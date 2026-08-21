@@ -49,9 +49,9 @@ documentation are openly available:
     Zenodo: DOI 10.5281/zenodo.22040623
 
 I am explicitly asking you to look for gaps or errors, not to endorse the
-result. If you are willing to review, I can send the complete proof
-document (currently in research-note form, to be formalized after
-independent checking). If you could give initial feedback within 2-3
+result. Attached please find the complete proof: a 7-page paper
+(paper-main.pdf) and the full proof details with all constants explicit
+(proof-details.pdf). If you could give initial feedback within 2-3
 weeks, that would be greatly appreciated.
 
 The paper is not yet submitted anywhere. I chose to contact you first
@@ -91,13 +91,11 @@ The proof is unconditional. Complete documentation, code, and data:
     GitHub: https://github.com/wxtanghui2023/dn-positivity
     Zenodo: DOI 10.5281/zenodo.22040623
 
-I am asking you specifically to find errors or gaps. The proof document
-is in research-note form; I will formalize it only after independent
-critical review. If you could give initial feedback within 2-3 weeks,
-that would be greatly appreciated.
-
-If you are willing to look at it, I can send the full proof document
-(≈30 pages of detailed estimates).
+I am asking you specifically to find errors or gaps. Attached please
+find the complete proof: a 7-page paper (paper-main.pdf) and the full
+proof details with all constants explicit (proof-details.pdf). If you
+could give initial feedback within 2-3 weeks, that would be greatly
+appreciated.
 
 Thank you for considering this request.
 
@@ -108,10 +106,11 @@ Hui Tang (Independent Researcher)
 
 ---
 
-## 发送清单
+## 附件清单
 
 - [ ] 附件 1：`paper/paper-main.pdf`（7 页正式论文）
-- [ ] 附件 2：`docs/theorem4-unconditional.md`（完整证明研究笔记）
+- [ ] 附件 2：`paper/proof-details.pdf`（**完整证明，所有常数显式**）
+- [ ] （可选）`docs/theorem4-unconditional.md`（研究笔记）
 - [ ] 署名：**Hui Tang 单人**（勿含 Ning Tang）
 - [ ] 填 `[Your email]`
 - [ ] 先发 Lagarias；48h 无回复再发 Conrad（或同时发）
