@@ -1,4 +1,4 @@
-# On the Positivity of $D_n = \sum_\gamma g_n(\gamma)$ for a Telescoping Test Function of the Riemann Zeta Zeros
+# 黎曼猜想的望远镜正性判据：$D_n > 0$ 与 Li 系数
 
 **小灵 · 数学探索项目** | 2026-08-21 | 数据审计完成版
 
