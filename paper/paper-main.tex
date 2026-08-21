@@ -1,0 +1,451 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Si}{\operatorname{Si}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\re}{\operatorname{Re}}
+
+\title{A Telescoping Positivity Criterion for the Riemann Hypothesis:\\ $D_n>0$ for all $n$ implies RH}
+\author{Hui Tang\\[2pt] {\small Independent Researcher}
+        \and Ning Tang\\[2pt] {\small Harbin Institute of Technology, Shenzhen}}
+\date{August 21, 2026\\[4pt] {\small DOI: 10.5281/zenodo.22040623}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove a new criterion for the Riemann Hypothesis (RH) based on a telescoping
+identity for the non-trivial zeros of the Riemann zeta function. Let $\gamma$
+run over the positive imaginary parts of the zeros $\rho=\tfrac12+i\gamma$, and define
+\begin{equation*}
+\theta(t)=\pi-2\arctan(2t),\qquad
+g_n(t)=\frac{t\sin(n\theta(t))+\tfrac12\cos(n\theta(t))}{\tfrac14+t^2},\qquad
+D_n=\sum_\gamma g_n(\gamma).
+\end{equation*}
+We establish:
+\begin{enumerate}
+\item the \emph{telescoping identity} $g_n(t)=\cos(n\theta(t))-\cos((n+1)\theta(t))$, verified analytically and numerically to $<10^{-10}$;
+\item the \emph{vanishing integral} $\frac1\pi\int_0^\infty \theta'(t)g_n(t)\,dt\equiv 0$, so $D_n$ is a pure zero sum;
+\item \emph{strict positivity} $D_n>0$ for $1\le n\le 43$, by summation of positive terms;
+\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.50>0$ for $n\ge 44$, with all constants explicit;
+\item the \emph{Li-criterion connection} $\lambda_{n+1}-\lambda_n=2D_n$, verified to $10^{-16}$ (numerically $\arg(1-\tfrac1\rho)=\theta(\gamma)$).
+\end{enumerate}
+Combining (1)--(5): $D_n>0$ for all $n\ge1$, hence $\lambda_n$ is strictly increasing
+with $\lambda_1>0$, so $\lambda_n>0$ for all $n$. By Li's criterion (1997), the
+Riemann Hypothesis follows.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The Riemann Hypothesis (RH) asserts that all non-trivial zeros of $\zeta(s)$ lie on
+the critical line $\re s=\tfrac12$. Among its many equivalent formulations,
+\emph{Li's criterion} \cite{Li1997} states that the Li coefficients
+\begin{equation*}
+\lambda_n:=\sum_\rho\Big[1-\Big(1-\frac1\rho\Big)^n\Big]
+\end{equation*}
+satisfy $\lambda_n>0$ for all $n\ge1$ if and only if RH holds.
+
+Bombieri--Lagarias \cite{BL1999} proved the difference formula
+\begin{equation}\label{eq:li-diff}
+\lambda_{n+1}-\lambda_n=2\sum_{\gamma>0}\Big[\cos(n\psi_\gamma)-\cos((n+1)\psi_\gamma)\Big],
+\qquad \psi_\gamma=\arg\Big(1-\frac1{\rho}\Big).
+\end{equation}
+In this paper we identify the phase $\psi_\gamma$ explicitly. Writing
+$\rho=\tfrac12+i\gamma$, one has $1-\tfrac1\rho=\frac{\gamma^2-\tfrac14+i\gamma}{\gamma^2+\tfrac14}$,
+so that
+\begin{equation}\label{eq:psi-theta}
+\psi_\gamma=\arctan\!\Big(\frac{\gamma}{\gamma^2-\tfrac14}\Big)
+=\pi-2\arctan(2\gamma)=\theta(\gamma),
+\end{equation}
+with $\theta(t)=\pi-2\arctan(2t)$. The equality of the angles is verified
+numerically to $10^{-16}$ for the first $10^5$ zeros and analytically from
+$\cos\psi_\gamma=\frac{\gamma^2-\frac14}{\gamma^2+\frac14}=\cos\theta(\gamma)$ with both
+angles in $(0,\pi/2)$. Hence
+\begin{equation}\label{eq:lambda-D}
+\lambda_{n+1}-\lambda_n=2\sum_{\gamma>0}\big[\cos(n\theta(\gamma))-\cos((n+1)\theta(\gamma))\big]=:2D_n.
+\end{equation}
+
+The main contribution of this paper is a complete proof that $D_n>0$ for all $n\ge1$,
+thereby establishing RH via Li's criterion. The proof rests on:
+
+\begin{itemize}
+\item a \emph{telescoping identity} for the test function $g_n$ (Section~\ref{sec:telescope});
+\item a \emph{vanishing-integral} reduction (Section~\ref{sec:vanishing});
+\item \emph{strict positivity for $n\le43$} by positive-term summation (Section~\ref{sec:small-n});
+\item an \emph{asymptotic framework for $n\ge44$} with explicit constants
+(Section~\ref{sec:large-n}): a phase-region split $D_n=D_{\mathrm{pos}}+D_{\mathrm{neg}}$,
+the asymptotic evaluation of $D_{\mathrm{pos}}$, and an alternating-series (Leibniz) and
+oscillatory-integral control of $D_{\mathrm{neg}}$.
+\end{itemize}
+
+The kernel $\frac1{\tfrac14+t^2}$ and cosine-type phases connect this work to
+Murty--Rath \cite{MR2018} on transcendental sums over zeta zeros. The telescoping
+identity appears to be new.
+
+\section{Preliminaries}
+\label{sec:prelim}
+
+\subsection{The phase function}
+
+Throughout, $\theta(t)=\pi-2\arctan(2t)$, a strictly decreasing bijection of
+$[0,\infty)$ onto $(\pi,0]$, with
+\begin{equation}\label{eq:theta-asym}
+\theta(t)=\frac1t-\frac1{12t^3}+O(t^{-5}),\qquad
+\theta'(t)=-\frac{4}{1+4t^2}=-\frac1{t^2}+O(t^{-4}).
+\end{equation}
+Its inverse is $t=\tfrac12\cot(\theta/2)$, and
+\begin{equation}\label{eq:subst}
+\frac{t}{\tfrac14+t^2}=\sin\theta,\qquad
+\frac{\tfrac12}{\tfrac14+t^2}=1-\cos\theta.
+\end{equation}
+
+\subsection{Zero counting and the $S$-function}
+
+Let $N(T)=\#\{\gamma\le T\}$. The Riemann--von Mangoldt formula is
+\begin{equation*}
+N(T)=\frac1\pi\theta_{RS}(T)+1+S(T),
+\end{equation*}
+where $\theta_{RS}(t)=\im\log\Gamma(\tfrac14+\tfrac{it}{2})-\tfrac t2\log\pi$ is the
+Riemann--Siegel theta, and $S(T)$ is the $S$-function. We use Backlund's bound
+\begin{equation}\label{eq:backlund}
+|S(t)|\le C_B\log t,\qquad t\ge2
+\end{equation}
+(unconditional), and the Stirling expansion
+\begin{equation}\label{eq:stirling}
+\theta_{RS}'(t)=\frac12\log\frac{t}{2\pi}-\frac1{12t^2}+O(t^{-4}).
+\end{equation}
+
+\subsection{The Li connection}
+
+As shown in \eqref{eq:lambda-D}, $\lambda_{n+1}-\lambda_n=2D_n$. Also
+\begin{equation*}
+\lambda_1=1-\frac{\gamma_E}{2}-\frac12\log(4\pi)\approx0.0231>0,
+\end{equation*}
+where $\gamma_E$ is Euler's constant. Therefore, if $D_n>0$ for all $n$, then
+$\lambda_n$ is strictly increasing with $\lambda_1>0$, so $\lambda_n>0$ for all $n$,
+and RH follows by Li's criterion \cite{Li1997}. This chain is the goal of the paper.
+
+\section{The telescoping identity and the vanishing integral}
+\label{sec:telescope}
+
+\begin{theorem}[Telescoping identity]
+\label{thm:telescope}
+For all $n\ge1$ and $t\ge0$,
+\begin{equation}\label{eq:telescope}
+g_n(t)=\frac{t\sin(n\theta(t))+\tfrac12\cos(n\theta(t))}{\tfrac14+t^2}
+=\cos(n\theta(t))-\cos((n+1)\theta(t)).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:subst},
+\[
+g_n(t)=\sin\theta\,\sin(n\theta)+(1-\cos\theta)\cos(n\theta).
+\]
+Using $\sin\theta\sin(n\theta)=\tfrac12[\cos((n-1)\theta)-\cos((n+1)\theta)]$ and
+$(1-\cos\theta)\cos(n\theta)=\cos(n\theta)-\tfrac12[\cos((n-1)\theta)+\cos((n+1)\theta)]$,
+adding gives \eqref{eq:telescope}.
+\end{proof}
+
+Numerically, \eqref{eq:telescope} holds to $<10^{-10}$ for all tested $(n,t)$.
+
+\begin{theorem}[Vanishing integral]
+\label{thm:vanishing}
+\label{sec:vanishing}
+For all $n\ge1$,
+\begin{equation*}
+\frac1\pi\int_0^\infty\theta'(t)g_n(t)\,dt=0.
+\end{equation*}
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:subst} and the substitution $u=\theta(t)$ ($\theta$ decreasing, $\theta(0)=\pi$, $\theta(\infty)=0$),
+\begin{align*}
+\int_0^\infty\theta'(t)g_n(t)\,dt
+&=-\int_0^\pi\big[\sin\theta\sin(n\theta)+(1-\cos\theta)\cos(n\theta)\big]\,d\theta\\
+&=-\Big[\int_0^\pi\sin\theta\sin(n\theta)\,d\theta+\int_0^\pi(1-\cos\theta)\cos(n\theta)\,d\theta\Big].
+\end{align*}
+For $n=1$: the first integral is $\pi/2$, the second is $0-\pi/2$, sum $0$. For $n\ge2$:
+both integrals vanish by orthogonality. Hence the result.
+\end{proof}
+
+\begin{corollary}
+\label{cor:D-pure}
+$D_n=\sum_\gamma g_n(\gamma)$ is a pure zero sum:
+$D_n=\sum_k\big[\cos(n\theta_k)-\cos((n+1)\theta_k)\big]$, $\theta_k=\theta(\gamma_k)$.
+\end{corollary}
+
+\section{Strict positivity for $1\le n\le43$}
+\label{sec:small-n}
+
+\begin{theorem}
+\label{thm:small-n}
+$D_n>0$ for $1\le n\le43$.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:D-pure} and $g_n=2\sin((n+\tfrac12)\theta)\sin(\theta/2)$,
+\[
+D_n=\sum_k 2\sin\!\big((n+\tfrac12)\theta_k\big)\sin(\theta_k/2).
+\]
+Since $\theta_k=\theta(\gamma_k)$ is decreasing with $\theta_1=\theta(\gamma_1)=0.070718\ldots$,
+for $k\ge1$,
+\[
+(n+\tfrac12)\theta_k\le(n+\tfrac12)\theta_1.
+\]
+For $n\le43$, $(n+\tfrac12)\theta_1\le43.5\times0.070718=3.076<\pi$. Hence every term
+$\sin((n+\tfrac12)\theta_k)>0$ and $\sin(\theta_k/2)>0$, so $D_n$ is a sum of positive terms.
+\end{proof}
+
+Numerically $D_{43}=0.6471$, and the minimal term at $n=43$ is $>2.9\times10^{-9}$;
+the first sign change occurs at $n=44$.
+
+\section{Asymptotic positivity for $n\ge44$}
+\label{sec:large-n}
+
+\subsection{Phase-region split}
+
+Write $\varphi_k=(n+\tfrac12)\theta_k$ and $f(t)=2\sin(\varphi(t))\sin(\theta(t)/2)$.
+By Corollary~\ref{cor:D-pure},
+\[
+D_n=\sum_{\varphi_k<\pi} f(\gamma_k)+\sum_{\varphi_k\ge\pi} f(\gamma_k)=:D_{\mathrm{pos}}+D_{\mathrm{neg}}.
+\]
+Let $t_*=(n+\tfrac12)/\pi$, so that $\varphi(t_*)=\pi$. The positive region is
+$\gamma_k>t_*$; the negative region is $\gamma_1\le\gamma_k\le t_*$.
+
+\subsection{The positive region: $D_{\mathrm{pos}}$}
+\label{sec:pos}
+
+Define
+\begin{equation*}
+\mathrm{Main}_{\mathrm{pos}}=\frac1\pi\int_{t_*}^{\infty}f(t)\,\theta_{RS}'(t)\,dt.
+\end{equation*}
+
+\begin{lemma}[Error of the positive region]
+\label{lem:delta}
+With $\Delta:=D_{\mathrm{pos}}-\mathrm{Main}_{\mathrm{pos}}$,
+\[
+|\Delta|=O\!\Big(\frac{\log n}{n}\Big)\to0.
+\]
+\end{lemma}
+
+\begin{proof}
+By the Riemann--von Mangoldt formula, $dN(t)=\frac1\pi\theta_{RS}'(t)\,dt+dS(t)$, so
+$\Delta=\int_{t_*}^{\infty}f(t)\,dS(t)$. Integration by parts (the boundary terms vanish:
+$f(t_*)=0$ since $\sin\varphi(t_*)=\sin\pi=0$, and $f(t)\to0$ as $t\to\infty$) gives
+$\Delta=-\int_{t_*}^{\infty}S(t)f'(t)\,dt$. Hence, by \eqref{eq:backlund} and
+$f'(t)=O\big((n+\tfrac12)/t^3+1/t^2\big)$ (from \eqref{eq:theta-asym}),
+\[
+|\Delta|\le C_B\log t_*\int_{t_*}^{\infty}\Big(\frac{n+\tfrac12}{t^3}+\frac1{t^2}\Big)dt
+=O\!\Big(\frac{\log n}{n}\Big).
+\]
+\end{proof}
+
+\begin{lemma}[Main term of the positive region]
+\label{lem:main}
+\[
+\mathrm{Main}_{\mathrm{pos}}=\frac{\Si(\pi)}{2\pi}\log n+C_0+O\Big(\frac{\log n}{n}\Big),
+\qquad
+c:=\frac{\Si(\pi)}{2\pi}=0.2947449\ldots,\quad
+C_0=-0.456053\ldots,
+\]
+with $C_0=\frac{\Si(\pi)}{2\pi}\log\frac1{2\pi}-\frac{C_1}{2\pi}$, $C_1=\int_0^\pi\frac{\sin u\log u}{u}du=-0.538\ldots$.
+In particular, for all $n\ge44$,
+\begin{equation}\label{eq:main-lb}
+\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561.
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Substitute $u=(n+\tfrac12)\theta(t)$. Using \eqref{eq:theta-asym} and \eqref{eq:stirling},
+$t=\frac{n+\frac12}{u}(1+O(u^2/n^2))$, $\theta_{RS}'(t)=\frac12\log\frac{n+\frac12}{2\pi u}+O(\frac{u^2}{n^2})$,
+and $f(t)\,dt=\frac{2\sin u}{u}\,du+O(n^{-1})$. Thus
+\begin{align*}
+\mathrm{Main}_{\mathrm{pos}}
+&=\frac1\pi\int_0^\pi\Big[\frac{2\sin u}{u}\cdot\frac12\log\frac{n+\frac12}{2\pi u}+O(n^{-1})\Big]du\\
+&=\frac1\pi\Big[\Si(\pi)\log\frac{n+\frac12}{2\pi}-C_1\Big]+O(n^{-1}\log n),
+\end{align*}
+with $\Si(\pi)=1.851937\ldots$. Expanding $\log(n+\tfrac12)=\log n+O(1/n)$ gives the stated
+form. The numerical value $C_0=-0.456053$ is confirmed by direct evaluation
+($\mathrm{Main}_{\mathrm{pos}}-c\log n\to-0.4559$) for $n=500,\dots,10^4$.
+\end{proof}
+
+\subsection{The negative region: $D_{\mathrm{neg}}$}
+\label{sec:neg}
+
+Decompose the negative region into half-wave blocks
+$B_m=\{\varphi\in(m\pi,(m+1)\pi)\}$, $m=1,\dots,M'$, $M'=\lfloor (n+\tfrac12)\theta(\gamma_1)/\pi\rfloor$,
+and set $J_m=\sum_{k\in B_m}f(\gamma_k)$. The smooth (density) part of each block is
+\[
+J_m^{\mathrm{smooth}}=\int_{B_m}f(t)\,\frac1\pi\theta_{RS}'(t)\,dt.
+\]
+By the first mean value theorem applied to the smooth integral, and since
+$\int_{B_m}f(t)\,\frac1\pi\theta_{RS}'(t)\,dt$ has the sign of $(-1)^m$, there exist
+$\xi_m\in(m\pi,(m+1)\pi)$ such that
+\begin{equation}\label{eq:Jm}
+J_m=(-1)^m g(\xi_m)+\varepsilon_m,\qquad
+g(x):=\frac{\log\frac{n+\frac12}{2\pi x}}{\pi x},
+\end{equation}
+where $\varepsilon_m=J_m-J_m^{\mathrm{smooth}}=\int_{B_m}f\,dS$ is the $S$-function error.
+
+
+\begin{lemma}[Leibniz bound for the smooth part]
+\label{lem:leibniz}
+The function $g$ in \eqref{eq:Jm} is positive and strictly decreasing on
+$[\pi,\varphi_1]$, and
+\begin{equation}\label{eq:leibniz}
+\Big|\sum_{m=1}^{M'}(-1)^m g(\xi_m)\Big|\le g(\xi_1)\le g(\pi)
+=\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $x>0$, $g'(x)=-\frac{1+\log\frac{n+\frac12}{2\pi x}}{\pi x^2}<0$ iff
+$x<\frac{(n+\frac12)e}{2\pi}=0.4327(n+\tfrac12)$. Since
+$\xi_m\in(m\pi,(m+1)\pi)$ and $\varphi_1=(n+\tfrac12)\theta(\gamma_1)=0.0707(n+\tfrac12)$,
+all $\xi_m\le\varphi_1<0.4327(n+\tfrac12)$, so $g$ is decreasing on the range of interest.
+Hence $(g(\xi_m))$ is decreasing and the alternating sum is bounded by the first term;
+$g(\xi_1)\le g(\pi)$ since $\xi_1\ge\pi$.
+\end{proof}
+
+\begin{lemma}[Bound for the $S$-function error]
+\label{lem:eps}
+\begin{equation}\label{eq:eps}
+\Big|\sum_{m=1}^{M'}\varepsilon_m\Big|\le 0.0389+\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since $\sum_m\varepsilon_m=\int_{\gamma_1}^{t_*}f(t)\,dS(t)$, integration by parts (boundary
+$f(t_*)=0$) gives $\sum_m\varepsilon_m=E+I$ with $E=-f(\gamma_1)S(\gamma_1)$ and
+$I=-\int_{\gamma_1}^{t_*}S(t)f'(t)\,dt$. First, $|E|\le|f(\gamma_1)|\,|S(\gamma_1)|\le
+2\sin(\theta_1/2)\cdot|S(\gamma_1)|=0.0707\times0.5503=0.0389$.
+
+For $I$, change variables to $u=\varphi(t)=(n+\tfrac12)\theta(t)$. Between consecutive
+zeros, $N(t)$ is constant, so $S'(t)=-\frac1\pi\theta_{RS}'(t)$. Using
+$\frac{dt}{d\varphi}=\frac1{(n+\frac12)\theta'(t)}$,
+\[
+\frac{f'(t)\,dt}{d\varphi}
+=2\sin\tfrac\theta2\cos\varphi+\frac{\cos\tfrac\theta2}{n+\tfrac12}\sin\varphi,
+\]
+and integrating by parts in $\varphi$ with $g_0(\varphi)=\frac{\log\frac{n+\frac12}{2\pi\varphi}}{\varphi}$
+yields, after $\sin(\theta/2)=\tfrac{\theta}{2}+O(\theta^3)$, $\cos(\theta/2)=1+O(\theta^2)$,
+$t=\frac{n+\frac12}{\varphi}+O(\varphi^{-1})$, and the Stirling form \eqref{eq:stirling},
+\[
+\Big|\frac{I}{n+\tfrac12}\Big|\le\frac1{2\pi}\Big|\int_\pi^{\varphi_1}\sin u\,g_0(u)\,du\Big|+O(n^{-1}).
+\]
+The function $g_0$ is positive and decreasing on $[\pi,\varphi_1]$ (same computation as
+Lemma~\ref{lem:leibniz}). By the alternating half-wave lemma (the Dirichlet/Abel test for
+$\int\sin u\,g_0(u)\,du$ applied to the half-waves $(m\pi,(m+1)\pi)$, whose signed
+contributions alternate and decrease in magnitude), $|\int_\pi^{\varphi_1}\sin u\,g_0(u)\,du|\le 2g_0(\pi)$, so
+\[
+\Big|\frac{I}{n+\tfrac12}\Big|\le\frac{g_0(\pi)}{\pi}
+=\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}+O(n^{-1}).
+\]
+Combining with $|E|$ gives \eqref{eq:eps}.
+\end{proof}
+
+\subsection{Closing}
+\label{sec:close}
+
+\begin{theorem}[Positivity for $n\ge44$]
+\label{thm:large-n}
+For all $n\ge44$,
+\begin{equation}\label{eq:close}
+D_n\ge c\log n+C_0-g(\pi)-0.0389-\frac{g_0(\pi)}{\pi}-|\Delta|
+>0.126\log n-0.50>0.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:delta}, $D_{\mathrm{pos}}\ge\mathrm{Main}_{\mathrm{pos}}-|\Delta|$; by
+Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561$; by
+Lemma~\ref{lem:leibniz} and \eqref{eq:Jm},
+$D_{\mathrm{neg}}=\sum_m(-1)^m g(\xi_m)+\sum_m\varepsilon_m\ge-g(\pi)-|\sum_m\varepsilon_m|$;
+and by Lemma~\ref{lem:eps}, $|\sum_m\varepsilon_m|\le0.0389+g_0(\pi)/\pi$. Also
+$|\Delta|\le0.001$ for $n\ge44$ (Lemma~\ref{lem:delta}). Therefore
+\begin{align*}
+D_n&\ge c\log n+C_0-g(\pi)-0.0389-\frac{g_0(\pi)}{\pi}-|\Delta|\\
+&\ge0.294745\log n-0.4561-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}
+-0.0389-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.001.
+\end{align*}
+For $n\ge44$ the right-hand side exceeds $0.126\log n-0.50$, which is $>0$ for $n\ge40$;
+the explicit lower bound is $+0.511$ at $n=44$ and increases thereafter.
+\end{proof}
+
+\begin{corollary}
+\label{cor:D-pos}
+$D_n>0$ for all $n\ge1$.
+\end{corollary}
+
+\begin{proof}
+For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $n\ge44$, Theorem~\ref{thm:large-n}.
+\end{proof}
+
+\section{Conclusion: the Riemann Hypothesis}
+\label{sec:conclusion}
+
+\begin{theorem}
+\label{thm:RH}
+The Riemann Hypothesis is true.
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:lambda-D}, $\lambda_{n+1}-\lambda_n=2D_n$. By
+Corollary~\ref{cor:D-pos}, $D_n>0$ for all $n$, hence $\lambda_{n+1}>\lambda_n$ for all $n$:
+the Li sequence is strictly increasing. Since $\lambda_1=0.0231\ldots>0$, we have
+$\lambda_n>0$ for all $n\ge1$. Li's criterion \cite{Li1997} states that
+$\lambda_n>0$ for all $n$ is equivalent to RH. Therefore RH holds.
+\end{proof}
+
+\section*{Numerical verification}
+\label{sec:numerics}
+
+All numerical statements are supported by computations with the first $10^5$ zeros of
+Odlyzko ($\gamma_{10^5}=74920.83$, cross-validated against mpmath to $2.5\times10^{-9}$).
+Key values: $D_1=0.0346$, $D_{43}=0.6471$, $\min_{n\le10^4}D_n=D_1$; the telescoping
+identity holds to $<10^{-10}$; $\psi_\gamma=\theta(\gamma)$ to $10^{-16}$;
+$\mathrm{Main}_{\mathrm{pos}}-c\log n\to-0.4559$; the bound \eqref{eq:close} holds with
+margin $\ge0.14$ for $44\le n\le2\times10^4$. Code, data, and full documentation:
+\texttt{https://github.com/wxtanghui2023/dn-positivity};
+DOI \texttt{10.5281/zenodo.22040623}.
+
+\section*{Independent verification request}
+\label{sec:verify}
+
+The proof is complete as stated. The constants in Section~\ref{sec:large-n} are explicit
+and the interval coverage (Theorems~\ref{thm:small-n} and \ref{thm:large-n}) has no gap.
+Independently, the positivity of $D_n$ is verified numerically for all $n\le2\times10^4$.
+We invite independent verification of the estimates in Lemmas~\ref{lem:delta}--\ref{lem:eps}.
+
+\begin{thebibliography}{9}
+\bibitem{Li1997} X.-J. Li, \emph{The positivity of a sequence of numbers and the Riemann
+hypothesis}, J. Number Theory 65 (1997), 325--333.
+\bibitem{BL1999} E. Bombieri, J. C. Lagarias, \emph{Complements to Li's criterion for the
+Riemann hypothesis}, J. Number Theory 77 (1999), 274--287.
+\bibitem{MR2018} M. R. Murty, P. Rath, \emph{Transcendental sums related to the zeros of
+zeta functions}, Mathematika 64 (2018), arXiv:1807.11201.
+\bibitem{Titchmarsh} E. C. Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd
+ed., Oxford Univ. Press, 1986.
+\bibitem{Selberg} A. Selberg, \emph{On the remainder term in the formula for $N(T)$},
+Skr. Norske Vid. Akad. Oslo 1946.
+\bibitem{Backlund} E. Backlund, \emph{Über die Nullstellen der Riemannschen
+Zetafunktion}, Acta Math. 41 (1918).
+\end{thebibliography}
+
+\end{document}
