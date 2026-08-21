@@ -2,6 +2,8 @@
 
 **Math Exploration Project** | 2026-08-21 | Data-audited version
 
+**DOI: [10.5281/zenodo.22040623](https://doi.org/10.5281/zenodo.22040623)**
+
 ---
 
 ## Abstract
