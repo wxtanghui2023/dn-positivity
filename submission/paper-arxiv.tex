@@ -544,6 +544,23 @@ far below the closing margin \(0.1934\log n\); even the worst-case
 that this bound is proved; Theorem 4 is accordingly stated as
 conditional.
 
+\textbf{Technical structure of the gap (numerical, 2026-08-21).} Writing
+\(\Sigma\varepsilon = \int_{\gamma_1}^{t_*} g_n\,dS\) with
+\(t_*=(n+\tfrac12)/\pi\), integration by parts gives
+\(\Sigma\varepsilon = -g_n(\gamma_1)S(\gamma_1) - \int_{\gamma_1}^{t_*} S\,g_n'\,dt\).
+The endpoint term is \(O(1)\) (\(|g_n(\gamma_1)| \approx 0.07\),
+\(|S(\gamma_1)| \le 1\)). The integral term splits into high-frequency
+and low-frequency parts that cancel to high order (numerically
+\(\int S\,g_n'\,dt = -0.066\) at \(n=1000\), with raw high/low parts
+\(\pm 36.4\); \(-0.114\) at \(n=5000\) with parts \(\pm 357\)). A naive
+\(M(T)\)-boundedness route (double integration by parts via
+\(M(T)=\int_0^T S\)) fails: \(\int|g_n''|\,dt\) grows like \(n\)
+(\(4 \to 100 \to 1688\) for \(n=1000,5000,20000\)), so that path gives
+only \(O(n)\). The correct mechanism is \textbf{oscillation
+cancellation} of \(S\) against \(g_n'\) (van der Corput with the
+explicit phase \(\theta(t) = \pi-2\arctan(2t)\)), for which the phase is
+explicit and favorable; this is the natural research avenue.
+
 \hypertarget{limitations}{%
 \subsubsection{6.3 Limitations}\label{limitations}}
 
