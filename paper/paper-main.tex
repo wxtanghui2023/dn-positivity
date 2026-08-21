@@ -121,9 +121,9 @@ Let $N(T)=\#\{\gamma\le T\}$. The Riemann--von Mangoldt formula is
 N(T)=\frac1\pi\theta_{RS}(T)+1+S(T),
 \end{equation*}
 where $\theta_{RS}(t)=\im\log\Gamma(\tfrac14+\tfrac{it}{2})-\tfrac t2\log\pi$ is the
-Riemann--Siegel theta, and $S(T)$ is the $S$-function. We use Backlund's bound
+Riemann--Siegel theta, and $S(T)$ is the $S$-function. We use the explicit Backlund--Trudgian bound \cite{Trudgian}
 \begin{equation}\label{eq:backlund}
-|S(t)|\le C_B\log t,\qquad t\ge2
+|S(t)|\le0.137\log t+0.443\log\log t+1.588,\qquad t\ge3,
 \end{equation}
 (unconditional), and the Stirling expansion
 \begin{equation}\label{eq:stirling}
@@ -251,7 +251,7 @@ $f(t_*)=0$ since $\sin\varphi(t_*)=\sin\pi=0$, and $f(t)\to0$ as $t\to\infty$) g
 $\Delta=-\int_{t_*}^{\infty}S(t)f'(t)\,dt$. Hence, by \eqref{eq:backlund} and
 $f'(t)=O\big((n+\tfrac12)/t^3+1/t^2\big)$ (from \eqref{eq:theta-asym}),
 \[
-|\Delta|\le C_B\log t_*\int_{t_*}^{\infty}\Big(\frac{n+\tfrac12}{t^3}+\frac1{t^2}\Big)dt
+|\Delta|\le\big(0.137\log t_*+0.443\log\log t_*+1.588\big)\int_{t_*}^{\infty}\Big(\frac{n+\tfrac12}{t^3}+\frac1{t^2}\Big)dt
 =O\!\Big(\frac{\log n}{n}\Big).
 \]
 \end{proof}
@@ -316,9 +316,11 @@ where $\varepsilon_m=J_m-J_m^{\mathrm{smooth}}=\int_{B_m}f\,dS$ is the $S$-funct
 The function $g$ in \eqref{eq:Jm} is positive and strictly decreasing on
 $[\pi,\varphi_1]$, and
 \begin{equation}\label{eq:leibniz}
-\Big|\sum_{m=1}^{M'}(-1)^m g(\xi_m)\Big|\le g(\xi_1)\le g(\pi)
-=\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}.
+\Big|\sum_{m=1}^{M'}(-1)^m g(\xi_m)\Big|\le g(\xi_1)
+=\frac{\log\frac{n+\frac12}{2\pi\xi_1}}{\pi\xi_1}
+\le\frac{\log n}{1.5\pi^2}.
 \end{equation}
+(The final bound uses $\xi_1\ge1.5\pi$ and $\log\frac{n+\frac12}{2\pi\xi_1}\le\log n$ for $n\ge44$.)
 \end{lemma}
 
 \begin{proof}
@@ -326,8 +328,7 @@ For $x>0$, $g'(x)=-\frac{1+\log\frac{n+\frac12}{2\pi x}}{\pi x^2}<0$ iff
 $x<\frac{(n+\frac12)e}{2\pi}=0.4327(n+\tfrac12)$. Since
 $\xi_m\in(m\pi,(m+1)\pi)$ and $\varphi_1=(n+\tfrac12)\theta(\gamma_1)=0.0707(n+\tfrac12)$,
 all $\xi_m\le\varphi_1<0.4327(n+\tfrac12)$, so $g$ is decreasing on the range of interest.
-Hence $(g(\xi_m))$ is decreasing and the alternating sum is bounded by the first term;
-$g(\xi_1)\le g(\pi)$ since $\xi_1\ge\pi$.
+Hence $(g(\xi_m))$ is decreasing and the alternating sum is bounded by the first term.
 \end{proof}
 
 \begin{lemma}[Bound for the $S$-function error]
@@ -341,7 +342,7 @@ $g(\xi_1)\le g(\pi)$ since $\xi_1\ge\pi$.
 Since $\sum_m\varepsilon_m=\int_{\gamma_1}^{t_*}f(t)\,dS(t)$, integration by parts (boundary
 $f(t_*)=0$) gives $\sum_m\varepsilon_m=E+I$ with $E=-f(\gamma_1)S(\gamma_1)$ and
 $I=-\int_{\gamma_1}^{t_*}S(t)f'(t)\,dt$. First, $|f(\gamma_1)|=2\sin(\theta_1/2)=0.070704\ldots$
-(since $|\sin((n+\tfrac12)\theta_1)|\le1$), and by the explicit Backlund--Trudgian bound
+(since $|\sin((n+\tfrac12)\theta_1)|\le1$), and by the explicit Backlund--Trudgian bound \cite{Trudgian}
 $|S(t)|\le0.137\log t+0.443\log\log t+1.588$ for $t\ge3$,
 $|S(\gamma_1)|\le0.137\log(14.1347)+0.443\log\log(14.1347)+1.588=2.3824\ldots$.
 Hence
@@ -494,6 +495,8 @@ ed., Oxford Univ. Press, 1986.
 Skr. Norske Vid. Akad. Oslo 1946.
 \bibitem{Backlund} E. Backlund, \emph{Über die Nullstellen der Riemannschen
 Zetafunktion}, Acta Math. 41 (1918).
+\bibitem{Trudgian} T. S. Trudgian, \emph{An improved upper bound for the argument of the
+Riemann zeta-function on the critical line}, Math. Comp. 81 (2012), 1053--1061; arXiv:1208.5846.
 \end{thebibliography}
 
 \end{document}
