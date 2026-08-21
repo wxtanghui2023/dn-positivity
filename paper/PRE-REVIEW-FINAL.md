@@ -62,6 +62,7 @@ Thank you for your time.
 
 Sincerely,
 Hui Tang (Independent Researcher)
+ORCID: 0009-0003-5745-4820
 wxtanghui@gmail.com
 ```
 
@@ -101,6 +102,7 @@ Thank you for considering this request.
 
 Sincerely,
 Hui Tang (Independent Researcher)
+ORCID: 0009-0003-5745-4820
 wxtanghui@gmail.com
 ```
 

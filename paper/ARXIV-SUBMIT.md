@@ -16,7 +16,7 @@
 ## arXiv 元数据（填表用）
 
 - **标题**: A Telescoping Positivity Criterion for the Riemann Hypothesis: $D_n>0$ for all $n$ implies RH
-- **作者**: Hui Tang (Independent Researcher)
+- **作者**: Hui Tang (Independent Researcher) — ORCID: 0009-0003-5745-4820
 - **分类**: math.NT (Number Theory)
 - **摘要**: 论文 Abstract 段（LaTeX 源中含）
 - **关键词**: Riemann hypothesis; Li's criterion; zeta zeros; telescoping identity

@@ -1,6 +1,6 @@
 # Proof of the Riemann Hypothesis via the Telescoping Positivity Criterion
 
-**Author:** Hui Tang (Independent Researcher)
+**Author:** Hui Tang (Independent Researcher) — ORCID: 0009-0003-5745-4820
 **Date:** August 21, 2026
 **Repository:** https://github.com/wxtanghui2023/dn-positivity
 **DOI:** 10.5281/zenodo.22042837

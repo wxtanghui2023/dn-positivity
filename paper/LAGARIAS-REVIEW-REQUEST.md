@@ -63,7 +63,7 @@ rigorous scrutiny.
 
 With respect and thanks,
 Hui Tang
-[Email] [Affiliation: Independent Researcher]
+[Email] wxtanghui@gmail.com | ORCID: 0009-0003-5745-4820
 ```
 
 ---
