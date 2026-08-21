@@ -2,7 +2,7 @@
 
 **On the Positivity of $D_n = \sum_\gamma g_n(\gamma)$ for a Telescoping Test Function of the Riemann Zeta Zeros**
 
-**DOI: [10.5281/zenodo.22040623](https://doi.org/10.5281/zenodo.22040623)**
+**DOI: [10.5281/zenodo.22042837](https://doi.org/10.5281/zenodo.22042837)**
 
 Math Exploration Project | 2026-08-21 | Data-audited
 

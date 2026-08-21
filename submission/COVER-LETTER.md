@@ -56,7 +56,7 @@ toward RH, overwhelming numerical evidence, and an honest, precisely
 formulated open problem with a technical roadmap.
 
 All code, data, and full proof documentation are openly available
-(DOI: 10.5281/zenodo.22040623, GitHub: wxtanghui2023/dn-positivity).
+(DOI: 10.5281/zenodo.22042837, GitHub: wxtanghui2023/dn-positivity).
 
 Thank you for your consideration.
 

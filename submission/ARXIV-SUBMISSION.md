@@ -21,7 +21,7 @@
 - **分类**：math.NT（Number Theory）
 - **摘要**：见 paper-arxiv.tex 或 EN.md 的 Abstract 段
 - **关键词**：Riemann zeta zeros; explicit formula; positivity; telescoping identity
-- **DOI**：10.5281/zenodo.22040623（已致谢）
+- **DOI**：10.5281/zenodo.22042837（已致谢）
 
 ## arXiv 提交步骤
 

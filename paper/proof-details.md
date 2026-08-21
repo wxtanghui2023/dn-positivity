@@ -3,7 +3,7 @@
 **Author:** Hui Tang (Independent Researcher)
 **Date:** August 21, 2026
 **Repository:** https://github.com/wxtanghui2023/dn-positivity
-**DOI:** 10.5281/zenodo.22040623
+**DOI:** 10.5281/zenodo.22042837
 
 *This document contains the complete proof with all constants explicit.
 It accompanies the 7-page paper "A Telescoping Positivity Criterion for the

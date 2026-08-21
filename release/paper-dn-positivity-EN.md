@@ -2,7 +2,7 @@
 
 **Math Exploration Project** | 2026-08-21 | Data-audited version
 
-**DOI: [10.5281/zenodo.22040623](https://doi.org/10.5281/zenodo.22040623)**
+**DOI: [10.5281/zenodo.22042837](https://doi.org/10.5281/zenodo.22042837)**
 
 ---
 
@@ -260,11 +260,11 @@ $$D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\theta(\ga
 
 ## Data Availability Statement
 
-All code, data, and documentation supporting the findings of this study are openly available in the GitHub repository `wxtanghui2023/dn-positivity` at https://github.com/wxtanghui2023/dn-positivity, archived on Zenodo with DOI [10.5281/zenodo.22040623](https://doi.org/10.5281/zenodo.22040623). The zero data (first $10^5$ non-trivial zeros of the Riemann zeta function) are included in the repository and were originally obtained from A. M. Odlyzko's public tables (https://www.dtc.umn.edu/~odlyzko/zeta_tables/).
+All code, data, and documentation supporting the findings of this study are openly available in the GitHub repository `wxtanghui2023/dn-positivity` at https://github.com/wxtanghui2023/dn-positivity, archived on Zenodo with DOI [10.5281/zenodo.22042837](https://doi.org/10.5281/zenodo.22042837). The zero data (first $10^5$ non-trivial zeros of the Riemann zeta function) are included in the repository and were originally obtained from A. M. Odlyzko's public tables (https://www.dtc.umn.edu/~odlyzko/zeta_tables/).
 
 ## Acknowledgements
 
-The authors thank the maintainers of the Odlyzko zero tables, mpmath, SciPy, and NumPy. This work was conducted as an independent research project; the preprint version is archived with DOI 10.5281/zenodo.22040623.
+The authors thank the maintainers of the Odlyzko zero tables, mpmath, SciPy, and NumPy. This work was conducted as an independent research project; the preprint version is archived with DOI 10.5281/zenodo.22042837.
 
 ## Disclosure statement
 
