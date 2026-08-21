@@ -196,7 +196,7 @@ $D_n$ grows roughly like $0.2\log n$, positive on $[1,10^4]$, $\min = D_1 = 0.03
 
 - $\theta_1 = 0.070718$ ($1/\gamma_1 = 0.070748$); $(n+\tfrac12)\theta_1 < \pi \iff n \le 43$;
 - mean of $S(\gamma_k) = 0.500048$ ($k\le 5000$), std 0.31;
-- $M(T) = \int_0^T S(u)du$ bounded: $M(\gamma_{10^5}) = -0.46$ (Gauss-16 corrected), $\max|M| \approx 1.2$;
+- $M(T) = \int_0^T S(u)du$: bounded along zeros ($M(\gamma_k) \in [-1.5, -0.5]$ for $k \le 10^5$), but grows with $T$ in general ($M(74921) \approx -200$); see Appendix A
 - $D_n > 0$ for all $n \in [1, 10^4]$ (direct computation).
 
 ---
@@ -250,7 +250,7 @@ $$D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\theta(\ga
 
 - Zeros: **fully correct** (mpmath cross-validation $\le 2.5\times10^{-9}$).
 - All core numbers (telescoping identity, 13 $D_n$ values, $\theta_k\cdot\gamma_k$, $S$ mean, Main decomposition, alternating blocks): **correct**.
-- Corrections: (i) early M(T) table had $+0.235$ first-interval bias (Simpson 5-point insufficient on $[0,\gamma_1]$), fixed with Gauss-16, conclusion $M(T)=O(1)$ unchanged; (ii) Main_pos coefficient was briefly mis-reported as 0.188 (truncation artifact), corrected back to $c = 0.295$ (closing margin 0.193) after reviewer verification.
+- Corrections: (i) early M(T) table had $+0.235$ first-interval bias (Simpson 5-point insufficient on $[0,\gamma_1]$), fixed with Gauss-16; **an early claim that $M(T)=O(1)$ for all $T$ was withdrawn** — $M(T)$ grows with $T$ (e.g. $M(74921)\approx -200$), though it is bounded along the zero sequence $\gamma_k$; (ii) Main_pos coefficient was briefly mis-reported as 0.188 (truncation artifact), corrected back to $c = 0.295$ (closing margin 0.193) after reviewer verification.
 
 ## Appendix B: Reproduction
 
@@ -274,7 +274,11 @@ The authors report there are no competing interests to declare.
 
 1. E. C. Titchmarsh, *The Theory of the Riemann Zeta-Function*, 2nd ed., Oxford, 1986.
 2. Riemann–von Mangoldt formula; DLMF §25.10.
-3. A. Selberg, *On the remainder term in the formula for $N(T)$*, 1946.
-4. E. Backlund, *Über die Nullstellen der Riemannschen Zetafunktion*, 1918.
+3. A. Selberg, *On the remainder term in the formula for $N(T)$*, Skr. Norske Vid. Akad. Oslo 1946.
+4. E. Backlund, *Über die Nullstellen der Riemannschen Zetafunktion*, Acta Math. 41 (1918).
 5. M. R. Murty, P. Rath, *Transcendental sums related to the zeros of zeta functions*, Mathematika 64 (2018), arXiv:1807.11201.
 6. X.-J. Li, *The positivity of a sequence of numbers and the Riemann hypothesis*, J. Number Theory 65 (1997), 325–333.
+7. E. Bombieri, J. C. Lagarias, *Complements to Li's criterion for the Riemann hypothesis*, J. Number Theory 77 (1999), 274–287.
+8. A. Fujii, *On the distribution of the zeros of the Riemann zeta function in short intervals*, Proc. Japan Acad. 66 (1990).
+9. J. G. van der Corput, *Zur Methode der Steilstesten Abstiegs*, 1926 (van der Corput lemmas; see also Stein, *Harmonic Analysis*, Ch. VIII).
+10. A. Selberg, *On the normal density of primes in small intervals, and the difference between consecutive primes*, Arch. Math. Naturvid. 47 (1943) [second moment of $S(T)$].
