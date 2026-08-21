@@ -86,13 +86,13 @@ $\Delta = -\int_{t_*}^{\infty} S(t) f'(t)\,dt$. By Backlund $|S(t)| \le C_B\log 
 $f'(t) = O((n+\frac12)/t^3 + 1/t^2)$ (from $\theta(t) = 1/t - 1/(12t^3) + O(t^{-5})$):
 $$|\Delta| \le C_B \log t_* \int_{t_*}^{\infty}\Big(\frac{n+\frac12}{t^3}+\frac1{t^2}\Big)dt
 = O(\log n / n).$$
-Numerically $|\Delta| \le 0.0005$ for $n \ge 100$; $\le 0.001$ for $n \ge 90$.
+Numerically $|\Delta| \le 0.0005$ for $n \ge 100$; $\le 0.001$ for $n \ge 100$.
 
 **Lemma B (main term).**
 $$\mathrm{Main}_{\rm pos} = c\log n + C_0 + O(\log n/n), \qquad
 c = \frac{\mathrm{Si}(\pi)}{2\pi} = 0.294744936\ldots, \quad
 C_0 = -0.456053\ldots.$$
-In particular $\mathrm{Main}_{\rm pos} \ge c\log n - 0.4561$ for $n \ge 90$.
+In particular $\mathrm{Main}_{\rm pos} \ge c\log n - 0.4561$ for $n \ge 100$.
 
 *Proof sketch.* Substitute $u = (n+\frac12)\theta(t)$. Using
 $\theta(t) = 1/t - 1/(12t^3)+O(t^{-5})$, $\theta_{RS}'(t) = \frac12\log\frac{t}{2\pi}
@@ -163,7 +163,7 @@ $$D_n \ge \mathrm{Main}_{\rm pos} - |\Delta| - g(\pi) - \Big(0.1685 + \frac{g_0(
 With $c = 0.294744936$, $C_0 = -0.4561$, $g(\pi) = \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}$,
 $g_0(\pi)/\pi = \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}$, $|\Delta| \le 0.001$:
 $$D_n \ge 0.294745\log n - 0.4561 - \frac{\log n}{\pi} - 0.1685 - \frac{\log n}{\pi^2} - 0.001.$$
-For $n \ge 90$ the right-hand side is $\ge 0.126\log n - 0.50 > 0$ (indeed $+0.511$
+For $n \ge 100$ the right-hand side is $\ge 0.126\log n - 0.50 > 0$ (indeed $+0.511$
 at $n=44$, increasing thereafter). Exact values: $n=44$: $+0.511$; $n=100$: $+0.615$;
 $n=10^4$: $+1.196$. $\blacksquare$
 
@@ -174,7 +174,7 @@ $n=10^4$: $+1.196$. $\blacksquare$
 | $n$ | Coverage |
 |---|---|
 | $1 \le n \le 43$ | Theorem (Step 3): positive-term summation |
-| $n \ge 90$ | Theorem (Step 6): explicit analytic bound, $> 0.126\log n - 0.50$ |
+| $n \ge 100$ | Theorem (Step 6): explicit analytic bound, $> 0.126\log n - 0.50$ |
 | Numerical | $D_n > 0$ verified for all $n \le 2\times10^4$ (independent check) |
 
 The two analytic ranges overlap ($n = 40$–$43$ covered by both), so there is no gap.

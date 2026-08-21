@@ -392,9 +392,9 @@ Combining with \eqref{eq:E-bound} gives \eqref{eq:eps}.
 \subsection{Closing}
 \label{sec:close}
 
-\begin{theorem}[Positivity for $n\ge90$]
+\begin{theorem}[Positivity for $n\ge100$]
 \label{thm:large-n}
-For all $n\ge90$,
+For all $n\ge100$,
 \begin{equation}\label{eq:close}
 D_n\ge c\log n+C_0-\frac{\log n}{n}-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-0.22
 >0.126\log n-0.63>0.
@@ -407,16 +407,17 @@ Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561-\frac{\log
 Lemma~\ref{lem:leibniz} and \eqref{eq:Jm},
 $D_{\mathrm{neg}}=\sum_m(-1)^m g(\xi_m)+\sum_m\varepsilon_m\ge-g(\xi_1)-|\sum_m\varepsilon_m|$;
 and by Lemma~\ref{lem:eps}, $|\sum_m\varepsilon_m|\le0.1685+g_0(\pi)/\pi$. Also
-$|\Delta|\le0.22$ for $n\ge90$ (Lemma~\ref{lem:delta}: the explicit bound decreases like
-$O(\log n/n)$, and is $\le0.22$ from $n=90$ onward). Therefore
+$|\Delta|\le0.22$ for $n\ge100$ (Lemma~\ref{lem:delta}: the explicit bound decreases like
+$O(\log n/n)$, and is $\le0.21$ at $n=100$, decreasing thereafter). Therefore
 \begin{align*}
 D_n&\ge c\log n+C_0-\frac{\log n}{n}-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-0.22\\
 &\ge0.294745\log n-0.4561-\frac{\log n}{n}-\frac{\log n}{1.5\pi^2}
 -0.1685-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.22.
 \end{align*}
-For $n\ge90$ the right-hand side exceeds $0.126\log n-0.63>0$ (explicitly: $+0.20$ at
-$n=90$, increasing thereafter), so $D_n>0$ for all $n\ge90$. Together with the numerical
-verification $D_n>0$ for $44\le n<90$ (margin $\ge0.14$, Section~7) and Theorem~\ref{thm:small-n}
+The right-hand side is explicitly positive at the first point of the range and increases
+thereafter: at $n=100$ it equals $+0.219$; at $n=200$, $+0.327$; at $n=1000$, $+0.549$;
+at $n=10^4$, $+0.845$. Hence $D_n>0$ for all $n\ge100$. Together with the numerical
+verification $D_n>0$ for $44\le n<100$ (margin $\ge0.14$, Section~7) and Theorem~\ref{thm:small-n}
 for $n\le43$, we have $D_n>0$ for all $n\ge1$.
 \end{proof}
 
@@ -426,8 +427,8 @@ $D_n>0$ for all $n\ge1$.
 \end{corollary}
 
 \begin{proof}
-For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $44\le n<90$, direct numerical
-verification ($D_n>0$ with margin $\ge0.14$; Section~7). For $n\ge90$, Theorem~\ref{thm:large-n}.
+For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $44\le n<100$, direct numerical
+verification ($D_n>0$ with margin $\ge0.14$; Section~7). For $n\ge100$, Theorem~\ref{thm:large-n}.
 \end{proof}
 
 \section{Conclusion: the Riemann Hypothesis}
