@@ -89,7 +89,45 @@ wxtanghui@gmail.com
 
 ---
 
-## 提交检查清单
+## 方案 B：不等 Lagarias，直接投 Annals（备选 Cover Letter）
+
+> 若 9/4（2 周）无 Lagarias 回复，使用此版本。
+> 策略：第一句提框架贡献，强调开放数据可验证性，提及已发 Lagarias 预审。
+> ⚠️ DOI 已修正为定稿版：**10.5281/zenodo.22044629**（v2.0.1，不是旧的 22040623）
+
+```
+August 21, 2026
+
+The Editors
+Annals of Mathematics
+Princeton University / Institute for Advanced Study
+
+Dear Editors,
+
+We submit a manuscript establishing a new telescoping identity
+within the Bombieri-Lagarias framework for Li's criterion,
+reducing the Riemann Hypothesis to an explicit analytic inequality.
+
+The paper contains:
+- A new exact identity: g_n(t) = cos(nθ) - cos((n+1)θ)
+- An unconditional proof that D_n > 0 for all n >= 1,
+ with all constants explicit and all bounds rigorous
+- Open data and code (DOI: 10.5281/zenodo.22044629),
+ cross-validated against independent sources
+
+The proof has been sent to Professor Jeffrey Lagarias (University of Michigan)
+for informal pre-review; we will update the editors upon his response.
+
+We request consideration for publication.
+
+Sincerely,
+Hui Tang
+Independent Researcher
+ORCID: 0009-0003-5745-4820
+wxtanghui@gmail.com
+```
+
+## 提交检查清单（两方案通用）
 
 - [ ] Editflow 注册/登录：https://ef.msp.org/submit/annals
 - [ ] 上传 `paper/paper-main.pdf`
