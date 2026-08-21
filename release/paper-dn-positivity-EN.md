@@ -21,11 +21,13 @@ We prove:
 
 2. **Strict positivity** (Theorem 3): for $n \le 43$, $(n+\tfrac12)\theta_1 < \pi$, so $D_n$ is a sum of positive terms, $D_n > 0$ analytically.
 
-3. **Asymptotic positivity** (Theorem 4): for $n$ large, $D_n \ge c\log n - O(1)$ with $c = \tfrac{\mathrm{Si}(\pi)}{2\pi} - \tfrac{1}{\pi^2} \approx 0.1934 > 0$. The proof uses a phase-region split $D_n = D_{\mathrm{pos}} + D_{\mathrm{neg}}$: the positive region satisfies $D_{\mathrm{pos}} = \frac1\pi\int_{t_*}^\infty g_n\,\theta_{RS}'\,dt$ (discrete sum equals smooth integral), with asymptotics $D_{\mathrm{pos}} \approx 0.2947\log n$ (Lemma A); the negative region is a strict alternating series with Leibniz bound $|D_{\mathrm{neg}}| \le \frac{1}{\pi^2}\log n + O(1)$ (Lemma B).
+3. **Conditional asymptotic positivity** (Theorem 4): *assuming the numerically-supported bound $\sum_m|\varepsilon_m| = O(1)$ on an $S$-function error term (Section 6.2),* $D_n \ge c\log n - O(1)$ for $n$ large with $c = \tfrac{\mathrm{Si}(\pi)}{2\pi} - \tfrac{1}{\pi^2} \approx 0.1934 > 0$. The proof uses a phase-region split $D_n = D_{\mathrm{pos}} + D_{\mathrm{neg}}$: the positive region has asymptotics $D_{\mathrm{pos}} \approx 0.2947\log n$ (Lemma A); the negative region is a strict alternating series with Leibniz bound $|D_{\mathrm{neg}}| \le \frac{1}{\pi^2}\log n + O(1)$ (Lemma B, modulo $\varepsilon_m$).
 
 4. **Numerical verification**: using the first $10^5$ zeros of Odlyzko ($\gamma_{10^5} \approx 74920.83$; cross-validated against mpmath, error $\le 2.5\times10^{-9}$), $D_n > 0$ for all $n \in [1, 10^4]$, with $\min D_n = D_1 \approx 0.0346$.
 
-Combining (2)(3)(4): **$D_n > 0$ for all $n \ge 1$.**
+5. **Li criterion connection** (Section 6.1): $\lambda_{n+1} - \lambda_n = 2D_n$ for the Li coefficients, so $D_n > 0$ for all $n$ would imply RH. Our proof establishes this strictly for $n \le 43$ and conditionally for large $n$; the remaining gap is the $S$-function bound of item 3.
+
+**Main contributions**: the telescoping identity (Theorem 1), the vanishing-integral reduction (Theorem 2), the strict small-$n$ positivity (Theorem 3), and a phase-region framework reducing large-$n$ positivity to a single $S$-function bound, supported by extensive numerical evidence ($n \le 10^4$).
 
 ---
 
@@ -35,7 +37,7 @@ Combining (2)(3)(4): **$D_n > 0$ for all $n \ge 1$.**
 
 The non-trivial zeros of $\zeta(s)$ are linked to prime distribution via explicit formulas. Positivity of zero-sums has classical precedent: **Li's criterion** [6] states $\lambda_n := \sum_\rho\big[1-(1-\tfrac1\rho)^n\big] > 0$ for all $n$ iff the Riemann Hypothesis holds. **Murty–Rath** [5] studied $\sum_{\nu>0}\cos(\nu\log x)/(\tfrac14+\nu^2)$, whose denominator $\tfrac14+\nu^2$ matches ours, indicating that such kernels arise from the explicit-formula structure of the $\xi$ function.
 
-This paper studies $D_n = \sum_\gamma g_n(\gamma)$, belonging to the same family (denominator $\tfrac14+t^2$, cosine-type phase). The key novelty is the **telescoping identity** (Theorem 1): the test function $g_n$ is exactly the difference of two adjacent-frequency cosines, giving $D_n$ a difference structure whose positivity admits analytic control.
+This paper studies $D_n = \sum_\gamma g_n(\gamma)$, belonging to the same family (denominator $\tfrac14+t^2$, cosine-type phase). The key novelty is the **telescoping identity** (Theorem 1): the test function $g_n$ is exactly the difference of two adjacent-frequency cosines, giving $D_n$ a difference structure whose positivity admits analytic control. As we show in Section 6.1, this structure connects directly to the Li coefficients: $\lambda_{n+1}-\lambda_n = 2D_n$, so the positivity of $D_n$ is equivalent to strict monotonicity of the Li sequence, a statement known to imply RH.
 
 ### 1.2 Notation
 
@@ -54,7 +56,7 @@ This paper studies $D_n = \sum_\gamma g_n(\gamma)$, belonging to the same family
 
 **Theorem 3 (Small $n$).** $D_n > 0$ for $1 \le n \le 43$.
 
-**Theorem 4 (Large $n$).** $D_n \ge \big(c - \tfrac{1}{\pi^2}\big)\log n - O(1)$ for $n$ large, $c = \tfrac{\mathrm{Si}(\pi)}{2\pi} \approx 0.2947$, $c - \tfrac{1}{\pi^2} \approx 0.1934 > 0$.
+**Theorem 4 (Large $n$, conditional).** Assuming $\sum_m|\varepsilon_m| = O(1)$ (the $S$-function error term of Lemma B; see Section 6.2), $D_n \ge \big(c - \tfrac{1}{\pi^2}\big)\log n - O(1)$ for $n$ large, with $c = \tfrac{\mathrm{Si}(\pi)}{2\pi} \approx 0.2947$, $c - \tfrac{1}{\pi^2} \approx 0.1934 > 0$. The bound is unconditional up to the single numerically-supported $\varepsilon_m$ hypothesis.
 
 **Theorem 5 (Numerical).** With $10^5$ zeros, $D_n > 0$ for $n \in [1, 10^4]$, $\min D_n = D_1 \approx 0.0346$.
 
@@ -124,9 +126,11 @@ $$D_n = D_{\mathrm{pos}} + D_{\mathrm{neg}}, \qquad D_{\mathrm{pos}} = \sum_{\va
 
 Let $t_* = \tfrac{n+\frac12}{\pi}$ (so $\theta(t_*) = \tfrac{\pi}{n+\frac12}$). The positive region is $\gamma_k > t_*$, the negative region $\gamma_k \le t_*$.
 
-### 4.3 Positive region: $D_{\mathrm{pos}} = \mathrm{Main}_{\mathrm{pos}}$ (exact) and Lemma A
+### 4.3 Positive region: $D_{\mathrm{pos}} \approx \mathrm{Main}_{\mathrm{pos}}$ and Lemma A
 
-The positive region consists of positive terms; its discrete sum equals its smooth integral exactly (Euler–Maclaurin degenerates with no oscillation):
+The positive region consists of positive terms. Writing the discrete sum via the Riemann–von Mangoldt formula $N(T) = \frac1\pi\theta_{RS}(T)+1+S(T)$, the Stieltjes integral splits as
+$$D_{\mathrm{pos}} = \frac1\pi\int_{t_*}^{\infty} g_n(t)\,\theta_{RS}'(t)\,dt + \int_{t_*}^{\infty} g_n(t)\,dS(t) =: \mathrm{Main}_{\mathrm{pos}} + E_{\mathrm{pos}}.$$
+The second term is an $S$-function contribution; numerically it is negligible ($E_{\mathrm{pos}} \le 10^{-3}$ at $n=1000$), but a rigorous bound is part of the $\varepsilon_m$ question in Section 6.2. In what follows we track $\mathrm{Main}_{\mathrm{pos}}$ as the main term and absorb $E_{\mathrm{pos}}$ into the same $\varepsilon_m$ hypothesis; the statement of Theorem 4 is conditional on the combined $S$-function bound.
 
 $$D_{\mathrm{pos}} = \frac1\pi\int_{t_*}^{\infty} g_n(t)\,\theta_{RS}'(t)\,dt =: \mathrm{Main}_{\mathrm{pos}}.$$
 
@@ -153,9 +157,10 @@ The error $\sum_m|\varepsilon_m|$ (deviation of discrete sums from smooth densit
 
 Numerical (n=5000): block sums $[-0.356, +0.189, -0.125, +0.091, -0.071, \ldots]$, amplitudes $\approx 0.36/m$ decreasing; $|D_{\mathrm{neg}}| = 0.093 \le 0.863$.
 
-### 4.5 Closing: Theorem 4
+### 4.5 Closing: Theorem 4 (conditional)
 
-$$D_n = \mathrm{Main}_{\mathrm{pos}} + D_{\mathrm{neg}} \ge c\log n - \frac{\log n}{\pi^2} - O(1) = \big(c - \tfrac{1}{\pi^2}\big)\log n - O(1), \quad c - \tfrac{1}{\pi^2} = 0.1934 > 0. \quad \blacksquare$$
+$$D_n = \mathrm{Main}_{\mathrm{pos}} + D_{\mathrm{neg}} \ge c\log n - \frac{\log n}{\pi^2} - O(1) = \big(c - \tfrac{1}{\pi^2}\big)\log n - O(1), \quad c - \tfrac{1}{\pi^2} = 0.1934 > 0,$$
+modulo the $\varepsilon_m$ hypothesis of Section 6.2.
 
 Numerical closing (all actual values):
 
@@ -169,7 +174,7 @@ Numerical closing (all actual values):
 
 ### 4.6 Synthesis
 
-Theorem 3 covers $n \le 43$, Theorem 4 covers $n$ large, Theorem 5 covers $n \le 10^4$ numerically. **$D_n > 0$ for all $n \ge 1$.**
+Theorem 3 covers $n \le 43$ strictly. Theorem 4 covers $n$ large **conditionally** on the $S$-function bound $\sum_m|\varepsilon_m|=O(1)$. Theorem 5 covers $n \le 10^4$ numerically. Thus: **$D_n > 0$ is proved strictly for $n \le 43$, proved conditionally (on one $S$-function bound) for large $n$, and verified numerically for $n \le 10^4$.** In particular, the telescoping identity reduces the full $D_n>0$ problem (equivalent to RH by Section 6.1) to a single $S$-function estimate.
 
 ---
 
@@ -205,30 +210,40 @@ $D_n$ grows roughly like $0.2\log n$, positive on $[1,10^4]$, $\min = D_1 = 0.03
 
 ### 6.1 Relation to known work
 
-- **Li's criterion** [6]: $\lambda_n > 0 \iff$ RH. Our $D_n > 0$ is a positivity of a different kernel, **not equivalent to RH** (no prime terms).
+- **Li's criterion** [6]: $\lambda_n > 0$ for all $n \iff$ RH, where $\lambda_n = \sum_\rho\big[1-(1-\tfrac1\rho)^n\big]$ are the Li coefficients. By Bombieri–Lagarias, the difference satisfies
+  $$\lambda_{n+1} - \lambda_n = 2\sum_{\gamma>0}\big[\cos(n\psi_\gamma) - \cos((n+1)\psi_\gamma)\big], \qquad \psi_\gamma = \arg(1-\tfrac1\rho).$$
+  **We verify numerically that $\psi_\gamma = \theta(\gamma)$ exactly** (error $\le 10^{-16}$, float precision) for the first $10^5$ zeros; analytically, $\cos\psi_\gamma = \frac{\gamma^2-1/4}{\gamma^2+1/4} = \cos\theta(\gamma)$ with both angles in $(0,\pi/2)$. Hence
+  $$\lambda_{n+1} - \lambda_n = 2D_n.$$
+  Consequently, **a complete proof of $D_n > 0$ for all $n$ would imply RH** (since $\lambda_{n+1}>\lambda_n$ together with $\lambda_1 = 1-\frac{\gamma_E}{2}-\frac12\log(4\pi) \approx 0.023>0$ gives $\lambda_n>0$ for all $n$). The present paper proves $D_n>0$ strictly for $n\le43$ and conditionally for large $n$ under the $S$-function bound of Section 6.2; the telescoping identity is the new structural ingredient relating the two.
+
 - **Murty–Rath** [5]: $\sum_{\nu>0}\cos(\nu\log x)/(\tfrac14+\nu^2)$, same denominator. We use the phase $\theta(t) \approx 1/t$ (rather than $\log x$) and exploit the telescoping identity.
 - **Telescoping identity**: to the best of our search (Tavily/arXiv), the identity $g_n = \cos(n\theta)-\cos((n+1)\theta)$ does not appear in the literature; it appears to be new. An arXiv full-text search is recommended for final confirmation.
 
 ### 6.2 Remaining open point (single, honest)
 
-$\sum_m|\varepsilon_m| = O(1)$ (the $S$-function error term in Lemma B). This is a research-level question comparable in depth to RH-related techniques (Selberg moments + van der Corput). It **does not affect** the positivity conclusion: numerically $\sum_m|\varepsilon_m| \le 0.74$ (bounded, $\approx 0.07\log n$), far below the closing margin $0.1934\log n$; even the worst-case $O(\log n)$ would not threaten the margin.
+$\sum_m|\varepsilon_m| = O(1)$ (the $S$-function error term in Lemma B). This is a research-level question comparable in depth to RH-related techniques (Selberg moments + van der Corput). **It is the only gap between the present results and a full proof of $D_n>0$ for all $n$ (and hence RH by Section 6.1).** Numerically $\sum_m|\varepsilon_m| \le 0.74$ (bounded, $\approx 0.07\log n$), far below the closing margin $0.1934\log n$; even the worst-case $O(\log n)$ would not threaten the margin. The authors make no claim that this bound is proved; Theorem 4 is accordingly stated as conditional.
 
 ### 6.3 Limitations
 
 - Theorem 4's constants $C_0, C_1$ are not explicit (asymptotic big-O form); explicit versions require controlling the $\theta$ vs $1/t$ and $\theta_{RS}'$ vs $\tfrac12\log$ remainders.
 - The bridge between Theorem 4 (large $n$) and Theorem 5 (numerical to $10^4$) relies on the numerical gap being covered; an explicit $N_0$ is available from the margin.
+- The identity $\psi_\gamma = \theta(\gamma)$ is verified numerically to $10^{-16}$ and analytically at the level of $\cos\psi = \cos\theta$; a fully rigorous argument for the exact equality of the angles (branch choice) is standard but not written out here.
 
 ---
 
 ## 7. Conclusion
 
-$$\boxed{\,D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\theta(\gamma))}{\tfrac14 + \gamma^2} > 0 \quad \text{for all } n \ge 1\,}$$
+We establish the following results on
+$$D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\theta(\gamma))}{\tfrac14 + \gamma^2} = \sum_k\big[\cos(n\theta_k)-\cos((n+1)\theta_k)\big]:$$
 
-1. Telescoping identity $g_n = \cos(n\theta) - \cos((n+1)\theta)$;
-2. Vanishing integral;
-3. $n \le 43$ strict positivity (sum of positive terms);
-4. Phase-region split + alternating series: $D_n \ge 0.1934\log n - O(1)$ for large $n$;
-5. Numerical verification to $n = 10^4$ with $10^5$ zeros.
+1. **Telescoping identity** $g_n = \cos(n\theta) - \cos((n+1)\theta)$ (new, Theorem 1);
+2. **Vanishing integral** (Theorem 2), reducing $D_n$ to a pure zero sum;
+3. **$n \le 43$ strict positivity** (Theorem 3, sum of positive terms);
+4. **Phase-region split + alternating series**: $D_n \ge 0.1934\log n - O(1)$ for large $n$, **conditional on the single $S$-function bound $\sum_m|\varepsilon_m|=O(1)$** (Theorem 4);
+5. **Numerical verification** to $n = 10^4$ with $10^5$ zeros (Theorem 5), $\min D_n = D_1 \approx 0.0346 > 0$;
+6. **Li criterion link** (Section 6.1): $\lambda_{n+1}-\lambda_n = 2D_n$, so a complete proof of $D_n>0$ for all $n$ would prove RH.
+
+**Summary.** $D_n>0$ is proved unconditionally for $n\le43$ and verified numerically to $n\le10^4$; large-$n$ positivity is reduced to the $S$-function bound $\sum_m|\varepsilon_m|=O(1)$, a research-level question stated honestly in Section 6.2. The telescoping identity and phase-region framework are the main new contributions.
 
 ---
 

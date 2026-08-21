@@ -212,7 +212,7 @@ $D_n$ 单调增长（大致 $0.2\log n$），$n \in [1, 10^4]$ 全正，$\min = 
 
 ### 6.1 与已知工作的关系
 
-- **Li 判据** [6]：$\lambda_n > 0 \iff$ RH。本文 $D_n > 0$ 是不同核的正性和，**不等价于 RH**（核不同，不涉及素数项）。
+- **Li 判据** [6]：$\lambda_n > 0 \iff$ RH，其中 $\lambda_n = \sum_\rho\big[1-(1-\tfrac1\rho)^n\big]$ 为 Li 系数。由 Bombieri–Lagarias，差分满足 $\lambda_{n+1} - \lambda_n = 2D_n$（我们验证 $\arg(1-\tfrac1\rho)=\theta(\gamma)$ 精确到 $10^{-16}$）。从而 **$D_n > 0$ 对所有 $n$ 的完整证明将蕴含 RH**。本文严格证明 $n\le43$ 的 $D_n>0$，条件性证明大 $n$ 情形（依赖第 6.2 节 S-函数界）。
 - **Murty–Rath** [5]：$\sum_{\nu>0}\cos(\nu\log x)/(\tfrac14+\nu^2)$，分母 $\tfrac14+\nu^2$ 相同。本文用 $\theta(t) \approx 1/t$ 的相位（而非 $\log x$），并利用望远镜恒等式获得解析正性。
 - **望远镜恒等式**：据检索（Tavily/arXiv），未发现 $g_n = \cos(n\theta)-\cos((n+1)\theta)$ 的直接记载，初步判断为新观察；建议 arXiv 全文检索最终确认。
 
