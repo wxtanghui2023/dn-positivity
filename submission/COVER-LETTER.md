@@ -15,7 +15,7 @@
 Dear Editor,
 
 We are pleased to submit our manuscript "A Telescoping Positivity
-Criterion for the Riemann Hypothesis: D_n > 0 and the Li Coefficients"
+Criterion for the Non-trivial Zeros of the Riemann Zeta Function: D_n > 0"
 for consideration in Experimental Mathematics.
 
 **Main contribution.** We prove a new telescoping identity for the
@@ -29,7 +29,7 @@ which yields the exact difference relation for the Li coefficients
     λ_{n+1} - λ_n = 2D_n,    D_n = Σ_γ g_n(γ).
 
 Consequently, by Li's criterion (1997), **D_n > 0 for all n is
-equivalent to the Riemann Hypothesis**. The paper establishes:
+a positivity criterion for the non-trivial zeros of $\zeta$**. The paper establishes:
 
 1. The telescoping identity (Theorem 1), verified analytically and
    numerically to <10^-10;

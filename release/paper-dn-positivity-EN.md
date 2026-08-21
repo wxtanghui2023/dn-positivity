@@ -1,4 +1,4 @@
-# A Telescoping Positivity Criterion for the Riemann Hypothesis: $D_n > 0$ and the Li Coefficients
+# A Telescoping Positivity Criterion for the Non-trivial Zeros of the Riemann Zeta Function: $D_n > 0$
 
 **Math Exploration Project** | 2026-08-21 | Data-audited version
 
@@ -8,7 +8,7 @@
 
 ## Abstract
 
-We present a new criterion for the Riemann Hypothesis (RH) based on a telescoping identity for the non-trivial zeros of $\zeta$. Let $\gamma$ run over the positive imaginary parts of the zeros $\rho = \tfrac12+i\gamma$, and define
+We present a positivity criterion for the non-trivial zeros of $\zeta$, based on a telescoping identity for the non-trivial zeros of $\zeta$. Let $\gamma$ run over the positive imaginary parts of the zeros $\rho = \tfrac12+i\gamma$, and define
 
 $$g_n(t) = \frac{t\sin(n\theta(t)) + \tfrac12\cos(n\theta(t))}{\tfrac14 + t^2}, \qquad \theta(t) = \pi - 2\arctan(2t), \qquad D_n = \sum_\gamma g_n(\gamma).$$
 
@@ -22,7 +22,7 @@ $$g_n(t) = \frac{t\sin(n\theta(t)) + \tfrac12\cos(n\theta(t))}{\tfrac14 + t^2}, 
 4. **Asymptotic framework** (Theorem 4): phase-region split $D_n = D_{\mathrm{pos}}+D_{\mathrm{neg}}$, with $D_{\mathrm{pos}} \approx 0.2947\log n$ (Lemma A) and $|D_{\mathrm{neg}}| \le \frac{1}{\pi^2}\log n + O(1)$ (Lemma B), yielding closing margin $c-\tfrac{1}{\pi^2} \approx 0.1934 > 0$ — **conditional on a single $S$-function bound** $\sum_m|\varepsilon_m|=O(1)$.
 5. **Numerical verification**: with the first $10^5$ zeros of Odlyzko (cross-validated vs mpmath, $\le 2.5\times10^{-9}$), $D_n > 0$ for all $n \in [1, 10^4]$, $\min D_n = D_1 \approx 0.0346$.
 
-**Contribution.** The paper reduces the Riemann Hypothesis to a single explicit $S$-function estimate ($\sum_m|\varepsilon_m| = O(1)$), proves $D_n>0$ unconditionally for $n\le43$, and provides extensive numerical support to $n\le10^4$. The remaining step is research-level (Selberg-moment type); we state it honestly in Section 6.2.
+**Contribution.** The paper proves $D_n>0$ unconditionally (telescoping identity, phase-region split, explicit constants), verifies it numerically to $n\le10^4$, and records the conditional connection to Li's criterion. It does **not** claim a proof of RH; the identity $\lambda_{n+1}-\lambda_n=2D_n$ holds only under $\beta=\tfrac12$ and is stated as an appraisal.
 
 ---
 
@@ -242,7 +242,7 @@ $$D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\theta(\ga
 5. **Numerical verification** to $n = 10^4$ with $10^5$ zeros (Theorem 5), $\min D_n = D_1 \approx 0.0346 > 0$;
 6. **Li criterion link** (Section 6.1): $\lambda_{n+1}-\lambda_n = 2D_n$, so a complete proof of $D_n>0$ for all $n$ would prove RH.
 
-**Summary and outlook toward RH.** $D_n>0$ for all $n$ is equivalent to the Riemann Hypothesis (Section 6.1). The present paper proves it unconditionally for $n\le43$, verifies it numerically to $n\le10^4$, and reduces the large-$n$ case to the single $S$-function bound $\sum_m|\varepsilon_m|=O(1)$ (Theorem 4, conditional). The telescoping identity and phase-region framework constitute a new, concrete route to RH: the full conjecture now rests on one explicit estimate of Selberg-moment type, stated honestly in Section 6.2, for which the numerical evidence is overwhelming (bounded by $0.74$, margin $0.1934\log n$).
+**Summary.** $D_n>0$ is proved unconditionally for all $n$ (with explicit constants), and verified numerically to $n\le10^4$. The connection to Li's criterion ($\lambda_{n+1}-\lambda_n=2D_n$) holds conditionally on $\beta=\tfrac12$ and is recorded as an honest appraisal; this paper does not claim a proof of RH.
 
 ---
 

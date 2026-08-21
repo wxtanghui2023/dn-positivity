@@ -1,7 +1,6 @@
 # Annals of Mathematics — Cover Letter
 
-**Manuscript:** A Telescoping Positivity Criterion for the Riemann Hypothesis:
-$D_n>0$ for all $n$ implies RH
+**Manuscript:** A Telescoping Positivity Criterion for the Non-trivial Zeros of the Riemann Zeta Function: $D_n>0$ for all $n$
 **Author:** Hui Tang (Independent Researcher)
 **Corresponding email:** wxtanghui@gmail.com
 **Date:** August 21, 2026
@@ -23,7 +22,7 @@ I am pleased to submit my manuscript "A Telescoping Positivity Criterion
 for the Riemann Hypothesis: D_n > 0 for all n implies RH" for
 consideration in the Annals of Mathematics.
 
-**Main result.** The paper proves the Riemann Hypothesis. The proof
+**Main result.** The paper proves a positivity statement for the non-trivial zeros of $\zeta$: $D_n>0$ for all $n$. The proof
 establishes that D_n > 0 for all n >= 1, where
 
     D_n = Σ_γ [cos(nθ(γ)) - cos((n+1)θ(γ))],
@@ -32,7 +31,7 @@ establishes that D_n > 0 for all n >= 1, where
 and γ runs over positive imaginary parts of the non-trivial zeros of ζ.
 By the Bombieri–Lagarias difference formula λ_{n+1} - λ_n = 2D_n
 (verified: arg(1-1/ρ) = θ(γ) to 10^-16) and Li's criterion (λ_n > 0 for
-all n iff RH), positivity of D_n for all n gives the Riemann Hypothesis.
+all n iff RH). **Important:** the identity $\lambda_{n+1}-\lambda_n=2D_n$ holds only when all zeros satisfy $\beta=\tfrac12$; the paper therefore does NOT claim a proof of RH, and states the Li connection as conditional.
 
 **Structure of the proof.**
 1. A new telescoping identity: g_n(t) = cos(nθ(t)) - cos((n+1)θ(t)),
@@ -106,7 +105,7 @@ Dear Editors,
 
 We submit a manuscript establishing a new telescoping identity
 within the Bombieri-Lagarias framework for Li's criterion,
-reducing the Riemann Hypothesis to an explicit analytic inequality.
+a positivity criterion for the non-trivial zeros of $\zeta$.
 
 The paper contains:
 - A new exact identity: g_n(t) = cos(nθ) - cos((n+1)θ)

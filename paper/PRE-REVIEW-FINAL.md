@@ -123,3 +123,11 @@ wxtanghui@gmail.com
 - [ ] Zenodo 记录作者：若旧版本含两人，登录 Zenodo 修改为 Hui Tang（或在 v2.0 归档时更正）
 - [ ] GitHub 仓库 README/描述：确认无 Ning Tang 署名残留
 - [ ] arXiv 提交时作者填 Hui Tang 一人
+
+
+---
+
+## ⚠️ 撤回说明（2026-08-21 22:25）
+
+**此预审邮件模板已失效（请求已撤回）**。原因：循环论证（eq:lambda-D 假设 β=½）。
+使用 LAGARIAS-WITHDRAWAL.md 的撤回邮件模板替代。

@@ -18,13 +18,18 @@ Let $\gamma$ run over the positive imaginary parts of the non-trivial zeros
 $\rho = \frac12 + i\gamma$ of $\zeta$, and set
 $\theta(t) = \pi - 2\arctan(2t)$.
 
-**Theorem.** For all $n \ge 1$,
+**Theorem (positivity).** For all $n \ge 1$,
 $$D_n := \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \frac12\cos(n\theta(\gamma))}{\frac14 + \gamma^2} > 0.$$
 
-**Corollary (RH).** By the Li criterion [Li 1997] and the difference formula
-$\lambda_{n+1} - \lambda_n = 2D_n$ [Bombieri–Lagarias 1999], $D_n > 0$ for all $n$
-implies $\lambda_n$ strictly increasing with $\lambda_1 = 0.0231\ldots > 0$, hence
-$\lambda_n > 0$ for all $n$, i.e. the Riemann Hypothesis holds.
+**Remark (connection to Li's criterion, conditional).** The Li coefficients are
+$\lambda_n = \sum_\rho[1-(1-1/\rho)^n]$ (all zeros $\rho=\beta+i\gamma$,
+unconditionally), and Bombieri–Lagarias proved $\lambda_n \ge 0$ for all $n$ iff RH.
+For zeros on the critical line ($\beta=\tfrac12$) one has $|1-1/\rho|=1$ and
+$\arg(1-1/\rho)=\theta(\gamma)$, giving $\lambda_{n+1}-\lambda_n=2D_n$.
+This identity is *conditional on $\beta=\tfrac12$*: it need not hold if RH is
+false. Hence the positivity of $D_n$ does **not** by itself prove RH. This paper
+proves $D_n>0$ unconditionally and records the conditional Li connection as an
+appraisal, not as a proof of RH.
 
 ---
 
@@ -181,12 +186,15 @@ The two analytic ranges overlap ($n = 40$–$43$ covered by both), so there is n
 
 ---
 
-## 9. The Riemann Hypothesis
+## 9. Connection to Li's criterion (conditional)
 
-$\lambda_{n+1} - \lambda_n = 2D_n$ (verified: $\arg(1-1/\rho) = \theta(\gamma)$ to
-$10^{-16}$). Since $D_n > 0$ for all $n$, $\lambda_n$ is strictly increasing;
-$\lambda_1 = 0.0231 > 0$; hence $\lambda_n > 0$ for all $n$. By Li's criterion,
-RH holds. $\blacksquare$
+$\lambda_{n+1} - \lambda_n = 2D_n$ holds when all zeros satisfy $\beta=\tfrac12$
+(verified numerically: $\arg(1-1/\rho) = \theta(\gamma)$ to $10^{-16}$ for the
+first $10^5$ zeros). Under that assumption, $D_n > 0$ for all $n$ implies $\lambda_n$
+strictly increasing; $\lambda_1 = 0.0231 > 0$; hence $\lambda_n > 0$ for all $n$,
+which is Li's criterion for RH. **However, this implication is conditional on
+$\beta=\tfrac12$; the identity fails if RH is false. This paper therefore does not
+claim a proof of RH.** The unconditional content is the positivity of $D_n$.
 
 ---
 

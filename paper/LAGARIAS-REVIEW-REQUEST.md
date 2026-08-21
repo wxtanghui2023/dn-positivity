@@ -84,3 +84,13 @@ Hui Tang
 | Andrew Booker (Bristol) | 计算数论 |
 | M. Ram Murty (Queen's) | Murty-Rath 作者 |
 | 审稿网站 | arXiv 预印本公开后社区审阅 |
+
+
+---
+
+## ⚠️ 撤回说明（2026-08-21 22:25）
+
+**此预审请求已撤回**。经仔细审视，发现证明链存在循环论证：
+λ_{n+1}−λ_n = 2D_n 依赖 |1−1/ρ|=1 ⟺ β=½（即假设 RH）。
+论文已降级为"正性结果 + 望远镜恒等式"（不声称证明 RH）。
+撤回邮件模板见 LAGARIAS-WITHDRAWAL.md。

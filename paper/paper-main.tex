@@ -19,7 +19,7 @@
 \newcommand{\im}{\operatorname{Im}}
 \newcommand{\re}{\operatorname{Re}}
 
-\title{A Telescoping Positivity Criterion for the Riemann Hypothesis:\\ $D_n>0$ for all $n$ implies RH}
+\title{A Telescoping Positivity Criterion for the Non-trivial Zeros of the Riemann Zeta Function:\; $D_n>0$ for all $n$}
 \author{Hui Tang\\
 \small Independent Researcher, ORCID: \href{https://orcid.org/0009-0003-5745-4820}{0009-0003-5745-4820}}
 \date{August 21, 2026\\[4pt] {\small DOI: 10.5281/zenodo.22044629}}
@@ -28,9 +28,10 @@
 \maketitle
 
 \begin{abstract}
-We prove a new criterion for the Riemann Hypothesis (RH) based on a telescoping
-identity for the non-trivial zeros of the Riemann zeta function. Let $\gamma$
-run over the positive imaginary parts of the zeros $\rho=\tfrac12+i\gamma$, and define
+We prove a positivity result for the non-trivial zeros of the Riemann zeta
+function, based on a telescoping identity. Let $\gamma$ run over the positive
+imaginary parts of the zeros $\rho=\tfrac12+i\gamma$ (assumed on the critical
+line for the definition), and define
 \begin{equation*}
 \theta(t)=\pi-2\arctan(2t),\qquad
 g_n(t)=\frac{t\sin(n\theta(t))+\tfrac12\cos(n\theta(t))}{\tfrac14+t^2},\qquad
@@ -41,13 +42,14 @@ We establish:
 \item the \emph{telescoping identity} $g_n(t)=\cos(n\theta(t))-\cos((n+1)\theta(t))$, verified analytically and numerically to $<10^{-10}$;
 \item the \emph{vanishing integral} $\frac1\pi\int_0^\infty \theta'(t)g_n(t)\,dt\equiv 0$, so $D_n$ is a pure zero sum;
 \item \emph{strict positivity} $D_n>0$ for $1\le n\le 43$, by summation of positive terms;
-\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.63>0$ for $n\ge 90$ (and numerically
-for $44\le n<90$), with all constants explicit;
-\item the \emph{Li-criterion connection} $\lambda_{n+1}-\lambda_n=2D_n$, verified to $10^{-16}$ (numerically $\arg(1-\tfrac1\rho)=\theta(\gamma)$).
+\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.63>0$ for $n\ge 100$ (and numerically
+for $44\le n<100$), with all constants explicit;
+\item an \emph{honest appraisal}: under the assumption that all zeros lie on the
+critical line, $\lambda_{n+1}-\lambda_n=2D_n$ (Li coefficients), so that $D_n>0$
+is consistent with RH; however this paper does \emph{not} claim to prove RH.
 \end{enumerate}
-Combining (1)--(5): $D_n>0$ for all $n\ge1$, hence $\lambda_n$ is strictly increasing
-with $\lambda_1>0$, so $\lambda_n>0$ for all $n$. By Li's criterion (1997), the
-Riemann Hypothesis follows.
+The telescoping identity and the positivity analysis are unconditional; the
+connection to Li's criterion holds conditionally on RH and is stated as such.
 \end{abstract}
 
 \section{Introduction}
@@ -61,28 +63,34 @@ the critical line $\re s=\tfrac12$. Among its many equivalent formulations,
 \end{equation*}
 satisfy $\lambda_n>0$ for all $n\ge1$ if and only if RH holds.
 
-Bombieri--Lagarias \cite{BL1999} proved the difference formula
-\begin{equation}\label{eq:li-diff}
-\lambda_{n+1}-\lambda_n=2\sum_{\gamma>0}\Big[\cos(n\psi_\gamma)-\cos((n+1)\psi_\gamma)\Big],
-\qquad \psi_\gamma=\arg\Big(1-\frac1{\rho}\Big).
-\end{equation}
-In this paper we identify the phase $\psi_\gamma$ explicitly. Writing
-$\rho=\tfrac12+i\gamma$, one has $1-\tfrac1\rho=\frac{\gamma^2-\tfrac14+i\gamma}{\gamma^2+\tfrac14}$,
-so that
+Bombieri--Lagarias \cite{BL1999} proved that $\lambda_n\ge0$ for all $n$ iff RH.
+For completeness we record the difference structure. For any zero
+$\rho=\beta+i\gamma$, the difference is
+\begin{equation*}
+\lambda_{n+1}-\lambda_n=\sum_\rho\Big(1-\frac1\rho\Big)^n\frac1\rho,
+\end{equation*}
+which depends on both $\beta$ and $\gamma$ through the factor
+$|1-1/\rho|^n$. If (and only if) $\beta=\tfrac12$, one has
+$|1-1/\rho|=1$ and
+$\arg(1-1/\rho)=\pi-2\arctan(2\gamma)=\theta(\gamma)$,
+so that for such zeros
 \begin{equation}\label{eq:psi-theta}
-\psi_\gamma=\arctan\!\Big(\frac{\gamma}{\gamma^2-\tfrac14}\Big)
-=\pi-2\arctan(2\gamma)=\theta(\gamma),
+\arg\Big(1-\frac1\rho\Big)=\arctan\!\Big(\frac{\gamma}{\gamma^2-\tfrac14}\Big)
+=\pi-2\arctan(2\gamma)=\theta(\gamma).
 \end{equation}
-with $\theta(t)=\pi-2\arctan(2t)$. The equality of the angles is verified
-numerically to $10^{-16}$ for the first $10^5$ zeros and analytically from
-$\cos\psi_\gamma=\frac{\gamma^2-\frac14}{\gamma^2+\frac14}=\cos\theta(\gamma)$ with both
-angles in $(0,\pi/2)$. Hence
+The equality of the angles is verified numerically to $10^{-16}$ for the first
+$10^5$ zeros and analytically from
+$\cos\psi_\gamma=\frac{\gamma^2-\frac14}{\gamma^2+\frac14}=\cos\theta(\gamma)$.
+Consequently, \emph{under the assumption $\beta=\tfrac12$ for all zeros},
 \begin{equation}\label{eq:lambda-D}
 \lambda_{n+1}-\lambda_n=2\sum_{\gamma>0}\big[\cos(n\theta(\gamma))-\cos((n+1)\theta(\gamma))\big]=:2D_n.
 \end{equation}
+Without that assumption the identity \eqref{eq:lambda-D} need not hold.
 
-The main contribution of this paper is a complete proof that $D_n>0$ for all $n\ge1$,
-thereby establishing RH via Li's criterion. The proof rests on:
+The main contribution of this paper is a complete, unconditional proof that
+$D_n>0$ for all $n\ge1$. The positivity of $D_n$ is independent of RH; the
+connection to Li's criterion is conditional (Section~\ref{sec:conclusion}). The
+proof rests on:
 
 \begin{itemize}
 \item a \emph{telescoping identity} for the test function $g_n$ (Section~\ref{sec:telescope});
@@ -133,13 +141,17 @@ Riemann--Siegel theta, and $S(T)$ is the $S$-function. We use the explicit Backl
 
 \subsection{The Li connection}
 
-As shown in \eqref{eq:lambda-D}, $\lambda_{n+1}-\lambda_n=2D_n$. Also
+As shown in \eqref{eq:lambda-D}, $\lambda_{n+1}-\lambda_n=2D_n$ \emph{provided all
+zeros satisfy $\beta=\tfrac12$}. Also
 \begin{equation*}
 \lambda_1=1-\frac{\gamma_E}{2}-\frac12\log(4\pi)\approx0.0231>0,
 \end{equation*}
-where $\gamma_E$ is Euler's constant. Therefore, if $D_n>0$ for all $n$, then
-$\lambda_n$ is strictly increasing with $\lambda_1>0$, so $\lambda_n>0$ for all $n$,
-and RH follows by Li's criterion \cite{Li1997}. This chain is the goal of the paper.
+where $\gamma_E$ is Euler's constant. Therefore, under the Riemann Hypothesis,
+$D_n>0$ for all $n$ implies that $\lambda_n$ is strictly increasing with
+$\lambda_1>0$, hence $\lambda_n>0$ for all $n$. The identity \eqref{eq:lambda-D}
+is conditional on $\beta=\tfrac12$; without this assumption the positivity of $D_n$
+does not imply RH (Section~\ref{sec:conclusion}). We emphasize that the positivity
+of $D_n$ itself is proved unconditionally in this paper.
 
 \section{The telescoping identity and the vanishing integral}
 \label{sec:telescope}
@@ -431,21 +443,37 @@ For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $44\le n<100$, direct numerica
 verification ($D_n>0$ with margin $\ge0.14$; Section~7). For $n\ge100$, Theorem~\ref{thm:large-n}.
 \end{proof}
 
-\section{Conclusion: the Riemann Hypothesis}
+\section{Connection to Li's criterion: an honest appraisal}
 \label{sec:conclusion}
 
-\begin{theorem}
-\label{thm:RH}
-The Riemann Hypothesis is true.
-\end{theorem}
+For completeness we record the precise relation between $D_n$ and the Li
+coefficients. The Li coefficients are defined for all zeros $\rho=\beta+i\gamma$
+(unconditionally) by
+\begin{equation*}
+\lambda_n:=\sum_\rho\Big[1-\Big(1-\frac1\rho\Big)^n\Big],
+\end{equation*}
+and Bombieri--Lagarias \cite{BL1999} proved that $\lambda_n\ge0$ for all $n$
+holds if and only if RH. The difference is
+\begin{equation*}
+\lambda_{n+1}-\lambda_n=\sum_\rho\Big(1-\frac1\rho\Big)^n\frac1\rho.
+\end{equation*}
+For a zero on the critical line, $\rho=\tfrac12+i\gamma$, one has
+$|1-1/\rho|=1$ and $\arg(1-1/\rho)=\pi-2\arctan(2\gamma)=\theta(\gamma)$, whence
+\begin{equation*}
+\lambda_{n+1}-\lambda_n=2D_n\qquad\text{(if all zeros satisfy }\beta=\tfrac12\text{)}.
+\end{equation*}
+Thus, \emph{under the Riemann Hypothesis}, $D_n>0$ is exactly the statement that
+the Li sequence is strictly increasing (with $\lambda_1=0.0231\ldots>0$), and the
+positivity of $D_n$ is consistent with RH.
 
-\begin{proof}
-By \eqref{eq:lambda-D}, $\lambda_{n+1}-\lambda_n=2D_n$. By
-Corollary~\ref{cor:D-pos}, $D_n>0$ for all $n$, hence $\lambda_{n+1}>\lambda_n$ for all $n$:
-the Li sequence is strictly increasing. Since $\lambda_1=0.0231\ldots>0$, we have
-$\lambda_n>0$ for all $n\ge1$. Li's criterion \cite{Li1997} states that
-$\lambda_n>0$ for all $n$ is equivalent to RH. Therefore RH holds.
-\end{proof}
+\emph{However}, the identity $\lambda_{n+1}-\lambda_n=2D_n$ relies on
+$|1-1/\rho|=1$, which holds if and only if $\beta=\tfrac12$. If RH were false and
+some zero had $\beta\ne\tfrac12$, then $\lambda_{n+1}-\lambda_n\ne2D_n$ and the
+positivity of $D_n$ would not imply positivity of the Li coefficients. Therefore
+\emph{this paper does not prove the Riemann Hypothesis}. The contributions are:
+(a) the telescoping identity, (b) the unconditional positivity of $D_n$, and (c) the
+numerical verification, together with the conditional connection to Li's criterion
+noted above.
 
 \section*{Numerical verification}
 \label{sec:numerics}
