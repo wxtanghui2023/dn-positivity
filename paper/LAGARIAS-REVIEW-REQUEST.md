@@ -55,7 +55,7 @@ analytic bound) has no gap. Numerical verification covers n ≤ 2×10^4.
 The manuscript, code, and data are openly available:
 - Manuscript: (attached PDF, 7 pages)
 - GitHub: https://github.com/wxtanghui2023/dn-positivity
-- DOI: 10.5281/zenodo.22042837
+- DOI: 10.5281/zenodo.22044629
 
 I would be most grateful for any comments, corrections, or verification you
 can provide. Given the significance of the claim, I welcome the most

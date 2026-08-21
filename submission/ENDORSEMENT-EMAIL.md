@@ -15,7 +15,7 @@ Dear Prof. [Last name],
 I am writing to request your endorsement for an arXiv submission in
 mathematical number theory (math.NT).
 
-I have posted a manuscript on Zenodo (DOI: 10.5281/zenodo.22042837)
+I have posted a manuscript on Zenodo (DOI: 10.5281/zenodo.22044629)
 discovering a telescoping identity for Riemann zeta zeros:
 
     g_n(t) = cos(nθ) - cos((n+1)θ),   θ(t) = π - 2arctan(2t)
@@ -37,7 +37,7 @@ The work relates to explicit formulas in the style of Murty–Rath
 and data are openly available at:
 
     https://github.com/wxtanghui2023/dn-positivity
-    DOI: 10.5281/zenodo.22042837
+    DOI: 10.5281/zenodo.22044629
 
 Would you be willing to review the manuscript and, if you find it
 sound, provide an endorsement for an arXiv math.NT submission?

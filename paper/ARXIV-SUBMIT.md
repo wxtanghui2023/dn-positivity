@@ -20,7 +20,7 @@
 - **分类**: math.NT (Number Theory)
 - **摘要**: 论文 Abstract 段（LaTeX 源中含）
 - **关键词**: Riemann hypothesis; Li's criterion; zeta zeros; telescoping identity
-- **DOI**: 10.5281/zenodo.22042837
+- **DOI**: 10.5281/zenodo.22044629
 - **Comments**: 7 pages; code and data at github.com/wxtanghui2023/dn-positivity
 
 ## 提交步骤

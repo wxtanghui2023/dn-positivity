@@ -2,7 +2,7 @@
 
 > 状态：✅ Lagarias 邮件已发送（2026-08-21 16:55）
 > 日期：2026-08-21 | 作者：Hui Tang（单人）
-> 仓库：https://github.com/wxtanghui2023/dn-positivity | DOI: 10.5281/zenodo.22042837
+> 仓库：https://github.com/wxtanghui2023/dn-positivity | DOI: 10.5281/zenodo.22044629
 
 ---
 
@@ -46,7 +46,7 @@ The proof is unconditional (no RH assumption). All code, data, and
 documentation are openly available:
 
     GitHub: https://github.com/wxtanghui2023/dn-positivity
-    Zenodo: DOI 10.5281/zenodo.22042837
+    Zenodo: DOI 10.5281/zenodo.22044629
 
 I am explicitly asking you to look for gaps or errors, not to endorse the
 result. Attached please find the complete proof: a 7-page paper
@@ -90,7 +90,7 @@ establishes:
 The proof is unconditional. Complete documentation, code, and data:
 
     GitHub: https://github.com/wxtanghui2023/dn-positivity
-    Zenodo: DOI 10.5281/zenodo.22042837
+    Zenodo: DOI 10.5281/zenodo.22044629
 
 I am asking you specifically to find errors or gaps. Attached please
 find the complete proof: a 7-page paper (paper-main.pdf) and the full

@@ -3,7 +3,7 @@
 **Author:** Hui Tang (Independent Researcher)
 **Date:** August 21, 2026
 **Status:** Companion results to the RH proof (dn-positivity project)
-**Repo:** https://github.com/wxtanghui2023/dn-positivity | DOI: 10.5281/zenodo.22042837
+**Repo:** https://github.com/wxtanghui2023/dn-positivity | DOI: 10.5281/zenodo.22044629
 
 *These results follow from the Riemann Hypothesis (proved in the companion paper).
 All numerical claims verified with the first $10^5$ zeros of Odlyzko.*
