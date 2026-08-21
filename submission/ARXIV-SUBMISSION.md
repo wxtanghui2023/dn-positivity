@@ -17,7 +17,7 @@
 ## 提交信息（准备填表用）
 
 - **标题**：On the Positivity of D_n = Σ_γ g_n(γ) for a Telescoping Test Function of the Riemann Zeta Zeros
-- **作者**：Hui Tang（Independent Researcher）；Ning Tang（Harbin Institute of Technology, Shenzhen）
+- **作者**：Hui Tang（Independent Researcher）
 - **分类**：math.NT（Number Theory）
 - **摘要**：见 paper-arxiv.tex 或 EN.md 的 Abstract 段
 - **关键词**：Riemann zeta zeros; explicit formula; positivity; telescoping identity

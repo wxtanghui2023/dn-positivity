@@ -64,7 +64,6 @@ rigorous scrutiny.
 With respect and thanks,
 Hui Tang
 [Email] [Affiliation: Independent Researcher]
-[Co-author: Ning Tang, Harbin Institute of Technology, Shenzhen]
 ```
 
 ---

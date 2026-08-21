@@ -62,7 +62,7 @@ Thank you for your consideration.
 
 Sincerely,
 Hui Tang (Independent Researcher)
-Ning Tang (Harbin Institute of Technology, Shenzhen)
+Hui Tang (Independent Researcher)
 [Emails]
 ```
 
