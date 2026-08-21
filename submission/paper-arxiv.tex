@@ -556,7 +556,17 @@ and low-frequency parts that cancel to high order (numerically
 \(M(T)\)-boundedness route (double integration by parts via
 \(M(T)=\int_0^T S\)) fails: \(\int|g_n''|\,dt\) grows like \(n\)
 (\(4 \to 100 \to 1688\) for \(n=1000,5000,20000\)), so that path gives
-only \(O(n)\). The correct mechanism is \textbf{oscillation
+only \(O(n)\).
+
+\textbf{Two favorable facts for the oscillation route.} (i) The total
+variation of the \emph{continuous} \(S\) (sampled between zeros)
+saturates: \(V(S) \approx 1000\) for \(T\) from \(3\times10^3\) to
+\(7.5\times10^4\) (\(10^5\) zeros), i.e.~\(V(S) = O(\log T)\)-scale, not
+\(O(T\log T)\) --- the smooth part of \(\theta_{RS}\) absorbs the
+density growth, so \(S\) is of bounded-variation type at logarithmic
+scale. (ii) The measured ratio \(|\Sigma\varepsilon|/\log n \le 0.018\)
+for \(n \in [10^3, 2\times10^4]\) --- three orders below the closing
+margin \(0.1934\). The correct mechanism is \textbf{oscillation
 cancellation} of \(S\) against \(g_n'\) (van der Corput with the
 explicit phase \(\theta(t) = \pi-2\arctan(2t)\)), for which the phase is
 explicit and favorable; this is the natural research avenue.
