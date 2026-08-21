@@ -1,6 +1,6 @@
 # 预审请求：最终版邮件（Lagarias + Conrad）
 
-> 状态：材料已就绪，**发送需唐先生操作**（外部邮箱）
+> 状态：✅ Lagarias 邮件已发送（2026-08-21 16:55）
 > 日期：2026-08-21 | 作者：Hui Tang（单人）
 > 仓库：https://github.com/wxtanghui2023/dn-positivity | DOI: 10.5281/zenodo.22040623
 
@@ -62,7 +62,7 @@ Thank you for your time.
 
 Sincerely,
 Hui Tang (Independent Researcher)
-[Your email]
+wxtanghui@gmail.com
 ```
 
 ---
@@ -101,7 +101,7 @@ Thank you for considering this request.
 
 Sincerely,
 Hui Tang (Independent Researcher)
-[Your email]
+wxtanghui@gmail.com
 ```
 
 ---
@@ -112,7 +112,7 @@ Hui Tang (Independent Researcher)
 - [ ] 附件 2：`paper/proof-details.pdf`（**完整证明，所有常数显式**）
 - [ ] （可选）`docs/theorem4-unconditional.md`（研究笔记）
 - [ ] 署名：**Hui Tang 单人**（勿含 Ning Tang）
-- [ ] 填 `[Your email]`
+- [ ] 填 `wxtanghui@gmail.com`
 - [ ] 先发 Lagarias；48h 无回复再发 Conrad（或同时发）
 - [ ] 分别单独发送，不群发
 
