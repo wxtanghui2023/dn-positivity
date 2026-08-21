@@ -9,7 +9,7 @@
 | # | 路线 | 失败原因 |
 |---|---|---|
 | 1 | M(T) 桥接（M 有界 → 双重 IBP）| **M(T) 实际增长**（M(74921)≈−200），非 O(1) 非 O(log T) |
-| 2 | Littlewood "M(T)=O(log T)" | 引用不成立（数值确认 M 增长）|
+| 2 | Littlewood "M(T)=O(log T)" | 定理正确但隐含常数大（M/log T ≈ -17.8 @ 74921），对闭合论证不可用 |
 | 3 | Cauchy-Schwarz + Selberg 二阶矩 | ∫f'² ~ n²，∫S² ~ n log log n → O(n^1.5) |
 | 4 | 逐块 van der Corput | 逐块和丢失跨块抵消，常数 0.7-1.4 > 0.1934 |
 | 5 | 全局 van der Corput | λ_min ~ π²/n，g(γ₁) ~ O(n)，常数 ~ n² 爆炸 |
