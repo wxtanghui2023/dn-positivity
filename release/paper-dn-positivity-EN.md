@@ -244,6 +244,18 @@ $$\boxed{\,D_n = \sum_\gamma \frac{\gamma\sin(n\theta(\gamma)) + \tfrac12\cos(n\
 - Environment: python3 + numpy + scipy + mpmath (`pip3 install --break-system-packages mpmath`).
 - Key scripts (`dn-project/scripts/`): `dn_telescope.py` (identity), `dn_realdef*.py` (definitions), `dn_region.py` (phase split), `dn_close.py`/`dn_final.py` (closing), `audit_*.py` (audit).
 
+## Data Availability Statement
+
+All code, data, and documentation supporting the findings of this study are openly available in the GitHub repository `wxtanghui2023/dn-positivity` at https://github.com/wxtanghui2023/dn-positivity, archived on Zenodo with DOI [10.5281/zenodo.22040623](https://doi.org/10.5281/zenodo.22040623). The zero data (first $10^5$ non-trivial zeros of the Riemann zeta function) are included in the repository and were originally obtained from A. M. Odlyzko's public tables (https://www.dtc.umn.edu/~odlyzko/zeta_tables/).
+
+## Acknowledgements
+
+The authors thank the maintainers of the Odlyzko zero tables, mpmath, SciPy, and NumPy. This work was conducted as an independent research project; the preprint version is archived with DOI 10.5281/zenodo.22040623.
+
+## Disclosure statement
+
+The authors report there are no competing interests to declare.
+
 ## References
 
 1. E. C. Titchmarsh, *The Theory of the Riemann Zeta-Function*, 2nd ed., Oxford, 1986.
