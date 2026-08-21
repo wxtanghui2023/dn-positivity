@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.8.2)  21 AUG 2026 16:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2026.8.2)  21 AUG 2026 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,15 +459,21 @@ msy/m/n/10.95 j [][] [] \OML/cmm/m/it/10.95 u g[]\OT1/cmr/m/n/10.95 (\OML/cmm/m
 
  []
 
-[6] [7] (./paper-main.aux)
+[6]
+Overfull \hbox (85.98543pt too wide) in paragraph at lines 451--455
+\OT1/cmr/m/n/10.95 All code and data sup-port-ing this work are openly avail-ab
+le at \OT1/cmtt/m/n/10.95 https://github.com/wxtanghui2023/dn-positivity
+ []
+
+[7] (./paper-main.aux)
 Package rerunfilecheck Info: File `paper-main.out' has not changed.
 (rerunfilecheck)             Checksum: 7E6F95DC839685C6F3AE7FF935E53C6B;2286.
  ) 
 Here is how much of TeX's memory you used:
- 9804 strings out of 478051
- 150370 string characters out of 5840944
+ 9807 strings out of 478051
+ 150398 string characters out of 5840944
  1874330 words of memory out of 5000000
- 29766 multiletter control sequences out of 15000+600000
+ 29767 multiletter control sequences out of 15000+600000
  525701 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,76p,361b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -491,10 +497,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb>
-Output written on paper-main.pdf (7 pages, 276214 bytes).
+Output written on paper-main.pdf (7 pages, 277495 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
