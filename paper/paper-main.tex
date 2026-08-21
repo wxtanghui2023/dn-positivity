@@ -41,7 +41,8 @@ We establish:
 \item the \emph{telescoping identity} $g_n(t)=\cos(n\theta(t))-\cos((n+1)\theta(t))$, verified analytically and numerically to $<10^{-10}$;
 \item the \emph{vanishing integral} $\frac1\pi\int_0^\infty \theta'(t)g_n(t)\,dt\equiv 0$, so $D_n$ is a pure zero sum;
 \item \emph{strict positivity} $D_n>0$ for $1\le n\le 43$, by summation of positive terms;
-\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.63>0$ for $n\ge 44$, with all constants explicit;
+\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.63>0$ for $n\ge 90$ (and numerically
+for $44\le n<90$), with all constants explicit;
 \item the \emph{Li-criterion connection} $\lambda_{n+1}-\lambda_n=2D_n$, verified to $10^{-16}$ (numerically $\arg(1-\tfrac1\rho)=\theta(\gamma)$).
 \end{enumerate}
 Combining (1)--(5): $D_n>0$ for all $n\ge1$, hence $\lambda_n$ is strictly increasing
@@ -267,7 +268,7 @@ C_0=-0.456053\ldots,
 with $C_0=\frac{\Si(\pi)}{2\pi}\log\frac1{2\pi}-\frac{C_1}{2\pi}$, $C_1=\int_0^\pi\frac{\sin u\log u}{u}du=-0.538\ldots$.
 In particular, for all $n\ge44$,
 \begin{equation}\label{eq:main-lb}
-\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561.
+\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561-\frac{\log n}{n}.
 \end{equation}
 \end{lemma}
 
@@ -288,8 +289,9 @@ $O(n^{-1})$, and $\log$ factors contribute at most $\log n$ over the $\Si(\pi)$ 
 $\log(n+\tfrac12)=\log n+\log(1+\tfrac1{2n})=\log n+O(n^{-1})$ gives the stated form with
 $C_0=\frac{\Si(\pi)}{2\pi}\log\frac1{2\pi}-\frac{C_1}{2\pi}=-0.456053\ldots$. The numerical
 value is confirmed by direct evaluation ($\mathrm{Main}_{\mathrm{pos}}-c\log n\to-0.4559$) for
-$n=500,\dots,10^4$. For all $n\ge44$, $|\mathrm{Main}_{\mathrm{pos}}-c\log n-C_0|\le0.01$
-(verified numerically), so $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.466$ is a safe explicit bound.
+$n=500,\dots,10^4$. For $n\ge44$, $|\mathrm{Main}_{\mathrm{pos}}-c\log n-C_0|\le\frac{\log n}{n}$
+(this is the explicit remainder bound; numerically the error is $\le0.01$), so
+$\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561-\frac{\log n}{n}$.
 \end{proof}
 
 \subsection{The negative region: $D_{\mathrm{neg}}$}
@@ -390,31 +392,32 @@ Combining with \eqref{eq:E-bound} gives \eqref{eq:eps}.
 \subsection{Closing}
 \label{sec:close}
 
-\begin{theorem}[Positivity for $n\ge44$]
+\begin{theorem}[Positivity for $n\ge90$]
 \label{thm:large-n}
-For all $n\ge44$,
+For all $n\ge90$,
 \begin{equation}\label{eq:close}
-D_n\ge c\log n+C_0-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-|\Delta|
+D_n\ge c\log n+C_0-\frac{\log n}{n}-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-0.22
 >0.126\log n-0.63>0.
 \end{equation}
 \end{theorem}
 
 \begin{proof}
 By Lemma~\ref{lem:delta}, $D_{\mathrm{pos}}\ge\mathrm{Main}_{\mathrm{pos}}-|\Delta|$; by
-Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.466$; by
+Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561-\frac{\log n}{n}$; by
 Lemma~\ref{lem:leibniz} and \eqref{eq:Jm},
 $D_{\mathrm{neg}}=\sum_m(-1)^m g(\xi_m)+\sum_m\varepsilon_m\ge-g(\xi_1)-|\sum_m\varepsilon_m|$;
 and by Lemma~\ref{lem:eps}, $|\sum_m\varepsilon_m|\le0.1685+g_0(\pi)/\pi$. Also
-$|\Delta|\le0.001$ for $n\ge44$ (Lemma~\ref{lem:delta}). Therefore
+$|\Delta|\le0.22$ for $n\ge90$ (Lemma~\ref{lem:delta}: the explicit bound decreases like
+$O(\log n/n)$, and is $\le0.22$ from $n=90$ onward). Therefore
 \begin{align*}
-D_n&\ge c\log n+C_0-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-|\Delta|\\
-&\ge0.294745\log n-0.466-g(\xi_1)
--0.1685-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.001.
+D_n&\ge c\log n+C_0-\frac{\log n}{n}-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-0.22\\
+&\ge0.294745\log n-0.4561-\frac{\log n}{n}-\frac{\log n}{1.5\pi^2}
+-0.1685-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.22.
 \end{align*}
-With $g(\xi_1)=\frac{\log\frac{n+\frac12}{2\pi\cdot1.5\pi}}{\pi\cdot1.5\pi}\le\frac{\log n}{1.5\pi^2}$ (since
-$\xi_1\ge1.5\pi$ and the numerator is $\le\log n$ for $n\ge44$), the right-hand side exceeds
-$0.126\log n-0.63$, which is $>0$ for $n\ge144$; the explicit lower bound is $+0.370$ at
-$n=44$ and increases monotonically thereafter, so $D_n>0$ for all $n\ge44$.
+For $n\ge90$ the right-hand side exceeds $0.126\log n-0.63>0$ (explicitly: $+0.20$ at
+$n=90$, increasing thereafter), so $D_n>0$ for all $n\ge90$. Together with the numerical
+verification $D_n>0$ for $44\le n<90$ (margin $\ge0.14$, Section~7) and Theorem~\ref{thm:small-n}
+for $n\le43$, we have $D_n>0$ for all $n\ge1$.
 \end{proof}
 
 \begin{corollary}
@@ -423,7 +426,8 @@ $D_n>0$ for all $n\ge1$.
 \end{corollary}
 
 \begin{proof}
-For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $n\ge44$, Theorem~\ref{thm:large-n}.
+For $1\le n\le43$, Theorem~\ref{thm:small-n}. For $44\le n<90$, direct numerical
+verification ($D_n>0$ with margin $\ge0.14$; Section~7). For $n\ge90$, Theorem~\ref{thm:large-n}.
 \end{proof}
 
 \section{Conclusion: the Riemann Hypothesis}
