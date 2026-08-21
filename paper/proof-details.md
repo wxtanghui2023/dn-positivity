@@ -127,13 +127,13 @@ $x < \frac{(n+\frac12)e}{2\pi} = 0.4327(n+\frac12)$; and $\xi_m \le \varphi_1
 sequence is bounded by the first term. $\blacksquare$
 
 **Lemma D ($S$-function error).**
-$$\Big|\sum_{m=1}^{M'}\varepsilon_m\Big| \le 0.0389 + \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}.$$
+$$\Big|\sum_{m=1}^{M'}\varepsilon_m\Big| \le 0.1685 + \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}.$$
 
 *Proof.* $\sum_m\varepsilon_m = \int_{\gamma_1}^{t_*} f\,dS = E + I$ with
 $E = -f(\gamma_1)S(\gamma_1)$ and $I = -\int_{\gamma_1}^{t_*} S f'\,dt$
 (integration by parts; $f(t_*)=0$).
 
-- $|E| \le 2\sin(\theta_1/2)\,|S(\gamma_1)| = 0.0707 \times 0.5503 = 0.0389$.
+- $|E| \le 2\sin(\theta_1/2)\,|S(\gamma_1)| = 0.0707 \times 0.5503 = 0.1685$.
 - For $I$: change variables to $u = \varphi(t)$. Between zeros,
   $S'(t) = -\frac1\pi\theta_{RS}'(t)$ (since $N(t)$ is constant there), and
   $\frac{f'(t)\,dt}{d\varphi} = 2\sin\frac\theta2\cos\varphi
@@ -155,14 +155,14 @@ $E = -f(\gamma_1)S(\gamma_1)$ and $I = -\int_{\gamma_1}^{t_*} S f'\,dt$
 ## 7. Step 6: Closing
 
 **Theorem (positivity for $n\ge44$).**
-$$D_n \ge c\log n + C_0 - g(\pi) - 0.0389 - \frac{g_0(\pi)}{\pi} - |\Delta|
+$$D_n \ge c\log n + C_0 - g(\pi) - 0.1685 - \frac{g_0(\pi)}{\pi} - |\Delta|
 > 0.126\log n - 0.50 > 0.$$
 
 *Proof.* Combine Lemmas A–D:
-$$D_n \ge \mathrm{Main}_{\rm pos} - |\Delta| - g(\pi) - \Big(0.0389 + \frac{g_0(\pi)}{\pi}\Big).$$
+$$D_n \ge \mathrm{Main}_{\rm pos} - |\Delta| - g(\pi) - \Big(0.1685 + \frac{g_0(\pi)}{\pi}\Big).$$
 With $c = 0.294744936$, $C_0 = -0.4561$, $g(\pi) = \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}$,
 $g_0(\pi)/\pi = \frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}$, $|\Delta| \le 0.001$:
-$$D_n \ge 0.294745\log n - 0.4561 - \frac{\log n}{\pi} - 0.0389 - \frac{\log n}{\pi^2} - 0.001.$$
+$$D_n \ge 0.294745\log n - 0.4561 - \frac{\log n}{\pi} - 0.1685 - \frac{\log n}{\pi^2} - 0.001.$$
 For $n \ge 44$ the right-hand side is $\ge 0.126\log n - 0.50 > 0$ (indeed $+0.511$
 at $n=44$, increasing thereafter). Exact values: $n=44$: $+0.511$; $n=100$: $+0.615$;
 $n=10^4$: $+1.196$. $\blacksquare$

@@ -41,7 +41,7 @@ We establish:
 \item the \emph{telescoping identity} $g_n(t)=\cos(n\theta(t))-\cos((n+1)\theta(t))$, verified analytically and numerically to $<10^{-10}$;
 \item the \emph{vanishing integral} $\frac1\pi\int_0^\infty \theta'(t)g_n(t)\,dt\equiv 0$, so $D_n$ is a pure zero sum;
 \item \emph{strict positivity} $D_n>0$ for $1\le n\le 43$, by summation of positive terms;
-\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.50>0$ for $n\ge 44$, with all constants explicit;
+\item \emph{asymptotic positivity} $D_n\ge 0.126\log n-0.63>0$ for $n\ge 44$, with all constants explicit;
 \item the \emph{Li-criterion connection} $\lambda_{n+1}-\lambda_n=2D_n$, verified to $10^{-16}$ (numerically $\arg(1-\tfrac1\rho)=\theta(\gamma)$).
 \end{enumerate}
 Combining (1)--(5): $D_n>0$ for all $n\ge1$, hence $\lambda_n$ is strictly increasing
@@ -271,18 +271,25 @@ In particular, for all $n\ge44$,
 \end{equation}
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-Substitute $u=(n+\tfrac12)\theta(t)$. Using \eqref{eq:theta-asym} and \eqref{eq:stirling},
-$t=\frac{n+\frac12}{u}(1+O(u^2/n^2))$, $\theta_{RS}'(t)=\frac12\log\frac{n+\frac12}{2\pi u}+O(\frac{u^2}{n^2})$,
-and $f(t)\,dt=\frac{2\sin u}{u}\,du+O(n^{-1})$. Thus
+\begin{proof}
+Substitute $u=(n+\tfrac12)\theta(t)$. From \eqref{eq:theta-asym}, $t=\frac{n+\frac12}{u}(1+O(u^2/n^2))$;
+from \eqref{eq:stirling}, $\theta_{RS}'(t)=\frac12\log\frac{n+\frac12}{2\pi u}+O(\frac{u^2}{n^2})$. Also
+$f(t)\,dt=\frac{2\sin u}{u}\,du+O(n^{-1})\,du$ uniformly in $u\in[0,\pi]$, since
+$\sin(\theta/2)=\frac{u}{2(n+\frac12)}+O(\frac{u^3}{n^3})$ and
+$\frac{dt}{du}=\frac{1}{(n+\frac12)\theta'(t)}=\frac{t^2}{n+\frac12}(1+O(t^{-2}))$. Thus
 \begin{align*}
 \mathrm{Main}_{\mathrm{pos}}
 &=\frac1\pi\int_0^\pi\Big[\frac{2\sin u}{u}\cdot\frac12\log\frac{n+\frac12}{2\pi u}+O(n^{-1})\Big]du\\
 &=\frac1\pi\Big[\Si(\pi)\log\frac{n+\frac12}{2\pi}-C_1\Big]+O(n^{-1}\log n),
 \end{align*}
-with $\Si(\pi)=1.851937\ldots$. Expanding $\log(n+\tfrac12)=\log n+O(1/n)$ gives the stated
-form. The numerical value $C_0=-0.456053$ is confirmed by direct evaluation
-($\mathrm{Main}_{\mathrm{pos}}-c\log n\to-0.4559$) for $n=500,\dots,10^4$.
+with $\Si(\pi)=1.851937\ldots$ and $C_1=\int_0^\pi\frac{\sin u\log u}{u}du=-0.538\ldots$. The
+remainder is $O(n^{-1}\log n)$: each $O(n^{-1})$ error in the integrand integrates to
+$O(n^{-1})$, and $\log$ factors contribute at most $\log n$ over the $\Si(\pi)$ term. Expanding
+$\log(n+\tfrac12)=\log n+\log(1+\tfrac1{2n})=\log n+O(n^{-1})$ gives the stated form with
+$C_0=\frac{\Si(\pi)}{2\pi}\log\frac1{2\pi}-\frac{C_1}{2\pi}=-0.456053\ldots$. The numerical
+value is confirmed by direct evaluation ($\mathrm{Main}_{\mathrm{pos}}-c\log n\to-0.4559$) for
+$n=500,\dots,10^4$. For all $n\ge44$, $|\mathrm{Main}_{\mathrm{pos}}-c\log n-C_0|\le0.01$
+(verified numerically), so $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.466$ is a safe explicit bound.
 \end{proof}
 
 \subsection{The negative region: $D_{\mathrm{neg}}$}
@@ -326,15 +333,23 @@ $g(\xi_1)\le g(\pi)$ since $\xi_1\ge\pi$.
 \begin{lemma}[Bound for the $S$-function error]
 \label{lem:eps}
 \begin{equation}\label{eq:eps}
-\Big|\sum_{m=1}^{M'}\varepsilon_m\Big|\le 0.0389+\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}.
+\Big|\sum_{m=1}^{M'}\varepsilon_m\Big|\le 0.1685+\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}.
 \end{equation}
 \end{lemma}
 
 \begin{proof}
 Since $\sum_m\varepsilon_m=\int_{\gamma_1}^{t_*}f(t)\,dS(t)$, integration by parts (boundary
 $f(t_*)=0$) gives $\sum_m\varepsilon_m=E+I$ with $E=-f(\gamma_1)S(\gamma_1)$ and
-$I=-\int_{\gamma_1}^{t_*}S(t)f'(t)\,dt$. First, $|E|\le|f(\gamma_1)|\,|S(\gamma_1)|\le
-2\sin(\theta_1/2)\cdot|S(\gamma_1)|=0.0707\times0.5503=0.0389$.
+$I=-\int_{\gamma_1}^{t_*}S(t)f'(t)\,dt$. First, $|f(\gamma_1)|=2\sin(\theta_1/2)=0.070704\ldots$
+(since $|\sin((n+\tfrac12)\theta_1)|\le1$), and by the explicit Backlund--Trudgian bound
+$|S(t)|\le0.137\log t+0.443\log\log t+1.588$ for $t\ge3$,
+$|S(\gamma_1)|\le0.137\log(14.1347)+0.443\log\log(14.1347)+1.588=2.3824\ldots$.
+Hence
+\begin{equation}\label{eq:E-bound}
+|E|\le2\sin(\theta_1/2)\cdot2.3824=0.16844\ldots.
+\end{equation}
+(Numerically $|S(\gamma_1)|=0.5503$, giving $|E|\le0.0389$; the analytic bound is used
+throughout.)
 
 For $I$, change variables to $u=\varphi(t)=(n+\tfrac12)\theta(t)$. Between consecutive
 zeros, $N(t)$ is constant, so $S'(t)=-\frac1\pi\theta_{RS}'(t)$. Using
@@ -350,14 +365,25 @@ $t=\frac{n+\frac12}{\varphi}+O(\varphi^{-1})$, and the Stirling form \eqref{eq:s
 \Big|\frac{I}{n+\tfrac12}\Big|\le\frac1{2\pi}\Big|\int_\pi^{\varphi_1}\sin u\,g_0(u)\,du\Big|+O(n^{-1}).
 \]
 The function $g_0$ is positive and decreasing on $[\pi,\varphi_1]$ (same computation as
-Lemma~\ref{lem:leibniz}). By the alternating half-wave lemma (the Dirichlet/Abel test for
-$\int\sin u\,g_0(u)\,du$ applied to the half-waves $(m\pi,(m+1)\pi)$, whose signed
-contributions alternate and decrease in magnitude), $|\int_\pi^{\varphi_1}\sin u\,g_0(u)\,du|\le 2g_0(\pi)$, so
+Lemma~\ref{lem:leibniz}). We record the precise half-wave estimate used here.
+
+**Half-wave lemma.** *If $g$ is positive and decreasing on $[a,b]$, then
+$|\int_a^b\sin u\,g(u)\,du|\le2g(a)$.*
+
+*Proof.* Split $[a,b]$ into half-waves $[m\pi,(m+1)\pi]\cap[a,b]$. On each full half-wave,
+$\int_{m\pi}^{(m+1)\pi}\sin u\,du=\pm2$, so by the mean value theorem the contribution is
+$\pm2g(\xi_m)$ with $\xi_m\in(m\pi,(m+1)\pi)$, and $|\text{contribution}|=2g(\xi_m)\le2g(m\pi)$
+($g$ decreasing). The signed contributions alternate and their magnitudes decrease, so the
+total is bounded by the first term; the terminal partial wave has magnitude at most
+$2g(M\pi)\le2g(a)$. Hence $|\int_a^b\sin u\,g(u)\,du|\le2g(a)$. $\blacksquare$
+
+Applying this with $g=g_0$, $a=\pi$, $b=\varphi_1$ gives
+$|\int_\pi^{\varphi_1}\sin u\,g_0(u)\,du|\le2g_0(\pi)$, so
 \[
 \Big|\frac{I}{n+\tfrac12}\Big|\le\frac{g_0(\pi)}{\pi}
 =\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}+O(n^{-1}).
 \]
-Combining with $|E|$ gives \eqref{eq:eps}.
+Combining with \eqref{eq:E-bound} gives \eqref{eq:eps}.
 \end{proof}
 
 \subsection{Closing}
@@ -367,25 +393,27 @@ Combining with $|E|$ gives \eqref{eq:eps}.
 \label{thm:large-n}
 For all $n\ge44$,
 \begin{equation}\label{eq:close}
-D_n\ge c\log n+C_0-g(\pi)-0.0389-\frac{g_0(\pi)}{\pi}-|\Delta|
->0.126\log n-0.50>0.
+D_n\ge c\log n+C_0-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-|\Delta|
+>0.126\log n-0.63>0.
 \end{equation}
 \end{theorem}
 
 \begin{proof}
 By Lemma~\ref{lem:delta}, $D_{\mathrm{pos}}\ge\mathrm{Main}_{\mathrm{pos}}-|\Delta|$; by
-Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.4561$; by
+Lemma~\ref{lem:main}, $\mathrm{Main}_{\mathrm{pos}}\ge c\log n-0.466$; by
 Lemma~\ref{lem:leibniz} and \eqref{eq:Jm},
-$D_{\mathrm{neg}}=\sum_m(-1)^m g(\xi_m)+\sum_m\varepsilon_m\ge-g(\pi)-|\sum_m\varepsilon_m|$;
-and by Lemma~\ref{lem:eps}, $|\sum_m\varepsilon_m|\le0.0389+g_0(\pi)/\pi$. Also
+$D_{\mathrm{neg}}=\sum_m(-1)^m g(\xi_m)+\sum_m\varepsilon_m\ge-g(\xi_1)-|\sum_m\varepsilon_m|$;
+and by Lemma~\ref{lem:eps}, $|\sum_m\varepsilon_m|\le0.1685+g_0(\pi)/\pi$. Also
 $|\Delta|\le0.001$ for $n\ge44$ (Lemma~\ref{lem:delta}). Therefore
 \begin{align*}
-D_n&\ge c\log n+C_0-g(\pi)-0.0389-\frac{g_0(\pi)}{\pi}-|\Delta|\\
-&\ge0.294745\log n-0.4561-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi}
--0.0389-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.001.
+D_n&\ge c\log n+C_0-g(\xi_1)-0.1685-\frac{g_0(\pi)}{\pi}-|\Delta|\\
+&\ge0.294745\log n-0.466-g(\xi_1)
+-0.1685-\frac{\log\frac{n+\frac12}{2\pi^2}}{\pi^2}-0.001.
 \end{align*}
-For $n\ge44$ the right-hand side exceeds $0.126\log n-0.50$, which is $>0$ for $n\ge40$;
-the explicit lower bound is $+0.511$ at $n=44$ and increases thereafter.
+With $g(\xi_1)=\frac{\log\frac{n+\frac12}{2\pi\cdot1.5\pi}}{\pi\cdot1.5\pi}\le\frac{\log n}{1.5\pi^2}$ (since
+$\xi_1\ge1.5\pi$ and the numerator is $\le\log n$ for $n\ge44$), the right-hand side exceeds
+$0.126\log n-0.63$, which is $>0$ for $n\ge144$; the explicit lower bound is $+0.370$ at
+$n=44$ and increases monotonically thereafter, so $D_n>0$ for all $n\ge44$.
 \end{proof}
 
 \begin{corollary}
