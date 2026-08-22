@@ -495,3 +495,29 @@ S(γ_k) = N₀(g_k) - N₀(γ_k) - 1, 其中 g_k 是 Gram 点 (θ_RS(g_k)=kπ)
 - P2: 无直接覆盖 (P0 独立) ✓
 - P1: 大数相消 + 振荡抵消 — 研究级卡点
 - 强版本 (Σδ_k=O(1), r(n)=O(1)): 仍开放 (振荡抵消)
+
+## 新无条件结果 (2026-08-22 16:30) — Σδ_k = O(loglogT)
+
+### 关键结构: g = -d(1/N₀')/dt (精确)
+∫S·g dt = -∫S d(1/N₀') = -[S/N₀'] + ∫(1/N₀')dS
+Σδ_k = -[S/N₀'] - ∫S·g dt + O(1)
+
+### 无条件界 (Backlund + 第二中值)
+∫_2^{T₀} S·g dt ≤ C·∫logt·g dt = O(loglogT₀) (Backlund |S|≤Clogt)
+∫_{T₀}^T S·g dt = O(g(T₀)·logT) → 0 (第二中值+Littlewood, T₀=T^α)
+→ ∫S·g dt = O(loglogT)
+→ Σδ_k = O(loglogT) (无条件!)
+
+### 数值
+- Σδ_k = -3.7 稳定 (O(1) 数值, N=1e5~2e6 不变)
+- loglogT = 2.2~2.5 (增长极慢)
+- |Σδ_k| ≤ C·loglogT 成立 (C~1.5)
+
+### 无条件界阶梯
+- mean(S) = 1/2 + o(1): ✅ 无条件定理
+- Σδ_k = O(loglogT): ✅ 无条件 (新)
+- r(n) = O(1): ❌ 需加权振荡 (f·N'·δ 控制, 研究级)
+
+### 差距
+- 数值 O(1) vs 无条件 O(loglogT): 需振荡抵消
+- r(n) 需 f·N'·δ 加权和: N'~logt 增长, Abel 给 O(logT·loglogT) 太松
