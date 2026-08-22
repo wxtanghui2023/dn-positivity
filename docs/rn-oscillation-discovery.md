@@ -70,6 +70,15 @@ $$\lambda_n = 4\sum_{\gamma>0}\sin^2(n\theta_\gamma), \quad \theta_\gamma = \arc
 5. **子结构**：n=750-850 宽波谷（深度 −6.2，宽度 ~100）；n=2000 局部峰 +11.5
 6. 与 8/21 深夜 Stieltjes dps=80 的 O(1) 结论**一致**（n≤250 尾部极小，无 bug 影响）
 
+### 4.3 修正后统计画像（rn_stats_true.py，n=50-3000 步长10）
+
+- **基本统计**：范围 [−10.3, +11.5]，均值 +1.8，std 3.4，偏度 −0.49，峰度 +1.12
+- **FFT 主频（修正后）**：周期 ~156、90、211、185（**中短周期**）——之前的 ~1950 大周期是 bug 假象
+- **自相关**：lag-1=0.91（强平滑漂移）、lag-2=0.67、lag-10=−0.38（振荡）、lag-20≈0
+- **周期-2 检查（Voros 2022）**：无结构（偶/奇子序列均值差 0.018，差分符号交替 0.184）
+- **游程**：36 vs 随机期望 109（长程相关，最长 31）
+- **极值**：最深谷 n=1870 (−10.3)、n=2500 (−6.6)、n=790 (−6.1)；最高峰 n=2000 (+11.5)、n=860 (+9.0)、n=2440 (+7.1)
+
 ### 4.3 数值验证（v2 修正后重新确认）
 
 1. **截断估计精确**：多级子集验证实际尾部 vs 估计差 0.0000
@@ -115,6 +124,7 @@ $$\lambda_n = 4\sum_{\gamma>0}\sin^2(n\theta_\gamma), \quad \theta_\gamma = \arc
 | `goldbach/rn_decomp2.py` | γ<n vs γ>n 分解 |
 | `goldbach/rn_boundary.py` | 边界效应/密度验证 |
 | `goldbach/rn_osc_source.py` | 振荡来源分解（含 rn_osc_source 逻辑）|
+| `goldbach/rn_stats_true.py` | **修正后完整统计画像（FFT/自相关/周期2/游程）** |
 | `goldbach/err_assess.py` | 误差严格评估 + 交叉验证 |
 | `goldbach/rn_extend.py` | Stieltjes dps=100（n>300 崩溃）|
 | `goldbach/rn_stieltjes800.py` | Stieltjes dps=200（太慢，终止）|
