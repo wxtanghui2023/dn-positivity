@@ -89,6 +89,14 @@
 - A_k = "有界反持久随机游走"（H=0.16）
 - 频谱：A_k 高频（周期 3）+ Δw 低频（单调）——正交性（全局 0——分块 −0.61）
 
+### 发现 12-17（19:30-20:05——GLSS25/GUE/排斥势）
+- **弱化目标**：Arias ℓ² 只需 r(n)=O(n^{1/2−ε})——数值 α≈0.18（余量大）——但证明仍 RH
+- **二阶反持久不存在**：δ 二阶矩 O(block)（Tsang/Selberg 无条件）——A_j 部分和 ~√k 不可避免
+- **GLSS25**：PCC ⟹ 100% 临界线（S 矩桥梁——无条件方向）
+- **长程刚性**：1+2Σρ ≈ 0（99.99% 方差压缩——Bourgade/Odlyzko/Berry-Keating 连接）
+- **排斥势**：ζ 势凹（φ''<0）vs GUE 凸——凸性方法不适用——GUE 移植关闭
+- **GLSS25 移植终点**：Σ(S_j−½)=O(1) ⟺ M(T)=O(1)（8/23 已知墙）
+
 ---
 
 ## 四、定理体系（最终状态）
@@ -131,6 +139,11 @@ r(n) = O(1)（Abel 项分解——唐先生 Δw 方向）
 - unified-prime-phase-mechanism.md（统一机制）
 - abel-decomposition-rn.md（r(n) 分解）
 - rn-final-structure.md（最终结构）
+- long-range-rigidity.md（长程刚性）
+- zeta-potential-concavity.md（排斥势凹性）
+- glss25-transplant.md（GLSS25 移植）
+- m-O1-conjecture-return.md（M(T)=O(1) 墙）
+- literature-second-order-search.md（二阶搜索）
 - 2026-08-23-full-archive.md（本文件）
 - epsilon-sum-explicit-proof.md + mechanism-chain-full.md（加核不匹配警示）
 
