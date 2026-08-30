@@ -107,13 +107,20 @@ convergence, and the interchange
 $\sum_\rho|\langle K_\rho,H_0\rangle|<\infty$; note that no global
 pairing $\langle S,H_0\rangle$ is used.
 
-**C4. Factorization of $P_\gamma$.** For $|\delta|<\tfrac12$ and
-$|\gamma|\ge\gamma_1=14.1347\ldots$ ($U\ge200$): $8U^2(5\gamma^2-1)>0$,
-$4(5U^2-16U+16)\delta^2>0$, $16(U-2)\delta^4>0$, $4\delta^6>0$; the
-denominator $2U^2D_+D_->0$ is a product of squares. Hence
-$$P_\gamma(\delta)\ge0,\qquad P_\gamma(\delta)=0\iff\delta=0.$$
-*Check:* the coefficient positivity for all $\gamma\ge\gamma_1$; no
-uniform lower bound is claimed (only pointwise/pairwise positivity).
+**C4. Factorization of $P_\gamma$ (formal lemma).**
+With $w_H$ as in O3,
+$P_\gamma(\delta)=2w_H(\gamma,0)-w_H(\gamma,\delta)-w_H(\gamma,-\delta)$.
+Substituting the closed form and putting over the common denominator
+gives
+$P_\gamma(\delta)=\delta^2M_2(\gamma,\delta^2)/[2U^2D_+D_-]$,
+$U=1+\gamma^2$, $D_\pm=((1\pm\delta)^2+\gamma^2)^2$, where
+$M_2=8U^2(5\gamma^2-1)+4(5U^2-16U+16)\delta^2+16(U-2)\delta^4+4\delta^6$.
+For $|\delta|<\tfrac12$ and $|\gamma|\ge\gamma_1=14.1347\ldots$
+($U\ge200$): $5\gamma^2-1>0$, $5U^2-16U+16>0$, $U-2>0$, hence every
+coefficient of $M_2$ is positive; $2U^2D_+D_->0$ is a product of
+squares.  Therefore
+$P_\gamma(\delta)\ge0$ and $P_\gamma(\delta)=0\iff\delta=0$.
+No uniform lower bound is claimed (only pointwise/pairwise positivity).
 
 **C5. Spectral assembly.** $Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$
 (over all zeros, pairs counted twice with $\delta$ and $-\delta$);
