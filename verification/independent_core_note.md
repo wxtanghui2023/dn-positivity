@@ -65,14 +65,29 @@ substitution); trivial zeros do not appear (their $\Gamma(s/2+1)$ poles
 cancel $\zeta$'s trivial zeros in $\xi$, whose Hadamard product runs over
 nontrivial zeros only).
 
-**C2. Fourier normalization.** Convention fixed as
-$\widehat H(u)=\int_{\mathbb R}H(t)e^{-2\pi iut}\,dt$. Standard integrals:
-$F[1/(x^2+a^2)](u)=(\pi/a)e^{-2\pi a|u|}$,
-$F[(a^2-x^2)/(x^2+a^2)^2](u)=2\pi^2|u|e^{-2\pi a|u|}$,
-$\widehat H_0(u)=e^{-2\pi|u|}\bigl[\tfrac{1}{4\pi|u|}+\tfrac12\bigr]$.
-*Check:* every $2\pi$, sign, and constant; the product
-$\widehat K_\delta\widehat H_0=\tfrac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}$
-is finite at $u=0$ (no formal zero-frequency cancellation).
+**C2. Fourier normalization (complete lemma).** Convention
+$\widehat H(u)=\int_{\mathbb R}H(t)e^{-2\pi iut}dt$.  Standard integral:
+$F[1/(x^2+a^2)](u)=(\pi/a)e^{-2\pi a|u|}$; by parameter
+differentiation,
+$F[1/(x^2+a^2)^2](u)=(\pi/2a^3)(1+2\pi a|u|)e^{-2\pi a|u|}$.
+Decomposing
+$(a^2-x^2)/(x^2+a^2)^2=-1/(x^2+a^2)+2a^2/(x^2+a^2)^2$ gives
+$F[K_a^{\mathrm{nat}}](u)=2\pi^2|u|e^{-2\pi a|u|}$.  For $H_0$,
+$F[\log(1+t^2)](u)=-(1/|u|)e^{-2\pi|u|}$ (via
+$\partial_a\log(a^2+t^2)=2a/(a^2+t^2)$) and
+$F[1/(1+t^2)](u)=\pi e^{-2\pi|u|}$, so
+$\widehat H_0(u)=e^{-2\pi|u|}[1/(4\pi|u|)+1/2]$.  The product
+$\widehat K_\delta\widehat H_0=\tfrac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}\in L^1$
+($a=1+\delta$) is finite at $u=0$ (the $|u|$ and $1/|u|$ factors cancel
+in the closed form; no formal zero-frequency extension).  Parseval then
+gives
+$w_H(\gamma,\delta)=\langle K_\delta^{\mathrm{nat}}(\cdot-\gamma),H_0\rangle
+=\int\widehat K_\delta\widehat H_0 e^{-2\pi iu\gamma}du$,
+and with
+$F^{-1}[e^{-2\pi a|u|}](\gamma)=(1/\pi)a/(a^2+\gamma^2)$,
+$F^{-1}[|u|e^{-2\pi a|u|}](\gamma)=(a^2-\gamma^2)/(2\pi^2(a^2+\gamma^2)^2)$,
+one obtains
+$w_H(\gamma,\delta)=[a^2(a+1)+\delta\gamma^2]/(2(a^2+\gamma^2)^2)$.
 
 **C3. Distributional pairing of $H_0$.** $H_0\notin L^1$, and the
 naive pairing $\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$ is
