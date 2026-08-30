@@ -46,11 +46,9 @@ $$M_2=8U^2(5\gamma^2-1)+4(5U^2-16U+16)\delta^2+16(U-2)\delta^4+4\delta^6,$$
 $$D_\pm=\bigl((1\pm\delta)^2+\gamma^2\bigr)^2.$$
 
 **O5. Functionals.** With $S(t)=\partial_t^2\log|\xi(\tfrac12+it)|$,
-$Q=-\langle S,H_0\rangle$ (pairing defined distributionally through
-$\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$), and
-$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$ where
-$\rho\sim 1-\bar\rho$ (functional equation pairs; same $\gamma$, opposite
-$\delta$).
+$Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$ (termwise, C3), and
+$Q'_{\mathrm{RH}}=-\sum_\rho m_\rho w_H(\gamma_\rho,0)$ (projection of every
+zero onto the critical line, preserving ordinate and multiplicity).
 
 ---
 
@@ -137,8 +135,8 @@ $P_\gamma(\delta)\ge0$ and $P_\gamma(\delta)=0\iff\delta=0$.
 No uniform lower bound is claimed (only pointwise/pairwise positivity).
 
 **C5. Spectral assembly.** $Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$
-(over all zeros, pairs counted twice with $\delta$ and $-\delta$);
-$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$. Then
+(over all zeros);
+$Q'_{\mathrm{RH}}=-\sum_\rho m_\rho w_H(\gamma_\rho,0)$. Then
 $$Q-Q'_{\mathrm{RH}}=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho).$$
 Absolute convergence: $P_\gamma(\delta)\le C/\gamma^6$ uniformly
 ($C=20$ suffices), $\sum_\rho m_\rho\gamma_\rho^{-6}<\infty$.
@@ -151,7 +149,7 @@ reverse expansion restoring $-Q'_{\mathrm{RH}}+Q$.
 
 **Definitions (termwise).** $Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$
 (absolute convergence, C3);
-$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$ where
+$Q'_{\mathrm{RH}}=-\sum_\rho m_\rho w_H(\gamma_\rho,0)$ where
 $\rho\sim 1-\bar\rho$ (functional-equation pairs: same $\gamma$,
 opposite $\delta$). $Q'_{\mathrm{RH}}$ uses the actual ordinates
 $\gamma_\rho$ and $w_H(\gamma_\rho,0)=(1+\gamma_\rho^2)^{-2}$; no RH
@@ -204,7 +202,7 @@ $|\delta|<\tfrac12$. Confirm $P_\gamma(\delta)=0\iff\delta=0$.
 Starting from $Q=-\langle S,H_0\rangle$ and $S=\sum m_\rho K^{\mathrm{nat}}_\rho$
 (do **not** start from $P_\gamma$), derive
 $Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$ and
-$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$,
+$Q'_{\mathrm{RH}}=-\sum_\rho m_\rho w_H(\gamma_\rho,0)$,
 fix the orbit convention, and confirm
 $Q-Q'_{\mathrm{RH}}=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho)$.
 Pay attention to: orbit classes, multiplicities, functional-equation
