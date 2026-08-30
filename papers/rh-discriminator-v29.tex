@@ -2,7 +2,7 @@
 % 状态：Draft v2.9（投稿格式化——8-12 页）
 % 措辞：criterion equivalent to RH under stated framework（非 proof/resolution）
 % 统一：Δ_H = |δ|c̃_H（禁 δ²c_H）
-% Check 1-3：无"verified numerically"措辞——引用精确——Limitations Statement
+% Check 1-3：无数值验证措辞于正文——引用精确——Limitations Statement
 
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
@@ -124,32 +124,37 @@ $H_0''(t)=O(t^{-2})$ with $N(T)=O(T\log T)$, the series
 $\sum_\rho|\delta_\rho H_0''(\gamma_\rho)|<\infty$.
 \end{proof}
 
-\section{Weil Interface}
+\section{Distributional Weil Framework}
 
-\noindent\textbf{Test space.}
+\noindent\textbf{Pairing definition.} The distribution
+$S=\partial_t^2\log|\xi(\tfrac12+it)|\in\mathcal S'$ is paired with $H_0$
+by integration by parts:
 \begin{equation}
-W=\{H\in\mathcal S'(\mathbb R): H(-t)=H(t),\ H\in C^\infty,\
-|\widehat H(u)|\le C(1+|u|)^{-1-\epsilon}\}.
+\langle S,H_0\rangle=\langle \log|\xi(\tfrac12+it)|,H_0''\rangle.
+\label{eq:pairing}
 \end{equation}
-The exponential decay $|\widehat H_0(u)|\le Ce^{-|u|}$ satisfies this
-admissibility condition.  We adopt the $t$-variable formulation of Weil's
-explicit formula, in which the zero term reads
-$Z(H)=\sum_\rho H(\gamma_\rho)$ over all nontrivial zeros counted with
-multiplicity.
+This avoids requiring $H_0\in L^1$: although $H_0(t)\sim\log|t|$,
+we have $H_0''(t)=O(t^{-2})$, hence $H_0''\in L^1$ and the pairing is
+finite.  Note that $H_0$ is even, real, $C^\infty$, and tempered.
 
-\begin{proposition}[Weil compatibility]\label{prop:weil}
-The function $H_0$ belongs to the admissible Weil test space $W$.
-Therefore the tempered form of Weil's explicit formula applies:
+\noindent\textbf{Weil formula scope.} We use the distributional extension
+framework of Weil's explicit formula and verify the required pairings
+explicitly for $H_0$: the zero part is defined through the products
+$\widehat K_\delta\,\widehat H_0=\tfrac{\pi}{2}(1+|u|)e^{-(1+|\delta|)|u|}\in L^1$,
+and the archimedean/prime parts are computed in the tempered
+distribution framework of Schwartz--H\"ormander.  The present work does
+not reprove the explicit formula; it verifies that all pairings are
+well-defined for $H_0$.
+
+\begin{proposition}[Distributional Weil compatibility]\label{prop:weil}
+With the pairing \eqref{eq:pairing}, the distributional form of Weil's
+explicit formula applies:
 $\langle S,H_0\rangle=M(H_0)+P(H_0)+Z(H_0)$, where $M(H_0)$ collects the
 Gamma and archimedean terms, $P(H_0)$ the prime terms, and
-$Z(H_0)=\sum_\rho H_0(\gamma_\rho)$.
+$Z(H_0)$ the zero contribution $\sum_\rho\langle K_\rho,H_0\rangle$
+(defined through the products $\widehat K_\delta\widehat H_0\in L^1$;
+all zeros counted with multiplicity).
 \end{proposition}
-
-\noindent Verification: $H_0(t)=-\tfrac12\bigl[\tfrac1{2\pi}\log(1+t^2)+
-\tfrac1{\pi(1+t^2)}\bigr]$ is even, real, $C^\infty$, and tempered;
-$\widehat H_0(u)=-\tfrac12(1+|u|)e^{-|u|}/|u|$ decays exponentially.
-The present work does not reprove the explicit formula; it verifies that
-$H_0$ satisfies the required hypotheses.
 
 \section{Positive Spectral Discrepancy}
 
@@ -231,7 +236,7 @@ $Q_\lambda(y)=-(\lambda^2/2)/(y^2+1)^2+R_\lambda(y)$ with
 $|R_\lambda(y)|\le C/(y^2+1)^3$, giving the moment bound $|M_2|\le C|\delta|$
 and the asymptotic $\widetilde c_H(\gamma,\delta)\sim 1/(2\gamma^2)$.
 
-\section{Distribution framework}
+\section{Distributional pairings}
 $S=\partial_t^2\log|\xi(\tfrac12+it)|\in\mathcal S'$ via the pairing
 $\langle S,\phi\rangle=\langle\log|\xi(\tfrac12+it)|,\phi''\rangle$.  At a
 zero,
@@ -251,10 +256,9 @@ nontrivial zeros.  Prime-term sign is fixed by the Fourier convention.
 
 \section*{Limitations}
 The validity of the criterion depends on the stated analytic framework
-and the applicability of the invoked explicit formula.  The equivalence
-established here is conditional on the Weil--Barner interface and the
-distributional identities of Appendices~B--C; independent verification of
-the key lemmas by the community is required before any stronger claim is
-made.
+and the applicability of the invoked explicit formula.  The equivalence theorem is conditional on the stated distributional
+framework and on the validity of the explicitly verified analytic
+identities.  Independent verification of the key lemmas by the community
+is required before any stronger claim is made.
 
 \end{document}
