@@ -1,9 +1,22 @@
 # Independent Core Verification Note
 
-**Status:** Draft for external verification — 2026-08-30
-**Scope:** 5 objects, 5 checks. No historical context required.
-**Claim:** A criterion equivalent to RH under a stated distributional
-framework. **Not** a proof of RH.
+**Status:** Final frozen statement — 2026-08-30
+**Claim:** A formally reconstructed criterion equivalent to the Riemann
+Hypothesis under the stated distributional framework, pending independent
+external verification. **Not** a proof of RH.
+
+**Final status markers:**
+- Core chain: **CLOSED internally** (C1–C5 formalized from original definitions)
+- Criterion: **FORMALLY RECONSTRUCTED**
+- External validation: **OPEN** (third-party attack from O1–O5 / C1–C5)
+- RH proof claim: **NOT MADE**
+
+**Three permanent boundaries:**
+1. "equivalent to RH" = current objective and internal reconstruction
+   conclusion;
+2. "under the stated distributional framework" = scope limitation;
+3. "pending independent external verification" = internal completion is
+   not academic confirmation.
 
 ---
 
