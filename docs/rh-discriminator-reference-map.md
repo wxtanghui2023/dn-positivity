@@ -49,3 +49,41 @@
 > 🟡 待完成：文献编号整理——参考文献表完善——最终独立复核
 >
 > ⚠️ 提醒：文献化和审稿仍不能等同于"RH 已被数学界接受为已证明"——最终仍需独立专家验证每个核心引理和外部定理接口。
+
+---
+
+## 六、参考文献表（完善版——Draft v2.5）
+
+**[1] Weil, A.** — Sur les "formules explicites" de la théorie des nombres premiers. *Comm. Sém. Math. Univ. Lund [Medd. Lunds Univ. Mat. Sem.]* Tome Supplémentaire (1952), 252–265.
+——用于：Weil explicit formula——零点项/素数项/Gamma 项结构。
+
+**[2] Barner, K.** — On A. Weil's explicit formula. *Journal für die reine und angewandte Mathematik* 323 (1981), 139–152.
+——用于：tempered Weil framework——非 Schwartz 测试函数许可。
+
+**[3] Schwartz, L.** — Théorie des distributions. Hermann, Paris, 1950–1951.
+——用于：S′——tempered distributions——Fourier transform on distributions。
+
+**[4] Hörmander, L.** — The Analysis of Linear Partial Differential Operators I: Distribution Theory and Fourier Analysis. Springer-Verlag.
+——用于：Fourier transform on S′——distributional pairing——延拓唯一性背景（可选加强）。
+
+## 七、正文引用位置（冻结）
+
+- **Proposition B** 第一次出现：*We use the tempered form of Weil's explicit formula [1,2].*——避免"Weil theorem proves our identity"——避免"new Weil formula"——**明确：本文只验证 H_0 ∈ W**。
+- **Appendix B（Distribution）**：S = ∂_t²log|ξ(½+it)| ∈ S′——引用 [3,4]。
+- **Appendix C（Convention）**：声明 Ĥ(u) = ∫_ℝH(t)e^{−2πiut}dt——*All formulas below follow this normalization.*
+
+## 八、Final Audit（独立复核版——四轮）
+
+**Audit A（外部定理接口）**：Weil 引用版本是否覆盖 W——H_0 条件逐条对应。
+
+**Audit B（内部核心引理）**：Lemma A3（交换）——Lemma C（Δ_H 正性）——H_0 构造唯一性——逐项。
+
+**Audit C（符号一致性）**：Q = −⟨S,H_0⟩——Δ_H = w_H(γ,δ) − w_H(γ,0)——**禁止回写 δ²w_H**。
+
+**Audit D（论文措辞）**：避免"RH is proved"——改"We establish a criterion equivalent to RH under the stated lemmas/assumptions."——直到独立验证完成。
+
+## 九、状态
+
+> **Draft v2.4：文献接口冻结。Draft v2.5：参考文献表 + 最终独立复核阶段启动。**
+> 推荐路径：Reference Map → Reference List → Final Audit → v2.5 定稿候选
+> ⚠️ 措辞红线：直到独立验证完成——不写"RH is proved"
