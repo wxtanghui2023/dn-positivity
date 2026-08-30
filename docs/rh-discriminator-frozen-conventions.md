@@ -1,0 +1,81 @@
+# RH 判别定理 —— 最终符号冻结表 + Draft v2.4 文献层
+
+> 日期：2026-08-30 20:14
+> 目的：引用前冻结数学对象——防止 Audit 1 恒等式问题在引用/排版阶段回流
+> 状态：✅ 核心完成（核结构/分布交换/统一 H_0/Weil 输入/正性刚性/反向审稿/恒等式修复）——🟡 文献引用精确化/排版/独立复核
+
+---
+
+## 一、最终符号冻结表（Step 0——不可更改）
+
+### 1. 最终主恒等式（冻结）
+
+$$\boxed{Q - Q'_{\rm RH} = \sum_\rho \Delta_H(\gamma_\rho, \delta_\rho)}$$
+
+- **Δ_H(γ,δ)** = w_H(γ,δ) − w_H(γ,0) = w_H(γ,δ) − w_target(γ)——偏离量
+- **正性形式**：Δ_H(γ,δ) = δ²c_H(γ,δ)——c_H > 0（Lemma C 正性）
+- ⚠️ **禁止回流**：不使用 δ²w_H（旧表述——非精确恒等式——Audit 1 已修复）
+
+### 2. 核心对象（冻结）
+
+| 对象 | 定义 |
+|------|------|
+| S | ∂_t² log\|ξ(½+it)\| ∈ S′（分布——Lemma 0） |
+| Q | := −⟨S,H_0⟩（Weil 判别量——正向零点展开） |
+| H_0 | = F⁻¹[ŵ_target/K̂_0]——K̂_0 = −π|ω|（tempered——唯一配对意义） |
+| K_ρ | = −K_{δ_ρ}(t−γ_ρ)——单零点核（重数计入 m_ρK_ρ） |
+| w_H(γ,δ) | = ⟨K_δ(·−γ),H_0⟩——闭式 (1/2)[a²(a+1)+|δ|γ²]/(a²+γ²)²——a=1+|δ| |
+| w_target(γ) | = (1+γ²)^{−2} |
+| Q'_RH | = Σ_ρ w_target(γ_ρ) |
+
+### 3. Weil 接口版本（冻结——方案 A）
+
+- **采用**：标准 Weil explicit formula 的 **tempered/distribution 版本**（引用经典——不重新证明）
+- **输入**：H ∈ W（W = {H ∈ S′: H(−t)=H(t)——C^∞——|Ĥ(u)| ≤ C(1+|u|)^{−1−ε}}）
+- **输出**：⟨S,H⟩ = M(H) + P(H) + Z(H)——M（Archimedean/main）——P（prime powers）——Z（zeros）
+- **本工作只负责证明 H_0 ∈ W**（——W1/W2/W3——）
+
+### 4. Fourier convention（冻结）
+
+$$\hat H(u) = \int_{\mathbb R} H(t)e^{-2\pi iut}\,dt$$
+
+（——或选定另一套——但——Weil 公式的 2π/log p/Gamma 项随 convention 改变——必须一致——）
+
+### 5. ξ 归一化（冻结）
+
+$$\xi(s) = \tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$$
+
+（——否则 S = ∂_t²log|ξ(½+it)| 的 regular term 变化——）
+
+---
+
+## 二、Draft v2.4 文献层结构
+
+### 正文引用（Proposition B——Tempered Weil compatibility）
+
+> **Proposition B**：By the tempered form of Weil's explicit formula, for every H ∈ W, ⟨S,H⟩ = M(H) + P(H) + Z(H).（——引用经典——不包装成新定理——）
+>
+> 本工作验证 H_0 ∈ W（W1 偶性——W2 光滑缓增——W3 |Ĥ_0(u)| ≤ Ce^{−|u|}）。
+
+### 附录 C：Convention（固定）
+
+1. **Fourier transform**：Ĥ(u) = ∫H(t)e^{−2πiut}dt
+2. **ξ normalization**：½s(s−1)π^{−s/2}Γ(s/2)ζ(s)
+3. **Zero multiplicity**：m_ρK_ρ——按重数计
+4. **Gamma contribution**：M(H) 含 Gamma/极点/显式项——S_reg 并入（M(H_0) = −⟨S_reg,H_0⟩）
+5. **Prime power sign**：P(H) = −Σ(log p/p^{m/2})Ĥ(m log p)
+
+### 文献引用清单（落笔时补）
+
+- Weil explicit formula（原始形式）
+- tempered distribution 版本
+- Barner 类推广（如果采用）
+- Fourier convention 来源
+
+---
+
+## 三、当前状态
+
+> ✅ 已完成：核结构——分布交换——统一 H_0——Weil 输入条件——正性刚性——反向审稿——**Lemma C 恒等式修复（ΣΔ_H 精确——非 Σδ²w_H）**
+> 🟡 待完成：文献引用精确化——最终排版——独立复核
+> **冻结表生效——后续所有文档/排版必须遵循（防 Audit 1 回流）**
