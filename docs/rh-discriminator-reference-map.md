@@ -120,3 +120,28 @@
 | D | 措辞规范 | 🟢 |
 
 **Draft v2.5 Final Audit A-D 第一轮通过 ✅**
+
+---
+
+## 十一、v2.10.1 Reference Verification（Barner 核对——2026-08-30 21:36）
+
+### R6.1：Barner 测试函数条件（文献核对）
+- Barner 1981 / Jorgenson-Lang 条件：JL1 F ∈ BV(ℝ) ∩ L¹(ℝ)——JL2 F(x)−F(0) = O(|x|^ε)（x→0）——JL3 F(x)e^{(σ₀/2+a')|x|} ∈ BV(ℝ)（∞）——Barner 弱化 0 处不必连续（bounded φ-variation）
+- **H_0 ~ log|t|——∉ L¹——经典 Weil/Barner 测试类不直接适用**
+
+### 关键发现（配对替代路径）
+- H_0''(t) = O(1/t²)——衰减——H_0'' ∈ L¹（数值：10:1.45e-3/100:1.59e-5/1000:1.59e-7）
+- ⟨S,H_0⟩ = ⟨log|ξ|, H_0''⟩（分部积分）——良定义
+- 逐项配对 ⟨K_ρ,H_0⟩ 通过乘积 K̂_δ·Ĥ_0 ∈ L¹
+- Weil 公式角色：用于 M(H_0)（主项）——对衰减类测试函数适用
+
+### R6.2：Barner 给的是 explicit formula（情况 A）——但测试类匹配需通过配对路径
+### R6.3：t-variable（Z=ΣH(γ_ρ)）——需注意与 s-空间（Σh(ρ)——h(s)=H((s−½)/i)）的变换
+### R6.4：Reference Map 修订
+- 分布框架：Schwartz–Hörmander（S∈S'——配对）
+- 显式公式：Weil + 扩展（tempered 测试函数形式）
+- 本文验证：配对通过 H_0''（衰减）良定义——逐项配对通过乘积（L¹）——**避免"H_0 ∈ W（经典）"过度声称**
+
+### Proposition B 修正方向
+原：H_0 ∈ W（偶/C^∞/衰减）——tempered Weil 适用
+修正：H_0 ∈ C^∞∩S'——配对 ⟨S,H_0⟩ := ⟨log|ξ|,H_0''⟩（H_0'' ∈ L¹ 衰减）——逐项配对 ⟨K_ρ,H_0⟩ 通过乘积 K̂_δ·Ĥ_0 ∈ L¹——Weil 公式对衰减类测试函数适用
