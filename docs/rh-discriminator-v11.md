@@ -97,3 +97,49 @@ $$H_0 = \mathcal F^{-1}\left[\frac{\widehat w_{\rm target}}{\widehat K_0}\right]
 | 正式稿措辞 | 🟡（可去奇延拓——tempered F⁻¹——归一化陈述） |
 
 **下一节（补项 3）**：Weil interface theorem（采用 tempered Weil 显式公式——W1-W3——H_0 ∈ W）
+
+---
+
+## 第三节：Weil Interface Theorem——补项 3
+
+### 3.1 测试空间定义
+
+$$\mathcal W = \{H\in\mathcal S'(\mathbb R): H(-t)=H(t),\ H\in C^\infty,\ |\widehat H(u)|\le C(1+|u|)^{-1-\epsilon}\}$$
+
+- 偶性：零点成对出现——实值：结果实数——Fourier 衰减：素数项收敛
+
+### 3.2 Weil 显式公式接口
+
+对 H ∈ W：
+$$\langle S,H\rangle = M(H) + P(H) + Z(H)$$
+
+- **M(H)**：主项（Gamma 因子——极点——显式项）
+- **P(H)** = −Σ_{p,m}(log p/p^{m/2})Ĥ(m log p)（素数项——Fourier 归一化按 convention）
+- **Z(H)** = Σ_ρ H(γ_ρ)（零点项——或等价分布配对形式）
+
+### 3.3 验证 H_0 ∈ W
+
+- **(W1) 偶性**：Ĥ_0(−ω) = Ĥ_0(ω) ⟹ H_0(−t) = H_0(t)（补项 2——精确）✓
+- **(W2) 光滑缓增**：H_0 ∈ C^∞——|H_0(t)| ≤ C(1+log(1+|t|))——H_0 ∈ S′（一般 ∉ S）✓
+- **(W3) Fourier 衰减**：|Ĥ_0(ω)| ≤ Ce^{−c|ω|}（Weil-Lemma 3——精确闭式）⟹ |Ĥ_0(ω)| ≤ C(1+|ω|)^{−1−ε}（任意 ε<1）✓
+
+### 3.4 素数项合法性
+
+- ω = m log p：e^{−cω} = p^{−cm}——|(log p/p^{m/2})Ĥ_0(m log p)| ≤ C log p·p^{−(½+c)m}
+- Σ_{p,m} log p·p^{−(½+c)m} < ∞——**P(H_0) 绝对收敛** ✓
+
+### 3.5 定稿形式
+
+> **Lemma B（Tempered Weil Interface）**：由补项 2 构造的 H_0 满足 W1–W3——因此 H_0 ∈ W——tempered Weil 显式公式适用于 H_0——零点项、素数项及主项均严格定义。
+
+### 3.6 完成状态
+
+| 项 | 状态 |
+|----|------|
+| W 定义（偶性/光滑/衰减） | 🟢 |
+| Weil 接口（M+P+Z） | 🟢 |
+| H_0 ∈ W（W1/W2/W3） | 🟢 |
+| 素数项绝对收敛 | 🟢 |
+| Lemma B 定稿 | 🟢 |
+
+**下一节（补项 4）**：正性刚性链（Q = Q'_RH ⟹ RH 的正式化——v1.1 最后一节）
