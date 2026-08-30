@@ -98,15 +98,29 @@ reverse expansion restoring $-Q'_{\mathrm{RH}}+Q$.
 
 ---
 
-## Theorem (candidate)
+## Theorem (candidate) — with formal proof
 
-With the definitions above,
-$$Q=Q'_{\mathrm{RH}}\iff \delta_\rho=0\ \forall\rho
-\iff \operatorname{Re}\rho=\tfrac12\ \forall\rho.$$
+**Definitions (termwise).** $Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$
+(absolute convergence, C3);
+$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$ where
+$\rho\sim 1-\bar\rho$ (functional-equation pairs: same $\gamma$,
+opposite $\delta$). $Q'_{\mathrm{RH}}$ uses the actual ordinates
+$\gamma_\rho$ and $w_H(\gamma_\rho,0)=(1+\gamma_\rho^2)^{-2}$; no RH
+assumption enters — it is a reference spectrum.
 
-- **RH $\Rightarrow$ equality:** $\delta_\rho=0\Rightarrow P_{\gamma_\rho}(0)=0$.
-- **Equality $\Rightarrow$ RH:** $\sum m_\rho P=0$ with $m_\rho>0$,
-  $P\ge0$ forces each $P=0$, hence $\delta_\rho=0$ (C4).
+**Assembly (O5).** Grouping $Q$ over orbits,
+$$Q=-\sum_{\rho/\sim}m_\rho\bigl[w_H(\gamma_\rho,\delta_\rho)+w_H(\gamma_\rho,-\delta_\rho)\bigr],$$
+hence, with $P_\gamma(\delta)=2w_H(\gamma,0)-w_H(\gamma,\delta)-w_H(\gamma,-\delta)$,
+$$Q-Q'_{\mathrm{RH}}=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho).$$
+This is definitional (termwise $Q$ + orbit grouping + definition of
+$Q'_{\mathrm{RH}}$); it does not use the closed form of $P_\gamma$.
+
+**Equivalence.**
+- RH $\Rightarrow$ equality: $\delta_\rho=0\Rightarrow P_{\gamma_\rho}(0)=0$.
+- Equality $\Rightarrow$ RH: $\sum m_\rho P=0$ with $m_\rho>0$, $P\ge0$
+(C4) forces each $P_{\gamma_\rho}(\delta_\rho)=0$, hence $\delta_\rho=0$.
+
+So $Q=Q'_{\mathrm{RH}}\iff\operatorname{Re}\rho=\tfrac12$ for all $\rho$.
 
 ## Verification Protocol (for third-party readers)
 
