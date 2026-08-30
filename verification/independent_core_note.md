@@ -1,13 +1,14 @@
 # Independent Core Verification Note
 
 **Status:** Final frozen statement — 2026-08-30
-**Claim:** A formally reconstructed criterion equivalent to the Riemann
-Hypothesis under the stated distributional framework, pending independent
-external verification. **Not** a proof of RH.
+**Claim:** Internally reconstructed and formally argued criterion
+equivalent to RH under the stated distributional framework, pending
+independent verification. **Not** a proof of RH. C1–C5 all holding is
+**not** equated with "the theorem is established".
 
 **Final status markers:**
 - Core chain: **CLOSED internally** (C1–C5 formalized from original definitions)
-- Criterion: **FORMALLY RECONSTRUCTED**
+- Criterion: **INTERNALLY RECONSTRUCTED AND FORMALLY ARGUED**
 - External validation: **OPEN** (third-party attack from O1–O5 / C1–C5)
 - RH proof claim: **NOT MADE**
 
