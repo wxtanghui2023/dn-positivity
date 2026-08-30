@@ -87,3 +87,36 @@
 > **Draft v2.4：文献接口冻结。Draft v2.5：参考文献表 + 最终独立复核阶段启动。**
 > 推荐路径：Reference Map → Reference List → Final Audit → v2.5 定稿候选
 > ⚠️ 措辞红线：直到独立验证完成——不写"RH is proved"
+
+---
+
+## 十、Final Audit A-D（第一轮——结果记录）
+
+### Audit A（外部接口——Weil）🟢
+- **A1 测试函数条件**：偶性 ✅——实值 ✅——C^∞ ✅——缓增 ✅——Fourier 衰减 ✅——H_0 逐条对应
+- **A2 外部公式定位**：冻结表述"We invoke a tempered-distribution form of Weil's explicit formula [1,2]"——**不是**"Weil proves the following identity"——本文构造 H_0 = F⁻¹[ŵ/K̂_0] 需证明进入允许空间
+- **记录**：外部定理只提供 M+P+Z 分解——不承担本文核估计与正性证明
+
+### Audit B（核心引理）🟢
+- **B1 Lemma A3（交换）**：|⟨K_ρ,H_0⟩| ≲ |δ_ρ||H_0''(γ_ρ)|——H_0'' = O(t^{−2})——N(T) = O(T log T)——绝对收敛——正文写"absolute convergence implies interchange"（——不写"by formal linearity"——）
+- **B2 Lemma C（正性）**：Q−Q'_RH = ΣΔ_H——Δ_H = w_H(γ,δ)−w_H(γ,0)——Δ_H = δ²c_H（c_H>0）——**禁 Σδ²w_H（❌）——用 ΣΔ_H（✅）**
+- **B3 H_0 唯一性**：奇点可去——单点修改不影响分布配对——配对逐项确定 🟢
+
+### Audit C（符号）🟢
+- Q = −⟨S,H_0⟩ 冻结——零点核符号全文一致——RH 基准保持 w_H(γ,δ) − w_H(γ,0)（——不反过来——否则正性翻转）——**建议 Appendix C 加符号表防回流**
+
+### Audit D（措辞）🟢
+- **禁**："RH is proved"
+- **推荐**："We construct a criterion equivalent to the Riemann Hypothesis, subject to the stated analytic framework and lemmas."——或——"The main theorem establishes an equivalence between RH and the vanishing of the proposed discrepancy functional."
+- 原因：即使内部链完整——数学共同体仍要求核心引理独立验证/引用框架无漏洞/无隐藏条件
+
+### 汇总
+
+| Audit | 内容 | 状态 |
+|-------|------|------|
+| A | Weil 外部接口 | 🟢 |
+| B | 核心引理链 | 🟢 |
+| C | 符号冻结 | 🟢 |
+| D | 措辞规范 | 🟢 |
+
+**Draft v2.5 Final Audit A-D 第一轮通过 ✅**
