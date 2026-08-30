@@ -42,15 +42,28 @@ $\delta$).
 
 ## Checks
 
-**C1. Hadamard second derivative.** From
-$\xi(s)=\tfrac12\pi^{-s/2}e^{bs}\prod_\rho(1-s/\rho)e^{s/\rho}$
-($b=\log 2\pi-1-\tfrac\gamma2$), all explicit terms
-($-\tfrac s2\log\pi$, $bs$, $\log\tfrac12$) are $t$-linear or constant,
-hence their $\partial_t^2$ vanishes. The zero part gives
-$$S(t)=\sum_\rho m_\rho K_\rho^{\mathrm{nat}}(t),\qquad S_{\mathrm{reg}}=0.$$
-*Check:* the $t$-linearity of every explicit term; the factor
-$\tfrac12$ arising from $\operatorname{Re}\log(\delta+i(\gamma-t))$; the
-multiplicity $m_\rho$.
+**C1. Hadamard second derivative (one-page recomputation).**
+$\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ with
+$\zeta(s)=e^{bs}/(2(s-1)\Gamma(s/2+1))\prod_\rho(1-s/\rho)e^{s/\rho}$,
+$b=\log 2\pi-1-\tfrac\gamma2$.  Substituting,
+$\Gamma(s/2)/\Gamma(s/2+1)=2/s$, so
+$\xi(s)=\tfrac12\pi^{-s/2}e^{bs}\prod_\rho(1-s/\rho)e^{s/\rho}$.
+Hence
+$\log\xi(s)=\log\tfrac12-\tfrac s2\log\pi+bs+\sum_\rho m_\rho[\log(1-s/\rho)+s/\rho]$.
+For $s=\tfrac12+it$, the explicit terms have real parts
+$\log\tfrac12$, $-\tfrac14\log\pi$, $\tfrac b2$ (constants) — each
+$t$-independent, so $\partial_t^2=0$.  The zero part:
+$\operatorname{Re}\log(1-s/\rho)=\tfrac12\log(\delta_\rho^2+(t-\gamma_\rho)^2)-\tfrac12\log(\beta_\rho^2+\gamma_\rho^2)$
+(constant second piece), and
+$\operatorname{Re}(s/\rho)=(\beta_\rho/2+t\gamma_\rho)/(\beta_\rho^2+\gamma_\rho^2)$
+is $t$-linear.  Therefore
+$\partial_t^2\log|\xi(\tfrac12+it)|=\sum_\rho m_\rho
+\tfrac{\delta_\rho^2-(t-\gamma_\rho)^2}{(\delta_\rho^2+(t-\gamma_\rho)^2)^2}
+=S_{\mathrm{reg}}+\sum_\rho m_\rho K_\rho^{\mathrm{nat}}(t)$
+with $S_{\mathrm{reg}}=0$.  No Gamma term survives (cancelled in the
+substitution); trivial zeros do not appear (their $\Gamma(s/2+1)$ poles
+cancel $\zeta$'s trivial zeros in $\xi$, whose Hadamard product runs over
+nontrivial zeros only).
 
 **C2. Fourier normalization.** Convention fixed as
 $\widehat H(u)=\int_{\mathbb R}H(t)e^{-2\pi iut}\,dt$. Standard integrals:
