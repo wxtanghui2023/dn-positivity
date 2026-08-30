@@ -108,3 +108,28 @@ $$Q=Q'_{\mathrm{RH}}\iff \delta_\rho=0\ \forall\rho
 - **Provenance 是证据——不是证明**：正文定理完全独立于研究史；
   研究史作为 supplementary provenance 保留（research_history_provenance.md）。
 - **INVALID-first 攻击点**：O5 的单向性、C3 的三层次区分、Barner 逐项表。
+
+---
+
+## O5 Single-Point-of-Failure Checklist（7 项——外部 Attack A 靶子）
+
+| # | 检查点 | 文档位置 |
+|---|--------|----------|
+| 1 | Q 的定义来自预先存在的自然对象（w_H 配对值——非为目标式设计） | C3.1-C3.3 |
+| 2 | Q'_RH 不是"把 δ=0 塞进去为得目标式而定义"（所有零点投影——同一 w_H 泛函） | C3.3 |
+| 3 | Q 与 Q'_RH 使用同一个 functional（w_H——同一解析求值引理 C3.2） | C3.2/C3.3 |
+| 4 | 轨道分解不改变原始谱量（绝对收敛 C3.4——重排合法 C3.5） | C3.4/C3.5 |
+| 5 | 自配对（在线 δ=0）/重数/非自配对零点处理一致（在线贡献 0——计数已修） | O5.1 |
+| 6 | 所有交换/重排/极限有独立合法性（逐条引理——非一步跳跃） | C3.4/C3.5/O5.2 |
+| 7 | 无任何一步使用 RH 结论（Q'_RH 只依赖实际 γ_ρ——w_H(γ,0)=(1+γ²)⁻²） | C3.3 |
+
+## External Attack Protocol（INVALID-first——四路）
+
+- **Attack A（O5 单向性）**：不提供 provenance——只看 Q、Q'_RH 原始定义——
+  若完全不知道 P_γ 的存在，能否独立推出 orbital decomposition？
+- **Attack B（假 RH toy spectrum）**：构造满足所有形式假设但含离轴 δ≠0 的
+  谱——从原始定义重新计算 Q−Q'_RH——验证必然等于正 ΣP_γ。
+- **Attack C（函数空间）**：δ=0 附近核、Fourier 乘积、零频——重点检查
+  "每个公式都对但组合成 distributional identity 不合法"的隐蔽断层。
+- **Attack D（等价 vs 蕴含）**：两方向明确拆开——RH⟹Q=Q'_RH（容易）
+  与 Q=Q'_RH⟹RH（关键——正项和+等号刻画）——互不混淆。
