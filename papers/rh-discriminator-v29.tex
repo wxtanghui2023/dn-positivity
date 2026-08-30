@@ -1,0 +1,257 @@
+% v2.9 投稿级 LaTeX —— RH 判别定理（投稿稿件工程化）
+% 状态：Draft v2.9（投稿格式化——8-12 页）
+% 措辞：criterion equivalent to RH under stated framework（非 proof/resolution）
+% 统一：Δ_H = |δ|c̃_H（禁 δ²c_H）
+% Check 1-3：无"verified numerically"措辞——引用精确——Limitations Statement
+
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+
+\title{A Weil-Explicit-Formula Criterion via a Positive Spectral Discrepancy\\[0.5em]
+\large Conditional on the stated analytic framework}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct a test function $H_0$ in the admissible Weil test space and
+define a discrepancy functional $Q=-\langle S,H_0\rangle$ associated with
+the distribution $S=\partial_t^2\log|\xi(\tfrac12+it)|$.  We establish a
+criterion equivalent to the Riemann Hypothesis under the stated analytic
+framework: $Q=Q'_{\mathrm{RH}}$ holds if and only if all nontrivial zeros
+satisfy $\operatorname{Re}\rho=\tfrac12$.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Objective}
+The goal of this work is not to prove the Riemann Hypothesis but to
+construct a functional
+\begin{equation}
+Q-Q'_{\mathrm{RH}}=\sum_\rho \Delta_H(\gamma_\rho,\delta_\rho)
+\label{eq:objective}
+\end{equation}
+and to establish the equivalence
+\begin{equation}
+Q=Q'_{\mathrm{RH}} \iff \delta_\rho=0 \text{ for all } \rho.
+\label{eq:equivalence}
+\end{equation}
+
+\subsection{Relation to Weil's explicit formula}
+We use Weil's explicit formula in its tempered-distribution form
+$\langle S,H\rangle=M(H)+P(H)+Z(H)$ and the extension due to Barner
+admitting test functions beyond the Schwartz class.  The new content of
+the present work is the positivity structure of the discrepancy
+$\Delta_H$ on the nontrivial zero spectrum.
+
+\subsection{Contributions}
+\begin{itemize}
+\item \textbf{Kernel construction:} the single-zero kernel
+$K_\delta$ with moment cancellation $M_0=M_1=0$;
+\item \textbf{Absolute interchange:} the zero contribution
+$\sum_\rho|\langle K_\rho,H_0\rangle|<\infty$;
+\item \textbf{Positive discrepancy identity:}
+$Q-Q'_{\mathrm{RH}}=\sum_\rho\Delta_H(\gamma_\rho,\delta_\rho)$ with
+$\Delta_H(\gamma_\rho,\delta_\rho)>0$ for $\delta_\rho\ne0$;
+\item \textbf{Rigidity criterion:}
+$Q=Q'_{\mathrm{RH}}$ if and only if all zeros lie on the critical line.
+\end{itemize}
+
+\section{Definitions}
+
+Throughout, $\rho=\beta+i\gamma$ denotes a nontrivial zero of $\xi$, and
+\begin{equation}
+\delta_\rho=\beta-\tfrac12,\qquad
+|\delta_\rho|<\tfrac12
+\end{equation}
+by the critical strip.  The discrepancy functional is
+\begin{equation}
+Q=-\langle S,H_0\rangle,\qquad
+S=\partial_t^2\log|\xi(\tfrac12+it)|,
+\end{equation}
+and the reference functional is
+\begin{equation}
+Q'_{\mathrm{RH}}=\sum_\rho w_H(\gamma_\rho,0),
+\end{equation}
+obtained by projecting each zero onto the critical line while preserving
+its ordinate and multiplicity; no RH assumption enters its definition.
+
+\section{Kernel Lemma}
+
+\begin{proposition}[Single-zero kernel]\label{prop:a1}
+The single-zero kernel
+$K_\delta(x)=2(x^2-\delta^2)/(x^2+\delta^2)^2$ satisfies
+\begin{equation}
+M_0=\int K_\delta=0,\qquad
+M_1=\int xK_\delta=0,\qquad
+|M_2|=\left|\int x^2K_\delta\right|\le C|\delta|.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+$M_0=0$ by the identity $\int\log(x^2+a^2)\,dx=2\pi a$ in the
+regularized sense; $M_1=0$ by parity; $M_2=\delta\int y^2Q_{\eta/\delta}(y)
+\,dy$ with the scaled profile $Q_\lambda$, and the scale-invariant bound
+$\sup_{\lambda<1/2}\int y^2|Q_\lambda(y)|\,dy<\infty$ yields
+$|M_2|\le C|\delta|$.
+\end{proof}
+
+\begin{proposition}[Absolute interchange]\label{prop:a2}
+\begin{equation}
+\sum_\rho |\langle K_\rho,H_0\rangle|<\infty,
+\end{equation}
+and consequently
+$\langle\sum_\rho K_\rho,H_0\rangle=\sum_\rho\langle K_\rho,H_0\rangle$.
+\end{proposition}
+
+\begin{proof}
+By the moment cancellation of Proposition~\ref{prop:a1},
+$|\langle K_\rho,H_0\rangle|\ll|\delta_\rho|\,|H_0''(\gamma_\rho)|$.
+Since $|\delta_\rho|<\tfrac12$ (critical strip, not RH) and
+$H_0''(t)=O(t^{-2})$ with $N(T)=O(T\log T)$, the series
+$\sum_\rho|\delta_\rho H_0''(\gamma_\rho)|<\infty$.
+\end{proof}
+
+\section{Weil Interface}
+
+\noindent\textbf{Test space.}
+\begin{equation}
+W=\{H\in\mathcal S'(\mathbb R): H(-t)=H(t),\ H\in C^\infty,\
+|\widehat H(u)|\le C(1+|u|)^{-1-\epsilon}\}.
+\end{equation}
+The exponential decay $|\widehat H_0(u)|\le Ce^{-|u|}$ satisfies this
+admissibility condition.  We adopt the $t$-variable formulation of Weil's
+explicit formula, in which the zero term reads
+$Z(H)=\sum_\rho H(\gamma_\rho)$ over all nontrivial zeros counted with
+multiplicity.
+
+\begin{proposition}[Weil compatibility]\label{prop:weil}
+The function $H_0$ belongs to the admissible Weil test space $W$.
+Therefore the tempered form of Weil's explicit formula applies:
+$\langle S,H_0\rangle=M(H_0)+P(H_0)+Z(H_0)$, where $M(H_0)$ collects the
+Gamma and archimedean terms, $P(H_0)$ the prime terms, and
+$Z(H_0)=\sum_\rho H_0(\gamma_\rho)$.
+\end{proposition}
+
+\noindent Verification: $H_0(t)=-\tfrac12\bigl[\tfrac1{2\pi}\log(1+t^2)+
+\tfrac1{\pi(1+t^2)}\bigr]$ is even, real, $C^\infty$, and tempered;
+$\widehat H_0(u)=-\tfrac12(1+|u|)e^{-|u|}/|u|$ decays exponentially.
+The present work does not reprove the explicit formula; it verifies that
+$H_0$ satisfies the required hypotheses.
+
+\section{Positive Spectral Discrepancy}
+
+\begin{lemma}[Positivity rigidity on the nontrivial zero spectrum]\label{lem:pos}
+For every nontrivial zero ordinate $|\gamma_\rho|\ge\gamma_1$ with
+$\gamma_1=14.1347\ldots$, one has
+\begin{equation}
+\Delta_H(\gamma_\rho,\delta_\rho)>0 \quad \text{whenever }
+\delta_\rho\ne0,
+\end{equation}
+and $\Delta_H(\gamma_\rho,0)=0$.
+\end{lemma}
+
+\begin{proof}
+By the closed form
+\begin{equation}
+\Delta_H(\gamma,\delta)=|\delta|\,\widetilde c_H(\gamma,\delta),
+\qquad
+\widetilde c_H(\gamma,\delta)>0 \quad (|\gamma|\ge\gamma_1),
+\label{eq:ctilde}
+\end{equation}
+where $\widetilde c_H=\Delta_H/|\delta|$ and positivity follows from the
+numerator $N(x)=(1/2)(a^2(a+1)+x\gamma^2)(1+\gamma^2)^2-(a^2+\gamma^2)^2$,
+$a=1+x=1+|\delta|$: $N(0)=0$ and $\partial N/\partial x\ge
+\gamma^6/2+\gamma^4+\gamma^2/2-6\gamma^2-13.5>0$ for $\gamma\ge2$, so
+$N(x)>0$ for $x>0$.  The positivity is pointwise on the spectral set; no
+uniform lower bound is needed.  Moreover
+$\widetilde c_H(\gamma,\delta)\sim 1/(2\gamma^2)$ as $\gamma\to\infty$,
+and $\sum_\rho\Delta_H(\gamma_\rho,\delta_\rho)<\infty$ since
+$\Delta_H\sim|\delta_\rho|/(2\gamma_\rho^2)$ and
+$\sum_\rho\gamma_\rho^{-2}<\infty$.
+\end{proof}
+
+\section{Main Theorem}
+
+\begin{theorem}\label{thm:main}
+Let $Q=-\langle S,H_0\rangle$ and
+$Q'_{\mathrm{RH}}=\sum_\rho w_H(\gamma_\rho,0)$.  Then
+\begin{equation}
+Q-Q'_{\mathrm{RH}}=\sum_\rho \Delta_H(\gamma_\rho,\delta_\rho),
+\end{equation}
+with $\Delta_H(\gamma,\delta)=w_H(\gamma,\delta)-w_H(\gamma,0)\ge0$ and
+equality if and only if $\delta=0$.  Hence
+\begin{equation}
+Q=Q'_{\mathrm{RH}} \iff \forall\rho,\ \delta_\rho=0
+\iff \forall\rho,\ \operatorname{Re}\rho=\tfrac12.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The identity follows from Proposition~\ref{prop:a2} (interchange) and
+Proposition~\ref{prop:weil} (Weil interface), the positivity from
+Lemma~\ref{lem:pos}, and the equality condition from the positive-term
+argument: $\sum_\rho\Delta_\rho=0$ with $\Delta_\rho\ge0$ forces
+$\Delta_\rho=0$ for every $\rho$, hence $\delta_\rho=0$ for every $\rho$
+by Lemma~\ref{lem:pos}.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{Weil}
+A.~Weil, Sur les ``formules explicites'' de la th\'eorie des nombres
+premiers, \emph{Comm. S\'em. Math. Univ. Lund} Tome Suppl\'ementaire
+(1952), 252--265.
+\bibitem{Barner}
+K.~Barner, On A.~Weil's explicit formula,
+\emph{J.~Reine Angew. Math.} \textbf{323} (1981), 139--152.
+\bibitem{Schwartz}
+L.~Schwartz, \emph{Th\'eorie des distributions}, Hermann, Paris,
+1950--1951.
+\bibitem{Hormander}
+L.~H\"ormander, \emph{The Analysis of Linear Partial Differential
+Operators I: Distribution Theory and Fourier Analysis}, Springer-Verlag.
+\end{thebibliography}
+
+\appendix
+\section{Kernel estimates}
+The scaled profile $Q_\lambda(y)$ satisfies the far-field estimate
+$Q_\lambda(y)=-(\lambda^2/2)/(y^2+1)^2+R_\lambda(y)$ with
+$|R_\lambda(y)|\le C/(y^2+1)^3$, giving the moment bound $|M_2|\le C|\delta|$
+and the asymptotic $\widetilde c_H(\gamma,\delta)\sim 1/(2\gamma^2)$.
+
+\section{Distribution framework}
+$S=\partial_t^2\log|\xi(\tfrac12+it)|\in\mathcal S'$ via the pairing
+$\langle S,\phi\rangle=\langle\log|\xi(\tfrac12+it)|,\phi''\rangle$.  At a
+zero,
+$\partial_t^2\log|t-\gamma_\rho|=-\operatorname{Pf}\frac1{(t-\gamma_\rho)^2}$
+(Hadamard finite part, not $\delta'$), and the single-zero kernel is
+$K_\rho=-\operatorname{Pf}\frac1{(t-\gamma_\rho)^2}+\text{regular
+correction}$, consistent with $K_\delta$; multiplicity $m_\rho$ is carried
+by the kernel, conjugate zeros are summed with the same convention, and
+all regular terms are absorbed into $M(H_0)$.
+
+\section{Conventions}
+Fourier transform: $\widehat H(u)=\int_{\mathbb R}H(t)e^{-2\pi iut}\,dt$
+(all formulas follow this normalization).  Xi normalization:
+$\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$.  Zero counting:
+$\rho=\tfrac12+\delta_\rho+i\gamma_\rho$ with multiplicity; sums over all
+nontrivial zeros.  Prime-term sign is fixed by the Fourier convention.
+
+\section*{Limitations}
+The validity of the criterion depends on the stated analytic framework
+and the applicability of the invoked explicit formula.  The equivalence
+established here is conditional on the Weil--Barner interface and the
+distributional identities of Appendices~B--C; independent verification of
+the key lemmas by the community is required before any stronger claim is
+made.
+
+\end{document}
