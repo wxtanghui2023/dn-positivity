@@ -61,14 +61,23 @@ $\widehat H_0(u)=e^{-2\pi|u|}\bigl[\tfrac{1}{4\pi|u|}+\tfrac12\bigr]$.
 $\widehat K_\delta\widehat H_0=\tfrac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}$
 is finite at $u=0$ (no formal zero-frequency cancellation).
 
-**C3. Distributional pairing of $H_0$.** $H_0\notin L^1$; pairings are
-defined by $\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$
-(integration by parts; $H_0''\in L^1$), and per-zero pairings through the
-product $\widehat K_\delta\widehat H_0\in L^1$. *Check:* boundary terms in
-the integration by parts; the interchange
-$\sum_\rho|\langle K_\rho,H_0\rangle|<\infty$ via
-$|\langle K_\rho,H_0\rangle|\ll|\delta_\rho||H_0''(\gamma_\rho)|$ and
-$\sum_\rho|H_0''(\gamma_\rho)|<\infty$ ($N(T)=O(T\log T)$).
+**C3. Distributional pairing of $H_0$.** $H_0\notin L^1$, and the
+naive pairing $\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$ is
+**not** a convergent ordinary integral: $\log|\xi(\tfrac12+it)|\sim
+O(t\log t)$ while $H_0''(t)\sim 1/(2\pi t^2)$, so the product is of
+order $\log t/t$, not integrable.  The functional $Q$ is therefore
+defined **termwise**:
+$$Q=-\sum_\rho m_\rho\langle K_\rho^{\mathrm{nat}},H_0\rangle,$$
+where each pairing is defined through the Parseval product
+$\widehat K_\delta\widehat H_0=\tfrac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}\in L^1$.
+The series is absolutely convergent since
+$|\langle K_\rho,H_0\rangle|=|w_H(\gamma_\rho,\delta_\rho)|\sim
+|\delta_\rho|/(2\gamma_\rho^2)$ and
+$\sum_\rho|\delta_\rho|/\gamma_\rho^2\le\tfrac12\sum_\rho\gamma_\rho^{-2}<\infty$
+($N(T)=O(T\log T)$).  *Check:* the termwise definition, the absolute
+convergence, and the interchange
+$\sum_\rho|\langle K_\rho,H_0\rangle|<\infty$; note that no global
+pairing $\langle S,H_0\rangle$ is used.
 
 **C4. Factorization of $P_\gamma$.** For $|\delta|<\tfrac12$ and
 $|\gamma|\ge\gamma_1=14.1347\ldots$ ($U\ge200$): $8U^2(5\gamma^2-1)>0$,
@@ -151,11 +160,11 @@ $P_\gamma$), or any step where $|\delta|$ silently replaces $\delta$.
 tempered distribution; $\log|\xi|\in\mathcal S'$.
 - $H_0\in C^\infty\cap\mathcal S'$ (smooth, logarithmic growth);
 $H_0\notin L^1$; $H_0''(t)=O(t^{-2})\in L^1$.
-- Pairing: $\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$ — the
-tempered distribution $\log|\xi|$ acts on the Schwartz-class-at-infinity
-test function $H_0''\in L^1\cap C^\infty$; boundary terms in the
-integration by parts vanish because $H_0$, $H_0'$ grow logarithmically/
-decrease and $S$ is a finite-order distribution.
+- Pairing: **termwise** — $Q=-\sum_\rho m_\rho\langle K_\rho^{\mathrm{nat}},H_0\rangle$
+with each pairing via the Parseval product
+$\widehat K_\delta\widehat H_0\in L^1$. The naive global pairing
+$\langle\log|\xi|,H_0''\rangle$ diverges ($\log|\xi|\sim O(t\log t)$,
+$H_0''\sim 1/t^2$), so no global pairing is used.
 - Fourier side: $\widehat H_0(u)=e^{-2\pi|u|}[\tfrac{1}{4\pi|u|}+\tfrac12]$
 is in $\mathcal S'$ (of $1/|u|$ type at $0$); per-zero pairings are
 defined through the product
