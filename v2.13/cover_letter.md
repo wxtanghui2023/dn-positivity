@@ -24,7 +24,7 @@ distributional Weil framework.
 ## 第二段：贡献描述
 
 We construct a positive spectral discrepancy criterion which is
-equivalent to RH under a stated distributional Weil framework.
+equivalent to RH under the stated distributional Weil framework.
 Specifically:
 
 1. we construct a single explicitly given test object $H_0$;
