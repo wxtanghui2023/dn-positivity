@@ -28,6 +28,12 @@ the stated Weil interface and distributional assumptions.
 
 \section{Main theorem}
 
+\noindent\textbf{Reference functional.} $Q'_{\mathrm{RH}}$ is a reference
+functional obtained by projecting each zero onto the critical line while
+preserving its ordinate and multiplicity: $Q'_{\mathrm{RH}}=\sum_\rho
+w_H(\gamma_\rho,0)$ over the actual (unprojected) zero set; no RH
+assumption enters its definition.
+
 \begin{theorem}\label{thm:main}
 Let $Q=-\langle S,H_0\rangle$ and let
 $Q'_{\mathrm{RH}}=\sum_\rho w_H(\gamma_\rho,0)$, where the sum runs over
@@ -57,6 +63,24 @@ Q=Q'_{\mathrm{RH}}
 for all nontrivial zeros.
 \end{theorem}
 
+\section{Proposition A3: absolute interchange}
+
+\begin{proposition}\label{prop:a3}
+The zero contribution is absolutely summable:
+$\sum_\rho |\langle K_\rho,H_0\rangle|<\infty$; consequently the
+interchange $\langle\sum_\rho K_\rho,H_0\rangle=\sum_\rho\langle
+K_\rho,H_0\rangle$ holds.
+\end{proposition}
+
+\begin{proof}
+By $M_0=M_1=0$, $|\langle K_\rho,H_0\rangle|\ll|\delta_\rho|
+|H_0''(\gamma_\rho)|$.  Since $|\delta_\rho|<\tfrac12$ (critical strip,
+not RH), $\sum_\rho|\delta_\rho H_0''(\gamma_\rho)|\le
+\tfrac12\sum_\rho|H_0''(\gamma_\rho)|$.  The bound $H_0''(t)=O(t^{-2})$
+combined with $N(T)=O(T\log T)$ gives $\sum_\rho|H_0''(\gamma_\rho)|
+<\infty$.
+\end{proof}
+
 \section{Lemma A: kernel and distribution exchange}
 
 \begin{lemma}\label{lem:exchange}
@@ -84,6 +108,11 @@ $N(T)=O(T\log T)$ yields absolute convergence.
 \end{proof}
 
 \section{Proposition B: Weil interface}
+
+\noindent\textbf{Test space.} $W=\{H\in\mathcal S'(\mathbb R):
+H(-t)=H(t),\ H\in C^\infty,\ |\widehat H(u)|\le C(1+|u|)^{-1-\epsilon}\}$.
+The exponential decay $|\widehat H_0(u)|\le C e^{-|u|}$ comfortably
+satisfies this admissibility condition.
 
 \begin{proposition}\label{prop:weil}
 The function $H_0$ belongs to the admissible Weil test space $W$.
@@ -123,8 +152,12 @@ By the closed form
 \widetilde c_H(\gamma,\delta)>0
 \ \text{for } |\gamma|\ge\gamma_1,
 \end{equation}
-the discrepancy is strictly positive off the critical line on the
-nontrivial zero spectrum.
+where $\widetilde c_H=\Delta_H/|\delta|$; positivity follows from the
+numerator estimate $N(x)=(1/2)(a^2(a+1)+x\gamma^2)(1+\gamma^2)^2-
+(a^2+\gamma^2)^2$, $N(0)=0$, $\partial N/\partial x\ge
+\gamma^6/2+\gamma^4+\gamma^2/2-6\gamma^2-13.5>0$ for $\gamma\ge2$.
+Positivity is required only on the support of the spectral measure
+appearing in the explicit formula, i.e. on the nontrivial zero ordinates.
 \end{proof}
 
 \appendix
