@@ -6,14 +6,15 @@
       "orcid": "0009-0003-5745-4820"
     }
   ],
-  "title": "A Telescoping Positivity Criterion for the Riemann Hypothesis: D_n > 0 for all n implies RH",
-  "description": "A proof of the Riemann Hypothesis via a telescoping identity for Li's criterion. We prove D_n > 0 for all n >= 1, where D_n = sum_gamma g_n(gamma), g_n(t) = [t sin(n theta(t)) + (1/2) cos(n theta(t))]/(1/4 + t^2), theta(t) = pi - 2 arctan(2t). The proof combines a new telescoping identity, strict positivity for n <= 43, an explicit asymptotic bound for n >= 44, and the Li criterion lambda_{n+1} - lambda_n = 2 D_n. Numerical verification covers n <= 2 x 10^4 with the first 10^5 zeros of Odlyzko.",
+  "title": "A Pairwise Spectral Discrepancy Criterion Equivalent to the Riemann Hypothesis: Core Identities and Positivity Mechanism (Candidate — Pending Independent Verification)",
+  "description": "A formally reconstructed candidate criterion equivalent to the Riemann Hypothesis under a stated distributional Weil framework. From the Hadamard expansion of the completed zeta function we derive the natural kernel K, a test object H_0 with H_0'' in L^1, the pairing weight w_H, and the pairwise discrepancy P_gamma(delta) = delta^2 M_2/(2 U^2 D_+ D_-) with an explicit positive-coefficient factorization. The criterion is Q = Q'_RH iff delta_rho = 0 for all zeros, assembled over functional-equation orbits. Core identities (O1-O5) and checks (C1-C5) are formalized from original definitions. This is NOT a claim that RH has been proved; independent external verification (INVALID-first) is required and pending.",
   "keywords": [
     "Riemann hypothesis",
-    "Li's criterion",
-    "zeta zeros",
-    "telescoping identity",
-    "explicit formula"
+    "explicit formula",
+    "Weil criterion",
+    "pairwise positivity",
+    "spectral discrepancy",
+    "distributional pairing"
   ],
   "license": "cc-by-4.0",
   "upload_type": "publication",
