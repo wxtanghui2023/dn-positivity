@@ -99,6 +99,73 @@ $$Q=Q'_{\mathrm{RH}}\iff \delta_\rho=0\ \forall\rho
 - **Equality $\Rightarrow$ RH:** $\sum m_\rho P=0$ with $m_\rho>0$,
   $P\ge0$ forces each $P=0$, hence $\delta_\rho=0$ (C4).
 
+## Verification Protocol (for third-party readers)
+
+Complete the five tasks below **without reading any historical versions**
+of this project and **without assuming the conclusion**. For each task
+output exactly one verdict:
+
+> **VALID** / **INVALID** / **UNJUSTIFIED**
+
+### Task 1 — Recompute $K^{\mathrm{nat}}$
+From $\xi(s)=\tfrac12\pi^{-s/2}e^{bs}\prod_\rho(1-s/\rho)e^{s/\rho}$,
+compute $S(t)=\partial_t^2\log|\xi(\tfrac12+it)|$ directly and identify
+the single-zero contribution. Confirm $S=\sum_\rho m_\rho K_\rho^{\mathrm{nat}}
++S_{\mathrm{reg}}$ with $S_{\mathrm{reg}}=0$ (every explicit term
+$t$-linear).
+
+### Task 2 — Recompute $H_0$ and $w_H$
+With Fourier convention $\widehat H(u)=\int H(t)e^{-2\pi iut}dt$,
+compute $\widehat H_0$ from the closed form of $H_0$, then compute
+$w_H(\gamma,\delta)=\langle K_\delta^{\mathrm{nat}}(\cdot-\gamma),H_0\rangle$
+via Parseval. Confirm $w_H=(a^2(a+1)+\delta\gamma^2)/(2(a^2+\gamma^2)^2)$,
+$a=1+\delta$ (actual $\delta$, not $|\delta|$).
+
+### Task 3 — Verify the factorization of $P_\gamma$
+Expand $P_\gamma(\delta)=2w_H(\gamma,0)-w_H(\gamma,\delta)-w_H(\gamma,-\delta)$
+algebraically; confirm
+$P_\gamma=\delta^2M_2/(2U^2D_+D_-)$ with $M_2$ as in O4, and confirm
+every coefficient of $M_2$ is positive for $|\gamma|\ge\gamma_1$,
+$|\delta|<\tfrac12$. Confirm $P_\gamma(\delta)=0\iff\delta=0$.
+
+### Task 4 — Rebuild O5 from the definitions of $Q$ and $Q'_{\mathrm{RH}}$
+Starting from $Q=-\langle S,H_0\rangle$ and $S=\sum m_\rho K^{\mathrm{nat}}_\rho$
+(do **not** start from $P_\gamma$), derive
+$Q=-\sum_\rho m_\rho w_H(\gamma_\rho,\delta_\rho)$ and
+$Q'_{\mathrm{RH}}=-\sum_{\rho/\sim}2m_\rho w_H(\gamma_\rho,0)$,
+fix the orbit convention, and confirm
+$Q-Q'_{\mathrm{RH}}=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho)$.
+Pay attention to: orbit classes, multiplicities, functional-equation
+pairing, signs, the factor $2$, and regular terms.
+
+### Task 5 — Hunt for hidden assumptions
+Actively look for: any implicit use of RH, illegal interchange of sum
+and pairing, circular reasoning (e.g. defining $Q'_{\mathrm{RH}}$ through
+$P_\gamma$), or any step where $|\delta|$ silently replaces $\delta$.
+
+---
+
+## Function-space details for the distributional pairing (C3)
+
+- $S=\partial_t^2\log|\xi(\tfrac12+it)|\in\mathcal S'(\mathbb R)$ as a
+tempered distribution; $\log|\xi|\in\mathcal S'$.
+- $H_0\in C^\infty\cap\mathcal S'$ (smooth, logarithmic growth);
+$H_0\notin L^1$; $H_0''(t)=O(t^{-2})\in L^1$.
+- Pairing: $\langle S,H_0\rangle=\langle\log|\xi|,H_0''\rangle$ — the
+tempered distribution $\log|\xi|$ acts on the Schwartz-class-at-infinity
+test function $H_0''\in L^1\cap C^\infty$; boundary terms in the
+integration by parts vanish because $H_0$, $H_0'$ grow logarithmically/
+decrease and $S$ is a finite-order distribution.
+- Fourier side: $\widehat H_0(u)=e^{-2\pi|u|}[\tfrac{1}{4\pi|u|}+\tfrac12]$
+is in $\mathcal S'$ (of $1/|u|$ type at $0$); per-zero pairings are
+defined through the product
+$\widehat K_\delta\widehat H_0=\tfrac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}\in L^1$,
+so no separate extension of $\widehat H_0$ at $u=0$ is needed.
+- Interchange: $\sum_\rho|\langle K_\rho,H_0\rangle|\le
+\tfrac12\sum_\rho|H_0''(\gamma_\rho)|<\infty$ via
+$|\langle K_\rho,H_0\rangle|\ll|\delta_\rho||H_0''(\gamma_\rho)|$,
+$|\delta_\rho|<\tfrac12$, and $N(T)=O(T\log T)$.
+
 ---
 
 ## Honest boundaries
