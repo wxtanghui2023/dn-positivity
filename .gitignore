@@ -1,2 +1,10 @@
 __pycache__/
 *.pyc
+# LaTeX 编译产物
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+latex_out*.txt
+latex_v2*.txt
