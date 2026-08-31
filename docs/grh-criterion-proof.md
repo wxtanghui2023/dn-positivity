@@ -257,3 +257,33 @@ $$\partial_t^2\operatorname{Re}\Bigl[\log\Bigl(1-\frac{\tfrac12+it}{\rho}\Bigr)\
 - **不是 Gamma 背景**（——Hadamard 已吸收——）——**修正早前表述**
 - **不进入判据**：$Q_\chi/Q'_{\mathrm{RH},\chi}$ 的定义**只用非平凡零点**（逐项 w_H
   配对）——平凡项在定义层面排除——（——理由比"投影差抵消"更直接——）
+
+---
+
+## Step 4 严格化补全（2026-08-31 13:00——轨道装配形式化）
+
+### 4.1 轨道结构（函数方程强制）
+$\xi_\chi(s)=\varepsilon\,\xi_{\bar\chi}(1-s)$（$|\varepsilon|=1$）⟹ 零点集
+$\mathcal{Z}_\chi$ 对映射 $\rho\mapsto 1-\bar\rho$ 封闭（——函数方程的零点等价——）。
+轨道 $\sim$：$\rho\sim 1-\bar\rho$——同一高度 $\gamma$——实部 $\tfrac12\pm\delta$——
+- 离轴轨道：2 个零点 $\{\tfrac12+\delta+i\gamma,\ \tfrac12-\delta+i\gamma\}$（$\delta\neq0$）
+- 在线轨道：1 个零点（$\delta=0$——自配对）
+- **重数**：$m_\rho=m_{1-\bar\rho}$（——函数方程保重数——）
+
+### 4.2 装配（逐项——重数/计数自洽）
+$$Q_\chi=-\sum_{\rho\in\mathcal{Z}_\chi}m_\rho w_H(\gamma_\rho,\delta_\rho),\qquad
+Q'_{\mathrm{RH},\chi}=-\sum_{\rho\in\mathcal{Z}_\chi}m_\rho w_H(\gamma_\rho,0).$$
+**同一零点集**（$\mathcal{Z}_\chi$——全部非平凡零点——含重数）——投影仅
+$\delta_\rho\mapsto0$——零点集不变。按轨道分组：
+$$Q_\chi-Q'_{\mathrm{RH},\chi}
+=-\sum_{\rho/\sim}m_\rho\bigl[w_H(\gamma,\delta)+w_H(\gamma,-\delta)-2w_H(\gamma,0)\bigr]$$
+（——离轴轨道 2 项——在线轨道 $w_H(\gamma,0)-w_H(\gamma,0)=0$——）
+$$=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho).$$
+
+### 4.3 计数核对（——历史教训——）
+- $Q_\chi$ 与 $Q'_{\mathrm{RH},\chi}$ 用**同一零点集**（——投影不增删零点——）
+- 离轴轨道在两者中都是 2 个零点——在线轨道都是 1 个——计数自洽
+- **不犯"零点数变化"错误**（——早前 probe13 的 QRH 未随谱更新 bug——）
+- 绝对收敛：$|P_\gamma(\delta)|\le C\gamma^{-6}$（Step 3——$\delta^2M_2/(2U^2D_+D_-)$——
+  $\gamma^{-6}$ 衰减）——$\sum m_\rho\gamma^{-6}<\infty$（$N_\chi(T)=O(T\log T)$）——
+  装配合法
