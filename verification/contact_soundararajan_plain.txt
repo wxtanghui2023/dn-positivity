@@ -26,6 +26,21 @@ the definition), and is the equivalence Q = Q'_RH iff RH a substantive
 equivalence rather than a tautological reformulation? In other words: can
 you find a fatal gap in O5?
 
+
+A further point of interest: the construction is universal. The same
+objects (kernel, test function, pairing weight, pairwise positivity)
+are pure algebra / pure Fourier and do not depend on the L-function, so
+the criterion migrates verbatim to Dirichlet L-functions: Q_chi = Q'_RH,chi
+iff GRH for chi, with GRH equivalent to the conjunction over all
+characters (verified numerically mod 3,4,5 at machine precision). Under
+GRH, the standard Hardy-Littlewood chain then gives the strong Goldbach
+asymptotic R(n) ~ (S(n)/2) n/log^2 n for sufficiently large even n
+(numerically: ratio -> 1, log-correction c ~ 2.2), with Goldston's
+exception count E(x) << x^{1/2} log^3 x. This is summarized in an
+accompanying document (manuscript_rh_grh_goldbach.md), should you wish
+to see the framework's scope beyond the RH criterion itself.
+
+
 I am deliberately not providing any of the derivation history, previous
 failed attempts, or internal assessments — only the definitions, the
 formal checks, and the INVALID-first protocol, so that the material can
