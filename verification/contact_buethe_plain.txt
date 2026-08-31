@@ -24,6 +24,19 @@ pairing framework (C3.1-C3.5) valid as stated — i.e., can you find an
 illegal Parseval use, a missing boundary term, a convention slip, or a
 hypothesis of the Weil-Barner framework that H_0 fails to satisfy?
 
+
+For context on why this construction matters beyond a single criterion:
+the framework is universal. The objects (kernel, test function, pairing
+weight, pairwise positivity) are pure algebra / pure Fourier, independent
+of the L-function, so the criterion migrates verbatim to Dirichlet
+L-functions — Q_chi = Q'_RH,chi iff GRH for chi, GRH equivalent to the
+conjunction over all characters (verified mod 3,4,5 at machine precision).
+Under GRH the standard chain yields the strong Goldbach asymptotic
+R(n) ~ (S(n)/2) n/log^2 n (numerically: ratio -> 1, c ~ 2.2) and
+Goldston's exception count. An accompanying document
+(manuscript_rh_grh_goldbach.md) summarizes this scope.
+
+
 I am deliberately not providing the derivation history, previous failed
 attempts, or internal assessments — only the definitions, the formal
 checks, and the INVALID-first protocol.
