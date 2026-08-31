@@ -131,7 +131,8 @@ $\widehat K_0(u)=2\pi^2|u|$（$K_\delta^{\mathrm{nat}}$ 的 $\delta\to0$ 极限�
   中用到（$a=1+\delta$）——$u=0$ 处 $|u|\cdot\frac1{|u|}$ 抵消——L¹ ✓**
 - $H_0''(t)=O(t^{-2})\in L^1$（数值：$t^2H_0''\to 1/(2\pi)\approx0.1592$——
   符号无关——）——交换引理（Step 5）的关键
-- **convention 注记**：$\zeta$ 版冻结的 $H_0$ t-域闭式（$-\frac1{4\pi}\log(1+t^2)$）
-  与 2π convention 的 u-域推导存在符号/π 因子的 convention 混用——
-  **判据不依赖 t-域闭式**（只用 u-域配对 $\widehat H_0$ 与乘积 L¹）——
-  此处以 u-域定义为严格基准
+- **自洽确认**（修正 2026-08-31 12:30）：$F[\log(1+t^2)] = -e^{-2\pi|u|}/|u|$
+  （分布恒等式：$F[\log t^2]=-1/|u|$——$d/da F[\log(a^2+t^2)]=2\pi e^{-2\pi a|u|}$）
+  ⟹ $F[\text{冻结 }H_0] = e^{-2\pi|u|}[\frac1{4\pi|u|}+\frac12] = \widehat H_0$——
+  **冻结的 H_0（负 log）与 u-域定义完全一致——无混用**——
+  （早前"convention 混用"注记是我推导 F[log] 常数错误的误报——已纠正）
