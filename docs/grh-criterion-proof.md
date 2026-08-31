@@ -228,3 +228,32 @@ $$Q_\chi - Q'_{\mathrm{RH},\chi}
 | 7 | 族一致性（已正式陈述） | ✅ |
 
 **GRH 判别判据证明文档——7 步全部深化完成**。
+
+---
+
+## Step 1 严格化补全（2026-08-31 12:58）
+
+### 1.1 ξ_χ 的整函数性与 Hadamard 积（标准——引用）
+- $\xi_\chi$ 整函数（阶 1）：Gamma 极点与 L 的平凡零点抵消——
+  偶字符（$a=0$）含 $s=0$ 平凡零点（$L(0,\chi)=0$）——奇字符平凡零点
+  $s=-1,-3,\dots$——$\xi_\chi$ 整 ✓
+- Hadamard：$\xi_\chi(s)=s^m e^{A+Bs}\prod_\rho(1-\frac{s}{\rho})e^{s/\rho}$
+  （——全部零点——含平凡——绝对收敛——Davenport/Iwaniec-Kowalski——）
+
+### 1.2 逐项 ∂² 的合法性
+- $\log\xi_\chi(s)=A+Bs+\sum_\rho[\log(1-\frac{s}{\rho})+\frac{s}{\rho}]$——在去零点
+  区域局部一致收敛——逐项可导（——标准 Hadamard 理论——）
+- $\partial_t^2$ 与求和交换合法（——局部一致收敛——紧集——）
+- $A$ 常数、$Bs$ t-线性——$\partial_t^2\operatorname{Re}=0$——无显式项残留
+
+### 1.3 关键计算（数值验证）
+$$\partial_t^2\operatorname{Re}\Bigl[\log\Bigl(1-\frac{\tfrac12+it}{\rho}\Bigr)\Bigr]
+= \frac{\delta_\rho^2-(t-\gamma_\rho)^2}{(\delta_\rho^2+(t-\gamma_\rho)^2)^2}=K^{\mathrm{nat}}_\rho(t).$$
+（——数值：差 $10^{-13}\sim10^{-15}$——无 ½ 因子——精确——）
+
+### 1.4 S_reg,χ = 平凡零点项（表述修正）
+- $S_{\mathrm{reg},\chi}=\sum_{\text{trivial}} m_\rho K^{\mathrm{nat},\mathrm{trivial}}_\rho(t)$
+  ——平凡零点贡献——**非零**（数值：$s_0=-1$ 处 $-9.3\times10^{-3}$@t=10）
+- **不是 Gamma 背景**（——Hadamard 已吸收——）——**修正早前表述**
+- **不进入判据**：$Q_\chi/Q'_{\mathrm{RH},\chi}$ 的定义**只用非平凡零点**（逐项 w_H
+  配对）——平凡项在定义层面排除——（——理由比"投影差抵消"更直接——）
