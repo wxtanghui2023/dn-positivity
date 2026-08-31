@@ -136,3 +136,27 @@ $\widehat K_0(u)=2\pi^2|u|$（$K_\delta^{\mathrm{nat}}$ 的 $\delta\to0$ 极限�
   ⟹ $F[\text{冻结 }H_0] = e^{-2\pi|u|}[\frac1{4\pi|u|}+\frac12] = \widehat H_0$——
   **冻结的 H_0（负 log）与 u-域定义完全一致——无混用**——
   （早前"convention 混用"注记是我推导 F[log] 常数错误的误报——已纠正）
+
+---
+
+## Step 5（深化）：交换——逐项配对绝对收敛
+
+### 5.1 关键估计（矩消元——ζ 版 A1 引理迁移）
+逐项配对 $\langle K^{\mathrm{nat}}_\delta(\cdot-\gamma),H_0\rangle$（u-域——乘积 L¹——良定义）。
+**矩消元**（M₀=M₁=0——$K_\delta^{\mathrm{nat}}$ 平移核的零阶/一阶矩消失）给出：
+$$|\langle K^{\mathrm{nat}}_\rho, H_0\rangle| \le C|\delta_\rho|\,|H_0''(\gamma_\rho)|.$$
+（——$K^\mathrm{nat}$ 形式与 $H_0$ 均不依赖 χ——引理逐字迁移——）
+
+### 5.2 绝对收敛（数值 + 解析）
+- $H_0''(t) = O(t^{-2})$——精确渐近 $H_0''(t)\sim\frac{1}{2\pi t^2}$
+  （数值：比值 1.0285→1.0003→1.0000——t=10/100/1000）
+- $\sum_\rho |H_0''(\gamma_\rho)| < \infty$：$\gamma_n\sim\frac{2\pi n}{\log n}$——
+  $\sum \frac1{\gamma^2}\sim\sum\frac{(\log n)^2}{4\pi^2 n^2}<\infty$——收敛
+- 数值（β 零点）：$\sum|H_0''(\gamma_\rho)|$ 前 40 个即饱和（0.0113→0.0121）——
+  尾部外推 +0.0008——总 ~0.013——**有限**
+- $|\delta_\rho|<\tfrac12$（临界带）⟹ $\sum|\delta_\rho||H_0''(\gamma_\rho)| \le \tfrac12\sum|H_0''|<\infty$
+
+### 5.3 交换合法
+- $\sum_\rho \langle K^{\mathrm{nat}}_\rho, H_0\rangle$ **绝对收敛**（5.2）
+- ⟹ 逐项求和与（零点集截断/极限）交换合法——不依赖零点分布的任何
+  精细性质（只用 $N_\chi(T)=O(T\log T)$——标准）——**无条件**
