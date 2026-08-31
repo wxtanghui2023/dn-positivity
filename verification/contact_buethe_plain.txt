@@ -33,8 +33,8 @@ L-functions — Q_chi = Q'_RH,chi iff GRH for chi, GRH equivalent to the
 conjunction over all characters (verified mod 3,4,5 at machine precision).
 Under GRH the standard chain yields the strong Goldbach asymptotic
 R(n) ~ (S(n)/2) n/log^2 n (numerically: ratio -> 1, c ~ 2.2) and
-Goldston's exception count. An accompanying document
-(manuscript_rh_grh_goldbach.md) summarizes this scope.
+Goldston's exception count. The complete work is a single self-contained paper
+(papers/rh_grh_goldbach_criterion.md).
 
 
 I am deliberately not providing the derivation history, previous failed

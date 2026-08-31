@@ -46,8 +46,11 @@ failed attempts, or internal assessments — only the definitions, the
 formal checks, and the INVALID-first protocol, so that the material can
 be attacked from first principles.
 
-The self-contained material (definitions O1-O5, checks C1-C5, theorem,
-and an INVALID-first protocol) is available at:
+The complete work is a single self-contained paper
+(papers/rh_grh_goldbach_criterion.md): the RH criterion (definitions,
+checks, theorem, INVALID-first protocol), its verbatim migration to
+GRH (Dirichlet L-functions, mod 3,4,5 verified), and the resulting
+Goldbach chain. It is available at:
 - Zenodo: DOI 10.5281/zenodo.22044629 (latest release v3.0.0)
 - GitHub: https://github.com/wxtanghui2023/dn-positivity
 
