@@ -141,11 +141,15 @@ $\widehat K_0(u)=2\pi^2|u|$（$K_\delta^{\mathrm{nat}}$ 的 $\delta\to0$ 极限�
 
 ## Step 5（深化）：交换——逐项配对绝对收敛
 
-### 5.1 关键估计（矩消元——ζ 版 A1 引理迁移）
+### 5.1 关键估计（矩消元——差形式——引理迁移）
 逐项配对 $\langle K^{\mathrm{nat}}_\delta(\cdot-\gamma),H_0\rangle$（u-域——乘积 L¹——良定义）。
-**矩消元**（M₀=M₁=0——$K_\delta^{\mathrm{nat}}$ 平移核的零阶/一阶矩消失）给出：
-$$|\langle K^{\mathrm{nat}}_\rho, H_0\rangle| \le C|\delta_\rho|\,|H_0''(\gamma_\rho)|.$$
-（——$K^\mathrm{nat}$ 形式与 $H_0$ 均不依赖 χ——引理逐字迁移——）
+**矩消元**（M₀=M₁=0）给出**差形式**（——配对本身非零——在线 $\delta=0$ 时
+$w_H(\gamma,0)=(1+\gamma^2)^{-2}\neq0$——引理必须取差——）：
+$$|w_H(\gamma,\delta)-w_H(\gamma,0)| \le C|\delta|\,|H_0''(\gamma)|,\qquad C\le\pi.$$
+- 数值：全部 $\gamma\in[6.02,10^5]$ × $\delta\in[0.01,0.49]$——$C\le3.1416$——
+  一致有界——渐近 $C\to\pi$（$\partial_\delta w_H|_{\delta=0}\sim\frac1{2\gamma^2}$——
+  $H_0''\sim\frac1{2\pi t^2}$——比值 $\to\pi$）
+- $K^\mathrm{nat}$ 形式与 $H_0$ 均不依赖 χ——引理逐字迁移（——差形式——）
 
 ### 5.2 绝对收敛（数值 + 解析）
 - $H_0''(t) = O(t^{-2})$——精确渐近 $H_0''(t)\sim\frac{1}{2\pi t^2}$
