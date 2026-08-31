@@ -1,62 +1,54 @@
-Subject: Adversarial check of a candidate criterion equivalent to RH — O5 assembly question
+Subject: Adversarial check of a candidate RH/GRH criterion — the equivalence question (O5)
 
 Dear Professor Soundararajan,
 
-I am writing to ask for an adversarial mathematical check of a candidate
-criterion equivalent to the Riemann Hypothesis — not for an endorsement,
-and certainly not to claim that RH has been proved.
+I am writing to request an adversarial mathematical check of one specific
+aspect of a candidate criterion equivalent to the Riemann Hypothesis —
+not an endorsement, and certainly not a claim that RH is proved.
 
-I have constructed a candidate criterion of the form
+The construction: from the Hadamard expansion one obtains a pairing
+weight w_H(gamma, delta) with closed form, and a pairwise discrepancy
+P_gamma(delta) >= 0, P_gamma(delta) = 0 iff delta = 0 (all-positive
+coefficients for gamma > 1/sqrt(5)). Defining
 
-    Q = Q'_RH  iff  delta_rho = 0 for every nontrivial zero rho = 1/2 + delta_rho + i gamma_rho,
+    Q       = -sum_rho m_rho w_H(gamma_rho, delta_rho)
+    Q'_RH   = -sum_rho m_rho w_H(gamma_rho, 0)      (projection delta -> 0)
 
-where Q is a termwise-defined spectral functional built from a pairing
-weight w_H derived from the Hadamard expansion, and Q'_RH is the
-projection delta_rho -> 0 evaluated by the same functional. The claimed
-assembly is
+the claimed assembly is
 
-    Q - Q'_RH = sum_{orbits} m_rho P_gamma(delta_rho),
+    Q - Q'_RH = sum_{orbits} m_rho P_gamma(delta_rho) >= 0,
 
-with P_gamma(delta) >= 0 and P_gamma(delta) = 0 iff delta = 0, summed
-over functional-equation orbits rho ~ 1 - conj(rho).
+so that Q = Q'_RH iff every nontrivial zero of zeta lies on the critical
+line (RH). The same objects, being pure algebra / pure Fourier, migrate
+verbatim to Dirichlet L-functions: Q_chi = Q'_RH,chi iff GRH for chi.
 
-The question I would value most is: Is Q'_RH genuinely and independently
-defined from the original spectral quantities (no RH assumption hidden in
-the definition), and is the equivalence Q = Q'_RH iff RH a substantive
-equivalence rather than a tautological reformulation? In other words: can
-you find a fatal gap in O5?
+The specific question I would value most is about the **equivalence
+itself** — the step labeled O5:
 
+1. Is Q'_RH genuinely and independently defined from the original
+   spectral quantities, with no RH assumption hidden in its definition?
+2. Is the projection spectrum (delta -> 0 at fixed gamma, multiplicity)
+   a legitimate comparison functional — not a tautology engineered to
+   produce positivity?
+3. Are the orbit/multiplicity bookkeeping and the "equality iff all
+   delta = 0" rigidity substantive, or is there a circularity?
 
-A further point of interest: the construction is universal. The same
-objects (kernel, test function, pairing weight, pairwise positivity)
-are pure algebra / pure Fourier and do not depend on the L-function, so
-the criterion migrates verbatim to Dirichlet L-functions: Q_chi = Q'_RH,chi
-iff GRH for chi, with GRH equivalent to the conjunction over all
-characters (verified numerically mod 3,4,5 at machine precision). Under
-GRH, the standard Hardy-Littlewood chain then gives the strong Goldbach
-asymptotic R(n) ~ (S(n)/2) n/log^2 n for sufficiently large even n
-(numerically: ratio -> 1, log-correction c ~ 2.2), with Goldston's
-exception count E(x) << x^{1/2} log^3 x. This is summarized in an
-accompanying document (manuscript_rh_grh_goldbach.md), should you wish
-to see the framework's scope beyond the RH criterion itself.
+In other words: can you find a fatal gap in the equivalence — a hidden
+RH assumption, a double-counting of orbits or multiplicities, or a
+projection that smuggles in the critical line?
 
+I deliberately provide no derivation history or internal assessments —
+only the self-contained paper (Section 1 objects and theorems, Section 2
+GRH migration, Section 3 the Goldbach consequence), with an
+INVALID-first protocol: try to prove it wrong.
 
-I am deliberately not providing any of the derivation history, previous
-failed attempts, or internal assessments — only the definitions, the
-formal checks, and the INVALID-first protocol, so that the material can
-be attacked from first principles.
+Paper: papers/rh_grh_goldbach_criterion.pdf
+Also at: Zenodo DOI 10.5281/zenodo.22044629 (v3.0.0)
+         GitHub https://github.com/wxtanghui2023/dn-positivity
 
-The complete work is a single self-contained paper
-(papers/rh_grh_goldbach_criterion.md): the RH criterion (definitions,
-checks, theorem, INVALID-first protocol), its verbatim migration to
-GRH (Dirichlet L-functions, mod 3,4,5 verified), and the resulting
-Goldbach chain. It is available at:
-- Zenodo: DOI 10.5281/zenodo.22044629 (latest release v3.0.0)
-- GitHub: https://github.com/wxtanghui2023/dn-positivity
-
-Any verdict — VALID, INVALID, or UNJUSTIFIED — on any single step would
-be genuinely valuable. I understand this is a substantial request, and I
-am grateful for any time you can give it.
+Any verdict — VALID, INVALID, or UNJUSTIFIED — on O5 (or any step) would
+be genuinely valuable. I understand this is a substantial request and am
+grateful for any time you can give.
 
 Sincerely,
 Hui Tang

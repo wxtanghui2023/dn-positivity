@@ -1,53 +1,57 @@
-Subject: Adversarial check of a distributional pairing in a candidate criterion — C3 question
+Subject: Adversarial check of a distributional pairing in a candidate RH criterion — the C3 step
 
-Dear Dr. Bue the,
+Dear Dr. Buethe,
 
 I am writing to ask for an adversarial mathematical check of one specific
-technical part of a candidate criterion equivalent to the Riemann
-Hypothesis — not for an endorsement.
+technical step in a candidate criterion equivalent to the Riemann
+Hypothesis — not an endorsement. Your work on the Weil–Barner explicit
+formula and on rigorous explicit bounds is directly relevant, so I would
+value your attack on the **distributional pairing machinery** (step C3).
 
-Because your work on the Weil-Barner explicit formula is directly
-relevant, I would value your attack on the distributional pairing step
-(C3) of the construction. The setting is:
+The setting (full details in the attached paper, Section 1):
 
-- H_0(t) = -(1/(4*pi)) log(1+t^2) + 1/(2*pi*(1+t^2)), with
-  H_0''(t) = O(t^{-2}) in L^1 (note H_0 is NOT in L^1);
-- pairings are defined termwise through L^1 Fourier products
-  (the naive global pairing diverges and is not used);
-- the question is whether the Parseval/Fourier normalization, the
-  delta = 0 singular-kernel treatment, and the interchange of per-zero
-  pairing with spectral summation are legitimate under the hypotheses of
-  the Weil/Barner explicit formula as invoked.
+- Test function
+      H_0(t) = -(1/(4 pi)) log(1+t^2) + 1/(2 pi (1+t^2)),
+  with H_0''(t) = O(t^{-2}) in L^1. Note H_0 is NOT in L^1 (log growth),
+  so the naive global pairing <S, H_0> = <log|xi|, H_0''> diverges and
+  is not used; instead all pairings are defined **termwise** through L^1
+  Fourier products of the per-zero kernels with H_0.
 
-The question I would value most is: Is the termwise distributional
-pairing framework (C3.1-C3.5) valid as stated — i.e., can you find an
-illegal Parseval use, a missing boundary term, a convention slip, or a
-hypothesis of the Weil-Barner framework that H_0 fails to satisfy?
+- Per-zero kernel K_delta(t-gamma) = (delta^2-(t-gamma)^2)/(delta^2+(t-gamma)^2)^2,
+  with Fourier transform \hat K_delta(u) = 2 pi^2 |u| e^{-2 pi delta |u|},
+  and \hat H_0(u) = e^{-2 pi |u|}[1/(4 pi |u|) + 1/2]; the product
+  \hat K_delta \hat H_0 = (pi/2)e^{-2 pi a|u|} + pi^2 |u| e^{-2 pi a|u|} is L^1.
 
+The questions I would value most:
 
-For context on why this construction matters beyond a single criterion:
-the framework is universal. The objects (kernel, test function, pairing
-weight, pairwise positivity) are pure algebra / pure Fourier, independent
-of the L-function, so the criterion migrates verbatim to Dirichlet
-L-functions — Q_chi = Q'_RH,chi iff GRH for chi, GRH equivalent to the
-conjunction over all characters (verified mod 3,4,5 at machine precision).
-Under GRH the standard chain yields the strong Goldbach asymptotic
-R(n) ~ (S(n)/2) n/log^2 n (numerically: ratio -> 1, c ~ 2.2) and
-Goldston's exception count. The complete work is a single self-contained paper
-(papers/rh_grh_goldbach_criterion.md).
+1. Is the termwise distributional pairing framework valid as stated —
+   an illegal Parseval use, a missing boundary term, or a convention
+   slip (2 pi Fourier normalization, delta = 0 singular-kernel
+   treatment)?
+2. Is the interchange of per-zero pairing with spectral summation
+   (absolute convergence via sum |delta_rho| |H_0''(gamma_rho)| < infinity)
+   legitimate under the hypotheses of the Weil/Barner explicit formula
+   as invoked?
+3. Does H_0 satisfy the hypotheses of the explicit formula framework you
+   would use — or is there a hypothesis (analytic strip, decay, test
+   class) that H_0 fails, making the invocation of the explicit formula
+   invalid at some step?
 
+In short: can you find an illegal Parseval use, a missing boundary term,
+a convention slip, or a hypothesis of the Weil–Barner framework that H_0
+fails to satisfy?
 
-I am deliberately not providing the derivation history, previous failed
-attempts, or internal assessments — only the definitions, the formal
-checks, and the INVALID-first protocol.
+I deliberately provide no derivation history or internal assessments —
+only the self-contained paper, with an INVALID-first protocol: try to
+prove it wrong.
 
-The self-contained material (definitions O1-O5, checks C1-C5, theorem,
-and an INVALID-first protocol) is available at:
-- Zenodo: DOI 10.5281/zenodo.22044629 (latest release v3.0.0)
-- GitHub: https://github.com/wxtanghui2023/dn-positivity
+Paper: papers/rh_grh_goldbach_criterion.pdf
+Also at: Zenodo DOI 10.5281/zenodo.22044629 (v3.0.0)
+         GitHub https://github.com/wxtanghui2023/dn-positivity
 
-Any verdict — VALID, INVALID, or UNJUSTIFIED — on C3 would be genuinely
-valuable. I am grateful for any time you can give this.
+Any verdict — VALID, INVALID, or UNJUSTIFIED — on C3 (or any step) would
+be genuinely valuable. I understand this is a substantial request and am
+grateful for any time you can give.
 
 Sincerely,
 Hui Tang
