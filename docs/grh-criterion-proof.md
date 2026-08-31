@@ -107,3 +107,31 @@ $$P_\gamma(\delta) = \frac{\delta^2 M_2}{2U^2D_+D_-} \ge 0,\qquad =0\iff\delta=0
   $H_0''=O(t^{-2})$——$N_\chi(T)=O(T\log T)$——逐项绝对收敛
 - **Step 6（S_reg）**：不进入 Q/Q'——投影差中抵消
 - **Step 7（族一致）**：3.2/3.3 的代数不含 q/χ——γ₁,χ 下界标准
+
+---
+
+## Step 2（深化）：H_0 构造（u 域严格定义）
+
+### 2.1 定义（u 域——严格）
+测试对象由 Fourier 定义（2π convention——$\hat f(u)=\int f(t)e^{-2\pi iut}dt$）：
+$$\widehat H_0(u) := \frac{\widehat w_{\mathrm{target}}(u)}{\widehat K_0(u)}
+= e^{-2\pi|u|}\Bigl[\frac{1}{4\pi|u|}+\frac12\Bigr],$$
+其中 $w_{\mathrm{target}}(\gamma)=(1+\gamma^2)^{-2}$（参考权重）——
+$\widehat w_{\mathrm{target}}(u)=\frac\pi2(1+2\pi|u|)e^{-2\pi|u|}$（参数导数：
+$F[1/(1+t^2)]=\pi e^{-2\pi|u|}$——$F[1/(1+t^2)^2]=-\partial_\alpha F[1/(\alpha+t^2)]|_{\alpha=1}$
+$=\frac\pi2(1+2\pi|u|)e^{-2\pi|u|}$）；
+$\widehat K_0(u)=2\pi^2|u|$（$K_\delta^{\mathrm{nat}}$ 的 $\delta\to0$ 极限）。
+
+**核对**：$\widehat w/\widehat K_0 = \frac{\pi/2(1+2\pi|u|)e^{-2\pi|u|}}{2\pi^2|u|}
+= e^{-2\pi|u|}[1/(4\pi|u|)+1/2]$——相对差 0.0e+00~4.3e-26 ✓
+
+### 2.2 关键性质（符号无关）
+- $\widehat H_0(u)$ 在 $u=0$ 有 $1/|u|$ 奇点——**但配对只在乘积
+  $\widehat K_\delta\widehat H_0 = \frac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}$
+  中用到（$a=1+\delta$）——$u=0$ 处 $|u|\cdot\frac1{|u|}$ 抵消——L¹ ✓**
+- $H_0''(t)=O(t^{-2})\in L^1$（数值：$t^2H_0''\to 1/(2\pi)\approx0.1592$——
+  符号无关——）——交换引理（Step 5）的关键
+- **convention 注记**：$\zeta$ 版冻结的 $H_0$ t-域闭式（$-\frac1{4\pi}\log(1+t^2)$）
+  与 2π convention 的 u-域推导存在符号/π 因子的 convention 混用——
+  **判据不依赖 t-域闭式**（只用 u-域配对 $\widehat H_0$ 与乘积 L¹）——
+  此处以 u-域定义为严格基准
