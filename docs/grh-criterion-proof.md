@@ -287,3 +287,31 @@ $$=\sum_{\rho/\sim}m_\rho P_{\gamma_\rho}(\delta_\rho).$$
 - 绝对收敛：$|P_\gamma(\delta)|\le C\gamma^{-6}$（Step 3——$\delta^2M_2/(2U^2D_+D_-)$——
   $\gamma^{-6}$ 衰减）——$\sum m_\rho\gamma^{-6}<\infty$（$N_\chi(T)=O(T\log T)$）——
   装配合法
+
+---
+
+## Step 2 严格化补全（2026-08-31 13:05——配对关系）
+
+### 2.1 逐项配对的定义（——不是整体配对——）
+判据的量是**逐项定义**的配对和：
+$$\langle K^{\mathrm{nat}}_{\rho},H_0\rangle
+:=\int_{\mathbb R}\widehat K^{\mathrm{nat}}_{\delta_\rho}(u)\widehat H_0(u)\,e^{-2\pi iu\gamma_\rho}\,du,$$
+其中 $\widehat K^{\mathrm{nat}}_\delta(u)=2\pi^2|u|e^{-2\pi\delta|u|}$——
+$\widehat H_0(u)=e^{-2\pi|u|}[1/(4\pi|u|)+1/2]$——乘积
+$\widehat K_\delta\widehat H_0=\frac\pi2 e^{-2\pi a|u|}+\pi^2|u|e^{-2\pi a|u|}\in L^1$
+（$a=1+\delta$——$u=0$ 处 $|u|\cdot\frac1{|u|}$ 抵消）——**每个配对良定义**。
+
+### 2.2 与整体配对的关系（——不混用——）
+- **整体配对** $\langle S_\chi,H_0\rangle$（$S_\chi=\partial_t^2\log|\xi_\chi|$——含
+  平凡零点项）——**不用**——因为平凡项 + 分布意义复杂化
+- **逐项配对和** $-\sum_\rho m_\rho\langle K^{\mathrm{nat}}_\rho,H_0\rangle$——
+  判据的量——**只对非平凡零点**——逐项绝对收敛（Step 5）
+- **关系**：逐项和 ≠ 整体配对（——差平凡项 + 分布细节——）——**但判据只
+  需要逐项和**（——Q 的定义——）——不声称等于整体配对
+
+### 2.3 严格表述（——防"配对含义模糊"——）
+- $w_H(\gamma,\delta):=\langle K^{\mathrm{nat}}_\delta(\cdot-\gamma),H_0\rangle$
+  ——**定义**（u-域积分——L¹ 被积函数——标准积分求值——Step 3）
+- $Q_\chi,Q'_{\mathrm{RH},\chi}$——**定义**在 $w_H$ 上（逐项和——绝对收敛）
+- 全程**不依赖**"$\langle S_\chi,H_0\rangle$ 的存在性"（——整体配对——）
+- ⟹ 配对关系的严格表述：**逐项定义——非整体**——无分布意义歧义
