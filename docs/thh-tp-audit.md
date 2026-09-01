@@ -44,3 +44,21 @@
 - THH/TP 值得记录为"动机上同调的现代候选宿主"（比 Deninger 的叶状空间更接近实现）
 - 但——RH 的核心缺失（Spec ℤ 的谱实约束来源）——THH 未解决
 - 特征零的"几何刚性来源"——仍是开放问题（F_q 的 Fr 模约束不适用）
+
+## even filtration（Hahn-Raksit-Wilson 2022——arXiv:2206.11208）——最新统一工具
+- **even filtration**：附属于交换环谱的**典范滤过**——"measures its failure to be even"（同伦群集中在偶度数的失败程度）
+- **恢复/统一**：Adams-Novikov 滤过（球谱）——Bhatt-Morrow-Scholze 滤过（THH——=> 棱镜上同调）——Morin/Bhatt-Lurie 细化——**可能恢复 Voevodsky 滤过**（Burklund-Krause 猜想——l-adic K 理论 = Voevodsky motivic filtration——对 global/local fields 已证明）
+- **关键**：even filtration 只依赖 E₁-ring 结构——**环谱本身的函数性不变量——独立于 zeta 零点（Level 2）**
+
+### even filtration 评估——不提供"无 Fr 的约束"
+1. 统一 BMS/Morin 滤过（特殊值层面）✓
+2. 独立于零点（环谱不变量）✓
+3. 连接 Voevodsky/K 理论（Burklund-Krause——已证明）✓
+4. **但不提供 Spec ℤ 的"零点 = 谱"约束**——仍需要 Θ（无 Fr）——**断裂依旧**
+
+**结论**：THH → TP → even filtration——现代工具链提供"宿主/滤过"（特殊值层面——Morin 已到完整统一）——但——"零点位置约束"（RH）需要"谱实/模约束"——特征零无 Fr——**断裂是结构性的（不是工具问题）**
+
+## 战略意义（最终）
+- THH/even filtration 方向已充分挖掘：到"特殊值"的完整统一——但——"零点"仍遥不可及（需 Θ——未构造）
+- 这**强化**了"断裂是结构性的"判断——不是工具不够新——是特征零缺 Fr
+- 真正开放的问题：**特征零的"谱实/模约束"来源——是否存在**——或——"断裂"意味着 RH 需要完全不同的方法（非谱的）
