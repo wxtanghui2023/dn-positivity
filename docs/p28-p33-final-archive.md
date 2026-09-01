@@ -60,12 +60,41 @@ Extensive growth of finite-section negative inertia does not, by itself, imply t
 
 P33 真正完成的不是"证明 n₋(K_off) 有限"——而是把 P27 的缺口精确拆成两个不同数学问题。
 
-## 七、封档声明
+## 七、封档声明（唐先生最终确认版——2026-09-01 23:25）
 
-- P28-P33 最稳固、最有算子论价值的结论：**n₋(K)=∞ 可以成立，但 uniform negative sector 完全不存在**
-- "Infinite negative index and uniform negative margin are logically independent"
-- 该区分比"n₋(K_off)=∞ 无望"准确得多
-- 后续方向：Problem II 的严格化（实际 K_off 的 uniform sector 是否存在）——需要新的 transfer theorem 或算术结构分析
+### 最终数学主线（固定）
+- **n₋(K_N)=N ⇏ ∃ε>0: dim E_K((−∞,−ε))=∞**
+- **一致 nested realization：n₋(K_N)→∞ ⟹ n₋(K)=∞**
+- **但完全可能同时：n₋(K)=∞——inf_{x∈H₋,||x||=1} −⟨Kx,x⟩=0**（moving-edge 模型展示的现象）
+
+### 最终压缩链
+```
+n₋(K_N)=N
+⇓
+blockwise positivity + inter-block negativity
+⇓
+Γ_j→2⁺, r_j→1
+⇓
+λ_j⁻→0⁻
+⇓
+finite persistent core + extensive moving edge
+⇓
+no automatic uniform negative-form transfer
+```
+最后一步是 **obstruction**，不是对 n₋(K_off)=∞ 的否定。
+
+### 正式术语（废弃"n₋(K_off)=∞ 无望"）
+- **finite-section negative-index transfer is unproved**
+- **uniform negative-form transfer is obstructed by the moving edge**
+
+### Problem I / II（严格区分）
+- **Problem I — Negative-index infinitude：n₋(K_off)=∞ ?**——P28-P33 没有完成否定
+- **Problem II — Uniform negative sector：∃ε>0, dim E_{(−∞,−ε)}(K_off)=∞ ?**——P28-P33 提供强烈的 moving-edge obstruction evidence
+
+### 下一阶段（P34 起点）
+**Does the actual arithmetic operator K_off possess an infinite-dimensional uniformly negative sector?**
+- 需要：K_off 的显式二次型、算术核结构、可构造的负测试向量族
+- 脱离单纯有限截断谱学——进入实际算术结构
 
 ## 文件索引
 - p28a-inertia-transfer.md —— P28-A（有限→无限惯性传递）
