@@ -1,0 +1,81 @@
+# P28-P33 正式封档：Moving-Edge Obstruction——算子论层级与 Problem I/II 拆分
+
+> 2026-09-01 · 唐先生最终封档指令 · P28-P33 系列归档
+
+## 一、层级表（已建立 / 尚未建立）
+
+| 层级 | 已建立 | 尚未建立 |
+|---|---|---|
+| 有限截断 | n₋(K_N)=N | — |
+| 块结构 | 对角块 ⪰ 0，负性来自 inter-block coherence | — |
+| 临界机制 | λ_edge→0⁻、Γ→2⁺、r→1 | 渐近速率 |
+| 深部谱 | O(1) 个 persistent directions | 更大 N 的严格谱估计 |
+| 边缘谱 | N−O(1) 个 moving near-zero directions | 实际极限算子的严格描述 |
+| 无限负指标 | 一致 nested embedding 下 n₋(K_N)=N ⟹ n₋(K)=∞ | 对实际 K_off 的证明 |
+| uniform negative sector | 不能由 n₋(K_N)=N 推出 | 实际 K_off 是否存在 |
+| uniform transfer | 未建立 | 需要新的 transfer theorem |
+
+## 二、核心逻辑式
+
+**n₋(K_N) = N ⇏ ∃ε>0: dim E_K((−∞,−ε)) = ∞**
+
+**但在固定且一致 nested operator 框架中：n₋(K_N)→∞ ⟹ n₋(K)=∞**
+（只要 K_N 是同一 K 的有限截面，且负子空间通过嵌入保持一致）
+
+## 三、标准 2×2 模型——钉死区别
+
+**K_j = [[1, −(1+1/j)],[−(1+1/j), 1]]——λ_j⁻ = −1/j → 0⁻**：
+- n₋(K) = ∞
+- 同时 inf_{||x||=1} −⟨Kx,x⟩ = 0
+
+**⟹ Infinite negative index and uniform negative margin are logically independent.**
+
+## 四、P28-P33 真正机制链
+
+```
+extensive finite inertia
+⇓
+inter-block generated negativity
+⇓
+Γ_j → 2⁺, r_j → 1
+⇓
+λ_j⁻ → 0⁻
+⇓
+extensive moving spectral edge
+```
+**而不是**：extensive inertia ⟹ extensive uniformly negative sector。
+P31-P32 的 finite persistent core + extensive near-zero moving edge 解释了为什么后一箭头缺失。
+
+## 五、Moving-Edge Obstruction（theorem-level statement）
+
+**Moving-Edge Obstruction.**
+Extensive growth of finite-section negative inertia does not, by itself, imply the existence of an infinite-dimensional uniformly negative sector. In a consistent nested realization, n₋(K_N)→∞ may indeed imply n₋(K)=∞, while all additional negative directions accumulate at the spectral edge 0, so that inf σ₋(K)=0 and no uniform negative-form margin exists.
+
+**"finite-section data alone are insufficient"限定为 embedding/limit 未固定时的 statement——不再声称同一个 nested operator 可以产生有限和无限两种极限负指标。**
+
+## 六、Problem I / II 拆分（P27 缺口的精确定位）
+
+- **Problem I: n₋(K_off) = ∞ ?**——P28-P32 没有完成否定——且一致 nested framework 下甚至可能直接成立
+- **Problem II: ∃ε>0, dim E_{(−∞,−ε)}(K_off) = ∞ ?**——P28-P32 给出很强的 moving-edge 反证型证据——但尚不是实际 K_off 的定理
+
+P33 真正完成的不是"证明 n₋(K_off) 有限"——而是把 P27 的缺口精确拆成两个不同数学问题。
+
+## 七、封档声明
+
+- P28-P33 最稳固、最有算子论价值的结论：**n₋(K)=∞ 可以成立，但 uniform negative sector 完全不存在**
+- "Infinite negative index and uniform negative margin are logically independent"
+- 该区分比"n₋(K_off)=∞ 无望"准确得多
+- 后续方向：Problem II 的严格化（实际 K_off 的 uniform sector 是否存在）——需要新的 transfer theorem 或算术结构分析
+
+## 文件索引
+- p28a-inertia-transfer.md —— P28-A（有限→无限惯性传递）
+- p28b2-fixed-quadratic.md / p28b2c-schur.md —— P28-B2/C（Schur 审计）
+- p28c1-schur-mpmath.md / p28c2a-direct.md / p28c2a-rerun-passage.md —— P28-C（direct compression——passage 确认）
+- p28d-wm-dichotomy.md / p28d1-asymptotic.md / p28d2-n11n12.md —— P28-D（W_M 二分）
+- p28e-interblock-coherence.md / p28e-eta-cross-coherence.md / p28e4-critical-coherence.md —— P28-E（inter-block coherence——η）
+- p28uc-transfer-lemma.md —— P28-UC（必要条件审计）
+- p29-qlevel-schur.md —— P29（q-Level Schur——Γ=2 确认）
+- p30a-gamma-spectrum.md / p30b-near-critical-lemma.md / p30c-alignment-decomposition.md / p30d-joint-scaling.md —— P30（Γ_j 谱——near-critical lemma——η/c/r/Δ）
+- p31-deep-sector-margin.md —— P31（deep sector 有限——情形 I）
+- p32-deep-persistence.md —— P32（finite persistent core——σ_max≈1）
+- p33-moving-edge-obstruction.md / p33b-moving-edge-strict.md / p33c-moving-edge-obstruction.md —— P33（Moving-Edge Obstruction 严格版）
