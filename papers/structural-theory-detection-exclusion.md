@@ -9,14 +9,20 @@
 
 ## 摘要
 
-本文建立 Riemann 猜想（RH）及其相关猜想（GRH/哥德巴赫/孪生素数）统一框架的**结构性审计**。核心贡献不是证明 RH，而是：
+本文建立 Riemann 猜想（RH）及其相关猜想（GRH/哥德巴赫/孪生素数）统一框架的**结构性审计**。核心贡献不是证明 RH，而是回答一个精确的问题：**为什么一大类 RH 型结构能够稳定产生临界线信号（检测），却无法自动产生排除机制？**
 
-1. 建立无条件骨架 F_U（输入/推理/observables 三层——RH 不在输入中）；
-2. 系统区分 **detection（检测）** 与 **exclusion（排除）**：大量 observable 对 β 敏感，但没有任何已知无条件机制将"离轴"从允许状态提升为不相容状态；
-3. 给出逻辑强度谱系 C0-C4（V<∞ 至 pointwise 控制）——越想让 observable 排除离轴，就越接近 RH 本身；
-4. 通过 RH-agnostic 失真测试（W_δ）验证：在所定义的 15 个无条件约束组成的抽象系统中，构造的离轴世界未被任何约束排除——该约束系统本身不提供 RH 的逻辑分离；
-5. 提出 **Rigidity Gap** 概念：所有成功 RH 机制必须跨越的结构障碍；
-6. 将 RH/GRH/哥德巴赫/孪生 的共同部分定位为**共同算术架构**（common architecture），而非**共同证明**（common proof）。
+论文主轴分四层：
+- **I. 无条件结构层**：A_min ⟹ F_U（Euler 积/显式公式/素数统计/轨道结构/正性/变分——RH 不进入基础公理）；
+- **II. 检测层**：prime data ⟹ β-sensitive observables（振幅/Mellin/V(T)/矩谱）——**β can be detected**（但不是 forced）；
+- **III. 排除层**：正式定义 rigidity mechanism（independent construction + β-sensitive observable + uniform coercivity）——只有 coercivity 把检测升级为排除；
+- **IV. Rigidity Gap**：**Detection ⇏ Exclusion**——缺失的中间桥梁不是更多数据/更漂亮的表示——而是 **independent rigidity / coercivity**。
+
+**冻结结论（三句）**：
+1. **Detection is unconditional; exclusion requires additional rigidity.**
+2. **The audited positive-kernel constructions do not yield uniform coercivity.**
+3. **No independent coercive mechanism was identified within the audited framework.**
+
+P5.9（正定化/spectral-gap 审计）确认：Gram positivity 不蕴含 uniform coercivity；可用的非平凡正性机制导向 RH 级信息。本文并未证明数学宇宙中不存在第三种机制——只是在本审计覆盖的范围内未发现。
 
 **关键认识论结论**：本文最有价值的可复用资产是——**一套识别"看起来像 RH 证明、实际上只是检测"的机制的方法**。
 
@@ -155,7 +161,7 @@ C4:  ψ(x) − x = O(x^{1/2+ε})    （pointwise——所有 ε > 0）
 
 ---
 
-## 5 命题 D：Rigidity Gap
+## 5 命题 D：Rigidity Gap 与排除机制分类（P5.9 审计结果）
 
 ### 5.1 定义（概念量——非标准数学定义）
 ```
@@ -165,11 +171,42 @@ G = β-sensitive information − independent rigidity
 - independent rigidity：不依赖零点/β 的刚性原理（把离轴从允许提升为不相容）。
 - **G > 0**：存在 rigidity gap（信息丰富但无排除机制）——本文的全部证据支持这一图景。
 
-### 5.2 全部路线的统一压缩
-prime array / log gas / crystal / Mellin / geometry / scattering / Arakelov / THH-TP / positive kernels——**全部产生 β-sensitive observable——但最终没有产生 independent rigidity gap > 0**。这是跨越 ~30 条路线后的共同结构。
+### 5.2 Rigidity mechanism 定义（排除层的正式对象）
+结构 M 若满足：
+```
+independent construction + β-sensitive observable + uniform coercivity（独立于零点位置）
+```
+则具有 **exclusion power**。只有第三项（coercivity）真正把 detection 升级为 exclusion。
 
-### 5.3 为什么 G 是正确的问题
-RH 的困难不是缺少能检测离轴零点的量——而是缺少把"离轴"从允许状态提升为"不相容状态"的独立刚性缺口。**任何未来的成功机制（无论什么形式）都必须跨越这个 gap**——这是比"Spec Z 缺 Frobenius"更一般的表述。
+### 5.3 统一分类表（已审计机制）
+| 机制 | β-sensitive | 独立 | coercive | exclusion |
+|------|:--:|:--:|:--:|:--:|
+| Euler/Mellin | ✓ | ✓ | ✗ | ✗ |
+| explicit formula | ✓ | ✓ | ✗ | ✗ |
+| scattering | ✓ | ✓ | ✗ | ✗ |
+| Arakelov | 间接 | ✓ | ✗ | ✗ |
+| THH/TP | 部分 | ✓ | ✗ | ✗ |
+| positive kernels | ✓ | 部分 | 条件 | ✗ |
+| **L² tail（K_T）** | ✓ | ✓ | **缺失** | ✗ |
+| hypothetical HP | ✓ | 若存在 | ✓ | ✓ |
+
+**P5.9 的贡献**：L² tail 路线的"coercive"列从"✗（未找到）"升级为"缺失（结构性——spectral-gap 层面）"。
+
+### 5.4 P5.9 核心命题（Lower-bound obstruction——正式表述）
+> **Proposition (Lower-bound obstruction).** The attempted lower-bound route reduces exclusion of off-critical-line zeros to a uniform coercivity estimate for an oscillatory quadratic form. Classical zero-density and spacing estimates, together with the elementary Gram positivity of the associated kernel, **do not by themselves provide** such a coercivity estimate.
+
+**措辞边界（明确）**：
+- 不是"no such coercivity exists"——而是"**do not by themselves provide**"。
+- 不是"the intermediate layer does not exist"——而是"**No independent intermediate coercive mechanism was identified within the audited classes**"。
+- Gram positivity ⟹ uniform coercivity 不成立；可用非平凡正性机制导向 RH 级信息——但本文**未证明数学宇宙中不存在第三种机制**。
+
+### 5.5 Weil 正定的谨慎表述（防定义过宽）
+- 本文说的"非平凡正定 ⟺ RH"特指 **Weil criterion 的特定二次型 W(f,f) ≥ 0**——不是泛泛的"nontrivial positivity is equivalent to RH"。
+- Gram kernel 的 K_T ⪰ 0 只是 **Hilbert 空间几何事实**（任何配置成立）。
+- 真正需要的是 coercivity：⟨K_T a, a⟩ ≥ η||a||²（η > 0 uniform in T）——**两个概念在全文严格分开**。
+
+### 5.6 全部路线的统一压缩
+prime array / log gas / crystal / Mellin / geometry / scattering / Arakelov / THH-TP / positive kernels / L² tail——**全部产生 β-sensitive observable——但最终没有产生 independent rigidity gap > 0**。这是跨越 ~30 条路线后的共同结构。
 
 ---
 
@@ -219,36 +256,48 @@ P_γ ⟶ { RH channel（β=½ 边界）
 
 ---
 
-## 9 结论：问号（RH）
+## 9 结论：杀手图——Detection ⇏ Exclusion
 
 ```
-UNCONDITIONAL ARITHMETIC
+UNCONDITIONAL MATHEMATICS
+│
+┌───────────┴───────────┐
+│                       │
+β-sensitive          structural
+observables          identities
+│                       │
+▼
+DETECTION
+│
+│  missing bridge（Rigidity Gap）
+▼
+┌───────────────────┐
+│   INDEPENDENT      │
+│   RIGIDITY         │
+│   / COERCIVITY     │
+└───────────────────┘
 │
 ▼
-┌─────────────────┐
-│      F_U        │  无条件骨架（命题 A——T1-T10）
-└─────────────────┘
-│       │       │
-▼       ▼       ▼
-β-sensitive observables（命题 B——Detect）
-│       │       │
-└───────┼───────┘
+EXCLUSION
+│
 ▼
-detection of β（检测层——数值支持 β≈½）
-│
-X（问号）
-│
-┌───────┴───────┐
-│                │
-independent     RH-equivalent
-rigidity        condition（命题 C——C2~RH）
-│                │
-?                │
-│                ▼
-└───────────────→ β = 1/2
+RH
 ```
 
-**问号就是整个 RH 问题**——不是"我们还缺一个漂亮模型"。本文的全部贡献在于：把问号之前的每一层（无条件骨架/检测/逻辑强度/失真测试/rigidity gap）精确地钉死——使得未来的突破必须落在"独立刚性"这一明确的位置，而不是任何其他的表示层面。
+**问号（RH）就是整个问题**——不是"我们还缺一个漂亮模型"。P1-P5 五轮的意义：逐层检查这个缺口能否被已有结构填上——**目前答案是：没有找到（不是：不存在）**。
+
+### 冻结结论（三句——全文强度）
+1. **Detection is unconditional; exclusion requires additional rigidity.**
+2. **The audited positive-kernel constructions do not yield uniform coercivity.**
+3. **No independent coercive mechanism was identified within the audited framework.**
+
+### 四层主轴的最终定位
+- **I. Unconditional structural layer**：A_min ⟹ F_U——RH 不进入基础公理。
+- **II. Detection layer**：prime data ⟹ β-sensitive observables——**β can be detected**（不是 forced）。
+- **III. Exclusion layer**：rigidity mechanism（independent + β-sensitive + uniform coercivity）——P5.9 在此。
+- **IV. Rigidity Gap**：**Detection ⇏ Exclusion**——缺失的中间桥梁是 **independent rigidity / coercivity**——不是更多数据/更漂亮的表示。
+
+本文不是"我们没证明 RH"的论文——而是一篇明确研究：**为什么一大类 RH 型结构能够稳定产生临界线信号，却无法自动产生排除机制**。
 
 ---
 
