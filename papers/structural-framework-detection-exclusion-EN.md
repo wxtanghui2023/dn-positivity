@@ -1,6 +1,6 @@
 # A Structural Framework for Detection without Exclusion
 
-**From Detection to Exclusion: Structural Boundaries in Riemann-Type Problems**
+**From Detection to Exclusion: Structural Rigidity Gaps in Riemann-Type Problems**
 
 **Hui Tang** -- 2026-09-01 -- v1 (structural audit)
 
@@ -290,6 +290,27 @@ so coercivity requires control of the **maximal negative deviation** of the diff
 > **Density information controls how many frequencies there are; coercivity controls how their difference spectrum can interfere at its worst phase.** The gap between these two information layers is the most precise form of the Rigidity Gap established in this work.
 
 The honest conclusion: current experiments support the need for a difference-spectrum condition stronger than R0-R2, but no such sufficient condition has been identified. This is a well-posed harmonic-analysis problem, independent of zeta.
+
+### 8.5.6 Zero-prime coupling (the last unclosed door)
+
+Preliminary examination of zero-prime mixed constraints (explicit-formula compatibility between a hypothetical off-critical-line zero configuration and the fixed prime-power sequence $\Lambda(n)$) did **not** identify an independent exclusion functional beyond the explicit-formula information already encoded in the admissible class. In particular:
+- gamma-only test functions do not distinguish on-line from off-axis configurations (orbit pairing fixes the imaginary parts);
+- beta-sensitive test functions are cancelled to first order by the functional-equation pairing;
+- second-order residuals are absorbable by the (self-adaptive) prime side.
+
+**This is not a completeness theorem.**
+
+### 8.5.7 Open Problem: completeness of the admissible information class
+
+$$\mathcal F_U \stackrel{?}{=} \{\text{all unconditional constraints relevant to exclusion}\}.$$
+
+This work audits 15 classes of constraints; therefore only
+$$\mathcal F_{\rm tested} \subseteq \mathcal F_U$$
+is asserted, not equality. Whether an unconditional constraint outside the audited class (e.g., a genuinely new arithmetic functional, a higher-order cumulant identity, or a compatibility condition over the full test-function family) exists remains open.
+
+### 8.5.8 Main proposition (scope-restricted)
+
+Within the routes audited in this work (zero-only statistics, density/difference-spectrum analysis, positive-kernel constructions, and preliminary zero-prime coupling), no exclusion mechanism independent of RH was obtained; the common gap is the missing upgrade from observable/statistical/compatibility information to uniform rigidity (coercivity or equivalent exclusion power). This is a statement about the audited routes, not a universal theorem over all possible mechanisms.
 
 ## 9. Conclusion: the killer diagram -- Detection not=> Exclusion
 
