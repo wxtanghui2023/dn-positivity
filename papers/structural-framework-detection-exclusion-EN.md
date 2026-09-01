@@ -254,6 +254,43 @@ These criteria screen any newly proposed "RH proof" candidate: does it provide i
 
 ---
 
+## 8.5 Uniform coercivity is not controlled by density statistics alone
+
+### 8.5.1 The precise question (difference-spectrum analysis)
+
+For the arithmetic-direction functional
+$$F_\Lambda(\theta) = \sum_{j,k} a_j \bar a_k K_c(\gamma_j - \gamma_k) e^{i(\gamma_j-\gamma_k)\theta}, \qquad a_j = 1/\rho_j,$$
+write $F(\theta) = b_0 + \sum_{r\ne 0} b_r e^{ir\theta}$. Then
+$$\inf_\theta F(\theta) \ge b_0 - \sum_{r\ne 0}|b_r|,$$
+so coercivity requires control of the **maximal negative deviation** of the difference spectrum (not its total variation; positive deviations do not affect the infimum).
+
+### 8.5.2 Rigidity ladder (R0-R4)
+- R0: global density -- does not give coercivity (lattice counterexample).
+- R1: separation -- insufficient.
+- R2: local discrepancy -- numerical attacks weaken but do not destroy coercivity (min margin ~ 0.016).
+- R3: difference-set / additive-energy control -- empirically correlated with coercivity (E large => F small), but not decisive (quadratic counterexample).
+- R4: uniform difference-spectrum rigidity -- the actual candidate; unidentified.
+
+### 8.5.3 Empirical findings
+- RvM-calibrated configurations: margin $\inf_\theta F/b_0$ decays slowly with J (numerically consistent with ~ c/log J; treated as numerical fit, not a theorem).
+- Adversarial constructions preserving R0-R2 with low additive energy all fail to destroy coercivity (margins 0.08-0.78).
+- The only configuration with margin -> 0 (dense lattice) violates the strong additive-energy bound.
+
+### 8.5.4 Honest status (five layers)
+| Layer | Status |
+|---|---|
+| $F \ge 0$ (Gram positivity) | strict |
+| $F > 0$ (pointwise) | holds per configuration; not automatically uniform |
+| $\inf_\theta F \ge \eta > 0$ (uniform coercivity) | **core unknown** |
+| R0+R1+R2 imply uniform coercivity | unproved |
+| zeta zeros satisfy the required condition | unknown |
+| implies RH | not established / untouched |
+
+### 8.5.5 The most precise form of the Rigidity Gap
+> **Density information controls how many frequencies there are; coercivity controls how their difference spectrum can interfere at its worst phase.** The gap between these two information layers is the most precise form of the Rigidity Gap established in this work.
+
+The honest conclusion: current experiments support the need for a difference-spectrum condition stronger than R0-R2, but no such sufficient condition has been identified. This is a well-posed harmonic-analysis problem, independent of zeta.
+
 ## 9. Conclusion: the killer diagram -- Detection not=> Exclusion
 
 ```
