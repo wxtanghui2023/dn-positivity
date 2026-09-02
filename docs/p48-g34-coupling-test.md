@@ -43,3 +43,36 @@
 - (a) 基于死亡层 ③ 的方向——搜索"非零点编码的代表元敏感算术量"（δ/β 的独立算术来源——P36-P47 核心未解——挑战极大——可能即"第三种 mechanism"本身）
 - (b) 接受 G3.4 第一轮（判定树就绪——已有候选全死——RI∩C 需新机制——Coupling Test 待真正候选）
 - (c) 唐先生指示
+
+---
+
+## ⭐ P48-G3.4 第一轮最终审计收档（唐先生 13:19）——CLOSED
+
+### 收档判定
+- **K1-K5 ✓ 封存**：genuine coupling = K1∧K2∧K3∧K4∧K5 + 第五层（admissibility ⟹ P）——K3 作用：representative-sensitive + independent arithmetic origin 必须在同一内部结构（否则 E(x)+Q(x) 拼接——G3.6 封死）
+- **五层判定树 ✓——已有候选审计 ✓——拼接路线 ✓ 已排除（G3.6）**
+- **RI∩C 仍 OPEN——β-accessibility gap 强结构线索 ✓——"arithmetic 无独立 β 信息"未证明 ✗——全数学 Decoupling No-Go 禁止升级 ✗**
+
+### 死亡层分类（failure map——价值确认）
+- 零点编码型 → K3——几何生成型 → K5/⑤——quotient 型 → K1——信息+类约束拼接 → G3.6
+- **问题不是"有没有更多 invariant"——是"有没有 arithmetic object 其内部自由度本身对代表元产生非平凡约束"**
+
+### β 墙三命题严格区分（防线）
+- **命题 A（经验观察）**：P36-P47 已审计机制中 β-sensitive 量来自 zero data——✓ 研究史事实
+- **命题 B（当前机制结构结论）**：Euler/reciprocity/spectral/geometric 构造中无 K1-K3 独立于零点的 β-sensitive object——✓ 可说
+- **命题 C（全数学 No-Go）**：arithmetic 不能含独立 β 信息——✗ 绝对不能说（解析延拓/FE/Hadamard/显式公式联系 Euler 与 zero 侧——真正问题：是否存在独立代表元敏感的算术结构使信息成 coercive constraint 而非零点重新编码）
+
+### 重命名：β-accessibility gap
+- **Arithmetic data ⟹̸（known mechanisms）independent representative-sensitive β ⟹̸ coercive localization**
+- 第一箭头 = 已知机制没找到——第二箭头 = G3 核心约束问题——不过度宣称
+
+### 下一轮不该"搜索 β"（关键升级）
+- 问"A = β？"易落 zero encoding（K3 death）——**搜索更宽：A(x) ≠ β(x)——但 admissibility 能推出 A admissible ⟹ β = ½**
+- **不要寻找 β 的算术表达式——寻找能排除 β ≠ ½ 的算术约束——前者易 zero encoding——后者才是真正 coercive arithmetic mechanism**
+
+### 开放空间（六条件）
+寻找 A：I（代表元敏感）——C（独立 admissibility constraint）——K（敏感性直接参与 constraint）——A（独立 arithmetic origin）——N（非 quotient/normalization/encoding/metric/spectral repackaging）——**R（admissibility ⟹ β = ½——最终 RH relevance）——不要求 A = β——搜索空间实质性扩大**
+
+### 状态
+- **P48-G3.4 第一轮 = CLOSED（收档）**
+- 下一阶段最干净的问题：**寻找非零点编码的 arithmetic coercion——不需要先知道零点位置——却能对 off-line representative 施加排除条件的内部算术操作**
