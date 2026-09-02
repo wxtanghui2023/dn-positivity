@@ -49,3 +49,39 @@
 - (a) Decoupling No-Go 严格化（枚举 current ontology 的全部构造——证明 I/C 无 coupling——挑战：需穷尽——但——分类表是基础）
 - (b) 接受 P48-G3 第一轮（I×C 框架 + 小定理 + 分类表——右上角空缺——第三种 mechanism 是唯一开放）
 - (c) 唐先生指示
+
+---
+
+## ⭐ P48-G3 第一轮审计收档（唐先生 13:11）——G3.6 Information–Constraint Separation Theorem
+
+### 审计修正
+- **G3.1 I-property ✓ 严格成立**——但保留 **I ≠ P**（恢复 x ≠ 从 D(x) 推出 P(x)——P36 型失败核心）
+- **G3.2 C-property 需收紧（防循环）**：任意 C 可定义 C(D(x)) := 1_{P(x)}——任何 D 瞬间获 C-property——**C 必须来自独立于 P 的内部数学结构**——拆为：
+  - C1：C 有独立数学来源——C2：C 不是 P 的重命名——C3：C 对 admissible objects 非平凡筛选——C4：C⟹P 是需证明的定理而非定义
+- **G3.3/G3.5 = 最硬严格结果 ✓**：representative information + class-level constraint ≠ representative-level constraint（严格定理——非经验）——比"metric 不行""reciprocity 不行"更一般——**封掉 Euler data + Kummer/Artin constraint 逃生路线**
+- **类大小检查 = 危险循环确认**——injective encoding + externally imposed test ⟹̸ intrinsic coupling——**正式加入永久排除**
+
+### G3.6：Information–Constraint Separation Theorem（封存）
+- **Theorem**：D(x) = (E(x),Q(x))——E representative-injective——admissibility factors through Q（C(D(x)) = C₀(Q(x))）——⟹ injective component E 贡献零额外约束力——**representative-level information 不能通过 mere augmentation 升级 quotient-level constraint 为 representative-level constraint**
+- **Scope：This theorem concerns factorized coupling only——未证明不存在真正 coupling**
+
+### 判定表（收档）
+- G3.1 I-property：严格完成 ✓
+- G3.2 C-property：形式化完成——须加"独立来源、非循环"条件 ✓/需修订
+- G3.3/G3.5 injective augmentation + quotient constraint：严格定理 ✓
+- 二维 I×C 分类：P36-P47 工作范围内成立 ✓（**不是穷尽定理——"第三种 mechanism 不能排除"——最强合法结论：P36-P47 已审计机制没有进入 RI∩C**）
+- "现有机制 decouple I/C"：候选证据——非穷尽 △
+- **Decoupling No-Go（全数学）：未证明——禁止升级为定理 ✗**（不把 conjecture 强行升级——重复 P44/P45/P46 meta-level closure 风险）
+- **RI ∩ C 的 intrinsic arithmetic ontology：仍完全开放 ★**
+
+### 真正的开放问题（五条件）
+Can an intrinsically arithmetic operation couple representative-sensitive information with coercive constraint：
+- I：D(x) = D(y) ⟹ x = y
+- C：admissibility genuinely restrictive
+- **K：constraint acts on representative-sensitive data（G3.4 真正缺失的）**
+- A：coupling 有独立算术来源
+- N：非 quotienting/normalization/encoding/metric repackaging
+
+### 状态
+- **P48-G3 第一轮 = 收档（G3.6 Separation Theorem 封存——Scope: factorized coupling only）**
+- 下一轮最有价值：**G3.4 — Coupling Test**（定义 intrinsic coupling——逐一检查真正候选是否同时提供 I+C——证明非 quotient/encoding/normalization/metric-spectral 变形——失败才谈 Decoupling No-Go——成功 = P48 第一个真正"第三种 mechanism"）
