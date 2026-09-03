@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+# 扫描 σ₀, γ₀: A/B 比值 - |A|≤B 是否总是成立? A/B 的结构
+import numpy as np
+from mpmath import fp as mpf
+
+def off_fast(N, sigma0, gamma0, zpr, zpi, eps=0.05, n_pts=300, half_width=80.0):
+    logN = np.log(N)
+    rho_pr = sigma0; rho_pi = gamma0
+    rho_mr = sigma0; rho_mi = -gamma0
+    s0r = 0.5 - eps
+    w = half_width
+    ts = np.concatenate([np.linspace(-gamma0-w, -gamma0+w, n_pts//2),
+                          np.linspace(gamma0-w, gamma0+w, n_pts//2)])
+    dt = ts[1]-ts[0]
+    total = 0j
+    zp = zpr + 1j*zpi; zm = zpr - 1j*zpi
+    for t in ts:
+        sr = s0r; si = float(t)
+        def Npow(rr, ri):
+            mag = N**rr
+            return mag*np.cos(ri*logN) + 1j*mag*np.sin(ri*logN)
+        dr = rho_pr - sr; di = rho_pi - si
+        term1 = Npow(dr, di) / (zp * (dr+1j*di)**2)
+        dr2 = rho_mr - sr; di2 = rho_mi - si
+        term2 = Npow(dr2, di2) / (zm * (dr2+1j*di2)**2)
+        sig2_s = (term1 + term2) / logN
+        smr = 1-sr; smi = -si
+        d1r = rho_pr - smr; d1i = rho_pi - smi
+        term1m = Npow(d1r, d1i) / (zp * (d1r+1j*d1i)**2)
+        d2r = rho_mr - smr; d2i = rho_mi - smi
+        term2m = Npow(d2r, d2i) / (zm * (d2r+1j*d2i)**2)
+        sig2_sm = (term1m + term2m) / logN
+        zs = complex(mpf.zeta(sr + 1j*si))
+        zsm = complex(mpf.zeta(smr + 1j*smi))
+        s = sr + 1j*si
+        integrand = sig2_s * sig2_sm * zs * zsm / (s * (1-s))
+        total += integrand * dt
+    return total / (2*np.pi) / logN**2
+
+def fit_AB(sigma0, gamma0, zpr=1.0, zpi=0.0):
+    Ns = [200, 400, 800, 1600]
+    vals = [off_fast(N, sigma0, gamma0, zpr, zpi) for N in Ns]
+    ys, cs = [], []
+    for N, v in zip(Ns, vals):
+        y = float(v.real) / (N**(2*sigma0-1)/np.log(N)**2)
+        ys.append(y); cs.append(np.cos(2*gamma0*np.log(N)))
+    ys = np.array(ys); cs = np.array(cs)
+    M = np.vstack([cs, np.ones_like(cs)]).T
+    sol, *_ = np.linalg.lstsq(M, ys, rcond=None)
+    return sol[0], sol[1]  # A, B
+
+if __name__ == "__main__":
+    print("=== A/B 比值扫描 (|A|≤B 检查) ===")
+    print(f"{'σ₀':>6} {'γ₀':>8} {'A':>12} {'B':>12} {'|A|/B':>8} {'|A|≤B':>8}")
+    results = []
+    for sigma0 in [0.51, 0.55, 0.6, 0.7, 0.8]:
+        for gamma0 in [20, 50, 100]:
+            try:
+                A, B = fit_AB(sigma0, gamma0)
+                ratio = abs(A)/B if B != 0 else float('inf')
+                ok = "OK" if ratio <= 1 else "FAIL"
+                results.append((sigma0, gamma0, A, B, ratio))
+                print(f"{sigma0:>6.2f} {gamma0:>8.0f} {A:>12.5f} {B:>12.5f} {ratio:>8.4f} {ok:>8}")
+            except Exception as e:
+                print(f"{sigma0:>6.2f} {gamma0:>8.0f} err: {e}")
+    # 总结
+    ratios = [r[4] for r in results]
+    print(f"\nA/B 比值范围: [{min(ratios):.4f}, {max(ratios):.4f}]")
+    print(f"全部 |A|≤B: {all(r <= 1 for r in ratios)}")
