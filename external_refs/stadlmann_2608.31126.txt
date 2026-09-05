@@ -1,0 +1,2926 @@
+=== PAGE 1 ===
+BOUNDED GAPS BETWEEN PRIMES
+JULIA STADLMANN
+Abstract.Polymath 8b [5] proved thatH 1= lim inf n→∞ (pn+1−pn)≤246. In this paper we show how
+the Bombieri-Vinogradov theorem can be combined with newer equidistribution estimates for smooth
+moduli to obtain the improved boundH 1≤240.
+1.Introduction
+In this paper we studyH 1= lim inf n→∞(pn+1−pn), the smallest gap between consecutive primes
+which appears infinitely often. The twin prime conjecture suggests thatH 1= 2, but only since Zhang’s
+breakthrough [7] in 2013 is it known thatH 1is finite. Zhang’s boundH 1≤70000000 has since been
+improved several times. In particular, Maynard [3] showed thatH 1≤600, and the Polymath project [5]
+improved this to the current best known boundH 1≤246. A core ingredient of Zhang’s result were
+his newly proved equidistribution estimates for primes in arithmetic progressions with smooth moduli.
+However, Maynard’s new sieve weights later allowed for the use of the older and simpler Bombieri-
+Vinogradov theorem [3]. Polymath’s boundH 1≤246 also only uses the Bombieri-Vinogradov theorem
+and no newer equidistribution estimates [5].
+More generally, one may considerH m= lim inf n→∞(pn+m−pn), the gap betweenm+ 1 consecutive
+primes. Maynard [3] first showed thatH mis bounded, giving estimateH m≪m3exp(4m), and Tao
+obtained a similar bound around the same time. The Polymath project [5] improved this bound toH m≪
+exp((4−28
+157)m). Baker and Irving [1] first introduced Harman’s sieve into this problem, givingH m≪
+exp(3.815m), which we improved toH m≪exp(3.8075m) [6]. Concrete upper bounds forH 2, . . . , H 5are
+also known, see [5] and [6]. The best known upper bounds onH mform≥2 all use equidistribution
+estimates of Zhang type.
+Equidistribution estimates of Zhang type give an exponent of distribution larger than1
+2, improving on
+the exponent in the Bombieri-Vinogradov theorem, but only apply to a limited choice of moduli, likexδ-
+smooth numbers. When applying the GPY method with Maynard-Tao sieve weights, a larger exponent
+of distribution corresponds to a bigger function support in the relevant optimization problem, whereas a
+restricted choice of moduli also restricts the support. In Polymath’s approach to proving upper bounds on
+Hm[5], the gains from having a larger exponent of distribution outweigh the losses from being restricted
+toxδ-smooth numbers whenm≥2, but not whenm= 1.
+The aim of this paper is to combine the function support given by the Bombieri-Vinogradov theorem
+with that of newer equidistribution estimates, so that we may benefit from the advantages of both, and
+improve the bound onH 1. We prove the following:
+Theorem 1.The quantityH 1= lim inf n→∞(pn+1−pn)satisfiesH m≤240.
+The value 246 corresponds to the length of the shortest admissible 50-tuple, while 240 is the length of
+the shortest admissible 49-tuple. The boundH 1≤240 is therefore the smallest possible improvement.
+However, while Polymath [5] used symmetric polynomials of degree≤27 to achieveH 1≤246, we only
+needed polynomials of degree≤21 to getH 1≤240. As such, we believe that our method could achieve
+bigger improvements, but due to limited resources and limited time, we have decided to present this
+modest improvement as a proof of concept.
+1.1.Proof strategy.By using equidistribution estimates for moduli with a large smooth factor, we can
+choose a considerably larger support for the functions used in the GPY optimization problem, giving
+better results in the corresponding eigenvalue computation. Our strategy is outlined below.
+First we need to determine a suitable function support. On the one hand, this support should capture
+many tuples to which the available equidistribution estimates are applicable, but on the other hand it
+should be simple enough that we can efficiently integrate over the chosen region. Our basic idea is to
+1
+arXiv:2608.31126v1  [math.NT]  31 Aug 2026
+=== PAGE 2 ===
+2 JULIA STADLMANN
+consider a unionS=S BV∪SZof the following sets:
+SBV=
+(t1, . . . , t k)∈[0,1]k:t1+···+t k≤1
+4
+,
+SZ(δ, ω, b ) =(
+(t1, . . . , t k)∈[0,1]k:t1+···+t k∈1
+4,1
+4+ω
+andX
+i∈Iti≤b|I|forI={i:t i> δ})
+.
+To decide whetherSis a suitable support, we must ask if we have the necessary equidistribution estimates
+for all modulim=dt1
+1. . . dtk
+kes1
+1. . . esk
+kwith ((t 1, . . . , t k),(s1, . . . , s k))∈S×S. For elements ofS BV×SBV
+we can simply apply the Bombieri-Vinogradov theorem. On the other hand, the conditionP
+i∈Iti≤b|I|
+ensures that elements of (S×S)\(S BV×SBV) have a largexδ-smooth factor. Thisxδ-smooth factor
+is convenient for applying equidistribution estimates, provided we choose the boundsb = (b 1, b2, . . .)
+suitably small. (To increase the support further, we will also apply the epsilon-enlargement trick of
+Polymath [5]. Additionally, to restrict the choice of sequences for which equidistribution estimates must
+apply, we will implement Harman’s sieve.)
+However, while the moduli corresponding to (S×S)\(S BV×SBV) have a reasonably largexδ-smooth
+factor, they are not necessarilyxδ-smooth themselves. In particular, moduli coming fromS BV×SZmay
+have a prime factor of size up tox1/4, meaning they are not eveni-tuplyxδ-densely divisible and thus
+neither the equidistribution estimates of Polymath [4] nor those proved by the author in [6] are directly
+applicable to the chosen support. As such, we must prove variations of the equidistribution estimates
+of [4] and [6] in which the restrictions on the moduli have been considerably relaxed.
+Having chosen a support and proved suitable equidistribution estimates, we need to solve the optimization
+problem produced by the GPY method with Maynard-Tao sieve weights. This involves maximizing a
+ratio of integrals, and can be transformed into an eigenvalue computation for a matrix whose entries
+are determined by these integrals. Here one needs to choose a basis of functions to integrate. To prove
+H1≤246, Polymath [5] used symmetric polynomials of the form·p(t 1, . . . , t k)2(1−t 1− ··· −t k)b, where
+p(t1, . . . , t k) is itself a symmetric polynomial of degreeaand where 2a+b≤27. To show the strength
+of our method, we will use the same kind of basis to proveH 1≤240, but with the stricter condition
+2a+b≤21. This means we get an improved result despite working with a significantly smaller basis.
+However, trying to integrate symmetric polynomials overS=S BV∪SZcauses significant complications:
+We need to obtain exact integrals as even minor errors in the matrix entries can quickly lead to incorrect
+results. However, trying to use Mathematica to integrate a polynomial in 49 variables over a region like
+this seems pretty hopeless: even for small degree polynomials and 10 variables a computation can already
+take 10 minutes or more, and the duration appears to increase exponentially, so that we would never get
+any result for 49 variables. Therefore we need to find a better way to integrate polynomials overS.
+Some of the key ideas of our integral computation are as follows: We first consider sets
+Ts(k) ={(t 1, . . . , t k)∈[0, δ]k:t1+···+t k≤1},
+Tb(k) ={(t 1, . . . , t k)∈[δ,1]k:t1+···+t k≤1}
+and polynomialsta1
+1. . . tak
+k(1−t 1− ··· −t k)b. The integrals ofta1
+1. . . tak
+k(1−t 1− ··· −t k)boverT s(k)
+andT b(k) can be expressed as polynomials inδ, with coefficients only dependent on the value of⌊1
+δ⌋.
+To compute these coefficients we find a recursion which relates an integral overT s(k) to integrals of
+polynomials of equal or lower degree overT s(k−1) andT b(k−1). We then also integrate over more
+complicated sets, like for instanceT m={(t 1, . . . , t r, tr+1, . . . , t k)∈[δ,1]r×[0, δ]k−r:t1+···+t k≤1}.
+Such integrals can be expressed as matrix multiplications, using the coefficient vectors forT s(k) andT b(k)
+produced in the previous step. The actual integral overS=S BV∪SZis then split up into integrals over
+scaledT m, so that we can use the results of the previous steps.
+Overall, our calculation of the needed matrix entries involves no integration at all, it only requires matrix
+multiplication. However, many very large matrices need to be multiplied together, and so despite a lot of
+effort to speed up our code, it can still take days to compute all necessary matrix entries for symmetric
+polynomials of degree 2a+b≤21. Our code also uses a lot of memory, a trade off from focusing on
+computation speed. Due to these time and memory constraints, it was not practical for us to consider
+symmetric polynomials of degree 2a+b≤27. As such, we believe that with greater resources the same
+method could be used to get a better bound onH 1.
+=== PAGE 3 ===
+BOUNDED GAPS BETWEEN PRIMES 3
+1.2.Structure of the paper.In Section 2 we carry out the key steps of the GPY method with
+Maynard-Tao sieve weights and Polymath’s epsilon-enlargement trick. Our arguments follow Polymath’s
+approach [5], but many adjustments need to be made to deal with a more complicated function support
+and account for the use of Harman’s sieve.
+In Section 3 we record the equidistribution estimates used in our proof. Although the relevant estimates
+are closely based on [4] and [6], the moduli restrictions in these papers are too strong, and we need to
+prove relaxed conditions on the moduli.
+The function support used in Section 2 is quite general and involves many different parameters. Dependent
+on these parameters, the equidistribution estimates of Section 3 may or may not be good enough to cover
+all relevant moduli. In Section 4 we show how to calculate good parameters for which the available
+equidistribution estimates work well enough.
+In Section 5 we briefly discuss how integrals over the chosen support can be expressed in terms of matrix
+multiplication and recursion.
+In Section 6 we combine the results of the previous sections to complete the proof of Theorem 1.
+1.3.Notation.Below is a list of notation and terminology used throughout this paper.
+In this paper, lower case Roman letters usually denote integers, and letterspandp idenote primes.
+1Sis the indicator function of setSand 1 Pis the prime indicator function.
+µ(n) is the M¨ obius function andϕ(n) is Euler’s totient function.τ(n) is the number of divisors ofn.
+We say a positive integernisy-smooth if all its prime factors are of size less thany.
+We writeP(y) =Q
+p<yp. Ifn|P(y), thennisy-smooth and squarefree.
+We use Vinogradov notation (≪and≫) and writeX≍YifY≪X≪Y. If we writeX≪ AY, then
+the implied constant may depend onA.
+2.The gpy sieve
+In this section we present a version of the GPY method. The GPY method was first developed by
+Goldston, Pintz and Yıldırım [2], who proved that lim inf n→∞pn+1−pn
+logp n= 0. Since then, it has been used
+in all proofs of upper bounds onH 1, from Zhang’s proof ofH 1≤70000000 [7] to Polymath’s proof of
+H1≤246 [5]. We will use the GPY sieve weights developed by Maynard in [3], and a modification of
+Polymath’s epsilon enlargement trick with a new function support. Additionally, like Baker and Irving [1],
+we will use a minorant for the primes, constructed via Harman’s sieve.
+2.1.Important definitions.Before we state an amended version of the GPY sieve, we need to introduce
+some definitions. We first define the function support we use to construct Maynard-Tao sieve weights.
+Definition 1(Simplex subset).Letk∈N,δ >0andε >0. Letn∈NandA = (A 0, A1, . . . , A n)with
+−ε=A 0<···< A n<1
+2−ε.
+LetB be an× ⌊1
+δ⌋matrix with(j, m)thentry equalB j,m. MatrixB must satisfy that for anym≥1,
+δ < B j,m≤B j,m+1≤B j,m+δ.
+ThenT k(δ, A, B, ε)is defined as follows:
+Tk(δ, A, B, ε) =n[
+j=1(
+(t1, . . . , t k)∈[0,1]k:kX
+i=1ti∈[A j−1+ε, A j+ε)andX
+i∈Iti≤B j,|I|forI={i:t i> δ})
+.
+Specific values for parametersA jandB j,mwill be chosen at a later stage, once we have derived equidistri-
+bution estimates for moduli with largexδ-smooth factors. The conditionδ < B j,m≤B j,m+1≤B j,m+δis
+quite important: IfP
+i∈Iti≤B j,|I|forI={i:t i> δ}, this condition implies that alsoP
+i∈I′ti≤B j,|I′|
+for anyI′⊆I. This property will be used in several proofs in this section.
+Next we define a set of corresponding moduli for which we need equidistribution estimates.
+Definition 2(Relevant moduli).Letx >0andε 0>0. LetT k(δ, A, B, ε)be as given in Definition 1.
+Further letQ(x;δ, A , B, ε, j, j′, m, m′, ε0)be the following set of integers in[1, x]:
+
+
+ee′mY
+i=1fim′Y
+i′=1f′
+i′∈[1, x] :logx(f1. . . f m)≤(1−ε 0)Bj,m,logx(f′
+1. . . f′
+m′)≤(1−ε 0)Bj′,m′,
+logx(f1. . . f me)≤(1−ε 0)(Aj−ε),logx(f′
+1. . . f′
+m′e′)≤(1−ε 0)(Aj′+ε),
+ee′isxδ-smooth,logx(fi),logx(f′
+i)≥δfor alli
+
+
+=== PAGE 4 ===
+4 JULIA STADLMANN
+We then say the moduli corresponding to regionT k(δ, A, B, ε)are the set
+Q∗(x;δ, A , B, ε, ε 0) =n[
+j=1n[
+j′=1⌊1
+δ⌋[
+m=0⌊1
+δ⌋[
+m′=0Q(x;δ, A , B, ε, j, j′, m, m′, ε0).
+Unlike in Polymath’s proof, we will not always work directly with primes in arithmetic progressions.
+Instead we can replace the prime indicator function with a suitable minorantρ(n)≤1 P(n), constructed
+via Harman’s sieve, which satisfies an equidistribution statement of the type described below.
+Definition 3(Equidistribution).LetT k(δ, A, B, ε)be as given in Definition 1 and letQ∗(x;δ, A , B, ε, ε 0)
+be as given in Definition 2.
+We say that a functionf:N×(1,∞)→Chas equidistribution properties for moduli corresponding to
+Tk(δ, A, B, ε)provided that the following holds: For anyx >1,ε 0>0andA >0, and for anya∈Zwith
+(a, p) = 1for all primesp≤x, we have
+X
+q∈Q∗(x;δ,A ,B,ε,ε 0)
+qis squarefreeX
+n∈[x,2x]
+n≡a(q)f(n;x)−1
+ϕ(q)X
+n∈[x,2x]
+(n,q)=1f(n;x)≪A,ε0x
+log(x)A.
+Next we write down the GPY sieve with a minorant of the prime indicator function. Recall here that
+(h1, . . . , h k) is an admissiblek-tuple ifh 1<···< h kare integers which avoid at least one residue class
+modulopfor each primep.
+Definition 4(GPY sieve).Let(h 1, . . . , h k)be an admissiblek-tuple.
+LetW=Q
+p≤log log logxpand chooseb∈Nwith(b+h i, W) = 1for alli∈ {1, . . . , k}.
+Letρ:N×(1,∞)→Rwithρ(n;x)≤1 P(n)for all largexandn∈[x,2x].
+For givenL∈N,c 1, . . . , c L∈Rand smooth compactly supported functionsF l,i: [0,∞)→R, we define
+the following sieve weights:
+ν(n) = LX
+l=1clλFl,1(n+h 1). . . λ Fl,k(n+h k)!2
+withλ F(n) =X
+d|nµ(d)F(logx(d)).
+For the chosen weight functionν:N→[0,∞), we then define the GPY sieve function
+N(x;ρ, ν) =X
+x≤n≤2x
+n≡b(W)ν(n) kX
+i=1ρ(n+h i;x)−1!
+.
+IfN(x;ρ, ν)>0 then there must exist somen 0∈[x,2x] for whichPk
+i=1ρ(n0+hi;x)>1. But then
+(n0+h1, . . . , n 0+hk) must contain at least two primes. ThusN(x;ρ, ν)>0 for largexwould imply that
+H1≤hk−h1. The difficulty is thus to find a choice ofF l,i(and thus a choice ofν) for which we can
+prove the inequalityN(x;ρ, ν)>0. This can be reduced to an optimization problem involving integrals:
+Definition 5(Key integrals).LetT k(δ, A, B, ε)be as given in Definition 1. LetFbe a symmetric,
+square-integrable function supported onT k(δ, A, B, ε). Then define
+I(F;δ, A , B, ε) =Z
+···Z
+Tk(δ,A,B,ε)F(t1, . . . , t k)2dt1. . .dt k,
+J(F;δ, A , B, ε) =nX
+m=1nX
+m′=1Z
+···Z
+t1+···+t k−1≤max{A m−ε,Am′−ε}
+t1+···+t k−1+tk∈[Am−1+ε,A m+ε]
+t1+···+t k−1+t′
+k∈[Am′−1+ε,Am′+ε]F(t1, . . . , t k−1, tk)F(t 1, . . . , t k−1, t′
+k)dt1. . .dt k−1dtkdt′
+k,
+K(F;δ, A , B, ε) =nX
+m=1nX
+m′=1Z
+···Z
+t1+···+t k−1>max{A m−ε,Am′−ε}
+t1+···+t k−1+tk∈[Am−1+ε,A m+ε]
+t1+···+t k−1+t′
+k∈[Am′−1+ε,Am′+ε]F(t1, . . . , t k)2dt1. . .dt k.
+=== PAGE 5 ===
+BOUNDED GAPS BETWEEN PRIMES 5
+2.2.Main sieve statement.We are now ready to state the main result of this section:
+Proposition 1.LetT k(δ, A, B, ε)be as given in Definition 1. Suppose that functionρ:N×(1,∞)→R
+and constantsc 1andc 2have the following properties:
+(1)Prime minorant:−c 2≤ρ(n;x)≤1 P(n)for all largexandn∈[x,2x].
+(2)ρhas equidistribution properties for moduli corresponding toT k(δ, A, B, ε).(See Definition 3.)
+(3)Ifρ(n;x)̸= 0, then all prime factors ofnexceedxβ, for someβ >max{B j,1: 1≤j≤n}.
+(4)The sum ofρ(n;x)over[x,2x]satisfiesP
+n∈[x,2x]ρ(n;x) = (1−c 1+o(1))x
+log(x).
+Further letI(F;δ, A , B, ε),J(F;δ, A , B, ε)andK(F;δ, A , B, ε)be as given in Definition 5. Suppose there
+exists a symmetric, square-integrable functionFsupported onT k(δ, A, B, ε)with
+k(1−c 1)J(F;δ, A , B, ε)−kc 2K(F;δ, A , B, ε)
+I(F;δ, A , B, ε)>1. (2.1)
+ThenH 1= lim inf n→∞(pn+1−pn)≤H(k), whereH(k)is the diameter of the shortest admissiblek-tuple.
+2.3.Construction of sieve weights.We first show how a functionFsatisfying (2.1) is used to con-
+struct sieve weightsν(n). Our arguments follow the steps of Section 5 of Polymath [5], adapted to the
+new supportT k(δ, A, B, ε).
+Lemma 1.LetT k(δ, A, B, ε)be as described in Definition 1. Letε 0>0and define region
+R+
+k(δ, A, B, ε, j, ε 0) =
+(t1, . . . , t k)∈[0,1]k:Pk
+i=1ti<(1−ε 0)(Aj+ε),P
+i∈Iti<(1−ε 0)Bj,|I|forI={i:t i> δ}
+.
+Suppose there exists a symmetric, square-integrable functionFsupported onT k(δ, A, B, ε)with
+k(1−c 1)J(F;δ, A , B, ε)−kc 2K(F;δ, A , B, ε)
+I(F;δ, A , B, ε)>1.
+Ifε0>0is chosen sufficiently small, we can then find integersL 1, . . . , L n, constantsc j,land smooth
+compactly supported functionsf j,l,i: [0,∞)→Rwith the following two properties:
+(1)For everyj∈ {1, . . . , n}andl∈ {1, . . . , L j}, the support of productf j,l,1(t1). . . f j,l,k(tk)is
+contained inR+
+k(δ, A, B, ε, j, ε 0).
+(2)Denoting byL(j, i)the set ofl∈ {1, . . . , L j}for which the support of productQ
+s̸=ifj,l,s(ts)is
+contained in{(t 1, . . . , t i−1, ti+1, . . . , t k) :P
+s̸=iti<(1−ε 0)(Aj−ε)}, and denoting byU(j, i)its
+complement{1, . . . , L j} \ L(j, i), the terms
+I=nX
+j=1LjX
+l=1nX
+j′=1Lj′X
+l′=1cj,lcj′,l′kY
+s=1Z∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts,
+Ji=nX
+j=1X
+l∈L(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Y
+s̸=iZ∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts
++ 2nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Y
+s̸=iZ∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts
+Ki=nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈U(j′,i)cj,lcj′,l′kY
+s=1Z∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts
+satisfy the inequality
+(1−c 1)Pk
+i=1Ji−c2Pk
+i=1Ki
+I>1.
+Our choice of sieve weights in the GPY method will then be as follows:
+ν(n) =
+nX
+j=1LjX
+l=1cj,lλfj,l,1(n+h 1). . . λ fj,l,k(n+h k)
+2
+Proof.LetF: [0,∞)k→Rbe a symmetric, square-integrable function, supported onT k(δ, A, B, ε),
+which satisfies the inequality
+k(1−c 1)J(F;δ, A , B, ε)−kc 2K(F;δ, A , B, ε)
+I(F;δ, A , B, ε)>1. (2.2)
+=== PAGE 6 ===
+6 JULIA STADLMANN
+LetS j={(t 1, . . . , t k)∈[0,1]k:Pk
+i=1ti∈[A j−1+ε, A j+ε) andP
+i∈Iti≤B j,|I|forI={i:t i> δ}}
+and let 1 Sj(n) be the indicator function of setS j. Since{S 1, . . . , S n}is a partition ofT k(δ, A, B, ε), we
+then haveF=Pn
+j=1F·1 Sj.
+Next we choose smallε 1, ε2>0 and defineF 2,j: [0,∞)k→Ras follows:
+F2,j(t1, . . . , t k) =(
+F
+t1−ε2
+1−ε 1, . . . ,tk−ε2
+1−ε 1
+·1Sj
+t1−ε2
+1−ε 1, . . . ,tk−ε2
+1−ε 1
+ift1, . . . , t k≥ε2,
+0 otherwise.
+We also takeε 0=ε1
+100and define the integrals
+I(F, G) =Z∞
+0···Z∞
+0F(t1, . . . , t k)G(t 1, . . . , t k) dt1. . .dt k,
+Ji(F, G;B) =Z∞
+0···Z∞
+0 P
+s̸=its<BF(t1, . . . , t i−1, ti, ti+1, . . . , t k)G(t 1, . . . , t i−1, t′
+i, ti+1, . . . , t k) dt′
+idt1. . .dt k,
+Ki(F, G;B) =Z∞
+0···Z∞
+0 P
+s̸=its>BF(t1, . . . , t k)G(t 1, . . . , t k) dt1. . .dt k,
+SinceFis square-integrable and symmetric, and satisfies inequality (2.2), we can choose a very small
+ε1>0 and an even smallerε 2>0 so that our shifted and scaled functionsF 2,jstill satisfy
+Pk
+i=1Pn
+j=1Pn
+j′=1((1−c 1)Ji(F2,j, F2,j′;B∗(j, j′))−c 2Ki(F2,j, F2,j′;B∗(j, j′)))Pn
+j=1Pn
+j′=1I(F2,j, F2,j′)>1 (2.3)
+whereB∗(j, j′) = (1−ε 0) max{A j−ε, A j′−ε}.
+Furthermore, recall the assumptionB j,m≤B j,m+1≤B j,m+δ. HenceP
+i∈Iti≤B j,|I|forI={i:t i> δ}
+impliesP
+i∈I′ti≤B j,|I′|for anyI′⊆I. In particular, if (t 1, . . . , t k) is in the support ofF 2,j, and
+L={i:t i> δ}, then for anyi∈L, alsoti−ε2
+1−ε 1> δand soP
+i∈L(ti−ε2
+1−ε 1)≤B j,|L|. Hence, forε 2much
+smaller thanε 1, we see that the support ofF 2,jis contained insideR+
+k(δ, A, B, ε, j,2ε 0), and it actually
+stays away from all boundary faces ofR+
+k(δ, A, B, ε, j,2ε 0). Thus we can convolve eachF 2,jwith a smooth
+approximation to the identity, supported close to the origin, to obtain functionsF 3,j: [0,∞)k→Rwhich
+are smooth, supported onR+
+k(δ, A, B, ε, j,2ε 0) and satisfy the inequality
+Pk
+i=1Pn
+j=1Pn
+j′=1((1−c 1)Ji(F3,j, F3,j′;B∗(j, j′))−c 2Ki(F3,j, F3,j′;B∗(j, j′)))Pn
+j=1Pn
+j′=1I(F3,j, F3,j′)>1. (2.4)
+Following the arguments of Polymath [5], we next definef 3,j: [0,∞)k→Rby setting
+f3,j(t1, . . . , t k) =Z∞
+t1···Z∞
+tkF3,j(s1, . . . , s k) ds1. . .ds k.
+Yet again, the conditionB j,m≤B j,m+1 ≤B j,m+δensures that the support off 3,jstays contained in
+R+
+k(δ, A, B, ε, j,2ε 0). Furthermore,
+I(F3,j, F3,j′) =Z∞
+0···Z∞
+0∂k
+∂t1. . . ∂t kf3,j(t1, . . . , t k)∂k
+∂t1. . . ∂t kf3,j′(t1, . . . , t k) dt1. . .dt k,
+Ji(F3,j, F3,j′;B) =Z∞
+0···Z∞
+0P
+s̸=its<B∂k−1
+Q
+s̸=i∂tsf3,j(t1, . . . , t i−1,0, ti+1, . . . , t k)∂k−1
+Q
+s̸=i∂tsf3,j′(t1, . . . , t i−1,0, ti+1, . . . , t k)Y
+s̸=idts,
+Ki(F3,j, F3,j′;B) =Z∞
+0···Z∞
+0P
+s̸=its>B∂k
+∂t1. . . ∂t kf3,j(t1, . . . , t k)∂k
+∂t1. . . ∂t kf3,j′(t1, . . . , t k) dt1. . .dt k.
+We now refer toI(F 3,j, F3,j′) byI∗(f3,j, f3,j′), we refer toJ i(F3,j, F3,j′;B) byJ∗
+i(f3,j, f3,j′;B) and we
+refer toK i(F3,j, F3,j′;B) byK∗
+i(f3,j, f3,j′;B). Hence
+Pk
+i=1Pn
+j=1Pn
+j′=1((1−c 1)J∗
+i(f3,j, f3,j′;B∗(j, j′))−c 2K∗
+i(f3,j, f3,j′;B∗(j, j′)))Pn
+j=1Pn
+j′=1I∗(f3,j, f3,j′)>1 (2.5)
+whereB∗(j, j′) = (1−ε 0) max{A j−ε, A j′−ε}.
+=== PAGE 7 ===
+BOUNDED GAPS BETWEEN PRIMES 7
+Next we choose another very small constantε 3>0 and (like in Section 5.3 of [5]) apply the Stone-
+Weierstrass theorem to each functionf 3,j, expressing it as the smooth limit of linear combinations of the
+formPclf4,j,l,1(t1). . . f 4,j,l,k (tk), where eachf 4,j,l,i(ti) is a smooth function supported on an interval
+of length at mostε 3. Overall, we can find integersL 1, . . . , L n, constantsc j,land and smooth functions
+fj,l,i: [0,∞)→Rwith the following properties:
+(i) Eachf j,l,i(t) is smooth and supported on an interval of length at mostε 3.
+(ii) For everyj∈ {1, . . . , n}andl∈ {1, . . . , L j}, the support of productf j,l,1(t1). . . f j,l,k(tk) is
+contained inR+
+k(δ, A, B, ε, j, ε 0).
+(iii) For eachj∈ {1, . . . , n}, sum
+hj(t1, . . . , t k) =LjX
+l=1cj,lfj,l,1(t1). . . f j,l,k(tk)
+approximates functionf 3,j(t1, . . . , t k) so well that the following is true:
+Pk
+i=1Pn
+j=1Pn
+j′=1((1−c 1)J∗
+i(hj, hj′;B∗(j, j′))−c 2K∗
+i(hj, hj′;B∗(j, j′)))Pn
+j=1Pn
+j′=1I∗(hj, hj′)>1. (2.6)
+Now we take a closer look atI∗,J∗
+iandK∗
+i. The expressionPn
+j=1Pn
+j′=1I∗(hj, hj′) rearranges to
+nX
+j=1LjX
+l=1nX
+j′=1Lj′X
+l′=1cj,lcj′,l′Z∞
+0···Z∞
+0f′
+j,l,1(t1). . . f′
+j,l,k(tk)f′
+j′,l′,1(t1). . . f′
+j′,l′,k(tk) dt1. . .dt k.
+But this is simplyI. On the other hand, considerPn
+j=1Pn
+j′=1J∗
+i(hj, hj′; (1−ε 0) max{A j−ε, A j′−ε})
+for somei∈ {1, . . . , k}. It equals the following expression:
+J∗
+i=nX
+j=1LjX
+l=1nX
+j′=1Lj′X
+l′=1cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Z∞
+0···Z∞
+0 P
+s̸=its<(1−ε 0) max{A j−ε,Aj′−ε}Y
+s̸=if′
+j,l,s(ts)Y
+s̸=if′
+j′,l′,s(ts)Y
+s̸=idts.
+We now partition each{1, . . . , L j}as follows:L(j, i) is the set ofl∈ {1, . . . , L j}for which the support of
+productQ
+s̸=ifj,l,s(ts) is contained in{(t 1, . . . , t i−1, ti+1, . . . , t k) :P
+s̸=iti<(1−ε 0)(Aj−ε)}. The set
+U(j, i) is the complement{1, . . . , L j} \ L(j, i).
+The union of the supports of functionsQ
+s̸=ifj,l,s(ts)Q
+s̸=ifj′,l′,s(ts) withl∈ U(j, i) andl′∈ U(j′, i) only
+overlaps with{(t 1, . . . , t i−1, ti+1, . . . , t k) :P
+s̸=iti<(1−ε 0) max{A j−ε, A j′−ε}}on a set of measure
+O(ε3). Hence for any givenε 4>0, we can choose the value ofε 3sufficiently small that the contribution
+of pairs (l, l′)∈ U(j, i)× U(j′, i) toJ∗
+iis bounded byε 4and
+Ji=nX
+j=1X
+l∈L(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Z∞
+0···Z∞
+0Y
+s̸=if′
+j,l,s(ts)Y
+s̸=if′
+j′,l′,s(ts)Y
+s̸=idts
++ 2nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Z∞
+0···Z∞
+0Y
+s̸=if′
+j,l,s(ts)Y
+s̸=if′
+j′,l′,s(ts)Y
+s̸=idts
+>nX
+j=1nX
+j′=1J∗
+i(hj, hj′; (1−ε 0) max{A j−ε, A j′−ε})−ε 4.
+Finally, pairs (l, l′) withl∈ L(j, i) orl′∈ L(j′, i) do not contribute at all toPn
+j=1Pn
+j′=1K∗
+i(hj, hj′;B∗(j, j′)),
+as their support does not overlap with the integration region. Thus the sum ofK∗
+iequals
+K∗
+i=nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈U(j′,i)cj,lcj′,l′Z∞
+0···Z∞
+0 P
+s̸=its>(1−ε 0) max{A j−ε,Aj′−ε}kY
+s=1f′
+j,l,s(ts)kY
+s=1f′
+j′,l′,s(ts) dt1. . .dt k.
+Since the support of functionsQ
+s̸=ifj,l,i(ti)Q
+s̸=ifj′,l′,i(ti) withl∈ U(j, i) andl′∈ U(j′, i) only overlaps
+with{(t 1, . . . , t i−1, ti+1, . . . , t k) :P
+s̸=iti<(1−ε 0) max{A j−ε, A j′−ε}}on a set of measureO(ε 3), we
+can drop the conditionP
+s̸=its>(1−ε 0) max{A j−ε, A j′−ε}with a loss of at mostε 4, provided that
+=== PAGE 8 ===
+8 JULIA STADLMANN
+ε3was chosen small enough. Overall we then have
+Ki=nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈U(j′,i)cj,lcj′,l′Z∞
+0···Z∞
+0kY
+s=1f′
+j,l,s(ts)kY
+s=1f′
+j′,l′,s(ts) dt1. . .dt k
+<nX
+j=1nX
+j′=1K∗
+i(hj, hj′;B∗(j, j′)) +ε 4.
+Looking back at inequality (2.6) we therefore have
+(1−c 1)Pk
+i=1Ji−c2Pk
+i=1Ki+ ((1−c 1)k+c 2k)ε4
+I>1.
+Hence, takingε 4sufficiently small (and the correspondingε 3even smaller), we arrive at the desired
+inequality(1−c 1)Pk
+i=1Ji−c2Pk
+i=1Ki
+I>1.□
+2.4.Asymptotics.Having chosen sieve weightsν(n), we now need to prove asymptotics for sumsP
+x≤n≤2xν(n)Pk
+i=1ρ(n+h i;x). We first look atP
+x≤n≤2xρ(n+h i;x)Qk
+s=1λFs(n+h s)λGs(n+h s).
+Here we can follow the arguments of Section 4.2 of Polymath [5], with small amendments due to use of
+Harman’s sieve (like in Baker and Irving’s work [1]) and due to the new support.
+Lemma 2.Suppose that functionρ:N×(1,∞)→Rhas the following properties:
+(1)Prime minorant:−c 2≤ρ(n;x)≤1 P(n)for all largexandn∈[x,2x].
+(2)ρhas equidistribution properties for moduli corresponding toT k(δ, A, B, ε).(See Definition 3.)
+(3)Ifρ(n;x)̸= 0, then all prime factors ofnexceedxβ, for someβ >max{B j,1: 1≤j≤n}.
+(4)The sum ofρ(n;x)over[x,2x]satisfiesP
+n∈[x,2x]ρ(n;x) = (1−c 1+o(1))x
+log(x).
+Leti 0∈ {1, . . . , k}. Consider smooth compactly supported functionsF i: [0,∞)→RandG i: [0,∞)→R.
+LetR+
+k(δ, A, B, ε, j, ε 0)be as defined in Lemma 1. Suppose that the support of productF 1(t1). . . F k(tk)
+is contained in the setR+
+k(δ, A, B, ε, j, ε 0)and the support of productG 1(t1). . . G k(tk)is contained in
+R+
+k(δ, A, B, ε, j′, ε0). Finally, suppose that the support of productQ
+i̸=i0Fi(ti)is contained in the set
+{(t1, . . . , t i0−1, ti0+1, . . . , t k) :P
+i̸=i0ti<(1−ε 0)(Aj−ε)}.
+LetW=Q
+p≤log log logxpandb∈Nwith(b+h i, W) = 1for alli∈ {1, . . . , k}. Then
+X
+x≤n≤2x
+n≡b(W)ρ(n+h i0;x)kY
+i=1λFi(n+h i)λGi(n+h i)
+= 
+(1−c 1)Fk(0)G k(0)Y
+i̸=i0Z∞
+0F′
+i(ti)G′
+i(ti)dti+o(1)!xWk−1
+ϕ(W)klog(x)k
+.
+Proof.Without loss of generality we assume thati 0=k. Recall thatλ F(n) =P
+d|nµ(d)F(logx(d)). We
+call the sum we are interested inS. Expanding, we have
+S:=X
+x≤n≤2x
+n≡b(W)ρ(n+h k;x)kY
+i=1λFi(n+h i)λGi(n+h i)
+=X
+d1,...,d k,d′
+1,...,d′
+kkY
+i=1µ(di)µ(d′
+i)Fi(logx(di))Gi(logx(d′
+i))X
+x≤n≤2x
+n≡b(W)
+n≡−h i[di,d′
+i]∀iρ(n+h k;x).
+Ifρ(n+h k;x)̸= 0, then anyd|n+h kwithd̸= 1 satisfies logx(d)> B j,1. But by construction we have
+Bj,m≤B j,m+1 ≤B j,m+δ, and so logx(d)> B j,1implies logx(d) + (m−1)δ > B j,mfor allm. Thus
+any tuple (logx(d1), . . . ,logx(dk)) with (d k|n+h kandd k̸= 1) cannot be in the support of product
+F1(t1). . . F k(tk). Onlyd k= 1 contributes toS. Similarly, onlyd′
+k= 1 contributes toSand so we have
+S=F k(0)G k(0)X
+d1,...,d k,d′
+1,...,d′
+kk−1Y
+i=1µ(di)µ(d′
+i)Fi(logx(di))Gi(logx(d′
+i))X
+x≤n≤2x
+n≡b(W)
+n≡−h i[di,d′
+i]∀i̸=kρ(n+h k;x).
+=== PAGE 9 ===
+BOUNDED GAPS BETWEEN PRIMES 9
+Now we use theW-trick as in Polymath [5]:bwas chosen to satisfy (b+h i, W) = 1 for alli. Assuming that
+xis sufficiently large to ensure|h i−hi′|<log log logxfori̸=i′, the system of congruences given above
+thus can only have solutions if the lcms [d i, d′
+i] are coprime to each other and toW=Q
+p≤log log logxp.
+The conditions (n≡b(W) andn≡ −h i[di, d′
+i] fori̸=k) can thus be replaced by a single congruence
+n+h k≡aW,d 1,...,d′
+k−1modq W,d 1,...,d′
+k−1. Herea W,d 1,...,d′
+k−1can be chosen to be coprime to all primes
+p≤x, andq W,d 1,...,d′
+k−1is defined to equal
+qW,d 1,...,d′
+k−1=W[d 1, d′
+1]. . .[d k−1, d′
+k−1].
+Hence we splitSinto a main termS Mand an error termS Eas follows:
+SM=Fk(0)G k(0)X
+d1,...,d k,d′
+1,...,d′
+kQk−1
+i=1µ(di)µ(d′
+i)Fi(logx(di))Gi(logx(d′
+i))
+ϕ(W[d 1, d′
+1]. . .[d k−1, d′
+k−1])X
+x+hk≤m≤2x+h kρ(m;x),
+SE=|F k(0)G k(0)|X
+d1,...,d k,d′
+1,...,d′
+k
+qW,d1,...,d′
+k−1squarefreek−1Y
+i=1|Fi(logx(di))Gi(logx(d′
+i))|∆(ρ;a W,d 1,...,d′
+k−1(qW,d 1,...,d′
+k−1)),
+where ∆(ρ;a(q)) =X
+x+hk≤m≤2x+h k
+m≡a(q)ρ(m;x)−1
+ϕ(q)X
+x+hk≤m≤2x+h k
+(m,q)=1ρ(m;x).
+To deal with the main termS M, we recall assumptionP
+n∈[x,2x]ρ(n;x) = (1−c 1+o(1))x
+log(x), and we
+apply Lemma 4.1 of Polymath [5] with [d i, d′
+i] replaced byϕ([d i, d′
+i]) (see also the discussion on page 19
+of [5]). Overall this gives the asymptotic
+SM= 
+Fk(0)G k(0) k−1Y
+i=1Z∞
+0F′
+i(ti)G′
+i(ti)dti!
+(1−c 1) +o(1)!xWk−1
+ϕ(W)klog(x)k
+.
+To deal with the error termS E, we first recall that the support of productG 1(t1). . . G k(tk) is con-
+tained inR+
+k(δ, A, B, ε, j′, ε0) and that the support of productQ
+i̸=i0Fi(ti) is contained in the set
+{(t1, . . . , t i0−1, ti0+1, . . . , t k) :P
+i̸=i0ti<(1−ε 0)(Aj−ε)}. Consider modulusq=W[d 1, d′
+1]. . .[d k−1, d′
+k−1],
+and assume the modulus contributes toS E. Relabel thosed iwhich satisfyd i≥xδasf iand combine
+the remainingd iandWto a product callede. Relabeld′
+i/(di, d′
+i) which satisfyd′
+i/(di, d′
+i)≥xδasf′
+iand
+combine the remainingd′
+i/(di, d′
+i) to a product callede′. Then we haveq=ee′Qm
+i=1fiQm′
+i=1f′
+i, wheree
+ande′arexδ-smooth and logx(f1. . . f me)≤(1−ε0
+2)(Aj−ε) and logx(f′
+1. . . f′
+m′e′)≤(1−ε0
+2)(Aj′+ε).
+Using once more thatB j,m≤B j,m+1 ≤B j,m+δ, we also have logx(f1. . . f m)≤(1−ε 0)Bj,mand
+logx(f′
+1. . . f′
+m′)≤(1−ε 0)Bj′,m′. In short, comparing with Definition 2, we see that any modulus
+q=W[d 1, d′
+1]. . .[d k−1, d′
+k−1] which contributes toS Eis contained in the setQ(x;δ, A , B, ε,ε0
+2).
+We then recall our assumption (2) thatρhas equidistribution properties for moduli corresponding to
+Tk(δ, A, B, ε): Ifa∈Zwith (a, p) = 1 for allp≤x, and ifC >0, we have
+X
+q∈Q∗(x;δ,A ,B,ε,ε0
+2)
+qis squarefreeX
+n∈[x,2x]
+n≡a(q)ρ(n;x)−1
+ϕ(q)X
+n∈[x,2x]
+(n,q)=1ρ(n;x)≪C,ε0x
+log(x)C. (2.7)
+However, in the statement above, the congruence classais fixed, whereas inS Ewe have thata W,d 1,...,d′
+k−1
+depends ond iandd′
+i. To get around this issue, we use a trick similar to that on page 22 of [5], and first
+define the following set:
+A=
+
+a∈
+
+1, . . . ,Y
+p≤xp
+
+:a≡b+h kmodW,∀p∈(log log logx, x]∃i∈ {1, . . . , k−1}:a≡h k−himodp
+
+.
+First we think about a fixed choice ofd 1, . . . , d′
+k−1, The setAis constructed so that for anyq=
+qW,d 1,...,d′
+k−1=W[d 1, d′
+1]. . .[d k−1, d′
+k−1], the correspondinga W,d 1,...,d′
+k−1(q) is contained inA. More
+specifically, by applying the Chinese Remainder Theorem, we see that whenearanges overA, then
+ea≡a W,d 1,...,d′
+k−1(q) for|A|/(k−1)ω(q/W)choices ofea, whereω(q/W) is the number of distinct prime
+factors ofq/W. But sinceq/Wis squarefree, we have (k−1)ω(q/W)≪τ(q)O(1). Hence if we sum
+over allea∈ Aand multiply withτ(q)O(1)
+|A|, thena W,d 1,...,d′
+k−1is counted at least once. Furthermore, any
+=== PAGE 10 ===
+10 JULIA STADLMANN
+q∈Q∗(x;δ, A , B, ε,ε0
+2) hasq=q W,d 1,...,d′
+k−1for at mostτ(q)O(1)choices ofd 1, . . . , d′
+k−1. Therefore we
+obtain the following bound onS E:
+SE≪X
+q∈Q∗(x;δ,A ,B,ε,ε0
+2)
+qsquarefreeτ(q)O(1)
+|A|X
+a∈AX
+n∈[x+h k,2x+h k]
+n≡a(q)ρ(n;x)−1
+ϕ(q)X
+n∈[x+h k,2x+h k]
+(n,q)=1ρ(n;x).
+To finish the proof we simply apply the Cauchy-Schwarz inequality and equidistribution property (2.7).
+Choosing constantCsufficient large, we have:
+SE≪1
+|A|X
+a∈A X
+q∈Q∗(x;δ,A ,B,ε,ε0
+2)
+qsquarefreeτ(q)O(1)∆(ρ, a(q))!1/2 X
+q∈Q∗(x;δ,A ,B,ε,ε0
+2)
+qsquarefree∆(ρ, a(q))!1/2
+≪C1
+|A|X
+a∈A(xlog(x)O(1))1/2(xlog(x)−C)1/2≪Cx
+log(x)C/2.
+SinceW≪(log logx)O(1), summing up the asymptotic forS Mand the bound onS Efor a largeC
+completes the proof. □
+2.5.Proof of Proposition 1.Proposition 1 can now be obtained as a corollary of Lemma 1, Lemma 2,
+as well as Theorem 3.6 of [5]. We need to be slightly careful when mixing Harman’s sieve (ρ(n;x)) and
+the epsilon enlargement trick.
+Proof of Proposition 1.Letε 0>0 be very small. By Lemma 1, we can then find integersL 1, . . . , L n, con-
+stantsc j,land smooth compactly supported functionsf j,l,i: [0,∞)→R, withf j,l,1(t1). . . f j,l,k(tk) sup-
+ported onR+
+k(δ, A, B, ε, j, ε 0), so that the following is true: Denoting byL(j, i) the set ofl∈ {1, . . . , L j}
+for which the support of productQ
+s̸=ifj,l,s(ts) is contained in{(t 1, . . . , t i−1, ti+1, . . . , t k) :P
+s̸=iti<
+(1−ε 0)(Aj−ε)}, and denoting byU(j, i) its complement{1, . . . , L j} \ L(j, i), the terms
+I=nX
+j=1LjX
+l=1nX
+j′=1Lj′X
+l′=1cj,lcj′,l′kY
+s=1Z∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts) dts,
+Ji=nX
+j=1X
+l∈L(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Y
+s̸=iZ∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts) dts
++ 2nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈L(j′,i)cj,lcj′,l′fj,l,i(0)fj′,l′,i(0)Y
+s̸=iZ∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts) dts
+Ki=nX
+j=1X
+l∈U(j,i)nX
+j′=1X
+l′∈U(j′,i)cj,lcj′,l′kY
+s=1Z∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts) dts
+satisfy the inequality
+(1−c 1)Pk
+i=1Ji−c2Pk
+i=1Ki
+I>1.
+We now choose the following sieve weights:
+ν(n) =
+nX
+j=1LjX
+l=1cj,lλfj,l,1(n+h 1). . . λ fj,l,k(n+h k)
+2
+.
+Next we consider the ratio
+eN(x;ρ, ν) =Pk
+i=1P
+x≤n≤2x,n≡b(W)ν(n)ρ(n+h i;x)
+P
+x≤n≤2x,n≡b(W) ν(n).
+On the one hand, Theorem 3.6 of [5] tells us that
+X
+x≤n≤2x
+n≡b(W)kY
+s=1λfj,l,s(n+h s)λfj′,l′,s(n+h s) = kY
+s=1Z∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts+o(1)!xWk−1
+ϕ(W)klog(x)k
+.
+=== PAGE 11 ===
+BOUNDED GAPS BETWEEN PRIMES 11
+Expanding the square inν(n), this gives
+X
+x≤n≤2x,n≡b(W)ν(n) = (I+o(1))xWk−1
+ϕ(W)klog(x)k
+. (2.8)
+On the other hand, a lower bound for the enumerator is obtained as follows:ρ(n+h i;x) +c 2≥0 and
+ν(n)ρ(n+h i;x)≥
+nX
+j=1X
+l∈L(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+2
+(ρ(n+h i;x) +c 2)
++ 2
+nX
+j=1X
+l∈L(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+
+nX
+j=1X
+l∈U(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+(ρ(n+h i;x) +c 2)
+−c2
+nX
+j=1X
+l∈L(j,i)cj,lkY
+s=1λfj,l,s(n+h s) +nX
+j=1X
+l∈U(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+2
+=
+nX
+j=1X
+l∈L(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+2
+ρ(n+h i;x)
++ 2
+nX
+j=1X
+l∈L(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+
+nX
+j=1X
+l∈U(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+ρ(n+h i;x)
+−c2
+nX
+j=1X
+l∈U(j,i)cj,lkY
+s=1λfj,l,s(n+h s)
+2
+.
+But Lemma 2 gives us asymptotic
+X
+x≤n≤2x
+n≡b(W)ρ(n+h i;x)kY
+s=1λfj,l,s(n+h s)λfj′,l′,s(n+h s)
+= 
+(1−c 1)fj,l,k(0)fj′,l′,k(0)Y
+s̸=iZ∞
+0f′
+j,l,s(ts)f′
+j′,l′,s(ts)dts+o(1)!xWk−1
+ϕ(W)klog(x)k
+.
+Summing the lower bound forν(n)ρ(n+h i;x) over [x,2x] and substituting the asymptotic from Lemma 2
+for terms involvingρ(n+h i;x), and substituting the asymptotic from Theorem 3.6 of [5] for terms
+involvingc 2, we then get
+kX
+i=1X
+x≤n≤2x,n≡b(W)ν(n)ρ(n+h i;x) = 
+(1−c 1)kX
+i=1Ji−c2kX
+i=1Ki+o(1)!xWk−1
+ϕ(W)klog(x)k
+. (2.9)
+Combining asymptotics (2.8) and (2.9), we finally get
+eN(x;ρ, ν) =(1−c 1)Pk
+i=1Ji−c2Pk
+i=1Ki+o(1)
+I+o(1)>1 +o(1).
+Hence, for sufficiently largex, we have the desired inequalityN(x;ρ, ν)>0.□
+3.Equidistribution estimates
+In this section we derive equidistribution estimates for various convolutions of coefficient sequences.
+These will be needed to show that some minorant for the prime indicator function (denoted byρ(n;x))
+has equidistribution properties for moduli corresponding toT k(δ, A, B, ε), provided that the entries of
+Bare chosen small enough: If the entries ofB are small, then the corresponding moduli, given by set
+Q∗(x;δ, A , B, ε, ε 0), are either smaller thanx1/2or have a largexδ-smooth factor. In the first case we
+can use the Bombieri-Vinogradov theorem, so we need to focus on moduli with a largexδ-smooth factor.
+Here the initial idea is to use the Type I/II/III estimates fori-tuplyxδ-densely divisible integers from
+Polymath’s paper [4], the equidistribution estimates forxδ-smooth moduli from the author’s paper [6],
+and well as the Type I estimate of Baker and Irving [1]. However, there is a problem: a bigxδ-smooth
+factor is not sufficient to ensure that a number isi-tuplyxδ-densely divisible. Thus we need to prove
+=== PAGE 12 ===
+12 JULIA STADLMANN
+amended versions of the equidistribution estimates listed above. Fortunately we only need to make small
+changes in the relevant proofs.
+3.1.Important definitions.Since this section discusses coefficient sequences, we first define these.
+Definition 6(Coefficient sequences).A coefficient sequence is a functionα:N×(1,∞)→Rwhich
+satisfies|α(n;x)| ≪τ(n)O(1)log(x)O(1).
+(i)αis said to be located at scaleN(x)if there are some constants1≪c≪C≪1such thatα(·;x)
+is supported on[cN(x), CN(x)]for everyx >1.
+(ii)Ifαis located at scaleN(x), it is said to have the Siegel-Walfisz property if
+X
+n=a(q)
+(n,r)=1α(n;x)−1
+ϕ(q)X
+(n,qr)=1α(n;x)≪Aτ(qr)O(1) N(x)
+log(x)A
+for anyx >1, anyq, r≥1, anyA >1, and any residue classamodqwith(a, q) = 1.
+(iii)αis said to be smooth at scaleN(x)if there are some constants1≪c≪C≪1so that for every
+x >1, there exists a smooth functionψ:R→Csupported on[c, C], with|ψ(j)(t)| ≪ jlog(x)Oj(1)
+for allt∈R, such thatα(n;x) =ψn
+N
+.
+Further, as usually, convolutions of sequences are defined as follows: Ifα:N→Candβ:N→C, then
+(α ⋆ β)(n) =X
+d|nα(d)βn
+d
+.
+We will now state various equidistribution estimates for Dirichlet convolutionsα ⋆ β. Generalizing our
+earlier definition, we will use the following notion of equidistribution:
+Definition 7(Equidistribution).Considerf:N×(1,∞)→C. LetD(x;ω, γ, δ;ε)be a set of integers
+dependent on parametersω,γandδ, and dependent on a small parameterε >0.
+For a given set of(ω, γ, δ), we sayfhas equidistribution properties for moduli inD(x;ω, γ, δ;ε), provided
+the following holds: For any sufficiently smallε >0and for allx >1andA >0, and for alla∈Zwith
+(a, p) = 1forp≤x,
+X
+d∈D(x;ω,γ,δ;ε)
+dis squarefreeX
+n∈[x,2x]
+n≡a(d)f(n;x)−1
+ϕ(d)X
+n∈[x,2x]
+(n,d)=1f(n;x)≪A,εx
+log(x)A. (3.1)
+Note that the implied constant is only allowed to depend onω,γandδinsofar that they determine which
+εare sufficiently small for (3.1) to hold.
+3.2.Equidistribution ingredients.To choose a suitableρ(n;x) andT k(δ, A, B, ε), we will use the
+following equidistribution estimates. Proofs follow in the next subsection.
+Lemma 3(Polymath Type II).Supposef(n;x) = (α ⋆ β)(n;x), whereαis coefficient sequence at scale
+Mandβis a coefficient sequence at scaleNwithM(x)N(x)≍xandN(x)≤x1/2. Suppose also thatβ
+has the Siegel-Walfisz property. WriteN(x) =xγ. Define the set of moduli
+DIIa(x;ω, γ, δ;ε) =n
+d∈[1, x1/2+2ω]∩N:There exists a divisorr|dwithxγ−3ε−δ< r < xγ−3εo
+.
+Consider triples(ω, γ, δ)which satisfy the following inequalities:
+24ω+ 7δ−5γ <−2,
+8ω+ 3δ−γ <0.
+For such triples(ω, γ, δ), convolutionfhas equidistribution properties for moduli inD IIa(x;ω, γ, δ;ε).
+This lemma is a variant of Theorem 2.8(iv) of Polymath [4], and serves as replacement for Theorem 2.8(i).
+Note: In Lemma 3, and in all subsequent lemmas, permissible (ω, γ, δ) are defined via strict inequalities.
+If we restrict the choice of (ω, γ, δ) to triples which satisfy these inequalities with room to spare (e.g. for
+some fixedε 1, we consider triples (ω, γ, δ) with 24ω+ 7δ−5γ+ε 1<−2 and 8ω+ 3δ−γ+ε 1<0), then
+εcan be chosen uniformly in (ω, γ, δ). This means that we can ensure that the implied constant in the
+equidistribution estimate does not depend on the triple.
+=== PAGE 13 ===
+BOUNDED GAPS BETWEEN PRIMES 13
+Lemma 4(Polymath Type I(ii)).Supposef(n;x) = (α ⋆ β)(n;x), whereαis coefficient sequence at
+scaleMandβis a coefficient sequence at scaleNwithM(x)N(x)≍xandN(x)≤x1/2. Suppose also
+thatβhas the Siegel-Walfisz property. WriteN(x) =xγ. Define the set of moduli
+DIIb(x;ω, γ, δ;ε) =
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+rwithxγ−3ε−δ< r < xγ−3ε
+andx1/2−γ−2ω−6ε−δ< u < x1/2−γ−2ω−6ε
+.
+Consider triples(ω, γ, δ)which satisfy the following inequalities:
+24ω+ 7δ−3γ <−1,
+8ω+ 3δ−γ <0.
+For such triples(ω, γ, δ), convolutionfhas equidistribution properties for moduli inD IIb(x;ω, γ, δ;ε).
+This lemma is a variant of Theorem 2.8(ii) of Polymath [4].
+Lemma 5(Baker-Irving Type I).Supposef(n;x) = (α⋆β)(n;x), whereαis coefficient sequence at scale
+Mandβis a smooth coefficient sequence at scaleNwithM(x)N(x)≍x. WriteN(x) =xγ. Define the
+set of moduli
+DI(x;ω, γ, δ;ε) =
+
+
+d∈[1, x1/2+2ω]∩N:∃r|dwithxγ−δ−3ε< r < xγ−3ε	
+ifγ≤1
+2,
+d∈[1, x1/2+2ω]∩N:∃r|dwithx1−γ−δ−3ε< r < x1−γ−3ε	
+ifγ∈(1
+2,1
+2+ 2ω+ε],
+[1, x1/2+2ω]∩Nifγ >1
+2+ 2ω+ε.
+Consider triples(ω, γ, δ)which satisfy the following inequalities:
+3γ−12ω−3δ >1ifγ≤1
+2,
+68ω+ 14δ <1ifγ∈(1
+2,1
+2+ 2ω+ε].
+For such triples(ω, γ, δ), convolutionfhas equidistribution properties for moduli inD I(x;ω, γ, δ;ε).
+This lemma is a variant of Lemma 5 of Baker and Irving [1].
+Lemma 6(S. Type I).Supposef(n;x) = (α ⋆ β)(n;x), whereαis coefficient sequence at scaleMand
+βis a coefficient sequence at scaleNwithM(x)N(x)≍xandN(x)≤x1/2. Suppose also thatβhas the
+Siegel-Walfisz property. WriteN(x) =xγ. Define the set of moduli
+DIIc(x;ω, γ, δ;ε) =
+
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+r∃d1|rwithxγ−3ε−δ< r < xγ−3ε
+andx1−γ−6ε−δd−1< u < x1−γ−6εd−1
+andr2x2−γ−52ε−δd−4< d1< r2x2−γ−52εd−4
+
+.
+Consider triples(ω, γ, δ)which satisfy the following inequalities:
+8ω+ 4δ+ 2γ <1,
+32ω+ 10δ−γ <0,
+48ω+ 16δ−4γ <−1.
+For such triples(ω, γ, δ), convolutionfhas equidistribution properties for moduli inD IIc(x;ω, γ, δ;ε).
+This lemma is a variant of Theorem 1 of [6].
+Lemma 7(Polymath Type III).Supposef(n;x) = (α⋆ψ 1⋆ψ2⋆ψ3)(n;x), whereαis coefficient sequence
+at scaleMandψ 1,ψ2andψ 3are smooth coefficient sequences at scalesN 1,N2andN 3with
+M(x)N 1(x)N 2(x)N 3(x)≍x,
+N1(x)N 2(x), N 1(x)N 3(x), N 2(x)N 3(x)≫x1−γ,
+x1−2γ≪N 1(x), N 2(x), N 3(x)≪xγ.
+Define the set of moduli
+DIII(x;ω, γ, δ;ε) =n
+d∈[1, x1/2+2ω]∩N:∃r|dwithx1/3+4δ/3−4ω/3−δ< r < x1/3+4δ/3−4ω/3o
+.
+Consider triples(ω, γ, δ)which satisfy the following inequality:
+28ω+ 9γ+ 8δ <4.
+For such triples(ω, γ, δ), convolutionfhas equidistribution properties for moduli inD III(x;ω, γ, δ;ε).
+This lemma is a variant of Theorem 2.8(v) of Polymath [4].
+=== PAGE 14 ===
+14 JULIA STADLMANN
+3.3.Proofs.The original proofs of the lemmas and theorems referenced above span a total of over 50
+pages. Since these proofs only need to be amended in a few specific places, it is not practical to write
+down full proofs of the new versions listed above. Instead we will just explain the particular changes we
+make. Our explanations are best read side-by-side with the original proofs.
+3.3.1.Starting point.With the exception of Theorem 2.8(v) of Polymath [4], all results referenced above
+start their proofs in Section 5 of [4], and essentially proceed in exactly the same way from page 42 all
+the way until page 50. Although Polymath discussesi-tuplyxδ-densely divisible integers, pages 42 to 50
+really just use that the relevant modulimhave a factorizationm=qrwithNx−3ε−δ 0≪r≪Nx−3ε. As
+such, we begin by stating Polymath’s Theorem 5.8 [4] with a suitably relaxed condition on the moduli.
+Since this statement involves exponential sums, we first need to introduce some more notation:
+Forq∈Nandn∈Z, we definee q(n) = exp(2πin/q). Fora, b∈Z, we set
+eqa
+b
+=(
+eq 
+a/b
+ifa/bis well-defined modq,
+0 otherwise,
+where a/brepresents an integernwhich satisfiesn≡a/bmodq.
+We will need to work with exponential sums of the following form:
+Definition 8.For a given triple(ω, γ, δ)withγ−4ω−δ >0andγ≤1
+2and forx >0, letZ(ω, γ, δ;x)
+denote the set of(Q, R, q 0, b1, b2, ℓ)with the following properties:
+(i)R∈(0,∞)withxγ−δ−3ε≤R≤xγ−2ε.
+(ii)Q∈(0,∞)withx1/2−ε≪QR≪x1/2+2ω.
+(iii)q 0∈Nwithq 0≪Q.
+(iv)b 1, b2∈Zwith(b 1b2, p) = 1for allp≤x.
+(v)ℓ∈Zwith1≤ |ℓ| ≪N
+R.
+Consider some choice of setsQ(Q;x, ω, γ, δ, ε)⊆[Q,2Q]∩NandR(R;x, ω, γ, δ, ε)⊆[R,2R]∩N.
+For a givenz= (Q, R, q 0, b1, b2, ℓ)∈Z(ω, γ, δ;x), we then setC(n) = 1 b1
+n≡b2
+n+ℓrmodq 0and define
+ΣQ,R(z) =X
+r∈R(R;x,ω,γ,δ,ε)XX
+q1,q2
+q0q1,q0q2∈Q(Q;x,ω,γ,δ,ε)
+(q1,q2)=1
+q0q1r,q0q2rsquarefreeX
+0<|h|≤xεRQ2
+q0MX
+n
+(n,rq 0q1)=1
+(n+ℓr,q 0q2)=1C(n)β(n) β(n+ℓr)Φ ℓ(h, n, r, q 0, q1, q2),
+whereΦ ℓ(h, n, r, q 0, q1, q2) =e rah
+nq0q1q2
+eq0q1b1h
+nrq2
+eq2b2h
+(n+ℓr)rq 0q1
+.
+Now we are ready to summarize Theorem 5.8.
+Lemma 8(Alternative version of Theorem 5.8 of [4]).Supposef(n;x) = (α ⋆ β)(n;x), whereαis
+coefficient sequence at scaleMandβis a coefficient sequence at scaleNwithM(x)N(x)≍x. Suppose
+βhas the Siegel-Walfisz property. WriteN(x) =xγ.
+Consider some setsQ(Q;x, ω, γ, δ, ε)⊆[Q,2Q]∩NandR(R;x, ω, γ, δ, ε)⊆[R,2R]∩N.
+LetZ(ω, γ, δ;x)andΣ Q,R(Q, R, q 0, b1, b2, ℓ)be as defined in Definition 8.
+LetD 0= exp(log(x)1/3)and suppose thatq∈ Q(Q;x, ω, γ, δ, ε)implies that(q, p) = 1forp≤D 0.
+SupposeD(x;ω, γ, δ;ε)is a set of moduli with
+D(x;ω, γ, δ;ε)⊆
+
+d∈[1, x1/2+2ω]∩N:∃R∃Qwithlog2(Q)∈Zandlog2(R)∈Z
+andxγ−δ−3ε≤R≤xγ−2εso that
+d=qrfor someq∈ Q(Q;x, ω, γ, δ, ε)andr∈ R(R;x, ω, γ, δ, ε),
+orQ
+p|d,p≤D 0p >exp(log2/3x)
+
+.
+Consider triples(ω, γ, δ)withγ−4ω−δ >0andγ≤1
+2. Suppose a collection of such triples satisfies
+sup
+(Q,R,q 0,b1,b2,ℓ)∈Z(ω,γ,δ;x)ΣQ,R(Q, R, q 0, b1, b2, ℓ)≪ εx−2εQ2RN(q 0, ℓ)q−2
+0.
+Then convolutionfhas equidistribution properties for moduli inD(x;ω, γ, δ;ε).
+=== PAGE 15 ===
+BOUNDED GAPS BETWEEN PRIMES 15
+Proof.Only minor changes need to be made on pages 42 to 50 of [4]: Throughout, Polymath considers
+congruence classesawith (a, p) = 1 forp∈I, whereIis some bounded set of integers (dependent onx).
+We simply chooseI= [1, x], and replaceP IbyQ
+p≤xp.
+On page 43 it is observed that the contribution ofdwithQ
+p|d,p≤D 0p >exp(log2/3x) can be bounded
+trivially. Hence we only think aboutd=qrwithq∈ Q(Q;x, ω, γ, δ, ε) andr∈ R(R;x, ω, γ, δ, ε).
+On page 44, Polymath notes that anyi-tuplyxδ-densely divisible integer has a factorizationd=qr
+withxγ−δ−3ε≤r≤xγ−3ε. Next prime factorsp≤D 0are removed fromq, which lowers the size of
+qby no more thanxε. From then on, the proof works with sums overq∈D(j)
+J(xδ+o(1))∩[Q,2Q] and
+r∈D(k)
+I(xδ+o(1))∩[R,2R], which arexδ+o(1)-densely divisible integers. We replace these by sums over
+q∈ Q(Q;x, ω, γ, δ, ε) andr∈ R(R;x, ω, γ, δ, ε), wherexγ−δ−3ε≤R≤xγ−2ε. We already assumed that
+elements ofQ(Q;x, ω, γ, δ, ε) have no prime factorsp≤D 0, so we do not need to remove any factors.
+The condition log2(Q),log2(R)∈Zwas included to highlight that we use dyadic decomposition and only
+need to consider≪log(x)2choices ofQandR. Finally, we may continue to assume thatqris squarefree.
+On page 45, boundRQ2≪xis observed. SinceRQ≪x1/2+2ωandRQ2≪x1+4ω/R≪x1+4ω−γ+δ+3ε,
+this gives us the conditionγ−4ω−δ >0. (Recall that we chooseεvery small depending on (ω, γ, δ).
+So we do not keep track ofεin the inequalities we record.)
+On page 46, the Cauchy-Schwarz inequality is applied, giving us two copies ofq, denoted byq 1andq 2. On
+page 48, the gcdq 0= (q 1, q2) is introduced. However, later on page 49, relabeling occurs:q 1is replaced by
+q0q1andq 2is replaced byq 0q2with (q 1, q2) = 1. Thus from now on we sum overq 0q1∈ Q(Q;x, ω, γ, δ, ε)
+andq 0q2∈ Q(Q;x, ω, γ, δ, ε). Having made these small changes, inequality (5.31) in Theorem 5.8 of [4]
+now instead reads Σ Q,R(Q, R, q 0, b1, b2, ℓ)≪ εx−2εQ2RN(q 0, ℓ)q−2
+0.□
+3.3.2.Proof of Lemma 3.The proof of Theorem 2.8(iv) of [4] continues on pages 51 to 54 and is very
+straightforward: we do not need to factorize moduli any further. However, it only applies toγ≥1
+2−2ω.
+Making a very minor change, we extend the proof to smaller values ofγ, which serves as a replacement
+for Theorem 2.8(i). (Theorem 2.8(i) is a bit stronger, but this strength is not needed for our proofs, since
+γclose to1
+2behave well and do not constitute a critical parameter range.)
+Proof of Lemma 3.We first apply Lemma 8 with a specific choice ofQandR: Recall first that in
+Lemma 3 we work with moduli
+DIIa(x;ω, γ, δ;ε) =n
+d∈[1, x1/2+2ω]∩N:∃r|dwithxγ−δ−3ε< r < xγ−3εo
+.
+Sod∈D IIa(x;ω, γ, δ;ε) impliesd=qrwithxγ−δ−3ε< r < xγ−3ε. Suppose now thatQ
+p|d,p≤D 0p≤
+exp(log2/3x). Thenq=q∗sfor someq∗with (q∗, p) = 1 forp≤D 0and someswiths≪xε. Thus we
+can factorisedasd=q∗(rs) wherexγ−δ−3ε< rs < xγ−2ε. Hence we can simply take
+Q(Q;x, ω, γ, δ, ε) ={q∈[Q,2Q]∩N: (q, p) = 1 forp≤D 0},
+R(R;x, ω, γ, δ, ε) = [R,2R]∩N.
+Applying Lemma 8, we must now show that
+sup
+(Q,R,q 0,b1,b2,ℓ)∈Z(ω,γ,δ;x)ΣQ,R(Q, R, q 0, b1, b2, ℓ)≪ εx−2εQ2RN(q 0, ℓ)q−2
+0. (3.2)
+Fixing a value ofr, replacing conditionq 0q1, q0q2∈ Q(Q;x, ω, γ, δ, ε) byq 0q1, q0q2∈[Q,2Q] (which
+increases the LHS), and replacing the absolute value signs in Σ Q,R(Q, R, q 0, b1, b2, ℓ) by constantsc h,q1,q2,
+we end up exactly with condition (5.33) on page 51 of [4]. The remaining proof of Theorem 2.8(iv) does
+not use any further factorization of moduli. Hence we can simply copy the arguments on pages 51 to 54
+to show that (3.2) holds provided that
+x1+12ω+7δ/2
+N5/2≪εx−100ε,
+x8ω+3δ
+N≪εx−100ε.
+(These inequalities can be found just below (5.36) on page 53.) At this point Polymath uses the assump-
+tionγ >1
+2−2ω−c. However, we do not want to impose such a restriction and instead directly substitute
+N=xγ. The inequalities listed above hold for sufficiently smallε, provided the following is true:
+24ω+ 7δ−5γ <−2,
+8ω+ 3δ−γ <0.
+=== PAGE 16 ===
+16 JULIA STADLMANN
+Finally, recall that Lemma 8 had condition 4ω+δ−γ <0. However, this condition is already implied
+by 8ω+ 3δ−γ <0, so we can discard it.□
+3.3.3.Exponential sum bounds.After arriving at Theorem 5.8, both Polymath [4] and Baker and Irving [1]
+apply exponential sum bounds which use theq-van der Corput method. (Theorem 2.8(iv), discussed
+above, is the one exception.) More specifically, they use the first inequality in Corollary 4.16 of [4].
+However, using theq-van der Corput method necessitates the presence of another factor of convenient
+size ind. To keep conditions on the moduli simple, we would rather avoid this. Hence we will use a
+different exponential sum bound: the second inequality in Corollary 4.16 of [4], recorded below. This
+simpler (but potentially weaker) bound does not require us to consider further factorizations ofd.
+Lemma 9(Corollary 4.16 of [4], inequality 2).LetN≥1and supposeψ N(n)is a smooth coefficient
+sequence at scaleN. Letd 1, d2∈Zbe squarefree, and leta, c 1, c2, l1, l2∈Z. Supposed|[d 1, d2]. Write
+δi=di/(d1, d2)andδ′
+i=δi/(d, δ i). Then for anyε >0,X
+n≡a(d)ψN(n)e d1c1
+n+l 1
+ed2c2
+n+l 2≪ε[d1, d2]ε [d1, d2]
+d1/2
++1
+d(c1, δ′
+1)
+δ′
+1(c2, δ′
+2)
+δ′
+2N!
+.
+Since this exponential sum bound uses gcds, the following simple lemma will also be useful:
+Lemma 10(Lemma 1.4 of [4]).Letq∈NandK≥1. Then
+X
+1≤k≤K(k, q)≤Kτ(q).
+3.3.4.Proof of Lemma 4.The proof of Theorem 2.8(ii) of [4] involves a further factorization ofd=qr
+intod=q 0uvr, which needs to be reflected in our choice ofD,QandR. In [4], the required size ofu
+changes depending onq 0, which is rather inconvenient. We thus carefully replace the range foruby a
+fixed interval, independent ofq 0. Additionally (as mentioned) above, we need to replace inequality 1 of
+Corollary 4.16 by inequality 2, so that we can simplify the factorization conditions further.
+Proof of Lemma 4.Recall first that in Lemma 4 we work with moduli
+DIIb(x;ω, γ, δ;ε) =
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+rwithxγ−3ε−δ< r < xγ−3ε
+andx1/2−γ−2ω−6ε−δ< u < x1/2−γ−2ω−6ε
+.
+Hence we can take
+Q(Q;x, ω, γ, δ, ε) =
+q∈[Q,2Q]∩N:(q, p) = 1 forp≤D 0
+and∃u|qwithx1/2−γ−2ω−7ε−δ< u < x1/2−γ−2ω−6ε
+,
+R(R;x, ω, γ, δ, ε) = [R,2R]∩N.
+Applying Lemma 8, we must now show that
+sup
+(Q,R,q 0,b1,b2,ℓ)∈Z(ω,γ,δ;x)ΣQ,R(Q, R, q 0, b1, b2, ℓ)≪ εx−2εQ2RN(q 0, ℓ)q−2
+0. (3.3)
+We follow the steps on pages 57 to 59 of [4], making changes as follows: On page 57 Polymath uses that
+q0q1isxδ+o(1)-densely divisible to deduce thatq 1has a factoru 1betweenq−1
+0x−δ−2εQ/Handx−2εQ/H.
+We instead haveq 0q1∈ Q(Q;x, ω, γ, δ, ε) and thus getq 0q1=uvwith
+x1/2−γ−2ω−7ε−δ< u < x1/2−γ−2ω−6ε.
+Recalling thatq 0q1ris squarefree and writingu 1=u/(u, q 0) andv 1=v/(v, q 0), we then haveq 1=u1v1
+withq−1
+0x1/2−γ−2ω−7ε−δ< u1< x1/2−γ−2ω−6ε.Thus we replace bound (5.39) on page 57 by
+q−1
+0x1/2−γ−2ω−7ε−δ≪U≪x1/2−γ−2ω−6ε.
+Of course we still haveUV≍Q/q 0. (Note: The conditionγ <1/2−2ωensures that the upper bound
+onUis greater than 1, providedεis sufficiently small.)
+Continuing on, we can follow the exact same steps as Polymath to arrive at (5.42) on page 58. Summa-
+rizing their results up to this point, we now need to show the following:
+Υ2:=X
+u1≍UX
+q2≍Q/q 0XX
+v1,v2≍V
+(u1v1v2,q0q2)=1XX
+1≤|h 1|,|h2|≤xεRQ2
+q0Msup
+t(q0)X
+n≡t(q 0)ψN(n)Φ ℓ(h1, n, r, q 0, u1v1, q2)Φℓ(h2, n, r, q 0, u1v2, q2)(3.4)
+≪εx−10εq−1
+0Q2V N.
+=== PAGE 17 ===
+BOUNDED GAPS BETWEEN PRIMES 17
+At this point Polymath applies inequality 1 of Corollary 4.16. We instead apply inequality 2 (Lemma 9).
+Like Polymath, we useq 0in the place ofd,rq 0u1[v1, v2] in the place ofd 1andq 2in the place ofd 2, and
+have (c 2, δ′
+2)/δ′
+2≤1 and (c 1, δ′
+1)/δ′
+1≤(c 1, r)/r= (h 1v2−h2v1, r)/r. Hence
+Υ2≪εxεX
+u1≍UX
+q2≍Q/q 0XX
+v1,v2≍V
+(u1v1v2,q0q2)=1XX
+1≤|h 1|,|h2|≤xεRQ2
+q0M
+(ru1[v1, v2]q2)1/2+N
+q0(h1v2−h2v1, r)
+r
+≪εx2εq−3
+0U3/2V3R5/2Q11/2M−2+x4εX
+u1≍UX
+q2≍Q/q 0X
+|∆|≪xεRQ2V
+q0MN(∆, r)
+q0rX
+v≍VX
+1≤|h|≤xεRQ2
+q0Mτ(∆−hv)
+≪εx2εq−3
+0U3/2V3R5/2Q11/2M−2+x10εq−4
+0UV2RQ5NM−2+x10εq−3
+0UV RQ3NM−1.
+The bound (3.4) is therefore satisfied if the following inequalities are true:
+q−2
+0U3/2V2R5/2Q7/2M−2N−1≪εx−100ε,
+q−3
+0UV RQ3M−2≪εx−100ε,
+q−2
+0URQM−1≪εx−100ε.
+Recall now thatRQ≪x1/2+2ωandR≫xγ−3ε−δandq−1
+0x1/2−γ−2ω−7ε−δ≪U≪x1/2−γ−2ω−6εand
+UV≍Q/q 0. Hence it suffices to have (for sufficiently smallε):
+−1
+2(1
+2−γ−2ω−δ) +11
+2(1
+2+ 2ω)−3(γ−δ) + (γ−2)<0,
+4(1
+2+ 2ω)−3(γ−δ)−2(1−γ)<0,
+(1
+2−γ−2ω−6ε) + (1
+2+ 2ω)−(1−γ)<0.
+Rearranging, we obtain our proposed conditions
+24ω+ 7δ−3γ <−1,
+8ω+ 3δ−γ <0.
+The condition 4ω+δ−γ <0 of Lemma 8 is again already implied by 8ω+ 3δ−γ <0.□
+3.3.5.Proof of Lemma 5.Baker and Irving [1] use the assumption that coefficient sequenceβis smooth
+and apply inequality 1 of Corollary 4.16 of [4] directly to Σ Q,R. We instead use inequality 2.
+Proof of Lemma 5.We first considerγ≤1
+2. Recall that we work with moduli
+DI(x;ω, γ, δ;ε) =n
+d∈[1, x1/2+2ω]∩N:∃r|dwithxγ−δ−3ε< r < xγ−3εo
+.
+Hence we can simply take
+Q(Q;x, ω, γ, δ, ε) ={q∈[Q,2Q]∩N: (q, p) = 1 forp≤D 0},
+R(R;x, ω, γ, δ, ε) = [R,2R]∩N.
+Applying Lemma 8 with this choice ofQandR, we must now show that
+sup
+(Q,R,q 0,b1,b2,ℓ)∈Z(ω,γ,δ;x)ΣQ,R(Q, R, q 0, b1, b2, ℓ)≪ εx−2εQ2RN(q 0, ℓ)q−2
+0.
+Like in the proof of Lemma 3 of [1], we observe that by fixingr∈[R,2R], this problem can be reduced
+to showing that
+XX
+q1,q2
+q0q1,q0q2∈Q(Q;x,ω,γ,δ,ε)
+(q1,q2)=1
+q0q1r,q0q2rsquarefreeX
+0<|h|≤xεRQ2
+q0M(q0, ℓ) sup
+t(q0)X
+n≡t(q 0)β(n)β(n+ℓr)e rq0q1zh
+nq2
+eq2b2h
+(n+ℓr)rq 0q1
+≪εx−2εQ2N(q 0, ℓ)q−2
+0,
+for a suitable choice ofz=z(a, b 1, r, q 0, q1, q2) with (z, rq 0q1) = 1.
+We now apply Lemma 9 withβ(n) β(n+ℓr) in the place ofψ N(n),tin the place ofa,q 0in the place ofd,
+rq0q1in the place ofd 1andq 2in the place ofd 2. Further, we takezh/q 2in the place ofc 1,b2h/(rq 0q1) in
+the place ofc 2, 0 in the place ofl 1andℓrin the place ofl 2. This are the same choices as in [1], and thus
+=== PAGE 18 ===
+18 JULIA STADLMANN
+we also get [d 1, d2] =rq 0q1q2andδ′
+1=rq 1andδ′
+2=q2. Further, (c 1, δ′
+1) = (h, rq 1) and (c 2, δ′
+2) = (h, q 2).
+Hence we find that
+XX
+q1,q2
+q0q1,q0q2∈Q(Q;x,ω,γ,δ,ε)
+(q1,q2)=1
+q0q1r,q0q2rsquarefreeX
+0<|h|≤xεRQ2
+q0M(q0, ℓ) sup
+t(q0)X
+n≡t(q 0)β(n)β(n+ℓr)e rq0q1zh
+nq2
+eq2b2h
+(n+ℓr)rq 0q1
+≪εXX
+q1,q2
+q0q1,q0q2∈Q(Q;x,ω,γ,δ,ε)
+(q1,q2)=1
+q0q1r,q0q2rsquarefreeX
+0<|h|≤xεRQ2
+q0M(q0, ℓ)(rq 0q1q2)ε
+(rq1q2)1/2+(h, rq 1q2)
+rq0q1q2N
+≪εx3εXX
+q1,q2
+q0q1,q0q2∈Q(Q;x,ω,γ,δ,ε)
+(q1,q2)=1
+q0q1r,q0q2rsquarefree(q0, ℓ)R1/2Q
+q0+q0N
+RQ2RQ2
+q0M
+≪εx3ε(q0, ℓ)
+q2
+0R3/2Q5
+M+Q2N
+M
+.
+To get the desired upper bound≪ εx−2εQ2N(q 0, ℓ)q−2
+0, we thus simply need
+R3/2Q3
+MN+1
+M
+≪εx−5ε.
+RecallingNM≍xandRQ≪x1/2+2ωandR≫xγ−δ−3ε, and choosingεsufficiently small (depending
+on (ω, γ, δ)), the inequality holds provided that
+3(1/2 + 2ω)−3/2(γ−δ)<1.
+This rearranges to condition 3γ−12ω−3δ >1 and concludes the treatment ofγ≤1
+2.
+Now we considerγ∈[1
+2,1
+2+ 2ω+ε]. If 24ω+ 7δ−5(1−γ)<−2 and 8ω+ 3δ−(1−γ)<0, we can
+apply our Lemma 3 (with the roles ofαandβswapped andγreplaced by 1−γ). Sinceγ≤1
+2+ 2ω+ε,
+these inequalities are satisfied provided that
+min{3
+5−7
+5δ−24
+5ω,1−8ω−3δ}>1
+2+ 2ω.
+Rearranging, the condition becomes
+68ω+ 14δ <1.
+Finally, ifγ >1
+2+ 2ω+ε, we can (like Baker and Irving) apply the results of pages 21 and 22 of
+Polymath [4]: for such largeγwe have the desired equidistribution estimates for anyd≤x1/2+2ω, we do
+not need any factorization conditions.
+Overall we thus have the desired equidistribution properties if 68ω+ 14δ <1 and 3γ−12ω−3δ >1.□
+3.3.6.Proof of Lemma 6.Theorem 1 of [6] only applies toxδ-smooth numbers. Again we extract much
+weaker factorization requirements from its proof to obtain Lemma 6. Fortunately, the original proof does
+not involve inequality 1 of Corollary 4.16 of [4], so although we do again change some factor sizes a bit
+(depending onq 0), calculations only change minimally.
+Proof of Lemma 6.Recall that we work with moduli
+DIIc(x;ω, γ, δ;ε) =
+
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+r∃d1|rwithxγ−3ε−δ< r < xγ−3ε
+andx1−γ−6ε−δd−1< u < x1−γ−6εd−1
+andr2x2−γ−100ε−δd−4< d1< r2x2−γ−100εd−4
+
+.
+We thus choose the following setsQ(Q, R;x, ω, γ, δ, ε) andR(Q, R;x, ω, γ, δ, ε):
+Q(Q, R;x, ω, γ, δ, ε) =
+q∈[Q,2Q]∩N:(q, p) = 1 forp≤D 0
+and∃u|qwithx1−γ−6ε−δ(QR)−1≪u≪x1−γ−6ε(QR)−1
+,
+R(Q, R;x, ω, γ, δ, ε) =
+r∈[R,2R]∩N: ∃d1|rwithx2−γ−52ε−δ(Q4R2)−1≪d 1≪x2−γ−52ε(Q4R2)−1	
+.
+For anyd∈D IIc(x;ω, γ, δ;ε) withQ
+p|d,p≤D 0p≤exp(log2/3x) there existQandRwith log2(Q)∈Z
+and log2(R)∈Zandxγ−3ε−δ≪R≪xγ−2εso thatd=qrfor someq∈ Q(Q, R;x, ω, γ, δ, ε) and some
+r∈ R(Q, R;x, ω, γ, δ, ε).
+We now follow the proof of Theorem 1 of [6] and make small alterations. The original proof starts on
+pages 40 to 43 in the appendix of [6]. These initial steps follow Polymath’s proof of Theorem 2.8(ii)
+=== PAGE 19 ===
+BOUNDED GAPS BETWEEN PRIMES 19
+rather closely, so we are already familiar with the necessary changes: In [6],d|P(xδ) is used to deduce
+thatd=qrfor somer∈[R,2R] withx−4ε−δN≪R≪x−2εN. Although we might not haved|
+P(xδ), the properties ofD(x;ω, γ, δ;ε) ensure that we can also factorize like this. In particular, we
+can replace summation conditions like (q 1≍Q,r≍Randq 1r|P(xδ)) by alternative conditions
+(q1∈ Q(Q, R;x, ω, γ, δ, ε) andr∈ R(Q, R;x, ω, γ, δ, ε) andq 1rsquarefree). We also replace condition
+(ab1b2, P(xδ)) = 1 by assumption (ab 1b2, P(x)) = 1.
+On page 42 the original proof then usesq 1|P(xδ) to extract a factor of sizeUfromq 1. At this
+point, we instead haveq 0q1∈ Q(Q, R;x, ω, γ, δ, ε) and thus know thatq 0q1=uvfor someuwith
+x1−γ−6ε−δ(QR)−1≪u≪x1−γ−6ε(QR)−1. We then writeu 1=u/(u, q 0) andv 1=v/(v, q 0) and get
+q1=u1v2for someu 1≍Uwithq−1
+0x1−γ−6ε−δ(QR)−1≪U≪x1−γ−6ε(QR)−1. Recalling the notation
+H=xεRQ2/(q0M), this condition can be rewritten as
+q−2
+0x−δ−5εQ/H≪U≪q−1
+0x−5εQ/H
+Hence we also getx5εH≪V≪q 0xδ+5εH. We then go to the main text. Our first change is to look at
+Lemma 3 (the summary of Polymath) and change the ranges ofU,VandRin Definition 3 on page 10
+accordingly.
+On page 12 of [6], the proof of Theorem 1 then usesr|P(xδ) to extract a factord 1fromr, this time
+of sizeD=N/(x50εH2). We instead recall thatr∈ R(R;x, ω, γ, δ, ε) and hence getr=d 1r1for some
+d1≍∆ withx2−γ−52ε−δ(Q4R2)−1≪∆≪x2−γ−52ε(Q4R2)−1. This can be rewritten as
+x−δN
+q2
+0x50εH2≪∆≪N
+q2
+0x50εH2.
+In particular, we have replacedD≈N/H2byD≈q−2
+0N/H2, so that the value ofDno longer depends
+onq 0. On pages 12 to 17 of [6], theq-van der Corput process is carried out. Although we have slightly
+changed the ranges ofR,Uand ∆, the arguments on pages 12 to 17 can be copied with minimal
+alterations. We do need to be a bit careful when treating diagonal terms, which are covered by Lemma 7
+on page 17 of [6]: because we increasedVby a factorq 0, various bounds now include an extra factorq2
+0,
+and so we need to replace max{xδ+10εH3
+(w2,m),H4
+(w2,m)}by max{xδ+10εH3q2
+0
+(w2,m),H4
+(w2,m)}in the upper bound on Σ 3.
+This extra factorq2
+0is carried through to later lemmas in the paper.
+Definition 7 and Lemma 8 on page 20 of [6] summarize results up to this point. Due to extra factorsq 0,
+we need to make various amendments in this summary:v 1, v2≪xδ+5εHbecomesv 1, v2≪q 0xδ+5εH,
+whileN
+xδ+55ε H2≪∆ 1≪N
+x55εH2becomesN
+q2
+0xδ+55ε H2≪∆ 1≪N
+q2
+0x55εH2. Further ,RQ2H
+q0(v1,v2)∆1≪
+m≪xδRQ2H
+q0(v1,v2)∆1becomesRQ2H
+q0(v1,v2)∆1≪m≪xδRQ2H
+(v1,v2)∆1and finally|Λ| ≪1
+w1(v1,v2)xδ+5εH2becomes
+|Λ| ≪q 01
+w1(v1,v2)xδ+5εH2. Fortunately, most of the remaining proof does not refer to specific parameter
+ranges for ∆ 1, Λ andm, so from page 21 all the way until page 32 we can now proceed with mini-
+mal changes. However, it is convenient to notice that in Lemma 10 on page 23, we have the definition
+∆∗= min{N
+Λx5ε,∆1}. For our new choice of ∆ 1and forεsufficiently small compared toδ, we always
+haveN
+Λx5ε≫w1(v1,v2)N
+q0xδ+10ε H2≫N
+q0x55εH2≪∆ 1and can simply choose ∆∗= ∆ 1.
+To finish the proof, we now just need to amend the computations on page 33 of [6] with the extra factors
+q0we introduced. The equations (3.30), (3.31) and (3.32) which need to be verified now look as follows:
+N∆ 1
+m≪min1
+xδ+10ε H3q2
+0,1
+H4(v1, v2)q2
+0(q0, ℓ)N∆ 1
+xδ+131ε H2, (3.5)
+N≪min1
+xδ+10ε H3q2
+0,1
+H4(v1, v2)q2
+0(q0, ℓ)N∆ 1
+xδ+131ε H2, (3.6)
+m≪min1
+xδ+10ε H3q2
+0,1
+H4(v1, v2)q2
+0(q0, ℓ)N∆ 1
+xδ+131ε H2. (3.7)
+We begin with (3.5). This condition rearranges to
+xδ+131ε
+(v1, v2)q2
+0(q0, ℓ)max
+q2
+0xδ+10εH5, H6	
+m≪1. (3.8)
+Recallingm≫RQ2H
+q0(v1,v2)∆1≫q0x55εRQ2H3
+(v1,v2)N≫q0x54εMH4
+(v1,v2)N, we get that the LHS of (3.8) is bounded by
+xδ+131ε
+(v1, v2)q2
+0(q0, ℓ)max
+q2
+0xδ+10εH5, H6	
+m≪x−1+δ+77εN2max
+xδ+10εH, H2	
+≪x−1+8ω+3δ+100εN2.
+=== PAGE 20 ===
+20 JULIA STADLMANN
+This gives us the condition 8ω+ 4δ+ 2γ <1.
+Next we consider (3.6). Rearranging, we find that this condition holds if
+xδ+131ε
+q2
+0∆1max
+q2
+0xδ+10εH5, H6	
+≪1.
+Recalling that ∆ 1≫N
+q2
+0xδ+55ε H2andH≪x4ω+δ+7ε
+q0, we get that (3.6) holds if 32ω+ 10δ−γ <0.
+Finally, we consider (3.7). Recall thatm≪xδRQ2H
+(v1,v2)∆1≪q0xδMH2
+(v1,v2)∆1. So (3.7) is true if
+x1+2δ+131ε
+N2∆2
+1max
+q2
+0xδ+10εH7, H8	
+≪1.
+UsingH≪x4ω+δ+7ε
+q0, we see that (3.7) holds if the following two inequalities are satisfied:
+x1+32ω+10δ+200ε
+N2x5εΛ
+∆1N
+≪1 andx1+32ω+10δ+200ε
+N21
+∆2
+1
+≪1. (3.9)
+Using Λ≪xδ+5εH2and ∆ 1≫N
+xδ+55ε H2, it suffices to have 48ω+ 16δ−4γ <−1.□
+3.3.7.Proof of Lemma 7.Theorem 2.8(v) of [4] requires that modulidcan be factorized asd=qrwith
+r≍Rfor many different sizes ofR. This is a bit inconvenient, and so we change the proof to work with
+a fixed value ofR. Regarding notation,γin this paper corresponds to1
+2−σin [4].
+Proof of Lemma 7.The proof of Theorem 2.8(v) begins on page 85 of [4], but its reduction to exponential
+sums does not need any factorization of moduli, and so we will mainly focus on the end of the proof, pages
+90 to 93. Prior to page 90, factorization is mentioned once, below (7.17). There we haveb=Q
+p|b1b2b3p
+and it is observed thatq=bdimpliesd∈ D I(bxδ). We instead recall that in Lemma 3 we work with
+DIII(x;ω, γ, δ;ε) =n
+q∈[1, x1/2+2ω]∩N:∃r|qwithx1/3+4δ/3−4ω/3−δ< r < x1/3+4δ/3−4ω/3o
+.
+We thus define the set
+D′(b;x;ω, γ, δ) =n
+d∈N:∃r|dwithb−1x1/3+4δ/3−4ω/3−δ< r < x1/3+4δ/3−4ω/3o
+Consider a squarefreeq∈D(x;ω, γ, δ;ε). We haveq=rsfor somerwithx1/3+4δ/3−4ω/3−δ<
+r < x1/3+4δ/3−4ω/3. If alsoq=bd, we taker′=r/(r, b) ands′=s/(s, b), so thatd=r′s′with
+b−1x1/3+4δ/3−4ω/3−δ< r′< x1/3+4δ/3−4ω/3. Hence we replace conditiond∈ D I(bxδ) by condition
+d∈ D′(b;x;ω, γ, δ).
+Summarizing results up to page 89, the goal of pages 90 to 93 is as follows: We must show that
+Σ′
+2=N1N2N3
+Q2X
+(b1,b2,b3)b♭
+1b♭
+2b♭
+3
+b2T(b1, b2, b3)≪εx1−3ε(3.10)
+whereT(b 1, b2, b3) =X
+0<|ℓ|≤x3ε/2Q3
+b1b2b3NX
+d≍Q/b
+d∈D′(b;x;ω,γ,δ)
+dsquarefree
+(bℓ,d)=1η′
+bdX
+(m,bd)=1α(m)Kl 3aℓb1b2b3
+b3m;d
+Herex1/2−ε≪Q≪x1/2+2ω,η′
+bdis some sequence of coefficients supported on short intervalI(Q) and
+b=Q
+p|b1b2b3pfor someb i∈Nwithb≪Qandb 1b2b3≪x3ε/2Q3/N. Further,b♭
+iis the largest squarefree
+divisor ofb iandb= (b 1b2b3)♭.
+On page 90, Polymath begins by usingd∈ D I(bxδ) to deduce thatd=rswith (bxδ)−1S≤s≤S. Of
+course, we can used∈ D′(b;x;ω, γ, δ) to deduce the same withS=x1/3+4δ/3−4ω/3. This choice ofS
+satisfies the requirement 1≤S≤xδQ/2 provided that 4ω−4δ <1 and 2δ−8ω <1.
+Fortunately, Polymath initially proceeds without specifying their value ofS. As such, we can simply
+copy their arguments on pages 90 and 91. Noting thatH b=x3ε/2H
+b1b2b3=x3ε/2Q3
+b1b2b3NwhereN=N 1N2N3, we
+get|T(b 1, b2, b3)|2≤T1T2withT 1≪εx3εQ3
+b1b2b3Nand
+T2=T′
+2+T′′
+2≪εx3εMQ4S
+bb1b2b3N+x3εM2Q4S1/2
+bb1b2b3N+x3εxδ/2M2Q3
+b5/2S1/2.
+=== PAGE 21 ===
+BOUNDED GAPS BETWEEN PRIMES 21
+MultiplyingT 1andT 2together, substitutingS=x1/3+4δ/3−4ω/3andQ≪x1/2+2ωand recalling that
+x3/2−3γ/2≪N≪x3γ, we now have
+|T(b 1, b2, b3)| ≪ εx3εM1/2Q7/2S1/2
+b1/2b1b2b3N+x3εMQ7/2S1/4
+b1/2b1b2b3N+x3εxδ/4MQ3
+b5/4(b1b2b3)1/2S1/4N1/2
+≪εx3εQ2
+N1N2N3x1/2+3ω+3γ/4S1/2
+b1/2b1b2b3+x1/4+3ω+3γ/2S1/4
+b1/2b1b2b3+xδ/4+3/4+2ω+3γ/4
+b5/4(b1b2b3)1/2S1/4
+≪εx3εQ2
+N1N2N3x2/3+7ω/3+3γ/4+2δ/3
+b(b1b2b3)1/2+x1/3+8ω/3+3γ/2+δ/3
+b(b1b2b3)1/2+x7ω/3+3γ/4+2/3−δ/12
+b(b1b2b3)1/2
+.
+Substituting this upper bound on|T(b 1, b2, b3)|back into (3.10), we get
+Σ′
+2≪εx3ε
+x2/3+7ω/3+3γ/4+2δ/3+x1/3+8ω/3+3γ/2+δ/3+x7ω/3+3γ/4−5/6−δ/12X
+(b1,b2,b3)b♭
+1b♭
+2b♭
+3
+b3(b1b2b3)1/2.
+But by Lemma 7.5 of [4], the inner sum over (b 1, b2, b3) is convergent. Therefore we have Σ′
+2≪εx1−3ε
+provided the following three inequalities hold:
+2/3 + 7ω/3 + 3γ/4 + 2δ/3<1,
+1/3 + 8ω/3 + 3γ/2 +δ/3<1,
+7ω/3 + 3γ/4 + 2/3−δ/12<1.
+The second and third inequality are already implied by the first, and so this leaves us with the condition
+28ω+ 9γ+ 8δ <4. □
+4.Finding permissible parameters
+In the previous sections we first derived a version of the GPY sieve with coefficients supported on
+Tk(δ, A, B, ε), conditional on there existing a minorantρ(n;x) for the prime indicator function which
+has suitable equidistribution properties for moduli produced byT k(δ, A, B, ε). We then derived a number
+of equidistribution estimates which work well for moduli with largexδ-smooth factors. Now we need to
+put these ingredients together to choose good values forδ,A andB and construct a suitableρ(n;x).
+4.1.Harman’s sieve.We begin with a Harman’s sieve construction.
+Definition 9(Decomposition).Letϵ= 10−10and letξ 1, ξ2, ξ3∈(0,1). ThenH(ξ 1, ξ2, ξ3)denotes the
+set of functionsf:N×(1,∞)→Cwhich satisfy one of the following three conditions:
+(I)f(n;x) = (α ⋆ β)(n;x), whereαis a coefficient sequence at scaleMandβis a smooth coefficient
+sequence at scaleNwithM(x)N(x)≍x. Additionally,N(x) =xγ(x)withγ(x)≥ξ 1−ϵ.
+(II)f(n;x) = (α⋆β)(n;x), whereαis a coefficient sequence at scaleM,βis a coefficient sequence at
+scaleNwithM(x)N(x)≍x, andαandβboth have the Siegel–Walfisz property. Additionally,
+N=xγ(x)withξ 2−ϵ≤γ(x)≤1−ξ 2+ϵ.
+(III)f(n;x) = (α ⋆ ψ 1⋆ ψ2⋆ ψ3)(n;x), whereαis a coefficient sequence at scaleMandψ 1,ψ2and
+ψ3are smooth coefficient sequences at scalesN 1,N2andN 3withM(x)N 1(x)N 2(x)N 3(x)≍x.
+Additionally,x1−2ξ 3−ϵ≤N 1(x), N 2(x), N 3(x)≤xξ3+ϵandN i(x)N j(x)≥x1−ξ 3−ϵfori̸=j.
+We will now useH(ξ 1, ξ2, ξ3) to construct a minorant for the primes.
+Proposition 2.LetT k(δ, A, B, ε)be as given in Definition 1, letQ∗(x;δ, A , B, ε, ε 0)be as given in
+Definition 2 and letH(ξ 1, ξ2, ξ3)be as given in Definition 9.
+Supposeξ 1, ξ2, ξ3∈(0,1)satisfy all of the following inequalities:
+2ξ1+ 3ξ 2<2,
+ξ2≤ξ3,
+ξ1+ 9ξ 2<4,
+2ξ1+ξ2>1,
+17ξ2<7.
+Suppose further that for everyf∈ H(ξ 1, ξ2, ξ3),x >1,ε 0>0,A >0anda∈Zwith(a, P(x)) = 1,
+X
+q∈Q∗(x;δ,A ,B,ε,ε 0)
+qis squarefreeX
+n∈[x,2x]
+n≡a(q)f(n;x)−1
+ϕ(q)X
+n∈[x,2x]
+(n,q)=1f(n;x)≪A,ε0x
+log(x)A. (4.1)
+=== PAGE 22 ===
+22 JULIA STADLMANN
+We then writep j=xαjand define the minorant
+ρ(n;x) = 1 P(n)−X
+n=p 1p2p3p4p5
+1−2ξ 2<α4<α3<α2<α1<ξ2
+α1+α2<ξ2
+α2+α3+α4>1−ξ 2α5>α41−X
+n=p 2p3p4p5p6
+1−2ξ 2<α2,α3,α4,α5,α6<8ξ 2−3
+α2,α4>α3
+α2+α4<ξ2
+α3+α4+α5>1−ξ 2α6>α51.
+Furthermore, we choose the constants
+c1=Zξ2
+1−2ξ 2Zmin{α 1,ξ2−α1}
+1−2ξ 2Zα2
+1−2ξ 2Zmin{α 3,(1−α 1−α2−α3)/2}
+max{1−2ξ 2,1−ξ 2−α2−α3}1
+α1α2α3α4(1−P4
+i=1αi)dα1dα2dα3dα4
++Z8ξ2−3
+1−2ξ 2Zmin{8ξ 2−3,α 2}
+1−2ξ 2Zmin{8ξ 2−3,ξ 2−α2}
+max{α 3,1−2ξ 2}Zmin{8ξ 2−3,(1−P4
+i=2αi)/2}
+max{1−2ξ 2,1−ξ 2−α3−α4}1Q5
+i=2αi(1−P5
+i=2αi)dα2dα3dα4dα5,
+c2=(
+24ifξ 2>4
+10,
+0ifξ 2≤4
+10.
+Thenρ(n;x)has the following properties:
+(1)Prime minorant:−c 2≤ρ(n;x)≤1 P(n)for all largexandn∈[x,2x].
+(2)ρhas equidistribution properties for moduli corresponding toT k(δ, A, B, ε).(See Definition 3.)
+(3)Ifρ(n;x)̸= 0, then all prime factors ofnexceedx1−2ξ 2.
+(4)The sum ofρ(n;x)over[x,2x]satisfiesP
+n∈[x,2x]ρ(n;x) = (1−c 1+o(1))x
+log(x).
+(Note: Ifξ 2≤4
+10, thenρ(n;x) is simply 1 P(n).)
+Proof.The construction ofρ(n;x) is essentially the same as in Baker and Irving’s work [1] and in the
+author’s paper [6]. We have simply replaced specific numeric values by variables. However, along the
+way numerous inequalities need to be satisfied, so to justify this choice ofρ(n;x), we look a little more
+closely at the proofs in Section 4 of [6]: The construction begins on page 35 with the statement of various
+equidistribution estimates. We replace the values 0.33856, 0.40481, 0.59519, 0.19, 0.405 and 0.595, which
+are used in [6], byξ 1,ξ2, 1−ξ 2, 1−2ξ 3,ξ3and 1−ξ 3, respectively. In Lemma 19 on page 35 we then
+instead haveα=ξ 2,β= 1−2ξ 2=λandM=x1−ξ 1andζ= 1−ξ 1−ξ2. In particular, 0.19038 is
+replaced by 1−2ξ 2and 0.25663 is replaced by 1−ξ 1−ξ2. Using Buchstab decompositions as on page
+36 of [6], and making the assumption
+2ζ= 2(1−ξ 1−ξ2)> ξ 2,
+we then arrive at
+1P(n) =θ 0(n;x) +X
+n=p 1p2n3
+1−2ξ 2≤α2<α1<ξ2
+α1+α2>1−ξ 2
+α2>1−ξ 1−ξ2ψ(n3, p2) +X
+n=p 1p2p3p4n5
+1−2ξ 2≤α4<α3<α2<α1<ξ2
+α1+α2<ξ2
+α3<1−ξ 1−ξ2ψ(n5, p4)−X
+n=p 1p2p3n4
+1−2ξ 2≤α3<α2<α1<ξ2
+α1+α2>1−ξ 2
+α2<1−ξ 1−ξ2ψ(n4, p3), (4.2)
+whereθ 0(n;x) has equidistribution properties for moduli corresponding toT k(δ, A, B, ε).
+Forξ 1= 0.33856 andξ 2= 0.40481, the first sum in (4.2) is treated in Lemma 20 on page 36 of [6]. There
+it is shown that this sum also has the desired equidistribution properties. For this proof to work for our
+more general parametersξ 1,ξ2andξ 3, we need the following: At the start of the proof of Lemma 20 we
+use thatn 3must be prime. Sinceα 1+α2>1−ξ 2andn 3not prime would implyn 3> x2(1−ξ 1−x2)this is
+ensured by assumption 2(1−ξ 1−x2)> ξ 2. Next, in the fourth paragraph on page 37, Polymath’s Type
+III equidistribution estimate is implied. To make sure this is possible, we have the important assumption
+ξ2≤ξ3.
+A paragraph further,µ 2+µ3< ξ2is treated. There 1−ξ 1−ξ2/2> ξ 2is used to getµ 4, µ5>1−2ξ 2.
+(For the meaning ofµ i, see [6]. We skip this discussion here, as it is not relevant for the inequality check.)
+µ1+ (µ 6+···+µ j)<1−ξ 1−ξ2is then deduced from 1−4(1−2ξ 2)<1−ξ 1−ξ2, which rearranges to
+ξ1+ 9ξ 2<4.
+The inequalities 2ξ 1+ 3ξ 2<2 andξ 2< ξ3andξ 1+ 9ξ 2<4 are all we need for the proof of Lemma 20
+to work. Moving on, the second sum in (4.2) is treated by Lemma 21 on page 37.
+For the proof of Lemma 21 to work with generalξ 1,ξ2andξ 3, we need the following: First, the second
+sum is split up depending on whetherα 2+α3+α4≤1−ξ 2orα 2+α3+α4>1−ξ 2. In the first case,
+=== PAGE 23 ===
+BOUNDED GAPS BETWEEN PRIMES 23
+we need 3(1−2ξ 2)> ξ 2to deduce that the sum has the desired equidistribution properties. Here we get
+the additional assumption 7ξ 2<3.
+In the second case, we useξ 2/2<1−ξ 1−ξ2to drop the assumptionα 3<1−ξ 1−ξ2, andα 2+α3+α4>
+1−ξ 2means that we need (4/3)(1−ξ 2) + 2(1−2ξ 2)>1 to deduce thatn 5is prime. The condition
+(4/3)(1−ξ 2) + 2(1−2ξ 2)>1 rearranges to 16ξ 2<7, which is already implied by 7ξ 2<3.Hence we are
+left with the sum
+Γ2(n;x) =X
+n=p 1p2p3p4p5
+1−2ξ 2<α4<α3<α2<α1<ξ2
+α1+α2<ξ2
+α2+α3+α4>1−ξ 2α5>α41,(4.3)
+for which we do not have good equidistribution estimates. It thus needs to be subtracted from 1 P(n).
+Using the prime number theorem for short intervals, we find thatP
+n∈[x,2x] Γ2(n;x) equals
+x(1 +o(1))
+log(x)Zξ2
+1−2ξ 2Zmin{α 1,ξ2−α1}
+1−2ξ 2Zα2
+1−2ξ 2Zmin{α 3,(1−α 1−α2−α3)/2}
+max{1−2ξ 2,1−ξ 2−α2−α3}1
+α1α2α3α4(1−P4
+i=1αi)dα1dα2dα3dα4.
+Finally, we need to look at the third sum in (4.2). It is treated by Lemma 22 on page 38 of [6]. The
+proof first needs (1−ξ 2) + 3(1−2ξ 2)>1 to deduce thatn 4is prime. This is implied by 7ξ 2<3. Next,
+(1−ξ 2)/2>1−ξ 1−ξ2is needed to drop conditionα 2< α1. This condition rearranges to
+2ξ1+ξ2>1.
+Further, we have 1−3(1−2ξ 2)<1−ξ 2(since 7ξ 2<3), and this inequality is used to drop condition
+α1<1−ξ 2. At that point the proof of Lemma 22 splits the sum into two parts, Υ 1and Υ 2. Υ2has
+good equidistribution properties, while reversal of roles is applied to Υ 1. We end up with
+Υ3(n;x) =X
+n=p 2p3p4p5p6
+1−2ξ 2≤α3<α2<ξ2
+α3+α4<ξ2
+α2<1−ξ 1−ξ2
+α4≥α3
+1−2ξ 2≤α5≤α61,
+where 6(1−2ξ 2)>1 was needed to get the primep 6. This rearranges to condition 12ξ 2<5.Note that
+12ξ2<5 implies 7ξ 2<3.Next we observe thatα i>1−2ξ 2for alliimplies that alsoα i<1−4(1−2ξ 2) =
+8ξ2−3 for alli. Furthermore, 8ξ 2−3< ξ 2since 7ξ 2<3. So conditionα i< ξ2can be replaced by
+αi<8ξ 2−3. Finally, the proof of Lemma 22 also requires 2(8ξ 2−3)<1−ξ 2. We need
+17ξ2<7
+to get that Υ 3is the sum of a function with the desired equidistribution properties and of Γ∗
+2(n;x), where
+Γ∗
+2(n;x) =X
+n=p 2p3p4p5p6
+1−2ξ 2≤α2,α3,α4,α5,α6≤8ξ 2−3
+α2,α4>α3
+α2+α4<ξ2
+α3+α4+α5>1−ξ 2α6>α51.(4.4)
+Using standard techniques, we find thatP
+n∈[x,2x] Γ∗
+2(n;x) is asymptotically equal to
+x(1 +o(1))
+log(x)Z8ξ2−3
+1−2ξ 2Zmin{8ξ 2−3,α 2}
+1−2ξ 2Zmin{8ξ 2−3,ξ 2−α2}
+max{α 3,1−2ξ 2}Zmin{8ξ 2−3,(1−P4
+i=2αi)/2}
+max{1−2ξ 2,1−ξ 2−α3−α4}1Q5
+i=2αi(1−P5
+i=2αi)dα2dα3dα4dα5.
+Overall, this tells us thatρ(n;x) has equidistribution properties for moduli corresponding toT k(δ, A, B, ε),
+and thatP
+n∈[x,2x]ρ(n;x) = (1−c 1+o(1))x
+log(x)for the given value ofc 1. Furthermore, clearlyρ(n;x)≤
+1P(n) andρ(n;x)̸= 0 implies that all prime factors ofnexceedx1−2ξ 2. Now we need to think aboutc 2.
+Ifξ2≤4
+10, we note that 1−2ξ 2≥1
+5and henceα i>1
+5for alliin both Γ 2(n;x) and Γ∗
+2(n;x). This means
+that Γ 2(n;x) and Γ∗
+2(n;x) are simply empty sums andρ(n;x) = 1 P(n). We can takec 2= 0. Ifξ 2>4
+10
+we need to be more careful. Looking at Γ 2(n;x), defined in (4.3), we only get a negative contribution if
+n=p′
+1p′
+2p′
+3p′
+4p′
+5for some primesp′
+iwithp′
+1>···> p′
+5. Further,p 4needs to be the smallest prime, so
+there are only 4 choices forp 5. Sincep 1> p2> p3> p4, the choice ofp 5immediately also determines the
+values ofp 1,p2andp 3. Noncan be counted more than 4 times. Thus Γ 2(n;x)≥ −4. Similarly, looking
+at Γ∗
+2(n;x), defined in (4.4), we only get a negative contribution ifn=p′
+1p′
+2p′
+3p′
+4p′
+5for some primesp′
+i
+withp′
+1>···> p′
+5. There are at most 5
+3
+= 10 choices for{p 2, p3, p4}, and since we needp 2> p3and
+=== PAGE 24 ===
+24 JULIA STADLMANN
+p4> p3andp 6> p5, anyncan be counted at most 20 times. We get Γ 2(n;x)≥ −20 and overall have
+ρ(n;x)≥ −24. This gives us choicec 2= 24.□
+4.2.Partition lemmas.In Proposition 2 we chose parameters (ξ 1, ξ2, ξ3) and constructed a prime
+minorantρ(n;x) which has equidistribution properties for moduli corresponding toT k(δ, A, B, ε) provided
+that everyf∈ H(ξ 1, ξ2, ξ3) has equidistribution properties for moduli inQ∗(x;δ, A , B, ε, ε 0). We now
+need to translate the equidistribution estimates proved in Section 3 into conditions on (ξ 1, ξ2, ξ3) and
+(δ, A, B) which ensure thatf∈ H(ξ 1, ξ2, ξ3) equidistributes for moduli inQ∗(x;δ, A , B, ε, ε 0). We will do
+this by thinking about the following sets:
+Definition 10.For givenB 1, B2, δ∈(0,∞)and givenm 1, m2∈N∪ {0}, we set
+Ξ(B 1, B2, m1, m2, δ) =(
+(y1, . . . , y m1+m 2)∈[δ,1]m1+m 2:m1X
+i=1yi≤B 1andm1+m 2X
+i=m 1+1yi≤B 2)
+.
+Properties of Ξ(B j,m, Bj′,m′, m, m′, δ) will be used to factorize moduli inQ(x;δ, A , B, ε, j, j′, m, m′, ε0).
+4.2.1.2 factors.We begin by asking what conditions onT k(δ, A, B, ε) ensure thatq∈Q∗(x;δ, A , B, ε, ε 0)
+has a factor in some fixed interval [xa, xb]. We make the following simple observation:
+Lemma 11.LetQ(x;δ, A , B, ε, j, j′, m, m′, ε0)be as given in Definition 2 and letΞ(B 1, B2, m1, m2, δ)
+be as given in Definition 10. Considera, b∈(0,1
+2)withb−a≥δ.
+Suppose that for every(y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ)there exists a partitionI 1∪I2of
+{1, . . . , m+m′}with
+X
+i∈I1yi≤bandX
+i∈I2yi≤1
+2−a.
+Then there exists a constantε 1>0(dependent only onε 0andδ), so that the following is true for large
+x: Ifq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0)andq > x1/2−ε 1, thenqhas somer|qwithr∈[xa, xb].
+Proof.Recall that we definedQ(x;δ, A , B, ε, j, j′, m, m′, ε0) to be the following set:
+
+
+ee′mY
+i=1fim′Y
+i=1f′
+i∈[1, x] :logx(f1. . . f m)≤(1−ε 0)Bj,m,logx(f′
+1. . . f′
+m′)≤(1−ε 0)Bj′,m′,
+logx(f1. . . f me)≤(1−ε 0)(Aj−ε),logx(f′
+1. . . f′
+m′e′)≤(1−ε 0)(Aj′+ε),
+ee′isxδ-smooth,logx(fi),logx(f′
+i)≥δfor alli
+
+
+Fix someq=ee′Qm
+i=1fiQm′
+i=1f′
+i∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) withq > x1/2−ϵ, whereϵis very small.
+Letp 1. . . p sbe the prime factorization ofee′. We then know thatp i< xδfor alli. We set
+yi=1
+(1−ε 0)logx(fi) for 1≤i≤m,
+ym+i=1
+(1−ε 0)logx(f′
+i) for 1≤i≤m′,
+zi= logx(pi) for 1≤i≤s.
+Sincey i≥δfor alliandPm
+i=1yi≤B j,mandPm+m′
+i=m+1yi≤B j′,m′, there exists a partitionI 1∪I2of
+{1, . . . , m+m′}with
+X
+i∈I1(1−ε 0)yi≤(1−ε 0)b < bandX
+i∈I2(1−ε 0)yi≤(1−ε 0) 1
+2−a
+.
+Sinceq > x1/2−ϵ, we also know that
+X
+i∈I1(1−ε 0)yi+sX
+i=1zi≥1
+2−ϵ−(1−ε 0) 1
+2−a
+≥a,
+providedϵis sufficiently small compared toε 0. Butz i< δand so there existsJ⊆ {1, . . . , s}with
+X
+i∈I1(1−ε 0)yi+sX
+i∈Jzi∈[a, b].
+Multiplying the correspondingf i,f′
+iandp itogether, we then get a factorr|qwithr∈[xa, xb].□
+=== PAGE 25 ===
+BOUNDED GAPS BETWEEN PRIMES 25
+4.2.2.3 factors.Similarly, we next ask what condition ensures thatq∈Q∗(x;δ, A , B, ε, ε 0) has a factor-
+izationq=uvrwithr∈[xa1, xb1] andu∈[xa2, xb2].
+Lemma 12.LetQ(x;δ, A , B, ε, j, j′, m, m′, ε0)be as given in Definition 2 and letΞ(B 1, B2, m1, m2, δ)
+be as given in Definition 10. Considera 1, a2, b1, b2∈(0,1
+2)withb 1−b2≥a1−a2andb 1+b2<1
+2and
+b1−a1≥δandb 2−a2≥δ.
+Suppose that for every(y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ)there exists a partitionI 1∪I2∪I3of
+{1, . . . , m+m′}with
+X
+i∈I1yi≤b1andX
+i∈I2yi≤b2andX
+i∈I3yi≤1
+2−b1−a2.
+Then there exists a constantε 1>0(dependent only onε 0andδ), so that the following is true for large
+x: Ifq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0)andq > x1/2−ε 1, thenqhas a factorizationq=uvrwith with
+r∈[xa1, xb1]andu∈[xa2, xb2].
+Proof.The proof of Lemma 12 is very similar to the proof of Lemma 11:
+We first fix someq=ee′Qm
+i=1fiQm′
+i=1f′
+i∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) withq > x1/2−ϵ, whereϵis very
+small. Denoting byp 1. . . p sthe prime factorization ofee′, we know thatp i< xδfor alliand set
+yi=1
+(1−ε 0)logx(fi) for 1≤i≤m,
+ym+i=1
+(1−ε 0)logx(f′
+i) for 1≤i≤m′,
+zi= logx(pi) for 1≤i≤s.
+Then there exists a partitionI 1∪I2∪I3of{1, . . . , m+m′}with
+X
+i∈I1(1−ε 0)yi< b1andX
+i∈I2(1−ε 0)yi< b2andX
+i∈I3(1−ε 0)yi≤(1−ε 0) 1
+2−b1−a2
+.
+Sinceq > x1/2−ϵ, we also know that
+X
+i∈I2(1−ε 0)yi+sX
+i=1zi>1
+2−ϵ−b 1−(1−ε 0) 1
+2−b1−a2
+≥a2.
+Butz i< δfor alliand so there existsJ 2⊆ {1, . . . , s}with
+X
+i∈I2(1−ε 0)yi+X
+i∈J 2zi∈[a 2, b2].
+Further, we then also have
+X
+i∈I1(1−ε 0)yi+X
+i̸∈J 2zi>1
+2−ϵ−b 2−(1−ε 0) 1
+2−b1−a2
+≥b1−b2+a2≥a1.
+Hence there also existsJ 1⊆ {1, . . . , s} \J 2with
+X
+i∈I1(1−ε 0)yi+sX
+i∈J 1zi∈[a 1, b1].
+Multiplying the correspondingf i,f′
+iandp itogether, we then get a factorizationq=uvrwithr∈[xa1, xb1]
+andu∈[xa2, xb2]. □
+4.2.3.4 factors.Finally, we need a condition which ensures thatq∈Q∗(x;δ, A , B, ε, ε 0) has a factoriza-
+tionq=uvrwith the following properties:r∈[xa1, xb1] andu∈[xa2, xb2] and there existsd 1|rwith
+d1∈[r2xa3, r2xb3] . This is the condition which is typically the hardest to satisfy, and so we work more
+carefully and consider moduliqof a specific size, given byq≍x1/2+2ω 0.
+Lemma 13.LetQ(x;δ, A , B, ε, j, j′, m, m′, ε0)be as given in Definition 2 and letΞ(B 1, B2, m1, m2, δ)be
+as given in Definition 10. Considera 1, a2, a3, b1, b2, b3with3(b 1−a1)+(a 3−b3)≥0andb 1−b2≥a1−a2
+andb 1−a1≥δandb 2−a2≥δandb 3−a3≥δ.
+Letω 0≥ −ε 0and suppose that for every(y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ)there exists a parti-
+tionI 1∪I2∪I3∪I4of{1, . . . , m+m′}with
+X
+i∈I1yi≤2a 1+b3andX
+i∈I2yi≤b2andX
+i∈I3yi≤1
+2+2ω 0−b1−a2andX
+i∈I4yi≤a1−2b 1−a3.
+=== PAGE 26 ===
+26 JULIA STADLMANN
+Then for largex, everyq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0)withq≍x1/2+2ω 0has a factorizationq=
+uvrwith the following properties:r∈[xa1, xb1]andu∈[xa2, xb2]and there existsd 1|rwithd 1∈
+[r2xa3, r2xb3].
+Proof.We first fix someq=ee′Qm
+i=1fiQm′
+i=1f′
+i∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) withq≍x1/2+2ω 0.
+Denoting byp 1. . . p sthe prime factorization ofee′, we know thatp i< xδand set
+yi= logx(fi) for 1≤i≤m,
+ym+i= logx(f′
+i) for 1≤i≤m′,
+zi= logx(pi) for 1≤i≤s.
+Then there exists a partitionI 1∪I2∪I3∪I4of{1, . . . , m+m′}with
+X
+i∈I1yi≤2a 1+b3andX
+i∈I2yi≤b2andX
+i∈I3yi≤1
+2+2ω 0−b1−a2andX
+i∈I4yi≤a1−2b 1−a3.
+Sinceq≍x1/2+2ω 0, we also know that
+X
+i∈I2yi+sX
+i=1zi>1
+2+ 2ω 0−(2a 1+b3)−(1
+2+ 2ω 0−b1−a2)−(a 1−2b 1−a3)
+≥a2+ (3b 1−3a 1+a3−b3)≥a 2.
+Butz i< δfor alliand so there existsJ 2⊆ {1, . . . , s}with
+X
+i∈I2yi+X
+i∈J 2zi∈[a 2, b2].
+This sum corresponds to factoru. Next, we observe that
+X
+i∈I1yi+X
+i∈I4yi≤(2a 1+b3) + (a 1−2b 1−a3) =b 1+ (3a 1−3b 1+b3−a3)≤b 1,
+X
+i∈I1yi+X
+i∈I4yi+X
+i̸∈J 2zi>1
+2+ 2ω 0−b2− 1
+2+ 2ω 0−b1−a2
+≥b1−b2+a2≥a1.
+Hence there also existsJ 1⊆ {1, . . . , s} \J 2with
+X
+i∈I1yi+X
+i∈I4yi+X
+i∈J 1zi∈[a 1, b1].
+This sum corresponds to factorr. Finally, considerc∈[a 1, b1]. Notice that
+X
+i∈I1yi≤2a 1+b3≤2c+b 3,
+X
+i∈I1yi+X
+i∈J 1zi≥a1−(a 1−2b 1−a3)≥2b 1+a3≥2c+a 3.
+Hence for anyc∈[a 1, b1] we can findJ′⊆J1with
+X
+i∈I1yi+X
+i∈J′zi∈[2c+a 3,2c+b 3].
+This sum corresponds to factord 1ofr. Overall, multiplying the correspondingf i,f′
+iandp itogether, we
+then get thatq≍x1/2+2ω 0has a factorizationq=uvrwithr∈[xa1, xb1] andu∈[xa2, xb2] so that for
+everyR∈[xa1, xb1], there existsd 1|rwithd 1∈[R2xa3, R2xb3].□
+4.3.An equidistribution criterion.Recall now that our goal is to find conditions onδ,A andB
+which ensure that everyf∈ H(ξ 1, ξ2, ξ3) has equidistribution properties for moduli inQ∗(x;δ, A , B, ε, ε 0).
+Combining the partition lemmas we just proved with the equidistribution estimates of Section 3, we can
+rephrase these conditions in terms of properties of Ξ(B 1, B2, m1, m2, δ), as seen in Proposition 3.
+Proposition 3.LetT k(δ, A, B, ε)be as given in Definition 1, letQ∗(x;δ, A , B, ε, ε 0)be as given in
+Definition 2 and letΞ(B 1, B2, m1, m2, δ)be as given in Definition 10.
+Letϵ= 10−10. Supposeξ 1, ξ2, ξ3∈(0,1)satisfy the following conditions:
+(I)Type I condition:min
+ξ1−4A n+2
+3,9
+7−34
+7An	
+−2ϵ > δ.(Recall thatA = (A 1, . . . , A n).)
+(II)Type II condition:19
+2−36A n−13δ+ 100ϵ≥0and
+minn
+ξ2
+10−32An
+10+8
+10,ξ2
+4+11
+16−3A no
+−2ϵ≥δ.
+=== PAGE 27 ===
+BOUNDED GAPS BETWEEN PRIMES 27
+(III)Type III condition:11
+8−7
+2An−9
+8ξ3−2ϵ > δ.
+Suppose further that for allj, j′∈ {1, . . . , n}and for allm, m′∈ {1, . . . ,⌊1
+δ⌋}withm+m′>0, every
+tuple(y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ)has all of the following properties:
+(A)Type I condition: There exists a partitionI 1∪I2of{1, . . . , m+m′}with
+X
+i∈I1yi≤ξ1−2ϵandX
+i∈I2yi≤1
+6−4ω(j, j′)−2ϵwhereω(j, j′) =Aj+Aj′
+2−1
+4
+.
+(B)Type IIa condition: There exists a partitionI 1∪I2of{1, . . . , m+m′}with
+X
+i∈I1yi≤2
+5+24ω(j, j′)
+5+7δ
+5−2ϵandX
+i∈I2yi≤1
+14−24ω(j, j′)
+7−2ϵ.
+(C)Type IIb condition: There also exists a partitionI 1∪I2∪I3of{1, . . . , m+m′}with
+X
+i∈I1yi≤1
+3+24ω(j, j′)
+3+7δ
+3−4ϵ,
+X
+i∈I2yi≤1
+10−34ω(j, j′)
+5−7δ
+5−4ϵ,
+X
+i∈I3yi≤1
+35+22ω(j, j′)
+35+21δ
+35−4ϵ.
+(D)Type IIc condition: For anyω 0∈[−ϵ, ω(j, j′)]and anyγwithξ 2−ϵ≤γ≤1
+3+24ω(j,j′)
+3+7δ
+3+3ϵ,
+there exists a partitionI 1∪I2∪I3∪I4with
+X
+i∈I1yi≤γ−2δ−8ω 0−ϵ,
+X
+i∈I2yi≤1
+2−γ−2ω 0−ϵ,
+X
+i∈I3yi≤4ω 0+δ−ϵ,
+X
+i∈I4yi≤8ω 0.
+(E)Type III condition: There also exists a partitionI 1∪I2of{1, . . . , m+m′}with
+X
+i∈I1yi≤1−6ω(j, j′)−3ξ3
+2−2ϵandX
+i∈I2yi≤5ω(j, j′)
+2+3ξ3
+8−2ϵ.
+Then for everyf∈ H(ξ 1, ξ2, ξ3),x >1,ε 0>0,A >0anda∈Zwith(a, P(x)) = 1,
+X
+q∈Q∗(x;δ,A ,B,ε,ε 0)
+qis squarefreeX
+n∈[x,2x]
+n≡a(q)f(n;x)−1
+ϕ(q)X
+n∈[x,2x]
+(n,q)=1f(n;x)≪A,ε0x
+log(x)A.
+Proof.Recall thatH(ξ 1, ξ2, ξ3) consists of convolutions of three different types, I, II and III. Our goal is
+to show that for each type offand for allj, j′∈ {1, . . . , n}and for allm, m′∈ {1, . . . ,⌊1
+δ⌋},
+X
+q∈Q(x;δ,A ,B,ε,j,j′,m,m′,ε0)
+qis squarefreeX
+n∈[x,2x]
+n≡a(q)f(n;x)−1
+ϕ(q)X
+n∈[x,2x]
+(n,q)=1f(n;x)≪A,ε0x
+log(x)A.
+We fix some choice ofj, j′∈ {1, . . . , n}andm, m′∈ {1, . . . ,⌊1
+δ⌋}and may assumem+m′>0 (as the
+m+m′= 0 case follows trivially from the other cases). Forq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) we have
+q≤x(1−ε 0)(Aj+Aj′)and so we will work with
+ωmax=Aj+Aj′
+2−1
+4.
+Case I : First considerf(n;x) = (α ⋆ β)(n;x), whereαis a coefficient sequence at scaleMandβis a
+smooth coefficient sequence at scaleNwithM(x)N(x)≍xandN(x)≥xξ1−ϵ.
+=== PAGE 28 ===
+28 JULIA STADLMANN
+Initially we assumeγ≤1
+2and defineδ∗(γ) =γ−4ω max−1
+3−ϵ. Forγ≥ξ 1−ϵwe now have
+3γ−12ω max−3δ∗(γ)>1.
+Also, the assumptionξ 1−4A n+2
+3−2ϵ > δensures thatδ∗(γ)≥δ.
+Now we apply Lemma 5 with (ω max, γ, δ∗(γ)) in the place of (ω, γ, δ). For sufficiently smallε′, any
+f(n;x) of Type I has good equidistribution properties for moduli inD I(x;ω max, γ, δ∗(γ);ε′). But this
+meansQ(x;δ, A , B, ε, j, j′, m, m′, ε0) also has the desired equidistribution properties, provided it is a
+subset ofD I(x;ω max, γ, δ∗(γ);ε′). Recall that forγ≤1
+2,
+DI(x;ω, γ, δ;ε) =n
+d∈[1, x1/2+2ω]∩N:∃r|dwithxγ−δ−3ε< r < xγ−3εo
+.
+To showQ(x;δ, A , B, ε, j, j′, m, m′, ε0)⊆D I(x;ω max, γ, δ∗(γ);ε′), we now apply Lemma 11. We need
+that the relevant moduliqhave a factorrwithxγ−δ∗(γ)−3ε′< r < xγ−3ε′whenξ 1−ϵ≤γ≤1
+2. But
+γ−δ∗(γ)−3ε′= 4ω max+1
+3+ϵ−3ε′.
+By Lemma 11 elements ofQ(x;δ, A , B, ε, j, j′, m, m′, ε0) thus have the desired factors provided that for
+every (y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) there exists a partitionI 1∪I2of{1, . . . , m+m′}with
+X
+i∈I1yi≤ξ1−2ϵandX
+i∈I2yi≤1
+6−4ω max−2ϵ.
+On the other hand, ifγ∈(1
+2,1
+2+ 2ω max+ε′], we useδ∗(γ) =1
+14−68
+14ωmax−ϵ, so that
+68ωmax+ 14δ∗(γ)<1.(4.5)
+Thenf(n;x) equidistributes for moduli inD I(x;ω max, γ, δ∗(γ);ε′). This time,D Iconsists ofqwhich have
+a factorrwithx1−γ−δ∗(γ)−3ε′< r < x1−γ−3ε′. Thus Lemma 11 applies toQ(x;δ, A , B, ε, j, j′, m, m′, ε0)
+provided that for every (y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) there exists a partitionI 1∪I2with
+X
+i∈I1yi≤1
+2−2ω max−2ϵandX
+i∈I2yi≤1
+14−68
+14ωmax−2ϵ. (4.6)
+Case II : Next considerf(n;x) = (α⋆β)(n;x), whereαis coefficient sequence at scaleM,βis a coefficient
+sequence at scaleNwithM(x)N(x)≍x, andxξ2−ϵ≤N(x) =xγ≤x1−ξ 2+ϵ. Assume also thatαandβ
+both have the Siegel–Walfisz property. By symmetry, we only need to considerN(x)≤x1/2.
+We will now apply the equidistribution estimates given in Lemma 3, Lemma 4 and Lemma 6.
+Case IIa : We begin with Lemma 3 and setδ∗(γ) =5γ
+7−2
+7−24ωmax
+7−ϵ. This choice ensures that
+24ωmax+ 7δ∗(γ)−5γ <−2,
+8ωmax+ 3δ∗(γ)−γ <0,
+so that we can apply Lemma 3 with (ω max, γ, δ∗(γ)) in the place of (ω, γ, δ). We get thatfhas good
+equidistribution properties for moduli inD IIa(x;ω max, γ, δ∗(γ);ε′), providedε′is very small. Now we
+need to show thatQ(x;δ, A , B, ε, j, j′, m, m′, ε0)⊆D IIa(x;ω max, γ, δ∗(γ);ε′). To apply Lemma 11, we
+need to restrict toγwithδ∗(γ) =5γ
+7−2
+7−24ωmax
+7−ϵ≥δ.This means for now we only consider
+γ≥2
+5+24ωmax
+5+7δ
+5+ 2ϵ.
+We then get that anyq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) has a divisorr|qwithxγ−3ε−δ∗(γ)< r < xγ−3ε
+provided that for every (y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) there exists a partitionI 1∪I2with
+X
+i∈I1yi≤2
+5+24ωmax
+5+7δ
+5−2ϵandX
+i∈I2yi≤1
+14−24ωmax
+7−2ϵ. (4.7)
+Case IIb : Now we considerγ <2
+5+24ωmax
+5+7δ
+5+ 2ϵand use Lemma 4. Here we instead choose
+δ∗(γ) =3γ
+7−1
+7−24ωmax
+7−ϵ, which ensures that
+24ωmax+ 7δ∗(γ)−3γ <−1,
+8ωmax+ 3δ∗(γ)−γ <0.
+=== PAGE 29 ===
+BOUNDED GAPS BETWEEN PRIMES 29
+Hence we can apply Lemma 4 with (ω max, γ, δ∗(γ)) and get thatfhas good equidistribution properties for
+moduli inD IIb(x;ω max, γ, δ∗(γ);ε′). To showQ(x;δ, A , B, ε, j, j′, m, m′, ε0)⊆D IIb(x;ω max, γ, δ∗(γ);ε′),
+we apply Lemma 12. However, we need to restrict toγwithδ∗(γ) =3γ
+7−1
+7−24ωmax
+7−ϵ≥δ, so have
+1
+3+24ωmax
+3+7δ
+3+ 3ϵ < γ <2
+5+24ωmax
+5+7δ
+5+ 2ϵ
+Recall now that
+DIIb(x;ω, γ, δ;ε) =
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+rwithxγ−3ε−δ< r < xγ−3ε
+andx1/2−γ−2ω−6ε−δ< u < x1/2−γ−2ω−6ε
+.
+Anyq∈Q(x;δ, A , B, ε, j, j′, m, m′, ε0) has a divisorr|qand a divisoru|q
+rwithxγ−3ε−δ∗(γ)< r <
+xγ−3εandx1/2−γ−2ω max−6ε−δ∗(γ)< u < x1/2−γ−2ω max−6εprovided that the following is true: For every
+(y1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) there exists a partitionI 1∪I2∪I3with
+X
+i∈I1yi≤γ−2ϵ,X
+i∈I2yi≤1/2−γ−2ω max−2ϵandX
+i∈I3yi≤3γ
+7−1
+7−10ωmax
+7−2ϵ.
+Of course we could simply check this condition for everyγin the relevant range, but Case IIb generally
+does not correspond to the most critical condition (Case IIc does), and so we simplify the above condition
+to the following criterion: There exists a partitionI 1∪I2∪I3with
+X
+i∈I1yi≤1
+3+24ωmax
+3+7δ
+3−4ϵ,(4.8)
+X
+i∈I2yi≤1
+10−34ωmax
+5−7δ
+5−4ϵ,
+X
+i∈I3yi≤1
+35+22ωmax
+35+21δ
+35−4ϵ.
+Case IIc : Finally, we use Lemma 6 to treat the caseξ 2−ϵ≤γ≤1
+3+24ωmax
+3+7δ
+3+ 3ϵ. Here we will
+work with a functionδ∗(γ) which satisfies
+δ∗(γ)≤min1
+4−2ω max−γ
+2,γ
+10−32ωmax
+10,γ
+4−1
+16−3ω max
+−ϵ.
+This ensures that we have the following inequalities:
+8ωmax+ 4δ∗(γ) + 2γ <1,
+32ωmax+ 10δ∗(γ)−γ <0,
+48ωmax+ 16δ∗(γ)−4γ <−1.
+Hence we can apply Lemma 6 with (ω max, γ, δ∗(γ)) and get thatfhas good equidistribution properties
+for moduli inD IIc(x;ω max, γ, δ∗(γ);ε′). Recall here that
+DIIc(x;ω, γ, δ;ε) =
+
+d∈[1, x1/2+2ω]∩N:∃r|d∃u|d
+r∃d1|rwithxγ−3ε−δ< r < xγ−3ε
+andx1−γ−6ε−δd−1< u < x1−γ−6εd−1
+andr2x2−γ−52ε−δd−4< d1< r2x2−γ−52εd−4
+
+.
+We now ask if the given upper bound onδ∗(γ) is sufficiently large to allowδ∗(γ)≥δforξ 2−ϵ≤γ≤
+1
+3+24ωmax
+3+7δ
+3+ 3ϵ. On the one hand, we need
+1
+4−2ω max−1
+2 1
+3+24ωmax
+3+7δ
+3+ 3ϵ
+≥δ,
+which is implied by
+19
+2−36A n−13δ+ 100ϵ≥0.
+On the other hand, we also need that
+minn
+ξ2
+10−32ωmax
+10,ξ2
+4−1
+16−3ω maxo
+−2ϵ≥δ.
+Recalling thatω max≤A n−1
+4, it suffices to have
+minn
+ξ2
+10−32An
+10+8
+10,ξ2
+4+11
+16−3A no
+−2ϵ≥δ.
+These two criteria form condition (II) of Proposition 3. Hence we can work with anyδ∗(γ) which satisfies
+δ≤δ∗(γ)≤min1
+4−2ω max−γ
+2,γ
+10−32ωmax
+10,γ
+4−1
+16−3ω max
+−ϵ.
+=== PAGE 30 ===
+30 JULIA STADLMANN
+Now we can apply Lemma 13 to show thatQ∗(x;δ, A , B, ε, ε 0)⊆D IIc(x;ω max, γ, δ∗(γ);ε′). According to
+Lemma 13, everyq∈Q∗(x;δ, A , B, ε, ε 0) has a suitable factorization provided the following is true: For
+everyω 0∈[−ε 0, ωmax] and every tuple (y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) there exists a partition
+I1∪I2∪I3∪I4of{1, . . . , m+m′}which satisfies inequalities
+X
+i∈I1yi≤γ−2δ∗(γ)−8ω 0−ϵ,
+X
+i∈I2yi≤1
+2−γ−2ω 0−ϵ,
+X
+i∈I3yi≤4ω 0+δ∗(γ)−ϵ,
+X
+i∈I4yi≤8ω 0.
+Looking at these conditions, it is actually often better to work with a smallerδ. Sinceδ∗(γ)≥δ, we
+hence settle on the following criterion:
+X
+i∈I1yi≤γ−2δ−8ω 0−ϵ,
+X
+i∈I2yi≤1
+2−γ−2ω 0−ϵ,
+X
+i∈I3yi≤4ω 0+δ−ϵ,
+X
+i∈I4yi≤8ω 0.
+Case III : Finally, considerf(n;x) = (α⋆ψ 1⋆ψ2⋆ψ3)(n;x), whereαis a coefficient sequence at scaleMand
+ψ1,ψ2andψ 3are smooth coefficient sequences at scalesN 1,N2andN 3withM(x)N 1(x)N 2(x)N 3(x)≍x.
+Additionally,x1−2ξ 3−ϵ≤N 1(x), N 2(x), N 3(x)≤xξ3+ϵandN i(x)N j(x)≥x1−ξ 3−ϵfori̸=j.
+We defineδ∗=1
+2−7
+2ωmax−9
+8ξ3−ϵ, so that
+28ωmax+ 9ξ 3+ 8δ∗<4.
+The condition11
+8−7
+2An−9
+8ξ3−2ϵ > δensuresδ∗> δ. Now we apply Lemma 7 with (ω max, γ, δ∗) in the
+place of (ω, γ, δ). We get that anyf(n;x) of Type III has good equidistribution properties for moduli in
+DIII(x;ω max, γ, δ∗;ε′). To obtain
+Q(x;δ, A , B, ε, j, j′, m, m′, ε0)⊆D III(x;ω max, γ, δ∗;ε′)
+we use once more Lemma 11. We need to show that elementsqofQhave a factorr|qwith
+x1/3+4δ∗/3−4ω max/3−δ∗< r < x1/3+4δ∗/3−4ω max/3.
+This is guaranteed if every (y 1, . . . , y m+m′)∈Ξ(B j,m, Bj′,m′, m, m′, δ) has a partitionI 1∪I2with
+X
+i∈I1yi≤1
+3+4δ∗
+3−4ωmax
+3andX
+i∈I2yi≤1
+6−δ∗
+3+4ωmax
+3.
+Plugging inδ∗=1
+2−7
+2ωmax−9
+8ξ3−ϵ, this is implied by
+X
+i∈I1yi≤1−6ω max−3ξ3
+2−2ϵandX
+i∈I2yi≤5ωmax
+2+3ξ3
+8−2ϵ. (4.9)
+This concludes the proof. □
+The statement of Proposition 3 may look a bit complicated at first, but it is extremely useful for identifying
+suitable choices ofB j,mfor givenA andδ. For instance, one may choose some small constantcand sample
+tuples in Ξ(B 1, B2, m1, m2, δ) by considering (y 1, . . . , y m1+m 2) withy i∈cN. Using a computer, it is then
+easy to check if there is a partitionI 1∪I2∪I3∪I4so that (y 1, . . . , y m1+m 2) satisfiesP
+i∈Ijyi< C jfor
+j= 1,2,3,4. Choosing constantsC 1,C2,C3andC 4according to the partitions listed in Proposition 3,
+but leaving room to spare to account for an error (m 1+m 2)c, one can then findB 1andB 2with the
+desired partition properties. Of course, the smaller the choice ofc, the longer this computation takes, but
+at least for smallmandm′it is not difficult to find near optimal values forB j,mby using this approach.
+=== PAGE 31 ===
+BOUNDED GAPS BETWEEN PRIMES 31
+However, to proveH 1≤240, such a brute force computation is actually not necessary and we will instead
+pickB j,mfor which the conditions of Proposition 3 can easily be verified by hand.
+5.Integrals via matrix multiplication
+In the previous sections we discussed the theoretical framework of our proof: we proved a variant of
+the GPY sieve for the supportT k(δ, A, B, ε), derived useful equidistribution lemmas and constructed a
+minorant for the prime indicator function. However, once we have chosenδ,A ,Bandε, one major
+obstacle remains: we need to solve the optimization problem described in Proposition 1 and find a
+functionFwhich makes the following quantity large:
+k(1−c 1)J(F;δ, A , B, ε)−kc 2K(F;δ, A , B, ε)
+I(F;δ, A , B, ε)>1.
+5.1.A basis.To find a good functionF, we first choose some symmetric functionsG 1, . . . , G las a basis
+and consider linear combinationsF=c 1G1+···+c lGl. We setc = (c 1, . . . , c l) and define matricesM 1
+andM 2as follows:
+(M1)i,j=Z
+···Z
+Tk(δ,A,B,ε)Gi(t1, . . . , t k)Gj(t1, . . . , t k)dt1. . .dt k,
+(M2)i,j=k(1−c 1)nX
+m=1nX
+m′=1Z
+···Z
+t1+···+t i−1+ti+1+···+t k≤max{A m−ε,Am′−ε}
+t1+···+t i−1+ti+ti+1+···+t k∈[Am−1+ε,A m+ε]
+t1+···+t i−1+t′
+i+ti+1+···+t k∈[Am′−1+ε,Am′+ε]Gi(t1, . . . , t k−1, tk)Gj(t1, . . . , t k−1, t′
+k)dtkdt′
+kdt1. . .dt k−1
+−kc 2nX
+m=1nX
+m′=1Z
+···Z
+t1+···+t k−1>max{A m−ε,Am′−ε}
+t1+···+t k−1+tk∈[Am−1+ε,A m+ε]
+t1+···+t k−1+t′
+k∈[Am′−1+ε,Am′+ε]Gi(t1, . . . , t k)Gj(t1, . . . , t k)dt1. . .dt k
+This gives us the following identity:
+cM2cT
+cM1cT=k(1−c 1)J(F;δ, A , B, ε)−kc 2K(F;δ, A , B, ε)
+I(F;δ, A , B, ε). (5.1)
+To find the optimal choice forc , Maynard [3] and Polymath [5] computed the largest eigenvalue of
+M2M1−1, and chosec to be a corresponding eigenvector. While our new choice ofM 1andM 2may not
+be positive definite, we nonetheless follow the same approach: We compute exact values for the entries
+ofM 1andM 2, and then approximate numerically to obtain eigenvalues and eigenvectors. Choosing
+an eigenvector, we then approximate it via rational numbers, obtaining a good choice forc . We then
+compute the ratio (5.1) exactly, and if the result is greater than 1, we have shown thatH 1≤H(k), where
+H(k) is the length of the narrowest admissiblek-tuple.
+Regarding the choice of basisG 1, . . . , G l, Polymath considered the set of symmetric polynomials
+BD=
+p(t1, . . . , t k)2(1−t 1− ··· −t k)b:p(t 1, . . . , t k) symmetric polynomial,deg(p) =a,2a+b≤D	
+.
+In particular,H 1≤246 was obtained by optimization over basisB 27. To obtainH 1≤240, we work with
+the smaller basisB 19, which indicates that our method gives quite a large improvement.
+5.2.Integration via recursion and matrix multiplication.To find eigenvectors ofM 2M1−1, one
+must of course first calculate the entries of matricesM 1andM 2. We need to obtain exact integrals as even
+minor errors in the matrix entries quickly lead to incorrect results. However, trying to use Mathematica
+to integrate a polynomial in 49 variables over a region likeT k(δ, A, B, ε) seems pretty hopeless: even for
+polynomials in 10 variables a computation can already take 10 minutes or more, and the duration appears
+to increase exponentially, so that we would never get any result for 49 variables. Therefore we need to
+find a better way to integrate polynomials overT k(δ, A, B, ε). We have carefully chosen the region to
+make it possible to completely rewrite integration in terms of recursion and matrix multiplication. Below
+we will briefly explain the key ideas behind this process.
+=== PAGE 32 ===
+32 JULIA STADLMANN
+5.2.1.Building blocks.We begin by considering much simpler sets
+Ts(k) ={(t 1, . . . , t k)∈[0, δ]k:t1+···+t k≤1},
+Tb(k) ={(t 1, . . . , t k)∈[δ,1]k:t1+···+t k≤1}
+and polynomialsta1
+1. . . tak
+k(1−t 1− ··· −t k)b. If one naively expands (1−t 1− ··· −t k)band integrates
+ta1
+1. . . tak
+k(1−t 1−···−t k)bby hand, then the conditiont 1+···+t k≤1 has the effect that each evaluation
+ofR
+dtiincreases the polynomial’s degree by 1. So we would quickly get an unmanageable number of
+different polynomials that need to be considered. To avoid such issues, we use the following two tricks:
+First, we note that the integral ofta1
+1. . . tak
+k(1−t 1− ··· −t k)boverT s(k) orT b(k) can itself be expressed
+(piecewise) as a polynomial inδ. Its degree is at mostk+a 1+···+a k+b. The coefficients of this
+polynomial only depend on the value of⌊1
+δ⌋. We may write
+Z
+···Z
+Ts(k)ta1
+1. . . tak
+k(1−t 1− ··· −t k)bdt1. . .dt k=k+a 1+···+a k+bX
+i=0Cm,i(k, a, b)δifor1
+δ
+∈[m, m+ 1],
+Z
+···Z
+Tb(k)ta1
+1. . . tak
+k(1−t 1− ··· −t k)bdt1. . .dt k=k+a 1+···+a k+bX
+i=0Dm,i(k, a, b)δifor1
+δ
+∈[m, m+ 1].
+The goal now is to find the coefficientsC m,i(k, a, b) andD m,i(k, a, b).
+Secondly, whena k̸= 0 orb̸= 0 we introduce additional integrals to replacetak
+kand (1−t 1− ··· −t k)b.
+This trick gives us a nice recursive definition for the coefficientsC m,i(k, a, b) andD m,i(k, a, b). Here is a
+brief example:
+k+a 1+···+a k+bX
+i=0Cm,i(k, a, b)δi=Zδ
+0···Zδ
+0
+t1+···+t k≤1ta1
+1. . . tak
+k(1−t 1− ··· −t k)bdt1. . .dt k
+=Zδ
+0···Zδ
+0
+t1+···+t k≤1Z(1−t 1−···−t k)b
+0ta1
+1. . . tak
+kdsdt 1. . .dt k
+=Z1
+0(1−s1/b)k+a 1+···+a kZ δ
+1−s1/b
+0···Z δ
+1−s1/b
+0
+u1+···+u k≤1ua1
+1. . . uak
+kdu1. . .du kds
+=∞X
+l=0Z(1−δl)b
+max{0,(1−δ(l+1))b}(1−s1/b)k+a 1+···+a kk+a 1+···+a k+bX
+i=0Cl,i(k, a,0)δ
+1−s1/bi
+ds.
+Evaluating the integral overs, we get another polynomial inδ. Carefully comparing coefficients on both
+sides, we can then expressC m,i(k, a, b) in terms ofC l,i(k, a,0) for variousl. Similarly,C m,i(k, a,0) can be
+expressed in terms ofC m,i(k,(a 1, . . . , a k−1),0),D m,i(k,(a 1, . . . , a k−1),0),C m−1,i (k,(a 1, . . . , a k−1),0) and
+Dm−1,i (k,(a 1, . . . , a k−1),0). This algorithm drastically speeds up integration overT s(k) for polynomials
+of the formta1
+1. . . tak
+k(1−t 1− ··· −t k)b.
+5.2.2.More complicated integrals.The integrals discussed in the previous section work as building blocks
+for the calculation of more complicated integrals. For instance, we may now consider the region
+Tb,s(k) ={(u 1, . . . , u r, v1, . . . , v s)∈[δ,1]r×[0, δ]s:u1+···+u r+v1+···+v s< A, v 1+···+v r< D}.
+=== PAGE 33 ===
+BOUNDED GAPS BETWEEN PRIMES 33
+Integration ofua1
+1. . . uarrvb1
+1. . . vbss(A−u 1− ··· −u r−v1− ··· −v s)coverT b,s(k) can be expressed in
+terms of the coefficientsC m,i(r, b, n) andD m,i(s, a, n):
+Z
+···Z
+Tb,s(k)ua1
+1. . . uar
+rvb1
+1. . . vbs
+s(A−u 1− ··· −u r−v1− ··· −v s)cdu1. . .du rdv1. . .dv s
+=Z1
+δ···Z1
+δ
+A−D<u 1+···+u r<Aua1
+1. . . uar
+rZδ
+0···Zδ
+0
+v1+···+v s<A−u 1−···−u rvb1
+1. . . vbs
+s(A−u 1− ··· −u r−v1− ··· −v s)c
++Z1
+δ···Z1
+δ
+u1+···+u r≤A−Dua1
+1. . . uar
+rcX
+n=0c
+n
+(A−D−u 1− ··· −u r)c−nZδ
+0···Zδ
+0
+v1+···+v s<Dvb1
+1. . . vbs
+s(D−v 1− ··· −v s)n
+=∞X
+l=0Z1
+δ···Z1
+δ
+max{A−D,A−δl}<u 1+···+u r<A−δ(l+1)ua1
+1. . . uar
+r(A−u 1− ··· −u r)s+b 1+···+b k+cs+b 1+···+b s+cX
+i=0Cl,i(s, b, c)δ
+A−u 1− ··· −u ri
++Z1
+δ···Z1
+δ
+u1+···+u r≤A−Dua1
+1. . . uar
+rcX
+n=0c
+n
+(A−D−u 1− ··· −u r)c−nDs+b 1+···+b k+ns+b 1+···+b s+nX
+i=0C⌊D
+δ⌋,i(s, b, c)δ
+Di
+.
+The computation above already replaced the integrals overv i< δby coefficientsC m,i(s, b, n), and the
+remaining integrals overu i> δcan similarly be replaced byD m,i(r, a, n). Overall, the entire integral can
+be expressed by multiplying a suitable matrix left and right by the coefficient vectorsCandD.
+The integral overT b,s(k) is itself a building block in our ultimate goal of integrating symmetric polynomials
+overT k(δ, A, B, ε). My code decomposes all such integrals into matrix multiplications and recursions.
+The above discussion highlighted the key ideas behind my calculation process, but I will also upload my
+full code at a later time, when I have had time to insert more comments to make it reader friendly.
+6.Final steps
+To conclude the proof ofH 1≤246, we first briefly discuss our general strategy for proving bounds on
+H1via Proposition 1, Proposition 2 and Proposition 3.
+6.1.General Strategy.Recall thatT k(δ, A, B, ε) is defined as follows:
+Tk(δ, A, B, ε) =n[
+j=1(
+(t1, . . . , t k)∈[0,1]k:kX
+i=1ti∈[A j−1+ε, A j+ε) andX
+i∈Iti≤B j,|I|forI={i:t i> δ})
+.
+We need to find goodA ,B,εandδ. We start by selecting some vector (A 1, . . . , A n) and someδ >0.
+We then take a look at Proposition 3 and choose parameters (ξ 1, ξ2, ξ3) as follows:
+ξ1≈4A n+δ−2
+3,
+ξ2≈max4
+10,32A n−8 + 10δ,12A n−11
+4+ 4δ	
+,
+ξ3≈11
+9−28
+9An−8
+9δ.
+Next we apply Proposition 2 to construct a minorantρ(n;x) for the prime indicator function. If the
+conditions onξ 1, ξ2, ξ3stated in Proposition 2 fail, or ifc 1is large, we need to decrease the size ofδ.
+Having chosen (ξ 1, ξ2, ξ3) andA andδ, we then use Proposition 3 to find a suitable choice forB , ideally
+withB m,jlarge. This determines the supportT k(δ, A, B, ε) and we can now compute matricesM 1and
+M2and search for a good choice of vectorc . If we findc with
+cM2cT
+cM1cT>1,
+then Proposition 1 tells us thatH 1≤H(k).
+6.2.Proof of Theorem 1.Proposition 1, Proposition 2 and Proposition 3 were all stated much more
+generally than is required for the proof ofH 1≤240. As will be discussed below, a quite simple choice of
+Tk(δ, A, B, ε) can be used to get this result, and we can work directly with 1 P(n) rather than a minorant
+ρ(n;x). We do not need the full strength of Proposition 3 either. I developed these more general results
+with the intend of proving better bounds onH 1, but due to time limitations, this paper only proves the
+minimal possible improvement.
+=== PAGE 34 ===
+34 JULIA STADLMANN
+Proof of Theorem 1.We chooseε= 0.0075 andA = (−ε,0.253) andδ= 0.028. Furthermore, we take
+B= (B 1,1, . . . , B1,⌊1
+δ⌋) withB 1,1=B 1,2= 0.15 andB 1,m= 0.17 form≥3.
+Next we chooseξ 1= 0.38 andξ 2=ξ3= 0.4. For this choice, conditions (I), (II) and (III) of Proposition 3
+are satisfied. Furthermore, the upper bound on the sum overI 1in each of the conditions (A), (B), (C)
+and (E) is greater than 0.34. SinceB 1,m+B 1,m′≤0.34, this means we can always simply choose
+I1={1, . . . , m+m′}. In condition (D) we are done if we have{1, . . . , m+m′}=I 1∪I2with bounds
+X
+i∈I1yi≤0.32 andX
+i∈I2yi≤0.07.
+This is possible sinceB 1,m+B1,m′≤0.32 ifm≤2 orm′≤2, and for tuples withm≥3 we must have a
+subsum between 0.02 and 0.07. Thus by Proposition 3,f∈ H(ξ 1, ξ2, ξ3) have the desired equidistribution
+properties. We also see that (ξ 1, ξ2, ξ3) satisfies all inequalities given in Proposition 2, and this proposition
+tells us to useρ(n;x) = 1 P(n), which meansc 1=c2= 0. We compute the relevant matricesM 1andM 2
+fork= 49 and are able to obtain a vectorc with
+cM2cT
+cM1cT>1.
+Therefore Proposition 1 tells us thatH 1≤240.□
+Acknowledgements
+I would like to thank James Maynard, Kannan Soundararajan, Kevin Ford and Jesse Thorner for their
+support and various helpful conversations during different stages of this project.
+References
+[1]Baker, R. C., and Irving, A. J.Bounded intervals containing many primes.Mathematische Zeitschrift 286(2017),
+821–841.
+[2]Goldston, D. A., Pintz, J., and Yildirim, C. Y.Primes in tuples i.Annals of Mathematics(2009), 819–862.
+[3]Maynard, J.Small gaps between primes.Annals of mathematics 181(2015), 383–413.
+[4]Polymath, D. H. J.New equidistribution estimates of Zhang type.Algebra & Number Theory 8, 9 (2014), 2067–2199.
+[5]Polymath, D. H. J.Variants of the Selberg sieve, and bounded intervals containing many primes.Research in the
+Mathematical sciences 1(2014), 1–83.
+[6]Stadlmann, J.On primes in arithmetic progressions and bounded gaps between many primes.Advances in Mathematics
+468, 110190 (2025).
+[7]Zhang, Y.Bounded gaps between primes.Annals of mathematics 179, 3 (2014), 1121–1174.

@@ -1,0 +1,2228 @@
+=== PAGE 1 ===
+IMPROVED SHORT GAPS BETWEEN PRIMES
+OPENAI
+Abstract. We prove that lim inf n→∞(pn+1−pn)≤186, wherepndenotes the nth prime. The
+improvement combines the equidistribution estimates of Polymath 8a and Stadlmann with com-
+plementary factorization conditions that make certain products, and more generally suitable least
+common multiples of divisor products, triply densely divisible. This permits a larger support for the
+multidimensional Selberg sieve and an improved numerical optimization, establishing DHL[40,2]
+and hence the stated bound. The proof is due to GPT 6 Astra.
+1.Introduction
+1.1.Background and main result. WriteHm:= lim inf n→∞(pn+m−pn), wherepnis thenth
+prime. The twin prime conjecture asserts that H1= 2. Zhang [ 21, Thm. 1] proved the ﬁrst uncon-
+ditional bound H1<70 000 000 , building on the sieve method of Goldston, Pintz and Yıldırım [ 6,
+Thm. 2], who proved
+lim infn→∞pn+1−pn
+logpn= 0. (1.1)
+Zhang’s distribution estimates go beyond the Bombieri–Vinogradov range for a restricted family of
+moduli. Polymath 8a [ 15] strengthened these estimates and reﬁned the sieve, reducing the bound
+to4680.
+The multidimensional Selberg sieve of Maynard [ 12, Thms. 1.1 and 1.3], developed independently
+by Tao, gave H1≤600andHm<∞for every ﬁxed m, using only the Bombieri–Vinogradov
+theorem. Further reﬁnements by Polymath 8b [ 16, Thm. 1.4(i)] gave
+H1≤246. (1.2)
+We exploit the stronger equidistribution estimates of Polymath 8a [ 15] and Stadlmann [ 19] through
+sieve weights whose divisor supports make fuller use of the available factorizations of the moduli.
+A set of distinct integers is admissible if it omits a residue class modulo every prime. Follow-
+ing Polymath [ 16, Claim 3.1], write DHL[k,j]for the assertion that every admissible k-tuple has
+inﬁnitely many translates containing at least jprimes.
+Theorem 1.1. The assertion DHL[40,2]holds.
+The40-element set
+H:={0,2,6,12,20,26,30,32,36,42,48,50,56,60,
+68,72,78,86,90,92,98,102,110,116,120,126,132,138,
+140,146,152,156,158,162,168,170,176,180,182,186}(1.3)
+is admissible and has diameter 186, so Theorem 1.1implies the following.
+Corollary 1.2. We haveH1≤186.
+In independent concurrent work, Stadlmann [ 20] provesH1≤240.
+We have a Lean 4 formalization of Theorem 1.1conditional on numerical integral and cap bounds
+and on ﬁnite-ﬁeld exponential-sum estimates ultimately coming from Deligne’s results on the Rie-
+mann hypothesis over ﬁnite ﬁelds [ 10,5]. The GitHub repository openai/PrimeGaps186 contains
+Date : 30 August 2026.
+1
+=== PAGE 2 ===
+this formalization, PrimeGaps186.lean , with the precise exponential-sum bounds of Lemma A.4
+stated as explicit assumptions, and the Python-FLINT program prime_gap_186_certificate.py ,
+which veriﬁes the numerical bounds. We also provide the accompanying PDF, Numerical certiﬁcate
+for prime gaps at most 186 [14], which gives the coeﬃcient tables, interval algorithms and complete
+veriﬁcation records.
+1.2.Outline of the proof. Fix an admissible tuple H={h1, ..., h k}. By translation, assume
+hi≥0; admissibility and prime-containing translates are preserved. Write d= (d1,...,d k)for the
+vector of divisors djand, for each ﬁxed i, write e= (ej)j/negationslash=ifor the corresponding vector with its
+ith coordinate omitted. There is one outer Selberg sum Aand, for each coordinate i, two inner
+sums with nested allowed divisor supports:
+A(n):=/summationdisplay
+dj|n+hj
+1≤j≤kλd,
+B(a)
+i(n):=/summationdisplay
+ej|n+hj
+j/negationslash=iβ(a,i)
+e (a= 0,1),
+Ci(n):=B(1)
+i(n)−B(0)
+i(n).(1.4)
+The coeﬃcients come from ﬁxed smooth proﬁle functions after ﬁnite-band approximation of their
+dependence on prime fragments (normalized logarithms of the divisor prime factors), and the
+supported divisor products are squarefree. Both inner sums approximate the same restriction of A
+obtained when its ith divisor is forced to be 1. The base sum B(0)
+iuses a smaller region; B(1)
+iretains
+more of that approximation. The correction Ciis their diﬀerence, not a second outer weight.
+Putw0:= log log log xandW:=/producttext
+p≤w0p. Throughout, xis suﬃciently large in terms of the
+ﬁxed tuple H; in particular, every prime dividing a nonzero diﬀerence hi−hjdividesW. Choose
+b0(modW)with (b0+hi,W) = 1 for everyi; admissibility and the Chinese remainder theorem
+permit this choice. Write P:=1Pand let/summationtext/prime
+nmean summation over x≤n<2x,n≡b0(modW).
+Our nonnegative weight is always A(n)2. We seek
+S2:=k/summationdisplay
+i=1/summationdisplay/prime
+nP(n+hi)A(n)2>S 1:=/summationdisplay/prime
+nA(n)2, (1.5)
+which guarantees a translate containing at least two primes. The ﬁrst approximation uses square
+completion:
+A2= 2AB(0)
+i−(B(0)
+i)2+ (A−B(0)
+i)2. (1.6)
+After multiplication by P(n+hi), the last square is nonnegative. Discarding it leaves mixed and
+inner products, whose moduli are smaller than those of the full outer square. This is the enlarged-
+support argument of Polymath 8b [ 16, §5.3]; we retain this argument and enlarge the allowed
+coeﬃcient supports. The unrounded divisor-product bounds are:
+Sum AB(0)
+iB(1)
+i
+Product Bound x.2742997x.2499106033x.251. (1.7)
+The exact construction takes slightly smaller cutoﬀs. These bounds concern divisor products, not
+individual prime factors. They force di= 1 whenevern+hiis prime. Ignoring W=xo(1), the
+outer square has modulus bound x.5485994, within the range of ordinary progression counting for
+S1but beyond the prime-distribution range used here. The corresponding bounds for AB(0)
+iand
+(B(0)
+i)2are onlyx.5242103033andx.4998212066. The latter is covered by Bombieri–Vinogradov; the
+former requires the stronger distribution estimates and suitable factorizations of its moduli.
+2
+=== PAGE 3 ===
+This factorization requirement is where the new support conditions enter. After expansion and
+the Chinese remainder theorem, a surviving mixed term has modulus
+WQ, Q := [D,E ],
+whereDandEare the outer and inner coeﬃcient-divisor products, and [·]denotes their lcm. A
+Y-densely divisible integer has divisors within a factor Yof prescribed sizes. Higher orders require
+the resulting factors to admit further controlled factorizations. We use the singly and doubly
+densely divisible estimates of Polymath 8a [ 15, Thm. 2.8], together with the triply densely divisible
+adaptation of Stadlmann’s bilinear estimate indicated in [ 19, Prop. 1 and §2.1.1]. The details of
+the latter adaptation are given in § A.4.
+The MPZ application in Polymath 8b [ 16, Thm. 3.5(ii)] uses smooth coeﬃcient divisors. That
+paper explicitly notes that the stronger dense-divisibility input is not exploited there. It also pro-
+poses using that input to enlarge the support, but identiﬁes the diﬃculty of evaluating the resulting
+integrals when kis around 50[16, §9, item 2]. Our conditions instead control the factorizations
+of the actual combined modulus. Small prime factors from either divisor product can provide the
+divisors needed to accommodate a larger prime. For example, the prime-factor criterion of Sarajian
+and Weingartner [ 17, Thm. 2] gives triple dense divisibility of a squarefree Qwhen
+p3≤YQ<p (p|Q, p>Y ), (1.8)
+whereQ<pis the product of its prime factors smaller than p. Proposition 2.3supplies separate,
+complementary conditions on DandEwhich imply this criterion for [D,E ], including when D
+andEshare prime factors. Neither integer has to be Y-smooth. This permits additional choices
+of smooth proﬁle functions without increasing the quoted distribution exponents.
+The larger approximation B(1)
+iuses a prime minorant. Stadlmann’s ﬁxed construction [ 19,
+Prop. 2] has exponent of distribution 0.5253 on suﬃciently smooth squarefree moduli and retains
+at least 1−2·10−5of the asymptotic prime mass. It reﬁnes Baker and Irving’s use of Harman’s
+sieve [ 2,7]. The Buchstab-and-discarding procedure has an earlier antecedent in Heath-Brown and
+Iwaniec [ 9]; Heath-Brown’s identity [ 8] also enters the distribution estimates. We use the same mi-
+norant on the required densely divisible moduli. On the interval in question write it as ϱ=P−b,
+with b≥0. Here b=ϱ−= max {−ϱ,0}is supported on composites, since ϱ= 1 on primes and
+ϱ≤0on composites. The coeﬃcient primes are kept below the roughness threshold of its support,
+sodi= 1there as well.
+The product AB(1)
+ihas modulus bound x.5252997, just beyond the endpoint 0.525of the full-prime
+estimates used here. The minorant evaluates its mixed correlation, and hence the correlation of
+A−B(0)
+iwithCi. It does not replace Pin the positive weight deﬁning S2. Instead, Cauchy–Schwarz
+is applied separately with the nonnegative weights Pand b. An upper-bound sieve controls the
+b-weighted residual square. All inner pairings have modulus bound x.502; a common order-two
+estimate of level 0.5062 evaluates them for both Pandϱ, and subtraction gives the corresponding
+b-weighted terms. These estimates recover a positive part of the residual prime square in ( 1.6),
+with a small loss from the minorant’s negative part.
+§2gives the divisor support conditions and the distribution estimates. § 3evaluates the sieve
+weights and bounds the contribution of the minorant’s negative part. § 4chooses the weights, veriﬁes
+their supports and proves the strict integral inequality which gives S2>S 1fork= 40 .
+2.Equidistribution conditions and minorants
+The mixed sieve sums produce moduli W[D,E ], whereDandEare squarefree divisor products.
+We ﬁrst give separate conditions on DandEwhich ensure dense divisibility of [D,E ]. We then
+state the equidistribution estimates and the properties of the prime minorant. The exponents and
+positive margins in the analytic estimates are ﬁxed as x→ ∞ . Implied constants may depend on
+these parameters and on the ﬁxed coeﬃcient bounds.
+3
+=== PAGE 4 ===
+2.1.Divisor support conditions. Dense divisibility. Write P+(m)for the largest prime factor
+ofm, withP+(1) = 1 . An integer is Y-smooth ifP+(m)≤Y. Smoothness allows one to choose
+divisors close to any prescribed size; the following weaker condition retains precisely this ﬂexibility.
+Deﬁnition 2.1 ([15, Def. 2.1]) .ForY≥1, putD(0)(Y):=Z>0. For an integer r≥1, a positive
+integermbelongs to D(r)(Y)if, for every pair of integers j,k≥0withj+k=r−1and every
+1≤U≤Ym, there is a factorization
+m=uv, U/Y ≤v≤U, u ∈ D(j)(Y), v∈ D(k)(Y).
+We call these integers r-tuplyY-densely divisible, or singly, doubly and triply densely divisible
+whenr= 1,2,3, respectively.
+The deﬁnition requires every allocation of the remaining orders j+k=r−1. This is the starred
+classD∗
+r,Yof Sarajian and Weingartner [ 17, §1.1]. Every Y-smooth integer belongs to all these
+classes.
+We use the elementary properties
+D(r+1)(Y)⊆ D(r)(Y), d |m, m ∈ D(r)(Y) =⇒d∈ D(r)(Ym/d ),
+and the analogous implication m∈ D(r)(Y),m|n=⇒n∈ D(r)(Yn/m ). Also, the least common
+multiple of two singly Y-densely divisible integers is singly Y-densely divisible. These facts are
+contained in [ 15, Lem. 2.10(0)–(iii)]. In particular, dense divisibility need not pass to a divisor with
+the same value of Y; the factor m/d must be retained.
+For positive squarefree D, putD<p:=/producttext
+q|D, q<pq. The following prime-factor test will be
+convenient.
+Lemma 2.2. Letr≥1be an integer, Y≥2, and letQbe a positive squarefree integer. If
+pr≤YQ<p (p|Q, p>Y ),
+thenQ∈ D(r)(Y). Moreover, if Q∈ D(r)(Y)andWis squarefree, Y-smooth and coprime to Q,
+thenWQ∈ D(r)(Y).
+Proof. The ﬁrst assertion is the lower inclusion in [ 17, Thm. 2]. For the second, let N∈ D(r)(Y)
+andp≤Y,p∤N. Induct on r, with order zero immediate. Given j+k=r−1and1≤U≤YNp ,
+factorNat targetUwhenU≤YN and adjoin pto the ﬁrst factor; when U≥p, use target U/p
+and adjoinpto the second. Induction preserves the required orders, and the ranges overlap because
+p≤YN. Iterating proves the assertion about W. At order one, the same two-range argument
+permits any p∤Nwithp≤YN. □
+Lemma 2.2reduces triple dense divisibility to an inequality for each prime factor. We obtain
+this inequality by splitting p3into two factors, one controlled by Dand the other by E. For any
+primep, writeD≥p:=D/D <pfor the product of the prime factors of Dwhich are at least p, and
+use the same notation for EandQ. The following proposition allows the split of p3to vary with p.
+Proposition 2.3. LetY≥2andX,A,B > 0, withAB≤XY. Letf,g: [1,∞)→[1,∞)
+be nondecreasing functions satisfying f(t)g(t) =t3. Suppose the positive squarefree integers D,E
+satisfy
+f(p)D≥p≤A, g (p)≤B (p|D, p>Y ),
+g(p)E≥p≤B, f (p)≤A (p|E, p>Y ).(2.1)
+IfQ:= [D,E ]>X, thenQ∈ D(3)(Y). Moreover, if d|Dande|E, then (2.1)holds withd,ein
+place ofD,E , with the same functions and constants.
+4
+=== PAGE 5 ===
+Proof. Fix a prime p|Qwithp>Y , and ﬁrst suppose p|D. The ﬁrst condition gives f(p)D≥p≤A.
+IfEhas a prime factor at least p, letqbe the least one. Then E≥p=E≥qandg(p)E≥p≤g(q)E≥q≤
+B. If it has none, E≥p= 1and the bound g(p)≤Bapplies. Multiplying the two bounds gives
+p3D≥pE≥p≤AB≤XY.
+SinceQ≥pdividesD≥pE≥pandQ>X ,
+p3≤XY
+Q≥p=X
+QYQ<p<YQ <p.
+The same argument with D,E interchanged handles the remaining primes. Lemma 2.2proves the
+assertion. Deleting prime factors only decreases D≥pandE≥p, which proves the last claim. □
+The bounds g(p)≤Bandf(p)≤Acover the case where the other integer has no prime factor
+left at that scale. No coprimality assumption on D,E is needed. The freedom to choose fandg,
+rather than ﬁxing one power of pfor each, is used in the numerical optimization.
+For single and double dense divisibility, bounds involving only pD≥pandpE≥psuﬃce.
+Proposition 2.4. LetY≥2,X > 0andD0,E0≥1. SupposeD≤D0andE≤E0are positive
+and squarefree, Q:= [D,E ]>X, and
+pD≥p≤XY
+E0(p|D, p>Y ). (2.2)
+(i)IfE2
+0≤XY, thenQ∈ D(1)(Y).
+(ii)If
+pE≥p≤XY
+D0(p|E, p>Y ), D2
+0≤XYE 0, E2
+0≤XYD 0,
+thenQ∈ D(2)(Y).
+Proof. SinceD > X/E 0, condition ( 2.2) givesp < YD <pfor everyp|Dwithp > Y . Thus,
+Dand each of its initial prime products are singly dense. In (i), every prime of Eis at most
+E0≤XY/E 0<YD , so order-one insertion adjoins the missing primes.
+For (ii), use the following order-two insertion step, stated in [ 17, Prop. 1]. If Nis doublyY-
+dense,d|Nis singlyY-dense, and p > P+(N)satisﬁesp≤Ymin{d,N/d }, thenNpis doubly
+Y-dense. Indeed, a singly dense divisor in [U/Y,U ]is supplied by NwhenU≤YN. WhenU≥p2,
+take a singly dense v|Nat targetU/p; thenYv≥U/p≥p, so order-one insertion makes pv
+singly dense. In the remaining interval YN < U < p2, the singly dense divisor pdworks, since
+U/Y <p2/Y≤pd≤YN <U . Applying the same construction at target YNp/U and taking the
+complement gives the other recursive orientation.
+Now insert the distinct primes of Qincreasingly, starting with its Y-smooth part. Just before
+insertingp|D,p > Y , setN:=Q<pandd:=D<p. By induction Nis doubly dense, while
+d|Nis singly dense and p < Yd . IfEhas a prime factor at least p, the least such prime gives
+pE≥p≤XY/D 0, exactly as in the preceding proof. Since Q≥p≤D≥pE≥p,
+p≤XY
+D0E≥p<YQ
+DE≥p≤YN
+d.
+OtherwiseN/d =Q/D>X/D 0, while
+p≤/radicalBig
+XY/E 0≤XY/D 0<YN
+d.
+The ﬁrst inequality uses D≥p≥pand the second uses D2
+0≤XYE 0. The insertion step applies;
+interchanging D,E handles the remaining primes. □
+5
+=== PAGE 6 ===
+Ifd|Dande|E, the prime-factor inequalities above remain true with d,ein place of D,E ,
+withX,Y,D 0,E0unchanged. The conclusion applies whenever [d,e]> X. There is also a simple
+exception for small divisors. If D≤D0andE≤E0, thenD≤X/E 0orE≤X/D 0implies
+[D,E ]≤X. Thus, when imposing either proposition only above X, we may admit these small
+divisors without further restrictions. Intersecting the resulting conditions for the diﬀerent modulus
+ranges still gives supports closed under taking divisors.
+2.2.Equidistribution estimates. For ﬁnitely supported sequences α,βonN, deﬁne their Dirich-
+let convolution by
+(α∗β)(n):=/summationdisplay
+uv=nα(u)β(v).
+For(a,q) = 1 , put
+∆(f;amodq):=/summationdisplay
+n≡a(q)f(n)−1
+φ(q)/summationdisplay
+(n,q)=1f(n), (2.3)
+whereφis the Euler totient function. Write Λfor the von Mangoldt function and Pfor the prime
+indicator, and set Λx:= Λ1[x,2x)andPx:=P1[x,2x).
+Writeτ(n):=/summationtext
+d|n1for the divisor function. The sequences below may depend on x; all
+constants in their deﬁning bounds are uniform within the family under consideration. We now
+recall some deﬁnitions from the surrounding literature:
+Deﬁnition 2.5. A family of sequences α:N→Cisdivisor-bounded if, for some ﬁxed C≥0,
+|α(n)| /lessmuchτ(n)C
+uniformly in nandx.
+Deﬁnition 2.6 ([15, Def. 2.5]) .Acoeﬃcient sequence is a ﬁnitely supported sequence α:N→C
+such that
+|α(n)| /lessmuchτ(n)C1(logx)C2
+for ﬁxedC1,C2≥0, uniformly in nandx.
+The cited real-valued estimates apply to complex sequences by separating real and imaginary
+parts.
+Deﬁnition 2.7 ([15, Def. 2.5(i)]) .A sequence αislocated at scale N=N(x)≥1ifsuppα⊆
+[cN,CN ]for ﬁxed 0<c<C < ∞. We also say that αisat scaleN.
+Deﬁnition 2.8 ([15, Def. 2.5(iii)]; [ 19, Def. 2]) .A sequence αissmooth at scale N=N(x)≥1if
+α(n) =ψx(n/N), whereψx∈C∞(R)is supported in a ﬁxed interval [c,C]⊂(0,∞)and, for every
+ﬁxed integer j≥0,
+/bardblψ(j)
+x/bardbl∞/lessmuchj(logx)Cj
+for a ﬁxedCj≥0. The proﬁle ψxmay depend on x, butc,C,C jand the implied constants do not.
+Deﬁnition 2.9 ([15, Def. 2.5(ii)]) .A coeﬃcient sequence βat scaleNhas the Siegel–Walﬁsz
+property if there is a ﬁxed constant CSW≥0such that, for every ﬁxed L>0,
+/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n≡a(q)
+(n,s)=1β(n)−1
+φ(q)/summationdisplay
+(n,qs)=1β(n)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/lessmuchLτ(qs)CSWN(logx)−L(2.4)
+uniformly for all integers q,s≥1and allamodqwith (a,q) = 1 . The constant CSWdepends only
+on the coeﬃcient family, not on L, and the implied constant may depend on Land that family but
+not onx,N,q,s ora.
+6
+=== PAGE 7 ===
+Proposition 2.10. Letα,β be coeﬃcient sequences at scales M,N , withMN/lessmuchxC0for a ﬁxed
+C0. Thenα∗βis a coeﬃcient sequence at scale MN. The Siegel–Walﬁsz property holds uniformly
+for
+β(n) =P(n)1J(n), J ⊆[N,2N], N ≥xη,
+whereJis an interval and η>0is ﬁxed.
+Proof. Convolution closure is [ 15, proof of Lem. 3.4(i)]. The prime-interval assertion is the lo-
+calization used in [ 16, §4.5, proof of (63)]; we record its uniformity in the auxiliary coprimality
+condition.
+For the prime-interval assertion, the classical Siegel–Walﬁsz theorem and partial summation give
+the estimate uniformly in the two endpoints when qis bounded by a ﬁxed power of logx. For
+q >(logx)L+2, use the bound O(N/q+ 1 +N/φ(q))andq/φ(q)≤τ(q). The condition (n,s) = 1
+removes at most τ(s)primes. Since N≥xη, both this error and the term 1are absorbed by ( 2.4),
+withCSW= 1. □
+LetIbe a ﬁnite set of primes and PI:=/producttext
+p∈Ip. Write D(r)
+I(Y):={q:q|PI, q∈ D(r)(Y)}. Fix
+one primitive class amodPIand use its restriction for every divisor qofPI. Forω,δ,ε> 0write
+Er(f;ω,δ,ε ):=/summationdisplay
+q≤x1/2+2ω−ε
+q|PI, q∈D(r)(xδ)|∆(f;amodq)|. (2.5)
+The setIand the class amay depend on x; the estimates are uniform in them. The residue class
+is ﬁxed outside the modulus sum. We place a maximum inside that sum only when it is explicitly
+present, as in Bombieri–Vinogradov below. The ﬁxed retreat εleaves room for the small factors
+arising from Wand from subdivision of the coeﬃcients. Whenever the parameter inequalities are
+strict, we may ﬁrst increase ωandδslightly. The resulting ﬁxed margin also permits a cutoﬀ
+x1/2+2ωL0(x)for any prescribed positive L0(x)with logL0(x) =o(logx); constants may depend on
+that choice.
+Proposition 2.11. Letfbe a coeﬃcient sequence at scale x, let0<θ< 1, and let Q ⊆ [1,xθ]∩N.
+Choose a primitive residue class aqmodqfor eachq∈ Q. If, for every ﬁxed L>0,
+/summationdisplay
+q∈Q|∆(f;aqmodq)| /lessmuchLx(logx)−L,
+then, for every ﬁxed B,L> 0,
+/summationdisplay
+q∈Qτ(q)B|∆(f;aqmodq)| /lessmuchB,Lx(logx)−L.
+The conclusion retains the uniformity of the hypothesis. The implication also holds for maxima
+over the same prescribed sets of primitive classes.
+Proof. PutE(q):=|∆(f;aqmodq)|. Shiu’s estimate [ 18, Thm. 1, (2.1)–(2.2)], applied to a
+ﬁxed power of the divisor function on an interval of length comparable to x, givesE(q)/lessmuch
+xφ(q)−1(logx)O(1)uniformly for q≤xθ. Together with the divisor moments in [ 15, Lem. 1.3(ii)],
+this yields/summationdisplay
+q∈Qτ(q)2BE(q)/lessmuchx(logx)OB(1).
+For the mean term use q/φ(q)≤τ(q). Cauchy–Schwarz now gives
+/parenleftBigg/summationdisplay
+qτ(q)BE(q)/parenrightBigg2
+≤/parenleftBigg/summationdisplay
+qE(q)/parenrightBigg/parenleftBigg/summationdisplay
+qτ(q)2BE(q)/parenrightBigg
+.
+Choose a suﬃciently strong unweighted logarithmic saving. The progression bound is uniform in
+the primitive class, so the same proof applies to the stated maxima. □
+7
+=== PAGE 8 ===
+Proposition 2.12. Let0<θ< 1, letQ ⊆ [1,xθ]∩N, and choose primitive classes aqmodq. Let
+wbe a nonnegative divisor-bounded sequence.
+(i)Supposefis a coeﬃcient sequence and, for every ﬁxed L>0,
+sup
+x≤t≤2x/summationdisplay
+q∈Qw(q)|∆(f1[x,t);aqmodq)| /lessmuchLx(logx)−L. (2.6)
+Ifψ∈C1([x,2x])satisﬁes /bardblψ/bardbl∞+/integraltext2x
+x|ψ/prime(t)|dt/lessmuch(logx)Cfor a ﬁxed C, then, for every
+ﬁxedL>0,
+sup
+x≤u≤v≤2x/summationdisplay
+q∈Qw(q)|∆(fψ1[u,v);aqmodq)| /lessmuchLx(logx)−L.
+(ii)For a ﬁxed coeﬃcient sequence f=fx, changing each endpoint of an interval in [x−
+O(1),2x+O(1)]byO(1)changes the corresponding weighted discrepancy sum by at most
+xθ+o(1).
+(iii) Ifθ<2/3and(2.6)holds forf= Λ x, then it also holds for f=Px.
+These assertions also hold with maxima over prescribed primitive classes when the hypotheses use
+the same maxima.
+Proof. We use partial summation and the divisor bounds in [ 15, Lem. 1.3]. For (i), put Fq(t) =
+∆(f1[x,t);aqmodq). Partial summation gives
+∆(fψ1[u,v);aqmodq) =ψ(v)Fq(v)−ψ(u)Fq(u)−/integraldisplayv
+uFq(t)ψ/prime(t) dt.
+Sum absolute values with weights w(q)and use ( 2.6) with a suﬃciently large L. For (ii), the
+diﬀerence is supported on O(1)integers, each with coeﬃcient xo(1); the divisor bound for w(q)
+gives the stated error on summing over q.
+For (iii), ﬁrst remove prime powers from Λx. A primitive class modulo qhas at most 2τ(q)
+square roots, so squares contribute at most x1/2+o(1)+xθ+o(1)to the summed discrepancies. There
+areO(x1/3logx)prime powers of exponent at least three; their contribution is at most xθ+1/3+o(1).
+The mean terms satisfy the same bounds by the divisor moments. These are power savings when
+θ < 2/3, uniformly in the interval. Apply (i) with ψ(t) = 1/logtto the remaining sequence
+P(t) logt. □
+The following proposition records the subdivision argument used in [ 15, §3, proof of Lem. 2.7,
+(3.9)–(3.13)] and [ 16, §4.5, proof of (63)]. We state it for regions deﬁned by a ﬁxed number of
+monomial inequalities.
+Proposition 2.13. Fix an integer ℓ≥2,η >0, and a ﬁnite list of nonzero vectors vj∈Rℓ. Let
+γi:N→[0,1] (1≤i≤ℓ), and let Ωx⊆[xη,∞)ℓbe cut out by
+x≤t1···tℓ<2x,ℓ/productdisplay
+i=1tvji
+i□jzj(x)for everyj,
+wherezj(x)>0and□j∈ {<,≤,>,≥}. For any region S, write
+FS(n):=/summationdisplay
+n1···nℓ=n
+(n1, ..., n ℓ)∈Sℓ/productdisplay
+i=1γi(ni).
+LetQ ⊆ { 1, ...,⌊x⌋}and choose a nonempty set Aqof primitive classes modulo qfor everyq∈ Q.
+Write E(f):=/summationtext
+q∈Qmax a∈Aq|∆(f;amodq)|.
+Suppose that, for every ﬁxed A,C > 0, withh= (logx)−C,
+E(FB)/lessmuchA,Cx(logx)−A(2.7)
+8
+=== PAGE 9 ===
+uniformly over B=/producttextℓ
+i=1[Ni,(1+h)Ni)withNi=xη(1+h)mi,mi∈Z≥0andx/2≤N1···Nℓ≤2x.
+Then E(FΩx)/lessmuchLx(logx)−Lfor every ﬁxed L > 0. The data γi,zj,Q,Aqmay depend on x; the
+conclusion retains the uniformity of (2.7)in these data.
+Proof. The proof is essentially identical to the box decomposition in [ 16, §4.5, proof of (63)]. We
+allow ﬁnitely many monomial boundaries.
+FixC > 0and takexsuﬃciently large that (1+h)ℓ≤2. There are O((h−1logx)ℓ)boxes meeting
+Ωx. LetF0be the sum of FBover boxes wholly contained in Ωx, and letGbe the sum of FBover
+boxes meeting Ωxbut not wholly contained in it. Since the grid is disjoint,
+|FΩx−F0| ≤G.
+Every box under consideration has x/2≤N1···Nℓ≤2x.
+Include the two product cutoﬀs among the boundary inequalities. A boundary box lies within
+O(h), in logarithmic coordinates, of one of the corresponding hyperplanes. More precisely, for some
+ﬁxed nonzero vector vand threshold z(x), every point of the box satisﬁes
+/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+ivilogti−logz(x)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle≤h/summationdisplay
+i|vi|.
+All integer tuples in these boxes also satisfy ni≥xηandx/2≤/producttext
+ini≤4x. Chooseiwithvi/negationslash= 0
+and ﬁx the other ℓ−1variables, whose product we denote by m. The displayed strip conﬁnes nito
+an interval of relative width O(h)and with upper endpoint at most 4x/m after intersection with
+the product range. It therefore contains O(hx/m + 1) integers. Necessarily m≤4x1−η. Summing
+O(hx/m + 1) over the remaining variables, for each of the ﬁnitely many boundary hyperplanes,
+gives by the usual harmonic-sum bounds
+/summationdisplay
+nG(n)/lessmuch(hx+x1−η)(logx)ℓ−1. (2.8)
+The constants in the box count and this bound depend on the ﬁxed geometry and ℓ,η, but not on
+C. If|R| ≤G, then
+|∆(R;amodq)| ≤ |∆(G;amodq)|+2
+φ(q)/summationdisplay
+nG(n).
+Apply this with R=FΩx−F0. The triangle inequality, ( 2.7), (2.8), and/summationtext
+q≤x1/φ(q)/lessmuchlogxgive
+E(FΩx)/lessmuchA,Cx(logx)ℓ(C+1)−A+ (hx+x1−η)(logx)ℓ.
+ChooseC >L +ℓ+ 2and thenA>L +ℓ(C+ 1) + 2 . □
+Proposition 2.14. LetMbe squarefree. For every p|M, choose a nonempty set Ap⊆(Z/pZ)×,
+and put
+A={amodM:amodp∈ A pfor everyp|M}, m (q) =/productdisplay
+p|q|Ap|(q|M).
+For any ﬁnitely supported f, anyQ ⊆ {q:q|M}, and any nonnegative weights w(q),
+/summationdisplay
+q∈Qw(q) max
+a∈A|∆(f;amodq)| ≤1
+|A|/summationdisplay
+a∈A/summationdisplay
+q∈Qw(q)m(q)|∆(f;amodq)|. (2.9)
+If|Ap| ≤Kfor a ﬁxedK≥1, thenm(q)≤τ(q)log2K. Consequently, for coeﬃcient sequences at
+scalexand moduli at most xθ,0<θ< 1, estimates
+/summationdisplay
+q∈Q|∆(f;amodq)| /lessmuchLx(logx)−L
+for every ﬁxed L>0, uniformly in a∈ A, imply the same bounds for the displayed maximum with
+any ﬁxed divisor weights.
+9
+=== PAGE 10 ===
+Proof. The proof is essentially identical to the averaging argument in [ 16, §4.3], with the sets Ap
+in place of the residue classes supplied by a particular sieve.
+The Chinese remainder theorem gives m(q)images of Amoduloq, each with |A|/m(q)preimages.
+The maximum is at most the sum over these images. Multiplying by w(q)and summing gives ( 2.9).
+The bound for m(q)follows from |Ap| ≤Kand squarefreeness. The last assertion follows from
+Proposition 2.11 and averaging over A. □
+We now state the analytic distribution estimates. Numbered references use the versions speciﬁed
+in the bibliography.
+Proposition 2.15. For every ﬁxed L,ε> 0,
+/summationdisplay
+q≤x1/2−εmax
+(a,q)=1|∆(Λ x;amodq)| /lessmuchL,εx(logx)−L. (2.10)
+This estimate is uniform when [x,2x)is replaced by any of its subintervals. If α,β are coeﬃcient
+sequences at scales M,N ,MN/equivasymptoticx,M,N ≥xε0for some ﬁxed ε0>0, andβhas the Siegel–Walﬁsz
+property, then the same estimate holds with α∗βin place of Λx, with the implied constant also
+depending on ε0and the coeﬃcient bounds.
+The prime estimate is the usual Bombieri–Vinogradov theorem [ 4, (1.4)], applied at interval
+endpoints. The bilinear assertion is [ 15, Thm. 2.9], whose Deﬁnition 2.5(ii) uses the absolute
+Siegel–Walﬁsz normalization ( 2.4). Their logarithmic cutoﬀs exceed x1/2−εfor suﬃciently large x.
+Proposition 2.16 ([15, Thm. 2.8(i),(ii),(iv)]) .Suppose 0<ω < 1/12,0<δ < 1/4 +ω,0<σ <
+1/2, and 68ω+ 14δ<1. Letα,β be coeﬃcient sequences at scales M,N , where
+MN/equivasymptoticx, x1/2−σ≤N≤x1/2,
+and suppose that βhas the Siegel–Walﬁsz property. For r= 1or2, assume respectively that
+54ω+ 15δ+ 5σ<1 (r= 1), 56ω+ 16δ+ 4σ<1 (r= 2). (2.11)
+Then, for every ﬁxed L,ε> 0,
+Er(α∗β;ω,δ,ε )/lessmuchx(logx)−L.
+This combines [ 15, Thm. 2.8(i),(ii)] with its Type II estimate, [ 15, Thm. 2.8(iv)]. The latter
+holds already on singly densely divisible moduli, and hence also on the doubly densely divisible
+subclass.
+Proposition 2.17 ([15, Thm. 2.8(v)]) .Suppose 0<ω< 1/12,0<δ< 1/4 +ωand
+1
+18+28
+9ω+2
+9δ<σ<1
+2. (2.12)
+Letαbe a coeﬃcient sequence at scale M, and letψ1,ψ2,ψ3be smooth sequences at scales
+N1,N2,N3, with
+MN 1N2N3/equivasymptoticx, N iNj≥x1/2+σ(i/negationslash=j),
+x2σ≤Ni≤x1/2−σ(1≤i≤3).(2.13)
+Then, for every ﬁxed L,ε> 0,
+E1(α∗ψ1∗ψ2∗ψ3;ω,δ,ε )/lessmuchx(logx)−L.
+Proposition 2.18. Letω,δ,σ> 0satisfy
+72ω+ 24δ<1, 48ω+ 16δ+ 4σ<1, 64ω+ 20δ+ 2σ<1. (2.14)
+Ifα,β are coeﬃcient sequences at scales M,N ,MN/equivasymptoticx,x1/2−σ≤N≤x1/2, andβhas the
+Siegel–Walﬁsz property, then
+E3(α∗β;ω,δ,ε )/lessmuchx(logx)−L
+10
+=== PAGE 11 ===
+for every ﬁxed L,ε> 0.
+Proof. The smooth-modulus estimate is [ 19, Prop. 1]. The extension to triple dense divisibility is
+proved in § A.4: the divisor choices retain the density loss after division, and the completion retains
+the original unit restrictions. The resulting common-factor bounds give the unchanged inequalities
+(2.14). □
+Corollary 2.19. Letω,δ> 0andr∈ {1,2,3}. Assume the corresponding condition
+108ω+ 30δ<1 (r= 1),
+280ω+ 80δ<3 (r= 2),
+240ω+ 80δ<3 (r= 3).(2.15)
+Then, for every ﬁxed L,ε> 0,
+Er(Px;ω,δ,ε )/lessmuchx(logx)−L. (2.16)
+The estimate is uniform on subintervals of [x,2x), and also holds with Λxin place of Px.
+Proof. In each range, σ > 1/10may be chosen suﬃciently close to 1/10thatσ > 2ω, (2.12),
+and the required bilinear inequalities all hold. At order three one may take σ:= 1/10 + (3 −
+240ω−80δ)/40. Forr= 1,2use Proposition 2.16; forr= 3 use Proposition 2.18. Combine
+these with Proposition 2.17 and the Heath–Brown reduction [ 15, Lem. 2.7], whose combinatorial
+input [ 15, Lem. 3.1] requires σ > 1/10. The subinterval uniformity follows from [ 15, Rem. 3.6];
+Proposition 2.12(iii) gives the Pxestimate. □
+For the minorant we also need a smooth-coeﬃcient estimate which reaches shorter factor lengths.
+Lemma 2.20. Letαbe a coeﬃcient sequence at scale Mandβa smooth sequence at scale N, with
+MN/equivasymptoticxandx1/2−σ≤N≤x1/2. Forω,δ,σ> 0satisfying
+4σ+ 28ω+ 8δ<1, (2.17)
+one has E1(α∗β;ω,δ,ε )/lessmuchx(logx)−Lfor every ﬁxed L,ε > 0. Without the preceding restriction
+onN, if0<θ< 1,ε0>0andN≥xθ+ε0, then
+/summationdisplay
+q≤xθmax
+(a,q)=1|∆(α∗β;amodq)| /lessmuchL,θ,ε 0x(logx)−L. (2.18)
+Proof. The ﬁrst assertion is proved in § A.5, adapting [ 2, Lem. 3] to singly densely divisible moduli.1
+The reciprocal-phase estimate uses the least common multiple of the complete moduli rq0q1and
+rq0q2, which is singly dense by [ 15, Lem. 2.10(ii)]. For ( 2.18), the Type 0 argument [ 15, §3, proof
+of Lem. 2.7, (3.14) and following] applies because N/q exceeds a ﬁxed power of x. □
+2.3.The prime minorant and its negative part. We use the arithmetic function constructed
+in [19, Prop. 2 and §4.8], which reﬁnes the Harman-sieve minorant of Baker and Irving [ 2]. For
+m≥1, letψ(m,z)be the indicator that every prime factor of mis at leastz, withψ(1,z) = 1 . Set
+a∗:= 0.40481,b∗:= 0.59519,c∗:= 0.33856,
+ξ∗:= 0.19038,u∗:= 0.23848.(2.19)
+These are exact values; in particular b∗= 1−a∗,ξ∗= 1−2a∗andu∗= 1−4ξ∗. In the sums below,
+allpjare prime,αj:= logpj/logx, andm5is a positive integer. For x≤n<2x, put
+b1(n;x):=/summationdisplay
+n=p1p2p3p4m5
+ξ∗≤α4<α3<α2<α1<a∗
+α1+α2<a∗
+α2+α3+α4>b∗ψ(m5,p4), (2.20)
+1In the notation of [ 2, Lem. 3, proof following (2.4)], (c1,δ/prime
+1) = (h,rq 1), so the ensuing mean term contains
+(h,rq 1q2). Form=rq1q2, the bound/summationtext
+1≤h≤H(h,m )≤Hτ(m)preserves the estimate; see § A.5.
+11
+=== PAGE 12 ===
+b2(n;x):=/summationdisplay
+n=p2p3p4p5p6
+ξ∗≤α2,α3,α4,α5,α6≤u∗α2,α4>α3
+α2+α4<a∗
+α2+α3+α5>b∗
+α6≥α51, (2.21)
+b(n;x):=b1(n;x) +b2(n;x),ϱ(n;x):=P(n)−b(n;x). (2.22)
+We extend these functions by zero outside [x,2x). The sums count conﬁgurations and can have
+multiplicity. The expression for b2is the one in Stadlmann [ 19, Prop. 2]; the equivalent form in
+[19, Lem. 22] interchanges p2andp4.
+Proposition 2.21. For suﬃciently large x, the function ϱequals one on primes in [x,2x)and is
+nonpositive on composites. It is supported on integers all of whose prime factors are at least xξ∗,
+and
+ϱ−:= max {−ϱ,0}=b≥0.
+Every integer in the support of bhas exactly ﬁve prime factors, counted with multiplicity, and
+b(n;x)/lessmuch1. There is a constant 0≤κtrue≤1/50000 such that, with mtrue:= 1−κtrue,
+/summationdisplay
+x≤n<2xϱ(n;x) = (mtrue+o(1))x
+logx,
+/summationdisplay
+x≤n<2xb(n;x) = (κtrue+o(1))x
+logx.(2.23)
+Proof. The lower bound for the mass is [ 19, Prop. 2]. The exceptional sums are nonnegative, vanish
+on primes, and are supported on xξ∗-rough integers. In ( 2.20), the possibility m5= 1would give
+n < x2a∗< x. Ifm5were composite, nwould have at least six prime factors of size at least xξ∗,
+which is impossible for large xsince 6ξ∗>1. Thus,m5is prime, and both exceptional sums have ﬁve
+prime factors. Their multiplicities are bounded by a ﬁxed number of assignments of those factors.
+The prime number theorem in the two ﬁxed regions of prime variables gives constants κ1,κ2≥0
+for their asymptotic masses. Set κtrue=κ1+κ2and use Stadlmann’s bound κtrue≤1/50000 [19,
+Prop. 2]. □
+We next record the distribution range for this same arithmetic function on densely divisible
+moduli. No change to its deﬁning regions or to its mass is made.
+Proposition 2.22. Putσm:= 1/2−a∗. Let 0<ω< 1/12and0<δ< 1/4 +ωsatisfy
+1
+4+ 7ω+ 2δ<c ∗,1
+18+28
+9ω+2
+9δ<19
+200,
+1
+2+ 2ω<b ∗.(2.24)
+Forr= 1,2, assume 68ω+ 14δ <1and the corresponding inequality in (2.11)withσ=σm. For
+r= 3, assume (2.14)withσ=σm. Then, for every ﬁxed L,ε> 0,
+Er(ϱ;ω,δ,ε )/lessmuchx(logx)−L. (2.25)
+In particular, the order-three estimate permits
+ω=253
+20000, 0<δ< 10−6,1
+2+ 2ω= 0.5253.
+For ordinary moduli one also has
+/summationdisplay
+q≤x1/2−εmax
+(a,q)=1|∆(ϱ;amodq)| /lessmuchL,εx(logx)−L. (2.26)
+12
+=== PAGE 13 ===
+Proof. Choose a ﬁxed 0<τ≤10−10suﬃciently small that the strict parameter inequalities remain
+valid withσm+τin place of σmand with the three upper bounds in ( 2.24) decreased by τ. The
+coeﬃcient construction in Lemma A.8and corrected Buchstab decomposition in Lemma A.9prove
+the version of [ 19, Lems. 18–22 and §4.8] needed here.2
+Both proofs are given in § A.6; the deﬁning regions of ϱare unchanged.
+Lemma 2.20 handles smooth factors of length at least xc∗−τand at most x1/2by the ﬁrst
+inequality of ( 2.24). Proposition 2.16 or Proposition 2.18, withσ=σm+τ, handles the bilinear
+range from xa∗−τtoxb∗+τ. The localized coeﬃcients are those in [ 19, Lems. 19–20], with the
+corrected sixth region.3They satisfy Siegel–Walﬁsz uniformly in their endpoints and auxiliary
+coprimality conditions by Lemma A.8, so the two factors may be interchanged.4Smooth factors
+longer than xb∗+τare covered by ( 2.18), since 1/2 + 2ω<b ∗.
+For the three smooth factors in the Type III terms, choose σ3strictly between the second lower
+bound in ( 2.24) and 19/200, and decrease τfurther so that τ <19/200−σ3. Their lengths lie be-
+tweenx0.19−τandx0.405+ τ, and their pairwise products are at least x0.595−τ. These satisfy ( 2.13), so
+Proposition 2.17 applies. These are the three distribution inputs required by the decomposition. Its
+logarithmically many subdivisions are absorbed by the arbitrary logarithmic saving. Substitution
+veriﬁes the order-three example; the tolerance is chosen after ω,δ.
+For ( 2.26), apply Proposition 2.13 tob1and b2withℓ= 5,η=ξ∗andγi=P. Both regions are
+deﬁned by monomial inequalities, and m5inb1is prime by Proposition 2.21. For the box estimate,
+writeFB=α∗β, grouping four prime factors into αand the ﬁfth into β. Proposition 2.10 makesαa
+coeﬃcient sequence and gives βthe Siegel–Walﬁsz property. Since their scales satisfy M/greatermuchx4ξ∗and
+N/greatermuchxξ∗, Proposition 2.15 supplies the uniform box estimate with a maximum over all primitive
+classes; together with Proposition 2.12(iii), it also handles the prime term. □
+For example, the two estimates have the common order-two parameters
+ω0=1
+500, δ 0=1
+50,1
+2+ 2ω0=63
+125= 0.504.
+The full-prime condition in ( 2.15) holds at order two, and the minorant conditions hold with σ=σm.
+Thus, both estimates hold on the same class of doubly xδ0-densely divisible squarefree moduli up to
+x0.504−ε, with the same coherent residue classes. Subtracting gives the corresponding estimate for
+b=Px−ϱ, whose mass is governed by the small constant κtruein (2.23). The common source used
+by the numerical trial has the parameters speciﬁed in § 4.2.3 ; its support containment is veriﬁed
+there.
+2In [19, proof of Lem. 22], use/summationtext
+αi= logxn. The complementary-cutoﬀ diﬀerence has p3p4∈[xa∗,2xa∗)and
+p1p2∈(xb∗,2xb∗), and is covered by the widened Type II estimate. On the ﬁxed-cutoﬀ region n1=n/(p2p3p4)>xc∗,
+the correct reversal is
+P(n1) =ψ(n1,xξ∗)−/summationdisplay
+n1=p5p6
+xξ∗≤p5≤p61,
+wherep5,p6are primes, possibly equal: 6ξ∗>1excludes longer rough composite cofactors. Without an indexed
+subset sum in [a∗,b∗], every pair sum is below a∗, givingαi< a∗−ξ∗< u∗. Lemma A.9justiﬁes the stated
+exceptional sum and repeated-prime diagonal, with errors summed over moduli. These corrections retain the same
+minorant.
+3In [19, Lem. 19(6)], replace ξ∗≤α4< α 3< α 2< a∗byξ∗≤α3< α 2< a∗, retaining α4≥α3and all other
+restrictions. No order between α2andα4is imposed. This is the region used in the proof of Lem. 22; the grouping
+I={3,4},J={2}in the proof of Lem. 19 remains valid. The coeﬃcient veriﬁcation is in Lemma A.8.
+4The nonsmooth factor in [ 2, Lem. 5], invoked by [ 19, Lem. 18(I)], must satisfy Siegel–Walﬁsz. The identity
+µ<z=µ∗ψ(·,z), whereµ<z(n):=µ(n)1P+(n)<zandz=xξ∗, does not by itself remove the ﬁrst-crossing and
+prime-order restrictions. Lemma A.8proves the property for the actual localized coeﬃcients, uniformly in endpoints
+and auxiliary coprimality, with one ﬁxed divisor exponent, and controls the associated boundary majorants. The
+corresponding hypothesis is explicit in [ 19, proof of Lem. 20, property (3)].
+13
+=== PAGE 14 ===
+To control the negative part after multiplication by sieve weights, its small unweighted mean
+alone is not enough. We use the following pointwise majorant, whose proof is elementary.
+Proposition 2.23. For squarefree n∈[x,2x), deﬁne
+N2(n):= #{p<q :pq|n, p,q ≥xξ∗, pq<xa∗}.
+For suﬃciently large x,
+0≤ϱ−(n;x) =b(n;x)≤12
+5N2(n). (2.27)
+There areO(x1−ξ∗)nonsquarefree integers in the support of bin[x,2x). Their contribution still
+has a ﬁxed power saving after multiplication by ﬁxed divisor-bounded weights.
+Proof. It suﬃces to consider b(n;x)>0. Rank its ﬁve distinct prime factors increasingly, and
+letEbe the set of rank pairs whose product is less than xa∗. This set is downward closed and
+|E|=N2(n). The ordering restrictions in ( 2.20)–(2.21) give
+b1≤21(4,5)∈E+1(3,5)∈E+1(3,4)∈E, b2≤2/summationdisplay
+(r,s)∈E(r−1).
+Forb1there are four possible omitted factors. For a marked pair (r,s)inb2there are two orien-
+tations,r−1choices of the smaller third factor, and a prescribed order for the remaining pair. If
+(4,5)∈E, then |E|= 10 and these bounds sum to 24. If (3,5)∈Ebut(4,5)/∈E, then |E|= 9
+and they sum to 16. If (3,4)∈Ebut neither preceding case occurs, then |E| ≥6and they sum
+to at most 11. Otherwise b1= 0 and the bound for b2is at most 2|E|. This proves ( 2.27). A
+nonsquarefree exception is divisible by p2for somep≥xξ∗; summing 2x/p2over such primes gives
+the asserted count. □
+3.Evaluation of the sieve weights
+We evaluate the divisor sums for general coeﬃcient weights, following the diagonal change of
+variables in [ 12, §5]. The distribution estimates enter through the moduli produced by pairs of
+coeﬃcients. We then express the main terms as integrals and prove the Selberg upper bound
+needed for the negative part of the minorant. The choice of supports and the ﬁnal combination are
+left to § 4.
+3.1.Coeﬃcients and diagonal variables. Fix an admissible tuple H={h1, ..., h k}, with
+k≥2. RetainW,b0,w0and/summationtext/prime
+nfrom the introduction. By our largeness convention, every prime
+divisor of a nonzero hi−hjdividesW. Fixρ∗,ζ > 0withρ∗ζ <1, and set
+R=xρ∗,Bx=φ(W)
+Wlogx, BR=ρ∗Bx,
+Cx=x
+WB−k
+x, Cx=x
+WB−k
+R=ρ−k
+∗Cx,
+Px=x
+φ(W) logxB−(k−1)
+R=ρ−(k−1)
+∗Cx=ρ∗Cx.(3.1)
+All parameters and support bounds in this section are ﬁxed as x→ ∞ .
+For1≤m≤k, letRmbe the set of tuples r= (r1, ..., r m)for whichr1···rmis squarefree,
+coprime to W, and has no prime factor above Rζ. Arrays indexed by Rmare extended by zero to
+all of Nm.
+Deﬁnition 3.1. A diagonal array y= (yr)is a real array, possibly depending on x, with a ﬁxed
+bound /bardbly/bardbl∞≤Mand
+yr= 0 ifr1···rm>RS
+14
+=== PAGE 15 ===
+for some ﬁxed S >0. Its coeﬃcient weights are
+λ(m)
+d(y) =B−m
+R
+m/productdisplay
+j=1µ(dj)dj
+/summationdisplay
+r∈Rm
+dj|rj(1≤j≤m)yr/producttextm
+j=1φ(rj). (3.2)
+For two arrays of the same dimension deﬁne
+/angbracketlefty,z/angbracketrightR,m=1
+Bm
+R/summationdisplay
+r∈Rmyrzr/producttextm
+j=1φ(rj),/bardbly/bardbl2
+R,m=/angbracketlefty,y/angbracketrightR,m. (3.3)
+Lemma 3.2. The weights in (3.2)satisfy
+yr=Bm
+R
+m/productdisplay
+j=1µ(rj)φ(rj)
+/summationdisplay
+d
+rj|dj(1≤j≤m)λ(m)
+d(y)/producttextm
+j=1dj. (3.4)
+Ifyis supported in a set Ssuch that r∈ S anddj|rjfor everyjimply d∈ S, thenλ(m)(y)is
+supported in the same set. Moreover,
+|λ(m)
+d(y)| /lessmuchm,ζ/bardbly/bardbl∞D
+φ(D), D =/productdisplay
+jdj,/bardbly/bardblR,m/lessmuchm,ζ/bardbly/bardbl∞.
+Proof. The inversion is the change of variables in [ 12, §5, (5.7)–(5.9)], with our factor B−m
+R. A
+nonzero coeﬃcient requires a tuple rwithyr/negationslash= 0anddj|rjfor everyj, which proves the support
+assertion. Write MR=/producttext
+p≤Rζ, p∤W(1 + 1/(p−1)). Puttingrj=djtjbounds the coeﬃcient by
+B−m
+R/bardbly/bardbl∞D
+φ(D)Mm
+R/lessmuch /bardbly/bardbl∞D
+φ(D).
+For the norm bound, drop the coprimality conditions between coordinates and use Mertens’
+formula
+1
+BR/productdisplay
+p≤Rζ
+p∤W/parenleftbigg
+1 +1
+p−1/parenrightbigg
+−→eγζ, (3.5)
+whereγis the Euler–Mascheroni constant. □
+Fix1≤i≤k. For ak-coordinate array yand a (k−1)-coordinate array z, deﬁne
+Ay(n) =/summationdisplay
+dj|n+hj(1≤j≤k)λ(k)
+d(y),
+Bz,i(n) =/summationdisplay
+dj|n+hj(j/negationslash=i)λ(k−1)
+dˆi(z).(3.6)
+Here the coordinates of zare indexed, in their usual order, by {1, ..., k } \ {i}. These sums are
+xo(1)pointwise for n/equivasymptoticx, by Lemma 3.2and the divisor bound. For rˆi∈ R k−1put
+(y(i))rˆi=1
+BR/summationdisplay
+a≥1yr1, ..., r i−1,a,ri+1, ..., r k
+φ(a). (3.7)
+The zero extension of yenforces squarefreeness, the prime cap, and (a,W/producttext
+j/negationslash=irj) = 1 in this sum.
+Lemma 3.3. The arrayy(i)has bounded supremum and the same total support bound as y. If
+A0i,ydenotes the sum Aywithdi= 1, then
+A0i,y=By(i),i. (3.8)
+Consequently, Ay(n) =By(i),i(n)whenevern+hihas no prime factor at most Rζ.
+15
+=== PAGE 16 ===
+Proof. Whendi= 1, the deﬁnition of the coeﬃcients gives
+λ(k)
+d(y) =λ(k−1)
+dˆi(y(i)).
+Indeed, the sum over the ith diagonal index is BRy(i), which cancels one factor B−1
+Rin the coeﬃcient
+normalization. The other divisibility conditions are unchanged. Summing over dj|n+hj,j/negationslash=i,
+proves ( 3.8). The supremum bound follows from ( 3.5). Ifn+hihas no prime factor at most Rζ,
+the prime-factor restriction on the coeﬃcients forces di= 1. □
+3.2.Counting and prime-weighted sums.
+Proposition 3.4 ([12, Lem. 5.1, (5.13)]) .Letybe a diagonal array on Rk, supported on r1···rk≤
+RS. If2ρ∗S <1, then
+/prime/summationdisplay
+nAy(n)2=Cx/parenleftbig/bardbly/bardbl2
+R,k+o(1)/parenrightbig. (3.9)
+The error is uniform for ﬁxed supremum and support bounds.
+The cited algebra applies before any smooth proﬁle is chosen. Use the coeﬃcient radius RSand
+the factorB−k
+Rin (3.2). The ordinary counting error is O(R2S(logx)O(1)); the strict inequality
+2ρ∗S <1makes it smaller than any ﬁxed logarithmic multiple of Cx.
+For two arrays y,zon the coordinates other than i, deﬁne Qi(y,z)to consist of the moduli
+q=W/productdisplay
+j/negationslash=i[dj,ej] =W[D,E ], D =/productdisplay
+j/negationslash=idj, E =/productdisplay
+j/negationslash=iej, (3.10)
+whereλ(k−1)
+d(y)λ(k−1)
+e (z)/negationslash= 0 and the [dj,ej]are pairwise coprime. Let Icontain the primes at
+mostRζand the primes dividing W.
+Proposition 3.5. Lety,zbe diagonal arrays on Rk−1. Letcxbe the restriction to [x,2x)of
+P=1Por ofϱ(·;x), with the same interval used in its discrepancy. Put µc= 1in the ﬁrst case and
+µc= 1−κtruein the second, where κtrueis the actual deﬁcit in Proposition 2.21. For the minorant
+assume also ρ∗ζ <ξ ∗. Suppose Qi(y,z)⊆[1,xθ]for ﬁxed 0<θ< 1and, for every ﬁxed L>0,
+sup
+(a,PI)=1/summationdisplay
+q∈Qi(y,z)|∆(cx;amodq)| /lessmuchLx(logx)−L. (3.11)
+Then/summationdisplay/prime
+ncx(n+hi)By,i(n)Bz,i(n) =Px/parenleftbigµc/angbracketlefty,z/angbracketrightR,k−1+o(1)/parenrightbig. (3.12)
+Ifuis a diagonal array on Rkand the same hypotheses hold with y=u(i), then
+/summationdisplay/prime
+ncx(n+hi)Au(n)Bz,i(n) =Px/parenleftbigµc/angbracketleftu(i),z/angbracketrightR,k−1+o(1)/parenrightbig. (3.13)
+The modulus family is independent of the global residue class. Each error is uniform for ﬁxed array
+bounds and uniform constants in (3.11). Fixed endpoint shifts do not change the result.
+Proof. We use the diagonal calculation of [ 12, Lems. 5.2–5.3] and the residue-class averaging of [ 16,
+§4.3], with ( 3.11) as the distribution input. We record the bilinear calculation for signed arrays
+depending on individual prime factors.
+The support of cxis coprime to every modulus in ( 3.10): for primes this follows from ρ∗ζ <1,
+and for the minorant from roughness and ρ∗ζ <ξ ∗. Thus, a compatible coeﬃcient pair contributes
+its common mean /summationtext
+mcx(m)
+φ(W)/producttext
+j/negationslash=iφ([dj,ej])
+and a discrepancy in a primitive residue class. Factor this common mean out before summing the
+signed coeﬃcients. The ﬁxed endpoint shifts are negligible by Proposition 2.12(ii).
+16
+=== PAGE 17 ===
+For a prime p|q/W , the detected variable n+hilies in one of the k−1distinct nonzero classes
+hi−hj(modp). LetAibe the primitive classes modulo PIsatisfying
+a≡b0+hi(modW),
+amodp∈ {hi−hj:j/negationslash=i} (p∈ I, p∤W).
+Every class from a compatible coeﬃcient pair extends to Ai. At each prime there are k−1coordinate
+choices and three membership patterns, left, right, or both roots. If t=ω(q/W ), Proposition 2.14
+replaces the maximum over compatible classes by an average over Ai, with factor (k−1)t. The total
+loss is at most [3(k−1)2]t, a ﬁxed divisor power. The family being residue-independent, Lemma 3.2,
+Proposition 2.11, and ( 3.11) give an arbitrary logarithmic saving for the summed discrepancy. It
+remains to evaluate the coeﬃcient sum
+M(y,z) =/summationdisplay∗
+d,eλ(k−1)
+d(y)λ(k−1)
+e (z)/producttext
+j/negationslash=iφ([dj,ej]),
+where the asterisk requires the [dj,ej]to be pairwise coprime. We claim that
+M(y,z) =B−2(k−1)
+R/summationdisplay
+r∈Rk−1yrzr/producttext
+j/negationslash=iφ(rj)+Ok,ζ
+B−(k−1)
+R/bardbly/bardbl∞/bardblz/bardbl∞/summationdisplay
+p>w 01
+p2
+. (3.14)
+This is the bilinear diagonal calculation underlying [ 12, (5.21)–(5.26) and Lem. 5.3]. The follow-
+ing prime-by-prime calculation also explains why it applies to arrays depending on the individual
+prime factors.
+Forp>w 0andj/negationslash=i, put
+Up,j(a) =1−p1a≡−hj(mod p)
+p−1.
+After factoring out B−2(k−1)
+R, inversion expresses M(y,z)as a sum of products of these functions,
+averaged over a/negationslash≡ −hi(modp)at each prime. Put ap=p−1. For this average Ep,i,
+Ep,iUp,j=−a−2
+p, Ep,iU2
+p,j=a−1
+p+a−2
+p−a−3
+p,
+Ep,i(Up,jUp,l) =−a−2
+p−2a−3
+p (j/negationslash=l).
+Each diagonal tuple contains a prime in at most one coordinate, so only these ﬁrst and second
+moments occur in the bilinear product. Replace these averages by ones in which the events indexed
+byjare independent and each has probability 1/p. Then the ﬁrst moments vanish and the second
+moments are 1j=l/(p−1), giving the displayed diagonal sum. The sum of the absolute errors at
+one prime is Ok(p−2). Expanding the diﬀerence of the two products therefore bounds the total
+error by
+/lessmuchkB−2(k−1)
+R/bardbly/bardbl∞/bardblz/bardbl∞/productdisplay
+w0<p≤Rζ/parenleftbigg
+1 +k−1
+p−1+Ok(p−2)/parenrightbigg/summationdisplay
+p>w 0p−2.
+Mertens’ formula bounds the product by Ok,ζ(Bk−1
+R), proving ( 3.14). Since/summationtext
+p>w 0p−2→0, the
+main term in the sieve sum is
+µcx
+φ(W) logxB−(k−1)
+R/parenleftbig/angbracketlefty,z/angbracketrightR,k−1+o(1)/parenrightbig,
+which proves ( 3.12). Finally, apply Lemma 3.3for (3.13). Only the mixed moduli are used for that
+assertion; no estimate for the outer self-square is required. □
+Condition ( 3.11) follows from the distribution results of § 2when the actual moduli lie in a ﬁxed
+ﬁnite union of the permitted residue-independent families, with ﬁxed positive retreats. Proposi-
+tion 2.12 supplies the prime-indicator and endpoint transfers. The modulus to check is W[D,E ],
+including the factor W.
+17
+=== PAGE 18 ===
+3.3.Smooth proﬁles and their quadratic forms. We now choose the diagonal arrays by sam-
+pling ﬁxed smooth functions. The calculation is analogous to [ 12, Lems. 6.1–6.3]: harmonic sums
+over the diagonal indices become integrals, and summing out one index becomes a partial integral.
+We also record the larger prime factors of each index, since the dense-divisibility conditions depend
+on those factors.
+Fix0< u 0< ζ. A divisor coordinate is X= (t0;u1, ..., u m), wheret0≥0and the fragments
+uj∈(u0,ζ]are unordered. Write |X|=t0+/summationtext
+juj. For a squarefree integer rwithP+(r)≤Rζ,
+deﬁne
+XR(r) =
+/summationdisplay
+p|r
+p≤Ru0logRp; (logRp)p|r, p>Ru0
+.
+Thus,t0records the total size of the smaller prime factors, the ujrecord the remaining prime
+factors individually, and |XR(r)|= logRr.
+LetρDbe the continuous Dickman function, determined by ρD(t) = 1 on[0,1]andtρ/prime
+D(t) =
+−ρD(t−1)fort>1. The measure used below is the sum, over all m≥0, of
+dν(X) =ρD(t0/u0) dt01
+m!m/productdisplay
+j=1duj
+uj. (3.15)
+The factor 1/m!accounts for the unordered fragments; the empty product is one. This is a ﬁnite
+measure, not a probability measure. It has mass eγζ, whereγis Euler’s constant, and its image
+underX/mapsto→ |X|is
+ρD(t/ζ) dt. (3.16)
+Reducingu0and then adding the newly recorded fragments back into the small total gives the
+original measure.
+Deﬁnition 3.6. A smooth proﬁle in dcoordinates is a real function F(X1, ..., X d)with the
+following properties. For every ﬁxed choice of fragment counts m1, ..., m d, it is the restriction of
+a function in C∞
+c(Rd+/summationtext
+jmj), symmetric in the fragments within each coordinate. Also, for some
+ﬁxedS, it vanishes when/summationtext
+j|Xj|>S; we call this a total support bound of S. Only count tuples
+with/summationtext
+jmj≤S/u 0can contribute. No compatibility between diﬀerent count tuples is required.
+Its diagonal array is
+y[F]r=F(XR(r1), ..., X R(rd)) ( r∈ R d),
+extended by zero elsewhere. When d=k, writey(i)[F] = (y[F])(i)for the discrete marginal in
+(3.7). In the corresponding dimensions, put AF=Ay[F],A0
+F,i=A0i,y[F]andBG,i=By[G],i. The
+parameters and proﬁles are ﬁxed as x→ ∞ .
+For a proﬁle Finkcoordinates, put
+I(F) =/integraldisplay
+F2dνk, (3.17)
+Fi(Xˆi) = (EiF)(Xˆi) =/integraldisplay
+F(X1, ..., X i−1,X,X i+1, ..., X k) dν(X), (3.18)
+J(i)(F) =/integraldisplay
+F2
+idνk−1. (3.19)
+We also write Vi=FiandJfull,i=J(i). Unsubscripted norms and inner products use the appropriate
+product of ν. IfFdepends only on the totals |Xj|andS≤ζ, then ( 3.16) is Lebesgue measure
+throughout its support. The forms are then the usual Maynard integrals, after rescaling the total
+support to one. The individual fragments allow the additional prime-factor restrictions needed
+here.
+18
+=== PAGE 19 ===
+Proposition 3.7. Fix1≤i≤k. LetFbe a smooth proﬁle in kcoordinates and G,H smooth
+proﬁles ink−1coordinates, using the same u0,ζ. Their sampled arrays have uniformly bounded
+supremum and retain their total support bounds. The function Fiis a smooth proﬁle, with the same
+total support bound as F, and
+/bardbly[F]/bardbl2
+R,k−→I(F),
+/angbracketlefty[G],y[H]/angbracketrightR,k−1−→ /angbracketleftG,H/angbracketright,
+/angbracketlefty(i)[F],y[G]/angbracketrightR,k−1−→ /angbracketleftFi,G/angbracketright.
+Moreover,
+/bardbly(i)[F]−y[Fi]/bardbl2
+R,k−1−→0. (3.20)
+Consequently, /bardbly(i)[F]−y[G]/bardbl2
+R,k−1→ /bardblFi−G/bardbl2
+2. IfFhas total support at most S, then
+J(i)(F)≤SI(F),k/summationdisplay
+i=1Jfull,i(F)≤kSI(F). (3.21)
+Proof. We ﬁrst establish the harmonic summation formula for these coordinates. Decompose each
+squarefree index uniquely as r=ap1···pm, whereP+(a)≤Ru0andRu0< p j≤Rζ. The
+normalized small-cofactor measure has Laplace transform
+1
+BR/productdisplay
+w0<p≤Ru0/parenleftBigg
+1 +e−slogRp
+p−1/parenrightBigg
+−→eγu0exp/parenleftBigg/integraldisplayu0
+0e−su−1
+udu/parenrightBigg
+(s≥0).
+Mertens’ formulas [ 13, (5), (13), (15)] supply the value at s= 0and the prime harmonic integral.
+After division by that value, each Euler factor is 1 + (e−slogRp−1)/p; expanding its logarithm
+has errorO(/summationtext
+p>w 0p−2) =o(1). The Dickman transform [ 1, (2.4)–(2.6)] identiﬁes the limit as the
+transform of ρD(t0/u0) dt0.
+Mertens’ formula also gives weak convergence of/summationtext
+Ru0<p≤Rζ(p−1)−1δlogRptodu/uon(u0,ζ],
+whereδtis unit mass at t. For each ﬁxed count, allowing repeated large primes costs Om(/summationtext
+p>Ru0(p−
+1)−2) =o(1)against bounded tests. Divide the ordered sums by m!to obtain ( 3.15). There
+are only ﬁnitely many contributing count tuples, and all endpoints have zero limiting measure,
+includingt0= 0. The arithmetic atom a= 1has mass 1/BR→0. Summing over minserts the
+factor exp(/integraltextζ
+u0e−sudu/u)into the small-cofactor transform. The resulting total-size transform is
+eγζexp(/integraltextζ
+0(e−su−1) du/u), which proves ( 3.16) and the stated mass. The same calculation between
+two cutoﬀs proves the assertion about adding fragments to the small total.
+Before imposing coprimality, the normalized harmonic measure is the product of the one-
+coordinate measures. Imposing coprimality between two coordinates changes a bounded normal-
+ized sum by O(/summationtext
+p>w 0p−2) =o(1): under the full squarefree harmonic weights, a prime poccurs
+in each coordinate with probability 1/p. A union bound over primes and pairs of coordinates
+therefore gives
+1
+Bd
+R/summationdisplay
+r∈RdF(XR(r1), ..., X R(rd))/producttext
+jφ(rj)−→/integraldisplay
+Fdνd. (3.22)
+Apply this formula to the products in the three pairings. Expanding ( 3.7) gives the mixed-
+marginal limit; opening its square gives two independently integrated coordinates and proves
+/bardbly(i)[F]/bardbl2
+R,k−1→ /bardblFi/bardbl2
+2. These two coordinates are each coprime to the retained tuple, but are
+not required to be coprime to one another.
+Bounded sampling follows from the ﬁnitely many smooth functions and |XR(r)|= logRr. The
+full harmonic mass also gives /bardbly(i)[F]/bardbl∞≤(eγζ+o(1))/bardblF/bardbl∞. For each choice of retained frag-
+ment counts, Fiis a ﬁnite sum of integrals over ﬁxed domains. Diﬀerentiating compactly supported
+19
+=== PAGE 20 ===
+smooth extensions under those integrals proves smoothness; its support lies in a ﬁnite union of com-
+pact projections. Taking G=Fiin the preceding limits and expanding the squared diﬀerence now
+proves ( 3.20). Finally, the permitted mass of the integrated coordinate is at most/integraltextS
+0ρD(t/ζ) dt≤S.
+Cauchy–Schwarz gives J(i)(F)≤SI(F). □
+Lemma 3.8 (Bounded proﬁles and exact faces) .The harmonic limits above also hold for ﬁxed
+bounded proﬁles of bounded total support whose discontinuity sets have limiting measure zero, sam-
+pled by the same rule. Their marginals are bounded and have null discontinuity sets; smoothness
+is asserted only for the smooth proﬁles of Deﬁnition 3.6. For ﬁxed ﬁnite real linear combinations
+zx,z/prime
+xof sampledd-coordinate arrays and exact discrete marginals, with corresponding combinations
+of proﬁles and marginals H,H/prime, one has
+/angbracketleftzx,z/prime
+x/angbracketrightR,d=/angbracketleftH,H/prime/angbracketright+o(1). (3.23)
+In particular, for such an outer proﬁle Fof total support S,2ρ∗S <1gives
+/prime/summationdisplay
+nAF(n)2=Cx(I(F) +o(1)).
+Under the actual-modulus hypotheses of Proposition 3.5, the mixed pairing with a canonical inner
+proﬁleHis
+/prime/summationdisplay
+ncx(n+hi)AF(n)BH,i(n) =Px/parenleftbigµc/angbracketleftFi,H/angbracketright+o(1)/parenrightbig.
+The coeﬃcient roots retain every hereditary support and prime cap.
+Proof. The weak harmonic convergence in ( 3.22) applies to bounded tests with null discontinuity
+sets. Fubini and dominated convergence give the same property for each marginal. In an exact-face
+square, expand the erased sums ﬁrst: the retained root is shared, whereas the two erased roots may
+share primes with each other. Only their intersections with retained roots, and intersections between
+retained coordinates, are forbidden. Removing these restrictions costs O(/summationtext
+p>w 0p−2) =o(1)in the
+normalized bounded form, as in the preceding proof. Bilinearity gives ( 3.23), without a pointwise
+limit for the discrete marginal. Lemmas 3.2–3.3preserve the support bounds; Propositions 3.4–3.5
+give the two arithmetic forms. □
+For the fragment calculations below, it is convenient to retain all fragments. Let Πζbe the
+Poisson process on (0,ζ]with intensity du/u, and putνζ=eγζL(Πζ). Its projection to the seed
+and the fragments above u0is precisely ( 3.15); proﬁles are identiﬁed with their pullbacks. The
+standard Poisson and Dickman identities [ 11, Thm. 3.9] [ 1, (2.4)–(2.6)] give, for 0<z≤ζ,
+νζ/vextendsingle/vextendsingle
+{maxX≤z}=νz. (3.24)
+Thus, an inward prime cap uses νz, with no extra z/ζfactor; totals above zretain their Dickman
+density. Conditionally on total t≤ζ, ranked fragments have law tPD(1) ; fort > ζ this law is
+conditioned on its largest fragment being at most ζ[1, Thm. 3.1, Cors. 3.1–3.2].
+For ordered distinct occurrences u∈Xr
+/negationslash=, letX\udelete the marked occurrences. The reduced
+Mecke identity [ 11, Thm. 4.5] states that, for every nonnegative measurable Ψ,
+/integraldisplay/summationdisplay
+u∈Xr
+/negationslash=Ψ(u,X\u) dνζ(X) =/integraldisplay
+(0,ζ]r/integraldisplay
+Ψ(u,X) dνζ(X)r/productdisplay
+j=1duj
+uj. (3.25)
+Unordered marking contributes 1/r!only for symmetric integrands; labelled roles retain the ordered
+form.
+20
+=== PAGE 21 ===
+3.4.A Selberg upper bound for the negative part. To count the rough cofactor left after
+a prime pair is marked, we use the classical one-dimensional Selberg coeﬃcients. Their diagonal
+variables are constant, so their energy is exact. Recall Bx=BR/ρ∗.
+Lemma 3.9. Fixz>0, putZ=xz, and deﬁne
+GZ:=/summationdisplay
+a≤Z
+(a,W)=1µ2(a)
+φ(a),λZ
+d:=µ(d)d
+GZ/summationdisplay
+a≤Z
+d|a
+(a,W)=1µ2(a)
+φ(a),LZ(t):=/summationdisplay
+d|tλZ
+d.
+These coeﬃcients vanish unless d≤Zis squarefree and coprime to W, and
+λZ
+1= 1,|λZ
+d| ≤d/φ(d), G Z= (z+o(1))Bx.
+Their ordinary diagonal variables are exactly
+za:=µ(a)φ(a)/summationdisplay
+a|dλZ
+d
+d=µ2(a)1a≤Z,(a,W)=1
+GZ.
+In particular,
+/summationdisplay
+d,eλZ
+dλZ
+e
+[d,e]=/summationdisplay
+az2
+a
+φ(a)=1
+GZ, sup
+a|za|=G−1
+Z/lessmuchzB−1
+x.
+Ifz<ξ , thenLZ(t) = 1 on everyxξ-rough positive integer.
+Here,zais the ordinary diagonal variable. In the normalization of ( 3.2), the corresponding raw
+array isBRza, after enlarging the ambient prime cap if necessary.
+Proof. The diagonal and energy identities are the classical Selberg identities [ 12, §5]. Writing a=db
+bounds the inner sum by GZ/φ(d), and on a rough integer only d= 1contributes.
+For the asymptotic, apply [ 12, Lem. 6.1] with γ(p) =1p∤Wand test function 1. Its singular
+product is φ(W)/W; its constants A1,A2may be ﬁxed, and its parameter LisO(logw0), since
+W=/producttext
+p≤w0pfor all suﬃciently large x. Thus, uniformly for our choice of W,
+GZ=φ(W)
+W/parenleftbiglogZ+O(logw0)/parenrightbig= (z+o(1))Bx.
+Changing the strict cutoﬀ in that lemma to a≤Zadds at most Z−1+o(1)and does not aﬀect the
+estimate. □
+Proposition 3.10. Fixrc,z,ξ > 0withξ >max{ρ∗ζ,z}. Letybe a bounded diagonal array on
+Rk−1, vanishing when/producttext
+j/negationslash=irj> xrc. Let Mbe any set of prime pairs p < q withp,q≥xξand
+pq≤xs, where
+s+ 2rc+ 2z<1.
+Then,
+/summationdisplay
+(p,q)∈M/summationdisplay
+x≤n<2x
+n≡b0(mod W)
+pq|n+hiLZ/parenleftbiggn+hi
+pq/parenrightbigg2
+By,i(n)2=Px
+1
+z/bardbly/bardbl2
+R,k−1/summationdisplay
+(p,q)∈M1
+pq+o(1)
+.
+The error is uniform for ﬁxed supremum and support bounds on y. No distribution estimate for
+primes or for the minorant is assumed.
+21
+=== PAGE 22 ===
+Proof. We use the ordinary CRT calculation in [ 16, Thm. 3.6(i) and §4.1], with the exact auxiliary
+diagonal from Lemma 3.9. We account for the marked pair and for primes shared by auxiliary and
+retained indices. The marked primes exceed both coeﬃcient prime caps. Hence, when pq|n+hi,
+one hasLZ((n+hi)/(pq)) =LZ(n+hi). Opening both squares gives x/(Wpq )times their complete
+CRT mean. The coeﬃcient bound in Lemma 3.9and Lemma 3.2bound the total counting error
+by
+xs+2rc+2z+o(1)=o(Px).
+For a prime p>w 0and a coordinate j, putUp,j= (1−p1p|n+hj)/(p−1). Here the average is over
+all residues modulo p, so
+EpUp,j= 0, EpU2
+p,j=1
+p−1.
+Putd=k−1. If the divisibility events in distinct coordinates were independent, the CRT mean
+ofL2
+ZB2
+y,iwould be exactly
+B−2d
+R/parenleftBigg/summationdisplay
+az2
+a
+φ(a)/parenrightBigg/parenleftBigg/summationdisplay
+ry2
+r/producttext
+j/negationslash=iφ(rj)/parenrightBigg
+=B−d
+R
+GZ/bardbly/bardbl2
+R,d.
+The local states are S∈ {∅,{i}} ∪ {{j},{i,j}:j/negationslash=i}; the state {i,j}retains a prime shared by
+the auxiliary index and coordinate j. Withap=p−1, their exact kernel is
+Kp(S,T) =1− |S∪T|+ap|S∩T|
+a|S|+|T|
+p, D p(S,T) =1S=Ta−|S|
+p
+in the actual and independent models, respectively. In particular, all mixed third and fourth
+moments are included. One has/summationtext
+S,T|Kp−Dp|=Ok(p−2)and/summationtext
+S,T|Dp|= (1 +d/ap)(1 + 1/ap).
+Since|za| ≤G−1
+Z, tensor expansion bounds the total diﬀerence by
+/lessmuchB−2d
+R/bardbly/bardbl2
+∞
+G2
+Z/productdisplay
+w0<p≤xmax{ρ∗ζ,z}/parenleftbigg
+1 +k
+p−1+Ok(p−2)/parenrightbigg/summationdisplay
+p>w 0p−2=o(B−d
+R/Bx).
+The harmonic sum/summationtext
+(p,q)∈M1/(pq)isOξ,s(1). Multiplication by x/W , together with GZ∼zBx
+and(x/W )B−d
+R/Bx=Px, proves the result. □
+For the application, ﬁx the global cap
+ξ0=19037
+100000<ξ∗=9519
+50000(3.26)
+and impose, on every outer and inner coeﬃcient root, even in the radial cores,
+P+
+/productdisplay
+jdj
+≤xξ0. (3.27)
+This hereditary restriction is preserved by the transform in Lemma 3.2. Since b(n;x)>0only
+onxξ∗-rough integers, the cap forces di= 1 on this support. The exact restriction identity ( 3.8)
+therefore gives
+AF(n) =A0
+F,i(n) whenever b(n+hi;x)>0. (3.28)
+The same identity holds when n+hiis prime. Roughness also gives, for every actual coeﬃcient
+modulusq,/summationdisplay
+x≤n<2x
+(n,q)=1ϱ(n;x) =/summationdisplay
+x≤n<2xϱ(n;x). (3.29)
+22
+=== PAGE 23 ===
+Proposition 3.11 (Exceptional square bound) .LetCibe a ﬁnite real linear combination, with coef-
+ﬁcients independent of x, of canonical (k−1)-coordinate sums and exact faces A0
+F,ifrom Lemma 3.8.
+The proﬁles are ﬁxed, bounded, and have limiting-null discontinuity sets. Suppose every summand
+satisﬁes (3.27)and has coeﬃcient-root physical radius at most
+rc=11
+40, K ex=17
+50. (3.30)
+LetHibe the corresponding combination of canonical proﬁles and marginals Fi=EiF. Then
+/prime/summationdisplay
+nb(n+hi;x)Ci(n)2≤ P x/parenleftbigKex/bardblHi/bardbl2
+2+o(1)/parenrightbig. (3.31)
+The norm is the full fragment norm. All proﬁles, bands and auxiliary cutoﬀs are ﬁxed before x→ ∞ ;
+their exact face arrays may depend on x.
+Proof. By inversion and Lemma 3.3,Ci=Byx,ifor a uniformly bounded raw array of the same
+radius and cap. In Proposition 3.10 use the ambient cap min{ζ,ξ0/ρ∗}: the array vanishes outside
+it, so its weights and diagonal norm are unchanged. ( 3.23) gives /bardblyx/bardbl2
+R,k−1→ /bardblHi/bardbl2
+2. The coeﬃcient
+and divisor bounds of Lemma 3.2make the nonsquarefree exceptions in Proposition 2.23, and ﬁxed
+endpoint shifts, negligible in this weighted sum.
+Divide [2ξ∗,a∗]into1024 equal bins with right endpoints sj, and set
+zj=1−2rc−sj
+2−1
+10000, Z j=xzj. (3.32)
+These satisfy 4499/200000 ≤zj<863/25000< ξ 0< ξ∗andsj+ 2rc+ 2zj= 1−1/5000. Thus,
+Proposition 3.10 applies in each bin. On the exceptional support, LZj= 1. The positive majorant
+of Proposition 2.23 gives
+b(n+hi;x)Ci(n)2≤12
+51024/summationdisplay
+j=1/summationdisplay
+p<q, p,q ≥xξ∗, pq<xa∗
+sj−1<logx(pq)≤sj1pq|n+hiLZj(n+hi)2Ci(n)2
+outside the negligible nonsquarefree set. The strict condition pq < xa∗is inherited from N2in
+Proposition 2.23, including in the last bin s1024=a∗. Only ordinary counting is used: the error in
+binjisxsj+2rc+2zj+o(1)=o(Px).
+The prime harmonic measure is du/uon ﬁxed positive logarithmic intervals [ 13, (5), (13)]. Inte-
+grating over ξ∗≤u<s/ 2gives the unordered pair measure
+dµ2(s) =1
+slog/parenleftbiggs−ξ∗
+ξ∗/parenrightbigg
+ds, 2ξ∗≤s≤a∗. (3.33)
+The last arithmetic bin has pq<xa∗; its limiting mass remains µ2((s1023,a∗]), because the endpoint
+has zeroµ2-mass. Proposition 3.10 gives the constant (12/5)/summationtext
+jz−1
+jµ2((sj−1,sj])in (3.31). This
+sum is a right-endpoint bound for
+24
+5/integraldisplaya∗
+2ξ∗log((s−ξ∗)/ξ∗)
+s(1−2rc−s−2/10000)ds. (3.34)
+We bound the ﬁnite bin sum itself. Put L21(t) =/summationtext21
+m=1(−1)m+1tm/m,hex= (a∗−2ξ∗)/1024,
+cex= 1−2rc−2/10000 andtj= (sj−2ξ∗)/ξ∗∈[0,1). The alternating-series bound gives
+log(1 +t)≤L21(t)on this interval. The density in ( 3.33) is increasing, so the ﬁnite bin sum is at
+most
+1
+10251024/summationdisplay
+j=1/ceilingleftBigg
+102524hexL21(tj)
+5sj(cex−sj)/ceilingrightBigg
+=840334010068226419110401
+2500000000000000000000000<17
+50. (3.35)
+The exact auxiliary energy in Lemma 3.9requires no smoothing loss. This proves ( 3.31). □
+23
+=== PAGE 24 ===
+4.Choice of weights and completion of the proof
+4.1.The trial function and its supports. Take the rational midpoint step function Fof [14,
+§§1.1–1.2], with its outer, base, enlarged and full cap domains HO,H0,H1,Hf. The parameters
+are
+k:= 40, S:=2742997
+2624989, ρ ∗:=2624989
+10000000,
+T0:=2499106033
+2624989000, T 1:=2510000
+2624989, ρ :=262499
+1000000.(4.1)
+Thus 0<T 0<T 1<S, and the physical radii satisfy
+rO:=ρ∗S=2742997
+107<11
+40, ρ ∗T0=2499106033
+1010, ρ ∗T1=251
+1000<11
+40. (4.2)
+Write
+h:=S/98304 (4.3)
+for the trial mesh. The cap domains use the full upper endpoint of each cell, with fragment caps
+rounded down to this mesh; their exact cells are listed in [ 14, §1.1]. Their caps decrease with the
+radial cell index, so the domains are divisor-closed; also H0⊆H1⊆Hf. All face forms use the
+same outer trial F.
+Useν=νζfrom § 3, withζ:=ξ0/ρ∗. The companion uses the smaller ambient cap ξ0/ρ, but
+every retained fragment cap is at most 68225h < ξ 0/ρ. By ( 3.24), the restricted measures, and
+hence the trial forms, coincide without an additional normalization factor.
+4.2.Veriﬁcation of the supports.
+4.2.1. Divisor-closed source conditions. FixR > 1,ξ≥0andY:=Rξ. For a positive squarefree
+integerD, put
+sD:= logRD, u p:= logRp, M ξ(D):= max/parenleftbig{up:p|D, p>Y } ∪ { 0}/parenrightbig. (4.4)
+For a nondecreasing function ϕ: [0,∞)→[0,∞)withϕ(0) = 0 , deﬁne
+Hϕ,ξ(D):= max
+p|D
+p>Y
+/summationdisplay
+q|D
+q>puq+up+ϕ(up)
+, (4.5)
+with empty maximum zero. For m≥1, writeHm,ξwhenϕ(u) = (m−1)u. Deleting primes
+decreasessD,Mξ(D)andHϕ,ξ(D), so their upper-bound conditions are divisor-closed. The same
+notation applies to fragment conﬁgurations, using the inclusive tail at each witness as in [ 14, §1.3].
+Lemma 4.1 (Lower-order transfer) .LetR> 1,ξ≥0andY:=Rξ. LetD,E be positive squarefree
+integers with sD≤SandsE≤T. Puta:=B−T,b:=B−S, andQ:= [D,E ]>RB.
+(i)IfB+ξ≥2Tand
+sD≤a orH2,ξ(D)≤a+ξ,
+thenQ∈ D(1)(Y).
+(ii)IfB+ξ≥max(2S−T,2T−S)and
+sD≤aorH2,ξ(D)≤a+ξ, s E≤borH2,ξ(E)≤b+ξ,
+thenQ∈ D(2)(Y).
+Proof. SinceQ > RB, the size bounds force sD> a andsE> b. ForY≥2, exponentiating the
+remaining conditions gives Proposition 2.4withX=RB,D0=RSandE0=RT.
+If1≤Y < 2andD> 1, its least prime factor gives H2,ξ(D)>sD+ξ >a +ξ, a contradiction.
+ThusD= 1. In (ii), the same argument gives E= 1. In (i), writing X=RBandE0=RT, we
+24
+=== PAGE 25 ===
+haveQ=E >X andE2≤E2
+0≤XY <EY , soE <Y < 2and againE= 1. HenceQ= 1, which
+belongs to every dense class. □
+For order three, put
+a:=B−T, b :=B−S, A :=a+ηD, C :=b+ηE, A +C≤B+ξ. (4.6)
+Proposition 4.2 (Transfer to order three) .LetD,E be positive squarefree integers with sD≤S
+andsE≤T. Suppose the nonnegative nondecreasing functions ϕD,ϕEsatisfy
+ϕD(u) +ϕE(u) = 3u (u≥0). (4.7)
+Deﬁne
+Oϕ:={sD≤a} ∪ {HϕD,ξ(D)≤A, ϕ E(Mξ(D))≤C}, (4.8)
+Iϕ:={sE≤b} ∪ {HϕE,ξ(E)≤C, ϕ D(Mξ(E))≤A}. (4.9)
+IfD∈Oϕ,E∈Iϕ, andQ:= [D,E ]>RB, thenQ∈ D(3)(Y).
+Proof. The size bounds again force sD>aandsE>b. Setf(t):=RϕD(logRt)andg(t):=RϕE(logRt).
+The remaining support conditions exponentiate to ( 2.1), with caps RA,RCwhose product is at most
+RBY. Proposition 2.3therefore applies for Y≥2. If1≤Y < 2andQ> 1, its primewise argument
+at the least prime p|Qgivesp3<Y, a contradiction. Thus Q= 1in that case. □
+For every order-three row, use
+ϕD(u):= min/braceleftbigg3
+2u,L/bracerightbigg
+, ϕ E(u):= 3u−ϕD(u), L :=23
+40C. (4.10)
+These functions are nondecreasing and satisfy ( 4.7). Both opposite-root conditions in ( 4.8)–(4.9)
+remain part of the support.
+4.2.2. The retained distribution estimates. Return toR=xρ∗. Use the old prime and new minorant
+source ladders, and their retained rows, from [ 14, §1.3], with
+τ:= 10−10, σ m,τ:=1
+2−a∗+τ. (4.11)
+The strict distribution inequalities, lower-order transfer guards, order-three budgets and coverage
+of all mixed moduli are veriﬁed in [ 14, Lem. 1.1].
+LetO⊆HOimpose every retained outer predicate of both ladders. Write LoldandLnewfor
+their raw inner predicates, including the radial bounds and global fragment cap, before imposing
+the cell restrictions. The actual inner domains are
+L1:=H1∩Lnew,
+L0:=H0∩Lold∩Lnew.(4.12)
+ThusL0⊆L1; the raw old and new predicates need not be nested. All source predicates are
+divisor-closed, so coeﬃcient roots inherit their restrictions.
+4.2.3. Distribution estimates for inner squares. Sinceρ∗T1= 251/1000>1/4, pairs of inner roots
+require a source beyond Bombieri–Vinogradov for both the prime indicator and the minorant. For
+roots of normalized radius at most T, putc:=B−Tand deﬁne
+S(B,T,ξ ):={s≤c} ∪ {H2,ξ≤c+ξ}. (4.13)
+Lemma 4.3 (Transfer for two inner roots) .Supposeξ≥0,c+ξ≥0, and the squarefree roots
+D,E∈S(B,T,ξ )have normalized radii at most T. IfQ:= [D,E ]>RB, thenQ∈ D(2)(Rξ).
+Proof. Apply Lemma 4.1(ii) with both radius bounds equal to T. Its guard is B+ξ≥T, equivalently
+c+ξ≥0. □
+25
+=== PAGE 26 ===
+Put
+BBV:=1
+2ρ, c s:=BBV−T1, (4.14)
+and take
+σ:=100001
+106, ω s:=31
+10000, δ s:=21319
+800000, ξ s:=δs/ρ. (4.15)
+At(ωs,δs), the prime estimate with this σand the minorant estimate with σm,τhave strict margins,
+and1
+2+ 2ωs−2ρT1=55122259
+13124945000>0, c s+ξs>0; (4.16)
+see [14, Lem. 1.1].
+The retained new order-two row 12imposes {s≤bn,12} ∪ {H2,ξn,12≤bn,12+ξn,12}. The same
+lemma gives
+cs−bn,12>4
+100, ξ s−ξn,12>5
+100. (4.17)
+Increasing the activation removes witnesses, so this row implies S(BBV,T1,ξs). Lemma 4.3supplies
+the common order-two source above RBBV< x1/2, while Bombieri–Vinogradov applies below it.
+Sinceξs>0and the roots are coprime to W, Lemma 2.2permits adjoining W; the strict base and
+level bounds absorb W=xo(1).
+4.2.4. Finite-band approximation. Fix the source rows and their positive activations, and put
+ξmin:= min ℓξℓ>0. Keep the radial shell boundaries ﬁxed, and partition [ξmin,ζ]into ﬁnitely
+many bands, retaining every activation, cap and breakpoint of ( 4.10) that lies in this interval. In
+each coordinate, combine the primes in a band into one block. At tier ℓ, primes at most Rξℓform
+a smooth seed. For each root, order the remaining block logarithms z1≤ ··· ≤zMand put
+Hband
+ϕ,ξℓ:= max
+1≤j≤M
+/summationdisplay
+v>jzv+zj+ϕ(zj)
+, (4.18)
+again with empty maximum zero. The seed contributes to the radial total and smaller-prime
+preﬁxes, but is not a witness.
+Lemma 4.4 (Fixed-band sources) .Replace the prime witnesses and activated maxima in each
+source predicate by the band blocks. The resulting supports are divisor-closed and imply the same
+dense-divisibility conclusion on that row’s modulus band.
+Proof. Deleting a prime decreases the ordered block logarithms, hence their tail sums, maxima and
+radial total. For an activated prime p, letjbe the ﬁrst block containing a prime at least p. Then
+zj≥up, and the seed and preceding blocks contain only primes below p. A block-tail bound with
+thresholdAtherefore gives
+ϕ(up)≤ϕ(zj)≤A−sD+ logRD<p.
+The block maximum also bounds every activated prime. Thus the primewise tail and opposite-root
+conditions hold, and the transfer results above apply. □
+For largex, all prime divisors of Wlie below every activation. The roots are coprime to W, so
+Lemma 2.2preserves their source class after adjoining W. Moreover,
+ρ∗=2624989
+107<ρ=262499
+106. (4.19)
+For a row with upper boundary B+
+ℓ= (1/2 + 2ωℓ)/ρ, this gives
+Rξℓ=x(ρ∗/ρ)δℓ<xδℓ, W [D,E ]≤xρ∗B+
+ℓ+o(1)<x1/2+2ωℓ−εℓ
+for some ﬁxed εℓ>0. The source estimates therefore apply at each ﬁxed band resolution, with the
+ﬁxed Fourier subdivisions, divisor weights and presieving modulus.
+26
+=== PAGE 27 ===
+As the band mesh tends to zero, the probability that two fragments share a coordinate and band
+is at most
+k
+2/summationdisplay
+v/parenleftBigg/integraldisplayβv
+αvdu
+u/parenrightBigg2
+−→0. (4.20)
+This follows from the second Poisson factorial moment and the ﬁnite intensity above ξmin. Multi-
+plication by (eγζ)k/bardblF/bardbl2
+∞bounds the corresponding weighted νk-mass. Away from collisions, each
+active block is one fragment, so all source predicates agree. The smooth seed retains its full mass.
+Each band law has an atom at zero and an absolutely continuous positive part. On every zero-
+band stratum, radial, activation and nonconstant support boundaries are null. For ϕD, a cap at
+or above its plateau is vacuous; a smaller cap has one boundary. One-sided smooth extensions
+retain the zero atoms, and removing thin neighborhoods of the remaining boundaries gives inward
+approximations within the hereditary supports.
+Dominated convergence and ( 3.21) give convergence of the ordinary and face forms, including
+changing inner restrictions. The positive Palm and factorial integrals also converge: on bounded
+radial supports, the mark counts above each ﬁxed cutoﬀ and the ﬁxed Chernoﬀ factors are bounded.
+Fix the strict source, cap and counting margins, then choose ﬁnitely many bands and inward smooth
+approximations ﬁne enough to preserve them. Let x→ ∞ with these choices ﬁxed. No uniformity
+in the number of bands or in the smoothing derivatives is required.
+4.3.A hybrid Selberg inequality. Retainmtrue= 1−κtruefrom Proposition 2.21, and put
+κdef:=1
+50000, m 0:= 1−κdef=49999
+50000. (4.21)
+Thusmtrue≥m0andκtrue≤κdef. Fix a detected coordinate i. For real outer, inner and correction
+sumsA=AF,B0andC, respectively, write D=A−B0,P=P(n+hi),ϱ=ϱ(n+hi;x)and
+b=b(n+hi;x).
+Forη>0, expansion using A=B0+Dandϱ=P−bgives
+PA2−/bracketleftbigP(2AB0−B2
+0) + 2ϱDC−PC2−ηbD2−η−1bC2/bracketrightbig
+=P(D−C)2+b
+η(ηD+C)2≥0.(4.22)
+sinceP,b≥0.
+LetFbe a real source-supported outer diagonal proﬁle and let L0⊆L1be complete hereditary
+inner domains, including their physical cell restrictions. With Vi=EiF, put
+I:=/bardblF/bardbl2
+2, J0,i:=/bardbl1L0Vi/bardbl2
+2, (4.23)
+J+,i:=/bardbl1L1\L0Vi/bardbl2
+2, E0,i:=/bardblVi/bardbl2
+2−J0,i. (4.24)
+Theorem 4.5 (Signed minorant criterion) .AssumeI >0and the following conditions:
+(1)every actual outer– L0modulus has a prime-distribution estimate for P=1P, as in Propo-
+sition 2.12(iii);
+(2)every actual outer– L1modulus has the ﬁxed-minorant estimate;
+(3)every actual self-pair modulus from two L1roots has both estimates;
+(4)the global cap (3.27), ordinary outer-square counting and Proposition 3.11 apply.
+If
+ρ∗
+Ik/summationdisplay
+i=1/bracketleftbigg
+J0,i+/parenleftBig
+m0/radicalBig
+J+,i−/radicalBig
+κdefKexE0,i/parenrightBig2
++/bracketrightbigg
+>1, (4.25)
+then DHL[k,2]holds.
+27
+=== PAGE 28 ===
+Proof. By Lemma 3.8and § 4.2.4 , chooseB0with proﬁle H0=1L0ViandCwith proﬁle Hsupported
+onL1\L0, up to arbitrarily small ﬁxed approximation errors. The coeﬃcient roots of Cremain in
+the hereditary domain L1, although its proﬁle support need not be hereditary. Bands and inward
+smoothing are ﬁxed before x→ ∞ . On the support of b, the cap gives D=A0
+F,i−B0by (3.28);
+its limiting squared norm is E0,iby (3.23). For the correction square, use
+bC2=PC2−ϱC2. (4.26)
+Both distribution estimates apply to the same actual self-pair moduli. Using ( 3.1), normalize by
+Mx(U):= (ρ−(k−1)
+∗Cx)−1/summationdisplay
+x≤n<2x
+n≡b0(mod W)U(n).
+The source hypotheses, ( 4.26) and Proposition 3.11 give
+Mx/parenleftbigP(2AB0−B2
+0)/parenrightbig=J0,i+o(1),
+Mx(2ϱDC ) = 2mtrue/angbracketleftVi−H0,H/angbracketright+o(1),
+Mx(PC2) =/bardblH/bardbl2
+2+o(1),
+Mx(bC2) =κtrue/bardblH/bardbl2
+2+o(1),
+Mx(bD2)≤KexE0,i+o(1).
+For ﬁxedη>0, optimizing scalar multiples of 1L1\L0Vigives the increment
+m2
+trueJ+,iη
+η+κtrue−ηKexE0,i.
+Its supremum over η>0, including zero correction, is
+/parenleftBig
+mtrue/radicalBig
+J+,i−/radicalBig
+κtrueKexE0,i/parenrightBig2
++≥/parenleftBig
+m0/radicalBig
+J+,i−/radicalBig
+κdefKexE0,i/parenrightBig2
++.
+The ordinary square has main term ρ−k
+∗CxI. Thus ( 4.25) and ( 4.22) make the prime-detection
+sum ( 1.5) positive after the ﬁxed approximation errors are absorbed. Since A(n)2≥0, this proves
+DHL[k,2]for each ﬁxed admissible k-tuple; compare [ 16, Lem. 3.4]. □
+Foru,v≥0and0<λ<m 0,
+(m0√u−√v)2
++≥(m2
+0−m0λ)u+ (1−m0/λ)v. (4.27)
+Indeed, ifv≥m2
+0u, the right side is nonpositive; otherwise, the diﬀerence is m0(√
+λu−/radicalbig
+v/λ)2≥0.
+Set
+λ:=1
+125, a h:=m2
+0−m0λ,
+bh:= (1−m0/λ)κdefKex, d 0:= 1−ah−bh.(4.28)
+These satisfy d0>0,0<ah+bh<1and−1/1000<bh<0. Applying ( 4.27) withu=J+,iand
+v=κdefKexE0,igives the lower form
+J0,i+ahJ+,i+bhE0,i=d0J0,i+ahJ1,i+bhJfull,i, (4.29)
+whereJ1,i=J0,i+J+,iandJfull,i=/bardblVi/bardbl2
+2uses the unrestricted face norm.
+28
+=== PAGE 29 ===
+4.4.Restoring the arithmetic supports. Use the caps of § 4.1and the actual inner domains
+(4.12). Work in L2(HO,νk), extending functions by zero. Let Eiintegrate coordinate i, letPO
+multiply by 1O, and putHa,i=1HaandRa,i=1Laon facei, fora= 0,1. Deﬁne
+A:=/summationdisplay
+iE∗
+i(d0H0,i+ahH1,i+bh)Ei, (4.30)
+B:=/summationdisplay
+iE∗
+i(d0R0,i+ahR1,i+bh)Ei, (4.31)
+D:=A − B =/summationdisplay
+iE∗
+i/parenleftbigd0(H0,i−R0,i) +ah(H1,i−R1,i)/parenrightbigEi≥0. (4.32)
+The negative full-face term cancels from D.
+For a retained total s/hatwidei=/summationtext
+j/negationslash=itj<S, putwi=S−s/hatwidei+ (k−1)ti. Since the total-size density is
+ρD(ti/ζ)≤1,
+/integraldisplay
+HO(X/hatwidei)dν(Xi)
+wi≤/integraldisplayS−s/hatwidei
+0dti
+S−s/hatwidei+ (k−1)ti=logk
+k−1.
+The boundary s/hatwidei=Shas zero ﬁbre measure. Weighted Cauchy–Schwarz and/summationtext
+iwi=kSgive/summationtext
+iE∗
+iEi≤Sklog(k)/(k−1). Fork= 40 , the inequality/summationtext11
+j=0(369/100)j/j!>40gives log 40<
+369/100. Together with S= 2742997/2624989<130/123, this proves
+/summationdisplay
+iE∗
+iEi≤CopId, C op:= 4. (4.33)
+The multipliers of Bare1,ah+bh,bh, so
+−|bh|CopId≤ B ≤CopId. (4.34)
+ForFin this space and Vi=EiF, put
+e= (1−PO)F, I H=/bardblF/bardbl2
+2, α =/bardble/bardbl2
+2, J λ,H=/angbracketleftF,AF/angbracketright.
+All forms here use unscaled products of ν. The inner deletion is
+β:=/angbracketleftF,DF/angbracketright=d0/summationdisplay
+i/integraldisplay
+H0\L0|Vi|2dνk−1+ah/summationdisplay
+i/integraldisplay
+H1\L1|Vi|2dνk−1. (4.35)
+Deﬁne its two uncombined losses by
+βold:=/summationdisplay
+i/integraldisplay
+H0\Lold|Vi|2dνk−1,βnew:=/summationdisplay
+i/integraldisplay
+H1\L1|Vi|2dνk−1. (4.36)
+The intersection ( 4.12) andH0⊆H1imply
+β≤d0βold+ (d0+ah)βnew=d0βold+ (1−bh)βnew. (4.37)
+On facei, write Y=X/hatwideiand put
+hi(Y):=
+
+1, Y∈H0,
+max{|ah+bh|,|bh|},Y∈H1\H0,
+|bh|, Y/∈H1.(4.38)
+Thenmi=d0R0,i+ahR1,i+bhsatisﬁes |mi| ≤hi. For a measurable cover HO\O⊆/uniontext
+jBjand
+positive rational cj, deﬁne the nonnegative outer bound
+EO:=/summationdisplay
+i,j/integraldisplay
+Bjhi(Y)/parenleftBigg
+cj|F(X)|2+|Vi(Y)|2
+cj/parenrightBigg
+dνk(X). (4.39)
+29
+=== PAGE 30 ===
+Proposition 4.6 (Restoration of the quadratic form) .One has
+ρ∗/angbracketleftPOF,B(POF)/angbracketright − /bardblPOF/bardbl2
+2≥ρ∗(Jλ,H−β− EO)−IH+ (1−ρ∗|bh|Cop)α. (4.40)
+IfFis real and POFwith the stated inner domains satisﬁes the realization and source hypotheses
+of Theorem 4.5, then DHL[k,2]holds if
+ρ∗/parenleftBig
+J−
+λ,H− E+
+O−d0β+
+old−(1−bh)β+
+new/parenrightBig
+>I+
+H, (4.41)
+where superscripts denote outward lower and upper bounds.
+Proof. SincePOF=F−e,B=A − D and/bardblPOF/bardbl2
+2=IH−α,
+ρ∗/angbracketleftPOF,B(POF)/angbracketright − /bardblPOF/bardbl2
+2=ρ∗Jλ,H−IH−ρ∗β
+−2ρ∗Re/angbracketlefte,BF/angbracketright+ρ∗/angbracketlefte,Be/angbracketright+α.
+Usinge=1HO\OF,|mi| ≤hi, and the cover, Young’s inequality gives
+2 Re/angbracketlefte,BF/angbracketright ≤/summationdisplay
+i,j/integraldisplay
+Bj2hi(Y)|F(X)Vi(Y)|dνk≤ EO.
+Also ( 4.34) gives /angbracketlefte,Be/angbracketright ≥ −|bh|Copα, proving ( 4.40). Sinceρ∗<1/3and|bh|<1/1000, the
+coeﬃcient of αis positive. Thus ( 4.37) and ( 4.41) make the restored quadratic form positive, so
+POF/negationslash= 0. Apply ( 4.29) toEi(POF)and then Theorem 4.5. □
+4.5.Support-error bounds. The ﬁnite source comparisons and the positive cover of their failures
+are given in [ 14, §§1.3, 1.5]. We record the consequence needed for support restoration.
+Proposition 4.7 (A positive cover of the support failures) .For the trial and source domains of
+§4.1, all support failures are covered by the six classes
+O2, O 5/2, Iold
+2, Iold
+5/2, Inew
+2, Inew
+5/2. (4.42)
+The outer classes have dimension 40, the inner classes dimension 39, and the subscript is the
+eﬀective obstruction order. Both inner pairs are imposed on the base domain. Their indicators
+admit a positive cover with 61low-witness intervals, 30rank-two intervals and six higher-rank
+terms, including coincident marked coordinates and every absorbed lower-order condition.
+Proof. The rational comparisons in [ 14, Lem. 1.1] verify the actual-LCM bands, inward cell caps,
+activations, and largest-fragment and opposite-root bounds. The lower-order transfer conditions
+giveH2,ξfailures. For order three, the allocation ( 4.10) satisﬁes max(A,C)≤7L/3; after excluding
+largest witnesses, its failures are H5/2,ξfailures by [ 14, Lem. 1.4]. This gives the six classes.
+For each class, split nonlargest witnesses at the point pGof [14, §1.5]. Low witnesses are covered
+by its positive Palm–Chernoﬀ bound. Above pG, exactly two fragments give the rank-two terms,
+with the two marks in either the same or distinct coordinates; at least three give the third-factorial
+term. The half-open partitions in [ 14, §1.5.1] cover the full ranges, and [ 14, Lem. 1.6] shows that
+radial clipping loses no low witness, including those absorbed from lower-order rows. Every term
+is nonnegative, so overlap does not aﬀect the upper bound. □
+4.6.Integral estimates and completion of the proof. We use the unscaled forms IH,Jλ,H,
+βold,βnewandEOfrom § 4.4. For each outer component choose the rational Young parameter
+speciﬁed in [ 14, §2.4]. Let L+be the sum of the resulting outer bounds and the inner bounds
+weighted by d0and1−bh, respectively.
+30
+=== PAGE 31 ===
+Lemma 4.8 (Numerical bounds) .For the stated trial there are bounds 0< I−
+H≤IH≤I+
+Hand
+J−
+λ,H≤Jλ,Hsuch that
+d0βold+ (1−bh)βnew+EO≤L+, (4.43)
+ρ∗J−
+λ,H
+I+
+H>500103
+500000,L+
+I−
+H≤696075110
+1012<697
+106. (4.44)
+Proof. These are the bounds of [ 14, Lem. 2.5]. Its signed cap form is /angbracketleftF,AF/angbracketright, with face multipliers
+1,ah+bhandbh, and its component bounds use the cover in Proposition 4.7. The companion
+divides every form and loss by the same positive factor. Multiplying its bounds by that factor gives
+the stated enclosures and leaves both quotients unchanged. □
+Proof of Theorem 1.1.Fix an arbitrary admissible tuple H={h1, ..., h 40}of distinct integers.
+SinceI+
+H≥I−
+H>0, Lemma 4.8gives
+ρ∗(J−
+λ,H−L+)−I+
+H
+I+
+H>1
+50000. (4.45)
+Corollary 2.19 and Proposition 2.22, with the source comparisons in [ 14, Lem. 1.1], supply the
+mixed estimates. The argument of § 4.2.3 supplies both self-square estimates. These are uniform
+in a primitive global residue. Presieving and Proposition 2.14 give the required residue classes
+for this ﬁxed tuple. The ﬁnite-band approximation of § 4.2.4 , with the bands and smoothing ﬁxed
+beforex→ ∞ , veriﬁes the realization hypotheses of Proposition 4.6. By ( 4.43), the strict inequality
+above makes its restored quadratic form positive. Hence the prime-detection sum is positive for
+all suﬃciently large x, andA(n)2≥0gives inﬁnitely many translates of Hcontaining two primes.
+SinceHwas arbitrary, DHL[40,2]follows. □
+Appendix A.Analytic estimates
+Write e(t):= exp(2πit)and eq(t):= e(t/q). All modular fractions retain their original unit
+domains.
+A.1.Divisor estimates.
+Lemma A.1 (Divisor bounds in progressions) .Fix0<ϑ< 1and the coeﬃcient bounds. Uniformly
+for coeﬃcient sequences vat polynomially bounded scales N, one has/summationtext
+n|v(n)|2/lessmuchN(logx)Cand/summationtext
+n≡a(q)|v(n)| /lessmuchεxε(N/q+ 1). If a divisor-bounded sequence uis supported in [cx,Cx ]and in a
+ﬁxed number of intervals of total length O(x(logx)−D), with coeﬃcient bounds independent of D,
+then for ﬁxed J,A and suﬃciently large D,
+/summationdisplay
+q≤xϑτ(q)Jmax
+(a,q)=1|∆(u;amodq)| /lessmuchAx(logx)−A. (A.1)
+Proof. The ﬁrst two bounds follow from [ 15, Lem. 1.3(i),(ii)] and the progression count O(N/q+ 1).
+Enlarge each boundary interval to length /equivasymptoticH=x(logx)−D. Shiu’s theorem [ 18, Thm. 1, (2.1)–
+(2.2)], applied to a ﬁxed divisor-power majorant, bounds its progression mass and reduced-residue
+mean byHφ(q)−1(logx)C. Its length conditions hold for q≤xϑwith 0< α < min{1/2,1−ϑ};
+q= 1has zero discrepancy. Now use/summationtext
+q≤xϑτ(q)J/φ(q)/lessmuch(logx)C/prime. □
+Lemma A.2 (Zero frequency) .Suppose (b1b2r,q0) = 1 , and let 0≤C(n,ℓ)≤1be bounded by the
+indicator of (b1−b2)n+b1ℓr≡0 (modq0). ForL≥1and any ﬁnitely supported β,
+/summationdisplay
+|ℓ|/lessmuchL/summationdisplay
+n|β(n)β(n+ℓr)|C(n,ℓ)/lessmuch(1 +L/q 0)/summationdisplay
+n|β(n)|2. (A.2)
+31
+=== PAGE 32 ===
+In the dispersion reduction of [15, §5.3] and[19, Appendix] , the noncoprime zero-frequency contri-
+bution satisﬁes
+|Σ/prime
+0| /lessmuchMN(logx)C/parenleftbigg
+1 +N
+RD 0/parenrightbigg
+, D 0:= exp((logx)1/3). (A.3)
+Its ratio to MN2/RisO((logx)C(R/N +D−1
+0)).
+Proof. Apply 2|uv| ≤ |u|2+|v|2. For ﬁxed n, the congruence selects one class of ℓmodq0; after
+m=n+ℓr, the second square uses (b1−b2)m+b2ℓr≡0 (modq0), also one class. This proves ( A.2),
+including any further unit restrictions. Insert L/equivasymptoticN/R in [15, §5.3, preceding (5.26)]; harmonic
+summation over q0≥D0and/summationtext
+n|β(n)|2/lessmuchN(logx)Cgive ( A.3). In our applications R/N/lessmuchx−2ε,
+giving every ﬁxed logarithmic saving relative to MN2/R. □
+A.2.Reciprocal phases. PutEm(c;t):=1(t,m)=1exp(2πict/m)form≥2, withE1(c;t):= 1; the
+inverse is evaluated only on units.
+Lemma A.3 (Reciprocal phases) .Letd1,d2be squarefree and d|q, whereq:= [d1,d2]is singly
+y-densely divisible. Suppose N≥d,N≤qC0, andψNis smooth at scale N, with ﬁxed-order deriva-
+tives bounded by powers of log(2qN). Putδi:=di/(d1,d2),δ/prime
+i:=δi/(d,δi)andB:=/producttext2
+i=1(ci,δ/prime
+i)/δ/prime
+i.
+The sum
+S:=/summationdisplay
+n≡a(d)ψN(n)Ed1(c1;n+ℓ1)Ed2(c2;n+ℓ2)
+satisﬁes, uniformly in the integer coeﬃcients, shifts, and classes,
+|S| /lessmuchεqε/parenleftbigg/radicalBig
+N/d(qy)1/6+ (N/d)B/parenrightbigg
+, (A.4)
+|S| /lessmuchεqε/parenleftbigg/radicalBig
+q/d+ (N/d)B/parenrightbigg
+. (A.5)
+Proof. PutX=N/d≥1,m=q/d, and substitute n=a+dv. Primes dividing dcontribute
+constants of modulus at most one. CRT leaves Fp(v) =1v/∈Zpep(fp(v))forp|m, wherefpis proper
+with at most two simple poles and |Zp| ≤2;Zpretains all original denominator zeros.
+Apply [ 15, Prop. 4.12 and proof of Cor. 4.16] as follows. At nonzero-phase primes the masks
+change complete Fourier and translated-diﬀerence sums by at most two and four terms, respectively.
+Outside bounded primes, a translated diﬀerence vanishes exactly when p|h, for the shift diﬀerence
+h. At zero-phase primes, in the sum and its correlations, expand
+1v/∈Z= 1−/summationdisplay
+z∈Z1v≡z(p).
+Each expansion has at most 5ω(q)terms and never increases the scale. For m=rs, the surviving
+phase factors satisfy r0|r,s0|s. Ons0, the oﬀ-diagonal bound remains qε(√s0+Y/radicalbig
+(s0,h)/√s0)
+at scaleY; the published gcd summation applies unchanged. Scales below one contribute O(qε).
+Each active exclusive prime has normalized mean −1/p; other local means have modulus at most
+one. The aﬃne substitutions preserve the remaining means, giving Bin each term. Completion
+and diﬀerencing yield
+|S| /lessmuchεqε(√m+XB),
+|S| /lessmuchεqε/parenleftbig√
+X(√r+s1/4) +XB/parenrightbig(m=rs).
+By [ 15, Lem. 2.10(i)], misyd-densely divisible. Choose ras in Cor. 4.16; then√r,s1/4≤
+(myd)1/6= (qy)1/6. All divisor and smoothness losses use the ambient q, sinceN≤qC0. □
+32
+=== PAGE 33 ===
+In the applications of [ 15, §5],d=q0/lessmuchQandN/Q/greatermuchx1/2−2σ−2ω−δ−O(ε). The exponent margins
+for Type I of orders 1,2, Type II, and the minorant’s smooth-factor estimate are, respectively,
+1/10 + (98/5)ω+ 5δ,26ω+ 7δ,7/17−O(ε), and 12ω+ 3δ; Type II uses 1/2−6ω−δ−O(ε). Thus
+N/q 0grows polynomially, verifying N≥d. Alsor|qwithr/greatermuchNx−δ−O(ε); the same inequalities
+giveN≤q3.
+A.3.Hyper-Kloosterman correlations. We use the normalization
+Kl3(c;m):=1
+m/summationdisplay
+x1,x2,x3mod m
+x1x2x3=cmod mem(x1+x2+x3),
+also for composite m. For a prime p, putK2(c;p):=/summationtext
+u∈F×
+pep(u+c/u); this second sum is
+unnormalized.
+Lemma A.4 (Prime-ﬁeld inputs) .For every prime pand nonzero c,A,B ∈Fp,
+|Kl3(c;p)| ≤3,/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+t∈Fp\{0,−1}K2(A/t;p)K2(B/(t+ 1);p)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle≤8p√p. (A.6)
+Proof. The ﬁrst estimate is [ 10, Thm. 4.1.1(1)–(2), p. 49]: rank three and weight two give the
+unnormalized bound 3p. For the second, substitute u/mapsto→u−1in [5, Prop. 2]. Its normalized sum is
+K2(c;p)/√p, so its bound 8√pgives the displayed bound. The two excluded poles are retained in
+both statements. □
+Forab/negationslash= 0, the unit-masked correlation Cp(a,b;h):=/summationtext
+v∈F×
+pKl3(av;p)Kl3(bv;p)ep(hv)satisﬁes
+|Cp(a,b;h)| ≤/braceleftBigg
+p, a =b, h = 0,
+9√p,otherwise.
+Indeed, orthogonality gives Cp(a,b; 0) =p1a=b−1−p−1−p−2. Forh/negationslash= 0, [5, Props. 2, 6]
+give|Cp(a,b;h)| ≤8√p+p−2with this normalization; the unit mask removes |Kl3(0;p)|2=p−2.
+Orthogonality and [ 10, Thm. 4.1.1, rank two] also bound the unit-masked Fourier coeﬃcients of
+v/mapsto→Kl3(av;p)by3√p.
+Lemma A.5 (Hyper-Kloosterman completion) .Lets,r1,r2be squarefree, (s,r1r2) = 1 , and letai
+be a unit modulo ris. Writed:= (r1,r2)andui:=ri/d. Putq:=s[r1,r2]and
+G:= (a2u3
+1−a1u3
+2,d)1/2(a2r3
+1−a1r3
+2,s)1/2.
+Forq,H≤xC0, a smooth weight wHat any positive scale H, and every ε>0,
+/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+(h,q)=1wH(h) Kl 3(a1h;r1s)Kl3(a2h;r2s)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/lessmuchxε(1 +H/q)√qG. (A.7)
+The ﬁxed-order derivatives of wHare bounded by powers of logx, as in the Type III completion of
+[15, §§6–7] .
+Proof. Puts/prime=sd; thens/prime,u1,u2are pairwise coprime, ris=uis/prime, andq=s/primeu1u2. Apply [ 15,
+Lem. 6.25] to (s/prime,u1,u2). Since (u1,u2) = 1 , every unit-masked complete Fourier coeﬃcient is
+/lessmuchηq1/2+η(a2u3
+1−a1u3
+2,s/prime)1/2=q1/2+ηG.
+The equality uses a2r3
+1−a1r3
+2=d3(a2u3
+1−a1u3
+2)and(s,d) = 1 . ForH≥1, [15, Lem. 4.9(i)] gives
+completion cost O((1 +H/q)(logx)C); absorb its logarithmic loss and qηinxε. ForH < 1, use the
+O(1)support size and [ 15, Rem. 6.10]. The case q= 1is immediate. □
+33
+=== PAGE 34 ===
+Lemma A.6 (A gcd average) .LetD≥1andc1,c2≥0be integers with (c1,D) = 1 , and letI,J
+be integer intervals of cardinalities LI,LJ, respectively. Then
+/summationdisplay
+m∈I/summationdisplay
+n∈J(D,c 1m−c2n)1/2≤τ(D)(LILJ+LJ√
+D).
+Proof. For eachnandk|D,(c1,k) = 1 gives at most LI/k+ 1solutions of c1m≡c2n(modk).
+Thus/summationdisplay
+m,n(D,c 1m−c2n)1/2≤LJ/summationdisplay
+k|D√
+k(LI/k+ 1)≤τ(D)(LILJ+LJ√
+D).
+□
+In [15, §7.3, pp. 90–93], ai=Amifor the unit A:=ab1b2b3b3. Keeping the original unit
+conditions, put
+∆:=m1u3
+1−m2u3
+2, T :=m1r3
+1−m2r3
+2=d3∆.
+Modulodands, cancelling Am1m2givesG= (d,∆)1/2(s,T)1/2. The integer diagonal remains
+T= 0; oﬀ it,Tis independent of sand/summationtext
+1≤s≤K(T,s)1/2≤Kτ(|T|). Since (ui,d) = 1 , Lemma A.6
+gives/summationdisplay
+m1,m2/equivasymptoticM(d,m 1u3
+1−m2u3
+2)1/2/lessmuchxo(1)(M2+M√
+d).
+After cancellation, omit the unit and oﬀ-diagonal restrictions in this nonnegative average and apply
+the divisor sums of [ 15, Lem. 7.4]. The replacement s/prime=sdoccurs only in the correlation estimate,
+leaving the scale Sand dense divisor unchanged. Together with Proposition 2.15 and Lemmas A.2
+andA.3, these estimates give the application of [ 15, §7].
+A.4.Triply densely divisible moduli.
+A.4.1. Double completion.
+Lemma A.7 (Double completion) .Letq|m≤xC, withmsquarefree, and let A,B,L be residue
+classes modulo m. LetwD,wNbe smooth weights at positive scales D,N ≤xC, with arbitrary
+translations and ﬁxed support and logarithmic derivative bounds. Put F1=n+BdandF2=
+n+ (B+L)d. Uniformly in d∗,n∗modq,
+/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+d≡d∗(q)
+n≡n∗(q)wD(d)wN(n)1(F1F2,m)=1em/parenleftbiggAL
+F1F2/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/lessmuchC,εxε(AL,m )
+q/parenleftbigg
+m+N+D+ND
+m/parenrightbigg
+. (A.8)
+There is no lower bound on D/q,N/q or density assumption on m.
+Proof. Forq= 1, allow aﬃne constants in both factors. At p∤AL, their invertible aﬃne change
+gives the complete sum/summationtext
+u,v∈F×
+pep(AL/(uv)+au+bv). Lemma A.4bounds it by 3pforab/negationslash= 0; direct
+summation gives at most potherwise. For p|ALusep2with the original unit mask. CRT therefore
+bounds every Fourier coeﬃcient by 3ν(m)m(AL,m ), whereν(m)counts its prime factors. Poisson
+summation and two integrations by parts give normalized Fourier ℓ1costO((1 +X/m )(logx)O(1))
+at every scale X > 0. Applying this in both variables proves the aﬃne estimate.
+Forq|m, substitute d=qd/prime+d∗,n=qn/prime+n∗and writem=qm1. Theq-part is constant
+of modulus at most one, and zero if an original denominator is a nonunit. The m1-part has the
+same slopes, aﬃne constants, and numerator AL/q3modm1. Apply the aﬃne estimate at scales
+D/q,N/q , using (AL/q3,m1) = (AL,m 1)≤(AL,m );m1= 1is immediate. This is the congruence
+reduction of [ 19, Lem. 13]. □
+34
+=== PAGE 35 ===
+A.4.2. The dispersion argument.
+Proof of Proposition 2.18.Writeω0,δ0for the given parameters and enlarge them to ω,δpreserving
+(2.14). Choose 0<ε< 10−100δsuﬃciently small. First suppose N=xγwith
+max/braceleftbigg1
+4+ 12ω+ 4δ+ 100ε,32ω+ 10δ+ 400ε/bracerightbigg
+≤γ≤1
+2−4ω−2δ−50ε. (A.9)
+Use the sums Σ1, ..., Σ6and parameter partitions of [ 19, Lems. 3–9], writing R0for itsRand
+ﬁxing coeﬃcient supports and derivative bounds before taking suprema. The sums Σ3, ..., Σ6
+retain the mask 1((n+Bd)(/tildewiden+Bd),m)=1, with the integer substitution for /tildewideninΣ6.
+Strong order-three density with orientation (1,1)factors each modulus as qr, with both factors
+singlyxδ0-dense and x−δ0−3εN≤r≤x−3εN. By [ 15, §5.3, Cor. 5.3] and Lemma A.1, discard
+moduli whose part on primes at most D0= exp((logx)1/3)exceeds exp((logx)2/3), and move the
+remaining such primes from qtor. The transferred factor is c=xo(1); [15, Lem. 2.10(i)] makes
+both factors singly cxδ0-dense, hence xδ-dense. Dyadic subdivision gives
+x−δ−4εN/lessmuchR0/lessmuchx−2εN, x1/2−ε/lessmuchR0Q/lessmuchx1/2+2ω+ε. (A.10)
+Proposition 2.15 covers smaller moduli. After the dispersion square, put q(i)=q0qiwithq0=
+(q(1),q(2)). Everyq0>1exceedsD0; Lemma A.2applies onn,n+ℓr/equivasymptoticNsinceR0/N/lessmuchx−2ε.
+PutH=xεR0Q2/(q0M);H < 1contributes nothing. The quotient q1is singlyq0xδ-dense.
+Choosing its divisor at target X=x−5εQ/H , or taking the whole quotient when X > q 1, gives
+q1=u1v1and
+q−1
+0x−δ−5εQ/H/lessmuchU/lessmuchx−5εQ/H,
+q−1
+0x5εH/lessmuchV/lessmuchxδ+5εH, UV/equivasymptoticQ/q 0.(A.11)
+Here ( A.9) givesX/greatermuchq0x2ω+2δ+43ε>1. These are the choices in [ 15, §8.1, (8.3)–(8.5)], with the
+factorq−1
+0retained in the lower bound for V.
+SetD=N/(x50εH2). The preceding bounds give 1/lessmuchD/lessmuchxδr, so single density supplies d|r
+withx−δD≤d≤D. Writer=dr1,d/equivasymptotic∆and∆1=x−5ε∆as in [ 19, Lem. 4], and put
+g= (v1,v2), g 0= (q0,ℓ),K= max {1,x5εH/V}, m =r1q0u1[v1,v2]q2.
+The original products rq0u1viq2are squarefree, so mis squarefree and (d,m) = 1 . Moreover,
+K /lessmuchq0, H /lessmuchH0/q0, H 0=x4ω+δ+7ε,
+R0Q2H
+q0gK∆1/lessmuchm/lessmuchxδR0Q2H
+q0g∆1.(A.12)
+The moment estimate [ 19, Appendix, Lem. 27] uses UV/equivasymptoticQ/q 0. Its progression remainder is
+O(N/q 0)becauseq0/lessmuchH0and ( A.9) giveN/q 0/greatermuchxηfor some ﬁxed η>0. In [ 19, Lems. 4–8], the
+removed diagonal contributes /lessmuchxo(1)∆HVN /lessmuchq0x−5ε+o(1)∆NV2. Before diﬀerencing, separate
+the four Fourier weights by Taylor expansion on d=d0+O(∆1). Indeed, for |h| /lessmuchH,
+∆j
+1|∂j
+dφ⋆
+H(h)| /lessmuchj(logx)Oj(1)x−4jε,
+and likewise for φ⋆⋆
+H. A ﬁxed ﬁnite family of common smooth cutoﬀs therefore suﬃces, with arbitrar-
+ily small power error. The ﬁbers of (h1,h2)/mapsto→h1(v2/g)−h2(v1/g)have sizeO(1+gH/V ) =O(gK).
+Thus Lemma 6’s squared bound loses K2. Fors2|m, ﬁxingh1mod (s2,v1/g)bounds the number of
+image values divisible by s2, and likewise their diﬀerences, by O(H2/s2+H). Lemma 7’s remainder
+is stillO(x−47εN2). Lemma 6’s m-supported divisor partition uses O(logx)prime divisors and has
+costxo(1)for our polynomial-size m.
+Accordingly, the target in [ 19, Lem. 8] becomes
+Σ5/lessmuchεs2q2
+0g2
+0N2
+K2x27εR, s 2= (w2,m),R= max {xδ+10εH3,H4}. (A.13)
+35
+=== PAGE 36 ===
+Use its transformed parameters w1,w2,z1,λ,/tildewideλ,Λ,A,B and substitutions dold=z1d,y=w1λ,
+/tildewidey=w1/tildewideλ, retaining the unit conditions. The error is admissible since K2/lessmuchq2
+0g2
+0.
+Puts=z1/w1,Jk=sk+ (λ−/tildewideλ)B. Lemma 9’s linearization is the integer identity /tildewiden=
+(/tildewideλn+skd)/λ; it forcesw2|k. After cancellation of w2, bothλ/w 2,/tildewideλ/w 2are units modulo m. The
+class indicators cost at most q0g0choices, so Σ5/lessmuchεq0g0/summationtext
+ksup Σ 6(k)up to negligible Taylor errors,
+where
+|k| /lessmuchw1|Λ|N
+x5ε∆1, w 2|k, (Jk,m)≤T, T = max {s−1
+2,H−1}xδ+100 εH2N
+g∆1.
+All divisions by λandw2here are integer divisions.
+Writeλ∗= (λ,/tildewideλ),u=λ/λ∗,v=/tildewideλ/λ∗; negatingλ,/tildewideλ,k,A together makes u,v > 0. The sum
+vanishes unless λ∗|sk. Otherwise choose 0≤F <u andG∈ZwithuG−vF=sk/λ∗, and put
+n=un1+Fd,/tildewiden=vn1+Gd. The numbers u,v,λ∗/w2are units modulo m, and
+G+B
+v−F+B
+u=Jk
+λ∗uv≡Jk/w2
+(λ∗/w2)uv(modm).
+The homogeneous Möbius–CRT partition of [ 19, Lems. 10–11], at scale
+∆∗= min {N/(|Λ|x5ε),∆1},
+gives the phase in Lemma A.7, with numerator w2A1L1. HereA1,A2are units and L1=
+A2(Jk/w2) modm. Only the weights are translated. The partition costs x2ε(∆1/∆∗)q3, where
+q3|m/q 0, and imposes modulus q0q3. Equation ( A.8) cancelsq3at every rescaled length. Since
+(w2A1L1,m) = (Jk,m), it gives
+Σ6(k)/lessmuchεx3ε(Jk,m)
+q0∆1
+∆∗/parenleftbigg
+m+N+ ∆∗+N∆∗
+m/parenrightbigg
+. (A.14)
+The gcd sum [ 19, Lems. 15–16] gives/summationtext
+k(Jk,m)/lessmuchεxεs2T: apply it after k=w2j, using (sw2,m) =
+s2andT/greatermuchx100εw1|Λ|N/(x5εw2∆1). IfT < 1, the admissible set is empty.
+PutW=H2R. SinceT≤xδ+100 εH2N/(g∆1)and∆∗≤N, comparison with ( A.13 ) reduces to
+bounding
+(A,B,C) =K2xδ+131 εW
+gq2
+0g0/parenleftbigg1
+m,1
+∆∗,m
+N∆∗/parenrightbigg
+. (A.15)
+The ranges in Lemma 8 and ( A.12 ) give
+∆1,∆∗/greatermuchN
+xδ+55εH2,x54εMH4
+gNK/lessmuchm/lessmuchxδ−εMH2
+g∆1;
+the last upper bound uses R0Q2=x−εq0MH. In particular, K3H/q2
+0/lessmuchH0andK3H2/q2
+0/lessmuchH2
+0.
+Substitution, with MN/equivasymptoticx, now gives
+A /lessmuchx−1+2γ+8ω+3δ+100 ε,B /lessmuchx32ω+10δ−γ+400 ε,C /lessmuchx1+48 ω+16δ−4γ+400 ε.
+Equation ( A.9) bounds all three ratios, proving ( A.13 ).
+For largerγ, use density nesting and [ 15, Thm. 2.8(ii),(iv)], with Proposition 2.15 and Lem-
+mas A.2 and A.3. This range begins at 1/4 + 14ω+ 4δand overlaps the preceding one by
+(1−72ω−24δ)/4>0. Also 1−68ω−14δ > 0; the distances from 1/2−σto the two lower
+endpoints are (1−48ω−16δ−4σ)/4and(1−64ω−20δ−2σ)/2. Small enough εpreserves all
+these margins. The residue classes restrict the ﬁxed primitive class modulo PI; all estimates are
+uniform in that class, I, and the coeﬃcient bounds. □
+36
+=== PAGE 37 ===
+A.5.A smooth factor on singly densely divisible moduli.
+Proof of the ﬁrst assertion of Lemma 2.20.Putγ:= 1/2−σ >1/4 + 7ω+ 2δ. Apply [ 2, Lem. 3,
+(2.3)–(2.4)], using Proposition 2.15 belowx1/2−εand Lemmas A.1andA.2for the exceptional and
+zero-frequency terms. The parameters satisfy
+x−δ−O(ε)N/lessmuchR/lessmuchx−2εN, RQ /lessmuchx1/2+2ω+O(ε), H :=xεRQ2
+q0M.
+There is nothing to sum if H < 1. The complete moduli rq0q1,rq0q2are singly dense, hence so
+is their least common multiple [ 15, Lem. 2.10(ii)]. Retaining the source’s CRT unit restrictions,
+apply Lemma A.3with (d,d1,d2) = (q0,rq0q1,q2). Indeed,N/q 0/greatermuchN/Q/greatermuchx2γ−1/2−2ω−δ−O(ε)>
+x12ω+3δ−O(ε)andN≤[rq0q1,q2]3. Footnote 1supplies the corrected mean-factor average. For
+g0:= (q0,ℓ)the resulting estimate is
+Υℓ,r
+g0Q2N/q2
+0/lessmuchxε+o(1)/braceleftBigg
+q−5/3
+0(RQ2)7/6xδ/6
+MN1/2+1
+M/bracerightBigg
+.
+SubstituteRQ2/lessmuchx1+4ω+δ+O(ε)/NandMN/equivasymptoticx. The two terms in braces are respectively
+O/parenleftbigx(1+28 ω+8δ−4γ+O(ε))/6/parenrightbigandO(x−1/2+o(1)).
+Choosingεsuﬃciently small gives the required x−εsaving. □
+A.6.Localized coeﬃcients and the minorant. Write (a,b,c,ξ ):= (a∗,b∗,c∗,ξ∗)andζ:=
+1−c−a. Use the six sifted functions and named-prime partitions of [ 19, Lem. 19], with footnote 3.
+Choose 0<τ≤10−10after the strict margins in Proposition 2.22.
+Lemma A.8 (Minorant coeﬃcients) .The localized coeﬃcients below, their positive box majorants,
+the elementary Heath–Brown factors and their bounded convolutions satisfy (2.4)forxε≤N≤xC,
+with one divisor exponent uniformly in endpoints, auxiliary coprimality and cutoﬀs. The smooth
+Type I and Type II inputs of Proposition 2.22 therefore give the asserted averaged distribution for
+the six sifted functions.
+Proof. PutH:=xa,z:=xξandM0:=x1−c. For each partition, let r,sbe its named-prime
+products, with r<H ,s<M 0/H. Insertψ(v,z) =/summationtext
+d|v, P+(d)<zµ(d). Terms with rsd≤M0have
+a free factor of length at least xcand give Type I after smooth subdivision. Otherwise order the
+primes ofd0decreasingly and stop at the ﬁrst product hwithrh≥H. Writingd0=hdgives
+uniquely
+rh/P−(h)<H≤rh<Hz =xb, P+(d)<P−(h), rshd>M 0.
+The variables rhandsdkinn=rshdk have lengths between xa+o(1)andxb+o(1). This is [ 3, proof
+of Lem. 14, (4.5)–(4.8)], retaining the named-prime restrictions until separation.
+For Siegel–Walﬁsz, put L:= logx,Y:=e√
+L. Fixj≥2so all coeﬃcients and positive majorants
+are bounded by τj(n)LC0, independently of the saving and mesh. Rankin’s bound and divisor
+moments give
+/summationdisplay
+n/lessmuchN
+P+(n)≤Yτj(n)/lessmuchNe−logN/logYLOj(1),/summationdisplay
+n/lessmuchN
+p2|nfor some p>Yτj(n)/lessmuchNY−1LOj(1).
+Both areo(NL−A)for everyA. Write each remaining integer as n=pm, wherep>Y is its unique
+largest prime. Fix its containing variable and all other factors. The permitted pform a bounded
+union of intervals: removing it from heither ﬁxes P−(h)or leavesh=pandr<H ≤rp. A Möbius
+factor becomes −µof the cofactor; |µ|is unchanged. Handle integer, logarithmic and smooth
+weights by partial summation. For q≤LB, prime Siegel–Walﬁsz at endpoints T≥Yapplies since
+q≤(logT)2B; summing the remaining weights uses/summationtext
+m/lessmuchNτ(m)O(1)/m/lessmuchLO(1). For auxiliary
+37
+=== PAGE 38 ===
+coprimality r0, keep (m,qr 0) = 1 and remove primes dividing r0, at cost /lessmuchτ(r0)NY−1LO(1). For
+q>LB, ﬁx a largest factor in a j-fold divisor representation:
+/summationdisplay
+n/equivasymptoticN
+n≡a0(q)τj(n)/lessmuchj(N/q)Lj−1+N1−1/jLj−2.
+The other factors have product O(N1−1/j), including the isolated point in this bound. Use q/φ(q)≤
+τ(q)and choose BafterAto obtain ( 2.4) with a ﬁxed divisor exponent. Convolution closure [ 15,
+proof of Lem. 3.4(iii)] uses /bardblα/bardbl1/lessmuchMLO(1)and preserves that exponent.
+Separate the restrictions into ratio- 1 +hboxes, with h=L−Dand singleton prime bins up
+toZ=LE. Interior boxes give the Type I/II coeﬃcients above; the positive full-box boundary
+majorantgsatisﬁes, for C1independent of D,E ,
+/bardblg/bardbl1/lessmuchxLC1(hL+Z−1+M−1/j
+0).
+For a prime comparison this follows by summing xLO(1)/summationtext
+Z<ℓ/lessmuch√xℓ−1/summationtext
+p=ℓ(1+O(h))p−1over inte-
+gers; forrshd =M0(1 +O(h))use the preceding divisor count on a short interval. Named-prime
+boundaries obey the same bounds; r<H ,s<M 0/Hremain exact. For |e| ≤g,
+|∆(e;a0modq)| ≤ |∆(g;a0modq)|+ 2/bardblg/bardbl1/φ(q).
+ChooseD,E after the desired saving, then the Type I/II saving to absorb LOD,E(1)boxes, using/summationtext
+q≤Qφ(q)−1/lessmuchlog(2Q). Lemma A.1handles total-product endpoints for Q≤x0.53. Every
+partition is independent of the modulus and primitive class. □
+Lemma A.9 (Buchstab decomposition of the minorant) .Suppose the Type I, II and III inputs
+used in Proposition 2.22 hold on a squarefree modulus family of level Q≤x0.53. ThenP−b1−b2
+has the same averaged distribution estimate.
+Proof. PutL= logxand writef≡gmodulo the asserted discrepancy bound. For the three
+unsigned sums T3,T5,T4in the last display of [ 19, §4.4], Buchstab’s identity and the preceding
+lemma give P≡T3+T5−T4. Central indexed subset sums and initial semiprimes up to√
+3x
+use the widened Type II range; prime squares cost O((√x+Q)LO(1))by counting square roots in
+primitive classes modulo squarefree q.
+ForT3, apply [ 19, proof of Lem. 20, properties (1)–(4)] with τin place of 10−10and localization
+errorsO(τ/1000) . The preceding lemma supplies Siegel–Walﬁsz; the two grouping gaps are 1−c−
+3a/2 = 0.054225 andζ−(1−4ξ) = 0.01815 . Type I/II/III therefore give T3≡0. Replacing a prime
+at scaleNbyΛ/logcosts at most xo(1)(xN−1/2+QN1/2), a power saving for xζ−o(1)≤N≤xa+o(1).
+The split in [ 19, proof of Lem. 21] gives T5≡b1; the ﬁfth-factor check is the argument in
+Proposition 2.21. ForT4, apply [ 19, proof of Lem. 22] with the complementary cutoﬀ and equal-
+prime reversal in footnote 2. This gives T4≡ −U3, whereU3is its ﬁve-prime sum Υ3. Interchanging
+p2,p4makes b2a subfamily of U3; the footnote’s pair/triple criterion gives a central indexed subset
+sum on the complement, except where p3=p4. Fork= 4,5, letDk,Pcount conﬁgurations with a
+repeated prime p/equivasymptoticP. Counting the cofactor, including the isolated point, gives
+/summationdisplay
+q≤Q|∆(Dk,P;aqmodq)| /lessmuchxo(1)(x/P +QP), xξ/lessmuchP/lessmuchx(1−(k−2)ξ)/2,
+This is a ﬁxed power saving for Q≤x0.53, soU3≡b2and the result follows. □
+References
+[1]R. Arratia, A. D. Barbour and S. Tavaré, The Poisson–Dirichlet distribution and the scale-invariant Poisson
+process , Combin. Probab. Comput. 8(1999), 407–416.
+[2]R. C. Baker and A. J. Irving, Bounded intervals containing many primes , Math. Z. 286 (2017), 821–841. Num-
+bered references use arXiv:1505.01815v1.
+38
+=== PAGE 39 ===
+[3]R. C. Baker and A. Weingartner, A ternary Diophantine inequality over primes , Acta Arith. 162(2014), 159–196.
+[4]E. Bombieri, J. B. Friedlander and H. Iwaniec, Primes in arithmetic progressions to large moduli , Acta Math.
+156 (1986), 203–251.
+[5]E. Fouvry, E. Kowalski and P. Michel, The Friedlander–Iwaniec character sum , note, 2013. https://people.math.
+ethz.ch/~kowalski/friedlander-iwaniec-sum.pdf .
+[6]D. A. Goldston, J. Pintz and C. Y. Yıldırım, Primes in tuples I , Ann. of Math. (2) 170 (2009), 819–862.
+[7]G. Harman, Prime-detecting sieves , London Mathematical Society Monographs, New Series, vol. 33, Princeton
+University Press, Princeton, NJ, 2007.
+[8]D. R. Heath-Brown, Prime numbers in short intervals and a generalized Vaughan identity , Canad. J. Math. 34
+(1982), 1365–1377.
+[9]D. R. Heath-Brown and H. Iwaniec, On the diﬀerence between consecutive primes , Bull. Amer. Math. Soc. (N.S.)
+1(1979), 758–760.
+[10] N. M. Katz, Gauss sums, Kloosterman sums, and monodromy groups , Annals of Mathematics Studies, vol. 116,
+Princeton University Press, Princeton, NJ, 1988.
+[11] G. Last and M. Penrose, Lectures on the Poisson process , Institute of Mathematical Statistics Textbooks, vol. 7,
+Cambridge University Press, Cambridge, 2018.
+[12] J. Maynard, Small gaps between primes , Ann. of Math. (2) 181 (2015), 383–413.
+[13] F. Mertens, Ein Beitrag zur analytischen Zahlentheorie , J. Reine Angew. Math. 78(1874), 46–62.
+[14] OpenAI, Numerical certiﬁcate for prime gaps at most 186 , accompanying manuscript.
+[15] D. H. J. Polymath, New equidistribution estimates of Zhang type , Algebra Number Theory 8(2014), 2067–2199.
+Numbered references use arXiv:1402.0811v3.
+[16] D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals containing many primes , Res. Math.
+Sci.1(2014), Art. 12; bibliographical erratum, Res. Math. Sci. 2(2015), Art. 15. Numbered references use
+arXiv:1407.4897v4.
+[17] G. Sarajian and A. Weingartner, An extension of smooth numbers: multiple dense divisibility , J. Number Theory
+280 (2026), 278–317.
+[18] P. Shiu, A Brun–Titchmarsh theorem for multiplicative functions , J. Reine Angew. Math. 313 (1980), 161–170.
+[19] J. Stadlmann, On primes in arithmetic progressions and bounded gaps between many primes , Adv. Math. 468
+(2025), Art. 110190. Numbered references use arXiv:2309.00425v3.
+[20] J. Stadlmann, Bounded gaps between primes , Forthcoming.
+[21] Y. Zhang, Bounded gaps between primes , Ann. of Math. (2) 179 (2014), 1121–1174.
+39

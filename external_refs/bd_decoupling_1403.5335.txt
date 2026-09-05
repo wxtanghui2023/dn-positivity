@@ -1,0 +1,1836 @@
+=== PAGE 1 ===
+arXiv:1403.5335v3  [math.CA]  26 Jul 2015THE PROOF OF THE l2DECOUPLING CONJECTURE
+JEAN BOURGAIN AND CIPRIAN DEMETER
+Abstract. We provethe l2Decoupling Conjecture for compact hypersurfaceswith pos-
+itive deﬁnite second fundamental form and also for the cone. This h as a wide range of
+important consequences. One of them is the validity of the Discrete Restriction Con-
+jecture, which implies the full range of expected Lp
+x,tStrichartz estimates for both the
+rational and (up to Nǫlosses) the irrational torus. Another one is an improvement in
+the range for the discrete restriction theorem for lattice points o n the sphere. Various
+applications to Additive Combinatorics, Incidence Geometry and Num ber Theory are
+also discussed. Our argument relies on the interplay between linear a nd multilinear
+restriction theory.
+1.Thel2Decoupling Theorem
+LetSbe a compact C2hypersurface in Rnwith positive deﬁnite second fundamental
+form. Examples include the sphere Sn−1and the truncated (elliptic) paraboloid
+Pn−1:={(ξ1,... ,ξn−1,ξ2
+1+...+ξ2
+n−1)∈Rn:|ξi| ≤1/2}.
+Unless speciﬁed otherwise, we will implicitly assume throughout the wh ole paper that
+n≥2. We will write A∼BifA/lessorsimilarBandB/lessorsimilarA. The implicit constants hidden
+inside the symbols /lessorsimilarand∼will in general depend on ﬁxed parameters such as p,nand
+sometimes on variable parameters such as ǫ,ν. We will not record the dependence on the
+ﬁxed parameters.
+LetNδbe theδneighborhood of Pn−1and letPδbe a ﬁnitely overlapping cover of Nδ
+with curved regions θof the form
+θ={(ξ1,... ,ξn−1,η+ξ2
+1+...+ξ2
+n−1) : (ξ1,... ,ξn−1)∈Cθ,|η| ≤2δ},(1)
+whereCθruns over all cubes c+[−δ1/2
+2,δ1/2
+2]n−1withc∈δ1/2
+2Zn−1∩[−1/2,1/2]n−1. Note
+that eachθsits inside a ∼δ1/2×...δ1/2×δrectangular box. It is also important to realize
+that the normals to these boxes are ∼δ1/2separated. A similar decomposition exists for
+anySas above and we will use the same notation Pδfor it. We will denote by fθthe
+Fourier restriction of ftoθ.
+Our main result is the proof of the following l2Decoupling Theorem .
+Key words and phrases. discrete restriction estimates, Strichartz estimates, additive en ergy.
+The ﬁrst author is partially supported by the NSF grant DMS-13016 19. The second author is partially
+supported by the NSF Grant DMS-1161752.
+1
+=== PAGE 2 ===
+2 JEAN BOURGAIN AND CIPRIAN DEMETER
+Theorem 1.1. LetSbe a compact C2hypersurface in Rnwith positive deﬁnite second
+fundamental form. If supp(ˆf)⊂ Nδthen forp≥2(n+1)
+n−1andǫ>0
+/bardblf/bardblp/lessorsimilarǫδ−n−1
+4+n+1
+2p−ǫ(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+p)1/2. (2)
+Theorem 1.1 has been proved in [20] for p>2+8
+n−1−4
+n(n−1). A standard construction
+is presented in [20] to show that, up to the δ−ǫterm, the exponent of δis optimal. We
+point out that Wolﬀ [36] has initiated the study of lpdecouplings, p >2 in the case of
+the cone. His work provides part of the inspiration for our paper.
+A localization argument and interpolation between p=2(n+1)
+n−1and the trivial bound for
+p= 2 proves the subcritical estimate
+/bardblf/bardblp/lessorsimilarǫδ−ǫ(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+p)1/2, (3)
+when 2≤p <2(n+1)
+n−1. Estimate (3) is false for p <2. This can easily be seen by testing
+it with functions of the form fθ(x) =gθ(x+cθ), where supp( /hatwidegθ)⊂θand the numbers cθ
+are very far apart from each other.
+Inequality (3) has been recently proved by the ﬁrst author for p=2n
+n−1in [11], using a
+variant of the induction on scales from [14] and the multilinear restric tion Theorem 6.1.
+An argument similar to the one in [20] was used in [18] to prove Theorem 1.1 for
+p>2(n+2)
+n−1, by interpolating Wolﬀ’s machinery with the estimate p=2n
+n−1from [11]. This
+range is better than the one in [20] due to the use of multilinear theor y as opposed to
+bilinear theory.1
+We mention brieﬂy that there is a stronger form of decoupling, some times referred to
+assquare function estimate , which predicts that
+/bardblf/bardblp/lessorsimilarǫδ−ǫ/bardbl(/summationdisplay
+θ∈Pδ|fθ|2)1/2/bardblp, (4)
+in the slightly smaller range 2 ≤p≤2n
+n−1. Whenn= 2 this easily follows via a geometric
+argument. Minkowski’s inequality shows that (4) is indeed stronger t han (3) in the range
+2≤p≤2n
+n−1. This is also conﬁrmed by the lack of any results for (4) when n≥3. Our
+methods do not seem to enable any progress on (4).
+It is reasonable to hope that in the subcritical regime (3) one may be able to replace
+δ−ǫby a constant Cp,nindependent of δ. This is indeed known when n= 2 andp≤4,
+but seems to be in general an extremely diﬃcult question. To the aut hors’ knowledge, no
+other examples of 2 <p<2(n+1)
+n−1are known for when this holds.
+In Section 5 we introduce a multilinear version of the decoupling inequa lity (2) and
+show that the multilinear and the linear theories are essentially equiva lent. This in itself
+is not enough to prove Theorem 1.1, as Theorem 6.1 gives multilinear de coupling only
+in the range 2 ≤p≤2n
+n−1. To bridge the gap between2n
+n−1and2(n+1)
+n−1, in Section 6 we
+reﬁne our analysis based on the multilinear theory. In particular we s et up an induction
+1While both the bilinear theorem in [33] and the multilinear theorem in [3] ar e sharp, the latter one is
+”morally” stronger
+=== PAGE 3 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 3
+on scales argument that makes use of Theorem 6.1 at each step of t he iteration, rather
+than once.
+Let us now brieﬂy describe some of the consequences of Theorem 1 .1. The ﬁrst one we
+mention is a sharp decoupling for the (truncated) cone
+Cn−1={(ξ1,... ,ξn−1,/radicalBig
+ξ2
+1+...+ξ2
+n−1),1≤/radicalBig
+ξ2
+1+...+ξ2
+n−1≤2}.
+Abusing earlier notation, we let Nδ(Cn−1) be theδneighborhood of Cn−1and we let
+Pδ(Cn−1) be the partition of Nδ(Cn−1) associated with a given partition of Sn−1intoδ1/2
+caps. More precisely, each θ∈ Pδ(Cn−1) is essentially a 1 ×δ×δ1/2×...×δ1/2rectangular
+box.
+Theorem 1.2. Assumesupp(ˆf)⊂ Nδ(Cn−1). Then for each ǫ>0
+/bardblf/bardblp/lessorsimilarǫδ−n−2
+4+n
+2p−ǫ(/summationdisplay
+θ∈Pδ(Cn−1)/bardblfθ/bardbl2
+p)1/2,ifp≥2n
+n−2
+and
+/bardblf/bardblp/lessorsimilarǫδ−ǫ(/summationdisplay
+θ∈Pδ(Cn−1)/bardblfθ/bardbl2
+p)1/2,if2≤p≤2n
+n−2.
+The proof of Theorem 1.2 is presented in the last section of the pape r and it turns
+out to be a surprisingly short application of Theorem 1.1 for the elliptic paraboloid. It
+has some striking consequences, some of which were described in (a nd provided some of
+the original motivation for) the work [36] of Wolﬀ. Examples include pr ogress on the
+“local smoothing conjecture for the wave equation” (see [30] and [36]), the regularity for
+convolutions with arclength measures on helices [27], and the bounde dness properties of
+the Bergman projection in tube domains over full light cones, see [21 ] and [2]. We refer
+the interested reader to these papers for details.
+Theorem 1.1 immediately implies the validity of the Discrete Restriction C onjecture in
+the expected range, see Theorem 2.2 below. This in turn has a wide ra nge of interesting
+consequences that are detailed in Section 2. First, we get the full r ange of expected Lp
+x,t
+Strichartz estimates for both the rational and (up to Nǫlosses) irrational tori. Second,
+we derive sharp estimates on the additive energies of various sets. These can be rephrased
+as incidence geometry problems and in some cases we are not aware a bout an alternative
+approach. While our theorems successfully address the case of ”n icely separated” points,
+some intriguing questions are left open for arbitrary points.
+A third type of applications includes sharp (up to Nǫlosses) estimates for the number
+of solutions of various diophantine inequalities. This is rather surpris ing given the fact
+that our methods do not rely on any number theory. We believe that they provide a
+new angle by means of our use of induction on scales and the topology ofRn. Indeed,
+the Multilinear Restriction Theorem 6.1 that we use repeatedly in the p roof of our main
+Theorem 1.1 relies at its core on the multilinear Kakeya phenomenon, w hich has some
+topological ﬂavor (see [24], [16]).
+Finally, we use Theorem 2.2 to improve the range from [12], [13] in the dis crete restric-
+tion problem for lattice points on the sphere.
+Inforthcoming papers we will develop the decoupling theory for arb itraryhypersurfaces
+with nonzero Gaussian curvature, as well as for nondegenerate c urves.
+=== PAGE 4 ===
+4 JEAN BOURGAIN AND CIPRIAN DEMETER
+Acknowledgment. The authors are indebted to the anonymous referees whose comm ents
+helped improving the presentation in Section 6. The second author h as beneﬁted from
+helpful conversations with Nets Katz and Andreas Seeger. The se cond author would
+like to thank his student Fangye Shi for a careful reading of the or iginal version of the
+manuscript and for pointing out a few typos.
+2.First applications
+In this section we present the ﬁrst round of applications of our dec oupling theory.
+Additional applications will appear elsewhere.
+2.1.The discrete restriction phenomenon. To provide some motivationwe recall the
+Stein-Tomas Restriction Theorem, see [34].
+Theorem 2.1. LetSbe a compact C2hypersurface in Rnwith nonzero Gaussian cur-
+vature and let dσdenote the natural surface measure on S. Then for p≥2(n+1)
+n−1and
+f∈L2(S,dσ)we have
+/bardbl/hatwidestfdσ/bardblLp(Rn)/lessorsimilar/bardblf/bardblL2(S).
+Note that this result only needs nonzero Gaussian curvature. We w ill use the notation
+e(a) =e2πia. For ﬁxed p≥2(n+1)
+n−1, it is an easy exercise to see that this theorem is
+equivalent with the statement that
+(1
+|BR|/integraldisplay
+BR|/summationdisplay
+ξ∈Λaξe(ξ·x)|p)1/p/lessorsimilarδn
+2p−n−1
+4/bardblaξ/bardbll2(Λ),
+for each 0 ≤δ≤1, eachaξ∈C, each ball BR⊂Rnof radiusR∼δ−1/2and each
+δ1/2separated set Λ ⊂S. Thus, the Stein-Tomas Theorem measures the average Lp
+oscillations of exponential sums at spatial scale equal to the invers e of the separation of
+the frequencies. It will be good to keep in mind that for each R/greaterorsimilarδ−1/2
+/bardbl/summationdisplay
+ξ∈Λaξe(ξ·x)/bardblL2(BR)∼ |BR|1/2/bardblaξ/bardbl2, (5)
+as can be seen using Plancherel’s Theorem.
+The discrete restriction phenomenon consists in the existence of s tronger cancellations
+at the larger scale R/greaterorsimilarδ−1. We prove the following.
+Theorem 2.2. LetSbe a compact C2hypersurface in Rnwith positive deﬁnite second
+fundamental form. Let Λ⊂Sbe aδ1/2- separated set and let R/greaterorsimilarδ−1. Then for each
+ǫ>0
+(1
+|BR|/integraldisplay
+BR|/summationdisplay
+ξ∈Λaξe(ξ·x)|p)1/p/lessorsimilarǫδn+1
+2p−n−1
+4−ǫ/bardblaξ/bardbl2 (6)
+ifp≥2(n+1)
+n−1.
+=== PAGE 5 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 5
+It has been observed in [11] that Theorem 1.1 for a given pimplies (6) for the same p.
+Here is a sketch of the argument. First, note that the statement
+/bardblf/bardblp/lessorsimilarδcp(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+p)1/2,whenever supp( ˆf)⊂ Nδ
+easily implies that for each g:S→CandR/greaterorsimilarδ−1
+(/integraldisplay
+BR|/hatwidestgdσ|p)1/p/lessorsimilarδcp(/summationdisplay
+θ∈Pδ/bardbl/hatwidegθdσ/bardbl2
+Lp(wBR))1/2, (7)
+where here gθ=g1θis the restriction of gto theδ1/2- capθonS. See Remark 5.2. Also,
+throughout the paper we write
+/bardblf/bardblLp(wBR)= (/integraldisplay
+Rn|f(x)|pwBR(x)dx)1/p
+for weights wBRwhich are Fourier supported in B(0,1
+R) and satisfy
+1BR(x)/lessorsimilarwBR(x)≤(1+|x−c(BR)|
+R)−10n. (8)
+It now suﬃces to use g=/summationtext
+ξ∈Λaξσ(U(ξ,τ))−11U(ξ,τ)in (7), where U(ξ,τ) is aτ- cap on
+Scentered at ξ, and to let τ→0.
+Using (6) with p=2(n+1)
+n−1and H¨ older’s inequality we determine that
+δǫ/bardblaξ/bardbl2/lessorsimilarǫ(1
+|BR|/integraldisplay
+BR|/summationdisplay
+ξ∈Λaξe(ξ·x)|p)1/p/lessorsimilarǫδ−ǫ/bardblaξ/bardbl2 (9)
+for 1≤p≤2(n+1)
+n−1andR/greaterorsimilarδ−1.We mention that prior to our current work, the only
+known results for (6) and (9) were the ones in the range where The orem 1.1 was known.
+2.2.Strichartz estimates for the classical and irrational tori .The discrete restric-
+tion phenomenon has mostly been investigated in the special case wh en the frequency
+points Λ come from a lattice. There is extra motivation in considering t his case coming
+fromPDEs, where there is interest in establishing Strichartz estima tes for the Schr¨ odinger
+equation on the torus. Prior to the current work, the best known result for the paraboloid
+Pn−1(N) :={ξ:= (ξ1,... ,ξn)∈Zn:ξn=ξ2
+1+...+ξ2
+n−1,|ξ1|,...,|ξn−1| ≤N}
+was obtained by the ﬁrst author [10], [11]. We recall this result below.
+Theorem 2.3 (Discrete restriction: the lattice case (paraboloid)) .Letaξ∈Candǫ>0.
+Then
+(i)ifn≥4we have
+/bardbl/summationdisplay
+ξ∈Pn−1(N)aξe(ξ·x)/bardblLp(Tn)/lessorsimilarǫNn−1
+2−n+1
+p+ǫ/bardblaξ/bardbll2,
+=== PAGE 6 ===
+6 JEAN BOURGAIN AND CIPRIAN DEMETER
+forp≥2(n+2)
+n−1and
+/bardbl/summationdisplay
+ξ∈Pn−1(N)aξe(ξ·x)/bardblLp(Tn)/lessorsimilarǫNǫ/bardblaξ/bardbll2,
+for1≤p≤2n
+n−1.
+(ii)Ifn= 2,3then
+/bardbl/summationdisplay
+ξ∈Pn−1(N)aξe(ξ·x)/bardblLp(Tn)/lessorsimilarǫNǫ/bardblaξ/bardbll2,
+forp=2(n+1)
+n−1.
+The proof of (i) combines the implementation of the Stein-Tomas arg ument via the
+circle method with the inequality (3) proved in [11]. The argument for ( ii) is much
+easier, it uses the fact that circles in the plane contain ”few” lattice points. It has been
+conjectured in [10] that (ii) should hold for n≥4, too. This is easily seen to be sharp,
+up to theNǫterm. We will argue below that our Theorem 2.2 implies this conjecture , in
+fact a more general version of it.
+The analogous question for the more general irrational tori has b een recently investi-
+gated in [9], [17], [19] and [23]. More precisely, ﬁx1
+2<θ1,... ,θn−1<2. Forφ∈L2(Tn−1)
+consider its Laplacian
+∆φ(x1,... ,xn−1) =
+/summationdisplay
+(ξ1,...,ξn−1)∈Zn−1(ξ2
+1θ1+...+ξ2
+n−1θn−1)ˆφ(ξ1,... ,ξn−1)e(ξ1x1+...+ξn−1xn−1)
+on the irrational torus/producttextn−1
+i=1R/(θiZ). Let also
+eit∆φ(x1,... ,xn−1,t) =
+/summationdisplay
+(ξ1,...,ξn−1)∈Zn−1ˆφ(ξ1,... ,ξn−1)e(x1ξ1+...+xn−1ξn−1+t(ξ2
+1θ1+...+ξ2
+n−1θn−1)).
+We prove
+Theorem 2.4 (Strichartz estimates for irrational tori) .Letφ∈L2(Tn−1)withsupp(ˆφ)⊂
+[−N,N]n−1. Then for each ǫ >0,p≥2(n+1)
+n−1and each interval I⊂Rwith|I|/greaterorsimilar1we
+have
+/bardbleit∆φ/bardblLp(Tn−1×I)/lessorsimilarǫNn−1
+2−n+1
+p+ǫ|I|1/p/bardblφ/bardbl2, (10)
+and the implicit constant does not depend on I,Nandθi.
+ProofFor−N≤ξ1,... ,ξn−1≤Ndeﬁneηi=θ1/2
+iξi
+4Nandaη=ˆφ(ξ). A simple change of
+variables shows that /integraldisplay
+Tn−1×I|eit∆φ|p/lessorsimilar
+1
+Nn+1/integraldisplay
+|y1|,...,|yn−1|≤8N
+yn∈IN2|/summationdisplay
+η1,...,ηn−1aηe(y1η1+...+yn−1ηn−1+yn(η2
+1+...η2
+n−1))|pdy1...dyn,
+=== PAGE 7 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 7
+whereIN2is an interval of length ∼N2|I|. By periodicity in the y1,... ,yn−1variables
+we bound the above by
+1
+Nn+1(N|I|)n−1/integraldisplay
+BN2|I||/summationdisplay
+η1,...,ηn−1aηe(y1η1+...+yn−1ηn−1+yn(η2
+1+...η2
+n−1))|pdy1...dyn,
+for some ball BN2|I|of radius ∼N2|I|. Our result will follow once we note that the points
+(η1,... ,ηn−1,η2
+1+...η2
+n−1)
+are∼1
+Nseparated on Pn−1and then apply Theorem 2.2 with R∼N2|I|.
+Remark 2.5.The diagonal form ξ2
+1θ1+...+ξ2
+n−1θn−1may in fact be replaced with an
+arbitrary deﬁnite quadratic form Q(ξ1,... ,ξn−1), to incorporate the more general case of
+ﬂat tori. The case θ1=...=θn−1= 1 corresponds to the classical (periodic) torus Tn.
+When combined with our Theorem 2.4, Propositions 3.113 and 3.114 fro m [10] show that
+in fact (10) holds true with ǫ= 0 in the range p >2(n+1)
+n−1forTn. Similar partial results
+in the direction of ǫremoval are derived for the irrational torus in [23].
+2.3.The discrete restriction for lattice points on the sphere. Given integers n≥3
+andλ=N2≥1 consider the discrete sphere
+Fn,N2={ξ= (ξ1,... ,ξn)∈Zn:|ξ1|2+...|ξn|2=N2}.
+In [8], the ﬁrst author made the following conjecture about the eige nfunctions of the
+Laplacian on the torus and found some partial results
+Conjecture 2.6. For eachn≥3,aξ∈C,ǫ>0and eachp≥2n
+n−2we have
+/bardbl/summationdisplay
+ξ∈Fn,N2aξe(ξ·x)/bardblLp(Tn)/lessorsimilarǫNn−2
+2−n
+p+ǫ/bardblaξ/bardbll2(Fn,N2). (11)
+We refer the reader to [12], [13] for a discussion on why the critical in dex2n
+n−2for the
+sphere is diﬀerent from the one for the paraboloid. The conjectur e has been veriﬁed by
+the authors in [12] for p≥2n
+n−3whenn≥4 and then later improved in [13] to p≥44
+7
+whenn= 4 andp≥14
+3whenn= 5. The methods in [8], [12] and [13] include Number
+Theory of various sorts, Incidence Geometry and Fourier Analysis . Using Theorem 2.2
+we can further improve our results.
+Theorem 2.7. Letn≥4. The inequality (11)holds forp≥2(n−1)
+n−3.
+ProofFix/bardblaξ/bardbl2= 1 and deﬁne
+F(x) =/summationdisplay
+ξ∈Fn,N2aξe(x·ξ).
+We start by recalling the following estimate (24) from [12], valid for n≥4 andα/greaterorsimilarǫ
+Nn−1
+4+ǫ
+|{|F|>α}|/lessorsimilarǫα−2n−1
+n−3N2
+n−3. (12)
+=== PAGE 8 ===
+8 JEAN BOURGAIN AND CIPRIAN DEMETER
+By invoking interpolation with the trivial L∞bound, it suﬃces to consider the endpoint
+p=pn=2(n−1)
+n−3. Note that /bardblF/bardbl∞≤NCn. It follows that
+/integraldisplay
+|F|pn=/integraldisplay
+Nn−1
+4+ǫ/lessorsimilarǫα≤NCnαpn−1|{|F|>α}|dα+N(n−1
+4+ǫ)(pn−2(n+1)
+n−1)/integraldisplay
+|F|2(n+1)
+n−1.
+The result will follow by applying (12) to the ﬁrst term and Theorem 2.2 withp=2(n+1)
+n−1
+to the second term.
+2.4.Additive energies and Incidence Geometry. The proof of Theorem 1.1 in the
+following sections will implicitly rely on the incidence theory of tubes and cubes. This
+theory manifests itself in the deep multilinear Kakeya phenomenon wh ich lies behind
+Theorem 6.1. It thus should come as no surprise that Theorem 1.1 ha s applications to
+Incidence Geometry.
+An interesting question is whether there is a proof of Theorem 2.2 us ing softer argu-
+ments. Or at least if there is such an argument which recovers (6) f orRlarge enough ,
+depending on Λ. When n= 3 andS=P2we can prove such a result. In fact our result
+is surprisingly strong, in that the bound |Λ|ǫdoes not depend on the separation between
+the points in Λ.
+Theorem 2.8. LetΛ⊂P2be an arbitrary collection of distinct points. Then for Rlarge
+enough, depending only on the geometry of Λand on its cardinality |Λ|, we have
+(1
+|BR|/integraldisplay
+BR|/summationdisplay
+ξ∈Λaξe(ξ·x)|4)1/4/lessorsimilarǫ|Λ|ǫ/bardblaξ/bardbl2. (13)
+Due to periodicity, this recovers (ii) of Theorem 2.3 for n= 3. To see the proof we
+recall some terminology and well known results.
+Given an integer k≥2 and a set Λ in Rnwe introduce its k-energy
+Ek(Λ) =|{(λ1,... ,λ 2k)∈Λ2k:λ1+...+λk=λk+1+...+λ2k}|.
+Note the trivial lower bound |Ek(Λ)| ≥ |Λ|k.
+We recall the point-line incidence theorem due to Szemer´ edi and Tr otter
+Theorem 2.9 ([31]).There areO(|L|+|P|+(|L||P|)2/3)incidences between any collec-
+tionsLandPof lines and points in the plane.
+Up to extra logarithmic factors, the same thing is conjectured to h old if lines are
+replaced with circles. Another related conjecture is
+Conjecture 2.10 (The unit distance conjecture) .The number of unit distances between
+Npoints in the plane is always /lessorsimilarǫN1+ǫ
+The point-circle and the unit distance conjectures are thought to be rather diﬃcult,
+and only partial results are known.
+Proof[of Theorem 2.8]
+The following parameter encodes the ”additive geometry” of Λ
+υ:= min{|η1+η2−η3−η4|:ηi∈Λ and|η1+η2−η3−η4| /ne}ationslash= 0}.
+=== PAGE 9 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 9
+We show that Theorem 2.8 holds if R/greaterorsimilar|Λ|2
+υ. Fix such an R.
+Using restricted type interpolation it suﬃces to prove
+1
+|BR|/integraldisplay
+BR|/summationdisplay
+η∈Λ′e(x·η)|4dx/lessorsimilarǫ|Λ′|2+ǫ,
+for each subset Λ′⊂Λ. See Section 6 in [13] for details on this type of approach.
+Expanding the L4norm we need to prove
+|/summationdisplay
+ηi∈Λ′1
+R3/integraldisplay
+BRe((η1+η2−η3−η4)·x)dx|/lessorsimilarǫ|Λ′|2+ǫ.
+Note that if A/ne}ationslash= 0
+|/integraldisplayR
+−Re(At)dt| ≤A−1.
+Using this we get that
+|/summationdisplay
+ηi∈Λ′
+|η1+η2−η3−η4|/negationslash=01
+R3/integraldisplay
+BRe((η1+η2−η3−η4)·x)dx| ≤|Λ′|4
+Rυ≤ |Λ′|2.
+Thus it suﬃces to prove the following estimate for the additive energ y
+E2(Λ′)/lessorsimilarǫ|Λ′|2+ǫ. (14)
+Assume
+η1+η2=η3+η4, (15)
+withηi:= (αi,βi,α2
+i+β2
+i). It has been observed in [10] that given A,B,C∈R, the
+equality
+η1+η2= (A,B,C)
+implies that for i∈ {1,2}
+(αi−A
+2)2+(βi−B
+2)2=2C−A2−B2
+4. (16)
+Thus the four points Pi= (αi,βi) corresponding to any additive quadruple (15) must
+belong to a circle. As observed in [10], this is enough to conclude (14) in the lattice
+case, as circles of radius Mcontain/lessorsimilarǫMǫlattice points. The bound (14) also follows
+immediately if one assumes the circle-point incidence conjecture.
+Weneedhowever anewobservation. Notethatif (15)holdstheninf actbothP1,P2and
+P3,P4are diametrically opposite on the circle (16). Thus each additive quad ruple gives
+rise to a distinct right angle, the one subtended by P1,P2,P3(say). The estimate (14)
+is then an immediate consequence of the following application of the Sz emer´ edi-Trotter
+Theorem.
+Theorem 2.11 (Pach, Sharir, [26]) .The number of repetitions of a given angle among
+Npoints in the plane is O(N2logN).
+=== PAGE 10 ===
+10 JEAN BOURGAIN AND CIPRIAN DEMETER
+It has been recognized that the restriction theory for the spher e and the paraboloid
+are very similar2. Consequently, one expects not only Theorem 2.8 to be true also fo r
+S2, but for a very similar argument to work in that case, too. If that is indeed the case,
+it does not appear to be obvious. The same argument as above show s that an additive
+quadruple of points on S2will belong to a circle on S2, and moreover the four points will
+be diametrically opposite in pairs. There will thus be at least E2(Λ) right angles in Λ.
+This is however of no use in this setting, as Λ lives in three dimensions. I t is proved in [1]
+that a set of Npoints in R3hasO(N7/3) right angles, and moreover this bound is tight
+in general.
+Another idea is to map an additive quadruple to the plane using the ste reographic
+projection. The resulting four points will again belong to a circle, so t he bound on the
+energy would follow if the circle-point incidence conjecture is proved . Unfortunately, the
+stereographic projection does not preserve the property of be ing diametrically opposite
+and thus prevents the application of Theorem 2.11. We thus ask
+Question 2.12. Is it true that E2(Λ)/lessorsimilarǫ|Λ|2+ǫfor each ﬁnite Λ⊂S2?
+One can ask the same question for Pn−1andSn−1whenn≥4. The right conjecture
+seems to be
+E2(Λ)/lessorsimilarǫ|Λ|3n−5
+n−1+ǫ. (17)
+Interestingly, when Λ ⊂P3this follows from the aforementioned result in [1], and in
+fact there is no Λǫloss this time. However, in the same paper [1] it is proved that this
+argument fails in dimensions ﬁve and higher: there is a set with Npoints in R4which
+determines /greaterorsimilarN3right angles. We point out that Theorem 2.2 implies (17) for subsets o f
+Pn−1andSn−1whenn≥3, in the case when the points Λ are ∼ |Λ|−1
+n−1separated.
+It is also natural to investigate the two dimensional phenomenon, f orS=S1and
+S=P1.
+Question 2.13. Is it true that for each Λ⊂S
+E3(Λ)/lessorsimilarǫ|Λ|3+ǫ? (18)
+Surprisingly, this question seems to be harder than its three dimens ional analogue
+from Theorem 2.8. Note that the case when the points are |Λ|−Cseparated follows from
+Theorem 2.2. We are not aware of an alternative (softer) argumen t.
+A positive answer to Question 2.13 would have surprising applications t o Number The-
+ory. In particular it would answer the following question posed in [7].
+Question 2.14. LetNbe a positive integer. Does (18)hold when Λare the lattice points
+on the circle N1/2S1?
+Note that Theorem 2.2 is too weak to answer this question. Indeed, rescaling by N1/2,
+the lattice points in N1/2S1becomeN−1/2-separated points on S1. However, it is known
+that there are O(NO(1)
+loglogN) lattice points on the circle N1/2S1.
+2A notable diﬀerence is the lattice case of the discrete restriction, b ut that has to do with a rather
+specialized scenario
+=== PAGE 11 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 11
+Theanalysisin[7]establishes somepartialresultsaswell assomeintr iguing connections
+to the theory of elliptic curves, see for example Theorem 8 there. A n easier question with
+similar ﬂavor is answered in the next subsection.
+The best that can be said regarding Question 2.13 with topological ba sed methods
+seems to be the following
+Proposition 2.15. LetSbe eitherP1orS1. For each Λ⊂S
+E3(Λ)/lessorsimilarǫ|Λ|7
+2+ǫ.
+ProofThis was observed by Bombieri and the ﬁrst author [7] when S=S1. The proofs
+forP1andS1are very similar, we brieﬂy sketch the details for S=P1. LetNbe the
+cardinality of Λ. It goes back to [10] that if
+(x1,x2
+1)+(x2,x2
+2)+(x3,x2
+3) = (n,j), (19)
+then the point (3( x1+x2),√
+3(x1−x2)) belongs to the circle centered at (2 n,0) and of
+radius squared equal to 6 j−2n2. Note that there are N2such points with ( xi,x2
+i)∈Λ,
+call this set of points T. Assume we have Mnsuch circles containing roughly 2npoints
+(3(x1+x2),√
+3(x1−x2))∈Tin such a way that (19) is satisﬁed for some x3∈Λ. Then
+clearly
+E3(S)/lessorsimilar/summationdisplay
+2n≤NMn22n.
+It is easy to see that
+Mn2n/lessorsimilarN3, (20)
+as each point in Tcan belong to at most Ncircles.
+The nontrivial estimate is
+Mn23n/lessorsimilarN4, (21)
+whichisanimmediateconsequence oftheSzemer´ edi-Trotter Theo remforcurvessatisfying
+the following two fundamental axioms: two curves intersect in O(1) points, and there are
+O(1)curves passing throughanytwo givenpoints. Thenumber ofinc idences between such
+curves and points is the same as in the case of lines and points, see fo r example Theorem
+8.10 in [32]. Note that since our circles have centers on the xaxis, any two points in T
+sitting in the upper (or lower) half plane determine a unique circle. Com bining the two
+inequalities we get for each n
+Mn22n/lessorsimilarN7
+2.
+In the case when Λ ⊂S1, the same argument leads to incidences between unit circles
+and points. The outcome is the same, since for any two points there are at most two unit
+circles passing through them. An interesting observation is the fac t that Question 2.13
+has a positive answer if the Unit Distance Conjecture is assumed. In deed, the argument
+above presents us with a collection TofN2points and a collection of /lessorsimilarN3unit circles.
+For 2n/lessorsimilarNletMnbe the number of such circles with ∼2npoints. There will be at
+leastMn2nunit distances among the N2points and the Mncenters. The Unit Distances
+=== PAGE 12 ===
+12 JEAN BOURGAIN AND CIPRIAN DEMETER
+Conjecture forces Mn2n/lessorsimilarǫ(Mn+N2)1+ǫ. SinceMn/lessorsimilarN3, it immediately follows that
+Mn22n/lessorsimilarǫN3+ǫwhich gives the desired bound on the energy.
+It seems likely that in order to achieve the conjectured bound on E3(Λ), the structure
+ofTmust be exploited, paving the way to algebraic methods. One possibilit y is to make
+use of the fact that Thas sumset structure. Another interesting angle for the parabo la is
+the following. Recall that whenever (19) holds, the three points (3 (xi+xj),√
+3(xi−xj)),
+(i,j)∈ {(1,2),(2,3),(3,1)}, belong to the circle centered at (2 n,0) and of radius squared
+equal to 6j−2n2. One can easily check that if fact they form an equilateral triangle! This
+potentially opens up the new toolbox of symmetries, since, for exam ple, the rotation by
+π/3 about the center of any such circle Cwill preserve C∩T.
+2.5.Additive energies of annular sets. Westartbymentioningamoregeneralversion
+of Theorem 2.2.
+Theorem 2.16. LetSbe aC2compact hypersurface in Rnwith positive deﬁnite second
+fundamental form. For each θ∈ PδletΛθbe a collection of points in θand letΛ =∪θΛθ.
+Then for each R- ballBRwithR/greaterorsimilarδ−1we have
+/bardbl/summationdisplay
+ξ∈Λaξe(x·ξ)/bardbl
+L2(n+1)
+n−1(BR)/lessorsimilarǫδ−ǫ(/summationdisplay
+θ/bardbl/summationdisplay
+ξ∈Λθaξe(x·ξ)/bardbl2
+L2(n+1)
+n−1(wBR))1/2.
+To see why this holds, note ﬁrst that the case R∼δ−1followsby applying (the localized
+version of) Theorem 1.1 to functions whose Fourier transforms ap proximate weighted
+sums of Dirac deltas supported on Λ. The case R/greaterorsimilarδ−1then follows using Minkowski’s
+inequality.
+ForR>1 deﬁne
+AR={ξ∈R2:R≤ |ξ| ≤R+R−1/3}
+andA′
+R=AR∩Z2. We prove the following inequality related to Question 2.14.
+Theorem 2.17.
+E3(A′
+R)/lessorsimilarǫ|A′
+R|3+ǫ. (22)
+Note that this is essentially sharp. The old Van der Corput estimate
+|N(R)−πR2|=o(R2/3)
+for the error term in the Gauss circle problem shows that |A′
+R|= 2πR2/3+o(R2/3). It
+thus suﬃces to show
+/bardbl/summationdisplay
+ξ∈A′
+Re(ξ·x)/bardblL6(T2)/lessorsimilarǫR1
+3+ǫ.
+SubdivideARinto sectors Aαof size∼R1/3×R−1/3,so that each of them ﬁts inside
+a rectangle Rαof area<1
+2. Applying Theorem 2.16 after rescaling by Rand using
+periodicity we get
+/bardbl/summationdisplay
+ξ∈A′
+Re(ξ·x)/bardblL6(T2)/lessorsimilarǫRǫ(/summationdisplay
+α/bardbl/summationdisplay
+ξ∈A′αe(ξ·x)/bardbl2
+L6(T2))1/2, (23)
+withA′
+α=Aα∩Z2.
+An elementary observation which goes back (at least) to Jarn´ ık’s w ork [25] is the fact
+that the area determined by a nondegenerate triangle with vertice s inZ2ishalf aninteger.
+=== PAGE 13 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 13
+It follows that the points in each A′
+αlie on a line Lα. In fact they must be equidistant,
+with consecutive points at distant d, for somed≥1. Deﬁne now for 1 ≤2s/lessorsimilarR1/3
+Ls={α: 2s≤ |A′
+α|<2s+1}.
+Let also Ls,mbe thoseα∈ Lsfor which 2m≤d <2m+1. Note that if α∈ Ls,mthen
+Lαmakes an angle ∼2−m2−sR−1/3with the long axis of Rα. Thus the directions of the
+linesLαwill be distinct for each collection of α∈ Ls,mwhose corresponding arcs on S1
+areC2−m2−sR−1/3-separated. Obviously there are u,v∈A′
+αsuch that |u−v| ∼2m.
+Since there are O(22m) lattice points with length ∼2m, it follows that there can be
+at mostO(22m) elements αinLs,mwhich areC2−m2−sR−1/3-separated. Thus |Ls,m|/lessorsimilar
+22mR1/32−m2−s. As 2m+s/lessorsimilarR1/3we conclude that |Ls|/lessorsimilarR2/32−2s.
+Note that by using H¨ older’s inequality with L2−L∞endpoints we have
+/bardbl/summationdisplay
+ξ∈A′αe(ξ·x)/bardblL6(T2)≤ |A′
+α|5/6.
+Using this, the bound on |Ls|and (23) ﬁnishes the proof of (22).
+2.6.Counting solutions of Diophantine inequalities. In this section we show how
+touse theDecoupling Theorem torecover andgeneralize results fr omtheliteratureaswell
+as to prove some new type of results. We do not aim at providing a sys tematic study of
+these problems but rather to explain the way our methods become u seful in this context.
+To motivate our ﬁrst application we consider the system of equation s fork≥2/braceleftBigg
+nk
+1+nk
+2+nk
+3=nk
+4+nk
+5+nk
+6
+n1+n2+n3=n4+n5+n6,
+with 1≤ni≤N. It is easy to see that there are 6 N3trivial solutions. The question here
+is to determine the correct asymptotic for the number Uk(N) of nontrivial solutions. This
+is in part motivated by connections to the Waring problem, see [4]. The casek= 3 known
+as the Segre cubic has been intensely studied. Vaughan and Wooley h ave proved in [35]
+thatU3(N)∼N2(logN)5, see also [15] for a more precise result. For k≥4, Greaves [22]
+(see also [29]) has proved that Uk(N) =O(N17
+6+ǫ). All these results follow through the
+use of rather delicate Number Theory.
+While our methods in this paper can not produce such ﬁne estimates, they successfully
+address the perturbed case. The following result is perhaps a surp rising consequence of
+Theorem 2.2.
+Theorem 2.18. For ﬁxedk≥2andCthe system/braceleftBigg
+|nk
+1+nk
+2+nk
+3−nk
+4−nk
+5−nk
+6| ≤CNk−2
+n1+n2+n3=n4+n5+n6
+hasO(N3+ǫ)solutions with ni∼N.
+ProofApply Theorem 2.2 to the curve
+{(ξ,ξk) :|ξ| ∼1},
+the points
+Λ ={(n
+N,(n
+N)k) :n∼N}
+=== PAGE 14 ===
+14 JEAN BOURGAIN AND CIPRIAN DEMETER
+andδ=N−2. We get that
+1
+N4/integraldisplay
+|x|≤N2/integraldisplay
+|y|≤N2|/summationdisplay
+n∼Ne(xn
+N+y(n
+N)k)|6dxdy/lessorsimilarǫN3+ǫ.
+Upon rescaling and using periodicity we get
+Nk−3/integraldisplay
+|x|≤N/integraldisplay
+|y|≤N2−k|/summationdisplay
+n∼Ne(xn+ynk)|6dxdy=
+Nk−2/integraldisplay
+|x|≤1/integraldisplay
+|y|≤N2−k|/summationdisplay
+n∼Ne(xn+ynk)|6dxdy/lessorsimilarǫN3+ǫ. (24)
+Let nowφ:R→[0,∞) be a positive Schwartz function with positive Fourier transform
+satisfying /hatwideφ(ξ)/greaterorsimilar1 for|ξ| ≤1. DeﬁneφN(y) =φ(Nk−2y). A standard argument allows
+us to replace the cutoﬀ |y| ≤N2−kwithφN(y) in (24). It suﬃces then to note that
+Nk−2/integraldisplay
+|x|≤1/integraldisplay
+R|/summationdisplay
+n∼Ne(xn+ynk)|6φN(y)dxdy=
+/summationdisplay
+ni∼N
+n1+n2+n3=n4+n5+n6/hatwideφ(N2−k(nk
+1+nk
+2+nk
+3−nk
+4−nk
+5−nk
+6)).
+Note also that our method proves that
+Nk−2/integraldisplay
+|x|≤1/integraldisplay
+|y−c|≤N2−k|/summationdisplay
+n∼Ne(xn+ynk)|6dxdy/lessorsimilarǫN3+ǫ,
+for eachc∈R. The diﬃculty in proving this for k≥3 using purely number theoretic
+methods comes from estimating the contribution of the minor arcs. Whenk= 2 the left
+hand side is at least cN3logN, which shows that one can not dispense with the Nǫterm.
+This can be seen by evaluating the contribution from the major arcs , see for example page
+118 in [10].
+Our second application generalizes the result from [28] ( k= 4) tok≥4. Its original
+motivation lies in the study of the Riemann zeta function on the critica l line (cf. [5], [6])
+and also in getting reﬁnements of Heath-Brown’s variant of Weyl’s ine quality, see [28].
+Theorem 2.19. Fork≥4and0≤λ≤1we have
+/integraldisplay
+|x|≤1/integraldisplayλ
+0|/summationdisplay
+n∼Ne(xn2+ynk)|6dxdy/lessorsimilarǫλN3+ǫ+N4−k+ǫ.
+In particular, the system
+/braceleftBigg
+|nk
+1+nk
+2+nk
+3−nk
+4−nk
+5−nk
+6| ≤CNk−1
+n2
+1+n2
+2+n2
+3=n2
+4+n2
+5+n2
+6
+hasO(N3+ǫ)solutions with ni∼N.
+=== PAGE 15 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 15
+ProofThe estimate on the number of solutions follows by using λ=N1−k. Note that it
+suﬃces to prove that
+/integraldisplay
+|x|≤1/integraldisplay
+J|/summationdisplay
+n∼Ne(xn2+ynk)|6dxdy/lessorsimilarǫN4−k+ǫ,
+for each interval Jwith length N1−k.
+We apply Theorem 2.16 to the curve
+{(ξ2,ξk) :|ξ| ∼1},
+the points
+Λ ={((n
+N)2,(n
+N)k) :n∼N},
+R−1=δ=N−1andBN= [MN,(M+1)N]×NkJwithM∈ {−N,... ,0,... ,N−1}.
+Summing over Mwe get due to periodicity
+/bardbl/summationdisplay
+n∼Ne(x′n2
+N2+y′nk
+Nk)/bardblL6(|x′|≤N2,y′∈NkJ)/lessorsimilarǫ
+Nǫ(/summationdisplay
+α/bardbl/summationdisplay
+n∈Iαe(x′n2
+N2+y′nk
+Nk)/bardbl2
+L6(|x′|≤N2,y′∈NkJ))1/2.
+HereIα= [nα,nα+N1/2] are intervals of length N1/2that partition the integers n∼N.
+It follows after a change of variables that
+/bardbl/summationdisplay
+n∼Ne(xn2+ynk)/bardblL6(|x|≤1,y∈J)/lessorsimilarǫ
+Nǫ(/summationdisplay
+α/bardbl/summationdisplay
+n∈Iαe(xn2+ynk)/bardbl2
+L6(|x|≤1,y∈J))1/2. (25)
+Next note that for y∈J
+|/summationdisplay
+n∈Iαe(xn2+ynk)|=
+|N1/2/summationdisplay
+m=1cm,J,nαe(m2(x+k(k−1)
+2nk−2
+αy)+m(2xnα+knk−1
+αy))|+O(1),
+with|cm,J,nα|= 1. To estimate the ﬁrst term we change variables to
+/braceleftBigg
+x′=x+k(k−1)
+2nk−2
+αy
+y′= (2k−k2)nk−1
+αy.
+We get
+/bardbl/summationdisplay
+n∈Iαe(xn2+ynk)/bardblL6(|x|≤1,y∈J)/lessorsimilar
+n−k−1
+6α/bardblN1/2/summationdisplay
+m=1cm,J,nαe(x′m2+2x′nαm+my′)/bardblL6(BC)+O(N1−k
+6) =
+=== PAGE 16 ===
+16 JEAN BOURGAIN AND CIPRIAN DEMETER
+n−k−1
+6α/bardblN1/2+nα/summationdisplay
+m=1+nαcm,J,nαe(x′m2+my′)/bardblL6(BC)+O(N1−k
+6),
+for some ball BCof radiusC=O(1). This can further be seen to be O(N1
+4+1−k
+6+ǫ) by the
+result in Theorem 2.3. We conclude that (25) is O(N1
+2+1−k
+6+ǫ), as desired.
+There are further number theoretical consequences of the dec oupling theory that will
+be investigated elsewhere.
+3.Norms and wave packet decompositions
+We will use Cto denote various constants that are allowed to depend on the ﬁxe d
+parameters n,p, but never on the scale δ.|·|will denote both the Lebesgue measure on
+Rnand the cardinality of ﬁnite sets.
+This section and the next one is concerned with introducing some of t he tools that will
+be used in the proof of Theorem 1.1 from Section 6. For 2 ≤p≤ ∞we deﬁne the norm
+/bardblf/bardblp,δ= (/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+p)1/2,
+wherefθis the Fourier restriction of ftoθ. We note the following immediate consequence
+of H¨ older’s inequality
+/bardblf/bardblp,δ≤ /bardblf/bardbl2
+p
+2,δ/bardblf/bardbl1−2
+p
+∞,δ (26)
+and the fact that if supp( ˆf)⊂ Nδthen
+/bardblf/bardbl2,δ∼ /bardblf/bardbl2.
+Deﬁnition 3.1. LetNbe a real number greater than 1. An N-tubeTis anN1/2×
+...×N1/2×Nrectangular parallelepiped in Rnwhich has dual orientation to some θ=
+θ(T)∈ Pδ. We call a collection of N-tubes separated if no more than Ctubes with a given
+orientation overlap.
+Letφ:Rn→Rbe given by
+φ(x) = (1+ |x|2)−M,
+forsomeMlargeenoughcomparedto n, whosevaluewillbecomeclearfromtheargument.
+DeﬁneφT=φ◦aT, whereaTis the aﬃne function mapping Tto the unit cube in Rn
+centered at the origin.
+Deﬁnition 3.2. AnN-function is a function f:Rn→Csuch that
+f=/summationdisplay
+T∈T(f)fT
+whereT(f)consists of ﬁnitely many separated N-tubesTand moreover
+|fT| ≤φT,
+/bardblfT/bardblp∼ |T|1/p,1≤p≤ ∞
+=== PAGE 17 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 17
+and
+supp(/hatwiderfT)⊂θ(T).
+Forθ∈ P1/NletT(f,θ)denote theN-tubes in T(f)dual toθ. AnN-function is called
+balanced if |T(f,θ)| ≤2|T(f,θ′)|whenever T(f,θ),T(f,θ′)/ne}ationslash=∅.
+The/bardbl ·/bardblp,δnorms ofN-functions are asymptotically determined by their plate distri-
+bution over the sectors θ.
+Lemma 3.3. For eachN-functionfand for2≤p≤ ∞
+/bardblf/bardblp,1/N∼Nn+1
+2p(/summationdisplay
+θ|T(f,θ)|2
+p)1/2. (27)
+If theN-function is balanced then
+/bardblf/bardblp,1/N∼Nn+1
+2pM(f)1
+2−1
+p|T(f)|1/p, (28)
+whereM(f)is the number of sectors θfor which T(f,θ)/ne}ationslash=∅.
+ProofIt suﬃces to prove (27) when T(f) =T(f,θ) for some θ. We ﬁrst observe the
+trivial estimates /bardblf/bardbl1/lessorsimilar|T||T(f)|,/bardblf/bardbl∞/lessorsimilar1 and/bardblf/bardbl2∼ |T|1/2|T(f)|1/2. Applying
+H¨ older’s inequality twice we get
+/bardblf/bardbl2(p−1)
+p
+2/bardblf/bardbl2−p
+p
+1≤ /bardblf/bardblp≤ /bardblf/bardbl1/p
+1/bardblf/bardbl1/p′
+∞,
+which is exactly what we want.
+The crucial role played by balanced N-functions is encoded by
+Lemma 3.4. (i) EachN-functionfcan be written as the sum of O(log|T(f)|)balanced
+N-functions.
+(ii) For each balanced N-functionfand2≤p≤ ∞we have the converse of (26),
+namely
+/bardblf/bardblp,1/N∼ /bardblf/bardbl2
+p
+2,1/N/bardblf/bardbl1−2
+p
+∞,1/N. (29)
+ProofNote that (i) is immediate by using dyadic ranges. Also, ( ii) will follow from (28).
+In the remaining sections we will use the fact that the contribution o ffto various
+inequalities comes from logarithmically many N-functions. The basic mechanism is the
+following.
+Lemma 3.5 (Wave packet decomposition) .Assumefis Fourier supported in Nδ. Then
+for each dyadic 0<λ/lessorsimilar/bardblf/bardbl∞,δthere is an N=δ−1-functionfλsuch that
+f=/summationdisplay
+λ/lessorsimilar/bardblf/bardbl∞,δλfλ
+and for each 2≤p<∞we have
+λpNn+1
+2|T(fλ)| ≤ /bardblλfλ/bardblp
+p,δ/lessorsimilar/bardblf/bardblp
+p,δ. (30)
+=== PAGE 18 ===
+18 JEAN BOURGAIN AND CIPRIAN DEMETER
+ProofUsing a partition of unity write
+f=/summationdisplay
+θ∈Pδ˜fθ
+with˜fθ=fθ∗KθFourier supported in9
+10θwith/bardblKθ/bardbl1/lessorsimilar1. Consider a windowed Fourier
+series expansion for each ˜fθ
+˜fθ=/summationdisplay
+T∈Tθ/an}bracketle{t˜fθ,ϕT/an}bracketri}htϕT,
+whereϕTareL2normalized Schwartz functions Fourier localized in θsuch that
+|T|1/2|ϕT|/lessorsimilarφT.
+The tubes in Tθare separated. Note that by H¨ older’s inequality
+|aT:=1
+|T|1/2/an}bracketle{t˜fθ,ϕT/an}bracketri}ht|/lessorsimilar/bardbl˜fθ/bardbl∞/lessorsimilar/bardblfθ/bardbl∞≤ /bardblf/bardbl∞,δ.
+It is now clear that we should take
+fλ=/summationdisplay
+θ/summationdisplay
+T∈Tθ:|aT|∼λaTλ−1|T|1/2ϕT.
+To see (30) note that the ﬁrst inequality follows from (27) and the f act that /bardbl·/bardbllp/2≤
+/bardbl·/bardbll1. To derive the second inequality, it suﬃces to prove that for each θ
+/bardbl/summationdisplay
+T∈Tθ:|aT|∼λ/an}bracketle{t˜fθ,ϕT/an}bracketri}htϕT/bardblp/lessorsimilar/bardblfθ/bardblp.
+Using (27) and the immediate consequence of H¨ older’s inequality |aT|p/lessorsimilar/integraltext
+|˜fθ|p|T|−1/2ϕT
+we get
+/bardbl/summationdisplay
+T∈Tθ:|aT|∼λ/an}bracketle{t˜fθ,ϕT/an}bracketri}htϕT/bardblp
+p/lessorsimilarλp|T||{T∈ Tθ:|aT| ∼λ}|/lessorsimilar
+/lessorsimilar|T|/summationdisplay
+T∈Tθ|aT|p/lessorsimilar/integraldisplay
+|˜fθ|p/summationdisplay
+T∈TθφT/lessorsimilar/integraldisplay
+|˜fθ|p/lessorsimilar/integraldisplay
+|fθ|p.
+4.Parabolic rescaling
+Proposition 4.1. Letδ≤σ<1
+2andKp(δ
+σ)be such that
+/bardblf/bardblp≤Kp(δ
+σ)(/summationdisplay
+θ∈Pδ
+σ/bardblfθ/bardbl2
+p)1/2,
+for eachfwith Fourier support in Nδ
+σ. Then for each fwith Fourier support in Nδand
+for eachτ∈ Pσwe have
+/bardblfτ/bardblp/lessorsimilarKp(δ
+σ)(/summationdisplay
+θ∈Pδ:θ∩τ/negationslash=∅/bardblfθ/bardbl2
+p)1/2.
+=== PAGE 19 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 19
+ProofLeta= (a1,... ,an−1) be the center of the σ1/2-cubeCτ, see (1). We will perform
+the parabolic rescaling via the aﬃne transformation
+Lτ(ξ1,... ,ξn) = (ξ′
+1,... ,ξ′
+n) = (ξ1−a1
+σ1/2,... ,ξn−1−an−1
+σ1/2,ξn−2/summationtextn−1
+i=1aiξi+/summationtextn−1
+i=1a2
+i
+σ).
+Note that
+ξ′
+n−n−1/summationdisplay
+i=1ξ′
+i2=σ−1(ξn−n−1/summationdisplay
+i=1ξ2
+i).
+It follows that Lτmaps the Fourier support Nδ∩τoffτtoNδ
+σ∩([−1
+2,1
+2]n−1×R). Also,
+for eachτ′∈ Pδ
+σwe have that Lτ(θ) =τ′for someθ∈ Pδwithθ∩τ/ne}ationslash=∅. Thus
+/bardblfτ/bardblp
+p=/bardblg/bardblp
+p(det(Lτ))1−p,
+wheregis theLτdilation offτFourier supported in Nδ
+σ∩([−1
+2,1
+2]n−1×R). By invoking
+the hypothesis we get that
+/bardblg/bardblp/lessorsimilarKp(δ
+σ)(/summationdisplay
+τ′∈Pδ
+σ/bardblgτ′/bardbl2
+p)1/2.
+We are done if we use the fact that
+/bardblfθ/bardblp
+p=/bardblgτ′/bardblp
+p(det(Lτ))1−p
+wheneverLτ(θ) =τ′.
+5.Linear versus multilinear decoupling
+The material in this section is an application of the Bourgain-Guth indu ction on scales
+[14] and it is most closely connected to the argument in [11]. Let g:Pn−1→C. For
+a capτonPn−1we letgτ=g1τbe the (spatial) restriction of gtoτ. We denote by
+π:Pn−1→[−1/2,1/2]n−1the projection map.
+Deﬁnition 5.1. We say that the caps τ1,... ,τnonPn−1areν-transverse if the volume
+of the parallelepiped spanned by any unit normals viatτiis greater than ν.
+We denote by Cp,n(δ,ν) the smallest constant such that
+/bardbl(n/productdisplay
+i=1|/hatwidegτidσ|)1/n/bardblLp(Bδ−1)≤Cp,n(δ,ν)
+n/productdisplay
+i=1(/summationdisplay
+θ:δ1/2−cap
+θ⊂τi/bardbl/hatwidegθdσ/bardbl2
+Lp(wBδ−1))1/2
+1/n
+,
+for eachν-transverse caps τi⊂Pn−1, eachδ−1ballBδ−1and eachg:Pn−1→C.
+Let alsoKp,n(δ) be the smallest constant such that
+/bardbl/hatwidestgdσ/bardblLp(Bδ−1)≤Kp,n(δ)(/summationdisplay
+θ:δ1/2−cap/bardbl/hatwidegθdσ/bardbl2
+Lp(wBδ−1))1/2,
+for eachg:Pn−1→Cand eachδ−1ballBδ−1.
+=== PAGE 20 ===
+20 JEAN BOURGAIN AND CIPRIAN DEMETER
+Remark5.2.As before, the norm /bardblf/bardblLp(wBR)refers to the weighted Lpintegral
+(/integraldisplay
+Rn|f(x)|pwBR(x)dx)1/p
+for some weight satisfying (8). It is important to realize that there are such weights which
+in addition are Fourier supported in B(0,R−1). Note also that if gis supported on Pn−1
+and if/hatwidestwBRis supported in B(0,R−1), then ( /hatwidestgdσ)wBRhas Fourier support inside NR−1.
+This simple observation justiﬁes the various (entirely routine) localiz ation arguments that
+follow, as well as the interplay between Fourier transforms of func tions and Fourier trans-
+forms of measures supported on Pn−1. In particular let K(1)
+p,n(δ) be the smallest constant
+such that
+/bardbl/hatwidestgdσ/bardblLp(wBδ−1)≤K(1)
+p,n(δ)(/summationdisplay
+θ:δ1/2−cap/bardbl/hatwidegθdσ/bardbl2
+Lp(wBδ−1))1/2,
+for eachg:Pn−1→Cand eachδ−1ballBδ−1. ThenK(1)
+p,n(δ)∼n,pKp,n(δ). Also, if
+K(2)
+p,n(δ),K(3)
+p,n(δ),K(4)
+p,n(δ) are the smallest constants such that
+/bardblf/bardblLp(Rn)≤K(2)
+p,n(δ)(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+Lp(Rn))1/2,
+/bardblf/bardblLp(Bδ−1)≤K(3)
+p,n(δ)(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+Lp(Rn))1/2,
+/bardblf/bardblLp(wBδ−1)≤K(4)
+p,n(δ)(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+Lp(wBδ−1))1/2,
+for eachfFourier supported in Nδand eachδ−1ballBδ−1, then
+K(2)
+p,n(δ),K(3)
+p,n(δ),K(4)
+p,n(δ)∼n,pKp,n(δ).
+The same observation applies to the family of constants related to Cp,n(δ,ν) from the
+multilinear inequality.
+Note that due to H¨ older’s inequality
+Cp,n(δ,ν)≤Kp,n(δ).
+We will show that the reverse inequality essentially holds true.
+Theorem 5.3. Assume one of the following holds
+(i)n= 2
+(ii)n≥3andKp,d(δ′)/lessorsimilarǫδ′−ǫfor eachδ′,ǫ>0and each 2≤d≤n−1.
+Then for each 0<ν≤1there isǫ(ν)withlimν→0ǫ(ν) = 0andCνsuch that
+Kp,n(δ)≤Cνδ−ǫ(ν)Cp,n(δ,ν)
+for eachδ.
+We prove the case n= 3 and will indicate the modiﬁcations needed for n≥4. The
+argument will also show how to deal with the case n= 2.
+Remark 5.4.IfQ1,Q2,Q3∈[−1/2,1/2]2the volume of parallelepiped spanned by the
+unit normals to P2atπ−1(Qi) is comparable to the area of the triangle ∆ Q1Q2Q3.
+=== PAGE 21 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 21
+The key step in the proof of Theorem 5.3 for n= 3 is the following.
+Proposition 5.5. AssumeKp,2(δ)/lessorsimilarǫδ−ǫfor eachǫ >0. Then for each ǫthere isCǫ
+such that for each R>1andK≥1
+/bardbl/hatwidestgdσ/bardblLp(wBR)≤CǫKǫ[(/summationdisplay
+α⊂P2
+α:1
+K−cap/bardbl/hatwidegαdσ/bardbl2
+Lp(wBR))1/2+(/summationdisplay
+β⊂P2
+β:1
+K1/2−cap/bardbl/hatwidegβdσ/bardbl2
+Lp(wBR))1/2]+
++K10Cp,3(R−1,K−1)(/summationdisplay
+∆⊂P2
+∆:1
+R1/2−cap/bardbl/hatwideg∆dσ/bardbl2
+Lp(wBR))1/2
+ProofFollowing the standard formalism (see for example sections 2-4 in [14]) we will
+regard|/hatwidegαdσ|as being essentially constant on each ball BK. Denote by cα(BK) this value
+and letα∗be the cap that maximizes it.
+The starting point in the argument is the observation that for each BKthere exists a
+lineL=L(BK) in the (ξ1,ξ2) plane such that if
+SL={(ξ1,ξ2) : dist((ξ1,ξ2),L)≤C
+K1
+2}
+then forx∈BK
+|/hatwidestgdσ(x)| ≤
+Cmax
+α|/hatwidegαdσ(x)|+ (31)
+Cmax
+β|/hatwidegβdσ(x)|+ (32)
+K4maxα1,α2,α3
+K−1−transverse(3/productdisplay
+i=1|/hatwidegαidσ(x)|)1/3+ (33)
+|/summationdisplay
+β⊂π−1(SL)/hatwidegβdσ(x)|. (34)
+To see this, we distinguish three scenarios.
+First, ifcα(BK)≤K−2cα∗(BK) for eachαwith dist(π(α),π(α∗))≥10
+K1
+2, then the sum
+of (31) and (32) suﬃces, as
+|/hatwidestgdσ(x)| ≤/summationdisplay
+α: dist(π(α),π(α∗))≥10
+K1
+2|/hatwidegαdσ(x)|+|/summationdisplay
+α: dist(π(α),π(α∗))<10
+K1
+2/hatwidegαdσ(x)|.
+Otherwise, there is α∗∗with dist(π(α∗∗),π(α∗))≥10
+K1
+2andcα∗∗(BK)≥K−2cα∗(BK). The
+lineLis determined by the centers of α∗,α∗∗.
+Second, ifthereis α∗∗∗suchthatπ(α∗∗∗)intersectsthecomplementof SLandcα∗∗∗(BK)≥
+K−2cα∗(BK) then (33) suﬃces. Indeed, note that α∗,α∗∗,α∗∗∗areK−1transverse by Re-
+mark 5.4.
+Thethirdcaseiswhen cα(BK)<K−2cα∗(BK)whenever π(α)intersectsthecomplement
+ofSL. It is immediate that the sum of (31) and (34) will suﬃce in this case.
+=== PAGE 22 ===
+22 JEAN BOURGAIN AND CIPRIAN DEMETER
+The only nontrivial case to address is the one corresponding to this latter scenario. We
+note that the K−1neighborhood of each β⊂π−1(SL) is essentially a K−1×K−1
+2×K−1
+2
+box whose side of length K−1points in the direction of the normal vector (2 x,2y,−1),
+for some (x,y)∈L. These normal vectors belong to a plane with normal vector v. Thus
+theK−1neighborhood of π−1(SL) sits inside the CK−1neighborhood of a cylinder in the
+direction v, of height ∼K−1
+2, over the parabola π−1(L).
+An application of Fubini’s inequality shows that
+/bardbl/summationdisplay
+β:π(β)⊂SL/hatwidegβdσ/bardblLp(BK)/lessorsimilarKp,2(K−1)(/summationdisplay
+β/bardbl/hatwidegβdσ/bardbl2
+Lp(wBK))1/2.
+We are of course relying on the fact that π−1(L) is a parabola with principal curvature
+roughly 1, and that the angle between the plane of the parabola and vis away from zero.
+We conclude that in either case
+/bardbl/hatwidestgdσ/bardblLp(BK)≤CǫKǫ[(/summationdisplay
+α⊂P2
+α:1
+Kcap/bardbl/hatwidegαdσ/bardbl2
+Lp(wBK))1/2+(/summationdisplay
+β⊂P2
+β:1
+K1/2cap/bardbl/hatwidegβdσ/bardbl2
+Lp(wBK))1/2]+
++K4maxα1,α2,α3
+K−1−transverse/bardbl(3/productdisplay
+i=1|/hatwidegαidσ(x)|)1/3/bardblLp(wBK)
+It suﬃces now to raise to the pthpower and sum over BK⊂BRusing Minkowski’s in-
+equality. Also, the norm /bardbl/hatwidestgdσ/bardblLp(BR)can be replaced by the weighted norm /bardbl/hatwidestgdσ/bardblLp(wBR)
+via the localization argument described in Remark 5.2.
+Rescaling gives the following.
+Proposition 5.6. Letτbe aδcap. Assume Kp,2(δ′)/lessorsimilarǫδ′−ǫfor eachǫ>0andδ′. Then
+for eachǫthere isCǫsuch that for each R>δ−2andK≥1
+/bardbl/hatwidegτdσ/bardblLp(wBR)≤CǫKǫ[(/summationdisplay
+α⊂τ
+α:δ
+Kcap/bardbl/hatwidegαdσ/bardbl2
+Lp(wBR))1/2+(/summationdisplay
+β⊂τ
+β:δ
+K1/2cap/bardbl/hatwidegβdσ/bardbl2
+Lp(wBR))1/2]+
+K10Cp,3((Rδ2)−1,K−1)(/summationdisplay
+∆⊂τ
+∆:1
+R1/2cap/bardbl/hatwideg∆dσ/bardbl2
+Lp(wBR))1/2
+ProofNote that if γ⊂[−1/2,1/2]2then
+/hatwidergπ−1γdσ(x1,x2,x3) =/integraldisplay
+Bη(c)πg(ξ1,ξ2)e(ξ1x1+ξ2x2+(ξ2
+1+ξ2
+2)x3)dξ1dξ2.
+Leta= (a1,a2). Changing variable to ξi=ai+δξ′
+iand letting
+πga,δ(ξ′) =πg(a+δξ′)
+γ′=δ−1(γ−a)
+we get
+|/hatwidergπ−1γdσ(x1,x2,x3)|=δ2|/hatwiderga,δ
+π−1γ′dσ(δ(x1+2a1x3),δ(x2+2a2x3),δ2x3)|.
+=== PAGE 23 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 23
+In particular
+/bardbl/hatwidergπ−1γdσ/bardblLp(wBR)=δ2−4
+p/bardbl/hatwiderga,δ
+π−1γ′dσ/bardblLp(wCR),
+whereCRis a∼δR×δR×δ2Rcylinder. Cover CRwith ballsBδ2R. The result now
+follows by applying Proposition 5.5 to ga,δ(withathe center of π(τ)) on eachBδ2Rand
+then summing using Minkowski’s inequality.
+We are now ready to prove Theorem 5.3 for n= 3. LetK=ν−1. Iterate Proposition
+5.6 staring with scale δ= 1 until we reach scale δ=R−1/2. Each iteration lowers the
+scale of the caps from δto at leastδ
+K1/2. Thus we have to iterate ∼logKRtimes. Since
+Cp,3((δ2R)−1,K−1)/lessorsimilarCp,3(R−1,ν)
+we get for each ǫ>0
+/bardbl/hatwidestgdσ/bardblLp(wBR)≤(CCǫKǫ)logKRK10Cp,3(R−1,ν)(/summationdisplay
+∆:1
+R1/2cap/bardbl/hatwideg∆dσ/bardbl2
+Lp(wBR))1/2=
+R−logν(CCǫ)+ǫν−10Cp,3(R−1,ν)(/summationdisplay
+∆:1
+R1/2cap/bardbl/hatwideg∆dσ/bardbl2
+Lp(wBR))1/2.
+The result follows since C,Cǫdoe not depend on ν.
+To summarize, the proof of Theorem 5.3 for n= 3 relied on the hypothesis that the
+contribution coming from caps living near the intersection of P2with a plane is controlled
+byKp,2(δ) =O(δ−ǫ). Whenn≥4,thehypothesis Kp,d(δ) =O(δ−ǫ)for2≤d≤n−1plays
+the same role, it controls the contribution coming from caps living nea r lower dimensional
+ellipticparaboloidswithprincipalcurvatures roughly1. Andofcours e, nosuchhypothesis
+is needed when n= 2. The statement and the proof of Proposition 5.6 for these value s of
+nwill hold without further modiﬁcations.
+6.Proof of Theorem 1.1 for the paraboloid
+In this section we prove Theorem 1.1 for Pn−1. We ﬁrst consider the open range
+p >2(n+1)
+n−1, and in the end of the section we prove the result for the endpoint. We use
+notation from the previous section such as Kp,n(δ),Cp,n(δ,ν) andδ=N−1.
+Proposition 4.1 shows that Kp,n(δ)/lessorsimilarKp,n(δ1/2)2. Let .
+γ= liminf
+δ→0logKp,n(δ)
+log(δ−1).
+It follows that for each ǫ
+δ−γ/lessorsimilarKp,n(δ)/lessorsimilarǫδ−γ−ǫ.
+Writeγ=n−1
+4−n+1
+2p+α. We have to show that α= 0.
+The following multilinear restriction estimate from [3] will play a key role in our proof.
+Theorem 6.1. Letτ1,... τnbeν-transverse caps on Pn−1and assume /hatwidefiis supported on
+theδ-neighborhood of τi. Then we have
+/bardbl(n/productdisplay
+i=1|fi|)1/n/bardbl
+L2n
+n−1(BN)/lessorsimilarǫ,νN−1
+2+ǫ(n/productdisplay
+i=1/bardblfi/bardblL2)1/n.
+=== PAGE 24 ===
+24 JEAN BOURGAIN AND CIPRIAN DEMETER
+Using Plancherel’s identity this easily implies that
+Cp,n(δ,ν)/lessorsimilarǫ,νδ−ǫ
+forp=2n
+n−1. Combined with the Bourgain-Guth induction on scales this further le ads to
+Kp,n(δ)/lessorsimilarǫδ−ǫ
+for 2≤p≤2n
+n−1. These inequalities were proved in [11]. We will not rely on them in our
+argument below.
+We now present the ﬁrst step of our proof, which shows how to inte rpolate the /bardbl·/bardblp,δ
+norms.
+Proposition 6.2. Letτ1,... τnbeν-transverse caps on Pn−1and assume /hatwidefiis supported
+on theδ-neighborhood of τi. Then we have for each2n
+n−1≤p≤ ∞
+/bardbl(n/productdisplay
+i=1|fi|)1/n/bardblLp(BN)/lessorsimilarǫ,νNn−1
+4−n2+n
+2p(n−1)+ǫ(n/productdisplay
+i=1/bardblfi/bardblp(n−1)
+n,δ)1
+n, (35)
+and also
+/bardbl[n/productdisplay
+i=1(/summationdisplay
+θ∈Pδ|fi,θ|2)1/2]1/n/bardblLp(BN)/lessorsimilarǫ,νN−n
+(n−1)p+ǫ(n/productdisplay
+i=1/bardblfi/bardblp(n−1)
+n,δ)1/n. (36)
+ProofLet us start with the proof of (35). Let λn=Nn−1
+4andF= (/producttextn
+i=1|fi|)1/n. Note
+that by Cauchy-Schwartz we have
+/bardblF/bardbl∞≤λn(n/productdisplay
+i=1/bardblfi/bardbl∞,δ)1
+n.
+By combining this with Theorem 6.1 and H¨ older’s inequality we ﬁnd that
+/bardblF/bardblLp(BN)/lessorsimilarǫ,νλ1−2n
+(n−1)p
+nNǫ−n
+(n−1)p(n/productdisplay
+i=1(/bardblfi/bardbl2n
+(n−1)p
+2/bardblfi/bardbl1−2n
+(n−1)p
+∞,δ))1
+n. (37)
+Finally, to get (35), we use the wave packet decomposition and the f act that
+/bardblf/bardbl2n
+(n−1)p
+2/bardblf/bardbl1−2n
+(n−1)p
+∞,δ∼ /bardblf/bardblp(n−1)
+n,δ
+iffis a balanced N-function. We can assume /bardblfi/bardblp(n−1)
+n,δ= 1 for each i. Write like in
+Lemma 3.5
+fi=/summationdisplay
+λ/lessorsimilar/bardblfi/bardbl∞,δλfi,λ.
+We use the triangle inequality to estimate the left hand side of (35). I n the following C
+will denote a large enough constant depending on n,p. As/bardblfi,λ/bardbl∞/lessorsimilar1, we have that
+/bardblfi,λ/bardblLp(BN)≤NC.
+As the right hand side in (35) is /greaterorsimilarN−C, it follows that the contribution coming from
+λfi,λwithλ/lessorsimilarN−Cis well controlled.
+=== PAGE 25 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 25
+On the other hand, recall that by Bernstein’s inequality, /bardblfi/bardbl∞,δ/lessorsimilarNC. This shows
+that it suﬃces to consider O(logδ−1) many terms in the triangle inequality. Each of these
+terms is dealt with by using (37), Lemma 3.4 and (30).
+The proof of (36) is very similar. First, a randomization argument an d Theorem 6.1
+imply that
+/bardbl[n/productdisplay
+i=1(/summationdisplay
+θ∈Pδ|fi,θ|2)1/2]1/n/bardbl
+L2n
+n−1(BN)/lessorsimilarǫ,νN−1
+2+ǫ(n/productdisplay
+i=1/bardblfi/bardbl2)1/n.
+Combining this with the trivial inequality
+/bardbl[n/productdisplay
+i=1(/summationdisplay
+θ∈Pδ|fi,θ|2)1/2]1/n/bardblL∞(BN)≤(n/productdisplay
+i=1/bardblfi/bardbl∞,δ)1/n
+then with H¨ older’s inequality gives
+/bardbl[n/productdisplay
+i=1(/summationdisplay
+θ∈Pδ|fi,θ|2)1/2]1/n/bardblLp(BN)/lessorsimilarǫ,νN−n
+(n−1)p+ǫ(n/productdisplay
+i=1(/bardblf/bardbl2n
+(n−1)p
+2/bardblfi/bardbl1−2n
+(n−1)p
+∞,δ))1/n.
+Then (36) follows from interpolation, as explained before.
+At this point it is useful to introduce the local norms for g:Pn−1→Cand arbitrary
+ballsB
+/bardbl/hatwidestgdσ/bardblp,δ,B= (/summationdisplay
+θ:δ1/2−cap/bardbl/hatwidegθdσ/bardbl2
+Lp(wB))1/2.
+Fix2n
+n−1<p<∞. To simplify notation we also introduce the following quantities. First,
+deﬁne
+ξ=2
+(p−2)(n−1)andη=n(np−2n−p−2)
+2p(n−1)2(p−2).
+For a ﬁxed 0 ≤β≤1 consider the inequality
+/bardbl(n/productdisplay
+i=1|/hatwidestgidσ|)1/n/bardblLp(BN)/lessorsimilarǫ,νAβ(N)Nǫ(n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp,δ,BN)1−β
+n(n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp(n−1)
+n,δ,BN)β
+n,
+(38)
+for arbitrary ǫ>0,ν,N,giandBNas before.
+We prove the following result.
+Proposition 6.3. (a) Inequality (38)holds true for β= 1withA1(N) =Nn−1
+4−n2+n
+2p(n−1).
+(b) Moreover, if we assume (38)for someβ∈(0,1], then we also have (38)forβξwith
+Aβξ(N) =Aβ(N1/2)Nβη+γ
+2(1−βξ).
+ProofThe proof of (a) is an immediate consequence of Remark 5.2 and (35) . We next
+focus on proving (b). By using H¨ older’s inequality on the N1/2- ball ∆
+/bardbl/hatwidestgidσ/bardblp(n−1)
+n,δ1/2,∆≤ /bardbl/hatwidestgidσ/bardbl1−2
+(p−2)(n−1)
+p,δ1/2,∆/bardbl/hatwidestgidσ/bardbl2
+(p−2)(n−1)
+2,δ1/2,∆,
+we get
+/bardbl(n/productdisplay
+i=1|/hatwidestgidσ|)1/n/bardblLp(∆)/lessorsimilarǫ,νNǫAβ(N1/2)(n/productdisplay
+i=1(/bardbl/hatwidestgidσ/bardbl1−ξβ
+p,δ1/2,∆/bardbl/hatwidestgidσ/bardblξβ
+2,δ1/2,∆)1
+n.(39)
+=== PAGE 26 ===
+26 JEAN BOURGAIN AND CIPRIAN DEMETER
+Consider a ﬁnitely overlapping cover of BNwith balls ∆ of radius N1/2. Note that
+/bardbl(n/productdisplay
+i=1/hatwide|gidσ|)1/n/bardblLp(BN)/lessorsimilar(/summationdisplay
+∆/bardbl(n/productdisplay
+i=1|/hatwidestgidσ|)1/n/bardblp
+Lp(∆))1/p. (40)
+We will use (39) to bound each /bardbl(/producttextn
+i=1|/hatwidestgidσ|)1/n/bardblLp(∆). After raising to the pthpower,
+the right hand side of (39) is summed using H¨ older’s inequality
+/summationdisplay
+∆bξβp
+∆n/productdisplay
+i=1a1−ξβ
+np
+∆,i≤(/summationdisplay
+∆bp
+∆)ξβn/productdisplay
+i=1(/summationdisplay
+∆ap
+∆,i)1−ξβ
+n, (41)
+with
+a∆,i=/bardbl/hatwidestgidσ/bardblp,δ1
+2,∆
+and
+b∆= (n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp
+2,δ1
+2,∆)1
+np.
+To sum the factors ap
+∆,iwe invoke ﬁrst Minkowski’s inequality then Proposition 4.1 to
+get
+/summationdisplay
+∆/bardbl/hatwidestgidσ/bardblp
+p,δ1
+2,∆/lessorsimilar/bardbl/hatwidestgidσ/bardblp
+p,δ1
+2,BN/lessorsimilarKp,n(δ1/2)p/bardbl/hatwidestgidσ/bardblp
+p,δ,BN. (42)
+We next show how to sum the factors bp
+∆. Rather than using the n-linear H¨ older’s inequal-
+ity followed by Minkowski’s inequality as we did with the terms ap
+∆,i, we ﬁrst transform
+bp
+∆to make it amenable to another application of Theorem 6.1.
+To this end we recall the standard formalism (see e.g. sections 2-4 in [14]) that for each
+δ1/2-capθ,|/hatwidegθdσ|is essentially constant on each ∆. Thus, in particular it is easy to see
+that
+/summationdisplay
+∆⊂BNn/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp
+n
+p,δ,∆/lessorsimilar/summationdisplay
+∆⊂BN/bardbln/productdisplay
+i=1(/summationdisplay
+θ:δ1/2−cap
+θ⊂τi|/hatwidergi,θdσ|2)1
+2n/bardblp
+Lp(w∆)/lessorsimilar
+/lessorsimilar/bardbln/productdisplay
+i=1(/summationdisplay
+θ:δ1/2−cap
+θ⊂τi|/hatwidergi,θdσ|2)1
+2n/bardblp
+Lp(wBN). (43)
+Note also that by orthogonality followed by H¨ older’s inequality, for e ach ∆
+/bardbl/hatwidestgidσ/bardbl2,δ1
+2,∆/lessorsimilar/bardbl/hatwidestgidσ/bardbl2,δ,∆/lessorsimilarNn
+2(1
+2−1
+p)/bardbl/hatwidestgidσ/bardblp,δ,∆. (44)
+Now (44), (43) and (36) lead to
+/summationdisplay
+∆bp
+∆/lessorsimilarǫ,νN−n
+(n−1)+ǫNn
+2(p
+2−1)(n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardbl(n−1)p
+n,δ,BN)1/n. (45)
+To end the argument simply invoke estimates (40), (41), (42) and ( 45).
+We can now present the ﬁnal stage of the proof of Theorem 1.1 for p>2(n+1)
+n−1. Recall
+from the beginning of this section that this amounts to proving that α= 0. Since
+=== PAGE 27 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 27
+p>2(n+1)
+n−1we have that ξ <1
+2. We begin with a general discussion that applies in every
+dimensionn, and then conclude with an inductive argument.
+A simple computation reveals that the inequality α>0 is equivalent with
+γ1−ξ
+1−2ξ>n−1
+4−n2+n
+2p(n−1)+2η
+1−2ξ.
+It follows that if α>0 we can choose s0∈Nlarge enough and ǫ0small enough so that
+γ(1−ξ
+1−2ξ−ξ(2ξ)s0
+1−2ξ)>
+n−1
+4−n2+n
+2p(n−1)+2s0ǫ0+2η
+1−2ξ(1−(2ξ)s0)+n
+(n−1)p(2ξ)s0.(46)
+Choose now ν0>0 small enough such that ǫ0> ǫ(ν0), withǫ(ν0) as in Theorem 5.3.
+Note thats0,ǫ0andν0depend only on the ﬁxed parameters p,n,α. As a result, we follow
+our convention and do not record the dependence on them when us ing the symbol /lessorsimilar.
+Proposition 6.3 implies that for each s≥0
+Aξs(N) =Nψ(ξs)
+with
+ψ(ξs+1) =1
+2ψ(ξs)+γ
+2(1−ξs+1)+ηξs. (47)
+Iterating (47) gives
+ψ(ξs) =1
+2sψ(1)+γ(1−2−s)+2(η
+ξ−γ
+2)2−s−ξs
+ξ−1−2(48)
+Note that by H¨ older’s inequality
+(n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp(n−1)
+n,δ,BN)1
+n/lessorsimilar(n/productdisplay
+i=1/bardbl/hatwidestgidσ/bardblp,δ,BN)1
+nNn
+(n−1)p.
+Combining this with (38) for β=ξswe get
+Cp,n(δ,ν0)/lessorsimilarǫ,sδ−ǫAξs(N)Nnξs
+(n−1)p. (49)
+To ﬁnish the argument, we ﬁrst consider n= 2. Since (49) (with s=s0) holds for
+arbitrarily small δandǫ, using Theorem 5.3 we get
+γ−ǫ0≤ψ(ξs0)+nξs0
+(n−1)p. (50)
+Combining (48) and (50) we ﬁnd
+γ(1−ξ
+1−2ξ−ξ(2ξ)s0
+1−2ξ)≤ψ(1)+2s0ǫ0+2η
+1−2ξ(1−(2ξ)s0)+n
+(n−1)p(2ξ)s0,
+which contradicts (46), if α >0. Thusα= 0 and Theorem 1.1 is proved for n= 2 and
+p>6.
+=== PAGE 28 ===
+28 JEAN BOURGAIN AND CIPRIAN DEMETER
+The higher dimensional proof follows by induction. Assume that n≥3 and that
+Theorem 1.1 was proved for all 2 ≤d≤n−1 whenp>2(d+1)
+d−1. To prove Theorem 1.1 in
+Rnforp>2(n+1)
+n−1, it suﬃces to prove it for2(n+1)
+n−1<p<2n
+n−2. Note that in this range we
+havep <2(d+1)
+d−1for each 2 ≤d≤n−1 and thus Theorem 5.3 is applicable, due to the
+induction hypothesis. To ﬁnish the argument, one applies the same r easoning as in the
+casen= 2, to conclude that α>0 leads to as contradiction.
+It remains to see why Theorem 1.1 holds for the endpoint p=pn=2(n+1)
+n−1. Remark 5.2
+shows that it suﬃces to investigate the best constant in the localize d inequality
+/bardblf/bardblLp(BN)≤K(3)
+p,n(δ)(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+Lp(Rn))1/2, (51)
+for eachN-ballBN. It suﬃces now to invoke Theorem 1.1 for p>2(n+1)
+n−1together with
+/bardblf/bardblLpn(BN)/lessorsimilar/bardblf/bardblLp(BN)Nn
+pn−n
+p(by H¨ older’s inequality)
+/bardblfθ/bardblLp(Rn)/lessorsimilarNn+1
+2p−n+1
+2pn/bardblfθ/bardblLpn(Rn)(by Bernstein’s inequality) ,
+and then to let p→pn.
+7.Extension to other hypersurfaces
+LetSbe a compact C2hypersurface in Rnwith positive deﬁnite second fundamental
+form. Recall that we have proved Theorem 1.1 for Pn−1. By rescaling, the proof extends
+to elliptic paraboloids of the form
+{(ξ1,... ,ξn−1,θ1ξ2
+1+...+θn−1ξ2
+n−1)∈Rn:|ξi| ≤1/2},
+withθi∈[C−1,C]. The implicit bounds will of course depend on C >0.
+We now show how to extend the result in Theorem 1.1 to Sas above. It suﬃces to
+prove the result for p=2(n+1)
+n−1. We can assume that all the principal curvatures of Sare
+in [C−1,C].
+The following argument is sketched in [20] and was worked out in detail for conical
+surfaces in [27]. For δ <1, let as before Kp(δ) be the smallest constant such that for each
+fwith Fourier support in Nδwe have
+/bardblf/bardblp≤Kp(δ)(/summationdisplay
+θ∈Pδ/bardblfθ/bardbl2
+p)1/2.
+Fix such an f. First, note that
+/bardblf/bardblp≤Kp(δ2
+3)(/summationdisplay
+τ∈P
+δ2
+3/bardblfτ/bardbl2
+p)1/2.
+Second, our assumption on the principal curvatures of Scombined with Taylor’s formula
+shows that on each τ∈ Pδ2
+3,Sis withinδfrom a (subset of a) paraboloid with similar
+principal curvatures. By invoking Theorem 1.1 for this paraboloid we get
+/bardblfτ/bardblp/lessorsimilarǫδ−ǫ(/summationdisplay
+θ∈Pδ:θ⊂τ/bardblfθ/bardbl2
+p)1/2.
+=== PAGE 29 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 29
+For eachǫ>0, we conclude the existence of Cǫsuch that for each δ <1
+Kp(δ)≤Cǫδ−ǫKp(δ2
+3).
+By iteration this immediately leads to Kp(δ)/lessorsimilarǫδ−ǫ.
+8.Proof of Theorem 1.2
+To simplify notation we present the argument for n= 3. Deﬁne the extension operator
+ERg(x1,x2,x3) =/integraldisplay
+Rg(ξ1,ξ2)e(x1ξ1+x2ξ2+x3/radicalBig
+ξ2
+1+ξ2
+2)dξ1dξ2
+for a subset Rof the annulus
+A1={(ξ1,ξ2) : 1≤/radicalBig
+ξ2
+1+ξ2
+2≤2}.
+It will suﬃce to prove that
+/bardblEA1g/bardblL6(BN)/lessorsimilarǫNǫ(/summationdisplay
+S⊂A1/bardblESg/bardbl2
+L6(wBN))1/2, (52)
+wherethesumisoveratilingof A1intosectors Soflength1andaperture N−1/2. Theidea
+behind the proof is rather simple, we will apply the decoupling inequality from Theorem
+1.1 to the parabola ( ξ,ξ2
+2). The observation that makes this application possible is the
+fact that
+|(/radicalBig
+ξ2
+1+ξ2
+2−ξ1)−ξ2
+2
+2|
+is “small” if ξ1is “close” to 1 and ξ2is “close” to 0. It remains to quantify the meaning
+of “small” and “close”.
+The key step is the following partial decoupling for a “signiﬁcant” sub set of the cone.
+Proposition 8.1. Fixν,µ >0such that 2µ+ν≤1and2µ≥ν. Given intervals
+I⊂[1,2]andJ⊂(−π/2,π/2)of lengthsN−νandN−µrespectively, consider the sector
+S={(ξ1,ξ2) :/radicalBig
+ξ2
+1+ξ2
+2∈I,arctan(ξ2
+ξ1)∈J}
+of lengthN−νand aperture N−µ. We have for each ǫ>0
+/bardblESg/bardblL6(wBN)/lessorsimilarǫNνǫ(/summationdisplay
+S′⊂S/bardblES′g/bardbl2
+L6(wBN))1/2,
+where the sum runs over a tiling of Sinto sectors S′of lengthN−νand aperture ∼N−µ−ν
+2.
+ProofDue to rotational and radial symmetry it suﬃces to assume I= [1,1+N−ν] and
+J= [N−µ,2N−µ]. Moreover, we may also assume that ξ1>0, which implies in particular
+that
+|1−ξ1|/lessorsimilarN−ν,|ξ2
+2| ∼N−2µ.
+Note that for each function F=F(x1,x2,x3) we have
+/bardblF/bardblL6(wBN)∼1
+N1/3/bardbl/bardblF(x1−y3,x2+y2,x3+y3)/bardblL6y2,y3(w[−N,N]2)/bardblL6x1,x2,x3(wBN).
+(53)
+We apply this to
+F(x1,x2,x3) =ESg(x1,x2,x3).
+=== PAGE 30 ===
+30 JEAN BOURGAIN AND CIPRIAN DEMETER
+Fix (x1,x2,x3)∈BNand evaluate the inner L6norm in (53) using the change of variables
+(ξ1,ξ2)/ma√sto→(η,ξ2) := (/radicalBig
+ξ2
+1+ξ2
+2−ξ1,ξ2),
+whose Jacobian J(η,ξ2) is nonzero. We get
+/bardbl/integraldisplay
+Sg(ξ1,ξ2)e(x1ξ1+x2ξ2+x3/radicalBig
+ξ2
+1+ξ2
+2)e(y2ξ2+y3(/radicalBig
+ξ2
+1+ξ2
+2−ξ1))dξ1dξ2/bardblL6y2,y3(w[−N,N]2)
+=/bardbl/integraldisplay
+h(η,ξ2)e(y2ξ2+y3η)dηdξ2/bardblL6y2,y3(w[−N,N]2),
+for some appropriate function h. Note that if ( ξ1,ξ2)∈S
+|η−ξ2
+2
+2|=|ξ2
+2(ξ1+/radicalbig
+ξ2
+1+ξ2
+2−2)
+2(ξ1+/radicalbig
+ξ2
+1+ξ2
+2)|/lessorsimilarN−2µ−ν.
+It follows that the support of his inside the δ∼N−2µ−νneighborhood of the parabola
+{(ξ2
+2
+2,ξ2), ξ2∼N−µ}.
+We can now invoke the parabolic rescaling Proposition 4.1 and Theorem 1.1 withf=/hatwideh
+to conclude that
+/bardbl/integraldisplay
+h(η,ξ2)e(y2ξ2+y3η)dηdξ2/bardblL6y2,y3(w[−N,N]2)/lessorsimilarǫ
+Nǫν(/summationdisplay
+|H|=N−µ−ν
+2/bardbl/integraldisplay
+ξ2∈Hh(η,ξ2)e(y2ξ2+y3η)dηdξ2/bardbl2
+L6y2,y3(w[−N,N]2))1/2.
+The conclusion of our proposition follows now by changing back to the original variables,
+using Minkowski’s inequality and (53).
+By iterating this proposition we get the following result.
+Proposition 8.2. Fixν=1
+M, withM≥2an integer. Given intervals I⊂[1,2]and
+J⊂(−π/2,π/2)of lengthsN−νandN−ν
+2respectively, consider the sector
+S={(ξ1,ξ2) :/radicalBig
+ξ2
+1+ξ2
+2∈I,arctan(ξ2
+ξ1)∈J}
+of lengthN−νand aperture N−ν
+2. We have
+/bardblESg/bardblL6(BN)/lessorsimilarǫNǫ(/summationdisplay
+∆⊂S/bardblE∆g/bardbl2
+L6(wBN))1/2,
+where the sum runs over a tiling of Sinto sectors ∆of lengthN−νand aperture ∼N−1
+2.
+ProofApply repeatedly Proposition 8.1 with µ=µj=jν
+2staring with j= 1 until
+j=M−1.
+We are left with proving that inequality (52) follows from this proposit ion. First, note
+thatA1can be tiled using ∼N3ν
+2sectorsSof lengthN−νand aperture N−ν
+2. Call this
+=== PAGE 31 ===
+THE PROOF OF THE l2DECOUPLING CONJECTURE 31
+collection Lν. Thus, by using the Cauchy-Schwartz inequality and invoking the ab ove
+proposition, we get for arbitrary ǫ>0
+/bardblEA1g/bardblL6(BN)/lessorsimilarN3ν
+4(/summationdisplay
+S∈Lν/bardblESg/bardbl2
+L6(BN))1/2
+/lessorsimilarǫNǫ+3ν
+4(/summationdisplay
+∆⊂A1/bardblE∆g/bardbl2
+L6(wBN))1/2, (54)
+where the sum runs over a tiling of A1into sectors ∆ of length N−νand aperture ∼N−1
+2.
+We also observe the following easy inequality
+/bardblE∆g/bardblL6(wBN)/lessorsimilar/bardblES′g/bardblL6(wBN), (55)
+whereS′is the sector in A1of length 1 and aperture N−1/2containing ∆. Note that
+no curvature is involved in this estimate, as the N−1neighborhood of ∆ is essentially a
+rectangular parallelepiped. Since each such S′containsNνsectors ∆, we conclude by
+combining (54) and (55) that
+/bardblEA1g/bardblL6(BN)/lessorsimilarǫNǫ+3ν
+4+ν
+2(/summationdisplay
+S′⊂A1/bardblES′g/bardbl2
+L6(wBN))1/2.
+Inequality (52) now follows by choosing νappropriately small.
+References
+[1] Appelbaum, R. and Sharir, M. Repeated angles in three and four dimensions , SIAM J. Discrete
+Math. 19 (2005), no. 2, 294-300 (electronic)
+[2] B´ ekoll´ e, D; Bonami, A.; Garrig´ os, G. and Ricci, F. Littlewood-Paley decompositions related to sym-
+metric cones and Bergman projections in tube domains , Proc. London Math. Soc. (3) 89 (2004),
+317-360
+[3] Bennett, J., Carbery, A. and Tao, T. On the multilinear restriction and Kakeya conjectures Acta
+Math. 196 (2006), no. 2, 261-302
+[4] Boklan, K., D. The asymptotic formula in Waring’s problem Mathematika 41 (1994), no. 2, 329-347
+[5] Bombieri, E. and Iwaniec, H. On the order of ζ(1
+2+it) Ann. Scuola Norm. Sup. Pisa Cl. Sci. (4) 13
+(1986), no. 3, 449-472.
+[6] Bombieri, E. and Iwaniec, H. Some mean-value theorems for exponential sums Ann. Scuola Norm.
+Sup. Pisa Cl. Sci. (4) 13 (1986), no. 3, 473486
+[7] Bombieri, E. and Bourgain, J. A problem on sums of two squares , to appear in Internat. Math. Res.
+Notices
+[8] Bourgain, J. Eigenfunction bounds for the Laplacian on the n-torus , Internat. Math. Res. Notices
+(1993), no. 3, 61-66.
+[9] Bourgain, J. On Strichartzs inequalities and the nonlinear Schr¨ odinge r equation on irrational tori ,
+Mathematical aspects of nonlinear dispersive equations, 1-20, An n. of Math. Stud., 163, Princeton
+Univ. Press, Princeton, NJ, 2007
+[10] Bourgain, J. Fourier transform restriction phenomena for certain latti ce subsets and applications to
+nonlinear evolution equations. I. Schr¨ odinger equations , Geom. Funct. Anal. 3 (1993), no. 2, 107-156
+[11] Bourgain, J. Moment inequalities for trigonometric polynomials with sp ectrum in curved hypersur-
+faces, Israel J. Math. 193 (2013), no. 1, 441-458.
+[12] Bourgain, J. and Demeter, C. Improved estimates for the discrete Fourier restriction to the higher
+dimensional sphere , Illinois J. Math. 57 (2013), no. 1, 213-227
+[13] Bourgain, J. and Demeter, C. New bounds for the discrete Fourier restriction to the spher e in four
+and ﬁve dimensions , preprint available on arXiv, to appear in Internat. Math. Res. Not ices
+=== PAGE 32 ===
+32 JEAN BOURGAIN AND CIPRIAN DEMETER
+[14] Bourgain, J. and Guth, L. Bounds on oscillatory integral operators based on multilin ear estimates
+Geom. Funct. Anal. 21 (2011), no. 6, 1239-1295
+[15] de la Bret` eche, R. R´ epartition des points rationnels sur la cubique de Segre (French) [Distribution of
+rational points on Segre’s cubic] Proc. Lond. Math. Soc. (3) 95 (2 007), no. 1, 69-155
+[16] Carbery, A. and Valdimarsson, S. I. The endpoint multilinear Kakeya theorem via the Borsuk-Ula m
+theoremJ. Funct. Anal. 264 (2013), no. 7, 1643-1663
+[17] Catoire, F. and Wang, W.-M. Bounds on Sobolev norms for the defocusing nonlinear Schr¨ o dinger
+equation on general ﬂat tori , Commun. Pure Appl. Anal. 9 (2010), 483-491.
+[18] Demeter, C. Incidence theory and discrete restriction estimates , available at arXiv:1401.1873
+[19] Demirbas, S. Local well-posedness for 2-d Schr¨ odinger equation on irra tional tori and bounds on
+Sobolev norms , arXiv:1307.0051
+[20] Garrig´ os, G. and Seeger, A. A mixed norm variant of Wolﬀ’s inequality for paraboloids , Harmonic
+Analysis and Partial Diﬀerential Equations, Contemporary Mathem atics, vol. 505, Amer. Math.
+Soc., Providence, RI, 2010, pp. 179-197
+[21] Garrig´ os, G. and Seeger, A. On plate decompositions of cone multipliers Proc. Edinb. Math. Soc. (2)
+52 (2009), no. 3, 631-651
+[22] Greaves, G. Some Diophantine equations with almost all solutions trivi al, Mathematika 44 (1997),
+no. 1, 14-36
+[23] Guo, Z., Oh, T., Wang, Y. Strichartz estimates for Sch¨ odinger equations on irratio nal tori,
+arXiv:1306.4973
+[24] Guth, L. The endpoint case of the Bennett-Carbery-Tao multilinear K akeya conjecture , Acta Math.
+205 (2010), no. 2, 263-286
+[25] Jarn´ ık, V. ¨Uber die Gitterpunkte auf konvexen Kurven , Math. Z. 24 (1926), pp 500-518
+[26] Pach, J. and Sharir, M. Repeated angles in the plane and related problems , J. Combin. Theory Ser.
+A, 59 (1992), pp. 12-22.
+[27] Pramanik,M.andSeeger,A. Lpregularity of averages over curves and bounds for associate d maximal
+operators , Amer. J. Math. 129 (2007), no. 1, 61-103
+[28] Robert, O. and Sargos, P. Un th´ eor` eme de moyenne pour les sommes d’exponentielles. Application
+l’in´ egalit´ e de Weyl. (French) [A mean value theorem for exponential sums. Application to the Weyl
+inequality] Publ. Inst. Math. (Beograd) (N.S.) 67(81) (2000), 14- 30
+[29] Skinner, C. M. and Wooley, T. D. On the paucity of non-diagonal solutions in certain diagona l
+Diophantine systems Quart. J. Math. Oxford Ser. (2) 48 (1997), no. 190, 255-277
+[30] Sogge, C. Propagation of singularities and maximal functions in the p lane, Invent. Math. 104 (1991),
+349-376
+[31] Szemer´ edi, E. and Trotter, W. T. Jr. Extremal problems in discrete geometry , Combinatorica 3
+(1983), no. 3-4, 381-392
+[32] Tao, T. and Vu, V. Additive combinatorics , Cambridge Studies in Advanced Mathematics, 105.
+Cambridge University Press, Cambridge, 2006. xviii+512 pp.
+[33] Tao, T. A sharp bilinear restriction estimate for paraboloids , Geom. Funct. Anal. 13 (2003), no. 6,
+1359-1384
+[34] Tomas, P. A. A restriction theorem for the Fourier transform. Bull. Amer. Math. Soc. 81 (1975),
+477-478
+[35] Vaughan, R. C.; Wooley, T. D. On a certain nonary cubic form and related equations , Duke Math.
+J. 80 (1995), no. 3, 669-735
+[36] Wolﬀ, T. Local smoothing type estimates on Lpfor large p, Geom. Funct. Anal. 10 (2000), no. 5,
+1237-1288
+School of Mathematics, Institute for Advanced Study, Princ eton, NJ 08540
+E-mail address :bourgain@math.ias.edu
+Department of Mathematics, Indiana University, 831 East 3r d St., Bloomington IN
+47405
+E-mail address :demeterc@indiana.edu

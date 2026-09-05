@@ -1,0 +1,1828 @@
+=== PAGE 1 ===
+arXiv:2006.07088v1  [math.NT]  12 Jun 2020PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE
+MODULI II: WELL-FACTORABLE ESTIMATES
+JAMES MAYNARD
+Abstract. We establish newmean value theorems forprimesofsize xinarith-
+metic progressions to moduli as large as x3/5−ǫwhen summed with suitably
+well-factorable weights. This extends well-known work of B ombieri, Fried-
+lander and Iwaniec, who handled moduli of size at most x4/7−ǫ. This has
+consequences for the level of distribution for sieve weight s coming from the
+linear sieve.
+1.Introduction
+The Bombieri-Vinogradov Theorem [1, 17] states that for every A >0 andB=
+B(A) suﬃciently large in terms of Awe have
+(1.1)/summationdisplay
+q≤x1/2/(logx)Bsup
+(a,q)=1/vextendsingle/vextendsingle/vextendsingleπ(x;q,a)−π(x)
+φ(q)/vextendsingle/vextendsingle/vextendsingle≪Ax
+(logx)A,
+whereπ(x) is the number of primes less than x, andπ(x;q,a) is the number of
+primes less than xcongruent to a(modq). This implies that primes of size xare
+roughly equidistributed in residue classes to moduli of size up to x1/2−ǫ, on average
+over the moduli. For many applications in analytic number theory (par ticularly
+sievemethods) this estimateisveryimportant, andservesasanad equatesubstitute
+for the Generalized Riemann Hypothesis (which would imply a similar stat ement
+for each individual arithmetic progression).
+We believe that one should be able to improve (1.1) to allow for larger mo duli, but
+unfortunately we do not know how to establish (1.1) with the summat ion extended
+toq≤x1/2+δfor any ﬁxed δ >0. The Elliott-Halberstam Conjecture [7] is the
+strongest statement of this type, and asserts that for any ǫ,A>0
+(1.2)/summationdisplay
+q≤x1−ǫsup
+(a,q)=1/vextendsingle/vextendsingle/vextendsingleπ(x;q,a)−π(x)
+φ(q)/vextendsingle/vextendsingle/vextendsingle≪ǫ,Ax
+(logx)A.
+Quantitatively stronger variants of (1.1) such as (1.2) would natur ally give quanti-
+tatively stronger estimates of various quantities in analytic number theory relying
+on (1.1).
+In many applications, particularly those coming from sieve methods, one does not
+quite need to have the full strength of an estimate of the type (1.1 ). It is often
+suﬃcient to measure the diﬀerence between π(x;q,a) andπ(x)/φ(q) only for a
+ﬁxed bounded integer a(such asa= 1 ora= 2) rather than taking the worst
+residue class in each arithmetic progression. Moreover, it is also oft en suﬃcient
+to measure the diﬀerence between π(x;q,a) andπ(x)/φ(q) with ‘well-factorable’
+1
+=== PAGE 2 ===
+2 JAMES MAYNARD
+weights (which naturally appear in sieve problems) rather than abso lute values.
+With these technicalweakeningswe canproduceestimates analogousto (1.1) which
+involve moduli larger than x1/2. Formally, we deﬁne ‘well-factorable’ weights as
+follows.
+Deﬁnition 1 (Well factorable) .LetQ∈R. We say a sequence λqiswell fac-
+torable of level Qif, for any choice of factorization Q=Q1Q2withQ1,Q2≥1,
+there exist two sequences γ(1)
+q1,γ(2)
+q2such that:
+(1)|γ(1)
+q1|,|γ(2)
+q2| ≤1for allq1,q2.
+(2)γ(i)
+qis supported on 1≤q≤Qifori∈ {1,2}.
+(3) We have
+λq=/summationdisplay
+q=q1q2γ(1)
+q1γ(2)
+q2.
+The following celebrated result of Bombieri-Friedlander-Iwaniec [2, T heorem 10]
+then gives a bound allowing for moduli as large as x4/7−ǫin this setting.
+Theorem A (Bombieri, Friedlander, Iwaniec) .Leta∈ZandA,ǫ>0. Letλqbe
+a sequence which is well-factorable of level Q≤x4/7−ǫ. Then we have
+/summationdisplay
+q≤Q
+(q,a)=1λq/parenleftBig
+π(x;q,a)−π(x)
+φ(q)/parenrightBig
+≪a,A,ǫx
+(logx)A.
+In this paper we consider weights satisfying a slightly stronger cond ition of being
+‘triply well factorable’. For these weights we can improve on the rang e of moduli.
+Deﬁnition 2 (Triply well factorable) .LetQ∈R. We say a sequence λqistriply
+well factorable of level Qif, for any choice of factorization Q=Q1Q2Q3with
+Q1,Q2,Q3≥1, there exist three sequences γ(1)
+q1,γ(2)
+q2,γ(3)
+q3such that:
+(1)|γ(1)
+q1|,|γ(2)
+q2|,|γ(3)
+q3| ≤1for allq1,q2,q3.
+(2)γ(i)
+qis supported on 1≤q≤Qifori∈ {1,2,3}.
+(3) We have
+λq=/summationdisplay
+q=q1q2q3γ(1)
+q1γ(2)
+q2γ(3)
+q3.
+With this deﬁnition, we are able to state our main result.
+Theorem 1.1. Leta∈ZandA,ǫ >0. Letλqbe triply well factorable of level
+Q≤x3/5−ǫ. Then we have
+/summationdisplay
+q≤Q
+(a,q)=1λq/parenleftBig
+π(x;q,a)−π(x)
+φ(q)/parenrightBig
+≪a,A,ǫx
+(logx)A.
+The main point of this theorem is the quantitative improvement over T heorem A
+allowing us to handle moduli as large as x3/5−ǫ(instead of x4/7−ǫ). Theorem 1.1
+has the disadvantage that it has a stronger requirement that the weights be triply
+well factorable rather than merely well-factorable, but we expect that Theorem 1.1
+=== PAGE 3 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 3
+(or the ideas underlying it) will enable us to obtain quantitative improv ements to
+several problems in analytic number theory where the best estimat es currently rely
+on Theorem A.
+It appears that handling moduli of size x3/5−ǫis the limit ofthe current method. In
+particular, there appears to be no further beneﬁt of imposing str onger constraints
+on the coeﬃcients such as being ‘quadruply well factorable’.
+As mentioned above, the main applications of such results come when using sieves.
+Standard sieve weights are not well-factorable (and so not triply we ll factorable),
+but Iwaniec [14] showed that a slight variant of the upper bound β-sieve weights of
+levelD(which producesessentiallyidenticalresultstothe standard β-sieveweights)
+is a linear combination of sequences which are well-factorable of level Dprovided
+β≥1. In particular, Theorem A applies to the factorable variant of the upper
+bound sieve weights for the linear ( β= 1) sieve, for example.
+The factorable variant of the β-sieve weights of level Dare a linear combination
+of triply well factorable sequences of level Dprovidedβ≥2, and so Theorem 1.1
+automatically applies to these weights. Unfortunately it is the linear ( β= 1) sieve
+weights which are most important for many applications, and these a re not triply
+well factorable of level D(despite essentially being well-factorable). Despite this,
+the linearsieveweightshavegoodfactorizationproperties, andtu rns out that linear
+sieve weightsof level x7/12are veryclose to being triply well factorable oflevel x3/5.
+In particular, we have the following result.
+Theorem 1.2. Leta∈ZandA,ǫ>0. Letλ+
+dbe the well-factorable upper bound
+sieve weights for the linear sieve of level D≤x7/12−ǫ. Then we have
+/summationdisplay
+q≤x7/12−ǫ
+(q,a)=1λ+
+q/parenleftBig
+π(x;q,a)−π(x)
+φ(q)/parenrightBig
+≪a,A,ǫx
+(logx)A.
+This enables us to get good savings for the error term weighted by t he linear sieve
+for larger moduli than was previously known. In particular, Theore m 1.2 extends
+the range of moduli we are able to handle from the from the Bombieri- Friedlander-
+Iwaniecresult[2, Theorem10]handlingmoduliofsize x4/7−ǫtodealingwithmoduli
+of sizex7/12−ǫ.
+It is likely Theorem 1.2 directly improves several results based on siev es. It doesn’t
+directly improve upon estimates such as the upper bound for the nu mber of twin
+primes, but we expect the underlying methods to give a suitable impro vement for
+several such applications when combined with technique such as Che n’s switching
+principle or Harman’s sieve (see [12, 4, 8, 9, 18]). We intend to addres s this and
+related results in future work. Moreover, we expect that there a re other upper
+bound sieves closely related to the linear sieve which are much closer t o triply well
+factorable, and so we expect technical variants of Theorem 1.2 ad apted to these
+sieve weights to give additional improvements.
+Remark. Drappeau [6]proved equidistribution for smooth numbers in arithmetic
+progressions to moduli x3/5−ǫ. The advantage of ﬂexible factorizations of smooth
+numbers allows one to use the most eﬃcient estimates on convo lutions (but one
+has to overcome additional diﬃculties in secondary main ter ms). Since our work
+=== PAGE 4 ===
+4 JAMES MAYNARD
+essentially reduces to the original estimates of Bombieri– Friedlander–Iwaniec in
+these cases, it provides no beneﬁt in this setting, but parti ally explains why we have
+the same limitiation of x3/5−ǫ.
+2.Proof outline
+The proof of Theorem 1.1 is a generalization of the method used to pr ove The-
+orem A, and essentially includes the proof of Theorem A as a special c ase. As
+with previous approaches, we use a combinatorial decomposition fo r the primes
+(Heath-Brown’s identity) to reduce the problem to estimating bilinea r quantities in
+arithmetic progressions. By Fourier expansion and several interm ediate manipula-
+tions this reduces to estimating certain multidimensional exponentia l sums, which
+are ultimately bounded using the work of Deshouillers-Iwaniec [5] co ming from the
+spectral theory of automorphic forms via the Kuznetsov trace f ormula.
+To obtain an improvement over the previous works we exploit the add itional ﬂexi-
+bility of factorizations of the moduli to beneﬁt from the fact that n ow the weights
+can be factored into three pieces rather than two. This gives us en ough room to
+balance the sums appearing from diagonal and oﬀ-diagonal terms p erfectly in a
+wide range.
+More speciﬁcally, let us recall the main ideas behind Theorem A. A comb inatorial
+decomposition leaves us to estimate for various ranges of N,M,Q,R
+/summationdisplay
+q∼Qγq/summationdisplay
+r∼Rλr/summationdisplay
+m∼Mβm/summationdisplay
+n∼Nαn/parenleftBig
+1nm≡a(modqr)−1(nm,qr)=1
+φ(qr)/parenrightBig
+,
+for essentially arbitrary 1-bounded sequences γq,λr,βm,αn. Applying Cauchy-
+Schwarz in the m,qvariables and then Fourier expanding the m-summation and
+using Bezout’s identity reduces this to bounding something like
+/summationdisplay
+q∼Q/summationdisplay
+n1,n2∼N
+n1≡n2(modq)αn1αn2/summationdisplay
+r1,r2∼Rλr1λr2/summationdisplay
+h∼He/parenleftBigahn2qr1(n1−n2)
+n1r2/parenrightBig
+,
+whereH≈NQR2/x. Writingn1−n2=qfand switching the q-summation to an
+f-summation, then applying Cauchy-Schwarz in the n1,n2,f,r2variables leaves us
+to bound/summationdisplay
+f∼N/Q/summationdisplay
+n1,n2∼N
+n1≡n2(modf)/summationdisplay
+r2∼R/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+r1∼Rγr1/summationdisplay
+h∼He/parenleftBigahfr1n2
+n1r2/parenrightBig/vextendsingle/vextendsingle/vextendsingle2
+.
+Bombieri-Friedlander-Iwaniec then drop the congruence condition onn1,n2, com-
+binen1,r2into a new variable cand then estimate the resulting exponential sums
+via the bounds of Deshouillers-Iwaniec. This involves applying the Kuz netsov trace
+formula for the congruence subgroup Γ 0(r1r′
+1). This is a large level (of size R2),
+which means that the resulting bounds deteriorate rapidly with R. We make use
+of the fact that if the moduli factorize suitably, then we can reduc e this level at the
+cost of worsening the diagonal terms slightly.
+In particular, if the above λrcoeﬃcients were of the form κs⋆νt, then instead we
+could apply the ﬁnal Cauchy-Schwarz in f,n1,n2,r2ands1, leaving us instead to
+=== PAGE 5 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 5
+bound/summationdisplay
+f∼N/Q/summationdisplay
+n1,n2∼N
+n1≡n2(modf)/summationdisplay
+r2∼R/summationdisplay
+s1∼S/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+t1∼Tνt1/summationdisplay
+h∼He/parenleftBigahfs1t1n2
+n1r2/parenrightBig/vextendsingle/vextendsingle/vextendsingle2
+.
+(HereST≈R). Here we have increased the diagonal contribution by a factor S,
+but now the level of the relevant congruence subgroup has dropp ed fromR2toT2.
+By dropping the congruence condition, combining c=n1r2andd=n2s1, we can
+then apply the Deshouillers-Iwaniec estimates in a more eﬃcient mann er, giving
+an additional saving over the previous approach in all the important regimes. This
+ultimately allows us to handle moduli as large as x3/5−ǫin Theorem 1.1. On its
+own this approach doesn’t quite cover all relevant ranges for N, but combining it
+with known estimates for the divisor function in arithmetic progress ions (based on
+the Weil bound) allows us to cover the remaining ranges.
+We view the main interest of Theorem 1.1 and Theorem 1.2 as their applic ability
+to sieve problems. It is therefore unfortunate that Theorem 1.1 d oesn’t apply
+directly to the (well-factorable variant of the) linear sieve weights. To overcome
+this limitation, it is therefore necessary for us to exploit the fact th at our main
+technical result on convolutions (Proposition 8.2) actually gives a st ronger estimate
+thanwhatiscapturedbyTheorem1.1. Moreover,itisnecessaryto studytheprecise
+construction of the linear sieve weights to show that they enjoy go od factorization
+properties. Indeed, we recall the support set for the upper bou nd linear sieve
+weights of level Dis
+D+(D) =/braceleftBig
+p1···pr:p1≥p2≥ ··· ≥pr, p1···p2jp3
+2j+1≤Dfor 0≤j <r/2/bracerightBig
+.
+Ifp1···pris close toD, we must have the most of the pi’s are very small, and so
+the weights are supported on very well factorable numbers. It is o nly really the
+largest few prime factors piwhich obstruct ﬁnding factors in given ranges, and so
+by explicitly handling them we can exploit this structure much more fully .
+Proposition 9.1 is a technical combinatorial proposition showing that the the linear
+sieve weights enjoy rather stronger factorization properties th at simply what is
+captured through being well-factorable. Although these are not s uﬃcient for triple
+well-factorability, they are suﬃcient for our more technical condit ions coming from
+Proposition 8.2. This ultimately leads to Theorem 1.2.
+3.Acknowledgements
+I would like to thank John Friedlander, Ben Green, Henryk Iwaniec an d Kyle Pratt
+for useful discussions and suggestions. JM is supported by a Roya l Society Wolfson
+Merit Award, and this project has received funding from the Europ ean Research
+Council (ERC) under the European Unions Horizon 2020 research a nd innovation
+programme (grant agreement No 851318).
+4.Notation
+We will use the Vinogradov ≪and≫asymptotic notation, and the big oh O(·)
+ando(·) asymptotic notation. f≍gwill denote the conditions f≪gandg≪f
+=== PAGE 6 ===
+6 JAMES MAYNARD
+both hold. Dependence on a parameter will be denoted by a subscrip t. We will
+viewa(the residue class (mod q)) as a ﬁxed positive integer throughout the paper,
+and any constants implied by asymptotic notation will be allowed to dep end ona
+from this point onwards. Similarly, throughout the paper, we will let ǫbe a single
+ﬁxed small real number; ǫ= 10−100would probably suﬃce. Any bounds in our
+asymptotic notation will also be allowed to depend on ǫ.
+The letter pwill always be reserved to denote a prime number. We use φto
+denote the Euler totient function, e(x) :=e2πixthe complex exponential, τk(n) the
+k-fold divisor function, µ(n) the M¨ obius function. We let P−(n),P+(n) denote
+the smallest and largest prime factors of nrespectively, and /hatwidefdenote the Fourier
+transform of foverR- i.e./hatwidef(ξ) =/integraltext∞
+−∞f(t)e(−ξt)dt. We use 1to denote the
+indicator function of a statement. For example,
+1n≡a(modq)=/braceleftBigg
+1,ifn≡a(modq),
+0,otherwise.
+For (n,q) = 1, we will use nto denote the inverse of the integer nmoduloq; the
+modulus will be clear from the context. For example, we may write e(an/q) - here
+nis interpreted as the integer m∈ {0,...,q−1}such thatmn≡1 (modq).
+Occasionally we will also use λto denote complex conjugation; the distinction of
+the usage should be clear from the context. For a complex sequenc eαn1,...,nk,/bardblα/bardbl2
+will denote the ℓ2norm/bardblα/bardbl2= (/summationtext
+n1,...,nk|αn1,...,nk|2)1/2.
+Summations assumed to be over all positive integers unless noted ot herwise. We
+use the notation n∼Nto denote the conditions N <n≤2N.
+We will let z0:=x1/(loglog x)3andy0:=x1/loglogxtwo parameters depending on
+x, which we will think of as a large quantity. We will let ψ0:R→Rdenote a
+ﬁxed smooth function supported on [1 /2,5/2] which is identically equal to 1 on the
+interval [1,2] and satisﬁes the derivative bounds /bardblψ(j)
+0/bardbl∞≪(4jj!)2for allj≥0.
+(See [3, Page 368, Corollary] for the construction of such a funct ion.)
+We will repeatedly make use of the following condition.
+Deﬁnition 3 (Siegel-Walﬁsz condition) .We say that a complex sequence αnsat-
+isﬁes the Siegel-Walﬁsz condition if for every d≥1,q≥1and(a,q) = 1and
+everyA>1we have
+(4.1)/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∼N
+n≡a(modq)
+(n,d)=1αn−1
+φ(q)/summationdisplay
+n∼N
+(n,dq)=1αn/vextendsingle/vextendsingle/vextendsingle≪ANτ(d)O(1)
+(logN)A.
+We note that αnsatisﬁes the Siegel-Walﬁsz condition if αn= 1 or ifαn=µ(n).
+5.Proof of Theorem 1.1
+In this section we establish Theorem 1.1 assuming two propositions, n amely Propo-
+sition 5.1 and Proposition 5.2, given below.
+=== PAGE 7 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 7
+Proposition5.1 (Well-factorableTypeIIestimate) .Letλqbe triply well factorable
+of levelQ≤x3/5−10ǫ, letNM≍xwith
+xǫ≤N≤x2/5.
+Letαn,βmbe complex sequences such that |αn|,|βn| ≤τ(n)B0andαnsatisﬁes the
+Siegel-Walﬁsz condition (4.1)and is supported on P−(n)≥z0. Then we have that
+for every choice of A>0and every interval I ⊆[x,2x]
+/summationdisplay
+q≤Qλq/summationdisplay
+n∼Nαn/summationdisplay
+m∼M
+mn∈Iβm/parenleftBig
+1nm≡a(modq)−1(nm,q)=1
+φ(q)/parenrightBig
+≪A,B0x
+(logx)A.
+Proposition 5.1 is our key new ingredient behind the proof, and will be e stablished
+in Section 8.
+Proposition 5.2 (Divisor function in arithmetic progressions) .LetN1,N2≥x3ǫ
+andN1N2M≍xand
+Q≤/parenleftBigx
+M/parenrightBig2/3−3ǫ
+.
+LetI ⊂[x,2x]be an interval, and let αma complex sequence with |αm| ≤τ(m)B0.
+Then we have that for every A>0
+/summationdisplay
+q∼Q/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n1∼N1
+P−(n)≥z0/summationdisplay
+n2∼N2
+P−(n)≥z0/summationdisplay
+m∼M
+mn1n2∈Iαm/parenleftBig
+1mn1n2≡a(modq)−1(mn1n2,q)=1
+φ(q)/parenrightBig/vextendsingle/vextendsingle/vextendsingle≪A,B0x
+(logx)A.
+Moreover, the same result holds when the summand is multipli ed bylogn1.
+Proposition 5.2 is essentially a known result (due to independent unpu blished work
+of Selberg and Hooley, but following quickly from the Weil bound for Klo osterman
+sums), but for concreteness we give a proof in Section 7.
+Finally, we require a suitable combinatorial decomposition of the prime s.
+Lemma 5.3 (Heath-Brown identity) .Letk≥1andn≤2x. Then we have
+Λ(n) =k/summationdisplay
+j=1(−1)j/parenleftbiggk
+j/parenrightbigg/summationdisplay
+n=n1···njm1···mj
+m1,...,m j≤2x1/kµ(m1)···µ(mj)logn1.
+Proof.See [13]. /square
+Lemma 5.4 (Consequence of the fundamental lemma of the sieve) .Letq,t,x≥2
+satisfyqxǫ≤tand let(b,q) = 1. Recallz0=x1/(loglog x)3. Then we have
+/summationdisplay
+n≤t
+n≡b(modq)
+P−(n)≥z01 =1
+φ(q)/summationdisplay
+n≤t
+P−(n)≥z01+OA/parenleftBigt
+q(logx)A/parenrightBig
+.
+Proof.This is an immediate consequence of the fundamental lemma of sieve m eth-
+ods - see, for example, [11, Theorem 6.12]. /square
+=== PAGE 8 ===
+8 JAMES MAYNARD
+Proof of Theorem 1.1 assuming Proposition 5.1 and 5.2. Bypartialsummation(not-
+ingthatprimepowerscontributenegligiblyandretainingtheconditon P−(n)≥z0),
+it suﬃces to show that for all t∈[x,2x]
+/summationdisplay
+q≤x3/5−ǫλq/summationdisplay
+x≤n≤t
+P−(n)≥z0Λ(n)/parenleftBig
+1n≡a(modq)−1(n,q)=1
+φ(q)/parenrightBig
+≪Ax
+(logx)A.
+We now apply Lemma 5.3with k= 3 to expand Λ( n) into varioussubsums, and put
+each variableinto one of O(log6x) dyadic intervals. Thus it suﬃces to show that for
+all choices of N1,N2,N3,M1,M2,M3withM1M2M3N1N2N3≍xandMi≤x1/3
+we have
+/summationdisplay
+q≤x3/5−ǫλq/summationdisplay
+m1,m2,m3,n1,n2,n3
+ni∼Ni∀i
+mi∼Mi∀i
+x≤n≤t
+P−(ni),P−(mi)≥z0∀iµ(m1)µ(m2)µ(m3)(logn1)/parenleftBig
+1n≡a(modq)−1(n,q)=1
+φ(q)/parenrightBig
+≪Ax
+(logx)A+6,
+wherewehavewritten n=n1n2n3m1m2m3intheexpressionaboveforconvenience.
+By grouping all but one variable together, Proposition 5.1 gives this if any of
+theNiorMilie in the interval [ xǫ,x2/5], and so we may assume all are either
+smaller than xǫor larger than x2/5. SinceMi≤x1/3≤x2/5, we may assume that
+M1,M2,M3≤xǫ. There can be at most two of the Ni’s which are larger than x2/5
+sinceM1M2M3N1N2N3≍x.
+Ifonlyoneofthe Ni’saregreaterthan x2/5thentheymustbeofsize ≫x1−5ǫ>xǫq,
+and so the result is trivial by summing over this variable ﬁrst and using Lemma
+5.4.
+If two of the Ni’s are larger than x2/5and all the other variables are less than xǫ,
+then the result follows immediately from Proposition 5.2. This gives the result./square
+To complete the proof of Theorem 1.1, we are left to establish Propo sitions 5.1 and
+5.2, which we will ultimately do in Sections 8 and 7 respectively.
+6.Preparatory lemmas
+Lemma 6.1 (Divisor function bounds) .Let|b|< x−yandy≥qxǫ. Then we
+have/summationdisplay
+x−y≤n≤x
+n≡a(modq)τ(n)Cτ(n−b)C≪y
+q(τ(q)logx)OC(1).
+Proof.This follows from Shiu’s Theorem [16], and is given in [15, Lemma 7.7]. /square
+Lemma 6.2 (Separation of variables from inequalities) .LetQ1Q2≤x1−ǫ. Let
+N1,...,N r≥z0satisfyN1···Nr≍x. Letαn1,...,nrbe a complex sequence with
+|αn1,...,nr| ≤(τ(n1)···τ(nr))B0. Then, for any choice of A>0there is a constant
+=== PAGE 9 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 9
+C=C(A,B0,r)and intervals I1,...,IrwithIj⊆[Pj,2Pj]of length ≤Pj(logx)−C
+such that/summationdisplay
+q1∼Q1/summationdisplay
+q2∼Q2
+(q1q2,a)=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay∗
+n1,...,nr
+ni∼Ni∀iαn1,...,nrSn1···nr/vextendsingle/vextendsingle/vextendsingle
+≪rx
+(logx)A+(logx)rC/summationdisplay
+q1∼Q1/summationdisplay
+q2∼Q2
+(q1q2,a)=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n1,...,nr
+ni∈Ii∀iαn1,...,nrSn1···nr/vextendsingle/vextendsingle/vextendsingle.
+Here/summationtext∗means that the summation is restricted to O(1)inequalities of the form
+nα1
+1···nαrr≤Bfor some constants α1,...αrand some quantity B. The implied
+constant may depend on all such exponents αi, but none of the quantities B.
+Proof.This is [15, Lemma 7.10]. /square
+Lemma 6.3 (Poisson Summation) .LetC >0andf:R→Rbe a smooth function
+which is supported on [−10,10]and satisﬁes /bardblf(j)/bardbl∞≪j(logx)jCfor allj≥0,
+and letM,q≤x. Then we have
+/summationdisplay
+m≡a(modq)f/parenleftBigm
+M/parenrightBig
+=M
+q/hatwidef(0)+M
+q/summationdisplay
+1≤|h|≤H/hatwidef/parenleftBighM
+q/parenrightBig
+e/parenleftBigah
+q/parenrightBig
++OC(x−100),
+for any choice of H >qxǫ/M.
+Proof.This follows from [15, Lemma 12.4]. /square
+Lemma 6.4 (Summation with coprimality constraint) .LetC >0andf:R→R
+be a smooth function which is supported on [−10,10]and satisﬁes /bardblf(j)/bardbl∞≪j
+(logx)jCfor allj≥0. Then we have
+/summationdisplay
+(m,q)=1f/parenleftBigm
+M/parenrightBig
+=φ(q)
+qM+O(τ(q)(logx)2C).
+Proof.This is [15, Lemma 12.6]. /square
+Lemma 6.5. LetC,B >0be constants and let αnbe a sequence satisﬁng the
+Siegel-Walﬁsz condition (4.1), supported on n≤2xwithP−(n)≥z0=x1/(loglog x)3
+and satisfying |αn| ≤τ(n)B. Then1τ(n)≤(logx)Cαnalso satisﬁes the Siegel-Walﬁsz
+condition.
+Proof.This is [15, Lemma 12.7]. /square
+Lemma 6.6 (Most moduli have small square-full part) .Letγb,cqbe complex se-
+quences satisfying |γb|,|cb| ≤τ(b)B0and recallz0:=x1/(loglog x)3. Letsq(n)denote
+the square-full part of n. (i.e.sq(n) =/producttext
+p:p2|npνp(n)). Then for every A >0we
+have that
+/summationdisplay
+q∼Q
+sq(q)≥z0cq/summationdisplay
+b≤Bγb/parenleftBig
+1b≡a(modq)−1(b,q)=1
+φ(q)/parenrightBig
+≪A,B0x
+(logx)A.
+Proof.This is [15, Lemma 12.9]. /square
+=== PAGE 10 ===
+10 JAMES MAYNARD
+Lemma 6.7 (Most moduli have small z0-smooth part) .LetQ < x1−ǫ. Letγb,cq
+be complex sequences with |γb|,|cb| ≤τ(n)B0and recallz0:=x1/(loglog x)3and
+y0:=x1/loglogx. Letsm(n;z)denote the z-smooth part of n. (i.e.sm(n;z) =/producttext
+p≤zpνp(n)). Then for every A>0we have that
+/summationdisplay
+q∼Q
+sm(q;z0)≥y0cq/summationdisplay
+b≤xγb/parenleftBig
+1b≡a(modq)−1(b,q)=1
+φ(q)/parenrightBig
+≪A,B0x
+(logx)A.
+Proof.This is [15, Lemma 12.10]. /square
+Proposition 6.8 (Reduction to exponential sums) .Letαn,βm,γq,d,λq,d,rbe com-
+plex sequences with |αn|,|βn| ≤τ(n)B0and|γq,d| ≤τ(qd)B0and|λq,d,r| ≤τ(qdr)B0.
+Letαnandλq,d,rbe supported on integers with P−(n)≥z0andP−(r)≥z0, and
+letαnsatisfy the Siegel-Walﬁsz condition (4.1). Let
+S:=/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+q∼Q
+(q,a)=1/summationdisplay
+r∼R
+(r,a)=1λq,d,rγq,d/summationdisplay
+m∼Mβm/summationdisplay
+n∼Nαn/parenleftBig
+1mn≡a(modqrd)−1(mn,qrd )=1
+φ(qrd)/parenrightBig
+.
+LetA>0andC=C(A,B0)be suﬃciently large in terms of A,B0, and letN,M
+satisfy
+N >QD (logx)C, M > (logx)C.
+Then we have
+|S| ≪A,B0x
+(logx)A+MD1/2Q1/2(logx)OB0(1)/parenleftBig
+|E1|1/2+|E2|1/2/parenrightBig
+,
+where
+E1:=/summationdisplay
+q
+(q,a)=1/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+r1,r2∼R
+(r1r2,a)=1ψ0/parenleftBigq
+Q/parenrightBigλq,d,r1λq,d,r2
+φ(qdr2)qdr1/summationdisplay
+n1,n2∼N
+(n1,qdr1)=1
+(n2,qdr2)=1αn1αn2
+×/summationdisplay
+1≤|h|≤H1/hatwideψ0/parenleftBighM
+qdr1/parenrightBig
+e/parenleftBigahn1
+qdr1/parenrightBig
+,
+E2:=/summationdisplay
+q
+(q,a)=1ψ0/parenleftBigq
+Q/parenrightBig/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+r1,r2∼R
+(r1,ar2)=1
+(r2,aqdr1)=1λq,d,r1λq,d,r2
+qdr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modqd)
+(n1,n2qdr1)=1
+(n2,n1qdr2)=1
+|n1−n2|≥N/(logx)Cαn1αn2
+×/summationdisplay
+1≤|h|≤H2/hatwideψ0/parenleftBighM
+qdr1r2/parenrightBig
+e/parenleftBigahn1r2
+qdr1+ahn2qdr1
+r2/parenrightBig
+,
+H1:=QDR
+Mlog5x,
+H2:=QDR2
+Mlog5x.
+Proof.This is [15, Proposition 13.4] with E= 1. /square
+=== PAGE 11 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 11
+Lemma6.9 (Simpliﬁcationofexponentialsum) .LetN,M,Q,R ≤xwithNM≍x
+and
+QR<x2/3, (6.1)
+QR2<Mx1−2ǫ. (6.2)
+Letλq,randαnbe complex sequences supported on P−(n),P−(r)≥z0with|λq,r| ≤
+τ(qr)B0and|αn| ≤τ(n)B0. LetH:=QR2
+Mlog5xand let
+E:=/summationdisplay
+(q,a)=1ψ0/parenleftBigq
+Q/parenrightBig/summationdisplay
+r1,r2∼R
+(r1,ar2)=1
+(r2,aqr2)=1λq,r1λq,r2
+qr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modq)
+(n1,n2qr1)=1
+(n2,n1qr2)=1
+|n1−n2|≥N/(logx)Cαn1αn2
+×/summationdisplay
+1≤|h|≤H/hatwideψ0/parenleftBighM
+qr1r2/parenrightBig
+e/parenleftBigahn1r2
+qr1+ahn2qr1
+r2/parenrightBig
+.
+Then we have (uniformly in C)
+E≪B0exp((loglog x)5) sup
+H′≤H
+Q′≤2Q
+R1,R2≤2R|E′|+N2
+Qxǫ,
+where
+E′=/summationdisplay
+Q≤q≤Q′
+(q,a)=1/summationdisplay
+R≤r1≤R1
+R≤r2≤R2
+(r1ar2)=1
+(r2,aqr1)=1λq,r1λq,r2
+qr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modq)
+(n1,qr1n2)=1
+(n2,qr2n1)=1
+(n1r2,n2)∈N
+|n1−n2|≥N/(logx)Cαn1αn2/summationdisplay
+1≤|h|≤H′e/parenleftBigahn2qr1(n1−n2)
+n1r2/parenrightBig
+,
+andNis a set with the property that if (a,b)∈ Nand(a′,b′)∈ Nthen we have
+gcd(a,b′) = gcd(a′,b) = 1.
+Proof.This is [15, Lemma 13.5]. /square
+Lemma 6.10 (Second exponential sum estimate) .Let
+DRN3/2<x1−2ǫ, (6.3)
+QDR<x1−2ǫ. (6.4)
+Letαn,λd,rbe complex sequences with |λd,r|,|αn| ≤xo(1). LetH1:=NQDR(logx)5/x
+and let
+/tildewideB:=/summationdisplay
+q
+(q,a)=1/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+r1,r2∼R
+(r1r2,a)=1ψ0/parenleftBigq
+Q/parenrightBigλd,r1λd,r2
+φ(qdr2)qdr1/summationdisplay
+n1,n2∼N
+(n1,qdr1)=1
+(n2,qdr2)=1αn1αn2/summationdisplay
+1≤|h|≤H1/hatwideψ0/parenleftBighM
+qdr1/parenrightBig
+e/parenleftBigahn1
+qdr1/parenrightBig
+Then we have
+/tildewideB≪N2
+QDxǫ.
+=== PAGE 12 ===
+12 JAMES MAYNARD
+Proof.This follows from the same argument used to prove [15, Lemma 17.3]. /square
+Lemma 6.11 (Reduction to smoothed sums) .LetN≥xǫandz≤z0and letαm,
+cqbe 1-bounded complex sequences.
+Imagine that for every choice of N′,D,A,C > 0withN′D≍NandD≤y0, and
+every smooth function fsupported on [1/2,5/2]satisfyingf(j)≪j(logx)Cj, and
+for every 1-bounded complex sequence βdwe have the estimate
+/summationdisplay
+q∼Qcq/summationdisplay
+m∼Mαm/summationdisplay
+d∼Dβd/summationdisplay
+n′f/parenleftBign′
+N′/parenrightBig/parenleftBig
+1mn′d≡a(modq)−1(mn′d,q)=1
+φ(q)/parenrightBig
+≪A,Cx
+(logx)A.
+Then for any B >0and every interval I ⊆[N,2N]we have
+/summationdisplay
+q∼Qcq/summationdisplay
+m∼Mαm/summationdisplay
+n∈I
+P−(n)>z/parenleftBig
+1mn≡a(modq)−1(mn,q)=1
+φ(q)/parenrightBig
+≪Bx
+(logx)B.
+Proof.This is [15, Lemma 18.2]. /square
+Lemma 6.12 (Deshouillers-Iwaniec estimate) .Letbn,r,sbe a 1-bounded sequence
+andR,S,N,D,C ≪xO(1). Letg(c,d) =g0(c/C,d/D )whereg0is a smooth func-
+tion supported on [1/2,5/2]×[1/2,5/2]. Then we have
+/summationdisplay
+r∼R/summationdisplay
+s∼S
+(r,s)=1/summationdisplay
+n∼Nbn,r,s/summationdisplay
+d∼D/summationdisplay
+c∼C
+(rd,sc)=1g(c,d)e/parenleftBigndr
+cs/parenrightBig
+≪g0xǫ/parenleftBig/summationdisplay
+r∼R/summationdisplay
+s∼S/summationdisplay
+n∼N|bn,r,s|2/parenrightBig1/2
+J.
+where
+J2=CS(RS+N)(C+DR)+C2DS/radicalbig
+(RS+N)R+D2NR.
+Proof.Thisis[5, Theorem12](correctingaminortypo inthe lastterm of J2)./square
+7.Double divisor function estimates
+Inthis sectionweestablishProposition5.2, whichisaquickconsequen ceofthe Weil
+bound and the fundamental lemma of sieves. Although well-known, w e give a full
+argument for completeness (it might also help the reader motivate [ 15, Section 19]
+on the triple divisor function). These estimates are not a bottlenec k for our results,
+and in fact several much stronger results could be used here (see , for example [10]).
+Lemma 7.1 (Smoothed divisor function estimate) .LetN1,N2,M,Q≥1satisfy
+x2ǫ≤N1≤N2,N1N2M≍xand
+Q≤x2/3−2ǫ
+M2/3.
+Letψ1andψ2be smooth functions supported on [1/2,5/2]satisfyingψ(j)
+1,ψ(j)
+2≪j
+(logx)jCand letαmbe a 1-bounded complex sequence. Let
+K:= sup
+(a,q)=1
+q∼Q/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+m∼Mαm/summationdisplay
+n1,n2ψ1/parenleftBign1
+N1/parenrightBig
+ψ2/parenleftBign2
+N2/parenrightBig/parenleftBig
+1mn1n2≡a(modq)−1(mn1n2,q)=1
+φ(q)/parenrightBig/vextendsingle/vextendsingle/vextendsingle.
+=== PAGE 13 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 13
+Then we have
+K≪Cx1−ǫ
+Q.
+(It is unimportant for this paper that Proposition 5.2 holds pointwise forqand
+uniformly over all ( a,q) = 1, but the proof is no harder.)
+Proof.Let the supremum occur at aandq. We have that K=K2−K1, where
+K1:=1
+φ(q)/summationdisplay
+m∼M
+(m,q)=1αm/summationdisplay
+n1,n2
+(mn1n2,q)=1ψ1/parenleftBign1
+N1/parenrightBig
+ψ2/parenleftBign2
+N2/parenrightBig
+,
+K2:=/summationdisplay
+m∼M
+(m,q)=1αm/summationdisplay
+(n2,q)=1ψ2/parenleftBign2
+N2/parenrightBig/summationdisplay
+n1
+n1≡amn2(modq)ψ1/parenleftBign1
+N1/parenrightBig
+.
+By Lemma 6.4, since N1≤N2we have
+/summationdisplay
+n1,n2
+(mn1n2,q)=1ψ1/parenleftBign1
+N1/parenrightBig
+ψ2/parenleftBign2
+N2/parenrightBig
+=φ(q)2
+q2N1N2/hatwideψ1(0)/hatwideψ2(0)+O(N2xo(1)).
+This implies that
+K1=KMT+O/parenleftBigx1+o(1)
+QN1/parenrightBig
+,
+where
+KMT:=N1N2/hatwideψ1(0)/hatwideψ2(0)φ(q)
+q2/summationdisplay
+m∼M
+(m,q)=1αm.
+By Lemma 6.3 we have that for H1:=xǫQ/N1
+/summationdisplay
+n1
+n1≡amn2(modq)ψ1/parenleftBign1
+N1/parenrightBig
+=N1
+q/hatwideψ(0)+N1
+q/summationdisplay
+1≤|h1|≤H1/hatwideψ1/parenleftBigh1N1
+q/parenrightBig
+e/parenleftBigah1mn2
+q/parenrightBig
++O(x−10).
+The ﬁnal term makes a negligible contribution to K2. By Lemma 6.4, the ﬁrst term
+contributes to K2a total
+N1/hatwideψ1(0)
+q/summationdisplay
+m∼M
+(m,q)=1αm/summationdisplay
+(n2,q)=1ψ2/parenleftBign2
+N2/parenrightBig
+=KMT+O/parenleftBigx1+o(1)
+QN2/parenrightBig
+.
+Finally, by another application of Lemma 6.3 we have
+/summationdisplay
+(n2,q)=1ψ2/parenleftBign2
+N2/parenrightBig
+e/parenleftBigah1mn2
+q/parenrightBig
+=N2
+q/hatwideψ2(0)/summationdisplay
+(b,q)=1e/parenleftBigah1mb
+q/parenrightBig
++N2
+q/summationdisplay
+1≤|h2|≤H2/hatwideψ2/parenleftBigh2N2
+q/parenrightBig/summationdisplay
+(b,q)=1e/parenleftBigah1mb+h2b
+q/parenrightBig
++O(x−10).
+The inner sum in the ﬁrst term is a Ramanujan sum and so of size O((h1,q)). The
+innersuminthesecondtermisaKloostermansum,andsoofsize O(q1/2+o(1)(h1,h2,q)).
+=== PAGE 14 ===
+14 JAMES MAYNARD
+The ﬁnal term contributes a negligible amount. Thus we see that the se terms con-
+tribute a total
+≪N1N2
+Q2/summationdisplay
+m∼M/summationdisplay
+1≤|h1|≤H1(h1,q)+xo(1)N1N2
+Q3/2/summationdisplay
+m∼M/summationdisplay
+1≤|h1|≤H1
+1≤|h2|≤H2(h1,h2,q)
+≪xo(1)N1N2MH1
+Q2+xo(1)N1N2MH1H2
+Q3/2
+≪x1+o(1)
+QN1+xo(1)MQ1/2.
+Putting this together, we obtain
+K≪x1+o(1)
+QN1+xo(1)MQ1/2.
+This gives the result provided
+x2ǫ≤N1, (7.1)
+Q≤x2/3−2ǫ
+M2/3. (7.2)
+This gives the result. /square
+Proof of Proposition 5.2. First we note that by Lemma 6.1 and the trivial bound,
+thosemwith|αm| ≥(logx)Ccontribute a total ≪x(logx)OB0(1)−C. This is
+negligible if C=C(A,B0) is large enough so, by dividing through by (log x)Cand
+considering A+Cin place ofA, it suﬃces to show the result when |αm| ≤1.
+We apply Lemma 6.2 to remove the condition mn1n2∈ I. Thus it suﬃces to show
+for everyB >0 and every choice of interval IM⊆[M,2M],I1⊆[N1,2N1] and
+I2⊆[N2,2N2] that we have
+/summationdisplay
+q∼Q/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n1∈I1
+P−(n)≥z0/summationdisplay
+n2∈I2
+P−(n)≥z0/summationdisplay
+m∈IMαm/parenleftBig
+1mn1n2≡a(modq)−1(mn1n2,q)=1
+φ(q)/parenrightBig/vextendsingle/vextendsingle/vextendsingle≪Bx
+(logx)B.
+We now remove the absolute values by inserting 1-bounded coeﬃcien tscq. By two
+applications of Lemma 6.11 with z=z0, then see that it is suﬃcient to show that
+for everyA,C >0, every choice of smooth functions f1,f2supported on [1 /2,5/2]
+withf(j)
+i≪j(logx)Cjand for every1-bounded sequence βd1,d2and for everychoice
+ofD1,D2,N′
+1,N′
+2withD1,D2≤y0andN′
+1D1≍N1,N′
+2D2≍N2we have that
+/summationdisplay
+q∼Qcq/summationdisplay
+d1∼D1
+d2∼D2βd1,d2/summationdisplay
+n′
+1,n′
+2f1/parenleftBign′
+1
+N′
+1/parenrightBig
+f2/parenleftBign′
+2
+N′
+2/parenrightBig
+×/summationdisplay
+m∈IMαm/parenleftBig
+1mn′
+1n′
+2d1d2≡a(modq)−1(mn′
+1n′
+2d1d2,q)=1
+φ(q)/parenrightBig
+≪A,Cx
+(logx)A.
+Grouping together m,d1,d2, we see that Lemma 7.1 now gives the result, recalling
+thatD1,D2≤y0=xo(1)soN′
+1=N1x−o(1)≥x2ǫandN′
+2=N2x−o(1)≥x2ǫand
+Q≤x2/3−3ǫ/M2/3≤x2/3−2ǫ/(D1D2M)2/3.
+=== PAGE 15 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 15
+An identical argument works if the summand is multiplied by log n1, since this just
+slightly adjusts the smooth functions appearing. /square
+8.Well-factorable estimates
+In this section we establish Proposition5.1, which is the key result beh ind Theorem
+1.1. This can be viewed as a reﬁnement of [2, Theorem 1]. Indeed, Pr oposition 5.1
+essentially includes [2, Theorem 1] as the special case R= 1. The key advantage
+in our setup is to make use of the additional ﬂexibility aﬀorded by havin g a third
+factor available when manipulating the exponential sums. The argum ent does not
+have a speciﬁc regime when it is weakest; the critical case for Theor em 1.1 is the
+whole range x1/10≤N≤x1/3. (The terms with N≤x1/10orN > x1/3can be
+handled by a combination of the result for N∈[x1/10,x1/3] and Proposition 5.2.)
+Lemma 8.1 (Well-factorable exponential sum estimate) .LetQ′≤2Q,H′≤
+xo(1)QR2S2/M,NM≍xand
+N2R2S <x1−7ǫ, (8.1)
+N2R3S4Q<x2−14ǫ, (8.2)
+NR2S5Q<x2−14ǫ. (8.3)
+Letγr,λs,αnbe 1-bounded complex coeﬃcients, and let
+W:=/summationdisplay
+Q≤q≤Q′
+(q,a)=1/summationdisplay
+r1,r2∼R/summationdisplay
+s1,s2∼S
+(r1s1,ar2s2)=1
+(r2s2,aqdr1s1)=1
+r1s1≤B1
+r2s2≤B2γr1λs1γr2λs2
+r1r2s1s2q/summationdisplay
+n1,n2∼N
+n1≡n2(modqd)
+(n1,n2qdr1s1)=1
+(n2,n1qdr2s2)=1
+(n1r2s2,n2)∈N
+|n1−n2|≥N/(logx)Cαn1αn2
+×/summationdisplay
+1≤|h|≤H′e/parenleftBigah(n1−n2)n2r1s1dq
+n1r2s2/parenrightBig
+for some (d,a) = 1whereNis a set with the property that if (a,b)∈ Nand
+(a′,b′)∈ Nthengcd(a,b′) = gcd(a′,b) = 1.
+Then we have
+W≪N2
+Qxǫ.
+Proof.We ﬁrst make a change of variables. Since we have n1≡n2(modqd), we
+letfdq=n1−n2for some integer |f| ≤2N/dQ≤2N/Q, and we wish to replace
+qwith (n1−n2)/df. We see that
+(n1−n2)dq=f(modn1r2s2).
+Thus the exponential simpliﬁes to
+e/parenleftBigahfr1s1n2
+n1r2s2/parenrightBig
+.
+=== PAGE 16 ===
+16 JAMES MAYNARD
+Theconditions( n1,n2) = 1andn1≡n2(moddq)automaticallyimply( n1n2,dq) =
+1, and so we ﬁnd
+W=/summationdisplay
+1≤|f|≤2N/Q/summationdisplay
+r1,r2∼R
+(r1r2,a)=1/summationdisplay
+s2∼S
+(r2s2,adr1)=1
+r2s2≤B2/summationdisplay′
+n1,n2∼N
+n1≡n2(moddf)γr1γr2λs2df
+r1r2s2(n1−n2)
+×/summationdisplay
+s1∼S
+(s1,an1r2s2)=1
+r1s1≤B1λs1
+s1/summationdisplay
+1≤|h|≤H′αn1αn2e/parenleftBigahfr1s1n2
+n1r2s2/parenrightBig
+.
+Here we have used/summationtext′to denote that fact that we have suppressed the conditions
+(n1,n2r1s1) = 1, (n2,n1r2s2) = 1, (n1r2s2,n2)∈ N,
+|n1−n2| ≥N/(logx)C,((n1−n2)/df,ar 2s2) = 1, Qdf ≤n1−n2≤Q′df.
+We ﬁrst remove the dependency between r1ands1from the constraint r1s1≤B1
+by noting
+1r1s1≤B1=/integraldisplay1
+0/parenleftBig/summationdisplay
+j≤B1/r1e(−jθ)/parenrightBig
+e(s1θ)dθ
+=/integraldisplay1
+0cr1,θmin/parenleftBigB1
+R,|θ|−1/parenrightBig
+e(s1θ)dθ
+for some 1-bounded coeﬃcients cr1,θ. Thus
+W=/integraldisplay1
+0min/parenleftBigB1
+R,|θ|−1/parenrightBig
+W2(θ)dθ≪(logx)sup
+θ|W2(θ)|,
+where W2=W2(θ) is given by
+W2:=/summationdisplay
+1≤|f|≤2N/Q/summationdisplay
+r1,r2∼R
+(r1r2,a)=1/summationdisplay
+s2∼S
+(r2s2,adr1)=1
+r2s2≤B2/summationdisplay′
+n1,n2∼N
+n1≡n2(moddf)γr1cr1,θγr2λs2df
+r1r2s2(n1−n2)
+×/summationdisplay
+s1∼S
+(s1,an1r2s2)=1e(s1θ)λs1
+s1/summationdisplay
+1≤|h|≤H′αn1αn2e/parenleftBigahfr1s1n2
+n1r2s2/parenrightBig
+.
+In order to show W≪N2/(Qxǫ) we see it is suﬃcient to show W2≪N2/(Qx2ǫ).
+We now apply Cauchy-Schwarz in the f,n1,n2,r1,r2ands2variables. This gives
+W2≪NRS1/2(logx)2
+QR2S2W1/2
+3,
+where
+W3:=/summationdisplay
+1≤|f|≤2N/Q/summationdisplay
+n1,n2∼N
+n1≡n2(moddf)/summationdisplay
+r1,r2∼R
+×/summationdisplay
+s2∼S
+(n2r1,n1r2s2)=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+s1∼S
+(s1,an1r2s2)=1/summationdisplay
+1<|h|≤H′λ′
+s1e/parenleftBigahfr1s1n2
+n1r2s2/parenrightBig/vextendsingle/vextendsingle/vextendsingle2
+,
+=== PAGE 17 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 17
+and where
+λ′
+s:=S
+sλse(sθ)
+are 1-bounded coeﬃcients. Note that we have dropped many of th e constraints on
+the summation for an upper bound. In order to show that W2≪N2/(Qx2ǫ) we
+see it is suﬃcient to show that W3≪N2R2S3/x5ǫ. We ﬁrst drop the congruence
+condition on n1,n2(moddf) for an upper bound, and then we combine n2r1into
+a single variable bandn1r2s2into a single variable c. Using the divisor bound to
+control the number of representations of candb, and inserting a smooth majorant,
+this gives
+W3≤xo(1)sup
+B≪NR
+C≪NRS
+F≪N/QW4,
+where
+W4:=/summationdisplay
+b/summationdisplay
+c
+(b,c)=1g(b,c)/summationdisplay
+f∼F/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+s1∼S
+(s1,ac)=1/summationdisplay
+1<|h|≤H′λ′
+s1e/parenleftBigahfbs1
+c/parenrightBig/vextendsingle/vextendsingle/vextendsingle2
+g(b,c) :=ψ0/parenleftBigb
+B/parenrightBig
+ψ0/parenleftBigc
+C/parenrightBig
+.
+In order to show W3≪N2R2S3/x5ǫ, it is suﬃcient to show that
+(8.4) W4≪N2R2S3
+x6ǫ.
+We expand the square and swap the order of summation, giving
+W4=/summationdisplay
+s1,s2∼S
+(s1s2,a)=1/summationdisplay
+1<|h1|,|h2|≤H′λ′
+s1λ′s2/summationdisplay
+b/summationdisplay
+f∼F/summationdisplay
+c
+(c,bs1s2)=1g(b,c)e/parenleftBig
+afℓbs1s2
+c/parenrightBig
+,
+where
+ℓ=h1s1−h2s2.
+We now split the sum according to whether ℓ= 0 or not.
+W4=Wℓ=0+Wℓ/negationslash=0.
+To show (8.4) it is suﬃcient to show
+(8.5) Wℓ=0≪N2R2S3
+x6ǫand Wℓ/negationslash=0≪N2R2S3
+x6ǫ.
+We ﬁrst consider Wℓ=0, and so terms with h1s1=h2s2. Givenh1,s1there are at
+mostxo(1)choices ofh2,s2, and so at most xo(1)HSchoices ofh1,h2,s1,s2. Thus
+we see that
+Wℓ=0≪xo(1)HSBFC ≪xo(1)R2S2Q
+M·S·NR·N
+Q·NRS
+≪N4R4S4
+x1−ǫ.
+This gives an acceptably small contribution for (8.5) provided
+N4R4S4
+x1−ǫ≪N2R2S3
+x6ǫ,
+=== PAGE 18 ===
+18 JAMES MAYNARD
+which rearranges to
+(8.6) N2R2S≪x1−7ǫ.
+We now consider Wℓ/negationslash=0. We lety=af(h1s1−h2s2)≪xo(1)NR2S3/Mandz=
+s1s2≪S2. Putting these variables in dyadic intervals and using the symmetry
+betweenyand−y, we see that
+Wℓ/negationslash=0≪logx/summationdisplay
+z∼Z/summationdisplay
+y∼Ybz,y/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+b/summationdisplay
+c
+(c,zb)=1g(b,c)e/parenleftBigyzb
+c/parenrightBig/vextendsingle/vextendsingle/vextendsingle,
+whereZ≍S2,Y≪xo(1)NR2S3/Mand
+bz,y=/summationdisplay
+s1,s2∼S/summationdisplay
+1≤|h1|,|h2|≤H′/summationdisplay
+f∼F
+s1s2=z
+af(h1s1−h2s2)=y1.
+By Lemma 6.12 we have that
+(8.7) Wℓ/negationslash=0≪xǫ/parenleftBig/summationdisplay
+z∼Z/summationdisplay
+y∼Yb2
+z,y/parenrightBig1/2
+J,
+where
+(8.8) J2≪C(Z+Y)(C+BZ)+C2B/radicalbig
+(Z+Y)Z+B2YZ.
+We ﬁrst consider the bz,yterms. We note that given a choice of z,ythere arexo(1)
+choices ofs1,s2,k,fwithz=s1s2andy=akfby the divisor bound. Thus by
+Cauchy-Schwarz, we see that
+/summationdisplay
+z∼Z/summationdisplay
+y∼Yb2
+z,y=/summationdisplay
+z∼Z/summationdisplay
+y∼Y/parenleftBig/summationdisplay
+s1,s2∼S
+s1s2=z/summationdisplay
+f∼F/summationdisplay
+k
+akf=y/summationdisplay
+1≤|h1|,|h2|≪H
+h1s1−h2s2=k1/parenrightBig2
+≪xo(1)/summationdisplay
+s1,s2∼S/summationdisplay
+f∼F/summationdisplay
+k/parenleftBig/summationdisplay
+1≤|h1|,|h2|≪H
+h1s1−h2s2=k1/parenrightBig2
+≪xo(1)F/summationdisplay
+s1,s2∼S/summationdisplay
+1≤|h1|,|h′
+1|,|h2|,|h′
+2|≪H
+(h1−h′
+1)s1=(h2−h′
+2)s21
+We consider the inner sum. If ( h1−h′
+1)s1= 0 = (h2−h′
+2)s2we must have
+h1=h′
+1,h2=h′
+2, so there are O(H2S2) choicesh1,h′
+1,h2,h′
+2,s1,s2. If instead
+(h1−h′
+1)s1= (h2−h′
+2)s2/ne}ationslash= 0 there are O(HS) choices of t= (h1−h′
+1)s1/ne}ationslash= 0.
+Given a choice of t, there are xo(1)choices ofs1,s2,h1−h′
+1,h2−h′
+2. Thus there
+areO(H3S) choicesh1,h′
+1,h2,h′
+2,s1,s2with (h1−h′
+1)s1= (h2−h′
+2)s2/ne}ationslash= 0. Thus
+/summationdisplay
+z∼Z/summationdisplay
+y∼Yb2
+z,y≪xo(1)N
+Q(H2S2+H3S)
+≪xǫ/parenleftBigNR4S6Q
+M2+NR6S7Q2
+M3/parenrightBig
+.
+In particular, since we are assuming that N2R2S < x1−ǫ≤MNandN > Q, we
+have
+M >R2SN >R2SQ.
+=== PAGE 19 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 19
+Thus this simpliﬁes to give
+(8.9)/summationdisplay
+z∼Z/summationdisplay
+y∼Yb2
+z,y≪xǫNR4S6Q
+M2.
+We now consider J. Since the bound (8.8) is increasing and polynomial in
+C,B,Z,Y , the maximal value is at most xo(1)times the value when C=NRS,
+Z=S2,Y=NR2S3/MandB=NR, and so it suﬃces to consider this case. We
+note that our bound M >R2SNfrom (8.6) then implies that that Z >Y, and so,
+noting that BZ >C andC2BZ >B2YZ, this simpliﬁes our bound for Jto
+J2≪xo(1)(CBZ2+C2BZ+B2YZ)
+≪xǫ(CBZ2+C2BZ)
+=xǫN2R2S5+xǫN3R3S4. (8.10)
+Putting together (8.7), (8.9) and (8.10), we obtain
+Wℓ/negationslash=0≪xǫ/parenleftBig
+xǫNR4S6Q
+M2/parenrightBig1/2/parenleftBig
+xǫN2R2S5+xǫN3R3S4/parenrightBig1/2
+≪x2ǫ/parenleftBigN3R6S11Q
+M2+N4R7S10Q
+M2/parenrightBig1/2
+.
+Thus we obtain (8.5) if
+N3R6S11Q+N4R7S10Q<x−14ǫN4R4S6M2.
+recallingNM≍x, we see that this occurs if we have
+NR2S5Q<x2−14ǫ, (8.11)
+N2R3S4Q<x2−14ǫ. (8.12)
+This gives the result. /square
+Proposition 8.2 (Well-factorable estimate for convolutions) .LetNM≍xand
+Q1,Q2,Q3satisfy
+Q1<N
+xǫ,
+N2Q2Q2
+3<x1−8ǫ,
+N2Q1Q4
+2Q3
+3<x2−15ǫ,
+NQ1Q5
+2Q2
+3<x2−15ǫ.
+Letαn,βmbe1-bounded complex sequences such that αnsatisﬁes the Siegel-Walﬁsz
+condition (4.1)andαnis supported on nwith all prime factors bigger than z0=
+x1/(loglog x)3. Letγq1,λq2,νq3be 1-bounded complex coeﬃcients supported on (qi,a) =
+1fori∈ {1,2,3}. Let
+∆(q) :=/summationdisplay
+n∼Nαn/summationdisplay
+m∼Mβm/parenleftBig
+1nm≡a(modq)−1(nm,q)=1
+φ(q)/parenrightBig
+.
+Then for every A>0we have
+/summationdisplay
+q1∼Q1/summationdisplay
+q2∼Q2/summationdisplay
+q3∼Q3γq1λq2νq3∆(q1q2q3)≪Ax
+(logx)A.
+=== PAGE 20 ===
+20 JAMES MAYNARD
+Proof.First we factor q2=q′
+2q′′
+2andq3=q′
+3q′′
+3whereP−(q′
+2),P−(q′
+3)> z0≥
+P+(q′′
+2),P+(q′′
+3) into parts with large and small prime factors. By putting these in
+dyadic intervals, we see that it suﬃces to show for every A>0 and every choice of
+Q′
+2Q′′
+2≍Q2,Q′
+3Q′′
+3≍Q3that
+/summationdisplay
+q1∼Q1/summationdisplay
+q′
+2∼Q′
+2
+P−(q′
+2)>z0/summationdisplay
+q′′
+2∼Q′′
+2
+P+(q′′
+2)≤z0/summationdisplay
+q′
+3∼Q′
+3
+P−(q′
+3)≥z0/summationdisplay
+q′′
+3∼Q′′
+3
+P+(q′′
+3)≤z0γq1λq′
+2q′′
+2νq′
+3q′′
+3∆(q1q′
+2q′′
+2q′
+3q′′
+3)≪Ax
+(logx)A.
+By Lemma 6.7 we havethe result unless Q′′
+2,Q′′
+3≤y0=x1/loglogx. We letd=q′′
+2q′′
+3
+and deﬁne
+λq,d,r:=1P−(r)>z0/summationdisplay
+q′′
+2q′′
+3=d
+q1∼Q1
+q′′
+2∼Q′′
+2
+q′′
+3∼Q′′
+3
+P+(q′′
+2q′′
+3)≤z0/summationdisplay
+q′
+2q′
+3=r
+q′
+2∼Q′
+2
+q′
+3∼Q′
+3λq′
+2q′′
+2νq′
+3q′′
+3.
+We note that λq,d,rdoesn’t depend on q. With this deﬁnition we see it suﬃces to
+show that for every A>0 and every choice of D,RwithDR≍Q2Q3andD≤y2
+0
+we have that/summationdisplay
+q∼Q1/summationdisplay
+d∼D/summationdisplay
+r∼Rγqλq,d,r∆(qdr)≪Ax
+(logx)A.
+We now apply Proposition 6.8 (we may apply this since N >Q 1xǫ>Q1D(logx)C
+andN < x1−ǫby assumption of the lemma). This shows that it suﬃces to show
+that
+|E1|+|E2| ≪N2
+DQ1y0,
+where
+E1:=/summationdisplay
+q
+(q,a)=1/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+r1,r2∼R
+(r1r2,a)=1ψ0/parenleftBigq
+Q1/parenrightBigλq,d,r1λq,d,r2
+φ(qdr2)qdr1/summationdisplay
+n1,n2∼N
+(n1,qdr1)=1
+(n2,qdr2)=1αn1αn2
+×/summationdisplay
+1≤|h|≤H1/hatwideψ0/parenleftBighM
+qdr1/parenrightBig
+e/parenleftBigahn1
+qdr1/parenrightBig
+,
+E2:=/summationdisplay
+q
+(q,a)=1ψ0/parenleftBigq
+Q1/parenrightBig/summationdisplay
+d∼D
+(d,a)=1/summationdisplay
+r1,r2∼R
+(r1,ar2)=1
+(r2,aqdr1)=1λq,d,r1λq,d,r2
+qdr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modqd)
+(n1,n2qdr1)=1
+(n2,n1qdr2)=1
+|n1−n2|≥N/(logx)Cαn1αn2
+×/summationdisplay
+1≤|h|≤H2/hatwideψ0/parenleftBighM
+qdr1r2/parenrightBig
+e/parenleftBigahn1r2
+qdr1+ahn2qdr1
+r2/parenrightBig
+,
+H1:=QDR
+Mlog5x,
+H2:=QDR2
+Mlog5x.
+=== PAGE 21 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 21
+Sinceλq,d,ris independent of q, we may apply Lemma 6.10 to conclude that
+E1≪N2
+Q1Dxǫ,
+provided we have
+DRN3/2<x1−2ǫ, (8.13)
+Q1DR<x1−2ǫ. (8.14)
+These are both implied by the conditions of the lemma, recalling that DR≍Q2Q3.
+Thus it suﬃces to bound E2. SinceD≤y2
+0=xo(1), it suﬃces to show
+E3≪N2
+Q1xǫ/10,
+for eachd≤y2
+0, where E3=E3(d) is given by
+E3:=/summationdisplay
+(q,a)=1ψ0/parenleftBigq
+Q1/parenrightBig/summationdisplay
+r1,r2∼R
+(r1,ar2)=1
+(r2,aqdr1)=1λq,d,r1λq,d,r2
+qr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modqd)
+(n1,n2qdr1)=1
+(n2,n1qdr2)=1
+|n1−n2|≥N/(logx)Cαn1αn2
+×/summationdisplay
+1≤|h|≤H2/hatwideψ0/parenleftBighM
+qdr1r2/parenrightBig
+e/parenleftBigahn1r2
+qdr1+ahn2qdr1
+r2/parenrightBig
+.
+Sinceλq,d,ris independent of qand we treat each dseparately, we may suppress the
+q,ddependence by writing λrin place of λq,d,r. We now apply Lemma 6.9. This
+shows it suﬃces to show that
+E′≪N2
+Q1xǫ/2,
+where
+E′:=/summationdisplay
+Q1≤q≤Q′
+1
+(q,a)=1/summationdisplay
+R≤r1≤R1
+R≤r2≤R2
+(r1,ar2)=1
+(r2,aqdr1)=1λr1λr2
+qdr1r2/summationdisplay
+n1,n2∼N
+n1≡n2(modqd)
+(n1,qdr1n2)=1
+(n2,qdr2n1)=1
+(n1r2,n2)∈Nαn1αn2/summationdisplay
+1≤|h|≤H′e/parenleftBigahn2qdr1(n1−n2)
+n1r2/parenrightBig
+,
+and whereQ′
+1≤2Q1andR1,R2≤2RandH′≤H2.
+We recall the deﬁnition of λq,d,rand expand it as a sum. Since dis ﬁxed, there are
+xo(1)possible choices of q′′
+2,q′′
+3. Fixing one such choice, we then see E′is precisely
+of the form considered in Lemma 8.1. This then gives the result, prov ided
+Q1<N
+xǫ,
+N2Q′
+2Q′
+32<x1−7ǫ,
+N2Q1Q′
+24Q′
+33<x2−14ǫ,
+NQ1Q′
+25Q′
+32<x2−14ǫ.
+SinceQ′
+2≤Q2andQ′
+3≤Q3, these bounds follow from the assumptions of the
+lemma. /square
+=== PAGE 22 ===
+22 JAMES MAYNARD
+Proof of Proposition 5.1. First we note that by Lemma 6.1 the set of n,mwith
+max(|αn|,|βm|)≥(logx)Candnm≡a(modq) has size ≪x(logx)OB0(1)−C/q, so
+thesetermscontributenegligiblyif C=C(A,B0)islargeenough. Thus, bydividing
+through by (log x)2Cand considering A+2Cin place of A, it suﬃces to show the
+result when all the sequences are 1-bounded. ( αnstill satisﬁes (4.1) by Lemma
+6.5.) The result follows from the Bombieri-Vinogradov Theorem if Q≤x1/2−ǫ, so
+we may assume that Q∈[x1/2−ǫ,x3/5−10ǫ].
+We use Lemma 6.2 to remove the condition nm∈ I, and see suﬃces to show for
+B=B(A) suﬃciently large in terms of A
+(8.15)/summationdisplay
+q≤x3/5−ǫλq/summationdisplay
+n∈INαn/summationdisplay
+m∈IMβm/parenleftBig
+1nm≡a(modq)−1(nm,q)=1
+φ(q)/parenrightBig
+≪Bx
+(logx)B
+uniformly over all intervals IN⊆[N,2N] andIM⊆[M,2M].
+Let us deﬁne for xǫ≤N≤x2/5
+Q1:=N
+xǫ, Q 2:=Q
+x2/5−ǫ, Q 3:=x2/5
+N.
+We note that Q1Q2Q3=QandQ1,Q2,Q3≥1. Sinceλqis triply well factorable
+of levelQ, we can write
+(8.16) λq=/summationdisplay
+q1q2q3=qγ(1)
+q1γ(2)
+q2γ(3)
+q3,
+for some 1-bounded sequences γ(1),γ(2),γ(3)withγ(i)
+qsupported on q≤Qifor
+i∈ {1,2,3}.
+We now substitute (8.16) into (8.15) and put each of q1,q2,q3into one of O(log3x)
+dyadic intervals ( Q′
+1,2Q′
+1], (Q′
+2,2Q′
+2] and (Q′
+3,2Q′
+3] respectively. Since Q′
+1≤Q1,
+Q′
+2≤Q2andQ′
+3≤Q3andQ1Q2Q3=Q≤x3/5−10ǫwe have
+Q′
+1≤N
+xǫ,
+N2Q′
+2Q′
+32≤Qx2/5+ǫ<x1−7ǫ,
+N2Q′
+1Q′
+24Q′
+33≤Q4
+x2/5−3ǫ<x2−14ǫ,
+NQ′
+1Q′
+25Q′
+32≤Q5
+x6/5−4ǫ<x2−14ǫ.
+Thus, we see that Proposition 8.2 now gives the result. /square
+We have now established both Proposition 5.2 and Proposition 5.1, and so com-
+pleted the proof of Theorem 1.1.
+9.Proof of Theorem 1.2
+First we recall some details of the construction of sieve weights ass ociated to the
+linear sieve. We refer the reader to [14] or [11, Chapter 12.7] for mo re details. The
+=== PAGE 23 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 23
+standard upper bound sieve weights λ+
+dfor the linear sieve of level Dare given by
+λ+
+d:=/braceleftBigg
+µ(d), d∈ D+(D),
+0,otherwise,
+where
+D+(D) :=/braceleftBig
+p1···pr:p1≥p2≥ ··· ≥pr, p1···p2jp3
+2j+1≤Dfor 0≤j <r/2/bracerightBig
+.
+Moreover, we recall the variant ˜λ+
+dof these sieve weights where one does not distin-
+guish between the sizes of primes pj∈[Dj,D1+η
+j] withDj>xǫfor some small con-
+stantη>0. (i.e. ifd=p1···prwithpj∈[Dj,D1+η
+j]andD1≥ ··· ≥Dr≥xǫ, then
+˜λ+
+d= (−1)rifD1≥ ··· ≥DrandD1···D2jD3
+2j+1≤D1/(1+η)for all 0≤j <r/2,
+and otherwise ˜λ+
+d= 0.) This variant is a well-factorable function in the sense that
+for any choice of D1D2=Dwe can write ˜λ+=/summationtext
+1≤j≤ǫ−1α(j)⋆β(j)whereα(j)
+nis a
+sequence supported on n≤D1andβ(j)
+mis supported on m≤D2. The construction
+of the sequence ˜λ+
+dfollows from the fact that if d∈ D+(D) andD=D1D2then
+d=d1d2withd1≤D1andd2≤D2. This produces essentially the same results
+as the original weights when combined with a fundamental lemma type sieve to
+remove prime factors less than xǫ.
+In view of Proposition 8.2 and Proposition 5.2, in order to prove Theor em 1.2 it
+suﬃces to construct a similar variant /hatwideλ+
+dsuch that for every N∈[xǫ,x1/3+ǫ] we
+can write /hatwideλ+
+d=/summationtext
+1≤j≤ǫ−1α(j)⋆β(j)⋆γ(j)withα(j)
+nsupported on n≤D1andβ(j)
+n
+supported on n≤D2andγ(j)
+nsupported on n≤D3for some choice of D1,D2,D3
+satisfying
+D1<N
+xǫ, N2D2D2
+3<x1−8ǫ, N2D1D4
+2D3
+3<x2−15ǫ, ND 1D5
+2D2
+3<x2−15ǫ.
+An identical argument to the construction of ˜λ+
+dshows that we can construct such
+a sequence /hatwideλ+
+dif everyd∈ D+(D) can be written as d=d1d2d3withd1≤D1,
+d2≤D2andd3≤D3satisfying the above constraints. Thus, in order to prove
+Theorem 1.2 it suﬃces to establish the following result.
+Proposition 9.1 (Factorizationofelementsof D+(D)).Let0<δ<1/1000and let
+D=x7/12−50δ,x2δ≤N≤x1/3+δ/2andd∈ D+(D). Then there is a factorization
+d=d1d2d3such that
+d1≤N
+xδ,
+N2d2d2
+3≤x1−δ,
+N2d1d4
+2d3
+3≤x2−δ,
+Nd1d5
+2d2
+3≤x2−δ.
+Proof.Letd=p1···pr∈ D+. We split the argument into several cases depending
+on the size of the factors.
+Case 1:p1≥D2/x1−3δ.
+=== PAGE 24 ===
+24 JAMES MAYNARD
+LetD1:=Nx−δ,d2:=D2:=p1andD3:=Dxδ/(Np1). Wenotethat D1,D2,D3≥
+1 from our bounds on Nandp3
+1≤D. Sincep2≤p1≤D1/3andD1D3=D/p1
+we see that p2
+2≤D1D3, so either p2≤D1orp2≤D3. Moreover, we see that
+sincep1···pj−1p2
+j≤Dfor allj≤r, we have that p2
+j≤D1D3/(p2···pj−1) for all
+j≥3. Thus, by considering p2,p3,...in turn, we can greedily form products d1
+andd3withd1≤D1andd3≤D3andd1d3=p2···pr. We now see that since
+D2/x1−δ≤p1≤D1/3, we have
+d1≤D1≤N
+xδ,
+N2d2d2
+3≤N2D2D2
+3≤x2δD2/p1<x1−δ,
+N2d1d4
+2d3
+3≤N2D1D4
+2D3
+3≤x2δD3p1<x2−δ,
+Nd1d5
+2d2
+3≤ND1D5
+2D2
+3≤xδD2p3
+1<x2−δ,
+so this factorization satisﬁes the conditions.
+Case 2:p2p3≥D2/x1−3δ.
+This is similar to the case above. Without loss of generality we may assu me we are
+not in Case 1, so p1,p2,p3,p4<D2/x1−3δ. We now set D1:=Nx−2δ,d2:=D2:=
+p2p3andD3:=x2δD/(Np2p3). Note that
+p2p3≤p1/3
+2(p1p2p3
+3)1/3≤D2/3
+x1/3−δD1/3=D
+x1/3−δ.
+In particular, D1,D2,D3≥1 and we have that D1D3=D/p2p3≥x1/3−δ. Thus
+p2
+1<D4/x2−6δ<x1/3−δ≤D1D3, andp2
+4≤D1D3/p1sincep1p2p3p2
+4≤D. More-
+over, forj≥5 we havep1···pj−1p2
+j≤D, sop2
+j≤D1D3/(p1p4...pj−1). We can
+greedily form products d1≤D1andd3≤D3out ofp1p4···pr, by considering each
+prime in turn. We now see that since D2/x1−3δ≤p2p3<x1/4, we have
+d1≤D1≤N
+xδ,
+N2d2d2
+3≤N2D2D2
+3≤x2δD2/(p2p3)≤x1−δ,
+N2d1d4
+2d3
+3≤N2D1D4
+2D3
+3≤x2δD3p2p3≤x2−δ,
+Nd1d5
+2d2
+3ND1D5
+2D2
+3≤xδD2(p2p3)3≤x2−δ,
+so this gives a suitable factorization.
+Case 3:p1p4≥D2/x1−3δ.
+We may assume we are not in Case 1 or 2. In particular max( p1,p2p3)<D2/x1−3δ,
+sop1p4≤p1(p2p3)1/2< D3/x3/2−9δ/2< D/x1/3−δ/2, and the argument is com-
+pletely analogous to the case above, choosing D1:=Nx−2δ,d2:=D2:=p1p4and
+D3:=x2δD/(Np1p4), using the fact that D2/x1−3δ≤p1p4<x1/4.
+Case 4:p1p4<D2/x1−3δandp2p3<D2/x1−3δ.
+We setD1:=Nx−δ,D2:=D2/x1−3δandD3:=x1−2δ/(DN), noting that these
+are all at least 1. We see that one of D1orD3is also at least D2/x1−3δ, since
+their product is x1−3δ/D > x9/24> D4/x2−6δ. We now wish to greedily form
+productsd1≤D1,d2≤D2andd3≤D3by considering primes in turn. We start
+withd2=p1p4< D2and either d1= 1 andd3=p2p3ord1=p2p3andd3= 1
+=== PAGE 25 ===
+PRIMES IN ARITHMETIC PROGRESSIONS TO LARGE MODULI II 25
+depending on whether p2p3>D1or not. We now greedily form a sequence, where
+at thejthstep we replace one of the diwithdipjprovideddipj< Di(the choice
+ofi∈ {1,2,3}does not matter if there are multiple possibilities with dipj< Di),
+and we start with j= 5. We stop if either we have included our ﬁnal prime prin
+one of thedi, or there is a stage jwhenpjd1>D1,pjd2>D2andpjd3>D3. If
+we stop because we have exhausted all our primes, then we see tha t we have found
+d1≤D1,d2≤D2andd3≤D3such thatd1d2d3=p1···pr. It is then easy to
+verify that
+d1≤D1≤N
+xδ,
+N2d2d2
+3≤N2D2D2
+3≤x1−δ,
+N2d1d4
+2d3
+3≤N2D1D4
+2D3
+3≤D5
+x1−5δ<x2−δ,
+Nd1d5
+2d2
+3≤ND1D5
+2D2
+3≤D8
+x3−10δ<x2−δ.
+Thus we just need to consider the situation when at some stage jwe havepjd1>
+D1,pjd2> D2andpjd3> D3. We see that this must ﬁrst occur when jis
+even, since for odd jwe havep3
+j≤D/(p1···pj−1) =D1D2D3/(d1d2d3) and so
+pj≤max(D1/d1,D2/d2,D3/d3). We must also have j≥6 sincej >4 and is even.
+This implies ( pj)7≤p1···p4p3
+5≤D, sopj≤D1/7≤x1/12−6δ.
+We now set d′
+2:=d2pjandD′
+2:=D2x1/12−6δ, so thatD2≤d′
+2≤D′
+2. We set
+D′
+3:=D2D3/d′
+2. For allℓ > jwe havep2
+ℓ< D1D′
+3/(d1d3pj+1···pℓ−1), so we can
+greedily make products d′
+1≤D1andd′
+3≤D′
+3withd′
+1d′
+3=d1d3pj+1···pr. In
+particular, we then have d=d′
+1d′
+2d′
+3. We then verify
+d′
+1≤D1≤N
+xδ,
+N2d′
+2(d′
+3)2≤N2d′
+2(D′
+3)2=N2D2
+2D2
+3
+d′
+2≤N2D2D2
+3=x1−δ,
+N2d′
+1(d′
+2)4(d′
+3)3≤N2D1(d′
+2)4(D′
+3)3≤N2D1D4
+2D3
+3x1/12−6δ≤D5
+x11/12+δ<x2−δ,
+Nd′
+1(d′
+2)5(d′
+3)2≤N2D1(d′
+2)5(D′
+3)2≤N2D1D5
+2D2
+3x1/4−18δ≤D8
+x11/4+8δ≤x2−δ.
+We have now covered all cases, and so completed the proof of Prop osition 9.1. /square
+Remark. By considering the situation when N=x1/3,p1≈p2≈D2/7,p3≈p4≈
+D1/7, andpjforj≥5are small but satisfy p1···pr≈D, we see that Proposition
+9.1 cannot be extended to D=x7/12+δunless we impose further restrictions on N
+or thepi.
+References
+[1] E. Bombieri. On the large sieve. Mathematika , 12:201–225, 1965.
+[2] E. Bombieri, J. Friedlander, and H. Iwaniec. Primes in ar ithmetic progressions to large mod-
+uli.Acta Math. , 156(3-4):203–251, 1986.
+[3] E. Bombieri, J. Friedlander, and H. Iwaniec. Primes in ar ithmetic progressions to large mod-
+uli. II.Math. Ann. , 277(3):361–393, 1987.
+=== PAGE 26 ===
+26 JAMES MAYNARD
+[4] J.-R. Chen. On the representation of a larger even intege r as the sum of a prime and the
+product of at most two primes. Sci. Sinica , 16:157–176, 1973.
+[5] J.-M. Deshouillers and H. Iwaniec. Kloosterman sums and Fourier coeﬃcients of cusp forms.
+Invent. Math. , 70(2):219–288, 1982/83.
+[6] S. Drappeau. Th´ eor` emes de type Fouvry-Iwaniec pour le s entiers friables. Compos. Math. ,
+151(5):828–862, 2015.
+[7] P. D. T. A. Elliott and H. Halberstam. A conjecture in prim e number theory. In Symposia
+Mathematica, Vol. IV (INDAM, Rome, 1968/69) , pages 59–72. Academic Press, London,
+1970.
+[8]´E. Fouvry and F. Grupp. On the switching principle in sieve th eory.J. Reine Angew. Math. ,
+370:101–126, 1986.
+[9]´E. Fouvry and F. Grupp. Weighted sieves and twin prime type eq uations. Duke Math. J. ,
+58(3):731–748, 1989.
+[10]´Etienne Fouvry and Henryk Iwaniec. The divisor function ove r arithmetic progressions. Acta
+Arith., 61(3):271–287, 1992. With an appendix by Nicholas Katz.
+[11] J. Friedlander and H. Iwaniec. Opera de cribro , volume 57 of American Mathematical Society
+Colloquium Publications . American Mathematical Society, Providence, RI, 2010.
+[12] G. Harman. Prime-detecting sieves , volume 33 of London Mathematical Society Monographs
+Series. Princeton University Press, Princeton, NJ, 2007.
+[13] D. R. Heath-Brown. Prime numbers in short intervals and a generalized Vaughan identity.
+Canadian J. Math. , 34(6):1365–1377, 1982.
+[14] H. Iwaniec. A new form of the error term in the linear siev e.Acta Arith. , 37:307–320, 1980.
+[15] J. Maynard. Primes in arithmetic progressions to large moduli I: Fixed residue classes.
+preprint, https://arxiv.org/abs/2006.06572 .
+[16] P. Shiu. A Brun-Titchmarsh theorem for multiplicative functions. J. Reine Angew. Math. ,
+313:161–170, 1980.
+[17] A. I. Vinogradov. The density hypothesis for Dirichet L-series.Izv. Akad. Nauk SSSR Ser.
+Mat., 29:903–934, 1965.
+[18] J. Wu. Chen’s double sieve, Goldbach’s conjecture and t he twin prime problem. Acta Arith. ,
+114(3):215–273, 2004.
+Mathematical Institute, Radcliffe Observatory quarter, W oodstock Road, Oxford
+OX2 6GG, England
+E-mail address :james.alexander.maynard@gmail.com

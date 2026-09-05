@@ -1,0 +1,1499 @@
+=== PAGE 1 ===
+arXiv:1408.5794v2  [math.NT]  22 Feb 2016Decoupling,exponentialsumsandtheRiemannzetafunction
+J. Bourgain∗
+InstituteforAdvancedStudy,Princeton, NJ08540
+bourgain@math.ias.edu
+February 23,2016
+Abstract
+Weestablishanewdecouplinginequalityforcurvesinthesp iritof[B-D1],[B-D2]whichimpliesanewmean
+value theorem for certain exponential sums crucial to the Bo mbieri-Iwaniec method as developed further in [H].
+Inparticular,this leads toanimproved bound |ζ(1
+2+it)| ≪t13/84+εforthe zeta function on the criticalline.
+0 Introduction
+The main result of the paper is the essentially sharp bound on the mean-value expression for r= 6(see [H] for
+details)
+Ar/parenleftig1
+N2,1
+N/parenrightig
+=/integraldisplay1
+0/integraldisplay1
+0/integraldisplay1
+−1/integraldisplay1
+−1/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+1≤n≤Ne(nx1+n2x2+N1
+2n3/2x3+N1
+2n1
+2x4)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle2r
+dx1dx2dx3dx4.(0.1)
+It isprovenindeedthat A6≪N6+ε(see Theorem2 below). Thebound A5(δ,δN)≪δN7+ε,1
+N2≤δ≤1
+N,
+established in [H-K], plays a key role in the reﬁnement of the Bombieri-Iwaniec approach [B-I1] to bounding
+exponentialsums as developedmainly by Huxley (see [H] for a n expositorypresentation). As pointedout in [H],
+obtaininggoodboundson A6leadsto furtherimprovementsandthisobjectivewasourmai nmotivation.
+In [B], we recovered the [H-K] A5-result (in fact in a sharper form) as a consequence of certai n general
+decouplinginequalitiesrelatedtotheharmonicanalysiso fcurvesin Rd. Thoseinequalitieswerederivedfromthe
+results in [B-D1] (see also [B-D2]). Theorem 2 will similarl y be derived from a decouplingtheorem, formulated
+asTheorem1.
+∗Thiswork was partially supported by NSFgrants DMS-1301619
+1
+=== PAGE 2 ===
+LetusnextbrieﬂyrecallthebasicstructureoftheBombieri -Iwaniecargument. Givenanexponentialsum
+/summationtext
+m∼Me/parenleftbig
+TF(m
+M)/parenrightbig
+withT > MandFa smooth function satisfying appropriatederivative condi tions, the sum
+/summationtext
+m∼Mis replaced by shorter sums/summationtext
+m∈I,Irangingoversize- Nintervals/parenleftbig
+hereNis a parameter to be chosen
+and is not the same as in (0.1)/parenrightbig
+. For each I, the phase may be replaced by a cubic polynomial and, by Poiss on
+summation,theexponentialsum/summationtext
+m∈Ie/parenleftbig
+TF(m
+M)/parenrightbig
+transformed(effectively)in asumofthe form
+/summationdisplay
+h≤He/parenleftbig
+x1(I)h+x2(I)h2+x3(I)h3/2+x4(I)h1/2/parenrightbig
+(0.2)
+wherethevector x(I) =/parenleftbig
+xj(I)/parenrightbig
+1≤j≤4∈R4dependsontheinterval I.
+At thispoint,oneneedstoanalyzethedistributionsof
+(h,h2,h3/2,h1/2) (1≤h≤H) (0 .3)
+and
+thevectorfunction x(I)ofthe interval I (0.4)
+whichHuxleyreferstoastheﬁrst andsecondspacingproblem s.
+Before applying a large sieve estimate, one takes an r-fold convolution of (0.3) whose L2-norm is expressed
+by mean valuesof the form (0.1)with Nreplacedby H. Roughlyspeaking,the L2-normofthe distribution(0.4)
+isboundedbyacertainparameter B,whoseevaluationishighlynon-trivialandsofarsub-opti mal. Theonlyinput
+of this paperis to providean optimalresult forthe ﬁrst spac ingproblem(see Corollary 3 below). Combinedwith
+availabletreatmentsofthe secondspacingproblem,it lead stoimprovedexponentialsumestimates.
+New exponential sum bounds are presented in §3. They are based on combining Corollary 3 with known
+estimatesontheparameter Bfromthesecondspacingproblem(seethe Acknowledgementbe low).
+Theconclusionisstated asTheorem4.
+In§4,weestablishournewestimateon |ζ(1
+2+it)|.
+Theorem5./vextendsingle/vextendsingle/vextendsingleζ/parenleftig1
+2+it/parenrightig/vextendsingle/vextendsingle/vextendsingle≪ |t|13
+84+ε. (0.5)
+It is implied by the classical approximate functional equat ion (cf. [T]) together with Theorem 4 and some
+further(known)exponentialsumbounds.
+Recall that the original Bombieri-Iwaniec argument provid ed the estimate/vextendsingle/vextendsingleζ/parenleftbig1
+2+it/parenrightbig/vextendsingle/vextendsingle≪ |t|9
+56+ε,9
+56=
+0,16071(see[B-I1] [B-I2]). TheworkofHuxleyin [H1](resp. [H2])p roducedtheexponents
+89
+570= 0.15614...and32
+205= 0.15609...,resp
+2
+=== PAGE 3 ===
+whileour A6-boundleadstotheexponent13
+84= 0.15476...,hencedoublingthesavingover1
+6obtainedin [B-I1].
+In§5wehighlighta newexponentpairthat resultsfromourwork.
+Acknowledgement
+The author is grateful to C. Demeter for various comments lea ding to simpliﬁcation of an earlier version.
+Most importantly,he is greatlyindebtedto one of the refere esfor clarifyingseveralmattersrelated to the ‘second
+spacingproblem’andprovidinganalternativetreatmentof Section3intheoriginalmanuscriptthatmoreoverleads
+to an improved exponent in Theorem 5. The presentation of the last 3 sections of the paper follows closely his
+suggestions.
+1 Adecoupling inequality for curves
+LetΦ = (φ1,...,φ d) : [0,1]→Γ⊂Rdbe a smooth parametrization of a non-degenerate curve in Rd, more
+speciﬁcallywe assumetheWronskiandeterminant
+det[φ(s)
+j(ts)1≤j,s≤d]/ne}ationslash= 0forallt1,...,td∈[0,1]. (1.1)
+Let usassumemoreoverthat diseven. For Ω⊂Rda boundedset ofpositivemeasure,denoteby
+/bardblf/bardblLp
+#(Ω)= (/upslope/integraldisplay
+Ω|f|pdx)1
+p=/parenleftbig1
+|Ω|/integraldisplay
+Ω|f|pdx/parenrightbig1
+p
+theaverage Lp-normandlet Bρbetheρ-cubeinRdcenteredat 0. We provethefollowingdecouplingpropertyin
+thespirit ofresultsin [B],[B-D2].
+Theorem 1. LetΓbe as above and I1,...,I d
+2⊂[0,1]subintervals that are O(1)-separated, let Nbe large and
+{Iτ}apartitionof [0,1]inN−1
+2-intervals. Thenforarbitrarycoefﬁcientfunctions aj=aj(t)
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+L3d
+#(BN)≪
+N1
+6+εd/2/productdisplay
+j=1/bracketleftig/summationdisplay
+τ;Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/bracketrightig1
+3d(1.2)
+holds,with ε >0arbitrary.
+Heree(z)standsfor e2πizas usual. Strictly speaking, L6
+#(BN)in the right handside of (1.2)shouldbesome
+weighted space L6
+#(wN)with weight 1BN(x)/lessorsimilarwN(x)≤(1 +|x|
+N)−10d, supp/hatwidewN⊂B1
+N(cf. [B-D1] and
+[B-D2]). Forsimplicity,thistechnicalpointwill beignor edhereandinthesequel.
+3
+=== PAGE 4 ===
+LetussayafewwordsabouttheroleofTheorem1intheproofof Theorem2statedbelow. First,theinequality
+in Theorem2canberewrittenas
+
+1
+|˜Ω|/integraldisplay
+˜Ω|/summationdisplay
+n≤Ne(x·Φ(n
+N))|12dx
+1/12
+≪N1
+2+ǫ
+with
+˜Ω = [0,N]×[0,N2]×[0,N2]×[0,N]
+and
+Φ(t) = (t,t2,t3/2,t1/2).
+Theorem1 impliesvia a standarddiscretizationargumentth at theaverageovereachball BN2with radius N2
+satisﬁes
+1
+|BN2|/integraldisplay
+|BN2|
+/radicaltp/radicalvertex/radicalvertex/radicalbt2/productdisplay
+j=1|/summationdisplay
+n∈Ije(x·Φ(n
+N))|
+12
+dx
+1/12
+≪N1
+2+ǫ.
+ThisestimateisweakerthantheoneinTheorem2intworegard s. First,inTheorem2oneisinterestedinaverages
+over the smaller region ˜Ω. This issue is dealt with in the ﬁrst half of Section 2, by usin g two further standard 2D
+decouplingsandexploitingperiodicity.
+The second difference between Theorems 1 and 2 is that the for mer produces a bilinear estimate, while the
+latter requires a linear estimate. This issue is addressed i n the second part of Section 2, and relies on a variant of
+theinductiononscalesfrom[B-G].
+Remarks.
+(1.3)Obviously(1.2)impliesthe sameinequalityfor BNreplacedbyanytranslate.
+(1.4)The case d= 2is an immediate consequence of te L6-decoupling inequality for planar curves Γof non-
+vanishingcurvature
+/vextenddouble/vextenddouble/vextenddouble/integraldisplay1
+0a(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble
+L6(BN)≪Nε/parenleftig/summationdisplay
+τ/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτa(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble2
+L6(BN)/parenrightig1
+2(1.5)
+whereΦ : [0,1]→Γ⊂R2with|Φ′′| ∼1and{Iτ}as above, established in [B-D1]. In fact, (1.5) will
+be the main analytical input required for the proof of (1.2). We mention for future use also the following
+discreteversionof(1.5)
+
+1
+|BN|/integraldisplay
+BN|/summationdisplay
+n≤Nane(x·Φ(n
+N))|6dx
+1/6
+≪Nǫ/bardblan/bardbll2,
+4
+=== PAGE 5 ===
+foreachcomplexcoefﬁcients an.
+(1.6)In the language of [B-D1], [B-D2], (1.2) may be reformulated as follows. Let Γ1,...,Γd/2⊂ΓbeO(1)-
+separated arcs and f1,...,f d
+2∈L1(Rd)satisfy supp /hatwidefj⊂Γj+B1
+N. Denote fτ= (ˆf|Φ(Iτ)+B1
+N)∨the
+Fourierrestrictionof fto the1
+N×···×1
+N/bracehtipupleft/bracehtipdownright/bracehtipdownleft/bracehtipupright
+d−1×1√
+NtubeΦ(Iτ)+B1
+N.
+Then
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1|fj|2/d/vextenddouble/vextenddouble/vextenddouble
+L3d
+#(BN)≪N1
+6+εd/2/productdisplay
+j=1/parenleftig/summationdisplay
+τ/bardblfj,τ/bardbl6
+L6
+#(BN)/parenrightig1
+3d. (1.7)
+(1.8)It may be worthwhile to explain the relation between (1.7) an d other known decoupling inequalities for
+curvesin Rd.
+Firstly, with Γas above and Γ1,...,Γd⊂ΓO(1)-separated, one has a d-linear inequality (the analogue of
+[B-C-T]forcurves)
+/vextenddouble/vextenddouble/vextenddoubled/productdisplay
+j=1|fj|1
+d/vextenddouble/vextenddouble/vextenddouble
+L2d
+#(BN)≤cΓd/productdisplay
+j=1/parenleftig/summationdisplay
+τ/bardblfj,τ/bardbl2
+L2
+#(BN)/parenrightig1
+2d. (1.9)
+This inequality turns out to be elementary. Using the fact th at the map I1×···×Id→Rd: (t1,...,td)/ma√sto→
+Φ(t1)+···+Φ(td)isadiffeomorphismfor I1,...,I dO(1)-separatedbyassumption(1.1)andParseval’stheorem,
+oneseesindeedthat/vextenddouble/vextenddouble/vextenddoubled/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle/vextenddouble/vextenddouble/vextenddouble
+L2(BN)≤cd/productdisplay
+j=1/bardblaj/bardblL2(Ij). (1.10)
+Onthe otherhand,onehasthe (d−1)-linearinequality(see [B-D2])
+/vextenddouble/vextenddouble/vextenddoubled−1/productdisplay
+j=1|fj|1
+d−1/vextenddouble/vextenddouble/vextenddouble
+L2(d+1)
+#(BN)≪N1
+2(d+1)d−1/productdisplay
+j=1/bracketleftig/summationdisplay
+τ/vextenddouble/vextenddouble/vextenddoublefj,τ/vextenddouble/vextenddouble/vextenddouble2(d+1)
+d−1
+L2(d+1)
+d−1
+#(BN)/bracketrightig1
+2(d+1)(1.11)
+and one observes, for deven, that the pair/parenleftbig
+2(d+ 1),2(d+1)
+d−1)/parenrightbig
+in (1.11) is obtained by interpolation between the
+pairs(2d,2)from (1.9) and (3d,6)from (1.7). The issue of what’s the analogue of Theorem1 for o dddwill not
+be consideredhere. In fact, ourmain interest is d= 4, whichprovidesthe requiredingredientforthe exponentia l
+sumapplication.
+Beforepassingto theproofofTheorem1,wemakea fewprelimi naryobservations.
+Notethatin thesettingofTheorem1,(1.9)also impliesthei nequality
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+Ld
+#(BN)≤
+cd/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble2
+L2
+#(BN)/bracketrightig1
+d.(1.12)
+5
+=== PAGE 6 ===
+To see this, take fj(x) =1√
+N/summationtext
+0≤k≤N
+k
+N∈Ijεke/parenleftbig
+x.Φ(k
+N)/parenrightbig
+forj=d
+2+1,...,dwithεk=±1independentrandom
+variablesandaverageover {εk},notingthat Eε[|fj|2]≍1andEε[|fτ|2]≍N−1
+2.
+Thereisalso thetrivialbound
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+L∞(BN)≤
+N1
+2d/2/productdisplay
+j=1max
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble2/d
+L∞(BN).(1.13)
+Interpolationbetween (1.12) and (1.13)using appropriate wave packet decompositionas explainedin [B-D1]
+(notethatit isessential herethat the IτareN−1
+2-intervals)gives
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+L3d
+#(BN)≤
+CN1
+3d/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/bracketrightig1
+3d(1.14)
+with{Iτ}a partitionin N−1
+2-intervals.
+Moregenerally,if ∆ = ∆ K⊂RdisaK-cube,we have(bytranslation)
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+L3d
+#(∆)≤
+CK1
+3d/2/productdisplay
+j=1/bracketleftbig/summationdisplay
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(∆)/bracketrightig1
+3d(1.15)
+where{Iτ}isnowa partitionin K−1
+2-intervals.
+The main point of (1.15)is to providea preliminary L6−L3dinequality; the prefactor K1/3is not important
+forwhatfollowsasitwill be improvedto Kε+1
+6usinga bootstrapargument.
+Returningto(1.1),itfollowsfromthe meanvaluetheoremth at
+|det[φ′
+i(tj)1≤i,j≤d]| ∼/productdisplay
+i/negationslash=j|ti−tj|. (1.16)
+By (1.16) and since φ′′(t) = lim s→01
+s/parenleftbig
+φ′(t+s)−φ′(t)/parenrightbig
+, it follows that for t1<···< td/2∈[0,1]O(1)-
+separated,
+|φ′(t1)∧φ′′(t1)∧φ′(t2)∧φ′′(t2)∧···∧φ′(td
+2)∧φ′′(td
+2)|> c (1.17)
+holds.
+6
+=== PAGE 7 ===
+ProofofTheorem1.
+Introducenumbers b(N)>0forwhichthe inequality,witharbitrary {aj},
+/vextenddouble/vextenddouble/vextenddoubled/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle2/d/vextenddouble/vextenddouble/vextenddouble
+L3d
+#(BN)≤
+b(N)N1
+6d/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/bracketrightig1
+3d(1.18)
+holds. Our aim is to establish a bootstrapinequality. By (1. 14),b(N)≤N1/6. WithK < Nto specify,partition
+BNinK-cubes∆ = ∆ K. We mayboundforeach ∆(sincethe inequalitiesfor BKand∆Kareequivalent)
+/upslope/integraldisplay
+∆d/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle6
+dx≤
+b(K)3dKd
+2d/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iσ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iσaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(∆)/bracketrightig(1.19)
+with{Iσ}apartitionin K−1
+2-intervals. Summationover ∆⊂BNimpliesthen
+/upslope/integraldisplay
+BNd/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Ijaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle6
+dx≤
+b(K)3dKd
+2/summationdisplay
+Iσ1⊂I1,...,Iσd/2⊂Id/2/upslope/integraldisplay
+Bd/2
+K/braceleftig
+/upslope/integraldisplay
+BNd/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplay
+Iσjaj(t)e/parenleftbig
+(x+zj).Φ(t)/parenrightbig
+dt/vextendsingle/vextendsingle/vextendsingle6
+dx/bracerightig/productdisplay
+jdzj.(1.20)
+FixIσj= [tj,tj+K−1
+2]⊂Ijandwrite for t=tj+s∈Iσj
+(x+zj).Φ(t) = (x+zj).Φ(tj)+(x+zj).Φ′(tj)s+1
+2(x+zj).Φ′′(tj)s2+o(1) (1 .21)
+provided
+N=o(K3/2). (1.22)
+Theinnerintegralin(1.20)maythenbereplacedby
+/upslope/integraldisplay
+BNd/2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/integraldisplayK−1
+2
+0aj(tj+s)e/parenleftbig
+(x+zj).Φ′(tj)s+1
+2(x+zj).Φ′′(tj)s2/parenrightbig
+ds/vextendsingle/vextendsingle/vextendsingle6
+dx (1.23)
+theo(1)-termin (1.21)producinga harmlesssmoothFouriermultipl ierthat maybe ignored.
+Next, since t1< t2<···< td/2areO(1)-separated, (1.17) applies and therefore the map Rd→Rd:
+x/ma√sto→/parenleftbig
+x.Φ′(t1),1
+2x.Φ′′(t1),...,x.Φ′(td/2),1
+2x.Φ′′(td/2)/parenrightbig
+isa linearhomeomorphism. Theimage measureofthe
+7
+=== PAGE 8 ===
+normalizedmeasureon BNmaybeboundedbythenormalizedmeasureon BCN,upto afactorand
+(1.23)/lessorsimilard/2/productdisplay
+j=1/upslope/integraldisplay
+|u|,|v|<CN/vextendsingle/vextendsingle/vextendsingle/integraldisplayK−1
+2
+0aj(tj+s)e(us+vs2)ds/vextendsingle/vextendsingle/vextendsingle6
+dudv. (1.24)
+Thisfactorizationisthemainpointintheargument.
+We may now apply (after rescaling s=k−1
+2s1)to each factor in (1.24) the 2D-decoupling inequality (1.5)
+withΓtheparabola (s1,s2
+1)andperforma decouplingatscale (K
+N)1
+2. Thus,byanotherchangeofvariables,
+(1.24)≪Nεd/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Iσj/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e(ut)dt/vextenddouble/vextenddouble/vextenddouble2
+L6
+#[|u|<CN]/bracketrightig3
+with{Iτ}a partitionin N−1
+2-intervals
+≪Nε/parenleftigN
+K/parenrightigd
+2d/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Iσj/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/bracketrightig
+. (1.25)
+Substituting(1.25)in(1.20)leadstotheestimate
+b(K)3dNd
+2+εd/2/productdisplay
+j=1/bracketleftig/summationdisplay
+Iτ⊂Ij/vextenddouble/vextenddouble/vextenddouble/integraldisplay
+Iτaj(t)e/parenleftbig
+x.Φ(t)/parenrightbig
+dt/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/bracketrightig
+. (1.26)
+Recalling(1.22),onemayconcludethat
+b(N)≪b(N2/3)Nε
+andTheorem1 followsbyiteration.
+2 Ameanvalue theorem
+Fromnowon,wefocuson d= 4(inviewoftheapplicationtoexponentialsums)andconside rΦ : [0,1]→Γ⊂R4
+satisfying(1.1). If I1,I2⊂ {1,...,N}are∼Nseparated,we getfromTheorem1
+/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ijane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.x/parenrightig/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(BN)≪
+N1
+6+ε2/productdisplay
+j=1/parenleftig/summationdisplay
+J⊂Ij/vextenddouble/vextenddouble/vextenddouble/summationdisplay
+n∈Jane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.x/parenrightig/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(BN)/parenrightig1
+12(2.1)
+with{J}a partitionof {1,...,N}inN1
+2-intervals.
+8
+=== PAGE 9 ===
+Againinviewofthe application,specify
+φ1(t) =t,φ2(t) =t2(2.2)
+andassume
+|φ′′′
+3|> c. (2.3)
+Inordertoperformafurtherdecouplingin(2.1),we enlarge thedomain BN,consideringﬁrst
+Ω = [0,N]×[0,N3/2]×[0,N3/2]×[0,N]
+whichwepartitionin N-cubes∆N.
+LetI1,I2beasabove. Applicationof(2.1)on ∆Ngives
+/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ijane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.x/parenrightig/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(∆N)≪
+N1
+6+ε/bracketleftig2/productdisplay
+j=1/parenleftig/summationdisplay
+J⊂Ij/vextenddouble/vextenddouble/vextenddouble/summationdisplay
+n∈Jane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.x/parenrightig/vextenddouble/vextenddouble/vextenddouble6
+L6
+#(∆N)/parenrightig/bracketrightig1
+12
+andsummingover ∆N
+/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ij···/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(Ω)≪
+N1
+6+ε/bracketleftig/summationdisplay
+J1⊂I1
+J2⊂I2/upslope/integraldisplay
+BN×BNdzdz′/upslope/integraldisplay
+Ωdx/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J1ane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.(x+z)/parenrightig/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J2ane/parenleftig
+Φ/parenleftign
+N/parenrightig
+(x+z′)/parenrightig/vextendsingle/vextendsingle/vextendsingle6/bracketrightig1
+12.(2.4)
+LetJ1= [h1,h1+N1
+2],J2= [h2,h2+N1
+2]withh1−h2≍N. Writefor n∈J1,n=h1+m, recalling(2.2)
+Φ/parenleftign
+N/parenrightig
+.(x+z) =Φ/parenleftigh1
+N/parenrightig
+.(x+z)+
+m
+N/parenleftig
+x1+z1+2h1
+N(x2+z2)+φ′
+3/parenleftigh1
+N/parenrightig
+(x3+z3)+φ′
+4/parenleftigh1
+N/parenrightig
+(x4+z4)/parenrightig
++
+m2
+N2/parenleftig
+x2+1
+2φ′′
+3/parenleftigh1
+N/parenrightig
+x3/parenrightig
++O(1)(2.5)
+recallingthat |z|,|x1|,|x4|< Nand|x2|,|x3|< N3/2while|m|< N1
+2. Proceedsimilarlyfor
+Φ/parenleftig
+n
+N/parenrightig
+.(x+z′),n∈J2.
+Observe that z1,z′
+1have range [0,N], so that periodicity considerations and a change of variabl es inz1,z′
+1
+permittoreplacethephase(2.5)by
+m
+Nz1+m2
+N2/parenleftig
+x2+1
+2φ′′
+3/parenleftigh1
+N/parenrightig
+x3/parenrightig
+9
+=== PAGE 10 ===
+and
+m
+Nz′
+1+m2
+N2/parenleftig
+x2+1
+2φ′′
+3/parenleftigh2
+N/parenrightig
+x3/parenrightig
+.
+Sinceh1−h2≍Nand(2.3),onemorechangeofvariablesin x2,x3givesthephases
+
+
+mu1+m2
+N1/2w1
+mu2+m2
+N1/2w2(2.6)
+withu1,u2,w1,w2rangingin [0,1]. Hencewe obtainagaina factorizationoftheintegrandin (2 .4),i.e.
+/integraldisplay1
+0/integraldisplay1
+0/integraldisplay1
+0/integraldisplay1
+0du1du2dw1dw2/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+m1<√
+Nah1+m1e/parenleftig
+m1u1+m2
+1
+N1/2w1/parenrightig/vextendsingle/vextendsingle/vextendsingle6
+/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+m2<√
+Nah2+m2e/parenleftig
+m2u2+m2
+2
+N1/2w2/parenrightig/vextendsingle/vextendsingle/vextendsingle6(2.7)
+and the2D-decoupling result applied to each factor enables to make a f urther decoupling at scale N1/4. This
+clearlypermitstobound(2.4)by
+N1
+6+εN1
+12+ε/bracketleftig/summationdisplay
+J′
+1⊂I1
+J′
+2⊂I2/integraldisplay1
+0/integraldisplay1
+0/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+1ane(nu1)/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+2ane(nu2)/vextendsingle/vextendsingle/vextendsingle6
+du1du2/bracketrightig1
+12(2.8)
+with{J′}a partition in N1
+4-intervals. The fact that we have dropped the termn2
+N1/2withat appears in (2.7)
+deserves a word of explanation. Note that if n∈J′
+ithenn=hi+mwithm≤N1/4. Thusn2
+N1/2w=
+/parenleftbigh2
+N1/2+2hm
+N1/2/parenrightbig
+w+O(1), whichpermitsusto replacein(2.7)theargumentby m/parenleftbig
+u+2h
+N1/2w/parenrightbig
+andhence muby
+changeofvariable.
+If instead we consider a translate Ω +yofΩ, the expression (2.8) needs to be modiﬁed replacing anby
+ane/parenleftbig
+Φ(n
+N).y/parenrightbig
+.
+Finally,considerthedomain(accordingtoHuxley’s A6-problem)
+˜Ω = [0,N]×[0,N2]×[0,N2]×[0,N]
+whichwepartitionindomains Ωα= Ω+yαwithΩasabove. Thusforeach α(2.8)implies
+/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ij···/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(Ωα)≪
+N1
+4+ε/bracketleftig/summationdisplay
+J′
+1⊂I1
+J′
+2⊂I2/integraldisplay1
+0/integraldisplay1
+0/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+1ane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.yα/parenrightig
+e(nu1)/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+2···/vextendsingle/vextendsingle/vextendsingle6
+du1du2/bracketrightig1
+12
+10
+=== PAGE 11 ===
+and/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ij···/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(˜Ω)≪
+N1
+4+ε/bracketleftig/summationdisplay
+J′
+1⊂I1
+J′
+2⊂I2/upslope/integraldisplay
+˜Ω/integraldisplay1
+0/integraldisplay1
+0/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+1ane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.y+nu1/parenrightig/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′
+2···/vextendsingle/vextendsingle/vextendsingle6
+dydu1du2/bracketrightig1
+12.(2.9)
+Proceedingasbefore,let J′
+1= [h1,h1+N1
+4],J′
+2= [h2,h2+N1
+4],h1−h2≍N.
+Write for n∈J′
+1,n=h1+m
+Φ/parenleftign
+N/parenrightig
+.y+nu1=
+Φ/parenleftigh1
+N/parenrightig
+.y+h1u1+
+m/parenleftig
+u1+y1
+N+2/parenleftigh1
+N/parenrightig
+y2+1
+Nφ′
+3/parenleftigh1
+N/parenrightig
+y3+1
+Nφ′
+4/parenleftigh1
+N/parenrightig
+y4/parenrightig
++m2
+N2/parenleftig
+y2+1
+2φ′′
+3/parenleftigh1
+N/parenrightig
+y3/parenrightig
++O(1).
+Since|y2|,|y3|< N2,|y4|< Nand|m|< N1
+4.
+Againbyperiodicity,(2.3)andchangeofvariables,we obta inthephases
+mu1+m2w1
+and
+mu2+m2w2
+withu1,u2,w1,w2∈[0,1]and theL6-normsare bounded by the ℓ2-norms of the coefﬁcients (see Remark 1.4).
+Inconclusion,we provedthat
+/vextenddouble/vextenddouble/vextenddouble2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ijane/parenleftig
+Φ/parenleftign
+N/parenrightig
+.x/parenrightig/vextendsingle/vextendsingle/vextendsingle1
+2/vextenddouble/vextenddouble/vextenddouble
+L12
+#(˜Ω)≪N1
+2+ε/bardbl¯a/bardbl∞ (2.10)
+withΦsatisfying(1.1),(2.2),(2.3),i.e.
+φ1(t) =t,φ2(t) =t2,|φ′′
+3|> cand/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingleφ′′′
+3(s)φ′′′
+4(s)
+φ′′′′
+3(t)φ′′′′
+4(t)/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle> cfors,t∈[0,1]. (2.11)
+Thefollowingstatementisthemeanvalueestimatefor A6in[H].
+Theorem2.
+/integraldisplay1
+0/integraldisplay1
+0/integraldisplay1
+−1/integraldisplay1
+−1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n≤Ne(nx1+n2x2+N1
+2n3/2x3+N1
+2n1
+2x4)/vextendsingle/vextendsingle/vextendsingle12
+dx1dx2dx3dx4≪N6+ε.(2.12)
+11
+=== PAGE 12 ===
+Proof.LetI⊂[1,N]be an interval of the form [N0,N0+M],100M < N 0≤N, and assume I1,I2⊂I
+subintervalsofsize ∼Mthatare∼M-separated.
+We ﬁrst estimate
+/integraldisplay/braceleftig2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Ije(nx1+n2x2+N1/2n3/2x3+N1/2n1/2x4)/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+dx. (2.13)
+Clearly(2.13)amountstothenumberofsolutionsofthesyst em
+
+
+m1+m2+m3−m4−m5−m6=m7+m8+m9−m10−m11−m12 (2.14)
+m2
+1+m2
+2+m2
+3−m2
+4−m2
+5−m2
+6=m2
+7+m2
+8+m2
+9−m2
+10−m2
+11−m2
+12 (2.15)
+(N0+m1)3/2+(N0+m2)3/2+(N0+m3)3/2−(N0+m4)3/2−(N0+m5)3/2−(N0+m6)3/2= (2 .16)
+(N0+m7))3/2+(N0+m8)3/2+(N0+m9)3/2−(N0+m10)3/2−(N0+m11)3/2−(N0+m12)3/2+O(N−1
+2)
+(N0+m1)1
+2+···−(N0+m6)1/2=
+(N0+m7)1
+2+···−(N0+m12)1
+2+O(N−1
+2). (2.17)
+withm1,...,m 6∈I′
+1=I1−N0;m7,...,m 12∈I′
+2=I2−N0.
+Write(N0+m)3/2,(N0+m)1/2intheform
+(N0+m)3/2=N3/2
+0+3
+2N1
+2
+0m+3
+8N−1
+2
+0m2+M3N−3/2
+0φ3/parenleftigm
+M/parenrightig
+(2.18)
+(N0+m)1/2=N1/2
+0+1
+2N−1
+2
+0m−1
+8N−3
+2
+0m2−M3N−5/2
+0φ3/parenleftigm
+M/parenrightig
++M4N−7/2
+0φ4/parenleftigm
+M/parenrightig
+(2.19)
+whereφ3(t)∼t3/parenleftig
+1+O/parenleftig
+M
+N0/parenrightig
+t+···/parenrightig
+,φ4(t)∼t4.
+HenceΦ(t) =/parenleftbig
+t,t2,φ3(t),φ4(t)/parenrightbig
+satisﬁes (2.11).
+From(2.14),(2.15),(2.18),(2.19),inequalities(2.16), (2.17)maybe replacedby
+φ3/parenleftigm1
+M/parenrightig
++···+φ3/parenleftigm12
+M/parenrightig
+< O(N−1
+2N3/2
+0M−3) (2 .20)
+φ4/parenleftigm1
+M/parenrightig
++···+φ4/parenleftigm12
+M/parenrightig
+< O(N−1
+2N7/2
+0M−4). (2.21)
+Thenumberofsolutionsof(2.14),(2.15),(2.20),(2.21)ma ybeevaluatedby
+/integraldisplay
+[−1,1]4/braceleftig2/productdisplay
+j=1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+m∈I′
+je(mx1+m2x2+N1
+2M3
+N3/2
+0φ3/parenleftigm
+M/parenrightig
+x3+N1
+2M4
+N7/2
+0φ4/parenleftigm
+M/parenrightig
+x4/parenrightig/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+dx. (2.22)
+Accordingto (2.10),(2.22)andhence(2.13)areboundedby
+M6+ε/braceleftig
+1+N3/2
+0
+N1
+2M/bracerightig/braceleftig
+1+N7/2
+0
+N1/2M3/bracerightig
+≪N4+εM2. (2.23)
+12
+=== PAGE 13 ===
+Returning to (2.12), let b(N)N6be a bound on the left hand side We use the same reduction proce dure to multi-
+linear (here bi-linear)inequalitiesas in [B], [B-D2] (and originatingfrom[B-G]). Denote Ka large constant and
+partition[0,N]in intervals I0,I1,...,I K,where|I0|=100N
+Kand|Is|=/parenleftbig
+1−100
+K/parenrightbigN
+K=M0for1≤s≤K.
+Bound/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n≤N/vextendsingle/vextendsingle/vextendsingle12
+≤212/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈I0/vextendsingle/vextendsingle/vextendsingle12
++(2K)12/summationdisplay
+1≤s≤K/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is/vextendsingle/vextendsingle/vextendsingle12
+. (2.24)
+Theﬁrst termof(2.24)isboundedby 2121006K−6b/parenleftig
+100N
+K/parenrightig
+N6.
+For the remaining terms, write Is= [Ns,Ns+M0],Ns>100M0, and make a further partition of Isin
+consecutive intervals Is,1,...,I s,Kof sizeM1=M0
+K. The key point (going back to [B-G]) is an estimate of the
+from/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is/vextendsingle/vextendsingle/vextendsingle12
+≤412/summationdisplay
+s1≤K/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s1/vextendsingle/vextendsingle/vextendsingle12
++K18/summationdisplay
+s1,s2≤K
+|s1−s2|≥2/integraldisplay/braceleftig/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s1/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s2/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+.(2.25)
+Recallthat(2.25)followsfromconsideringthe(pointwise inx)decreasingrearrangement η1≥η2≥ ··· ≥ηKof
+thesequence/parenleftbig/vextendsingle/vextendsingle/summationtext
+n∈Is,s1/vextendsingle/vextendsingle/parenrightbig
+1≤s1≤Kanddistinguishingthecases η4<1
+K1η1andη4≥1
+K1η1.
+Applicationof(2.23)givesfor |s1−s2| ≥2
+/integraldisplay/braceleftig/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s1/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s2/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+≪N6+ε
+and hence the second sum in (2.25) contributes at most for C(K)N6+ε. Replace the second term in the r.h.s. of
+(2.24)by
+(2K)12412/summationdisplay
+s≤K,s1≤K/integraldisplay/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈Is,s1/vextendsingle/vextendsingle/vextendsingle12
+.
+Repeating the procedure, partition each Is,s1in intervals Is,s1,s2of sizeM2=M1
+Kand apply the decomposition
+(2.25)foreach/summationtext
+n∈Is,s1etc.
+Ingeneral,onegetsbilinearcontributionsoftheform
+(2K)12412αK18/summationdisplay
+J,J′/integraldisplay/braceleftig/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+. (2.26)
+wherethe sum extendsoverpairs J,J′of intervalsofsize Mα=N
+Kα+1,α≥1that are at least Mα-separatedand
+containedinanintervalofthe form [N0,N0+KMα],KMα<1
+100N0. Againby(2.23)
+/integraldisplay/braceleftig/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J/vextendsingle/vextendsingle/vextendsingle6/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n∈J′/vextendsingle/vextendsingle/vextendsingle6/bracerightig
+≪N4+εM2
+α
+implyingthat
+(2.26)≪C(K)412αN
+MαN4+εM2
+α≪N6+ε/parenleftig412
+K/parenrightigα
+.
+13
+=== PAGE 14 ===
+Summingover αeventuallyleadstothebound
+2121006K−6b/parenleftig100N
+K/parenrightig
+N6+N6+ε. (2.27)
+Onthe l.h.s. of(2.24). Therefore
+b(N)≤2121006K−6b/parenleftig100N
+K/parenrightig
++CεNε
+implying b(N)≪NεandTheorem2.
+Usingthenotationfrom[H],Theorem2 implies
+Corollary3. Let1
+N2≤δ≤1,1
+N≤∆≤1. Then
+A6(N,δ,∆) =/integraldisplay1
+0/integraldisplay1
+0/integraldisplay1
+−1/integraldisplay1
+−1/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n≤Ne/parenleftig
+nx1+n2x2+1
+δ/parenleftign
+N/parenrightig3/2
+x3+1
+∆/parenleftign
+N/parenrightig1/2
+x4/parenrightig/vextendsingle/vextendsingle/vextendsingle12
+dx≪δ∆N9+ε.
+(2.28)
+Consideringthe majorarccontribution,(2.28)isclearlys eento beessentiallybest possible.
+3 Applications toexponential sums
+LetFbea smoothfunctionon [1
+2,1]satisfying,forsomeconstant c∈(0,1],the condition
+min{|F′′(x)|,|F′′′(x)|,|F′′′′(x)|}> c. (3.1)
+GivenTsufﬁcientlylarge, M≥1,put:f(u) =TF(u/M)withM
+2≤u≤Mand
+S=/summationdisplay
+m∼Me/parenleftbig
+f(m)/parenrightbig
+. (3.2)
+In whatfollows, we assume M≤√
+T, in view ofthe applicationto |ζ(1
+2+it)|. We use notationandbackground
+from[H]andalsorelyon[H-W]and §7and§8in[H1].
+Oncetheparameter N∈(1,M)ischosen, Risdeﬁnedbytherelation
+R=/ceilingleftig/parenleftig2M3
+cNT/parenrightig1/2/ceilingrightig
+, (3.3)
+so that, foreach relevantsize- NintervalI⊂[M/2,M], the corresponding‘arc’ J(I) ={f′′(u)/2 :u∈I}will
+beanintervaloflengthexceeding 1/R2. We assumethat NandRsatisfythe conditions
+R≤N≤R2
+14
+=== PAGE 15 ===
+(given that√
+T≥M, these conditions imply that 2≤R≤N≪M3/2T−1/2≪MT−1/4≤M1/2and
+N≫MT−1/3≫1). By following (in all but certain inessential respects) th e steps of §4 in [H-W] that precede
+Equation(4.8)there,whileslightlymodifyingtheapplica tionofthelemmaon‘partialsumsbyFouriertransforms’
+(i.e. [H-W],Lemma3.4),oneobtainsa resultimplyingthat, forsome Q,ℓ,H,α ∈Csatisfying
+Q,H∈N,ℓ∈ {0,1,2},α∈ {e(−η) :−1/2≤η≤1/2},Q≥R≫/radicalbig
+QandH≥NQ/R2≫H,
+onehasanupperbound
+|S| ≪MlogN
+N1/2+Rlog2N
+Q1/2/summationdisplay
+I∈I(Q,ℓ)/parenleftig/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+h≤Hαhe/parenleftbig
+x(I)·/parenleftbig
+h,h2,h3/2,h1/2/parenrightbig/parenrightbig/vextendsingle/vextendsingle/vextendsingle+Q
+R/parenrightig
+(3.4)
+in whichxisa certainmappingfromtheset I(Q,ℓ)into[−X1,X1]×···×[−X4,X4]⊂R4, where
+X1=X2=1
+2andX3=X4=/parenleftigR
+Q/parenrightig2
+H1/2,
+whileI(Q,ℓ)is the set of those I∈ {[kN,N+kN] :k∈NandM/(2N)≤k≤(M−3N)/N}that, via the
+proceduresset outin [H-W], §4, Step 1, are associated with a reducedrational a/q∈J(I)that happensto satisfy
+Q≤q <2QandQ≡ ±ℓ(mod4)(in the terminology of [H-W], §4, Step 1, these I’s are ‘minor arcs’). The
+details of the ‘second spacing problem’ are not amongst the m ain points of interest in this paper, so we skip the
+deﬁnition of x(I)and mention only that this element of R4is essentially identical to the vector y=y(k)deﬁned
+in [H-W], §4Step 4(theindex ‘k′therecorrespondstoour‘ I’).
+Byan appropriateapplicationof[H-W],Lemma2.1,oneﬁndst hat
+2/summationdisplay
+ℓ=0|I(Q,ℓ)| ≪MR2
+NQ2+R2
+Q≍MR2
+NQ2.
+Giventhis estimate, that in (3.4)and the trivial upperboun dforthe modulusof the sum over hin (3.4),it follows
+bythesixth-powerH¨ olderinequalitythat,either
+|S| ≪Mlog2N
+N1/2(3.5)
+orelse
+R≤Q < R2/3N1/3≤N (3.6)
+andonehas
+|S|6≪/parenleftigRlog2N
+Q1/2/parenrightig6/parenleftigMR2
+NQ2/parenrightig5/summationdisplay
+I∈I(Q,ℓ)/summationdisplay
+h∈N6e/parenleftbig
+x(I)·y(h)/parenrightbig
+ω(I)Ω(h), (3.7)
+where
+y(h) =6/summationdisplay
+j=1(hj,h2
+j,h3/2
+j,h1/2
+j) = (h1+···+h6,...,h1/2
+1+···+h1/2
+6)∈R4,
+15
+=== PAGE 16 ===
+whileωisacertaincomplex-valuedfunctionthattakesvaluesthat are(withoutexception)ofmodulusnotexceed-
+ingunity,asdoes Ω(h)(whichisequalto αy1(h)ifhj≤Hforj= 1,...,6,andiszerootherwise).
+Supposenowthat(3.6)and(3.7)hold. Then,similarlytowha tisobservedattheendof‘Step4’,in[H-W], §4,
+it follows by the Bombieri-Iwaniec ‘double large sieve’ [B- I1], Lemma 2.4 (or see [H-W], Lemma 3.6) that one
+has/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+I∈I(Q,ℓ)/summationdisplay
+h∈N6e/parenleftbig
+x(I)·y(h)/parenrightbig
+ω(I)Ω(h)/vextendsingle/vextendsingle/vextendsingle2
+≪AB14/productdisplay
+j=1(XjYj+1). (3.8)
+where
+Y1= 6H, Y 2= 6H2, Y 3= 6H3/2, Y 4= 6H1/2,
+B1=/vextendsingle/vextendsingle/braceleftbig
+I,I′) :I,I′∈ I(Q,ℓ)and|xj(I)−xj(I′)|<1
+2Yj(j= 1,...,4)/bracerightbig/vextendsingle/vextendsingle(3.9)
+and
+A=/vextendsingle/vextendsingle/vextendsingle/braceleftbig
+(h,h′) :h,h′∈(N∩(0,H])6and|yj(h)−yj(h′)|<1
+2Xj(j= 1,...,4)/bracerightbig/vextendsingle/vextendsingle/vextendsingle.
+Itisworthremarkingherethattheconditionson (h,h′)intheabovedeﬁnitionofthenumber Aactuallyimplythe
+equality of the orderedpairs/parenleftbig
+y1(h),y2(h)/parenrightbig
+and/parenleftbig
+y1(h′),y2(h′)/parenrightbig
+(both of which lie in Z2): hence the traditional
+deﬁnitionofthe‘ﬁrstspacingproblem’asaquestionconcer ningtheorderofmagnitudeofthenumberofsolutions
+in integers h1,h′
+1,...,h r,h′
+r∈(0,H]ofa certainsystem of two equationsand two inequalities/parenleftbig
+see for example
+[H], (11.1.1)-(11.1.5)/parenrightbig
+. Given that |y−y′|<1
+2Ximplies|y−y′|<1
+X(whenever X,y,y′∈R), it is a corollary
+of[H],Lemma5.6.5(forexample)thatwe havehere:
+0≤A≤/parenleftigπ2
+2/parenrightig4/parenleftig1
+X1···X4/parenrightig/integraldisplayX1
+−X1/integraldisplayX2
+−X2/integraldisplayX3
+−X3/integraldisplayX4
+−X4/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+h∈N6
+hj≤H(j=1,...,6)e(y(h)·(z1,...,z 4)/parenrightbig/vextendsingle/vextendsingle/vextendsingle2
+dz1dz2dz3dz4
+=π8Q4
+4HR4/integraldisplay1
+0/integraldisplay1
+0/integraldisplayR2√
+H
+Q2
+−R2√
+H
+Q2/integraldisplayR2√
+H
+Q2
+−R2√
+H
+Q2/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+h≤He/parenleftbig
+(h,h2,h3/2,h1/2)·(z1,...,z 4)/parenrightbig/vextendsingle/vextendsingle/vextendsingle12
+dz1dz2dz3dz4
+= (π8/4)A6(H;δ,Hδ).
+withA6(L;γ,Γ)deﬁnedaccordingto (2.28),andwith
+δ=Q2
+H2R2
+so that1/H≤Hδ≤Q/N≤1. Thereforeit followsbyCorollary3 thatwe have
+A≪δ2H10+ε. (3.10)
+Withregardtothe‘secondspacingproblem’oneusesthetrea tmentofthesecondspacingproblemin[H-W],rather
+thanthemoreadvancedtreatmentin[H1]). Oneobtains
+B1≪∆1∆2/parenleftigM
+N/parenrightig2/parenleftigQ
+R/parenrightig4
+ifN=MT−2/7
+16
+=== PAGE 17 ===
+where
+∆1=1
+X2Y2=1
+3H2<R4
+N2Q2and∆2=1
+X3Y3=Q2
+6R2H2<R2
+N2.
+Hence,with N=MT−2/7
+B1≪M2R2Q2
+N6(3.11)
+Itfollowsfrom(3.5)-(3.8),(3.10)and(3.11)that
+|S|6≪max/braceleftigM6+ε
+N3,/parenleftigM5+εR4N
+Q7/parenrightig/parenleftigMRQ
+N3/parenrightig/bracerightig
+≤/parenleftigM6+ε
+N3/parenrightig/parenleftigN
+R/parenrightig
+forN=MT−2/7. (3.12)
+Recalling(3.3)theaboveboundfor |S|6implies
+|S|6≪/parenleftigM6+ε
+N3/parenrightig/parenleftigN3T
+M3/parenrightig1/2
+=Mε+9/2T1/2
+N3/2=M3+εT13/14,
+If√
+T≥M≥cT3/7(wherecis the positive constant in (3.1) and (3.3)) then the conditi onsN∈(1,M)and
+R≤N≤R2aresatisﬁed, with N=MT−2/7andRasin(3.3). Thatis, wehave:
+|S| ≪M1
+2Tε+13/84for√
+T≥M≥cT3/7. (3.13)
+TheM-range for which the bound (3.13)holdsmay be extendedby inv okingthe treatment in [H1] which we
+discussnext.
+ItwasobservedbyHuxley,at thestartof §7in[H1],thatforanarbitrary V≥1thestructureoftheBombieri-
+Iwaniec‘doublelargesieve’impliesthatifthefactor X2Y2+1ontheright-handsideofthebound(3.8)isincreased
+toX2Y2V+ 1≤(X2Y2+ 1)Vthen the adjacent term B1may be replaced by a term BV≤B1, the deﬁnition
+of which differs from that of B1/parenleftbig
+in (3.9)/parenrightbig
+only insofar as it involves an upper bound on |x2(I)−x2(I′)|that
+is stronger by a factor Vthan is the case in (3.9). This observation plays a crucial pa rt in Huxley’s method of
+‘resonancecurves’,throughwhich the most recentprogress [H1], [H],[H2] on the ‘secondspacingproblem’was
+achieved;weapplyithere,incombinationwith(3.10)andth e bounds/producttext
+j≤4(XjYj+1) =
+(3H+1)(3H2+1)(6δ−1+1)(6(Hδ)−1+1)≪H2/δ2,in ordertodeducethat
+|S|6≪/parenleftigM5R16log12N
+N5Q13/parenrightig
+H6+ε(VBV)1/2≪/parenleftigM5R4N1+ε
+Q7/parenrightig
+(VBV)1/2(V≥1).(3.14)
+In [H1] Huxley invented an approach to the ‘second spacing pr oblem’ based on a theory involving certain
+‘resonancecurves’. In his ﬁrst applicationof this, in [H1] ,§7, he obtaineda result implyingthat, if M≤√
+T(as
+we suppose),andifonehaseither V=N/Q≪R4/N2,orelseV=R4/N2(sothatV≥1ineithercase, given
+thatQ≤N≤R2), then
+VBV≪/parenleftigVMR2
+NQ2+∆1∆2∆2/3
+4/parenleftigM
+N/parenrightig2/parenrightig/parenleftigQ
+R/parenrightig4
+(3.15)
+17
+=== PAGE 18 ===
+where∆1,∆2areasabove,while
+∆4=1
+X4Y4=Q2
+6R2H<Q
+N.
+By (3.14)and(3.15),oneobtains:
+|S|6≪/parenleftigM5+εR4N
+Q7/parenrightig/parenleftig
+min/braceleftig/parenleftigN
+Q/parenrightig1/2
+,R2
+N/bracerightig/parenleftigM
+N/parenrightig1/2
++/parenleftigQ
+R/parenrightig1/3/parenleftigR
+N/parenrightig7/3/parenleftigM
+N/parenrightig/parenrightig
+≤/parenleftigM5+εN
+R3/parenrightig/parenleftig
+min/braceleftig/parenleftigN
+R/parenrightig1/2
+,R2
+N/bracerightig/parenleftigM
+N/parenrightig1/2
++/parenleftigR
+N/parenrightig7/3/parenleftigM
+N/parenrightig/parenrightig
+= min/braceleftigMε+11/2N
+R7/2,Mε+11/2
+RN1/2/bracerightig
++/parenleftigM6+ε
+N3/parenrightig/parenleftigN
+R/parenrightig2/3(3.16)
+/parenleftbig
+withMε+11/2/(RN1/2)≍M4+εT1/2, by virtue of (3.3)/parenrightbig
+. WhenM > T11/30andRis given by (3.3), the
+upper bound (3.16) may be optimized by putting N= max{MT−17/57,M1/2T−1/12}: for each such M,T,N
+andR,thebound(3.16)isequivalentto:
+|S|6≪/parenleftigM6+ε
+N3/parenrightig/parenleftigN
+R/parenrightig2/3
+≍M5+εT1/3
+N2. (3.17)
+One can check that if Tis sufﬁciently large (in terms of c−1), if√
+T≥M≥T5/12, and ifNis as assumed
+in (3.17), then Ndoes satisfy our initial assumptions/parenleftbig
+that1< N < M andR≤N≤R2, withRgiven by
+(3.3)/parenrightbig
+. In fact our optimal choice of Nin connectionwith the applicationof (3.15)is, unsurprisi ngly,identical to
+the choice of Nfoundto be optimal in [H1], §8. The same is true in cases where M < T5/12. The problemwith
+such cases is that the choice of Nassumed in (3.17) is too large to satisfy the condition N≤R2. The solution
+to this problem (utilized in [H1]) is to switch to a smaller va lue ofNsatisfying N≤R2≪N. This is achieved
+here by putting N=/parenleftbig
+2M3/(cT)/parenrightbig1/2, which satisﬁes all of our assumptions considering NandRwhenever
+T5/12≥M≥2(cT)1/3. Itmoreoverfollowsfrom(3.16)and(3.3)thatoneobtains( 3.17)forthisalternatechoice
+ofN(satisfying N≍R2).
+By the above observations, and the further observation that MT−17/57≫M1/2T−1/12if and only if M≫
+T49/114,we arriveat theupperbounds.
+|S|6≪
+
+M3+εT53/57if√
+T≥M > T49/114;
+M4+εT1/2ifT49/114≥M≥T5/12;
+M2+εT4/3ifT5/12> M≥2(cT)1/3.(3.18)
+Notethat thisboundis min{M3+εT53/57,M4+εT1/2}when√
+T≥M≥T5/12.
+Using(3.18)if M < T3/7(notingtheinequalities49
+114>3
+7>5
+12),oneveriﬁesthatthe boundon |S|in (3.13)
+holdsif√
+T≥M≥T17/42. Thuswe establish
+18
+=== PAGE 19 ===
+Theorem4. With theabovenotation,onehasthat
+|S| ≪M1/2Tε+13/84if1
+2≥α=logM
+logT≥17
+42. (3.19)
+4 Bounding the zeta-function onthe criticalline
+Fortheapplicationto |ζ(1/2+it)|onewantstoshowthat(3.19)alsoholdswhen 17/42> α≥0. Thecaseswith
+0≤α≤13/42are trivial (there one can just use |S| ≤M), so all that remains to be done is establishing that
+(3.19)holdswhen αliesinthe interval (13/42,17/42). Toachievethisonecanemploythebound
+|S| ≪T1
+128(4+103α)+ε(12/31< α≤1), (4.1)
+whichis[H1],Theorem3,incombinationwiththe exponentpa irestimate
+|S| ≪/parenleftigT
+M/parenrightig1/9
+M13/18=M11/18T1/9(0≤α≤1), (4.2)
+which corresponds to the exponent pair (1
+9,13
+18) =ABA2B(0,1)mentioned in [T], §5 20. It should be noted
+that (4.2)/parenleftbig
+andalso (4.1)/parenrightbig
+assumeadditionalhypothesesconcerningthefunction F, beyondcondition(3.1). This,
+however, is not an obstacle to the application to |ζ(1/2 +it)|, since that only requires consideration of cases in
+whichF(x) = logx/parenleftbig
+a function that does satisfy all the unmentioned conditions attached to (4.1) and (4.2)/parenrightbig
+.
+Assume henceforth that Fis “a suitable function”. such that (4.1) and (4.2) are appli cable. A calculation shows
+that (3.19) is implied by (4.1) for all αin the interval (12/31,332/819], and is implied by (4.2) for all αin the
+interval[0,11/28]: noting that 11/28 = 0.39285... >0.38709...= 12/31,we ﬁnd that the union of these two
+intervalsis [0,332/819]= [0 ,0.40537...]⊃(0.30952...,0.40476...) = (13/42,17/42).
+Bytheprecedingonehasthebound(3.19)whenever 0≤α≤1/2(atleastthisissointhecase F(x) = logx).
+It followsfromthe‘approximatefunctionalequation’for ζ(s)in thecriticalstrip,see [T](4.12.4),that
+/vextendsingle/vextendsingle/vextendsingleζ/parenleftig1
+2+it/parenrightig/vextendsingle/vextendsingle/vextendsingle≤2/vextendsingle/vextendsingle/vextendsingle/summationdisplay
+n≤√
+t/2πn−1
+2+it/vextendsingle/vextendsingle/vextendsingle+O(1) (t→ ∞). (4.3)
+Frompartialsummationanddyadicdissection,Theorem5 now followsinthe usualway.
+Remark.
+Bombieri and Iwaniec achieved the exponent 9/56 = (1 −1/28)/6using an essentially optimal bound on
+A4(δ,Hδ),sothattheexponent 13/84 = (1−1/14)/6/parenleftbig
+achievedwithanessentiallyoptimalboundfor A6(δ,Hδ)/parenrightbig
+19
+=== PAGE 20 ===
+representsexactlyadoublingofBombieriandIwaniec’simp rovementovertheclassical‘1/6’(withtheiressentially
+optimalboundon A5(δ,Hδ)HuxleyandKolesnik,in1991,gottheexponent 17/108= (1 −1/18)/6,andwould
+in fact have got 11/70 = (1−2/35)/6,exceptfor the fact that cases with αnear to 23/54were a problemat that
+time).
+5 Further comments
+Recalling(3.2),theprecedingshowsthat onehastheestima te
+|S| ≪M1
+2Tε+13
+84if1
+2≥α=logM
+logT>0 (5 .1)
+provided fisinthe classoffunctionsto whichthe exponentpairtheory applies(seeforinstance[G-K],Ch. 3for
+details). Infact
+Theorem6./parenleftbig
+ε+13
+84,ε+55
+84/parenrightbig
+isanexponentpair.
+Oneneedsto obtainthebound |S| ≪(T/M)13
+84+εM55
+84+ε=M1
+2T13
+84+εsubjectto conditionsthatareweaker,
+in two respects, than the conditionsunderwhich direct appl icationof (5.1)givesthis boundon |S|. More speciﬁ-
+cally
+(a) therelevant‘ M’mayexceedthesquarerootoftherelevant‘ T’(althoughonewillatleastnothave M > T);
+(b) the summation may not be over [M/2,M]∩Z/parenleftbig
+it may just be over some set [a,b]∩Z, where[a,b]is
+some propersubset of (M/2,M)/parenrightbig
+. Moreoverthe function fthat one is ‘given’may onlybe deﬁned onthe
+subinterval [a,b](thisis, forexample,whatoccursinthetheoryofexponentp airsdevelopedin[G-K]).
+As a ﬁrst step to getting around the problem (a), one can note t hat in the absence of problem (b) the desired
+resultinanycaseswith T < M2≪Tcanbeseentofollowfrom(5.1). Forinsuchcasesonemayrepl acec,F,T
+byc1=TM−2c,F1=TM−2FandT1=M2without invalidating (3.1) or causing any change in the valu e of
+thesumS.
+Secondly,just to secure any extreme cases, one can deal with the cases in which M≥T9/10(say) simply by
+an appeal to the exponent pair (1/2,1/2)(this is analogous to using the trivial bound |S| ≤Mwhenαis in a
+neighborhoodof0).
+Cases with T1/2< M < T9/10become manageable after they are converted, through Poisso n summation
+and partial summation, into cases involving (in place of MandT) anM′≍T/Mand aT′≍T, so that one
+has(T′)1/10≪M1≪(T′)1/2. The details of this conversion are essentially the same as w hat goes on in the
+20
+=== PAGE 21 ===
+veriﬁcationofthe‘ B-process’ofexponentpairtheory(see,forexample,[G-K], §3.5);itsefﬁcacy,indisposingof
+problem(a),isrelatedtothefactthat,when 0≤k≤1
+2andl=k+1
+2,onehas B(k,l) := (l−1
+2,k+1
+2) = (k,l).
+Problem (b) is also remarked upon in Sargos’s paper [S] (see t he remark on p. 310). Firstly one constructs
+a suitable extension of the function f(x), so that the resulting function f1(x)has domain [M/2,M], is identical
+tof(x)on the subinterval [a,b], and satisﬁes (on [M/2,M])the requisite set of conditions on its derivatives
+(theseconditionsbeingsuchastomakethetheoryofexponen tpairsapplicable). If s >0andyx−sistherelevant
+‘monomial’approximationto f′(x)on[a,b](suchasmustbepresentwhentheexponentpairtheoryisappl icable),
+then it is enough to consider an extension f1offthat, forb < x≤M, satisﬁes f1(x) =y/integraltextx
+bu−sdu+a0+
+a1x+···+aPxP, wherea0,a1,...,a Pare certain constants (determined by the requirement that f(P)
+1(x)be
+continuousat x=b): given that the derivatives f′(x),...,f(P)(x)satisfy the requisite conditionson the interval
+[a,b](forwhichsee[G-K],Condition(3.3.3))onemaydeducethat theconstants a1,...,a Paresmall enoughnot
+to preventthosesame conditionsbeingsatisﬁed by f′
+1(x),...,f(P)
+1(x)onthe longerinterval [a,M]. By a similar
+construction one obtains an extension of f, (and so also of f) that has domain [M/2,M]and is of the class to
+whichtheexponentpairtheoryapplies.
+Once the extension of fto/bracketleftbigM
+2,M/bracketrightbig
+is obtained, one can employ [S], lemma 2.1 to solve problem (b ) at the
+cost oflosinga harmlessfactor O(logM)inthe ﬁnalestimate.
+References
+[B] J.Bourgain, Decouplinginequalitiesandsomemean-valuetheorems ,preprintavailableonarxiv.
+[B-D1] J. Bourgain,C. Demeter, Theproofofthe l2-decouplingconjecture ,arXiv: 1405335.
+[B-D2] J. Bourgain, C. Demeter, ℓpdecouplings for hypersurfaces with nonzero Gaussian curva ture,
+arXiv:14070291.
+[B-I1] E. Bombieri, H. Iwaniec, On the order of ζ(1
+2+it), Ann. Scuola Norm. Sup. Pisa Cl. Sci (4) 13 (1986),
+449–472.
+[B-I2] E. Bombieri, H. Iwaniec, Some mean value theorems for exponential sums , Ann. Scuola Norm. Sup.Pisa
+Cl. Sci(4)13(1986),473–486.
+[B-G] J. Bourgain, L. Guth, Bounds on oscillatory integral operators based on multilin ear estimates , GAFA 21
+(2011),no6,1239-1295.
+21
+=== PAGE 22 ===
+[B-C-T] J. Bennett, A. Carberry, T. Tao, On the multilinear restriction and Kakeya conjectures , Acta Math. 196
+(2006),no2,261–302.
+[G-K] S.W. Graham, G. Kolesnik, Van der Dorput’s Method of Exponential Sums , London Math. Soc Lecture
+NoteSeries126,CambridgeUniversityPress, 1991.
+[H] M.N.Huxley, Area,LatticePointsandExponentialSums ,LMS monographs,13(1996).
+[H1] M.N.Huxley, ExponentialsumsandtheRiemannzetafunction,IV ,Proc.LondonMath.Soc.(3)66(1993),
+1–40.
+[H2] M.N. Huxley, Exponentialsums and the Riemann zeta function, V , Proc. LondonMath. Soc (3) 90 (2005),
+1–41,
+[H-K] M.N. Huxley,G. Kolesnik, Exponentialsums and the Riemannzeta functionIII , Proc. LondonMath. Soc.
+(3)62(1991),449–468.
+[H-W] M.N. Huxley,N. Watt, Exponentialsums and the Riemann zeta function ,Proc. LondonMath. Soc. (3) 57
+(1988),1–24.
+[S] P.Sargos, Pointsentiersauvoisinaged’unecourbe,sommestrigonome triquescourtesetpairesd’exposants ,
+Proc.LondomMath.Soc.(3)70(1995),285–312.
+[T] E.C.Titchmarsh, The TheoryoftheRiemannZeta-function (2ndedition),Oxford(1986).
+22

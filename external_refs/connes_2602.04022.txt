@@ -1,0 +1,2155 @@
+=== PAGE 1 ===
+The Riemann Hypothesis: Past, Present and a Letter
+Through Time
+[Alain Connes]
+February 5, 2026
+Abstract
+This paper, commissioned as a survey of the Riemann Hypothesis, provides a comprehensive
+overview of 165 years of mathematical approaches to this fundamental problem, while introduc-
+ing a new perspective that emerged during its preparation. The paper begins with a detailed
+description of what we know about the Riemann zeta function and its zeros, followed by an
+extensive survey of mathematical theories developed in pursuit of RH—from classical analytic
+approaches to modern geometric and physical methods. We also discuss several equivalent for-
+mulations of the hypothesis.
+Within this survey framework, we present an original contribution in the form of a "Letter to
+Riemann," using only mathematics available in his time. This letter reveals a method inspired by
+Riemann’s own approach to the conformal mapping theorem: by extremizing a quadratic form
+(restriction of Weil’s quadratic form in modern language), we obtain remarkable approximations
+to the zeros of zeta. Using only primes less than 13, this optimization procedure yields approx-
+imations to the first 50 zeros with accuracies ranging from 2.6×10−55to 10−3. Moreover we
+prove a general result that these approximating values lie exactly on the critical lineℜ(z) =1
+2.
+Following the letter, we explain the underlying mathematics in modern terms, including the
+description of a deep connection of the Weil quadratic form with the world of information theory.
+The final sections develop a geometric perspective using trace formulas, outlining a potential
+proof strategy based on establishing convergence of zeros from finite to infinite Euler products.
+While completing the commissioned survey, these new results suggest a promising direction for
+future research on Riemann’s conjecture.
+Contents
+1 Introduction 3
+2 Encounter with the Riemann zeta function 6
+2.1 Classical Analytic Number Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.1.1 Prime Number Theorem (PNT): . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.1.2 Riemann’s formula, von Mangoldt paper . . . . . . . . . . . . . . . . . . . . . 7
+2.1.3 Explicit formulas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.1.4 Changes of sign ofπ(x)−Li(x). . . . . . . . . . . . . . . . . . . . . . . . . . 9
+2.1.5 Hardy and Littlewood . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+2.1.6 Selberg’s early contributions (1940s–1950s): . . . . . . . . . . . . . . . . . . . . 10
+2.1.7 Proportion of zeros on the critical line: . . . . . . . . . . . . . . . . . . . . . . . 10
+2.1.8 Zero-free regions and zero-density estimates: . . . . . . . . . . . . . . . . . . . 10
+2.1.9 The Lindelöf Hypothesis: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+2.2 Theory of Entire and Meromorphic Functions . . . . . . . . . . . . . . . . . . . . . . . 10
+2.2.1 Hadamard factorization theorem . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+2.2.2 Nevanlinna theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+2.2.3 Average behavior of log|ζ(s)|and zeros ofζ(s)−x. . . . . . . . . . . . . . . 12
+2.2.4 Voronin’s Universality Theorem, zeta as a chameleon . . . . . . . . . . . . . . 12
+1arXiv:2602.04022v1  [math.NT]  3 Feb 2026
+=== PAGE 2 ===
+3 A Century and a Half of Theory Building towards RH 13
+3.1 Harmonic Analysis and Functional Analysis . . . . . . . . . . . . . . . . . . . . . . . 13
+3.1.1 Hilbert spaces and spectral theory: . . . . . . . . . . . . . . . . . . . . . . . . . 13
+3.1.2 Scattering theory and spectral interpretation: . . . . . . . . . . . . . . . . . . . 13
+3.2 Algebraic and Arithmetic Geometry . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+3.2.1 Weil’s proof for function fields: . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+3.2.2 Grothendieck’s schemes and étale cohomology: . . . . . . . . . . . . . . . . . 14
+3.2.3 Motives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+3.3 Automorphic Forms and Representation Theory . . . . . . . . . . . . . . . . . . . . . 15
+3.3.1 Langlands Program: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+3.3.2 Modular forms and L-functions: . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+3.3.3 Selberg trace formula and zeta functions: . . . . . . . . . . . . . . . . . . . . . 15
+3.4 Random Matrix Theory and Quantum Chaos . . . . . . . . . . . . . . . . . . . . . . . 16
+3.4.1 Montgomery’s pair correlation: . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+3.4.2 Odlyzko’s statistics: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+3.4.3 Quantum chaos: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+3.4.4 Katz-Sarnak theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+3.4.5 Moments and unitary matrices (Keating–Snaith): . . . . . . . . . . . . . . . . 17
+3.5 Noncommutative Geometry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3.5.1 Connes’ trace formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3.5.2 Knots, primes and class field theory . . . . . . . . . . . . . . . . . . . . . . . . 19
+3.6 p-adic and Motivic L-functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+3.6.1 p-adic L-functions and Iwasawa theory: . . . . . . . . . . . . . . . . . . . . . . 19
+3.6.2 Motivic L-functions and Bloch–Kato conjectures: . . . . . . . . . . . . . . . . . 19
+3.7 Computational and Experimental Mathematics . . . . . . . . . . . . . . . . . . . . . . 20
+3.7.1 High-precision computations . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+4 Equivalent Formulations 20
+4.1 Weil’s Positivity Criterion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+4.2 Beurling–Nyman criterion: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4.3 Li’s criterion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4.4 Elementary Number-Theoretic Formulations . . . . . . . . . . . . . . . . . . . . . . . 22
+4.4.1 Robin’s Criterion (1984) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+4.4.2 Lagarias’ Criterion (2002) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+5 A Letter to Professor Bernhard Riemann 23
+6 The strategy and the next small steps 26
+6.1 The Fourier transform ofθ xhas all its zeros on the real line . . . . . . . . . . . . . . . 26
+6.2 Riemann’sΞfunction and Hermite functions . . . . . . . . . . . . . . . . . . . . . . . 26
+6.3 The prolate wave functions enter the scene . . . . . . . . . . . . . . . . . . . . . . . . 27
+6.4 The Poisson formula and the approximationk λofθ x,λ=√x. . . . . . . . . . . . . . 28
+6.5 Convergence of the Fourier tranforms bkλ→bk. . . . . . . . . . . . . . . . . . . . . . . 29
+6.6 Remaining steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+7 Geometric Perspectives 30
+7.1 Archimedean trace formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+7.2 Archimedean Weil positivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+7.3 The semilocal adele class space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+7.4 The semilocal trace formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+7.5 The infrared and ultraviolet regimes . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+7.6 The prolate wave operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+8 Conclusion 34
+2
+=== PAGE 3 ===
+1 Introduction
+The Riemann Hypothesis (RH) stands as perhaps the most famous unsolved problem in mathe-
+matics, having resisted all attempts at proof since Bernhard Riemann casually remarked in his 1859
+memoir that "sehr wahrscheinlich" (very probably) all nontrivial zeros of his zeta function lie on
+the critical lineℜ(s) =1/2.
+The essence of this paper is a three pages letter to Riemann, written as if it were possible to commu-
+nicate across the years, and in which I will present a strategy (towards a proof of RH) which only
+uses mathematics that he was familiar with, together with the great power of modern computers.
+In the section"Encounter with the Riemann zeta function"we aim to convey to the reader a vivid pic-
+ture of the extraordinary connection that Riemann unveiled between the complex zeros of the zeta
+function and the distribution of prime numbers. We begin with a short historical account of the
+prime number theorem, followed by Riemann’s explicit formula forπ(x), the number of primes
+belowx, and its later generalizations into the explicit formulas. From there we turn to one of the
+most striking consequences: Littlewood’s discovery that the differenceπ(x)−Li(x)changes sign
+infinitely often, an observation that overturned earlier expectations of a simple monotone law.
+We then trace the story of what has been established about the zeros ofζ(s), beginning with Hardy’s
+proof of their infinitude on the critical line, through Selberg’s breakthrough in 1942, and up to mod-
+ern results concerning the proportion of zeros lying exactly on the critical line. To illuminate this
+theory, we also draw on the rich framework of entire functions, including Hadamard’s factoriza-
+tion theorem, Nevanlinna theory, and the remarkable Borchsenius–Jessen theorem, itself a success
+of the Bohr–Landau program on almost periodic functions.
+This part culminates with a result that would surely have amazed Riemann : Voronin’s universality
+theorem. It asserts that the zeta function, in the strip 1/2<ℜ(s)<1, has a chameleon-like prop-
+erty: by vertical translation it can approximate any preassigned functionf(s)that is continuous,
+non-vanishing, and holomorphic on a simply connected compact set within the strip.
+Taken together, these milestones show both the depth and the subtlety of the analytic structure of
+ζ(s). They prepare us to appreciate why the Riemann Hypothesis remains so resistant: the function
+itself embodies an astonishing range of behaviors, far more elusive than any first impression might
+suggest.
+Riemann could certainly not have foreseen the extraordinary mathematical landscape that emerged
+from attempts to prove his conjecture. Entire theories were born from this pursuit with connections
+spanning from algebraic geometry to quantum physics. The section"A century and a Half of Theory
+Building towards RH"is devoted to a quick panorama of these theories. The first is the extension of
+the problem into algebraic and arithmetic geometry. In this setting, the analogue of the Riemann
+zeta function in finite characteristic was developed, and the corresponding analogue of the Rie-
+mann Hypothesis was proved by André Weil. To provide context, I will briefly recall the notions
+of Grothendieck schemes and étale cohomology. The essential point here is that Weil’s celebrated
+“Rosetta stone” analogy becomes clear when viewed through the lens of schemes. In the original
+Rosetta stone the parallel inscriptions are horizontal: the hieroglyphs at the top, the Demotic text
+in the middle, and the Greek at the bottom. Weil proposed a similar three-texts comparison for
+the Riemann Hypothesis. At the bottom, corresponding to the Greek text, lies Riemann’s work on
+Riemann surfaces. There is no analogue of the Riemann Hypothesis in this setting, but it illustrates
+the extraordinary power of transcendental methods in geometry. The middle text corresponds to
+algebraic geometry over finite fields: here the analogue of the Riemann Hypothesis was estab-
+lished by Weil, with the zeta function arising as the generating function counting rational points on
+curves over finite field extensions. Finally, the top one, the “hieroglyphic” text, corresponds to the
+arithmetic case of the spectrum ofZ, still deeply mysterious.
+What is remarkable is that, thanks to Grothendieck’s theory of schemes, one sees a unifying frame-
+work across all three inscriptions: in each case one is dealing with regular schemes of dimension
+one. For this reason, I will briefly evoke schemes, étale cohomology, and motives.
+Another major generalization arises from the theory of automorphic forms and representation the-
+3
+=== PAGE 4 ===
+ory, where the Selberg trace formula and zeta functions play a central role.
+I will then move on to random matrix theory and quantum chaos. A remarkable discovery, initiated
+by Montgomery and Dyson and later spectacularly confirmed by Odlyzko’s large-scale numerical
+experiments, is that the pair correlation of the normalized spacings between consecutive zeros of
+ζ(s)on the critical line coincides with the correlation of eigenvalues from the Gaussian Unitary
+Ensemble (GUE) of random matrix theory. Nicholas Katz and Peter Sarnak extended this corre-
+spondence to entire families of L-functions and established a systematic theoretical framework for
+understanding their statistical behavior as explained in §3.4.4.
+In making the comparison of zeta zeros with eigenvalues from the Gaussian Unitary Ensemble,
+one has to rescale locally to compensate for the varying density of zeros. This need for such an
+adjustment reveals the absence of a genuine “ultraviolet model” for the zeta function—a gap that
+will be addressed in the final part of this paper, in §7.6.
+A further advance came with the work of Keating and Snaith in 2000, who used random matrix
+theory to propose a conjectural formula for the moments of the Riemann zeta function.
+I will then briefly turn to my own work from 1998 on the trace formula. The new ingredient there
+is that, instead of studying the zeta function directly, one considers the ideal it generates, which is
+equivalent to focusing on its zeros. Crucially, one can capture this ideal and the associated zeros
+without defining the function explicitly, nor appealing to its analytic continuation. The key is the
+construction of a geometric space—the adèle class space—which acquires a central significance as
+the quotient of the adèles by the ergodic multiplicative action of the rational numbers. This quotient
+reveals the zeros ofL-functions, not only of the Riemann zeta function, as an absorption spectrum.
+Recent results underline a precise correspondence between the adèle class space and the class field
+theory counterpart of the schemes intimately related to SpecZthat Grothendieck’s theory of the
+étale site and the étale fundamental group unveiled as a generalization of Galois theory.
+The corresponding trace formula is analogous to Selberg’s, but more delicate, since it involves both
+an infrared and an ultraviolet cutoff. It is precisely here that, for the first time, prolate spheroidal
+wave functions naturally enter the scene.
+I will mention various generalizations of the Riemann zeta function, which broaden the perspective
+and suggest new avenues of exploration. For completeness, I will also touch uponp-adic functions:
+while no analogue of the Riemann Hypothesis is known in these cases, they have nonetheless given
+rise to a wealth of beautiful developments.
+Finally, I will turn in the section"Equivalent Formulations"to the realm of equivalent formulations of
+the Riemann Hypothesis. The website/book "Equivalences of the Riemann Hypothesis" by Kevin
+Broughan (2017, Cambridge University Press), systematically catalogs over 100 equivalent formu-
+lations. This comprehensive work organizes equivalences by mathematical area:
+• Elementary arithmetic functions
+• Prime counting formulations
+• Analytic equivalences
+• Functional analysis criteria
+• Probabilistic statements
+• Matrix and operator theory
+• Dynamical systems
+Some of these equivalents of RH are strikingly simple : for instance, one letsR nbe the Redheffer
+matrix, ann×n(0,1)-matrix withR i j=1 ifj=1 oridividesj. Then
+RH⇐⇒det(R n) =O(n1/2+ϵ),∀ϵ>0
+These are alluring but treacherous: the history of the subject shows how easily an attempt to solve
+the problem can be drawn into the gravitational pull of this “black hole” of equivalences.
+4
+=== PAGE 5 ===
+I will discuss two of these equivalent formulations, first Weil’s positivity criterion, then Robin’s
+criterion as improved by Lagarias. This latter criterion shows that RH belongs to the type of state-
+ments that Hilbert, in his program on the foundations of Mathematics, was hoping to be "provable
+if true". But Godel’s theorem showed that precisely for this type of statement truth does not imply
+provability. This will be discussed in details involving Chaitin’s theory of algorithmic complexity.
+The next part of this paper, entitled“A Letter to Professor Bernhard Riemann”, is of a completely dif-
+ferent nature. It is written in the form of a letter addressed to Riemann himself, in an imaginary
+dialogue across time. The purpose of the letter is to point out a simple but surprising observa-
+tion: a strategy towards RH which fits entirely within Riemann’s own mathematical outlook, as
+exemplified for instance by his proof of the conformal mapping theorem. Importantly, this strategy
+requires only the mathematical concepts and tools available in 1859.
+Concretely, it allows one to recover the first nontrivial zeros of the zeta function by using only
+a few factors from the Euler product. For example, truncating the Euler product at the prime
+13 and computing with the method described, one obtains an approximation of the first 50 zeros
+ofζ(s)whose precision is best understood by giving the probability that one could get such an
+approximation by chance. The likelihood that such agreement could occur merelyby chanceis
+about 10−1235. To give a sense of scale, this is approximately the probability of correctly guessing
+the outcomes of over 4000 consecutive coin tosses — a feat so improbable that, for all practical
+purposes, it excludes both coincidence and computational error.
+One might therefore be tempted to conclude: “This is simply a new algorithm for computing the
+zeros of the Riemann zeta function.” Were that the case, the Riemann Hypothesis itself would
+follow, since a general theorem ensures that whenever the smallest eigenvalue of the corresponding
+operator is simple and even1, the resulting approximating numbers form the spectrum of a self-
+adjoint operator and hence are all real.
+This letter to Riemann is followed, in the sectionThe Next Small Steps, by a more detailed discussion
+of its content, together with an outline of a possible strategy to justify rigorously that, in general,
+the approximating zeros produced by this method converge to the actual zeros of the Riemann
+zeta function. While the numerical evidence in support of this is overwhelming, evidence alone is
+not a proof. In this natural line of attack, a central role is played by the prolate spheroidal wave
+functions, which I had introduced into this context in 1998.
+Computer experiments reveal a striking fact: when expressed in terms of spheroidal wave func-
+tions, one obtains an excellent approximation to the function that minimizes the Weil quadratic
+form. This observation provides strong motivation for the approach. It is of course possible that
+a complete proof along these lines may encounter serious obstacles. Yet regardless of how far one
+can progress, this direction naturally opens the way to a deeper exploration, whose starting point
+is presented in the sectionGeometric Perspectives— namely, the unexpected relation between two
+seemingly distant mathematical worlds.
+On the one hand, there is the world of the Weil quadratic form. The central fact here is Weil’s re-
+markable equivalence: the Riemann Hypothesis is equivalent to the positivity of certain quadratic
+forms which involve only finitely many primes. This is striking, since one might expect that ad-
+dressing the Riemann Hypothesis would require controlling the full infinity of primes. Here, how-
+ever, the problem reduces locally, to finite collections at a time. Moreover, in this setting, as men-
+tioned earlier, one can exploit the general construction of functions whose zeros lie entirely on the
+critical line.
+On the other hand, there is the world of the prolate wave functions developed by David Slepian
+and collaborators, with roots in Claude Shannon’s work in communication theory. The key link,
+established in the seminal work of Slepian, Landau, and Pollak, is a classical second-order differ-
+ential operator on the line: the prolate operator, obtained as a confluence from the Heun equa-
+tion—something entirely familiar to Riemann’s mathematical universe. This operator plays a dual
+role. In the infrared regime, it provides a means of approximating the minimal eigenvector of the
+Weil quadratic form. At the other extreme, as explained in the final section of this paper, it also
+supplies a model for a self-adjoint operator whose spectrum reflects the ultraviolet behavior of the
+1meaning that the associated eigenfunction is even
+5
+=== PAGE 6 ===
+zeros of the Riemann zeta function.
+Taken together, these observations underline the importance of understanding situations where
+only finitely many primes are involved, and of clarifying the interplay between the Weil quadratic
+form and the prolate operator. This connection is established through the trace formula, which I
+proved in 1998. In the last section, I will reformulate this trace formula using precisely the same in-
+gredients that arise in communication theory and in the work of Slepian and collaborators, thereby
+making explicit the bridge it provides between the Weil quadratic form and the prolate functions.
+Behind the scene there lies a geometric space of fundamental importance: thesemilocal adele class
+space Y S, associated with a finite setSof places ofQthat includes the archimedean place. By con-
+struction,Y Sis obtained as the quotient
+∏
+v∈SQv/Γ,Γ:={± ∏pnvv|nv∈Z}
+of the finite product of local fields by the diagonal action of the groupΓ⊂Q∗generated by the
+primes inS. Weil’s positivity criterion shows that proving the required positivity in this semilocal
+setting is equivalent to establishing the Riemann Hypothesis (in fact, one also captures the case of
+L-functions with Grössencharacters).
+A key advantage of this semilocal space, when compared with the full adele class space, is measure-
+theoretic: here the multiplicative and additive Haar measures are no longer singular with respect
+to one another, so the quotient behaves well from the viewpoint of measure theory. Topologically,
+however, the situation is more subtle. For each primep∈Sone encounters a periodic orbit of
+length logp, and these orbits encode precisely the contribution ofpto the explicit formula. Finally
+in §7.6, I explain the recent discovery in our joint work with H. Moscovici [27], where we show that
+the eigenvalues of the selfadjoint extension of the prolate spheroidal operator reproduce the ultra-
+violet behavior of the squares of zeros of the Riemann zeta function and construct an isospectral
+family of Dirac operators whose spectra have the same ultraviolet behavior as the zeros of zeta.
+2 Encounter with the Riemann zeta function
+2.1 Classical Analytic Number Theory
+2.1.1 Prime Number Theorem (PNT):
+In 1852, Pafnuty Chebyshev, proved in [14] that the numberπ(x)of primes less thanxfulfills
+Ax
+log(x)<π(x)<6A
+5x
+log(x),A≈0.92129
+forxlarge enough, which allowed him to prove the convergence of the series over the primesp,
+1
+2 log 2+1
+3 log 3+1
+5 log 5+1
+7 log 7+. . .
+He introduced two key counting functionsϑandψ, given as the sums
+ϑ(x):= ∑
+p<xlogp,ψ(x):=ϑ(x) +ϑ(x1/2) +ϑ(x1/3) +. . .
+proved the identity ∑x
+1ψ(x/n) =log(x!)and then used Stirling’s formula. The fact that the asymp-
+totic relationπ(x)∼x/logxis equivalent toϑ(x)∼xwas surely known to Chebyshev and was
+part of the math folklore at that time. In fact in their papers [54], [106], both Hadamard and de la
+Vallée Poussin proveϑ(x)∼xand do not mention explicitly the equivalent resultπ(x)∼x/logx.
+Their independent proofs crucially established the non-vanishing ofζ(s)on the line Re(s) =1, us-
+ing complex analysis techniques including Hadamard’s theory of entire functions. The connection
+to RH is profound: while PNT requires only thatζ(s)̸=0 forℜ(s) =1, the error termπ(x)−Li(x)
+6
+=== PAGE 7 ===
+in the prime counting function is directly controlled by the location of the zeros. Under RH, the
+error term improves toO(x1/2logx). The approximation by the integral logarithm differs substan-
+tially from its first term, one has
+Li(x)∼x
+logx+x
+log2x+2x
+log3x+· · ·
+The proof of Hadamard thatζ(s)̸=0 forℜ(s) =1 contains a beautiful idea that can be understood
+through the phases of prime powers and reduced to(−1)2=1. Indeed if for some real number
+tone hadζ(1+it) =0, the complex numbersp−itwould tend to accumulate at−1, using the
+expansion of−log(1−p−it+ϵ). But then the complex numbersp−2itwould tend to accumulate at
+1, thus creating a pole of the zeta function at 1+2itwhich is impossible unless 2t=0.
+The next step in the proof of the PNT by Hadamard and de la Vallée Poussin stemmed from their
+need to extract precise asymptotic information about the distribution of primes from analytic prop-
+erties of the zeta function. They employed sophisticated techniques from the theory of entire func-
+tions and this required detailed estimates of the zeta function’s behavior in various regions of the
+complex plane. While these methods were mathematically sound and represented brilliant math-
+ematical insights, they obscured the conceptual relationship between the analytic input and the
+arithmetic output,i.e.the asymptotic formula. Edmund Landau provided the first major concep-
+tual simplification by introducing Tauberian methods to prove the Prime Number Theorem, work
+that appeared in his influential 1909 "Handbuch der Lehre von der Verteilung der Primzahlen".
+Landau’s innovation involved recognizing that the connection between analytic properties of the
+zeta function and arithmetic information about prime distribution could be mediated through a
+general class of theorems known as Tauberian results. These theorems provide conditions un-
+der which asymptotic properties of generating functions translate into asymptotic properties of
+their coefficient sequences. The progression from Landau’s initial Tauberian approach through
+the Wiener-Ikehara theorem1to Newman’s simplified presentation shows how mathematical un-
+derstanding can deepen through the development of more general and conceptually transparent
+frameworks.
+The 1949 elementary proof of the PNT by Selberg and Erdos showed that complex analysis is not
+logically necessary for proving the theorem. The Selberg sieve, while developed for his elementary
+proof of PNT [97], became a fundamental tool in analytic number theory. The Selberg symmetry
+formula
+∑
+p≤xlog2p+∑
+pq≤xlogplogq=2xlogx+O(x)
+exemplifies his ability to find unexpected simplicities in prime distribution.
+2.1.2 Riemann’s formula, von Mangoldt paper
+In his fundamental paper2[90], Riemann was very careful to define which branch of the integral
+logarithm he was using and to state the conditional convergence3in his formula for the function
+f(x)obtained as the sum of the counting functionsπ(x1/n)
+f(x) =Li(x)− ∑
+α
+Li
+x1
+2+αi
++Li
+x1
+2−αi
++Z∞
+x1
+t2−1dt
+tlogt−log 2 (1)
+where the1
+2+αiare the non-trivial zeros ofζwith positive imaginary part and the order of the
+terms corresponds to increasing values ofℜ(α).
+As I will briefly mention at the beginning of my letter to Riemann, it is unfortunate that the care
+2which he sent to Chebyshev
+3He was a master of conditional convergence and gave the first rigorous proof that conditionally convergent series can
+be rearranged to converge to any prescribed value or to diverge entirely. Riemann’s rearrangement theorem emerged from
+his 1854 habilitation thesis "Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe", a work primarily
+focused on extending the theory of Fourier series to more general classes of functions. Published posthumously in 1867, [91],
+through Dedekind’s editorial efforts.
+7
+=== PAGE 8 ===
+about the various branches of the integral logarithm has disappeared in some modern treatise such
+as the classic book of Edwards [44], or in some technical papers, where (1) is written as above while
+there is no functionLi(z)orLi(z) + Li(z)for which the general term of the series tends to 0. The
+problem is with the notation since if one follows Riemann closely one finds that the value he con-
+siders depends not just onxρbut uponρlog(x). In fact in the paper of von Mangoldt [107], he
+correctly defines the meaning that he gives, not to the functionLi(z)but to the functionLi (ew).
+Here is what he writes:
+Settingw=u+ivwhere u and v denote real numbers, and again understandinghas a positive
+real variable, one only needs to make the following definitions:
+1. Ifv>0 , then
+Li(ew)=lim
+h→∞Zw
+−h+wez
+zdz+iπ
+2. Ifv=0, then
+Li(ew)=lim
+h→0Z−h
+−∞ez
+zdz+Zw
+hez
+zdz
+3. Ifv<0 , then
+Li(ew)=lim
+h→∞Zw
+−h+wez
+zdz−iπ
+It is easily verified that the functionLi (ew)defined in this way indeed possesses the desired
+properties.
+Thus von Mangoldt was fully aware of the defect of the notationLi(xρ)which unfortunately re-
+mained used carelessly, even though most authors are (probably) aware of the problem.
+One can test Riemann’s formula, reformulated using the function Ei(ρlogx)in place of Li(xρ)(see
+(27)) with the help of the computer and one finds a pretty good agreement by taking the sum over
+a few thousands zeros of zeta.
+2.1.3 Explicit formulas
+These relate prime-counting functions to the nontrivial zeros ofζ(s), making precise the influence
+of the zeros on arithmetic functions. Von Mangoldt [107] rigorously proved Riemann’s original
+explicit formula as deduced from the simpler equality
+ψ(x) =x− ∑
+ρxρ
+ρ−log(2π)−1
+2log(1−x−2)
+whereψ(x) = ∑pk≤xlogpis the Chebyshev function, and the sum runs over nontrivial zerosρ. As
+in Riemann’s case the ∑ρis taken as the limit of the partial sums for−T≤ℑ(ρ)≤Tand fails to be
+absolutely convergent. The error term is of the order of(logT)2/T(see [81] Theorem 12.5).
+Guinand [52] and Weil [109] later developed more general explicit formulas connecting test func-
+tions and their Fourier transforms to distributions of zeros, providing a harmonic analysis perspec-
+tive on the relationship between primes and zeros. The usual formulation for the Riemann zeta
+function involves test functionsf:R∗+→Cfulfilling suitable regularity conditions4, and their
+Mellin transform defined as
+˜f(s):=Z∞
+0f(x)xs−1dx(2)
+4they are continuous and with continuous derivative except at finitely many points where bothf(x)andf′(x)have at
+most a discontinuity of the first kind, and at which the value off(x)andf′(x)is defined as the average of the right and left
+limits. Moreover one assumes that for someδ>0 one has
+f(x) =O(xδ), forx→0+,f(x) =O(x−1−δ), forx→+∞.
+8
+=== PAGE 9 ===
+They take the form
+∑
+ρ˜f(ρ) = ˜f(0) + ˜f(1)−∑
+vWv(f), (3)
+where the sum on the left hand side is over all complex zerosρof the Riemann zeta function, and is
+in general only conditionally convergent while the sum on the right hand side runs over all rational
+placesvofQ. The non-archimedean distributionsW pare defined, usingf♯(x):=x−1f(x−1), as
+Wp(f):= (logp)∞
+∑
+m=1
+f(pm) +f♯(pm)
+(4)
+while the archimedean distribution is given by
+WR(f):= (log 4π+γ)f(1) +Z∞
+1
+f(x) +f♯(x)−2
+xf(1)dx
+x−x−1. (5)
+2.1.4 Changes of sign ofπ(x)−Li(x)
+Littlewood’s famous 1914 result [75] thatπ(x)−Li(x)changes sign infinitely often (assuming RH)
+demonstrated that the error term in the PNT exhibits complex oscillatory behavior, challenging the
+empirical observation thatπ(x)<Li(x)for all computed values. The first effective bound for such
+a sign change was given by Skewes [100], who showed (assuming RH) that a crossing occurs before
+B=10101034
+This enormous bound has been dramatically improved by Lehman [71], who introduced the key
+idea of deriving an explicit formula forue−u/2(π(eu)−Li(eu))averaged by a Gaussian kernel.
+It was further improved by Riele [105] (to approximately 6.69×10370), Bays and Hudson [2] (to
+approximately 1.4×10316), and most recently by Chao and Plymen [15] and Saouter, Demichel and
+Trudgian [93], [94].
+2.1.5 Hardy and Littlewood
+Hardy’s 1914 proof [56] that infinitely many zeros lie on the critical line used the functional equation
+and careful analysis ofZ(t) =eiθ(t)ζ(1/2+it), whereθ(t)is chosen to makeZ(t)real fortreal,
+θ(t) =Im
+logΓ1
+4+it
+2
+−t
+2logπ
+By studying sign changes ofZ(t), he showed infinitely many zeros exist withℜ(s) =1/2.
+The Hardy-Littlewood work [57] on conditional results showed that RH implies numerous conse-
+quences about prime gaps and other additive problems. Their approach built upon Hardy’s earlier
+work but incorporated more refined analytical techniques for estimating oscillatory integrals and
+asymptotic expansions. Their subsequent work involved careful analysis of the approximate func-
+tional equation for the zeta function5, which provides an explicit representation forζ(s)that is
+valid throughout the critical strip. By studying the cancellations and oscillations in this represen-
+tation, they were able to demonstrate that the number of sign changes in Hardy’sZ-function, and
+hence the number of zeros ofζ(s)on the critical line of imaginary part in[0,T], grows at least lin-
+early withT. It was still unclear if a positive fraction of the numberN(T)of non-trivial zeros with
+imaginary part in[0,T], estimated by Riemann asN(T)∼1
+2πTlogT, lie on the critical line.
+5Siegel’s 1932 paper on Riemann’s notebooks shows that while Hardy and Littlewood had independently rediscovered
+the principal term of this development in 1920 through their "approximate functional equation" using similar methods (the
+saddle-point method), Riemann’s work contained additional insights
+9
+=== PAGE 10 ===
+2.1.6 Selberg’s early contributions (1940s–1950s):
+The breakthrough that resolved this fundamental question came in 1942 through Atle Selberg’s
+pioneering work, which introduced the innovative technique of mollification and proved for the
+first time that a positive proportion of nontrivial zeros lie on the critical line. The essential idea in
+Selberg’s proof2is to multiply the series forζ(s)by the square of the partial sums of the series for
+ζ(s)−1/2. Selberg’s achievement was to demonstrate that the number N 0(T)of zeros on the critical
+line satisfies N 0(T)≫T log T, which immediately implies that the ratio N 0(T)/N(T)is bounded
+away from zero, establishing that a positive fraction of all zeros reside on the critical line. Selberg’s
+work [96, 97] revolutionized the study of the zeta function through several key innovations. His
+work on the distribution of log|ζ(1/2+it)|showed it follows a Gaussian distribution with specific
+mean and variance, presaging connections to random matrix theory.
+2.1.7 Proportion of zeros on the critical line:
+As explained above, Hardy’s 1914 theorem [56] was quantified by Selberg (1942) [96] who showed
+that a positive proportion of zeros have real part 1/2. Levinson’s breakthrough in 1974 [73] proved
+that at least 1/3 of the nontrivial zeros lie on the critical line, using mollifier techniques that smooth
+the zeta function near the critical line. Conrey’s 1989 improvement [34] to 2/5 used more sophisti-
+cated mollifiers and asymptotic analysis. The 2011 result by Bui, Conrey, and Young [12] achieving
+41% employed multiple Dirichlet polynomials and optimization techniques from the theory of ex-
+tremal functions, representing the current state of the art in this approach. Pratt et al [88] have the
+current record of 41.7% based on Feng’s mollifier [46].
+2.1.8 Zero-free regions and zero-density estimates:
+Classical zero-free regions, such as the one proved by de la Vallée Poussin [106] showingζ(s)̸=0
+forℜ(s)≥1−c/log(|ℑ(s)|+2), provide explicit bounds on the distribution of primes in arith-
+metic progressions. Zero-density estimates, pioneered by Bohr and Landau, bound the number
+N(σ,T)of zeros withℜ(s)≥σand|ℑ(s)| ≤T. The best known results show thatN(σ,T)≪
+Tc(1−σ)for various values ofcdepending onσ, with improvement
+N(σ,T)≪T3(1−σ)
+2−σ(logT)5
+by Ingham [61]. Montgomery and others provided increasingly sharp bounds asσ→1. The Guth-
+Maynard zero density result [53] is the first improvement in Ingham’s theorem nearσ=3/4 in 85
+years.
+2.1.9 The Lindelöf Hypothesis:
+The Lindelöf Hypothesis states that|ζ(1/2+it)| ≪tϵfor anyϵ>0. Ifσis real, thenµ(σ)is
+defined to be the infimum of all real numbersαsuch that|ζ(σ+it)|=O (tα). One hasµ(σ) =0
+forσ>1, and the functional equation implies thatµ(σ) =µ(1−σ)−σ+1/2. The Phragmén-
+Lindelöf theorem implies thatµis a convex function. The Lindelöf hypothesis statesµ(1/2) =0,
+which together with the above properties ofµimplies thatµ(σ)is 0 forσ≥1/2 and 1/2−σ
+forσ≤1/2. While weaker than RH, it would still have significant applications to moments of
+L-functions and subconvexity problems.
+2.2 Theory of Entire and Meromorphic Functions
+2.2.1 Hadamard factorization theorem
+An entire functionfhas orderσif
+σ=lim sup
+r→∞log logM(r)
+logr
+10
+=== PAGE 11 ===
+whereM(r) =max|z|=r|f(z)|. The Hadamard product formula states that an entire functionfof
+order 1 can be written as
+f(z) =eA+Bz∏
+ρ
+1−z
+ρ
+ez/ρ
+where the product is over all zerosρoff, andA,Bare constants. The completed zeta function
+ξ(s) =1
+2s(s−1)π−s/2Γ(s/2)ζ(s)(6)
+is an entire function of order one with the Hadamard product representation6[5, 55, 72]
+ξ(z) =ξ(0) ∏
+ρ
+1−z
+ρ
+Riemann considers the function (he was denoting it asξ(s)but, since Hardy, one usesΞ(s))
+Ξ(s) =ξ(1/2+is)(7)
+The functional equationξ(s) =ξ(1−s)impliesΞ(s) =Ξ(−s), thus the functionΞis even and its
+zeros come in pairs±α. Moreover,Ξis entire of order 1, for each pair of zeros±α, the exponential
+factorses/αande−s/αcancel and the Hadamard factorization ofΞtakes the particularly simple
+form
+Ξ(s) =Ξ(0) ∏
+ℜ(α)>0
+1−s2
+α2
+where the product is over zeros with positive real part only. The two product representations are
+the same7except for the constant factor and whileξ(0) =1
+2, one has
+Ξ(0) =−ζ
+1
+2
+Γ
+5
+4
+24√π∼0.497121
+This nuance is at the origin of the only "typo" in Riemann’s formula for the number of primes less
+thanx, where he used logΞ(0)in place of logξ(0).
+2.2.2 Nevanlinna theory
+This value-distribution theory [68, 82, 83] studies the growth and value distribution of meromor-
+phic functions through characteristic functions and deficiency relations. It is worth noting that the
+Nevanlinna characteristic is closely related to Jensen’s formula. For an analytic functionfwith
+zerosa kin|z| ≤r, Jensen’s formula asserts that, providedf(0)̸=0,
+log|f(0)|+ ∑
+klogr
+|ak|=1
+2πZ2π
+0log|f(reiθ)|dθ.
+This relation between the average boundary growth offand the distribution of its zeros is precisely
+what Nevanlinna theory systematizes for meromorphic functions. The characteristicT(r,f) =
+m(r,f) +N(r,f),r>0, can thus be viewed as a refined version of the quantities appearing in
+Jensen’s formula, with the counting functionN(r,f)recording the poles and the proximity func-
+tionm(r,f)recording the boundary growth. For the zeta function, one can define the Nevanlinna
+characteristicT(r,ζ)and study its growth3. The theory provides tools like the First and Second
+Main Theorems that relate the distribution ofa-points (solutions tof(z) =a) to the growth of
+the function. While direct applications to prove RH have not succeeded, Nevanlinna theory offers
+insights into the exceptional nature of the value 0 forζ(s)as shown by the Borchsenius-Jessen the-
+orem discussed below, and provides analogies with Picard-type theorems [49]. Recent work has
+explored connections between Nevanlinna theory and the universality properties ofζ(s).
+6The infinite product is defined here as the limit asT→∞of the product overρwith|ρ|<T
+7using the identity 1−1
+2+is
+1
+2+ia=1−s
+a
+1−i
+2a
+11
+=== PAGE 12 ===
+2.2.3 Average behavior oflog|ζ(s)|and zeros ofζ(s)−x
+The Borchsenius-Jessen theorem [7] provides a striking contrast to RH. While all nontrivial zeros of
+ζ(s)are conjectured to lie onℜ(s) =1/2, the zeros ofζ(s)−xfor anyx̸=0 cluster densely near
+the critical line from the right. Specifically:
+• Forx̸=0, the equationζ(s) =xhas infinitely many solutions in any strip 1/2<ℜ(s)<σ.
+• The density of solutions increases without bound asℜ(s)→1/2+
+• IfN x(T)counts zeros ofζ(s)−xwithℜ(s)>1/2 and 0<ℑ(s)<T, thenN x(T)/T→∞as
+T→∞
+This phenomenon highlights the exceptional nature of the valuex=0 and shows that RH is unsta-
+ble under perturbations: adding any constant toζ(s)destroys the alignment of zeros on the critical
+line. The result connects to the mean value theorems for logζ(s)in the critical strip and to the
+ergodic properties of the flows7→s+iton the value distribution ofζ(s). The Borchsenius-Jessen
+theorem can be viewed as the crowning achievement of the Bohr-Landau program on almost peri-
+odic functions and Dirichlet series. Where Bohr and Landau established the general framework for
+understanding value distribution of Dirichlet series through almost periodicity, Borchsenius and
+Jessen achieved the definitive result for the Riemann zeta function itself, proving that logζ(σ+it)
+has a continuous limiting distribution4.
+2.2.4 Voronin’s Universality Theorem, zeta as a chameleon
+This remarkable 1975 theorem [108] states that the Riemann zeta function can approximate any
+non-vanishing holomorphic function arbitrarily well in the critical strip. Voronin’s original theorem
+established universality for disks: If 0<r<1/4,f(s)is continuous on|s| ≤r, holomorphic on
+|s|<rwithf(s)̸=0 on|s| ≤r, andϵ>0, then there existst 0such that
+max
+|s|≤rf(s)−ζ
+s+3
+4+it 0<ϵ
+Following Voronin’s pioneering work, it was shown by Reich and Bagchi that ifKis a compact
+subset of the strip{s: 1/2<ℜ(s)<1}with connected complement,fis continuous onKand
+holomorphic in the interior ofKwithf(s)̸=0 onK, andϵ>0, then there existst 0such that
+max
+s∈K|ζ(s+it 0)−f(s)|<ϵ
+Moreover, the set of sucht 0has positive lower density. Thus, the Riemann zeta function in the
+critical strip1
+2<ℜ(z)<1 behaves like a mathematical chameleon: it can approximate any non-
+vanishing holomorphic function on compact sets simply by shifting vertically in the complex plane.
+This result uses, as in the Bohr-Landau almost periodic set-up, the ergodic properties of the Kro-
+necker flow on the infinite dimensional torus which is the compact dual of the discrete groupQ∗of
+non-zero rational numbers, but we now discuss the key ingredient which is of a different nature.
+As we briefly mentioned above in a footnote, Riemann in his memoir on trigonometric series
+showed, in his discussion of the Dirichlet kernel, that a conditionally convergent series of real
+numbers can be given any sumCafter a suitable rearangement of its terms. What is amazing is
+that it is a generalization of this fact which is at the heart of Voronin’s proof. The key result is the
+following ( [70], Theorem 1.16)
+LetHbe a Hilbert space, {xm}be a sequence inHsatisfying the two conditions:
+∞
+∑
+m=1∥xm∥2<∞;∞
+∑
+m=1|(xm,x)|=∞∀x∈H,x̸=0
+Then the set of all convergent series ∑∞
+m=1 amxm,|am|=1,m=1, 2, . . . is dense inH.
+12
+=== PAGE 13 ===
+The proof of this result is a testimony of the power of the Hahn-Banach theorem5, using the convex
+set of sums ∑bmxmwhere|b m| ≤1.
+Voronin’s theorem has been extended to joint universality for DirichletL-functions and other classes
+ofL-functions, revealing this as a general phenomenon for functions with Euler products. The
+essence of the proof is to show that, as elements of a suitable Bergman/Hardy-type spaceH, the
+system {log(1−p−s)}wherepruns through the primes satisfies both conditions of the above the-
+orem. This allows one to approximate the logarithm of the functionf(s)(which makes sense since
+Kis simply connected).
+3 A Century and a Half of Theory Building towards RH
+Since Riemann’s 1859 memoir “Über die Anzahl der Primzahlen unter einer gegebenen Grösse,”
+the hypothesis he formulated concerning the zeros of the zeta function has inspired some of the
+most profound developments in mathematics. The pursuit of the Riemann Hypothesis (RH), whether
+explicitly or as a motivating ideal, has led to the emergence of entire theories and reshaped mul-
+tiple domains. This section provides an overview of major mathematical frameworks and ideas
+developed in this ongoing quest.
+3.1 Harmonic Analysis and Functional Analysis
+3.1.1 Hilbert spaces and spectral theory:
+The proof of Voronin’s theorem discussed above shows the power of Hilbert space techniques.
+Hilbert’s inclusion of RH as his 8th problem (1900) coincided with the development of spectral
+theory. The Hilbert-Pólya conjecture (1910s) suggests the existence of a self-adjoint operatorHsuch
+that the non-trivial solutions ofζ(1/2+it) =0 are the eigenvalues ofH. This would immediately
+imply RH since eigenvalues of self-adjoint operators are real.
+3.1.2 Scattering theory and spectral interpretation:
+The scattering approach, developed by Faddeev and Pavlov, interprets the zeros ofζ(s)as reso-
+nances (poles of the scattering matrix) of a certain quantum mechanical system. The Berry-Keating
+conjecture [3] suggests connections to classical chaotic Hamiltonian systems whose quantization
+might yield the desired operator. Specific proposals includeH=1
+2(xp+px)(wherexis posi-
+tion andpis momentum) with appropriate boundary conditions, though rigorous constructions
+remain elusive. The connection to quantum chaos is reinforced by the statistical properties of the
+zeros matching those of quantum chaotic systems.
+3.2 Algebraic and Arithmetic Geometry
+As every mathematician knows, one of the time-honored strategies when faced with a difficult
+problem is to enlarge its scope: to generalize the question and then examine special cases where
+essential features can be more clearly discerned. Within this setting, André Weil achieved a decisive
+breakthrough by resolving the analogue of the hypothesis for global fields of finite characteristic.
+3.2.1 Weil’s proof for function fields:
+Weil’s 1940s proof of RH for curves over finite fields used intersection theory on the productC×C
+of a curve with itself. For a smooth projective curveCoverF q, the zeta function
+ZC(t) =exp 
+∞
+∑
+n=1Nn
+ntn!
+13
+=== PAGE 14 ===
+whereN n=|C(F qn)|, satisfies a functional equation and has the formZ C(t) =P(t)/((1−t)(1−
+qt))whereP(t)is a polynomial whose roots have absolute valueq−1/2. This is the analogue of
+RH. Weil’s proof used the intersection pairing on divisors and the Hodge index theorem, estab-
+lishing a geometric approach to RH-type problems. The successive simplifications of Weil’s proof
+by Mattuck-Tate and Grothendieck represent a paradigmatic example of how mathematical un-
+derstanding evolves through the development of more powerful theoretical frameworks. Weil’s
+original achievement required technical virtuosity to overcome the absence of key theoretical tools.
+The subsequent simplifications demonstrated how the availability of general results—the Riemann-
+Roch theorem for surfaces6and systematic intersection theory—could transform specialized con-
+structions into applications of standard techniques. While the classical Riemann-Roch theorem
+for surfaces originated with Castelnuovo in the 1890s, the sheaf-theoretic version that enabled the
+Mattuck-Tate simplification was developed by Serre, and the intersection theory suitable for this
+setting represents a collaborative effort involving André Weil’s foundational 1946 work, Claude
+Chevalley’s local theory, Serre’s 1958 algebraic formulation, and subsequent developments that
+created the modern framework of intersection multiplicities using Tor functors and sheaf cohomol-
+ogy.
+3.2.2 Grothendieck’s schemes and étale cohomology:
+Grothendieck revolutionized algebraic geometry by introducing schemes and étale cohomology
+[1], partly motivated by the goal of proving the Weil conjectures in arbitrary dimension. The étale
+cohomology groupsHi
+ét(X,Q ℓ)for a varietyXoverF qcarry an action of the Frobenius morphism,
+and the zeta function is expressed as
+ZX(t) =2dimX
+∏
+i=0Pi(t)(−1)i+1
+whereP i(t) =det(1−tF|Hi
+ét(X,Q ℓ)). Deligne’s proof (1974) of the Weil conjectures showed that
+the eigenvalues of Frobenius onHihave absolute valueqi/2, establishing RH for varieties over fi-
+nite fields.
+What is particularly inspiring in the study of the étale site of Spec(Z)is the striking analogy, due
+to David Mumford and Barry Mazur, between the role of prime ideals in arithmetic geometry and
+the role of knots in the three-dimensional sphere. In this perspective, each prime can be viewed
+as the analogue of a knot, and the intricate way in which primes are intertwined within Spec(Z)
+endowed with the étale topology mirrors the way knots can be interlaced inS3. This vision opened
+a new topological imagination for number theory, suggesting that the geometry of primes might
+be understood through concepts closer to low-dimensional topology than to classical analysis. At
+the heart of this analogy lies Grothendieck’s far-reaching extension of Galois theory from fields to
+general schemes, accomplished through the introduction of the étale fundamental group. It pro-
+vides the natural language to interpret the arithmetic of primes in terms of covering spaces, thereby
+giving a conceptual framework in which Mazur’s and Mumford’s analogy could take shape and
+develop [77]. We shall come back to this point briefly in §3.5.2.
+3.2.3 Motives
+Grothendieck’s vision of motives aims to provide a universal cohomology theory that explains
+the common patterns in various cohomology theories (de Rham, étale, crystalline, etc.). In this
+framework, zeta andL-functions are associated to motives, and their analytic properties (including
+potential RH) would follow from geometric properties of the motives. The motivic formalism sug-
+gests that there should be a cohomological interpretation of the classical RH, viewing Spec(Z)as
+an arithmetic curve and seeking an appropriate cohomology theory. While the full theory of mixed
+motives remains conjectural, special cases like Artin motives and motives of modular forms have
+been extensively developed.
+14
+=== PAGE 15 ===
+3.3 Automorphic Forms and Representation Theory
+In André Weil’s work, the Riemann Hypothesis is naturally recast within the broader framework
+of global fields. He proved the analogue of the hypothesis for global fields of finite characteristic,
+and his bookBasic Number Theory(Springer, 1967) illustrates how powerful it is to approach num-
+ber theory from this unifying perspective. A fundamental insight is that, although global fields
+themselves are countable and discrete, each admits a natural companion: a locally compact, non-
+discrete ring that contains the global field as a discrete co-compact subgroup. This companion is
+the ring of adèles, first introduced in the context of class field theory. The adèle ring provides a rich
+harmonic-analytic structure, and Weil’s reformulation of the explicit formulas in this setting repre-
+sents a decisive step toward harnessing that structure as a tool in analytic number theory. Weil’s
+bookBasic Number Theorywas the first systematic exposition of the use of adèles and idèles in num-
+ber theory. It not only unified class field theory but also laid the foundation for later developments
+in automorphic forms and representation theory to which we now turn.
+3.3.1 Langlands Program:
+This extension of class field theory to the non-abelian case is a vast web of conjectures, initiated
+by Langlands in the 1960s, it predicts deep connections between Galois representations and auto-
+morphic representations. ForL-functions, it predicts that every motivicL-function (coming from
+algebraic geometry) equals an automorphicL-function (coming from harmonic analysis on adelic
+groups). The proven functional equation is actually one of the key achievements of the automor-
+phic theory, establishing that automorphicL-functions have the right analytic structure to even
+formulate the Generalized Riemann Hypothesis. Since automorphicL-functions are expected to
+satisfy RH, this would imply RH for all motivicL-functions. The program has achieved spectacu-
+lar successes (Wiles’ proof of Fermat’s Last Theorem used the Taniyama-Shimura conjecture, now
+a theorem) but the general conjectures remain open.
+3.3.2 Modular forms and L-functions:
+The theory of modular forms provides concrete examples ofL-functions with analytic continuation
+and functional equations. For a weightkcusp formf(z) = ∑∞
+n=1ane2πinzonΓ 0(N), the associated
+L-function
+L(s,f) =∞
+∑
+n=1an
+ns
+satisfies a functional equation relatingstok−s. The Ramanujan-Petersson conjecture (proved
+by Deligne) bounds|a p| ≤2p(k−1)/2, which is the analogue of RH at the level of Euler factors.
+These examples clarify the expected shape of generalL-functions and their connection to geometric
+objects.
+3.3.3 Selberg trace formula and zeta functions:
+Selberg’s trace formula [59,98] for discrete groupsΓacting on hyperbolic spaces relates spectral data
+(eigenvalues of the Laplacian) to geometric data (lengths of closed geodesics). ForΓ=PSL(2,Z),
+this yields the Selberg zeta function
+ZΓ(s) = ∏
+pprimitive∞
+∏
+k=0(1−e−(s+k)l(p))
+where the product is over primitive closed geodesicspwith lengthl(p). This function has zeros
+at the eigenvalues of the Laplacian, providing a complete spectral interpretation. The analogy
+with the Riemann zeta function is striking: both have Euler products, functional equations, and
+their zeros encode important information (eigenvalues vs. prime distribution). The Selberg trace
+formula for Riemann surfaces of finite area, acquires additional terms which make it looke.g.in the
+15
+=== PAGE 16 ===
+case ofX=H/PSL(2,Z)(whereHis the upper half plane with the Poincaré metric) even more
+similar to the explicit formulas, since the parabolic terms now involve explicitly the sum
+2∞
+∑
+n=1Λ(n)
+ng(2 logn)
+(for a test functiong) to be compared with theΛ(n)terms in the explicit formulas
+−2∞
+∑
+n=1Λ(n)
+n1
+2g(logn)
+There is however a striking difference which is that these terms occur with a positive sign instead
+of the negative sign, as discussed in [59] §12. This discussion of the minus sign was extended to the
+case of the semiclassical limit of Hamiltonian systems in physics in [3].
+3.4 Random Matrix Theory and Quantum Chaos
+3.4.1 Montgomery’s pair correlation:
+In 1973, Hugh Montgomery [79,80] conjectured a striking statistical property of the nontrivial zeros
+of the Riemann zeta function on the critical line. Lettingγdenote ordinates of zerosρ=1
+2+iγ
+with 0<γ<T, he studied the two-point correlation function of the rescaled spacings between
+zeros. Specifically, he conjectured that for 0<a<b, andN(T) = ∑0<γ≤T 1,
+lim
+T→∞1
+N(T)#
+(γ,γ′): 0<γ,γ′<T,2πa
+logT≤ |γ−γ′| ≤2πb
+logT
+=Zb
+a 
+1−sinπu
+πu2!
+du,
+This conjectured density reflects a repulsion between zeros and suggests they are not randomly dis-
+tributed but exhibit a regularity akin to that of eigenvalues of large random Hermitian matrices. In
+a widely recounted anecdote, Montgomery mentioned his formula during a visit to the Institute for
+Advanced Study, where the physicist Freeman Dyson, upon seeing it, immediately recognized it as
+the pair correlation function for eigenvalues in the Gaussian Unitary Ensemble (GUE) of random
+matrix theory. This was verified numerically by Odlyzko to extraordinary precision. The connec-
+tion suggests that the zeros behave like eigenvalues of a random Hermitian matrix, pointing to an
+underlying chaotic quantum system. This serendipitous encounter laid the groundwork for a deep
+and fruitful connection between number theory and quantum statistical mechanics.
+3.4.2 Odlyzko’s statistics:
+Andrew Odlyzko’s computations in the 1980s-1990s revolutionized our understanding of the sta-
+tistical properties of zeta zeros. Computing millions of zeros at very large heights (around the
+1020-th zero), he found:
+• Nearest-neighbor spacings follow the GUE distribution with extraordinary accuracy
+• Higher correlation functions also match random matrix predictions
+• Local statistics are universal, but global statistics show number-theoretic fluctuations
+His data provided compelling evidence for the GUE hypothesis and inspired much of the subse-
+quent work connecting number theory to random matrix theory. The agreement extends to fine
+details like the variance of the number of zeros in intervals and the distribution of the arguments
+ofζ(1/2+it).
+To compare the statistical properties of Riemann zeta zeros with eigenvalues of random matrices
+from the Gaussian Unitary Ensemble (GUE), one must address a fundamental incompatibility in
+16
+=== PAGE 17 ===
+their densities. The eigenvalues of anN×NGUE matrix have constant mean spacingπ/√
+Nalong
+the real axis (after appropriate normalization). In contrast, the zerosρ n=1/2+iγ nof the Riemann
+zeta function have imaginary partsγ nwhose density increases logarithmically: the number of
+zeros with 0<γ<Tis approximatelyT
+2πlogT
+2π, giving a local mean spacing near heightTof
+approximately2π
+log(T/2π).
+To make a meaningful comparison, one must rescale the zeros locally. Specifically, when studying
+zeros near heightT, one considers the rescaled spacings
+˜γn=log(T/2π)
+2π(γn+1−γ n)
+which have mean value 1. One then compares these rescaled spacings with the eigenvalue spacings
+of GUE matrices withN∼logT
+2π. After this height-dependent rescaling, one finds remarkable
+agreement in local statistics such as nearest-neighbor spacing distributions andn-point correlation
+functions. However, this rescaling procedure highlights that any correspondence between zeta
+zeros and random matrix eigenvalues must be inherently local and cannot arise from a simple,
+fixed spectral operator.
+3.4.3 Quantum chaos:
+The field of quantum chaos studies the quantum mechanics of classically chaotic systems. The
+Berry-Tabor conjecture states that quantum systems with integrable classical limits have Poisson
+statistics for their eigenvalues, while those with chaotic classical limits follow random matrix statis-
+tics (GUE for time-reversal invariant systems). The appearance of GUE statistics for zeta zeros sug-
+gests they arise from quantizing a chaotic classical system [3]. Specific proposals include billiards
+in certain domains or more abstract dynamical systems.
+3.4.4 Katz-Sarnak theory
+Building upon Montgomery’s discovery and Odlyzko’s computational confirmation of the connec-
+tion between Riemann zeta zeros and random matrix statistics, Nicholas Katz and Peter Sarnak ex-
+tended this correspondence to entire families ofL-functions and established a systematic theoretical
+framework for understanding their statistical behavior [64, 65]. Their groundbreaking insight was
+that different families ofL-functions exhibit universal statistical properties governed by one of the
+classical matrix groups—unitaryU(N), orthogonalO(N), or symplecticSp(2N)—with the specific
+symmetry type determined by the arithmetic and geometric structure of the family itself [42, 64].
+The Katz–Sarnak density conjecture predicts that, as the analytic conductors ofL-functions in a
+family tend to infinity, the distribution of their normalized low-lying zeros near the critical point
+s=1/2 converges to the scaling limits of eigenvalues clustered near 1 in the corresponding ran-
+dom matrix ensemble [64–66]. Most remarkably, they proved their conjectures rigorously for fami-
+lies ofL-functions over finite fields by connecting the zeros to Frobenius eigenvalues and applying
+Deligne’s equidistribution theorem [40, 41, 51, 64], thereby providing the first complete verification
+of random matrix universality in a number-theoretic context. This work not only unified previ-
+ously disparate phenomena under a single conceptual framework but also provided powerful new
+tools for studying classical problems in analytic number theory, from the distribution of primes to
+the arithmetic of elliptic curves.
+3.4.5 Moments and unitary matrices (Keating–Snaith):
+The asymptotic behavior of moments of the zeta function is conjectured (see [33]) to be of the form
+:
+1
+TZT
+0|ζ(1/2+it)|2kdt∼c k(logT)k2
+for some constantc k. Hardy and Littlewood proved this whenk=1 in 1918 and Ingham proved
+it in 1926 [62] fork=2, one hasc 1=1, andc 2= 
+2π2−1. These are the only values ofk
+17
+=== PAGE 18 ===
+where this conjecture is proven, and there was for a long time not even a conjectural value ofc k
+for any other value ofk. Conrey and Ghosh [35] conjectured in 1992 the answer fork=3, and
+Conrey and Gonek [36] conjectured the answer fork=4 in 1998. These two conjectures are of
+the formc k=a kgk/(k2!)where as explained belowa kis a well understood arithmetic factor, but
+the constantsg 3=42 andg 4=24024 remained mysterious. In the 1998 Vienna conference on
+RH, Keating and Snaith [66, 67] announced their breakthrough of using random matrix theory to
+guess the value ofg k. The new insight of Keating and Snaith was recognizing that the constant
+fk=g k/(k2!)naturally arises from random matrix theory. The general conjecture then takes the
+formc k=a kfkwhere
+•f kcomes from random matrix theory (thek-th moment of|det(I−U)|2forUa random
+unitary matrix)
+•a kis an arithmetic factor which captures the arithmetic complexity through an Euler product,
+ak=∏
+p
+1−1
+pk2∞
+∑
+m=0Γ(m+k)
+m!Γ(k)2
+p−m
+The random matrix partf kcan be expressed as:
+fk=k−1
+∏
+j=0j!
+(j+k)!=⇒g k= (k2)!fk
+This separation reveals a beautiful principle: the “universal” behavior comes from random matrix
+theory, while the arithmetic specifics of the zeta function are encoded separately ina k. This opened
+a new paradigm of using random matrix models to predict number-theoretic results, later extended
+to otherL-functions and their derivatives [38, 50, 104].
+3.5 Noncommutative Geometry
+3.5.1 Connes’ trace formula
+Connes developed a trace formula in the context of noncommutative geometry8that recovers Weil’s
+explicit formula for the zeros ofζ(s)and ofL-functions [17,18]. The key insight is to work with the
+noncommutative space of adele classesA/Q∗, whereAis the ring of adeles. On this space, there is
+a natural action of the idele class group GL(A)/Q∗≃ˆZ∗×R∗+. The trace formula relates:
+• Spectral side: contributions from the zeros ofL-functions with Grössencharakter.
+• Geometric side: contributions from places ofQ.
+In the beginning the trace formula was stated for general global fields as a conjecture equivalent
+to the validity of the analogue of RH for allL-functions with Grössencharakter, but the semilocal
+form of the trace formula was already proved in [17], and it admits as simple corollaries the global
+versions allowing for the presence of non-critical zeros [78] (see also [18]). This provides a spectral
+realization where the zeros appear as an absorption spectrum which accounts for the minus sign in
+the explicit formulas as compared to the Selberg trace formula.
+These approaches aim to geometrize the RH using tools from operator algebras and noncommuta-
+tive differential geometry. An ergodic quotient such as the adele class spaceA K/K×of a number
+fieldKis encoded by the cross product of the algebra of functions onA Kby the action ofK×. The
+spectral realizations mentioned above involve the Hochschild homology of the cross product of the
+Bruhat-Schwartz algebra, while the topology ofA K/K×is encoded by theC∗-algebra cross product.
+A recent result [13] shows that this topological encoding is faithful, non-isomorphic number fields
+give non-isomorphicC∗-algebras.
+8The origin came from a system of quantum statistical mechanics exhibiting phase transitions and having the Riemann
+zeta function as partition function [8]
+18
+=== PAGE 19 ===
+3.5.2 Knots, primes and class field theory
+For the global fieldK=Q, the projection of the adele class space
+π:Y Q=Q∗\A→Q∗\A/ ˆZ∗=XQ
+on the sectorX Qcorresponding toζdisplays the class field theory counterpart of the Mazur-
+Mumford analogy between knots and primes mentioned above. To each primepcorresponds a
+periodic orbitC p⊂XQof length logp. Let then Frob p∈πet
+1(Spec(F p))be the canonical generator
+of the etale fundamental group andZ(p)the ringZlocalized atp. One then has [26],
+(i) The inverse imageπ−1(Cp)⊂Y Qof the periodic orbitC pis canonically isomorphic to the
+mapping torus of the multiplication byr∗
+Frob p	
+in the abelianized étale fundamental group
+πet
+1(SpecZ(p))ab.
+(ii) The canonical isomorphism in(i)is equivariant for the action of the idele class group.
+(iii) The monodromy of the periodicC pinπ−1(Cp)⊂Y Qis equal to the natural map
+r∗:πet
+1 
+SpecF p→πet
+1(SpecZ(p))ab
+and determines the linking of the primepwith all other primes.
+This result shows that the adele class space plays the role of a class field theory counterpart of the
+abelian etale covers involved in Grothendieck theory. Quite remarkably the spaceX Qadmits a
+topos theoretic incarnation as the scaling site naturally endowed with a structure sheaf of charac-
+teristic one (see [20] and the references there).
+3.6 p-adic and Motivic L-functions
+3.6.1 p-adic L-functions and Iwasawa theory:
+Kubota and Leopoldt constructedp-adic analogues of the Riemann zeta function, which arep-adic
+analytic functions that interpolate special values of the classical zeta function. For each primep,
+thep-adic zeta functionζ p(s)is ap-adic analytic function onZ psatisfying
+ζp(1−k) = (1−pk−1)ζ(1−k)
+for positive integersk. Iwasawa theory studies these functions in towers of cyclotomic extensions,
+relating them to ideal class groups and units. The Main Conjecture of Iwasawa theory (proved
+by Mazur-Wiles) connectsp-adicL-functions to Selmer groups of Galois representations. While
+there is no directp-adic analogue of RH, the growth and zeros ofp-adicL-functions are intimately
+connected to deep arithmetic phenomena.
+3.6.2 Motivic L-functions and Bloch–Kato conjectures:
+These far-reaching conjectures relate special values ofL-functions to arithmetic invariants. For a
+motiveMwithL-functionL(M,s), the conjectures predict that:
+• The order of vanishing ofL(M,s)at integer points equals the rank of certainK-groups or
+Selmer groups
+• The leading coefficient is related to regulators, periods, and Tamagawa numbers
+Special cases include the Birch and Swinnerton-Dyer conjecture (for elliptic curves) and Beilinson’s
+conjectures. These place RH in a broader arithmetic context where zeros ofL-functions encode
+geometric and arithmetic information. The conjectures suggest that RH is part of a vast network of
+relationships between analysis, algebra, and geometry.
+19
+=== PAGE 20 ===
+3.7 Computational and Experimental Mathematics
+3.7.1 High-precision computations
+The numerical verification of RH has a rich history:
+• Riemann (1859): computed the first few zeros
+• Gram (1903): 15 zeros
+• Backlund (1914): 79 zeros
+• Hutchinson (1925): 138 zeros
+• Titchmarsh (1935-1936): 1,041 zeros using the Riemann-Siegel formula
+• Turing (1950): verified 1,104 zeros using the Manchester Mark 1
+• Lehmer (1956): 25,000 zeros using electronic computers
+• Rosser, Yohe, Schoenfeld (1968): 3,500,000 zeros
+• van de Lune, te Riele, Winter (1986): 1,500,000,000 zeros
+• Gourdon and Demichel (2004): first 1013zeros
+• Platt (2021): verification up to height 3×1012, [87].
+Modern computations use the Riemann-Siegel formula with sophisticated error bounds and the
+Turing method for rigorous verification. The 1988 publication of the Odlyzko-Schönhage algorithm
+was a major methodological breakthrough. These massive computations provide overwhelming
+evidence for RH while also testing for exceptional phenomena [44, 63].
+4 Equivalent Formulations
+While the previous sections surveyed theories built in pursuit of the Riemann Hypothesis, there
+exists a parallel tradition of discovering equivalent formulations of RH itself. These reformula-
+tions, ranging from elementary number theory to functional analysis, reveal the hypothesis’s deep
+connections across mathematics and sometimes suggest new angles of attack. There are so many of
+these equivalent formulations that there is a whole website which is designed to account for them.
+The main significance that one can find in all these formulations is that the elementary formula-
+tions, for instance, the Robbins criterion or the Lagarias criterion, show that at the logical level RH
+has a very particular logical status which will be discussed in details below.
+4.1 Weil’s Positivity Criterion
+RH is equivalent to the positivity of certain distributions constructed from the zeros, connecting to
+Weil’s approach via the explicit formula. The difficulty of solving the Riemann Hypothesis in the
+analytic formulation, is often primarily attributed to the infinite number of terms within the Euler
+product.
+ζ(s) =∏
+p(1−p−s)−1(8)
+However, contrary to this widespread belief, there exists a propertyP(n), involving only the Euler
+factors for primes smaller thann, and whose validity for allnis equivalent to RH. This is derived
+from Weil’s positivity criterion which involves the quadratic formQWdefined using the Riemann-
+Weil explicit formulas applied to test functions with support in a compact symmetric interval. After
+a minor change of notations the Mellin transform becomes the Fourier transform for the groupR∗+
+whose Pontjagin dual is identified with the additive groupR, and the explicit formula takes the
+20
+=== PAGE 21 ===
+following form, similar to (4), (5) but with notations adapted to the involutive convolution algebra
+of the groupR∗+,
+bfi
+2
+−∑
+1
+2+is∈Zbf(s) + bf
+−i
+2
+=∑
+vWv(f)
+bf(s):=Z∞
+0f(x)x−isd∗x,d∗x=dx
+x
+where the local contributions are now given by
+Wp(f):= (logp)∞
+∑
+m=1p−m/2 
+f(pm)+f 
+p−m
+(9)
+and for the archimedean place
+WR(f):=(log 4π+γ)f(1)
++Z∞
+1
+f(x) +f
+x−1
+−2x−1/2f(1)x1/2
+x−x−1d∗x(10)
+The key result of André Weil is the equivalence
+RH⇐⇒ ∑
+vWv(g∗g∗)≤0,∀g, bg
+±i
+2
+=0
+whereg∈C∞
+c 
+R∗+
+is smooth with compact support andg∗(x):= ¯g 
+x−1
+. The key point of this
+equivalence is that the sum on the right-hand side, when evaluated on a test functiongwith com-
+pact support, involves only finitely many primes (sinceW pvanishes on functions with support in 
+p−1,p
+). Thus, even though the Riemann Hypothesis is concerned with the asymptotic distribu-
+tion of the primes, the equivalent formulation only involves finitely many primes at a time. In [111]
+H. Yoshida proved the following result (Theorem 1 in that paper)
+For any smooth, positive definite functionfwith support in the interval(1/2, 2)and whose
+Fourier transform vanishes at±i
+2one has:W ∞(f)≥0 whereW ∞:=−W R.
+The proof is a numerical analysis of the positivity of the Weil functionalW ∞restricted to the interval
+1
+2, 2
+, and therefore it does not provide any conceptual reason for this positivity that would have
+a chance to continue to hold when primes are involved.
+4.2 Beurling–Nyman criterion:
+This remarkable reformulation (Beurling 1955, Nyman 1950) states that RH is equivalent to the
+density inL2(0, 1)of the linear combinations ∑n
+1cνρθν, 0<θ ν≤1,∑n
+1cνθν=0 where
+ρθ(x) ={θ
+x}forx∈(0, 1)
+and{y}denotes the fractional part ofy. This transforms RH into a completeness problem in func-
+tional analysis. Later work by Báez-Duarte and others has provided quantitative versions, showing
+that the rate of approximation in this criterion is related to the distribution of zeros off the critical
+line.
+4.3 Li’s criterion
+Xian-Jin Li (1997) proved [74] that RH is equivalent to the positivity of the numbers
+λn=∑
+ρ
+1−
+1−1
+ρn
+for alln≥1, where the sum runs over all non-trivial zerosρofζ(s).
+21
+=== PAGE 22 ===
+4.4 Elementary Number-Theoretic Formulations
+In 1913 Grönwall proved in his paper "Some asymptotic expressions in the theory of numbers" that
+lim sup
+n→∞σ(n)
+nlog logn=eγ,γ=limn→∞ 
+n
+∑
+k=11
+k−logn!
+whereσ(n)is the sum of divisors function andγis the Euler-Mascheroni constant. Building on
+Gronwall’s foundation, Srinivasa Ramanujan made a crucial connection between the functionσ(n)
+and the Riemann Hypothesis in his work on highly composite numbers. Ramanujan proved that if
+the Riemann Hypothesis is true, then the inequalityσ(n)/n<eγlog lognholds for all sufficiently
+large positive integersn. This represented the first direct link between the truth of the Riemann
+Hypothesis and bounds on arithmetic functions.
+4.4.1 Robin’s Criterion (1984)
+Guy Robin proved that RH is equivalent to the inequality
+σ(n)<eγnlog logn
+for alln>5040, whereσ(n)is, as above, the sum of divisors function andγis the Euler-Mascheroni
+constant. This remarkable result translates the complex-analytic RH into purely arithmetic terms.
+4.4.2 Lagarias’ Criterion (2002)
+Jeffrey Lagarias refined Robin’s criterion in the form
+RH⇐⇒σ(n)<H n+eHnlogH n,∀n≥1
+whereH n=1+1/2+· · ·+1/nis then-th harmonic number. This formulation has the aesthetic
+advantage of holding for all positive integers.
+The reformulation of the Riemann Hypothesis as a universal statement over decidable arithmetic
+properties places it precisely within the class of statements that Hilbert was hoping to consider as
+"provable" if true and that Gödel’s incompleteness theorems identify as potentially "true but un-
+provable" ! Chaitin’s algorithmic information theory results demonstrate that such unprovability
+becomes increasingly prevalent as statement complexity grows. This connection illuminates fun-
+damental limitations in formal mathematical systems and provides a striking example of how even
+central problems in number theory intersect with the deepest questions about the nature of math-
+ematical truth and proof. Chaitin’s work reveals that mathematical truth and provability operate
+in fundamentally different domains from an information-theoretic perspective. Most mathematical
+truths have high descriptive complexity and contain more information than can be extracted from
+finite axiom systems through deductive processes. This creates a vast landscape of true statements
+that remain forever beyond the reach of formal proof, with provable statements representing an
+infinitesimal fraction of mathematical reality as complexity increases. Estimating the algorithmic
+complexity of the Lagarias criterion reveals fundamental computational barriers in verifying the
+Riemann Hypothesis through direct arithmetic checking. The dominant complexity arises from
+integer factorization requirements for computing the sum of divisors function, placing individual
+verification instances outside polynomial-time computation for general integers. Harmonic num-
+ber computation and transcendental function evaluation contribute additional complexities that
+compound the overall computational costs.
+These complexity limitations highlight both the elegance and computational intractability of the
+Lagarias criterion as a verification approach for the Riemann Hypothesis. While the criterion suc-
+cessfully transforms a deep analytic statement into elementary arithmetic, the computational costs
+of verification reflect the profound difficulty of the underlying mathematical problem. The analy-
+sis demonstrates how computational complexity theory provides essential insights into the practi-
+cal feasibility of mathematical verification approaches and the fundamental relationship between
+mathematical truth and computational resources.
+22
+=== PAGE 23 ===
+5 A Letter to Professor Bernhard Riemann
+I was invited to give a talk in Varese, on June 4th of 2025, in the Villa Toeplitz, where the Riemann
+International School of Mathematics is located. In order to prepare this talk, I did, two days before,
+a pilgrimage in Selasca, the place where Riemann died on July 20th of 1866.
+Given the place where I had to give the talk, I took the following challenge:
+What could I tell to Riemann that would surprise him
+and that would give him confidence that his hypothesis is true?
+So what I am going to write now is a letter to him. I will address to him as "Master". The req-
+uisite of course is that it is forbidden to use mathematical notions unknown to him or not easily
+understandable by him. In fact, I will restrict myself to those which he used in his work. After a
+preliminary remark, the really new stuff is in the second part of the letter.
+TOPROFESSORBERNHARDRIEMANN
+The beautiful formula that you proved in your paper, namely the formula which
+allows one to compute the number of prime numbers less thanxin terms of the
+zeros of the zeta function, has been unfortunately badly written in textbooks thus
+displaying a profound misunderstanding of the middle term of the formula. You
+letπ′(x)be the number of primes strictly less thanxwith1
+2added whenxis prime
+and found for the counting function
+f(x):=∑1
+nπ′
+x1
+n
+,
+the following formula involving the integral logarithm function Li(x) =Rx
+0dt
+logt,
+f(x) =Li(x)− ∑
+α
+Li
+x1
+2+αi
++Li
+x1
+2−αi
++Z∞
+x1
+t2−1dt
+tlogt−log 2 (11)
+You were very careful at the end of your paper in dealing with multivalued func-
+tions, but the mathematical language has evolved and, nowadays, one only uses
+functions with a definite univalent meaning, while the use of multivalued func-
+tions is no longer commonly admitted.
+In standard textbooks, for instance the classic book of Edwards7the middle term
+is written as a sum of the integral logarithm Li function evaluated onxρwhere the
+ρ’s are the non-trivial zeros ofζ.
+Now this is obviously a nonsensical sum becausexto the powerρdoes not change
+if one replacesρbyρ+2πin/logx, wherenis an arbitrary integer. So the con-
+stancy of Li(xρ)on this arithmetic progression implies that there is no possible
+meaning to the infinite sum because it includes infinitely many repetitions of es-
+sentially the same term, since the complex numbersxρaccumulate infinitely at
+least on the circle of radiusx1/2. In fact, von Mangoldt gave, many years after
+your paper, a detailed proof of your theorem, and he was more careful, up to some
+extent, in writing the formula ... since instead of dealing with Li he considers a well
+defined univalent function Ei(z) =Li(exp(z))of the correct variablez(rather than
+exp(z)). He then proves your formula replacing the term ∑Li(xρ)by∑Ei(ρlogx).
+23
+=== PAGE 24 ===
+This being said, it is clear from your formula that you knew what is now called
+the Guinand-Weil explicit formulas. And the new input in this formula, but that
+wouldn’t surprise you, is that one considers, instead of the function 1/loguwhich
+you use, an arbitrary test functionφ(u)applied on the prime powers, and one
+writes an equality which involves what is nowadays called the Mellin transform9
+of this functionφ(u)evaluated on the non-trivial zeros of the zeta function. One
+obtains in this way an equality which is not really a generalization of your formula
+in the sense that yours goes one level of subtlety beyond these classical Guinand-
+Weil explicit formulas since your test function 1/loguis singular atu=1. One
+thing which is striking in these explicit formulas is that if the test functionφ(u)
+vanishes outside a finite interval[1,x], then only finitely many primes are involved
+in its computation, those less thanx. But this is of course the case for your formula
+which involves the function equal toφ(u) =1/loguin the interval[1,x]and
+vanishing outside, so this would not be a surprise to you.
+But let me tell you, Master, a fact which I find quite supportive of your hypothesis.
+The fact is the following. I will devise a process with which, by using only a few
+primes, I will be able to reach the first non-trivial zeros of your zeta function with
+remarkable precision. Now what do I mean by involving a few primes? I will
+take a concrete situation and I will imagine that I do not know what are the primes
+beyond 13. So I only know 2, 3, 5, 7, 11 and 13. Now at first it seems that in order to
+get any grasp on the zeros of zeta, it is necessary to involve all primes, because all
+of them are involved in the Euler product which is defining this function. And so
+it seems quite unbelievable that by truncating this Euler product, namely by only
+considering the terms in the Euler product which are involving the primes smaller
+than 13, one could get any hint on the zeros of the zeta function.
+So let me describe the process using only notions that are familiar to you. Out of
+these primes, 2, 3, etc., up to 13, one fabricates a quadratic form. This quadratic
+form is similar to the quadratic form you were using when you applied the Dirich-
+let principle in proving the conformal mapping theorem. It is a quadratic form on
+the infinite dimensional space of functionsφ(u)of a positive real variable which
+vanish outside the interval[1, 13]. The valueQ(φ)of the quadratic form is ob-
+tained by applying the explicit formula to the functionψ(v) =Rφ(u)φ(uv)du/u.
+Thus because the functionφvanish outside the interval[1, 13], the functionψvan-
+ishes outside the interval[1/13, 13]and one does not need to use any other prime
+power than 2, 3, 4, 5, 7, 8, 9, 11, 13 to computeQ(φ). Next, I know how to prove
+that there is a functionη(u)realizing the minimum of the quadratic formQ(φ)
+whileRφ(u)2du/u=1. The proof of existence is entirely similar to the proof given
+by Hilbert in 1900, in his paper "Über das Dirichletsche Prinzip" for the Dirichlet
+principle. I then take the Mellin transform of the functionη(u). I also know how
+to prove10that the zeros of this Mellin transform are on the critical line11. This is
+proved modulo a condition of uniqueness of the minimum12.
+9The Mellin transform ofφ(u)is defined asM(φ)(s) =R∞
+0us−1φ(u)du
+10See §6.1
+11Which is normalized here as the imaginary line
+12The proof uses a generalization of a Theorem of Caratheodory-Fejer on Toeplitz matrices, obtained in 1911, one needs
+to assume that the lowest eigenvalue of the quadratic form is simple and even
+24
+=== PAGE 25 ===
+The amazing fact, which I want to report to you, is that when one computes—with
+the aid of modern computational machines far beyond what was available in your
+time—the zeros of the Mellin transform ofη(u), say its first 50 zeros, one finds an
+incredible coincidence with the non-trivial zeros of zeta. For instance, for the first
+zero, you find out that there are 54 decimal places which agree, and so on and so
+forth. The number of decimal places which agree decreases slowly, and when you
+reach the 50-th zero, only few decimal places agree.
+I have computed these differences (upper bound of) between the values computed
+using primes less than 13 and the true values of zeros of zeta which I present here-
+with:
+DIFFERENCESBETWEENVALUES(USING PRIMES≤13)
+2.60179×10−55, 4.80071×10−52, 4.43756×10−50, 3.89903×10−47, 7.59453×10−46, 1.13198×10−43,
+1.07245×10−41, 1.2694×10−40, 4.40141×10−38, 4.24869×10−37, 5.86724×10−36, 3.24443×10−34,
+2.44517×10−32, 9.02026×10−32, 5.13539×10−30, 7.04142×10−29, 6.47754×10−28, 4.96772×10−27,
+5.86016×10−25, 3.76751×10−24, 1.03779×10−23, 3.52722×10−22, 3.03977×10−21, 5.66201×10−20,
+1.41755×10−19, 2.19821×10−18, 6.31599×10−17, 1.42037×10−16, 4.34328×10−16, 4.47113×10−15,
+7.01522×10−14, 3.81989×10−13, 5.99581×10−13, 4.26414×10−11, 1.10653×10−10, 1.95651×10−10,
+5.20728×10−10, 2.05031×10−9, 3.42274×10−8, 2.10931×10−7, 2.23714×10−7, 5.95608×10−7,
+5.77737×10−6, 0.000141389, 0.000556111, 0.000720794, 0.000314865, 0.0209081, 0.00313565, 0.00212727
+What this is saying is that we have a firm grasp on your zeros, without at any
+point involving the infinity of the collection of all primes. And moreover we know
+a priori that all zeros of the Mellin transform ofη(u)are on the critical line.
+What we do not know is that, when we increase the upper limit, which wasx=
+13 here, the corresponding set of zeros will converge towards the zeros of zeta.
+This is something which at this point is not proved. On the other hand, it seems
+that the abstract reason why your conjecture is true is now within reach since we
+know that the zeros of the Mellin transforms of the minimal eigenvectorsη xare
+purely imaginary, and we expect that theη xconverge to the function whose Mellin
+transform is your functionΞ(it). The result would then follow from Hurwitz’s
+theorem, which implies that all the zeros of the limit of a convergent sequence13of
+holomorphic functions whose zeros are on a fixed line are still on that line.
+With respect and admiration,
+Alain Connes
+13uniformly on compact subsets
+25
+=== PAGE 26 ===
+6 The strategy and the next small steps
+We first explain in §6.1 the general result which provides a wealth of entire functions all of whose
+zeros are on the real line. The goal then is to try to show that, when the upper boundx(which was
+x=13 above) tends to infinity, the minimal eigenvectorsη xconverge in a suitable sense so that
+their Fourier transforms, for the duality betweenR∗+andR, will converge uniformly on compact
+subsets to the holomorphic function that Riemann had introduced as theΞ-function in his paper. In
+fact we shall follow his footsteps and consider the explicit formula he gave for the functionkwhose
+Fourier transform isΞ(t). We shall rewrite in §6.2 this functionkas the image by a summation
+mapEof a linear combinationhof two Hermite functionsh 0,h4. The issue, then, is to show the
+convergence of the minimal eigenvectorsη xto the functionE(h). In fact, one first needs to recenter
+ηxtoθ x(u) =η x(x1/2u)which has its support in[x−1/2,x1/2]. The plan, in order to achieve this
+goal, is to break it into several small steps. In the second step, §6.3, one introduces, givenλ>1,
+the prolate spheroidal wave functions which give an adaptationh n,λof the hermite functionsh n
+to functions with support in the interval[−λ,λ]⊂R. The functionsh n,λare eigenfunctions of
+a modification of the Hermite operator (14), the prolate wave operator PW λof (15), obtained by
+adding to the Hermite operatorHthe only multiple of the square of the scaling so that the sum
+commutes with the orthogonal projection on functions with support in the interval[−λ,λ]⊂R.
+By construction PW λadmits two regular singular points at the boundary±λof the interval and
+an irregular singularity at∞. The third step §6.4, consists in making an educated guess for an
+approximation of the minimal eigenvectorθ xby using the same process as in the simple case of
+§6.2. Thus one simply replaces the Hermite functionsh 0,h4by their localizationsh 0,λ,h4,λ, for
+λ=x1/2, and one applies the summation mapEto the linear combination of these two functions
+with vanishing integral. One obtains in this manner a functionk λwhich approximatesθ xon the
+interval[x−1/2,x1/2]. In §6.5 one shows that, whenλ→∞, the Fourier transforms bkλconverge
+towards theΞfunction of Riemann, uniformly on closed substrips of the open strip of width 1
+neighborhood of the real line. Finally in §6.6 we point to the missing final steps.
+6.1 The Fourier transform ofθ xhas all its zeros on the real line
+The proof of this result follows from a theorem shown in a joint paper [32] with Walter van Sui-
+jlekom, entitled "Quadratic Forms, Real Zeros and Echoes of the Spectral Action". The precise
+statement is :
+Theorem 6.1.Let L>0,Dbe a real distribution on the interval[0,L]and ˜Dthe associated even distribu-
+tion on[−L,L]. Assume that the quadratic form with Schwartz kernel ˜D(x−y)defines a lower-bounded
+selfadjoint operator on L2([−L
+2,L
+2]), and that the minimum of its spectrum is a simple, isolated eigenvalue,
+with even eigenfunctionη. Then all the zeros of the entire function bη(z), z∈C, Fourier transform ofηlie
+on the real line.
+The proof of this theorem is based on the special form of the matrix of the quadratic form in the
+trigonometric orthonormal basis, the construction for finite matrices of that special form of a selfad-
+joint operator and the above mentioned Hurwitz theorem to pass to the limit when the size of the
+matrices tends to infinity. The validity of the result on the zeros of the Fourier transform for finite
+truncations [32] plays a key role in numerical computations14and allows one to approximate the
+zeros of bη(z)by the spectrum of a rank one perturbation of the periodic Dirac operator, obtained
+using the Dirichlet kernel analysed by Riemann in [91].
+6.2 Riemann’sΞfunction and Hermite functions
+Riemann adopts the following notation
+ψ(x):=∞
+∑
+1e−n2πx
+14It is used for the trigonometric truncation atN=100 in the computation presented in the letter
+26
+=== PAGE 27 ===
+and then writes, withξ(s):=1
+2s(s−1)π−s/2ζ(s)Γ s
+2
+,Ξ(t):=ξ(s)fors=1
+2+it, the equality15
+Ξ(t) =4Z∞
+1d
+x3
+2ψ′(x)
+dxx−1
+4cos1
+2tlogx
+dx
+He then obtains, using the equalityk(u) =k(u−1)from the Poisson formula, where
+k(u):=u1/2π
+2∞
+∑
+1n2u2
+2πn2u2−3
+e−πn2u2
+thatΞ(t)is the Fourier transform of the functionk(u):
+Ξ(t) =2Z∞
+1k(u)cos (tlogu )d∗u=Z∞
+0k(u)uitd∗u,
+Moreover introducing the notation
+E(f)(u):=u1/2∞
+∑
+1f(nu)(12)
+one has
+k(u) =E(h)(u),h(u) =π
+2u2
+2πu2−3
+e−πu2. (13)
+The functionh(u)can be characterized as follows. One considers the Hermite operator (harmonic
+oscillator)
+Hf(u):=−f′′(u) +4π2u2f(u)(14)
+and letsh nbe the normalized eigenfunction for the eigenvalue 2π(1+2n). These functions are
+even forneven and invariant under the Fourier transform fornmultiple of 4.
+Fact 6.2.TheΞfunction of Riemann is the Fourier transform of k=E(h)where h is, up to a multiplicative
+scalar, the only linear combination of h 0,h4with vanishing integral8.
+6.3 The prolate wave functions enter the scene
+The next step requires introducing a family of functions whose pivotal role in signal transmission
+was uncovered by Slepian, Pollak, and Landau at Bell Labs during the 1960s. Their work addressed
+a fundamental question first posed by Claude Shannon in his foundational study on entropy16:To
+what extent can functions that are band-limited also be time-limited?Shannon had estimated that the
+numberNof orthogonal signals that can be packed into a time windowTand frequency band
+WsatisfiesN≃2TW. Building on this, Slepian and his collaborators sought to maximize the
+information transmittable over a limited time within a given bandwidth — a problem central to
+efficient communication systems.
+To describe their result, fix the time and frequency interval as[−λ,λ]⊂R, and letP λbe the pro-
+jection in the Hilbert spaceL2(R)(square-integrable functions) defined by multiplication with the
+characteristic function of the interval[−λ,λ]. Let cPλ:=F eRPλF−1
+eRbe its conjugate under the Fourier
+transform,17
+15The traditional notation for this function isΞ(t)instead of Riemann’sξ(t).
+16C. E. Shannon,Communication in the Presence of Noise, Proc. IRE37(1949), 10–21.
+17The normalized Fourier transform is defined by
+FeR(f)(y):=Z
+Rf(x)e2πixydx.
+Note that on even functions one hasF−1
+eR=F eR.
+27
+=== PAGE 28 ===
+In their seminal paper, [101], Slepian and Pollak showed that the compressed Fourier transform
+PλFeRPλcommutes with the second-order differential operator
+PWλ:=−∂ x
+(λ2−x2)∂x
++ (2πλx)2. (15)
+It follows that this operator commutes onL2(R)ev(even functions) with
+PλcPλPλ=PλFeRPλFeRPλ=(PλFeRPλ)2,
+which enables one to diagonalize theangle operator9αλbetween the projectionsP λandcPλdefined
+by the identity
+Pλcos2(αλ) =P λcPλPλ.
+Fact 6.3.The eigenvalues of the operator P λcPλPλin L2([−λ,λ])evare simple and form a decreasing sequence
+νn(λ), n≥0,ν n(λ)→0for n→∞, such that1>ν 0(λ)>ν 1(λ>. . .>0. The corresponding
+eigenfunctions are theprolate spheroidal wave functionsof even index h 2n,λwhere h m,λis the m+1-th
+eigenfunction of the prolate wave operator(15)in L2([−λ,λ]).
+The operatorα λhas a finite number18∼4λ2of small nonzero eigenvalues. Following the standard
+notation in the literature, the prolate spheroidal wave functions are denoted
+hn,λ(x):=PS n,0
+2πλ2,x
+λ
+where the subscriptnindexes the eigenfunction, the second subscript 0 indicates the angular order-
+a remnant of the operator’s origin in separating variables for the Laplacian on prolate spheroids-
+and the first argument 2πλ2is the dimensionless bandwidth parameter. Eachh n,λis supported
+in[−λ,λ]and extended by zero outside. The functionh n,λis even whennis even. The Fourier
+transform ofh 2m,λ, restricted to[−λ,λ], satisfies
+FeR(h2m,λ) =χ mh2m,λ,
+whereχ2
+m=ν mand the sign ofχ mis(−1)m. For our purpose we need the eigenvaluesχ 0,χ2
+corresponding to the eigenfunctionsh 0,λ,h4,λand both(1−χ 0), and(1−χ 2)tend exponentially
+to 0 as functions ofx=λ2.
+6.4 The Poisson formula and the approximationk λofθ x,λ=√x.
+Letλ>1, andQW λbe the restriction of the Weil quadratic form to test functions whose support is
+within the interval[λ−1,λ]. By the result of André Weil discussed in §4.1, the positivity ofQW λfor
+allλ>1 is equivalent to RH. This positivity can be proved for small values ofλ(see [111], [24]).
+There is (see [25, 31]) for eachλ>1 a canonical lower bounded, unbounded selfadjoint operator
+Aλwith compact resolvent, in the Hilbert spaceL2 
+λ−1,λ
+,du/u
+such that
+QW λ(f,f) =⟨A λf|f⟩(16)
+The numerical computation of the smallest eigenvalueϵ(λ)ofA λ, done in [25], shows thatϵ(λ)
+tends exponentially fast to 0 as a function ofµ=λ2. In fact a careful analysis reveals a striking
+similarity (Figure 1) between the behavior ofϵ(λ)and of the angular function 1−χ 2(λ).
+In terms of the lengthL=2 logλof the support[λ−1,λ]of the test functions forQW λ, the conver-
+gence to 0 of the minuscule quantities like 1−χ 2isexponential of exponential19:
+1−χ 2∼214
+3√
+2π5e−4πeL+9/2L
+18With our normalization, time duration isT=2λand bandlimit isW=λ.
+19see [47], Theorem 1. Note thatχ k(λ)2=λ 2k(a)witha=√
+2π λin the notations of this theorem
+28
+=== PAGE 29 ===
+.
+Figure 1: Graphs of log(ϵ(√x)))and log(1−χ 2(√x)))as functions ofx.
+In [25], we gave a construction numerically10justified of the eigenvectors associated to the first
+minuscule eigenvalues ofQW λ, using prolate spheroidal wave functions associated to the interval
+[−λ,λ]. In particular this gives an educated guess for an approximation of the eigenvector associ-
+ated to the smallest eigenvalueϵ(λ)ofA λ. In agreement with Fact 6.2, it is
+kλ(u):=E(h λ)(u),∀u∈[λ−1,λ](17)
+whereh λis, up to a multiplicative scalar, the only linear combination ofh 0,λ,h4,λwith vanishing
+integral20.
+The conceptual justification of this formula is as follows: The range of the mapEis contained in
+the radical of the global Weil quadratic form (see [18]), but RH implies thatQW λis strictly positive
+and that its radical is{0}so we should expect that the domain ofQW λcannot contain any non-
+zero element of the range of the mapE. One can nevertheless construct functions with support
+in[λ−1,λ]which are in the “near radical” of the Weil quadratic form as follows. If the support of
+the even functionfis contained in the interval[−λ,λ]⊂R, the support ofE(f)is contained in
+(0,λ]⊂R∗+. On the other hand, the Poisson formula, using the conditionsf(0) = bf(0) =0 to
+define the codimension 2 subspaceS 0⊂ S(R)of the Schwartz space, gives
+E(bf)(x) =E(f)(x−1),∀f∈ Sev
+0 (18)
+which shows that the support ofE(f)is contained in[λ−1,∞)provided the support of the even
+function bfis contained in the interval[−λ,λ]⊂R. The obstruction to obtain an elementE(f)of the
+radical ofQW λis the equalityP λ∩bPλ={0}, whereP λandcPλare as above. But as explained in §6.3
+these two projections nearly intersect, and after taking care of the two conditionsf(0) = bf(0) =0,
+the restriction ofE(f)to the interval[λ−1,λ]gives rise to the functionk λof (17) on whichQW λ
+takes non-zero, but extremely small values, thus giving a natural guess as an approximation of the
+eigenvector associated to the smallest eigenvalueϵ(λ)ofA λ.
+6.5 Convergence of the Fourier tranforms bkλ→bk
+Thanks to the classical estimates on the convergence of the prolate wave functions towards the
+Hermite-Weber function one controls the convergence ofk λof (17) towardsk=E(h)and this gives
+20Note that the computation ofE(h λ)(u)foru∈[λ−1,λ]only involes the sum over the integers≤λ2
+29
+=== PAGE 30 ===
+Fact 6.4.The Fourier transform of k λconverges, whenλ→∞, towards theΞ-function of Riemann uni-
+formly on closed substrips of the open stripℑ(z)<1
+2.
+The difference is controlled on the lineℑ(z) =αwhereα∈(−1
+2,1
+2)bycλ−1
+2−α(1−2α)−1wherec
+is a finite constant.
+6.6 Remaining steps
+In order to apply Theorem 6.1 one needs to show that the smallest eigenvalue of the Weil quadratic
+formQW λis simple with even eigenvector. The analogue of this property is known for the prolate
+wave operator. Moreover it still remains to show thatk λis a sufficiently good approximation ofθ x,
+λ=√x.
+7 Geometric Perspectives
+The geometric approach pursued in the joint work [19] described in [20] unveiled a novel geo-
+metric landscape which is a natural analogue, for the global fieldQ, of the geometry associated
+to global fields in finite characteristic. In particular the Frobenius correspondences make sense on
+the square of the scaling site and the completed Riemann zeta function appears as the analogue of
+the Hasse-Weil generating function. The handling of the delicate principal values involved in the
+Riemann-Weil explicit formula required to use the adelic incarnation of the scaling site which we
+now understand as its class field theory counterpart [26].
+In the paper [24], we began to exploit the adelic interpretation of the Frobenius correspondences for
+the number fieldQin order to gradually investigate Weil’s positivity. As explained in §4.1 the Weil
+positivity, which only involves finitely many primes at a time, is equivalent to RH. In the adelic
+geometric framework, the correspondences are encoded by Schwartz kernels, which are distribu-
+tions in the square of the adelic data that play the role of the class field theory counterpart of the
+geometric curve. More generally the connection between the operator theoretic and the geometric
+viewpoints is effected by the Schwartz kernels associated to operators. By implementing the addi-
+tive structure of the adeles, one sees that the Schwartz kernel of the scaling operator corresponds
+geometrically to the divisor of the Frobenius correspondence.
+The additive structure of the adeles ofQallows one to write the Schwartz kernelk(x,y)of the
+scaling actionf(x)7→f(λx),λ∈R∗+, in the form (withδ the Dirac distribution)
+k(x,y) =δ (λx−y).
+7.1 Archimedean trace formula
+There is a very important parallel between the Weil quadratic form and the trace formula, on one
+hand, and the world of information theory. The starting point of this parallel is to rewrite the
+archimedean case of the trace formula of [17] by involving now two independent parameters which
+play the role of the time limitation and frequency limitation in the approach of Shannon, Slepian
+and their collaborators concerning the transmission of information. One works in the Hilbert space
+L2(R) evof even square integrable functions. The scaling action ofR∗+is defined as
+(ϑλξ)(v):=λ−1/2ξ
+λ−1v
+,ϑ(f) =Z
+f(λ)ϑ λd∗λ,∀ξ∈L2(R) ev
+The parameterTwhich gives the limitation in time to the interval[−T,T]defines the orthogonal
+projectionP Tand the parameterWwhich gives the limitation in frequency to the interval[−W,W]
+defines the projection bPW. One can write the archimedean case of the trace formula of [17] as
+follows, whereW ∞:=−W Rwas defined in (10):
+30
+=== PAGE 31 ===
+W∞(f) =log(TW)f(1) +Trace
+ϑ(f)
+1−P T−bPW
+(19)
+We view this formula as a bridge between the explicit formulas and the world of information theory
+where the projectionsP TandbPWplay a central role. It will be extended below in §7.4 to incorporate
+the contribution of the primes to the explicit formulas.
+7.2 Archimedean Weil positivity
+The key ingredient is the semilocal trace formula, which in our paper was used in the simple case
+when no primes are involved. What we found is that not only Weil’s positivity holds in that case,
+as explained in §4.1, but the main source of positivity is due to the Sonin space, first introduced in
+the context of RH by Burnol [9–11]. The Sonin spaceS λis the space of square integrable functions
+which vanish identically in the interval[−λ,λ]as well as their Fourier transform. It is by construc-
+tion the orthogonal of the ranges of the projectionsP λandcPλ. We denote bySthe orthogonal
+projection inL2(R) evto the Sonin spaceS 1(forλ=1). One then has [24],
+Theorem 7.1.Let g∈C∞
+c 
+R∗+
+have support in the intervalh
+2−1/2, 21/2i
+and Fourier transform vanish-
+ing ati
+2and 0 . Then the following inequality holds
+W∞(g∗g∗)≥Tr(ϑ(g)Sϑ(g)∗)
+7.3 The semilocal adele class space
+Underlying the semilocal trace formula discussed in §7.4, are the semilocal adele class spaces. These
+geometric spacesY Sare associated with a finite setSof places ofQcontaining the infinite place. By
+constructionY Sis the quotient
+YS:=A S/ΓS,A S=∏
+v∈SQv (20)
+of the adelic space product of the local fields completions of the global fieldQat the placesv∈S.
+The groupΓ Sis the subgroup ofQ×defined by
+ΓS:={±pn1
+1· · ·pnk
+k:pj∈S\ {∞},n j∈Z} ⊂Q×(21)
+The ringA ScontainsQas a subring using the diagonal embedding and this induces the action
+ofΓ SonA Sby multiplication. The semilocal adele class spaces are best encoded by the noncom-
+mutative algebrasS(A S)⋊Γ Scross products of the Bruhat-Schwartz algebrasS(A S)of functions
+on semilocal adeles, by the multiplicative groupsΓ S. These noncommutative algebras constitute a
+sheaf of algebras over SpecZ. The groupΓ Sis properly understood as sectionsZ×
+Sof the sheafG m
+on the open set complement ofSin SpecZ. One shows that the semilocal Bruhat-Schwartz alge-
+braS(A S)form a sheafOof commutative algebras over SpecZ. One then obtains the following
+result which establishes the compatibility of the noncommutative geometric constructions with the
+algebraic geometry of SpecZ.
+Theorem 7.2.1. The algebraic cross productO⋊G mdefines a sheaf of algebras onSpecZsuch that
+for every finite set of places S∋∞
+(O⋊G m)(Sc) =S(A S)⋊Z×
+S
+2. The stalk ofO⋊G mat the generic point is the global cross productS(A Q)⋊Q×.
+3. The global sections ofO⋊G mform the cross productS(R)⋊{±1}.
+The function spaces involved in the semilocal trace formula of §7.4 are best understood conceptu-
+ally as the Hochschild homology of the semilocal algebras.
+31
+=== PAGE 32 ===
+7.4 The semilocal trace formula
+The remaining difficulty in proving that the eigenvectorsθ xconverge to the functionk=E(h)of
+Fact 6.2 is to effectively compareθ xwithk λforλ=√x. The numerical evidence was shown in [25]
+where the comparison was extended to the eigenvectors ofQW λcorresponding to the first minus-
+cule eigenvalues, using the Gram-Schmidt orthogonalisation of vectors of the formE(ψ)where the
+ψare constructed using the next prolate wave functions.
+As a step towards a conceptual justification of this numerical fact one has the semilocal trace for-
+mula of [17]. It provides a trace formula representation of the Weil quadratic formQW λwhich
+is perfectly analogous to (19), but now gives the contribution of the primesp∈Sto the explicit
+formula. It takes the form
+−∑
+v∈SWv(f) =log(TW)f(1) +Trace
+ϑ(f)
+1−PS
+T−bPS
+W
+(22)
+where the projectionsPS
+TandbPS
+Ware defined as in the archimedean case using the module11.
+7.5 The infrared and ultraviolet regimes
+In the framework of noncommutative geometry, the encoding of a geometric space by a spectral
+triple(A,H,D)reveals information through two complementary spectral regimes of the Dirac
+operator D:
+• The ultraviolet (UV) regime corresponds to the high-energy part of the spectrum, i.e., the behavior
+of the eigenvalues ofDat infinity. This regime captures the infinitesimal structure of the space
+and determines its local geometric invariants, such as dimension, volume form, and curvature. In
+physics, this is akin to probing a system at very short distances or high momenta. Mathematically,
+the UV behavior governs the asymptotics of the heat kernel and enters crucially in the spectral
+action principle.
+• The infrared (IR) regime concerns the low-lying part of the spectrum of D, particularly the small
+eigenvalues. This part reflects the global topological and geometric features of the space, such as
+connectedness, volume growth, and index-theoretic quantities. In physics, IR behavior refers to
+low-energy phenomena and large-scale properties. It plays a central role in understanding long-
+range correlations and topological effects.
+In particular, such a dual perspective allows noncommutative geometry to access both local spec-
+tral invariants and global arithmetic or topological features through a unified operator-theoretic
+language.
+For the infrared regime we construct in [30] self-adjoint operatorsD(λ,N)
+logobtained as rank-one
+perturbations of the spectral triple associated with the scaling operator on the interval[λ−1,λ]and
+whose spectrum coincides with the stunning approximation of the low lying zeta zeros as described
+in the letter to Riemann. We further compute the regularized determinants det reg(D(λ,N)
+log−z)of
+these operators and discuss the analytic role they play in controlling and potentially proving the
+above result by showing that, suitably normalized, they converge towards the RiemannΞfunction.
+For the ultraviolet regime, we shall briefly describe in Section 7.6 the results of [27] which show
+that the prolate wave operator provides a self-adjoint operator that matches the ultraviolet behav-
+ior of the zeros. As a preparation one can use the explicit formulas to compute the heat expansion,
+assuming RH, of an operator whose spectrum is formed of the imaginary parts of non-trivial zeros
+ofζ(z):
+Theorem 7.3.[28] Assume RH and let D be the self-adjoint operator whose spectrum is formed of the
+imaginary parts of non-trivial zeros of the Riemann zeta function. One then has the asymptotic expansion
+for t→0
+Tr(exp(−tD2))∼log
+1
+t
+4√π√
+t−(log 4π+1
+2γ)
+2√π√
+t+2 exp(t/4) + ∑antn/2(23)
+32
+=== PAGE 33 ===
+where a 0=−1
+4and for k>0, using Bernouilli numbers B jand Euler numbers E(k),
+a2k−1=Γ(k)
+22k−1−1
+B2k
+2√π(2k)!,a2k=−1
+4Γ(k+1
+2)E(2k)√π(2k)!.
+The Euler numbers are defined as
+E(2n):=2n
+∑
+k=1
+−1
+2k2k
+∑
+j=0(−1)j2k
+j
+(k−j)2n(24)
+One has the asymptotic behavior whenk→∞
+E(2k)
+(2k)!∼(−1)k22k4
+ππ−2k
+which shows that the asymptotic expansion (23) is by no means convergent since its general coeffi-
+cienta ndiverges like a factorial.
+7.6 The prolate wave operator
+The prolate spheroidal wave functions play a key role as we saw above in relation with the Riemann
+zeta function. In all these applications they appear as eigenfunctions of the angle operator between
+two orthogonal projections in the Hilbert spaceL2(R)evof even square integrable function onR.
+These projections depend on a parameterλ>0, the projectionP λis given by the multiplication
+with the characteristic function of the interval[−λ,λ]⊂R. The projection cPλis its conjugate by
+the Fourier transformF eR. In all the above applications of prolate spheroidal wave functions the
+miraculous existence, discovered by the Bell Labs group of a differential operatorPW λcommuting
+with the angle operator, plays only an auxiliary role. In the present section we explain another
+"miracle" discovered in our joint work with H. Moscovici [27]: a careful study of the natural self-
+adjoint extension ofPW λextended toL2(R)shows that it still has discrete spectrum and that its
+negative eigenvalues reproduce the ultraviolet behavior of the squares of zeros of the Riemann zeta
+function. In a similar way the positive spectrum corresponds, in the ultraviolet regime, to the trivial
+zeros. This coincidence holds for two valuesλ=1 andλ=√
+2. The conceptual reason for this
+coincidence is the link between the operator of (15),i.e.
+(PW λψ)(q) =−∂((λ2−q2)∂)ψ(q) + (2πλq)2ψ(q)(25)
+and the square of the scaling operator /S:=x∂ x. As we saw above the compression of the scaling
+ϑ(f)to Sonin’s space was shown to be the root of Weil’s positivity at the archimedean place on
+test functions with support in the intervalh
+2−1/2, 21/2i
+, but I had shown in 1998 that the prolate
+wave operator admits a unique selfadjoint extension commuting with the orthogonal projections
+PλandcPλ. It is invariant under the Fourier transform and restricts to the Sonin space,i.e.the space
+of square integrable even functions which vanish identically as well as their Fourier transform on
+the interval[−λ,λ]. We discovered in [27], that this restriction of PW λto the Sonin space, which
+is a selfadjoint operator, provides a spectral realization of the ultraviolet regime of the zeros of
+the Riemann zeta function. More precisely the spectrum of this operator is formed by a discrete
+sequenceν kof negative numbers and the numbers 2√νkfor the choiceλ=√
+2 have the same
+ultraviolet behavior as theρ−1
+2where theρ’s are the zeros of zeta.
+In fact using the Darboux process we constructed a Dirac square rootDof PW λdepending on a
+deformation parameter, and whose spectrum is formed of the numbers 2√νkfor the choiceλ=√
+2,
+and has the same ultraviolet behavior as the zeros of the Riemann zeta function. Figure 2 shows
+the spectrum of the operatorDand the imaginary parts of zeros of zeta. This ultraviolet spectral
+33
+=== PAGE 34 ===
+similarity suggests that one has spectrally captured the contribution of the archimedean place to
+the mysterious zeta spectrum. The ambiguity in the choice of the Dirac square rootDis deeply
+related to the differential Galois theory of the prolate differential equation studied by J. P . Ramis
+and his collaborators [45, 89].
+20 40 60 80 10050100150200250
+Figure 2: The plot shows the proximity of then-th zero of zeta with then-th element of SpecD.
+8 Conclusion
+The Riemann Hypothesis has catalyzed the development of vast areas of mathematics, from classi-
+cal analysis to modern arithmetic geometry and mathematical physics. Each approach has enriched
+our understanding of the zeta function and its generalizations, even when falling short of a proof.
+In this survey, we have provided a comprehensive view of this mathematical landscape. We be-
+gan with a detailed examination of what is known about the Riemann zeta function and its zeros,
+then surveyed the remarkable variety of mathematical theories developed over 165 years in pur-
+suit of RH—from classical analytic methods and the theory of L-functions to modern approaches
+via random matrix theory, operator theory, and arithmetic geometry. We explored equivalent for-
+mulations of the hypothesis, each offering its own perspective on why this problem has proven so
+resistant to solution. While this comprehensive survey demonstrates the richness of mathematical
+ideas generated by RH, it also reveals how even the most sophisticated modern approaches have
+yet to crack this 165-year-old puzzle.
+Against this backdrop of accumulated knowledge, the second part of this paper offers something
+different-a return to Riemann’s original viewpoint with fresh eyes. Our discovery of a large class
+of functions directly related to the Weil quadratic form and with zeros provably on the critical line,
+combined with the extraordinary numerical evidence linking truncated Euler products to the actual
+zeros of zeta, suggests that Riemann’s original insights may contain more power than previously
+realized. The accuracy achieved using only primes less than 13—with errors as small as 2.6×
+10−55—cannot be dismissed as coincidence.
+The geometric framework presented here, utilizing the trace formula and spectral methods, offers
+a potential path forward: proving that zeros of appropriately constructed approximating functions
+converge to zeros of zeta. This synthesis of computational discovery, classical analysis, and modern
+geometric techniques represents a new approach that honors Riemann’s legacy while employing
+contemporary mathematical tools.
+34
+=== PAGE 35 ===
+Whether this path leads to a proof of RH remains to be seen. However, the journey has already
+revealed unexpected connections between the Weil quadratic form and the world of information
+theory, and between computational evidence and theoretical structure. As we wrote in our letter to
+Riemann, sometimes the most profound truths are hidden in the simplest observations.
+For comprehensive surveys of the Riemann Hypothesis and its many facets, see [6,37,39,44,63,86].
+The present work, to be continued in collaboration with C. Consani and H. Moscovici, offers a new
+chapter in this ongoing story.
+Notes
+1The Wiener-Ikehara theorem states that ifA(x)is a non-negative, monotonically increasing function and
+f(s) =Z∞
+0A(x)e−xsdx
+converges for Re(s)>1, and iff(s)−c/(s−1)has a continuous extension to Re(s)≥1 for some constantc≥0, then
+lim
+x→∞e−xA(x) =c.
+This result provided exactly the framework needed to convert information about the zeta function’s non-vanishing on
+Re(s) =1 into precise asymptotic statements about prime-counting functions. The application to the Prime Number The-
+orem involves expressing the logarithmic derivative of the zeta function as a Mellin transform of the Chebyshev function
+ψ(x) = ∑pk≤xlogp i.e.the equality−ζ′(s)/ζ(s) =sR∞
+1ψ(x)x−(s+1)dx. The non-vanishing ofζ(s)on Re(s) =1, combined
+with the known behavior ofζ(s)ats=1, ensures thatζ′(s)/ζ(s) +1/(s−1)has the required analytic properties for apply-
+ing the Wiener-Ikehara theorem. The theorem then directly implies thatψ(x)∼x, from which the Prime Number Theorem
+follows through elementary arguments
+2Selberg’s mollifier was of the form
+∑
+n≤ξαn
+1−logn
+logξ
+ns
+where theα nare the Dirichlet series coefficients of 1/p
+ζ(s)withα 1=1. He needed an average of|ζ(1/2+it)|2times the
+fourth power of this mollifier.
+3For a meromorphic functionfin the complex plane, the Nevanlinna characteristic is defined by
+T(r,f) =m(r,f) +N(r,f),r>0,
+where
+m(r,f) =1
+2πZ2π
+0log+f
+reiθdθ
+is the proximity function, and
+N(r,f) =Zr
+0n(t,f)−n(0,f)
+tdt+n(0,f)logr
+is the integrated counting function of poles, withn(t,f)denoting the number of poles off(with multiplicity) in|z| ≤t. For
+an entire function,N(r,f) =0 and henceT(r,f) =m(r,f).
+In the case of the Riemann zeta functionζ(s), which is meromorphic inCwith a single pole ats=1, one can define
+T(r,ζ)in the same way. A classical result of Borchsenius and Jessen (1948) shows that
+T(r,ζ)∼logr
+2πZπ
+−πlog+ζ
+reiθdθ(r→∞),
+and, more precisely, they obtained the asymptotic
+T(r,ζ)∼1
+πrlograsr→∞.
+Thus the Nevanlinna characteristic ofζ(s)grows essentially likerlogr, which is of the same order as the growth of
+logM(r,ζ), whereM(r,ζ) =max|s|=r|ζ(s)|.
+4The theorem states that for fixedσ>1/2, the values
+1
+TZT
+0f(logζ(σ+it))dt
+converge asT→∞for continuous bounded functionsf:C→CThe limiting distributionµ σis a probability measure on
+Csuch that:
+- It has no atoms (continuous distribution)
+35
+=== PAGE 36 ===
+- Its support is the whole complex plane when 1/2<σ<1.
+Moreover in spite of the ambiguity in defining logζ(σ+it)in the presence of zeros of zeta, the Borchsenius-Jessen theorem
+does not assume the Riemann Hypothesis.
+5Besides the Hahn-Banach theorem one uses the following Lemma (see [70] Lemma 1.15) : Letx 1, . . . ,x n∈Hand let
+b1, . . . ,b nbe complex numbers withbj⩽1,j=1, . . . ,n. Then there exist complex numbersa 1, . . . ,a nwithaj=1,j=
+1, . . . ,n, such thatn
+∑
+j=1ajxj−n
+∑
+j=1bjxj2
+⩽4n
+∑
+j=1xj2
+6It is of the form
+2
+∑
+0(−1)jdimHj(X,O(D)) =1
+2D.(D−K) +χ(X)(26)
+whereDis a divisor,O(D)its sheaf of sections,χ(X)is the arithmetic genus
+7It is not clear if there is a hidden convention in this book, but the following formula written in section 1.15 "The term
+involving the rootsρ"
+Z
+C+tβ−1
+logtdt=Zxβ
+0du
+logu
+(with the comment "where the second integral is over a path which passes above the singularity atu=1") equates two
+terms which cannot be equal since the integral on the left takes different values when one replacesβbyβ+2πi/log(x)
+whilexβdoes not change. This implies that Riemann’s formula should be rewritten using instead the function
+Ei(z) =Zz
+−∞et
+tdt
+which has a branch cut discontinuity in the complexzplane running from−∞to 0. The correct form of (11) is
+f(x) =Li(x)− ∑
+ℑ(ρ)>0(Ei(ρlogx) +Ei( ρlogx) )+Z∞
+x1
+t2−1dt
+tlogt−log 2 (27)
+where the sum is over the zeros of zeta with positive imaginary part.
+8More precisely one has
+h=√
+3
+4 23/4h4−3
+217/4h0,∥h j∥=1,∥h∥=√
+33
+217/4. (28)
+9The notion of angle between two closed subspaces of a Hilbert space — or equivalently, between two orthogonal projec-
+tionsPandQ— was studied by J. Dixmier in:Position relative de deux variétés linéaires fermées dans un espace de Hilbert, Revue
+Sci.86(1948), 387–399. The key idea is that a pair(P,Q)corresponds to a unitary representation of the infinite dihedral
+group. Its irreducible representations are classified by an angleα, which in the real plane represents the angle between two
+real lines. The relationPcos2α=PQPdetermines the angle operator on each irreducible component.
+10This fact is verified in [25], where we compare the eigenvectors of the Weil quadratic formQW λassociated to its smallest
+eigenvalues with the orthogonalisation of the prolate vectors obtained using the technique outlined above, from the prolate
+spheroidal wave functions.
+11The module extends to a multiplicative map| • | Sfrom the ringA S=∏v∈SQvtoR +, and by construction this map
+passes to the quotient as a map Mod S:YS=A S/Γ→R +.
+Mod S(u):=|(u v)v∈S|S=∏|u|v∈R + (29)
+. The idele and idele class groups
+GL 1(AS) =∏
+p∈SGL 1(Qp),C S=GL 1(AS)/Γ(30)
+act naturally by multiplication on the quotientY Sand the orbit of 1∈A Sgives an embeddingC S→Y S. The complement of
+CSinY Sis of measure zero for the product of the Haar measures of the additive groups of the local fields (which is preserved
+by the action of the countable groupΓ). Using the Radon-Nikodym derivative of the Haar measures of the multiplicative
+groups with respect to the Haar measure of the additive groups, one obtains a unitary identification
+wS:L2(YS)→L2(CS)(31)
+(see [18] Proposition 2.30). We also recall (see [18, Eqs. (2.223) and (2.239)] thatC Sis a modulated locally compact group
+with module
+Mod S(λ) =|λ| S:=∏
+p∈S|λp|,∀λ= (λ p)∈C S (32)
+which is (non-canonically) isomorphic toR∗+×K S, whereK Sis the kernel of Mod S. The trace formula in the form of (22)
+is the specialization of the general trace formula of [17] to theK Sinvariant part.
+Acknowledgements
+I would like to thank Jacques Dixmier and the first referee for very useful comments.
+36
+=== PAGE 37 ===
+References
+[1] M. Artin, A. Grothendieck, and J. L. Verdier,Théorie des topos et cohomologie étale des schémas
+(SGA 4), Lecture Notes in Math., Vols. 269, 270, 305, Springer, 1972–1973.
+[2] C. Bays and R. H. Hudson,A new bound for the smallest x withπ(x)>Li(x), Math. Comp. 69
+(2000), no. 231, 1285–1296.
+[3] M. V . Berry and J. P . Keating,The Riemann zeros and eigenvalue asymptotics, SIAM Review 41
+(1999), no. 2, 236–266.
+[4] M. V . Berry and J. P . Keating,H=xp and the Riemann zeros, in:Supersymmetry and Trace
+Formulae: Chaos and Disorder, Springer, 1999, 355–367.
+[5] R. P . Boas Jr.,Entire Functions, Academic Press, 1954.
+[6] E. Bombieri,The Riemann Hypothesis, in:The Millennium Prize Problems, J. Carlson, A. Jaffe, and
+A. Wiles (eds.), Clay Math. Inst./AMS, 2006, 107–124.
+[7] V . Borchsenius and B. Jessen,Mean motion and values of the Riemann zeta function, Acta Math. 80
+(1948), 97–166.
+[8] J.B. Bost, A. Connes,Hecke algebras, Type III factors and phase transitions with spontaneous symme-
+try breaking in number theory, Selecta Math. (New Series) Vol.1 (1995) no.3, 411–457.
+[9] J.-F. Burnol,Sur certains espaces de Hilbert de fonctions entières, liés à la transformation de Fourier et
+aux fonctions L de Dirichlet et de Riemann, C. R. Acad. Sci. Paris Sér. I333(2001), 201–206.
+[10] J.-F. Burnol,Sur les espaces de Sonine associés par de Branges à la transformation de Fourier, C. R.
+Acad. Sci. Paris Sér. I335(2002), 689–692.
+[11] J.-F. Burnol,Two complete and minimal systems associated with the zeros of the Riemann zeta function,
+J. Théor. Nombres Bordeaux 16 (2004), no. 1, 65–94.
+[12] H. M. Bui, J. B. Conrey, and M. P . Young,More than 41% of the zeros of the zeta function are on the
+critical line, Acta Arith. 150 (2011), no. 1, 35–64.
+[13] C. Bruce, T. Takeishi,On the C∗-algebra associated with the full adele ring of a number field. J.
+Noncommut. Geom. 19 (2025), no. 2, 383–399.
+[14] P . L. Chebyshev,Mémoire sur les nombres premiers, J. Mathématiques Pures Appl., 1re série,
+tome 17 (1852), 366–390.
+[15] Y. Chao and R. Plymen,A new bound for the smallest x withπ(x)>Li(x), Int. J. Number Theory
+6 (2010), 681–690.
+[16] A. Connes,Noncommutative Geometry, Academic Press, 1994.
+[17] A. Connes,Trace formula in noncommutative geometry and the zeros of the Riemann zeta function,
+Selecta Math. (N.S.) 5 (1999), no. 1, 29–106.
+[18] A. Connes and M. Marcolli,Noncommutative Geometry, Quantum Fields, and Motives, Collo-
+quium Publications, Vol. 55, AMS, 2008.
+[19] A. Connes and C. Consani,Schemes overF 1and zeta functions, Compos. Math. 146 (2010), no. 6,
+1383–1415.
+[20] A. Connes,An essay on the Riemann Hypothesis. InOpen problems in mathematics, Springer (2016),
+volume edited by Michael Rassias and John Nash.
+[21] A. Connes and C. Consani,The Scaling Hamiltonian, J. Operator Theory 85 (2019), 257–276.
+37
+=== PAGE 38 ===
+[22] A. Connes and C. Consani,On Absolute Algebraic Geometry, the affine case, Adv. Math. 390 (2021),
+Paper no. 107909, 44 pp.
+[23] A. Connes and C. Consani,Quasi-inner functions and local factors, J. Number Theory 226 (2021),
+139–167.
+[24] A. Connes and C. Consani,Weil positivity and trace formula, the archimedean place, Selecta Math.
+(N.S.) 27 (2021), no. 4, Paper no. 77, 70 pp.
+[25] A. Connes and C. Consani,Spectral triples andζ-cycles, Enseign. Math. 69 (2023), no. 1–2, 93–
+148.
+[26] A. Connes and C. Consani,Knots, primes and class field theory, arXiv:2501.06560, to appear in
+Regulators V proceedings, AMS.
+[27] A. Connes, H. Moscovici,The UV prolate spectrum matches the zeros of zeta. Proc. Natl. Acad. Sci.
+USA119(2022), no. 22.
+[28] A. Connes,Heat expansion and zeta. Ann. Funct. Anal. 15 (2024), no. 3, Paper No. 59, 13 pp.
+[29] A. Connes, C. Consani, and H. Moscovici,Zeta zeros and prolate wave operators: semilocal adelic
+operators, Ann. Funct. Anal. 15 (2024), no. 4, Paper no. 87, 38 pp.
+[30] A. Connes, C. Consani, and H. Moscovici,Zeta Spectral Triples. To appear in Proceedings of
+the CIRM conference, Applications of NonCommutative Geometry to Gauge Theories, Field
+Theories, and Quantum Space-Time, 7 –11 April 2025.
+[31] A. Connes, C. Consani, and H. Moscovici,Riemann Zeros via Weil Forms: From Prolate Functions
+to Cohomology, in preparation.
+[32] A. Connes and W. van Suijlekom,Quadratic Forms, Real Zeros and Echoes of the Spectral Action,
+Commun. Math. Phys. (2025) 406:312, volume dedicated to H. Araki.
+[33] J. B. Conrey, A. Ghosh,On mean values of the zeta function, Mathematika 31 (1984), no. 1, 159–
+161.
+[34] J. B. Conrey,More than two fifths of the zeros of the Riemann zeta function are on the critical line, J.
+Reine Angew. Math. 399 (1989), 1–26.
+[35] J. B. Conrey, A. Ghosh,A conjecture for the sixth power moment of the Riemann zeta-function,
+Internat. Math. Res. Notices 1998, no. 15, 775–780.
+[36] J. B. Conrey, S.Gonek,High moments of the Riemann zeta-function. Duke Math. J. 107 (2001), no.
+3, 577–604.
+[37] J. B. Conrey,The Riemann Hypothesis, Notices Amer. Math. Soc. 50 (2003), no. 3, 341–353.
+[38] J. B. Conrey and N. C. Snaith,Applications of the L-functions ratios conjectures, Proc. London
+Math. Soc. (3) 94 (2007), no. 3, 594–646.
+[39] J. B. Conrey,Riemann’s hypothesis. The legacy of Bernhard Riemann after one hundred and fifty years.
+Vol. I, 107-190, Adv. Lect. Math. (ALM), 35.1, Int. Press, Somerville, MA, 2016.
+[40] P . Deligne,La conjecture de Weil. I, Publ. Math. Inst. Hautes Études Sci.43(1974), 273–307.
+[41] P . Deligne,La conjecture de Weil. II, Publ. Math. Inst. Hautes Études Sci.52(1980), 137–252.
+[42] E. Dueñez,Random matrix ensembles associated with compact symmetric spaces, Commun. Math.
+Phys.244(2004), 29–61.
+[43] F. J. Dyson,Statistical theory of the energy levels of complex systems. I–III, J. Math. Phys. 3 (1962),
+140–175.
+38
+=== PAGE 39 ===
+[44] H. M. Edwards,Riemann’s Zeta Function, Dover Publications, 2001 (orig. Academic Press,
+1974).
+[45] F. Fauvet, J.-P . Ramis, F. Richard-Jung and J. Thomann,Stokes phenomenon for the prolate
+spheroidal wave equation. Appl. Numer. Math. 60 (2010), no. 12, 1309–1319.
+[46] S. Feng,Zeros of the Riemann zeta function on the critical line. J. Number Theory 132, 511-542
+(2012).
+[47] W. H. J. Fuchs,On the eigenvalues of an integral equation arising in the theory of band-limited signals,
+J. Math. Anal. Appl. 9 (1964), 317–330.
+[48] C. F. Gauss,Disquisitiones Arithmeticae, 1801.
+[49] A. A. Goldberg and I. V . Ostrovskii,Value Distribution of Meromorphic Functions, Translations
+of Mathematical Monographs, Vol. 236, AMS, 2008.
+[50] S. M. Gonek, C. P . Hughes, and J. P . Keating,A hybrid Euler–Hadamard product for the Riemann
+zeta function, Duke Math. J. 136 (2007), no. 3, 507–549.
+[51] C. Gordon and P . Sarnak,Zeros of zeta functions of curves over finite fields, Bull. Amer. Math. Soc.
+(N.S.)23(1990), 147–182.
+[52] A. P . Guinand,A summation formula in the theory of prime numbers, Proc. London Math. Soc. (2)
+50 (1949), 107–119.
+[53] L. Guth and J. Maynard,New large value estimates for Dirichlet polynomials, arXiv:2405.20552.
+[54] J. Hadamard,Sur la distribution des zéros de la fonctionζ(s)et ses conséquences arithmétiques, Bull.
+Soc. Math. France 24 (1896), 199–220.
+[55] J. Hadamard,Essai sur l’étude des fonctions données par leur développement de Taylor, J. Math.
+Pures Appl. (4) 8 (1892), 101–186.
+[56] G. H. Hardy,Sur les zéros de la fonctionζ(s)de Riemann, C. R. Acad. Sci. Paris 158 (1914), 1012–
+1014.
+[57] G. H. Hardy and J. E. Littlewood,Contributions to the theory of the Riemann Zeta-Function and
+the theory of the distribution of primes, Acta Math. 41 (1916), 119–196.
+[58] D. R. Heath-Brown,Zero-free regions for Dirichlet L-functions, and the least prime in an arithmetic
+progression, Proc. London Math. Soc. (3) 64 (1992), no. 2, 265–338.
+[59] D. A. Hejhal,The Selberg Trace Formula forPSL(2,R), Lecture Notes in Math., Vol. 548, Springer,
+1976.
+[60] A. E. Ingham,The Distribution of Prime Numbers, Cambridge University Press, 1932.
+[61] A. E. Ingham,On the estimation of N(σ,T), Quart. J. Math. Oxford 11 (1940), 183–188.
+[62] A. E. Ingham,Mean-value theorems in the theory of the Riemann zeta-function, Proc. London Math.
+Soc. 27 (1926), 273–300.
+[63] A. Ivi´ c,The Riemann Zeta-Function: Theory and Applications, Dover Publications, 2003.
+[64] N. M. Katz and P . Sarnak,Random Matrices, Frobenius Eigenvalues, and Monodromy, American
+Mathematical Society Colloquium Publications, Vol. 45, American Mathematical Society, Prov-
+idence, RI, 1999.
+[65] N. M. Katz and P . Sarnak,Zeros of zeta functions and symmetry, Bull. Amer. Math. Soc. (N.S.)36
+(1999), 1–26.
+39
+=== PAGE 40 ===
+[66] J. P . Keating and N. C. Snaith,Random matrix theory andζ(1/2+it), Commun. Math. Phys. 214
+(2000), no. 1, 57–89.
+[67] J. P . Keating and N. C. Snaith,Random matrix theory and L-functions at s=1/2, Commun. Math.
+Phys. 214 (2000), 91–110.
+[68] I. Laine,Nevanlinna Theory and Complex Differential Equations, Walter de Gruyter, 1993.
+[69] C. L. Siegel,Über die Anzahl der Klassen ganzer quadratischer Formen mit gegebenen Diskriminan-
+ten, Math. Ann. 106 (1932), 538–586.
+[70] A. Laurinˇ cikas,Limit Theorems for the Riemann Zeta Function, Mathematics and its Applications,
+Vol. 352, Kluwer, 1996.
+[71] R. Lehman,On the differenceπ(x)−Li(x), Acta Arith. 11 (1966), 397–410.
+[72] B. Ya. Levin,Distribution of Zeros of Entire Functions, Translations of Mathematical Monographs,
+Vol. 5, AMS, 1964.
+[73] N. Levinson,More than one third of the zeros of Riemann’s zeta-function are onσ=1/2, Advances
+in Math. 13 (1974), 383–436.
+[74] X.-J. Li,The positivity of a sequence of numbers and the Riemann hypothesis. J. Number Theory 65
+(1997), no. 2, 325–333.
+[75] J. E. Littlewood,Sur la distribution des nombres premiers, C. R. Acad. Sci. Paris 158 (1914), 1869–
+1872.
+[76] J. Lurie,Higher Topos Theory, Annals of Math. Studies, Vol. 170, Princeton Univ. Press, 2009.
+[77] B. Mazur,Notes on étale cohomology of number fields, Ann. Sci. École Norm. Sup. (4) 6 (1973),
+521–552.
+[78] R. Meyer,On a representation of the idele class group related to primes and zeros of L-functions. Duke
+Math. J. Vol.127 (2005), no.3, 519–595.
+[79] H. L. Montgomery,The zeros of the zeta function, Proc. Int. Congress Math. (Vancouver, 1974),
+Vol. 1, 379–381.
+[80] H. L. Montgomery,The pair correlation of zeros of the zeta function, in:Analytic Number Theory,
+Proc. Sympos. Pure Math., Vol. 24, AMS, 1973, 181–193.
+[81] H. L. Montgomery and R. C. Vaughan,Multiplicative Number Theory I: Classical Theory, Cam-
+bridge Studies in Advanced Mathematics, vol. 97, Cambridge University Press, Cambridge,
+2007.
+[82] R. Nevanlinna,Le théorème de Picard–Borel et la théorie des fonctions méromorphes, Gauthier-
+Villars, Paris, 1929.
+[83] R. Nevanlinna,Analytic Functions, Springer-Verlag, 1970.
+[84] A. M. Odlyzko,On the distribution of spacings between zeros of the zeta function, Math. Comp. 48
+(1987), no. 177, 273–308.
+[85] A. M. Odlyzko,The1020-th zero of the Riemann zeta function and 70 million of its neighbors,
+Preprint (1990); available athttps://www.dtc.umn.edu/~odlyzko.
+[86] S. J. Patterson,An Introduction to the Theory of the Riemann Zeta-Function, Cambridge Studies in
+Adv. Math., Vol. 14, Cambridge Univ. Press, 1988.
+[87] D. Platt, T. Trudgian,The Riemann hypothesis is true up to3·1012. Bull. Lond. Math. Soc. 53
+(2021), no. 3, 792–797.
+40
+=== PAGE 41 ===
+[88] K. Pratt, N. Robles, A. Zaharescu, D. Zeindler,More than five-twelfths of the zeros ofζare on the
+critical line. Res. Math. Sci. 7 (2020), no. 2, Paper No. 2, 74 pp.
+[89] J. P . Ramis, F. Richard-Jung, J. Thomann,New eigenfunctions for the negative part of the Connes-
+Moscovici prolate spectrum. C. R. Math. Acad. Sci. Paris 363 (2025), 1065–1081.
+[90] B. Riemann,Über die Anzahl der Primzahlen unter einer gegebenen Größe, Monatsberichte der
+Königlich Preußischen Akademie der Wissenschaften zu Berlin (1859), 671–680.
+[91] B. Riemann,Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe(On the
+Representability of a Function by a Trigonometric Series) Abhandlungen der Königlichen
+Gesellschaft der Wissenschaften zu Göttingen, vol. 13 (1867), pp. 87–132.
+[92] W. Rudin,Real and Complex Analysis, 3rd ed., McGraw-Hill, 1987.
+[93] Y. Saouter and P . Demichel,A sharp region whereπ(x)−Li(x)is positive, Math. Comp. 79 (2010),
+2395–2405.
+[94] Y. Saouter, T. Trudgian, and P . Demichel,A still sharper region whereπ(x)−Li(x)is positive,
+Math. Comp. 84 (2015), no. 295, 2433–2446.
+[95] K. Schmüdgen,Unbounded Self-Adjoint Operators on Hilbert Space, Graduate Texts in Math.,
+Vol. 265, Springer, 2012.
+[96] A. Selberg,Contributions to the theory of the Riemann zeta-function, Skr. Norske Vid. Akad. Oslo
+I. (1942), no. 10, 1–59.
+[97] A. Selberg,An elementary proof of the prime-number theorem, Ann. of Math. (2) 50 (1949), 305–313.
+[98] A. Selberg,Harmonic analysis and discontinuous groups in weakly symmetric Riemannian spaces
+with applications to Dirichlet series, J. Indian Math. Soc. 20 (1956), 47–87.
+[99] B. Simon,Lower semi-continuity of positive quadratic forms, Proc. Roy. Soc. Edinburgh 79 (1977),
+267–273.
+[100] S. Skewes,On the differenceπ(x)−Li(x), J. London Math. Soc. 8 (1933), 277–283.
+[101] D. Slepian and H. Pollack,Prolate spheroidal wave functions, Fourier analysis and uncertainty,
+Bell Syst. Tech. J. (1961), 43–63.
+[102] D. Slepian,Some asymptotic expansions for prolate spheroidal wave functions, J. Math. Phys. 44
+(1965), 99–140.
+[103] D. Slepian,Some comments on Fourier analysis, uncertainty and modeling, SIAM Review 23
+(1983), 379–393.
+[104] N. Snaith,Riemann zeros and random matrix theory, Milan J. Math. Vol. 78 (2010) 135–152.
+[105] H. J. J. te Riele,On the sign of the differenceπ(x)−Li(x), Math. Comp. 48 (1987), 323–328.
+[106] C. J. de la Vallée Poussin,Recherches analytiques sur la théorie des nombres premiers, Ann. Soc.
+Sci. Bruxelles 20 (1896), 183–256.
+[107] H. von Mangoldt,Zu Riemann’s Abhandlung “Über die Anzahl der Primzahlen unter einer gegebe-
+nen Größe”, J. Reine Angew. Math. 114 (1895), 255–305.
+[108] S. M. Voronin,Theorem on the universality of the Riemann zeta function, Izv. Akad. Nauk SSSR
+Ser. Mat. 39 (1975), 475–486; Math. USSR Izv. 9 (1975), 443–445.
+[109] A. Weil,Sur les formules explicites de la théorie des nombres premiers, Comm. Sém. Math. Univ.
+Lund, 1952, 252–265.
+41
+=== PAGE 42 ===
+[110] A. Weil,Basic Number Theory, Die Grundlehren der math. Wissenschaften, Band 144, Springer,
+1967; 2nd ed. 1973; corr. reprint 1995.
+[111] H. Yoshida,On Hermitian forms attached to zeta functions, in:Zeta Functions in Geometry(Tokyo,
+1990), Adv. Stud. Pure Math.21, Kinokuniya, Tokyo, 1992, 281–325.
+ALAINCONNES
+HES and College de France
+Paris, 75005, France
+E-mail address:alain@connes.org
+42

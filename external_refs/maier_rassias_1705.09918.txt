@@ -1,0 +1,359 @@
+=== PAGE 1 ===
+arXiv:1705.09918v1  [math.CA]  28 May 2017A CRITERION RELATED TO THE RIEMANN HYPOTHESIS
+HELMUT MAIER AND MICHAEL TH. RASSIAS
+Abstract. A crucial role in the Nyman-Beurling-B´ aez-Duarte approac h to
+the Riemann Hypothesis is played by the distance
+d2
+N:= inf
+AN1
+2π/integraldisplay∞
+−∞/vextendsingle/vextendsingle/vextendsingle/vextendsingle1−ζAN/parenleftbigg1
+2+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle2dt
+1
+4+t2,
+where the inﬁmum is over all Dirichlet polynomials
+AN(s) =N/summationdisplay
+n=1an
+ns
+of length N.
+In this paper we investigate d2
+Nunder the assumption that the Riemann zeta
+function has four non-trivial zeros oﬀ the critical line. Th us we obtain a crite-
+rion for the non validity of the Riemann Hypothesis.
+Key words: Riemann hypothesis, Riemann zeta function, Nyman-Beurlin g-
+B´ aez-Duarte criterion.
+2000 Mathematics Subject Classiﬁcation: 30C15, 11M26
+1.Introduction
+The Nyman-Beurling-B´ aez-Duarte approach to the Riemann hypo thesis asserts
+that the Riemann hypothesis is true, if and only if
+lim
+N→∞d2
+N= 0,
+where
+(1.1) d2
+N:= inf
+AN1
+2π/integraldisplay∞
+−∞/vextendsingle/vextendsingle/vextendsingle/vextendsingle1−ζAN/parenleftbigg1
+2+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle2dt
+1
+4+t2
+and the inﬁmum is over all Dirichlet polynomials
+AN(s) =N/summationdisplay
+n=1an
+ns
+of length N(see [3]).
+Burnol [4], improving on work of B´ aez-Duarte, Balazard, Landrea u and Saias [1],
+[2] showed that
+liminf
+N→∞d2
+NlogN≥/summationdisplay
+Re(ρ)=1
+2m(ρ)2
+|ρ|2,
+Date: October 17, 2018.
+1
+=== PAGE 2 ===
+wherem(ρ) denotes the multiplicity of the zero ρ.
+This lower bound is believed to be optimal and one expects that
+(*) d2
+N∼1
+logN/summationdisplay
+Re(ρ)=1
+2m(ρ)2
+|ρ|2.
+Under the Riemann hypothesis one has
+(1.2)/summationdisplay
+Re(ρ)=1
+2m(ρ)
+|ρ|2= 2+γ−log4π,
+whereγis the Euler-Mascheroni constant.
+S. Bettin, J. B. Conrey and D. W. Farmer [3] prove (*) under an add itional as-
+sumption and also identify the Dirichlet polynomials AN, for which the expected
+inﬁmum in (1.1) is assumed. They prove (Theorem 1 of [3]):
+Let
+VN(s) :=N/summationdisplay
+n=1/parenleftbigg
+1−logn
+logN/parenrightbiggµ(n)
+ns.
+If the Riemann hypothesis is true and if
+/summationdisplay
+|Im(ρ)|≤T1
+|ζ′(ρ)|2≪T3
+2−δ
+for some δ >0, then
+(1.3)1
+2π/integraldisplay∞
+−∞/vextendsingle/vextendsingle/vextendsingle/vextendsingle1−ζVN/parenleftbigg1
+2+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle2dt
+1
+4+t2∼2+γ−log4π
+logN.
+In this paper we investigate the expression (1.3) under an assumpt ion contrary to
+the Riemann hypothesis: There are exactly four nontrivial zeros o ﬀ the critical line.
+We observe that nontrivial zeros oﬀ the critical line always appear a s quadruplets.
+Indeed, if ζ(ρ) = 0 for ρ=σ+iγwith 1> σ >1
+2,γ >0, then from the functional
+equation
+(1.4) Λ( s) = Λ(1−s),
+where
+Λ(s) :=π−s/2Γ/parenleftBigs
+2/parenrightBig
+ζ(s)
+and the trivial relation ζ(¯s) =ζ(s), we obtain that
+ζ(σ+iγ) =ζ(1−σ+iγ) =ζ(σ−iγ) =ζ(1−σ−iγ) = 0.
+We prove the following:
+Theorem 1.1. Letσ0>1/2,γ0>0,ζ(σ0±iγ0) =ζ(1−σ0±iγ0) = 0and
+ζ(σ+iγ)/\egatio\slash= 0for all other σ+iγwithσ >1/2. Assume that
+/summationdisplay
+|Im(ρ)|≤T1
+|ζ′(ρ)|2≪T3
+2−δ(T→ ∞),
+for some δ >0. Then, there are constants A=A(σ0,γ0)andB=B(σ0,γ0)∈R,
+such that for all ǫ >0:
+1
+2π/integraldisplay∞
+−∞/vextendsingle/vextendsingle/vextendsingle/vextendsingle1−ζVN/parenleftbigg1
+2+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle2dt
+1
+4+t2
+2
+=== PAGE 3 ===
+=1
+log2N/parenleftbig
+AN2σ0−1cos(2γ0logN)+BN2σ0−1/parenrightbig/parenleftBig
+1+O(N1
+2−σ0+ǫ)/parenrightBig
+,
+for some ǫ >0.
+2.Preliminary Lemmas and Definitions
+Lemma 2.1. Letǫ >0be ﬁxed but arbitrarily small. Under the assumptions of
+Theorem 1.1 we have
+(2.1) ζ(σ+it)≪ |t|3ǫ(|t| → ∞),
+for
+1
+2−ǫ≤σ≤1
+2+ǫ.
+Proof.The estimate (2.1) is well known as the Lindel¨ of hypothesis, which is a
+consequence of the Riemann hypothesis. In [5], the Lindel¨ of hypo thesis is proven
+on the assumption of the Riemann hypothesis. This proof may be ada pted to the
+new situation by slight modiﬁcations.
+The function log ζ(s) is holomorphic in the domain
+G:=/braceleftbigg
+σ+it:σ >1
+2/bracerightbigg
+\/braceleftbigg/bracketleftbigg1
+2,1/bracketrightbigg
+∪/bracketleftbigg1
+2+iγ0,σ0+iγ0/bracketrightbigg
+∪/bracketleftbigg1
+2−iγ0,σ0−iγ0/bracketrightbigg/bracerightbigg
+.
+Let now1
+2< σ∗≤σ≤1. As in [5], let z=σ+it, but now |t|suﬃciently large.
+We apply the Borel-Carath´ eodory theorem to the function log ζ(z) and the circles
+with centre 2+ itand radius3
+2−1
+2δand3
+2−δ, (0< δ <1
+2).
+On the larger circle
+Re(logζ(z)) = log|ζ(z)|< Alogt
+for a ﬁxed positive constant A. Hence on the smaller circle
+|logζ(z)| ≤3−2δ
+1
+2δAlogt+3−3
+2δ
+1
+2δ|log|ζ(2+it)||< Aδ−1logt.
+We now apply Hadamard’s three circle theorem as in [5]. The proof the re can be
+taken over without change, to obtain
+(2.2) ζ(z) =O(tǫ),for every σ >1
+2,
+which is (14.2.5) of [5].
+By the functional equation (1.4) we obtain
+(2.3)/vextendsingle/vextendsingle/vextendsingle/vextendsingleζ/parenleftbigg1
+2−ǫ+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle=O/parenleftbig
+|t|3ǫ/parenrightbig
+.
+Theclaim(2.1)nowfollowsfrom(2.2),(2.3)andthetheoremofPhrag m´ en-Lindel¨ of.
+/square
+Deﬁnition 2.2. Forρa non-trivial zero of ζ(s)let
+RN(ρ,s) :=Resz=ρNz−s
+ζ(z)(z−s)2
+and
+Fs(z) :=πzs∞/summationdisplay
+n=1(−1)n(2π)2n+1z2n
+(2n)!ζ(2n+1)(2n+s)2
+3
+=== PAGE 4 ===
+Lemma 2.3. If0< Re(s)<1, then
+VN(s) =1
+ζ(s)/parenleftbigg
+1−1
+logNζ′
+ζ(s)/parenrightbigg
++1
+logN/summationdisplay
+ρRN(ρ,s)+1
+logNFs/parenleftbigg1
+N/parenrightbigg
+,
+where the sum is over all distinct non-trivial zeros of ζ(s).
+Proof.This is Lemma 2 of [3]. /square
+Lemma 2.4. Letǫ >0. Under the assumptions of Theorem 1.1 we have
+/summationdisplay
+ρ,Re(ρ)=1
+2RN(ρ,s)≪N∓ǫ|s|3
+4−δ
+2+ǫ.
+Proof.The proof is identical to the proof of Lemma 3 of [3]. There the summa tion
+condition Re(s) = 1/2 is not needed, since the Riemann hypothesis is assumed. /square
+Lemma 2.5.
+N±ǫ/summationdisplay
+ρ,|ρ|=1
+2RN(ρ,s)≪/summationdisplay
+|ρ−s|<|ρ|
+2
+Re(ρ)=1
+21
+|ζ′(ρ)||ρ−s|2+1.
+Proof.This is (5) of [3]. /square
+Deﬁnition 2.6. We set
+Σ(1)(N,s) :=1
+logN/summationdisplay
+ρ:Re(ρ)=1
+2RN(ρ,s)
+and
+Σ(2)(N,s) :=1
+logN/summationdisplay
+ρ∈{σ0±iγ0}RN(ρ,s)
+3.Proof of Theorem 1.1
+We closely follow the proof of Theorem 1 in [3]. We have
+1
+2π/integraldisplay∞
+−∞/vextendsingle/vextendsingle/vextendsingle/vextendsingle1−ζVN/parenleftbigg1
+2+it/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle2dt
+1
+4+t2=1
+2πi/integraldisplay
+(1
+2)(1−ζVN(s))(1−ζVN(1−s))ds
+s(1−s)
+=1
+2πi/integraldisplay
+(1
+2−ǫ)(1−ζVN(s))(1−ζVN(1−s))ds
+s(1−s)
+By Lemma 2.3 and Deﬁnition 2.6 this is
+1
+log2N1
+2πi/integraldisplay
+(1
+2−ǫ)/parenleftbiggζ′
+ζ2(s)−Σ(1)(N,s)−Σ(2)(N,s)−Fs/parenleftbigg1
+N/parenrightbigg/parenrightbigg
+×(3.1)
+/parenleftbiggζ′
+ζ2(1−s)−Σ(1)(N,1−s)−Σ(2)(N,1−s)−F1−s/parenleftbigg1
+N/parenrightbigg/parenrightbiggζ(s)ζ(1−s)
+s(1−s)ds.
+We now expand the product in (3.1) and separately estimate the pro ducts that
+do not contain terms Σ(2)and the products consisting of a term Σ(2)and another
+term.
+4
+=== PAGE 5 ===
+The asymptotic ﬁnally is obtained by asymptotically evaluating the pro ducts con-
+sisting only of factors Σ(2).
+We closely follow [3]. It follows from Lemmas 2.1, 2.3, 2.4 that
+1
+log2N1
+2πi/integraldisplay
+(1
+2−ǫ)/summationdisplay
+ρ1,ρ2RN(ρ1,s)RN(ρ2,1−s)ζ(s)ζ(1−s)
+s(1−s)ds
+≪1
+log2N/integraldisplay
+(1
+2−ǫ)/summationdisplay
+|ρ−s|<|ρ|
+21
+|ζ′(ρ)||ρ−s|2|ds|
+|s|5
+4+δ
+2−5ǫ+O/parenleftbigg1
+log2N/parenrightbigg
+.
+Now by Lemma 2.4 and the trivial estimate
+Fs/parenleftbigg1
+N/parenrightbigg
+=O(N−5/2),
+all the other terms in (3.1) not containing factors Σ(2)are trivially O(1/log2N)
+apart from
+−1
+log2N1
+2πi/integraldisplay
+(1
+2−ǫ)ζ′
+ζ(1−s)Σ(1)(N,s)ζ(s)ζ(1−s)
+s(1−s)ds= logN−1
+2ζ′′
+ζ′(ρ)+χ′
+χ(ρ)+1−2ρ
+|ρ|2
+=logN
+|ρ|2+O/parenleftbigg1
+|ρ|2−ǫ|ζ′(ρ)|+1
+|ρ|2/parenrightbigg
+,
+where we set
+χ(s) :=π−s/2Γ/parenleftBigs
+2/parenrightBig
+and use the bound
+ζ′′/parenleftbigg1
+2+it/parenrightbigg
+≪ |t|ǫ,
+which follows from Lemma 2.1 by the well-known estimate for the deriva tives of a
+holomorphic function. By moving the line of integration to Re(s) =1
+2+ǫ, we get
+that the contribution from the products not containing Σ(2)is
+1
+logN/summationdisplay
+ρ:Re(ρ)=1
+21
+|ρ|2+O/parenleftbigg1
+log2N/parenrightbigg
+.
+We now come to the products that contain the factor Σ(2)(N,s).
+They may be handled by adding the factor Nσ0−1
+2+ǫstemming from Nz−sin Def-
+inition 2.2.
+These estimates yield the error-term in Theorem 1.1. The main term ﬁ nally is ob-
+tained by evaluating the contribution with two factors Σ(2)and by observing that
+the integral in (1.3) is real.
+/square
+References
+[1] L. B´ aez-Duarte, M. Balazard, B. Landreau, E. Saias, Notes sur la fonction ζde Riemann.
+III(French) [Notes on the Riemann ζ-function. III], Adv. Math. 149(2000), no. 1, 130–144.
+5
+=== PAGE 6 ===
+[2] L. B´ aez-Duarte, M. Balazard, B. Landreau, E. Saias, ´Etude de l’autocorrelation multiplica-
+tive de la fonction ’partie fractionnaire’ , (French) [Study of the multiplicative autocor-
+relation of the fractional part function], Ramanujan J., 9( 2005), no. 1–2, 215–240; arxiv
+math.NT/0306251.
+[3] S. Bettin, J. B. Conrey, D. W. Farmer, An optimal choice of Dirichlet polynomials for the
+Nyman-Beurling criterion , (in memory of Prof. A. A. Karacuba), arXiv:1211.5191
+[4] J. F. Burnol, A lower bound in an approximation problem involving the zero s of the Riemann
+zeta function , Advances in Math., 170(2002), 56–70.
+[5] E. C. Titchmarsh, The Theory of the Riemann Zeta Function , Oxford University Press, 2nd
+edition, 1986.
+Department of Mathematics, University of Ulm, Helmholtzstras se 18, 89081 Ulm,
+Germany.
+E-mail address :helmut.maier@uni-ulm.de
+Institute of Mathematics, University of Zurich, CH-8057, Zur ich, Switzerland &
+Institute for Advanced Study, Program in Interdisciplinary Studies, 1 Einstein Dr,
+Princeton, NJ 08540, USA.
+E-mail address :michail.rassias@math.uzh.ch, michailrassias@math.pri nceton.edu
+6

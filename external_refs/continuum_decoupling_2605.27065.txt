@@ -1,0 +1,1536 @@
+=== PAGE 1 ===
+A CONTINUUM OF SMALL-CAP DECOUPLINGS AND
+EXPONENTIAL SUMS FOR THE MOMENT CURVE INR4
+JACOB GLIDEWELL
+Abstract. We use the high-low method and wavepacket pruning to prove new small-
+cap decoupling estimates for the moment curve in R4. As an application, we verify a
+conjecture of Demeter regarding the L12square-root cancellation of exponential sums
+associated with the moment curve in R4. This provides a continuum of square-root
+cancellation estimates that connects the Vinogradov MVT in R3with a result of
+Bourgain, related to improving the best known estimate for the Lindelöf hypothesis.
+1.Introduction
+We are motivated to attack the following conjecture of Demeter [5, Conjecture
+8.1] for the case of the moment curveΦ( t) = ( t, t2, t3, t4). The p= 12case is given
+in [5, Conjecture 1.1]. We use the notatione(x) =e2πixforx∈R.
+Conjecture 1.1.Let11 ≤p≤ 12. Assume a≥b≥ 0and a+b=p
+2−3. Let
+Ω = [0, N]×[0, N2]×[0, Na]×[0, Nb]. Then,
+(1)Z
+ΩX
+n∼Ne(x·Φn
+N
+)p
+dx⪅Np
+2|Ω|.
+Somespecialcasesofthisareknown. Notably, thecase( p, a, b ) = (12 ,3,0)corresponds
+to the Vinogradov Mean Value Theorem in R3( [10], [3]). Indeed, using periodicity
+and VMVT, we get the estimate for eachx 4∈[0,1],
+1
+N3Z
+[0,N3]3X
+n∼Ne(x·Φn
+N
+)12
+dx1dx2dx3⪅N6·N6.
+Integrating in x4gives(1)in this case. The case( p, a, b ) = (12 ,2,1)was shown by
+Bourgain [1]. In that paper, the following variant of (1)served as the main ingredient
+to his improvement on the Lindelöf hypothesis:
+(2)Z
+ΩX
+n∼Ne(x· ˜Φn
+N
+)12
+dx⪅N6|Ω|
+with ˜Φ(t) = (t, t2, t3/2, t1/2). In particular, Bourgain showed (2)for any curve ˜Φ(t) =
+(t, t2, ϕ3(t), ϕ4(t))satisfying some nondegeneracy and torsion conditions. In [5], Demeter
+conjectured a continuum of estimates connecting these two endpoints, and proved the
+related cases where p= 12and a∈[3
+2,2]. All of these results are part of a vast program
+in Fourier analysis, initiated in [6], called small-cap decouplings which have become
+useful for proving exponential sum estimates on spatial truncations of the torus. To
+1arXiv:2605.27065v1  [math.CA]  26 May 2026
+=== PAGE 2 ===
+2 JACOB GLIDEWELL
+the author’s knowledge, no prior estimates towards Conjecture 1.1 are known for the
+case whenp <12andb >0.
+Bourgain’s original approach in [1] relies on a geometric observation that a bilinear
+version of (2)reduces matters to quadratic exponential sums in the plane. To show this
+bilinear version, he iterates L6decouplings with a "magic" change of variables. One
+key feature of his argument uses that the domain[0 , N]forx4matches the period of x1.
+His change of variables miraculously exploits this fact to move "volume" from x4to
+x1. See [5, Section 3] for a discussion of this argument. The method in [5] generalizes
+Bourgain’s approach. By combining L6decoupling for the parabola with Gauss sum
+estimates, Demeter was able to prove the sharp estimates in the regime a∈[3
+2,2].
+However, in both versions of the argument, for the cases a >2, this mechanism becomes
+inefficient due to the loss of genuine 4-dimensional behavior at the global scale. A direct
+manifestation of this is that the domain in x4is now shorter than the period of x1.
+Rather than clever manipulations of existing decouplings, we will progress Conjecture
+1.1 by new small-cap decouplings. The new technology we use for this problem is the
+small-cap decoupling for the cone, developed by Guth and Maldague [7], [8].
+Letβ∈[1
+3,1
+2]andα∈(0, β]. Define
+M4(Rβ, R) =
+(ξ1, ξ2, ξ3, ξ4) :ξ 1∈[1
+2,1],|ξ 2−ξ2
+1| ≤R−2β,
+|ξ3−3ξ 1ξ2+ 2ξ3
+1| ≤R−1,|ξ4+ 4ξ 1ξ3−9ξ2
+2+ 4ξ4
+1| ≤R−1	
+.
+We define the small-caps γas the partition M4(Rβ, R)∩ {ℓR−β≤ξ1≤(ℓ+ 1)R−β}for
+each integer ℓ∈Rβ[1
+2,1]. We will show the following generalized square-root cancellation
+phenomenon. Given F:R4→C, we define Fγas the Fourier projection onto γ. For
+clarity, we call a S1×S 2×S 3×S 4box inR4regularif the side with length Siis parallel
+to thex i-axis.
+Theorem 1.2.For any F:R4→C Schwartz with Fourier Transform supported in
+M4(Rβ, R) =S
+γγand anyR×R×R×Rαregular boxΩ R, if∥F γ∥∞≤1, we have
+∥F∥p
+Lp(ΩR)⪅Rp
+2β|ΩR|,
+with
+p= 6 +2(α+ 1)
+β,
+forαandβin the range corresponding top≥11.
+We call this phenomenon "square-root cancellation" because, on average, Fis com-
+parable to Rβ/2. This is seen easily with the L2-moment: ∥F∥ L2(ΩR)≲Rβ/2|ΩR|1/2. We
+compare this to the triangle inequality, which gives
+|F(x)| ≤X
+γ|Fγ(x)|≲Rβ.
+When |F(x)| ∼Rβ, we call this "constructive interference." It is easy to see that for
+exponential sums, such as (1)or in Corollary 1.4, constructive interference occurs in
+anO(1)-neighborhood of x= 0. The critical exponent pis the Lp-moment where the
+=== PAGE 3 ===
+SMALL-CAP DECOUPLING INR43
+βα
+1/2 2/5 1/31/31/2
+1/4
+0
+Figure 1.Parameters αandβ. In the blue region, the critical exponent
+isp∈(12,14). In the red,p∈(11,12). In the orange,p <11.
+competing behavior of square-root cancellation and constructive interference match.
+For larger moments, constructive interference dominates while for smaller moments,
+square-root cancellation dominates. Observe that by Hölder’s inequality, Theorem 1.2
+is true more generally for2 ≤p≤ 6 +2(α+1)
+β,so for the rest of the paper we will only
+consider
+p= 6 +2(α+ 1)
+β.
+Notice p∈(10,14]for the range of parameters; see Figure 1. When10 < p < 11, we
+expectananalogous4-linearestimate; however, ourmethodsonlyshowa4-broadversion.
+A counterexample for the linear estimate when p <11can be found in [5, Theorem 8.2].
+Theorem 1.3.For any F:R4→C Schwartz with Fourier Transform supported in
+M4(Rβ, R) =S
+γγ, any R×R×R×Rαregular boxΩ R, and any caps τ1, τ2, τ3, τ4with
+|τi| ∼1and∼1-separated, if∥F γ∥∞≤1, we have
+∥min
+1≤i≤4|Fτi|∥p
+Lp(ΩR)⪅Rp
+2β|ΩR|,
+with
+p= 6 +2(α+ 1)
+β,
+for the parametersβ∈[1
+3,1
+2]and0< α≤β.
+As a corollary of Theorem 1.2, we verify Conjecture 1.1 in the remaining range for
+p= 12, make progress for p∈[11,12), and give new exponential sum estimates for
+p∈(12,14]. These estimates with cn= 1and constructive interference on[0 ,1
+100]4show
+that the critical exponentpin Theorem 1.2 is sharp.
+=== PAGE 4 ===
+4 JACOB GLIDEWELL
+Corollary 1.4.Let11 ≤p≤ 14. Assume a∈[2,3],b∈(0,1]and a+b=p
+2−3. Let
+Ω = [0, N]×[0, N2]×[0, Na]×[0, Nb]. Then, for any|c n| ≤1,
+Z
+ΩX
+n∼Ncne(x·Φn
+N
+)p
+dx⪅Np
+2|Ω|.
+Therefore, the remaining open range in Conjecture 1.1 is p∈[11,12)withp−6
+4≤a < 2.
+Thisisanalogoustotherangefor p= 12whichDemeterprovedin[5], whichourmethods
+seem to not be able to address. These correspond to decouplings with parameters α > β
+in the language of Theorem 1.2.
+To establish Theorem 1.3, we use a high-low stopping time argument with wavepacket
+pruning, combining the approaches of Guth and Maldague [8] and Maldague and Oh [9].
+By a standard broad-narrow argument, we get the linear inequalities in Theorem 1.2.
+The main novelity of this paper is the integration and simplification of the arguments
+from [8] and [9]. Further, we elaborate on the lack of linear inequalities for p <11.
+One obstruction that we see explicitly is that the rescaling needed for the reduction is
+inefficient whenp <11.
+Acknowledgments. The author would like to thank his advisor, Ciprian Demeter, for
+introducing him to this problem and for encouragement throughout the completion of
+this project.
+2.Notation and Outline
+We write A≲BorA=O(B)ifA≤cBfor some universal constant (possibly large)
+c >0. Also, we write A∼BifA≲BandB≲A. We write A⪅BifA≲ ϵRϵBfor
+anyϵ >0. Finally, we writeA≈BifB≲A⪅B.
+Now, we define the operational notation for our argument. Fix ϵ > 0. Define
+intermediate scales Rk=Rkϵfork= 0, . . . , Kwhere RK∼Rβwith K∼1
+ϵ. Now, we
+define the intermediate caps.
+i) ForR k≤R1/4, letγ kbe the caps with dimensions
+∼R−1
+k×R−2
+k×R−3
+k×R−4
+k.
+ii) ForR1/4< R k≤R1/3, letγ kbe the caps with dimensions
+∼R−1
+k×R−2
+k×R−3
+k×R−1.
+iii) Finally, forR1/3< R k≤Rβ, letγ kbe the caps with dimensions
+∼R−1
+k×R−2
+k×R−1×R−1.
+These coincide with the cap sizes in [8] in the first three dimensions. Fix A > 0a
+constant to be determined, depending on ϵ. There are two places in the argument
+(namely, Lemma 5.2 and estimating the low piece in Section 7) where the size of Ais
+determined. Fixτ 1, τ2, τ3, τ4caps with|τ i| ∼1and1-separated. Forλ >0, let
+Uλ={x∈Ω R:λ≤min
+1≤i≤4|Fτi(x)| ≤2λ}.
+=== PAGE 5 ===
+SMALL-CAP DECOUPLING INR45
+We normalize so that max γ∥Fγ∥∞= 1. By dyadic pigeonholing, we have for some
+0< λ≤Rβ,
+(3)∥min
+1≤i≤4|Fτi|∥p
+Lp(ΩR)⪅λp|Uλ|.
+We assume without loss of generality that λ≥Rβ/2. Otherwise, Theorem 1.3 is
+immediate. We will make use of this assumption in Section 8.
+At this point, let us give a heuristic overview of the proof of Theorem 1.3; the
+broad-to-linear reduction for Theorem 1.2 is standard and is given in Section 9. The
+argument for Theorem 1.3 nicely decomposes into two major phases: (a) finding local
+square-root cancellation and (b) gaining globally with a high-low decomposition.
+Phase (a): Our initial goal is to identify where inΩ Rsquare-root cancellation is occurring
+locally. This is quantified by square functions at each scale Rk. Indeed, we
+would likeFto be comparable to
+ X
+γ|Fγ|2!1/2
+≲Rβ
+2.
+However, this is not always true. Instead, we pick out the spatial places
+where intermediate (squared) square functions are comparable to square-root
+cancellation; that is,
+(4)g k=X
+γk|Fγk|2∼Rβ.
+Each of these square functions are essentially constant on balls of radius Rk,
+so we decompose via a stopping time selectionΩ R=SΛkwith eachΛ ka
+union of Rk-cubes where (4)occurs. To pass from Fto these intermediate
+square functions, we use the Multilinear Restriction Theorem for the moment
+curve (see [4, Ex. 6.33] or Theorem 3.1 in the next section). This preserves
+the square-root cancellation from Fto the intermediate square function onΛ k,
+giving the estimate which "morally" says
+λ8|Uλ∩Λ k|⪅R4β|Λk|.
+Phase (b): Now, it suffices to get a gain on the size ofΛ k. Because of the stopping time
+selection and our expectation that Fsatisfies square-root cancellation on most
+ofΩ R, we expect |Λk|to decrease as Rkincreases. For instance, when p= 12,
+we would like to show
+|Λk|⪅R2β
+λ4|ΩR|.
+As we will see in Lemma 5.3, the critical λto consider is λ∼R1/2
+kRβ
+2.Thus,
+the estimate we would like to show is "morally"
+|Λk|⪅1
+R2
+k|ΩR|,
+=== PAGE 6 ===
+6 JACOB GLIDEWELL
+which matches our expectation. To prove such an estimate, we convert to
+estimating aLq-moment of the intermediate (squared) square function:
+Rqβ|Λk| ∼Z
+Λk X
+γk|Fγk|2!q
+=Z
+Λk|gk|q.
+Because of the stopping time selection ofΛ k, we have control over the next
+intermediate square function
+gk+1=X
+γk+1|Fγk+1|2.
+We relate the two square functions by the following identity:
+gk=X
+γk|Fγk|2=X
+γkX
+γk+1,γ′
+k+1⊂γkFγk+1Fγ′
+k+1
+=X
+γkX
+γk+1∼γ′
+k+1⊂γkFγk+1Fγ′
+k+1+X
+γkX
+γk+1̸∼γ′
+k+1⊂γkFγk+1Fγ′
+k+1,
+where ∼is the adjacency relation (i.e γk+1∼γ′
+k+1if they are the same or
+adjacent). We can bound the first term by gk+1; this is called the "low" piece. It
+suffices to control the second term; this is called the "high" piece. We will explain
+in Section 7 that the terms in the high piece exhibit additional orthogonality,
+due to the fact that their frequency supports mimic that of cone planks. This is
+the main mechanism of our proof, mirroring that of [8]. Since we are proving
+estimates over a range of parameters, some combinations of αandβhave access
+to better or worse outcomes from the Multilinear Restriction Theorem (Part (a))
+and cone decouplings (Part (b)). From this obstacle, we finally need to show
+how these estimates combine to give the correct estimates for Theorem 1.3. We
+must consider three different regimes of Rkwhere slightly different arguments
+are needed.
+A key technical tool used in the argument is "wavepacket pruning" (see Lemma 4.1).
+This tool is commonly used in tandem with the high-low stopping time argument. It
+"prunes off" irrelevant wavepackets with large amplitudes relative to each intermediate
+square function. One should observe that wavepacket pruning is not strictly needed
+for every iteration of this kind of argument. For instance, [9] does not make use of
+any pruning. For similar reasons, Theorem 1.2 with β=1
+3does not need wavepacket
+pruning. However, the other cases β >1
+3need this tool and so we use it for all cases.
+One should note that pruning causes the need for a4-broad formulation, rather than a
+4-linear formulation; see Lemma 5.3.
+A striking similarity between our argument here and Bourgain’s original argument
+is that the x4variable becomes irrelevant after an initial "local" step. In Bourgain’s
+argument, the local step was an initial application of the L6decoupling inequality on
+R1/2-cubes while in our argument, this was part (a) described above. It remains unclear
+exactly why (other than for ad-hoc reasons) one may ignore x4in some steps and still
+=== PAGE 7 ===
+SMALL-CAP DECOUPLING INR47
+produce sharp estimates. One may hope that a general theory of these decouplings may
+shed some light on this dependence.
+The order of this paper is as follows. Section 3 gives a review of the known decouplings
+we will be using for our argument. Sections 4 and 5 present the pruning and stopping
+time setup for the argument, respectively. In section 6, we will perform our initial L8
+estimate using multilinear restriction estimates for the moment curve. This exploits
+the 4-dimensional setting of the problem. Sections 7 and 8 will present how we use
+decoupling for the cone in R3to enhance our estimate from L8toLp. This enhancement
+mechanism ignores x4in our argument, so it is likely that other estimates beyond L14
+or in the remaining open range of Conjecture 1.1 may be progressed by utilizing x4via
+new cone-like geometry in R4. Therefore, we give the heuristic that the estimates of
+Corollary 1.4 are locally 4-dimensional but globally 3-dimensional. Finally, section 9
+presents the broad-to-linear reduction and the necessity of p≥11. Section 10 gives the
+short proof of Corollary 1.4 using Theorem 1.2.
+3.Known Restriction and Decoupling Estimates
+Let us recall some known restriction estimates and decouplings that we will use for
+our argument; namely, the mulitlinear restriction estimate for the moment curve [4, Ex.
+6.33], the Bourgain-Demeter-Guth decoupling for the moment curve [3], the Bourgain-
+Demeter canonical decoupling for the cone [2], and the Guth-Maldague small-cap
+decoupling for the cone [7].
+DefineMn(R)to be the1
+R-neighborhood of the moment curve inRn:
+r(t) = (t, t2, t3, . . . , tn), t∈[1
+2,1].
+We define the canonical caps γas the partition Mn(R)∩{ℓR−1/n≤ξ1≤(ℓ+ 1)R−1/n}
+for each integerℓ∈R1/n[1
+2,1]. Let{˜τ i}1≤i≤nbe caps with|˜τ i| ∼1and∼1-separated.
+Theorem 3.1.[4, Ex. 6.33] For any F:Rn→C with Fourier Transform supported
+inMn(R)and any ballB Rof radiusR, we have
+1
+|BR|Z
+BRnY
+i=1F˜τi2
+≲nY
+i=11
+|BR|Z
+BR|F˜τi|2
+.
+We will make use of Theorem 3.1 forR3andR4in Section 6.
+Theorem 3.2.[3, Theorem 1.2] For any F:Rn→C with Fourier Transform supported
+inMn(R) =S
+γγand any ballB Rof radiusR, we have
+Z
+BR|F|n(n+1)⪅ X
+γ∥Fγ∥2
+Ln(n+1) (BR)!n(n+1)
+2
+.
+ForR2, this is an L6-decoupling and for R3, this is an L12-decoupling. We will also
+frequently use the idea of cylindrical decoupling. Let us state this principle for R4. Let
+=== PAGE 8 ===
+8 JACOB GLIDEWELL
+F:R4→Cwith Fourier Transform supported in M3(R)×R. Let Bbe a regular box
+which has lengthsR×R×R×rfor somer≥1. Then,
+Z
+B|F|12⪅ X
+γ∗=γ×R∥Fγ∗∥2
+L12(B)!6
+.
+This follows by applying Theorem 3.2 on F(·, x4)for each x4followed by integrating in
+x4and Minkowski’s inequality; see [4, Ex. 9.22]. The similar L6inequality holds with
+M2(R)×R2and regular boxesBwith lengthsR×R×r 1×r2.
+Now, let us set up the cone. Letκ∈[1
+2,1]. Define the cone inR3
+Γ ={(u, uv, uv2) :u∈[1
+2,1], v∈[−1,1]},
+andΓ( R)the1
+R-neighborhood ofΓ. We define the small-planks θκas the partition
+Γ(R)∩ {ℓR−κ≤v≤(ℓ+ 1)R−κ}for each integerℓ∈Rκ[−1,1]. We writeθ=θ 1/2.
+Theorem 3.3.[2, Theorem 1.2] For any F:R3→C with Fourier Transform supported
+inΓ(R) =S
+θθand any ballB Rof radiusR, we have
+Z
+BR|F|6⪅ X
+θ∥Fθ∥2
+L6(BR)!3
+.
+Theorem 3.4.[7, Theorem 3] For any F:R3→C with Fourier Transform supported
+inΓ(R) =S
+θκθκand any ballB Rof radiusR, we have
+Z
+BR|F|q⪅RX
+θκ∥Fθκ∥q
+Lq(BR),
+withq= 2 +2
+κ.
+These two decouplings for the cone will be used in Section 7 to produce our desired
+gain for|Λ k|.
+4.Wavepacket Pruning
+We first prune wavepackets to create the functions F(k)=P
+γkF(k)
+γk, identically as
+in [8, Lemma 1]. We record the key properties here. The main point is F(k)has a
+similar Fourier support to Fwith a much better L∞size, suitable for transferring to
+smaller exponents where lower dimensional decoupling may be used.
+Lemma 4.1.For eachγ k,
+a)
+|F(k)
+γk(x)|≲|F(k+1)
+γk(x)| ≤X
+γk+1⊂γk|F(k+1)
+γk+1(x)|,
+b)
+∥F(k)
+γk∥∞≲minRβ
+λ,Rβ
+Rk
+,
+=== PAGE 9 ===
+SMALL-CAP DECOUPLING INR49
+c)
+supp\F(k+1)
+γk⊂suppdF(k)
+γk⊂Cγ k.
+Proof.We perform an iterative scheme. Define F(K)
+γK=FγandF(K)
+γK−1=FγK−1. For each
+1≤k≤K−1, write the wavepacket decomposition dual toγ k:
+F(k+1)=X
+γkX
+TγkψTγkF(k+1)
+γk.
+We split the Tγkinto two collections: good wavepackets and bad wavepackets. The
+good ones are defined by
+Tg
+γk={T γk:∥ψ TγkF(k+1)
+γk∥∞≤AK−k+1 Rβ
+λ}.
+Now define
+F(k)
+γk=X
+Tγk∈Tg
+γkψTγkF(k+1)
+γk, F(k)
+γk−1=X
+γk⊂γk−1F(k)
+γk.
+Property a) follows by noting that since {Tγk}are a tiling of R4, for each x∈R4, either
+|F(k)
+γk(x)|= 0or |F(k)
+γk(x)| ∼ |F(k+1)
+γk(x)|.The properties c), and the first bound in b)
+are immediate from the construction. The latter bound in b) follows from iterating
+property a).□
+It is not immediately clear which bound in b) is the "better" L∞estimate. For some
+estimates,Rβ
+Rkwill suffice. However, as we will see in Lemma 5.3, the critical value of λ
+we consider at this scale isR1/2
+kRβ/2and so we morally have from b),
+∥F(k)
+γk∥∞≲Rβ/2
+R1/2
+k=Rβ
+Rk1/2
+.
+This is the desired square-root cancellation bound.
+Lemma 4.2.For any scaleR k≤R1/2, we have
+∥F(k)
+γk∥L6(ΩR)⪅|Ω R|1
+6Rβ
+Rk1/2
+.
+ForR k≤R1/3, we have
+∥F(k)
+γk∥L12(ΩR)⪅min(
+R3
+4β
+λ1
+2R1
+4
+k,R3
+4β
+R1
+12R1
+2
+k)
+|ΩR|1
+12.
+Proof.Note by a) of Lemma 4.1 and L6cylindrical decoupling with Theorem 3.2, we
+have
+∥F(k)
+γk∥L6(ΩR)≤C ϵRϵ100
+X
+γk+1⊂γk∥F(k)
+γk+1∥2
+L6(ΩR)
+1/2
+=== PAGE 10 ===
+10 JACOB GLIDEWELL
+≤C ϵRϵ100
+X
+γk+1⊂γk∥F(k+1)
+γk+1∥2
+L6(ΩR)
+1/2
+.
+We iterate this untilk=Kto get
+∥F(k)
+γk∥L6(ΩR)≤C ϵRϵ99 X
+γ⊂γk∥Fγ∥2
+L6(ΩR)!1/2
+.
+Since∥F γ∥∞≤1, this gives
+∥F(k)
+γk∥L6(ΩR)⪅R−1
+k
+R−β|ΩR|1
+31/2
+=Rβ
+Rk1
+2
+|ΩR|1
+6.
+Similarly, note by a) of Lemma 4.1 and L12cylindrical decoupling with Theorem 3.2,
+we have
+∥F(k)
+γk∥L12(ΩR)≤C ϵRϵ100
+X
+γk+1⊂γk∥F(k+1)
+γk+1∥2
+L12(ΩR)
+1/2
+.
+We iterate this untilk=k 0withR k0≈R1/3to get
+∥F(k)
+γk∥L12(ΩR)≤C ϵRϵ99
+X
+γk0⊂γk∥F(k0)
+γk0∥2
+L12(ΩR)
+1/2
+.
+By b) in Lemma 4.1 and the previousL6inequality withk=k 0, we have
+∥F(k0)
+γk0∥12
+L12(ΩR)≲minR6β
+λ6,R6β
+R2
+∥F(k0)
+γk0∥6
+L6(ΩR)
+⪅minR6β
+λ6,R6β
+R2
+|ΩR|Rβ
+R1/33
+= minR9β
+λ6R,R9β
+R3
+|ΩR|.
+Therefore, we have
+∥F(k)
+γk∥L12(ΩR)⪅R−1
+k
+R−1/31
+2
+min(
+R3
+4β
+λ1
+2R1
+12,R3
+4β
+R1
+4)
+|ΩR|1
+12
+= min(
+R3
+4β+1
+12
+λ1
+2R1
+2
+k,R3
+4β
+R1
+12R1
+2
+k)
+|ΩR|1
+12.
+We can actually do better than the first bound by going straight toL6. Indeed,
+∥F(k)
+γk∥12
+L12(ΩR)≲∥F(k)
+γk∥6
+∞∥F(k)
+γk∥6
+L6(ΩR)⪅R6β
+λ6Rβ
+Rk3
+|ΩR|=R9β
+λ6R3
+k|ΩR|.
+□
+=== PAGE 11 ===
+SMALL-CAP DECOUPLING INR411
+5.Square Function Stopping Time
+Let
+gk(x) =X
+γk|F(k+1)
+γk(x)|2.
+We perform a stopping time decomposition onΩ R. The decomposition has two regimes:
+Rk> RαandRk≤Rα. In the large scale regime Rk> Rα, we will split into boxes of
+sidelengths
+Rk×R k×R k×Rα
+while for the small scale regime Rk≤Rα, we will split into cubes of sidelength Rk. We
+will call both "boxes" of sidelength Rk; however, the meaning of "boxes" is as above,
+depending on the size of Rkrelative to Rα. SplitΩ Rinto "boxes" of sidelength RK−1.
+We say one of these "boxes"Bis(K−1)-bad if
+1
+|B|Z
+Bg2
+K−1≥A2R2β.
+LetΛ K−1be the union of the( K−1)-bad "boxes". We formΛ ksimilarly. We split the
+remaining "boxes" after formingΛ k+1into smaller "boxes" of sidelength Rk. We say
+one of these "boxes"Bisk-bad if
+(5)1
+|B|Z
+Bg2
+k≥A2K−2kR2β.
+LetΛ kbe the union of these k-bad "boxes". Finally, letΛ 0be the union of the cubes
+with sidelength1which remain after formingΛ 1. Note by Hölder’s inequality,
+gk≤Rϵgk+1.
+Lemma 5.1.Fork≥1, we have
+Z
+Λk|gk|2≥A2K−2kR2β|Λk|,Z
+Λk|gk+1|2≲A2K−2k−2R2β|Λk|.
+Moreover, forx∈Λ k,
+gk(x)≈AK−kRβ
+and form > k,
+gm(x)≲AK−mRβ.
+Fork= 0, the second inequality still holds and forx∈Λ 0,g0(x)≲RO(ϵ)Rβ.
+Proof.The first inequality follows from summing over all Rk-"boxes" B⊂ Λkwith
+the definition (5)ofB⊂ Λk. For the second inequality, first observe that gkis locally
+constant on balls of radius Rk; indeed, gkis Fourier supported on a ball of radius O(R−1
+k)
+about the origin. This follows since each |F(k+1)
+γk|2has Fourier support on C(γk−γk)
+by Lemma 4.1. Now note that if B⊂ Λk, then Bmust lie in a( k+ 1)-good "box".
+Therefore, forB⊂Λ k,
+Z
+B|gk+1|2≲|B|
+|B′|Z
+B′|gk+1|2≤A2K−2k−2R2β|B|,
+=== PAGE 12 ===
+12 JACOB GLIDEWELL
+where B′is the( k+ 1)-good parent of B. Now, we sum over B⊂ Λkto finish. For
+the pointwise estimate, we use Hölder’s inequality as above and the locally constant
+property. Further, form > k, for theR m-"box" containingx, call itB, we haveZ
+B|gm|2≤A2K−2mR2β|B|.
+By the locally constant property,g m(x)≲AK−mRβ.□
+We relate eachΛ kto the pruning, identical to [8, Lemma 5]. Define
+F(k+1)
+τi=X
+γk⊂τiF(k+1)
+γk.
+Lemma 5.2.For eachτ iand eachx∈Λ k,
+|Fτi(x)−F(k+1)
+τi(x)| ≤λ
+1000.
+Proof.Fixτ i. Write
+Fτi=F(k+1)
+τi+K−1X
+m=k+1(F(m+1)
+τi−F(m)
+τi).
+Further for each term, we have
+F(m+1)
+τi−F(m)
+τi=X
+γm⊂τiF(m+1)
+γm−F(m)
+γm.
+We bound each term of this sum. Let Tb
+γmbe the set of bad wavepackets as in the proof
+of Lemma 4.1. Note that since|F(m+1)
+γm|is locally constant on eachT γm, we have
+|F(m+1)
+γm−F(m)
+γm|=X
+Tγm∈TbγmψTγm|F(m+1)
+γm|
+≲X
+Tγm∈TbγmA−(K−m+1) λ
+RβψTγm|F(m+1)
+γm|2
+≲A−(K−m+1) λ
+Rβ|F(m+1)
+γm|2.
+Therefore, by the triangle inequality,
+|F(m+1)
+τi−F(m)
+τi|≲A−(K−m+1) λ
+Rβgm.
+So, for x∈Λk, by Lemma 5.1, we have gm(x)≲AK−mRβ. Now, we may choose A
+sufficiently large such that we get the desired inequality.□
+We also have the following bound on λ, which is analogous to [9, Lemma 4.1]. This
+is the step where the4-broad formulation is needed; passing to the pruned F(k+1)
+τiis
+not available for the4-linear version.
+Lemma 5.3.IfU λ∩Λ kis nonempty, then
+λ≲RO(ϵ)R1/2
+kRβ/2.
+=== PAGE 13 ===
+SMALL-CAP DECOUPLING INR413
+Proof.Say,x∈U λ∩Bwhere B⊂ Λkis a "box" with sidelength Rk. By Lemma 5.2,
+we may pass toF(k+1)
+τi=P
+γk⊂τiF(k+1)
+γk:
+λ≤min
+1≤i≤4|Fτi(x)| ≤λ
+1000+ min
+1≤i≤4|F(k+1)
+τi(x)|.
+Then, using Lemma 5.1,
+λ≲min
+1≤i≤4|F(k+1)
+τi(x)| ≤X
+γk|F(k+1)
+γk(x)| ≤R1/2
+kg1/2
+k(x)≲RO(ϵ)R1/2
+kRβ/2.
+□
+6.Multilinear Restriction Estimates
+Recall from (3), it suffices to show
+λp|Uλ|=X
+kλp|Uλ∩Λ k|⪅Rp
+2β|ΩR|.
+We will eventually get a uniform estimate for λp|Uλ∩Λk|, for each k. In this section,
+we will get anL8estimate onΛ k.
+Lemma 6.1.
+(6)λ8|Uλ∩Λ k|≲RO(ϵ)max
+1,Rk
+Rα
+R4β|Λk|.
+By Lemma 5.2, we can pass to F(k+1)
+τi=P
+γk⊂τiF(k+1)
+γk, just as in the proof of Lemma
+5.3. Moreover, we can bound by the geometric mean
+min
+1≤i≤4|F(k+1)
+τi| ≤4Y
+i=1|F(k+1)
+τi|1/4.
+We split into two regimes.
+First, considerR k≤Rα. By theL8multilinear restriction estimate Theorem 3.1,
+λ8|Uλ∩Λ k|≲X
+B=B Rk⊂ΛkZ
+B4Y
+i=1|F(k+1)
+τi|2≲X
+B⊂Λ k1
+|B|34Y
+i=1Z
+B|F(k+1)
+τi|2
+.
+ByL2orthogonality and Hölder’s,
+Z
+B|F(k+1)
+τi|2≲Z
+BX
+γk|F(k+1)
+γk|2=Z
+Bgk≲|B|1/2Z
+B|gk|21/2
+≲|B|Rβ+O(ϵ).
+Therefore, we have
+λ8|Uλ∩Λ k|≲R4β+O(ϵ)|Λk|.
+Now, consider Rα< R k≤Rβ. If we ignore x4and only use the L6trilinear restriction
+estimate Theorem 3.1, we get by the same argument as in the previous case that
+(7)λ6|Uλ∩Λ k|≲R3β+O(ϵ)|Λk|.
+=== PAGE 14 ===
+14 JACOB GLIDEWELL
+However, we can do better; we can apply L84-linear estimate Theorem 3.1 at the scale
+Rαand using the locally constant property, we can then further use the L6trilinear
+estimate Theorem 3.1. This is similar to the argument in [9, Section 4.1]. This gives
+λ8|Uλ∩Λ k|≲X
+B⊂Λ kX
+BRα⊂BZ
+BRα4Y
+i=1|F(k+1)
+τi|2≲X
+BRα⊂Λk1
+|BRα|34Y
+i=1Z
+BRα|F(k+1)
+τi|2
+.
+ByL2orthogonality and Hölder’s and the locally constant property ofg k,
+Z
+BRα|F(k+1)
+τi|2≲Z
+BRαX
+|γ′|=R−α,γ′⊂τi|F(k+1)
+γ′|2≲R kR−αZ
+BRαX
+γk|F(k+1)
+γk|2
+=R kR−αZ
+BRαgk≲R kR−α|BRα|1/2Z
+BRα|gk|21/2
+≲R kR−α|BRα|Rβ+O(ϵ).
+Therefore, we have
+λ8|Uλ∩Λ k|≲R kRβ−α+O(ϵ)X
+BRα⊂Λk1
+|BRα|23Y
+i=1
+Z
+BRαX
+|γ′|=R−α,γ′⊂τi|F(k+1)
+γ′|2
+.
+Similarly to the local constancy ofg k, we have that
+X
+|γ′|=R−α|F(k+1)
+γ′|2
+are roughly constant on cubesB Rα. Hence,
+λ8|Uλ∩Λ k|≲R kRβ−α+O(ϵ)X
+B⊂Λ kZ
+B3Y
+i=1
+X
+|γ′|=R−α,γ′⊂τi|F(k+1)
+γ′|2
+.
+By theL6trilinear restriction estimate Theorem 3.1, we have
+Z
+B3Y
+i=1
+X
+|γ′|=R−α,γ′⊂τi|F(k+1)
+γ′|2
+≲1
+|B|23Y
+i=1
+Z
+BX
+|γ′|=R−α|F(k+1)
+γ′|2
+.
+By the same orthogonality argument as above, we have
+λ8|Uλ∩Λ k|≲R kR4β−α+O(ϵ)|Λk|.
+In summary,
+λ8|Uλ∩Λ k|≲RO(ϵ)|Λk|(
+R4β, R k≤Rα
+RkR4β−α, R k> Rα=RO(ϵ)max
+1,Rk
+Rα
+R4β|Λk|.
+For clarity moving forward, we will omitRO(ϵ)as it is harmless for our argument.
+=== PAGE 15 ===
+SMALL-CAP DECOUPLING INR415
+7.Adding exponents: fromL8toLp
+TheLpestimate
+λp|Uλ∩Λ k|⪅Rp
+2β|ΩR|
+follows by combining (6)with an improved estimate for |Λk|. We can first quickly
+dispense with k= 0. Indeed, by Lemma 5.3 and (6), we use the trivial estimate
+|Λ0| ≤ |ΩR|and we are done. Now, we focus on k≥1. To get such an estimate, we
+decompose gkinto a high and low piece. Define the adjacency relation γk∼γ′
+kifγk, γ′
+k
+are the same or adjacent caps. Let
+gh
+k=X
+γkX
+γk+1̸∼γ′
+k+1⊂γkF(k+1)
+γk+1F(k+1)
+γ′
+k+1,
+and
+gl
+k=X
+γkX
+γk+1∼γ′
+k+1⊂γkF(k+1)
+γk+1F(k+1)
+γ′
+k+1.
+By Lemma 5.1, we have
+A2K−2kR2β|Λk|≲Z
+Λk|gk|2≲Z
+Λk|gl
+k|2+Z
+Λk|gh
+k|2.
+We will showgl
+kis comparable tog k+1. Note that
+gl
+k(x)≤g k+1(x) +X
+γkX
+γk+1∼γ′
+k+1⊂γk
+γk+1,γ′
+k+1adjacentF(k+1)
+γk+1(x)F(k+1)
+γ′
+k+1(x).
+Thus, by Cauchy-Schwarz,
+|gl
+k(x)| ≤g k+1(x) +X
+γkX
+γk+1,γ′
+k+1⊂γk
+γk+1,γ′
+k+1adjacent|F(k+1)
+γk+1(x)|2+|F(k+1)
+γ′
+k+1(x)|2
+2≲gk+1(x).
+By Lemma 5.1, we have
+Z
+Λk|gl
+k|2≲Z
+Λk|gk+1|2≲A2K−2k−2R2β|Λk|.
+Therefore, we can chooseAsufficiently large such that
+Z
+Λk|gl
+k|2≤1
+2A2K−2kR2β|Λk|.
+Hence, the high piece dominates so that
+R2β|Λk|≲Z
+Λk|gh
+k|2≤ |Λ k|1−2
+qZ
+ΩR|gh
+k|q2/q
+=== PAGE 16 ===
+16 JACOB GLIDEWELL
+which gives forq≥2,
+Rβq|Λk|≲Z
+ΩR|gh
+k|q.
+From this point further, we ignore x4and only use3-dimensional considerations; namely,
+the decoupling of the cone into planks Theorems 3.3 and 3.4. We use these decouplings
+of the cone to get the following improved orthogonality for gh
+k. The high piece has
+frequency supported on differences of separated γk+1. After rescaling, these difference
+sets are roughly cone planks in the first three frequency variables. We refer to [8, Lemma
+7, Lemma 8].
+Lemma 7.1.For4≤2
+β≤q≤6, andR k=R2/q∈[R1/3, Rβ],
+Z
+ΩR|gh
+k|q⪅R−1
+kRX
+γk+1Z
+ΩR|F(k+1)
+γk+1|2q.
+ForR k≤R1/3,
+Z
+ΩR|gh
+k|6⪅
+X
+γk+1∥F(k+1)
+γk+1∥4
+L12(ΩR)
+3
+.
+Proof.We deviate from the presentation in [8, Section 2.3-2.4] for clarity. In particular,
+their arguments are completely geometric. We reformulate in terms of the extension
+operator, and simplify the argument down to a simple sequence of variable changes. Fix
+x4and only consider R3as the first three variables; integrating over x4and Minkowski’s
+inequality at the end will give the inequalities overΩ R.
+LetEbe the extension operator associated with the moment curve in R3, i.e. for
+any intervalJ⊂[1
+2,1]andf J:J→C,
+EfJ(x) =Z
+[1
+2,1]fJ(t)e(x·(t, t2, t3))dt.
+LetJkbe the interval of length R−1
+kassociated with the cap γk. Consider the analog of
+the high piece
+G(x) =X
+JkX
+Jk+1̸∼J′
+k+1⊂JkEfJk+1(x)EfJ′
+k+1(x).
+After an affine rescaling, we will see that for eachJ k,
+GJk(x) =X
+Jk+1̸∼J′
+k+1⊂JkEfJk+1(x)EfJ′
+k+1(x)
+is Fourier supported on a thin neighborhood of a cone plank. Indeed, by two changes
+of variables,
+GJk(x) =X
+Jk+1̸∼J′
+k+1⊂JkZ
+Jk+1×J′
+k+1f(t)f(s)e(x·(t−s, t2−s2, t3−s3))dtds
+=== PAGE 17 ===
+SMALL-CAP DECOUPLING INR417
+=1
+2X
+Jk+1̸∼J′
+k+1
+⊂JkZ
+[R−1
+k+1,R−1
+k]Z
+Jk+1+J′
+k+1g(u, v)e(x·(u, uv,u3
+4+3
+4uv2))dvdu
+=1
+2RkX
+Jk+1̸∼J′
+k+1
+⊂JkZ
+[R−ϵ,1]Z
+Jk+1+J′
+k+1g(R ku′, v)e(1
+Rkx·(u′, u′v,(u′)3
+4R2
+k+3
+4u′v2))dvdu′,
+for some functiong. NoteJ k+1+J′
+k+1⊂2J k. Since(u′)3
+4R2
+k≲1
+R2
+k, the surface
+{(u′, u′v,(u′)3
+4R2
+k+3
+4u′v2)) :u′∈[R−ϵ,1], v∈2J k}
+is contained in a ∼1×R−1
+k×R−2
+kcone plank. Since u′ranges over[ R−ϵ,1], we technically
+can dyadic pigeonhole and rescale u′; however, this only introduces RO(ϵ)losses which
+are harmless. With the change of variables y=1
+Rkx, we can apply a decoupling for the
+cone on a ball ofR
+Rk. For Rk≤R1/3, we may use canonical decoupling on smaller balls
+of radiusR2
+k. Indeed by Theorem 3.3 this gives
+Z
+BR|G(x)|6dx=R3
+kZ
+BR/Rk|˜G(y)|6dy=R3
+kX
+BR2
+k⊂BR/Rk∥˜G∥6
+L6(BR2
+k)
+⪅R3
+kX
+BR2
+k⊂BR/Rk X
+Jk∥˜GJk∥2
+L6(BR2
+k)!3
+.
+Now, by undoing the variablesy=1
+Rkxand Minkowski’s inequality, we get
+Z
+BR|G(x)|6dx⪅ X
+Jk∥GJk∥2
+L6(BR)!3
+≲RO(ϵ)
+X
+Jk+1∥Ef Jk+1∥4
+L12(BR)
+3
+.
+By a standard R−1-thickening and integrating over x4, we get the desired inequality
+above. For Rk> R1/3, we use the small-cap decoupling Theorem 3.4 on a ball of radius
+R
+Rkwith κsuch that
+R
+Rk−κ
+=1
+Rk. This gives Rk=Rκ
+κ+1=R2/q. Moreover, the cone
+planks as described above fit inside the small-cap cone planks since1
+R2
+k≤
+R
+Rk−1
+in
+this regime. By the same computation as in the previous case, we get the desired
+inequality.□
+Now, we use the previous Lemma 7.1 to get the improved estimate forΛ k.
+Corollary 7.2.For4≤2
+β≤q≤6, andR k=R2/q∈[R1/3, Rβ],
+|Λk|⪅minRβ(q−3)+1
+R3
+kλ2q−6,Rβ(q−3)+1
+R2q−3
+k
+|ΩR|.
+=== PAGE 18 ===
+18 JACOB GLIDEWELL
+ForR k≤R1/3,
+|Λk|⪅minR3β
+λ6,R3β
+R3
+kR
+|ΩR|.
+Proof.ForR k=R2/qforq∈[2
+β,6], then by Lemma 4.2
+Rβq|Λk|≲Z
+ΩR|gh
+k|q⪅R−1
+kRX
+γk+1Z
+ΩR|F(k+1)
+γk+1|2q
+≲R−1
+kRRβ
+λ2q−6X
+γk+1Z
+ΩR|F(k+1)
+γk+1|6
+⪅R−1
+kRRβ
+λ2q−6
+RkRβ
+Rk3
+|ΩR|
+=Rβ(2q−3)+1
+R3
+kλ2q−6|ΩR|.
+The second bound in this case is found by repeating the same computation but using
+Lemma 4.1
+∥F(k+1)
+γk+1∥∞≲Rβ
+Rk.
+ForR k≤R1/3,
+R6β|Λk|≲Z
+ΩR|gh
+k|6⪅
+X
+γk+1∥F(k+1)
+γk+1∥4
+L12(ΩR)
+3
+⪅
+X
+γk+1min(
+R3β
+λ2Rk,R3β
+R1
+3R2
+k)
+|ΩR|1
+3
+3
+⪅minR9β
+λ6,R9β
+RR3
+k
+|ΩR|
+□
+8.Proof of Theorem 1.3
+Fixp∈(10,14]with α= p−6
+2
+β−1,max{1
+3,2
+p−6} ≤β≤min{1
+2,2
+p−8}. The main
+strategy is to combine (6)with Corollary 7.2. In some cases, we do not need the full
+strength of (6), only the L6estimate (7). Cases Ia and Ib will verify for the smallest
+scales Rk≤R1/3. Case II verifies for the intermediate scales and Case III verifies for
+the largest scales.
+8.1.Case Ia:R k≤R1/3,p≤12.By Corollary 7.2 and (7), we get
+λ6|Uλ∩Λ k|⪅R3βR3β
+λ6|ΩR|
+=== PAGE 19 ===
+SMALL-CAP DECOUPLING INR419
+which gives
+λ12|Uλ∩Λ k|⪅R6β|ΩR|.
+By our assumption in Section 2 thatλ≥Rβ/2, we get
+λp|Uλ∩Λ k|⪅Rp
+2β|ΩR|.
+8.2.Case Ib:R k≤R1/3,p >12.IfR k≤Rα, then by Corollary 7.2 and (6), we get
+λ8|Uλ∩Λ k|⪅R4βR3β
+λ6|ΩR|.
+By our assumption in Section 2 thatλ≥Rβ/2, we get
+λp|Uλ∩Λ k|⪅Rp
+2β|ΩR|.
+Alternatively, now suppose Rk> Rαif any scales exist. By Corollary 7.2 and (6), we
+get
+λ8|Uλ∩Λ k|⪅R4βR3β−α
+R2
+kR|ΩR|.
+By Lemma 5.3, this gives
+λp|Uλ∩Λ k|⪅Rp
+2βRβ(7−p
+2)−α−1
+R2
+kλp−8|ΩR|
+⪅Rp
+2βRβ(7−p
+2)−α−1
+R2
+k(R1
+2
+kRβ
+2)p−8|ΩR|
+=Rp
+2βRp
+2−6
+k
+Rα+1−3β|ΩR|.
+Noteα+ 1 =β p
+2−3
+. Sincep >12, this gives
+Rp
+2−6
+k
+Rα+1−3β=Rk
+Rβp
+2−6
+≤1.
+Hence, we getλp|Uλ∩Λ k|⪅Rp
+2β|ΩR|.
+8.3.Case II: R1/3< R k< R4
+p−2.Let Rk=R2
+qwithp−2
+2≤q≤ 6. We split into two
+subcases depending on the size of λ. First, suppose λ≥R k. By Corollary 7.2 and (6),
+we get
+λ8|Uλ∩Λ k|⪅R4βRβ(q−3)+1
+R3
+kλ2q−6|ΩR|max
+1,Rk
+Rα
+.
+Sinceq≥p−2
+2, we get
+λp|Uλ∩Λ k|⪅Rp
+2βRβ(q+1−p
+2)+1
+R3
+kλ2q−p+2|ΩR|max
+1,Rk
+Rα
+≤Rp
+2βRβ(q+1−p
+2)+1
+R3
+kR2q−p+2
+k|ΩR|max
+1,Rk
+Rα
+=== PAGE 20 ===
+20 JACOB GLIDEWELL
+=Rp
+2βRβ(q+1−p)+p
+2β+1
+R2q−p+5
+k|ΩR|max
+1,Rk
+Rα
+=Rp
+2βRβ(q+1−p)+3β+α+2
+R2q−p+5
+k|ΩR|max
+1,Rk
+Rα
+=Rp
+2βRβ(q+4−p)
+Rq−p+4
+k·R2Rα
+Rq+1
+k|ΩR|max
+1,Rk
+Rα
+.
+NoteRq
+k=R2and that
+Rα
+Rkmax
+1,Rk
+Rα
+≤maxRβ
+Rk,1
+.
+Forp≥11≥q+ 5, we haveRk
+Rβp−q−5
+≤1.
+These give λp|Uλ∩Λk|⪅Rp
+2β|ΩR|.Also for p <11, note α≤1
+4<1
+3so,Rk> Rαand
+our estimate becomes
+λp|Uλ∩Λ k|⪅Rp
+2β|ΩR|Rk
+Rβp−q−4
+≤Rp
+2β|ΩR|.
+Alternatively, supposeλ≤R k. By Corollary 7.2 and (6), we get
+λ8|Uλ∩Λ k|⪅R4βRβ(q−3)+1
+R2q−3
+k|ΩR|max
+1,Rk
+Rα
+.
+Therefore,
+λp|Uλ∩Λ k|⪅Rp
+2βRβ(q+1−p
+2)+1
+R2q−p+5
+k|ΩR|max
+1,Rk
+Rα
+which is the same estimate as above so we proceed the same and get λp|Uλ∩Λk|⪅
+Rp
+2β|ΩR|.
+8.4.Case III: Rk> R4
+p−2.Let Rk=R2
+qwith2
+β≤q <p−2
+2if any such scales exist. As
+in Case II, we have
+λp|Uλ∩Λ k|⪅Rp
+2βRβ(q+1−p
+2)+1
+R3
+kλp−2−2q|ΩR|max
+1,Rk
+Rα
+.
+By Lemma 5.3,
+λp−2−2q⪅Rp
+2−1−q
+k Rβ(p
+2−1−q)=1
+R2Rp
+2−1
+kRβ(p
+2−1−q).
+Thus,
+λp|Uλ∩Λ k|⪅Rp
+2βRp
+2−1
+k
+R3
+kR|ΩR|max
+1,Rk
+Rα
+.
+=== PAGE 21 ===
+SMALL-CAP DECOUPLING INR421
+Note
+Rp
+2−4
+k
+R≤(Rβ)α+1
+β−1
+R=Rα
+Rβ,
+and so we getλp|Uλ∩Λ k|⪅Rp
+2β|ΩR|.
+9.Broad-to-linear Reduction - Proof of Theorem 1.2
+Up to this point, we have shown Theorem 1.3. Let us restate: for any τ1, . . . , τ 4caps
+with|τ i| ∼1and∼1-separated, we have
+(8)∥min
+1≤i≤4|Fτi|∥p
+Lp(ΩR)⪅Rβp
+2|ΩR|max
+γ∥Fγ∥p
+∞.
+To show the linear inequality for p≥11, we follow an argument similar to [9, Section
+2]. LetC(R)be the best constant satisfying
+∥F∥p
+Lp(ΩR)≤C(R)Rβp
+2|ΩR|max
+γ∥Fγ∥p
+∞.
+By iterating the following inequality, we have the desired conclusionC(R)⪅1.
+Lemma 9.1.For anyϵ >0,
+C(R)≲ ϵC(R1−ϵ) +R1000ϵ.
+Proof.Fixϵ >0and letK∼Rϵβ. By a standard broad-narrow argument, we have
+∥F∥p
+Lp(ΩR)≲X
+|τ|=K−1∥Fτ∥p
+Lp(ΩR)+K100X
+|τi|=K−1
+d(τi,τj)≥1
+10K−1∥min
+1≤i≤4|Fτi|∥p
+Lp(ΩR),
+where the first sum is over all caps τwith length1
+Kand the second sum is over all
+quadruples of caps( τ1, τ2, τ3, τ4)with length1
+Kand1
+10Kseparated. The narrow term we
+compute by rescaling and the induction hypothesis. Indeed, fix τand let Tbe an affine
+transformation rescaling τto the full moment curve over[1
+2,1]and bG(ξ) =bF(T−1ξ).
+Note|detT| ∼K10. This gives
+∥Fτ∥p
+Lp(ΩR)≲1
+K10(p−1)∥G∥p
+Lp(T−1(ΩR)).
+Note thatT−1(ΩR)is roughly a
+R
+K×R
+K2×R
+K3×Rα
+K4
+regular box. We will trivially extend this to a
+R
+K×R
+K2×R
+K1
+β×Rα
+Kα
+β
+regular box. Applying the induction, we get
+∥G∥p
+Lp(T−1(ΩR))≲C(R
+K1
+β)R
+K1
+ββp
+2|ΩR|
+K3+α+1
+βmax
+|γ′|=KR−β∥Gγ′∥p
+∞
+=C(R
+K1
+β)Rβp
+2
+Kp|ΩR|max
+|γ′|=KR−β∥Gγ′∥p
+∞.
+=== PAGE 22 ===
+22 JACOB GLIDEWELL
+By reversing the change of variables, we get
+max
+|γ′|=KR−β∥Gγ′∥p
+∞≲K10pmax
+γ∥Fγ∥p
+∞.
+We combine the previous inequalities to get
+X
+|τ|=K−1∥Fτ∥p
+Lp(ΩR)≲1
+Kp−11C(R/K1/β)Rβp
+2|ΩR|max
+γ∥Fγ∥p
+∞.
+Sincep≥11, we get
+1
+Kp−11≤1,
+and so, we get the correct bound for the narrow term. By a similar rescaling argument
+and using (8), we also get
+K100X
+|τi|=K−1
+d(τi,τj)≥1
+10K−1∥min
+1≤i≤4|Fτi|∥p
+Lp(ΩR)⪅KO(1)Rβp
+2|ΩR|max
+γ∥Fγ∥p
+∞.
+□
+10.Proof of Corollary 1.4
+LetB= [0, Na]3×[0, Nb]andB 0= [0, Na]4. By periodicity, it suffices to show
+Z
+BX
+n∼Ncne(x·Φn
+N
+)p
+dx⪅Np
+2|B|.
+We aim to apply Theorem 1.2. Let R=Na,β=1
+a, and α=b
+a. Note β∈[1
+3,1
+2]
+andα≤β. Moreover, let fbe a Schwartz function such that f(x)≳1B0(x)andbfis
+supported on[0,1
+100R]4. Let
+F(x) =X
+n∼Ncne(x·Φn
+N
+)f(x).
+We get the desired Fourier support:
+bF(ξ) =X
+n∼Ncnbf(ξ−Φn
+N
+).
+Therefore, by Theorem 1.2,
+Z
+BX
+n∼Ncne(x·Φn
+N
+)p
+dx≲Z
+B|F|p⪅Rβp
+2|B|=Np
+2|B|.
+=== PAGE 23 ===
+SMALL-CAP DECOUPLING INR423
+References
+[1]Jean Bourgain. Decoupling, exponential sums and the Riemann zeta function.J. Amer. Math.
+Soc., 30(1):205–224, 2017.
+[2]Jean Bourgain and Ciprian Demeter. The proof of the l2decoupling conjecture.Ann. of Math.
+(2), 182(1):351–389, 2015.
+[3]Jean Bourgain, Ciprian Demeter, and Larry Guth. Proof of the main conjecture in Vinogradov’s
+mean value theorem for degrees higher than three.Ann. of Math. (2), 184(2):633–682, 2016.
+[4]Ciprian Demeter.Fourier restriction, decoupling, and applications, volume 184 ofCambridge
+Studies in Advanced Mathematics. Cambridge University Press, Cambridge, 2020.
+[5]Ciprian Demeter. On L12square root cancellation for exponential sums associated with nondegen-
+erate curves inR4.Trans. Amer. Math. Soc., 375(11):7715–7746, 2022.
+[6]Ciprian Demeter, Larry Guth, and Hong Wang. Small cap decouplings.Geom. Funct. Anal.,
+30(4):989–1062, 2020. With an appendix by D. R. Heath-Brown.
+[7]Larry Guth and Dominique Maldague. Amplitude dependent wave envelope estimates for the
+cone inR3.https://arxiv.org/abs/2206.01093, 2022.
+[8]Larry Guth and Dominique Maldague. Small cap decoupling for the moment curve in R3.Anal.
+PDE, 17(10):3551–3588, 2024.
+[9]Dominique Maldague and Changkeun Oh. On the small cap decoupling for the moment curve in
+R3.https://arxiv.org/abs/2411.18016, 2024.
+[10]Trevor D. Wooley. The cubic case of the main conjecture in Vinogradov’s mean value theorem.
+Adv. Math., 294:532–561, 2016.
+Dept. of Mathematics, Indiana University, Bloomington, IN, 47405-7106, USA
+Email address:jaglide@iu.edu

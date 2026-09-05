@@ -1,0 +1,587 @@
+=== PAGE 1 ===
+arXiv:1405.0335v1  [cond-mat.str-el]  2 May 2014Spin-Polarized-Current State of Electrons in Bilayer Grap hene
+Xin-Zhong Yan1and C. S. Ting2
+1Institute of Physics, Chinese Academy of Sciences, P.O. Box 603, Beijing 100190, China
+2Texas Center for Superconductivity, University of Houston , Houston, Texas 77204, USA
+(Dated: June 22, 2021)
+We propose a model of spin-polarized-current state for elec trons in bilayer graphene. The model
+resolves the puzzles as revealed by experiments that (a) the energy gap Egapof the insulating ground
+state at the charge neutrality point (CNP) can be closed by a p erpendicular electric ﬁeld of either
+polarity, (b) Egapincreases signiﬁcantly with increasing the magnetic ﬁeld B, (c) the particle-hole
+spectrum is asymmetric in thepresence of B, (d)there is apeak structure in theelectric conductivity
+at small Bat the CNP, and (e) there are quantum Hall states stemming fro m lifting of degeneracy
+in the lowest Landau level. The model predicts that the groun d state of the system close to the
+CNP is a ferrimagnet at ﬁnite Band the Hall current is spin polarized.
+PACS numbers: 73.22.Pr,71.70.Di,71.10.-w,71.27.+a
+Recently, the bilayer graphene (BLG) has been stud-
+ied extensivelybecauseofits potentialapplicationtonew
+electronic devices.1–4Many experiments5–8performed on
+high quality suspended BLG samples have shown strong
+evidence for the gapped ground state of electrons at the
+charge neutrality point (CNP). The main experimental
+ﬁndings are: (i) the ground state is insulating with a gap
+that can be closed by a perpendicular electric ﬁeld of
+either polarity, (ii) the gap grows with increasing mag-
+netic ﬁeldBasEgap= ∆0+/radicalbig
+a2B2+∆2
+0with ∆ 0≈1
+meV anda≈5.5 meVT−1, (iii) the state is particle-hole
+asymmetric in the presence of the magnetic ﬁeld B, (iv)
+there is a peak structure in the electric conductivity at
+smallB≈0.04T at the CNP, and (v) there are quan-
+tum Hall states ( ν= 0,±1,±2 and±3) stemming from
+lifting of degeneracy in the lowest Landau level. These
+experimental observationsare still puzzles to the existing
+theories1,2,9–16including the models of the ferroelectric-
+layer asymmetric state9,10or quantum valley Hall state
+(QVH),12layer-polarizedantiferromagneticstate(AF),13
+quantum anomalous Hall state (QAH),11,14,15quantum
+spin Hall state (QSH),11,15and ordered-current state
+(OCS).1,2,16The QVH, QAH and QSH states all have
+been ruled out by the experiment.7It is shown that the
+AF state is not able to reproduce the gap growth with
+B.2The carrier density position of the gap given by the
+OCS deviates from the CNP at ﬁnite Band the OCS
+cannot correctly explain (v).
+In this work, we propose a model of spin-polarized-
+current state (SPCS) for the electrons in BLG. We study
+the order parameters, the gap behavior, and the energy
+levels of the SPCS in the presence of the magnetic ﬁeld.
+We will show that the experimental observations (i)-(v)
+stated above can be explained by the present theory.
+With the theory, we will also give new predictions.
+The Hamiltonian. The unit cell of the BLG lattice
+shown in Fig. 1 contains atoms aandbon top layer, and
+a′andb′on bottom layer with lattice constant a≈2.4
+˚A and interlayer distance d≈3.34˚A. The energy of in-
+tralayernearest-neighbor(NN) [between a(a′) andb(b′)]
+and interlayer NN (between banda′) electron hoppingaretandt1, respectively. From the density-functional
+calculation19and the experiments,20the values of these
+quantities are determined in the ranges: 2.8 eV < t <
+3.1 eV and 0.27 eV <t1<0.4 eV. We here take t= 3 eV
+andt1= 0.273 eV. The Hamiltonian of the continuum
+model for the noninteracting electrons is
+H0=/summationdisplay
+vkσC†
+vkσH0
+vkCvkσ (1)
+withC†
+vkσ= (c†
+avkσ,c†
+bvkσ,c†
+a′vkσ,c†
+b′vkσ) andH0
+vk=
+ǫ0(svkxσx−kyσy)τ0−t1(σ−τ++σ+τ−), wherec†
+lvkσ
+creates a spin- σelectron of momentum kin valleyv[=
+K≡(4π/3a,0) orK′=−K] of sublattice l,kis mea-
+sured from the Dirac point K(K′) and conﬁned to a
+circlek≤1/ainK(K′) valley,sv= 1 (-1) for v=K
+(K′),ǫ0=√
+3t/2, the Pauli matrices σ’s operate in ( a,b)
+or (a′,b′) space, and τ’s in the space of (top, bottom)
+layers. We hereafter use the units of ǫ0=a= 1.
+The interaction part of the Hamiltonian is
+H′=U/summationdisplay
+ljδnlj↑δnlj↓+1
+2/summationdisplay
+li/negationslash=l′jvli,l′jδnliδnl′j(2)
+whereδnliσ=nliσ−n/2 is the number deviation of elec-
+trons with spin σfrom the averageoccupation n/2 at site
+iof sublattice l,δnli=δnli↑+δnli↓, andUandv’s are
+the interactions between electrons. The oﬀ-site interac-
+tions here are given as v(r) =e2[1−exp(−q0r)]/rwhere
+r=|/vector r|with/vector ras a vector from litolj, andq0is a pa-
+rameter that approximately takes into account the wave-
+function spreading eﬀect in short range. According to
+the many-particle theory, since the exchange self-energy
+of electrons contains the screening due to the electronic
+charge ﬂuctuations, we adopt the eﬀective exchange in-
+teraction
+vxc(r) =e2
+r(1+αqsr+q2sr2)(3)
+whereqs= 2πe2χ0is the screening constant with χ0=
+t1ln4/π(aǫ0)2the polarizability by the random-phase-
+approximation (RPA),21andαis an adjustable parame-
+ter. Note that the form of vxc(r) is consistent with the
+=== PAGE 2 ===
+2
+RPA in the limit r→ ∞. The total Hamiltonian H0+H′
+satisﬁes the particle-hole symmetry.22
+Self-energy of electrons. The self-energy Σσ
+ll′(k) con-
+tains the Hartree and exchange terms. The oﬀ-diagonal
+part of the self-energy comes from the exchanges and
+results in a renormalization of H0
+vk. We will drop this
+part by supposing that it has already been included
+inH0
+vk. The Hartree terms in the diagonal part stem
+from the density orderings /angb∇acketleftδnljσ/angb∇acket∇ight’s. In terms of the or-
+derings of spin ml= (/angb∇acketleftδnlj↑/angb∇acket∇ight − /angb∇acketleftδnlj↓/angb∇acket∇ight)/2 and charge
+ρl=/angb∇acketleftδnlj↑/angb∇acket∇ight+/angb∇acketleftδnlj↓/angb∇acket∇ight, we have /angb∇acketleftδnljσ/angb∇acket∇ight=σml+ρl/2 with
+σ= + (-) for spin up (down). Since the charge ordering
+ρlis the deviation from the average electron concentra-
+tionn, thoseρl’s satisfy the relations ρa=−ρb′and
+ρb=−ρa′. The exchange self-energy in the diagonal
+part is due to the average /angb∇acketleftcliσc†
+ljσ/angb∇acket∇ight=Rlσ(r) +iIlσ(/vector r).
+The imaginary part Ilσ(/vector r) is proportional to a current
+that breaks the time-reversal symmetry. In the previous
+work,2we neglected the spin dependence in /angb∇acketleftcliσc†
+ljσ/angb∇acket∇ight.
+Here, wekeepthespindependenceinthisaverage. Under
+the mean-ﬁeld approximation and neglecting the terms
+of orders ≤O(k), the self-energy in the diagonal part is
+obtained as
+Σσv
+ll=ǫl−σu0ml−sv∆lσ−vcδ/2 (4)
+whereǫlisduetothechargeordering,∆ lσstemsfromthe
+current ordering, δ=n−1, andu0andvcare eﬀective
+interactions [see the supplementary material (SM)23]. In
+terms ofρl,ǫl’s are given by ǫa=vaaρa+vabρb,ǫb=
+vbbρb+vbaρa,ǫb′=−ǫa, andǫa′=−ǫb. The interactions
+vaa,vbbandvab=vbaare deﬁned in SM.23The order
+parameters ρl,mland ∆ lσare determined by
+ρl=1
+2N/summationdisplay
+vkσ(/angb∇acketleftc†
+lvkσclvkσ/angb∇acket∇ight−/angb∇acketleftc†
+¯lvkσc¯lvkσ/angb∇acket∇ight) (5)
+ml=1
+2N/summationdisplay
+vkσσ/angb∇acketleftc†
+lvkσclvkσ/angb∇acket∇ight (6)
+∆lσ=vs
+N/summationdisplay
+vksv/angb∇acketleftc†
+lvkσclvkσ/angb∇acket∇ight (7)
+whereNis the total number of the unit cells, the ksum-
+mations run over a single valley, the sublattice ¯lmeans
+that ¯a=b′and¯b=a′and vis-` a-vis, and vsis an eﬀective
+interaction (see SM23).
+The SPCS at the CNP with B = 0. At the CNP and
+in the absence of external electric and magnetic ﬁeld, we
+expect the gap stems only from the current ordering and
+impose the conditions ∆ lσ=−∆¯lσand ∆ l↑=−∆l↓on
+the solution. The gap between the valence and conduc-
+tionbandsis2 |∆aσ|. Toreproducetheexperimentaldata
+∆0= 1 meV,vsneeds to be 6.372. With this condition,
+the adjustable parameter αinvxc(r) given by Eq. (3)
+is determined as 4.69. The other interaction parameters
+are determined as u0= 6.38,vc= 5.38,vaa≈vbb= 3.3
+andvab=vba= 6.58 (by taking q0= 0.5/a, see SM23).
+With these parameters, we obtain ρl=ml= 0 except
+∆lσbeing ﬁnite.ab (a’)b’y
+x
+FIG. 1: (Color online) Top view of the bilayer graphene.
+Atomsa(a′) andb(b′) are on the top (bottom) layer.
+The relation ∆ l↑=−∆l↓means that the current ﬂows
+in opposite direction for opposite spin. Therefore, the
+system is in the spin-polarized-current state.
+The SPCS at ﬁnite B. Under the magnetic ﬁeld Bap-
+pliedperpendicularlytotheBLGplane,thevectorpoten-
+tial is/vectorA= (0,Bx). By using the raising and lowering op-
+eratorsa†andaforthe variable x+ky/B= (a†+a)/√
+2B
+and the operator kx=−i∇x=i/radicalbig
+B/2(a†−a), the oper-
+atorsvkx+i(ky+Bx) inH0
+vkbecomesi√
+2Ba†forv=K
+ori√
+2Baforv=K′. The eigenfunction is expressed as
+ψµ
+vnσ= ΦvnXµ
+vnσwithµas the band index, and Φ vn(a
+4×4 diagonal matrix) and Xµ
+vnσ(a 4-component vector
+normalized to unity) are deﬁned as
+Φvn= Diag(iφn−1+sv,φn−1,φn−1,−iφn−1−sv)
+Xµ
+vnσ= (x1µ
+vnσ,x2µ
+vnσ,x3µ
+vnσ,x4µ
+vnσ)t,
+whereφnis thenth level wave function of a harmonic
+oscillator centered at xc=−ky/B, and the superscript t
+means the transpose of the vector. Here, when the sub-
+scriptnofφnis negative, the corresponding component
+inXµ
+vnσis understood as zero. Especially, for n= 0,
+there is only one state of energy ΣσK
+aa(ΣσK′
+b′b′) atK(K′)
+valley with the electrons stayingon a(b′) sublattice. The
+vectorXµ
+vnσand the eigenenergy Eµ
+vnσare determined by
+HvnσXµ
+vnσ=Eµ
+vnσXµ
+vnσ, with
+Hvnσ=
+Σσv
+aaǫ+
+vn0 0
+ǫ+
+vnΣσv
+bb−t10
+0−t1Σσv
+a′a′ǫ−
+vn
+0 0ǫ−
+vnΣσv
+b′b′
+
+andǫ±
+vn=/radicalbig
+B(2n−1±sv). Theksummations in
+Eqs. (5)-(7) for self-consistently determining the order
+parameters are now changed to summations over the y-
+component momentum kyand the Landau states.2
+The solution at δ= 0 to the order parameters ∆ lσ
+andmlare plotted in Fig. 2. At the CNP, these pa-
+rameters satisfy the relationships: ∆ lσ=−∆¯lσand
+ml=m¯l, while the charge ordering parameters ρlvan-
+ish. As shown in left panel of Fig. 2, the magnitudes
+=== PAGE 3 ===
+3
+B (T)0 1 2 3 4Δl+ /Δ0
+051015
+Δa'+Δa+B (T)0 1 2 3Δl-/Δ0
+-1.0-0.50.00.5
+Δa-
+Δa'-
+B (T)0 1 2 3 4
+ml (10-4)
+-1.0-0.50.00.51.01.5
+ma , mb'
+mb , ma'
+FIG. 2: (Color online)(Left) Orderparameter ∆ lσas function
+of magnetic ﬁeld B. The main panel shows the result for spin-
+up electrons. The inset is for spin-down electrons. (Right)
+Spin polarization mlof sublattice las function of magnetic
+ﬁeldB.
+of the current parameters ∆ l+= ∆l↑for spin-up elec-
+trons increases with B, but the magnitude of ∆ l−= ∆l↓
+for spin-down electrons decreases with Bin a small in-
+terval ofBclose to zero; ∆ l−vanishes at B≈0.15 T
+and then very slowly increases with B. The behaviors of
+∆lσcan be understood by simply looking into the prop-
+erty of the n= 0 state. As noted above, the energy
+of the state is ΣσK
+aa=−σmau0−∆aσatKvalley or
+ΣσK′
+b′b′=−σmb′u0+∆b′σatK′valley. The energy is neg-
+ative for spin-up electrons, while it is positive for spin-
+down electrons. At zero temperature and at the CNP,
+the latter state is empty. Therefore, the magnetic ﬁeld
+enhances ∆ l↑but suppresses ∆ l↓.
+Becausethere aremore negativeenergy states for spin-
+up electrons than for spin-down electrons at ﬁnite Band
+at the CNP, the system has a total net spin. It is seen
+from right panel of Fig. 2, the system is a ferrimagnet
+with the sublattices aandb′being equally spin-up or-
+dered and the banda′sublattices spin-down ordered.
+The magnitude of the spin polarization mlis approx-
+imately linear in B. The magnetization comes solely
+from the orbital current ordering but not the Zeeman
+splitting. The Zeeman splitting has been neglected here
+because the orbital eﬀect is about 46 times larger than
+it. The ‘spin-up’ here merely means its current ordering
+parameter ∆ a↑is positive.
+TheLandaulevelsintheconductionandvalencebands
+close to zero at B= 1 T are shown in Fig. 3. At the
+CNP, because of ρl= 0 andml=m¯land ∆ lσ=−∆¯lσ,
+the energy levels are degenerated for exchanging the two
+valleys. On the other hand, the levels are diﬀerent for
+diﬀerent spins because of the spin polarization and the
+diﬀerent current orderings. The obvious diﬀerence ap-
+pears at the levels of n= 0 and 1. The energy levels of n
+= 1 are determined by the upper-left (lower-right) 3 ×3
+matrix ofHK1σ(HK′1σ). To order O(B), the level of n
+= 1 nearly degenerated with the level ΣσK
+aaofn= 0 is(2nB/B0)1/20.00 0.01 0.02 0.03Evnσ /Δ0
+-20-1001020
+Spin up
+B = 1 T
+n = 0n = 1n = 2
+(2nB/B0)1/20.00 0.01 0.02 0.03Spin down
+K valley
+K' valleyn = 0n = 1
+n = 2
+FIG. 3: (Color online) Landau levels Eµ
+vnσin the valence
+and conduction bands at B= 1 T. The lines represent the
+continuum conduction (solid) and valence (dashed) bands at
+B= 0 with momentum kas the abscissa.
+obtained approximately as
+EK1σ≈ΣσK
+aa+2B(ΣσK
+a′a′−ΣσK
+aa)/t2
+1. (8)
+Theperturbation EK1σ−ΣσK
+aaispositiveforspin-upelec-
+trons but negative for spin-down electrons. By viewing
+the energy levels, the energy gap at the CNP is found as
+the diﬀerence between Ec
+K1↓in the conduction band and
+Ev
+K2↓in the valence band,
+Egap=Ec
+K1↓−Ev
+K2↓. (9)
+Comparison with experiments. (i) By experiment,7the
+gap is measured through the electric conductivity with a
+source-drain voltage applied to the sample. During such
+an electric transport process, the spin should not be al-
+tered and the gap should be given by Eq. (9). The gap
+is shown as a function of Bin Fig. 4. Except a dip at
+B≈0.15 T, the theory reproduces satisfactorily the ex-
+perimental result.7(ii) Though the dip is not observed
+in Ref. 7, the appearance of the dip is in qualitatively
+agreement with the observation by Weitz et al..5The lat-
+ter experiment shows that there is peak structure in the
+electric conductivity at |B| ≈0.04 T, which implies the
+dip in the energy gap. (iii) On the other hand, the en-
+ergy bands have no particle-hole symmetry, which is in
+agreement with the experiment.7(iv) Because the lev-
+els ofn= 0 and 1 of spin-up electrons in the valence
+band are occupied while their counterparts of spin-down
+electrons in the conduction band are empty, we have ob-
+tained the insulating state with ν= 0 at the CNP. This
+is diﬀerent from the previous OCS model2by which the
+levelsn= 0 and 1 are degenerated for both spins and all
+are occupied (empty) when they are negative (positive).
+Thus, the electron density of the gapped state given by
+the previous model cannot not be viewed at the CNP. (v)
+Finally, the gap can be closed by perpendicular electric
+ﬁeld in either direction. To see it, we apply voltages ±V
+respectively to the top and bottom layers. This causes
+=== PAGE 4 ===
+4
+B (T)0 1 2 3 4 5Egap / 2Δ0
+051015
+Exp
+SPCS
+FIG. 4: (Color online) Energy gap Egapat CNP as function
+ofBcompared with the experimental result (Exp)7.
+charge polarization between the two layers. The quan-
+tityǫlin Eq. (4) now includes the voltage and the charge
+ordering eﬀect (and is ﬁnite). For positive (negative) V,
+we get positive (negative) ǫa. The level Σ↑K
+aa(Σ↑K′
+b′b′) in
+the valence band raises,while the levelΣ↓K′
+b′b′(Σ↓K
+aa) in the
+conductionbanddecreases. At certain V, thephasetran-
+sition with the particle distribution changing in the top
+level of the valence band and bottom level of conduction
+band happens and the gap closes.2
+Quantum Hall states (QHS) of integer |ν| ≤4.By
+doping electrons, the level Ec
+K1↓orEc
+K′1↓is ﬁrstly ﬁlledwith spin-down electrons. The occupation of level Ec
+K1↓
+(Ec
+K′1↓) close to Σ↓K
+aa(Σ↓K′
+b′b′) means that the sublattice
+a(b′) is mostly occupied. Therefore, if the level Ec
+K1↓is
+ﬁlled, there will exist charge ordering with ρa>0 and
+ρb<0, resulting in ǫa<0 andEc
+K1↓< Ec
+K′1↓. This is
+the state of ν= 1. Analogously, we can analyzethe other
+states of integer |ν| ≤4. The key point is that under the
+carrier doping the valley degeneracy of the Landau levels
+is lifted by the charge orderings ρl/negationslash= 0 (see SM23). The
+appearance of these QHS is in qualitatively agreement
+with the experimental observations.24,25
+Prediction. As stated above, the system is a ferrimag-
+netatthe CNPunderthemagneticﬁeld. Moreover,since
+the Hall states of ν= 1, 2, 3 and 4 correspond to the oc-
+cupations of levels of n= 0 and 1 in the conduction band
+with spin-down electrons, the Hall current in these states
+is spin-down polarized. On the other hand, the Hall cur-
+rent in the states of ν= -1, -2, or -3 is spin-up polarized
+because the states of n= 0 and 1 in the valence band are
+for spin-up electrons.
+Summary. On the basis of the four-band contin-
+uum Hamiltonian, we have proposed a model of spin-
+polarized-current state for the interacting electrons in
+BLG. The model can explain the experimental observa-
+tions (i)-(v) as stated in the beginning of the paper. The
+model predicts that (a) the ground state of the system
+close to the CNP is a ferrimagnet at ﬁnite Band (b) the
+Hall current is spin polarized.
+This work was supported by the National Basic
+Research 973 Program of China under Grants No.
+2011CB932700 and No. 2012CB932302, and the Robert
+A. Welch Foundation under Grant No. E-1146.
+1T. Ohta, A. Bostwick, T. Seyller, K. Horn, E. Rotenberg,
+Science313, 951 (2006).
+2J. B. Oostinga, H. B. Heersche, X. Liu, A. F. Morpurgo,
+and L. M. K. Vanderspen, Nature Mater. 7, 151 (2008).
+3E. McCann, Phys. Rev. B 74, 161403(R) (2006).
+4E. V. Castro, K. S. Novoselov, S. V. Morozov, N. M. R.
+Peres, J. M. B. L. dos Santos, J. Nilsson, F. Guinea, A. K.
+Geim, and A. H. Castro Neto, Phys. Rev. Lett. 99, 216802
+(2007).
+5R. T. Weitz, M. T. Allen, B. E. Feldman, J. Martin, and
+A. Yacoby, Science 330, 812 (2010).
+6F. Freitag, J. Trbovic, M. Weiss, and C. Sch¨ onenberger,
+Phys. Rev. Lett. 108, 076602 (2012).
+7J. Velasco Jr., L. Jing, W. Bao, Y. Lee, P. Kratz, V. Aji, M.
+Bockrath, C. N. Lau, C. Varma, R. Stillwell, D. Smirnov, F.
+Zhang, J. Jung, and A. H. MacDonald, Nature Nanotech.
+7, 156 (2012).
+8W. Bao, J. Velasco Jr., L. Jing, F. Zhang, B. Standley, D.
+Smirnov, M. Bockrath A. H. MacDonald, and C. N. Lau,
+Proc. Natl. Acad. Sci. USA 109, 10802 (2012).
+9H. K. Min, G. Borghi, M. Polini, and A. H. MacDon-
+ald, Phys. Rev. B 77, 041407(R) (2008); F. Zhang, H.
+K. Min, M. Polini, and A. H. MacDonald, Phys. Rev. B
+81, 041402(R) (2010); A. H. MacDonald, J. Jung, and F.Zhang, Phys. Scr. T146, 014012 (2012).
+10R. Nandkishore and L. Levitov, Phys. Rev. Lett. 104,
+156803 (2010).
+11J. Jung, F. Zhang, and A. H. MacDonald, Phys. Rev. B
+83, 115408 (2011).
+12F. Zhang and A. H. MacDonald, Phys. Rev. Lett. 108,
+186804 (2012).
+13E. V. Gorbar, V. P. Gusynin, V. A. Miransky, and I. A.
+Shovkovy, Phys. Rev. B 85, 235460 (2012).
+14R. Nandkishore and L. Levitov, Phys. Rev. B 82, 115124
+(2010).
+15F. Zhang, J. Jung, G. A. Fiete, Q. Niu, and A. H. Mac-
+Donald, Phys. Rev. Lett. 106, 156801 (2011).
+16L. J. Zhu, V. Aji, and C. M. Varma, Phys. Rev. B 87,
+035427 (2013).
+17X.-Z. Yan and C. S. Ting, Phys. Rev. B 86, 235126 (2012).
+18X.-Z. Yan and C. S. Ting, Phys. Rev. B 88, 045410 (2013).
+19R. C. Tatar and S. Rabii, Phys. Rev. B 25, 4126 (1982).
+20L. M. Zhang, Z. Q. Li, D. N. Basov, M. M. Fogler, Z. Hao
+and M. C. Martin, Phys. Rev. B 78, 235408 (2008).
+21E. H. Hwang and S. Das Sarma, Phys. Rev. Lett. 101,
+156802 (2008).
+22X.-Z. Yan and C. S. Ting, Phys. Rev. B 86, 125438 (2012).
+23See Supplemental Material at [URL will be inserted by
+=== PAGE 5 ===
+1
+publisher] for the details of the Hartree approximation and
+the results for the Landau levels of spin-down electrons and
+the corresponding charge orderings of the ν= 1 quantum
+Hall state.
+24H. J. van Elferen, A. Veligura, E. V. Kurganova, U. Zeitler,J. C. Maan, N. Tombros, I. J. Vera-Marun, and B. J. van
+Wees, Phys. Rev. B 85, 115408 (2012).
+25J. Velasco Jr., Y. Lee, Z. Zhao, L. Jing, P. Kratz, M. Bock-
+rath, and C. N. Lau, arXiv.1303.3649.
+Supplementary Material for ‘Spin-polarized-current stat e of electrons in bilayer graphene’
+1. Approximation for the self-energy. The interaction part of the Hamiltonian is
+H′=U/summationdisplay
+ljδnlj↑δnlj↓+1
+2/summationdisplay
+li/negationslash=l′jvli,l′jδnliδnl′j (1)
+whereδnliσ=nliσ−n/2 is the number deviation of electrons with spin σfrom the average occupation n/2 at sitei
+of sublattice l,δnli=δnli↑+δnli↓,Uis the on-site interaction, and vli,l′jis the interaction between electrons at sites
+liandl′j.
+According to the renormalized-ring-diagram approximation1, the self-energy of electrons is given in Fig. 1. Here,
+for simplifying our calculation, we use an eﬀective static exchange int eraction as given by Eq. (3) in the main text
+taking into account the screening eﬀect due to electronic charge ﬂ uctuations.
+The Hartree terms in the diagonal part of the self-energy stem fr om the density orderings /angb∇acketleftδnljσ/angb∇acket∇ight’s. In terms of the
+orderings of spin ml= (/angb∇acketleftδnlj↑/angb∇acket∇ight−/angb∇acketleftδnlj↓/angb∇acket∇ight)/2 and charge ρl=/angb∇acketleftδnlj↑/angb∇acket∇ight+/angb∇acketleftδnlj↓/angb∇acket∇ight, we have /angb∇acketleftδnljσ/angb∇acket∇ight=σml+ρl/2 withσ
+= + (-) for spin up (down). Since the charge ordering ρlis the deviation from the average electron concentration n,
+thoseρl’s satisfy the relations ρa=−ρb′andρb=−ρa′. The Hartree approximation reads
+H′≈/summationdisplay
+liσ
+Uρl/2−σUml+/summationdisplay
+l′j/negationslash=livli,l′jρl′
+δnliσ.
+The Hartree term in the self-energy is
+ΣσH
+ll=Uρl/2−σUml+/summationdisplay
+l′j/negationslash=livli,l′jρl′
+= (ull+U/2)ρl+ul˜lρ˜l−σUml (2)
+where˜lmeans that ˜ a=b,˜b=a, ˜a′=b′, and˜b′=a′, andullandul˜lare interaction parameters. The parameters uaa
+anduab=ubaare deﬁned as
+uaa=−v(|/vector r0|)+/summationdisplay
+/vector r/negationslash=0[v(r)−v(|/vector r+/vector r0|)]
+uab=/summationdisplay
+/vector r[v(|/vector r+/vector r1|)−v(|/vector r+/vector r2|)]
+where the /vector r-summation runs over the asublattice, and /vector r0= (1,1/√
+3,d) and/vector r1= (1/2,1/2√
+3,0) and/vector r2=
+(1/2,1/2√
+3,d) are the vectors from atom ato respectively atoms b′,b, anda′in the unit cell. The parameter
+ubbis deﬁned by
+ubb=−v(d)+/summationdisplay
+/vector r/negationslash=0[v(r)−v(|/vector r+/vectord|)]
+where/vectord= (0,0,d) withdas the interlayer spacing, and the /vector r-summation runs over the bsublattice.
+On the other hand, according to the treatment in the previous wor k2, the exchange self-energy in the diagonal part
+can be obtained as
+Σσv,xc
+ll=−(δ/2+ρl/2+σml)vc−sv∆lσ. (3)
+=== PAGE 6 ===
+2
++ + ··· + =
+FIG. 1: (Color online) Self-energy of electrons. The solid l ine with an arrow represents the Green’s function of electro ns. The
+waveline is the Coulomb interaction v(r). The dashed line is the exchange interaction.
+(2nB/B0)1/20.00 0.01 0.02 0.03Evnσ /Δ0
+-20-1001020
+ν = 1, B = 1 T
+n = 0 n = 1
+n = 2
+K valley
+K' valley
+FIG. 2: (Color online) Landau levels Evnσfor spin-down electrons σ=↓at the two valleys v=KandK′of quantum Hall
+stateν= 1 atB= 1 T.
+with
+∆lσ=vs
+N/summationdisplay
+vksv/angb∇acketleftc†
+lvkσclvkσ/angb∇acket∇ight
+vc=/summationdisplay
+/vector r/negationslash=0vxc(r)cos2(/vectorK·/vector r)
+vs=/summationdisplay
+/vector r/negationslash=0vxc(r)sin2(/vectorK·/vector r)
+whereδis the concentration of doped electrons, the /vector r-summation runs over the asublattice, and vxc(r) is deﬁned in
+the main text.
+By summing ΣσH
+lland Σσv,xc
+ll, we obtain
+Σσv
+ll=ǫl−σu0ml−sv∆lσ−vcδ/2 (4)
+whereǫl’s are given by ǫa= (uaa+U/2−vc/2)ρa+uabρb,ǫb= (ubb+U/2−vc/2)ρb+ubaρa,ǫb′=−ǫa, andǫa′=−ǫb,
+andu0=U+vc.
+With the parameter α= 4.69 invxc(r), we obtain the interaction parameters vc= 5.38,vs= 6.372, reproducing
+the experimental gap ∆ 0= 1 meV. Since a strong on-site interaction Uleads to the AF state and the state does not
+explain the experimental observation, the strength of Ushould be weak. We here take U=ǫ0≈2.66v(a) and obtain
+u0= 6.38.
+Forq0≤0.58/a, the interaction v(r) does not result in charge orderings in the system at the charge ne utrality
+point (CNP) (and the results at the CNP do not depend on q0forq0≤0.58/a). We here take q0= 0.5/aand get
+=== PAGE 7 ===
+3
+B (T)0 1 2 3 4 5ρl (10-4)
+-2-1012
+ρa 
+ρb ν = 1
+FIG. 3: (Color online) Charge orderings ρlas functions of magnetic ﬁeld Bof theν= 1 quantum Hall state.
+uaa≈ubb= 5.495 anduab= 6.577 fromv(r). The interactions vaa=vbbandvab=vbain the text are given as
+vaa=uaa+U/2−vc/2 = 3.3,
+vab=uab= 6.58.
+2. Landau levels of the ν= 1QHS.By doping electrons, the Landau level Ec
+K1↓orEc
+K′1↓can be ﬁrstly ﬁlled with
+spin-down electrons. We here consider the case that the level Ec
+K1↓is ﬁrstly ﬁlled. This is the case that the sublattice
+ais mostly occupied. Figure 2 shows the Landau levels Evnσof spin-down electrons σ=↓of theν= 1 quantum Hall
+state (QHS) at B= 1 T. Due to the charge orderings, the valley ( v=K,K′) degeneracy is lifted. Shown in Fig. 3
+are the corresponding charge orderings ρlas functions of the magnetic ﬁeld B.
+1X.-Z. Yan and C. S. Ting, Phys. Rev. B 86, 125438 (2012).
+2X.-Z. Yan and C. S. Ting, Phys. Rev. B 88, 045410 (2013).
