@@ -64,6 +64,32 @@
 - arg ζ(ρ−1) 与 arg ζ'(ρ) mod π 接近（同号——0.06-0.3——）——但实际反号（符号 ±——）
 - Re ζ'(ρ) > 0（恒——）——"零点的导数结构"新事实——机制未明
 
+## 8. 零曲线几何与 σ=½ 分界（2026-09-05 下午——）
+### u/v 零曲线结构（临界带——）
+- 零点 = u=0（Re ζ=0）与 v=0（Im ζ=0）曲线交点
+- v=0 曲线密集（全带——像竖直帘——23+ 个 t）——u=0 曲线 σ≤½ 密集——σ>½ 急剧减少（逃离——）
+- σ>½ 的 u=0 点（29.86——43.57——47.46——）v 全部非零（错开——无交点——无零点——）
+
+### 机制（为什么 u 逃离而 v 不——）
+- u = 1 + Re(振荡)——u=0 需"幅度条件"（|振荡|>1——）
+- v = Im(振荡)——v=0 只需"相位条件"（经常——）
+- σ>½：振荡受控（u 稀少——）——σ≤½：振荡大（u 密集——）
+
+### ⭐ σ=½ 分界（为什么 ½ 的定量根源——）
+- u=0 密度（沿 t 到 100——）：σ≤0.50 饱和 59——σ=0.55: 29——σ=0.65: 11——σ=0.75: 1——σ≥0.85: 0
+- **分界精确在 σ=½ = ζ(2σ) 的发散点**（ζ(2σ) 在 2σ=1 发散——）——"振荡幅度均方"的临界
+- 机制链：ζ(2σ) 在 σ=½ 发散 ⟹ 振荡幅度（σ≤½）大（u 密集）⟹ σ>½ 振荡受控（u 稀少）⟹ 零点集中在 σ≤½ 分界附近
+
+### 诚实评估
+- σ=½ 分界是"为什么 ½"的最深分析图像（ζ(2σ) 临界——）——但——仍是"统计/理解"非"证明"
+- 零点（u=v=0）需"错开证明"（u=0 与 v=0 在 σ>½ 不同时——）= RH 的一半
+- 密度分界解释"为什么集中"——不证明"无零点（σ>½）"
+
+### 多模型动力学（0-½ ∩ FE——）
+- ζ_X 零点（β<½）的 FE 镜像（1−β+iγ）不是 ζ_X 零点（|ζ_X|≠0——）但小且随 X 减小（0.109→0.024）
+- 零点与镜像"相向而行"在 ½ 合流（合流点=½=唯一自镜像点——）
+- 合流的必要性 = 0-½ ∩ 对称 = ½（若终点 β_ζ<½——镜像 >½ 违反 0-½——矛盾——）
+
 ## 文件
-- scripts/smooth_switch_fast.py, c_gamma_fit.py, extrapolate_beta.py, endpoint_measure.py, kinematics_check.py, force_balance_check.py, force_balance_fast.py, force_balance_wider.py
+- scripts/smooth_switch_fast.py, c_gamma_fit.py, extrapolate_beta.py, endpoint_measure.py, kinematics_check.py, force_balance_check.py, force_balance_fast.py, force_balance_wider.py, zero_curve_geo.py, u0_density.py
 - 本文档——dn-project/docs/switch-process-0half-compression.md
