@@ -1,0 +1,1748 @@
+arXiv:1806.06250v3  [math.NT]  12 Apr 2021
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE
+PELL
+PETER STEVENHAGEN
+Abstract. We discuss the origin, an improved deﬁnition and the key reci-
+procity property of the trilinear symbol introduced by R´edei [16] in the study
+of 8-ranks of narrow class groups of quadratic number ﬁelds. It can be used to
+show that such 8-ranks are ‘governed’ by Frobenius conditions on the primes
+dividing the discriminant, a fact used in the recent work of A. Smith [18,19]. In
+addition, we explain its impact in the progress towards proving my conjectural
+density for solvability of the negative Pell equation x2 −dy2 = −1.
+1. Introduction
+In a 1939 Crelle paper [16], the Hungarian mathematician L´aszl´o R´edei introduced
+a trilinear quadratic symbol [a, b, c] ∈{±1} for quadratic discriminants a, b ∈Z and
+positive squarefree integers c satisfying a number of conditions. He used his symbol
+to describe 8-ranks of quadratic class groups, much in the way he had described the
+4-ranks of these class groups in terms of Legendre symbols in his earlier work [15].
+His deﬁnition of the symbol, as a Jacobi symbol in the quadratic ﬁeld Q(√a),
+is somewhat involved, and seems to depend on many choices. Moreover, it only
+allows for a limited ‘symmetry’ of the symbol in its arguments, as inﬁnite primes
+are disregarded in his deﬁnition.
+An improved deﬁnition in class ﬁeld theoretic terms was proposed in 2007 by Jens
+Corsman [5]. He imposes fewer conditions on the arguments of the symbol, which
+are most conveniently taken in the group Q∗/Q∗2 of non-zero rational numbers
+modulo squares, requiring them to have relative quadratic Hilbert symbols
+(1)
+(a, b)p = (a, c)p = (b, c)p = 1
+at all primes p, and to satisfy the coprimality condition
+(2)
+gcd(∆(a), ∆(b), ∆(c)) = 1
+for the discriminants of the associated quadratic ﬁelds, with ∆(1) = 1. The R´edei
+symbol is then deﬁned as a product [a, b, c] = Q
+p|c[a, b, c]p of ‘local’ symbols at the
+primes p dividing the squarefree integer representing c. It is essential to include
+the inﬁnite prime p = ∞in the product, with ∞|c having the meaning c < 0.
+A correct deﬁnition of [a, b, c]p leads to a striking feature that we baptize R´edei’s
+reciprocity law.
+Date: April 13, 2021.
+2010 Mathematics Subject Classiﬁcation. Primary 11R11, 11R37; Secondary 11R16.
+Key words and phrases. quadratic class group, reciprocity law, governing ﬁeld, negative Pell.
+1
+2
+PETER STEVENHAGEN
+Theorem 1.1. For a, b, c ∈Q∗/Q∗2 satisfying (1) and (2), the R´edei symbol
+[a, b, c] is linear in each of its arguments, and satisﬁes the reciprocity law
+[a, b, c] = [b, a, c] = [a, c, b].
+The R´edei symbol traditionally has its values in {±1}, as it may be computed as
+a Jacobi symbol in a quadratic ﬁeld. Moreover, it has a deﬁnition as a product
+of local symbols that in (48) turn out to be quadratic Hilbert symbols, which
+invariably have values in {±1}, and satisfy a product formula on which the proof
+of Theorem 1.1 is based. However, the R´edei symbol is typically used in a linear
+algebra setting over the ﬁeld of two elements F2. It therefore makes sense to take
+its value in F2, as we will do in our formal Deﬁnition 7.8.
+Part of the perfect symmetry of the symbol [a, b, c] in its arguments is immediate
+from the deﬁnition, as [a, b, c] is an Artin symbol depending on c in a cyclic quartic
+extension K = Q(
+√
+ab) ⊂Fa,b that depends symmetrically on a and b. Symmetry
+involving c is a true reciprocity: we may swap b and c in the symbol by a (non-
+obvious) application of quadratic reciprocity over Q(√a).
+The auxiliary ﬁeld Fa,b occurring in the deﬁnition of [a, b, c], which is only unique
+up to twisting by a ﬁnite group Ta,b of quadratic characters (43), is the most
+complicated ingredient in the deﬁnition. Corsman failed to notice that K ⊂Fa,b
+may be ramiﬁed over 2, and that one has to require minimal ramiﬁcation at 2 for
+K ⊂Fa,b in order for [a, b, c] to be well-deﬁned, independently of the choice of Fa,b.
+In the case of prime arguments a, b, c ≡1 mod 4, no dyadic ramiﬁcation subtleties
+arise, and the symbol has been interpreted by Morishita [13, Section 8.2] as an
+arithmetic Milnor invariant, leading to a description as a triple Massey product
+that is useful in the study of pro-2-extensions of Q with given ramiﬁcation locus [8].
+Although Galois cohomology does play a role in Corsman’s approach to the R´edei
+symbol, its relation to Massey products and the applications of R´edei reciprocity
+to the average behavior of the 2-part of imaginary quadratic class groups in the
+recent work of Smith [18, 19], neither the deﬁnition of the symbol nor the proof
+of its symmetry properties needs it, and we do not use it in this paper. Galois
+cohomology may be needed to ﬁnd generalizations of the R´edei symbol. In fact,
+the linearity properties of the symbol make it one of the rare trilinear maps that
+‘naturally occur’ in mathematics, and it is an interesting question whether the
+symbol has variants having properties of cryptographic interest in the sense of [1].
+In this paper we approach R´edei’s symbol along historical lines, showing how it
+arises in the study of the 2-part of the narrow class group C of a quadratic ﬁeld K
+of discriminant D. Starting from old results in Section 2 on the 2-rank of C, we
+describe the 4-rank of C in terms of the R´edei matrix R4 = R4(D), a matrix
+over the ﬁeld F2 of 2 elements with entries that are essentially F2-valued relative
+Legendre symbols of the primes dividing D (Theorem 3.1). Linear algebra also gives
+the 8-rank of C in terms of a matrix R8 = R8(D) over F2 (Theorem 4.1), but this
+time its entries are (F2-valued) R´edei symbols [d1, d2, m], given in Deﬁnition 4.4 as
+the Artin symbol of an ambiguous ideal in K of norm m in an unramiﬁed cyclic
+quartic extension K = Q(√d1d2) ⊂Fd1,d2 having Q(√d1, √d2) as its intermediate
+quadratic extension. In Section 5, we explicitly compute [d1, d2, m] in a ﬁeld Fd1,d2
+obtained by twisting the ﬁeld F(x, y, z) in (33) associated to a primitive integral
+point on the conic
+x2 −d1y2 −d2z2 = 0
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+3
+by a quadratic character to ensure that K ⊂Fd1,d2 is unramiﬁed at 2.
+Section 6 shows how R´edei’s reciprocity law is suggested by the behavior of small
+examples, and indicates how the general symbol [a, b, c] should be deﬁned in order
+to obtain reciprocity. The precise deﬁnitions are in Section 7, leading to a proof of
+Theorem 1.1 in Section 8.
+As an immediate application of R´edei reciprocity, Section 9 shows, following
+Corsman, how it yields the existence of governing ﬁelds for the 8-rank of class
+groups in 1-parameter families Q(√dp), with d a ﬁxed integer and p a variable
+prime, a result that was originally obtained by diﬀerent means in 1988 in [20], and
+that is at the basis of Smith’s work. Section 10 discusses its impact on my now
+classical conjecture 3.2 on the number of real quadratic ﬁelds with fundamental
+unit of norm −1 or, equivalently, the asymptotic number of squarefree d ∈Z>1 for
+which the negative Pell equation
+(3)
+x2 −dy2 = −1
+is solvable in integers x, y ∈Z.
+2. The 2-rank
+Let d ̸= 1 be a squarefree integer, K = Q(
+√
+d) the corresponding quadratic ﬁeld,
+D ∈{d, 4d} the discriminant of K, and C = Cl+
+K = Cl+(OK) the narrow class
+group of K, i.e., the quotient C = I/P + of the group I of fractional OK-ideals by
+the subgroup of principal ideals (x) = xOK with generator of positive norm N(x).
+The narrow class group maps surjectively to the ordinary class group ClK of K,
+and we have an exact sequence
+(4)
+0 →⟨F∞⟩−→C −→ClK →0
+in which F∞, the Frobenius at ∞, denotes the ideal class [(
+√
+d)] ∈C. This is the
+trivial element in C if K is imaginary quadratic, and also if K is real quadratic with
+fundamental unit εd of norm N(εd) = −1. If K is real quadratic with N(εd) = 1,
+then F∞is of order 2, and C has twice the size of ClK.
+Describing the 2-part C[2∞] ⊂C consisting of all 2-power torsion elements in C
+can be done by specifying, for k ≥1, the 2k-rank
+r2k = r2k(D) = dimF2 C[2k]/C[2k−1] = dimF2 2k−1C/2kC.
+The sequence of non-negative integers r2, r4, r8, . . . is non-increasing, and we have
+r2k = 0 for k suﬃciently large.
+The 2-rank r2 = dimF2 C[2] = dimF2 C/2C was already determined by Gauss,
+who deﬁned C in terms of binary quadratic forms. To state his result, we factor D
+as a product
+(5)
+D =
+tY
+i=1
+p∗
+i = tD
+Y
+p|D odd
+p∗
+of signed odd prime discriminants p∗= (−1)(p−1)/2p ≡1 mod 4 and a discriminan-
+tal 2-part tD ∈{1, −4, ±8} that we sloppily denote by 2∗in case D is even. We let
+pi|pi be the prime of K lying over pi. It satisﬁes p2
+i = (pi), so we have [pi] ∈C[2].
+Theorem 2.1. We have r2 = t −1, with t the number of prime divisors of D.
+4
+PETER STEVENHAGEN
+Proof. There are two fundamentally diﬀerent proofs of this result, describing C[2]
+and C/2C, respectively. The ﬁrst uses the t ambiguous ideal classes [pi] ∈C[2]
+coming from the ramifying primes pi|pi of K, the second the t genus characters
+χp∗
+i ∈bC[2] corresponding to the discriminantal divisors p∗
+i in (5).
+In the ﬁrst proof, one exploits the Galois action on C of Gal(K/Q) = ⟨σ⟩, noting
+that σ acts by inversion as the norm map N = 1 + σ annihilates C. A little Galois
+cohomology shows that the 2-torsion subgroup C[2] = C[σ −1] is generated by the
+t classes [pi], subject to a single relation. This yields r2 = t −1.
+For the second proof, one views C = Gal(H/K) under the Artin isomorphism
+as the Galois group over K of the narrow Hilbert class ﬁeld H of K. Then H is
+Galois over Q with dihedral Galois group
+Gal(H/Q) ∼= Gal(H/K) ⋊Gal(K/Q) = C ⋊⟨σ⟩,
+as the surjection Gal(H/Q) →Gal(K/Q) = ⟨σ⟩is split and σ acts by inversion.
+The genus ﬁeld H2 ⊂H of K, which is deﬁned as the maximal subﬁeld of H that
+is abelian over Q, has as its Galois group over Q the elementary abelian 2-group
+(6)
+Gal(H2/Q) = Gal(H/Q)ab = C/2C × ⟨σ⟩.
+One can generate H2 explicitly over Q by t independent square roots as
+(7)
+H2 = Q({
+p
+p∗
+i : i = 1, 2, . . . , t}),
+so Gal(H2/Q) is naturally an F2-vector space of dimension t, in which the subspace
+C/2C = Gal(H2/K) ⊂Gal(H2/Q) has dimension r2 = t −1.
+□
+The second proof of Theorem 2.1 shows that the prime power discriminants p∗
+i |D
+in (5) yield an F2-basis of the quadratic characters on Gal(H2/Q), with
+(8)
+χp∗
+i : Gal(H2/Q) →Gal(Q(
+p
+p∗
+i )/Q) ∼= F2
+giving the Galois action on pp∗
+i . Even though this Galois action is given by mul-
+tiplication by ±1, it is convenient for our linear algebra purposes to have additive
+characters with values in Q/Z, and deﬁne the quadratic characters χp∗
+i with values
+in 1
+2Z/Z = F2.
+The character χd1 = P
+i∈S χpi for a subset S ⊂{1, 2, . . ., t} corresponding to
+the discriminantal divisor d1 = Q
+i∈S p∗
+i of D gives the action on √d1.
+When
+restricted to C/2C = Gal(H2/K) ⊂Gal(H2/Q), it yields a quadratic character in
+the character group
+(9)
+bC = Hom(C, Q/Z)
+of C that coincides with the character χd2 corresponding to the complementary
+divisor d2 = D/d1 = Q
+i/∈S p∗
+i . R´edei calls an unordered pair (d1, d2) of quadratic
+discriminants satisfying
+(10)
+D = d1d2
+a discriminantal decomposition of D. It ‘is’ the genus character χd1 = χd2 ∈bC[2],
+and the corresponding ﬁnitely unramiﬁed quadratic extension K ⊂E inside H is
+(11)
+E = K(
+p
+d1) = Q(
+p
+d1,
+p
+d2) = K(
+p
+d2).
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+5
+3. The 4-rank and negative Pell
+The ambiguous ideal proof of Theorem 2.1 describes the subgroup C[2] ⊂C as a
+quotient of Ft
+2 by a surjection
+(12)
+α : Ft
+2 −→C[2]
+that sends the j-th basis vector to the class [pj]. The generator AD ∈Ft
+2 of its
+1-dimensional kernel encodes the unique non-trivial relation that exists between the
+t classes of the ramifying primes pj|D of K. In particular, it tells us whether the
+element F∞= [(
+√
+d)] ∈C[2] in (4) is trivial. In the interesting case D > 0, this
+amounts to the fundamental unit of K = Q(
+√
+D) having norm N(εd) = −1.
+The genus theory proof of Theorem 2.1 describes the quotient C/2C = Gal(H2/K)
+of C as a subspace of Gal(H/Q) = Ft
+2 under the inclusion map
+(13)
+γ : C/2C = Gal(H2/K) −→Gal(H2/Q) = Ft
+2,
+with the i-th coordinate of γ(a) ∈Ft
+2 for [a] ∈C describing the action of the Artin
+symbol Art(a, H/K) ∈Gal(H/K) on pp∗
+i .
+As elements of Gal(H2/K) ﬁx the
+product Qt
+i=1
+p
+p∗
+i =
+√
+D, the map γ embeds C/2C as the ‘sum-zero-hyperplane’
+in Ft
+2. Equivalently, one can formulate this as in (12) by saying that the subgroup
+bC[2] ⊂bC of quadratic characters on C is generated by the t characters χp∗
+i , subject
+to the relation that their sum
+(14)
+χD =
+t
+X
+i=1
+χp∗
+i ,
+the Dirichlet character corresponding to K, is the character on Gal(H2/Q) in (6)
+that has kernel C/2C and is trivial as an element of bC. This time, the relation
+holds no deeper information as it is ‘the same’ for all quadratic ﬁelds.
+The 4-rank of C is the F2-dimension of the kernel C[2] ∩2C of the natural map
+ϕ4 : C[2] →C/2C,
+and we can ﬁnd it by combining ϕ4 with the surjection α and the injection γ from
+(12) and (13) into a single F2-linear R´edei map
+(15)
+R4 :
+Ft
+2
+α
+−→C[2]
+ϕ4
+−→C/2C
+γ
+−→Gal(H2/Q) = Ft
+2.
+We have
+1 + r4 = 1 + dimF2 ker ϕ4 = dimF2 ker R4 = t −rankF2 R4,
+and writing r2 = t −1 as in Theorem 3.1, we obtain the following result.
+Theorem 3.1. The 4-rank of C equals r4 = r2 −rankF2 R4.
+□
+Explicit entries for the matrix R4 = (εij)i,j ∈Matt×t(F2) can easily be given. The
+entry εij describes the action of the Artin symbol Art(pj, H/K) on
+p
+p∗
+i ∈H2 ⊂H.
+For i ̸= j, it is an F2-valued Legendre (or for pj = 2 Kronecker) symbol:
+(16)
+εij = χp∗
+i ([pj]) =
+p∗
+i
+pj
+
+∈F2.
+The diagonal entries εjj = P
+i̸=j εij of R4 follow from the sum-zero-property of γ:
+the rows of R4 add up to 0 ∈Ft
+2. This simple description of r4 in terms of the
+relative quadratic behavior of the primes pi dividing D goes back to R´edei [15].
+6
+PETER STEVENHAGEN
+The somewhat hybrid notation in (16) uses an identiﬁcation ‘{±1} = F2’ of
+multiplicative and additive value groups of quadratic symbols and characters. The
+same notational ambiguity inevitably occurs for R´edei symbols, which are quadratic
+symbols in quadratic ﬁelds, with values that are traditionally taken in {±1}, but
+that also occur as entries of matrices over F2. We have mostly chosen additive
+values of characters and symbols in this paper, but multiplicative values are used
+in the proof of R´edei’s reciprocity law in Section 8, which relates R´edei symbols to
+quadratic Hilbert symbols.
+For K = Q(
+√
+d) real quadratic of discriminant D ∈{d, 4d}, the fundamental unit
+has norm N(εd) = −1 if and only if the negative Pell equation
+(17)
+x2 −dy2 = −1
+is solvable in integers x, y ∈Z.
+If it exists, the smallest solution to (17) can
+be found from the continued fraction expansion of
+√
+d, which then needs to have
+odd period length, or from general unit ﬁnding algorithms in number rings [9].
+For d = D ≡5 mod 8, this solution corresponds to the cube of εd in case the
+fundamental unit εd ∈OK = Z[(1+
+√
+d)/2] does not lie in Z[
+√
+d]. Conjecturally [22],
+this happens for a fraction 2/3 of squarefree D ≡5 mod 8.
+For solvability of (17) in rational numbers, which amounts to K having elements
+of norm −1 or, equivalently, having quadratic Hilbert symbols
+(18)
+(d, −1)p = (D, −1)p = 1
+for all primes p ≤∞,
+there is an easy criterion: solvability occurs if and only if d (or D) is positive and
+without prime factors p ≡3 mod 4.
+By [17, Satz 3], the set D of such D is a
+thin set, asymptotically containing cX/√log X elements D < X, for some explicit
+c ≈.348 ∈R>0. For D ∈D we have tD ∈{1, 8} and p∗= p in (5), and by (7)
+(19)
+D ∈D
+⇐⇒
+H2 is totally real.
+The class ﬁeld theoretic implication of (4) is that the set D−⊂D of discrimi-
+nants for which the negative Pell equation (17) is solvable in integers has a similar
+description:
+(20)
+D ∈D−
+⇐⇒
+H is totally real.
+Indeed, the narrow Hilbert class ﬁeld H of K = Q(
+√
+d) is totally real if and only if
+the Frobenius at inﬁnity F∞∈C at the real primes of K = Q(
+√
+d) is trivial on H.
+Assume D ∈D. Then the map α : Ft
+2 →C[2] in (12) describes F∞= [(
+√
+d)] as
+F∞= α[(1)t
+i=1] ∈C[2] ∩2C,
+and V = α−1(C[2]∩2C) ⊂Ft
+2 is an (r4+1)-dimensional subspace containing (1)t
+i=1.
+The linear map α|V : V →C[2]∩2C is surjective with kernel F2·AD, and numerical
+evidence [2] suggests that AD behaves like a ‘random’ non-zero element in V . As
+D ∈D satisﬁes
+D ∈D−⇐⇒AD = (1)t
+i=1,
+we expect that for the discriminants D ∈D having 4-rank r4 = e, the negative Pell
+equation (17) will be solvable with ‘probability’ (#V −1)−1 = (2r4+1 −1)−1.
+To heuristically ﬁnd the density for D−in D, write D = S∞
+e=0 D(e), with D(e)
+the subset of D ∈D having 4-rank r4 = e. By Theorem 3.1, a discriminant D ∈D
+is in D(e) if and only if its R´edei matrix R4 ∈Matt(F2) has corank e+1. Quadratic
+reciprocity for the entries (16) implies that the matrix R4 is symmetric, with rows
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+7
+and columns adding up to 0. The (1, 1)-minor of R4, which determines the full
+matrix R4, behaves as a random symmetric (t−1)× (t−1)-matrix. As the average
+number t of primes factors of D tends to inﬁnity with D, albeit very slowly, as
+log log D, we expect the density of D(e) in D to equal P(e) = limn→∞Pn(e), with
+Pn(e) the fraction of the
+ n+1
+2
+
+symmetric n × n-matrices over F2 having corank e.
+In terms of the inﬁnite product
+(21)
+α =
+Y
+j odd
+(1 −2−j) =
+∞
+Y
+j=1
+(1 + 2−j)−1 ≈.419422441,
+we have P(0) = α, and more generally P(e) = α · Qe
+j=1(2j −1)−1 for e ≥0.
+By the probability argument above, we expect the natural density of D−(e) in
+D(e) to be 1/(2e+1 −1) for all e ∈Z≥0. This leads to my 1992 conjecture for the
+solvability of the negative Pell equation [21].
+Conjecture 3.2. The set D−of discriminants of quadratic ﬁelds with fundamental
+unit of norm −1 has natural density
+∞
+X
+e=0
+P(e)
+2e+1 −1 = 1 −α ≈.580577559
+inside the set D of discriminants of quadratic ﬁelds containing elements of norm −1.
+Fouvry and Kl¨uners proved in 2010 [6] that D(e) does indeed have the expected
+density P(e) in D. For e = 0 we have 2e+1 −1 = 1 and D(0) ⊂D−, as in the case
+r4 = 0 the narrow Hilbert class ﬁeld H is totally real, being a normal number ﬁeld
+of odd degree over the totally real genus ﬁeld H2. This immediately implies that
+P(0) = α is a lower bound for the lower density of D−in D. To get better bounds,
+one needs control over the archimedean character of H for e ≥1. We will address
+this in Section 10.
+4. The 8-rank
+The 8-rank r8 of C equals the F2-dimension of the kernel of the natural map
+ϕ8 : C[2] ∩2C −→2C/4C
+between r4-dimensional vector spaces over F2. Under the Artin isomorphism, the
+group 2C/4C is the Galois group Gal(H4/H2), with H4 ⊂H the narrow 4-Hilbert
+class ﬁeld of K. We can restrict α in (12) to the kernel of the 4-rank map R4 from
+(15) and compose with ϕ8 to obtain an F2-linear map
+(22)
+R8 :
+ker R4
+α
+−→C[2] ∩2C
+ϕ8
+−→2C/4C = Gal(H4/H2) ∼= Fr4
+2
+deﬁned on the (r4+1)-dimensional space ker R4. Here we write Gal(H4/H2) ∼= Fr4
+2 ,
+in contrast to the equality Gal(H2/Q) = Ft
+2 in (15), as we no longer have an obvious
+choice for the basis of this F2-vector space. As r8 = dimF2 ker ϕ8 is the codimension
+of the image of ϕ8 in 2C/4C, we obtain the following analogue of Theorem 3.1.
+Theorem 4.1. The 8-rank of C equals r8 = r4 −rankF2 R8.
+□
+In order to obtain a matrix representing R8, we want to represent Gal(H4/H2)
+in (22) as explicitly as we represented Gal(H2/Q) in (15).
+R´edei had already
+achieved this in a 1934 paper with Reichardt [14], which computed r4 not as in
+Theorem 3.1 but by an explicit construction of H2 ⊂H4 in terms of r4 cyclic quartic
+8
+PETER STEVENHAGEN
+extensions K ⊂F inside H that are K-linearly disjoint. For such unramiﬁed F,
+the group Gal(F/Q) is dihedral of order 8, and the intersection E = F ∩H2 equals
+E = Q(√d1, √d2) for a discriminantal decomposition D = d1d2 as in (10) and (11).
+R´edei calls the decompositions D = d1d2 deﬁning those E = Q(√d1, √d2) that
+arise as F ∩H2 zweiter Art, ‘of the second kind’. For the corresponding quadratic
+character χ ∈bC = Hom(C, Q/Z), it means that we have χ = 2ψ for a quartic
+character ψ deﬁning K ⊂F. By the duality of ﬁnite abelian groups, we have χ ∈2 bC
+if and only if χ vanishes on the 2-torsion subgroup C[2]. This leads to the following
+characterization of these quadratic characters.
+Lemma 4.2. For a quadratic character χ ∈bC[2] deﬁning E = Q(√d1, √d2) as in
+(10) and (11), having χ ∈2 bC is equivalent to each of the following:
+(1) there exists a cyclic quartic extension K ⊂F inside H containing E;
+(2) χd1 ◦R4 = χd2 ◦R4 is the zero map;
+(3) all ramiﬁed primes of K split completely in K ⊂E;
+(4) for i = 1, 2 and p|di prime we have ( D/di
+p
+) = 1.
+Proof. Having χ = 2ψ for a quartic character ψ ∈bC deﬁning F as in (1) is equiv-
+alent to χ vanishing on the subgroup C[2] of ambiguous ideal classes generated by
+the classes of the ramifying primes p|D = d1d2 of K as in (12). One can phrase this
+using the map R4 from (15) as in (2), or in terms of the splitting of the ramifying
+primes in K ⊂E as in (3). A ramifying prime of K divides exactly one of d1, d2.
+A prime p|p in K dividing, say, d1 splits completely in K ⊂E = K(√d2) if and
+only if the Legendre (or Kronecker) symbol ( d2
+p ) equals 1, as in (4).
+□
+Remark 4.3. The identity χ = 2ψ determines ψ ∈bC up to a quadratic character,
+as an element of bC[4]/ bC[2], and this means that the quadratic extension E ⊂F
+it gives rise to in (1) is determined by χ only up to ‘twisting’ by an unramiﬁed
+quadratic character.
+In other words: not E ⊂F, but the quadratic extension
+H2 ⊂H2F it generates over the genus ﬁeld H2 is unique.
+♦
+In order to compute the 8-rank in Theorem 4.1 from the rank of an explicit matrix
+describing the map R8 in (22), we choose an F2-basis for the (r4 + 1)-dimensional
+subspace ker R4 ⊂Ft
+2, and write
+[mj] ∈C[2] ∩2C
+(j = 1, 2, . . . , r4 + 1)
+for the images of these basis vectors under the map α from (12). The classes [mj]
+span C[2]∩2C, subject to a single relation encoded in AD, and their Artin symbols
+Art(mj, H/K) are the identity on the genus ﬁeld H2.
+Similarly, we choose quartic characters ψi for i = 1, 2, . . . , r4 spanning bC[4]/ bC[2],
+and let K ⊂F4,i be the corresponding unramiﬁed quartic extensions. By condition
+(2) of Lemma 4.2, the quadratic characters χi = 2ψi ∈bC[2] come from vectors in
+Ft
+2 that, together with (1)t
+i=1, span the kernel of the transpose RT
+4 of the R´edei
+matrix in (15). The r4 quadratic extensions H2 ⊂H2F4,i span H2 ⊂H4, and the
+map R8 is represented by a matrix R8 = (ηij)i,j ∈Matr4×(r4+1)(F2) with entries
+(23)
+ηij = ψi[mj] = Art(mj, H2F4,i/K) ∈Gal(H2F4,i/H2) = F2 .
+In cases where we know the kernel of α in (12), i.e., the non-trivial relation AD
+between the ramiﬁed primes of K in C, we can use it to leave out a column of R8
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+9
+corresponding to a ‘superﬂuous’ generator [mj] of C[2] ∩2C, and work with an
+(r4 × r4)-matrix to describe ϕ8 in (22).
+A product m of distinct ramiﬁed primes of K is characterized by the squarefree
+divisor m|D arising as its norm, and the residue class of a quartic character ψ in
+bC[4]/ bC[2] by the invariant ﬁeld E = Q(√d1, √d2) of the quadratic character 2ψ
+corresponding to a decomposition D = d1d2 ‘of the second kind’. This leads to a
+classical notation for the entries ψ([m]) in (23) as R´edei symbols.
+Deﬁnition 4.4. Let D = d1d2 be a decomposition of the second kind, K ⊂F a
+corresponding extension as in condition (1) of Lemma 4.2, and m|D the squarefree
+norm of an integral ideal m in K with [m] ∈C[2] ∩2C. Then the R´edei symbol
+associated to d1, d2, and m is the Artin symbol
+[d1, d2, m] = Art(m, H2F/K) ∈Gal(H2F/H2) = F2 .
+It is convenient to take the value of R´edei symbols in F2, as we do in Deﬁnition 4.4.
+After all, they arise as entries ηij of an F2-matrix R8 in (23). However, they describe
+the Galois action on certain square roots, just like the entries εij of R4 in (16), so
+their values are traditionally taken in {±1}. We have been unable to completely
+avoid this notational ambiguity, which already occurs in (16). Despite our additive
+deﬁnition, our proof of R´edei reciprocity in Section 8 views R´edei symbols in (46) as
+‘products’ of local symbols [a, b, c]p, which are recognized in our key lemma 8.1 as
+quadratic Hilbert symbols satisfying a well-known global product formula that we
+did not rename into a sum formula. On the other hand, our quadratic characters
+in (8) and biquadratic characters in (38) do take values in F2.
+5. Computing Redei-symbols
+Deﬁnition 4.4 of the R´edei symbol [d1, d2, m] does not immediately show how to
+compute it from d1, d2 and m, as it involves a quadratic extension F of Q(√d1, √d2)
+that is dihedral over Q. Galois theory tells us that such F come from rational
+points on the conic x2 −d1y2 −d2z2 = 0, and that they are unique up to twisting
+by quadratic characters. This statement does not depend on the base ﬁeld Q, and
+we formulate it for any ﬁeld Q of characteristic diﬀerent from 2.
+Lemma 5.1. Let Q be of characteristic diﬀerent from 2, and Q ⊂Q(√a) a qua-
+dratic extension. For β ∈Q(√a)∗non-square of norm Nβ = b ∈Q∗, let F be the
+normal closure of the quartic extension Q(√a, √β) of Q. Then
+(1) for b /∈{1, a} ⊂Q∗/Q∗2, the ﬁeld F is quadratic over Q(√a,
+√
+b), cyclic of
+degree 4 over Q(
+√
+ab), and dihedral of degree 8 over Q;
+(2) for b = a ∈Q∗/Q∗2, the ﬁeld F is quadratic over Q(√a) and cyclic of
+degree 4 over Q;
+(3) for b = 1 ∈Q∗/Q∗2, the ﬁeld F is quadratic over Q(√a) and non-cyclic
+abelian of degree 4 over Q.
+Conversely, every ﬁeld F having the properties in (1), (2), or (3) is obtained in this
+way for some β ∈Q(√a) of norm b.
+Proof. Basic Galois theory.
+□
+Corollary 5.2. Let a, b ∈Q∗and E = Q(√a,
+√
+b) be as in (1) of Lemma 5.1.
+Then a quadratic extension E ⊂F is cyclic over Q(
+√
+ab) and dihedral of degree 8
+10
+PETER STEVENHAGEN
+over Q if and only if there exists a non-zero solution (x, y, z) ∈Q3 to the equation
+x2 −ay2 −bz2 = 0
+such that for β = x + y√a ∈Q(√a) and α = 2(x + z
+√
+b) ∈Q(
+√
+b) of norm
+ββ′ ∈b · Q∗2 and αα′ ∈a · Q∗2, we have
+F = E(
+p
+β) = E(√α).
+Given F = E(√β), any other quadratic extension of E that is dihedral over Q is
+of the form Ft = E(√tβ) for some unique t ∈Q∗/⟨a, b, Q∗2⟩.
+Proof. The ﬁrst statement follows if we write β = x+y√a ∈Q(√a) in the dihedral
+case (1) of Lemma 5.1, and observe that F = Q(√a, √β, √β′) = E(√β) is the
+normal closure over Q of Q(√a, √β), but also of Q(
+√
+b, √α): it contains a square
+root of the non-square element
+(24) (
+p
+β +
+p
+β′)2 =
+q
+x + y√a +
+q
+x −y√a
+2
+= 2(x + z
+√
+b) = α ∈Q(
+√
+b)∗.
+The dihedral group D4 of order 8 has center Z(D4) = F2 with quotient D4/Z(D4) =
+F2 × F2, and extending Q ⊂Q(√a,
+√
+b) to a D4-extension amounts to lifting the
+surjection GQ →F2 × F2 = D4/Z(D4) on the absolute Galois group of Q corre-
+sponding to Q(√a,
+√
+b) to a homomorphism f : GQ →D4. Given f corresponding
+to F = E(√β), any other lift is of the form ft = χtf for some quadratic character
+χt : GQ →Z(D4) = F2 corresponding to Q ⊂Q(
+√
+t). The extension Ft corre-
+sponding to ft is the quadratic twist Ft = E(√tβ) of F, and t ∈Q∗yielding Ft is
+unique up to multiplication by elements of E∗2 ∩Q∗= ⟨a, b, Q∗2⟩.
+□
+Corollary 5.3. For E = Q(√a) as in Lemma 5.1, a quadratic extension E ⊂F is
+cyclic over Q if and only if there exists a non-zero solution (x, y, z) ∈Q3 to
+x2 −ay2 −az2 = 0
+such that we have F = E(√α) for α = x + y√a ∈Q(√a) of norm αα′ ∈a · Q∗2.
+Given one F = E(√α), any other such extension is of the form Ft = E(
+√
+tα) for
+some unique t ∈Q∗/⟨a, Q∗2⟩.
+Proof. Analogous to the dihedral case.
+□
+Remark 5.4. The dihedral group D4 of order 8 can be viewed as the Heisenberg
+group U3(F2) of upper triangular 3 × 3-matrices with coeﬃcients in F2, and ex-
+tending an extension Q ⊂Q(√a,
+√
+b) to a D4-extension amounts to an embedding
+problem that can be treated in terms of Massey symbols [12]. For our purposes,
+the basic Galois theory of Lemma 5.1 and its corollaries are already suﬃcient.
+♦
+In order to construct an unramiﬁed extension K ⊂F containing E = Q(√d1, √d2)
+for D = d1d2 satisfying the conditions of Lemma 4.2, we apply Corollary 5.2 for
+Q = Q and (a, b) = (d1, d2). It shows that F can be explicitly generated as
+(25)
+F = F(x, y, z) = E(
+p
+δ2) = E(
+p
+δ1),
+for elements δ2 = x + y√d1 ∈Q(√d1)∗and δ1 = 2(x + y√d1) ∈Q(√d1)∗coming
+from a solution (x, y, z) to the equation
+(26)
+x2 −d1y2 −d2z2 = 0.
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+11
+By Corollary 5.2, scaling any non-zero solution (x, y, z) with an appropriate element
+t ∈Q∗, which amounts to replacing F(x, y, z) by the quadratic twist F(tx, ty, tz),
+will make K ⊂F unramiﬁed. As we will show in a slightly more general setting in
+Corollary 7.4, every primitive integral solution (x, y, z) to (26) yields an extension
+K ⊂F(x, y, z) that is unramiﬁed at all odd primes. Ramiﬁcation over 2 can be
+avoided by twisting the extension with a suitable choice of t ∈{±1, ±2}.
+Example 5.5. Take K = Q(√−205) of discriminant D = −4·5·41 = −820, which
+has t = 3 and r2 = 2. The columns of the R´edei matrix
+R4 =
+
+
+1
+0
+0
+1
+0
+0
+0
+0
+0
+
+
+describe the action of the Artin symbols of the three ramiﬁed primes p2, p5, and p41
+dividing D on the square roots of −4, 5 and 41 generating H2 = Q(i,
+√
+5,
+√
+41) as
+in (16). From the matrix R4 we read oﬀthat r4 equals r2 −rank(R4) = 1, that [p5]
+and [p41] span C[2] ∩2C, and that D = −20 · 41 is the unique decomposition of the
+second kind. The equation
+x2 + 20y2 −41z2 = 0
+has a primitive solution (12,1,2) for which the element δ = 12 + 2√−5 of norm
+22 · 41 is ‘primitive outside 2’ and satisﬁes δ ≡(1 + √−5)2 mod 4. This shows that
+δ = 2(6+√−5) has an unramiﬁed square root over E = Q(√−5,
+√
+41), whereas the
+primitive elements ±6 + √−5 yield extensions E ⊂E(
+p
+±δ/2) that are ramiﬁed
+over 2.
+The solution (17, 2, 3) deﬁning the primitive element δ0 = 17 + 4√−5 of norm
+32 · 41 satisfying δ0 ≡1 mod 4 also has an unramiﬁed square root over E. We have
+δδ0 = 164 + 82
+√
+−5 = −[
+√
+41(1 −
+√
+−5)]2 ∈−1 · E∗2,
+and E(√δ0) = E(
+√
+tδ) for t = −1. Over H2, both √δ0 and
+√
+δ generate
+H4 = H2(
+p
+δ0) = H2(
+√
+δ).
+As we know that (√−5 · 41) = p5p41 is trivial in C, the class of either p5 or p41
+generates C[2] ∩2C. The matrix R8 consists of a single R´edei symbol
+[−20, 41, 5] = [−20, 41, 41]
+describing whether the prime p5 (or, equivalently, p41) of K splits completely in H4.
+It does not, as δ = 12 + 2√−5 (like δ0 = 17 + 4√−5)) is congruent to the quadratic
+non-residue 2 modulo every prime over 5 in H2. We conclude that we have r8 = 0,
+and that the 2-part of C is isomorphic to Z/2Z × Z/4Z.
+In this case, the decomposition D = d1d2 = −4 · 205 is not of the second kind,
+but the conic
+x2 + 4y2 −205z2 = 0
+deﬁned by (26) does have inﬁnitely many rational points (x, y, z), such as (3, 7, 1).
+None of them deﬁnes an unramiﬁed quartic extension K ⊂F(x, y, z).
+♦
+Example 5.5 shows that non-trivial solvability of (26) over Q may not guarantee
+the existence of unramiﬁed extensions K ⊂F(x, y, z), whereas the slightly stronger
+conditions of Lemma 4.2 do. More precisely, by the classical local-global principle
+for conics, assuming solvability of (26) amounts to having quadratic Hilbert symbols
+12
+PETER STEVENHAGEN
+(d1, d2)p = 1 for all ﬁnite primes p, with (d1, d2)∞= 1 then being implied by the
+product formula. At p ∤D = d1d2, including p = 2, we have (d1, d2)p = 1. For an
+odd prime p dividing D = d1d2, say d1, the Hilbert symbol condition at p is
+(d1, d2)p =
+d2
+p
+
+= 1,
+exactly as in condition (4) of Lemma 4.2. For p = 2 dividing d1 however, we have
+d2 ≡1 mod 4 and obtain
+(27)
+(d1, d2)2 =
+d2
+2
+ord2(d1)
+= 1.
+If D has 2-part tD = −4 in (5) and we have d2 ≡5 mod 8, such as for D = −820
+and d2 = 205 above, condition (27) does not imply condition (4) of Lemma 4.2 for
+p = 2, as we have (d1, d2)2 = 1 but
+  d2
+2
+
+= −1. This discrepancy will lead us to
+the notion of 2-minimal ramiﬁcation in Deﬁnition 7.5.
+6. Discovering Redei reciprocity
+Explicit computations of R´edei symbols exhibit a ‘reciprocity law’ that we can
+discover already by looking at the most classical example
+K = Q(√−p),
+with p an odd prime. Having r2 = t −1 = 1 for K amounts to having p ≡1 mod 4
+and D = −4p by Theorem 2.1; otherwise C has odd order. Assuming this, R4 in
+Theorem 3.1 has rank 0 if and only if we have ( p
+2) = ( 2
+p) = 1, so r4 = 1 happens
+for p ≡1 mod 8. We further assume p ≡1 mod 8.
+As (√−p)|p is principal, the class of the non-principal prime p2|2 generates
+C[2] = C[2]∩2C, and R8 consists of a single R´edei symbol [−4, p, 2]. The case r8 = 1
+in which the symbol vanishes occurs when the prime p2 of K splits completely in
+the 4-Hilbert class ﬁeld H4(−p) of K. Solving
+x2 + 4y2 −pz2 = 0
+with z = 1, we can generate H4(−p) over E = Q(i, √p) by adjoining a square root
+of π = x + 2iy. Now p2 splits into 4 primes in the extension K ⊂H4(−p) if and
+only if the prime (1 + i) over 2 in Q(i) splits into 4 primes in the extension
+Q(i) ⊂H4(−p) = Q(√−p, i, √π) = Q(i, √π,
+√
+π).
+This shows that [−4, p, 2] can be viewed as a ‘Kronecker symbol’ ( π
+1+i) in Q(i). By
+class ﬁeld theory (or quadratic reciprocity) over Q(i), this symbol is simply the
+Legendre symbol ( 1+i
+p ), which is well deﬁned for p ≡1 mod 8, and we have
+(28)
+r8 = 1
+⇐⇒
+p splits completely in Q(ζ8,
+√
+1 + i).
+We deduce that the prime p2 over 2 splits completely in the unramiﬁed extension
+K ⊂H4(−p) if and only if p splits completely in Q(ζ8, √1 + i). By the case (a, b) =
+(−1, 2) of Lemma 5.1, the ﬁeld Q(ζ8, √1 + i) = Q(i,
+√
+2, √1 + i) is dihedral over Q,
+just like H4(−p). In fact, both ﬁelds are abelian of exponent 2 over Q(i), quadratic
+over respectively Q(i,
+√
+2) and Q(i, √p), and cyclic over respectively Q(√−2) and
+Q(√−p). We have proved a special case of R´edei reciprocity, and in terms of R´edei
+symbols it can be suggestively formulated as
+(29)
+[−4, p, 2] = [−4, 2, p].
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+13
+The symbol on the left is deﬁned by Deﬁnition 4.4 for symbols [d1, d2, m], but the
+symbol on the right is not. It is natural to take d1 and d2 up to squares, yielding the
+formulation [−1, p, 2] = [−1, 2, p], but the symbol [−1, 2, p] refers to the splitting of
+the primes over p in
+Q(
+√
+−2) ⊂E = Q(i,
+√
+2) ⊂F = E(
+√
+1 + i),
+a cyclic quartic extension that is totally ramiﬁed over 2. Primes p ≡1 mod 8 are
+totally split in E, and split or inert in E ⊂F depending on the value of [−1, 2, p].
+As we can swap the arguments −1 and p in the symbol [−1, p, 2] by its very
+deﬁnition, and 2 and p by what we just proved, one naturally wonders whether it
+also equals a symbol [2, p, −1] that describes the splitting of “−1” in the narrow 4-
+Hilbert class ﬁeld H4(2p) of Q(√2p). By Theorem 3.1, the ﬁeld H4(2p) is quadratic
+over the totally real ﬁeld Q(
+√
+2, √p) for p ≡1 mod 8. Now Frobenius symbols at
+“−1”, which over Q raise roots of unity to the power −1, arise in class ﬁeld theory
+as complex conjugations, and act trivially on totally real ﬁelds. The dihedral ﬁeld
+H4(2p) is abelian of exponent 2 over Q(
+√
+2), and it is totally real if and only if its
+conductor over Q(
+√
+2) is p, not p · ∞. Looking at the ray class group
+(Z[
+√
+2]/pZ[
+√
+2])∗/⟨−1, 1 +
+√
+2⟩
+modulo p of Q(
+√
+2), we see that H4(2p) is real exactly when the fundamental
+unit 1 +
+√
+2 ∈Q(
+√
+2) is a square modulo p, and this happens for the primes
+that split completely in the dihedral ﬁeld Q(ζ8,
+p
+1 +
+√
+2). By equation (24) for
+(a, b) = (−1, 2) and (x, y, z) = (1, 1, 1), this is the same ﬁeld as Q(ζ8, √1 + i), so
+the R´edei symbol
+(30)
+[−1, p, 2] = [−1, 2, p] = [2, p, −1],
+when properly deﬁned, is invariant under all permutations of its arguments.
+In R´edei’s own deﬁnition, [−1, 2, p] does not exist, and [p, 2, −1] is trivial for
+all p. Our deﬁnition in the next section introduces a notion of minimal ramiﬁcation
+for extensions K ⊂F as in (25), correcting the deﬁnition found in [5].
+7. Redei symbols
+In order to obtain R´edei reciprocity, we generalize the symbol [d1, d2, m] in Deﬁni-
+tion 4.4 beyond the setting of dihedral ﬁelds F containing Q(√d1, √d2) that are
+cyclic and unramiﬁed over K = Q(√d1d2) and norms m of ambiguous ideals m of
+K with trivial Artin symbol in the genus ﬁeld of K. As d1 and d2 encode quadratic
+ﬁelds, and m is the norm of an ideal with ideal class in a subgroup of C of expo-
+nent 2, the general R´edei symbol [a, b, c] naturally takes its arguments in the group
+Q∗/Q∗2. It will be linear in each of its arguments.
+Every a ∈Q∗/Q∗2 is uniquely represented by a squarefree integer a, and cor-
+responds to a number ﬁeld Q(√a) that is quadratic for a ̸= 1. Given non-trivial
+elements in Q∗/Q∗2 represented by squarefree integers a, b, the extension
+(31)
+Q(
+√
+ab) = K ⊂E = Q(√a,
+√
+b)
+is quadratic, and Q ⊂E is unramiﬁed at primes outside the discriminants ∆(a)
+and ∆(b) of the quadratic ﬁelds corresponding to a and b.
+We now assume that a and b have relative quadratic Hilbert symbols (a, b)p = 1
+for all primes p. As we observed at the end of Section 5, this amounts to saying
+14
+PETER STEVENHAGEN
+that the equation
+(32)
+x2 −ay2 −bz2 = 0
+admits non-zero rational solutions.
+By Corollaries 5.2 and 5.3, such a solution
+(x, y, z) generates a cyclic quartic extension
+(33)
+Q(
+√
+ab) = K ⊂F = F(x, y, z) = E(
+p
+β) = E(√α)
+in which we take β = x + y√a and α = 2(x + z
+√
+b). The ﬁeld F is dihedral over Q
+for a ̸= b, and cyclic over Q(
+√
+ab) = Q for a = b. It is uniquely determined by
+a and b up to twisting by rational quadratic characters χt, with t ∈Q∗/Q∗2. In
+fact, the asymmetry in (33) in the deﬁnition of α and β coming out of (32) can be
+seen as making a somewhat arbitrary choice between F and F2. Here we use the
+twisting notation
+(34)
+Ft = F(tx, ty, tz) = E(
+p
+tβ) = E(
+√
+tα)
+for F = F(x, y, z) from Section 5.
+Before deﬁning the general symbol [a, b, c], we start with the special case of a
+squarefree integer a = b ̸= 1. Then K ⊂E in (31) is the extension Q ⊂Q(√a).
+As Hilbert symbols satisfy (a, −a)p = 1 for all a ∈Q∗, our assumption on a is
+(a, −1)p = 1 for all p. By (18), this means that the discriminant ∆(a) ∈{a, 4a} is
+positive and without prime divisors 3 mod 4, i.e., in the set D of Conjecture 3.2.
+For such a, we can write the associated Dirichlet character χa : GQ →F2 in the
+notation of (14) as
+χa =
+X
+p|a
+χp,
+with χ2 = χ8 the quadratic character associated to Q(
+√
+2). Let ψp be a character
+of order 4 modulo p ≡1 mod 4, and ψ2 a character of order 4 on (Z/16Z)∗. Then
+(35)
+ψa =
+X
+p|a
+ψp
+is a quartic Dirichlet character of conductor a (or 8a when a is even) that satisﬁes
+2ψa = χa. It corresponds to a cyclic quartic ﬁeld Fa,a containing E = Q(√a).
+Cyclic quartic Q ⊂F containing E are unique up to quadratic twists, as 2ψF = χa
+only deﬁnes ψF up to a quadratic character. Clearly E ⊂F will be ramiﬁed at all
+primes dividing a, but not at other primes if we take ψF = ψa as in (35). Such
+an extension Q ⊂Fa,a of minimal ramiﬁcation is not unique, as we can add χp to
+each ψp of odd conductor p in (35), and χ2 and χ−1 to ψ2. This makes ψa unique
+up to twisting by sums of characters χp with p|a, and in addition the character χ−1
+in case a is even. For a = 1 we deﬁne ψa to be the trivial character.
+In terms of Corollary 5.3, a minimally ramiﬁed cyclic quartic extension Q ⊂Fa,a
+containing E = Q(√a) is unique up to twisting by t in the ﬁnite twisting subgroup
+(36)
+Ta,a ⊂Q∗/Q∗2
+generated by the residue classes of the odd primes p = p∗dividing a and, for a
+even, of −1 and 2. It follows that for squarefree integers a and c satisfying
+(37)
+gcd(∆(a), ∆(c)) = 1
+and
+(a, a)p = (a, c)p = 1 for all p,
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+15
+we have χt(c) = 0 for t ∈Ta,a, and a well deﬁned biquadratic character
+(38)
+ψa(c) =
+ c
+a
+
+4 ∈F2.
+In terms of Artin symbols in the cyclotomic ﬁeld Q(ζa) (or Q(ζ8a)) containing Fa,a,
+we have
+(39)
+ψa(c) = Art(c, Fa,a/Q) ∈Gal(Fa,a/E) = F2.
+Note that a and ∆(a) ∈D have the same prime factors by the hypothesis (a, a)p = 1
+for all p. Thus, (37) implies that for a even, with −1, 2 ∈Ta,a, we have c ≡1 mod 4
+by the gcd-condition, and then c ≡1 mod 8 by the condition (a, c)2 = 1, yielding
+χ2(c) = χ−1(c) = 0. For odd primes p dividing a, with p ∈Ta,a, the conditions
+(a, c)p = 1 and χp(c) = 0 coincide.
+Viewing ψa in (38) as deﬁned on the subgroup of Q∗/Q∗2 generated by the
+integers c satisfying (37), we obtain the following special R´edei symbol.
+Deﬁnition 7.1. For a, c ∈Q∗/Q∗2 satisfying (37), we take (38) to deﬁne
+[a, a, c] = ψa(c) =
+ c
+a
+
+4 ∈F2.
+For the general case, we take a, b ∈Z̸=1 to be diﬀerent squarefree integers, assuming
+(40)
+(a, b)p = 1
+for all primes p
+in order to have non-trivial solvability of (32). Then the quadratic extension
+Q(
+√
+ab) = K ⊂E = Q(√a,
+√
+b)
+from (31) is only ramiﬁed at primes p| gcd(∆(a), ∆(b)), and such p will be totally
+ramiﬁed in every cyclic quartic extension K ⊂F in (33). Generalizing (39), we are
+to deﬁne the R´edei symbol in Deﬁnition 7.8 as
+[a, b, c] = Artc(Fa,b/K) ∈Gal(Fa,b/E) = F2,
+the Artin symbol of an ideal c in K corresponding to c in a cyclic quartic extension
+K ⊂Fa,b constructed from a solution to (32) that is minimally ramiﬁed over E.
+For odd primes p ∤gcd(∆(a), ∆(b)), one can avoid ramiﬁcation over p in E ⊂F
+by passing, if needed, to the quadratic twist Fp∗from (34), with p∗= ±p as in (5).
+Proposition 7.2. Let a, b ∈Z̸=1 be distinct and squarefree, p ∤∆(b) an odd prime,
+and K = Q(
+√
+ab) ⊂F = E(√β) as in (33).
+(1) If p divides ∆(a), then K ⊂F is unramiﬁed over p.
+(2) If p does not divide ∆(a), then exactly one of K ⊂F and K ⊂Fp∗is
+unramiﬁed over p.
+Proof. Consider F as a quartic extension of Ka = Q(√a). The intermediate ﬁeld
+E = K(
+√
+b) = Ka(
+√
+b) is a quadratic extension of both K and Ka that is unramiﬁed
+at primes dividing p, as we have p ∤∆(b). It follows that K ⊂F is unramiﬁed over p
+if and only if Ka ⊂F is.
+Write F = Ka(√β, √β′), with β ∈Ka of norm ββ′ = x2 −ay2 = bz2. As p is
+odd, Ka ⊂F is unramiﬁed over p if and only if β and β′ have even valuation at
+the primes p|p in Ka. For a prime p|p of ramiﬁcation index ep/p in Ka, we have
+ordp(ββ′) = ep/p ordp(bz2) = 2ep/p ordp(z).
+16
+PETER STEVENHAGEN
+In the ramiﬁed case p|∆(a), we have ep/p = 2 and ordp(ββ′) = 2 ordp(β) ≡0 mod 4,
+proving (1). In the unramiﬁed case p ∤∆(a), we have ep/p = 1 and ordp(β) ≡
+ordp(β′) mod 2. Moreover, we have ordp(p∗β) = ordp(β) + 1, so p is unramiﬁed in
+exactly one of F and Fp∗, proving (2).
+□
+As twisting by p∗does not change ramiﬁcation outside p, Proposition 7.2 shows
+that K ⊂F in (33) can be chosen to be unramiﬁed at all odd p ∤gcd(∆(a), ∆(b)).
+For p = 2 we can twist by −1 and 2, with the following outcome.
+Proposition 7.3. Let a, b ∈Z̸=1 be distinct and squarefree, b = ∆(b) ≡1 mod 4,
+and K = Q(
+√
+ab) ⊂F = E(√β) as in (33).
+(1) If ∆(a) is odd, then Q ⊂Ft is unramiﬁed at 2 for a unique t ∈{±1, ±2}.
+(2) If ∆(a) is even and ∆(b) is 1 mod 8, then K ⊂Ft is unramiﬁed over 2 for
+exactly two values of t ∈{±1, ±2}.
+(3) If ∆(a) is even and ∆(b) is 5 mod 8, then K ⊂Ft is ramiﬁed over 2 for all
+t ∈Q∗, and ∆(a) is 4 mod 8.
+Proof. Just as for odd p, we consider the extension Ka ⊂F = Ka(√β, √β′). As
+before, up to squares, β is a 2-unit in Ka if ∆(a) is even, and exactly one of β and
+2β is a 2-unit Ka if ∆(a) is odd. However, for a 2-unit to have a square root that
+is unramiﬁed at 2, we need the stronger condition that it is a square modulo 4.
+We can assume, possibly after twisting F by t = 2, that β is a 2-unit in the ring
+of integers O of Ka. For 2 ∤∆(a), the group (O/4O)∗has order 4 or 12, depending
+on whether 2 is split or inert in O, and the squares form a subgroup of index 4.
+Together with −1, they generate the kernel of the surjective norm map
+N : (O/4O)∗−→(Z/4Z)∗.
+By assumption, we have ββ′ ≡b ≡1 mod 4O, so the residue classes β, β′ ∈ker N
+are squares in (O/4O)∗for a unique ‘sign choice’ of β, and Q ⊂Ft is unramiﬁed
+at 2 for a unique value t ∈{±1, ±2}. This proves (1).
+For 2|∆(a), the group (O/4O)∗= (O/p4O)∗has order 8, and its subgroup of
+squares, of index 4, is of order 2. The norm O = Z[√a] →Z induces a map
+N : (O/4O)∗−→(Z/8Z)∗
+for which the image, of order 2, is generated by 1 −a mod 8 when a ≡±2 mod 8 is
+even, and by 5 mod 8 when a ≡−1 mod 4 is odd.
+In the case where a is even, ker N is non-cyclic of order 4, generated by −1
+and the squares in (O/4O)∗, and it contains β mod 4O as ββ′ ≡b mod 8 is not
+5 mod 8 /∈im N. In this case, we have ∆(b) = b ≡1 mod 8, and we conclude just
+as before that exactly one of F and F−1 is unramiﬁed over K at 2. By the same
+argument applied to F2, one of F2 and F−2 is unramiﬁed over K at 2, so K ⊂Ft
+is unramiﬁed over 2 for exactly two values t ∈{±1, ±2}, as stated in (2).
+In the remaining case a ≡−1 mod 4, or ∆(a) ≡4 mod 8, the residue class of
+(41)
+τ = (1 + √a)2/2 = (1 + a)/2 + √a
+in (O/4O)∗, which equals √a mod 4O for a ≡−1 mod 8 and 2 + √a mod 4O for
+a ≡3 mod 8, has square −1 mod 4O, so it is of order 4 and generates ker N.
+We now have 2 cases. For ∆(b) = b ≡1 mod 8 we have β mod 4O ∈ker N,
+and twisting by t = 2, which replaces β by β/τ, may be used to move β into the
+subgroup ±1 mod 4O of squares in (O/4O)∗. In this case either F and F−1 or F2
+and F−2 are unramiﬁed over K at 2, proving (2).
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+17
+The ﬁnal case a ≡−1 mod 4 and ∆(b) = b ≡5 mod 8 is the case occurring
+in (3). Here twisting by −1 or 2 cannot move β or β′ into ker N, and the extension
+Ka ⊂F = Ka(√β, √β′) is ramiﬁed at the prime p|2 of Ka. This implies that
+K ⊂Ft is ramiﬁed over 2 for all t ∈Q∗, proving (3).
+Alternatively, one can argue for (3) that if the ramiﬁed prime over 2 in K, which
+is inert in K ⊂E, were unramiﬁed in the cyclic quartic extension K ⊂Ft, the
+primes over 2 in Ft would have ramiﬁcation index 2 and residue class degree 4
+over Q; but the dihedral group of order 8 has no cyclic quotient of order 4.
+□
+The ramiﬁed case (3) of Proposition 7.3 does not occur when D = ∆(a)∆(b) is a
+decomposition satisfying the conditions of Lemma 4.2, as for even D, the prime 2
+splits in either Q(√a) or Q(
+√
+b), by condition (4) of Lemma 4.2.
+Corollary 7.4. Let (x, y, z) be a primitive integral solution to (26) for D = d1d2
+satisfying the conditions of Lemma 4.2. Then there exists t ∈{±1, ±2} such that
+Ft = Q(√d1, √d2,
+p
+tx + ty√d1) is unramiﬁed and cyclic of degree 4 over Q(
+√
+D).
+Proof. For (x, y, z) primitive and p odd, β = x + y√d1 and α = 2(x + z√d2)
+are not divisible by p, hence units at a prime over p in Q(β) and Q(α), making
+Q(
+√
+D) ⊂F1 unramiﬁed outside 2. Twisting by t ∈{±1, ±2} as in (1) and (2) of
+Proposition 7.3 makes it unramiﬁed at 2 as well.
+□
+In the ramiﬁed case (3) of Proposition 7.3, with a ≡−1 mod 4 and b ≡5 mod 8,
+which is essential for R´edei reciprocity, the extension K ⊂F in (33) gives rise to a
+local ﬁeld F ⊗Q2 that is dihedral of degree 8 over Q2, and quadratic over
+(42)
+E ⊗Q2 = Q2(√a,
+√
+b) = Q2(i,
+√
+5).
+It is cyclic over Q2(√−5) for a ≡−1 mod 8, and cyclic over Q2(i) for a ≡−5 mod 8.
+Ramiﬁcation in E ⊗Q2 ⊂F ⊗Q2 cannot be avoided, but one can obtain 2-minimal
+ramiﬁcation after twisting, if necessary, by the generator t = 2 of
+Q∗
+2/⟨a, b, Q∗
+2
+2⟩= Q∗
+2/⟨−1, 5, Q∗
+2
+2⟩∼= Z/2Z.
+In view of (41), this amounts to replacing β by τβ. In this way we can make β trivial
+in the group (O/2O)∗= ⟨τ⟩= ⟨√a mod 2O⟩of order 2, and we can even change the
+sign of β – this does not change F ⊗Q2 – to achieve β ≡1 mod p3, with p|2 in Ka.
+This is not quite the congruence β ≡1 mod p4 that would make Ka = Q(√a) ⊂F
+unramiﬁed over 2, but it does ensure that the local extension Q2(√a) ⊂F ⊗Q2 is
+of conductor 2, the minimum for a ramiﬁed biquadratic extension of Q2(√a). One
+has F ⊗Q2 = Q2(i,
+√
+5, √x) with x = 1 + 2i for a ≡−1 mod 8 and x = 3 + 2√−5
+for a ≡−5 mod 8.
+Deﬁnition 7.5. In the ramiﬁed case (3) of Proposition 7.3, with a ≡−1 mod 4 and
+b ≡5 mod 8, the extension K ⊂F is 2-minimally ramiﬁed if the local biquadratic
+extension Q2(√a) ⊂F ⊗Q2 is of conductor 2.
+The requirement in Deﬁnition 7.5 means that we have F = E(√β) for an element
+β ∈1 + 2O ⊂K∗
+a.
+Any F in case (3) of Proposition 7.3 has a twist Ft with
+t ∈{±1, ±2}, unique up to sign, that is 2-minimally ramiﬁed.
+For arbitrary non-trivial elements a, b ∈Q∗/Q∗2 for which (32) admits non-zero
+solutions, we are led to the following global notion of minimal ramiﬁcation.
+Deﬁnition 7.6. For a, b ∈Q∗/Q∗2 \ {1}, the extension K ⊂F in (33) deﬁned by
+a non-zero rational solution to (32) is said to be minimally ramiﬁed over E if it is
+18
+PETER STEVENHAGEN
+(1) unramiﬁed over all odd primes p ∤gcd(∆(a), ∆(b));
+(2) unramiﬁed over 2 when ∆(a)∆(b) is odd, or one of ∆(a), ∆(b) is 1 mod 8;
+(3) 2-minimally ramiﬁed if (∆(a), ∆(b)) is (5, 4) or (4, 5) modulo 8.
+In the special case a = b, we recover our earlier deﬁnition of a minimally ramiﬁed
+extension Q ⊂Fa,a, as being unramiﬁed at the primes p ∤a.
+Every extension K ⊂F in (33) can be twisted by some t ∈Q∗/Q∗2 to obtain
+a minimally ramiﬁed extension K ⊂Fa,b, but Fa,b is not uniquely determined by
+a, b ∈Q∗/Q∗2. More precisely, we have a ﬁnite twisting subgroup
+(43)
+Ta,b ⊂Q∗/Q∗2
+just as for a = b in (36). It is generated by the residue classes of the odd signed
+primes p∗occurring in the discriminantal factorizations (5) of ∆(a) and ∆(b), to-
+gether with −1 and 2 if both ∆(a) and ∆(b) are even, and with the unique non-
+trivial discriminantal 2-part t∆(a) or t∆(b) in {−4, ±8} if only one of them is even.
+For a = b, this deﬁnition coincides with (36). It is tailored to obtain the following.
+Lemma 7.7. For a, b ∈Q∗/Q∗2 \ {1} satisfying (40), there exists F = F(x, y, z)
+in (33) that is minimally ramiﬁed over E. For such F and t ∈Q∗/Q∗2, we have
+K ⊂Ft is minimally ramiﬁed ⇐⇒t ∈Ta,b.
+Proof. We already showed existence. If ∆(a) and ∆(b) are not both even, it follows
+from (8) that the elements t ∈Ta,b are exactly the Dirichlet characters of the
+quadratic extensions Q ⊂Q(
+√
+t) that become unramiﬁed over E = Q(√a,
+√
+b),
+and preserve the minimal ramiﬁcation of F under twisting. If both ∆(a) and ∆(b)
+are even, inclusion of both generators −1 and 2 ‘at 2’ ensures that for ta = tb ̸= 1,
+when Deﬁnition 7.6 imposes no restriction on ramiﬁcation at 2 on K ⊂F, we do
+allow all possible quadratic twists of 2-power conductor.
+□
+We are now ready to deﬁne the R´edei symbol [a, b, c] for a, b, c ∈Q∗/Q∗2 satisfying
+(1) and (2) from the Introduction, i.e., with relative quadratic Hilbert symbols
+(a, b)p = (a, c)p = (b, c)p = 1
+at all primes p, and associated discriminants satisfying the coprimality condition
+gcd(∆(a), ∆(b), ∆(c)) = 1.
+Deﬁnition 7.8. For non-trivial a, b, c ∈Q∗/Q∗2 satisfying (1) and (2), let K =
+Q(
+√
+ab) ⊂Fa,b be minimally ramiﬁed over E = Q(√a,
+√
+b), as in Deﬁnition 7.6.
+Then the R´edei symbol
+[a, b, c] ∈Gal(Fa,b/E) = F2
+is deﬁned as
+(44)
+[a, b, c] = Artc(Fa,b/K) =
+(
+Art(c, Fa,b/K)
+if
+c > 0;
+Art(c∞, Fa,b/K)
+if
+c < 0.
+Here c is an integral OK-ideal of norm |c0|, with c0 the squarefree integer in the
+class of c, and ∞denotes an inﬁnite prime of K.
+If one of a, b, or c is trivial in Q∗/Q∗2, we take [a, b, c] = 0.
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+19
+With this deﬁnition, which we show in Corollary 8.2 to be independent of the choice
+of the minimally ramiﬁed extension K ⊂Fa,b, the R´edei symbol becomes perfectly
+symmetric in its 3 arguments. R´edei’s reciprocity law is the following precise version
+of Theorem 1.1.
+Theorem 7.9. For a, b, c ∈Q∗/Q∗2 satisfying (1) and (2), the symbol (44) is
+well-deﬁned, linear in each of its arguments, and satisﬁes
+[a, b, c] = [b, a, c] = [a, c, b] ∈F2.
+We say that the R´edei symbol [a, b, c] is deﬁned if its arguments a, b, c ∈Q∗/Q∗2
+satisfy the conditions (1) and (2).
+The inclusion of the inﬁnite prime in the deﬁnition (44) almost by tautology
+leads to the following useful property.
+Proposition 7.10. Let D = d1d2 be a decomposition of the second kind as in
+Deﬁnition 4.4. Then the R´edei symbol [d1, d2, −d1d2] ∈F2 is deﬁned and equals 0.
+Proof. Multiplying (d1, d2)p = 1 in (44) by the trivial symbols (d1, −d1)p and
+(−d2, d2)p, we obtain (d1, −d1d2)p = (−d1d2, d2) = 1, so [d1, d2, −d1d2] satisﬁes
+(1), and obviously also (2).
+Suppose D = d1d2 < 0. Then the principal ideal (
+√
+D) in the ring of integers of
+K = Q(
+√
+D) of norm c = −D = −d1d2 > 0 is trivial in C(D), so its Artin symbol
+acts trivially on any unramiﬁed abelian extension K ⊂F. In case D is odd, c is
+squarefree, and deﬁnition (44) with a = d1, b = d2, and c = (
+√
+D) yields the desired
+equality [a, b, c] = [d1, d2, −d1d2] = 0. For D < 0 even, c = ( 1
+2
+√
+D) of squarefree
+norm −d1d2/4 does the same.
+In the case D = d1d2 > 0, the class of the ideal c = (
+√
+D) of norm D = d1d2
+in C(D) is the Frobenius at inﬁnity F∞from (4), which acts as Art(∞, F/K) on
+the ﬁnitely unramiﬁed abelian extension K ⊂F. For D odd and c = −D < 0
+squarefree, [a, b, c] = [d1, d2, −d1d2] now corresponds to the action of the square of
+Art(∞, F/K) on F, which is also the identity, yielding [d1, d2, −d1d2] = 0. For
+D > 0 even, c = ( 1
+2
+√
+D) does the job.
+□
+8. Proving Redei reciprocity
+We already mentioned that R´edei’s original deﬁnition is diﬀerent from (44). Not
+only does he omit a contribution of the inﬁnite prime, putting [a, b, −c] = [a, b, c], he
+also requires at least one of ∆(a) and ∆(b) to be odd, making a symbol like [−1, 2, p]
+in (30) undeﬁned. The resulting reciprocity law [16, Satz 4] has superﬂuous 2-adic
+restrictions on the entries, and for bc < 0 the symbols [a, b, c] and [a, c, b], which are
+only both deﬁned for ∆(a) without prime factors congruent to 3 mod 4, diﬀer by a
+product of four quadratic and biquadratic symbols.
+In his 2007 thesis, Corsman found that including an Artin symbol at inﬁnity
+for c < 0 leads to a perfectly symmetric version of the reciprocity law. Both his
+deﬁnition of the symbol and his proof of the law rely heavily on an incorrect lemma
+[5, Lemma 5.1.2] claiming that the assumptions (1) and (2) guarantee the existence
+of an extension K ⊂F in (44) that is unramiﬁed at all primes p ∤gcd(∆(a), ∆(b)).
+Smith’s paper on the average 8-rank behavior of imaginary quadratic class groups
+also has an incorrect version of the reciprocity law [18, Proposition 2.1] that disre-
+gards the subtleties at both inﬁnite and dyadic primes.
+20
+PETER STEVENHAGEN
+We now let a, b, and c be squarefree integers diﬀerent from 1 satisfying (1) and (2).
+To see that [a, b, c] is well-deﬁned, and independent of the many choices that go
+into the deﬁnition of the symbol, we ﬁrst note, using Lemma 7.7, that an extension
+K ⊂Fa,b in (44) that is minimally ramiﬁed over E does exist, and that it is unique
+up to twisting by t ∈Ta,b.
+Let K ⊂F be minimally ramiﬁed over E = Q(√a,
+√
+b), and p a prime dividing c.
+Then p is split or ramiﬁed in Q(√a) and in Q(
+√
+b) by (1), and unramiﬁed in at least
+one of these ﬁelds by (2). For a prime pK|p in K, this implies that pK is of degree 1,
+and split in the extension K ⊂E. Moreover, pK is unramiﬁed in K ⊂F for primes
+p|c. Indeed, for odd p we are in case (1) of Deﬁnition 7.6 by (2). For 2|c at least one
+of ∆(a), ∆(b) is odd, say ∆(b), and then the condition (b, c)2 = (∆(b), 2)2 = 1 in (1)
+shows that we have ∆(b) ≡1 mod 8, putting us in case (2) of Deﬁnition 7.6. Thus
+Art(pK, F/K) ∈Gal(F/E) is a well-deﬁned element of Gal(F/Q). As Gal(F/E) is
+contained in the center of Gal(F/Q), and equal to it if Q ⊂F is dihedral,
+(45)
+[a, b, c]F,p = Art(pK, F/K) ∈Gal(F/E)
+only depends on F and p, not on pK|p in K. For p ∤c we put [a, b, c]F,p = idF .
+For c < 0, we have a, b > 0 by condition (1) for p = ∞, so E = Q(√a,
+√
+b) is
+totally real, and the decomposition group at every inﬁnite prime of F is generated
+by the Frobenius at inﬁnity
+[a, b, c]F,∞= Art(∞, F/K) ∈Gal(F/E).
+For c > 0 we put [a, b, c]F,∞= idF .
+With this notation, the R´edei symbol in (44) becomes a product
+(46)
+[a, b, c] =
+Y
+p≤∞
+[a, b, c]F,p ∈Gal(F/E)
+of its p-parts. The inﬁnite product (46) is well-deﬁned in Gal(F/E), as we can only
+have [a, b, c]F,p ̸= idF for primes p|c, with ∞|c having the meaning c < 0.
+As the prime pK in the Artin symbol Art(pK, F/K) = [a, b, c]F,p for p|c in (45)
+splits in K ⊂E, we can view it as the Artin symbol of a prime pE|p of E in the
+quadratic extension E ⊂F = E(√β) = E(√β′). As pE is unramiﬁed in E ⊂F, its
+norm to Ka is a prime p of degree 1 over p in Ka that is unramiﬁed in at least one of
+the quadratic extensions Ka(√β) and Ka(√β′) of Ka. Replacing p by a conjugate
+prime in Ka if necessary, we can take it to be unramiﬁed in Ka ⊂Ka(√β). We
+can then compute the p-part of [a, b, c] as
+(47)
+[a, b, c]F,p = Art(p, Ka(
+p
+β)/Ka) ∈{±1}.
+This shows that [a, b, c]F,p is essentially a Legendre symbol ( β
+p ) in the ﬁeld Ka. The
+reason that we choose its value to lie in {±1} rather than in F2, which is of course
+‘only’ a matter of notation, is not just a Legendre symbol tradition, or the fact that
+Galois groups like Gal(F/E) tend to be written as multiplicative groups. The point
+is that, for p|p unramiﬁed in Ka ⊂Ka(√β), the p-part of [a, b, c] is the quadratic
+Hilbert symbol
+(48)
+[a, b, c]F,p = (β, π)p ∈{±1}
+of β and a uniformizer π in the completion of Ka at p. For c < 0 and p = ∞, we
+have [a, b, c]F,∞= (β, −1)p, as the archimedean nature of F = E(√β) is determined
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+21
+by the sign of β at a real prime p of Ka. Respecting tradition, we have refrained
+from using Hilbert symbols with values in F2.
+It is clear from the symmetry in a and b of the deﬁnition of the R´edei symbol
+[a, b, c] that we have [a, b, c] = [b, a, c] whenever the symbol is deﬁned. In order to
+prove the non-trivial reciprocity law [a, b, c] = [a, c, b] in Theorem 1.1, we choose a
+minimally ramiﬁed extension F = E(√β) of K = Q(
+√
+ab) as in (33) in order to
+express [a, b, c] as a product of p-parts [a, b, c]F,p as in (46), and similarly a minimally
+ramiﬁed extension F ′ = E′(√γ) of K′ = Q(√ac) in order to express [a, c, b] as a
+product of [a, c, b]F ′,p. Here β, γ ∈Q(√a)∗are elements of norm b, c ∈Q∗/Q∗2,
+and the ﬁelds F and F ′ are the normal closures of Q(√a, √β) and Q(√a, √γ),
+respectively. In the spirit of (48), we then have the following key lemma.
+Lemma 8.1. Let a, b, c ∈Q∗/Q∗2 be non-trivial elements satisfying (1) and (2),
+and F = E(√β) and F ′ = E′(√γ) minimally ramiﬁed extensions of K = Q(
+√
+ab)
+and K′ = Q(√ac) deﬁned as above. For all rational primes p ≤∞, we then have
+(49)
+[a, b, c]F,p · [a, c, b]F ′,p =
+Y
+p|p in Q(√a)
+(β, γ)p.
+Proof. We denote the left and right hand side of (49) by Lp and Rp, respectively,
+and note that Lp and Rp are symmetric in b and c. Moreover, we can replace β
+(or γ) in Rp by its conjugate without changing the value of Rp, as the expression
+R′
+p obtained by replacing β by β′ satisﬁes RpR′
+p = Q
+p|p(b, γ)p = (b, c)p = 1.
+For p = ∞, condition (1) implies that at most one of a, b, c is negative. If they
+are all positive, we have L∞= 1, and both β and γ are totally positive or negative
+in the real quadratic ﬁeld Ka = Q(√a). The symbols (β, γ)p at the two inﬁnite
+primes of Ka then have the same value, so we also have R∞= 1. If only a is
+negative, we have L∞= 1 = R∞, as the unique inﬁnite prime of Ka is complex.
+If a is positive and exactly one of b and c, say c, is negative, L∞is the Frobenius
+at inﬁnity in E ⊂F = E(√β), which equals 1 if β ∈K∗
+a is totally positive, and
+−1 if β is totally negative. As γ has a positive and a negative embedding in R, the
+same value is taken by the product R∞= (β, γ)∞1(β, γ)∞2 of the Hilbert symbols
+at the inﬁnite primes of Ka. This settles the case p = ∞.
+For p a ﬁnite prime, take a, b, c to be squarefree integers. Condition (2) implies
+that p divides at most two of a, b, c. If p divides b, it is split or ramiﬁed in Ka,
+and β is, up to squares in K∗
+a, a uniformizer at a prime p1|p and, in the split case
+(p) = p1p2, a unit at the other prime p2|p in Ka. If p does not divide b, then the
+minimal ramiﬁcation of K ⊂F implies that β is a p-unit, up to squares in K∗
+a.
+For odd p this means that √β ∈F generates an extension of Ka that is unramiﬁed
+over p. Analogous statements apply to c and γ.
+Suppose ﬁrst that p is odd. If p does not divide bc, we have Lp = 1 = Rp, as
+the Hilbert symbols (β, γ)p at p|p are equal to 1 for p-units β and γ. If p divides
+exactly one of b, c, say c, we can take β to be a p-unit, with square root in F that
+is unramiﬁed over p, and γ a uniformizer at a prime p1|p. By (48), we then have
+(50)
+Lp = [a, b, c]F,p = (β, γ)p1.
+In the split case (p) = p1p2, we further have (β, γ)p2 = 1, as both β and γ are units
+at p2. This yields Lp = Rp both in the ramiﬁed and in the split case.
+If p divides both b and c, it does not divide a, so we are in the split case
+(p) = p1p2 in Ka. After replacing β by its conjugate, if necessary, β is a unit at p1
+22
+PETER STEVENHAGEN
+and a uniformizer at p2, whereas γ is a uniformizer at p1 and a unit at p2. Again
+by (48),
+(51)
+Lp = [a, b, c]F,p · [a, c, b]F ′,p = (β, γ)p1(β, γ)p2 = Rp,
+so we have proved our lemma for odd p.
+For p = 2, we need a ﬁner distinction as 2 ∤b, and even 2 ∤∆(b), does not
+imply that the minimally ramiﬁed extension K ⊂F is unramiﬁed over 2, and that
+√β generates a subextension of Ka ⊂F that is unramiﬁed over 2. For 2 ∤∆(b),
+or b ≡1 mod 4, Deﬁnition 7.6 shows that it does in all cases except in the case
+a ≡−1(4) and b ≡5 mod 8. For b ≡−1 mod 4, when 2 divides ∆(b) but not b, we
+do know that β is, up to squares in K∗
+a, a 2-adic unit. Moreover, for ∆(b) even and
+2 split in Ka, the extension Ka ⊂Ka(√β) is unramiﬁed at one prime over 2, and
+ramiﬁed at the other. Same for c and γ.
+Suppose ﬁrst that bc is odd. Then we have L2 = 1, and we take β and γ to
+be 2-units. By the condition (b, c)2 = 1 at least one of b, c, say b, is 1 mod 4. For
+c ≡−1 mod 4, the condition (a, c)2 = 1 implies a ̸≡−1 mod 4, so the minimally
+ramiﬁed extension K ⊂F is unramiﬁed over 2, and all Hilbert symbols (β, γ)p at
+primes p|2 in Ka occurring in R2 equal 1, as γ is a unit at p and Ka ⊂Ka(√β)
+is unramiﬁed at p.
+For c ≡1 mod 4, Deﬁnition 7.6 tells us that we are in the
+same situation, with R2 = 1 because one of β, γ is a p-unit and the other has a
+p-unramiﬁed square root, provided that either we have a ̸≡−1 mod 4 or one of b, c
+is 1 mod 8. The remaining special case a ≡−1 mod 4 and b ≡c ≡5 mod 8 is when
+both Ka ⊂F and Ka ⊂F ′ are ramiﬁed at the prime p|2 of Ka. This is where the
+minimal ramiﬁcation at 2 of the extensions K ⊂F and K ⊂F ′ from Deﬁnition 7.5
+is essential: once more we have R2 = (β, γ)p = 1, as √β generates an extension
+of conductor 2 of the completion Q2(√a) of Ka at p, and γ is 1 modulo p2 = (2)
+in Ka. This proves L2 = 1 = R2 for bc odd.
+If exactly one of b, c is even, say c, the condition (a, c)2 = (b, c)2 = 1 implies
+a, b ̸≡5 mod 8. For b ≡1 mod 8, the minimally ramiﬁed extension K ⊂F, and
+therefore Ka ⊂Ka(√β), is unramiﬁed over 2. In this case, we have
+L2 = [a, b, c]F,2 = (β, γ)p1 = R2
+just as in the case of odd p, as we can take γ to be a uniformizer at p1|2 and, in
+the split case, a unit at the other prime p2. In the other case b ≡−1 mod 4 both
+∆(b) and ∆(c) are even, so we have a ≡1 mod 8 and (2) = p1p2 in Ka. In this
+case, √β and √γ generate extensions of Ka that are ramiﬁed at one prime over 2,
+and unramiﬁed at the other. Replacing β or γ by their conjugate if necessary, we
+can assume that Ka ⊂Ka(√β) is unramiﬁed at p1 and Ka ⊂Ka(√γ) unramiﬁed
+at p2. Up to squares, γ is a then a uniformizer at p1 and β a unit at p2, so we have
+L2 = [a, b, c]F,2 = (β, γ)p1 = (β, γ)p1(β, γ)p2 = R2.
+Finally, for b and c both even, we are also in the split case, as ∆(a) is odd and
+(a, b)2 = (a, 2)2 = 1 implies a ≡1 mod 8. As above, we can choose Ka ⊂Ka(√β)
+unramiﬁed at p1 and Ka ⊂Ka(√γ) unramiﬁed at p2. Up to squares, this makes β
+a uniformizer at p2 and γ a uniformizer at p1. We obtain
+L2 = [a, b, c]F,2[a, c, b]F ′,2 = (β, γ)p1(β, γ)p2 = R2,
+and we have ﬁnished the proof of Lemma 8.1.
+□
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+23
+Proof of Theorem 1.1. By Lemma 8.1, the sum in F2 of the R´edei symbols
+[a, b, c] and [a, c, b], when deﬁned as in (44) with the help of F = E(√β) and
+F ′ = E′(√γ), respectively, is the additive analogue of Q
+p≤∞(β, γ)p ∈{±1}, where
+the product ranges over all primes p ≤∞of Q(√a). By the product formula for
+Hilbert symbols, this product is equal to 1, so we have [a, b, c] = [a, c, b], as desired.
+As we can trivially swap a and b in [a, b, c], this shows that the R´edei symbol is
+perfectly symmetric in its 3 arguments.
+The linearity of [a, b, c] in c is clear from its description as a product of Artin
+symbols [a, b, c]p of order 2 at the primes p|c. It must therefore be linear in all
+arguments.
+□
+Corollary 8.2. The value of the symbol [a, b, c] in (44) is the same for all K ⊂Fa,b
+that are minimally ramiﬁed over Q(√a,
+√
+b).
+Proof. By Theorem 1.1, the symbol is equal to [a, c, b], which is deﬁned indepen-
+dently of a choice K ⊂Fa,b.
+One can of course also prove this directly: by Lemma 7.7, two F’s that are
+minimally ramiﬁed over Q(√a,
+√
+b) diﬀer by a twist t ∈Ta,b, and twisting F = Fa,b
+in (44) changes the value of [a, b, c] by χt(c), which equals 0 for t ∈Ta,b by the
+conditions (1) and (2).
+□
+Even though the symbol [a, b, c] itself is independent of the choice of F in (7.8), its
+p-parts [a, b, c]F,p in (46) do depend on the minimally ramiﬁed extension K ⊂F.
+It is also possible to deﬁne [a, b, c] as an Artin symbol in an abelian extension
+K ⊂Fa,b that is uniquely deﬁned in terms of a and b. For any minimally ramiﬁed
+extension K ⊂F as in (33), we can take the compositum
+Fa,b = FGa,b,
+of F with the multiquadratic extension Ga,b obtained by adjoining the square roots
+√
+t of the elements t ∈Ta,b from (43). By Lemma 7.7, the number ﬁeld Fa,b is the
+compositum of all minimally ramiﬁed extensions K ⊂F, so it is uniquely deﬁned
+in terms of a and b. We now replace Fa,b by Fa,b in (44) and deﬁne the R´edei
+symbol [a, b, c] ∈Gal(Fa,b/Ga,b) = F2 as
+(52)
+[a, b, c] = Artc(Fa,b/K) =
+(
+Art(c, Fa,b/K)
+if
+c > 0;
+Art(c∞, Fa,b/K)
+if
+c < 0.
+Although Deﬁnition (52) is in many ways the ‘correct’ deﬁnition of [a, b, c], it has the
+psychological disadvantage of being deﬁned using a ﬁeld Fa,b that is potentially very
+large. For the proof of the reciprocity of the symbol, and for actual computations
+of R´edei symbols, the p-parts of [a, b, c], which are simply Legendre symbols in
+quadratic ﬁelds such as Ka = Q(√a) by (47), are handled more easily.
+9. Governing fields
+An immediate application of R´edei’s reciprocity law in the form we have stated it
+is the existence of governing ﬁelds for the 8-rank of the narrow class group C(dp)
+of the quadratic ﬁeld Q(√dp), with d a ﬁxed squarefree integer and p a variable
+prime. By this, we mean that there exists a normal number ﬁeld Ω8,d with the
+property that for primes p, p′ ∤d that are coprime to its discriminant and have
+the same Frobenius conjugacy class in Gal(Ω8,d/Q), the groups C(dp)/C(dp)8 and
+C(dp′)/C(dp′)8 are isomorphic.
+24
+PETER STEVENHAGEN
+Theorem 2.1 trivially implies that Ω2,d = Q(i) is a governing ﬁeld for the 2-rank
+of C(dp). By the explicit form (16) of Theorem 3.1, we can take the multi-quadratic
+ﬁeld
+Ω4,d = Q(i, {√p : p|d prime})
+as a governing ﬁeld for the 4-rank of C(dp).
+Now suppose p and p′ are primes that are unramiﬁed in Ω4,d and have the same
+Artin symbol in Gal(Ω4,d/Q). Then the R´edei matrices R4 and R′
+4 for C(dp) and
+C(dp′) as given in (16) coincide if the primes in dp and dp′ are numbered in the
+obvious compatible way. This implies that the 8-rank maps in (22) can be described
+by matrices R8 and R′
+8 for C(dp) and C(dp′) with entries given by (23) that may be
+compared ‘entry-wise’. In other words, every entry [d1, d2, m] from Deﬁnition 4.4 in
+the matrix R8 for D = d1d2 ∈{dp, 4dp} corresponds to a R´edei symbol [d′
+1, d′
+2, m′]
+for R′
+8 in which the arguments are obtained by replacing every prime factor p in
+the entries of [d1, d2, m] by the factor p′.
+Possibly switching the role of d1 and d2, we may assume that all symbols
+[d1, d2, m] in R8 have p ∤d1. Moreover, if we have p|m in a symbol [d1, d2, m],
+we can add the trivial symbol [d1, d2, −d1d2] from Proposition 7.10 to it to rewrite
+it as a symbol
+(53)
+[d1, d2, m] = [d1, d2, −d1d2/m] = [d1, d2, dp/m]
+with p ∤(dp/m). Thus, we may write the entries of R8 as [d1, d2, m] with p ∤d1m.
+Then the entries of R′
+8 become [d′
+1, d′
+2, m′] = [d1, d′
+2, m].
+In order to show that the value of [d1, d2, m] for p ∤d1m is governed by the
+splitting behavior of p in some ﬁnite extension of Ω4,d, it suﬃces to rewrite it using
+Theorem 1.1 as
+[d1, d2, m] = [d1, m, d2],
+and observe that we now have [d1, m, d2] = [d1, m, d′
+2] for d′
+2 = p′d2/p whenever
+p and p′ have the same splitting behavior in Ω4,d(√µ), with µ ∈Q(√d1) an el-
+ement with norm in m · Q∗2 that generates a minimally ramiﬁed extension of
+K = Q(√md1) as in (33) for (a, b) = (d1, m).
+Note that Ω4,d ⊂Ω4,d(√µ) is
+unramiﬁed outside 2d.
+Taking Ω8,d to be the compositum of the ﬁelds Ω4,d(√µ) arising for each of the
+entries [d1, d2, m] of R8, we see that R8 and R′
+8 coincide for primes p, p′ having
+the same Frobenius conjugacy class in Gal(Ω8,d/Q). We arrive at the following
+theorem, which was proved in a more involved way in 1988 in [20]. The short proof
+we gave above already occurs in [5].
+Theorem 9.1. A governing ﬁeld Ω8,d for the 8-rank of C(dp) exists, and one can
+take for it the maximal exponent 2 extension of Ω4,d unramiﬁed outside 2d.
+□
+The existence of Ω8,d implies, by the Chebotarev density theorem, that we can
+compute the density of the set of primes p for which C(dp) has prescribed 2-, 4-
+and 8-rank. Cohn and Lagarias [4] conjectured in 1983 that such governing ﬁelds
+Ω2k should exist for the 2k-rank of C(dp) for all k ≥1. Recent work of Milovic and
+Koymans [10,11] establishes density results for 16-ranks of class groups C(dp) with
+cyclic 2-part, such as C(−2p), with error terms that are “too good” to come from
+a governing ﬁeld, making it unlikely that the conjecture holds for 2k-ranks with
+k ≥4. Smith [19] nevertheless arrives at proving average distributions for higher
+2k-ranks by ‘governing less’, focusing not on individual quadratic ﬁelds K but on
+their related behavior in well-chosen families.
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+25
+10. The negative Pell equation
+By (20), proving Conjecture 3.2 entails controlling the archimedean character of the
+full narrow Hilbert class ﬁeld H of K = Q(
+√
+D) for the discriminants D in the thin
+set D of discriminants for which the genus ﬁeld H2 is totally real. The 4-Hilbert class
+ﬁeld H4 of K can be given explicitly, in the sense of Corollary 7.4, as a compositum
+of cyclic quartic extensions K ⊂Fd1,d2 that are unramiﬁed over the ﬁelds E =
+Q(√d1, √d2), with D = d1d2 ranging over (a basis of) the decompositions of D of
+the second kind, as characterized in Lemma 4.2. By Deﬁnition 7.8, the archimedean
+character of the dihedral ﬁeld Fd1,d2 is given by the R´edei symbol [d1, d2, −1] =
+Art(∞, Fd1,d2/K), which is deﬁned since d1, d2 ∈D satisfy (d1, −1)p = (d2, −1)p =
+1 for all p.
+Theorem 10.1. Let D = d1d2 be a decomposition of the second kind for D ∈D,
+and K ⊂Fd1,d2 a corresponding unramiﬁed extension as in (1) of Lemma 4.2. Then
+Fd1,d2 is totally real if and only if we have
+[d1, d2, −1] =
+d1
+d2
+
+4
++
+d2
+d1
+
+4
+= 0 ∈F2.
+Proof. Add to [d1, d2, −1] the symbol [d1, d2, −d1d2] = 0 from Proposition 7.10,
+and use the linearity and reciprocity properties of the R´edei symbol together with
+the special case in Deﬁnition 7.1 to obtain the desired equality
+[d1, d2, −1] = [d1, d2, d1d2] = [d1, d2, d1] + [d1, d2, d2]
+= [d1, d1, d2] + [d2, d2, d1] =
+d2
+d1
+
+4
++
+d1
+d2
+
+4
+.
+□
+Theorem 10.1 was already known to R´edei, but his symbol ‘without inﬁnite primes’
+cannot be used to give the short proof above. A long proof can be found in [6, pp.
+2061–2064].
+Theorem 10.1 implies that H4 is totally real if and only if all R´edei symbols
+[d1, d2, −1] corresponding to r4 decompositions D = d1d2 of the second kind span-
+ning bC[2]∩2 bC vanish. The explicit form of the symbol as a sum of two biquadratic
+symbols was used by Fouvry and Kl¨uners [6] to show that these r4 diﬀerent R´edei
+symbols vanish for the expected fraction 2−e of all discriminants in the subset
+D(e) ⊂D of D having r4 = e. As D(e) has density P(e) in D, a short calculation
+[21, Corollary 4.4] involving the explicit values following equation (21) shows that
+the density of D ∈D with H4 totally real equals
+∞
+X
+e=0
+2−eP(e) =
+∞
+X
+e=0
+2−e · α ·
+e
+Y
+j=1
+(2j −1)−1 = 2
+3.
+In the direction of Conjecture 3.2, this yields an upper density P ≤2
+3 ≈.667 for
+the subset D−of D.
+For discriminants D ∈D having r8 = 0, the necessary condition for D ∈D−
+that H4 be totally real is also suﬃcient, and this gives rise to lower bounds. Dis-
+criminants in D(0) trivially have r8 = r4 = 0, and the inclusion D(0) ⊂D−yields
+the lower bound P(0) = α ≈.419 from (21) for the lower density P of D−in D
+that we already mentioned at the end of Section 3.
+Discriminants D ∈D(1) have a unique non-trivial decomposition D = d1d2 of
+the second kind, and the kernel of the symmetric matrix R4 is spanned by the
+26
+PETER STEVENHAGEN
+discriminantal divisors d1 and d2. In this case R´edei reciprocity for the special
+symbols in Deﬁnition 7.1 shows that R8 has a matrix representation
+R8 =
+ [d1, d2, d1]
+[d1, d2, d2]
+=
+d2
+d1
+
+4
+d1
+d2
+
+4
+
+in terms of biquadratic symbols. In view of Theorems 4.1 and 10.1, having r8 = 0
+and H4 totally real now amounts to
+(54)
+d2
+d1
+
+4
+=
+d1
+d2
+
+4
+= 1 ∈F2,
+and, again, for the expected fraction 1
+4 of discriminants in D(1), both biquadratic
+symbols are non-trivial [7]. This yields P(0)+ 1
+4P(1) = 5
+4α ≈.524 as a lower bound
+for the lower density P.
+For discriminants D ∈D(e) with e ≥2, the R´edei symbols in the matrix R8 are
+not restricted to biquadratic symbols, but Chan, Koymans, Milovic and Pagano [3]
+show that they can still be ‘governed’ by an adaptation of the methods in Smith’s
+recent work [18,19]. They prove that the density of discriminants D ∈D of 4-rank
+r4 = e for which r8 = 0 and H4 is totally real equals 2−e(e+3)/2 · α, extending the
+trivial case e = 0 and the special case e = 1 above. This improves the lower bound
+α + 1
+4α above to P∞
+e=0 2−e(e+3)/2 · α. Thus, the published state of aﬀairs towards
+Conjecture 3.2, which claims P = P = 1 −α = .581, becomes
+.538 ≈P∞
+e=0 2−e(e+3)/2 · α ≤P ≤P ≤2/3 ≈.667.
+Improving these bounds involves dealing with the remaining 12.8% of discriminants
+D ∈D having r8 > 0. As this article goes to press (March 2021), Koymans and
+Pagano have announced that they have been able to extend Smith’s techniques [19]
+to also control these discriminants, and to prove my full Conjecture 3.2 after almost
+30 years.
+References
+[1] Dan Boneh and Alice Silverberg, Applications of multilinear forms to cryptography, Topics in
+algebraic and noncommutative geometry (Luminy/Annapolis, MD, 2001), Contemp. Math.,
+vol. 324, Amer. Math. Soc., Providence, RI, 2003, pp. 71–90.
+[2] Wieb Bosma and Peter Stevenhagen, Density computations for real quadratic units, Math.
+Comp. 65 (1996), no. 215, 1327–1337.
+[3] Stephanie Chan, Peter Koymans, Djordjo Milovic, and Carlo Pagano, On the negative Pell
+equation, arXiv:19089.0175032v1 (2019).
+[4] H. Cohn and J. C. Lagarias, On the existence of ﬁelds governing the 2-invariants of the
+classgroup of Q(√dp) as p varies, Math. Comp. 41 (1983), no. 164, 711–730.
+[5] Jens Corsman, R´edei symbols and governing ﬁelds, ProQuest LLC, Ann Arbor, MI, 2007.
+PhD thesis–McMaster University (Canada).
+[6] ´Etienne Fouvry and J¨urgen Kl¨uners, On the negative Pell equation, Ann. of Math. (2) 172
+(2010), no. 3, 2035–2104.
+[7]
+, The parity of the period of the continued fraction of
+√
+d, Proc. Lond. Math. Soc. (3)
+101 (2010), no. 2, 337–391.
+[8] Jochen G¨artner, R´edei symbols and arithmetical mild pro-2-groups, Ann. Math. Qu´e. 38
+(2014), no. 1, 13–36 (English, with English and French summaries).
+[9] Hendrik W. Lenstra Jr., Solving the Pell equation, Algorithmic number theory: lattices, num-
+ber ﬁelds, curves and cryptography, Math. Sci. Res. Inst. Publ., vol. 44, Cambridge Univ.
+Press, Cambridge, 2008, pp. 1–23.
+[10] Djordjo Milovic, On the 16-rank of class groups of Q(√−8p) for p ≡−1 mod 4, Geom. Funct.
+Anal. 27 (2017), no. 4, 973–1016.
+REDEI RECIPROCITY, GOVERNING FIELDS, AND NEGATIVE PELL
+27
+[11] P. Koymans and D. Z. Milovic, Spins of prime ideals and the negative Pell equation x2 −
+2py2 = −1, Compos. Math. 155 (2019), no. 1, 100–125.
+[12] J´an Min´aˇc and Nguyen Duy Tˆan, Construction of unipotent Galois extensions and Massey
+products, Adv. Math. 304 (2017), 1021–1054.
+[13] Masanori Morishita, Knots and primes, Universitext, Springer, London, 2012. An introduc-
+tion to arithmetic topology.
+[14] L. R´edei and H. Reichardt, Die Anzahl der durch vier teilbaren Invarianten der Klassengruppe
+eines beliebigen quadratischen Zahlk¨orpers, J. Reine Angew. Math. 170 (1934), 69–74.
+[15] L. R´edei, Arithmetischer Beweis des Satzes ¨uber die Anzahl der durch vier teilbaren Invari-
+anten der absoluten Klassengruppe im quadratischen Zahlk¨orper, J. Reine Angew. Math. 171
+(1934), 55–60.
+[16]
+, Ein neues zahlentheoretisches Symbol mit Anwendungen auf die Theorie der quadra-
+tischen Zahlk¨orper. I, J. Reine Angew. Math. 180 (1939), 1–43.
+[17] G. J. Rieger, ¨Uber die Anzahl der als Summe von zwei Quadraten darstellbaren und in einer
+primen Restklasse gelegenen Zahlen unterhalb einer positiven Schranke. II, J. Reine Angew.
+Math. 217 (1965), 200–216.
+[18] Alexander Smith, Governing ﬁelds and statistics for 4-Selmer groups and 8-class groups,
+ArXiv:1607.07860 (2016), 1–29.
+[19]
+, 2∞-Selmer groups, 2∞-class groups, and Goldfeld’s conjecture, ArXiv:1702.02325
+(2017), 1–72.
+[20] Peter Stevenhagen, Ray class groups and governing ﬁelds, Th´eorie des nombres, Ann´ee
+1988/89, Fasc. 1, Publ. Math. Fac. Sci. Besan¸con, Univ. Franche-Comt´e, Besan¸con, 1989,
+pp. 1–93.
+[21]
+, The number of real quadratic ﬁelds having units of negative norm, Experiment.
+Math. 2 (1993), no. 2, 121–136. MR1259426
+[22]
+, On a problem of Eisenstein, Acta Arith. 74 (1996), no. 3, 259–268.
+Mathematisch Instituut, Universiteit Leiden, Postbus 9512, 2300 RA Leiden, The
+Netherlands
+Email address: psh@math.leidenuniv.nl
