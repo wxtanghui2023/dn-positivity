@@ -1,0 +1,2588 @@
+arXiv:2211.16680v1  [math.PR]  30 Nov 2022
+A NEW CLASS OF SOLUTIONS TO THE VAN DANTZIG PROBLEM,
+THE LEE-YANG PROPERTY, AND THE RIEMANN HYPOTHESIS
+T. KONSTANTOPOULOS, P. PATIE, AND R. SARKAR
+Abstract. The purpose of this paper is to carry out an in-depth analysis of the intrigu-
+ing van Dantzig problem which consists on characterizing the set D of analytic charac-
+teristic functions F which remains stable by the action of the mapping V F(t) = 1/F(it),
+t ∈R. We start by observing that the celebrated Lee-Yang property, appearing in sta-
+tistical mechanics and quantum ﬁeld theory, and the Riemann hypothesis can be both
+rephrased in terms of the van Dantzig problem, and, more speciﬁcally, in terms of the
+set DL ⊂D of real-valued characteristic functions that belong to the Laguerre-P´olya
+class.
+Motivated by these facts, we proceed by identifying several non-trivial closure
+properties of the set D and DL. This not only revisits but also, by means of probabilistic
+techniques, deepens the fascinating studies of the set of even characteristic functions in
+the Laguerre-P´olya class carried out by P´olya [52], de Bruijn [13], Lukacs [38], Newman
+[40] and more recently by Newman and Wu [41], among others. We continue by provid-
+ing a new class of entire functions that belong to the set D but not necessarily to DL,
+oﬀering the ﬁrst examples outside the set DL. This class, which is derived from some
+entire functions introduced by the second author in [44], is in bijection with a subset of
+continuous negative-deﬁnite functions and includes several notable generalized hyperge-
+ometric type functions. Besides identifying the characteristic functions, we also manage
+to characterize the pair of the corresponding van Dantzig random variables revealing
+that one of them is inﬁnitely divisible. Finally, we investigate the possibility that the
+Riemann ξ function belongs to this class.
+AMS 2020 subject classiﬁcations: Primary: 42A38, 33C47, 47D07 Secondary: 30C15,
+47D07.
+Key words: van Dantzig problem, characteristic functions, Laguerre-P´olya entire func-
+tions, generalized hypergeometric functions, Lee-Yang property, Riemann hypothesis, Self-
+similar Markov processes.
+1. Introduction
+In his seminal paper [38], E. Lukacs provided comprehensive and fascinating insights
+towards the characterization of the class of functions
+(1.1)
+D = {F ∈P+; V F ∈P+}
+where
+V F(t) =
+1
+F(it), t ∈R,
+and P+ stands for the set of continuous bounded positive-deﬁnite functions, normalized
+to be 1 at the origin. Note that by Bochner’s theorem, P+ is the set of characteristic
+functions of real-valued random variables, see e.g. [61]. This question was posed, as a
+The second author is grateful to Mateusz Kwa´snicki for providing the reference [19] which contains a
+closure property of P´olya frequency densities.
+1
+prize-winning problem, by David van Dantzig, a Dutch algebraic topologist, in Nieuw
+Archief voor Wiskunde.
+If F ∈D then the function V F is called the (van Dantzig) reciprocal of F, and also belongs
+to D. This last fact entails, see Proposition 6, that any F ∈D admits an analytic extension
+on a cross section of the complex plane including the imaginary line in its interior. We
+also let
+(1.2)
+D2 = {[F, V F] ∈P+ × P+; F(it) · V F(t) = 1 for all t ∈R} .
+We say that F is a van Dantzig function and that [F, V F] is a van Dantzig pair. Note
+that the mapping V : D →D is a multiplicative involution, that is, V F1F2 = V F1V F2
+and V ◦V F = F, see Proposition 7 below.
+The ﬁrst historical instances of non-trivial van Dantzig pairs are
+(1.3)
+
+cos t,
+1
+cosh t
+
+,
+sin t
+t
+,
+t
+sinh t
+
+and
+
+e−t2
+2 , e−t2
+2
+
+.
+We notice that, in the last example,
+FN(t) = e−t2
+2
+is the characteristic function of a standard normal random variable for which it is imme-
+diate that V FN(t) = 1/FN(it) = FN(t) and hence FN ∈DS, where
+DS = {F ∈P+; F = V F}
+is the invariant set of V or self-reciprocal elements of D. It is easy to see that, for any
+F ∈D, the mapping t 7→F(t)V F(t) is in DS, meaning that the set DS contains many
+more elements than FN. However, the following fact, due to Lukacs, oﬀers an original
+characterization of the characteristic function FN
+
+[F1, F2] ∈D2; −log Fj ∈N(R), j = 1, 2
+	
+=
+
+[FN, FN]
+	
+where N(R) is the set of negative deﬁnite functions on R, see [61, Chapter 4] for more
+information on this set. In other words, if F and V F are inﬁnitely divisible then they are
+identical and both equal to FN.
+Regarding the ﬁrst example in (1.3), it is immediate that the mapping t 7→cos t is
+the characteristic function of a random variable taking values ±1 with equal probabil-
+ity, whereas t 7→(cosh t)−1 is the characteristic function of a random variable with density
+(2 cosh(πx/2))−1, x ∈R. For the second example, the mapping t 7→sin t/t corresponds
+to the characteristic function of a uniformly distributed random variable on the interval
+[−1, 1] and t 7→t(sinh t)−1 to the one of an absolutely continuous probability measure
+whose density is π
+4 (1 −tanh(πx/2))2, x ∈R.
+Another classical example, discussed at the end of Lukacs’s paper, and presented in a more
+general form in [24, 21], is expressed in terms of the entire functions
+(1.4)
+Jν(t) = Γ(ν + 1)t−νJν (t) ,
+Iν(t) = Jν(it),
+where Jν is the Bessel function of the ﬁrst kind of index ν, and given by the pair
+(1.5)
+
+Jν, 1
+Iν
+
+∈D2,
+ν > −1
+2.
+The corresponding pair of random variables are described in details in [24], see also (5.24)
+and Lemma 34.
+This set of examples turns out to be the only canonical solutions to
+2
+the van Dantzig problem available in the literature.
+Note that they all belong to the
+subclass DL ⊂D, originally identiﬁed by Lukacs [38], which stands for the set of even
+entire characteristic functions in the Laguerre-P´olya class. That is, entire functions which
+are locally the limit of a series of polynomials whose roots are all real, see Section 2 for
+further discussion on this class. Throughout, we shall provide several ways of generating
+new instances in DL and also present new subclasses of D.
+In this paper, we start by identifying a connection between two fundamental problems in
+mathematics and the subclass DL ⊆D. First, we explain how the Riemann hypothesis can
+be equivalently formulated by the membership of the Riemann ξ function to the class DL,
+something which, in a diﬀerent context, was observed by Roynette and Yor [57]. Similarly,
+the celebrated Lee-Yang property in statistical physics, discovered ﬁrst by Lee and Yang
+in connection to the Ising model on a ﬁnite lattice, is also equivalent to the requirement
+that the partition function, viewed as a function on the imaginary line, belongs to DL, see
+[23] for a thorough account on this topic. This connection relies on the theory of P´olya
+frequency functions developed by Schoenberg [60], see Section 2.
+In view of its importance, we ﬁrst aim to develop an in-depth analysis of the subclass
+DL.
+On the one hand, we adapt several substantial results that one can ﬁnd in the
+number theory and statistical mechanics literature to provide new information about the
+class DL. Conversely, by means of probabilistic techniques combined with the theory of
+entire functions, we also provide original closure properties of the class DL which give new
+insights to the two aforementioned problems. For instance, we ﬁnd necessary conditions
+for the product of two independent random variables to belong or to remain in DL, see
+Theorem 18. In the same vein, in Theorem 19, we revisit, improve and extend to the class
+D, a recent result due to Newman and Wu [41] regarding the closure property of this class
+under locally uniform convergence.
+Another objective of this paper is to identify a new subclass, denoted by DP , of analytic
+characteristic functions that belong to the class D, that is, are solutions to the van Dantzig
+problem. More speciﬁcally, to each Laplace exponent Ψ of a (possibly killed) spectrally
+negative L´evy process which is non-negative on the interval [1/2, ∞), we associate the
+function JΨ ∈DP which is deﬁned by
+JΨ(t) = 1 +
+∞
+X
+n=1
+(−1)n
+Ψ(1) · · · Ψ(n)t2n.
+Since limu→∞Ψ(u) = ∞, we deduce easily that JΨ deﬁnes an entire function. We refer
+to sections 4 and 5.2.2 for more information about the objects introduced here and this
+class of functions, whose analysis is intimately related to the Wiener-Hopf factorization
+of the Laplace exponent Ψ. We also point out that the entire function IΨ(t) = JΨ(i
+√
+t)
+was introduced by the second author in [44], and has appeared in various mathematical
+contexts recently, in probability theory [45], in the spectral theory of some non-self-adjoint
+operators [49, 46], in the study of special functions [67] and a chapter is devoted to this
+class of function in the monograph [31]. Note that when Ψ(n) = n(ν + n) is the Laplace
+exponent of a (scaled) Brownian motion with drift ν ≥−1
+2, then JΨ boils down to the
+Bessel-Cliﬀord function Jν as deﬁned in (1.4). The class DP includes a wide range of other
+well-known special functions such as several hypergeometric functions, the Mittag-Leﬄer
+functions, and the Wright functions, among others, see Section 4.2.
+3
+Theorem 20 states that JΨ ∈D. Its proof relies on identifying the two random variables
+whose characteristic functions are JΨ and 1/IΨ, IΨ(t) = JΨ(it), see Lemmas 35 and 34,
+respectively. This is achieved by introducing a Markov operator, see (5.19), that serves
+on the one hand to show that JΨ is the characteristic function of the product of two
+independent random variables (one having as characteristic function the Bessel function
+J0). On the other hand, it also turns out to be an intertwining operator between two
+Markov semigroups, see e.g. [49] for a review of this concept. From this fact, we deduce
+ﬁrst that t 7→IΨ(
+√
+t) is an invariant function for one of these semigroups and then
+its reciprocal is the Laplace transform of a positive random variable associated to the
+Markov process, from where we conclude by invoking an argument involving the Bochner
+subordination of a Brownian motion. Moreover, since Jν ∈DL ∩DP , it is natural to
+wonder whether DP ⊂DL. This is a very delicate question as it is diﬃcult, in general, to
+identify the location of zeros of a power series. However, we manage to provide necessary
+conditions on Ψ for JΨ ∈DL, that is the entire function has only real zeros. We also
+identify instances of entire functions in DP which have non real zeros, revealing that
+DL ⊊D, see Theorem 23.
+The remaining part of the paper is organized as follows. In Section 2, we introduce the
+Lukacs class DL and present its connection with the Riemann hypothesis and the Lee-Yang
+property. Section 3 is devoted to a thorough analysis of the sets D and DL, including some
+closure properties of DL under various mappings, and to the identiﬁcation of original ways
+to generate new elements in DL. In Section 4 we introduce the new subclass DP and
+provide some interesting properties. Finally, in Section 5, we collect the proofs of the
+results presented in the two previous sections.
+2. The Lukacs class DL
+We start by recalling that an entire function is in the Laguerre-P´olya class LP if it is the
+local uniform limit of a sequence of polynomials with real coeﬃcients and real zeros only.
+In fact, based on ideas of Laguerre, see [20, pp. 167–177] and [7, Ch. 2], P´olya and Schur
+[53] showed that ϕ is in LP if and only if
+(2.1)
+ϕ(z) = Kzme−c2z2+az
+∞
+Y
+k=1
+
+1 −z
+zk
+
+ez/zk, z ∈C,
+for some m ∈Z+, K, c, a ∈R, zk ∈R \ {0} such that P 1/z2
+k < ∞, and, where zk,
+k ∈N, are the nonzero zeros of the entire function F, arranged in order of nondecreasing
+modulus.
+Lukacs was interested in even characteristic functions in the class LP and made the ob-
+servation that such functions are automatically in D, something that we explain in the
+sequel.
+Let now
+(2.2)
+LPe = {ϕ ∈LP; ϕ is even and ϕ(0) = 1}.
+The representation (2.1) immediately gives that ϕ ∈LPe must be of the form
+(2.3)
+ϕ(z) = e−c2z2 ∞
+Y
+k=1
+
+1 −z2
+z2
+k
+
+,
+c ∈R,
+zk > 0,
+X
+k
+1/z2
+k < ∞.
+4
+Indeed, the even functions in LP are the functions of the form (2.1) with m = 0, K = 1
+and zeros that are symmetrically placed around 0 on the real axis, resulting in precisely
+the form (2.3). Next, we mention that the order ρ and the exponent of convergence ̺ of
+an entire function ϕ in the Laguerre-P´olya class are such that
+0 ≤̺ ≤ρ ≤2
+where we recall that ρ = limr→∞
+log log max|z|=r |ϕ(z)|
+log r
+and ̺ = inf
+n
+α > 0; P
+k≥1 |zk|−α < ∞
+o
+.
+Here and throughout, we refer to the monograph of Levin [35] for information related to
+entire functions.
+The functions in the examples (1.3) and (1.5) are all of the form (2.3).
+However, we
+emphasize that if an entire function ϕ is of the form (2.3) then it needs not be the case
+that the mapping t 7→ϕ(t) is positive-deﬁnite on R. Nevertheless, Schoenberg, following
+Hadamard, proved that the reciprocal of a normalized Laguerre-P´olya entire function
+(non-necessarily even) is in P+. In particular, we have the following.
+Theorem 1. [60, Theorem 1] If ϕ is of the form (2.3) then
+(2.4)
+t 7→
+1
+ϕ(it) = e−ct2 ∞
+Y
+k=1
+
+1 + t2
+z2
+k
+−1
+is the characteristic function of a symmetric P´olya frequency density fP, namely,
+FfP (t) =
+1
+ϕ(it) =
+Z
+R
+eitxfP (x)dx
+where fP is a symmetric probability density function on R such that, for all n ∈N,
+x1 < · · · < xn, y1 < · · · < yn, the determinant of the matrix [fP(xj −yk)]n
+j,k=1 is non-
+negative.
+Moreover, the probability measure with density fP is inﬁnitely divisible, that is, equiva-
+lently, t 7→−log FP (it) ∈N(R), see Kwa´snicki [32, Proposition 5.3].
+We point out that an easy way to see why (2.4) is a characteristic function is by a proba-
+bilistic argument. Indeed, let N, Z1, Z2, . . . be independent random variables where N is a
+standard normal and each Zj a standard Laplace random variable, that is, it has density
+1
+2e−|x|, x ∈R. Then, one observes that the random variable
+(2.5)
+X = c
+√
+2N +
+∞
+X
+j=1
+Zj
+zj
+has characteristic function (2.4). Then, relying on Theorem 1, Lukacs observed the very
+useful fact that if an even characteristic function F is in the Laguerre-P´olya class then it is
+necessarily solution to the van Dantzig problem. This leads us to introduce the following
+class.
+Deﬁnition 2. Let
+DL = LPe ∩P+ ⊂D
+be the Lukacs class of solutions to the van Dantzig problem.
+5
+The examples in (1.3) and (1.5) are not just in D but also in DL. Further elements of
+DL can be generated by means of the mappings described in Theorem 10 below, and, also
+from the subclass of D that we introduce and study in Section 4, see Theorem 23. We
+already mention that in Section 3 we provide some (partial) characterizations of the class
+DL.
+The ﬁrst appearance of this class of Laguerre-P´olya characteristic functions traces back
+to P´olya [53] who, motivated by Riemann hypothesis, was interested in characterizing all
+(complex valued) functions f on R such that the analytic extension of
+(2.6)
+t 7→
+Z
+R
+eitxf(x)dx is an entire function with only real zeros.
+We refer to the recent paper by Newman and Wu [42] for an excellent account on P´olya’s
+approach and to de Bruijn’s fascinating contributions to this problem.
+Theorems 15,
+16 and 17 below form the adaptation of these results in the context of the van Dantzig
+problem. From that time onwards, the Laguerre-P´olya class of characteristic functions
+has become ubiquitous and plays a central role in various ﬁelds of mathematics. In what
+follows, we describe the connection between the class DL and both the Riemann hypothesis,
+and, the Lee-Yang property that appears in some statistical mechanics models and in
+Euclidean quantum ﬁeld theory.
+2.1. The Lukacs class and the Riemann hypothesis. There is a fascinating literature
+describing the role played by the Riemann ζ function in probability theory, see the excellent
+papers [4, 5] and the references therein. In the spirit of the work of Roynette and Yor
+[57, Th´eor`eme V.3.2], we now explain how the Riemann hypothesis can be formulated in
+terms of the van Dantzig problem. Consider the Riemann ζ function
+ζ(z) =
+∞
+X
+n=1
+n−z, ℜz > 1,
+which, when extended meromorphically to the whole complex plane, has a single simple
+pole at 1 with residue 1 and the following zeros: the trivial ones located at the negative
+even integers and the nontrivial ones lying in the critical strip 0 < ℜz < 1. The Riemann
+hypothesis states that all nontrivial zeros are located on the critical line ℜz = 1/2. It is
+well-known that the function
+η(z) = 1
+2z(z −1)π−z/2Γ(z/2)ζ(z),
+z ∈C,
+is an entire function (because 1 −z cancels the pole of ζ, whereas the trivial zeros of ζ
+cancel the poles of the gamma function Γ(z/2), located at the same places). Hence the
+zeros of η are the nontrivial zeros of ζ. Moreover, it satisﬁes
+η(z) = η(1 −z),
+z ∈C.
+Performing an aﬃne transformation on C so that the critical line maps onto the real line,
+we get the Landau function
+ξ(z) = η(1
+2 + iz),
+z ∈C.
+The functional equation above then becomes
+ξ(z) = ξ(−z),
+z ∈C.
+6
+Using the standard integral expression for the gamma function and the deﬁnition of the ζ
+function one can show that
+(2.7)
+ξ(t) =
+Z ∞
+−∞
+eitxΦ(x)dx, t ∈R,
+where
+Φ(x) =
+∞
+X
+n=1
+
+4π2n4e9x/2 −6πn2e5x/2
+e−πn2e2x.
+It is plain that Φ(x) > 0 for all x ≥0. Since ξ is even, one gets that Φ(x) > 0 for all
+x ∈R. Also, Φ is integrable as
+R ∞
+−∞Φ(x)dx = ξ(0) < ∞, we have that the function Φ/ξ(0)
+is the density of a symmetric real-valued random variable and ξ/ξ(0) is its characteristic
+function. We have the following.
+Theorem 3. The function ξ/ξ(0) is in DL if and only if the Riemann hypothesis holds.
+Proof. If the function ξ/ξ(0) is in DL then it has only real zeros which means that η has
+all its zeros on the critical line. Hence the Riemann hypothesis holds. If the Riemann
+hypothesis holds then ξ/ξ(0) is an even entire characteristic function with real zeros only.
+Using the result of Proposition 8 below, we have that ξ/ξ(0) is in DL.
+□
+The previous result combined with Theorem 1 yields this reformulation.
+Corollary 4. The function t 7→ξ(0)/ξ(it) is the characteristic function of a symmetric
+P´olya frequency function if and only if the Riemann hypothesis holds.
+Further connections between the Riemann ξ and the van Dantzig problem will be discussed
+in Section 4.1.
+2.2. The Lukacs class and the Lee-Yang property. Entire characteristic functions
+with only real zeros appear naturally in various models of statistical mechanics and quan-
+tum ﬁeld theory. We brieﬂy state the examples taken from the excellent paper [42]. In
+their pioneering works, Lee and Yang [34, 65] considered the Ising model in the presence
+of an external magnetic ﬁeld and discovered that the zeros, in the magnetic ﬁeld variable,
+of the partition function are purely imaginary. This is equivalent to the following. Let µ
+denote the probability measure on {−1, 1}N, N ∈N, deﬁned by
+µ(x) = Ke
+PN
+j,k=1 Jj,kxjxk,
+x = (x1, . . . , xN),
+where, here and below, Jj,k ≥0 and Jj,k = Jk,j for all j, k and K is a positive normalizing
+constant. Then the partition function
+Pλ,µ(z) =
+X
+x∈{−1,1}N
+ezλ·xµ(x),
+λ = (λ1, . . . λN) ∈RN
++,
+is an entire function whose zeros are all purely imaginary. This was discovered by Lee
+and Yang and refer to it as the Lee-Yang property.
+We emphasize that the location
+and distribution of the zeros of the partition function are useful to determine substantial
+properties of the underlying physical system such as phase transitions, the inﬁnite volume
+limit and existence of a mass gap under an external magnetic ﬁeld. In relation to the
+7
+van Dantzig problem, one observes that the mapping t 7→Pλ,µ(it) is the characteristic
+function of the random variable
+λ · x =
+N
+X
+j=1
+λjxj
+under the measure µ. By Theorem 1, the Lee-Yang property is then equivalent to the
+statement that this characteristic function is in DL. Generalizing the Lee-Yang result,
+Simon and Griﬃths [62] showed that if µ0 is a symmetric probability measure1 on R such
+that
+Z
+R
+ebx2µ0(dx) < ∞for all b ∈R and Fµ0(z) ̸= 0 for all ℑ(z) < 0
+then, to the probability measure
+µβ(dx) = Keβ P
+j,k Jj,kxjxk
+N
+Y
+k=1
+µ0(dxk)
+x = (x1, . . . , xN) ∈RN,
+there corresponds the partition function
+Pλ,µβ(z) =
+Z
+RN ezλ·xµβ(dx),
+λ = (λ1, . . . , λN) ∈RN
++,
+with the property that, for all β ≥0, the zeros of the entire function z 7→Pλ,µβ(z) are
+all purely imaginary. Hence, the mapping t 7→Pλ,µβ(it) is in DL. We also point out that
+these Lee-Yang type theorems arise in quantum ﬁeld theory, and refer again to [42] for a
+more detailed description. We simply point out that an important measure in this context
+is the measure µ0(dx) = e−ax4−bx2dx, where a > 0 and x, b ∈R. From Theorem 1, we
+deduce the following.
+Theorem 5. A partition function P has the Lee-Yang property if and only if t 7→P(it) ∈
+DL.
+3. Properties of the van Dantzig and Lukacs classes
+We collect here several properties of both the classes D and DL. We start by presenting
+some basic properties that both classes share. Some of them were stated in Lukacs’ paper
+[38] without proof; for sake of conciseness, we indicate the main lines of proof. Then, we
+move to the properties to the Lukacs class DL which are of diﬀerent types. Some results
+can be found in the number theory or statistical mechanics literature in some form that
+we adapt, revisit or extend to identify new properties for the set DL. Moreover, based
+on ideas coming from probability theory, we also present original and substantial results
+about this set, see Theorem 18, and, we improve, in Theorem 19, a very interesting closure
+property due to Newman and Wu. Let us start with the following simple but useful result
+which is a reformulation of [36, Theorems A.2.1 and A.2.2, page 335].
+Proposition 6. If F ∈D then F is a real and even function, meaning that the associated
+random variables are symmetric. Moreover, F admits an analytic extension to some cross
+{z ∈C; |ℑ(z)| < z1}, {z ∈C; |ℜ(z)| < z2} where z1 > 0, z2 > 0. The same claims hold for
+V F.
+1In fact, a signed measure is also allowed in [62].
+8
+We also point out that since F is even, a theorem of Schoenberg on positive-deﬁnite radial
+functions entails that the mapping t 7→F(
+√
+t) is completely monotone on R+, that is, it
+is the Laplace transform of a non-negative Radon measure on [0, ∞), see e.g. [10].
+We proceed with the following the simple observation which follows readily from the
+previous Proposition since V ◦V F(t) = 1/V F(it) = F(−t) = F(t).
+Proposition 7. The mapping V deﬁned by (1.2) is an involution on D.
+In other words, the set D2 is closed under commutation, that is, if [F, V F] ∈D2 then
+[V F, F] ∈D2.
+Next, from the Deﬁnition 2 of DL, a ﬁrst natural question is to understand whether the
+Lukacs class DL contains all possible entire characteristic functions with only real zeros,
+that is, whether there exists such an entire function of order ρ > 2. Here is the deﬁnitive
+answer to this issue, which is, in fact, a direct consequence of a very nice result due to
+Gol’dberg and Ostrovs’ki [17], see also [39, Theorem 4.4.1], regarding entire characteristic
+functions having only real zeros. Note that, in these references, the statement is proven
+for a more general class of entire functions, namely the ones possessing the so-called ridge
+property, that is, |ϕ(z)| ≤|ϕ(ℑ(z))|.
+Proposition 8. Every entire characteristic function with only real zeros belongs to the
+class DL.
+We proceed by deriving some closure properties of the sets D and DL. First, since mul-
+tiplication of characteristic functions remain characteristic function as they correspond
+to addition of independent random variables, we get that D is stable by multiplication
+and having the constant function 1 as identity element, we obtain that it is a monoid.
+Similarly, since any reciprocal of a function in DL being the moment generating function,
+at least on an imaginary strip, of a P´olya frequency function, it remains to identify trans-
+forms that preserve the positive deﬁniteness property of a Laguerre-P´olya function. It is
+the program that we develop in the remaining part of this section. In this spirit, there
+is this ﬁrst closure property which follows readily since the product of two characteristic
+functions in LP, that is of the form (2.3), remain an even entire characteristic function in
+LP, see the item (9) above for the same property for the set D.
+Proposition 9. The sets D and DL constitute a monoid under the operation of function
+multiplication.
+Note that the previous claim could also be interpreted as the set DL being invariant by the
+convolution of probability distributions or equivalently by taking the sum of independent
+random variables. The following mappings and results were proposed by Lukacs
+(3.1)
+L(p)f(t) = tp−2 f (p)(t)
+f (2)(0),
+t ∈R,
+p = 1, 2,
+where, for a suﬃciently smooth function f, we write f (p)(t) = dp
+dtp f(t).
+Theorem 10. [38, Theorem 4] We have, for p = 1, 2, L(p)(LP) ⊂LP and L(p)(DL) ⊂DL.
+9
+The proof of this theorem relies on Laguerre’s theory, see e.g. Borel [7, Ch. 2], which
+provides a closure property of the class LP by diﬀerentiation. Then Lukacs showed, by
+analytical means, that his mappings leave the set P+ invariant. In Section 5 we shall
+provide an alternative proof of this last fact based on probabilistic arguments.
+Remark 11.
+(i) Since L(p), p = 1, 2, are diﬀerential operators, we easily get that the
+unique invariant of L(1) (resp. L(2)) in P+, i.e. L(1)F = F, is F(t) = e−σ2t2/2
+(resp. F(t) = cos(σt), σ ∈R).
+(ii) For any ﬁnite sequence (p1, . . . , pn) whose elements take values in {1, 2} we have that
+L(pn) ◦· · · ◦L(p1)(DL) ⊆DL. For example, one observes that
+L(1) cos(t) = sin t
+t
+and L(1) ◦L(1) cos(t) = 3sin t −t cos t
+t3
+.
+More generally, deﬁne Fn+1(t) = L(1)Fn(t), n ≥0, with F0(t) = cos t. Thus, Fn is
+obtained by the n-fold application of the operator L(1) to the cosine function. We
+obtain the expression
+Fn+1(t) = −(2n + 1)!!
+t2n+1
+ℜ(P n(−it)ie−it)
+where (2n+1)!! = (2n+1)(2n−1)(2n−3) · · · 1 and P n is the so-called reverse Bessel
+polynomial, expressed in terms of the degree-n Bessel polynomial Pn via P n(x) =
+xnPn(1/x), see [29]. Note that Fn →F0 pointwise as n →∞and this is natural
+from the probabilistic interpretation of the operator L(1), see Lemma 28.
+We proceed with the following two results that give a characterization or a partial charac-
+terization of the set DL. First, we have the following L´evy-Khintchine type representation
+which follows readily from Theorem 1 combined with the characterization result due to
+Kwa´snicki of the Laplace transform of P´olya frequency densities.
+Theorem 12. [32, Proposition 5.3] If F ∈DL then, for all t ≥0,
+(3.2)
+F(t) = eΨL(t)
+where ΨL(t) = −ct2 −
+R ∞
+−∞
+
+1
+t+r −1
+r + t
+r2
+
+ρ(r)dr, c ≥0 and ρ : R →Z is an even non-
+decreasing integer-valued function such that
+R ∞
+−∞
+|ρ(r)|
+|r|3 dr < ∞.
+The next theorem, proved by Newman [40], who was, as discussed in Section 2.2, mo-
+tivated by problems arising in statistical physics and Euclidean ﬁeld theory, charac-
+terizes a subclass of DL.
+For a random variable X and a real number λ such that
+Zλ :=
+R ∞
+−∞eλx2FX(dx) < ∞, let Xλ denote a random variable whose distribution FXλ
+is given by
+(3.3)
+FXλ(dx) = 1
+Zλ
+eλx2FX(dx), x ∈R.
+Theorem 13. [40, Theorem 1] Let X be a symmetric random variable. Then, FXλ ∈DL
+for all λ ∈DX = {λ ∈R; FX2(−iλ) < ∞} ⊇(−∞, 0] if and only if either, for some x0,
+FX = 1
+2 (δx0 + δ−x0) ,
+10
+or FX is absolutely continuous with respect to the Lebesgue measure with a density fX
+which takes the form
+(3.4)
+fX(x) = Kx2me−αx4−βx2
+N
+Y
+k=1
+ 
+1 + x2
+a2
+k
+
+e
+−x2
+a2
+k
+!
+where K > 0 is a normalizing constant, m a nonnegative integer, α, β real numbers, N a
+nonnegative integer or ∞, with the ak positive, and either α = 0, P a−4
+k
+< ∞, or α > 0,
+β + P a−2
+k
+> 0 (the case P a−2
+k
+= ∞is allowed).
+Remark 14. This theorem does not fully characterize the set DL as, for instance, J0, the
+Bessel function of order 0, see (1.5), is in DL, but it is the characteristic function of the
+arc-sine law whose density, see (5.24), does not have the form (3.4). Another well-known
+function that does not belong to Newman characterization is the function
+t 7→Fλ,Φ(t) =
+1
+R
+R eλx2Φ(x)dx
+Z
+R
+eitxeλx2Φ(x)dx,
+introduced by P´olya, where Φ is the inverse Fourier transform of the Landau function ξ;
+see (2.7). It is well-known that
+Fλ,Φ ∈DL if and only if λ ≥ΛDN
+where ΛDN is the celebrated de Bruijn-Newman constant.
+Since, by Theorem 3, the
+Riemann hypothesis is equivalent to ΛDN ≤0, this observation has motivated an intensive
+research activity on the computation of ΛDN. The current state of art is 0 ≤ΛDN ≤0.22
+and was obtained by Tao and collaborators [56, 63].
+The following three claims are adaptation to our setting of some deep results due to P´olya
+[52] (the ﬁrst two) and to de Bruijn [13], see also [42, sections 2.2 and 2.3]. We omit their
+proofs as they follow readily from the aforementioned results combined with Theorem 1.
+Theorem 15. [52] Let f : R →R+ be the density of a symmetric random variable such
+that, for some A, α > 0,
+(3.5)
+f(x) ≤Ae−x2+α, x ≥0.
+Let ϕ : R →R+ be even, real analytic, and such that
+R
+R f(x)ϕ(x)dx = 1. Assume further
+that t 7→Ff(t) =
+R
+R eitxf(x)dx ∈DL. Then,
+t 7→Ff·ϕ(t) =
+Z
+R
+eitxf(x)ϕ(x)dx ∈DL
+if and only if the analytic extension of ϕ is such that t 7→ϕ(it) ∈LP.
+Note that the function ϕ in the above theorem is called a universal factor by P´olya. An
+interesting and simple application of this theorem is for the entire function ϕ(x) = eλx2
+where λ > 0. Indeed, using the notation of Theorem 13, if X is a symmetric random
+variable with an absolutely continuous distribution whose density satisﬁes the bound (3.5)
+and for some λ ∈R, FXλ ∈DL, then FXλ ∈DL for all λ ≥λ as plainly here DX = R.
+For instance, from the expression (5.24), we deduce that, for any ν < 1
+2 and λ > 0, the
+mapping
+(3.6)
+t 7→Kλ
+Z
+|x|<2
+eitxeλx2(4 −x2)−ν−1
+2 dx ∈DL
+11
+where Kλ > 0 is a normalizing constant. However, note that since the density above when
+λ = 0 is not of the form (3.4), by Theorem 13, there exists λ < 0 such that the entire
+function
+(3.7)
+t 7→Kλ
+Z
+|x|<2
+eitxeλx2(4 −x2)−ν−1
+2dx
+has non-real zeros.
+Theorem 16. [13] Let f : [0, ∞) →R+ be the density of a positive random variable, and,
+for all y ≥0,
+f(y) ≤Be−y
+1
+2 +β
+for some B, β > 0. Suppose that f has an analytic extension in a neighborhood of the
+origin. Then the function
+Mf(t) =
+Z ∞
+0
+yt−1f(y)dy
+has an extension on C as a meromorphic function. If the function Mf has only negative
+zeros and n is a positive integer, then, writing
+1
+Cn =
+R
+R f(x2n)dx,
+t 7→Cn
+Z
+R
+eitxf(x2n)dx ∈DL.
+Theorem 17. [42] Let f be an entire function such that its derivative f (1) is the limit
+(uniform in any bounded domain) of a sequence of polynomials, all of whose roots lie on
+the imaginary axis. Suppose further that f is not a constant, f(x) = f(−x), and f(x) ≥0
+for x ∈R and
+R
+R e−f(x)dx = 1. Then
+t 7→
+Z
+R
+eitxe−f(x)dx ∈DL.
+As instances illustrating these results, there are the following entire functions that were
+derived by P´olya
+t 7→
+K
+R
+R eitx cosh(ax)e−a cosh x dx,
+t 7→K
+Z
+R
+eitxe−x2n dx and
+t 7→
+K
+R
+R eitxe−ax4n+bx2n+cx2 dx ∈DL
+(3.8)
+where K is, in each expression, a normalizing constant, and n ∈N, a > 0.
+We continue P´olya’s and de Bruijn’s line of research by presenting original additional clo-
+sure properties of the set DL. More speciﬁcally, we investigate its stability under product
+of independent variables.
+We have already mentioned that this property is intimately
+connected to the concept of intertwining relationship between Markov semigroups, as we
+will discuss later in the paper. To state it, we say that a positive linear operator Λ on
+the space of bounded borelian functions is Markov multiplicative if there exists a random
+variable I with distribution function FI, such that, for any bounded borelian function f,
+writing Λ = ΛI,
+(3.9)
+ΛIf(t) =
+Z
+R
+f(xt)FI(dx).
+In the following, we identify a mapping from the set of even entire functions in P+ into
+DL. In other words, we provide a way of creating entire characteristic functions with only
+12
+real zeros from any even characteristic functions. We also ﬁnd necessary conditions on a
+Markov multiplicative operator to leave invariant the set DL. Let us now denote by LP+
+the class of functions in LP with only strictly negative zeros and of the form
+ϕ(z) = Keaz
+∞
+Y
+k=1
+
+1 + z
+zk
+
+e−z/zk
+with K, a ∈R and zk > 0 for all k with P
+k≥1 z−2
+k
+< ∞.
+Theorem 18.
+(1) Let FD ∈P+ be entire and even, and, assume that there exist a
+random variable I such that for any non-negative integer n
+MI(2n)MD(2n) = aϕ(n)G(n)Γ(2n + 1)
+where ϕ(z) = P∞
+n=0 aϕ(n)zn ∈LP and G ∈LP+.
+Then, ΛIFD ∈DL.
+(2) Let us now assume that there exist ϕ ∈LP+ and a random variable IL such that
+for any non-negative integer n,
+ϕ(n) = MIL(2n).
+Then, ΛIL(DL) ⊂DL.
+Before continuing further, let us ﬁrst illustrate part (1) of this theorem by an example.
+Let us take ϕ(z) = ez ∈LP and then aϕ(n) = 1
+n!, n ≥0. For instance, let D = J0 where J0
+is the symmetric random variable whose distribution is the arc-sine law and is recalled in
+(5.24) below. Then, from (5.28), MJ0(2n) = (2n)!
+n!n! and FJ0 = J0 ∈DL, the Bessel function
+of order 0, see (1.5) above.
+Next ﬁx b > 0 and deﬁne Ib as the positive random variable with distribution FIb(dx) =
+2b
+b+1e−x2x
+
+x2
+b + 1
+
+dx, x > 0. Simple algebra yields that MIb(2n) = (n+b)
+b
+n!, and, with
+the previous choice of ϕ, the equation MIb(2n)MJ0(2n) = aϕ(n)G(n)Γ(2n + 1) gives
+G(n) = (2n)!n!(n + b)n!
+bn!n!(2n)!
+= (n + b)
+b
+.
+Since G(z) = z+b
+b
+is in LP+, the theorem above shows that
+ΛIbFJ0(t) =
+∞
+X
+n=0
+(−1)n n + b
+n!b t2n = b −t2
+b
+e−t2 ∈DL,
+for all b > 0. Note that this characteristic function already appeared in [36, Example III.8]
+where the authors showed that it is not decomposable with respect to the additive con-
+volution of probability measures. However, our approach reveals that it is decomposable
+with respect to the multiplicative one.
+We point out that Theorem 18 enables one to generate many new examples of elements
+in DL, and, we refer to Theorem 33 where this idea is exploited and to Section 4.2 below,
+where some additional examples are provided.
+Another interesting aspect of the set DL is the following additional closure property.
+Theorem 19. The sets D and DL are closed under locally uniform convergence.
+13
+Note that the locally uniform convergence of characteristic functions is equivalent to the
+pointwise convergence to a continuous function at 0, see [6, Theorem 3.2.1], and, by the
+L´evy continuity theorem, see [8, Theorem 8.28], this implies the weak convergence of
+the corresponding sequence of random variables to a random variable. In other words,
+Theorem 5 entails that Theorem 19 is a generalization to [41, Theorem 7] regarding the
+closure under weak convergence of the set X, which is the set of symmetric probability
+measures F whose characteristic function is in LPe and such that
+R
+R ebx2F(dx) < ∞for
+some b > 0.
+We do not need this last condition for our closure result. However, the
+result from Newman and Wu [41, Theorem 7] ensures that the gaussian tail property for
+elements in DL is preserved under weak convergence.
+4. The new class DP
+To present the main results of this Section, we start by introducing some objects and
+notation. First, with M+(R+) denoting the set of non-negative Radon measures on (0, ∞),
+we deﬁne the mapping Ψ : R+ →R by
+(4.1)
+Ψ(u) = −κ + au + 1
+2σ2u2 −
+Z ∞
+0
+(1 −e−ur −urI{r<1})µ(dr)
+where κ ≥0, a ∈R, σ2 ≥0 and µ ∈M+(R+) is such that
+R ∞
+0 inf(1, r2)µ(dr) < ∞. We
+exclude the case when σ = 0, a +
+R 1
+0 rµ(dr) ≤0 and
+R ∞
+0
+inf(1, r)µ(dr) < ∞, which is seen
+as degenerate in our context. This function has a nice probabilistic interpretation. Indeed,
+it is the so-called Laplace exponent of a possibly killed real-valued spectrally negative L´evy
+process Y = (Yt)t≥0, i.e. a stochastic process without positive jumps and with stationary
+and independent increments starting from 0 and, when κ > 0, it is killed at an independent
+exponential time of parameter κ. Moreover, we have, for any u, t ≥0,
+(4.2)
+FYt(−iu) = eΨ(u)t.
+Note that under the three conditions we excluded above, Y is negative-valued and has
+non-increasing sample paths. We refer to the monograph [31] for a thorough study of
+these processes.
+It is a well established (and an easy to check) fact that the Laplace
+exponent Ψ is strictly convex on [0, ∞) with
+(4.3)
+lim
+u→∞Ψ(u) = +∞and Ψ is increasing on [θ, ∞) where θ = sup{u ≥0; Ψ(u) = 0}.
+In fact, by convexity, we have
+(4.4)
+θ > 0 if and only if (i) κ > 0 or (ii) κ = 0 and Ψ(1)(0+) = lim
+u↓0 Ψ(1)(u) < 0
+and a monotone convergence argument yields that Ψ(1)(0+) = a−
+R ∞
+1
+rµ(dr) ∈[−∞, +∞).
+We are now ready to deﬁne the sets
+(4.5)
+N = {Ψ : R+ →R of the form (4.1)}
+and
+(4.6)
+ND =
+
+Ψ ∈N; 0 ≤θ≤1
+2
+	
+.
+Note that (4.4) entails that
+(4.7)
+Ψ ∈ND if κ = 0 and Ψ(1)(0+) ≥0
+14
+as, in this case, θ = 0. Moreover, from (4.3), one easily gets that a necessary and suﬃcient
+condition for a function Ψ to be in ND is that Ψ ∈N with Ψ(1
+2)≥0. The notation of
+the set ND is motivated by the following facts.
+On the one hand, due to the inﬁnite
+divisibility of Y1, we have, for any Ψ ∈N, that z 7→−Ψ(iz) ∈N(R), the set of continuous
+and negative-deﬁnite functions on R. On the other hand, we now deﬁne a class of entire
+functions that are generated by the set ND, that will be shown to belong to D.
+For any Ψ ∈N, we introduce the power series
+(4.8)
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+WΨ(n + 1)t2n
+where, here and below, for a function ϕ deﬁned on R+, we set
+Wϕ(1) = 1,
+Wϕ(n + 1) =
+n
+Y
+k=1
+ϕ(k),
+n ≥1.
+Since, from (4.3), lim
+n→∞
+WΨ(n+2)
+WΨ(n+1) = lim
+n→∞Ψ(n + 1) = ∞, JΨ deﬁnes an entire function.
+We also write
+(4.9)
+IΨ(t) = JΨ(it) =
+∞
+X
+n=0
+1
+WΨ(n + 1)t2n
+and point out that the entire function IΨ(
+√
+t) was introduced by the second author in [44]
+where it was shown that it is an invariant function of some self-similar integro-diﬀerential
+operator. Therein, the complete monotonicity property was identiﬁed for several of its
+transformations, and, we also refer to [2] for a more recent and reﬁned studies of this class
+of functions. We are now ready to introduce the following class of entire functions
+(4.10)
+DP = {JΨ of the form (4.8) with Ψ ∈ND}.
+Theorem 20. We have DP ⊆D, and, for all Ψ ∈ND,
+(4.11)
+
+JΨ, 1
+IΨ
+
+∈D2
+with
+(4.12)
+t 7→−log JΨ(t) /∈N(R) but t 7→log IΨ(t) = φΨ(t2) ∈N(R)
+where the function φΨ is a Bernstein function that belongs to the class BJ, that is, it is
+of the form (5.4) below with the additional property that r 7→rµ(r) is non-increasing on
+R+. Finally, writing FΨ(t) = JΨ(t)
+IΨ(t) , t ∈R, we have FΨ ∈DS, that is FΨ(t)FΨ(it) = 1 for
+all t ∈R.
+Remark 21. The random variables whose characteristic functions appear above shall be
+explicitly described in Section 5.2.4.
+Remark 22. Note that in [30], it is proved that the entire function JΨ(
+√
+t) has its smallest
+(in modulus) zero, say z1, which is simple and located on the positive real line. On the
+one hand, this shows that JΨ is not the characteristic function of an inﬁnitely divisible
+variable as their characteristic functions are zero-free, see [59]. On the other hand, z1 < 0
+15
+corresponds to a singularity of the Bernstein function φΨ. However, from Theorem 20, we
+get the identity, for all t ∈R,
+(4.13)
+IΨ(t)JΨ(t) = e−φΨ(t2)eφΨ(−t2) = 1,
+which entails that the Bernstein function φΨ admits a meromorphic extension on C, but
+it is not necessarily a Pick function (see the deﬁnition below). This reveals that such an
+identity cannot be possible for Bernstein functions, especially for those having an essential
+singularity, e.g. φ(u) = ua, 0 < a < 1.
+The purpose of the next result is to explain how the classes DP and DL are related, which
+consists on investigating the diﬃcult issue of locating the zeros of the entire function
+JΨ ∈DP . To state it, we recall that a Bernstein Pick function [61, p. 56] is a Bernstein
+function which admits an holomorphic extension which maps the upper half-plane into
+its closure. We say that an entire function (resp. Pick meromorphic function) has the
+1-separation property if its sequence of zeros (zk)k≥1 (resp. and poles (ρk)k≥1) satisﬁes,
+for all k, zk+1 < zk −1 (resp. ρk = zk −1 > zk+1). We now introduce the set
+(4.14)
+BP1 = {φ ∈B; φ is a Pick function having the 1 separation property}.
+Theorem 23. Let φ ∈BP1.
+Then, u 7→Ψ(u) = uφ(u) ∈ND and JΨ ∈DL ∩DP .
+However, DP ⊈DL as there are Ψ′s ∈ND such that JΨ has at least a non-real zero.
+Remark 24. In Section 4.2, we provide instances of the two situations presented in this
+theorem, see e.g. the Bernstein functions that deﬁne the Bessel functions and the Fox-
+Wright functions, see 4.2.3, which both belong to DL. On the other hand there are the
+examples involving hypergeometric functions and the Mittag-Leﬄer functions which have
+non-real zeros.
+We proceed with the following result that shows that the Lukacs mappings, introduced in
+(3.1), also leave our class DP invariant.
+Proposition 25. Let L(p), p = 1, 2, be the operators that were deﬁned in (3.1) above.
+Then, we have L(1)(DP ) ⊂DP . Moreover, L(2)(DP ) ⊂D and the same remains true for
+their iterates.
+4.1. The Riemann ξ function and the class DP . A natural and important question
+that arises at this stage is to understand whether the Riemann ξ function deﬁned in
+(2.7) belongs to the class DP . Indeed, this would yield a power series representation of
+this function whose coeﬃcients would be expressed in terms of negative deﬁnite functions
+oﬀering new tools to study the location of its zeros, using for instance Theorem 23. To
+this end, let us recall that the Riemann ξ function, deﬁned in (2.7), can be expressed in
+terms of the following power series
+(4.15)
+Θ(z) = ξ(√z) =
+∞
+X
+n=0
+γ(n)
+n! zn, z ∈C,
+where, with F(n) =
+R ∞
+1 (log x)n x−3/4 θ0(x) dx and θ0(x) = P∞
+n=1 e−πn2x the theta series,
+we have set
+(4.16)
+γ(n) =
+n!
+(2n)!
+32
+ 2n
+2
+
+F(2n −2) −F(2n)
+22n−1
+,
+16
+see e.g. [18]. The question whether there exists Ψ ∈ND such that JΨ = ξ boils down to
+the existence of φ ∈BD such that, for all n ∈N,
+(4.17)
+1
+Wφ(n + 1) =
+n!
+(2n)! · 32
+ 2n
+2
+
+F(2n −2) −F(2n)
+22n−1
+,
+which, after some easy algebra, is equivalent to show that
+(4.18)
+φ(n + 1) = −
+G(2n)
+8(n + 1)G(2n + 2),
+where we have set G(2n) = 64n(2n −1)F (2n−2)
+F (2n)
+−1. Since this question does not seem
+straightforward, we investigate, instead here, whether this possibility could be excluded
+from the properties that we know about elements of the class DP and the Riemann ξ
+function. Recalling that the latter is an entire function of order 1 with inﬁnite type and
+it is the characteristic function of the density of a probability measure whose support is
+R, we have the following.
+Proposition 26. Let Ψ ∈ND such that Ψ(u) =
+u2
+ℓ(u), u ∈R, with limu→∞ℓ(u) = ∞,
+ℓbeing a slowly varying function at inﬁnity, i.e. for every u > 0, limt→∞
+ℓ(ut)
+ℓ(t)
+= 1.
+Then JΨ is an entire function of order 1 and inﬁnite type. This condition holds when
+Ψ(u) = (u −θ)φ(u), θ ≥0, with φ a special Bernstein function, i.e. φ(u)bφ(u) = u, such
+that its conjugate Bernstein function bφ(u) = ℓ(u). Moreover, under this condition, JΨ is
+the characteristic function of a probability density function whose support is R.
+The ﬁrst part of the Proposition follows readily from [2, Proposition 2.1], see also Proposi-
+tion 31 below, where we notice that when the order is 1, with the notation of Proposition
+31, Ψ = 2 and thus the type τΨ ≥
+
+lim supn→∞
+n
+φ(n)
+ 1
+2 = (lim supn→∞ℓ(n))
+1
+2 = ∞under
+the condition of the Proposition. The last claim is a speciﬁc instance of Lemma 35.
+Remark 27. One instance when Ψ(u) =
+u2
+ℓ(u), u ∈R, with ℓas in the Proposition is when
+Ψ(u) = ueW(u), where W is the Lambert function. Indeed, it is well known that for all
+u ≥0, W(u)eW(u) = u and W is a complete Bernstein function that is a Bernstein function
+whose L´evy measure is absolutely continuous with a completely monotone density, and
+limu→∞
+W(u)
+ln u = 1, and hence it is a special Bernstein function with eW (u) as conjugate,
+see [43]. Therefore Ψ(u) = ueW(u) ∼
+u2
+ln u.
+4.2. Some examples in the class DP . In this section, we give several speciﬁc examples
+of the function JΨ including the modiﬁed Bessel functions, the Mittag-Leﬄer functions
+and several type of hypergeometric functions, and refer to [16, 27] as classical references
+on these functions. The interested reader can also consult the monograph [61] for sev-
+eral examples of Bernstein functions from which one can provide additional interesting
+instances of JΨ.
+4.2.1. Bessel functions. Let Ψ(u) = u(u+ν), ν≥−1
+2. We get that WΨ(n+1) = n!Γ(n+ν+1)
+Γ(ν+1)
+and thus
+(4.19)
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+Γ(ν + 1)
+Γ(n + ν + 1)
+t2n
+n! = Γ(ν + 1)t−νJν (2t)
+17
+where Jν stands for the Bessel function of order ν. It is well-known that JΨ ∈DL.
+4.2.2. Conﬂuent hypergeometric function. Let 0 < a < 1 < a + b and Ψ(u) = u u+1−a
+u+b .
+Note that, in this case σ = 0, and hence the support of the variable Dφ,θ is the real line.
+Moreover, simple algebra yields
+Ψ(u)
+=
+u1 −a
+b
++ u
+Z ∞
+0
+ 1 −e−ur
+(a + b −1) e−brdr.
+We have WΨ(n + 1) = n!Γ(b+1)Γ(n+2−a)
+Γ(n+b+1)Γ(2−a) and thus
+JΨ(t) =
+∞
+X
+n=0
+(−1)n Γ(n + b + 1)Γ(2 −a)
+Γ(b + 1)Γ(n + 2 −a)
+t2n
+n! = 1F1
+ b + 1; 2 −a; −t2
+where 1F1 is the conﬂuent hypergeometric function. If a + b = 2, 3, . . ., then JΨ ∈DL, see
+e.g. [26, Theorem 4]. Therein, the authors conjecture, in particular, that JΨ ∈DL for all
+a + b > 1.
+4.2.3. Fox-Wright function. Let α ∈(0, 1) and β ≥α, then
+Ψ(u) = u
+Γ(αu + β)
+Γ(α(u −1) + β) = u
+Γ(β)
+Γ(β −α) +
+u
+Γ(1 −α)
+Z ∞
+0
+ 1 −e−ur
+e−β
+αr
+ 1 −e−r/αα+1 dr
+yielding WΨ(n + 1) = n!Γ(αn+β)
+Γ(β)
+and thus
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+Γ(β)
+Γ(αn + β)
+t2n
+n! = 0Ψ∗
+1
+ (β, α) ; −t2
+where 0Ψ∗
+1 is the normalized Fox-Wright function, which is in DL by Laguerre Theorem,
+see e.g. [58, Theorem 4] as the mapping z 7→
+1
+Γ(αz+β) ∈LP+.
+4.2.4. Mittag-Leﬄer function. Let now α ∈(1, 2) and β ∈(α −1, α) and set
+Ψ(u) =
+Γ(αu + β)
+Γ(αu + β −α) =
+αΓ(β)
+Γ(β −α + 1)u + (α −1)u
+Γ(2 −α)
+Z ∞
+0
+ 1 −e−ur
+e−β
+αr
+ 1 −e−r/αα dr.
+Then, WΨ(n + 1) = Γ(αn+β)
+Γ(β)
+and
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+Γ(β)
+Γ(αn + β)t2n = Γ(β)Eα,β(−t2)
+where Eα,β(t) = P∞
+n=0
+tn
+Γ(αn+β) is the general Mittag-Leﬄer function. It is well known, see
+[15, Ch. 3.2], that, for 1 < α < 2, Eα,β have nonreal zeros. For the last 3 examples, we do
+not know whether JΨ ∈DL or not.
+4.2.5. The Barnes-Hypergeometric function. Let now α ∈(1, 2), ρ ∈(0, 1/α] and set
+Ψ(u) = Γ(αρ + αu)u
+Γ(αu)
+= u
+Z ∞
+0
+(1 −e−ur)
+ρ
+Γ(1 −αρ)e−ρr 
+1 −e−r/α−αρ−1
+dr.
+Observe that
+WΨ(n + 1) = n!
+G
+ 1, 1
+α
+
+G
+ 1 + ρ, 1
+α
+ G
+ n + 1 + ρ, 1
+α
+
+G
+ n + 1, 1
+α
+
+(4.20)
+18
+where the Barnes G-function G(n; 1
+α) is deﬁned as the unique log-convex solution to re-
+currence equation G(n + 1; 1
+α) = Γ (αn) G(n; 1
+α), and refer to [37] for more details on this
+example. Then,
+JΨ(t) =
+∞
+X
+n=0
+(−1)n G
+ n + 1, 1
+α
+
+G
+ 1 + ρ, 1
+α
+
+G
+ 1, 1
+α
+
+G
+ n + 1 + ρ, 1
+α
+ t2n
+n! .
+4.2.6. Hypergeometric function. Let α > 0, and, writing α1 = α+
+√
+α2+4
+2
+and α2 = α−
+√
+α2+4
+2
+,
+consider
+Ψ(u) =
+u
+u + α (u + α1) (u + α2) .
+It follows that WΨ(n + 1) = n!Γ(α+1)Γ(n+α1+1)Γ(n+α2+1)
+Γ(n+α+1)Γ(α1+1)Γ(α2+1)
+and thus
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+Γ(n + α + 1)Γ(α1 + 1)Γ(α2 + 1)
+Γ(α + 1)Γ(n + α1 + 1)Γ(n + α2 + 1)
+t2n
+n! = 1F2
+ α + 1; α1 + 1, α2 + 1; −t2
+where 1F2 is an hypergeometric function.
+4.2.7. Power-gamma function. Let α ∈(0, 1), γ ≥0 and consider
+Ψ(u) = u (u + γ)α = γαu + u
+Z ∞
+0
+ 1 −e−ur
+e−γr r−α−1
+Γ(−α)dr.
+It follows that WΨ(n + 1) = n!Γα(n+γ+1)
+Γα(γ+1)
+and thus
+JΨ(t) =
+∞
+X
+n=0
+(−1)n
+Γα(γ + 1)
+Γα(n + γ + 1)
+t2n
+n! .
+5. Proofs
+5.1. Proofs of Section 3.
+5.1.1. Proof of Theorem 10. First, resorting to the Laguerre theory, see e.g. Borel [7, Ch.
+2], on the additional number of zeros obtained by diﬀerentiating an entire function of
+ﬁnite genus, we get that if F ∈LP then t 7→F(1)(t)/t and t 7→F(2)(t) are also in LP.
+Recall that DL contains even and positive deﬁnite functions in LP that take value 1 at
+0. Suppose that F is even with F(0) = 1. it is easy to see that L(p)F, p = 1, 2, are also
+even and take value 1 at 0. Hence, to show that L(p)(DL) ⊂DL it suﬃces to show that
+if F is a characteristic function then so are the L(p)F, p = 1, 2. One can check the latter
+by a probabilistic argument. First, recall if X is a positive random variable with ﬁnite
+expectation mX(1) and distribution FX then the random variable X(1) with distribution
+FX(1)(dx) =
+x
+mX(1)FX(dx), x ≥0,
+is called the size-biased version of X. Size-biasing appears frequently and naturally in
+probability theory, most notably in the theory of stationary point processes on the real
+line and in the theory of branching processes and random walks.
+19
+Lemma 28. Let FX be the characteristic function of a real-valued random variable X
+with ﬁnite second moment. Let X2(1) be the size-biased version of X2. Then L(p)FX is
+the characteristic function of the random variable
+(5.1)
+U(p) ×
+p
+X2(1)
+where U(p) is a uniform random variable on the interval [−1, 1] if p = 1 or a random
+variable taking values +1 or −1 with probability 1/2 each if p = 2, and, in both cases, is
+taken independent of X2(1).
+Proof. We ﬁrst recall that, for a random variable X, we denote its distribution function
+by FX. Then, using the deﬁnition of size-biasedness and writing X(p) = U(p) ×
+p
+X2(1) we
+obtain, since the variables are independent, that
+FX(1)(dx) =
+1
+mX(2)
+ Z
+|y|>|x|
+|y|FX(1)(dy)
+!
+dx,
+FX(2)(dx) =
+x2
+mX(2)FX(1)(dx),
+where, by assumption, mX(2) =
+R ∞
+−∞x2FX(dx) < ∞. We can then directly verify that
+L(p)f(t) =
+R ∞
+−∞eitxFX(p)(dx), p = 1, 2.
+□
+5.1.2. Proof of Theorem 18. First, note that if FX ∈P+, then for any random variable I,
+ΛIFX ∈P+ as it is the characteristic function of the random variable XI where the two
+random variables are considered to be independent. Next, take FD ∈P+ even and entire,
+that is, D is a symmetric real-valued random variable such that, for any t ∈R,
+FD(t)
+=
+∞
+X
+n=0
+(−1)n MD(2n)
+(2n)!
+t2n.
+Moreover, under the conditions of the item (1), that is ϕ ∈LP and G ∈LP+, Laguerre’s
+theorem [58, Theorem 4] entails that the function
+f(z) =
+∞
+X
+n=0
+G(n)aϕ(n)zn
+is an entire function with only real zeros. We made the assumption that G(n)aϕ(n) =
+MD(2n)MI(2n)/(2n)!. Since these are nonnegative numbers, f cannot have nonnegative
+zeros. On the other hand,
+ΛIFD(t) =
+Z
+R
+FD(xt)FI(dx) =
+∞
+X
+n=0
+(−1)n MD(2n)MI(2n)
+(2n)!
+t2n
+=
+∞
+X
+n=0
+(−1)nG(n)aϕ(n)t2n = f(−t2)
+where the interchange of the integral and sum is justiﬁed by a classical Fubini argument
+as the series deﬁnes an entire function. Since f has only real negative zeros, it follows
+that ΛIFD is an even entire function with only real zeros. Since ΛIFD is a characteristic
+function, it is in P+. Hence ΛIFD ∈DL.
+For the second one, let F ∈DL, and thus, one has from (2.6), that F is of the form (2.3),
+and thus t 7→F(
+√
+t) ∈LP. Since F ∈DL there exists a symmetric real-valued random
+20
+variable D such that F = FD. Proceeding as above, we get, for any t ∈R,
+ΛIFD(t)
+=
+∞
+X
+n=0
+(−1)n MD(2n)MI(2n)
+(2n)!
+t2n.
+We apply again Laguerre’s Theorem [58, Theorem 4]. On the one hand, by assumption,
+there is a function ϕ ∈LP+ such that MI(2n) = ϕ(n). On the other hand, we observed
+above that
+f(z) =
+∞
+X
+n=0
+MD(2n)
+(2n)!
+zn = F(√z) ∈LP.
+Since ΛIFD(t) = f(−t2) we conclude, as above, that ΛIFD ∈DL.
+5.1.3. Proof of Theorem 19. Let ﬁrst (Fn)n≥0 be a sequence in D and assume that for all t
+in a bounded interval, limn→∞Fn = F uniformly. Then, according to the L´evy continuity
+theorem, see [8, Theorem 8.28], F ∈P+ and is continuous on R. Let us write, for all
+t ∈R, n ≥0, Gn(t) =
+1
+Fn(t). Since by assumption, for all n ≥0, t 7→Gn(it) ∈P+, and,
+Fn is real, even and non-vanishing around 0, we get that Gn is well deﬁned and even in a
+neighborhood of 0. Hence, it is the moment generating function of a (unique) symmetric
+random variable. Moreover, we have, for all t ∈R, limn→∞Gn(t) = G(t) =
+1
+F(t), and, by
+continuity of F and the fact that F(0) = 1, there exits α > 0 such that G is ﬁnite-valued
+on |t| < α.
+According to [12, Theorem 3], G is the moment generating function of a
+random variable, whose law is uniquely determined by G, see [12, Theorem 1]. Finally, its
+characteristic function is plainly the mapping t 7→G(it) and is such that, for all t ∈R,
+F(t)G(it) = 1, that is F ∈D.
+Now assume that the sequence (Fn)n≥0 is in DL. We shall show that its locally uniform
+limit F ∈DL. Since, for all n ≥0, Fn ∈DL, by Theorem 1, we have that Gn : t 7→
+1
+Fn(it) is
+the characteristic function of a symmetric P´olya frequency function. As DL ⊂D, from the
+previous proof, we deduce that, for all t ∈R, limn→∞Gn(t) = G(t) =
+1
+F(it) with G ∈P+.
+However, the set of P´olya frequency functions (probability measures) is closed under weak
+convergence as it is the closure, under weak convergence, of probability measures whose
+characteristic functions are the reciprocal of a polynomial having only real roots, see [19,
+Chap. III, Theorem 4.1]. We obtain, using the fact that Gn is real and even for all n ≥0,
+that the mapping t 7→F(t) =
+1
+G(it) ∈LPe and hence F ∈P+ ∩LPe = DL which completes
+the proof.
+5.2. Proofs of Section 4.
+5.2.1. A Wiener-Hopf type mapping between sets of negative-deﬁnite functions. We start
+the proof by a one-to-one mapping, emanating from the Wiener-Hopf factorization, be-
+tween the set ND and a set of Bernstein functions. This allows us to provide a represen-
+tation of the coeﬃcients of the function in terms of a Stieltjes moment sequence that will
+be helpful in identifying one of the random variables solving the van Dantzig problem.
+To this end we introduce some notation. First, let us denote by B the set of Bernstein
+functions, i.e. functions φ : (0, ∞) →[0, ∞) having derivatives of all orders such that
+(−1)n+1φ(n) ≥0 for all n ≥1; see [61, Ch. 3] These functions are in a one-to-one corre-
+spondence with functions that admit the so-called L´evy-Khintchine representation
+(5.2)
+φ(u) = ν + σ2
+2 u +
+Z ∞
+0
+(1 −e−ur)µ(dr), u ≥0,
+21
+where ν, σ ≥0 and µ ∈M+(R+) such that
+R ∞
+0 inf(1, r)µ(dr) < ∞. The set B is invariant
+under several transformations. In particular, it is a convex cone, and, it is also stable by
+the action of the semigroup of translations, Indeed, for any β ≥0, easy algebra yields
+(5.3)
+φ(u + β) = φ(β) + σ2
+2 u +
+Z ∞
+0
+(1 −e−ur)e−βrµ(dr), u ≥0,
+which is plainly a Bernstein function as φ(β) ≥0 and e−βrµ(dr) is a L´evy measure as
+deﬁned above. We shall also need the subset BJ ⊂B which is the convex cone of Bernstein
+functions which take the form
+(5.4)
+φ(u) = ν + σ2
+2 u +
+Z ∞
+0
+(1 −e−ur)µ(r)dr
+where ν, σ ≥0 and µ is a non-negative and non-increasing function on R+ such that
+R ∞
+0
+inf(1, r)µ(r)dr < ∞. We refer to the monograph [61] for an excellent account on all
+these sets of functions.
+Next, for a Radon measure µ on (0, ∞) and θ ≥0, let
+µθ(r) :=
+Z ∞
+r
+eθ(r−s)µ(ds),
+r > 0.
+Letting Mθ be the set of all functions µθ, where µ ranges over Radon measures, such that
+R ∞
+0
+min(1, r)µθ(r)dr < ∞, we deﬁne, in relation to the van Dantzig problem, the following
+set of Bernstein functions:
+(5.5)
+BD =
+
+φ ∈B; µ(dr) = µθ(r)dr, with µθ(r) ∈Mθ, 0 ≤θ≤1
+2
+
+.
+Note ﬁrst that when θ > 0 the function µθ may fail to be monotone, for a suitable choice
+of µ. Note also that when θ = 0 we have µ0(r) =
+R ∞
+r
+µ(ds) is simply a non-negative and
+non-increasing function that satisﬁes the integrability condition above,meaning that BJ is
+a strict subset of BD.
+We have the following.
+Proposition 29.
+(1) There exists a one-to-one mapping between the sets ND and BD.
+More speciﬁcally, for any Ψ ∈ND of the form (4.1), we have, for any u ≥0,
+(5.6)
+Ψ(u) = (u −θ)φ(u)
+where, with νθ = κ
+θ I{θ>0} +Ψ(1)(0+)I{θ=0}, we have set φ(u) = νθ + 1
+2σ2u+
+R ∞
+0 (1−
+e−ur)µθ(r)dr ∈BD. Moreover, with such a notation, we have, for all z ∈C,
+(5.7)
+JΨ(z) = Jφ,θ(z) =
+∞
+X
+n=0
+(−1)nΓ(1 −θ)
+Γ(n + 1 −θ)Wφ(n + 1)z2n.
+(2) Let us deﬁne the mapping Tβf(u) =
+u
+u+βf(u+β). Then, (Tβ)β≥0 form a semigroup,
+i.e., Tβ ◦Tγ = Tβ+γ, and, for any β ≥0, Tβ(N) ⊂N and Tβ(ND) ⊂ND.
+(3) Let us write T βf(u) = u−β
+u+βf(u + β). Then, for any β ≥θ, T β(N) ⊂N and for
+any θ ≤β≤1
+2, T β(ND) ⊂ND.
+22
+Proof. Let Ψ ∈ND. Then, by means of the Wiener-Hopf factorization of L´evy-Khintchine
+exponents of spectrally negative L´evy process, see e.g. [31], there exists φ ∈B such that,
+for all u ≥0,
+(5.8)
+Ψ(u) = (u −θ)φ(u)
+where we recall that θ = sup{u ≥0; Ψ(u) = 0}, see (4.4). In order to characterize φ, we
+write νθ = a + σ2θ +
+R 1
+0 (1 −e−θr)rµ(dr) −
+R ∞
+1
+e−θrµθ(r)dr and, observe ﬁrst that
+Ψ(u + θ)
+=
+(νθ +
+Z ∞
+1
+e−θrµθ(r)dr)u + 1
+2σ2u2 −
+Z ∞
+0
+(1 −e−ur −urI{r<1})e−θrµ(dr)
+=
+u
+
+νθ + 1
+2σ2u +
+Z ∞
+0
+(1 −e−ur)e−θrµθ(r)dr
+
+and, thus
+Ψ(u)
+=
+(u −θ)
+
+νθ + 1
+2σ2u +
+Z ∞
+0
+(1 −e−ur)µθ(r)dr
+
+which, after recalling that −θφ(0) = Ψ(0) = −κ and Ψ(1)(0+) = φ(0) if θ = 0, completes
+the proof of the ﬁrst item as the rest follows at once. Next, the claim of item (2) in the
+case β = 0 is obvious and thus we assume that β > 0. In [11], see also [47, Proposition
+2.1], it is shown that (Tβ)β≥0 is a semigroup and the set N is invariant under the action
+of the mapping Tβ, β ≥0, that is Tβ(N) ⊂N. Thus, it simply remains to show that
+Tβ(ND) ⊂ND for all β ≥0. Let Ψ ∈ND. Then, note that TβΨ(0) = 0, i.e. κ = 0 in
+(4.1), and, there exists 0 ≤θ≤1
+2 such that Ψ(θ) = 0. Suppose, ﬁrst, that β ≥θ, then
+recalling that Ψ is non-decreasing on [θ, ∞) with Ψ(θ) ≥0, we get the claim, from (4.7),
+by observing that (TβΨ)(1)(0) = Ψ(β)
+β
+≥0. Next, assuming that 0 < β < θ, one easily sees
+that TβΨ(θ −β) = θ−β
+θ Ψ(θ) = 0 and since 0 < θ −β < 1
+2, we deduce that also TβΨ ∈ND,
+completing the proof of this item as the semigroup property is obvious. For the last claim,
+ﬁrst observe that, T βΨ(u) = u+β−2β
+u+β
+Ψ(u + β) + Ψ(β) −Ψ(β) = T2β,βΨ(u) −Ψ(β) (the
+last identity serves to ﬁx a notation), and then we know from [11, Proposition 2.2], that
+T2β,β(N) ⊂N and we obtain the statement since Ψ(β) ≥0 as we choose β ≥θ. Finally, if
+Ψ ∈ND, then, from (4.3), Ψ is non-negative on [1
+2, ∞) and, from the preceding discussion,
+T βΨ ∈N with T βΨ(1
+2) =
+1
+2 −β
+1
+2 +βΨ(1
+2 + β)≥0.
+□
+5.2.2. Some analytical properties of the entire functions in the class DP .
+Lemma 30. Let Ψ ∈ND, and, for p = 1, 2, we set L(p)
+1
+= L(p), where we recall that L(p)
+was deﬁned in (3.1), and, for k = 1, 2, . . ., we deﬁne
+L(p)
+k+1 = L(p) ◦L(p)
+k .
+(1) For any k = 1, 2, . . ., we have
+(5.9)
+L(1)
+k JΨ = JTkΨ
+where we recall that the mapping Tk was deﬁned in Proposition 29(2).
+(2) Moreover, for any k = 1, 2, . . ., we have
+(5.10)
+L(2)
+k JΨ = JT
+2k
+1
+2 Ψ
+23
+where, T
+1
+β = T β and T
+k
+β = T β ◦T
+k−1
+β
+, and, the mapping T β was deﬁned in
+Proposition 29(3).
+Proof. To prove the identity (5.9), we ﬁrst let k = 1 and observe that
+(5.11)
+J (1)
+Ψ (t) =
+∞
+X
+n=1
+2n(−1)nt2n−1
+WΨ(n + 1)
+= −2t
+Ψ(1)
+∞
+X
+n=0
+(−1)nt2n
+Qn
+k=1
+k
+k+1Ψ(k + 1) =
+−2t
+WΨ(2)JT1Ψ(t).
+Moreover, diﬀerentiating the right-hand side one more time yields
+J (2)
+Ψ (0) = lim
+t→0
+−2
+WΨ(2)JT1Ψ(t) =
+−2
+WΨ(2)
+where we used that J (1)
+T1Ψ(0) = 0, which, itself, follows by applying (5.11) to JT1Ψ. Hence
+L(1)JΨ = JT1Ψ. To complete the proof for p = 1, we resort to an induction argument
+combined with the semigroup property of the mapping Tk. Indeed, for any k = 1, . . ., one
+has
+L(1)
+k+1JΨ = L(1) ◦L(1)
+k JΨ = L(1)JTkΨ = JTk+1Ψ.
+On the other hand, we note that
+J (2)
+Ψ (t) =
+−2
+WΨ(2)
+d
+dt
+∞
+X
+n=0
+(−1)n
+WT1Ψ(n + 1)t2n+1 =
+−2
+WΨ(2)
+∞
+X
+n=0
+(−1)n(2n + 1)
+WT1Ψ(n + 1) t2n
+=
+−2
+WΨ(2)
+∞
+X
+n=0
+(−1)n
+Qn
+k=1
+k−1
+2
+k+ 1
+2
+k
+k+1Ψ(k + 1)
+t2n
+=
+−2
+WΨ(2)JT
+2
+1
+2 Ψ(t)
+which provides the proof of the last claim for k = 1. As above invoking an induction
+argument yields
+L(2)
+k+1JΨ = L(2) ◦L(2)
+k JΨ = L(2)JT
+2k
+1
+2 Ψ = JT
+2k+2
+1
+2
+Ψ
+which completes the proof.
+□
+We proceed with the following result regarding the order and the type of the entire function
+JΨ. It is a slight reﬁnement of a result obtained recently by Bartholm´e and Patie [2] in
+the case θ = 0, and, for the entire function IΨ(
+√
+t) = JΨ(i
+√
+t), this later transformation
+aﬀects simply the order by a factor of 2. To deal with the general case θ > 0, it is not
+diﬃcult to see that both the order and type remain the same when replacing the term n!
+by CΓ(n + 1 −θ), C > 0, in the coeﬃcients of a power series. We left the details of the
+easy modiﬁcation to the reader and recall that a measurable function ℓon R+ is said to
+be slowly varying at inﬁnity if, for every u > 0, limt→∞
+ℓ(ut)
+ℓ(t) = 1.
+Proposition 31. [2, Proposition 2.1] Let Ψ ∈ND. Then, JΨ is an entire function of
+order
+(5.12)
+ρΨ = 2
+Ψ ∈[1, 2]
+24
+where Ψ = sup{a > 0; limu→∞u−aΨ(u) = ∞} = lim infu→∞
+ln Ψ(u)
+ln u
+∈[1, 2], is its so-called
+Blumenthal-Getoor lower index. Moreover, its type τΨ is given by
+(5.13)
+τΨ = Ψe−Ψ−1
+Ψ lim sup
+n→∞e
+−1
+Ψ
+ R n
+1 ln φ(u)du
+n
+−(Ψ−1) ln n
+
+≥
+
+lim sup
+n→∞
+nΨ−1
+φ(n)
+ 1
+Ψ
+where we recall that Ψ(u) = (u −θ)φ(u). In particular, ρΨ = 1 if Ψ(u) =
+u2
+ℓ(u), and,
+otherwise, ρΨ = 2
+a, a ∈[1, 2) , if Ψ(u) = uaℓ(u) where, in both cases, ℓis a slowly varying
+function, and, ρΨ = 2 also if
+R ∞
+0 rµ(dr) < ∞.
+5.2.3. Useful bounds for the Bernstein-gamma functions. For a Bernstein function φ ∈B,
+we write zφ = inf{u > 0; φ(−u) = 0} ∈[0, ∞] and eφ = sup{u > 0;
+R ∞
+1 eurµ(dr) < ∞} ∈
+[0, ∞] and set
+aφ = min(zφ, eφ).
+We also denote by Wφ the so-called Bernstein-gamma function which admits the following
+generalized Weierstrass product representation
+Wφ(z) = e−γφz
+φ(z)
+∞
+Y
+k=1
+φ(k)
+φ(k + z)e
+φ′(k)
+φ(k) z
+where
+γφ = lim
+n→∞
+ n
+X
+k=1
+φ′(k)
+φ(k) −log φ(n)
+!
+.
+From [48, Theorem 4.1], we know that Wφ deﬁnes a zero-free and analytic function on
+the right-half plane ℜ(z) > −aφ, which admits a meromorphic extension to the right-half
+plane ℜ(z) > −eφ. We mention that when φ(z) = z, then Wφ boils down to the gamma
+function as the inﬁnite product above corresponds to its Weierstrass representation and
+γφ is the Euler-Mascheroni constant. This class of functions has been thoroughly studied
+in the papers by Patie and Savov [49, 48]. Thereout, it has been shown that Wφ ∈P+
+and it is the unique element in P+ solution to the functional equation Wφ(z + 1) =
+φ(z)Wφ(z), Wφ(1) = 1. We also ﬁnd in [48] the following result which will be useful in the
+sequel.
+Proposition 32. [48, Proposition 6.2] Let φ ∈B and write µ(r) =
+R ∞
+r
+µ(ds), r > 0.
+Then, the following estimates holds.
+(1) If σ2 > 0 we have, for any ǫ, a > 0 such that
+R ∞
+0 e−arµ(r)dr < 1, as |b| →∞,
+(5.14)
+
+Γ(a + ib)
+Wφ(a + ib)
+ ≤C|b|−2
+σ2 (µ(1/|b|)+φ(0))+ǫ
+where C > 0.
+(2) If σ2 = 0 then, for any u ≥0 and a > 0 ﬁxed,
+(5.15)
+lim
+|b|→∞|b|u
+
+Γ(a + ib)
+Wφ(a + ib)
+ = 0.
+25
+5.2.4. Characterization and properties of the van Dantzig pair of random variables. To
+deﬁne the van Dantzig pair of random variables that appear in Theorem 20, we need to
+introduce some notations.
+Let Ψ ∈N and recall that it is the Laplace exponent of a
+spectrally negative L´evy process Y, see (4.2). Then, according to Lamperti [33], there
+exists a 1-self-similar Markov process on (0, ∞) denoted by X = (Xt)t≥0 such that
+(5.16)
+Xt = eYAt,
+0 ≤t < ξ = inf{t > 0; Xt = 0},
+where At = inf
+
+s > 0;
+R s
+0 eYudu > t
+	
+. Moreover, if θ = 0, i.e. the conditions (4.4) are
+not fulﬁlled, then ξ = ∞almost surely and X is in fact a Feller process on [0, ∞). On
+the other hand, if 0 < θ < 1, then ξ is ﬁnite almost surely but there exists an unique
+1-self-similar extension of the process X which is also a Feller process on [0, ∞) and with
+the path property to leave the recurrent boundary point 0 continuously, see [55]. From
+now on, if 0 ≤θ < 1, we denote by X(Ψ) = (Xt(Ψ))t≥0 the realization of the 1-self-similar
+Feller semigroup (P Ψ
+t )t≥0 on [0, ∞) (that is the recurrent extension if θ > 0) associated to
+Y and let TΨ be a random variable whose distribution is that of
+inf{t > 0; Xt(Ψ) ≥1},
+conditional on X(Ψ) starting from 0. We also need to introduce the exponential functional
+of a subordinator, a positive random variable which has been intensively studied over the
+last two decades and refer to [47] for a nice historical account and a thorough study. Let
+φ ∈B and let
+(5.17)
+Iφ =
+Z ∞
+0
+e−Ztdt
+where (Zt)t≥0 is a subordinator such that FZt(iu) = e−φ(u)t, u, t ≥0. Next, we recall, from
+[9], the following expression for the integer moments of Iφ,
+(5.18)
+MIφ(n) =
+n!
+Wφ(n + 1),
+n = 0, 1, . . . ,
+and the notation of the associated Markov operator, see (3.9),
+(5.19)
+ΛIφf(t) =
+Z ∞
+0
+f(xt)FIφ(dx).
+We are now ready to state the following result which can be found in [44]. To emphasize
+the role played by the concept of intertwining in the van Dantzig problem, we provide
+another original proof. Intertwining, in our context, refers to the relation (5.22) below.
+To state the theorem, recall the notation
+J−θ(x) = Γ(1 −θ)tθJ−θ(2x),
+I−θ(x) = Γ(1 −θ)tθI−θ(2x),
+appearing in (4.19), where J−θ (respectively I−θ) is the ordinary (respectively modiﬁed)
+Bessel function of the ﬁrst kind of order −θ.
+Theorem 33. [44, Theorem 2.1] Let Ψ ∈N with 0 ≤θ < 1. Then, writing eIΨ(x) =
+IΨ(√x) and eI−θ(x) = I−θ(√x), we have
+(5.20)
+ΛIφ eI−θ(x) = eIΨ(x),
+x > 0,
+26
+where φ(u) = Ψ(u)
+u−θ ∈B. Moreover, TΨ is a positive self-decomposable random variable,
+and, for any u > 0, we have
+FTΨ(iu)
+=
+1
+IΨ(√u) = e−φΨ(u)
+(5.21)
+where φΨ is the Bernstein function deﬁned in Theorem 20.
+Proof. Let Ψ ∈N with 0 ≤θ < 1. We recall that in [49] for the case θ = 0, and in [50] for
+the case 0 < θ < 1, the following intertwining relation has been identiﬁed
+(5.22)
+P Ψ
+t ΛIφ = ΛIφP Ψθ
+t
+where Ψθ(u) = u(u −θ) ∈N. Then, using successively Tonelli theorem and the identity
+(5.18), we obtain that, for any x > 0,
+ΛIφ eI−θ(x)
+=
+∞
+X
+n=0
+MIφ(n)Γ(1 −θ)
+n!Γ(n + 1 −θ) xn =
+∞
+X
+n=0
+Γ(1 −θ)
+Wφ(n + 1)Γ(n + 1 −θ)xn = eIΨ(x).
+It is well-known that the mapping x 7→dqeI−θ(x) = eI−θ(qx), q > 0, is a q-invariant for the
+squared Bessel semigroup P Ψθ, that is, for all t ≥0, e−qtP Ψθ
+t
+dqeI−θ(x) = dqeI−θ(x). Now
+observing that dqΛIφ = ΛIφdq, we deduce from the intertwining relation above that
+P Ψ
+t dqeIΨ(x)
+=
+P Ψ
+t dqΛIφ eI−θ(x) = P Ψ
+t ΛIφdqeI−θ(x)
+=
+ΛIφP Ψθ
+t
+dqeI−θ(x) = eqtΛIφdqeI−θ(x)
+=
+eqtdqΛIφ eI−θ(x) = eqtdqeIΨ(x),
+which shows, since it is positive, that dqeIΨ, q > 0, is a q-invariant function for the semi-
+group P Ψ.
+Then, noting that eIΨ(0) = 1, an application of Dynkin’s formula to the
+bounded stopping TΨ(t) = inf(TΨ, t), yields, for all t ≥0, that
+e−qtP Ψ
+TΨ(t)dqeIΨ(0)
+=
+1
+where (P Ψ
+TΨ(t))t≥0 is the semigroup corresponding to the process (XTΨ(t))t≥0. Diﬀeren-
+tiating term by term the series eIΨ, we observe that x 7→dqeIΨ(x) is, for all q > 0,
+non-decreasing on R+. This allows us to invoke a dominated convergence argument, while
+combined with the absence of positive jumps of X(Ψ), which entails that XTΨ(Ψ) = 1
+almost surely, gives the ﬁrst identity in (5.21). The rest of the statement, that is, TΨ is a
+positive self-decomposable variable is justiﬁed in [44].
+□
+We are ready to state the following result that identiﬁes the ﬁrst random variable of our
+pair of solutions to the van Dantzig problem.
+Lemma 34. Let Ψ ∈N with 0 ≤θ < 1 and B = (Bt)t≥0 be a standard Brownian motion
+independent of X(Ψ). Then, the random variable DΨ =
+√
+2BTΨ is real-valued, symmetric,
+and inﬁnitely divisible. Moreover, for any t ∈R,
+(5.23)
+FDΨ(t) =
+1
+IΨ(t).
+27
+Proof. According to Theorem 33, TΨ is self-decomposable and hence inﬁnitely divisible.
+Since B is a symmetric L´evy process, we have, by Bochner subordination, see [59, The-
+orem 30.1], that DΨ is real-valued, symmetric, and inﬁnitely divisible. Next, using the
+independence of B and X(Ψ) and hence of TΨ, one gets, for any t ∈R,
+FDΨ(t)
+=
+FTΨ
+ it2
+=
+1
+IΨ(t)
+where the last line follows from (5.21).
+□
+To characterize the second random variable, we need to introduce the random variable Jν,
+ν ∈(−∞, 1
+2], whose law is, when ν < −1
+2 , absolutely continuous with a density fJν given
+by
+(5.24)
+fJν(x) = 22νΓ(1 −ν)
+Γ(1
+2)Γ(1
+2 −ν) (4 −x2)−ν−1
+2I{|x|≤2}
+and, otherwise for ν = −1
+2, Jν has the Bernoulli distribution
+1
+2(δ2 + δ−2).
+We note
+that the characteristic function corresponding to the random variable Jν is the function
+J−ν(t) = Γ(1 −ν)tνJ−ν(2t), see [3, p. 38]. We are now ready to state the following which
+deﬁnes a new class of random variables indexed by the whole set of Bernstein functions,
+and, when restricted to the subet BD gives the other set of van Dantzig variables.
+Lemma 35. Let φ ∈B and deﬁne, for any ν ≤−1
+2, the random variable
+Dφ,ν =
+p
+Iφ × Jν
+where Jν is chosen independent of Iφ. Then, Dφ,ν is a symmetric random variable tak-
+ing values in the possibly inﬁnite interval
+
+−2
+√
+2
+σ , 2
+√
+2
+σ
+
+(we use the convention 1
+0 = ∞).
+Moreover, all its even moments exist and are given, for any ν < −1
+2 (resp. ν = −1
+2), by
+(5.25)
+MDφ,ν(2n) =
+Γ(2n + 1)Γ(1 −ν)
+Wφ(n + 1)Γ(n + 1 −ν)
+(resp. = 22n),
+n = 0, 1, . . . ,
+and, for any t ∈R, we have
+(5.26)
+FDφ,ν(t) = Jφ,ν(t)
+where the entire function Jφ,ν is deﬁned as in (5.7). Finally, the law of Dφ,ν is abso-
+lutely continuous with a density fDφ,ν which is continuous on R and fDφ,ν ∈C∞
+0 (R \ {0})
+(resp. fDφ,ν ∈Cp
+0(R\{0}), where p = ⌈2
+σ2 (µ(0+) + φ(0))−ν −1
+2⌉) if σ2 = 0 or µ(0+) = ∞
+(resp. otherwise), such that fDφ,ν(x) = fDφ,ν(−x), and, for any n ∈N (resp. n = 0, . . . , p),
+x > 0 and a > 1
+2 + n,
+(5.27)
+f (n)
+Dφ,ν(x) = (−1)n Γ(1 −ν)
+2πi
+Z a+i∞
+a−i∞
+x1−2z
+Γ(z)
+Γ(z −n)
+Γ(2z −1 −2n)
+Wφ(z −n)Γ(z −ν −n)dz.
+Proof. First, note that the symmetry property of Jν entails the one of Dφ,ν. Since the
+support of Jν is [−2, 2] (or {−2, 2} when ν = 1
+2) and the one of Iφ is
+
+0, 2
+σ2
+
+, see e.g. [48,
+Theorem 2.4], we deduce readily the one of Dφ,ν. Being symmetric, only the even moments
+are non-zero and are given, for any n = 0, 1, . . ., by
+MDφ,ν(2n) = MJν(2n)MIφ(n)
+28
+where we used that the random variables are independent. Using the identity (5.18) and,
+observing, from the duplication formula of the gamma function, that, for ν < −1
+2,
+Z 2
+−2
+x2nfJν(x)dx
+=
+Γ(1 −ν)
+Γ(1
+2)Γ(1
+2 −ν)22n
+Z 1
+0
+yn−1
+2 (1 −y)−ν−1
+2 dy
+=
+22n Γ(1 −ν)Γ(n + 1
+2)
+Γ(1
+2)Γ(n + 1 −ν)
+=
+Γ(1 −ν)(2n)!
+Γ(n + 1 −ν)n!
+(5.28)
+we derive easily the identity (5.25). The case ν = −1
+2 follows easily and from the identity
+before (5.28), the expression of moment is continuous (from below) in ν. Next, since, see
+e.g. [24, Theorem 1], for any t ∈R,
+(5.29)
+FJν(t) = J−ν(t) =
+∞
+X
+n=0
+(−1)nΓ(1 −ν)
+Γ(n + 1 −ν)n!t2n
+and recalling, from [48], that the law of Iφ is absolutely continuous, the independence of
+Iφ and Jν yields, for any t ∈R, that
+FDφ,ν(t)
+=
+Z ∞
+0
+FJν(√xt)fIφ(x)dx
+=
+Z ∞
+0
+Jν(√xt)fIφ(x)dx
+=
+∞
+X
+n=0
+(−1)nΓ(1 −ν)MIφ(n)
+Γ(n + 1 −ν)n!
+t2n
+=
+Jφ,ν(t)
+where to justify the interchange of sums in the third equality, we resort to a classical
+Fubini’s argument whose details are described in [64, Section 1.77], and relies on the fact
+that the series Jφ,ν is absolutely convergent on R. For the last identity we used (5.18).
+Next, it is not diﬃcult to see that the computation (5.28) extends to any complex z such
+that ℜ(z) > −1
+2, and, from [48, Theorem 2.4], the expression (5.18) also extends (at least)
+to ℜ(z) > −1, to get, for ℜ(z) > −1
+2,
+MD2
+φ,ν(z) =
+Γ(2z + 1)Γ(1 −ν)
+Wφ(z + 1)Γ(z + 1 −ν),
+which proves (5.25). Then, recalling the Stirling formula of the gamma function, for any
+a > 0 and |b| large,
+(5.30)
+|Γ(a + ib)| ∼Ce−|b| π
+2 |b|a−1
+2
+where, here and below, C > 0 is a generic constant, we deduce, that, for any a > −1
+2 and
+|b| large,
+
+Γ(2a + 1 + 2ib)
+Γ(a + 1 + ib)Γ(a + 1 −ν + ib)
+ ∼C|b|ν−1
+2.
+This combines with (5.14) when σ2 > 0 and µ(0+) < ∞, gives for any ǫ > 0 and a > −1
+2,
+(5.31)
+MD2
+φ,ν(a + ib)
+ ≤C|b|−2
+σ2(µ(0+)+φ(0))+ν−1
+2+ǫ.
+29
+We deduce that the mapping b 7→|b|p MD2
+φ,ν(a + ib)
+ is integrable on R whenever p <
+2
+σ2 (µ(0+) + φ(0))−ν −1
+2. Then, invoking classical results on Mellin inversion, see e.g. [49,
+Section 1.7.4], we get the Mellin-Barnes representation of fD2
+φ,ν which takes the form for
+any x > 0 and a > 1
+2,
+fD2
+φ,ν(x) = Γ(1 −ν)
+2πi
+Z a+i∞
+a−i∞
+x−z
+Γ(2z −1)
+Wφ(z)Γ(z −ν)dz.
+Next, with ν < −1
+2, since fDφ,ν is symmetric, we have that fDφ,ν(x) = xfD2
+φ,ν(x2), x > 0,
+from where we deduce the Mellin-Barnes representation of fDφ,ν. Next, since the mapping
+z 7→
+Γ(2z−1)
+Wφ(z)Γ(z−ν) is meromorphic on (a′, a′ + 1
+2), 0 < a′ < 1
+2 with a simple pole at 1
+2, an
+application of the residues theorem yields
+fDφ,ν(x) =
+Γ(1 −ν)
+2Wφ(1
+2)Γ(1
+2 −ν) + Γ(1 −ν)
+2πi
+Z a′+i∞
+a′−i∞
+x1−2z
+Γ(2z −1)
+Wφ(z)Γ(z −ν)dz
+from where we easily conclude, as a′ < 1
+2, that limx↓0 fDφ,ν(x) =
+Γ(1−ν)
+2Wφ( 1
+2)Γ( 1
+2 −ν). Moreover,
+by Mellin inversion, see again [49, Section 1.7.4], and by symmetry, we get that f ∈C0(R).
+From the same reference and by a similar reasoning, we obtain the expression and the
+smoothness properties for the successive derivatives for all n ≤p. The cases σ = 0 or
+µ(0+) = ∞follow easily by means of a similar reasoning and using (5.15) in place of
+(5.14).
+□
+We continue our program with the following observation which is the key step in proving
+Proposition 25 for the L(2) mapping.
+To state it, we recall that X(γ), γ ∈R, is the
+γ-length-biased random variable of a non-negative random variable X, if its γth moment
+mX(γ) is ﬁnite and
+FX(γ)(dx) =
+xγ
+mX(γ)FX(dx).
+This notion was used in the proof of the Lukacs mapping deﬁned in (10). We are now
+ready to state the following.
+Proposition 36. For any φ ∈B, we have T1φ(u) =
+u
+u+1φ(u + 1) ∈B. Moreover, with
+the notation of (5.18), we have, for any t ∈R,
+FIT1φ(t) = FIφ(1)(t)
+and, for any twice continuously diﬀerentiable function FX ∈P+,
+(5.32)
+L(2)ΛIφFX = ΛIφ(1)L(2)FX
+where ΛIφf(t) = E
+
+f(t
+p
+Iφ)
+
+and Iφ is chosen independent of X. In particular, for any
+k = 1, 2, . . . , and, any t ∈R, with ν < 1
+2,
+(5.33)
+L(2)
+k FDφ,ν(t) = FJν(2k)√
+Iφ(k)(t) = FDφ,ν(2k)(t).
+30
+Proof. The ﬁrst statement can be found in [11]. Then, observing that WT1φ(n + 1) =
+Qn
+k=1
+k
+k+1φ(k + 1) =
+Wφ(n+2)
+Wφ(1)(n+1), we deduce, from (5.18), that, for any integer n,
+(5.34)
+MIT1φ(n) =
+n!
+WT1φ(n + 1) = (n + 1)!Wφ(1)
+Wφ(n + 2)
+= MIφ(n + 1)
+MIφ(1)
+= MIφ(1)(n)
+which yields the second claim since these random variables are moment determinate, see
+[9], and the characteristic function uniquely determines the law of a random variable.
+Next, as FX is twice continuously diﬀerentiable, one gets, for any t ∈R,
+L(2)ΛIφFX(t)
+=
+L(2)FX√
+Iφ(t)
+=
+F(2)
+X√
+Iφ(t)
+F(2)
+X√
+Iφ(0)
+=
+1
+F(2)
+√
+Iφ(0)
+Z ∞
+0
+F(2)
+X (t√x)
+F(2)
+X (0)
+xfIφ(x)dx
+=
+ΛIφ(1)L(2)FX(t)
+where for the third equality, we used that X and Iφ are independent and for the last
+one that F(2)
+√
+Iφ(0) =
+R ∞
+0
+xfIφ(x)dx =
+1
+φ(1).
+To prove the last relation, we recall that
+Dφ,ν = pIφJν, where Jθ is chosen independent of Iφ and thus resorting to the commutation
+type relation (5.32), one gets, for any t ∈R,
+L(2)FDφ,ν(t) = L(2)ΛIφFJν(t) = ΛIφ(1)L(2)FJν(t) = ΛIφ(1)FJν(2)(t) = FJν(2)
+q
+IIφ(1)(t)
+which provides the claim for k = 1. Then, an induction argument gives for any k,
+L(2)
+k+1FDφ,ν(t) = L(2) ◦L(2)
+k FDφ,ν(t) = L(2)FJν(2k)
+q
+IIφ(k) = FJν(2k+2)
+q
+IIφ(k+1)(t)
+which completes the proof.
+□
+5.2.5. End of the proof of Theorem 20. To complete the proof of Theorem 20, we take
+Ψ ∈ND, and, recall from Proposition 29, that there exists φ ∈BD and 0 ≤θ ≤1
+2 such
+that Ψ(u) = (u−θ)φ(u). Then combining lemmas 34 and 35, we obtain, using the notation
+of the latter lemma, that is Dφ,θ = pIφJθ,
+FDΨ(it)FDφ,θ(t) = 1,
+t ∈R.
+Hence [FDΨ, FDφ,θ] form a van Dantzig pair, which completes the proof of the theorem
+after invoking Theorem 33.
+5.2.6. Proof of Theorem 23. We simply sketch the proof of the ﬁrst claim as the detailed
+arguments can be found in [30].
+Let φ ∈BP1.
+Then, observing that WΨ(n + 1) =
+n!Wφ(n + 1), n ≥0, we write Fφ =
+1
+Wφ , that is Fφ is a function which is analytic and
+zero-free on the half-plane ℜ(z) > z1, z1 being the largest zero of φ which is simple, and,
+at least on this former half-plane, Fφ is solution to the recurrence equation
+(5.35)
+Fφ(z + 1) =
+1
+φ(z)Fφ(z).
+31
+From this recurrence equation, we get that z1 is also a simple zero of Fφ, and Fφ admits
+an analytic extension to ℜ(z) > ρ1 > z2 due to the interlacing property. Then, the 1-
+separation property entails that ρ1 = z1 −1 is a simple pole of φ, and, hence, ρ1 is neither
+a zero nor a pole of Fφ, which, yields, by the recurrence (5.35), that Fφ admits an analytic
+extension to ℜ(z) > z2 = ρ2 −1. An induction argument gives that Fφ is indeed an entire
+function with the sequence of simple zeros (zk)k≥1, which completes the proof of the ﬁrst
+claim by invoking Laguerre theorem [58, Theorem 4] as JΨ(z) = P∞
+n=0
+(−1)nFφ(n+1)
+n!
+z2n.
+For the last claim, we invoke, for instance, the Mittag-Leﬄer function presented in example
+4.2.4 which has non-real zeros.
+5.2.7. Proof of Proposition 25. The case p = 1 is simply the combination of Lemma 30,
+Proposition 29 and Theorem 20. To prove the case p = 2, we take Ψ ∈ND and recall
+that Dφ,θ = pIφJθ, where Ψ(u) = (u −θ)φ(u). Then, using (5.27), Proposition 29 and
+the identity (5.33), one gets, for any k = 1, 2, . . . ,
+L(2)
+k JΨ(t) = L(2)
+k FDφ,θ(t) = FJθ(2k)
+q
+IIφ(k)(t).
+(5.36)
+On the other hand, using (5.10), and recalling the identity IΨ(t) = JΨ(ei π
+2 t), one has
+L(2)
+k IΨ = IT
+2k
+1
+2 Ψ.
+(5.37)
+However, since Ψ ∈ND, then 1
+2 ≥θ and, from Proposition 29(3), the mapping u 7→
+T
+2k
+1
+2 Ψ(u) = T
+1
+1
+2 ◦T
+2k−1
+1
+2
+Ψ(u) =
+u−1
+2
+u+ 1
+2 T
+2k−1
+1
+2
+Ψ(u + 1
+2) ∈N with T
+2k
+1
+2 Ψ(1
+2) = 0. Then, T
+2k
+1
+2 Ψ
+fulﬁlls the requirement of Theorem 33 and hence
+FTT 2k
+1
+2
+Ψ(iu)
+=
+1
+IT
+2k
+1
+2 Ψ(√u)
+which concludes the proof after invoking Lemma 34.
+References
+[1] L.V. Ahlfors. Complex Analysis. McGraw Hill, New York, 1979.
+[2] C. Bartholm´e and P. Patie. Tur´an inequalities and complete monotonicity for a class of entire functions,
+Anal. Math. 47, no. 3, 507–527, 2021.
+[3] H. Bateman. Tables of Integral Transforms, Vol. 1. McGraw-Hill, New York, 1954.
+[4] P. Biane. La fonction Zˆeta de Riemann et les Probabilit´es. In: La Fonction Zˆeta, ed. by N. Berline
+and Claude Sabahh. Ed. ´Ecole Polytechn., 166–193, 2011.
+[5] P. Biane, J. Pitman and M. Yor. Probabilistic interpretation of the Jacobi theta and the Riemann
+zeta functions, via Brownian excursions, Bull. AMS 38, 435–465, 2001.
+[6] S. Bochner. Harmonic Analysis and the Theory of Probability, University of California Press, Berkeley
+and Los Angeles, 1955.
+[7] E. Borel. Le¸cons sur les Fonctions Enti`eres, 2nd edition. Gauthiers-Villars et ﬁls, Paris, 1921.
+[8] L. Breiman. Probability, Addison-Wesley Publishing Co., London, 1968.
+[9] P. Carmona, F. Petit and M. Yor. On the distribution and asymptotic results for exponential func-
+tionals of L´evy processes. Exponential functionals and principal values related to Brownian motion,
+73–130, Rev. Mat. Iberoamericana, Madrid, 1997.
+[10] D.
+Chafa¨ı.
+A
+probabilistic
+proof
+of
+the
+Schoenberg
+theorem.
+Available
+at
+Libres pens´ees d’un math´ematicien ordinaire, 2013.
+[11] M. Chazal, A.E. Kyprianou and P.
+Patie. On some new transformations of Laplace exponents of
+spectrally negative L´evy processes, A lifetime of excursions through random walks and L´evy processes
+32
+- a volume in honour of Ron Doney’s 80th birthday, 157–180, Progr. Probab., 78, Birkh¨auser/Springer,
+Cham, 2021.
+[12] J. H. Curtiss. A Note on the Theory of Moment Generating Functions. Ann. Math. Statist. 13, no. 4,
+430-433, 1942.
+[13] N.G. de Bruijn. The roots of trigonometric integrals, Duke Math. J. 17, 197-226, 1950.
+[14] D.K. Dimitrov and Y. Cheikh. Laguerre polynomials as Jensen polynomials of Laguerre-P´olya entire
+functions. J. Comput. Appl. Math. 233, no. 3, 703–707, 2009.
+[15] M.M. Dzhrbashyan. Integral Transforms and Representations of Functions in the Complex Domain,
+Nauka, Moscow, 1966 (in Russian).
+[16] G. Gasper and M. Rahman, Basic Hypergeometric Series, second ed., Encyclopedia of Mathematics
+and its Applications 96, Cambridge University Press, Cambridge, With a foreword by Richard Askey,
+2004.
+[17] A.A. Gol’dberg and I.V. Ostrovs’kii. The growth of entire ridge functions with real zeros, Math. Phys.
+Funct. Anal., no. V, 3–10, 156 Akad. Nauk. Ukrain. SSR Fiz.-Tehn˙Inst. Nizkih Temperatur Kharkov,
+1974 (in Russian).
+[18] M. Griﬃn, K. Ono, L. Rolen, D. Zagier. Jensen polynomials for the Riemann zeta function and other
+sequences, Proceedings of the National Academy of Sciences, 116 (23):11103-11110, 2019.
+[19] I.I. Hirschman and D.V. Widder, The Convolution Transform, Princeton University Press, Princeton,
+New Jersey, 1955.
+[20] C. Hermite, H. Poincar´e and E. Rouch´e. Oeuvres de Laguerre, Tome I. Gauthiers-Villars et ﬁls, Paris,
+1898.
+[21] W. E. Hinds. Moments of complex random variables related to a certain class of characteristic func-
+tions. J. Sankhy¯a Ser. A 36, no. 2, 219–222, 1974.
+[22] M.E.H. Ismail and D.H. Kelker. Special functions, Stieltjes transforms and inﬁnite divisibility. SIAM
+J. Math. Anal. 10, no. 5, 884–901, 1979.
+[23] G. Iurato. The early historical roots of Lee-Yang theorem. arXiv: History and Philosophy of Physics,
+2014.
+[24] Z.J. Jurek. Generalized L´evy stochastic areas and selfdecomposability. Statist. Probab ˙Lett. 64, no. 2,
+213–222, 2003.
+[25] O. Kallenberg. Foundations of Modern Probability, Springer, 2002.
+[26] S.I. Kalmykov and D.B. Karp. Log-concavity and Tur´an-type inequalities for the generalized hyper-
+geometric function. Anal. Math. 43, 567-580, 2017.
+[27] A.A. Kilbas, H.M. Srivastava, and J.J. Trujillo. Theory and Applications of Fractional Diﬀerential
+Equations, volume 204 of North-Holland Mathematics Studies. Elsevier Science B.V., Amsterdam,
+2006.
+[28] Y. Kozitsky. Laguerre entire functions and the Lee-Yang property, Applied Mathematics and Compu-
+tation 141, no. 1, 103–112, 2003.
+[29] H.L. Krall and O. Frink. A new class of orthogonal polynomials: the Bessel polynomials. Trans. Amer.
+Math. Soc. 65(1): 100–115, 1948.
+[30] A. Kuznetsov, P. Patie and M. Savov. Zeros of some entire functions and hitting times of self-similar
+Markov processes, working paper, 2020.
+[31] A.E. Kyprianou. Introductory Lectures on Fluctuations of L´evy Processes with Applications. Univer-
+sitext. Springer-Verlag, Berlin, 2006.
+[32] M. Kwa´snicki. A new class of bell-shaped functions. Trans. Amer. Math. Soc. 373 no. 4, 2255–2280,
+2020.
+[33] J. Lamperti. Semi-stable Markov processes. Z. Wahrsch. verw. Geb. 22, 205-225, 1972.
+[34] T.D. Lee and C.N. Yang. Statistical theory of equations of state and phase transitions, II. Lattice gas
+and Ising model. Physical Rev. (2) 87, 410-419, 1952.
+[35] B. Y. Levin. Lectures on entire functions, volume 150 of Translations of Mathematical Monographs.
+American Mathematical Society, Providence, RI, 1996. In collaboration with and with a preface by
+Yu. Lyubarskii, M. Sodin and V. Tkachenko, Translated from the Russian manuscript by Tkachenko.
+[36] Ju.V. Linnik and I.V. Ostrovskii. Decomposition of Random Variables and Vectors. Amer. Math. Soc.,
+Providence 1977. (Translation from the Russian original published by Nauka, Moscow, 1972.)
+[37] R. Loeﬀen, P. Patie and M. Savov. Extinction time of non-Markovian self-similar processes, persis-
+tence, annihilation of jumps and the Fr´echet distribution. J. Stat. Phys. 175, no. 5, 1022-1041, 2019.
+33
+[38] E. Lukacs. Contributions to a problem of D. van Dantzig. Teor. Veroyatnost. i Primenen. 13 no. 1,
+114-125, 1968.
+[39] E. Lukacs. Characteristic Functions, second edition. Hafner Publishing Co., New York, 1970.
+[40] C.M. Newman. Fourier transforms with only real zeros. Proceedings of the American Mathematical
+Society 61 no. 2, 245–251, 1976.
+[41] C.M. Newman and W. Wu. Lee-Yang property and Gaussian multiplicative chaos. Commun. Math.
+Phys. 369, 153–170, 2019.
+[42] C.M. Newman and W. Wu. Constants of de Bruijn-Newman type in analytic number theory and
+statistical physics. Bull. Amer. Math. Soc., in press. Published online April 19, 2019.
+[43] A.G. Pakes. Lambert’s W, inﬁnite divisibility and Poisson mixtures, Journal of Mathematical Analysis
+and Applications, Volume 378, Issue 2, Pages 480-492, 2011.
+[44] P. Patie. Inﬁnite divisibility of solutions to some self-similar integro-diﬀerential equations and expo-
+nential functionals of L´evy processes. Ann. Inst. Henri Poincar´e Probab. Stat. 45 no. 3, 667–684,
+2009.
+[45] P. Patie. Law of the absorption time of positive self-similar Markov processes, Ann. Probab. 40(2):
+765-787, 2012.
+[46] P. Patie and R. Sarkar. Weak similarity orbit of the log-Bessel semigroup on the Euclidean space.
+submitted, 2020.
+[47] P. Patie and M. Savov. Extended factorizations of exponential functionals of L´evy processes. Electron.
+J. Probab. 17, paper no. 38, 22 pp, 2012.
+[48] P. Patie and M. Savov. Bernstein-gamma functions and exponential functionals of L´evy processes.
+Electron. J. Probab. 23, paper no. 75, 101, 2018.
+[49] P. Patie and M. Savov. Spectral expansion of non-self-adjoint generalized Laguerre semigroups, Mem.
+Amer. Math. Soc., 272, no. 1336, vii+182 pp., 2021.
+[50] P. Patie, M. Savov and Y. Zhao. Intertwining, excursion theory and Krein theory of strings for non-
+self-adjoint Markov semigroups, Ann. Probab. 47, no. 5, 3231–3277, 2019.
+[51] J. Pitman and M. Yor, Bessel processes and inﬁnitely divisible laws, Stochastic Integrals (Proc. Sym-
+pos. Univ. Durham, Durham, 1980), Lecture Notes in Math. (D. Williams, ed.) 851, Springer, Berlin,
+285–370, 1981.
+[52] G. P´olya. ¨Uber trigonometrische Integrale mit nur reellen Nullstellen. J. reine u. ang. Math. 158,
+6-18, 1927.
+[53] G.
+P´olya
+and
+J.
+Schur.
+¨Uber
+zwei
+Arten
+von
+Faktorenfolgen
+in
+der
+Theo-
+rie
+der
+Algebraischen
+Gleichungen.
+J.
+Reine
+Angew.
+Math.
+144,
+89-113,
+1914.
+Digital version by Nieders¨achsische Staats- und Universit¨atsbibliothek G¨ottingen.
+[54] A.Yu. Popov, A.M. Sedletskii. Zeros distribution of Mittag-Leﬄer functions. Contemporary Math-
+ematics. Fundamental Directions 40 (2011), 3–171 (in Russian); EN Transl. in: J. Math. Sci. 190,
+209–409, 2013.
+[55] V. Rivero. Recurrent extensions of self-similar Markov processes and Cram´er’s condition. Bernoulli,
+11(3), 471–509, 2005.
+[56] B. Rodgers and T. Tao (2020). The De Bruijn–Newman constant is non-negative. Forum of Mathe-
+matics, Pi, 8, E6. doi:10.1017/fmp.2020.6
+[57] B. Roynette and M. Yor. Couples de Wald inﬁniment divisibles. Exemples li´es `a la fonction Gamma
+d’Euler et `a la fonction Zeta de Riemann. Ann. Inst. Fourier 55 no. 4, 1219-1283, 2005.
+[58] H.-J. Runckel. Zeros of entire functions. Trans. Amer. Math. Soc. 143, 343–362, 1969.
+[59] K.-I. Sato. L´evy processes and inﬁnitely divisible distributions, volume 68 of Cambridge Studies in
+Advanced Mathematics. Cambridge University Press, Cambridge, 1999. Translated from the 1990
+Japanese original, Revised by the author.
+[60] I.J. Schoenberg. On Totally positive functions, Laplace integrals and entire functions of the Laguerre-
+Polya-Schur type. Proc. Nat. Acad. Sci. 33, no. 1, 11–17, 1947.
+[61] R.L. Schilling, R. Song, and Z. Vondraˇcek. Bernstein functions, volume 37 of de Gruyter Studies in
+Mathematics. Walter de Gruyter & Co., Berlin, 2010. Theory and applications.
+[62] B. Simon and R.B. Griﬃths. The (φ4)2 ﬁeld theory as a classical Ising model. Comm. Math. Phys.
+33, 145–164, 1973.
+[63] T. Tao et al., Upper bounding the de Bruijn-Newman constant, available at Polymath (2018)
+[64] E.C. Titchmarsh. The Theory of Functions. Oxford University Press, Oxford, 1939.
+34
+[65] C.N. Yang and T.D. Lee. Statistical theory of equations of state and phase transitions, I. Theory of
+condensation. Physical Rev. (2) 87, 404–409, 1952.
+[66] D.V. Widder. The Laplace Transform. Princeton University Press, 1941.
+[67] R. Zhang. On complete monotonicity of certain special functions. (English summary) Proc. Amer.
+Math. Soc. 146, no. 5, 2049–2062, 2018.
+Department of Mathematical Sciences, University of Liverpool, Liverpool, L69 7ZL, UK
+Email address: takiskonst@gmail.com
+School of Operations Research and Information Engineering, Cornell University, Ithaca,
+NY 14853.
+Email address: pp396@cornell.edu
+School of Operations Research and Information Engineering, Cornell University, Ithaca,
+NY 14853.
+Email address: rs2466@cornell.edu
+35
