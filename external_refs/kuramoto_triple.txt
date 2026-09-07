@@ -1,0 +1,1693 @@
+ON TRIPLE QUADRATIC RESIDUE SYMBOLS IN REAL QUADRATIC
+FIELDS
+ATSUKI KURAMOTO
+Abstract. We introduce triple quadratic residue symbols [p1, p2, p3] for certain finite primes
+pi’s of a real quadratic field k with trivial narrow class group. For this, we determine a pre-
+sentation of the Galois group of the maximal pro-2 Galois extension over k unramified outside
+p1, p2, p3 and infinite primes, from which we derive mod 2 arithmetic triple Milnor invariants
+µ2(123) yielding the triple symbol [p1, p2, p3] = (−1)µ2(123). Our symbols [p1, p2, p3] describes
+the decomposition law of p3 in a certain dihedral extension K over k of degree 8, determined
+by p1, p2. The field K and our symbols [p1, p2, p3] are generalizations over real quadratic fields
+of R´edei’s dihedral extension of Q and R´edei’s triple symbol of rational primes. We give ex-
+amples of R´edei type extensions K over real quadratic fields. We also give a cohomological
+interpretation of our symbols in terms of Massey products.
+Introduction
+The purpose of this paper is to introduce the triple quadratic residue symbol [p1, p2, p3] for
+certain primes pi’s of real quadratic fields and investigate its properties.
+Our symbols is a
+triplication of quadratic residue symbol in real quadratic fields, and is also a generalization of
+R´edei’s triple symbol over the rational number field Q to real quadratic fields.
+The study of triple symbols in arithmetic goes back to the work of R´edei in 1939 ([R]), which
+intended to generalize the Legendre symbol and Gauss’ genus theory for quadratic fields. For
+certain prime numbers p1, p2 and p3, R´edei’s triple symbol [p1, p2, p3] ∈{±1} describes the
+decomposition law of p3 in the dihedral extension of degree 8 over Q, determined by p1 and p2.
+Some variants of the R´edei symbol have also been studied in [Fr], [Fu], [Su] among others. In
+the late 1990s, Morishita interpreted the R´edei symbol as a mod 2 arithmetic analogue of the
+triple linking number (Milnor invariant) of a link L in the 3-sphere S3 ([Mil], [Tu]) from the
+viewpoint of arithmetic topology ([Mo4]), especially from the analogy between Koch’s theorem
+on a group presentation of the Galois group πpro-2
+1
+(Spec(Z) \ S) of the maximal pro-2 extension
+over Q unramified outside a finite set S of primes and Milnor’s theorem on a group presentation
+of a link group π1(S3 \L), and introduced the multiple quadratic residue symbols [p1, . . . , pr] for
+certain prime numbers pi’s as mod 2 arithmetic analogues of Milnor invariants of a link ([Mo1],
+[Mo2], [Mo3]). He also gave a description of [p1, . . . , pr] in terms of the Massey product of the
+´etale cohomology of Spec(Z) \ {(p1), . . . , (pr)} ([Mo3]).
+Now it remains an important problem to generalize the multiple quadratic residue symbols
+in Q to the multiple power residue symbols for primes in a number field. We may note that
+Turaev ([Tu]) extended Milnor’s theorem on a link group to an integral homology 3-sphere M
+and defined Milnor’s invariants of a link in M. Since the ideal class group is regarded as an
+analogue of the 1st homology group of a 3-manifold in arithmetic topology, it is natural to expect
+that we may extend Koch’s presentation of the pro-2 Galois group over Q to the Galois group
+Gk,S(l) of the maximal pro-l extension over a number field k unramified outside a finite set S
+of primes, when k has the (narrow) class number one and k contains the l-th roots of unity
+(l being a prime number), and that we may derive multiple l-th power residue symbols from
+Date: June 12, 2026.
+2020 Mathematics Subject Classification. 11R32, 57M05.
+Key words and phrases. Pro-2 Galois group with restricted ramification, Mod 2 arithmetic Milnor invariant,
+R´edei extension, Triple quadratic residue symbol.
+1
+arXiv:2509.00667v2  [math.NT]  11 Jun 2026
+2
+ATSUKI KURAMOTO
+Gk,S(l). However, there are a cohomological obstruction to determine a group presentation of
+Gk,S(l) and the difficulty arising from the unit group of k, in order to define arithmetic Milnor
+invariants. So far there is the only case k = Q(√−3) and l = 3, for which triple cubic residue
+symbols are defined by using the Galois group GQ(√−3),S(3) ([AMM]). For other approaches to
+triple symbols, we refer to the recent works [E] and [KM].
+In this paper, we resolve the difficulty arising from the cohomological obstruction and the
+unit group for a real quadratic field k and determine a presentation of the Galois group GS(2) of
+the maximal pro-2 extension of k unramified outside a finite set of finite primes S = {p1, . . . ps}
+and the infinite primes, when k has the trivial narrow class group. From this we are able to
+derive the triple quadratic residue symbol [p1, p2, p3] = ±1 for certain finite primes of k. To be
+precise, fix a prime number p ≡1 mod 4 and let k be a real quadratic field Q(√p) whose narrow
+ideal class group is trivial, and let ε be the fundamental unit of k. Let S = {p1, . . . , ps} be a
+finite set of finite primes of k and let ∞1, ∞2 denotes the infinite primes of k, where Npi ≡1
+mod 4 and the corresponding embeddings ι∞j : k ,→R are defined by ι∞1(a + b√p) = a + b√p,
+ι∞2(a + b√p) = a −b√p for a, b ∈Q. In Section 1, we showed as our first result that the pro-2
+Galois group GS(2) has the following presentation
+GS(2) = ⟨x1, · · · , xs | xNp1−1
+1
+[x1, y1] = · · · = xNps−1
+s
+[xs, ys] = 1, x2
+∞2 = 1⟩,
+(0.1)
+where the word xi represents a monodromy τi over pi in kS(2)/k and yi denotes the free pro-2
+word of x1, . . . , xs which represents a Frobenius automorphism σi over pi in kS(2)/k, and x∞2
+denotes the word which represents the monodromy over a real prime ∞2 (see Theorem 1.3).
+We note that the presentation (0.1) looks similar to that of a link group ([Mil], [Tu]) by the
+analogy between a monodromy (resp. Frobenius automorphism) over a prime and a meridian
+(resp. longitude) of a knot ([Mo4, Chapter 8]).
+In Section 2, we define the triple quadratic residue symbol [p1, p2, p3] using group presentation
+obtained in Section 1, and we also confirm that this definition is a generalization of the quadratic
+residue symbol. To be precise, let us consider the case that S = {p1, p2, p3} with pi = (πi) such
+that
+ πi
+πj
+
+= 1 for 1 ≤i ̸= j ≤3 and
+ ε
+πi
+
+= 1 for 1 ≤i ≤3,
+where
+·
+·
+
+denotes the quadratic residue symbol in k. Then, following the method by Morishita
+([Mo1], [Mo2], [Mo3]), we obtain the well-defined mod 2 Milnor invariant µ2(123) by using the
+presentation (0.1) and hence the triple quadratic residue symbol
+[p1, p2, p3] := (−1)µ2(123).
+By the definition of µ2(123), the triple symbol [p1, p2, p3] describes the decomposition law of p3
+in a dihedral extension K of degree 8 over k, unramified outside S and the infinite primes with
+ramification index of pi being 2. We call such an extension K a R´edei type D8-extenision over k.
+Actually we show that R´edei type extenision K exists uniquely for {p1, p2} (see Theorem 2.6).
+In Section 3, we construct R´edei type D8-extenision K under several conditions, following
+the method by R´edei ([A], [R]). To be precise, let k = Q(√p) be a real quadratic field and we
+assume p ≡5 mod 8. Let p1 = (π1), p2 = (π2) are prime ideals of Ok such that πi ≡1 mod 4Ok
+and πi > 0 (1 ≤i ≤2). Then, there is a non-zero Ok solution (x, y, z) of x2 −π1y2 −π2z2 = 0
+such that gcd(x, y, z) = 1, y ∈2Ok. Furthermore, if x −y ≡1 mod 4Ok, then the R´edei type
+D8-extenision K is given by
+K = k(√π1, √π2,
+q
+x + y√π1).
+We also give some numerical examples of R´edei type D8-extenisions over real quadratic fields.
+Moreover, we give the first example of a Borromean primes p1 = (π1), p2 = (π2), p3 = (π3) in
+Q(
+√
+5), which satisfies
+
+πi
+πj
+
+= 1 (i ̸= j) and [p1, p2, p3] = −1.
+Finally, in Section 4, following [Mo3], we give a cohomological interpretation of mod 2 Milnor
+invariant and the triple quadratic residue symbol from the perspective of Massey products.
+3
+Notations. For a set A, #A denotes the cardinality of A.
+For a finite algebraic number field F, OF denotes the ring of integers of F, HF denotes the ideal
+class group of F, and H+
+F denotes the narrow ideal class group of F.
+For an ideal a of OF , Na := #(Ok/a).
+For a group G and x, y ∈G, [x, y] := xyx−1y−1.
+For a topological group G and subsets X, Y of G, [X, Y ] denotes the closed subgroup of G
+generated by [x, y] for x ∈X, y ∈Y .
+1. Maximal pro-2 Galois groups of real quadratic fields with restricted
+ramification
+In this section, we study a presentation of the Galois group GS(2) of the maximal pro-2 ex-
+tension over a real quadratic field k, which is unramified outside a finite set S of primes of k.
+For this, we apply theorems due to H¨ochsmann and Koch ([Ko]) and we assume that the narrow
+class group of k is trivial and a certain cohomological obstruction BS vanishes, in order to give
+a precise minimal generators and their relations. We also give a condition for BS = {1} in terms
+of the fundamental unit of k.
+Let k be a real quadratic field and Ok be the ring of integers of k. We recall that the unit
+group O×
+k is given by
+O×
+k = {±εn | n ∈Z},
+where ε is the fundamental unit of k. Let S be a finite set of finite primes of k,
+S = {p1, · · · , ps}, #S = s.
+We assume that pi’s are not lying over 2, that is, Npi ≡1 mod 2 for each i. Let S be the union
+S = S ∪SR,
+where SR = {∞1, ∞2} is the set of real primes of k. For pi ∈S, let kpi be the completion of k
+at pi and let πi be a prime element of kpi. Each primes p ∈S defines an embedding k to kp,
+which we denote by ιp. In particular, for real primes, we denote by ι∞1 the embedding into R
+determined from the identity map and the conjugate map by ι∞2. Let kS(2) denote the maximal
+pro-2 extension of k, unramified outside S and we set GS(2) := Gal(kS(2)/k).
+Now we describe the structure of the pro-2 group GS(2) in a certain unobstructed case. For
+this, we first recall a result due to Iwasawa on the local Galois group ([Ko, Satz 10.2]). We fix
+an algebraic closure kpi of kpi and an embedding ¯k ,→kpi. Let kpi(2) denote the maximal pro-2
+extension of kpi in kpi and Gkpi(2) denote the Galois group of kpi(2) over kpi. In this case, the
+following identity is known:
+kpi(2) = kpi(ζ2n,
+2n√πi | n ≥1),
+where ζ2n denotes a primitive 2n-th root of unity in k such that (ζ2a)2b = ζ2a−b for all a ≥b.
+The local Galois group Gkpi(2) is topologically generated by the monodromy τi and (a lift of)
+the Frobenius automorphism σi which are defined by
+τi(ζ2n) := ζ2n,
+τi( 2n√πi) := ζ2n 2n√πi,
+σi(ζ2n) := ζNpi
+2n ,
+σi( 2n√πi) :=
+2n√πi,
+which are subject to the relation
+τ Npi−1
+i
+[τi, σi] = 1.
+(1.1)
+For p ∈SR, we have kp = R, kp(2) = C, and
+Gkp(2) = ⟨τ | τ 2 = 1 ⟩.
+(1.2)
+4
+ATSUKI KURAMOTO
+For each p ∈S, the fixed embedding ¯k ,→kp induces an embedding kS(2) ,→kp(2), so a prime
+Pi of kS(2) lying over pi (1 ≤i ≤s). We denote by the same letters τi and σi the images of τi
+and σi under φp, respectively, under the homomorphism
+φp : Gkp(2) −→GS(2)
+induced by the embedding kS(2) ,→kp(2). Then τi is a topological generator of the inertia group
+of Pi and σi is a lift of the Frobenius automorphism of the maximal subextension of kS(2)/k in
+which Pi is unramified. We call simply τi a monodromy over pi in kS(2)/k and σi a Frobenius
+automorphism over pi in kS(2)/k. We note that the restriction of τi to the maximal Abelian
+subextension kS(2)ab in kS(2)/k, denoted by τ i := τi|kS(2)ab, is given by the Artin symbol
+τ i = (ηi, kS(2)ab/k),
+for an id`ele ηi of k whose pi-component is a primitive (Npi −1)-th root of unity in k×
+pi and all
+of the other components are 1. Now we assume that the 2-class group Hk(2) of k is trivial.
+Then, by class field theory and Burnside’s basis theorem ([Ko, Satz 4.10]), the monodromies
+τ1, . . . , τs, τ∞1, τ∞2 generate topologically the global Galois group GS(2). However, they may
+not be a minimal set of generators in general. In fact, Shafarevich’s theorem ([Ko, Satz 11.8])
+tells us that the minimal number d(GS(2)) of generators of GS(2) is given by
+d(GS(2)) = s + dimF2 BS,
+(1.3)
+where the obstruction BS is defined as follows: We define the subgroup VS of k× by
+VS := {a ∈k× | aOk = a2, a ∈(k×
+p )2 (∀p ∈S)},
+where a is a fractional ideal of Ok, and then BS is defined by
+BS := VS/(k×)2,
+which is an elementary Abelian 2-group.
+By Shafarevich’s formula (1.3) on d(GS(2)), 2 −
+dimF2 BS generators among τi’s have to be removed in order to get a minimal generators of
+GS(2).
+Now we show a necessary and sufficient condition for BS to vanish by using the fundamental
+unit ε of k. For a ∈k× and a finite prime p of k such that 2, a and p are relatively prime,
+
+a
+p
+
+denotes the quadratic residue symbol in k. For a real prime ∞of k,
+  a
+∞
+
+is defined by 1 (resp.
+−1) if ι∞(a) > 0 (resp. if ι∞(a) < 0).
+Proposition 1.1.
+(1) We assume that the ideal class group Hk of k is trivial.
+Then, the
+following conditions are equivalent.
+(i) BS = {1}.
+(ii) There is a prime p ∈S such that
+ε
+p
+
+= −1.
+(2) We assume that the narrow ideal class group H+
+k of k is trivial. Then we have
+
+ε
+∞2
+
+= −1
+and BS = {1}.
+Proof. (1) Suppose that VS = (k×)2. Since ε is not square in k×, ε is not included in VS. Since
+εOk = (1)2, there exists p ∈S such that ε /∈(k×
+p )2. Consequently, we have
+
+ε
+p
+
+= −1 for some
+prime p ∈S.
+Conversely, we assume that there is a prime p ∈S such that
+
+ε
+p
+
+= −1. Choose any α ∈VS.
+By the definition of VS, there is an ideal a satisfying αOk = a2. Since the class number of k is
+one, a is generated by one element a ∈k×. So, α has the form α = u · a2 (u ∈O×
+k ). Because of
+the structure of O×
+k /(O×
+k )2, we have u = u′ · v2 (u′ ∈{1, −1, ε, −ε}, v ∈O×
+k ). Then replacing
+v · a by a, α has the form u′ · a2 (u′ ∈{1, −1, ε, −ε}). So we obtain u′ = α · (a−1)2 ∈VS. On
+the other hand, −1, −ε /∈VS because S has a real prime ∞1. In addition, ε is not included in
+VS by the assumption. Consequently, we have u′ = 1 and α = a2 ∈(k×)2.
+5
+(2) Since the narrow ideal class group H+
+k of k is trivial, Nk/Q(ε) = ε · ι∞2(ε) = −1. Therefore
+we have ι∞2(ε) = −1 and
+
+ε
+∞2
+
+= −1. By (1), we have BS = {1}.
+□
+By using Proposition 1.1, the minimal set of generators of GS(2) can be determined as follows.
+Let Φ(GS(2)) be the Frattini subgroup of GS(2), namely, Φ(GS(2)) = GS(2)2[GS(2), GS(2)].
+Proposition 1.2. Notations being as above, we assume that the ideal class group Hk of k is
+trivial, and there is a prime p ∈S \ {∞1} such that
+
+ε
+p
+
+= −1. Then GS(2) is topologically
+generated by the set of minimal generators {τ1, . . . , τs, τ∞2} \{τ}, where τ is a monodromy
+corresponding to p. If the narrow ideal class group H+
+k of k is trivial, then we can take τ = τ∞2.
+Proof. By Burnside’s basis theorem, it is sufficient to show that {τ1, . . . , τs, τ∞2}\{τ} generates
+GS(2)/Φ(GS(2)). For a prime p of k, let Op be the ring of p-adic integers of kp. (For the infinite
+prime p, we set Op := kp.) Let Jk be the id`ele group of k. Let Uk be the subgroup of Jk consisting
+of unit id`eles of k, Uk := Q
+p O×
+p , and let US denote the subgroup of Uk whose p-component is
+1 for any p ∈S. Employing class field theory, we have the canonical isomorphism of F2-vector
+spaces
+Jk/USJ2
+kk× ≃GS(2)/Φ(GS(2))
+by the Artin symbol.
+Since the ideal class group Hk = Jk/Ukk× is trivial and BS = {1} by Proposition 1.1, we
+have the following exact sequence of F2-vector spaces (cf. [Ko, (11.11)]).
+1 −→O×
+k /(O×
+k )2
+δ
+−→
+Y
+p∈S
+O×
+pi/(O×
+pi)2
+ι
+−→Jk/USJ2
+kk× −→1,
+where δ is the diagonal map and ι is induced by the natural inclusion Q
+p∈S O×
+pi ,→Jk. By
+local and global class field theory, O×
+pi/(O×
+pi)2 ≃⟨τi⟩and Jk/USJ2
+kk× ≃GS(2)/Φ(GS(2)). So we
+obtain the following exact sequence.
+1 →O×
+k /(O×
+k )2
+δ
+−→⟨τ1⟩× · · · × ⟨τs⟩× ⟨τ∞1⟩× ⟨τ∞2⟩
+ι
+−→GS(2)/Φ(GS(2)) →1.
+Therefore, {ι(τ1), · · · ι(τs), ι(τ∞1), ι(τ∞2)} forms a system of generators of
+GS(2)/Φ(GS(2)). On the other hand, Since O×
+k /(O×
+k )2 = {1, −1, ε, −ε} = ⟨−1, ε⟩, {δ(−1), δ(ε)}
+is a basis of Im(δ). Since Ker(ι) = Im(δ), {δ(−1), δ(ε)} is a basis of Ker(ι). By expressing δ(−1)
+and δ(ε) as δ(−1) = τ1a1 · · · τ∞2
+a∞2, δ(ε) = τ1b1 · · · τ∞2
+b∞2 using the basis of ⟨τ1⟩× · · · × ⟨τ∞2⟩,
+we obtain the relations
+(
+τ1a1 · · · τ∞2
+a∞2 = 1
+(1.2.1)
+τ1b1 · · · τ∞2
+b∞2 = 1
+(1.2.2)
+in GS(2)/Φ(GS(2)). Here, for i, j = 1, · · · , s, ∞1, ∞2, we define
+ai =
+(
+1
+δ(−1) /∈(O×
+pi)2
+0
+otherwise,
+bj =
+(
+1
+δ(ε) /∈(O×
+pj)2
+0
+otherwise.
+From relation (1.2.1), since δ(−1) = −1 /∈(O×
+∞1)2 = (R×)2 we see that it is possible to omit τ∞1
+from the system of generators of GS(2)/Φ(GS(2)). Moreover, by defenition of bj and relation
+(1.2.2) another omissible element is τ corresponding to p ∈S such that
+
+ε
+p
+
+= −1.
+In addition, if the narrow ideal class group of k is trivial, the same argument as above shows
+that we can use the relation (1.2.1) (resp. (1.2.2)) to omit τ∞1 (resp. τ∞2) from the system of
+generators. Note that the image of ε into O×
+∞2 by δ is the conjugate of ε, and the conjugate of
+ε is a negative number when the narrow ideal class group is trivial.
+□
+By Proposition 1.1 and Proposition 1.2, the following holds.
+6
+ATSUKI KURAMOTO
+Theorem 1.3. Notations being as above, we assume that the narrow ideal class group H+
+k of k
+is trivial. Then the pro-2 group GS(2) has the following presentation:
+GS(2) = ⟨x1, · · · , xs | xNp1−1
+1
+[x1, y1] = · · · = xNps−1
+s
+[xs, ys] = 1, x2
+∞2 = 1⟩,
+where xi denotes the word which represents a monodromy τi over pi in kS(2)/k and yi denotes the
+free pro-2 word of x1, . . . , xs which represents a Frobenius automorphism σi over pi in kS(2)/k,
+and x∞2 denotes the word which represents the monodromy over a real prime ∞2.
+Proof. Since the narrow ideal class group H+
+k of k is trivial, BS = {1} by Proposition 1.1 and
+GS(2) is topologically generated by the set of minimal generators {τ1, . . . , τs} by Proposition
+1.2. Since BS = {1}, according to [Ko, Satz 11.3], the localization map
+H2(GS(2), F2) −→
+Y
+p∈S
+H2(Gkp(2), F2)
+is injective. Moreover, [Ko, Satz 11.4] tells us that the map
+H2(GS(2), F2) −→
+Y
+p∈S\{∞1}
+H2(Gkp(2), F2)
+is also injective. Therefore, by [Ko, Satz 6.14], the relation system of GS(2) is generated by
+the local relation system of Gkp(2) (p ∈S \ {∞1}). By (1.1) and (1.2), we have presentation of
+GS(2).
+□
+The following Proposition 1.4 will be used in Section 2.
+Proposition 1.4. Notations being as above, we assume that the narrow ideal class group H+
+k
+of k is trivial. Then, the following conditions are equivalent.
+(i) x∞2 ∈Φ(GS(2)).
+(ii)
+ ε
+pi
+
+= 1 for all finite primes pi ∈S.
+Proof. By the proof of Proposition 1.2, we have relations
+(
+τ1a1 · · · τ∞2
+a∞2 = 1,
+τ1b1 · · · τ∞2
+b∞2 = 1
+in GS(2)/Φ(GS(2)). Here, for i, j = 1, · · · , s, ∞1, ∞2, we define
+ai =
+(
+1
+δ(−1) /∈(O×
+pi)2
+0
+otherwise,
+bj =
+(
+1
+δ(ε) /∈(O×
+pj)2
+0
+otherwise.
+Therefore, x∞2 ∈Φ(GS(2)) is equivalent to that one of the following conditions hold:
+(iii) for i = 1, · · · , s, ∞1,
+−1 ∈(O×
+pi)2 and −1 /∈(O×
+p∞2)2,
+(iv) for j = 1, · · · , s, ∞1,
+ε ∈(O×
+pj)2 and ε /∈(O×
+p∞2)2.
+Since −1 /∈(O×
+p∞1)2, (iii) cannot hold. An equivalent condition for (iv) is that
+ ε
+pi
+
+= 1
+for all finite primes pi ∈S.
+□
+7
+2. Mod 2 arithmetic Milnor invariants and triple quadratic residue symbols in
+real quadratic fields
+In this section, following Morishita’s work ([Mo1], [Mo2], [Mo3]), we introduce mod 2 arith-
+metic Milnor invariants and triple quadratic residue symbols for certain primes of a real quadratic
+field, by using the presentation in Theorem 1.3 in Section 1.
+Now, let us be back to the arithmetic situation in Section 1 and keep the same notations and
+assumptions there. Let k be a real quadratic field. In the following, we assume that the narrow
+ideal class group H+
+k of k is trivial. Let S = {p1, · · · , ps} be a set of s distinct finite primes of k,
+where pi’s are not lying over 2, and let S := S ∪SR, when SR denotes the set of real primes of
+k. We fix a prime element πi of pi, namely, pi = (πi). By Theorem 1.3, the pro-2 Galois group
+GS(2) has the following presentation:
+GS(2) = ⟨x1, · · · , xs | xNp1−1
+1
+[x1, y1] = · · · = xNps−1
+s
+[xs, ys] = 1, x2
+∞2 = 1⟩,
+where xi denotes the word which represents a monodromy over pi in kS(2)/k and yi denotes
+the free pro-2 word of x1, . . . , xs which represents a Frobenius automorphism over pi in kS(2)/k,
+and x∞2 denotes the word which represents a monodromy over a real prime ∞2.
+Let FS denote the free pro-2 group on the words x1, . . . , xs. Let F2[[FS]] be the complete group
+algebra of FS over F2 and let εF2[[FS]] : F2[[FS]] −→F2 be the augmentation homomorphism
+with the augmentation ideal IF2[[FS]] := Ker(εF2[[FS]]). Let F2⟨⟨X1, . . . , Xs⟩⟩denote the formal
+power series algebra over F2 in non-commutative variables X1, . . . , Xs. For a multiple index
+I = (i1 · · · in), 1 ≤i1, . . . , in ≤s, we set XI = Xi1 · · · Xin. Let
+M : F2[[FS]]
+∼
+−→F2⟨⟨X1, . . . , Xs⟩⟩,
+be the mod 2 Magnus isomorphism defined by
+M(xi) = 1 + Xi, M(x−1
+i ) = 1 −Xi + X2
+i −· · · .
+Then, for f ∈FS, M(f) has the form (called Mod 2 Magnus expansion)
+M(f) = 1 +
+X
+|I|≥1
+µ2(I; f)XI,
+where µ2(I; f) ∈F2 are the mod 2 Magnus coefficients. In terms of the pro-2 Fox free derivatives
+∂
+∂xi : Z2[[FS]] −→Z2[[FS]] over Z2, we can obtain for I = (i1 · · · in)
+µ2(I; f) = εF2[[FS]]
+
+∂nf
+∂xi1 · · · ∂xin
+mod 2
+
+,
+where mod 2 : Z2[[FS]] −→F2[[FS]] is the reduction mod 2.
+Here, we recall basic properties of mod 2 Magnus coefficients.
+Lemma 2.1. (i) For α, β ∈F2[[FS]] and a multi-index I,
+µ2(I; αβ) =
+X
+I=JK
+µ2(J; α)µ2(K; β),
+where the sum ranges over all pairs (J, K) of multi-indices such that JK = I.
+(ii) For f ∈FS and q ≥2, we have
+µ2(I; f) = 0 for |I| < q ⇐⇒f ∈FS(q),
+where F (q)
+S
+:= {x ∈FS | g −1 ∈Iq
+F2[[FS]]}, the q-th term of the mod 2 Zassenhaus filtration of
+FS.
+We note that the set {F (q)
+S } forms a fundamental system of neighbourhoods of 1 in FS and
+that F (q)
+S /F (q+1)
+S
+is central in FS/F (q+1)
+S
+and (F (q)
+S )2 ⊂F (2q)
+S
+.
+8
+ATSUKI KURAMOTO
+Now let I = (i1 · · · in) be a multi-index with 1 ≤i1, . . . , in ≤s. Let I′ := (i1 · · · in−1). Then
+the mod 2 arithmetic Milnor number µ2(I) for I is defined by
+µ2(I) := µ2(I′; yin).
+Here we set µ2(I) := 0 if |I| = 1. The mod 2 arithmetic Milnor numbers µ2(I) are not invariants
+determined by the Galois group GS(2). However, we can show in the following that µ2(I) are
+invariant of GS(2) if |I| = 2 or 3.
+Proposition 2.2. Notations being as above, let i, j be indices between 1 and s. When i = j, we
+have µ2(ii) = 0. When i ̸= j, we have
+(−1)µ2(ij) =
+ πi
+πj
+
+.
+Proof. By definition of the quadratic residue symbol,
+ πi
+πj
+
+= (πj, kpj(√πi)/kpj)(√πi)
+√πi
+= yj(√πi)
+√πi
+.
+where (
+, kpj(√πi)/kpj) : k×
+pj −→Gal(kpj(√πi)/kpj) is the norm residue symbol. On the other
+hand, we consider the mod 2 Magnus isomorphism of yj,
+M(yj) = 1 +
+X
+i
+µ2(ij)Xi + (terms of higher degree).
+Therefore yj ≡Q
+i xµ2(ij)
+i
+mod [GS(2), GS(2)]. Hence
+yj(√πi)
+√πi
+= xµ2(ij)
+i
+(√πi)
+√πi
+= (−1)µ2(ij).
+□
+Next, we show that mod 2 arithmetic triple Milnor numbers are invariants determined by
+GS(2).
+Theorem 2.3. Notations being as above, we assume that
+
+ε
+pi
+
+= 1 for all finite primes pi ∈S,
+µ2(J) = 0 for any multi-index J of length ≤2 ,and Npi ≡1 mod 4 for all pi ∈S. Then, for a
+multi-index I satisfying |I| = 3, µ2(I) is an invariant depending on GS(2).
+Proof. Let I := (i1, i2, i3). We must show that µ2(I) is independent of the choices of a mon-
+odromy over pi and an extension of the Frobenius automorphism over pi. It suffices to show the
+following:
+(i) µ2(I) is not changed if yi is replaced by a conjecture.
+(ii) µ2(I) is not changed if xi is replaced by a conjecture.
+(iii) µ2(I) is not changed if yi3 is multiplied by a conjugate of xNpi−1
+i
+[xi, yi] and x∞2.
+Let I′ := (i1, i2).
+Proof of (i): Write M(yi) = 1 + ωi for the Mod 2 Magnus expansion of yi, i = 1, 2, 3. By the
+assumption, Lemma 2.1 (ii) and Proposition 2.2, the degree of ωi ≥2. Then, we have
+M(xjyix−1
+j ) = (1 + Xj)(1 + ωi)(1 −Xj + X2
+j −· · · )
+= 1 + ωi + (terms involving Xjωi or ωiXj)
+≡M(yi) + (terms of degree ≥3).
+Since FS is topologically generated by xj’s, this proves (i).
+Proof of (ii): Suppose that xi is replaced by x∗
+i = xjxix−1
+j . As xi = x−1
+j x∗
+i xj, we have 1+Xi =
+9
+(1 −Xj + X2
+j −· · · )(1 + X∗
+i )(1 + Xj). Therefore, Xi = X∗
+i + (terms containing XjX∗
+i or X∗
+i Xj).
+Each time Xi occurs in the Magnus expansion M(yi), it is to be replaced by this last expansion.
+The terms in the bracket give rise to terms of degree ≥3 in the new Magnus expansion of
+yi using X∗
+i . Hence, the new expansion has the same coefficient in degree 2 as the old. This
+completes the proof of (ii).
+Proof of (iii): The identity M(xjyj −yjxj) = Xjωj −ωjXj implies
+M([xj, yj]) = M(1 + (xjyj −yjxj)x−1
+j y−1
+j )
+= 1 + (Xjωj −ωjXj)(1 −Xj + X2
+j −· · · )M(y−1
+j )
+= 1 mod M(I3
+F2[[FS]]).
+In addition, we have M(xNpj−1
+j
+) = (1 + Xj)Npj−1 ≡1 mod M(I3
+F2[[FS]]). Hence, we have
+xNpj−1
+j
+[xj, yj] ≡1 mod I3
+F2[[FS]].
+Moreover, by Proposition 1.4, x∞2 ∈Φ(GS(2)) = GS(2)(2) ⊂F (2)
+S
+and (F (2)
+S )2 ⊂F (4)
+S , x2
+∞2 ∈
+F (4)
+S . Hence we have
+M(x2
+∞2) = 1 + (terms of degree ≥4),
+which leads to the assertion.
+□
+By Theorem 2.3, we call µ2(I) the mod 2 arithmetic triple Milnor invariant of S for the
+multi-index |I| = 3, when
+
+ε
+pi
+
+= 1 for pi ∈S, µ2(J) = 0 for any multi-index J of length ≤2
+and Npi ≡1 mod 4 for pi ∈S.
+A meaning of the mod 2 arithmetic triple Milnor invariants is given as follows. Let S =
+S ∪SR = {p1, p2, p3} ∪{∞1, ∞2} be a finite set of primes of k, where Npi ≡1 mod 4 (1 ≤i ≤3)
+and ∞1, ∞2 are real primes. We assume that µ2(ij) = 0 for any multi-index of length 2. By
+Proposition 2.2, it means
+
+πi
+πj
+
+= 1 for i ̸= j. Let N3(F2) denote the group of 3 by 3 upper-
+triangular unipotent matrices over F2. We note that N3(F2) is isomorphic to the dihedral group
+D8 = ⟨s, t | s2 = t4 = 1, sts−1 = t−1⟩of order 8 by the correspondence
+s 7→
+
+
+1
+0
+0
+0
+1
+1
+0
+0
+1
+
+, t 7→
+
+
+1
+1
+0
+0
+1
+1
+0
+0
+1
+
+.
+We define the map
+ρ : FS −→N3(F2)
+by
+ρ(f) :=
+
+
+1
+µ2((1); f)
+µ2((12); f)
+0
+1
+µ2((2); f)
+0
+0
+1
+
+
+for f ∈FS. By Lemma 2.1 (i), we see ρ is a group homomorphism. Let S′ = {p1, p2} and let
+S′ = S′ ∪S′
+R be the subset of S and S.
+Theorem 2.4. Notations being as above, we assume that
+
+ε
+pi
+
+= 1 for pi ∈S.
+(1) The homomorphism ρ is surjective and factors through the Galois group GS(2) and GS′(2).
+(2) Let Kρ be the extension over k corresponding to Ker(ρ). Then Kρ is a Galois extension of k
+unramified outside S′ with Galois group Gal(Kρ/k) = N3(F2), and each ramification index over
+pi is 2.
+(3) Assume that
+
+πi
+πj
+
+= 1 for i ̸= j. For a Frobenius automorphism σ3 over p3, we have
+ρ(σ3) =
+
+
+1
+0
+µ2(123)
+0
+1
+0
+0
+0
+1
+
+.
+10
+ATSUKI KURAMOTO
+In particular, we have
+µ2(123) = 0 ⇐⇒p3 is completely decomposed in Kρ/k.
+Proof. (1) Since
+ρ(x1) =
+
+
+1
+1
+0
+0
+1
+0
+0
+0
+1
+
+,
+ρ(x2) =
+
+
+1
+0
+0
+0
+1
+1
+0
+0
+1
+
+
+and so ρ(x1), ρ(x2) generate N3(F2), ρ is surjective.
+Next, by presentation of GS(2) and GS′(2), we need to show
+ρ(xNpi−1
+i
+[xi, yi]) = E3(1 ≤i ≤3) and ρ(x2
+∞2) = E3,
+where E3 is the identity matrix of size 3. Since we can prove
+µ2((1); xNpi−1
+i
+[xi, yi]) = µ2((2); xNpi−1
+i
+[xi, yi]) = µ2((12); xNpi−1
+i
+[xi, yi]) = 0
+and
+µ2((1); x2
+∞2) = µ2((2); x2
+∞2) = µ2((12); x2
+∞2) = 0
+as in the proof of Theorem 2.3, we are done.
+(2) By (1), we obtain Gal(Kρ/k) = N3(F2). Since ρ(x3) = E3, Kρ/k is unramified outside S′.
+The ramification index over pi is the order of ρ(xi), which is 2.
+(3) For J with |J| = 1, µ2(J; y3) = 0 by definition and the assumption. Hence the assertion
+follows.
+□
+Definition 2.5. Let p1, p2 be distinct finite primes of k such that Npi ≡1 mod 4. We call an
+extension K of k a R´edei type D8-extension of k for {p1, p2} if K/k is a Galois extension of
+k which is unramified outside {p1, p2, ∞1, ∞2} with ramification index of each pi being 2 and
+whose Galois group is isomorphic to the group D8 ∼= N3(F2).
+Theorem 2.6. Notations being as above, let p1 = (π1), p2 = (π2) be distinct finite primes of k
+such that Npi = 1 mod 4. Suppose that
+
+π1
+π2
+
+=
+
+π2
+π1
+
+= 1. ι∞2(π1) > 0, and ι∞2(π2) > 0
+(1) (Uniqueness) The R´edei type D8-extension of k for {p1, p2} is unique if it exists.
+(2) (Existence) We assume further
+
+ε
+pi
+
+= 1 for pi for i = 1, 2.
+Then the R´edei type D8-
+extension of k for {p1, p2} exists.
+Proof. (1) This is proved in a manner similar to the proof of [AMM, Theorem 4.1], [Miz,
+Proposition 3.7].
+Let K/k be a R´edei type D8-extension of k for {p1, p2} and S′ = {p1 =
+(π1), p2 = (π2)}. We fix a presentation of GS′(2):
+GS′(2) = F/R,
+where F is the free pro-2 group on the words x1, x2 and R is a normal subgroup of F generated
+by xNp1−1
+1
+[x1, y1], xNp2−1
+2
+[x2, y2], x2
+∞2. Let N be the normal subgroup of F generated by x2
+1, x2
+2.
+Since any element of F 2 can be expressed as a product of x2
+1 and x2
+2 modulo [F, F], N[F, F] =
+F 2[F, F]. By definition of R, R is subgroup of N[F, F] = F 2[F, F]. By Proof of Proposition 2.2,
+our assumption
+
+π1
+π2
+
+=
+
+π2
+π1
+
+= 1 implies that y1, y2 ∈[F, F] ⊂N[F, F], so [x1, y1], [x2, y2] ∈
+N[[F, F], F]. In addition, since N[F, F] corresponds to k(√π1, √π2), we have x∞2 ∈N[F, F] by
+our assumption ι∞2(π1) > 0 and ι∞2(π2) > 0. In otherwords, x2
+∞2 ∈(N[F, F])2 ⊂N[[F, F], F].
+Since
+[x1, x2]2 ≡[x2
+1, x2] ≡1 mod N[[F, F], F],
+N[F, F]/N[[F, F], F] is a cyclic group generated by [x1, x2]N[[F, F], F] of order at most 2.
+Let ψ : GS′(2) = F/R −→Gal(K/k) be the natural homomorphism. Since [[D8, D8], D8] = 1
+and ramification index of each pi is 2, N[[F, F], F] ⊂Ker(ψ). Hence ψ induces an isomorphism
+F/N[[F, F], F]
+∼
+−→Gal(K/k).
+11
+Therefore, K is uniquely determined as a fixed field of N[[F, F], F]/R.
+(2) This follows from Theorem 2.4 (2).
+□
+Suggested by Proposition 2.2, we may define the triple quadratic residue symbol [p1, p2, p3]
+as follows.
+Definition 2.7. Let p1 = (π1), p2 = (π2) and p3 = (π3) be distinct finite primes of k such that
+Npi = 1 mod 4. Assume that the narrow class group of k is trivial and that
+π1
+π2
+
+=
+π2
+π1
+
+= 1 and
+ ε
+pi
+
+= 1 (1 ≤i ≤3).
+Then the triple quadratic residue symbol [p1, p2, p3] is defined by
+[p1, p2, p3] := (−1)µ2(123).
+Theorem 2.8.
+Let the assumptions be as in Definition 2.7. Let K be the R´edei type D8-
+extension of k for {p1, p2} by Theorem 2.6. Then we have the following:
+[p1, p2, p3] = 1 ⇐⇒p3 is completely decomposed in K/k.
+Proof. The existence of a R´edei type D8-extension K of k for {p1, p2} follows from Theorem
+2.4 (2). The uniqueness of K follows from Theorem 2.6. The assertion for [p1, p2, p3] follows
+from Theorem 2.4 (3).
+□
+Corollary 2.9.
+Let the assumptions be as in Definition 2.7. Then, the following equation
+holds:
+[p1, p2, p3] = [p2, p1, p3].
+Proof. The construction of R´edei type D8-extension K of k depends on the set {p1, p2} of two
+primes, and is independent of the ordering of them. Therefore, by Theorem 2.8, the values of
+the two symbols [p1, p2, p3] and [p2, p1, p3] are equal.
+□
+3. R´edei type D8-extensions over real quadratic fields
+In this section, we give examples of R´edei type D8-extensions of k for {p1, p2} in Theorem
+2.6. We keep the same notations and assumptions as in the Section 2. Namely, let k be a real
+quadratic field whose narrow class number is one. By Gauss’ genus theory ([O, Remark 4.7,
+p.172]), there is a prime number p = 2 or p ≡1 mod 4 such that k = Q(√p). We assume that
+p ≡1 mod 4. Let p1 = (π1), p2 = (π2), p3 = (π3) be distinct finite primes of k such that Npi ≡1
+mod 4,
+
+ε
+pi
+
+= 1 (1 ≤i ≤3) and
+
+πi
+πj
+
+= 1 (1 ≤i ̸= j ≤3). Let pi denote the rational prime
+lying below pi.
+Proposition 3.1.
+Suppose that both p1 and p2 are inert in k/Q and p1, p2 ≡1 mod 4. Let R
+be R´edei’s extension of Q for {p1, p2}, which is given by
+R = Q(√p1, √p2,
+q
+x + y√p1),
+where x, y are non-zero integers satisfying
+x2 −p1y2 −p2z2 = 0,
+y ≡0 mod 2,
+x −y ≡1 mod 4
+with some non-zero integer z ([R]). Then, the R´edei type D8-extension K of k for {p1, p2} is
+the composite field
+K = R · k = k(√p1, √p2,
+q
+x + y√p1).
+Proof. Recall that R is a Galois extension of Q unramified outside {p1, p2, ∞} with the ram-
+ification index of each pi being 2 and whose Galois group is isomorphic to the group D8 ([A],
+[R]). Since only Q(√p1), Q(√p2), Q(√p1p2) are the intermediate quadratic fields of R/Q, R ∩k
+is Q. By Galois theory, K/k is a Galois extension and Gal(K/k)= D8. By Hilbert ramification
+theory, K/k is unramified outside {p1, p2, ∞1, ∞2}. Moreover, since p1 and p2 are inert in k/Q,
+12
+ATSUKI KURAMOTO
+the ramification index of each pi is 2. Therefore K is the R´edei type D8-extension of k for
+{p1, p2}.
+□
+Next, we consider the case that p1 or p2 is decomposed in k/Q. To deal with this case, we
+recall some lemmas regarding ramification.
+Lemma 3.2 ([N] Kapitel III, (2.5) Theorem, p.209).
+Let L/F be an extension of algebraic
+number fields, d(L/F) be the relative discriminant of L/F, and d(α, L/F) be the relative dis-
+criminant of α ∈OL for L/F. Then d(L/F) | (d(α, L/F)).
+Using Lemma 3.2, we obtain the following lemma.
+Lemma 3.3. Let k be a real quadratic field k = Q(√p), π be a prime element of k such that
+π ≡1 mod 4Ok. Then the extension k(√π)/k is ramified at only (π).
+Proof. We set α1 := (1 + √π)/2. Since α1 satisfies α2
+1 −α1 + (1 −π)/4 = 0 and π ≡1 mod
+4Ok, we have α1 ∈Ok(√π). Then the relative discriminant of α1 in k(√π)/k is
+d(α1, k(√π)/k) =
+
+1
+α1
+1
+α1
+
+2
+= π.
+By Lemma 3.2, k(√π)/k can be ramified at only (π).
+□
+Lemma 3.4. Let k be a real quadratic field with trivial narrow class group, and let π > 0 be
+a prime element of Ok, and let ε be the fundamental unit of k. We assume π ≡1 mod 4Ok.
+Then, the following are equivalent.
+(i)
+ ε
+π
+
+= 1.
+(ii) ι∞2(π) > 0, where ι∞2 is the conjugate embedding.
+Proof. We calculate the Hilbert symbol
+
+ε,π
+p
+
+for all primes p of k to use product formula. By
+definition of the Hilbert symbol, we have
+ε, π
+p
+
+= (ε, kp(√π)/kp)(√π)
+√π
+,
+where ( , kp(√π)/kp) : k×
+p −→Gal(kp(√π)/kp) is a norm residue symbol. Case p ∤(π)∞. By
+Lemma 3.3, kp(√π)/kp is an unramified extension. So, the norm residue symbol factors through
+Gal(kur
+p /kp) ;
+k×
+p
+(
+,kur
+p /kp)
+−−−−−−−→Gal(kur
+p /kp)
+res
+−−−−→Gal(kp(√π)/kp).
+Since the local class field theory, the karnel of ( , kp(√π)/kp) is O×
+p , and ε ∈O×
+p , so (ε, kur
+p /kp) =
+idkur
+p . Therefore (ε, kp(√π)/kp) = idkp(√π) and hence we have
+ε, π
+p
+
+= 1.
+Case p = (π). By definition of the quadratic residue symbol,
+ε, π
+p
+
+=
+ ε
+π
+
+.
+Case p | ∞. Since p is a real prime, kp = R. If p = ∞1, (ε, kp(√π)/kp) = (ε, R/R) = idR
+since π > 0.
+Thus, we have
+ε, π
+p
+
+= 1.
+If p = ∞2, since (ι∞2(ε), kp(
+p
+ι∞2(π))/kp) =
+(ι∞2(ε), R(
+p
+ι∞2(π))/R), then
+ε, π
+p
+
+=
+(
+1
+if ι∞2(π) > 0
+−1
+if ι∞2(π) < 0. .
+From the above calculation and Hilbert’s product formula, we have
+ ε
+π
+
+= 1 ⇐⇒ι∞2(π) > 0.
+□
+13
+Theorem 3.5. Let k = Q(√p) be a real quadratic field with trivial narrow class group and we
+assume p ≡5 mod 8. Let ε be the fundamental unit of k, and p1 = (π1), p2 = (π2) are prime
+ideals of Ok such that:
+ ε
+πi
+
+= 1,
+ πi
+πj
+
+= 1, πi ≡1 mod 4Ok, πi > 0 (1 ≤i ̸= j ≤2).
+Then the followings hold:
+(1) There is a non-zero Ok solution (x, y, z) of x2 −π1y2 −π2z2 = 0 such that gcd(x, y, z) = 1,
+y ∈2Ok.
+(2) If x −y ≡1 mod 4Ok, the R´edei type D8-extension K of k for {p1, p2} is given by
+K = k(√π1, √π2,
+q
+x + y√π1).
+Proof. (1) We use Hasse–Minkowski theorem to show the equation in (1) has a nontrivial Ok
+solution. It suffices to show that the Hilbert symbol
+π1, π2
+p
+
+is 1 for all primes p of k.
+Case p ∤p1p2∞. Since π2 ∈O×
+p and Lemma 3.3, kp(√π2)/kp is an unramified extension. Further-
+more, like the proof of Lemma 3.4, it can be seen that π1 ∈O×
+p , (π1, kp(√π2)/kp) = idkp(√π2),
+and hence we have
+π1, π2
+p
+
+= 1.
+Case p | p1p2. Since the quadratic residue symbols
+π2
+π1
+
+=
+π1
+π2
+
+= 1, we have
+π1, π2
+p
+
+= 1.
+Case p | ∞. Since p is a real prime, kp = R. If p = ∞1, (π1, kp(√π2)/kp) = (π1, R(√π2)/R) =
+(π1, R/R) = 1 and hence we have
+π1, π2
+p
+
+= 1.
+If p = ∞2, ι∞2(π2) > 0 by Lemma 3.4. Therefore (π1, kp(
+p
+ι∞2(π2))/kp) = (π1, R(
+p
+ι∞2(π2))/R) =
+(π1, R/R) = 1 and hence we have
+π1, π2
+p
+
+= 1.
+From the above, the Hilbert symbol
+π1, π2
+p
+
+is 1 for all primes p of k. Then there is a non-zero
+Ok solution of x2 −π1y2 −π2z2 = 0 by Hasse–Minkowski theorem. Since the class number of k
+is one, we can assume gcd(x, y, z) = 1. Since x2 −π1y2 −π2z2 = 0, we have x2 ≡y2 + z2 mod
+4Ok. If x2 ≡0 mod 4Ok, then it causes a contradiction to gcd(x, y, z) = 1. Therefore we can
+set y2 ≡0 mod 4Ok. This means that y ∈2Ok.
+(2) First, we easily see that K = k(√π1, √π2,
+p
+x + y√π1) is a D8-extension of k, where
+α1 := x + y√π1. In fact, to be precise, the intermediate fields of K over k are given in the
+following, where ki = k(√πi), and α2 = (√α1 + √¯α1)2.
+K = k(√π1, √π2, √α1)
+k2(√¯α2)
+k2(√α2)
+k1k2
+k1(√α1)
+k1(√¯α1)
+k2
+k(√π1π2)
+k1
+k
+Next, let us see the ramifications in K/k. We prove that k1(√α1)/k1 is ramified at only primes
+dividing π2. We first claim that θ := 1+√α1
+2
+∈Ok1(√α1). We set β := 1−α1
+4
+. It can be seen
+that β satisfies β2 −(1−(x−y)
+2
+−y
+2)β +
+1
+16((1 −x)2 −y2 + (1 −π1)y2) = 0. Since x −y ≡1
+14
+ATSUKI KURAMOTO
+mod 4Ok and y ∈2Ok, 1 −x + y ∈4Ok and 1 −x −y = 1 −x + y −2y ∈4Ok.
+Then
+(1 −x)2 −y2 = (1 −x + y)(1 −x −y) ∈16Ok.
+Since π1 ≡1 mod 4Ok and y ∈2Ok,
+(1 −π1)y2 ∈16Ok. Therefore, β ∈Ok1. Since θ satisfies θ2 −θ + β = 0, θ ∈Ok1(√α1). Since the
+relative discriminant of θ in k1(√α1)/k1 is
+d(θ, k1(√α1)/k1) =
+
+1
+θ
+1
+θ
+
+2
+= α1.
+Since Nk1(√α1)/k1(α1) = π2 and Lemma 3.2, k1(√α1)/k1 is ramified at only primes dividing
+π2.
+□
+Here is a numerical example of Theorem 3.5.
+Example 3.6. Let k = Q(
+√
+5), π1 = 33+8
+√
+5 (Nk/Q(π1) = 769), π2 = 17, π3 = 23+5
+√
+5
+2
+(Nk/Q(π3) =
+101). We set pi = (πi) (1 ≤i ≤3). Then we have
+ ε
+πi
+
+= 1,
+ πi
+πj
+
+= 1, πi ≡1 mod 4Ok, πi > 0 (1 ≤i ̸= j ≤2),
+ ε
+π3
+
+= 1,
+ πi
+πj
+
+= 1, Np3 ≡1 mod 4 (1 ≤i ̸= j ≤3),
+where ε = (1 +
+√
+5)/2. It is easy to see that
+(−23 −14
+√
+5)2 −π122 −π2(2 + 3
+√
+5)2 = 0 and (−23 −14
+√
+5) −2 ≡1 mod 4Ok.
+Therefore, K = k(√π1, √π2, √α1) is the R´edei type D8-extension of k for {p1, p2}, where α1 =
+(−23 −14
+√
+5) + 2√π1. Since p3 is not completely decomposed in K, we have
+[p1, p2, p3] = −1.
+Remark 3.7. From the viewpoint of arithmetic topology, mod 2 arithmetic Milnor invariants
+may be regarded as an arithmetic analogue of (higher) linking numbers of a link. So, the triple of
+primes (p1 = (33+8
+√
+5), p2 = (17), p3 = (23+5
+√
+5
+2
+)) in Example 3.6 may be called the Borromean
+primes.
+Next, we give other numerical examples, which are not contained in the cases of Proposition
+3.1 and Theorem 3.5.
+Example 3.8. The case that p1 is decomposed and p2 is inert in k/Q. We give an example
+for k = Q(
+√
+5), p1 = 29 and p2 = 13. We take π1 = (11 +
+√
+5)/2 and π2 = 13. Then
+
+π1
+π2
+
+=
+
+π2
+π1
+
+= 1 and
+
+ε
+p1
+
+=
+
+ε
+p2
+
+= 1, where ε = (1 +
+√
+5)/2. In this case, K = k(√π1, √π2, √α1) is
+the R´edei type D8-extension of k for {p1, p2}, where α1 = (−1 −9
+√
+5 + 6√π1)/4.
+Proof. Let k1 := k(√π1). We prove that k1/k can be ramified at only over p1 and k1(√α1)/k1
+is ramified at only primes dividing π2. First we set λ1 := (1 +
+√
+5 + 2√π1)/4. Since λ1 satisfies
+λ2
+1 −1+
+√
+5
+2
+λ1 −1 = 0, λ1 ∈Ok1. Since the relative discriminant of λ1 in k1/k is
+d(λ1, k1/k) =
+
+1
+λ1
+1
+λ1
+
+2
+= π1.
+By Lemma 3.2, k1/k can be ramified at only over p1. Next we set λ2 := ((
+√
+5 −1) −(
+√
+5 +
+1)√π1 + 4√α1)/8. Since λ2 satisfies λ8
+2 + λ7
+2 −2λ6
+2 + 3λ5
+2 + 11λ4
+2 −λ3
+2 −18λ2
+2 −13λ2 −1 = 0,
+λ2 ∈Ok1(√α1). Since the relative discriminant of λ2 in k1(√α1)/k1 is
+d(λ2, k1(√α1)/k1) =
+
+1
+λ2
+1
+λ2
+
+2
+= α1.
+Since Nk1/k(α1) = π2 and Lemma 3.2, k1(√α1)/k1 is ramified at only primes dividing π2.
+Therefore the extension K/k is the R´edei type D8-extension of k for {p1, p2}.
+□
+15
+Example 3.9. The case that p1 and p2 are decomposed in k/Q. We give an example k = Q(
+√
+5),
+p1 = 29 and p2 = 89. We take π1 = (11 +
+√
+5)/2 and π2 = (19 +
+√
+5)/2. Then
+
+π1
+π2
+
+=
+
+π2
+π1
+
+= 1
+and
+
+ε
+p1
+
+=
+
+ε
+p2
+
+= 1, where ε = (1 +
+√
+5)/2. In this case, K = k(√π1, √π2, √α1) is the R´edei
+type D8-extension of k for {p1, p2}, where α1 = (6
+√
+5 + (1 −
+√
+5)√π1)/4.
+Proof. Let k1 := k(√π1) and k2 := k(√π2). We prove that k2/k is ramified at only p2 and
+k1(√α1)/k1 is ramified at only primes dividing π2. First we set θ1 := (1 +
+√
+5 + 2√π2)/4. Since
+θ1 satisfies θ2
+1 −1+
+√
+5
+2
+θ1 −2 = 0, θ1 ∈Ok2. Since the relative discriminant of θ1 in k2/k is
+d(θ1, k2/k) =
+
+1
+θ1
+1
+θ1
+
+2
+= π2.
+By Lemma 3.2, k2/k is ramified at only over p2. Next we set θ2 := ((2
+√
+5 + 4) −(
+√
+5 + 3)√π1 +
+4√α1)/8. Since θ2 satisfies θ8
+2 −4θ7
+2 + 3θ5
+2 −2θ4
+2 + 12θ3
+2 + 2θ2
+2 + 5θ2 −1 = 0, θ2 ∈Ok1(√α1). Since
+the relative discriminant of θ2 in k1(√α1)/k1 is
+d(θ2, k1(√α1)/k1) =
+
+1
+θ2
+1
+θ2
+
+2
+= α1.
+Since Nk1/k(α1) = π2 and Lemma 3.2, k1(√α1)/k1 is ramified at only primes dividing π2.
+Therefore the extension K/k is the R´edei type D8-extension of k for {p1, p2}.
+□
+4. Massey products in Galois cohomology
+In this section, we interpret our mod 2 arithmetic Milnor invariants and triple quadratic
+residue symbols in terms of the Massey product in Galois cohomology. Our theorem is seen as a
+generalization of the known relation between the cup product and the quadratic residue symbol
+to the triple case, and also a generalization of the previous result by Morishita ([Mo3]) in the
+case of the rational number field to the real quadratic fields. It may be regarded as a mod 2
+arithmetic analogue of the corresponding topological result due to Turaev ([Tu]).
+Let G be a pro-2 group and let A be a commutative ring with identity on which G acts trivally.
+Let Cj(G, A) be the A-module of inhomogeneous j-cochains (j ≥0) of G with coefficients in A
+and we consider the differential graded algebra (C•(G, A), d), where the product structure on
+C•(G, A) = L
+j≥0 Cj(G, A) is given by the cup product and the differential d is the coboundary
+operator.
+Then we have the cohomology H∗(G, A) = H∗(C•(G, A)) of the pro-2 group G
+with coefficients in A. In the following, we consider Massey products in H1(G, A). For the
+sign convention, we follow [D]. Let χ1, . . . , χn ∈H1(G, A) (n ≥2). An n-th Massey product
+⟨χ1, . . . , χn⟩is said to be defined if there is an array
+Ω= {ωij ∈C1(G, A) | 1 ≤i < j ≤n + 1, (i, j) ̸= (1, n + 1)}
+such that
+
+
+
+
+
+[ωi,i+1] = χi (1 ≤i ≤n),
+dωij =
+j−1
+X
+a=i+1
+ωia ∪ωaj (j ̸= i + 1).
+Such an array Ωis called a defining system for ⟨χ1, . . . , χn⟩. The value of ⟨χ1, . . . , χn⟩relative
+to Ω, denoted by ⟨χ1, . . . , χn⟩Ω, is defined by the cohomology class represented by the 2-cocycle
+n
+X
+a=2
+ω1a ∪ωa,n+1.
+We define the Massey product ⟨χ1, . . . , χn⟩to be the subset of H2(G, A) consisting of elements
+⟨χ1, . . . , χn⟩Ωfor some defining system Ω. By convention, ⟨χ⟩= 0. We recall the following basic
+fact (cf. [Kr]).
+16
+ATSUKI KURAMOTO
+Lemma 4.1. We have ⟨χ1, χ2⟩= χ1 ∪χ2. For n ≥3, ⟨χ1, . . . , χn⟩is defined and consists of a
+single element if ⟨χj1, . . . , χja⟩= 0 for all proper subsets {j1, . . . , ja} (a ≥2) of {1, . . . , n}. (In
+this case, we denote the single element by ⟨χ1, . . . , χn⟩.)
+Next, we recall a relation between Massey products and Magnus coefficients. Suppose that G
+is a finitely generated pro-2 group with a minimal presentation
+1 −→N −→F
+ψ
+−→G −→1,
+where F is a free pro-2 group on generators x1, . . . , xn with n = dimF2H1(G, F2).
+We set
+τi := ψ(xi) (1 ≤i ≤n). We assume that ψ induces the isomorphism F/Φ(F) ≃G/Φ(G) so that
+ψ induces the isomorphism ψ∗: H1(G, F2) ≃H1(F, F2). We let
+tra : H1(N, F2)G →H2(G, F2)
+be the transgression defined as follows. For a ∈H1(N, F2)G, choose a 1-cochain b ∈C1(F, F2)
+such that b|N = a. Since the value db(f1, f2), fi ∈F, depends only on the cosets fi mod N,
+db defines a 2-cocyle c of G. Then tra(a) is defined by the class of c. By the Hochschild-Serre
+spectral sequence, tra is an isomorphism and so we have the dual isomorphism, called the Hopf
+isomorphism,
+tra∨: H2(G, F2) ∼
+→H1(N, F2)G = N/N2[N, F].
+Then we have the following proposition (cf. [St, Lemma 1.5]). The proof goes in the same
+manner as in [Mo3, Theorem 2.2.2].
+Proposition 4.2. Notations being as above, let χ1, . . . , χn ∈H1(G, F2) (n ≥2). Let f ∈N
+and set δ := (tra∨)−1(f mod N2[N, F]). Assume that all Massey products up to length n−1 are
+trivial. Then N ⊂F (n) and we have
+⟨χ1, . . . , χn⟩(δ) =
+X
+I=(i1···in)
+1≤i1,...,in≤N
+χ1(xi1) · · · χn(xin)µl(I; f).
+Let us be back in our arithmetic situation and keep the same notations as in Section 2. So
+let k be the real quadratic field and let S := {p1, p2, p3} be a set of all distinct primes where
+Npi ≡1 mod 4 and
+
+ε
+pi
+
+= 1. Let S := S ∪SR where SR = {∞1, ∞2} be the set of real primes
+of k. By Theorem 1.3, we have the following minimal presentation of the Galois group GS(2) of
+maximal pro-2 extension over k unramified outside S
+GS(2) =
+*
+x1, x2, x3
+
+xNp1−1
+1
+[x1, y1] = xNp2−1
+2
+[x2, y2] = xNp3−1
+3
+[x3, y3] = 1
+x2
+∞2 = 1
++
+= FS/NS.
+Here xi denotes the word representing a monodromy τi over pi in kS(2)/k (1 ≤i ≤3) and
+FS denotes the free pro-2 group on x1, x2, x3. The pro-2 word yi represents a Frobenius auto-
+morphism σi over pi in kS(2)/k and NS denotes the closed subgroup of FS generated normally
+by xNpi−1
+i
+[xi, yi] for 1 ≤i ≤3 and x2
+∞2. We set δi := (tra∨)−1(xNpi−1
+i
+[xi, yi]), where tra∨:
+H2(GS(2), F2) ∼
+→NS/N2
+S[NS, FS] is the Hopf isomorphism. Let χ1, χ2, χ3 ∈H1(GS(2), F2) be
+the Kronecker dual to the monodromies τ1, τ2, τ3, namely, χi(τj) = δi,j.
+Theorem 4.3. Notations being as above, we have, for 1 ≤i ̸= j ≤3,
+ πi
+πj
+
+= (−1)⟨χi,χj⟩(δj),
+πj
+πi
+
+= (−1)⟨χi,χj⟩(δi).
+Proof. By Proposition 4.2, we have
+⟨χi, χj⟩(δa) = µ2((ij); xNpa−1
+a
+[xa, ya]).
+17
+Here, noting that the Magnus coefficients are in F2, we have
+M(xNpa−1
+a
+[xa, ya]) = M(xNpa−1
+a
+)M(xa)M(ya)M(xa)−1M(ya)−1,
+M(xa) = 1 + Xa, M(xNpa−1
+a
+) = 1 + (terms of degree ≥4),
+M(xa)−1 = 1 + Xa + X2
+a + (terms of degree ≥3),
+M(ya) = 1 +
+X
+i
+µ2(ia)Xi +
+X
+i,j
+µ2(ija)XiXj + (terms of degree ≥3),
+M(ya)−1 = 1 +
+X
+i
+µ2(ia)Xi +
+X
+i,j
+{µ2(ija) + µ2(ia)µ2(ja)}XiXj + (terms of degree ≥3),
+The straightforward calculation yields
+M(xNpa−1
+a
+[xa, ya]) = 1 +
+X
+i
+µ2(ia)XaXi +
+X
+i
+µ2(ia)XiXa + (terms of degree ≥3).
+Hence we obtain
+⟨χi, χj⟩(δa) =
+
+
+
+µ2(ij)
+a = j,
+µ2(ji)
+a = i,
+0
+a ̸= i, j.
+The assertion follows from Theorem 2.2.
+□
+We assume that
+⟨χi, χj⟩= 0 (1 ≤i ̸= j ≤3),
+which is equivalent to the condition πi
+πj
+
+= 1 (1 ≤i ̸= j ≤3)
+by Proposition 2.3, and the mod 2 Milnor invariants µ2(abc) ({a, b, c} = {1, 2, 3}) are well
+defined. By the definition of Massey products and Lemma 4.1, there are 1-cochains ω13, ω24 ∈
+C1(GS(2), F2) such that
+⟨χ1, χ2⟩= dω13, ⟨χ2, χ3⟩= dω24,
+and we have the triple Massey product ⟨χ1, χ2, χ3⟩defined by
+⟨χ1, χ2, χ3⟩= [χ1 ∪ω24 + ω13 ∪χ3].
+Theorem 4.4. Assume that
+ πi
+πj
+
+= 1 (1 ≤i ̸= j ≤3).
+Then we have
+[p1, p2, p3] = (−1)⟨χ1,χ2,χ3⟩(δ3), [p2, p3, p1] = (−1)⟨χ1,χ2,χ3⟩(δ1).
+In particular, µ(123) and [p1, p2, p3] are independent of choices of 1-cochains ω13 and ω24.
+Proof. Noting by the assumption that all µ2(ij) = 0, we have
+M(xa) = 1 + Xa, M(xNpa−1
+a
+) = 1 + (terms of degree ≥4),
+M(xa)−1 = 1 + Xa + X2
+a + X3
+a + (terms of degree ≥4),
+M(ya) = 1 +
+X
+i,j
+µ2(ija)XiXj +
+X
+i,j,k
+µ2(ijka)XiXjXk + (terms of degree ≥4),
+M(ya)−1 = 1 +
+X
+i,j
+µ2(ija)XiXj +
+X
+i,j,k
+µ2(ijka)XiXjXk + (terms of degree ≥4).
+The straightforward calculation yields
+M(xNpa−1
+a
+[xa, ya]) = 1 +
+X
+i,j
+µ2(ija)XaXiXj +
+X
+i,j
+µ2(ija)XiXjXa + (terms of degree ≥4).
+18
+ATSUKI KURAMOTO
+Hence we obtain
+⟨χ1, χ2, χ3⟩(δa) =
+
+
+
+µ2(123)
+a = 3,
+µ2(231)
+a = 1,
+0
+a ̸= 1, 3.
+The assertion follows from Defnition 2.7.
+□
+Acknowledgements. I would like to express my sincere gratitude to my supervisor, Professor
+Masanori Morishita, for suggesting the problem studied in this paper and for his guidance
+and cooperation in carrying out this research. I am grateful to Professors Yasushi Mizusawa,
+Dohyeong Kim and Doctor Sosuke Sasaki for useful communications. I would like to thank Yuki
+Ishida and Dingchuan Zheng for useful discussions and suggestions.
+References
+[A]
+Fumiya Amano. On R´edei’s dihedral extension and triple reciprocity law. Proceedings of the Japan
+Academy, Series A, Mathematical Sciences, 90(1):1–5, 2014.
+[AMM]
+Fumiya Amano, Yasushi Mizusawa, and Masanori Morishita. On mod 3 triple Milnor invariants and
+triple cubic residue symbols in the Eisenstein number field. Research in Number Theory, 4(1):7–29,
+2018.
+[D]
+William G. Dwyer. Homology, Massey products and maps between groups. Journal of Pure and Applied
+Algebra, 6(2):177–190, 1975.
+[E]
+Ido Efrat. Linking invariants for valuations and orderings on fields. Research in the Mathematical
+Sciences, 11(4), 2024.
+[Fr]
+A. Fr¨ohlich. A prime decomposition symbol for certain non Abelian number fields. Acta Scientiarum
+Mathematicarum, 21:229–246, 1960.
+[Fu]
+Yoshiomi Furuta. A prime decomposition symbol for a non-abelian central extension which is abelian
+over a bicyclic biquadratic field. Nagoya Mathematical Journal, 79:79–109, 1980.
+[KM]
+Dohyeong Kim and Masanori Morishita. Triple symbols in arithmetic. To appear in Research in Number
+Theory, 2024.
+[Ko]
+Helmut Koch. Galoissche Theorie der p-Erweiterungen. Springer Berlin, Heidelberg, 1970.
+[Kr]
+David Kraines. Massey higher products. Transactions of the American Mathematical Society,
+124(3):431–449, 1966.
+[Mil]
+John Milnor. Isotopy of links. In Algebraic Geometry and Topology, pages 280–306. Princeton University
+Press, 1957.
+[Miz]
+Yasushi Mizusawa. On pro-p link groups of number fields. Transactions of the American Mathematical
+Society, 372(10):7225–7254, 2019.
+[Mo1]
+Masanori Morishita. Milnor’s link invariants attached to certain Galois groups over Q. Proceedings of
+the Japan Academy, Series A, Mathematical Sciences, 76(2):18–21, 2000.
+[Mo2]
+Masanori Morishita. On certain analogies between knots and primes. Journal f¨ur die Reine und Ange-
+wandte Mathematik., 550:141–167, 2002.
+[Mo3]
+Masanori Morishita. Milnor invariants and Massey products for prime numbers. Compositio Mathe-
+matica, 140(1):69–83, 2004.
+[Mo4]
+Masanori Morishita. Knots and Primes: An Introduction to Arithmetic Topology. Springer Nature
+Singapore, second edition, 2024.
+[N]
+J¨urgen Neukirch. Algebraische Zahlentheorie. Springer-Verlag, Berlin, 1992.
+[O]
+Takashi Ono. An introduction to algebraic number theory. The University Series in Mathematics.
+Plenum Press, New York, 1990.
+[R]
+Ladislaus R´edei. Ein neues zahlentheoretisches Symbol mit Anwendungen auf die Theorie der quadratis-
+chen Zahlk¨orper. I. Journal f¨ur die reine und angewandte Mathematik, 1939(180):1–43, 1939.
+[St]
+David Stein. Massey products in the cohomology of groups with applications to link theory. Transactions
+of the American Mathematical Society, 318(1):301–325, 1990.
+[Su]
+Hiroshi Suzuki. A Tripling Symbol for Central Extensions of Algebraic Number Fields. In Investigations
+in Number Theory, volume 13 of Advanved Studies in Pure Mathematics, pages 9–24. Mathematical
+Society of Japan, 1988.
+[Tu]
+V. G. Turaev. Milnor invariants and Massey products. Journal of Soviet Mathematics, 12(1):128–137,
+1979.
+Graduate School for Mathematics, Kyushu University, Motooka 744, Nishi-ku Fukuoka 819-
+0395, Japan
+Email address: kuramoto.atsuki.2358@gmail.com

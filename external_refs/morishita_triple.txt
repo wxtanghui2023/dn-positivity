@@ -1,0 +1,2845 @@
+arXiv:1412.6894v5  [math.NT]  19 Jan 2018
+On mod 3 triple Milnor invariants and triple cubic
+residue symbols in the Eisenstein number ﬁeld
+Fumiya Amano, Yasushi Mizusawa and Masanori Morishita
+Dedicated to Professor Takayuki Oda
+Abstract.
+We introduce mod 3 triple Milnor invariants and triple cubic
+residue symbols for certain primes of the Eisenstein number ﬁeld Q(√−3), follow-
+ing the analogies between knots and primes. Our triple symbol generalizes both
+the cubic residue symbol and R´edei’s triple symbol, and describes the decompo-
+sition law of a prime in a mod 3 Heisenberg extension of degree 27 over Q(√−3)
+with restricted ramiﬁcation, which we construct concretely in the form similar to
+R´edei’s dihedral extension over Q. We also give a cohomological interpretation of
+our symbols by triple Massey products in Galois cohomology.
+Introduction
+In this paper, we investigate a triple generalization of the cubic residue
+symbol in the Eisenstein number ﬁeld Q(√−3). It is L. R´edei who ﬁrstly
+studied such a generalization of the Legendre symbol in 1939 ([Rd]), aiming
+to generalize the arithmetic of quadratic ﬁelds such as the theory of genera
+initiated by Gauss ([G]). For distinct rational primes p1, p2 and p3 satisfying
+pi ≡1 mod 4 and
+
+pi
+pj
+
+= 1 (1 ≤i ̸= j ≤3), R´edei introduced a triple
+symbol [p1, p2, p3], which describes the decomposition law of p3 in a dihedral
+extension R, determined by p1 and p2, of degree 8 over the rational number
+ﬁeld Q. Here R´edei’s extension R is given concretely by
+(0.1)
+R = Q(√p1, √p2, √α),
+2010 Mathematics Subject Classiﬁcation: 11R32, 57M05, 57M25
+Key words: Eisenstein number ﬁeld, maximal pro-3 Galois group with restricted
+ramiﬁcation, mod 3 triple Milnor invariant, mod 3 Heisenberg extension, triple cubic
+residue symbol, triple Massey product
+The second author is partly supported by JSPS KAKENHI Grant Number JP26800010,
+Grant-in-Aid for Young Scientists (B)
+The third author is partly supported by JSPS KAKENHI Grant Number JP17H02837,
+Grant-in-Aid for Scientiﬁc Research (B)
+1
+where α = x+y√p1 and x, y are certain integers satisfying x2−p1y2−p2z2 = 0
+with some non-zero integer z (cf. [Rd]). It is characterized as the unique Ga-
+lois extension over Q whose Galois group is the dihedral group D8 of order
+8 and which is unramiﬁed outside p1, p2 and the inﬁnite prime with ramiﬁ-
+cation index of each pi being 2 ([A1]). It might not be clear, however, why
+such a dihedral extension and triple symbol should be considered as a natural
+generalization of a quadratic ﬁeld and the Legendre symbol, and it seemed
+that his work had been overlooked for a long time (except some related works
+[F¨o], [Fu] etc).
+In the late 1990s, M. Kapranov and the third author independently inter-
+preted the R´edei symbol as a mod 2 arithmetic analogue of a triple linking
+number of a link, and further the third author introduced mod 2 arithmetic
+analogues for rational primes of the Milnor invariants (higher order linking
+numbers) in link theory ([Mi2]), based on the analogies between primes and
+knots in arithmetic topology ([Ka], [Mo1]∼[Mo4], [Rz]). For example, the
+mod 2 Milnor invariant µ2(12 · · ·n) ∈F2 of length n ≥2 for certain ratio-
+nal primes p1, p2, . . . , pn describes the decomposition law of pn in a certain
+nilpotent extension K(n), determined by p1, . . . , pn−1, of degree 2
+1
+2n(n−1) over
+Q, where the extension K(n)/Q is unramiﬁed outside p1, p2, . . . , pn−1 and the
+inﬁnite prime with ramiﬁcation index for each pi being 2, and the Galois
+group Gal(K(n)/Q) is isomorphic to the group Hn(F2) consisting of n by n
+upper-triangular unipotent matrices over F2. For the cases that n = 2 and 3,
+where H2(F2) = Z/2Z and H3(F2) = D8, the mod 2 Milnor invariants µ2(12)
+and µ2(123) give the Legendre symbol
+
+p1
+p2
+
+and the R´edei symbol [p1, p2, p3],
+respectively, in the relations
+(0.2)
+(−1)µ2(12) =
+p1
+p2
+
+,
+(−1)µ2(123) = [p1, p2, p3],
+and further it is shown that
+(0.3)
+K(2) = Q(√p1),
+K(3) = R
+([A1], [M1]∼[M3]). The ﬁrst author introduced further the 4-tuple quadratic
+residue symbol [p1, p2, p3, p4] = (−1)µ2(1234) by constructing concretely a can-
+didate of K(4) ([A2]). This uniﬁed interpretation may tell us that R´edei’s
+dihedral extension and triple symbol would be a natural generalization of a
+quadratic ﬁeld and the Legendre symbol.
+2
+However, these results concerns only rational primes, because they are
+based on an analogy between the structure of the maximal pro-2 Galois group
+over Q with restricted ramiﬁcation and that of the group of a link in the 3-
+sphere and there are obstructions to extend this analogy for number ﬁelds.
+We note that topological Milnor invariants are well deﬁned for a link in an
+l-homology 3-sphere ([Tu]), l being a prime number, and that l-homology 3-
+spheres correspond to number ﬁelds having trivial l-class group in the analogy
+of arithmetic topology. So it would be an interesting and important problem
+to overcome the diﬃculty concerning the obstructions and to introduce mod
+l arithmetic Milnor invariants and multiple l-th power residue symbols for
+certain primes in such a number ﬁeld containing a primitive l-th root of unity.
+In this paper, we introduce and investigate mod 3 arithmetic triple Milnor
+invariants and triple cubic residue symbols for certain primes in the Eisen-
+stein number ﬁeld, by overcoming the diﬃculty concerning the obstruction
+mentioned above. In the following, let us describe our main results.
+Let k be the Eisenstein number ﬁeld Q(ζ3) = Q(√−3), ζ3 :=
+−1+√−3
+2
+.
+In this paper, we shall introduce the mod 3 triple Milnor invariant µ3(123)
+for a set S0 = {p1, p2, p3} of primes of k satisfying Npi ≡1 mod 9 and
+
+πi
+πj
+
+3 = 1 (1 ≤i ̸= j ≤3) (1 ≤i ̸= j ≤3), where πi is the unique
+prime element of pi such that πi ≡1 mod (3√−3). Although there is the
+obstruction BS0 for the Galois group GS0 of the maximal pro-3 extension of
+k unramiﬁed outside S0 as mentioned above, we observe that if we add to S0
+a prime p0 with Np0 ≡4 or 7 mod 9, the obstruction BS for S = S0 ∪{p0}
+vanishes so that the larger Galois group GS of the maximal pro-3 extension
+kS of k unramiﬁed outside S has a minimal presentation similar to a link
+group
+(0.4) GS = ⟨x1, x2, x3 | xNp1−1
+1
+[x1, y1] = xNp2−1
+2
+[x2, y2] = xNp3−1
+3
+[x3, y3] = 1⟩,
+where the letter xi represents a monodromy over pi in kS/k and yi is a pro-3
+word representing a Frobenius automorphism over pi in kS/k. Following the
+procedure in link theory ([Mi2]), we derive the mod 3 Milnor numbers µ3(ij)
+(1 ≤i ̸= j ≤3) and µ(123) from the presentation (0.4) by using the pro-
+3 Magnus expansion of yj and y3, respectively. Then we ﬁrstly prove that
+µ3(ij) is independent of the choice of p0 and so an invariant of the ordered
+pair (pi, pj), by noting that there exists (uniquely) a cyclic extension of degree
+3 over k in which only pi is ramiﬁed. As for µ3(123), we shall prove, under
+3
+µ3(ij) = 0 (1 ≤i ̸= j ≤3), that µ3(123) is independent of the choice of p0
+and so an invariant of the ordered triple (p1, p2, p3) if there exists (uniquely)
+a Galois extension K{p1,p2} over k whose Galois group is isomorphic to the
+mod 3 Heisenberg group H3(F3) and in which only primes p1, p2 are ramiﬁed
+with ramiﬁcation index of each pi being 3. We show that such a extension of
+k exists if and only if the class number of k( 3√π1π2) is divisible by 9 and that
+the latter condition is satisﬁed if p1 and p2 are generated by prime numbers.
+We then deﬁne the triple cubic symbol [p1, p2, p3]3 by
+[p1, p2, p3]3 := ζµ3(123)
+3
+as a cubic generalization of (0.2). In order to describe [p1, p2, p3]3 arithmeti-
+cally, we construct concretely the extension K{p1,p2} in the form
+(0.5)
+K{p1,p2} = k( 3√π1,
+3√π2,
+3√
+θ),
+under a certain assumption on θ, where θ = x+y 3√π1+z( 3√π1)2 and x, y, z are
+certain algebraic integers in Z[ζ3] satisfying x3+π1y3+π2
+1z3−3π1xyz−π3
+2w3 =
+0 with some w ∈Z[ζ3]. The assumption on θ is proved to hold if p1 and p2
+are generated by prime numbers. This extension (0.5) was ﬁrstly constructed
+by the ﬁrst author in [A3] and may be regarded as a cubic generalization
+of R´edei’s extension R over Q in (0.1). We can deﬁne the Artin symbol
+K{p1,p2}/k
+p3
+
+by the assumption and then we can show the formula
+[p1, p2, p3]3 =
+K{p1,p2}/k
+p3
+
+(
+3√
+θ)
+3√
+θ
+.
+So [p1, p2, p3]3 describes the decomposition law of p3 in the extension K{p1,p2}/k.
+The power residue symbol is known to be described by the cup product in
+Galois cohomology ([Ko; 8.11], [Se; XIV, §2]). We generalize this relation for
+our triple cubic residue symbol by describing them by the Massey product
+in Galois cohomology. It is also an extension of the earlier works [Mo3], [V]
+in the case of the rational number ﬁeld to the Eisenstein number ﬁeld.
+Thus our results in this paper may form a ﬁrst and natural generalization
+of the arithmetic of R´edei’s triple symbols and cubic residue symbols, and
+also our work may have some importance in the respect that it would suggest
+a general theory of multiple power residue symbols in number ﬁelds, to be
+explored in the future.
+4
+Here are the contents of this paper. In Section 1, we recall a theorem
+of Koch for the particular case of the maximal pro-3 Galois group GS over
+the Eisenstein number ﬁeld k = Q(√−3) with given ramiﬁcation primes
+S. We determine the obstruction BS and, consequently, when S contains
+a prime p with Np ≡4 or 7 mod 9, we describe a minimal presentation
+of GS in the form similar to a link group. In Section 2, for a given set of
+primes S0 = {p1, . . . , pr} of k with Npi ≡1 mod 9, we derive the mod 3
+Milnor numbers µ3(i1 · · · in) (1 ≤i1, . . . , in ≤r) from the Galois group GS
+for S = S0 ∪{p0} with Np0 ≡4 or 7 mod 9 and show that they are invariants
+of the group GS. We introduce the notion of a R´edei type Hn(F3)-extension
+K{p1,...,pn−1} of k for {p1, . . . , pn−1} with Npi ≡1 mod 9. In Section 3, we
+prove that the mod 3 Milnor number µ3(12) is independent of the choice of
+p0 and so an invariant of the ordered pair (p1, p2), by noting the existence
+of the R´edei type H2(F3)-extension of k for {p1}. We then show its relation
+with the cubic residue symbol. In Section 4, we give a condition for a R´edei
+type H3(F3)-extension K{p1,p2} of k for {p1, p2} to exist, and show that the
+condition is satisﬁed if p1 and p2 are generated by prime numbers. We then
+prove that the mod 3 triple Milnor number µ3(123) is independent of the
+choice of p0 and so an invariant of the ordered triple (p1, p2, p3) of primes in
+S1 mod 9
+k
+, under µ3(ij) = 0 (1 ≤i ̸= j ≤3), if there exists (uniquely) a R´edei
+type H3(F3)-extension K{p1,p2} of k for {p1, p2}. In Section 5, we construct
+concretely the extension K{p1,p2} in the form analogous to Redei’s dihedral
+extension over Q, under a certain assumption. We show that this assumption
+holds if p1 and p2 are generated by prime numbers. In Section 6, we introduce
+the triple cubic residue symbol in terms of the mod 3 triple Milnor invariant,
+and describe it by using the concrete construction of K{p1,p2}. In Section 7,
+we give a cohomological interpretation of our triple residue symbols in terms
+of Massey products in Galois cohomology.
+Notation. For a number ﬁeld F, OF denotes the ring of integers of F. For
+a non-zero ideal a of OF, Na denotes the norm of a, Na := #(OF /a). We
+denote by Cl(F) the ideal class group of F and by hF the class number of
+F, hF := #Cl(F).
+For elements a, b in a group G, the commutator [a, b] is deﬁned by aba−1b−1.
+Throughout this paper, let ζ3 :=
+−1+√−3
+2
+and let k denote the Eisenstein
+number ﬁeld, k := Q(ζ3) = Q(√−3).
+We denote by Snon-3
+k
+the set of ﬁnite primes of k (maximal ideals of Ok) which
+5
+are not lying over 3, and we set
+S1 mod 9
+k
+:= {p ∈Snon-3
+k
+| Np ≡1 mod 9},
+S4,7 mod 9
+k
+:= {p ∈Snon-3
+k
+| Np ≡4 or 7 mod 9}.
+1. Maximal pro-3 Galois groups with restricted ramiﬁcation
+In this section, we recall a theorem of Koch ([Ko]) on the maximal pro-l
+Galois group GS over a number ﬁeld k with given ramiﬁcation primes S, for
+the particular case where l = 3 and k is the Eisenstein number ﬁeld Q(√−3).
+For this case, we can determine the obstruction BS involved in a theorem of
+Koch and hence the generator rank of GS. Consequently, when S contains
+a prime p with Np ≡4 or 7 mod 9, we can describe a presentation of GS in
+the form similar to a link group ([Mi1], [Mi2]).
+First, we note that Ok = Z[ζ3], the unit group is O×
+k = {±ζe
+3 | e = 0, 1, 2}
+and the class number hk is one.
+Recall our notaion: Snon-3
+k
+denotes the
+set of ﬁnite primes of k which are not lying over 3.
+For p ∈Snon-3
+k
+, we
+have Np ≡1 mod 3.
+We denote by S1 mod 9
+k
+(resp.
+S4,7 mod 9
+k
+) the set of
+p ∈Snon-3
+k
+satisfying Np ≡1 mod 9 (resp. Np ≡4 or 7 mod 9), so that
+Snon-3
+k
+= S1 mod 9
+k
+⊔S4,7 mod 9
+k
+.
+We start to show the following elementary
+lemma, which asserts that there is a standard prime element in each prime
+in Snon-3
+k
+. It may be interesting, from the viewpoint of arithmetic topology,
+to remark that choosing a prime element in a ﬁnite prime is analogous to
+choosing an orientation of a knot.
+Lemma 1.1. Let p ∈Snon-3
+k
+. Then p ∈S1 mod 9
+k
+if and only if there ex-
+ists uniquely π ∈Ok such that
+p = (π), π ≡1 mod (3
+√
+−3).
+Similarly, Np ≡4 (resp. Np ≡7) mod 9 if and only if there exists the
+unique prime element π in p satisfying π ≡7 mod (3√−3) (resp.
+π ≡
+4 mod (3√−3)).
+Proof. Suppose that p ∈S1 mod 9
+k
+. Since the class number of k is one, there is
+π′ ∈Ok such that p = (π′). Since Nk/Q(π′) > 0, we have
+(1.1.1)
+Nk/Q(π′) = Np ≡1
+mod 9.
+6
+Let U := (Ok/(3√−3))×. Let l be the unique maximal ideal of Ok lying over
+3, l = (1 −ζ3). We note that (3√−3) = l3 and Ok/l = Z/3Z. So we have
+(1.1.2)
+U
+= {a0 + a1
+√−3 + a2(√−3)2 mod (3√−3) |
+a0 = 1, 2, a1, a2 = 0, 1, 2}
+= {a + b√−3 mod (3√−3) | a = 1, 2, 4, 5, 7, 8, b = 0, 1, 2}.
+Let U1 be the subgroup of (Ok/(3√−3))× consisting of α mod (3√−3) with
+Nk/Q(α) ≡1 mod 9. By the straightforward calculation using (1.1.2), we
+have
+(1.1.3)
+U1
+= {a + b√−3 mod (3√−3) |
+(a, b) = (1, 0), (8, 0), (4, 1), (4, 2), (5, 1), (5, 2)}
+= ⟨−1 mod (3√−3)⟩× ⟨ζ3 mod (3√−3)⟩
+= {ε mod(3√−3) | ε ∈O×
+k },
+where −1 ≡8, ζ3 ≡4 + 2√−3 mod (3√−3). By (1.1.1) and (1.1.3), there is
+a unit ε ∈O×
+k such that π := επ′ ≡1 mod (3√−3) and (π) = (π′).
+Suppose that p = (π) = (̟) and π ≡̟ ≡1 mod (3√−3). We can write
+̟ = επ for some ε ∈O×
+k . So ε ≡επ = ̟ ≡1 mod (3√−3). By (1.1.3), we
+must have ε = 1 and hence ̟ = π.
+Conversely, suppose that p = (π), π ≡1 mod (3√−3). Writing π =
+1 + 3√−3(x + yζ3) with x, y ∈Z, we see easily Np = Nk/Q(π) ≡1 mod 9.
+Similarly, the latter assertions are veriﬁed by a straightforward computa-
+tion using (1.1.2).
+✷
+Let S be a ﬁnite set of s distinct primes p1, . . . , ps in Snon-3
+k
+. Let kS denote
+the maximal pro-3 extension of k, unramiﬁed outside S, in a ﬁxed algebraic
+closure ¯k. Let GS denote the Galois group of kS over k, GS := Gal(kS/k). We
+describe the structure of the pro-3 group GS in a certain unobstructed case.
+For this, we ﬁrst recall a result due to Iwasawa on local Galois groups ([Iw2]).
+For each i (1 ≤i ≤s), let kpi be the pi-adic ﬁeld which has the unique prime
+element πi as given in Lemma 1.1. We ﬁx an algebraic closure kpi of kpi and
+an embedding ¯k ֒→kpi. Let ˜kpi denote the maximal pro-3 extension of kpi
+in kpi and Gpi denote the Galois group of ˜kpi over kpi, Gpi := Gal(˜kpi/kpi).
+Then we have
+˜kpi = kpi(ζ3n,
+3n√πi | n ≥1),
+where ζ3n denotes a primitive 3n-th root of unity in ¯k such that ζ3 = −1+√−3
+2
+and (ζ3a)3b = ζ3a−b for all a ≥b. The local Galois group Gpi is then topolog-
+7
+ically generated by the monodromy τi and (an extension of) the Frobenius
+automorphism σi which are deﬁned by
+(1.2)
+τi(ζ3n) := ζ3n,
+τi( 3n√πi) := ζ3n 3n√πi,
+σi(ζ3n) := ζNpi
+3n ,
+σi( 3n√πi) :=
+3n√πi
+and subject to the relation
+(1.3)
+τ Npi−1
+i
+[τi, σi] = 1.
+For each i (1 ≤i ≤s), the ﬁxed embedding ¯k ֒→kpi gives an embedding
+kS ֒→˜kpi, hence a prime Pi of kS lying over pi. We denote by the same letters
+τi and σi the images of τi and σi, respectively, under the homomorphism
+(1.4)
+ϕpi,S : Gpi −→GS
+induced by the embedding kS ֒→˜kpi. Then τi is a topological generator of
+the inertia group of the prime Pi and σi is an extension of the Frobenius
+automorphism of the maximal subextension of kS/k for which Pi is unrami-
+ﬁed. We call simply τi and σi a monodromy over pi in kS/k and a Frobenius
+automorphism over pi in kS/k, respectively. We note that the restriction of
+τi to the maximal abelian subextension kab
+S
+of kS/k is given by the Artin
+symbol
+(1.5)
+τi|kab
+S = (˜ξi, kab
+S /k)
+for an idele ˜ξi of k whose pi-component is a primitive (Npi −1)-th root of
+unity ξi in k×
+pi and other components are all 1.
+Since the ideal class group Cl(k) is trivial, class ﬁeld theory tells us that
+the monodromies τ1, . . . , τs generate topologically the global Galois group
+GS. However, they may not be a minimal set of generators in general. In
+fact, noting that k contains ζ3, Shafarevich’s theorem ([Ko; Satz 11.8]) tells
+us that the minimal number d(GS) of generators of GS is given by
+(1.6)
+d(GS) = s −1 + dimF3 BS.
+Here the obstruction BS is deﬁned by
+(1.7)
+BS := {a ∈k× | (a) = a3, a ∈(k×
+pi)3 for all 1 ≤i ≤s}/(k×)3,
+8
+where a is a fractional ideal of Ok. For the Eisenstein number ﬁeld, we can
+determine BS and hence dS(GS) as follows.
+Proposition 1.8. If S is a subset of S1 mod 9
+k
+, then BS = ⟨ζ3 mod (k×)3⟩≃F3
+and hence d(GS) = s, namely, τ1, . . . , τs are minimal generators of GS. If
+S contains a prime p in S4,7 mod 9
+k
+, then BS = {1} and hence d(GS) = s −1,
+namely, one of τ1, . . . , τs is redundant for minimal generators of GS.
+Proof.
+Suppose that pi ∈S1 mod 9
+k
+for 1 ≤i ≤s.
+Let a ∈k× satisfy
+(a) = a3 and a ∈(k×
+pi)3 for 1 ≤i ≤s. Writing a = (b) with b ∈k×, we
+have a = εb3 with ε ∈O×
+k = {±ζe
+3 | e = 0, 1, 2} and so a ≡ζe
+3 mod (k×)3 for
+some e = 0, 1, 2. Noting that ζ3 ∈(k×
+pi)3 for all 1 ≤i ≤s and ζ3 /∈(k×)3, we
+see that ζ3 mod (k×)3 is a basis of BS.
+Suppose that there is pj ∈S4,7 mod 9
+k
+. Let a ∈k× satisfy (a) = a3, a ∈(k×
+pi)3
+for 1 ≤i ≤s. As in the above, writing a = (b), we have a ≡ζe
+3 mod (k×)3
+for some e = 0, 1, 2. Since pj is inert in Q(ζ9)/k, ζ9 /∈k×
+pj and so ζ3 /∈(k×
+pj)3.
+Therefore e = 0 and so a ∈(k×)3. Hence BS = {1}.
+The assertion for minimal generators of GS follows from (1.6)
+✷
+As for a redundant generator, class ﬁeld theory tells us the following re-
+ﬁned information.
+Proposition 1.9. Assume that S contains a prime pj in S4,7 mod 9
+k
+. Then
+we can exclude the monodromy τj over pj from τ1, . . . , τs to obtain minimal
+generators of GS.
+Proof. We may suppose that p1, . . . , pr ∈S1 mod 9
+k
+and pr+1, . . . , ps ∈S4,7 mod 9
+k
+.
+For g ∈GS, we let [g] := g mod G3
+S[GS, GS]. We need to show that we can
+exclude one [τj] with r + 1 ≤j ≤s from [τ1], . . . , [τs] to obtain a basis of the
+Frattini quotient GS/G3
+S[GS, GS]. For a prime p of k, let Op denote the ring
+of p-adic integers of kp. (For the inﬁnite prime p∞, we set Op∞:= kp∞= C).
+Let Jk be the idele group of k. Let Uk be the subgroup of Jk consisting of
+unit ideles of k, Uk := Q
+p O×
+p , and let US denote the subgroup of Uk whose
+p-component is 1 for p ∈S. By class ﬁeld theory, we have the canonical
+isomorphism by the Artin symbol of F3-vector spaces
+(1.9.1)
+Jk/USJ3
+kk× ≃GS/G3
+S[GS, GS].
+Since the ideal class group Cl(k) = Jk/Ukk× is trivial and BS = {1} by
+9
+Proposition 1.8, we have the following exact sequence of F3-vector spaces (cf.
+[Ko; (11.11)])
+(1.9.2)
+0 −→O×
+k /(O×
+k )3
+δ
+−→
+s
+Y
+i=1
+O×
+pi/(O×
+pi)3
+ι
+−→Jk/USJ3
+kk× −→0,
+where δ is the diagonal map and ι is induced by the natural inclusion
+Qs
+i=1 O×
+pi ֒→Jk.
+Let ξi be a primitive (Npi −1)-th root of unity in Opi
+(1 ≤i ≤s).
+We denote by [ξi] the element of Qs
+i=1 O×
+pi/(O×
+pi)3 whose
+pi-component is ξi mod (O×
+pi)3 and other components are all 1, so that
+[ξ1], . . . , [ξs] form a basis of the F3-vector space Qs
+i=1 O×
+pi/(O×
+pi)3.
+We let
+[ζ3] := δ(ζ3 mod (O×
+k )3). Then we have an equation in Qs
+i=1 O×
+pi/(O×
+pi)3
+(1.9.3)
+[ζ3] =
+s
+X
+i=1
+ai[ξi] (ai ∈F3).
+Note that the isomorphism (1.9.1) sends ι([ξi]) to [τi] := τi mod G3
+S[GS, GS]
+by (1.5) and sends ι([ζ3]) to 0 by (1.9.2). Hence we obtain from (1.9.3) the
+equation in GS/G3
+S[GS, GS]
+(1.9.4)
+0 =
+s
+X
+i=1
+ai[τi].
+Let 1 ≤i ≤r. Looking at the pi-component of (1.9.3), we have ζ3 ≡ξai
+i mod
+(O×
+pi)3. Since Npi ≡1 mod 9, we have ζ3 ∈(O×
+pi)3 and hence ai = 0.
+Let r + 1 ≤j ≤s. Looking at the pj-component of (1.9.3), we have ζ3 ≡ξ
+aj
+j
+mod (O×
+pj)3. Since Npj ≡4 or 7 mod 9, we can write Npj −1 = 3m, (3, m) =
+1. So we have ξ
+ajm
+j
+= ζm
+3 ̸= 1 and hence aj ̸= 0. Therefore we have from
+(1.9.4)
+0 =
+s
+X
+j=r+1
+ai[τj] (aj ∈F×
+3 ),
+from which we can exclude arbitrary one [τj] with r + 1 ≤j ≤s from
+[τ1], . . . , [τs] to obtain a basis of GS/G3
+S[GS, GS].
+✷
+Suppose that BS = {1}. Noting that k contains ζ3, it is shown by com-
+bining [Ko; Satz 6.11] ([Ko; Satz 6.14]), [Ko; Satz 11.3] and [Ko; Satz 11.4]
+that the relations of the Galois group GS are given by the local relations
+10
+(1.3) for minimal generators. Summing up, we have the following.
+Theorem 1.10 (Koch). Assume that S contains a prime pj in S4,7 mod 9
+k
+.
+Then the pro-3 group GS has the following minimal presentation
+GS = ⟨x1, . . . , xj−1, xj+1, . . . , xs | xNp1−1
+1
+[x1, y1] = · · · = x
+Npj−1−1
+j−1
+[xj−1, yj−1]
+= x
+Npj+1−1
+j+1
+[xj+1, yj+1] = · · · = xNps−1
+s
+[xs, ys] = 1 ⟩,
+where xi denotes the letter which represents a monodromy τi over pi in kS/k
+and yi denotes the free pro-3 word of x1, . . . , xj−1, xj+1, . . . , xs which repre-
+sents a Frobenius automorphism over pi in kS/k.
+2. Mod 3 Milnor numbers
+In this section, for a given ﬁnite subset S0 = {p1, . . . , pr} of S1 mod 9
+k
+, we
+introduce the mod 3 Milnor numbers µ3(i1 · · · in) (1 ≤i1, . . . , in ≤r) by us-
+ing Theorem 1.10 applied to S = S0 ∪{p0} with p0 ∈S4,7 mod 9
+k
+, and we prove
+that the mod 3 Milnor numbers are invariants of the pro-3 Galois group GS.
+First, we recall the pro-l Magnus expansion for a free pro-l group FN on
+letters x1, . . . , xN, where l is a prime number (cf. [Ko; 7], [Mo4; 8.3]). Let
+Fl[[FN]] denote the completed group algebra of FN over Fl and let ǫFl[[FN]] :
+Fl[[FN]] →Fl be the augmentation homomorphism with the augmentation
+ideal IFl[[FN]] := Ker(ǫFl[[FN]]). Let F3⟨⟨X1, . . . , XN⟩⟩denote the formal power
+series algebra over Fl in non-commuting variables X1, . . . , XN. Sending xi to
+1 + Xi for 1 ≤i ≤r, we have the (pro-l) Magnus isomorphism of topological
+Fl-algebras
+ΘN : Fl[[FN]]
+∼
+−→Fl⟨⟨X1, . . . , XN⟩⟩.
+For α ∈Fl[[FN]], ΘN(α) is called the Magnus expansion of α over Fl. For
+a multi-index I = (i1 · · · in), 1 ≤i1, . . . , in ≤r, we set |I| := n and XI :=
+Xi1 · · · Xin. We denote the coeﬃcient of XI in the Magnus expansion ΘN(α)
+by µl(I; α), called the mod l Magnus coeﬃcient of α for I, so that we have
+ΘN(α) = ǫFl[[FN]](α) +
+X
+|I|≥1
+µl(I; α)XI.
+In terms of the pro-l Fox free derivatives
+∂
+∂xi : Fl[[FN]] →Fl[[FN]] over Fl (cf.
+[Ih; §2], [Mo4; 8.3], [O]), we can write µl(I; α) for I = (i1 · · · in) as
+µl(I; α) = ǫFl[[FN]]
+
+∂nα
+∂xi1 · · · ∂xin
+
+.
+11
+Here are some basic properties of mod l Magnus coeﬃcients.
+(2.1.1) For α, β ∈Fl[[FN]] and a multi-index I, we have
+µl(I; αβ) =
+X
+I=JK
+µl(J; α)µl(K; β),
+where the sum ranges over all pairs (J, K) of multi-indices such that JK = I.
+(2.1.2) (Shuﬄe relation) For f ∈FN and multi-indices I, J with |I|, |J| ≥1,
+we have
+µl(I; f)µl(J; f) =
+X
+H∈Sh(I,J)
+µl(H; f),
+where Sh(I, J) denotes the set of the results of all shuﬄes of I and J ([CFL],
+[Mo4; 8.1]).
+(2.1.3) For f ∈FN and d ≥2, we have
+µl(I; f) = 0 for |I| < d ⇐⇒f ∈F(d)
+N ,
+where F(d)
+N
+:= FM ∩(1 + Id
+Fl[[FN]]), the d-th term of the mod l Zassenhaus
+ﬁltration of FN. It is known that F(d)
+N
+= (F([d/l])
+N
+)l Q
+i+j=d[F(i)
+N , F(j)
+N ], where
+[d/l] stands for the Gauss symbol ([DDMS; Deﬁnition 11.1, Theorem 12.9]).
+Let us be back in our arithmetic situation, where l = 3.
+Let S0 :=
+{p1, . . . pr} be a given set of r distinct primes in S1 mod 9
+k
+. Let us choose a
+prime p0 ∈S4,7 mod 9
+k
+and we let S := S0 ∪{p0} = {p0, p1, . . . , pr}. Let GS
+denote the Galois group of the maximal pro-3 extension kS over k unramiﬁed
+outside S. Let xi denote a letter representing a monodromy τi over pi in
+kS/k (1 ≤i ≤r) and let Fr denote the free pro-3 group on x1, . . . , xr. Let
+yi denote the free pro-3 word which represents a Frobenius automorphism σi
+over pi in kS/k. Let NS denote the closed subgroup of Fr generated normally
+by xNp1−1
+1
+[x1, y1], . . . , xNpr−1
+r
+[xr, yr]. By Theorem 1.10, we have the minimal
+presentation
+(2.2)
+GS
+= ⟨x1, . . . , xr | xNp1−1
+1
+[x1, y1] = · · · = xNpr−1
+r
+[xr, yr] = 1⟩
+= Fr/NS.
+For a multi-index I = (i1 · · · in) (1 ≤i1, . . . , in ≤r), we deﬁne the mod
+3 Milnor number µ3(I) = µS
+3(I) with respect to S by the mod 3 Magnus
+coeﬃcient of yin for I′ := (i1 · · ·in−1)
+(2.3)
+µ3(I) := µ3(I′; yin),
+12
+and we set µ3(I) := 0 if |I| = 1. Let eI be the maximal integer e satisfying
+Npi ≡1 mod 3e for all i = i1, . . . , in and we set mI := 3eI. Note that eI ≥2,
+since Npi ≡1 mod 9 for 1 ≤i ≤r.
+Theorem 2.4. Let I = (i1 · · · in) be a multi-index satisfying 1 ≤i1, . . . , in ≤
+r and 2 ≤|I| ≤mI. Assume that µ3(J) = 0 if |J| < |I|. Then µ3(J) = 0
+and µ3(I) are independent of a choice of a monodromy τi and a Frobenius
+σi over pi for 1 ≤i ≤r, namely, a choice of a prime Pi in kS lying over pi
+(equivalently an embedding kpi(l) ֒→kS), and so µ3(I) is an invariant of the
+Galois group GS.
+Proof. Note that mI ≤mJ. We see that by induction, µ3(J) = 0 is in-
+dependent of a choice of τi and σi. Since GS has a presentation (2.2), we
+need to verify
+(i) µ3(I) is unchanged when xi is replaced by its conjugate for 1 ≤i ≤r.
+(ii) µ3(I) is unchanged when yin is replaced by its conjugate in Fr.
+(iii) µ3(I) is unchanged when yin is multiplied by a product of conjugates
+of (xNpi−1
+i
+[xi, yi])e for 1 ≤i ≤r, e = ±1.
+We set I′ := (i1 · · · in−1).
+Proof of (i). Suppose that xi is replaced by x†
+i = xjxix−1
+j
+(1 ≤i, j ≤r).
+Since xi = x−1
+j x†
+ixj, we have Xi = (1 −Xj + X2
+j −· · ·)X†
+i (1 + Xj) and hence
+(2.4.1)
+Xi = X†
+i + (terms involving XjX†
+i or X†
+i Xj).
+Each time Xi appears in the Magnus expansion Θr(yin) = 1+P
+J µ3(Jin)XJ,
+it is to be replaced by the above expansion (2.4.1) and we ﬁnally reach the
+new expansion of Θr(yin) in X†
+1, . . . , X†
+r, by which we denote Θ†
+r(yin). Then
+we can easily see that the coeﬃcient of X†
+i1 · · · X†
+in−1 in Θ†
+r(yin), denoted by
+µ†
+3(I), is of the form
+µ†
+3(I) = µ3(I) +
+X
+J
+µ3(Jin),
+where J runs over some proper subsequences of I′. Therefore, by the as-
+sumption, we have
+µ†
+3(I) = µ3(I).
+Similarly, µ3(I) is proved to be unchanged when xi is replaced by x−1
+j xixj
+(1 ≤i, j ≤r). So µ3(I) is unchanged when xi is replaced by its conjugate in
+13
+the (discrete) free group Fr generated by x1, . . . , xr. Since Fr is dense in Fr
+and µ3(I) takes discrete values, µ3(I) is unchanged when xi is replaced by
+its conjugate in Fr.
+Proof of (ii). By comparing the coeﬃcients of XI′ in the both sides of the
+equality
+Θr(xiyinx−1
+i ) = (1 + Xi)Θr(yin)(1 −Xi + X2
+i −· · · )
+for 1 ≤i ≤r and by the assumption, we have
+µ3(I′; xiyinx−1
+i ) = µ3(I).
+Similarly, we have µ3(I′; x−1
+i yinxi) = µ3(I). By the same argument as in the
+proof of (i), the assertion (ii) is proved.
+Proof of (iii). Let J be any subsequence of I′, 1 ≤i ≤r and e = ±1. We
+will prove that
+(2.4.2)
+µ3(J; (xNpi−1
+i
+[xi, yi])e) = 0.
+First we prove that
+(2.4.3)
+µ3(J; [xi, yi]e) = 0.
+Comparing the coeﬃcients of XJ in the equality
+Θr([xi, yi]e) =
+
+1 + (Θr(xiyi) −Θr(yixi))Θr(x−1
+i )Θr(y−1
+i ) (e = 1)
+1 + (Θr(yixi) −Θr(xiyi))Θr(y−1
+i )Θr(x−1
+i ) (e = −1),
+we have
+µ3(J; [xi, yi]e) = e(µ3(J; xiyi)−µ3(J; yixi))+
+X
+A
+(µ3(A; xiyi)−µ3(A; yixi))cA,
+where A runs over some proper subsequences of J and cA ∈F3. So, in order
+to prove (2.4.3), it is enough to show that for any subsequence J of I′ and
+1 ≤i ≤r,
+(2.4.4)
+µ3(J; xiyi) −µ3(J; yixi) = 0.
+Let J = (j1 · · · ja). By the straightforward computaion, we have
+µ3(J; xiyi) =
+ µ3(Ji)
+(i ̸= j1),
+µ3(Jj1) + µ3(j2 · · · jaj1)
+(i = j1),
+14
+and
+µ3(J; yixi) =
+
+µ3(Ji)
+(i ̸= ja),
+µ3(Jja) + µ3(J)
+(i = ja).
+Hence we have
+(2.4.5)
+µ3(J; xiyi) −µ3(J; yixi)
+=
+
+
+
+µ3(j2 · · · jaj1) −δj1,jaµ3(J)
+(i = j1),
+µ3(j2 · · · jaj1)δj1,ja −µ3(J)
+(i = ja),
+0
+(otherwise),
+= 0 (by the assumption).
+Next, we prove that for any subsequence J of I′, 1 ≤i ≤r and e = ±1,
+(2.4.6)
+µ3(J; (xNpi−1
+i
+)e) = 0.
+Suppose i ∈I. Then Npi ≡1 mod mI and so we write Npi −1 = mIq. By
+the assumption, we have
+Θr((xNpi−1
+i
+)e)
+= (1 + Xi)emIq
+=
+ mI
+X
+j=0
+mI
+j
+
+Xj
+i
+!eq
+= 1 + (term of degree ≥|I|),
+from which (2.4.6) follows.
+Suppose i /∈I. Then Θr((xNpi−1
+i
+)e) does not contain the term of XJ, and
+hence µ3(J; (xNpi−1
+i
+)e) = 0. So (2.4.6) is proved.
+By (2.1.1), (2.4.3) and (2.4.6), we have
+µ3(J; (xNpi−1
+i
+[xi, yi])e)
+=
+X
+J′,J′′
+µ3(J′; (xNpi−1
+i
+)e)µ3(J′′; [xi, yi]e)
+= 0,
+where J = J′J′′ if e = 1 and J = J′′J′ if e = −1. Thus (2.4.2) is proved.
+By the same argument as in the proof of (ii), we have, for any f ∈Fr,
+(2.4.7)
+µ3(J; f(xNpi−1
+i
+[xi, yi])ef −1) = µ3(J; (xNpi−1
+i
+[xi, yi])e) = 0.
+Finally, by (2.1.1) and (2.4.7), we have
+µ3(I′; f(xNpi−1
+i
+[xi, yi])ef −1yin)
+=
+X
+I′=JK
+µ3(J; f(xNpi−1
+i
+[xi, yi])ef −1)µ3(K; yin)
+= µ3(I).
+15
+By the argument similar to the above, we can prove that
+µ3(I′; yinf(xNpi−1
+i
+[xi, yi])ef −1) = µ3(I).
+Hence the assertion (iii) is proved.
+✷
+Remark 2.5. For a multi-index I, put S′
+0 = {pi|i ∈I} ⊂S0, r′ = #S′
+0
+and S′ = S′
+0 ∪{p0} ⊂S. Then the commutative diagram
+GS
+−→
+GS′
+↑
+↑
+Fr
+−→
+Fr′
+:
+xj 7→1 (j ̸∈I)
+↓
+↓
+F3⟨⟨X1, . . . , Xr⟩⟩
+−→
+F3⟨⟨Xi (i ∈I)⟩⟩
+:
+Xj 7→0 (j ̸∈I)
+yields that µS
+3 (I) = µS′
+3 (I). This reduces our consideration on mod 3 Milnor
+invariants to the case where S0 = {pi1, . . . , pin} and I = (i1 · · · in).
+We end this section by giving the following
+Deﬁnition 2.6. Let p1, . . . , pn−1 be distinct n−1 primes in S1 mod 9
+k
+. We call
+an extension K of k a R´edei type Hn(F3)-extension for {p1, . . . , pn−1} if K is
+a Galois extension of k in which only primes p1, . . . , pn−1 are ramiﬁed with
+ramiﬁcation index of each pj being 3 and whose Galois group is isomorphic
+to the group Hn(F3) consisting of n by n upper-triangular unipotent matrices
+over F3:
+Hn(F3) :=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+∗
+∗
+· · ·
+∗
+0
+1
+∗
+· · ·
+∗
+...
+...
+...
+...
+...
+...
+...
+1
+∗
+0
+· · ·
+· · ·
+0
+1
+
+
+
+
+
+
+
+| ∗∈F3
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+As we shall see in Sections 3 and 4, the independence of µ3(1 · · · n) on the
+choice of p0 will be deduced from the existence of the R´edei type Hn(F3)-
+extension for {p1, . . . , pn−1}, when n = 2 or 3.
+3. Mod 3 linking numbers and cubic residue symbols
+16
+In this section, we prove that the mod 3 Milnor number µ3(12) is an
+invariant (mod 3 linking number) determined by primes p1, p2 ∈S1 mod 9
+k
+, by
+showing that there exists (uniquely) a R´edei type H2(F3)-extension K{p1} of
+k for {p1}. We then show its relation with the cubic residue symbol by con-
+structing K{p1} concretely.
+We start to show the following
+Theorem 3.1. For p ∈S1 mod 9
+k
+, there exists uniquely a Redei type H2(F3)-
+extension K{p} of k for {p}.
+Proof. Note H2(F3) = Z/3Z. By Proposition 1.8, we have d(G{p}) = 1,
+which implies the assertion.
+✷
+Let S0 = {p1, p2} for the simplicity of the notation in Section 2. By us-
+ing Theorem 3.1, we see the following
+Theorem 3.2.
+The mod 3 Milnor number µ3(12) is independent of the
+choice of p0 and so an invariant of the ordered pair (p1, p2).
+Proof. Take a prime p0 ∈S4,7 mod 9
+k
+and let S := S0 ∪{p0} = {p0, p1, p1}.
+We use the same notations as in Sections 1 and 2.
+By the deﬁnition of
+µ3(12), we have
+(3.2.1)
+σ2 ≡τ µ3(12)
+1
+mod G(2)
+S .
+There exists uniquely an H2(F3)-extension K{p1} of k for {p1} by Theorem
+3.1 and the Galois group Gal(K{p1}/k) ≃Z/3Z is generated by τ1|K{p1}. Since
+K{p1} ⊂kS, we have, by (3.2.1),
+σ2|K{p1} = (τ1|K{p1})µ3(12),
+which implies that µ3(12) is independent of the choice of p0 and so an invari-
+ant of S0.
+✷
+We call µ3(12) the mod 3 linking number of p1 and p2 and denote it by
+lk3(p1, p2).
+17
+Next, we show the relation between the mod 3 linking number and the
+cubic residue symbol by constructing concretely K{p} in Theorem 3.1. For
+this, we recall a well-known fact on the ramiﬁcation in a Kummer extension.
+Lemma 3.4 ([B; Lemma 5, Lemma 6]). Let F be a ﬁnite algebraic number
+ﬁeld containing a primitive l-th root of unity, where l is a prime number.
+Let L be a cyclic extension of degree l over F so that L = F( l√a) for some
+a ∈F ×. Let p be a ﬁnite prime of F which is not lying over l, and write
+(a) = pvp(a)q with q being an ideal prime to p. Then we have the follwings.
+(1) If vp(a) is prime to l, then p is totally ramiﬁed in L/F.
+(2) If vp(a) is divisible by l, then p is unramiﬁed in L/F.
+Theorem 3.5. Let p ∈S1 mod 9
+k
+and let π the prime element in p satisfy-
+ing π ≡1 mod (3√−3) as in Lemma 1.1. Then k( 3√π) is a cyclic extension
+of degree 3 over k in which only p is ramiﬁed. Hence we have
+K{p} = k( 3√π).
+Proof. It is easy to see that k( 3√π) is a cyclic Kummer extension of degree
+3 over k.
+So it suﬃces to show the assertion on the ramiﬁcation.
+Since
+(π) = p, p is totally ramiﬁed by Lemma 3.4 (1). Let λ :=
+3√π−1
+√−3 . Since λ
+satisﬁes λ3 −√−3λ2 −λ −
+1−π
+3√−3 = 0 and
+1−π
+3√−3 ∈Ok by Lemma 1.1, we ﬁnd
+λ ∈OK. The relative discriminant of λ in k( 3√π)/k is computed as
+d(λ, K/k) =
+
+1
+λ(1)
+(λ(1))2
+1
+λ(2)
+(λ(2))2
+1
+λ(3)
+(λ(3))2
+
+2
+= −π2
+27
+
+1
+1
+1
+1
+ζ3
+ζ2
+3
+1
+ζ2
+3
+ζ3
+
+2
+= π2,
+where λ(1) := λ, λ(2) := (ζ3
+3√π −1)/√−3 and λ(2) := (ζ2
+3
+3√π −1)/√−3.
+Hence k( 3√π)/k is unramiﬁed outside p. The second assertion follows from
+Theorem 3.1.
+✷
+Recall that for a ﬁnite prime p = (π) of k and a ∈k×
+p such that vp(a) ≡0
+mod 3, the cubic residue symbol is deﬁned by
+a
+π
+
+3 = σ( 3√a)
+3√a ,
+18
+where σ is the Frobenius automorphism of the unramiﬁed extension kp( 3√a)/kp.
+We note that
+a
+π
+
+3 = 1 ⇐⇒a ∈(k×
+p )3.
+Theorem 3.6. Let p1 and p2 be distinct primes in S1 mod 9
+k
+and let πi be
+the prime element in pi satisfying πi ≡1 mod (3√−3) as in Lemma 1.1 for
+i = 1, 2. Then we have
+ζlk3(p1,p2)
+3
+=
+π1
+π2
+
+3
+.
+Proof. This is just a reﬁnement of the proof of Theorem 3.2. Take a prime
+p0 ∈S4,7 mod 9
+k
+and let S := S0 ∪{p0} = {p0, p1, p2}. By the deﬁnition of
+µ3(12) =: lk3(p1, p2), we have
+(3.6.1)
+σ2 ≡τ lk3(p1,p2)
+1
+mod G(2)
+S .
+Noting that K{p1} = k( 3√π1) ⊂kS, we have, by (1.2),
+(3.6.2)
+τ1( 3√π1) = ζ3
+3√π1.
+By the deﬁnition of the cubic residue symbol as in the above, we have
+(3.6.3)
+π1
+π2
+
+3
+= σ2( 3√π1)
+3√π1
+.
+By (3.6.1), (3.6.2) and (3.6.3), we obtain the assertion.
+✷
+4. Mod 3 triple Milnor invariants
+In this section, we give a condition for a R´edei type H3(F3)-extension
+K{p1,p2} of k for {p1, p2} to exist, and show that the condition is satisﬁed if
+p1 and p2 are generated by prime numbers. We then prove that the mod 3
+triple Milnor number µ3(123) is an invariant of the ordered triple (p1, p2, p3)
+of primes in S1 mod 9
+k
+, under µ3(ij) = 0 (1 ≤i ̸= j ≤3), if there exists
+(uniquely) a R´edei type H3(F3)-extension K{p1,p2} of k for {p1, p2}.
+19
+Let p1 and p2 be distinct primes in S1 mod 9
+k
+and let πi be the unique prime
+element in pi such that πi ≡1 mod (3√−3) as in Lemma 1.1. As in Section
+3, mod 3 linking numbers µ3(ij) are well deﬁned for 1 ≤i ̸= j ≤3. We set
+Ki := k( 3√πi) = K{pi} (i = 1, 2) and K12 = k( 3√π1π2).
+First, we prove the following.
+Theorem 4.1.
+There exists a R´edei type H3(F3)-extension K{p1,p2} of k
+for {p1, p2} if and only if the class number hK12 of K12 is divisible by 9.
+Moreover, K{p1,p2} is unique if it exists.
+Proof.
+Let L be the Hilbert 3-class ﬁeld of K12.
+The genus 3-class ﬁeld
+of K12/k is the maximal subﬁeld Lg of L which is abelian over k. Then
+K1K2 ⊂Lg. Since the class number hk is one, Gal(Lg/k) is generated by the
+inertia subgroups Ii of pi. Then [Lg : k] ≤|I1||I2| = 9 and hence Lg = K1K2.
+In particular, the maximal abelian quotient of G = Gal(L/k) is G/[G, G] ≃
+Gal(K1K2/k) ≃(Z/3Z)2. Let K be the ﬁxed ﬁeld of [G, G]3[[G, G], G].
+If part: Suppose that hK12 is divisible by 9, i.e., [L : K12] ≥9. Then
+G is nonabelian. Hence Gal(K/k) ≃G/[G, G]3[[G, G], G] is a nonabelian 3-
+group of order 27. Since K/K1K2 is unramiﬁed, neither of K/K1 and K/K2
+is cyclic extensions, i.e., the noncyclic maximal subgroup of Gal(K/k) is not
+unique. This implies that Gal(K/k) ≃H3(F3). Therefore K is a R´edei type
+H3(F3)-extension of k for {p1, p2}.
+Only-if part and uniqueness: Suppose the existence of K{p1,p2}.
+Since
+d(G{p1,p2}) = 2 by Proposition 1.8, K1K2 is the unique (Z/3Z)2-extension of
+k unramiﬁed outside {p1, p2}. Since H3(F3)/[H3(F3), H3(F3)] ≃(Z/3Z)2, we
+have K1K2 ⊂K{p1,p2}. Since p1 and p2 ramify in K12/k, K{p1,p2}/K12 is an
+unramiﬁed Galois extension of degree 9. Hence K{p1,p2} ⊂L. By class ﬁeld
+theory, hK12 is divisible by 9. Since
+[G, G]3[[G, G], G] ⊂Ker(G
+restr.
+−→Gal(K{p1,p2}/k)),
+K{p1,p2} coincides with the ﬁxed ﬁeld K of [G, G]3[[G, G], G], which is uniquely
+deﬁned.
+✷
+Proposition 4.2. If p1 = (p1) and p2 = (p2) with prime numbers p1 and p2,
+then the class number of K12 is divisible by 9 and hence there exists uniquely
+a R´edei type H3(F3)-extension K{p1,p2} of k for {p1, p2}.
+20
+Proof.
+Since pi is inert in k/Q and p2
+i ≡1 (mod 9), we have pi ≡−1
+(mod 9). Then πi = −pi. Hence Ki = k( 3√pi) and K12 = k( 3√p1p2). Note
+that K1K2/K12 is an unramiﬁed cubic cyclic extension, and that
+Gal(K1K2/Q( 3√p1p2)) ≃Gal(Ki/Q) ≃S3.
+On the other hand, there is an unramiﬁed cubic cyclic extension F/Q( 3√p1p2)
+by [H]. Since
+Gal(K12F/Q( 3√p1p2)) ≃Z/6Z,
+K12F/K12 is another unramiﬁed cubic cyclic extension. Therefore K1K2F/K12
+is an unramiﬁed (Z/3Z)2-extension. Hence hK12 is divisible by 9 by class ﬁeld
+theory. By Theorem 4.1, the latter assertion follows.
+✷
+Let S0 = {p1, p2, p3} for the simplicity of notation in Section 2. Let πi be
+the unique prime element in pi satisfying πi ≡1 mod (3√−3) (1 ≤i ≤3) as
+in Lemma 1.1. We assume that
+(4.3)
+µ3(ij) = lk3(pi, pj) = 0
+(1 ≤i ̸= j ≤3),
+which is equivalent, by Theorem 3.6, to the condition
+πi
+πj
+
+3
+= 1
+(1 ≤i ̸= j ≤3).
+Now, we prove the following
+Theorem 4.4. If there exists a R´edei type H3(F3)-extension K{p1,p2} of k
+for {p1, p2}, then the mod 3 Milnor number µ3(123) is independent of the
+choice of p0 and so an invariant of the ordered triple (p1, p2, p3).
+Proof.
+Choose a prime p0 ∈S4,7 mod 9
+k
+and set S := {p0, p1, p2, p3}.
+By
+Theorem 1.10, the Galois group GS of the maximal pro-3 extension kS over
+k unramiﬁed outside S has the minimal presentation:
+GS
+= ⟨x1, x2, x3 | xNp1−1
+1
+[x1, y1] = xNp2−1
+2
+[x2, y2] = xNp3−1
+3
+[x3, y3] = 1⟩
+= F3/NS.
+Here xi is the letter representing a monodromy τi over pi in kS/k and F3 is
+the free pro-3 group generated by x1, x2 and x3. The free pro-3 word yi ∈F3
+21
+represents a Frobenius automorphism σi over pi in kS/k and NS denotes the
+closed subgroup of F3 generated normally by xNpi−1
+i
+[xi, yi] for 1 ≤i ≤3. By
+(2.1.3) and the assumption (4.3), we have, for 1 ≤i ≤3,
+(4.4.1)
+yi ∈F(2)
+r
+= F3
+3[F3, F3].
+Let F(si, ti) be the free pro-3 group on words si, ti (1 ≤i ≤3) and let ˜k
+denote the maximal pro-3 extension of k. By [Ko; Satz 6.11], we have the
+following commutative diagram
+F3
+F(si, ti)
+GS
+Gpi
+Gal(K{p1,p2}/k)
+Gal(˜k/k).
+✲
+✲
+✲
+✲
+❄
+❄
+❄
+✑
+✑
+✑
+✑
+✑
+✰
+ΦS
+Φ
+ϕpi
+ϕpi,S
+ti7→τi
+si7→σi
+ti7→xi
+si7→yi
+Here ϕpi,S is the map in (1.4) and ϕpi is also the map induced by the embed-
+ding ˜k ֒→˜kpi. The maps ΦS and Φ are natural quotient homomorphisms.
+We set, for 1 ≤i ≤3,
+γi := Φ(ϕpi(τi)) = ΦS(xiNS), ηi := Φ(ϕpi(σi)) = ΦS(yiNS) ∈Gal(K{p1,p2}/k).
+We note that γi and ηi are independent of the choice of p0. Let V denote the
+closed subgroup of F3 generated normally by x3
+1, x3
+2 and x3. Then we have
+xNp3−1
+3
+[x3, y3] ∈V obviously and xNpi−1
+i
+[xi, yi] ∈V[[F3, F3], F3] for i = 1, 2 by
+(4.4.1). Therefore we have NS ⊂V[[F3, F3], F3]. We set
+M := VF(3)
+3
+= VF3
+3[[F3, F3], F3],
+where F(3)
+3
+is the 3rd term of the Zassenhaus ﬁltration of F3 (cf. (2.1.3)).
+Since H3(F3) is two-step nilpotent and has the exponent 3, the surjective
+homorophsim ΦS factors through F3/M. Since F3/[F3, F3]M is generated
+by x1, x2 mod [Fr, Fr]M and the commutator subgroup of F3/M is a cyclic
+group generated by [x1, x2] mod M, we see that
+#(F3/M) ≤27.
+Therefore ΦS induces the isomorphism
+(4.4.2)
+F3/M ≃Gal(K{p1,p2}/k),
+22
+where xi mod M is sent to γi for i = 1, 2 and to id for i = 3, and we note that
+the commutator subgroup of Gal(K{p1,p2}/k) is a cyclic group generated by
+[γ1, γ2]. Since y3 ∈VF3
+3[F3, F3] by (4.4.1), there exists uniquely m(123) ∈F3
+such that
+(4.4.3)
+y3 ≡[x1, x2]m(123)
+mod M.
+By (2.1.1) and (2.1.3), we have µ3(I; M) = 0 for I ∈{(1), (2), (12)} and
+(4.4.4)
+µ3(123) := µ3((12); y3) = m(123) ∈F3.
+By (4.4.2), (4.4.3) and (4.4.4), we have
+η3 = [γ1, γ2]µ3(123) ∈Gal(K{p1,p2}/k),
+which implies that µ3(123) is independent of the choice of p0 and so an in-
+variant of S0.
+✷
+Composing (4.4.2) with the isomorphism Gal(K{p1,p2}/k) ≃H3(F3) given by
+the correspondence
+γ1 7→
+
+
+1
+1
+0
+0
+1
+0
+0
+0
+1
+
+, γ2 7→
+
+
+1
+0
+0
+0
+1
+1
+0
+0
+1
+
+,
+we have the isomorphism
+ρ : F3/M
+∼→H3(F3).
+We note that ρ is given by
+ρ(f mod M) =
+
+
+1
+µ3((1); f)
+µ3((12); f)
+0
+1
+µ3((2); f)
+0
+0
+1
+
+
+and we have
+ρ(y3 mod M) =
+
+
+1
+0
+µ3(123)
+0
+1
+0
+0
+0
+1
+
+.
+We remark that a map analogous to ρ was considered for the study of Milnor
+invariants in link theory ([Mu]).
+23
+Corollary 4.5.
+If p1 = (p1) and p2 = (p2) with prime numbers p1 and
+p2, then the mod 3 Milnor number µ3(123) is an invariant of the ordered
+triple (p1, p2, p3).
+Proof. This follows from Proposition 4.2 and Theorem 4.4.
+✷
+There is a case where no R´edei type H3(F3)-extension exists, and µS
+3(123)
+depends on the choice of p0 as follows.
+Example 4.6.
+The following examples are calculated by [Pari-gp].
+Put
+π1 = −17, π2 = 1 + 9ζ3 and π3 = 7 + 12ζ3. Then πi ≡1 (mod 3√−3)
+for 1 ≤i ≤3, and Np2 = 73, Np3 = 109. Moreover, the condition (4.3) is
+satisﬁed. Then p3 splits completely in K1K2/k. Put
+K′
+12 = k(
+3q
+π2
+1π2) ≃Q[x]/(x6 + 2023x3 + 6097033).
+Since hK′
+12 = 3, K1K2 is the maximal unramiﬁed 3-extension of K′
+12, in
+particular K1K2 has no unramiﬁed 3-extension. Hence K1K2 is the Hilbert
+3-class ﬁeld of K12, and hK12 is not divisible by 9.
+On the other hand,
+p3 = (π3) = (7 + 12ζ−1
+3 ) is inert in K2/k and splits in K1/k. Then p3 is also
+inert in K′
+12/k, and hence a prime P3 of K′
+12 lying over p3 is characterized as
+a degree one prime of K′
+12 lying over 109. Note that P3 splits in K1K2/K′
+12.
+Put p0 = (1 + 3ζ3) ∋7 or p0 = (−6 −7ζ3) ∋43. Then Np0 ≡7 (mod 9),
+and p0 is inert in K′
+12/k. Moreover, the ray class group Clp0(K′
+12) of K′
+12 mod-
+ulo p0OK′
+12 has the 3-rank 2. Let K/K′
+12 be the maximal elementary abelian
+3-extension unramiﬁed outside p0.
+Then Gal(K/K′
+12) ≃Clp0(K′
+12)/3 ≃
+(Z/3Z)2, and K/k is also a Galois extension. Since K/Ki is not cyclic, i.e.,
+the noncyclic maximal subgroup of Gal(K/k) is not unique, K/k is a H3(F3)-
+extension unramiﬁed outside {p0, p1, p2}. Put S = {p0, p1, p2, p3}. Then the
+map ΦS : GS →Gal(K/k) induces an isomorphism F3/M ≃Gal(K/k) similar
+to (4.4.2), and we have
+y3 ≡[x1, x2]µS
+3 (123)
+mod M
+as in the proof of Theorem 4.4. Let [P3] be the class of P3 in Clp0(K′
+12).
+• If 7 ∈p0 = (1 + 3ζ3), then [P3] ̸∈Clp0(K′
+12)3, i.e., a prime of K1K2 lying
+over P3 is inert in K/K1K2. This implies that µS
+3(123) ̸= 0 ∈F3.
+24
+• If 43 ∈p0 = (−6 −7ζ3), then [P3] ∈Clp0(K′
+12)3, i.e., p3 splits completely
+in K/k. This implies that µS
+3(123) = 0 ∈F3.
+5. Construction of the R´edei type H3(F3)-extension for {p1, p2}
+In this section, we construct concretely the R´edei type H3(F3)-extension
+K{p1,p2} of k for {p1, p2}, under a certain assumption (A), in the form anal-
+ogous to R´edei’s dihedral extension over Q. We show that the assumption
+(A) holds if p1 and p2 are generated by prime numbers.
+We start to recall a classical theorem by Iwasawa and the ambiguous class
+number formula.
+Lemma 5.1 ([Iw1; II]). Let l be a prime number and let F be a ﬁnite alge-
+braic number ﬁeld whose class number hF is prime to l. Let L be a Galois
+extension over F of degree a power of l. We assume that there is at most
+one prime in F which is ramiﬁed in L/F. Then the class number hL is also
+prime to l.
+Lemma 5.2 ([L; Theorem 1 (2)], [Y; Lemma 4]). Let l be a prime number
+and let L/F be a cyclic extension of ﬁnite algebraic number ﬁelds of degree
+l. Let A(L/F) be the group consisting of classes of ideals a of L satisfying
+τ(a) = a, where τ is a generator of the Galois group Gal(L/F). Then we
+have
+#A(L/F) =
+hF · lt
+[O×
+F : NL/F(O×
+L)],
+where t is the number of primes of F which are ramiﬁed in L/F.
+Using Lemma 5.1 and Lemma 5.2, we have the following Propositions.
+Proposition 5.3. Let p be a prime in S1 mod 9
+k
+and let π be the unique prime
+element in p satisfying π ≡1 mod (3√−3) as in Lemma 1.1. Then the class
+number of k( 3√π) is prime to 3.
+Proof. This follows from Theorem 3.5 and Lemma 5.1.
+✷
+Proposition 5.4. Let p and π be as in Proposition 5.3 and set K := k( 3√π).
+25
+Then the norm map restricted to the unit groups NK/k : O×
+K →O×
+k is surjec-
+tive.
+Proof. This follows from Theorem 3.5, Lemma 5.2 and hk = 1.
+✷
+Let p1 and p2 be distinct ﬁnite primes in S1 mod 9
+k
+. By Lemma 1.1, we choose
+the unique prime element πi in pi satisfying πi ≡1 mod (3√−3) (i = 1, 2).
+We set
+Ki := k( 3√πi) = K{pi}
+(i = 1, 2).
+In the following, we assume that
+(5.5)
+π1
+π2
+
+3
+=
+π2
+π1
+
+3
+= 1.
+Note that (5.5) is equivalent to that p1 (resp. p2) splits in K2/k (resp. K1/k).
+Let P be a ﬁxed prime of K1 lying over p2.
+Proposition 5.6.
+There is an algebraic integer α in K1 which satisﬁes
+the following properties.
+(1) NK1/k(α) = π2β3 with some β ∈k.
+(2) The principal ideal (α) has the decomposition of the form
+(α) = PaBb, (a, 3) = 1, (B, 3) = 1, b ≡0 mod 3.
+Proof. (1) Write PhK1 = (α′) for some α′ ∈OK1. Since p2 is completely
+decomposed in K1/k, we have NK1/k((α′)) = NK1/kPhK1 = (π
+hK1
+2
+) and so
+NK1/k(α′) = επ
+hK1
+2
+for some ε ∈O×
+k . By Proposition 5.4, there is u ∈O×
+K1
+such that NK1/k(u) = ε. Letting α := u−1α′, we have NK1/k(α) = π
+hK1
+2
+. Since
+hK1 is prime to 3 by Proposition 5.3, α or α2 satisﬁes the desired condition.
+(2) This follows immediately from (1).
+✷
+Let α be an element of OK1 satisfying the properties (1), (2) of Proposi-
+tion 5.6. Let τ be the element of Gal(K1/k) deﬁned by
+τ( 3√π1) := ζ3
+3√π1.
+26
+Then we have Gal(K1/k) = ⟨τ | τ 3 = 1⟩. We set
+
+
+
+α(1) := α,
+α(2) := τ(α),
+α(3) := τ 2(α),
+
+
+
+P(1) := P,
+P(2) := τ(P),
+P(3) := τ 2(P),
+where P(1), P(2) and P(3) are distinct all prime ideals of OK1 lying over p2.
+By Proposition 5.6, we see easily the following.
+Theorem 5.7. Let θ := ζc
+3(α(1))2α(2) ∈OK1 (c = 0, 1, 2). Then θ satis-
+ﬁes the following properties:
+(1) NK1/k(θ) = π3
+2w3 for some w ∈k. Writing θ = x + y 3√π1 + z( 3√π1)2
+(x, y, z ∈k), it is given by
+x3 + π1y3 + π2
+1z3 −3π1xyz = π3
+2w3.
+(2) (θ) = (P(1))2e(P(2))eAa, (e, 3) = 1, (A, 3) = 1, a ≡0 mod 3.
+In the following, we assume that θ in Theorem 5.7 satisﬁes the following
+condition:
+(A)
+There is η ∈OK1 such that η3 ≡θ mod (3√−3).
+A suﬃcient condition for (A) to hold is given as follows. Set UK1 := (OK1/(3√−3))×
+and let UK1(3) denote the 3-Sylow subgroup of UK1. By replacing α by αb2,
+we may assume that α in Proposition 5.6 satisﬁes α ∈UK1(3), where b (= 8
+or 26) is the non-3 part of #UK1.
+Proposition 5.8. (1) The group UK1(3) is given by
+UK1(3) = ⟨a1⟩× ⟨a2⟩× ⟨a3⟩× ⟨a4⟩× ⟨a5⟩× ⟨a6⟩, ⟨ai⟩≃Z/3Z,
+where we set ai := ai mod (3√−3), λ :=
+1
+√−3( 3√π1 −1) and
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a1 := 4,
+a2 := ζ3,
+a3 :=
+3√π1,
+a4 := 1 + √−3 3√π1 = 1 + √−3 + 3λ,
+a5 := −1 + 3 3√π1 −( 3√π1)2 = 1 + √−3λ + 3λ2,
+a6 :=
+1
+√−3(1 + (√−3 −2) 3√π1 + ( 3√π1)2) = 1 + √−3λ + √−3λ2
+27
+(2) Assume that α in Proposition 5.6 satisﬁes α ∈UK1(3).
+Then α ∈
+⟨a1⟩× ⟨a2⟩× ⟨a3⟩× ⟨a4⟩.
+If we have α ∈⟨a1⟩× ⟨a2⟩× ⟨a3⟩, then θ in
+Theorem 5.7 satisﬁes the condition (A) for some c.
+Proof. (1) Since (√−3) is unramiﬁed in K1/k, we can write (√−3) = q1 · · · qr
+(r = 1 or 3) with prime ideals qi’s of OK1. Then we have
+UK1
+≃(OK1/q3
+1 · · · q3
+r)×
+≃(OK1/q3
+1)× × · · · × (OK1/q3
+r)×.
+We note that #UK1 = Qr
+i=1 Nq2
+i (Nqi −1) = N((√−3OK1)2) Qr
+i=1(Nqi −1) =
+729b, where b = Qr
+i=1(Nqi −1) ∈{8, 26}, and that a3
+i ≡1 mod (3√−3).
+Deﬁne τ ∈Gal(K1/k), τ( 3√π1) = ζ3 3√π1. Then we have
+τ(a3) ≡a2 · a3,
+τ(a4) ≡a1 · a4 mod (3
+√
+−3)
+and hence a3 ̸∈⟨a1, a2 ⟩and a4 ̸∈Q3
+i=1⟨ai ⟩. We note that NK1/k(ai) ≡1
+mod (3√−3) (1 ≤i ≤4) and
+NK1/k(a5)
+= −1 + 27π −π2 −3 · (−1) · 3 · (−1) · π
+≡−1 −π2 ≡7
+mod (3√−3)
+NK1/k(a6)
+=
+√−3
+9 (1 + (√−3 −2)3π1 + π2
+1 −3 · 1 · (√−3 −2) · 1 · π)
+=
+√−3
+9 (1 + (16 + 6√−3)π1 + π2
+1)
+=
+√−3
+9 ((1 −π1)2 + (18 + 6√−3)π1)
+=
+√−3
+9 (1 −π1)2 + (2√−3 −2)π1
+≡(2√−3 −2)π1 ≡7 + 2√−3
+mod (3√−3)
+and hence a5 ̸∈Q4
+i=1⟨ai ⟩, a6 ̸∈Q5
+i=1⟨ai ⟩. Since the order of the group
+Q6
+i=1⟨ai⟩is 36 = 729, it must be UK1(3).
+(2) Since NK1/k(α) ≡1 mod (3√−3), by (1), we have α ∈Q4
+i=1⟨ai⟩. Sup-
+pose α ∈Q3
+i=1⟨ai⟩. Then we can write α = a1b1 · a2b2 · a3b3 and τ(α) =
+a1b1 · a2b2+b3 · a3b3 by (1).
+Therefore we have θ ≡1 mod (3√−3) with
+θ = ζ2b3
+3 (α(1))2α(2).
+✷
+Corollary 5.9.
+Assume that p1 = (p1) and p2 = (p2) with prime num-
+bers p1 and p2. Then (5.5) is satisﬁed, and there exists α as in Proposition
+5.6 such that θ in Theorem 5.7 satisﬁes condition (A) for some c.
+28
+Proof.
+Since p1 = (p1) with prime number p1, K1/Q is a Galois exten-
+sion. Note that pi is inert in k/Q, and that πi = −pi. Since K1/Q is not
+cyclic, p2 = (p2) splits in K1/k. Similarly, p1 splits in K2/k. Hence (5.5)
+is satisﬁed.
+Put F := Q( 3√p1). In the proof of Proposition 5.6, we may
+choose a prime P of K1 such that F is the decomposition ﬁeld of P in
+K1/Q. Then P = ℘OK1 with a prime ideal ℘of OF, and a principal ideal
+PhK1 = ℘hK1OK1 = (α′) has a generator α′ = x + y 3√p1 + z( 3√p1)2 ∈F
+with x, y, z ∈Q. Since NK1/k(α′) = x3 + p1y3 + p2
+1z3 −3p1xyz ∈Q, we
+have ε = (−p2)−hK1NK1/k(α′) = ±1 = u in the proof of Proposition 5.6.
+Thus we can take α ∈F in Proposition 5.6. Moreover, we may assume that
+α ∈UK1(3). Then σ(α) = α, where σ is the generator of Gal(K1/Q( 3√p1)).
+By Proposition 5.8 (2), we can write α = a1b1 · a2b2 · a3b3 · a4b4. We can easily
+see that
+a1 · a2
+4 ≡1 −
+√
+−3 3√−p1 = σ(a4) mod (3
+√
+−3),
+where we note that
+3√−p1 −1 = √−3λ ≡0 mod (√−3). Since
+a1
+b1 · a2
+b2 · a3
+b3 · a4
+b4 = α = σ(α) = a1
+b1+b4 · a2
+2b2 · a3
+b3 · a4
+2b4,
+we have b4 ≡0 mod 3, i.e., α ∈Q3
+i=1⟨ai⟩. By Proposition 5.8 (2), we obtain
+the claim.
+✷
+Let θ be an element of OK1 in Theorem 5.7 satisfying condition (A). We
+then set
+Kθ := k( 3√π1,
+3√π2,
+3√
+θ).
+Remark 5.10. The extension Kθ over k may be regarded as a cubic analogue
+of R´edei’s dihedral extension R over Q given by
+ R = Q(√p1, √p2, √α), α = x + y√p1 with x, y, z ∈Z satisfying
+x2 −p1y2 = p2z2, (x, y, z) = 1, y ≡0 mod 2, x −y ≡1 mod 4.
+Here we may observe that the equation x3 + π1y3 + π2
+1z3 −3π1xyz = π3
+2w3
+in (1) of Theorem 5.7 corresponds to the equation x2 −p1y2 = p2z2, the
+property (2) of Theorem 5.7 corresponds to (x, y, z) = 1 and the condition
+(A) corresponds to y ≡0 mod 2 and x −y ≡1 mod 4.
+29
+In the following, we will show that Kθ enjoys the properties of an H3(F3)-
+extension over k associated to {p1, p2}.
+Theorem 5.11.
+We assume the condition (A).
+Then the following as-
+sertions hold.
+(1) We have Kθ = k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)), where θ(1) := θ = ζc
+3(α(1))2α(2), θ(2) :=
+τ(θ) = ζc
+3(α(2))2α(3), and θ(3) := τ 2(θ) = ζc
+3(α(3))2α(1).
+(2) The extension Kθ/k is Galois. This extension is unramiﬁed outside p1
+and p2 and the ramiﬁcation index of each pi is 3.
+(3) The Galois group Gal(Kθ/k) is isomorphic to H3(F3).
+Proof. (1) k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)) ⊂Kθ: Since
+3√π2,
+3√
+θ(1) ∈Kθ and we see
+θ(1)(θ(2))2 = π2
+2(α(2)β)3 and θ(1)θ(2) = (θ(3))2(α(2)/α(3))3,
+we have
+3√
+θ(2),
+3√
+θ(3) ∈Kθ and hence the assertion is proved.
+Kθ ⊂k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)): Writing θ = x + y 3√π1 + z( 3√π1)2, we have
+ζ3θ(1) + θ(2) + ζ2
+3θ(3) = 3ζ3y 3√π1.
+So,
+3√π1 ∈k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)) if y ̸= 0. If y = 0, then z ̸= 0 and ζ3θ(1) +
+θ(2) = (1 + ζ3)x −z( 3√π1)2.
+Hence
+3√π1 ∈k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)).
+Using
+θ(1)(θ(2))2 = π2
+2(α(2)β)3 again, we have
+3√π2 ∈k(
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3)). Thus
+the assertion is proved.
+(2) Since Kθ is the splitting ﬁeld of Π3
+i=1(T 3 −θ(i)) ∈Ok[T], Kθ is a Galois
+extension over k. We shall show that only p1 and p2 are ramiﬁed in Kθ/k
+with ramiﬁcation index 3.
+Since
+3√
+θ /∈K1 by Theorem 5.7 (2), we have
+[K1(
+3√
+θ) : K1] = 3. Let ξ := √−3(η −
+3√
+θ)/3. Then ξ ∈OK1( 3√
+θ), since ξ
+satisﬁes ξ3 −√−3ηξ2 −η2ξ + √−3(η3 −θ)/9 = 0 and √−3(η3 −θ)/9 ∈OK1
+by η3 ≡θ (mod 3√−3)(Assumption (A) ). The relative discriminant of ξ in
+K1(
+3√
+θ)/K1 is computed as
+d(ξ, K1(
+3√
+θ)/K1) =
+
+1
+ξ(1)
+(ξ(1))2
+1
+ξ(2)
+(ξ(2))2
+1
+ξ(3)
+(ξ(3))2
+
+2
+= −θ2
+27
+
+1
+1
+1
+1
+ζ3
+ζ2
+3
+1
+ζ2
+3
+ζ3
+
+2
+= θ2,
+where ξ(1) := ξ, ξ(2) := √−3(η −ζ3
+3√
+θ)/3 and ξ(3) := √−3(η −ζ2
+3
+3√
+θ)/3. So,
+only P(1) and P(2) are ramiﬁed in K1(
+3√
+θ)/K1. Similarly, only P(2) and P(3)
+30
+are ramiﬁed in K1(
+3√
+θ(2))/K1. Since Kθ = K1(
+3√
+θ(1)) · K1(
+3√
+θ(2)) and only p1
+is ramiﬁed in K1/k, we conclude that only p1 and p2 are ramiﬁed in Kθ/k
+and their ramiﬁcation indices are 3.
+(3) First, we show [Kθ : k] = 27.
+By (2), K1(
+3√
+θ)/K1 is a cyclic exten-
+sion of degree 3 where only P(1) and P(2) are ramiﬁed. By Theorem 3.5,
+K1( 3√π2)/K1 is a cyclic extension of degree 3 where only P(i) (1 ≤i ≤3)
+are ramiﬁed. So, K1(
+3√
+θ) ∩K1( 3√π2) = K1. Since Kθ = K1(
+3√
+θ) · K1( 3√π2),
+[Kθ : K1] = [K1(
+3√
+θ) : K1][K1( 3√π2) : K1] = 9.
+Hence [Kθ : k] = [Kθ :
+K1][K1 : k] = 27.
+By the computer calculation using [GAP], we have the following presen-
+tation of the group H3(F3):
+H3(F3)
+=
+
+g1, g2, g3
+
+g3
+1 = g3
+2 = g3
+3 = 1
+g3g2g1 = g1g2, g3g1 = g1g3, g3g2 = g2g3
+
+= ⟨g1, g2 | g3
+1 = g3
+2 = (g1g2
+2)3 = (g2
+1g2
+2)3 = 1⟩,
+where g1, g2 and g3 are words representing the following matrices respectively:
+g1 =
+
+
+1
+1
+0
+0
+1
+0
+0
+0
+1
+
+, g2 =
+
+
+1
+0
+0
+0
+1
+1
+0
+0
+1
+
+, g3 =
+
+
+1
+0
+1
+0
+1
+0
+0
+0
+1
+
+(= [g1, g2]).
+On the other hand, we deﬁne γ1, γ2, γ3 ∈Gal(Kθ/k) by
+(5.11.1)
+γ1 :
+( 3√π1,
+3√π2,
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3))
+7→(ζ3
+3√π1,
+3√π2,
+3√
+θ(2),
+3√
+θ(3),
+3√
+θ(1))
+γ2 :
+( 3√π1,
+3√π2,
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3))
+7→( 3√π1, ζ3 3√π2,
+3√
+θ(1), ζ2
+3
+3√
+θ(2), ζ3
+3√
+θ(3))
+γ3 :
+( 3√π1,
+3√π2,
+3√
+θ(1),
+3√
+θ(2),
+3√
+θ(3))
+7→( 3√π1,
+3√π2, ζ3
+3√
+θ(1), ζ3
+3√
+θ(2), ζ3
+3√
+θ(3)).
+Then we have
+γ3
+1 = γ3
+2 = γ3
+3 = id, γ3γ2γ1 = γ1γ2, γ3γ1 = γ1γ3 and γ3γ2 = γ2γ3,
+equivalently,
+(5.11.2)
+γ3 = [γ1, γ2], γ3
+1 = γ3
+2 = (γ1γ2
+2)3 = (γ2
+1γ2
+2)3 = 1.
+Thus the correspondence gi 7→γi (i = 1, 2) gives a homomorphism κ :
+H3(F3) →Gal(Kθ/k). Since we easily see that the ﬁxed subﬁelds of Kθ by
+31
+⟨γ2⟩and ⟨γ2
+3⟩are K1(
+3√
+θ) and K1( 3√π2), respectively, Gal(Kθ/k) is generated
+by γ1 and γ2, and so κ is surjective. Since H(F3) and Gal(Kθ/k) have the
+same order 27, κ is an isomorphism.
+✷
+All subgroups of Gal(Kθ/k) and the corresponding subﬁelds of Kθ are il-
+lustrated as follows.
+k
+k( 3√π1π2)
+K2
+k(
+3p
+π1π2
+2)
+K1
+K1( 3√π2)
+L1
+L2
+L3
+L4
+L5
+L6
+L7
+L8
+L9 K1(
+3√
+θ)L10
+L11
+Kθ
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❍
+❍
+❍
+❍
+❍
+❍
+✟✟✟✟✟
+✟
+✘✘✘✘✘✘✘✘✘✘✘
+❅
+❅
+❅
+   ✟✟✟✟✟
+✟
+   ❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+✘✘✘✘✘✘✘✘✘✘✘
+❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+   ✟✟✟✟✟✟
+❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+P
+P
+P
+P
+P
+P
+P
+P
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+   ✟✟✟✟✟✟
+✏✏✏✏✏✏✏✏
+✘✘✘✘✘✘✘✘✘✘✘
+✥✥✥✥✥✥✥✥✥✥✥✥✥✥
+✭✭✭✭✭✭✭✭✭✭✭✭✭✭✭✭
+H3(F3)
+⟨γ1, γ3⟩
+⟨γ2γ2
+1, γ2
+3⟩
+⟨γ2γ1, γ2
+3⟩
+⟨γ2, γ2
+3⟩
+⟨γ2
+3⟩
+⟨h1⟩⟨h2⟩⟨γ1⟩⟨h4⟩⟨h5⟩⟨h6⟩
+⟨h7⟩⟨h8⟩⟨h9⟩⟨γ2⟩⟨h10⟩⟨h11⟩
+{1}
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❍
+❍
+❍
+❍
+❍
+❍
+✟✟✟✟✟
+✟
+✘✘✘✘✘✘✘✘✘✘✘
+❅
+❅
+❅
+   ✟✟✟✟✟
+✟
+   ❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+✘✘✘✘✘✘✘✘✘✘✘
+❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+   ✟✟✟✟✟✟
+❅
+❅
+❅
+❍
+❍
+❍
+❍
+❍
+❍
+P
+P
+P
+P
+P
+P
+P
+P
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❳
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❵
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+❤
+   ✟✟✟✟✟✟
+✏✏✏✏✏✏✏✏
+✘✘✘✘✘✘✘✘✘✘✘
+✥✥✥✥✥✥✥✥✥✥✥✥✥✥
+✭✭✭✭✭✭✭✭✭✭✭✭✭✭✭✭
+where hi are words representing the following elements respectively:
+h1 = γ1γ2
+3, h2 = γ1γ3, h4 = γ2γ2
+1, h5 = γ2γ2
+1γ2
+3, h6 = γ2γ2
+1γ3,
+h7 = γ2γ1, h8 = γ2γ1γ2
+3, h9 = γ2γ1γ3, h10 = γ2γ2
+3, h11 = γ2γ3.
+Corollary 5.12. Assume condition (A). Then we have
+K{p1,p2} = Kθ.
+In particular, Kθ is independent of the choice of θ.
+32
+Proof. This follows from Theorem 4.1 and Theorem 5.11.
+✷
+Corollary 5.9 and Corollary 5.12 yield a constructive proof of Proposition
+4.2.
+6. Triple cubic residue symbols
+In this section, we introduce the triple cubic residue symbol in terms of
+the mod 3 triple Milnor invariant. Then we interpret it arithmetically by us-
+ing the concrete construction Kθ of K{p1,p2} in Section 5. It may be regarded
+as a cubic generalization of R´edei’s triple symbol.
+Let p1, p2 and p3 be distinct primes in S1 mod 9
+k
+and let πi be the unique
+prime element in pi satisfying πi ≡1 mod (3√−3) (i = 1, 2, 3) as in Lemma
+1.1. We assume that
+(6.1)
+πi
+πj
+
+3
+= 1
+(1 ≤i ̸= j ≤3).
+Moreover, we assume that there exists a R´edei type H3(F3)-extension K{p1,p2}
+of k for {p1, p2}. By Theorem 4.4, the mod 3 triple Milnor invariant µ3(123)
+is well-deﬁned.
+Deﬁnition 6.2.
+We deﬁne the triple cubic residue symbol [p1, p2, p3]3 of
+p1, p2 and p3 by
+[p1, p2, p3]3 = ζµ3(123)
+3
+.
+We shall describe [p1, p2, p3]3 arithmetically, by using the concrete con-
+struction given in Section 5 of the R´edei type H3(F3)-extension K{p1,p2} of k
+for {p1, p2}. Let θ ∈OK1 be as in Theorem 5.7 and we assume the condition
+(A), so that we have
+K{p1,p2} = Kθ := k( 3√π1,
+3√π2,
+3√
+θ).
+Let eP3 be a prime of K3 lying over p3. Since eP3 is unramiﬁed in K{p1,p2}/k,
+we have the Frobenius automorphism
+ K{p1,p2}/k
+eP3
+
+∈Gal(K{p1,p2}/k). Since p3
+33
+splits completely in k( 3√π1,
+3√π2) by the assumption (6.1), we have
+K{p1,p2}/k
+eP3
+
+∈
+⟨γ3⟩. Since γ3 is in the center of Gal(K{p1,p2}/k), the Frobenius automorphism
+K{p1,p2}/k
+eP3
+
+is independent of the choice of eP3 lying over p3 and so we denote
+it by
+K{p1,p2}/k
+p3
+
+.
+Theorem 6.3. Notations being as above, we have
+[p1, p2, p3]3
+=
+K{p1,p2}/k
+p3
+
+(
+3√
+θ)
+3√
+θ
+=
+
+
+
+
+
+
+
+
+
+1
+K{p1,p2}/k
+p3
+
+= idR{p1,p2},
+ζ3
+K{p1,p2}/k
+p3
+
+= γ3 = [γ1, γ2],
+ζ2
+3
+K{p1,p2}/k
+p3
+
+= γ2
+3 = [γ2, γ1],
+where γ1, γ2, γ3 ∈Gal(K{p1,p2}/k) are as in (5.11.1).
+Proof. The latter equality follows from the deﬁnition (5.11.1) of γi’s. We
+shall prove the former equality. Let us choose a prime p0 ∈S4,7 mod 9
+k
+and
+set S := {p0, p1, p2, p3}. Then, by Theorem 1.10, the Galois group GS of the
+maximal pro-3 extension kS over k unramiﬁed outside S has the following
+presentation:
+GS = ⟨x1, x2, x3 | xNp1−1
+1
+[x1, y1] = xNp2−1
+2
+[x2, y2] = xNp3−1
+3
+[x3, y3] = 1⟩,
+where xi is the letter representing a monodromy τi over pi in kS/k and yi
+is the free pro-3 word of x1, x2, x3 representing a Frobenius automorphism
+σi over pi in kS/k.
+Let F3 be the free pro-3 group on x1, x2, x3 and let
+ψ : F3 →GS be the natural homomorphism. Since K{p1,p2} ⊂kS, we have
+the quotient homomorphism ΦS : GS →Gal(K{p1,p2}/k). Let ϕ := ΦS ◦ψ :
+F3 →Gal(K{p1,p2}/k).
+Since we may assume τi|K{p1,p2} = γi (i = 1, 2) by
+Theorem 2.4, we have
+ϕ(x1) = γ1,
+ϕ(x2) = γ2,
+ϕ(x3) = 1,
+and we have
+ϕ(y3) =
+K{p1,p2}/k
+p3
+
+.
+34
+By (5.11.2), the relations among γ1 and γ2 are equivalent to the following
+relations:
+ϕ(x1)3 = ϕ(x2)3 = 1,
+ϕ(x3) = 1,
+ϕ(x1x2
+2)3 = ϕ(x2
+1x2
+2)3 = 1,
+and so Ker(ϕ) is generated as a normal subgroup of F3 by
+x3
+1, x3
+2, x3, (x1x2
+2)3 and (x2
+1x2
+2)3.
+Let Θ3 : F3 →F3⟨⟨X1, X2, X3⟩⟩× be the Magnus embedding of F3 over F3.
+Then we have
+Θ3((x1)3) = (1 + X1)3 = 1 + X3
+1,
+Θ3((x2)3) = (1 + X2)2 = 1 + X3
+2,
+Θ3((x3)) = 1 + X3,
+Θ3((x1x2
+2)3) = ((1 + X1)(1 + X2)2)3 ≡1 mod deg ≥3,
+Θ3((x2
+1x2
+2)3) = ((1 + X1)2(1 + X2)2)3 ≡1 mod deg ≥3.
+Therefore µ3((1); ∗), µ3((2); ∗), µ3((12); ∗) take their values 0 on Ker(ϕ).
+Case
+ K{p1,p2}/k
+p3
+
+= id: Then ϕ(y3) = 1 and µ3(123) = µ3((12); y3) = 0 by
+y3 ∈Ker(ϕ).
+Case
+ K{p1,p2}/k
+p3
+
+= [γ1, γ2]: Then ϕ(y3) = [γ1, γ2] = ϕ([x1, x2]) and so we
+can write y3 = [x1, x2]f for some f ∈Ker(ϕ). Comparing the coeﬃcients of
+X1X2 in the equality Θ3(y3) = Θ3([x1, x2])Θ3(f), we have
+µ3(123)
+= µ3((12); y3)
+= µ3((12); [x1, x2]) + µ3((1); [x1, x2])µ3((2); f) + µ3((12); f)
+= µ3((12); [x1, x2])
+= 1.
+Case
+K{p1,p2}/k
+p3
+
+= [γ2, γ1]: Then ϕ(y3) = [γ2, γ1] = ϕ([x2, x1]) and so we can
+write y3 = [x2, x1]f ′ for some f ′ ∈Ker(ϕ). Then comparing the coeﬃcients
+of X1X2 in the equality Θ3(y3) = Θ3([x2, x1])Θ3(f ′), we have
+µ3(123)
+= µ3((12); y3)
+= µ3((12); [x2, x1]) + µ3((1); [x2, x1])µ3((2); f ′) + µ3((12); f ′)
+= µ3((12); [x2, x1])
+= −1 = 2. ✷
+35
+Example 6.4. Let (π1, π2) := (−17, −53). Then we have
+
+
+
+α(1) = α = 8 −3
+3√
+17,
+α(2) = 8 −3ζ3
+3√
+17,
+α(3) = 8 −3ζ2
+3
+3√
+17,
+
+
+
+θ(1) = θ = (α(1))2α(2),
+θ(2) = (α(2))2α(3),
+θ(3) = (α(3))2α(1).
+Then we easily see that θ satisﬁes (1), (2) in Theorem 5.7. Since α(1) ≡α(2)
+mod (3√−3), α3 ≡θ mod (3√−3) and so the condition (A) is also satisﬁed.
+Hence
+K{p1,p2} = k( 3√π1,
+3√π2,
+3√
+θ).
+Suppose π3 = −71, −89, −107, −179, −197. Then we have
+[(17), (53), (71)]3 = ζ2
+3, [(17), (53), (89)]3 = ζ3, [(17), (53), (107)]3 = ζ2
+3,
+[(17), (53), (179)]3 = ζ3, [(17), (53), (197)]3 = ζ3.
+The right hand side of the equality in Theorem 6.3 depends on the choice of
+θ and the order of p1 and p2. The mod 3 Milnor invariant µ3(213) is well
+deﬁned as in Section 4 and hence the triple cubic residue symbol [p2, p1, p3]3
+is deﬁned. Then the shuﬄe relation (2.1.2) yields the following.
+Proposition 6.5. Notations and assumptions being as above, we have
+[p1, p2, p3]3 = [p2, p1, p3]−1
+3 .
+7. Triple Massey products
+In this section, we give a cohomological interpretation of the triple cubic
+residue symbols in terms of the triple Massey product in Galois cohomology.
+Our theorem is seen as a generalization of the known relation between the
+cup product and the cubic residue symbol to the triple case, and also a gen-
+eralization of the previous result by the second author ([Mo3], [V]) in the
+case of the rational number ﬁeld to the Eisenstein number ﬁeld. It may be
+regarded as a mod 3 arithmetic analogue of the corresponding topological
+result due to Turaev ([Tu]).
+36
+Let G be a pro-l group (l being a prime number) and let R be a com-
+mutative ring with identity on which G acts trivally. Let Cj(G, R) be the
+R-module of inhomogeneous j-cochains (j ≥0) of G with coeﬃcients in
+R and we consider the diﬀerential graded algebra (C•(G, R), d), where the
+product structure on C•(G, R) = L
+j≥0 Cj(G, R) is given by the cup product
+and the diﬀerential d is the coboundary operator. Then we have the coho-
+mology H∗(G, R) = H∗(C•(G, R)) of the pro-l group G with coeﬃcients in
+R. In the following, we consider Massey products in H1(G, R). For the sign
+convention, we follow [Dw].
+Let χ1, . . . , χn ∈H1(G, R) (n ≥2). An n-th Massey product ⟨χ1, . . . , χn⟩
+is said to be deﬁned if there is an array
+Ω= {ωij ∈C1(G, R) | 1 ≤i < j ≤n + 1, (i, j) ̸= (1, n + 1)}
+such that
+
+
+
+
+
+[ωi,i+1] = χi (1 ≤i ≤n),
+dωij =
+j−1
+X
+a=i+1
+ωia ∪ωaj (j ̸= i + 1).
+Such an array Ωis called a deﬁning system for ⟨χ1, . . . , χn⟩.
+The value
+of ⟨χ1, . . . , χn⟩relative to Ω, denoted by ⟨χ1, . . . , χn⟩Ω, is deﬁned by the
+cohomology class represented by the 2-cocycle
+n
+X
+a=2
+ω1a ∪ωa,n+1.
+We deﬁne the Massey product ⟨χ1, . . . , χn⟩to be the subset of H2(G, R) con-
+sisting of elements ⟨χ1, . . . , χn⟩Ωfor some deﬁning system Ω. By convention,
+⟨χ⟩= 0. We recall the following basic fact (cf. [Kr]).
+Lemma 7.2.
+We have ⟨χ1, χ2⟩= χ1 ∪χ2.
+For n ≥3, ⟨χ1, . . . , χn⟩is
+deﬁned and consists of a single element if ⟨χj1, . . . , χja⟩= 0 for all proper
+subsets {j1, . . . , ja} (a ≥2) of {1, . . . , n}. (In this case, we denote the single
+element by ⟨χ1, . . . , χn⟩.)
+Next, we recall a relation between Massey products and Magnus coeﬃ-
+cients. Suppose that G is a ﬁnitely generated pro-l group with a minimal
+presentation
+1 −→N −→FN
+ψ
+−→G −→1,
+37
+where FN is a free pro-l group ongenerators x1, . . . , xN with N = dimFlH1(G, Fl).
+We set τi := ψ(xi) (1 ≤i ≤N). We assume that ψ induces the isomorphism
+FN/Φ(FN) ≃G/Φ(G) so that ψ induces the isomorphism ψ∗: H1(G, Fl) ≃
+H1(FN, Fl). We let
+tg : H1(N, Fl)G →H2(G, Fl)
+be the transgression deﬁned as follows. For a ∈H1(N, Fl)G, choose a 1-
+cochain b ∈C1(FN, Fl) such that b|N = a. Since the value db(f1, f2), fi ∈FN,
+depends only on the cosets fi mod N, db deﬁnes a 2-cocyle c of G. Then
+tg(a) is deﬁned by the class of c. By the Hochschild-Serre spectral sequence,
+tg is an isomorphism and so we have the dual isomorphism, called the Hopf
+isomorphism,
+tg∨: H2(G, Fl)
+∼→H1(N, Fl)G = N/Nl[N, FN].
+Then we have the following Proposition (cf. [St; Lemma 1.5], [V; Theorem
+A.3]). The proof goes in the same manner as in [Mo3; Theorem 2.2.2].
+Proposition 7.3.
+Notations being as above, let χ1, . . . , χn ∈H1(G, Fl)
+(n ≥2).
+Let f ∈N and set δ := (tg∨)−1(f mod Nl[N, FN]).
+Assume
+that all Massey products up to length n −1 are trivial. Then N ⊂F(n)
+N
+and
+we have
+⟨χ1, . . . , χn⟩(δ) = (−1)n+1
+X
+I=(i1···in)
+1≤i1,...,in≤N
+χ1(xi1) · · ·χn(xin)µl(I; f).
+Let us be back in our arithmetic situation and keep the same notations as
+in Section 4. So let k be the Eisenstein number ﬁeld and let S0 := {p1, p2, p3}
+be a set of 3 distinct primes in S1 mod 9
+k
+. As in Lemma 1.1, we choose the
+unique prime element πi of pi such that πi ≡1 mod (3√−3) (1 ≤i ≤3).
+Choose a prime p0 ∈S4,7 mod 9
+k
+and set S := S0 ∪{p0}. By Theorem 1.10, we
+have the following minimal presentation of the Galois group GS of maximal
+pro-3 extension over k unramiﬁed outside S
+GS
+= ⟨x1, x2, x3 | xNp1−1
+1
+[x1, y1] = xNp2−1
+2
+[x2, y2] = xNp3−1
+3
+[x3, y3] = 1⟩
+= F3/NS.
+Here xi denotes a letter representing a monodromy τi over pi in kS/k (1 ≤
+i ≤3) and F3 denotes the free pro-3 group on x1, x3, x3. The pro-3 word yi
+38
+represents a Frobenius automorphism σi over pi in kS/k and NS denotes the
+closed subgroup of Fr generated normally by xNpi−1
+i
+[xi, yi] for 1 ≤i ≤3. We
+set δi := (tg∨)−1(xNpi−1
+i
+[xi, yi]), where tg∨: H2(GS, F3)
+∼→NS/N3
+S[NS, F3] is
+the Hopf isomorphism. Let χ1, χ2, χ3 ∈H1(GS, F3) be the Kronecker dual
+to the monodromies τ1, τ2, τ3, namely, χi(τj) = δi,j.
+Proposition 7.4. Notations being as above, we have, for 1 ≤i ̸= j ≤3,
+πi
+πj
+
+3
+= ζ
+⟨χi,χj⟩(δj)
+3
+,
+πj
+πi
+
+3
+= ζ
+−⟨χi,χj⟩(δi)
+3
+.
+Proof. By Proposition 7.3 and the proof of (2.4.2), we have
+⟨χi, χj⟩(δa)
+= −µ3((ij); xNpa−1
+a
+[xa, ya])
+=
+
+
+
+µ3(ij)
+a = j,
+−µ3(ji)
+a = i,
+0
+a ̸= i, j.
+The assertion follows from Theorem 3.6.
+✷
+We assume that
+⟨χi, χj⟩= 0 (1 ≤i ̸= j ≤3),
+which is equivalent to the condition
+πi
+πj
+
+3
+= 1 (1 ≤i ̸= j ≤3)
+by Proposition 7.4, and we assume that the mod 3 Milnor invariants µ3(abc)
+({a, b, c} = {1, 2, 3}) are well deﬁned (cf. Theorem 4.4). By the deﬁnition of
+Massey products and Lemma 7.2, there are 1-cochains ω13, ω24 ∈C1(GS, F3)
+such that
+⟨χ1, χ2⟩= dω13, ⟨χ2, χ3⟩= dω24,
+and we have the triple Massey product ⟨χ1, χ2, χ3⟩deﬁned by
+⟨χ1, χ2, χ3⟩= [χ1 ∪ω24 + ω13 ∪χ3].
+Theorem 7.5. Assume that
+πi
+πj
+
+3
+= 1 (1 ≤i ̸= j ≤3).
+39
+Then we have
+[p1, p2, p3]3 = ζ−⟨χ1,χ2,χ3⟩(δ3)
+3
+, [p2, p3, p1]3 = ζ⟨χ1,χ2,χ3⟩(δ1)
+3
+.
+Proof. By Proposition 7.3 and the proof of (2.4.2), we have
+⟨χ1, χ2, χ3⟩(δa)
+= µ3((123); xNpa−1
+a
+[xa, ya])
+=
+
+
+
+−µ3(123)
+a = 3,
+µ3(231)
+a = 1,
+0
+a ̸= 1, 3.
+By Theorem 6.4, we obtain the assertion.
+✷
+References
+[A1] F. Amano, On R´edei’s dihedral extension and triple reciprocity law, Proc.
+Japan Acad., 90, Ser. A (2014), 1–5.
+[A2] F. Amano, On a certain nilpotent extension over Q of degree 64 and the
+4-th multiple residue symbol, Tohoku Math. J. 66 No.4 (2014), 501 –522.
+[A3] F. Amano, Arithmetic of nilpotent extensions and multiple residue
+symbols, Thesis, Kyushu University, 2014.
+[B] B. J. Birch, Cyclotomic ﬁelds and Kummer extensions, In:Algebraic Number
+Theory (Proc. Instructional Conf., Brighton, 1965), pages 85–93. Thompson,
+Washington, D.C., 1967.
+[CFL] K. T. Chen, R. H. Fox and R. C. Lyndon, Free diﬀerential calculus. IV.
+The quotient groups of the lower central series, Ann. of Math. (2) 68 (1958),
+81–95.
+[DDMS] J. D. Dixon, M. P. F. du Sautoy, A. Mann, D. Segal, Analytic pro-p
+groups, Second edition. Cambridge Studies in Advanced Mathematics, 61,
+Cambridge University Press, Cambridge, 1999.
+[Dw] W. G. Dwyer, Homology, Massey products and maps between groups, J.
+Pure Appl. Algebra 6, (1975), no. 2, 177–190.
+[F¨o] A. Fr¨ohlich, A prime decomposition symbol for certain non Abelian number
+ﬁelds, ActaSci. Math., 21 (I960), 229–246.
+[Fu] Y. Furuta, A prime decomposition symbol for a nonabelian central
+extension which is abelian over a bicyclic biquadratic ﬁeld, Nagoya Math. J. 79
+(1980), 79–109.
+[GAP] The GAP Group, GAP — Groups, Algorithms, and Programming, ver.
+4.7.8, 2015.
+40
+[G] C. F. Gauss, Disquisitiones arithmeticae, Translated into English by A.
+Arthur, S. J. Clarke, Yale University Press, New Haven, Conn.-London 1966.
+[H] T. Honda, Pure cubic ﬁelds whose class numbers are multiples of three, J.
+Number Theory 3 (1971), 7–12.
+[Ih] Y. Ihara, On Galois representations arising from towers of coverings of
+P1 \ {0, 1, ∞}, Invent. Math. 86 (1986), no. 3, 427–459.
+[Iw1] K. Iwasawa, A note on class numbers of algebraic number ﬁelds, Abh.
+Math. Sem. Hamburg, 20 (1956), 257–258.
+[Iw2] K. Iwasawa, On Galois groups of local ﬁelds, Trans. Amer. Math. Soc. 80
+(1955), 448–469.
+[Ka] M. Kapranov, Analogies between number ﬁelds and 3-manifolds,
+unpublished note (1996), Max Planck Institute.
+[Ko] H. Koch, Galoissche Theorie der p-Erweiterungen, Springer-Verlag,
+Berlin-New York; VEB Deutscher Verlag der Wissenschaften, Berlin, 1970.
+[Kr] D. Kraines, Massey higher products, Trans. Amer. Math. Soc. 124 (1966),
+431–449.
+[L] F. Lemmermeyer, The ambiguous class number formula revisited, J.
+Ramanujan Math. Soc. 28 (2013), no. 4, 415-421.
+[Mi1] J. Milnor, Link groups, Ann. of Math. 59 (1954), 177–195.
+[Mi2] J. Milnor, Isotopy of links, in Algebraic Geometry and Topology, A
+symposium in honor of S. Lefschetz ( edited by R.H. Fox, D.C. Spencer and
+A.W. Tucker), 280–306 Princeton University Press, Princeton, N.J., 1957.
+[Mo1] M. Morishita, Milnor’s link invariants attached to certain Galois groups
+over Q, Proc. Japan Acad. Ser, A 76 (2000), 18–21.
+[Mo2] M. Morishita, On certain analogies between knots and primes, J. Reine
+Angew. Math. 550 (2002), 141–167.
+[Mo3] M. Morishita, Milnor invariants and Massey products for prime numbers,
+Compos. Math., 140 (2004), 69–83.
+[Mo4] M. Morishita, Knots and Primes - An introduction to arithmetic topology,
+Universitext, Springer, London, 2012.
+[Mu] K. Murasugi, Nilpotent coverings of links and Milnor’s invariant,
+Low-dimensional topology (Chelwood Gate, 1982), 106-142 London Math. Soc.
+Lecture Note Ser., 95, Cambridge Univ. Press, Cambridge-New York 1985.
+[O] T. Oda, Note on meta-abelian quotients of pro-l free groups, (1985), preprint.
+[Pari-gp] The PARI Group, PARI/GP version 2.7.4, Univ. Bordeaux, 2015.
+[Rd] L. R´edei, Ein neues zahlentheoretisches Symbol mit Anwendungen auf die
+Theorie der quadratischen Zahlk¨orper I, J. Reine Angew. Math., 180 (1939),
+1-43.
+[Rz] A. Reznikov, Embedded incompressible surfaces and homology of ramiﬁed
+coverings of three-manifolds, Selecta Math. (N.S.) 6 (2000), no. 1, 1–39.
+41
+[Se] J.-P. Serre, Corps locaux, Publications de l’Universit´e de Nancago, No. VIII.
+Hermann, Paris, 1968.
+[St] D. Stein, Massey products in the cohomology of groups with applications to
+link theory, Trans. Amer. Math. Soc. 318 (1990), 301–325.
+[Ta] J. Tate, Global class ﬁeld theory, In:Algebraic Number Theory (Proc.
+Instructional Conf., Brighton, 1965), pages 162 – 203. Thompson, Washington,
+D.C., 1967.
+[Tu] V. Turaev, The Milnor invariants and Massey products, (Russian) Studies
+in topology, II. Zap. Nauˇcn. Sem. Leningrad. Otdel. Mat. Inst. Steklov.
+(LOMI) 66, (1976), 189–203, 209–210.
+[V] D. Vogel, On the Galois group of 2-extensions with restricted ramiﬁcation, J.
+Reine Angew. Math. 581 (2005), 117–150.
+[Y] H. Yokoi, On the class number of a relatively cyclic number ﬁeld, Nagoya
+Math. J. 29 1967 31–44.
+Fumiya Amano
+2077-1, Jyuni-cho, Ibusuki, Kagoshima, 891-0403, JAPAN
+e-mail: ca-solitudeam.p@ezweb.ne.jp
+Yasushi Mizusawa
+Department of Mathematics, Nagoya Institute of Technology
+Gokiso, Showa, Nagoya, Aichi, 66-8555 JAPAN
+e-mail: mizusawa.yasushi@nitech.ac.jp
+Masanori Morishita
+Faculty of Mathematics, Kyushu University
+744, Motooka, Nishi-ku, Fukuoka, 819-0395, JAPAN
+e-mail: morisita@math.kyushu-u.ac.jp
+42
