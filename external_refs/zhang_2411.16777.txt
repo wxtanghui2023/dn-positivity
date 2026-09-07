@@ -1,0 +1,2044 @@
+Equivalence between the zero distributions of the Riemann zeta function and a 
+two-dimensional Ising model with randomly distributed competing interactions  
+Zhidong Zhang  
+Shenyang National Laboratory for Materials Science, Institute of Metal Research, 
+Chinese Academy of Sciences, 72 Wenhua Road, Shenyang, 110016, P.R. China 
+Abstract 
+In this work, we prove the equivalence between the zero distributions of the 
+Riemann zeta function ζ(s) and the partition function of a two-dimensional (2D) 
+Ising model with a mixture of ferromagnetic and randomly distributed competing 
+interactions. At first, we review briefly the characteristics of the Riemann hypothesis 
+and its connections to physics, in particular, to statistical physics. Second, we build a 
+2D Ising model, 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+, in which interactions between the nearest neighboring 
+spins are ferromagnetic along one crystallographic direction while competing 
+ferromagnetic/antiferromagnetic interactions are randomly distributed along another 
+direction. Third, we prove that all energy eigenvalues of this 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ 
+are real and randomly distributed as the Möbius function μ(n), the Dirichlet L(𝑠, 𝜒𝑘) 
+function as well as the Riemann zeta function ζ(s). Fourth, we prove that the 
+eigenvectors of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are constructed by the eigenvectors of 
+the 1D Ising model with phases related to the Riemann zeta function 𝜁(𝑠), via the 
+relation 𝜔1(𝛾2𝑗) between the angle 𝜔1 and the energy eigenvalues 𝛾2𝑗, which 
+form the Hilbert-Pólya space. Fifth, we prove that all the zeros of the partition 
+function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ lie on a unit circle in a complex temperature 
+plane (i.e. Fisher zeros), which can be mapped to the zero distribution of the Dirichlet 
+L(𝑠, 𝜒𝑘) function and also the Riemann zeta function ζ(s) in the critical line. In a 
+conclusion, we have proven the closure of the nontrivial zero distribution of the 
+L(𝑠, 𝜒𝑘) function (including the Riemann zeta function 𝜁(𝑠)).  
+ 
+Keywords: 2D Ising model; Riemann zeta function; zeros; energy eigenvalues; 
+eigenvectors; partition function; zero distribution; Hilbert-Pólya conjecture; Riemann 
+hypothesis 
+ 
+Mathematics Subject Classification: 82B20,82B44, 11M26, 11A41 
+ 
+The corresponding author: Z.D. Zhang,  
+Tel: 86-24-23971859,  
+Fax: 86-24-23891320,  
+e-mail address: zdzhang@imr.ac.cn 
+ 
+ 
+1.Introduction 
+The Riemann hypothesis is one of the most fundamental problems in mathematics, 
+which is connected to many problems in mathematics and physics. Euler [16] 
+revealed a series written as an infinite product over the prime numbers p. Riemann 
+expanded this function by the tools of complex analysis [54]. Hardy [23] proved that 
+infinitely many zeros lie on the critical line, but which is much weaker than the 
+Riemann’s conjecture, requiring all the nontrivial zeros to be on the critical line. 
+Borwein et al. [7] gave a mathematical introduction to the history of the Riemann 
+hypothesis and its equivalent statements. 
+Several approaches have attempted to solve the problem. 1) To find the nontrivial 
+zeros of the Riemann zeta function ζ(s) by computing projects. If anyone of the 
+nontrivial zeros were located off the critical line, one would disprove the Riemann’s 
+conjecture. But up to date, no such a nontrivial zero has been found. Although 100 
+billions nontrivial zeros have been found to lie on the critical line [20], it is too far for 
+proving/disproving the Riemann’s conjecture. 2) To determine how many percentage 
+of the nontrivial zeros lie on the critical line. Levinson [37] showed that at least 
+one-third of the nontrivial zeros are on the critical line which was later incrementally 
+improved to two-fifths [10]. Clearly, it is extremely difficult to prove the Riemann 
+hypothesis along this path. 3) To give the zero-density estimates for the Riemann zeta 
+function ζ(s). Let N(σ, T) be the number of zeroes of ζ(s) in the rectangle ℜ(s) ≥ σ 
+and |ℑ(s)| ≤ T. Ingham [28] proved the bound N(σ, T) ≤𝑇
+3(1−𝜎)
+2−𝜎+𝑜(1). Recently, Guth 
+and Maynard [22] deduced a zero density estimate N(σ, T) ≪𝑇
+15(1−𝜎)
+3+5𝜎+𝑜(1)  and 
+combing with Ingham’s estimate when   7/10 they obtained N(σ, T) ≤
+𝑇
+30(1−𝜎)
+13
++𝑜(1). However, this new advance is still far from the desired solution. 4) To 
+connect the Riemann zeta function ζ(s) with physical systems. The main obstacle of 
+the path is to find an appropriate model to satisfy the condition that the zero 
+distribution of the partition function is equivalent to the distribution of the nontrivial 
+zeros of the Riemann zeta function ζ(s). 
+ 
+On the other hand, the Ising model is one of the most fundamental models in 
+physics [29], which is associated with many problems in physics, mathematics and 
+computer science. The study of the mathematical structures of the Ising model is 
+helpful for a better understanding of other mathematical problems [52]. The present 
+author has solved two fundamental problems related with Ising models: the exact 
+solution 
+of 
+the 
+ferromagnetic 
+three-dimensional 
+(3D) 
+Ising 
+model 
+[64,71,73,74,76,80.81] and the computational complexity of the spin-glass 3D Ising 
+model [75,78,79,82]. In the first case, the exact solution has been supported by 
+experimental data [24,42,57,72] and Monte Carlo simulations [38,39]. In the second 
+case, the lower bound for the computational complexity of the spin-glass 3D Ising 
+model (and also the Boolean satisfiability problem) has been recognized by several 
+groups of computer scientists worldwide [30,41,50,56,69]. Because the Riemann 
+hypothesis is closely related with the statistical physics [59,67], I believe that the 
+Ising model may play an important role for solving the Riemann hypothesis. The key 
+is to set up a reliable Ising model, which has random distributions of energy 
+eigenvalues, eigenvectors and zeros of its partition function, and its zero distribution 
+is the same as that of the Riemann zeta function ζ(s).   
+The aim of this work is to prove the equivalence between the zero distributions of 
+the Riemann zeta function ζ(s) and a two-dimensional (2D) Ising model with a 
+mixture 
+of 
+ferromagnetic 
+and 
+randomly 
+distributed 
+competing 
+ferromagnetic/antiferromagnetic interactions. In section 2, we review briefly the 
+characteristics of the Riemann hypothesis and its connections to physics. In section 3, 
+we build a 2D Ising model with ferromagnetic interactions and randomly distributed 
+competing ferromagnetic/antiferromagnetic interactions along two crystallographic 
+directions respectively. We prove that all energy eigenvalues of this 2D Ising model 
+are real and randomly distributed as the L(𝑠, 𝜒𝑘) function as well as the Riemann 
+zeta function ζ(s) and that its eigenvectors are constructed by the eigenvectors of the 
+1D Ising model with phases related to the Riemann zeta function 𝜁(𝑠), via the 
+relation 𝜔1(𝛾2𝑗) between the angle 𝜔1 and the energy eigenvalues 𝛾2𝑗. We also 
+prove that all the zeros of the partition function of the 2D Ising model lie on a unit 
+circle in the parametric space of complex temperature (i.e. Fisher zeros), which can be 
+mapped to the zero distribution of the L(𝑠, 𝜒𝑘) function and also the Riemann zeta 
+function ζ(s) in the critical line. Namely, we have proven the closure of the 
+nontrivial zero distribution of the L(𝑠, 𝜒𝑘) function (including the Riemann zeta 
+function 𝜁(𝑠)).  
+ 
+2. Notation and characteristics of the Riemann hypothesis and its connections to 
+physics 
+Notation. 
+𝑝, 𝑝1, 𝑝2, 𝑝𝑟, 𝑝𝑛: a prime number. 
+q, X: an even number. 
+n, a: an integer number. 
+x: a number. 
+𝐿(𝑠, 𝜒𝑘): the Dirichlet function. 
+ζ(s): the Riemann zeta function. 
+μ(n): the Möbius function. 
+𝛬(𝑛): the von Mangoldt function. 
+𝑃(𝐽̃2): the Gaussian function. 
+𝜒𝑘(𝑛): a primitive Dirichlet character.  
+k, h: an integer modulo of the Dirichlet character. 
+𝑹: an operator. 
+𝑰: the unit matrix. 
+𝑯: a self-adjoint operator interpreted as a Hamiltonian of a physical system. 
+𝜌𝑘: the nontrivial zero of the Dirichlet function. 
+𝛾𝑘, E, 𝐸𝑛: the imaginary part of the Dirichlet function.  
+𝑠i,j: the Ising spin.  
+i, j, t, n, m: the lattice site. 
+𝐽, 𝐽0, 𝐽1, 𝐽2, 𝐽̃2: the interaction between spins. 
+𝐾, 𝐾1, 𝐾1
+∗, 𝐾̃2: the interaction variable with respect to temperature. 
+𝜇′(𝑖, 𝑗): a function imitating the Möbius function. 
+𝑘𝐵: the Boltzmann constant.  
+𝑇: temperature. 
+Z, 𝑍̅𝛼: the partition function. 
+, R: the replica of the spin-glass system. 
+V, V1, V2: the transfer matrix. 
+U: the boundary factor in the transfer matrix. 
+Γ2𝑗, 𝐶𝑗, 𝑠′𝑗: the matrix in the spinor representation. 
+𝜎1, 𝜎2, 𝜎3, 𝐶, s′, s′′: the Pauli matrix.  
+𝑹𝟎
+−: the rotation transformation matrix. 
+𝜶2𝑗, 𝒂, 𝒃, 𝒃∗: a matrix in the rotation transformation matrix. 
+𝛾2𝑗: an energy eigenvalue.  
+𝜔1, 𝛿′, 𝛿𝑡
+∗: an angle in a hyperbolic triangle in the 2D Poincaré disk model.  
+𝐸𝑗: an energy level. 
+𝑢2𝑗, 𝑣2𝑗: the 2nlo-normalized eigenvectors. 
+𝑣𝜃, 𝑣𝑐: the locus of the unit circle.  
+𝑥, 𝑥0, 𝑥1, 𝑢, 𝑣, 𝑠: a complex variable.  
+2.1 Riemann hypothesis 
+Using the fundamental theorem of arithmetic, Euler [16] revealed a series written 
+as an infinite product over the prime numbers, p,  
+ζ(k) = ∑1
+𝑛𝑘
+∞
+𝑛=1
+= ∏(1 −1
+𝑝𝑘)
+−1
+𝑝
+ 
+(1) 
+Riemann applied the tools of complex analysis to this function and proved that the 
+function defined by the infinite summation [54], 
+ζ(s) = ∑1
+𝑛𝑠
+∞
+𝑛=1
+ 
+(2) 
+can be analytically continued over the complex s plane, except for s = 1, which is 
+called the Riemann zeta function. Here, s denotes a complex number s = σ +
+it, where σ and t are real numbers and i is the imaginary unit. Riemann derived a 
+functional equation, containing the ζ(s) function, which is valid for all complex s 
+and exhibits mirror symmetry around the σ = 1/2 vertical line, called the critical 
+line, such that 
+𝜋−𝑠/2Γ (𝑠
+2) ζ(𝑠) = 𝜋−(1−𝑠)/2Γ (1 −𝑠
+2
+) ζ(1 −𝑠) 
+for s ∈ℂ{0,1} 
+(3) 
+Riemann’s Hypothesis [54]: All nontrivial zeros of the function ζ(𝑠) have the form 
+ = 1/2 + it, where t is a real number. In other words, all nontrivial zeros lie on the 
+critical line. 
+The prime number theorem states that the prime-counting function (x) 
+asymptotically behaves as the logarithmic integral Li(x) [58,66]: 
+π(x)~Li(x) ≔∫𝑑𝑢
+ln (𝑢)
+𝑥
+2
+≈
+𝑥
+ln (𝑥) 
+(4) 
+Then  (x) is given by the series via so called Möbius inversion formula [66]: 
+π(x) = ∑𝜇(𝑛)
+𝑛
+𝑛≥1
+𝐽(𝑥1/𝑛) 
+(5) 
+where the sum is in fact finite because it stops at such N that 𝑥1/𝑁> 2 >
+𝑥1/(𝑁+1) and J(x) is defined as 
+J(x) = π(x) + 1
+2 π(𝑥1/2) + 1
+3 π(𝑥1/3) + ⋯ 
+(6) 
+and μ(n) is the Möbius function 
+μ(n)
+= {
+1,       𝑓𝑜𝑟 𝑛= 1                                         
+0,       𝑤ℎ𝑒𝑛 𝑛 𝑖𝑠 𝑑𝑖𝑣𝑖𝑠𝑎𝑏𝑙𝑒 𝑏𝑦 𝑎 𝑠𝑞𝑢𝑎𝑟𝑒 𝑜𝑓 𝑎 𝑝𝑟𝑖𝑚𝑒 𝑝: 𝑝2
+(−1)𝑟,
+𝑤ℎ𝑒𝑟𝑒 𝑛= 𝑝1𝑝2 … 𝑝𝑟                                
+n 
+(7) 
+The distribution of prime numbers among the integers is a fundamental problem of 
+number theory (see, e.g. [48]). It is connected closely to the properties of Dirichlet L 
+functions (including the Riemann zeta function), defined via [7,63]  
+L(𝑠, 𝜒𝑘) ≔∑𝜒𝑘(𝑛)
+𝑛𝑠
+∞
+𝑛=1
+ 
+(8) 
+for Re(s) > 1 and by analytic continuation elsewhere, where 𝜒𝑘(𝑛) is a primitive 
+Dirichlet character: 𝜒𝑘(𝑛) is a number-theoretic character modulo k, defined by the 
+properties 𝜒𝑘(𝑚𝑛) = 𝜒𝑘(𝑚)𝜒𝑘(𝑛), 𝜒𝑘(𝑛) = 𝜒𝑘(𝑛+ 𝑘), 𝜒𝑘(1) = 1 for all integers, 
+and 𝜒𝑘(𝑛) = 0 for (k, n) ≠1. The Riemann zeta function is given by ζ(s): =
+L(s, 𝜒1). 
+The definition of μ(n) stems from the formula (2) and the Dirichlet series for the 
+reciprocal of the zeta function ζ(s) [7,11,33,66]: 
+1
+𝜁(𝑠) =
+∏
+(1 −
+1
+𝑝𝑠)
+𝑝=2,3,5,7…
+= ∑
+𝜇(𝑛)
+𝑛𝑠
+∞
+𝑛=1
+= 𝑠∫
+𝑀(𝑥)
+𝑥𝑠+1
+∞
+1
+𝑑𝑥   (𝑅𝑒(𝑠) > 1) 
+(9) 
+Then the number of primes up to x is obtained [66]: 
+π(x) = ∑𝜇(𝑛)
+𝑛
+(𝐿𝑖(𝑥1/𝑛) −∑𝐿𝑖(𝑥𝜌/𝑛)
+𝜌
+)
+𝑁
+𝑛=1
+ 
+(10) 
+since J(x) = Li(x) −∑𝐿𝑖(𝑥𝜌)
+𝜌
+. Here 
+M(x) ≔∑𝜇(𝑛)
+𝑛≤𝑥
+ 
+(11) 
+Thus a Mertens type estimate [33]: 
+M(x) = 𝑂𝜀(𝑥
+1
+2+𝜀) 
+(12) 
+for all > 0 would imply convergence of (9) in the half plane Re(s) > 1/2 and thus the 
+Generalized Riemann Hypothesis. 
+Generalized Riemann Hypothesis [7,9]: All nontrivial zeros of the Dirichlet 
+function L(𝑠, 𝜒𝑘) have real part equal to 
+1
+2. 
+According to the generalized Riemann hypothesis [63], any zero of the Dirichlet 
+function L(𝑠, 𝜒𝑘) with 0 < Re(s) < 1 is on the critical line Re(s) =
+1
+2; these are the 
+nontrivial zeros, which we write as 𝜌𝑘=
+1
+2 + 𝑖𝛾𝑘 The generalized Riemann 
+hypothesis implies that each 𝛾𝑘 is real, and this in turn implies that the number of 
+primes less than x in the arithmetic progression a; a+ k; a + 2k; . . . (with a less than 
+and coprime to k) is, in the limit of large x, 
+𝜋𝑎,𝑘(𝑥) =
+1
+𝜑(𝑘) 𝐿𝑖(𝑥) + 𝑂(𝑥
+1
+2+𝜖) 
+(13) 
+or all 𝜖 > 0, where 𝜑(𝑘) is the number of integers less than and coprime to k (the 
+Euler totient function), and Li(x) is the logarithmic integral function. The exponent of 
+x in the error term increases to 
+1
+2 + max(Im𝛾𝑘) + 𝜖 if the generalized Riemann 
+hypothesis is false. 
+2.2 Connections to physics 
+It is noticed the fruitful and diverse area of extensions of the Riemann zeta 
+function ζ(𝑠) which also occur throughout physics [58,66], such as, classical 
+mechanics (for instance, billiards), quantum mechanics (for instance, quantum 
+billiards，scattering state models and bound state models), nuclear physics (for 
+instance, random matrix theory), condensed matter physics (for instance, solid built 
+up by cations and anions) and statistical physics.  
+It is an old idea, now generally known as the Hilbert-Pólya conjecture (see [13] 
+for a historical review): 
+Hilbert-Pólya Conjecture [58]: The nontrivial zeros of the Dirichlet function 
+L(𝑠, 𝜒𝑘) (including the Riemann function (s)) can be the spectrum of an operator, 
+𝐑=
+1
+2 𝑰+ 𝑖𝑯 where 𝑰 is the unit matrix, 𝑯 is self-adjoint operator interpreted as a 
+Hamiltonian of a physical system. 
+Each Dirichlet function L(𝑠, 𝜒𝑘)  would have a different Hamiltonian 𝑯. 
+Furthermore, L(
+1
+2 + 𝑖𝐸, 𝜒𝑘)  is conjectured to be proportional to the spectral 
+determinant det(𝐸−𝐻); since the eigenvalues of a Hermitian operator must be real, 
+the Hilbert-Pólya conjecture implies the generalized Riemann hypothesis [63]. A 
+large 
+body 
+of 
+analytic 
+and 
+numerical 
+work 
+strongly 
+supports 
+the 
+Montgomery-Odlyzko law (see, e.g., [11,46]), which states that the statistical 
+distribution of the imaginary part 𝛾𝑘 for each Dirichlet function L(𝑠, 𝜒𝑘) is the 
+same as the Wigner-Dyson distribution of the eigenvalues of large Hermitian matrices 
+with real diagonal entries and complex off-diagonal entries, each selected from a 
+Gaussian distribution; this is the Gaussian unitary ensemble [32,44].  
+In what follows, we shall introduce briefly some examples for possible physical 
+systems.  
+We can construct the physical system with the Riemann zeta function ζ(s) as a 
+partition function. For instance, the problem of construction of a one-dimensional (1D) 
+Hamiltonian whose spectrum coincides with the set of primes was considered in 
+[49,59,60], see also review [55,66]. The comparison of the number of ζ(s) zeros and 
+the number of energy eigenvalues below a threshold suggested that the physical 
+system is quasi-one dimensional [59]. Some modification should lead to the 
+Hamiltonian H having eigenstates |𝑝⟩ labeled by the prime numbers p with 
+eigenvalues 𝐸𝑝= ℰln (p) where ℰ is some constant with dimension of energy. The 
+n particle state can be decomposed into the states |𝑝⟩ using the factorization theorem. 
+The energy of the state |𝑛⟩ is equal to 𝐸𝑛= ℰ∑
+𝛼𝑖ln (𝑝𝑖)
+𝑘
+𝑖=1
+= ℰln (n). Then the 
+partition function Z is given by the Riemann zeta function 𝜁(𝑠) [66]: 
+Z(T) = ∑𝑒𝑥𝑝(−𝐸𝑛
+𝑘𝐵𝑇)
+∞
+𝑛=1
+= ∑𝑒𝑥𝑝(−ℰln (𝑛)
+𝑘𝐵𝑇) = ∑1
+𝑛𝑠= 𝜁(𝑠)
+∞
+𝑛=1
+∞
+𝑛=1
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(14) 
+with s ≡ℰ/𝑘𝐵𝑇. 
+The Riemann zeta function occurs in numerous different branches of statistical 
+physics, from Brownian motion to lattice gas models. The combinatorial problem 
+arises in many different branches of mathematical physics, such as lattice animals in 
+statistical physics [40,68], numerical analysis on combinatorial optimization [45]. The 
+results in physics can have profound implications for mathematics in general and 
+number theory. The interpretation of prime numbers or the Riemann zeta zeros as 
+energy eigenvalues of particles appears not just in quantum mechanics but also in 
+statistical mechanics. For instance, one may introduce two concepts: the Riemann gas, 
+sometimes called the primon gas, and the Riemann liquid, although their definitions 
+vary slightly. from this spectrum [58] 
+𝑍𝐵= ∑𝑒𝑥𝑝(−𝐸𝑛
+𝑘𝐵𝑇)
+∞
+𝑛=1
+= ∑1
+𝑛𝑠
+∞
+𝑛=1
+= 𝜁(𝑠) 
+(15) 
+where s =
+𝜖0
+𝑘𝐵𝑇. Here the total energy of the system in the state |𝑛⟩ is 𝐸𝑛= 𝜖0 ln(𝑛). 
+The partition function for the primon gas is thus the Riemann zeta function ζ(s) and 
+hence the alternative nomenclature. 
+The particular interest of the present work is the statistical physics, and thus we 
+shall focus on it. It is well known that the lattice gas models can be mapped into Ising 
+models at the magnetic field [36,70]. Therefore, the conclusion above for the physical 
+systems can be extended to be applicable for the partition function Z of the Ising 
+models. The Möbius function (n) can be treated as a q =3 Potts model or a spin-glass 
+Ising model. If one defines the random motion through the Möbius function (n), i.e., 
+if (n) = 1, the particle moves up or down, and if (n) = 0, it does not move. For the 
+q =3 Potts model [68], the spins have three states (up, down and empty). For the 
+ferromagnetic Ising model (i.e., the q =2 Potts mode), the spins have two states (up 
+and down). But for the spin-glass Ising model when the random interactions vary in 
+[-J, J], an additional state with empty will appear effectively (see the next section for 
+details). The functional equation (3) can be written in non-symmetrical form [66]: 
+2Γ(s)cos (𝜋
+2 𝑠) ζ(s) = (2𝜋)𝑠𝜁(1 −𝑠) 
+(16) 
+In this form it is analogous to the Kramers–Wannier [34] duality relation for the 
+partition function Z(K) of the 2D Ising model with parameter K expressed in units 
+of kBT (i.e. K = J/(𝑘𝐵𝑇)) [66] 
+Z(K) = 2𝑁(𝑐𝑜𝑠ℎ𝐾)2𝑁(𝑡𝑎𝑛ℎ𝐾)𝑁𝑍(𝐾∗), 
+(17) 
+where N denotes the number of spins and 𝐾∗ is related to K via 𝑒−2𝐾∗= 𝑡𝑎𝑛ℎ𝐾. 
+Readers may refer also to [33] for an approach based on a statistical mechanics 
+interpretation of the Riemann zeta function ζ(s). 
+To pursue this analogy between the Ising model and the Dirichlet function 
+L(𝑠, 𝜒𝑘) （including the Riemann ζ(s) function), the key to solve the problem is to 
+set up a suitable model to satisfy the following conditions: 1) All the discrete energy 
+eigenvalues are real, which are randomly distributed the same way as the Dirichlet 
+function L(𝑠, 𝜒𝑘)（including the Riemann ζ(s) function); 2) All the zeros of the 
+partition function of the model lie on a unit circle, which can be mapped into a critical 
+line. In the next section, we shall establish a 2D model with randomly distributed 
+competing interactions, derive the exact solution for the energy eigenvalues and the 
+partition function of this model. We shall prove that this special model satisfies both 
+the conditions and gives an unique solution for the nontrivial zeros of the Dirichlet 
+function L(𝑠, 𝜒𝑘)（including the Riemann ζ(s) function) in the critical line. 
+ 
+3. 2D Ising model with randomly distributed competing interactions 
+3.1 Hamiltonian and transfer matrices  
+Definition 1. A 2D Ising model with ferromagnetic interactions and randomly 
+distributed competing ferromagnetic/antiferromagnetic interactions along two 
+crystallographic directions respectively is defined as 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+. Here the subscript FI 
+denotes the ferromagnetic Ising spins, while SGI denotes the spin-glass Ising spins 
+with randomly distributed competing interactions.  
+Theorem 1 (Equivalence Theorem). The zero distribution of the partition function 
+of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ is equivalent to the zero distribution of the Dirichlet 
+function L(𝑠, 𝜒𝑘) (including the Riemann zeta function 𝜁(𝑠)). 
+Proof of Theorem 1. The Hamiltonian of the 2D Ising model, 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+, is written as 
+[29,31,52]: 
+H = −∑[𝐽1𝑠𝑖,𝑗𝑠𝑖+1,𝑗+ 𝐽̃2𝑠𝑖,𝑗𝑠𝑖,𝑗+1]
+𝑚,𝑛
+<𝑖,𝑗>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(18) 
+Here every Ising spin takes two values +1 and -1 for spin up and spin down, 
+respectively, which is located on a 2D lattice with the lattice size N = mn. The 
+numbers (i, j), running from (1, 1) to (m, n), denote lattice points along two 
+crystallographic directions. Only are the nearest neighboring interactions between 
+spins located at a 2D lattice considered. The first interaction 𝐽1 > 0 is ferromagnetic, 
+while 
+the 
+second 
+one 
+𝐽̃2 
+is 
+a 
+randomly 
+distributed 
+competing 
+ferromagnetic/antiferromagnetic interaction as in a spin-glass system [15,47,53]. The 
+distribution P(𝐽̃2) of values 𝐽̃2 is taken to be a Gaussian function with a non-zero 
+mean J0  0 and a variance 𝐽̂2
+2. Namely, the interaction 𝐽̃2 varies randomly with 
+different signs in range of [-𝐽2, 𝐽2] with 𝐽2 ≥0. So, the present model can be viewed 
+as a 2D mixture model consisting of a 1D ferromagnetic Ising model and a 1D 
+spin-glass Edwards-Anderson model [15]. Note that the interaction 𝐽2 varies from 
+zero to infinite, to fit with the unbounded Gaussian distribution. This model is the 
+same as random layered frustration Ising models investigated in details in 
+[25,26,43,67].  
+At first, we can use the Ising model to imitate the Möbius function (n). An Ising 
+spin have two states (up and down), i.e., 𝑠𝑖= ±1. For the nearest neighboring 
+interactions 𝑠𝑖𝑠𝑖+1 between two spins, the combination of the spins states results in 
+the two possibilities +1 and -1, which correspond to 𝑠𝑖 and 𝑠𝑖+1 have the same and 
+different signs (alignments) respectively. That is: 
+𝑠𝑖,𝑗𝑠𝑖,𝑗+1 = {+1,    𝑖𝑓 𝑠𝑖,𝑗= +1, 𝑠𝑖,𝑗+1 = +1; 𝑜𝑟 𝑠𝑖,𝑗= −1, 𝑠𝑖,𝑗+1 = −1.
+−1,    𝑖𝑓 𝑠𝑖,𝑗= +1, 𝑠𝑖,𝑗+1 = −1; 𝑜𝑟 𝑠𝑖,𝑗= −1, 𝑠𝑖,𝑗+1 = +1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(19) 
+The Möbius function (n) can be treated as a q =3 Potts model with three spin states 
+(up, down and empty) [68]. The three states spin-1 Ising Hamiltonian was mapped 
+onto the two state spin-1/2 Ising Hamiltonian by using the Griffith’s variable 
+transformation [21,83]. Thus, the Griffith’s variable transformation ensures the 
+relation between the Möbius function and the spin-1/2 Ising model via the mapping 
+between the spin-1/2 and spin-1 Ising models. Furthermore, the three states can be 
+realized in a spin-glass spin-1/2 Ising model with two spin states (up and down) and 
+an additional state (empty) induced by random interactions, which can be described as 
+the following procedure. 
+When the random interactions 𝐽̃2 are introduced, which vary in [−𝐽2, 𝐽2], an 
+additional state with empty will appear effectively when 𝐽̃2 = 0. All the characters 
+together give a function  
+𝜇′(i, j) = 𝐽̃2𝑠i,j𝑠i,j+1  
+= {
+𝐽̃2,
+𝑓𝑜𝑟 𝑠i,j 𝑎𝑛𝑑 𝑠i,j+1 ℎ𝑎𝑣𝑒 𝑡ℎ𝑒 𝑠𝑎𝑚𝑒 𝑠𝑖𝑔𝑛 𝑎𝑛𝑑 𝐽̃2 ≠0.   
+0,
+𝑤ℎ𝑒𝑛 𝐽̃2 = 0                                        
+−𝐽̃2,
+𝑓𝑜𝑟 𝑠i,j 𝑎𝑛𝑑 𝑠i,j+1 ℎ𝑎𝑣𝑒 𝑡ℎ𝑒 𝑑𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑡 𝑠𝑖𝑔𝑛 𝑎𝑛𝑑 𝐽̃2 ≠0.
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(20) 
+The function 𝜇′(i, j) can be normalized so that it can be used to imitate the 
+Möbius function (n) (Eq. (7)), Dirichlet L(𝑠, 𝜒𝑘) functions (Eq. (8)) and thus the 
+Riemann function ζ(s) (Eq. (2)), by adjusting the distribution P(𝐽̃2). Therefore, we 
+can use the competing 2D Ising model to imitate the Möbius function (n).  
+It is noticed that the Möbius function and Dirichlet characters depend on a single 
+integer n and all their properties follow from the arithmetic features of this n with 
+respect to the modulus q. The function 𝜇′(i, j) depends on two indices i and j, used 
+for the 2D lattice. The two indices (i, j) run from (1, 1) to (m, n), can be represented 
+by a single integer J = [(𝑗−1)𝑚+ 𝑖] = 1,2,…,m,m+1, …, 2m, 2m+1, …, m(n-1), 
+m(n-1)+1,…, mn. Furthermore, the products in the transfer matrices V2 and V1 (Eqs. 
+(11) and (12)) run over j from 1 to n, after performing the periodic condition, which 
+may set a one-to-one correspondence with the Möbius function and Dirichlet 
+characters. It is understood that it is not very important to determine exactly the 
+location of all the nontrivial zeros of the Dirichlet function L(𝑠, 𝜒𝑘) (including the 
+Riemann zeta function 𝜁(𝑠)), but imitate its trend for the zero distribution, in 
+particular, in the large number limit (corresponding to the high energy limit). It is 
+extremely important to prove the closure of the nontrivial zero distribution, while 
+excluding the possibility that the nontrivial zeros lie off the critical line. The zero 
+distribution in the large number limit is the most important, but merely uncertain 
+factor for proving its closure. By utilizing the properties of Ising model together with 
+randomly distributed competing interactions, we can realize this purpose by ergodic 
+of all replicas [47,53].  
+By pretending that the imaginary parts Em of the Riemann zeros are eigenvalues 
+of a quantum Hamiltonian whose corresponding classical trajectories are chaotic and 
+without time-reversal symmetry, Berry [2] obtained the mean square difference 
+between the actual and average numbers of Riemann zeros near the x-th zero in an 
+interval. Berry and Keating [3] gave the Riemann zeros and eigenvalue asymptotics. 
+Forr12.ester et al. [18] studied the distributions of energy eigenvalues of the Gaussian 
+unitary ensemble and the zeros of the Riemann zeta function ζ(s), described by 
+nonlinear equations. Bogomolny [5] discussed statistical properties of quantum 
+eigenvalues for chaotic systems based on semiclassical trace formulas, and considered 
+the statistics of the zeros of the Riemann zeta function ζ(s). Conrey and Snaith [12] 
+investigated correlations of eigenvalues of a unitary matrix (and its conjugate 
+transpose) and Riemann zeros. Languasco et al. [35] obtained a quantitative version of 
+the Goldston-Montgomery theorem about the equivalence between the asymptotic 
+behaviors of the mean-square of primes in short intervals, and of the pair correlation 
+function of the nontrivial zeros of the Riemann zeta function ζ(s). It is commonly 
+accepted that the statistical distribution of the imaginary part 𝛾𝑘 of each Dirichlet 
+function 𝐿(𝑠, 𝜒𝑘) is the same as the Wigner-Dyson distribution of the eigenvalues of 
+the Gaussian unitary ensemble [14,46,65]. Because of the randomness of the 
+interaction 𝐽̃2 (𝐾̃2) with the Gaussian distribution, the transfer matrix has the 
+character of a random unitary matrix [14,65], and the present system behaves as the 
+Gaussian unitary ensemble [32,44]. It is noticed that the distribution of the 
+eigenvalues of the random matrices possess the universality as the order of the 
+random matrices approaches infinite, which does not reply on the distribution of 
+particular Hamiltonian of a physical system. Such a universality can be applicable for 
+describing the distribution of energy levels of complex systems, from disorder 
+mediums, neural networks to quantum chaos [58,66]. For more details of the relation 
+between the Ising model, the random matrix and the Riemann zeta function ζ(s), 
+readers refer also to [1,6,19,27,51]. 
+The replica method has been employed for treating the random systems, like the 
+spin-glass Edwards-Anderson model [15], which rests on the use of the exact relation 
+[𝑙𝑛𝑍{𝑥}]𝑎𝑣= lim
+𝑅→0
+1
+𝑅([𝑍𝑅{𝑥}]𝑎𝑣−1) = lim
+𝑅→0
+𝜕
+𝜕𝑅[𝑍𝑅{𝑥}]𝑎𝑣 [4]. For positive integer R, 
+one can express 𝑍𝑅{𝑥} in terms of R identical replicas of the system. The partition 
+function Z of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ can be calculated from the product of the 
+partition functions 𝑍̅𝛼 for all fixed replicas ( = 1,2,..,R), Z = ∏
+𝑍̅𝛼
+𝑅
+𝛼=1
+ (refer to Eq. 
+(3.25) of [4]). Here  denotes the -th replica. The primon gas system with the 
+Riemann zeta function 𝜁(𝑠) as a partition function can be constructed by a 1D 
+Hamiltonian whose spectrum coincides with the set of primes (see Eq. (56) in [58] 
+and Eq. (55) in [66]). Similarly, the partition function 𝑍̅𝛼 of the 2D Ising model 
+𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ for each replica can be written as: 
+𝑍̅𝛼= ∑𝑒𝑥𝑝(−𝐸𝑛
+𝑘𝐵𝑇)
+∞
+𝑛=1
+= ∑1
+𝑛𝑠
+∞
+𝑛=1
+= 𝜁(𝑠) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(21) 
+with s ≡ℰ/𝑘𝐵𝑇 and 𝐸𝑛= ℰln (𝑛). This equivalence is validated for the Gaussian 
+unitary ensembles including the present model as the order of the random matrices 
+approaches infinite, corresponding to the thermodynamical limit. It ensures that such 
+an equivalence is held for all the primes and all the eigenvalues, which certainly cover 
+the large number limit of the zero distribution (i.e, the high energy limit of the energy 
+levels). Clearly, we can see from Eq. (21) that 𝑍̅𝛼= 0 ⇔ 𝜁(𝑠) = 0. Namely, the 
+zeros of the partition function 𝑍̅𝛼 of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ for each replica 
+are equivalent to the zeros of the Riemann zeta function 𝜁(𝑠). Because the change in 
+the Hamiltonian 𝑯 corresponds to the change in the Dirichlet function L(𝑠, 𝜒𝑘), 
+scanning over all the replicas would correspond to the change in the Dirichlet 
+character 𝜒𝑘 of the Dirichlet function L(𝑠, 𝜒𝑘). As a consequence, the zeros of the 
+partition function Z of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are equivalent to the nontrivial 
+zeros of the Dirichlet function L(𝑠, 𝜒𝑘).  
+Second, it is necessary to construct a 2D Ising model. No phase transition occurs 
+in the 1D Ising models at the absence of a magnetic field. For the 2D ferromagnetic 
+Ising model, all the interactions are ferromagnetic and there is a phase transition, but 
+no randomness. For the 2D spin-glass Ising model, all the interactions are randomly 
+distributed and no phase transition occurs [62], since the lower critical dimensionality 
+for spin glass is about 2.5. The unique 2D Ising model is what we constructed here, 
+𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+, with a mixture of ferromagnetic and randomly distributed competing 
+interactions along the two crystallographic directions respectively. The present model 
+𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ in a certain sense satisfies the requirement for a quasi-one dimensional 
+physical system [59], since it is not a full 2D ferromagnetic model. There might exist 
+other models, for instance, a 2D Ising model 𝑀𝐴𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ with antiferromagnetic 
+interactions and spin-glass interactions, etc., which can be also utilized to realize the 
+desired solution for the Dirichlet function L(𝑠, 𝜒𝑘) as well as the Riemann zeta 
+function 𝜁(𝑠), but not the focus of the present work.  
+For simplicity, we apply the cylindrical crystal model preferred by Onsager [52] 
+and Kaufman [31], in which we wrap our crystal on cylinders (since there is a 
+translational invariance along the direction i due to the ferromagnetic interactions). 
+The partition function of the 2D Ising model, 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+, at the zero magnetic field is 
+expressed as follows 
+Z = (2𝑠𝑖𝑛ℎ2𝐾1)
+𝑛
+2 ∙trace(𝑉)𝑚≡(2𝑠𝑖𝑛ℎ2𝐾1)
+𝑛
+2 ∙∑𝜆𝑖
+𝑚
+2𝑛
+𝑖=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(22) 
+with the transfer matrix V = V2V1 as: 
+𝑽𝟐= ∏𝑒𝑥𝑝[−𝑖𝐾̃2Γ2𝑗Γ2𝑗+1]
+𝑛−1
+𝑗=1
+𝑒𝑥𝑝[𝑖𝐾̃2Γ1Γ2𝑛𝑈] = ∏exp[𝐾̃2𝑠′
+𝑗𝑠′
+𝑗+1]𝑒𝑥𝑝[𝐾̃2𝑠′
+1𝑠′
+𝑛𝑈]
+𝑛−1
+𝑗=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(23) 
+𝑽𝟏= ∏exp[𝑖𝐾1
+∗Γ2𝑗−1Γ2𝑗]
+𝑛
+𝑗=1
+= ∏exp[𝐾1
+∗∙𝐶𝑗]
+𝑛
+𝑗=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(24) 
+Note that the products in the transfer matrices V2 and V1 (Eqs. (11) and (12)) run over 
+j from 1 to n, after performing the periodic condition. It is convenient to introduce 
+variables 𝐾1 ≡𝐽1/(𝑘𝐵T)  and 𝐾̃2 ≡𝐽̃2/(𝑘𝐵T) instead of interactions 𝐽1  and 
+𝐽̃2 along the two crystallographic directions. Because of the randomness of the 
+interaction 𝐽̃2 (𝐾̃2), the transfer matrix 𝑽𝟐 has the character of a random matrix 
+[61,65], and behaves as the Gaussian unitary ensemble mentioned above [32,44]. For 
+more details of the relation between the random matrix and the Riemann zeta function 
+ζ(s), readers refer also to [6,19,27]. Here, the Kramers-Wannier relation gives the 
+definition of 𝐾1
+∗ in its dual lattice [34]: 
+𝐾1
+∗= −1
+2 𝑙𝑛(𝑡𝑎𝑛ℎ𝐾1) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(25) 
+The Kramers–Wannier [34] duality is analogous to the Riemann zeta function ζ(s) 
+(see Eqs.(16) and (17) for comparison, and also [33] for details). 
+We define the matrices 
+j
+C and 
+j
+s'  as follows: 
+𝐶𝑗= I ⊗I ⊗… ⊗I ⊗C ⊗I ⊗… ⊗I 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(26) 
+and 
+𝑠′𝑗= I ⊗I ⊗… ⊗I ⊗s′ ⊗I ⊗… ⊗I 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(27) 
+Following the Onsager–Kaufman–Zhang notation [31,52,71], we have: s′′ =
+[0
+−1
+1
+0 ] (= −𝑖𝜎2), s′ = [1
+0
+0
+−1] (= 𝜎3), 𝐶= [0
+1
+1
+0] (= 𝜎1), where σj (j = 
+1,2,3) are Pauli matrices, while I is the unit matrix. It is remarked that from the reality 
+of the Ising Hamiltonian (Eq. (6)) the transfer matrices V2 and V1 are real also. 
+However, the imaginary number emerges in V2 and V1 as written in the Clifford 
+algebraic representation, since the Γ2𝑗 matrix is complex-valued, which consists of a 
+complex-valued Pauli matrix 𝜎2 The product of two matrices Γ2𝑗Γ2𝑗+1 in V2 or 
+Γ2𝑗−1Γ2𝑗 in V1 corresponds to a rotation angle  for 𝑒±𝑖𝜃
+2  [31], which is 
+complex-valued. The imaginary number appearing in the transfer matrices V2 and V1 
+results in a rotation angle  for 𝑒±𝛾
+2 [31], and accordingly the hyperbolic functions 
+appear in the rotation matrices and the eigenvalues (see Eqs. (28)-(33)).  
+In the transfer matrices, the boundary factor 𝑈= 𝐶1𝐶2 … 𝐶𝑛 as in Kaufman’s 
+paper [31] can be viewed as the projection operator 𝑃≡
+1
+2 (1 ± 𝑈), splitting the 
+Hilbert space into two subspaces, which does not alter the character of real 
+eigenvalues. In the thermodynamic limit, the surface to volume ration vanishes for an 
+infinite system so that the boundary factor can be neglected [74].  
+Note that the products in the transfer matrices V2 and V1 (Eqs. (23) and (24)) run 
+over j from 1 to n, after performing the periodic condition along one crystallographic 
+direction. For a 2D lattice, the planar rotations 𝐾1  and 𝐾̃2  in the spinor 
+representation can be transformed into the rotation representation. Therefore, the 
+eigenvalues of the partition function can be calculated by the planar rotations in the 
+rotation representation. Following the Onsager-Kaufman procedure [31,52], we have 
+the first (and last) product representing the rotation: 
+[
+ 
+ 
+ 
+ 
+ 𝑐𝑜𝑠ℎ𝐾1
+∗
+𝑖𝑠𝑖𝑛ℎ𝐾1
+∗
+−𝑖𝑠𝑖𝑛ℎ𝐾1
+∗
+𝑐𝑜𝑠ℎ𝐾1
+∗
+𝑐𝑜𝑠ℎ𝐾1
+∗
+𝑖𝑠𝑖𝑛ℎ𝐾1
+∗
+−𝑖𝑠𝑖𝑛ℎ𝐾1
+∗
+𝑐𝑜𝑠ℎ𝐾1
+∗
+∙
+∙]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(28) 
+The middle products have the form: 
+[
+ 
+ 
+ 
+ 
+ 
+ 𝑐𝑜𝑠ℎ2𝐾̃2
+𝑐𝑜𝑠ℎ2𝐾̃2
+𝑖𝑠𝑖𝑛ℎ2𝐾̃2
+−𝑖𝑠𝑖𝑛ℎ2𝐾̃2
+    −𝑖𝑠𝑖𝑛ℎ2𝐾̃2
+𝑐𝑜𝑠ℎ2𝐾̃2
+∙
+𝑖𝑠𝑖𝑛ℎ2𝐾̃2    
+∙
+  𝑐𝑜𝑠ℎ2𝐾̃2]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(29) 
+Compared with those in Kaufman’s procedure [31], only is difference in our 
+procedure the interaction 𝐾̃2 is randomly distributed.  
+The rotation transformation matrix 𝑹𝟎
+− could be written schematically as [31]:  
+𝑹𝟎
+−=
+[
+ 
+ 
+ 
+ 
+ 
+ 
+ 𝒂
+𝒃
+𝒃∗
+𝒂
+0
+0
+𝒃
+0
+0
+𝒃∗
+0
+0
+𝒂
+𝒃
+𝒃∗
+𝒂
+0
+⋯
+0
+⋯
+0
+𝒃∗
+0
+0
+0
+⋯
+𝒃
+⋯
+0
+0
+0
+0
+𝒃
+0
+0
+0
+0
+⋯
+𝒃∗
+𝒂]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(30) 
+where  
+𝒂= [𝑐𝑜𝑠ℎ2𝐾̃2 ∙𝑐𝑜𝑠ℎ2𝐾1
+∗
+−𝑖𝑐𝑜𝑠ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+𝑖𝑐𝑜𝑠ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+𝑐𝑜𝑠ℎ2𝐾̃2 ∙𝑐𝑜𝑠ℎ2𝐾1
+∗] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(31) 
+𝒃= [
+−1
+2 𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+𝑖𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+−𝑖𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑐𝑜𝑠ℎ2𝐾1
+∗
+−1
+2 𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(32) 
+𝒃∗= [
+−1
+2 𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+𝑖𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑐𝑜𝑠ℎ2𝐾1
+∗
+−𝑖𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+−1
+2 𝑠𝑖𝑛ℎ2𝐾̃2 ∙𝑠𝑖𝑛ℎ2𝐾1
+∗
+] 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(33) 
+It is noticed that Dirichlet characters are, in general, complex-valued and, as the 
+Mobius function, depend on an integer n. From the reality of the Ising Hamiltonian 
+(Eq. (18),) the rotation matrices are unitary, which are complex-valued, since one of 
+Pauli matrices is complex-valued. The complex property can be seen clearly from the 
+imaginary off-diagonal elements in the rotation matrices (Eqs. (28)-(33)). Indeed, the 
+transfer matrices (Eqs. (23) and (24)) and the rotation matrices (Eqs. (28)-(33)) 
+possess the Wigner-Dyson distribution of the eigenvalues of large Hermitian matrices 
+with real diagonal entries and complex off-diagonal entries, each selected from a 
+Gaussian distribution being the Gaussian unitary ensemble [32,44]. As mentioned 
+above, the distribution of the eigenvalues of the random matrices possess the 
+universality as the order of the random matrices approaches infinite, which 
+corresponds to the thermodynamical limit. The distribution of the eigenvalues of the 
+present model is the same as the statistical distribution of the imaginary part k’s for 
+each L function. Therefore, we have shown that the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ behaves 
+as the Möbius function (n) and thus Riemann zeta function 𝜁(𝑠). The zero 
+distribution of the partition function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ is equivalent to 
+the zero distribution of the Dirichlet function L(𝑠, 𝜒𝑘) (including the Riemann zeta 
+function 𝜁(𝑠)). 
+ 
+If the Hilbert-Pólya conjecture is true, all the energy levels 𝐸𝑛 (thus the constant 
+ℰ) in Eq. (21) will be real; vice versa. In the remainder of this article, we shall prove 
+this point. It should be noticed that since s is a complex number and if the energy 
+constant ℰ is a real number, the temperature T must be a complex. For the physical 
+significance of the complex temperature, readers refer to [77] for detailed discussion. 
+Thus, the zeros of the partition function are distributed in a complex temperature 
+plane. In what follows, we shall investigate in details the eigenvalues, the partition 
+function and its zero distribution of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+. It should be 
+emphasized that from the real energy levels one can derive a critical line for the 
+nontrivial zeros, while from the zeros of the partition function one can derive again a 
+critical line. Because the partition function is calculated from the energy levels of the 
+states of the system, the critical line derived from the two paths is unique.  
+3.2 Eigenvalues 
+Theorem 2 (Real Eigenvalues Theorem). All energy eigenvalues of the 2D Ising 
+model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are real, which are randomly distributed as the Riemann zeta function 
+𝜁(𝑠).  
+Proof of Theorem 2. Following the procedure developed by Onsager and Kaufman 
+[31,52], we can derive the eigenvalues for our present model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+. The first and 
+last lines in the rotation transformation matrix 𝑹𝟎
+− (Eq.(12)) correspond to the edge 
+states with properties for N  . It is clear that the edge matrix elements result in the 
+same formulas as other elements in the rotation matrix, which indicates that as the 
+system approach infinite the character of the energy eigenvalues does not alter. The 
+2n-eigenvalues of the rotation transformation matrix 𝑹𝟎
+− are the eigenvalues of the n 
+2-dimensional matrices 𝜶2𝑗= 𝒂+ 𝜖2𝑗∙𝒃+ 𝜖2(𝑛−1)𝑗∙𝒃∗ with ϵ ≡𝑒
+𝑖𝜋
+𝑛 [31]. The 
+determinant of this rotation transformation matrix is +1. Its eigenvalues could be 
+written as exp( 2j), and 2j could be determined by: 
+1
+2 trace(𝜶2𝑗) = 1
+2 (𝑒𝛾2𝑗+ 𝑒−𝛾2𝑗) = 𝑐𝑜𝑠ℎ𝛾2𝑗
+= 𝑐𝑜𝑠ℎ2𝐾1
+∗𝑐𝑜𝑠ℎ2𝐾̃2 −𝑠𝑖𝑛ℎ2𝐾1
+∗𝑠𝑖𝑛ℎ2𝐾̃2𝑐𝑜𝑠𝜔1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(34) 
+where 𝜔1 =
+2𝑗𝜋
+𝑛. In the 2D Ising case, 2j is geometrically the third side of a 
+hyperbolic triangle, represented in a 2D Poincaré disk model, whose other two sides, 
+2𝐾̃2 and 2𝐾1
+∗. The angle between the two sides 2𝐾̃2 and 2𝐾1
+∗ is determined by the 
+angle 𝜔. The Hamiltonian H (Eq. (18)) of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ is hermitian 
+(self-adjoint), and the transfer matrices V (Eqs. (23) and (24)) as well as the rotation 
+transformation matrix 𝑹𝟎
+− (Eq. (30)) are self-adjoint. Even in the thermodynamic 
+limit (m  , n  ), the physical properties of the system keeps the hermitian 
+(self-adjoint) character to be the observable physical quantities. Therefore, all the 
+energy eigenvalues of this model are real. Furthermore, because the interaction is 
+randomly distributed, the energy eigenvalues are randomly distributed as the Riemann 
+zeta function 𝜁(𝑠). This proves that there exists and only exists a critical line i𝐸𝑛 (or 
+i𝛾2𝑗 as denoted in Eq. (34)) in the complex plane, and that no nontrivial zeros lie off 
+the critical line. The conclusion is valid for every replica, and thus for all the replicas 
+of the present model, corresponding to the Dirichlet function 𝐿(𝑠, 𝜒𝑘). . 
+ 
+In order to study the thermodynamic properties, we can use the replica method 
+for the spin glass to obtain the energy eigenvalues 𝛾̅2𝑗,𝛼 for each replica , in which 
+the interaction 𝐾̃2  equals to the mean value 𝐾0 = 𝐽0/(𝑘𝐵𝑇) according to the 
+Gaussian distribution after averaging the disorder. Note that the actual and average 
+numbers of Riemann zeros behave in the same tendency, since the mean interaction 
+vale 𝐽0 for the Gaussian distribution is located in between the actual values [-𝐽2, 𝐽2]. 
+3.3 Eigenvectors 
+Theorem 3 (Hilbert-Pólya Space Theorem). The eigenvectors of the 2D Ising 
+model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are constructed by the eigenvectors of the 1D Ising model with 
+phases related to the Riemann zeta function 𝜁(𝑠).  
+Proof of Theorem 3. The 2n-normalized eigenvectors of 𝑹𝟎
+− would behave as 
+[31,52]: 
+𝑢2𝑗≡
+1
+(2𝑛)1/2
+[
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 𝑒𝑥𝑝(𝑖(𝜔2𝑗+ 1
+2 𝛿2𝑗′))
+𝑖𝑒𝑥𝑝(𝑖(𝜔2𝑗−1
+2 𝛿2𝑗′))
+𝑒𝑥𝑝(𝑖(𝜔4𝑗+ 1
+2 𝛿2𝑗′))
+𝑖𝑒𝑥𝑝(𝑖(𝜔4𝑗−1
+2 𝛿2𝑗′))
+∙
+∙∙∙∙
+𝑖𝑒𝑥𝑝(𝑖(𝜔2𝑛𝑗−1
+2 𝛿2𝑗′))]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(35) 
+and  
+𝑣2𝑗≡
+1
+(2𝑛)1/2
+[
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 𝑖𝑒𝑥𝑝(𝑖(𝜔2𝑗+ 1
+2 𝛿2𝑗′))
+𝑒𝑥𝑝(𝑖(𝜔2𝑗−1
+2 𝛿2𝑗′))
+𝑖𝑒𝑥𝑝(𝑖(𝜔4𝑗+ 1
+2 𝛿2𝑗′))
+𝑒𝑥𝑝(𝑖(𝜔4𝑗−1
+2 𝛿2𝑗′))
+∙∙
+∙∙∙
+𝑒𝑥𝑝(𝑖(𝜔2𝑛𝑗−1
+2 𝛿2𝑗′))]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(36) 
+ 
+The phase factor e𝑥𝑝(𝑖𝜔2𝑗) is related with 𝑐𝑜𝑠𝜔 in the energy eigenvalues (Eq. 
+(34)), while the phase factors 𝑒𝑥𝑝(
+𝑖
+2 𝛿2𝑗′) and 𝑒𝑥𝑝(−
+𝑖
+2 𝛿2𝑗′) form the normalized 
+eigenvectors of a one-dimensional Ising spin chain [31]. From the eigenvalues 𝛾2𝑗 
+(Eq. (34)), we can derive the following formulation for the angle 𝜔1:  
+𝜔1(𝛾2𝑗) = 𝑎𝑟𝑐𝑐𝑜𝑠{𝑐𝑜𝑠ℎ2𝐾1
+∗𝑐𝑜𝑠ℎ2𝐾̃2 −𝑐𝑜𝑠ℎ𝛾2𝑗
+𝑠𝑖𝑛ℎ2𝐾1
+∗𝑠𝑖𝑛ℎ2𝐾̃2
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(37) 
+ 
+On the other hand, we have from Eqs. (33) and (34) of [58]: 
+ 
+𝜁(1
+2 −𝑖𝐸) =
+1
+𝜆
+1
+2−𝑖𝐸= 𝜆−1
+2+𝑖𝐸= 𝑒
+ln (𝜆−1
+2+𝑖𝐸)
+= 𝑒(−1
+2+𝑖𝐸)𝑙𝑛𝜆 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(38) 
+Namely, we have: 
+𝑖𝛾2𝑗=
+𝑙𝑛[𝜆
+1
+2𝜁(1
+2 −𝑖𝛾2𝑗)]
+𝑙𝑛𝜆
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(39) 
+Therefore, the normalized eigenvectors of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are 
+constructed by the eigenvectors of the 1D Ising model with phases related to the 
+Riemann zeta function 𝜁(𝑠), via the relation 𝜔1(𝛾2𝑗) between the angle 𝜔1 and the 
+energy eigenvalues 𝛾2𝑗, which form an Hilbert-Pólya space [8].  
+ 
+Note again that for each replica , we can use 𝛾̅2𝑗,𝛼 and 𝐾0 to replace 𝛾2𝑗 and 
+𝐾̃2, respectively, in the above discussion (see Eqs. (35)-(39)).  
+3.4 Zeros of the partition function  
+Theorem 4 (Unit Circle - Critical Line Theorem): All the zeros of the partition 
+function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ lie on a unit circle in the complex 
+temperature plane, which can be mapped into a critical line.   
+Proof of Theorem 4. After mediating lnZ over disorder (i.e., lnZ
+̅̅̅̅), the partition 
+function 𝑍̅𝛼 of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ in a fixed replica  ( = 1,2,..,R) is 
+represented as [31], 
+𝑍̅𝛼= 1
+2 (2𝑠𝑖𝑛ℎ2𝐾1)
+𝑚𝑛
+2
+∙{∏(2𝑐𝑜𝑠ℎ𝑚
+2 𝛾̅2𝑗,𝛼)
+𝑛
+𝑗=1
++ ∏(2𝑠𝑖𝑛ℎ𝑚
+2 𝛾̅2𝑗,𝛼)
+𝑛
+𝑗=1
++ ∏(2𝑐𝑜𝑠ℎ𝑚
+2 𝛾̅2𝑗−1,𝛼)
+𝑛
+𝑗=1
++ ∏(2𝑠𝑖𝑛ℎ𝑚
+2 𝛾̅2𝑗−1,𝛼)
+𝑛
+𝑗=1
+} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(40) 
+where the eigenvalues 𝛾̅2𝑗,𝛼 and 𝛾̅2𝑗−1,𝛼 are determined by Eq. (34) after averaging 
+the disorder. Again, in these eigenvalues, one can investigate actual numbers in details 
+and also average numbers. After averaging the disorder, the interaction 𝐾̃2 in the 
+eigenvalues equals to the mean value 𝐾0 of the Gaussian distribution. 
+Eq. (21) shows that the zeros of the partition function correspond to the zeros of 
+the Riemann zeta function 𝜁(𝑠). This can be generalized to be appropriate for the 
+Dirichlet function L(𝑠, 𝜒𝑘). Each L function would have a different H, vice versa. It 
+is understood that each replica for the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ gives a different 
+Gaussian distribution [47,53], changing the interaction 𝐽̃2 (𝐾̃2), thus altering the 
+Hamiltonian H. The change of the Hamiltonian H (and thus the partition function 𝑍̅) 
+by scanning all replicas is equivalent to the change of the character 𝜒𝑘 all the way in 
+the Dirichlet function L(𝑠, 𝜒𝑘). 
+The Lee-Yang zeros of the canonical partition function are calculated at (real) 
+temperature in the complex magnetic-field plane [36,70]. Lee and Yang proved that 
+the zeros in the 2D Ising model with a magnetic field lie on the unit circle of the 
+complex magnetic field plane [36]. The distribution of roots determines completely 
+the equation of state, and in particular its behavior near the positive real axis 
+prescribes the properties of the system in relation to phase transitions. On the other 
+hand, Fisher showed that the zeros in the 2D Ising model at the absence of a magnetic 
+field lie on the unit circle of the complex temperature plane [17]. In the Fisher’s 
+article [17], two unit circles appear in Figure 19.1, which correspond to the 2D 
+ferromagnetic and antiferromagnetic Ising models respectively. The unit circle of the 
+present model with the mixture of ferromagnetic Ising and randomly distributed 
+Edwards-Anderson interactions lies also in the complex plane of temperature, which 
+is consistent with the Fisher zeros for the 2D ferromagnetic Ising model. The zeros of 
+the canonical partition function lie on a unit circle in the plane of the complex 
+variable v = tanhK [17], here for simplicity we set 𝐾0 = 𝐾1 = 𝐾. The center of the 
+unit circle is located at the point (-1, 0), while it lies on the locus  
+𝑣𝜃= −1 + √2𝑒𝑖𝜃  (0 ≤𝜃≤2𝜋) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(41) 
+When 𝜃= 0 𝑜𝑟 2𝜋, 𝑣𝑐= √2 −1 is the critical point for the present model, where 
+a zero approaches the positive real axis in the thermodynamic limit, corresponding to 
+a phase transition; when 𝜃= 𝜋, v = −(√2 + 1) corresponds to non-physical 
+complex temperature [17]. Note that the situation is just the same in the complex 
+parametric plane of x = exp (−2K), since the bilinear transformation x =
+1−𝑣
+1+𝑣 carries 
+a circle into a circle. It should be noted that the complex variable should be 
+normalized by a factor of √2 for the 2D Ising model to be 𝑣′ =
+tanhK
+√2 , so that the 
+radius of the unit circle equals to unit.  
+For the general case of 𝐾1 ≠𝐾0, the zeros of the canonical partition function lie 
+on a unit circle in the plane of the complex variable x = (𝑥1𝑥0)1/2 = exp (−𝐾1 −𝐾0), 
+or v = 𝑡𝑎𝑛ℎ
+1
+2 (𝐾1 + 𝐾0). Note that these parameters have to be normalized also.   
+Next, we are interested in the critical point of the present 2D Ising model for the 
+phase transition. With the mixture of ferromagnetic interactions along one direction 
+and randomly distributed competing interactions along another direction, we can 
+employ the periodic condition along the first direction, and thus the largest eigenvalue 
+principle is applicable in the thermodynamic limit. It is seen clearly from the term of 
+𝜆𝑖
+𝑚 in Eq. (22). In the thermodynamic limit, we have m →∞ and n →∞, the 
+partition function 𝑍̅𝛼 of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ in a fixed replica  after 
+averaging the disorder is represented as [52], 
+𝑁−1𝑙𝑛𝑍̅𝛼= 𝑙𝑛2
++
+1
+2(2𝜋)2 ∫∫𝑙𝑛{𝑐𝑜𝑠ℎ2𝐾1𝑐𝑜𝑠ℎ2𝐾0 −𝑠𝑖𝑛ℎ2𝐾1𝑐𝑜𝑠𝜔1
+𝜋
+−𝜋
+𝜋
+−𝜋
+−𝑠𝑖𝑛ℎ2𝐾0𝑐𝑜𝑠𝜔′}𝑑𝜔1𝑑𝜔′ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(42) 
+The partition function (42) and the critical point of the present 2D Ising model are the 
+same as the Onsager’s exact solutions [52]. The critical point of the present model on 
+the square lattice (if 𝐾0 = 𝐾1) is located at  
+𝑥𝑐= 𝑒−2𝐾𝑐= √2 −1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(43) 
+It is clear that the partition function 𝑍̅𝛼 of the present 2D Ising model for every 
+replica is the same as described in Eq. (42).  
+Therefore, all the zeros of the partition function 𝑍̅𝛼 of the 2D Ising model 
+𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ in a fixed replica lie on a unit circle in the complex temperature plane. This 
+conclusion is validated for every fixed replica. The partition function Z can be 
+calculated from the product of the partition functions 𝑍̅𝛼 for all fixed replicas ( = 
+1,2,..,R), Z = ∏
+𝑍̅𝛼
+𝑅
+𝛼=1
+. Thus, all the zeros of the partition function Z of the 2D Ising 
+model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ lie on a unit circle in the complex temperature plane. 
+The unit circle |u| = 1 can be mapped into the critical line 
+1
+2 + 𝑖𝑡= 𝑠 via the 
+transformation u =
+𝑠
+1−𝑠=
+1
+2+𝑖𝑡
+1
+2−𝑖𝑡→s. From all energy eigenvalues of the 2D Ising 
+model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are real, we have proven the critical line of i𝐸𝑛 (Theorem 2). It 
+restricts the domain of definition for the mapping from the unit circle to the critical 
+line. Thus, by devising appropriate spin system (e.g. the present Ising model) with Z(, 
+z) expressed by the Riemann zeta function 𝜁(𝑠), the Lee–Yang theorem together with 
+Fisher zeros can be used to locate all the possible zeros of the latter function, 
+distributing on the critical line. This proves that there has and only has a critical line 
+in the complex temperature plane and that no nontrivial zeros lie off the critical line. 
+In another word, we have proven the closure of the zero distribution of the Dirichlet 
+L(𝑠, 𝜒𝑘) function (including the Riemann zeta function 𝜁(𝑠)).  
+ 
+Note that in the Lee-Yang Theorem for the unit circle [36], no assumptions were 
+made about (1) the range of the interaction u, (2) the dimensionality of the lattice, (3) 
+the size and structure of the lattice and (4) even the periodicity property of the lattice. 
+The same is true for the Fisher’s zeros [17]. Therefore, not only the present model 
+𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ but also other models (such as, 𝑀𝐴𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+, 𝑀𝐹𝐼+𝑆𝐺𝐼
+3𝐷
+, etc.) can be utilized to 
+prove Theorem 4.  
+Theorem 5. The nontrivial zeros of the Dirichlet function L(𝑠, 𝜒𝑘) (including the 
+Riemann zeta function 𝜁(𝑠) is the spectrum of an operator, 𝐑=
+1
+2 𝑰+ 𝑖𝑯 where 𝑰 
+is the unit matrix, H is self-adjoint operator interpreted as the Hamiltonian of the 2D 
+Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ 
+Proof of Theorem 5. Theorem 2 shows that the model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ is a suitable system 
+for proving the Hilbert-Pólya conjecture [58]. All energy eigenvalues of the 2D Ising 
+model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are real, indicating that there is merely a critical line of i𝐸𝑛. 
+Furthermore, according to Theorem 4, the unit circle for the zeros of the partition 
+function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ in the complex temperature plane also 
+assures the existence of only a critical line. This has been proven to be true for every 
+replica, and thus the conclusion is not only suitable for the Riemann zeta function 
+𝜁(𝑠), but also for the Dirichlet function L(𝑠, 𝜒𝑘). The critical line obtained in the two 
+approaches is the same one, confirming the uniqueness of the critical line. Moreover, 
+it is verified that no nontrivial zeros lie off the critical line. However, this ensures only 
+the imaginary part of R, while the real part needs to be fixed.  
+On the other hand, Hardy [23] proved that infinitely many zeros lie on the critical 
+line. Up to date, 100 billions nontrivial zeros have been found to lie on the critical line 
+with the real part as 1/2. The Hardy’s result and the computation of the nontrivial 
+zeros of the Riemann zeta function 𝜁(𝑠) fixes already the real part of R. If our 
+critical line is located at σ = 1/2, it will be consistent with the Hardy’s proof and the 
+computation of the nontrivial zeros, else it will be contradictory with them. This 
+excludes the possibility that the critical line is off σ = 1/2. Therefore, we have 
+proven the Hilbert-Pólya conjecture. 
+ 
+ 
+4. Conclusion 
+In conclusion, we have proven five theorems: 1) The zero distribution of the 
+partition function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ is equivalent to the zero 
+distribution of the Dirichlet function L(𝑠, 𝜒𝑘) (including the Riemann zeta function 
+𝜁(𝑠)) (Equivalence Theorem). 2) All eigenvalues of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are 
+real, which are randomly distributed as the Dirichlet function L(𝑠, 𝜒𝑘) and the 
+Riemann zeta function 𝜁(𝑠) (Real Eigenvalues Theorem). 3) The eigenvectors of the 
+2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ are constructed by the eigenvectors of the 1D Ising model 
+with phases related to the Riemann zeta function 𝜁(𝑠)  (Hilbert-Pólya Space 
+Theorem). 4) All the zeros of the partition function of the 2D Ising model 𝑀𝐹𝐼+𝑆𝐺𝐼
+2𝐷
+ 
+lie on a unit circle in the complex temperature plane, which can be mapped into a 
+critical line (Unit Circle - Critical Line Theorem). 5) The closure of the nontrivial zero 
+distribution of the L(𝑠, 𝜒𝑘) function (including the Riemann zeta function 𝜁(𝑠)) has 
+been proven. This work offers a novel thought to understand in-depth the generalized 
+Riemann hypothesis and a path to upgrade it. 
+Acknowledgements  
+This work has been supported by the National Natural Science Foundation of 
+China under grant numbers 52031014. The author is grateful to Fei Yang for 
+understanding, encouragement, support and discussion. 
+Declaration of competing interest: The author declares no competing interests. 
+References:  
+1. N. Argaman, F. M. Dittes, E. Doron, P. Keating, A.Yu. Kitaev, M. Sieber, and U. 
+Smilansky, Correlations in the actions of periodic orbits derived from quantum chaos, 
+Phys. Rev. Lett. 71 (1993) 4326-4329.  
+2. M.V. Berry, Semiclassical formula for the number variance of the Riemann zeros, 
+Nonlinearity 1 (1988), 399-407. 
+3. M.V. Berry, J.P. Keating, The Riemann zeros and eigenvalue asymptotics, SIAM 
+Rev. 41 (1999) 236-266. 
+4. K. Binder, A.P. Young, Spin glasses: Experimental facts, theoretical concepts, and 
+open questions, Rev. Mod. Phys. 58 (1986), 801-976. 
+5. E. Bogomolny, Spectral statistics and periodic orbits, Proc. Int. School of Physics 
+‘Enrico Fermi’ (Varenna) (1999), 333-369. 
+6. E.B. Bogomolny and J.P. Keating, Random matrix theory and the Riemann zeros I: 
+three- and four-point correlations, Nonlinearity 8 (1995), 1115-1131. 
+7. P. Borwein, S. Choi, B. Rooney, and A. Weirathmueller, The Riemann Hypothesis: 
+A Resource for the Afficionado and Virtuoso Alike, CMS Books in Mathematics 
+(Springer, New York) (2008). 
+8. J.-F. Burnol, A lower bound in an approximation problem involving the zeros of 
+the Riemann zeta function, Advances in Mathematics 170 (2002), 56–70. 
+9. S. Chowla, The Riemann Hypothesis and Hilbert’s Tenth Problem, Mathematics 
+and Its Applications, Vol. 4, Gordon and Breach Science Publishers, New York, 
+(1965). 
+10. J. B. Conrey, More than two fifths of the zeros of the Riemann zeta function are 
+on the critical line, J. Reine Angew. Math. 399 (1989), 1-26.  
+11. J. B. Conrey, The Riemann hypothesis, Notices American Mathematical Society 
+50 (2003), 341-353. 
+12. J.B. Conrey and N.C. Snaith, Correlations of eigenvalues and Riemann zeros, 
+Communications in Number Theory and Physics, 2 (2008), 477-536. 
+13. J. Derbyshire, Prime Obsession (Joseph Henry Press, Washington, DC, 2003). 
+14. F.J. Dyson, Statistical theory of energy levels of complex systems, J. Math. Phys. 
+3 (1962) 140-156. 
+15. S.F. Edwards, P.W. Anderson, Theory of spin glasses. J. Phys. F Met. Phys. 5 (1975), 
+965–974.  
+16. L. Euler, Varia observationes circa series infinitas, Comm. Acad. Sci. Imp. 
+Petropol. 9 (1744), 160-188 
+17. M. E. Fisher, The Nature of Critical Points (Lectures in Theoretical Physics vol 
+VIIC) ed W Brittin (Boulder, CO: University of Colorado Press) (1965), 1-159. 
+18. P.J. Forrester, A.M. Odlyzko, Gaussian unitary ensemble eigenvalues and 
+Riemann ζ function zeros: A nonlinear equation for a new statistic, Phys. Rev. E 54 
+(1996), R4493-4495.  
+19. P.J. Forrester, N. C. Snaith,J. J. M. Verbaarschot, Developments in random matrix 
+theory, J. Phys. A: Math. Gen. 36 (2003) R1-R10. 
+20. X. Gourdon, The 1013 first zeros of the Riemann zeta function, and zeros 
+computation at very large height, (2003),  
+http://numbers.computation.free.fr/Constants/Miscellaneouszetazeros1e13-1e24.pdf 
+21. R. B. Griffiths, First-order phase transition in spin-one Ising systems, Physica 33, 
+(1967) 689-690. 
+22. L. Guth and J. Maynard, New large value estimates for Dirichlet polynomials, 
+(2024), arXiv2405.20552.  
+23. G. H. Hardy, The zeros of the function ζ(s) of Riemann, Comptes Rendus 
+Hebdomadaires des Seances de l Academie des Sciences, 158 (1914), 1012-1014. 
+24. J.T. Ho, J. D. Litster, Magnetic equation of state of CrBr3 near the critical point, 
+Phys. Rev. Lett., 22 (1969), 603-606. 
+25. P. Hoever, W.F. Wolff, J. Zittartz, Random layered frustration models, Z. Phys. B - 
+Condensed Matter 41 (1981) 43-53. 
+26. P. Hoever, J. Zittartz, Thermodynamics of some layered Ising models, Z. Phys. B 
+- Condensed Matter 44 (1981) 129-134. 
+27. C.P. Hughes, J.P. Keating and N. O’Connell, Random matrix theory and the 
+derivative of the Riemann zeta function, Proc. R. Soc. London A 456 (2000), 
+2611-2627. 
+28. A.E. Ingham. On the estimation of N(, T). Quart. J. Math. Oxford Ser., 11 (1940), 
+291–292. 
+29. E. Ising, Beitrag zur theorie des ferromagnetismus, Z Phys, 31 (1925), 253-258. 
+30. D. Kapitan, A. Korol, E. Vasiliev, P. Ovchinnikov, A. Rybin, E. Lobanova, K. 
+Soldatov, Y. Shevchenko, V. Kapitan, Application of machine learning in solid state 
+physics, Solid State Physics, 74 (2023), 1-65. 
+31. B. Kaufman, Crystal statistics II: Partition function evaluated by spinor analysis, 
+Phys. Rev. 76 (1949), 1232-1243. 
+32. J. P. Keating, N. C. Snaith, Random matrix theory and ζ(1/2 + it), Commun. Math. 
+Phys. 214 (2000), 57-89. 
+33. A. Knauf, The number-theoretical spin chain and the Riemann zeroes, Commun. 
+Math. Phys. 196 (1998), 703-731. 
+34. H.A. Kramers, G.H. Wannier, Statistics of the two-dimensional ferromagnet, Phys. 
+Rev. 60 (1941), 252-262. 
+35. A. Languasco, A. Perelli, A. Zaccagnini, Explicit relations between pair 
+correlation of zeros and primes in short intervals, J. Math. Analysis Appl., 394 (2012), 
+761-771.  
+36. T.D. Lee, C.N. Yang, Statistical theory of equations of state and phase transitions. 
+IL Lattice gas and Ising model, Phys. Rev. 87 (1952), 410-419. 
+37. N. Levinson, More than one third of zeros of Riemann’s zeta-function are on  = 
+l/2. Adv. Math. 13 (1974), 383-436.  
+38. B.C. Li and W. Wang, Influence of a new long-range interaction on the magnetic 
+properties of a 2D Ising layered model by using Monte Carlo method, Chinese Journal 
+of Physics, 87 (2024), 525-539. 
+39. B.C. Li and W. Wang, Exploration of dynamic phase transition of 3D Ising model 
+with a new long-range interaction by using the Monte Carlo method, Chinese Journal 
+of Physics, 90 (2024), 15-30. 
+40. A.R. Lima, M. A. de Menezes, Entropy-based analysis of the number partitioning 
+problem, Phys. Rev. E 63 (2001), 020106(R). 
+41. F.X. Liu, L.-M. Duan, Computational characteristics of the random-field Ising 
+model with long-range interaction, Phys. Rev. A 108 (2023), 012415. 
+42. Y. Liu, V.N. Ivanovski, C. Petrovic, Critical behavior of the van der Waals bonded 
+ferromagnet Fe3−xGeTe2, Phys. Rev. B 96 (2017), 144429.  
+43. B.M. McCoy, In: Phase Transitions and Critical Phenomena. C. Domb, M.S. 
+Green, (eds.) London, New York: Academic Press (1972). 
+44. M. L. Mehta, Random Matrices (Elsevier, Amsterdam, 2004). 
+45. S. Mertens, Phase transition in the number partitioning problem, Phys. Rev. Lett. 
+81 (1998), 4281-4284. 
+46. H. Montgomery, The pair correlation of zeros of the zeta function, Analytic 
+Number Theory (Proc. Sympos. Pure Math., Vol. XXIV, St. Louis Univ., St. Louis, 
+MO., 1972), American Mathematical Society Providence, (1973), 181-193.  
+47. M. Mézard, G. Parisi, M.A. Virasoro, Spin Glass Theory and Beyond (World 
+Scientific, Singapore), (1987).  
+48. S. J. Miller and R. Takloo-Bighash, An Invitation to Modern Number Theory 
+(Princeton University Press, Princeton, 2006). 
+49. G. Mussardo, The quantum mechanical potential for the prime numbers, (1997), 
+arXiv:cond-mat/9712010. 
+50. S. Nagy, R. Paredes, J.M. Dudek, L. Dueñas-Osorio, M.Y. Vardi, Ising model 
+partition-function computation as a weighted counting problem, Phys. Rev. E 109 
+(2024), 055301.  
+51. C. M. Newman, The GHS inequafity and the Riemann hypothesis, Constr. Approx. 
+7 (1991) 389-399. 
+52. L. Onsager, Crystal statistics I: A two-dimensional model with an order-disorder 
+transition, Phys. Rev. 65 (1944), 117-149.  
+53. G. Parisi, Infinite number of order parameters for spin-glasses, Phys. Rev. Lett. 43 
+(1979), 1754-1756.  
+54. B. Riemann, Uber die Anzahl der Primzahlen unter einer gegebenen Grösse, 
+Monatsb. der Berliner Akad., (1859), 671–680. 
+55. H.C. Rosu, Quantum Hamiltonians and prime numbers, Mod. Phys. Lett. A 18 
+(2003), 1205–1213 
+56. A. Sander, L. Burgholzery, R. Wille, Towards Hamiltonian simulation with 
+decision diagrams, IEEE Inter. Conf. Quantum Computing and Engineering, (2023), 
+arXiv:2305.02337. 
+57. P. Schofield, J. D. Litster, J.T. Ho, Correlation between critical coefficients and 
+critical exponents, Phys. Rev. Lett., 23 (1969), 1098-1102. 
+58. D. Schumayer and D.A.W. Hutchinson, Physics of the Riemann hypothesis, Rev. 
+Mod. Phys. 83 (2011), 307-330. 
+59. D. Schumayer, B.P. van Zyl and D.A.W. Hutchinson, Quantum mechanical 
+potentials related to the prime numbers and Riemann zeros, Phys. Rev. E 78 (2008) 
+056215.  
+60. S.K. Sekatskii, On the Hamiltonian whose spectrum coincides with the set of 
+primes, (2007), arXiv:0709.0364. 
+61. O. Shanker, Random matrices, generalized zeta functions and self-similarity of 
+zero distributions, J. Phys. A: Math. Gen. 39 (2006), 13983-13997. 
+62. R.R.P, Singhal, M.E. Fisher, Short-range Ising spin glasses in general dimensions, 
+J. Appl. Phys. 63 (1988), 3994–3996. 
+63. M. Srednicki, Nonclassical degrees of freedom in the Riemann Hamiltonian, Phys. 
+Rev. Lett. 107 (2011), 100201. 
+64. O. Suzuki, Z.D. Zhang, A method of Riemann-Hilbert problem for Zhang’s 
+conjecture 1 in a ferromagnetic 3D Ising model: trivialization of topological structure, 
+Mathematics, 9 (2021), 776. 
+65. E. Wigner, Random matrices in physics, SIAM Rev. 9 (1967), 1-23. 
+66. M. Wolf, Will a physicist prove the Riemann hypothesis? Rep. Prog. Phys. 83 
+(2020), 036001.  
+67. W.F. Wolff, P. Hoever, J. Zittartz, Layered inhomogeneous Ising models with 
+frustration on a square lattice, Z. Phys. B - Condensed Matter 42 (1981) 259-264.  
+68. F.Y. Wu, G. Rollet, H.Y. Huang, J. M. Maillard, C.-K. Hu, and C.-N. Chen, 
+Directed compact lattice animals, restricted partitions of an integer, and the 
+infinite-state Potts model, Phys. Rev. Lett. 76 (1996), 173-176. 
+69. H.J. Xu, S. Dasgupta, A. Pothen, A. Banerjee, Dynamic asset allocation with 
+expected shortfall via quantum annealing, Entropy, 25 (2023), 541. 
+70. C.N. Yang, T.D. Lee, Statistical theory of equations of state and phase transitions. 
+I. Theory of condensation, Phys. Rev. 87 (1952), 404-409.  
+71. Z.D. Zhang, Conjectures on the exact solution of three - dimensional (3D) simple 
+orthorhombic Ising lattices, Phil. Mag. 87 (2007), 5309-5419. 
+72. Z.D. Zhang, N.H. March, Three-dimensional (3D) Ising universality in magnets 
+and critical indices at fluid-fluid phase transition, Phase Transitions 84 (2011), 
+299-307.  
+73. Z.D. Zhang, Mathematical structure of the three-dimensional (3D) Ising model, 
+Chinese Phys. B 22 (2013), 030513.  
+74. Z.D. Zhang, O. Suzuki, N.H. March, Clifford algebra approach of 3D Ising model, 
+Advances in Applied Clifford Algebras, 29 (2019), 12. 
+75. Z.D. Zhang, Computational complexity of spin-glass three-dimensional (3D) Ising 
+model, J. Mater. Sci. Tech. 44 (2020), 116-120.  
+76. Z.D. Zhang, O. Suzuki, A method of the Riemann-Hilbert problem for Zhang’s 
+conjecture 2 in a ferromagnetic 3D Ising model: topological phases, Mathematics, 9 
+(2021), 2936.  
+77. Z.D. Zhang, Topological quantum statistical mechanics and topological quantum 
+field theories, Symmetry, 13 (2022), 323. 
+78. Z.D. Zhang, Mapping between spin-glass three-dimensional (3D) Ising model and 
+Boolean satisfiability problems, Mathematics, 11 (2023), 237. 
+79. Z.D. Zhang, Lower bound of computational complexity of Knapsack problems, 
+AIMS Math. 10 (2025), 11918-11938. 
+80. Z.D. Zhang, Exact solution of the three-dimensional (3D) Z2 lattice gauge theory, 
+Open Physics, 23 (2025) 20250215. 
+81. Z.D. Zhang, Two-dimensional Ising model with the next nearest interactions, Phys. 
+Rev. E 113 (2026) 064111. 
+82. Z.D. Zhang, Relationship between spin-glass three-dimensional (3D) Ising model 
+and traveling salesman problems, arXiv: 2507.01914. 
+83. R. Zivieri, Critical behavior of the classical spin-1 Ising model for magnetic 
+systems, AIP Advances 12 (2022) 035326. 
+ 
