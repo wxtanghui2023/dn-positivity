@@ -1,0 +1,84 @@
+
+# q-expansion of newform 1.12.a.a, downloaded from the LMFDB on 07 September 2026.
+
+# We generate the q-expansion using the Hecke eigenvalues a_p at the primes.
+# Each a_p is given as a linear combination
+# of the following basis for the coefficient ring.
+
+def make_data():
+
+    from sage.all import prod, floor, prime_powers, gcd, QQ, primes_first_n, next_prime, RR
+
+    def discrete_log(elts, gens, mod):
+        # algorithm 2.2, page 16 of https://arxiv.org/abs/0903.2785
+        def table_gens(gens, mod):
+            T = [1]
+            n = len(gens)
+            r = [None]*n
+            s = [None]*n
+            for i in range(n):
+                beta = gens[i]
+                r[i] = 1
+                N = len(T)
+                while beta not in T:
+                    for Tj in T[:N]:
+                        T.append((beta*Tj) % mod)
+                    beta = (beta*gens[i]) % mod
+                    r[i] += 1
+                s[i] = T.index(beta)
+            return T, r, s
+        T, r, s = table_gens(gens, mod)
+        n = len(gens)
+        N = [ prod(r[:j]) for j in range(n) ]
+        Z = lambda s: [ (floor(s/N[j]) % r[j]) for j in range(n)]
+        return [Z(T.index(elt % mod)) for elt in elts]
+    def extend_multiplicatively(an):
+        for pp in prime_powers(len(an)-1):
+            for k in range(1, (len(an) - 1)//pp + 1):
+                if gcd(k, pp) == 1:
+                    an[pp*k] = an[pp]*an[k]
+    from sage.all import PolynomialRing, NumberField
+    R = PolynomialRing(QQ, "x")
+    f = R(poly_data)
+    K = NumberField(f, "a")
+    betas = [K.gens()[0]**i for i in range(len(poly_data))]
+    convert_elt_to_field = lambda elt: sum(c*beta for c, beta in zip(elt, betas))
+    # convert aps to K elements
+    primes = primes_first_n(len(aps_data))
+    good_primes = [p for p in primes if not p.divides(level)]
+    aps = map(convert_elt_to_field, aps_data)
+    if not hecke_ring_character_values:
+        # trivial character
+        char_values = dict(zip(good_primes, [1]*len(good_primes)))
+    else:
+        gens = [elt[0] for elt in hecke_ring_character_values]
+        gens_values = [convert_elt_to_field(elt[1]) for elt in hecke_ring_character_values]
+        char_values = dict([(
+            p,prod(g**k for g, k in zip(gens_values, elt)))
+            for p, elt in zip(good_primes, discrete_log(good_primes, gens, level))
+            ])
+    an_list_bound = next_prime(primes[-1])
+    an = [0]*an_list_bound
+    an[1] = 1
+    
+    from sage.all import PowerSeriesRing
+    PS = PowerSeriesRing(K, "q")
+    for p, ap in zip(primes, aps):
+        if p.divides(level):
+            euler_factor = [1, -ap]
+        else:
+            euler_factor = [1, -ap, p**(weight - 1) * char_values[p]]
+        k = RR(an_list_bound).log(p).floor() + 1
+        foo = (1/PS(euler_factor)).padded_list(k)
+        for i in range(1, k):
+            an[p**i] = foo[i]
+    extend_multiplicatively(an)
+    return PS(an)
+level = 1
+weight = 12
+poly_data = [0, 1]
+
+# The basis for the coefficient ring is just the power basis
+# in the root of the defining polynomial above.
+hecke_ring_character_values = None
+aps_data = [[-24], [252], [4830], [-16744], [534612], [-577738], [-6905934], [10661420], [18643272], [128406630], [-52843168], [-182213314], [308120442], [-17125708], [2687348496], [-1596055698], [-5189203740], [6956478662], [-15481826884], [9791485272], [1463791322], [38116845680], [-29335099668], [-24992917110], [75013568546], [81742959102], [-225755128648], [90241258356], [73482676310], [-85146862638], [-262717201024], [631528759932], [-297198746214], [596793577940], [-1115433620850], [-824447297848], [1315116754406], [-357832759588], [2754833892216], [-950387449578], [1681384224780], [-996774496018], [2762403350592], [5442387685442], [-2876091504354], [728391402200], [-6793168439188], [7334863021472], [-1359839565924], [-11824411223170], [-17563353448518], [-7139577462960], [-231306909358], [12983053545252], [23961192565506], [-24273728464488], [25837706543670], [-3767932360528], [-16418932005874], [21035722907082], [16713176326532], [-23926858987458], [15311092828556], [49875160575912], [-99480832756438], [83369248359366], [-63584021925868], [121001428335986], [-155661561078204], [-25643022194650], [24909815245602], [157584150853560], [-177901220129584], [-55161734023378], [146463116322980], [231449571733632], [-149871571611810], [208110680273846], [-133407937691598], [-206167580638390], [73403515193820], [171111932338622], [-71775829446768], [99881248225682], [-29031220908760], [328369848718692], [-612368143631550], [303483032911706], [-729307946668938], [122188164073712], [-617380683662484], [1050837984850080], [-219909971761864], [-483863128068108], [-108877719272500], [506588355787752], [85753393288710], [927574652509722], [-21818651341228], [-1695266465052058], [752144751323996], [187489032934806], [244971285916812], [1352425875836970], [1432228477996772], [-877659324192574], [-2434250501782764], [-303318212278158], [-1701984261329400], [2339216023326602], [-2496072486898144], [2473009012516862], [24336777156666], [4225450805148020], [-4263261111420568], [1008295928583042], [303982416160892], [3435828424131096], [-1185387156769098], [-2265102374509140], [-5330121520762738], [4741198635421922], [-1413071638641474], [-3031157627077068], [-2747313442193908], [5727465442629702], [698326457818910], [9709787093595120], [2464686886685576], [7912852398754982], [-8406936179151460], [1362869794471992], [6817220120892752], [-667048975014994], [-7744079729695638], [2524111226919170], [-11145268112466978], [13227104255899436], [2302477758246246], [5604717670694010], [-5085164185024588], [279110773799022], [-13526517861603928], [272543929352676], [18045917610367430], [-7961834707368360], [-14982644001390898], [-22256130175851894], [5442366024533060], [10810987426382112], [-28102437759471274], [4222089494633682], [516091995437132], [5719060466578536], [-84377784300844], [-11009058285505488], [-4863513801242680], [3575343976258530], [38637331724206586], [-34899727878407658], [-28512291118415604], [40033434235820202], [18495304308397016], [-21487665696030828], [-8738799717564174], [11892426157508232], [23440857788319392], [-21400415987399554]]
