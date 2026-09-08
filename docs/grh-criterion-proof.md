@@ -262,13 +262,17 @@ $$\partial_t^2\operatorname{Re}\Bigl[\log\Bigl(1-\frac{\tfrac12+it}{\rho}\Bigr)\
 
 ## Step 4 严格化补全（2026-08-31 13:00——轨道装配形式化）
 
-### 4.1 轨道结构（函数方程强制）
-$\xi_\chi(s)=\varepsilon\,\xi_{\bar\chi}(1-s)$（$|\varepsilon|=1$）⟹ 零点集
-$\mathcal{Z}_\chi$ 对映射 $\rho\mapsto 1-\bar\rho$ 封闭（——函数方程的零点等价——）。
+### 4.1 轨道结构（共轭对称 + 函数方程——一般字符——完整证明见 a1）
+$\xi_\chi(s)=\varepsilon\,\xi_{\bar\chi}(1-s)$（$|\varepsilon|=1$）。
+$\mathcal{Z}_\chi$ 对 $\rho\mapsto 1-\bar\rho$ 封闭——【需两步——FE 单独不够】——
+① 共轭对称：$L(\bar s,\chi)=\overline{L(s,\bar\chi)}$ ⟹ $\rho\in\mathcal{Z}_\chi$ ⟹ $\bar\rho\in\mathcal{Z}_{\bar\chi}$
+② FE（$\bar\chi$ 版）：$\xi_\chi(1-\bar\rho)=\varepsilon_\chi\xi_{\bar\chi}(\bar\rho)=0$ ⟹ $1-\bar\rho\in\mathcal{Z}_\chi$ ✓
+（重数：共轭与 FE 均保重数 ⟹ $m_\rho=m_{1-\bar\rho}$——同高度：$1-\bar\rho=(1-\beta)+i\gamma$——）
+（实字符 $\chi=\bar\chi$ 退化：自共轭 + FE 自配对——同构——）
 轨道 $\sim$：$\rho\sim 1-\bar\rho$——同一高度 $\gamma$——实部 $\tfrac12\pm\delta$——
 - 离轴轨道：2 个零点 $\{\tfrac12+\delta+i\gamma,\ \tfrac12-\delta+i\gamma\}$（$\delta\neq0$）
 - 在线轨道：1 个零点（$\delta=0$——自配对）
-- **重数**：$m_\rho=m_{1-\bar\rho}$（——函数方程保重数——）
+- **重数**：$m_\rho=m_{1-\bar\rho}$（——共轭对称 + 函数方程保重数——见 a1——）
 
 ### 4.2 装配（逐项——重数/计数自洽）
 $$Q_\chi=-\sum_{\rho\in\mathcal{Z}_\chi}m_\rho w_H(\gamma_\rho,\delta_\rho),\qquad
