@@ -26,3 +26,15 @@ NS 振荡参考 → 读出穷尽（M/P_N/PFE/log E/Δδ/守恒——）
 → HP 三层（xp/Connes/Trace——）→ RF（候选空间——）
 → NC（BC/σ_p——）→ Prime Orbit → Static-Dynamic（熵 = 1——）
 ——约 35+ 类 NO-GO——终点：熵 1 算术流（T_p = log p——）——
+
+## 16:31 Length Origin Test（最终表述——）
+杀手条件不是"有无闭轨"（Selberg 有——）也不是"有无 Euler 积"（BC 有——）
+——是【为什么周期恰好是 log p？】——
+Selberg：T_γ = log(基本单位)——ζ：T_p = log p——结构相似非同一谱——
+第一关：任何候选必须回答"内禀时间单位为何自动产生 log p"（非输入——）
+压缩链：Euler 积 → prime orbit → T_p = log p → h = 1 → trace → 谱 → RH
+  ——HP 只是最后一步（H → {γ}——）
+  ——Rational Frobenius 解决更早的 p → time——
+最小未解决对象：自然对象 X_Q（Frob-like 时间——Per(p) = log p——h = 1——）
+——函数域：Frobenius 同时回答"谱为何是零点"+"时间为何是素数"——
+——数域：缺 Frobenius 机制（非更多谱拟合/振荡分析——）
