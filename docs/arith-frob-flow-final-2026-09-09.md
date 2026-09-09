@@ -25,3 +25,29 @@ Q6: ∞ 位提供对偶/函数方程（Archimedean——）
   γ_p ↔ p——T_p = log p——γ_p^n ↔ p^n——h = 1——F_p 内生——
 真正新增点：log p 的长度来源 + p^n 的绕行来源（两个独立硬约束——）
 ——必须由同一个算术动力对象同时产生——
+
+## 17:00 严格版（唐先生定稿——）
+A = (X_Q, φ_t, F_p, Θ)——必须同时满足：
+Q1 p ↔ γ_p（闭点 = 动力对象非标签）
+Q2 T(γ_p) = log p（内部产生——非外部赋值）
+Q3 h_top = 1（PNT 全局统计）
+Q4 γ_p^n ↔ p^n（φ_{n log p} = (φ_{log p})^n——Power compatibility——）
+Q5 F_p 属于 End(X_Q) 或其增强（非选定表示/人工/ζ 重写）
+Q6 Θ* = 1−Θ（函数方程 = 内部对偶——含 ∞ 位补全）
+
+## 本轮新增（核心缺口分裂——）
+缺口 A：Length generation（p → log p——范数→周期——）
+缺口 B：Power generation（p^n → γ_p^n——代数幂→动力绕行——）
+——不能分别解决（只有 A = 有频率无轨道——只有 B = Selberg 型长度错——）
+
+## 三个不可约条件
+Arithmetic Length（T_p = log p）*
+Arithmetic Iteration（γ_p^n = p^n）*
+Arithmetic Duality（Θ* = 1−Θ）
+——分别解决：Euler 因子时间来源/幂展开动力来源/RH 对称性——
+
+## 关键贡献（Power Compatibility——）
+任何真正的算术动力化不仅须解释素数作为周期——
+——还须解释 Euler 因子的幂指数作为轨道迭代——
+——未来候选若只能产生 log p 不能产生 p^n ↔ γ_p^n：
+  【直接判为形式 Euler 化（非真正动力化——）】
