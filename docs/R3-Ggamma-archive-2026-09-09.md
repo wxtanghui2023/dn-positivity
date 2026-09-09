@@ -62,3 +62,16 @@ profinite-adic✗/Archimedean-completion✗（R1 闭）/measure-limit✗
 ④ 反射可在离散对象上（J: X→X——不需作用于实数——）
 ⑤ 单实数可编码无限序列（刀 2 漏洞——规范 vs 人为是关键）
 ```
+
+## 23:21 更新：C-c Locking Lemma + R6 收缩
+- 撤回：无 log 语法 ⟹ N(T) 无 T log T（π(n) ~ n/log n 反例——）
+- 撤回：π vs e 独立（c = length unit——非 e 的——换底吸收——）
+- C = c/2π（若频率与算术长度共轭——同源锁定——非独立常数——）
+- L1（canonical T——）比 L2（2π 归一化——）更基础（坐标缩放作弊——）
+- canonical T 五来源：角色✗/几何✗/谱✗/复绕数✗/离散递归旋转（Case C——）
+- Case C：C₁（离散周期✗——）C₂（无限极限连续频率——撞 R1-R5——）
+- R6：高度收缩——NOT CLOSED（结构性边界——非 NO-GO——）
+  剩余：canonical discrete recursion → non-Fourier continuous oscillation
+  （须一次解释 L + T + C=c/2π + δ↔−δ + {γ_n}——）
+- 下一轮：Case-C 完备性定理尝试（C 类严格定义——非离散频率 ⟹
+  transform/spectrum/growth/geometry——或第五类 = 突破——）
