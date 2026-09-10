@@ -1339,3 +1339,52 @@ $$\mathcal N=\{\text{zero-blind arithmetic QSC systems}\}\setminus\{\text{Weil/t
 小灵具体化：先判"第三类是否必须非对偶型"（若是 ⟹ = 已关闭的算术微分候选）；
             再判"QSC 是否即 GL₂-结构"（若是 ⟹ 用门⑰的 Sym² 平凡化直接给 Λ 的排除条件）
 ```
+
+### §8.25 ⚠️ 撤回 4.2/4.3 + L3‴ + Finite-QSC Lemma（唐先生核实高秩 Voronoi/Weil/BK 框架）
+
+**撤回 4.3**（小灵过强推断）：$\text{QSC}\Rightarrow GL_2$ **✗ 不成立**
+```
+反例：GL(N) balanced Voronoi 公式把 Fourier 系数与 **hyper-Kloosterman** 扭结连接，
+并与 GL(2) Kuznetsov 配合产生谱 reciprocity ⟹ 底层表示论可为 GL₃、GL₄、…
+更甚：QSC 也不唯一指向 GL(n) —— Epstein/theta 给第二类（quadratic lattice → Weil 表示 → Mp_{2r}）
+⟹ 至少三类引擎：GL₂/Kuznetsov ｜ GL_n/Kloosterman–Voronoi ｜ Weil/theta/metaplectic
+修正表述：QSC ⟹ **representation-theoretic spectral structure**（候选必要，非定理），
+   底层群 ∈ {GL_n, Sp_{2n}, Mp_{2n}, SO_n, …}（与 Braverman–Kazhdan 一般 Fourier/γ-factor 框架一致）
+⟹ **GL₂ 是 QSC 的一个实现，不是其定义**
+```
+**降级 4.2**（小灵过强推断）：「第三类必须 non-dual」**✗ 未证**
+```
+三清单完整性未证明；且 duality 非三个离散盒子：Fourier → Weil transform → ρ-Fourier →
+  一般 reductive group 的 representation-dependent Fourier theory（BK：kernel 由 Langlands dual 表示决定）
+⟹ "不是已有三种 duality" ⇏ "必须 non-dual"；可能出现新的 duality functor
+```
+
+**L3‴ 正式登记**：
+$$\boxed{\textbf{L3}^{\prime\prime\prime}:\ Z2+Z3+Z4+Z5\ \stackrel{?}{\Longrightarrow}\ A_q\in\mathcal E_{\rm RT}}$$
+$$\mathcal E_{\rm RT}\supset\{GL_2\text{-Kuznetsov}\}\cup\{GL_n\text{-Voronoi}\}\cup\{\text{Weil/theta}\}\qquad \boxed{\mathcal N=\text{QSC}\setminus\mathcal E_{\rm RT}}$$
+**四层猎捕**：A Abelian Fourier（Z2/Z3 不够强）｜B Weil/theta（过 Z4+Z5，不自动过严格 Z2/Z3）｜
+C Automorphic/reductive（目前最强已知 QSC 类）｜**D 真正未知（非 reductive 表示论）**
+
+**⭐ 唐先生新观察**：Z2 含 $a\mapsto a^{-1}\bmod q$ ⟹ dual kernel 须同时看见 $(\mathbb Z/q,+)$ 与 $(\mathbb Z/q)^\times$
+$$\boxed{\text{真问题}:\ \{\text{additive char}\otimes\text{multiplicative inversion}\otimes\text{CRT}\otimes\text{quadratic closure}\}\stackrel{?}{\Longrightarrow}\text{finite-group representation}}$$
+
+**⭐⭐ 新硬目标 Finite-QSC Lemma**：$K_q(a,m)$ 满足 R1 reciprocal inversion｜R2 $K_{q_1q_2}\simeq K_{q_1}\otimes K_{q_2}$｜
+R3 $K_qK_q^*$ 同类闭合｜R4 不由 $C(X,H)$ 反向定义。
+$$\boxed{R1+R2+R3\ \Longrightarrow\ K_q\ \text{是否必来自某种有限群/代数表示？}}$$
+若成立 ⟹ 第三类 = $\boxed{\text{non-representation-theoretic finite reciprocity kernel}}$
+
+**⭐ 小灵补三点**：
+```
+7.1 候选证明策略（torus 识别）：R1（d↦d⁻¹）+ R2（CRT 张量）合起来把 kernel 逼向
+    **环面指数和** Σ_{d∈(ℤ/qℤ)^×} e_q(ad+bd⁻¹)（Kloosterman 型）；已知其【谱闭合唯一途径】
+    是 trace formula / automorphic / Weil 机器 ⟹ 未猎获者 = "torus 和 + 独立谱闭合"
+7.2 Z1 升级 = 早前 **C_ar^finite 语法类**的同一动作（限制【构造文法】而非输出）；
+    杀手反例：任意有限群表示造的 K_q(x,y)=Tr[ρ_q(x)ρ_q(y)⁻¹] 天然表示论闭合但可能是 re-encoding
+    ⟹ IDC/生成性条件是唯一闸门（两处应合并为同节门槛纪律）
+7.3 Z2 的实质 = **加法与乘法的耦合门** ⟹ 正是本项目最老主题（+ 与 × 的交互）以【门槛形式】重现
+    （结构性呼应，非定理）
+```
+
+**判定**：Epstein/theta ✓ 正面证据 ｜ FE⇏Euler ✓ ｜ QSC⇒GL₂ ✗ 撤回 ｜ 第三类必须 non-dual ✗ 未证 ｜
+Z2+Z3+QSC 仍可能强迫表示论结构 ｜ **真正活口 = non-representation-theoretic finite reciprocity kernel**
+（本轮没回到任何已关闭路线：问的是 ZBV 五门本身是否已具备有限代数结构定理）
