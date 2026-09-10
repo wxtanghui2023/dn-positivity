@@ -1808,3 +1808,43 @@ I5 同时满足 X0/X2/X3/X5/X6
 （若无 ⟹ R-CS 真正终点；若有 ⟹ 必然不是本轮的 coarse-graining，也不是 non-associative transport）
 
 **必产 R**：R_A-ind【inactive】｜R_B4【inactive】｜**R_int-sym【新，活跃问题】**
+
+### §8.36 R-INT-SYM-PRE1：内部对称的原生算术来源审计（唐先生设定 + 小灵执行）
+
+**目标**：$\mathcal S(X,H,\theta)$，$J(X,H,\theta)=(X,X/H,\theta')$，$J^2=1$，真 fixed locus $=H=\sqrt X\wedge\theta=\theta'$，
+且 $\boxed{\theta=\theta'\ \text{须提供【独立于 }H=X/H\text{ 】的算术约束}}$｜**不放 Λ**｜**先来源分类，不枚举名词**
+
+**⭐ §0 前置观察 + 新门 S9**：
+```
+为使 θ=θ' 成为非平凡约束，θ 须在 J 下【变值】（J-反协变）：
+  若 J(θ)=θ ⟹ 自动成立 ⟹ 无约束
+  若 θ 仅由两支 reach 决定且 J-反协变 ⟹ θ 必为 reach 差函数 ⟹ 零点 = 重合点
+⟹ **S9: J-反协变 且 仅由两支 reach 决定 ⟹ fixed locus = 重合点 ⟹ N43**
+⟹ θ 必须【不由两支 reach 决定】，而由两通道【交互数据】决定
+```
+
+**θ-A 局部组合型（全失败）**：A1 $\gcd\cdot\operatorname{lcm}=ab$ 是**恒等式**（障碍恒 0）；
+A2 reach 差函数（§0/S9）；A3 平方因子缺陷 $\Omega-\omega$（J-不变、无尺度）；A4 判别式（swapping 下**不变** ⟹ θ=θ' 自动 ⟹ 无约束）
+
+**θ-B 相位/符号型（全失败，三类死因）**：B1 Legendre/Jacobi = **重命名 character**（禁止项）；
+B2 **Gauss 和相位**：确为加×乘生成 ✓，但 $|\tau(\chi)|=\sqrt q$ 来自**有限正交性（Parseval）**
+$$\boxed{\text{= 门⑬"char 0 的无条件 }\sqrt{\ }\text{ 只来自有限性"}\Longrightarrow\text{常数特征而非 fixed locus（I3 失败）}}$$
+B3 Liouville/Möbius 符号 = 纯乘法 ⟹ **Sym(ℙ)-协变** ⟹ I2 失败
+
+**⭐⭐ θ-C 组合障碍型：规范实例 = 互反律符号**
+```
+二次互反 (a/b)(b/a) = (−1)^{((a−1)/2)((b−1)/2)} ⟹ 该符号正是"a 模 b 与 b 模 a 能否同时相容实现"的 obstruction ✓
+且由 (a mod 4)、(b mod 4) 生成 ⟹ 确为加×乘共同生成 ✓（非重命名 character）
+⚠️ 但死于 I2：互反对合交换 a↔b（**标号/类层**），【不携带 H 与 X/H 的 scale reach】
+⭐ 并在本项目被关闭过（P47-G2.5 **Pure Reciprocity Detector No-Go**）
+   ⟹ 本轮给出更深层解释：互反 obstruction 落标号侧无尺度 ⟹ 不可能供 H↔X/H
+```
+
+**判决**：$\textbf{R-INT-SYM-PRE1}$：三类 $\theta$ **均无实例通过 I1–I5**（θ-A ⟹ N43 支；θ-B ⟹ Sym(ℙ) 支 + 已关闭源；θ-C ⟹ Sym(ℙ) 支）
+**⭐⭐ 分叉预测【本轮被真正行使】且成立**（此前 B4 两对象在抵达分叉前即死 ⟹ 未行使；本轮三类**全部落入二分的一支**）
+（限于 3 类少数实例，**非穷尽性**）
+$$\boxed{\text{结构性诊断}：\theta\text{ 的对称性容易找到（互反/共轭/奇偶），但它总作用在【标号/类】侧，而那里没有尺度 reach}}$$
+
+**当前状态**：$\mathrm{R\_int\text{-}sym}$ **仍活跃，但本轮未找到入口**；**残余精确形式**：
+$$\boxed{\text{一个 }J\text{-反协变的内部变量 }\theta，\text{其数据源【既非两 reach，亦非标号/类】}}$$
+**S 门**：S1–S8 全部投入实际预筛（S8 未触发）；**新增 S9**
