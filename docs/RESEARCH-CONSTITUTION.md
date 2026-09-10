@@ -802,3 +802,45 @@ $=\sum_{h\le H}(H-h)\sum_{n\sim X}\Lambda(n)\Lambda(n+h)$
 **硬禁令**：不得把"素数对数据 = 独立输入"写入假设（本协议起因即该假设被违反）；不得以"可定义"充"可无条件获得"；不得以等价转换冒充新信息；不得以 Hardy–Littlewood 充当无条件结果
 
 **预注册预期**：最可能 R8-C；最理想 R8-A；须避免把 BKS"从零点统计出发"当作算术独立性证据
+
+### §8.11 R8 第一轮裁决 + H↔λ 字典 + R8.2 协议
+
+**裁决**：$$\boxed{\textbf{R8-B（当前）｜R8-C 未证｜R8-A 未证｜R8-D 已排除}}$$
+
+**Gate 0（RH contamination）**：
+```
+prime pairs --(代数)--> J --(显式公式)--> zero pair correlation
+右端强等价【带 RH】（LPZ 明确"在 RH 下"；Chan：strong pair correlation ⟺ 短区间素数两个二阶矩，under RH）
+HL 本身即强未解决算术输入，不是现成无条件 carrier
+⟹ 未发现隐藏的"独立无条件 prime-pair → zeros"通道；R8-C 暂不能成立为定理
+⚠️ 规范化警示：展开式 Σ_{h≤H}(H−|h|)Σ_nΛ(n)Λ(n+h) 结构成立但公式层须规范化（三角权/端点/连续平均）
+```
+
+**⭐ Gate 1 — H↔λ 字典（本轮核心产出）**：
+$$\boxed{\lambda=\frac{1}{1-\eta},\quad H=X^\eta\quad\Longleftrightarrow\quad \eta=1-\frac1\lambda}$$
+```
+λ=1 ⟺ η=0（H=X^{o(1)} 边界）｜λ>1 ⟺ 0<η<1 ｜**λ=2 ⟺ H=X^{1/2}（自对偶长度）**
+```
+$$\boxed{\text{决定性问题改写为：能否【独立无条件】获得 }H\sim\sqrt X\text{ 尺度的正确二阶素数方差？}}$$
+⚠️ 校正：不得把"无条件几乎处处一阶计数可达 $H\ge X^{1/6+o(1)}$"当作 λ>1 证据——**一阶 vs 二阶不可混淆**
+
+**三箭**：箭1 prime-pair→J **PASS**（真实 carrier）｜箭2 J→λ>1 **FAIL（当前，精度不足）**｜箭3 λ>1→λ≥2 **FAIL（当前，更大缺口）**
+
+**三问**：Q1 定义层 YES / 强渐近层"独立供给未知"｜Q2 均未实现（≠不可能）｜Q3 定义层 non-encoding YES；强渐近层可能进入与 zero statistics 等价层级（未证）
+
+**新登记 R**：
+$$\boxed{R_8^{(1)}:\ \lambda=\frac{1}{1-\eta},\ H=X^\eta;\quad \lambda>1\iff\eta>0;\quad \lambda=2\iff H=\sqrt X}$$
+```
+⟹ 把"prime-pair 能否推 support"变为明确尺度问题：
+   能否在 H=X^η（η>0）正幂尺度上独立无条件得到正确二阶 prime variance？（RH 强度目标 H~√X）
+```
+
+**R8.2 协议就绪**（`PROTOCOL-R8.2-precision-gap.md`）—— 缺口六槽分解：
+```
+S1 对角项 ｜ S2 非对角项（**关键槽**）｜ S3 在 H 上的一致性/均匀性 ｜
+S4 主项精度 ｜ S5 规范化/涌现项（新增）｜ S6 局部性筛查（新增，依 N42/N5 预淘汰同余型机制）
+预注册判据：若 S2 求值必须借入 F(α)、α∈(1,2) 型信息 ⟹ **R8-C 成立（Gate-4 型杀灭）**
+            若 S2 可由素数侧独立评估（含足够精度的上界/几乎处处）⟹ R8-A/B 方向
+主要劳动：产出"无条件精度表"（行=η 分段；列=无条件一阶/二阶上界/二阶渐近 ｜ 猜想 ｜ RH 下 ｜ 所需）
+```
+**裁决**：不做坐标跃迁；不宣布 R8-C；下一轮只审 S1–S6 的缺口解剖
