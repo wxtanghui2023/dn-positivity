@@ -1444,3 +1444,58 @@ $$\boxed{\text{终点必须是}:\ \text{Global-QSC}+\Lambda\text{ 的结构约�
 
 **下一步（唐先生指定）**：对 Global-QSC Lemma 做【反例构造】——先尝试构造满足 Z1–Z5、具真正跨 $q$ 全球谱、
 但不属 $\mathcal E_{\rm global}$ 的 $A_q$；小灵建议起点 = "不借助群作用"的全球恒等式候选。
+
+### §8.27 ⚠️ ERR-R8-ARCH-1（撤回）+ 算术 hypergroup 框架（唐先生本轮，R8-C†-B3）
+
+**撤回 10.2**：$\boxed{\text{"}\Gamma'/\Gamma\text{ 型}\Rightarrow\text{不能产生 Bessel/Hankel kernel"}\ 	extbf{错误，撤回}}$
+```
+撤回理由：Bessel/Hankel transform 可有一般参数依赖，其 Mellin 表达式含 Γ 因子；
+对参数/谱变量求导自然产生 ψ(s)=Γ'/Γ（digamma）项 ⟹ 出现 Γ'/Γ ⇏ 无 Bessel 核
+文献：广义 Hankel transform 即谱变换；已有 **Hankel transform 的 Poisson summation 理论**；
+      BK–Ngo 型框架推广到一般 ρ
+保留（L1″ 仍正确）：−ζ'/ζ 的 Mellin FE dual 仍是 logarithmic-derivative/residue 结构
+⟹ archimedean 层【不能】作为 Λ 的 NO-GO
+```
+
+**关键事实**：$\boxed{\text{global spectral closure}\not\Rightarrow\text{显式 group action}}$（Bessel–Kingman hypergroup = 标准非群型实例）
+但其变量是**连续径向变量**，不提供 $(\mathbb Z/q,+)\times(\mathbb Z/q)^\times$ 耦合并无 $d\mapsto d^{-1}$
+⟹ 是"第三类的**原型**"，**尚未进入 R8 算术入口**
+
+**第三类具体化 = Arithmetic hypergroup**（H1 inversion symmetry｜H2 CRT tensor｜H3 reciprocal character｜H4 global Hankelization｜H5 zero-blind）
+**⚠️ H3 障碍**：直接塞入 $e_q(am+a^{-1}m')$ ⟹ 已是 Kloosterman 型 ⟹ hypergroup 很可能退化为 Kloosterman/automorphic envelope
+⟹ 真正的第三类**不能"把 Kloosterman 改成 hypergroup"，必须改【有限层组合律本身】**
+
+**⭐ 唐先生新尝试：inversion 不作用于点，而在【谱侧】**
+$$J_q:\widehat X_q\to\widehat X_q,\ J_q^2=1,\ \mathcal F_q(e_a)=e_{J_q(a)}\ \text{表现为}\ a\mapsto a^{-1}$$
+⟹ CRT 自然（$J_{q_1q_2}=J_{q_1}\otimes J_{q_2}$）；QSC 天然（$J_q^2=1$）；不必有 Kloosterman 和 ⟹ $Z2\not\Rightarrow$Kloosterman
+**Z1 硬门槛**：$\boxed{J_q=\mathcal J_q(\Lambda)}$（局部定义、与 $X,H$ 及 $C(X,H)$ 无关、CRT 自然、不用零点、不预设谱）
+
+**⭐ 小灵补（首要否证目标）**：
+```
+(ℤ/q)^× 的 dual = Dirichlet 特征群；其 **canonical 对合 = 复共轭 χ↦χ̄**，而 χ̄(a)=χ(a⁻¹) ⟹ 共轭恰实现 inversion
+但仍同时拥有：① 加法特征 e_q(an) ② 作用于乘法变量的 inversion
+   ⟹ 把两者 canonical 耦合的方式**恰恰就是 Kloosterman 和**
+（待核实）有限域上与该对合相容的 harmonic/hypergroup 结构（GL₂(F_q)/B Hecke 代数、有限域 Bessel 函数）
+   其结构常数即 Kloosterman 型
+⟹ **最可能失败模式 = (ii) inversion 强迫 Kloosterman** ⟹ 下一轮应以它为【首要否证目标】
+```
+
+**⭐ 框架升级建议（小灵）**：把"有限算术卷积"放到 **association scheme / Bose–Mesner 代数**语言
+```
+CRT 张量条件有自然表述；inversion/共轭对合 = scheme 的（反）自同构/对偶性
+判定问题变为：ℤ/q 上的 CRT 张量 scheme 中，与共轭-compatible inversion 相容者是否【只有】Kloosterman 型？
+（scheme 术语与分类状态【待核实】）
+```
+
+**搜索树状态**：hypergroup/global harmonic ✓存在｜Bessel/Hankel global transform ✓存在｜非群卷积 ✓存在｜
+**finite arithmetic reciprocal hypergroup 尚未发现**｜**CRT-compatible reciprocal hypergroup 尚未发现**｜
+**Λ 二阶相关完全未知** ⟹ **第三类未被杀**
+
+**R8 更新状态**：finite algebra 太容易｜finite representation 排除力弱｜global harmonic 非群型也存在｜
+**archimedean Bessel 不能作为 NO-GO**｜finite arithmetic+reciprocal 真正未知｜CRT+reciprocal+global Bessel 真正未知｜
+Λ×Λ 二阶闭合 = 最终门槛
+$$\boxed{\textbf{R8 真正活口不是"新谱"，而是【新算术卷积】（new arithmetic hypergroup / character-side reciprocity）}}$$
+
+**下一轮唯一硬问题**：是否存在有限算术卷积 $*_q$ 满足 CRT tensor + character-side inversion + quadratic closure，
+但不是 Kloosterman/Hecke/Weil/automorphic 的重命名？**失败原因三选一**：(i) CRT 杀死 hypergroup｜(ii) inversion 强迫 Kloosterman｜
+(iii) global Besselization 强迫已有表示论 ⟹ **小灵建议以 (ii) 为首要否证目标**
