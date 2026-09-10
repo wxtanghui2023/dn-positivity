@@ -1888,3 +1888,68 @@ SW3 群求逆/共轭 ⟹ 落 S9｜SW4 Galois ⟹ 标号侧 D1｜SW5 adjunction u
 **终止条件核对**：唐先生规则的前提（D2 经 S9/I2–I5 后无 instance）**表面已满足**；但 D2 只跑一轮预筛、SW6 仅"形式开放"⟹ **建议进入丙，决定权在唐先生**
 **状态**：$R_{A\text{-}ind}$ inactive｜$R_{B4}$ inactive｜$R_{\rm int\text{-}sym}$ **active，空间压缩为 $\mathfrak I_{\rm cross}$**
 **S 门累计**：S1–S11（**S9 为 filter 级**）｜继续不碰 Λ
+
+### §8.38 ⭐⭐⭐ 尺度动力学线终审：结构边界图（唐先生定 丙）
+
+**汇合**：$R_{\rm CS}(A\cup B)$ 与 $R_{\rm int\text{-}sym}$ 三条线压缩为
+$$\boxed{\text{两尺度 reach}\to H\leftrightarrow X/H\to\sqrt X\ \text{fixed point}}$$
+要得到**非 N43** 的 $\sqrt X$ 机制，必须把 fixed condition 从 reach 本身剥离：$\boxed{H=\sqrt X+\text{独立 internal condition}}$
+⟹ 被迫进入 $\boxed{\mathfrak I_{\rm cross}=\{\text{非 reach、非 label 的 cross-channel internal interaction}\}}$
+
+**最终边界图**：
+```
+        R_CS                              R_int-sym
+          |                                   |
+ coarse-graining   non-assoc.            reach      label
+          |             |                   |           |
+         N43          Ω = 0                S9          D1
+                                            \         /
+                                               D2
+                                                |
+                                               S10
+                                                |
+                                            nonlinear
+                                                |
+                                               S11
+                                                |
+                                               SW6
+```
+$$\boxed{R_{\rm CS}\ \text{inactive}}\qquad\boxed{R_{\rm int\text{-}sym}\to SW6\text{-Gap}\ (\textbf{不是 NO-GO})}$$
+
+**⭐⭐ 六道门（可筛选未来模型的边界图）**：
+```
+Gate 1 √X 是否来自 H↔X/H？若不是 ⟹ 不是当前问题
+Gate 2 internal state 是否真独立于 H,X/H？否则 S9
+Gate 3 是否 label/class/character/Galois 数据？否则 D1
+Gate 4 J 是否在线性空间上作用？否则 S10
+Gate 5 J 是否只是 Fourier/FE/inverse/conjugation/adjunction 变体？否则 S11
+Gate 6 是否只是 associative law 换种表示？否则 S7
+```
+
+**⚠️ 最关键决定：不建议现在硬造 SW6**
+```
+否则回到【名字生成 → 漂亮定义 → 结构塌缩】这条已反复验证失败的生产线
+⟹ SW6 下一次只有在发现【生成原则】之后才能重启（先问"为什么自然存在这种 involution"）
+```
+
+**正式结论**：$R_{A\text{-}ind}=\textbf{inactive}$｜$R_{B4}=\textbf{inactive}$｜$R_{\rm int\text{-}sym}=\textbf{restricted}$｜
+$\mathfrak I_{\rm cross}=\textbf{uninstantiated}$｜$SW6=\textbf{open gap, not NO-GO}$
+**总诊断（逐字登记）**：
+> **在当前审计的尺度交换架构中，$\sqrt X$ 很容易由两-range 对称产生，但一旦要求它同时携带独立的 arithmetic internal constraint，所有已知的 native involutions 都退化为 reach、label 或既有 duality；剩余入口被压缩为一个尚无生成原则的 SW6 gap。**
+
+**下一阶段 = G-SW6 Gap Problem**：
+$$\boxed{\textbf{G-SW6}:\ \text{是否存在天然的、非 Fourier/FE/群逆/伴随的算术对合，使【非线性 cross-channel interaction observable】产生独立 fixed law？}}$$
+**规则**：无**生成原则**前**不继续枚举候选**；**Λ 耦合继续冻结**
+
+**⭐⭐⭐ 小灵新增三项长期登记纪律**：
+```
+11.1 三值状态分类法（取代二值）：NO-GO（在已定义类内证明不可能，须写明类边界）｜
+     Gap（开放、未证为空、冻结待生成原则）｜Uninstantiated（类已定义但无实例）｜Active
+     ⟹ 今后每条路线收口须标三值之一，不得混用"未找到"与"不存在"
+11.2 ⚠️ 范围限定：本边界图刻画的是【本项目审计过的 architecture class】（以两尺度 reach 构造），
+     不是"全部数学"；三线漏斗到同一处可能部分反映【我们搜索空间的结构】；
+     ⟹ 边界图在【该类之外】的预测力【未证】，此限定须随图一起引用
+11.3 重启 SW6 的准入（可检验）：须先提交 (a) "为什么该 involution 自然存在"的生成原则（非"我需要它"）
+     (b) 不依赖 Λ / 目标 C(X,H) / ζ 零点 (c) 由该原则【推导】对合而非定义它
+     ⟹ 未能提交者不予评审（直接拒收）
+```
