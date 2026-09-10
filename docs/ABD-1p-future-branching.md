@@ -43,9 +43,34 @@ $$\text{合法性 L1 + 窗口 }B\ \Longrightarrow\ \mathcal C=\Big(2\Big\lfloor\
 $c\ge4$ 时平衡态 $a=b=c/2$ 有 $g=c/2\ge2$，故
 $$\mathcal C(\text{balance})=\Big(2\big\lfloor\tfrac{B}{c/2}\big\rfloor+1\Big)^2<\mathcal C(\text{primitive},g=1)$$
 $$\boxed{\text{⟹ 分支最大化动力学【永不】选择平衡态 }(c\ge4)}$$
-**实例（$c=20,B=3$）**：$g=1\Rightarrow\mathcal C=28$；$g=2\Rightarrow6$；$g\ge4\Rightarrow1$；平衡 $g=10\Rightarrow\mathcal C=1$
+**实例（$c=20,B=3$）——⚠️ 此行数值已被 ERR-ABD1p-1 更正**：~~$g=1\Rightarrow\mathcal C=28$；$g=2\Rightarrow6$；$g\ge4\Rightarrow1$~~ ⟹ **正确（无截断）**：$g=1\Rightarrow49$（内部态）、$g=2\Rightarrow9$、$g\ge4\Rightarrow1$、平衡 $g=10\Rightarrow\mathcal C=1$
 
 ---
+
+### ⚠️ 勘误 ERR-ABD1p-1（唐先生核验发现）
+**错误**：本报告此前把 $\mathcal C$ 在 $c=20$ 的取值写成 $g{=}1\Rightarrow28$、$g{=}2\Rightarrow6$、$g{\ge}4\Rightarrow1$，
+并把它当作公式 $\big(2\lfloor B/g\rfloor+1\big)^2$ 的数值。**这是错的**：
+```
+28 / 6 / 1 是【代码对特定边界态】的输出：(1,19)→28、(2,18)→6、(4,16)→1、(5,15)→1、(10,10)→1
+被【正性截断】(a+p>=1, b+q>=1) 压低（当 a 或 b <= B 时截断生效）
+公式值（无截断）应为：g=1→49、g=2→9、g>=4→1
+```
+**核验**（`scripts/verify_C.py`，输出 `/tmp/verify_C_out.txt`）：
+```
+逐项复现截断值：C(1,19)=28、C(2,18)=6、C(4,16)=1、C(5,15)=1、C(10,10)=1   ✓
+公式值核对：g=1→49、g=2→9、g=3→9、g=4→1、g=5→1、g=10→1               ✓
+单调性（正确检验 = 对每个 g 取【全体态的最大值】）：
+   c=12: g=[1,2,3,4,6]                    maxC=[49,6,6,1,1]                 非增 ✓
+   c=20: g=[1,2,4,5,10]                   maxC=[49,9,1,1,1]                 非增 ✓
+   c=30: g=[1,2,3,5,6,10,15]              maxC=[49,9,9,1,1,1,1]             非增 ✓
+   c=60: g=[1,2,3,4,5,6,10,12,15,20,30]   maxC=[49,9,9,1,1,1,1,1,1,1,1]     非增 ✓
+```
+$$\boxed{\text{单调性【成立】；反对齐结论【被加强】：平衡态 }\mathcal C=1\ (\text{最小}),\ \text{内部 primitive 态 }\mathcal C=49\ (\text{最大})}$$
+$$\boxed{\text{修正后对照是 }49\ \text{vs}\ 1\ (\text{不是 }28\ \text{vs}\ 1)}$$
+**成因**：§4 的循环打印了"每个 $g$ 首次出现的那个态"（恰为边界邻态），而非"该 $g$ 下的最大值"。
+**更严重的是**：同一份输出里的 A2 **已经报告了**"40 个反例证明 $\mathcal C$ 不是 $(g,c)$ 的函数（窗口边界截断）"，
+我却没把它与 $g$ 表对齐 ⟹ 这是**核对失误**，不只是展示失误。
+**Gate V 补充条款 V-b（定义—数值对账）**：引用的数值必须说明它是【该类的最大/最小值】还是【某代表态的值】。
 
 ## 4. 实测行为
 | 变体 | reach $a=b$ | mean $R$: 初 → 末 |
