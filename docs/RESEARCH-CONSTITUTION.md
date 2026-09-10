@@ -1766,3 +1766,45 @@ $$\boxed{\textbf{S8}:\ \text{若不可区分性的"分辨模数"是单一尺度 
 
 **必产 R**：R_A-ind【新，inactive】｜S8【新筛查门】
 **裁决**：A 已激活，但 A-PRE1 **未找到通过 A-X0..X6 的等价关系**（存活形态 E13 的 fixed point 结构性落 N43）
+
+### §8.35 ⭐ R-CS 受限封存（RESTRICTED ARCHIVE，唐先生定 乙）
+
+**对象**：$R_{\rm CS}=A_{\rm coarse\!-\!graining}\cup B_{\rm non\!-\!associative\ transport}$｜**链条 5 轮**：R_CS → R-CS-PRE1(+最小 Ω) → B-PRE2 → B4-IA/II → A-PRE1
+
+**结构性收缩**（比单个候选死亡更有价值）：
+$$\boxed{\text{A、B 从不同方向撞回同一障碍：}\sqrt X\text{ 对合若由【两尺度 reach】承载，fixed point 极易变成两范围边界；}}\\text{而 defect／信息损失一旦由边界产生 ⟹ 回到 N43}}$$
+⟹ 硬攻"非边界 fixed point"极易**人为定义第三个 reach** ⟹ 违反 X0/S2/S3 防线
+
+**A 侧（受限非穷尽）**：$\boxed{\mathrm{R_A\text{-}ind}:\ \textbf{inactive, restricted}}$（**不得**写成"所有 coarse-graining 都不可能"）
+**B 侧**：$\boxed{\mathrm{B4}:\ \textbf{inactive}}$（残余 = 对象层本征非结合的 canonical 算术律；目前无实例）
+
+**⭐⭐ 三项保留结论**：
+$$\boxed{\textbf{S6}:\ \text{non-multiplicativity}\neq\text{non-associativity}}\quad\boxed{\textbf{S7}:\ \text{operator composition / associative quotient}\Rightarrow\Omega\equiv0}\quad\boxed{\textbf{S8}:\ \text{单一单调尺度 resolution}\not\Rightarrow H\leftrightarrow X/H}$$
+
+**⚠️ 机制级措辞降级（唐先生指定，正式采纳并覆盖）**：
+原表述 ~~"任何 $H\leftrightarrow X/H$ 架构的 fixed point 必是某两支 reach 的重合点"~~ 过强
+$$\boxed{\text{正式版本}：\text{在本轮所枚举的 reach-based architecture 中，canonical }H\leftrightarrow X/H\text{ 的 fixed point 表现为两支 reach 的重合}}$$
+**理由**：可能存在未发现的**内部变量 $\theta$**，使 $J(H,\theta)=(X/H,\theta')$，fixed locus 由 $\theta=\theta'$ + **内部守恒律**共同决定
+$$\boxed{\text{这个逻辑空间必须【刻意保留】——否则将来真找到时会被自己写死}}$$
+
+**⭐⭐ 逃生规范 I1–I5（小灵形式化，供未来检验）**：
+```
+I1 状态存在【内部变量 θ】（非尺度、非 reach 长度）
+I2 对合作用在【对】(H,θ)：J(H,θ)=(X/H,θ')
+I3 fixed locus = θ=θ' ∧ 某内部守恒律（不是两 reach 相等）
+I4 该 fixed locus【不是两范围边界】⟹ 不落 N43
+I5 同时满足 X0/X2/X3/X5/X6
+⟹ I1–I5 全部有解 ⟹ 它必然既不是本轮定义的 coarse-graining，也不是 non-associative transport
+```
+
+**封存状态**：$R_{\rm CS}\ \textbf{RESTRICTED ARCHIVE}$；S1–S8、X0–X6 全保留；
+**E13 保留为 boundary witness**；**Gauss/Hecke 保留为 false-defect controls**；**不删除**
+
+**下一阶段**：**不得在 R-CS 内部继续挖**。已得结论：R-CS 的两种自然产生记忆的机制（**信息丢失**与**组合缺陷**）
+目前都无法同时产生新的 $\sqrt X$ 内生结构 ⟹ 这回答了"transport 为何不能只是换名字"。
+**应重新寻找 X0–X6 中"尺度动力学"的第三种来源。**
+
+**保留未决问题**：$\boxed{\text{有没有一种 canonical arithmetic state，其 }\sqrt X\text{ fixed point 来自【内部对称】而非两尺度 reach 的交点？}}$
+（若无 ⟹ R-CS 真正终点；若有 ⟹ 必然不是本轮的 coarse-graining，也不是 non-associative transport）
+
+**必产 R**：R_A-ind【inactive】｜R_B4【inactive】｜**R_int-sym【新，活跃问题】**
