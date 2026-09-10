@@ -1058,3 +1058,40 @@ $$\boxed{\textbf{R8v-iv}:\ \text{坐标层问题——}\alpha/\lambda/H\ \text{�
 
 **必产 R**：**R_conv【新】**（α/λ/H 约定统一，输入=两个必核项；**A4 的前置**）｜
 R_8^{(v)}【更新】（A2 可逆性须严格化）｜R_{8.3}^{sharp}、R_avg-coord【保留】
+
+### §8.18 ⭐ R_conv 解出（唐先生核实）：坐标层闭合；**R8v-iv 撤回**
+
+**解出结果**：
+$$\boxed{\eta=1-\frac1\alpha\iff\alpha=\frac1{1-\eta}\qquad\text{且}\qquad \alpha=\lambda}$$
+```
+标准 Montgomery–Goldston：X=T^α、H=X/T ⟹ H=T^{α−1} ⟹ H=X^{1−1/α} ⟹ η=1−1/α
+⟹ α=λ（同一 F(X,T) normalization 下的同一参数）
+⟹ **H=√X ⟺ η=1/2 ⟺ α=λ=2**（R8 的"自对偶尺度"不再悬空，已被精确坐标化）
+```
+**⚠️ 取代登记**：上一轮登记的 $\alpha=1+\eta$ 为**坐标误用**，据其生成的"1.5 vs 2 未对齐"随之消解。
+$$
+\boxed{\text{真正缺口 = 【求值】——如何无条件求出 }V(X,H)\text{ 的正确非对角主项？}}$$
+
+**M–S 主项验证该坐标**：$V\sim H\log(X/H)$，$H=X^\eta$ ⟹ 尺度系数 $(1-\eta)=1/\alpha=1/\lambda$
+
+**第二个前置项（未平均 $V(X,H)$ 无条件范围）**：
+```
+未找到无条件 S2-c 渐近；2024 综述：该 asymptotics 无条件所知甚少
+且记录 Goldston–Montgomery【在 RH 下】：V ~ H log X(1 − log H/log X) 对 1≤H≤X^{1−ε} 一致，
+**并与 Strong Pair Correlation Conjecture 等价**
+```
+$$\boxed{\text{S2-c}\Longleftrightarrow_{\rm norm}\text{variance asymptotic}\Longleftrightarrow_{\rm RH}\text{Strong PC}}$$
+**⚠️ 限定**：该等价在 **RH 框架内**建立；**不得**写成"无条件 RH-free 等价" ⟹ R8v-i 以**条件形式**达成
+
+**A2（确认）**：$V(X,H)\sim\sum_{|h|<H}(H-|h|)C_X(h)+$ 修正项；三角核 $\Delta_H^2$ 产生离散 delta
+$$\boxed{\text{A2：结构性可逆（精确公式尚需完整记账）}\ \Longrightarrow\ \text{R8v-iii 排除}}$$
+三项 bookkeeping 必留：Λ(n)² diagonal｜主项 H² 及交叉项｜x-积分边界 O(H²)/endpoint
+
+**A3/A4 坐标统一（A4 解除悬置）**：
+$$\boxed{C(X,H)\leftrightarrow V(X,H)\leftrightarrow F(\alpha),\ \alpha=\frac1{1-\eta}}\quad(\text{不得写 }C\leftrightarrow F(1+\eta))$$
+特别 $C(X,\sqrt X)\leftrightarrow V(X,\sqrt X)\leftrightarrow F(2)$
+
+**状态**：$\boxed{\textbf{R8v-ii（强）}+\textbf{R8.3-B'}}$；**R8v-iv 撤回**
+**下一刀**：① 严格化 A2（完整记账）⟹ S2-c ⟹ 目标 $F(\alpha),\alpha>1$；
+② 是否存在**完全不经过 $F(\alpha)$**的方法直接给出 h-shift 非对角主项？
+②若被堵死 ⟹ R8-C 才真正具有**结构性**
