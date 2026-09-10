@@ -2093,3 +2093,29 @@ fixed condition 可能不等价于 $H=X/H$ ⟹ **第一个在定义层面未被 
 **三体耦合 = add×mult×label = 解析核心**
 **建议裁决（决定权在唐先生）**：$\boxed{O5=\text{class-closed}，理由="不可约实例与目标重合，故非独立"}$；注明【第四类不可约性】留为未命名残余
 ⟹ 若采纳，**G-SW6 残余只剩 O2**
+
+### §8.43 ⭐⭐⭐ O5 措辞收紧 + O2 Correspondence Reduction ⟹ **G-SW6 CLOSED**
+
+**O5 正式措辞（唐先生收紧）**：
+$$\boxed{O5=\mathrm{class\!-\!closed\ for\ \textbf{independent SW6 mechanisms}}}\quad(\text{而非 }O5=\varnothing)$$
+**两限定**：① 不能说 O5 所有可能实例已被【定理性】排除；②"第四类不可约性"留为**未命名残余**，但**不得**再作为 O5 的开放搜索空间反复使用
+
+**O2-P1 本体**：$C\subset\mathcal A_H\times\mathcal Z\times\mathcal A_{X/H}$，$a\leftrightarrow z\leftrightarrow b$；
+$\boxed{\text{不把 }C\text{ 本身当新机制——须审计 interaction 来自哪里}}$
+**四模式**：O2-A 单一中间元 ⟹ 对称 ⟹ **S10**｜**O2-B 定向 correspondence（O2 核心残余）**｜
+O2-C 双 correspondence ⟹ 置换则 N2，复合则 N4｜O2-D 多值 ⟹ cardinality/norm→**N5**｜distribution→**N7**｜labels→**N2**｜composition→**N4**
+$$\boxed{\text{O2-D 最后残余}=\text{fiber 的【非交换、非计数、非标签、非组合】结构}}$$
+
+**⭐ 小灵实例审计**：O2-A lcm-型（对称 ⟹ S10）｜**O2-B 整除链 $a\mid z\mid b$**（规范可观测量 $d(b/a)$ ⟹ **cardinality ⟹ N5**；非计数内容 ⟹ Sym(ℙ) ⟹ **N2**）｜
+O2-C Hecke 双陪集（N2/N4 + **S7：Ω≡0 已验算**）｜O2-D 各类 fiber（N5/N7/N2/N4）⟹ **无实例逃出**
+
+**⭐⭐ Correspondence Reduction Lemma（结构性）**：correspondence observable 必落入六项之一——
+endpoint/reach(N1)｜label(N2)｜finite cardinality/norm(N5)｜composition(N4，且 S7)｜canonical representative(N6)｜statistical distribution(N7)
+⟹ 若不属六项 ⟹ 由 $(a,z,b)$ 的**不可约三元关系**决定 ⟹ **O2 → O5**
+$$\boxed{\textbf{Outcome A}:\ O2\subset N1\cup\cdots\cup N7\cup O5\ \Longrightarrow\ \boxed{\textbf{G-SW6 CLOSED}}}$$
+
+**⭐⭐⭐ 终止链（本轮最大产出）**：
+$$\boxed{\text{三原语}\Longrightarrow O1\cup O2\cup O3\cup O4\cup O5\Longrightarrow N1\!-\!N7}$$
+O1 第一轮失败｜**O2 归入**｜O3 class-closed｜O4 无入口｜O5 class-closed（for independent mechanisms）
+**必产 R**：**R_4th-irr【frozen gap】**（第四类不可约性；不得作为开放搜索空间；重启须提交生成原则，同 11.3 条款）
+**下一阶段**：**G-SW6 正式停止**；资源从"继续挖 arithmetic operation ontology"转移出去；RH 线整体仍开放；**Λ 耦合继续冻结**
