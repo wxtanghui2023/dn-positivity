@@ -2282,3 +2282,42 @@ $$\boxed{\text{对任意有界窗口 }W\text{，限制到 }W\text{ 的约束【�
 §10 ⚠️ 本轮不宣布完成（未决：①"自洽方程是否算术原生"能否独立判定 ② G8 的"状态数据"边界能否被"把规则编码进状态"绕过 ③ 是否真有两轴之外第三轴）
 ⟹ **ISRG 定义仍未冻结；M-NOGO-1 仍不启动**
 ```
+
+### §8.49 ⭐⭐⭐ M-NOGO-P1f（G8 终审）+ P1g（A 轴冻结 / C 轴不可对象化）
+
+**P1f（唐先生）**：$\boxed{\text{G8 按"状态数据 vs 规则"的原定义【不可冻结】}}$
+（"规则编码进状态"可在不改变数学对象的情况下把递归生成律改写成单尺度读出）
+**最强攻击**：$s_{n+1}=T(s_n)$ 取 $\tilde s_n=(s_n,T)$ 甚至 $(s_n,T,\alpha)$ ⟹ $\alpha_X^{\rm loc}$ 显然存在
+⟹ 若据此判死，**会杀掉完全合法的递归机制** ⟹ $\boxed{\text{"规则不属于状态"不是数学不变量}}$
+**取消 G8 亦不可行**：$s_X=(X,\sqrt X)$ 令 $\alpha_X^{\rm loc}=\tfrac12$ ⟹ 最典型 PIM 复活
+**G8′（表示不变局部不可辨识性）**：$\mathfrak M_X\not\Rightarrow\alpha$；严格版 = 存在两个全局延拓在尺度 $X$ 上相同而 $\alpha^{(1)}\neq\alpha^{(2)}$
+**⭐ 关键分层**：不能要求 $(s_n,T)\not\Rightarrow\alpha$（真动力系统恰是 $(s_n,T)\Rightarrow$ 吸引子 $\Rightarrow\alpha$）；
+真正禁止的只是 **$T$ 本身已含 $\alpha=1/2$**；允许 **$T$ 只产生动力学，$\alpha$ 是 $T^\infty$ 的不动点不变量**
+**新分工**：G8′ 禁止"单尺度对象已携带最终 exponent"；G4/POC 禁止"$\alpha=1/2$ 被写入生成规则"；合法 = $K\not\Rightarrow\tfrac12$ 而 $K^\infty\Rightarrow\tfrac12$
+**第三轴**：目前未发现 ⟹ 两轴为合理的**结构性压缩**（⚠️ 非定理）
+**ISRG 压缩**：$\boxed{\text{ISRG}=A_{\rm generation}+C_{\rm anti\text{-}insertion}}$（A：$\mathfrak M_X\not\Rightarrow\alpha$ 但 $\mathfrak M_\infty\Rightarrow\alpha=\tfrac12$ 且删去跨尺度约束后 $\alpha$ 不再唯一）
+
+**⭐⭐ 小灵 P1g 执行**：
+**§9 A 轴可完全表示无关地冻结**（范畴式）：
+```
+装置：模型范畴 𝕸（带尺度分级）；有界窗口截断函子 ρ_W:𝕸→𝕸_W；指数泛函 α:𝕸→R̄
+A1 局部不可辨识性：对每个有界窗口 W，α 不通过 ρ_W 分解
+   （∃m₁,m₂: ρ_W(m₁)=ρ_W(m₂) 而 α(m₁)≠α(m₂)）
+A2 耦合非平凡性：α 在 Σ_dec 上【不】被确定（删去跨尺度关系后 α 的确定消失）
+表示无关性：ρ_W 定义在【范畴对象】而非 presentation 上 ⟹ "把规则编码进状态"只是另一 presentation ⟹ 自动免疫
+检出：A1 检出 N1/N5/PIM-I/II/III；A2 检出 PIM-VI（其约束全为单尺度 ⟹ Σ=Σ_dec）
+⟹ **A 轴冻结（表示无关）**
+```
+**§10 ⭐⭐ C 轴在数学上【不可能对象化】**：
+```
+C 的内容（"规定 vs 导出"）是【provenance】概念；provenance 不是对象的同构不变量
+（两个同构对象可有不同的导出历史）⟹ 不存在只依赖同构类的 C 判据
+⟹ **C 必然是【推导层（proof-theoretic）】条件**
+```
+$$\boxed{\textbf{ISRG}=A_{\rm object\text{-}level}\ (\text{已冻结})+C_{\rm derivation\text{-}level}\ (\text{须证明论化})}$$
+**⭐ 追溯性解释**：M-NOGO 只能在"从 primitives 出发的推导"层面严格化——这解释了为何本项目每次路线之死
+最终都只能靠问"**这个 1/2 是从哪来的**"判定，而非任何结构性质（不变量/谱/对称）
+**§12 生成最终表述**：A1（无有界窗口确定 α）+ A2（删去耦合后确定消失）+ C（推导中未被规定）
+**§13 未决（P1h）**：① C 的证明论形式化（判据候选：推导中不出现 1/2 及任何**可证等于**它的表达式；
+⚠️ 依赖理论 normal form ⟹ 原则上可被混淆绕过 ⟹ 作为**研究纪律**可辩护、作为数学定义不完美）
+② "有界窗口"族是否足够 ③ 第三轴仍未证不存在 ⟹ **C 层未完成；ISRG 未完全冻结；M-NOGO-1 仍不启动**
