@@ -2536,7 +2536,7 @@ $$\boxed{\textbf{P2 规格} = \underbrace{\text{D2 的 uniformity（推导）}}_
 
 **DA-1 连续参数内生？**
 $$
-\widehat{\mathbb Z}:\ 	extbf{✗【证明】}\ \mathbb R\text{ 连通}\Rightarrow\text{连续像连通}\Rightarrow\text{任何连续 }\mathbb R\to\widehat{\mathbb Z}\text{ 为常数}\Rightarrow\text{无连续实参数（唐先生先验被严格证实）}$$
+\widehat{\mathbb Z}:\ 	extbf{✗【证明】}\ \mathbb R\text{ 连通}\Rightarrow\text{连续像连通}\Rightarrow\text{任何连续 }\mathbb R\to\widehat{\mathbb Z}\text{ 为常数}\Rightarrow\text{无连续实参数（唐先生先验被严格证实）}}$$
 $\mathcal S_{\mathbb Q}$: **✓ 内生** —— composant 是一参数拓扑子群（$\mathbb R$ 的单射连续同态像，文献核实），
 参数 = archimedean 流方向 $t\in\mathbb R$，**不是**人为 $e^{i\theta}$；⚠️ 但对偶为 $\mathbb Q$（离散）⟹ 频率参数是离散的
 
