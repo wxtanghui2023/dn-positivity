@@ -1204,3 +1204,46 @@ $$\boxed{\textbf{能否构造一个不经过 }\rho\textbf{ 的 }\Lambda\textbf{-
 门⑲⑳（锁管离散侧/ζ 住散射侧）｜R8.4（divisor 有 automorphic engine，Λ 侧落 zero side）｜
 本节（非-automorphic 乘法函数的 Voronoi 化暴露 zero 级数）
 ⟹ 形状一致："算术对象自身的对偶/谱引擎落在 zero 侧"（可作未来候选的快速筛查模板）
+
+### §8.22 R8-C†-L1″：标准 Voronoi 范式内 zero-side 断点已锁定（唐先生完成"甲"）
+
+**甲的结果**：Chorge–Dixit（2024/2026）覆盖 $\lambda$（**Liouville**）、$\mu$、$d^2$，**不覆盖** $\Lambda$（von Mangoldt）
+$$\sum\lambda(n)n^{-s}=\frac{\zeta(2s)}{\zeta(s)}\qquad\text{vs}\qquad\sum\Lambda(n)n^{-s}=-\frac{\zeta'(s)}{\zeta(s)}$$
+$$\boxed{\text{Chorge–Dixit}\not\Rightarrow\Lambda\text{-side VZ}}$$
+**登记纪律**：$\lambda_{\rm Liouville}\neq\Lambda_{\rm von\,Mangoldt}$（禁止再混用）
+**VZ → VZ-1**（降格为机制旁证）：$\lambda_{\rm Liou},\mu,d^2$ 的 Voronoï 公式中确实出现 $\rho$-series
+
+**Λ 侧标准 Mellin dual 必含 $\rho$**：由 $\zeta(s)=\chi(s)\zeta(1-s)$ 微分得
+$$-\frac{\zeta'}{\zeta}(s)=-\frac{\chi'}{\chi}(s)+\frac{\zeta'}{\zeta}(1-s)$$
+右侧非新 Dirichlet series，而是 $\zeta'/\zeta(1-s)$ + archimedean 对数导数 ⟹ contour shift 必遇 $\operatorname{Res}_{s=\rho}=-\mathcal T(\rho)$
+
+**⭐ 小灵补（显式结构）**：$\chi(s)=2^s\pi^{s-1}\sin(\pi s/2)\Gamma(1-s)$ ⟹
+$$-\chi'/\chi=\underbrace{\Gamma'/\Gamma\ \text{型项}}_{\text{非乘性 ⟹ Bessel 核不存在}}+\underbrace{\cot(\pi s/2)\ \text{型项}}_{\text{偶数处极点 = trivial zeros 来源}}$$
+
+**L1″ 正式登记**：
+$$\boxed{\textbf{L1}^{\prime\prime}:\ \text{在标准 Mellin/FE Voronoi 范式中，}-\zeta'/\zeta\text{ 对偶化时保持为 logarithmic derivative，}\\text{其非平凡谱贡献以 }\rho\text{-residue 出现，而不形成 zero-blind arithmetic coefficient system}}$$
+$$\boxed{\text{L1}^{\prime\prime}\neq\text{"全体可能 ZBV 不存在"}}$$
+
+**⭐⭐ 断点更准确位置**：
+$$\boxed{\text{断点不是"有无函数方程"，而是【乘法层（积/比）】vs【导数层（对数导数）】}}$$
+```
+λ_Liouville：ζ(2s)/ζ(s) = 级数【之比】⟹ 可产生新系数系统 c(n) ⟹ 有 arithmetic dual ✓
+Λ：−ζ'/ζ = Euler 积的【对数导数】⟹ 乘法局部因子 → 加法性 prime-power measure
+小灵提炼：**可对偶性是乘法层的性质；导数层的对偶是极点/留数层**
+```
+
+**ZBV-Existence Audit 三分类**（只攻最后一格）：
+```
+① Mellin + ζ FE → ρ-residues（❌ N1）｜② automorphic Voronoi → 若存在对应 automorphic coefficient（? 待证）
+③ 非-Mellin 新变换 → 未知 A_q(m)（**唯一活口**）⟹ 攻 Λ →? A_q(m) →? Kuznetsov
+```
+**⭐ 小灵提出的 ZBV 两难（审计框架；结构性）**：
+```
+① 满足 Z1–Z3 ⟹ 对偶系数须（本质）automorphic/FE 型 ⟹ 原对象须属乘法层或自守对象 ⟹ 与 Λ 的导数层性质冲突
+② 放弃 Z3 ⟹ 失去产生二阶主项的谱机器（C2）⟹ 无法交付 S2-c
+⟹ 两难即为"A_q(m) 必要结构条件"的可攻形式
+附记（结构性）：对 −ζ'/ζ 对偶化实质要"积分回乘法层"（log ζ），而 log ζ 由零点支配（待严格化）
+```
+
+**状态表**：Chorge–Dixit 覆盖 Λ? NO ｜ λ 的 Voronoï 含 zero sums? YES(VZ-1) ｜
+Λ 的标准 Mellin dual 含 ρ? YES ｜ Λ 的 zero-blind arithmetic dual? 未发现 ｜ ZBV 全称定理? NO
