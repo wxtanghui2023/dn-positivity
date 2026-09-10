@@ -2528,3 +2528,44 @@ $$\boxed{\textbf{P2 规格} = \underbrace{\text{D2 的 uniformity（推导）}}_
 **§5 裁决**：**不是**成分级 NO-GO —— 至少两种**非有限非退化机制确实存在**（D2 紧性⟹一致性；D3 对偶竞争⟹指数）
 ⟹ 新目标（取代"找无条件 X-尺度耗散"）：$\boxed{\text{找【紧的算术极限对象族】+ 连续参数化 + 有限传播/局域性}}$
 三关现状：① D2✓ D3✓｜② D3 给 1/4=(1/2)²（须经 λ=s(1−s) 字典）｜③ D3 已知但封闭、**D2 未识别 ← 唯一活口**
+
+### §8.56 ⭐⭐⭐ D2-arith：solenoid 审计（DA-1→DA-4）—— DA-4 杀死，D2 处于关闭边缘
+
+**修正（唐先生）**：$\boxed{\text{目标不是"找紧的算术族"，而是"有限算术约束压缩连续自由度"}}$
+先验：profinite 容易紧但**几乎无连续实参数**；solenoid（$\mathbb A_{\mathbb Q}/\mathbb Q\cong(\mathbb R\times\widehat{\mathbb Z})/\mathbb Z$）为**唯一第一优先**
+
+**DA-1 连续参数内生？**
+$$
+\widehat{\mathbb Z}:\ 	extbf{✗【证明】}\ \mathbb R\text{ 连通}\Rightarrow\text{连续像连通}\Rightarrow\text{任何连续 }\mathbb R\to\widehat{\mathbb Z}\text{ 为常数}\Rightarrow\text{无连续实参数（唐先生先验被严格证实）}$$
+$\mathcal S_{\mathbb Q}$: **✓ 内生** —— composant 是一参数拓扑子群（$\mathbb R$ 的单射连续同态像，文献核实），
+参数 = archimedean 流方向 $t\in\mathbb R$，**不是**人为 $e^{i\theta}$；⚠️ 但对偶为 $\mathbb Q$（离散）⟹ 频率参数是离散的
+
+**DA-2 有限层看到但不确定？** ✓ 通过：$\pi_n(x+t)=\pi_n(x)+(t\bmod\tfrac1n)$ ⟹ 第 $n$ 层只看 $t\bmod\tfrac1n$；
+$\bigcap_n\tfrac1n\mathbb Z=\{0\}$ ⟹ 逆极限确定 $t$。**形态正是已冻结的 A（$\Sigma\subsetneq\Sigma_{\rm dec}$）**；
+⚠️ 但这是**嵌套离散子群之交的离散式恢复**，**不是把连续自由度压成刚性点**
+
+**DA-3 局部作用？** ✗ **失败**：$\pi_n\circ T_t=T_{n,t}\circ\pi_n$ ✓、$T_{n,t}$ 只依赖有限数据 ✓，
+但 $T_{t+s}=T_tT_s$ 是**一参数群作用**且**自由**（无不动点）⟹ 按 DA-3 自身判据 = N4/N3 信号，且不产生刚性
+
+**DA-4 全体兼容 ⟹ uniform non-degeneracy？** ✗ **失败（生死线）**：
+bonding maps $z\mapsto z^n$ **满射** ⟹ 逆系统**恒可满足** ⟹ 极限非空且 **$t$ 保持为自由连续参数**
+$$\boxed{\text{compactness}+\text{local compatibility}\ \Longrightarrow\ \text{收敛/非空，但【不】产生刚性}}$$
+**按死线（compactness⟹convergence）⟹ solenoid 被杀**；
+诊断：$\boxed{\text{满射 bonding}\iff\text{粗粒化"什么都不丢"}\iff\text{projective/自由族，非 over-determined}}$
+⟹ **solenoid 是"compact + continuous ⟹ compression"的典型反例**（无限有限层兼容 **与** 连续参数完全自由并存）
+
+**⭐⭐ §5 结构性二分（本轮最有价值产出）**：
+```
+(甲) 满射型（solenoid/projective/可除群 ℚ/ℤ）⟹ 极限非空且含【自由连续参数】（承载，非压缩）
+(乙) 非满射型（over-determined：Ẑ 中 n|x、CRT 相容剩余）⟹ 嵌套子群交 = {0} 或单点
+     ⟹ 【离散/点式刚性】，刚性有但【不产生临界指数】
+⟹ 两种情形都不产生【临界指数】
+```
+且算术中自然收缩量全是 log 尺度（筛法 $\sim e^{-\gamma}/\log z$；Dickman $\rho(u)$）⟹ **G5-fail**；其余 ⟹ **G6-fail**
+$$\boxed{\text{D2-arith 落回与 ISRG 原型轮同一个 }L/G5/G6\text{ 三难}}$$
+**§6 附核实**：solenoid 的刚性相关结构 = Pontryagin 对偶（$\mathbb Q$）+ archimedean 完备化 = R1/R2 ⟹ N3
+⟹ 唐先生警告的"换成拓扑语言的 N5/M-TOWER"风险**被结构性证实**
+
+**§7 裁决**：$\widehat{\mathbb Z}$ DA-1✗[证明]；$\mathcal S_{\mathbb Q}$ DA-1✓ DA-2✓ **DA-3✗ DA-4✗**
+⟹ **solenoid 在 DA-4 被杀；profinite 在 DA-1 被杀**；唯一残留形态（over-determined + 收缩率）据二分**只给离散刚性**
+⟹ **D2 处于结构性关闭边缘**；关闭决定属方向性决策，留唐先生
