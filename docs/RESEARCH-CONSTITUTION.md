@@ -1499,3 +1499,49 @@ $$\boxed{\textbf{R8 真正活口不是"新谱"，而是【新算术卷积】（n
 **下一轮唯一硬问题**：是否存在有限算术卷积 $*_q$ 满足 CRT tensor + character-side inversion + quadratic closure，
 但不是 Kloosterman/Hecke/Weil/automorphic 的重命名？**失败原因三选一**：(i) CRT 杀死 hypergroup｜(ii) inversion 强迫 Kloosterman｜
 (iii) global Besselization 强迫已有表示论 ⟹ **小灵建议以 (ii) 为首要否证目标**
+
+### §8.28 R8-HG-1 首要否证第一轮（唐先生 HG-1–HG-7 + 小灵两引理）
+
+**✅ 已严格成立（群型情形，HG-1 引理）**：
+$$\overline{\chi(x)}=\chi(x^{-1})\ \Longrightarrow\ (\mathcal F_+I\mathcal F_+^*)(a,b)\ \text{的核}=\sum_x\psi_p(ax+bx^{-1})=K_p(a,b)\ \text{(Kloosterman)}$$
+⟹ 加法 Fourier + 乘法对偶共轭 + 点空间 inversion ⟹ Kloosterman 核
+**⚠️ 偷用的条件**：$J^\vee$ 在点空间对应 $x\mapsto x^{-1}$ —— 在乘法群成立，但 R8 要找的是**改变有限层组合律本身**
+
+**HG-2（一般交换 hypergroup）**：$\delta_x*\delta_y=\sum_z p_{xy}^z\delta_z$，$\overline{\chi(x)}=\chi(\bar x)$，**但 $\bar x\neq x^{-1}$ 一般成立**
+$$K_H(a,b)=\sum_{x\in X}w(x)e_p(a\iota(x)+b\iota(\bar x))\ \Longrightarrow\ \boxed{(ii)\text{「inversion 强迫 Kloosterman」不能作为总 NO-GO}}$$
+能严格推出的只是：**群型乘法结构 + character conjugation + additive Fourier 耦合 ⟹ Kloosterman**
+
+**⭐⭐ 小灵引理 HG-3（环可定义对合清单，含非 Kloosterman 实例）**：
+```
+环 (ℤ/q,+,×) 可定义对合族：x ↦ ±x^k，k² ≡ 1 (mod λ(q))（λ = Carmichael）
+  核 K(a,b)=Σ_x w(x)e_q(a x + b x^k)：k=1 ⟹ 退化；k=−1 ⟹ Kloosterman；加符号 ⟹ 退化
+  **其他 k ⟹ 非退化、非 Kloosterman 的新 reciprocal 核**
+实例（已验）：q=17，λ(16)=16，7²=49≡1 (mod 16) ⟹ x↦x⁷ 是对合，x⁷≠±x^{±1}
+   ⟹ 存在环可定义、非退化、非 Kloosterman 的核 Σ_x w(x)e_{17}(ax+bx⁷)
+```
+**⭐⭐ 小灵引理 HG-4（CRT 刚性 ⟹ (i) 严格杀死环可定义类）**：
+```
+① 模数一致：k²≡1 (mod λ(q)) 对所有 q ⟹ k²−1 被 lcm_q λ(q)=∞ 整除 ⟹ **k=±1**
+② 逐素数选择 k_p：CRT 张量自动成立，但 λ(p^e) 的平方根 1 有 2^{ω(λ)} 个
+   （p=17 时 7, 9 等）⟹ 除 k=±1 外**无 canonical 选择** ⟹ 违反 Z1 生成性
+⟹ 在"环可定义对合"整类内：reciprocal 核只能【退化】或【Kloosterman】——没有第三种
+⟹ 落在 **B（(i) CRT 杀死）**，且是【证明】而非猜测
+```
+**⭐⭐ 推论（本轮真正收获）**：第三类必须在**环可定义对合类之外** ⟹ 逃逸须来自**非环语法对合**
+```
+具体候选：把对合从【剩余类层】换到【因子分解层】（素数指数向量 / 除数结构上的对合）
+⟹ 直接连回早前审计过的 **divisor-complement（d ↦ n/d）**：
+   当时结论"给出 δ↔−δ 反射但缺 γ 振荡通道"——**但那是在缺少加法特征的语境下**
+   ⟹ 本语境【加法特征提供振荡】⟹ divisor-complement 必须【重新审计】
+```
+
+**HG-6 三步杀伤链**：CRT → local involution classification → reciprocal kernel classification
+（**本轮把中间一步在"环可定义类"内做完了**）
+**HG-5 禁止的假杀法**：① 不得当定理"hypergroup 对合总是 group inverse"（Bessel–Kingman 即非群卷积）
+② 不得用"谱表出现 Kloosterman ⟹ 本质是 Kloosterman"（循环论证）
+**HG-7 文献状态**：有限域 Euclidean scheme 谱含 Kloosterman sums；有限环 affine-type scheme 特征表由 Kloosterman 描述；
+有限 GL_n Bessel 与 Kloosterman 深层对应；2026 年工作把有限 reductive group Bessel 值与 Kloosterman sheaves 联系
+⟹ 经验上"finite arithmetic spectral closure → Kloosterman/rep-theoretic envelope"**非常顽固**，但**非分类定理**
+
+**下一步**：H1–H7 框架下研究 $K_{\mathfrak H}(a,b)$，判定 A（(ii) 杀死）/ B（(i) CRT 杀死）/ C（第三类首个严格正例）。
+本轮在环可定义类内已落 **B**；**H1–H7 允许 $X_q\neq(\mathbb Z/q)^\times$** ⟹ A/B/C 判定仍未完成
