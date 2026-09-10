@@ -2611,3 +2611,41 @@ $$\boxed{\text{workspace 仓库内禁止 }git\ add\ -A\ /\ git\ add\ .\text{；�
 ③ 改以**显式路径**提交（`.gitignore` / `MEMORY.md` / `memory/2026-09-10.md`）；
 ④ 将硬纪律写入 `AGENTS.md`（含提交前自检：`git diff --cached --name-only | wc -l`）。
 $$\boxed{\text{RCI-2 CLOSED；与 RCI-1 同属【过程纪律】，均不进入数学地图}}$$
+
+### §8.60 ⭐⭐⭐ ABD-0：Arithmetic Balance Defect 构造与实算（造机器轮）
+
+**规格（唐先生）**：$\\boxed{\\text{不是生成 }\\sqrt X\\text{，而是生成跨尺度稳定性方程，其唯一中性点恰为 }\\alpha=\\tfrac12}$
+$m=ab/c^2=r(1-r)$（乘积两因子 $\\Rightarrow$ **arity 2**）；转移 $\\rho(\\alpha)=\\sum_i m_i^{\\alpha}$；临界根 $\\rho(\\alpha)=1$（**Moran 型方程**）
+禁令：不得规定 $X_{k+1}=2X_k$｜不得把 1/2 写入权重｜禁 ζ/Mellin/零点/显式公式/统计拟合
+
+**实算结果（`scripts/abd0.py`，输出 `/tmp/abd0_out.txt`）**：
+```
+PART1【精确】AM-GM：m <= 1/4，等号 <=> a=b（c<=1500 穷举；750 处等号全为 a=b）
+PART2/3【精确数值】唯一"无选择" refinement（全拆分 x=1..c-1）：
+        α_*(c) 发散，α_*(c) ~ (1/2)log2 c（比值 ->0.5 缓慢，c=1e6 时 0.454）
+        c=10:1.308  c=100:2.779  c=800:4.160  c=1e6:9.055
+        => 无尺度稳定中性常数 => 无选择 refinement 一关即死
+PART4【精确】均匀 k-child：α_* = log k / log(1/m)；α_*=1/2 <=> m=1/k^2 <=> 两因子各 1/k
+        <=> α_* = 1/arity（arity=2 来自乘积 ab）
+PART5【精确数值】非对称 canonical 2-child（拆较大者）：α_* < 1/2 严格，a/b->1 时 ->1/2
+PART6【数值】聚合压力中性点随尺度上发散 => 稳定性要求不满足
+PART7【精确】B(α) = -B(1-α) 恒成立 => B(1/2)=0 平凡 => 反对称性是【搬运】的（N3 危险）
+```
+**裁决**：
+```
+(i)   根【有】但【自动】（k>=2 时 rho 连续递减、rho(0+)=k、rho(inf)=0）=> 存在性非判别性
+(ii)  无选择 refinement 无稳定中性常数（发散）=> 死
+(iii) α_*=1/2 <=> 均匀 k-child 且 m=1/k^2 <=> 指数 = 1/arity
+(iv)  1/2 是【上确界】，由 AM-GM 从上方钉住（非插入）
+(v)   ⚠️ 极值 locus 恰为 a=b：那里【加法不对称信息被销毁】=> 1/2 随对称化一起到达
+      => C_NI 风险（1/2 不是动力学产出）
+(vi)  反对称性为搬运而得
+```
+$$\\boxed{\\text{ABD-0 目前给出的是 }\\tfrac12\\text{ 的【变分/极值刻画】，不是【动力学生成】}}$$
+
+**⭐⭐ §9 新靶点（本轮真正产出）**：要把上确界变成生成，机制必须**取到等号**
+$$\\boxed{\\text{1/2 必须作为【算术 sharp 不等式的等号情形】出现}}\\Longrightarrow\\ \\textbf{等号刚性（equality rigidity）}$$
+即：**动力学能否强迫 AM-GM 取等（强迫 }a=b\\text{）？** —— 此即 **D3 模板形状**（sharp inequality + critical equality ⟹ rigidity）✓
+**这是此前从未以该形式提出的精确靶点；未构造。**
+
+**⚠️ §3 勘误**：首轮结论文字误写 $\\alpha_*\\to0$（单调方向写反），实为**发散**；已修正重跑，旧声明计数 0。
