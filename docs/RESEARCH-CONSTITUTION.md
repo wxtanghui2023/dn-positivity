@@ -250,11 +250,11 @@ C-BC：Bost–Connes 系统 / KMS–Tomita–Takesaki 模结构载体
 ## §6 残差问题登记簿（R-Registry）—— 与 NO-GO 表【平级】
 
 **设立理由**（2026-09-10）：掉坑的深层原因不是想法差，而是每次关闭**只记录"什么死了"，没记录"还剩下什么精确问题"**。
-$$oxed{	ext{白区应随关闭而【单调收窄】，而不是反复原地立碑}}$$
+$$\boxed{\text{白区应随关闭而【单调收窄】，而不是反复原地立碑}}$$
 
 ### 规则（硬性）
-$$oxed{	ext{每次关闭一条路线，必须同时产出或更新至少一条 R 问题；}\
-	ext{没有产出 R 的关闭视为【不完整关闭】}}$$
+$$\boxed{\text{每次关闭一条路线，必须同时产出或更新至少一条 R 问题；}\
+\text{没有产出 R 的关闭视为【不完整关闭】}}$$
 
 ### 登记表
 
@@ -340,8 +340,8 @@ R1 扫描: 待执行（Azizov–Iokhvidov + Znojil；两模板并行对照表）
 屏障：Levinson 方法要求 mollifier 长度 ≤ T^{1/2}
       原因不是技术性的——**mollifier 一旦超过 √T，它自己就开始探测它要排除的离线零点，方法自我击败**
 ```
-$$oxed{	ext{宪法 LIVE-5 要求活对象内生解释 }W\sim\sqrt X;\ 	ext{而唯一成功的 β-敏感方法恰撞在 }\sqrt T	ext{ 墙上}}$$
-$$oxed{	ext{⟹ }W\sim\sqrt X\ 	ext{不是本项目的特殊要求，而是 β-敏感排除机制在算术上自给时的【必然墙壁】}}$$
+$$\boxed{\text{宪法 LIVE-5 要求活对象内生解释 }W\sim\sqrt X;\ \text{而唯一成功的 β-敏感方法恰撞在 }\sqrt T\text{ 墙上}}$$
+$$\boxed{\text{⟹ }W\sim\sqrt X\ \text{不是本项目的特殊要求，而是 β-敏感排除机制在算术上自给时的【必然墙壁】}}$$
 **两条独立推导收敛到同一尺度** ⟹ R3 获得一座桥（mollifier 屏障 ≡ 尺度对合不动点）。
 
 ### V1 活对象规格说明书（P-对象定义）
@@ -1447,7 +1447,7 @@ $$\boxed{\text{终点必须是}:\ \text{Global-QSC}+\Lambda\text{ 的结构约�
 
 ### §8.27 ⚠️ ERR-R8-ARCH-1（撤回）+ 算术 hypergroup 框架（唐先生本轮，R8-C†-B3）
 
-**撤回 10.2**：$\boxed{\text{"}\Gamma'/\Gamma\text{ 型}\Rightarrow\text{不能产生 Bessel/Hankel kernel"}\ 	extbf{错误，撤回}}$
+**撤回 10.2**：$\boxed{\text{"}\Gamma'/\Gamma\text{ 型}\Rightarrow\text{不能产生 Bessel/Hankel kernel"}\ \textbf{错误，撤回}}$
 ```
 撤回理由：Bessel/Hankel transform 可有一般参数依赖，其 Mellin 表达式含 Γ 因子；
 对参数/谱变量求导自然产生 ψ(s)=Γ'/Γ（digamma）项 ⟹ 出现 Γ'/Γ ⇏ 无 Bessel 核
@@ -2157,7 +2157,7 @@ O1 第一轮失败｜**O2 归入**｜O3 class-closed｜O4 无入口｜O5 class-c
 
 **E3（重点审）**：
 ```
-反作弊门 A（初等）：affine $\mathcal R:lpha\mapsto alpha+b$ ⟹ $lpha_*=b/(1-a)$；$lpha_*=	frac12\iff a+2b=1$
+反作弊门 A（初等）：affine $\mathcal R:\alpha\mapsto a\alpha+b$ ⟹ $\alpha_*=b/(1-a)$；$\alpha_*=\frac12\iff a+2b=1$
    ⟹ 对任意 a≠1 都可取 b=(1-a)/2 ⟹ **1/2 是自由选择而非被强制** ⟹ 人为 1/2 插入陷阱
 反作弊门 B：落到 $H\mapsto X/H$ 或 $u\mapsto-u$ ⟹ **N1**
 非仿射清单：reach 反射 N1｜除数自对偶 N1/N43｜Gauss 映射（Euclid 已 STOPPED）｜筛法/Mertens 递归 ⭐
