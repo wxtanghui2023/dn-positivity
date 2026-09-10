@@ -2441,3 +2441,39 @@ $$\boxed{\text{balance}=\underbrace{\text{invariance}}_{\text{自对偶/不变�
 **裁决**：5 原型全败，但缺口从【对象级】压到【成分级】；**下一轮唯一合法目标** =
 $$\boxed{\text{造一个【不预装 1/2、且自带无条件 X-尺度耗散】的算术跨尺度律}}$$
 （若造不出 ⟹ 说明 ISRG 入口本身可能不存在，而非"未找到"）
+
+### §8.54 ⭐⭐⭐ LIMIT-RIGIDITY ARCHAEOLOGY 第一轮（三站模板考古）
+
+**方向（唐先生）**：$\boxed{\text{不要先发明机制；先找【机制已经存在】的同类定理}}$
+新任务：$\boxed{\text{finite/local control}\to\text{limit objects}\to\text{uniform nondegeneracy}\to\text{global rigidity}}$
+**四结构**：uniform coercivity｜uniform invertibility｜compactness+nondegenerate limit｜critical degeneration with conserved balance
+**P0/P1/P2（唐先生）**：P0 $Q_X\ge0$（不够）｜P1 $Q_X\ge c\|f\|^2$（$c$ 与 $X$ 无关）｜**P2 最有希望**：$Q_X\ge cX^{-\beta}I$ 且 $R_X\asymp X^{-\gamma}$，若 primitive law 强迫 $\beta+\gamma=1$ 且外部 $\Phi(\beta,\gamma)=0$ ⟹ 唯一 $(\beta,\gamma)=(\tfrac12,\tfrac12)$（**非** $H=X/H$ 式预设）
+**第一轮纪律**：只做 `Theorem → Hypotheses → 哪条假设阻止 moving-edge`；**不搬进数论**
+
+**站 1 Limit operators（RRS / JFA2014 / arXiv:1801.08442）**：
+```
+经典：band-dominated A Fredholm ⟺ 所有 limit operators 可逆【且逆一致有界】
+⭐ 演进：`一致有界`被证明【自动】——arXiv:1801.08442 无附条；1998 综述明言历史上曾写成附条
+骨架：局域性(band-domination) ⟹ limit operators 族（*-强极限）⟹ **族紧 + 参数连续** ⟹ 逐个可逆 ⟹ 一致下界【自动】⟹ 全局 Fredholm
+不可替代假设：**极限对象族的【紧性】+ 参数化【连续性】**（不是外加一致 gap）
+```
+**站 2 正二次型单调极限（B. Simon, JFA 28(3) 1978, 377–385）**：
+```
+典范分解 h = h_r + h_s（h_r = 小于 h 的最大可闭形式）
+防退化条件 = **奇异部分不积累**（等价于某类统一可闭性）⟹ 即 P0→P1 的形式化原型
+```
+**站 3 最终正半群（Arora–Glück, Semigroup Forum 103 (2021) 791–811）**：
+```
+防退化条件 = **轨道相对紧 + 谱不逼近虚轴（主导性）**；positivity 本身不最终控制
+障碍 = 弱化正性时 cyclicity（周环谱）结果失效
+```
+
+**⭐⭐ 三站共同骨架（本轮抽取）**：
+$$\boxed{\text{finite/local control}\to\text{极限族}\to\underbrace{\text{族紧+参数连续+逐个非退化}}_{\text{防退化}}\to\text{一致下界（自动）}\to\text{全局刚性}}$$
+$$\boxed{\textbf{最重要收获}：uniformity 不是要我们【外加】的部件，它由【极限族的紧性】推出}$$
+⟹ **我们此前把"缺 dissipation / 缺统一正性"(P1) 当成待补部件 = 把结论当条件**
+⟹ **正确的待找物**：$\boxed{\text{一个【紧】的算术极限对象族 + 连续参数化}}$
+⟹ 并解释历次 moving-edge 失败：那些族**非紧**（边缘逃到无穷）——正是站 1/2/3 假设所排除的模式 ✓
+
+**§7 末节（本轮不回答，留给下一轮）**：四种防退化条件中，哪种**素数算术**天然可能提供？
+候选（均未研究）：① 紧性（算术自然紧族多为 profinite/adelic，0 维）② 一致可逆性（需范数结构；乘法 Haar 测度给 L² 且逆不变）③ 紧+非退化极限（未识别）④ 临界退化+守恒平衡（P2 形态）
