@@ -201,3 +201,12 @@ $$\boxed{\text{RH 需要 }1/2\text{ 的\textbf{选择性}（非尺度）；需�
 
 $$\boxed{\text{char 0}\ \overset{?}{\longrightarrow}\ \underbrace{\text{三重尺度锁}}_{C,M,W}\
 \overset{?}{\longrightarrow}\ \underbrace{\text{非自伴位置刚性}}_{\Re\rho=1/2}}$$
+
+---
+## 附加：宪法修正案 1 的两条最高原则（2026-09-10，唐先生）
+
+$$\boxed{\textbf{没有通过 L3，不允许称为“RH 活路”；没有通过 L4，不允许称为“RH 证明路线”。}}$$
+
+$$\boxed{\textbf{下一阶段的成功标准不是“更大胆”，而是：第一次有对象【通过】本宪法，而不是我们修宪法去容纳它。}}$$
+
+（分级细节、META-NO-GO、L0–L4 阶梯、退出条件、决策树 → 见 `CONSTITUTION-AMENDMENT-1-grading.md`）
