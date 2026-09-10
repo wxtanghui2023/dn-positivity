@@ -1025,3 +1025,36 @@ Fourier 形式 $C(X,H)\leftrightarrow\int|\widehat w_H(\alpha)|^2|S_X(\alpha)|^2
 四箭：A1 (q,a)-平均→h-shift 平均｜A2 variance→shift correlation（恒等/单向/需额外信息）｜
 A3 主项是否足以恢复 $1-\eta$｜**A4 $C\to F(\alpha)$ 是 exact/asymptotic/单向/RH+PC 下**
 四输出：R8v-i 等价点精确定位｜R8v-ii 缺口位置明确｜R8v-iii 缺口在变换本身｜R8v-iv 坐标层未对齐
+
+### §8.17 R_8^{(v)} 执行（小灵）：变换链审计 ⟹ **R8v-iv（坐标层）触发**
+
+**§3 未对齐处理（本轮第一位）**：
+```
+一致性检验：若 λ=1/(1−η) 就是 F 支持映射，则 Hooley 的 η=7/12+ε ⟹ λ≈2.4>1
+            ⟹ 应给【无条件 F 支持>1】——与 Montgomery 无条件 α≤1【矛盾】
+但该检验【不闭合】：Hooley 的平均坐标是 (q,a)（AOC*），未必转译为 F 信息
+⟹ **循环依赖**：判定字典需要 A1，而 A1 的判定又需要字典
+```
+**⭐ 可判定替代判据（本轮产出）**：
+$$\boxed{\text{须用【非 AP-平均】的无条件短区间二阶结果（未平均 }V(X,H)\text{）来判定字典}}$$
+```
+两个必核项：① LPZ / Montgomery–Soundararajan 的 α↔H 确切约定
+            ② 【未平均】V(X,H) 的无条件 η-范围（非 Hooley 的 AP 版）
+```
+
+**A1**：(q,a)→h 无已知无条件转换；且按 AOC* 不可用作 R8 carrier
+**A2**（⭐结构性判读）：展开 + 三角权 (H−|h|) 的**二阶差分**即可回收 c(h)
+$$
+\boxed{\text{A2 疑为【可逆】}\ (\text{须扣 principal/diagonal/规范化项})}\ \Longrightarrow\ \text{困难不在变换，而在求值}}$$
+**A3**：1−η 来自频率积分【端点项】⟹ **并入 A4**，不单独成立
+**A4**：**判定【悬置】**（§3 未解 ⟹ α↔H 映射未定 ⟹ 四选项无法区分；不得强行选一）
+
+**输出**：
+$$\boxed{\textbf{R8v-iv}:\ \text{坐标层问题——}\alpha/\lambda/H\ \text{三者约定必须先统一}}$$
+```
+附带：A2 疑可逆 ⟹ 若成立则 R8v-iii（缺口在变换本身）被排除
+      ⟹ §3 解决后最可能落 R8v-ii（缺口位置明确）；R8v-i 需 A4 双向，暂不可得
+```
+
+**必产 R**：**R_conv【新】**（α/λ/H 约定统一，输入=两个必核项；**A4 的前置**）｜
+R_8^{(v)}【更新】（A2 可逆性须严格化）｜R_{8.3}^{sharp}、R_avg-coord【保留】
