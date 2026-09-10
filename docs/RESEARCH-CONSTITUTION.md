@@ -2837,3 +2837,31 @@ $$\boxed{\text{不得再从 ABD-0/1 内部继续挖；若继续，必须跨出 �
 这一整类机制的**边界画清**。
 
 **位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` §12.5 + **§13（新增）**；提交链移至 §14。
+
+### §8.67 ⭐⭐⭐ GPS：Generation Principle Specification（第四类机制验收规范；唐先生 (甲) 升级版）
+
+**定位**：$\boxed{\text{不是"限制清单"，而是能区分【真正第四类机制】与【换皮 ABD】的【判定器】}}$——**先于任何新模型**
+**必须方向**：${\text{生成原则}\to\text{内部约束}\to\text{唯一临界行为}\to\alpha=1/2}$；**禁止方向**：先有 $1/2$ 再设计规则让它出现
+**文件**：`docs/GPS-generation-principle-specification.md`
+
+**五硬门（唐先生）**：
+```
+G1 Primitive generation ：原则本身产生方向/演化，不得从目标函数反推
+G2 Non-monotone         ：不得由 g=gcd(a,b) 或其单调函数支配
+G3 Target-blind         ：不得读 a-b, ab, (a-b)^2, ab/c^2 或等价 balance observable
+G4 Information-preserving：不得靠非单射/商/规范化丢信息
+G5 Cross-scale rigidity ：须有真跨尺度约束，过 C_NI 与 Gate V/V-b；不得把 1/2 写进权重/尺度律/边界
+                          （G5-a A1 局部不可辨识｜G5-b A2 耦合非平凡｜G5-c C_NI 不可插入）
+```
+**⭐ 反调参测试（核心判别力）**：
+$$\boxed{\text{若只改变一个自由参数就能【连续把 }\alpha_*\text{ 调到 }1/2\text{】}\Rightarrow\text{立即淘汰}}$$
+形式化：$\exists\theta^*,v$ 使 $\alpha_*(\theta^*)=1/2$ 且 $\partial\alpha_*/\partial v\neq0$ ⟹ 淘汰；
+通过三支：**(a)** $\Theta=\varnothing$｜**(b)** $\alpha_*\equiv1/2$ 于整个 $\Theta$｜**(c)** 仅出现在**刚性 locus**
+
+**§5 校准表（证明判别力）**：R0_grad ✗G3｜R1_gcd/R2_par ✗G2（g-支配、惰性）｜R3_* ✗G2（迁至低 g）｜
+R4_sym ✗G4（fiber $c-1$）+✗G3｜**ABD-1′ ✗G2（$\mathcal C$ 对 $g$ 单调）**｜**ER-1 ✗反调参（$k$-旋钮可调）**+
+✗G4（$k{=}2$ 退化）｜FE/Fourier 族 ✗G1+✗反调参（中心即 $1/2$）｜D2 solenoid ✗G5（只收敛不刚性）
+$$\boxed{\text{⟹ 每个既有机制都死在【具名】的某一门 ⟹ 规范具备判别力}}$$
+**§6 证书形态**：七条全过（含 §3 单向推导链与"1/2 出现那一步"的标注）**才允许**声称"生成了 1/2"
+**§7 判定流程（固定顺序）**：G1 → G3 → G4 → G2 → G5(a,b,c) → 反调参 → Gate V/V-b → 才进入构造
+**⚠️ 与 §13.3 guardrail 一致**：不得据本规范去自由化 $k$/权重/层数；ABD 冻结不变
