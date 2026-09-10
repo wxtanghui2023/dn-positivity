@@ -2061,3 +2061,35 @@ $$\boxed{\text{O3 的 action–response 在算术中就是【模论层】}\Longr
 
 **SW6 现状**：O1/O3/O4 已归入，O2/O5 **未归入** ⟹ $\boxed{\textbf{G-SW6 = OPEN，残余}=O2\cup O5}$
 **⭐ 建议下一刀 = O5**（唯一在定义上不涉及 associativity 的入口，结构上最可能避开 S6/S7）
+
+### §8.42 ⭐⭐⭐ O5-PRE1 生成门 + O5-P2 不可约三体（唐先生全套门 + 小灵执行）
+
+**O5 致命风险**：$\boxed{\text{"不可拆三元函数"本身不是机制——任意 }F(a,b,c)\text{ 都可人为定义}}$ ⟹ 首问：$\boxed{\text{三元性为何是【算术强制】而非人为规定？}}$
+**O5-A（派生三元）**：$\Phi=F(a\circ b,c)$ 或 $F(a,b\circ c)$ ⇒ **O1/O2/O3/O4 + N4/N6 直接关闭**（$\gcd(a,b,c)$、$abc$、$a+b+c$ 皆非 O5）
+**O5-B（真三元）**：三元性不能由任何 binary factorization 消除，且**不存在 canonical binary presentation**
+**六项假 O5 审计**：三元 gcd/lcm ⟹ N4/O1｜$abc$ ⟹ N4｜$a+b+c$ ⟹ N4｜三体 divisor incidence ⟹ **O4**｜$\chi(a)\chi(b)\chi(c)$ ⟹ N2/N4｜三体互反 ⟹ **N2**
+$$\boxed{\text{变量数量增加}\neq\text{进入 O5}}\qquad\boxed{\text{pair interaction}\to\text{再组合}\neq\text{irreducible 3-way}}$$
+**三门**：G1 irreducibility（$\nexists F$ 使 $\Phi=F(I(a,b),I(b,c),I(c,a))$）｜G2 $\Phi'\neq\Phi$ 且 $\Phi'\neq-\Phi$｜
+G3 固定两变量后第三变量的作用不能被既有 unary response 吸收，须**改变 a 与 b 的关系本身**
+**完整过滤器 G1–G10**：…G4 非 correspondence/incidence｜G5 非 action/composition｜G6 非 canonicalization｜G7 非 finite norm｜
+G8 非 label/class｜**G9 须 $\zeta_H,\zeta_{X/H}$ 型随 channel 传播的内部状态**（不是 $\Phi=\Phi(H,X/H,\zeta)$）｜**G10 fixed 方程独立于 $H=X/H$**
+**O5≠O2 标准**：删除任一变量不得得到完整 correspondence 使第三变量仅为其参数
+**⭐ O5 的独特地位**：第一次允许 $J$ 不需交换二元结构 $\Rightarrow (H,\xi;X/H,\eta;\zeta)\xrightarrow{J}(X/H,\eta';H,\xi';\zeta')$，
+fixed condition 可能不等价于 $H=X/H$ ⟹ **第一个在定义层面未被 S9/S10 立即压死的 operation class**
+**候选来源 T1–T5**：只有 **T2 三元约束/方程** 与 **T4 三元 operation** 值得看
+
+**⭐⭐ 小灵 O5-P2 执行结果**：
+```
+§8 已知三体不可约装置清单——**全部落禁列**：信息论 synergy(N7)｜**Massey 积/A∞**（定义在上同调 ⟹ cohomology）｜
+   Čech/群上同调 obstruction｜associator(N4)｜determinant/cross-ratio(G1)｜inclusion-exclusion
+⟹ 残下者须是【第四类】不可约性 —— 目前无已知实例
+§9 原生实例检查：
+  A 素数星座：HL singular series 的 admissibility 为 pairwise ⟹ **pairwise 可约**（也解释了此前三体素数结构为何无新机制）
+  B abc 型 $a+b=c$：内容真三体，但非独立（Siegel/abc 领域）+ 关于单个三元组 ⟹ **G9 失败**
+  C ⭐ add×mult×label：本体论三原语的唯一三体耦合 ⟹ 规范实例 = 素数在 AP = **解析核心本身**
+§10 裁决：**O5 非空，但其不可约实例恰是解析核心 ⟹ 不提供【独立机制】，它就是目标**
+```
+**本体论闭合图像**：两体耦合 = {add×mult（CRT/除数/reach）, add×label（residues）, mult×label（characters）} = 已知地形；
+**三体耦合 = add×mult×label = 解析核心**
+**建议裁决（决定权在唐先生）**：$\boxed{O5=\text{class-closed}，理由="不可约实例与目标重合，故非独立"}$；注明【第四类不可约性】留为未命名残余
+⟹ 若采纳，**G-SW6 残余只剩 O2**
