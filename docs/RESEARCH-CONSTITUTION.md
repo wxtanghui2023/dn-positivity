@@ -2148,3 +2148,30 @@ O1 第一轮失败｜**O2 归入**｜O3 class-closed｜O4 无入口｜O5 class-c
 §9 下一阶段：G-SW6 停止；不得沿 SW6 微调；不得从 O1–O5 内部再挖名字；
    **下一条 RH 主线应从边界图【外部】寻找机制**；RH 线整体仍开放；Λ 继续冻结
 ```
+
+### §8.45 External Mechanism Pre-Screen E1–E5（唐先生指定，优先 E3）⟹ 五类全 NO-GO
+
+**搜索逻辑改变**：$\boxed{\text{不找"可能证明 RH 的方法"，而找能提供 }D6\text{ 机制的数学结构}}$
+**六问（Q3 硬门）**：primitive？作用于整数算术？**√X 从哪产生？** 为何非 N1–N7？为何非已冻结的 Λ/显式公式/谱实现？可否形成 exact invariant？
+**纪律**：E1–E5 **不是** O6–O10，只是外部入口；每类最多留**一个**机制原型
+
+**E3（重点审）**：
+```
+反作弊门 A（初等）：affine $\mathcal R:lpha\mapsto alpha+b$ ⟹ $lpha_*=b/(1-a)$；$lpha_*=	frac12\iff a+2b=1$
+   ⟹ 对任意 a≠1 都可取 b=(1-a)/2 ⟹ **1/2 是自由选择而非被强制** ⟹ 人为 1/2 插入陷阱
+反作弊门 B：落到 $H\mapsto X/H$ 或 $u\mapsto-u$ ⟹ **N1**
+非仿射清单：reach 反射 N1｜除数自对偶 N1/N43｜Gauss 映射（Euclid 已 STOPPED）｜筛法/Mertens 递归 ⭐
+```
+**⭐⭐⭐ E3 核心发现**：筛法/Mertens 递归的自然临界指数住在 **log 变量** 中（PNT 级 $X\cdot e^{-c\sqrt{\log X}}$）
+而 √X 是 **L² 尺度**；$\sqrt{\log X}\to\sqrt X$ 的跃迁【正是】已注册的 **ACA-1「L²→L∞ 转移墙」**
+$$\boxed{\textbf{E3}=\textbf{NO-GO}（两个 1/2 分属不同变量；跃迁=已注册墙，非新机制）}$$
+
+**E2**：反作弊标准 = "$\sqrt X$ 须在【进入 ζ 理论之前】存在"；规范装置 Poisson/Tate ⟹ **N3**（FE 对称点）｜theta/Gauss 自对偶 ⟹ **N5**｜数的几何体积 ⟹ **N5/N7** ⟹ **NO-GO**
+**E1**：Connes NCG ⟹ **N3**（已审）｜量子群/Hopf ⟹ **N4/N3**｜Bost–Connes ⟹ **已关闭**｜HP 重命名 ⟹ 禁止 ⟹ **NO-GO**
+**E4**：Erdős–Kac 型 CLT $\sqrt{\log\log n}$ ⟹ **N7**｜Jarník 型 $\dim=2/\tau$，$\dim=\tfrac12$ 需 $\tau=4$（非规范），**规范临界 $\tau=2$ 对应维数 $=1$** ⟹ 无 canonicity｜norm ⟹ **N5** ⟹ **NO-GO**
+**E5**：**Q1 无法回答（未指定 primitive）** ⟹ 未通过入口；其内容 **≙ R_4th-irr = FROZEN** ⟹ **NO-GO at entry level**
+
+$$\boxed{E1\cup\cdots\cup E5\subset N1\cup\cdots\cup N7（本轮预筛范围内）\Longrightarrow\text{触发预设出口}}$$
+**⭐ meta-NO-GO 问题（登记为下一层问题）**：
+$$\boxed{\textbf{M-NOGO}:\ \text{为什么所有【已知】数学结构都只能通过 }N1\!-\!N7\text{ 产生 }\sqrt X？}}$$
+**⚠️ 纪律**：M-NOGO 是**分类纲领**而非 RH 攻击；须**先形式化问题**（"什么是 √X 的产生机制"），**不得**直接开始枚举结构（否则重演"无生成原则的名字生成"）
