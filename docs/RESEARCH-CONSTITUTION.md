@@ -1848,3 +1848,43 @@ $$\boxed{\text{结构性诊断}：\theta\text{ 的对称性容易找到（互反
 **当前状态**：$\mathrm{R\_int\text{-}sym}$ **仍活跃，但本轮未找到入口**；**残余精确形式**：
 $$\boxed{\text{一个 }J\text{-反协变的内部变量 }\theta，\text{其数据源【既非两 reach，亦非标号/类】}}$$
 **S 门**：S1–S8 全部投入实际预筛（S8 未触发）；**新增 S9**
+
+### §8.37 ⭐ S9 严格化（引理）+ D2 interaction-data 预筛（唐先生乙′→甲 + 小灵执行）
+
+**S9 原表述的两支箭头**：箭头①成立；**箭头②（"零点集 = 重合点"）❌ 不成立**
+```
+反例形式（小灵验算）：θ(a,b)=(a−b)g(a+b) 反对称 ✓，但零集 = {a=b} ∪ {g(a+b)=0} 【严格大于】对角线
+```
+**S9 严格版（正式引理）**：设 $\theta=\Theta(r_1,r_2)$ 仅由两支 reach 决定且 $\Theta(r_2,r_1)=-\Theta(r_1,r_2)$，
+则在交换 $J$ 下必有 $\boxed{\Theta(r,r)=0}$（证明：$2\Theta(r,r)=0$）
+$$\boxed{\text{推论}：\text{reach-only 反协变 }\theta\Longrightarrow r_1=r_2\text{【必属】fixed locus}\Longrightarrow \text{不可能满足 I3/I4}}$$
+**⚠️ 严格边界**：**不**声称零点集只有 $H=\sqrt X$，只声称**对角线被包含**
+**⭐ 对逃生更致命**：无论 $\theta$ 多复杂，只要反对称就恒有 $\Theta(a,a)=0$ ⟹ **复杂化不能把 fixed-point 机制从两-reach 对角线上解耦**
+
+**θ 数据源分类（取代数学对象分类）**：
+```
+D0 reach data        ⟹ 由 S9 排除
+D1 label/class data  ⟹ 天然无 scale reach ⟹ ≈ Sym(ℙ) 支
+D2 interaction data  ⟹ **唯一剩下**（θ=Θ(𝓒₁,𝓒₂)，𝓒ᵢ 为通道内部算术状态，非长度非标签）
+```
+**D2 六门**：D2-1 两个内部状态｜D2-2 native transformation $J(u,v)=(v^\#,u^\#)$｜D2-3 真正交互量｜D2-4 $J^2=1$｜
+D2-5 fixed 方程给独立约束｜D2-6 绑定 $H\leftrightarrow X/H$
+**⭐ 唐先生关键门**：$\boxed{\theta\ \text{须 }J\text{-敏感而非 }J\text{-不变}}$；又不得只是反对称（否则退化 $\theta=0$）
+$$\boxed{\text{困难区域}：\theta'\neq\theta,\ \theta'\neq-\theta,\ J^2\theta=\theta}$$
+**𝕀_cross 定义**：$J:(u_H,v_{X/H})\mapsto(u'_{X/H},v'_H)$，$J^2=1$，$\Theta$ 一般变值但 fixed 解集非平凡且 $\neq H=X/H$
+
+**⭐⭐ 小灵新门 S10（线性性排除）**：$\theta$ 取值向量空间 + $J$ 线性 + $J^2=1$ ⟹ 分解 J-偶 ⊕ J-奇 ⟹ $\theta'=\pm\theta$ ⟹ 恰落入已排除情形
+$$\boxed{\textbf{D2 需要【非线性】可观测量}}$$
+**非线性资源清单**：乘积/复合（非线型 ✓ 但 Sym(ℙ)/divisor 侧已关）｜carry（已关）｜幂映射/迭代（HG-3/HG-4 已关）
+⟹ 残余：**既非标号侧、又非 reach 侧的原生非线性资源——目前未命名/无候选**
+
+**⭐⭐ 小灵新门 S11（swap 机制预筛）**：SW1 结构对偶/变换（Mellin/Fourier）⟹ 禁止项｜SW2 FE 型 ⟹ 已关｜
+SW3 群求逆/共轭 ⟹ 落 S9｜SW4 Galois ⟹ 标号侧 D1｜SW5 adjunction unit/counit ⟹ **coboundary**（Pincer 腿 i）｜
+**SW6 真正不同类型的对合 ⟹ 形式开放但无候选**
+⟹ 任何 D2 候选须提供 SW6 型对合 —— **目前无实例**
+
+**判决**：**D2 本轮未找到 canonical instance**；残余精确形式 = SW6 型 native 对合 + 非线性 J-敏感（非 ±）交互量，
+数据源既非 reach 亦非标号，fixed 解集独立于 $H=X/H$
+**终止条件核对**：唐先生规则的前提（D2 经 S9/I2–I5 后无 instance）**表面已满足**；但 D2 只跑一轮预筛、SW6 仅"形式开放"⟹ **建议进入丙，决定权在唐先生**
+**状态**：$R_{A\text{-}ind}$ inactive｜$R_{B4}$ inactive｜$R_{\rm int\text{-}sym}$ **active，空间压缩为 $\mathfrak I_{\rm cross}$**
+**S 门累计**：S1–S11（**S9 为 filter 级**）｜继续不碰 Λ
