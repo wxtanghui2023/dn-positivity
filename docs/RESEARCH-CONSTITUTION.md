@@ -1095,3 +1095,34 @@ $$\boxed{C(X,H)\leftrightarrow V(X,H)\leftrightarrow F(\alpha),\ \alpha=\frac1{1
 **下一刀**：① 严格化 A2（完整记账）⟹ S2-c ⟹ 目标 $F(\alpha),\alpha>1$；
 ② 是否存在**完全不经过 $F(\alpha)$**的方法直接给出 h-shift 非对角主项？
 ②若被堵死 ⟹ R8-C 才真正具有**结构性**
+
+### §8.19 R8.4 执行（唐先生选 ②）：h-space Independent Carrier Audit ⟹ **R8.4-B** + 结构性理由
+
+**唯一问题**：是否存在已知的、不经 $F(\alpha)$、不经 HL、不经 AP/族平均，
+却能直接给出 $\sum_{h\le H}w_H(h)\sum_n\Lambda(n)\Lambda(n+h)\sim HX\log(X/H)$ 的 char-0 机制？
+
+**分类表（按"产生 cancellation 的变量"）**：HL(h/prime pair，排除)｜Hooley(AP $(q,a)$，AOC* 不匹配)｜
+族平均/迹公式（排除）｜zero statistics（目标侧）｜Fourier mean-square（需回到 h）｜纯筛法（奇偶性障碍）｜
+大筛/zero-density（S2-b 级）｜Bombieri–Vinogradov（AOC* 不匹配）｜almost-all 一阶（非二阶）｜
+**未知第三机制（h 本身）= 唯一活口——本轮未发现**
+
+**⭐ 结构性发现（本轮核心）**：
+```
+唯一走出"平均二元关联"的先例 = 加法除数问题（Σ_n d(n)d(n+h) 在 h-平均下可无条件求解，
+   Motohashi / Deshouillers–Iwaniec 一线），机制 = 谱方法（Kuznetsov 公式）
+拆解：Kuznetsov 谱侧 = 离散谱（Maass 尖点形式）+ 连续谱（Eisenstein/ζ 相关）
+ · 对除数函数：离散谱贡献【无条件可得】（自伴谱侧 ⟹ 谱参数实 ⟹ 门⑲"RH 自动"侧）
+ · 对 Λ：对应谱输入正是 ζ 的零点/配对相关 F(α) ⟹ **条件侧/目标侧**
+```
+$$\boxed{\text{除数情形能无条件走出 h-平均，因为其谱引擎坐在【离散·自伴】侧；}\ \text{Λ 情形的同一引擎坐在【零点·散射】侧}}$$
+⟹ **与门⑲/⑳完全同型**（"锁管离散侧；ζ 住散射侧"）⟹ **本项目内部强交叉一致性检验** ✓✓
+
+**输出**：$\boxed{\textbf{R8.4-B}}$（已枚举机制均退化为 HL / zero statistics / AP-族机器）
+**⚠️ 仍非必然性定理**（"已枚举"≠"全部"），但给出结构性理由
+
+**R8-C\* 锐化**：
+$$\boxed{\textbf{R8-C}^{*}:\ \text{任何 canonical、zero-blind、非-HL、h-space cancellation 若给 S2-c，必产生等价于 }F(\alpha)\ (\alpha>1)\text{ 的量}}$$
+**更强等价表述（由 §2 得）**：
+$$\boxed{\text{h-space cancellation 必须供给一个【谱输入】；而 Λ-关联可用的谱输入只有 zero-side（"谱输入二分"）}}$$
+
+**保留任务 ①**（收口用）：严格化 A2（完整扣除三项 bookkeeping）⟹ 形式化链条 S2-c → V → Σ_h(H−|h|)C_X(h) → F(α)
