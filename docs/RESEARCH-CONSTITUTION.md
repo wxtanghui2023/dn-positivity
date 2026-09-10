@@ -1953,3 +1953,40 @@ $$\boxed{\textbf{G-SW6}:\ \text{是否存在天然的、非 Fourier/FE/群逆/�
      (b) 不依赖 Λ / 目标 C(X,H) / ζ 零点 (c) 由该原则【推导】对合而非定义它
      ⟹ 未能提交者不予评审（直接拒收）
 ```
+
+### §8.39 ⭐⭐⭐ NO-GO 商空间 N1–N7 + G-SW6-P1 第一轮（唐先生设定 + 小灵执行）
+
+**总规则（新长期纪律）**：$\boxed{\text{不再按【对象】积累 NO-GO，而按【机制母类】压缩；新候选须先证明自己不属于 N1–N7}}$
+$\boxed{\text{"寻找 native involution"不是研究问题，只是对象搜索接口}}$
+
+| 类 | 名称 | 统一杀门 | 归入 |
+|---|---|---|---|
+| **N1** | Reach / Boundary（$\theta=\Theta(H,X/H)$） | **N43/S8/S9** | 双曲线、divisor complement、双截断、reach 差、单调 resolution、range-overlap |
+| **N2** | Label / Symmetry | **D1** | Legendre/Jacobi、互反、Galois、Liouville/Möbius、character 共轭、Sym(ℙ) |
+| **N3** | Existing Duality / Repackaging | N3 | Fourier、Mellin、FE、Poisson、adjunction、trace/projection、Weil/显式公式、Connes/P49 |
+| **N4** | Associative Algebra | **S6/S7** | Hecke、Gauss composition、group action、semigroup、双陪集、算子复合、category |
+| **N5** | Finite Norm / Orthogonality | N5 | Gauss 和 $|\tau(\chi)|=\sqrt q$、有限正交、有限 Fourier、有限域谱范数 |
+| **N6** | Canonicalization / Quotient | N6 | Gauss 代表元、mediant、连分数归一化、quotient、人为 projection（⊃ S2） |
+| **N7** | Statistical / Observed Scaling | N7 | GUE、零点间距、prime-pair variance、HL 归一化、经验 1/2 |
+
+**⭐ 小灵补两轴结构**：轴A（√ 来源）= reach 重合(N1)｜有限 norm(N5)｜观察 scaling(N7)；
+轴B（对合来源）= label(N2)｜已有 duality(N3)｜结合结构(N4)｜canonicalization(N6)
+⟹ **候选须同时通过两轴**（√ 来自真 fixed locus；对合来源在 N2/N3/N4/N6 之外）= 3+4 两支独立失效轴
+**⭐ 操作化分类器（7 问，任一"是"即杀）**：Q-N1…Q-N7（详见 docs/NOGO-QUOTIENT-N1-N7.md §3）
+
+**顺序反转**：旧 $J\to\theta\to\sqrt X$ ⟹ 新 $\boxed{\text{new arithmetic operation}\to\text{two-channel interaction}\to J\to\sqrt X}$
+$$N^\star=\text{none of N1--N7}；J^2=1\ \text{但}\ J\neq\{\text{reach exchange, label perm, Fourier/FE, group inverse, associative comp, finite orthogonality, canonicalization}\}，\theta'\neq\pm\theta$$
+
+**⭐ 唯一生成原则（唐先生）**：**交换"组合规则"而非"对象"**
+$$\boxed{J:(\mathcal A,\circ_1;\mathcal B,\circ_2)\mapsto(\mathcal B,\circ_2;\mathcal A,\circ_1)}\quad\theta=\mathcal D(a,b;\circ_1,\circ_2),\ \theta'=\mathcal D(b,a;\circ_2,\circ_1)$$
+**防伪门**：$\circ_2=\phi^{-1}\circ\circ_1\circ(\phi\times\phi)\Longrightarrow$ **N6**；故须**arithmetically inequivalent**
+
+**⭐ 小灵第一轮检验**：枚举成对原生结合律的 cross-rule defect ⟹
+$(+,\times)$ 分配律成立 defect≡0｜$(\gcd,\operatorname{lcm})$ 分配格 defect≡0｜$(\text{Dirichlet 卷积},\cdot)$ **非分配 ✓ = 唯一候选**｜$(\circ,\cdot)$ 非算术/已停
+$$\boxed{\text{唯一候选：算术函数环上的 }(*,\cdot)}$$
+预筛：① 防伪门形式通过，**但 Dirichlet 变换把 $*$ 共轭为"级数之乘"⟹ N3 邻接风险高**；
+② **不携带 scale reach** ⟹ Gate 1 风险；③ 附带观察：$(\cdot,*)$ defect 恰度量**非乘性**（与 Λ 有天然接口，**phase 1 禁用 Λ，仅登记不展开**）
+$$\boxed{\text{第一轮：唯一候选大概率被 Gate 1 + N3 双重杀死} \Longrightarrow \text{按唐先生判据 = SW6【结构性闭合迹象】的第一次}}$$
+
+**G-SW6-P1 链条**：找两天然不可共轭组合律 → cross-rule interaction → channel-exchange involution → 查 $H\leftrightarrow X/H$（**phase 1 禁用 Λ**）
+**闭合判据（登记）**：若第一批 canonical construction 又全落 N4/N6/N3 ⟹ SW6 = **结构性闭合迹象**，届时才考虑封存整条尺度动力学线
