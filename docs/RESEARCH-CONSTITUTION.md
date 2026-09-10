@@ -985,3 +985,43 @@ $$\boxed{R_{8.3}^{\rm sharp}:\ \text{证明 S2-c 的 }(1-\eta)\text{ 项（作�
 **输出**：**R8.3-B′（维持）**，且本轮给出结构性理由（平均坐标错配）；仍非必然性定理（R_{8.3}^{sharp} 为待证靶点）
 
 **必产 R**：R_{8.3}^{sharp}（更新为锋利形式）｜R_avg-coord【新】｜R_8^{(v)}【新】：Lavrik 型频率平均量与 S2-c 端点项的精确关系（恒等／可逆／单向）
+
+### §8.16 ⚠️ R8.3-verify 勘误（唐先生）+ AOC* 升级 + R_8^{(v)} 变换链协议
+
+**勘误（留原档）**：我上一轮表中 Hooley 一行标"主项含 H/X ✗"——**错误**。
+```
+原文（Montgomery–Hooley 短区间定理，LPZ 版）：
+  M(x,h,Q) = hQ log(xQ/h) + (x+h)Q log(1+h/x) − κhQ
+  无条件范围：x^{7/12+ε} ≤ h ≤ x，Q ≤ h
+⟹ Hooley/AP 方差族【确含】连续短区间尺度 h/x
+```
+
+**判别器升级（唐先生）**：
+$$\boxed{\mathsf{AOC}^*:\ \text{该定理能否把【目标非对角变量本身】作为可控平均坐标？}}$$
+```
+R8 的目标平均坐标 = **shift h**；Hooley 中 h 只是 AP 误差项的区间长度，
+真正产生 cancellation 的平均坐标仍是 (q,a) ⟹ H/X 出现 ⇏ R8 尺度自由度已被捕获
+```
+
+**必须改写的对比表述**：
+```
+· 已证：短区间二阶主项【可以】无条件存在（Hooley，H ≥ X^{7/12+ε}）
+· 未证：shift-average 的 prime-pair S2-c 可无条件存在
+⟹ 不得再写"char-0 中不存在这种二阶主项机制"（过强）
+新增范围事实：Hooley 无条件范围【不覆盖】η ≤ 1/2，尤其不覆盖 H=√X
+```
+
+**⭐ 本轮发现的未对齐（列为 A4 靶点）**：
+$$\boxed{\lambda=\frac1{1-\eta}\ (H=\sqrt X\mapsto\lambda=2)\quad\text{vs}\quad \alpha=1+\eta\ (H=\sqrt X\mapsto\alpha=1.5)}$$
+```
+两式不能同时作为映到同一 F 参数的映射 ⟹ 必有一方约定不同
+⟹ A4 必须核实 LPZ / Montgomery–Soundararajan 的 α↔H 约定
+⟹ 未解决前，R8 的"自对偶尺度 H=√X"陈述【悬空】
+```
+
+**R_8^{(v)} 协议就绪**（`PROTOCOL-R8v-transform-chain.md`）：目标链
+$V(X,H)\leftrightarrow\sum_h w_H(h)\sum_n\Lambda(n)\Lambda(n+h)\leftrightarrow F(\alpha)$，
+Fourier 形式 $C(X,H)\leftrightarrow\int|\widehat w_H(\alpha)|^2|S_X(\alpha)|^2d\alpha$，$|\alpha|\sim H^{-1}$
+四箭：A1 (q,a)-平均→h-shift 平均｜A2 variance→shift correlation（恒等/单向/需额外信息）｜
+A3 主项是否足以恢复 $1-\eta$｜**A4 $C\to F(\alpha)$ 是 exact/asymptotic/单向/RH+PC 下**
+四输出：R8v-i 等价点精确定位｜R8v-ii 缺口位置明确｜R8v-iii 缺口在变换本身｜R8v-iv 坐标层未对齐
