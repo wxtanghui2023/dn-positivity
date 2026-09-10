@@ -16,6 +16,7 @@
 | `B3-central-layer.md` | 中心层 $\sigma^2$-特征；Schur 强制 $\rho(\sigma^2)=-I_2$；conductor 精确对应 | **positive structure** |
 | `B4-profile.md` | profile $C(u)$、$C_{\rm tot}(H)=\lvert G\rvert-\lvert G\rvert/\lvert H\rvert$；24 恒等式被【推导】 | **positive structure** |
 | `B4b-second-object.md` | 第二对象筛选 + $\rho\otimes\rho$ 核验（同 conductor 8、不同 profile） | positive（(a)(b) 排除；(c)(d) 活跃） |
+| `C1-cover-balance-verification.md` | (c) 部分验证：平衡障碍 = |G| 的 2-adic 指数为奇；一次二次 lift 解除（3→4）；含 **B4d 勘误** | **positive（机制层面）** |
 | `B4d-dual-scale.md` | 第二对象 = **不动域塔**；$\lvert G_i\rvert[F_i:\mathbb Q_2]=\lvert G\rvert$；balance 受阻（判别式 60 非平方） | **positive structure** |
 
 ## 已被排除 / 已撤回（不要再引用）
@@ -23,6 +24,7 @@
 · B2：(a) 局部互反/单位 filtration 与 (b) Hilbert 配对 —— 在本例【退化】（rank 1，radical = span{[2]}）
 · L2 §2：10 条撤回项（d=50/22/30、index=1、1/8、|disc Q(ζ₈)|=2¹⁰、非极大基结果等），逐条附原因
 · Layer 3（双尺度守恒 + 递推 r↦(r−1)/2 ⟹ 1/2 不动点）= **结构猜想，未建立，继续冻结**
+· B4d §4 的 "ℓ = c 平衡障碍" 表述 = **已勘误**（正确判据见 C1 §1/§5）
 ```
 
 ## 未验证的活跃候选（下一轮）

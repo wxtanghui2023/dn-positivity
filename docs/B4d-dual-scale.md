@@ -35,6 +35,13 @@ $$\ell=c\iff\frac1d=|G|-d\iff d^2-|G|d+1=0\iff d=\frac{|G|\pm\sqrt{|G|^2-4}}2$$
 ```
 $$\boxed{\text{balance 障碍} = \lvert G\rvert=8\ \text{不是完全平方}\quad(\text{与此前 }\sqrt{|D|}\text{ 情形同一类平方根障碍})}$$
 
+
+> ⚠️ **ERRATUM（2026-09-10，见 `C1-cover-balance-verification.md`）**：本文件 §4 把方程 "ℓ = c"（即
+> $d^2-|G|d+1=0$，判别式 $|G|^2-4$）称为 "the balance obstruction"，这是**表述错误**。
+> 正确的 A′ 型平衡判据是 §5 所用的 $|G_i|=\sqrt{|G|}$；其障碍的精确形态是 **$|G|$ 的 2-adic 指数为奇**，
+> 而该障碍**可由一次二次 lift 解除**（$3\to4$，即 $8\to16=4^2$）——见 C1。
+> §4 的方程 $\ell=c$ 是一个**无关的、对一切 $|G|>2$ 都不可满足的**方程（C1 §5 有证明）。
+
 ## §5 与 A′ 的对比（诚实）
 ```
 A′：两尺度 S_± = log|Λ|, log|Λ^⊥|，守恒 |Λ||Λ^⊥| = |G|；平衡尺度 = √|G|
