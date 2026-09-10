@@ -1126,3 +1126,42 @@ $$\boxed{\textbf{R8-C}^{*}:\ \text{任何 canonical、zero-blind、非-HL、h-sp
 $$\boxed{\text{h-space cancellation 必须供给一个【谱输入】；而 Λ-关联可用的谱输入只有 zero-side（"谱输入二分"）}}$$
 
 **保留任务 ①**（收口用）：严格化 A2（完整扣除三项 bookkeeping）⟹ 形式化链条 S2-c → V → Σ_h(H−|h|)C_X(h) → F(α)
+
+### §8.20 R8.4-ERR-1（取代）+ R8-C† 登记 + 第一刀：**Voronoi vs 显式公式结构断点**
+
+**⚠️ R8.4-ERR-1（取代）**：撤回"divisor case is unconditional because its spectrum is purely
+discrete/self-adjoint"（Motohashi 谱分解并非只有离散谱，涉及 cusp forms 与 Kuznetsov/Kloosterman 耦合）
+$$\boxed{\text{合法修正：divisor case possesses an }\textbf{unconditional automorphic spectral engine}}$$
+**影响**：不修正则 R8-C\* 会建立在**假的"谱二分"**上。
+
+**文献前提（I 层核验，唐先生）**：
+```
+Motohashi 1994：D(N;f)=Σ_{n≤N}d(n)d(n+f)，链 = Kloosterman → Kuznetsov → cusp-form Fourier coefficients
+  **Theorem 1：对 shift f 的 uniform 结果（1<f<N^{1/2}）**
+Motohashi–Ivić 1995：E(X;f) 关于 shift f 的均方（spectral large sieve + E(x;f) 的 explicit formula）
+⟹ **h-space 本身可以承载真正的谱 cancellation（文献事实）**
+```
+
+**R8-C† 正式登记（Spectral Input Dichotomy）**：
+$$\boxed{\text{canonical、zero-blind、非-HL 的 }h\text{-space cancellation 若给 }V\sim HX\log(X/H)\text{，则内部必有 spectral input 同时完成：}\text{①解析 }\Lambda\text{ 非对角}\\text{②对 h-shift 真 uniformity ③提取精确二阶主项}}$$
+三子命题：C1 对象层（⟹ 真 Λ-shift spectral input，非仅 Fourier mean-square）｜
+C2 主项层（$H\log(X/H)$ 不由 diagonal/size/density 自动产生；系数 $1-\eta=1/\alpha$ 须由跨尺度谱结构产生）｜
+C3 zero-blindness 层（定义 zero-blind engine；问 C1+C2 是否迫使其失败）
+
+**⭐ divisor 反例校准（写死）**：
+$$\boxed{\text{h-space cancellation}\ \not\Rightarrow\ F(\alpha)}$$
+⟹ R8-C\* 只能问：对 $\Lambda\times\Lambda$ 的 canonical correlation，产生正确二阶主项所需谱输入是否**只能**从 zero-side 获得？
+
+**⭐ 第一刀结果（结构断点）**：
+$$\boxed{\text{Voronoi 公式 = 相应 Dirichlet 级数【函数方程】的影子；要求系数来自"函数方程/Voronoi 类"}}$$
+```
+· d(n)：级数 = ζ(s)² ⟹ 有函数方程 ⟹ Voronoi ✓ ⟹ Kloosterman ⟹ Kuznetsov ✓
+· Λ(n)：级数 = −ζ'/ζ ⟹ 无函数方程；Mellin/Perron 转移给出【零点和】（显式公式）
+  ⟹ Voronoi 步骤被【显式公式】取代，其对偶对象【就是零点】
+```
+$$\boxed{\text{L1（引理候选）}：\text{Kuznetsov/Voronoi 引擎要求移位关联两因子来自函数方程类；}d(n)\text{ 在内}，\Lambda(n)\text{ 不在}}$$
+L1 解释三件事：①divisor 能走出 h-平均 ②Λ 的 h-平均需 zero-side ③BKS 为何从 zero statistics 出发
+**连接**：N1 + 门⑰（引擎平凡化）+ 门⑲⑳（离散/散射不对称）在 R8 世界的同一件事
+
+**L1 可证伪条件（预注册）**：存在 Λ-侧 canonical、zero-blind、非-HL、non-Voronoi 谱引擎给出正确二阶主项
+**可核实项**：是否存在"Λ 的 Voronoi 型公式"文献（若有且对偶非零点 ⟹ L1 削弱）
