@@ -2119,3 +2119,32 @@ $$\boxed{\text{三原语}\Longrightarrow O1\cup O2\cup O3\cup O4\cup O5\Longrigh
 O1 第一轮失败｜**O2 归入**｜O3 class-closed｜O4 无入口｜O5 class-closed（for independent mechanisms）
 **必产 R**：**R_4th-irr【frozen gap】**（第四类不可约性；不得作为开放搜索空间；重启须提交生成原则，同 11.3 条款）
 **下一阶段**：**G-SW6 正式停止**；资源从"继续挖 arithmetic operation ontology"转移出去；RH 线整体仍开放；**Λ 耦合继续冻结**
+
+### §8.44 ⭐⭐⭐ RH Boundary Map — **FROZEN MASTER TABLE**（唐先生指定，冻结基准）
+
+**文件**：`docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md`｜**用途**：以后任何新候选先过此表，再谈构造
+**范围限定**：刻画**本项目已审计的 architecture class**，**非"全部数学"**（须随表引用）
+
+**⭐ 四态图例（严格分栏，禁止混读）**：
+```
+[证明]           定理级/精确验算（有记录可核）
+[结构性归约]      以论证确立"属于某类"；**不是定理**
+[经验性本体判断]   基于已列举原语的判断；**明确不是定理**
+[FROZEN GAP]     未证为空；无生成原则；重启须提交生成原则
+```
+**全部 [结构性归约] 与 [经验性本体判断] 条目不得作为定理引用**；
+唯一可作定理/精确验算引用者 = 标 [证明] 的条目（Hecke 关联子 2744×5、$\Theta(r,r)=0$、$(\Delta,P)$ 双射、D1 精确恒等式、X6 范围对换、Gauss 和 $|\tau|=\sqrt q$ 等）
+
+**总表结构**：
+```
+§1 第一层商空间 M_arith/⟨N1..N7⟩（7 类 + 两轴判据：sqrt source ⟹ N1/N5/N7；involution source ⟹ N2/N3/N4/N6；须同时逃逸）
+§2 第二层 ontology：三原语 ⟹ O1∪O2∪O3∪O4∪O5（含各类当前状态与归宿）
+§3 终止链 ⟹ G-SW6 = CLOSED；R_4th-irr = FROZEN GAP（非 OPEN）
+§4 S-gates S1–S11（**S6/S7/S9/S10 特别重要**）
+§5 Six fundamental doors D1–D6（**D6：√X 须由机制产生，而非由数据观察得到**）
+§6 Frozen gaps 单列（R_4th-irr FROZEN；R_int-sym restricted；R_A-ind/R_B4 inactive；SW6 CLOSED；Λ FROZEN）
+§7 ⚠️ Structural Closure ≠ Impossibility Theorem（六项结构性边界清单）
+§8 候选筛检程序（长期纪律）：Candidate → N-quotient → O-class → frozen-gap check
+§9 下一阶段：G-SW6 停止；不得沿 SW6 微调；不得从 O1–O5 内部再挖名字；
+   **下一条 RH 主线应从边界图【外部】寻找机制**；RH 线整体仍开放；Λ 继续冻结
+```
