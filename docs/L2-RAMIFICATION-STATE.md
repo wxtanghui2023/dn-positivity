@@ -6,6 +6,32 @@
 
 ---
 
+
+## §0 ⭐ **明确结果（2026-09-10，带四项自检）**
+
+$$[\mathcal O_L:\mathbb Z[\delta,i]] = 8 \quad\Longrightarrow\quad |D_L| = 2^{30}/8^2 = 2^{24} \quad\Longrightarrow\quad \boxed{d(L/\mathbb Q_2) = 24}$$
+
+**关键结构更正**：$\mathfrak D_{L/K'}$ 的相对指数 $= 24-2\cdot11 = \mathbf{2}$（此前我声称 8 是错的，源于非极大基）
+$$\text{TOWER}:\quad d(L/\mathbb Q)=e(L/K')\,d(K'/\mathbb Q)+d(L/K') = 2\cdot 11 + 2 = 24\ \checkmark$$
+
+**$L$ 的正确 ramification filtration（用极大基算）**：
+$$|G_i| = 8,8,4,4,2,2,2,2,1\ (i\ge8\ \text{为}\ 1),\qquad \sum_i(|G_i|-1)=7+7+3+3+1+1+1+1=24\ \checkmark$$
+$i_G$：$\sigma\!\to\!4,\ \sigma^2\!\to\!8,\ \sigma^3\!\to\!4,\ \tau,\sigma\tau,\sigma^2\tau,\sigma^3\tau\!\to\!2,\ \mathrm{id}\!\to\!\infty$
+
+### 自检（全部通过，脚本 `scripts/index_verified.py`）
+```
+① integrality 判据 ......... 4/4 已知答案（1/2→False, δ/2→False, 1→True, δ→True）✓
+② HNF / index ............. 4/4 已知答案（I→1, 2I→256, {e1..e7,2e8}→2, {e1..e6,2e7,e8}→2）✓
+③ round-2 收敛 ............ round 2 无新的整性半元素 ⟹ O 在 2 处极大 ✓
+④ 可除性 .................. index=8 ⟹ 8² | 2³⁰ ✓（8=2³ ✓）
+⑤ 独立下界 ................ d ≥ e·d(K')+(e−1) = 2·11+1 = 23 ≤ 24 ✓
+⑥ 独立上界 ................ d ≤ 30（阶判别式）✓
+⑦ **两路线一致** ........... disc 比 24 == filtration 24 ✓✓
+```
+**性能 bug（同时修掉）**：原先的行列式是 $O(n!)$ 排列展开（8×8 = 40320 项）⟹ 已换成 $O(n^3)$ 高斯消元 ✓
+**index 公式方向 bug（已修）**：$[L:\mathbb Z^8] = D^8/[\mathbb Z^8:D\!\cdot\!L]$（我原先写反 ⟹ 曾得 $1/8$）
+
+---
 ## §1 已确立（可复现，有脚本 + 自检）
 
 **结构**：$K=\mathbb Q(\sqrt2)\subset K'=\mathbb Q(\delta),\delta^4=2\subset L=\mathbb Q(\delta,i)$（$L$ 为 $K'$ 的 Galois 闭包，$G=D_4$）
@@ -56,6 +82,9 @@ $$ \boxed{\text{index trap}:\ \text{基不张成 }O\ \Longrightarrow\ i_G\ \text
 | $d(L)=30$ / index $=1$ | 由两个 bug 造成：半整数坐标 $\mathrm{int}()$ 截断（255/255 假"整"）、Newton 恒等式下标配错 ⟹ 作废 |
 | index 的**任何具体数值** | 格扩大取基仍有 bug（跑出 $1/8$，对 index 不可能）⟹ **不声称任何一个值** |
 | "路线 C 通过两个测试例" | 撤回：其中一个测试例用的 $|D|$ 本身就是错的 |
+| $\mathfrak D_{L/K'}$ 的相对指数 $=8$ | 撤回：**真值 $=2$**（8 来自非极大基 $O_{K'}[i]$）|
+| round-2 的 index $=1/8$ 等中间输出 | 撤回：index 公式方向写反（真值 $=8$）|
+| 用 $O(n!)$ 行列式得出的慢/错结果 | 撤回：已换 $O(n^3)$ 高斯消元 |
 
 ---
 
