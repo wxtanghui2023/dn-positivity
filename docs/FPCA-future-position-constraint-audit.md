@@ -1,3 +1,12 @@
+# ⚠️ 本文两处错误已撤回（见 FPCA2-generator-complexity-audit.md）
+
+1. 输出信息量：应为 (x/log x)·log log x，不是 x/log x
+2. “排除一切有限状态+有限规则机制”：无效（描述长度 ≠ 输出信息量）
+
+P-Info 重定义为三量分离（I_state / I_rule / I_out）。
+
+---
+
 # FPCA：Future-Position Constraint Audit（纯纸面，无程序）
 
 **日期**：2026-09-10 ｜ 唐先生指定七步 ｜ 结论：三个出口中①②被结构化封死，残余只剩分析通道
