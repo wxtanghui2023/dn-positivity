@@ -2477,3 +2477,54 @@ $$\boxed{\textbf{最重要收获}：uniformity 不是要我们【外加】的部
 
 **§7 末节（本轮不回答，留给下一轮）**：四种防退化条件中，哪种**素数算术**天然可能提供？
 候选（均未研究）：① 紧性（算术自然紧族多为 profinite/adelic，0 维）② 一致可逆性（需范数结构；乘法 Haar 测度给 L² 且逆不变）③ 紧+非退化极限（未识别）④ 临界退化+守恒平衡（P2 形态）
+
+### §8.55 ⭐⭐⭐ D-ARCHAEOLOGY r1：D1/D2/D3 跨极限非退化定理考古（五问审计）
+
+**方向（唐先生）**：$\boxed{\text{考古【非有限来源的耗散定理】，不构造算术耗散}}$；**修正**：dissipation 应读作
+$\boxed{\text{uniform non-degeneracy across }X}$（阻止 $D_X\to0$ 冲掉刚性），≈ coercivity at infinity / uniform invertibility / critical inequality
+**五问**：Q1 防哪种极限退化｜Q2 需要什么**非有限**假设｜**Q3 临界量是否由 theorem 自己产生（生死线）**｜Q4 有无 arithmetic primitive analogue｜Q5 替换后是否逃出 N1–N7
+**三关**：① 非预装 critical exponent？② $=1/2$？③ arithmetic 可实现？　**裁决**：不收线，走甲
+
+**站 D1 coercivity at infinity**：$Q_X[f]\ge cN_X[f]$（去紧集后**与位置无关**的下界）
+```
+D-Q1 ✓ 防"去紧集后下界消失"（moving-edge 最直接补丁）
+D-Q2 ✓ 假设是渐近/无穷处条件（非有限）
+D-Q3 ✗ **不过关**：常数 c 是【假设/输入】，非定理产出
+⟹ **D1 不独立：其一致性必来自 D2 ⟹ D1 ⊆ D2**
+```
+**站 D2 limit-operator uniform invertibility**：
+```
+经典：band-dominated A Fredholm ⟺ 所有 limit operators 可逆【且逆一致有界】
+⭐ 演进：一致有界【自动】——JFA 2014《An affirmative answer to a core issue on limit operators》；
+        后期表述（arXiv:1801.08442）不带一致性条款
+D-Q1 ✓ 防逆爆炸｜D-Q2 ✓✓ 非有限假设 = 极限族【紧】+ 参数化【连续】+ 【局域性】(band-domination)
+**D-Q3 ✅ 过关（最强）**：统一下界【由定理产出】而非外加
+D-Q4 ⚠️ 需 ① 随尺度→∞ 的极限对象族 ② 该族紧 ③ 算术运算的有限传播 ④ 范数结构；
+       算术自然紧族是 profinite/adelic（0 维），与尺度族【结构不同】
+⟹ D2 是本轮唯一 **Q3 过关且机制明确**的模板
+```
+**站 D3 sharp critical inequalities（唐先生重点）**：
+```
+(a) Hardy 不确定性（Escauriaza–Kenig–Ponce–Vega；Tao）：
+    f=O(e^{−x²/β²}), f̂=O(e^{−4ξ²/α²}) ⟹ 1/(αβ)>1/4 ⇒ f≡0； =1/4 ⇒ f=c·e^{−x²/β²}
+    ⚡ 两个对偶衰减参数之【积】有精确阈值，达阈值时解被强制为 Gaussian（唯一极值 = rigidity）
+    动力学版：T/(αβ)=1/4 临界 ⟹ 时间亦卷入平衡；证明用 Appell 共形变换归约 α=β（内含尺度不变）
+(b) Hardy 不等式：∫|∇u|² ≥ ((N−2)²/4)∫|u|²/|x|²（sharp；N=1 时 1/4）
+    ⚡ Tao 核实：**永不取等**，近极值序列逼近而不收敛 ⟹ 第二种 rigidity 模式（sharp + critical + 不达到）
+(c) Selberg 1/4：λ₁≥1/4；Selberg ≥3/16；最佳 975/4096 = 1/4 − (7/64)²（Kim–Sarnak JAMS 2003）
+    ⚡ 等价于 GL₂/Q 在 ∞ 处的 Ramanujan（主序列 vs 补序列）⟸ Langlands 函子性
+⚡ 共同常数结构：((N−2)/2)²、(1/2)²、1/(αβ)=1/4 ⟹ **临界常数 = 半个整数间隔的平方**（结构性归纳）
+   ⟹ 与函数域 |α|=q^{1/2}（半个 weight）同源
+五问：Q1 防对偶约束同时近饱和的松弛｜Q2 非有限（无穷处衰减 + 竞争结构）｜**Q3 ✅ 过关**（sharp constant 由定理产出）
+      Q4 ✅ 有真实算术实例（Selberg/Ramanujan）｜**Q5 ✗ 不逃出**：
+      ① 阈值以 1/4=(1/2)² 到达，1/4↔1/2 字典 = 二次自对偶参数化 λ=s(1−s)（= 门⑮/⑰ 的同一结构）
+      ② 算术实现属【自伴离散谱】，ζ 零点在散射侧（门⑲/⑳）；通往 ζ 的引擎 Kuznetsov+Sym² 在 GL(1) 平凡化（门⑰）
+      ⟹ **D3 算术实现 = 已封闭路线的更高分辨率重推**
+```
+**⭐⭐ §4 合成（最有价值产出）**：
+$$\boxed{\textbf{P2 规格} = \underbrace{\text{D2 的 uniformity（推导）}}_{c\ \text{来自紧性}} + \underbrace{\text{D3 的对偶耦合阈值}}_{\beta\ \text{来自 sharp threshold}}}$$
+⟹ 唐先生 P2 的"守恒平衡" $\beta+\gamma=1$ 获得**已证实类比**：Hardy 型 $1/(\alpha\beta)=1/4$（两指数被对偶耦合、阈值由竞争固定）
+
+**§5 裁决**：**不是**成分级 NO-GO —— 至少两种**非有限非退化机制确实存在**（D2 紧性⟹一致性；D3 对偶竞争⟹指数）
+⟹ 新目标（取代"找无条件 X-尺度耗散"）：$\boxed{\text{找【紧的算术极限对象族】+ 连续参数化 + 有限传播/局域性}}$
+三关现状：① D2✓ D3✓｜② D3 给 1/4=(1/2)²（须经 λ=s(1−s) 字典）｜③ D3 已知但封闭、**D2 未识别 ← 唯一活口**
