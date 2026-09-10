@@ -1,3 +1,6 @@
+> ⚠️ **SUPERSEDED**：本文件的权威版本为 `L2-RAMIFICATION-STATE.md`。
+> 本文件保留作历史记录；其中的若干数值**已撤回**（见权威文件 §2），请勿引用本文件的数值结论。
+
 # ① 修正局部 ramification bookkeeping（**不碰 Layer 3/4**）
 
 **日期**：2026-09-10 21:00+ ｜ 依据：唐先生收窄指示（只修 bookkeeping）｜ 代码 `scripts/ramification_bookkeeping_fix.py` ｜ 输出 `/tmp/bookkeeping_fix_out.txt`

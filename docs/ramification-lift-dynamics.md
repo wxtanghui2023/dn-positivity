@@ -1,3 +1,6 @@
+> ⚠️ **SUPERSEDED**：本文件的权威版本为 `L2-RAMIFICATION-STATE.md`。
+> 本文件保留作历史记录；其中的若干数值**已撤回**（见权威文件 §2），请勿引用本文件的数值结论。
+
 # 乙-(a) 四层实算：分歧数据 / ramification filtration / 双尺度 / 传播递推（**构造性，未审计**）
 
 **日期**：2026-09-10 20:45+ ｜ 依据：唐先生四层规格 ｜ 代码 `scripts/ramification_lift_dynamics.py`, `ramification_groups_exact.py`, `disc_L_decisive.py`

@@ -1,3 +1,6 @@
+> ⚠️ **SUPERSEDED**：本文件的权威版本为 `L2-RAMIFICATION-STATE.md`。
+> 本文件保留作历史记录；其中的若干数值**已撤回**（见权威文件 §2），请勿引用本文件的数值结论。
+
 # (a) round-2 index 判定：**状态报告（含未完成部分）**
 
 **代码**：`scripts/round2_index.py`（含修正）、`scripts/index_final.py`｜**结论：未完成，不声称任何 index 数值**
