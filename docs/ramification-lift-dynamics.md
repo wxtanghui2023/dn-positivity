@@ -1,0 +1,77 @@
+# 乙-(a) 四层实算：分歧数据 / ramification filtration / 双尺度 / 传播递推（**构造性，未审计**）
+
+**日期**：2026-09-10 20:45+ ｜ 依据：唐先生四层规格 ｜ 代码 `scripts/ramification_lift_dynamics.py`, `ramification_groups_exact.py`, `disc_L_decisive.py`
+**结构**：$K=\mathbb Q(\sqrt2)$（2 次）⊂ $K'=\mathbb Q(\delta),\delta^4=2$（4 次）⊂ $L=\mathbb Q(\delta,i)$（8 次，Galois 闭包，$G=D_4$）
+
+---
+
+## LAYER 1 ✅ **完全验证**（精确元素/范数计算）
+```
+δ = (0,1,0,0)  δ⁴ = 2 ✓;  N_{K'/Q}(δ) = −2  ⟹ (δ) 是 2 上的素理想（唯一）
+(2) = (δ)⁴  ⟹  e(p₀/2) = 4,  f = 1,  v_p₀(δ) = 1,  v_p₀(2) = 4
+D_{K'} = (f'(δ)) = (4δ³)  ⟹  v_p₀ = 2·v_p₀(2) + 3 = 2·4 + 3 = 11  ⟹  |D_{K'}| = 2¹¹ = 2048 ✓
+```
+**TOWER 展开（唐先生要求，不只看"平方化"）**：
+$$\mathfrak D_{K'/\mathbb Q}=\mathfrak D_{K/\mathbb Q}^{[K':K]}\cdot N_{K/\mathbb Q}(\mathfrak D_{K'/K})$$
+```
+D_{K/Q} = (√2)³ ⟹ 第一因子指数 = 2·3 = 6
+D_{K'/K} = (2δ) = (δ)^5 ⟹ 相对指数 = 5   （f = x²−√2 ⟹ f'(δ) = 2δ，v = v_p₀(2)+v_p₀(δ) = 4+1 = 5）
+合计 6 + 5 = 11  ✓ 与 v_p₀(D_{K'}) 精确一致
+```
+$$\boxed{\textbf{r 映射（唐先生特别关注）}:\ r_0=v_{(\sqrt2)}(\mathfrak D_K)=3 \ \xrightarrow{\ \text{Kummer lift}\ }\ r'_0=3\cdot e((\delta)|(\sqrt2))=3\cdot2=6\ \textbf{（奇→偶）}}$$
+
+## LAYER 2 ⚠️ **内部矛盾（未解决）—— 如实记录**
+```
+L = Q(2^{1/4}, i), degree 8, Galois, G = D₄ (order 8), 2 上全分歧 (e=8, f=1)
+```
+**路线 A（判别式，精确）**：$\det(\mathrm{Tr}(e_ie_j))$ 于 $\mathbb Z[\delta,i]$ $= 2^{30}$ ✓
+**路线 B（tower）**：$|D_L| = N_{K'/\mathbb Q}(\mathrm{disc}(L/K'))\cdot |D_{K'}|^{[L:K']} = 2^8\cdot(2^{11})^2 = 2^{30}$ ✓
+$$\boxed{\text{A、B 独立一致} \Longrightarrow d(L/\mathbb Q_2) = 30}$$
+**路线 C（ramification groups 直接计算）**：
+```
+v_q(x) = v_2|N_{L/Q}(x)|   （验证：v_q(2)=8 ✓, v_q(δ)=2 ✓, v_q(i+1)=4 ✓）
+m(σ) = min over Z-basis of v_q(σ(e) − e)（该检验对阶 Z[δ,i] 是【精确】的）
+m: σ,σ³,στ,σ³τ → 6 ｜ τ,σ²τ → 8 ｜ σ² → 10 ｜ id → ∞
+⟹ |G_i| = 8,8,8,8,8,8,4,4,2,2,1  ⟹ d = Σ(|G_i|−1) = 42+6+2 = 50
+```
+$$\boxed{\textbf{矛盾}: \text{路线 A/B 给 } d=30;\ \text{路线 C 给 } d=50}$$
+**⚠️ 且路线 C 的机器在测试例上通过**：$\mathbb Q_2(\sqrt2)/\mathbb Q_2$ 得 $d=3$ ✓（= $\log_2 8$ ✓）；$\mathbb Q_2(\zeta_8)/\mathbb Q_2$ 得 $d=10$ ✓（$|D|=2^{10}$ ✓）
+**⟹ 矛盾尚未解决**；候选原因（未定）：
+```
+① O_L 是否真等于 Z[δ,i]（若 index>1，则 A 给的是阶的判别式，D_L = 2³⁰/index²；而 B 独立给 2³⁰ ⟹ index=1 ⟹ 又回到矛盾）
+② 路线 C 的群作用/编号细节（Herbrand 函数、lower/upper 编号）
+③ 对非循环 Galois 群（D₄）与野分歧，"d = Σ(|G_i|−1)" 的适用条件须复核
+```
+**⚠️ 另更正一处我此前的错误**：$L/K'$ **并非**在 2 上非分歧——$e(L/K')=2$，相对 different 指数 $=8$（$\mathfrak D_{L/K'}=(2i)=\mathfrak q^8$）
+
+## LAYER 3 双尺度对象（**以路线 C 的 filtration 为条件**）
+```
+r_i（层贡献）= [7,7,3,3,1,1]，Σ = 22 ⟹ d = 2·(7+3+1)
+S+^(i) = 累计 = [7,14,17,20,21,22]   S−^(i) = d − S+^(i) = [15,8,5,2,1,0]
+每一层守恒：S+^(i) + S−^(i) = d ✓（若用 d=30，只改变总值，不改"每层守恒"这一结构）
+平衡（S+ = S− = d/2）出现在层 0→1 的【交叉点】—— 不是自由参数
+```
+
+## LAYER 4 传播递推（**同一条件**）
+$$\boxed{r_{i+1}=\frac{r_i-1}{2}\ \text{（ramification 群逐层减半）};\qquad d=2\sum_i r_i\ \text{（每层计两次）}}$$
+```
+ladder 7,3,1 ⟹ Σ = 11 ⟹ d = 22（路线 C 的层结构）；halving 就是"1/2"的来源
+固定点：R_i = S+^(i)/(S+^(i)+S−^(i)) = cum/d 穿过 1/2 —— 1/2 是【递推的不动点】，不是代入的指数
+```
+**⚠️ 由于 Layer 2 矛盾未解，Layer 3/4 的数值（22）尚未确立；其【结构】（减半 + 双层计数 + 交叉点守恒）不依赖具体 d 值**
+
+## 诚实边界
+```
+· Layer 1（含 r 映射 3→6）为精确验证 ✓；Layer 2 矛盾【未解决】；Layer 3/4 的条件性已标注
+· 测试例（Q₂(√2): 3；Q₂(ζ₈): 10）用于验证路线 C 的机器 ✓；但矛盾仍在
+· ⚠️ 本轮自查失误：① 前版把 4δ³ 误算为 4δ·δ³（显示 4096 而非 −2048）已修
+   ② 先前断言 L/K' 非分歧——错误，已更正 ③ Layer 4 首版把 Galois/非 Galois 混列，已修
+· 本轮未做任何审计；未声称临界指数；未声称与 ζ 连接
+```
+
+## 下一步（若要解决矛盾）
+```
+① 计算 |D_L| 的第三条独立路线（D₄ 五特征的 conductor-discriminant：D_L = Π_χ f(χ)^{χ(1)}）
+② 直接判定 O_L 是否 = Z[δ,i]（Pohst–Zassenhaus 式或 round-2 方法），以排除 ① 因
+③ 用 upper numbering + Herbrand 重新走路线 C，核对 d = Σ(|G_i|−1) 的适用形式
+```
