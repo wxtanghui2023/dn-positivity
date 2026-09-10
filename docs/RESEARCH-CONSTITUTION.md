@@ -2252,3 +2252,33 @@ $$\boxed{\text{对任意有界窗口 }W\text{，限制到 }W\text{ 的约束【�
 **§12 结论**：$\boxed{G7^{\prime}\Rightarrow G7^{\prime\prime}（句法\to语义；单尺度积\to有界窗口积）}$；**G4′ 降为辅助**；
 当前 ISRG 候选定义 = G1｜G2｜G3｜**G4（与 G7″ 分工）**｜G5｜G6｜**G7″**
 **§13 ⚠️ 本轮不宣布完成**：新攻击面（前缀/超滤型复制｜取极限搭出的耦合｜窗口嵌套复制）⟹ **ISRG 定义尚未冻结；M-NOGO-1 仍不启动**
+
+### §8.48 ⭐⭐⭐ M-NOGO-P1d（三攻击面）+ P1e（K ⇏ α 的形式化）
+
+**P1d（唐先生）**：$\boxed{\text{G7″ 仍不足}}$；漏洞可压成：$\boxed{\text{"全局确定"}\neq\text{"只有无限多个局部副本联合才确定"}}$
+**三攻击面**：**PIM-VI**（前缀/cofinal 复制：局部独立事实 + 无限取极限）｜超滤版（$\lim_{\mathcal U}$ 仅**极限选择器** ⟹ $\boxed{\text{global functional}\neq\text{global arithmetic constraint}}$ ⟹ 归 PIM-VI）｜
+**PIM-VII**（窗口嵌套自相似 $\mathcal R_{n+1}=\operatorname{Scale}(\mathcal R_n)$）**最危险**：甚至通过解集版 decoupling test
+**过排除警戒**：真机制 $s_{n+1}=T(s_n)$ 亦可经极限得到 $\alpha$ ⟹ 须问"**极限是否携带新约束**"，而非"有没有极限"
+**G7‴（Non-Replicable Cross-Scale Generation）**：(a) $\Sigma_\infty\subsetneq\Sigma_{\rm dec}$ (b) $\alpha$ 在 $\Sigma_\infty$ 唯一、在 $\Sigma_{\rm dec}$ 不唯一 (c) 非有限窗口生成 (d) 非 cofinal replication (e) 非单尺度继承 (f) 内生性（G4/POC）
+**⚠️ G7‴ 过排除危险**：若把"不可复制"理解成【形式上不可由规则生成】⟹ **所有 scale dynamics 都被 PIM-VII 杀死**
+**最干净分界**：$\textbf{PIM}:K\Rightarrow\tfrac12,\ K^\infty$ 只是复制｜$\textbf{真 ISRG}:K\not\Rightarrow\tfrac12,\ K^\infty\Rightarrow\tfrac12$
+**必要分解**：$\boxed{\text{ISRG}=\text{Cross-Scale Coupling}+\text{Non-Replication}+\text{Emergent Exponent}}$；三轴 A（不是继承）｜B（不是复制）｜C（不是规定，G4/POC）
+
+**⭐⭐ 小灵 P1e 执行**：
+```
+§6 **语义版强于窗口版**：PIM-VI 的全部约束都是【单尺度】的 ⟹ Σ=Σ_dec ⟹ P1c 的语义版自动检出 ✓
+   （窗口版 G7″ 反而放行）⟹ **G7″ 的"窗口"限定应删除，代之以语义版**
+§7 ⭐ **G8（无单尺度局部读出）**：定义 α_X^loc = 由 scale-X 单尺度状态数据可提取的指数；
+   PIM-I/II/III/VI 全部 α_X^loc 有定义且 → α ⟹ 检出；真递归仅凭 s_n 无指数 ⟹ α_X^loc 未定义 ✓
+   （若指数写在【规则】里 ⟹ 属规定 ⟹ G4/POC 处理）
+§8 ⭐⭐ **PIM-VII 不是漏洞，而是【目标形状本身】**：嵌套自相似 + 自洽方程确定 α
+   在形式上与**合法 renormalization 完全同形**（自相似维数、Feigenbaum 指数皆由自洽方程定出）
+   ⟹ 形式手段无法区分；唯一差别 = **自洽方程是否算术原生**
+   ⟹ **B 轴（非复制）塌缩进 C 轴（G4/POC）**；三轴 → **两轴**
+   ⟹ ⭐ 正面读法：若用算术 primitives 构造出嵌套自相似且自洽方程唯一给 α=1/2 ⟹ **那正是我们找的机制**
+§9 归结：ISRG 形式化归结为【一个实质性数学问题】——
+   $\boxed{\text{是否存在由算术 primitives 构成的 }\alpha\ \text{自洽（不动点）方程，其解唯一为 }\tfrac12？}$
+   即 E3 的要求，但判据集已锐化；**且不存在形式捷径判定它**
+§10 ⚠️ 本轮不宣布完成（未决：①"自洽方程是否算术原生"能否独立判定 ② G8 的"状态数据"边界能否被"把规则编码进状态"绕过 ③ 是否真有两轴之外第三轴）
+⟹ **ISRG 定义仍未冻结；M-NOGO-1 仍不启动**
+```
