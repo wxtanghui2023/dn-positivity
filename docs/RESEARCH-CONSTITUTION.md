@@ -2033,3 +2033,31 @@ FM3：把 η 换成素分布型约束 ⟹ 可实现性 = 素数在 AP / Dirichle
 $$\boxed{\text{O4 结构性障碍：有方向性（J-敏感所需）与算术原生性（预序）相互冲突}}$$
 
 **裁决**：$\boxed{\textbf{G-SW6 = OPEN}}$；封存条件未满足（O2/O3/O5 尚未结构性归入 N1–N7）
+
+### §8.41 ⭐⭐⭐ O3（Action/Response）机制审计 + 算术 mechanism ontology（唐先生六关 + 小灵执行）
+
+**O3 六关**：O3-1 group action ⟹ **N4**（"action"本身绝不构成新机制）｜O3-2 commutator ⟹ **N4+S10**｜
+O3-3 共轭 action ⟹ **N3**（label 则 N2）｜O3-4 两 response 比较须为 arithmetic primitive（差→S10｜比→reach｜内积/norm→N5｜投影后相等→N3/N6｜统计→N7）｜
+O3-5 $\theta=\mathbf 1[A_\xi(x)=B_\eta(x)]$ ⟹ **J-不变 ⟹ S10 杀**｜O3-6 真 O3* 须 swap **同时改变内部状态** $(x_A,x_B,\xi,\eta)\xrightarrow{J}(x_B',x_A',\eta',\xi')$
+$$\boxed{\text{O3}\neq\text{O2}:\ \text{action 须有独立于 correspondence 的原生"作用"定义；否则归 O2}}\qquad O3^\star=\text{intrinsic nonlinear action-response interaction}$$
+**暂停纪律**：$\boxed{\text{O3 第一轮产物是 }O3\to O3^\star\text{，而非"找到候选"}}$（否则重回对象堆积）
+
+**⭐ 小灵本体整理（三原语）**：
+$$\boxed{\text{加法平移}\ \mathbb Z\curvearrowright(\mathbb Z/+)\quad\text{乘法伸缩}\ \mathbb N^\times\curvearrowright(\mathbb N/\times)\quad\text{标号/Galois}\ \mathrm{Gal}/\mathrm{Sym}(\mathbb P)}$$
+**原生 action 清单 A1–A5**：A1 加法平移 ⟹ 线性/S10（N4）｜A2 乘法伸缩 ⟹ 尺度 **N1** 或 monoid **N4**｜
+A3 Galois ⟹ **N2**｜A4 素数-赋值 ⟹ **N2**｜A5 有限群作用 ⟹ **N5/N3**
+$$\boxed{\text{算术中一切原生 action 皆为【态射型】，无例外}}$$
+**⭐ response 的本体位置**：response = **读值泛函** $\varphi$ ⟹ action–response = **模结构** ⟹ interaction 层 = 交换子/导子
+$$\boxed{\text{O3 的 action–response 在算术中就是【模论层】}\Longrightarrow \text{N4 + S10}}$$
+
+**⭐⭐ 裁决：O3 CLASS-CLOSED**（**新纪律下第一次类别级 NO-GO**，非 candidate failure）
+```
+① 一切原生 action 皆态射型（A1–A5）⟹ interaction 层分别为 线性/S10、尺度/N1、标号/N2、有限/N5
+② response = 读值泛函 ⟹ action–response = 模结构 ⟹ 交换子/导子 ⟹ N4+S10
+③ O3* 要求【非态射型作用】；算术中无原生实例——可称"act"的非态射结构 = 过程/重写
+   （substitution/rewriting/dynamics）—— 该类已于早前 STOPPED 并属 O5 范畴
+```
+**⚠️ 诚实标注**：本体表基于**已列举原语与 action 类型**；"仅有三原语"为**经验性本体陈述，非定理**
+
+**SW6 现状**：O1/O3/O4 已归入，O2/O5 **未归入** ⟹ $\boxed{\textbf{G-SW6 = OPEN，残余}=O2\cup O5}$
+**⭐ 建议下一刀 = O5**（唯一在定义上不涉及 associativity 的入口，结构上最可能避开 S6/S7）
