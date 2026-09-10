@@ -1388,3 +1388,59 @@ $$\boxed{R1+R2+R3\ \Longrightarrow\ K_q\ \text{是否必来自某种有限群/�
 **判定**：Epstein/theta ✓ 正面证据 ｜ FE⇏Euler ✓ ｜ QSC⇒GL₂ ✗ 撤回 ｜ 第三类必须 non-dual ✗ 未证 ｜
 Z2+Z3+QSC 仍可能强迫表示论结构 ｜ **真正活口 = non-representation-theoretic finite reciprocity kernel**
 （本轮没回到任何已关闭路线：问的是 ZBV 五门本身是否已具备有限代数结构定理）
+
+### §8.26 R8-C†-B2：QSC_F / QSC_G 分叉 + Global-QSC Lemma（唐先生本轮）
+
+**⚠️ 小灵撤回 7.1**：$R1+R2\not\Rightarrow$ 标准 Kloosterman（一般核 = $\sum_{d\in(\mathbb Z/q)^\times}w_q(d)e_q(ad+bd^{-1})$，
+$w_{q_1q_2}=w_{q_1}w_{q_2}$ ⟹ 仍满足 CRT 张量，$w_q\equiv1$ 只是最特殊情形）
+
+**⚠️ Finite-QSC Lemma 改名**：→ **Finite-QSC Reduction Lemma**
+```
+若 QSC 只要求有限卷积闭合 ⟹ 固定 q 时进入 ℂ[G_q]≃⊕End(V_π) ⟹ 任何有限核分解为有限维不可约块
+⟹ "finite closure ⟹ finite representation" 是【代数事实】
+⟹ 原 Lemma 即使成立也【排除力弱】（价值 = 压缩候选空间，非杀候选）
+```
+
+**⭐⭐ Z4 少一层：QSC_F ≠ QSC_G**
+| 级别 | 内容 | 性质 |
+|---|---|---|
+| **QSC_F** | finite closure（$A_qA_q^*\in\mathcal A_q$，dim<∞） | **近乎代数事实** |
+| **QSC_G** | global spectral closure（统一谱空间 $\mathscr H$，含 finite $q$-算术侧 + archimedean transform + 同谱闭合所有 $q$） | **Kuznetsov 有、有限群表示没有** |
+
+**L3 拆两级**：L3_F（Z2+Z3+QSC_F ⟹ finite rep envelope；大概率可证、排除力弱）｜
+**L3_G**（$Z2+Z3+QSC_G+Z5\Longrightarrow\mathcal E_{\rm global}$?），$\mathcal E_{\rm global}\supset\mathcal E_{\rm theta}\cup\mathcal E_{\rm automorphic}\cup\mathcal E_{\rm other}$
+$$\boxed{\mathcal N_G=\text{QSC-G}\setminus\mathcal E_{\rm global}}$$
+**Epstein/theta = QSC-G 的合法实现**（确实通过 finite/local→global 关）
+
+**⭐ 伪活路命名**：**finite-QSC impostor**——各 $q$ 的谱只是 $\mathscr H_q$（未形成 $\mathscr H_{\rm global}$），
+无法把 $\Lambda\times\Lambda$ 二阶相关推进到统一谱参数。
+**Z1 再加一层（唐先生）**：$\boxed{\text{Global independence}:\ A_q=\mathcal V_q(\Lambda)\ \text{须来自统一构造 }\mathcal V\ \text{与统一谱 }\mathscr H_{\mathcal V}}$
+
+**R8 真正桥**：$\Lambda\overset{\mathcal V}{\to}\{A_q\}\overset{\text{finite reciprocity}}{\to}\{K_q\}\overset{\text{global closure}}{\to}\mathscr H$
+（$\mathscr H$ 须承载：所有 $q$｜所有尺度｜additive twist｜archimedean transform｜二阶 $A\times A$ closure｜Z5 保证未偷放 $\rho$）
+
+**⚠️ 不能用"有限表示"杀 R8**：$(R1+R2+R3)\Rightarrow\text{finite rep}\Rightarrow\text{R8 closed}$ **不成立**（差最关键一层）
+
+**⭐ Global-QSC Lemma（新生死线）**：$A_q$ 满足 Z1+Z2+Z3+QSC_F+QSC_G+Z5 ⟹ 是否必然存在 global harmonic/rep-theoretic object？
+且即使"是"也不能直接杀 Λ（Λ 可能对应尚未发现的 global object）
+$$\boxed{\text{终点必须是}:\ \text{Global-QSC}+\Lambda\text{ 的结构约束}\Rightarrow\text{矛盾}}$$
+
+**⭐ 小灵补两点**：
+```
+10.1 QSC-G ≈【系统满足一个 trace formula / Poisson 型全球恒等式】
+     （Kuznetsov = GL₂ 迹公式；Epstein/theta = adelic Poisson + Weil 谱分解）
+     已知这一切都【从群作用导出】⟹ 反例构造目标精确化为：
+     **一个不借助群作用却仍具 global closure 的有限 reciprocity 系统**（呼应门⑨⑲"char 0 缺群作用"）
+10.2 ⭐⭐⭐ 最终 NO-GO 位置已提前定位 = **archimedean 层**
+     QSC-G 需 archimedean transform（Bessel 核）；Bessel 核源自函数方程中【Γ 因子乘性】
+     L1″ 已确立：Λ 的 archimedean 对偶 = Γ'/Γ 型 + cot(πs/2) 型（非乘性）
+     ⟹ **Λ 在 archimedean 层无法提供 Bessel 型核 ⟹ QSC-G 在此层失败**，且独立于有限 reciprocity 层
+     ⟹ R8 最终 NO-GO 是【两层】：① 有限层（近乎平凡，无排除力）② archimedean 层（**排除力在此**）
+     ⟹ **Global-QSC Lemma 应重新加权**：排除力在 archimedean compatibility，不在有限 reciprocity
+```
+
+**当前最窄活口**：有限算术 reciprocity 能否在**不预先指定谱**的情况下自动产生跨所有 $q$、跨尺度、
+含 archimedean 对偶的**统一全球谱**？（解释了为何旧路线最多提供其中一层）
+
+**下一步（唐先生指定）**：对 Global-QSC Lemma 做【反例构造】——先尝试构造满足 Z1–Z5、具真正跨 $q$ 全球谱、
+但不属 $\mathcal E_{\rm global}$ 的 $A_q$；小灵建议起点 = "不借助群作用"的全球恒等式候选。
