@@ -2409,3 +2409,35 @@ $$\boxed{\mathcal E_{\rm ISRG}=\left\{\mathfrak M\notin\bigcup_{i=1}^{7}N_i:\ A(
 $$\boxed{\textbf{N8 规则}：\text{N8 必须是【新的生成原则】，而不是【新的对象】}}$$
 （不得再产生"给旧机制换名字"式的 N8）
 **保留纪律**：G-SW6 停止｜不得沿 SW6 微调｜不得从 O1–O5 内部再挖名字｜主线须从边界图【外部】找机制｜RH 线仍开放｜**Λ 冻结**
+
+### §8.53 ⭐⭐⭐ ISRG 造原型轮：最小 arithmetic scale-balance prototype（5 尝试全败 → 成分级缺口）
+
+**模板（唐先生）**：$\boxed{\text{不找 }\sqrt X\text{，而找【不预设 }\tfrac12\text{ 的 arithmetic scale law】，其全尺度 rigidity 自己产生 }\alpha_*=\tfrac12}$
+**四项要求**：A 有限尺度无法确定 $\alpha$｜B 真正的跨尺度 primitive law｜C 该 law 自带守恒/平衡方程 $B(\alpha)=0$｜D $B(\alpha)\neq B(1-\alpha)$ **不作公理**而唯一 admissible 解恰为 $\tfrac12$
+**纪律**：不碰 ζ；不套 RG/谱/范畴/物理名字；只用 $+,×,|,\gcd,v_p,\operatorname{rad},\lfloor\cdot\rfloor$
+
+**五个原型的死因**：
+```
+① 除子配对 d↔n/d ⟹ 平衡点 √n 逐 n 独立给出 ⟹ **A-fail**（= N43/双曲线）
+② 乘法求逆 n↦1/n + 不变测度 dx/x ⟹ 自对偶条件 −s=s ⟹ **s=0（即 α=0）**，非 1/2
+   ⭐ 新否定事实①：算术中最纯粹的 self-duality（乘法逆）其自对偶指数 = 0
+   ⟹ 1/2 必须来自【pair 型对偶 s↔1−s】，而此类在算术中只有 FE 型/有限型/几何型
+③ 筛法/Mertens 密度平衡 ⟹ 「剩一半」是人为 1/2（**D-fail**）+ 住在 log 变量（**G5-fail**）
+④ 平方/位似流 n↦n² ⟹ u↦2u 无不动点 ⟹ 任何 α 都须外加
+⑤ 计数 vs 重数（A(X)=X, M(X)=X loglog X）⟹ 不存在平衡方程 B(α)=0
+```
+**三难（所有可用算术平衡律）**：**(L)** 逐尺度恒等式 ⟹ A-fail｜**(G5)** log 变量平衡 ⟹ 变量错｜**(G6)** 统计平衡 ⟹ 非 exact
+$$\boxed{\text{没有一条是【真正跨尺度 + X 尺度 + exact】的平衡律}}$$
+
+**⭐⭐ 成分级诊断（本轮真正产出）**：
+$$\boxed{\text{balance}=\underbrace{\text{invariance}}_{\text{自对偶/不变测度}}+\underbrace{\text{dissipation}}_{\text{单调耗散/正性}}}$$
+| 成分 | 算术现状 |
+|---|---|
+| invariance | **可得**（乘法逆 + $dx/x$，但中心 $\alpha=0$；或 FE 型 pairing） |
+| **dissipation** | **缺失**：char 0 中无条件 √-尺度正性全来自**有限性**（门⑬）；推到极限即失去驱动（moving-edge P28–P33） |
+⟹ $\boxed{\text{算术有【不变性】但没有【无条件 X-尺度耗散】}}$ —— **这才是"越收窄越没方向"的真答案：缺的不是候选，而是【成分】**
+⟹ 且与既有残差同构：无条件 X-尺度耗散 ⟺ **独立 √-尺度正性**（门⑬/⑭、LIVE-3）
+
+**裁决**：5 原型全败，但缺口从【对象级】压到【成分级】；**下一轮唯一合法目标** =
+$$\boxed{\text{造一个【不预装 1/2、且自带无条件 X-尺度耗散】的算术跨尺度律}}$$
+（若造不出 ⟹ 说明 ISRG 入口本身可能不存在，而非"未找到"）
