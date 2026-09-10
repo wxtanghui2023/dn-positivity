@@ -2743,3 +2743,33 @@ $$\boxed{\text{修正后对照 }49\ \text{vs}\ 1}$$
 ```
 **Gate V 补充条款 V-b（定义—数值对账）**：引用的数值必须说明它是【该类的最大/最小值】还是【某代表态的值】。
 **状态**：唐先生决定——**ALIGNMENT SOURCE 是否升为 FROZEN GAP，待此核验后定**（核验已通过）。
+
+### §8.64 ⭐⭐⭐ ALIGNMENT SOURCE 正式升为 **FROZEN GAP**（唐先生批准；收窄版措辞入库）
+
+**位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` **§12**（与 NO-GO 表分栏独立，**不得混读**）
+
+**核验结论（唐先生确认）**：
+$$\boxed{\mathcal C_{\rm formula}(g)=\Big(2\lfloor B/g\rfloor+1\Big)^2;\quad B=3:\ g{=}1{\Rightarrow}49,\ g{=}2,3{\Rightarrow}9,\ g{\ge}4{\Rightarrow}1}$$
+**28 / 6 / 1 是具体边界态经 $a+p\ge1,\ b+q\ge1$ 后的 clipped branching，不是理论 $C(g)$ 本身**
+$$\boxed{\text{正确结构对照 = 最大分支 }49\ \longleftrightarrow\ \text{平衡态最小分支 }1}$$
+**采用"每个 $g$ 下取最大 $C$"的正确检验后，$c=12,20,30,60$ 全部非增** ⟹ 关键结构性判断**未被 bug 推翻，反被加强**
+
+**冻结陈述（收窄版）**：在 ABD 当前容许类（驱动仅用 $a+b=c$、整除、$\gcd$；不读 $|a-b|$、$ab$、显式序）中，
+当前发现的**自然分支复杂度方向与 AM-GM 等号流形结构性反向**；
+$C(g)$ 对 $g$ 单调不增，而 $a=b\Rightarrow g=a=c/2$（等号流形达到该 $c$ 下允许的最大 $g$）
+⟹ $\boxed{\text{算术未来分支最丰富}\to g\text{ 小、primitive、不平衡}}$ ｜ $\boxed{\text{sharp equality}\to g\text{ 最大、分支自由度最低}}$
+**证据等级**：[近证明] $C(g)$ 单调不增（$c=12,20,30,60$ 全 $g$-层最大值检验通过）｜[实测] $a=b$ reach $=0.0324$ vs ceiling $0.5185$｜[结构性解释] 同一 $g$ 反向支配
+
+**⚠️ 边界保留（防止误写成全称不可能定理）**：
+```
+尚未证明所有可能的算术方向场均不存在；特别【尚未枚举】能够利用 c 的素因子结构、
+而又不退化为 (i) 读取目标几何量 或 (ii) 丢失状态信息的【非单调】方向场。
+```
+$$\boxed{\text{本条冻结的是："自然算术分支复杂度"不能提供所需 alignment source}}$$
+$$\boxed{\textbf{不是}："所有可能 arithmetic alignment source 不存在"}$$
+**重启条件**：$\boxed{\textbf{必须提交新的【生成原则】}}$——**不能**仅修改 $C$、窗口 $B$、权重或已有 gcd-branching 规则
+
+**⭐ 保留句**：$\boxed{\text{自然 arithmetic branching principle 系统性偏好 primitive/不平衡态，而 sharp equality 是 arithmetic freedom 的最低点}}$
+
+**编号整理**：冻结基准已重排为 §0–§13（§10 = D2 收口归位、§11 = 诚实边界、§12 = 本条、§13 = 提交链）；
+跨行 `$$` 块括号平衡已自检（0 不平衡）。
