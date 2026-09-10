@@ -34,3 +34,35 @@ $$\boxed{\text{(c) Kummer 2-cover } K\to K'=K(\sqrt{\sqrt2})}$$
 
 ## 一句话现状
 $$\text{L2 = VERIFIED（冻结）};\quad \text{B3/B4/B4b/B4d = positive structure};\quad \text{Layer 3 = 冻结的结构猜想};\quad \text{下一轮 = (c)}$$
+
+---
+
+# 续篇：C/D/E 系列（2026-09-10 夜，全部为**推导/核验**，非审计终结）
+
+| 文件 | 内容 | 状态 |
+|---|---|---|
+| `C1-cover-balance-verification.md` | (c) 2-cover 机制验证：平衡障碍 = $\lvert G\rvert$ 的 2-adic 指数为奇；一次二次 lift 解除（$3\to4$） | **positive（机制层面）**；含 **B4d §4 勘误** |
+| `D1-prime-history-audit.md` | prime-history composition：Euler 化 = 唯一分解的推论；非交换算子不够；add×mult defect = 平移 ⟹ Aff(ℤ) **可解** | 路线**拟判死**（已审天然类内） |
+| `D2-mutation-canonicality-audit.md` | mutation：canonical 根替换 = Cayley–Hamilton ⟹ 秩-2 ⟹ **算术格** ⟹ 自守影子 ✗；自然临界量是 δ 非 1/2 | **拟判死**（§3 已收紧为"已识别来源的压缩"） |
+| `D3-dual-scale-closure-prea_audit.md` | dual-scale closure：$\alpha+\beta=1$ 且 $\alpha=\beta$ ⟹ 两者 $\asymp\sqrt r$；本问题已有 canonical 答案（A′/B4d）但**答案是 generic** | **建议新增第 (5) 过滤器：非 generic** |
+| `F-closure-and-H-exact-cancellation-audit.md` | F（无限非消去）= **CLOSED**；H（精确抵消律）canonical 实例 = Möbius/Mertens ⟹ **RH 等价重述**；成功实例 = 函数域 Weil（有限性正性） | F **CLOSED**；H 三分（trivial / RH-等价 / 有限性支撑） |
+| `E1-information-loss-route-audit.md` | AFAC-v1 **CLOSED**；信息损失路线三重困境；canonical 极限 = $\widehat{\mathbb Z}\times$ archimedean profile ⟹ **Mellin 变换正是显式公式** | 路线**判死**；但正确解释了 Mellin 的不可避免性 |
+| `E2-transport-second-order-dichotomy.md` | 二阶传输 $\Delta_{p,q}L$ 精确核验（1266 组）；**二分**：分解决定 ⟺ 只依赖局部数据；非分解决定 ⟹ 计数/误差函数 ⟹ 显式公式类 | **核验完成**；§14 形状 = 局部-整体 obstruction（Ш/类群/Brauer–Manin，全由 L-值测度） |
+| `E3-why-this-is-not-the-old-pit.md` | 为何新方向不在旧坑 + 记录更正（唯一洞 = **OPEN, apparatus pending**）+ 技术修正（anomaly **不可能**是极限值；必须是**非单射局部化的核类**） | 方向 **OPEN**；含"四个缺口是同一个缺口"综合 |
+| `E4-apparatus-bounded-and-Pi1-constraint.md` | anomaly 的**三处家**：(a) Galois 上同调（L-值测度 ✗）｜(b) Spec ℤ 新上同调（Deninger/Connes，停点已定位）｜(c) 模型论（新但未连线）；**Robin/Π₁ 必要条件** | (b) 与领域硬核**合流**（char 0 缺正性 = C6-C） |
+| `E5-fourth-localisation-spec.md` | **三名字同构**（§15 ≡ 核类 ≡ β-wall 自由层）；精确刻画 **limit-seeing but finite-blind**；**五条设计规格**；四类 canonical 局部化全落已知箱子 ⟹ 需**第五个** | 产出 = **规格**而非对象；无候选 |
+
+## 唯一那个洞的**四个等价表述**
+```
+① 【D3 §4】(5) 非 generic（依赖算术特异性）
+② 【E1 §5】第三种不变量（非 congruence、非 archimedean）
+③ 【E2 §3】非分解决定的 L（不是计数/误差函数）
+④ 【E5 §6】第五个局部化系统（canonical + limit-seeing/finite-blind + 核非 L-值可测）
+⟹ 单一缺口 = 【算术特异 + 非 completion + 非 L-测量 + limit-seeing/finite-blind】的机制
+⟹ 该路线的实现可证明地归约到本领域核心难点（char 0 正性）⟹ 不是捷径；方向 OPEN 但 = 核心难点本身
+```
+
+## 全局约束（贯穿 B/C/D/E 全部轮次）
+```
+无 1/2 输入｜无递推输入｜无人为权重｜无人为范数｜无 GPS 审计｜未声称与 ζ 连接｜L2 保持冻结（VERIFIED）
+```
