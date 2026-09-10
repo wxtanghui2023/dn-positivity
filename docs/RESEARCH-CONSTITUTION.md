@@ -2987,3 +2987,37 @@ $$S_{\max}\sim4.8\log X,\qquad \Omega_{\max}\sim(0.9\!-\!0.98)\log_2X\ \Longrigh
 **下一候选准入**：$\boxed{\text{必须来自尚未进入 }N1\text{–}N7/S1\text{–}S8/S3\text{ 的【新算术生成原则}}}$
 **第一关**：$\boxed{\text{为什么这个算术原则【必然】产生这种 transition law？}}$（**不是**"能不能做出 $1/2$"）；过关后才进入 GPS → G2/G4 → G5
 **当前状态**：$\boxed{\text{等待下一方向}}$
+
+### §8.72 ⭐⭐⭐ 策略转向：暂停 NO-GO 搜索，转为【正向机制生成】（唐先生，2026-09-10 18:31）
+
+**转向理由（唐先生自述）**："提出候选 → 找结构性死亡点 → 冻结"最多建立越来越完整的 NO-GO 地图，
+**却不会自动产生突破口**；而需要的是"**先找到一个新数学机制，再让审计检验它能不能活**"。
+**S3 到此为止**；边界图不再往里挖。
+**反向信息**：天然算术"构造复杂度"多产生 $\log X$；天然局部平衡产生 $X^{1/2}$ 的路线又易循环
+⟹ 继续找"另一个更聪明的 $a+b=c$"是错误方向。
+
+**新方向形状**：
+$$\boxed{\text{两个天然且独立的算术尺度}\to\text{compatibility/commutation law}\to\text{固定尺度不是自由参数}\to\text{固定点是否必为 }X^{1/2}\to\text{能否接 }\zeta\text{ 零点}}$$
+$$\mathcal A_X\overset{P}{\to}\mathcal A_Y\overset{Q}{\to}\mathcal A_X;\quad P,Q\ \text{皆天然};\ P\circ Q\ \text{与}\ Q\circ P\ \text{增长律不同}\ \Longrightarrow\ XY=X_0^2\Rightarrow X=Y=X_0$$
+**排除列表**：规定 $H=\sqrt X$｜观察 $1/2$｜FE $s\leftrightarrow1-s$｜$d\leftrightarrow n/d$｜AM-GM｜现成 HP 算子｜"复杂度恰好等于平方根"
+**关键新要求**：$\boxed{\text{把【尺度本身】变成算术对象}}$（记 (additive scale, multiplicative scale) 两套竞争分解尺度；
+问哪些 $n$ 能被两套天然分解同时稳定描述；若稳定条件给出 $S_{\rm add}S_{\rm mult}=C^2$ 型二次关系则平方根为固定点）
+⚠️ 但该公式**不可直接用**（等于藏入平方根）；必须从**另一已有算术原则**推出该二次兼容关系
+**最后一步极重要**：若只得到漂亮的 $\sqrt X$ 算术定理，**仍无 RH**；必须形成
+$\text{arithmetic compatibility}\Rightarrow\text{critical scale }X^{1/2}\Rightarrow\text{spectral localization of }\zeta$
+
+**角色分工（唐先生）**：本次由**唐先生**承担"产生新机制"；小灵**暂停淘汰机制**，改为提供正向构造材料
+**当前模式**：$\boxed{\text{正向机制生成（先不审计）}}$；形成具体数学对象后再进行第一轮生死审计
+
+**已提供构造材料**（`docs/TWO-SCALE-compatibility-construction-material.md`，**未过任何 GPS 门**）：
+```
+材料 A 不变因子双尺度：对象=Z² 中指数 N 的子格；两尺度=Smith 不变因子 d1|d2（唯一无选择）；
+       定理 d1d2=N；自然交换=对偶/对换；不对称性=d1|d2 使交换反转整除方向；
+       固定尺度=√N；1/2 = 1/rank（rank=2 由对象维数给出，非人为指数）
+材料 B 数域两尺度：√|D_K|（Minkowski 余体积，指数恰 1/2）与类数 h_K；
+       已有定理=解析类数公式（$h_KR_K=\frac{w_K\sqrt{|D_K|}}{2^{r_1}(2\pi)^{r_2}}\operatorname{Res}_{s=1}\zeta_K(s)$）；
+       Brauer–Siegel 现象即"两尺度竞争"；**天然与 L 函数接壤** ⟹ 最后一步（→ζ 零点）有现成接口
+设计约束 C1–C5：两操作须天然｜守恒律须是定理｜固定点无自由参数｜1/2 由内禀整数(rank/arity)给出｜须有通往 ζ 的接口
+⚠️ 构造约束（非死亡审计）：本形状与 E3 重整化不动点同型；成败系于 C1/C2（操作与守恒律是否"定理级天然"）
+```
+**⚠️ 本轮明确未做**：任何审计（G1–G5/反调参/Gate V/V-b）；未声称临界指数存在；未声称与 RH 连接
