@@ -1578,3 +1578,47 @@ $$d+\frac nd\ge 2\sqrt n,\ \text{等号}\iff d=\sqrt n$$
 
 **保留的结构收获**：① D1 死亡机制被计算确证 ② 二阶层相位显式形态 $(d-e)(a-bn/(de))$（配对积 $P=de$ 调制有效加法参数）
 ③ "$(\Delta,P)$ 双射"是一条干净的**否证性引理**（任何"二阶压缩"方案须绕过它）④ √n-探测器性质解释了该路线总被经典双曲线吸回
+
+### §8.30 R8-FL-Closure（有限层受限 NO-GO）+ 新对象 cross-scale transport（唐先生选 甲）
+
+**受限 NO-GO**：
+$$\boxed{\textbf{有限算术层受限 NO-GO}:\ \text{三类自然有限入口均不能产生新的 }QSC_G\text{ 入口}}$$
+（**受限**，非"所有有限结构都不可能"的不可能性定理）
+```
+① 环可定义对合：**可封口** —— 跨模数 canonical/CRT ⟹ k²−1 被所有 λ(q) 整除而 lcm=∞ ⟹ k=±1 ⟹ {退化, Kloosterman}
+② hypergroup/scheme：**不能宣布全杀** —— 未证（也不应声称）hypergroup ⟹ Kloosterman；
+   非群 hypergroup（x̄≠x⁻¹）存在但未通过 arithmetic embedding+CRT+reciprocity+QSC_G ⟹ "存在但未形成 R8 入口"
+③ factorization：**真正收口** —— D1 可分权重【精确恒等式】Σ_n K_n = 两个独立加法 Fourier 之积；
+   D2 (d+e)²=Δ²+4P ⟹ (Δ,P)⟷{d,e} ⟹ 二阶**不压缩** pair information ⟹ K₁→K₂→K₃ 是逐层携带更高阶 divisor tuple
+```
+
+**共同缺口**：$\boxed{\text{有限局部对象易产生"kernel"，但不能自然产生"跨尺度动力学"}}$ —— 而 R8 缺的正是后者
+
+**Gap_FL 正式降级**：
+$$\boxed{\mathrm{Gap}_{FL}:\ \text{是否存在非平凡、canonical、固定维数、非 re-encoding 的 factor-pair compression？}\ =\textbf{unresolved/inactive}}$$
+```
+降级五理由：①无候选 ②自然压缩被双射性阻挡 ③非自然压缩无生成原则 ④从 C(X,H) 反推违反 Z1
+            ⑤即使找到编码仍须证 QSC-G 与 global spectrum
+⭐ 小灵加【重激活判据】：只能通过展示一个【生成原则】重激活——即给出 canonical 固定维数状态，
+   它【可证丢失】divisor-pair 信息却仍携带该耦合；单纯"再找编码"不算重激活
+⟹ **正式冻结 finite-layer search**
+```
+
+**新研究对象：cross-scale arithmetic transport**
+$$\Lambda\ \overset{?}{\to}\ \mathcal A_{\rm cross-scale}\ \to\ \mathscr H_{\rm global}\ \to\ V(X,H)\ \to\ F(\alpha)$$
+$$\boxed{T_{q\to q'}:\mathcal A_q\to\mathcal A_{q'}}\quad\text{或}\quad T_{X\to X'}:\mathcal A(X)\to\mathcal A(X')$$
+（**真实 morphism**，非静态反射；与早前"物理运动"路线的本质区别）
+**X1 非静态 ｜ X2 非目标导向 ｜ X3 非 re-encoding ｜ X4 可组合 ｜ X5 产生二阶量 ｜ X6 内生尺度（不得事后代入 H=√X，否则回 N43）**
+
+**⭐ 小灵加 X0（前置门）——Round 3 cocycle 飞行前检查**：
+```
+Round 3 已证：①算术无内生动力学（状态=尺度的函数）②群作用实现的尺度演化【自动是 cocycle】⟹路径无关⟹记忆为零
+             ③破坏合成律只有两条路：状态空间随尺度变化（联络/和乐，已关闭）或转移律非群作用
+⟹ 若 X1–X4 由群作用实现，则 X4 自动成立但记忆为零，X5 退化为"尺度的函数"
+⟹ **X5+X6 必须在【非 coboundary、非和乐】前提下成立**（极紧）
+⟹ 不做 X0 检查，该路线会重新发现 Round 3 的墙
+```
+**⭐ 小灵对 X6 的锐化**：X6 ⟺ **传输律自带【尺度对合】σ**（$T_{X\to X'}\leftrightarrow T_{\sigma(X')\to\sigma(X)}$，σ 不动点即 √X 尺度）
+⟹ 把 X6 从"外部要求"变为【传输律的结构闭合性质】，可检验；并与 R3「尺度对合」残差接轨
+
+**必产 R**：R_CS【新，X0–X6 全过才准构造】｜R_GapFL【新，inactive】｜R3（保留，与 X6 锐化合流）
