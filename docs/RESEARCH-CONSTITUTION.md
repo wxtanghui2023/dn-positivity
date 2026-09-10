@@ -2797,3 +2797,43 @@ $\alpha_*=\log k/\log(1/m)$）**不变**；须限定的是**解读**：上确界
 
 **⚠️ 未检验**：非均匀 $k$-child、带权 refinement、$\ge2$ 层复合 refinement 是否也能给出
 $1/2$ 且同时保持【非退化 + 平衡】（本轮否定仅覆盖**均匀**情形）。
+
+### §8.66 ⭐⭐⭐ ABD 代正式收口 + 剩余开放边界（唐先生指定；边界地图更新）
+
+**ER-1 的真正结论（唐先生复述并认可）**：均匀 $k$-child 中 $\alpha_*=\log k/\log(1/m)$，$\alpha_*=1/2\iff m=1/k^2$；
+而 $m=r(1-r)$ ⟹ $r(1-r)=1/k^2$。故
+```
+k=2：唯一 r=1/2，但 refinement 已直接把父态变成两个平衡副本 ⟹ 对称化 / 非单射退化
+k≥3：存在两个严格 ≠1/2 的 r±，却仍精确产生 α*=1/2
+```
+$$\boxed{\tfrac12\ \text{在 ABD-0 均匀 refinement 中由【arity】产生，而非由【balance】产生}}$$
+**⟹ "1/2 是平衡点特殊指纹"的解释（"ABD-0 的收口结论"）不能再使用。**
+
+**§12 现有两个【不同机制层面】的支撑**：
+```
+(i)  ABD-1′（方向选择）：future branching → 偏好 primitive/不平衡
+(ii) ER-1  （临界指数生成）：α_* 只编码 arity，不编码 balance
+```
+$$\boxed{\text{两条入口都未产生所需 alignment}}\quad\text{（强于"又一个算法没找到"）}$$
+
+**边界不得扩大**：$\boxed{\text{ER-1 CLOSED}\neq\text{所有 refinement 不可能}}$——**非均匀 $k$-child｜带权 refinement｜多层复合 refinement** 仍为**开放边界**。
+
+**⚠️ Guardrail（唐先生指定）**：
+$$\boxed{\text{不要马上沿这三类逐个枚举}}$$ 理由：仅把 $k$、权重、层数继续自由化，极易重入"**人为调参数使 $\alpha=1/2$**"的老循环
+
+**ABD 代状态表（正式收口）**：
+| 项 | 状态 | 依据 |
+|---|---|---|
+| ABD-0 | **CLOSED（收口）** | $1/2$ = arity 产物；**不再作为 balance detector** |
+| ABD-1 | **CLOSED** | 容许类内无等号吸引子（惰性/去相关/非单射） |
+| ABD-1′ | **CLOSED → FROZEN（§12）** | 结构性反对齐 |
+| ER-1 | **CLOSED（前提失败）** | $1/2$ 不表征平衡 |
+
+**剩余开放边界 = 第四类 alignment source**：
+$$\boxed{\text{第四类}=\text{非单调}+\text{非 }g\text{-only}+\text{非目标读取}+\text{非数据丢失}+\text{具有【新的生成原则】}}$$
+$$\boxed{\text{不得再从 ABD-0/1 内部继续挖；若继续，必须跨出 §12 所要求的【新生成原则】，而非给 ABD 再加一层}}$$
+
+**ABD 这一代的真实成果**：不是 RH 模型，而是把"**用算术分支 / 临界 refinement 自生 $1/2$，再解释为平衡选择器**"
+这一整类机制的**边界画清**。
+
+**位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` §12.5 + **§13（新增）**；提交链移至 §14。

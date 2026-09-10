@@ -288,6 +288,15 @@ $$\boxed{\textbf{FROZEN GAP：重启必须提交一个新的【生成原则】}}
 $$\boxed{\text{自然 arithmetic branching principle 系统性偏好 primitive/不平衡态，而 sharp equality 是 arithmetic freedom 的最低点}}$$
 **这比"某个具体算法没成功"强得多**：ABD-1′ 已找到 alignment 缺口的**机制性来源**——不是算力不足，而是**当前 arithmetic complexity 本身朝着与 sharp equality 相反的方向流**。
 
+### §12.5 第二独立支撑（ER-1）
+§12 现有**【两个不同机制层面】**的支撑：
+```
+(i)  ABD-1′（方向选择）：future branching → 偏好 primitive / 不平衡
+(ii) ER-1  （临界指数生成）：α_* 只编码 arity，不编码 balance
+```
+$$\boxed{\text{两个入口——方向选择 与 临界指数生成——都未产生所需的 alignment}}$$
+**这强于"又一个具体算法没找到"。**
+
 **诚实边界**：§12 全部措辞为唐先生批准并指定的收窄版本（含 $C_{\rm formula}$、49 vs 1、证据三级、边界保留、
 重启条件、保留句）；[近证明] 项依赖 L1 合法性与窗口 $B$ 下的无边界公式，边界截断处不精确
 （见 ERR-ABD1p-1）；[实测] 项为 clipped dynamics 的数值（$B=3$，$c\le30$）；本条与 NO-GO 表**分栏独立**，
@@ -295,11 +304,42 @@ $$\boxed{\text{自然 arithmetic branching principle 系统性偏好 primitive/�
 
 ---
 
-## 13. 提交链
+## 13. ABD 代收口 + 剩余开放边界
+
+### §13.1 状态表
+| 项 | 状态 | 依据 |
+|---|---|---|
+| **ABD-0** | **CLOSED（收口）** | $1/2$ = **arity 产物**（$m=1/k^2\Rightarrow\alpha_*=1/\text{arity}$）；**不再作为 balance detector**（由 ER-1 限定） |
+| **ABD-1** | **CLOSED** | 容许类内无等号吸引子（三失败模式：惰性 / 去相关 / 非单射） |
+| **ABD-1′** | **CLOSED → FROZEN GAP（§12）** | 结构性反对齐（$C(g)$ 对 $g$ 单调不增；balance 最大化 $g$） |
+| **ER-1** | **CLOSED（前提失败）** | $\alpha_*=1/2$ 不表征平衡（$k{=}2$ 退化；$k\ge3$ 不平衡） |
+
+### §13.2 剩余开放边界：**第四类 alignment source**
+$$\boxed{\text{第四类}=\text{非单调}+\text{非 }g\text{-only}+\text{非目标读取}+\text{非数据丢失}+\text{具有【新的生成原则】}}$$
+**⚠️ 边界保留（不得扩大否定范围）**：**非均匀 $k$-child**｜**带权 refinement**｜**多层复合 refinement**
+—— 三者仍是**开放边界**，ER-1 的否定**仅覆盖均匀情形**。
+
+### §13.3 ⚠️ Guardrail（唐先生指定，防回归）
+$$\boxed{\text{不得通过放开 }k\text{ / 权重 / 层数来枚举上述三类}}$$
+**理由**：仅自由化 $k$、权重、层数，极易重入"**人为调参数使 $\alpha=1/2$**"的旧循环。
+$$\boxed{\text{若继续，必须跨出 §12 所要求的【新生成原则】，而不是给 ABD 再加一层}}$$
+
+### §13.4 ABD 这一代的真实成果
+**不是**一个 RH 模型，而是把"**用算术分支 / 临界 refinement 自生 $1/2$，再把它解释为平衡选择器**"
+这一整类机制**的边界画清**。
+
+**诚实边界**：§13.1–§13.4 全部条目为唐先生本人指定的收口与开放边界（含四条件、边界保留、guardrail、
+"不得从 ABD-0/1 内部继续挖"）；小灵仅执行归档与编号整理。
+
+---
+
+## 14. 提交链
 ```
 41496e4 O2 归约 + G-SW6 CLOSED → 冻结基准总表
 c3a4488 M-NOGO-1 装配（N1–N7 死亡链）→ 并入 §8 三层 + §9 ISRG 外部入口
-87f8ea8 → 追加 §10（D2-arith 收口 + 边界条件 + 下一阶段入口）
-本篇 → 追加 §12（ALIGNMENT SOURCE, FROZEN GAP）+ 编号整理（§10 D2 归位、诚实边界 → §11、提交链 → §13）
+87f8ea8 → 追加 §10（D2-arith 收口）
+827e17c ER-1（等号刚性前提失败）→ 本篇：
+         §12.5 第二独立支撑（ER-1）｜新增 §13（ABD 代收口 + 第四类开放边界 + guardrail）｜
+         提交链移至 §14
 ```
 ---
