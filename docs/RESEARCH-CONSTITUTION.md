@@ -1165,3 +1165,42 @@ L1 解释三件事：①divisor 能走出 h-平均 ②Λ 的 h-平均需 zero-si
 
 **L1 可证伪条件（预注册）**：存在 Λ-侧 canonical、zero-blind、非-HL、non-Voronoi 谱引擎给出正确二阶主项
 **可核实项**：是否存在"Λ 的 Voronoi 型公式"文献（若有且对偶非零点 ⟹ L1 削弱）
+
+### §8.21 R8-C†-L1′：L1 撤回与取代（唐先生核实可证伪项）
+
+**L1 撤回**：原命题"Kuznetsov/Voronoi 引擎要求两因子来自函数方程类；d 在内、Λ 不在"❌**过强**
+```
+理由：Λ 并非不属于任何函数方程相关结构；文献已有对 Λ 的 Voronoi-type treatment
+     （Lou 2019 将 λ(n)=Λ(n) 放入 shifted-convolution 框架，大 H 区间获非平凡 cancellation）
+```
+$$\boxed{\text{L1}^{\prime}:\ \text{标准 Kuznetsov-compatible Voronoi 引擎要求系数具有一种能把 additive twist}\\text{转化为【另一个 arithmetic coefficient system】的函数方程结构}}$$
+```
+d(n): ζ² → automorphic 函数方程 → Kloosterman dual
+Λ(n): −ζ'/ζ → logarithmic derivative → zero poles
+⟹ Λ 缺的是"zero-free arithmetic dualization"，不是"任何 Voronoi formula"
+```
+
+**可证伪项三行结果**：①"Λ 完全没有 Voronoi 型公式"= **FALSE/过强**；
+②"已有 Λ-type Voronoi machinery 是 zero-blind dual"= **未发现**；③"原始 Λ 的 Mellin dualization 暴露 zeros"= **成立**
+
+**Mellin 机制精确化**：$\frac1{2\pi i}\int(-\zeta'/\zeta)\widehat W\,ds$ 左移 contour 必遇 $s=\rho$ ⟹
+$$\boxed{\text{对原始 }\Lambda\text{，自然对偶谱不是 arithmetic Kloosterman side，而是 }\textbf{zero-residue side}}$$
+
+**⭐ Chorge–Dixit 2024 数据**：新 Voronoi 公式（Liouville/Möbius/d²）**明确含 ζ 非平凡零点级数**
+$$\boxed{\text{Voronoi-type formula}\ \not\Rightarrow\ \text{zero-blind}}$$
+⟹ 新筛查项 **VZ**：若某函数 Voronoi 公式暴露零点级数，以其为 carrier 即重新引入 zero-side（N1）
+
+**⭐ 机制细化（小灵）**：Bessel/Kloosterman 核来自函数方程【Γ 因子的乘性】；
+对数导数破坏 Γ 乘性（引入 Γ'/Γ 型非乘性项）⟹ **同型 Bessel 核不存在**（结构性论证）
+
+**C1′**：S2-c ⟹ Λ×Λ 的 genuine arithmetic dualization，且 dual spectrum **不含 ρ**（否则 = zero statistics in disguise）
+**ZBV 条件**：$\mathcal V_\Lambda:\sum_n\Lambda(n)e(an/q)W(n/N)\mapsto\sum_m A_q(m)\widetilde W(m)$，
+$A_q(m)$ 须由有限/离散 arithmetic data 构造且**不含** $\sum_\rho$，并能进 Kuznetsov 型机器给出正确二阶主项
+
+**⭐ 核心问题压缩（当前唯一）**：
+$$\boxed{\textbf{能否构造一个不经过 }\rho\textbf{ 的 }\Lambda\textbf{-arithmetic dualization？}}$$
+
+**⭐ 元观察（结构性，非定理）**：同一障碍形状已三实例——
+门⑲⑳（锁管离散侧/ζ 住散射侧）｜R8.4（divisor 有 automorphic engine，Λ 侧落 zero side）｜
+本节（非-automorphic 乘法函数的 Voronoi 化暴露 zero 级数）
+⟹ 形状一致："算术对象自身的对偶/谱引擎落在 zero 侧"（可作未来候选的快速筛查模板）
