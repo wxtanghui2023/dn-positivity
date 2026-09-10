@@ -2350,3 +2350,43 @@ $$\boxed{\Gamma_{\rm arith}\vdash\exists!\alpha\,\mathsf{Rigidity}(\alpha)\quad\
    **M-NOGO-1 性质变为【装配任务】**：对每个 N1–N7 证明其不满足 A 和/或不能提供 C
    （多数已在既有登记零散完成：N1/N5 失败 A1；PIM-VI 失败 A2；规定型失败 C）
 ```
+
+### §8.51 M-NOGO-1 装配（N1–N7 → (A₁,A₂,C_NI) 死亡链总表）
+
+**纪律**：不扩展 ISRG；每个 N_i 写清"至少一条足够的死亡链"；严格区分 [证明]/[结构性归约]/[FROZEN GAP]；C 须写成"该类机制没有提供 C-rigidity theorem 的独立来源"
+
+**总表**：
+| 类别 | A₁ | A₂ | C_NI | 最终状态 | 证据 | 死亡链 |
+|---|---|---|---|---|---|---|
+| **N1** Reach/Boundary | 失败（H=X/H 每尺度独立钉 α=1/2） | 不必检 | 无需检 | **A-fail** | **[证明]** | N1⟶A₁-fail |
+| **N2** Label/Symmetry | 标签数据不在 A₁ 范围 | 无真实跨尺度耦合 | **没有提供 C-rigidity theorem 的独立来源**（标签结构预编码答案） | 归约至 C 不可提供 | **[结构性归约]** | N2⟶C 不可提供 |
+| **N3** Existing Duality | 失败（FE 对称点 s=1/2 是单尺度性质） | 虽有全局关系但非新生成 | 关键在"已有结构"而非"目标形变" | 归约至 A₁-fail | **[结构性归约]** | N3⟶A₁-fail |
+| **N4** Associative Algebra | 指数若来自结构常数则已存于单尺度 | 组合本身不提供尺度生成 | 若来自迭代率则须证非预装参数（无独立 C 来源） | 归约至 A-fail 或 C 不可提供 | **[结构性归约]** | N4⟶A-fail 或 C 不可提供 |
+| **N5** Finite Norm/Orthogonality | 失败（\|τ(χ)\|²=q 每有限 q 上 exact 给出 α=1/2） | 无必要跨尺度 | 不抓 | **A-fail** | **[证明]** | N5⟶A₁-fail |
+| **N6** Canonicalization/Quotient | 规范化通常在单尺度完成 | 若跨尺度则检查是否只是表示变化 | **没有提供 C-rigidity theorem 的独立来源**（规范化是约定） | 归约至 C 不可提供 | **[结构性归约]** | N6⟶C 不可提供 |
+| **N7** Statistical/Observed Scaling | 局部数据不能给非统计生成 | 若指数来自极限统计量则不满足 G₆ | 统计拟合不能提供 rigidity theorem | **G₆-fail + C 不可提供** | **[证明]** | N7⟶G₆-fail |
+
+**逐条论证要点**：
+```
+N1（[证明]）：H·(X/H)=X 是每尺度恒等式，α=1/2 被逐尺度独立钉住，违反 A₁ 的"窗口内不唯一"要求
+N5（[证明]）：\|τ(χ)\|²=q 是有限正交性定理，per-scale exact，违反 A₁
+N7（[证明]）：G₆ 明定禁止统计/拟合指数，N7 与其字面冲突 ⟹ G₆-fail
+N2（[结构性归约]）：标签/类结构的"答案"预编码于标签中，非 primitive 导出
+N3（[结构性归约]）：FE 对称点 per-scale，不引入跨尺度耦合
+N4（[结构性归约]）：结构常数→A₁-fail；迭代率→C 不可提供
+N6（[结构性归约]）：规范化是约定，非 primitive 导出
+```
+
+**关键区分（本轮反复强调）**：
+```
+"没有发现满足 A+C 的 N_i"  ⟹ 可登记为 [结构性归约]
+"证明 N_i 不可能满足 A+C"  ⟹ 须为 [证明]（目前仅 N1/N5/N7 达此级别）
+```
+**C 的特殊逻辑**：C 不是"我们预先证明它没有 rigidity"，而是"**该类机制没有提供 rigidity theorem 的独立来源**"——这是**逻辑上不同的断言**（negative theorem vs. absent-source judgment）。
+
+**总体命题**：
+$$\boxed{\forall i\in\{1..7\},\ N_i\overset{\mathcal R_i}{\longrightarrow}\neg(A+C)\ \text{或}\ \text{FROZEN GAP}}$$
+**当前**：[证明] 级 N1/N5/N7；[结构性归约] 级 N2/N3/N4/N6；[FROZEN GAP] **无**
+**第二个问题（M-NOGO 边界）**：
+$$\boxed{\exists\ \mathfrak M\notin N1\cup\cdots\cup N7\ \text{s.t.}\ A(\mathfrak M)\land C(\mathfrak M)?}$$
+**仍开放**——此即 ISRG 的实质数学问题（是否存在满足 A+C 的跨尺度 rigidity theorem）。
