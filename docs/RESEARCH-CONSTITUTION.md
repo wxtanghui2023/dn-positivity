@@ -1657,3 +1657,46 @@ $$\boxed{\text{R_CS 缺的不是【尺度对合】（可用且 canonical），�
 而任何【被定义的】非结合 T 又有"人为改造规则"风险 ⟹ **双向夹逼**
 **类 A（coarse-graining）**：X0/X4 过，X5/X6 潜在，但普通 RG 的 fixed point 常为人为动力学尺度（非算术 √X）
 ⟹ 须用 Θ 结构钉在 √X；且易退化为 entropy/density flow ⟹ 弱（本轮未做构造）
+
+### §8.32 B-PRE2：非截断、非人为非结合律来源审计（唐先生预筛 + 小灵执行）
+
+**筛选条件**：$\text{canonical}\cap\text{non-associative}\cap\text{non-truncation}\cap\text{scale-complement compatible}$
+| 类别 | 判定 |
+|---|---|
+| B1 gcd/lcm 混合 | **杀**（三体 defect 有内容，但 **scale involution 无来源**） |
+| B2 Farey/mediant | **杀**（非结合来自 projective normalization；给加法比例几何而非乘法尺度） |
+| B3 归一化卷积 | **杀**（结合内核 + 人为 canonicalize ⟹ **假 defect**，与 projection 陷阱同族） |
+| **B4 三因子天然组合路径** | **核心活口** |
+| B5 local/global 原生双组合 | **待构造**（CRT 封闭／p-adic local-global 已 NO-GO／holonomy 已关） |
+
+**搜索问题改写**：$\boxed{\text{什么天然算术三体关系具有两种不可等价的组合路径？defect 不来自截断/归一化/投影/holonomy？且两尺度天然构成 }H,X/H？}$
+**三个测试**：① $\Omega(a,b,c)$ 能否在**不引入 $X,H$** 下独立存在（不能 ⟹ 尺度人为塞入 ⟹ 杀）
+② $\Omega(H,X/H,\cdot)\stackrel{?}{=}\pm\Omega(X/H,H,\cdot)$ ③ 是否产生二阶量（非退回 additive convolution／双曲线）
+
+**⭐ 小灵 B2 ⊆ B3（证明级）**：齐次坐标上 mediant = 向量加法（**结合**）⟹ B2 非结合性**全部**来自约化/归一化 ⟹ 与 B3 **同一死因**
+
+**⭐⭐ 小灵五重筛查门（通用产出）**：candidate defect 不得可归属下列任一，否则杀
+```
+S1 截断边界（内容落双曲线跨项 N43）｜S2 归一化/约化（结合内核 + canonicalize = 假 defect）
+S3 投影（Connes/P49 已遇）｜S4 holonomy/connection（Round 3 已关）
+S5 传输结构：a★b=φ⁻¹(φ(a)·φ(b)) ⟹ ★ 自动结合 ⟹ 杀
+⟹ 候选必须是【非可传输】的真正 loop
+```
+
+**⭐⭐ B4 预注册分叉预测（小灵）**：
+```
+所有 canonical 算术运算只活两层之一：
+ ① 整除/素支撑层 ⟹ **Sym(ℙ)-协变** ⟹ 无绝对尺度 ⟹ 拿不到 H↔X/H（= B1 死因）
+ ② 加法/archimedean 层 ⟹ 有尺度，但对合来自【两范围边界】⟹ 内容落 N43（= 最小 Ω 死因）
+⟹ 预注册：B4 一旦具体实例化，将落入上述二分之一
+⟹ 若下一轮全部落入某支 ⟹ 有充分理由回头攻 A（唐先生条件）
+```
+**B4 两个具体测试对象（附继承风险）**：
+```
+I 二元二次型 Gauss 合成：仅在等价类上良定义 ⟹ 形式层非结合，defect = **ambiguity class**；
+  对合 = 形式↦逆形式，不动点 = ambiguous forms
+  ⚠️ 风险：与 √D 连分数周期纠缠 ⟹ 很可能继承 Euclid/连分数旧 NO-GO 与 N43 支
+II Hecke 关系 T_m T_n = Σ_{d|gcd(m,n)} χ(d)d^{k−1}T_{mn/d²}：两路径差异 canonical
+  ⚠️ 风险：修正项依赖 gcd(m,n) ⟹ Sym(ℙ)-协变 ⟹ 落分支 ①（= B1 死因模式）
+⟹ 两对象各指向二分一支（正是预测形态，尚待完整审计）
+```
