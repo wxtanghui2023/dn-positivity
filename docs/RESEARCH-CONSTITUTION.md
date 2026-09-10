@@ -2390,3 +2390,22 @@ $$\boxed{\forall i\in\{1..7\},\ N_i\overset{\mathcal R_i}{\longrightarrow}\neg(A
 **第二个问题（M-NOGO 边界）**：
 $$\boxed{\exists\ \mathfrak M\notin N1\cup\cdots\cup N7\ \text{s.t.}\ A(\mathfrak M)\land C(\mathfrak M)?}$$
 **仍开放**——此即 ISRG 的实质数学问题（是否存在满足 A+C 的跨尺度 rigidity theorem）。
+
+### §8.52 ⭐⭐⭐ 冻结基准并入 M-NOGO-1 证据链（§8 三层）+ §9 改为 ISRG 外部入口
+
+**文件**：`docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md`（**已更新，防重复搜索基线**）
+**并入目的**：把"每类为何死、死在哪一级证据"固化进冻结基准，**防止以后把"结构性归约"误升级成"不可能定理"**
+
+**§8.1 命题**：$\boxed{\forall i\in\{1..7\},\ N_i\to\neg(A+C)\ \text{或 FROZEN GAP}}$
+**§8.2 证据等级表**：**N1 / N5 / N7 = [证明]**（N7 基于 $G_6$ 的定义性排除）｜**N2 / N3 / N4 / N6 = [结构性归约]**｜**本轮无 [FROZEN GAP]**
+**§8.3 逻辑边界（固定表述，随表引用）**：
+$$\boxed{\text{absence of an independent C-rigidity source}\ \neq\ \text{proof that no such source exists}}$$
+$$\boxed{\text{M-NOGO-1 只完成了 }N1\text{–}N7\text{ 内部装配，不构成对所有数学机制的否定}}$$
+**§8.4**：原"候选筛检程序"降为配套纪律保留（Candidate → N-quotient → O-class → frozen-gap check）
+
+**§9 ISRG 外部入口（下一阶段正门）**：
+$$\boxed{\mathcal E_{\rm ISRG}=\left\{\mathfrak M\notin\bigcup_{i=1}^{7}N_i:\ A(\mathfrak M)\land C(\mathfrak M)\right\}}$$
+**准入问句**（任何候选须**先回答**才允许进入数学构造）：**它究竟来自哪个 N1–N7 之外的 primitive generation principle？**
+$$\boxed{\textbf{N8 规则}：\text{N8 必须是【新的生成原则】，而不是【新的对象】}}$$
+（不得再产生"给旧机制换名字"式的 N8）
+**保留纪律**：G-SW6 停止｜不得沿 SW6 微调｜不得从 O1–O5 内部再挖名字｜主线须从边界图【外部】找机制｜RH 线仍开放｜**Λ 冻结**

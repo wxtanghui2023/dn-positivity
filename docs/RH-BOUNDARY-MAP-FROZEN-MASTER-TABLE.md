@@ -121,40 +121,74 @@ $$\boxed{\text{Structural Closure}\neq\text{Impossibility Theorem}}$$
 
 ---
 
-## 8. 候选筛检程序（**长期研究纪律**）
+## 8. M-NOGO-1 证据链（**正式并入**；详见 `docs/M-NOGO-1-assembly.md`）
 
-$$\boxed{\text{Candidate}\to\text{N-quotient}\to\text{O-class}\to\text{frozen-gap check}}$$
-以后任何新候选，**第一问不再是"它能不能产生 $\sqrt X$？"**，而是：
-```
-① 它属于哪个 native-operation class（O1–O5）？
-② 它是否已落入 N1–N7（两轴同时检查）？
-③ 若未落入，它是否真正产生【新的 mechanism】？
-④ 若只是"第四类不可约性"且无新生成原则 ⟹ **冻结**（R_4th-irr）
-```
+> 目的：把"每类为何死、死在哪一级证据"固化进冻结基准，**防止以后重新搜索时把"结构性归约"误升级成"不可能定理"**。
+
+### §8.1 命题
+$$\boxed{\forall i\in\{1,\dots,7\},\quad N_i\to\neg(A+C)\ \text{或}\ \text{FROZEN GAP}}$$
+
+### §8.2 证据等级表
+
+| 类别 | 死亡链 | 证据等级 |
+|---|---|---|
+| **N1** Reach/Boundary | $N1\to A_1$-fail（$H\cdot(X/H)=X$ 每尺度独立钉住 $\alpha=\tfrac12$） | **[证明]** |
+| **N5** Finite Norm/Orthogonality | $N5\to A_1$-fail（$\lvert\tau(\chi)\rvert^2=q$ 每有限 $q$ 上 exact 给出 $\alpha=\tfrac12$） | **[证明]** |
+| **N7** Statistical/Observed Scaling | $N7\to G_6$-fail 且 C 不可提供（与 $G_6$ 定义性排除**字面冲突**） | **[证明]** |
+| **N2** Label/Symmetry | $N2\to$ C 不可提供（标签结构预编码答案，非 primitive 导出） | **[结构性归约]** |
+| **N3** Existing Duality | $N3\to A_1$-fail（FE 对称点 $s=\tfrac12$ 是**单尺度**性质） | **[结构性归约]** |
+| **N4** Associative Algebra | $N4\to A$-fail 或 C 不可提供（结构常数→单尺度；迭代率→无独立 C 来源） | **[结构性归约]** |
+| **N6** Canonicalization/Quotient | $N6\to$ C 不可提供（规范化是约定，非 primitive 导出） | **[结构性归约]** |
+
+**本轮 [FROZEN GAP]：无。**
+
+### §8.3 逻辑边界（固定表述，随表引用）
+$$\boxed{\text{absence of an independent C-rigidity source}\ \neq\ \text{proof that no such source exists}}$$
+$$\boxed{\text{M-NOGO-1 只完成了 }N1\text{–}N7\text{ 内部装配，不构成对所有数学机制的否定}}$$
 
 ---
 
-## 9. 下一阶段方向
+## §8.4 配套：候选筛检程序（长期研究纪律）
+$$\boxed{\text{Candidate}\to\text{N-quotient}\to\text{O-class}\to\text{frozen-gap check}}$$
+以后任何新候选，**第一问不再是"它能不能产生 $\sqrt X$？"**，而是：
+（1）它属于哪个 native-operation class（O1–O5）？（2）是否已落入 N1–N7（两轴同时检查）？（3）若未落入，是否真正产生【新的 mechanism】？（4）若只是"第四类不可约性"且无新生成原则 ⟹ **冻结**（R_4th-irr）
 
-```
-G-SW6 停止；不得沿 SW6 做微调；不得从 O1–O5 内部再挖一个名字。
-下一条 RH 主线应从这张边界图的【外部】寻找机制。
-RH 线整体仍开放；Λ 耦合继续冻结。
-```
+---
+
+## 9. ISRG 外部入口（下一阶段正门）
+
+$$\boxed{\mathcal E_{\rm ISRG}=\left\{\mathfrak M\notin\bigcup_{i=1}^{7}N_i:\ A(\mathfrak M)\land C(\mathfrak M)\right\}}$$
+
+**准入问句（任何候选必须【先回答】，才允许进入数学构造）**：
+
+> **它究竟来自哪个 N1–N7 之外的 primitive generation principle？**
+
+**⚠️ N8 规则**
+$$\boxed{\text{N8 必须是【新的生成原则】，而不是【新的对象】}}$$
+（不得再产生"给旧机制换名字"式的 N8）
+
+**保留纪律**：G-SW6 停止；**不得**沿 SW6 做微调；**不得**从 O1–O5 内部再挖名字；下一条 RH 主线须从本边界图【外部】寻找机制；RH 线整体仍开放；**Λ 耦合继续冻结**。
+
+---
 
 ## 10. 诚实边界
 ```
 · 本表的骨架（0–7 节结构、两轴判据、S-gate 列表、D1–D6、frozen gap 约定、筛检程序、四态分栏要求）
-  —— 均为唐先生本轮指定
+  —— 均为唐先生指定
 · 表内各处 [证明] / [结构性归约] / [经验性本体判断] / [FROZEN GAP] 标记为小灵按四态图例逐项归位
 · 全部 [结构性归约] 与 [经验性本体判断] 条目【不得】作为定理引用；
   唯一可作定理/精确验算引用者为标 [证明] 的条目（Hecke 关联子 2744×5 权重、Θ(r,r)=0、
   (Δ,P) 双射、D1 精确恒等式、X6 范围对换、Gauss 和 |τ|=√q 等）
+· §8 的三层结构（8.1 命题 / 8.2 证据等级表 / 8.3 逻辑边界）与 §9 的 𝓔_ISRG 入口 —— 为唐先生本轮指定
+· §8.2 表中 [证明] 级三条各自依赖精确事实（H·(X/H)=X 恒等式 / 有限正交性 / G6 定义级禁列）；
+  四个 [结构性归约] 条目中的 per-scale、非 primitive 导出、约定非机制等判断【均未形式化】
+· "absence ≠ proof" 与 "M-NOGO-1 只完成内部装配" 两句为【固定表述】，随表引用
 · 范围限定随表引用：本表刻画【已审计的 architecture class】，非全部数学
 · 未写代码、未做数值；未引入 ζ 零点或谱算子；全文未使用 Λ
 ```
 
 ## 11. 提交链
 ```
-41496e4 O2 归约 + G-SW6 CLOSED → 本篇（冻结基准总表）
+41496e4 O2 归约 + G-SW6 CLOSED → 冻结基准总表
+c3a4488 M-NOGO-1 装配（N1–N7 死亡链）→ 并入 §8 三层 + §9 ISRG 外部入口
 ```
