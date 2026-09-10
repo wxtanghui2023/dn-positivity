@@ -2224,3 +2224,31 @@ $$\boxed{\textbf{G7}：\alpha\ \text{须由【跨尺度约束】确定（涉及�
 **结论**：$\boxed{\text{G1--G6【不足】——N1 与 N5 均能通过；"exact + 唯一指数 + 不可插值"不能区分"产生"与"插入"}}$
 ⟹ **先修定义；M-NOGO 尚无资格进入分类阶段**
 **下一轮（P1b）**：审计 G7/G4′ 的 ①充分性 ②是否过排除 ③是否可被新 PIM 变体（极限形逐点恒等式、有限族恒等式）绕过
+
+### §8.47 ⭐⭐⭐ M-NOGO-P1b（G4′/G7 终审）+ P1c（G7′ 审计）
+
+**P1b 结论（唐先生）**：$\boxed{\text{G7 单独不充分；G4′ 单独不充分；二者不能简单相加}}$ ⟹ 真正缺的是 $\boxed{\textbf{尺度之间必须发生真实的约束传递}}$
+**G4′ 不够**：$|\tau_q|^2=q$ 取 $q=f(X)$，$f(X)=X^{2\alpha+o(1)}$ ⟹ 指数来自有限 norm law + 外部索引 ⟹ 不排除 N5 型 PIM
+**G7 三漏洞**：**PIM-I** 族≠跨尺度（$L_X^2=X$ 逐尺度可独立解）｜**PIM-II** 有限律复制（$F_q^2=q$ 沿 $q_n\sim X_n$ 复制；**N5 即此型**）｜**PIM-III** 渐近逐点律（$F_X^2=X(1+\varepsilon_X)$）
+$$\boxed{\text{asymptotic}\neq\text{cross-scale}}$$
+**G7′（Irreducible Cross-Scale Constraint）**：①非逐点性（不得分解为 $\prod_X\mathcal R_X$）②非有限复制③**不可拆尺度（decoupling test：$\alpha_{\rm coupled}=\tfrac12$ 但 $\alpha_{\rm decoupled}$ 非唯一）**④内生性⑤渐近性 $L_X=X^{1/2+o(1)}$
+**G7′ 之杀**：N1（decoupled 下 $H\cdot(X/H)=X$ 对任意 $\alpha$ 成立 ⟹ 非 coupling 而是 imposed symmetry，**且不依赖 Gauge 定义**）｜N5（拆尺度后 $|\tau_q|^2=q$ 仍成立 = PIM-II）｜N3（FE 固定点 survive decoupling）
+**⚠️ 过排除修正**：不得要求【显式动力系统】；只需【不可约跨尺度约束】（$\Phi(s_X,s_Y)=0\ \forall X,Y$ 型全局相容性亦可）
+**⭐ 更深二分**：不是 exact vs asymptotic，而是 $\boxed{\text{scale-generated}\ vs\ \text{scale-inherited}}$
+**审计表**：G4′（排 N1 ✓、不排 N5 ✗、PIM-III ✗）｜原 G7（排 N1/N3、不排 N5、PIM-III ✗）｜**G7′（排 N1/N5/N3 ✓、PIM-III ✓、过排除可控）**
+$$\boxed{G4'\subset G7'\ (\text{辅助 anti-insertion test})}$$
+**PIM-IV（唐先生指出）**：$s_X=f(X)$ + 形式不可拆的 $\mathcal R(s_X,s_{2X})=0$ ⟹ 把单尺度函数包装成 scale coupling
+
+**⭐⭐ 小灵 P1c 执行**：
+**§8 句法→语义修正**：G7′① 原为【句法条件】（可被 PIM-IV 伪造）⟹ 改为**解集条件**
+$$\boxed{\textbf{G7}^{\prime}\text{①语义版}:\ \Sigma\subsetneq\Sigma_{\rm dec}=\prod_X\Sigma_X\ \text{且}\ \alpha\ \text{仅在}\ \Sigma\ \text{上唯一}}$$
+（$s_X=f(X)$ 若已属单尺度约束 ⟹ $\Sigma=\Sigma_{\rm dec}$ ⟹ 自动检出；PIM-I/II/III 亦尽被覆盖）
+**§9 分工声明**：退化情形 $\Sigma_X=$ 全体（未声明任何单尺度约束）由 **G4/POC** 处理，而非 decoupling test
+**§10 ⭐ 新漏洞 PIM-V（Finite-Cluster Replication）**：在有界窗口内解出全部关系再沿尺度族复制 ⟹ 通过逐尺度 test 但仍为伪造
+**§11 ⭐⭐ 强化 G7″（Window Indecomposability）**：
+$$\boxed{\text{对任意有界窗口 }W\text{，限制到 }W\text{ 的约束【不】确定 }\alpha\text{；只有整个尺度族确定 }\alpha}$$
+（$\alpha$ 必须为全局量；过排除检查：真跨尺度 rigidity 本然不由有界窗口确定 ✓）
+**⭐ 与 P28–P33 呼应**：要求"$\alpha$ 不由有限数据确定"——与已注册 moving-edge（有限不传输到无限）同型，此处**反向用作要求**
+**§12 结论**：$\boxed{G7^{\prime}\Rightarrow G7^{\prime\prime}（句法\to语义；单尺度积\to有界窗口积）}$；**G4′ 降为辅助**；
+当前 ISRG 候选定义 = G1｜G2｜G3｜**G4（与 G7″ 分工）**｜G5｜G6｜**G7″**
+**§13 ⚠️ 本轮不宣布完成**：新攻击面（前缀/超滤型复制｜取极限搭出的耦合｜窗口嵌套复制）⟹ **ISRG 定义尚未冻结；M-NOGO-1 仍不启动**
