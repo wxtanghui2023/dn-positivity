@@ -1736,3 +1736,33 @@ $$\boxed{\text{B4-IA 死于 S2 + 不动点集失败}\quad\text{B4-II 死于 }\Om
 $$\boxed{\textbf{S7}:\ \text{若 composition 是【算子复合】或【某结合律的商】，则 associator 恒为 0}}$$
 **B4 剩余内容 = "给出一个【对象层本征非结合】的 canonical 算术律"**，而经典本征非结合结构（octonions、Moufang loops）
 非本项目意义下的算术对象 ⟹ **目前无候选** ⟹ 与 Gap_FL 同型：**inactive**
+
+### §8.34 A-PRE1：Arithmetic indistinguishability audit（唐先生转 A + 小灵执行）
+
+**入口改写**：$A\neq$"设计 $\Theta$ 把 fixed point 放到 $\sqrt X$" ⟹ **先找原生算术等价关系 $a\sim_{X,H}b$，再从它内生导出 $\Theta$ 与 $\sqrt X$**
+**三关**：①非乘法分解型 ②**加法—乘法兼容**型 ③尺度变化下 canonical refinement（真损失非投影）
+
+**候选枚举 + 预筛（13 类）**：
+```
+E1 指数多重集｜E2 rad(n)｜E3 Ω(n)｜E4 d(n)｜E5 m=n/d｜E6 a≡b mod q｜E7 |log a−log b|≤τ
+E8 |a−b|≤τ｜E9 同数量级/Benford｜E10 σ(a)/a｜E11 r_k(a)｜E12 a≡b mod L(H)=lcm(1..H)
+  ⟹ 杀因：无尺度（E1–E5,E10,E11）／单调性 S8（E6,E12）／截断 S1（E7,E9）／加法禁列（E8）
+E13 **双通道（乘法数据到 H 且加法数据到 X/H）** ⟹ **唯一存活形态**
+```
+
+**⭐ 新筛查门 S8（单调性杀）**：
+$$\boxed{\textbf{S8}:\ \text{若不可区分性的"分辨模数"是单一尺度 }H\text{ 的【单调函数】，则不可能携带 }H\leftrightarrow X/H}$$
+（$L(H)=\operatorname{lcm}(1..H)$ 单调 ⟹ 无对偶支 ⟹ E12 尤其清楚）
+
+**⭐ 唯一存活形态 E13**：$\mathcal S_{X,H}=($乘法通道 reach $=H$, 加法通道 reach $=X/H$)
+⟹ 对换 $\mathcal J$ ⟺ $H\leftrightarrow X/H$ ⟹ **唯一满足 A-X3/A-X4 且不含因子对者**（= 唐先生新硬条件）
+**⚠️ 但其 fixed point 恰好退化**：$H=X/H=\sqrt X$ 处两通道 reach 重合 ⟹ 该重合点 = **经典两范围边界 = N43 继承**
+（与上轮最小 Ω 完全一致）
+**⚠️ 两层诚实标注**：① 不得声称"到 √X 时乘法通道已完全决定 n"——**这是错的**（反例：小除数集 {1,p} 同时来自 $n=p^2$ 与 $n=pq$）；② 正确表述是"√X = 两通道 reach 重合边界 = 经典双曲线边界 ⟹ N43 继承"（结构性论证）
+
+**⭐ 机制级诊断**：$\boxed{\text{任何 }H\leftrightarrow X/H\text{ 架构的 fixed point 必是某两支 reach 的重合点}}$，
+而所有已知算术 reach 的重合点都落在【两范围/双曲线边界】⟹ **解释了 N43 为何反复出现（非巧合）**
+⟹ 要逃出 N43，须找【reach 重合点不是两范围边界】的架构 —— **目前无候选（与 B4 残余同型：inactive）**
+
+**必产 R**：R_A-ind【新，inactive】｜S8【新筛查门】
+**裁决**：A 已激活，但 A-PRE1 **未找到通过 A-X0..X6 的等价关系**（存活形态 E13 的 fixed point 结构性落 N43）
