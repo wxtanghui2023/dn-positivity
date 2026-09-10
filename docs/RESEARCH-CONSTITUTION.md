@@ -1622,3 +1622,38 @@ Round 3 已证：①算术无内生动力学（状态=尺度的函数）②群�
 ⟹ 把 X6 从"外部要求"变为【传输律的结构闭合性质】，可检验；并与 R3「尺度对合」残差接轨
 
 **必产 R**：R_CS【新，X0–X6 全过才准构造】｜R_GapFL【新，inactive】｜R3（保留，与 X6 锐化合流）
+
+### §8.31 R-CS-PRE1 预筛 + 最小 Ω 构造（唐先生预筛 + 小灵执行）
+
+**X0 形式化**：$\boxed{T\neq\text{group cocycle}\ (T_{X,Y}=\rho_Y(g)\rho_X(g)^{-1}),\quad T\neq\text{coboundary}\ (T_{X,Y}=\Phi_Y^{-1}\Phi_X)}$
+
+**预筛表**（群作用/coboundary/可逆 transport/generic semigroup 杀；Markov 统计杀；
+Euclid 旧 NO-GO；substitution X5 不足；ordinary category 记忆不足）
+$$\boxed{R_{\rm CS}\ \text{搜索空间压缩到两类：A. arithmetic irreversible coarse-graining}\ |\ \textbf{B. arithmetic non-associative transport}}$$
+**两条防线（唐先生）**：
+```
+① Ω 不得直接称"曲率"（connection/holonomy 已关闭）⟹ 用 **arithmetic composition defect**；
+   仅在证明 gauge-invariance/cocycle 型变换律后才谈曲率解释
+② X0 陷阱：不得用人为 projection（T=P_Y U P_X）制造 defect（= Connes/P49 已遇的 projection 机器）；
+   **projection 本身必须由算术生成**
+```
+**X6 结构版本**：$T_{X,H\to X,X/H}=\mathcal J^{-1}T_{X,X/H\to X,H}\mathcal J$，$\mathcal J^2=1$；
+$H=\sqrt X$ 处 $T_{\sqrt X}=\mathcal J^{-1}T_{\sqrt X}\mathcal J$
+
+**⭐⭐ 小灵最小 Ω 构造尝试结果**：
+```
+候选：截断范围状态的【乘法】组合 ⟹ Ω(X,H)=(截断到 H)∘(截断到 X/H)−(截断到 X)
+defect 内容 = 跨范围乘积项（截断不相乘 ⟹ 乘积生成跨范围新系数）
+✅ 正面：范围对换 𝒥:(范围₁,范围₂)↦(范围₂,范围₁) ⟺ H↔X/H 是 canonical 算术对合，
+   跨项集合在 H↔X/H 下不变；两范围重合处 = H=X/H ⟺ H=√X ⟹ **不动点内生为 √X**
+   ⟹ **X6 的对合半部分【可被 canonical 实现】** ✓（与 R3 尺度对合残差接合）
+⚠️ 但 defect【内容】= 两范围跨项 + √X 处双计数 = **Dirichlet 双曲线记账结构 = N43（Round 2 已识别）**
+⟹ **"截断 × 乘法"整族的受限 NO-GO**（任何该型非结合 defect 的内容必为两范围跨项 ⟹ 双曲线型）
+```
+**⭐⭐ 本轮最有价值的产出：把 X6 与 X5 分开**
+$$\boxed{\text{X6 的对合半部分：可获得（范围对换，canonical，不动点 }\sqrt X\text{）✓}\quad\text{X5 的内容半部分：崩塌（落回双曲线 N43）✗}}$$
+$$\boxed{\text{R_CS 缺的不是【尺度对合】（可用且 canonical），而是【一个其 content 不是经典两范围跨项的 defect】}}$$
+**类 B 逃逸条件（清晰形式）**：须找非结合算术组合律，其 defect 不是两范围跨项（非"截断×乘法"型）；
+而任何【被定义的】非结合 T 又有"人为改造规则"风险 ⟹ **双向夹逼**
+**类 A（coarse-graining）**：X0/X4 过，X5/X6 潜在，但普通 RG 的 fixed point 常为人为动力学尺度（非算术 √X）
+⟹ 须用 Θ 结构钉在 √X；且易退化为 entropy/density flow ⟹ 弱（本轮未做构造）
