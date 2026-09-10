@@ -1990,3 +1990,46 @@ $$\boxed{\text{第一轮：唯一候选大概率被 Gate 1 + N3 双重杀死} \L
 
 **G-SW6-P1 链条**：找两天然不可共轭组合律 → cross-rule interaction → channel-exchange involution → 查 $H\leftrightarrow X/H$（**phase 1 禁用 Λ**）
 **闭合判据（登记）**：若第一批 canonical construction 又全落 N4/N6/N3 ⟹ SW6 = **结构性闭合迹象**，届时才考虑封存整条尺度动力学线
+
+### §8.40 ⭐⭐⭐ G-SW6-CAT：native-operation origin 双分层分类 + O4 审计（唐先生刹车 + 只审 O4）
+
+**判决层级修正（唐先生）**：上一轮我做的只是"已列举【二元运算对】第一轮预筛失败"
+$$\boxed{\text{不能升级为：SW6 结构性闭合迹象（两者差一个逻辑层级）}}$$
+三条理由：
+```
+① "两个原生结合律" ≠ "两个二元运算"（漏一维）：operation 至少含 binary｜correspondence｜action｜transform｜incidence
+   杀掉后四类的【具体实例】 ≠ 杀掉【整个 operation class】
+② "交换组合律"只是【生成原则候选】，未证是唯一 SW6 生成原则 ⟹ 不能从"未产出候选"推"closed"
+③ 只能写：G-SW6-P1 fails to produce a candidate
+```
+
+**两层分类器**：候选须同时回答——①它为什么以前没死（$\notin N1\cup\cdots\cup N7$）②它的 native operation 来自哪个生成机制族 $O_i$
+
+**O1–O5（native-operation origin 母源）**：
+| 类 | 名称 | 关键问题 | 状态 |
+|---|---|---|---|
+| O1 | 内部二元组合 | — | **第一轮无 $N^\star$（已审）** |
+| O2 | Correspondence（$a\leftarrow C\to b$） | $C_{12}\circ C_{23}$ 是否【必须】结合？若 interaction 来自 incidence geometry 而非 operator composition ⟹ 未自动落 N4 | 未审计 |
+| O3 | Action/response | ⭐ swap 可交换【两个 action】而非对象 ⟹ 可避开 S9；但 group action→N4｜conjugate→N3/N2｜commutator→N4｜random→N7 | 未审计 |
+| **O4** | **Incidence/compatibility** | $I(x_H,y_{X/H})$ 须【本身携带两 channel 内部状态】，否则 D1 | **已审（FM1–FM3）** |
+| O5 | Higher-arity primitive $\Phi(x,y,z)$ 不可拆 | associativity 非其定义属性 ⟹ 存在 $(x,y,z)\mapsto(y,x,z')$ ⟹ 避开 S6/S7 | 未审计 |
+
+**新搜索规则**：$\boxed{\text{同一 }O_i\text{ 内不得重复已有对象；只有【跨 }O_i\text{ 】才允许新候选}}$
+**终止规则升级**：$\boxed{\text{只有当【所有】}O1\text{–}O5\text{ 都被结构性归入 }N1\text{–}N7\text{ 时才能封存 SW6}}$（否则只是 candidate failure）
+
+**O4 规范**：$I_X(H,\xi;X/H,\eta)$，$J^2=1$，$I(\xi,\eta)=I(\xi',\eta')$ 不得退化为 $H=X/H$／$\xi=\eta$／label swap；
+$\xi_H\not\equiv F(H)$，$\eta_{X/H}\not\equiv F(X/H)$
+**⭐ 小灵**：O4 的 swap **自动交换 $H\leftrightarrow X/H$**（channel 携带尺度）⟹ D2-6 是**继承**而非外加；但独立约束须**全由内部状态承担**
+
+**⭐⭐ 小灵 O4 实例审计（三个具名失败模式）**：
+```
+FM1：ξ="n 被 d 整除"、η="n≡a mod q" ⟹ 可实现性判据 = gcd(d,q)|a；
+     交换后判据 = gcd(q,d)|a **完全相同** ⟹ θ'=θ 恒成立 ⟹ 违反 J-敏感门（初等事实）
+FM2：自然"可实现性 obstruction"退化为 CRT 的 gcd 条件 ⟹ CRT 路线已关闭（p-adic NO-GO + S8）
+FM3：把 η 换成素分布型约束 ⟹ 可实现性 = 素数在 AP / Dirichlet-GRH 领域 ⟹ 非独立（ζ 侧）
+```
+**⭐⭐ O4 必要条件（结构性产出）**：obstruction 须 **J-非对称** ⟹ 关系须**有方向** ⟹ 算术中天然有方向关系（包含/整除/序）
+**全是预序** ⟹ 其 obstruction 要么平凡（传递性给单一数值），要么对偶性推回 N3/N1
+$$\boxed{\text{O4 结构性障碍：有方向性（J-敏感所需）与算术原生性（预序）相互冲突}}$$
+
+**裁决**：$\boxed{\textbf{G-SW6 = OPEN}}$；封存条件未满足（O2/O3/O5 尚未结构性归入 N1–N7）
