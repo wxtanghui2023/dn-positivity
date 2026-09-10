@@ -2175,3 +2175,52 @@ $$\boxed{E1\cup\cdots\cup E5\subset N1\cup\cdots\cup N7（本轮预筛范围内�
 **⭐ meta-NO-GO 问题（登记为下一层问题）**：
 $$\boxed{\textbf{M-NOGO}:\ \text{为什么所有【已知】数学结构都只能通过 }N1\!-\!N7\text{ 产生 }\sqrt X？}}$$
 **⚠️ 纪律**：M-NOGO 是**分类纲领**而非 RH 攻击；须**先形式化问题**（"什么是 √X 的产生机制"），**不得**直接开始枚举结构（否则重演"无生成原则的名字生成"）
+
+### §8.46 ⭐⭐⭐ M-NOGO-P0（ISRG 形式化）+ M-NOGO-P1（G1–G6 漏洞审计）
+
+**P0 形式化（唐先生）**：模型 $\mathfrak A=(\mathcal S,\mathcal O,\mathcal I)$（禁放 ζ/零点/显式公式）；
+尺度观测量 $L:\mathcal S_X\to\mathbb R_{>0}$，$\alpha_X=\log L_X/\log X$；仅有极限 $\alpha_*$ 只算 generated scaling exponent
+**反插值**：若 admissible reparameterization 可把任意 $\alpha_0$ 变成 $\tfrac12$ ⟹ **inserted exponent（NO-GO）**
+**rigidity**：$\mathcal C_{\mathfrak A}(\alpha)=0$ 的 admissible 解唯一为 $\tfrac12$ ⟹ 但仍不够（$F(\alpha)=\alpha-\tfrac12$ 亦唯一）
+⟹ **POC**：产生 $\alpha$ 的方程须在【不含目标指数】的原生算术层成立
+⟹ **log 尺度 $\neq$ 算术长度尺度**：要求 $L_X=X^{1/2+o(1)}$（挡 E3 的 $(\log X)^{1/2}$）
+⟹ 非统计：exact constraint，非 $\mathbb E[\cdot]\sim X^{1/2}$ 或拟合
+
+**ISRG 六条件**：
+```
+G1 X 外部算术尺度（非模型定义的目标参数）
+G2 L_X=X^{α+o(1)} 为模型原生产生
+G3 α 由 exact primitive constraint 唯一确定
+G4 α=1/2 不可由 admissible reparameterization 插入
+G5 α=1/2 属 X-scale 而非 (log X)-scale
+G6 α 非统计平均/数值拟合/已知谱量的重新编码
+```
+$$\boxed{\textbf{M-NOGO-P}:\ \text{在指定类 }\mathfrak C\text{ 中是否存在满足 G1--G6 的 ISRG？}}\quad\mathfrak C=\text{本项目已审计的 arithmetic constructions}$$
+**N1–N7 重新定位**：不是"证明不能有 √X"，而是"各自至少违反一个 G-condition"
+**分阶段**：**M-NOGO-1** = 证明 N1–N7 各自至少违反一条（可严格化）；再问外部 architecture 是否全落这些模式
+
+**⭐⭐ 小灵 P1 执行：逐项映射表 + 两个真实漏洞**
+| | G1 | G2 | G3 | G4 | G5 | G6 | 判定 |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|---|
+| **N1** | ✓ | ✓ | **✓** | **✓** | ✓ | ✓ | ⚠️ **通过 G1–G6** |
+| N2 | ✓ | ✗ | ✗ | ✓ | ✗ | ✓ | 违反 G2/G3/G5 |
+| N3 | ✓ | ✓ | ✗ | ✗ | ✓ | ✗ | 违反 G3/G4/G6 |
+| N4 | ✓ | ✓ | ✗ | ✓ | ✗ | ✓ | 违反 G3/G5 |
+| **N5** | ✓ | ✓ | **✓** | **✓** | ✓ | **✓** | ⚠️ **通过 G1–G6** |
+| N6 | ✓ | ✗ | ✗ | ✗ | — | ✓ | 违反 G2/G3/G4 |
+| N7 | ✓ | ✓ | ✗ | ✓ | ✓ | **✗** | 违反 G3/G6 |
+
+**漏洞① N1**：$H\cdot(X/H)=X$ 是**对任意 H 恒成立的 tautology**，并不 pin 住 $H$；pin 住者 = **额外强加的对称条件 $H=X/H$**
+⟹ $\tfrac12$ 来自"把恒等式**对称切开**"（imposed symmetrization）
+**漏洞② N5**：$|\tau(\chi)|=\sqrt q$ 是**有限对象在每个 q 上独立成立的 norm law**，与 $X\to\infty$ 的跨尺度生长无关
+$$\boxed{\text{共同特征：}t\tfrac12\text{ 均由【逐点/有限恒等式】决定，而非由【跨尺度生长】决定}}$$
+$$\boxed{\textbf{PIM 反模式（新登记）}：\text{一个在【每个尺度上独立成立】的 exact 恒等式被当作跨尺度 rigidity 呈现}}$$
+
+**⭐⭐ 修定义提案（待下轮审计）**
+$$\boxed{\textbf{G7}：\alpha\ \text{须由【跨尺度约束】确定（涉及状态族随 }X\to\infty\text{ 的生长），而非逐点/有限恒等式}}$$
+（G7 一举排除 N1/N5，并连带排除 N3 的 FE 逐点对称点）
+备选更窄：$\boxed{\textbf{G4}^{\prime}：\alpha=\tfrac12\ \text{不得来自"把对自由参数恒成立的 tautology 对称切开"}}$
+
+**结论**：$\boxed{\text{G1--G6【不足】——N1 与 N5 均能通过；"exact + 唯一指数 + 不可插值"不能区分"产生"与"插入"}}$
+⟹ **先修定义；M-NOGO 尚无资格进入分类阶段**
+**下一轮（P1b）**：审计 G7/G4′ 的 ①充分性 ②是否过排除 ③是否可被新 PIM 变体（极限形逐点恒等式、有限族恒等式）绕过
