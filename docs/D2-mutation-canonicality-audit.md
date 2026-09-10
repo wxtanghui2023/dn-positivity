@@ -15,6 +15,9 @@ $$\text{2×2 矩阵 }M:\ \text{另一根}= \mathrm{tr}(M)I-M\quad\Longrightarrow
 $$\boxed{\text{mutation 的 canonical 形式【就是】秩-2 的特征多项式根配对——这是【恒等式】，不是选择}}$$
 
 ## §3 于是 canonical 的来源只有两类【推导 + 引用】
+
+> ⚠️ **收紧（唐先生 2026-09-10 21:18）**：本条是"**已识别 canonical 来源的压缩**"，**不是全称分类定理**。
+> 作为全称命题还差一个证明（即：不存在其他 canonical 来源）。以下结论均在此边界内成立。
 ```
 (a) 只要【环公理】本身（Z 的 + 与 ×）：
       T_a: x↦x+a 与 M_p: x↦px ⟹ T_aM_p−M_pT_a = 平移 a(1−p) ⟹ 生成 Aff(Z) ⟹ **可解** ✗（D1 §3 已核验同族）
