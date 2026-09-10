@@ -80,3 +80,23 @@ P-Coherence / P-Finite-Law : 降级为【精细统计支线】门槛，不作为
 ```
 5913ca6 ⑨ → c8b113e ⑩ → d9a7956 ⑪ → 本篇 ⑫
 ```
+
+---
+
+## 9. 勘误（唐先生 2026-09-10 拦截；不静默改写）
+
+**原文 §2 错误**：
+$$\Big|\sum_\rho\frac{x^\rho}{\rho}\Big|\le x^{1/2}\sum_\rho\frac1{|\rho|}=x^{1/2}O(\log^2x)$$
+**问题**：非平凡零点无限多，$\sum_\rho 1/|\rho|$ **本身不收敛**
+（由 $N(T)\sim\frac{T}{2\pi}\log\frac{T}{2\pi}$ 得 $\sum_{|\gamma|\le T}\frac1{|\gamma|}\asymp(\log T)^2$，
+是对数发散，不是收敛级数）。写成上式即构成**假的直接证明**。
+
+**正确表述（截断显式公式）**：
+$$\Big|\sum_{|\gamma|\le T}\frac{x^{\rho}}{\rho}\Big|
+\le x^{1/2}\!\!\sum_{|\gamma|\le T}\frac1{|\rho|}
+\ll x^{1/2}\log^2 T$$
+**并且**必须另行处理：截断误差 $T$ 的选取、平滑（smoothing）误差、以及显式公式中的其余项
+（$x^{-2k}$ 平凡零点贡献、常数项等）。**结构性结论不变**，但"直接得出"必须改为"截断后得出"。
+
+**这也再次确认**：
+$$\boxed{\beta=\tfrac12\ \text{是【位置约束】；phase coherence 是【另一层】问题}}$$
