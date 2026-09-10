@@ -2972,3 +2972,18 @@ $$\boxed{\Longrightarrow\ \text{仅凭算术恒等式，得不到【完全非人
 **⚠️ 边界保留**：本次普查仅覆盖【半环恒等式 + FTA + 素性】；"非人为"空间**未被证明穷尽**；
 重启须提交**新的算术原则**（不得是 balance / $g$ / 当前值类型 / 人为 alternation / 权重 / 枚举全部 continuation / 已有群-半群作用），
 且必须解释"为什么算术结构**必然**产生该转移律"。
+
+### §8.71 ⭐⭐⭐ 本阶段边界收口（唐先生宣布，2026-09-10 18:27）
+**位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` **§15**（提交链移至 §16）
+
+**收口表**：N1–N7 **全部关闭**｜ISRG 关闭至 $A+C$ rigidity boundary｜D1/D2/D3 **关闭**（D2-arith 极限族亦未形成临界指数生成）｜
+R_D2-defect **FROZEN**｜ALIGNMENT SOURCE **FROZEN**（§12，两独立支撑）｜**GPS 作为下一代候选判据保留**｜S1–S8 source archaeology **完成**｜
+$$\boxed{S3:\ \text{primitive legitimacy 未取得}\Rightarrow\text{GPS boundary}}$$
+
+**S3 的定量原因（从构造/语法侧独立重现 E3）**：
+$$S_{\max}\sim4.8\log X,\qquad \Omega_{\max}\sim(0.9\!-\!0.98)\log_2X\ \Longrightarrow\ \text{天然算术构造复杂度趋向 }\log\text{-scale 而非 }X^\alpha\text{-scale}$$
+
+**禁续命条款**：无任何 S3 内部子路线处于 active；**不得**通过修改 `alternation / 权重 / branching / continuation 枚举方式` 给 S3 续命
+**下一候选准入**：$\boxed{\text{必须来自尚未进入 }N1\text{–}N7/S1\text{–}S8/S3\text{ 的【新算术生成原则}}}$
+**第一关**：$\boxed{\text{为什么这个算术原则【必然】产生这种 transition law？}}$（**不是**"能不能做出 $1/2$"）；过关后才进入 GPS → G2/G4 → G5
+**当前状态**：$\boxed{\text{等待下一方向}}$
