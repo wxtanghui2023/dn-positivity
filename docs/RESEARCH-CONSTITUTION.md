@@ -2601,3 +2601,13 @@ $$\boxed{\text{写入后必须执行 ASCII 控制字符扫描，并对受损行�
 已完成：全 docs/memory 控制字符扫描（损坏仅限 constitution）+ **7 行人工核验**（253/256/257/343/344/1450/2160）
 + `\mid` **误报排除**（其为合法宏，用于整除）+ `\nmid` 行首孤儿扫描（为空）。
 $$\boxed{\text{RCI-1 CLOSED / 修复完成 —— 不需再反复审计}}$$
+
+### §8.59 记录完整性规程 **RCI-2**（**过程纪律，不进入数学 NO-GO 地图**；状态 CLOSED）
+
+$$\boxed{\text{workspace 仓库内禁止 }git\ add\ -A\ /\ git\ add\ .\text{；一律使用【显式路径】}}$$
+**事故（本日，近灾难）**：workspace 目录下存在 `fn_backup/`（**45 GB / 260,876 文件**，飞牛OS 备份）。
+一次 `git add -A` 使其被 staged 并**卡死在该 add 上**（进程已终止，**提交未发生**，HEAD 未变）。
+**处置**：① 终止进程并确认无 commit；② 建立 `.gitignore` 保护 `fn_backup/`、密钥、缓存、压缩包；
+③ 改以**显式路径**提交（`.gitignore` / `MEMORY.md` / `memory/2026-09-10.md`）；
+④ 将硬纪律写入 `AGENTS.md`（含提交前自检：`git diff --cached --name-only | wc -l`）。
+$$\boxed{\text{RCI-2 CLOSED；与 RCI-1 同属【过程纪律】，均不进入数学地图}}$$
