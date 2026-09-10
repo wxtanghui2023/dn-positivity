@@ -2681,3 +2681,38 @@ $$\boxed{\textbf{ABD-1}^{\prime}:\ \text{寻找不读序、不丢数据的 arith
 **⚠️ §3 勘误（本轮第二次自我修正）**：初稿 verdict 写"若 $|a-b|$ 从不增加 ⟹ 伪装梯度"，
 实算显示 R3 有 13–22% 轨道增加 ⟹ 应记为**去相关**而非伪装梯度；已在归档前修正。
 教训（与 RCI-1 同族）：**verdict 文字必须在数字之后写**。
+
+### §8.62 ⭐⭐⭐ ABD-1′：未来分支方向场（第一轮）—— 结构性【反】对齐 + 审计判据空转发现
+
+**规格（唐先生）**：不找"与 $a=b$ 相关的 invariant"，而找"什么 primitive arithmetic law 本身产生平衡方向"；
+$\mathcal C_n(a,b)=\#\{n\text{-step admissible descendants}\}$，方向由 $\mathcal C_{n+1}$ 决定；第一道审计先证 $\mathcal C_n\notin\sigma(|a-b|,ab,c)$
+
+**机器**：
+```
+【精确】关系保持的整数移动 = (a,b,c) ↦ (a+p, b+q, c+p+q)，(p,q) ∈ Z²（因 Δa+Δb=Δc 的格解）
+合法性（只读 gcd/整除）：L1 增量为 g=gcd(a,b) 的倍数；L2 再加 gcd(a',b')=g
+窗口 |p|,|q| ≤ B=3（常数，不随不平衡变化）
+分支测度 C(s)=#合法移动；动力学：选使 C(后代) 最大者（平局规范定序）
+```
+**⚠️ 审计判据空转（本轮发现）**：
+$$\boxed{\mathcal C_n\notin\sigma(|a-b|,ab,c)\ \text{按原样【空转】}}$$ 因 $c=a+b$ ⟹ $(|a-b|,c)$ 决定**无序状态** $\{a,b\}$ ⟹ 任何对称函数都"被决定" ⟹ 判据无法被违反
+$$\boxed{\text{修正为【方向性审计】：由 }\mathcal C\text{ 诱导的方向是否 = }|a-b|\text{-梯度方向}}$$
+实测：A1 命中 0（与空转一致，**非反证**）｜A2 有 40 反例（$\mathcal C$ 不是 $(g,c)$ 的函数，窗口边界截断）｜
+A3 $\mathrm{corr}(|a-b|,\mathcal C)=-0.0731$（弱负）｜$\mathrm{corr}(g,\mathcal C)=-0.6618$（**强负**）
+
+**⭐⭐ 结构性理由（近证明）**：L1+窗口 ⟹ $\mathcal C=(2\lfloor B/g\rfloor+1)^2$ 对 $g$ **单调递减**；
+$c\ge4$ 时平衡态 $g=c/2\ge2$ ⟹ $\mathcal C(\text{balance})<\mathcal C(g=1)$
+$$\boxed{\text{⟹ 分支最大化动力学【永不】选平衡态（}c\ge4\text{）}}$$
+实例 $c=20,B=3$：$g{=}1{\Rightarrow}28$；$g{=}2{\Rightarrow}6$；$g{\ge}4{\Rightarrow}1$；平衡 $g{=}10{\Rightarrow}1$
+
+**实测**：reach $a=b$ = **0.0324**（四变体一致）vs CEILING 0.5185（R0_grad 达到）；mean $R$ 0.4106 → 0.4763(C1)/0.5638(C2)；
+轨道在 primitive 区**停滞并进入短周期**（$(1,19)\to(7,20)$；$(7,13)\to(7,10)$），而 primitive 区含**最大不平衡态** $(1,c-1)$（$\mathcal C=28$ 最大）
+
+$$\boxed{\text{未来分支方向与 AM-GM 等号流形【结构性反对齐】}}$$
+$$\boxed{\text{分支对 }g\text{ 单调递减，平衡【最大化】}g\ \Longrightarrow\ \text{算术未来最丰富者与等号流形位于两端}}$$
+$$\boxed{\text{⟹ primitive arithmetic future complexity}\not\Rightarrow\text{balance}\quad(\text{且给出了【为什么】})}$$
+
+**⚠️ §6 自我修正（第三次）**：初稿 verdict 两处与数据不符（A1 结论、$\mathrm{corr}$ 符号）；已修正。
+**新方法纪律提议 Gate V（空转检查）**：
+$$\boxed{\text{任何审计判据在运行前，必须先给出一个【能使其失败】的状态}}$$
+（本轮即为空转实例）—— 建议与 RCI-1/RCI-2 同级登记为**方法纪律**，不入 NO-GO 地图。
