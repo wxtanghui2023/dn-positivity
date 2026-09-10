@@ -1290,3 +1290,52 @@ L3′ 不成立 ⟹ 得到明确新数学空间：non-Euler-multiplicative, zero
               arithmetic duality —— 可能才是 R8 真正活路
 ```
 **下一刀（唯一）**：证或否证 L3′；**首选突破口 = 反例表 (b)**（Epstein/theta 类，同时触"有 FE 无 Euler 积"与"谱可实现性"两条线）
+
+### §8.24 R8-C†-B1：Epstein/theta 反例审计（唐先生执行）——(b) 不是反例，而是 L3′ 的正面证据
+
+**已确认**：$\text{FE}\not\Rightarrow\text{Euler product}$；$\text{zero-blind spectral duality}\not\Rightarrow\text{Euler multiplicativity}$
+**Epstein FE 来源**：$\Theta_Q(t)\xrightarrow{\text{Poisson}}t^{-n/2}(\det Q)^{-1/2}\Theta_{Q^{-1}}(1/t)$ ⟹ lattice → Poisson → dual lattice → Mellin → FE
+（适当条件下 $\Theta_Q$ 是 modular form，或 Weil 表示下的 vector-valued modular form）
+**硬审计**：
+$$\boxed{\text{Poisson reciprocity}\neq\text{Kloosterman reciprocal-phase reciprocity}}\quad\boxed{\text{Weil-locality}\neq\text{CRT-locality(Z3)}}$$
+（Poisson kernel = $e^{2\pi i\langle x,\xi\rangle}$；Kuznetsov 几何侧需 $d\mapsto\bar d\bmod c$）
+**Z4**：Epstein/theta 有 QSC 强版本，但**谱核是 theta/Weil 型，非 Kloosterman 型**
+
+**四象限表**：
+| 机制 | Z2 | Z3 | Z4 | Z5 | modular/spectral |
+|---|:-:|:-:|:-:|:-:|---|
+| Epstein/theta | △ | △ | ✓ | ✓ | ✓ |
+| Kuznetsov | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Ruelle/量子图 | × | × | ✓/△ | ✓ | 非算术 |
+| Λ 标准 Mellin | × | × | × | × | zero residues |
+
+**⟹ (b) 身份**：non-Euler but modular/Weil-spectral example（**非** non-modular zero-blind QSC 反例）
+
+**L3′ → L3″**：QSC 至少两种实现（Type I Kuznetsov / Type II theta-Weil）⟹
+$$\boxed{\textbf{L3}^{\prime\prime}:\ Z2+Z3+QSC+Z5\Longrightarrow\text{representation-theoretic spectral realization？}}$$
+三支：Weil/theta ｜ automorphic/Kuznetsov ｜ **genuinely new**
+$$\mathcal N=\{\text{zero-blind arithmetic QSC systems}\}\setminus\{\text{Weil/theta}\cup\text{automorphic}\}$$
+**对 Λ 的意义**：没有 Euler 积**完全不是障碍**；关键是**是否存在独立的 representation-theoretic reciprocity engine**（Epstein 有 lattice duality/theta/Weil；**Λ 缺这一层次对象**）
+
+**⭐ 小灵补三点**：
+```
+4.1 命名 Z2 的对偶类型：**inversion reciprocity（乘法群反转 d↦d̄）vs Fourier duality（加法群特征对偶）**
+    Kloosterman 建在乘法群反转上；theta 建在加法群字符对偶上 ⟹ 第三类须提供第三种对偶类型
+4.2 局部域对偶清单（结构性）：① 加法群 Pontryagin 自对偶 ② 乘法群特征论（反转→Kloosterman/Gauss）
+    ③ 二者的综合 = Tate adelic 对偶（**其解析延拓产出 ζ 零点**）
+    ⟹ 若 engine 必须由局部域结构装配，第三类须为【非对偶型】；已知非对偶候选 = 算术微分（Buium δ）
+       —— **门⑩已因尺度关闭**
+4.3 ⭐⭐ **QSC 的二次性 = GL₂-结构**：Kloosterman 来自 GL₂；Weil 表示是 GL₂ 的 metaplectic 表示
+    ⟹ QSC 很可能正是"要求 GL₂-型表示论"；而对 GL(1) 对象 Sym²(平凡)=平凡 ⟹ 无 GL₂-二次结构
+    ⟹ **R8 的 QSC 与门⑰（引擎平凡化）很可能是同一件事**（结构性论证，未形式化）
+```
+
+**下一刀**：证或否证 $Z2+Z3+Z4\Rightarrow$ 某有限 adelic/representation-theoretic kernel？
+分类：$\text{finite reciprocity}\to\{$Kloosterman/automorphic ｜ Gauss/Weil/theta ｜ **genuinely new**$\}$
+```
+第三类存在 ⟹ R8 当前最值得追的活口
+第三类不存在 ⟹ 有力度的受限 NO-GO：Z2+Z3+QSC+Z5 ⟹ Weil/automorphic representation-theoretic realization
+   ⟹ 再查 Λ 能否进入该 envelope
+小灵具体化：先判"第三类是否必须非对偶型"（若是 ⟹ = 已关闭的算术微分候选）；
+            再判"QSC 是否即 GL₂-结构"（若是 ⟹ 用门⑰的 Sym² 平凡化直接给 Λ 的排除条件）
+```
