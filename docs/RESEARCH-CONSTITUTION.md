@@ -685,3 +685,35 @@ $$\boxed{\text{开放可证伪问题：}\lambda\le1\ \text{是【结构天花板
 **现在还不该**：L1 非空 ⟹ 坐标系并未失效，只是当前产出停在比例层
 跃迁的理由要等 λ ≤ 1 被证明为结构天花板之后
 ```
+
+### §8.8 R6 升格为中心问题 + 协议就绪（FZ-5 出口）
+
+$$\boxed{\text{R6：}\lambda=1\ \text{是【结构常数】还是【技术常数】？}}$$
+```
+来源：FZ-5 把"canonical 能否位置承载"（答案：能，在 L1 层）锐化为
+      "L1 的天花板 λ ≤ 1 是否为结构性的"
+协议：docs/PROTOCOL-R6-support-ceiling.md（§0 格式；1 轮纸面；不写代码/不做数值）
+```
+
+**协议结构（唐先生六关 + 我加两处）**：
+```
+Gate 1  定义干净化 —— **λ-字典**（我加）：1-level density 的 λ（基准）
+        ｜mollifier 的 θ（**不同轴**，R-A2 已证 θ 可 >1/2）｜pair correlation support（待判定）
+        ｜zero-free region（非 support 半径）｜zero proportion（下游输出量）
+        ⟹ 不可比即直接输出 R6-D
+Gate 2  λ ≤ 1 的真正来源：A 显式公式 / B positivity / C 算术独立性 / D 族平均
+Gate 3  必须主动构造 λ = 1+ε 并**明确失败节点**（不可消除正项 B_λ ≥ c(λ)>0 才算"结构味"）
+Gate 4  **信息需求 vs 证明技术**（核心）——障碍是 ⟦未算但可定义的量⟧ 还是 ⟦与目标的等价性⟧？
+Gate 5  ★ 决定性：canonical L1 机制能否跨过 λ ≥ 2
+Gate 6  写死：比例 ⇏ 钉住（proportion → zero exclusion 须独立步骤）
+
+**判定程序（我加）**：
+$$\boxed{\text{结构性天花板} = \text{存在定理：}C\in\mathscr C_{\rm L1}\ \text{且 support}>\lambda_0\Longrightarrow C\ \text{必含与零点互相定义的对象（或必为条件性）}}$$
+⟹ 结构性 = 【在信息类内部证明】的界；技术性 = 障碍可归约为定义良好但尚未算出的量
+```
+**四种输出**：R6-A 真结构天花板（Λ*=1）→ **此时才该坐标系跃迁**｜R6-B 1<λ<2 独立机制｜
+R6-C λ≥2 且过 C1/C2′/C3（最期待，L1→pinning 现实化）｜R6-D λ 不可比（FZ-3″ 统一坐标失效）
+**硬禁令**：不得退化为"寻找更强的 1-level density 定理"；须审【所有】L1 位置约束机制
+**先验锚点（文献级/待核实）**：unitary 无条件 λ<1；orth/symplectic 族可到 λ<2；
+两者之差来自【移位矩展开中非对角项的存亡】；ζ 猜想为 unitary ⟹ 不能借用族结果
+```
