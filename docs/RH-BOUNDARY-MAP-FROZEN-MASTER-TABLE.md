@@ -191,4 +191,67 @@ $$\boxed{\text{N8 必须是【新的生成原则】，而不是【新的对象�
 ```
 41496e4 O2 归约 + G-SW6 CLOSED → 冻结基准总表
 c3a4488 M-NOGO-1 装配（N1–N7 死亡链）→ 并入 §8 三层 + §9 ISRG 外部入口
+本篇 → 追加 §10（D2-arith 收口 + 边界条件 + 下一阶段入口）
 ```
+---
+
+## 10. D2-arith 收口（**CLOSED**；详见 `docs/D2-arith-CLOSED.md`）
+
+$$\boxed{\textbf{D2-arith} = \textbf{CLOSED}}$$
+**不进微调分支**（不开 D2b / D2c / D2-solenoid-2）。
+
+### §10.1 二分（D2 的核心机制被钉死）
+| bonding | 极限行为 | 结果 |
+|---|---|---|
+| **满射**（solenoid / projective / 可除群 $\mathbb Q/\mathbb Z$） | 自由度**保留** | **无 rigidity**（只是把各层自由度忠实搬运到极限） |
+| **非满射 / 过定约束**（$\widehat{\mathbb Z}$ 中 $n\mid x$、CRT 相容剩余） | 自由度**被消灭** | 可能 rigidity，但**通常离散/点式**（不产生临界指数） |
+
+**关键区分**：$\varprojlim X_n\neq\varnothing$（非空）**不产生额外选择原则**；
+D2 真正需要的是 $\boxed{\text{finite compatibility}\Longrightarrow\text{new global restriction}}$ —— **两者不是同一件事**。
+
+### §10.2 D2 的"必要矛盾"（三条件）
+```
+D2-A：X = lim← X_n compact
+D2-B：X 保留非平凡连续参数
+D2-C：finite compatibility 在极限产生新的 uniform rigidity
+solenoid（满射）  ⟹ A + B + ¬C
+非满射/过定       ⟹ A + ¬B + C
+⟹ 目前未见 A+B+C 的自然算术实例
+```
+
+### §10.3 ⚠️ 逻辑边界（固定表述，随表引用）
+$$\boxed{\text{[结构性归约]}\ \text{D2-arith 的自然 inverse-limit 实例不能同时提供连续自由参数与由有限层兼容产生的新的 X-尺度刚性}}$$
+**不得**写成" D2 形态在算术中无法产出 X-尺度指数 "——后者需**更一般的分类定理**方具 [证明] 资格。
+
+### §10.4 余项 **R_D2-defect（FROZEN）**
+存在逻辑第三类 bonding：**既非满射、也非"交越来越小"**：
+$$\boxed{\text{non-surjective bonding}+\text{nontrivial fibers}+\text{scale-dependent defect accumulation}}$$
+且须 $\boxed{\text{defect accumulation}\sim X^{\alpha}}$，**不是** $\log X,\ \log\log X,\ \rho(\log X)$。
+**未证为空；不得再称"solenoid 路线"；重启须提交新生成原则**（不得作候选枚举场）。
+
+### §10.5 DA-3 升级为一般事实
+$$\boxed{\text{continuous endogenous parameter}+\text{canonical compatibility}\ \Longrightarrow\ \text{group-action tendency}}$$
+$T_t=e^{tA}\Rightarrow e^{(t+s)A}=e^{tA}e^{sA}$ ⟹ 跨尺度 transport **落回已关闭的结合演化**。
+⟹ D2 复活须找**非群型跨尺度演化**，且非群性**不得**来自截断/canonicalization/投影误差 ⟹ **与 SW6 死因独立交叉验证**。
+
+### §10.6 G5 层次结论
+$$\boxed{\text{算术局部约束的自然尺度}\ \neq\ \text{RH 所需要的 X-power scale}}$$
+（算术 natural inverse-limit 尺度 = $\omega(n),\Omega(n),\log n,\log q$）
+**层次区别**：N1–N7 = "已知机制的 1/2 无新生成资格"；D2 = "连有限层→无限层的极限刚性机制也天然倾向 log/离散压缩，而非幂律生成"。
+
+### §10.7 ⭐⭐ 边界条件（下一阶段）
+$$\boxed{\textbf{compression 本身不是 generator}}$$
+$$\boxed{\text{有限层兼容 / 紧性负责【承载与收敛】；它本身【不是】临界幂律的生成器}}$$
+
+### §10.8 边界图更新与下一阶段入口
+```
+N1–N7 → ISRG → D1 / D2 / D3 → 均不能提供 X-power critical generator
+⟹ 下一阶段：power-law generation archaeology（从 limit/rigidity archaeology 转出）
+硬条件：α = lim log L(X)/log X 必须是【动力学/组合机制的输出】，
+        不得预埋在对象定义 / 归一化 / 边界条件 / 参数化 ⟹ 否则触发 PIM / C_NI
+```
+
+**诚实边界**：§10.1–§10.8 全部条目均为唐先生本轮指定（含二分表、三条件、措辞限制、R_D2-defect 规格、
+DA-3 升级、G5 层次结论、边界条件句、下一阶段命名与硬条件）；[证明] 级仅限 DA-1..DA-4 的**solenoid 实例**，
+一般形态与 G5/G6 均为 **[结构性归约]**；R_D2-defect 为 **FROZEN**（未证为空）。
+

@@ -2569,3 +2569,35 @@ $$\boxed{\text{D2-arith 落回与 ISRG 原型轮同一个 }L/G5/G6\text{ 三难}
 **§7 裁决**：$\widehat{\mathbb Z}$ DA-1✗[证明]；$\mathcal S_{\mathbb Q}$ DA-1✓ DA-2✓ **DA-3✗ DA-4✗**
 ⟹ **solenoid 在 DA-4 被杀；profinite 在 DA-1 被杀**；唯一残留形态（over-determined + 收缩率）据二分**只给离散刚性**
 ⟹ **D2 处于结构性关闭边缘**；关闭决定属方向性决策，留唐先生
+
+### §8.57 ⭐⭐⭐ D2-arith 收口（**CLOSED**）
+$$\boxed{\textbf{D2-arith}=\textbf{CLOSED}}$$（不进微调分支；详见 `docs/D2-arith-CLOSED.md`，并入冻结总表 §10）
+```
+二分：满射 bonding ⟹ 自由度保留 ⟹ 无 rigidity（只是忠实搬运）；
+      非满射/过定 ⟹ 自由度被消灭 ⟹ 可能 rigidity 但通常离散/点式
+关键：lim← X_n ≠ ∅（非空）不产生额外选择原则；
+      D2 真正需要 finite compatibility ⟹ new global restriction（两者不是同一件事）
+三条件：D2-A compact + D2-B 非平凡连续参数 + D2-C 有限层兼容产生新 uniform rigidity
+      solenoid ⟹ A+B+¬C；非满射 ⟹ A+¬B+C；未见 A+B+C 的自然算术实例
+⚠️ 措辞限制（固定）：[结构性归约]「D2-arith 的自然 inverse-limit 实例不能同时提供连续自由参数
+      与由有限层兼容产生的新的 X-尺度刚性」；**不得**写"无法产出 X-尺度指数"（需更一般分类定理）
+余项 R_D2-defect（FROZEN）：non-surjective bonding + nontrivial fibers + scale-dependent defect
+      accumulation，且 defect accumulation ~ X^α（非 log 型）；重启须提交新生成原则
+DA-3 升级：continuous endogenous parameter + canonical compatibility ⟹ group-action tendency
+      （T_t=e^{tA}）⟹ 落回已关闭的结合演化 ⟹ 与 SW6 死因独立交叉验证
+G5 层次：算术局部约束的自然尺度（ω(n),Ω(n),log n,log q）≠ RH 所需的 X-power scale
+⭐ 边界条件：**compression 本身不是 generator**（有限层兼容/紧性负责承载与收敛，不是临界幂律的生成器）
+下一阶段：**power-law generation archaeology**；硬条件 α=lim log L/log X 必须是动力学/组合机制的输出，
+      不得预埋于对象定义/归一化/边界条件/参数化 ⟹ 否则触发 PIM/C_NI
+门表证据等级：DA-1/DA-2/DA-3 [证明]；DA-4 [证明/结构性]；G5/G6 [结构性归约]
+```
+
+### §8.58 记录完整性规程 **RCI-1**（**过程纪律，不进入数学 NO-GO 地图**；状态 CLOSED）
+$$\boxed{\text{所有含 LaTeX 反斜杠的 constitution / research-state 脚本，统一使用 raw string 或显式双反斜杠}}$$
+$$\boxed{\text{写入后必须执行 ASCII 控制字符扫描，并对受损行进行逐行人工核验}}$$
+**事故与处置（已闭）**：非 raw 三引号字符串使 Python 把 $\backslash b,\backslash t,\backslash a,\backslash f$ 解释为控制字符，
+**同时吃掉反斜杠与宏首字母**（`\boxed`→BS+`oxed`、`\text`→TAB+`ext`、`\alpha`→BEL+`lpha`）
+⟹ 已修复 **18 处**（4 `\boxed` / 8 `\text` / 1 `\textbf` / 4 `\alpha` + DA-1 行）；
+已完成：全 docs/memory 控制字符扫描（损坏仅限 constitution）+ **7 行人工核验**（253/256/257/343/344/1450/2160）
++ `\mid` **误报排除**（其为合法宏，用于整除）+ `\nmid` 行首孤儿扫描（为空）。
+$$\boxed{\text{RCI-1 CLOSED / 修复完成 —— 不需再反复审计}}$$
