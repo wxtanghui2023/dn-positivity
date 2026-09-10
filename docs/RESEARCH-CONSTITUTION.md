@@ -920,3 +920,35 @@ $$\boxed{\text{三支线的"墙"是【同一道】——无条件素数侧信息
 
 **必产 R**：R_{8.3} 必然性定理（任何 canonical 求值 S2 平均主项必与 zero-side 等价）｜
 R_{8.2} 保留｜R_{8.3}-verify（Lavrik/Motohashi/Hooley 无条件 η-范围核实）
+
+### §8.14 ⚠️ R8.3 勘误（唐先生纠正）+ R8.3-verify 协议（状态 → **R8.3-B′**）
+
+**三处修正（留原档，不静默改写）**：
+```
+① "S2-c ⟺ λ>1"（写作等价）⟹ **降为单向**：仅"若 S2-c 在目标归一化下成立 ⟹ λ>1"可用
+② "所有【已知】S2 路线只到 η=0 边界"⟹ **证据不足，撤回该表述**
+   原因：**Hooley 已展示 prime-specific off-diagonal 可在某些平均问题中被无条件压到主项以下**
+        （误差改善至 QN log N + O(QN) + O(N²(log N)^{−A})）
+③ 三支线统一（θ=1/2 / λ=1 / η=0⁺ 同一道墙）⟹ **降级为待核**（按本项目自身 N28 对象混淆）：
+   Lavrik=频率平均二阶量；Motohashi=arithmetic functions(除数族)在 AP 中的 variance；
+   Hooley=素数 AP variance 的 off-diagonal 改进 —— 与 R8 的 fixed-X 短区间 prime-pair 主项【非同一对象】
+   特别：**不得因同具 QN log N 量级就把它们放在同一 λ 坐标轴上**
+```
+
+**⭐ 唐先生指定登记（本轮最大正面收获）**：
+$$\boxed{\text{Hooley 型 prime-specific off-diagonal cancellation = R8.3 必须排除的【真正反例模板】}}$$
+
+**状态更正**：
+$$\boxed{\textbf{R8.3-B'}:\ \text{已知路线未打开 S2-c，但"必然归约到 zero-side"【尚未证明】}}$$
+
+**R8.3-verify 协议就绪**（`PROTOCOL-R8.3-verify.md`）—— 中心判别器（新增）：
+$$\boxed{\text{候选结果主项是否携带【连续尺度自由度】}H/X\ (1-\eta)\text{，还是只含【离散参数】}}$$
+```
+（AP modulus q / Fourier cutoff / 另一坐标）—— 即"对象对齐检验"的具体化（回应 N28）
+三问：V1 是否真含 H=X^η(η>0) 的 prime-pair 二阶主项｜V2 主项是否真出现 1−η｜
+      V3 能否在不调用 RH/pair correlation 下转译为 F(α)(α>1)
+三输出：R8.3-C′（V1+V2 成立 ⟹ 反查 λ↔η 坐标，**不得宣布突破**）｜
+        R8.3-A（V1+V2+V3 不可转译 ⟹ 真正新 carrier）｜
+        R8.3-B′（V1/V2 失败 **且证失败非技术缺口** ⟹ 方有资格开始 R8-C 必然性定理）
+主要劳动：对象对齐表（变量空间／权函数／非对角展开／主项是否含 H/X／能否转译 F(α)）
+```
