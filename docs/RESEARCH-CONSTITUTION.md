@@ -2974,7 +2974,7 @@ $$\boxed{\Longrightarrow\ \text{仅凭算术恒等式，得不到【完全非人
 且必须解释"为什么算术结构**必然**产生该转移律"。
 
 ### §8.71 ⭐⭐⭐ 本阶段边界收口（唐先生宣布，2026-09-10 18:27）
-**位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` **§15**（提交链移至 §16）
+**位置**：冻结基准 `docs/RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md` **§14**（提交链移至 §15）
 
 **收口表**：N1–N7 **全部关闭**｜ISRG 关闭至 $A+C$ rigidity boundary｜D1/D2/D3 **关闭**（D2-arith 极限族亦未形成临界指数生成）｜
 R_D2-defect **FROZEN**｜ALIGNMENT SOURCE **FROZEN**（§12，两独立支撑）｜**GPS 作为下一代候选判据保留**｜S1–S8 source archaeology **完成**｜
