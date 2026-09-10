@@ -2939,3 +2939,36 @@ V-b 对账表：定义(叶-gcd/值/方向)｜计算(n-1, d(n))｜代表元(witne
 R2 若用整除限制 continuation ⟹ **有重回 g-支配（S2）之险**（须重做 G2 反例）｜R3 fork B 的"交替"是句法规则，是否算合法 primitive（G1 边界）｜
 R4 阶段二（跨尺度刚性）**未开始**
 **⚠️ 本轮不构造模型、不算临界指数**
+
+### §8.70 ⭐⭐⭐ S3 裁定 + continuation-law 普查 ⟹ **S3 归入 GPS 边界**
+
+**裁定（唐先生）**：
+```
+① fork B 的 alternation【不批准】作为 primitive generating principle（人为有限状态机，
+   未说明"为什么算术结构必然产生该转移律"）⟹ S3-B′ 通过、**primitive legitimacy 未通过**
+   fork A = CLOSED｜fork B = NOT YET ADMITTED｜**Phase 2 = NOT STARTED**
+② AC-quotient【批准】，G4 重述：**状态 = derivations 的 AC-等价类**（非完整语法树、非值）
+③ 更深定位：**S3 的真正 primitive 是 continuation law**（operand→operation 只是表示层方向）
+```
+
+**continuation-law 普查（非人为候选）**：
+```
+L1 算术恒等式重写（AC + 分配律）：值保持且【可逆】⟹ GROUPOID ⟹ 无内生箭头（G1 失败）；
+   若朝规范形定向则【终止】⟹ 无渐近、无临界指数
+L2 FTA-强制分解（唯一的箭头携带者）：素数 p→1+(p−1)；合数 n→p×(n/p)，p=最小素因子
+L3 素性强制的加法腿（= L2 组成部分）｜L4 其余（alternation/权重/优先级/枚举顺序）⟹ 人为，淘汰
+```
+**⭐⭐ 尺度实测（`scripts/s3_continuation_law_survey.py`，输出 `/tmp/s3_cont_out.txt`）**：
+$$S_{\max}\simeq 4.8\log X\ (\text{比值}4.56\to4.90\ \text{稳定});\quad X\text{-指数}b\simeq0.10\approx0;\quad (\log X)\text{-指数}c\simeq0.91\!-\!1.36\approx1$$
+$$\boxed{\text{唯一非人为的箭头携带 law 的尺度是 }\log X\ \Longrightarrow\ \text{【E3 墙的第二个独立实例】（从构造/语法侧）}}$$
+且 $\max\Omega\approx0.9\!-\!0.98\log_2X$（纯乘法侧同为 log 尺度）
+
+**⭐⭐⭐ 精确二分（本轮核心结论）**：
+$$\boxed{\text{箭头需要【不可逆性】；半环中的不可逆性只能来自【加法】；而加法的规范步骤需要【选取规则】}}$$
+$$\boxed{\Longrightarrow\ \text{仅凭算术恒等式，得不到【完全非人为】且【携带箭头】的 continuation law}}$$
+（纯乘法分解：完全非人为 **但可逆 ⟹ 无箭头**；混合树：有箭头 **但加法腿的规范性来自"最小加数"选取**）
+
+**裁决**：$\boxed{\text{S3 的 primitive legitimacy = 未取得（OPEN），自然候选已【实测】失败 ⟹ S3 归入 GPS 边界}}$
+**⚠️ 边界保留**：本次普查仅覆盖【半环恒等式 + FTA + 素性】；"非人为"空间**未被证明穷尽**；
+重启须提交**新的算术原则**（不得是 balance / $g$ / 当前值类型 / 人为 alternation / 权重 / 枚举全部 continuation / 已有群-半群作用），
+且必须解释"为什么算术结构**必然**产生该转移律"。
