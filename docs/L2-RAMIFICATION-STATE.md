@@ -1,5 +1,7 @@
 # L2 分歧 bookkeeping —— **权威状态文件**（取代早前数份散落文档）
 
+> **状态：L2 = VERIFIED**（唐先生 2026-09-10 20:36）：index / tower / filtration 三链闭合，且已有第三种语言（character conductor）独立验证。
+
 **建立时间**：2026-09-10 20:28（真实时间；早前文档中的时刻标注不可靠，已不再使用）
 **取代**：`ramification-lift-dynamics.md`、`layer2-bookkeeping-fix.md`、`round2-index-status.md`
 （该三份保留作历史，但**已 superseded**；只认本文件）
@@ -30,6 +32,47 @@ $i_G$：$\sigma\!\to\!4,\ \sigma^2\!\to\!8,\ \sigma^3\!\to\!4,\ \tau,\sigma\tau,
 ```
 **性能 bug（同时修掉）**：原先的行列式是 $O(n!)$ 排列展开（8×8 = 40320 项）⟹ 已换成 $O(n^3)$ 高斯消元 ✓
 **index 公式方向 bug（已修）**：$[L:\mathbb Z^8] = D^8/[\mathbb Z^8:D\!\cdot\!L]$（我原先写反 ⟹ 曾得 $1/8$）
+
+---
+
+## §0b ② conductor–discriminant 独立验证（**第三种语言**）
+
+**脚本**：`scripts/conductor_discriminant.py`｜**自检**：平凡角色给 0 ✓；$\sum_\chi\chi(1)a(\chi) = 24$ ✓
+
+### Artin conductor（$a(\chi)=\sum_{i\ge0}\frac{1}{[G_0:G_i]}\operatorname{codim}V^{G_i}$，$V^{G_i}$ = 不动子空间）
+| 角色 | $\dim$ | $a(\chi)$ |
+|---|---|---|
+| trivial $(0,0)$ | 1 | **0** ✓ |
+| linear $(0,1)$ | 1 | **2** |
+| linear $(1,0)$ | 1 | **3** |
+| linear $(1,1)$ | 1 | **3** |
+| **2-dim**（standard） | 2 | **8** |
+
+$$\sum_\chi \chi(1)a(\chi)=0+2+3+3+2\cdot 8=\mathbf{24}=d(L/\mathbb Q_2)\quad\checkmark\ (\text{与 filtration 路线一致})$$
+
+### ⭐ 与 tower 的对应（**非人为匹配**）
+```
+三个非平凡线性角色的 conductor = {2, 3, 3}
+  = 三个分歧二次子域的不同指数：Q₂(i)[d=2]、Q₂(√2)[d=3]、Q₂(√−2)[d=3] ✓
+    （独立核验：用三个 index-2 子群 H=⟨σ⟩、⟨σ²,τ⟩、⟨σ²,στ⟩ 反算，得 2, 3, 3 ✓）
+2-dim 角色贡献 2·a = 16
+⭐ induced 路线：a(Ind_H^G 1_H) = **11**（对四个反射对合 τ, στ, σ²τ, σ³τ）⟹ **恰好 = d(K') = 11** ✓
+   ⟹ **d(K') = 11 = 3（一个二次 conductor）+ 8（2-dim conductor）**
+```
+$$\boxed{2\cdot 11+2 \;=\; 2(3+8)+2 \;=\; 6+16+2 \;=\; 24 \;=\; 2+3+3+2\cdot 8}$$
+### 三种语言闭合（唐先生要的结构）
+$$\boxed{\text{Kummer valuation }(11=2\cdot3+5)\ \longleftrightarrow\ \text{ramification filtration }(\textstyle\sum(|G_i|-1)=24)\ \longleftrightarrow\ \text{character conductor }(\textstyle\sum\chi(1)a(\chi)=24)}$$
+### 附带结构数据（已核实）
+```
+L 的 5 个四次子域：4 个（来自四个反射对合，互相共轭）different 指数 = 11；1 个（来自中心对合 σ²）= 8
+⟹ K' = Q₂(2^{1/4}) 属于 11 那一类 ✓（与 Layer 1 一致）
+```
+### 边界
+```
+· 计算级：上表全部 a(χ)、和 = 24、三个 index-2 子群的 2/3/3、induced 路线的 11 与 8 —— 均已实算 ✓
+· 【引用，非我证明】：conductor-discriminant 定理本身；Q₂(√−2) 的 d = 3；三个分歧二次扩域的完备性
+· 【结构性识别，非定理】："d(K') = 二者相加"是 induced-character 公式的读数，数值已核对（公式本身引用）
+```
 
 ---
 ## §1 已确立（可复现，有脚本 + 自检）
