@@ -1700,3 +1700,39 @@ II Hecke 关系 T_m T_n = Σ_{d|gcd(m,n)} χ(d)d^{k−1}T_{mn/d²}：两路径�
   ⚠️ 风险：修正项依赖 gcd(m,n) ⟹ Sym(ℙ)-协变 ⟹ 落分支 ①（= B1 死因模式）
 ⟹ 两对象各指向二分一支（正是预测形态，尚待完整审计）
 ```
+
+### §8.33 B4-IA（Gauss）/ B4-II（Hecke）逐层死亡测试（小灵执行 + 一次精确验算）
+
+**审计顺序（唐先生）**：对象自身代数事实 → 如何获得尺度 → defect 是否真不可传输（**不一开始塞进 $X,H$**）
+
+**B4-II Hecke：Ω ≡ 0（已精确验算）**
+```
+验算（scripts/hecke_associator.py，精确整数）：triples 2744 (m,n,l≤14)，k=2,3,4,6,12
+  ⟹ associator nonzero 0/2744；commutator nonzero 0；系数级对照 (2,6,3),k=2 两边 identical
+非乘性对照：T_2T_4={2:2,8:1} ≠ T_8={8:1} ✓（非乘性存在）
+死因：Hecke 算子 = 同一空间上线性算子 ⟹ 算子复合天然结合；Hecke 代数 = 双陪集卷积代数（结合）
+⟹ "两路径差异"【不是 associator】，而是同一算子的不同 divisor-sum 展开
+```
+**⚠️ 小灵上轮表述 errata 记正**："两路径差异 canonical" 应为【非乘性】而非 defect
+$$\boxed{\textbf{S6}:\ \text{候选须在【结合性】而非仅【乘性】上失败}\quad\text{non-multiplicativity}\neq\text{non-associativity}}$$
+
+**B4-IA Gauss：逐层**
+```
+① 类群层完全结合（Gauss 合成 = Cl(D) 群律）⟹ defect 只可能在代表元层
+② 代表元 ambiguity = 取商后的选择效应 ⟹ **死于 S2（结合内核 + canonicalization）**
+③ 对合 f↦f⁻¹ 内生 ✓（(a,b,c)↦(a,−b,c)，不需 D）—— 这关反而通过
+④ **fixed point 结构性失败**：类层 [f]=[f]⁻¹ ⟺ [f]²=1 ⟹ **2-挠群**（阶 2^{ω(|D|)−1}）；
+   形式层 f=f⁻¹ ⟺ b≡0 (mod a)（两条件不同）；不动点集【不是单一尺度】⟹ 拿不到 H=X/H
+   （此死因【独立于连分数】✓）
+⑤ 连分数仅作解释，不作杀因 ✓
+```
+$$\boxed{\text{B4-IA 死于 S2 + 不动点集失败}\quad\text{B4-II 死于 }\Omega\equiv0\ \text{(已验证)}\quad\Longrightarrow\ \textbf{B4 本身严重收缩}}$$
+
+**⚠️ 预注册预测的诚实处理**：两对象都在**抵达分叉测试之前**死亡 ⟹ 分叉预测**未被检验**（既不确认也不推翻，判别力未行使）
+**唐先生条件核对**：字面条件"全部落入某支"✗未触及；弱条件"无 live 候选残留"✅已满足
+⟹ 可回头攻 A，但须同时声明 [S6 新增] 与 [分叉预测未被行使]
+
+**⭐⭐ 新增筛查门**：
+$$\boxed{\textbf{S7}:\ \text{若 composition 是【算子复合】或【某结合律的商】，则 associator 恒为 0}}$$
+**B4 剩余内容 = "给出一个【对象层本征非结合】的 canonical 算术律"**，而经典本征非结合结构（octonions、Moufang loops）
+非本项目意义下的算术对象 ⟹ **目前无候选** ⟹ 与 Gap_FL 同型：**inactive**
