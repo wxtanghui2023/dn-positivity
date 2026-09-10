@@ -627,3 +627,61 @@ Y = X²（因子分解完备性）与 x↦N/x（除数配对）确为【同一 i
 #### 冻结结论
 $$\boxed{\text{不是"还没找到好模型"，而是坐标系的可允许结构被【二分】限定}}$$
 $$\boxed{\text{真正的坐标系跃迁须提供【同时 canonical 且携带零点位置内容】的结构}}$$
+
+### §8.7 FZ-5：Canonical Position-Bearing Audit 执行记录
+
+**问题**：能否存在一个不编码零点、完全 canonical 的算术构造，其内部刚性能够区分复参数的实部位置？
+**四门**：C1 canonical ｜ C2 non-encoding ｜ C3 independent rigidity ｜ C4 positional discrimination
+
+#### ⭐ 三条修正（推翻 FZ-3 的隐含假设）
+
+**修正 1：canonical 且位置承载的对象【存在】**
+$$W_0:=\ x\mapsto \psi(x)-x=\sum_{n\le x}\Lambda(n)-x$$
+```
+canonical ✓（Λ 由素数/乘法结构定义）；位置承载 ✓（振荡由零点支配：ψ(x)−x ~ −Σ_ρ x^ρ/ρ）
+⟹ **"canonical ⟹ 给不出位置信息"是错的**
+真正的障碍是：canonical 对象的位置内容与 ζ 零点【互相定义】
+⟹ 从 W_0 读出位置必经显式公式 ⟹ 读的就是零点本身，无独立杠杆
+即：【位置承载不是问题，位置的独立来源才是问题】
+```
+
+**修正 2：判据不是 entropy，也不是 discrimination，而是【独立性】**
+```
+唐先生 W(x)=0 反例正确：低信息熵 ⇏ 低位置区分力
+但对偶失效同样存在：位置内容"相同"⇏ 可用（等价 ⟹ 读的就是零点）
+⟹ C2 必须从 non-encoding 强化为 **C2′ non-equivalent（不与显式公式互相定义）**
+```
+
+**修正 3：三层结构替换 FZ-3 的二分**
+| 层 | 位置内容 | 实例 | 状态 |
+|---|---|---|---|
+| **L0** | 无（β 盲） | M1–M6 绝大多数 | 已关闭 |
+| **L1** | **低于显式公式但仍能约束** | **Levinson（5/12）｜pair-correlation（2/3）** | ★ **非空 = 唯一有产出层** |
+| **L2** | 完整（与目标互相定义） | ψ−x、显式公式 | 循环（N1） |
+
+$$\boxed{\text{真实缺口 = L1 → L2，且已量化：support }\lambda\le1\ \Longrightarrow\ \text{比例}\le0.68185\text{；L2 强度需 }\lambda\ge2}$$
+
+#### 四门裁决
+```
+C1 canonical ✓ ｜ C2 non-encoding ✓ ｜ C2′ non-equivalent ✓ ｜ C3 independent ✓
+C4 positional discrimination：**比例层 ✓（确实排除部分离线零点）｜钉住层 ✗（受 λ ≤ 1 限制）**
+⟹ **FZ-5 Outcome A 非空**：canonical ∧ non-encoding ∧ independent ∧ position-constraining 已存在
+```
+
+#### ⭐ FZ-3″（上修版，可证伪）
+$$\boxed{\text{canonical 非等价构造的位置约束【只能通过矩/支撑信息】起作用；}\
+\text{无条件素数侧只给 }\lambda\le1\text{，钉住需 }\lambda\ge2}$$
+$$\boxed{\text{开放可证伪问题：}\lambda\le1\ \text{是【结构天花板】还是【当前方法的天花板】？}}$$
+```
+⟹ 这正是 V2 审计登记的 **R6** ⟹ R6 由候选问题升格为【唯一活跃的中心问题】
+理由：① 不是 RH 本身，而是信息类陈述（可独立攻击）
+     ② 有文献抓手（1-level density / support 理论 / λ≤1 与 λ≥2 经典门槛）
+     ③ 可证伪：证明 λ≤1 为结构天花板 ⟹ FZ-3 升格为定理，且【那时才该做坐标系跃迁】
+               证明 λ=1 可越 ⟹ **第一次出现 canonical ∧ 位置钉住 的入口**
+```
+
+#### 对"是否该做坐标系跃迁"的裁决
+```
+**现在还不该**：L1 非空 ⟹ 坐标系并未失效，只是当前产出停在比例层
+跃迁的理由要等 λ ≤ 1 被证明为结构天花板之后
+```
