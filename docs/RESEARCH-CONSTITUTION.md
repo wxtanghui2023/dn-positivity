@@ -1247,3 +1247,46 @@ $$\boxed{\text{断点不是"有无函数方程"，而是【乘法层（积/比�
 
 **状态表**：Chorge–Dixit 覆盖 Λ? NO ｜ λ 的 Voronoï 含 zero sums? YES(VZ-1) ｜
 Λ 的标准 Mellin dual 含 ρ? YES ｜ Λ 的 zero-blind arithmetic dual? 未发现 ｜ ZBV 全称定理? NO
+
+### §8.23 ZBV-Existence Audit 第一轮（小灵执行）：五门形式化 + **L3 → L3′**
+
+**五门 ZBV = Z1∩Z2∩Z3∩Z4∩Z5**：
+```
+Z1 Non-reencoding + 压缩性（含 IDC：A_q 须独立于目标 C(X,H)，由 Λ 的算术律独立构造）
+Z2 Reciprocal phase：e(an/q) → e(±ā m/q′)
+Z3 Local/CRT compatibility：R_{q₁q₂} ≃ R_{q₁} ⊗ R_{q₂}
+Z4 **Quadratic spectral closure (QSC)**：A_q×A_q → Kloosterman/trace 核 → **闭合谱展开**
+Z5 Zero-blindness：不显式/隐式依赖 {ρ}
+```
+$$
+\boxed{\text{若 ZBV 要成为 R8 carrier，必须具有二次谱闭合 QSC 且 }\operatorname{Spec}\cap\{\rho\text{-residue data}\}=\varnothing}$$
+**Λ 状态表**：Z1 可要求 ✓ ｜ **Z2 未知** ｜ Z3 强约束未知 ｜ **Z4 未发现** ｜ **Z5 标准路线失败**
+**标准 Mellin 分支已关闭**（ZBV-1 = NO）：$\sum_\rho\mathcal T(\rho)$ ⟹ 唯一活口 = 满足 Z2–Z5 的新 $A_q$
+
+**L2（候选引理，近乎定义层可证）**：
+$$\boxed{\text{zero-blind independent dualization }\Lambda\to A_q\text{ 且能产生 }\Lambda\times\Lambda\text{ 二阶主项}\Longrightarrow A_q\text{ 必满足 reciprocal}+\text{CRT}+\text{QSC}}$$
+**L3 → L3′（本轮改写，小灵）**：
+```
+原 L3 用了"automorphic/Euler-FE 型"，但 **Kuznetsov 需要的是【谱可实现性/模性】，不是 Euler 乘性**
+（Euler 乘性 ≠ 模性：存在有 FE 但无 Euler 积的对象，如 Epstein zeta/高阶格 theta 级数）
+```
+$$\boxed{\text{L3}^{\prime}:\ \text{reciprocity}+\text{CRT}+\text{QSC}+\text{Z5}\ \stackrel{?}{\Longrightarrow}\ \text{系数系统 modular/谱可实现？}}$$
+⟹ 若准入门槛是**谱可实现性**而非乘性，则**潜在 ZBV 类比"自守 L 函数"更宽**
+
+**⭐ 反例猎捕（主动）**：
+| 候选类 | 判定 |
+|---|---|
+| (a) 非自守 Voronoi 函数（λ_Liou, μ, d²） | **Z5 ✗（公式显含 ρ 级数）** ⟹ 被吸收；且证明 **Voronoi ⇏ automorphic** |
+| **(b) Epstein zeta / 高阶格 theta** | **真正威胁**：有 FE 无 Euler 积 ⟹ 待核实能否作 carrier |
+| (c) 动力/几何谱展开（Ruelle、量子图、转移算子） | 缺算术 reciprocity/CRT ⟹ 被 Z2/Z3 吸收 |
+| (d) Kloosterman zeta 函数 | **循环**（解析理论由 Kuznetsov/自守输入建立） |
+| (e) Weil 表示 / theta | 谱理论 = theta = 自守 ⟹ 被吸收 |
+$$\boxed{\text{【未发现】未被吸收的反例；但得到经验二分：算术 reciprocity+CRT 类中，Z5 仅在 automorphic/FE 类被观察到}}$$
+
+**判定**：$\textbf{R8-C}^{\dagger}\to$ **L2 可形式化，L3′ 为真正生死线**
+```
+L3′ 成立 ⟹ A_q 须 modular/谱可实现 ⟹ Λ（导数层，连 FE 都无）不匹配 ⟹ ZBV 在 QSC 类内不存在
+L3′ 不成立 ⟹ 得到明确新数学空间：non-Euler-multiplicative, zero-blind, quadratically closed
+              arithmetic duality —— 可能才是 R8 真正活路
+```
+**下一刀（唯一）**：证或否证 L3′；**首选突破口 = 反例表 (b)**（Epstein/theta 类，同时触"有 FE 无 Euler 积"与"谱可实现性"两条线）
