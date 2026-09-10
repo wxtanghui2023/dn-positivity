@@ -1545,3 +1545,36 @@ $$K_H(a,b)=\sum_{x\in X}w(x)e_p(a\iota(x)+b\iota(\bar x))\ \Longrightarrow\ \box
 
 **下一步**：H1–H7 框架下研究 $K_{\mathfrak H}(a,b)$，判定 A（(ii) 杀死）/ B（(i) CRT 杀死）/ C（第三类首个严格正例）。
 本轮在环可定义类内已落 **B**；**H1–H7 允许 $X_q\neq(\mathbb Z/q)^\times$** ⟹ A/B/C 判定仍未完成
+
+### §8.29 HG-D 二阶闭合审计第一轮（小灵执行）：两条硬门均未通过，失败原因已分类
+
+**对象**：$K_n(a,b)=\sum_{d\mid n}W_n(d)e_q(ad+b\,n/d)$
+**逃逸确认（唐先生）**：divisor-complement 来自【因子分解指数格】$J(\mathbf j)=(\nu_i-j_i)$，
+非 $(\mathbb Z/q)^\times$ 上的幂映射 ⟹ **HG-4 管不到它** ⟹ 已逃出"环可定义对合"层
+
+**⭐ D1（非 Euler 化）：【计算确证】为真死亡机制**
+```
+可分权重 W_n(d)=f(d)g(n/d) ⟹ Σ_n K_n = (Σ_d f(d)e_q(ad))(Σ_m g(m)e_q(bm))
+即总和 = 两个独立加法 Fourier 之积 ⟹ 完全解耦 ⟹ 死亡
+```
+
+**⭐⭐ D2（二阶有限闭合）：计算失败**
+$$\big|K_n\big|^2\ \text{的指数}=(d-e)\Big(a-\frac{bn}{de}\Big)\ \Longrightarrow\ \text{核心变量}(\Delta,P)=(d-e,de)$$
+**⭐ 关键否证性引理**：$(d+e)^2=\Delta^2+4P$ ⟹ $(\Delta,P)$ **唯一确定 $\{d,e\}$** ⟹
+$$\boxed{\text{二阶层【完全不压缩】——配对信息被完整保留 ⟹ 二阶对象本质上是【配对层】}}$$
+二阶核 = "差形式" Kloosterman 型求和（over divisor lattice）⟹ 属 **affine-type association scheme** 范畴
+⟹ 据 HG-7 文献（有限环 affine-type scheme 特征表由 Kloosterman 描述）**塔 $K_2\to K_3\to\cdots$ 撞回 Kloosterman envelope**
+⟹ 失败模式 **(ii)/impostor 类**
+
+**素数幂独立佐证**（唐先生）：$n=p^r$ 时 $r=2$ 的中间项 $e_q(p(a+b))$ 不产生 reciprocal 振荡 ✓
+
+**⭐⭐ 不可分逃逸 $W_n(d)=F(d+n/d)$：轨道不变量是 √n-探测器**
+$$d+\frac nd\ge 2\sqrt n,\ \text{等号}\iff d=\sqrt n$$
+⟹ 与 √X 主题强共振，**但这正是经典因子自对偶（Dirichlet 双曲线）= Round 2 已识别 = N43**
+⟹ **不可分逃逸落回【经典结构】，未提供新的 √X 机制**
+
+**裁决**：HG-D 第一轮 **两条硬门均未过**；逃逸口落在【经典结构】而非新机制
+（严格限定：是"当前未找到有限闭合"，**非**已证不存在）
+
+**保留的结构收获**：① D1 死亡机制被计算确证 ② 二阶层相位显式形态 $(d-e)(a-bn/(de))$（配对积 $P=de$ 调制有效加法参数）
+③ "$(\Delta,P)$ 双射"是一条干净的**否证性引理**（任何"二阶压缩"方案须绕过它）④ √n-探测器性质解释了该路线总被经典双曲线吸回
