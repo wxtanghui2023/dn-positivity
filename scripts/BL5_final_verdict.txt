@@ -1,0 +1,19 @@
+a = 1/(2pi) = 0.1591549431 | b = -0.4516621630 | b+ = 0 | 3a+b = 0.0258026663 (>0: True)
+  k= 2 tau=1.0 H=     100  LHS=1.6441e-07  margin(Trudgian)=4.569  margin(Rosser)=4.841
+  k= 2 tau=1.0 H=    1000  LHS=2.8627e-10  margin(Trudgian)=3.100  margin(Rosser)=3.117
+  k= 2 tau=1.0 H=   10000  LHS=4.0890e-13  margin(Trudgian)=2.739  margin(Rosser)=2.741
+  k= 2 tau=1.0 H=  100000  LHS=5.3141e-16  margin(Trudgian)=2.565  margin(Rosser)=2.565
+  k= 2 tau=1.0 H=   1e+06  LHS=1.1073e-18  margin(Trudgian)=1.452  margin(Rosser)=1.452
+  k= 2 tau=1.5 H=     100  LHS=3.6993e-07  margin(Trudgian)=4.569  margin(Rosser)=4.841
+  k= 2 tau=1.5 H=    1000  LHS=6.4410e-10  margin(Trudgian)=3.100  margin(Rosser)=3.117
+  k= 2 tau=1.5 H=   10000  LHS=9.2003e-13  margin(Trudgian)=2.739  margin(Rosser)=2.741
+  k= 2 tau=1.5 H=  100000  LHS=1.1957e-15  margin(Trudgian)=2.565  margin(Rosser)=2.565
+  k= 2 tau=1.5 H=   1e+06  LHS=2.4915e-18  margin(Trudgian)=1.452  margin(Rosser)=1.452
+  k= 2 tau=1.9 H=     100  LHS=5.9354e-07  margin(Trudgian)=4.569  margin(Rosser)=4.841
+  k= 2 tau=1.9 H=    1000  LHS=1.0334e-09  margin(Trudgian)=3.100  margin(Rosser)=3.117
+  k= 2 tau=1.9 H=   10000  LHS=1.4761e-12  margin(Trudgian)=2.739  margin(Rosser)=2.741
+  k= 2 tau=1.9 H=  100000  LHS=1.9184e-15  margin(Trudgian)=2.565  margin(Rosser)=2.565
+  k= 2 tau=1.9 H=   1e+06  LHS=3.9974e-18  margin(Trudgian)=1.452  margin(Rosser)=1.452
+worst margin over all (k=2..32, tau=1.0,1.5,1.9, H=1e2..1e6): 1.452 x
+asymptotic identity: RHS/LHS -> 2*pi*a = 1.000000  (exactly 1 for a = 1/(2pi))
+VERDICT: the rigorous bound fits the RHS on the whole tested range.
