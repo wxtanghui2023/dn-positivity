@@ -30,7 +30,7 @@ with N(T) the number of zeros with 0 < Im ρ ≤ T. For ζ one has a = 1/(2π), 
 >    ≤ 2 (r_H^k + r_H^{−k} − 2) [ (a/3) H log H + (4a/9) H + 2c log H + 2d + c/4 ],
 > *where γ_ρ = Im ρ and r_H = (1 + 1/H²)^{1/2}.*
 
-This is exactly inequality (3.2.7)-type of [Dr12] in the classical case, but with **no restriction k ≤ 2H²logH**: our range is all k ≥ 2. Consequently Brown's Theorem 2 holds in the classical case, and with it the implication *zero-free region ⇒ non-negativity of the corresponding Li coefficients* within the range the inequality controls.
+This is exactly inequality (3.2.7)-type of [Dr12] in the classical case, but with **no restriction k ≤ 2H²logH**: our range is all k ≥ 2. This inequality is the key input of the classical case. The passage from the inequality to the non-negativity of the corresponding Li coefficients invokes the implication of Brown's Lemma 5, whose proof contains an unresolved error; we therefore state that consequence conditionally, pending repair of that step.
 
 ## 2. The summand
 
