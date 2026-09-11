@@ -1,0 +1,58 @@
+========================================================================================================
+BL10: the explicit difference RHS_side - LHS_side, and the exact Taylor factor
+========================================================================================================
+  a = 1/(2pi) = 0.1591549431 | b = -(1+log2pi)/(2pi) = -0.4516621630  (b < 0: True)
+  => the margin (2/3)|b| = 0.3011081087
+
+  (i) exact Taylor factor  G(u) := ((1+u)^{k/2}+(1+u)^{-k/2}-2)/(k^2/4)  vs  u^2(1-u)
+       k    u=1/H^2             G(u)         u^2(1-u) G/[u^2(1-u)]
+       2         10     9.900990e-05     9.900000e-05   1.000100
+       2        100     9.999000e-09     9.999000e-09   1.000000
+       2       1000     9.999990e-13     9.999990e-13   1.000000
+       4         10     9.901235e-05     9.900000e-05   1.000125
+       4        100     9.999000e-09     9.999000e-09   1.000000
+       4       1000     9.999990e-13     9.999990e-13   1.000000
+       8         10     9.902216e-05     9.900000e-05   1.000224
+       8        100     9.999000e-09     9.999000e-09   1.000000
+       8       1000     9.999990e-13     9.999990e-13   1.000000
+
+  (ii) the difference RHS_side - LHS_side (proved form), for a range of (k,H)
+      k         H         LHS_side         RHS_side       difference diff/bound
+      2         3     1.286292e-01     1.258032e-01    -2.825984e-03       FAIL
+      2         5     1.733228e-02     1.898187e-02    +1.649590e-03         OK
+      2         7     4.687872e-03     5.454423e-03    +7.665514e-04         OK
+      2        10     1.193431e-03     1.479741e-03    +2.863107e-04         OK
+      2        20     9.101555e-05     1.283332e-04    +3.731768e-05         OK
+      2       100     4.501778e-07     7.512108e-07    +3.010330e-07         OK
+      2      1000     5.864492e-10     8.875564e-10    +3.011072e-10         OK
+      2     10000     8.190286e-13     1.120137e-12    +3.011081e-13         OK
+      4         3     1.286292e-01     1.261527e-01    -2.476531e-03       FAIL
+      4         5     1.733228e-02     1.898917e-02    +1.656891e-03         OK
+      4         7     4.687872e-03     5.454980e-03    +7.671080e-04         OK
+      4        10     1.193431e-03     1.479778e-03    +2.863473e-04         OK
+      4        20     9.101555e-05     1.283334e-04    +3.731788e-05         OK
+      4       100     4.501778e-07     7.512108e-07    +3.010330e-07         OK
+      4      1000     5.864492e-10     8.875564e-10    +3.011072e-10         OK
+      4     10000     8.190286e-13     1.120137e-12    +3.011081e-13         OK
+
+  entries with RHS_side - LHS_side <= 0 : 2
+  [small-H sweep: e < H < 14, where the zero table starts at gamma_1 = 14.13]
+      k=2 H=  3.0  difference = -2.825984e-03   FAIL
+      k=2 H=  5.0  difference = +1.649590e-03   OK
+      k=2 H=  7.0  difference = +7.665514e-04   OK
+      k=2 H= 10.0  difference = +2.863107e-04   OK
+      k=2 H= 14.0  difference = +1.074686e-04   OK
+      k=4 H=  3.0  difference = -2.476531e-03   FAIL
+      k=4 H=  5.0  difference = +1.656891e-03   OK
+      k=4 H=  7.0  difference = +7.671080e-04   OK
+      k=4 H= 10.0  difference = +2.863473e-04   OK
+      k=4 H= 14.0  difference = +1.074715e-04   OK
+
+========================================================================================================
+READ-OFF
+========================================================================================================
+  CONCLUSION (conditional on the numbers above):
+    entries with a non-positive difference: 2
+    * if 0: the comparison holds on the whole tested range, the margin being driven by the
+      NEGATIVE linear coefficient b of the counting function;
+    * if >0: the comparison fails somewhere and must be re-examined (do NOT claim success).
