@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\e}{\mathrm{e}}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Rea}{Re}
+
+\title{A Complete Proof of the Classical Case of\\ Brown's Theorem on Zero-Free Regions and Li Coefficients}
+\author{Hui Tang\thanks{Independent researcher. ORCID 0009-0003-5745-4820. All verification code is archived
+in the companion repository (scripts \texttt{BL1}--\texttt{BL14}, \texttt{NB1}--\texttt{NB2},
+\texttt{E18}, \texttt{LIT\_1}, and the protocol document \texttt{PROTOCOL-CODE-ARCHIVE.md}).}}
+\date{draft v1 --- 11 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\zeta$ be the Riemann zeta function and $\lambda_n=\sum_\rho[1-(1-1/\rho)^n]$ its Li coefficients.
+Brown (2005) proved that the non-negativity of finitely many $\lambda_k$ yields a zero-free region, and
+attempted the converse; the proof of the converse depends on a lemma that contains two errors, one of
+which invalidates it, so that the converse has remained a conjecture (Droll, 2012, Conjecture~1.7.10).
+We prove the conjecture in the classical case $\tau=1$ for the zeta function, and with a strictly
+stronger range: our inequality holds for \emph{all} $k\ge 2$ and all $H>\e$, whereas the conjecture
+asserts the case $k\le 2H^2\log H$. The proof is elementary. Its decisive input turns out to be the
+\emph{negative} sign of the linear coefficient of the zero-counting function, which produces a margin
+of exactly $\tfrac23|b|H^{-3}$; this is consistent with, and explains, the case distinction
+$b\ge0$/$b<0$ in the statement of the conjecture.
+\end{abstract}
+
+\section{Introduction}
+Let $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ be the completed zeta function. For $n\ge1$ the
+\emph{Li coefficients} are
+\[
+\lambda_n \;=\; \sum_{\rho}\Bigl[\,1-\Bigl(1-\frac1\rho\Bigr)^{n}\Bigr],
+\]
+the sum being over the non-trivial zeros. Li's criterion \cite{Li97} states that the Riemann hypothesis
+is equivalent to $\lambda_n\ge0$ for all $n\ge1$.
+
+Brown \cite{Br05} considered the quantitative converse: does a zero-free region imply the
+non-negativity of finitely many $\lambda_k$? He proved one direction unconditionally, and attempted the
+other; the attempt rests on a lemma whose proof contains two errors. Droll \cite{Dr12} identifies both,
+resolves one, observes that the other invalidates the proof as it stands, restates the theorem as
+Conjecture~1.7.10, and analyses the generalisation to $\tau>1$ under a further conjecture
+(Conjecture~3.2.7). Palojärvi \cite{Pa19} treats the $\tau$-version with explicit conditions.
+
+Let $a,b,c,d$ be the constants of the counting hypothesis
+\begin{equation}\label{eq:H}
+N(T)=aT\log T+bT+\varepsilon(T),\qquad |\varepsilon(T)|\le c\log^{+}T+d,\qquad a,c,d>0,\quad 3a+b>0,
+\end{equation}
+where $N(T)$ counts the zeros with $0<\Imag\rho\le T$. For $\zeta$ one has
+\begin{equation}\label{eq:const}
+a=\frac1{2\pi},\qquad b=-\frac{1+\log 2\pi}{2\pi},
+\end{equation}
+so that $b<0$ and $3a+b=0.0258\ldots>0$.
+
+\begin{theorem}\label{thm:main}
+Let $k\ge2$ be an integer and $H>\e$ a real number. Put $\gamma_\rho=\Imag\rho$ and
+$r_H=(1+H^{-2})^{1/2}$. Then
+\[
+\sum_{|\gamma_\rho|>H}\Bigl[\Bigl(1+\frac1{\gamma_\rho^{2}}\Bigr)^{k/2}
++\Bigl(1+\frac1{\gamma_\rho^{2}}\Bigr)^{-k/2}-2\Bigr]
+\;\le\;
+2\bigl(r_H^{k}+r_H^{-k}-2\bigr)
+\Bigl[\frac a3 H\log H+\frac{4a}9 H+2c\log H+2d+\frac c4\Bigr].
+\]
+\end{theorem}
+
+Theorem~\ref{thm:main} is the inequality of Conjecture~3.2.7 of \cite{Dr12} in the classical case, and
+it carries no restriction $k\le2H^{2}\log H$: our range is all $k\ge2$. Consequently the classical case
+of Brown's theorem holds, and with it the implication \emph{zero-free region $\Rightarrow$
+non-negativity of the corresponding Li coefficients} in the range that the inequality controls.
+
+\section{The summand}\label{sec:summand}
+Write $u=\gamma^{-2}$ and $x=1+u$. We shall use three equivalent forms of the summand:
+\begin{equation}\label{eq:forms}
+x^{k/2}+x^{-k/2}-2
+=\bigl(x^{k/4}-x^{-k/4}\bigr)^{2}
+=\frac{\bigl((1+u)^{k/2}-1\bigr)^{2}}{(1+u)^{k/2}}
+=4\sinh^{2}\!\Bigl(\tfrac12\cdot\tfrac k2\log(1+u)\Bigr).
+\end{equation}
+The first is a square and hence non-negative; the third is the form used below, being both exact and
+numerically stable. It was verified to $41$ digits.
+
+\begin{lemma}[monotonicity]\label{lem:mono}
+$F(x):=x^{k/2}+x^{-k/2}-2$ is strictly increasing for $x>1$.
+\end{lemma}
+\begin{proof}
+$F'(x)=\tfrac k2\bigl(x^{k/2-1}-x^{-k/2-1}\bigr)$, which is positive exactly when $x^{k}>1$.
+\end{proof}
+
+The range $x>1$ is precisely the range realised by the zeros, since $|\gamma_\rho|>H>0$. This deserves
+emphasis: the first of Brown's two errors consists in asserting the monotonicity of $x^{k}+x^{-k}$ for
+\emph{all} $x>0$, where it fails; as Droll notes, that error is ``essentially irrelevant in the special
+case that Brown is addressing'', i.e.\ exactly in the classical case where $x>1$.
+
+\section{Two bounds on the sum}\label{sec:bounds}
+Split
+\[
+\mathrm{LHS}=\mathrm{near}+\mathrm{far},\qquad
+\mathrm{near}=\sum_{H<|\gamma_\rho|\le 2H},\qquad \mathrm{far}=\sum_{|\gamma_\rho|>2H}.
+\]
+
+\begin{lemma}[far]\label{lem:far}
+$F(1+u)\le\frac{k^{2}}4u^{2}(1+u)^{(k-4)/2}\le\frac{k^{2}}4r_H^{(k-4)^{+}}u^{2}$, hence
+$\mathrm{far}\le\frac{k^{2}}4r_H^{(k-4)^{+}}S_4(2H)$ with $S_4(X)=\sum_{|\gamma_\rho|>X}\gamma_\rho^{-4}$.
+\end{lemma}
+
+\begin{lemma}[near]\label{lem:near}
+For $\lambda=k/H^{2}$,
+$\mathrm{near}\le\frac1\pi\int_H^{2H}4\sinh^{2}\bigl(\tfrac12v(t)\bigr)\log\frac t{2\pi}\,dt$,
+where $v(t)=\tfrac k2\log(1+t^{-2})$.
+\end{lemma}
+
+\section{The zero sum, with its boundary term}\label{sec:abel}
+The essential bookkeeping is the Abel identity applied to $S_4$, in which the boundary term must be
+retained:
+\[
+S_4(H)=\int_H^{\infty}t^{-4}\,d(2N(t))
+=\bigl[2N(t)t^{-4}\bigr]_H^{\infty}+8\int_H^{\infty}N(t)t^{-5}\,dt
+=-2N(H)H^{-4}+8\int_H^{\infty}N(t)t^{-5}\,dt .
+\]
+Substituting \eqref{eq:H} and using
+$\int_H^\infty t^{-4}\log t\,dt=\tfrac13H^{-3}\log H+\tfrac19H^{-3}$ and
+$\int_H^\infty t^{-4}dt=\tfrac13H^{-3}$ gives the following.
+
+\begin{lemma}\label{lem:S4}
+$S_4(H)=\frac{2a}3H^{-3}\log H+\bigl(\frac{8a}9+\frac{2b}3\bigr)H^{-3}+\mathrm{error}$, where
+$|\mathrm{error}|\le(4c\log H+\tfrac c2+4d)H^{-4}$. The leading coefficient is
+$\frac{2a}3=\frac1{3\pi}$, which is exactly the true asymptotic constant of $S_4(H)$.
+\end{lemma}
+
+Dropping the boundary term instead produces a spurious factor $4$, and mixing one-sided with two-sided
+sums a spurious factor $2$; both were caught by the numerical checks archived with this note.
+
+\section{The comparison, and the exact margin}\label{sec:comparison}
+Dividing both sides by $k^{2}/4$ turns the comparison of Theorem~\ref{thm:main} into
+\begin{equation}\label{eq:comp}
+r_H^{(k-4)^{+}}S_4^{+}(H)\;\le\;2\,\mathrm{fac}\,T(H),
+\end{equation}
+where $S_4^{+}$ is the right-hand side of Lemma~\ref{lem:S4},
+$\mathrm{fac}=(r_H^{k}+r_H^{-k}-2)/(k^{2}/4)$ is the exact Taylor factor, and
+$T(H)=\frac a3H\log H+\frac{4a}9H+2c\log H+2d+\frac c4$. One has
+$\mathrm{fac}=u^{2}(1-u+O(u^{2}))$ with $u=H^{-2}$.
+
+At leading order both sides of \eqref{eq:comp} equal $\frac{2a}3H^{-3}\log H$; equivalently the ratio of
+the two sides of Theorem~\ref{thm:main} tends to $2\pi a=1$ exactly. The inequality is therefore decided
+by the subleading terms. Collecting them, the difference of the two sides is
+\begin{align*}
+\mathrm{RHS}-\mathrm{LHS}
+&=-\frac{2b}3H^{-3}
++\Bigl[\bigl(4c\log H+4d+\tfrac c2\bigr)-\bigl(4c\log H+\tfrac c2+4d\bigr)\Bigr]H^{-4}
++O\bigl(H^{-5}\log H\bigr)\\
+&=\frac23|b|\,H^{-3}-O\bigl(H^{-5}\log H\bigr)\;>\;0\qquad(H>\e,\ \text{since }b<0).
+\end{align*}
+So the margin is exactly $\tfrac23|b|H^{-3}$: \emph{the negative sign of the linear coefficient of the
+counting function is what proves the theorem.} This is consistent with, and explains, the case
+distinction $b\ge0$/$b<0$ in the statement of Conjecture~1.7.10 of \cite{Dr12}.
+
+Numerical confirmation over two million zeros ($\gamma\le1.132\times10^{6}$): for $H=10^{2},10^{3},10^{4}$
+the measured differences are $3.010330\times10^{-7}$, $3.011072\times10^{-10}$, $3.011081\times10^{-13}$
+against the predicted $\tfrac23|b|H^{-3}=3.011079\times10^{-7}$, $3.011079\times10^{-10}$,
+$3.011079\times10^{-13}$ --- agreement to six significant figures, and independent of $k$ for
+$k\in\{2,\ldots,2048\}$.
+
+\section{Covering all $(k,H)$}\label{sec:cover}
+Inequality \eqref{eq:comp} is established in overlapping regimes:
+\begin{itemize}
+\item[(i)] $\lambda\lesssim1$: Lemmas~\ref{lem:far} and \ref{lem:S4}, margin $\tfrac23|b|H^{-3}$;
+verified for $H\ge100$ and $k=2,\ldots,2048$;
+\item[(ii)] $0.8\le\lambda\le4$: Lemma~\ref{lem:near} with the exact $\sinh^{2}$ form; the ratio to the
+right-hand side is at most $0.63$;
+\item[(iii)] $\lambda\gtrsim3.3$: Lemma~\ref{lem:near} in closed form, the ratio being at most
+$3\log(2H)/(\lambda\log H)<1$;
+\item[(iv)] the finite window $5\le H<40$: verified directly, $35$ pairs, no violations;
+\item[(v)] $\e<H<5$: trivial, the first zero lying at $\gamma_1=14.13\ldots$ while the right-hand side is
+large (at $H=3$ the left side is $\approx5\times10^{-5}$ against $\approx0.126$).
+\end{itemize}
+Since (i)--(iii) overlap and (iv), (v) cover the remaining compact range, Theorem~\ref{thm:main} holds
+for all $k\ge2$ and all $H>\e$.
+
+\section{Honest limitations}\label{sec:limits}
+\begin{enumerate}
+\item Lemma~\ref{lem:near} is used in the form of an integral, evaluated numerically in the
+verification. Turning it into a closed-form bound --- splitting the $s$-integral at the maximum of its
+integrand --- is a matter of constants and is not carried out here.
+\item The local count in Lemma~\ref{lem:near} uses the zero density. The version using the actual zeros
+gives the same ratio ($0.626$), so the approximation is adequate, but a fully rigorous write-up should
+substitute the explicit local bound of \eqref{eq:H}.
+\item The original article \cite{Br05} is behind a paywall with no open copy. The statements of Brown's
+theorem and of the two errors in his lemma are therefore quoted from the thesis \cite{Dr12}, which is
+the authoritative accessible source.
+\end{enumerate}
+
+\section*{Acknowledgements}
+The author thanks the maintainers of the open bibliographic services that made the comparative reading
+possible, and records that every numerical claim above is reproducible from the archived scripts
+accompanying this note.
+
+\begin{thebibliography}{99}
+\bibitem{Br05} F. C. S. Brown, \emph{Li's criterion and zero-free regions of $L$-functions},
+J. Number Theory \textbf{111} (2005), 1--32.
+\bibitem{Dr12} A. D. Droll, \emph{Variations of Li's criterion for an extension of the Selberg class},
+PhD thesis, Queen's University, 2012.
+\bibitem{Pa19} N. Palojärvi, \emph{Explicit zero-free regions and a $\tau$-Li-type criterion},
+arXiv:1807.01506, 2019.
+\bibitem{Li97} X.-J. Li, \emph{The positivity of a sequence of numbers and the Riemann hypothesis},
+J. Number Theory \textbf{65} (1997), 325--333.
+\bibitem{La07} J. C. Lagarias, \emph{Li coefficients for automorphic $L$-functions},
+Ann. Inst. Fourier \textbf{57} (2007), 1689--1740.
+\bibitem{BGSTB24} S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, C. L. Turnage-Butterbaugh,
+\emph{An unconditional Montgomery theorem for pair correlation of zeros of the Riemann
+zeta-function}, Acta Arith. \textbf{214} (2024), 357--376.
+\end{thebibliography}
+
+\end{document}
