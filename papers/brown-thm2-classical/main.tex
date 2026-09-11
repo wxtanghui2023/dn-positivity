@@ -77,9 +77,12 @@ $r_H=(1+H^{-2})^{1/2}$. Then
 A companion note \cite{BT26a} obtains outright positivity of the coefficients for a range linear in the verified height by an elementary phase-window argument that bypasses the defective implication; the present note is complementary, in that it supplies the input inequality of the classical converse for \emph{all} orders. The two share one identity, namely $|1-1/\rho|^{2}=1+(1-2\beta)/(\beta^{2}+\gamma^{2})$ for a zero $\rho=\beta+i\gamma$.
 
 Theorem~\ref{thm:main} is the inequality of Conjecture~3.2.7 of \cite{Dr12} in the classical case, and
-it carries no restriction $k\le2H^{2}\log H$: our range is all $k\ge2$. This inequality is the key input of the classical case; the passage from it to the non-negativity of
-the corresponding Li coefficients invokes the implication of Brown's Lemma 5, whose proof contains an
-unresolved error, so we state the consequence conditionally on that step being repaired.
+it carries no restriction $k\le2H^{2}\log H$: our range is all $k\ge2$. This inequality is precisely the statement that Droll identifies as the repair of the defective step:
+his Conjecture~3.2.7, "combined with the previous lemma, provides a modified, generalized version of
+\mbox{[Br05, Lemma~5]}". Since the conjecture requires only $1\le\tau<2$, the classical case $\tau=1$
+is covered by Theorem~\ref{thm:main}, and because Brown's remaining inputs are unaffected, the classical
+case of the theorem follows for all orders. We prove the conjecture modulo two constant-level items
+(\S\ref{sec:limits}), not unconditionally.
 
 \section{The summand}\label{sec:summand}
 Write $u=\gamma^{-2}$ and $x=1+u$. We shall use three equivalent forms of the summand:
@@ -197,6 +200,10 @@ integrand --- is a matter of constants and is not carried out here.
 \item The local count in Lemma~\ref{lem:near} uses the zero density. The version using the actual zeros
 gives the same ratio ($0.626$), so the approximation is adequate, but a fully rigorous write-up should
 substitute the explicit local bound of \eqref{eq:H}.
+\item The remaining lemmas used in the chain (partial summation over the zeros, the lower and upper
+bounds for the sums over the zeros beyond height $k\tau$, and the modified form of the defective lemma)
+are Brown's originals or Droll's generalisations; we take them at reference level and have not
+independently re-derived them.
 \item The original article \cite{Br05} is behind a paywall with no open copy. The statements of Brown's
 theorem and of the two errors in his lemma are therefore quoted from the thesis \cite{Dr12}, which is
 the authoritative accessible source.
