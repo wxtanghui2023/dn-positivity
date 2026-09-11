@@ -127,3 +127,34 @@
 【来源 ✓】本轮全部对齐档案 + 清单 + 自查记录 ✓（无凭空新增 ✓）
 【⚠️ 已完成项**均为本轮实际执行** ✓；未完成项**均未执行** ✗ —— 本表为登记，非承诺 ✓
 ```
+
+---
+
+## 十二、【更新】G4/G5 的裁定（2026-09-11 23:29）
+
+### G4 ✅ **已解决**（且**更正我的误判** ✓）
+```
+【❌ 我此前的判断】"git-autosync 只 push 不 bundle" ✗ —— **错的** ✓
+【✓ 实际】脚本 `scripts/git_autosync.sh` **本就含每日 bundle 步骤** ✓（保留最近 7 份 + 自动清理 ✓）
+   04:37 的 dn-project/workspace 两份 bundle 正是它生成的 ✓✓
+【⭐⭐ 真正的问题（已修 ✓）】**cron 任务的【模型】全部 429** ✗✓：
+   · bailian-token-plan/qwen3.6-flash：**"1-week quota exhausted，09-15 10:00 UTC 重置"** ✓
+   · bailian-token-plan/qwen3.8-max / deepseek-v4-pro：同 ✓
+   · agnes/agnes-2.0-flash：**免费用户速率限制** ✓
+   ⟹ **连续 2 次 error** ✓（脚本其实跑了 ✓，但**回复步骤**需要模型 ✗ ⟹ 整轮判为 error ✗）
+【✅ 修复】把该 cron 的模型改为 **deepseek/deepseek-v4-flash** ✓（**当前实测可用** ✓✓）
+   + fallback：`zhipu/glm-4-flash`（免费 ✓）、`zhipu/glm-5.1`、`agnes/agnes-2.0-flash` ✓
+【✅ 验证】手动触发一次 ⟹ 日志新增 **23:28:22** 条目 ✓✓ ⟹ 任务恢复正常 ✓
+【⚠️ 需唐先生知晓】**百炼 token-plan 周配额已耗尽**（09-15 10:00 UTC 重置 ✗）⟹
+   一切**用百炼模型的 cron/heartbeat** 在此期间会失败 ✗ —— 与"全局偏好：Cron 用百炼模型"冲突 ⚠️
+   ⟹ **建议**：此期间统一改用 **deepseek/deepseek-v4-flash** 或 **zhipu/glm-4-flash（免费）** ✓
+   （已对 git-autosync 执行；其余 2 个 cron 用 `main` + systemEvent ✓ ⟹ 走主会话模型 ✓，暂不受影响 ✓）
+```
+
+### G5 **仍需唐先生拍板** 🔵
+```
+【workspace bundle 393 MB】由历史大 blob 造成 ⚠️（今早 78 MB → 393 MB ✓）
+【选项】① `git filter-repo` 清理历史（**破坏性** ✗ —— 需你决定 ✓）
+   ② 维持现状 + 接受大 bundle ⚠️
+   ③ 另建干净仓库（保留旧库为只读归档 ✓ —— **我倾向此项** ✓，风险最低 ✓）
+```
