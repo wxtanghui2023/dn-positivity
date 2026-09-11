@@ -1,0 +1,13 @@
+*** THIS RUN FAILED: d_N^2 came out NEGATIVE, which is impossible. The numbers below are NOT a result.
+*** See the STATUS block in NB2_dN_direct.py for the two identified defects.
+*** Recorded as a failed attempt (honesty over tidiness).
+
+====================================================================================================
+NB2: direct d_N^2 vs the frontier constant  C = 2 + gamma - log(4 pi) = 0.0461914179
+====================================================================================================
+  precomputing zeta on the critical line (1201 nodes, t up to 200) ...
+  done. computing c and G for N up to 10 ...
+
+     N   d_N^2 computed          C/log N            ratio       note
+     2      -2.13637478       0.06664013         -32.0584       neg!
+     4      -2.19027035       0.03332006         -65.7343       neg!

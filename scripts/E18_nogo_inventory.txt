@@ -1,0 +1,96 @@
+======================================================================================================================
+E18 NO-GO inventory: 84 documents matched the negative-result naming conventions
+======================================================================================================================
+  document                                       marker     bytes  title
+  2026-08-23-full-archive.md                     archive     4955  2026-08-23 全天发现综合存档（最终版——19:30）
+  ADC1-no-go-and-contraction-sources.md          no-go       2345  ADC1：AM-CROSS-SCALE NO-GO 登记 + **严格收缩来源的四分类**（回答"枚举"问题）
+  AEB1-escape-boundary-topology.md               boundary    3424  AEB1：**逃逸边界的拓扑判定** —— 有限阶段永不逃逸；connected 1D 只能非 canonical
+  AM-affine-final-verdict.md                     verdict     2121  A–M affine closure / prime-label symmetry：终审（定理式边界）
+  ARCHIVE-P28-P33.md                             archive     1329  P28-P33 封档存档标记
+  ARCHIVE-P34-2026-09-02.md                      archive     6134  P34 系列存档：素数侧 canonical-limit 与算子级 trivialization 审计
+  ARCHIVE-P34-FINAL-2026-09-02.md                archive     3819  P34 系列最终封档：素数侧 Fourier 算子的 canonicalization obstruction（权重无关）
+  ARCHIVE-P36-P47.md                             archive     4640  ARCHIVE-P36-P47：机制级总归档
+  ARCHIVE-P38-FINAL.md                           archive     3071  ARCHIVE-P38：Euler Deformation / Pole-Lattice Obstruction——最终归档
+  ARCHIVE-P39-FINAL.md                           archive     2369  ARCHIVE-P39：Finite Euler-Orbit Geometry——最终归档
+  ARCHIVE-P49-G274-PROLATE-WEIL.md               archive     2613  ARCHIVE：P49-G2.7.4 Prolate-Weil Bridge——三层数值封档
+  CLOSED-ROUTES-MAP.md                           closed      4867  死路地图（**按死因**分类的筛选表）
+  D2-arith-CLOSED.md                             closed      4084  D2-arith 收口记录（**CLOSED**）
+  DIRECTION-LOOP-STOP-verdict-and-assets.md      verdict,    2253  **战略自查**：方向搜索循环必须停止；我们的真实资产清单
+  DOOR2-explicit-formula-verdict.md              verdict     2311  **逐门清单 ②**：显式公式 / Guinand 方向 —— **有门，但通往已知领域**
+  DOOR3-machine-located-verdict.md               verdict     2181  **逐门清单 ③（侦察）**：机器找到了 —— 但**天真应用 ⟹ 与 RH 等价**（无增益）
+  EG-archive.md                                  archive     1273  E-G 路线归档（2026-09-08 21:00——唐先生定案）
+  H1-two-scales-verdict.md                       verdict     2583  ⭐⭐⭐ **H1 判决 + 一个必须记下的双标度精细化**
+  M-NOGO-1-assembly.md                           nogo        4248  M-NOGO-1 装配：N1–N7 → (A₁, A₂, C_NI) 的死亡链总表
+  M-NOGO-P0-P1-ISRG-and-loopholes.md             nogo        6189  M-NOGO-P0（ISRG 形式化）+ M-NOGO-P1（G1–G6 漏洞审计）
+  M-NOGO-P1b-P1c-G7prime.md                      nogo        5702  M-NOGO-P1b（G4′/G7 终审）+ P1c（G7′ 审计：真跨尺度 vs 包装）
+  M-NOGO-P1d-P1e.md                              nogo        4680  M-NOGO-P1d（三攻击面）+ P1e（K ⇏ α 而 K^∞ ⟹ α 的形式化）
+  M-NOGO-P1f-P1g.md                              nogo        5330  M-NOGO-P1f（G8 终审）+ P1g（表示无关的"局部已含 α"）
+  M-NOGO-P1h.md                                  nogo        4055  M-NOGO-P1h：C 的证明论化（目标指数不可替换性）
+  MASTER-NOGO-AND-LIVE-PATHS.md                  nogo        6617  主文档：NO-GO 总册 与 活路定义
+  NOGO-QUOTIENT-N1-N7.md                         nogo        6147  NO-GO 商空间：N1–N7 机制母类 + G-SW6-P1 第一轮
+  NOGO-registry-and-screens.md                   nogo        2643  NO-GO 登记册与候选筛选协议
+  PROTOCOL-CODE-ARCHIVE.md                       archive     1848  📜 **制度：验证代码必须存档、可复现**（唐先生指令，2026-09-11 23:04）
+  PROTOCOL-V2-levinson-barrier.md                barrier     2078  V2 纸面协议【草稿】：Levinson √T 屏障分析（正向进攻第一轮）
+  R-A2-levinson-barrier-audit.md                 barrier     3236  R-A2 审计记录：Levinson √T 屏障（V2 执行）
+  R-CS-RESTRICTED-ARCHIVE.md                     archive     4003  R-CS 受限封存（RESTRICTED ARCHIVE）
+  R3-Ggamma-archive-2026-09-09.md                archive     2011  R3'/G_γ 状态存档——2026-09-09 23:20（ALO 反向审计——）
+  R6-totalpositivity-verdict-and-correction.md   verdict     2592  **R6 查重结果 + 更正**：TP₅ 结论**对象错了** —— 并给出**正确的对象与实验**
+  RETRACTION-A1-li-range-2026-09-11.md           retracti    4374  ⚠️⚠️ **撤回：A1（Li 显式范围）不是我们的成果** —— 且我们的是【更弱】的版本
+  RH-BOUNDARY-MAP-FROZEN-MASTER-TABLE.md         boundary   14056  RH Boundary Map — FROZEN MASTER TABLE
+  RH-YM-obstruction-parallel.md                  obstruct    1902  RH ↔ Yang–Mills：**障碍层面的对照**（唐先生直觉的精确化）
+  RH-map-final-archive.md                        archive     2335  RH/LH 研究地图收尾——死亡地图与方法论存档（2026-09-08）
+  RH-prior-NOGO-checklist-2026-09-09.md          nogo        2973  RH 路线先验 NO-GO 检查表（2026-09-09——215 层审计的可复用资产）
+  SCALE-DYNAMICS-FINAL-BOUNDARY-MAP.md           boundary    5765  尺度动力学线 · 终审结构边界图（R-CS + R-INT-SYM）
+  TPX-verdict-tp-instantiation-degenerates.md    verdict     2147  **TP/PF 路线的判定**：以零点实例化后，条件**自动坍缩**（+ 一次 ERR）
+  YM-breakthrough-3-asano-analogue-limit-obstruc obstruct    2038  突破口分析（三）：**算术 Asano 收缩 = 截断/Pólya 近似**；缺口是**极限不保性**
+  YM-breakthrough-5-dqpt-paper-verdict.md        verdict     2536  突破口分析（五）：**"相变路线"文献已查清 —— 它是"检测/验证"框架，落回我们的墙**
+  archive-maier-rassias-signature-exhausted.md   archive     2884  ARCHIVE：Maier-Rassias 签名反证穷尽——BNBD 方法边界确认
+  ari-family-archive.md                          archive     1266  ARI 全家族归档——Arithmetic Renormalization Invariant（正式封存——）
+  character-family-archive.md                    archive     1381  Character 路线正式归档——linearization 机制（CHAR-A 到 E——）
+  contradiction-reductio-boundary.md             boundary    1155  反证法（候选 E）精确边界——矛盾形态攻击的关键资产
+  cp-line-CLOSED-2026-09-09.md                   closed      1846  c_p 线完整收口（J1-J10）——2026-09-09 21:55
+  d5-no-go-and-d6.md                             no-go       2650  D5 存档 + no-go 图谱升级 + D6 定义
+  d7-boundary-audit.md                           boundary    1465  D7 执行结果：σ=1 信息转换层审计
+  ii-arp-archive.md                              archive     1348  II + ARP 谱系归档——正性/自伴/边界范式封闭（2026-09-07 15:04）
+  iib-boundary-probe.md                          boundary    1048  II-B 数值探索——边界形式朴素实现失败
+  ix-final-archive.md                            archive     1347  IX 家族终审归档——Arithmetic Realization 全链终结
+  lemma3b-verdict.md                             verdict     2215  Lemma 3 弱版 B 判定：无条件可行性分析（最终）
+  log-energy-archive.md                          archive      830  A 对数势能路线归档（2026-09-09 13:43——）
+  meta-argument-obstruction.md                   obstruct    1642  元论证骨架——为什么零点的 β-obstruction 需要"非标准"机制
+  modulus-rigidity-NOGO-archive.md               nogo,arc    1940  Maślanka–Li 模长刚性：归档（结构性 NO-GO）
+  numberfield-positivity-CLOSED-2026-09-09.md    closed      1918  范式级封存：数域内部 canonical positivity 搜索闭合（2026-09-09 20:27）
+  p141-bridge-obstruction.md                     obstruct    1623  P14.1：Bridge Obstruction——结构审计
+  p191-boundary-phase.md                         boundary    1627  P19.1：Boundary-Phase Lemma——单离轴零点的 phase defect
+  p21-quotient-obstruction.md                    obstruct    1527  P21：Arithmetic Quotient / Range Obstruction——三门测试
+  p26a9-boundary-diff.md                         boundary    1349  P26-A9：边界值差证明的尝试——离线极点破坏（β 墙再现）
+  p28-p33-final-archive.md                       archive     4047  P28-P33 正式封档：Moving-Edge Obstruction——算子论层级与 Problem I/II 拆分
+  p28b12-dual-boundary.md                        boundary    1655  P28-B1.1/B1.2：双边界谱追踪——临界方向完全漂移 + W_M 缓慢下降
+  p33-moving-edge-obstruction.md                 obstruct    1959  P33：Moving-Edge Obstruction——抽象反例框架（n₋(K_N)=N 无足够信息决定 n₋(K_off)）
+  p33c-moving-edge-obstruction.md                obstruct    2542  P33 修正：Moving-Edge Obstruction——Extensive Inertia Does Not Imply
+  p43-archive-p44-first.md                       archive     3111  ARCHIVE-P43 + P44：Fixed-Point Forcing Mechanisms——第一轮
+  p46-g35-archive-p47-first.md                   archive     2786  ARCHIVE-P46-G3.5 + P47：Global Realizability Invariant——第一轮
+  p48-g2-factorization-no-go.md                  no-go       3073  P48-G2：Class-Defect Impossibility Audit——第一轮（Factorization No-Go
+  p49-g262-c0-local-no-go.md                     no-go       2920  P49-G2.6.2：C₀ 局部 No-Go——第一轮（结构性论证）
+  p49-g274-limit-wall-audit.md                   wall        2719  P49-G2.7.4：Limit Identification Wall——L0-LF 定理级审计（第一轮）
+  p49-offline-obstruction.md                     obstruct    2794  P49：Off-Line Obstruction Test——第一轮（O1-O4 + 结构反推）
+  p49-r3-grammar-closed-a-prime.md               closed      4636  P49-G2.6.2-R3：C₀^conv Grammar 精化与 A′ 严格闭合（唐先生定稿——PASS）
+  p51-t5-archive-phase1.md                       archive     1371  P51-T5 第一阶段归档——Amplification–Resolution / Analytic–Discrete Dich
+  p54a1-update-re-quantity-closed.md             closed      1142  P54-A1 更新：8/31 已否定 b₂ 判别（Re 量无 β——伪影修正）
+  pfe-archive.md                                 archive     1009  Prime Frequency Energy 路线封存（2026-09-09 11:11）
+  phase-archive-2026-09-09-final.md              archive      749  阶段归档：零点读出穷尽 + 生成机制审计（2026-09-09 15:12 定稿——）
+  pn-archive-final.md                            archive      784  P_N 相位均匀性路线归档（2026-09-09 13:13——）
+  qcd-vacuum-vs-rh.md                            vacu        2131  夸克真空（QCD）与 RH——精确机制对照
+  r3-iii-archive.md                              archive     1042  R3-III 归档（修正版）——跨-a 兼容性窄归档
+  rh-mechanism-boundary-map.md                   boundary    1254  RH Mechanism Boundary Map 1976–2026（机制边界图——收束归档）
+  wall-completeness.md                           wall        1045  墙的完整性：概念/物理/数值全收敛（2026-09-04）
+  wallB-unified-weil.md                          wall        2186  墙 B 定稿 —— 统一 Weil 测试函数
+  wallC-equality.md                              wall        1422  墙 C —— 等号条件（主定理"⟺"方向）
+  weighted-zero-density-verdict.md               verdict     1494  加权 zero-density 深入判断：W^{(P)} 不比均匀 N(σ,T) 强（推论关系）
+
+  columns for the alignment table (to be filled by the analyst):
+    status in { known-to-frontier (rediscovery) | ours-possibly-new | superseded | closed-by-frontier }
+
+======================================================================================================================
+READ-OFF
+======================================================================================================================
+  * 84 candidate negative-result documents; the alignment table is docs/E18-NOGO-ALIGNMENT.md
