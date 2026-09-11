@@ -13,8 +13,14 @@ so the conjecture is asymptotically critical and decided by the subleading terms
 """
 import numpy as np
 from mpmath import mp, mpf, log as mlog, log1p as mlog1p, sinh as msinh, pi as mpi
+import os as _os
+_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
+_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+
 mp.dps=50
-g=np.sort(np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel()); GMAX=g[-1]
+g=np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel()); GMAX=g[-1]
 a = 1/(2*mpi); b = -(1+mlog(2*mpi))/(2*mpi)
 print("a = 1/(2pi) = %.10f | b = %.10f | b+ = 0 | 3a+b = %.10f (>0: %s)"
       % (a, b, 3*a+b, 3*a+b>0))

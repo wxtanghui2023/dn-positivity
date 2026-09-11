@@ -11,8 +11,14 @@ The tail beyond the table is estimated analytically.
 """
 import numpy as np
 from mpmath import mp, mpf, log as mlog, euler as meuler, pi as mpi
+import os as _os
+_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
+_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+
 mp.dps=40
-g = np.sort(np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel())
+g = np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel())
 gam = mpf('0.5772156649015328606065120900824024310421')
 C = 2 + gam - mlog(4*mpi)
 print("="*96)

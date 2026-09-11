@@ -25,6 +25,12 @@ from our zero data (the "2A(n)" of TRACK A/B).  Use it to check S_inf(n) against
 """
 import numpy as np
 from mpmath import mp, mpf, log as mlog, pi as mpi, euler as meuler
+import os as _os
+_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
+_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+
 mp.dps=40
 gam=meuler; LOG2PI=mlog(2*mpi)
 def S_inf(n):
@@ -46,7 +52,7 @@ print("="*96)
 print("BL1: arithmetic decomposition -- which constraint binds?")
 print("="*96)
 print("  CALIBRATION: S_inf(n) vs our on-line computation 2A(n) (which equals lambda_n under RH)")
-g=np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel(); g=np.sort(g)
+g=np.load(ZEROS_PATH).astype(np.float64).ravel(); g=np.sort(g)
 th=np.arctan2(g, g**2-0.25)
 for n in (1,10,100,1000,10000):
     A=float(np.sum(1.0-np.cos(n*th)))

@@ -11,8 +11,14 @@ The Abel route with the boundary term gives leading coefficient 2a/3 = 1/(3pi) -
 """
 import numpy as np
 from mpmath import mp, mpf, log as mlog, pi as mpi
+import os as _os
+_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
+_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+
 mp.dps=40
-g=np.sort(np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel()); GMAX=g[-1]
+g=np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel()); GMAX=g[-1]
 a=1/(2*mpi); b=-(1+mlog(2*mpi))/(2*mpi); c=mpf('0.112'); d=mpf('2.5')
 print("="*104)
 print("BL7: two-sided S4 vs the Abel bound WITH boundary term  (sharp leading constant check)")

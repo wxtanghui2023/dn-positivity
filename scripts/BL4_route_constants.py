@@ -19,8 +19,14 @@ We compute the EXACT required threshold for the constant a (dominant term) for b
 """
 import numpy as np
 from mpmath import mp, mpf, log as mlog, e as me, pi as mpi
+import os as _os
+_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
+_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+
 mp.dps=30
-g = np.sort(np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel())
+g = np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel())
 GMAX = g[-1]
 print("="*98)
 print("BL4: route strictification -- S4(H) = sum_{|gamma|>H} gamma^{-4}   (data + analytic tail)")
