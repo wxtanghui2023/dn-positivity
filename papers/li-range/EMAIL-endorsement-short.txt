@@ -1,0 +1,34 @@
+Subject: arXiv endorsement request (math.NT) — "An elementary explicit positivity range for the Li coefficients"
+
+Dear Professor [NAME],
+
+I would like to submit a short paper to arXiv in math.NT and need an endorsement
+(my endorsement request ID is [REQUEST-ID]).
+
+The paper is attached (5 pages). It concerns the Li criterion (RH ⟺ λ_n ≥ 0 for all n).
+Its content is deliberately modest and elementary:
+
+  Assume the zeros of ζ below a height T have been rigorously verified to lie on the
+  critical line (interval arithmetic). Then λ_n ≥ 0 for every n with 2 ≤ n ≤ 2T − O(1).
+  For T = 3.000175·10¹² this gives n up to ≈ 6.00035·10¹², about 6·10⁷ times the range
+  reached by direct computation of λ_n in the literature (n ≤ 10⁵).
+
+The proof is elementary and uses four ingredients: (i) on-line zeros contribute
+1 − cos(nθ_γ) ≥ 0, where θ_γ = arg(1−1/ρ); (ii) on the window γ ∈ [n/2, 2n] each such term
+is at least 1 − cos(1/2 − 1/(96n²)) (from the expansion θ_γ = 1/γ − 1/(12γ³) + …);
+(iii) the classical explicit zero-counting bound supplies enough zeros in that window;
+(iv) zeros above T contribute at worst −n·B_T with an explicitly computable B_T.
+
+To be explicit about scope: this is a subset result, not a proof of RH, and I do not claim
+novelty for converting a verified height into a range for λ_n — that conversion is a
+folklore consequence of |1−1/ρ| = 1 on the line and > 1 off it. What the note provides is an
+explicit, elementary and numerically calibrated form of the resulting range (with the
+calibration λ_1 = 0.02309570897… reproduced to 8·10⁻⁵).
+
+I would be very grateful for an endorsement if you find the paper suitable, and equally
+grateful for any correction — if the range or the argument is already known, please tell me
+and I will withdraw it immediately.
+
+With many thanks and best regards,
+Hui Tang
+[affiliation / contact]

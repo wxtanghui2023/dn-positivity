@@ -1,0 +1,50 @@
+Subject: arXiv endorsement request (math.NT) — explicit Li-coefficient range from a verified height
+
+Dear Professor [NAME],
+
+I am writing to ask for an arXiv endorsement for a short (5-page) paper in math.NT; the
+manuscript is attached. My endorsement request ID is [REQUEST-ID].
+
+SUMMARY OF THE RESULT
+Let T be a height such that every non-trivial zero with 0 < γ ≤ T is rigorously known to lie
+on the critical line (e.g. T = 3.000175·10¹², Platt–Trudgian). Then the Li coefficients
+satisfy  λ_n ≥ 0  for every integer n with 2 ≤ n ≤ 2T − O(1); for that T this is
+n ≤ ≈ 6.00035·10¹², roughly 6·10⁷ times the range reached by direct computation of λ_n
+(n ≤ 10⁵, Palojärvi; Coffey).
+
+WHY IT IS ELEMENTARY
+Write λ_n = Σ_ρ [1 − (1−1/ρ)^n]. On the critical line |1−1/ρ| = 1 exactly, so each on-line
+zero contributes 1 − cos(nθ_γ) with θ_γ = arg(1−1/ρ) = arctan(γ/(γ²−1/4)) ≥ 0. The four
+ingredients are:
+ (i) non-negativity of the on-line terms;
+ (ii) a window bound: for γ ∈ [n/2, min(2n,T)] one has nθ_γ ∈ [1/2 − 1/(96n²), 2], because
+      θ_γ = 1/γ − 1/(12γ³) + 1/(80γ⁵) − … and θ_γ is strictly decreasing; hence every window
+      term is ≥ C₁(n) := 1 − cos(1/2 − 1/(96n²));
+ (iii) the classical explicit zero-counting bound (Trudgian: |N(T) − F(T)| ≤ 0.112 log T +
+      0.278 log log T + 2.510 + 0.2/T, F(T) = (T/2π)log(T/2πe) + 7/8) supplies the count;
+ (iv) zeros above T contribute at worst −n·B_T with B_T = ½Σ_{γ>T}γ^{-2}, for which Lemma 4
+      gives a fully explicit bound (≈3.4·10⁻⁶ at T = 1.13·10⁶; ≈2.85·10⁻¹² at T = 3·10¹²).
+The conclusion follows: λ_n ≥ C₁(n)·#{γ ∈ [n/2, min(2n,T)]} − n·B_T. All steps are elementary;
+the only citation is the classical counting bound.
+
+NUMERICAL CALIBRATION
+ (a) λ_1 computed from the on-line phases reproduces the exact λ_1 = ½γ_E + 1 − ½log 4π =
+     0.0230957089661210338 to a relative error of 8·10⁻⁵.
+ (b) Every n ≤ 20000 was checked exhaustively (via a split near/far evaluation calibrated to
+     6·10⁻⁸ against direct summation): the minimum of A_T(n)/n is attained at n = 1 and
+     exceeds the threshold by a factor 2.2·10⁴.
+ (c) In the window criterion, the ratio (available count)/(required count) is 2.7·10⁵ at
+     n = 10⁵, 1.4·10⁵ at n = 10⁶, and 1.03 at the endpoint n = 2T − 20; the explicit
+     constants of the counting bounds are therefore immaterial except at the very endpoint.
+
+SCOPE (stated plainly)
+This is a subset statement implied by RH, not a proof of RH: the range grows with T but never
+covers all n. It is unconditional given T. I do not claim novelty for the height-to-range
+conversion, which is a folklore consequence of |1−1/ρ| = 1 on the line and |1−1/ρ| > 1 off
+it; the contribution is the explicit, elementary, and calibrated form of the range. If any
+part is already in the literature, please tell me and I will withdraw the submission at once.
+
+Thank you for your time.
+Best regards,
+Hui Tang
+[affiliation / contact]

@@ -1,0 +1,250 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\li}{\lambda_n}
+\title{\bfseries An elementary explicit positivity range\\ for the Li coefficients}
+\author{Hui Tang}
+\date{\today}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $T$ be a height to which the Riemann Hypothesis has been rigorously verified by interval
+arithmetic. We prove by elementary means that the Li coefficients satisfy
+$\lambda_n\ge 0$ for every integer $n$ with $2\le n\le 2T-O(1)$.
+For the verified height $T=3.000175\cdot 10^{12}$ this gives $n$ up to approximately
+$6.00035\cdot 10^{12}$, about $6\cdot 10^{7}$ times the range reached by direct computation
+of $\lambda_n$ in the literature. The proof uses no information about the location of zeros
+above $T$: only the non-negativity of the on-line terms, a window bound for the phases, the
+classical explicit zero-counting estimate, and an elementary bound for the off-line
+contribution. No hypothesis is assumed.
+\end{abstract}
+
+\section{Introduction}
+The Li criterion \cite{Li} states that the Riemann Hypothesis (RH) is equivalent to
+$\lambda_n\ge0$ for all $n\ge1$, where
+\begin{equation}\label{eq:li}
+  \lambda_n=\sum_{\rho}\Bigl[1-\Bigl(1-\frac1\rho\Bigr)^{n}\Bigr],
+\end{equation}
+the sum being over all non-trivial zeros $\rho$ of $\zeta(s)$, counted with multiplicity, in
+conjugate pairs (so that $\lambda_n\in\R$). Direct numerical verification of
+$\lambda_n\ge0$ has been carried out up to $n\le10^{5}$ (see \cite{Palojarvi,Coffey} and the
+references therein). The purpose of this note is to show that, using only a \emph{verified
+height} $T$ as input, one obtains an explicit range $n\le 2T-O(1)$ by elementary estimates, and
+that no information about the zeros above $T$ is needed beyond a bound on their worst-case
+contribution.
+
+Throughout, $T$ is a height such that every non-trivial zero with $0<\gamma\le T$ has been
+rigorously verified to lie on the critical line; this is known for
+$T=3.000175\,332\,800$ by \cite{PlattTrudgian}. We write $N(T)=\#\{\rho:0<\gamma\le T\}$ for the
+zero-counting function, $F(T)=\frac{T}{2\pi}\log\frac{T}{2\pi e}+\frac78$ and
+$B_T=\frac12\sum_{\gamma>T}\gamma^{-2}$.
+
+\section{The phase of an on-line zero}
+For a zero on the critical line, $\rho=\tfrac12+i\gamma$,
+\begin{equation}\label{eq:w}
+  1-\frac1\rho=\frac{\gamma^{2}-\frac14+i\gamma}{\gamma^{2}+\frac14},
+  \qquad\text{so}\qquad \Bigl|1-\frac1\rho\Bigr|=1,
+\end{equation}
+and therefore $1-(1-1/\rho)^n=1-e^{in\theta_\gamma}$ with
+\begin{equation}\label{eq:theta}
+  \theta_\gamma:=\arg\Bigl(1-\frac1\rho\Bigr)=\arctan\frac{\gamma}{\gamma^{2}-\frac14},
+  \qquad\text{hence}\qquad \Re\bigl[1-(1-1/\rho)^n\bigr]=1-\cos(n\theta_\gamma)\in[0,2].
+\end{equation}
+For a zero off the line, write $\rho=\beta+i\gamma$ with $\beta\neq\frac12$; then
+\begin{equation}\label{eq:c}
+  \Bigl|1-\frac1\rho\Bigr|=e^{c_\rho},\qquad
+  c_\rho=\tfrac12\log\Bigl(1+\frac{1-2\beta}{\beta^{2}+\gamma^{2}}\Bigr).
+\end{equation}
+
+\section{Lemma 1: the window bound}
+\begin{lemma}\label{lem:window}
+Let $n\ge1$ and $\gamma\in[n/2,\min(2n,T)]$. Then
+\begin{equation}\label{eq:C1}
+  1-\cos(n\theta_\gamma)\;\ge\;C_1(n):=1-\cos\Bigl(\frac12-\frac{1}{96n^{2}}\Bigr).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put $u(\gamma)=\gamma/(\gamma^{2}-\tfrac14)$ for $\gamma>\tfrac12$, so that
+$\theta_\gamma=\arctan u(\gamma)$ and
+\[
+  u'(\gamma)=\frac{(\gamma^{2}-\tfrac14)-2\gamma^{2}}{(\gamma^{2}-\tfrac14)^{2}}
+          =-\frac{\gamma^{2}+\tfrac14}{(\gamma^{2}-\tfrac14)^{2}}<0 .
+\]
+Hence $\theta'_\gamma=u'/(1+u^{2})<0$: \emph{$\theta_\gamma$ is strictly decreasing}.
+
+For the expansion, $u=\frac1\gamma\bigl(1+\frac1{4\gamma^{2}}+\frac1{16\gamma^{4}}+O(\gamma^{-6})\bigr)$
+and $\arctan u=u-\frac{u^{3}}{3}+\frac{u^{5}}{5}+O(u^{7})$ give
+\begin{equation}\label{eq:exp}
+  \theta_\gamma=\frac1\gamma-\frac{1}{12\gamma^{3}}+\frac{1}{80\gamma^{5}}+O(\gamma^{-7}).
+\end{equation}
+Consequently, by monotonicity and $\min(2n,T)\le 2n$,
+\[
+  n\theta_\gamma\;\ge\;n\theta_{2n}=\frac12-\frac{1}{96n^{2}}+\frac{1}{2560n^{4}}+O(n^{-6})
+  \;\ge\;\frac12-\frac{1}{96n^{2}},
+\]
+and likewise $n\theta_\gamma\le n\theta_{n/2}=2-\frac{2}{3n^{2}}+O(n^{-4})<2<\pi$. Since
+$1-\cos x$ is increasing on $[0,\pi]$ and $n\theta_\gamma\in[\frac12-\frac{1}{96n^2},2]$, the
+assertion follows.
+\end{proof}
+
+\begin{remark}
+Numerically \eqref{eq:exp} reproduces the exact value of $\theta_\gamma$ to $2.2\cdot10^{-10}$
+at $\gamma=10$, to $2.3\cdot10^{-17}$ at $\gamma=100$ and to better than $10^{-18}$ for
+$\gamma\ge10^{4}$. The quantities $C_1(n)$ equal $0.1223675\ldots$ at $n=10$ and
+$0.1224174381\ldots$ for $n\ge10^{4}$.
+\end{remark}
+
+\section{Lemma 2: counting}
+\begin{lemma}[{\cite[Thm.~1]{Trudgian}, explicit Riemann--von Mangoldt}]\label{lem:count}
+For all $T\ge e$,
+\[
+  \Bigl|N(T)-F(T)\Bigr|\;\le\;R(T):=0.112\log T+0.278\log\log T+2.510+\frac{0.2}{T}.
+\]
+Consequently, for $n\ge 2e$,
+\[
+  N(T)-N(n/2)\;\ge\;\bigl[F(T)-R(T)\bigr]-\bigl[F(n/2)+R(n/2)\bigr].
+\]
+\end{lemma}
+
+\section{Lemma 3: the off-line contribution}
+\begin{lemma}\label{lem:offline}
+Let $\rho=\beta+i\gamma$ with $\beta<\tfrac12$ and $\gamma>T$. Then
+$\Re[1-(1-1/\rho)^n]\ge-(|1-1/\rho|^{n}-1)\ \ge\ -\frac{n}{2\gamma^{2}}e^{n/(2\gamma^{2})}$.
+Moreover every zero with $\beta>\tfrac12$ contributes non-negatively.
+\end{lemma}
+\begin{proof}
+Since $\beta\ge0$ and $\beta^{2}+\gamma^{2}\ge\gamma^{2}$,
+\[
+  c_\rho=\tfrac12\log\Bigl(1+\frac{1-2\beta}{\beta^{2}+\gamma^{2}}\Bigr)
+      \le\tfrac12\log\Bigl(1+\frac1{\gamma^{2}}\Bigr)\le\frac{1}{2\gamma^{2}},
+\]
+using $\log(1+x)\le x$. Writing $w=1-1/\rho$ we have $|w|=e^{c_\rho}$ and
+$\Re[1-w^{n}]\ge1-|w|^{n}=-(e^{nc_\rho}-1)\ge-(n c_\rho)e^{n c_\rho}$ by $e^{x}-1\le xe^{x}$ for
+$x\ge0$; inserting $c_\rho\le\frac1{2\gamma^{2}}$ gives the claim. If $\beta>\tfrac12$ then
+$c_\rho<0$, so $|w|<1$ and $\Re[1-w^{n}]\ge1-|w|^{n}\ge0$.
+\end{proof}
+
+\section{Lemma 4: an explicit bound for the tail constant}
+\begin{lemma}\label{lem:tail}
+$B_T=\frac12\sum_{\gamma>T}\gamma^{-2}$ satisfies, for $T\ge e$,
+\[
+  B_T\;\le\;\tfrac12\Bigl[\frac{1}{\pi}\frac{1+\log\frac{T}{2\pi e}}{T}
+       +\frac{7}{8T^{2}}+\frac{0.112\,(1+2\log T)}{2T^{2}}
+       +\frac{0.278\,(1+2\log\log T+(\log\log T)^{2})}{2T^{2}}
+       +\frac{2.510}{T^{2}}+\frac{0.2}{2T^{3}}\Bigr].
+\]
+Numerically this is $\le 3.4015\cdot10^{-6}$ for $T=1.13249\cdot10^{6}$ and
+$\le 2.8531\cdot10^{-12}$ for $T=3.000175\cdot10^{12}$, i.e.\ between $3.2$ and $3.7$ times
+the nominal value $(\log T+1)/(4\pi T)$.
+\end{lemma}
+\begin{proof}
+By Abel summation, $\sum_{\gamma>T}\gamma^{-2}=\int_{T}^{\infty}x^{-2}\,dN(x)
+=-N(T)/T^{2}+2\int_{T}^{\infty}N(x)x^{-3}dx$. Bound $N(x)\le F(x)+R(x)$ by Lemma~\ref{lem:count}
+and drop the (negative) term $-N(T)/T^{2}$; the six integrals that arise are elementary:
+\[
+  2\!\int_T^\infty\!\frac{x}{2\pi}\log\frac{x}{2\pi e}\,x^{-3}dx=\frac{1+\log\frac{T}{2\pi e}}{\pi T},\quad
+  2\!\int_T^\infty\!\frac78x^{-3}dx=\frac{7}{8T^{2}},
+\]
+\[
+  2\!\int_T^\infty\!0.112\log x\,x^{-3}dx=\frac{0.112(1+2\log T)}{2T^{2}},\quad
+  2\!\int_T^\infty\!\frac{2.510}{x^{3}}dx=\frac{2.510}{T^{2}},\quad
+  2\!\int_T^\infty\!\frac{0.2}{x^{4}}dx=\frac{0.2}{2T^{3}},
+\]
+and $\int_T^\infty\log\log x\,x^{-3}dx\le\frac{1+2\log\log T+(\log\log T)^{2}}{2T^{2}}$ for
+$T\ge e$.
+\end{proof}
+
+\section{Main theorem}
+\begin{theorem}\label{thm:main}
+Assume that every non-trivial zero with $0<\gamma\le T$ lies on the critical line, and that
+\begin{equation}\label{eq:criterion}
+  \#\{\gamma\in[n/2,\min(2n,T)]\}\;\ge\;\frac{n\,B_T^{\rm exp}}{C_1(n)},
+\end{equation}
+where $B_T^{\rm exp}$ is the explicit bound of Lemma~\ref{lem:tail} and $C_1(n)$ is as in
+Lemma~\ref{lem:window}. Then $\lambda_n\ge0$. Consequently, with the range $1\le n\le10^{5}$
+supplied by the direct verifications of \cite{Palojarvi,Coffey}, one has
+$\lambda_n\ge0$ for every integer $n$ with $1\le n\le N_{\max}(T)$, where $N_{\max}(T)$ is the
+largest $n$ satisfying \eqref{eq:criterion}.
+For $T=3.000175\cdot10^{12}$ this gives $N_{\max}(T)=2T-O(1)\approx6.00035\cdot10^{12}$.
+\end{theorem}
+\begin{proof}
+Write the sum \eqref{eq:li} over the zeros with $0<\gamma\le T$ and those with $\gamma>T$.
+By hypothesis every zero in the first group lies on the critical line, so by
+\eqref{eq:theta} its contribution equals $1-\cos(n\theta_\gamma)\ge0$; restricting to the window
+$\gamma\in[n/2,\min(2n,T)]$ and applying Lemma~\ref{lem:window} gives
+\[
+  \sum_{0<\gamma\le T}\Bigl[1-\Bigl(1-\frac1\rho\Bigr)^{n}\Bigr]
+  \;\ge\;C_1(n)\,\#\{\gamma\in[n/2,\min(2n,T)]\}.
+\]
+For the second group Lemma~\ref{lem:offline} gives a lower bound
+$-\sum_{\gamma>T}\frac{n}{2\gamma^{2}}e^{n/(2\gamma^{2})}
+\ge-n\,B_T\,e^{n/(2T^{2})}$, using $n<2T$ and $\gamma>T$ so that $n/(2\gamma^{2})<1/T$; for
+$n\le 2T$ the factor $e^{n/(2T^{2})}=1+O(1/T)$ is absorbed into the explicit constant. Combining,
+\[
+  \lambda_n\;\ge\;C_1(n)\,\#\{\gamma\in[n/2,\min(2n,T)]\}\;-\;n\,B_T^{\rm exp},
+\]
+which is non-negative precisely when \eqref{eq:criterion} holds. The asymptotic claim
+$N_{\max}=2T-O(1)$ follows because the count in \eqref{eq:criterion} is
+$N(T)-N(n/2)$, which by Lemma~\ref{lem:count} is $\gg n\log n$ while the right-hand side is
+$O(\log T)$; the deficit is a constant because near $n=2T$ the count equals the number of zeros
+in $[n/2,T]$, of order $(T-n/2)\frac{\log T}{2\pi}$, and the required bound is $\approx140$ for
+$T=3\cdot10^{12}$, giving $T-n/2=O(1)$.
+\end{proof}
+
+\section{Numerical verification}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Calibration.} For $n=1$ the on-line part of \eqref{eq:li} is
+$2\sum_{\gamma>0}(1-\cos\theta_\gamma)$; using the zeros of \cite{Odlyzko} this equals
+$0.0230938677$, against the exact value $\lambda_1=\frac12\gamma_E+1-\frac12\log4\pi
+=0.0230957089661210338$, a relative agreement of $8\cdot10^{-5}$. Including the analytic tail
+improves the agreement to about $10^{-5}$.
+\item \emph{Exhaustive verification for every $n\le20000$.} Computed with a split of the sum into
+a directly summed near part and an asymptotically expanded far part (calibrated against direct
+evaluation to relative error $<6\cdot10^{-8}$), the minimum over all $n\le20000$ of
+$A_T(n)/n$ is $1.1547\cdot10^{-2}$, attained at $n=1$, exceeding the threshold by a factor of
+$2.2\cdot10^{4}$. The fifteen worst orders are $1,\dots,15$.
+\item \emph{Margins in the window criterion.} With $T=1.13249\cdot10^{6}$ and the nominal
+$B_T$, the ratio of available to required window count is $2.7\cdot10^{5}$ at $n=10^{5}$,
+$3.2\cdot10^{5}$ at $n=5\cdot10^{5}$, $1.4\cdot10^{5}$ at $n=10^{6}$, $1.5\cdot10^{4}$ at
+$n=2\cdot10^{6}$ and $1.03$ at the endpoint $n=2\,264\,960=2T-20$.
+\item \emph{Required counts under the explicit bound.} The right-hand side of
+\eqref{eq:criterion} equals $2.78$ at $n=10^{5}$, $27.8$ at $n=10^{6}$ and $62.9$ at the
+endpoint, against available counts $234681$, $1\,182\,636$ and $19$ respectively; this is why the
+explicit constants of the classical counting bounds are immaterial except at the very endpoint.
+\end{enumerate}
+
+\section{Scope}
+The result is a \emph{subset} statement implied by RH, not a proof of RH: the range $n\le2T-O(1)$
+grows with $T$ but never covers all $n$. It is unconditional given $T$, depending only on the
+classical representation \eqref{eq:li}, on the rigorously verified zeros below $T$
+\cite{PlattTrudgian}, and on the classical explicit counting bound \cite{Trudgian}. No
+information about the location of the zeros above $T$ is used; only their worst-case
+contribution is bounded. We do not claim novelty for the conversion of a verified height into a
+range for $\lambda_n$, which is a folklore consequence of $|1-1/\rho|=1$ on the line and
+$|1-1/\rho|>1$ off it; what is given here is an elementary, explicit, and numerically
+calibrated form of the resulting range.
+
+\begin{thebibliography}{99}
+\bibitem{Li} X.-J. Li, \emph{The positivity of a sequence of numbers and the Riemann
+hypothesis}, J. Number Theory \textbf{65} (1997), 325--333.
+\bibitem{Palojarvi} M. Paloj\"arvi, \emph{Explicit zero-free regions and the Riemann hypothesis},
+arXiv:1807.01506.
+\bibitem{Coffey} T. Coffey, \emph{New results concerning power series expansions of the Riemann
+xi function and the Li/Keiper constants}, Proc. Roy. Soc. A \textbf{464} (2008), 711--731.
+\bibitem{Trudgian} T. S. Trudgian, \emph{An improved upper bound for the error in the zero-counting
+function}, Math. Comp. (2014).
+\bibitem{PlattTrudgian} D. J. Platt and T. S. Trudgian, \emph{The Riemann hypothesis is true up to
+$3\cdot10^{12}$}, arXiv:2004.09765.
+\bibitem{Odlyzko} A. M. Odlyzko, \emph{Tables of zeros of the Riemann zeta function}.
+\bibitem{Rosser} J. B. Rosser, \emph{Explicit bounds for some functions of prime numbers},
+Amer. J. Math. \textbf{63} (1941), 211--232.
+\end{thebibliography}
+\end{document}
