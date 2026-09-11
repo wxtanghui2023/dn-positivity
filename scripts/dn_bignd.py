@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # CRITICAL: n·D_n at large n (100..60000). Does it stay > 0? Does C(n) really wander?
 import numpy as np
 from scipy import integrate

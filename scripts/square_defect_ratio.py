@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 第三层：平方映射缺陷——尺度商 x = a/b 上的归一化结构
 # K_s(a,b) = (a+b)^{-2s} - a^{-2s} - b^{-2s}
 # 用 x = a/b 归一化：K_s(a,b) / b^{-2s} = (x+1)^{-2s} - x^{-2s} - 1

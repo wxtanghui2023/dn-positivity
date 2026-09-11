@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # INDEPENDENT verification of M(T) = ∫₀^T S(u)du
 # Method 1: M(T) = Σ_{γ≤T}(T-γ) - ∫₀^T(θ/π+1)du   (sum of distances - smooth integral)
 # Method 2: mean/distribution of S(γ_k) for all 100k zeros

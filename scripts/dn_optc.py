@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Option C experiment: normalized test functions g_n(t) = (1/n)·h(t/n)
 # Then D_n = ∫g_n dS = Σg_n(γ) - (1/π)∫θ'g_n = -∫S g_n'  (integration by parts)
 # |S(t)| = O(log t)  =>  |D_n| ≤ ∫|S||g_n'| ~ O(log n / n)  =>  n·D_n = O(log n), NOT linear

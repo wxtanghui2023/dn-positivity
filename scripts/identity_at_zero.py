@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 层间作用：恒等式 ζ'/ζ(s) = χ'/χ(s) - ζ'/ζ(1-s) 在零点附近
 import mpmath as mp
 mp.mp.dps = 15

@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 攻：约束（Σ v_n = 0——零点——）⟹ σ=1/2
 # 思路：约束 + 运动方程（v_n 如何随 σ 变化）——看能否推出 σ=1/2
 # 约束：1 + Σ_{n≥2} n^{-ρ} = 0（ρ = σ+it——零点——）

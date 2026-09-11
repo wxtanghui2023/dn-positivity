@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # D_n = ∫ g_n dS = Σ_γ g_n(γ) - (1/π)∫ θ'(t) g_n(t) dt
 # g_n(t) = sin(n θ(t))/t, θ = Riemann-Siegel theta (continuous branch via loggamma)
 # Robust integral: u = θ(t) substitution -> Fourier integrals handled by quad(weight='sin')
@@ -124,6 +130,6 @@ for n in ns:
     print(f"n={n:5d}:  Σg_n(γ)={gamma_sum:+.8f}  -(1/π)∫θ'g_n={-theta_integral:+.8f}  "
           f"D_n={D_n:+.8f}  n·D_n={n*D_n:+.6f}   (int err {eI:.1e})", flush=True)
 
-with open('/tmp/dn_results.json', 'w') as f:
+with open('scripts/dn_results.json', 'w') as f:
     json.dump(results, f, indent=1)
 print("\nsaved /tmp/dn_results.json", flush=True)

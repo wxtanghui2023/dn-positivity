@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # AXD: Arithmetic Exchange Defect
 # σ: 素因子中 p<->q 互换 (乘法同态, 非加法同态)
 # 加法关系 a+b=c 在交换 p,q 乘法角色后保持 iff σ(a)+σ(b) = σ(c)

@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Check the analytic integral claim carefully for ALL n
 # θ=π-2arctan(2t), t=½cot(θ/2), 1/(1/4+t²)=2(1-cosθ), t/(1/4+t²)=sinθ
 # ∫₀^∞ θ'g_n dt = ∫_π^0 [sinθ·sin(nθ) + 2(1-cosθ)·0.5·cos(nθ)]dθ  [dt=dθ/θ', θ'dt=dθ]

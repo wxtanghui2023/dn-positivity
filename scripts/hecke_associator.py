@@ -1,3 +1,9 @@
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Hecke associator: exact check of (T_m T_n) T_l vs T_m (T_n T_l)
 # Product rule: T_m T_n = sum_{d | gcd(m,n)} d^{k-1} T_{m n / d^2}   (trivial character)
 from math import gcd

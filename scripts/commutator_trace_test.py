@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Arithmetic noncommutative defect: [A,M] commutator trace 测试
 # (Af)(n) = Σ_{p<=N-n} Λ(p)f(n+p)  加法迁移 (严格增: n -> n+p)
 # (Mf)(n) = Σ_{p<=N/n} Λ(p)f(np)    乘法迁移 (严格增: n -> np, p>=2)

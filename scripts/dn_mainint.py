@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # D_n = Σ_k 2sin((n+1/2)θ_k)·sin(θ_k/2), θ_k ≈ 1/γ_k
 # Smooth approx: D_n ≈ (1/2π)∫_{γ₁}^∞ 2sin((n+1/2)/γ)·sin(1/(2γ))·log(γ/2π) dγ
 # u = (n+1/2)/γ: = (1/2π)∫_0^{u_max} 2sin(u)sin(u/(2n+1))·log((n+1/2)/(2πu))·(n+1/2)/u² du

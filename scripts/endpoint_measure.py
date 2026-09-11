@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 多高度终点测量：12 个零点（γ 14→90）——验证 β(X) ≈ ½ − c/X（截距 = ½——终点常数？）
 # c(γ) = −Re[ζ(ρ−1)/ζ'(ρ)]（精确公式——已验证 4 个——）
 # β(X=1000) 数值（平滑截断——）vs 预测 ½ − c/1000——残差小 ⟹ 截距 ½

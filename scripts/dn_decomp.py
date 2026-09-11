@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Exact decomposition of n·D_n to locate the "1":
 # n·D_n = Σ_γ sinc(γ/n) - (1/π)∫₀^∞ θ'(t)sinc(t/n)dt
 # Using N(T) = (1/π)θ(T) + 1 + S(T), split at first zero γ₁:

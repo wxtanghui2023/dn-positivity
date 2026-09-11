@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # P51-T3 representation 层测试 3 (修正): 逃逸的 ψ 偏差尺度 + 多逃逸累积
 # 问题: (1) 单高零点逃逸的 ψ 偏差尺度 (2) 多个逃逸是否累积 (3) 中间尺度是否有 relation 排除
 import numpy as np

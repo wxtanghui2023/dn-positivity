@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Euclidean Cocycle: Tr(P_s^k) 结构测试
 # P_s f(x) = Σ_n Λ(n)(n+x)^{-2s} f(1/(n+x))
 # Tr(P_s^k) = Σ_{周期k连分数} Π_j Λ(n_j)(n_j+x_j)^{-2s} / |1-(T^k)'(x)|

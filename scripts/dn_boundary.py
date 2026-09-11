@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Answer the boundary-term question rigorously:
 # 1. g_n(0) = 2(-1)^n? (user's claim)
 # 2. Document θ: (1/π)∫θ'_doc g_n ≡ 0  ->  D_n = Σg_n(γ) EXACT (no "other terms" needed)

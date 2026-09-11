@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # C(n) split at fixed T0:  C(n) = main(n) + tail(n)
 # main(n) = Σ_{γ₁<γ≤T0} sinc(γ/n) - (1/π)∫_{γ₁}^{T0} θ'sinc dt  →  S(T0)+θ(γ₁)/π as n→∞
 # tail(n) = ∫_{T0}^∞ sinc(t/n)dS(t)

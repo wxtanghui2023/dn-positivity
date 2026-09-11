@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # δ-生成代数下中心列测试
 # D = <δ_2, δ_3>, δ_p(n) = (n - n^p)/p
 # 下中心列: D^(1)=D, D^(k+1)=[D, D^(k)] (交换子 = 函数组合差)

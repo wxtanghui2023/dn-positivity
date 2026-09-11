@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Affine prime dynamics CRT/representation factorization test
 # T_p(x) = px+1 mod q (primorial q) — U_p 置换表示
 # Tr(U_s^k) = Σ_words (ΠΛ(p_j)/p_j^s) · N_q(P,B), N_q = #{x: T_word(x)=x}

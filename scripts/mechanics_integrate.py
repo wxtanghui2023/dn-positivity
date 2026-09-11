@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 力学分析：用合规力（自洽方程——）从初始积分零点轨迹——算终点（决定论实现——）
 # dρ/dX = F(ρ,X) = -(∂ζ_X/∂X)/ζ_X'(ρ)——从 X0 积分到 X_large——看 ρ(X)
 import numpy as np

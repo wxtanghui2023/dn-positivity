@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 任务4(a): 无限离轴 ψ 贡献收敛性诊断
 # ψ_off(x) ~ Σ_j x^{δ_j}cos(γ_j log x)/γ_j (近线离轴 σ_j = ½+δ_j, δ_j→0)
 # 测不同 γ_j 分布的收敛/发散

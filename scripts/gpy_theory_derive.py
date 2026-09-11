@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 理论推导: R(k,b,L) 的渐近 + 临界结构
 # R = k·L·(k-1)·B(2b+3,k-1)/((b+1)²·B(2b+1,k))
 # 渐近 (k→∞): R → L·2(2b+1)/(b+1)

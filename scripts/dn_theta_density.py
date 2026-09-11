@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # D_n = Σ_k [cos(nθ_k) - cos((n+1)θ_k)], θ_k = θ(γ_k) strictly decreasing to 0
 # Density analysis: θ_k ≈ uniform-ish? D_n ≈ ∫₀^{θ₁} [cos(nθ)-cos((n+1)θ)] ρ(θ)dθ?
 # ρ(θ)dθ = zero count in dθ: dt/dθ = -(1+4t²)/4, dN/dt ≈ (1/2π)log(t/2π) smooth part

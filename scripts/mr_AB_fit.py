@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 任务3: A,B 显式形式数值推导 - 离轴主导项 I(N) = ∫ Σ(2)·Σ(2)·ζζ/(s(1-s))
 # 检查 |A| ≤ B 约束 - 与 ζ'(ρ) 相位/大小的关系
 import numpy as np

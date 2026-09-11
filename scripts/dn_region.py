@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # NEW: split D_n by phase region
 # D_n = Σ 2sin(φ_k)sin(θ_k/2), φ_k = (n+½)θ_k
 # POSITIVE region: φ_k < π (θ_k < π/(n+½), γ_k > (n+½)/π) - all terms positive

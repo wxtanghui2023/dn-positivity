@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # THE BIG ONE: g_n(t) = cos(nθ(t)) - cos((n+1)θ(t)) ?!
 # If true: D_n = Σ_γ [cos(nθ_k) - cos((n+1)θ_k)] = telescoping structure
 # θ_k = θ(γ_k) = π - 2arctan(2γ_k), decreasing from θ₁≈0.0707 to 0

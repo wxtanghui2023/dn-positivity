@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # CRITICAL: verify mean(S(γ_k)) = 1/2 is an ANALYTIC IDENTITY
 # Claim: S(γ_k) = k - θ(γ_k)/π - 1, and Σ_{k=1}^K S(γ_k) = K/2 + (known correction)
 # Test the identity: Σ_{k=1}^K [S(γ_k) - 1/2] vs boundary terms θ(γ_K)/π - K - 1/2...

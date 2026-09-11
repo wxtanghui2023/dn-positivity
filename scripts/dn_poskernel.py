@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # KEY IDEA: C(n) = ∫ sinc(t/n)dS(t). Can we write it as convolution with a POSITIVE kernel?
 # If S(t) = N(t) - θ(t)/π - 1, then dS = dN - θ'/π dt.
 # C(n) = Σ sinc(γ_k/n) - (1/π)∫ θ'(t)sinc(t/n)dt  [over γ ≥ γ1]

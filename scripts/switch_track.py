@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 改进的切换过程验证：追踪"同一个零点"随 N 的连续轨迹（continuation）
 # 用 N 的零点作为 N+1 的初始猜测——看 β(N), γ(N) 轨迹——是否趋近 ζ 的零点（β=½）
 import mpmath as mp

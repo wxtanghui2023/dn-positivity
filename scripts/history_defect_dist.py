@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 最小 history algebra: rewrite 距离 d(H1,H2)
 # 项 = 算术表达式 (数字原子 + 二元 +,×)
 # rewrite (可逆): 结合律 (+ 与 ×) 可选分配律

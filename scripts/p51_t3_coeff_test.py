@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # P51-T3 representation 层测试 2: 系数层 + 计数检查
 # 逃逸配置的系数 a_n (Mellin 反演 - 显式公式差分) vs von Mangoldt Λ(n)
 # 计数 N_W(T) vs N_ζ(T)

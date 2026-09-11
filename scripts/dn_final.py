@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # FINAL CLOSING: verify Main_pos asymptotics precisely
 # Main_pos ≈ (1/2π)[Si(π)·log((n+½)/2π) - C₁], C₁ = ∫₀^π sin(u)log(u)/u du
 # Then D_n = Main_pos + D_neg ≥ c₁·log n - (log n)/π² with c₁ = Si(π)/(2π) ≈ 0.2947

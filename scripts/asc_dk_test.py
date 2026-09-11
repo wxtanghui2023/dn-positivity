@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # ASC: 加法-乘法尺度曲率 D_k(q,n) = det(A(q^{i+j}n))_{0<=i,j<=k}
 # D1 = A(n)A(q²n) - A(qn)²  (2x2 Hankel)
 # D2 = 3x3 Hankel

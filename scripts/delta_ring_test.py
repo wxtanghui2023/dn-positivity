@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # δ-环跨素数测试: p-导子 δ_p(n) = (n - n^p)/p 的交换子
 # 检查: δ_pδ_q(n) - δ_qδ_p(n) 是否 = pq 的乘法函数(平凡/C8) 或 n 的非平凡函数(新)
 def delta(p, n):

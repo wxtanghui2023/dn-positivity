@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Resolve the sawtooth inconsistency: why Σ(S(γ_k)-1/2)·spacing = -6003 but M(T) ≈ O(1)?
 # Hypothesis: the sawtooth integral over (γ_k, γ_{k+1}) is NOT (S(γ_k)-1/2)·spacing
 # because θ/π increases NON-linearly. Correct integral:

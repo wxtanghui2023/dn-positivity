@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # GPY/Maynard 概念复现 (小规模)
 # 关键比率: R(F) = k·J(F)/I(F)  (经典 BV 情形 - c1=c2=0)
 # I(F) = ∫_{Δ_k} F², Δ_k = {t_i≥0, Σt_i≤1}

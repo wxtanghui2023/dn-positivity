@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Affine groupoid primitive word 测试
 # 生成元: D_p (n->pn, p素数), T (n->n+1) — 关系 D_pT = T^p D_p (分配律)
 # 词作用 = n -> an+b。检查:

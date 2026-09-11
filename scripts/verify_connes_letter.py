@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 验证 Connes 2026 "Letter" 的核心数值声称:
 # 极小化 Weil 二次型 Q(φ) (素数≤13), 得到 η, Mellin 变换零点逼近 ζ 零点
 # Q(φ) = Σ_v W_v(ψ), ψ(v) = ∫φ(u)φ(uv)du/u

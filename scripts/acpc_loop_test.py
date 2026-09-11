@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # ACPC A×M×A 闭环不变量——L_k 链计算 + κ 连通量
 # L1 = Σ_{qm<=X} Λ(q)Λ(m) A(qm) A(m)
 # L2 = Σ_{q1 q2 m<=X} Λ(q1)Λ(q2)Λ(m) A(q1q2m) A(q2m) A(m)

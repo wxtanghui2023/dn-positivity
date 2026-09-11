@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Stadlmann 参数 slack 检查: 条件 (I)(II)(III) of Proposition 3
 # 参数: A_n=0.253 (A的上界), δ=0.028, ξ1=0.38, ξ2=ξ3=0.4, ε=0.0075, ϵ=1e-10
 An = 0.253

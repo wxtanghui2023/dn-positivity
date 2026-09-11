@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Perturbation test: high-order A_k expansion coefficients at gamma1, epsilon-scan.
 # On-line prediction: A_k * eps^k = (-1)^(k+1)/k  (no flip for any eps>0)
 # If off-axis delta>0: flip at eps=delta for ALL k consistently.

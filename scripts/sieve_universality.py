@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 运动机制深入：不同"筛/平滑"的零点运动——终点普适性？
 # 筛的变体：①指数 e^{-n/X} ②高斯 e^{-(n/X)^2} ③幂 e^{-(n/X)^0.5}
 # 每种筛——追踪 γ1 零点随"尺度参数"的运动——看终点（是否都 ½——）

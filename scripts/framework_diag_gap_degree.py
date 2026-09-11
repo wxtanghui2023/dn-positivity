@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 框架诊断: gap ↔ tuple 数 ↔ 多项式度的关系
 # 已知数据点 (GPY/Maynard/Polymath/Stadlmann):
 #   Maynard 600 (度 1 类 - 基础), Polymath 246 (度 27 - 50-tuple), Stadlmann 240 (度 21 - 49-tuple)

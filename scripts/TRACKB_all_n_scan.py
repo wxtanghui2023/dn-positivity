@@ -60,7 +60,7 @@ print("  15 worst n (smallest A(n)/n):", list(map(int,worst)))
 print("  corresponding A(n)/n       :", ["%.3e"%rat[n-1] for n in worst])
 print()
 print("  A(n)/N at selected n:", {n: round(vals[n]/N,4) for n in (1,10,100,1000,5000,10000,NMAX) if n<=NMAX})
-np.save('/tmp/trackB_vals.npy', vals)
+np.save('scripts/trackB_vals.npy', vals)
 print()
 print("="*94); print("READ-OFF"); print("="*94)
 print("""  * if min_n A(n)/n over ALL n <= NMAX still exceeds the threshold B_T/2 by a large factor,

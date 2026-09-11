@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # BNBD 通道测试 1: 真实 ζ 的 d_N² 基线 (在线)
 # d_N² = (1/2π)∫|1-ζ(½+it)V_N(½+it)|² dt/(¼+t²)
 # V_N(s) = Σ_{n≤N} (1-logn/logN)μ(n)/n^s (Bettin-Conrey-Farmer 最优)

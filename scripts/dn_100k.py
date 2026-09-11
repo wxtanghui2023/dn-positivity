@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Option C verification with 100k Odlyzko zeros
 # g_n(t) = sin(t/n)/t, RS theta, D_n = Σg_n(γ) - (1/π)∫θ'g_n
 # Key: n·D_n should stay ≈ 1.001 for n well below γ_max

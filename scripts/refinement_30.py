@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # n=30 的 refinement 系统: 找最小非平凡环, 测可填平性
 # 节点 = 30 的部分分解 (multiset, 无序); 边 = 一步拆分(合数->两因子) 或 合并(两因子->积)
 from collections import defaultdict

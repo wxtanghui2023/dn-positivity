@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 细扫描 γ₀: A/B = f(γ₀) 的形状 - 是否总 <1? 标度 (A~1/γ₀²?)
 import numpy as np
 from mpmath import fp as mpf

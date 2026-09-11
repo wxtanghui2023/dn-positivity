@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # ACPC 最小模型骨架测试
 # 最小 incidence: a+b = qm = n
 # C(X) = Σ_{a+b=qm≤X} Λ(a)Λ(b)Λ(q)Λ(m) = Σ_n A(n)·M(n)

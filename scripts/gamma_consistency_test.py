@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Γ(X,h) 二维一致性场——跨尺度残差结构测试
 # T_h(X) = #{p<=X: p, p+h prime}
 # Γ_X(h) = |T_h(X)| / (S(h)·Li₂(X)), S(h)=奇异级数

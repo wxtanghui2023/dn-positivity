@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # CRITICAL: determine B_j growth law |B_j| ~ j^α?
 # If |B_j| ~ √j (random walk) -> path A works, neg contribution = O(1)
 # If |B_j| ~ j (linear) -> need finer structure

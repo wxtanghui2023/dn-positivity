@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 整数加乘交换缺陷谱 —— T1/T2 测试
 # K_N[m,n] = Σ_k C_add(m,k)·C_mul(n,k)  (J: 加法行与乘法行共享整数 k -> 1)
 # K_N(s) = D(s)* K D(s),  D(s) = diag(n^{-s})

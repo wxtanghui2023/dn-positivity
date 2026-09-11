@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Decisive experiment with the DOCUMENT's theta: θ(t) = π - 2·arctan(2t)
 # g_n(t) = sin(nθ(t))/t ;  D_n = Σ_γ g_n(γ) - (1/π)∫_0^T θ'(t) g_n(t) dt
 import numpy as np

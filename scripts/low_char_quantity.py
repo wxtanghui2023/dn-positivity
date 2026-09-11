@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Low-region characteristic-quantity analysis: A1/A2 of log-xi expansion at each low zero.
 # A_k(gamma0, eps): expansion of log xi(1/2 + z0 + w), z0 = i*gamma0 + eps.
 # On-line zero at gamma0: A1 ~ +1/eps (positive), A2 ~ -1/(2 eps^2).

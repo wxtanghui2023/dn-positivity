@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 平方线索第一轮：a+b=c 在 F₂ parity 层（v_p mod 2）上的转移律
 # ε_p(n) = v_p(n) mod 2——数 (a,b) 的 (ε(a), ε(b), ε(a+b)) 分布——看尺度稳定不变量
 import numpy as np

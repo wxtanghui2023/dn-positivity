@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Document definitions: θ=π-2arctan(2t), g_n=[t sin(nθ)+0.5cos(nθ)]/(1/4+t²)
 # ANALYTIC: ∫₀^∞ θ'g_n dt = 0 for n≥1 (verified below numerically)
 # So D_n = Σ_γ g_n(γ) directly!

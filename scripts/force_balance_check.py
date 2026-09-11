@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 验证：ζ_X(s) = Σ n^{-s} e^{-n/X} 的零点（临界带内）是否都在 β < ½？
 # 力的平衡命题：零点集在左侧（β<½）——从不越过 ½
 import numpy as np

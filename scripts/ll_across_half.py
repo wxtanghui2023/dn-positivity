@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # ζ'/ζ（素数运动）沿 σ 穿过 σ=1/2——多高度（零点 vs 非零点——）——看 σ=1/2 是否普适特征
 import mpmath as mp
 mp.mp.dps = 12

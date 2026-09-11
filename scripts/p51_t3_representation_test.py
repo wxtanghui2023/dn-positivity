@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # P51-T3 representation 层测试: FE 自洽逃逸配置是否违反算术 relations
 # 问题: 移动高零点离轴 δ (完整 FE 四重奏) - 是否被 relations 排除?
 # relations 检查: (1) ψ 匹配 (2) 零点计数 N(T) (3) 截断矩 Σρ^{-k} (4) 显式公式系数

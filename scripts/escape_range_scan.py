@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 逃逸范围缩小分析: Maier-Rassias 签名 N^{2δ} 的检测阈值
 # 逃逸零点 (σ₀=½+δ, γ₀) 的 d_N² 签名 ~ N^{2δ}·A(γ₀)/log²N, A ~ 1/γ₀²
 # 检测需要 N^{2δ}/γ₀² ≳ 在线基线 C/log N → N* ~ (γ₀²·C/log N*)^{1/(2δ)}

@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # GPY/Maynard 概念复现 (闭式修正版)
 # 支撑 Δ_k(L) = {t_i≥0, Σt_i ≤ L} (L=1/4 对 BV - 分布水平 θ 相关)
 # F_b(t) = (L - Σt_i)^b

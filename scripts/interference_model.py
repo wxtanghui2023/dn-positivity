@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # Verify interference model: Re(A1)*eps = 1 + eps^2 * sum_{j!=0} 1/(eps^2 + (gamma_j-gamma_0)^2)
 # If deviation is pure interference (all zeros on-line), prediction should match numerics.
 import numpy as np

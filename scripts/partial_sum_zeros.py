@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # "切换过程"实验：部分和 ζ_N(s) = Σ_{n<=N} n^{-s} 的零点——N 增大——零点实部如何移动？
 # 问题：正整数的离散和（X 轴）→ 零点的"切换"——β 的轨迹是否揭示 β=½ 的选择？
 import mpmath as mp

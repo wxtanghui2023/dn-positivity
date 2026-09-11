@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 速度的变量分析：零点轨迹运动 vs 约束
 # 问题1：速度受哪几个变量影响？
 # 问题2：零点约束（Σ v_n = 0）是否控制这些速度变量？

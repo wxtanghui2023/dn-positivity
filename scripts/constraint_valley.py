@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 从零点约束构造减速机制：D(σ,t) = |Σ v_n|（约束偏差——）沿 σ 的谷结构
 # 问题：D 沿 σ 的极小（无条件——每 t——）是否在 σ=1/2？
 # 如果 D 的"谷"在 σ=1/2——约束场把运动"吸"到 1/2（减速停止——）

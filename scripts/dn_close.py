@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # CLOSING: D_pos vs Main. If D_pos ≥ Main_pos ≈ Main, then D_n ≥ (0.216 - 1/π²)log n > 0
 # Verify: (1) Main positive-region integral ≈ Main? (2) D_pos ≈ Main_pos?
 import numpy as np

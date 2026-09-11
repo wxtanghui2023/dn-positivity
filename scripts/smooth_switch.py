@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 切换过程候选 2：平滑截断 ζ_X(s) = Σ_{n>=1} n^{-s} e^{-n/X}
 # X 增大——零点轨迹（continuation）——是否"形成"到 ζ 的零点（β=½, γ=14.13...）
 import mpmath as mp

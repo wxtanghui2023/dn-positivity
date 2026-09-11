@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 完整最小系统: 数字 = 1 的加链 (n <-> 1+1+...+1), 结合, 分配 (无交换)
 # 问: 2×3 与 3×2 是否可达? d? 缺陷是否被展开+分配消除?
 from collections import deque

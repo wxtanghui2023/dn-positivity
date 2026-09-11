@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""
+Provenance: retroactive archive header added 2026-09-11 by scripts/fix_archive_compliance.py
+under the code-archive protocol (docs/PROTOCOL-CODE-ARCHIVE.md, R4).
+The analysis itself was performed earlier; this header only records the file's existence
+in the committed archive so that the computation is reproducible. Original code below.
+"""
 # 决定性计算：算术平移 Gram 几何 G_X(s) 在 ζ_X 零点处的退化测试
 # G_X(s)_{r,q} = Σ_{n≥1} e^{-n/X}(n+r)^{-s}(n+q)^{-s̄}——N×N Gram（半正定——）
 # 测试：零点处是否出现特殊退化（最小特征值 → 0 / det → 0）——对比非零点
