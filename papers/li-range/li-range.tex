@@ -199,6 +199,23 @@ in $[n/2,T]$, of order $(T-n/2)\frac{\log T}{2\pi}$, and the required bound is $
 $T=3\cdot10^{12}$, giving $T-n/2=O(1)$.
 \end{proof}
 
+
+\medskip
+\noindent\textbf{Remark (optimality of the range in $T$).}\label{rem:optimal}
+The ceiling $n\le 2T$ is not an artefact of the estimate for the off-line zeros, and it cannot be
+raised by improving that estimate. Two observations make this precise. First, the phase-window
+argument requires the window $[n/2,\min(2n,T)]$ to lie inside the region where the zeros are known
+to be on the critical line; for $n>2T$ the window degenerates to $[n/2,T]$ and is empty once
+$n/2>T$, so $n\le2T$ is a hard boundary of the method. Second, the two quantities being compared
+are both linear in $n$: the on-line count in the window is of order $(1.5\,n/2\pi)\log n$, while the
+off-line cost is at most $nB_T^{\rm exp}$. The criterion \eqref{eq:criterion} is therefore
+independent of $n$ up to a factor $\log n$, and the off-line term is never the binding
+constraint. Consequently, within this method the range is optimal in $T$, and it can be extended
+only by verifying the hypothesis to a greater height --- a different mechanism, not a sharper
+estimate, would be needed to go beyond it. The companion note \cite{BT26} sharpens the treatment
+of the sum over distant zeros in a different direction, namely for the input inequality of the
+classical converse theorem, but for the reason just given it does not widen the range here.
+
 \section{Numerical verification}
 \begin{enumerate}[label=(\roman*)]
 \item \emph{Calibration.} For $n=1$ the on-line part of \eqref{eq:li} is
@@ -246,5 +263,7 @@ $3\cdot10^{12}$}, arXiv:2004.09765.
 \bibitem{Odlyzko} A. M. Odlyzko, \emph{Tables of zeros of the Riemann zeta function}.
 \bibitem{Rosser} J. B. Rosser, \emph{Explicit bounds for some functions of prime numbers},
 Amer. J. Math. \textbf{63} (1941), 211--232.
+\bibitem{BT26} H.~Tang, \emph{A complete proof of the classical case of Brown's theorem on
+zero-free regions and Li coefficients}, draft, September 2026 (companion note).
 \end{thebibliography}
 \end{document}
