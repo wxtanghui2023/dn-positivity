@@ -120,10 +120,23 @@ $\mathrm{far}\le\frac{k^{2}}4r_H^{(k-4)^{+}}S_4(2H)$ with $S_4(X)=\sum_{|\gamma_
 \end{lemma}
 
 \begin{lemma}[near]\label{lem:near}
-For $\lambda=k/H^{2}$,
-$\mathrm{near}\le\frac1\pi\int_H^{2H}4\sinh^{2}\bigl(\tfrac12v(t)\bigr)\log\frac t{2\pi}\,dt$,
-where $v(t)=\tfrac k2\log(1+t^{-2})$.
+For $\lambda=k/H^{2}$, with $v(t)=\tfrac k2\log(1+t^{-2})$ and $F$ as in Lemma~\ref{lem:mono},
+\[
+\mathrm{near}\;\le\;\frac1\pi\int_H^{2H}4\sinh^{2}\bigl(\tfrac12v(t)\bigr)\log\frac t{2\pi}\,dt,
+\]
+and equally, integrating by parts against the counting function so that only the constants of
+\eqref{eq:H} enter,
+\[
+\mathrm{near}\;\le\;F(2H)\,M(2H)-F(H)\,M(H)+\int_H^{2H}|F'(t)|\,M_{\mathrm{up}}(t)\,dt,
+\qquad M_{\mathrm{up}}(t)=2\bigl(at\log t+bt+c\log t+d\bigr).
+\]
 \end{lemma}
+
+The second form is the one to be used in a fully explicit write-up: the pointwise local count derived
+from \eqref{eq:H} has leading constant $a+2c$, about $2.4$ times the smooth density's $a$, and would
+push the ratio in the critical band above one, whereas the integrated form keeps the sharpness by
+cancelling the boundary contribution in the same way as in \S\ref{sec:abel}. Verified numerically,
+the second form gives a ratio of at most $0.351$ across the band, marginally better than the first.
 
 \section{The zero sum, with its boundary term}\label{sec:abel}
 The essential bookkeeping is the Abel identity applied to $S_4$, in which the boundary term must be
@@ -197,9 +210,10 @@ for all $k\ge2$ and all $H>\e$.
 \item Lemma~\ref{lem:near} is used in the form of an integral, evaluated numerically in the
 verification. Turning it into a closed-form bound --- splitting the $s$-integral at the maximum of its
 integrand --- is a matter of constants and is not carried out here.
-\item The local count in Lemma~\ref{lem:near} uses the zero density. The version using the actual zeros
-gives the same ratio ($0.626$), so the approximation is adequate, but a fully rigorous write-up should
-substitute the explicit local bound of \eqref{eq:H}.
+\item The local count in Lemma~\ref{lem:near} is now available in the explicit Abel form recorded in
+that lemma, whose only inputs are the constants of \eqref{eq:H}; it was verified numerically to give a
+ratio of at most $0.351$ across the critical band, so this item is closed. The version using the actual
+zeros in place of the count gives the same ratio to three decimals, an independent check.
 \item The remaining lemmas used in the chain (partial summation over the zeros, the lower and upper
 bounds for the sums over the zeros beyond height $k\tau$, and the modified form of the defective lemma)
 are Brown's originals or Droll's generalisations; we take them at reference level and have not

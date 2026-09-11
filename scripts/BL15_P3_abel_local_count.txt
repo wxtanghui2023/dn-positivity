@@ -1,0 +1,20 @@
+========================================================================================================
+BL15 (P3): explicit local count via Abel summation, vs the smooth-density bound
+========================================================================================================
+   lambda        H       near exact     smooth bound       Abel bound    sm/RHS    ab/RHS
+      0.8      100     4.479730e+00     4.486480e+00     4.276047e+00    0.3683    0.3511
+      1.5      100     1.599920e+01     1.602379e+01     1.523663e+01    0.3619    0.3441
+      2.5      100     4.621995e+01     4.629461e+01     4.375815e+01    0.3468    0.3278
+      4.0      100     1.302422e+02     1.304800e+02     1.214169e+02    0.3144    0.2926
+     10.0      100     1.875485e+03     1.884127e+03     1.437826e+03    0.1713    0.1307
+
+
+
+  worst smooth/RHS = 0.3683 ; worst Abel/RHS = 0.3511
+
+========================================================================================================
+READ-OFF  (conclusion generated from the numbers above)
+========================================================================================================
+  * if the Abel column stays below 1, the near bound no longer needs the smooth density, and the
+    explicit constants of the counting hypothesis suffice;
+  * the pointwise local count was NOT used precisely because its constant a+2c is far larger.
