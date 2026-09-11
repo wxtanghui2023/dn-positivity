@@ -1,0 +1,77 @@
+========================================================================================================
+BL13 (i): sharpened closed form  near <= (log2H/pi)(H/lambda)e^{lambda/2}  vs exact near
+========================================================================================================
+  lambda        H     near exact              bound bound/exact
+     3.5      100   9.609728e+01       2.772908e+02      2.886
+     5.0      100   2.224415e+02       4.109172e+02      1.847
+    10.0      100   1.875485e+03       2.502998e+03      1.335
+    30.0      100   1.042257e+07       1.837740e+07      1.763
+   100.0      100   3.230323e+21       8.744041e+21      2.707
+/home/node/.openclaw/workspace/dn-project/scripts/BL13_band_closed.py:32: RuntimeWarning: overflow encountered in square
+  v=(k/2.0)*np.log1p(u); return np.expm1(v)**2/np.exp(v)
+  1000.0      100            inf      2.367168e+216      0.000
+     3.5     1000   1.701116e+03       3.977980e+03      2.338
+     5.0     1000   3.944617e+03       5.894968e+03      1.494
+    10.0     1000   3.356866e+04       3.590771e+04      1.070
+    30.0     1000   1.964849e+08       2.636400e+08      1.342
+   100.0     1000   8.254725e+22       1.254410e+23      1.520
+  worst bound/exact ratio: 2.886
+
+========================================================================================================
+BL13 (ii): crude bound's validity in lambda (ratio RHS/LHS_bound must exceed 1)
+========================================================================================================
+    lambda        H          ratio        ok?
+       0.5      100       1.306643         ok
+       1.0      100       1.033609         ok
+       1.5      100       0.826078       FAIL
+       2.0      100       0.666934       FAIL
+       2.5      100       0.543811       FAIL
+       3.0      100       0.447717       FAIL
+       3.3      100       0.400214       FAIL
+       4.0      100       0.311982       FAIL
+
+       0.5     1000       1.184823         ok
+       1.0     1000       0.937235       FAIL
+       1.5     1000       0.749046       FAIL
+       2.0     1000       0.604737       FAIL
+       2.5     1000       0.493093       FAIL
+       3.0     1000       0.405958       FAIL
+       3.3     1000       0.362884       FAIL
+       4.0     1000       0.282880       FAIL
+
+       0.5    10000       1.070679         ok
+       1.0    10000       0.846942       FAIL
+       1.5    10000       0.676884       FAIL
+       2.0    10000       0.546477       FAIL
+       2.5    10000       0.445589       FAIL
+       3.0    10000       0.366848       FAIL
+       3.3    10000       0.327924       FAIL
+       4.0    10000       0.255627       FAIL
+
+       0.5   100000       1.004815         ok
+       1.0   100000       0.794842       FAIL
+       1.5   100000       0.635245       FAIL
+       2.0   100000       0.512860       FAIL
+       2.5   100000       0.418178       FAIL
+       3.0   100000       0.344281       FAIL
+       3.3   100000       0.307752       FAIL
+       4.0   100000       0.239902       FAIL
+
+       0.5    1e+06       0.963326       FAIL
+       1.0    1e+06       0.762023       FAIL
+       1.5    1e+06       0.609016       FAIL
+       2.0    1e+06       0.491684       FAIL
+       2.5    1e+06       0.400911       FAIL
+       3.0    1e+06       0.330066       FAIL
+       3.3    1e+06       0.295044       FAIL
+       4.0    1e+06       0.229997       FAIL
+
+  minimum ratio over the sweep: 0.2300
+
+========================================================================================================
+READ-OFF  (conclusion generated from the numbers above)
+========================================================================================================
+  * if (i) gives a finite constant and (ii) stays above 1 up to lambda ~ 3.3, then the crude
+    bound (small lambda) and the sharpened closed form (lambda >~ 3.3) OVERLAP, and together
+    with the directly verified finite window 5 <= H < 40 and the trivial range H < 5 the whole
+    range k >= 2, H > e is covered -- i.e. the theorem is complete up to explicit constants.

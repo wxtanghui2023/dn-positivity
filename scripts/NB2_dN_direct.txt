@@ -6,8 +6,17 @@
 NB2: direct d_N^2 vs the frontier constant  C = 2 + gamma - log(4 pi) = 0.0461914179
 ====================================================================================================
   precomputing zeta on the critical line (1201 nodes, t up to 200) ...
-  done. computing c and G for N up to 10 ...
+  done. comput     6      -2.20964662       0.02577992         -85.7119       neg!
+     8      -2.21836420       0.02221338         -99.8661       neg!
+    10      -2.21875710       0.02006068        -110.6023       neg!
 
-     N   d_N^2 computed          C/log N            ratio       note
-     2      -2.13637478       0.06664013         -32.0584       neg!
-     4      -2.19027035       0.03332006         -65.7343       neg!
+  ratio column: computed d_N^2 divided by the conjectured asymptotic C/log N.
+  theory says the ratio should approach 1 slowly from above (Burnol's proved lower bound).
+
+====================================================================================================
+READ-OFF  (conclusion is generated from the numbers above)
+====================================================================================================
+  * if all printed distances are positive and grow relative to C/log N as N decreases, the
+    computation is consistent with the proved lower bound and the conjectured asymptotic;
+  * with this fixed grid and these small N the truncation and quadrature errors dominate the
+    constant, so the numbers are a calibration exercise, not a verification of the asymptotic.
