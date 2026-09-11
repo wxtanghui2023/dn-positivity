@@ -52,3 +52,14 @@
 - docs/p49-g274c1-ground-instability.md + c1-correction.md（数值审计）
 - docs/p49-g274c2-compression.md + c2cv-cvariant-close.md（压缩 + canonical）
 - 本文档（封档）
+
+---
+## ⚠️ **勘误（2026-09-11 21:12 追加）—— 范围限定，不改历史结论**
+**原判**："ξ̂_λ ↔ k_λ（missing step 2）：**FAIL candidate**（三层否证）"
+**限定**：上述三层否证**全部在 λ = 3（及 4、6）固定、N ≤ 12 固定**的参数区完成；
+   —— 而该路线要求的区间是 **λ → ∞ 且截断随 λ 自适应**（Connes 2026 §6.4–6.6 + Fact 6.4 的一致收敛陈述 ✓）。
+**因此**：本 FAIL **限定为**"**λ ≤ 6、N ≤ 12（非自适应截断）时两对象不匹配**" ✓；
+   **不构成**对 λ→∞ 区间收敛性的否证 ✗。
+**另一条（正面）**：本文档"simple-even：OPEN（数值 gap 双精度不可判定）"✓ ——
+   **与 Connes 2026 的 open problem ① 独立重合** ✓（该对齐是正面的 ✓）。
+**依据**：`docs/RECONCILE-bridge-lambda-regime.md`（对账文档 ✓）。
