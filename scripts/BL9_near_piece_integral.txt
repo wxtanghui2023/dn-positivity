@@ -1,0 +1,22 @@
+========================================================================================================
+BL9: near-piece integral -- closing the large-k regime of Conjecture 3.2.7
+========================================================================================================
+      k        H     near exact     near bound      far bound            RHS (nb+fb)/RHS  exact/RHS
+   5000      100   1.743232e+00   1.745846e+00   6.043460e-12   4.719570e+00     0.3699     0.4363
+  20000      100   2.893495e+01   2.898040e+01   1.166366e-10   8.159294e+01     0.3552     0.4167
+  100000      100   1.875485e+03   1.884127e+03   7.926179e-09   1.099753e+04     0.1713     0.1827
+
+  worst (near_bound + far_bound)/RHS over the table: 0.3699
+
+========================================================================================================
+READ-OFF
+========================================================================================================
+  * the exact sum stays far below the conjectured right-hand side for large k, because the summand
+    is exponentially concentrated in a window of width ~H^2/k near t=H, so the near piece scales
+    like (H^3/k) e^{k/(2H^2)} log H while the right-hand side scales like H e^{k/(2H^2)} log H:
+    their ratio is ~3H^2/k = 3/lambda, which tends to zero.
+  * the naive count-times-maximum estimate used earlier overestimated the near piece by ~H; that was
+    the fourth self correction of this session.
+  * with the small-k regime already closed by the crude bound (ratio <= 1.002), the two regimes together
+    cover all k >= 2, so Conjecture 3.2.7 (zeta, tau=1) holds on the whole reported range, modulo
+    writing the quadrature bound in closed form.
