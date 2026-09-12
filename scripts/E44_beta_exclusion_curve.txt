@@ -1,0 +1,108 @@
+==============================================================================
+4-A  THE beta-EXCLUSION WALL, QUANTIFIED
+==============================================================================
+
+Zero table: data/zeros_odlyzko_2M.npy
+  zeros = 2,001,052   gamma_max = 1,132,490.7
+  [all tabulated zeros are on the critical line by construction of the table]
+
+Reference heights:  gamma_max (this table) = 1.13e+06
+                    Platt-Trudgian verified height T0 = 3.0e12
+
+------------------------------------------------------------------------------
+(1) CLASSICAL ZERO-FREE REGION   sigma > 1 - 1/(R log T),  R = 5.573
+------------------------------------------------------------------------------
+
+           T       zfr edge    excluded band     width to 1/2
+                  sigma*(T)      (sigma*, 1)     sigma* - 1/2
+       1e+03       0.974024    (0.974024, 1)         0.474024
+       1e+06       0.987012    (0.987012, 1)         0.487012
+       1e+09       0.991341    (0.991341, 1)         0.491341
+       1e+12       0.993506    (0.993506, 1)         0.493506
+       3e+12       0.993754    (0.993754, 1)         0.493754
+       1e+20       0.996104    (0.996104, 1)         0.496104
+       1e+50       0.998441    (0.998441, 1)         0.498441
+      1e+100       0.999221    (0.999221, 1)         0.499221
+         inf       1.000000    (1.000000, 1)         0.500000
+
+  => the zero-free edge sigma*(T) RISES toward 1 as T grows:
+     the region unconditional theorems can exclude RETREATS from 1/2.
+
+------------------------------------------------------------------------------
+(2)(3)(4) ZERO-DENSITY EXPONENTS a(sigma)  [bound ~ T^a]
+------------------------------------------------------------------------------
+
+  A bound forces N(sigma,T) = 0 only if it is < 1, which (up to log factors and
+  the unknown explicit constant) requires a(sigma) <= 0. Below we report a(sigma)
+  and the resulting bound at two large heights.
+
+   sigma       Ingham a     Guth-May a        Ingham@1e12            GM@1e12
+   0.500        1.00000        1.36364          1.000e+12          2.310e+16
+   0.550        0.93103        1.17391          1.487e+11          1.222e+14
+   0.600        0.85714        1.00000          1.931e+10          1.000e+12
+   0.650        0.77778        0.84000          2.154e+09          1.202e+10
+   0.700        0.69231        0.69231          2.031e+08          2.031e+08
+   0.750        0.60000        0.55556          1.585e+07          4.642e+06
+   0.800        0.50000        0.42857          1.000e+06          1.389e+05
+   0.850        0.39130        0.31034          4.962e+04          5.298e+03
+   0.900        0.27273        0.20000          1.874e+03          2.512e+02
+   0.950        0.14286        0.09677          5.179e+01          1.450e+01
+   0.990        0.02970        0.01887          2.272e+00          1.684e+00
+   0.999        0.00300        0.00188          1.086e+00          1.053e+00
+
+  NOTE (numerical coincidence, verified): at sigma = 0.7 the two exponents agree
+       a_ingham(0.7) = a_gm(0.7) = 0.6923077, so the two bounds coincide there.
+
+  => a(sigma) = 0 occurs ONLY at sigma = 1 for BOTH bounds.
+     For every sigma < 1 the bound is astronomically larger than 1,
+     so zero-density estimates exclude NOTHING below sigma = 1.
+
+------------------------------------------------------------------------------
+(5) SLACKNESS: bound / truth   at sigma = 0.6 and 0.7, T0 = 3.0e12
+------------------------------------------------------------------------------
+
+  True N(sigma,T0) = 0 for sigma > 1/2 (RH verified to T0). The bounds give:
+    sigma = 0.60:  Ingham bound = 4.951e+10   Guth-Maynard bound = 3.000e+12   truth = 0
+    sigma = 0.70:  Ingham bound = 4.345e+08   Guth-Maynard bound = 4.345e+08   truth = 0
+    sigma = 0.80:  Ingham bound = 1.732e+06   Guth-Maynard bound = 2.225e+05   truth = 0
+
+  => the ratio bound/truth is INFINITE at every sigma > 1/2: the bounds are
+     not merely loose, they are vacuous in exactly the region that matters.
+     truth is 0 while the bound is 4.951e+10 at sigma = 0.6 (Ingham)
+     and 3.000e+12 at sigma = 0.6 (Guth-Maynard): the gap is unbounded.
+
+------------------------------------------------------------------------------
+SUMMARY: THE SHAPE OF THE WALL (numbers above, not interpretation)
+------------------------------------------------------------------------------
+
+  sigma in [1 - 1/(5.573 log T), 1]      : EXCLUDED (zero-free region)
+  sigma in (1/2, 1 - 1/(5.573 log T))    : NO unconditional exclusion exists
+                                            from any of the four standard inputs
+  sigma = 1/2                             : the RH line itself
+
+  Width of the UNEXCLUDED band, 1/2 < sigma < sigma*(T):
+    T =    1e+06: width = 0.487012
+    T =    1e+12: width = 0.493506
+    T =   1e+100: width = 0.499221
+    T -> infinity: width -> 0.500000  (the band fills the entire strip)
+
+  => As the verified height grows WITHOUT BOUND, the unconditionally unexcluded
+     band WIDENS toward (1/2, 1). The wall does not move toward RH; the
+     unconditional knowledge retreats away from it.
+
+------------------------------------------------------------------------------
+(6) THE THREE KNOWN INGREDIENTS, SIDE BY SIDE
+------------------------------------------------------------------------------
+
+  (a) numerical verification  : zeros on the line up to gamma = 1.13e+06
+                               (this table) and to 3.0e12 (Platt-Trudgian)
+  (b) zero-free region        : excludes sigma > 1 - 1/(5.573 log T)
+  (c) de Bruijn-Newman        : Lambda >= 0, and Lambda = 0 iff RH (Rodgers-Tao)
+  (d) zero-density exponents  : a(sigma) > 0 for all sigma < 1 (no exclusion)
+
+  (a) and (b) are both of the form "verified/excluded up to some boundary";
+  (b) RETREATS as T grows, (a) ADVANCES only with computation. Neither touches
+  the individual real parts in (1/2, 1). (c) is a single number. (d) is vacuous.
+
+  This is the beta-wall, stated in numbers rather than in words.
+==============================================================================
