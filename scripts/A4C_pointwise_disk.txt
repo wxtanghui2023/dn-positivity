@@ -1,0 +1,115 @@
+====================================================================================================
+A4C: pointwise DFMR zero-free disc — d_r(lambda)^2 from the actual zeta functional,
+     disc radius, 1/d^2 sensitivity, conflict check, G1/G2 correspondence
+====================================================================================================
+  lambda = 1/2 + i H ; r = 1/2 ; a = Re(lambda) = 1/2 ; Q^2 = 1 - d^2 ; non-empty iff d^2 < 1
+  integral truncation EPS = 1.0e-06  (tail O(EPS))
+
+  SECTION 1 (核验) - reproduce DFMR I Cor 7.5 example to validate the disc centre/radius
+    paper: lambda=0.01+50i, r=0.49, sigma1=0.4  =>  disc centre 1/2+50i, radius 3.75e-6
+    computed: F = 1.880985e-04 ; centre = (0.50000000070762072205) + i*50.0 ; radius = 3.761970e-06
+    paper target: centre 1/2 + 50i, radius 3.75e-6  ->  [核验] radius factor 2Re(lambda)F/(1-F^2)
+
+  SECTION 2 (核验/推导) - d_{1/2}(lambda)^2 = min_c int_0^1 |t^{-iH} - sum c_j ({a_j/t}-a_j{1/t})|^2 dt
+    basis functions f_a(t) = {a/t} - a{1/t},  a in (0,1]  (Prop 7.3, psi(u)={u} for zeta)
+    single-term and few-term least-squares projection residual (an UPPER bound on d^2)
+    --- H = 0        ---
+         alpha |    B=||f||^2 |        |A|^2 |   d^2 <= 1-|A|^2/B | A (H=0 vs -a ln a)
+         0.125 |     0.108931 | 6.756348e-02 |        0.379760170 | 0.259930 vs 0.259930
+         0.250 |     0.161755 | 1.201130e-01 |        0.257439693 | 0.346573 vs 0.346574
+         0.375 |     0.197224 | 1.352847e-01 |        0.314056735 | 0.367811 vs 0.367811
+         0.500 |     0.173287 | 1.201131e-01 |        0.306853319 | 0.346573 vs 0.346574
+         0.625 |     0.231535 | 8.629028e-02 |        0.627311926 | 0.293752 vs 0.293752
+         0.750 |     0.235102 | 4.655299e-02 |        0.801988185 | 0.215761 vs 0.215762
+         0.875 |     0.205860 | 1.365156e-02 |        0.933685306 | 0.116840 vs 0.116840
+      3-term {0.25,0.5,0.75}: d^2 <= 0.156648859   (trivial bound d^2 <= 1)
+    --- H = 1000     ---
+         alpha |    B=||f||^2 |        |A|^2 |   d^2 <= 1-|A|^2/B | A (H=0 vs -a ln a)
+         0.125 |     0.108931 | 1.180252e-09 |        0.999999989 |
+         0.250 |     0.161755 | 1.839681e-07 |        0.999998863 |
+         0.375 |     0.197224 | 5.124867e-08 |        0.999999740 |
+         0.500 |     0.173287 | 6.270555e-07 |        0.999996381 |
+         0.625 |     0.231535 | 4.650101e-07 |        0.999997992 |
+         0.750 |     0.235102 | 7.742900e-07 |        0.999996707 |
+         0.875 |     0.205860 | 1.377464e-06 |        0.999993309 |
+      3-term {0.25,0.5,0.75}: d^2 <= 0.999990354   (trivial bound d^2 <= 1)
+    --- H = 100000   ---
+         alpha |    B=||f||^2 |        |A|^2 |   d^2 <= 1-|A|^2/B | A (H=0 vs -a ln a)
+         0.125 |     0.108931 | 1.806735e-11 |        1.000000000 |
+         0.250 |     0.161755 | 9.079826e-11 |        0.999999999 |
+         0.375 |     0.197224 | 1.841224e-10 |        0.999999999 |
+         0.500 |     0.173287 | 1.529326e-10 |        0.999999999 |
+         0.625 |     0.231535 | 4.517836e-10 |        0.999999998 |
+         0.750 |     0.235102 | 7.622900e-10 |        0.999999997 |
+         0.875 |     0.205860 | 4.617009e-10 |        0.999999998 |
+      3-term {0.25,0.5,0.75}: d^2 <= 0.999999996   (trivial bound d^2 <= 1)
+    Gram matrix of {f_0.25, f_0.5, f_0.75} at H=0:
+      [     0.161755     0.118434     0.082739 ]
+      [     0.118434     0.173287     0.082074 ]
+      [     0.082739     0.082074     0.235102 ]
+    eigenvalues: [0.04886248 0.1414181  0.3798634 ]
+    cross-check: B(a) should NOT equal a^2 in general (a^2: 0.0625 0.2500 0.5625)
+
+  SECTION 3 (核验/推导) - disc radius vs d^2  (a = 1/2)
+    correct (引用 DFMR I Thm 2.2): rad = sqrt(1-d^2)/d^2, centre (1/d^2, H)
+    E27-A4-5 sec.2 (erroneous)   : rad = |lambda| sqrt(1-d^2)/(a d^2) = 2|lambda| sqrt(1-d^2)/d^2
+    H = 1e+03, |lambda| = 1.000000e+03
+             d^2 |    rad (correct)     centre (correct) |  rad (E27 sec.2)   centre (E27 sec.2)
+         1.00000 |                - (EMPTY: d^2>=1) |                - (EMPTY)
+         0.10000 |     9.486833e+00 (1.000000e+01, 1000) |     1.897367e+04 (1.000000e+01, 19000)
+         0.01000 |     9.949874e+01 (1.000000e+02, 1000) |     1.989975e+05 (1.000000e+02, 199000)
+         0.00100 |     9.994999e+02 (1.000000e+03, 1000) |     1.999000e+06 (1.000000e+03, 1999000)
+         0.00000 |     9.999995e+05 (1.000000e+06, 1000) |     1.999999e+09 (1.000000e+06, 1999999000)
+    H = 1e+05, |lambda| = 1.000000e+05
+             d^2 |    rad (correct)     centre (correct) |  rad (E27 sec.2)   centre (E27 sec.2)
+         1.00000 |                - (EMPTY: d^2>=1) |                - (EMPTY)
+         0.10000 |     9.486833e+00 (1.000000e+01, 100000) |     1.897367e+06 (1.000000e+01, 1900000)
+         0.01000 |     9.949874e+01 (1.000000e+02, 100000) |     1.989975e+07 (1.000000e+02, 19900000)
+         0.00100 |     9.994999e+02 (1.000000e+03, 100000) |     1.999000e+08 (1.000000e+03, 199900000)
+         0.00000 |     9.999995e+05 (1.000000e+06, 100000) |     1.999999e+11 (1.000000e+06, 199999899994)
+    => rad(correct) = sqrt(1-d^2)/d^2 ~ 1/d^2 for small d^2  (pure 1/d^2, no |lambda| factor)
+    => rad(E27 sec.2) ~ 2|lambda|/d^2 : overstates by 2|lambda| ~ 2H (H=1e3: 2000, H=1e5: 2e5)
+
+  SECTION 4 (推导) - what d^2 is needed for rad >= rho  (correct formula)
+    solve rad^2 d^4 + d^2 - 1 = 0  =>  d^2 = (-1 + sqrt(1+4 rad^2))/(2 rad^2) ~ 1/rad
+        target rad |         required d^2
+                 1 |         6.180340e-01   (~1/rad = 1.000e+00)
+                10 |         9.512492e-02   (~1/rad = 1.000e-01)
+               100 |         9.950125e-03   (~1/rad = 1.000e-02)
+              1000 |         9.995001e-04   (~1/rad = 1.000e-03)
+           1000000 |         9.999995e-07   (~1/rad = 1.000e-06)
+
+  SECTION 5 (核验) - conflict of the disc with verified zeros (Platt-Trudgian: RH checked |t|<=3e12)
+    loaded 2001052 zeros, gamma in [14.135, 1132490.659] (all critical-line, Re=1/2 by Platt-Trudgian)
+    the disc centre has Re = 1/d^2 >= 1 and radius = sqrt(1-d^2)/d^2 < 1/d^2, so its leftmost
+    Re = (1 - sqrt(1-d^2))/d^2 = 1/(1+sqrt(1-d^2)) > 1/2 : the disc NEVER crosses Re=1/2.
+    actual single-term d^2 (best alpha) -> disc:
+    H=1e+03 single-term d2=0.999993309 rad=2.586763e-03 centre=(1.000007e+00,1000) zeros inside: 0
+    H=1e+05 single-term d2=0.999999997 rad=5.694189e-05 centre=(1.000000e+00,100000) zeros inside: 0
+    H=1e+03 d^2=0.10 (illustration) rad=9.486833e+00 centre=(1.000000e+01,1000) zeros inside: 0
+    H=1e+03 d^2=0.01 (illustration) rad=9.949874e+01 centre=(1.000000e+02,1000) zeros inside: 0
+    H=1e+05 d^2=0.10 (illustration) rad=9.486833e+00 centre=(1.000000e+01,100000) zeros inside: 0
+    H=1e+05 d^2=0.01 (illustration) rad=9.949874e+01 centre=(1.000000e+02,100000) zeros inside: 0
+    => for any d^2<1 the disc lies strictly to the right of Re=1/2, so it cannot contain a
+       known zero (all known zeros have Re=1/2); no conflict, and also no information about
+       the critical line (Burnol's 'disappointing fact').  [推导]
+
+====================================================================================================
+READ-OFF
+====================================================================================================
+  [核验] Cor 7.5 example reproduced (Section 1): disc centre/radius match DFMR I's own numbers.
+  [引用] for zeta, psi(u)={u} (fractional part), K_r = span(t^r({a/t}-a{1/t}))  (DFMR I Rmk 3.5, Prop 7.3).
+  [推导] at r=1/2 the functional reduces to d^2 = min int_0^1 |t^{-iH} - sum c_j({a_j/t}-a_j{1/t})|^2 dt.
+  [核验] single/few-term projection gives a genuine upper bound d^2 <= 1 - v^H G^{-1} v.
+  [核验/新发现] the disc is 'variant 2': rad = sqrt(1-d^2)/d^2, centre (1/d^2, H); E27-A4-5 sec.2
+       formula carries a spurious factor |lambda|/a = 2|lambda| ~ 2H (algebra drops the y-cross term).
+  [推导] d^2 -> 1 as H -> infinity (the phase t^{-iH} oscillates and cannot be tracked by the
+       piecewise-constant test span), so the disc is essentially EMPTY at H=1e3,1e5.
+  [推导] disc never crosses Re=1/2 (leftmost Re = 1/(1+sqrt(1-d^2)) > 1/2); no conflict with
+       Platt-Trudgian, and no critical-line information.
+  [推导] rad >> 1 requires d^2 <<~ 1/rad ; with the trivial d^2~1 the radius is ~0.
+  [未做] no lambda-dependent d_r(lambda)^2 that is SMALL is produced; the honest verdict is that
+       the pointwise disc is empty from the available input (see the G1/G2 checklist in the doc).
+  [未做] no proof claimed; nothing about RH is decided by these numbers.
+
+Output written to /home/node/.openclaw/workspace/dn-project/scripts/A4C_pointwise_disk.txt
