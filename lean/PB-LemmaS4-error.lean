@@ -368,3 +368,18 @@ theorem S4_main_terms (a b H : ℝ) (hH : Real.exp 1 < H) :
   ring_nf
 
 end PB
+
+namespace PB
+
+/-- ★ **误差项的分解与论文常数核对**（重要 ✓）：
+论文 Lemma S4 给出 `|error| ≤ (4c log H + c/2 + 4d)H⁻⁴` ✓。
+我起初只算**积分项**，得 `(2c log H + c/2 + 2d)` ✗ —— 少了**边界项**的 ε 贡献 ✓！
+   边界项 `−2N(H)H⁻⁴` 中的 `−2ε(H)H⁻⁴` 贡献 `≤ (2c log H + 2d)H⁻⁴` ✓
+   两者相加：`(2c log H + 2d) + (2c log H + c/2 + 2d) = 4c log H + c/2 + 4d` ✓✓
+   ⟹ **论文常数正确** ✓；我漏了边界项 ✗ —— 与论文自己的方法论警告（**边界项必须保留** ✓）**同源** ✓✓
+本引理即验证这条算术 ✓。-/
+theorem S4_error_constant_check (c d L : ℝ) :
+    (2 * c * L + 2 * d) + (2 * c * L + c / 2 + 2 * d) = 4 * c * L + c / 2 + 4 * d := by
+  ring
+
+end PB
