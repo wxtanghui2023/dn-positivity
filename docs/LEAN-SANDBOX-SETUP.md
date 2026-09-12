@@ -50,3 +50,26 @@
 · 不声称本项目任何结论已形式化 ✅（**尚未** ✗ —— 本文件只记录**工具链就绪** ✅）
 · 不声称形式化必然成功 ✅（Paper B 的引理链**初等但非平凡** ⚠️；工作量需评估 ✓）
 ```
+
+---
+
+## 六、**Mathlib 实测结果（2026-09-12 15:10–15:20 ✅ 已核）**
+```
+【✅ 装好 ✓】`lake exe cache get` **100% 完成**：**8690 文件 / 8311 olean / 约 15 GB**（`~/mathlib4/.lake`）
+   · 工程目录：`~/mathlib4`（对应 **mathlib4 标签 v4.33.0** ✅ 与已装 Lean 4.33.0 匹配 ✅）
+   · 依赖克隆走镜像 ✓：用 `GIT_CONFIG_GLOBAL=~/.lean_dl/gitconfig-mathlib` 注入 ✓（**不污染 dn-project 远端配置** ✓✓）
+   · 缓存源：`https://lakecache.blob.core.windows.net/mathlib4-master` ✓（**该主机可达 ✓**）
+【✅✅ 可用性验证：通过 ✓】**（**纠正我 15:06 时"未通过"的说法 ✗**）
+   · **`import` 单个模块 + 2 条真定理 → 退出码 0，耗时 【4 秒】 ✓✓**（`Real.exp_pos`、`Real.exp_ne_zero` ✓）
+   · 模块名确认 ✓：`Mathlib.Analysis.SpecialFunctions.{Exponential,Exp,Log.Basic}` 均含 `Real.exp` ✓
+【✗ 反面：全库 import 很重】**`import Mathlib`（全库）600 秒限时内未完成** ✗
+   · 根因：**容器内存 7865 MB，仅剩 150–289 MB 空闲，且在 active swap**（si 约 2–9 MB/s ✓）
+   · 另有次因：**当时有两个编译互相抢资源** ✗（我先前的测试未退出 ✓）
+【⭐ 结论（关键区别 ✓）】**"验证"不等于"加载全库"** ✓
+   | 方式 | 耗时 | 内存 |
+   | **最小 import（我们的实际需要 ✓）** | **4 秒 ✓✓** | 低 ✓ |
+   | `import Mathlib`（全库） | > 600 秒未完成 ✗ | 数 GB ⟹ 抖动 ✗ |
+   ⟹ **Paper B 的引理链只需少量模块（实数幂/指数/对数/求和/序 ✓）** ⟹ **走最小 import 即可，无需加内存** ✓✓
+【⚠️ 教训】官方教程普遍写 `import Mathlib`（图省事 ✗）⟹ 误导了我 ✓；
+   **磁盘占用（15 GB）≠ 验证所需内存** ✓ 两者是不同的事 ✓
+```
