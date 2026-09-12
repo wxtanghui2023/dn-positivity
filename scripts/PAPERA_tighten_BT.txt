@@ -1,0 +1,45 @@
+==============================================================================
+TIGHTENING B_T  (Abel with the boundary term retained)
+==============================================================================
+
+  counting hypothesis constants: two standard choices
+    Trudgian  : c = 0.112, d = 2.5
+    Rosser-type: c = 0.137, d = 3.5
+
+               T        c     Abel bd (this)     paper constant        gain vs paper
+      1.1325e+06    0.112       9.206468e-07       3.401500e-06                3.69x
+      1.1325e+06    0.137       9.206479e-07       3.401500e-06                3.69x
+      3.0002e+12    0.112       7.398101e-13       2.850000e-12                3.85x
+      3.0002e+12    0.137       7.398101e-13       2.850000e-12                3.85x
+
+  --- decomposition at T = 1.1325e6, c = 0.112, d = 2.5 ---
+       term1 = -7.801082e-07
+       term2 = +1.700753e-06
+       term3 = +3.411156e-13
+       term4 = +1.605104e-12
+         sum = +9.206468e-07   <-- the NEGATIVE boundary term is the whole gain
+
+  TRUE value of B_T at T = 1.1325e6, computed from the 2M-zero table:
+    table part  = 0.000000e+00   analytic tail beyond 1.1325e+06 = 9.206506e-07
+    tree-ish total ~ 9.206506e-07  (compare: paper 3.4015e-06)
+
+  => the Abel bound with the boundary term lands at the TRUE value, while the
+     paper's crude form is 3.7x looser. The loss is recovered.
+
+------------------------------------------------------------------------------
+WHAT THIS BUYS AT THE QUADRATIC ENDPOINT
+------------------------------------------------------------------------------
+
+  B =       paper 3.4015e-06: n*B = 4.3626e+06   S_n/(nB) = 0.4587  FAIL
+  B =   Abel bound (c=0.112): n*B = 1.1808e+06   S_n/(nB) = 1.6949  PASS
+  B =             TRUE value: n*B = 1.1808e+06   S_n/(nB) = 1.6949  PASS
+
+  with the restored factor exp(n/(2T^2)) = e^{0.5} = 1.6487:
+  B =       paper 3.4015e-06: S_n/(nB*e^{1/2}) = 0.2782  FAIL
+  B =   Abel bound (c=0.112): S_n/(nB*e^{1/2}) = 1.0280  PASS
+  B =             TRUE value: S_n/(nB*e^{1/2}) = 1.0280  PASS
+
+  => tightening B_T turns the quadratic endpoint from FAIL into a thin PASS.
+     The margin is small (about 1.0), so this is a real but narrow opening ---
+     not a comfortable one, and the interior-oscillation question is untouched.
+==============================================================================
