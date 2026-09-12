@@ -144,7 +144,7 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ③ | **计数测度 = Dirac 测度** ⟹ `∫ g d(measure) = g γ` | ✅ **已通过** |
 | ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
 | ④a | **FTC 核心**：`Σᵢ f(uᵢ) = |s|·f(H) + Σᵢ ∫_H^{uᵢ} f'`（边界项 + 区间积分 ✓） | ✅ **已通过** |
-| ④b | **Fubini/指示函数重排**（把 `Σᵢ ∫_H^{uᵢ} f'` 化为 `∫_H^∞ f'(t)·N(t)dt`） | ⏳ 待做（最难的一小步 ✓） |
+| ④b | **Fubini/指示函数重排** | ✅ **已通过** |
 【① 的细节 ✓】`stepAt γ := fun x => if γ ≤ x then 1 else 0` ✓
    · 单调性 ✓：按 `γ ≤ a` 分情形 ✓
    · **右连续性 ✓**：`x ≥ γ` 时右侧邻域常值 1 ✓；`x < γ` 时用**局部邻域**（`isOpen_Iio` ✓）常值 0 ✓
@@ -163,7 +163,7 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ③ | **`measure = Measure.dirac γ`** ⟹ **`∫ g d(measure) = g γ`** ✓✓ | ✅ |
 | ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
 | ④a | **FTC 核心**：`Σᵢ f(uᵢ) = |s|·f(H) + Σᵢ ∫_H^{uᵢ} f'`（边界项 + 区间积分 ✓） | ✅ **已通过** |
-| ④b | **Fubini/指示函数重排**（把 `Σᵢ ∫_H^{uᵢ} f'` 化为 `∫_H^∞ f'(t)·N(t)dt`） | ⏳ 待做（最难的一小步 ✓） |
+| ④b | **Fubini/指示函数重排** | ✅ **已通过** |
 
 【③ 的实现 ✓】`Measure.ext_of_Ioc`（在 `Ioc` 上一致 ⟹ 测度相等 ✓）
    + `StieltjesFunction.measure_Ioc`（增量 ✓）+ `Measure.dirac_apply'`（Dirac 的作用 ✓）
@@ -199,4 +199,45 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
    ⟹ **答：不需要"补"✓ —— Mathlib【已有】所需的一切** ✓✓
       我此前断言"无 Stieltjes 支持"是**错的** ✗（只搜了小写文件名 ✓）
       **实际：`StieltjesFunction.measure` 就是计数测度的现成构造** ✓✓
+```
+
+## ⚠️→✅ 第 ④b 步失败的【根因】（2026-09-12 17:15 已定位并修复 ✅）
+
+**结论：不是数学错误 ✓ —— 是「形式／约定」层面的两个陷阱** ✗
+
+```
+【根因 ①：指示函数的判据是「成员关系」而非「不等式」✗】
+   `Set.indicator_apply (s) (f) (a) : s.indicator f a = if a ∈ s then f a else 0` ✓
+   ⟹ 判据须写成 t ∈ Ioc H (u i) ✓；我写成 t ≤ u i ✗ ⟹ 模式匹配失败 ✗
+   ⟹ 报错原文直接点出："Did not find an occurrence of the pattern `if t ≤ u i then …`" ✓
+   ⟹ 修法：条件写成 if H < t ∧ t ≤ u i then 1 else 0 ✓
+【根因 ②：rw/conv 与「库的定义展开」打架 ✗】
+   · ∫ t in s, f t 在库中定义为 ∫ t, f t ∂(volume.restrict s) ✓
+     —— 【并不是】定义等同的「指示函数积分」✗
+     （实测：example : (∫ t in s, f t) = ∫ t, s.indicator f t := rfl  → 失败 ✗）
+   · rw 会命中【所有】出现位置 ✗ ⟹ 会把不该动的地方也改写 ✗
+     ⟹ 正确工具是 setIntegral_congr_fun（逐点／a.e. 意义 ✓）
+   · noncomputable def 的展开须用 simp only [名] ✓（rw [名] 会失败 ✗）
+   · 化简后残留 beta-redex（(fun t => …) t ✗）须 simp only [] ✓
+   · 最后残留 f' t = f' t * 1 ✗ ⟹ 补 ring ✓
+```
+
+**★ 两条纪律（已入档 ✓）**
+```
+· 【不要假设"定义等同"】✓ —— 用 rfl 或 #check 实测 ✓
+  这次正是靠「rfl 失败」才定位到根因 ② ✓✓
+· 【报错信息要逐字读】✓ —— 上面那条 "pattern if t ≤ u i" 直接指出了根因 ① ✓
+```
+
+## 🎉 Lemma S4 零件【全部完成】（2026-09-12 17:15 ✅）
+
+```
+| 件 | 内容 | 状态 |
+| 桥 ①②③③′ | 零点求和 = 对计数测度积分 | ✅ |
+| ④a | 求和 = 边界项 + 各区间积分 | ✅ |
+| ④b | 各区间积分 = 对「计数函数」的一次积分（Fubini 重排） | ✅ |
+| 积分 | ∫_H^∞ t⁻⁴ ✓、∫_H^∞ t⁻⁴ log t ✓ | ✅ |
+| 系数 | S4 系数代数 ✓ | ✅ |
+⟹ Lemma S4 的数学内容【已全部机器验证】✓✓
+   （含论文强调的「边界项必须保留」✓）
 ```
