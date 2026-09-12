@@ -1,0 +1,25 @@
+======================================================================
+A3-break-682 attempt3 : Christoffel hierarchy from frontier moment data
+======================================================================
+moments m_k(1) = 1, 4/3, 2, 13/4  (k=1..4)  [原, in-repo]
+
+[m=1] Lambda_1(0) = det H1 / det B1 = 1/3 / 4/3 = 0.25000000
+      1 - Lambda_1(0) = 0.75000000
+      m1^2/m2 (Cauchy-Schwarz) = 0.75000000  (equal: True)
+
+[m=2] Lambda_2(0) = det H2 / det B2 = 5/108 / 1/3 = 0.13888889   (= 5/36 = 0.13888889 check)
+      1 - Lambda_2(0) = 0.86111111
+
+Frontier-recorded [原]: Lambda_2(0;1)=5/36 ; HL*(4) => proportion >= 13/18
+  13/18 = 0.72222222
+
+NOTE: 1 - Lambda_m(0) != 'certified proportion'. The dictionary
+      Lambda_m(0) -> proportion lives in frontier Sec 7.2 (UNREAD in repo).
+      E8 (docs/E8-ceiling-0682.md) states this dictionary is NOT
+      reconstructible from in-repo material. So this hierarchy is the
+      'moment-information' curve, not the 'proportion' curve.
+
+Anchors established elsewhere (in-repo, [核验]):
+  bandwidth-one ceiling (support 1, moments m1,m2) ~ 0.682
+  Montgomery-Taylor window (support 1) = 0.6725
+  pair-correlation conjecture (all support) => 100% simple
