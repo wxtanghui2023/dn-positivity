@@ -31,7 +31,7 @@ n (or d), the n-th object being a probe of increasing resolution.
   input to Brown's theorem holds for **all k ≥ 2** with explicit dependence on a threshold H, and the
   statements found in the literature for the same object run to **k ≤ 2T² log T**.
 - **Jensen polynomials.** Hyperbolicity of J^{d,n} holds for **d ≤ ⌊T⌋²** where T is the verified
-  height: the thesis of Droll–Griffin–Ono–Rolen–Thorner–Tripp–Wagner gives the implication from
+  height: the thesis of Droll, and the effective version of Griffin–Ono–Rolen–Thorner–Tripp–Wagner, give the implication from
   "RH verified to height T" to "hyperbolic for d ≤ T²", and Platt's verification to 3.06·10¹⁰ then
   yields d ≤ 9.36·10²⁰.
 
@@ -93,7 +93,8 @@ coefficients*, draft, 2026.
 [3] A. D. Droll, *Variations of Li's criterion for an extension of the Selberg class*, PhD thesis,
 Queen's University, 2012.
 [4] M. Griffin, K. Ono, L. Rolen, D. Zagier, *Jensen polynomials for the Riemann zeta function and
-other sequences*, PNAS 116 (2019), 11103–11110.
+other sequences*, PNAS 116 (2019), 11103–11110; effective version: M. Griffin, K. Ono, L. Rolen,
+J. Thorner, Z. Tripp, I. Wagner, *Jensen polynomials for the Riemann xi function*, arXiv:1910.01227.
 [5] arXiv:2608.13637, *More than two thirds of the zeta zeros are simple and on the critical line*,
 2026 (with its appendix on the limits of the method).
 [6] J.-F. Burnol, *A lower bound in an approximation problem involving the zeros of the Riemann zeta
