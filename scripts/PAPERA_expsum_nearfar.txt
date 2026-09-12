@@ -1,0 +1,140 @@
+================================================================================
+DELIVERABLE #1 : near-pair vs far-pair decomposition of |S_n|^2 = N + 2 sum_{k<l} cos
+================================================================================
+T0 = 1132490.658714   N = 2001052   main(T0) = 2001051.3770   B_T0 = 1.049794e-06
+phase: theta(gamma) = 2 arctan(1/(2 gamma))  (identical to project convention)
+allowance(n) = N - n*B_T0 ; at n=T0^2 : 6.546538e+05 = 0.3272*N
+
+(0) EXACT |S_n|^2 and total pair sum P_tot = |S_n|^2 - N
+         n     Re S=sum cos     Im S=sum sin            |S|^2  P_tot=|S|^2-N   |S|/sqrtN
+ 1.000e+06      14323.06247    1143889.72520  1308688853534.74756     1.308687e+12    808.7029
+ 1.000e+09        524.54706      -2447.69101    6266340.88357     4.265289e+06      1.7696
+ 1.000e+12        726.18996        242.29057     586056.58365    -1.414995e+06      0.5412
+ 1.283e+12       -217.23646       -270.74303     120493.46789    -1.880559e+06      0.2454
+
+(1) EXACT separation profile A_j(n) = 2 sum_k cos(n(theta_{k+j}-theta_k));  P_tot = sum_j A_j
+    [A_j > 0  <=> zero-pairs at separation j add constructively]
+         n   sum_{j<=8} A_j  sum_{j<=64} A_j  sum_{j<=2048} A_j    P_tot (exact)
+ 1.000e+06       3.1983e+07       2.5535e+08       2.7503e+08       1.3087e+12
+ 1.000e+09       3.0619e+07       2.2466e+08       2.3269e+08       4.2653e+06
+ 1.000e+12      -2.2933e+06      -1.0581e+06      -1.0938e+06      -1.4150e+06
+ 1.283e+12      -1.5818e+06      -1.0976e+06      -1.1007e+06      -1.8806e+06
+
+(1b) same, NORMALISED by N (so that P_tot/N = |S|^2/N - 1)
+         n  near/N (j<=64)  near/N (j<=2048)    far/N (J=64)  far/N (J=2048)         P_tot/N
+ 1.000e+06       127.60928       137.44429    653871.81326    653861.97825    653999.42255
+ 1.000e+09       112.27174       116.28383      -110.14022      -114.15231         2.13152
+ 1.000e+12        -0.52875        -0.54660        -0.17838        -0.16053        -0.70713
+ 1.283e+12        -0.54850        -0.55008        -0.39128        -0.38971        -0.93978
+
+(1c) per-j table for n = T0^2 = 1.282535e+12 (exact A_j)
+    j =     1   A_j =      7.0811e+05   A_j/(2N) = 1.76934e-01
+    j =     2   A_j =     -3.5632e+05   A_j/(2N) = -8.90336e-02
+    j =     3   A_j =     -7.5423e+05   A_j/(2N) = -1.88457e-01
+    j =     4   A_j =     -7.5862e+05   A_j/(2N) = -1.89556e-01
+    j =     5   A_j =     -5.3856e+05   A_j/(2N) = -1.34569e-01
+    j =     6   A_j =     -2.2804e+05   A_j/(2N) = -5.69810e-02
+    j =     7   A_j =      6.7197e+04   A_j/(2N) = 1.67904e-02
+    j =     8   A_j =      2.7865e+05   A_j/(2N) = 6.96254e-02
+    j =     9   A_j =      3.7696e+05   A_j/(2N) = 9.41906e-02
+    j =    10   A_j =      3.5574e+05   A_j/(2N) = 8.88887e-02
+    j =    11   A_j =      2.4460e+05   A_j/(2N) = 6.11172e-02
+    j =    12   A_j =      8.7779e+04   A_j/(2N) = 2.19333e-02
+    j =    13   A_j =     -7.2645e+04   A_j/(2N) = -1.81517e-02
+    j =    14   A_j =     -1.8982e+05   A_j/(2N) = -4.74303e-02
+    j =    15   A_j =     -2.4318e+05   A_j/(2N) = -6.07628e-02
+    j =    16   A_j =     -2.2706e+05   A_j/(2N) = -5.67347e-02
+    j =    17   A_j =     -1.5786e+05   A_j/(2N) = -3.94444e-02
+    j =    18   A_j =     -5.0554e+04   A_j/(2N) = -1.26318e-02
+    j =    19   A_j =      5.5634e+04   A_j/(2N) = 1.39013e-02
+    j =    20   A_j =      1.3722e+05   A_j/(2N) = 3.42875e-02
+    j =    32   A_j =      8.7994e+04   A_j/(2N) = 2.19870e-02
+    j =    48   A_j =      2.1412e+04   A_j/(2N) = 5.35028e-03
+    j =    64   A_j =     -5.8936e+04   A_j/(2N) = -1.47263e-02
+    j =   128   A_j =      1.3222e+04   A_j/(2N) = 3.30371e-03
+    j =   256   A_j =     -1.2304e+04   A_j/(2N) = -3.07429e-03
+    j =   512   A_j =     -6.5931e+03   A_j/(2N) = -1.64740e-03
+    j =  1024   A_j =      2.6277e+03   A_j/(2N) = 6.56584e-04
+    j =  2048   A_j =     -1.0738e+02   A_j/(2N) = -2.68311e-05
+
+(2) WHERE does the positive small-j mass live?  A_j split by octave bins of gamma
+    criterion: pair (k,k+j) is phase-coherent iff  n*(theta_{k+j}-theta_k) < 1,
+    i.e. n*2*pi/(gamma^2 log(gamma/2pi)) * j  <~ 1   =>  gamma >~ sqrt(2 pi j n / log(gamma/2pi))
+    j =   1 :
+        gamma in <1e2        : count       29   sum 2cos =   -6.1354e-01   mean cos =  -0.01058
+        gamma in 1e2-1e3     : count      620   sum 2cos =   -1.9335e+01   mean cos =  -0.01559
+        gamma in 1e3-1e4     : count     9493   sum 2cos =   -7.1823e+01   mean cos =  -0.00378
+        gamma in 1e4-1e5     : count   127927   sum 2cos =   -5.5040e+02   mean cos =  -0.00215
+        gamma in 1e5-3e5     : count   328590   sum 2cos =    4.0676e+02   mean cos =   0.00062
+        gamma in 3e5-6e5     : count   532849   sum 2cos =   -2.6623e+05   mean cos =  -0.24982
+        gamma in 6e5-9e5     : count   557831   sum 2cos =    3.0003e+05   mean cos =   0.26893
+        gamma in 9e5-1.05e6  : count   285317   sum 2cos =    4.1335e+05   mean cos =   0.72437
+        gamma in >1.05e6     : count   158395   sum 2cos =    2.6119e+05   mean cos =   0.82449
+    j =   2 :
+        gamma in <1e2        : count       29   sum 2cos =    1.9866e+00   mean cos =   0.03425
+        gamma in 1e2-1e3     : count      620   sum 2cos =   -1.5415e+01   mean cos =  -0.01243
+        gamma in 1e3-1e4     : count     9493   sum 2cos =    3.2163e+01   mean cos =   0.00169
+        gamma in 1e4-1e5     : count   127927   sum 2cos =    1.5203e+02   mean cos =   0.00059
+        gamma in 1e5-3e5     : count   328590   sum 2cos =    9.9358e+02   mean cos =   0.00151
+        gamma in 3e5-6e5     : count   532849   sum 2cos =    3.2241e+04   mean cos =   0.03025
+        gamma in 6e5-9e5     : count   557831   sum 2cos =   -6.0058e+05   mean cos =  -0.53831
+        gamma in 9e5-1.05e6  : count   285317   sum 2cos =    7.8352e+04   mean cos =   0.13731
+        gamma in >1.05e6     : count   158394   sum 2cos =    1.3250e+05   mean cos =   0.41825
+    j =   4 :
+        gamma in <1e2        : count       29   sum 2cos =    1.1698e+01   mean cos =   0.20169
+        gamma in 1e2-1e3     : count      620   sum 2cos =    2.3377e+01   mean cos =   0.01885
+        gamma in 1e3-1e4     : count     9493   sum 2cos =   -1.1922e+02   mean cos =  -0.00628
+        gamma in 1e4-1e5     : count   127927   sum 2cos =    4.3978e+02   mean cos =   0.00172
+        gamma in 1e5-3e5     : count   328590   sum 2cos =   -5.9528e+02   mean cos =  -0.00091
+        gamma in 3e5-6e5     : count   532849   sum 2cos =   -7.2688e+04   mean cos =  -0.06821
+        gamma in 6e5-9e5     : count   557831   sum 2cos =   -3.4215e+03   mean cos =  -0.00307
+        gamma in 9e5-1.05e6  : count   285317   sum 2cos =   -4.9334e+05   mean cos =  -0.86454
+        gamma in >1.05e6     : count   158392   sum 2cos =   -1.8894e+05   mean cos =  -0.59643
+    j =   8 :
+        gamma in <1e2        : count       29   sum 2cos =    5.1636e+00   mean cos =   0.08903
+        gamma in 1e2-1e3     : count      620   sum 2cos =   -1.8539e+00   mean cos =  -0.00150
+        gamma in 1e3-1e4     : count     9493   sum 2cos =   -7.7467e+01   mean cos =  -0.00408
+        gamma in 1e4-1e5     : count   127927   sum 2cos =   -3.3601e+02   mean cos =  -0.00131
+        gamma in 1e5-3e5     : count   328590   sum 2cos =   -7.9524e+02   mean cos =  -0.00121
+        gamma in 3e5-6e5     : count   532849   sum 2cos =   -1.0053e+04   mean cos =  -0.00943
+        gamma in 6e5-9e5     : count   557831   sum 2cos =   -2.9826e+04   mean cos =  -0.02673
+        gamma in 9e5-1.05e6  : count   285317   sum 2cos =    3.8449e+05   mean cos =   0.67379
+        gamma in >1.05e6     : count   158388   sum 2cos =   -6.4757e+04   mean cos =  -0.20443
+    j =  16 :
+        gamma in <1e2        : count       29   sum 2cos =   -4.9767e+00   mean cos =  -0.08580
+        gamma in 1e2-1e3     : count      620   sum 2cos =    6.3940e+00   mean cos =   0.00516
+        gamma in 1e3-1e4     : count     9493   sum 2cos =    7.1645e+01   mean cos =   0.00377
+        gamma in 1e4-1e5     : count   127927   sum 2cos =    1.7967e+02   mean cos =   0.00070
+        gamma in 1e5-3e5     : count   328590   sum 2cos =    7.1189e+02   mean cos =   0.00108
+        gamma in 3e5-6e5     : count   532849   sum 2cos =    5.8722e+03   mean cos =   0.00551
+        gamma in 6e5-9e5     : count   557831   sum 2cos =   -7.9241e+04   mean cos =  -0.07103
+        gamma in 9e5-1.05e6  : count   285317   sum 2cos =    1.0008e+05   mean cos =   0.17538
+        gamma in >1.05e6     : count   158380   sum 2cos =   -2.5473e+05   mean cos =  -0.80418
+    coherent-mass prediction (n=T0^2): gamma_coherent >~ 8.160e+05, i.e. 601772 zeros = 30.1% of N
+
+(3) CONTROLS (clearly labelled models; same N, same n-values)
+    R = iid uniform phases ; S = gap-shuffled zero set ; M = mean-gap smooth phase
+    n = 1.000e+09 :
+        R (iid phases)      : mean P_tot =  -6.52931e+05   rms =   1.06043e+06   (5 draws)
+        S (shuffled gaps)   : mean P_tot =   4.46809e+06   rms =   2.20393e+06   (5 draws)
+        actual              :      P_tot =   4.26529e+06
+    n = 1.283e+12 :
+        R (iid phases)      : mean P_tot =  -9.04409e+05   rms =   9.90015e+05   (5 draws)
+        S (shuffled gaps)   : mean P_tot =  -9.72944e+05   rms =   1.24866e+06   (5 draws)
+        actual              :      P_tot =  -1.88056e+06
+
+================================================================================
+READING OF THE NUMBERS
+================================================================================
+  n=1.000e+06: near(j<=8)/N =  15.98326   near(j<=64)/N = 127.60928   far/N = 653871.81326   P_tot/N = 653999.42255
+  n=1.000e+09: near(j<=8)/N =  15.30166   near(j<=64)/N = 112.27174   far/N = -110.14022   P_tot/N =   2.13152
+  n=1.000e+12: near(j<=8)/N =  -1.14603   near(j<=64)/N =  -0.52875   far/N =  -0.17838   P_tot/N =  -0.70713
+  n=1.283e+12: near(j<=8)/N =  -0.79050   near(j<=64)/N =  -0.54850   far/N =  -0.39128   P_tot/N =  -0.93978
+
+  Decision rule:
+   * if near(j<=~64) alone accounts for the O(N) positive mass AND the far remainder is
+     also Theta(N) of the OPPOSITE sign  => the cancellation is GLOBAL, pair correlation
+     (a local/nearest-neighbour statement) is NOT the correct input.
+   * if the near mass is O(sqrt(N)) random-looking  => nearest-neighbour pairs are NOT
+     even coherent at this n, and the whole Theta(N) discussion is vacuous.
+================================================================================

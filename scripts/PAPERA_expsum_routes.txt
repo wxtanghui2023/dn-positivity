@@ -1,0 +1,77 @@
+================================================================================
+ROUTES A (equidistribution) and B (rigidity) -- explicit numbers
+================================================================================
+T0 = 1132490.658714  N(actual zero count) = 2001052  main(T0) = 2001051.3770
+B_T0 = 1.049794e-06   allowance(n) := N - n*B_T0 ; allowance(T0^2) = 6.546544e+05 = 0.3272 N
+
+(A) WHERE IS THE CONSTRAINT BINDING ?   delta(n) := [(N - nB) - |S_n|] / (N - nB)
+    (the proposition |S_n| <= (1-delta)(N-nB) holds for every delta <= min_n delta(n))
+    scanned 549 n in [1, T0^2]
+    min_n delta(n) = 5.7530e-09  at n = 1   (|S_n| = 2001051.988487, allowance = 2001051.999999)
+    delta(1) = 5.7530e-09 ; delta(10) = 5.6780e-07 ; delta(100) = 2.9474e-05
+    for n >= 300 (log-spaced sample): min delta = 1.4417e-04 at n = 328
+    |S_n| at n=1,10,100,1e3,1e6,1e9,1e12,T0^2:
+        n=            1: |S_n| =    2001051.9885   |S_n|/N = 1.000000   delta(n) = 5.7530e-09
+        n=           10: |S_n| =    2001050.8638   |S_n|/N = 0.999999   delta(n) = 5.6780e-07
+        n=          100: |S_n| =    2000993.0212   |S_n|/N = 0.999971   delta(n) = 2.9474e-05
+        n=         1000: |S_n| =    1999914.5176   |S_n|/N = 0.999432   delta(n) = 5.6844e-04
+        n=      1000000: |S_n| =    1143979.3938   |S_n|/N = 0.571689   delta(n) = 4.2831e-01
+        n=   1000000000: |S_n| =       2503.2660   |S_n|/N = 0.001251   delta(n) = 9.9875e-01
+        n=1000000000000: |S_n| =        765.5433   |S_n|/N = 0.000383   delta(n) = 9.9920e-01
+        n=1282535092075: |S_n| =        347.1217   |S_n|/N = 0.000173   delta(n) = 9.9947e-01
+    => FOR SMALL n there is NO sqrt(N): the phases barely wrap, |S_n| ~ N - c n^2,
+       and the binding constant is delta ~ 5.8e-09 (NOT O(1)).  The sqrt(N) regime
+       (task premise) only begins once n >> 1 (n*theta_gamma ~ n/gamma is not small).
+
+(B) SMOOTH-MODEL SPLIT  S_n = S_n^smooth + D_n ,  ghat(k) = Nbar^{-1}(k+1/2)
+    max |gamma_k - ghat(k)| = 0.9937   rms = 0.1881   (O(1): classical S(t) error)
+             n           |S_n|      |S_smooth|           |D_n|    |D_n|/sqrt N
+     1.000e+06      1.1440e+06      1.1440e+06      4.3867e+01          0.0310
+     1.000e+09      2.5033e+03      2.3726e+03      1.3069e+02          0.0924
+     1.000e+12      7.6554e+02      1.5311e+03      1.2298e+03          0.8694
+     1.283e+12      3.4712e+02      8.3154e+02      9.4392e+02          0.6673
+    => BOTH parts are Theta(sqrt N): the smooth density already produces the sqrt(N)
+       cancellation, and the rigidity error D_n is the same size (not dominant).
+
+    identity check: D_n  vs  sum_k (e^{i lambda_k (S_k+a)} - 1) e^{i phi_k}
+      n=1.000e+09: D_n =       130.69   |model(a=0.0)| =     245.62   |model(a=0.5)| =     181.91
+      n=1.000e+12: D_n =      1229.81   |model(a=0.0)| =    1008.51   |model(a=0.5)| =     547.41
+      n=1.283e+12: D_n =       943.92   |model(a=0.0)| =     815.68   |model(a=0.5)| =     748.79
+    => the rigidity error is controlled by the equidistribution of
+       { lambda_k * S_k / 2 pi } mod 1,  lambda_k = 2 pi n/(gamma_k^2 log(gamma_k/2pi)).
+
+    vdC second-derivative test on the smooth sequence (phi(k) = n theta(ghat(k))):
+      phi'(k)  = -2 pi n/(gamma^2 log(gamma/2pi))        [per unit index]
+      phi''(k) =  (2 pi/(gamma log))(2 - 1/log) * (2 pi/log)   (>0, decreasing in gamma)
+      resonance point lambda(gamma_res)=1 : gamma_res = 8.2683e+05   M_B = 581491 = 29.1% N   M_A = 1419561
+      phi''(gamma_res) = 6.5813e-07   sqrt = 8.1125e-04
+      vdC(2nd) on B : M_B sqrt(lam2) + 1/sqrt(lam2) = 471.7 + 1232.7 = 1704.4
+      vdC(1st) on A : |phi'| >= 1 and monotone in the smooth model
+                      => sum over lambda-dyadic shells of O(1/lambda) = O(1)
+      => |S_smooth| <= ~1700 << allowance 6.55e5.  THE SMOOTH PART IS PROVABLE.
+
+(C) RIGIDITY ROUTE: discrete vdC on the ACTUAL sequence phi(k) = n theta(gamma_k).
+    Lambda_B = max_{gamma_k>gamma_res} | n (theta(g_{k+2}) - 2 theta(g_{k+1}) + theta(g_k)) |
+    REGION B (gamma > 8.2683e+05, 581489 terms):
+      max |n Delta^2 theta| = 2.8442e+00  (99.9%q 1.7644e+00, median 3.2255e-01)
+      vdC bound  M_B sqrt(Lambda) + Lambda^-1/2 = 9.8067e+05 + 0.59 = 9.8068e+05
+      with the MEDIAN second difference: 3.3025e+05 + 1.76 = 3.3025e+05
+      NEEDED: M_B sqrt(Lambda) <= 0.327 N  <=>  Lambda <= (0.327 N/M_B)^2 = 1.2663
+      Lambda ~ n|gap_jump|/gamma^2  =>  need max|gap_(k+1)-gap_k| <= 0.6750  (region B)
+      MEASURED max |gap_(k+1)-gap_k| in B = 1.6628   (rms 0.3529)  =>  DOES NOT FIT
+    REGION A (gamma < gamma_res, 1419561 terms): max |n Delta^2 theta| = 1.9976e+10
+      => 2nd-difference test fails there (M_A sqrt(Lambda) = 2.006e+11);
+         must use the 1st-derivative test, whose hypothesis f' monotone FAILS for the
+         actual increments  n(theta_{k+1}-theta_k) = n gap_k/gamma_k^2 (gap noise ~40%).
+      => the rigidity route covers region B only, and needs max|gap jump| <= 0.675 there.
+
+(D) REGION SPLIT OF S_n and the ROUTE-A (equidistribution) BOUND NUMBERS
+             n  |S_n^A| (fast)  |S_n^B| (slow)     |S_n| total  sqrt(M_A),sqrt(M_B)
+     1.000e+09      1.3200e+03      1.2940e+03      2.5033e+03     1191,    763
+     1.000e+12      6.3782e+02      1.4641e+02      7.6554e+02     1191,    763
+     1.283e+12      2.5943e+02      1.2748e+02      3.4712e+02     1191,    763
+    route-A bound |D_n| <= 2 N_A + (sup|S_k|) * sum_B lambda_k,  at n=T0^2:
+      2 N_A = 2.8391e+06 ;  sum_B lambda_k = 4.1866e+05 ;  with sup|S| = C log T0 = 14.0 -> 5.8613e+06
+      => the PROVABLE bound is ~8.7e+06 > allowance 6.55e5 (fails by 13.3x).
+    lambda-dyadic shells in region A: log2(lambda_max/lambda_min) = log2(4.975e+10/1) = 35.5
+================================================================================
