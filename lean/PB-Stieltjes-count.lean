@@ -122,4 +122,42 @@ theorem sum_eq_boundary_add_integrals {ι : Type*} (s : Finset ι) (u : ι → �
     _ = s.card * f H + ∑ i ∈ s, ∫ t in H..(u i), f' t := by
         rw [Finset.sum_add_distrib, Finset.sum_const, nsmul_eq_mul]
 
+/-- 尾计数函数：多少个零点 `≥ t` ✓。-/
+noncomputable def tailCount {ι : Type*} (s : Finset ι) (u : ι → ℝ) (t : ℝ) : ℝ :=
+  ∑ i ∈ s, if t ≤ u i then (1 : ℝ) else 0
+
+/-- **第 ④b 步（Fubini／指示函数重排）** ✓
+左侧用**指示函数形式**（与库的 `Set.indicator_apply` 取值约定一致 ✓：
+判据是 `t ∈ s` 的**成员关系** ✓ 而非不等式 ✓）。-/
+theorem sum_integrals_eq_integral_tailCount {ι : Type*} (s : Finset ι) (u : ι → ℝ)
+    (f' : ℝ → ℝ) (H : ℝ)
+    (hint : ∀ i ∈ s, IntegrableOn
+      (fun t => f' t * (if H < t ∧ t ≤ u i then (1 : ℝ) else 0)) (Set.Ioi H)) :
+    ∑ i ∈ s, ∫ t in Set.Ioi H, (Set.Ioc H (u i)).indicator f' t
+      = ∫ t in Set.Ioi H, f' t * tailCount s u t := by
+  -- 先证：右边 = Σᵢ ∫ (f'·1ᵢ)（用 integral_finsetSum 的 ← 方向 ✓，须显式给 s ✓）
+  have hR : (∫ t in Set.Ioi H, f' t * tailCount s u t)
+      = ∑ i ∈ s, ∫ t in Set.Ioi H, f' t * (if H < t ∧ t ≤ u i then (1 : ℝ) else 0) := by
+    rw [← integral_finsetSum s hint]
+    refine setIntegral_congr_fun measurableSet_Ioi ?_
+    intro t ht
+    simp only [tailCount]
+    rw [Finset.mul_sum]
+    refine Finset.sum_congr rfl ?_
+    intro i hi
+    by_cases htu : t ≤ u i
+    · rw [if_pos htu, if_pos ⟨Set.mem_Ioi.mp ht, htu⟩]
+    · rw [if_neg htu, if_neg (fun hc => htu hc.2)]
+  rw [hR]
+  refine Finset.sum_congr rfl ?_
+  intro i hi
+  refine setIntegral_congr_fun measurableSet_Ioi ?_
+  intro t ht
+  simp only [Set.indicator_apply]
+  by_cases hc : t ∈ Set.Ioc H (u i)
+  · rw [if_pos hc, if_pos ⟨Set.mem_Ioi.mp ht, hc.2⟩]
+    ring
+  · rw [if_neg hc, if_neg (fun hcc => hc ⟨Set.mem_Ioi.mp ht, hcc.2⟩)]
+    ring
+
 end PB
