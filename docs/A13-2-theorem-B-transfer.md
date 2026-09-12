@@ -74,3 +74,21 @@ Two further modulus-dependent inputs: (i) the archimedean Γ-factor, with parity
 Within the repository the label "Theorem B" has **also** been used for Theorem B of the frontier paper arXiv:2608.13637, which is reported to hold verbatim for L(s,χ) (fixed primitive character) [引用; `docs/ALIGN-A3-COMPLETE-proof-architecture.md` §1, `docs/PENDING-ITEMS-MASTER.md` A13-2]. That is a *different* (rank/trace/inertia) argument and is **not** what this note transfers. This note concerns the classical Brown case ("Paper B", `papers/brown-thm2-classical`). If A13-2 was intended to mean the frontier Theorem B, a separate note is required.
 
 **Summary of the transfer.** The algebraic and Abel-bookkeeping core of Theorem B is character-independent and transfers verbatim; the counting hypothesis must be re-instantiated for each L(s,χ), and for the eight moduli the sign condition b_q < 0 (which makes the margin positive) is satisfied by a direct computation; but the two recorded gaps — Brown's broken Lemma 5 step and the unverified explicit constants c_q, d_q — mean the transfer is a **conditional recipe at reference level**, not an established theorem for any modulus.
+
+---
+
+## Update (2026-09-12, later the same day): gap G3 is closed, and it transfers too
+
+Gap G3 above recorded that the near-piece integral of the source's Lemma 3 was not in closed form
+even in the classical case. That has since been closed on the classical side, by an argument that
+uses only the exact identity $F(1+u)=4\sinh^{2}(\tfrac12 v)$, the monotonicity of $\sinh x/x$, and
+$\int_0^1(1+\delta)^{-4}d\delta=7/24$; the bound is $\tfrac7{24}H\log(2H)F(1+H^{-2})/\pi$ and it is
+sharp. The same three ingredients are character-independent, so they transfer here as well: the only
+change is that the local zero density of Lemma 3 becomes $(1/\pi)\log(qt/2\pi)$ instead of
+$(1/2\pi)\log(t/2\pi)$, which replaces $\log(2H)$ by $\log(2qH/\pi)$ in the near bound. For the
+largest of the eight moduli, $q=13$, this inflates the near bound by the factor
+$1+\log13/\log(2H)$, about $1.34$ at $H=10^{3}$, so the near piece still costs only about a tenth to a
+seventh of the right-hand side and the comparison is unaffected. Accordingly G3 should be read as
+closed at the same level as the classical case: algebraically transferred, with the constant written
+out, but still at reference level as regards Brown's own broken step (G1) and the unverified explicit
+constants (G2).
