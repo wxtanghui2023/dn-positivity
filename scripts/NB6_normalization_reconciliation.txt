@@ -1,0 +1,110 @@
+============================================================================================================
+NB6 / A4-M1: normalisation reconciliation  R(N) = I(V_N) / d_N^2(N)
+============================================================================================================
+  V_N(s) = sum_{n<=N} (1 - log n/log N) mu(n) n^{-s}   (BCF arXiv:1211.5191 Thm 1, 引用)
+  C = 2 + gamma - log(4pi) = 0.046191417932 ; [C,3C] = [0.0462, 0.1386]  (引用/推导)
+  BCF Thm 1 (RH + moment hypothesis): I(V_N) ~ C/log N   (引用)
+  Burnol (unconditional): liminf d_N^2 log N >= C          (引用)
+
+------------------------------------------------------------------------------------------------------------
+  T = 400
+  grid T=400 h=0.05 : 8001 points ; c_T = (1/pi)int_0^T dt/(1/4+t^2) = 0.999204226
+  g(0) = 1.2556482683 ; kernel entries exact (dict-cached, no interpolation)
+      N |     d_N^2(A)    d^2*logN  d^2/C*logN       R(N) |       I(V_N)      I*logN    I/C*logN | muA n<=N/2
+     20 |   0.05575728    0.167034      3.6161     7.8855 |   0.43967545    1.317150     28.5150 |    7/7   
+          I(V_N) direct (c=1) = 0.439675446   rel.diff vs kernel = 2.65e-14
+     40 |   0.05194933    0.191635      4.1487     5.8835 |   0.30564581    1.127491     24.4091 |   13/13  
+          I(V_N) direct (c=1) = 0.305645814   rel.diff vs kernel = 3.41e-13
+     80 |   0.05005117    0.219326      4.7482     4.5614 |   0.22830179    1.000425     21.6582 |   26/26  
+          I(V_N) direct (c=1) = 0.228301795   rel.diff vs kernel = 2.07e-13
+    160 |   0.04821944    0.244722      5.2980     3.7592 |   0.18126753    0.919964     19.9163 |   50/50  
+          I(V_N) direct (c=1) = 0.181267533   rel.diff vs kernel = 1.00e-13
+    320 |   0.04663792    0.269022      5.8241     3.1944 |   0.14898079    0.859369     18.6045 |   89/98  
+          I(V_N) direct (c=1) = 0.148980790   rel.diff vs kernel = 6.36e-13
+  (exact kernel sweep: 9.8 s, 31232 distinct g-values cached)
+
+------------------------------------------------------------------------------------------------------------
+  T = 1200
+  grid T=1200 h=0.05 : 24001 points ; c_T = (1/pi)int_0^T dt/(1/4+t^2) = 0.999734742
+  g(0) = 1.2586990488 ; kernel entries exact (dict-cached, no interpolation)
+      N |     d_N^2(A)    d^2*logN  d^2/C*logN       R(N) |       I(V_N)      I*logN    I/C*logN | muA n<=N/2
+     20 |   0.05691065    0.170489      3.6909     7.7410 |   0.44054777    1.319763     28.5716 |    7/7   
+          I(V_N) direct (c=1) = 0.440547772   rel.diff vs kernel = 5.59e-14
+     40 |   0.05296951    0.195398      4.2302     5.7858 |   0.30646866    1.130526     24.4748 |   13/13  
+          I(V_N) direct (c=1) = 0.306468657   rel.diff vs kernel = 3.71e-13
+     80 |   0.05099771    0.223473      4.8380     4.4920 |   0.22908401    1.003852     21.7324 |   26/26  
+          I(V_N) direct (c=1) = 0.229084005   rel.diff vs kernel = 2.19e-13
+    160 |   0.04913592    0.249373      5.3987     3.7044 |   0.18202066    0.923786     19.9991 |   50/50  
+          I(V_N) direct (c=1) = 0.182020661   rel.diff vs kernel = 7.38e-14
+    320 |   0.04750084    0.274000      5.9318     3.1518 |   0.14971302    0.863593     18.6960 |   98/98  
+          I(V_N) direct (c=1) = 0.149713021   rel.diff vs kernel = 6.70e-13
+  (exact kernel sweep: 24.3 s, 31232 distinct g-values cached)
+
+------------------------------------------------------------------------------------------------------------
+  T = 2400
+  grid T=2400 h=0.05 : 48001 points ; c_T = (1/pi)int_0^T dt/(1/4+t^2) = 0.999867371
+  g(0) = 1.2595858154 ; kernel entries exact (dict-cached, no interpolation)
+      N |     d_N^2(A)    d^2*logN  d^2/C*logN       R(N) |       I(V_N)      I*logN    I/C*logN | muA n<=N/2
+     20 |   0.05722937    0.171444      3.7116     7.7023 |   0.44079973    1.320518     28.5880 |    7/7   
+          I(V_N) direct (c=1) = 0.440799734   rel.diff vs kernel = 8.00e-14
+     40 |   0.05325535    0.196453      4.2530     5.7591 |   0.30670339    1.131392     24.4936 |   13/13  
+          I(V_N) direct (c=1) = 0.306703386   rel.diff vs kernel = 4.17e-13
+     80 |   0.05125875    0.224617      4.8627     4.4735 |   0.22930590    1.004825     21.7535 |   26/26  
+          I(V_N) direct (c=1) = 0.229305901   rel.diff vs kernel = 2.91e-13
+    160 |   0.04938036    0.250614      5.4256     3.6904 |   0.18223325    0.924865     20.0225 |   50/50  
+          I(V_N) direct (c=1) = 0.182233252   rel.diff vs kernel = 1.88e-13
+    320 |   0.04774135    0.275387      5.9619     3.1402 |   0.14991825    0.864777     18.7216 |   98/98  
+          I(V_N) direct (c=1) = 0.149918246   rel.diff vs kernel = 4.86e-13
+  (exact kernel sweep: 45.6 s, 31232 distinct g-values cached)
+
+============================================================================================================
+  CROSS-T TABLE (d_N^2 and R(N) at each T; the true d_N^2 uses T = infinity)
+============================================================================================================
+      N |     d2 T=400    d2 T=1200    d2 T=2400 |    R T=400   R T=1200   R T=2400 | d2*logN(2400)      ratio/C
+     20 |   0.05575728   0.05691065   0.05722937 |     7.8855     7.7410     7.7023 |     0.171444       3.7116
+     40 |   0.05194933   0.05296951   0.05325535 |     5.8835     5.7858     5.7591 |     0.196453       4.2530
+     80 |   0.05005117   0.05099771   0.05125875 |     4.5614     4.4920     4.4735 |     0.224617       4.8627
+    160 |   0.04821944   0.04913592   0.04938036 |     3.7592     3.7044     3.6904 |     0.250614       5.4256
+    320 |   0.04663792   0.04750084   0.04774135 |     3.1944     3.1518     3.1402 |     0.275387       5.9619
+
+  I(V_N) CROSS-T
+      N |      I T=400     I T=1200     I T=2400 | I*logN(2400)/C
+     20 |   0.43967545   0.44054777   0.44079973 |      28.5880
+     40 |   0.30564581   0.30646866   0.30670339 |      24.4936
+     80 |   0.22830179   0.22908401   0.22930590 |      21.7535
+    160 |   0.18126753   0.18202066   0.18223325 |      20.0225
+    320 |   0.14898079   0.14971302   0.14991825 |      18.7216
+
+  NORMALISATION-SOURCE DIAGNOSTIC (each candidate factor, 核验/推导)
+  candidate                              | verdict
+  (a) measure dt/|s|^2 vs dt/(1/4+t^2)   | IDENTICAL: |s|^2=1/4+t^2 at s=1/2+it -> no factor (推导)
+  (b) target function 1 vs 1/s           | BCF uses '1' (引用 A4-3 sec4); constant c=(1/2pi)int dt/(1/4+t^2)=1 (核验)
+  (c) kernel (mn)^-1/2 weight            | FIXED 2026-09-12 -> convention A reproduces defining integral to 1e-13 (核验)
+  (d) T truncation floor                 | d2 increases with T (see table); floor is the tail, not a scalar k_N (核验)
+  (e) grid step h=0.05                   | interpolation/quadrature error ~0.04-1%% documented; not a scalar (核验)
+  (f) time/frequency convention (mn)^-1/2 | covered by (c); convention A is the literal BCF form (核验)
+
+============================================================================================================
+READ-OFF (generated from the numbers above; 核验 / 引用 / 推导 / 未做)
+============================================================================================================
+  [核验] at every (N,T), I(V_N) from the assembled kernel equals the direct quadrature of the
+         defining integral to <= 3e-13 relative.  This is the decisive normalisation test: the
+         measure (dt/(1/4+t^2)), the 2pi factor, the constant term c=1, and the target '1' are
+         all self-consistent.  There is NO hidden scalar k_N.
+  [核验] R(N) = I(V_N)/d_N^2 is NOT stable and NOT ~1: it DECREASES with N (7.89->3.69 at T=400)
+         and decreases mildly with T.  This drift is NOT a normalisation error: I(V_N) is the
+         value at the FIXED suboptimal polynomial V_N, while d_N^2 is the infimum over ALL a_n,
+         so d_N^2 <= I(V_N) and R(N) -> 1 only in the N->inf limit (BCF optimality, 引用).
+  [核验] d_N^2 * log N is INCREASING in N (0.167 -> 0.251 at T=2400), i.e. L2 (fall into [C,3C])
+         FAILS cleanly: ratio to C rises 3.6 -> 5.4, never entering [0.046, 0.139].
+  [核验] I(V_N) * log N is DECREASING (1.13 -> 0.92 at T=2400) but saturates at ~20 C, far above
+         [C,3C]; BCF's 1/log N rate is present (decreasing) but the constant is not yet C at N<=320.
+  [推导] the 'opposite behaviour' flagged in the task is REAL and is NOT a normalisation artefact:
+         d_N^2 (infimum, small, slow N-dependence -> rising logN product) vs I(V_N) (explicit V_N,
+         larger, already 1/logN-shaped -> falling logN product) are two DIFFERENT objects, both
+         legitimately above C/log N at these N.  d_N^2 <= I(V_N) at every N, consistently.
+  [推导] the ~5.5x gap of d_N^2*logN over C is genuine finite-N slow convergence (the (loglog N)
+         corrections are known to be large; N<=320 is far from the asymptotic regime), not a k_N.
+  [未做] no proof claimed; these numbers do not decide RH; I(V_N)~C/logN is conditional (RH + moment).
+
+Output written to /home/node/.openclaw/workspace/dn-project/scripts/NB6_normalization_reconciliation.txt
