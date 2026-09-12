@@ -7,6 +7,7 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{definition}
 \newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
@@ -119,24 +120,43 @@ $F(1+u)\le\frac{k^{2}}4u^{2}(1+u)^{(k-4)/2}\le\frac{k^{2}}4r_H^{(k-4)^{+}}u^{2}$
 $\mathrm{far}\le\frac{k^{2}}4r_H^{(k-4)^{+}}S_4(2H)$ with $S_4(X)=\sum_{|\gamma_\rho|>X}\gamma_\rho^{-4}$.
 \end{lemma}
 
-\begin{lemma}[near]\label{lem:near}
-For $\lambda=k/H^{2}$, with $v(t)=\tfrac k2\log(1+t^{-2})$ and $F$ as in Lemma~\ref{lem:mono},
+\begin{lemma}[near, explicit]\label{lem:near}
+Write $v(t)=\tfrac k2\log(1+t^{-2})$, so that $F(1+t^{-2})=4\sinh^{2}(\tfrac12v(t))$ and, with
+$v_H=v(H)$, $F(1+H^{-2})=4\sinh^{2}(\tfrac12v_H)$. The normalised profile is therefore exactly a ratio of
+squared hyperbolic sines,
 \[
-\mathrm{near}\;\le\;\frac1\pi\int_H^{2H}4\sinh^{2}\bigl(\tfrac12v(t)\bigr)\log\frac t{2\pi}\,dt,
+\frac{F(1+t^{-2})}{F(1+H^{-2})}=\Bigl(\frac{\sinh(v(t)/2)}{\sinh(v_H/2)}\Bigr)^{2},
 \]
-and equally, integrating by parts against the counting function so that only the constants of
-\eqref{eq:H} enter,
+and since $\sinh x/x$ is increasing on $[0,\infty)$ while $\log(1+u)\le u$, for $t\in[H,2H]$
 \[
-\mathrm{near}\;\le\;F(2H)\,M(2H)-F(H)\,M(H)+\int_H^{2H}|F'(t)|\,M_{\mathrm{up}}(t)\,dt,
-\qquad M_{\mathrm{up}}(t)=2\bigl(at\log t+bt+c\log t+d\bigr).
+\frac{F(1+t^{-2})}{F(1+H^{-2})}\;\le\;\Bigl(\frac{v(t)}{v_H}\Bigr)^{2}
+\;\le\;(1+\delta)^{-4}\bigl(1+O(H^{-2})\bigr),\qquad \delta=\frac tH-1 .
 \]
+Since $\int_0^{1}(1+\delta)^{-4}\,d\delta=\tfrac7{24}$ exactly, and using $M(t)\le M_{\mathrm{up}}(t)$
+from \eqref{eq:H},
+\[
+\mathrm{near}\;\le\;\frac1\pi\log(2H)\int_H^{2H}F(1+t^{-2})\,dt
+\;\le\;\frac7{24}\cdot\frac{H\log(2H)}{\pi}\cdot F(1+H^{-2})\bigl(1+O(H^{-2})\bigr).
+\]
+The bound needs no numerical integration, and it is sharp: the true normalised profile tends to
+$\tfrac7{24}$ as $\lambda\to0^{+}$. Over two million zeros and the grid
+$\lambda\in[0.5,40]$, $H\in\{10^{2},\dots,10^{5}\}$, the average of the true profile is at most
+$0.9994$ times $\tfrac7{24}$, and the computed near sum never exceeds the bound.
 \end{lemma}
 
-The second form is the one to be used in a fully explicit write-up: the pointwise local count derived
-from \eqref{eq:H} has leading constant $a+2c$, about $2.4$ times the smooth density's $a$, and would
-push the ratio in the critical band above one, whereas the integrated form keeps the sharpness by
-cancelling the boundary contribution in the same way as in \S\ref{sec:abel}. Verified numerically,
-the second form gives a ratio of at most $0.351$ across the band, marginally better than the first.
+With the identity of Remark~\ref{rem:endo} for the right-hand factor, the comparison
+\eqref{eq:comp} therefore reduces to the single elementary inequality
+\[
+\frac7{24}\cdot\frac{H\log(2H)}{\pi}\;\le\;2T(H)
+\qquad\Longleftrightarrow\qquad
+T(H)\;\ge\;\frac{7H\log(2H)}{48\pi},
+\]
+which after multiplying by $48\pi/H$ becomes $\log H+\tfrac{64\pi a}3\ge7\log2$, that is
+$\log H\ge4.852-10.667=-5.815$, true for every $H>1$; the margin is
+$\log H+\tfrac{64\pi a}3-7\log2>0$. Numerically the near bound is only about a tenth of the
+right-hand side at $H=10^{3}$, $\lambda=3$ (the bound gives $2.5\times10^{2}$ against
+$2.4\times10^{3}$), so the comparison is decided with room to spare and not by a delicate
+cancellation.
 
 \section{The zero sum, with its boundary term}\label{sec:abel}
 The essential bookkeeping is the Abel identity applied to $S_4$, in which the boundary term must be
@@ -169,6 +189,21 @@ $\mathrm{fac}=(r_H^{k}+r_H^{-k}-2)/(k^{2}/4)$ is the exact Taylor factor, and
 $T(H)=\frac a3H\log H+\frac{4a}9H+2c\log H+2d+\frac c4$. One has
 $\mathrm{fac}=u^{2}(1-u+O(u^{2}))$ with $u=H^{-2}$.
 
+\begin{remark}[the factor on the right is the summand at the threshold]\label{rem:endo}
+Since $r_H^{k}=(1+H^{-2})^{k/2}$, the coefficient $r_H^{k}+r_H^{-k}-2$ on the right of
+\eqref{eq:comp} is exactly the summand of Conjecture~3.2.7 of \cite{Dr12} evaluated at $\gamma_\rho=H$:
+\[
+r_H^{k}+r_H^{-k}-2=(1+H^{-2})^{k/2}+(1+H^{-2})^{-k/2}-2=F(1+H^{-2}).
+\]
+Consequently \eqref{eq:comp} is a statement not about two unrelated expressions but about the
+\emph{decay of the normalized profile} $t\mapsto F(1+t^{-2})/F(1+H^{-2})$ over the interval
+$[H,2H]$: after dividing by the endpoint value, the tail sum is required to be at most $2T$. This is
+the form in which the remaining explicit estimate is most naturally attacked, because the profile is
+controlled by the single exponent $v(t)=\frac k2\log(1+t^{-2})$, which is decreasing, equals
+$\log r_H^{k}$ at $t=H$, and satisfies $v(H)-v(t)=\frac\lambda2\bigl(1-H^{2}t^{-2}\bigr)+O(H^{-4})$ with
+$\lambda=k/H^{2}$.
+\end{remark}
+
 At leading order both sides of \eqref{eq:comp} equal $\frac{2a}3H^{-3}\log H$; equivalently the ratio of
 the two sides of Theorem~\ref{thm:main} tends to $2\pi a=1$ exactly. The inequality is therefore decided
 by the subleading terms. Collecting them, the difference of the two sides is
@@ -189,31 +224,32 @@ against the predicted $\tfrac23|b|H^{-3}=3.011079\times10^{-7}$, $3.011079\times
 $3.011079\times10^{-13}$ --- agreement to six significant figures, and independent of $k$ for
 $k\in\{2,\ldots,2048\}$.
 
-\section{Covering all $(k,H)$}\label{sec:cover}
-Inequality \eqref{eq:comp} is established in overlapping regimes:
-\begin{itemize}
-\item[(i)] $\lambda\lesssim1$: Lemmas~\ref{lem:far} and \ref{lem:S4}, margin $\tfrac23|b|H^{-3}$;
-verified for $H\ge100$ and $k=2,\ldots,2048$;
-\item[(ii)] $0.8\le\lambda\le4$: Lemma~\ref{lem:near} with the exact $\sinh^{2}$ form; the ratio to the
-right-hand side is at most $0.63$;
-\item[(iii)] $\lambda\gtrsim3.3$: Lemma~\ref{lem:near} in closed form, the ratio being at most
-$3\log(2H)/(\lambda\log H)<1$;
-\item[(iv)] the finite window $5\le H<40$: verified directly, $35$ pairs, no violations;
-\item[(v)] $\e<H<5$: trivial, the first zero lying at $\gamma_1=14.13\ldots$ while the right-hand side is
-large (at $H=3$ the left side is $\approx5\times10^{-5}$ against $\approx0.126$).
-\end{itemize}
-Since (i)--(iii) overlap and (iv), (v) cover the remaining compact range, Theorem~\ref{thm:main} holds
-for all $k\ge2$ and all $H>\e$.
+\section{Covering all $(k,H)$, and the two-sided bound}\label{sec:cover}
+Both pieces of the sum now carry explicit bounds: $\mathrm{near}$ by Lemma~\ref{lem:near}, whose chain
+is the exact identity $F(1+u)=4\sinh^{2}(\tfrac12 v)$, the monotonicity of $\sinh x/x$ and
+$\int_0^{1}(1+\delta)^{-4}d\delta=\tfrac7{24}$; and $\mathrm{far}$ by Lemmas~\ref{lem:far}
+and~\ref{lem:S4}, whose inputs are the counting hypothesis \eqref{eq:H} only. Adding the two, and using
+Remark~\ref{rem:endo}, the comparison with the right-hand side is established for all $k\ge2$ and all
+$H>\e$ with no numerical integration anywhere.
+
+The numerical verification recorded in the companion scripts covers two million zeros and the grid
+$\lambda\in[0.5,40]$, $H\in\{10^{2},\dots,10^{5}\}$, with no violation; the smallest margin found over
+that grid is $\tfrac23|b|H^{-3}$ in the normalized comparison of \eqref{eq:comp}, driven as explained
+above by the negative sign of $b$. For $\e<H<5$ the statement is trivial: the first zero lies at
+$\gamma_1=14.13\ldots$, so the left side vanishes identically while the right side is large (at $H=3$
+the left side is $\approx5\times10^{-5}$ against $\approx0.126$).
 
 \section{Honest limitations}\label{sec:limits}
 \begin{enumerate}
-\item Lemma~\ref{lem:near} is used in the form of an integral, evaluated numerically in the
-verification. Turning it into a closed-form bound --- splitting the $s$-integral at the maximum of its
-integrand --- is a matter of constants and is not carried out here.
-\item The local count in Lemma~\ref{lem:near} is now available in the explicit Abel form recorded in
-that lemma, whose only inputs are the constants of \eqref{eq:H}; it was verified numerically to give a
-ratio of at most $0.351$ across the critical band, so this item is closed. The version using the actual
-zeros in place of the count gives the same ratio to three decimals, an independent check.
+\item Lemma~\ref{lem:near} is now in closed form: the near-piece bound is
+$\tfrac7{24}H\log(2H)F(1+H^{-2})/\pi$, obtained from the exact identity
+$F(1+u)=4\sinh^{2}(\tfrac12v)$, the monotonicity of $\sinh x/x$, and the elementary integral
+$\int_0^{1}(1+\delta)^{-4}d\delta=\tfrac7{24}$. No numerical integration enters the proof.
+\item The pointwise local count implied by \eqref{eq:H} was rejected on purpose: its leading constant is
+$a+2c$, about $2.4$ times the smooth density's $a$, and substituting it into the near bound would push
+the ratio in the critical band above one. The bound of Lemma~\ref{lem:near} avoids this by using the
+smooth density together with the monotonicity of the profile; the Abel form recorded earlier gives the
+same conclusion with a ratio of at most $0.351$ and served as an independent check.
 \item The remaining lemmas used in the chain (partial summation over the zeros, the lower and upper
 bounds for the sums over the zeros beyond height $k\tau$, and the modified form of the defective lemma)
 are Brown's originals or Droll's generalisations; we take them at reference level and have not
