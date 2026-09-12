@@ -1,0 +1,29 @@
+# `lean/` —— Paper B 的 Lean 4 形式化
+
+**目的**：按项目纪律⑤「**机器可验证优先**」✅，把 Paper B 的引理链逐条形式化、**每条即时编译验证** ✅
+（缘由：`docs/00-ANCHOR-purpose-and-discipline.md` ✅；工具链安装：`docs/LEAN-SANDBOX-SETUP.md` ✅）
+
+## 如何编译（可复现 ✅）
+```bash
+export PATH="$HOME/.elan/bin:$PATH"
+cd ~/mathlib4                       # Mathlib 工程（提供 import 搜索路径 ✅）
+lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Basic.lean
+```
+**判据**：**退出码 0 且 error 数为 0** ⟹ 通过 ✅（4 秒左右 ✅）
+```
+⚠️ 必须 `lake env lean`（在 ~/mathlib4 内）—— 直接 `lean` 找不到 Mathlib ✅
+⚠️ 必须【最小 import】✅（全库 `import Mathlib` 在本机内存下不可用 ✗ 见 LEAN-SANDBOX-SETUP.md §六）
+```
+
+## 进度
+```
+| # | 引理 | 状态 |
+| 1 | `F_eq_sq`：x^{k/2} + x^{-k/2} - 2 = (x^{k/4} - x^{-k/4})^2  (x>0) | ✅ **已形式化并通过**（2026-09-12） |
+| 2 | `exp_sinh_identity`：e^v - 2 + e^{-v} = 4 sinh^2(v/2) | ✅ **已形式化并通过**（2026-09-12） |
+| 3 | 论文 **Lemma 1**（单调性：F 在 x>1 严格递增） | ⬜ 待做 |
+| 4 | 论文 **Lemma 2**（far：F(1+u) ≤ (k²/4)u²(1+u)^{(k-4)/2}） | ⬜ 待做 |
+| 5 | 论文 **Lemma 3**（near：F(1+t^{-2}) = 4sinh²(v(t)/2) + 归一化剖面） | ⬜ 待做 |
+| 6 | 论文 **Lemma S4**（Abel 求和 + 渐近常数 2a/3 = 1/(3π)） | ⬜ 待做 |
+```
+**说明**：本目录只记录**形式化**进度 ✅；**不改变**论文的任何数学陈述 ✅。
+**纪律**：每条引理必须**独立编译通过**才记为 ✅；**卡住的如实记为卡住** ✅（不粉饰 ✅）。
