@@ -1,0 +1,89 @@
+==============================================================================
+ROUTE 2 (reciprocal variable) + ROUTE 4 (Erdos-Turan)
+==============================================================================
+  T0 = 1132490.658714   N = 2,001,052   sqrt(N) = 1414.6
+
+------------------------------------------------------------------------------
+ROUTE 2 -- THE u = theta(gamma) DENSITY AND ITS SMOOTH PART
+------------------------------------------------------------------------------
+
+  gamma(u) = (1/2) cot(u/2);  rho(u) = main'(gamma(u)) * |d gamma/du|
+  (asymptotically rho(u) = log(1/u)/(2 pi u^2) (1 + O(u^2 log u))).
+
+  mass int rho du over u in [8.830e-07,3.141589] = 2001050.502037   (mass main(T0)-main(0+) = 2001050.501974)
+  u_max = theta(gamma_1) = 0.070718  (< pi/2; the u-densities pile up at u -> 0 like log(1/u)/u^2)
+
+  smooth part  S_sm(n) = int cos(nu) rho(u) du   vs   J(n) = int_0^{T0} cos(n theta) d main
+  (identical after u = theta(t); checked numerically by two independent grids)
+         n      S_sm (rho-grid)       J = MASS-TermB      ratio
+     1,000      +1.99988965e+06      +1.99988965e+06     1.0000
+    10,000      +1.98376837e+06      +1.98376837e+06     1.0000
+   100,000      +1.77894851e+06      +1.77894852e+06     1.0000
+ 1,000,000      +1.43526182e+04      +1.43526523e+04     1.0000
+
+  => S_sm(n) == J(n) (same integral).  Sizes: J(n) = Theta(mass) for n << T0; for n >> T0
+     the period-block identity (int_0^{2pi} cos = 0, int_0^{2pi} u cos u du = 0) applies
+     and gives |J(n)| <= G_phase(u0) = main'(T0)(4T0^2+1)/(4n) -- table below.
+
+                   n u0 = n theta(T0)        G_phase(u0)    |J|/G(u0)
+           1,000,000       8.8301e-01       2.470293e+06        0.006
+         100,000,000       8.8301e+01       2.470293e+04       (n.a.)
+      10,000,000,000       8.8301e+03       2.470293e+02       (n.a.)
+   1,000,000,000,000       8.8301e+05       2.470293e+00       (n.a.)
+   1,282,535,092,075       1.1325e+06       1.926102e+00       (n.a.)
+
+  THE FLUCTUATION AFTER THE u-CHANGE:  sum cos - J
+               n          sum cos         J (= S_sm)        fluctuation   |fluc|/|sum|
+           1,000    +1.999890e+06      +1.999890e+06      +2.449442e-01         0.0000
+          10,000    +1.983776e+06      +1.983768e+06      +7.405370e+00         0.0000
+         100,000    +1.778966e+06      +1.778949e+06      +1.770327e+01         0.0000
+       1,000,000    +1.432306e+04      +1.435265e+04      -2.958986e+01         0.0021
+   1,000,000,000    +5.245471e+02      +5.438036e+02      -1.925657e+01         0.0367
+1,282,535,092,075    -2.172365e+02      -1.651144e-01      -2.170713e+02         0.9992
+
+  => in u-space the SMOOTH part is provably O(T0^2 log(T0/2pi)/n) (the period-block
+     identity: int_0^{2pi} cos = 0 and int_0^{2pi} u cos u du = 0), but the FLUCTUATION
+     is the same object as before:  sum cos - J = int_0^{T0} cos(n theta) dS.  The
+     u-parametrisation is exact and gain-free.
+
+  STRUCTURAL NOTE: theta(t) = 2 arctan(1/(2t)) has branch points at t = +-i/2;
+  in u-space the phase n theta(t) ~ n/t becomes exp(i n gamma^{-1}), whose only
+  singularity in gamma is at gamma = 0 (essential).  The admissible-class obstruction
+  is invariant: +-i/2 <-> 0.
+
+------------------------------------------------------------------------------
+ROUTE 4 -- ERDOS-TURAN FOR x_gamma = n theta_gamma/(2 pi) mod 1
+------------------------------------------------------------------------------
+
+  D_N <= C ( 1/M + sum_{k=1}^{M} (1/k) |(1/N) sum_gamma e^{2 pi i k x_gamma}| ),  C = 2 used.
+  Koksma: |sum_gamma cos(n theta_gamma)| <= 4 N D_N   (Var(cos 2 pi .) = 4).
+
+       n          M      max_k |S_k|/N         D_N (ET)            4 N D_N true |sum cos|        |S_1|/N
+1,000,000         30       5.716890e-01     2.389877e+00       1.912907e+07   1.432306e+04   5.716890e-01
+1,000,000,000         30       1.250975e-03     7.109466e-02       5.690564e+05   5.245471e+02   1.250975e-03
+1,000,000,000,000         30       1.083551e-03     7.111387e-02       5.692102e+05   7.261900e+02   3.825704e-04
+1,282,535,092,075         30       1.141501e-03     7.088384e-02       5.673690e+05   2.172365e+02   1.734696e-04
+
+  NOTE: |S_1| is dominated by the SMOOTH part of e^{i n theta}: at n=1e6, |S_1|/N = 5.7e-1
+  while Re S_1 = sum cos = 1.4e4 = 7.2e-3 N.  So the ET sums are NOT calibrated by the
+  allowance at small n; ET fails there (bound 1.9e7 > allowance 2.0e6).
+
+  => at n = T0^2 the ET bound (5.7e5) is just BELOW the allowance (6.5e5), but 94% of it
+     is the 1/M floor; with the same M the bound fails at n = 1e6 by a factor 9.5.
+     The requirement is |S_k| <= delta N with delta ~ allow/(4 C N log M) = 0.0058 for
+     every k <= M, M >~ 25.  The k = 1 term IS the required sum (with 2 pi n in place of n).
+     ET therefore presupposes ~30 constant-factor bounds each as hard as the original.
+     Loss: strictly more than the original problem (30 frequencies instead of 1).
+
+==============================================================================
+SUMMARY -- routes 2 and 4
+==============================================================================
+  2. u = theta(gamma) is an exact reparametrisation: the smooth part becomes J(n),
+     provably O(T0^2 log T0/n) for n >> T0 by the period-block identity, but the
+     fluctuation is unchanged (sum cos - J = int cos dS).  No gain; the analytic
+     singularity merely moves +-i/2 -> 0.
+  4. Erdos-Turan needs |sum_gamma e^{i k n theta_gamma}| <= delta N, delta ~ 0.006, for
+     k <= M >~ 25.  The k = 1 term is the required sum itself; ET is circular and asks
+     for ~30 times more.  Measured |S_k| would just fit at n=T0^2 (5.7e5 < 6.5e5) but
+     fail by 9.5x at n=1e6.
+==============================================================================

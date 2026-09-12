@@ -1,0 +1,89 @@
+==============================================================================
+ROUTE 3 (linearised phase) + ROUTE 5 (finite admissible expansion)
+==============================================================================
+  T0 = 1132490.658714   N = 2,001,052   allowance at n=T0^2 = 6.546538e+05
+
+------------------------------------------------------------------------------
+ROUTE 3 -- WHAT A "LINEAR-PHASE" CRITERION COSTS
+------------------------------------------------------------------------------
+
+  phase in the gamma variable:  phi(gamma) = n theta(gamma),  theta(gamma) = 2 arctan(1/(2 gamma))
+  phi'(gamma) = -4n/(4 gamma^2 + 1);  max over gamma in [1,T0] at gamma=1:  |phi'| = 4n/5 = 0.8n
+
+                   n       max |phi'|    Lambda (cycles)  prime side e^{2 pi L} bandlimit route e^{5.357n}
+           1,000,000       8.0000e+05         1.2732e+05           10^3.474e+05           10^2.327e+06
+       1,000,000,000       8.0000e+08         1.2732e+08           10^3.474e+08           10^2.327e+09
+   1,000,000,000,000       8.0000e+11         1.2732e+11           10^3.474e+11           10^2.327e+12
+   1,282,535,092,075       1.0260e+12         1.6330e+11           10^4.456e+11           10^2.984e+12
+
+  => ANY criterion whose fluctuation term reproduces the Li phase over gamma <= T0 and
+     n <= T0^2 must carry exponential type >= 0.1273 n; the explicit-formula prime side
+     then reaches m <= e^{0.8n} = 10^{0.347 n}.  At n = T0^2 that is 10^{4.45e11}.
+     Feasible explicit verifications of the explicit formula reach prime side T0^{O(1)},
+     i.e. log10 <= O(log T0) ~ 14.  Loss factor = 10^{4.45e11} / 10^{14} = 10^{4.45e11}.
+
+  CROSS-CHECK: the project's band-limited analysis (PAPERA-bandlimited-route.md) gets the
+  same structure with the (larger) threshold pi Delta >= 2.678 n: prime side e^{5.357n}.
+  Both are e^{Theta(n)}; the linearisation does not reduce the exponent, it only changes
+  the constant (0.8 vs 5.357).  The Li weight (1-1/rho)^n itself has exponential type n.
+
+  WHAT DOES EXIST: Oesterle/Voros linearise by the change of variable n theta = t, which
+  turns the fluctuation into the Fourier coefficient of an L^1 function and sends it to 0
+  by Riemann-Lebesgue.  That is an n -> infinity statement; it produces the closed form
+  of lambda_n but NO uniform-in-n error.  The linear-phase object is EVALUABLE, not BOUNDABLE.
+
+------------------------------------------------------------------------------
+ROUTE 5 -- FINITE ADMISSIBLE EXPANSION AND ITS CANCELLATION COST
+------------------------------------------------------------------------------
+
+  (1) ADMISSIBILITY: the binomial expansion is finite (n+1 terms) and each term
+      rho -> rho^{-j} is holomorphic on Re s > 0 (so on |Im s| <= 1/2 + eps, eps < 1/2)
+      and decays.  The band-limited obstruction (branch point at s = 1/2 +- i/2) does NOT
+      apply to this expansion.  Admissibility is satisfied; the obstruction is elsewhere.
+
+  (2) THE |Z_j| LAW, measured from the table:  Z_j = sum_rho rho^{-j},  j = 2..25
+      fit  log|Z_j| = a - j log r  =>  r = 14.11006   (|rho_1| = 14.13473)
+      j =   2: |Z_j| = 4.615063e-02
+      j =   3: |Z_j| = 1.111582e-04
+      j =   5: |Z_j| = 7.150934e-07
+      j =  10: |Z_j| = 5.997715e-12
+      j =  20: |Z_j| = 1.482399e-23
+      j =  25: |Z_j| = 2.663193e-29
+      => |Z_j| ~ r^{-j} with r = |rho_1| = 14.13, i.e. the terms decay geometrically at
+         the scale of the FIRST zero, not at the arithmetic scale 3 (the trivial zero s=-2).
+
+  (3) lambda_n FROM THE TABLE (lower bound: the omitted tail is positive) and the
+      CANCELLATION COST  digits = log10( sum_j |C(n,j) Z_j| / lambda_n ).
+
+      check:  lambda_1 = 2 sum (1 - cos theta_gamma) = 0.023093867665072
+              known value                            = 0.023095708966121
+
+       n log10 sum|C(n,j)Z_j|         j_peak   log10 lambda_n    digits needed
+      50               6.3347              3           1.6388             4.70
+     100               9.5925              6           2.0740             7.52
+     200              16.2420             13           2.4865            13.76
+     300              22.9740             19           2.7156            20.26
+     400              29.7396             26           2.8739            26.87
+     600              43.3192             39           3.0939            40.23
+
+  => j_peak/n = 0.0656 for n >= 200 (project: j_approx = n/(1+|rho_1|) = n/15.13;
+     at n <= 100 the j = 2 term is still exceptional, as the project found).
+     digits needed grows LINEARLY: fitted rate 0.0648 digits per unit n
+     (the project measured 0.0427 n from the Z_j cancellation + 0.029 n from the binomial
+     transform; our n = 50..600 numbers are the same order and the same law).
+     EXTRAPOLATION: at n = T0^2 = 1.283e+12 the cost is ~ 8.32e+10 digits, versus ~50 digits
+     that a high-precision (MPFR, 200-bit) implementation can afford.  ROUTE 5 fails on
+     precision, NOT on admissibility: the finite binomial expansion is fully admissible.
+
+==============================================================================
+SUMMARY -- routes 3 and 5
+==============================================================================
+  3. A linear-phase criterion must have exponential type >= 0.1273 n; the explicit
+     formula prime side then reaches e^{0.8 n} = 10^{4.45e11} at n = T0^2, versus
+     T0^{O(1)} feasible.  ROUTE 3 fails by ~10^{4.45e11}.  The "linear phase" object
+     exists (Oesterle) but is evaluable, not uniformly boundable.
+  5. The FINITE binomial expansion has admissible terms -- so the admissibility wall of
+     the band-limited route is NOT the issue -- but the binomial transform loses about
+     0.0648 digits per unit n, i.e. ~8.32e+10 digits at n = T0^2.
+     ROUTE 5 fails on the cancellation cost, not on the class of test functions.
+==============================================================================

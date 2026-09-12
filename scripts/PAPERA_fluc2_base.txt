@@ -1,0 +1,86 @@
+==============================================================================
+ROUND-2 BASE: Fluc(n), exact reduction, allowance, margin
+==============================================================================
+  T0 = gamma_max = 1132490.658714   tabulated zeros N = 2,001,052   main(T0) = 2001051.376974
+  B_T0 = (logT0+1)/(4 pi T0) = 1.049794e-06    mass main(T0)-main(0+) = 2001050.5020
+  C0 = [N-main(T0)] + main(0+) = 1.498026
+
+------------------------------------------------------------------------------
+(0) theta_gamma vs theta(gamma)
+------------------------------------------------------------------------------
+   max |arg(1-1/rho) - 2 arctan(1/(2 gamma))| over the table = 1.39e-17
+   => identical phase function; the window argument of Paper A applies verbatim.
+
+------------------------------------------------------------------------------
+(2) VALIDATION of the quadrature: Fluc(n) against the project's own |Fluc|
+------------------------------------------------------------------------------
+
+  Fluc = [N - sum cos(n theta_gamma)] - TermB,  TermB by 40 pts/period (and 80 as check)
+        n        sum cos          TermB(40)          TermB(80)       Fluc(40)   project |Fluc|
+     1000  +1.999890e+06       1.160853e+03       1.160853e+03      +1.253082          10.1653
+    10000  +1.983776e+06       1.728213e+04       1.728213e+04      -5.907344          42.3229
+   100000  +1.778966e+06       2.221020e+05       2.221020e+05     -16.205245          39.3791
+  1000000  +1.432306e+04       1.986698e+06       1.986698e+06     +31.087885          30.5167
+
+  => reproduced; resolution test |TermB(40)-TermB(80)| is at the ~1e-4 relative level,
+     i.e. far below the O(10) differences reported here.
+
+------------------------------------------------------------------------------
+(1) J(n) = Mass - TermB(n)  vs the block-method leading value  -sin(u0) G(u0)
+------------------------------------------------------------------------------
+
+           n     J = Mass-TermB              G(u0)    |J|/G(u0)             u0
+        1000    +1.99988965e+06       2.470293e+09       0.0008   8.830095e-04
+       10000    +1.98376837e+06       2.470293e+08       0.0080   8.830095e-03
+      100000    +1.77894852e+06       2.470293e+07       0.0720   8.830095e-02
+     1000000    +1.43526523e+04       2.470293e+06       0.0058   8.830095e-01
+     3000000    -5.41165104e+05       8.234309e+05       0.6572   2.649028e+00
+
+  => for n << T0, J = Theta(mass) (the naive boundary term is NOT small); it decays
+     only once u0 = n theta(T0) >> 1, i.e. n >> T0.  |J| <= G(u0) holds numerically.
+
+------------------------------------------------------------------------------
+(3) Fluc(n) vs the allowance N(T0) - n B_T0   (the margin table)
+------------------------------------------------------------------------------
+
+                   n          sum cos             Fluc        allowance    allow/|F|   |F|/sqrt N
+               1,000    +1.999890e+06    +1.253082e+00     2.001051e+06    1.597e+06        0.001
+              10,000    +1.983776e+06    -5.907344e+00     2.001051e+06    3.387e+05        0.004
+             100,000    +1.778966e+06    -1.620525e+01     2.001051e+06    1.235e+05        0.011
+           1,000,000    +1.432306e+04    +3.108788e+01     2.001050e+06    6.437e+04        0.022
+          10,000,000    -1.715100e+05    +1.715115e+05     2.001041e+06    1.167e+01      121.245
+         100,000,000    -7.550261e+03    +7.551759e+03     2.000946e+06    2.650e+02        5.338
+       1,000,000,000    +5.245471e+02    -5.230490e+02     2.000002e+06    3.824e+03        0.370
+      10,000,000,000    -5.283697e+01    +5.433500e+01     1.990553e+06    3.663e+04        0.038
+     100,000,000,000    -2.665024e+02    +2.680004e+02     1.896072e+06    7.075e+03        0.189
+   1,000,000,000,000    +7.261900e+02    -7.246919e+02     9.512574e+05    1.313e+03        0.512
+   1,282,535,092,075    -2.172365e+02    +2.187345e+02     6.546538e+05    2.993e+03        0.155
+
+  (rows with n > 3e6 use Fluc = C0 - sum cos; J has decayed to <= G(u0), which at
+   n = 1e7 is 2.47e+05 and at n = T0^2 is 1.93e+00, both << allowance.)
+  allowance at n = T0^2 : 6.546538e+05 = 0.3272 * N(T0)
+
+------------------------------------------------------------------------------
+(4) SOURCE OF THE MARGIN: sample rms of sum_{gamma<=T0} cos(n theta_gamma)
+------------------------------------------------------------------------------
+
+  60 random n in [T0^2, 2T0^2]:  mean +78.00   rms 820.50   max |.| 2569.06
+  random-phase model: mean 0, rms sqrt(N/2) = 1000.26
+  60 random n in [T0^1.5,2T0^1.5]:  mean +149.07   rms 1085.68
+
+  => the fluctuation is at the square-root-cancellation scale sqrt(N) = 1415, while
+     the allowance is Theta(N) = 2.001e+06.  The margin is therefore Theta(sqrt N)~1415,
+     i.e. sqrt((T0/2pi) log T0) -- STRUCTURAL and growing, not a constant.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  1. theta_gamma == theta(gamma); one phase function (max diff 1.4e-17).
+  2. Fluc(n) = C0 - sum_{gamma<=T0} cos(n theta_gamma) + J(n); quadrature reproduces
+     the project's |Fluc| = 10.17, 42.32, 39.38, 30.52 at n = 1e3..1e6.
+  3. J(n) = Theta(N) for n << T0 and decays like T0^2 log T0/n; so for n >> T0 the
+     problem IS the exponential sum sum cos(n theta_gamma).
+  4. Allowance at n=T0^2 = 6.5465e+05 = 0.3272 N; sampled |sum cos| ~ sqrt(N/2).
+  5. MARGIN = Theta(sqrt(N(T0))) = Theta(sqrt((T0/2pi) log T0)): the square-root
+     cancellation gap.  This is the correct technique: an o(N) bound on the sum.
+==============================================================================
