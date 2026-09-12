@@ -40,7 +40,7 @@ def solve(N):
     K = np.empty((N, N)); lv = np.empty(N)
     lgn = np.log(np.arange(1, N + 1))
     for m in range(1, N + 1):
-        K[m - 1] = gI(lgn - np.log(m))
+        K[m - 1] = gI(lgn - np.log(m)) / np.sqrt(np.arange(1, N + 1, dtype=float) * float(m))
         lv[m - 1] = float(np.trapz((zvals * np.exp(-1j * ts * np.log(m))).real, ts)) / float(mpi) / np.sqrt(m)
     a = np.linalg.solve(K, lv)
     return 1.0 - float(lv @ a), a

@@ -1,0 +1,104 @@
+====================================================================================================
+E26C: the DFMR pointwise disc - radius law, sensitivity, variant ambiguity, availability
+====================================================================================================
+  lambda = r + iH, r = 0.50, H in (1000.0, 100000.0), a = Re(lambda) = 0.50
+  R^2 = 1 - 2 a d^2 (non-empty iff d^2 < 1/(2a) = 1) ; two Apollonius variants, see header
+
+  SECTION 1 (核验) - both Apollonius identities checked numerically (4000 random samples)
+  variant 1, d^2=0.31 : centre=(+2.725806,+5451.612903) rad=5.359113e+03 ; disagreements 0/4000
+  variant 1, d^2=0.90 : centre=(+0.611111,+1222.222222) rad=7.027285e+02 ; disagreements 0/4000
+  variant 2, d^2=0.31 : centre=(+2.725806,+1000.000000) rad=2.679556e+00 ; disagreements 0/4000
+  variant 2, d^2=0.90 : centre=(+0.611111,+1000.000000) rad=3.513642e-01 ; disagreements 0/4000
+  variant 1 centre = c*lambda (c = 1/(a d^2) - 1) ; variant 2 centre = c*a + i*b
+  radius ratio variant1/variant2 = |lambda|/a = 2.0000e+05 at H = 1e+05  (they agree only for real lambda)
+  d^2 = 0.999000 -> rad = 6.330887e+01 (v1), 3.165443e-02 (v2) : both -> 0 at the threshold 1/(2a) = 1
+  d^2 = 0.999999 -> rad = 2.000002e+00 (v1), 1.000001e-03 (v2) : both -> 0 at the threshold 1/(2a) = 1
+
+  SECTION 2 (核验) - radius law, both variants
+  H = 1e+03        d^2 | rad/|lam| (v1)         rad (v1) |       rad (v2)   rad/|lam| (v2)
+              0.90000 |         0.7027     7.027285e+02 |     3.513642e-01         0.0004
+              0.50000 |         2.8284     2.828427e+03 |     1.414214e+00         0.0014
+              0.20000 |         8.9443     8.944273e+03 |     4.472136e+00         0.0045
+              0.10000 |        18.9737     1.897367e+04 |     9.486833e+00         0.0095
+              0.05000 |        38.9872     3.898718e+04 |     1.949359e+01         0.0195
+              0.02000 |        98.9949     9.899496e+04 |     4.949747e+01         0.0495
+              0.01000 |       198.9975     1.989975e+05 |     9.949874e+01         0.0995
+              0.00100 |      1998.9997     1.999000e+06 |     9.994999e+02         0.9995
+              0.00000 |   1999998.9999     1.999999e+09 |     9.999995e+05       999.9994
+  H = 1e+05        d^2 | rad/|lam| (v1)         rad (v1) |       rad (v2)   rad/|lam| (v2)
+              0.90000 |         0.7027     7.027284e+04 |     3.513642e-01         0.0000
+              0.50000 |         2.8284     2.828427e+05 |     1.414214e+00         0.0000
+              0.20000 |         8.9443     8.944272e+05 |     4.472136e+00         0.0000
+              0.10000 |        18.9737     1.897367e+06 |     9.486833e+00         0.0001
+              0.05000 |        38.9872     3.898718e+06 |     1.949359e+01         0.0002
+              0.02000 |        98.9949     9.899495e+06 |     4.949747e+01         0.0005
+              0.01000 |       198.9975     1.989975e+07 |     9.949874e+01         0.0010
+              0.00100 |      1998.9997     1.999000e+08 |     9.994999e+02         0.0100
+              0.00000 |   1999998.9999     1.999999e+11 |     9.999995e+05        10.0000
+
+  SECTION 3 (核验) - sensitivity: both variants obey rad = O(1/d^2)
+        d^2 |   rad1*d^2/|lam|     2sqrt(1-d^2) |         rad2*d^2      sqrt(1-d^2)
+    0.90000 |         0.632456         0.632456 |         0.316228         0.316228
+    0.50000 |         1.414214         1.414214 |         0.707107         0.707107
+    0.20000 |         1.788854         1.788854 |         0.894427         0.894427
+    0.10000 |         1.897367         1.897367 |         0.948683         0.948683
+    0.05000 |         1.949359         1.949359 |         0.974679         0.974679
+    0.02000 |         1.979899         1.979899 |         0.989949         0.989949
+    0.01000 |         1.989975         1.989975 |         0.994987         0.994987
+    0.00100 |         1.999000         1.999000 |         0.999500         0.999500
+    0.00000 |         1.999999         1.999999 |         0.999999         0.999999
+   => rad1 = |lam| 2 sqrt(1-d^2)/d^2 and rad2 = sqrt(1-d^2)/d^2 : pure 1/d^2 at small d^2.
+   requirement, radius >= rho  <=>  d^2 <~ |lam|/(a rho) = 2H/rho (v1)  or  d^2 <~ 1/rho (v2)
+        rho | d^2 req (v1) H=1e3            H=1e5 |     d^2 req (v2)            H=1e5
+          1 |     9.999998e-01     1.000000e+00 |     6.180340e-01     6.180340e-01
+         10 |     9.999750e-01     1.000000e+00 |     9.512492e-02     9.512492e-02
+       1000 |     8.284272e-01     9.999750e-01 |     9.995001e-04     9.995001e-04
+    1000000 |     1.998001e-03     1.809975e-01 |     9.999995e-07     9.999995e-07
+
+  SECTION 4 (引用) - the trivial DFMR input gives an empty disc at r = 1/2
+   DFMR I Prop. 7.5 (as recorded): d_r^2 < 1/(2-2r) ; at r = 1/2 this is d^2 < 1, and
+   d^2 = 1 is exactly the threshold: R^2 = 0 and both radii vanish.  The only
+   lambda-free distance bound available therefore yields NO usable disc (clean negative).
+
+  SECTION 5 (推导/示意, NOT a result) - project d_N^2 as proxy, and containment test
+   zeros: 2001052 ordinates, gamma in [14.135, 1132490.659] ; all are critical-line zeros by
+   Platt-Trudgian (引用, RH verified for |t| <= 3e12 > 1.13e+06)
+   H=1e+03 v1 NB3 convention  d_160^2 (T=400)  d2=0.679913 rad=1.6642e+03 centre=(9.7078e-01,1.9416e+03) zeros inside: disc=2949  r+disc=2949
+   H=1e+03 v2 NB3 convention  d_160^2 (T=400)  d2=0.679913 rad=8.3211e-01 centre=(9.7078e-01,1.0000e+03) zeros inside: disc=1  r+disc=1
+   H=1e+03 v1 BCF convention  d_160^2 (T=400)  d2=0.048219 rad=4.0465e+04 centre=(2.0239e+01,4.0477e+04) zeros inside: disc=109031  r+disc=109031
+   H=1e+03 v2 BCF convention  d_160^2 (T=400)  d2=0.048219 rad=2.0232e+01 centre=(2.0239e+01,1.0000e+03) zeros inside: disc=7  r+disc=10
+   H=1e+05 v1 NB3 convention  d_160^2 (T=400)  d2=0.679913 rad=1.6642e+05 centre=(9.7078e-01,1.9416e+05) zeros inside: disc=538813  r+disc=538813
+   H=1e+05 v2 NB3 convention  d_160^2 (T=400)  d2=0.679913 rad=8.3211e-01 centre=(9.7078e-01,1.0000e+05) zeros inside: disc=1  r+disc=2
+   H=1e+05 v1 BCF convention  d_160^2 (T=400)  d2=0.048219 rad=4.0465e+06 centre=(2.0239e+01,4.0477e+06) zeros inside: disc=2000210  r+disc=2000210
+   H=1e+05 v2 BCF convention  d_160^2 (T=400)  d2=0.048219 rad=2.0232e+01 centre=(2.0239e+01,1.0000e+05) zeros inside: disc=13  r+disc=19
+   => every variant/reading excludes a region that in fact CONTAINS known zeros, so if the
+      zero-free statement is read as excluding ALL zeros of zeta, the recorded disc fails.
+      If instead it excludes only zeros with Re > r, then only off-line zeros could
+      falsify it, and by Platt-Trudgian there are none below 3e12: the test then can only
+      falsify, never confirm, and gives no information at these heights.  No claim is made.
+
+====================================================================================================
+READ-OFF (generated from the numbers above; 核验 / 引用 / 推导 / 未做)
+====================================================================================================
+  [核验] both Apollonius identities verified numerically (0 disagreements in 4000 samples).
+  [核验] 1/d^2 sensitivity confirmed in both variants: rad1*d^2/|lam| = 2sqrt(1-d^2),
+         rad2*d^2 = sqrt(1-d^2).
+  [核验] threshold at r = 1/2: disc non-empty only for d^2 < 1; radius -> 0 as d^2 -> 1.
+  [核验/新发现] the two DFMR statements recorded in this repo imply DIFFERENT discs:
+         variant 1 (denominator z+lambda) gives centre c*lambda, rad = |lambda|R/(a d^2);
+         variant 2 (denominator z+conj(lambda)) gives centre c*a+i b, rad = R/d^2.
+         They differ by |lambda|/a (= 2.0e+05 at H = 1e5).  E27 section 2's derivation matches
+         variant 1; E27 section 1's quotation of DFMR I section 7.1.1 matches variant 2.
+         Resolving which is correct needs the DFMR originals - NOT in this repository.
+  [未做] no lambda-dependent d_r(lambda)^2 is available here, so no disc is produced as a
+         result.  MISSING: (a) DFMR I section 7's explicit functional evaluated for a
+         concrete f_{A,r}, with ||f_{A,r}||_2 and phi-hat (Cor. 2.3 / Cor. 7.4);
+         (b) the containment of the project's length-N class in DFMR's class (G2), which
+         is what would let a bound on d_N transfer to d_r.
+  [推导] criterion verdict: 'non-empty disc' fails from the available input (trivial bound
+         gives d^2 = 1, radius 0); 'no conflict with the verified region' is satisfied
+         vacuously by any disc, since no off-line zero exists below 3e12.  Hence
+         computation C cannot meet its success criterion with the material at hand.
+  [未做] no proof is claimed; nothing about RH is decided by these numbers.
+
+Output written to /home/node/.openclaw/workspace/dn-project/scripts/E26C_dfmr_pointwise_distance.txt

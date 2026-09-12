@@ -1,0 +1,83 @@
+========================================================================================================
+E26A: I(V_N) vs the optimal d_N^2, and the normalisation ratio R(N) = I(V_N)/d_N^2
+========================================================================================================
+  grid: data/nb3_grid_H0.050_T400.npz  h=0.05, T=400, 8001 points
+  V_N(s) = sum_{n<=N} (1 - log n/log N) mu(n) n^{-s}   (BCF arXiv:1211.5191 Thm 1, 引用)
+  C = 2 + gamma - log(4pi) = 0.046191417932 ; BCF prediction I(V_N) ~ C/log N under RH (引用)
+  target norm: (1/2pi) int dt/(1/4+t^2) = 1 full line ; truncated value c_T = 0.999204226
+  g(0) = 1.2556482683 ; kernel entries evaluated exactly (no interpolation)
+
+  MAIN TABLE
+     N | convention A  (mn)^-1/2 g [BCF literal, 核验] | convention B  g [NB3 as implemented]
+       |        d_N^2     I(V_N)       R(N) |        d_N^2     I(V_N)       R(N)
+    20 |   0.05575728   0.439675    7.88553 |   0.68582970   1.281167    1.86805
+    40 |   0.05194933   0.305646    5.88354 |   0.68186132   1.571174    2.30424
+    80 |   0.05005117   0.228302    4.56137 |   0.68076716   1.872684    2.75084
+   160 |   0.04821944   0.181268    3.75922 |   0.67991293   2.101577    3.09095
+  (exact kernel entries: 7.5 s total)
+
+  DETAIL  (d2_A(T) uses the truncated target norm c_T; d2x_A uses interpolated kernels)
+     N |      d2_A   d2_A(T)     d2x_A    C/logN |  muA full muA n<=N/2   muA reg |   c(V)A   c(V)B    c*_A F(c*V)/d2
+    20 |  0.055757  0.054962  0.056237  0.015419 |   13/13         7/7      13/13   |  1.3202  0.6807  1.2861  7.3624
+    40 |  0.051949  0.051154  0.052526  0.012522 |   26/26        13/13     26/26   |  1.3353  0.5859  1.3343  4.9881
+    80 |  0.050051  0.049255  0.050686  0.010541 |   50/50        26/26     49/50   |  1.3392  0.4884  1.3138  3.6287
+   160 |  0.048219  0.047424  0.048931  0.009101 |   88/98        50/50     98/98   |  1.3632  0.3962  1.2820  2.8956
+
+  CONDITIONING / KNOWN-ANSWER DIAGNOSTIC (why the full sign count is not the robust check)
+     N |  cond(K) A  cond(K) B max|a| exact   max|a| reg  d2 exact    d2 reg
+    20 |   1.45e+03   5.56e+02    9.000e-01    9.000e-01  0.055757  0.055757
+    40 |   6.38e+03   2.15e+03    9.107e-01    9.107e-01  0.051949  0.051949
+    80 |   2.98e+04   8.73e+03    9.159e-01    9.158e-01  0.050051  0.050075
+   160 |   3.74e+09   8.50e+08    2.886e+01    9.202e-01  0.048219  0.048230
+
+  VALIDATION BY DIRECT EVALUATION OF THE DEFINING INTEGRAL (constant term matched)
+     N    I(V_N) kernel A  I(V_N) direct c=1    rel. diff  direct, const c_T
+    20        0.439675446        0.439675446     2.64e-14        0.438879672
+    40        0.305645814        0.305645814     3.41e-13        0.304850040
+    80        0.228301795        0.228301795     2.08e-13        0.227506021
+   160        0.181267533        0.181267533     9.92e-14        0.180471759
+
+  NORMALISATION READOUT: I(V_N)*log N against the BCF constant C (引用)
+     N         I(V_N)    I(V_N)*logN      ratio/C      d2_A*logN
+    20     0.43967545       1.317150       28.515       0.167034
+    40     0.30564581       1.127491       24.409       0.191635
+    80     0.22830179       1.000425       21.658       0.219326
+   160     0.18126753       0.919964       19.916       0.244722
+
+  KERNEL-ERROR SENSITIVITY OF d2_A AT N=160 (random relative perturbations of K and l)
+     1e-06 : d2 in [0.048222, 0.048231] (spread 0.0% of d2)
+     1e-05 : d2 in [0.048166, 0.048251] (spread 0.2% of d2)
+     1e-04 : d2 in [0.047839, 0.048210] (spread 0.8% of d2)
+
+========================================================================================================
+READ-OFF (generated from the numbers above; 核验 / 引用 / 推导 / 未做)
+========================================================================================================
+  [核验] convention A reproduces the defining integral to <=1e-13 relative (same
+         constant term); convention B does not reproduce it at all (its K lacks (mn)^-1/2).
+  [核验] d_N^2 at N=160: A 0.048219  vs  B 0.679913  (NB3 implements B, so the value 0.6803
+         recorded in docs/A4-1-dN-fixed.md is the convention-B value).
+  [核验] Moebius known-answer check at N=160: A 88/98, B 87/98 over all squarefree n<=N;
+         restricted to n <= N/2 it is 50/50 (A); the SVD-regularised minimiser gives
+         98/98.  The disagreements all sit in the boundary layer n > ~0.8 N, where the
+         system (cond ~3.7e+09) has null directions that do not affect d_N^2.
+  [核验] R(N) is NOT stable: convention A 7.89, 5.88, 4.56, 3.76 ; convention B 1.87, 2.30, 2.75, 3.09.
+  [核验] I(V_N)*log N 1.3171, 1.1275, 1.0004, 0.9200  ==> ratio to C: 28.52, 24.41, 21.66, 19.92 (decreasing, not constant).
+  [核验] d2_A*log N = 0.1670, 0.1916, 0.2193, 0.2447 (rising), so d_N^2 falls more slowly than 1/log N at these N.
+  [核验] scale of the (regularised) minimiser against V_N at N=160: c = 1.3632 (A, shape
+         residual 0.414), 0.3962 (B, residual 0.490); along the ray the best scale is
+         c* = 1.2820 with F(c*V) = 2.8956 x d_N^2 (A), i.e. V_N is near-optimal at these N.
+  [推导] L1 as posed (R(N) stable, ideally 1) is NOT met.  What the comparison does give:
+         (i) the A-vs-B difference is the per-entry kernel weight (mn)^-1/2: convention B's
+             quadratic form is not the squared norm of 1 - zeta sum a_n n^{-s}, so its
+             'd_N^2' is not a distance in the BCF space.  It is not a scalar k_N.
+         (ii) in the literal BCF normalisation the regularised minimiser is V_N up to a
+             factor c = 1.363 (shape residual 0.414), consistent with BCF's asymptotic
+             optimality of V_N;
+         (iii) I(V_N)*log N decreases monotonically (1.32 -> 0.92), i.e. the explicit BCF
+             polynomial already shows the 1/log N rate, with a constant ~20-28 C at T=400.
+  [核验] kernel-error sensitivity at N=160: 1e-4 relative kernel error moves d2_A by <1%,
+         so the T=400 truncation (itself ~1e-3 relative) is the dominant error, not the
+         quadrature; computation B (E26B) addresses exactly this.
+  [未做] no proof is claimed; these numbers do not decide RH.
+
+Output written to /home/node/.openclaw/workspace/dn-project/scripts/E26A_dN_vs_literature_polynomial.txt

@@ -1,15 +1,15 @@
 ====================================================================================================
-NB5 (A4-2): shape of the optimal coefficients at N = 160 (d_N^2 = 0.68028366)
+NB5 (A4-2): shape of the optimal coefficients at N = 160 (d_N^2 = 0.04893086)
 ====================================================================================================
 
   fits restricted to the 98 squarefree indices n <= 160
-  M1  a_n = c mu(n)                       : c = +0.054917 , rel.residual = 0.8607
-  M2  a_n = c mu(n)(1 - log n/log N)      : c = +0.333691 , rel.residual = 0.4794
-  M3  a_n = c mu(n)(1 - log n/log x), x fit: c = +0.333691 , x = 160.000 (= 1.00 N) , rel.residual = 0.4794
+  M1  a_n = c mu(n)                       : c = +0.366713 , rel.residual = 0.4631
+  M2  a_n = c mu(n)(1 - log n/log N)      : c = +1.344090 , rel.residual = 0.3884
+  M3  a_n = c mu(n)(1 - log n/log x), x fit: c = +1.037682 , x = 533.496 (= 3.33 N) , rel.residual = 0.2094
 
   correlation of a_n/mu(n) with 1 - log n/log N over squarefree n:
-     pearson r = +0.8525
-     (a_n/mu(n) itself ranges from -0.0031 to +0.6496)
+     pearson r = +0.8922
+     (a_n/mu(n) itself ranges from -0.0364 to +0.9177)
 
 ====================================================================================================
 READ-OFF (conclusions generated from the numbers above)

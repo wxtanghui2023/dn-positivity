@@ -103,7 +103,10 @@ lv = np.zeros(N)
 for m in range(1, N + 1):
     lgm = float(mlog(m))
     for n in range(1, N + 1):
-        K[m - 1, n - 1] = g(float(mlog(n)) - lgm)
+        # FIX 2026-09-12 (E26A): the defining integral carries the (mn)^{-1/2} weight.
+        # Without it the kernel is inconsistent with the linear form below (which has n^{-1/2})
+        # and the minimiser solves the wrong problem; convention A is the correct one.
+        K[m - 1, n - 1] = g(float(mlog(n)) - lgm) / np.sqrt(float(m) * float(n))
     lv[m - 1] = float(np.trapz((zvals * np.exp(-1j * ts * lgm)).real, ts)) / float(mpi) / np.sqrt(m)
 
 mu = np.zeros(N + 1, dtype=int)
