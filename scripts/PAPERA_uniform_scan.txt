@@ -49,6 +49,10 @@ WHAT WOULD A UNIFORM BOUND REQUIRE ?
         0.3791 at n = 145,681
 
   *** THE TWO-REGIME STRUCTURE (this is the finding) ***
+    RESONANCE regime  n <= 10*GSUB = 749,208: max |Osc|/N = 0.3791  (spikes DO occur)
+      but there the allowance N - n*B is >= 1.00*N, so the spikes are harmless.
+      (resonances align when n is comparable to a zero ordinate, since the phase is
+       n*theta ~ n/gamma; hence the regime boundary is at n ~ gamma, not n <= gamma.)
     AVERAGING regime  n > 30*GSUB:          max |Osc|/N = 3.4065e-02  (no spikes)
       and this is exactly the regime where the allowance becomes tight.
 

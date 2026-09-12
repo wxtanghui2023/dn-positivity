@@ -116,13 +116,15 @@ out('        worst ratio |Osc| / allowance, among n whose allowance is positive:
 out('        {:.4f} at n = {:,}'.format(ratios[worst], ns[worst]))
 out()
 out('  *** THE TWO-REGIME STRUCTURE (this is the finding) ***')
-res = np.array(ns) <= GSUB
+res = (np.array(ns) <= 10 * GSUB)          # resonances live at n comparable to gamma
 avg = np.array(ns) > 30 * GSUB
 if res.any():
-    out('    RESONANCE regime  n <= GSUB = {:,.0f}: max |Osc|/N = {:.4f}  (spikes DO occur)'
-        .format(GSUB, rel[res].max()))
+    out('    RESONANCE regime  n <= 10*GSUB = {:,.0f}: max |Osc|/N = {:.4f}  (spikes DO occur)'
+        .format(10 * GSUB, rel[res].max()))
     out('      but there the allowance N - n*B is >= {:.2f}*N, so the spikes are harmless.'
         .format(float((req[res] / N).min())))
+    out('      (resonances align when n is comparable to a zero ordinate, since the phase is')
+    out('       n*theta ~ n/gamma; hence the regime boundary is at n ~ gamma, not n <= gamma.)')
 if avg.any():
     out('    AVERAGING regime  n > 30*GSUB:          max |Osc|/N = {:.4e}  (no spikes)'
         .format(rel[avg].max()))
