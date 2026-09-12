@@ -11,7 +11,7 @@ import mpmath as mp
 import time
 mp.mp.dps = 30
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 
 def logxi_deriv1(s):
     return (1/s + 1/(s-1) - 0.5*mp.log(mp.pi)

@@ -25,7 +25,7 @@ import os, numpy as np
 from mpmath import mp, mpf, log as mlog, log1p as mlog1p, pi as mpi, exp as mexp
 mp.dps=40
 ZD=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'data')
-ZP=os.path.join(ZD,'zeros_odlyzko_2M.npy'); ZEROS_PATH=ZP if os.path.exists(ZP) else '/tmp/zeros_odlyzko_2M.npy'
+ZP=os.path.join(ZD,'zeros_odlyzko_2M.npy'); ZEROS_PATH=ZP if os.path.exists(ZP) else 'data/zeros_odlyzko_2M.npy'
 g=np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel()); GMAX=g[-1]
 a=1/(2*mpi); b=-(1+mlog(2*mpi))/(2*mpi); c=mpf('0.112'); d=mpf('2.5')
 def Fv(u,k):

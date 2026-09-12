@@ -15,7 +15,7 @@ in the committed archive so that the computation is reproducible. Original code 
 import numpy as np
 import mpmath as mp
 mp.mp.dps = 20
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 
 def g1_explicit(t):
     # (6t² - 0.5)/((1+4t²)(1/4+t²))

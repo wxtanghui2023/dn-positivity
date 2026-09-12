@@ -25,7 +25,7 @@ def main():
     print("Σ₁ 涨落 vs Σ[S(γ_k)−½]（相位均匀性）")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     xi = 0.5
     coeff = 1.0/pi
     

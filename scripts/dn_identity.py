@@ -13,7 +13,7 @@ import numpy as np
 import mpmath as mp
 mp.mp.dps = 20
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 gmax = float(zeros[-1])
 
 def theta_mp(t):

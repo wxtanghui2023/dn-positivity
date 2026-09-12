@@ -7,7 +7,7 @@ in the committed archive so that the computation is reproducible. Original code 
 import numpy as np
 from mpmath import mp, mpf, euler, log as mlog, pi as mpi
 mp.dps=30
-g=np.load('/tmp/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
+g=np.load('data/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
 T=float(g[-1]); N=g.size
 th=np.arctan2(g, g**2-0.25)
 def A(n): return float(np.sum(1.0-np.cos(n*th)))

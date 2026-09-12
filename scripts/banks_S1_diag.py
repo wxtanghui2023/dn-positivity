@@ -39,7 +39,7 @@ def main():
     print("诊断：Σ₁(T) = Σ_{γ≤T} ξ^{−ρ}𝒳(1−ρ)——截断和——主项？")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     print(f"零点: {len(z)}——γ到{z[-1]:.0f}")
     
     for q, m in [(2,1), (3,1), (5,1), (3,2)]:

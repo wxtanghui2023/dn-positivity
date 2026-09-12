@@ -15,7 +15,7 @@ import time
 
 mp.mp.dps = 20
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 print(f"loaded {len(zeros)} zeros, gamma_max = {zeros[-1]:.2f}", flush=True)
 
 def theta_cont(t):

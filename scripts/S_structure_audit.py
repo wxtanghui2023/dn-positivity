@@ -30,7 +30,7 @@ def main():
     print("S(t) 结构审计：结构项 + 残差——残差与 δ 的耦合")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     print(f"零点数: {len(z)}——γ范围: {z[0]:.1f} 到 {z[-1]:.1f}")
     
     # 取前 20000 零点（快——）

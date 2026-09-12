@@ -22,7 +22,7 @@ def main():
     print("验证定理 3.1（修复 𝒳 相位——）")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     try:
         primes = np.load('/home/node/.openclaw/workspace/prime_data/primes_1e8.npy')
     except:

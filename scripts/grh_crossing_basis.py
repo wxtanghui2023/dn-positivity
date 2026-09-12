@@ -26,7 +26,7 @@ def main():
     print("="*70)
     
     # 对 ζ——用零点直接算 Q_ζ 和 Q'_RH,ζ（判据定义——）
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     z = z[:500]  # 前 500（δ=0——在线——RH 数值——）
     m = np.ones(len(z))  # 重数 1（简单零点——数值——）
     

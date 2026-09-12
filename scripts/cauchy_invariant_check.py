@@ -6,7 +6,7 @@
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 
 def lam_req_at(idx):
     """γ_idx 的 λ = -2Σ_{j<idx}1/(1+(γ_idx-γ_j)²)——用截断（近的精确——远的渐近——）"""

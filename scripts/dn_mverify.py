@@ -14,7 +14,7 @@ from scipy import integrate
 import mpmath as mp
 mp.mp.dps = 20
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 N = len(zeros)
 
 def theta_scalar(t):

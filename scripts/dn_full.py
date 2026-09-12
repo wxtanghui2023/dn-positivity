@@ -16,7 +16,7 @@ import time, json, os, sys
 
 mp.mp.dps = 20
 N_ZEROS = 2000
-CACHE = '/tmp/zeros_2000.npy'
+CACHE = 'data/zeros_2000.npy'
 
 # ---------- zeros (cached, checkpointed) ----------
 t0 = time.time()
@@ -132,4 +132,4 @@ for n in ns:
 
 with open('scripts/dn_results.json', 'w') as f:
     json.dump(results, f, indent=1)
-print("\nsaved /tmp/dn_results.json", flush=True)
+print("\nsaved data/dn_results.json", flush=True)

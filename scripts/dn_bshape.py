@@ -10,7 +10,7 @@ in the committed archive so that the computation is reproducible. Original code 
 import numpy as np
 import mpmath as mp
 mp.mp.dps = 20
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 def theta_doc(t):
     return np.pi - 2.0*np.arctan(2.0*t)
 th = theta_doc(zeros)

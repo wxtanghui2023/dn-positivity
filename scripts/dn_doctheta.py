@@ -10,7 +10,7 @@ in the committed archive so that the computation is reproducible. Original code 
 import numpy as np
 from scipy import integrate
 
-zeros = np.load('/tmp/zeros_2000.npy')
+zeros = np.load('data/zeros_2000.npy')
 T_max = float(zeros[-1])
 
 def theta_doc(t):

@@ -14,8 +14,8 @@ from mpmath import mp, mpf, log as mlog, log1p as mlog1p, sinh as msinh, pi as m
 import os as _os
 _ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')
 _ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')
-ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/
-ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'
+ZEROS_PATH = _ZP if _os.path.exists(_ZP) else 'data/zeros_odlyzko_2M.npy'   # R2: prefer data/
+ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else 'data/zeros_odlyzko_100k.npy'
 
 mp.dps=40
 g = np.sort(np.load(ZEROS_PATH).astype(np.float64).ravel()); GMAX=g[-1]

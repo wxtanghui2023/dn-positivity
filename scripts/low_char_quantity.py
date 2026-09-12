@@ -13,7 +13,7 @@ import numpy as np
 import mpmath as mp
 mp.mp.dps = 30
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 
 def logxi_deriv1(s):
     """d/ds log xi(s) = 1/s + 1/(s-1) - 0.5 log pi + 0.5 psi(s/2) + zeta'/zeta(s)"""

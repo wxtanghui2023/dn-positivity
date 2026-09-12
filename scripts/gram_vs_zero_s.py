@@ -6,7 +6,7 @@ S(t) 在三种采样下的分布——零点 γ_k / Gram 点 g_k（纯 N₀—�
 """
 import numpy as np
 from math import log, pi, sqrt
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = 400000
 z = z[:K]
 

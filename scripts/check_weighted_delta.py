@@ -6,7 +6,7 @@ P_N = N(S1-1/2) + Σ(N-j)ΔS_j（精确——）——ΔS_j ≈ -N0'(γ_j)δ_j
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = 200000
 z = z[:K]
 dg = np.diff(z)

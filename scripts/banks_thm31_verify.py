@@ -21,7 +21,7 @@ def main():
     print("验证定理 3.1：Σ₁(T) + Σ₂(T/2πξ) = O(T^{½}log²T)")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     # 素数数据（到 10^7——够 U ~ 几千到几万——）
     try:
         primes = np.load('/home/node/.openclaw/workspace/prime_data/primes_1e8.npy')

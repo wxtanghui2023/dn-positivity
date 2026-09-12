@@ -8,7 +8,7 @@ E_ren = Σ_{j<k}[log|k-j+δ_k-δ_j| - log(k-j) - (δ_k-δ_j)/(k-j) + ½(δ_k-δ_
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 def N0(t):
     return (t/(2*pi))*(log(t/(2*pi)) - 1) + 7.0/8
 

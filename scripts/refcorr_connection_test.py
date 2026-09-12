@@ -22,7 +22,7 @@ import numpy as np
 def load_zeros(n=200):
     """加载 Odlyzko 零点（虚部——）"""
     try:
-        z = np.load('/tmp/zeros_odlyzko_100k.npy')
+        z = np.load('data/zeros_odlyzko_100k.npy')
         return z[:n]
     except Exception as e:
         print(f"加载失败: {e}")

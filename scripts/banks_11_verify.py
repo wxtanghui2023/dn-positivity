@@ -62,7 +62,7 @@ def main():
     print("验证 Banks (1.1)：ζ 零点的 ξ 扭曲和")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     print(f"零点可用: {len(z)}——γ到 {z[-1]:.0f}")
     
     Cb = C_B()

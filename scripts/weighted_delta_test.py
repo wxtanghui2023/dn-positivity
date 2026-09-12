@@ -6,7 +6,7 @@ P_N 本质对应 B(γ_N)——需要 B(X) = O(1)? 还是 log/X^α?
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 500000)
 z = z[:K]
 print(f'零点: {K}——γ到 {z[-1]:.0f}')

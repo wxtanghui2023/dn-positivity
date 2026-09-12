@@ -16,7 +16,7 @@ and #window ~ (3 n log n)/(4 pi) for n << T, so the condition is met from tiny n
 giving a PROVABLE range n < 2T.
 """
 import numpy as np
-g = np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel(); g=np.sort(g)
+g = np.load('data/zeros_odlyzko_2M.npy').astype(np.float64).ravel(); g=np.sort(g)
 T=float(g[-1]); N=g.size
 th = np.arctan2(g, g**2-0.25)
 B_T = (np.log(T)+1)/(4*np.pi*T)

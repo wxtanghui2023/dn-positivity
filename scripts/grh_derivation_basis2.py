@@ -33,7 +33,7 @@ def main():
     print("基础验证 2：arg ζ 跳跃符号（Z 变号——）")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     z = z[:200]  # 只前 200（mpmath 慢——）
     print(f"零点: {len(z)}")
     

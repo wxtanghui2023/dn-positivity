@@ -25,7 +25,7 @@ print(f"1/π² = {1/np.pi**2:.6f}")
 print(f"margin: c - 1/π² = {c_asy - 1/np.pi**2:.6f} > 0 ✓\n")
 
 # verify Main_pos against asymptotic formula
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 gmax = float(zeros[-1]); g1 = float(zeros[0])
 def theta_doc(t):
     return np.pi - 2.0*np.arctan(2.0*t)

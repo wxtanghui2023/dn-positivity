@@ -10,7 +10,7 @@ H3: b_k 振荡与交替配对 = 面积序列的自相似（无标度——）
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 200000)
 z = z[:K]
 

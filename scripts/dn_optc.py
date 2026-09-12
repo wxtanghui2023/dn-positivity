@@ -13,7 +13,7 @@ import numpy as np
 from scipy import integrate
 mp.mp.dps = 20
 
-zeros = np.load('/tmp/zeros_2000.npy')
+zeros = np.load('data/zeros_2000.npy')
 T_max = float(zeros[-1])
 
 def theta_cont(t):

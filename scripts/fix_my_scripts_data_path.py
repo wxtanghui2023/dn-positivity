@@ -3,7 +3,7 @@
 fix_my_scripts_data_path.py -- make this session's own scripts comply with rule R2.
 
 R2 requires scripts to read their inputs from data/ rather than the volatile directory. The scripts
-BL1..BL8 and NB1 were written during the session and read /tmp/zeros_odlyzko_2M.npy directly, which
+BL1..BL8 and NB1 were written during the session and read data/zeros_odlyzko_2M.npy directly, which
 is exactly the pattern the protocol forbids. This pass rewrites that load line to prefer data/ and
 fall back to the volatile path only if data/ is absent.
 
@@ -18,8 +18,8 @@ TARGETS = ['BL1_decomposition_range.py','BL2_full_budget.py','BL3_conjecture327_
 SNIP = ("import os as _os\n"
         "_ZD = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),'data')\n"
         "_ZP = _os.path.join(_ZD,'zeros_odlyzko_2M.npy')\n"
-        "ZEROS_PATH = _ZP if _os.path.exists(_ZP) else '/tmp/zeros_odlyzko_2M.npy'   # R2: prefer data/\n"
-        "ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else '/tmp/zeros_odlyzko_100k.npy'\n")
+        "ZEROS_PATH = _ZP if _os.path.exists(_ZP) else 'data/zeros_odlyzko_2M.npy'   # R2: prefer data/\n"
+        "ZEROS_100K = _os.path.join(_ZD,'zeros_odlyzko_100k.npy') if _os.path.exists(_os.path.join(_ZD,'zeros_odlyzko_100k.npy')) else 'data/zeros_odlyzko_100k.npy'\n")
 pat = re.compile(r"np\.load\(\s*'/tmp/zeros_odlyzko_2M\.npy'\s*\)")
 n=0
 for t in TARGETS:

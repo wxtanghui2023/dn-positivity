@@ -2,7 +2,7 @@
 import numpy as np
 from mpmath import mp, mpf, log as mlog, pi as mpi, e as me
 mp.dps=50
-g=np.load('/tmp/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
+g=np.load('data/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
 Tdata=float(g[-1])
 def B_bound(Tv):
     Tv=mpf(Tv)

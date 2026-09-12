@@ -10,7 +10,7 @@ Calibration: must reproduce the earlier direct values A(1)=0.0115469338, A(20)=4
 A(400)=374.0105, A(1000)=1162.106  -- if the split is implemented correctly.
 """
 import numpy as np, time, sys
-g = np.load('/tmp/zeros_odlyzko_2M.npy').astype(np.float64).ravel()
+g = np.load('data/zeros_odlyzko_2M.npy').astype(np.float64).ravel()
 g = np.sort(g); T = float(g[-1]); N = g.size
 th = np.arctan2(g, g**2 - 0.25)
 K = 10.0

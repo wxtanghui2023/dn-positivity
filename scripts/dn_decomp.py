@@ -17,7 +17,7 @@ import numpy as np
 from scipy import integrate
 mp.mp.dps = 20
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 g1 = float(zeros[0])
 
 def theta_cont(t):

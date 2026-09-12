@@ -24,7 +24,7 @@ LEMMA 2.  B_T = (1/2) sum_{g>T} g^{-2} <= explicit bound:
 import numpy as np
 from mpmath import mp, mpf, atan, cos as mcos, sin as msin, log as mlog, pi as mpi, quad, inf
 mp.dps=50
-g = np.load('/tmp/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
+g = np.load('data/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
 T=float(g[-1]); N=g.size
 print("="*96); print("LEMMA 1: monotonicity and the exact window bound"); print("="*96)
 # (a) monotonicity check on the exact formula

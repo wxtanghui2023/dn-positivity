@@ -9,7 +9,7 @@ in the committed archive so that the computation is reproducible. Original code 
 # Focus: per-zero evolution (Tang's "low first, then recurse" strategy)
 import numpy as np
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 print(f"zeros loaded: {len(zeros)}, γ1={zeros[0]:.6f}, γ1000={zeros[999]:.6f}")
 
 # --- 1. Basic: gamma_k stats, gaps ---

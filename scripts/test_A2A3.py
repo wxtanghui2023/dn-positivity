@@ -39,7 +39,7 @@ def local_log_energy(x, L):
     return total
 
 print('=== Test A2: 重正化 log 能量 ===')
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 def N0(t):
     return (t/(2*pi))*(log(t/(2*pi)) - 1) + 7.0/8
 

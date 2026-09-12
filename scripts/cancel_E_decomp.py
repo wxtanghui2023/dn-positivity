@@ -8,7 +8,7 @@ import numpy as np
 from math import log, pi
 
 # 零点数据
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 100000)
 z = z[:K]
 

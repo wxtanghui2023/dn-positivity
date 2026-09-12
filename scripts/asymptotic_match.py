@@ -13,7 +13,7 @@ import mpmath as mp
 import time
 mp.mp.dps = 30
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 print(f"data zeros: {len(zeros)}, last gamma = {zeros[-1]:.1f}")
 
 def logxi_deriv1(s):

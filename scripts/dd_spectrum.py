@@ -7,7 +7,7 @@
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = 100000
 z = z[:K]
 dg = np.diff(z)

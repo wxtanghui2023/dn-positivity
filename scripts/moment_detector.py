@@ -10,7 +10,7 @@
 
 用法：
   python3 moment_detector.py [zeros_file] [--beta 0.5] [--k 3,4,5] [--scan]
-  默认：/tmp/zeros_odlyzko_2M.npy——β=0.5——k=3,4,5
+  默认：data/zeros_odlyzko_2M.npy——β=0.5——k=3,4,5
 
 依赖：numpy + mpmath（c_k 计算）
 """
@@ -86,7 +86,7 @@ def beta_scan(gamma, k_list=(3, 5), beta_range=(0.40, 0.60, 0.01)):
 
 
 def main():
-    zeros_file = "/tmp/zeros_odlyzko_2M.npy"
+    zeros_file = "data/zeros_odlyzko_2M.npy"
     beta = 0.5
     k_list = (3, 4, 5)
     scan = False

@@ -8,7 +8,7 @@ I_N = Σ_{j<k≤N}K(γ_j−γ_k) + λΣ_jV(γ_j)——dI_N/dN = 0
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 Kmax = 5000  # 测到 5000 零点
 
 def lam_req(N, Kfunc, subtract=None):

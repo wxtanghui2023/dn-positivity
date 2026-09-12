@@ -30,7 +30,7 @@ def main():
     print("基础验证：Σq(γ_ρ) 的 Stieltjes 重构")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     # 用前 2000 零点（γ < ~3000）
     z = z[:2000]
     print(f"零点: {len(z)}——γ范围: {z[0]:.1f} 到 {z[-1]:.1f}")

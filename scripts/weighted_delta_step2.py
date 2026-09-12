@@ -8,7 +8,7 @@ P_N = Σ(S_n - 1/2)——用 δ 表达（无 N0' 权重的——）？
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 200000)
 z = z[:K]
 

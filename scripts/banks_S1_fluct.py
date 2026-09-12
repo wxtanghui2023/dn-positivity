@@ -19,7 +19,7 @@ def main():
     print("Σ₁ 涨落扫描——ξ=1/2——ζ 零点 ξ 扭曲和 − 主项")
     print("="*70)
     
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     xi = 0.5
     m, q = 1, 2
     mu_phi = -1.0  # μ(2)/φ(2)

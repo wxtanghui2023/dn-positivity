@@ -9,7 +9,7 @@ dS_k = S_{k+1} - S_k = 1 - ΔN₀(k)——ΔN₀ = N₀(γ_{k+1}) - N₀(γ_k)
 import numpy as np
 from math import log, pi
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 500000)
 z = z[:K]
 

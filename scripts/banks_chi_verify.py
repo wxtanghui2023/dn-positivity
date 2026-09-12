@@ -25,7 +25,7 @@ def main():
     print("="*70)
     print("𝒳(1−ρ) 精确 vs Stirling——验证实现")
     print("="*70)
-    z = np.load('/tmp/zeros_odlyzko_100k.npy')
+    z = np.load('data/zeros_odlyzko_100k.npy')
     print(f"\n前 5 个零点——𝒳(½−iγ) 对比：")
     for g in z[:5]:
         ce = chi_exact(float(g))

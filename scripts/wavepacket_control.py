@@ -29,7 +29,7 @@ def stats(areas, name):
     print(f'{name}: ρ(1)={r1:+.4f}——ρ(2)={r2:+.4f}——累积max={np.max(np.abs(cum)):.4f}——块压缩={blk_sums.std()/rw:.4f}')
 
 # 真实
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 200000)
 z = z[:K]
 def N0(t):

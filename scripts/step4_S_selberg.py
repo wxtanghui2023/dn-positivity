@@ -8,7 +8,7 @@ S(γ_k)（零点采样——）的统计（mean 0.5——std ?——）
 import numpy as np
 from math import log, pi, sqrt
 
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 K = min(len(z), 500000)
 z = z[:K]
 

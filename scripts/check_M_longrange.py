@@ -7,7 +7,7 @@ from math import log, pi
 
 # 加载 2M 零点
 try:
-    z = np.load('/tmp/zeros_odlyzko_2M.npy')
+    z = np.load('data/zeros_odlyzko_2M.npy')
     print(f'2M 零点: {len(z)}——γ到 {z[-1]:.0f}')
 except:
     print('无 2M 数据——用 200k')

@@ -13,7 +13,7 @@ import numpy as np
 import mpmath as mp
 mp.mp.dps = 40
 
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 gamma1 = zeros[0]
 
 def log_xi(s):

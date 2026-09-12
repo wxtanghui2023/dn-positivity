@@ -26,7 +26,7 @@ def log_potential(points, N=None):
 print('=== 对数势能比较（unfolded——）===')
 
 # 1. 零点 unfolded（u_n = N0(γ_n)——直接算——用前 N 个零点）
-z = np.load('/tmp/zeros_odlyzko_2M.npy')
+z = np.load('data/zeros_odlyzko_2M.npy')
 def N0(t):
     return (t/(2*pi))*(log(t/(2*pi)) - 1) + 7.0/8
 

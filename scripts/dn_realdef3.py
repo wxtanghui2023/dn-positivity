@@ -30,7 +30,7 @@ for n in [10, 20, 50, 100]:
 print("\n=== g_n tail asymptotics: g_n(γ) ≈ sin(n/γ)/γ ≈ n/γ² (γ≫n) ===")
 # verify: D_n = Σ g_n(γ) should ≈ n·Σ1/γ² + boundary if g_n ≈ n/γ² for γ≫n
 # but g_n(γ) for γ≪n: sin(nθ(γ)) oscillates... check partial sums
-zeros = np.load('/tmp/zeros_odlyzko_100k.npy')
+zeros = np.load('data/zeros_odlyzko_100k.npy')
 print(f"\npartial sums of g_n(γ) up to T (n=20):")
 for T in [50, 100, 500, 1000, 5000, 20000, 74921]:
     zsel = zeros[zeros <= T]

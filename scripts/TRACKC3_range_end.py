@@ -2,7 +2,7 @@
 import numpy as np
 from mpmath import mp, mpf, atan, cos as mcos, sin as msin, log as mlog
 mp.dps=40
-g=np.load('/tmp/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
+g=np.load('data/zeros_odlyzko_2M.npy').astype(float).ravel(); g=np.sort(g)
 T=float(g[-1]); N=g.size
 B_T=(np.log(T)+1)/(4*np.pi*T)
 C1=1.0-float(mcos(mpf('0.5'))); S1=float(msin(mpf('0.5')))
