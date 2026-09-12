@@ -1,5 +1,7 @@
 # P28-B2-C：Low-block effective inertia——Schur complement S_M（穿过——非 core）
 
+> ⚚ 勘误指针（2026-09-12）：本文中出现的每 orbit 负指标 **1**（或 N 个 orbit 的 **N**）应读作 **2**（或 **2N**）—— 原值源于 G8.1 的一处代数笔误（把对角块写成 −2σₓ 而非 −2I₂）；详见 `ERRATUM-inertia-factor2.md`。**定性结论不受影响**（有限仍有限 ✓）。
+
 > 2026-09-01 · 唐先生 B2-C 指令 · S_M = A_M − B_M C_M⁻¹ B_M* · persistent core 判别
 
 ## S_M(N)（Schur complement——低块有效二次型）

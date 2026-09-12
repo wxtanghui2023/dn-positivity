@@ -1,5 +1,7 @@
 # P28-C2-A：Direct low-block compression——negative spectral passage 确认
 
+> ⚚ 勘误指针（2026-09-12）：本文中出现的每 orbit 负指标 **1**（或 N 个 orbit 的 **N**）应读作 **2**（或 **2N**）—— 原值源于 G8.1 的一处代数笔误（把对角块写成 −2σₓ 而非 −2I₂）；详见 `ERRATUM-inertia-factor2.md`。**定性结论不受影响**（有限仍有限 ✓）。
+
 > 2026-09-01 · 唐先生 C2 指令 · 放弃 Schur 主判据 · direct compression + LDL*
 
 ## 实现验证（N=1——单零点——G8.1 理论 n₋=1）

@@ -1,5 +1,7 @@
 # P28-E：Projection-Overlap Asymptotics——inter-block coherence 机制确认 + 实现审计
 
+> ⚚ 勘误指针（2026-09-12）：本文中出现的每 orbit 负指标 **1**（或 N 个 orbit 的 **N**）应读作 **2**（或 **2N**）—— 原值源于 G8.1 的一处代数笔误（把对角块写成 −2σₓ 而非 −2I₂）；详见 `ERRATUM-inertia-factor2.md`。**定性结论不受影响**（有限仍有限 ✓）。
+
 > 2026-09-01 · 唐先生 P28-E 指令 · W_M(N)=Tr(P_M P_N⁻) · operator bound 目标
 
 ## ⚠️ 实现审计（关键——必须先记录）

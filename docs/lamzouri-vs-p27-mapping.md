@@ -1,5 +1,7 @@
 # Lamzouri 2609.02882 ↔ 我们 P27-P33：逐条映射分析
 
+> ⚚ 勘误指针（2026-09-12）：本文中出现的每 orbit 负指标 **1**（或 N 个 orbit 的 **N**）应读作 **2**（或 **2N**）—— 原值源于 G8.1 的一处代数笔误（把对角块写成 −2σₓ 而非 −2I₂）；详见 `ERRATUM-inertia-factor2.md`。**定性结论不受影响**（有限仍有限 ✓）。
+
 > 2026-09-07 · 唐先生指令"2"（深挖 Lamzouri 方法与我们的对应——借简洁性重铸——）
 > 论文：Lamzouri《A new proof that more than 2/3 of the zeros of the Riemann zeta function are simple and on the critical line》(arXiv:2609.02882)
 

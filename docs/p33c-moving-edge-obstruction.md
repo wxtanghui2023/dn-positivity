@@ -1,5 +1,7 @@
 # P33 修正：Moving-Edge Obstruction——Extensive Inertia Does Not Imply Uniform Negative-Form Transfer
 
+> ⚚ 勘误指针（2026-09-12）：本文中出现的每 orbit 负指标 **1**（或 N 个 orbit 的 **N**）应读作 **2**（或 **2N**）—— 原值源于 G8.1 的一处代数笔误（把对角块写成 −2σₓ 而非 −2I₂）；详见 `ERRATUM-inertia-factor2.md`。**定性结论不受影响**（有限仍有限 ✓）。
+
 > 2026-09-01 · 唐先生关键逻辑审计修正 · 分 A/B 两层 · 问题 I/II 拆分
 
 ## ⚠️ 关键修正——两种极限结局不能来自同一个 nested truncation
