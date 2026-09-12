@@ -23,7 +23,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | 2 | `exp_sinh_identity`：e^v - 2 + e^{-v} = 4 sinh^2(v/2) | ✅ **已形式化并通过**（2026-09-12） |
 | 3 | `PB-Lemma1.lean`：**论文 Lemma 1**（单调性：F 在 x>1 严格递增，k>0） | ✅ **已形式化并通过**（2026-09-12，4 次迭代） |
 | 4 | 论文 **Lemma 2**（far：F(1+u) ≤ (k²/4)u²(1+u)^{(k-4)/2}） | ⬜ 待做 |
-| 5 | 论文 **Lemma 3**（near：F(1+t^{-2}) = 4sinh²(v(t)/2) + 归一化剖面） | ⬜ 待做 |
+| 5a | `PB-Lemma3-identity.lean`：**Lemma 3 恒等式部分**（F(1+u) = 4sinh²(((k/2)log(1+u))/2)） | ✅ **已通过**（首次编译，2026-09-12） |
+| 5b | Lemma 3 剩余：比值恒等式 + sinh(x)/x 单调 + ∫₀¹(1+δ)⁻⁴=7/24 + 修正项 | ⏳ 进行中 |
 | 6 | 论文 **Lemma S4**（Abel 求和 + 渐近常数 2a/3 = 1/(3π)） | ⬜ 待做 |
 ```
 **说明**：本目录只记录**形式化**进度 ✅；**不改变**论文的任何数学陈述 ✅。
