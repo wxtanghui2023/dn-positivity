@@ -25,7 +25,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | 4 | 论文 **Lemma 2**（far：F(1+u) ≤ (k²/4)u²(1+u)^{(k-4)/2}） | ⬜ 待做 |
 | 5a | `PB-Lemma3-identity.lean`：**Lemma 3 恒等式部分**（F(1+u) = 4sinh²(((k/2)log(1+u))/2)） | ✅ **已通过**（首次编译，2026-09-12） |
 | 5b | ：**比值恒等式**（剖面 = (sinh(v_t/2)/sinh(v_H/2))²） | ✅ **已通过** |
-| 5c | Lemma 3 剩余：sinh(x)/x 单调 + ∫₀¹(1+δ)⁻⁴=7/24 + 修正项 | ⏳ 进行中 |
+| 5c | `PB-Lemma3-integral.lean`：**∫₀¹(1+δ)⁻⁴dδ = 7/24**（FTC + rpow 导数 ✓） | ✅ **已通过** |
+| 5d | Lemma 3 剩余：`sinh(x)/x` 单调（⚠️ **Mathlib 中不存在** ⟹ 需自证） + `(1+O(H⁻²))` 修正项 | ⏳ 进行中 |
 | 6 | 论文 **Lemma S4**（Abel 求和 + 渐近常数 2a/3 = 1/(3π)） | ⬜ 待做 |
 ```
 **说明**：本目录只记录**形式化**进度 ✅；**不改变**论文的任何数学陈述 ✅。
@@ -45,4 +46,18 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 ④ **自然数指数 vs 实数指数** ⚠️ —— `(...)^2` 是 `Nat` 指数；`Real.rpow_*` 要实数指数 ✅
    ⟹ **避免混用**：全程用 `Real.rpow_add` 而非 `Real.rpow_mul` ✅（本目录的 `F_eq_sq` 即如此 ✓）
 ⑤ **每次改完立刻编译**（3–4 秒 ✓）—— 本项目 4 次迭代的错误**全由编译器抓出** ✅
+```
+
+## 本轮技术收获（供后续复用 ✅）
+```
+| 目的 | 本次找到的正确名字 ✓ | 本版本【不】存在的 ✗ |
+| 幂函数导数 | `Real.hasDerivAt_rpow_const`（**须 import `Pow/Deriv`** ✓） | — |
+| 幂函数凸性 | `convexOn_rpow`（**须 import `Convex/SpecificFunctions/Basic`** ✓） | `Real.convexOn_rpow` ✗ |
+| 区间积分基本定理 | `intervalIntegral.integral_eq_sub_of_hasDerivAt`（**须 import `IntervalIntegral/FundThmCalculus`** ✓） | `integral_deriv_eq_sub` ✗（另一变体名 ✓） |
+| 幂的域内连续 | `ContinuousOn.rpow_const`（**须 import `Pow/Continuity`** ✓；负指数时用 `f x ≠ 0` 那一支 ✓） | — |
+| MVT 型 | `StrictMonoOn.exists_slope_lt_deriv`（`Convex/Deriv` ✓） | `exists_deriv_eq_slope` ✗ |
+| `sinh x / x` 单调 | **不存在** ✗ ⟹ **需自行证明** ⚠️ | — |
+【教训 ✅】**模块选对比名字更重要** —— 有 3 次错误是"名字对、模块没 import" ✗✓
+【教训 ✅】`HasDerivAt.rpow_const` / `ContinuousOn.rpow_const` 的条件是**析取**（`f x ≠ 0 ∨ 0 ≤ p`）✓
+   ⟹ 负指数时必须主动选**左支**并给 `f x ≠ 0` ✓（我一开始错选右支 ✗ 目标变成 `1 ≤ -3` 的假命题 ✓）
 ```
