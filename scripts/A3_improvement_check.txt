@@ -1,0 +1,62 @@
+==========================================================================
+A3 improvement check -- negative inertia / moving-edge / Toeplitz-CF
+==========================================================================
+  c_MT^-1 = 1.3274992963   2 - R(psi_MT) = 0.6725007   ceiling (frontier 7.2) = 0.682
+
+(A) check the quoted Lemma 3.2  r >= 2trP + 4trQ - 4b - ||P+Q||^2_HS
+    4000 random trials: violations = 0  (min slack on non-trivial configs = 0.674547)
+    equality config P=Pi1(r=6), Q=2*Pi2(b=4): RHS = 6.0000000000  = rank P = 6  -> equality attained
+    NOTE: in that equality config n_-(Q) = 0 (moving-edge has zero contact with it)
+
+(B) Q1: substitute the project's n_- = 2 per orbit into (3.1)
+    model: N_on simple on-line zeros (eigenvalue 1) + p off-line pairs,
+    each pair a signature (1,1) block [[0,1],[1,0]] in Q.
+       N_on    p  rankQ  n_+(Q)  n_-(Q)  b=rank-n_-    id  db_need gain|b->0
+         10    1      2       1       1           1  True     0.03   0.33333
+         10    5     10       5       5           5  True     0.05   1.00000
+        100   20     40      20      20          20  True     0.33   0.57143
+       1000    3      6       3       3           3  True     2.39   0.01193
+       2000  500   1000     500     500         500  True     7.12   0.66667
+    b_new = rank Q - n_-(Q) = 2p - p = p = b  -> the rewrite is an IDENTITY.
+    identity used: 2trP+4trQ-4b = 4tr(P+Q)-2N  iff  b = p, N = N_on+2p.
+    sensitivity: d(rank bound)/db = -4  ->  4/N per unit of proportion.
+    'db_need' = b-reduction needed to reach 0.682 = 0.00238 N; the actual
+    slack is zero because our n_- asset certifies n_+(Q) = n_-(Q) = p.
+    'gain|b->0' = gain if one could prove n_+(Q)=0, i.e. Q <= 0: that is
+    'no off-line zeros' = RH (and contradicts signature (1,1) per pair).
+
+(C) Q2: moving-edge family K_j = [[1,-(1+1/j)],[-(1+1/j),1]], lam_j^- = -1/j
+          N   edge lam^-_N  sum |lam^-| = H_N      H_N/N
+         10     -1.000e-01           2.928968   2.93e-01
+        100     -1.000e-02           5.187378   5.19e-02
+       1000     -1.000e-03           7.485471   7.49e-03
+      10000     -1.000e-04           9.787606   9.79e-04
+    1000000     -1.000e-06          14.392726   1.44e-05
+    edge -> 0 (no uniform negative sector); total negative mass H_N = log N
+    = o(N).  Any inequality linear in n_- therefore contributes o(1) to a
+    proportion O(1) -> no numeric C* is produced by the moving edge.
+
+(D) Q3: Toeplitz / Christoffel counting on the same moment data
+                                   measure      1-L1      1-L2      1-L3   m1^2/m2
+    0.6725 d_1 + 0.3275 d_0  (Montgomery 2-pt)  0.672500  0.672500  0.672500  0.672500
+    0.682 d_1 + 0.318 d_0   (0.682 2-pt ceiling)  0.682000  0.682000  0.682000  0.682000
+       0.682 d_3 + 0.318 d_0   (same, c=3)  0.682000  0.682000  0.682000  0.682000
+     0.3275 d_0 + 0.6725 * empirical zeros  0.538311  0.622996  0.648907  0.538311
+    [Py] Toeplitz/Christoffel identity  Lambda_m(0)=detH_m/detB_m =
+         1/(H_m^-1)_00  and for m=1: 1-Lambda_1(0) = m1^2/m2 = the
+         Cauchy-Schwarz rank bound.  Same functional, same number.
+    Rows 1-3: 1-L_m = 1-mu({0}) exactly (sharp two- or three-moment data)
+      -> 0.6725 (Montgomery normalisation) and 0.682 (ceiling data).
+    Row 4 (data-driven): the empirical spread costs moments; 1-L_m rises
+      only as 1-L_1=0.538 -> 0.649 -> ..., never above 0.6725 = 1-mu({0}).
+    Toeplitz rank-deficiency device (r atoms on the unit circle):
+      n= 12 size= 13 atoms r= 6  rank(T)= 12  deficiency=1  (=1 iff generic)
+      n= 24 size= 25 atoms r=12  rank(T)= 24  deficiency=1  (=1 iff generic)
+    deficiency 1 <-> all roots on the unit circle (Caratheodory-Fejer);
+    rank(T) = 2r = #nonzero eigenvalues: the SAME invariant as the
+    frontier's rank P.  No second constant is produced.
+
+==========================================================================
+SUMMARY: Q1 identity (no gain, 0.6725); Q2 no numeric C* from moving-edge;
+Q3 same functional, same constant (0.682 ceiling).  Best available = 0.682.
+==========================================================================
