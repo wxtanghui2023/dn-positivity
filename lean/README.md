@@ -32,7 +32,7 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | 6a | `PB-LemmaS4-integrals.lean`：**两个幂积分**（有限区间版 ✓；极限即论文值 ✓） | ✅ **已通过** |
 | 6b | `PB-LemmaS4-abel.lean`：**反常积分 ∫_H^∞ t⁻⁴** + **S4 系数代数**（论文关键计算 ✓） | ✅ **已通过** |
 | 6c | 论文 **Lemma S4** 的 **Abel 求和恒等式**（离散和↔积分，含边界项） | ⏳ **未完成**（需 Stieltjes/计数测度积分 ✗） |
-| 6d | log 型反常积分 ∫_H^∞ t⁻⁴log t（有限版已过 ✓ 反常版未做） | ⏳ 未完成 |
+| 6d | `PB-LemmaS4-abel.lean`：**log 型反常积分** ∫_H^∞ t⁻⁴log t（**有限版 + 反常版均过** ✓） | ✅ **已通过** |
 ```
 **说明**：本目录只记录**形式化**进度 ✅；**不改变**论文的任何数学陈述 ✅。
 **纪律**：每条引理必须**独立编译通过**才记为 ✅；**卡住的如实记为卡住** ✅（不粉饰 ✅）。
