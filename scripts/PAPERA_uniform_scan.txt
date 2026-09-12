@@ -1,0 +1,72 @@
+==============================================================================
+UNIFORM SCAN OF THE OSCILLATION  Osc(n) = sum cos(n theta_gamma)
+==============================================================================
+
+  zeros used  = 100,000   (gamma <= GSUB = 74,920.83)
+  random prediction for |Osc| is sqrt(N) = 316.2
+
+  scanning 582 values of n from 100,000 to 9,924,297,935
+
+  --- worst cases ---
+                   n             Osc(n)        |Osc|/N
+             145,681        -3.7907e+04     3.7907e-01
+             148,594        -3.7906e+04     3.7906e-01
+             142,824        -3.7858e+04     3.7858e-01
+             151,566        -3.7810e+04     3.7810e-01
+             140,024        -3.7718e+04     3.7718e-01
+             154,597        -3.7618e+04     3.7618e-01
+             137,278        -3.7491e+04     3.7491e-01
+             157,689        -3.7354e+04     3.7354e-01
+
+  max |Osc| / N        = 3.790740e-01   (at n = 145,681)
+  max |Osc| / sqrt(N)  = 119.8737
+  median |Osc| / sqrt(N)= 0.6464
+  90th pct |Osc|/sqrt(N)= 44.7662
+
+------------------------------------------------------------------------------
+WHAT WOULD A UNIFORM BOUND REQUIRE ?
+------------------------------------------------------------------------------
+
+  The quadratic range needs  N - Osc(n)  >  n * B_{GSUB},  i.e.
+        |Osc(n)|  <  N - n*B_{GSUB}.
+  With the FULL table the margin at n = T0^2 is about 2 (measured earlier).
+  Here, with only 100,000 zeros, the margin runs out at a much smaller n:
+        B_tail at GSUB (from the full 2M table) = 1.011116e-05
+        margin exhausted at n = N/B = 9.8901e+09
+        the scan goes to n = 9.9243e+09, i.e. 1.003 of the margin limit
+
+  restricted to n <= half the margin limit (546 scanned points):
+        max |Osc|/N there = 3.790740e-01
+        the requirement there is |Osc|/N < 1 - n*B/N >= 0.5
+        => SATISFIED at every scanned n
+
+  *** DIRECT TEST OF THE REQUIREMENT AT EVERY SCANNED n ***
+        requirement |Osc(n)| < N - n*B  holds at 581/582 scanned n
+        FAILS at n = 9,924,297,935: |Osc| = 2.7216e+02 vs allowance -3.4616e+02
+        (the single failure is at n = 9,924,297,935, where the allowance N - n*B has already
+         gone NEGATIVE, i.e. that n lies beyond the quadratic endpoint: expected.)
+        worst ratio |Osc| / allowance, among n whose allowance is positive:
+        0.3791 at n = 145,681
+
+  *** THE TWO-REGIME STRUCTURE (this is the finding) ***
+    AVERAGING regime  n > 30*GSUB:          max |Osc|/N = 3.4065e-02  (no spikes)
+      and this is exactly the regime where the allowance becomes tight.
+
+    => the uniform requirement, if proved, will be TWO-REGIME: resonance-dominated
+       but with a huge margin at small n, averaging-dominated and tiny at large n.
+
+  ⚠️ CAVEAT: with 1e5 zeros the "signal" N is only 1e5, so the relative deviation
+     floor is set by sqrt(N)/N = 1/sqrt(N) = 3.2e-03;. The FULL table earlier gave
+     1.09e-04 at the quadratic endpoint, which is what matters for the paper.
+     This scan answers the DIFFERENT and equally important question: is there any
+     n at which the oscillation spikes. The answer is read off the numbers above.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  max |Osc|/N over the dense scan   = 3.790740e-01
+  max |Osc|/sqrt(N)                 = 119.8737
+  => READ TOGETHER WITH THE REGIME SPLIT ABOVE: spikes exist but only in the
+     resonance regime where the allowance is huge; the requirement holds at 581 of
+     582 scanned n, the exception being an n already beyond the quadratic endpoint.
+==============================================================================
