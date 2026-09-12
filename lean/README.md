@@ -135,3 +135,18 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
    ⟹ 那一小段（把 ∫f dN 化为 [f·N] − ∫N f′）**需自写** ✓ —— 但**基础已备** ✓，属**可完成** ✓✓
 【✅ 教训 ✓】**搜源码要兼搜大小写与 API 名** ✓ —— 只看文件名会漏掉整个 API ✗
 ```
+
+## 🌉 桥的进度（连续版 Abel，2026-09-12 17:00 ✅）
+```
+| 步 | 内容 | 状态 |
+| ① | **计数函数是合法 `StieltjesFunction`**（单调 + 右连续） | ✅ **已通过**（`PB-Stieltjes-bridge.lean`） |
+| ② | 其 `measure` 在原子处取 1（`measure_singleton` = 跳跃 ✓） | ⏳ 下一步（需算 `leftLim` ✓） |
+| ③ | `∫ g d(measure) = Σ g(γᵢ)`（有限零点） | ⏳ 待做 |
+| ④ | 分部积分（Fubini + FTC ⟹ `∫f dN = [f·N] − ∫N f′`） | ⏳ 待做 |
+【① 的细节 ✓】`stepAt γ := fun x => if γ ≤ x then 1 else 0` ✓
+   · 单调性 ✓：按 `γ ≤ a` 分情形 ✓
+   · **右连续性 ✓**：`x ≥ γ` 时右侧邻域常值 1 ✓；`x < γ` 时用**局部邻域**（`isOpen_Iio` ✓）常值 0 ✓
+      ⚠️ 踩坑：我起初误以为「`x < γ` 时整个 `[x,∞)` 上都是 0」✗ —— **错** ✗（y 可以越过 γ ✓）
+      ⟹ 必须用**局部**邻域 ✓（这正是右连续的定义 ✓）
+【教训 ✓】`open scoped Topology` 才认 `𝓝` ✓；`Set.mem_Iio.mp` 才能把成员关系变成 `<` ✓
+```
