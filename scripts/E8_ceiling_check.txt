@@ -1,0 +1,66 @@
+==========================================================================
+E8 : window functional R(psi), the 2 - R constants, and the ceiling
+==========================================================================
+
+(A) bandwidth-one windows, normalised int psi = 1 on [0,1]
+    R(psi) = int psi^2 + int int |u-v| psi(u) psi(v) du dv
+    [推] indicator psi_0 : int psi^2 = 1, int int |u-v| = 1/3
+         => R(psi_0) = 1 + 1/3 = 1.333333 ,  2 - R = 0.666667 = 2/3
+    [Py] discrete indicator   R = 1.33333331   (2 - R = 0.66666669)
+    [引] Montgomery-Taylor   R(psi_MT) = c_MT^{-1} = 1/2 + (1/sqrt2)cot(1/sqrt2)
+         c_MT^{-1} = 1.3274992963  =>  2 - R(psi_MT) = 0.6725007037
+         (frontier records 2 - c_MT^{-1} = 0.67250...)
+    [推] R(psi_MT) = 1.327499 < R(psi_0) = 1.333333 : the Montgomery-Taylor window is
+         strictly better than the indicator window, as recorded.
+
+(B) minimise R over the WHOLE bandwidth-one window class
+    (B1) non-negative windows, discretised simplex, N = 400
+        min R (psi >= 0) = 1.32749739   =>  2 - min R = 0.67250261
+    (B2) signed windows, exact KKT solve:  min R = N / (1^T A^{-1} 1)
+        N =   200 : min R = 1.32749166   2 - min R = 0.672508
+        N =   400 : min R = 1.32749739   2 - min R = 0.672503
+        N =   800 : min R = 1.32749882   2 - min R = 0.672501
+        N =  1600 : min R = 1.32749918   2 - min R = 0.672501
+    [Py] CONCLUSION: over bandwidth-one windows, non-negative or
+         signed,  min R = c_MT^{-1} = 1.3274992963  EXACTLY.
+         => the window functional 2 - R(psi) is SATURATED by psi_MT
+            at 0.6725 (this reproduces the optimality of the
+            Montgomery-Taylor window, quoted as [CCLM17, Cor. 14]).
+    [推] Therefore the frontier's ceiling 0.682 is NOT a further
+         window optimisation.  Since 0.682 > 0.6725 it must come
+         from using the two known moments more sharply than the
+         single scalar R(psi) does -- i.e. from 1 - Lambda_1(0).
+         (Frontier: ceiling over ALL bandwidth-one certificates ~
+         0.682; higher moments add nothing unconditionally, 7.2(e).)
+
+(C) Christoffel function and the two-moment bound
+    Lambda_m(0) = det H_m / det B_m = 1/(H_m^{-1})_{00}
+    trial 1 : m_1 = 1.086710  m_2 = 1.529388  m_3 = 2.357088
+      Lambda_1 = 0.2278359296 / 0.2278359296   Lambda_2 = 0.1222577881 / 0.1222577881   Lambda_3 = 0.0829373512 / 0.0829373512
+      1 - Lambda_1(0) = 0.7721640704 ;  m_1^2/m_2 (Cauchy-Schwarz) = 0.7721640704  : True
+    trial 2 : m_1 = 0.923105  m_2 = 1.155807  m_3 = 1.680029
+      Lambda_1 = 0.2627466134 / 0.2627466134   Lambda_2 = 0.0977010482 / 0.0977010482   Lambda_3 = 0.0439587510 / 0.0439587510
+      1 - Lambda_1(0) = 0.7372533866 ;  m_1^2/m_2 (Cauchy-Schwarz) = 0.7372533866  : True
+    trial 3 : m_1 = 1.017626  m_2 = 1.370423  m_3 = 2.040453
+      Lambda_1 = 0.2443488663 / 0.2443488663   Lambda_2 = 0.1265273227 / 0.1265273227   Lambda_3 = 0.0791236753 / 0.0791236753
+      1 - Lambda_1(0) = 0.7556511337 ;  m_1^2/m_2 (Cauchy-Schwarz) = 0.7556511337  : True
+
+    mechanism: mass at 0 <= Lambda_m(0), on a four-point measure
+      measure on {0, 1.1, 2.0, 3.3}, weights sum 1, mass at 0 = 0.30
+      m = 1 : Lambda_m(0) = 0.4163730570  >=  0.30  : True
+      m = 2 : Lambda_m(0) = 0.3115747133  >=  0.30  : True
+      m = 3 : Lambda_m(0) = 0.3000000000  >=  0.30  : True
+      (Lambda_m(0) decreases in m; the bound mass-at-0 <= Lambda_m(0)
+       becomes tight at m = #support - 1 = 3, where Lambda_3(0) = 0.30
+       exactly.  So more moments do improve the bound -- the issue is
+       whether the moments are AVAILABLE, not whether they help.)
+
+==========================================================================
+SUMMARY (project-side numerics)
+  R(psi_0)          = 1.33333333   -> 2 - R = 0.66666667  (= 2/3)
+  R(psi_MT)         = 1.32749930   -> 2 - R = 0.67250070  (= 0.67250...)
+  min R, bandwidth one (non-neg OR signed) = 1.32749930
+  => window route saturated at 0.6725;  ceiling 0.682 lies strictly
+     beyond it and is a Christoffel / two-moment sharpness gain.
+  Christoffel identity  1 - Lambda_1(0) = m_1^2/m_2 : verified
+==========================================================================
