@@ -1,5 +1,7 @@
 # 📐 **A4 修订 + A5 对齐**：与我们【已有成果】逐条对齐
 
+> ⚚ 更正（2026-09-12，E29b 精读 ✓）：本文把「√log 来自**阶预算** k ~ log(1/λ)」归于 Burnol ✗ —— **被原文否定** ✓：Burnol 的 **Theorem 5.4** 表明对 **k ≥ 1** 内积 → 0 ✓，**只有 k = 0 存活** ✓；√log 来自**尺度预算** log(1/λ)（膨胀区间 [λ,1]、测度 dt/t ✓）✓。另：**Burnol↔Li 同构【在该文中不存在】** ✓（全文 0 次 Bombieri/Lagarias/Weil/criterion ✓；两版参考文献均无 Li 1997 与 Bombieri–Lagarias 1999 ✓；(ρ,k) 的出处是 **Connes/Hilbert–Pólya** ✓）。详见 `E29b-burnol-li-definitive-check.md`。
+
 **依据**：唐先生 22:52（"继续"）｜**本轮调取我方存档**（此前 A4 档案误称"未调取" ✗ —— **特此更正** ✓）
 **我方存档**：`DOOR5f-burnol-original-resolves-everything.md` ✓✓｜`nyman-beurling-exploration.md`｜
    `DOOR5b/c/d/e`（4 份）｜`CVS3-cvs5-findings-and-nb-threshold.md`｜`ix-anb-audit.md`
