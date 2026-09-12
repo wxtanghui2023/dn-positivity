@@ -45,4 +45,17 @@ theorem F_eq_sinh (k u : ℝ) (hu : 0 < 1 + u) :
   have harg : Real.log (1 + u) * (k / 2) / 2 = (k / 2) * Real.log (1 + u) / 2 := by ring
   rw [harg]
 
+
+/-- **论文 Lemma 3 的比值恒等式**：归一化剖面恰为双曲正弦之比。
+（分母非零由 `hsinh` 给出。）-/
+theorem F_ratio (k t H : ℝ)
+    (ht : 0 < 1 + t ^ (-(2 : ℝ))) (hH : 0 < 1 + H ^ (-(2 : ℝ)))
+    (hsinh : Real.sinh ((k / 2) * Real.log (1 + H ^ (-(2 : ℝ))) / 2) ≠ 0) :
+    ((1 + t ^ (-(2 : ℝ))) ^ (k / 2) + (1 + t ^ (-(2 : ℝ))) ^ (-(k / 2)) - 2)
+        / ((1 + H ^ (-(2 : ℝ))) ^ (k / 2) + (1 + H ^ (-(2 : ℝ))) ^ (-(k / 2)) - 2)
+      = (Real.sinh ((k / 2) * Real.log (1 + t ^ (-(2 : ℝ))) / 2)
+          / Real.sinh ((k / 2) * Real.log (1 + H ^ (-(2 : ℝ))) / 2)) ^ 2 := by
+  rw [F_eq_sinh k (t ^ (-(2 : ℝ))) ht, F_eq_sinh k (H ^ (-(2 : ℝ))) hH]
+  field_simp
+
 end PB
