@@ -69,7 +69,7 @@ factor 2 in Locus B applicable. Both are bookkeeping, not mechanism.
 
 ## 5. The modified statement that survives
 
-**推导 (conditional; the closed-form constant in N_m is not re-derived — see §6).**
+**推导 (closed 2026-09-12: the closed form of N_m is now re-derived — see §5b).**
 Fix an integer m ≥ 1. Let F satisfy conditions (a)–(d) and τ > 1/e. Suppose F has **at most m** zeros
 with |ρ/(ρ−τ)| > 1, and suppose (if any exist) that R > 1 is such that max_j |ρ_j/(ρ_j−τ)| ≥ R. Then
 
@@ -95,6 +95,56 @@ R^n ≥ n log n · [40(K_{F,1}+K_{F,4}) + 20m].
 (iv) **Consistency check at m = 1** (推导): 40(K_{F,1}+K_{F,4}) + 20·1 = 40(0.5 + K_{F,1} + K_{F,4}), and
 [N₁, 5·1·N₁] = [N, 5N]. The generalized statement degenerates to Theorem 4.1 exactly, constant for constant.
 
+## 5b. The constant-level gap, CLOSED (2026-09-12)
+
+**引用** The source's own three-scale comparison, extracted verbatim from p. 20 (proof of Theorem 4.1):
+
+    We want to prove that the previous formula is at least (K_{F,1}(τ)+K_{F,4}(τ)) n log n
+    for all n ∈ [N, 5N].  It is sufficient to show
+        R^n ≥ 40 n log n (1/2 + K_{F,1}(τ) + K_{F,4}(τ)).
+    This can be equivalently written as
+        (2/3)logR + (1/4)logR + (1/12)logR
+          ≥ log n / n + log log n / n + log(40(0.5 + K_{F,1}(τ) + K_{F,4}(τ))) / n.
+    This follows similarly from the assumptions for the number n as result (21) in the proof of
+    Theorem 3.1.  Also, the coefficients 2/3, 1/4 and 1/12 are selected because of the similar
+    reasons ... Indeed, the term log n grows faster than the term log log n, this grows faster
+    than a constant term and for all n ≥ e we have 3 log n ≥ 8 log log n.
+
+**推导** The three parts are what the earlier version of this note asserted without re-deriving.
+Substituting the extension's constant C(m) := 40(K_{F,1}+K_{F,4}) + 20m (which is the constant the
+right-hand side of the sufficient inequality acquires in §5(iii)):
+
+    (a)  log n / n        ≤ (2/3) log R     — from the W₋₁ term in N (independent of C) **unchanged**
+    (b)  log log n / n    ≤ (1/4) log R     — from 3 log n ≥ 8 log log n together with (a) **unchanged**
+    (c)  log C / n        ≤ (1/12) log R    ⟺  n ≥ 12 log C / log R     **with C → C(m)**
+
+So parts (a) and (b) never see the constant, and part (c) reproduces the published 12-term form
+with C replaced by C(m). The closed form therefore *is*
+
+    N_m = ⌈ max{ T₀/(eτ), exp(−W₋₁(−(2/3)·log R)), 12·log(40(K_{F,1}+K_{F,4}) + 20m)/log R } ⌉
+
+**核验** `scripts/E4b_palojarvi_constant.py` → `scripts/E4b_palojarvi_constant.txt` (all numbers from there):
+1. **m = 1 degeneracy is EXACT**: for five parameter sets, C(1) = 40(K₁+K₄)+20 and the published
+   40(0.5+K₁+K₄) agree to the last floating-point bit (relative difference exactly 0).
+2. **The inequality holds on the WHOLE window**, as the theorem requires (detection supplies only
+   *some* n): scanned every (m, K₁, K₄, R) in a grid of 60 cases over n ∈ [N_m, 5m·N_m]; the worst
+   log-ratio is **+32.13** (m = 1, K₁ = 0.1, K₄ = 0.2, R = 1.5), i.e. the ratio R^n/(C(m)·n·log n)
+   exceeds 1 by a factor e^{32.13} ≈ 9×10¹³. No case fails.
+3. **The minimum sits at the LEFT endpoint** n = N_m, because R^n/(n log n) is increasing for n ≥ e;
+   so widening the window by the factor m costs nothing — the cost of m is entirely in C(m) and in
+   the 5m of Lemma 2.2.
+4. **The cost of m is logarithmic**: with K₁ = 1, K₄ = 2, R = 2, N_m/N₁ runs 1.00 (m=1) → 1.16
+   (m=10) → 1.55 (m=100) → 3.40 (m=10⁶). The linear factor is only the window and the 5m.
+5. **Control: the 12 is load-bearing.** Replacing 12 log C / log R by the naive ⌈log C / log R⌉
+   fails at the left endpoint (log-ratio −2.2 to −3.4), so the comparison is not vacuous — the 12
+   is exactly the reciprocal of the (1/12) slot, and the need for it comes from the *n log n* factor
+   on the right-hand side, not merely from C.
+
+**⚠️ Honest note on tightness** (核验): the margins in (2) are enormous (e^{32} and up), so the
+published form 12 log C / log R is **sufficient but far from optimal**; a much smaller threshold
+would also work. This note does not claim optimality of the constant — only that the published
+closed form, with C replaced by C(m), is valid.
+
 ## 6. What is genuinely new input, and what I did not verify
 
 - **New hypothesis, not new mechanism.** The generalization is *conditional on an a priori bound m* on the
@@ -104,11 +154,12 @@ R^n ≥ n log n · [40(K_{F,1}+K_{F,4}) + 20m].
   supplied — which is close to the kind of input the whole τ-Li framework was built to avoid needing.
 - **Financial cost of m.** The n-window stretches linearly in m ([N, 5mN]) and the constants inside N grow
   linearly in m. This is exactly what Lemma 2.2's "5M" forces; it cannot be avoided by rescaling.
-- **Not verified here (honest gap).** The step that converts "R^n ≥ n log n · C" into the closed form of N
-  is result (21) in the proof of Theorem 3.1, with the split log R = (2/3)log R + (1/4)log R + (1/12)log R.
-  I checked that C(m) := 40(K_{F,1}+K_{F,4}) + 20m is the correct target constant, but I did **not** re-run
-  the (21)-type three-scale comparison at constant C(m). Existence of *some* valid N_m for each fixed m is
-  certain from n log n = o(R^n); only the closed form needs rechecking.
+- **~~Not verified here (honest gap).~~ CLOSED 2026-09-12 — see §5b.** The step that converts
+  "R^n ≥ n log n · C" into the closed form of N is result (21)-type in the proof of Theorem 3.1, with the
+  split log R = (2/3)log R + (1/4)log R + (1/12)log R. The comparison has now been re-run at constant
+  C(m) := 40(K_{F,1}+K_{F,4}) + 20m: parts (a),(b) do not involve C, part (c) is exactly the 12-term with C
+  replaced, and the resulting closed form is verified numerically on the whole window (§5b, items 1–5).
+  The only thing *not* claimed is optimality of the constant.
 - **R vs R′.** The source's hypothesis uses a *lower* bound R for the exceptional modulus; detection uses
   the *maximum* R′. I used R′ ≥ R, which is legitimate but means the generalized hypothesis must read
   "∃ zero with |w| ≥ R", not "the (unique) zero has |w| ≥ R".
