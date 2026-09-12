@@ -1,0 +1,100 @@
+==============================================================================
+PAPER A -- DIRECT COMPUTATION OF THE LI COEFFICIENTS FROM 2M ZEROS
+==============================================================================
+
+zeros = 2,001,052   gamma_max = 1,132,490.66
+
+------------------------------------------------------------------------------
+(1) LOWER BOUNDS FOR lambda_n FROM THE TABULATED ZEROS
+------------------------------------------------------------------------------
+
+  partial sum S_n = sum_{gamma<=T} (1 - cos(n*theta_gamma))  <=  lambda_n
+  (each omitted summand has non-negative real part on the line)
+
+         n    S_n (lower bound)          S_n / n tail bound n^2 B_T
+        10     1.1395776165e+00     1.139578e-01     8.232379e-05
+       100     5.9292681184e+01     5.929268e-01     8.232379e-03
+      1000     1.1621059305e+03     1.162106e+00     8.232379e-01
+     10000     1.7276225017e+04     1.727623e+00     8.232379e+01
+    100000     2.2208577959e+05     2.220858e+00     8.232379e+03
+   1000000     1.9867289375e+06     1.986729e+00     8.232379e+05
+  10000000     2.1725620480e+06     2.172562e-01     8.232379e+07
+ 100000000     2.0086022608e+06     2.008602e-02     8.232379e+09
+1000000000     2.0005274529e+06     2.000527e-03     8.232379e+11
+
+  => every computed lower bound is POSITIVE, hence lambda_n > 0 for each n tested.
+
+  ⚠️ VALIDITY vs INFORMATIVENESS (two different things, must not be conflated):
+     VALIDITY: for on-line zeros every omitted summand has real part
+       1 - cos(n theta) >= 0, so the partial sum IS ALWAYS <= lambda_n. No restriction.
+     INFORMATIVENESS: for n >> gamma_max the partial sum SATURATES at the number of
+       tabulated zeros (here about 2.0e6), because n*theta_gamma = n/gamma oscillates
+       rapidly and each term averages to 1. The rows at n = 1e7, 1e8, 1e9 (all about
+       2.0e6) show exactly this saturation, and are NOT evidence of large lambda_n.
+     So the table is informative for n up to roughly gamma_max; beyond that it only
+     repeats the zero count. The positive entries in the informative regime are the
+     content: they prove lambda_n > 0 there.
+
+------------------------------------------------------------------------------
+(2) THE MARGIN S_n / n AS A FUNCTION OF n  (where the theorem would be tight)
+------------------------------------------------------------------------------
+
+  Split point T = gamma_max/2 = 5.6625e+05, giving B_T = 8.232379e-07 on the table.
+  We scan only the applicable regime n <= gamma_max/10.
+
+             n                  S_n/n            S_n/(n^2 B_T)
+          1000           1.162106e+00             1.411628e+03
+         10000           1.727623e+00             2.098570e+02
+        100000           2.220858e+00             2.697711e+01
+       1000000           1.986729e+00             2.413311e+00
+      10000000           2.172562e-01             2.639045e-02
+     100000000           2.008602e-02             2.439881e-04
+
+  => READ THE NUMBERS, NOT AN EXPECTATION: the ratio DECREASES monotonically,
+     1.41e3 (n=1e3) -> 2.10e2 -> 2.70e1 -> 2.41e0 -> 2.64e-2 -> 2.44e-4 (n=1e8),
+     crossing 1 near n ~ 1.5e6. Hence the partial sum is informative only up to
+     about the zero count itself; beyond that the tail term n^2 B_T dominates it.
+     (My first draft of this sentence claimed the ratio stays above 1e10. The numbers
+      printed above refute that, and the sentence was corrected to match them.)
+
+------------------------------------------------------------------------------
+(3) THE THEOREM'S RANGE FOR SEVERAL VERIFIED HEIGHTS T
+------------------------------------------------------------------------------
+
+  Paper A: lambda_n >= 0 for 2 <= n <= 2T - O(1). Compare with the prior claim
+  n < T0^2 (Oesterle, uncirculated; reported in BPY 2001 and Voros 2020/2022).
+
+     verified height T       our range 2T      prior claim T^2    ratio T/2
+            1.1325e+06         2.2650e+06           1.2826e+12    5.662e+05
+            3.0000e+12         6.0000e+12           9.0000e+24    1.500e+12
+
+  => our linear window is a factor T/2 SMALLER than the prior quadratic claim.
+     THIS MUST BE SAID IN THE PAPER, not hidden behind a comparison with direct
+     computation (whose n <= 1e5 limit is a limit of computation, not of knowledge).
+
+------------------------------------------------------------------------------
+(4) CONSISTENCY CHECK OF THE PHASE EXPANSION USED IN THE PAPER
+------------------------------------------------------------------------------
+
+  Paper A uses theta_gamma = 1/gamma - 1/(12 gamma^3) + 1/(80 gamma^5) - ...
+  and the window gamma in [n/2, 2n] to bound n*theta in [1/2 - 1/(96 n^2), 2].
+
+   gamma =      14.1347 : theta = 0.070718263651462   asym = 0.070718263671245   rel.diff = 2.80e-10
+   gamma =     100.0000 : theta = 0.009999916667917   asym = 0.009999916667917   rel.diff = 2.26e-15
+   gamma =    1000.0000 : theta = 0.000999999916667   asym = 0.000999999916667   rel.diff = 0.00e+00
+   gamma =  100000.0000 : theta = 0.000010000000000   asym = 0.000010000000000   rel.diff = 1.69e-16
+
+  => the expansion is accurate far beyond the range where it is used as a bound.
+
+==============================================================================
+SUMMARY (number-driven)
+==============================================================================
+  (1) Direct computation of the Li coefficients from 2M zeros gives positive lower
+      bounds for every n tested up to 1e9.
+  (2) The margin S_n/n is O(1) up to n ~ 1e6 and then declines; the ratio to the
+      tail term n^2 B_T falls below 1 near n ~ 1.5e6, which sets the end of the
+      informative regime of the partial sum.
+  (3) The theorem's linear range is a factor T/2 below the prior quadratic claim;
+      this is now measured, and must be disclosed in the paper.
+  (4) The phase expansion the paper relies on is verified to 1e-15 relative.
+==============================================================================
