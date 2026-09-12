@@ -5,6 +5,7 @@ Paper B · 桥的第 ③′ 步【有限多零点版】—— Lean 4 形式化
 -/
 import Mathlib.MeasureTheory.Measure.Stieltjes
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 import Mathlib.Topology.Order.LeftRightLim
 
 open MeasureTheory Filter
@@ -102,5 +103,23 @@ theorem integral_countFn {ι : Type*} (s : Finset ι) (γ : ι → ℝ) (g : ℝ
     ∫ x, g x ∂(countFn s γ).measure = ∑ i ∈ s, g (γ i) := by
   rw [measure_countFn, integral_finsetSum_measure hint]
   simp only [integral_dirac]
+
+/-- **第 ④ 步的核心（FTC 形式）**：论文"**边界项 + 积分**"结构的离散原型 ✓
+设零点为 `u i`，且 `∫_H^{u i} f' = f(u i) − f(H)`（FTC ✓），则
+  `Σᵢ f(u i) = |s|·f(H) + Σᵢ ∫_H^{u i} f'`
+即：**求和 = 边界项（每个零点贡献 `f(H)`）+ 各零点区间上的积分** ✓
+（论文的 `−2N(H)H⁻⁴ + 8∫_H^∞ N(t)t⁻⁵dt` 正是此结构 ✓）。-/
+theorem sum_eq_boundary_add_integrals {ι : Type*} (s : Finset ι) (u : ι → ℝ)
+    (f f' : ℝ → ℝ) (H : ℝ)
+    (hFTC : ∀ i ∈ s, ∫ t in H..(u i), f' t = f (u i) - f H) :
+    ∑ i ∈ s, f (u i) = s.card * f H + ∑ i ∈ s, ∫ t in H..(u i), f' t := by
+  have h : ∀ i ∈ s, f (u i) = f H + ∫ t in H..(u i), f' t := by
+    intro i hi
+    have := hFTC i hi
+    linarith
+  calc ∑ i ∈ s, f (u i)
+      = ∑ i ∈ s, (f H + ∫ t in H..(u i), f' t) := Finset.sum_congr rfl h
+    _ = s.card * f H + ∑ i ∈ s, ∫ t in H..(u i), f' t := by
+        rw [Finset.sum_add_distrib, Finset.sum_const, nsmul_eq_mul]
 
 end PB

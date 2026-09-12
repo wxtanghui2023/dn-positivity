@@ -143,7 +143,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ② | 其 `measure` 在原子处取 1（`measure_singleton` = 跳跃 ✓） | ✅ **已通过** |
 | ③ | **计数测度 = Dirac 测度** ⟹ `∫ g d(measure) = g γ` | ✅ **已通过** |
 | ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
-| ④ | 分部积分（把 ③′ 化为 `[f·N] − ∫N f′`；Fubini + FTC） | ⏳ 待做 |
+| ④a | **FTC 核心**：`Σᵢ f(uᵢ) = |s|·f(H) + Σᵢ ∫_H^{uᵢ} f'`（边界项 + 区间积分 ✓） | ✅ **已通过** |
+| ④b | **Fubini/指示函数重排**（把 `Σᵢ ∫_H^{uᵢ} f'` 化为 `∫_H^∞ f'(t)·N(t)dt`） | ⏳ 待做（最难的一小步 ✓） |
 【① 的细节 ✓】`stepAt γ := fun x => if γ ≤ x then 1 else 0` ✓
    · 单调性 ✓：按 `γ ≤ a` 分情形 ✓
    · **右连续性 ✓**：`x ≥ γ` 时右侧邻域常值 1 ✓；`x < γ` 时用**局部邻域**（`isOpen_Iio` ✓）常值 0 ✓
@@ -161,7 +162,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ② | `leftLim = 0` ⟹ `measure {γ} = 1`（**一个零点 = 一份质量** ✓） | ✅ |
 | ③ | **`measure = Measure.dirac γ`** ⟹ **`∫ g d(measure) = g γ`** ✓✓ | ✅ |
 | ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
-| ④ | 分部积分（把 ③′ 化为 `[f·N] − ∫N f′`；Fubini + FTC） | ⏳ 待做 |
+| ④a | **FTC 核心**：`Σᵢ f(uᵢ) = |s|·f(H) + Σᵢ ∫_H^{uᵢ} f'`（边界项 + 区间积分 ✓） | ✅ **已通过** |
+| ④b | **Fubini/指示函数重排**（把 `Σᵢ ∫_H^{uᵢ} f'` 化为 `∫_H^∞ f'(t)·N(t)dt`） | ⏳ 待做（最难的一小步 ✓） |
 
 【③ 的实现 ✓】`Measure.ext_of_Ioc`（在 `Ioc` 上一致 ⟹ 测度相等 ✓）
    + `StieltjesFunction.measure_Ioc`（增量 ✓）+ `Measure.dirac_apply'`（Dirac 的作用 ✓）
