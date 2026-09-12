@@ -104,3 +104,11 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 【★ 重要 ✓】论文的核心方法论「**边界项必须保留**」已**机器验证** ✓✓
    （`abel_zero_sum` ✓ + 反例 `boundary_term_matters` ✓ 证明省略边界项会得到 0 ≠ 3 ✓）
 ```
+
+## 追加：论文最后一步比较（✅ 已形式化）
+```
+`PB-FinalComparison.lean`：
+   · `sixtyfour_pi_a_over_three`：64π·(1/(2π))/3 = **32/3** ✓
+   · `final_comparison`：H > 1 ⟹ **log H + 64πa/3 ≥ 7 log 2** ✓（等价于论文的 log H ≥ −5.815 ✓）
+   · `final_margin_positive`：**边际 > 0** ✓（论文末句"the margin is ... > 0" ✓）
+```
