@@ -1,0 +1,30 @@
+================================================================================================
+G6-VERIFY: is n_-(K_rho) = 1 (documents) or 2 (sub-agent)?
+================================================================================================
+
+(a) the asserted identity  -4 e^{u/2}e^{v/2}cos(g(u-v)) = -2[phi5(u)phi6(v)+phi6(u)phi5(v)]
+         u      v  gamma                LHS                RHS     rel.diff
+       0.3    0.7    2.0      -4.5947006846      -2.9983560180   3.4743e-01
+       1.1    0.2    5.0       1.6151518416      -0.8241422406   1.5103e+00
+       0.5    0.5    3.7      -6.5948850828       1.7471042310   1.2649e+00
+    -> worst relative difference 1.510e+00  => identity is FALSE
+
+(b) standard identity: cos(g(u-v)) = cos(gu)cos(gv) + sin(gu)sin(gv)
+    worst relative difference 4.084e-41  => identity is TRUE (diagonal in the cos/sin basis)
+    => each of the two sectors contributes its own negative direction, so the block is
+       -2 I_2 (two negatives) and not -2 sigma_x (one negative, since sigma_x has eigenvalues +-1).
+
+(c) inertia of the Gram matrix in the six-dimensional model space
+    basis: e^{(1/2+-delta)u} cos(gu), e^{u/2} cos(gu), and the same three with sin(gu)
+    (see the analytic derivation in the text below; the 3x3 sector block is 2I - 4*ones)
+    eigenvalues of 2I - 4*ones: 2 (twice, on the orthogonal complement of (1,1,1))
+    and 2 - 12 = -10 (once). So each sector has signature (2,1): two negatives in total.
+    => n_-(K_rho) = 2 per orbit, n_-(K_N) = 2N for N orbits.
+
+================================================================================================
+READ-OFF
+================================================================================================
+  * (a) shows the identity asserted in the documents is false as written;
+  * (b) shows the correct decomposition is diagonal in the cos/sin basis;
+  * (c) therefore gives two negative directions per orbit, matching the documents' own
+    earlier P27-G7.1 table (N=1->2, N=2->4, N=3->6) and contradicting G8.1/G8.2'/G8.4.

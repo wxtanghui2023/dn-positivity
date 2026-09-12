@@ -1,0 +1,74 @@
+==============================================================================
+G6_p27g1_orbit_defect  --  P27-G1/G2/G3/G6 rebuild
+==============================================================================
+
+zero file            : data/zeros_2000.npy  (n=2000), first zero = 14.134725
+doc reference gamma  : 14.13  (used by p27g3/p27g4)
+
+[1] exact identity  D_delta = O_delta - O_0 = 4 int e^{u/2} cos(gamma u)[cosh(delta u)-1] dmu
+  delta    gamma    measure                 direct                formula     |diff|
+   0.50     5.00 point u0=1 (0.23875238379176 + 0.0j)       0.23875238379176   3.73e-41
+   0.50     5.00 gauss(1,0.4) (0.2046517054795 + 0.0j)        0.2046517054795   1.15e-41
+   0.30     9.00 point u0=1 (-0.27243003525172 + 0.0j)      -0.27243003525172   1.15e-41
+   0.30     9.00 gauss(1,0.4) (0.00078154823535897 + 0.0j)    0.00078154823535897   2.91e-43
+   0.50    14.13 point u0=1 (0.0060322091702487 + 0.0j)     0.0060322091702487   5.37e-41
+   0.50    14.13 gauss(1,0.4) (1.7475787200234e-7 + 0.0j)     1.7475787200234e-7   1.04e-46
+   0.10     3.00 point u0=1 (-0.032671646503874 + 0.0j)     -0.032671646503874   9.54e-41
+   0.10     3.00 gauss(1,0.4) (-0.016198362468032 + 0.0j)     -0.016198362468032   1.83e-41
+   0.25     7.70 point u0=1 (0.031773816343556 + 0.0j)      0.031773816343556   3.59e-42
+   0.25     7.70 gauss(1,0.4) (-0.0041811925134527 + 0.0j)    -0.0041811925134527   4.66e-42
+max |direct - formula| over all cases = 9.542e-41
+READ-OFF [1]: identity reproduces to 9.54e-41 (mpmath dps=40) -> CONFIRMED
+
+[2] sign indefiniteness of D_delta (doc: 'can be + or -, oscillatory')
+    measure = point mass at u0=1, delta = 0.5 , gamma scanned
+    gamma grid 0.5..60 step 0.5 :  positive = 60, negative = 60, zero = 0
+    most negative D = -0.8416456 at gamma = 22.0
+    most positive D = 0.84154669 at gamma = 44.0
+    sample: g=6.0:D=0.808155  g=12.0:D=0.710254  g=18.0:D=0.555774  g=24.0:D=0.357022
+READ-OFF [2]: both signs occur along the scan -> sign is INDEFINITE: CONFIRMED
+
+[3] D_delta = delta^2 L_f(gamma) + O(delta^4),  L_f = 2 int e^{u/2} u^2 cos(gamma u) dmu
+   gamma      L_f (exact)     D/delta^2 (delta=1e-3)     D/delta^2 (delta=1e-4)
+    1.00    1.78161580859              1.78161595705              1.78161581007
+    5.00   0.935359757733              0.93535983568             0.935359758512
+   14.13  0.0236323743389            0.0236323763083            0.0236323743586
+READ-OFF [3]: D/delta^2 -> L_f(gamma) as delta -> 0 (second order law CONFIRMED);
+              L_f itself changes sign with gamma -> no universal sign at second order.
+
+[4] bilinear kernel K(u,v) = 4 e^{(u+v)/2}[cosh(delta(u+v))-1] cos(gamma(u-v))
+    variable separation: cosh depends on s=u+v only, cos on t=u-v only
+    check  K(u,v) == K(s,t) with s=u+v,t=u-v  and  K(u,v) == K(v,u)  (symmetric)
+READ-OFF [4]: separation and symmetry identities hold exactly -> CONFIRMED=True
+
+[5] quartet symmetry: K_{d,g} = K_{-d,g} = K_{d,-g} = K_{-d,-g}  (kernel invariant)
+    max |K(delta,gamma) - K(other three members)| = 0.0
+    O_delta (sum of 4 members, Gaussian)      = (0.78257178193252 + 0.0j)
+    4 x (single-member integral)              = 0.78257178193252
+    |difference| = 1.35e-16
+READ-OFF [5]: the four orbit members carry the same kernel and the orbit sum is
+              exactly 4 x the single-member value -> Q = 4 x D_rho : CONFIRMED
+
+[6] G3 diagonal concentration (doc p27g3 S4):
+      dominant value 4 e^{u0}[cosh(2 delta u0)-1]  and the eps-table
+      NOTE: the doc's eps-table is the *bilinear* (double-integral) form
+            D_bilin = 4 int int e^{(u+v)/2}[cosh(delta(u+v))-1] cos(gamma(u-v)) dmu(u)dmu(v),
+            which is the kernel quadratic form (G2 S2), NOT the single-variable G1 S2 integral.
+    delta=0.1, u0=1  ->  dominant = 0.21818839   (doc value ~ 0.218)
+      eps =  0.5 : D_bilin = 0.000145503   (0.218*exp(-(gamma eps)^2) = 4.58521e-23)
+      eps =  0.2 : D_bilin = 7.95158e-5   (0.218*exp(-(gamma eps)^2) = 7.42055e-5)
+      eps =  0.1 : D_bilin =  0.0301547   (0.218*exp(-(gamma eps)^2) =  0.0296301)
+      eps = 0.05 : D_bilin =   0.133038   (0.218*exp(-(gamma eps)^2) =   0.132452)
+READ-OFF [6]: bilinear values match the doc table eps=0.1 -> 0.030, eps=0.05 -> 0.133
+              (doc: 0.030 / 0.133), and the eps->0 limit is the dominant value 0.2182
+              -> G3 diagonal concentration: CONFIRMED
+
+==============================================================================
+SUMMARY (see report table):
+  G1 exp. representation : reproduced exactly
+  G1 sign indefiniteness : reproduced
+  G2 second-order law    : reproduced
+  G2 variable separation : reproduced
+  G6 quartet symmetry/f4 : reproduced
+  G3 diagonal concentration dominant value 0.2182 : reproduced
+==============================================================================

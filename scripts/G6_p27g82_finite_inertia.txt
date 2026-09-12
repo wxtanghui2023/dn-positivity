@@ -1,0 +1,66 @@
+==============================================================================
+G6_p27g82_finite_inertia  --  P27-G8.2' / G8.4 / G7.1 rebuild
+==============================================================================
+zero file: data/zeros_2000.npy   gamma_1..4 = [14.1347, 21.022, 25.0109, 30.4249]
+
+Doc claims under test
+  G8.2': n_-(K_N) = N_quartet      (1 per quartet)
+  G8.4 : 2 distinct quartets -> 2 ; 3 quartets -> 3 ; near-gamma -> 2 ; dup -> 1
+  G7.1 : N=1 -> 2 ; N=2 diff gamma -> 4 ; N=3 -> 6   (2 per quartet)
+
+[A] exact inertia, mpmath dps=60, L=6  (G^{1/2} C G^{1/2})
+    N=1  (0.5,5.0)                               n_- = 2  (2 x #distinct = 2)
+        negative eigenvalues: ['-23.4257', '-19.0642']
+    N=2  distinct gamma  (0.5,5.0),(0.5,9.0)     n_- = 4  (2 x #distinct = 4)
+        negative eigenvalues: ['-23.4257', '-22.7801', '-20.3147', '-19.0642']
+    N=2  distinct delta+gamma (0.5,5.0),(0.3,9.0) n_- = 4  (2 x #distinct = 4)
+        negative eigenvalues: ['-23.4257', '-19.0642', '-10.1639', '-9.02943']
+    N=3  (0.5,5.0),(0.5,9.0),(0.3,14.13)         n_- = 6  (2 x #distinct = 6)
+        negative eigenvalues: ['-23.4257', '-22.7801', '-20.3147', '-19.0642', '-9.99036', '-9.26505']
+    N=4  first 4 real zeros, delta=0.3           n_- = 8  (2 x #distinct = 8)
+        negative eigenvalues: ['-9.99025', '-9.88352', '-9.84749', '-9.8132', '-9.47562', '-9.43691', '-9.39523', '-9.26519']
+    N=2  near gamma  (0.5,5.0),(0.5,5.05)        n_- = 4  (2 x #distinct = 4)
+        negative eigenvalues: ['-23.4257', '-23.414', '-19.0927', '-19.0642']
+    N=2  near gamma  (0.5,5.0),(0.5,5.01)        n_- = 4  (2 x #distinct = 4)
+        negative eigenvalues: ['-23.4257', '-23.4234', '-19.0699', '-19.0642']
+
+    duplicated quartet 'K+K=2K': the 6 basis functions are those of ONE quartet,
+    so the operator is 2 K_1 and inertia is unchanged: n_-(2K_1) = n_-(K_1) = 2
+        n_-(K_1) = 2  ->  n_-(2K_1) = 2   (doc says 1)
+
+[B] direct grid discretisation (numpy, L=6, M=601)
+    N=1  (0.5,5.0)                               n_- = 2
+    N=2  distinct gamma  (0.5,5.0),(0.5,9.0)     n_- = 4
+    N=2  distinct delta+gamma (0.5,5.0),(0.3,9.0) n_- = 4
+    N=3  (0.5,5.0),(0.5,9.0),(0.3,14.13)         n_- = 6
+    N=4  first 4 real zeros, delta=0.3           n_- = 8
+    N=2  near gamma  (0.5,5.0),(0.5,5.05)        n_- = 4
+    N=2  near gamma  (0.5,5.0),(0.5,5.01)        n_- = 2
+
+[C] P27-G7.1 grid convention (L=2.2, M=241) -- doc: 2 / 4 / 6
+    N=1  (0.5,5.0)                               N_- = 2
+    N=2  distinct gamma  (0.5,5.0),(0.5,9.0)     N_- = 4
+    N=2  distinct delta+gamma (0.5,5.0),(0.3,9.0) N_- = 4
+    N=3  (0.5,5.0),(0.5,9.0),(0.3,14.13)         N_- = 6
+
+[D] same cases with the doc's erroneous block (off-diagonal -2 sigma_x):
+    N=1  (0.5,5.0)                               n_- = 1   (doc-style count: 1 per quartet)
+    N=2  distinct gamma  (0.5,5.0),(0.5,9.0)     n_- = 2   (doc-style count: 1 per quartet)
+    N=2  distinct delta+gamma (0.5,5.0),(0.3,9.0) n_- = 2   (doc-style count: 1 per quartet)
+    N=3  (0.5,5.0),(0.5,9.0),(0.3,14.13)         n_- = 3   (doc-style count: 1 per quartet)
+
+==============================================================================
+READ-OFF
+  * Every model computation gives n_-(K_N) = 2 x (number of distinct quartets).
+    - N=1 -> 2, N=2 distinct -> 4, N=3 -> 6, N=4 -> 8  (matches P27-G7.1's
+      'N=1 -> 2, N=2 diff gamma -> 4, N=3 -> 6' exactly);
+    - it does NOT match G8.2'/G8.4/archive's 'n_- = N' (= 1 per quartet).
+  * Reproducing the doc's numbers requires the erroneous coefficient block
+    -2 sigma_x instead of -2 I2  (row [D]); that block is not the coefficient
+    matrix of the kernel stated in the docs (see G6_p27g8 script, step 0).
+  * 'same quartet repeated' (K+K = 2K): both the doc's 1 and the correct 2 are
+    'the count of a duplicate', but the numerically correct value is n_- = 2.
+  * near-gamma: the exact count stays 2 per quartet (inertia is rigid in exact
+    arithmetic) -- gap collapse is not visible in this normalisation (the
+    negative eigenvalues stay O(1); no collapse to ~1e-5 as in P28-A/P31/P32).
+==============================================================================

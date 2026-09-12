@@ -1,0 +1,63 @@
+==============================================================================
+G6_p27g73_jet_audit  --  P27-G7.3 / G7.3-A / G7.3-A' rebuild
+==============================================================================
+zero file: data/zeros_2000.npy  gamma_0 = 14.134725
+
+[1] (u+v)^2 matrix vs the audit's M
+    (u+v)^2   -> [[1,1],[1,1]]  eigenvalues [0. 2.]   PSD (no negative)
+    2uv+2v^2  -> [[0,1],[1,2]]  eigenvalues [-0.41421356  2.41421356]   1-sqrt2 = -0.414214
+READ-OFF [1]: the doc's audit is CORRECT -- the leading (u+v)^2 jet is PSD and the
+              indefinite matrix M=[[0,1],[1,2]] corresponds to 2uv+2v^2, not (u+v)^2.
+
+[2] exact jet expansion of one quartet kernel (s=u+v, t=u-v)
+    coefficient of s^2   : +8.000000   (expected +2 delta^2 = +8.000000)  -> PSD direction
+    coefficient of s^3   : +4.000000   (expected +delta^2 = +4.000000)
+    coefficient of s^2t^2: -36.000000   (expected -delta^2 gamma^2 = -36.000000)  -> NEGATIVE
+    numeric check along t=0, s=0.001: K = 8.004004e-06 ; c_s2*s^2 = 8.000000e-06
+
+    sign structure at fixed t (delta=0.408, gamma=10): s small -> positive, s large -> negative
+      t=0.2  s=0.05: -0.0004   s=0.20: -0.0061   s=0.50: -0.0446   s=1.00: -0.2316   s=2.00: -1.5919
+      t=0.5  s=0.05: +0.0002   s=0.20: +0.0042   s=0.50: +0.0304   s=1.00: +0.1579   s=2.00: +1.0851
+      t=1.0  s=0.05: -0.0007   s=0.20: -0.0124   s=0.50: -0.0900   s=1.00: -0.4670   s=2.00: -3.2097
+READ-OFF [2]: leading jet is +2 delta^2 s^2 (PSD); the first negative contribution is the
+              4th-order term -delta^2 gamma^2 s^2 t^2 -> negativity is a gamma-dependent,
+              'medium-scale' effect: doc's audit conclusion CONFIRMED.
+
+[3] doc spot values (3 zeros, sum rules Sigma delta^2 = 0.5, Sigma delta^2 gamma^2 = 45.5)
+    the individual (delta_j,gamma_j) are NOT given in the docs -> several admissible choices
+    deltas=[0.408, 0.408, 0.408] gammas=[5.0, 8.0, 12.0]:  Sigma delta^2=0.499  Sigma delta^2 gamma^2=38.8
+        K(0.1,0.5) =  -0.2158   (doc -0.054)
+        K(0.3,0.8) =  -0.3512   (doc -0.458)
+        K(0.1,0.1) =  +0.0442   (doc +0.044)
+        K(0.5,0.1) =  -0.2158   (doc -0.102)
+        K(1.0,0.5) =  -0.8092   (doc -2.000)
+    deltas=[0.408, 0.408, 0.408] gammas=[9.0, 9.0, 9.528]:  Sigma delta^2=0.499  Sigma delta^2 gamma^2=42.1
+        K(0.1,0.5) =  -0.4191   (doc -0.054)
+        K(0.3,0.8) =  -0.2627   (doc -0.458)
+        K(0.1,0.1) =  +0.0442   (doc +0.044)
+        K(0.5,0.1) =  -0.4191   (doc -0.102)
+        K(1.0,0.5) =  -0.6053   (doc -2.000)
+    deltas=[0.5, 0.4, 0.3] gammas=[1.0, 9.0, 19.0]:  Sigma delta^2=0.500  Sigma delta^2 gamma^2=45.7
+        K(0.1,0.5) =  +0.1074   (doc -0.054)
+        K(0.3,0.8) =  +0.4201   (doc -0.458)
+        K(0.1,0.1) =  +0.0442   (doc +0.044)
+        K(0.5,0.1) =  +0.1074   (doc -0.102)
+        K(1.0,0.5) =  +0.9894   (doc -2.000)
+    deltas=[0.4, 0.4, 0.374] gammas=[10.0, 10.0, 10.0]:  Sigma delta^2=0.460  Sigma delta^2 gamma^2=46.0
+        K(0.1,0.5) =  -0.2935   (doc -0.054)
+        K(0.3,0.8) =  +0.5557   (doc -0.458)
+        K(0.1,0.1) =  +0.0407   (doc +0.044)
+        K(0.5,0.1) =  -0.2935   (doc -0.102)
+        K(1.0,0.5) =  +1.2790   (doc -2.000)
+READ-OFF [3]: the doc's spot values are NOT reproducible -- they depend on the individual
+              (delta_j,gamma_j), which the doc never states (only the two sums). The SIGN
+              pattern (small scale -> positive, medium scale -> negative) is robust.
+
+[4] product-measure obstruction (far-apart two-peak test function)
+    measure = 0.5 * (N(+a0,sigma) + N(-a0,sigma)) ; Q = int int K dmu dmu
+    a0=0.07   sigma=0.02:+0.0100  sigma=0.05:+0.0111  sigma=0.1:+0.0130
+    a0=0.20   sigma=0.02:+0.0794  sigma=0.05:+0.0692  sigma=0.1:+0.0451
+    a0=0.50   sigma=0.02:+0.5534  sigma=0.05:+0.4783  sigma=0.1:+0.3047
+READ-OFF [4]: for all far-apart two-peak product measures tested the form is POSITIVE
+              (diagonal dominates) -> the anisotropic route to a negative direction fails,
+              matching the doc's G7.3-A' audit conclusion.

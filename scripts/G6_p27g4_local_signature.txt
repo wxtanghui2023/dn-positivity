@@ -1,0 +1,55 @@
+==============================================================================
+G6_p27g4_local_signature  --  P27-G4 / G4' / G5 / G5-A/B/C rebuild
+==============================================================================
+zero file: data/zeros_2000.npy   gamma_0 = 14.134725  (doc uses 14.13)
+
+[G4] 2x2 Gram table  (delta=0.5, gamma=5.0, sigma=0.4)
+           (u1,s1)            (u2,s2)         A          B         C     Q_min   sqrt(AC)        det
+        (1.0, 0.4)         (1.5, 0.4)    0.1470    -0.2357    0.5583    0.2340     0.2865    0.02652
+              doc:                        0.147     -0.236     0.558     0.234
+        (1.0, 0.4)         (0.5, 0.4)    0.1470    -0.0544    0.0278    0.0660     0.0639    0.00113
+              doc:                        0.147     -0.054     0.028     0.066
+        (1.0, 0.4)         (2.0, 0.4)    0.1470     0.1584    1.8202    1.6505     0.5173    0.24248
+              doc:                        0.147      0.158     1.820     1.650
+        (0.5, 0.4)         (1.5, 0.4)    0.0278     0.0417    0.5583    0.5027     0.1245    0.01376
+              doc:                        0.028      0.042     0.558     0.503
+READ-OFF [G4]: every A,B,C,Q_min reproduces the doc table; |B| <= sqrt(AC) always,
+              det G >= 0, Q_min >= 0 -> 2x2 self-form is PSD (G4-A 'fails'): CONFIRMED
+
+[G4'] c2(u;delta,gamma) = [cosh(2 delta u)-1](gamma^2[cosh(2 delta u)-1] - delta^2)
+     threshold: gamma^2 = delta^2/(cosh(2 delta u)-1)  ->  u* = 0.141304  (doc 0.141)
+     1/(sqrt2 gamma) = 0.141421
+      u    c2 (computed)     c2 (doc)     sign
+   0.05        -0.000273      -0.0003     c2<0
+   0.10        -0.000625      -0.0006     c2<0
+   0.14        -0.000045      -0.0000     c2<0
+   0.20         0.005050       0.0051     c2>0
+   0.50         0.375303       0.3753     c2>0
+   1.00         7.237644       7.2376     c2>0
+READ-OFF [G4']: c2 table reproduces the doc values to ~1e-4; sign flips exactly at u*: CONFIRMED
+
+[G5-B] witness at delta=0.5, gamma=5.0, u=0.1, eps=0.05, sigma=0.02
+    A=0.02243 (doc 0.0224)  B=0.03456 (doc 0.0346)  C=0.05247 (doc 0.0525)
+    lambda_- = -2.354e-04 (doc -2.35e-4)   lambda_+ = 7.514e-02 (doc 7.51e-2)
+READ-OFF [G5-B]: exact reproduction -> admissible f realises a NEGATIVE local direction: CONFIRMED
+
+[G5-A] lambda_-(2x2, eps=0.05) vs u  (doc table w/o sigma given; sigma=0.02 assumed)
+      u   lambda_- (sigma=.02)   lambda_- (doc)   eta=-l/(A+C)
+   0.01             -3.646e-04        -1.30e-04         0.0421
+   0.05             -6.857e-04        -1.80e-04         0.0244
+   0.10             -2.354e-04        -6.40e-05         0.0031
+   0.14              5.334e-04         1.10e-04            nan
+   0.30              7.280e-03         1.30e-03            nan
+READ-OFF [G5-A]: the SIGN pattern (neg for small u, positive for u >= 0.14) reproduces;
+              magnitudes are ~3-5x larger than the doc table and eta differs -> doc table
+              NOT reproduced (its sigma/normalisation is not stated).
+
+[G5-C] negative bandwidth (point-kernel A,B,C: cosh(2 delta tau)-1 etc.)
+    A=0.005004 B=0.007823 C=0.011271
+    threshold = 0.9602   (doc 0.960)
+    Delta_gamma_- = arccos(threshold)/eps = 5.663   (doc 5.66)
+    period 2 pi/eps = 125.66   (doc 125.7)
+    zero spacing 2 pi/log(gamma0) = 2.373   (doc 2.37) ; ratio = 2.39   (doc 2.4)
+    same using data/zeros_2000.npy gamma0: 2.372
+READ-OFF [G5-C]: threshold 0.960, bandwidth 5.6, ratio ~2.4 all reproduce: CONFIRMED
+              (negative bandwidth >> zero spacing -> single-zero isolation impossible)

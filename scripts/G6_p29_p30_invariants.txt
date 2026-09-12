@@ -1,0 +1,52 @@
+==============================================================================
+G6_p29_p30_invariants  --  P29 / P30 rebuild
+==============================================================================
+zero file: data/zeros_2000.npy   gamma_0 = 14.134725
+
+[1] invariants of K = [[1,-c],[-c,1]], c = 1+eps  (mpmath dps=50)
+       eps       lambda_-        q_M        q_H      q_cross          Gamma            r        Delta   |lam|/sqrtq    Gam/2
+         1           -1.0        0.5        0.5         -2.0            4.0          1.0          2.0           2.0      2.0
+      1e-1           -0.1        0.5        0.5         -1.1            2.2          1.0          0.2           0.2      1.1
+      1e-2          -0.01        0.5        0.5        -1.01           2.02          1.0         0.02          0.02     1.01
+      1e-3         -0.001        0.5        0.5       -1.001          2.002          1.0        0.002         0.002    1.001
+      1e-6        -1.0e-6        0.5        0.5         -1.0       2.000002          1.0       2.0e-6        2.0e-6 1.000001
+     1e-13       -1.0e-13        0.5        0.5         -1.0            2.0          1.0      2.0e-13       2.0e-13      1.0
+READ-OFF [1]: q_M = q_H = 1/2 exactly; q_cross = -c < 0; Gamma = 2(1+eps) -> 2^+ ;
+              r = 1 exactly; Delta = Gamma-(r+1/r) = |lambda|/sqrt(q_M q_H) = 2 eps.
+              P29's 'Gamma = 2 (to 1e-12)' is the eps -> 0 (critical) limit: CONFIRMED.
+              P30-A's 'deep directions have Gamma > 2' corresponds to eps > 0: CONFIRMED.
+
+[2] P30-C identity  Delta_j = |lambda_j| ||x_j||^2 / sqrt(q_M q_H)
+    max |Delta - |lambda|/sqrt(q_M q_H)| over eps grid = 5.35e-51
+READ-OFF [2]: identity holds exactly (with ||x||_G = 1) -> CONFIRMED
+
+[3] P30-D: c = Gamma/(2 eta)  ->  eta*c = Gamma/2  (tautology)
+    eta=1.0: eta*c = 1.001   Gamma/2 = 1.001   (equal by definition)
+    eta=1.02: eta*c = 1.001   Gamma/2 = 1.001   (equal by definition)
+    eta=1.2: eta*c = 1.001   Gamma/2 = 1.001   (equal by definition)
+READ-OFF [3]: 'eta c -> 1' carries no independent information: CONFIRMED (tautological)
+
+[4] the P28-E mechanism 'negative inertia from the CROSS term' in the two models
+    (a) 2x2 block model: block diagonal entries q_M = q_H = 1/2 > 0 and q_cross = -c < 0
+        -> mechanism statement TRUE in this model.
+    (b) 6-dim quartet kernel K_rho (delta=0.5, gamma=5.0, exact Gram, L=6):
+        a single quartet block is itself indefinite (n_- = 2, see G6_p27g8 script),
+        so the 'no fixed block is negative' statement is FALSE for the kernel model.
+        (this is the same 'block vs quartet' mismatch that produces the factor-2
+         inertia discrepancy documented in the G6_p27g8 / G6_p27g82 scripts)
+
+[5] NOT reproduced (documented for the report)
+    * P28-A  separated-gamma table (n_- = N, lambda_- = -0.031 ... -0.053,
+      lambda_min(H) ~ 0.67-0.79, cond(G) ~ 1e4): these numbers depend on an
+      inner-product normalisation the doc never fixes; the counts inherit the
+      factor-2 error above.
+    * P28-E  q_M >= 0 / q_H >= 0 for the 6-dim kernel model: not reproducible
+      (each quartet block is itself indefinite).
+    * P29    q_cross = -2.248697e6 = -2 q_M 'exactly' with q_M ~ 1e6: the doc's
+      absolute scale is model-specific; only the RATIO Gamma = 2 reproduces (row [1]).
+    * P30-A  Gamma_1 = 2.00112, Gamma_2 = 2.00267: reproduced only as Gamma = 2(1+eps)
+      with eps ~ 5.6e-4 / 1.3e-3; the doc does not state eps, so the absolute values
+      are model-dependent (the LIMIT Gamma -> 2^+ is reproduced).
+    * P31/P32 D_lambda0 = 1 (and 2) constant in N, sigma_max ~ 0.99: model-specific;
+      not reproducible from the stated kernel without the doc's (self-flagged buggy
+      'seigh') normalisation.

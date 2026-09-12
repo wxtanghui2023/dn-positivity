@@ -1,0 +1,56 @@
+==============================================================================
+G6_p27g8_single_orbit_inertia  --  P27-G8.1 / P27-G7.1 rebuild
+==============================================================================
+zero file: data/zeros_2000.npy   gamma_1 = 14.134725  (doc point (0.5,14.1))
+
+[0] pointwise factorisation of the kernel on 6 basis functions
+    K(u,v) ?= 4 sum_{i<=4} B_i(u)B_i(v) - 4 (B5(u)B5(v)+B6(u)B6(v))
+    max |K - factorisation| = 1.421e-13   (K scale 219.4)
+    -> the coefficient matrix in this basis IS C = diag(1,1,1,1,-1,-1); CONFIRMED
+    doc identity  -4..cos(gamma(u-v)) = -2[phi5(u)phi6(v)+phi6(u)phi5(v)]:
+      max |lhs - rhs| = 7.721e+01  vs |lhs| ~ 45.4  -> FAILS
+      rhs actually equals -8 e^{(u+v)/2} sin(gamma(u+v)) (err 1.4e-14)
+      => the doc's block must be -2 I2 (diagonal), not -2 sigma_x (off-diagonal).
+
+[1] inertia of the coefficient matrices (exact, integer algebra)
+    C = I4 (+) (-I2)  [derived above]      eigenvalues (1,1,1,1,-1,-1)   n_- = 2   inertia (4,2,0)
+    C = I4 (+) (-2 sigma_x)  [doc G8.1]    eigenvalues ['-2.0', '1.0', '1.0', '1.0', '1.0', '2.0']   n_- = 1   inertia (5,1,0)
+
+[2] high-precision inertia via exact Gram  (mpmath dps=50, L=6)
+    (G^{1/2} C G^{1/2}; correct C vs doc C)
+    (0.5,5.0)                    correct C: inertia=(4,2,0)  n_-=2   |   doc-style(off-diag -2sx): n_-=1
+        correct-C eigenvalues: ['-23.4257', '-19.0642', '1.54759', '1.5999', '16193.3', '24137.3']
+    (0.3,9.0)                    correct C: inertia=(4,2,0)  n_-=2   |   doc-style(off-diag -2sx): n_-=1
+        correct-C eigenvalues: ['-10.1639', '-9.02943', '0.479033', '0.499157', '1927.44', '2315.01']
+    (0.5,14.1)  [=doc (0.5,14.1)] correct C: inertia=(4,2,0)  n_-=2   |   doc-style(off-diag -2sx): n_-=1
+        correct-C eigenvalues: ['-22.4177', '-20.8408', '1.57637', '1.58087', '18735.8', '21595.5']
+    (0.1,3.0)                    correct C: inertia=(4,2,0)  n_-=2   |   doc-style(off-diag -2sx): n_-=1
+        correct-C eigenvalues: ['-1.38879', '-0.962367', '0.052398', '0.0621898', '89.6307', '143.214']
+
+[3] direct grid discretisation of K(u,v) (numpy, L=6, M=601)
+    (rank-6 kernel: only 6 eigenvalues are non-zero)
+    (0.5,5.0)                    n_- = 2   6 largest |eig|: [0.123887, 0.128612, 1.540455, 1.893446, 1321.137381, 1970.558642]
+    (0.3,9.0)                    n_- = 2   6 largest |eig|: [0.038451, 0.040093, 0.72976, 0.821937, 156.672493, 188.357379]
+    (0.5,14.1)  [=doc (0.5,14.1)] n_- = 2   6 largest |eig|: [0.126225, 0.127057, 1.683438, 1.812562, 1527.613685, 1764.143653]
+    (0.1,3.0)                    n_- = 2   6 largest |eig|: [0.004213, 0.005, 0.07783, 0.112324, 7.272046, 11.620398]
+
+[4] P27-G7.1 grid convention  (L^2([-2.2,2.2]), M=241) -- doc: N=1 -> N_- = 2
+    (0.5,5.0)                    N_- = 2   most negative: [-0.017744, -0.013202, -0.0]
+    (0.3,9.0)                    N_- = 2   most negative: [-0.006436, -0.00538, -0.0]
+    (0.5,14.1)  [=doc (0.5,14.1)] N_- = 2   most negative: [-0.016786, -0.01516, -0.0]
+    (0.1,3.0)                    N_- = 2   most negative: [-0.000789, -0.000434, -0.0]
+
+==============================================================================
+READ-OFF
+  * The doc's C = I4 (+) (-2 sigma_x) is NOT the coefficient matrix of the stated
+    kernel: the identity it rests on fails by O(1) (step 0), and the correct
+    matrix is C = diag(1,1,1,1,-1,-1) with inertia (4,2,0).
+  * Consequence: n_-(K_rho) = 2 for a single off-line quartet (not 1).
+  * This AGREES with the doc's own independent grid computation in P27-G7.1
+    (N=1 -> N_- = 2, table reproduced in step 4), and DISAGREES with G8.1's
+    n_- = 1 / G8.4 / the P28-P33 archive's 'n_-(K_N) = N' (which is off by the
+    same factor 2 throughout: the true count is 2 per distinct quartet).
+  * The doc's own 6x6 numeric table ([18.6, 0.5, ... , -15.2] etc.) is NOT
+    reproducible: the docs never fix the integration interval/weighting, and the
+    table is consistent with the erroneous off-diagonal block (1 negative).
+==============================================================================

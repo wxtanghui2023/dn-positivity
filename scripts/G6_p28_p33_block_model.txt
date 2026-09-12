@@ -1,0 +1,42 @@
+==============================================================================
+G6_p28_p33_block_model  --  P28-P33 'Moving-Edge Obstruction' standard model
+==============================================================================
+K_j = [[1, -(1+eps_j)], [-(1+eps_j), 1]]  ->  eigenvalues -eps_j  and  2+eps_j
+
+[0] single-block eigenvalues (exact)
+    eps=1.0    eigenvalues = [-1.0, 3.0]   (=-eps, 2+eps = -1.0, 3.0)
+    eps=0.5    eigenvalues = [-0.5, 2.5]   (=-eps, 2+eps = -0.5, 2.5)
+    eps=0.1    eigenvalues = [-0.1, 2.1]   (=-eps, 2+eps = -0.1, 2.1)
+    eps=0.01   eigenvalues = [-0.01, 2.01]   (=-eps, 2+eps = -0.01, 2.01)
+
+[1] doc table p33b [1]: eps_j = 1/j  (infinite supercritical regime)
+    N    n_-   D_0.1    lambda_edge       -1/N   P_low>=0   P_high>=0
+    5      5       5      -0.200000  -0.200000        YES         YES
+   20     20      10      -0.050000  -0.050000        YES         YES
+   50     50      10      -0.020000  -0.020000        YES         YES
+    doc p33b [1]: N=5 -> 5 / 5 / -0.2 ;  N=20 -> 20 / 10 / -0.05 ;  N=50 -> 50 / 10 / -0.02
+READ-OFF [1]: n_- = N, D_0.1 = min(N,10), lambda_edge = -1/N -> 0^- : REPRODUCED exactly
+
+[2] doc table p33b [2]: eps_j = 1/j for j<=5, else 0  (finite regime)
+    N= 10:  n_- = 5   D_0.1 = 5   lambda_edge = -0.200000
+    N= 20:  n_- = 5   D_0.1 = 5   lambda_edge = -0.200000
+    N= 50:  n_- = 5   D_0.1 = 5   lambda_edge = -0.200000
+READ-OFF [2]: n_- converges to 5 and STOPS growing -> finite negative index: REPRODUCED
+
+[3] doc p33 'counterexample A': K_N = -diag(1/j)
+    N    n_-   D_0.1    inf(-q)/||x||^2
+    5      5       5          -0.200000
+   20     20      10          -0.050000
+   50     50      10          -0.020000
+READ-OFF [3]: n_- = N exactly and the uniform negative margin of the tail tends to 0:
+              REPRODUCED (this counterexample violates 'block non-negative' -- the doc
+              acknowledges this; the block model [1]/[2] does not).
+
+[4] 'infinite negative index  <->  uniform negative margin' are independent
+    eps_j=1/j, N=50:  n_- = 50 (extensive),  max(neg) = -0.02000000 (edge -> 0^-)
+    inf over the unit sphere of -<Kx,x> = 1.00000000  (attained by the j=1 direction)
+    but the inf over the EDGE directions j -> infty is 0 (1/j -> 0)
+READ-OFF [4]: n_-(K_N) = N -> oo coexists with zero uniform margin on the edge:
+              REPRODUCED.  This is the P33 'moving-edge obstruction' in its cleanest form.
+              NOTE: this model is a 2x2-block *standard* model; it is NOT the actual
+              arithmetic K_off of the kernel model of P27 (different object).
