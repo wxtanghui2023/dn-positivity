@@ -57,3 +57,24 @@
 【✅ 本勘误的复核脚本】`G6_verify_inertia_factor2.py` ✓（父方独立 ✓ 不依赖子代理 ✓）
 【⭐ 结论】**"重建旧脚本"不再是形式工作** ✓ —— 它**实际发现并定位了归档中的一处数学错误** ✓✓
 ```
+
+---
+
+## ✅ **§6 勘误的开放项【已解决】（2026-09-12 10:10，E12 精读 ✓✓）**
+```
+【§4 的开放项 ✓】"A3 对齐称我方 n₋ 重现 Bombieri 的观察（每对 1 个）—— 与正确值 2 冲突 ✓ 须重核 orbit↔pair" ✓
+【✅ 已核实解决（原文级 ✓）】Bombieri [Bom00] 的陈述（已自 bdim.eu 取原文 ✓）：
+   · **Theorem 8**："**The number of negative eigenvalues of the matrix H(Γ;t) equals the number of
+     distinct complex conjugate pairs (γ;γ̄) in Γ**" ✓
+   · **摘要（决定性校准 ✓）**："…the number of negative eigenvalues is **precisely one-half of the
+     number of zeros failing to satisfy** the Riemann Hypothesis…" ✓✓
+⟹ ⭐ **一个离轴 orbit = 4 个零点 = 2 个共轭对** ✓ ⟹ 由摘要的"**一半**"（4 → **2** ✓）
+   与 Thm 8 的"**对**"（2 对 ✓）**两者一致** ✓✓
+⟹ ⭐⭐ **结论：Bombieri 的观察 = 每个共轭对 1 个负方向 = 【每个 orbit 2 个】** ✓✓
+   —— **与本勘误的正确值 2【完全一致】** ✓✓ ⟹ **本勘误的开放担忧【在其自身方向上解决】** ✓✓
+【⭐⭐ 根因确认】文档原先的 "n₋(K_ρ)=1（每 orbit）" ✗ 是**配对错误** ✓：
+   **"一个 pair ≠ 一个 orbit"** ✓ —— 这是**对我方原始表述的最终更正** ✓✓
+【⚠️ 剩余（未决 ✓）】**归一化匹配**：我方在**与 Bombieri H(Γ;t) 同单位的归一化**（(8.14) ✓）
+   下算得的每 orbit 负指标是否 **= 2**？✗ —— 须文档化我方内积 ✓（列为待办 ✓）
+   另：他的定理对**任意对称 Γ 一致成立** ✓ 而我方 K_ρ 由 δ 构造 ⟹ 属**特例重推** ✓（非直接重现 ✓）
+```
