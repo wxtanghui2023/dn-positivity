@@ -1,0 +1,24 @@
+  grid in use: nb3_grid_H0.050_T2400.npz
+====================================================================================================
+NB4: N-dependence of d_N^2 (grid from nb3_grid_H0.050_T400.npz, 48001 points)
+====================================================================================================
+  Burnol constant C = 0.046191417932 ; prediction d_N^2 ~ C/log N
+
+      N            d_N^2      d^2*log N        C/log N d^2/(C/logN)   mu agree
+      2      0.334615982    0.231938125    0.066640130       5.0212      2/2   
+      5      0.077952998    0.125460510    0.028700342       2.7161      4/4   
+     10      0.064889326    0.149413194    0.020060678       3.2347      7/7   
+     20      0.057363666    0.171846187    0.015419074       3.7203     13/13  
+     40      0.053414460    0.197039506    0.012521802       4.2657     26/26  
+     80      0.051435260    0.225390679    0.010541108       4.8795     50/50  
+    120      0.049932997    0.239053811    0.009648355       5.1753     75/75  
+    160      0.049572395    0.251588519    0.009101446       5.4467     98/98  
+
+====================================================================================================
+READ-OFF (conclusions generated from the numbers above)
+====================================================================================================
+  * the Mobius column is the known-answer check; it must stay near 100% for the numbers
+    to mean anything.
+  * if d_N^2 decreases with N, the computed distance behaves as the criterion requires;
+    the comparison column shows how far the finite-N value still is from the asymptotic
+    constant of Burnol's lower bound, which is expected to be approached only slowly.

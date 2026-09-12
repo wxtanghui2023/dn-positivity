@@ -37,7 +37,13 @@ C = 2 + float(meuler) - float(mlog(4 * mpi))
 print("  Burnol constant C = %.12f ; prediction d_N^2 ~ C/log N" % C)
 
 # tabulate g on a fine x-grid and interpolate
-XS = np.arange(0.0, 6.0, 0.0025)
+XS = np.arange(0.0, 6.0, 0.0005)   # refined 2026-09-12 (was 0.0025) to cut interpolation error
+_SPL = None
+try:
+    from scipy.interpolate import CubicSpline as _CS
+    _SPL = True
+except Exception:
+    _SPL = False
 GS = np.array([float(np.trapz(fvals * np.cos(ts * x), ts)) / float(mpi) if x > 0
                else float(np.trapz(fvals, ts)) / float(mpi) for x in XS])
 def gI(x):

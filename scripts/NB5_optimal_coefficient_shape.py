@@ -26,12 +26,23 @@ cand = sorted(glob.glob(os.path.join(ROOT, 'data', 'nb3_grid_*.npz')))
 assert cand, "run NB3_dN_fourier_kernel.py first (it writes the cached grid)"
 c = np.load(cand[-1]); ts, fvals, zvals = c['ts'], c['fvals'], c['zvals']
 
-XS = np.arange(0.0, 6.0, 0.0025)
+XS = np.arange(0.0, 6.0, 0.0005)   # refined 2026-09-12 (was 0.0025) to cut interpolation error
+_SPL = None
+try:
+    from scipy.interpolate import CubicSpline as _CS
+    _SPL = True
+except Exception:
+    _SPL = False
 GS = np.array([float(np.trapz(fvals * np.cos(ts * x), ts)) / float(mpi) if x > 0
                else float(np.trapz(fvals, ts)) / float(mpi) for x in XS])
+if _SPL:
+    from scipy.interpolate import CubicSpline as _CS2
+    _F = _CS2(XS, GS)
+
 def gI(x):
-    r = np.interp(np.abs(np.asarray(x, float)), XS, GS)
-    return r if r.ndim else float(r)
+    xa = np.abs(np.asarray(x, float))
+    r = _F(xa) if _SPL else np.interp(xa, XS, GS)
+    return r if np.ndim(r) else float(r)
 
 N = 160
 lgn = np.log(np.arange(1, N + 1))
