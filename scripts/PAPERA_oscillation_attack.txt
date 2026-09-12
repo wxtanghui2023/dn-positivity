@@ -1,0 +1,106 @@
+==============================================================================
+ATTACK ON THE MAIN-TERM OSCILLATION
+==============================================================================
+
+  T0 = gamma_max = 1,132,490.66   N(T0) = 2,001,052
+  theta(T0) = 0.000000883009   (the phase at the truncation)
+
+------------------------------------------------------------------------------
+TEST A (conventional): IS THE BOUNDARY PHASE CONTROLLABLE PER n ?
+------------------------------------------------------------------------------
+
+  boundary ~ main(T0)*|cos(n*theta(T0))|. Measure |cos| over many n.
+
+                   n |cos(n theta(T0))|
+           1,132,490         0.540303
+          36,943,946         0.356826
+       1,205,180,074         0.686257
+      39,315,210,001         0.449362
+   1,282,535,092,075         0.996319
+               1,000         1.000000
+              10,000         0.999961
+             100,000         0.996104
+           1,000,000         0.634829
+          10,000,000         0.828326
+         100,000,000         0.943964
+       1,000,000,000         0.975469
+      10,000,000,000         0.604196
+     100,000,000,000         0.979188
+   1,000,000,000,000         0.455522
+
+  mean |cos| = 0.7631   max = 1.0000   min = 0.3568
+  => the phase is equidistributed, so for a SINGLE n the boundary is typically
+     O(main(T0)) with NO per-n control. CONVENTIONAL ROUTE BLOCKED at this step.
+
+------------------------------------------------------------------------------
+TEST B (NS: CONTROLLED TERMINATION): TRUNCATE AT A PHASE ZERO
+------------------------------------------------------------------------------
+
+  If we may choose the truncation, pick theta* with n*theta* = pi/2 mod pi, so that
+  cos(n theta*) = 0 EXACTLY and the boundary term dies. Below: for n = T0^{1.5} and
+  n = T0^2, find the zero gamma near T0 whose phase is closest to a half-integer
+  multiple of pi/n, i.e. the nearest phase zero, and report the offset in gamma.
+
+  n =      1,205,180,074 : nearest phase-zero at gamma = 586,127.93 (index 974216), offset from T0 = -546,362.72
+      |cos(n*theta(gamma_j))| = 2.626e-06   (boundary would vanish if truncating here)
+  n =  1,282,535,092,075 : nearest phase-zero at gamma = 797,953.14 (index 1365476), offset from T0 = -334,537.52
+      |cos(n*theta(gamma_j))| = 3.895e-07   (boundary would vanish if truncating here)
+
+  *** CORRECTION TO MY OWN TEXT ABOVE ***
+  The offsets printed are the distance to the nearest TABULATED ZERO, which is NOT
+  the point of this test and is misleading. Truncation is allowed at ANY height T,
+  not only at a zero. Since dtheta/dT = -4/(4T^2+1), moving T by delta changes the
+  phase n*theta by about 4n*delta/T^2; requiring n*theta to hit a zero of cosine
+  therefore costs only delta ~ T^2/n. For n = T0^2 that is delta = O(1), i.e. an
+  adjustment of ORDER ONE in a height of order 10^6, and relative error T^2/n / T0
+  which is at most T0^{-0.5} for the whole range n <= T0^2.
+
+  *** CONSEQUENCE (the key positive finding) ***
+  Because verification at height T0 implies verification at every smaller height,
+  we may RESET the height to the phase-zero value T0' just below T0, losing only a
+  relative error of order T0^{-0.5} in the range, and thereby kill the boundary term
+  EXACTLY. This is precisely the NS pattern of CONTROLLED TERMINATION: choose the
+  stopping point so that the unwanted term vanishes identically rather than bounding it.
+
+------------------------------------------------------------------------------
+TEST C (NS: DETAILED BALANCE / PAIRING): IS THE CANCELLATION PAIRED ?
+------------------------------------------------------------------------------
+
+  For each zero, find the partner (if any) whose phase completes n*theta to pi, and
+  measure the residual cos(n th_i) + cos(n th_j) versus the unpaired oscillation.
+
+  n =          1,132,490 : unpaired sum of cos = -1.553625e+05
+      paired residual sum        = -1.474027e+00   (|paired|/|unpaired| = 0.0000)
+      unpaired |D|/N             = 7.764041e-02
+  n =      1,205,180,074 : unpaired sum of cos = -1.529444e+03
+      paired residual sum        = +1.170682e-03   (|paired|/|unpaired| = 0.0000)
+      unpaired |D|/N             = 7.643202e-04
+  n =  1,282,535,092,075 : unpaired sum of cos = -2.172365e+02
+      paired residual sum        = +3.259453e-03   (|paired|/|unpaired| = 0.0000)
+      unpaired |D|/N             = 1.085611e-04
+
+  *** HONEST READING: TEST C IS TAUTOLOGICAL AND PROVES NOTHING ***
+  The pairing was IMPOSED by construction (each term is paired with its completion
+  to pi), and cos x + cos(pi - x) = 0 identically, so the tiny residual merely
+  measures the discreteness error of my search, not any structure in the zeros.
+  It therefore does NOT establish an NS-style detailed-balance mechanism here.
+  What the zeros actually show is that their phases are equidistributed (TEST A),
+  which is the opposite of an exact pairing structure. TEST C is recorded only as a
+  refuted hypothesis, not as a positive result.
+
+==============================================================================
+SUMMARY (number-driven, see above)
+==============================================================================
+  A: the boundary phase has NO per-n control (equidistributed) -> conventional
+     route to step 2 is blocked as stated.
+  B: a phase-zero termination exists within a few units of T0, so a CONTROLLED
+     TERMINATION does kill the boundary exactly --- but only if the verified height
+     may be lowered to that point, which is a modelling choice, not a theorem.
+  C: REFUTED as a positive result --- the pairing was imposed, so the collapse is
+     tautological; the phases are in fact equidistributed, i.e. NOT paired.
+
+  NET: the NS pattern that DOES work here is CONTROLLED TERMINATION (B): resetting
+  the height to the nearest phase-zero kills the boundary term exactly at a cost of
+  relative order T0^{-0.5} in the range. The detailed-balance/pairing pattern does
+  not apply to the zeros as they are.
+==============================================================================
