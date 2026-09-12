@@ -113,30 +113,25 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
    · `final_margin_positive`：**边际 > 0** ✓（论文末句"the margin is ... > 0" ✓）
 ```
 
-## ⚠️ 可行性核查结论：连续版 Abel 为何不能在本环境完成（已核查 ✅）
+## ✅ **可行性核查【更正】：连续版 Abel 其实【有】库支持（2026-09-12 16:55 更正 ✗→✓）**
+
 ```
-【核查方式】直接搜 Mathlib 源码（不猜 ✓）
-【结果 ✓】
-   · **无 Stieltjes 积分/分部积分理论** ✗ —— `stieltjes` 仅出现在概率论 CDF/分解相关文件 ✓，非分析工具 ✗
-   · **有层蛋糕公式** ✓（`lintegral_eq_lintegral_meas_le` ✓）—— 但方向不同 ✗（积分↔分布，非分部积分 ✓）
-   · **无「计数测度分部积分」型引理** ✗
-⟹ 论文的 `∫_H^∞ t^{-4} d(2N(t)) = −2N(H)H^{-4} + 8∫N(t)t^{-5}dt`（**一般计数函数/Stieltjes 情形**）
-   **在本环境中无法直接形式化** ✗ —— 需**自建** Stieltjes 分部积分理论 ⚠️（研究级工作量 ✓）
-【✅ 替代 ✓】论文**光滑主项情形**（N(t)=a·t·log t+b·t）是普通分部积分 ✓，**可用已有零件做** ✓
-   —— 但其积分线性化证明较长 ⚠️（`integral_add` ✓/`integral_const_mul` ✓ 均已就位 ✓）
-【✅ 但恒等的【实质内容】已独立验证 ✓✓】恒等两边化开后归结为：
-   ① 两个反常积分 ✓（**均已形式化** ✓）
-   ② 系数代数 ✓（**`S4_coefficients` + `S4_assembly` 均已形式化** ✓✓）
-   ⟹ 即：**该恒等"算出来的结果"已被机器核过** ✓；缺的只是"从谱和写到积分"的**桥**（Stieltjes）✗
-```
-## 最终完成度（2026-09-12 16:45 ✅）
-```
-| 论文部分 | 形式化 | 完成度 |
-| **Lemma 1**（单调性） | ✅ 完整 | **100%** |
-| **Lemma 2**（far + MVT 零件） | ✅ 完整 | **100%** |
-| **Lemma 3**（恒等 + 比值 + sinh 单调 + 7/24 积分） | ✅ 完整 | **100%** |
-| **Lemma S4** | 零件齐（两个反常积分 ✓ + 系数代数 ✓ + 离散 Abel ✓）；**连续桥缺** ✗ | **~85%** |
-| **最后一步比较** | ✅ 完整 | **100%** |
-| **主定理总装** | ⏳ 未做（需 S4 的连续桥 ✓） | 0% |
-【总计】**11 文件 / 26 定理 / 零 sorry / 全部 exit 0** ✅
+【⚠️ 我此前的结论是【错的】✗】我曾搜 Mathlib 源码后断言"无 Stieltjes 支持" ✗
+   错因 ✓：我只搜了**小写 `stieltjes`**（文件名 ✓），**漏掉了 `StieltjesFunction`**（大写 ✓）✗
+【✅ 更正后的真实情况 ✓（已实测确认 ✓）】
+   · **`Mathlib/MeasureTheory/Measure/Stieltjes.lean`（36 KB ✓）存在** ✓
+   · **`StieltjesFunction R`** 结构 ✓（含 `mono'` ✓、`right_continuous'` ✓、`leftLim` ✓、`length` ✓）
+   · ⭐ **`StieltjesFunction.measure : Measure R`** ✓✓ —— **能变成【真正的 Measure】** ✓✓
+   · ⭐ **`measure_Ioc (a b) : f.measure (Ioc a b) = ofReal (f b − f a)`** ✓
+   · ⭐⭐ **`measure_singleton (a) : f.measure {a} = ofReal (f a − leftLim f a)`** ✓✓
+     —— **这正是"计数测度在原子点的跳跃"** ✓✓（即 Dirac ✓）
+   · 另有 `isFiniteMeasure` ✓、`isProbabilityMeasure` ✓、`measure_Icc`/`measure_Ioo` ✓
+【⟹ 结论 ✓】**连续版 Abel 的桥【可以搭】** ✓：
+   ① 把计数函数 N(t) 做成 `StieltjesFunction` ✓（单调 + 右连续 ✓ —— 计数函数天然满足 ✓）
+   ② 取 `N.measure` ✓（即计数测度 ✓）
+   ③ 对其积分 ✓（Mathlib 全套积分 API ✓）
+   ④ **分部积分由 Fubini + FTC 导出** ✓（标准证法 ✓ —— Mathlib 有 Fubini ✓ 与 FTC ✓）
+【⚠️ 仍需自建的部分 ✗（诚实 ✓）】Mathlib **没有**现成的「Stieltjes 测度的分部积分」引理 ✗
+   ⟹ 那一小段（把 ∫f dN 化为 [f·N] − ∫N f′）**需自写** ✓ —— 但**基础已备** ✓，属**可完成** ✓✓
+【✅ 教训 ✓】**搜源码要兼搜大小写与 API 名** ✓ —— 只看文件名会漏掉整个 API ✗
 ```
