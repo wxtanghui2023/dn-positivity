@@ -383,3 +383,20 @@ theorem S4_error_constant_check (c d L : ℝ) :
   ring
 
 end PB
+
+namespace PB
+
+/-- **误差项之边界部分** ✓：`|−2ε(H)H⁻⁴| ≤ (2c log H + 2d)H⁻⁴`，
+由 `|ε(H)| ≤ c log H + d` 与 `H⁻⁴ > 0` 得 ✓。-/
+theorem S4_error_boundary (c d H : ℝ) (hH : 0 < H) (ε : ℝ → ℝ)
+    (hε : |ε H| ≤ c * Real.log H + d) :
+    |-(2 * ε H * H ^ (-(4 : ℝ)))| ≤ (2 * c * Real.log H + 2 * d) * H ^ (-(4 : ℝ)) := by
+  have hHp : 0 < H ^ (-(4 : ℝ)) := Real.rpow_pos_of_pos hH _
+  rw [abs_neg, abs_mul, abs_mul, abs_of_pos hHp, abs_two]
+  calc 2 * |ε H| * H ^ (-(4 : ℝ))
+      ≤ 2 * (c * Real.log H + d) * H ^ (-(4 : ℝ)) := by
+        exact mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_left hε (by norm_num))
+          (le_of_lt hHp)
+    _ = (2 * c * Real.log H + 2 * d) * H ^ (-(4 : ℝ)) := by ring
+
+end PB
