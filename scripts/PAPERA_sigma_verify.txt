@@ -1,0 +1,43 @@
+================================================================================
+SIGMA-FORM LEMMA VERIFICATION  (candidate: |sum e^{i phi}| <= sqrt(ML)+sqrt(M/L))
+================================================================================
+(V1) region B reproduction:
+    M_B = 581489  L_B = 2.2563e+05
+    sqrt(M_B L_B) + sqrt(M_B/L_B) = 3.6222e+05 + 1.61e+00 = 3.6222e+05
+
+(V2) COUNTEREXAMPLE (step function, general real phase):
+    phi_k = 2*pi*m_k, m_k = 0 for k<=K, m_k = 1 for k>K.
+    Then e^{i phi_k} = 1 for ALL k  =>  |sum| = M.  But Delta^2 phi has two spikes
+    (+2pi, -2pi) => L = 4*pi.  The lemma would require M <= ~sqrt(M*4pi)+sqrt(M/(4pi)).
+    M=     100: |sum| = 1.000e+02   L = 12.5664   sqrt(ML)+sqrt(M/L) = 3.827e+01   RATIO lhs/rhs = 2.6  LEMMA FAILS
+    M=    1000: |sum| = 1.000e+03   L = 12.5664   sqrt(ML)+sqrt(M/L) = 1.210e+02   RATIO lhs/rhs = 8.3  LEMMA FAILS
+    M= 1000000: |sum| = 1.000e+06   L = 12.5664   sqrt(ML)+sqrt(M/L) = 3.827e+03   RATIO lhs/rhs = 261.3  LEMMA FAILS
+    M= 2000000: |sum| = 2.000e+06   L = 12.5664   sqrt(ML)+sqrt(M/L) = 5.412e+03   RATIO lhs/rhs = 369.5  LEMMA FAILS
+
+(V3) CONVEX phase (Delta^2 phi >= 0): random convex + near-linear integer-slope perturb.
+    M=    10000 q=1 eps=1.00e-04: |sum|=1.754e+02 L=2.000e+00 rhs=2.121e+02 ratio=0.827
+    M=    10000 q=1 eps=1.00e-06: |sum|=1.616e+03 L=2.000e-02 rhs=7.213e+02 ratio=2.240
+    M=    10000 q=1 eps=1.00e-08: |sum|=9.972e+03 L=2.000e-04 rhs=7.073e+03 ratio=1.410
+    M=    10000 q=7 eps=1.00e-04: |sum|=1.754e+02 L=2.000e+00 rhs=2.121e+02 ratio=0.827
+    M=    10000 q=7 eps=1.00e-06: |sum|=1.616e+03 L=2.000e-02 rhs=7.213e+02 ratio=2.240
+    M=    10000 q=7 eps=1.00e-08: |sum|=9.972e+03 L=2.000e-04 rhs=7.073e+03 ratio=1.410
+    M=  2000000 q=1 eps=5.00e-07: |sum|=2.508e+03 L=2.000e+00 rhs=3.000e+03 ratio=0.836
+    M=  2000000 q=1 eps=3.54e-10: |sum|=9.651e+04 L=1.944e-03 rhs=3.214e+04 ratio=3.003
+    M=  2000000 q=1 eps=2.50e-13: |sum|=1.994e+06 L=1.436e-03 rhs=3.738e+04 ratio=53.360
+    M=  2000000 q=7 eps=5.00e-07: |sum|=2.508e+03 L=2.000e+00 rhs=3.000e+03 ratio=0.836
+    M=  2000000 q=7 eps=3.54e-10: |sum|=9.651e+04 L=1.066e-02 rhs=1.385e+04 ratio=6.971
+    M=  2000000 q=7 eps=2.50e-13: |sum|=1.994e+06 L=1.052e-02 rhs=1.393e+04 ratio=143.145
+    CONVEX max ratio lhs/rhs over all trials = 143.145  (from (2000000, 1994449.9547016763, 0.010520210606614455, 13933.100980156298, 'parabola q=7 eps=2.50e-13'))
+    => if max ratio <= 1 for all convex phases, Sigma-form holds (convex); else fails.
+
+(V4) SIGN-CHANGING phase (realistic regime: mixed-sign second differences).
+    mixed-sign random phase max ratio = 0.149  (from (300, 40.399172650933124, 242.88177555672735, 271.04569326195576))
+    near-linear + single jump (the exact "bad point" scenario Sigma-form targets):
+    M=    10000 q=1 J=12.57: |sum|=1.000e+04 L=1.257e+01 rhs=3.827e+02 ratio=26.130 FAILS
+    M=    10000 q=5 J=12.57: |sum|=1.000e+04 L=1.257e+01 rhs=3.827e+02 ratio=26.130 FAILS
+    M=  2000000 q=1 J=12.57: |sum|=2.000e+06 L=1.257e+01 rhs=5.413e+03 ratio=369.505 FAILS
+    M=  2000000 q=5 J=12.57: |sum|=2.000e+06 L=1.257e+01 rhs=5.413e+03 ratio=369.451 FAILS
+
+(V5) empirical: find the correct form / constant for the Sigma-type bound.
+    Compare |sum| against candidates A=sqrt(ML), B=sqrt(M/L), C=M/L, D=1/sqrt(L), E=const.
+    For convex phase, report |sum| / each candidate on the adversarial family.
