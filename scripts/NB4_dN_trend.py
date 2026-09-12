@@ -20,7 +20,15 @@ mp.dps = 26
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 cands = sorted(glob.glob(os.path.join(ROOT, 'data', 'nb3_grid_*.npz')))
 assert cands, "no cached grid: run NB3_dN_fourier_kernel.py first"
-c = np.load(cands[-1])
+import os as _os
+_want = _os.environ.get('NB4_T')
+_pick = None
+if _want:
+    for _c in cands:
+        if ('T%s' % int(float(_want))) in _c or ('T%.3f' % float(_want)).replace('.000','') in _c: _pick = _c
+if _pick is None: _pick = cands[-1]
+print('  grid in use:', _os.path.basename(_pick))
+c = np.load(_pick)
 ts, fvals, zvals = c['ts'], c['fvals'], c['zvals']
 print("=" * 100)
 print("NB4: N-dependence of d_N^2 (grid from %s, %d points)" % (os.path.basename(cands[-1]), len(ts)))

@@ -35,8 +35,8 @@ from mpmath import mp, mpf, mpc, zeta as mzeta, log as mlog, pi as mpi, euler as
 from mpmath import siegelz, siegeltheta, exp as mexp
 
 mp.dps = 26
-H = 0.05           # grid step
-T = 400.0          # truncation
+H = float(os.environ.get('NB3_H', 0.05))    # grid step (env-overridable)
+T = float(os.environ.get('NB3_T', 400.0))  # truncation (env-overridable)
 NMAX = 40          # polynomial degree
 C_burnol = 2 + float(meuler) - float(mlog(4 * mpi))
 
