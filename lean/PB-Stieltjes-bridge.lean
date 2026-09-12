@@ -57,4 +57,35 @@ theorem measure_singleton_stepAt (γ : ℝ) : (stepAt γ).measure {γ} = 1 := by
   rw [h, sub_zero]
   exact ENNReal.ofReal_one
 
+/-- `stepAt γ` 作为函数按定义展开 ✓（便于化简 ✓）。-/
+@[simp] theorem stepAt_apply (γ x : ℝ) : ((stepAt γ) : ℝ → ℝ) x = if γ ≤ x then 1 else 0 := rfl
+
+/-- **桥的第 ③ 步之一**：计数测度**就是 Dirac 测度** ✓（单原子情形 ✓）。-/
+theorem measure_stepAt_eq_dirac (γ : ℝ) : (stepAt γ).measure = Measure.dirac γ := by
+  refine Measure.ext_of_Ioc _ _ ?_
+  intro a b hab
+  rw [StieltjesFunction.measure_Ioc]
+  simp only [stepAt_apply]
+  by_cases h : γ ∈ Set.Ioc a b
+  · -- γ ∈ (a,b] ✓：左 = 1−0 = 1 ✓，右 = 1 ✓
+    rw [Set.mem_Ioc] at h
+    have hd : (Measure.dirac γ) (Set.Ioc a b) = 1 := Measure.dirac_apply_of_mem h
+    rw [hd, if_pos h.2, if_neg (not_le.mpr h.1)]
+    simp
+  · -- case 2: gamma not in (a,b]
+    have hconj : ¬ (a < γ ∧ γ ≤ b) := by
+      simpa [Set.mem_Ioc] using h
+    rw [Measure.dirac_apply' _ measurableSet_Ioc,
+      Set.indicator_of_notMem (by intro hc; exact h hc)]
+    by_cases hga : γ ≤ a
+    · -- case: gamma <= a
+      rw [if_pos hga, if_pos (le_trans hga hab.le)]
+      simp
+    · -- case: a < gamma, hence b < gamma by hconj
+      have hbγ : b < γ := by
+        by_contra hnb
+        exact hconj ⟨not_le.mp hga, not_lt.mp hnb⟩
+      rw [if_neg hga, if_neg (not_le.mpr hbγ)]
+      simp
+
 end PB

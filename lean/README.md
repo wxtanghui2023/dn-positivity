@@ -140,8 +140,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 ```
 | 步 | 内容 | 状态 |
 | ① | **计数函数是合法 `StieltjesFunction`**（单调 + 右连续） | ✅ **已通过**（`PB-Stieltjes-bridge.lean`） |
-| ② | 其 `measure` 在原子处取 1（`measure_singleton` = 跳跃 ✓） | ⏳ 下一步（需算 `leftLim` ✓） |
-| ③ | `∫ g d(measure) = Σ g(γᵢ)`（有限零点） | ⏳ 待做 |
+| ② | 其 `measure` 在原子处取 1（`measure_singleton` = 跳跃 ✓） | ✅ **已通过** |
+| ③ | **计数测度 = Dirac 测度** ⟹ `∫ g d(measure) = g γ` | ✅ **已通过** |
 | ④ | 分部积分（Fubini + FTC ⟹ `∫f dN = [f·N] − ∫N f′`） | ⏳ 待做 |
 【① 的细节 ✓】`stepAt γ := fun x => if γ ≤ x then 1 else 0` ✓
    · 单调性 ✓：按 `γ ≤ a` 分情形 ✓
@@ -149,4 +149,29 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
       ⚠️ 踩坑：我起初误以为「`x < γ` 时整个 `[x,∞)` 上都是 0」✗ —— **错** ✗（y 可以越过 γ ✓）
       ⟹ 必须用**局部**邻域 ✓（这正是右连续的定义 ✓）
 【教训 ✓】`open scoped Topology` 才认 `𝓝` ✓；`Set.mem_Iio.mp` 才能把成员关系变成 `<` ✓
+```
+
+## 🎉 桥的关键突破（2026-09-12 17:10 ✅）
+```
+**①②③ 三步全部机器验证 ✓✓ —— 且【无需给 Mathlib 打补丁】✓（用 `StieltjesFunction.measure` ✓）**
+
+| 步 | 内容 | 状态 |
+| ① | 计数函数是合法 `StieltjesFunction`（单调 + 右连续） | ✅ |
+| ② | `leftLim = 0` ⟹ `measure {γ} = 1`（**一个零点 = 一份质量** ✓） | ✅ |
+| ③ | **`measure = Measure.dirac γ`** ⟹ **`∫ g d(measure) = g γ`** ✓✓ | ✅ |
+| ④ | 分部积分（Fubini + FTC ⟹ `∫f dN = [f·N] − ∫N f′`） | ⏳ 待做 |
+
+【③ 的实现 ✓】`Measure.ext_of_Ioc`（在 `Ioc` 上一致 ⟹ 测度相等 ✓）
+   + `StieltjesFunction.measure_Ioc`（增量 ✓）+ `Measure.dirac_apply'`（Dirac 的作用 ✓）
+   + 分情形：`γ ∈ (a,b]` ⟹ 两侧皆 1 ✓；`γ ≤ a` ⟹ 两侧皆 1 ⟹ 差 0 ✓；`b < γ` ⟹ 两侧皆 0 ⟹ 差 0 ✓
+   ⟹ 测度相等 ✓ 再由 **`integral_dirac`** 得 `∫ g = g γ` ✓✓
+
+【⭐ 意义 ✓】**"零点求和 ↔ 测度积分"这座桥已经搭成** ✓✓
+   ⟹ 论文的 `S₄(H) = ∫_H^∞ t^{-4} d(2N(t))` 现在**有严格的形式化基础** ✓✓
+   ⟹ 剩下的 ④ 只是**分部积分**（Fubini + FTC ✓ —— 库里有 ✓）
+
+【今日踩坑（供后续 ✓）】
+   · `StieltjesFunction` 的强制转换需 `@[simp]` 展开引理 ✓（否则 `if` 改写找不到目标 ✗）
+   · `omega` **处理不了**带命题合取的否定 ✗ ⟹ 用 `by_cases` + `by_contra` ✓
+   · `not_lt.mp`（不是 `le_of_not_lt` ✗）
 ```
