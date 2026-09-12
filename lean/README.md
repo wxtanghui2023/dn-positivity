@@ -142,7 +142,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ① | **计数函数是合法 `StieltjesFunction`**（单调 + 右连续） | ✅ **已通过**（`PB-Stieltjes-bridge.lean`） |
 | ② | 其 `measure` 在原子处取 1（`measure_singleton` = 跳跃 ✓） | ✅ **已通过** |
 | ③ | **计数测度 = Dirac 测度** ⟹ `∫ g d(measure) = g γ` | ✅ **已通过** |
-| ④ | 分部积分（Fubini + FTC ⟹ `∫f dN = [f·N] − ∫N f′`） | ⏳ 待做 |
+| ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
+| ④ | 分部积分（把 ③′ 化为 `[f·N] − ∫N f′`；Fubini + FTC） | ⏳ 待做 |
 【① 的细节 ✓】`stepAt γ := fun x => if γ ≤ x then 1 else 0` ✓
    · 单调性 ✓：按 `γ ≤ a` 分情形 ✓
    · **右连续性 ✓**：`x ≥ γ` 时右侧邻域常值 1 ✓；`x < γ` 时用**局部邻域**（`isOpen_Iio` ✓）常值 0 ✓
@@ -159,7 +160,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | ① | 计数函数是合法 `StieltjesFunction`（单调 + 右连续） | ✅ |
 | ② | `leftLim = 0` ⟹ `measure {γ} = 1`（**一个零点 = 一份质量** ✓） | ✅ |
 | ③ | **`measure = Measure.dirac γ`** ⟹ **`∫ g d(measure) = g γ`** ✓✓ | ✅ |
-| ④ | 分部积分（Fubini + FTC ⟹ `∫f dN = [f·N] − ∫N f′`） | ⏳ 待做 |
+| ③′ | **有限多个零点**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` | ✅ **已通过**（`PB-Stieltjes-count.lean`） |
+| ④ | 分部积分（把 ③′ 化为 `[f·N] − ∫N f′`；Fubini + FTC） | ⏳ 待做 |
 
 【③ 的实现 ✓】`Measure.ext_of_Ioc`（在 `Ioc` 上一致 ⟹ 测度相等 ✓）
    + `StieltjesFunction.measure_Ioc`（增量 ✓）+ `Measure.dirac_apply'`（Dirac 的作用 ✓）
@@ -174,4 +176,25 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
    · `StieltjesFunction` 的强制转换需 `@[simp]` 展开引理 ✓（否则 `if` 改写找不到目标 ✗）
    · `omega` **处理不了**带命题合取的否定 ✗ ⟹ 用 `by_cases` + `by_contra` ✓
    · `not_lt.mp`（不是 `le_of_not_lt` ✗）
+```
+
+## 🎉🎉 桥建成（2026-09-12 17:20 ✅✅）
+```
+**核心定理（机器验证 ✓）**：`Σᵢ g(γᵢ) = ∫ g d(计数测度)` ✓✓
+   —— 即「**对零点求和 = 对计数测度积分**」✓✓
+   —— **论文 `S₄(H) = ∫_H^∞ t⁻⁴ d(2N(t))` 的形式化基础已经成立** ✓✓
+
+【实现链条（全部用库内工具 ✓ 无需打补丁 ✓）】
+   ① `stepAt γ` 是合法 `StieltjesFunction` ✓（单调 + 右连续 ✓）
+   ② `leftLim = 0` ⟹ `measure {γ} = 1` ✓
+   ③ **`measure = Measure.dirac γ`** ✓（`Measure.ext_of_Ioc` ✓）
+   ④ 计数函数 `countFn = Σᵢ stepAt(γᵢ)` ✓（`StieltjesFunction.add` ✓）
+   ⑤ **`(countFn).measure = Σᵢ Dirac(γᵢ)`** ✓（`StieltjesFunction.measure_add` ✓ 归纳 ✓）
+   ⑥ **`∫ g d(countFn.measure) = Σᵢ g(γᵢ)`** ✓✓（`integral_finsetSum_measure` ✓ + `integral_dirac` ✓）
+
+【❗ 对「可行性问题」的最终回答 ✓】
+   用户问："是否有可行的解决方案补齐 Mathlib" ✓
+   ⟹ **答：不需要"补"✓ —— Mathlib【已有】所需的一切** ✓✓
+      我此前断言"无 Stieltjes 支持"是**错的** ✗（只搜了小写文件名 ✓）
+      **实际：`StieltjesFunction.measure` 就是计数测度的现成构造** ✓✓
 ```
