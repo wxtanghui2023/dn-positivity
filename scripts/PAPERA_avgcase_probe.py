@@ -74,7 +74,7 @@ xs, ys = np.array(xs), np.array(ys)
 A = np.vstack([xs, np.ones_like(xs)]).T
 slope, intercept = np.linalg.lstsq(A, ys, rcond=None)[0]
 slope = -slope   # model is |D|/N ~ (T0/n)^alpha, so alpha = -(raw slope); report alpha everywhere below
-pred = A @ np.array([slope, intercept])
+pred = A @ np.array([-slope, intercept])   # recompute predictions with the RAW slope
 ss_res = float(np.sum((ys - pred) ** 2))
 ss_tot = float(np.sum((ys - ys.mean()) ** 2))
 r2 = 1 - ss_res / ss_tot if ss_tot > 0 else float('nan')
