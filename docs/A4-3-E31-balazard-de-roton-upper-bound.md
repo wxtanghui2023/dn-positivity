@@ -1,5 +1,7 @@
 # A4-3 / E31 — The upper-bound side: Balazard–de Roton, and what the gap means for the criterion
 
+> ⚚ 数值更正（2026-09-12，第 16 次自查 ✓）：本文若出现 **d_N² ≈ 0.68**（或 0.6803 / 0.6819 / 0.6821）**已作废** ✗ —— 根因：核漏了 **`(mn)^{−1/2}`** 权重 ✗（线性型有权重而核没有 ✗ ⟹ 归一化不一致 ✓）。**修正后的值**：**d_N²(N=40) = 0.0519493** ✓、**d_N²(N=160) = 0.0489309** ✓（与 Burnol 常数 C 之比从 ~75 倍降到 **~5.4 倍** ✓）。核与线性型的权重一致性**已列为提交前自检** ✓；距离类计算一律用 **SVD 正则化**或 **n ≤ N/2** ✓。详见 `A4-CORRECTION-missing-weight.md`。
+
 **Registered item.** E31 (= A4-3 in the merge table): *"A4 补上界（Balazard–de Roton）"*.
 Register note: *"我方 A4 唯一缺口"* — the **only** gap in the project's A4 alignment is the upper bound.
 Register records original text **not read** ✗.
