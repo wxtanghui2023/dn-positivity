@@ -1,0 +1,185 @@
+==============================================================================
+SECOND-MOMENT ROUTE FOR Fluc(n):  quantitative test
+==============================================================================
+
+  table: data/zeros_odlyzko_2M.npy   Nz = 2,001,052   T0 = gamma_max = 1132490.658714
+  main(T0) = (T0/2pi) log(T0/(2 pi e)) + 7/8 = 2001051.377
+  N(T0)    = 2,001,052   (table)      S(T0) = N - main = +0.623
+  (task shorthand (T0/2pi) log T0 = 2512553.682; main(T0) is smaller by the log(2 pi e) term)
+
+------------------------------------------------------------------------------
+(a)  THE SECOND-MOMENT INPUT, AND ITS CONSTANT, FROM THE TABLE
+------------------------------------------------------------------------------
+
+  SELFTEST of int_0^T S^2:  Boole/interval 1.65372536e+03   vs uniform grid trapz 1.65347412e+03
+    (grid spacing 5.00e-03 vs zero spacing 0.682 at t=1e4)
+
+  claim tested:   int_0^T S(t)^2 dt  ~  c * T * loglog T
+
+             T   int_0^T S^2 dt     T loglog T  M/(T loglogT)  M/(T loglogT)
+                 (exact, table)                   = implied c if c=1/pi^2=0.10132
+       283,123     5.280468e+04   7.163033e+05        0.07372          0.728
+       566,245     1.075698e+05   1.463039e+06        0.07352          0.726
+     1,132,491     2.188071e+05   2.983838e+06        0.07333          0.724
+
+  ==> empirical constant  c_emp = int S^2 / (T0 loglogT0) = 0.07333
+      vs 1/(2 pi^2) = 0.05066    : ratio 1.447
+      vs 1/pi^2 = 0.10132        : ratio 0.724
+  NB loglog T0 = 2.6348.  We carry the constant SYMBOLICALLY as c below.
+  SOURCE (literature search, secondary quotation, retrieved 2026-09-12):
+    Selberg 1946, Theorems 6 and 7, as quoted in arXiv:2006.08503 eq. (1.4):
+      int_0^T |S(t)|^2 dt = (T/(2 pi^2)) loglog T + O(T sqrt(loglog T)),  so c = 1/(2 pi^2)
+  Hence c = 1/(2 pi^2) = 0.05066 (NOT 1/pi^2); the two normalisations differ by 2.
+  The same source records a secondary +O(T) term (their eq. (1.8)); relative to the main
+  term T loglog T that is a relative size ~1/loglog T0 = 0.380.  Our table value
+  c_emp = 0.07333 is 1.447 x the asymptotic constant, consistent with exactly such a
+  secondary term; c_emp is an EFFECTIVE, one-realisation constant.  Because it EXCEEDS
+  1/(2 pi^2), using it makes the C-S bound larger, i.e. more generous to the route; the
+  verdict below is reported for c in [1/(2 pi^2), c_emp] and does not depend on c.
+  diagnostic: sup|S| over zeros = 1.799; |S(T0)| = 0.623; mean of S^2 over [T0/2,T0] = 0.1964
+  ||S||_{L^2[0,T0]} = sqrt(int S^2) = 467.7682   (note: sup|S| = 1.7994 on this range)
+  ==> the L^2 norm over the whole range EXCEEDS the pointwise size of S by a factor
+      260.0; note sqrt(T0) = 1064.2, so ||S||_2/sup|S| ~ 0.244 sqrt(T0).  A C-S against
+      a weight supported on [0,T0] must pay this inflation -- that is the whole loss.
+  to come: the weight norm is ~n (not ~sqrt(n)), so the product is ~n sqrt(T0 loglog T0).
+
+------------------------------------------------------------------------------
+(b)  THE WEIGHT  w_n(t) = n sin(n theta) theta'(t)   AND ITS L^2 NORM
+------------------------------------------------------------------------------
+
+  theta'(t) = -4/(4t^2+1) = -4 sin^2(theta/2);  dt/dtheta = -(1/4) csc^2(theta/2)
+  int_0^{T0} w_n^2 dt = 4 n^2 int_{theta(T0)}^{pi} sin^2(n theta) sin^2(theta/2) dtheta
+  closed form used:  int sin^2(n th) sin^2(th/2) dth = (th/2 - sin th/2)/2
+                     - sin(2n th)/(8n) + [sin((2n+1)th)/(2n+1) + sin((2n-1)th)/(2n-1)]/8
+
+               n           int w^2 dt               pi n^2          ratio
+            1000         3.141593e+06         3.141593e+06       1.000000
+           1e+05         3.141593e+10         3.141593e+10       1.000000
+           1e+06         3.141593e+12         3.141593e+12       1.000000
+            1064         3.556846e+06         3.557824e+06       0.999725
+       1.283e+12         5.167594e+24         5.167594e+24       1.000000
+
+  ==> ||w_n||_2 = n sqrt(pi) (1 - theta(T0)/pi)^{1/2} ~ n sqrt(pi) = 1.7725 n
+
+------------------------------------------------------------------------------
+(c)  THE TRUE Fluc(n)  (Stieltjes by parts is exact; not used here -- computed directly)
+------------------------------------------------------------------------------
+
+  Fluc(n) = sum_{gamma<=T0} [1 - cos(n theta_gamma)]  -  int_0^{T0} [1-cos(n theta)] dmain
+
+           n    sum f(n th_g)      smooth part        Fluc(n)  ||w||_2*||S||_2 bound/|Fluc|
+  smooth-part check at n = 1e5: direct Simpson 2.22125159e+05 vs asymptotic 2.22125159e+05 (ratio 1.00000)
+
+       1,000     1.162106e+03     1.172271e+03  -1.016534e+01     8.290976e+05    8.156e+04
+      10,000     1.727623e+04     1.731855e+04  -4.232295e+01     8.290976e+06    1.959e+05
+     100,000     2.220858e+05     2.221252e+05  -3.937911e+01     8.290976e+07    2.105e+06
+   1,000,000     1.986729e+06     1.986698e+06  +3.051667e+01     8.290976e+08    2.717e+07
+  1,282,535,092,075     2.001269e+06     2.001051e+06  +2.187490e+02     1.063347e+15    4.861e+12
+
+------------------------------------------------------------------------------
+(d)  BOUND vs ALLOWANCE, BOTH HEIGHTS
+------------------------------------------------------------------------------
+
+  global C-S bound:  |Fluc(n)| <= ||S||_2 * ||w_n||_2  =  sqrt(c T0 loglogT0) * n sqrt(pi)
+                     =  n * sqrt(pi c T0 loglogT0)      [c symbolic]
+  allowance:         Allow(n) = main(T0) - n B_{T0},  B_{T0} = (logT0+1)/(4 pi T0)
+  ratio(n) = bound/Allow;  n_max = largest n with ratio < 1  (~ main(T0)/coef when
+  n B_{T0} << main(T0), i.e. for n << T0^2; exact  n_max = main(T0)/(coef + B_{T0}) )
+
+  constant c = 1/(2pi^2)  (loglogT0 = 2.6348 at the smaller height)
+             T0 coef=sqrt(pi c Tl)      main(T0)          T0^2  ratio at T0^2        n_max   n_max/T0
+   1.132491e+06         6.8912e+02    2.0011e+06    1.2825e+12     1.3501e+09      2,903.8  2.564e-03
+        coef=sqrt(pi*0.0506606*1.132491e+06*2.6348)=6.8912e+02;  B_{T0}=1.0498e-06
+        Allow(T0^2)=main(T0)-T0^2*B = 2.001051e+06 - 1.346398e+06 = 6.546538e+05
+        n_max = main(T0)/(coef+B) = 2.001051e+06/(6.891245e+02+1.050e-06) = 2.9038e+03
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 2.9038e+03
+        n_max/T0 = 2.5640e-03   n_max/T0^2 = 2.2641e-09
+   3.000175e+12         1.2662e+06    1.2363e+13    9.0011e+24     2.1647e+18  9,763,600.1  3.254e-06
+        coef=sqrt(pi*0.0506606*3.000175e+12*3.3579)=1.2662e+06;  B_{T0}=7.8856e-13
+        Allow(T0^2)=main(T0)-T0^2*B = 1.236315e+13 - 7.097856e+12 = 5.265298e+12
+        n_max = main(T0)/(coef+B) = 1.236315e+13/(1.266249e+06+7.886e-13) = 9.7636e+06
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 9.7636e+06
+        n_max/T0 = 3.2543e-06   n_max/T0^2 = 1.0847e-18
+
+  constant c = 1/pi^2  (loglogT0 = 2.6348 at the smaller height)
+             T0 coef=sqrt(pi c Tl)      main(T0)          T0^2  ratio at T0^2        n_max   n_max/T0
+   1.132491e+06         9.7457e+02    2.0011e+06    1.2825e+12     1.9093e+09      2,053.3  1.813e-03
+        coef=sqrt(pi*0.101321*1.132491e+06*2.6348)=9.7457e+02;  B_{T0}=1.0498e-06
+        Allow(T0^2)=main(T0)-T0^2*B = 2.001051e+06 - 1.346398e+06 = 6.546538e+05
+        n_max = main(T0)/(coef+B) = 2.001051e+06/(9.745692e+02+1.050e-06) = 2.0533e+03
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 2.9038e+03
+        n_max/T0 = 1.8131e-03   n_max/T0^2 = 1.6009e-09
+   3.000175e+12         1.7907e+06    1.2363e+13    9.0011e+24     3.0613e+18  6,903,907.8  2.301e-06
+        coef=sqrt(pi*0.101321*3.000175e+12*3.3579)=1.7907e+06;  B_{T0}=7.8856e-13
+        Allow(T0^2)=main(T0)-T0^2*B = 1.236315e+13 - 7.097856e+12 = 5.265298e+12
+        n_max = main(T0)/(coef+B) = 1.236315e+13/(1.790747e+06+7.886e-13) = 6.9039e+06
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 9.7636e+06
+        n_max/T0 = 2.3012e-06   n_max/T0^2 = 7.6701e-19
+
+  constant c = table c_emp  (loglogT0 = 2.6348 at the smaller height)
+             T0 coef=sqrt(pi c Tl)      main(T0)          T0^2  ratio at T0^2        n_max   n_max/T0
+   1.132491e+06         8.2910e+02    2.0011e+06    1.2825e+12     1.6243e+09      2,413.5  2.131e-03
+        coef=sqrt(pi*0.0733308*1.132491e+06*2.6348)=8.2910e+02;  B_{T0}=1.0498e-06
+        Allow(T0^2)=main(T0)-T0^2*B = 2.001051e+06 - 1.346398e+06 = 6.546538e+05
+        n_max = main(T0)/(coef+B) = 2.001051e+06/(8.290976e+02+1.050e-06) = 2.4135e+03
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 2.9038e+03
+        n_max/T0 = 2.1312e-03   n_max/T0^2 = 1.8818e-09
+   3.000175e+12         1.5234e+06    1.2363e+13    9.0011e+24     2.6043e+18  8,115,252.4  2.705e-06
+        coef=sqrt(pi*0.0733308*3.000175e+12*3.3579)=1.5234e+06;  B_{T0}=7.8856e-13
+        Allow(T0^2)=main(T0)-T0^2*B = 1.236315e+13 - 7.097856e+12 = 5.265298e+12
+        n_max = main(T0)/(coef+B) = 1.236315e+13/(1.523447e+06+7.886e-13) = 8.1153e+06
+        closed form sqrt(T0/(2 pi loglogT0))*log(T0/(2 pi e)) = 9.7636e+06
+        n_max/T0 = 2.7049e-06   n_max/T0^2 = 9.0159e-19
+
+------------------------------------------------------------------------------
+(e)  C-S  PER PERIOD-BLOCK  (block = phase advance 2 pi, theta_k = (u0+2 pi k)/n)
+------------------------------------------------------------------------------
+
+  per block: |int_block S w| <= ||S||_{2,block} * ||w||_{2,block}
+     ||S||^2_{2,block} = int_{t_{k+1}}^{t_k} S^2 dt   (exact, table; t = (1/2)cot(theta/2))
+     ||w||^2_{2,block} = 4 n^2 int_{block} sin^2(n th) sin^2(th/2) dth   (closed form)
+     block count K ~ n(pi - theta(T0))/(2 pi) ~ n/2
+
+  HEURISTIC version (what the second-moment input actually supplies): replace the
+  block norm by the local CLT scale  ||S||^2_{2,block} ~ (1/(2 pi^2)) loglog t * Dt,
+  Dt = 2 pi t^2/n  ->  ||S||_{2,bl}||w||_{2,bl} ~ sqrt(loglog t) per block:
+
+           n     K (blocks)    per-block EXACT     per-block HEUR   crude sup*int|w|    TRUE |Fluc|
+        1000            499       1.298894e+03       4.150283e+01       3.598732e+03     -1.017e+01
+       10000           4999       1.212178e+04       4.150790e+02       3.598732e+04     -4.232e+01
+      100000          49999       1.209206e+05       4.150878e+03       3.598732e+05     -3.938e+01
+     1000000         499999       1.208890e+06       4.150887e+04       3.598732e+06      3.052e+01
+
+  CHECK  Pint(T0) = 2.188071e+05   vs uniform grid trapz (1e7 pts, spacing 0.1132) = 2.188146e+05
+  CHECK  Pint(T0/2) = 1.075698e+05 vs uniform grid trapz = 1.075564e+05
+
+  ratios to the crude bound (a value <1 means the refinement helps):
+      n =       1000   per-block/crude = 0.3609   per-block/globalCS = 1.5666e-03
+      n =      10000   per-block/crude = 0.3368   per-block/globalCS = 1.4620e-03
+      n =     100000   per-block/crude = 0.3360   per-block/globalCS = 1.4585e-03
+      n =    1000000   per-block/crude = 0.3359   per-block/globalCS = 1.4581e-03
+
+  asymptotic per-block total (HEUR):  (n/2 pi) * int sqrt(loglog t)/t^2 dt over [20,T0]
+      integral = 0.0993  ->  total = 0.0158 n
+  plus the region t < first zero (14.13): there N(t)=0 and S(t) = -main(t) is a SMOOTH
+  function with |S| <= 0.432:
+      blocks there ~ n(pi - theta(14))/(2 pi) = 0.4886 n, each <= 4 sup|S| = 1.728
+      -> contribution ~ 0.8444 n  (UNCONDITIONAL; no second-moment gain available)
+      ==> per-block total ~ 0.8602 n  (constant, NOT sqrt(loglog T0)*n and not o(n))
+  table check: exact per-block sum at n = 1e6 is 1.208890e+06 = 1.2089 n  (K = 499,999 blocks)
+  range from per-block:  n_max ~ main(T0)/1.2089 = 1,655,280 = 1.46 T0
+
+==============================================================================
+SUMMARY
+==============================================================================
+  (1) global C-S: bound(n) = 8.2910e+02 n ; allowance(T0^2) = 6.5465e+05 ; ratio(T0^2) = 1.6243e+09
+      n_max(global C-S) = 2.4135e+03 = 2.131e-03 T0  (far BELOW the linear range)
+  (2) per-block C-S: exact sum on the table is 1.209 n -> n_max ~ 1.46 T0 (LINEAR)
+      (heuristic decomposition: 0.016 n above t=20 + 0.844 n below the first zero)
+      at the second height T0 = 3.0001753328e12 the same coefficient gives
+      n_max ~ 1.0227e+13, i.e. 3.41 T0  (still LINEAR, never T0^2)
+  (3) n = T0^2 is NOT delivered by either treatment; both fall short by a factor
+      >= 7.7e+05.
+  (4) the true |Fluc(n)| on the table is O(1)-ish while both bounds are O(n): the loss
+      is in Cauchy-Schwarz itself, i.e. in discarding the phase correlation of S with w.
+==============================================================================
