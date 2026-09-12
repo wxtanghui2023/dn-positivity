@@ -5,6 +5,7 @@ Paper B · 连续版 Abel 的【桥】—— Lean 4 形式化（第一步）
 -/
 import Mathlib.MeasureTheory.Measure.Stieltjes
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.Topology.Order.LeftRightLim
 
 open MeasureTheory Filter
 open scoped Topology
@@ -35,5 +36,25 @@ noncomputable def stepAt (γ : ℝ) : StieltjesFunction ℝ where
       refine (tendsto_const_nhds).congr' ?_
       filter_upwards [hmem] with y hy
       simp only [if_neg (not_le.mpr h), if_neg (not_le.mpr (Set.mem_Iio.mp hy))]
+
+/-- **桥的第 ② 步之一**：`stepAt γ` 在 `γ` 处的**左侧极限为 0** ✓
+（因 `y < γ` 时函数恒为 0 ✓）。-/
+theorem leftLim_stepAt (γ : ℝ) : Function.leftLim (stepAt γ) γ = 0 := by
+  refine leftLim_eq_of_tendsto ?_
+  refine (tendsto_const_nhds).congr' ?_
+  filter_upwards [self_mem_nhdsWithin] with y hy
+  simp only [Set.mem_Iio] at hy
+  show (0 : ℝ) = (if γ ≤ y then (1 : ℝ) else 0)
+  rw [if_neg (not_le.mpr hy)]
+
+/-- **桥的第 ② 步之二（关键）**：计数测度在原子处为 **1** ✓✓
+即 `(stepAt γ).measure {γ} = 1` —— **"一个零点贡献一份质量"** ✓。-/
+theorem measure_singleton_stepAt (γ : ℝ) : (stepAt γ).measure {γ} = 1 := by
+  rw [StieltjesFunction.measure_singleton, leftLim_stepAt]
+  have h : ((stepAt γ) : ℝ → ℝ) γ = 1 := by
+    show (if γ ≤ γ then (1 : ℝ) else 0) = 1
+    rw [if_pos le_rfl]
+  rw [h, sub_zero]
+  exact ENNReal.ofReal_one
 
 end PB
