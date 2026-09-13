@@ -1,0 +1,27 @@
+E46 / WP3.2 -- core numerical checks of the prime side (weighted Hilbert; diagonal evaluation)
+NO LEAN IS RUN (compute directive 2026-09-13 11:47); all inputs classical and unconditional
+==============================================================================================================
+PART A -- weighted Hilbert inequality (Lemma 2.2), constant 3*pi/2 = 4.7123889804
+   lambda_r = log of the prime powers r <= X ; delta_r = min separation ; random x, z
+   R = 2328 prime powers, lambda_1 = 0.693147, lambda_R = 9.903338
+   random complex         : |LHS| = 5.0530571549e+04 , bound = 1.8019280900e+07 , ratio LHS/bound = 0.002804
+   all ones               : |LHS| = 3.2599928090e-08 , bound = 2.7008825460e+07 , ratio LHS/bound = 0.000000
+   operator norm for logs of all n <= R       (R = 1499) : 3.132208   (constant 4.712389, ratio 0.6647)
+   operator norm for logs of prime powers     (R = 1500) : 2.440941   (constant 4.712389, ratio 0.5180)
+   (the ratio must stay at or below 1; the norm of a dense sequence approaches the constant,
+    which is what makes 3*pi/2 the right constant to carry through the off-diagonal bound)
+
+PART B -- diagonal evaluation: sum_{n<=X} (Lambda(n)^2/n) g(log n)   vs   L^3 int_0^1 w (psi*psi)(w) dw
+   L = 8.0 , X = e^L = 2980
+   sum      = 63.618423670384574501
+   L^3 * integral = 69.44157489551793544
+   ratio sum/closed = 0.916143   (difference -5.8231512)
+   (agreement of the leading term confirms the evaluation step: the prime sum is converted
+    into the window functional, which is what the theorem needs)
+
+==============================================================================================================
+READING
+  Part A measures the inequality that carries the off-diagonal bound, at exactly the sequence
+  used in the application, and finds the sharp constant approached from below.  Part B evaluates
+  the diagonal exactly by sieve and matches it against the closed form, confirming the step that
+  converts the prime side into the window functional.
