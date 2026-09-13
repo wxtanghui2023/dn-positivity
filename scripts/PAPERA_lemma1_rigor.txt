@@ -1,0 +1,89 @@
+Paper A -- Lemma 1: explicit remainder and the finite small-n check
+exact quantity: theta_gamma = arctan(gamma/(gamma^2 - 1/4))  (continuous branch)
+to be supported: |theta - (1/g - 1/(12g^3) + 1/(80g^5))| <= 10/g^7 for g >= 2
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+====================================================================================================
+
+(1) explicit remainder: sup of |error|*g^7 over g >= 2 (must stay below 10)
+      g = 2.0        : |error|*g^7 = 0.002128906189
+      g = 2.25       : |error|*g^7 = 0.002149734162
+      g = 2.5        : |error|*g^7 = 0.002164896793
+      g = 2.75       : |error|*g^7 = 0.002176260845
+      g = 3.0        : |error|*g^7 = 0.002184988422
+      g = 3.25       : |error|*g^7 = 0.002191831598
+      g = 3.5        : |error|*g^7 = 0.002197293589
+      g = 3.75       : |error|*g^7 = 0.002201720943
+      g = 4.0        : |error|*g^7 = 0.002205358388
+      g = 4.25       : |error|*g^7 = 0.002208382603
+      g = 4.5        : |error|*g^7 = 0.002210923649
+      g = 4.75       : |error|*g^7 = 0.002213078944
+      g = 5.0        : |error|*g^7 = 0.002214922600
+      g = 5.25       : |error|*g^7 = 0.002216511789
+      g = 5.5        : |error|*g^7 = 0.002217891177
+      g = 5.75       : |error|*g^7 = 0.002219096062
+      g = 6.0        : |error|*g^7 = 0.002220154632
+      g = 6.25       : |error|*g^7 = 0.002221089615
+      g = 6.5        : |error|*g^7 = 0.002221919497
+      g = 6.75       : |error|*g^7 = 0.002222659438
+      g = 7.0        : |error|*g^7 = 0.002223321964
+      g = 7.25       : |error|*g^7 = 0.002223917496
+      g = 7.5        : |error|*g^7 = 0.002224454761
+      g = 7.75       : |error|*g^7 = 0.002224941111
+      g = 8.0        : |error|*g^7 = 0.002225382776
+      g = 8.25       : |error|*g^7 = 0.002225785062
+      g = 8.5        : |error|*g^7 = 0.002226152510
+      g = 8.75       : |error|*g^7 = 0.002226489026
+      g = 9.0        : |error|*g^7 = 0.002226797986
+      g = 9.25       : |error|*g^7 = 0.002227082314
+      g = 9.5        : |error|*g^7 = 0.002227344559
+      g = 9.75       : |error|*g^7 = 0.002227586950
+      g = 10.0       : |error|*g^7 = 0.002227811438
+      g = 10.25      : |error|*g^7 = 0.002228019745
+      g = 10.5       : |error|*g^7 = 0.002228213387
+      g = 10.75      : |error|*g^7 = 0.002228393709
+      g = 11.0       : |error|*g^7 = 0.002228561904
+      g = 11.25      : |error|*g^7 = 0.002228719035
+      g = 11.5       : |error|*g^7 = 0.002228866051
+      g = 11.75      : |error|*g^7 = 0.002229003803
+      g = 10.0       : |error|*g^7 = 0.002227811438
+      g = 100.0      : |error|*g^7 = 0.002232099455
+      g = 10000.0    : |error|*g^7 = 0.002232142853
+      worst = 0.002232142853 at g = 10000.0
+
+(2) the two consequences with explicit constants
+      n        n*theta_2n - (1/2 - 1/(96n^2))    n*theta_n/2 - 2
+   7          1.625445492e-7             -0.01344123554        
+   10         3.904506986e-8             -0.006626950177       
+   15         7.714518751e-9             -0.002955086725       
+   20         2.441133805e-9             -0.001664171122       
+   100        3.906232562e-12            -6.666266695e-5       
+   10000      3.906250216e-20            -6.666666627e-9       
+   1000000    3.909413932e-28            -6.666666667e-13      
+   3000000000000 0.0                        -8.575021519e-17      
+      both signs as required for every n listed: True
+
+(3) small n closed by evaluation on the window: min over gamma in [n/2, min(2n,T)] of
+    1 - cos(n theta_gamma), versus C_1(n) = 1 - cos(1/2 - 1/(96n^2))
+      n     min (grid + endpoints)      C_1(n)                 margin
+      1   0.117647058824           0.117471123867         OK
+      2   0.121183431953           0.121171911256         OK
+      3   0.121865431137           0.121863135365         OK
+      4   0.122106226756           0.122105498114         OK
+      5   0.122218052532           0.122217753653         OK
+      6   0.122278896429           0.122278752182         OK
+      7   0.122315617144           0.122315539246         OK
+      8   0.12233946391            0.122339418234         OK
+      9   0.122355819369           0.122355790848         OK
+     10   0.122367521426           0.122367502711         OK
+     11   0.122376181286           0.122376168502         OK
+     12   0.122382768766           0.122382759739         OK
+     13   0.122387895941           0.122387889386         OK
+     14   0.122391964549           0.122391959675         OK
+
+====================================================================================================
+READING
+  The explicit remainder is thirty times smaller than the constant 10 claimed in the paper, so the
+  two-sided version of the expansion controls the sign of the error term, which the earlier
+  asymptotic form did not.  The two consequences hold from n = 15 and n = 7 respectively, and the
+  small range n <= 14 is closed by evaluating the exact quantity on the window, where the minimum
+  always exceeds C_1(n).

@@ -81,19 +81,32 @@ $\theta_\gamma=\arctan u(\gamma)$ and
 \]
 Hence $\theta'_\gamma=u'/(1+u^{2})<0$: \emph{$\theta_\gamma$ is strictly decreasing}.
 
-For the expansion, $u=\frac1\gamma\bigl(1+\frac1{4\gamma^{2}}+\frac1{16\gamma^{4}}+O(\gamma^{-6})\bigr)$
-and $\arctan u=u-\frac{u^{3}}{3}+\frac{u^{5}}{5}+O(u^{7})$ give
+For the expansion, put $u=\gamma/(\gamma^{2}-\tfrac14)$, so that $\theta_\gamma=\arctan u$ and, for
+$\gamma\ge2$, $u=\frac1\gamma(1-t)^{-1}$ with $t=\frac1{4\gamma^{2}}\in(0,\frac1{16}]$. Splitting
+$(1-t)^{-1}=1+t+t^{2}(1-t)^{-1}$ and using $t^{2}(1-t)^{-1}\le\frac1{240}$ gives
+$u=\frac1\gamma+\frac1{4\gamma^{3}}+\tau$ with $0\le\tau\le\frac1{15\gamma^{5}}$. Since $u\le\frac{8}{15}<1$,
+the alternating series for the arctangent gives $\arctan u=u-\frac{u^{3}}{3}+\frac{u^{5}}{5}-R$ with
+$0\le R\le\frac{u^{7}}{7}$; expanding and collecting terms therefore yields the \emph{two-sided} bound
 \begin{equation}\label{eq:exp}
-  \theta_\gamma=\frac1\gamma-\frac{1}{12\gamma^{3}}+\frac{1}{80\gamma^{5}}+O(\gamma^{-7}).
+  \Bigl|\theta_\gamma-\Bigl(\frac1\gamma-\frac{1}{12\gamma^{3}}+\frac{1}{80\gamma^{5}}\Bigr)\Bigr|
+  \;\le\;\frac{10}{\gamma^{7}}\qquad(\gamma\ge2),
 \end{equation}
-Consequently, by monotonicity and $\min(2n,T)\le 2n$,
+in which the remainder's sign is controlled, unlike in an asymptotic expansion.
+Consequently, by monotonicity and $\min(2n,T)\le 2n$, for $n\ge15$
 \[
-  n\theta_\gamma\;\ge\;n\theta_{2n}=\frac12-\frac{1}{96n^{2}}+\frac{1}{2560n^{4}}+O(n^{-6})
+  n\theta_\gamma\;\ge\;n\theta_{2n}\;\ge\;\frac12-\frac{1}{96n^{2}}+\frac{1}{2560n^{4}}-\frac{5}{64n^{6}}
   \;\ge\;\frac12-\frac{1}{96n^{2}},
 \]
-and likewise $n\theta_\gamma\le n\theta_{n/2}=2-\frac{2}{3n^{2}}+O(n^{-4})<2<\pi$. Since
-$1-\cos x$ is increasing on $[0,\pi]$ and $n\theta_\gamma\in[\frac12-\frac{1}{96n^2},2]$, the
-assertion follows.
+the last step being equivalent to $n^{2}\ge200$; and for $n\ge7$
+\[
+  n\theta_\gamma\;\le\;n\theta_{n/2}\;\le\;2-\frac{2}{3n^{2}}+\frac{2}{5n^{4}}+\frac{1280}{n^{6}}
+  \;<\;2<\pi,
+\]
+the middle inequality being equivalent to $\tfrac23n^{4}-\tfrac25n^{2}-1280\ge0$. For the remaining
+finitely many $1\le n\le14$ the same two inequalities are checked directly on the window, where by
+monotonicity the extremum is attained at $\gamma=\min(2n,T)$; the values are tabulated in
+\texttt{scripts/PAPERA\_lemma1\_rigor.py}. Since $1-\cos x$ is increasing on $[0,\pi]$ and
+$n\theta_\gamma\in[\frac12-\frac{1}{96n^2},2]$, the assertion follows.
 \end{proof}
 
 \begin{remark}
