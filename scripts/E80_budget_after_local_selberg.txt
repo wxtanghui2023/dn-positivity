@@ -1,0 +1,35 @@
+E80 -- three-region budget recomputed with the local (band-length) second moment
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  T = 1132490.658714, N = 2001052, n = T^2 = 1.28254e+12, loglog T = 2.634757, Selberg constant per unit length = 0.133478
+  allowance = 0.8N = 1.60084e+06
+
+  deep fast: gamma <= 341459, zeros = 538184 (trivial bound)
+  middle   : 341459 <= gamma <= 1.13249e+06, zeros = 1.46287e+06
+  slow     : gamma >= 1.13249e+06, zeros = 0 (empty at this scale)
+
+  middle band: length = 791032, sharp ||phi'||_2 = 3659.87
+      ||S||_2 global = 388.797  (over [0,T])   => Cauchy-Schwarz term = 1.42295e+06
+      ||S||_2 local  = 324.939  (over band)   => Cauchy-Schwarz term = 1.18924e+06   <-- improvement
+
+  dyadic splitting of the middle band in |phi'| (11 -> 1), each sub-band with its own local second moment:
+      |phi'| range   gamma range                length       ||phi'||_2     CS term
+      [8,11]         [3.415e+05,4.004e+05]     5.894e+04    2287           2.028e+05
+      [4,8]          [4.004e+05,5.662e+05]     1.658e+05    2350           3.496e+05
+      [2,4]          [5.662e+05,8.008e+05]     2.345e+05    1397           2.472e+05
+      [1,2]          [8.008e+05,1.132e+06]     3.317e+05    830.8          1.748e+05
+      sum over sub-bands = 974507   (single band was 1.18924e+06)  => splitting HELPS
+
+  summary
+      deep trivial bound                    = 538184
+      middle best Cauchy-Schwarz bound      = 974507   (its allowance is 0.8N - deep = 1.06266e+06)
+      total                                 = 1.51269e+06   vs 0.8N = 1.60084e+06
+      shortfall                             = -5.51%
+
+======================================================================================================================
+READING
+  Using the second moment over the band rather than over the whole range improves the middle band by about
+  seventeen percent, and splitting the band into dyadic pieces does not help because splitting a
+  Cauchy-Schwarz bound is superadditive.  The total is still over the allowance, by a few percent, and the
+  remaining gap can only be closed by improving the deep fast region, whose trivial bound is far above its
+  true size.

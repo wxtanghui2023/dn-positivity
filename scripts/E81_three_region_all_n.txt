@@ -1,0 +1,23 @@
+E81 -- three-region accounting over the whole index interval, all terms included
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  T = 1132490.658714, N = 2001052, allowance 0.8N = 1.60084e+06, Selberg constant per length = 0.133478, sup|S| bound = 4.5875
+
+      n/X        deep        middle      slow        total       0.8N         shortfall
+      0.3000     276857      533806      108717      919380       1.60084e+06  -42.57%
+      0.4000     324631      616379      99567.6     1.04058e+06  1.60084e+06  -35.00%
+      0.5000     367236      689127      87427.1     1.14379e+06  1.60084e+06  -28.55%
+      0.6000     406124      754897      73044       1.23406e+06  1.60084e+06  -22.91%
+      0.7000     442168      815378      56860.5     1.31441e+06  1.60084e+06  -17.89%
+      0.8000     475943      871673      39166.9     1.38678e+06  1.60084e+06  -13.37%
+      0.9000     507850      924546      20167.7     1.45256e+06  1.60084e+06  -9.26%
+      1.0000     538184      974554      0           1.51274e+06  1.60084e+06  -5.50%
+
+      worst case: n/X = 1.00 with shortfall -5.50%
+
+======================================================================================================================
+READING
+  If every row is negative, the accounting closes uniformly over the interval with explicit terms, under
+  the single assumption that the counting error has, over a sub-interval, a second moment proportional to
+  its length with Selberg's constant.  If some row is positive, the worst index is identified and that is
+  where the remaining work is.
