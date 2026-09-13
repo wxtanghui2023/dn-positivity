@@ -1,0 +1,27 @@
+E45 step 19 -- is the exact-ramp law EXTREMAL for the stability inequality?  (certificate r(x) = x)
+quadrature deficit  Q(x) = 1/3 - sum_j (j/N^2)(j/N)   vs   bound  d1 + 1/(6N^2),   d1 = 1/(2N)
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+   N           Q(x)          bound      |Q|-bound   equality
+   2          -7/24           7/24              0        YES
+   3          -5/27           5/27              0        YES
+   4         -13/96          13/96              0        YES
+   5          -8/75           8/75              0        YES
+   6        -19/216         19/216              0        YES
+   7        -11/147         11/147              0        YES
+   8        -25/384         25/384              0        YES
+   9        -14/243         14/243              0        YES
+  10        -31/600         31/600              0        YES
+
+equality for EVERY N in 2..30 : True
+
+closed forms:  Q(x) = -(3N+1)/(6N^2)   and   bound = 1/(2N) + 1/(6N^2) = (3N+1)/(6N^2)
+=> the exact-ramp law SATURATES the stability inequality: both the edge term and the kernel term
+   are necessary for it, and the equality holds for every grid size.
+
+====================================================================================================
+READING
+  Sharpness inside the theorem's own framework is therefore complete for this law: the numeric input is
+  exact (tau = 0), the edge bound is exact, an arbitrary simple fraction is reachable on a fine grid,
+  and the stability inequality is attained.  The single remaining item is the frontier's class-level
+  ceiling, which needs their analytic law-plus-certificate construction and is not bounded work.

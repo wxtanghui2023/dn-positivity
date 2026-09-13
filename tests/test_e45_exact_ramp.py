@@ -93,3 +93,14 @@ def test_edge_bound_is_one_over_twice_N(N, expected_d1):
     D1 = C1 - F(1, 2)
     assert D1 == F(1, 2 * N)
     assert D1 == expected_d1
+
+
+@pytest.mark.parametrize("N", [4, 6])
+def test_ramp_law_saturates_the_stability_inequality(N):
+    """for r(x) = x the quadrature deficit equals the stability bound exactly (E45 section 24)"""
+    s_sum = sum(F(j, N * N) * F(j, N) for j in range(1, N + 1))   # sum_j s_j r(j/N)
+    Q = F(1, 3) - s_sum                                          # 1/3 - sum
+    bound = F(1, 2 * N) + F(1, 6 * N * N)                        # 1/(2N) + 1/(6N^2)
+    assert Q == -F(3 * N + 1, 6 * N * N)
+    assert bound == F(3 * N + 1, 6 * N * N)
+    assert abs(Q) == bound
