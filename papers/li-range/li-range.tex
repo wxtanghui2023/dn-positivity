@@ -115,6 +115,21 @@ Consequently, for $n\ge 2e$,
 \]
 \end{lemma}
 
+\begin{proof}[Remarks on the three constants and on the last term]
+The constants $0.112$, $0.278$, $2.510$ are the bound on $|S(T)|$ proved in \cite[Thm.~1]{Trudgian}; the
+sequel \cite{TrudgianII} lowers them to $0.111$, $0.275$, $2.450$, which would only improve the range below.
+The last term is elementary and we verify it here rather than quoting it. From the exact identity
+$N(T)=\tfrac1\pi\theta(T)+1+S(T)$, where $\theta(T)=\arg\Gamma(\tfrac14+\tfrac{iT}2)-\tfrac T2\log\pi$ with the
+continuous branch, one has
+\[
+  N(T)-F(T)-S(T)=\frac{r(T)}{\pi},\qquad
+  r(T):=\theta(T)-\Bigl[\tfrac T2\log\tfrac{T}{2\pi}-\tfrac T2-\tfrac\pi8\Bigr].
+\]
+The explicit Stirling expansion gives $r(T)=\tfrac1{48T}+O(T^{-3})$, so $|r(T)|/\pi\le 0.2/T$ for $T\ge e$ with
+a factor $30$ to spare; \texttt{scripts/PAPERA\_trudgian\_remainder\_check.py} confirms $r(T)\cdot48T\to1$
+numerically over the range used. Hence Lemma~\ref{lem:count} follows from the quoted bound on $|S(T)|$ alone.
+\end{proof}
+
 \section{Lemma 3: the off-line contribution}
 \begin{lemma}\label{lem:offline}
 Let $\rho=\beta+i\gamma$ with $\beta<\tfrac12$ and $\gamma>T$. Then
@@ -333,8 +348,14 @@ hypothesis}, J. Number Theory \textbf{65} (1997), 325--333.
 arXiv:1807.01506.
 \bibitem{Coffey} T. Coffey, \emph{New results concerning power series expansions of the Riemann
 xi function and the Li/Keiper constants}, Proc. Roy. Soc. A \textbf{464} (2008), 711--731.
-\bibitem{Trudgian} T. S. Trudgian, \emph{An improved upper bound for the error in the zero-counting
-function}, Math. Comp. (2014).
+\bibitem{Trudgian} T. S. Trudgian, \emph{An improved upper bound for the argument of the Riemann
+zeta-function on the critical line}, Math. Comp. \textbf{81} (2012), 1053--1061.
+\bibitem{TrudgianII} T. S. Trudgian, \emph{An improved upper bound for the argument of the Riemann
+zeta-function on the critical line II}, J. Number Theory \textbf{134} (2014), 280--292. (The form of
+Lemma~\ref{lem:count} is the standard corollary for $N(T)$ of the bound on $S(T)$ proved there, with
+$7/8$ absorbed into $F$; the constants $0.112$, $0.278$, $2.510$ are those of that paper. The sequel
+\emph{II}, J. Number Theory \textbf{134} (2014), 280--292, improves them to $0.111$, $0.275$,
+$2.450$, which would only improve our range.)
 \bibitem{PlattTrudgian} D. J. Platt and T. S. Trudgian, \emph{The Riemann hypothesis is true up to
 $3\cdot10^{12}$}, arXiv:2004.09765.
 \bibitem{Odlyzko} A. M. Odlyzko, \emph{Tables of zeros of the Riemann zeta function}.

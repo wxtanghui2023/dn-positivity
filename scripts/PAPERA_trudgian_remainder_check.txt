@@ -1,0 +1,27 @@
+Paper A -- Lemma 2: independent check of the remainder term 0.2/T
+identity used: N(T) = (1/pi) theta(T) + 1 + S(T), so N(T) - F(T) - S(T) = r(T)/pi
+bound to be verified: |r(T)|/pi <= 0.2/T
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+========================================================================================================
+      T            r(T)              |r(T)|/pi         0.2/T            ratio (must be <= 1)
+   10.0         0.00208455248533     0.0006635336643    0.02               0.033177
+   100.0        0.00020833454865     6.631494647e-5     0.002              0.033157
+   1000000.0    2.08333333333e-8     6.631455962e-9     2.0e-7             0.033157
+   1132490.7    1.83960310604e-8     5.855638553e-9     1.766018982e-7     0.033157
+   3.0e+12      6.94444444444e-15    2.210485321e-15    6.666666667e-14    0.033157
+
+   worst ratio |r(T)|/pi * T/0.2 = 0.033177 at T = 10.0
+   => the remainder term 0.2/T in Lemma 2 is valid (and in fact the true remainder is far smaller:
+      asymptotically |r(T)|/pi = 1/(48 pi T) + O(T^-3), i.e. about 0.0066/T)
+
+   shape check (should approach 1):  r(T) * 48 T
+      T = 100.0        : r*48T = 1.000005834
+      T = 1000000.0    : r*48T = 1.000000000
+      T = 3.0e+12      : r*48T = 1.000000000
+
+========================================================================================================
+READING
+  The last term of Lemma 2 is now checked rather than quoted: the discrepancy between N(T) and
+  F(T)+S(T) is the explicit Stirling remainder divided by pi, and it is bounded by 0.2/T across
+  the whole range the paper uses, with the true size asymptotically 0.0066/T.  The first three
+  constants are Trudgian's |S(T)| bound and are cited, not re-proved here.
