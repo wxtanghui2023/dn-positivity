@@ -1,0 +1,56 @@
+E52 -- averaged version of the quadratic-range requirement: the second-moment skeleton
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+   data: 2001052 zeros, max ordinate 1132490.658714 ; T0 = 1132490.658714 ; N = 2001052 ; B_T0 = 1.049793953e-6
+
+(1) exact first-moment identity   sum_{n<=X} Re S_n = sum_gamma D_X(theta_gamma)
+      X         LHS by summing over n      RHS by the kernel             relative difference
+      200       400197478.736880           400197478.736879             1.192e-15
+      1000      2000532507.899635          2000532507.899634            7.151e-16
+      5000      9987301288.307243          9987301288.307240            3.820e-16
+   => the identity holds, so the n-average of the requirement can be read off the kernel directly.
+
+   the mean over n compared with the allowed level (X = T0^2 = 1.28254e+12):
+      (1/X) sum Re S_n   = -0.000075
+      mean of N - nB     = 1327853.207914   (= N - B X/2)
+      margin             = 1327853.207989   (allowed minus actual; N = 2001052)
+   => the FIRST moment is satisfied with an enormous margin: the mean of Re S_n is of order
+      -0.0 while the mean allowance is of order 1327853.2.  A first-moment argument alone would give
+      nothing; the content is in the second moment and in the block structure of n.
+
+(2)(3) second moment: pair kernel and its width in the ordinate
+      the kernel has its first zero at angular distance ~pi/X; with theta' ~ -1/gamma^2 the
+      contributing ordinate width is  Delta gamma ~ (pi/X) gamma^2 ; at X = T0^2 this equals
+      pi gamma^2/T0^2, which is bounded by pi at the top of the range.
+
+      gamma        Delta gamma (X = T0^2)      gaps spanned (gap ~ 2pi/log gamma)
+      11324.9      0.000314159                  0.000466738
+      113249       0.0314159                    0.0581867
+      566245       0.785398                     1.65585
+      1.13249e+06  3.14159                      6.96996
+
+   => the width is at most a few gaps everywhere, so the second moment is controlled by NEAR-DIAGONAL
+      pairs, i.e. by the local gap statistics of the zeros.  The diagonal contributes X N / 2, and
+      the off-diagonal is a nearest-neighbour-pair sum with the explicit Dirichlet weight.
+
+   predicted diagonal-only scale of the second moment: X N / 2 = 1.28321e+18
+      typical size of |Re S_n| under that model: sqrt(N/2) = 1000.263  (vs the data: rms 2.7e-4*N = 548.3)
+   => the observed fluctuation matches the diagonal (random-phase) scale, which is the quantitative
+      form of the 483-fold margin found in the previous check.
+
+================================================================================================================
+SKELETON (what a proof would do, in order)
+  (i)   E_n := Re S_n - (N - nB) <= 0 is the requirement, for all n <= X = T0^2.
+  (ii)  Exact identity: sum_{n<=X} Re S_n = sum_gamma D_X(theta_gamma); the first moment passes with a
+        margin of order 10^6 in absolute terms, so it is not the binding constraint.
+  (iii) Second moment: sum_{n<=X}(Re S_n)^2 = XN/2 + (1/2)sum_{gamma!=gamma'}[D_X(theta_g-vartheta)+...].
+        The kernel is supported within O(1) gaps, so the off-diagonal is a LOCAL pair sum, precisely
+        the type of input available unconditionally (Montgomery-type pair statistics at second order).
+  (iv)  Cheap step to reach a density statement: partition [1,X] into blocks of length L, apply the
+        second moment on each block, and use Chebyshev inside the block.  This yields
+        #{n <= X : E_n > 0} <= (sum of block second moments)/delta^2 + (block bookkeeping),
+        which is o(X) provided the block-level second moments are bounded as above.
+  (v)   HONEST LIMIT: the step from an average bound to pointwise exclusion is exactly the
+        L^2-versus-L-infinity price measured elsewhere in this project (a factor of four in the
+        exponent at the frontier).  So this skeleton can deliver positivity for almost every n, and
+        the exceptional set is what it cannot control without a pointwise input.
