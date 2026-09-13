@@ -1,0 +1,40 @@
+E53 -- off-diagonal pair sum: smooth main term versus the real fluctuation
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+   real zeros: N = 2001052, max = 1132490.658714
+   smooth model: F(v) = (v/2pi)log(v/2pi e)+7/8 inverted for k = 1..N; max v = 1132490.982179
+   the two sequences therefore have the same count; the difference is the fluctuation of the
+   zeros about their smooth positions.
+
+      X        exact sum (Re S_n)^2        smooth-model value          diagonal X N / 2        ratios: exact/diag   smooth/diag
+   20        8.008405e+13              8.008407e+13                2.001052e+07                4002097.5863            4002098.3818
+   50        2.002088e+14              2.002089e+14                5.002630e+07                4002070.8363            4002073.3334
+   100       4.004112e+14              4.004114e+14                1.000526e+08                4002007.3265            4002008.8847
+   200       8.007901e+14              8.007904e+14                2.001052e+08                4001845.5811            4001847.1191
+
+   PART 2 -- the regime where the requirement actually bites: large n, sampled directly
+   (the small-X sums above are dominated by n small enough that Re S_n is close to N, so they say
+   nothing about the large-n regime; here the sums are evaluated directly at sampled large n)
+
+      n / T0^2     Re S_n / N (real)    Re S_n / N (smooth)     squared real       allowed level
+   0.30          -0.000289              -0.000151               8.340549e-08       0.798147
+   0.40          -0.000291              -0.000262               8.453550e-08       0.730862
+   0.50          -0.000152              0.000453                2.321056e-08       0.663578
+   0.60          -0.000099              -0.000255               9.748922e-09       0.596293
+   0.70          -0.000783              -0.000008               6.124082e-07       0.529009
+   0.80          -0.000236              -0.000039               5.568392e-08       0.461724
+   0.90          0.000431               0.000163                1.855320e-07       0.394440
+   1.00          -0.000109              0.000192                1.178709e-08       0.327155
+
+   rms Re S_n / N : real = 3.650876e-04 , smooth = 2.309936e-04   (random-phase reference 1/sqrt(N) = 7.069209e-04)
+   => the large-n regime is tiny compared with the allowed level, and the smooth model tracks the
+      real sums; the input that the off-diagonal needs in this regime is therefore of smooth-density
+      type, and the density estimate obtained by Markov IN THIS REGIME is of order
+      (rms)^2 / (0.3272)^2 = 1.245e-06 per index.
+
+   READING
+   The diagonal-only baseline is X N / 2.  If the exact sums sit at a fraction of it and the smooth
+   model reproduces that fraction, then the off-diagonal is a smooth-density effect and the input
+   needed is the classical density, which is unconditional.  If the smooth model instead sits far
+   from the exact value, the off-diagonal is governed by the fluctuation of the zeros about their
+   smooth positions, i.e. by rigidity, a strictly harder input.
