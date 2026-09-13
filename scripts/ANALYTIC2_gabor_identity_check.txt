@@ -1,0 +1,43 @@
+E46 / WP2 -- Poisson-Gabor identity at the critical density: independent numerical verification
+h = 2*pi/L with L = 12.0  =>  h = 0.523598775598 ; offset-free instance (the identity is offset-independent)
+claim: sum_k phi_hat(z-alpha_k) phi_hat(z'-alpha_k) = L * (phi^2)_hat(z-z')
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+
+CASE A -- indicator window (closed form); |phi_hat(w)| ~ 1/|w|, so partial sums converge slowly
+   z = 0.7, z' = 1.9 :  reference = (15.873357276983061 + 0.0j)
+      K =     10 : |partial sum - reference| = 2.3686629
+      K =    100 : |partial sum - reference| = 0.23280001
+      K =   1000 : |partial sum - reference| = 0.023369766
+      K =  10000 : |partial sum - reference| = 0.0023380131
+      K = 100000 : |partial sum - reference| = 0.00023381182
+   z = 2.3, z' = 2.3 :  reference = (144.0 + 0.0j)
+      K =     10 : |partial sum - reference| = 2.9949702
+      K =    100 : |partial sum - reference| = 0.2590702
+      K =   1000 : |partial sum - reference| = 0.025974543
+      K =  10000 : |partial sum - reference| = 0.0025985737
+      K = 100000 : |partial sum - reference| = 0.00025986901
+
+CASE B -- C-infinity bump window (transform by quadrature); |phi_hat| decays faster than any power
+   ||phi||_2^2 = 0.79851672506996562934   =>  L*||phi||_2^2 = 9.5822007008395875521
+   z = 0.7+0.0i, z' = 1.9+0.0i :  reference = (-0.529710833406337546 + 0.0j)
+      K =    5 : |partial sum - reference| = 0.011008486
+      K =   20 : |partial sum - reference| = 6.5429993e-8
+      K =   60 : |partial sum - reference| = 2.0508245e-13
+   z = 0.3+1.0i, z' = 2.4+0.0i :  reference = (0.367097772010893556 + 7.6226953562422866j)
+      K =    5 : |partial sum - reference| = 0.95964926
+      K =   20 : |partial sum - reference| = 2.1124153e-5
+      K =   60 : |partial sum - reference| = 5.5359936e-11
+
+TRACE COROLLARY -- case B with z = z' = gamma (real): sum_k phi_hat(gamma-alpha_k)^2 = L*||phi||_2^2
+      gamma = 0.8, K =   20 : partial sum = 9.58220066640518737   (limit 9.58220070083958755)
+      gamma = 0.8, K =   60 : partial sum = 9.58220070083941711   (limit 9.58220070083958755)
+      gamma = 2.9, K =   20 : partial sum = 9.58219993990481501   (limit 9.58220070083958755)
+      gamma = 2.9, K =   60 : partial sum = 9.58220070083882893   (limit 9.58220070083958755)
+
+====================================================================================================
+READING
+  Case A shows the algebraic approach of the partial sums for a discontinuous window; case B shows that
+  with a smooth compactly supported window the identity is confirmed to high precision from a few dozen
+  terms, which is the regime in which the theorem is used.  The offset independence asserted in the
+  header is why the verification may be run at zero offset.
