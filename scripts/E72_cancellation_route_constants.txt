@@ -1,0 +1,24 @@
+E72 -- constants of the cancellation route that would need no pointwise input
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052, T0 = 1132490.658714, X = T0^2 = 1.28254e+12
+  counting error S: sup = 1.7994, rms over the table = 0.6003, classical scale log T0 = 13.9399
+  mean gap = 0.565941, min gap = 0.002959, max gap = 6.887314
+
+      n/X     range length    int S^2 (table)   CS bound      smooth-part bound   total bound    0.8N
+      0.4501  372700          1.455e+05         2.328e+05     8.558               2.329e+05       1.601e+06
+      0.5473  294671          1.155e+05         1.845e+05     7.038               1.845e+05       1.601e+06
+      0.5086  324842          1.271e+05         2.032e+05     7.574               2.033e+05       1.601e+06
+      0.6820  197230          7.766e+04         1.238e+05     5.648               1.238e+05       1.601e+06
+      0.4405  380826          1.486e+05         2.379e+05     8.744               2.379e+05       1.601e+06
+      0.7160  174217          6.868e+04         1.094e+05     5.38                1.094e+05       1.601e+06
+
+  reference: measured slow-region sums earlier were between 0.77 and 181
+  Selberg target for the whole range: T0*log(log T0)/(2 pi^2) = 1.512e+05, table value = 4.081e+05
+
+======================================================================================================================
+READING
+  The route is viable if the total bound stays below four fifths of the count for every index, with
+  the Cauchy-Schwarz term carrying the discrepancy and the smooth part carried by monotone-phase
+  integration by parts.  The margin, not the truth, decides: even a crude bound suffices if it is
+  uniform in the index.
