@@ -4,6 +4,7 @@
 \usepackage{enumitem}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
@@ -249,6 +250,82 @@ range for $\lambda_n$, which is a folklore consequence of $|1-1/\rho|=1$ on the 
 $|1-1/\rho|>1$ off it; what is given here is an elementary, explicit, and numerically
 calibrated form of the resulting range.
 
+\appendix
+
+\section{The uniform variant, and what is provable there}
+\label{app:uniform}
+
+Theorem~\ref{thm:main} fixes $n$ and counts zeros in a window; it does not require any estimate
+uniform in $n$. It is nevertheless useful to record a stronger variant, because saying exactly
+what is and is not elementary about it prevents the range from being misread. In the uniform
+variant one asks, at a verified height $T_0$, for
+\begin{equation}\label{eq:uniform}
+  \sum_{\gamma\le T_0}\bigl(1-\cos n\theta_\gamma\bigr)\;\ge\;n\,B_{T_0}
+  \qquad\text{for every }1\le n\le T_0^{2},
+\end{equation}
+with $B_{T_0}=\frac12\sum_{\gamma>T_0}\gamma^{-2}$, equivalently $|S_n|\le N(T_0)-nB_{T_0}$ for
+$S_n=\sum_{\gamma\le T_0}e^{in\theta_\gamma}$. This is strictly stronger than what
+Theorem~\ref{thm:main} needs, and the next two statements are the part of it that is elementary.
+
+\begin{proposition}[small $n$, elementary]\label{prop:small}
+Let $T_0=1.132490\,658\,714\,411\cdot10^{6}$ and let $\gamma_1=14.134\,725\ldots$ be the first
+zero ordinate. Then \eqref{eq:uniform} holds for every integer $n$ with $1\le n\le\gamma_1$:
+the inequality is implied by $n\ge B_{T_0}\big/\bigl(\tfrac13\sum_{\gamma\le T_0}\theta_\gamma^{2}\bigr)
+=1.36\cdot10^{-4}$, which is immediate.
+\end{proposition}
+\begin{proof}
+$\theta_\gamma=2\arctan\frac1{2\gamma}\le\theta_{\gamma_1}=0.0707\ldots$, so $n\le\gamma_1$ gives
+$n\theta_\gamma\le0.99<1$: the phases do not wrap. On $[0,1]$ one has $1-\cos x\ge x^{2}/3$
+(the function $x\mapsto1-\cos x-x^{2}/3$ is non-negative there), whence
+$\sum_{\gamma\le T_0}(1-\cos n\theta_\gamma)\ge\tfrac{n^{2}}{3}\sum_{\gamma\le T_0}\theta_\gamma^{2}$.
+Numerically $\sum_{\gamma\le T_0}\theta_\gamma^{2}=2.3104\cdot10^{-2}$, so the right-hand side is
+$7.70\cdot10^{-3}n^{2}$, which exceeds $nB_{T_0}$ as soon as $n\ge1.36\cdot10^{-4}$. The margin at
+$n=1$ is $\delta=5.75\cdot10^{-9}$.
+\end{proof}
+
+\begin{proposition}[smooth part, van der Corput]\label{prop:smooth}
+Write $S_n=S_n^{\rm smooth}+D_n$, where $S_n^{\rm smooth}$ is formed from the monotone model
+$\bar N^{-1}(k+\tfrac12)$ of the zero ordinates, $\bar N(t)=\frac{t}{2\pi}\log\frac{t}{2\pi e}+\frac78$.
+Let $\gamma_{\rm res}=8.2683\cdot10^{5}$ be the resonance point defined by $|\varphi'|=1$ for
+$\varphi(k)=n\theta\bigl(\bar N^{-1}(k+\tfrac12)\bigr)$ at $n=T_0^{2}$, and let $M_B$ be the number of
+zeros with $\gamma_{\rm res}<\gamma\le T_0$. Then $M_B=581\,491$ and, by the second-derivative test
+(the phase is monotone with $|\varphi''|=6.58\cdot10^{-7}$ there),
+\[
+  |S_n^{\rm smooth}|\;\le\;M_B\sqrt{|\varphi''|}+|\varphi''|^{-1/2}=471.7+1232.7=1704,
+\]
+while the allowance of \eqref{eq:uniform} at $n=T_0^{2}$ is $6.546544\cdot10^{5}$: the mean-density
+model therefore already produces the required cancellation with a factor $384$ to spare, the fast
+region $|\varphi'|\ge1$ being handled by the first-derivative test with a dyadic shell summation.
+Consequently every obstruction in \eqref{eq:uniform} sits in the rigid error $D_n$.
+\end{proposition}
+
+\begin{remark}[what does not work, and by how much]\label{rem:negative}
+Three classes of attempts fail, and it is worth recording the margins so that the range of
+Theorem~\ref{thm:main} is not mistaken for something it is not.
+\emph{(i) Rigidity.} Estimating $D_n$ by the second-derivative test on the \emph{actual} zero
+ordinates splits the sum at $\gamma_{\rm res}$: on the fast region the test needs
+$\max_k|\operatorname{gap}_{k+1}-\operatorname{gap}_k|\le0.675$, while the measured maximum is
+$1.663$; the resulting bound exceeds the allowance by a factor $1.5$. On the slow region
+$\gamma<\gamma_{\rm res}$, containing $1.42\cdot10^{6}$ zeros, the second differences are
+$1.9976\cdot10^{10}$ in size and the test is void altogether.
+\emph{(ii) The second-derivative test in aggregate form.} Requiring only a bound on the total
+second-difference mass $\Lambda=\sum_k|\Delta^{2}\varphi_k|$ is false: a single full-turn step
+contributes $4\pi$ of mass while leaving the whole sum coherent, missing the truth by a factor
+$369.5$, and a convex parabola with one-signed second differences defeats the same form by a
+factor up to $3.35$. The standard test needs a sign-definite second derivative, which the
+sequence of phases here does not have (its second differences are of mixed sign in a split of
+roughly one half each, dominated by the jumps of the zero gaps).
+\emph{(iii) A pair-correlation input.} The negative mass of $|S_n|^{2}$ is spread over all
+separations rather than concentrated at neighbours, and the double sum is statistically
+indistinguishable from one built from independent uniform phases; the neighbour term alone is
+positive, so pair-correlation information controls a single, wrongly signed part of the sum and
+cannot supply the cancellation. What is missing is not a stronger input but a more \emph{uniform}
+one: an estimate of the counting-error increments valid simultaneously for all frequencies
+$\lambda=2\pi n/(\gamma^{2}\log\gamma)$ when $n\le T_0^{2}$, of strength $|D_n|=o(N)$.
+No such statement is available in the literature, and the search for one is a separate line of
+work \cite{BT26ux}.
+\end{remark}
+
 \begin{thebibliography}{99}
 \bibitem{Li} X.-J. Li, \emph{The positivity of a sequence of numbers and the Riemann
 hypothesis}, J. Number Theory \textbf{65} (1997), 325--333.
@@ -265,5 +342,7 @@ $3\cdot10^{12}$}, arXiv:2004.09765.
 Amer. J. Math. \textbf{63} (1941), 211--232.
 \bibitem{BT26} H.~Tang, \emph{A complete proof of the classical case of Brown's theorem on
 zero-free regions and Li coefficients}, draft, September 2026 (companion note).
+\bibitem{BT26ux} H.~Tang, \emph{Towards a uniform count of the zero ordinates: the rigid error and
+its resonance}, draft, September 2026 (companion note, in preparation).
 \end{thebibliography}
 \end{document}
