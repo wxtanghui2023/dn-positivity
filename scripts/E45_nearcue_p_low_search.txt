@@ -1,0 +1,17 @@
+E45 step 18 -- VERIFIED small-p exact-ramp laws on the refined grid (N = 4, Q = 16)
+by construction and exact sign tests, not by trusting a program's boundary optimum
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+groups (value vector, mark-one count): 133   [configurations 3620]
+mark-one counts present: [0, 2, 4]
+
+exact verified laws found: 11
+   smallest verified simple fraction: p in [4098685059279100941669102173811150704622819734732433093285670341/177668750000000000000000000000000000000000000000000000000000000000, 16394740237116403766676408700657725454895749030002508267363991021/710675000000000000000000000000000000000000000000000000000000000000]  =  [0.023069251, 0.023069251]
+   support size 6 groups; mark-one counts [0, 2, 2, 2, 2, 2]
+   coarse value = 0.713388348 ; frontier = 0.6818287
+   verdict: BELOW the frontier -> a ceiling-comparable exact-ramp law exists on this grid
+
+====================================================================================================
+READING
+  Every number here comes from a concrete law whose ramp identity and weight signs were checked
+  exactly, so unlike the program values of steps 14 and 17 it can be trusted as it stands.

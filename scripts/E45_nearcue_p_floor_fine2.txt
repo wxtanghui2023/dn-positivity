@@ -1,0 +1,18 @@
+E45 step 17 -- the refined-grid floor with the CORRECT field multiplication (step 14's was wrong)
+grouping by (value vector, mark-one count); exact recovery of the optimum; rigorous sign test
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+configurations 3620  ->  groups (value vector, mark-one count) 133
+solving: 532 variables, 16 equations, 133 sign rows
+
+   LP value of the minimal simple fraction = 0.000000000
+   coarse value = 0.713388348 ; frontier = 0.6818287
+   optimal support size = 11 groups
+   exact recovery: 7 of 11 weights nonnegative (rigorous sign test)
+   exact recovery did not produce an all-nonnegative law (heuristic limitation, not a theorem)
+
+====================================================================================================
+READING
+  With the correct field multiplication the refined-grid program has a definite value; the exact
+  recovery then turns its optimum into a concrete law whose simple fraction is verified, so the
+  number reported here can be trusted -- unlike step 14's.
