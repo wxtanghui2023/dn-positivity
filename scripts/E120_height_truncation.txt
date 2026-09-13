@@ -1,0 +1,26 @@
+E120 -- height truncation diagnostic
+zeros loaded: 2001052, max ordinate 1132490.658714
+
+x0 = 1000000.0   h = sqrt(x0) = 1000.000   natural height T = 1000.000   u = 9.995e-04
+
+zeros: head (gamma<=T) = 649 ; tail (T<gamma<=1.05 x0) = 1842007
+
+SUM |A| over head  = 6.384453e-01
+SUM |A| over tail  = 1.239110e+01
+ratio tail/head    = 19.4082
+predicted head ~ (1/2pi) log T          = 1.099403
+predicted tail ~ (1/4pi)(log^2(1.05x0)-log^2 T) = 11.499084
+
+cumulative |A| versus cut (the diagnostic):
+  cut =      1.0 T : n_zeros =      649 : sum|A| = 6.384453e-01
+  cut =      2.0 T : n_zeros =     1517 : sum|A| = 1.423616e+00
+  cut =      5.0 T : n_zeros =     4520 : sum|A| = 3.069221e+00
+  cut =     10.0 T : n_zeros =    10142 : sum|A| = 3.919371e+00
+  cut =     50.0 T : n_zeros =    63519 : sum|A| = 6.557586e+00
+  cut =    100.0 T : n_zeros =   138069 : sum|A| = 7.867311e+00
+  cut =    500.0 T : n_zeros =   818415 : sum|A| = 1.127774e+01
+  cut =   1000.0 T : n_zeros =  1747146 : sum|A| = 1.291031e+01
+
+READING: if the sum keeps GROWING well past cut = T, the natural-height
+truncation is the bookkeeping error, and every E117-E119 estimate that
+truncated at T is (systematically, not marginally) too small.
