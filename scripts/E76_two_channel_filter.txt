@@ -1,0 +1,38 @@
+E76 -- two-channel (average + difference) test in the E75 weighted Gram form
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  table: N = 2001052 zeros, top ordinate T = 1132490.658714
+  deep fast region: gamma <= 4000, M = 3474 zeros, index interval I = [n0, 2 n0] with n0 = 1.77778e+08
+
+(1) theta_g = 1/g approximation: max relative deviation over the region = 4.170e-04
+    exact derivative identity: sum_g theta_g e^{i n theta_g} = (1/i) d/dn sum_g e^{i n theta_g}
+    (holds termwise because d/dn e^{i n theta_g} = i theta_g e^{i n theta_g}, with theta_g independent of n)
+
+(2) exact two-channel identity S_D = A_h + D_h, checked pointwise
+      h=n0/1e4    max |A_h + D_h - S_D| (per term, hence total)   max |a_g|    max |d_g|
+      0.0001      1.735e-18                                     0.0001125    0.07069
+      0.01        5.421e-20                                     1.125e-06    0.07072
+      1           0.000e+00                                     1.125e-08    0.07072
+
+(3) channel energies Q(a) = sum_{g,g'} a_g conj(a_g') K(g,g'), K = INT_I e^{i(theta_g-theta_g')n} dn
+      h              Q(A_h)/L          Q(D_h)/L          Q(theta)/L      ratio A/(A+D)   which band gamma*
+      20             0.02163           0.003407          0.0228          0.8639          gamma* = h = 20
+      100            0.01157           0.0176            0.0228          0.3966          gamma* = h = 100
+      1000           0.002032          0.0224            0.0228          0.0831          gamma* = h = 1000
+      4000           0.0004662         0.02293           0.0228          0.0199          gamma* = h = 4000
+
+(4) redundancy audit: for the band that a chosen h selects, the product of band width and interval length
+      gamma*      band width (1/gamma* - 1/(2 gamma*))   Omega*L        Nyquist factor sqrt(Omega*L)
+      20          0.025                                  4.444e+06      2108
+      100         0.005                                  8.889e+05      942.8
+      1000        0.0005                                 8.889e+04      298.1
+      1e+04       5e-05                                  8889           94.28
+      4000        0.000125                               2.222e+04      149.1
+
+======================================================================================================================
+READING
+  The two channels are exact and complementary, and the difference channel does suppress the high-gamma
+  tail as claimed.  The decisive numbers are in part (4): the index interval is so long compared with the
+  coherence length of any selected frequency band that the product of band width and interval length is
+  enormous, so the pointwise extraction of each channel's value still pays exactly the Nyquist factor
+  that the previous step identified.  If that is what the numbers show, this is the same wall again.
