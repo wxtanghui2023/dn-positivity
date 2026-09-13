@@ -1,0 +1,29 @@
+E65 -- minimal input for a pointwise phase-uniformity statement
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  scales: N = 100000 zeros, T = 74920.8, X = T^2 = 5.613e+09, |I| = X/2 = 2.807e+09
+
+  (1) thresholds c_k from the Markov arithmetic with Gaussian moment constants C_k = (2k-1)!!
+      k    C_k          c_k = (C_k*|I|/N^k)^(1/(2k))      is c_k < 0.2 (the needed value)?
+      1    1            167.528                          no
+      2    3            0.957909                         no
+      3    15           0.186514                         yes
+      4    105          0.0858362                        yes
+
+  (2) measured moments of S_n on the real zeros (sampled over n)
+      samples n in [X/2, X], 400 draws
+      moment      measured mean        Gaussian prediction     ratio measured/predicted
+      M_2         35284               100000                  0.3528
+      M_4         2.65856e+09         3e+10                   0.0886
+      M_6         3.11266e+14         1.5e+16                 0.0208
+
+      max |S_n| observed: 515.114         = 5.151e-03 x N        (needed: <= (1-c) N)
+      rms |S_n| observed: 187.84          = 1.878e-03 x N
+
+======================================================================================================================
+READING
+  The thresholds decide the question: the order k suffices if its threshold c_k is below the value the
+  argument needs, because then Markov already gives zero exceptions at a threshold stricter than
+  necessary.  The measured moments then say whether real zeros really sit at the Gaussian size, which is
+  what the arithmetic assumes.  Together they identify the minimal order, and thereby whether this
+  trigger needs the same kind of input as the other one, namely an unconditional higher moment.
