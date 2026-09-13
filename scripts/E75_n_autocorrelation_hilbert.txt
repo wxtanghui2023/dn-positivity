@@ -1,0 +1,45 @@
+E75 -- n-autocorrelation / Hilbert kernel test for the deep fast region
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  table: N = 2001052 zeros, top ordinate T = 1132490.658714
+  deep fast region taken as gamma <= 0.3*sqrt(n0) with n0 = (gamma_max/0.3)^2, so that n0 = T^2
+  at the largest truncation; the index interval is I = [n0, 2 n0]
+
+(1) exact kernel K(g,g') = INT_{n0}^{2 n0} e^{i(theta_g - theta_g') n} dn, normalised G = K/|I|
+    diagonal |I| by construction; off-diagonal |G| = |e^{i D 2n0}-e^{i D n0}|/(|D| n0) <= 2/(|D| n0)
+    with D = theta_g - theta_g' ~ -delta_gamma/gamma^2, so |G| ~ 2 gamma^2/(|delta_gamma| n0)
+
+(2) row-sum bound max_g sum_g' |G(g,g')|, as a function of the truncation
+      gamma_max      M        log M     rowsum(a=1)   rowsum/M     rowsum(a=theta)   ratio to log M
+      1000          649      6.4754    2.2821        0.0035       0.005001          0.3524
+      2000          1517     7.3245    2.8931        0.0019       0.005001          0.3950
+      4000          3474     8.1531    3.2250        0.0009       0.005001          0.3956
+      8000          7830     8.9657    3.7031        0.0005       0.005001          0.4130
+      1.6e+04       17425    9.7657    4.0690        0.0002       0.005001          0.4167
+
+    reading: if the row sum grows like a constant, the kernel is bounded and the route has a chance;
+    if it grows like log M, the kernel is a logarithmic Hilbert kernel and the route is structurally
+    blocked, as the preliminary analysis of the density accumulation suggested.
+
+(4) split G = (diagonal) + (Hilbert main term) + R :
+      M = 3474, |I| = n0 = 1.77778e+08
+      max row sum:   full kernel 3.2250   Hilbert main term (2/|D|n0) 3.3894
+      => the remainder R = G - Hmain - diag has max row sum -1.1644
+
+(5) implied bounds, with the CORRECT derivative weights theta_gamma * theta_gamma' (entries t_g t_g' G).
+    NOTE: an earlier run of this script used the squared weights and understated the derivative energy by
+    about two hundred times; the numbers below replace those.  The derivative energy is n0 * 0.005001,
+    since the weighted row sum is diagonal-dominated by theta(gamma_1)^2 = 0.005001 in every truncation.
+      M        n0              energy            derivative energy   |S_D| bound     budget        verdict
+      3474     1.77778e+08     1.99176e+12       889100              51589.6        1.36e+06      FITS
+      7830     7.11111e+08     2.0619e+13        3.5564e+06          130868         1.36e+06      FITS
+      17425    2.84444e+09     2.01678e+14       1.4225e+07          327298         1.36e+06      FITS
+      margins: 26x / 10x / 4.2x, decreasing with the truncation because |S_D| grows like M^1.15 while
+      the allowance is fixed; extrapolating to the real scale gamma_c = 0.3T gives about 8x over budget.
+
+======================================================================================================================
+READING
+  The route lives if the operator norm of the normalised kernel is bounded, in which case the energy is
+  of order M and the Sobolev step converts the averaged control into a pointwise bound within budget. It
+  dies if the operator norm grows with the truncation, which would mean that the n-integration does not
+  kill the off-diagonal but produces a logarithmic Hilbert kernel, exactly the structural obstruction.
