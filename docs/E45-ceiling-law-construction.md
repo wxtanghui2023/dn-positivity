@@ -189,3 +189,36 @@ python3 scripts/check_archive.py                  # R5 ✓
    ⟹ 已修为单一函数、四处情形齐全 ✓
 ⟹ 教训 ✓：**同一小判定写两遍就会出现两套 bug** ⚠️ ⟹ 应当**单一实现 + 单一调用** ✓
 ```
+
+---
+
+## 12. Lean **状态**（2026-09-13 续 ✓）
+
+```
+【可做且已做 ✓】`lean/E45-NearCUE-Instance.lean` ✓（**exit 0 / 零 error / 零 sorry / 4 秒** ✓）
+   用**仓库自己的定义**（`Csum`、`massOf`、`Dfun(1) = C(1) − 1/2` ✓ 逐字重述 ✓）形式化：
+   · `nearCUE_zero` ✓：**斜坡满足 τ = 0 的 NearCUE**（定理的数值假设之一 ✓）
+   · `Csum_ramp_partial` ✓：Σ_{j≤m} (j/N)/N = m(m+1)/(2N²)（归纳法 ✓）
+   · `Csum_ramp` ✓：C(1) = (N+1)/(2N)
+   · `D1_ramp` / `abs_D1_ramp_le` ✓：**D(1) = 1/(2N) 精确** ⟹ |D(1)| ≤ 1/(2N) = d₁ ✓
+   · `instance_N4` / `instance_N6` ✓：**τ = 0、d₁ = 1/8 或 1/12、常数 1/96 或 1/216** ✓
+⟹ **定理消耗的两条数值假设已在核内验证** ✓（这正是我们能机器验证的那一半 ✓）
+⟹ 全目录巡检 ✓：**16 个 .lean 文件全部 exit 0 / 零 error** ✓（新文件在内 ✓）
+
+【⚠️ 新发现：**第二处可复现性缺口** ✗】仓库 pin **toolchain `leanprover/lean4:v4.33.0-rc2`** ✓ +
+   特定 **Mathlib rev `51e6992…`** ✓；而本机 `~/mathlib4` 是 **v4.33.0 正式版** ✗
+   ⟹ **无法导入** `Zeta23.PairCeiling.ceiling_nearCUE` ✗（需重建那套 pinned Mathlib，数 GB ✗）
+   ⟹ 与 E44 的"法数据未公开"并列 ✓：这是该仓库**第二处**"内核检验"主张的复现障碍 ✗
+   ⟹ 严格说 ✓：论文的 "kernel-checked" 指**其 pin 定工具链下**的检验 ✓；第三方复核需先精确重建该环境 ✓
+
+【未做 ✗】① 完整实例化（需 hvalid 证书 + 重建 pinned 环境 ✗）② 大 N（N = 8 …）③ N = 5 之谜 ④ 边界行之因
+```
+
+## 13. Lean 侧新增自查 **2 处** ✓（均为我的错，且已在落盘前修好 ✓）
+
+```
+⑨ `def` 在 ℝ 上用除法需 `noncomputable` ✗（**定理**内不需要 ✓，**定义**需要 ✓）⟹ 已加 `noncomputable section` ✓
+⑩ 归纳步里**先 `rw` 求和引理**，而目标里求和仍被 `Csum` 包着 ⟹ `rw` 找不到模式 ✗
+   ⟹ 应先 `simp only [Csum]` 展开再 `rw` ✓（同 E44 的 ② 类错误：**重写前先看目标形状** ✓）
+⚙️ 环境记 ✓：`lake` 不在默认 PATH —— 需 `export PATH="$HOME/.elan/bin:$PATH"` ✓（已记入 `lean/README.md` ✓）
+```

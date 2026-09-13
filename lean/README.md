@@ -55,7 +55,7 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 ```
 命令 ✓：for f in lean/*.lean; do (cd ~/mathlib4 && lake env lean "$f"); done
         （逐文件记录 exit 码 / `: error:` 数 / `: warning:` 数 ✓）
-结果 ✓：**15 个 .lean 文件 / 15× exit 0 / 共 【0】个 error / 【1】个 warning** ✅
+结果 ✓：**16 个 .lean 文件 / 16× exit 0 / 共 【0】个 error** ✅（2026-09-13 续：新增 `E45-NearCUE-Instance.lean` ✓）
    · 唯一 warning 所在 = `PB-Lemma3-identity.lean`（**非** error ✓）
    · ⚠️ **巡检前**：`PA-Basic.lean` = **3 个 error** ✗（即上面修正 ①②③ ✓）⟹ 修后全绿 ✓✓
 【对记录的影响 ✓】
@@ -280,4 +280,18 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | 系数 | S4 系数代数 ✓ | ✅ |
 ⟹ Lemma S4 的数学内容【已全部机器验证】✓✓
    （含论文强调的「边界项必须保留」✓）
+```
+
+## E45 侧：近-CUE 法的**数值假设**形式化（2026-09-13 ✓）
+```
+`E45-NearCUE-Instance.lean` ✅（**exit 0 / 零 sorry / 4 秒** ✓）—— 见 `docs/E45-ceiling-law-construction.md` §12 ✓
+   内容 ✓：用**前沿仓库自己的定义**（`Csum`、`massOf`、`Dfun(1) = C(1) − 1/2` ✓ 逐字重述 ✓）证明：
+   · `nearCUE_zero`：**斜坡满足 τ = 0 的 NearCUE** ✓（即天花板定理的数值假设之一 ✓）
+   · `Csum_ramp_partial` / `Csum_ramp` / `D1_ramp` / `abs_D1_ramp_le`：**D(1) = 1/(2N) 精确** ✓ ⟹ d₁ = 1/(2N) ✓
+   · `instance_N4` / `instance_N6`：**τ = 0、d₁ = 1/8 或 1/12、常数 1/96 或 1/216** ✓
+【⚠️ 重要发现 ✓】**无法直接导入前沿仓库的定理** ✗：其 `lean-toolchain` pin **`v4.33.0-rc2`** ✓
+   且 Mathlib pin **`51e6992…`** ✓，而本机是 **`v4.33.0` 正式版** ✗ ⟹ 需重建那一套 pinned Mathlib（数 GB ✗）
+   ⟹ 故本文件是**独立**形式化 ✓（重述其定义 ✓，不 import 其模块 ✓）；此障碍已记入 E45 档 §12 ✓
+   （与 E44 的“法数据未公开”并列 —— 同一仓库的**两处**复现障碍 ✗ ✓）
+⚙️ 环境记 ✓：`lake` 不在默认 PATH ✓ ⟹ 每次先 `export PATH="$HOME/.elan/bin:$PATH"` ✓
 ```
