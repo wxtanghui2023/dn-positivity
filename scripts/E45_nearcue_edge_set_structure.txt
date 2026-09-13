@@ -1,0 +1,26 @@
+E45 step 8 -- structure of the achievable EDGE set (continuous interval vs isolated points)
+theory: for support m > N the solution set is an affine family of positive dimension, the edge
+functional is linear on it, and the nonnegativity cuts a polytope => the image should be an interval
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2)) : 8 equations per law; sampling supports of size 5..7
+   distinct edge values S(N) collected: 16
+   min = 1.000000000   max = 3.292893219   (theoretical ceiling (sum m)^2/N = 4.0)
+   largest gaps between consecutive values: 0.439340, 0.292893, 0.242641, 0.171573, 0.146447
+   median gap = 0.146446609
+   => large gaps: the collected values look ISOLATED (a discrete set at this sampling)
+   sample of collected values: 1.000000, 1.146447, 1.292893, 1.414214, 1.585786, 1.828427, 1.853553, 1.878680, 2.000000, 2.146447, 2.585786, 2.609476
+
+N = 6 (Q = 12, field Q(sqrt3)) : 12 equations per law; sampling supports of size 7..9
+   distinct edge values S(N) collected: 50
+   min = 1.000000000   max = 2.675473843   (theoretical ceiling (sum m)^2/N = 6.0)
+   largest gaps between consecutive values: 0.288034, 0.187440, 0.104231, 0.079824, 0.074775
+   median gap = 0.019993951
+   => large gaps: the collected values look ISOLATED (a discrete set at this sampling)
+   sample of collected values: 1.000000, 1.009573, 1.020513, 1.047865, 1.095238, 1.129602, 1.178633, 1.233952, 1.248352, 1.255934, 1.267949, 1.347773
+
+====================================================================================================
+READING
+  Density with small median gaps at supports larger than N means the frontier's specific edge value
+  (211.43 at N = 256, or anything comparable at these sizes) can be matched EXACTLY by an exact-ramp
+  law, not merely approximated -- the strongest form of the E45 conclusion.

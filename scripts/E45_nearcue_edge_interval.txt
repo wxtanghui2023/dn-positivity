@@ -1,0 +1,27 @@
+E45 step 9 -- does one solution FAMILY fill an interval of edge values?  (direct optimisation)
+objective: maximise/minimise S(N) = sum_c w_c |F_c(N)|^2 subject to the exact ramp equations
+and to w_c = u_c + t_c sqrt(D) >= 0.  Positive interval length => the edge set is continuous.
+phase 1: find a support (size > N) that admits a nonneg exact-ramp solution at all
+phase 2: on that support, optimise the edge functional in both directions
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2), 98 configs)
+   m = 5 : feasible support found after 1 trials : yes
+   m = 5 : edge interval S(N) = [1.000000000, 1.000000000]   length = 0.000000000  => the edge value is FORCED on this support
+      supports exactly re-checked at both optima: ['OK', 'OK']
+   m = 6 : feasible support found after 2 trials : yes
+   m = 6 : edge interval S(N) = [1.292893219, 1.292893219]   length = 0.000000000  => the edge value is FORCED on this support
+      supports exactly re-checked at both optima: ['negative weight', 'negative weight']
+
+N = 6 (Q = 12, field Q(sqrt3), 1144 configs)
+   m = 7 : feasible support found after 24 trials : yes
+   m = 7 : edge interval S(N) = [1.666666667, 1.666666667]   length = 0.000000000  => the edge value is FORCED on this support
+      supports exactly re-checked at both optima: ['OK', 'OK']
+   m = 8 : feasible support found after 66 trials : yes
+   m = 8 : edge interval S(N) = [1.000000000, 1.000000000]   length = 0.000000000  => the edge value is FORCED on this support
+      supports exactly re-checked at both optima: ['OK', 'OK']
+
+====================================================================================================
+READING
+  A positive interval length means one family already covers a whole range of edge values, so the
+  achievable edge set is continuous and the frontier's edge shape can be matched EXACTLY at tau = 0.
