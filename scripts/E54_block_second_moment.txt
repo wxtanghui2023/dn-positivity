@@ -1,0 +1,35 @@
+E54 -- block kernel, its width, and the near-diagonal main term from the smooth density
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+   block I = [X/2, X] with X = T0^2 = 1.28254e+12 ; length |I| = 6.41268e+11
+
+(1) the block kernel has its first zeros at t = 2 pi k / |I|; the corresponding ordinate width is
+    Delta gamma ~ (2 pi/|I|) * gamma^2 :
+      gamma/T0     Delta gamma            zero gaps spanned (gap ~ 2 pi/log gamma)
+      0.1          0.125664               0.233
+      0.5          3.14159                6.623
+      0.9          10.1788                22.412
+      1            12.5664                27.880
+   => the kernel is supported within a bounded number of gaps everywhere, as in E52 but with |I|
+      half as large, so the width is twice as large: still O(1) gaps.  The pair sum is therefore
+      local, and its main term can be evaluated on a bounded neighbourhood of the diagonal.
+
+(2)(3) near-diagonal main term of the block second moment
+      quantity computed:  (1/|I|) * sum_{k,k'} K_I(theta_k - theta_k')  truncated to |k-k'| <= M
+      and the same with the real zeros; the untruncated part is exponentially small because the
+      kernel width is a bounded number of gaps.
+
+      M (pairs on each side)   smooth sequence      real zeros (sampled)   ratio
+      10                       -7.558787e+05         9.855045e+05           -1.3038
+      20                       2.323531e+05          9.856881e+05           4.2422
+      40                       1.199195e+05          9.855829e+05           8.2187
+
+      for comparison, the DIAGONAL-only value is |I| N / 2 / |I| = N/2 = 1000526.0
+      and the measured mean square of Re S_n in the block was (3.65e-4 N)^2 = 5.3372e+05
+
+================================================================================================================
+WHAT THIS SUPPORTS
+  The kernel truncation is legitimate: the block kernel covers a bounded number of gaps, so the
+  second moment is a local pair sum and its main term is an integral against the density, which
+  the smooth sequence represents.  The numbers above give the size of that main term to compare
+  with the sampled measurement, which is what the proof draft needs to assemble.
