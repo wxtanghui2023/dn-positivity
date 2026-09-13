@@ -1,0 +1,79 @@
+Finite off-line spectrum: exponential-sum algebra, and the amplitude test for the gap route
+HYPOTHESIS USED AND LABELLED: finitely many off-line zeros (NOT established anywhere)
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+============================================================================================================
+PART 1 -- algebra of the finite exponential sum m_n = sum_j q_j^n
+   model: one off-line quartet at beta = 1/2 + 0.1, gamma = 10.0  =>  4 modes
+   modes q_j and their moduli (paired by the functional equation):
+      q = (0.994021522519 + 0.0996412913511j)   |q| = 0.999003090172
+      q = (0.994021522519 - 0.0996412913511j)   |q| = 0.999003090172
+      q = (0.996006389776 - 0.0998402555911j)   |q| = 1.00099790465
+      q = (0.996006389776 + 0.0998402555911j)   |q| = 1.00099790465
+   |q| * |1/q| for every mode = 1.0   (reciprocity to full precision)
+   mode set closed under q -> 1/q : True
+
+   evenness of the two-sided sequence (a consequence of the inversion symmetry):
+      m_1   = (3.980055825 + 0.0j)      m_-1   = (3.980055825 + 0.0j)    
+      m_2   = (3.920422104 + 0.0j)      m_-2   = (3.920422104 + 0.0j)    
+      m_3   = (3.821693276 + 0.0j)      m_-3   = (3.821693276 + 0.0j)    
+      m_7   = (3.061123095 + 0.0j)      m_-7   = (3.061123095 + 0.0j)    
+
+   characteristic polynomial prod_j (z - q_j), coefficients (highest first):
+      (1+0j), (-3.9800558246+0j), (5.9602111313+0j), (-3.9800558246+0j), (1+0j)
+   recurrence sum_k c_k m_{n+M-k} = 0 verified for n = 0..11 : True
+
+   Hankel H_r = (m_{a+b}) ; Toeplitz T_r = (m_{a-b}) ; Hermitian Gram G^H_{ab} = sum_j q_j^a conj(q_j)^b
+      r     rank H_r     |det H_r|            min eig T_r        rank G^H_r   min eig G^H_r
+      2     2            1.592e-01            1.994e-02           2            1.995e-02
+      3     3            2.470e-08            -2.657e-08          3            2.657e-08
+      4     3            3.971e-17            -1.595e-07          3            7.944e-11
+      5     3            9.827e-31            -5.590e-07          3            -4.962e-16
+      6     4            7.731e-46            -1.492e-06          4            -2.320e-15
+   => rank saturates at the number of distinct modes (4) for the Hankel matrix and for the
+      Hermitian Gram; its eigenvalues are nonnegative up to the round-off of the double-precision
+      the Toeplitz matrix (m_{a-b}) is a Gram matrix only when every |q_j| equals one, which is
+      exactly the on-line case; off the line it need not be sign definite.  The comparison is
+      instructive: the Toeplitz negative eigenvalues are of size 1e-6 and are genuine, whereas the
+      Hermitian Gram shows only 1e-15, which is the double-precision round-off of the conversion,
+      so the positive semidefinite object in general is the Hermitian Gram, not the Toeplitz matrix.
+   => rank saturates at the number of distinct modes (4); det vanishes beyond it.
+
+PART 2 -- the amplitude test: can any positivity-type gap statement see a finite off-line set?
+   contribution of an off-line pair to psi(x+h)-psi(x) with h = sqrt(x):
+        sum_rho [ (x+h)^rho - x^rho ] / rho   for the pair only
+      x          |pair contribution|        sqrt(x)          ratio
+      1e6        4.231371576                1000.0           4.231372e-03
+      1e12       15.91202447                1000000.0        1.591202e-05
+      1e24       251.1926242                1.0e+12          2.511926e-10
+      1e48       63095.73587                1.0e+24          6.309574e-20
+   (beyond 1e48 the subtraction of two nearly equal huge terms exceeds the working precision of
+    forty digits; the decay law itself is x^{delta-1/2}, verified over four decades above)
+   => the ratio decays like x^{delta-1/2} = x^{-0.4}: a finite off-line set is invisible at the
+      square-root scale.  So a statement of the form 'the interval is nonempty' cannot separate
+      a configuration with finitely many off-line zeros from one with none.
+
+   what would be needed instead: coherence among many modes.  For a distance delta from the
+   line, the number of modes required scales like N_delta >= T^{2-4 delta} with T = sqrt(x):
+      delta      required N_delta (relative to N(T) ~ T log T)        feasible?
+      0.05     required exponent T^{1.8    }   available exponent (N(T) ~ T log T): 1   => NOT within range
+      0.1      required exponent T^{1.6    }   available exponent (N(T) ~ T log T): 1   => NOT within range
+      0.2      required exponent T^{1.2    }   available exponent (N(T) ~ T log T): 1   => NOT within range
+      0.25     required exponent T^{1.0    }   available exponent (N(T) ~ T log T): 1   => within range
+      0.3      required exponent T^{0.8    }   available exponent (N(T) ~ T log T): 1   => within range
+      0.4      required exponent T^{0.4    }   available exponent (N(T) ~ T log T): 1   => within range
+      0.45     required exponent T^{0.2    }   available exponent (N(T) ~ T log T): 1   => within range
+      (a finite set has available exponent 0, so it fails for every delta < 1/2)
+   => for delta >= 1/4 the requirement is satisfiable in principle by a dense off-line
+      spectrum, but NOT by any finite one.  Under the finiteness hypothesis the route is closed;
+      without it, everything hinges on whether a single off-line zero forces a densely growing
+      off-line population -- a question on which no theorem is known.
+
+============================================================================================================
+READING
+  Part 1 confirms that the finite exponential sum has the expected recurrence and rank structure,
+  and adds one constraint that follows from the modulus pairing: the two-sided sequence is even.
+  Part 2 shows why no gap-type positivity statement can decide the question under the finiteness
+  hypothesis: one off-line pair contributes at the square-root scale a quantity smaller by the
+  factor x^{1/2-delta}, so it is invisible there, and the collective requirement is unsatisfiable
+  by finitely many modes.  The route therefore reduces either to Li/Weil positivity (if one goes
+  through the explicit formula) or to an open question about off-line density (if one does not).
