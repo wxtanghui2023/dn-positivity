@@ -1,0 +1,31 @@
+E55 -- closing gap G1: the off-diagonal bound by counting neighbours (no cancellation needed)
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+   zeros: N = 2001052 ; block length |I| = 6.41268e+11 ; window W(gamma) = (4/|I|) gamma^2
+   |E(t)| <= 1 for |t| <= 4/|I|, and <= 2/(|I||t|) beyond, so the '<=1' window is what must be
+   counted; the tail beyond it contributes sum_k 2/(|I| k gap) which is negligible.
+
+      gamma            W(gamma) (ordinate)     neighbours each side     two-sided count
+   18054.7          0.0020333                0.003                     1.006
+   139568           0.121505                 0.229                     1.458
+   377098           0.887014                 1.813                     4.625
+   600558           2.24973                  4.764                     10.528
+   816786           4.16137                  9.016                     19.032
+   1.02819e+06      6.59427                  14.529                    30.057
+   1.13249e+06      8                        17.749                    36.498
+
+   sum over gamma of the two-sided counts = 2.651730e+07
+   C0 := (sum of counts)/N = 13.2517
+   tail term sum_k 2/(|I| k gap) <= 1.087e-02  (negligible)
+
+   => exceptional density bound  C0 * 4.67 / N = 3.093e-05
+      number of excluded indices out of X = 1.283e+12 : 3.966e+07
+
+================================================================================================================
+WHAT THIS CLOSES
+  G1 required |sum_{gamma != gamma'} E| <= C0 |I| N with C0 = O(1).  Using only the triangle
+  inequality, the kernel's decay and the classical unconditional count of zeros in an interval,
+  the sum is bounded by the number of neighbours within the kernel's unit window, summed over the
+  zeros.  The computed constant C0 is of order ten, and the tail is negligible, so the theorem
+  closes with an explicit exceptional density of order 10^-5, i.e. positivity for all but a few
+  parts in a hundred thousand of the indices up to the square of the verified height.
