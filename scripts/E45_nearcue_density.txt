@@ -1,0 +1,26 @@
+E45 step 10 -- does the achievable edge set become DENSE as support grows?  (N = 4, field Q(sqrt2))
+step 9 showed the edge value is forced per support; here we sample supports of growing size and
+measure how many distinct forced values occur and how small the gaps between them get.
+NOTE: no Lean is run in this script (compute directive 2026-09-13 11:47).
+====================================================================================================
+   m =  6 : feasible supports  1353 / 4000 ; DISTINCT edge values   15 ; range [1.000000, 3.000000]
+            smallest gap 0.023689271 ; largest gap 0.439339828 ; median gap 0.146446609
+   m =  8 : feasible supports  1416 / 4000 ; DISTINCT edge values   14 ; range [1.000000, 3.000000]
+            smallest gap 0.023689271 ; largest gap 0.439339828 ; median gap 0.146446609
+   m = 10 : feasible supports  1441 / 4000 ; DISTINCT edge values   11 ; range [1.000000, 3.000000]
+            smallest gap 0.025126266 ; largest gap 0.535533906 ; median gap 0.146446609
+   m = 12 : feasible supports  1452 / 4000 ; DISTINCT edge values   16 ; range [1.000000, 3.292893]
+            smallest gap 0.023689271 ; largest gap 0.439339828 ; median gap 0.146446609
+
+====================================================================================================
+TREND (support size m -> distinct values, smallest gap)
+   m =  6 : distinct   15   smallest gap 0.023689271
+   m =  8 : distinct   14   smallest gap 0.023689271
+   m = 10 : distinct   11   smallest gap 0.025126266
+   m = 12 : distinct   16   smallest gap 0.023689271
+
+READING
+  If the distinct count grows and the smallest gap shrinks as m grows, the achievable set densifies,
+  so any prescribed edge value can be approximated arbitrarily well by an exact-ramp law.  If the
+  smallest gap stalls, densification is not happening at these sizes and exact matching stays a search
+  problem -- both answers are useful, and this script reports which one the data shows.

@@ -1,0 +1,32 @@
+E45 step 11 -- instance completeness: exact law data + a valid certificate, and the role of p
+the ceiling theorem's conclusion needs (i) the law's grid data (we supply exactly, tau = 0) and
+(ii) a certificate valid against the law.  p = the law's simple fraction bounds the whole class,
+so a law with p = 1 is useless for the ceiling.  Question: does exactness FORCE p = 1?
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2))
+   (A) exact law data: masses s_j = j/4^2,  C(1) = 5/8,  tau = 0,  d1 = 1/8
+       certificate r(x) = x, c0 = 0, p := sum_j s_j r(j/N) = 15/32 (so validity holds with =)
+       conclusion:  1/3 <= p + d1 + 1/(6N^2)  :  1/3 <= 29/48  ->  True
+   (B) our law's configurations are all unit-mark (every point simple and on-line)
+       => simple fraction p = 1  (= 1 for the recorded weights)
+   (C) max feasible weight on mark-2 configurations = 0.250000000
+       => exactness does NOT force p = 1: an exact-ramp law with p = 0.750000 exists
+
+N = 6 (Q = 12, field Q(sqrt3))
+   (A) exact law data: masses s_j = j/6^2,  C(1) = 7/12,  tau = 0,  d1 = 1/12
+       certificate r(x) = x, c0 = 0, p := sum_j s_j r(j/N) = 91/216 (so validity holds with =)
+       conclusion:  1/3 <= p + d1 + 1/(6N^2)  :  1/3 <= 55/108  ->  True
+   (B) our law's configurations are all unit-mark (every point simple and on-line)
+       => simple fraction p = 1  (= 1 for the recorded weights)
+   (C) max feasible weight on mark-2 configurations = 0.111111111
+       => exactness does NOT force p = 1: an exact-ramp law with p = 0.888889 exists
+
+====================================================================================================
+READING
+  (A) shows the arithmetic of a complete instance is available to us exactly, with tau = 0 and
+  d1 = 1/(2N).  (B)+(C) address the deeper question: the ceiling's bound is only as strong as the
+  law's simple fraction is small, and our constructions are all-simple.  Whether exactness can be
+  reconciled with a small simple fraction decides whether E45's numeric half can be combined with a
+  ceiling-witnessing law, or whether the two purposes need different laws.
