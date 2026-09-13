@@ -276,3 +276,15 @@ Lean     lean/README.md ✓（A+B 进度 + 经验 ✓）｜lean/PA-Basic.lean �
    **不再**在会话里巡检 ✗；只在**论文定稿里程碑**上跑 ✓（详见 `docs/TESTING.md` §4 ✓）
    建测试套件时我把 Lean 巡检放了进去并真跑了一遍（15 passed in 85.31s ✗）⟹ 纯浪费 ✓ 已移除 ✓
 ```
+
+### ⭐⭐ **2026-09-13：撤回已应用（论文 A）** ✓
+```
+【发现 ✓】论文摘要仍留**被撤回的比较** ✗（"about 6·10⁷ times … direct computation" ✗）
+   ⟹ 与 Scope 的 "do not claim novelty for the conversion" ✓ **自相矛盾** ⚠️（parked doc 早于撤回 7 分钟 ✗）
+【已改 ✓（待提交）】摘要中性化 + 明示线性范围被二次型取代 ✓；引言区分**两类范围** ✓（直接计算型 vs 转换型 ✓）；
+   Scope 加 **Remark（比较前先读）** ✓ 明确"说成对 n≤10⁵ 的改进是错的" ✓；补 BombieriLagarias/Voros bibitem ✓
+   重编译 **0 error / 0 undefined / 7 页** ✓
+【③ 引用核对 ⚠️】Coffey 递推 ✓ 支持 10⁵ ✓；但 **Palojärvi arXiv:1807.01506 是 τ-Li 判据 ✓，未见 10⁵ 数值验证** ✗
+   ⟹ 并列引用恐不准确 ⚠️（待定夺 ✓）
+【④】"投稿路径"已被撤回取代 ⟹ 论文**不应投稿** ✗（**待唐先生定处置** ✓：归档/Zenodo/改写定位？✓）
+```

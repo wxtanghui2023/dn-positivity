@@ -21,11 +21,13 @@ Let $T$ be a height to which the Riemann Hypothesis has been rigorously verified
 arithmetic. We prove by elementary means that the Li coefficients satisfy
 $\lambda_n\ge 0$ for every integer $n$ with $2\le n\le 2T-O(1)$.
 For the verified height $T=3.000175\cdot 10^{12}$ this gives $n$ up to approximately
-$6.00035\cdot 10^{12}$, about $6\cdot 10^{7}$ times the range reached by direct computation
-of $\lambda_n$ in the literature. The proof uses no information about the location of zeros
-above $T$: only the non-negativity of the on-line terms, a window bound for the phases, the
-classical explicit zero-counting estimate, and an elementary bound for the off-line
-contribution. No hypothesis is assumed.
+$6.00035\cdot 10^{12}$. The proof uses no information about the location of zeros above $T$:
+only the non-negativity of the on-line terms, a window bound for the phases, the classical
+explicit zero-counting estimate, and an elementary bound for the off-line contribution. No
+hypothesis is assumed. The range obtained is \emph{linear} in $T$ and is therefore superseded
+by the quadratic ranges that the classical conversion of a verified height yields (see the
+remark at the end of \S\ref{sec:scope}); the interest of the present note is that the
+argument is elementary and self-contained.
 \end{abstract}
 
 \section{Introduction}
@@ -37,7 +39,12 @@ $\lambda_n\ge0$ for all $n\ge1$, where
 the sum being over all non-trivial zeros $\rho$ of $\zeta(s)$, counted with multiplicity, in
 conjugate pairs (so that $\lambda_n\in\R$). Direct numerical verification of
 $\lambda_n\ge0$ has been carried out up to $n\le10^{5}$ (see \cite{Palojarvi,Coffey} and the
-references therein). The purpose of this note is to show that, using only a \emph{verified
+references therein). This is not, however, the only kind of range available: converting a
+verified height into a range, a conversion for which no novelty is claimed here, is classical
+\cite{BombieriLagarias}, and, as recorded by \cite{Voros}, already appears in unpublished work
+of Oesterl\'e; such ranges grow like a constant times $T^{2}/(\log T)^{2}$ and are therefore
+substantially larger than the linear range proved below. The contribution of this note is
+accordingly the elementary and self-contained proof, not the size of the range. The purpose of this note is to show that, using only a \emph{verified
 height} $T$ as input, one obtains an explicit range $n\le 2T-O(1)$ by elementary estimates, and
 that no information about the zeros above $T$ is needed beyond a bound on their worst-case
 contribution.
@@ -268,6 +275,7 @@ explicit constants of the classical counting bounds are immaterial except at the
 \end{enumerate}
 
 \section{Scope}
+\label{sec:scope}
 The result is a \emph{subset} statement implied by RH, not a proof of RH: the range $n\le2T-O(1)$
 grows with $T$ but never covers all $n$. It is unconditional given $T$, depending only on the
 classical representation \eqref{eq:li}, on the rigorously verified zeros below $T$
@@ -277,6 +285,19 @@ contribution is bounded. We do not claim novelty for the conversion of a verifie
 range for $\lambda_n$, which is a folklore consequence of $|1-1/\rho|=1$ on the line and
 $|1-1/\rho|>1$ off it; what is given here is an elementary, explicit, and numerically
 calibrated form of the resulting range.
+
+\medskip
+\noindent\textbf{Remark (relation to the quadratic ranges; read this before comparing).}
+The range proved here is linear in the verified height. Ranges quadratic in it are also
+available from the same input by a different route: combining the decomposition of
+Bombieri and Lagarias \cite{BombieriLagarias} with an explicit bound for $\zeta'/\zeta$ on the
+line produces ranges of the shape $n\le c\,T^{2}/(\log T)^{2}$, and a statement of that shape
+goes back, in unpublished form, to Oesterl\'e \cite{Voros}. Such ranges are larger than the one
+proved here by a factor of order $T/(\log T)^{2}$, hence by many orders of magnitude at any
+realistic height. It would therefore be wrong to describe the present result as an improvement
+over ``direct numerical verification up to $n\le10^{5}$'': that comparison is between two
+different kinds of range, and against the quadratic conversion-type range of the same kind the
+range here is weaker, not stronger. The value of the note is the elementary route, not the range.
 
 \appendix
 
@@ -364,7 +385,12 @@ xi function and the Li/Keiper constants}, Proc. Roy. Soc. A \textbf{464} (2008),
 \bibitem{Trudgian} T. S. Trudgian, \emph{An improved upper bound for the argument of the Riemann
 zeta-function on the critical line}, Math. Comp. \textbf{81} (2012), 1053--1061.
 \bibitem{TrudgianII} T. S. Trudgian, \emph{An improved upper bound for the argument of the Riemann
-zeta-function on the critical line II}, J. Number Theory \textbf{134} (2014), 280--292. (The form of
+zeta-function on the critical line II}, J. Number Theory \textbf{134} (2014), 280--292.
+\bibitem{BombieriLagarias} E. Bombieri and J. C. Lagarias, \emph{Complements to Li's criterion for
+the Riemann hypothesis}, J. Number Theory \textbf{77} (1999), 274--287.
+\bibitem{Voros} A. Voros, notes on the Li criterion and verified heights (as recorded in the
+literature on finite-height Li theorems); the unpublished precursor is P. Oesterl\'e, \emph{Remarks
+on the Li criterion}, 2000, Proposition 2. (The form of
 Lemma~\ref{lem:count} is the standard corollary for $N(T)$ of the bound on $S(T)$ proved there, with
 $7/8$ absorbed into $F$; the constants $0.112$, $0.278$, $2.510$ are those of that paper. The sequel
 \emph{II}, J. Number Theory \textbf{134} (2014), 280--292, improves them to $0.111$, $0.275$,
