@@ -1,0 +1,43 @@
+A5-3 -- explicit constant for the Guinand phase-locking sum Sigma_p(X) = sum_{gamma<=X} sin(gamma log p)
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+no novelty claimed for the statement or its order (A5-2); this is the constant only
+================================================================================================================
+   zeros: N = 2001052 , up to X = 1132490.658714 (log X = 13.9399)
+
+(1)(2) the sum, its maximum over X <= Xmax, and the comparison with the leading term
+   p        log p      max|Sigma|      argmax X      (1/2pi log p) log X      ratio max/lead      max/log X
+   2        0.6931     3.2987          1.024e+06      3.1777                   1.0381                 0.2384
+   3        1.0986     2.6167          1.009e+06      2.0027                   1.3066                 0.1893
+   5        1.6094     2.6492          1.069e+06      1.3728                   1.9298                 0.1908
+   7        1.9459     2.9942          6.912e+05      1.0998                   2.7226                 0.2227
+   11       2.3979     3.2580          7.169e+05      0.8949                   3.6407                 0.2416
+   101      4.6151     14.5006         3.264e+05      0.4378                   33.1200                1.1422
+   1009     6.9167     42.5723         2.915e+05      0.2895                   147.0393               3.3834
+   9973     9.2076     99.2520         3.193e+05      0.2191                   453.0596               7.8312
+
+(3) p-dependence of the maximum: max|Sigma| against sqrt(p)
+   p        sqrt(p)          max|Sigma|        max/sqrt(p)
+   2        1.4142          3.2987           2.33252
+   3        1.7321          2.6167           1.51076
+   5        2.2361          2.6492           1.18475
+   7        2.6458          2.9942           1.13169
+   11       3.3166          3.2580           0.98233
+   101      10.0499         14.5006          1.44287
+   1009     31.7648         42.5723          1.34024
+   9973     99.8649         99.2520          0.99386
+
+(4) resonance sensitivity: perturbing log p by 1e-7
+   p        max|Sigma| at exact log p     max|Sigma| at log p + 1e-7     ratio
+   7        2.9942                       7499.7869                          2504.8
+   101      14.5006                      4683.8116                          323.0
+   1009     42.5723                      2223.4047                          52.2
+
+================================================================================================================
+READING
+  The explicit form calibrated here is
+      |Sigma_p(X)|  <=  (1/(2 pi log p)) log X + C(p) ,
+  with the leading coefficient universal in X and depending on p only through log p.  The
+  measurements give the empirical C(p) as the excess of the maximum over the leading term, and
+  the p-dependence quoted in the project's notes can be checked by the last table of part (3).
+  Part (4) documents the resonance: a perturbation of one part in ten million multiplies the
+  maximum by orders of magnitude, which is the sharpness phenomenon recorded earlier.
