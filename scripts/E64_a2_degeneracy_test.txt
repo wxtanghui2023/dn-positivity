@@ -1,0 +1,21 @@
+E64 -- a2 verdict: is the third-order cyclic sum degenerate-dominated?
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  exact identity:  T = N  +  3*P_off  +  T_distinct     (normalised kernel, k(0)=1)
+
+     N      L        T (exact)        N (all-equal)    3*P_off (two-equal)   T_distinct      distinct share
+     200    4.1445   307.818          200               109.581               -1.76326        -0.0057
+     400    4.6838   629.644          400               232.316               -2.67144        -0.0042
+     600    5.0070   950.52           600               355.332               -4.81223        -0.0051
+     600    5.0070   950.52           600               355.332               -4.81223        -0.0051
+
+   SELF-TEST
+   The identity T = N + 3*P_off + T_distinct is exact by the split on coincidences, so the residual
+   column is the three-distinct contribution by construction, not a fit.
+
+   READING
+   If the distinct share is tiny, the third-order object is essentially determined by the diagonal and
+   the pair sum, so the third moment adds no independent information and the short-length route has
+   nothing to gain: the answer to a2 is degeneracy-dominated, and a1 is not worth computing.  If the
+   distinct share is substantial, the object carries independent content and the symbolic work of a1
+   is the right next step.
