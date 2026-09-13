@@ -1,0 +1,15 @@
+E94 - truncation tail: does x<=H change the prime-side numbers?
+H=7.910319e+05  X=T0=1132490  H_as_int=791031  e^11=5.987414e+04  H>e^11=True
+(A) with X=T0      = 3.296411e+01
+(A) with x=H       = 2.952720e+01
+    tail e^11<p<=H = 1.525737e+01   (10.426% of (A))
+(B) stationary (x>=e^11 keeps all) = 2.398236e+04  (#6047)
+
+LEDGER with x=H : prime side = 2.401189e+04
+                 remainder(Thm4 form) = 2.335084e+05
+                 TOTAL = 2.575203e+05  vs allowance 1.062658e+06  -> margin 4.1265x
+
+CONSTANT THRESHOLD (constant enters under the square root):
+  need sqrt(C)*rem_unit + prime <= allow, rem_unit=2.335084e+05
+  C_Th4 <= ((allow-prime)/rem)^2 = 19.785
+  (the earlier figure 4.45 omitted the square root)
