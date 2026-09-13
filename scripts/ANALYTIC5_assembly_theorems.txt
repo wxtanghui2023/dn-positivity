@@ -1,0 +1,38 @@
+E46 / WP4 -- assembly of Theorems A and B: rank-trace, its multiplicity form, and the constants
+NO LEAN IS RUN (compute directive 2026-09-13 11:47); inputs classical and unconditional
+==============================================================================================================
+PART 1 -- rank-trace inequality  r >= 2 tr P + 4 tr Q - 4 b - ||P+Q||_HS^2
+   400 random admissible pairs (d = 12); worst margin r - RHS = 627.297787
+   (a nonnegative worst margin over many random pairs is the check; the hypothesis rank P <= r
+    and n_+(Q) <= b are satisfied by construction)
+   extremal P = Pi_1 (rank 3), Q = 2 Pi_2 (rank 2) : r = 3 , RHS = 3.0000000000 , equality = yes
+   extremal P = Pi_1 (rank 5), Q = 2 Pi_2 (rank 4) : r = 5 , RHS = 5.0000000000 , equality = yes
+   extremal P = Pi_1 (rank 7), Q = 2 Pi_2 (rank 0) : r = 7 , RHS = 7.0000000000 , equality = yes
+   (equality at the extremal configuration is what makes the inequality sharp, and it is the
+    configuration the source names)
+
+PART 2 -- the equivalent multiplicity form: LP over profiles m_j with counts n_j
+   constraints: sum j n_j = N (normalised to 1), sum j^2 n_j <= R N, n_j >= 0
+   (m runs up to 40 so that the optima cannot be an artefact of a truncated profile)
+   R = 1.333333 : min simple = 0.666667  (predicted 2 - R = 0.666667) ;  min distinct = 0.833333  (predicted (3-R)/2 = 0.833333)
+   R = 1.327500 : min simple = 0.672500  (predicted 2 - R = 0.672500) ;  min distinct = 0.836250  (predicted (3-R)/2 = 0.836250)
+   R = 1.250000 : min simple = 0.750000  (predicted 2 - R = 0.750000) ;  min distinct = 0.875000  (predicted (3-R)/2 = 0.875000)
+   R = 1.400000 : min simple = 0.600000  (predicted 2 - R = 0.600000) ;  min distinct = 0.800000  (predicted (3-R)/2 = 0.800000)
+   R = 1.500000 : min simple = 0.500000  (predicted 2 - R = 0.500000) ;  min distinct = 0.750000  (predicted (3-R)/2 = 0.750000)
+   (equality of the LP optima with 2 - R and (3 - R)/2 is the verification that the rank-trace
+    inequality is exactly the multiplicity inequality m^2 >= 2m - 1, resp. m^2 >= 3m - 2)
+
+PART 3 -- the constants and the resulting proportions
+   R(psi_0)  = 4/3 = 1.3333333333  -> simple >= 0.6666666667 , distinct >= 0.8333333333
+   R(psi_MT) = c_MT^{-1} = 1/2 + cot(1/sqrt2)/sqrt2 = 1.3274992963  -> simple >= 0.6725007037 , distinct >= 0.8362503518
+   source states: 0.67250... and 0.83625... for Montgomery-Taylor, and 2/3, 5/6 for the indicator
+   check: |(2 - c_MT^{-1}) - 0.67250| = 7.04e-07 ;  |(3 - c_MT^{-1})/2 - 0.83625| = 3.52e-07
+   (the indicator window is the one that gives exactly two thirds and five sixths, since
+    R(psi_0) = 4/3; the Montgomery-Taylor window is optimal in this class by [CCLM17, Cor. 14])
+
+==============================================================================================================
+READING
+  Part 1 confirms the rank-trace inequality and its sharp extremal case; part 2 confirms that it
+  is exactly the multiplicity inequality, by linear programming; part 3 reproduces the constants.
+  Together they verify the assembly chain N_0^s >= (2 - R(psi))N and N_d >= (3 - R(psi))N/2, which
+  at R(psi_0) = 4/3 are the statements two thirds and five sixths.
