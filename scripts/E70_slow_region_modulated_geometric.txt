@@ -1,0 +1,28 @@
+E70 -- the slow-phase region as a modulated geometric series
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052 zeros, T0 = 1132490.658714, X = T0^2 = 1.28254e+12
+
+  slow region = zeros with gamma >= sqrt(n); 12 sampled indices
+
+      n/X      sqrt(n)     #slow      mean delta    1/|delta|    max|E_j|     TV(E)      |sum slow|   |sum|/N
+      0.4501   759790      706807     -0.056304      17.76        4123        1.506e+04   158.9        7.941e-05
+      0.5473   837820      560854     -0.061862      16.17        2718        1.238e+04   164.5        8.223e-05
+      0.5086   807648      617432     -0.059716      16.75        3238        1.343e+04   169.5        8.468e-05
+      0.6820   935261      376978     -0.068766      14.54        1291        8783        176.3        8.811e-05
+      0.4405   751665      721934     -0.055723      17.95        4279        1.533e+04   160.5        8.021e-05
+      0.7160   958273      333309     -0.070391      14.21        1020        7881        2.91         1.454e-06
+      0.9512   1.10453e+06 53808      -0.080674      12.4         28.36       1419        2.002        1.001e-06
+      0.4930   795183      640756     -0.058828      17           3462        1.386e+04   159.2        7.958e-05
+      0.6755   930812      385410     -0.068452      14.61        1346        8954        181          9.046e-05
+      0.5241   819845      594582     -0.060584      16.51        3024        1.301e+04   163.2        8.154e-05
+      0.7820   1.00146e+06 251117     -0.073436      13.62        590.3       6115        0.7657       3.827e-07
+      0.3321   652656      905089     -0.048626      20.57        6277        1.855e+04   143.6        7.179e-05
+
+======================================================================================================================
+READING
+  If max|E_j| stays of order one, the classical pointwise bound on the counting error does control the
+  accumulated phase deviation, and the slow-region sum is a geometric series modulated by a bounded
+  factor; the column 1/|delta| then is the natural uniform bound.  If max|E_j| grows with the region
+  length, the modulation is not bounded and the route needs the total variation instead.  The measured
+  sum over the slow region is the quantity the whole trigger is about.

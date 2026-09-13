@@ -1,0 +1,30 @@
+E71 -- fast region, slow region, and the sum-versus-integral gap
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052 zeros, T0 = 1132490.658714, X = T0^2 = 1.28254e+12
+
+      n/X     |S_all|   |S_fast|  |S_slow|   |I| (integral)  |S_all-I|   bound 2max|rho/theta'|  n_fast
+      0.4501  666.7     611.2     158.9      31.84          659.6      3.725                1294245
+      0.5473  411       561       164.5      435.2          202.9      3.756                1440198
+      0.5086  791.9     709.7     169.5      365.1          481.2      3.745                1383620
+      0.6820  748.8     790.1     176.3      777.9          102.3      3.791                1624074
+      0.4405  708.3     558.9     160.5      679.4          375.5      3.722                1279118
+      0.7160  1101      1101      2.91       1066           37.29      3.799                1667743
+      0.9512  781.8     779.8     2.002      578.4          261.7      3.844                1947244
+      0.4930  901.2     756.2     159.2      1008           425.5      3.74                 1360296
+
+======================================================================================================================
+READING
+  If |S_fast| carries the size while |I| is tiny, then the size is not in the oscillatory integral at
+  all but in the discretisation, that is in the difference between summing over the zeros and integrating
+  against the smooth density.  That difference is, by Poisson summation, a prime-side object, which is
+  where the other routes also end.  The bound column shows what stationary phase gives for the integral,
+  for comparison with the measured |I|.
+
+  CAVEAT ON THIS RUN, recorded so the numbers are not over-read. The |I| column is NOT reliable:
+  the integrand oscillates with phase n*theta, which changes by about a radian per grid step in the
+  fast region, so the trapezoidal rule under-samples and the reported values are quadrature error
+  rather than the integral. A proper evaluation needs a stationary-phase or analytic treatment, or
+  quadrature on a phase-adapted grid; neither was done here. The valid conclusions from this run are
+  only the two sum columns: the slow-region sum is small and the fast-region sum carries the size,
+  the latter being close to tautological since the fast region holds most of the zeros.
