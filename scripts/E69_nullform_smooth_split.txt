@@ -1,0 +1,22 @@
+E69 -- does the singular (discrepancy) part carry the entire size of the phase sum?
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052 zeros, T0 = 1132490.658714, X = T0^2 = 1.28254e+12
+  smooth surrogate built by inverting the counting law; top surrogate ordinate 1045794.836375 (actual 1132490.658714)
+  Theta(14) = 0.071398 so the whole phase range lies in [0, 0.0714]
+
+      quantity                rms              max            rms/N        max/N
+      S_n  (actual zeros)     961.192          2183.47         4.803e-04    1.091e-03
+      S_n^smooth (surrogate)  786.274          1700.87         3.929e-04    8.500e-04
+      D_n  (singular part)    595.021          1784.27         2.974e-04    8.917e-04
+
+      ratio  max|D_n| / max|S_n|         : 0.8172
+      trivial bound for comparison        : |S_n| <= N, so needed is 0.8*N, i.e. a uniform 20%% gain
+
+======================================================================================================================
+READING
+  If the smooth surrogate already reproduces the size, then the size is carried by the part that
+  stationary phase can handle and the route would be open.  If the difference carries it, then the size
+  sits in the singular part, which stationary phase cannot touch, and the route is blocked at the same
+  place as the others.  The last line records the equivalent formulation of the requirement: a uniform
+  gain of twenty percent over the trivial triangle-inequality bound.
