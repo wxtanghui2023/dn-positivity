@@ -1,0 +1,29 @@
+E93 - middle-band ledger with Theorem 4 controlling the remainder
+T0=1132490.658714  H=7.910319e+05  L=log T0=13.939930  loglog T=2.634757
+N=2001052  deep=N(0.3015 T0)=538184  allowance_mid=0.8N-deep=1.062658e+06
+
+(1) PRIME SIDE (E92 non-resonance, truncation X = T0)
+    (A) non-stationary + (B) stationary = 2.401532e+04
+
+(2) REMAINDER, two treatments
+    pointwise   : sup|R| * int_I|phi'| = 2.623556e+06   ratio to allowance = 2.4689  (>1 = dead)
+    Theorem 4   : ||R||_2^2 = H/L^2 = 4.070735e+03  -> ||R||_2 = 63.802310
+                  int R K  <= ||R||_2 sqrt(E_phi) = 2.335084e+05   ratio to allowance = 0.2197
+
+(3) LEDGER
+    prime side            = 2.401532e+04
+    remainder (Theorem 4) = 2.335084e+05
+    TOTAL                 = 2.575237e+05
+    allowance             = 1.062658e+06
+    MARGIN                = 4.1264 x
+
+(4) COMPARISON with E82's Cauchy-Schwarz value
+    E82 C-S for the middle band = 9.745070e+05  ratio to allowance = 0.9170  (>1 = fails)
+    new bound                   = 2.575237e+05  ratio to allowance = 0.2423
+    improvement factor          = 3.7841 x
+
+(5) WHY it works: the two L2 norms
+    ||S||_2^2 = 1.055856e+05   ||R||_2^2 = 4.070735e+03   ratio = 25.9377
+    -> bounding the REMAINDER by Cauchy-Schwarz is legitimate;
+       bounding S ITSELF by Cauchy-Schwarz is not (E92).
+    Lambda_inf = 16.933166
