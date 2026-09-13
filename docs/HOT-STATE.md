@@ -1,6 +1,6 @@
 # 🔥 HOT-STATE —— 项目当前状态交接（≤150 行）
 
-> 更新 ✓ 2026-09-13 09:15｜用途 ✓：**新会话开场读这一份**（替代长尾上下文 ✓）
+> 更新 ✓ 2026-09-13 10:05｜用途 ✓：**新会话开场读这一份**（替代长尾上下文 ✓）
 > 纪律 ✓：一切以**产物**为准 ✓；数字驱动（R7 ✓）；**不得预设 RH、不得循环** ✓；提交**显式路径** ✓
 
 ---
@@ -94,12 +94,20 @@ A4 C ✓：外部锚点 ✓（复现 DFMR I Cor 7.5：论文 3.75e−6 vs 算得
 (f) ✅ **已完成（2026-09-13 上午 ✓）= Lean 补验 + 记录修补**：`lean/PA-Basic.lean`（Paper A 共享恒等式）
     **首编译 3 处 error** ✗ ⟹ 修正后 **exit 0 / 零 sorry / 3 秒** ✓；顺带补全三处记录缺口 ✓
     （① `PAPERA-bandlimited-route.md` 未入 §四/§七 ✓ ② `LEAN-SANDBOX-SETUP.md` §四 "Mathlib 未装" 已过期 ✗ ③ 昨晚 7 个脚本未入仓 ✓）
+(g) ✅ **已完成（2026-09-13 ✓）= E44：0.682 天花板的数值包络独立复核**（即下方 (e) 的"可做的一项" ✓，唐先生批准 ✓）
+    **结果 ✓**：公开部分**全通过** ✓ —— 行证书 255/255（余量 1.63×）｜⭐ **边界界 0.82395317 被独立复现** ✓
+      （算出 D(1) = 0.823953160712835167，余量 **9.29e−9**，符号 + ✓ ⟹ 展示式的常数 0.824 来源已对上 ✓）
+      ｜p₀ = 0.68182868746… ≤ 0.6818287（余量 1.25e−8）✓｜常数步 2.5431315e−6 ✓
+    **✗ 唯一输入不可复核**：`EnclOK`（法的真形状因子落在包络内）—— 法数据 `cert_N256_blk_b128m.json`
+      **未随仓库发布** ✗（sha256 已公开 ✓）⟹ 任何第三方都无法重跑那段区间算术 ✗
+    **⟹ 性质 = 可复现性缺口** ✗（**不是**发现错误 ✗）；关闭缺口 = 等作者发布该文件 ✓（我方已无可做部分 ✓）
+    **档案 ✓**：`docs/E44-ceiling-encl-audit.md` ✓｜`scripts/E44_ceiling_encl_audit.py/.txt` ✓｜`data/lawN256_encl_v1.0.json` ✓
 (b) 论文 A 补写：① n ≤ γ₁ 初等证明 ② 光滑部分 vdC ≤ 1704 ③ 三类负面结果 Remark
     （区域 A 墙｜vdC 误用族｜Σ-form 判死｜点态桥无价值）
 (c) E26 §6(B)：大 T·大 N 的 L2 数值（长期项 ✓）
 (d) 可选：T=4800 收敛（~24 分钟 ✓，把 d_∞ 收到 ±0.0002 ✓）
 (e) 观察项（不等 ✓、不投入）：无条件三阶矩 / 支撑 >1 的高阶相关 / mollifier 新方法 > 5/12
-    ｜⭐ 可做的一项：**0.682 数值包络的独立复核**（前沿 Lean 唯一未经内核检验处 ✓，"补链路"型 ✓）
+    ｜⭐ 可做的一项：**0.682 数值包络的独立复核** —— ✅ **已于 2026-09-13 完成 ✓（见上方 (g) / E44 ✓）**
 ```
 
 ## 七、档案地图（新会话按需检索，勿整篇读 ✓）
@@ -112,6 +120,8 @@ A1       docs/PAPERA-expsum.md ✓｜docs/PAPERA-fluc-round2.md ✓｜docs/PAPER
          docs/PAPERA-sigma-form-lemma.md ✓｜docs/PAPERA-bandlimited-route.md ✓（**候选 A 带限路线判死** ✓）｜scripts/PAPERA_*.py/.txt ✓
 A3       docs/A3-third-moment-barrier.md ✓｜docs/A3-improvement-assessment.md ✓
          docs/A3-break-682-attempt.md ✓（含父方核验注记）｜docs/A3-barrier-opinion-2026-09-12.md ✓
+         ⭐ docs/E44-ceiling-encl-audit.md ✓（0.682 包络独立复核 ✓）｜scripts/E44_ceiling_encl_audit.py/.txt ✓
+         ｜data/lawN256_encl_v1.0.json ✓（前沿仓库 v1.0 包络表 + 来源/sha256 ✓）
 A4       docs/E26-A4-4-*.md ✓｜docs/E27-A4-5-*.md ✓（含更正横幅）｜docs/A4-M1-normalization-reconciliation.md ✓
          docs/A4-C-pointwise-disk-constants.md ✓｜docs/A4-FINAL-numerical-table-corrected.md ✓
          docs/A4-CORRECTION-missing-weight.md ✓（第 16 次自查）｜scripts/NB1–NB6 ✓
@@ -129,4 +139,9 @@ Lean     lean/README.md ✓（A+B 进度 + 经验 ✓）｜lean/PA-Basic.lean �
 ③ 子代理任务书：**小步 + 勤落盘 + lightContext** ✓（长文件串行读取 + 长单次调用 ⟹ 会话锁过期崩溃 ✗）
 ④ 大文件：先 `grep -n` 定位，再 `sed -n` 取片段 ✓（**禁止整篇 read** ✓）
 ⑤ 每议题**一个新会话** ✓；本轮负面结果见 `NEGATIVE-RESULTS-2026-09-12-ROUND.md` ✓
+⑥ ⭐ **结构恒等式必须先核前提** ✓（2026-09-13 E44 教训 ✓）——“应当成立”的恒等式（如 Parseval
+   Σ_j|F(j)|² = 256Σ_i m_i²）**未必适用** ✗：它要求**整数位置**，而 E44 的法位置**有理非整数** ✗
+   ⟹ 误用会得到假结论（E[Σm²] = 383.5 ✗）；**先验证前提，再当必要条件用** ✓
+⑦ ⭐ **假失败要先怀疑自己的脚本** ✓（E44 自查 3 处：把 j=256 误入 255 行 ✗｜dec() 切片吞指数 ✗
+   ｜Parseval 误用 ✗）—— 三处**全是我的错**，且**全在落盘前被脚本/核对抓出** ✓
 ```

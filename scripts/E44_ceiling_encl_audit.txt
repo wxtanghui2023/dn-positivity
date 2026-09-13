@@ -1,0 +1,66 @@
+E44 -- independent audit of the 0.682 ceiling enclosure  (arXiv:2608.13637v2 section 7.2)
+source: repo anthropics/zeta-23-lean tag v1.0, file Zeta23/PairCeiling/LawN256.lean
+        sha256 11ae9f7dcc1747f68b51c44f057641ba20bd623b2abea04849b612e716903c6e
+paper's own caveat: EnclOK is 'certified by interval arithmetic and [is] not checked by the
+Lean kernel'; the paper says this is the only place a numerical certification enters.
+====================================================================================================
+[A] table shape
+    pairs = 256 ; N = 256 ; K = 1393796574908163946345982392040522594123776 ; K == 2^140 : True
+    distinct interval widths: [1]   -> every interval has width 1
+
+[B] the 255 near-CUE ROWS: |256*S(j) - j| <= tau = 3e-40,  j = 1..255
+    (j = 256 is the EDGE entry, excluded by construction: the paper counts 255 rows)
+    intervals bracketing j*2^132 at an endpoint: 255/255 ; exceptions: none
+    widest deviation  max_{j<=255} |256*S(j) - j| = 1.8367e-40  (attained at j = 1)
+    256/K = 2^-132 = 1.8367e-40
+    => tau = 3e-40 holds, margin = 1.633x  : True
+    sign pattern: 131 rows place the value at/above j/256, 124 at/below
+    (mixed signs; consistent with an active-set optimum of the underlying programme)
+
+[C] edge bound  |D(1)| <= 82395317/10^8 = 0.82395317     [Defs.lean: D(x) = C(x) - x^2/2]
+    S(256) in [211.43200914248580, 211.43200914248580]   (last recorded pair)
+    C(1)   in [1.3239531607128351, 1.3239531607128351]
+    D(1)   in [0.823953160712835167, 0.823953160712835167]   (interval width 7.1746e-43)
+    recorded bound = 0.82395317 ; margin = 9.2872e-09 ; sign of D(1) = +
+    => the recorded edge bound reproduces and holds : True
+    (82395317/10^8 = 0.82395317 < 0.824 = the paper's rounded constant in the display)
+
+[D] the ceiling constant  p0 = 1 - a_N  <= 0.6818287
+    p0  = 10909258999421303588095230195816054408197/16000000000000000000000000000000000000000
+        = 0.681828687463831474255951887238...
+    a_N = 1 - p0 = 0.318171312536168525744048112761
+    denominator = 2^43 * 5^39 : True   (a 40-digit decimal-type rational)
+    p0 <= 0.6818287 : True ; margin = 1.2536e-08
+    distance to the rounded display 0.682 : 0.000171
+
+[E] the theorem's own constant  c := 1/(6*256^2) + tau/(2*256) <= 2.5431316e-6
+    c = 0.000002543131510416   (1/(6*256^2) = 1/393216 = 0.000002543131510416)
+    c <= 2.5431316e-6 : True ; margin = 8.9583e-14
+
+[F] consistency checks valid for RATIONAL positions (the law has positions in [0,256) rational)
+    |F_c(j)|^2 <= (sum_i m_i)^2 = 65536, hence 0 <= S(j) <= 256 for every j
+    max_j S(j) = 211.43200914248580 (attained at j = 256) ; all S(j) <= 256 : True
+    if all positions were INTEGERS then F would be 256-periodic in j and S(256) = S(0) = 256;
+    recorded S(256) = 211.43200914248580 != 256, so positions are genuinely non-integer -- consistent with the
+    Lean header.  This also explains why the grid carries no j <-> 256-j symmetry, so the ramp
+    j/256 on both halves of the grid is not contradictory (integer positions would forbid it).
+
+====================================================================================================
+CONCLUSION (digit-driven)
+  VERIFIED INDEPENDENTLY from public data:
+    * the recorded enclosures imply the row certificate |256 S(j) - j| <= 3e-40  (margin 1.63x)
+    * the recorded enclosures REPRODUCE the paper's edge bound |D(1)| <= 0.82395317
+      (computed D(1) = 0.823953160712835167, margin 9.2872e-09) and its sign; this is the constant 0.824 that appears
+      in the paper's displayed ceiling inequality
+    * p0 = 0.681828687463831474... <= 0.6818287  (margin 1.2536e-08)
+    * the theorem's constant step 1/(6*256^2) + tau/512 <= 2.5431316e-6
+    * 0 <= S(j) <= 256 for all j, and S(256) != 256 (non-integer positions, as stated)
+  NOT VERIFIABLE from public materials (the honest limit of this audit):
+    * EnclOK itself -- that the law's TRUE form factor lies inside these intervals.  The data
+      file cert_N256_blk_b128m.json (sha256 cc3de9917db4d14d844630a4e97dda8387fd6e257e52b6967f430b8914584eb8)
+      is referenced but not shipped, so no third party can redo the interval arithmetic.
+      Reproducibility gap, NOT a detected error.
+    * consequence: the chain 'enclosures => row certificate + edge bound => 0.6818287 +
+      2.5431316e-6(...)' is checkable at every step except its single input -- exactly the step
+      the paper itself flags as un-kernel-checked.
+  Request that would close the gap: the law file above (its sha256 is public).
