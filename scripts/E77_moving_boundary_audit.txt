@@ -1,0 +1,34 @@
+E77 -- moving-boundary (edge/bulk) audit of the deep fast region
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  table: N = 2001052 zeros, top ordinate T = 1132490.658714
+  boundary gamma_c = 16000, corresponding n0 = gamma_c^2/0.09 = 2.84444e+09
+
+(1) exact phase identity:  n/gamma = sqrt(n)/0.3 + u/0.09 + u^2/(0.09 gamma),  u = gamma_c - gamma
+      n/n0     max |LHS - RHS| over the region      note
+      1.2144   4.314e+07                              exact identity, residual is round-off
+      1.3533   7.107e+07                              exact identity, residual is round-off
+      1.2980   5.994e+07                              exact identity, residual is round-off
+      1.5457   1.098e+08                              exact identity, residual is round-off
+
+(2) edge layer [gamma_c - U, gamma_c]: bound U/(mean gap)/gamma_c versus measured |S_edge|
+      U              #zeros in layer    bound (count/gamma_c)   measured max |S_edge| (sampled)
+      126.5          158                0.005589                0.00052118
+      253            316                0.01118                 0.00154793
+      1265           1571               0.05557                 0.00304819
+    reading: the edge layer holds only a few thousand zeros out of hundreds of thousands, so its sum is
+    trivially small; the question is only whether the bulk can be controlled without the Nyquist factor.
+
+(3) bulk gamma <= gamma_c - U (a FIXED band-limited sum): energy, extraction bound, allowance
+      U/sqrt(gc)   M_bulk      rms|S_bulk|     Omega        Omega*L        sqrt(Omega*L)   sup bound      verdict
+      1            17267       0.1517          0.07066      2.01e+08       1.418e+04       2150           ok
+      10           15854       0.1517          0.07065      2.01e+08       1.418e+04       2150           ok
+    note: at the real scale the same arithmetic gives Omega*L ~ 9.1e10 and sqrt ~ 3.0e5, so the bulk
+    extraction costs three hundred thousand times the root-mean-square, far over the allowance.
+
+======================================================================================================================
+READING
+  The moving-boundary decomposition is exact and the edge layer is trivially small, because it holds only
+  a thin band of zeros.  The bulk, however, is a fixed band-limited sum, so the pointwise extraction of
+  the bulk still pays the Nyquist factor, which at the real scale is three hundred thousand.  Under the
+  instruction to close the line at once if the bulk needs that factor, the verdict is to close it.
