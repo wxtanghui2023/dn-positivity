@@ -1,0 +1,22 @@
+E67 -- moment constants of the phase sum at the true scales of the trigger
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052 zeros, T0 = 1132490.658714, X = T0^2 = 1.28254e+12, |I| = X/2 = 6.41268e+11
+
+  sampling 400 indices n uniformly in [0.30*X, X]  (the range the argument uses)
+
+      quantity            value                 normalised                comment
+      M_2                 852566                M_2/N = 0.426059         (random-phase value 1)
+      M_4                 1.36105e+12           M_4/N^2 = 0.339904       (requirement: < 2.55)
+      2*(M_2)^2/N^2       0.363052              0.363052                 (Gaussian-complex prediction)
+      max |S_n|           2183.47               max|S_n|/N = 0.001091      (requirement: <= 0.8)
+      rms |S_n|           923.345               rms/N = 0.000461         
+      sqrt(N)             1414.59               rms/sqrt(N) = 0.652732      
+
+======================================================================================================================
+READING
+  C = M_4/N^2 is the constant the derivation must bound below 2.55.  If the measured constant is far below
+  that, the fourth-moment route has room and the remaining task is the uniform inequality.  If it is close
+  to or above it, the route cannot work with the fourth moment and would need a higher order instead.
+  The ratio M_2/N says how far the phases are from equidistribution at these indices, and rms/sqrt(N)
+  says whether the sum sits at the random-phase scale.
