@@ -1,0 +1,22 @@
+E45 step 14 -- the p-floor on a REFINED grid: N = 4, Q = 16 (coarse was Q = 8)
+field K = Q(zeta_16)^+ = Q[u]/(u^4-4u^2+2) ; weights in K ; ramp becomes 4 rational equations per j
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+family: ALL marked configurations with marks in {1,2} summing to 4 on the 16-grid = 3620
+   spot check: config [0, 1, 2, 3] -> |F(1)|^2 = ('0', '0', '2', '1') (embeds to 13.137071184544)
+   spot check: config [0, 1, 2, 4] -> |F(1)|^2 = ('0', '-1', '2', '1') (embeds to 11.289312119522)
+   spot check: config [0, 1, 2, 5] -> |F(1)|^2 = ('2', '2', '1', '0') (embeds to 9.109731692418)
+
+solving LP: 14480 variables, 16 equations, 3620 nonnegativity rows
+
+   MINIMAL simple fraction p on the refined grid (N=4, Q=16) = 0.000000000
+   comparison: coarse grid floor = 0.713388348 ; frontier's constant = 0.6818287
+   verdict: BELOW the frontier -> the obstruction DISSOLVES on the refined grid
+   optimal law uses 6 configurations
+
+====================================================================================================
+READING
+  A floor below the frontier's 0.6818287 on the refined grid means the coarse-grid obstruction was a
+  resolution effect: with enough position resolution an exact-ramp law can have a small simple
+  fraction and hence be a ceiling-comparable law.  A floor that stays above it means the obstruction
+  is not about resolution, and the exact-ramp route cannot produce such a law at this grid size.
