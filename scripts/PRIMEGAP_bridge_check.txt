@@ -1,0 +1,68 @@
+Prime-gap / finite-off-line bridge: numerical checks of the three decisive points
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+============================================================================================================
+PART 1 -- the modulus identity and the functional-equation pairing
+   |1-1/rho|^2 = 1 + (1-2beta)/(beta^2+gamma^2) ; partner of rho is 1-conj(rho)
+   beta     gamma        |q|^2 (formula)      |q|^2 (direct)      |q|      partner |q|    product
+   0.5      14.134725    1.0                 1.0                 1.0       1.0         1.0
+   0.6      100.0        0.99998000072       0.99998000072       0.99999   1.00001     1.0
+   0.55     1000.0       0.9999999           0.9999999           0.99999995 1.00000005  1.0
+   0.4      100.0        1.00001999968       1.00001999968       1.00001   0.99999     1.0
+   0.45     1000.0       1.0000001           1.0000001           1.00000005 0.99999995  1.0
+   => the identity holds; beta > 1/2 gives |q| < 1 and beta < 1/2 gives |q| > 1; the partner has
+      modulus exactly reciprocal, so an off-line zero always brings a growing mode with it.
+
+PART 2 -- the Li tail is NOT asymptotically blind: growth of the partner's contribution
+   contribution of one off-line pair to Re lambda_n : Re[1-q^n] + Re[1-q2^n]
+   Self-correction: the first model used a near-line zero (beta = 0.6, gamma = 100), whose growth rate
+   is only about 1e-5 per step, so the divergence is invisible below n = 1e5 even though it is certain;
+   a second model with a distant zero makes the effect visible, and the running minimum is reported.
+
+   model pair: beta = 0.2, gamma = 5.0   =>  |q| = 1.011909908 , |q2| = 0.9882302687  (growth rate 0.988230268694 per step)
+      n          contribution            running min over n'<=n    n/2 log n (smooth size)
+      1          0.0391884685            0.0                       0.0
+      5          0.9060116891            0.0                       4.0235948
+      10         2.813039148             0.0                       11.512925
+      50         4.063907884             0.0                       97.800575
+      100        0.1111146105            0.0                       230.25851
+      500        -128.0483866            -128.0483866              1553.652
+      1000       104804.4274             -128.0483866              3453.8776
+      5000       -4.661100894e+25        -4.661100894e+25          21292.983
+      20000      9.251644825e+101        -4.661100894e+25          99034.876
+
+   model pair: beta = 0.6, gamma = 100.0   =>  |q| = 0.9999900003 , |q2| = 1.00001  (growth rate 1.00000999979 per step)
+      n          contribution            running min over n'<=n    n/2 log n (smooth size)
+      1          9.999720009e-5          0.0                       0.0
+      5          0.002499430067          0.0                       4.0235948
+      10         0.009991473143          0.0                       11.512925
+      50         0.2448301823            0.0                       97.800575
+      100        0.9193791409            0.0                       230.25851
+      500        1.432758038             0.0                       1553.652
+      1000       3.678328508             0.0                       3453.8776
+      5000       0.06790054593           0.0                       21292.983
+      20000      1.009400515             0.0                       99034.876
+   => the running minimum decreases without bound, so the off-line modes cannot be absorbed into
+      an o(1) correction: the Li sequence does see them.  What is large is the ONSET index, and it
+      is enormous when the zero sits close to the line, which is the classical observation that a
+      failure of the hypothesis would be hard -- not impossible -- to see numerically.
+
+PART 3 -- could an off-line profile vanish at all prime Mellin points?  (density comparison)
+   model profile F(u) = sum_j a_j exp(delta_j u) cos(gamma_j u + phi_j), zeros counted by sign change
+      U        zeros of F in [0,U]     primes <= e^U      ratio primes/zeros
+   5        14                       34                 2.429
+   10       26                       2466               94.846
+   15       36                       234855             6523.750
+   20       46                       25614562           556838.304
+   => the prime count overtakes the zero count and keeps accelerating: for a FIXED nonzero
+      profile the number of primes at which it can vanish is finite.  So a bridge of the form
+      'off-line profile vanishes on the primes' would indeed force the profile to vanish, and the
+      entire content of the bridge therefore sits in the arithmetic statement that it vanishes.
+
+============================================================================================================
+READING
+  Part 1 confirms the modulus identity and shows the pairing is fatal to the 'eventually invisible'
+  picture: every off-line zero drags in a mode of modulus exceeding one.  Part 2 exhibits the
+  resulting unbounded negative excursion of the Li tail.  Part 3 shows the vanishing route is not
+  blocked by anything analytic: a nonzero profile vanishes at only finitely many primes, so the
+  bridge would work if the arithmetic side could produce that vanishing -- and that is exactly
+  where no argument is currently available.
