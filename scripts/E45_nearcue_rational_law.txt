@@ -1,0 +1,17 @@
+E45 step 2 -- does a RATIONAL-weight law with the EXACT ramp form factor exist?
+ramp condition: sum_c w_c |F_c(j)|^2 = j for j = 1..N-1, w >= 0, sum w = 1
+method: split each value into (rational part, sqrt(D) part) -> RATIONAL LP; re-verify exactly
+====================================================================================================
+   4  Q= 8  field=Q(sqrt2)  configs=   98  LP status=2
+      -> INFEASIBLE: no law in this family attains the exact ramp (any real weights)
+   5  Q=10  field=Q(sqrt5)  configs=  252  LP status=2
+      -> INFEASIBLE: no law in this family attains the exact ramp (any real weights)
+   6  Q=12  field=Q(sqrt3)  configs= 1144  LP status=2
+      -> INFEASIBLE: no law in this family attains the exact ramp (any real weights)
+
+====================================================================================================
+READING
+  Feasibility would mean S(j) = j/N exactly, hence tau = 0 in NearCUE and NO interval arithmetic
+  in the numeric input.  Infeasibility means the exact ramp is out of reach on this grid, so any
+  construction must accept tau > 0 -- see scripts/E45_nearcue_consistency_check.py for the
+  reconciliation and the quantitative floor.

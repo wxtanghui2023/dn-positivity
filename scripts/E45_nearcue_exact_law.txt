@@ -1,0 +1,17 @@
+E45 step 3 -- EXACT near-CUE laws at N = 4,5,6 (weights solved over Q, ramp verified exactly)
+====================================================================================================
+N = 4  (Q = 8, field Q(sqrt2))   support = 2 configurations
+   exact rational system: 7 equations, 2 unknowns -> consistent = False
+   -> NO exact solution on this support
+N = 5  (Q = 10, field Q(sqrt5))   support = 5 configurations
+   exact rational system: 9 equations, 5 unknowns -> consistent = False
+   -> NO exact solution on this support
+N = 6  (Q = 12, field Q(sqrt3))   support = 6 configurations
+   exact rational system: 11 equations, 6 unknowns -> consistent = False
+   -> NO exact solution on this support
+====================================================================================================
+READING
+  tau = 0 means the single numeric input of the ceiling theorem is an EXACT algebraic identity,
+  with no interval arithmetic anywhere -- the E44 gap, closed for our own instance.
+  The weights lie in Q(sqrt2), Q(sqrt5), Q(sqrt3) respectively; step 2 showed no rational-weight
+  law exists on these grids, so this quadratic field is the natural home of the construction.

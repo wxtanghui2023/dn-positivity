@@ -1,0 +1,39 @@
+E45 reconciliation at N=4 (Q=8, field Q(sqrt2)), COMPLETE family of 70 configurations
+====================================================================================================
+[C] max |float |F_c(j)|^2 - (a + b*sqrt2)| over all configs and j = 5.773e-15
+    (small => the two implementations agree; the discrepancy below is mathematical, not a bug)
+[A] floating-point LP on the COMPLETE family: min max-residual = 0.000e+00
+[B] exact-split LP (a-parts = j AND b-parts = 0): status = 2 (INFEASIBLE)
+[D] LP for the minimum deviation failed: The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+[E] which half obstructs the EXACT ramp?
+    E1 rational parts only  (sum w a_cj = j)      : INFEASIBLE
+    E2 sqrt parts only      (sum w b_cj = 0)      : feasible
+    F  floor of the rational parts: min_w max_j |sum_c w_c a_cj - j| = 1.000000e+00
+       CAUTION: this bounds the a-parts ALONE.  A real-weight law need not make the a-parts
+       match, so this is NOT a lower bound for tau -- see the RESOLUTION section.
+    G  distinct rational parts a_cj appearing in the family: [0.0, 2.0, 4.0, 8.0]
+       all even integers? True
+       NOTE: parity alone is NOT an obstruction -- a convex combination of even integers can
+       be odd (1 = 0.5*0 + 0.5*2), so the evenness below is a symptom, not the reason.
+    H  single-row feasibility of  sum_c w_c a_cj = j  (w in the simplex):
+       j = 1 : feasible
+       j = 2 : feasible
+       j = 3 : feasible
+       => single rows are individually satisfiable; the split system fails JOINTLY.
+          (The split system is the RATIONAL-weight condition; see the RESOLUTION below.)
+
+====================================================================================================
+RESOLUTION (corrected logic; an earlier draft of this section was WRONG)
+  [C] shows the float and the exact-split implementations agree, so [A] vs [B] is a genuine
+  discrepancy, not a coding error.  The resolution is about WHAT [B] decides:
+    * The split criterion (a-parts = j AND b-parts = 0 SEPARATELY) is exactly the condition for a
+      RATIONAL-weight law: both sums must be rational, which presupposes rational weights.
+    * For REAL weights the two parts need not vanish separately: the single real equation
+      (sum w a - j) + (sum w b)*sqrt2 = 0 can hold with both brackets nonzero.  Hence [B] does NOT
+      rule out exactness, and [A] shows the ramp IS reached numerically with real weights.
+    * [F] bounds the a-part alone and is therefore NOT a lower bound for tau.
+  Corrected status: (i) RATIONAL weights are impossible in these families; (ii) real/algebraic
+  weights reach the ramp numerically; (iii) whether they reach it EXACTLY is OPEN -- an algebraic
+  question, not an LP one.  An exactly-certifiable law, if it exists, will have ALGEBRAIC
+  weights, so its certificate is an identity in a number field (exactly checkable, but not
+  rational arithmetic).
