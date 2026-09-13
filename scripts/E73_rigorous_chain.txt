@@ -1,0 +1,27 @@
+E73 -- rigorous chain for the slow phase range, verified term by term
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  N = 2001052, T = 1132490.658714, X = T^2 = 1.28254e+12, mean grid spacing = 0.565941
+  explicit counting-error bound at u = T: c1 log T + c2 loglog T + c3 = 4.5875
+
+      n/X      Y=sqrt(n)   (1) smooth   (2) boundary   (3) discrepancy   chain total   measured |sum|   0.8N
+      0.4501   759790      12.84        9.175          2.328e+05        2.329e+05     158.9          1.601e+06
+                                                       2.374e+05        (Selberg version)                          margin vs 0.8N: 6.74x
+      0.5473   837820      10.56        9.175          1.845e+05        1.845e+05     164.5          1.601e+06
+                                                       2.111e+05        (Selberg version)                          margin vs 0.8N: 7.58x
+      0.5086   807648      11.36        9.175          2.032e+05        2.032e+05     169.5          1.601e+06
+                                                       2.216e+05        (Selberg version)                          margin vs 0.8N: 7.22x
+      0.6820   935261      8.472        9.175          1.238e+05        1.238e+05     176.3          1.601e+06
+                                                       1.727e+05        (Selberg version)                          margin vs 0.8N: 9.27x
+      0.4405   751665      13.12        9.175          2.379e+05        2.379e+05     160.5          1.601e+06
+                                                       2.4e+05          (Selberg version)                          margin vs 0.8N: 6.67x
+      0.7160   958273      8.07         9.175          1.094e+05        1.094e+05     2.91           1.601e+06
+                                                       1.623e+05        (Selberg version)                          margin vs 0.8N: 9.86x
+
+======================================================================================================================
+READING
+  Term (1) is elementary, term (2) uses the explicit pointwise counting-error bound, term (3) uses
+  Cauchy-Schwarz against the second moment of the counting error, which Selberg supplies unconditionally
+  and which does not depend on the index.  If the chain total stays below four fifths of the count for
+  every index, the slow phase range is closed rigorously and uniformly, and the only remaining piece is
+  the fast range, where the phase derivative exceeds one.
