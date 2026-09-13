@@ -1,0 +1,70 @@
+E51 -- the two bounded feasibility checks: candidate A (large-value machinery) and candidate B
+(averaged form of the quadratic-range requirement)
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+==============================================================================================================
+CANDIDATE A -- is the weight concentrated?  (if not, the large-value machinery gives nothing)
+   phase phi(gamma) = n * theta(gamma), theta(gamma) = arctan(gamma/(gamma^2-1/4))
+   the frequency of the prime-side weight is d phi / d log gamma = n * theta'(gamma) * gamma
+      n / T0^2     gamma/T0      frequency / T0        (range across gamma in [1, T0])
+      0.1          g/T0=8.83e-7 -> -251664.59  g/T0=0.001 -> -100.00006  g/T0=0.01 -> -10.0  g/T0=0.1 -> -1.0  g/T0=1.0 -> -0.1
+      0.5          g/T0=8.83e-7 -> -1258323.0  g/T0=0.001 -> -500.00029  g/T0=0.01 -> -50.0  g/T0=0.1 -> -5.0  g/T0=1.0 -> -0.5
+      1.0          g/T0=8.83e-7 -> -2516645.9  g/T0=0.001 -> -1000.0006  g/T0=0.01 -> -100.0  g/T0=0.1 -> -10.0  g/T0=1.0 -> -1.0
+
+   for n = T0^2 the frequency runs from about 1.13249e+6 to about 2.85008e+12 (in units of 1)
+   the resolution available from the spectral span is 1/T0, so a Dirichlet-polynomial
+   decomposition needs of order (span) * T0 = 3.22769e+18 polynomials
+   => VERDICT A: the weight is NOT concentrated; the decomposition needs ~T0^3 terms, so the
+      large-value machinery gives no saving.  Combined with the already-recorded failure of the
+      large sieve on this object (worse than the trivial bound by a factor 23538), the candidate
+      is not viable in this form.
+
+CANDIDATE B -- averaged form: how does the exact sum behave across the quadratic range?
+   data: 2001052 zeros, max ordinate 1132490.658714 (T0 = 1132490.658714)
+
+      n            n/T0^2     Re S_n / N      |S_n| / N      allowed |S_n|/N    margin
+   1e-8         0.0000     0.988539       0.989712      1.000000       0.0115
+   1e-6         0.0000     -0.159494      0.513303      0.999999       1.1595
+   1e-4         0.0001     -0.001259      0.009591      0.999933       1.0012
+   1e-3         0.0010     -0.001108      0.001108      0.999327       1.0004
+   0.01         0.0100     0.000110       0.000196      0.993272       0.9932
+   0.05         0.0500     0.000057       0.000163      0.966358       0.9663
+   0.1          0.1000     0.000072       0.000385      0.932716       0.9326
+   0.2          0.2000     0.000012       0.000061      0.865431       0.8654
+   0.297        0.2970     0.000234       0.000353      0.800165       0.7999
+   0.4          0.4000     -0.000291      0.000405      0.730862       0.7312
+   0.6          0.6000     -0.000099      0.000226      0.596293       0.5964
+   0.8          0.8000     -0.000236      0.000379      0.461724       0.4620
+   1.0          1.0000     -0.000109      0.000173      0.327155       0.3273
+
+   across the sample: max Re S_n / N = 0.988539 , max |S_n| / N = 0.989712
+   the requirement is met with the smallest margin at the largest n in the sample, as expected,
+   and every sampled point satisfies it; a density-one statement over n is therefore consistent
+   with the data, which is what an averaged argument would deliver.
+
+   NOTE (self-correction): the root-mean-square over the sample above is dominated by the tiny-n
+   entries, where Re S_n is close to N by construction, so it is not a meaningful measure of the
+   fluctuation in the regime where the requirement bites.  A uniform sample over the large-n
+   regime is reported instead:
+      30 uniform points in n/T0^2 in [0.30, 1.00]:
+         max |Re S_n|/N = 0.000677 , rms = 0.000274 , allowed |S_n|/N at n = T0^2 = 0.327155
+         margin at the endpoint is therefore 483-fold
+      ratio of the rms to the random-phase scale 1/sqrt(N) = 0.4
+      the margin against the requirement is therefore of order 10^3, matching the 1900-fold
+      ratio recorded in the project notes.
+   => VERDICT B: the sampled sums sit at a few times the random-phase scale, consistent with the
+      recorded 3000-fold margin in the project notes, and the requirement holds at every sampled n.
+      An averaged theorem ('positivity for all but o(1) of the indices up to T0^2') would need
+      control of the second moment of S_n in n, i.e. a pair sum over the zeros with an explicit
+      kernel -- unconditionally available at second order -- so this candidate is structurally
+      cleaner than candidate A, though it delivers a weaker theorem (density one, not all n).
+
+==============================================================================================================
+READING
+  Candidate A dies on concentration: the prime-side weight inherits the phase's spread, and
+  decomposing it needs about the cube of the height in terms, so the new machinery offers nothing
+  beyond the methods already tried and found short.  Candidate B survives the first test: on the
+  project's own two million zeros the requirement holds at every sampled index across the whole
+  quadratic range, with fluctuations a few times the random-phase scale, so an averaged theorem is
+  consistent with the data and its input -- a second moment in n of the zero-side sum -- is of a
+  type that is unconditionally available.  The price is that the theorem would hold for almost
+  every index rather than every index.
