@@ -1,0 +1,15 @@
+E57 -- zero-side evaluation of the inertia device's Hilbert-Schmidt pairing
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+   R_meas(N) = (1/N) sum_{gamma,gamma'} (Phi(gamma-gamma')/L)^2  with Phi/L = 2 sin(dL/2)/(dL)
+   diagonal = 1 ; off-diagonal = R_meas - 1 ; frontier's prime-side value for this window: R(psi_0)=4/3
+
+      N          T (top)        L = log(T/2pi)     R_meas         off-diagonal/N     ratio to 4/3
+      2000       2515.29        5.992265            1.215603        0.215603            0.9117
+      100000     74920.8        9.386310            1.253909        0.253909            0.9404
+
+   READING
+   The diagonal is fixed at 1.  If the off-diagonal divided by N stays bounded as N grows, the
+   pairing is O(N) and the zero-side elementary route can carry the device's input; if it grows like
+   log N, the pairing is O(N log N), the elementary route cannot reach the needed constant, and the
+   prime-side machinery remains essential.  The frontier's value 4/3 is the target for the total.
