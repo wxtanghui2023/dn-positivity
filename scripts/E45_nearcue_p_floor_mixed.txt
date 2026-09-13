@@ -1,0 +1,24 @@
+E45 step 13 -- the p-floor re-examined on the FULL family of MIXED-mark configurations
+step 12 used only all-ones and all-twos configurations; mixed ones are admissible and more numerous
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2)) : family of ALL marked configurations = 266
+   MINIMAL simple fraction p over the full mixed family = 0.713388348
+   frontier's recorded constant = 0.6818287   =>  ABOVE (obstruction stands)
+   optimal law: 7 configurations (mark-1 counts: [(2, 5), (4, 2)])
+   step 12 comparison: its floor was 0.713388 (N=4) / 0.707336 (N=6) on the restricted family
+
+N = 6 (Q = 12, field Q(sqrt3)) : family of ALL marked configurations = 8074
+   MINIMAL simple fraction p over the full mixed family = 0.707336156
+   frontier's recorded constant = 0.6818287   =>  ABOVE (obstruction stands)
+   optimal law: 11 configurations (mark-1 counts: [(2, 6), (4, 4), (6, 1)])
+   step 12 comparison: its floor was 0.713388 (N=4) / 0.707336 (N=6) on the restricted family
+
+====================================================================================================
+READING
+  If the mixed family lowers the minimal fraction below the frontier's 0.6818287, then step 12's
+  floor was a family artifact, the obstruction dissolves, and an exact-ramp law with a
+  ceiling-comparable simple fraction exists on the SAME coarse grid -- the strongest possible
+  reconciliation of the numeric half with the ceiling's purpose.  If the floor persists, the
+  obstruction is real for these grids.
