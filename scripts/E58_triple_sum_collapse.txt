@@ -1,0 +1,30 @@
+E58 -- does the third-order zero-side sum collapse to the second-order one?
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+================================================================================================================
+(1) idempotence  (k*k)(x) = (2 pi/L) k(x) , with k(x) = 2 sin(xL/2)/(xL), L = 10.0
+      x          (k*k)(x)            (2 pi/L) k(x)        relative difference
+      -30.00     -0.00306451          -0.00299447           2.34e-02
+      -5.00      -0.00342547          -0.00332636           2.98e-02
+      -0.50      0.15049256           0.15041246            5.33e-04
+      0.00       0.62821855           0.62831853            1.59e-04
+      0.50       0.15049256           0.15041246            5.33e-04
+      5.00       -0.00342547          -0.00332636           2.98e-02
+      30.00      -0.00306451          -0.00299447           2.34e-02
+   => the identity holds to quadrature accuracy, so for the indicator window the kernel is
+      idempotent up to the scale 2 pi/L and the cyclic collapse follows analytically.
+
+(2) collapse on real zeros:  triple sum  vs  (2 pi/L) x pair sum
+      N = 400 zeros, L = log(T/2pi) = 4.683837
+      pair sum (normalised):          1.19359649
+      predicted triple (2 pi/L)*pair: 1.60116346
+      exact triple sum (normalised):  1.57411088
+      relative difference:            1.690e-02
+
+================================================================================================================
+READING
+  The escape is exactly as expected: the third-order sum is a fixed multiple of the second-order one,
+  so the third moment of the certificate matrix carries no information beyond the second moment.  The
+  same argument collapses every higher cyclic order.  The consequence for the goal is a negative one
+  with a clean reason: the higher-order input that the 0.682 ceiling needs cannot be sourced from
+  zero-side moments of the device, because they are all functions of the second moment; it has to
+  come from a different type of object, namely a genuinely third-order prime-side quantity.
