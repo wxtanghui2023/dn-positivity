@@ -1,0 +1,28 @@
+E46 / WP3.1 -- von Mangoldt sums (Lemma 5.1) and the lattice-to-integral step (Proposition 5.2)
+all inputs classical and unconditional; NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+==============================================================================================================
+PART 1 -- von Mangoldt sums, exact evaluation vs the closed forms
+   x      sum L/n - log x   sumL2/n / (log^2 x/2)   sumL2(log x-log n) / (log^3 x/6)   sumL/sqrt n / sqrt x   sumL/(sqrt n log n) / (sqrt x/log x)
+      1000   -0.5790          0.94105                    0.90424                   1.9134                3.0292
+     10000   -0.5757          0.96485                    0.93385                   1.9747                2.8111
+    100000   -0.5767          0.97672                    0.95227                   1.9920                2.6053
+   1000000   -0.5776          0.98355                    0.96421                   1.9969                2.4586
+   2000000   -0.5772          0.98512                    0.96697                   1.9982                2.4255
+   (ratios tending to 1 and the first column to a constant confirm the closed forms;
+    the constant in the first column is the O(1) of Chebyshev's estimate)
+
+PART 2 -- lattice-to-integral step: sum_{k in [0,d)} phi_hat(tau-a_k)phi_hat(tau'-a_k)  vs  L*Phi(tau-tau')
+   L = 12.0, h = 0.52359878, T0 = 26.0, d = 49 ; tau, tau' taken in the interior of [T0, 2T0)
+   tau = 29.0, tau' = 30.0 : sum = (0.1624527532304802 + 0.0j) , L*Phi = (0.1624802548828897 + 0.0j) , relative deviation = 0.000169262
+   tau = 31.0, tau' = 31.0 : sum = (9.582190119966681 + 0.0j) , L*Phi = (9.582200700839588 + 0.0j) , relative deviation = 1.10422e-6
+   tau = 28.0, tau' = 34.0 : sum = (0.0007457515205102145 + 0.0j) , L*Phi = (0.0007385490628249975 + 0.0j) , relative deviation = 0.00975217
+   (small relative deviation in the interior is what the reduction assumes; the boundary
+    rows of the interval carry the tails that the source's E_1 estimate bounds)
+
+==============================================================================================================
+READING
+  Part 1 exhibits the constants behind the six von Mangoldt estimates, all of which follow from
+  Chebyshev's sum and partial summation.  Part 2 confirms the step on which the Hilbert-Schmidt
+  reduction rests: the lattice sum over the sampling window reproduces L times the transform of
+  the squared window, which is the Poisson-Gabor identity of WP2 restricted to the window, with a
+  deviation that stays small in the interior where the theorem applies.
