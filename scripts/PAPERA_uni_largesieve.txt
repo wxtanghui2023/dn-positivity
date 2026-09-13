@@ -1,0 +1,49 @@
+================================================================================
+ROUTE A : UNIFORMITY DIRECT  (Weyl / Erdos-Turan / large sieve)
+================================================================================
+T0 = 1132490.658714  N = 2001052  allowance(T0^2) = 6.5465e+05
+
+(A1) WEYL CRITERION (equidistribution of {n theta_gamma / 2 pi} mod 1)
+  The sequence {n theta_gamma mod 2 pi}_{gamma<=T0} is equidistributed
+  <=>  (1/N) sum_gamma e^{2 pi i m n theta_gamma/2 pi} -> 0  for all m >= 1
+  <=>  S_{m n}/N -> 0  for all m >= 1 ,  with S_k = sum_gamma e^{i k theta_gamma}.
+  The m = 1 condition is  S_n / N = the very quantity to be bounded.
+  => CIRCULAR: Weyl needs S_n = o(N) as one of its own hypotheses.
+
+(A2) ERDOS-TURAN discrepancy (C = 2)
+  x_gamma = n theta_gamma / 2 pi mod 1 ;
+  D_N <= C ( 1/M + sum_{k<=M} (1/k) |(1/N) sum_gamma e^{2 pi i k x_gamma}| )
+  = C ( 1/M + sum_{k<=M} (1/k) |S_{k n}| / N ).
+  Koksma (f = cos 2 pi x, Var = 4): |sum_gamma cos(n theta_gamma)| <= 4 N D_N.
+  The k = 1 term is |S_n|/N = the target itself (same circularity).
+  measured at n = T0^2, M = 30 : |S_1|/N = 1.7347e-04
+  prior-round numbers (reproduced, see PAPERA-fluc-round2 s.4): ET bound at T0^2 = 5.67e5
+  vs allowance 6.55e5 (barely under) BUT 94% is the 1/M floor; fails 9.5x at n=1e6.
+  => CIRCULAR + quantitatively useless (needs |S_k| <= 0.0058 N for ALL k<=~30).
+
+(A3) LARGE SIEVE  (Selberg / Montgomery-Vaughan)
+  points x_j = theta(gamma_j)/2 pi in [0, 1/2]; coefficients a_j = 1.
+  Montgomery-Vaughan large sieve:
+      sum_{m=M+1}^{M+Q} |sum_j e^{2 pi i m x_j}|^2  <=  (Q + 1/delta) * N
+  with delta = min_{j!=k} || x_j - x_k ||  (minimal spacing of the points).
+  theta is decreasing; min |theta(k+1)-theta(k)| = 5.6674e-15  => delta = 9.0199e-16
+  1/delta = 1.1087e+15   (vs N = 2.0011e+06)
+  single-frequency bound (take one n0 in the sum, all terms >=0):
+      |S_n| <= (N + 1/delta)^(1/2) * sqrt(N) = 4.7101e+10
+      ratio to N = 23538.0   ratio to trivial = 23538.0
+  => WORSE than trivial (N) by a factor 23538.
+  REASON: theta = 1/gamma compresses the top of the range:
+  gamma in [T0/2, T0]  ->  theta in [1/T0, 2/T0] of length ~1/T0, holding ~N/2 points
+  => min spacing ~ 1/(T0^2 log) while N ~ T0 log T0  =>  1/delta ~ T0^2 >> N.
+
+  STRUCTURAL OBSTRUCTION (theorem-level): the large sieve is an L^2 (moment) bound.
+  For constant coefficients a_j = 1 it gives |S_n| <= sqrt((Q+1/delta) N).  To get
+  |S_n| < N (any constant-factor saving) one needs Q + 1/delta < N, i.e. 1/delta < N.
+  Here 1/delta = 1.11e+15 > N = 2.00e+06, so even |S_n| <= N is NOT attained --
+  let alone a saving.  A constant-factor saving requires L^1/L^infinity (cancellation
+  / equidistribution) structure, which is exactly what Weyl/ET re-express as S_n = o(N).
+
+VERDICT ROUTE A:  FAIL (circular + structurally impossible).
+  Weyl/ET: circular (k=1 = target).  large sieve: |S_n| <= 4.71e+10 = 23538x trivial.
+  Uniformity-as-input is the wrong direction: it REPHRASES the target, never bounds it.
+================================================================================

@@ -1,4 +1,4 @@
-# `lean/` —— Paper B 的 Lean 4 形式化
+# `lean/` —— Paper A + Paper B 的 Lean 4 形式化
 
 **目的**：按项目纪律⑤「**机器可验证优先**」✅，把 Paper B 的引理链逐条形式化、**每条即时编译验证** ✅
 （缘由：`docs/00-ANCHOR-purpose-and-discipline.md` ✅；工具链安装：`docs/LEAN-SANDBOX-SETUP.md` ✅）
@@ -34,9 +34,37 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 | 6c | `PB-LemmaS4-abeltransform.lean`：**Abel 变换（离散形式）** Σγᵢ⁻⁴ = n·γ_{n−1}⁻⁴ − Σ(i+1)(γ_{i+1}⁻⁴−γᵢ⁻⁴) | ✅ **已通过** |
 | 6c′ | Abel 变换的**连续版**（离散和 ↔ 积分，计数测度） | ⏳ 未完成（需 Stieltjes 积分 ✗） |
 | 6d | `PB-LemmaS4-abel.lean`：**log 型反常积分** ∫_H^∞ t⁻⁴log t（**有限版 + 反常版均过** ✓） | ✅ **已通过** |
+———————————————— Paper A（2026-09-13 补 ✓）————————————————
+| 15 | `PA-Basic.lean`：**共享恒等式** `|1 − 1/ρ|² = 1 + (1 − 2β)/(β² + γ²)`（β, γ ∈ ℝ, ρ ≠ 0）
+     + **临界线推论** `|1 − 1/ρ|² = 1`（β = 1/2） | ⚠️ **首编译 3 处 error** ✗ ⟹ 修正后 ✅ **已通过**（**exit 0 / 零 sorry / 3 秒** ✓，2026-09-13） |
+| 15a | `PA` · `normSq_of_re_im`：`normSq (β + γI) = β² + γ²` | ✅ **已通过** |
+| 15b | `PA` · `normSq_one_sub_inv`：**共享恒等式**（论文 A/B 的核心机制 ✓） | ✅ **已通过** |
+| 15c | `PA` · `normSq_one_sub_inv_half`：**临界线上 = 1**（论文 A 用那一步 ✓） | ✅ **已通过** |
 ```
+**Paper A 首编译的 3 处 error（留痕 ✓，修法已写入文件内注记 ✓）**
+```
+① `normSq_of_re_im`：`simp [normSq_apply]` 只到 `β*β + γ*γ = β^2 + γ^2` ⟹ 需 `ring` 收尾 ✓
+② `normSq_one_sub_inv`：**强制转换与减法次序** —— 目标里是 `↑β - 1`，引理模式是 `↑(β-1)`
+   ⟹ `rw` 找不到模式 ✗（用 `push_cast; ring` 显式转换 ✓）
+③ 非零性：见经验记录 ⑥（`positivity` 在本 import 集下**两种目标都证不出** ✗）
+⟹ 三条修法**均已实测通过** ✓；本条记录同时坐实：**未经编译的文件不得记 ✅** ✓
 **说明**：本目录只记录**形式化**进度 ✅；**不改变**论文的任何数学陈述 ✅。
 **纪律**：每条引理必须**独立编译通过**才记为 ✅；**卡住的如实记为卡住** ✅（不粉饰 ✅）。
+
+## 全目录编译**巡检**（2026-09-13 ✓ —— 以**产物**为准 ✓）
+```
+命令 ✓：for f in lean/*.lean; do (cd ~/mathlib4 && lake env lean "$f"); done
+        （逐文件记录 exit 码 / `: error:` 数 / `: warning:` 数 ✓）
+结果 ✓：**15 个 .lean 文件 / 15× exit 0 / 共 【0】个 error / 【1】个 warning** ✅
+   · 唯一 warning 所在 = `PB-Lemma3-identity.lean`（**非** error ✓）
+   · ⚠️ **巡检前**：`PA-Basic.lean` = **3 个 error** ✗（即上面修正 ①②③ ✓）⟹ 修后全绿 ✓✓
+【对记录的影响 ✓】
+   · 进度表（§进度）只到 `6d`；另有 3 个已通过文件在本文件**其它小节**如实记录 ✓
+     （`PB-FinalComparison.lean` §追加 ✓｜`PB-Stieltjes-bridge.lean` / `PB-Stieltjes-count.lean`
+      §桥的进度 / §桥建成 ✓）⟹ **无遗漏文件** ✓；但 **进度表本身滞后** ⚠️ ⟹ 以**巡检**为准 ✓
+   · ⭐ **重要结论** ✓：本目录现在 **15/15 全绿且零 sorry** ✓（只有 `PA-Basic.lean` 是
+     2026-09-13 新验的 ✓）—— 这也坐实：**未经编译的文件不得记 ✅** ✓
+```
 
 ## 形式化的经验记录（供后续引理复用 ✅）
 ```
@@ -52,6 +80,16 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 ④ **自然数指数 vs 实数指数** ⚠️ —— `(...)^2` 是 `Nat` 指数；`Real.rpow_*` 要实数指数 ✅
    ⟹ **避免混用**：全程用 `Real.rpow_add` 而非 `Real.rpow_mul` ✅（本目录的 `F_eq_sq` 即如此 ✓）
 ⑤ **每次改完立刻编译**（3–4 秒 ✓）—— 本项目 4 次迭代的错误**全由编译器抓出** ✅
+⑥ **`positivity` 不总能证“正性/非零”** ⚠️（2026-09-13，`PA-Basic.lean` ✓）
+   —— 在本文件的 import 集（`Data/Complex/Basic` + `Tactic/Ring` + `Tactic/FieldSimp`）下，
+   `positivity` 对 `(1/2)^2 + γ^2` 的 **正性**与**非零**两种目标**都失败** ✗
+   （报 `failed to prove positivity/nonnegativity/nonzeroness`；⟹ **与“否定型目标”无关** ✗ ——
+     我最初的诊断（“≠ 0 是位否定型目标”）被自己实测推翻 ✓）
+   ⚠️ 另：`nlinarith` 在此 import 集下**不存在** ✗（`unknown tactic` ✓）—— **四个候选的实测表与结论**
+     见 `lean/PA-positivity-experiment.md` ✓（故 scratch 已删 ✗，避免污染“所有 `.lean` 应 exit 0”的检查 ✓）
+   ⟹ **稳妥写法** ✓：`have h1 : (0:ℝ) < (1/2)^2 := by norm_num`｜`have h2 : 0 ≤ γ^2 := sq_nonneg γ`
+     ｜`exact add_pos_of_pos_of_nonneg h1 h2`（**实测通过** ✓）
+   ⟹ 同族教训 ✓：Mathlib 里“应该有”的 tactic 也要**先小文件实测** ✓（4 行 scratch，2 秒）✅
 ```
 
 ## 本轮技术收获（供后续复用 ✅）
@@ -79,6 +117,8 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
 ## 完成度总览（2026-09-12 收尾 ✅）
 ```
 【✅ 已机器验证：**12 项 / 9 个文件 / 全部 exit 0 且 error 数 0、零 sorry** ✅】
+   ＋ **2026-09-13 新增** ✓：`PA-Basic.lean`（Paper A **共享恒等式**，3 项：`15a`/`15b`/`15c`）
+     —— **首编译 3 处 error** ✗ ⟹ 修正后 **exit 0 / 零 sorry / 3 秒** ✓（修法注记在文件内 ✓）
    论文 Lemma 1（单调性）✅｜Lemma 2（far + MVT 零件）✅
    Lemma 3（恒等式 ✓ + 比值 ✓ + sinh x/x 单调 ✓ + ∫₀¹(1+δ)⁻⁴=7/24 ✓）
    Lemma S4（反常积分 ∫_H^∞ t⁻⁴ ✓ + **系数代数** ✓）

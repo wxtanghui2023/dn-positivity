@@ -1,0 +1,61 @@
+====================================================================================================
+PAPERA candidate A -- band-limited approximation of g = f(n*theta): error vs allowance
+====================================================================================================
+
+[0] constant check: |ghat(x)| for the singular part (t-i/2)^-n  vs  2*pi*(2*pi|x|)^(n-1)e^(-pi|x|)/(n-1)!
+    n=1  x= -0.7 :  numeric |FT| =     0.696813   closed form =     0.696813   ratio = 1.0000
+    n=2  x= -0.7 :  numeric |FT| =     3.064745   closed form =     3.064745   ratio = 1.0000
+    n=3  x= -0.7 :  numeric |FT| =     6.739726   closed form =     6.739726   ratio = 1.0000
+    n=3  x= -1.3 :  numeric |FT| =     3.529450   closed form =     3.529450   ratio = 1.0000
+    n=4  x= -1.0 :  numeric |FT| =    11.225143   closed form =    11.225143   ratio = 1.0000
+    n=5  x= -0.9 :  numeric |FT| =    15.838696   closed form =    15.838696   ratio = 1.0000
+
+[1] data check: data/zeros_odlyzko_2M.npy holds 2001052 zeros, max gamma = 1132490.6587
+    N(1000): empirical =       649   Riemann-von Mangoldt =      648.616   main/emp = 0.999409
+    N(100000): empirical =    138069   Riemann-von Mangoldt =   138068.558   main/emp = 0.999997
+    N(1132490): empirical =   2001050   Riemann-von Mangoldt =  2001050.108   main/emp = 1.000000
+
+----------------------------------------------------------------------------------------------------
+[T0 = 1.1325e6]  n = T0^2 = 1.2825563e+12
+     N(T0) (Riemann-von Mangoldt main) = 2.001069e+06
+     empirical zero count <= T0          = 2001052   (S(T0) = -17.4)
+     allowance  0.41*N                 = 8.2044e+05     N - n*B_T0 = 6.5466e+05
+     natural bandwidth  Delta_nat = n/2pi = 2.041252e+11   (pi*Delta_nat = n/2)
+     eps(Delta_nat, n) = 2^n P(Poisson(n/2) <= n-1)  ~=  2^n :  log10 eps = 3.8609e+11
+     ratio eps(Delta_nat)/allowance      :  log10 = 3.8609e+11
+     bandwidth needed for eps < 0.205 :  Delta* = 1.093436e+12  ( = 0.852544 * n,  pi*Delta* = 2.678347 * n )
+        vs natural: Delta*/Delta_nat = 5.357
+        check: log10 eps(Delta*) = -1.116  (target log10 0.205 = -0.688); the O(1) large-deviation
+        prefactor shifts the threshold by O((log n)/n) only -- immaterial
+        prime side then needs m <= e^(2*pi*Delta*) = e^(6.8703e+12) :  log10 = 2.9837e+12
+        if prime side capped at m <= T0^10 : Delta <= 2.219e+01  =>  route works only for n <= 2.602e+01
+        if prime side capped at m <= T0^1000 : Delta <= 2.219e+03  =>  route works only for n <= 2.602e+03
+        if prime side capped at m <= T0^1000000 : Delta <= 2.219e+06  =>  route works only for n <= 2.602e+06
+     construction (iii) [smooth theta, then compose]: need eta < 0.41/n = 3.197e-13
+        theta-bandwidth Delta_theta = 9.888e+00  (logarithmic!)  but composed type 2*pi*n*Delta_theta = 7.9679e+13
+        prime side needs m <= e^(7.9679e+13) :  log10 = 3.4604e+13  -- same blow-up, now from the n-fold type amplification
+
+----------------------------------------------------------------------------------------------------
+[T0 = 3.0001753328e12]  n = T0^2 = 9.001052e+24
+     N(T0) (Riemann-von Mangoldt main) = 1.236315e+13
+     allowance  0.41*N                 = 5.0689e+12     N - n*B_T0 = 5.2653e+12
+     natural bandwidth  Delta_nat = n/2pi = 1.432562e+24   (pi*Delta_nat = n/2)
+     eps(Delta_nat, n) = 2^n P(Poisson(n/2) <= n-1)  ~=  2^n :  log10 eps = 2.7096e+24
+     ratio eps(Delta_nat)/allowance      :  log10 = 2.7096e+24
+     bandwidth needed for eps < 0.205 :  Delta* = 7.673796e+24  ( = 0.852544 * n,  pi*Delta* = 2.678347 * n )
+        vs natural: Delta*/Delta_nat = 5.357
+        check: log10 eps(Delta*) = -1.116  (target log10 0.205 = -0.688); the O(1) large-deviation
+        prefactor shifts the threshold by O((log n)/n) only -- immaterial
+        prime side then needs m <= e^(2*pi*Delta*) = e^(4.8216e+25) :  log10 = 2.0940e+25
+        if prime side capped at m <= T0^10 : Delta <= 4.572e+01  =>  route works only for n <= 5.363e+01
+        if prime side capped at m <= T0^1000 : Delta <= 4.572e+03  =>  route works only for n <= 5.363e+03
+        if prime side capped at m <= T0^1000000 : Delta <= 4.572e+06  =>  route works only for n <= 5.363e+06
+     construction (iii) [smooth theta, then compose]: need eta < 0.41/n = 4.555e-26
+        theta-bandwidth Delta_theta = 1.952e+01  (logarithmic!)  but composed type 2*pi*n*Delta_theta = 1.1039e+27
+        prime side needs m <= e^(1.1039e+27) :  log10 = 4.7943e+26  -- same blow-up, now from the n-fold type amplification
+
+====================================================================================================
+VERDICT: candidate A does NOT land.  With any bandwidth that keeps the explicit-formula prime side
+evaluable, eps(Delta,n) ~ 2^n (or worse) at n = T0^2, versus a required 0.205 -- a failure by
+ 10^(1e11) orders (case 1) / 10^(1e24) orders (case 2).  Making eps small forces pi*Delta >= 2.68 n.
+====================================================================================================

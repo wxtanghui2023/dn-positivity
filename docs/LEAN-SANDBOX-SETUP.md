@@ -36,6 +36,11 @@
 【⚠️ 易失性】**切勿留在 `/tmp`** ✗（重启即失 ✓ G8 教训 ✓）⟹ 已置于 `~/.elan/toolchains/` ✅
 ```
 ## 四、**下一步：Mathlib（尚未安装 ⚠️）**
+
+> ⚠️ **更正（2026-09-13 ✓）**：**Mathlib 已安装并可用** ✓ —— 位于 **`~/mathlib4`**；
+> 实测 `cd ~/mathlib4 && lake env lean <文件>` **exit 0、3–4 秒** ✓（今日复验于 `lean/PA-Basic.lean` ✓，
+> 见 `lean/README.md` ✓）。本节以下"**尚未安装 / 需数 GB 缓存**"的描述**已过期** ✗（保留原文仅为留痕 ✓）。
+> ✗ **不**受影响的部分 ✓：§六 的"全库 `import Mathlib` 在本机内存下不可用 ⟹ 必须**最小 import**"仍然成立 ✓。
 ```
 【现状】当前只有 **Lean 核心 + Std** ✅（`lib/lean/` 下无 Mathlib ✗）
 【对我们的意义】Paper B 的引理链涉及**实数幂、sinh、Abel 求和** ✅ ⟹ **需要 Mathlib** ⚠️

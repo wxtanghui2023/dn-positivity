@@ -21,7 +21,7 @@ FIT:  |D_n| / N  ~  (T0 / n)^alpha   (i.e. a power law in the averaging ratio)
 ------------------------------------------------------------------------------
 
   fitted exponent alpha = 0.5385   (|D|/N ~ (T0/n)^alpha)
-  intercept = -2.5210   R^2 = -19.4247   (points fitted: 4)
+  intercept = -2.5210   R^2 = 0.8446   (points fitted: 4)
 
   For comparison, INDEPENDENT random phases would give |D|/N ~ 1/sqrt(N) = 7.0692e-04
   i.e. no decay at all in n. The measured decay is therefore a structural effect,
@@ -55,7 +55,7 @@ SUMMARY
 ==============================================================================
   (1) S_n / N approaches 1 as n grows, confirming the average-case picture.
   (2) The relative deviation decays like a power of T0/n with fitted exponent
-      alpha = 0.539 (R^2 = -19.425), far faster than the no-decay random prediction.
+      alpha = 0.539 (R^2 = 0.845), far faster than the no-decay random prediction.
   (3) At the quadratic endpoint n = T0^2 (MEASURED, not extrapolated) the relative
       deviation is 1.1e-04, and positivity still holds with margin 1.69.
       ⟹ green light to attempt the quantitative delta N(T) bound.

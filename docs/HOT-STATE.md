@@ -62,6 +62,11 @@ A3 越 0.682           ⟹ 需 **无条件三阶矩（X≍T）** 或 **支撑 >1
 ✗ Erdős–Turán —— **循环**（94% 是 1/M 地板；k=1 项 = 目标本身 ✓）
 ✗ 有限 admissible 展开 —— admissible 不是问题；二项式相消 0.0648 位/单位 n ⟹ T0² 需 8.3e10 位 ✓
 ✗ 共振两区制 —— 两侧都在 √count；素数侧无 "far" 区 ✓
+✗ **带限逼近路线（候选 A，(i) 截断 ĝ）—— 判死** ✓：误差 = 2^n·P(Poisson(πΔ) ≤ n−1)（|Im z| = 1/2 处 **n 阶支点** ✓），
+   要 < 0.205 需 **πΔ ≥ 2.678 n**（自然带宽的 5.36 倍）⟹ 素数侧跑到 m ≤ e^{5.36n}（e^{6.87e12} @T0²）⟹ **路线自我取消** ✓
+   备选 (iii)（先光滑 θ 再复合）：逼近误差可到**对数**小 ✓，但**型被 n 倍放大**（2πnΔθ = 7.97e13）⟹ 同一处爆炸 ✓
+   诊断 ✓：素数侧限 ≤ T₀^{10} ⟹ 本路线只对 **n ≲ 26** 成立（目标 n = T₀²）✓
+   ⟹ 真输家 = **z = ±i/2 的 n 阶支点**；缺的对象 = **不被 n 倍放大**的容许逼近定理（B–S / de Branges 无 ✓）
 ✗ E27（A4↔A1）**点态桥实操无价值** ✓：r = 1/2 时 d² 饱和到 1（H=10³ → 0.999993 ✓）
    ⟹ 圆盘半径 ~O(1/H)，不跨 Re=1/2，对临界线零信息 ✓；**与归一化无关**（t^{−iH} 相位退相干 ✓）
 ✗ 越 0.682 —— 无条件支撑上限 = **1**（与条件情形相同 ✓）；越它需无条件三阶矩 ✓（未找到 ✓）
@@ -86,6 +91,9 @@ A4 C ✓：外部锚点 ✓（复现 DFMR I Cor 7.5：论文 3.75e−6 vs 算得
 
 ```
 (a) ✅ 已完成 = 本档 + `NEGATIVE-RESULTS-2026-09-12-ROUND.md` ✓
+(f) ✅ **已完成（2026-09-13 上午 ✓）= Lean 补验 + 记录修补**：`lean/PA-Basic.lean`（Paper A 共享恒等式）
+    **首编译 3 处 error** ✗ ⟹ 修正后 **exit 0 / 零 sorry / 3 秒** ✓；顺带补全三处记录缺口 ✓
+    （① `PAPERA-bandlimited-route.md` 未入 §四/§七 ✓ ② `LEAN-SANDBOX-SETUP.md` §四 "Mathlib 未装" 已过期 ✗ ③ 昨晚 7 个脚本未入仓 ✓）
 (b) 论文 A 补写：① n ≤ γ₁ 初等证明 ② 光滑部分 vdC ≤ 1704 ③ 三类负面结果 Remark
     （区域 A 墙｜vdC 误用族｜Σ-form 判死｜点态桥无价值）
 (c) E26 §6(B)：大 T·大 N 的 L2 数值（长期项 ✓）
@@ -101,13 +109,15 @@ A4 C ✓：外部锚点 ✓（复现 DFMR I Cor 7.5：论文 3.75e−6 vs 算得
 复盘     docs/REVIEW-A1-todos-2026-09-12.md ✓｜docs/REVIEW-A4-todos-2026-09-12.md ✓
          docs/REVIEW-ALL-DIRECTIONS-2026-09-12.md ✓｜docs/RH-DIRECTION-STATUS-2026-09-12.md ✓
 A1       docs/PAPERA-expsum.md ✓｜docs/PAPERA-fluc-round2.md ✓｜docs/PAPERA-uniformity-attack.md ✓（含撤回横幅）
-         docs/PAPERA-sigma-form-lemma.md ✓｜scripts/PAPERA_*.py/.txt ✓
+         docs/PAPERA-sigma-form-lemma.md ✓｜docs/PAPERA-bandlimited-route.md ✓（**候选 A 带限路线判死** ✓）｜scripts/PAPERA_*.py/.txt ✓
 A3       docs/A3-third-moment-barrier.md ✓｜docs/A3-improvement-assessment.md ✓
          docs/A3-break-682-attempt.md ✓（含父方核验注记）｜docs/A3-barrier-opinion-2026-09-12.md ✓
 A4       docs/E26-A4-4-*.md ✓｜docs/E27-A4-5-*.md ✓（含更正横幅）｜docs/A4-M1-normalization-reconciliation.md ✓
          docs/A4-C-pointwise-disk-constants.md ✓｜docs/A4-FINAL-numerical-table-corrected.md ✓
          docs/A4-CORRECTION-missing-weight.md ✓（第 16 次自查）｜scripts/NB1–NB6 ✓
 论文     papers/li-range/ ✓｜papers/brown-thm2-classical/ ✓（均编译通过 ✓）
+Lean     lean/README.md ✓（A+B 进度 + 经验 ✓）｜lean/PA-Basic.lean ✓（**Paper A 恒等式 3 项，已编译** ✓）
+         lean/PB-*.lean ✓（12 项 ✓ 零 sorry ✓）—— ⚠️ **新 Lean 文件必须先编译再记 ✅**（今日教训 ✓）
 数据     data/zeros_odlyzko_2M.npy ✓｜data/nb3_grid_*.npz（T=400/1200/2400 ✓）
 ```
 

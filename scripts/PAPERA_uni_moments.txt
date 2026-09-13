@@ -1,0 +1,45 @@
+================================================================================
+ROUTE B : REPLACE POINTWISE sup|S| WITH MOMENTS (Selberg / Tsang)
+================================================================================
+T0 = 1132490.658714  N = 2001052  allowance(T0^2) = 6.5465e+05  gamma_res = 8.2683e+05
+N_A = 1419561   N_B = 581491   (resonance split lambda=1)
+
+(B1) POINTWISE INPUT (prior round) vs SHARP constant
+    sum_B lambda_k = 4.1866e+05
+    crude  sup|S| <= 1.0 * log T0 = 13.94   (used in PAPERA-expsum)
+    sharp  sup|S| <= 0.110 log t + 0.290 log log t + 2.290 = 4.587  [Platt-Trudgian 2021, cite unverified]
+    measured sup_k |S_k| = 1.799  (NOT usable in a proof -- that would be circular)
+    => pointwise region-B term:  crude 5.836e+06 ;  sharp 1.921e+06
+
+(B2) L^2 INPUT (Selberg 1946 second moment)
+    Selberg: int_0^T S(t)^2 dt = (T/(2 pi^2)) log log T (1+o(1))   [cite: Selberg 1946]
+    => int_0^T0 S^2 ~ 1.5116e+05   (RMS of S over [0,T0] ~ 0.365)
+    measured sum_k S_k^2 (all N zeros) = 7.2104e+05 ;  (region B) = 2.1154e+05
+    NOTE: sampling at zeros weighs by density log/2pi ~ 2, so sum_k S(g_k)^2 ~ 2 * int S^2 ;
+    Selberg-predicted sum_B S^2 ~ 2*(T0-gres)/(2 pi^2) log log T0 * (M_B/M_total) [needs care; flagged]
+
+(B3) CAUCHY-SCHWARZ on region B
+    sum_B lambda_k^2 = 3.1233e+05  =>  sqrt = 558.86
+    sum_B S_k^2 = 2.1154e+05  =>  sqrt = 459.93
+    CS region-B term = 2.5704e+05   (vs pointwise sharp 1.921e+06 : improvement 7.5x)
+
+(B4) TOTAL and the region-A wall
+    |D_n| <= 2 N_A + [region-B term]
+                           bound          value    x allowance
+                 crude pointwise     8.6753e+06          13.25
+                 sharp pointwise     4.7597e+06           7.27
+                   L^2 (Selberg)     3.0962e+06           4.73
+          region A alone (2 N_A)     2.8391e+06           4.34
+
+    => 2 N_A = 2.8391e+06 ALREADY exceeds allowance 6.5465e+05 by 4.34x.
+    => even with PERFECT region-B control (sum_B -> 0), |D_n| <= 2 N_A fails.
+
+(B5) WHY region A cannot be helped by moments of S(t)
+    region A has lambda_k > 1 (up to 4.9749e+10 at gamma_1), so exp(i lambda S) is a fast phase;
+    the only pointwise bound is |e^{i lambda S} - 1| <= 2, and S(t)-moments do not enter.
+    Region A is a *phase-increment* (vdC) problem, not a rigidity-moment problem (see route C).
+
+VERDICT ROUTE B:  FAIL (region A wall, 4.3x even with perfect region B).
+  L^2 (Selberg/Tsang) compresses region B from 1.92e+06 to 2.57e+05 (a 7x win),
+  but 2 N_A = 2.84e+06 > allowance, and region A is unreachable by S(t)-moments.
+================================================================================
