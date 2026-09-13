@@ -1,0 +1,35 @@
+E78 -- a large peak forces the phases into a narrow arc: inversion and arithmetic audit
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+  table: N = 2001052 zeros, T = 1132490.658714, X = T^2 = 1.28254e+12
+  budget for the fast part 0.8N = 1.60084e+06 ; trivial bound N = 2001052
+
+(1) inversion on real data: |Sigma|, best-arc fractions, and the inequality W(A^c) <= (W-|Sigma|)/(1-cos(a/2))
+      n/X      |Sigma|     |Sigma|/N   arc frac (pi/2)   (pi)     (3pi/2)   inversion holds?
+      0.4501   611.2       0.0003     0.2508             0.5007   0.7509    yes
+      0.5473   561         0.0003     0.2505             0.5005   0.7506    yes
+      0.5086   709.7       0.0004     0.2505             0.5007   0.7507    yes
+      0.6820   790.1       0.0004     0.2506             0.5005   0.7505    yes
+      0.4405   558.9       0.0003     0.2505             0.5007   0.7506    yes
+      0.7160   1101        0.0006     0.2506             0.5008   0.7506    yes
+    reading: the arc fractions equal alpha/(2 pi) to four decimals, so the phases are equidistributed and
+    the observed peak is three orders of magnitude below the budget.
+
+(2) audit at the budget: the fraction the budget demands, against what equidistribution supplies
+      alpha        fraction demanded p >= 1-0.2/(1-cos(alpha/2))    achievable alpha/(2 pi)   verdict
+      1.5708       0.3172                                    0.2500                    FAILS
+      3.1416       0.8000                                    0.5000                    FAILS
+      4.7124       0.8828                                    0.7500                    FAILS
+      5.9690       0.8994                                    0.9500                    holds
+      6.2518       0.9000                                    0.9950                    holds
+
+    conclusion: the only arcs meeting the budget demand have length close to two pi, so the demand is
+    that all but a sliver of the phases lie in an almost complete circle, which is nearly vacuous.
+
+======================================================================================================================
+READING
+  The inversion is elementary and unconditional, and it is verified on real data.  But the demand it makes
+  at the budget is nearly vacuous, for a structural reason: the required saving is only twenty percent of
+  the trivial bound, and an inversion of this shape can only bite when the required value is a small
+  fraction of the total.  So the necessary condition it produces can be met by equidistributed phases and
+  has no force here, and by the stated rule the route is closed.
