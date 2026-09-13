@@ -1,0 +1,35 @@
+E100 - function-field Li criterion: power sums and the p=0 onset
+==============================================================================
+(1) the equivalence, checked on a model multiset
+    g=  2 q=2:  max_n |lambda_K(n)| / (2g q^(n/2)) = 0.960206   (<=1 means the envelope holds)
+    g=  5 q=3:  max_n |lambda_K(n)| / (2g q^(n/2)) = 0.722776   (<=1 means the envelope holds)
+    g= 13 q=7:  max_n |lambda_K(n)| / (2g q^(n/2)) = 0.468243   (<=1 means the envelope holds)
+
+(2) detection onset with one root at q^(1/2+eps)   [predicted log(2g)/(eps log q)]
+   g    q      eps  measured n0    predicted    ratio
+   2    2      0.5            1        4.000    0.250
+   2    2      0.2            1       10.000    0.100
+   2    2     0.05            4       40.000    0.100
+   5    3      0.5            3        4.192    0.716
+   5    3      0.2            6       10.480    0.573
+   5    3     0.05           26       41.918    0.620
+  13    7      0.5            3        3.349    0.896
+  13    7      0.2            8        8.372    0.956
+  13    7     0.05           29       33.487    0.866
+  50   11      0.5            4        3.841    1.041
+  50   11      0.2           10        9.603    1.041
+  50   11     0.05           37       38.410    0.963
+
+(3) scaling: onset versus genus (fixed q, eps)
+    g=1e0: predicted n0 = 6.3093   (logarithmic in g)
+    g=1e1: predicted n0 = 13.6342   (logarithmic in g)
+    g=1e2: predicted n0 = 24.1137   (logarithmic in g)
+    g=1e4: predicted n0 = 45.0727   (logarithmic in g)
+    g=1e6: predicted n0 = 66.0317   (logarithmic in g)
+
+==============================================================================
+Reading: the onset is logarithmic in the genus and carries NO height parameter.
+In the number field the same analysis gives n0 ~ gamma^2/eps, because the carrier
+is the damping map rho -> 1 - 1/rho, whose deficit is eps/gamma^2 rather than eps.
+This is the p=0 versus p=2 contrast, and it is a comparison of CARRIERS, not of
+probes: the function-field carrier is the Frobenius eigenvalue itself.
