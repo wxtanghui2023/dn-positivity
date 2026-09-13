@@ -1,0 +1,52 @@
+E45 step 7 -- is the EDGE ROW forced by the ramp condition?  (exact-ramp laws, tau = 0)
+edge row S(N) = E|F(N)|^2 / N is the one row NearCUE leaves free; with tau = 0 the theorem's
+only other input is d1 = |S(N)/N - 1/(2N)|.  Question: is S(N) pinned to the grid size N?
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2), family 98 configs)
+   exact-ramp laws collected: 40 ; distinct edge values S(N): 3
+     S(N) = 1 + (0)sqrt2 = 1.000000000   (appears 36 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.125000000
+     S(N) = 2 + (-1/2)sqrt2 = 1.292893219   (appears 3 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.198223305
+     S(N) = 2 + (1/2)sqrt2 = 2.707106781   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.551776695
+   NOTE: for the frontier at N = 256 the edge row is S(256) = 211.432009... , giving
+         d1 = 0.82395317 exactly as recorded -- their instance is fixed by this one number.
+
+N = 6 (Q = 12, field Q(sqrt3), family 1144 configs)
+   exact-ramp laws collected: 40 ; distinct edge values S(N): 28
+     S(N) = 1 + (0)sqrt3 = 1.000000000   (appears 13 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.083333333
+     S(N) = 53/11 + (-24/11)sqrt3 = 1.039161874   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.089860312
+     S(N) = 40/17 + (-12/17)sqrt3 = 1.130317077   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.105052846
+     S(N) = 3 + (-1)sqrt3 = 1.267949192   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.127991532
+     S(N) = 37/27 + (0)sqrt3 = 1.370370370   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.145061728
+     S(N) = 11/18 + (4/9)sqrt3 = 1.380911470   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.146818578
+     S(N) = -65/23 + (56/23)sqrt3 = 1.391080227   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.148513371
+     S(N) = -15/19 + (24/19)sqrt3 = 1.398379967   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.149729995
+     S(N) = 21/23 + (8/23)sqrt3 = 1.515495933   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.169249322
+     S(N) = 1 + (4/13)sqrt3 = 1.532938710   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.172156452
+     S(N) = -3/7 + (8/7)sqrt3 = 1.550915209   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.175152535
+     S(N) = 5/3 + (0)sqrt3 = 1.666666667   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.194444444
+     S(N) = 101/35 + (-24/35)sqrt3 = 1.698022303   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.199670384
+     S(N) = 41/5 + (-56/15)sqrt3 = 1.733676985   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.205612831
+     S(N) = 73/37 + (-4/37)sqrt3 = 1.785724237   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.214287373
+     S(N) = -5/3 + (2)sqrt3 = 1.797434948   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.216239158
+     S(N) = 3 + (-2/3)sqrt3 = 1.845299462   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.224216577
+     S(N) = 13/7 + (0)sqrt3 = 1.857142857   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.226190476
+     S(N) = -33/7 + (80/21)sqrt3 = 1.884003076   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.230667179
+     S(N) = 13/5 + (-2/5)sqrt3 = 1.907179677   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.234529946
+     S(N) = 7/12 + (5/6)sqrt3 = 2.026709006   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.254451501
+     S(N) = 47/33 + (4/11)sqrt3 = 2.054079082   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.259013180
+     S(N) = 15/7 + (0)sqrt3 = 2.142857143   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.273809524
+     S(N) = 4/3 + (1/2)sqrt3 = 2.199358737   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.283226456
+     S(N) = 11/5 + (0)sqrt3 = 2.200000000   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.283333333
+     S(N) = 7/3 + (0)sqrt3 = 2.333333333   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.305555556
+     S(N) = 1 + (4/5)sqrt3 = 2.385640646   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.314273441
+     S(N) = 79/33 + (0)sqrt3 = 2.393939394   (appears 1 times)  =>  d1 = |S(N)/N - 1/(2N)| = 0.315656566
+   NOTE: for the frontier at N = 256 the edge row is S(256) = 211.432009... , giving
+         d1 = 0.82395317 exactly as recorded -- their instance is fixed by this one number.
+
+====================================================================================================
+READING
+  If every exact-ramp law shows S(N) = 1 (edge value = grid size N), the ramp PINS the edge row,
+  and the frontier's large edge value is incompatible with an exact ramp -- which would explain
+  why their construction needs tau = 3e-40 > 0.  If several distinct edge values occur, the edge
+  row is controllable in exact-ramp laws, and the frontier's tolerance is a choice, not a necessity.
