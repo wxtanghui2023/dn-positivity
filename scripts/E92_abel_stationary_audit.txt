@@ -1,0 +1,29 @@
+E92 - Abel term split against prime-side frequencies
+T0=1132490.658714  n=1.282535e+12  sqrt(n)=1132490.658714
+band I=[341458.781231,1132490.658714]  |I|=H=7.910319e+05
+|phi'| on band: [1.000000, 11.000000]
+truncation X=1132490, #primes=88061
+
+(A) NON-STATIONARY bound, '-' branch: |int| <= 2 c_p / min|Phi'|, min|Phi'| = |phi'|_min + log p
+    total (A) = 3.296411e+01
+
+(B) STATIONARY contribution, '+' branch: phi'(t) + log p = 0 at t_p = sqrt(n/log p)
+    inside the band iff log p in [1, 11] i.e. p in [e, e^11]
+    #stationary primes = 6047 (largest few):
+      p=  59779  t_p=3.414835e+05  width=3.1232e+02  contrib=1.2774e+00
+      p=  59791  t_p=3.414804e+05  width=3.1231e+02  contrib=1.2772e+00
+      p=  59797  t_p=3.414788e+05  width=3.1231e+02  contrib=1.2772e+00
+      p=  59809  t_p=3.414757e+05  width=3.1231e+02  contrib=1.2770e+00
+      p=  59833  t_p=3.414695e+05  width=3.1230e+02  contrib=1.2767e+00
+      p=  59863  t_p=3.414617e+05  width=3.1229e+02  contrib=1.2764e+00
+    total (B) = 2.398236e+04
+
+    allowance (E82 fast+middle budget) = 1.063000e+06
+    (A)+(B) = 2.401532e+04   ratio to allowance = 2.259e-02
+
+(C) CONSISTENCY: Cauchy-Schwarz route without the spurious 1/sqrt(2pi)
+    int S^2 (main) = 1.055856e+05   E_phi = 1.339467e+07
+    D_CS = sqrt(S^2)*sqrt(E_phi) = 1.189237e+06
+    ratio to allowance = 1.1188  (>1 means dead)
+    Lambda_inf = E_phi/H -> 16.933166
+    |D_I|/H  <=  sqrt(Lambda_inf/(2 pi^2)) * sqrt(loglog T) = 0.926199 * sqrt(loglog T)
