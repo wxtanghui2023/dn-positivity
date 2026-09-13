@@ -1,0 +1,62 @@
+Oppermann square-centre functional: complete expansion and the radial-factor test
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+==============================================================================================================
+PART 1 -- expansion of the symmetric second difference around a square, h = m = sqrt(x)
+   Phi(z) = z^rho ,  S = Phi(x+h) + Phi(x-h) - 2 Phi(x) = x^rho [ (1+u)^rho + (1-u)^rho - 2 ], u = h/x
+   predicted leading behaviour: S / (x^rho u^2) -> rho(rho-1)
+      x        rho                S/(x^rho u^2)            rho(rho-1)             ratio
+      1e6      beta=0.5  gamma=10.0   (-100.2491959 + 0.000334163584j) (-100.25 + 0.0j)       0.999992
+      1e12     beta=0.5  gamma=10.0   (-100.25 + 3.341666667e-10j) (-100.25 + 0.0j)       1.000000
+      1e6      beta=0.6  gamma=10.0   (-100.2391864 + 2.000301317j) (-100.24 + 2.0j)       0.999992
+      1e12     beta=0.6  gamma=10.0   (-100.24 + 2.0j)       (-100.24 + 2.0j)       1.000000
+      1e6      beta=0.75 gamma=30.0   (-900.1200676 + 15.00675445j) (-900.1875 + 15.0j)    0.999925
+      1e12     beta=0.75 gamma=30.0   (-900.1874999 + 15.00000001j) (-900.1875 + 15.0j)    1.000000
+   => the leading coefficient is confirmed, so the radial part of the leading term is
+      x^{beta-1} = m^{2(beta-1)}, i.e. relative to on-line zeros a factor m^{2 beta - 1}.
+      So the factor 唐先生 is hunting for DOES appear, at the level of the kernel.
+
+PART 2 -- the antisymmetric combination and what it couples to
+   Phi(p^+) - Phi(p^-) with p^+ = x + b, p^- = x - a, x = m^2, a,b in (0,m)
+   prediction: leading term = Phi'(x)(a+b) + higher orders, so it couples to the SUM a+b (a gap)
+   and NOT to the asymmetry D = b - a at leading order; the asymmetry enters only at order 1/m^2,
+   i.e. inside the term Phi''(x)(b^2 - a^2)/2 = Phi''(x)(a+b)D/2.
+      m = 1e3 : (p^+ - p^-) - (b+a) = (0.0 + 0.0j)  (linear part exact for Phi = identity)
+      m = 1e6 : (p^+ - p^-) - (b+a) = (0.0 + 0.0j)  (linear part exact for Phi = identity)
+      m = 1e9 : (p^+ - p^-) - (b+a) = (0.0 + 0.0j)  (linear part exact for Phi = identity)
+   => with Phi the identity the antisymmetric part reduces to the ordinary prime gap, so it carries
+      no information beyond Andrica-type statements; the asymmetry D appears only multiplied by
+      Phi'' at order m^0 relative to Phi'', which is a smooth-factor coupling, not a new detector.
+
+PART 3 -- usability, and the decisive comparison
+   The kernel does produce the radial factor, so the question is settled by which functionals exist:
+     (i)  functionals built from the individual primes p_m^pm : NOT USABLE, because those primes are
+          unknown for all m (their existence is exactly what Oppermann conjectures).
+     (ii) summatory functionals, i.e. what the explicit formula can read: on those, the second
+          difference at shift h = sqrt(x) gives one zero rho the contribution
+             -x^rho (rho-1) (h/x)^2 (1 + O(1/x)) ,   magnitude ~ x^{beta-1} |rho|^2 = x^{delta-1/2}|rho|^2
+          with delta = beta - 1/2.  This is precisely the factor computed in the earlier assessment,
+          and it carries no information beyond it.
+   numerical magnitudes for the same model used before (delta = 0.1, gamma = 10):
+      x = 1e6      ratio |off-line|/|on-line| = 3.97928429   (predicted m^{2 delta} = 3.981071706)
+      x = 1e12     ratio |off-line|/|on-line| = 15.84181609   (predicted m^{2 delta} = 15.84893192)
+      x = 1e24     ratio |off-line|/|on-line| = 251.0758648   (predicted m^{2 delta} = 251.1886432)
+      x = 1e48     ratio |off-line|/|on-line| = 63067.40581   (predicted m^{2 delta} = 63095.73445)
+   => the ratio is m^{2 delta} = x^{2 delta}, growing: the off-line mode dominates the ON-LINE
+      signal, but it does not dominate the MAIN term, which for the symmetric difference cancels
+      exactly and for any one-sided difference equals h = m = x^{1/2}.  Since x^{delta} << x^{1/2}
+      for every delta < 1/2, no nonemptiness statement can detect it -- the obstruction is unchanged.
+
+   VERDICT (by 唐先生's own criterion, applied honestly): the radial factor appears at the level of
+   the kernel, but the only usable functionals are the summatory ones, and there the factor is the
+   earlier x^{delta-1/2} restated.  The mechanism produces no new discriminating power, and the
+   individual-prime functionals are unavailable in principle.  The line therefore closes, not because
+   the factor is absent, but because its presence does not change the comparison that must be won.
+
+==============================================================================================================
+READING
+  The expansion confirms that the second difference around a square produces the radial factor
+  m^{2 beta - 1} multiplying the on-line baseline, exactly as hoped; the antisymmetric combination
+  instead reproduces the prime gap and couples the asymmetry only through a smooth second-derivative
+  factor.  What decides the matter is which functional can actually be formed: the individual primes
+  are not known, and on the summatory side the same factor reappears in its earlier form, with the
+  comparison against the main term unchanged.
