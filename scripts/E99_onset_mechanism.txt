@@ -1,0 +1,44 @@
+E99 - onset mechanism of the quadratic law
+==============================================================================
+(1) 1 - r versus the predicted eps/gamma^2
+     eps      gamma                1-r          2*eps/g^2      ratio
+     0.5      1e+02 4.999625031243e-05 5.000000000000e-05    0.99993
+     0.5      1e+03 4.999996250366e-07 5.000000000000e-07    1.00000
+     0.5      1e+04 4.999999969613e-09 5.000000000000e-09    1.00000
+     0.5      1e+06 5.000444502912e-13 5.000000000000e-13    1.00009
+     0.1      1e+02 9.999690009921e-06 1.000000000000e-05    0.99997
+     0.1      1e+03 9.999996897214e-08 1.000000000000e-07    1.00000
+     0.1      1e+04 1.000000082740e-09 1.000000000000e-09    1.00000
+     0.1      1e+06 1.000310945187e-13 1.000000000000e-13    1.00031
+    0.01      1e+02 9.999744905453e-07 1.000000000000e-06    0.99997
+    0.01      1e+03 9.999997385712e-09 1.000000000000e-08    1.00000
+    0.01      1e+04 1.000001192963e-10 1.000000000000e-10    1.00000
+    0.01      1e+06 9.992007221626e-15 1.000000000000e-14    0.99920
+   0.001      1e+02 9.999749506218e-08 1.000000000000e-07    0.99997
+   0.001      1e+03 9.999998606958e-10 1.000000000000e-09    1.00000
+   0.001      1e+04 1.000000082740e-11 1.000000000000e-11    1.00000
+   0.001      1e+06 9.992007221626e-16 1.000000000000e-15    0.99920
+
+  -> the identity is exact to leading order; ratio tends to 1 as gamma grows
+
+(2) onset index n0 where the partner's growth matches a main term of size M
+    r^{-n} = exp(eps*n/gamma^2) >= M   =>   n0 = gamma^2*log(M)/eps
+     eps      gamma       n0 for M=1e2       n0 for M=1e6
+     0.5      1e+03         9.2103e+06         2.7631e+07
+     0.5      1e+06         9.2103e+12         2.7631e+13
+     0.1      1e+03         4.6052e+07         1.3816e+08
+     0.1      1e+06         4.6052e+13         1.3816e+14
+    0.01      1e+03         4.6052e+08         1.3816e+09
+    0.01      1e+06         4.6052e+14         1.3816e+15
+
+  -> worst case eps of order one: n0 ~ gamma^2 (up to a log) = the quadratic law
+  -> a nearly-on-line zero (eps -> 0) has onset FAR LARGER: it is invisible
+
+(3) high-precision check of |q'| = 1/r and of the partner's growth
+    eps=0.1 gamma=1000.0: |q_in|*|q_out|-1 = 0.000e+00   |q_out|-1 = 9.999997900000e-08   predicted eps/g^2 = 1.000000000000e-07
+    eps=0.01 gamma=1000.0: |q_in|*|q_out|-1 = 0.000e+00   |q_out|-1 = 9.999997549001e-09   predicted eps/g^2 = 1.000000000000e-08
+
+==============================================================================
+Boundary: the onset estimate is heuristic. It explains the quadratic law as the
+worst case over admissible configurations, but it is NOT a proof that no criterion
+consuming only 'no off-line zeros up to height T' can beat T squared.
