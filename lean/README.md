@@ -295,3 +295,10 @@ lake env lean /home/node/.openclaw/workspace/dn-project/lean/PB-Lemma1.lean
    （与 E44 的“法数据未公开”并列 —— 同一仓库的**两处**复现障碍 ✗ ✓）
 ⚙️ 环境记 ✓：`lake` 不在默认 PATH ✓ ⟹ 每次先 `export PATH="$HOME/.elan/bin:$PATH"` ✓
 ```
+
+## ⚠️ 算力纪律（唐先生 2026-09-13 11:47 指令 ✓ 强制）
+```
+Lean 编译**已确认可用** ✓ ⟹ **只在论文定稿时跑** ✓，**不要**在常规会话里巡检/测试 ✗
+（本目录 2026-09-13 巡检结果：**16 文件全 exit 0 / 零 error** ✓ —— 记录在案，不重复验证 ✓）
+详见 `docs/TESTING.md` §4 ✓
+```
