@@ -1,0 +1,91 @@
+# Karatsuba 1996 "On the function S(t)" — 审计所需短摘录 (fair-use excerpt)
+# 源: A. A. Karatsuba, Izv. Math. 60:5 (1996) 901-931; English PDF via mathnet.ru
+#      https://www.mathnet.ru/eng/im86  (PDF 844921 bytes, 31 pages)
+# 抽取: PyMuPDF get_text(); OCR 由 mathnet.ru 提供 — 含 OCR 误差
+
+## [A] Theorem A-D 区块
+Izvestiya: Mathematics 60:5 901-931 
+©1996 RAS(DoM) and LMS
+Izvestiya RAN: Ser. Mat. 60:5 27-56 
+UDC 511
+On the function S(t)
+A. A. Karatsuba
+Abstract. We prove a theorem on the density of zeros of the Riemann function £(s)
+in narrow rectangles of neighbourhoods of the critical line and theorems on moments
+and the number of changes of sign of S(t) on short intervals on the real line.
+This paper is mainly devoted to a study of the behaviour of the argument of the
+Riemann function £(s) with the condition that s lies on the critical line, that is,
+s — | + it, where t is real. We introduce the known functions S(t), S\(t) (see [1],
+pp. 90-91 and [4], Russian pp. 209, 220).
+Definition 1. For real t, not equal to the imaginary part of a zero of £(s),
+where arg £ ( | + it) is obtained by continuous extension of arg ((s) along the polyg-
+onal line starting at the point s = 2 (arg ((2) = 0), going to the point s = 2 + it
+and then to the point s = | + it. If t is the imaginary part of a zero of £(s) then
+S(t) = lim l{S{t + 6)+S(t-S)}.
+Definition 2. For positive t the function Si(t) is defined by
+Si(t) = I S{u)du.
+Jo
+The main propositions in this paper are the following four theorems.
+Theorem A. With H = T21'%2+a, 0 < a < 0.001, T > T^a) > 0, and
+1/2 < a < 1 we have
+N{<J, T + H)- N(a, T-H) 
+= o ^ T - 0 1 " ^ - 1 ' logT),
+where N(a, T) is the number of zeros of the Riemann zeta function in the rectangle
+Res > a, 0 < Ims <T, and the constant in the symbol O depends only on a.
+This research was carried out with the financial support of the Russian Foundation for Funda-
+mental Research (grant no. 94-01-00002)
+A MS 1991 Mathematics Subject Classification. 11M26.
+
+902 
+A. A. Karatsuba
+Theorem B. Suppose that H = T27'S2+a, 0 < a < 0.001, T > 7\(a) > 0, and k
+is a natural number. Then the following asymptotic formula holds:
+f
+JT
+IT 
+K- \4n)
+where the constant in the symbol 0 depends only on a and k.
+Theorem C. Suppose that H = T27'S2+a, 0 < a < 0.001, T > Tx(a) > 0, and k
+is a natural number. Then the following asymptotic formula holds:
+i-T+H
+/ 
+\Sl{t)\2kdt = ckH + O{H log"1 T),
+JT
+where Ck is a positive constant depending only on k, and the constant in the sym-
+bol O depends only on a and k.
+Theorem D. Let H = T27/82+a, 0 < a < 0.001. Then there are positive numbers
+T\ = T\{a) and A = A(a) such that for T >T\ the function S(t) changes sign in
+the interval (T, T + H) no fewer than K times,
+K= [H (log r ^ e x p C - Ay/log log T)].
+The fundamental work in Riemann zeta function theory is [1] where Selberg
+created a method by which he proved, in particular, Theorems A-D for Ta <
+H < T, a > 1/2. We shall essentially use his method in this paper and, where
+Selberg's arguments are repeated, we shall indicate this and in a number of cases
+omit the corresponding calculations. In addition, we have considered it necessary
+to use the formulation of Theorems 2 and 3 of [1] in which the original formulae
+connecting S(t) and Si(t) with segments of the Dirichlet series and zeros of £(s) are
+proved. We also note that Titchmarsh gave considerable attention to S(t) and Si (t)
+in his monograph [4], where certain of Selberg's theorems and also conditional
+theorems (assuming the Riemann hypothesis) are proved (see also [13]).
+
+
+## [B] Remark (range)
+Remark. Theorems B-D hold provided that
+H = Ta, 
+27/82<a<l, 
+T>Ti(a)>0.
+Bibliography
+[1] A. Selberg, "Contributions to the theory of the Riemann zeta-function", Arch. Math.
+Naturvid. 48:5 (1946), 89-155.
+[2} A. Selberg, "On the zeros of Riemann's zeta-function", Skr. Norske Vid. Akad. Oslo 10
+(1942)
+
+## [C] Bibliography [1] (Selberg 1946)
+Bibliography
+[1] A. Selberg, "Contributions to the theory of the Riemann zeta-function", Arch. Math.
+Naturvid. 48:5 (1946), 89-155.
+[2} A. Selberg, "On the zeros of Riemann's zeta-function", Skr. Norske Vid. Akad. Oslo 10
+(1942), 1-59.
+[3] A. Selberg, "On the remainder in the formula for N(T), the number of zeros of £(s) in the
+strip 0 < * < T", Avh. Norske Vid. Akad. Oslo 1944, no. 1.
+[4] E. C. Titchmarsh., The theo
