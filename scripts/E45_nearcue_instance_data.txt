@@ -1,0 +1,36 @@
+E45 step 6 -- exact inputs of the ceiling theorem for our own near-CUE laws
+====================================================================================================
+
+N = 4  (Q = 8, field Q(sqrt2))  support = 2 configurations
+   weight check: sum u = 1, sum t = 0  (need 1 and 0) : True
+   nonnegativity of w_c = u + t*sqrt2 : True
+   exact ramp  sum_c w_c |F_c(j)|^2 = j  for j = 1..3 : True   => S(j) = j/N exactly, tau = 0
+   edge row (free): E|F(N)|^2 = 4 + (0)*sqrt2
+                    S(N) = E|F(N)|^2 / N = 1 + (0)*sqrt2
+   C(1) = (N-1)/(2N) + S(N)/N = 5/8 + (0)*sqrt2
+   D(1) = C(1) - 1/2 = 1/8 + (0)*sqrt2   (Defs.lean: D = Cstep - x^2/2)
+   sqrt2 < 141421356237309504880168872421/100000000000000000000000000000 (rational, 30 digits)
+   => d1 := |Da| + |Db|*sqrt2 < 1/8  (rational upper bound for |D(1)|)
+      reference decimal value of D(1): 0.125000000000000
+   THEOREM INPUT (N = 4):  tau = 0,  S(j) = j/4 (j < N),  d1 = 1/8
+      constant in the conclusion: 1/(6*4^2) = 1/96
+
+N = 6  (Q = 12, field Q(sqrt3))  support = 6 configurations
+   weight check: sum u = 1, sum t = 0  (need 1 and 0) : True
+   nonnegativity of w_c = u + t*sqrt3 : True
+   exact ramp  sum_c w_c |F_c(j)|^2 = j  for j = 1..5 : True   => S(j) = j/N exactly, tau = 0
+   edge row (free): E|F(N)|^2 = 6 + (0)*sqrt3
+                    S(N) = E|F(N)|^2 / N = 1 + (0)*sqrt3
+   C(1) = (N-1)/(2N) + S(N)/N = 7/12 + (0)*sqrt3
+   D(1) = C(1) - 1/2 = 1/12 + (0)*sqrt3   (Defs.lean: D = Cstep - x^2/2)
+   sqrt3 < 866025403784438646763723170753/500000000000000000000000000000 (rational, 30 digits)
+   => d1 := |Da| + |Db|*sqrt3 < 1/12  (rational upper bound for |D(1)|)
+      reference decimal value of D(1): 0.083333333333333
+   THEOREM INPUT (N = 6):  tau = 0,  S(j) = j/6 (j < N),  d1 = 1/12
+      constant in the conclusion: 1/(6*6^2) = 1/216
+
+====================================================================================================
+READING
+  Every quantity above is exact rational arithmetic in a quadratic field (or a rational bound for
+  the field element).  There is no interval arithmetic and no unverifiable input: the numeric
+  hypothesis of the ceiling theorem is an identity for our own law.
