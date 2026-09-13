@@ -1,0 +1,49 @@
+E74 -- attack on the fast phase region
+NO LEAN IS RUN (compute directive 2026-09-13 11:47)
+======================================================================================================================
+(1) Lipschitz in the index
+    sum over zeros of theta(gamma) = 11.637672   (theta(14) = 0.071398, so this is the Lipschitz constant of S)
+      n/X      h         |S(n+h)-S(n)|/h   Lipschitz constant   ratio
+      0.4501   1e+03     0.022625          11.637672            0.0019
+      0.4501   1e+06     0.000584          11.637672            0.0001
+      0.4501   1e+09     0.000001          11.637672            0.0000
+      0.5473   1e+03     0.033327          11.637672            0.0029
+      0.5473   1e+06     0.001107          11.637672            0.0001
+      0.5473   1e+09     0.000001          11.637672            0.0000
+      0.5086   1e+03     0.058956          11.637672            0.0051
+      0.5086   1e+06     0.001742          11.637672            0.0001
+      0.5086   1e+09     0.000001          11.637672            0.0000
+
+(2) Lipschitz plus global second moment: the best such bound is M^3 <= 4 L |I| B
+    L = 11.6377, |I| = 6.413e+11, B = 14.25N = 2.851e+07  =>  M <= 9.477e+06
+    requirement is 0.8N = 1.601e+06  =>  this route is short by a factor 5.9
+    the obstruction is structural: Lipschitz bounds the MEASURE of the high set, not its height
+
+(3) local second moment: kernel width in ordinate is 4 pi gamma^2 / l, so C0(l) ~ 4 pi gamma^2 rho / l
+      l (block length in n)      C0(l)              is the local bound usable?
+      1e+04                      3.104e+09           NO (bound is vacuous)
+      1e+06                      3.104e+07           NO (bound is vacuous)
+      1e+09                      3.104e+04           NO (bound is vacuous)
+      6.4e+11                    48.5                NO (bound is vacuous)
+    => the tempting argument 'small block + Lipschitz gives M <= sqrt(4B)' fails, because taking the
+       block as short as M/L = 8.14e+05 makes C0 enormous.  Recorded as refuted.
+
+(4) second-difference ratio: gap-fluctuation term / curvature term = gamma * |delta g| / (2 g^2)
+      at gamma = T:          537390.6453      (>> 1 => the gap term dominates)
+      at gamma = 100:        47.4521
+    => the second differences are gap-dominated with mixed signs throughout, so the second-derivative
+       test of van der Corput is never applicable in this problem.  This explains the earlier finding.
+
+(5) intermediate band [0.3 sqrt(n), sqrt(n)], where the increment per gap is between 1 and 2 pi
+      n         int |phi'|^2 over band     CS bound       0.8N        margin
+      3.848e+11 7.451e+06                 1.061e+06       1.601e+06   1.51x
+      8.336e+11 1.097e+07                 1.288e+06       1.601e+06   1.24x
+      1.283e+12 1.36e+07                  1.434e+06       1.601e+06   1.12x
+
+======================================================================================================================
+READING
+  The Lipschitz fact is real and elementary, but it cannot bound the maximum, and the local second moment
+  is not uniform, so blocking does not rescue it either.  The second-derivative test is structurally
+  inapplicable.  The intermediate band does close by Cauchy-Schwarz, with a thin margin, and the deep
+  fast region, where the phase advances by much more than a full turn per gap, is left needing an
+  exponential-sum bound at critical density, which is the same wall the other routes meet.
