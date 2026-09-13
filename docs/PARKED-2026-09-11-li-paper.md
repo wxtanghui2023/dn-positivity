@@ -16,9 +16,17 @@
 > ```
 > 【Coffey 2008 ✓】项目记录（`docs/LATEST1-combination-report.md:16`）称"λ_n 正性已直接验证到 n = 10⁵
 >    （**Coffey 递推** ✓ 无条件数值 ✓）" ⟹ 该引用**成立** ✓
-> 【Palojärvi ⚠️】取原文（arXiv:1807.01506 ✓）标题 = "Explicit zero-free regions and a **τ-Li-type criterion**" ✓
->    摘要只讲 τ-Li 系数的**符号 ⟹ 零点存在/不存在**（显式 N₁, N₂ ✓），**未见**"直接数值验证 10⁵" ✗
->    ⟹ **把 Palojärvi 与 Coffey 并列引作 10⁵ 的来源，对 Palojärvi 恐不准确** ⚠️（待唐先生定：改为仅引 Coffey ✓？）
+> 【Palojärvi ✗ → **已更正 ✓**】取原文（arXiv:1807.01506 ✓）标题 = "Explicit zero-free regions and a
+>    **τ-Li-type criterion**" ✓；摘要只讲 τ-Li 系数的**符号 ⟹ 零点存在/不存在**（显式 N₁, N₂ ✓），
+>    **未见**"直接数值验证 10⁵" ✗ ⟹ 并列引作 10⁵ 的来源**不准确** ✗
+>    ⭐ **旁证 ✓**：Wikipedia "Li's criterion" 条目把 Palojärvi 归为"explicit conditions between finitely many
+>      **τ-Li** coefficients and zero-free regions" ✓（另一处 ✓），而 10⁵ 一句另属 ✓ ⟹ 坐实判断 ✓
+>    ✅ **已更正（2026-09-13 ✓）**：两处 `\cite{Palojarvi,Coffey}` → **`\cite{Keiper,Coffey}`** ✓；
+>      新增 **Keiper 1992**（Math. Comp. **58**, 765–773 ✓，该系数**首创计算** ✓，多处文献一致 ✓）；
+>      **删去 Palojärvi bibitem** ✓（全篇 0 处残留 ✓）｜重编译 **0 error / 0 undefined / 7 页** ✓
+>      ⚠️ 诚实注 ✓：**10⁵ 这一具体数字的原始出处**我未能在本轮定位到（Wikipedia 该句无可用脚注 ✓、
+>        Coffey 2005 摘要未提该数字 ✗、McPhedran 2024 亦未归属 ✗）⟹ 现改为引用**计算谱系**（Keiper 首创 + Coffey 发展 ✓）
+>        并保留 "and the references therein" ✓ —— 不再把该数字系于具体某篇 ⚠️（如需精确归属可另查 ✓）
 > ```
 
 ---
