@@ -1,0 +1,24 @@
+E45 step 12 -- the floor of the simple fraction p over EXACT-ramp laws (complete families)
+LP: maximise the weight on mark-2 configurations s.t. the exact ramp equations and nonnegativity
+    => min p = 1 - optimum ; compare with the frontier's recorded 0.6818287
+NOTE: no Lean is run here (compute directive 2026-09-13 11:47).
+====================================================================================================
+
+N = 4 (Q = 8, field Q(sqrt2)) : complete family 98 configurations (70 unit-mark, 28 mark-2)
+   max weight on mark-2 configurations = 0.286611652  =>  MINIMAL simple fraction p = 0.713388348
+   frontier's recorded ceiling constant = 0.6818287  (ABOVE p_min)
+   optimal law uses 7 configurations (4 of them mark-2)
+   is there an exact-ramp law with p <= 0.6818277 ?  NO
+
+N = 6 (Q = 12, field Q(sqrt3)) : complete family 1144 configurations (924 unit-mark, 220 mark-2)
+   max weight on mark-2 configurations = 0.292663844  =>  MINIMAL simple fraction p = 0.707336156
+   frontier's recorded ceiling constant = 0.6818287  (ABOVE p_min)
+   optimal law uses 11 configurations (9 of them mark-2)
+   is there an exact-ramp law with p <= 0.6818277 ?  NO
+
+====================================================================================================
+READING
+  A minimal p ABOVE the frontier's 0.6818287 is a structural obstruction: on that grid no exact-ramp
+  law can be a ceiling-witnessing law.  A minimal p BELOW it means the two purposes can be combined:
+  an exact numeric input (tau = 0) attached to a law whose simple fraction is at or below the
+  frontier's, which is the strongest form of the E45 reconciliation.
