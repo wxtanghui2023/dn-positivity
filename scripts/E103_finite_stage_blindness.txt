@@ -1,0 +1,23 @@
+E103 - finite-stage prime data is blind to the zeros
+==============================================================================
+box: sigma in [0.02, 0.98],  t in [0.5, 30.0]
+
+zeros of zeta inside the box               : 3
+first five ordinates                       : 14.1347, 21.0220, 25.0109, 30.4249, 32.9351
+
+truncated zeta series D_N(s) = sum_{n<=N} n^{-s}: zeros inside the SAME box
+       N    #zeros(D_N)    ratio to zeta
+      10              6             2.00
+      20              9             3.00
+      50             14             4.67
+     100             19             6.33
+
+Reading: the count grows with the truncation and does not settle at the zeta count.
+The truncated sums do not converge to zeta inside the strip (they diverge there),
+so their zero sets cannot converge to zeta's zeros either.  Combined with Lemma A
+(finite Euler products have no zeros in the strip at all) this says: the zeros are
+created by the limit, and the limits that see them are not the naive finite ones.
+==============================================================================
+Boundary: this is not a theorem that analytic continuation is the UNIQUE limit
+procedure; it only excludes the naive finite-stage limits and records that any
+successful procedure must be limit-seeing.
