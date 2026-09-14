@@ -18,7 +18,9 @@ $$\boxed{\mathcal M_{\rm audited}=\text{当前机制库中所有已审计可用�
 $$\boxed{R_{\rm residual}=\text{尚未发现的 char-0、无限层、非循环、非有限性来源的 intrinsic polarization/purity mechanism}\ ⚠️}$$
 $$\qquad\boxed{\text{其"不存在"}\textbf{尚未成为定理}\ ✗（"尚未发现"\ \ne\ \varnothing\ ✓）}\qquad\boxed{\text{若继续}\textbf{需要新的数学输入}\ ✓\text{，而非继续重排现有机制}\ ✗}$$
 
-**三层结论（`V128`–`V136` 收束 ✓）**：
+**📁 归档入口 ✓**：`ARCHIVE-V128-V140-fourth-arrow-and-cross-scale-closure-audit.md`（**V128–V140 ＝ Fourth-Arrow ＋ Cross-scale Closure Audit** ✓；含三条不可越界标签 ＋ 定界审计（`V138`–`V140`）＋ 最终双门图 ＋ 档案纪律 ＋ 下一轮对象 ✓）｜`CLOSED-ROUTES-MAP` §F（含 **§F.5 总收束节点**：Fourth Arrow／Cross-scale ⟹ $R_{\rm residual}$ ✓）
+
+**三层结论（`V128`–`V140` 收束 ✓）**：
 ```
 Level 1（已证否定 ✓）：finite-window → limit → trace → spectral → positivity 逐项封闭
    （V125 单侧 ✗｜V133 Theorem A 极限盲性 ✗｜E104② 迹=显式公式 ✗｜L1/N0 ✗｜L3 0/15 ✗）
