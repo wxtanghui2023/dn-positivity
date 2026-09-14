@@ -88,3 +88,4 @@ E172	main	E172-differenceset-vs-modular-coverage	2026-09-14T14:25:00+08:00
 E173	main	E173-bounded-representative-criterion	2026-09-14T14:28:00+08:00
 E174	main	E174-alias-forcing-binary-verdict	2026-09-14T14:32:00+08:00
 E175	main	E175-convolutional-rigidity-level2-verdict	2026-09-14T14:40:00+08:00
+E176	main	E176-moment-hierarchy-collapse-class-dead	2026-09-14T14:45:00+08:00
