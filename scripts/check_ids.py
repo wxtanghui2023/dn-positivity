@@ -43,12 +43,14 @@ def main():
 
     ledger_path = os.path.join(ROOT, "docs", "ID-CLAIMS.tsv")
     ledger = collections.defaultdict(set)
+    slugmap = collections.defaultdict(set)
     if os.path.exists(ledger_path):
         with open(ledger_path, encoding="utf-8", errors="replace") as f:
             for line in f:
                 parts = line.rstrip("\n").split("\t")
                 if len(parts) >= 2 and PAT.match(parts[0] + "-") and parts[1] != "legacy-alias":
                     ledger[parts[0]].add(parts[1])
+                    slugmap[parts[0]].add(parts[2] if len(parts) > 2 else "")
 
     fatal = []
     warn = []
@@ -61,6 +63,10 @@ def main():
     for k, v in sorted(ledger.items()):
         if len(v) > 1:
             fatal.append((k, "台账同号多 stream", sorted(v)))
+    # (B') 台账同号同流 ≥2 slug（一号 = 一项 ⟹ 同号两物）
+    for k, v in sorted(slugmap.items()):
+        if len(v) > 1:
+            fatal.append((k, "台账同号同流多 slug（同号两物）", sorted(v)))
     # (C) 只有脚本没有 doc
     for k in sorted(set(scripts) - set(docs)):
         warn.append((k, "只有脚本，无 doc（可能在制品）", scripts[k]))
