@@ -54,3 +54,4 @@ E145	main	E145-E141-E144-minimal-spec-closure	2026-09-14T11:46:00+08:00
 V114	audit	bl1-budget-final-gates	2026-09-14T11:51:18+08:00
 V115	audit	representation-contraction-r1r2r3	2026-09-14T12:05:30+08:00
 E146	main	E146-RS1-RS2-criterion-space-contraction	2026-09-14T12:10:00+08:00
+E147	main	E147-fourth-detection-mode-exhaustion	2026-09-14T12:14:00+08:00
