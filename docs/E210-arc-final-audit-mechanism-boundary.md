@@ -1,0 +1,82 @@
+# E210 · 📕 **单元素弧线终审归档（E180–E209）：机制边界报告**
+> 用途 ✓：**可审计的机制边界**，不是实验目录 ✓。后续开"第二状态变量"前【必读 ✓】，防止重走已排除路线 ✓。
+> 判定 ✓（唐先生 2026-09-14 19:48）：$$\boxed{\textbf{E180–E209：单元素机制 —— 结构刻画完成，解析闭合失败}}$$
+> 纪律 ✓ 未用 RH ✓；未涉 ζ ✓；未跑 Lean ✓；本文档＝归档（无新数值 ✓）
+
+---
+
+## §1 A 层 · **已可封死的结构事实（硬结构层 ✓）**
+
+| # | 事实 | 证据 | 适用范围 | 反证条件 |
+|---|---|---|---|---|
+| **A1** | $\boxed{B_\infty\supseteq W\neq\varnothing}$，$W=\{6,29,66,137,177,193\}$ | E194 永久见证 ＋ E197/E204 构造性硬不变量（50 步逐步验证 ✓） | 嵌套方案（$A_k\uparrow,B_k\downarrow$ ＋ $W$-相容新元素 ✓） | 某步 $W$ 被逐出 $B_k$ ✓ |
+| **A2** | $\boxed{\lambda\approx0.031}$ 结构常数 | E202（跨候选 ✓）／E204（跨尺度 ✓）／E208（跨 $\theta$ ✓） | 单元素 +$c$、$B\gets B\cap(S-c)$ ✓ | 出现系统性偏离（如 $\lambda<0.02$ 或 $>0.05$ ✓） |
+| **A3** | $\boxed{\theta\le0.05}$ **非动力学控制量** | E208：$\theta\in\{0.05,0.02,0.005,0.001\}$ 四档轨迹**逐行重合 ✓** | 同上（约束 $G\ge\theta D$ 从不生效 ✓） | 低 $\theta$ 下出现不同轨迹 ✓ |
+| **A4** | $\boxed{r\ \text{存在稳定反弹区间 }0.14\!\sim\!0.16}$ | E206（$r$ 触底回升 ✓）／E209 三种子 $r_H=0.1396,\ 0.1567,\ 0.1598$ ✓ | 同 A2 ✓ | 别处出现 $r_{\min}<0.10$ 或 $\gg0.20$ ✓ |
+| **A5** | $\boxed{\eta>1\Rightarrow r\downarrow,\quad \eta<1\Rightarrow r\uparrow}$ | E206：变号点精确落于 $\eta=1$ ✓ | 同 A2 ✓ | 若 $\eta>1$ 时 $r$ 仍上升 ✓ |
+| **A6** | **避让侧完全自由** ✓ | E182：任意多"全交叉平方自由"元素可同时选入 ✓ | 单元素机制 ✓ | — |
+| A7 | $\rho$ 无正下界（$0.40\!\sim\!0.90$ ✓）；$\gamma$ 随 $r$ 单调倾向但噪声大 ✓ | E202/E204/E208 ✓ | 单元素机制 ✓ | — |
+
+$$\textbf{A 层使用规则 ✓}：\text{后续任何新机制（多元素联合／第二变量／}W\ \text{扩张 ✓）在}\ \textbf{不破坏 A1–A5 的前提}下才值得做 ✓；\text{若新机制推翻 A1–A5 之一 ✓，须显式说明 ✓}$$
+
+## §2 B 层 · **必须降级：禁止升级为定理（✗）**
+
+$$\textbf{B1 }\ \gamma=G(r)\ \Longrightarrow\ \text{只能写}\ \boxed{\text{局部经验闭合 ✓}}\ ✗（\text{禁止写"}\gamma\ \text{是 }r\ \text{的函数"✓）$$
+$$\qquad\text{依据 ✓}：\text{E205 支持（跨历史 }|\Delta\gamma|\le0.017\ ✓）\ \text{但 E208 反例（}F\ \text{非全局单零点：}r{=}0.34\ \text{时 }F{=}{+}0.75\ ✗）✓$$
+$$\textbf{B2 }\ r_0=\frac{\rho(r_0)\lambda(r_0)}{\gamma(r_0)-\lambda(r_0)}\ \Longrightarrow\ \text{只能写}\ \boxed{\text{局部自洽关系候选 ✓}}\ ✗$$
+$$\qquad\text{依据 ✓}：\text{E208 单点 6\% 吻合 ✓（可疑的巧合 ✓）};\text{E209 三种子 }r_F=0.142/0.111/-1.61\ ✗\ \text{（斜率差 80 倍 ✗）}✓$$
+$$\textbf{B3 }\ \text{"一维动力系统已建立"}\ \Longrightarrow\ \boxed{\text{禁止 ✗}}\ ✓：\text{E209 证 }Q(r)\ \text{无稳定一维根结构 ✓}$$
+$$\textbf{B4 }\ \text{"容量墙／容量黑洞"}\ \Longrightarrow\ \text{降级为}\ \boxed{\text{动力学墙 ✓}}\ ✗：\text{E206 墙处 }G(r)=0.08\!\sim\!0.13\ \boxed{>0}\ ✓$$
+$$\textbf{B5 }\ \text{E190/E191 的悲观（bootstrap 失败）}\ \Longrightarrow\ \boxed{\text{小尺度 ＋ 口径假象，已撤回 ✗}}\ ✓（\text{E192：未覆盖数 ≠ persistent-dead ✓）}$$
+$$\textbf{B6 }\ \text{E201 的"候选空间死亡"}\ \Longrightarrow\ \boxed{\text{已撤回 ✗}}\ ✓（\text{15 抽样太薄 ✓；E202 找到 }\eta=2.86\ ✓）$$
+$$\textbf{B7 }\ \text{“宽搜索 }\Rightarrow r_{20}\ \text{改善”}\ \Longrightarrow\ \boxed{\text{不成立 ✗}}\ ✓（\text{E200：}r_{20}\ \text{相当，但 }\eta\ \text{持续性改善 ✓）}$$
+
+## §3 C 层 · **真正留下来的开放缺口（✓ 比"挑变量"更重要 ✓）**
+
+$$\textbf{C1 }\ \boxed{\text{为什么 }r\approx0.14\ \text{会产生动力学反弹？}}\ ✓：\text{现象已确证（A4/A5 ✓），【机制未知 ✗】}$$
+$$\qquad\text{已知 ✓}：\text{反弹与 }\eta\ \text{穿越 1 同时发生 ✓；}\gamma\ \text{已降到 }0.08\!\sim\!0.15\ ✓\ \text{而 }\lambda\approx0.031\ \text{不变 ✓};\ \rho\ \text{降到 }0.40\!\sim\!0.50\ ✓$$
+$$\qquad\text{未知 ✗}：\text{为何 }\gamma\ \text{不能继续以与 }r\ \text{同步的速度下降（从而维持 }\eta>1\ ✓）}$$
+$$\textbf{C2 }\ \boxed{r=D/|B|\ \text{只是【压缩统计量】✗}}\ ✓：\text{E209 已示}\ \boxed{r\ \text{相同}\not\Rightarrow(\gamma,\rho,\lambda)\ \text{相同}}\ ✓$$
+$$\qquad\Longrightarrow\ \textbf{故第二状态变量不能"凭相关挑一个"✗}，\text{必须经【最小充分状态】审计 ✓（E211 ✓）}$$
+$$\textbf{C3 }\ \text{若任何 }(r,s)\ \text{都压不到同一曲面 ✓} \Longrightarrow \boxed{\text{有限维状态闭合可能本身是错误方向 ✗}}\ ✓（\text{此时应转向机制层重设 ✓，而非加第三变量 ✗）}$$
+
+## §4 正式判词（✓）
+
+$$\boxed{\textbf{E180–E209：单元素机制 —— 结构刻画完成，解析闭合失败}}\ ✓$$
+$$\qquad\textbf{不是 DEAD 原问题 ✗}，而是：\boxed{\text{单元素机制族}\ \xrightarrow{\text{完整审计}}\ \text{存在稳定动力学墙，但无已验证的低维解析闭合 ✓}}\ ✓$$
+$$\qquad\textbf{本弧线的价值 ✓}：\text{把一个"看似可驯服"的增量构造}\ \xrightarrow{\text{20 份档案}}\ \text{压缩成 7 条硬事实（A 层）＋ 7 条禁止项（B 层）＋ 1 个真缺口（C1）✓✓}$$
+
+## §5 E211 预告 · **最小充分状态审计（✓ 不直接造二维模型 ✓）**
+
+$$s_1:=\frac{\gamma}{\gamma_{\rm pool}}\ ✓（\text{饱和度 ✓}）;\qquad s_2:=\frac{|B|}{|B_0|}\ ✓（\text{规模 ✓}）$$
+$$\text{GO 条件 ✓}：(r_i,s_i)\approx(r_j,s_j)\Longrightarrow(\gamma_i,\rho_i,\lambda_i)\approx(\gamma_j,\rho_j,\lambda_j)\ ✓$$
+$$\text{判定 ✓}：s_1\ \text{成功}\Rightarrow\text{选饱和度 ✓};\ s_2\ \text{成功}\Rightarrow\text{选规模 ✓};\ \boxed{\text{两者皆败}\Rightarrow\textbf{不加第三变量 ✗}}\ ✓（\text{转机制层重设 ✓）}$$
+$$\text{数据源 ✓}：\text{E208/E209 的多历史状态（3–4 个种子 ✓，各 }r\in[0.10,0.35]\ \text{区间 ✓）}$$
+
+## §6 方法论纪律清单（✓ 防重走 ✓）
+
+```
+① 监控量：必须用 persistent-dead（free 层可达性口径 ✓），绝不用"未覆盖数"✗（E192 ✓）
+② 候选族：必须够宽（逐素数残类组合 ＋ 多尺度 kQ ✓），窄族会制造"停滞假象"✗（E192→E193、E196/E198→E200 ✓）
+③ γ 估计：噪声是"墙"结论的主要不确定源 ✓；结论必须跨种子稳定 ✓（E207→E208→E209 ✓）
+④ 判据：绑定【机制族】✓，不作方向性判死 ✗（NOGO-GATE ✓；E201 教训 ✓）
+⑤ 单变量：一次只改一个量（窗口／θ／规则 ✓），否则结果不可归因 ✗（E204 拆 A/B ✓）
+⑥ 预先写死 GO/NO-GO ✓（E209 ✓ —— 本轮正是靠它干净收束 ✓）
+⑦ 口径定义随证据演进必须显式标注 ✓（E198/E199/E204 的修正 ✓）
+```
+
+## §7 档案索引（✓ E180–E209 ✓）
+
+```
+E180 路线分叉＋无限双集合闭包 | E181 无限对首判（含 §10 勘误） | E182 T1 反驳（避让自由）
+E183 T2a 投影刚性 | E184 T2c 空泛＋覆盖局域性 | E185 双闭包退化＋密度判据
+E186 停滞＝尺度困境 | E187 修正筛＋归一化预算 | E188 低点横截数有界
+E189 单尺度 free 层死（残类不变定理） | E190 混合失败（bootstrap） | E191 假象（小尺度）
+E192 50 步 persistent 口径（撤回 E191 乐观） | E193a 前沿不坍缩（判活） | E194 永久见证
+E195 因果拆解（L=0 不存在） | E196 50 步审计（PARETO 有限寿命） | E197 保护 W 硬不变量
+E198 50 步（降率不消机制） | E199 最小 λ 前沿（平台） | E200 θ 三链（案例 B）
+E201 存在性扫描（撤回于 E202） | E202 ρ 耦合（λ 结构常数） | E203 min-r* 轨道（状态 B）
+E204 A 大窗口（容量衰减稳健）／B 四档（判据 C） | E205 配对审计（局部一维）
+E206 动力学墙（η=1 变号） | E207 θ 极限＋自洽候选 | E208 全池 γ（局部固定点 6%）
+E209 墙邻域求根（NO-GO ⟹ 弧线收束）
+```
