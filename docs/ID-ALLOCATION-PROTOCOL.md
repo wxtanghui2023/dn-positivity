@@ -56,7 +56,7 @@
 | 2 | E127 | `V105-L2-carrier-migration-survey.md` | `scripts/E127_multiscale.py` | 本会话迁号 → **E305** |
 | 3 | E128 | `E128-L3-Q3-...`（已改 E130） | `docs/E128-bessel-form-and-multiscale.md` | 已改号（→E130→**E306**） |
 | 4 | E129 | — | （他流占用） | 无需处置 |
-| 5 | E130 | `E130-L3-Q3-...` | `docs/E130-identity-rigorous.md` | 本会话迁号 → **E306** |
+| 5 | E130 | `E130-L3-Q3-...` | `docs/E133-identity-rigorous.md` | 本会话迁号 → **E306** |
 
 **本会话（audit 流）迁号映射（2026-09-14 ✓）**
 
