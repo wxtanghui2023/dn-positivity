@@ -77,3 +77,17 @@ $$\textbf{③ 代价 ✓}：\alpha\ ⇒\ \text{规格 }A+B\ \text{（1 核 ✓�
 $$\textbf{④ 我的推荐 ✓}：\boxed{\textbf{取 }\beta\ ✓}\ ——\ \text{理由：}\alpha\ \text{与档内"含 }\infty\ \text{位补全"逐字冲突 ✗ ⟹ 取 }\alpha\ \text{会【删掉源文本的一项要求 ✗】；}$$
 $$\qquad\text{而取 }\beta\ \text{只是【多留一个硬核 ✗】，是诚实的更强规格 ✓}$$
 $$\textbf{⑤ 定稿后果 ✓}：\beta\ ⇒\ \text{E145 §2 保留 }C_{\rm int}\ ✓；\text{§0 记为【2 个硬核 ✓】：}\ A+B\ \text{（存在性 ✗）＋ }C_{\rm int}\ \text{（内在对偶 ✗）}$$
+
+---
+
+## §9 ✅ **裁定已下（2026-09-14 12:06 唐先生 ✓）：取 $\beta$ —— 规格正式定稿**
+
+$$\boxed{\textbf{规格定稿 ✓}：\ A+B+C_{\rm int}\qquad\left(\textbf{2 个真正硬核 ✓}\right)}$$
+$$\boxed{A+B:\ \exists\,(X,\varphi_t)\ ✓,\ \ \operatorname{PrimPer}(\varphi)\cong\mathbb P\ ✓,\ \ L(\gamma_p)=\log p\ ✓}$$
+$$\boxed{C_{\rm int}:\ \exists\,\Theta\ \text{intrinsic}\ ✓,\ \ \Theta^*=1-\Theta\ ✓}$$
+$$\textbf{并附一项【同一性要求 ✓】}：\text{二者须属于}\ \textbf{同一算术动力对象 ✓}，\textbf{而非事后分别拼接 ✗}$$
+$$\text{裁定理由（采纳 ✓）}：\text{原规格明确要求"含 }\infty\text{-位补全"✓ ⟹ }\alpha\ \text{把 }C\ \text{降格为"}\zeta_\varphi=\zeta\ \text{故继承 FE"✗，}\textbf{会丢掉原要求中的内部 }\infty\text{-位结构 ✗}；\ \beta\ \text{才忠实于源文本 ✓}$$
+
+$$\textbf{附记 ✓}：\text{依据 }E144\ ✓\ ——\ \alpha/\beta\ \text{的分野【只影响 }C\ \text{的地位 ✓】，}\textbf{不影响 }A+B\ \text{的硬核身份 ✓}$$
+$$\textbf{测试状态 ✓}：\text{未为恢复绿灯而临时归档 }E132\ \text{的未提交脚本 ✗}（\text{依唐先生 12:06 指示 ✓）} —— $$
+$$\qquad\ E132\ \text{与 }E145\ \text{无关 ✓，保持独立 ✓，}\textbf{避免测试状态污染规格定稿 ✗✓}$$
