@@ -137,6 +137,23 @@ $$\qquad\text{否则 ✓：直接归入已有档案 ✓，不再消耗研究轮�
 
 ---
 
+### 2.I 非 RH 主线：四条入口查图结果（2026-09-14 22:0x ✓ —— 唐先生逐条提出、当场查图 ✓）
+
+> **用途 ✓**：日后任何人再想到这四条，**先看此表** ✓（均已在图内；两条有【可证框架级否定 ✓】）
+
+| 入口（唐先生提出） | 图中位置 | 判定 | 依据（可证片段 ✓） | 指针 | 等级 |
+|:--|:--|:--|:--|:--|:--|
+| **判据空间完备性** | ＝ RS-2 ⟹ 类表完备性 ⟹ **≡ $u_1$** | **旧结 ✗**（无新信息 ✓） | `E147` §③ 逐字：“RS-2 残余 ≡ 类表完备性 ⟹ 无新信息”；＋ `E106` §5 判据空间 ≡ 载体空间**对偶同一** | `V121` | 档案级 |
+| **$N(\sigma,T)$ 二维分布** | 零点密度线 | **杀 ✗（可证标度障碍 ✓✓）** | $\mathrm{RH}\iff N(\sigma,T)=0\ \forall\sigma>1/2$；已知最强 GM $N\ll T^{15(1-\sigma)/(3+5\sigma)+\varepsilon}$（$A(1/2){=}1.364,\ A(3/4){=}0.556$）；要“消失”需 $A\le0\Rightarrow\sigma\ge1$ ⟹ **幂型界在 $\sigma<1$ 处永不消失**（逻辑类型不匹配，非估计不够强）⟹ 解释指数 $7/12\to17/30$ 为何无用 ✓ | `V122` | 定理级 |
+| **零点测度二阶变分／“恢复力”** | `R_B-nonassoc` 邻域＋能量形式图 | **已封 ✗（框架级 ✓✓）** | ① 能量五类图谱**无排除型**（penalty≠排除；Hadamard 使离轴配置可实现 ✓）；② 自然核**二阶变分为负**（log $-3.9\text{e}4\to-160$；Coulomb $-2.5\text{e}7\to-2.5\text{e}3$）⟹ 临界线是**极大** ✓；③ **决定性 ✓**：比较参考配置 $\mu_{1/2+i\gamma}$ 在 RH 假时**不存在** ⟹ 比较无定义 ⟹ 循环 ✓ | `V123`；`p8-variational-rigidity`；`variational-limitation`；`energy-forms-map` | 定理级 |
+| **延拓代价的三尺度非结合缺陷 $\Delta_{X,Y,Z}$** | **＝ `R_B-nonassoc`**（原文用 $\Omega(X,Y,Z)=T_{Y,Z}T_{X,Y}-T_{X,Z}\neq0$ ✓） | **inactive ✗（已封 ✓）；两步判死与您所列一致 ✓** | 崩塌清单逐字 ✓：group action→path-independent｜**coboundary→可消除**（＝您第一步 telescoping ✓）｜invertible→groupoid｜Hecke→结合｜Gauss→类群结合｜代表元 ambiguity→quotient｜generic semigroup/Markov→**无内生算术 $\sqrt X$**；＋ `E170`：**乘积型解永远可提升 ⟹ 有限阶段永不产生障碍**（＝您第二步“可加则 $\Delta{=}0$”✓）；＋ `DISCOVERY-R3`（跨尺度记忆）**裁决 $D_1{=}0$** ✓（“未来不被过去决定”≠“不可压缩记忆” ✓） | `SCALE-DYNAMICS-FINAL-BOUNDARY-MAP` §2.B；`E170`；`DISCOVERY-R3-scale-memory`；`iteration-17-20` | 结构性 |
+
+$$\boxed{\text{四条入口 → 全部落在已封位置；无新线 ✓（按唐先生指示：不留新编号 ✓）}}$$
+$$\boxed{\textbf{残余收敛（重要观察 ✓）}：\text{所有活的残余都落到同一簇}＝\{u_1\text{类表完备性},\ \text{类 VI 范畴不变量},\ \textbf{SW6 规范对合（“尚未证明为空”✓）},\ \Theta/\text{动力学吸引子}\}}$$
+$$\qquad\text{其中 `SCALE-DYNAMICS` 档自己加粗要求保留的一句 ✓：}\boxed{\textbf{SW6 尚未证明为空}}\ ✓\ ——\ \text{即跨尺度线的残余与判据空间线的残余是同一簇 ✓}$$
+
+---
+
 ## §3 ✅ 准入清单（**新路径开工前 8 步**；任一步命中 ⟹ 停止并归档 ✓）
 
 ```
