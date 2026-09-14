@@ -441,3 +441,48 @@
    `V116 §⑥`（"CS-2/CS-3 判定力 ≡ u1 局部版"）⟹ **四档同构：方向 (ii)(iii) 的现成判据皆回落至 `u1`** ✓
 【纪律 ✓】本行仅为**交叉索引** ✓ —— **不改写**任一路径的结论 ✗（T10）；两路径**不合并为单档** ✓（保留各自判据轴，便于将来引用 ✓）
 ```
+
+---
+
+# 🔒 **2026-09-14 14:14 · 唐先生裁定（收束）＋ 下一轮入口闸门**
+
+## 裁定（三位，照录 ✓）
+
+```
+Q1 **合并 ✓（批准，但【今日不执行】✗ —— 下轮执行 ✓）**
+   方向：把 `docs/AUDIT-local-vs-global-satisfiability.md` 作为 (甲) Spec 的【方法论核心章节】，
+   形成：定义问题 → 四层审计 → 判定局部路线何时必然失效 → 明确进入非局部搜索
+Q2 **标题 ✓**：`局部可满足性与全局障碍：一个可复用排除框架`
+   （理由照录 ✓：已证明的是【方法边界 ✓】，不是结构障碍本身 ✗）
+Q3 **今日不再动它 ✓**；但它【不是"下轮起点"✗】，而是【下轮【入口闸门】✓】：
+   Local → CRT → Density → Lift **全部封闭** ⟹ 任何候选 M-模／p^k-模／筛／局部密度／CRT 拼接，
+   只要落在四层框架内 ⟹ **直接 NO-GO ✗，不再投入推导时间 ✓**
+```
+
+## ⭐ 今日正式结论（✓ 严格区分 ✓）
+
+$$\boxed{\text{E141--E171：}\textbf{局部路线 CLOSED ✓}}\qquad\boxed{\text{但：}\textbf{平方自由分解问题【未】CLOSED ✗}}$$
+$$\boxed{\text{局部可满足性}\ \not\Rightarrow\ \text{全局加法可分解性}}$$
+
+## ⭐⭐ 唐先生指出的【变量错位】（✓ 新数学内容，下轮起点 ✓）
+
+$$S=A+B\ \text{真正约束的【不是】单个 }n\ \text{是否 }\in S\ ✓，\text{而是【双侧】✓}：$$
+$$\qquad\boxed{A+B=S\iff\begin{cases}A+B\subseteq S&\text{(avoidance ✗ 局部路线已打穿 ✓)}\\ S\subseteq A+B&\text{(coverage ✗}\textbf{ 此前【完全未触碰 ✓】})\end{cases}}$$
+$$\Longrightarrow\ \textbf{四层审计实际上只打穿了 avoidance 一侧 ✗}：\ \text{local avoidance}\ \not\Rightarrow\ \text{contradiction}$$
+$$\Longrightarrow\ \textbf{下轮【不该】再问"如何造更强的局部禁形 ✗"，而应问 ✓}：$$
+$$\qquad\boxed{\textbf{能否证明：任何 }(A,B)\ \text{若满足 avoidance，就必在 coverage 上产生缺口 ✗？}}$$
+
+## ⭐⭐⭐ 下轮目标（✓ 压缩到一句 ✓）
+
+$$\text{定义覆盖数 ✓}：\ r_{A,B}(n)=\sum_{a+b=n}\mathbf 1_A(a)\mathbf 1_B(b)\ ✓\qquad\text{原命题 ⟺ }\ r_{A,B}(n)\ge1\iff n\in S$$
+$$\boxed{\textbf{问题 ✓}：\operatorname{supp}(\mathbf 1_A*\mathbf 1_B)=S\ \text{—— 是否存在【全局卷积障碍 ✗】？}}$$
+$$\text{（}\textbf{关键 ✓}：\text{这把问题从"局部集合能否满足 ✗"转为"}\textbf{整数卷积的零集能否恰为}\ \bigcup_p p^2\mathbb Z\ \text{✗"}\ ✓）$$
+$$\text{（}\textbf{硬约束候选 ✓}：\mathbf 1_A*\mathbf 1_B\ \text{不是任意 }0/1\ \text{函数 ✗ —— 它同时受【平移／交集／差集／能量／不同分解数之间的关联】约束 ✓）}$$
+
+## 状态
+
+```
+**check_ids=0 ✓｜当日无未提交改动 ✓｜工作时长 ≈14.2h ✓**
+**下轮入口 ✓：直接从【卷积的全局约束】开始 ✗，不从模 p 重新开始 ✓**
+**AUDIT 正文【未改 ✓】；合并【未执行 ✓】—— 留作下轮第一件事 ✓**
+```
