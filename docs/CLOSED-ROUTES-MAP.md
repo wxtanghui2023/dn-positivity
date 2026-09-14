@@ -186,6 +186,18 @@ $$\boxed{Gate\ 3\ \textbf{结构性失败 ✗}}：\text{FE 是}\textbf{对称性
 $$\boxed{\text{⭐ 关键命中 ✓}：\det_{\rm ren}(I-\mathcal E(s))\ \textbf{＝ Deninger 纲领};\ \text{档案（`V105` 第 6 行 ✓）判：有 canonical 生成元}\ ✓\ \text{但}\textbf{缺 canonical polarization（正定相交形式）}\ ✗\ +\ \textbf{局部 similitude 只看得见 }\sigma>1\ \text{的 Euler 窗口（算术断裂）⟹ 看不到零点}\ ✗;\ \text{命中箱 6／12；状态 }\textbf{CLOSED*};\ \text{配套 `connes-2026-full-audit`（}\text{未产生独立于 Weil 显式公式的 }\beta\text{-障碍}\ ✓\text{）}$$
 $$\qquad\Longrightarrow\ \text{三关结论 ＝ }\textbf{有限／无限层断裂 ＋ 有完成函数机制但无 RH 强制力} \text{两者同时成立}\ ✓;\ \text{并核对：}J\text{-unitary}\not\Rightarrow|\lambda|=1\ ✗（\text{不定度量下 }\lambda=r,\lambda'=r^{-1}\ ✓），\text{与 `AOB4` §1 的 E/D/Z}\perp\text{P 同向}\ ✓$$
 
+### F.5h ⭐ **Iterated Arithmetic Action（$F_N^2=N R_N$，$R_N^\dagger R_N=I$）**（`V146` ✓ 2026-09-14 23:58）—— **DEAD** ✗
+
+$$\text{命题 ✓}：\text{用}\ F_N^2=N\,R_N\ \text{（迭代律）替代}\ F^\dagger JF=NJ\ \text{（二次型），以求}\ \sqrt N\ \text{不经 determinant／Gram／polarization ✓}$$
+$$\textbf{① 形式区分真实 ✓}：F=\begin{pmatrix}0&N\\1&0\end{pmatrix}\ \text{满足}\ F^2=NI\ \text{但}\ F^\dagger F=\operatorname{diag}(1,N^2)\ne NI\ ✓;\ \text{且}\ F^2=NR\ \text{自动给}\ |\lambda|=\sqrt N\ ✓$$
+$$\textbf{② 但包含方向相反 ✗}：F^\dagger F=NI\ \Longrightarrow\ F=\sqrt N\,U\ \Longrightarrow\ F^2=N\,U^2\（U^2\ \text{酉}\ ✓）\ \Longrightarrow\ \textbf{迭代条件是 similitude 的【推论】，严格更弱} ✗✓$$
+$$\textbf{③ "}R_N\ \text{酉"}\ \Longleftrightarrow\ \text{存在正定形式}\ \Longrightarrow\ \text{困难被}\textbf{搬回} char-0 canonical polarization 缺口\ ✗✓（\text{箱 12；`AOB4` §1：E/D/Z}\perp\text{P}）$$
+$$\textbf{④ ⭐⭐⭐ 档案命中 ✓}：`p41-g1-unitary-factorization`（2026-09-02）＝ 同类，\textbf{已判死} ✓✓：$$
+$$\qquad\textbf{消零定理 ✓}：S(w)=\frac{\zeta(\frac12-w)}{\zeta(\frac12+w)}\xrightarrow{FE}\chi(\tfrac12-w)\ \Longrightarrow\ \textbf{ζ 零点在比值中完全消掉} ✗;\ \text{"比值型 unitary 不可能携带零点"} ✓$$
+$$\qquad\textbf{反例 ✓}：S=\frac{w-a}{w+a}\（a\ \text{实}）：S(-w)=1/S(w)\ ✓,\ |S(it)|=1\ ✓\ \text{但}\ \textbf{极点在实轴非虚轴} ✗✓\ \text{—— 与"}\ J\text{-unitary}\not\Rightarrow\text{单位圆"构成【两方向对称】（酉不约束位置 ✓）}$$
+$$\qquad\text{inner-outer 循环 ✓；Hardy 类障碍 ✓}\ \Longrightarrow\ \text{判词逐字："与 }\beta\text{-wall }\textbf{同深度};\ \text{global factorization rigidity 未出现"}\ ✓$$
+$$\Longrightarrow\ \boxed{\textbf{DEAD} ✓}\qquad\textbf{残余（与 `V145` 一致 ✓）}：\text{非交换跨 }N\ \text{兼容律 ＝ }\textbf{SW6}\ ⛔\ \text{（未证明为空 ✓）}\ +\ \text{char-0 canonical polarization ⛔}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
