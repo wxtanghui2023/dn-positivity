@@ -1,0 +1,19 @@
+E127 (ii) -- multi-scale test: is |S|^2 the correct requirement ratio,
+and does it decrease like log(T)/T with T = sqrt(N)?
+zeros: 2001052, max ordinate 1132490.658714
+
+         N   T=sqrt N      n_zeros         rms|S| sqrt(sum|A|^2)        max/rms   rms|S|^2 log T/2piT
+--------------------------------------------------------------------------------------------------------
+     1e+04   100.0000      2001052   1.154298e-01   1.267228e-01         1.9711  1.332e-02  7.329e-03
+     1e+05   316.2278      2001052   7.636632e-02   8.289664e-02         2.1047  5.832e-03  2.897e-03
+     1e+06  1000.0000      2001052   5.217217e-02   5.238100e-02         1.9839  2.722e-03  1.099e-03
+
+peak RSS = 171.4 MB
+
+READING
+  column 'rms|S|^2' IS the requirement ratio R = int|Delta|^2/(h*N),
+  because the window and the short interval both equal sqrt(N).
+  R << 1 means the requirement o(hN) holds with margin 1/R.
+  If rms|S|^2 decreases roughly like log T/T while rms|S| tracks
+  sqrt(sum|A|^2), the randomised law is scale-stable and the margin grows.
+  fitted exponent d(log R)/d(log T) = -0.6898   (predicted ~ -1)
