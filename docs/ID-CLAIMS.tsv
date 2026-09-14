@@ -41,3 +41,4 @@ V111	audit	TP5-O3-test	2026-09-14T10:57:13
 V112	audit	input-substitution	2026-09-14T10:57:52+08:00
 E123	legacy-alias	superseded-by-V101	2026-09-14T10:42:19
 E137	main	E137-P2-and-lambda	2026-09-14T11:02:00+08:00
+E122	main	E122-random-or-coherent	2026-09-13T23:00:00+08:00
