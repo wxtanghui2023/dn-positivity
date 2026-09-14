@@ -167,6 +167,16 @@ $$\boxed{\textbf{V128–V140：搜索边界已冻结} ✓\qquad \text{下一阶�
 $$\boxed{\text{四方向全部已在图中 ✓ —— ①②③ 已封 ✗；④ ＝ 我们刚冻结的 }R_{\rm residual}\ \text{正向侧（已登记 ⛔ 未执行）}\ \Longrightarrow\ \textbf{无新入口 ✗，但正向构造任务活着 ⛔}}$$
 $$\qquad\text{四陷阱 ↔ 档案 ✓}：\text{(a) }\Phi_\infty\ne\text{拼接}\to AOB4\ \text{§0 ✓};\ \text{(b) }\infty\text{-Fr}\ne e^{it\log p}\text{／Mellin}\to AOB1\ \text{§2 ＋ }V140\ ✓;\ \text{(c) 不能先写 }\zeta(s)\to AOB1\ \text{§4 的 }A6'\ ✓;\ \text{(d) 塞 }L\text{-函数 ⟹ 违 C5}\to AOB3\ \text{§4 ✓}$$
 
+### F.5f ⭐⭐⭐ **层诊断：motive 层 vs Archimedean 层**（`V144` ✓ 2026-09-14 23:47；档案原诊断 2026-09-02 ✓✓）
+
+$$\boxed{\text{ζ 的局部 Frobenius 本征值}\ \alpha_p\equiv1\（\textbf{平凡 motive}）\ \Longrightarrow\ \textbf{相位通道在每个有限处为空}\ ✗\ \text{且}\ \textbf{局部 }q_v\equiv1\ \text{无 }\sqrt{}\text{-尺度}\ ✗}$$
+$$\qquad\text{（逐字依据 ✓：`thought-experiment-generator-M`："ζ 的 Euler 积局部因子 }(1-p^{-s})^{-1}\ \text{的'Frobenius 特征值'}\ \alpha_p=1\（\text{平凡！}\text{）—— }\zeta\ \text{是平凡 motive —— Euler 积无临界带零点 —— 零点是解析延拓的产物"✓）}$$
+$$\boxed{\text{函数域}\textbf{平凡 motive 的 }L\ \textbf{无零点}（\zeta_C(u)=\tfrac1{(1-u)(1-qu)}\ \text{纯极点}\ ✓）\ \text{而 char-0 的 }\zeta\ \text{有非平凡零点} \Longrightarrow\ \text{差异 ＝ }\textbf{Archimedean 结构}（\Gamma／\xi\ \text{整性}\ ✓）}$$
+$$\boxed{\textbf{ζ 零点（和 RH）不在 motive 层 —— 在 Archimedean 层}\ ✓✓（`iteration-independent-wplane-archimedean` 方向 B ✓）}$$
+$$\boxed{\textbf{元解释 ✓✓✓}：\text{为什么所有 Frobenius／几何类比失败 —— }\textbf{层错了}（\text{作用在 motive 层，零点在 Archimedean 层}）}$$
+$$\qquad\Longrightarrow\ \textbf{C6（＝"延拓的算术替代物"，`thought-experiment-generator-M` 第 5 步逐字 ✓）的死因 ＝ 层结构} ✗：\text{motive 层}\textbf{不可能};\ \text{Archimedean 层}\textbf{已知仅自伴 ⟹ }HP\ \text{循环} ✗（`iteration-2-5`：}\textbf{机制真空} ✓）$$
+$$\qquad\textbf{同时已封 ✓}：\text{Sato–Tate／Hecke 局部统计 ⟹ }\textbf{L3 死}（`dstar-ec-death` ✓；`RESEARCH-CONSTITUTION` N15 ✓）；\text{Gaussian／CM 同源模+相位 ⟹ }\textbf{箱 8} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
