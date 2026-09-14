@@ -1,0 +1,15 @@
+盲生成类原子：16 个 —— Lam, Omega, absmu, const1, d, id, id2, id_mu, id_phi, mu, mu_absmu, mu_phi, omega, one_big, phi, sigma
+序列长度 N≤135；互素对 34 组
+
+候选 A/B 家族大小：106
+
+已测（非退化）配对：9612
+乘性命中：4
+   A=const1             B=one_big            C[0..12]=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+   A=const1+one_big     B=id                 C[0..12]=[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144]
+   A=id                 B=const1+one_big     C[0..12]=[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144]
+   A=one_big            B=const1             C[0..12]=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+【对照】若 C 为多项式型且乘性 ⟹ 必为 N^k（自证：P(xy)≡P(x)P(y) ⟹ 单项式）
+   测：C_N = N+1 是否乘性 ⟹ True
+   测：C_N = N   是否乘性 ⟹ False
