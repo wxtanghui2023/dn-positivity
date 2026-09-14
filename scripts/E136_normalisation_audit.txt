@@ -1,0 +1,25 @@
+E136 -- normalisation audit (row 3: truncation / weight), T = 1000.0, N = 1e+06, Y = 1000.0
+zeros: 2001052, max ordinate 1132490.658714
+
+Q is evaluated by chunked accumulation (no dense Gram) -> memory safe.
+
+weight/truncation        M                Q         sum|A|^2    R = Q/sum
+--------------------------------------------------------------------------
+  cut gamma<=T      649     3.216097e-04     6.281601e-04     0.511987
+ cut gamma<=3T     2469     1.451141e-03     1.886296e-03     0.769307
+cut gamma<=10T    10142     1.543570e-03     2.489520e-03     0.620027
+
+    flat (w=1)    10142     1.543570e-03     2.489520e-03     0.620027
+ exp(-(g/T)^2)    10142     4.223460e-04     3.642733e-04     1.159420
+(1-(g/T)^2)_+^2    10142     1.890902e-04     2.110269e-04     0.896048
+
+tail beyond 3T  1998583   diag tail =     8.574730e-04
+tail beyond 10T  1990910   diag tail =     2.542484e-04
+tail beyond 300T  1534393   diag tail =     8.774059e-06
+
+peak RSS = 203.0 MB
+
+READING
+  R stable as the cutoff grows  -> the decay of Q is just the 1/gamma weight;
+                                   no explicit-formula tail is being lost.
+  R drifting with the cutoff    -> a tail is being wrongly removed.
