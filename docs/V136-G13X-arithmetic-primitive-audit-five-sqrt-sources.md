@@ -35,7 +35,7 @@ $$\boxed{\text{算术中 }\sqrt{}\text{ 尺度的来源【只有五种 ✓】}}$
 | **(ii)** | **有限群/有限极化的特征正交** | 有限和 $\sum_{\chi}|\cdot|^2=q$ ⟹ $|G(\chi)|=\sqrt q$ ✓✓（Gauss 和：**Gauss 定理 ✓ 无条件 ✓**） | Gauss 和；Frobenius 作用于**有限维极化上同调**＋Hodge–Riemann ⟹ $|\alpha_j|=q^{1/2}$ ✓ | **W7（有限性）／`E100`** | **✗ 封（char-0 无对应 ✗）** |
 | **(iii)** | **统计平均（CLT 型）** | $\sqrt n$ 来自方差/独立和 | 随机游走、方差 | **$C_2$ 排除（非统计）✗** | **✗ 排除** |
 | **(iv)** | **函数方程的 $\sqrt{}$** | 对称轴 ⟹ 尺度 $\sqrt{}$ | Riemann–Siegel 截断 $N=\sqrt{t/2\pi}$ ✓ | **W3（$T^2$ 律）／G14** | **✗ 封** |
-| **(v)** | **purity／Hodge 指标（char-p 独占 ✓）** | 极化＋正定 ⟹ $|\alpha|=\sqrt q$ ✓ | 函数域 RH 的机制 ✓ | **`E100`／`V105` 第 10 行** | **char-0【未发现对应】⚠️（非“不存在”✗—— 见 §6 ✓）** |
+| **(v)** | **purity／Hodge 指标（char-p 独占 ✓）** | 极化＋正定 ⟹ $|\alpha|=\sqrt q$ ✓ | 函数域 RH 的机制 ✓ | **`E100`／`V105` 第 10 行** | **char-0【未发现对应】⚠️（非“不存在”✗—— 见 §6 ✓）⟹ ⚠️ 须按 `V141` 修正：char-0 【有】Lorentzian／Hodge–Riemann 型极化正性框架（不需 Frobenius ✓），但其触达 $\zeta$ 与否另论 ✗** |
 
 $$\Longrightarrow\ \boxed{\textbf{(i)–(iv) 已封 ✗；(v) 在 char-0 【未发现对应结构】⚠️ ⟹ 五种来源在【已审计结构内】穷尽 ✓ —— \textbf{但不构成“不存在”的否定性定理 ✗（见 §6 勘误 ✓）}}}$$
 $$\textbf{⭐ 关键几何直觉 ✓✓}：\text{第 (i) 与 (v) 实为【同一件事】✓ —— }\textbf{"}\sqrt{}\text{ 是【极化/二次结构】的签名 ✗"}\ \text{（}|G|^2=q\ \text{✓；}N(x\bar x)=N(x)^2\ \text{✓；Hodge 指标 ✓）}$$
