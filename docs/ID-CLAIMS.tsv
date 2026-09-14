@@ -72,3 +72,6 @@ E159	main	E159-E141-E158-closing-index	2026-09-14T12:45:00+08:00
 V118	audit	fourth-detection-mode	2026-09-14T12:59:20+08:00
 E160	main	E160-methodology-and-direction-reset	2026-09-14T13:12:00+08:00
 E161	main	E161-spec-validation-against-known-proofs	2026-09-14T13:14:00+08:00
+V119	audit	five-classes-normal-form	2026-09-14T13:22:57+08:00
+V120	audit	u1-formalization	2026-09-14T13:25:27+08:00
+E162	main	E162-method-rebuild	2026-09-14T13:30:00+08:00
