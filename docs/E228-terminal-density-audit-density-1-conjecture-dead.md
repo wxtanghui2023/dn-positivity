@@ -9,7 +9,8 @@
 $$A^*\ \text{【有限】}\ (|A^*|{=}6)\ \Longrightarrow\ \text{所有涉及量的自然密度都是【有限筛型 Euler 积 ✓】}$$
 $$\qquad\boxed{\delta\big(\{x:x+c\ \text{squarefree}\ \forall c\in C\}\big)=\prod_p\Big(1-\frac{|\{c\bmod p^2:c\in C\}|}{p^2}\Big)=:d(C)}\ ✓（\text{标准有限筛密度定理 ✓，}C\ \text{有限 ✓）}$$
 $$\qquad\textbf{且 ✓}：\sum_p\nu_p/p^2\le 6\sum_p1/p^2<\infty\ \Longrightarrow\ \text{乘积【自动收敛到正值 ✓】}$$
-$$\qquad\textbf{精确化的关键 ✓}：p^2>810000\ (p\ge1009)\ \Longrightarrow\ \text{所有差 }a-a'\ (a,a'\in A^*)\ \text{互异 mod }p^2\ ⟹\ \nu_p^{(I)}=6|I|\ \text{【精确 ✓】}$$
+$$\qquad\textbf{精确化的关键 ✓}：p^2>2\max A^*=1{,}620{,}000\ ⟹\ \boxed{\nu_p^{(I)}=c_I=\big|\{a-a':a\in I,a'\in A^*\}\big|}\ \text{【与 }p\ \text{无关的常数 ✓】}\ ✓$$
+$$\qquad\qquad\textbf{⚠️ 自纠 ✓}：\text{不可写成 }\nu_p^{(I)}=6|I|\ ✗\ ——\ \text{不同对的差可在【整数值】上重合（如 }a-a'=a''-a'''\ ✓\text{）}⟹c_I\le6|I|\ ✓\ \text{（实现时必须按【不同整数差值个数】计 ✓）}$$
 $$\qquad\Longrightarrow\ \text{只需对 }p\le1000\ \text{精确枚举 ✓ ＋ }p>1000\ \text{严格 tail ✓ ⟹ 结果【无窗口误差 ✓✓】}$$
 
 ## §1 E228-A：$\delta(B)$ 的严格 Euler 积（✓ 验证通过 ✓✓）
