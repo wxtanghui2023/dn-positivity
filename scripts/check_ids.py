@@ -47,7 +47,7 @@ def main():
         with open(ledger_path, encoding="utf-8", errors="replace") as f:
             for line in f:
                 parts = line.rstrip("\n").split("\t")
-                if len(parts) >= 2 and PAT.match(parts[0] + "-"):
+                if len(parts) >= 2 and PAT.match(parts[0] + "-") and parts[1] != "legacy-alias":
                     ledger[parts[0]].add(parts[1])
 
     fatal = []

@@ -24,6 +24,8 @@ for n in $(seq $((BASE+1)) $((BASE+99))); do
   if compgen -G "$ROOT/scripts/${id}_*" >/dev/null 2>&1; then continue; fi
   if compgen -G "$ROOT/scripts/$id-*" >/dev/null 2>&1; then continue; fi
   if mkdir "$ROOT/docs/.idclaims/$id.lock" 2>/dev/null; then
+    # END_NEWLINE_GUARD: 防主线追加缺换行导致行粘连
+    if [ -s "$LEDGER" ] && [ -n "$(tail -c1 "$LEDGER")" ]; then printf '\n' >> "$LEDGER"; fi
     printf '%s\t%s\t%s\t%s\n' "$id" "$STREAM" "$SLUG" "$(date -Iseconds)" >> "$LEDGER"
     echo "$id"; exit 0
   fi

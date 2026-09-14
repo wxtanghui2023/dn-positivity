@@ -1,0 +1,10 @@
+ID	stream	slug	time
+E123	legacy-alias	superseded-by-V101	2026-09-14T10:42:19
+E124	legacy-alias	superseded-by-V102	2026-09-14T10:42:19
+E125	legacy-alias	superseded-by-V103	2026-09-14T10:42:19
+E126	legacy-alias	superseded-by-V104	2026-09-14T10:42:19
+E127	legacy-alias	superseded-by-V105	2026-09-14T10:42:19
+E130	legacy-alias	superseded-by-V106	2026-09-14T10:42:19
+E131	legacy-alias	superseded-by-V107	2026-09-14T10:42:19
+E132	legacy-alias	superseded-by-V110	2026-09-14T10:54:48
+V110	legacy-alias	superseded-by-V111(TP5-O3-test) / V110=已由 r1-scan-and-audit-b 先占	2026-09-14T10:57:13
