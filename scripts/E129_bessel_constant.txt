@@ -1,0 +1,26 @@
+E129 -- the Bessel constant C = lambda_max of the normalised Gram
+N = 1000000.0   Y = sqrt(N) = 1000.000   M capped at 3000
+zeros: 2001052, max ordinate 1132490.658714
+
+         frequency set        M     lambda_max     lambda_min        trace/M
+------------------------------------------------------------------------------
+  real zeros, gamma<=T      649     645.071775  -8.908277e-11       1.000000
+real zeros, gamma<=1.5T     1069    1054.344706  -1.405609e-10       1.000000
+ real zeros, gamma<=2T     1517    1480.057035  -3.467471e-10       1.000000
+ real zeros, gamma<=3T     2469    2336.181557  -4.094973e-10       1.000000
+
+RIGID (equally spaced), M=  649 : lambda_max =     610.619504  (M = 649) ratio=0.9409
+RIGID (equally spaced), M= 1500 : lambda_max =    1411.439477  (M = 1500) ratio=0.9410
+RIGID (equally spaced), M= 2629 : lambda_max =    2473.866827  (M = 2629) ratio=0.9410
+
+RANDOM (random spacings), M=  649 : lambda_max =     612.158702  (M = 649) ratio=0.9432
+RANDOM (random spacings), M= 1500 : lambda_max =    1418.846337  (M = 1500) ratio=0.9459
+RANDOM (random spacings), M= 2629 : lambda_max =    2465.947382  (M = 2629) ratio=0.9380
+
+peak RSS = 563.3 MB
+
+READING
+  C >= 1 always (diagonal is 1, so trace/M = 1 and lambda_max >= 1).
+  If RIGID gives lambda_max ~ M while REAL gives ~1, then C is NOT
+  universally bounded: the bound is a genuine arithmetic input, and the
+  real zeros behave like the RANDOM surrogate rather than the rigid one.
