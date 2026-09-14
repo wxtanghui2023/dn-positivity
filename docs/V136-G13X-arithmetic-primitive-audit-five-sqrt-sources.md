@@ -10,7 +10,7 @@
 $$\boxed{\text{① 您的 §2–§10 推导【全部正确 ✓】：有限平方和 ✗（平方根只是外部重参数化 ✓）；无限＝有限层极限 ⟹ `V133` ✗；Archimedean 序 ⟹ 无原生无限 }\sqrt N\ ✗；\text{超积/非标准化 ⟹ 只是模型论容器，不增算术信息 ✗；Cauchy/正核 ⟹ }D_1\ ✗；\text{范数型 ⟹ 二次结构 ⟹ }D_1\ ✗}$$
 $$\boxed{\text{② ⭐ 本档新增（五种 }\sqrt{}\text{ 来源枚举 ✓✓）}：\text{算术中一切 }\sqrt{}\text{ 尺度只有五种来源 ✓，且【全部已映射】—— 见 §2 ✓}}$$
 $$\boxed{\text{③ ⭐ 该枚举【与元数 $k$ 无关】✓✓}：\sqrt{}\text{ 的来源是【结构性】的（二次型／有限极化／统计／FE／purity ✓）⟹ \textbf{故 }k=2\ \text{失败可直接提升到任意 }k\ \text{（您的 §13 升级规则无需执行 ✓）}}$$
-$$\boxed{\text{④ ⟹ G13 的残量 ＝ char-0 极化／purity 缺口 ⛔（＝与 }E100\text{／}V105\text{ 第 6／10 行／}AOB3\text{ 同一位置 ✓）}}$$
+$$\boxed{\text{④ ⟹ G13 的残量 ＝ }R_{\rm residual}\ \text{（＝尚未发现的 char-0 intrinsic polarization/purity mechanism ⚠️）}}$$
 
 ## §1 您的六类排除：逐条核对（✓ 全部正确 ✓）
 
@@ -35,9 +35,9 @@ $$\boxed{\text{算术中 }\sqrt{}\text{ 尺度的来源【只有五种 ✓】}}$
 | **(ii)** | **有限群/有限极化的特征正交** | 有限和 $\sum_{\chi}|\cdot|^2=q$ ⟹ $|G(\chi)|=\sqrt q$ ✓✓（Gauss 和：**Gauss 定理 ✓ 无条件 ✓**） | Gauss 和；Frobenius 作用于**有限维极化上同调**＋Hodge–Riemann ⟹ $|\alpha_j|=q^{1/2}$ ✓ | **W7（有限性）／`E100`** | **✗ 封（char-0 无对应 ✗）** |
 | **(iii)** | **统计平均（CLT 型）** | $\sqrt n$ 来自方差/独立和 | 随机游走、方差 | **$C_2$ 排除（非统计）✗** | **✗ 排除** |
 | **(iv)** | **函数方程的 $\sqrt{}$** | 对称轴 ⟹ 尺度 $\sqrt{}$ | Riemann–Siegel 截断 $N=\sqrt{t/2\pi}$ ✓ | **W3（$T^2$ 律）／G14** | **✗ 封** |
-| **(v)** | **purity／Hodge 指标（char-p 独占 ✓）** | 极化＋正定 ⟹ $|\alpha|=\sqrt q$ ✓ | 函数域 RH 的机制 ✓ | **`E100`／`V105` 第 10 行** | **char-0【无对应】✗✓** |
+| **(v)** | **purity／Hodge 指标（char-p 独占 ✓）** | 极化＋正定 ⟹ $|\alpha|=\sqrt q$ ✓ | 函数域 RH 的机制 ✓ | **`E100`／`V105` 第 10 行** | **char-0【未发现对应】⚠️（非“不存在”✗—— 见 §6 ✓）** |
 
-$$\Longrightarrow\ \boxed{\textbf{(i)–(iv) 全部已封 ✗；(v) 在 char-0 【不存在】✗✓ ⟹ 五种来源穷尽 ⟹ }\sqrt{}\text{ 尺度在 char-0 【无原生来源】✗}}$$
+$$\Longrightarrow\ \boxed{\textbf{(i)–(iv) 已封 ✗；(v) 在 char-0 【未发现对应结构】⚠️ ⟹ 五种来源在【已审计结构内】穷尽 ✓ —— \textbf{但不构成“不存在”的否定性定理 ✗（见 §6 勘误 ✓）}}}$$
 $$\textbf{⭐ 关键几何直觉 ✓✓}：\text{第 (i) 与 (v) 实为【同一件事】✓ —— }\textbf{"}\sqrt{}\text{ 是【极化/二次结构】的签名 ✗"}\ \text{（}|G|^2=q\ \text{✓；}N(x\bar x)=N(x)^2\ \text{✓；Hodge 指标 ✓）}$$
 $$\qquad\Longrightarrow\ \text{故"原生 }\sqrt{}\text{-正性"}\ \equiv\ \text{"存在一个【无条件极化】"}\ ✗\ \text{—— 而 char-0 的极化缺口正是档案反复记录的 }F\text{-}4\text{／}F\text{-}5\ ✗✓$$
 $$\qquad\Longrightarrow\ \boxed{\text{该理由【不依赖元数 }k\text{】✓ ⟹ }k=2\ \text{已足以判死 ⟹ }k\ge3\ \text{无需再做 ✓✓（按您 §13 的升级规则 ✓）}}$$
@@ -54,9 +54,9 @@ $$\textbf{④ }`ADC1`\ ✓：\text{收缩来源四分类 ⟹ 纯 }(+,\times)\ \t
 
 ## §4 判词（✓）
 
-$$\boxed{\textbf{G13-X（}k=2\text{）✓}：\textbf{无逃脱 ✗} —— \text{五种 }\sqrt{}\text{ 来源（二次型／有限极化／统计／FE／purity）全部已封或不存在 ⟹ }\sqrt{}\text{ 尺度在 char-0 无原生来源 ✓}}$$
+$$\boxed{\textbf{G13-X（}k=2\text{）✓}：\textbf{在已审计结构内无逃脱 ✗} —— \text{五种 }\sqrt{}\text{ 来源中 (i)–(iv) 已封 ✗、(v) 未发现 char-0 对应 ⚠️}}$$
 $$\boxed{\text{且理由【与元数无关】✓ ⟹ }k\ge3\ \text{不改变结论 ✓}}$$
-$$\boxed{\text{G13 的残量 ＝ }\textbf{char-0 极化／purity 缺口 ⛔}\ \text{（}F\text{-}4\text{／}F\text{-}5\ ✓）\ ——\ \text{与 }E100\text{／}V105\text{／}AOB3\text{／}G10\text{／}G15\text{ 同一位置 ✓}}$$
+$$\boxed{R_{\rm residual}=\text{尚未发现的 char-0、无限层、非循环、非有限性来源的 intrinsic polarization/purity mechanism}\ ⚠️}\ \text{（}\textbf{“尚未发现”}\ne\varnothing\ ✓；登记于 }V137\ ✓）$$
 $$\qquad\textbf{您的 §11 反向结论 ✓ 现已成立 ✓}：\text{可由档案给出"代数分类"的}\textbf{条件版 ✓}：\text{由 }(\mathbb Z,+,\times,<)\ \text{内生构造、保算术可定义的正性谓词 ✓，其 }\sqrt{}\text{ 尺度若无条件 ✓，则必属 §2 五类之一 ✓（(i)/(ii)/(iii)/(iv)/(v) ✓）}$$
 $$\qquad\qquad\text{（}\textbf{边界 ⚠️}：\text{§2 的"只有五种"是}\textbf{枚举型 ✓（II 类证据）}\ \text{，不是形式分类定理 ✗；但 (i)/(v) 的"}\sqrt{}\text{ ＝极化签名"给出}\textbf{概念性理由 ✓}）$$
 
@@ -72,4 +72,16 @@ $$\text{待攻清单 ✓}：\ \{\text{类 VI／SW6／第四箭头}\}\ \text{对�
 ✅ 净产出 ✓：① 六类排除核对 ✓；② ⭐ 五种 √ 来源枚举 ✓✓；③ 元数无关性 ⟹ k≥3 免做 ✓；
    ④ 档案同构确认 ✓（V105 第 6 行逐字 ✓）；⑤ G13 残量定位 ✓
 ```
-$$\boxed{\text{G13-X（}V136\text{）✓：您的六类排除全部正确 ✓；⭐ 五种 }\sqrt{}\text{ 来源（(i) 二次型／范数 ⟹ }D_1\text{；(ii) 有限极化／Gauss 和 ⟹ W7 有限性；(iii) 统计 ⟹ }C_2\ \text{排除；(iv) FE 的 }\sqrt{}\ ⟹\ W3\ \text{；(v) purity／Hodge ⟹ char-p 独占 ✓）全部已封或不存在 ⟹ }\textbf{char-0 中无原生 }\sqrt{}\text{ 尺度 ✗}\ \text{；且}"\sqrt{}=\text{极化签名}"\ \text{使该结论【与元数无关】⟹ }k\ge3\ \text{免做 ✓；档案逐字对应 }V105\ \text{第 6 行（"尚无"}✓\text{）＋ }E101\ F\text{-}4\ ＋\ AOB3\ \text{§4 ⟹ G13 残量 ＝ char-0 极化/purity 缺口 ⛔}$$
+$$\boxed{\text{G13-X（}V136\text{）✓：您的六类排除全部正确 ✓；⭐ 五种 }\sqrt{}\text{ 来源（(i) 二次型／范数 ⟹ }D_1\text{；(ii) 有限极化／Gauss 和 ⟹ W7 有限性；(iii) 统计 ⟹ }C_2\ \text{排除；(iv) FE 的 }\sqrt{}\ ⟹\ W3\ \text{；(v) purity／Hodge ⟹ char-p 独占 ✓）（(i)–(iv) 已封 ✗／(v) 未发现 char-0 对应 ⚠️）⟹ }\textbf{在已审计结构内未见 char-0 原生 }\sqrt{}\text{ 来源 ⚠️（非否定性定理 ✗）}\ \text{；且}"\sqrt{}=\text{极化签名}"\ \text{使该结论【与元数无关】⟹ }k\ge3\ \text{免做 ✓；档案逐字对应 }V105\ \text{第 6 行（"尚无"}✓\text{）＋ }E101\ F\text{-}4\ ＋\ AOB3\ \text{§4 ⟹ G13 残量 ＝ char-0 极化/purity 缺口 ⛔}$$
+
+
+---
+
+## §6 ⚠️ 勘误（2026-09-14 23:14，唐先生指示 ✓ T10 ✓）
+
+$$\\text{原文（已废止 ✗）}\\ \text{逐字：}\\text{"}(v)\\ \\text{在 char-0 【不存在】} \\Longrightarrow \\text{char-0 中【无原生来源】}\\ \\sqrt{}\\ \\text{尺度}"}\ ✗$$
+$$\\text{过强之处 ✓}：\\text{本档 §2 的"只有五种"是}\\textbf{枚举型（II 类证据）}\\ ✗；它\\textbf{不含}"不存在任何可能的 char-0 purity mechanism"这一\\textbf{否定性定理} ✗$$
+$$\\textbf{正确逻辑 ✓}：\\underbrace{\\text{已知 char-0 结构}}_{\\text{已审计}}\\ \\not\\Rightarrow\\ \\text{存在 purity mechanism}\\ ✗\\qquad\\text{而非}\\qquad\\underbrace{\\text{已知 char-0 结构}}_{\\text{已审计}}\\ \\Longrightarrow\\ \\text{不存在 purity mechanism}\\ ✗$$
+$$\\qquad\\text{即：可得的是}\\boxed{\\text{已知 char-0 结构}\\ \\Longrightarrow\\ \\textbf{未发现}\\ \\text{purity mechanism}}\\ ✓\\qquad\\text{而不是}\\qquad\\boxed{\\text{不存在任何可能的 purity mechanism}}\\ ✗$$
+$$\\textbf{本档判词最终形式 ✓}：\\boxed{R_{\\rm residual}=\\text{尚未发现的 char-0、无限层、非循环、非有限性来源的 intrinsic polarization/purity mechanism}}\\ ⚠️\\quad（\\textbf{“尚未发现”}\\ \\ne\\ \\varnothing\\ ✓）$$
+$$\\qquad\\text{（＝ }V137\\ \\text{的 }J\\ \\text{裁定登记项 ✓；此勘误由唐先生 2026-09-14 23:09 指示 ✓）}$$
