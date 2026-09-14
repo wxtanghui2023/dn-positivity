@@ -89,3 +89,35 @@ $$\boxed{\text{这张类表【是否完整】？即：是否存在一个类表�
 · 找不到（且能论证完整性）⟹ 空间【真正关闭】，此时应改变目标而非继续搜索
 ```
 **这才是"能缩小范围"的唯一动作。** 继续枚举候选机制不在此列。
+
+
+---
+---
+
+# F. ⭐⭐⭐ **Fourth-Arrow 总入口（`V128`–`V137`，2026-09-14 归档 ✓）**
+
+> **用途 ✓**：任何新候选若声称提供了**新的 $\sqrt{}$-正性、稳定性、或第四箭头** ⟹ **先走本节，不重走九轮** ✗
+> **配套 ✓**：`ARCHIVE-V128-V137-fourth-arrow-closure-audit.md`（三条不可越界标签 ＋ 九轮清单 ✓）｜`MASTER` §0.1（J 裁定 ✓）
+
+## F.1 总入口决策树（✓）
+
+$$\boxed{\text{Fourth Arrow}\ \longrightarrow\ \begin{cases}\text{finite-window}&\to\ \text{`V133`}\ ✗\\[1pt]\text{limit program}&\to\ \text{`E104`}\ ✗\\[1pt]\text{trace／operator}&\to\ \text{E104 ②／`L1`／`N0`}\ ✗\\[1pt]\text{canonical object}&\to\ \text{`V135`}\ ✗\ (\text{canonical}\not\Rightarrow\text{stable})\\[1pt]\text{stability}&\to\ D_1\ ✗\\[1pt]\sqrt{\ }\text{-positivity}&\to\ \text{`V136`／G13}\ ✗\\[1pt]\text{O2／O3}^\star\text{／O5}&\to\ \text{`V130`–`V132`}\ ✗\end{cases}}$$
+$$\textbf{最终节点统一指向 ✓}：\boxed{R_{\rm residual}=\text{未分类的 char-0 intrinsic polarization/purity mechanism}\ ⚠️}$$
+
+## F.2 ⭐ 最高优先级查重规则（✓ 新候选的**第一问** ✓）
+
+$$\boxed{\text{新候选若声称"新的平方根来源" ⟹ 第一问 ＝ }\textbf{"它的 }\sqrt{\ }\text{ 来自哪里？"}\ ✓（\text{而非"它能不能工作"✗）}}$$
+$$\qquad\textbf{强制七箱 ✓}：\text{quadratic/polarization}\ \big|\ \text{finite purity}\ \big|\ \text{statistical}\ \big|\ \text{functional-equation}\ \big|\ \text{spectral}\ \big|\ \text{finite-window/limit}\ \big|\ \text{order/stability}$$
+$$\qquad\Longrightarrow\ \text{能归类 ⟹ 直接按对应 route 处理 ✗（不必研究 ✓）};\qquad\boxed{\text{全部不能归类 ⟹ 才允许进入 }R_{\rm residual}\ ⚠️}$$
+
+## F.3 三条不可越界标签（✓ 摘要；详见 ARCHIVE ✓）
+
+$$\textbf{① 已证明 ✓}：\text{具体机制}\Longrightarrow\text{已有 CLOSED route（}V133\ \text{Theorem A ／ }V130\ \text{FE 湮灭 ／ }E104\text{ ② ／ }L1\text{／}N0\ \text{／ }L3\ \text{0/15 ／ }V123\ \text{／ }V135\ \text{三反例 ／ }V136\ \text{(i)–(iv)} ✓）}$$
+$$\textbf{② 条件分类 ✓}：\text{canonical}\not\Rightarrow\text{stable}；\text{任何稳定性须支付带符号/序结构（成本落 }D_1\text{）}$$
+$$\textbf{③ 未证明 ⚠️（必须保留 ✓）}：R_{\rm residual}\ne\varnothing\ \text{或}\ =\varnothing\ \textbf{均未证明}\ ✗\ \text{—— 不得把"搜索库空了"写成"数学上不存在" ✗}$$
+
+## F.4 与 §E.4 的关系（✓）
+
+$$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
+$$\qquad\Longrightarrow\ \text{本节}\textbf{不} \text{回答 §E.4 的完整性问题 ✗ —— 二者是同一缺口的两个视角 ✓}$$
+$$\boxed{\textbf{V137 ＝ SEARCH BRANCH CLOSED}\ ✓\qquad\ne\qquad\text{RH CLOSED}\ ✗}$$
