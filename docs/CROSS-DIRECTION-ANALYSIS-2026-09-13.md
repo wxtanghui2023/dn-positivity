@@ -177,3 +177,22 @@ $$\boxed{\textbf{把 }h(n)\text{ 从 }\sqrt n\text{ 改为 }n\ \Longrightarrow\ 
 ⟹ 教训 ✓：**提出新建议前必须先检索是否已有档案** ✗
    （今日第二类重复劳动 ✓ —— 第一次＝E92/E93 之前未查 NO-GO 总册 ⑫关 ✓）
 ```
+
+---
+
+# 勘误／结案（2026-09-14 ✓ 小灵，依 `E126` 裁决 ✓）
+
+```
+【⚠️ 勘误 · K7 的装置 ✗】本文 §4 里 K7 = "B5 正性审计（用 TP₅ 装置）" —— 该**装置选择不适用** ✗：
+   三层对象**不同一** ✓ —— O₁ = B5 所需【模型耦合并联正性】｜O₂ = TP₅ 所测【核 Φ 全正性】｜O₃ = RH 相关的【1/Ξ 双边 Laplace 逆变换】
+   · O₂ ≠ O₃ ✓（＝ TP₅ 撤回理由本身；`E23` 行 21 逐字："RH ⟺ the (bilateral) Laplace inverse transform of 1/Ξ
+     is a Pólya frequency function"；行 129 逐字："1/Ξ），neither of which was tested here"）
+   · O₂ ≠ O₁ ✓（`E39b` §4 行 125 逐字："kernel `Φ`, **not the couplings** of `M^{2D}_{FI+SGI}` — so it is
+     **not** an independent verification"）⟹ **双重不匹配** ✓
+【更正 ✓】K7 的正确形态 = **用【审计准则】审 B5 的正性前提**（`B5-2-physical-route-audit-criteria.md` 门 2 ✓），
+   **非**用 TP₅ 装置 ✗
+【结案 ✓】**K7 = 已结案（装置不适用）** ✓✓，且其**实际目标已由他档达成** ✓：
+   B5 的实质裁决"**未建立其主张**"已由 `E39-AUDIT-v2-complete.md`／`E39b-B5-3-ising-fulltext-audit.md` 给出
+   （三条理由：C1 循环 ＝ N0／C2 等价性未证／C3 缺正性前提 ✓），**不依赖 TP₅** ✓ ⟹ **不重开** ✓
+【纪律 ✓】T10：原文保留 ✓、勘误留档 ✓、不静默改写 ✗；依据档 = `docs/E126-K7-B5-positivity-audit.md` ✓
+```
