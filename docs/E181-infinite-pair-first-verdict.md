@@ -13,11 +13,11 @@ $$\Longrightarrow\ \boxed{\text{(L1)}\ B\subseteq S}\ ✓\quad(\forall b\in B:\ 
 $$\textbf{对照 ✓}：\text{(L1)(L2) 正是 }AUDIT\ \S L4\ \text{的两条全局条件}\ ✓（B_p\cap\{0\}=\varnothing\ \forall p\ \text{与}\ A_p\cap\{-1\}=\varnothing\ \forall p\ ✓）\ \Longrightarrow\ \textbf{审计中"当作假设"的两条，在此【被覆盖侧推出 ✓】}$$
 $$\qquad\text{（对偶方向 ✓}：\text{若取 }0\in B\ \text{（则 }1\in A\text{）}\ \Longrightarrow\ A\subseteq S,\ B+1\subseteq S\ ✓\ \text{—— E179 的"B\subseteq S-1"即此方向 ✓；下文固定 }0\in A\ ✓）$$
 
-## §1 ⭐ 刚性：$A\cap B$ 至多一个元素，且必 $\equiv1\bmod4$（✓ 新 ✓）
+## §1 ⭐ 刚性（⚠️ **已勘误 ✗，见 §10**）：$A\cap B\subseteq\{x\equiv1\bmod4\}$（✓ 成立 ✓）；基数上界（✗ **不成立 ✗**）
 
 $$x\in A\cap B\ \Longrightarrow\ \underbrace{x\in S}_{(0\in A)},\ \underbrace{x+1\in S}_{(1\in B)},\ \underbrace{2x\in S}_{x\in A,\ x\in B}\ ✓\ \Longrightarrow\ x+1\ \text{偶且平方自由}\ \Longrightarrow\ x+1\equiv2\bmod4\ \Longrightarrow\ \boxed{x\equiv1\bmod4}\ ✓$$
-$$x\ne y\in A\cap B\ \Longrightarrow\ x+y\in A+B\subseteq S\ ✓\ \text{且偶}\ \Longrightarrow\ x+y\equiv2\bmod4\ \Longrightarrow\ x\not\equiv y\bmod4\ ✗\!\!\perp$$
-$$\Longrightarrow\ \boxed{\big|A\cap B\big|\le1}\ ✓,\qquad \boxed{A\cap B\subseteq\{x\equiv1\!\!\pmod 4\}}\ ✓$$
+$$x\ne y\in A\cap B\ \Longrightarrow\ x+y\in A+B\subseteq S\ ✓\ \text{且偶}\ \Longrightarrow\ x+y\equiv2\bmod4\ \text{⚠️【此步推出「不同余」是错的 ✗，见 §10】}\ ✗\!\!\perp$$
+$$\Longrightarrow\ \text{⚠️【勘误 ✗ 见 §10】}\ \big|A\cap B\big|\le1\ \text{【不成立 ✗】},\qquad \boxed{A\cap B\subseteq\{x\equiv1\!\!\pmod 4\}}\ ✓\ \text{（此条仍成立 ✓）}$$
 $$\text{（对 E180 §1 的加强 ✓}：\text{E180 得 }A\cap B\subseteq\{x:2x\in S\}\ ✓；\text{此处再叠 }x,\ x+1\in S\ \text{两个强制条件 ⟹ 模 4 类锁定 ✓）$$
 
 ## §2 ⭐ mod 4 三分律（✓ 穷举 ✓，恰三种，无第四种 ✓）
@@ -36,7 +36,7 @@ $$\textbf{穷举 ✓}：\alpha\in\{\{0\},\{0,1\},\{0,2\},\{0,1,2\}\}\ \text{（�
 
 $$\Longrightarrow\ \boxed{\textbf{恰三种构型}}\ ✓\qquad\textbf{强制小元 ✓}：$$
 $$\text{(I)}\ A\subseteq4\mathbb Z\ ✓,\ 1,2,3\notin A\ ✓,\ \{2,3\}\subseteq B\ ✓\ [2=a+b,\ a\in A,\ a\le2\Longrightarrow a=0\ ✓]\ \Longrightarrow\ \boxed{A\cap B=\varnothing}\ ✓$$
-$$\text{(II)}\ 1\in A\cap B=\boxed{\{1\}}\ ✓,\ 2\in B\ ✓,\ 2\notin A\ ✓\ [\alpha\not\ni2\ ✓]\quad\text{（由 }3=2+1\ \text{或}\ 1+2\ \text{且}\ 2\notin A\ ✓）$$
+$$\text{(II)}\ \boxed{1\in A\cap B}\ ✓\ 【勘误 ✗：旧写 "=\{1\}"，见 §10】,\ 2\in B\ ✓,\ 2\notin A\ ✓\ [\alpha\not\ni2\ ✓]\quad\text{（由 }3=2+1\ \text{或}\ 1+2\ \text{且}\ 2\notin A\ ✓）$$
 $$\text{(III)}\ B\subseteq\{b\equiv1\!\!\pmod4\}\ ✓,\ \boxed{2\in A}\ ✓\ [3=a+b,\ b\in B,\ b\le3,\ b\equiv1\!\!\pmod4\Longrightarrow b=1\ ✓],\ 1\notin A\ \text{不强制 ✓}$$
 
 ## §3 ⭐⭐ 两个**退化解**（✓ 恰落在 (I) 与 (III) ✓；数值核对 ✓ $n\le200$ 全通过 ✓）
@@ -106,3 +106,14 @@ $$\Longrightarrow\ \textbf{与 E171/E172 结论一致 ✓}：\text{局部／密�
 ## §9 一句话（✓）
 
 $$\boxed{\text{有限侧【全封 ✗】（新 CRT 机制 ✓）；退化侧【两个显式解 ✓】；两侧无限 ⟹ 唯一活口，仍 OPEN ✓ —— 下一枪打 (T1)：无限 }B\Longrightarrow\mathcal A(B)\ \text{有限}\ ✗}$$
+
+---
+
+## §10 ⚠️ **勘误（由 E182 §5 追加 ✓）**
+
+$$\textbf{错误 ✗}：\text{§1 中"}x,y\in A\cap B\Longrightarrow x+y\equiv2\bmod4\Longrightarrow x\not\equiv y\bmod4\Longrightarrow|A\cap B|\le1\text{" —— 最后一步错 ✗}$$
+$$\textbf{正确 ✓}：x\equiv y\equiv1\bmod4\ \text{时}\ x+y\equiv2\bmod4\ ✓\ \text{【无矛盾】}\ \Longrightarrow\ \textbf{基数上界不存在 ✗}$$
+$$\qquad\text{数值反例 ✓（E182 §1 构造）：}A\cap B=\{1,5,37,41,101,433\}\ ✓\（\text{全}\equiv1\bmod4\ ✓）\Longrightarrow|A\cap B|=6\ ✗$$
+$$\textbf{降级 ✓}：\S1\ \text{保留}\ \boxed{A\cap B\subseteq\{x:x,x+1,2x\in S\}}\ ✓；\S2\ \text{(II) 的"}A\cap B=\{1\}"\ \text{降为"}1\in A\cap B"\ ✓$$
+$$\textbf{不受影响 ✓}：\S0\ \text{推出链 ✓、}\S2\ \text{三分律 ✓（独立重推 ✓）、}\S3\ \text{退化解 ✓、}\S4\ \text{有限侧定理 ✓（证明未用 §1 ✓）、}\S5\ \text{重写 ✓、}\S6\ \text{耦合不等式 ✓}$$
+$$\qquad\text{另 ✓：}\S6\ \text{的逐素数式已由 E182 §4 的跨素数 Kneser 式【统一并推广 ✓】}$$
