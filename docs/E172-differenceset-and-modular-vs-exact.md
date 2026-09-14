@@ -51,3 +51,19 @@ $$\text{（}\textbf{首选突破口 ✓（我的建议 ✓）}：\text{把 ① �
 ## §5 一句话（✓）
 
 $$\boxed{\text{三条引理全在四层框架【之外 ✓】；}\textbf{障碍的精确位置 ＝ 模覆盖与精确覆盖之间的缝隙 ✗；下轮用【差集互斥 ⊗ 平移铺砌 ✓】}}$$
+
+---
+
+## §6 本轮**已试并失败**的两条框架外路线（✓ 防重复劳动 ✓）
+
+$$\textbf{路线 (a) 差集支撑互斥计数 ✗}：\text{Lemma A} \Longrightarrow \operatorname{supp}(r_A)\cap\operatorname{supp}(r_B)=\{0\}\ ✓,\ \text{故}\ |\operatorname{supp}r_A|+|\operatorname{supp}r_B|\le2X+1\ ✓$$
+$$\qquad\text{下界 ✓}：|\operatorname{supp}(r_A)\cap[-X,X]|\ge 2|A\cap[0,X]|-1\approx2c_A\sqrt X\ ✓ \Longrightarrow\ 2c_A\sqrt X+2c_B\sqrt X\le2X\ \textbf{相容 ✗（弱 ✗）} \Longrightarrow \textbf{路线 (a) 失败 ✓}$$
+$$\textbf{路线 (b) }p^2\text{-碰撞 ✗}：|A|=\infty>|A_p|\le p^2\ \Longrightarrow\ \forall p,\ \exists k\ne0:\ kp^2\in A-A\ ✓\ \text{（同理 }B\text{ ✓）}$$
+$$\qquad\text{但 Lemma A 【只】禁止【共同】的非零 }p^2\ \text{倍数 ✗ —— 不同的倍数（}kp^2\ne k'p^2\text{）不受限 ✗} \Longrightarrow \textbf{路线 (b) 不足 ✓}$$
+$$\text{（}\textbf{两路线皆为：差集侧信息【不足以】与铺砌耦合 ✓}）}$$
+
+## §7 下轮候选（✓ 均**未试** ✓）
+
+$$\text{① }\textbf{铺砌 ⊗ 差集互斥}\ ✓：S=\bigsqcup_{a\in A}(a+B)\ \text{给出平移的【互斥性】✗，与 Lemma A 的【距离互斥】✗ 是否同源 ✗}$$
+$$\text{② }\textbf{乘法结构 ⊗ 铺砌}\ ✓：B\subseteq S\ \Longrightarrow\ S\ \text{对【互素积】封闭 ✗}（s_1s_2\in S\ \text{若}(s_1,s_2)=1\ ✓）—— \text{与【加法】铺砌联用 ✓（此前从未用过 ✗）}$$
+$$\text{（}\textbf{注 ✓}：\text{② 是我认为唯一【不属于】四层框架、也【尚未被否】的入口 ✗}）$$
