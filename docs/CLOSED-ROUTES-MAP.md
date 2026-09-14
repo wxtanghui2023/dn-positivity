@@ -219,6 +219,16 @@ $$\boxed{\textbf{⭐ 三形状皆闭 ✓}：\text{invariant ✗（只见 }\delta
 $$\textbf{档案决定性 ✓}：`AOB4` §2 逐字二分 —— char 0 中 canonical 对象：\text{① 交换谱化（Hecke／}[n]\text{）⟹ }L\text{-函数 ✗；② 不可全局极化（mixed：Galois／GT／MZV）⟹ 无 similitude ✗；③ pure＋polarizable ⟹ }\textbf{无 canonical element} ✗ ⟹ \textbf{存在性终审：不存在}；\ \textbf{差别不在 Frobenius，而在【非平凡性的来源】}（char $p$ 来自\textbf{元素}；char 0 只能来自\textbf{扩展}）✓✓$$
 $$\qquad\textbf{配套 ✓}：`S9-strict` 第二支箭不成立（\theta=0\Rightarrow a=b ✗，反例 \theta=(a-b)g(a+b)）—— 与 `V147` §1 同型：forcing／selection 论证总需额外假设，而那些假设正是被封闭处 ✓$$
 
+### F.5k ⭐⭐⭐ **证明形状审计（Fourth Proof-Shape Audit）**（`V149` ✓ 2026-09-15 00:14）
+
+$$\text{三形状复核 ✓}：\textbf{(A) invariant} ⟹ \text{只见 }\delta^2／|\delta|\ ⟹ \textbf{无方向} ✗;\ \textbf{(B) selection} ⟹ \text{平凡化 }\mathbb Z/2\text{-torsor} ⟹ H^1 ⟹ \text{quadratic} ✗（`V148`）；\ \textbf{(C) size} ⟹ T^2／\log\ \text{墙} ✗（W3／W4／L3）$$
+$$\qquad\textbf{映射 ✓}：\text{三形状} \cong §E.3\ \text{类表的 }\{I／II,\ III,\ II\}\ ✓\ \text{（III ＝ 存在性结构 ＝ selection，档内已标关闭 ✓）}$$
+$$\boxed{\textbf{⚠️ "三形状穷尽" 为假 ✗}}：§E.3\ \text{类表为}\textbf{六类} —— \text{I／II／III／V／VI \textbf{关闭} ✗；}\textbf{IV 证明论／一致性强度 ＝ OPEN} ⚠️\ \text{（但"只给可证性 ⟹ 【不能】承载谱" ✗）}$$
+$$\boxed{\textbf{⭐⭐ 且 §E.4 逐字就是同一问题} ✓✓}：\text{"于是活的问题【只剩一个】：这张类表【是否完整】？找到 ⟹ 新方向；找不到（且能论证完整性）⟹ 空间【真正关闭】，此时应}\textbf{改变目标而非继续搜索}\text{"}\ +\ \text{§E.2："能真正缩小范围的只有【表征定理】"}$$
+$$\textbf{候选形状 (D) 形变／连续性型 ⚠️（闭环为循环）}：\text{de Bruijn–Newman：RH}\iff\Lambda\le0\ ✓,\ \Lambda\ge0\ \text{无条件（Rodgers–Tao）},\ \text{上界 }0.22\ \text{（Polymath 15）} ⟹ \text{要证 }\Lambda\le0\ \text{即证 RH ⟹ 循环} ✗;\ \text{char-}p\ \text{transfer ✗（}E100／F\text{-4}）；\ \text{热流 ✗（}p11／V123\text{）}$$
+$$\textbf{候选形状 (E) 传播／级联型 ⚠️（铰链未封，但产出判据 ⟹ 已封 ✗）}：\neg\text{RH}\Rightarrow\text{稠密}\Rightarrow\text{矛盾}\ ✓;\ \textbf{E47 铰链"一个离轴零点是否迫使离轴谱稠密"＝ 未封} ⚠️✓;\ \text{但 (E) 把 RH 改写为"离轴集不稠密"（与 RH 等价 ⟹ 新判据）} ⟹ \text{落 }E106\ \text{（判据空间 ＝ 正性 ∪ 求和 ⟹ 封闭）✗};\ \textbf{诚实标注}：\text{(E)＋无条件"几乎全部在线上"}\Rightarrow\text{RH}，\text{但该输入未证（已知仅正比例：Selberg／Conrey }\ge2/5\text{）} ⟹ \text{(E) 单独不充分} ✗$$
+$$\boxed{\text{闭合陈述 ✓}：\text{就"}\textbf{能承载零点谱}\text{"的形状而言，空间}\textbf{已闭合} ✓\ \text{（I／II／III／V／VI 五闭 ＋ (C)(D)(E) 闭）；两处缺口 ⚠️ ＝ 类 IV（元的，不承载谱）＋ §E.4 类表完整性（未证）}}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
