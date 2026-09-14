@@ -67,3 +67,22 @@ $$\text{（}\textbf{两路线皆为：差集侧信息【不足以】与铺砌耦
 $$\text{① }\textbf{铺砌 ⊗ 差集互斥}\ ✓：S=\bigsqcup_{a\in A}(a+B)\ \text{给出平移的【互斥性】✗，与 Lemma A 的【距离互斥】✗ 是否同源 ✗}$$
 $$\text{② }\textbf{乘法结构 ⊗ 铺砌}\ ✓：B\subseteq S\ \Longrightarrow\ S\ \text{对【互素积】封闭 ✗}（s_1s_2\in S\ \text{若}(s_1,s_2)=1\ ✓）—— \text{与【加法】铺砌联用 ✓（此前从未用过 ✗）}$$
 $$\text{（}\textbf{注 ✓}：\text{② 是我认为唯一【不属于】四层框架、也【尚未被否】的入口 ✗}）$$
+
+---
+
+## §8 候选 ②（乘法结构 ⊗ 铺砌）：**自然表述退化 ✗ ＋ 我的第三次自身错误被逮 ✓**
+
+$$\textbf{我一度写 ✓}：\ S-B+1\subseteq S\ ✓\ \text{（"从任意平方自由数减去任意 }b\in B\ \text{再加 1 仍平方自由"）}$$
+$$\qquad\text{并据此设想计数矛盾 ✓}：\text{对数 }\approx0.6079X\cdot B(X)\approx0.6079c_BX^{3/2}\ ⟹\ \text{需 }S\cap[0,X]\ \text{含这么多值 ⟹ 矛盾 ✗}$$
+$$\textbf{⚠️ 错误 ✓（自查 ✓）}：\text{该式【只对【配对】的 }(s,b)\ \text{成立 ✗】}—— \text{即 }s=a+b\ \text{的【唯一配】}b\ ✓。$$
+$$\qquad\text{对【任意】}(s,b)\in S\times B\ \text{并不成立 ✗} \Longrightarrow\ \text{正确版本就是 }A+1\subseteq S\ \textbf{【本身 ✓，循环 ✗】}$$
+$$\qquad\Longrightarrow\ \textbf{自然表述【退化 ✗】}；\text{计数矛盾【不成立 ✗】（}\text{值的重数不受控 ✓）}$$
+$$\textbf{残余（正确形式 ✓）}：\text{铺砌给出【双射 ✗】}S\leftrightarrow A\times B\ ✓（s\mapsto(a,b)\ ✓）\quad\Longrightarrow\quad |S\cap[0,X]|=\#\{(a,b):a+b\le X\}$$
+$$\qquad\text{问题化为 ✓}：\textbf{乘法运算（互素积 ✓）在}(a,b)\text{-坐标下能否被任何【局部规则】实现 ✗？}$$
+$$\qquad\text{（}\text{计数版本 ✓：}S\cap[0,\sqrt X]\ \text{的互素积 }\approx0.3696X\ \text{个（}\text{重数可重叠 ✓）}\ \text{须落在 }S\cap[0,X]\ ✓（\text{大小 }0.6079X\ ✓）\ \Longrightarrow\ \textbf{相容 ✗}）$$
+
+## §9 本轮净状态（✓ 诚实 ✓）
+
+$$\text{本轮共试【四条】框架外路线 ✓，}\textbf{全部失败或退化 ✗}：\ \text{(a) 差集支撑计数 ✓（弱 ✗）}\ |\ \text{(b) }p^2\text{-碰撞 ✓（不足 ✗）}\ |\ \text{(c) }S-B+1\subseteq S\ ✓（\textbf{我自误 ✗，实为循环 ✓}）}\ |\ \text{(d) 互素积计数 ✓（相容 ✗）}$$
+$$\text{（}\textbf{其中 (c) 是我的【第三次自身错误 ✓】，已自查逮住并更正 ✓ —— 与 }E165/E169\ \text{两次同类 ✓）}$$
+$$\Longrightarrow\ \textbf{当前状态 ✓}：\text{新靶（}\operatorname{supp}(\mathbf 1_A*\mathbf 1_B)=S\ ✓）}\textbf{【尚未】被任何框架外路线触到 ✗}；}\text{已知的只是：}\textbf{障碍必然在【模覆盖↔精确覆盖的缝隙】里 ✓}$$
