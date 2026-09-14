@@ -58,7 +58,8 @@ $$\qquad\qquad\text{见证结构 ✓（E226）：残差皆有【有限见证 ✓
 $$\boxed{\textbf{有限筛密度判决定理（本项目实证 ✓）}：\text{对【有限 }A\ \text{】与任意有限 shift 集 }C\ ✓：}$$
 $$\qquad(1)\ \ \delta\big(\{x:x+c\in S\ \forall c\in C\}\big)=\prod_p\Big(1-\frac{|\{c\bmod p^2:c\in C\}|}{p^2}\Big)\ ✓（\text{乘积收敛 ✓，因 }\sum_p|C|/p^2<\infty\ ✓）$$
 $$\qquad(2)\ \ \delta\Big(\bigcup_{a\in A}(a+B)\Big)=\sum_{\varnothing\ne I\subseteq A}(-1)^{|I|+1}\prod_p\Big(1-\frac{|\{a-a'\!\!\bmod p^2:a\in I,a'\in A\}|}{p^2}\Big)\ ✓（2^{|A|}-1\ \text{项 ✓）}$$
-$$\qquad(3)\ \ \text{对 }p^2>2\max(A)\ \text{，}\nu_p^{(I)}=|I|\cdot|A|\ \text{【精确 ✓】}\ ⟹\ \text{只需精确枚举 }p\le\sqrt{2\max A}\ \text{＋严格 tail ✓}$$
+$$\qquad(3)\ \ \text{对 }p^2>2\max(A)\ \text{，}\boxed{\nu_p^{(I)}=c_I:=\big|\{a-a':a\in I,a'\in A\}\big|}\ \text{【与 }p\ \text{无关的常数 ✓】}\ ⟹\ \text{只需精确枚举 }p\le\sqrt{2\max A}\ \text{＋严格 tail ✓}$$
+$$\qquad\qquad\textbf{⚠️ 自纠 ✓}：\text{不可写成 }\nu_p^{(I)}=|I|\cdot|A|\ ✗（\text{不同对的差可在整数值上重合 ✓）；本处已按实现修正 ✓}$$
 $$\Longrightarrow\ \boxed{\text{任何新的【有限 }A\ \text{】候选，都可【先做解析密度判决 ✓】，无需重复百万级窗口实验 ✗✓}}$$
 
 ## 层 III-c · 方法论收获（✓ 写入归档 ✓）
