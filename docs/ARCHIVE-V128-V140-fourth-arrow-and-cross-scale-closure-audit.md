@@ -1,4 +1,5 @@
-# ARCHIVE · V128–V137 ＝ **Fourth-Arrow / G13 Closure Audit**（2026-09-14 23:17 归档 ✓）
+# ARCHIVE · **V128–V140 ＝ Fourth-Arrow ＋ Cross-scale Closure Audit**（2026-09-14 23:38 归档 ✓）
+> **本次扩展 ✓**：`V138`–`V140` 并入，且**不是三份追加报告**，而是**对 `V137` 的 $R_{\rm residual}$ 的一次【定界审计】✓** —— 即：把"第四箭头"与"跨尺度兼容"两条线**共同界定的残量边界**写清楚 ✓
 
 > **用途 ✓**：以后任何新候选只要声称提供了**新的 $\sqrt{}$-正性、稳定性、或第四箭头**，**直接拿本档做前置审计** ✓ —— 而不必重走九轮 ✗
 > **配套 ✓**：`CLOSED-ROUTES-MAP` §F（总入口决策树 ＋ 查重规则 ✓）｜`MASTER-STATUS-AND-CLOSURES` §0.1（J 裁定 ✓）／§4.2 ✓
@@ -43,10 +44,28 @@ $$\boxed{R_{\rm residual}\ \neq\ \varnothing\quad\text{或}\quad R_{\rm residual
 
 ---
 
+## §1b ⭐⭐⭐ **定界审计：`V138`–`V140`（跨尺度兼容线）**（✓ 与第四箭头线互补 ✓）
+
+$$\textbf{`V138`（查图 ✓）}：\text{跨尺度兼容 ＋ 缺陷复合律}\ \textbf{【已研究过】}\ ✓\ ——\ \text{三处独立注册（}`TWO-SCALE材料A/B`\ ✓／`R-CS-PRE1` 的 $X0$："非 cocycle 非 coboundary"\ \textbf{逐字相同}\ ✓／`SCALE-DYNAMICS` 的 $\Omega=T_{Y,Z}T_{X,Y}-T_{X,Z}$ ＝ 用户的 $\mathcal C_{m,n,k}$\ ✓）＋ 一次具体构造测试（`addmul-defect-test-death`：$\lambda_{\min}$ 与 $\gamma$ 完全无关 ⟹ 原因 ＝ \textbf{定理}：$D=|D|U(\gamma)$ 酉共轭保谱 ✓）$$
+$$\textbf{`V139`（材料 A／B ✓）}：$$
+$$\qquad\text{A（二维 lattice／不变因子）}：\text{Smith（$d_1d_2=N$ 需额外 $d_1{=}d_2$ ⟹ AM-GM）／自对偶（⟹ discriminant）／Minkowski（⟹ 需 isotropy）}\ \Longrightarrow\ \textbf{全部退回箱 8}\ ✗$$
+$$\qquad\text{B（数域／ideal-class）}：\sqrt{|D_K|}\ \text{四层剥离 ⟹ 第 0 层}\textbf{按定义}＝\text{trace pairing Gram 行列式平方根 ⟹ }\textbf{定义性地 }D_1\ ✗;\ \text{第 2 层 }\tfrac12\ \text{非来自维数（应为 }1/d\text{）而来自二次性 ⟹ }\textbf{违反自身约束 C4}\ ✗;\ \text{第 4 层 Brauer–Siegel 下界 ＝ GRH 强度 ⟹ 循环}\ ✗$$
+$$\qquad\Longrightarrow\ \text{A 的 ideal-class 部分 ≡ B ⟹ }\textbf{合流 ✗};\ \text{数域 discriminant 路线的 }\sqrt{}\ \textbf{无独立来源}\ ✓$$
+$$\textbf{`V140`（固定基／非对角 transport ✓）}：\textbf{第一层即判死 ✗}$$
+$$\qquad\text{(i) 相位来源}\textbf{已穷举}（`AOB1` §2 四源：互反符号／holonomy／2-上闭链 ⟹ character／Fourier–Mellin／L-值 ✗；第四种 Frobenius 型 ＝ 唯一不退化但 \textbf{char-}p\ \textbf{专属 ✗}）$$
+$$\qquad\text{(ii) 本档二分定理 ✓}：T\ \text{含 }\gamma\ ⟹\ \text{相位 ＝ 算术频率}\times\gamma\ ⟹\ \gamma\ \text{是【输入】✗（Mellin 参数型）};\ T\ \text{不含 }\gamma\ ⟹\ \text{与 }\gamma\ \text{无关 ✗（谱＝}\{\gamma_j\}\ \text{须 HP ⟹ }N0\ \text{循环 ✗）}$$
+$$\qquad\qquad\Longrightarrow\ \textbf{"non-diagonal}\ \ne\ \text{intrinsically }\gamma\text{-sensitive" 得证 ✓}$$
+$$\qquad\text{(iii) ⭐⭐ 档案决定性 ✓}：\textbf{断裂双重}（`phase-source-search` ✓）＝ \text{Gate A（相位来源）＋ Gate B（权-1 宿主）};\ \text{Spec }\mathbb Z\ \textbf{两者皆缺}，\mathbb F_q\ \textbf{两者皆有且【同源】}（similitude $\Phi^\dagger Q\Phi=qQ$ ✓）$$
+$$\Longrightarrow\ \boxed{\text{故 }V138\ \text{的三处未执行项}\textbf{全部关闭}：材料 A ✗／材料 B ✗／修复方向（固定基缺陷）✗✓✓}$$
+$$\qquad\textbf{归档后纪律 ✓}：\textbf{不再沿 cross-scale／fixed-basis／transport 线搜索} ✗$$
+
 ## §2 总入口决策树（✓ 与 `CLOSED-ROUTES-MAP` §F 同源 ✓）
 
 $$\boxed{\text{Fourth Arrow}\ \longrightarrow\ \begin{cases}\text{finite-window}&\to\ \text{`V133`}\ ✗\\[1pt]\text{limit program}&\to\ \text{`E104`}\ ✗\\[1pt]\text{trace／operator}&\to\ \text{`E104`／`L1`／`N0`}\ ✗\\[1pt]\text{canonical object}&\to\ \text{`V135`}\ ✗\text{(canonical}\not\Rightarrow\text{stable)}\\[1pt]\text{stability}&\to\ D_1\ ✗\\[1pt]\sqrt{\ }\text{-positivity}&\to\ \text{`V136`／G13}\ ✗\\[1pt]\text{O2／O3}^\star\text{／O5}&\to\ \text{`V130`–`V132`}\ ✗\end{cases}}$$
 $$\textbf{最终节点统一指向 ✓}：\boxed{R_{\rm residual}=\text{未分类的 char-0 intrinsic polarization/purity mechanism}\ ⚠️}$$
+$$\textbf{＋ 跨尺度线一并收束（}V138\text{–}V140\text{ ✓）：}\boxed{\text{Fourth Arrow / Cross-scale}\ \Longrightarrow\ R_{\rm residual}}$$
+$$\qquad\text{四条支路 ✓}：\begin{array}{c}\text{二维 lattice／invariant-factor}\ \xrightarrow{V139}\ \text{quadratic／discriminant}\\[1mm]\text{number-field／ideal-class}\ \xrightarrow{V139}\ \text{Gram determinant／analytic class-number}\\[1mm]\text{fixed-basis non-diagonal transport}\ \xrightarrow{V140}\ \text{phase source}\end{array}$$
+$$\textbf{故 }R_{\rm residual}\ \text{的等价表述 ✓（两条线的共同收束 ✓）}：\boxed{R_{\rm residual}=\underbrace{\text{char-0 Frobenius substitute}}_{\text{Gate A：相位来源}}+\underbrace{\text{weight-1 host}}_{\text{Gate B：}\beta=\frac12}}$$
 
 ---
 
@@ -88,6 +107,15 @@ Level 3（真正未解决 ✓）：是否存在此前未分类的 char-0 intrins
 
 ---
 
+## §5b ⭐⭐⭐ **最终双门图（Gate A ＋ Gate B）**（✓ `V140` ✓）
+
+$$\boxed{\begin{array}{ccc}\text{Spec }\mathbb Z\\[1mm]\downarrow\\[-1mm]\underbrace{\text{arithmetic}}_{\text{输入}}&\xrightarrow{\ \text{Gate A}\ }&\underbrace{\gamma}_{\text{phase}}\\[2mm]&&\downarrow\text{ Gate B}\\[1mm]&&\underbrace{\beta=\frac12}_{\text{weight}}\end{array}}$$
+$$\textbf{函数域 ✓（两个缺口被同一对象绑定 ✓）}：\Phi^\dagger Q\Phi=qQ\ ✓\ \Longrightarrow\ |\alpha|=\sqrt q,\ \alpha=\sqrt q\,e^{i\theta}\ ✓\ \Longrightarrow\ s=\frac12+\frac{i\theta}{\log q}\ ✓$$
+$$\qquad\Longrightarrow\ \boxed{\text{模}\Rightarrow\frac12,\qquad\text{辐角}\Rightarrow\gamma}\qquad\text{—— 二者}\textbf{不是两个独立机制}，而是}\textbf{同一个 Frobenius eigenvalue 的 modulus ＋ phase} ✓✓$$
+$$\textbf{而 Spec }\mathbb Z\ \text{（✓ 两个独立缺口 ✓）}：\boxed{\text{weight-1 host}\ \textbf{缺}}\qquad\boxed{\text{arithmetic Frobenius}\ \textbf{缺}}$$
+$$\Longrightarrow\ \boxed{\textbf{关键判断 ✓}：\text{过去九轮看似不同的失败，被压缩成一个}\textbf{干净的结构性问题}：\text{RH 的复谱模型需要同时解决}\textbf{两个独立的结构缺口} ✓}$$
+$$\qquad\text{（}V140\ \textbf{不是又一条死路} ✓\ ——\ \text{它第一次把"为什么总掉回 }HP\text{／显式公式／}L\text{-值／有限 purity"}\text{压缩成上述双缺口 ✓）}$$
+
 ## §6 边界（✓）
 
 ```
@@ -97,4 +125,15 @@ Level 3（真正未解决 ✓）：是否存在此前未分类的 char-0 intrins
 ⚠️ V137 的状态是 SEARCH BRANCH CLOSED ✓ —— 不是 RH CLOSED ✗
 ✅ 可复用性 ✓：本档 ＋ `CLOSED-ROUTES-MAP` §F ＋ `MASTER` §0.1／§4.2 ＝ 未来新候选的前置审计入口 ✓
 ```
-$$\boxed{\text{ARCHIVE-V128-V137 ✓ ＝ Fourth-Arrow／G13 Closure Audit：三条不可越界标签（① 已证明 ⟹ CLOSED route ✓；② 条件分类：canonical}\not\Rightarrow\text{stable ＋ 稳定即序型 ✓；③ 未证明：}R_{\rm residual}\ne\varnothing\ \text{或}\ =\varnothing\ \text{均未证 ✗）＋ 总入口决策树 ＋ 最高优先级查重规则（}\sqrt{\ }\text{七箱 ⟹ 不能归类才入 }R_{\rm residual}\text{）＋ 九轮清单 ⟹ }\textbf{V137 ＝ SEARCH BRANCH CLOSED}\ ✓\ne\ \text{RH CLOSED}\ ✗}$$
+### ⑥d 档案纪律（✓ 唐先生 2026-09-14 23:32 指示 ✓ **必守** ✓）
+
+$$\boxed{R_{\rm residual}\ \text{是【当前审计体系下唯一未关闭的机制类别】}\ ✓}\qquad\textbf{而不是}\qquad\boxed{\text{"不存在其他机制"}\ ✗}$$
+$$\qquad\text{理由 ✓（}V140\ \text{自留边界 ✓）}：\text{穷举的是}\textbf{当前定义的 phase-source taxonomy}，\textbf{不是数学宇宙} ✗✓$$
+
+### ⑥e 下一轮搜索对象（✓ 若继续 ✓）
+
+$$\boxed{\text{搜索对象【直接提升】到：}\quad \textbf{Frobenius substitute}\ +\ \textbf{weight-1 host}}$$
+$$\qquad\textbf{第一道审计（不是"能不能产生 RH"✗）}：\boxed{\text{在 char 0，是否存在一个}\textbf{不借助 }\zeta\text{-零点定义}\text{、又同时具有【算术膨胀 similitude ＋ 权 1 极化】的 canonical structure？}}$$
+$$\qquad\textbf{禁用 ✗}：\text{再沿 cross-scale／fixed-basis／transport 线搜索（`V138`–`V140` 已关闭 ✓）}$$
+
+$$\boxed{\text{ARCHIVE-V128-V140 ✓ ＝ Fourth-Arrow ＋ Cross-scale Closure Audit：三条不可越界标签（① 已证明 ⟹ CLOSED route ✓；② 条件分类：canonical}\not\Rightarrow\text{stable ＋ 稳定即序型 ✓；③ 未证明：}R_{\rm residual}\ne\varnothing\ \text{或}\ =\varnothing\ \text{均未证 ✗）＋ 总入口决策树 ＋ 最高优先级查重规则（}\sqrt{\ }\text{七箱 ⟹ 不能归类才入 }R_{\rm residual}\text{）＋ 九轮清单 ⟹ }\textbf{V137 ＝ SEARCH BRANCH CLOSED}\ ✓\ne\ \text{RH CLOSED}\ ✗}$$

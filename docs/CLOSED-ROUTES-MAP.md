@@ -97,7 +97,7 @@ $$\boxed{\text{这张类表【是否完整】？即：是否存在一个类表�
 # F. ⭐⭐⭐ **Fourth-Arrow 总入口（`V128`–`V137`，2026-09-14 归档 ✓）**
 
 > **用途 ✓**：任何新候选若声称提供了**新的 $\sqrt{}$-正性、稳定性、或第四箭头** ⟹ **先走本节，不重走九轮** ✗
-> **配套 ✓**：`ARCHIVE-V128-V137-fourth-arrow-closure-audit.md`（三条不可越界标签 ＋ 九轮清单 ✓）｜`MASTER` §0.1（J 裁定 ✓）
+> **配套 ✓**：`ARCHIVE-V128-V140-fourth-arrow-and-cross-scale-closure-audit.md`（三条不可越界标签 ＋ 九轮清单 ✓）｜`MASTER` §0.1（J 裁定 ✓）
 
 ## F.1 总入口决策树（✓）
 
@@ -131,6 +131,27 @@ $$\boxed{\textbf{三处未执行 ⛔}}（各附前置问 ✓）：\text{① 材�
 $$\textbf{新闻 ✓（`V141`）}：\text{arXiv:}2609.05341\ \text{"Bounded ratios for Lorentzian polynomials"}\ ✓（\text{AI 协助 ✓；}\text{Huh 二次情形 ⟹ 任意次数，由离散凸性决定 ✓）$$
 $$\textbf{本档审计结论 ✓（`V142`）}：\text{① 一元 Lorentzian}\iff\text{非负}\ \wedge\ \text{支撑区间}\ \wedge\ \text{Newton／超对数凹 ✓；② }\textbf{Lorentzian}\not\Rightarrow\textbf{hyperbolic}\ ✗（反例 }t^3+3t^2+3t+3\ ✓）⟹\ \text{弱于 RH ✓；③ ξ-Jensen 的超对数凹部分}\textbf{已被 GORZ 无条件蕴含} ✓✓；④ 剩余差距（Lorentzian ⟹ 双曲）＝ RH 所在 ✗；⑤ 整条双曲性路线}\textbf{已由 Farmer（}arXiv\text{:}2008.07206\text{）关闭} ✓✓\ \text{（档案 }`ALIGN-A2`\ ✓）}$$
 $$\boxed{\text{故 Lorentzian 路线落 A2 已封格 ✗；不填补 }R_{\rm residual}\ ✓}\qquad\textbf{⭐ 附带 ✓}：T^2\ \text{律在此独立出现（}d\le T^2\ ✓\text{）⟹ }W3\ \text{独立确认 ✓✓}$$
+
+## F.5 ⭐⭐⭐ **总收束节点：Fourth Arrow / Cross-scale ⟹ $R_{\rm residual}$**（`V138`–`V140` ✓）
+
+$$\boxed{\text{Fourth Arrow / Cross-scale}\ \Longrightarrow\ R_{\rm residual}}$$
+$$\qquad\textbf{四条支路 ✓}：\begin{array}{c}\text{二维 lattice／invariant-factor}\ \xrightarrow{\ V139\ }\ \text{quadratic／discriminant}\\[1mm]\text{number-field／ideal-class}\ \xrightarrow{\ V139\ }\ \text{Gram determinant／analytic class-number}\\[1mm]\text{fixed-basis non-diagonal transport}\ \xrightarrow{\ V140\ }\ \text{phase source}\end{array}$$
+$$\qquad\textbf{最终全部落到 ✓}：\boxed{R_{\rm residual}=\underbrace{\text{char-0 Frobenius substitute}}_{\text{Gate A：相位来源}}+\underbrace{\text{weight-1 host}}_{\text{Gate B：}\beta=\frac12}}$$
+
+### F.5b 最终双门图（✓ `V140` ✓）
+$$\boxed{\begin{array}{ccc}\text{Spec }\mathbb Z\\[1mm]\downarrow\\[-1mm]\underbrace{\text{arithmetic}}_{\text{输入}}&\xrightarrow{\ \text{Gate A}\ }&\underbrace{\gamma}_{\text{phase}}\\[2mm]&&\downarrow\text{ Gate B}\\[1mm]&&\underbrace{\beta=\frac12}_{\text{weight}}\end{array}}$$
+$$\textbf{函数域 ✓}：\Phi^\dagger Q\Phi=qQ\ \Longrightarrow\ |\alpha|=\sqrt q,\ \alpha=\sqrt q\,e^{i\theta}\ \Longrightarrow\ s=\frac12+\frac{i\theta}{\log q}\ \Longrightarrow\ \boxed{\text{模}\Rightarrow\frac12,\quad\text{辐角}\Rightarrow\gamma}$$
+$$\qquad\text{—— 在函数域它们}\textbf{不是两个独立机制}，而是\textbf{同一个 Frobenius eigenvalue 的 modulus ＋ phase} ✓✓$$
+$$\textbf{Spec }\mathbb Z\ ✓：\boxed{\text{weight-1 host}\ \textbf{缺}}\qquad\boxed{\text{arithmetic Frobenius}\ \textbf{缺}}\ \Longrightarrow\ \textbf{两个独立结构缺口} ✓$$
+
+### F.5c 档案纪律（✓ 唐先生 2026-09-14 23:32 指示 ✓ **必守** ✓）
+$$\boxed{R_{\rm residual}\ \text{是【当前审计体系下唯一未关闭的机制类别】}\ ✓}\qquad\textbf{而不是}\qquad\boxed{\text{"不存在其他机制"}\ ✗}$$
+$$\qquad\text{理由 ✓}：\text{穷举的是}\textbf{当前定义的 phase-source taxonomy}，\textbf{不是数学宇宙} ✗✓$$
+
+### F.5d 下一轮对象（✓ 若继续 ✓）
+$$\boxed{\text{搜索对象【直接提升】到：}\ \textbf{Frobenius substitute}\ +\ \textbf{weight-1 host}}$$
+$$\qquad\boxed{\text{第一道审计（不是"能不能产生 RH"✗）}：\text{在 char 0，是否存在一个}\textbf{不借助 }\zeta\text{-零点定义}\text{、又同时具有【算术膨胀 similitude ＋ 权 1 极化】的 canonical structure？}}$$
+$$\qquad\textbf{禁用 ✗}：\text{再沿 cross-scale／fixed-basis／transport 线搜索（`V138`–`V140` 已关闭 ✓）}$$
 
 ## F.4 与 §E.4 的关系（✓）
 
