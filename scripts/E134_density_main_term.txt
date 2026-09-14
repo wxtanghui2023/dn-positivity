@@ -1,0 +1,30 @@
+E134 -- is there an uncentred density main term in S(T) = sum A_gamma ?
+N = 1000000.0   h = Y = T = 1000.000   u = 9.995003e-04   (natural height 1/u = 1000.500)
+zeros: 2001052, max ordinate 1132490.658714
+
+         G    n_zeros       |S_direct|            |S|^2        sqrt(M)*u      log T/(2pi)
+------------------------------------------------------------------------------------------------
+      1000        649     6.326344e-01     4.002263e-01     2.546275e-02         1.099403
+      2000       1517     1.371248e+00     1.880320e+00     3.892922e-02         1.099403
+      5000       4520     2.469983e+00     6.100816e+00     6.719735e-02         1.099403
+     1e+04      10142     3.092527e+00     9.563722e+00     1.006572e-01         1.099403
+     1e+05     138069     6.020330e+00     3.624437e+01     3.713907e-01         1.099403
+ 1.132e+06    2001052     1.017501e+01     1.035308e+02     1.413879e+00         1.099403
+
+consistency check at G = T (M = 649):
+   Q = A^*G A (exact, E130 method) = 4.655102e-04
+   |S_direct|^2 (plain sum)        = 4.002263e-01
+   ratio |S|^2 / Q                 = 859.758308   (should be ~1 if rank one)
+
+density model:
+   C = (1/2pi) int_0^1 (e^{iv}-1)/(iv) dv = (0.150574 +0.000000i)  |C| = 0.150574
+   S_dens(T) with log(gamma/2pi) weight  = (0.607657 +0.000000i)  |.| = 0.607657
+   naive 'C log T' (using C*log T)       = (1.040126 +0.000000i)  |.| = 1.040126
+
+peak RSS = 140.7 MB
+
+READING / three outcomes
+  A: density main term o(1)      -> only fluctuation remains
+  B: density main term = constant-> extra cancellation needed
+  C: density main term ~ C log T -> E130's A_gamma is NOT correctly centred
+  Compare the |S_direct| column with the last two columns to decide.

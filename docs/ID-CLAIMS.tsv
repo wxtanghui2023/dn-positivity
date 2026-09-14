@@ -1,4 +1,5 @@
 ID	stream	slug	time
+E134	main	E134-density-main-term-and-centering	2026-09-14T10:52:00+08:00
 V101	audit	V101-remainder-flat-region-attempt	2026-09-14T10:42:19
 V102	audit	V102-K1-conversion-probe	2026-09-14T10:42:19
 V103	audit	V103-archive-tension-resolution	2026-09-14T10:42:19
@@ -39,3 +40,4 @@ E121	main	E121-redo-window-averages-tail	2026-09-13T22:55:42+08:00
 E128	main	E128-bessel-form-and-multiscale	2026-09-14T09:53:40+08:00
 E129	main	E129-bessel-constant-is-M	2026-09-14T09:58:20+08:00
 E133	main	E133-identity-rigorous	2026-09-14T10:45:00+08:00
+V109	audit	coverage-argument-charter	2026-09-14T10:48:42+08:00
