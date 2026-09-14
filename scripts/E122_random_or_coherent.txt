@@ -1,0 +1,21 @@
+E122 -- window-averaged zero sum: random-like or coherent?
+N = 1000000.0   Y = 1000.0   window samples = 64
+zeros: 2001052, max ordinate 1132490.658714
+
+           G       N(G)      mean|S|^2    diag=Y*N(G)   coh=Y*N(G)^2 ratio/diag
+----------------------------------------------------------------------------------
+        1000        649   4.162143e+05   6.490000e+05   4.212010e+08      0.641
+        3162       2629   2.845123e+06   2.629000e+06   6.911641e+09      1.082
+       1e+04      10142   7.704101e+06   1.014200e+07   1.028602e+11      0.760
+   3.162e+04      37864   4.176056e+07   3.786400e+07   1.433682e+12      1.103
+       1e+05     138069   1.122208e+08   1.380690e+08   1.906305e+13      0.813
+   3.162e+05     494505   4.921657e+08   4.945050e+08   2.445352e+14      0.995
+       1e+06    1747146   2.109374e+09   1.747146e+09   3.052519e+15      1.207
+   1.132e+06    2001052   2.647464e+09   2.001052e+09   4.004209e+15      1.323
+
+READING
+  intS2/diag ~ 1        -> RANDOM-like: no coherence, cancellation present.
+  intS2/diag ~ N(G)     -> FULLY COHERENT: no cancellation.
+  growth of intS2 versus N(G): fit the exponent from the table above.
+  fitted exponent d(log intS2)/d(log N(G)) = 1.0583
+  (0.5 = random-like, 1.0 = coherent-with-fixed-|S|, 2.0 = fully coherent)
