@@ -364,3 +364,29 @@
 | **E137** | ⭐ **阶段完成（2026-09-14 ✓）：$\psi\to\vartheta$ 非断点 ＋ $\lambda=h/Y$ 扫描（$\lambda=2$ 仍 $o(1)$）＋ 断点清单** ✓ | 唐先生 11:00 指令 ✓ | **精确计算**（`scripts/E137_P2_and_lambda.py` ✓ 峰值 51 MB ✓） | 🟡 | ⭐⭐ **① $P_2\equiv0$ 于 $\lambda=1$（结构性 ✓）**：平方项要求 $p\in(\sqrt N,\sqrt{N+Y+h}]$ ✓ 区间长 $\approx\lambda/2$ ✓；$\lambda=1\Rightarrow$ 长 0.5<1 ⟹ **无整数 ⟹ 无素数平方** ✓ ⟹ 实测 $P_2$ max=0 ✓ nonzero fraction=0 ✓（两个新项皆 0 ✓）；$\lambda=2$ 时区间长恰 1 ✓（临界 ✓）；⭐ **② $\lambda=2$ 处 $P_2$ 项仍小 ✓**：期望素数数 $\approx2/\log N=0.145$ ✓ ⟹ $\frac1{hN}\int P_2^2\approx3.5\text{e-}6$ ✓；交叉项 $\approx5\text{e-}5$ ✓ ⟹ **$\psi\to\vartheta$ 【非断点】** ✓（与唐先生 §4 担心相反 ✓）；⭐⭐ **③ $\lambda$-扫描 ✓**：$Q$：$4.159\text{e-}4(\lambda{=}0.5)\to1.452\text{e-}3(1.0)\to\mathbf{5.130\text{e-}3(2.0)}\to9.575\text{e-}3(3.0)$ ✓ $\propto\lambda^{1.8}$ ✓ ⟹ **$\lambda=2$（Legendre ✓）处仍 $o(1)$** ✗ ⟹ **换 $\lambda$ 不解悖论** ✗；⭐ **④ 候选断点清单 ✓**：② 权重/相位 ✅（通过 ✓）；① 截断 ✅（E136 $R=0.512/0.769/0.620$ 稳定 ✓，尾部 $8.6\text{e-}4$ ✓）；③ 单点反例⟹窗口异常 ✅（$8n^3>2n^3$ ✓）；④ $h(x)$ 差额 ⚠️ 未逐项 ✗（低危）；⑤ $\psi\to\vartheta$ ✅；⑥ $\lambda$ ✅；⑦ **零点和条件收敛／配对 ⚠️ 唯一未做 ✗**（$\sum_{\gamma>G}2\sqrt x/\gamma$ 逐项对数发散 ✓ E120 ✓；须按 $\rho\leftrightarrow1-\bar\rho$ 配对处理 ✓）；⚠️ **⑤ 工具 bug 第三次 ✓**：`id_claim.sh main` 又给别名 E123 ✗（我的别名检查未拦住 ✗，须核台账 ✓）；⚠️ **边界 ✓**：$P_2$ 仅 $\lambda=1$ 数值验证 ✓（$\lambda=2$ 为解析估算 ✗）；$Q(\lambda)$ 用 $\gamma\le3T$ ✓；$N=10^6$ 单尺度 ✓；**未用 RH** ✓；**未跑 Lean** ✓｜`docs/E137-P2-and-lambda.md` ✓ ＋ `scripts/E137_P2_and_lambda.py`／`.txt` ✓ |
 
 > **E137（升级 ✓ 2026-09-14 11:10）**：① **判 FAIL 证实 ✓**（$R$ 0.512–2.052 ✗ 从不稳定 ✓；**且 $Q$ 对截断非单调 ✗**：$\lambda{=}1.5$ 时 $Q(3T_{\rm eff}){=}4.80\text{e-}3>Q(10T_{\rm eff}){=}2.44\text{e-}3$ ✓）⟹ **截断带 $T_{\rm eff}\lesssim\gamma\lesssim3T_{\rm eff}$ 不可删** ✓；② **$\lambda=2$（Legendre ✓）处 $Q=5.489\text{e-}3=o(1)$ ✗** ⟹ **悖论未解 ✗**（$\lambda{=}2$ 时 $R{=}1.267\approx1$ ✓ ⟹ **对角主导 ✓**）；③ ⚠️ **$C_{\psi,2}$ 测试失效 ✗**：$N{=}10^6$ 处 $p\in(1000,1001.5]$ **仅 1001（合数 ✓）** ⟹ $P_2\equiv0$ ✗ ⟹ **须取 $N\approx p^2$** ✓；④ **$Q\propto\lambda^{1.9}$ ✓**｜`docs/E137-lambda-and-cross-upgrade.md` ✓ ＋ `scripts/E137_lambda_and_cross.py`／`.txt` ✓
+
+---
+
+## 九、⭐ 补登与新增（2026-09-14 ✓ 小灵）
+
+```
+【补登 ✓ 本会话 audit 线】V108（`E102 §8` 靶1：判定 (c) 不可判定；靶1≡`E105`五类≡覆盖论证 u1）
+   ｜V109（**覆盖论证立项**：弱/中/强三档；**中档＝表征定理＝唯一可攻靶**；KILL 先写死；三方向）
+   ｜V110（R1 扫描＋审计 B：R1＝**未找到**；审计 B＝**校准 PASS**；`V106 §⑤` 核验成立）
+   ｜V111（TP5 改测正确对象 O₃：**NO SIGNAL**；C1 PASS/C2 FAIL 证装置有判别力；留全 x 有效 Λ 评估器）
+   ｜V112（**换输入**：枚举 11 族／存活 2；F1 零密度型为主候选）
+   ｜V113（**F1 悬点**：判定"**能界住**"但**无增益**；收敛全来自 CONV2 漏写的 $-1$；平衡 $n^*/T^2\to2$ ⟹ 复现 $T^2$ 律；
+      逐点实证 7/200、3/212 违反 ⟹ 实证 P-Type）⟹ F1 降 **LIVE\***
+   ｜V114（**BL1 §4C 三关终审**：**总判定 CLOSED**（作突破输入上限路线）＋ 残量 **LIVE\***；Gate 1/2/3 全 ✗；
+      **K2-E″ 命中**；⟹ `V112 §③-F1` 下调 **CLOSED**）
+   ⟹ **换输入两支全灭** ✓（CONV2 §5② 支 `V113`｜BL1 §4C 支 `V114`）
+【新增判据 ✓】**K2-E″**（"是而空"型 ⟹ NO-GAIN）＋ **负结果三关（方向／秩／截断）** ⟹ 已入 `MASTER-NOGO-AND-LIVE-PATHS.md` 末段 ✓
+【⭐ 方向 (ii) 表征收缩 · 首轮规格 ✓（唐先生 2026-09-14 12:04 定 ✓）】
+   问题 ✓：覆盖论证所允许的**全部对象族 $\mathcal C$**，能否压缩到**有限／低复杂度 canonical 表征 $\mathcal R$**？
+   须找 $R:\mathcal C\to\mathcal R$，使 $R(C_1)=R(C_2)\Rightarrow \operatorname{Cover}(C_1)\Leftrightarrow\operatorname{Cover}(C_2)$ ✓
+   **KILL 顺序（不得先构造 $R$ ✓）**：**R1 完备性**（$\forall C,\ R(C)$ 有定义；不成立 ⟹ **CLOSED**）→
+     **R2 保真性**（同表征 ⟹ 完全相同的覆盖判定；不成立 ⟹ **CLOSED**）→ **R3 真压缩**（$|\mathcal R|\ll|\mathcal C|$
+     或明确复杂度下降如 $\dim\mathcal R<\dim\mathcal C$，**且非换坐标写法**；只有 R1+R2 无 R3 ⟹ **重编码 ⟹ NO-GAIN**）✓
+   **首轮纪律 ✓**：**不提出新机制**；先把 $\mathcal C$ 精确定义出来，再直接做 R1/R2/R3 审计 ✓
+   **预期快结论 ✓**：若连 $\mathcal C$ 都无法在**不偷用 RH** 的前提下给出完备表示 ⟹ **"表征收缩"本身即覆盖论证的另一种包装，非新入口** ✓
+```
