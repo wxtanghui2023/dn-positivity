@@ -1,0 +1,25 @@
+E137-(7) three-way test   N=1000000.0 Y=1000.0 h=1000.0  T_eff=1000.500
+
+(A) algebraic pairing at G = 3 T_eff = 3001.5
+    |F^pm| = 9.814987e-01   |F^pm - F^pair| = 0.000000e+00   D_G = 0.000e+00
+    (D_G at machine level  ->  pairing adds nothing; (7) is a tautology here)
+
+(B) Q at three cutoffs:  sharp(+-) | paired(2Re) | complex(E130 object)
+           G          Q_sharp           Q_pair        Q_complex
+      1000.5     1.202444e-03     1.202444e-03     3.217454e-04
+      3001.5     2.408349e-03     2.408349e-03     1.459000e-03
+     10005.0     3.645095e-03     3.645095e-03     1.541637e-03
+
+(C) tail increment  E_pair(G,dG)/(Q_G)   with dG = G
+           G           dG           E_pair        Q_G(pair)      ratio
+      1000.5       1000.5     8.113318e-04     1.202444e-03     0.6747
+      3001.5       3001.5     1.697497e-04     2.408349e-03     0.0705
+     10005.0      10005.0     8.455266e-05     3.645095e-03     0.0232
+
+peak RSS = 51.0 MB
+
+READING
+  A: D_G machine-level        -> conditional convergence / pairing is NOT the break.
+  B: sharp == paired          -> the cutoff question is not a summation-convention artefact.
+  C: E_pair/Q_G -> 0          -> no same-scale tail correction; (7) dead.
+     E_pair/Q_G -> O(1)       -> (7) could be a real break point.
