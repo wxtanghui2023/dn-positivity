@@ -1,0 +1,32 @@
+E122b -- across-x fluctuation of the zero sum (memory-safe rerun)
+N = 1000000.0   h = 1000.0   T = 1000.0   u = 9.9950e-04
+chunk = 200000 zeros   x-samples = 120   peak-so-far = 140.7 MB
+
+--- gamma<=T  (natural height) : n_zeros = 649 ---
+   unweighted rms=2.601380e+01  mean=2.276834e+01  max=7.225112e+01  max/rms=2.7774
+   A-weighted rms=2.607987e-02  mean=2.286471e-02  max=7.070870e-02  max/rms=2.7112
+   pure-random prediction rms_unw ~ sqrt(n) = 2.547548e+01
+   pure-random prediction rms_wt  ~ sqrt(sum|A|^2) = 2.506312e-02
+   coherent worst case sum|A| = 6.384453e-01
+
+--- gamma<=10T : n_zeros = 10142 ---
+   unweighted rms=1.044355e+02  mean=9.201478e+01  max=2.336851e+02  max/rms=2.2376
+   A-weighted rms=5.258465e-02  mean=4.750921e-02  max=1.079736e-01  max/rms=2.0533
+   pure-random prediction rms_unw ~ sqrt(n) = 1.007075e+02
+   pure-random prediction rms_wt  ~ sqrt(sum|A|^2) = 4.989509e-02
+   coherent worst case sum|A| = 3.919371e+00
+
+--- all available zeros : n_zeros = 2001052 ---
+   unweighted rms=1.415967e+03  mean=1.245634e+03  max=3.433076e+03  max/rms=2.4245
+   A-weighted rms=5.508117e-02  mean=4.869412e-02  max=1.133504e-01  max/rms=2.0579
+   pure-random prediction rms_unw ~ sqrt(n) = 1.414585e+03
+   pure-random prediction rms_wt  ~ sqrt(sum|A|^2) = 5.238100e-02
+   coherent worst case sum|A| = 1.321357e+01
+
+peak RSS = 147.1 MB
+
+READING
+  max/rms near sqrt(2 log M) with M samples (~3.1 for M=120): light tail.
+  much larger: heavy tail, worst windows far above the average.
+  rms vs the pure-random prediction: agreement means the SIZE of the
+  sum is randomised; disagreement means residual structure.
