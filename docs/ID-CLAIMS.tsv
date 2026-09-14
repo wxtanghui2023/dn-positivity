@@ -71,3 +71,4 @@ E158	main	E158-arithmetic-identity-zero-transfer-equivalence-test	2026-09-14T12:
 E159	main	E159-E141-E158-closing-index	2026-09-14T12:45:00+08:00
 V118	audit	fourth-detection-mode	2026-09-14T12:59:20+08:00
 E160	main	E160-methodology-and-direction-reset	2026-09-14T13:12:00+08:00
+E161	main	E161-spec-validation-against-known-proofs	2026-09-14T13:14:00+08:00
