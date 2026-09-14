@@ -3,7 +3,11 @@
 
 ## 🔴 标签与判词（✓ 置顶 ✓ 防重挖 ✓）
 
-$$\boxed{\textbf{标签 ＝ CLOSED / EXACT NEGATIVE}\ 🔒}\qquad（\text{非 DEAD ✗ —— 留下可复用解析工具 ✓）}$$
+$$\boxed{\textbf{标签 ＝ CLOSED / EXACT NEGATIVE / TOOLIZED}\ 🔒🧰}\qquad（\text{非 DEAD ✗ —— 已抽成【可执行】工具卡 ✓）}$$
+$$\boxed{A\ \text{有限}\ \longrightarrow\ \text{Euler density audit}\ \longrightarrow\ \begin{cases}\delta(A+B)<\delta(S)&\Rightarrow\ \textbf{立即 EXACT NEGATIVE}\ 🔒\\[2pt]\delta(A+B)=\delta(S)&\Rightarrow\ \textbf{才值得继续}\ ✓\\[2pt]\text{无法适用}&\Rightarrow\ \textbf{换工具（不是 GO ✗）}\end{cases}}$$
+> **⚠️ 第三支纪律 ✓（必须写死 ✓）**：「工具卡不能判死」$\ne$ GO ✗ —— 它只意味着**进入下一层审计** ✓；
+> 防重演旧错 ✓：过去曾有「候选未被当前工具杀死 ⟹ 被误认为可能突破」✗ —— 本轮明确禁止该推理 ✓。
+> **成本 ✓**：单次判决 < 1 分钟 ✓（`scripts/audit_finite_A_density.py` ✓；实测复现本档全部数值 ✓），替代分钟级窗口扫描 ＋ 8M 内存 ✗。
 $$\boxed{\text{有限 }A\text{ 的构造侧近覆盖可以极强，但 }A^*\text{ 的缺口具有【严格正密度】，故不能产生密度-1机制。}}$$
 $$\boxed{\delta(B)=0.465941,\quad \delta(A^*+B)=0.607853,\quad \delta(S)=6/\pi^2=0.607927,\quad \frac{\delta(E)}{\delta(S)}=1.22\times10^{-4},\quad \boxed{R_\infty=0.999878\ldots<1}}$$
 > **⚠️ 未来的自己请看这里 ✓**：E224 的 $R_{8M}=0.999615$ 已由 E228 **解析解释为趋向 $0.999878$ ✗**（而非趋 1 ✓）；**不要再做 E229-$A^*$／E229-$Q$-scan 之类变体** ✗，除非出现**独立的新机制** ✓。

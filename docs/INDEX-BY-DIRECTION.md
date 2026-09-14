@@ -1,10 +1,13 @@
 # 📚 dn-project 存档索引（按方向）
 
-> **🔒 封口提示（2026-09-14 21:07）**：独立弧线 **E180–E228「有限构造侧覆盖」已 CLOSED / EXACT NEGATIVE** ✓。
+> **🔒🧰 封口提示（2026-09-14 21:12 工具化闭环）**：独立弧线 **E180–E228「有限构造侧覆盖」已 CLOSED / EXACT NEGATIVE / TOOLIZED** ✓。
 > 一句话判词：$\boxed{\text{有限 }A\text{ 的构造侧近覆盖可以极强，但 }A^*\text{ 的缺口具有【严格正密度】，故不能产生密度-1机制。}}$ ✓
+> 过滤三支 ✓：$\delta(A{+}B)<\delta(S)\Rightarrow$ 立即 EXACT NEGATIVE｜$=\delta(S)\Rightarrow$ 才值得继续｜**无法适用 $\Rightarrow$ 换工具（≠ GO ✗）**；
+> **第三支纪律 ✓**：「工具不能判死」≠ GO ✗，只意味着**进入下一层审计** ✓。
+> 工具卡 ✓：`TOOLCARD-FINITE-A-EULER-DENSITY-AUDIT.md` ＋ 执行器 `scripts/audit_finite_A_density.py`（单次判决 < 1 分钟 ✓）。
 > 固定数值：$\delta(B){=}0.465941$、$\delta(A^*{+}B){=}0.607853$、$\delta(S){=}0.607927$、$\frac{\delta(E)}{\delta(S)}{=}1.22\times10^{-4}$、$R_\infty{=}0.999878\ldots<1$ ✓
 > （背景：E224 的 $R_{8M}{=}0.999615$ 已由 E228 解析解释为**趋向 0.999878**，**不是**趋 1 ✓）
-> 详见 `ARCHIVE-E180-E228-finite-construction-arc-final.md` ＋ `MASTER-STATUS-AND-CLOSURES.md` §2.H ✓
+> 详见 `ARCHIVE-E180-E228-finite-construction-arc-final.md` ＋ `MASTER-STATUS-AND-CLOSURES.md` §2.H／§2.H-1／§2.H-2 ✓
 
 > ⚚ TP₅ 读数撤回（2026-09-12）：本文若把 TP₅ 的七个负子式称为【新的负面结果】✗，该读数**已撤回** ✓ —— 后续审计发现**对象错误**：与 RH 相关的对象是 **1/Ξ 的双边 Laplace 逆变换** ✓，而非本文所测的核 Φ ✗ ⟹ **数值事实仍成立**（30/60/120 位逐位相同 ✓；高斯对照验证装置 ✓），但**不再作为该路线的负面结果** ✓。详见 `E23-lee-yang-dqpt-report.md`。
 

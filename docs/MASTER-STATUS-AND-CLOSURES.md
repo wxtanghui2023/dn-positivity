@@ -102,14 +102,14 @@
 | ⭐⭐ **锐化靶 `P`（本轮浮现，最有价值的收窄）** | **未证；若证 ⟹ 三分法 ⟹ 中档 M ⟹ `u1`** | `P` 逐字 ＝「**任何 RH 等价判据的失效均可由【标量泛函】表出**」；在 `P` 下，标量值的可区分特征**穷尽为三类**（符号／量级-增长／零点集-谱位）⟹ 三分法成立；**逃逸口 ＝ 范畴/结构不变量 ＝ 档内类 VI（已关但非定理）**；⭐ **双线独立确认**（主线 `E147 §0-④`／`§1` ＋ 本线 `V118 §④-3`）⟹ **这是把 `u1` 从"类表完备性"收窄成【一句关于形式化的命题】** | `E147 §0-④`／`§1`；`V118 §④-3`；`V120` 补记 | 档案级 |
 | 下一步可判定动作 | **裁定 `J`**（纯口径、低成本） | 次选 ＝ 完成 `V119 §③` 五类局部判定程序 | `V120 §⑦` | — |
 
-### 2.H ⭐ 独立弧线（**非 RH 主线**）：E180–E228 有限构造侧覆盖 —— **CLOSED / EXACT NEGATIVE** ✓（2026-09-14 21:07 正式封口 ✓）
+### 2.H ⭐ 独立弧线（**非 RH 主线**）：E180–E228 有限构造侧覆盖 —— **CLOSED / EXACT NEGATIVE / TOOLIZED** 🔒🧰（2026-09-14 21:07 封口 ✓；21:12 工具化闭环 ✓）
 
 > **项目级判词（一句话，防重挖 ✓）**：
 > $$\boxed{\text{有限 }A\text{ 的构造侧近覆盖可以极强，但 }A^*\text{ 的缺口具有【严格正密度】，故不能产生密度-1机制。}}$$
 
 | 项 | 判定 | 判据（一句话） | 指针 | 等级 |
 |:--|:--|:--|:--|:--|
-| **E180–E228 有限构造侧覆盖弧线** | **CLOSED / EXACT NEGATIVE** 🔒 | 十类机制族逐一排除（增量／多元素／嵌套／固定模／CRT-local／低维状态／压缩／残差 mod49／杀手集／六平移覆盖），收束到 $A\mapsto B(A)\mapsto A{+}B(A)$ 并【解析判决】其极限覆盖密度 $<1$ | `ARCHIVE-E180-E228-finite-construction-arc-final.md` | **定理级** |
+| **E180–E228 有限构造侧覆盖弧线** | **CLOSED / EXACT NEGATIVE / TOOLIZED** 🔒🧰 | 十类机制族逐一排除（增量／多元素／嵌套／固定模／CRT-local／低维状态／压缩／残差 mod49／杀手集／六平移覆盖），收束到 $A\mapsto B(A)\mapsto A{+}B(A)$ 并【解析判决】其极限覆盖密度 $<1$ | `ARCHIVE-E180-E228-finite-construction-arc-final.md` | **定理级** |
 
 **⭐ 固定数值（任何人看到 E224 的 $R_{8M}=0.999615$ 都不得误认为"尚未解释的趋 1" ✓）**：
 $$\boxed{\delta(B)=0.465941,\qquad \delta(A^*+B)=0.607853}$$
@@ -120,6 +120,18 @@ $$\boxed{\delta(S)=6/\pi^2=0.607927,\qquad \frac{\delta(E)}{\delta(S)}=1.22\time
 $$A\ \longrightarrow\ B(A)\ \longrightarrow\ \delta(B(A))\ \longrightarrow\ \delta(A+B(A))$$
 即：**对任何有限 $A$ 候选，可先用有限个 Euler 乘积 ＋ $2^{|A|}-1$ 项包含-排除做【纯解析密度判决】✓，无需重复百万级窗口实验 ✗**（$p^2>2\max A$ 时 $\nu_p^{(I)}=c_I:=|\{a-a'\}|$ 为常数 ✓；⚠️ 非 $|I|\cdot|A|$ ✗）。
 $$\Longrightarrow\ \text{🧰 \textbf{已抽成独立工具卡 ✓}：`TOOLCARD-FINITE-A-EULER-DENSITY-AUDIT.md` ✓（已挂 \S2.E 工具索引 ✓）：任何有限 }A\ \text{候选，先过此关再决定是否值得进数值实验 ✓✓}}$$
+
+### 2.H-1 ⭐⭐ 前置过滤器（**本弧线最有价值的部分 ✓**）与三分支纪律
+
+$$\boxed{A\ \text{有限}\ \longrightarrow\ \text{Euler density audit}\ \longrightarrow\ \begin{cases}\delta(A+B)<\delta(S)&\Rightarrow\ \textbf{立即 EXACT NEGATIVE}\ 🔒\\[2pt]\delta(A+B)=\delta(S)&\Rightarrow\ \textbf{才值得继续}\ ✓\\[2pt]\text{无法适用}&\Rightarrow\ \textbf{换工具（不是 GO ✗）}\end{cases}}$$
+$$\boxed{\textbf{⚠️ 第三支纪律（必须写死 ✓）}：\text{【工具卡不能判死】}\ \ne\ \textbf{GO}\ ✗\ \text{—— 它只意味着【进入下一层审计】✓}}$$
+$$\qquad\text{（防重演旧错 ✓：过去曾有「候选未被当前工具杀死 ⟹ 被误认为可能突破」✗ —— 本轮明确禁止该推理 ✓）}$$
+$$\textbf{成本 ✓}：\text{单次判决 }<1\ \text{分钟 ✓（脚本 \texttt{scripts/audit\_finite\_A\_density.py} ✓，实测复现 E228 全部数值 ✓）};\ \text{替代分钟级窗口扫描 ＋ 8M 内存 ✗}$$
+
+### 2.H-2 下一线准入判据（✓ 按唐先生 21:12 ✓）
+
+$$\boxed{\text{下一条线必须同时满足：}\quad(\text{i})\ \text{不是【有限固定 }A\text{】}\ ✗\quad+\quad(\text{ii})\ \text{不是【已有局部筛／CRT／加法覆盖的重包装】}\ ✗}$$
+$$\qquad\text{否则 ✓：直接归入已有档案 ✓，不再消耗研究轮次 ✗}$$
 
 **⚠️ 边界（不得越界 ✓）**：仅排除**该有限构造弧线及其已测机制族** ✗；**不得**升级为"所有有限 $A$ 都不可能达到密度 1" ✗；**更不得**升级为对 RH／Goldbach 的否定 ✗（无逻辑连接 ✓）。**不再做 E229-$A^*$／E229-$Q$-scan 之类变体** ✗ —— 除非出现**独立的新机制** ✓。
 
