@@ -148,10 +148,12 @@ $$\textbf{Spec }\mathbb Z\ ✓：\boxed{\text{weight-1 host}\ \textbf{缺}}\qqua
 $$\boxed{R_{\rm residual}\ \text{是【当前审计体系下唯一未关闭的机制类别】}\ ✓}\qquad\textbf{而不是}\qquad\boxed{\text{"不存在其他机制"}\ ✗}$$
 $$\qquad\text{理由 ✓}：\text{穷举的是}\textbf{当前定义的 phase-source taxonomy}，\textbf{不是数学宇宙} ✗✓$$
 
-### F.5d 下一轮对象（✓ 若继续 ✓）
-$$\boxed{\text{搜索对象【直接提升】到：}\ \textbf{Frobenius substitute}\ +\ \textbf{weight-1 host}}$$
-$$\qquad\boxed{\text{第一道审计（不是"能不能产生 RH"✗）}：\text{在 char 0，是否存在一个}\textbf{不借助 }\zeta\text{-零点定义}\text{、又同时具有【算术膨胀 similitude ＋ 权 1 极化】的 canonical structure？}}$$
-$$\qquad\textbf{禁用 ✗}：\text{再沿 cross-scale／fixed-basis／transport 线搜索（`V138`–`V140` 已关闭 ✓）}$$
+### F.5d ⭐ 下一阶段准入闸 **C1–C5**（✓ 唐先生 2026-09-14 23:34 ✓ **冻结基线** ✓）
+$$\boxed{\text{唯一问题 ✓}：\textbf{C1–C5 在特征零是否存在非平凡实例？}}\ \Longrightarrow\ \text{不存在 ⟹ 更强结构性负结果 ✓；存在 ⟹ 才有资格问是否指向 RH ✓}$$
+$$\boxed{\begin{aligned}\mathrm{C1}&:\ \text{char-0 canonical arithmetic action}\\[1mm]\mathrm{C2}&:\ \text{similitude}\ \Phi^\dagger Q\Phi=\lambda Q\\[1mm]\mathrm{C3}&:\ \text{weight-1 normalization}\ |\lambda_{\rm eig}|=\sqrt{\lambda}\\[1mm]\mathrm{C4}&:\ \text{phase}\ \arg(\lambda_{\rm eig})\ \text{内生且非零点输入}\\[1mm]\mathrm{C5}&:\ \text{C1–C4 来自}\textbf{同一个 canonical object}，\textbf{非事后拼接}\end{aligned}}$$
+$$\qquad\textbf{映射 ✓}：\mathrm{C2}{+}\mathrm{C3}\ \text{＝ Gate B（模 ⟹ }\beta{=}\tfrac12\text{）};\quad\mathrm{C1}{+}\mathrm{C4}\ \text{＝ Gate A（辐角 ⟹ }\gamma\text{）};\quad\textbf{C5 ＝ 两门同一把钥匙} ✓$$
+$$\qquad\textbf{禁用 ✗}：\text{再沿 cross-scale／fixed-basis／transport 线搜索（`V138`–`V140` 已关闭 ✓）；}\textbf{不再造路线地图} ✓$$
+$$\boxed{\textbf{V128–V140：搜索边界已冻结} ✓\qquad \text{下一阶段 ＝ 新数学对象的构造 ＋ 逐条件审计} ✓}$$
 
 ## F.4 与 §E.4 的关系（✓）
 

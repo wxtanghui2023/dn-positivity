@@ -116,6 +116,21 @@ $$\textbf{而 Spec }\mathbb Z\ \text{（✓ 两个独立缺口 ✓）}：\boxed{
 $$\Longrightarrow\ \boxed{\textbf{关键判断 ✓}：\text{过去九轮看似不同的失败，被压缩成一个}\textbf{干净的结构性问题}：\text{RH 的复谱模型需要同时解决}\textbf{两个独立的结构缺口} ✓}$$
 $$\qquad\text{（}V140\ \textbf{不是又一条死路} ✓\ ——\ \text{它第一次把"为什么总掉回 }HP\text{／显式公式／}L\text{-值／有限 purity"}\text{压缩成上述双缺口 ✓）}$$
 
+## §5c ⭐⭐⭐ **下一阶段准入闸：C1–C5**（✓ 唐先生 2026-09-14 23:34 指示 ✓ **冻结基线** ✓）
+
+$$\boxed{\text{下一阶段唯一要回答的问题 ✓}：\textbf{C1–C5 在特征零是否存在非平凡实例？}}$$
+$$\qquad\Longrightarrow\ \text{不存在 ⟹ 得到一个}\textbf{比过去更强的结构性负结果} ✓;\qquad\text{存在 ⟹ 才有资格继续问它是否真的指向 RH} ✓$$
+
+$$\boxed{\begin{aligned}\mathrm{C1}&:\quad \text{char-0 canonical arithmetic action}\ ✓\\[1mm]\mathrm{C2}&:\quad \text{similitude}\ \Phi^\dagger Q\Phi=\lambda Q\ ✓\\[1mm]\mathrm{C3}&:\quad \text{weight-1 normalization}\ |\lambda_{\rm eig}|=\sqrt{\lambda}\ ✓\\[1mm]\mathrm{C4}&:\quad \text{phase}\ \arg(\lambda_{\rm eig})\ \text{内生且非零点输入}\ ✓\\[1mm]\mathrm{C5}&:\quad \text{C1–C4 必须来自}\textbf{同一个 canonical object}，\textbf{而非事后拼接}\ ✓\end{aligned}}$$
+
+$$\textbf{与双门图的对应 ✓}：\mathrm{C2}+\mathrm{C3}\ \text{＝ Gate B（模}\Rightarrow\beta=\tfrac12\text{ ✓）};\qquad\mathrm{C1}+\mathrm{C4}\ \text{＝ Gate A（辐角}\Rightarrow\gamma\text{ ✓）}$$
+$$\qquad\Longrightarrow\ \text{C1–C4 ＝ "两门同时关"；}\textbf{C5 ＝ "两门由【同一把钥匙】关"}\ ✓✓$$
+$$\textbf{⚠️ C5 为什么最重要 ✓}：\text{否则极易出现}\ \text{"Frobenius substitute}\ +\ \text{Hodge／polarization"}\ \text{两个}\textbf{半机制拼接}：视似得到函数域结构 ✓，实际仍未给出}\ \operatorname{Spec}\mathbb Z\ \text{的对象 ✗✓}$$
+$$\qquad\text{（函数域原型中二者确由【同一对象】绑定 ✓：}\Phi^\dagger Q\Phi=qQ\ \Longrightarrow\ |\alpha|=\sqrt q\ \text{且}\ \arg\alpha=\theta\ ✓\ ——\ \text{即 modulus ＋ phase 出自同一个 Frobenius eigenvalue ✓✓）}$$
+
+$$\boxed{\textbf{V128–V140：搜索边界已经冻结} ✓}$$
+$$\text{下一阶段 ＝ }\textbf{新数学对象的构造与逐条件审计} ✓\qquad\textbf{而不是旧机制的重新组合} ✗$$
+
 ## §6 边界（✓）
 
 ```

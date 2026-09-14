@@ -18,6 +18,8 @@ $$\boxed{\mathcal M_{\rm audited}=\text{当前机制库中所有已审计可用�
 $$\boxed{R_{\rm residual}=\text{尚未发现的 char-0、无限层、非循环、非有限性来源的 intrinsic polarization/purity mechanism}\ ⚠️}$$
 $$\qquad\boxed{\text{其"不存在"}\textbf{尚未成为定理}\ ✗（"尚未发现"\ \ne\ \varnothing\ ✓）}\qquad\boxed{\text{若继续}\textbf{需要新的数学输入}\ ✓\text{，而非继续重排现有机制}\ ✗}$$
 
+**🧊 冻结声明（唐先生 2026-09-14 23:34 ✓）**：$$\boxed{\textbf{V128–V140：搜索边界已经冻结}}\ ✓$$ 下一阶段 ＝ **新数学对象的构造 ＋ 逐条件审计（准入闸 C1–C5）** ✓，**不是旧机制的重新组合** ✗；不再造路线地图 ✓。准入闸：C1 char-0 canonical arithmetic action｜C2 similitude $\Phi^\dagger Q\Phi=\lambda Q$｜C3 weight-1 normalization $|\lambda_{\rm eig}|=\sqrt{\lambda}$｜C4 phase $\arg(\lambda_{\rm eig})$ 内生且非零点输入｜**C5 C1–C4 来自同一 canonical object，非事后拼接** ✓；唯一问题 ＝ **C1–C5 在特征零是否存在非平凡实例？** ✓
+
 **📁 归档入口 ✓**：`ARCHIVE-V128-V140-fourth-arrow-and-cross-scale-closure-audit.md`（**V128–V140 ＝ Fourth-Arrow ＋ Cross-scale Closure Audit** ✓；含三条不可越界标签 ＋ 定界审计（`V138`–`V140`）＋ 最终双门图 ＋ 档案纪律 ＋ 下一轮对象 ✓）｜`CLOSED-ROUTES-MAP` §F（含 **§F.5 总收束节点**：Fourth Arrow／Cross-scale ⟹ $R_{\rm residual}$ ✓）
 
 **三层结论（`V128`–`V140` 收束 ✓）**：
