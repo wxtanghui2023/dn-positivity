@@ -229,6 +229,17 @@ $$\textbf{候选形状 (D) 形变／连续性型 ⚠️（闭环为循环）}：
 $$\textbf{候选形状 (E) 传播／级联型 ⚠️（铰链未封，但产出判据 ⟹ 已封 ✗）}：\neg\text{RH}\Rightarrow\text{稠密}\Rightarrow\text{矛盾}\ ✓;\ \textbf{E47 铰链"一个离轴零点是否迫使离轴谱稠密"＝ 未封} ⚠️✓;\ \text{但 (E) 把 RH 改写为"离轴集不稠密"（与 RH 等价 ⟹ 新判据）} ⟹ \text{落 }E106\ \text{（判据空间 ＝ 正性 ∪ 求和 ⟹ 封闭）✗};\ \textbf{诚实标注}：\text{(E)＋无条件"几乎全部在线上"}\Rightarrow\text{RH}，\text{但该输入未证（已知仅正比例：Selberg／Conrey }\ge2/5\text{）} ⟹ \text{(E) 单独不充分} ✗$$
 $$\boxed{\text{闭合陈述 ✓}：\text{就"}\textbf{能承载零点谱}\text{"的形状而言，空间}\textbf{已闭合} ✓\ \text{（I／II／III／V／VI 五闭 ＋ (C)(D)(E) 闭）；两处缺口 ⚠️ ＝ 类 IV（元的，不承载谱）＋ §E.4 类表完整性（未证）}}$$
 
+### F.5l ⭐⭐⭐ **Well-foundedness / Infinite-Descent（第七类候选）**（`V150` ✓ 2026-09-15 00:22）—— **不成立** ✗
+
+$$\textbf{W1 ✗}：\textbf{WF}\subseteq\mathrm{II}\cup\mathrm{IV}\ ✓✓\ \text{—— Mostowski／rank 定理：}\text{良基}\iff\exists\ \text{秩} ⟹ \text{"无限下降"}\textbf{不是新逻辑原子};\ \text{秩值域二分}：$$
+$$\qquad\text{(i) }\mathbb N\text{-型／度量型（标准序（}T2\ \text{唯一）／}\log|n|／\omega(n)／\text{height）}\ \Longrightarrow\ \textbf{归 II} ✗;\qquad\text{(ii) 超限序数型 ⟹ 强度 ＝ }\textbf{证明论序数}\ \Longrightarrow\ \textbf{归 IV} ✓✓\（\text{Gentzen：}\mathrm{Con(PA)}\iff\varepsilon_0\ \text{良基} ✓）$$
+$$\textbf{W2 ✗}：\text{算术 rank 被 }\textbf{Π}_1\ \text{论证【整族】排除} ✓✓\ —— `E4` §2 逐字：\text{Robin 定理（RH}\iff\sigma(n)<e^\gamma n\log\log n\ \forall n>5040\text{，逐项可判定）}\Longrightarrow\text{RH 是 }\Pi_1\Longrightarrow\neg\text{RH}\ \text{有【有限见证】}n_0;$$
+$$\qquad\text{算术完备的可观察系统 ⟹ 对 }B_R\ge n_0\ \text{的层有限层 obstruction 本应非零 ⟹ 与"每层严格平坦"矛盾} ⟹ \textbf{必须对 Robin 型见证盲目} ⟹ \text{anomaly 必须由}\textbf{解析／上同调} \text{定义} ✗✓;$$
+$$\qquad\text{且候选 height 本身 ＝ 正定二次型 ⟹ 箱 8／12 ✗；Arakelov height ⟹ G9 }\textbf{尺度失败}（\text{height／}\log\ \text{非 }\sqrt X\text{）✗}$$
+$$\textbf{W3 ✗}：\neg\text{RH}\ \text{给【有限见证（非无限）】};\ \text{下降需 canonical 单边映射 ⟹ }\textbf{V147 T1 已封} ✗;\ \text{FE 是 involution 非 descent，转 descent 即 selection ⟹ V148 已封} ✗$$
+$$\boxed{\text{故}\textbf{无第七类} ✓\ \text{（WF 被 II}\cup\text{IV 吸收）};\ \textbf{但不证明类表完整} ✗\（\text{§E.4 仍开} ⚠️）}$$
+$$\qquad\textbf{⭐ 本行收获 ✓}：\text{Π}_1\ \text{必要条件（对 Robin 型见证盲目 ⟹ 必须解析／上同调定义）是 }§E.4\ \text{类表的}\textbf{新增覆盖力证据} ✓（仍非完整性证明 ✗）}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
