@@ -149,6 +149,11 @@ $$\qquad\text{否则 ✓：直接归入已有档案 ✓，不再消耗研究轮�
 | **延拓代价的三尺度非结合缺陷 $\Delta_{X,Y,Z}$** | **＝ `R_B-nonassoc`**（原文用 $\Omega(X,Y,Z)=T_{Y,Z}T_{X,Y}-T_{X,Z}\neq0$ ✓） | **inactive ✗（已封 ✓）；两步判死与您所列一致 ✓** | 崩塌清单逐字 ✓：group action→path-independent｜**coboundary→可消除**（＝您第一步 telescoping ✓）｜invertible→groupoid｜Hecke→结合｜Gauss→类群结合｜代表元 ambiguity→quotient｜generic semigroup/Markov→**无内生算术 $\sqrt X$**；＋ `E170`：**乘积型解永远可提升 ⟹ 有限阶段永不产生障碍**（＝您第二步“可加则 $\Delta{=}0$”✓）；＋ `DISCOVERY-R3`（跨尺度记忆）**裁决 $D_1{=}0$** ✓（“未来不被过去决定”≠“不可压缩记忆” ✓） | `SCALE-DYNAMICS-FINAL-BOUNDARY-MAP` §2.B；`E170`；`DISCOVERY-R3-scale-memory`；`iteration-17-20` | 结构性 |
 
 $$\boxed{\text{四条入口 → 全部落在已封位置；无新线 ✓（按唐先生指示：不留新编号 ✓）}}$$
+
+| 入口（唐先生提出） | 图中位置 | 判定 | 依据（可证片段 ✓） | 指针 | 等级 |
+|:--|:--|:--|:--|:--|:--|
+| **零集上的“操作代数交换缺陷” $[D_h,E_\tau]_Z$（平移 $\times$ 缩放）** | ≡ `AM` 仿射群 ＋ `AOB5` $(+,\times,\mid)$ 事件缺陷 | **已封 ✗ —— 且缺陷已被算出【精确为零】✓✓** | ① `AM-affine-final-verdict`：对象即 $A_m(x){=}x{+}m$、$M_p(x){=}px$；唯一关系 $M_pA_1{=}A_1^{\,p}M_p$ **由唐先生证明、助手核验**：prime-label 自同构 $\Rightarrow\sigma(p){=}p\Rightarrow G_N{=}\{1\}$（**定理式关闭，非预期** ✓）；② `AOB5` TEST B（312/312 **精确集合恒等式**）：$(S+a)\cdot m=(S\cdot m)+(ma)$ ⟹ **两种延拓顺序精确相关 ⟹ 缺陷 $\equiv0$ ✓✓**（即只剩平移—缩放的仿射群关系）；③ `AOB5` TEST A（4000/4000）：CRT 无高阶 obstruction ⟹ 兼容复形是 **flag complex** ⟹ 无三体／四体新 obstruction（“CRT 因果性是真的，曲率不是真的” ✓） | `AM-affine-final-verdict`；`AOB5-internal-event-defect`；`AOB1-tau-source-audit`；`AOB2-scale-dynamics-phase-sources` | 定理级 |
+| （附带）相位源／$\tau$ | `AOB1`／`AOB2` | **已封 ✗** | $\tau$ 的四类 canonical 源**穷举**（互反符号／holonomy／2-上闭链／上同调本征值）⟹ 前三种落 L-函数 ✗；决定性：函数域里 **modulus 与 phase 是同一个复本征值的两半**（$\alpha_i{=}\sqrt q\,e^{i\theta_i}$ ⟹ $s{=}\tfrac12{+}i\theta_i/\log q$）⟹ “寻找 $\tau$”关闭 ✓；“极化后剩余自由度”＝**period domain** ⟹ char-0 对应物卡在 **purity／Hodge 正性＝有限性** ✗（与 `E100`／L2 同位置 ✓） | `AOB1`；`AOB2` | 结构性 |
 $$\boxed{\textbf{残余收敛（重要观察 ✓）}：\text{所有活的残余都落到同一簇}＝\{u_1\text{类表完备性},\ \text{类 VI 范畴不变量},\ \textbf{SW6 规范对合（“尚未证明为空”✓）},\ \Theta/\text{动力学吸引子}\}}$$
 $$\qquad\text{其中 `SCALE-DYNAMICS` 档自己加粗要求保留的一句 ✓：}\boxed{\textbf{SW6 尚未证明为空}}\ ✓\ ——\ \text{即跨尺度线的残余与判据空间线的残余是同一簇 ✓}$$
 
