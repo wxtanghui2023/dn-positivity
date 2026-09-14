@@ -50,3 +50,4 @@ E141	main	E141-Q4-independence-audit	2026-09-14T11:34:00+08:00
 E142	main	E142-Q3-definitional-and-implication-audit	2026-09-14T11:38:00+08:00
 E143	main	E143-Q5-independence-decomposition	2026-09-14T11:42:00+08:00
 E144	main	E144-Q6-final-independence-test	2026-09-14T11:44:00+08:00
+E145	main	E145-E141-E144-minimal-spec-closure	2026-09-14T11:46:00+08:00
