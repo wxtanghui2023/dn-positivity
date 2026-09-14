@@ -83,3 +83,30 @@ $$\text{若存在}\ p<2\ \Longrightarrow\ \text{对【一切】}\varepsilon\ \te
    $$\text{突破必要条件：判据的 }n_0(\gamma,\varepsilon)\ \text{须按}\ \gamma^{p}/\varepsilon^{q},\ p<2$$
    （**仅看 $h(n)$ 不够** ✗ —— 必须看**对 $\varepsilon$ 的敏感度** ✓）
 ```
+
+
+---
+
+# 勘误（2026-09-14，依 E125 裁决 ✓）
+
+【⚠️ 勘误 · $p$ 的方向 ✓】本档 §0 ③（行 17–18）、§3（行 50、52）、§5 更新 2（行 82–84）**三处**把 K1 的
+尖锐形式写作 "**$p<2$**（对近线零点更敏感）⟹ 对一切 $\varepsilon$ 都优于 $T^2$（律 I 的边界被打破 ⟹ 真突破）" ✗
+—— **该方向有误** ✗。按项目规范归一（`E47` §一 逐字：$h(n)\asymp n^{\alpha}$；`E124` §⑥ 逐字：$n_0\asymp\gamma^{p}\Rightarrow\alpha=1/p$，
+可达 $n\lesssim T_0^{1/\alpha}=T_0^{\,p}$）：
+
+   · $p=2$（本档 §1 自身机制：$n_0=\gamma^{2}\log M/\varepsilon$） ⟹ $\alpha=\tfrac12$ ⟹ 可达 $=T_0^{2}$（**$T^2$ 律基线** ✓）；
+   · **$p<2$ ⟹ $\alpha>\tfrac12$ ⟹ 可达 $<T_0^{2}$** ⟹ **比 $T^2$ 更差** ✗（非"更优"）；
+   · **$p>2$ ⟹ $\alpha<\tfrac12$ ⟹ 可达 $>T_0^{2}$** ⟹ **真突破** ✓。
+
+【更正 ✓】故 §3 的尖锐形式应表述为：
+   $$\boxed{\text{找判据，其 } n_0(\gamma,\varepsilon)\ \text{按}\ \gamma^{p}/\varepsilon^{q}\ \text{且}\ \boldsymbol{p>2}\ \text{（等价 }\alpha<\tfrac12\text{）}\ \Longrightarrow\ \text{可达}>\ T^{2}}$$
+   并删去/改写 "对近线零点更敏感 ⟹ 优于 $T^2$" 的**因果**表述 ✗。
+
+【量纲澄清 ✓】"对**近线**零点（$\varepsilon\ll1$）更敏感"由 **$\varepsilon$ 的幂 $q$** 控制（见本档 §2：
+   $\varepsilon\ll1$ 时 $n_0=\gamma^{2}/\varepsilon\cdot\log M$ 远大于 $\gamma^{2}$），**与 $p$（$\gamma$ 的幂）无关** ⚠️；
+   本档此前把敏感度挂在 $p$ 上属**量纲错位** ✗。同时，在可达意义上 $n_0$ **更小 = 可达更小 = 更差**，
+   与"更敏感"并非同向收益 —— 二者不可互换 ✗。
+
+【边界 ✓】本勘误**不动**本档核心机制（§1 的 $n_0=\gamma^{2}\log M/\varepsilon$ ⟹ $T^2$ 律 ✓）与
+   §2 的"仅消费验证高度 ⟹ $T^2$ 被迫"结论 ✓ —— 只更正 §0③／§3／§5 更新 2 的"$p<2$／优于 $T^2$"**方向**表述 ✗。
+【纪律 ✓】依 T10：**原文保留 ✓、以勘误留档 ✓、不静默改写 ✗**；依据档 = `docs/E125-archive-tension-resolution.md` ✓。
