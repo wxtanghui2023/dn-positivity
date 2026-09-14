@@ -122,6 +122,7 @@ $$\text{提案形状 ✓}：\text{Arithmetic}\to\text{irreversible compatibility
 $$\textbf{已注册三处 ✓}：\text{`TWO-SCALE-compatibility-construction-material`（同形状 ＋ 同排除表 ＋ 同自警 ✓）；`R-CS-PRE1`（}X0\text{：}T\ne\text{group cocycle}\ \wedge\ T\ne\text{coboundary}\ \textbf{逐字相同 ✓}）；`SCALE-DYNAMICS`（}\Omega(X,Y,Z)=T_{Y,Z}T_{X,Y}-T_{X,Z}\text{ ＝ }\mathcal C\ ✓）}$$
 $$\textbf{已测试一次 ✓}：\text{`addmul-defect-test-death`：加法–乘法 defect 谱测试 ⟹ }\lambda_{\min}\text{ 与 }\gamma\text{ 完全无关 ✗ —— 原因 ＝ 【定理 ✓】：}D=|D|U(\gamma)\text{ 酉共轭保谱 ⟹ 对角 }D\text{ 乘两边的构造其谱必与 }\gamma\text{ 无关 ✗✓}$$
 $$\textbf{类级状态 ✓}：R_{B4}\ \text{inactive ✗（七项崩塌清单 ✓）；}R_{A\text{-}ind}\ \text{inactive（在本轮规定的 coarse-graining 类中 ✓）}\ ——\ \textbf{但档案自标"}\ne\text{ 所有可能 ✗"，并加粗保留 }\boxed{\textbf{SW6 尚未证明为空}}\ ✓$$
+$$\textbf{【}V139\text{ 更新 ✓】材料 A ⟹ 已审 ✓ 退回箱 8；材料 B ⟹ 已审 ✓ 四层塌缩（第 0 层 }\sqrt{|D_K|}\text{ 按定义 ＝ trace pairing Gram 行列式平方根 ⟹ 定义性地 }D_1\text{；第 2 层 }\tfrac12\text{ 非来自维数（应为 }1/d\text{）而来自二次性 ⟹ 违反自身约束 C4 ✗；第 4 层 Brauer–Siegel 下界 ＝ GRH 强度 ⟹ 循环 ✗）⟹ \textbf{三处未执行项中两处已关闭 ✗}，仅剩【修复方向（固定基缺陷）】⛔$$
 $$\boxed{\textbf{三处未执行 ⛔}}（各附前置问 ✓）：\text{① 材料 A（不变因子双尺度：指数 }N\text{ 的子格／二次型／理想类）⟹ 前置问：是否退回箱 8／12？}\ \text{② 材料 B（数域余体积 }\sqrt{|D|}\text{ vs 类数 }h\text{）⟹ 前置问：} \sqrt{|D|}\text{ 是【推出】的还是【输入】的？}\ \text{③ 修复方向（固定基缺陷／非对角 transport）⟹ 前置问：能否用【纯算术】给出该相位而不用零点？}}$$
 
 ## F.4 与 §E.4 的关系（✓）
