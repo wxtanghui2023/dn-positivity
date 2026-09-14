@@ -198,6 +198,16 @@ $$\qquad\textbf{反例 ✓}：S=\frac{w-a}{w+a}\（a\ \text{实}）：S(-w)=1/S(
 $$\qquad\text{inner-outer 循环 ✓；Hardy 类障碍 ✓}\ \Longrightarrow\ \text{判词逐字："与 }\beta\text{-wall }\textbf{同深度};\ \text{global factorization rigidity 未出现"}\ ✓$$
 $$\Longrightarrow\ \boxed{\textbf{DEAD} ✓}\qquad\textbf{残余（与 `V145` 一致 ✓）}：\text{非交换跨 }N\ \text{兼容律 ＝ }\textbf{SW6}\ ⛔\ \text{（未证明为空 ✓）}\ +\ \text{char-0 canonical polarization ⛔}$$
 
+### F.5i ⭐⭐ **Arithmetic One-Sidedness（序路线）**（`V147` ✓ 2026-09-15 00:02）—— **不存在** ✗
+
+$$\text{提案 ✓}：\text{SW6 ＝ involution ＋ odd defect ＋ }\textbf{one-sided arithmetic law}（\text{非二次正定 ✓}）;\ \text{用 }\iota\text{-反转型序 ⟹ 不动点 ⟹ }\Re\rho=\tfrac12\ ✓$$
+$$\boxed{\textbf{T1（本档 ✓）}\ \text{全预序 ＋ 保序}\ \iota\ \Longrightarrow\ x\sim\iota(x)\ \forall x\ \Longrightarrow\ \textbf{不存在严格单边律}\ ✗;\ \text{若为全}\textbf{序}\ \Longrightarrow\ \iota=\mathrm{id}\ \text{与非平凡性矛盾} ✗✓}$$
+$$\qquad\text{（注 ✓：原论证需【保序】而非"反转"，且需【全序性】；修正后结论更强 ✓）}$$
+$$\boxed{\textbf{T2（经典 ✓）}\ \text{与}\ +,\times\ \text{兼容的}\ \mathbb Z\ \text{序}\ \textbf{唯一 ＝ 标准序}（1\in P\Rightarrow n\in P;\ k<0\ \wedge\ k\in P\Rightarrow \pm k^2\in P\Rightarrow k^2=0\ ✗）\ \Longrightarrow\ \text{看不到零点} ✗✓}$$
+$$\boxed{\textbf{类 VI（档案 ✓）}\ \text{Presburger 可定义集 ＝ 最终周期 ⟹ 回到 congruence ⟹ }\textbf{箱 1} ✗\ \text{（可定义型结构全封 ✓）}}$$
+$$\qquad\textbf{配套 ✓}：\text{箱 11（valuation／divisor ✗）＋ 箱 10（incidence／加法组合 ✗）⟹ 您 §8 三分（Archimedean／valuation／divisibility）三支皆封 ✓}$$
+$$\Longrightarrow\ \boxed{\text{SW6}\ \textbf{≠ 序型} ✓（\text{新增排除 ✓）};\ \text{SW6 形态压缩为"}\text{既非 involution-only ✗（}p41\text{ 消零定理）／非 unitary 分解 ✗／非 order／preorder ✗（T1）／非 }+,\times\text{-兼容序 ✗（T2）／非可定义型 ✗（类 VI）／非正定型 ✗（箱 12）"},\ \text{而该剩余}\textbf{仍未被证明非空} ⛔}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
