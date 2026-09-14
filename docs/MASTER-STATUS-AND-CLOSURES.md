@@ -230,7 +230,7 @@ $$
 |:--|:--|
 | 标量统计｜正定二次型｜谱算子｜**动力系统**｜算术局部结构｜**无限延拓**｜纯组合加法 | **已封 ✗**（依次 `V124`/`V125`｜L3+G13+W7｜L1+N0｜**`V127`**｜`E171`–`E176`｜**`V126`**｜`E180`–`E228` 🔒🧰） |
 | **范畴／几何** | ⚠️ **半封（关而未证 ✗）**：类 VI 已关非定理；**SW6「尚未证明为空」** ✓ |
-| **非线性全局约束** | ⚠️ **子类已开（`V129` ✓）**：$O5$ 最硬子类 → **第一关（$\Delta_x\Delta_y\Delta_z\Phi\not\equiv0$ ＝ 经典 ANOVA／Hoeffding 判据 ✓）通过但不封口 ✗；第二关：纯三体不归约 ✓ 但指示／矩族塌缩（`E176`：$r\in\{0,1\}\Rightarrow r^k{=}r$ ✓）＋ 一般 $k$-点相关不被显式公式确定（Montgomery 型猜想 ✗）⟹ 障碍 ＝ **不可算** ✗；第三关：真三体装置已知清单（synergy／Massey–$A_\infty$／det／cumulant／associator／coboundary／inclusion–exclusion／correlation）**全落禁列** ✗ ⟹ **candidate failure ⛔，非类级 NO-GO ✓**；孤立残量 ＝ **可算的 $k$-点型对象**；$O3^\star$ 仍未审计 ⛔ |
+| **非线性全局约束** | ⚠️ **子类已开（`V129` ✓）**：$O5$ 最硬子类 → **第一关（$\Delta_x\Delta_y\Delta_z\Phi\not\equiv0$ ＝ 经典 ANOVA／Hoeffding 判据 ✓）通过但不封口 ✗；第二关：纯三体不归约 ✓ 但指示／矩族塌缩（`E176`：$r\in\{0,1\}\Rightarrow r^k{=}r$ ✓）＋ 一般 $k$-点相关不被显式公式确定（Montgomery 型猜想 ✗）⟹ 障碍 ＝ **不可算** ✗；第三关：真三体装置已知清单（synergy／Massey–$A_\infty$／det／cumulant／associator／coboundary／inclusion–exclusion／correlation）**全落禁列** ✗ ⟹ **candidate failure ⛔，非类级 NO-GO ✓**；孤立残量 ＝ **可算的 $k$-点型对象** ⟹ **残量已定位（`V130` ✓）**：**FE 湮灭定理（核版 ✓）** $\sum_{\rho,\rho'}K=\sum K^{\sigma}$（$K^{\sigma}{=}\frac12[K(\rho,\rho'){+}K(1{-}\rho,\rho')]$）⟹ **$\sigma$-奇核贡献恒零** ⟹ **任何 $k$-点核只产 $\sigma$-偶 ∧ $\tau$-偶（$|\delta|$ 型）信息 ⟹ 只能【单侧】⟹ 与 `E148`／`V125`／`V123` 合流 ✗**；$k{=}1$ 特例即 `V124` 引理 A（$M_{2m+1}\equiv0$ ✓）；第二刀（对相关型非可分离 ✓）**存在但 β-盲** ✗（`E117`／`E121` 已关 ✓）；未封形态 ＝ 可算非可分离 FE-偶核（**上限 ＝ 单侧** ✗）；$O3^\star$ 仍未审计 ⛔ |
 | 随机／统计 | **T4 排除 ✗**（`E103` Lagarias–Rodgers 文献定理 ✓） |
 
 **三逻辑缝 → 档案位置 ✓**：**A 多值／关系／非 Hausdorff ⟹ $O2$ Correspondence（未审计 ⛔）**｜**B 非线性全局约束 $\mathcal C(Z)=0$ ⟹ $O5$ ＋ $O3^\star$（未审计 ⛔）**｜**C 非显式公式的算术–几何桥 ⟹ `V126` 适用面限制 ✓（只封 Euler→trace／流 一条）＋ $O2$／$O4$ ⚠️**
