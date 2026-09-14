@@ -177,6 +177,15 @@ $$\boxed{\textbf{元解释 ✓✓✓}：\text{为什么所有 Frobenius／几何
 $$\qquad\Longrightarrow\ \textbf{C6（＝"延拓的算术替代物"，`thought-experiment-generator-M` 第 5 步逐字 ✓）的死因 ＝ 层结构} ✗：\text{motive 层}\textbf{不可能};\ \text{Archimedean 层}\textbf{已知仅自伴 ⟹ }HP\ \text{循环} ✗（`iteration-2-5`：}\textbf{机制真空} ✓）$$
 $$\qquad\textbf{同时已封 ✓}：\text{Sato–Tate／Hecke 局部统计 ⟹ }\textbf{L3 死}（`dstar-ec-death` ✓；`RESEARCH-CONSTITUTION` N15 ✓）；\text{Gaussian／CM 同源模+相位 ⟹ }\textbf{箱 8} ✓$$
 
+### F.5g ⭐ **Archimedean 边界对象：三关审计**（`V145` ✓ 2026-09-14 23:52）
+
+$$\text{提案 ✓}：\text{找"Archimedean arithmetic boundary object"}\ \mathcal B_\infty\ \text{＋ 边界耦合}\ \mathcal E:\mathcal A_{\rm fin}\to\mathcal B_\infty\ ✓,\ \text{使}\ \Lambda(s)\sim\det_{\rm ren}(I-\mathcal E(s))\ ✓（\text{零点 ＝ compatibility failure}\ ✓）$$
+$$\boxed{Gate\ 1\ \textbf{通过 ✓ 且经典 ✓}}：\pi^{-s/2}\Gamma(s/2)\ \text{可由}\ \theta(1/t)=\sqrt t\,\theta(t)\（\mathbb Z\ \text{泊松自对偶}\ ✓）\ \text{＋ Mellin ＋ Tate 局部积分生成}\ ✓\ \text{—— 形状由三事实决定（Gaussian 自对偶}\ \widehat{e^{-\pi x^2}}=e^{-\pi x^2}\ ✓;\ \mathbb Z\ \text{自对偶格}\ ✓;\ \text{局部 ζ 积分}\ ✓）,\ \textbf{不碰 }\zeta,\Lambda,\rho,\gamma\ ✓$$
+$$\boxed{Gate\ 2\ \textbf{失败 ✗}}：\text{档案逐字（`iteration-2-5` 第 2 轮 ✓）：}\zeta\ \text{站在}\textbf{乘法离散}＋\textbf{加法离散} \text{之间；}\textbf{加法侧（}\theta\text{／泊松）通回 }\zeta \Longrightarrow \text{同一延拓对象 ⟹ 非独立 ⟹ 循环}\ ✗✓$$
+$$\boxed{Gate\ 3\ \textbf{结构性失败 ✗}}：\text{FE 是}\textbf{对称性}（\rho\leftrightarrow1-\rho\ ✓）；\text{对称性}\textbf{不强制固定轨迹}、\text{允许离轴对}\ ✗（\text{M-公理表：FE／duality}\ \textbf{安全}\ ✓）$$
+$$\boxed{\text{⭐ 关键命中 ✓}：\det_{\rm ren}(I-\mathcal E(s))\ \textbf{＝ Deninger 纲领};\ \text{档案（`V105` 第 6 行 ✓）判：有 canonical 生成元}\ ✓\ \text{但}\textbf{缺 canonical polarization（正定相交形式）}\ ✗\ +\ \textbf{局部 similitude 只看得见 }\sigma>1\ \text{的 Euler 窗口（算术断裂）⟹ 看不到零点}\ ✗;\ \text{命中箱 6／12；状态 }\textbf{CLOSED*};\ \text{配套 `connes-2026-full-audit`（}\text{未产生独立于 Weil 显式公式的 }\beta\text{-障碍}\ ✓\text{）}$$
+$$\qquad\Longrightarrow\ \text{三关结论 ＝ }\textbf{有限／无限层断裂 ＋ 有完成函数机制但无 RH 强制力} \text{两者同时成立}\ ✓;\ \text{并核对：}J\text{-unitary}\not\Rightarrow|\lambda|=1\ ✗（\text{不定度量下 }\lambda=r,\lambda'=r^{-1}\ ✓），\text{与 `AOB4` §1 的 E/D/Z}\perp\text{P 同向}\ ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
