@@ -11,14 +11,14 @@ LEDGER="$ROOT/docs/ID-CLAIMS.tsv"
 STREAM="${1:?usage: id_claim.sh <stream> <slug>}"
 SLUG="${2:?usage: id_claim.sh <stream> <slug>}"
 case "$STREAM" in
-  main)  BASE=100 ;;
-  audit) BASE=300 ;;
-  spare) BASE=500 ;;
+  main)  PREFIX=E; BASE=100 ;;   # 主线：E1xx
+  audit) PREFIX=V; BASE=100 ;;   # 审计线（小灵）：V1xx（与现有前缀零重叠 ✓）
+  spare) PREFIX=Z; BASE=100 ;;   # 备用：Z1xx
   *) echo "unknown stream: $STREAM (main|audit|spare)" >&2; exit 2 ;;
 esac
 mkdir -p "$ROOT/docs/.idclaims"
 for n in $(seq $((BASE+1)) $((BASE+99))); do
-  id="E$n"
+  id="${PREFIX}$n"
   [ -e "$ROOT/docs/.idclaims/$id.lock" ] && continue
   if compgen -G "$ROOT/docs/$id-*" >/dev/null 2>&1; then continue; fi
   if compgen -G "$ROOT/scripts/${id}_*" >/dev/null 2>&1; then continue; fi
