@@ -1,5 +1,18 @@
 # E131 · N31 形式化：把「char-0 无条件 √-尺度正性 ⟹ 来源可归入【有限性】」写成可证／可反驳的精确命题
 
+---
+
+# 勘误：迁号（编号领用制 ✓ 2026-09-14）
+
+```
+【⚠️ 迁号 ✓】本档原编号 **E131** ⟹ 新编号 **V107** ✓（`docs/ID-ALLOCATION-PROTOCOL.md` ✓）
+   原因 ✓：**跨会话编号撞车**（唐先生 2026-09-14："编号撞车问题必须解决，不然会覆盖不该覆盖的文本和内容"）；
+   本会话（审计线）**整体迁出 E 号段** ⟹ 改用 **V 系列**（`V*` 与现有任何编号前缀**零重叠** ⟹ 通配不会误命中 ✓）
+   按 **T10**：原文保留 ✓、以勘误留档 ✓、**不静默改写** ✗；本档**内容/数字/证据等级不变** ✓
+   历史别名 ✓：`E131` ⟹ `V107`（引用旧号须转写 ✓）
+```
+
+
 **日期**：2026-09-14 ｜ **会话号段**：E130–E149（登记册 §八 ✓）｜ **本档编号**：**E131** ✓
 **对象**：**N31**（宪法 §2.4／附录 N-表；总册 G13／L3 现状）｜ **口径**：⚠️ 凡涉 L 编号**均显式标注总册／宪法** ✓
 **纪律** ✓：**不写代码** ✗｜**只新建本档 1 份** ✓（未改任何既有文件 ✗）｜只用**显式路径** ＋ `docs/` 内**定向** grep/sed ✓（**未做全盘 find/grep** ✗，未触 `fn_backup`/`fupeng`/`github`/`quant-system`/`.git` ✗）｜**禁整篇读大文件**（一律 `grep -n` → `sed` 取片段 ✓）｜**不预设 RH** ✓｜**不循环** ✓｜**不发明术语**（每关键定义附**档案逐字出处**或显式标 **【本方拟定义】** ✓）｜边推边落盘 ✓
@@ -45,7 +58,7 @@
 > `· 本关结论是"未找到已知来源"，【不是】不存在定理`
 > `· 有限/全局二分的严格化（"一切无条件 √-尺度正性都源于有限性"）是一个【可论证但尚未形式化】的结构性陈述，需单独证明`
 
-**【档 I】`docs/E130-L3-Q3-independent-sqrt-positivity-audit.md` §① 结论一 ＋ §⑨-u2** ✓：
+**【档 I】`docs/V106-L3-Q3-independent-sqrt-positivity-audit.md` §① 结论一 ＋ §⑨-u2** ✓：
 > `char 0 中一切无条件 √-尺度正性，都来自【有限性】……无已知的【独立】全局 √-尺度正性`
 > `【u2 门槛级未证 ⚠️】"char 0 一切无条件 √-正性都源于有限性"（N31／C6-C）【尚未形式化为定理】`
 
@@ -68,7 +81,7 @@
 ### ①-5 编号核实
 - **命令** ✓：`cd dn-project/docs && ls | grep '^E131'` ⟹ **无输出，exit=1** ⟹ **E131 未被占用** ✓ ⟹ **本档用 E131** ✓（未顺延）。
 - **号段** ✓：`EXPLORATION-POINTS-REGISTER.md` §八 第 330 行逐字 `预留：本会话（小灵）E130–E149` ✓ ⟹ E131 ∈ 号段 ✓。
-- ⚠️ **本号段内已有双占（登记，不代改 ✗）**：`E130-L3-Q3-independent-sqrt-positivity-audit.md` 与 **`E130-identity-rigorous.md`** 同占 **E130** ⟹ 号段内亦出现碰撞，建议唐先生裁定统一口径（T10 勘误 ✓）。
+- ⚠️ **本号段内已有双占（登记，不代改 ✗）**：`V106-L3-Q3-independent-sqrt-positivity-audit.md` 与 **`E130-identity-rigorous.md`** 同占 **E130** ⟹ 号段内亦出现碰撞，建议唐先生裁定统一口径（T10 勘误 ✓）。
 
 ---
 
@@ -134,7 +147,7 @@
 **②-3-b**：由 D2 得 N31 **天然含两个半**：**α 半**（正面分类：「此类 ⇒ 来源有限」）＋ **β 半**（否定外推：「有限来源 ⇒ 不可全局化」）✓ —— 二者**可分别形式化、分别死亡** ✓（§⑤ 据此分线）。
 **②-3-c** ⚠️ **Selberg 张力点（最危险处，必须写死 ✓）**：
 ```
-`E127-L2-carrier-migration-survey.md` §④ 逐字："族1 算术群+测地流 是**唯一"无条件 √-刚性"真实实例**
+`V105-L2-carrier-migration-survey.md` §④ 逐字："族1 算术群+测地流 是**唯一"无条件 √-刚性"真实实例**
    （−Δ 自伴 ⟹ Selberg 的 RH 是无条件定理 ✓），但 ζ 恰落在它管不到的散射半" ✓
 ⟹ 若把"√-尺度正性"宽读为"任何无条件 √-刚性"，则 **Selberg 谱正性【直接反驳】N31** ✗！
 ⟹ **故 D1-(2)/(3) 的防火墙不可省**：N31 的类只含"**输出 = 对角量之 √**"的正性；
@@ -406,7 +419,7 @@ T6 **张力点搜寻** ✓：主动找"**会不会有反例**"——**Selberg（
   MASTER-NOGO-AND-LIVE-PATHS.md（G8/G9/G13/G14/G15 行 79–86｜L1/L2/L3 行 155–186｜勘误 行 210–237）
   EXPLORATION-POINTS-REGISTER.md（§六/§七/§八 行 268–349｜E124 行 277｜E127 行 277｜E130 行 322/337）
   docs/gate13-quartet-Q3-audit.md｜docs/gate14-square-root-positivity-escape-audit.md｜docs/gate15-diagonal-origin-audit.md
-  docs/E130-L3-Q3-independent-sqrt-positivity-audit.md｜docs/L1-nonselfadjoint-spectral-rigidity-audit.md｜docs/R-A1-de-branges-audit.md｜docs/E124-K1-conversion-probe.md｜docs/E127-L2-carrier-migration-survey.md
+  docs/V106-L3-Q3-independent-sqrt-positivity-audit.md｜docs/L1-nonselfadjoint-spectral-rigidity-audit.md｜docs/R-A1-de-branges-audit.md｜docs/V102-K1-conversion-probe.md｜docs/V105-L2-carrier-migration-survey.md
 提交链：E130（L3 0/15）→ 本档 E131（N31 形式化：可写命题；升级能力＝仅总册 L3 条件性 ✓）
 定位：**纸面/档案级 ✓**；未改既有文件 ✓（仅新建本档 ✓）；**待小灵/唐先生抽验** ⚠️。
 ```

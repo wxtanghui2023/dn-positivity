@@ -194,5 +194,5 @@ $$\boxed{\textbf{把 }h(n)\text{ 从 }\sqrt n\text{ 改为 }n\ \Longrightarrow\ 
 【结案 ✓】**K7 = 已结案（装置不适用）** ✓✓，且其**实际目标已由他档达成** ✓：
    B5 的实质裁决"**未建立其主张**"已由 `E39-AUDIT-v2-complete.md`／`E39b-B5-3-ising-fulltext-audit.md` 给出
    （三条理由：C1 循环 ＝ N0／C2 等价性未证／C3 缺正性前提 ✓），**不依赖 TP₅** ✓ ⟹ **不重开** ✓
-【纪律 ✓】T10：原文保留 ✓、勘误留档 ✓、不静默改写 ✗；依据档 = `docs/E126-K7-B5-positivity-audit.md` ✓
+【纪律 ✓】T10：原文保留 ✓、勘误留档 ✓、不静默改写 ✗；依据档 = `docs/V104-K7-B5-positivity-audit.md` ✓
 ```

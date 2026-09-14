@@ -109,4 +109,4 @@ $$\text{若存在}\ p<2\ \Longrightarrow\ \text{对【一切】}\varepsilon\ \te
 
 【边界 ✓】本勘误**不动**本档核心机制（§1 的 $n_0=\gamma^{2}\log M/\varepsilon$ ⟹ $T^2$ 律 ✓）与
    §2 的"仅消费验证高度 ⟹ $T^2$ 被迫"结论 ✓ —— 只更正 §0③／§3／§5 更新 2 的"$p<2$／优于 $T^2$"**方向**表述 ✗。
-【纪律 ✓】依 T10：**原文保留 ✓、以勘误留档 ✓、不静默改写 ✗**；依据档 = `docs/E125-archive-tension-resolution.md` ✓。
+【纪律 ✓】依 T10：**原文保留 ✓、以勘误留档 ✓、不静默改写 ✗**；依据档 = `docs/V103-archive-tension-resolution.md` ✓。
