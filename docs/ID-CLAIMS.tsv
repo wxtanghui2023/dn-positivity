@@ -38,3 +38,5 @@ V108	audit	e102-target1-canonical-identification	2026-09-14T10:42:36+08:00
 V109	audit	coverage-argument-charter	2026-09-14T10:48:42+08:00
 V110	audit	r1-scan-and-audit-b	2026-09-14T10:52:08+08:00
 V111	audit	TP5-O3-test	2026-09-14T10:57:13
+V112	audit	input-substitution	2026-09-14T10:57:52+08:00
+E123	main	P2-and-lambda	2026-09-14T11:03:43+08:00

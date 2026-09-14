@@ -1,0 +1,25 @@
+E137 -- psi->vartheta (P_2) terms and the lambda = h/Y scan
+N = 1000000.0   T = 1000.0   Y = 1000.0   window = [1000000.0, 1001000.0]
+primes up to 1003 : 168 (largest 997)
+
+(A) P_2 statistics over the window at h = Y = T
+    P_2: max=0.000000  mean=0.000000  rms=0.000000  nonzero fraction=0.0000
+    expected magnitude when present ~ 0.5 log N = 6.9078
+
+(B) normalised terms (each should be o(1))
+    (1/(hN)) int P_2^2 dy             = 0.000000e+00
+    F rms                             = 3.810099e-02
+    (2/(h sqrtN)) Re int F conj(P_2)  = 0.000000e+00
+    Q = (1/Y) int |F|^2               = 1.451686e-03
+
+(C) lambda = h/Y scan: Q(lambda) = (1/Y) int |F|^2 with that h
+    lambda = 0.5 :  Q = 4.159253e-04   rms|F| = 2.039425e-02
+    lambda = 1.0 :  Q = 1.451686e-03   rms|F| = 3.810099e-02
+    lambda = 2.0 :  Q = 5.130106e-03   rms|F| = 7.162476e-02
+    lambda = 3.0 :  Q = 9.575399e-03   rms|F| = 9.785397e-02
+
+peak RSS = 50.7 MB
+
+READING
+  both P_2 terms << 1  -> the psi->vartheta conversion is NOT the break point.
+  Q(lambda) at lambda = 2 is the quantity Legendre actually needs to be o(1).
