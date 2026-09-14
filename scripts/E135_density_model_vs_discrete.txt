@@ -1,0 +1,19 @@
+E135 -- (a) density-model Q vs actual Q;  and the T-dependence of Q(T)
+zeros: 2001052, max ordinate 1132490.658714
+
+       T     N=T^2        M       Q_actual      Q_density Qact/sum|A|^2      log^2 T ratio dens/act
+------------------------------------------------------------------------------------------------------------
+   100.0     1e+04      138   1.931763e-02   2.543435e-03     1.885100      21.2076      0.132
+   316.0  9.99e+04      607   3.071588e-03   6.292912e-03     0.668044      33.1286       2.05
+  1000.0     1e+06     2469   1.346694e-03   2.159918e-04     0.713936      47.7171       0.16
+
+peak RSS = 376.8 MB
+
+READING
+  Q_density >> Q_actual  -> the density model does NOT give o(1); the smallness
+                            of the actual Q comes from DISCRETE cancellation.
+  Q_density ~ c0 log^2 T -> confirms 唐先生's predicted main term.
+  Q_actual vs T          -> decides whether Q(T) -> 0 (the line lives) or
+                            Q(T) stays O(1) (the small value was a small-T accident).
+  fitted exponent d(log Q_actual)/d(log T) = -1.1566
+  fitted exponent d(log Q_density)/d(log T) = -1.0714
