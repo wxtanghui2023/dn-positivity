@@ -126,6 +126,12 @@ $$\textbf{【}V139\text{ 更新 ✓】材料 A ⟹ 已审 ✓ 退回箱 8；材�
 $$\textbf{【}V140\text{ ✓】修复方向（固定基缺陷／非对角 transport）⟹ }\textbf{已审 ✗ 判死}：\text{① 相位来源【已穷举】（`AOB1` §2 四源：互反符号／holonomy／2-上闭链 ⟹ character／Fourier–Mellin／L-值 ✗；第四种 Frobenius 型 ＝ 唯一活口但 char-}p\text{ 专属 ✗）；② 本档二分定理：}T\text{ 含 }\gamma\text{ ⟹ 相位 ＝ 算术频率}\times\gamma\text{ ⟹ }\gamma\text{ 是【输入】✗（Mellin 参数型）；}T\text{ 不含 }\gamma\text{ ⟹ 与 }\gamma\text{ 无关 ✗，谱＝}\{\gamma_j\}\text{ 须 HP ⟹ }N0\text{ 循环 ✗ ⟹ "non-diagonal} \ne \text{intrinsically }\gamma\text{-sensitive" 得证 ✓；③ 档案"断裂双重"（}phase\text{-}source\text{-}search\text{）＝ Gate A（相位来源）＋ Gate B（权-1 宿主），Spec }\mathbb Z\text{ 两者皆缺、}\mathbb F_q\text{ 两者皆有且【同源】（similitude }\Phi^\dagger Q\Phi=qQ\text{）⟹ 原型里两门是一门 ✗ ⟹ }\textbf{V138 三处未执行项全部关闭 ✓}$$
 $$\boxed{\textbf{三处未执行 ⛔}}（各附前置问 ✓）：\text{① 材料 A（不变因子双尺度：指数 }N\text{ 的子格／二次型／理想类）⟹ 前置问：是否退回箱 8／12？}\ \text{② 材料 B（数域余体积 }\sqrt{|D|}\text{ vs 类数 }h\text{）⟹ 前置问：} \sqrt{|D|}\text{ 是【推出】的还是【输入】的？}\ \text{③ 修复方向（固定基缺陷／非对角 transport）⟹ 前置问：能否用【纯算术】给出该相位而不用零点？}}$$
 
+## F.3c 附：**Lorentzian 多项式 / ξ-Jensen / 双曲性路线**（`V141`–`V142` ✓）
+
+$$\textbf{新闻 ✓（`V141`）}：\text{arXiv:}2609.05341\ \text{"Bounded ratios for Lorentzian polynomials"}\ ✓（\text{AI 协助 ✓；}\text{Huh 二次情形 ⟹ 任意次数，由离散凸性决定 ✓）$$
+$$\textbf{本档审计结论 ✓（`V142`）}：\text{① 一元 Lorentzian}\iff\text{非负}\ \wedge\ \text{支撑区间}\ \wedge\ \text{Newton／超对数凹 ✓；② }\textbf{Lorentzian}\not\Rightarrow\textbf{hyperbolic}\ ✗（反例 }t^3+3t^2+3t+3\ ✓）⟹\ \text{弱于 RH ✓；③ ξ-Jensen 的超对数凹部分}\textbf{已被 GORZ 无条件蕴含} ✓✓；④ 剩余差距（Lorentzian ⟹ 双曲）＝ RH 所在 ✗；⑤ 整条双曲性路线}\textbf{已由 Farmer（}arXiv\text{:}2008.07206\text{）关闭} ✓✓\ \text{（档案 }`ALIGN-A2`\ ✓）}$$
+$$\boxed{\text{故 Lorentzian 路线落 A2 已封格 ✗；不填补 }R_{\rm residual}\ ✓}\qquad\textbf{⭐ 附带 ✓}：T^2\ \text{律在此独立出现（}d\le T^2\ ✓\text{）⟹ }W3\ \text{独立确认 ✓✓}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

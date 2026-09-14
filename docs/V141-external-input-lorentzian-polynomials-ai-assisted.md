@@ -63,3 +63,13 @@ $$\textbf{(3) }\textbf{不改写 }V137\ \text{的 SEARCH BRANCH CLOSED ✓}：\t
 ✅ 净产出 ✓：① 一手事实核清 ✓；② ⭐ 与 V136 §2(v) 的修正项 ✓；③ ⭐ 不填补残量的三条理由 ＋ 残量描述锐化 ✓；④ 一个可判定小审计的登记 ✓；⑤ 方法论三条（含 Lean 成本骤降 ✓）
 ```
 $$\boxed{\text{V141 ✓：Lorentzian 有界比率（arXiv:2609.05341 ✓ AI 协助 ✓）对我们}\textbf{有帮助但是框架级，不是缺口级}：\text{① }\textbf{它正是 char-0 的极化／Hodge–Riemann 正性框架}（不需 Frobenius ✓）⟹ \textbf{须修正 }V136\text{ §2(5) 的"char-0 未发现对应结构"}\ ✓；\text{② 其方法（离散凸性 ＋ 锥对偶）与我们同形但更尖锐 ✓；③ }\textbf{但不填补 }R_{\rm residual}\ ✗：\text{Lorentzian 是有限小多项式条件 → }\zeta\ \text{不可对接；可对接的 }\xi\text{-Jensen 路线中 hyperbolicity ⟺ RH，而 Lorentzian ⟹ hyperbolic ⟹ }\textbf{该命题本身即 RH 强度 ✗（＝}D_1\text{ 型，已封）} ⟹ \textbf{净收益 ＝ 残量描述锐化为"char-0 Lorentzian／Hodge–Riemann 型正性，带算术支撑"}\ ✓；\text{④ 附一个可判定小审计（ξ-Jensen 是否形式上 Lorentzian）＋ 方法论三条（含 Lean 形式化成本骤降 ✓ 对我方停放论文有直接意义 ✓）}$$
+
+
+---
+
+## §5 ⚠️ 勘误（2026-09-14 23:33，`V142` 审计后 ✓ T10 ✓）
+
+$$\text{原文（§1③，已废止 ✗）}：\text{"Lorentzian}\Longrightarrow\text{hyperbolic}\ ⟹\ \text{"ξ-Jensen 是 Lorentzian"这一命题本身是 RH 强度 ✗"}\ ✗$$
+$$\textbf{错误 ✓}：\textbf{Lorentzian}\ \not\Longrightarrow\ \textbf{hyperbolic}\ ✗\ ——\ \text{反例（`V142` §2 ✓）}：t^3+3t^2+3t+3\ ✓\ \text{归一化系数全 1 ⟹ 超对数凹 ✓ 但 }(t+1)^3+2\ \text{一实两复 ✗}$$
+$$\textbf{正确方向 ✓}：\text{stable／hyperbolic}\ \Longrightarrow\ \text{Lorentzian}\ ✓（\text{弱化关系 ✓）}\ \Longrightarrow\ \text{Lorentzianity}\ \textbf{弱于}\ RH\ ✗\ \text{（可能无条件可证 ✓）}$$
+$$\textbf{结论不变但机制更正 ✓}：\text{Lorentzian 路线}\textbf{确实不填补 }R_{\rm residual}\ ✗，\text{但理由}\textbf{不是}\text{"它与 RH 等价 ✗"}，\text{而是}\text{（`V142` §3 ✓）：其超对数凹部分}\textbf{已被 GORZ 无条件蕴含} ✓✓，\text{剩余差距（Lorentzian ⟹ 双曲）＝ RH 所在 ✗，且整条双曲性路线}\textbf{已由 Farmer 关闭} ✓✓$$
