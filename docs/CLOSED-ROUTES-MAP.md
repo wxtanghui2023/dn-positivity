@@ -116,6 +116,14 @@ $$\textbf{① 已证明 ✓}：\text{具体机制}\Longrightarrow\text{已有 CL
 $$\textbf{② 条件分类 ✓}：\text{canonical}\not\Rightarrow\text{stable}；\text{任何稳定性须支付带符号/序结构（成本落 }D_1\text{）}$$
 $$\textbf{③ 未证明 ⚠️（必须保留 ✓）}：R_{\rm residual}\ne\varnothing\ \text{或}\ =\varnothing\ \textbf{均未证明}\ ✗\ \text{—— 不得把"搜索库空了"写成"数学上不存在" ✗}$$
 
+## F.3b 附：**跨尺度兼容 ＋ 缺陷复合律**（`V138` 查图结果 ✓ —— 已独立注册，早于本节 ✓）
+
+$$\text{提案形状 ✓}：\text{Arithmetic}\to\text{irreversible compatibility}\to\text{canonical polarization}\to\text{RH}\ ✓；\text{缺陷复合律 }\Delta_{m,k}=\Delta_{m,n}+\Phi^*\Delta_{n,k}+\mathcal C_{m,n,k}\ ✓$$
+$$\textbf{已注册三处 ✓}：\text{`TWO-SCALE-compatibility-construction-material`（同形状 ＋ 同排除表 ＋ 同自警 ✓）；`R-CS-PRE1`（}X0\text{：}T\ne\text{group cocycle}\ \wedge\ T\ne\text{coboundary}\ \textbf{逐字相同 ✓}）；`SCALE-DYNAMICS`（}\Omega(X,Y,Z)=T_{Y,Z}T_{X,Y}-T_{X,Z}\text{ ＝ }\mathcal C\ ✓）}$$
+$$\textbf{已测试一次 ✓}：\text{`addmul-defect-test-death`：加法–乘法 defect 谱测试 ⟹ }\lambda_{\min}\text{ 与 }\gamma\text{ 完全无关 ✗ —— 原因 ＝ 【定理 ✓】：}D=|D|U(\gamma)\text{ 酉共轭保谱 ⟹ 对角 }D\text{ 乘两边的构造其谱必与 }\gamma\text{ 无关 ✗✓}$$
+$$\textbf{类级状态 ✓}：R_{B4}\ \text{inactive ✗（七项崩塌清单 ✓）；}R_{A\text{-}ind}\ \text{inactive（在本轮规定的 coarse-graining 类中 ✓）}\ ——\ \textbf{但档案自标"}\ne\text{ 所有可能 ✗"，并加粗保留 }\boxed{\textbf{SW6 尚未证明为空}}\ ✓$$
+$$\boxed{\textbf{三处未执行 ⛔}}（各附前置问 ✓）：\text{① 材料 A（不变因子双尺度：指数 }N\text{ 的子格／二次型／理想类）⟹ 前置问：是否退回箱 8／12？}\ \text{② 材料 B（数域余体积 }\sqrt{|D|}\text{ vs 类数 }h\text{）⟹ 前置问：} \sqrt{|D|}\text{ 是【推出】的还是【输入】的？}\ \text{③ 修复方向（固定基缺陷／非对角 transport）⟹ 前置问：能否用【纯算术】给出该相位而不用零点？}}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
