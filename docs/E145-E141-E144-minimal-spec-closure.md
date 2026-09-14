@@ -64,3 +64,16 @@ $$\text{—— \textbf{这才是现在唯一值得投入数学推导的硬核入
 ⚠️ **读法 $\alpha/\beta$ 待您最终裁定 ✗** ⟹ §0 的 1 核／2 核随之定稿 ✓
 ⭐ **收官结论一句话 ✓**：**六项规格经四轮独立性消元，压缩为【一个存在性核心 $A+B$】（读法 $\beta$ 下另加内在对偶 $C_{\rm int}$）；**
    **并明确划出边界：解析函数层的识别 $\zeta_\varphi=\zeta$ 推不出载体内部的对偶实现 ✗。**
+
+---
+
+## §8 读法 $\alpha/\beta$ 决策简报（✓ 供一行定稿 ✓）
+
+$$\textbf{① 两种读法的【内容差】✓}：\alpha\ \text{把 }C\ \text{读作【事实陈述】✓（"}\zeta\ \text{满足 FE"}\ ✓）\ ——\ \text{可删 ✗；}\beta\ \text{读作【内在实现】✗（"载体内部存在 }\Theta^*=1-\Theta\text{"}\ ✓）\ ——\ \text{保留 ✗}$$
+$$\textbf{② 决定性的判据 ✓（来自档内自身措辞 ✓）}：C\ \text{的原写法含"}\textbf{含 ∞ 位补全}\ ✓\text{"（逐字 ✓）}$$
+$$\Longrightarrow\ \alpha\ \text{会把 }\infty\ \text{位【整体丢掉 ✗】（Euler 积只含有限位 ✓）}\ \Longrightarrow\ \textbf{与源文本不符 ✗}$$
+$$\Longrightarrow\ \beta\ \text{保留 }\infty\ \text{位 ✓，与源文本一致 ✓，且与"同一算术动力对象【同时】产生"的原意一致 ✓✓}$$
+$$\textbf{③ 代价 ✓}：\alpha\ ⇒\ \text{规格 }A+B\ \text{（1 核 ✓）}；\beta\ ⇒\ \text{规格 }A+B+C_{\rm int}\ \text{（2 核 ✗）}$$
+$$\textbf{④ 我的推荐 ✓}：\boxed{\textbf{取 }\beta\ ✓}\ ——\ \text{理由：}\alpha\ \text{与档内"含 }\infty\ \text{位补全"逐字冲突 ✗ ⟹ 取 }\alpha\ \text{会【删掉源文本的一项要求 ✗】；}$$
+$$\qquad\text{而取 }\beta\ \text{只是【多留一个硬核 ✗】，是诚实的更强规格 ✓}$$
+$$\textbf{⑤ 定稿后果 ✓}：\beta\ ⇒\ \text{E145 §2 保留 }C_{\rm int}\ ✓；\text{§0 记为【2 个硬核 ✓】：}\ A+B\ \text{（存在性 ✗）＋ }C_{\rm int}\ \text{（内在对偶 ✗）}$$
