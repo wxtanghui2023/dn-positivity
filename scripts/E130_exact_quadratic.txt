@@ -1,0 +1,61 @@
+E130 -- exact quadratic form for the window integral
+N = 1000000.0   Y = sqrt(N) = 1000.000   h = Y   (Legendre scale)
+zeros: 2001052, max ordinate 1132490.658714
+
+identity: int_N^{N+Y} |sum_gamma A_gamma e^{i gamma log x}|^2 dx = Y * A^* G A
+
+--- gamma <= 1000  (M = 649) ---
+   A^*G A (exact)          = 4.655102e-04
+   sum |A_gamma|^2          = 6.281601e-04
+   rho = A^*G A / sum|A|^2  = 0.741069      (sampling gave ~1)
+   requirement: int|Delta|^2 ~ N*Y*A^*GA, target h*N = Y*N, so the
+                criterion is A^*G A = o(1); here A^*G A = 4.655102e-04  (margin 2148.2x)
+   lambda_max = 645.071775   (M = 649, ratio 0.993947)
+   lambda=  645.071775  |<A,v>|^2=  7.191661e-07  contributes   4.639138e-04
+   lambda=    3.924043  |<A,v>|^2=  4.047400e-07  contributes   1.588217e-06
+   lambda=    0.004180  |<A,v>|^2=  1.964364e-06  contributes   8.211640e-09
+   share of top eigenvector in the form = 0.996571
+
+--- gamma <= 1500  (M = 1069) ---
+   A^*G A (exact)          = 6.733189e-04
+   sum |A_gamma|^2          = 9.953401e-04
+   rho = A^*G A / sum|A|^2  = 0.676471      (sampling gave ~1)
+   requirement: int|Delta|^2 ~ N*Y*A^*GA, target h*N = Y*N, so the
+                criterion is A^*G A = o(1); here A^*G A = 6.733189e-04  (margin 1485.2x)
+   lambda_max = 1054.344706   (M = 1069, ratio 0.986291)
+   lambda= 1054.344706  |<A,v>|^2=  6.213515e-07  contributes   6.551186e-04
+   lambda=   14.619696  |<A,v>|^2=  1.244084e-06  contributes   1.818814e-05
+   lambda=    0.035562  |<A,v>|^2=  3.388522e-07  contributes   1.205032e-08
+   share of top eigenvector in the form = 0.972969
+
+--- gamma <= 2000  (M = 1517) ---
+   A^*G A (exact)          = 1.089292e-03
+   sum |A_gamma|^2          = 1.339411e-03
+   rho = A^*G A / sum|A|^2  = 0.813262      (sampling gave ~1)
+   requirement: int|Delta|^2 ~ N*Y*A^*GA, target h*N = Y*N, so the
+                criterion is A^*G A = o(1); here A^*G A = 1.089292e-03  (margin 918.0x)
+   lambda_max = 1480.057035   (M = 1517, ratio 0.975647)
+   lambda= 1480.057035  |<A,v>|^2=  7.113781e-07  contributes   1.052880e-03
+   lambda=   36.781093  |<A,v>|^2=  9.856900e-07  contributes   3.625476e-05
+   lambda=    0.161581  |<A,v>|^2=  9.705019e-07  contributes   1.568146e-07
+   share of top eigenvector in the form = 0.966573
+
+--- gamma <= 3000  (M = 2469) ---
+   A^*G A (exact)          = 1.346694e-03
+   sum |A_gamma|^2          = 1.886296e-03
+   rho = A^*G A / sum|A|^2  = 0.713936      (sampling gave ~1)
+   requirement: int|Delta|^2 ~ N*Y*A^*GA, target h*N = Y*N, so the
+                criterion is A^*G A = o(1); here A^*G A = 1.346694e-03  (margin 742.6x)
+   lambda_max = 2336.181557   (M = 2469, ratio 0.946206)
+   lambda= 2336.181557  |<A,v>|^2=  5.606210e-07  contributes   1.309712e-03
+   lambda=  131.466889  |<A,v>|^2=  2.749955e-07  contributes   3.615280e-05
+   lambda=    1.346045  |<A,v>|^2=  6.097527e-07  contributes   8.207548e-07
+   share of top eigenvector in the form = 0.972539
+
+peak RSS = 565.9 MB
+
+READING
+  The identity is now EXACT: no sampling, no quadrature error.
+  rho = A^*GA / sum|A|^2 compares the form with the diagonal: rho near 1
+  means no cancellation beyond the diagonal, rho below 1 means some.
+  The criterion for the requirement o(hN) is A^*G A = o(1).
