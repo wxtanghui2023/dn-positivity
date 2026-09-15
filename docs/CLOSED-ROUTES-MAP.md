@@ -792,6 +792,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V189 预登记，三选）**：① 三件套固化成工具卡 ② 攻同一残余（第四类不变量）的严格定义 ③ 接受外部机制普查结束，转回 **A1／A3（Weil／Li 正性）** 本身。
 
+### F.5ax 🧰 **工具卡：外部机制三筛 F1／F2／F3 ＋ 外部机制普查正式收束**（`V189` ✓ 2026-09-15 13:01）
+
+**用法（固定顺序，30 秒预筛）**：$$\text{F3 通道分类}\to\text{F1 信息饱和}\to\text{F2 涨落层级}$$ 任一步判为"回归旧墙" ⟹ **立即停止，不进入推导（禁止先写数十页）**。
+
+**🧰 F1 · 信息饱和判据**（措辞为唐先生 13:01 收紧版）：若候选**只**增加 $L_f(\mu)=\sum_\rho m_\rho f(\gamma_\rho)$ 及其有限／可控组合，而这些量**已被显式公式与算术侧确定**，则它**未产生新的独立信息**；必须**进一步**证明它能从统计量进入**支撑性质**，否则**关闭**。严格形式：$\mathcal L=\overline{\operatorname{span}}\{L_f\}$ 已饱和 ⟹ 额外线性关系是代数推论 ⟹ $\Delta I=0$ ⟹ $$\boxed{\text{线性统计量}\ \textbf{不能直接分辨}\ \text{支撑性质}}$$ ⚠️ **边界（须同时引用）**：若拥有**全部测试函数的完整无界精度数据**，$\mu$ 原则上可被恢复 ⟹ 支撑可被恢复；但那是**反演**而非**判别**，而反演所需的无界精度正是 $S(T)$ 问题本身 ⟹ F1 问的是"**是否携带新的独立信息**"，**不是**宣判"绝对不可能"。用法三步：① 列出候选增加了哪些量 ② 检查是否 ∈ $\mathcal L$ ③ 若 ∈ $\mathcal L$，要求给出**统计量 → 支撑性质**的过渡证明。
+
+**🧰 F2 · 涨落层级判据**（候选必须自报控制哪一层）：**L1 典型** $S(T)\asymp\sqrt{\log\log T}$（**无条件**，Selberg CLT）｜**L2 无条件最坏** $S(T)=O(\log T)$（**无条件**，Littlewood 1924）｜**L3 目标最坏** $S(T)=O(\log T/\log\log T)$（**RH $\Longleftrightarrow$**，von Koch）。⟹ $$\boxed{\text{只达到 L1 或 L2 者，}\textbf{不能冒充}\ \text{RH 级控制}}$$（由 $\sqrt{\log\log T}$ 到 $\log T/\log\log T$ 的差距**不是常数因子**，是典型的"最坏情形"鸿沟）。
+
+**🧰 F3 · 通道分类器**：$$\boxed{\text{linear}\ |\ \text{quadratic}\ |\ \text{signature/inertia}\ |\ \text{pointwise/dynamic}\ |\ \text{other}}$$ 立即检查 $\text{other}\stackrel{?}{\to}\text{linear／quadratic／pointwise}$。已知归宿：linear → **盲**（F1）｜quadratic → **Weil／Li 正性**｜signature/inertia → **终点退回正性**（`V186`）｜pointwise/dynamic → $S(T)$ **最坏**（F2）｜det → **Deninger（缺 polarization）**。
+
+**外部机制普查正式收束（12:24–13:01）**：两条独立入口（**入口 A `V187`** 机制族：index／inertia／RG／Lefschetz／sum rule／null relation；**入口 B `V184`／`V188`** 信息类型：linear／quadratic／符号／逐点／det）**收敛**，产出**结构性地图**：$$\boxed{\text{线性统计}\to\text{信息饱和}}\quad\boxed{\text{二次／符号}\to\text{Weil／Li 正性}}\quad\boxed{\text{逐点／动态}\to S(T)\ \text{最坏}}$$（inertia 只是把第二列换成 signature 语言，**最终仍回到正性**）⟹ 真正留下的**不是**模糊的"第四类"，而是 $$\boxed{\textbf{必须找到一种既非线性统计、又非二次正性、又非逐点控制的独立信息载体}}$$
+
+**⚠️⚠️ 严格警告（唐先生逐字，须随任何引用携带）**：$$\boxed{\text{"第四类存在"目前}\ \textbf{只是逻辑剩余类}，\ \textbf{绝不是}\ \text{候选机制}}$$ 否则易再陷循环：定义第四类 $\to$ 加足够强结构 $\to$ 结构隐含 Weil 正性 $\to$ 重新得到 RH。
+
+**重开门槛（三条硬规则，唐先生逐字）**：**(R1)** 若新机制**不能回答"它携带的独立信息究竟是什么"**，则**不进入推导**；**(R2)** 禁止**先写数十页再判类型**（须先过 F3／F1／F2）；**(R3)** 禁止**把"第四类"当作目标对象**（只能作为判定的剩余）。
+
+**下一步**：V189 ＝ ① → ③ 已完成（三筛固化 ＋ 普查收束）；**不再立即攻第四类**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
