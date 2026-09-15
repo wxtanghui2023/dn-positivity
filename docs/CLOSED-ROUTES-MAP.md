@@ -424,6 +424,18 @@ $$\text{压缩筛子（4 维：范围 LOCAL/GLOBAL｜量词 }\exists/\forall\tex
 $$\text{今晚干净结论四行}：V161\ \text{有限组合}\Rightarrow\text{FSC-DEAD}｜V162\ \text{Weyl count 本身不承重}｜V164\ \text{内生连续参数仍不足以识别 ζ}｜V165\ \boxed{\text{generation}\not\Rightarrow\text{identification}}$$
 $$\qquad\textbf{下一刀 ＝ ①}：\boxed{\text{"全局同一性是否必然需要 ζ 的全局结构？"}}\ \text{可证} ⟹ \textbf{C6 真正封口};\ \text{打不出} ⟹ \text{停止"收窄"，转而}\textbf{主动构造反例性全局结构}\ \mathfrak S_\zeta$$
 
+### F.5ab ⭐⭐⭐⭐⭐ **C6.6 的 global identification 攻击 ＝ o-极小性障碍 ⟹ 终局 A（条件性封口）**（`V166` ✓ 2026-09-15 11:13）
+
+$$\text{判据锁死}：\text{只允许终局 A（封口）或 B（活路）};\ \textbf{不允许终局 C}（\text{"又发现一个更深的 gap"}）$$
+$$\textbf{第一刀}：P_M(\lambda):\iff\lambda\in\Lambda_M,\ P_\zeta(\lambda):\iff\zeta(\tfrac12+i\lambda)=0,\ \text{C6.6}\iff\boxed{P_M\iff P_\zeta};\ \text{⚠️ 不能说"这是 global 所以必须用 global structure"}（\text{把要证的当前提}）⟹ \text{等价式须对}\textbf{每个 }\lambda\ \text{成立} ⟹ \boxed{P_M\ \textbf{不只是生成谱}，而是新的零点独立的}\textbf{零点判定器}} ⟹ \text{C6.6 必须产生}\ \text{独立结构}\Longrightarrow\zeta\ \text{零点谓词}（\text{而非}\ \text{独立结构}\to\{\lambda_n\}＝V164）$$
+$$\textbf{B1–B4}：\text{B1 }M\ \text{含 ζ 全局信息} ⟹ \boxed{\text{definition smuggling}}\ \mathrm{DEAD};\ \text{B2 等价证明用解析恒等式}\（\xi'/\xi,\zeta'/\zeta,\text{Mellin},\text{Hadamard},\text{EF}）⟹ C_{\rm analytic}（\text{⚠️ 不得声称"所有证明必如此"}）;\ \text{B3 只有统计／计数一致}\（N_M=N_\zeta\ \text{或}\ \sum f\ \text{一致}）⟹ \boxed{\text{GENERATION/COUNT}\not\Rightarrow\text{IDENTIFICATION}};\ \text{B4 }\textbf{结构同构＝唯一生存形态}：\Phi:M\to\mathfrak Z\ \text{自然同构},\ \operatorname{Spec}(M)=\operatorname{Spec}(\mathfrak Z),\ \textbf{并且}\ \text{另有独立于零点的定理}\ \operatorname{Spec}(\mathfrak Z)=Z_\zeta-\tfrac12\（\text{最后一步最难}）⟹ \text{这是}\textbf{对象识别问题}，\text{非 }V164\ \text{的"生成 }\lambda\text{"}$$
+$$\textbf{⭐⭐ 本档新增 o-极小性障碍}：\text{(观察 1) }P_M\ \text{的外延是 ℝ 子集}\ \{\gamma_n\};\ \text{(引理 1, 经典) o-minimal 结构中可定义的 ℝ 子集必为}\ \boxed{\text{有限多个点与开区间的并}}\ ⟹ \textbf{不能}\text{定义任何}\ \boxed{\text{无限离散集}}\（\text{如 }\mathbb Z）;\ \text{(引理 2, 经典无条件) }Z_\zeta-\tfrac12\ \text{离散且无限多} ⟹ \text{是无限离散集} ⟹ \boxed{P_M\ \textbf{不可能}\text{在任何 o-minimal 语言中定义}}$$
+$$\qquad\Longrightarrow\ \textbf{二分}：\text{(L1) }\mathcal L\ \text{o-minimal} ⟹ P_M\ \text{不存在} ⟹ \textbf{C6.6 不可能};\ \text{(L2) }\mathcal L\ \text{非 o-minimal} ⟹ \text{须含一个}\textbf{非 o-minimal 化装置},\ \text{而}\textbf{一切已知}\text{此类装置落于}\ \text{(i) 六接口族}\ \cup\ \text{(ii) }\textbf{类 VI}（\text{任意描述性定义}）$$
+$$\qquad\Longrightarrow\ \boxed{\textbf{终局 A（条件性封口）}：\text{满足 C6.6 的 }P_M\ \text{必定义 ℝ 中无限离散集} \Longrightarrow \text{语言必非 o-minimal} \Longrightarrow \text{必含非 o-minimal 化装置} \Longrightarrow \text{已知此类装置全在}\ \textbf{六接口}\cup\textbf{类 VI}\ \Longrightarrow C6\subseteq C_{\rm analytic}}$$
+$$\qquad\textbf{残余（不是"更深的 gap"，而是}\textbf{具体设备表}）②：\text{①非 o-minimal 化装置的}\textbf{穷尽性}：是否存在既不在六接口亦不落类 VI 者？\\text{候选表（可逐条审计）}：(a) \mathbb Z\ \text{在 ℝ 的统一定义}（\sin/\lfloor\cdot\rfloor/\text{exp 型}）;\ (b) \text{周期／拟周期}（\sin,\text{Jacobi},\text{模形式}）;\ (c) \text{完整解析对象};\ (d) \text{集合论／描述性任意定义};\ (e) \text{非标准模型}（\text{超积仅模型论容器，}V136\ \text{已判）} ⟹ \text{(a)(b)(c) 解析型}\to C_{\rm analytic};\ \text{(d)}\to\text{类 VI};\ \text{(e) 无信息};\ \text{②}\textbf{o-minimal 语言边界的界定}（\text{机制的定义语言是否总可规范为一阶 ℝ-结构？}）$$
+$$\qquad ⚠️\ \text{边界}：\text{引理 1 为 o-minimality 定义级经典；引理 2 为经典无条件；"已知装置全落六接口}\cup\text{类 VI"为}\textbf{[结构性]} ⚠️\ \textbf{非穷尽性定理} ⟹ \text{本档为}\textbf{条件性封口}，}\textbf{不是}\text{无条件 DEAD}$$
+$$\qquad\textbf{下一步（二选，不得有第三项）}：①\ \text{审计残余①的 (a)–(e)，看是否有既非六接口亦非类 VI 的非 o-minimal 化装置（一项即够 → 转终局 B 路线）};\ ②\ \text{界定"机制定义语言"能否规范为一阶 ℝ-结构} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
