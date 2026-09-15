@@ -1503,6 +1503,24 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§7 判词**：$$\boxed{\textbf{V227：V226-A 撤回；ARS＝第四类（未封锁，亦非 ALIVE）}}$$ 四条严格结果：(i) **命题 V227-A**（$\sup\Re$ 非模长不变量，定理级）；(ii) **char-$p$ 对照**（圆 vs 竖直线 ⟹ 不可移植；ARS 需"实部钉定机制"）；(iii) **构造性 vs 涌现性**；(iv) 污染测试正式化 ＋ ARS 两个必要输入（余调/谱实现；实部钉定）⟹ ⚠️ **纪律**：**不判 DEAD、不判 ALIVE**；仅登记"满足形式逃逸条件" ◎ **残余（OPEN，可计算）**：$$\boxed{\exists P_X\ \text{独立构造（过污染测试）}\wedge\sup_{P_X=0}\Re z=\sup_{\xi(\rho)=0}\Re\rho\ \text{可独立证明}}$$（判据：① ARS1–ARS6；② 过污染测试；③ 钉定机制**非模长/极化型**；④ 不跨识别接口）✓
 
+### F.5ck ⭐⭐⭐⭐⭐ **V228：Root-Edge Bridge Audit（谱边屏障）⟹ 命题 V228-A（解析屏障不可能，定理级）＋ 命题 V228-B（(3) 零敏感 ⟹ 饱和/正性）**（`V228` ✓ 2026-09-15 16:41）
+
+**委托（唐先生）**：**"不能继续'再找一种 ARS'。下一步应该直接审计 ARS 的唯一缺口：为什么一个独立根谱的右边界会等于 $\beta_*$。"** (1) **压到标量**：$$\boxed{\beta_X=\beta_*}\tag{B}$$ 且该等式不能用 $Z(\xi)$；"只证 $\beta_X=\frac12$ 只是另一个 $1/2$ 来源；只证 $\beta_X\ge\beta_*$ 通常是偷输入；只证 $\beta_X\le\frac12$ 仍未触及 RH" ⟹ $$\boxed{\text{唯一真难题＝独立根谱与 zeta 零点右边界之间的非识别桥}}$$ (2) **分叉 A/B**：**A 共享对象型**（$\beta_X=\mathcal E(\mathcal A)=\beta_*$）⟹ ARS 降级为识别接口的一部分；**B 共享不变量型**（独立泛函 $I(\mathcal A)$ 使二者相等）⟹ 不需逐点识别 ⟹ **"比 V221–V226 的 pointwise parameterization 弱得多，也因此更值得继续"**；(3) **识别问题再削弱**：只需 $$\boxed{\operatorname{Edge}(R_X)=\operatorname{Edge}(Z(\xi))}$$ **"只识别谱边，不识别谱本身"**；(4) **非对称性**：$\beta(R_1)=\beta(R_2)$ 允许 $R_1\ne R_2$ ⟹ 不需 $R_X=Z(\xi)$／$\#R_X\sim N_\xi$／同虚部结构 ⟹ **绕开 `V183` 密度障碍** ⟹ $$\boxed{\text{ARS 不是"重建零点"，而是"重建零点谱边"}}$$ (5) **四类桥**：**B1 系数共享** ⟹ $$\boxed{\text{优先淘汰}}$$；**B2 Euler 局部共享** ⟹ V144 障碍＋旧墙 ⟹ $$\boxed{\text{暂不构成新机制}}$$；**B3 谱实现型** ⟹ **不能直接判死**，五问落点（同 FE→`V212`；同 trace→`V185`/`V199`/`V200`；同计数→`V183`/`V192`；同谱→R4）⟹ 真正新的 ARS 必须"**共同谱边，但无共同谱／FE／trace／counting**"；**B4 不等式桥** ⟹ $$\boxed{\textbf{唯一活口}}$$：$$\boxed{\beta_*\le\beta_X}\ (\mathrm{I})\qquad\boxed{\beta_X\le\tfrac12}\ (\mathrm{II})$$ 配 $\beta_*\ge\frac12$（`V219`）⟹ $\beta_*=\beta_X=\frac12$；(6) **非识别桥候选**：$\mathcal F_X(\rho)\ge0$ 对一切零点成立、$\Re s>\beta_X$ 时 $\mathcal F_X<0$ ⟹ 自动得 $\Re\rho\le\beta_X$；关键是 $\mathcal F_X$ 不能是 Weil 二次型／Li／explicit formula／FE／零计数／已知零点变换；(7) **隔离器**：(A) $P_X$ 独立构造；(B) $\beta_X\le\frac12$；(C) $\forall\rho:\Re\rho\le\beta_X$；(D) (C) 不用 $Z(\xi),\Phi,\mathrm{FE},$ explicit formula ⟹ $$\boxed{\textbf{独立算术谱作为 RH 的外部屏障}}$$ **"这个表述比 V227 的'谱实现＋实部钉定'更精确。"**；(8) **生死判定**：ARS 本身 OPEN；"构造另一根谱并声称边界＝$\beta_*$" **DEAD**（换名）；"构造根谱使边界＝$\frac12$" **不足**；"**根谱边界给出 RH 上界**" **真正 OPEN**；(9) **V228 应先证桥的必要结构定理**：任何有效 ARS 必须产生对任意 $\rho$ 的**单调屏障** $$\mathscr B_X(s)<0\ \text{for}\ \Re s>\beta_X,\qquad \mathscr B_X(\rho)\ge0\ \forall\rho\in Z(\xi)$$ 而 $\mathscr B_X$ 定义完全不含零点 ⟹ **"若这个结构最终被证明必然等价于已有 Weil/Li/explicit-formula 正性，那么 ARS 才真正 DEAD。反之若能构造非显式公式型的 arithmetic barrier，那就是真正的突破口。"**
+
+**§1 采纳重写**：最小目标 $$\boxed{\forall\rho:\ \Re\rho\le\operatorname{Edge}(P_X)\le\tfrac12}$$ 配 `V219` 的 $\beta_*\ge\frac12$ ⟹ RH；**只需识别谱边**、绕开 `V183`；承重件＝`V219` ✓✓✓
+
+**§2 四类桥分流**：B1 淘汰／B2 撞旧墙／B3 五问落点／**B4 唯一活口** ✓✓
+
+**§3 ⭐⭐⭐ 命题 V228-A（定理级，核心一）**：$$\boxed{\text{解析屏障不可能}}$$ **证明（开映射定理，两行）**：非常数解析函数映开集为**开集**；$\mathbb R$ 在 $\mathbb C$ 中**内点为空** ⟹ 像不可能开 ⟹ $\mathscr B_X$ **必为常数** ⟹ "在开半平面严格负"不可能 ⟹ $$\boxed{\text{屏障}\ \textbf{必然非解析}}$$ ⟹ $$\boxed{\text{屏障}\ \textbf{不能是} \text{L-函数型／算术解析对象}}$$ ⟹ 屏障必然是 $\Re s$（或误差项）的**实变函数** ＝ 一个"**实部探测器**" ✓✓✓✓
+
+**§4 ⭐⭐⭐ 命题 V228-B（[结构性]，核心二）**：条件 (3) $\mathscr B_X(\rho)\ge0\ \forall\rho$ 是**关于零点**的断言 ⟹ 要证明它必须用零点的性质，而可用者仅三类：**(a)** 位置 ⟹ **R4／循环**；**(b)** 统计 ⟹ **`V188` 饱和**；**(c)** 正性型恒等式 ⟹ **Weil／Li** ⟹ $$\boxed{\text{任何非平凡的 (3) 必落 (a)(b)(c)；唯一非平凡用途＝正性}}$$ 形式化：若 $\mathscr B_X$ 由**乘子不变**数据决定 ⟹ 乘子族改零点而不改 $\mathscr B_X$ ⟹ (3) 不能由其推得 ✓✓✓✓
+
+**§5 推论**：平凡屏障 $\mathscr B_X(s)=\beta_X-\Re s$ 已满足 (2)+(3) $\iff(\mathrm{I})$ ⟹ $$\boxed{\text{"存在屏障"}\ \textbf{不增新机制};\ \text{全部内容在}\ (\mathrm{I})}$$ ✓✓
+
+**§6 生死判定表**：1 ARS 本身 $\boxed{\text{OPEN}}$；2 换名 $\boxed{\text{DEAD}}$；3 边界$=\frac12$ $\boxed{\text{不足}}$；4 边界给上界 $\boxed{\textbf{真正 OPEN}}$；5 屏障**解析实现** ⭐ $\boxed{\text{DEAD}}$（V228-A，定理级）；6 屏障**非解析实现** ⟹ (3) 零敏感 ⟹ 落 (a)(b)(c) ⟹ $\boxed{\text{DEAD}}$（条件性）✓✓
+
+**§7 判词**：$$\boxed{\textbf{V228：屏障形式在解析情形 DEAD（定理级）；非解析情形落饱和／正性（条件性）}}$$ ⚠️ **不判 ARS 整体 DEAD**（唐先生要求）；仅封"屏障形式"；V228-B 标 **[结构性]** ◎ **残余（OPEN，最窄）**：$$\boxed{\text{是否存在一个}\ \textbf{非解析、零敏感}、\ \text{但}\ \textbf{非} \text{explicit-formula／Li／Weil 的算术实部屏障？}}$$（判据：① 造 (A)–(D)；② $\mathscr B_X$ **非解析**；③ (3) 的证明**不**走 (a)(b)(c)；④ 过污染与反乘子测试）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
