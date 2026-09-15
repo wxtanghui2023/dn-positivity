@@ -138,3 +138,41 @@ $$\textbf{(e)}\ \text{§6/§7}\ \text{按}\ \textbf{唐先生指令}：\text{不
    ④ 三重测试全中 ⟹ 坍缩 ✓✓✓✓；⑤ ⭐⭐⭐⭐⭐⭐ 终局判定：当前框架下搜索空间耗尽 ✓✓✓✓✓✓；
    ⑥ 按指令不制造 V243/V244、不提出新方向 ✓✓✓
 ```
+
+---
+
+## §9 追记：V242 的准确界限 ＋ **PROGRAM-FROZEN**（唐先生 2026-09-15 18:43）
+
+**§9.1 V242 真正证明了什么（＝生成规则内的界限，不是"数学上没有路"）**
+$$\boxed{\text{在以下生成规则内，没有新的机制空间}}：\ \text{整数局部数据}\to\text{算术状态}\to\text{算子/谱/迹/交点/holonomy}\to\text{RH} ✓✓✓$$
+$$\qquad \Longrightarrow \text{所有此类路线最终经过}\ \textbf{至少一个已有接口}：$$
+$$\qquad\qquad \boxed{\text{explicit formula}\ \cup\ \text{positivity}\ \cup\ \text{spectral realization}\ \cup\ \text{Chebotarev/statistics}} ✓✓✓$$
+$$\qquad ⟹ \text{这解释了为何过去几十轮不断出现}\ \text{新名字}\to\text{推导}\to\textbf{旧对象} ✓✓$$
+
+**§9.2 最值得保留的是"缺口形式"**
+$$\text{缺口已}\ \textbf{不是}\ \text{"还缺一个聪明的不变量"}，\ \text{而是三个具体的数学输入}：$$
+$$\qquad \boxed{\text{I. canonical arithmetic geometry};\quad \text{II. canonical polarization};\quad \text{III. a universal property forcing both from}\ \mathbb Z} ✓✓✓$$
+$$\qquad ⭐\ \text{III}\ \textbf{最强}：\text{即使明天有人人为构造一个漂亮的}\ X，\ \text{只要}\ \mathbb Z\to X\ \text{只是}\ \textbf{选择} \text{而非泛性质唯一决定}，$$
+$$\qquad\qquad \text{则}\ \textbf{R4／identification 问题} \text{依旧未解} ✓✓✓$$
+
+**§9.3 ⚠️ V242-A 的范围限制（不得升级 —— 这条必须与结论同行）**
+$$\text{成立}：\mathrm{Frob}_p\in\mathrm{Gal}(\bar{\mathbb Q}/\mathbb Q)\ \text{是}\ \textbf{共轭类} ⟹ \text{不能像元素一样直接复合}（\text{对}\ \textbf{全局绝对 Galois 群的 Frobenius 共轭类}）✓✓$$
+$$\qquad \textbf{不得} \text{升级为}：\boxed{\text{任何未来的 arithmetic Frobenius 都不可能存在}} ✗\（\text{超出证明范围}）✓✓✓$$
+$$\qquad \text{真正结论只是}：\boxed{\text{经典 Chebotarev 数据本身不能提供所需的 canonical global element}} ✓✓✓$$
+$$\qquad ⭐\ \text{这一区分很重要}：\text{它}\ \textbf{保留} \text{了"非经典／新框架下的 global Frobenius 型对象"的可能性} ✓$$
+
+**§9.4 状态 ＝ PROGRAM-FROZEN（非 DEAD）**
+$$\boxed{\textbf{PROGRAM-FROZEN}}：\text{在没有}\ \textbf{新的外部数学输入} \text{之前，不再产生 V243+ 的候选机制} ✓✓✓$$
+$$\qquad ⚠️\ \textbf{不是 DEAD};\ \textbf{不是"数学上没有路"} ✓✓$$
+$$\qquad ⭐\ \text{这次终止比以前的 DEAD 更有价值}：\text{不是某个候选死了}，\ \text{而是}\ \textbf{生成候选的元方法本身被审计到了边界} ✓✓✓$$
+
+**§9.5 未来任何"突破"的三道审计门**
+$$\textbf{Gate 1}：\boxed{X_{\rm new}\not\simeq\ \text{已有 spectral/trace/explicit-formula object}}（\text{是否真正提供以前不存在的对象}）✓✓$$
+$$\textbf{Gate 2}：\boxed{X\simeq\operatorname{Universal}(\mathbb Z)}（\text{不是}\ \mathbb Z\hookrightarrow X\ \text{的"选择"}）✓✓$$
+$$\textbf{Gate 3}：\boxed{\text{是否产生新的 polarization／definiteness}，\ \text{而非把 Weil positivity 换名}} ✓✓$$
+$$\qquad \text{三问中}\ \textbf{任一为"否"} ⟹ \textbf{直接退回 V242} ✓✓✓$$
+
+**§9.6 ⚠️ 必须严格区分（终局判定的准确表述）**
+$$\boxed{\textbf{V242}\ =\ \textbf{当前研究程序的边界}，\ \textbf{不是 RH 的边界}} ✓✓✓$$
+$$\qquad ⚠️\ \text{以后重启时}\ \textbf{不得} \text{把"程序终局"误读成"数学上没有路"} ✓✓$$
+$$\qquad ⭐\ \text{操作含义}：\text{在没有新的外部数学输入之前，}\textbf{不再强行创造} \text{——}\ \text{继续在现有框架里随机组合术语，只会重新制造}\ \text{`V196`}–`V242`\ \text{已杀过的东西} ✓✓✓$$

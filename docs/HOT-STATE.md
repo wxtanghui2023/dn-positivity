@@ -12,18 +12,21 @@
 > **② A1／A3 门（`V201`）**：欲重开正性锥源的提案，先跑 `docs/V201-A1A3-restart-gate-protocol-only.md` §1–§2（五条件＋四类还原判据＋换名清单）；
 > **任一不满足 ⟹ 立即停止、不进入推导**。A1／A3 ＝ **定义域内收口**（`V200`，表述已收紧）；⚠️ **不自动开新线** ✓
 >
-> ## 🛑 **第三道：V242 程序性终局判定（必读 ✓ 2026-09-15 18:38）**
-> **`docs/V242-terminal-verdict-correspondence-collapse-and-search-space-exhaustion.md`**
-> **结论 ✓**：截至 `V242`，**内部机制线（`V185`–`V241`）＋ 外部几何／correspondence 层级（`V242`）皆已坍缩** ⟹
-> $$\boxed{\textbf{当前框架下，本程序的搜索空间已耗尽}}$$
-> **统一原因**：所有机制最终都作用于**同一个对象** —— $\zeta$ 的**迹／显式公式／正性通道** ✓；
-> "外部几何"在有限域有效，靠**基域**提供的 (a) 元素级 Frobenius ＋ (b) intersection pairing（Hodge 指标定理）；
-> **二者在 $\mathbb Z$ 侧无 canonical 替代**（(a) 退化为共轭类／Chebotarev 统计；(b) 退化为迹／Weil 正性）✓
-> **关键古典事实**：① $\mathbb Q$ 的 $\mathrm{Frob}_p$ 是**共轭类**（非元素）⟹ **共轭类不能复合** ⟹ 无 canonical global Frobenius；
-> ② **Lefschetz**：$(C\circ D)\cdot\Delta_X=\mathrm{tr}(C_*D_*)$ ⟹ **intersection multiplicity ＝ trace** ⟹ correspondence 路线只是迹路线的几何语言 ✓
-> **⟹ 任何欲重开本线的提案，必须先给出以下任一项（框架外输入）**：
-> **(a)** 严格的 $\mathbb F_1$-基础；**(b)** canonical polarization 的**构造**；**(c)** 一个被 $\mathbb Z$ 的**泛性质唯一迫出**的几何对象（即第一箭头为**唯一性定理**，而非"选择"）；
-> **三者皆无 ⟹ 不得重启，不得以换包装方式继续（不再制造"又一个候选"）** ✓
+> ## 🛑 **第三道：V242 程序性终局判定 ＝ PROGRAM-FROZEN（必读 ✓ 2026-09-15 18:43 更新）**
+> **`docs/V242-terminal-verdict-correspondence-collapse-and-search-space-exhaustion.md`**（含 §9 追记 ✓）
+> **状态 ✓**：$$\boxed{\textbf{PROGRAM-FROZEN}}$$ —— **不是 DEAD**；**不是"数学上没有路"** ✓
+> **含义**：在没有**新的外部数学输入**之前，**不再产生 V243+ 的候选机制**；不再以换包装方式继续 ✓
+> **V242 真正证明了什么**：$$\boxed{\text{在以下生成规则内，没有新的机制空间}：\text{整数局部数据}\to\text{算术状态}\to\text{算子/谱/迹/交点/holonomy}\to\text{RH}}$$
+> 所有此类路线最终经过**至少一个已有接口** ✓：$$\boxed{\text{explicit formula}\ \cup\ \text{positivity}\ \cup\ \text{spectral realization}\ \cup\ \text{Chebotarev/statistics}}$$
+> **缺口形式（最值得保留）── 三个具体输入**：$$\boxed{\text{I. canonical arithmetic geometry};\ \text{II. canonical polarization};\ \text{III. a universal property forcing both from}\ \mathbb Z}$$
+> ⭐ III 最强：即使人为构造漂亮 $X$，只要 $\mathbb Z\to X$ 只是**选择**而非泛性质唯一决定，**R4／identification 问题依旧** ✓
+> **⚠️ 范围限制（不得升级）**：V242-A 只证明 $$\boxed{\text{经典 Chebotarev 数据本身不能提供所需的 canonical global element}}$$；
+> **禁止**升级为"任何未来的 arithmetic Frobenius 都不可能存在"（超出证明范围）✓
+> **未来任何"突破"的三道审计门（任一为"否" ⟹ 退回 V242）**：
+> **Gate 1** $X_{\rm new}\not\simeq$ 已有 spectral/trace/explicit-formula object（真正提供以前不存在的对象）；
+> **Gate 2** $$X\simeq\operatorname{Universal}(\mathbb Z)$$（不是 $\mathbb Z\hookrightarrow X$ 的"选择"）；
+> **Gate 3** 产生**新的 polarization／definiteness**，而非把 Weil positivity 换名 ✓
+> **⚠️ 必须严格区分**：$$\boxed{\textbf{V242}\ =\ \textbf{当前研究程序的边界}，\ \textbf{不是 RH 的边界}}$$ ✓
 > **任何声称走「机制 II（globalization obstruction）」的提案，开工前先跑 `docs/V198-mechanism-II-closure-gate-executable-restart-criteria.md` §2 六条**；
 > **任一不满足 ⟹ 立即停止、不进入推导**。canonical 分支已实算收口至 $0$／$\mathrm{Br}[N]$；下一站 ＝ **A1／A3** ✓
 

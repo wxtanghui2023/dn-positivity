@@ -1771,6 +1771,17 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 ### F.5cx ⭐⭐⭐⭐⭐ **V242：程序性终局判定 —— correspondence 层级的第一性原理计算 ⟹ 坍缩；当前框架下搜索空间耗尽**（`V242` ✓ 2026-09-15 18:38）**⚠️ 本档不提出新方向（按唐先生指令）；不制造 V243／V244**
 
+$$\textbf{追记（`V242` §9；唐先生 18:43）── 状态 ＝}\boxed{\textbf{PROGRAM-FROZEN}}（\textbf{非 DEAD};\ \textbf{非"数学上没有路"}）✓✓✓$$
+$$\qquad \textbf{含义}：\text{在没有}\ \textbf{新的外部数学输入} \text{之前，不再产生 V243+ 的候选机制};\ \text{不再以换包装方式继续} ✓✓$$
+$$\qquad \textbf{V242 真正证明的是生成规则内的界限}：\boxed{\text{整数局部数据}\to\text{算术状态}\to\text{算子/谱/迹/交点/holonomy}\to\text{RH}\ \text{内无新机制空间}}$$
+$$\qquad\qquad \text{所有此类路线最终经过至少一个已有接口}：\boxed{\text{explicit formula}\cup\text{positivity}\cup\text{spectral realization}\cup\text{Chebotarev/statistics}} ✓✓$$
+$$\qquad \textbf{缺口形式（最值得保留）}：\boxed{\text{I. canonical arithmetic geometry};\ \text{II. canonical polarization};\ \text{III. universal property forcing both from}\ \mathbb Z};\ ⭐\text{III 最强} ✓✓$$
+$$\qquad ⚠️\ \textbf{范围限制（不得升级）}：\text{V242-A 只证}\ \boxed{\text{经典 Chebotarev 数据本身不能提供所需的 canonical global element}};\ \textbf{禁止} \text{升级为"任何未来的 arithmetic Frobenius 都不可能存在"} ✓✓$$
+$$\qquad \textbf{三道审计门（任一为"否"} ⟹ \text{退回 V242}）\text{：}\textbf{Gate 1}\ X_{\rm new}\not\simeq\text{已有 spectral/trace/explicit-formula object};\ \textbf{Gate 2}\ X\simeq\operatorname{Universal}(\mathbb Z);\ \textbf{Gate 3}\ \text{新的 polarization／definiteness（非 Weil positivity 换名）} ✓✓$$
+$$\qquad ⚠️\ \textbf{严格区分}：\boxed{\textbf{V242}\ =\ \textbf{当前研究程序的边界}，\ \textbf{不是 RH 的边界}} ✓✓✓$$
+$$\qquad ⭐\ \text{本次终止的价值}：\text{不是某个候选死了}，\ \text{而是}\ \textbf{生成候选的元方法本身被审计到了边界} ✓$$
+
+
 **委托（唐先生）**：**"如果继续沿着'构造一个算术对象 → 找动力学/不变量 → 从它逼出 RH'这条轴走，确实已经进入换包装循环。"** 链条 $$\text{Euler/局部}\to\text{卷积}\to\text{二次型}\to\text{谱}\to\text{非交换}\to\text{holonomy}$$ 几乎全部落入 $$\text{局部性},\ \mu_n,\ \text{coboundary},\ \text{显式公式},\ \text{正性}$$ ⟹ **"所以我不应该再给你 V242'再找一种算术结构'"**。**必须承认的隐含错误**：$$\boxed{\text{"RH 的证明机制必须从算术内部产生"}}$$ **这个前提本身没有理由成立** —— 有限域 RH 说明的是 $$\boxed{\text{算术对象}\to\textbf{外部几何}\to\text{几何约束}\to\text{谱定位}}$$ ⟹ $$\boxed{\text{我们搜错了搜索空间}}$$。**新问法**：$$\boxed{\textbf{什么外部结构能够被 }\mathbb Z\textbf{ 唯一地迫出来？}}$$（找范畴/几何/动力系统 $X$，使 $\mathbb Z\hookrightarrow X$ 由**泛性质唯一决定**，且 $\operatorname{Aut}(X)$ 或自然 cohomology/duality 自动产生谱）；**新硬目标**：$$\boxed{\text{若 }X\text{ 满足三个纯算术泛性质，则 }X\text{ 必须具有 polarization}}$$（$\mathbb Z\Rightarrow X\Rightarrow$ polarization $\Rightarrow$ RH；**第一箭头必须是唯一性定理**）。**此前未真正攻击的问题**：为什么 $\mathbb F_p$ 有 Frob 而 $\mathbb Z$ 无对应 global Frobenius？关键在 $$\boxed{\textbf{correspondence}}$$ **而非 global Frobenius**：缺的是把 $\{\mathrm{Frob}_p\}_p$ 拼成一个全球对象；此前用 乘法／局部符号／Galois／Euler product／cohomology／trace 全死；新操作＝$$\boxed{\textbf{correspondence composition}}$$：$C_p\subset X\times X$（**对应非函数**）⟹ 非交换性可表现为 $$\boxed{\text{intersection multiplicity}}\quad\text{或}\quad\boxed{\text{global intersection class}}$$（与 local symbol 完全不同）。**三个致命测试**：**T1** intersection number 只是 $\sum_pf(p)$ ⟹ 回统计；**T2** correspondence 来自 Hecke（$C_p=T_p$）⟹ 回自守/谱；**T3** intersection pairing ＝ Weil pairing/positivity ⟹ 回 `V199`；**只有三者全失败才是新东西**。**结论**：截至 V241 **批评成立**（"内部算术机制搜索"本身正在产生闭环）；**"我不应该再这样做"**；下一阶段唯一改变的是**对象层级**；**若该层级也坍缩 ⟹ 明确承认搜索空间耗尽，而非再制造 V242／V243／V244**
 
 **§2 ⭐⭐⭐⭐ 命题 V242-A（定理级，核心一）**：$$\textbf{Frobenius 属于}\ \textbf{定义域} \text{，不属于"算术"}$$——$\mathbb F_p$：$\mathrm{Frob}_p$ 是**元素**；$\mathbb Q$：$\mathrm{Frob}_p$ 只是 $\mathrm{Gal}(\bar{\mathbb Q}/\mathbb Q)$ 中的**共轭类**（Chebotarev）⟹ $$\boxed{\text{共轭类不能复合}}$$（两类之积是类的**并**）⟹ $$\boxed{\text{不存在 canonical 元素级"global Frobenius"}}$$ ⟹ $\{\mathrm{Frob}_p\}$ 的**唯一 canonical 装配 ＝ Chebotarev 等分布 ＝ 统计陈述** ⟹ **T1 命中** ✓✓✓✓
