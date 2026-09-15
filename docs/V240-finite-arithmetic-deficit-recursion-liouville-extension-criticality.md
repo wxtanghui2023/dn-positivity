@@ -136,3 +136,17 @@ $$\textbf{(f)}\ ⭐⭐⭐⭐\ \text{§6 Dickman}\ ρ(2)=1-\ln2\ \text{与光滑�
    ⑤ V240-A（加法关系⟹奇异级数收敛）✓✓；⑥ ⭐⭐⭐⭐ V240-E（密度型 √X）✓✓；
    ⑦ 不产出第三种结果 ✓✓
 ```
+
+---
+
+## §9 ⚠️ V240-D 降级落档（唐先生 2026-09-15 18:33；由 `V241` 执行）
+
+$$\textbf{降级}：\text{“逐素数递推}+\text{canonical}\Longrightarrow\text{乘性”}\ \textbf{为假} ✓✓✓$$
+$$\qquad \textbf{反例 A}：B_N(X)=\#\{n\le X:p|n\Rightarrow p\in P_N,\ n\ \text{squarefree}\};\quad B_N(X)=B_{N-1}(X)+B_{N-1}(X/p_N) ✓✓$$
+$$\qquad\qquad \text{但}\ \sum\mu^2(n)n^{-s}=\frac{\zeta(s)}{\zeta(2s)}\ ⟹ \textbf{仍回 Euler 世界} ⟹ \text{说明不了 V240-D} ✓$$
+$$\qquad \textbf{反例 B（决定性）}：C_N(X)=\sum\Omega(n);\quad \Omega(p_Nm)=\Omega(m)+1 ⟹ C_N(X)=C_{N-1}(X)+C_{N-1}(X/p_N)+A_{N-1}(X/p_N) ✓✓✓$$
+$$\qquad\qquad \text{严格逐素数 canonical 递推，而}\ C_N\ \textbf{非乘性算术函数} ⟹ \boxed{\text{逐素数递推}\not\Rightarrow\text{乘性}} ✓✓✓$$
+$$\qquad \textbf{反例 C}：V_N(X)=\sum(v_{p_1}(n),\ldots,v_{p_N}(n));\ v_{p_N}(p_N^km)=k\ \textbf{由唯一分解唯一确定} ⟹ \text{逐素数}+\text{canonical}+\text{精确递推}+\textbf{非乘性状态} ✓✓$$
+$$\Longrightarrow \textbf{降级}：\boxed{\textbf{V240-D}\ \text{降为"乘性状态类封口"}} ⟹ \textbf{不能封口整个动力学范式} ✓✓✓$$
+$$\qquad ⚠️\ \text{更深的根因（唐先生）}：\lambda\ \text{死亡的根因}\ \textbf{不是 Euler product}，\ \text{而是}\ \textbf{dilation 生成元全部交换}：T_pf(X)=f(X)-f(X/p),\ T_pT_q=T_qT_p ✓✓✓$$
+$$\qquad ⟹ \text{下一步应攻击}\ [T_p,T_q]\ne0\ \text{（见}\ \text{`V241`}）✓$$
