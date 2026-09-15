@@ -1866,6 +1866,26 @@ $$\boxed{\textbf{角 II · 离散／扭角}}：\text{输出}＝\mathbb Z／\math
 
 **边界**：§2 为 **[结构性] 逐门审计，不是不可能性定理**；"两角"是**命名类，不是分类定理**；M5 全刻画是猜想；M7 抓取失败、来源待核；"无第三种"引自已读综述、非穷尽检索。
 
+### F.5db ⭐⭐⭐⭐⭐ **V247：第三型公理的存在性判定 ⟹ 两刀定理级证实 ＋ 角 I 由 Koecher–Vinberg 精确刻画 ＋ 但第三型\*\*存在\*\*（Choi 非可分解正映射）⟹ 三分律为假，两角升级为三角**（`V247` ✓ 2026-09-15 20:51）
+
+**委托（唐先生）**：**"不要再继续扩大外部机制名单，而应该攻击'两角二分'本身"**；须按 $(C1)$ 连续／$(C2)$ 相位 gauge 不变／$(C3)$ 确定符号／$(C4)$ 不以零点为输入／$(C5)$ 不等价于已有 quadratic 正性，构造第三型公理；三刀（gauge 商 ⟹ 回角 I；不商 ⟹ 须 canonical axis；额外结构 $A$ 只能 bilinear/sesquilinear/quadratic ⟹ 角 I，或 finite-order torsion ⟹ 角 II，或**连续非线性非度量非 torsion**）；**任务**：构造第三型最一般代数形式并判定；**直接算、不搜文献**。
+
+**§1 第一刀（定理级）**：$$\mathbb C[z,\bar z]^{U(1)}=\mathbb C[z_i\bar z_j]\quad（\text{二次不变量生成}）\Longrightarrow \text{连续不变}\ L\ \text{由 Gram 矩阵}\ Z^*Z\ \text{决定} \Longrightarrow \boxed{\textbf{角 I}}$$ 加强版：纯 $U(1)$ 相位上平移**传递**作用 ⟹ $(C2)$ 迫使 $L\equiv\mathrm{const}$ ⟹ **纯相位不携带任何 canonical 实数**
+
+**§2 第二刀（定理级）**：相位本体是 $U(1)$-**torsor**，**无 canonical 基点** ⟹ 须 canonical 原点／轴 ⟹ `V218` S1/S3 ＋ `V227`-A ＋ `V215`(c)；与非 Hermitian 拓扑"线只在旋转下定义"完全同型
+
+**§3 第三型最一般代数形式**：canonical、$G$-不变、**非离散、非二次型定义**的凸锥（**正性锥**）
+
+**§4 Theorem C（定理级，经典 Koecher–Vinberg）**：有限维实向量空间中**齐性自对偶**开凸锥 ＝ 某 Euclid **Jordan 代数**的平方锥，带 canonical trace **二次型** $$\Longrightarrow \boxed{\textbf{角 I 的精确刻画}＝\text{"自对偶正性锥"}＝\text{"正性可由双线性形式表示"}}$$ ⚠️ 读数：**Weil 正性／Bochner／Hodge 指标配对全部是双线性的 ⟹ 全部落角 I，这不是巧合而是 KV 的推论**
+
+**§5 Theorem D（定理级，经典；决定性反例）**：**Choi 1975／Woronowicz 1976** —— 正映射锥 $\mathcal P(M_n\to M_n)$ 在 $n\ge3$ 时**非自对偶**且含**非可分解**元素；**Choi 定理**：$\phi$ 完全正 $\iff$ Choi 矩阵半正定 ⟹ **CP 部分＝双线性可表示；非 CP 的正性＝不可由任何双线性形式表示**。逐条：$(C1)$–$(C5)$ **全部满足** $$\Longrightarrow \boxed{\textbf{第三型存在};\ \text{唐先生三分律}\ \text{Third-type}\Longrightarrow\text{I}\cup\text{II}\ \textbf{为假}}$$ **逃逸点**：KV 需**齐性＋自对偶**，而正映射锥 $n\ge3$ **非自对偶且非齐性** ⟹ 归约结构性失败
+
+**§6 三角化**：$$\boxed{\textbf{角 I}}\ \text{自对偶／双线性可表示的正性};\quad \boxed{\textbf{角 II}}\ \text{离散／扭};\quad \boxed{\textbf{角 III}}\ \text{连续／gauge 不变／确定符号／}\textbf{非自对偶} \text{正性锥（Choi 非可分解正映射）}$$ ⚠️ **角 III 的障碍不是类型障碍，而是宿主／识别**（`V242` 缺口 I／III；`V204` "无非厄米宿主"）
+
+**§7 重写 polarization 故事**：char-$p$ 的 **Hodge 指标配对是双线性的** ⟹ **角 I** ⟹ 所以成功；char-$0$ 要么同一件（Weil 正性 ⟹ 循环）要么**角 III（无算术宿主）** ⟹ 与 `V227` §4 一致。**残差改写为可检验形式**：$$\boxed{\text{是否存在一个算术正性，它}\ \textbf{不可由任何双线性形式表示}（\text{非 Choi 型}）？}$$ ⚠️ 该形式**新于"缺 polarization"**：指定了**类型**（非双线性正性）且有现成判定机器（Choi 定理／算子系统／$\mathrm{PPT}^2$ 型问题）
+
+**§8 边界**：经典结果（$U(1)$ 不变量理论、$U(1)$-torsor、Koecher–Vinberg、Choi 定理、正映射锥自对偶仅在 $(2,2),(2,3),(3,2)$）**均凭记忆引用、未逐条核对原文** ⚠️；§3／§6／§7 为 **[结构性]**；"∃ 第三型"是数学事实，但**"它能否服务 RH"完全未触及**（宿主缺失）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
