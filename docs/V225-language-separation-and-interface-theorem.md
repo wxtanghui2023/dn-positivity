@@ -105,3 +105,14 @@ $$\textbf{(f)}\ \text{§6 判词：作为独立路线 DEAD}\ \text{为}\ \textbf
 ✅ 净产出：① 两处修正落档＋判词改写 ✓✓✓；② ⭐ 命题 V225-A（语言分离，三行）✓✓✓；③ ⭐⭐⭐⭐ 接口定理（选项 1 排除）✓✓✓✓；
    ④ ⭐⭐⭐ 第三条 (iii) 的精确形状＝"新桥"形状（不封）✓✓✓；⑤ 四选项终局表 ○；⑥ 残余四条判据 ✓
 ```
+
+---
+
+## §7 ⚠️ 两处范围修正（唐先生 2026-09-15 16:23；由 `V226` 执行）
+
+$$\textbf{T10（V225-A 的准确范围）}：\text{它证明的是}\ L_X\not\vdash J=1，\ \textbf{仅当}\ J\ \text{完全是}\ \Phi\text{-外生定义的对象} ✓✓✓$$
+$$\qquad ⟹ \text{由它推出"无第三条"}\ \textbf{有逻辑跳跃} ⟹ \text{§4 的"接口定理"}\ \textbf{降级} \text{为条件性} ✓✓$$
+$$\qquad \qquad \text{（结构：}\ (I)\ \text{与}\ (II)\ \text{覆盖"完全钉住"与"完全不钉住"，}\ \text{而}\ \textbf{"部分钉住"} \text{的情形须另证}）✓$$
+$$\textbf{T11（}D_X\ \text{藏接口）}：\text{若}\ F_X\ \text{决定}\ \beta\ \text{需解码}\ D_X:Y_X\to\mathcal B ⟹ \text{关键内容在}\ D_X ✓✓✓$$
+$$\qquad ⟹ \boxed{F_X\ \text{与}\ D_X\ \text{必须都}\ X\text{-内部定义}};\ \text{否则接口}\ \textbf{从}\ F_X\ \text{藏到}\ D_X ⟹ \text{残余不能只盯}\ F_X ✓✓$$
+$$\qquad ⚠️\ \text{故 §5 的}\ (iii)\ \text{形态}\ \textbf{须加强} \text{为：}\ \textit{无}D_X\ \text{情形下}\ F_X\ \text{自身即决定}\ \beta;\ \text{或有}\ D_X\ \text{时二者皆内部} ✓$$

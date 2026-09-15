@@ -107,3 +107,13 @@ $$\textbf{(e)}\ \text{§7 残余为}\ \textbf{登记};\ \textbf{不给方向} �
 ✅ 净产出：① 战略转向落档 ✓；② Mellin abscissa 测试 ✓✓；③ ⭐⭐ 乘子障碍（定理级、整族反例）✓✓✓；
    ④ 幅度/相位分叉＋V144 并入 ✓✓✓；⑤ ⭐⭐⭐ 聚合障碍（核心）✓✓✓④；⑥ canonical 幅度比审计＋两条投影判据 ✓✓；⑦ 残余与判据 ✓
 ```
+
+---
+
+## §9 ⚠️ §5 修正（唐先生 2026-09-15 16:23；由 `V226` 执行）
+
+$$\text{你的修正}：\text{只需}\ \textbf{一个标量}\ D_X(F_X)=\beta_*;\quad \text{RH}\iff\beta_*=\tfrac12 ⟹ \boxed{\text{无需编码整个}\ \beta\ \text{数据}} ✓✓✓$$
+$$\qquad ⟹ \textbf{无"信息量／维数不足"障碍};\ \text{§5 的"必须聚合 ⟹ 乘子杀"}\ \textbf{过强} ✓✓$$
+$$\qquad ⟹ \textbf{正确的障碍形态}：\text{乘子族}\ F\mapsto F(1-am^{-s})\ \text{保持增长/幅度信息而移动零点} ⟹$$
+$$\qquad\qquad \boxed{\text{任何}\ \textbf{增长／幅度决定} \text{的量不能等于}\ \beta_*} ⟹ \text{逃逸}\ =\ \textbf{非增长决定的实量} ✓✓✓$$
+$$\qquad ⚠️\ \text{§5 的}\ \textbf{聚合障碍} \text{须}\ \textbf{降级} \text{为"}\ L_X\ \text{内不能\emph{聚合到无穷}的反例} \text{"的弱形式};\ \text{乘子障碍}\ \textbf{仍存活}（\text{以修正形式}）✓$$
