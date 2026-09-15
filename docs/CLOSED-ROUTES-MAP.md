@@ -884,6 +884,50 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V194 预登记，三选）**：① **收束**：本晚连关 9 项 ＋ 三入口收敛 ⟹ 转回 **A1／A3（Weil／Li 正性）** ② **工具卡收官**：F1 修订版（两问）＋F4＋二分封闭＋饱和判据＋涨落三层表＋四通道穷尽表 → **单页预筛卡** ③ 若攻第四类：按 R1 先给"第三支"**严格定义**并自检（预计回到二次型／重数通道）
 
+### F.5bc 🧰 **V194：第四类机制预筛卡（总卡，取代 `V189`）＋ 二分封闭 Lemma ＋ 两条纪律升级**（`V194` ✓ 2026-09-15 13:19）
+
+**委托（唐先生）**：同意 **② → ①**；**V194 不再扩展候选**，**"先把筛选器压缩成一张真正可执行的总卡，然后再回 A1／A3"**；理由：**"现在最有价值的不是再找一个名字，而是证明以后任何'第四类'候选都无法通过偷换信息类型逃过已建立的封闭条件。"**
+
+**§0 用法（三步 $<2$ 分钟；任一步失败即停，禁止先写推导）**：$$\text{步 1 定性（F1 两问）}\to\text{步 2 结构（F4 六条）}\to\text{步 3 量化（三层涨落）}$$ 并对四通道表归类；凡引用外部结果者先过**定义级核对**（§7 六项）。
+
+**I. F1 两问**：$$\boxed{\mathrm{F1a}:\ \text{是否携带显式公式／Weil 型信息}\textbf{之外}\text{的新信息}？\qquad \mathrm{F1b}:\ \text{能否以}\textbf{严格弱于 RH}\text{的输入}\textbf{无条件}\text{证明}？}$$ 2×2：**否／任意 ⟹ REPACKAGED**｜**是／否 ⟹ RH-EQUIVALENT / TOO STRONG**｜**否／是 ⟹ USEFUL BUT IRRELEVANT**｜$$\boxed{\textbf{是／是 ⟹ 真正候选}}$$
+
+**II. F4 六条**：$$\boxed{\mathrm{F4.1}\ \text{非线性／非平凡变换};\ \mathrm{F4.2}\ \text{非显式公式换坐标};\ \mathrm{F4.3}\ \text{算术可直接构造};\ \mathrm{F4.4}\ \textbf{对}\ \beta-\tfrac12\ \textbf{有实质敏感性};\ \mathrm{F4.5}\ \text{非}\ Q\succeq0\ \text{等价};\ \mathrm{F4.6}\ \text{定量定位而非仅统计}}$$ ⭐ **F4.4 为本轮最重要升级**（因 $\gamma_\rho=\gamma-i(\beta-\tfrac12)$）⟹ $$\boxed{\text{information blindness}\ \neq\ \text{effective extractability}}$$ 正确障碍：线性信息**包含** $\beta$，但从**有限／可控输入**中**稳定提取** $\beta$ 困难。⚠️ **此后一律使用"可提取性"，不再使用"盲"**。
+
+**III. 饱和判据**：若候选只产生 $L_f(\mu_\zeta)=\sum_\rho m_\rho f(\rho)$ 且 $L_f$ 已被显式公式完全确定 ⟹ **未增加新的信息通道**；⚠️ **不得**写成 "linear $\Rightarrow$ $\beta$-blind"；正确：$$\boxed{\text{linear}\Rightarrow\text{information-saturated}}$$ 唯一出路：进一步给出**稳定、有限复杂度、定量可逆的 support localization**。
+
+**IV. 三层涨落**：$$\boxed{\text{typical}\ S(T)\sim\sqrt{\log\log T}\ \text{（无条件）}\ |\ \text{uncond. worst}\ O(\log T)\ \text{（无条件）}\ |\ \textbf{RH-level}\ O(\log T/\log\log T)\iff\text{RH}}$$ ⟹ RMT rigidity／pair correlation／variance／CLT 若只控 typical ⟹ 降级为 $$\boxed{\text{statistical improvement}}$$（**非** RH mechanism）。
+
+**V. 四通道穷尽表 ＋ 第四类严格定义**：| 通道 | 能处理 | 状态 |｜Linear／trace｜全部显式公式线性信息｜**SATURATED**｜｜Quadratic／positivity｜Weil 型二次型、部分零点比例｜**A1／A3 主线**｜｜Signature／inertia｜正负惯性、部分在线比例｜**67.2% ceiling（0.6818287）**｜｜Pointwise／dynamic｜单点定位、最强局部信息｜**唯一真正未关闭**｜ ⟹ 收窄为 $$\boxed{\textbf{第四类}=\text{非二次型、非惯性、非纯线性，}\textbf{且能逐点／局部定位}\ \beta}$$ ⚠️ 并行携带 `V189` 警告：**"第四类存在"只是逻辑剩余类，绝不是候选机制**。
+
+**VI. 二分封闭 Lemma**：设 $\mathcal A_{\mathbb P}\xrightarrow{\mathcal R}H$ 且声称 $\operatorname{Spec}(H)\subset\mathbb R$。**支 A（自伴）**：实谱自动成立（无信息）⟹ $\beta$ 只能经 $(\gamma,\text{multiplicity})$ 进入 ⟹ 落入零点比例／重数通道 ⟹ 撞 **0.6818287**。**支 B（非自伴但声称谱全实）**：实谱本身即极强谱定位命题；若足以推出全部零点实 ⟹ real spectrum $\Rightarrow$ RH ⟹ **无免费实谱**。⟹ $$\boxed{\text{自伴支}\cup\text{非自伴实谱支}=\textbf{全部封闭}}$$ 唯一剩余形态：$$\boxed{\mathcal A_{\mathbb P}\xrightarrow{\mathcal R}\mathcal X}$$ 其中 $\mathcal X$ **不是先验实谱对象**，却能从算术内部产生对 $\beta-\tfrac12$ 的**非退化敏感性**。
+
+**VII. ⚠️ 纪律：Definition-level audit before theorem-level use**（六项，逐项记录）：$$\boxed{1.\text{对象定义一致}\ 2.\text{归一化一致}\ 3.\text{指标依赖因子一致}\ 4.\text{权重是否随指标变化}\ 5.\text{适用域一致}\ 6.\text{之后才谈定理结论}}$$ ⭐ Planat 事故为典型：**定理方向漂亮，但对象已不是 GORZ 的 Jensen polynomial**；本条为**实质性成果**，把"引用风险"从判断力问题变为**可执行清单**。
+
+**VIII. 回 A1／A3 的唯一问题（V195 立项）**：主线压成 $$\boxed{\text{Weil positivity}\longleftrightarrow\text{Li positivity}}$$ 但**不再问**"能否找到另一个正性判据"；**新问题**：$$\boxed{\textbf{能否把 Weil／Li 正性从"全局无限族"降成一个可证明的}\textbf{局部结构条件}？}$$ 即求严格 $P_{\rm local}$：$$P_{\rm local}\Longrightarrow P_{\rm Weil}\iff\text{RH}\qquad\text{且}\ P_{\rm local}\ \text{可由}\ \textbf{严格弱于 RH 的算术事实}\ \text{推出}$$ 附加约束：$P_{\rm local}$ **不能只是 Weil 二次型的坐标表达**（否则 $\mathrm{F1a}=$ 否 ⟹ **REPACKAGED**）。
+
+**V195 预登记（唯一方向）**：$$\textbf{Local Positivity Audit}：\text{攻}\ \boxed{\text{local arithmetic constraint}\Longrightarrow\text{global Weil／Li positivity}}$$ 第一步（按 R1 与 F1）：先给 $P_{\rm local}$ **严格定义**并自检两问；⚠️ 任一为否 ⟹ 按本卡**立即停**，不进入推导。
+
+### F.5bd ⭐⭐⭐⭐⭐ **V195：搜索生成器重置（机制优先）—— 【第一轮禁用 F1–F4】＋ 三个刚性引擎**（`V195` ✓ 2026-09-15 13:22）
+
+**委托（唐先生）**：**"我刚才虽然换了候选对象，但没有换搜索生成器"** —— 仍从"RH 已知障碍 → 分类 → 找绕开障碍的通道"出发 ⟹ 必然把新东西投影回四通道再宣布撞墙；**"这不是你要的'清空'"**。指示：$$\boxed{\text{不从 RH 出发找机制；先从数学／物理中找"异常强的机制"，再问它能否落到 RH}}$$ **第一轮只允许六类机制（A 一致性闭包／B 非线性吸引子／C 动力奇点／D 全球化障碍／E 约束传播／F 缺陷-拓扑荷）进入，且"暂时全部不允许套 F1–F4"**；**先不碰 RH**，先答纯数学问题"它为什么能产生全局刚性？"；三优先：**I 非线性算术吸引子／II 算术全球化障碍（排第一）／III 算术动力奇点**。
+
+**§0 生成器重置**：旧生成器**停用**（四通道表是**障碍的投影**，当生成器用必投影回去 ⟹ "又撞墙"是**搜索结构的产物**）；新生成器：$$\boxed{\text{Physics／Math mechanism}\to\text{abstract mechanism}\to\text{arithmetic realization}\to\text{RH relevance}}$$ **本轮硬规则**：$$\boxed{\text{第一轮}\ \textbf{禁用 F1--F4}}$$ `V194` 卡**不作废但降级为后阶段过滤器**。
+
+**§1 ⭐ 机制 II（全球化障碍，排第一）**：抽象：局部态 $\{x_i\}$ on $U_i$，重叠一致性 $x_i|_{U_i\cap U_j}=T_{ij}(x_j|_{U_i\cap U_j})$；三通道 $T_{AB}T_{BC}T_{CA}=\mathrm{id}$；⚠️ **关键限定**：不是"存在 compatible sequence"（**太弱**），而是 **transition cocycle／obstruction class**。**⭐ 纯数学引擎（它为什么产生全局刚性）**：**(i) 障碍类的离散性／量子化** —— $[T]\in H^1(\mathfrak U;\mathcal A)$（Čech）等，当取值于**离散群／格**时，"$[T]=0$"是**开条件** ⟹ **不可形变 ⟹ 刚性**；**(ii) 约束过定**（约束数 > 自由度 ⟹ 全局解集稀疏／唯一）。⟹ 机制 II 的独特处：刚性来自**量子化**，**不是**正性／实谱／逐点控制。**类型区别**：机制 II ＝ **discrete／quantized obstruction class**，**不落在任何已封通道的类型里**（类型层面观察，**≠** "通过了 F1–F4"）。**算术原材料（只列不判）**：$p$-局部因子｜功能方程对合 $s\leftrightarrow1-s$（离轴对正是其轨道）｜adelic 拼接｜经典 $\mathrm{Br}$／$\mathrm{Sha}$／非交换 $H^1$｜本项目 `V176`–`V180` 的 $H^1(C_2,K^\times)$ 触点。**⚠️ 缺的一环（诚实，不判死）**：$$\boxed{\text{transition map}\ T\ \text{在算术情形}\ \textbf{是什么} —— \text{目前}\ \textbf{没有候选}}$$ 三种待挖形态：(i) 沿 $s\leftrightarrow1-s$ 的过渡；(ii) 沿 $p$ 与 $\infty$ 的局部化过渡；(iii) 沿高度／尺度的过渡（archimedean 相关）；**若最终被证＝显式公式重述则退化，但按指示在算到最后前不杀**。
+
+**§2 机制 I（非线性吸引子）**：抽象 $(\mathcal N f)(x)=\frac{\sum_pW_p(x)F_p[f](x)}{\sum_pW_p(x)}$，$f_{n+1}=\mathcal Nf_n$，目标唯一 $f_*$ ＋ $\|\mathcal N^nf-f_*\|\le Ce^{-cn}$。**⭐ 引擎 ＝ Birkhoff--Hopf 射影度量收缩**：$d_{\rm proj}(\mathcal Nf,\mathcal Ng)\le\kappa d_{\rm proj}(f,g)$，$\kappa<1$ ⟹ **唯一不变 profile ＋ 与初值无关 ＝ 刚性**；实现条件 ＝ **锥不变性 ＋ 有界畸变**（RPF 正统机制）。**⭐ 算术原材料：现成实例** $$\boxed{\text{Mayer／Gauss 转移算子的 Fredholm 行列式}\ =\ \zeta}$$（经典；具体形式待核）⟹ 在本实例中"profile"是函数，共振／零点＝ζ 的零点 ⟹ RH 问题变成**"共振位置"**。
+
+**§3 机制 III（动力奇点）**：抽象：**零点 ≠ eigenvalue；零点 ＝ 动力学奇点**（Loschmidt 幅／累积相位的非解析点）。**⭐ 引擎**：单调／守恒量 ＋ **反射不变性** ⟹ 奇点轨迹落入**不动集**：若 $\mathcal E[X_s]=\mathcal E[X_{1-s}]$ 且 $\mathcal E$ 在轴外**严格分离** ⟹ $\Re\sigma=0$；**缺的输入 ＝ 一个反射不变、且在轴外严格分离的量**。⚠️ **风险（记录不判死）**：`V147` T1 曾证"全预序＋保序对合 ⟹ $x\sim\iota(x)$ ⟹ 无严格单边律"；但此处需**实值分离量**而非预序 ⟹ 不完全同型。
+
+**§4 Backlog**：**D ＝ 机制 II**；**E 约束传播**（有限局部 ⟹ 无限刚性；紧性／König ⟹ 有限见证）；**F 缺陷／拓扑荷**（局部缺陷 ⟹ 全局不变量 ⟹ 禁忌扇区）；⚠️ E／F 与 II 的"量子化"引擎亲缘，建议并入 II。
+
+**§5 Phase-1 纯数学答案表**：| 机制 | 刚性引擎 | 算术现成实例 |｜**II**｜**障碍类量子化**（＋过定）｜$\mathrm{Br}$／$\mathrm{Sha}$／非交换 $H^1$；本项目 $H^1(C_2,K^\times)$｜｜**I**｜**Birkhoff--Hopf 射影收缩**＋锥不变／有界畸变｜⭐ **Mayer／Gauss 转移算子，$\det=\zeta$**｜｜**III**｜**反射不变的严格分离量** ⟹ 奇点入不动集｜无现成（最薄）｜ ⭐ 机制 I 已有把 ζ 作为行列式的经典转移算子实例 ⟹ **不是无源之水**。
+
+**§6 Phase-2 判据**：**成功** ＝ 机制能对**纯算术对象**（$p,\ p^k,\ \Lambda(n),\ \log p$）给出**局部定义**，并让全局化／不动点／奇点约束产生对 $\beta-\frac12$ 的**非平凡结论**；**失败** ＝ 该机制的过渡映射／收缩／守恒量**必然**退化为显式公式／字符 holonomy／有限逆极限。⚠️ 纪律：**在算到最后之前不能杀**；也不得**提前**宣布"可能又是延拓压力的重包装"。
+
+**下一步（V196 预登记，唯一动作）**：**Mechanism II · Phase 1-b**：从零构造算术情形的 **transition maps／cocycle**，再算 **obstruction class**；三条待验形态（(i) 沿 $s\leftrightarrow1-s$；(ii) 沿 $p$ 与 $\infty$ 的局部化；(iii) 沿高度／尺度）；**唯一目标** ＝ 给出 $T$ 的**显式局部定义**并判断 $[T]$ 是否取值于**离散集合**（离散 ⟹ 刚性引擎可用）。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
