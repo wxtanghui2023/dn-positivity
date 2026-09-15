@@ -119,3 +119,14 @@ $$\textbf{(e)}\ \text{§6 的“已知参数化全部经}\ \arg\xi／N(T)\text{�
 ✅ 净产出：① 残余压成单一形式 ✓✓；② ⭐⭐⭐ 命题 V221-A（新结果＋可证伪预测）✓✓✓✓；③ 双坐标审计的诚实结论 ✓✓；
    ④ 九类逐类第一非平凡例子＋落点 ✓✓；⑤ 已知参数化全部违规（事实级）✓✓；⑥ 不判 DEAD＋残余四条判据 ✓✓
 ```
+
+---
+
+## §9 ⚠️ 两处勘误（唐先生 2026-09-15 16:03；随后由 `V222` 执行）
+
+$$\textbf{T10（推论 2 降级）}：\iota_X\ne\mathrm{id}\Longrightarrow\neg\text{RH}\ \textbf{只是 RH 的反证机制}，\ \textbf{不是}\ \text{"该 }X\ \text{不存在"的证明} ✓✓✓$$
+$$\qquad ⟹\ \textbf{不得} \text{写成"非平凡}\ \iota_X\Rightarrow\text{参数化不存在"};\ \text{§3 推论 2}\ \textbf{降级} \text{为条件性推论} ✓$$
+
+$$\textbf{T11（§4 的"反称配对"撤回）}：\text{仅由}\ \Phi\ \text{双射只能}\ \textbf{定义} \ \iota_X:=\Phi^{-1}\circ\iota\circ\Phi;\ \text{但该}\ \iota_X\ \textbf{由识别映射反推} ✓✓$$
+$$\qquad \text{而 R1 要求}\ I_X,\Phi\ \text{独立于零点} ⟹ \boxed{\text{零点的 FE 对合}\not\Rightarrow\text{独立构造中的 canonical }\iota_X} ✓✓✓$$
+$$\qquad ⟹\ \text{§3 命题 V221-A}\ \textbf{仅当}\ \iota_X\ \textbf{可先独立构造} \text{（再由识别定理证等变）时才生效};\ \text{残余}\ \textbf{不能被 S1 自动吃掉} ✓✓$$
