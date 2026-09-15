@@ -105,3 +105,13 @@ $$\textbf{(e)}\ \text{§6 表采纳你的 §12 四行，本档加第 5、6 行} 
 ✅ 净产出：① 采纳重写（不等式桥 + 只识别谱边）✓✓✓；② ⭐⭐⭐ 命题 V228-A（解析屏障不可能，定理级）✓✓✓✓；
    ③ ⭐⭐⭐ 命题 V228-B（(3) 零敏感 ⟹ 饱和/正性）✓✓✓✓；④ 四类桥分流 ✓✓；⑤ 生死判定表六行 ✓✓；⑥ 残余四条判据 ✓
 ```
+
+---
+
+## §9 ⚠️ **V228-B 撤回**（唐先生 2026-09-15 16:46；由 `V229` 执行）
+
+$$\textbf{"仅三类"（位置／统计／正性）}\ \textbf{不是定理};\ \text{零敏感}\ \not\Rightarrow\ \text{三类} ✓✓✓$$
+$$\qquad \text{反例}：\text{零集上的}\ \textbf{代数／微分关系}\ P(\rho,F'(\rho),F''(\rho),\ldots)=0 ⟹ \text{非位置、非统计、非必然正性} ✓✓$$
+$$\qquad ⟹ \boxed{\text{zero-sensitive}\not\Rightarrow\text{position/statistics/positivity}} ⟹ \text{§4}\ \textbf{降级} \text{为"四类之一"的清单式观察} ✓✓$$
+$$\qquad ⚠️\ \text{§3 命题 V228-A}\ \textbf{仍成立}（\text{只封"解析实值屏障"这一种表示}）✓$$
+$$\textbf{补充（由 `V229` 命题 V229-A）}：\text{FE 强制任何}\ \beta\text{-界}\ \textbf{自动双侧} ⟹ \text{B4 的"单侧性"}\ \textbf{是幻觉};\ \text{它降级为"须产生}\ \textbf{任意} \ \beta\text{-界"} ✓✓✓$$
