@@ -141,3 +141,15 @@ $$\textbf{(e)}\ ⭐⭐⭐⭐⭐⭐\ \text{§7 V238-D}\ \textbf{[结构性]，本
    ⑥ ⭐⭐⭐⭐⭐ V238-C（只有两种形状）✓✓✓✓✓；⑦ ⭐⭐⭐⭐⭐⭐ V238-D（polarization 最小结构含 definiteness＝Weil 正性）✓✓✓✓✓✓；
    ⑧ 回答新问题（不存在）✓✓；⑨ 残余精确化 ✓✓
 ```
+
+---
+
+## §11 ⚠️ V238-C 撤回落档（唐先生 2026-09-15 18:25；由 `V239` 执行）
+
+$$\textbf{撤回}：\text{"有限算术模型只有两种形状（CRT-可分解／按大小截断）"}\ \textbf{不成立} ✓✓✓$$
+$$\qquad \textbf{反例}：\mathcal X_N=\Big\{\frac ab:(a,b)=1,\ \operatorname{depth}(a/b)\le N\Big\} ⟹ \text{有限性来自}\ \textbf{关系深度}，\ \text{不是坐标} ✓✓$$
+$$\qquad\qquad \text{且}\ \mathcal X_N\not\simeq\prod_{p\le P_N}\mathcal X_p ⟹ \textbf{非 CRT} ✓✓$$
+$$\Longrightarrow \boxed{\text{第三种天然有限模型}\ \textbf{存在};\ \text{有限阶段}=\textbf{有限关系深度}} ✓✓✓$$
+$$\qquad ⚠️\ \textbf{V238-A/B（两个具体计算）}\ \textbf{保留};\ \text{仅 C 撤回} ✓✓$$
+$$\qquad ⚠️\ \text{但}\ \text{`V239`}\ \text{已证}：\text{该模型的}\ \textbf{最小闭环 holonomy ＝ 经典 CF 终止歧义}（\text{终止点平凡}）;\ \text{有限层无 holonomy};\ \text{且 Euclid 层与素数层}\ \textbf{唯一相容性＝互素（standing invariant）} ⟹ \text{仍 DEAD} ✓✓✓$$
+$$\qquad \textbf{结构性结论（不变）}：\text{自然的算术历史}\ \textbf{太刚性}，\ \text{不产生 obstruction}（\text{与}\ \text{`V209`}\ \text{同型}）✓✓$$
