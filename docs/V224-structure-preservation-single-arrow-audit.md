@@ -96,3 +96,16 @@ $$\textbf{(e)}\ \text{§6 残余与}\ \text{`V215`--`V217`}\ \text{的合流}\ \
 ✅ 净产出：① §6 续推落档（共轭类＋歧义消失＋障碍上移）✓✓✓；② ⭐⭐⭐ 张力定理（无甜点区）✓✓✓✓；
    ③ ⭐⭐⭐ 命题 V224-A（不可内证；两条理由穷尽）✓✓✓；④ Case I/II 具体例 ✓✓；⑤ 判词＋残余合流 ✓✓
 ```
+
+---
+
+## §8 ⚠️ 两处修正 ＋ 判词改写（唐先生 2026-09-15 16:19；由 `V225` 执行）
+
+$$\textbf{T10（Case II 盲性需条件）}：\text{§3 的 Case II}\ \text{仅}\ \exists g\ \text{非平凡对合}\ \textbf{不足} \text{以断言盲性} ✓✓✓$$
+$$\qquad \text{还须存在保持所有}\ X\text{-可见结构}\ h\ \text{使}\ h^{-1}J_Xh=g（J_X\ \text{与}\ g\ \text{在}\ \mathrm{Aut}\ \text{中共轭}）⟹ \text{"有非平凡对合"}\ \text{仅}\ \textbf{潜在盲性} ✓✓$$
+$$\qquad \text{正确表述}：\textbf{盲性}\iff J_X\ \text{在}\ \mathrm{Aut}(\mathcal A_X)\ \text{作用下的轨道非平凡} ✓$$
+$$\textbf{T11（§4}\ (\beta)\ \text{非穷尽性）}：\text{"唯一可用信息是 FE"}\ \text{是}\ \textbf{结构性判断，非定理} ⟹ \text{§4 的 V224-A}\ \textbf{降级} \text{为条件性} ✓✓✓$$
+$$\qquad \text{存在逻辑可能}：X\overset{\textbf{内部定理}}{\to}P_X\overset{\textbf{恒等性}}{\to}J_X\in\mathrm{Aut}(\mathcal A_X)，\ P_X\ \textbf{不含}\ 1-s/\xi/Z(\xi) ⟹ \textbf{非循环};\ \text{若存在则}\ \textbf{即 RH 的新证明} ✓✓$$
+$$\textbf{判词改写（逐字采纳）}：\qquad \boxed{\textbf{V224：保持性机制已封，但"结构保持不可内证"尚未成为定理}} ✓✓✓$$
+$$\qquad \text{已严格证明}：\text{刚性保持}\Rightarrow\text{RH};\quad \text{仅有丰富自同构}\not\Rightarrow\text{RH};\quad \textbf{尚未证明}：\text{任何纯}\ X\text{-语言都无法产生保持性} ✓✓$$
+$$\qquad ⚠️\ \text{V225}\ \text{已把}"尚未证明"补为\textbf{接口定理}（选项 1 排除）✓✓$$
