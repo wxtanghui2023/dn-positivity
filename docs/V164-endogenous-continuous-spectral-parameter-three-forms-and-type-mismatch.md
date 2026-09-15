@@ -86,3 +86,13 @@ $$\text{`CLOSED-ROUTES-MAP` §F.5z 增补 ✓}：\text{三形态行 ＋ FSC 推�
 ✅ 净产出：① 三形态穷尽 ✓✓；② FSC 推广（有限数据双出口封闭）✓✓；③ 陈述类型分离 ✓✓；
    ④ 四例"陈述类型不匹配"元规律（＋诊断用法）✓✓；⑤ 残余＝条件 5（类型层）✓
 ```
+
+---
+
+## §7 ⚠️ ERRATUM（T10 勘误 · 唐先生 2026-09-15 11:10 ✓）
+
+$$\textbf{降级 ✓✓}：\text{本档 §5 的四例"陈述类型不匹配"及其结论}\ \boxed{\text{RH 及相关命题是全局缺席型；全部可行候选机制是局部存在／选择型}}\ \textbf{不能作为定理} ✗✓$$
+$$\qquad\textbf{理由 ✓（唐先生逐字）}：\text{存在完全可能的}\textbf{全局结构命题}\ \forall x\,P(x)\ ✓,\ \text{其证明机制}\textbf{本身也可以是一个真正的全局结构定理},\ \textbf{而不需要}\text{先从局部存在出发} ✓✓$$
+$$\qquad\Longrightarrow\ \text{正式版本}\ ✓：\boxed{\textbf{诊断假设 H}：\text{当前}\textbf{已审计}\text{候选主要输出局部生成／选择信息，而 C6.6 要求全局谱同一性}}\ ✓$$
+$$\qquad\Longrightarrow\ \text{性质}\ ✓：\textbf{经验性元规律}（\text{诊断启发式}）,\ \textbf{非定理} ✗;\ \text{与 }V136/V144\ \text{"未找到"}\neq\text{"不存在"}\ \text{同型纪律} ✓$$
+$$\qquad\Longrightarrow\ \text{§5 表可继续使用，但}\textbf{必须标注}"经验性" ✓（\text{已固化为 }V165\ \text{工具卡}）$$

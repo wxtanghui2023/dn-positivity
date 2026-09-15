@@ -411,6 +411,19 @@ $$\textbf{⭐ 陈述类型分离}：\text{条件 1–4}＝\textbf{局部生成�
 $$\textbf{⭐⭐ 元规律：四例"陈述类型不匹配"}：V148（局部\textbf{选择} vs RH＝ι 无自由轨道／缺席型）; V152（\textbf{语法} β-free vs \textbf{语义} β-信息最大）; V153（\textbf{∃-信息} vs \textbf{λ-信息}）; V164（\textbf{局部生成} vs \textbf{全局同一}）⟹ \boxed{\text{四例同源}：\text{RH 及其相关命题是}\textbf{全局缺席型}，\text{而全部可行候选机制是}\textbf{局部存在／选择型}}（\textbf{[结构性]} 归纳，非定理）;\ \text{诊断用法：新提案先问"输出的是【局部存在】还是【全局缺席】？"}$$
 $$\qquad\textbf{下一步三选}：①\ \text{攻条件 5 的}\textbf{类型}（\text{能否证"全局同一性}\Rightarrow\text{必经 ζ 全局结构"＝类型定理）};\ ②\ \text{把四例元规律写成}\textbf{诊断工具卡}（与 }V163\ \text{同层）};\ ③\ \text{审 §2 三形态穷尽能否形式化} ✓$$
 
+$$\textbf{⚠️ ERRATUM（T10 · 唐先生 2026-09-15 11:10 ✓）}：\text{上节四例"陈述类型不匹配"的结论}\ \boxed{\text{RH 及相关命题是全局缺席型；全部可行候选机制是局部存在／选择型}}\ \textbf{不得作定理} ✗✓\ \text{—— 理由：存在}\textbf{全局结构命题}\ \forall x\,P(x)\ \text{其证明机制本身可以是}\textbf{真正的全局结构定理}，\textbf{不必}\text{先经局部存在}。\ \text{正式版本}\ \boxed{\textbf{诊断假设 H}：\text{当前已审计候选主要输出局部生成／选择信息，而 C6.6 要求全局谱同一性}\ \（\textbf{经验性},\ \textbf{非定理}）$$
+
+### F.5aa ⭐⭐⭐⭐ **陈述类型不匹配诊断卡（工具卡，基础设施）**（`V165` ✓ 2026-09-15 11:10）
+
+$$\text{核心筛子}：\boxed{\operatorname{Type}(P)=(\text{信息域},\text{量词结构},\text{对象范围},\text{输出对象})}\ \text{新候选先做四项审计}$$
+$$\textbf{T1 局部／全局}：\text{机制只处理有限阶段／单个局部对象}\（M_n\to a_n）\ \text{而目标要求}\ \forall n\,P(a_n)\ \text{或整个 }X\ \text{满足 }P ⟹ \text{必须明确指出}\textbf{局部}\to\textbf{全局的桥梁};\ \text{无桥梁} ⟹ \boxed{\text{LOCAL}\not\Rightarrow\text{GLOBAL}}$$
+$$\textbf{T2 存在／定位}：\exists a\,R(a)\ \text{只证"有东西"};\ \lambda=\Lambda(M)\ \text{须给}\textbf{身份／位置} ⟹ \boxed{\exists\text{-information}\not\Rightarrow\lambda\text{-information}}（=V153\ \text{核心筛子}）$$
+$$\textbf{T3 生成／同一}：\Lambda_M=\{\lambda_n\}\ \text{vs}\ \Lambda_M=Z_\zeta-\tfrac12 ⟹ \boxed{\text{generation}\neq\text{identification}};\ \textbf{即使}\ N_{\Lambda_M}(T)=N_\zeta(T)\ \textbf{仍不足}\text{以得 }\Lambda_M=Z_\zeta-\tfrac12$$
+$$\textbf{T4 语法／语义}：\boxed{\text{syntactic absence}\neq\text{semantic absence}}（\text{Robin 语法 β-free、语义最大}）⟹ \textbf{不得}\text{用"形式上没有 }\rho,\beta\text{"作为}\textbf{非循环性}\text{的证明}$$
+$$\text{压缩筛子（4 维：范围 LOCAL/GLOBAL｜量词 }\exists/\forall\text{｜输出 GENERATION/IDENTIFICATION｜表述 SYNTACTIC/SEMANTIC）}；\ \text{三处断裂}\ \boxed{\text{LOCAL}\to\text{GLOBAL},\ \exists\to\text{LOCATION},\ \text{GENERATION}\to\text{IDENTIFICATION}}\ \Longrightarrow\ \text{必须提供}\textbf{额外定理},\ \text{否则}\ \boxed{\text{TYPE-MISMATCH / STOP}}（\text{而非继续堆计算}）$$
+$$\text{今晚干净结论四行}：V161\ \text{有限组合}\Rightarrow\text{FSC-DEAD}｜V162\ \text{Weyl count 本身不承重}｜V164\ \text{内生连续参数仍不足以识别 ζ}｜V165\ \boxed{\text{generation}\not\Rightarrow\text{identification}}$$
+$$\qquad\textbf{下一刀 ＝ ①}：\boxed{\text{"全局同一性是否必然需要 ζ 的全局结构？"}}\ \text{可证} ⟹ \textbf{C6 真正封口};\ \text{打不出} ⟹ \text{停止"收窄"，转而}\textbf{主动构造反例性全局结构}\ \mathfrak S_\zeta$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
