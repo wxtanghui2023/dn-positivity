@@ -810,6 +810,28 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步**：V189 ＝ ① → ③ 已完成（三筛固化 ＋ 普查收束）；**不再立即攻第四类**。
 
+### F.5ay ⭐⭐⭐⭐⭐ **受约束外部搜索（F3／F1／F2 预筛）：发现 F3 之外的具名通道 S ＝ 稳定性／全正性 ⟹ ALIVE（不封）**（`V190` ✓ 2026-09-15 13:04）
+
+**委托（唐先生）**：**"有了这些前提条件和约束后，再搜索一次所有的物理和数学模型，看看有没有适配我们研究的"** ⟹ 方法改为**用 `V189` 三筛预筛**（F3 归类 → F1 判断独立信息 → F2 判断层级），凡回归 linear／quadratic／pointwise 即停。
+
+**① 找到并判定通道 S（ALIVE，不封）** —— **稳定性／全正性**（hyperbolicity／LP-class／TP-PF），**F3 "other" 的首个具名占位者**。**F1 通过**（见下）；**F2 不适用**（缺口按 $(d,n)$ 指标化，**不是** $T$ 的涨落尺度）。
+
+**⭐ F1：独立信息 ＝ 支撑级（本档核心判断）**：**Bochner**（二次型通道）$f$ 正定 $\Longleftrightarrow$ $f$ 是 $\mathbb R$ 上**正测度的傅里叶变换** —— **对支撑无限制**；**Schoenberg**（本通道）$f$ 全正／Pólya 频率 $\Longleftrightarrow$ $f$ 是 $\mathbb R_{\ge0}$（**半直线**）上正测度的拉普拉斯变换 —— **支撑被限制在一侧**。⟹ $$\boxed{\text{该通道比二次型通道}\ \textbf{严格更强}：\text{它把}\ \textbf{支撑信息}\ \text{编码进去}}$$ 而支撑信息正是 F1 说"线性统计量**不能直接分辨**"的那一类 ⟹ **F1 通过** ✓✓✓（现代等价形式：变差缩减 variation diminishing／**全子式非负** —— 非有限阶、非二次型）。
+
+**② 关键事实链与近期真进展**：**Pólya (1927)**：$(-1+4z^2)\Lambda(\frac12+z)=\sum_{n\ge0}\frac{\gamma(n)}{n!}z^{2n}$，$J_\gamma^{d,n}(x)=\sum_{j=0}^{d}\binom dj\gamma(n+j)x^j$ ⟹ $$\boxed{\text{RH}\ \Longleftrightarrow\ \textbf{全部}\ J_\gamma^{d,n}\ \text{双曲（全实根）}}$$ **Griffin–Ono–Rolen–Zagier（PNAS 2019，arXiv:1902.07321，被引 180+）**：(i) 对**每个** $d\ge1$ 存在 $N(d)$ 使 $n\ge N(d)$ 时双曲 ✓（"高 $n$ 全成立"）(ii) 对 $1\le d\le8$ **全部** $n\ge0$ 双曲 ✓（此前最好 $d\le3$）(iii) 方法：重正化 Jensen 多项式 $\to$ **Hermite 多项式** $H_d$ ⟹ 大 $n$ 双曲 (iv) 数值：$d\le10^{20}$ 双曲 (v) 作者自述**未发明新技术**，只是**复活了 Jensen–Pólya 这条被认为已死的路线**。同通道经典：Csordas–Norfolk–Varga（Turán 不等式；解 Pólya 58 年问题，对应 $d=2$）｜Newman／Cardon（Fourier transforms with only real zeros）。
+
+**③ ⭐⭐ 缺口结构与新轴**：RH ⟺ 所有 $(d,n)$ 无例外；已知**高 $n$ 全成立**（所有 $d$）＋**小 $d$ 全成立**（$d\le8$，全部 $n$）⟹ 缺口 ＝ **中等／大 $d$ 且小 $n$ 的例外集**；⚠️ **对每个 $d$ 只有有限多 $n$ 例外** ⟹ 缺口是"**每度有限的例外集族**"，**不是渐近墙** ⟹ F2 三层阶梯**不适用**，本通道有**自己的缺口几何（$d$ vs $n$）** ✓✓。
+
+**④ 同通道现代工具与一刀**：**(a) Borcea–Brändén** 稳定性保持算子分类（用**算子 symbol** 判保稳定／保实根）⟹ 可用于构造或否定保持算子 ✓。**(b)** ⚠️ **Belton–Guillot–Khare–Putinar（2021/22）**：在无限全序集上（存在 TP$_2$ 核时）**TP 保持算子只有正齐次（positive homothety）** ⟹ **一刀**：若坚持**无限阶全正**保持算子，则保持类过窄（只有缩放）⟹ **该子通道不可用** ⟹ 要用的应是**稳定性（hyperbolicity）保持算子**（Borcea–Brändén，类很丰富），**而非**无限阶 TP 保持算子。
+
+**⑤ 其余候选**：**2026 综述** arXiv:2602.04022（《The Riemann Hypothesis: Past, Present and a Letter to Riemann》）的原创贡献是**极值化 Weil 二次型**逼近零点 ⟹ **二次型通道 ⟹ 回归，关闭**（仅登记）。**Pólya–Schur–Lax（AIM 2007）** ⟹ 领域地图。**Newman／Cardon、Csordas–Norfolk–Varga** ⟹ 通道 S 工具。
+
+**⑥ 三条风险（必须随本档携带）**：**(R-a)** Pólya 1927 是 **RH 等价改写** ⟹ 按 `V149` 教训，**等价改写不自动带来新输入**；**(R-b)** 正面判断（独立信息＝支撑级）**尚未证明能被无条件确立** —— **携带独立信息 ≠ 能被无条件确立**；**(R-c)** 缺口（中等 $d$、小 $n$）与**低零点／小高度**可能**同源** ⟹ 可能隐藏同一核心难点。
+
+**⭐ R1 所要求的回答**：$$\boxed{\text{它携带的独立信息}\ =\ \textbf{支撑级信息}：\text{根集落在实轴上}\Longleftrightarrow\text{表示测度的支撑被限制在一侧／实轴}\ ——\ \text{严格强于"正定"}}$$
+
+**下一步（V191 预登记，二选，均须先过 R1）**：① **结构性**：证明"中等 $d$、小 $n$ 例外集为空"需要**何量级输入**？（等价于低零点／Weil 正性 ⟹ 封；否则这是**第一个定位在 $(d,n)$ 轴上的新缺口**）② **构造性**：用 **Borcea–Brändén symbol 判据**构造**算术可实现**的稳定性保持算子，把"已知实根"起点推向 $\xi$（⚠️ 若把目标写进 symbol 即走私 ⟹ 按 `V188` 判据自检）。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
