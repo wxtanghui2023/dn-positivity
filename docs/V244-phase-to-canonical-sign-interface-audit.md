@@ -10,7 +10,10 @@
 
 $$\textbf{强化一（定理级）}：\text{evenization 是}\ \textbf{普适算子} \text{—— 论文自己证明：}\boxed{f(u)\mapsto\exp\big((\log f(u))_{\rm even}\big)}\ \text{对}\ \textbf{任意可逆形式幂级数} \text{都可用} ✓✓✓$$
 $$\qquad ⟹ \text{所以}\ \Xi_P(-u)=\Xi_P(u)\ \textbf{不是} \text{发现了 }\zeta\text{ 的功能方程},\ \text{而是}\ \textbf{一个对一切可逆形式级数都成立的构造} ⟹ \textbf{FE 声明在定理级被否} ✓✓✓$$
-$$\qquad ⚠️\ \text{本档标注}：\text{该句引自}\ \textbf{唐先生对 §10 的阅读};\ \text{我方读的是 §10 的标题与结构}（\text{“Odd–Even Decomposition of Formal Series”／“Evenization via Exponential Correction”／“Formal Functional Symmetry”}）⟹ \textbf{待原文逐行核} ⚠️$$
+$$\qquad ⭐⭐\ \textbf{已核原文（本档追加）}：\ \textbf{Theorem 10.3（Existence and uniqueness of evenization）}：\text{“For }\textbf{any invertible formal power series}\ Z(u)\in R\text{, there exists a unique pair }(\Xi(u),O(u))\text{ such that: (1) }\Xi(u)\ \text{is an even invertible formal power series, (2) }O(u)\ \text{is an odd formal power series, (3) }Z(u)=\Xi(u)\exp(O(u))\text{.”} ✓✓✓$$
+$$\qquad \qquad \text{其中}\ \mathcal E(Z)(u):=Z(u)\exp\big(-(\log Z(u))_{\rm odd}\big)\ \text{（Def 10.2）};\ \text{而}\ \S10\ \textbf{开篇自述}：\text{“This construction }\textbf{replaces}\text{ analytic continuation and Gamma factors by an explicit algebraic normalization that }\textbf{enforces}\text{ a reflection symmetry.”} ✓✓✓$$
+$$\qquad \Longrightarrow \textbf{定理级确认}：\Xi^{\rm for}(-u)=\Xi^{\rm for}(u)\ \text{是}\ \textbf{一条普适代数引理}（\text{对任意可逆形式级数成立}）\ \text{作用的结果} ⟹ \text{它}\ \textbf{不可能} \text{是 }\zeta\text{ 功能方程的证据};\ \text{且原文自认该对称是}\ \textbf{enforced by construction} ✓✓✓$$
+$$\qquad \qquad ⚠️\ \text{§3 亦已核：}T=\tfrac12+u\ \text{（Def 3.3）};\ \S4\ \text{Def 4.1／4.2：}(\log\zeta)_{\rm odd}:=a_1u+a_3u^3+\cdots,\ H(u):=\exp(-(\log\zeta)_{\rm odd}),\ \xi^{\rm for}(u):=H(u)\zeta^{\rm for}(\tfrac12+u),\ \text{再出 Theorem 4.3} ✓$$
 $$\textbf{强化二（$1/2$ 的来源）}：\text{论文取}\ T=\tfrac12+u\ \text{后作偶化} ⟹ \boxed{\tfrac12\ \text{是}\ \textbf{预先选入的中心},\ \text{不是由算术机制产生}} ✓✓✓$$
 $$\qquad ⟹ \text{与本项目}\ \textbf{`V218`}（\text{可产生}\ 1/2\ \text{的三种来源};\ \text{H0 为假}）＋\textbf{`V231`}（\text{对称性单独不能产生临界线}）＋\textbf{`V215`(c)}（\text{钉到坐标值须 archimedean 归一化）} \text{完全同型} ✓✓$$
 $$\textbf{强化三（cumulant）}：\text{“Gaussian leading term”}＝\text{取}\ a_2(P)\ \text{作}\ \sigma(P)^2\ \text{再令}\ u\mapsto u/\sigma(P) ⟹ \boxed{\text{先取二阶系数、再用二阶系数归一化}} ✓✓$$
@@ -105,4 +108,4 @@ $$\boxed{\textbf{V244：}U(1)\text{-phase}\to\text{canonical sign 接口的}\ \t
 $$\qquad ⭐\ \textbf{唯一同时满足三项的只有 (VIII)，而它正是循环项} ⟹ \textbf{这就是“seven-class 之外没有第八类”的原因} ✓✓✓$$
 $$\qquad \textbf{残差（UNINSTANTIATED）}：\text{一个}\ canonical\ \text{的}\ phase\to sign\ \text{操作},\ \text{其障碍}\ \textbf{非 Brauer 型}、\ \text{产出}\ \textbf{定号形式}（\text{非离散 }\pm1）\ \text{且编码实部};\ \textbf{本档未见实例} ✓$$
 $$\qquad \text{逃逸判据（若将来出现）}：①\ \text{canonical（不依赖 }\rho／\xi／\text{FE 的坐标选择}）；②\ \text{障碍}\ \notin\mathrm{Br}/\mu_N;\ ③\ \text{输出为定号而非离散符号};\ ④\ \text{定号确实编码}\ \Re\rho-\tfrac12;\ ⑤\ \text{不落 (1)–(8)／I–VIII} ✓$$
-$$\qquad \textbf{边界}：\text{§1 强化一（evenization 普适性）}\ \textbf{引自唐先生对 §10 的阅读}，\text{我方}\ \textbf{待原文逐行核} ⚠️;\ \text{§3 I–VIII 为}\ \textbf{[结构性] 枚举}，\textbf{不是不可能性定理};\ \text{§2 三分法为唐先生提出、本档采纳};\ \text{§4 的“枚举完备”}\ \textbf{未证};\ \text{§5 为结构性论证};\ \text{未用 RH 作推导};\ \text{未跑 Lean};\ \textbf{零数值} ✓$$
+$$\qquad \textbf{边界}：\text{§1 强化一（evenization 普适性）}\ \textbf{已核原文}\ \text{Theorem 10.3 ＋ §10 开篇自述} ✓✓\（\text{定理级}）;\ \text{§3 I–VIII 为}\ \textbf{[结构性] 枚举}，\textbf{不是不可能性定理};\ \text{§2 三分法为唐先生提出、本档采纳};\ \text{§4 的“枚举完备”}\ \textbf{未证};\ \text{§5 为结构性论证};\ \text{未用 RH 作推导};\ \text{未跑 Lean};\ \textbf{零数值} ✓$$
