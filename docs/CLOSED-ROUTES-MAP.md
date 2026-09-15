@@ -1066,6 +1066,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§5 与 `V202` §4 的**同形观察**（模式，非定理）**：`V202` §4 ＝ 大筛法有效区间（$Q\gtrsim\sqrt N$）与 FUP 稀疏需求（$Q\ll\sqrt N$）**相反**；本档 §3 ＝ 交换生于 $\mathbb R$／乘积律生于有限位 **不相交** ⟹ 两档同形：**两个必要条件落在相反区域** ⟹ **层诊断（`V144`）第三次以不同面貌出现** ✓✓（**模式识别，非定理**）。
 
+### F.5bm ⭐⭐⭐⭐⭐ **V204：Arithmetic Spectral-Flow／Index Audit（三步）⟹ 三步全 DEAD，第三步**自败**（对称给的是盲性）**（`V204` ✓ 2026-09-15 13:58）
+
+**委托（唐先生）**：**「继续找'模型发动机'，而不是继续在已经关闭的路线里优化。」** 新候选 ＝ **同伦谱流／index transport**：$$\boxed{\text{局部连续变形}\to\text{谱流整数}\to\text{全局不可改变}}$$ **入口（更严）**：**第一阶段甚至不允许出现 $\zeta,\rho,\gamma,\beta$**；先答纯数学问题 $$\boxed{\text{素数局部数据能否产生一个非平凡、非 Brauer、非 explicit-formula 的}\ K_1／\text{index 类}？}$$ **「如果答案是 0、旧 torsion、Euler-characteristic 重写或 argument principle，立即死。」** 三步：**A** 纯算术 index；**B** 双参数闭环（$\operatorname{SF}(\Gamma)=\sum_{\rm local}\nu_i$，**不得**是已存在的 global explicit formula）；**C** 固定集（$\exists J,J^2=1$，$\nu(J\Gamma)=-\nu(\Gamma)$；若又 $J\Gamma\simeq\Gamma$ ⟹ $\nu=0$）。**致命风险（先写死）**：若 $\nu(\Gamma)=\frac{1}{2\pi i}\oint_\Gamma\frac{\zeta'(s)}{\zeta(s)}ds$ ⟹ **立即关闭**；若 $\nu=$ Li／Weil 正性 ⟹ 关闭。
+
+**§1 引擎确认真实**：$\operatorname{SF}(A_t)\in\mathbb Z$；同伦不变；$K_1$ pairing；**可加记账律** $\operatorname{SF}(A_{t_0},A_{t_m})=\sum_j\operatorname{SF}(A_{t_j},A_{t_{j+1}})$；闭环 $A_0=A_1\Rightarrow\operatorname{SF}(\Gamma)=0$（除非不可去除谱奇点）⟹ 「整数加法守恒」代替 `V202` 的"乘法放大" ✓✓
+
+**⭐ §2 V204-A（本阶段禁用 $\zeta,\rho,\gamma,\beta$）：DEAD** —— **候选 1（局部数据参数族）**：$\zeta$ 的局部因子为 $(1-p^{-s})^{-1}\Rightarrow$ $$\boxed{a_p\equiv1\ \forall p}$$ ⟹ 由 $\{a_p\}$ 构造的族**在 $p$ 方向是常族** ⟹ **无穿越** ⟹ $$\boxed{\operatorname{SF}=0}$$ ⭐ **失败点精确定位**：**不是"算术 index 不存在"，而是"$\zeta$ 的局部数据无变化 $\Rightarrow$ 任何由它构造的族是常族 $\Rightarrow$ index 平凡"** ✓✓✓；**候选 2（Euler-characteristic 型）**：加性、对自对偶复合体恒为 0 ⟹ 命中预设；**候选 3（Brauer／Galois／旧上闭链）**：$K$-类落在 $\mathrm{Br}[N]／H^1／H^2$ ⟹ 命中预设；**候选 4（Hecke／移位算子族 $K_1$）**：确有非平凡 index，**但对应其他 $L$-函数**，对 $a_p\equiv1$ 者**回到候选 1** ⟹ $\operatorname{SF}=0$。⟹ 四候选分别命中"零／Euler-characteristic／旧 torsion／回到零" ✓✓✓
+
+**§3 V204-B：DEAD** —— 闭环的**闭合**必须由**全局算术**提供；canonical 闭合 ＝ 沿 $u=p$（局部／Euler）与 $v=\infty$（scale／archimedean）走一圈，其相消由**乘积公式**给出 ⟹ ⚠️ 而 **`V196` §3.1 已算出该 cocycle 恒为 0**（加法上闭链；$\{\log p\}$ $\mathbb Q$-线性无关 ⟹ 格自由）⟹ $$\boxed{\nu(\Gamma)=0}$$ ⚠️ 若改用**非平凡**全局闭合 ⟹ 那正是**显式公式** ⟹ 命中致命风险 ⟹ DEAD。⭐ 注：此处**复用** `V196` 的**实算结果**，**不回** `V198` 门（属跨线收敛）✓✓
+
+**⭐ §4 V204-C：自败** —— 设 $J^2=1$（功能方程对合 $s\leftrightarrow1-s$ 即为其一）；取 $J$-对称回路（$J\Gamma\simeq\Gamma$）⟹ $\nu(J\Gamma)=-\nu(\Gamma)\Rightarrow\boxed{\nu(\Gamma)=0}$ ⚠️ **但这不是刚性，而是盲性**：对**任何** $J$-对称回路 $\nu=0$，**与配置无关** ⟹ index **对离轴配置完全盲** ⟹ **不可能**用它排除离轴配置；要产生内容必须把 $\nu$ 与配置连起来 ⟹ 唯一连接是 **argument principle**（$\zeta'/\zeta$）⟹ 命中预设致命风险 ⟹ DEAD ✓✓✓。**⭐⭐ 二分宣告（本档最强结论）**：$$\text{对称（}J^2=1\ \text{可用）}\Rightarrow\boxed{\text{盲}};\qquad \text{非对称}\Rightarrow\boxed{\text{失去唯一的算术对合}}\Rightarrow\text{无结构可用}$$ 两条路**互斥** ⟹ **"对称性＋拓扑守恒"作为发动机在算术中无法启动** ✓✓✓ ⭐ 与 `V187` §2 同形（"index／signature 型不变量对离轴对结构性盲"）—— 在**谱流语言中第二次独立复现** ✓✓
+
+**§5 判词与前置问题答案**：$$\boxed{\textbf{V204：三步全 DEAD}}$$（A 常族／index 平凡；B 乘积公式闭合 ＝0；C 对称 ⟹ 盲）⟹ **前置问题（纯数学）答案 ＝ 不能（canonical 构造内）**，失败点 ＝ **"$\zeta$ 的局部数据无变化（$a_p\equiv1$）"**；⚠️ 范围 ＝ canonical 构造，**不**声称"算术 index 不存在"（其他 $L$-函数确有非平凡族）。**根因（模式）**：$\zeta$ 的**有限层无变化** ⟹ 既无变族（A）也无相位（`V144`）也无交换（`V203`）；**阿基米德层是单个位** ⟹ 无回路（B）也无乘性分裂（`V203`）⟹ **`V144` 层诊断第四次以不同面貌出现**（`V200` 组合／`V202` 双局域化／`V203` 交换／`V204` index）✓✓
+
+**§6 重开三条件 ＋ 互斥宣告**：$$\boxed{(1)\ \text{局部数据必须有非平凡变化};\ (2)\ \text{闭环不得经过乘积公式／显式公式};\ (3)\ \text{index 不得在}\ J\text{-对称下恒为 0}}$$ ⚠️ ⭐ **互斥**：本档 §4 已证 (3) 与"使用算术对合 $J$"**逻辑互斥** —— 用 $J$ 对称化则 $\nu$ 必为 0；不用 $J$ 则**失去唯一的算术对合** ⟹ 重开须给出**新的算术对合**（非功能方程）或**非对合型守恒量**；⚠️ 若 $\nu$ 最终 ＝ $\zeta'/\zeta$／Li／Weil ⟹ **立即 DEAD**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
