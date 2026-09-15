@@ -1246,6 +1246,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§5 判词**：$$\boxed{\textbf{V213：第一非平凡例子构造不出来} \Longrightarrow \textbf{判死}（\text{不再包装为候选}）}$$ 四条理由：(i) 模板不闭合／修复前提被 `V148` 排除；(ii) 八类来源全部在构造阶段失败；(iii) per-zero 构造必用 $\xi$ 内部数据 ⟹ 落 `V212` 三通道；(iv) **重数定理**：任何内部 $X$ 探 $\beta$ 只能给比例界（上盖 $0.6818287$）。**残余（UNINSTANTIATED）**：收敛到**同一个 slot** —— `V160` §5／`V166` B4／`V171`／`V193`／`V212` 的 **"$\zeta$ 的非零点刻画／识别箭头"** ✓✓✓
 
+### F.5bw ⭐⭐⭐⭐⭐ ⚠️**三处勘误（`V215`／唐先生 15:20）**：**T10** §2 软化（$\ker S\ne0$ 只说明存在公共根；"kernel"$\ne$"自伴谱"，仅当 $S$ 被赋予谱结构才可用谱审计；不改 DEAD）；**T11** §5 的 Hamburger 链**全链撤回**（FE 不足以唯一化 $\zeta$；反例 $F=\xi\cdot H$）；**T12** 判词改写为「**纯消元／结果式路线封死**」，**不得**写成"所有 resultant 都必为 $\xi$ 的代数消元"，应写成「resultant 本身只能提供公共根的消元条件，它没有产生新的 $\beta$-约束」。**正确收口**改由 `V215` §2：Hadamard $+$ FE $\Longrightarrow R_X=c\,\xi$（且只给"同一零集"、不给 RH）。
+
 ### F.5bw ⭐⭐⭐⭐⭐ **V214：识别箭头的完备消元审计 ⟹ 结果式＝行列式 ⟹ 谱条件；匹配 ζ 的 FE 数据 ⟹ Hamburger ⟹ 即 ζ ⟹ 循环 ⟹ "识别箭头" slot 封死**（`V214` ✓ 2026-09-15 15:16）
 
 **委托（唐先生）**：**「V213 的判死我接受……最重要的是残余空间已经发生了质变。」** 不能再沿 $\zeta\to X\to\beta=0$ 制造 $X$（内部派生物只能获得 $\gamma$／对合／重数／显式公式信息）；**⚠️ 纠正 V213 §4**（"任何内部 $X$ 探测 $\beta$ 必须探测重数"不是已证普遍定理；否则成为新的过强分类假设）⟹ V213 硬核结论压缩为 $$\boxed{\text{同一零集内部的自然构造，目前没有产生独立}\ \beta\ \text{坐标的实例}}$$ 新任务：审计识别箭头 $\mathcal A_{\mathbb P}\to X\to\{\rho\}$ 的**逻辑类型**（等式｜谱映射｜零点因子分解｜计数映射｜**代数消元**｜动力系统编码）；**"真正尚未被直接打掉的，是消元／结果式这一类"**：$$\boxed{X\ \text{不含}\ \rho\ \overset{\text{独立方程组}}{\Longrightarrow}\ \operatorname{Res}_u(F_X,G_X)}$$ **七步审计**；**元结论（若封死）**：$$\boxed{\text{任何 RH 证明若不引入全新的外部数学对象，就无法突破当前整个机制族}}$$
@@ -1263,6 +1265,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 **§6 判词**：$$\boxed{\textbf{V214：DEAD} —— \text{所有 resultant 都只是已知对象的代数消元}}$$ 两条定理级理由：(A) 结果式＝Sylvester／Fredholm 行列式 ⟹ **谱／核条件** ⟹ `V192`／`V199`／`V204`；(B) 匹配 $\zeta$ 的 FE 数据 ⟹ **Hamburger** ⟹ 即 $\zeta$ ⟹ 循环；第三刀（计数判别式）、第四刀（FE ⟹ `V212`(c)／`V148`）⟹ $$\boxed{\textbf{"识别箭头" slot 封死}}$$（七步任务全部执行完）；范围＝消元／结果式这一类；未用 RH 作推导 ✓✓✓
 
 **§7 元结论**：$$\boxed{\text{任何 RH 证明若不引入}\textbf{全新的外部数学对象}，\text{就无法突破当前整个机制族}}$$ 依据：`V147`–`V214` 已覆盖 序／选择、局部约束／传播、有限→无限、cocycle、index、卷积／混合代数、scale／RG、rewriting、positivity、FUP／localization、inverse spectral、显式公式／Li／Weil、**消元／resultant** ✓ ⚠️ 标签：**结构性元结论**（对已审计机制族），**非定理**；其精确形式即 `V212` §4 的**单对象／单位结构**；⭐ 故下一步若要继续，**唯一合法形态**：引入**全新的外部数学对象**（非 $\xi$ 的派生物）并提供**识别定理** ✓✓
+
+### F.5bx ⭐⭐⭐⭐⭐ **V215：独立对象 $X$ 携带 $\beta$ 的"最小结构"分类审计 ⟹ 三型接口全封 ⟹ 可推出"为什么现有语言无法提供"**（`V215` ✓ 2026-09-15 15:20）
+
+**委托（唐先生）**：接受 V214 主结论，但**硬伤须立即纠正**：(1) §2 软化 —— $$\boxed{\text{resultant 的有限维实现没有逃离 }\det／\ker;\ \textbf{但 kernel}\ne\textbf{自伴谱}}$$（$\operatorname{Res}=0\iff\ker S\ne0$ 只说明存在公共根；仅当 $S$ 被赋予谱结构才可继续用谱审计；"不改 DEAD，只是避免过度封口"）；(2) **§5 Hamburger 链撤回** —— $$\boxed{\text{FE alone}\not\Rightarrow\text{uniqueness of }\zeta}$$（还需 Dirichlet 级数结构、系数条件、解析性／增长、归一化；反例 $F=\xi\cdot H$）；(3) **正确收口（用户给出）**：由 **Hadamard**：$$\boxed{Z(R_X)=Z(\xi)\Longrightarrow R_X=e^{g}\xi}$$（"这比 Hamburger 更精确"）；(4) **新分叉**：$R_X=e^g\xi$ 只说明**同一零集**，**仍未得到 RH** ⟹ 真正需要的是 $$X\to R_X\to\textbf{独立几何／代数约束}\to\beta=0$$ **"V214 封掉的是：通过纯消元'识别 ζ 的零集'这一条路线；但没有严格封掉所有外部对象。"** (5) **更精确的残余**（$X$ 独立于 $\xi$／自身有定理 $T_X$／$T_X$ 对 $\beta$ 敏感／联系非显式公式、非谱重编码、非正性、非对合选择、非"先知道零点再构造"）；**最关键**：$$\boxed{\textbf{联系必须是双向识别，而不是单向编码}}$$ (6) **三步筛选器**（不知任何 $\rho$ 能否独立构造／$T_X$ 是否已成立于 $X$ 自身／$T_X\Rightarrow$ 关于 $\zeta$ 的什么精确命题）；(7) **判词改写**：$$\boxed{\textbf{V214-DEAD：纯消元／结果式路线封死}}$$ 应写成"resultant 本身只能提供公共根的消元条件；它没有产生新的 $\beta$-约束"；**最关键结论**：$$\boxed{\text{V147--V214 已不是"还没找到一种机制"}}$$ 而是 $$\boxed{\text{所有已审计的内部机制都不能制造新的 }\beta\text{-信息}}$$ 剩余问题压缩成：$$\boxed{\textbf{独立对象 }X+\textbf{独立于 }\zeta\textbf{ 的自身定理}+\textbf{非循环的识别定理}}$$ **下一轮应先问**：$$\boxed{\textbf{一个真正独立的 }X\textbf{，在数学上必须具有什么最小结构，才能携带 }\beta\textbf{ 而不等于零集重编码？}}$$
+
+**§1 三处勘误落档**：T10（§2 软化）、T11（§5 全部撤回；反例 $F=\xi H$）、T12（判词改写）✓✓✓
+
+**§2 三层分解 A／B／C ＋ C 层正确收口**：**A** $X\mapsto R_X$ ＝ $\det／$resultant 型；**B** 有限 ⟹ $Z(R_X)$ 有限（不够）；无限化须 $R_X=\det(I-K_X(s))$ ⟹ 须真正无限维 $K_X$；**⭐ C** 由 **Hadamard** 同阶同零集 ⟹ $R_X=e^g\xi$；阶／型条件 ⟹ $\deg g\le1$；并入 **FE**：$e^{as+b}\xi(s)=\pm e^{a(1-s)+b}\xi(s)\Rightarrow e^{as}=\pm e^{a(1-s)}\Rightarrow a=0$ ⟹ $$\boxed{R_X=c\,\xi}$$（匹配零集＋FE 者必为 $\xi$ 的常数倍；**假设远少于 Hamburger**）⚠️ **但这只说明同一零集，仍未得到 RH** ⟹ 故真正需要 $X\to R_X\to$**独立几何／代数约束**$\to\beta=0$ ✓✓✓
+
+**⭐ §3 最小结构要求 R1–R4**：$$\boxed{\text{(R1) 独立构造（不知任何 }\rho\text{）};\ \text{(R2) }T_X\text{ 已成立于 }X\text{ 自身};\ \text{(R3) 刚性强制（非"恰好相等"）};\ \text{(R4) 双向识别（非单向编码）}}$$ ⚠️ **R3 最易被偷工**；并加**反循环检查**（$\rho\to X_\rho\to X_\rho$ 有性质 $\to\rho$ 在线上 ＝ 把答案塞进 $X_\rho$ ⟹ 违反 R1／R4）✓✓
+
+**⭐⭐⭐ §4 $\beta$ 的"携带目标"只有三型，全部已封**：$$\begin{array}{c|l|l}\text{型} & \text{内容} & \text{落点}\\\hline \text{(a) 零点统计型} & N(T),\ \text{moments},\ \text{pair correlation} & \text{`V188` 饱和定理} ⟹ \textbf{单一来源}\ ✗\\ \text{(b) 特殊值／周期型} & \zeta(n),\ L\text{-值},\ \text{motivic／Drinfeld 周期} & \text{周期}\textbf{只看"取值面"、不看"零点面"}\ ✗\\ \text{(c) archimedean 完成化型} & \Gamma\ \text{因子、阶与型、}\xi & \text{`V171` §3-D ＋ `V144` 层诊断}\ ✗\\ \end{array}$$ ⟹ $$\boxed{\text{三型之外，}\zeta\ \textbf{没有任何 canonical 可寻址数据}}$$ ⚠️ 且三型**各自都是单对象管道**：**(a) 单源；(b) 面不对；(c) 单点（$\mathbb R$ 是唯一 archimedean 位）** ✓✓✓
+
+**⭐⭐⭐ §5 由此推出"为什么现有数学语言无法提供这个对象"**：由 R1／R4 ⟹ $X$ 必须经一条**双向识别**与 $\zeta$ 会合 ⟹ 会合处必是 $\zeta$ 的某条 canonical 管道；由 §4 ⟹ $\zeta$ 的 canonical 管道**恰只有三型且皆封** ⟹ $$\boxed{\text{不是"还没找到对象"，而是"}\zeta\ \text{只有三条可被独立对象会合的接口，且三条皆封"}}$$ ⭐ 与 `V212` 的关系：`V212` 说"**同一零集内**必落三通道"，本档说"**跨对象**也要经三接口" ⟹ **两者合起来才是完整图景** ✓✓✓
+
+**§6 三步筛选器固化**：① 不知任何 $\rho$ 能否独立构造？② $T_X$ 是否已成立于 $X$ 自身？③ $T_X\Rightarrow$ 关于 $\zeta$ 的什么**精确**命题？＋反循环检查 ✓
+
+**§7 判词与残余**：本档不判死新候选，而给出**最小结构＋接口分类**；**残余（UNINSTANTIATED）**：唯一未覆盖者 ＝ 一条**非 canonical 的双向识别接口**（判据：满足 R1–R4／不属于三型／可被独立陈述）；⚠️ 若日后仍无实例 ⟹ 可把 §5 升格为"**现有语言结构性不可能**"的候选表述（仍非定理）✓
 
 ## F.4 与 §E.4 的关系（✓）
 

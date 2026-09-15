@@ -104,3 +104,15 @@ $$\textbf{(e)}\ \text{§7 的元结论为}\ \textbf{结构性}，\ \textbf{非�
    ③ 计数判别式 ✓；④ FE 作用 ✓；⑤ Hamburger 定理级收口 ✓✓✓；⑥ 识别箭头 slot 封死 ✓✓✓；
    ⑦ 元结论 ✓✓；⑧ V213 §4 降级勘误 ✓✓
 ```
+
+---
+
+## §9 ⚠️ 三处勘误（唐先生 2026-09-15 15:20；随后由 `V215` 执行）
+
+**T10（§2 软化）**：$\operatorname{Res}=0\iff\ker S\ne0$ 只说明**存在公共根**；**"kernel" $\ne$ "自伴谱"** ⟹ 原表述"全部内容落进谱条件领地 $\Longrightarrow$ 落 `V192`"应软化为：**有限维实现没有逃离** $\det／\ker$；**仅当 $S$ 被赋予相应谱结构时**才可继续用谱审计。⚠️ 故 `V192` 的使用**需附加条件**；**不改 DEAD**，仅避免过度封口 ✓
+
+**T11（§5 全链撤回）**：撤回"匹配 FE 数据 $\to$ Hamburger $\to E\xi^m$"。理由：Hamburger 型唯一性**还需** Dirichlet 级数结构、系数条件、解析性／增长条件与归一化；且**反例** $F=\xi\cdot H$（$H$ 具适当对称性）保持同一 FE 对称而 $F\ne\xi$ ⟹ $$\boxed{\text{FE alone}\not\Rightarrow\text{uniqueness of }\zeta}$$
+
+**T12（判词改写）**：$$\boxed{\textbf{V214-DEAD：纯消元／结果式路线封死}}$$ ⚠️ **不得**写成"所有 resultant 都必为 $\xi$ 的代数消元"；应写成 $$\boxed{\text{resultant 本身只能提供公共根的消元条件；它没有产生新的 }\beta\text{-约束}}$$
+
+**⭐ 正确收口（改由 `V215` §2 给出）**：由 **Hadamard** $Z(R_X)=Z(\xi)\Longrightarrow R_X=e^g\xi$；再叠加 **FE** ⟹ $a=0$ ⟹ $R_X=c\,\xi$（**假设远少于 Hamburger**）。⚠️ 但**这只给"同一零集"，不给 RH** ✓
