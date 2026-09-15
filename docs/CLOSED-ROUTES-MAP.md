@@ -1591,6 +1591,8 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§10 残余精确形式**：$$\text{残余}\ =\ \text{canonical 泛函于}\ \mathcal U_{s_0}\big/\mathcal M\text{-像}$$ 两极端：$\mathcal M=\{Ce^{as}\}$ ⟹ 商＝"本质单位群" ⟹ 不变量＝零点集 ⟹ **R4**；$\mathcal M\supseteq\{1-am^{-s}\}$ ⟹ 有限阶无（V232-A）、无限阶**未证** ⟹ **下一步（唐先生指定）**：$$\boxed{\text{无限阶／非局部的乘子不变量，是否也因 Dirichlet 乘子群的作用而退化？}}$$ 若能封 ⟹ **整个 D3 路线真正死亡**；若封不掉 ⟹ 剩一条明确、此前未被 `V185`–`V231` 覆盖的窄通道 ✓✓
 
+### F.5co ⭐⭐⭐⭐⭐ ⚠️**§6 降级 ＋ §7 残余收窄（`V234`／唐先生 17:17）**：**"商空间只有四成分、无第五类"不能从 V233-A/B/C 单独推出**（需**额外分类定理**）⟹ 严格判词改为 $$\boxed{\text{不存在第三种\emph{乘子不变且携带}\ \beta\text{-location 的 Dirichlet 型局部结构}}$$ **不得**说"整个商范畴只有四个对象"。 另：**乘子 $Q_{a,m}$ 是整函数 ⟹ 零可移动性 \textbf{世界无关} ⟹ "离开 Dirichlet/完成化世界"本身不解决**；正确边界是**乘子前提**（`V234` §3）。
+
 ### F.5co ⭐⭐⭐⭐⭐ **V233：germ 商空间审计 ⟹ 命题 V233-A（$T_e\mathcal M=\mathfrak m$）＋ V233-B（单式乘子已足够）＋ V233-C（$\beta$-盲 ⟹ D3 整体 DEAD）**（`V233` ✓ 2026-09-15 17:13）
 
 **委托（唐先生）**：**"不能停在'无限阶可能存活'。真正应该审计的是整个 germ 商空间。"** 关键问题：$$\boxed{\mathcal M=\langle 1-am^{-s}\rangle}\ \text{对解析 germ 的作用是否已局部传递到足以把两个非零 germ 连起来？}$$ 若"是"，则 V232-A 升级为 $$\boxed{\textbf{解析 germ 层 no-go}}$$ (1) **群作用写法**：$\mathscr G_{s_0}=\{F:F(s_0)\ne0\}$，$\ell_F=\log F$，$F\mapsto FQ\iff\ell_F\mapsto\ell_F+\ell_Q$ ✓；(2) **关键计算**：$\log(1-ae^{-ws})=-\sum_{r\ge1}\frac{a^r}{r}e^{-rws}$，一阶 $=-e^{-ws}$ ⟹ 切空间含 $\{m^{-s}:m\ge2\}$ ✓；(3) ⚠️ **重要边界**：$\sum c_mm^{-s}$ 只是 Dirichlet 型，**不是任意解析 germ**（$e^{s^2}$ 反例）⟹ $$\boxed{\text{V232-A 不能直接升级为"所有解析 germ 被杀"}}$$；(4) 但 D3 的 $F_X$ 若来自算术 Dirichlet 结构则属 $\mathscr D$（Dirichlet 级数＋有限次完成化）⟹ $T_e\mathcal M\supseteq\{$无常数项 Dirichlet 多项式$\}$；(5) **无限阶压力测试**：$Q_\varepsilon=\prod_m(1-\varepsilon c_mm^{-s})$ ⟹ $$\boxed{DI_F[-FP]=0}$$ 对所有有限 Dirichlet 多项式 $P$ ✓；(6) ⟹ 不变量只能依赖"Dirichlet 方向之外"的信息；三种东西（**Gamma/completion**、**指数 $e^{as}$**、**零点结构**）必须分开；(7) 指数方向＝**零自由**（$e^{as}$ 无零点）⟹ 商掉它不获零点信息；(8) Gamma＝archimedean ⟹ 触发旧墙（$\text{`V212`}$/$\text{`V215`}$）；(9) **最危险剩余**：若 $F_1/F_2$ 对所有 Dirichlet 方向不变，差异可能落在"Dirichlet 部分不可见的 analytic divisor"；⚠️ **但不能把"留下 divisor"直接等同于 R4** —— 须证商是否由 divisor 完全决定；(10) **V233-A/B/C 三层目标**＋二分（completion → `V212`/`V215`；divisor → **R4**）⟹ $$\boxed{\textbf{D3 整体 DEAD}}$$；(11) ⚠️ **不提前判死**：真正问题是"商空间还有没有第三种信息" ✓
@@ -1610,6 +1612,24 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 **§7 诚实边界（唐先生 §3 收紧，写死）**：前提＝$F_X$ 属 Dirichlet／完成化 $\mathscr D$；**非 Dirichlet**（含 $e^{s^2}$ 等）⟹ 乘子群**无合适作用** ⟹ 闭包论证不适用 ⟹ 残余＝$$\boxed{"F_X\ \text{逃出 Dirichlet-完成化世界}"}$$ ⟹ 须**识别定理** ⟹ 落 **`V215`–`V217`** ⟹ 残余亦封闭 ✓✓✓
 
 **§8 判词＋状态表**：`V232`-A 定理级｜**V233-A/B/C 皆定理级**｜E1 **DEAD**｜E2 **DEAD**｜**E3（Dirichlet 型）** $\boxed{\textbf{DEAD}}$（本档）｜非 Dirichlet 型 ⟹ `V215`–`V217` ⟹ $$\boxed{\textbf{V233：D3 整体 DEAD（Dirichlet／完成化世界内）；二分完成；残余＝逃出该世界}}$$ ⚠️ 纪律：不得升级为"所有解析 germ 被杀" ✓
+
+### F.5cp ⭐⭐⭐⭐⭐ **V234：前提层二分 ＋ Euler-分子单项商 ⟹ 边界上移至"前提层"＋ 真门被发现**（`V234` ✓ 2026-09-15 17:17）
+
+**委托（唐先生）**：**"V233 的结论比 V232 实质上更强，但'商空间只有四成分、无第五类'目前不能从 V233-A/B/C 单独推出。"** (1) **V233-C 是杀手**：$Q_{a,m}$ 零点 $\Re s_k=\frac{\log|a|}{\log m}$；给定任意 $\sigma_0$ 取 $|a|=m^{\sigma_0}$ 即可让乘子在**任意指定竖线**产生零点 ⟹ $$\boxed{\text{全乘子不变量}\Longrightarrow\text{不能携带任何}\ \beta\text{-location 信息}}$$ **"这一步甚至比 V233-A 的 tangent-space 论证更直接"**；(2) **D3 的真正死因**不是"没有微分不变量"，而是 $$\boxed{\text{任何希望通过乘子商得到}\ \beta\ \text{的对象，都遇到"可任意移动零点"的反例}}$$ ⟹ 压成 $$\boxed{\text{D3 不存在一个中间的}\ \beta\text{-定位层}}$$；(3) **FE 配对也救不了**（`V229`-A：FE symmetry ⟹ 单侧 $\beta$ bound 自动双侧 ⟹ 不能选出 $\Re\rho=\frac12$）；(4) ⚠️ **§6 表述修正**：不能严格推出"商空间只有 completion + divisor" —— 需**额外分类定理**；最严谨判词是 $$\boxed{\text{不存在第三种\emph{乘子不变且携带}\ \beta\text{-location 的 Dirichlet 型局部结构}}}$$；(5) **下一阶段边界**：V185–V233 形成"内部世界封锁"（Dirichlet 系数 → 局部乘子 → 有限阶微分 → 无限阶 germ → 乘子商）⟹ 除非 ① 保留 divisor（R4）；② 进入 completion（`V212`/`V215`）；③ **彻底离开 Dirichlet/完成化世界**（且需真新桥 $X\Rightarrow Z(\xi)\subseteq\Omega_X\Rightarrow\Omega_X\subseteq\{\Re\le\frac12\}$）✓；(6) **压缩核心句**：$$\boxed{\begin{array}{c}\text{若一个算术证书把 Dirichlet 乘子全部商掉，}\\[2pt]\text{而乘子本身可以把零点实部移动到任意}\ \sigma,\\[2pt]\text{那么该证书必然失去}\ \beta\text{-定位能力}\end{array}}$$ ⟹ **"这解释了为什么此前那么多'先构造算术函数，再取曲率/不变量，希望长出 $\frac12$'的尝试反复坍缩"**；**下一问＝离开 Dirichlet／完成化世界以后，是否存在此前 `V215`–`V217` 未覆盖的"非解析函数型"算术对象能产生 beta-admissibility？** **"若仍是 NO，则是更大的接口封锁。"**
+
+**§1 V233 §6 修正落档**：降级为需分类定理；严格判词改写；**不得**说"商范畴只有四对象"✓✓✓
+
+**§2 采纳压缩核心句**（作为本档判词形态）✓✓
+
+**§3 ⭐⭐⭐ 本档修正：边界不在"世界"，而在"前提"**：$Q_{a,m}$ 是**整函数** ⟹ 乘法 $F\mapsto FQ_{a,m}$ 对**任何乘法封闭类**有定义 ⟹ **零可移动性反例世界无关** ⟹ $$\boxed{\textbf{"离开 Dirichlet/完成化世界"本身不解决}}$$（`V233` §7 的残余描述**过窄**）✓✓✓✓
+
+**§4 ⭐⭐⭐⭐ 本档核心一：前提层二分**：**(i)** $I$ 对 $\{1-am^{-s}\}$ 不变 ⟹ 由 V233-C **$\beta$-盲** ⟹ 无用；**(ii)** $I$ 不不变 ⟹ 对**局部因子扰动灵敏**，但 $\zeta$ 的局部数据**平凡**（$\alpha_p\equiv1$，`V144`）⟹ 局部灵敏对 ζ 不产生 β-信息 ⟹ **必取全局** ⟹ divisor（识别箭头 `V215`–`V217`）或 completion（`V212`/`V215`）⟹ ⚠️ 诚实："divisor 灵敏"**不**自动等于 R4（`V233` §9）；关键是"能否**独立构造**而仍 divisor 灵敏" ✓✓✓✓
+
+**§5 ⭐⭐⭐⭐⭐⭐ 本档核心二（正面发现）：乘子族的非唯一性 ⟹ 真门**：**算术自然的局部因子是** $\boxed{1-p^{-s}}$（**Euler 分子**），**不是** $\{1-am^{-s}\}$。**(a)** $1-p^{-s}=0\iff p^{-s}=1\iff s=\frac{2\pi ik}{\log p}$ ⟹ $$\boxed{\Re s=0}$$ ⟹ **算术自然乘子的零点永不进入临界带内部**（$0<\sigma<1$）⟹ **V233-C 的杀手对此族失效**（其关键步骤是"$\sigma$ 任意"）；**(b)** $\log(1-X_p)=-\sum_rX_p^r/r$ ⟹ 每 $p$ 只给**一条方向** ⟹ $\mathfrak g_{\rm nat}=\mathrm{span}\{\sum_rX_p^r/r\}_p$ **远小于** $\mathfrak m$ ⟹ 不变性约束**弱**；**(c)** $\zeta(s)=\prod_p(1-p^{-s})^{-1}$ ⟹ **$\zeta$ 不在单项中** ⟹ 商它**不商掉** ζ 的结构；⚠️ **更正（本档自检）**：群 $\langle1-p^{-s}\rangle$ 的元素是 $\prod_{p\in S}(1-p^{-s})^{e_p}$（$S$ **有限**）⟹ **不含** $1/\zeta$（无穷乘积不在群中）⟹ 群元素的零点/极点**也全在** $\Re s=0$ ⟹ 群与单项**同样安全** ⟹ **"单项 vs 群"之分不必要**；⚠️ 但 $a=1$ 的限制需 **canonical 动机**（算术 Euler 因子的分子正是 $1-p^{-s}$；一般 $a$ 对应非算术局部因子）⟹ ⟹ $$\boxed{\text{单项/群商}\ \mathcal A^\times/\mathcal M_{\rm nat}\ \textbf{不强迫}\ \beta\text{-盲};\ \text{且}\ \zeta\ \text{的结构在其中可见}} \Longrightarrow \boxed{\textbf{Euler-分子商＝真门}}$$ ✓✓✓✓✓✓
+
+**§6 新残余精确形式**：$$\boxed{\mathcal M_{\rm nat}=\Big\langle\prod_{p\in S}(1-p^{-s})^{k_p}:S\ \text{有限},\ k_p\ge0\Big\rangle}$$ 要求 $I$：① $\mathcal M_{\rm nat}$-不变；② $\beta$-灵敏；③ 独立构造；④ 非正性；⑤ 非 completion；⑥ 非 R4 ⟹ ⚠️ **存在性未证**，但**零可移动性障碍已不在**；⭐ 注：$\mathcal M_{\rm nat}$ 因子零点全在 $\Re s=0$ ⟹ 该族"锚定"于 $\sigma=0$；FE 把 $\sigma=0$ 映到 $\sigma=1$ ⟹ 条带中心 $\frac12$ ⟹ **（观察，非定理）可能正是 `V231` 追问的"不对称源"形状** ✓✓
+
+**§7 判词 ＋ 状态表（七行）**：`V233` §6 **降级**｜`V233`-C **有效**（$\beta$-盲）｜**前提层二分成立**｜**"离开 Dirichlet 世界"不解决**（世界无关）｜**Euler-分子商 $\mathcal M_{\rm nat}$** $\boxed{\textbf{OPEN}}$（零移动障碍已除）｜群 $\langle1-p^{-s}\rangle$ **安全（同单项）** ⟹ $$\boxed{\textbf{V234：边界上移到"前提层"；D3 DEAD 保持；新门＝Euler-分子单项商}}$$ ✓
 
 ## F.4 与 §E.4 的关系（✓）
 
