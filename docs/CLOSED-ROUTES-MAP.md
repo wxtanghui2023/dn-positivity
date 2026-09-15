@@ -329,6 +329,19 @@ $$\qquad\Longrightarrow\ \boxed{\text{十条全落 A／C／不足／＝既有主
 $$\qquad ⚠️\ \text{边界：本表为 [结构性] 已知机制分类，}\textbf{非}"不存在"之定理（与 }V144\ \text{"未找到"≠"不存在"同型）}$$
 $$\qquad\textbf{下一步三选}：①\ \text{形式化空槽（给"谱身份定理"下定义：β-free 输入＋输出逐点相等＋不含零数据，看是否自相矛盾）};\ ②\ \text{审 #8（Selberg 类分类能否去解析化）};\ ③\ \text{审 #5 与既有主线的完全等价性（若 ≡ Weil 正性，则 C6.6 与 A1/A3 同墙）} ✓$$
 
+### F.5t ⭐⭐⭐⭐⭐ **非循环谱身份定理形式化**（`V158` ✓ 2026-09-15 10:39）—— **相容性定理（不得语言判死）｜RH-equivalence ≠ spectral identity｜soundness ＋ completeness｜必经性审计**
+
+$$\text{机制规格}：\mathfrak M=(A,M,P,Q),\ A=\text{β-free 算术输入},\ P:A\to\Lambda_M,\ Q:\Lambda_M\to\mathbb C;\ \text{C6.6-1 β-free}（\operatorname{Lang}(A,M,P,Q)\ \text{不得含}\ \rho,\beta,\gamma_\rho,\zeta(\rho),Z_\zeta\ \text{及可定义等价编码}）;\ \text{C6.6-2 内生谱};\ \text{C6.6-3 逐点身份}\ \lambda_j\in\Lambda_M\iff\zeta(\tfrac12+q(\lambda_j))=0$$
+$$\qquad ⚠️\ \textbf{关键限定（必守）}：\zeta\ \textbf{只出现在待证明的结论中}，\textbf{不是}\text{机制的定义中} —— 否则"β-free"被}\textbf{错误强化}\text{成"证明中不能谈 ζ"} ✗$$
+$$\textbf{⭐ 相容性定理（本档第①刀）}：\text{若 }P\ \text{β-free 算术命题且 }P\iff\mathrm{RH} ⟹ \text{可证 }P\Rightarrow\text{"所有 ζ 零点在临界线"} ⟹ \boxed{\text{β-free}+\text{推出 RH}\not\Rightarrow\text{逻辑矛盾}};\ \textbf{Robin 即显式模型}（\forall n>5040:\sigma(n)<e^{\gamma_E}n\log\log n\ \text{β-free 且}\iff\mathrm{RH}）⟹ \textbf{不能从语言层面判死 C6.6} ✗✓$$
+$$\textbf{⭐ 更强结构结论}：\text{要禁的不是"β-free 命题推出 RH"，而是"β-free 机制}\textbf{如何}\text{产生逐点零谱身份"；Robin 只给}\ \boxed{\text{算术全称命题}\iff\mathrm{RH}}\ \textbf{不给}\ \boxed{n\mapsto\rho_n} ⟹ \boxed{\textbf{RH-equivalence}\neq\textbf{spectral identity}} ✓✓\ \text{（这正解释 C6.6 比 Robin 路线强）}$$
+$$\textbf{⭐ C6.6 拆开}：\Lambda_M=Z_\zeta-\tfrac12\ \text{含两独立断言}\ \boxed{\Lambda_M\subseteq Z_\zeta-\tfrac12\ (\text{I soundness})}\ \text{＋}\ \boxed{Z_\zeta-\tfrac12\subseteq\Lambda_M\ (\text{II completeness})};\ \boxed{\text{soundness alone}\not\Rightarrow\mathrm{RH}}（\text{只产临界线上部分零点的谱也满足 soundness}）;\ \text{completeness 才迫使全谱进入载体} —— \text{比"证明 RH"强得多}$$
+$$\text{硬墙}：\text{用 }\zeta'/\zeta／\text{Hadamard}／\text{explicit formula}／\text{Mellin}\to V157\text{-B}\to C;\ \text{用另一 L-函数 Euler 积／分类}\to C;\ \text{靠统计}\ N_M(T)=N_\zeta(T)+o(N(T))\ \text{只有计数一致}\to \text{不足};\ \text{人为配对}\to\text{selection}$$
+$$\textbf{⭐ 必经性审计（本档新增）}：\text{(a) }\textbf{soundness}\ \text{要求对每个 }\lambda_j\ \text{建立}\ \zeta(\tfrac12+q(\lambda_j))=0;\ \text{该谓词是}\textbf{继续后对象}\text{的谓词}（\text{Euler 积只在}\operatorname{Re}s>1\ \text{收敛，而临界带不在其中}）⟹ \text{任何验证须触及 Archimedean／完成结构} ⟹ \text{与 }V144\ \text{层诊断一致}（\text{零点在 Archimedean 层；β-free 算术在有限层}）⟹ \boxed{\text{soundness}\ \textbf{必经 archimedean 桥}（V140\ \text{Gate A/B}）} \Longrightarrow ⚠️\ \textbf{该桥就是 C6 第一箭头本身} ⟹ \text{soundness}\textbf{不与 C6-gap 独立};\ \text{(b) }\textbf{completeness}\ \text{等价于}\ |\Lambda_M(T)|\ \text{与}\ N_\zeta(T)\ \text{全谱匹配} ⟹ \text{需 }N_\zeta(T)（\text{RvM}），\text{而已知唯一途径＝对 }\xi\ \text{用论证原理}\to\text{显式公式} ⟹ \boxed{\text{completeness}\ \textbf{必经解析计数}} ⟹ \textbf{至少 completeness 必然经过解析 ζ 结构}$$
+$$\qquad\Longrightarrow\ \boxed{\text{C6.6 不可判 DEAD，但被压到两处必经性}：\text{soundness}\to\text{archimedean 桥（非独立墙）};\ \text{completeness}\to\text{解析计数}}\ \text{可闭合形式：}\text{若两条皆形式化}\Longrightarrow \text{C6.6 封死}$$
+$$\qquad ⚠️\ \text{边界}：\text{(a) 为 [类型级]（Euler 积收敛域）＋[层诊断一致]};\ \text{(b) 的"唯一途径"为 [结构性] 非定理};\ \text{本档不证明 C6.6 封死}$$
+$$\qquad\textbf{下一步三选}：①\ \text{形式化 (b)"completeness}\Longrightarrow\text{需 }N_\zeta(T)";\ ②\ \text{审 (a) 反面：能否造只用完成结构而不用显式公式的 soundness？};\ ③\ \text{若 (a)+(b) 成立} ⟹ \text{整条 C6 线}\textbf{并入既有主线}（\text{与 }A1/A3/V157\text{-}⑤\ \text{同墙}）$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
