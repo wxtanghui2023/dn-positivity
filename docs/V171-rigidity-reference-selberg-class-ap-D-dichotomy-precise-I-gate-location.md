@@ -79,3 +79,14 @@ $$\text{`CLOSED-ROUTES-MAP` §F.5ag 增补 ✓}：\text{四门行 ＋ Selberg/K-
 ✅ 净产出：① 真实"公理⟹∃!⟹谱"实例（Selberg＋K-P）✓✓；② I 门精确定位（公理 (iv) archimedean Γ）✓✓；
    ③ ⭐⭐ A⊥D 互斥二分（唯一性 ⟺ archimedean；零点独立 ⟹ 唯一性崩塌）✓✓；④ 与 V144 层诊断一致 ✓✓
 ```
+
+---
+
+## §6 ⚠️ ERRATUM（T10 勘误 · 唐先生 2026-09-15 11:38 ✓✓）
+
+$$\boxed{\text{本档 §4 的 }\text{(★)}\ \text{命题（"D 通过}\Longrightarrow\text{必须引入 archimedean"）}\textbf{被反例击穿}} ✗✓$$
+$$\qquad\textbf{反例（纯有限素数数据唯一刻画 ζ）} ✓：F(s)=\sum a_nn^{-s},\ a_1=1,\ a_{mn}=a_ma_n\ ((m,n)=1),\ a_{p^k}=1\ (k\ge1) \Longrightarrow a_n=1\ \forall n \Longrightarrow F=\zeta ✓$$
+$$\qquad\Longrightarrow\ \text{完全不用}\ \Gamma,Q,\text{degree},\text{conductor},\ \textbf{甚至不用 Archimedean place} ⟹ \boxed{\text{finite-place rigidity}\not\Rightarrow\text{Archimedean rigidity}} ✓✓$$
+$$\qquad\textbf{该反例不能救 C6} ✓：\text{它}\textbf{把 ζ 的 Euler local factors 写进去了} ⟹ \text{死于}\ \boxed{\text{reference／identity smuggling}}\ ✓,\ \textbf{不是}\text{死于 A} ✓✓$$
+$$\qquad\textbf{降级} ✓✓：\text{本档 §4 的"A}\perp\text{D 互斥二分"}\ \textbf{仅在 Selberg 体系内部成立} ✓;\ \text{升为元定理}\ \textbf{不成立} ✗\ \text{（}{\text{纪律}：\textbf{不得把某框架的分类定理当作所有数学机制的分类定理}}）✓✓$$
+$$\qquad\Longrightarrow\ \text{后续见 }V172\ \text{（Rigidity Source Separation：F／A／S 三分）} ✓✓$$
