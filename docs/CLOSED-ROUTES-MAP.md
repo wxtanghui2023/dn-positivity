@@ -283,6 +283,18 @@ $$\qquad ⭐\ \textbf{三处收敛（结构性）}：N29\ \text{位置盲}（\te
 $$\qquad\textbf{诚实边界 ⚠️}：\text{Theorem 1 的"任何 }F"\ \text{需先固定构造的范畴（本档取"数据族的函数"最广读法）};\ \text{§5 (I)(II) 归属与 §6 收敛为 [结构性]};\ \text{依赖 }E103\ \text{Lemma A（档案级} ✓\text{）}$$
 $$\qquad\textbf{下一步三选 ✓}：①\ \text{正面攻 λ-供给}⟹\text{攻 }N29;\ ②\ \text{把 (I) 形式化（控制无界算术 ⟹ 必经解析）};\ ③\ \text{回 }P（\text{暂放}）$$
 
+### F.5p ⭐⭐⭐⭐⭐ **Robin-无界排除的闭合（支 (I)）＋ 残余单点化 ＝ C6**（`V154` ✓ 2026-09-15 09:58）—— **支 (I) 闭掉 ✗✓｜C6 单点命名 ✓✓**
+
+$$\text{规格}：R(n):=\sigma(n)-e^{\gamma_E}n\log\log n;\ \mathrm{RH}\iff R(n)<0\ \forall n>5040;\ \text{支 (I) 义务}＝(I)\ \forall n>5040:R(n)<0;\ \textbf{要点}＝\text{证明存在}\textbf{无界统一控制量}（\text{非逐个检查}）$$
+$$\textbf{⭐ Theorem A} ✓✓：\text{显式公式 }\psi(x)-x=-\sum_\rho x^\rho/\rho+(\log\ \text{项})\ ⟹ \text{主项由 }\sup_\rho\Re\rho\ \text{支配};\ \text{结合三条}\textbf{经典等价}：\text{Robin 1984}(\mathrm{RH}\iff R<0)\ +\ \text{Schoenfeld 1976}(\mathrm{RH}\iff\psi(x)-x\le\frac{1}{8\pi}\sqrt x\log^2x)\ +\ \text{von Koch 1901}(\mathrm{RH}\iff\psi(x)=x+O(\sqrt x\log^2x))$$
+$$\qquad\Longrightarrow\ \boxed{\text{达到临界精度的}\textbf{统一控制}\iff\mathrm{RH}} ⟹ \textbf{支 (I) 的有效内容}\equiv\mathrm{RH}\ \text{本身} ⟹ \textbf{不可能"内容上 β-free"} ✗✓\（\text{要么间接重引 }\lambda\text{（经 }\psi\text{-误差）}，\text{要么就是 RH}）$$
+$$\qquad ⭐\ \text{与 }V152\ \text{二难接口}：\mathcal B\ \text{的}\textbf{语句}\text{可语法上 β-free（如 Robin 不等式）},\ \text{但}\textbf{语义／有效内容}\text{是 RH-等价的} ✓$$
+$$\textbf{Theorem B（载体分类，[结构性] ⚠️）}：\text{无界 Robin 控制}\Longrightarrow\psi\text{-控制}\Longrightarrow\text{素数分布解析估计}\Longrightarrow \textbf{C（growth／sum-formula／explicit-formula 旧类）} ✗;\ \text{已达档载体}＝\{\text{零点自由区／显式公式／零点密度}\}$$
+$$\textbf{⭐ 残余正式单一化} ✓✓：\text{B 空（}V153\text{）}＋\text{支 (I)}\in C＋\text{(C) 旧类（}V152\ \text{a}）⟹ \text{唯一余支}＝(II) ⟹ \text{须满足}\ \boxed{\beta\text{-free}+\text{non-circular}+\text{non-selection}+\lambda\text{-output}} ⟹ \boxed{\textbf{C6 ＝ β-free、非选择、非显式公式的 λ-供给机制}} \Longrightarrow \text{残余由"多张地图"压成}\textbf{单点} ✓✓\ \text{且立刻撞 }N29 ✗$$
+$$\textbf{⭐ C6 定义漏洞审计（第一轮 ✓）}：\text{唯一逻辑缝隙}＝\lambda\text{-output 经}\textbf{关系／对应}\text{而非}\textbf{选择} ⟹ \textbf{已被登记}：\equiv \textbf{V131}（\text{"瓶颈不是非对称性而是}\textbf{箭头}"；\text{三箭头全封} ⟹ \text{需第四箭头} \equiv \text{类 VI／SW6}）⟹ \text{不构成未登记新缝，但"归约为箭头"}\textbf{待形式化} ⚠️;\ \text{第二缝：non-selection 是否过强（canonical 唯一化算不算选择）⟹ }V148\ \text{已判 torsor 平凡化} ⟹ H^1 ⟹ \text{quadratic} ⟹ \text{仍落 I/II} ✓$$
+$$\qquad\textbf{诚实边界 ⚠️}：\text{Theorem A 依赖三条经典引用};\ \textbf{Theorem B 为 [结构性] 非定理}（\text{无"无直证"之形式化定理}）;\ \text{§6 归约待形式化}$$
+$$\qquad\textbf{下一步} ✓（\text{唐先生已定}）：\text{审 C6 定义} —— ①\ \text{形式化"关系型 λ-供给 ⟹ 箭头问题"};\ ②\ \text{审 non-selection 强度} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
