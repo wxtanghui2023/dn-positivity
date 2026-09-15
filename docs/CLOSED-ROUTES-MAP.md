@@ -1134,6 +1134,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 四档同形**：`V205` 太均匀／`V206` 非交换但局部化／`V207` 打破局部化但落入经典代数 ⟹ $$\boxed{\text{单一结构内部}\to\text{停在局部层};\ \text{两结构交互}\to\text{落入经典瓶颈区}}$$ **§8 重开四条件**：$C_k$ 非经典除子代数元／增长非 $n^\alpha(\log n)^j$／出现内生 $\lambda_*\ne1$／不依赖人为归一化；⚠️ 须说明如何跳出 additive divisor／shifted convolution 框架。
 
+### F.5bq ⭐⭐⭐⭐⭐ **V208：尺度重整化／$\mu$–粗粒化 commutator（四算例）⟹ 组合律**成立**（正面发现），但输出落 $\mu$-domain ⟹ D5 触发 ⟹ 封档且封掉整类**（`V208` ✓ 2026-09-15 14:27）
+
+**委托（唐先生）**：**「V207 把'加法 × 乘法交互'压到很窄区域：交换结构交互 ⟶ 经典卷积代数，所以不能再找第三个卷积算子。」** **V208：非线性重整化／尺度消去** —— 问 $$\boxed{\text{尺度改变以后，哪些算术信息能被消去，哪些不能？}}$$ 唯一 arithmetic input $\mu*1=\varepsilon$；$(\mathcal C F)(n)=F(2n)+F(2n+1)$；$(\mathcal MF)(n)=\sum_{d\mid n}\mu(d)F(n/d)$；**完整算 $[\mathcal C,\mathcal M]F$ 对 $F=\delta_1,1,\mu,\mathrm{id}$**；**D1–D6 预注册门**；**Phase-1 绝对禁止 $\sum\mu(n)n^{-s}=1/\zeta(s)$**；**「如果第一轮 commutator 仍然只是 Möbius／divisor／scale 的旧代数，建议连第二轮都不要做，直接封掉'尺度重整化'这一整类。」**
+
+**⭐ §1 组合律成立（正面发现）**：$(\mathcal C_qF)(n)=\sum_{r=0}^{q-1}F(qn+r)$ ⟹ $$\mathcal C_p(\mathcal C_qF)(n)=\sum_{s}\sum_{r}F(q(pn+s)+r)=\sum_{t=0}^{pq-1}F(pqn+t)=\mathcal C_{pq}F(n)\ \Longrightarrow\ \boxed{\mathcal C_p\circ\mathcal C_q=\mathcal C_{pq}}$$ ⟹ 唐先生 §12 的硬条件**通过**、尺度参数**非自由重标** ⟹ **D4 不触发** ✓✓✓
+
+**§2 四算例（逐值验证）**：(2.1) $F=\delta_1$：$\mathcal M\delta_1=\mu$、$\mathcal C\delta_1\equiv0$ ⟹ $$[\mathcal C,\mathcal M]\delta_1(n)=\mu(2n)+\mu(2n+1)$$（$n=1$：$-2−0=-2$ ✓）⟹ **移位 Möbius 组合**，和函数化归 **Mertens 型** ✓。(2.2) $F=1$：$\mathcal M\mathbf 1=\varepsilon$、$\mathcal C\mathbf 1=2$ ⟹ $$[\mathcal C,\mathcal M]\mathbf 1=-2\delta_1$$（退化）✓。(2.3) $F=\mu$：$$\mu*\mu=\delta_1-2\mathbf 1_{\rm prime}+\mathbf 1_{p^2}$$ ⟹ $[\mathcal C,\mathcal M]\mu$ ＝ 素／平方指标组合 ＋ **Möbius 卷积**（$n=1$：$-4-(-2)=-2$ ✓；$n=2$：$-1-1=-2$ ✓）。(2.4) $F=\mathrm{id}$：$\mathcal M\mathrm{id}=\varphi$、$\mathcal C\mathrm{id}(m)=4m+1$ ⟹ $$[\mathcal C,\mathcal M]\mathrm{id}(n)=\varphi(2n)+\varphi(2n+1)-4\varphi(n)-\varepsilon(n)$$（$n=1,2$ 均 $=-2$ ✓）⟹ $\varphi=\mu*\mathrm{id}$ ⟹ **divisor algebra（D2 部分触发）** ✓
+
+**§3 逐门**：**D1 ✗**（四例皆 $\ne0$）；**D2 部分**（$F=\mathrm{id}$）；**D3 ✗**；**D4 ✗（组合律成立 —— 正面）**；$$\boxed{\textbf{D5 触发}}\（F=\delta_1,\mu\ \text{输出为}\ \mu\text{-domain}\bigr)$$ ⟹ **封档**；且按指示**连第二轮都不做，直接封掉"尺度重整化"整类** ✓✓✓ ⚠️ **如实说明**：本轮封档理由**不是** D1／D2／D3／D4 —— 唐先生 §12 门槛（组合律）**实际通过**；杀死它的是 §7 的禁令 ✓
+
+**⭐⭐ §5 结构性原因（最深）**：$\mathcal C$ ＝ **加法平均**（模 $q$ 完备剩余系），$\mathcal M$ ＝ **乘法反转**（与 $\mu$ 卷积）⟹ $[\mathcal C,\mathcal M]$ 度量"加法平均与乘法反转是否可交换"；而这一**不可交换性就是经典素数–零点对偶（显式公式）的内容**（加法侧平均 ↔ 素数侧求和；乘法侧 $\mu$ ↔ 零点侧 $1/\zeta$）⟹ $$\boxed{\text{该模型}\ \textbf{结构上被逼入}\ D5}$$ —— 不是"不小心用了 $1/\zeta$"，而是**对象本身就在那个域里** ✓✓✓（且 Phase-1 禁令**严格遵守**：全程只用 $\mu*\mathbf 1=\varepsilon$ 与尺度操作，$1/\zeta$ **从未调用**）
+
+**§6 与 `V207` 同形（第二次确认）**：`V207` 加法×乘法卷积 ⟹ 落 **additive divisor／shifted convolution／circle method** 区；`V208` 加法平均×乘法反转 ⟹ 落 **Möbius／Mertens（显式公式）** 区 ⟹ $$\boxed{\text{凡"混合加法与乘法结构"的机制，其内容总落入}\textbf{已知困难区}}$$ ⚠️ 两档共同点：**机制本身是新的，但内容不新**（模式识别，非定理）。
+
+**§7 重开三条件**：(1) 输出须非 $\mu/\varphi/$divisor 型；(2) 须出现非 $2^\alpha n^\beta(\log n)^j$ 增长；(3) 须有内生固定点指数；⚠️ **禁止项**：任何只由 $\mu*\mathbf 1=\varepsilon$ 与模 $q$ 平均生成、输出自动含 $\mu$ 的机制 ⟹ 按 D5 **立即封档**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
