@@ -1523,6 +1523,8 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§7 判词**：$$\boxed{\textbf{V228：屏障形式在解析情形 DEAD（定理级）；非解析情形落饱和／正性（条件性）}}$$ ⚠️ **不判 ARS 整体 DEAD**（唐先生要求）；仅封"屏障形式"；V228-B 标 **[结构性]** ◎ **残余（OPEN，最窄）**：$$\boxed{\text{是否存在一个}\ \textbf{非解析、零敏感}、\ \text{但}\ \textbf{非} \text{explicit-formula／Li／Weil 的算术实部屏障？}}$$（判据：① 造 (A)–(D)；② $\mathscr B_X$ **非解析**；③ (3) 的证明**不**走 (a)(b)(c)；④ 过污染与反乘子测试）✓
 
+### F.5cl ⭐⭐⭐⭐⭐ ⚠️**§5 推论降级（`V230`／唐先生 16:50）**：**"已知无条件 $\beta$-界只有正性来源"不是完备性定理** ⟹ **不能**推出"新界必须非正性来源"（"已知文献中的来源分类不是完备性定理"）⟹ §5 的该推论**撤回**（保留者仅"已知证书构造都是正性型"，文献事实）；§4 的五条坍缩**仍有效**。
+
 ### F.5cl ⭐⭐⭐⭐⭐ **V229：零敏感机制完备性 ＋ C4 坍缩审计 ⟹ 命题 V229-A（FE ⟹ β-界必双侧，定理级）＋ 经典验证（唯一无条件 β-界来自正性）**（`V229` ✓ 2026-09-15 16:46）
 
 **委托（唐先生）**：**"V228-B 仍然过强，不能作为'结构性定理'登记。问题不是 ARS，而是你把'证明一个命题对零点成立'的方式压成了三类。这一步没有被证明，而且存在第四类。"** (1) V228-A 成立，但**只封"解析实值屏障"这一种表示**，未说明零点约束只能来自位置／统计／正性；(2) **"仅三类"不是定理**：反例＝$$\boxed{\text{零集上的代数／微分关系}}$$（$P(\rho,F'(\rho),F''(\rho),\ldots)=0$）⟹ $$\boxed{\text{zero-sensitive}\not\Rightarrow\text{position/statistics/positivity}}$$；(3) **第四机制可造"实部探测器"**：$\mathscr B_X=\Psi(\mathcal D_X[A_X],\partial_s\mathcal D_X[A_X],\ldots)$，$\Psi\ge0$ ⟹ $\mathscr B_X(\rho)\ge0$ 来自**代数／微分约束**而非 Weil/Li ⟹ 未被 V228-B 封死；(4) **压缩**：为避 R4 不能有 $A_X(\rho)=0\ \forall\rho$，须更弱 $$\boxed{\mathcal R_X(\rho)=0\Longrightarrow\Re\rho\le\beta_X}$$ —— **非识别，而是"零点可容许域的排除机制"**；(5) **四分法**：**C1 位置型**（R4／循环）｜**C2 统计型**（`V188`/`V183`）｜**C3 正性型**（`V185`/`V199`/`V200`）｜**C4 关系型** ⟹ $$\boxed{\text{C4＝V228 未封掉的真正残余}}$$；(6) **C4 强二分**：若 $\mathcal R_X$ 独立、刚性、在每个零点消失 ⟹ $Z(\xi)\subseteq Z(\mathcal R_X)$ ⟹ 阶控 ⟹ $\mathcal R_X=\xi H$ ⟹ **重回 `V214`** ⟹ $$\boxed{\text{C4 若要求"在每个零点精确消失"，高度危险}}$$ 可保留者：$\mathcal R_X(\rho)=0$ **只推出不等式，不定义零集**；(7) **非识别关系桥**：$(\mathrm{C4})\ \mathcal R_X(\rho)=0\Rightarrow\Re\rho\le\operatorname{Edge}(P_X)$ ＋ $(\mathrm{E})\ \operatorname{Edge}(P_X)\le\frac12$ ⟹ $\Re\rho\le\frac12$；配 $\beta_*\ge\frac12$（`V219`）⟹ RH；**无** $P_X=Z(\xi)$、**无** $R_X=Z(\xi)$；(8) **反污染 R1–R5**：R1 独立于 $\xi,Z(\xi)$；R2 $\operatorname{Edge}(P_X)\le\frac12$；R3 关系推出界；R4 不通过 FE／explicit formula／Weil／Li／statistics；R5 $\mathcal R_X=0$ 不编码 $Z(\xi)$；(9) **Dirichlet/Mellin 坍缩**：若 $\mathcal R_X(\rho)=\sum a_n\rho^n$ 或 $\sum a_ne^{-\rho\log n}$ ⟹ 又入 Dirichlet/Mellin 解析结构 ⟹ 显式公式／FE／零点编码 ⟹ 可封；**真正剩下的 C4 必须非解析、非统计、非正性、非显式公式**；(10) **V229 唯一任务＝C4 完备性/坍缩审计**；若不坍缩则得到**第五接口** $$\boxed{\textbf{Arithmetic relation}\to\textbf{zero-admissibility region}}$$
@@ -1542,6 +1544,30 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 **§7 状态表**：解析实值屏障 **DEAD**（V228-A）；简单非解析屏障 ⟹ 降为 $\beta_*\le\beta_X$（且由 V229-A 必双侧）；位置型 **DEAD**；统计型 **DEAD**；Weil／Li 正性型 **DEAD**；精确零集编码 **DEAD**；**非识别关系型 C4** $\boxed{\textbf{OPEN}}$ ✓
 
 **§8 判词**：$$\boxed{\textbf{V229：V228-B 撤回；C4＝真正的唯一残余；命题 V229-A 使"单侧性"失效}}$$ ⚠️ **不判 ARS DEAD**；"五条覆盖"标 **[结构性]**；命题 V229-A **定理级** ◎ **残余（OPEN，本档最窄）**：$$\boxed{\text{是否存在}\ \textbf{不属五个坍缩}、\ \text{且给出}\ \textbf{非正性来源的、强于零-free region 的}\ \beta\text{-界}\ \text{的独立关系}\ \mathcal R_X？}$$（判据：① 满足 R1–R5；② 不落 (i)–(v)；③ 其界强于 $1-c/\log t$ 并指向 $\frac12$；④ 过污染与反乘子测试）✓
+
+### F.5cm ⭐⭐⭐⭐⭐ **V230：C4 的"关系 → 区域"终审 ⟹ 三明治命题 V230-A（$Z(\xi)\subseteq\Omega_X\subseteq\{\Re\le\frac12\}\Rightarrow$ RH）＋ 不对称源定位 ＋ $(M)$ 自动满足**（`V230` ✓ 2026-09-15 16:50）
+
+**委托（唐先生）**：**"这里有一个关键逻辑修正：'已知无条件 $\beta$-界只有正性来源'不能推出'新界必须是非正性来源'。这个'已知文献中的来源分类'不是完备性定理。真正值得做的是把 C4 本身做结构分解。"** (1) **目标**：$\mathcal R_X(s,\mathcal A_X)=0$，目标 $\mathcal R_X(\rho)=0\Rightarrow\Re\rho\le c_X$（$c_X<1$）；FE $\Rightarrow c_X\ge\frac12$；RH 终须 $c_X=\frac12$；**关键问题** $$\boxed{\text{一个关系如何把复数}\ \rho\ \text{排除在某个半平面之外？}}$$；(2) **判别量归约**：必 $\exists D_X:\mathbb C\to\mathbb R$ 使 $$\boxed{\mathcal R_X(s)=0\Longrightarrow D_X(s)\ge0},\quad D_X(s)<0\ (\Re s>c_X)$$ ⟹ C4 $\to$ 实值判别量 $\to$ 禁区；(3) **三分**：**D1** 解析实值 $\to$ `V228`-A $\to$ **DEAD**；**D2** 模长平方型 $\to$ `V199`/`V185`；**D3** 差分／导数符号（$F^{(k)}F^{(k+2)}-(F^{(k+1)})^2$）$\to$ **Laguerre–Pólya／variation-diminishing**；⚠️ **"`V190` 封掉的是已有的 hyperbolicity/Jensen/total-positivity 路线，不等于所有微分不等式都被封掉"** ⟹ **D3 不能 DEAD**；(4) **D3 压力测试**：$\{D_X\ge0\}$ 是**外部几何区域** ⟹ $$\boxed{\text{zero admissibility}\ne\text{zero identification}}$$ 真问题变成 $$\boxed{\text{能否构造独立算术}\ F_X，\text{其自然微分几何恰好包含全部 zeta 零点？}}$$ ＝ $$\boxed{\textbf{Arithmetic admissibility geometry}}$$；(5) **有限参数描述 + 四重对称只给闭合，不给临界线** ⟹ $$\boxed{\text{对称性本身不能产生临界线}}$$；(6) **竖直边界需 $\Im s$-平移 ＋ $\Re s$-刚性**（`V227`：$|\cdot|$ 型做不到）；(7) **新筛选器 $(M)$**：$$\boxed{\partial_\sigma D_X(\sigma+it)<0}$$（横向 $t$ 可振荡、纵向 $\sigma$ 必须单调）；(8) **六条件尖锐形式**；(9) **反乘子测试** ⟹ $$\boxed{\text{有效 C4 必须检测全局零点几何，而非粗略解析尺度}}$$；(10) **判词**：不判 C4 死；压成 $$\boxed{\textbf{Arithmetic transverse monotonicity}}$$；(11) **下一步＝存在性压力测试**：$$\boxed{\text{任意独立算术}\ D_X\ \text{满足}\ \partial_\sigma D_X<0\ \text{且覆盖全部}\ \rho,\ \text{是否必然落回 Mellin／positive-kernel／explicit-formula？}}$$
+
+**§1 逻辑修正落档**：**"已知只有正性来源"不是完备性定理** ⟹ `V229` §5 该推论**降级**（保留"已知证书构造都是正性型"，文献事实）✓✓✓
+
+**§2 判别量归约**：C4 $\equiv$ **零-free 证书** $\equiv$ **$\beta$-主化量 $h$** ✓✓
+
+**§3 三分**：D1 **DEAD**；D2 $\to$ `V199`/`V185`；**D3 OPEN**（`V190` 未封全体微分不等式）✓✓✓
+
+**§4 ⭐⭐ $(M)$ 判据自动满足（本档新结果一）**：平凡判别量 $$D_X(\sigma+it):=h(t)-\sigma\Longrightarrow\partial_\sigma D_X=-1<0$$ ⟹ $$\boxed{(M)\ \textbf{不是筛选器}}$$（凡满足 (a) 的 $\Omega_X$ 都可写成满足 $(M)$ 的 $D_X$）⟹ 真正约束只有 $\Omega_X\supseteq Z(\xi)$ ⟹ 等价于**零-free 证书**（与 `V228` §5 一致）✓✓
+
+**§5 ⭐⭐⭐⭐ 三明治命题 V230-A（本档核心一，比六条件更弱）**：$$\boxed{Z(\xi)\subseteq\Omega_X\subseteq\{\Re s\le\tfrac12\}\Longrightarrow\mathrm{RH}}$$ **证明（四行，只用一个无条件事实）**：取 $\rho\in Z(\xi)$；FE $\Rightarrow1-\rho\in Z(\xi)$；$\rho\in\Omega_X\Rightarrow\Re\rho\le\frac12$；$1-\rho\in\Omega_X\Rightarrow1-\Re\rho\le\frac12\Rightarrow\Re\rho\ge\frac12$ ⟹ $\Re\rho=\frac12$ ⟹ RH ⟹ $$\boxed{\text{第二包含在 FE 下}\ \textbf{等价于}\ \mathrm{RH}}$$ ⭐ **不需要单调性、半平面、主化量** ✓✓✓✓
+
+**§6 ⭐⭐⭐⭐⭐ 不对称源定位（本档核心二）**：若 $\Omega_X$ **FE-对称**且 $\subseteq\{\Re\le\frac12\}$ ⟹ 对称性给 $\subseteq\{\Re\ge\frac12\}$ ⟹ $$\Omega_X\subseteq\{\Re s=\tfrac12\}\（\textbf{thin}）$$ ⟹ 内含 $Z(\xi)$ ⟹ **已基本枚举零点 ⟹ R4 风险** ⟹ $$\boxed{\text{活靶必须}\ \textbf{不对称}}$$（如半条带）⟹ 而不对称必须 **canonical 地论证**：**算术中唯一不对称特征 ＝ $s=1$ 的极点／收敛横坐标** ⟹ $$\boxed{\text{不对称给出的自然边界是}\ \sigma=1\ \text{或}\ 1-c/\log t,\ \textbf{不是}\ \tfrac12}$$ ⟹ 推到 $\tfrac12$ 需**新不对称源**；且由 §5，到达 $\tfrac12$ 时区域自对偶 ⟹ $$\boxed{\text{RH}\ =\ \text{不对称主化量恰好抵达自对偶轴}}$$ ⚠️ `[结构性]`（"唯一不对称特征"为清单式）✓✓✓✓
+
+**§7 对称性单独不能产生临界线**：对称主化量族在 $h\equiv1$ 与 $h\equiv\frac12$ 之间**连续插值** ⟹ 对称性**只固定族、不固定端点**；端点是**定量**问题 ⟹ 已知两步（$1\to1-c/\log t$）远未达端点 ✓✓
+
+**§8 反乘子强化**：$\Omega_X\supseteq Z(\xi)$ 的有效性若由**乘子不变**数据证明 ⟹ 乘子族把零点移出 ⟹ $$\boxed{\text{有效 C4 必须检测全局零点几何}}$$ ✓✓
+
+**§9 判词 ＋ 状态表（十一行）**：ARS OPEN｜C4 一般关系 OPEN｜精确零集关系 **DEAD**｜D1 **DEAD**｜D2 **DEAD**｜统计 **DEAD**｜FE **DEAD**｜已有 Weil/Li **DEAD**｜**微分不等式 D3** $\boxed{\textbf{OPEN}}$｜**三明治形式** $\boxed{\textbf{OPEN}}$（本档最弱）⟹ $$\boxed{\textbf{V230：C4 未死；压成三明治形式；其硬核＝}\textbf{不对称性来源}}$$ 三条新结果：(i) $(M)$ 自动满足；(ii) **三明治**（比六条件弱）；(iii) **不对称源定位**（自然边界 $1$／$1-c\log t$，**非** $\frac12$）⚠️ **不判 C4 死**；`V229` §5 的"必非正性"**撤回**；D3 **不判 DEAD** ✓✓
+
+**§10 存在性压力测试的回答**：由 §4，**"$\partial_\sigma D_X<0$"不构成约束**（平凡 $h(t)-\sigma$ 已满足）⟹ 该测试须**重述**为 $$\boxed{\text{任意独立算术}\ \Omega_X\supseteq Z(\xi)\ \text{是否必然落回}\ \text{零-free 证书类}？}$$ 本档不判；且由 §6 应**先攻不对称源，而非再枚举 $\Omega_X$** ✓
 
 ## F.4 与 §E.4 的关系（✓）
 
