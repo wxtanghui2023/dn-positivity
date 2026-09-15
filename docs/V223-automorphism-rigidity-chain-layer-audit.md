@@ -117,3 +117,13 @@ $$\textbf{(f)}\ \text{§6 的盲性精化为}\ \textbf{本档};\ “\text{咬在
    ③ ⭐⭐⭐⭐ 四步逐层答案（1/2/4 免费、3 崩溃）✓✓✓✓；④ 可见性缺口 ✓✓✓；⑤ 盲性精化＋与 V215-217 汇合 ✓✓；
    ⑥ 不判 DEAD＋残余的正确形式（＝RH 可证性）✓✓
 ```
+
+---
+
+## §9 §6 的续推（唐先生 2026-09-15 16:11；接受并由 `V224` 执行）
+
+$$\Phi'=\Phi g,\quad g:=\Phi^{-1}\Phi';\ \text{若二者皆保持}\ I_X\ \text{结构则}\ g\in\mathrm{Aut}(\mathcal A_X) \Longrightarrow \iota'_{\mathrm{ind}}=g^{-1}\iota_{\mathrm{ind}}g ✓✓$$
+$$\qquad ⟹ \boxed{\textbf{内部对象}\ =\ \iota_{\mathrm{ind}}\ \textbf{的共轭类};\ \text{改变识别只引起共轭}} ✓✓✓$$
+$$\qquad ⚠️\ \text{而}\ \mathrm{Aut}(\mathbb N,+,\times)=1 ⟹ \text{共轭类}\ =\ \text{单点} ⟹ \boxed{\textbf{歧义消失}:\ \Phi'=\Phi} ✓✓✓$$
+$$\qquad ⟹ \textbf{障碍上移}：\text{不是"}\Phi\ \text{不唯一"}，\ \text{而是}\ \boxed{\text{为什么会存在由}\ X\ \text{独立决定的}\ \textbf{结构保持} \text{映射}\ \Phi_X:\mathbb N\to Z(\xi)？} ✓✓✓$$
+$$\qquad ⚠️\ \text{§6 的"第 3 步可再分解为}\Phi\ \text{的典范唯一性"}\ \text{应}\ \textbf{修正}：\text{该分解}\ \text{在}\ (\mathbb N,+,\times)\ \text{情形}\ \textbf{为空}（\text{歧义为零}）⟹ \text{全部困难落在}\ \textbf{"保持"} \text{本身} ✓$$
