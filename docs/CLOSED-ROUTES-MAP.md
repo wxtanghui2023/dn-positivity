@@ -392,6 +392,25 @@ $$\qquad ⚠️\ \text{与 }V153/V155\ \text{接口}：\text{承重项（内生�
 $$\qquad ⚠️\ \text{边界}：\text{观察 1 为构造性} ✓;\ \text{观察 2 为归约} ⚠️;\ \text{观察 3（}T\log T\ \text{非组合性）为结构性} ⚠️\ \text{非定理};\ \text{FSC 依 Artin–Mazur／Ruelle（经典）}＋L1\ \text{NO-GO}$$
 $$\qquad\textbf{下一步三选}：①\ \text{攻承重项（内生＋逐点锁定 ＝ V153 }\lambda\text{-supply／V155 箭头），但须}\textbf{新入口};\ ②\ \text{把 FSC 写成}\textbf{工具卡}（给定组合载体 }\Rightarrow\ \text{查 state space 有限性 }\Rightarrow\ \text{判 }\Phi\ \text{不可能）;\ ③\ \text{审能否把"}\ T\log T\Rightarrow\text{连续化"上升为定理} ✓$$
 
+### F.5y ⭐⭐⭐⭐ **FSC 工具卡（基础设施，非突破口）**（`V163` ✓ 2026-09-15 11:06）
+
+$$\text{最终判据}：\dim\mathcal S<\infty\ +\ Z_{\mathcal S}(z)=1/\det(I-zA)\Longrightarrow Z_{\mathcal S}\ \text{rational};\ A\in M_m(\mathbb C)\Longrightarrow\det(I-zA)=\prod(1-\lambda_jz)\Longrightarrow Z_{\mathcal S}=\prod(1-\lambda_jz)^{-1} ⟹ \text{基本零／极点通道}\le m$$
+$$\qquad ⚠️\ \textbf{措辞修正（唐先生判定）}：\textbf{不得}\text{把 }N_{Z_A}(R)\le m\ \text{写成所有"零点计数"的统一表述 —— 周期覆盖 }z\mapsto e^s\ \text{下一个有限 }z\text{-平面奇点可对应 }s\text{-平面}\textbf{无限周期复制} ⟹ \text{真正不变量应叫}\ \boxed{\textbf{有限基本谱通道}}\ \text{而非" }s\text{-平面零点有限"}$$
+$$\text{三步流程}：\text{FSC-1 状态有限性（}\exists\ \text{有限 }\mathcal S\ \text{使动力学由 }F:\mathcal S\to\mathcal S\ \text{或有限 }A\ \text{完整描述）}\Longrightarrow Z_M\ \text{rational};\ \text{FSC-2 谱通道有限（周期／代数映射产生的无限复制仍只算有限基本通道）};\ \text{FSC-3 目标是否要求 ζ 完整谱（需 }N_\zeta(T)\to\infty\ \text{且 }N_\zeta(T)/T\sim\tfrac1{2\pi}\log T\text{）}\Longrightarrow \boxed{\text{FSC}=DEAD}$$
+$$\text{边界纪律}：\textbf{FSC 不判死}\ |\mathcal S|=\infty／Z_M\ \text{非有理}／N_M(T)\sim T\log T ⟹ \boxed{\textbf{FSC 只杀 finite-state，不杀 infinite-state}}$$
+$$\text{复用筛选器}：\text{任何新提案先问}\ \boxed{\dim(\text{完整状态空间})<\infty\ ?}\ \text{若是}\Longrightarrow\text{FSC-DEAD 直接结束（不再讨论 Weyl law／谱统计／周期轨道／动力 ζ／"增加几个状态"／有限图／有限自动机／有限群作用）};\ \text{附声明表格式（FSC-1/2/3 三栏）—— 判据为声明式，故本卡为流程卡＋声明表，非脚本}$$
+$$\qquad ⚠️\ ③（T\log T\Rightarrow\text{连续化}）\ \textbf{按唐先生指示放弃} ✓\ \text{（}N(T)\sim T\log T\ \text{几乎无承重能力；}\lambda_n:=N^{-1}(n)\ \text{可人为制造完全离散序列）}$$
+
+### F.5z ⭐⭐⭐⭐⭐ **非算子化无限结构如何内生连续谱参数（机制本体）**（`V164` ✓ 2026-09-15 11:06）—— **三形态穷尽｜FSC 推广｜陈述类型分离｜四例元规律**
+
+$$\text{五条硬条件}：\mathcal R(M,\lambda)=0\ \text{独立定义};\ \exists!\lambda;\ \lambda\in\mathbb R\ \text{非外部};\ \mathcal R\ \text{非解析接口};\ \mathcal R(M,\lambda)=0\iff\zeta(\tfrac12+i\lambda)=0\（\text{末行＝最硬 C6.6}）$$
+$$\textbf{⭐ 三形态穷尽（本档核心）}：\text{(i) }\textbf{逼近型}（\text{Cauchy 模数／嵌套区间／受限展开／收敛级数}）⟹ \lambda\ \text{为}\textbf{可计算实数}，\text{代价＝}\textbf{收敛结构}（metric／topology／modulus）\ \text{隐含一个连续化接口};\ \text{(ii) }\textbf{选择型}（\text{非主超滤子／Banach 极限／filter 极限}）⟹ \lambda\ \text{是序列的函数}，\text{由 }V153\ \text{Theorem 1 相等的有限阶段数据}\Longrightarrow\text{相等输出}，\text{但}\textbf{与 ζ 的识别须另证};\ \text{(iii) }\textbf{隐式方程型}（\mathcal R(M,\cdot)=0\ \text{含不动点）}⟹ \text{若 }\mathcal R\ \text{只由有限数据定义则解集有限／代数型，若由无限数据定义则回到 (i)(ii)}$$
+$$\qquad\Longrightarrow \boxed{\text{三形态穷尽}：\text{任何"离散无限结构}\Longrightarrow\text{连续内生参数"都须提供}\ \text{收敛结构／选择结构／无穷阶方程}\ \text{之一}}（\textbf{[结构性] ⚠️}）\ \text{且}\ \textbf{三形态都只解决"内生 }\lambda\text{"（条件 1–4），都不触碰"}\lambda\ \text{是 ζ 零点"（条件 5）}$$
+$$\textbf{⭐ FSC 推广}：\text{若 }\mathcal R\ \text{由}\textbf{有限数据}\text{定义} ⟹ \text{(a) }\textbf{解析型条件}（有理／半代数／解析方程）⟹ \text{解集}\textbf{有限或代数型} ⟹ \text{不能承载 ζ 完整谱（元素超越且分布 }T\log T）；\ \text{(b) }\textbf{可定义型条件}（有限数据描述地定义任意集合）⟹ \text{落}\ \boxed{\textbf{类 VI（可定义性／正则性）}}\ ✗ ⟹ \boxed{\text{"有限数据"路线两条出口皆已封闭}}$$
+$$\textbf{⭐ 陈述类型分离}：\text{条件 1–4}＝\textbf{局部生成命题}（\Sigma\text{-型}：存在且唯一）；\ \text{条件 5}＝\textbf{ζ 全局结构命题}（指定全局对象的整个零集）⟹ \boxed{\text{类型不同} ⟹ \text{1–4 对 5}\textbf{零贡献}}（\text{不是"还没做到"而是}\textbf{类型不匹配}）$$
+$$\textbf{⭐⭐ 元规律：四例"陈述类型不匹配"}：V148（局部\textbf{选择} vs RH＝ι 无自由轨道／缺席型）; V152（\textbf{语法} β-free vs \textbf{语义} β-信息最大）; V153（\textbf{∃-信息} vs \textbf{λ-信息}）; V164（\textbf{局部生成} vs \textbf{全局同一}）⟹ \boxed{\text{四例同源}：\text{RH 及其相关命题是}\textbf{全局缺席型}，\text{而全部可行候选机制是}\textbf{局部存在／选择型}}（\textbf{[结构性]} 归纳，非定理）;\ \text{诊断用法：新提案先问"输出的是【局部存在】还是【全局缺席】？"}$$
+$$\qquad\textbf{下一步三选}：①\ \text{攻条件 5 的}\textbf{类型}（\text{能否证"全局同一性}\Rightarrow\text{必经 ζ 全局结构"＝类型定理）};\ ②\ \text{把四例元规律写成}\textbf{诊断工具卡}（与 }V163\ \text{同层）};\ ③\ \text{审 §2 三形态穷尽能否形式化} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
