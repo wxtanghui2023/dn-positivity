@@ -269,6 +269,20 @@ $$\qquad\Longrightarrow\ §E.4\ \text{形态}\textbf{再次收窄} ✓：\text{�
 $$\qquad\textbf{诚实边界 ⚠️}：\text{flatness 论证 [结构性] 非定理};\ \text{二分平凡穷尽、内容在两条后果};\ \text{"(b)⟹必须新 primitive" [结构性] 非定理}$$
 $$\qquad\textbf{下一步三选 ✓}：①\ \text{攻 (b) 支（形式化"Robin-blind ⟹ 算术路径 β-信息＝0"，取代 }(BIC)\ \text{的表征定理靶）};\ ②\ \text{攻 flatness（把 }W2\ \text{补硬）};\ ③\ \text{回 }P（暂放）$$
 
+### F.5o ⭐⭐⭐⭐⭐ **Robin-blind Arithmetic Path Theorem**（`V153` ✓ 2026-09-15 09:53）—— **(FAL) 成立 ✓✓｜⭐ Case B 空（定理级）✗✓｜⭐ ∃／λ 分裂 ✓✓｜残余 ＝ 打破 N29 ✦**
+
+$$\text{规格（唐先生逐字）}：\mathscr A=\{A_N\},\ A_N=\{\text{所有 }n\le N\ \text{的素性／因子／}\sigma(n)\text{／}\Lambda(n)\};\ \textbf{任何有限 }N\ \text{不得使用 }n>N\ \text{的信息} ✓;\ A_1\subset A_2\subset\cdots,\ \bigcup A_N=A_\infty$$
+$$\textbf{关键区分（本档纠正）}：\text{唐先生 §3 的反例 }f_N=0(N{<}n_0)/1(N{\ge}n_0)\ \textbf{并非逐点盲} ✗\ \text{—— 它在 }N\ge n_0\ \text{已可见异常} ⟹ \text{必须分开两种 regime}：\textbf{(R1) pointwise-blind}（O_n(Z_+){=}O_n(Z_-) \textbf{作为元素} \forall n，＝ V133 适用域）｜\textbf{(R2) eventually-separating}（\exists N: A_N(Z_+)\neq A_N(Z_-)，\textbf{Robin 属此类} ✓）$$
+$$\textbf{⭐⭐ Theorem 1（非连续性无力定理）} ✓✓：\text{若 }A_N(Z_+)=A_N(Z_-)\ \forall N\ \textbf{作为元素}，\ \text{则}\textbf{任何} F=F((A_N)_N)\（\text{连续或不连续皆可}\）\ \text{满足 }F(Z_+)=F(Z_-)\ \text{（函数的定义，}\textbf{与连续性无关}）⟹ \boxed{\textbf{Case B 为空} ✗✓};\ \text{且 (R1)}⟹\textbf{global β-blindness}，\textbf{不需连续性假设}（强于目标 (FAL) ✓✓）$$
+$$\qquad\Longrightarrow\ \textbf{六来源逐个审计} ✓✓：\text{Banach limit／ultrafilter(超积)／completion／boundary value／奇异测度选择（或落 selection ⟹ V148）／noncommuting limits}\ \text{—— }\textbf{全部落 B-空或 C-旧} ✗✓\（\text{皆为"数据族的函数"，等序列 ⟹ 等值}）；\ \textbf{唯一逃逸方式}：\text{构造}\textbf{不是}\text{数据族的函数} ⟹ \text{依赖"世界自身零点集"} ⟹ \textbf{偷渡 β ⟹ 循环}（V140 ✓）$$
+$$\textbf{⭐⭐ 真正的障碍 ＝ ∃／λ 分裂} ✓✓：\text{(i) }\textbf{∃-信息}（\text{"存在 }n_0\ \text{违反 Robin"}\）\ \text{在 }N\ge n_0\ \textbf{有限阶段可得} ✓;\ \text{(ii) }\textbf{λ-信息}（\text{"哪一个／在哪"}\）⟹ E103\ \text{Lemma A 逐字"}\textbf{有限阶段}\text{素数数据}\textbf{不能定位任何零点}" ⟹ \textbf{算术不给 λ} ✗$$
+$$\qquad\Longrightarrow\ \text{机制变证明只有两路}：(I)\ \text{用 ∃-信息排除一切 }n_0 ⟹ \text{须控制无界算术} ⟹ \text{手段正是 Robin 自己证明（}\psi(x)-x\ \text{／零自由区）} ⟹ \textbf{解析／上同调} ⟹ V152\ \text{(a) 旧类};\ (II)\ \text{直接供给 λ} ⟹ \text{算术不可得} ⟹ \textbf{非算术 primitive} ⟹ V152\ \text{(b)}$$
+$$\qquad ⭐\ \text{附注 ✓}：\text{Robin 判据}\textbf{语法上 β-free}，\text{但"它与 RH 等价"}\textbf{本身经解析} ⟹ \mathcal L_0\to\beta\ \text{的通道}\textbf{就是解析的}（与 V152 \text{(a)} 一致）✓$$
+$$\textbf{⭐ 三分法 ⟹ 二分法 ＋ 残余重述} ✓：\textbf{B 空} ⟹ A\ \text{（β-盲）}\cup\ C\ \text{（旧类）};\ \text{残余 ＝ λ-供给} ⟹ \text{新 primitive 的}\textbf{正确刻画}\text{不是"非连续极限"，而是}\ \boxed{\textbf{β-free、非选择、能输出位置（λ）的构造}} ⟹ \text{"输出位置"恰是 }\textbf{N29（位置盲，定理级）}\ \text{的否定} ⟹ \boxed{\textbf{残余 ＝ 必须打破 }N29} ⟦\text{落回已登记根墙}✗⟧$$
+$$\qquad ⭐\ \textbf{三处收敛（结构性）}：N29\ \text{位置盲}（\text{定理级}）\ +\ V133\ \text{极限盲}\ +\ V144\ \text{层诊断（Archimedean 层）} ⟹ \text{同一约束的三个视角} ✓✓$$
+$$\qquad\textbf{诚实边界 ⚠️}：\text{Theorem 1 的"任何 }F"\ \text{需先固定构造的范畴（本档取"数据族的函数"最广读法）};\ \text{§5 (I)(II) 归属与 §6 收敛为 [结构性]};\ \text{依赖 }E103\ \text{Lemma A（档案级} ✓\text{）}$$
+$$\qquad\textbf{下一步三选 ✓}：①\ \text{正面攻 λ-供给}⟹\text{攻 }N29;\ ②\ \text{把 (I) 形式化（控制无界算术 ⟹ 必经解析）};\ ③\ \text{回 }P（\text{暂放}）$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
