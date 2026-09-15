@@ -139,3 +139,15 @@ $$\boxed{\text{残余}＝\text{非单项式单位 }\Phi\ \text{（须在扩张�
 ✅ 净产出：① 三层次判据化 ✓✓；② R 定死 ＋ 单位群 ✓；③ 环级 H¹≠1（奇偶×符号；Φ=−1 反例）✓✓；
    ④ ⭐ 支撑论证杀尽非 coboundary 单项式 ✓✓✓；⑤ 结论 A 修正为析取式 ✓✓；⑥ 残余收窄为一个具体代数问题 ✓
 ```
+
+---
+
+## §8 ⚠️ ERRATUM（T10 勘误 · 唐先生 2026-09-15 12:02 ✓✓）
+
+$$\textbf{本档 §4 的推论"}\operatorname{Spec}(F)\ \text{有限"}\ \textbf{必须撤回} ✗✓$$
+$$\qquad\textbf{反例（唐先生）} ✓✓：1+2^{-s}=1+e^{-s\log2}\ \text{的零点为}\ s=\frac{(2m+1)\pi i}{\log2}\ (m\in\mathbb Z)\ \text{——}\ \textbf{无穷多个} ✗$$
+$$\qquad\Longrightarrow\ \text{有限支撑}\ \textbf{不蕴含}\ \text{有限零点} ✗✓\ \text{（有限 Dirichlet 多项式沿垂直线的零点可以有无限多）}$$
+$$\qquad ⚠️\ \text{但}\ \textbf{支撑结论保留} ✓：\operatorname{supp}(F)\subseteq C\cap(\alpha-C)=\{\delta:0\le\delta\le\alpha\}\ \text{有限}\ \text{仍然正确} ✓$$
+$$\qquad\Longrightarrow\ \text{正确的杀法换为}\ \textbf{谱容量冲突} ✓✓：\text{有限支撑}\Longrightarrow F\ \text{是有限指数多项式}\Longrightarrow N_F(T)=O(T);\ \text{而}\ N_\zeta(T)\asymp T\log T ⟹ \text{矛盾}$$
+$$\qquad\Longrightarrow\ \text{详见 }V179\ \text{（FSC-Dirichlet 筛：F1／F2／F3）} ✓✓$$
+

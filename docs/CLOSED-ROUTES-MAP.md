@@ -635,6 +635,22 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V179 预登记）**：① 攻残余（扩张环中的非单项式单位）② 把 §4 支撑论证升级为一般定理（"任何使 $F$ 支撑有限的平衡因子 ⟹ 非 S"）
 
+### F.5ao ⭐⭐⭐⭐⭐ **有限支撑判据（FSC-Dirichlet 筛）＋ `V178` 勘误**（`V179` ✓ 2026-09-15 12:02）
+
+**① `V178` 勘误（T10）**：`V178` §4 的推论"$\operatorname{Spec}(F)$ 有限"**必须撤回** —— **反例 $1+2^{-s}$** 有**无穷多**零点 $s=(2m+1)\pi i/\log2$ ⟹ **有限支撑不蕴含有限零点**（有限 Dirichlet 多项式沿垂直线可有无限多零点）；但 **支撑结论保留**（$\operatorname{supp}(F)\subseteq C\cap(\alpha-C)=\{\delta:0\le\delta\le\alpha\}$ 有限）✓；正确的杀法换为 **谱容量冲突** ✓✓。
+
+**② 有限指数多项式的零点计数（经典）**：$P\not\equiv0$ 为有限指数多项式 $P(s)=\sum_{j=1}^mc_je^{\lambda_js}$ ⟹ 在 $|\operatorname{Im}s|\le T$ 内零点数 $$\boxed{N_P(T)=O(T)}$$ （常数取决于 $\{\lambda_j\}$ 的频率跨度）。**自检例证**：$1+2^{-s}$ 的频率跨度为 $\log2$，零点 $s=(2m+1)\pi i/\log2$ ⟹ $N(T)\approx T\log2/\pi=O(T)$ ✓ 与定理一致。
+
+**③ ⭐ 谱容量冲突（本档核心）**：$N_\zeta(T)=\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}+O(\log T)\asymp T\log T$，而有限支撑给 $N_F(T)=O(T)$ ⟹ $$\boxed{N_F(T)=O(T)\ \text{而}\ N_\zeta(T)\asymp T\log T}$$ ⟹ 若要求 $\operatorname{Spec}(F)=Z_\zeta-\tfrac12$ 则须 $N_F(T)=N_\zeta(T)\sim\frac{T}{2\pi}\log T$，**与 $O(T)$ 矛盾** ⟹ $$\boxed{\text{有限 Dirichlet 支撑}\Longrightarrow F\ \text{不可能承载}\ Z_\zeta}$$
+
+**④ FSC-Dirichlet 筛（三步）**：**F1** $S$ 有限 ⟹ $F$ 是（广义）Dirichlet 多项式；**F2** $F\not\equiv0$ ⟹ $N_F(T)=O(T)$；**F3** 目标要求 $N_F(T)\asymp T\log T$ ⟹ **矛盾** ⟹ **FSC-DEAD**。
+
+**⑤ ⭐ 可复用筛子（把"单项式杀法"彻底抽象掉）**：$$\boxed{\Phi\longrightarrow\operatorname{Supp}(F)\longrightarrow\text{有限？}\xrightarrow{\text{YES}}\textbf{FSC-DEAD}}$$ $V178$ 依赖具体有限盒 $C\cap(\alpha-C)=\{0\le\delta\le\alpha\}$；本档把"有限盒"**彻底抽象掉** —— **只要任何机制最终把支撑压进有限集合 ⟹ 立即 FSC-DEAD**，**无需**重新分析 $\Phi$ 的具体形式。**适用范围（"有限支撑"的常见来源，逐条可查）**：单项式平衡因子 $cX^\alpha$（`V178`）｜有限阶差分／微分型算子作用于 $F$｜有限秩扰动、有限个指数项线性组合｜任何把支撑限制在有限指数盒内的锥条件（$C\cap(\alpha-C)$ 型、多锥交成有限集）。
+
+**⑥ 严格单向边界（唐先生）**：$$\boxed{\text{finite support}\Longrightarrow\text{DEAD};\qquad \text{infinite support}\not\Longrightarrow\text{ALIVE}}$$ 反例：$F(s)=\sum_{n\ge1}2^{-n}n^{-s}$ 支撑无限但毫无理由产生 ζ 零谱 ⟹ 本筛子**只杀不保**（**必要条件型**，排除法，**不是**充分条件判定器）。
+
+**下一步（V179-① 开）**：在 Laurent 级数环 $\mathbb Q[[X_p]][X_p^{-1}]$ 中解 $\Phi\iota(\Phi)=1$，判定是否存在**非 coboundary 且支撑无限**的单位 —— 即**通过有限支撑筛的唯一剩余代数对象**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
