@@ -148,3 +148,13 @@ $$\textbf{(f)}\ ⭐⭐⭐⭐⭐\ \text{§7 V237-D}\ \textbf{[结构性]}：\text
    ④ ⭐⭐⭐⭐ V237-B（模长幂律）✓✓✓✓；⑤ ⭐⭐⭐⭐ V237-C（三来源三分）✓✓；⑥ ⭐⭐⭐⭐⭐ V237-D（精确缺口＝F_1 几何）✓✓✓✓；
    ⑦ 复方向审计＋残余精确化 ✓✓
 ```
+
+---
+
+## §11 ⚠️ V237-D 降级落档（唐先生 2026-09-15 18:14；由 `V238` 执行）
+
+$$\boxed{\text{V237-D}\（\mathbb F_1\text{-几何}）\ \textbf{＝结构性线索，}\ \textbf{不是} \text{唯一缺口}} ✓✓✓$$
+$$\qquad ⚠️\ \text{若把它当唯一缺口} ⟹ \text{极易回到}\ \text{Deninger}/\mathbb F_1\to\text{polarization}\to\text{Weil 正性}\ \text{旧环路} ✓✓$$
+$$\qquad ⟹ \text{应提取的是}：\boxed{\text{polarization}\Rightarrow\text{evolution defect}\Rightarrow\text{infinite-extension rigidity}} ✓✓$$
+$$\qquad ⚠️\ \text{但}\ \text{`V238`}\ \text{已证}：\text{polarization 的最小结构含}\ \textbf{definiteness}，\ \text{而它在算术情形}\ \textbf{就是 Weil 正性} ⟹ \text{缺陷表述}\ \textbf{在最后一步包含}\ \text{`V199`} ✓✓✓$$
+$$\qquad ⚠️\ \text{且}\ \text{`V238`}\ \text{的有限层计算显示}：\Delta_F\ \text{在自然模型里}\ \textbf{恒零／局部分解／退化为密度} ⟹ \text{当场退化} ✓✓$$
