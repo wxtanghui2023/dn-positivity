@@ -112,3 +112,16 @@ $$\textbf{(e)}\ \text{§5 为}\ \textbf{结构性论证}，\ \textbf{非定理} 
 ✅ 净产出：① V214 三处勘误 ✓✓✓；② Hadamard＋FE 收口（取代 Hamburger）✓✓✓；③ 最小结构 R1–R4 ✓✓；
    ④ 三型接口分类（全封）✓✓✓；⑤ "为什么现有语言无法提供"的结构性结论 ✓✓✓；⑥ 三步筛选器＋残余判据 ✓
 ```
+
+---
+
+## §9 ⚠️ 两处修正（唐先生 2026-09-15 15:26；随后由 `V216` 执行）
+
+$$\textbf{(1) R3 须写成更强形式}：T_X\ \text{成立}\ \not\Rightarrow T_X\ \text{强迫 RH};\ \text{必须有} ✓✓$$
+$$\qquad \boxed{T_X\Longrightarrow\forall\rho\in Z(\zeta),\ \Re\rho=\tfrac12} ✓✓✓$$
+$$\qquad ⚠️\ \text{即"刚性"必须}\ \textbf{直接给出所有零点的横向位置}，\ \text{而非只给出某个不变量取临界值} ✓$$
+
+$$\textbf{(2)}\ \text{§4 的"三型"}\ \textbf{不构成穷尽}：\text{漏掉}\ \textbf{系数／值域结构}：✓✓$$
+$$\qquad \text{Taylor 系数／Dirichlet 系数／integrality／代数依赖／递推／det 子式};\ \ \xi(s)=\sum a_ns^n\ \text{的}\ \{a_n\}\ \textbf{不在 (a)(b)(c) 内} ✓$$
+$$\qquad \Longrightarrow\ \text{接口}\ \textbf{升级为五类}：\text{(a) zero-statistical};\ \text{(b) special-value};\ \text{(c) archimedean};\ \textbf{(d) coefficient-arithmetic};\ \textbf{(e) functional-algebraic} ✓✓$$
+$$\qquad ⚠️\ \text{且本档 §4 关于"三型皆单对象管道"的论证}\ \textbf{对 (d)(e) 无效} ⟹ \text{须单独审计（见 `V216`）} ✓$$
