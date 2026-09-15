@@ -240,6 +240,19 @@ $$\textbf{W3 ✗}：\neg\text{RH}\ \text{给【有限见证（非无限）】};\
 $$\boxed{\text{故}\textbf{无第七类} ✓\ \text{（WF 被 II}\cup\text{IV 吸收）};\ \textbf{但不证明类表完整} ✗\（\text{§E.4 仍开} ⚠️）}$$
 $$\qquad\textbf{⭐ 本行收获 ✓}：\text{Π}_1\ \text{必要条件（对 Robin 型见证盲目 ⟹ 必须解析／上同调定义）是 }§E.4\ \text{类表的}\textbf{新增覆盖力证据} ✓（仍非完整性证明 ✗）}$$
 
+### F.5m ⭐⭐⭐⭐⭐ **§E.4 直接攻击（第一轮）：反例骨架生成器**（`V151` ✓ 2026-09-15 09:38）—— **未逃逸** ✗｜⭐ **§E.4 → (E4′) 精确化** ✓✓｜⭐ **六类表 ＝ big five 的影子** ✓✓
+
+$$\textbf{方法论转向 ✓（回应 }V149\ \text{§2 的批评）}：\text{审计单位}\neq\text{对象形态};\ \text{审计单位}＝\textbf{推出矛盾所用的推理原则}\ \sigma\ ✓\ \Longrightarrow\ \text{写法定式}：\neg\mathrm{RH}\Rightarrow\exists\text{坏轨道}\Rightarrow_\sigma\bot$$
+$$\textbf{四型骨架全试 ✓}：\text{A 算术枚举型（Robin）}\textbf{被吸收} ✗\（\text{有限阶段}⟹\mathrm V/\mathrm{III};\ \text{且 }V150\ \text{W2 的 }\Pi_1\ \text{必要条件在骨架层就排除}\ ✓✓\text{）};\ \text{B 动力系统型}\textbf{被吸收} ✗\（\text{证书}＝\text{秩}⟹\text{Mostowski}⟹\mathrm{II}\cup\mathrm{IV}\ ✓\ \text{或 有限特征}⟹_\text{König}\text{有限阶段见证}\ ✓\text{）};\ \text{C 选择/定向型}\textbf{已封} ✗\（V148\text{）};\ \text{D }\mathrm{zoo}\ \text{型}\textbf{被定位但判 }\beta\text{-盲} ✦$$
+$$\textbf{⭐ §E.4 新形式 ✓✓}：\boxed{(\mathrm{E4}^{\prime})\quad\text{任何 }\neg\mathrm{RH}\Rightarrow\bot\ \text{的证书，必由 } RCA_0\cup WKL_0\cup ACA_0\cup ATR_0\cup\Pi^1_1\text{-}CA_0\ \text{之一认证}}$$
+$$\qquad\Longrightarrow\ \text{有明确定义域（需固定骨架语言＋"}\beta\text{-排除证书"的形式定义）} ✓;\ \text{且有已知否定候选（}\mathrm{zoo}\text{）} ⟹ \textbf{可证／可否证} ✓\ \text{—— 满足"把 §E.4 变成可证明／可否证的命题"的要求} ✓✓$$
+$$\textbf{⭐ 六类表 ＝ big five 的影子 ✓}：RCA_0\（\text{有限特征}）⟹\mathrm V/\mathrm{III};\ WKL_0\（\text{König/紧性}）⟹\text{有限阶段见证};\ ACA_0\（\text{算术量词/增长}）⟹\mathrm{II};\ ATR_0\（\text{超限递归/秩}）⟹\mathrm{IV};\ \Pi^1_1\text{-}CA_0\（\text{可定义性}）⟹\mathrm{VI};\ RCA_0\ \text{的等式型子形状}⟹\mathrm I$$
+$$\qquad ⭐⭐\ \textbf{三项独立吻合}：\text{(a) }ATR_0\ \text{行}\equiv V150\ \text{W1（}\mathrm{WF}\subseteq\mathrm{II}\cup\mathrm{IV}\text{）} ✓✓;\ \text{(b) }WKL_0\ \text{行}\equiv V133\ \text{Theorem A（极限盲）} ✓✓;\ \text{(c) }\Pi^1_1\text{-}CA_0\ \text{行}\sim V134\ \text{（不可解码}⟹\text{不可认证}⟹\mathrm{IV}\text{）} ✓$$
+$$\qquad ⚠️\ \textbf{诚实边界}：\text{映射为}\textbf{结构性 ⚠️ 非定理} ✗;\ \text{未证"每个 }\sigma\ \text{必落其中一层"} ✗$$
+$$\textbf{唯一攻击面 ＝ 逆向数学 }\mathrm{zoo} ✦\（RT^2_2\text{／}COH\text{／}AMT\text{／}SADS\dots\ \text{严格超出 big five} ✓\text{）}\ ——\ \text{但判 }\beta\text{-盲}：\text{其输出 ＝ 齐次集／同构对象的存在}\⟹\ \text{对元素的算术位置不敏感}\⟹\ \textbf{结构性信息}\neq\beta\text{-排除所需的元素级信息}\⟹\textbf{类型不匹配}（与 }V148\ \text{同型} ✓\text{）};\ \text{双佐证}：V132\ \text{§② β-free 数据引理 ＋ }V150\ \text{W2 }\Pi_1\ \text{必要条件} ✓$$
+$$\qquad\Longrightarrow\ \text{结论 ✓}：\text{反例骨架【未逃逸】✗}\ \text{—— 但 §E.4 第一次成为}\textbf{良置命题} ✓✓;\ \text{本档不证 }(\mathrm{E4}^{\prime})\ ✗\ \text{亦不证 zoo 逃逸} ✗$$
+$$\qquad\textbf{下一步三选（待定 ✓）}：①\ \text{攻 }\mathrm{zoo}\（\text{先形式化"}\beta\text{-信息"再证 zoo 原理 }β\text{-信息}＝0\text{）};\ ②\ \text{攻 }ATR_0\ \text{行（}V150\ \text{W1 升为逆向数学定理）};\ ③\ \text{回 }P$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
