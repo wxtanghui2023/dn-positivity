@@ -832,6 +832,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V191 预登记，二选，均须先过 R1）**：① **结构性**：证明"中等 $d$、小 $n$ 例外集为空"需要**何量级输入**？（等价于低零点／Weil 正性 ⟹ 封；否则这是**第一个定位在 $(d,n)$ 轴上的新缺口**）② **构造性**：用 **Borcea–Brändén symbol 判据**构造**算术可实现**的稳定性保持算子，把"已知实根"起点推向 $\xi$（⚠️ 若把目标写进 symbol 即走私 ⟹ 按 `V188` 判据自检）。
 
+### F.5az ⭐⭐⭐⭐⭐ ⚠️**勘误（`V193` ✓）**：本节所引 **MDPI Mathematics 14(11) 1884（Planat）存在实质性归一化错误**（其 $M_n=\int\Phi_1u^{2n}du$ 相对 GORZ 的 $\gamma(n)$ **漏掉一个随 $n$ 变化的 $n!$ 因子**）⟹ 其三条结论（$n\ge C_0^\infty d^4$／finite strip $\equiv$ RH／interlacing-lift vacuity）**一律作废、不得引用**；**S 通道封闭理由改用 `V191` 等价性**，**不依赖该文**。
+
 ### F.5az ⭐⭐⭐⭐⭐ **V191-① 的回答：NO（定理级）—— 剩余区域的双曲性不可能由严格弱于 RH 的命题推出；F1 升级为两问制**（`V191` ✓ 2026-09-15 13:08）
 
 **委托（唐先生 13:08）**：把 S 通道升级为 ALIVE，但 V191-① 必须做且**比"需要什么量级输入"更严格**：**中/大 $d$、小 $n$ 的全部双曲性，是否能由一个明显弱于 RH 的有限算术命题推出？** 同时修正逻辑点（"每个 $d$ 有限例外"**不**蕴含统一 $(D,N)$，因 $N(d)$ 可随 $d$ 增长）并给出判死标准（若"剩余全双曲"$\Longrightarrow$ Weil/Li 正性 $\Longrightarrow$ **S channel DEAD**）；并指出真正该追的量是 **Hermite 稳定性到 finite-$n$ 的距离** $\|\widehat J-H_d\|<\operatorname{dist}(H_d,\partial\mathcal H_d)$。
@@ -865,6 +867,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 **⑤ F4 采纳（六条）＋ 逐条打分**：$$\boxed{\mathcal R\ \text{须满足}：①\text{非线性}\ ②\text{非显式公式换坐标}\ ③\text{算术侧可独立构造}\ ④\text{对}\beta\text{敏感}\ ⑤\text{非}Q\succeq0\text{重编码}\ ⑥\text{定量 localization}}$$ 打分：**Hedenmalm** $\pm/\pm/\checkmark/\times/\pm/\checkmark$ ⟹ **死于④**（§②）｜**逆谱几何（Hayashi–Sakai）** $\checkmark/\checkmark/\times/\checkmark/\checkmark/\checkmark$ ⟹ **只缺③ arithmetic origin**｜sum rule／covariance（DEAD，`V188`）｜inertia（DEAD，`V186`）｜RG 收缩（DEAD）｜**RMT rigidity（Laguerre）＝统计型 ⟹ DEAD**（`V188`）｜self-adjoint／Hilbert–Pólya 类（**DEAD，§③ 封印**）。⭐ **四筛最终形态**：$$\text{F3 通道分类}\to\text{F1 两问（语义／强度）}\to\text{F2 涨落层级}\to\textbf{F4 表示变换}$$
 
 **下一步（V193 预登记，三选）**：① **核** Hedenmalm 原文四句话（$\Theta_{00}$／$\mathbf E$／零积分／负点质量），确认 §④ 的 F1 判定（若其补偿结构与显式公式**不完全同构**，该资产值得单独立档）② **逆谱几何的③问**："能否把 $\mathcal R$（逆谱变换）的**输入**从零点测度换成素数侧数据？"——若不能 ⟹ 与一切几何侧候选同命（缺同一座桥）；若能 ⟹ **本晚第一个真正的新入口** ③ **收束**：本晚已连关 S 线／N31／线性 Weyl 律／inertia／cancellation／null-relation／通道 S（`V191`）／**谱实现族（`V192`）** ⟹ 转回 **A1／A3**
+
+### F.5bb ⭐⭐⭐⭐⭐ **V193：Planat 剔除 ＋ 算术-逆谱几何审计（二分封闭）＋ 自查勘误 ＋ 第三次收敛**（`V193` ✓ 2026-09-15 13:14）
+
+**① Planat／MDPI 归一化错误确认 ⟹ 三条结论剔除、我方引用作废**：GORZ 定义 $(-1+4z^2)\Lambda(\frac12+z)=\sum_{n\ge0}\frac{\gamma(n)}{n!}z^{2n}$（级数中 $1/n!$ **显式**）；Planat 用 $M_n=\int_0^\infty\Phi_1(u)u^{2n}du$（**无** $n!$ 因子）⟹ 两族相差一个**随 $n$ 变化**的因子（量级 $n!/(2n)!$）⟹ **定义的 Jensen 族不同**；其 $d=2$ 的论证（$\Phi_1\ge0$ ＋ Cauchy–Schwarz $\Rightarrow M_{n+1}^2<M_nM_{n+2}\Rightarrow\Delta<0$，故永不双曲）与 GORZ 已证 $d\le8$ 全 $n$ 双曲**定义层面冲突** ⟹ 其 $n\ge Cd^4$／finite strip $\equiv$ RH／interlacing-lift vacuity **均不可采信**。⚠️ **纪律升级**：$$\boxed{\text{引用外部结果前，先做}\ \textbf{定义级核对}（归一化／因子／指标约定）}$$
+
+**② S 通道 CLOSED，理由正确**：封闭理由**不是** "Planat 的 obstruction"，而是 `V191` 的等价性：$$\text{RH}\iff[\text{剩余区}\{d\ge9,n<N(d)\}\ \text{全双曲}]$$ ⟹ 该通道**强度恰等于 RH** ⟹ 不可能提供"弱于 RH 的输入"。⭐ 保留"**$d$ vs $n$ 二维缺口**"为**地图上的缺口形态**（与 $T$-轴缺口并列），**不作**独立机制。
+
+**③ 算术-逆谱几何审计（V193-② 窄问题）**：$\mathcal R$ 链条 $$\boxed{\{\varepsilon_n\}\xrightarrow{\mathcal D}f\xrightarrow{\langle m|\cdot|n\rangle}F\xrightarrow{|m-n|=d}W_d\xrightarrow{\sum d^p}M_p}$$ 第一步是**谱 $\to$ 势**的**逆谱问题**，输入必须是**离散有序谱** ⟹ 素数侧自然对象 $\{\log p\}$ 虽也是离散有序序列，但 $$\boxed{\mathcal R(\{\log p\})\neq\mathcal R(\{\gamma_n\})}$$ ⟹ 须有算术 intertwiner $\mathcal A_{\mathbb P\to\zeta}$ ＝ **缺的桥** ⟹ **直接替换：NO**。唯一已知 intertwiner ＝ **显式公式**，但其内容已被 `V188` 饱和定理覆盖，且由 **F4 ②**：$$\boxed{\text{显式公式}+\mathcal R=\textbf{纯表示变换}}\Longrightarrow\text{杀}$$ ⟹ 旧工作（Wu–Sprung／Ramani 等）分别造出 $V_\zeta$ 与 $V_{\mathbb P}$ 但**未证明二者相同、无桥** ⟹ 判 **BRIDGE-ONLY / ALIVE BUT UNINSTANTIATED**。
+
+**⭐⭐ ④ 二分封闭（本档核心）**：设 $\mathcal R_{\rm arith}$ 存在、产出 $\operatorname{Spec}(H_0+f)=\{\gamma_n\}$，问 $\beta$ 信息从何而来？**(i) 目标为自伴（实谱）实现**：由 `V192` 封印，$\beta$ **只能经退化／重数**进入 ⟹ 该支 $\beta$-内容 ＝ 简单／互异零点计数（$N_0^s／N_d$）⟹ 撞**已证上限 0.6818287** ⟹ **封**。**(ii) 目标为非自伴但声称实谱**：则"实性"本身 ＝ **RH 强度** ⟹ **无免费输入** ⟹ **封**。⟹ $$\boxed{\text{两支皆封};\ \text{唯一逃生 ＝ 第三支}}$$（算术对象，其 $\beta$-敏感性**既非重数、也非"实性声称"**）。
+
+**⭐⭐⭐ ⑤ 第三次收敛**：`V187`（机制族入口）／`V188`（信息类型入口）／**本档（算术-逆谱几何入口）** 三路 ⟹ 同一残余：$$\boxed{\text{“}\beta\text{-敏感、但既非重数／指标、也非二次型、也非逐点}\text{的算术对象”}}$$ ⚠️ 标 **OPEN，不杀、不投入**（**不是**候选机制，只是判定的剩余）。
+
+**⚠️⚠️ ⑥ 自查勘误（F1 措辞级）**：`V188`／`V192` 的"线性／求和／null-relation 通道对 $\beta$ **结构性盲**"**措辞过强** ✅ **正确表述**：线性通道**饱和**（不提供新的独立信息），但其**提取**需要**一致性／无界精度** ⟹ 障碍是**定量-一致性**，**不是盲**。根源：$\gamma_\rho=\frac{\rho-1/2}{i}=\gamma-i(\beta-\frac12)$ **为复数**，**显式公式的线性统计量确实编码 $\beta$**。⚠️ `V187` 的"signature／trace 中性"**仍成立**（那是**特定聚合泛函**的中性，≠ 泛函族盲）。⟹ **不影响任何结论**，只修正**理由的表述**；并印证 `V188` 原有 caveat（"饱和 $\neq$ 无用；反演需无界精度"）本就在 —— 是我压缩转述时丢了"**直接**"二字。
+
+**下一步（V194 预登记，三选）**：① **收束**：本晚连关 9 项 ＋ 三入口收敛 ⟹ 转回 **A1／A3（Weil／Li 正性）** ② **工具卡收官**：F1 修订版（两问）＋F4＋二分封闭＋饱和判据＋涨落三层表＋四通道穷尽表 → **单页预筛卡** ③ 若攻第四类：按 R1 先给"第三支"**严格定义**并自检（预计回到二次型／重数通道）
 
 ## F.4 与 §E.4 的关系（✓）
 
