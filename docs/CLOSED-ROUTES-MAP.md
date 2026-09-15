@@ -678,6 +678,24 @@ $$\Longrightarrow\ \Phi=cX^\alpha\ \textbf{单式}\ \Longrightarrow\ \operatorna
 
 **⑧ 主线交接（A1／A3）**：**承重墙（`V162`）** $$\boxed{T\log T\ +\ \text{Weil 正性}};\qquad \text{核心缺口}：\boxed{\text{局部算术结构}\ \not\Longrightarrow\ \text{全球谱定位}}$$ 已知无条件输入不足：比例天花板 $0.682$｜第三矩／高相关需 support $>1$｜T² 律／预算越界（`V102`／`V162`）⟹ **唯一登记靶点：E102 §8 target1**。**V182 建议：形式化 N31**（char-0 无条件 $\sqrt{\cdot}$-正性 ⟹ origin 可归约到 finiteness）—— 理由：把三条**族级 NO-GO** 升级为**结构结论**（目前只在 known-candidate 级，覆盖性论证未证），杠杆最高。
 
+### F.5ar ⭐⭐⭐⭐⭐ **N31 全证明审计：四箭逐个判定 ⟹ 判定 B＋C（箭 3 为假；两难；封口）**（`V182` ✓ 2026-09-15 12:13）
+
+**硬目标（唐先生）**：char-0 无条件 $\sqrt{\cdot}$-正性 $\Longrightarrow$ origin reduction $\Longrightarrow$ finiteness；四箭必须独立闭合；**纪律：先不要证明"某已知候选满足 N31"，而要证"假设本身 ⟹ finiteness"**；三选 A／B／C（**C 也算实质结果**）。
+
+**① 箭 1（钉死正性输入）**：必须钉死 (1a) 测试函数类范围｜(1b) 是否允许依赖 $T$｜(1c) 是否 PSD（决定能否用 Cauchy–Schwarz 产生 $\sqrt{\cdot}$ 型界 —— 这正是"$\sqrt{\cdot}$-正性"的来处）⟹ 无论怎么钉，都落入 §4 两难。
+
+**② 箭 2（origin reduction）前提混入待证结论**：$\mathcal O(F)$（原点量）的存在要求对象有**局部（算术）模型** —— 正是 `V105`（L2 载体迁移）判 **0/14** 的东西 ⟹ 箭 2 的前提**正是族级 NO-GO 的内容**；若不要求局部模型，$\mathcal O(F)$ 只能是谱侧量 ⟹ 箭 2 退化为箭 3。
+
+**③ ⭐ 箭 3 判为【假】（不是"未证"）**：**(3a) 反例类** —— 取 $H=\operatorname{diag}(\lambda_j)$ 自伴，$Q(f)=\langle Hf,f\rangle\ge0$，$\{\lambda_j\}$ **任意**（含 $\lambda_j\asymp j\log j$）⟹ 存在正半定、无条件、char-0 的二次形式，其谱恰为 $\{\lambda_j\}$ ⟹ $$\boxed{\text{正性}\ \not\Longrightarrow\ \text{任何计数界}}$$ **(3b) 加强到 trace-class 也只给 $O(T^2)$**：若 $\tau=\sum_j\frac1{1+\lambda_j^2}<\infty$，则 $|λ_j|\le T$ 时 $\frac1{1+λ_j^2}\ge\frac1{1+T^2}$ ⟹ $$\boxed{N_F(T)\le\tau(1+T^2)=O(T^2)}$$ 而 $O(T^2)$ 与 RvM 的 $T\log T$ **不矛盾** ⟹ **箭 4 无从产生矛盾**。⭐ 要得 $O(T)$ 必须要求**一阶可和** $\sum_j\frac1{1+|λ_j|}<\infty$，而这对 $\lambda_j\asymp j\log j$ **发散**（$\sum1/(j\log j)=\infty$）⟹ 一阶可和要求**排除 $T\log T$ 谱**。
+
+**④ ⭐⭐ 两难（本档最强结论）**：**无条件读法**（全测试函数／全 $T$、PSD）⟹ 由 (3a) 与 $N\asymp T\log T$ 相容 ⟹ **不给界** ⟹ 箭 3 假；**强读法**（输入强到迫使 $N=O(T)$）⟹ 由 (3b) 等价于**一阶可和** ⟹ **排除** $\lambda\asymp j\log j$ ⟹ 已排除 ζ 零谱密度 ⟹ **该输入已蕴含 RH 强度** ⟹ **非无条件** ⟹ **循环**。⟹ $$\boxed{\text{无条件}\Longrightarrow\text{太弱（不给界）};\quad \text{给界}\Longrightarrow\text{太强（已是 RH）}}\ \Longrightarrow\ \boxed{\text{N31 的桥}\ \textbf{不存在}}$$
+
+**⑤ 判定 ＝ B ＋ C**：**(B)** 失效在**箭 3**（且为假，有反例类），箭 2 亦混入待证结论；**(C-i)** 若把输入加强到"一阶可和"，对 ζ 无条件为**假**（RvM 给 $\sum1/|\gamma|$ 发散）⟹ N31 的假设对目标对象**空转** ⟹ 结论**真空**，不构成族级 NO-GO；**(C-ii)** 若把输入弱化为"ζ 可用"，则必须提供**线性 Weyl 律（1 维半经典密度）** —— 正是 `V162` 的 $$\boxed{T\log T+\text{Weil 正性}}$$ 墙本身。⟹ **N31 或空转，或 ≡ `V162` 墙** ⟹ 按纪律**立即封口，不包装成突破**。
+
+**⑥ 一致性 ＋ 一条撤回**：与 `V162`（$T\log T$ 是 1 维半经典律，自然产生需 continuation）／`V179`（一阶可和才是 $O(T)$ 的正性侧充分形式，对 ζ 空转）／`V144`（零点在 Archimedean 层）一致。⚠️ **重要撤回**：此前（09-14 台账）把"形式化 N31"列为**最高杠杆**的升级路径 —— 本档判定该路径**不存在** ⟹ **三条族级 NO-GO（L1／L2／L3）保持 known-candidate 级，不升级**。
+
+**下一步（V183 预登记）**：① 回主线承重墙攻**线性 Weyl 律的算术来源**（正性侧已证不可达 ⟹ 只剩几何／算术构造侧）② 审 §3(3b) 的**一阶可和门槛**可否反向用作新筛子（与 `V179` 有限支撑筛并列）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
