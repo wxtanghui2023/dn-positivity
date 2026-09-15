@@ -125,3 +125,39 @@ $$\text{`CLOSED-ROUTES-MAP` §F.5m 增补 ✓}：(E4^{\prime})\ \text{行 ＋ bi
    ③ **六类表 ＝ big five 影子**（ATR₀ 行与 V150 W1 独立吻合）✓✓；④ zoo 为唯一攻击面且判 β-盲 ✦；
    ⑤ 三项可选下一步 ✓
 ```
+
+---
+
+## §8 ⚠️ **ERRATUM（T10 勘误 · 唐先生 2026-09-15 09:48 裁定 ✓ 必守 ✓）**
+
+$$\text{唐先生裁定逐字 ✓}：\text{"V151 有}\textbf{重要推进}\text{，但 §0 的核心'E4}^{\prime}\ \text{已良置且 zoo }\beta\text{-盲'}\textbf{不能按现稿成立}"} ✗$$
+
+**(1) (E4′) 未良置 ✗✓（最严重）**：big five 是**主要分层**，但**没有**一般定理「任何数学证明 ⟹ 其强度必等于 big five 某一级」✗
+$$\qquad\text{恰恰相反 ✓}：\text{zoo 的存在}\textbf{本身就是该断言的反例} ⟹ \text{"}\textbf{必由}\text{…之一认证"}\text{ 是}\textbf{过度断言} ✗✗$$
+$$\qquad\Longrightarrow\ \text{正确形式（}\textbf{降一格} ✓\text{）}：\boxed{(\mathrm{E4}^{\prime}\text{-cond})\quad \text{若 }\beta\text{-排除证书的认证原则}\textbf{属于}\text{ big five，则六类表获得相应覆盖}} ✓$$
+$$\qquad\qquad\text{—— 它比 }(\mathrm{E4}^{\prime})\ \text{弱一层，但}\textbf{是良置的} ✓✓$$
+
+**(2) "zoo β-盲"这一刀打不中 ✗✓**：**Z 本身位置盲 ⇏ Z 认证的整个证明位置盲** ✗✗
+$$\qquad\text{反例（唐先生给出 ✓）}：\text{coloring }c:\mathbb N^2\to\{0,1\}\ \text{可编码}\textbf{任意}\text{算术谓词}\ \bigl(c(x,y){=}0\iff P(x,y)\bigr)\ ✓$$
+$$\qquad\qquad\text{Ramsey 型定理只给 }\exists H\ \text{无限齐次} ⟹ \textbf{定理没告诉你哪个 }n\ \text{特殊，但 coloring 已把特殊的 }n\ \text{放进结构里} ✓✓$$
+$$\qquad\Longrightarrow\ \boxed{\text{本档 §6【作废】✗\ —— }\beta\text{-盲论证混淆了【认证原则的盲性】与【其所认证结构的编码能力】}}$$
+
+**(3) V148 类比不成立 ✗**：V148 处有**实质分类事实**（}H^1(-,\mathbb Z/2)\ \text{本身就是 quadratic/character 数据} ✓）；**zoo 没有这样的统一分类定理** ⟹ 不可类比 ✗
+
+**(4) 判词修订 ✓**：V151 ＝ **部分成立，核心 β-盲结论未证** ⚠️（逐条判定见 §9）
+
+---
+
+## §9 修订后的逐条判定（✓ 按唐先生表格 ✓）
+
+| V151 命题 | 判定 |
+|:--|:--|
+| WF 无第七类 | **✓**（`V150`） |
+| 六类与 big five 存结构对应 | **✓ / ⚠️**（结构性映射，非定理） |
+| **big five 穷尽所有认证原则** | **✗** |
+| zoo 是唯一形式攻击面 | **⚠️** |
+| **zoo 天然 β-盲** | **✗** |
+| β-free ＋ β-neutral ⟹ β-free | **值得正式攻**（→ 见 `V152`，结论：**为假** ✗） |
+| **§E.4 已经解决** | **✗** |
+
+$$\Longrightarrow\ \textbf{下一步不得继续枚举 }\mathrm{RT}^2_2/\mathrm{COH}/\mathrm{AMT}/\mathrm{SADS}\ ✗\ \text{—— 应直接做 }V152\ ✓（\text{见 }docs/V152\text{-}\dots\ ✓）$$

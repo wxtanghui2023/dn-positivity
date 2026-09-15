@@ -253,6 +253,22 @@ $$\textbf{唯一攻击面 ＝ 逆向数学 }\mathrm{zoo} ✦\（RT^2_2\text{／}
 $$\qquad\Longrightarrow\ \text{结论 ✓}：\text{反例骨架【未逃逸】✗}\ \text{—— 但 §E.4 第一次成为}\textbf{良置命题} ✓✓;\ \text{本档不证 }(\mathrm{E4}^{\prime})\ ✗\ \text{亦不证 zoo 逃逸} ✗$$
 $$\qquad\textbf{下一步三选（待定 ✓）}：①\ \text{攻 }\mathrm{zoo}\（\text{先形式化"}\beta\text{-信息"再证 zoo 原理 }β\text{-信息}＝0\text{）};\ ②\ \text{攻 }ATR_0\ \text{行（}V150\ \text{W1 升为逆向数学定理）};\ ③\ \text{回 }P$$
 
+$$\textbf{⚠️ ERRATUM（T10 · 唐先生 2026-09-15 09:48 ✓ 必守）}：\text{本行（}V151\text{）的 }(\mathrm{E4}^{\prime})\ \textbf{未良置} ✗✓\ \text{—— big five 是}\textbf{主要分层}，\textbf{无}\text{"任何证明的强度必等于某一级"之一般定理} ✗；\mathrm{zoo}\ \text{存在}\textbf{即其反例} ⟹ \text{降为}\ \textbf{(E4}^{\prime}\text{-cond)}（条件式）✓；\ \textbf{"zoo }\beta\text{-盲"}\textbf{作废} ✗\ \text{—— }\text{coloring }c:\mathbb N^2\to\{0,1\}\ \text{可编码}\textbf{任意}\text{算术谓词} ⟹ \textbf{Z 本身盲 ⇏ 所认证结构盲} ✓✓；\ \textbf{V148 类比不成立} ✗\（\mathrm{zoo}\ \text{无统一分类定理}）⟹ \text{正解见 }V152\ ✓$$
+
+### F.5n ⭐⭐⭐⭐⭐ **β-Information Conservation / Zoo Neutrality（守恒命题为假）＋ Robin 二分**（`V152` ✓ 2026-09-15 09:52）—— **(BIC) 为假 ✗｜攻击面迁移 ✦**
+
+$$\text{目标（唐先生 §五）}：\mathcal L_0\text{-}\beta\text{-free}\ +\ Z\text{-neutral}\Longrightarrow\mathrm{Cl}_Z(\mathcal L_0)\ \text{β-free};\ \mathcal L_0\ \textbf{不含}\ \rho/\beta/\gamma/\zeta(\rho)\ \text{及零点参数谓词（含}\sigma(n)\text{）} ✓$$
+$$\textbf{⭐ 决定性反例 ＝ Robin} ✓✓：\mathrm{RH}\iff\forall n>5040:\sigma(n)<e^\gamma n\log\log n\（\gamma\ \text{＝ Euler–Mascheroni 常数，非零点虚部 ✓）}\Longrightarrow\neg\mathrm{RH}\iff\exists n>5040:\sigma(n)\ge e^\gamma n\log\log n$$
+$$\qquad\Longrightarrow\ \text{该句}\textbf{完全落在 }\mathcal L_0\ \text{内} ✓✓\ \text{—— }\mathcal L_0\ \textbf{已在语义上完备于 RH} ⟹ \mathcal L_0\ \text{的语义 β-信息}\neq0\ ✗✓$$
+$$\qquad\Longrightarrow\ \boxed{\textbf{二难} ✓✓}：\text{语法版 }I_\beta ⟹ (BIC)\ \textbf{可证但平凡且不承载 }§E.4 ✗;\ \textbf{语义版 }I_\beta ⟹ (BIC)\ \textbf{为假（Robin 反例）} ✗✗\ \text{—— 任何"强到正确"的语义定义都会把 RH 塞进定义} ✓✓$$
+$$\textbf{⭐ 失败点定位} ✓✓：\textbf{finite → infinite 边界}\ \text{—— 有限阶段素数数据 β-盲（}E103\ \text{Lemma A ✓）而无界算术数据 β-可见（Robin ✓）} ⟹ \text{这}\textbf{正是 }V150\ \text{W2 的 Π}_1\ \text{论证} ⟹ \textbf{W2 的证明论根源 ＝ 算术虽 β-free 语法却经 Robin 承载 β} ✓✓$$
+$$\textbf{⭐⭐ Theorem B（Robin 二分）}：(a)\ \textbf{Robin-seeing}（用无界除数和数据）⟹ \text{算术完备} ⟹ \text{会看到 }n_0 ⟹ \text{与"每层平坦"矛盾} ⟹ anomaly\ \text{必须解析／上同调} ⟹ \textbf{已封类} ✗；(b)\ \textbf{Robin-blind} ⟹ \text{不可能经算术路径得 β 信息} ⟹ \text{必须引入}\textbf{非算术 β-sensitive primitive} ⟹ \text{三来源：零点（循环 ✗）／L-函数（旧类 ✗）／}\boxed{\textbf{真正新的 arithmetic→Archimedean bridge（唯一剩余方向）}} ✓✓$$
+$$\qquad ⭐\ \text{独立佐证}：\textbf{从证明论侧独立重推 }V144\ \text{层诊断}（(b)\ \text{逼出的"解析"侧 ＝ Archimedean 层 ✓✓）;\ \text{与 }V140\ \text{二分定理同向};\ \textbf{覆盖 }V133\ \text{Theorem A 的适用范围} ✓$$
+$$\textbf{⭐ 反例搜索与攻击面迁移} ✦：\text{唯一发现的实例是"算术等价自身"（Robin），而}\text{算术}\in\ \text{big five}\（\text{非 zoo}）⟹ (BIC)\ \text{的反例}\textbf{不在 zoo 里} ⟹ \mathrm{zoo}\ \textbf{不再是自然攻击面};\ \text{攻击面迁移至}\ \boxed{\textbf{Robin 边界}}$$
+$$\qquad\Longrightarrow\ §E.4\ \text{形态}\textbf{再次收窄} ✓：\text{不再是"big five 是否完整"（已判非正确形式 ✗），而是}\ \boxed{\textbf{Robin-blind 机制能否排除 β？}} ✓✓$$
+$$\qquad\textbf{诚实边界 ⚠️}：\text{flatness 论证 [结构性] 非定理};\ \text{二分平凡穷尽、内容在两条后果};\ \text{"(b)⟹必须新 primitive" [结构性] 非定理}$$
+$$\qquad\textbf{下一步三选 ✓}：①\ \text{攻 (b) 支（形式化"Robin-blind ⟹ 算术路径 β-信息＝0"，取代 }(BIC)\ \text{的表征定理靶）};\ ②\ \text{攻 flatness（把 }W2\ \text{补硬）};\ ③\ \text{回 }P（暂放）$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
