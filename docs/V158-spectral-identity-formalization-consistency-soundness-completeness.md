@@ -65,7 +65,7 @@ $$\text{问 ✓}：\textbf{soundness 与 completeness 是否必须分别经过 �
 
 $$\textbf{(a) soundness 的必经性 ✓}：\text{soundness 要求对每个 }\lambda_j\ \text{建立}\ \zeta\bigl(\tfrac12+q(\lambda_j)\bigr)=0\ ✓$$
 $$\qquad ⚠️\ \text{该谓词是}\textbf{继续后对象}\text{的谓词} ✓✓\ \text{—— Euler 积}\ \prod_p(1-p^{-s})^{-1}\ \textbf{只在}\ \operatorname{Re}s>1\ \text{收敛},\ \text{而}\ \tfrac12+q(\lambda_j)\ \text{落在临界带}\ ✓$$
-$$\qquad\Longrightarrow\ \text{任何验证都须}\textbf{触及 Archimedean／完成结构}（\theta\ \text{／Mellin／函数方程）✓$$
+$$\qquad\Longrightarrow\ \text{任何验证都须}\textbf{触及 Archimedean／完成结构}（\theta\ \text{／Mellin／函数方程}）✓$$
 $$\qquad\Longrightarrow\ ⭐\ \text{与 }V144\ \text{层诊断}\textbf{一致} ✓✓：\text{零点与 RH 在}\textbf{Archimedean 层};\ \text{而 β-free 算术住在}\textbf{有限层} ✓$$
 $$\qquad\Longrightarrow\ \boxed{\text{soundness}\ \textbf{必经 archimedean 桥}（\text{＝}V140\ \text{的 Gate A／B：arithmetic}\to\text{Archimedean）}}\ ✓✓$$
 $$\qquad\qquad ⚠️\ \textbf{重要推论}：\text{该桥}\textbf{就是 }C6\ \text{第一箭头本身} ⟹ \text{soundness}\ \textbf{不与 C6-gap 独立} ✓✓\ \text{（不再是一条新墙）}$$
