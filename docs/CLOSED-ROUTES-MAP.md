@@ -696,6 +696,24 @@ $$\Longrightarrow\ \Phi=cX^\alpha\ \textbf{单式}\ \Longrightarrow\ \operatorna
 
 **下一步（V183 预登记）**：① 回主线承重墙攻**线性 Weyl 律的算术来源**（正性侧已证不可达 ⟹ 只剩几何／算术构造侧）② 审 §3(3b) 的**一阶可和门槛**可否反向用作新筛子（与 `V179` 有限支撑筛并列）
 
+### F.5as ⭐⭐⭐⭐⭐ **线性 Weyl 律的算术来源审计 ⟹ DEAD（源-基数障碍 ＋ $S(T)$ 等价于 RH）**（`V183` ✓ 2026-09-15 12:16）
+
+**硬目标（唐先生）**：$$\boxed{\text{什么算术结构，能够强制}\ N_F(T)=O(T)\ \text{或线性密度？}}$$ 第一原则：**先审计线性 Weyl 律本身**；判死标准：**若只能得 $\mathcal A(T)=O(T)$ 但无法控制纤维；或必须假设 $N_F(T)\ll T$；或所需条件等价于 RH／Weil 正性／已知线性律 ⟹ 立即封口**。② 一阶可和筛定位为**验尸工具／必要条件**，不单独开档。
+
+**① 四类机制逐条 DEAD**：**(1) 离散长度谱**（每谱点 ↔ 整数／理想／素数事件）：此类事件**至多线性**（理想范数 $\le T$ 约 $cT$）⟹ 由 §2 不可能覆盖 $T\log T$ 零谱 ⟹ DEAD；**(2) 几何维数**（1 维／rank-1）：1 维 Weyl 给 $N(\lambda)\asymp\sqrt\lambda$ ⟹ 量级不符，且 $T\log T$ 真实来源是 $\Gamma$-相位（非几何）⟹ DEAD；**(3) 局部计数**（每高度区间 $O(1)$ 新自由度）：由 RvM，ζ 每单位高度新增 $\asymp\frac1{2\pi}\log T$ **不是 $O(1)$** ⟹ 该机制给出**过度稀疏**谱 ⟹ DEAD（此条最接近"算术可实现"，恰被 RvM 排除）；**(4) 算术唯一性**：即纤维条件 $\#\Phi^{-1}\le C$ —— **必要但非决定性**（见 §3）。
+
+**② ⭐ 决定性障碍（本档核心，先行）：源-基数障碍**。RvM（**无条件**）：$$N_\zeta(T)\asymp T\log T$$ ⟹ 若源满足 $\#\mathcal A_{\le T}=O(T)$，则 $\#\Phi(\mathcal A_{\le T})\le O(T)$，要覆盖 $T\log T$ 个谱点须 $T\log T\le O(T)$，**矛盾** ⟹ $$\boxed{\text{线性计数源}\ \textbf{不可能}\text{覆盖}\ \zeta\ \text{零谱}}$$ ⚠️ **无条件**（只用 RvM，不依赖 RH／Weil／显式公式）⟹ 最干净的一层；与 `V179`（"有限支撑 ⟹ $O(T)$ ⟹ 冲突"，从 $F$ 结构出发）**互为镜像**。
+
+**③ 纤维问题审计（唐先生危险点）**：$$\mathcal A_{\le T}\overset{\Phi}{\longrightarrow}\{\text{谱点}\ |\gamma|\le T\}$$ 的注入／有限纤维问题 —— **条件确实必要**（否则一个谱点可携带 $O(\log T)$ 内部自由度），但**不是本档瓶颈**：障碍在**更早**（源的基数本身只有 $O(T)$，即使纤维 $\equiv1$ 也不够）；且要救它只能**扩大源**到超线性 ⟹ 纯算术事件（素数／理想）**只有（次）线性计数**，能产生 $T\log T$ 计数的结构是 $\Gamma$-相位（archimedean）⟹ **回到层诊断**。
+
+**④ $T\log T$ 的真实来源**：$N(T)=\frac{\theta(T)}{\pi}+1+S(T)$，$\theta(T)=\operatorname{Im}\log\Gamma(\frac14+\frac{iT}{2})-\frac T2\log\pi$，$\theta(T)\sim\frac T2\log\frac T{2\pi}-\frac T2-\cdots$ ⟹ $\frac{\theta(T)}{\pi}\asymp T\log T$ ⟹ $$\boxed{T\log T\ \text{的主项来自}\ \textbf{完成函数的相位增长（archimedean）}，\textbf{不是}\text{几何 Weyl 律}}$$ 与 `V144` 层诊断**完全一致**；且 $\theta$ 与 RvM 均**无条件** ⟹ **$T\log T$ 这一层不构成缺口**。
+
+**⑤ 唯一剩下的计数问题 ＝ 涨落 $S(T)$ ⟹ DEAD**：无条件 $S(T)\ll\log T$（Littlewood）；$$\boxed{\text{RH}\Longleftrightarrow S(T)\ll\frac{\log T}{\log\log T}}$$（von Koch／Littlewood，经典）⟹ 控制 $S(T)$ 的算术来源 **≡ RH** ⟹ 按判死标准 ⟹ $$\boxed{\textbf{DEAD，封口}}$$ ⚠️ **目标改写**：要的不是 **Weyl 律**（密度／主项，无条件已知），而是 $$\boxed{\textbf{涨落（误差项）控制}}$$ —— 这是**抵消／相消**问题，**不是**计数问题。
+
+**⑥ 与 `V162` 墙的对应**：$$\boxed{\text{主项}\ T\log T\ \text{（条件成立）};\qquad \text{缺口}\ =\ \text{Weil 正性}\ =\ \text{涨落相消}}$$ ⟹ `V162` 的"墙"**不是**产生 $T\log T$ 密度，而是**抵消其涨落** ⟹ 与 A1／A3 **完全一致**。
+
+**下一步（V184 预登记）**：① **正面**：攻**涨落相消的算术来源**（＝ A1／A3 的算术实现；今晚唯一剩下的承重缺口）② **工具化**：把**源-基数障碍**做成新筛子（与 `V179` 有限支撑筛、`V182` 一阶可和门槛并列）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
