@@ -928,6 +928,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V196 预登记，唯一动作）**：**Mechanism II · Phase 1-b**：从零构造算术情形的 **transition maps／cocycle**，再算 **obstruction class**；三条待验形态（(i) 沿 $s\leftrightarrow1-s$；(ii) 沿 $p$ 与 $\infty$ 的局部化；(iii) 沿高度／尺度）；**唯一目标** ＝ 给出 $T$ 的**显式局部定义**并判断 $[T]$ 是否取值于**离散集合**（离散 ⟹ 刚性引擎可用）。
 
+### F.5be ⭐⭐⭐⭐⭐ **V196：机制 II · Phase-1-b —— canonical transition structure 与 obstruction（五步已执行）**（`V196` ✓ 2026-09-15 13:25）
+
+**委托（唐先生）**：**"V196 就攻 II，严格按 Phase-1-b，不碰 RH，不调用 F1–F4，不投影回旧四通道"**；**关键约束**：**"不能先假定 transition map 一定存在"** —— 第一步必须把**候选 transition structure 的来源空间也构造出来**，否则是"先写 $T$，再给 $T$ 找意义"（反向工程）。**禁令**（本档全程遵守）：**禁止出现 $\rho,\gamma,\beta,\Xi,\mathrm{RH},\text{Weil positivity},\text{Li criterion}$，甚至暂不问"这能否证明 RH"**；只允许 $$(p,p^k,\Lambda(p^k),\log p)\to A_v\to T_{vw}\to\text{cocycle}\to\text{obstruction}\to\text{是否离散}$$
+
+**V196-1 底空间与局部对象**：$\mathscr X=\{v_p\}\cup\{v_\infty\}$；$A_p$ 只用 $p,p^k,\log p,\Lambda(p^k)$。候选 canonical 局部对象：$\mathbb Z_p^\times$｜$\mu_{p-1}\subset\mathbb Z_p^\times$（**局部挠**，Teichmüller，阶 $p-1$ **有限**）｜$v_p:\mathbb Q^\times\to\mathbb Z$（**取值离散**）｜$\log p\in\mathbb R_{>0}$（尺度）｜$\Lambda(p^k)=\log p$；$A_\infty=\mathbb R_{>0}$。
+
+**V196-2 过渡映射存在性 ＋ canonical 性检验（第一个硬结果）**：**(A) $T_{p,q}:\mathbb Z_p^\times\to\mathbb Z_q^\times$ 直接映射 —— ✗ 不存在 canonical 定义**（挠阶 $p-1$ vs $q-1$ 不同、无自然 $p$-adic→$q$-adic 同态；任何此类映射都需**额外选择** ⟹ 那**不是** transition structure，只是**人为编码**）⟹ 按预定：$$\boxed{\text{素数之间没有这种 canonical gluing geometry}}$$ **转 B**。**⭐ 但发现 canonical 的替代道路 ＝ 公共对象（common object）**：不是点对点映射，而是各 $A_p$ **canonically 映入同一对象** ——(甲) 乘法侧 $p\mapsto p\in\hat{\mathbb Z}^\times$（**无需任何选择**）；(乙) 加法侧 $p\mapsto\log p\in\mathbb R_{>0}$；(丙) 局部挠侧 $\mu_{p-1}\hookrightarrow\mu_\infty=\bigcup_N\mu_N$ ⟹ **canonicity 在"共对象"层面成立**，过渡结构应写成**公共对象上的数据相容性**。**(C) 尺度支**：$A(r)=A_p$ 当 $r=\log p$ ⟹ canonical 性同 A 一样失败，**只能走公共对象道路**；尺度侧 canonical 结构 ＝ $\mathbb R_{>0}$ 上的伸缩作用，且 $\{\log p\}$ 在 $\mathbb Q$ 上**线性无关**。
+
+**V196-3 cocycle（一阶／二阶由实际 gluing law 决定）**：**加法支（valuations／$\log p$）** ＝ **乘积公式** $\sum_pv_p(x)\log p-\log|x|_\infty=0$ ⟹ cocycle **恒为 0**（加法上闭链），且 $\{\log p\}$ $\mathbb Q$-线性无关（唯一分解；Baker 更强）⟹ **格自由** ⟹ $$\boxed{\text{obstruction}=0}$$ ⟹ 判据 ① **杀**。**乘法支（局部挠／符号）**：局部符号 $(a,b)_v$ 取值 $\mu_N$（**离散**）；gluing law ＝ **Hilbert 互反** $\prod_v(a,b)_v=1$ ⟹ obstruction 宿主 $$\bigoplus_v\mathrm{Br}(\mathbb Q_v)/\mathrm{Br}(\mathbb Q)\cong\mathbb Q/\mathbb Z$$ 其 $N$-挠部分 $\mathrm{Br}(\mathbb Q)[N]$ **有限**（逐 $N$ 离散），但整体 $\mathbb Q/\mathbb Z$ **非有限** ⟹ 判据 ③ **杀**。
+
+**V196-4 离散值域来源（已定位）**：**(I) 局部挠 $\mu_{p-1}\subset\mathbb Z_p^\times$**（阶有限、canonical）；⭐ **结构事实**：$\hat{\mathbb Z}$ 的挠子群 $=\bigoplus_p\mu_{p-1}$（**直和**，因有限阶元只有限多分量非平凡）⟹ **它在 profinite 拓扑中是离散子群** ⟹ 这是"**连续群中的离散结构**"的现成实例 ⟹ **刚性引擎的前提在算术中真实存在**。**(II) 符号取值 $\mu_N$ 与 $\mathrm{Br}[N]$（逐 $N$ 有限）**。⚠️ 但 (I)(II) 的离散性**都来自"挠／单位根"，不来自任何"局部-全局张力"的新结构**。**(III)（本档新提）局部挠与全局挠的落差**：逐 $p$ 有 $\mu_{p-1}$（阶 $p-1$），而 $\mathbb Q$ 只有 $\mu_2$ ⟹ "局部离散数据不升为全局离散数据"这一**落差**本身是 canonical 现象，其障碍类落在 $\mu$-挠／$\mathrm{Br}$ 体系中。
+
+**V196-5 刚性检验**：$T_\lambda$ 连续族、$[T_\lambda]\in D$ 离散 ⟹ $\lambda\mapsto[T_\lambda]$ **局部常值** ⟹ 一点为零则同支为零；⭐ **经典实例（局部符号／挠类）确有该性质**（对 $(a,b)$ 局部常值）⟹ $$\boxed{\text{机制 II 的刚性引擎在算术中确有实例};\ \text{但实例的类是}\textbf{经典类}}$$
+
+**§6 判据对照（四条逐条）**：加法支 ＝ 0 ⟹ **① 杀**｜尺度支 ＝ 0 ⟹ **① 杀**｜$p\leftrightarrow q$ 直接映射 ＝ **canonical 性失败**（非 obstruction 型）｜$p\leftrightarrow\infty$ 公共对象 ＝ 可建但 gluing 是乘积公式 ⟹ **① 杀**｜乘法／符号支 ＝ $\mathrm{Br}$ 型 ⟹ **③ 杀**｜来源 (I)(II) 满足 ④ **形式条件但内容为经典挠类**。⟹ **四个候选支路全部落到 ① 或 ③**。⚠️ **但严格按纪律：本档不宣称"机制 II 死"，只宣称"canonical 分支的落点已被识别"**。
+
+**§7 唯一残余与 V197 预登记（lead，不预判）**：唯一未被判据覆盖的形状 ＝ **离散、非平凡、且非已知挠／$\mathrm{Br}$ 类的 obstruction**；最接近的 lead（**仅登记**）＝ 经典 $K$-理论中 **Steinberg 型关系 $\{a,1-a\}=0$**（**配对形状 $a\leftrightarrow1-a$**），⚠️ 但其取值**可能仍落 $\mu_N／\mathrm{Br}$**（待算）。**V197 唯一动作**：判 Steinberg 型关系的 obstruction 是否仍落 $\mathrm{Br}[N]$ —— 若落 ⟹ 该 lead 亦属 ③；若否 ⟹ 这是**第一个不属于 ①②③ 的离散非平凡类**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
