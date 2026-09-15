@@ -832,6 +832,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V191 预登记，二选，均须先过 R1）**：① **结构性**：证明"中等 $d$、小 $n$ 例外集为空"需要**何量级输入**？（等价于低零点／Weil 正性 ⟹ 封；否则这是**第一个定位在 $(d,n)$ 轴上的新缺口**）② **构造性**：用 **Borcea–Brändén symbol 判据**构造**算术可实现**的稳定性保持算子，把"已知实根"起点推向 $\xi$（⚠️ 若把目标写进 symbol 即走私 ⟹ 按 `V188` 判据自检）。
 
+### F.5az ⭐⭐⭐⭐⭐ **V191-① 的回答：NO（定理级）—— 剩余区域的双曲性不可能由严格弱于 RH 的命题推出；F1 升级为两问制**（`V191` ✓ 2026-09-15 13:08）
+
+**委托（唐先生 13:08）**：把 S 通道升级为 ALIVE，但 V191-① 必须做且**比"需要什么量级输入"更严格**：**中/大 $d$、小 $n$ 的全部双曲性，是否能由一个明显弱于 RH 的有限算术命题推出？** 同时修正逻辑点（"每个 $d$ 有限例外"**不**蕴含统一 $(D,N)$，因 $N(d)$ 可随 $d$ 增长）并给出判死标准（若"剩余全双曲"$\Longrightarrow$ Weil/Li 正性 $\Longrightarrow$ **S channel DEAD**）；并指出真正该追的量是 **Hermite 稳定性到 finite-$n$ 的距离** $\|\widehat J-H_d\|<\operatorname{dist}(H_d,\partial\mathcal H_d)$。
+
+**⭐ ① 答案 ＝ NO，且为定理级（零外部依赖）**：Pólya 1927：RH $\iff$ **全部** $J_\gamma^{d,n}$ 双曲；GORZ 2019（已证）：$\forall d\ \exists N(d):n\ge N(d)\Rightarrow$ 双曲，且 $1\le d\le8$ 对**全部** $n\ge0$ 双曲 ⟹ $$\boxed{\text{RH}\iff\bigl[\text{剩余区域}\{d\ge9,\ n<N(d)\}\ \text{全双曲}\bigr]}$$ ⟹ **剩余区域陈述强度恰等于 RH** ⟹ 若命题 $P$ **严格弱于** RH 却能推出它，则 $P\Rightarrow$ RH，**矛盾** ⟹ $$\boxed{\textbf{NO}}$$ ⚠️ 本论证**只用 Pólya ＋ GORZ**，不需任何关于剩余区内部结构的假设 ⟹ 强度极高。
+
+**② 通道 S 重新定位**：不是"**弱输入载体**"，而是"**强度恰为 RH 的等价路线**"；其唯一可能的"新"在于**几何**（$(d,n)$ 轴 ＋ Hermite 极限机制），而**不在于更弱的输入**。
+
+**③ 逻辑修正采纳 ＋ 机制**：$N(d)$ 可随 $d$ 增长 ⟹ 无统一 $(D,N)$ ✓；机制：$H_d$ 根间距 $\asymp\pi/\sqrt d$（根散布 $[-2\sqrt d,2\sqrt d]$）⟹ $\operatorname{dist}(H_d,\partial\mathcal H_d)\asymp d^{-1/2}$ **随 $d$ 衰减** ⟹ 一致推出双曲性需误差**一致地** $\ll d^{-1/2}$，$d$ 越大越难 ⟹ $$\boxed{N(d)\to\infty\ \text{是机制必然}}$$
+
+**④ 定量判据与自证**：$\varepsilon_{d,n}:=\|\widehat J_\gamma^{d,n}-H_d\|<\delta_d:=\operatorname{dist}(H_d,\partial\mathcal H_d)\Longrightarrow$ 双曲 ✓；⚠️ **自证**：若对全部 $(d,n)\in\mathcal R$ 成立 ⟹ 由 §① 得 **RH** ⟹ 该不等式**不是弱输入**，而是 **RH 的充分判据**（"可攻"$\neq$"更弱"）。
+
+**⑤ 外部证据（⚠️ 可信度中等，红旗待核）**：**MDPI Mathematics 14(11) 1884**（2026）《Asymptotic Hyperbolicity of Jensen Polynomials and the Finite-Strip Obstruction to the Riemann Hypothesis》取到片段给出：(i) **asymptotic regime $n\ge C_0^\infty d^4$**：$J_{d,n}^\gamma$ **双曲、无条件**（Theorem 3）✓；(ii) **finite strip $0\le n<C_0^\infty d^4,\ d\ge9$：等价于 RH**，且被称"**一切已知局部与归纳机制同时失效处**" ✓✓；(iii) **Theorem 9（interlacing-lift vacuity）**：该区域内 $J_{d-1,n+1}^\gamma$ **永不双曲**（$N_-\le1\ll d-1$）⟹ **归纳提升无立足点** ✓✓✓。⚠️ **红旗**：该文 Remark 3 称 $J_{2,n}^\gamma$"对每个 $n\ge0$ 都有非实根"，与 GORZ 已证 $d\le8$ 对全部 $n$ 双曲**表面冲突** ⟹ 可能归一化约定不同，亦可能有误 ⟹ **核对前不可作依据**。⭐ 三条与 §① 同向，但 §① **不依赖**该文。
+
+**⑥ ⭐ F1 判据修订（本档最重要方法论产出）**：`V190` 给 F1 的回答（"通道 S 携带**支撑级信息**，严格强于 Bochner"）**在语义上正确**，但**不足以**支撑"弱输入"期望 ⟹ $$\boxed{\text{F1（修订版）＝两问}\：\text{① 语义问：是否携带}\ \textbf{新的独立信息}？\quad\text{② 强度问：该信息}\ \textbf{能否被无条件确立}\ \text{且}\ \textbf{严格弱于}\ \text{RH}？}$$ 两问都过才算"弱输入载体"；通道 S 过①、**过不了②**（§① 定理级）⟹ 降级为"**等价路线**"。⭐ 一句话：$$\boxed{\text{信息更多}\ \neq\ \text{更易证}}$$
+
+**下一步（V192 预登记，三选）**：① **核**（低成本、必要）：核 MDPI 与 GORZ 原文，确认 $n\ge C_0^\infty d^4$ 的无条件性、finite strip 的等价性、interlacing-lift vacuity，并解 $d=2$ 红旗 —— 三条若成立 ⟹ 通道 S 的"路线价值"也被压低（**所有已知机制在该区域同时失效**）⟹ 可**封**；② 若①确认 ⟹ **封**，并把"**$d$ vs $n$ 轴**"登记为**已探明的第六类缺口形态**（与 $T$ 轴缺口并列）；③ 转回主线 **A1／A3（Weil／Li 正性）**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
