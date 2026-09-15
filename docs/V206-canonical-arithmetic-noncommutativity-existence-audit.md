@@ -48,7 +48,7 @@ $$\Longrightarrow\ \text{这是}\ \text{一个}\ \textbf{完全显式、初等�
 ## §3 判定：存在性 **YES**，但缺陷**无菌**（本档的第一个关键结论）
 
 $$\textbf{存在性}：\boxed{\textbf{YES}}\ —— \text{canonical 算术非交换}\ \textbf{确实存在}（\S1.3），\ \text{预注册死门}\ \textbf{未触发} ✓✓✓$$
-$$\textbf{但缺陷是}\ \textbf{局部}：\text{由}\ \S2\text{(iii)}，} K\ \text{只依赖}\ (k_i)\ \text{与}\ \omega(n) \Longrightarrow \textbf{指数型局部函数} ✓✓✓$$
+$$\textbf{但缺陷是}\ \textbf{局部}：\text{由}\ \S2\text{(iii)}， K\ \text{只依赖}\ (k_i)\ \text{与}\ \omega(n) \Longrightarrow \textbf{指数型局部函数} ✓✓✓$$
 $$\qquad \Longrightarrow\ \text{它}\ \textbf{不在尺度上累积}：\ K(\prod p_i^{k_i})\ \text{由}\ \{k_i\}\ \text{逐点决定},\ \text{无跨尺度耦合} ✓$$
 $$\qquad \Longrightarrow\ \boxed{\textbf{无菌（sterile）}：\text{非交换是真的，但不产生全局刚性}} ✓✓✓$$
 $$\qquad ⚠️\ \text{且其内容为}\ \textbf{初等不等式}\ d(n)\ge2^{\omega(n)}（\text{等号}\iff\text{平方自由}\bigr) \Longrightarrow \textbf{不产生新的无条件输入} ✓$$
