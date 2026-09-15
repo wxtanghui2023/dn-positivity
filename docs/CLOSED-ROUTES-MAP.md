@@ -714,6 +714,22 @@ $$\Longrightarrow\ \Phi=cX^\alpha\ \textbf{单式}\ \Longrightarrow\ \operatorna
 
 **下一步（V184 预登记）**：① **正面**：攻**涨落相消的算术来源**（＝ A1／A3 的算术实现；今晚唯一剩下的承重缺口）② **工具化**：把**源-基数障碍**做成新筛子（与 `V179` 有限支撑筛、`V182` 一阶可和门槛并列）
 
+### F.5at ⭐⭐⭐⭐⭐ **外部输入分诊（不局限 RH）—— 【惯性／签名计数】新机制类型 ＋ 0.68185 天花板（＝我们的 0.682）**（`V184` ✓ 2026-09-15 12:24）
+
+**委托（唐先生）**：搜索所有数学／物理模型相关研究（**不特定 RH**），找符合我们要求的"特别输入"。
+
+**⭐ A（最重要）无条件对相关（带宽 ≤1）＋ Weil 形式 ＋ Sylvester 惯性** —— `More than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line`（署名 **Claude**；专家注 Alpöge–Furman；arXiv:2608.13637；2026-08；**Lean 形式化** anthropics/formal-math `zeta23/`，toolchain `lean4:v4.33.0-rc2` + Mathlib `v4.33.0-rc2`；Conrey／Goldston 复核）：**无条件** $N^*_0(T,2T)/N(T,2T)\ge2/3$，优化后 $0.6725$，$(5/6-o(1))N$ 互异。**三件输入**：(i) 零点平均密度（RvM）(ii) **Montgomery 对相关，测试函数 Fourier 支撑 $\subset(-1,1)$ —— 无条件**（Aryan 2022；**Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh** 2024, Acta Arith. 214）(iii) 重数整性。**⭐ 关键技术（RH 不进入）**：经典需 RH 把零点侧读成正和；他们改用 $$\boxed{\text{有限压缩的 Weil Hermitian 形式}\ +\ \textbf{Sylvester 惯性定律}}$$（离轴对 $\{\rho,1-\bar\rho\}$ 贡献一个 **block**）⟹ 用**符号计数**而非**正性** ⟹ **绕开 `V182` 的障碍**（V182 证"正性 ⟹ 无计数界"）⟹ **本项目 183 轮从未出现的机制类型** ✓✓✓。**⭐ 最优性 Remark 1.1**：只读带宽 $\le1$ 数据、逐配置成立的证书**无法超过 $\boxed{0.68185}$** ⟹ **带宽 $\le1$ 已封顶**；下一步必须 support $>1$ ⟹ **正是我们 `V162`／A3 的墙** ✓✓✓（"0.682"被独立证明为该类硬天花板）。**过程**：$\sim60$ subagents／2400 shell／31M tokens／**650 次失败**；Lean 作机械审计层；人类专家收口 ⟹ **工具链与本机已装 Lean 4.33.0 同版本 ⟹ 可本地复现** ✓✓。
+
+**⭐ B Connes–Consani 线（archimedean 桥 ＋ 新正性机器）**：自述缺失构件 ＝ **arithmetic site 的平方上的 intersection theory ＋ Riemann–Roch**（char-1；已有 `Riemann–Roch for the ring ℤ`）；**Sonin 空间压缩 ⟹ archimedean place 的 Weil 正性**（Selecta 2021）；**prolate 算子自伴延拓的 UV 谱＝零点平方**（PNAS 2022，Connes–Moscovici），并可造**等谱 Dirac 族**；2026 `On the Jacobian of Spec ℤ`（JNCG）**自伴性由 Carathéodory–Fejér（Toeplitz 正性）推广保证** ⟹ **新正性来源**。⚠️ 需过我们的筛子：逐点＝全部零点？走私？等谱族 ⟹ 谱"族"而非"点"？**UV 匹配 ≠ 逐点同一**（与 `V165` T3 同型风险）。
+
+**⭐ C 物理侧更强的正性机器**（ICTS 2025 讲义 arXiv:2603.28454）：正性三来源 ＝ ①Feynman 参数化 ⟹ **CM／Stieltjes** ②酉性＋解析性 ⟹ **色散关系＋正谱密度 ⟹ Stieltjes** ③**正几何 canonical form ⟹ 完全单调**。⟹ **CM／Stieltjes 比 PSD 强、自带定量内容**（Bernstein 表示；正测度＋矩条件）⟹ **正对症 `V182` 缺口**；开放问题：能否无条件把 ζ／Weil 放进 CM／Stieltjes／色散框架（⚠️ 风险：等价于已有正性 = 换语言）。
+
+**D Guth–Maynard 2024**：大值估计 ⟹ $N(\sigma,T)\le T^{30(1-\sigma)/13+o(1)}$；**Ingham $0.6\to0.52$**；短区间素数 $x^{17/30}$；方法＝调和分析／多项式方法（外部技术注入）⟹ 真新无条件输入，但方向是"密度／排斥"，非涨落相消。
+**E Dyatlov–Zworski**（已证 RH 型定理；microlocal ＋ anisotropic Sobolev）⟹ ⭐ **负载假设＝双曲扩张 ＋ 轨道指数增长** ⟹ 与函数域／Ihara 图 ζ 同侧；char-0 素数增长为多项式 ⟹ **机制不可移植**（分类学数据，与 `V144` 一致）。
+**F 低可信度**：TechRxiv 2025 声称"Hermitian 算子谱＝零点虚部"（非同行评审）⟹ 登记为筛子测试样本。
+
+**四个动作**：(1) **精读 arXiv:2608.13637**（§7.1 测试族优化／Remark 1.1 最优性／**Sylvester 惯性那一步**），把 **0.68185** 登记（对齐我们的 0.682）(2) **本地复现其 Lean 形式化**：装 Mathlib（`ghfast.top` 镜像）→ clone `anthropics/formal-math` `zeta23/` ⟹ **首次获得可机器验证的 ground truth** (3) 用我们的筛子审 **B／C** 两候选 (4) **工作流改造**：`sessions_spawn` 并行 subagent ＋ Lean 审计层 ＋ 数值验证 ＋ 外部专家收口 ⟹ 直接回应"低效"
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
