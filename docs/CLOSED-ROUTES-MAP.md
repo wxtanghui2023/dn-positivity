@@ -946,6 +946,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 唯一残余与 V197 预登记（lead，不预判）**：唯一未被判据覆盖的形状 ＝ **离散、非平凡、且非已知挠／$\mathrm{Br}$ 类的 obstruction**；最接近的 lead（**仅登记**）＝ 经典 $K$-理论中 **Steinberg 型关系 $\{a,1-a\}=0$**（**配对形状 $a\leftrightarrow1-a$**），⚠️ 但其取值**可能仍落 $\mu_N／\mathrm{Br}$**（待算）。**V197 唯一动作**：判 Steinberg 型关系的 obstruction 是否仍落 $\mathrm{Br}[N]$ —— 若落 ⟹ 该 lead 亦属 ③；若否 ⟹ 这是**第一个不属于 ①②③ 的离散非平凡类**。
 
+### F.5bf ⭐⭐⭐⭐⭐ **V197：Steinberg branch obstruction 值域审计 ＋ V196 §4 勘误（ℤ̂^× 挠结构）⟹ Mechanism II canonical branch 收口**（`V197` ✓ 2026-09-15 13:31）
+
+**委托（唐先生）**：**"开 V197……不是先问 Steinberg relation 能不能产生离散类，而是把它作为候选 obstruction，完整算它的值域"**；**技术点核实**：**"$\hat{\mathbb Z}^\times$ 的 torsion $=\bigoplus_p\mu_{p-1}$ 这个表述涉及有限阶元素在 profinite 单位群中的具体分解；V197 不要沿用它作为未经证明的前提。先从标准结构分解逐项核。"**（并指出 V196 核心结论不依赖此表述）；**只允许链** $a\mapsto1-a\mapsto\{a,1-a\}\mapsto\partial_v\{a,1-a\}\mapsto\text{global obstruction}$；**禁令同 V196**。
+
+**⚠️ ① 勘误（定义级核对）—— 唐先生提示正确**：标准分解 $\mathbb Z_p^\times\cong\mu_{p-1}\times(1+p\mathbb Z_p)$（$p$ 奇）、$\mathbb Z_2^\times\cong\mu_2\times\mathbb Z_2$ ⟹ $\hat{\mathbb Z}^\times=\prod_p\mathbb Z_p^\times$；挠元判据 ＝ **各分量挠且阶有界**（元组的阶 ＝ lcm 分量阶），⚠️ **不要求"只有限多分量非平凡"**（例 $x_p=-1\ \forall p$ 阶 2）⟹ $$\boxed{(\hat{\mathbb Z}^\times)[N]=\prod_p\mu_{\gcd(N,p-1)}}$$ **是积而非直和**，对 $N\ge2$ 为**无限积**；⚠️ $(\hat{\mathbb Z}^\times)[2]=\mu_2^\infty$ **不可数、Cantor 型、非离散** ⟹ 挠子群**不是离散子群** ✗ ⟹ **V196 §4 的"$\hat{\mathbb Z}$ 挠 $=\bigoplus_p\mu_{p-1}$ 且为离散子群 ⟹ 刚性前提存在"撤回** ✓；⭐ 但 **V196 核心结论（四支全落 ①／③）不依赖此表述，不受影响** ✓✓（唐先生已预判）。
+
+**⭐ ② local boundary 全链实算**：tame symbol $\partial_v\{a,b\}=(-1)^{v(a)v(b)}a^{v(b)}b^{-v(a)}\in k(v)^\times$；关键输入 $a+(1-a)=1\Rightarrow v(1)=0\ge\min(v(a),v(1-a))$。**五情形穷尽**：(i) $v(a)=0,v(1-a)=n>0$ ⟹ $a\equiv1\bmod\mathfrak m$ ⟹ $\partial_v=a^n\mapsto1$；(ii) 对称情形 ⟹ $(1-a)^{-n}\mapsto1$；(iii) 两者皆 0 ⟹ $1$；(iv) $v(a)=v(1-a)=m<0$ ⟹ $u+u'=\pi^{-m}\in\mathfrak m^{|m|}$ ⟹ $\bar u'=-\bar u$ ⟹ $\partial_v=(-1)^{m^2}(u/u')^m=(-1)^m(-1)^m=1$；(v) $m>0$ **不可能**（否则 $v(1)\ge m>0$）。⟹ $$\boxed{\partial_v\{a,1-a\}=1\quad(\forall\ v)}$$ ⭐ **结构性原因**：$a+(1-a)=1$ 强制 $a$ 或 $1-a$ 为**主单位**（$\equiv1\bmod\mathfrak m$）⟹ 残数恒平凡；⭐ **逐层传播**：由 $a\in1+\mathfrak m$（或 $1-a\in1+\mathfrak m$），迭代边界同样平凡 ⟹ **Steinberg 对在所有边界层不可见**。
+
+**③ localization 值域审计（逐类区分，不把 torsion 一律归 Brauer）**：对 **Steinberg 对**：由 ② 该链**无输出**（每分量为 1）⟹ "Steinberg $\to$ local data $\to$ global quotient" 的中间环节**为空** ⟹ quotient 无内容。对**一般符号** $\{a,b\}$（$b\ne1-a$）：局部数据非平凡；其离散不变量由 ⭐ **Merkurjev--Suslin** $K_2^M(F)/N\cong\mathrm{Br}(F)[N]$（**定理，非假设**）确定 ⟹ 从 $K_2$ 符号提取的离散不变量在 $N$-商上**恰是 Brauer 类** ⟹ **B 类**。其余逐项排除：$\mu_N$ ＝ $\mathrm{Br}[N]$ 的取值层，**不独立** ⟹ 归 B；$K_2$ **未商部分**／$K_2/\text{divisible}$：**非离散**（可除／无限秩）⟹ 不满足离散性要求 ⟹ **非候选** ⟹ **无第五类出现**。
+
+**④ $a\leftrightarrow1-a$ 是否产生新 obstruction**：若 $\Omega(a)+\Omega(1-a)=0$ 或 $\Omega(a)\Omega(1-a)=1$，问其是否只是 Steinberg 的另一种表示；⚠️ 本档严格限于允许链（含 $\partial_v$ **边界型**构造）：由 ② 所有 tame 边界已平凡 ⟹ 任何**由边界构造**的 $\Omega$ **必为 0** ⟹ $$\boxed{\Omega=0}$$ ⟹ **A 类**。⚠️ 诚实边界：**非边界型**的 $a\mapsto1-a$ 构造不在本条链内（本档不涉及）。
+
+**⑤ 三分判定**：$$\boxed{\text{A}\ \Omega=0\ \text{（trivial）}\ |\ \text{B}\ \Omega\in\mu_N\ \text{或}\ \mathrm{Br}[N]\ \text{（经典 torsion）}\ |\ \text{C}\ \Omega\in D_{\rm new}\ \text{（新 obstruction）}}$$ 本档落点：**Steinberg 支 $\Rightarrow$ A**；**一般符号支 $\Rightarrow$ B**；**C 未出现**。
+
+**⑥ 判词：Mechanism II 的 canonical arithmetic branch 收口**：$$\text{transition}\to\text{cocycle}\to\text{localization}\to\text{obstruction}\ \Longrightarrow\ \text{落点}\ 0/\mu_N/\mathrm{Br}[N]$$ ⭐ 这不是**猜测性死亡**，而是经**实际计算**（V196 过渡/cocycle ＋ V197 边界/localization）后的**收口**；⚠️ 严格表述：收口范围 ＝ **"canonical 分支"**（公共对象道路 ＋ 边界型 obstruction），**不**声称机制 II 整类死亡。
+
+**⑦ 残余**：唯一未被覆盖 ＝ **非 tame 边界、非 $\mathrm{Br}[N]$ 的离散不变量**；本轮**未见实例** ⟹ 登记 **UNINSTANTIATED**，**不给方向、不投入、不杀**。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
