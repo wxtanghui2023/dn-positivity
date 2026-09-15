@@ -509,6 +509,38 @@ $$\qquad\textbf{V172 目标形式（Rigidity Source Separation）}：\text{定�
 $$\qquad\textbf{指导意义}：\text{若"非指纹、非 Archimedean 的刚性"也能被}\textbf{形式化排除} ⟹ \text{第一次接近类封口};\ \text{若排不掉} ⟹ \text{可能第一次得到}\textbf{真正未被前十几类 NO-GO 覆盖的突破口}$$
 $$\qquad\textbf{下一步（V173 预登记）}：①\ \text{把局部灵活性论证}\textbf{形式化}（\text{S 排除的关键第一步，}\textbf{不依赖 Selberg 框架}）;\ ②\ \text{审是否存在第三种全局约束（既非 FE 亦非增长）}$$
 
+### F.5ai ⭐⭐⭐⭐⭐ **Euler-local flexibility theorem（有适用域）＋ 全局耦合审计链＋⭐ 耦合≠选择**（`V173` ✓ 2026-09-15 11:41）
+
+降级（唐先生）：标题＝ **Euler-local flexibility theorem**（**有明确适用域**），**不**写成"任意体系的框架无关元定理"；理由：若公理体系不要求 Euler factorization，"局部因子自由"连适用对象都没有。**纪律（新增）：不得把"很强但有明确适用域"的定理过早升级成全数学空间的 NO-GO。**
+
+**引理 1**：$F(s)=\sum a_nn^{-s}=\prod_pF_p(p^{-s})$，全部有限场信息由局部因子族 $\{F_p\}_p$ 决定。若公理 $P$ 只施加**逐素数独立局部约束** $F_p\in\mathcal C_p$ ＋有限个统一增长／系数条件、**无跨素数全局约束**，则
+
+$$P\ \text{一般不能唯一确定}\ F$$
+
+证明：取素数 $q_1$、$\mathcal C_{q_1}$ 中 $F_{q_1}\neq G_{q_1}$，其余 $F_p=G_p$ ⟹ $F\neq G$，但不涉及 $q_1$ 的局部公理全同 ⟹ 局部独立约束 ⇏ 全局唯一性。
+
+**local-swap 对称形式**：若公理集在**单点替换**下不变（任一素数允许类内替换仍成立），则任何模型都不唯一 ⟹
+
+$$\text{唯一性}\iff\text{存在破坏单点替换对称性的跨素数约束}$$
+
+⚠️ 适用条件：(i) $\mathcal C_q$ 非退化；(ii) **无**跨素数耦合；⚠️ 技术缺口：替换若破坏收敛／解析性质，出错的是**全局条件（A-leak）**。
+
+**审计链**：Local flexibility ⟹ global coupling necessary ⟹ classify global couplings ⟹ {F-leak, A-leak, S residual}；⚠️ **纪律：若最后剩下一个真正的第三类 global coupling，这一次不要继续杀它。**
+
+**十项全局约束审计**：①Hecke／系数递推 ＝ **同一素数内** ⟹ 仍局部；②⭐ **SMO** ＝ **真跨素数刚性且纯算术（不落 A）**，但把唯一性归约到局部数据的唯一性 ⟹ 仍需 F-leak；③Rankin–Selberg ⟹ A-side；④**无 $\Gamma$ 版 FE** ⟹ 跨素数，但经典 **Hamburger 定理（1921）**（$a_1=1$ ＋与 ζ 相同的函数方程 ⟹ $F=\zeta$）**用的正是 ζ 的 $\Gamma$-因子** ⟹ A-leak；"无 $\Gamma$ 版"是否存在 ⟹ **OPEN**；⑤positivity（$W(f)\ge0$）⟹ A-side；⑥automorphic axioms ⟹ A-side；⑦⭐ **Galois compatibility** ＝ **真跨素数耦合且纯算术**，但**不唯一选出 ζ**（无穷多 Galois 表示／Dirichlet 特征）⟹ 选择仍需 archimedean；⑧Artin 互反 ⑨局部-整体原则 ⑩"无限素数统一参数"（＝⑥⑦⑧ 的抽象形式）⟹ 同上。
+
+⟹ **表结论**：跨素数耦合**确实存在，而且可以是纯算术的**（#2/#7/#8/#9/#10）⟹ **不落 A-leak**；但**都不能完成"选出 ζ"**；选择步骤在所有已知机制里退化为 F-leak（局部数据平凡性）或 A-leak（degree／conductor／$\Gamma$／FE）。
+
+**⭐⭐ 本档核心：耦合 ≠ 选择。** 耦合 ＝ 把无限多个局部因子绑在一个对象上（**可纯算术**）；选择 ＝ 从众多对象中挑出 ζ（**不可纯算术**）。两条已知选择路径：**选择-A**（archimedean 选择器；经典实例 Hamburger 1921，**早于 Selberg 框架** ⟹ A 路线不依赖 Selberg 类）与 **选择-F**（局部数据平凡 $a_{p^k}=1\Rightarrow a_n=1$ ⟹ F-leak）。与 `V172` (6b) 衔接：$\alpha_p\equiv1$ ⟹ 选择不能来自局部数据的"内容"，只能来自"平凡性"本身（F）或 archimedean 选择器（A）。
+
+**S 残余精确化**：S 须同时提供 **纯算术耦合（不落 A）＋ 纯算术选择（不落 F、不落 A）**。形式化目标：
+
+$$\exists\ \text{纯算术跨素数耦合}\quad\text{s.t.}\quad \text{唯一选出}\ M_\zeta\ \text{且}\ \operatorname{Spec}(M_\zeta)=Z_\zeta-\tfrac12$$
+
+⚠️ 边界：引理 1 有明确适用域（Euler–Dirichlet 型 ＋ 无跨素数耦合）；十项为**盘点**非穷尽；#4 标 **OPEN**；**不**声称"所有耦合都落 F／A"；**不**声称 S 已被排除（**S 仍 OPEN**）。
+
+**下一步（V174 预登记）**：① 攻 #4 OPEN（无 $\Gamma$ 版 FE 唯一性）② 形式化「选择步骤 ⟹ F-leak ∨ A-leak」的条件性定理。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
