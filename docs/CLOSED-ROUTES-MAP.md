@@ -1052,6 +1052,20 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§9 重开门（四条件，缺一不可）**：(1) **正余维**（两侧都稀疏）；(2) **嵌套**；(3) **存在变换 $\mathcal T$ 把两族互换**；(4) **乘积律** $T_{k+\ell}=T_kT_\ell$；且须产生**不是** G–S／大筛法／NTT 不确定性已给出的定量不等式；⚠️ 按 §4，条件 (1) 与"大筛法有内容"**互斥** ⟹ 若候选仍在大筛法框架内，**立即判死** ✓
 
+### F.5bl ⭐⭐⭐⭐⭐ **V203：互换变换审计（窄窗口）⟹ 统一结论：「交换」与「乘积律」位于不相交的位；五条终止条件全中 ⟹ 关闭**（`V203` ✓ 2026-09-15 13:54）
+
+**委托（唐先生）**：**「不要关闭。专门找'互换变换'，但只给它一个非常窄的 V203 审计窗口。」** 缺口形式化 $$\boxed{\exists\,\mathcal T:\mathcal T(\mathcal A_k)\approx\mathcal B_k,\ \mathcal T(\mathcal B_k)\approx\mathcal A_k}\ \text{＋}\ \boxed{T_{k+\ell}=T_kT_\ell}$$ **「不要从'寻找一个新变换'开始猜，直接从现有算术变换的完整候选空间做审计」**：(1) 有限 Fourier／加法特征；(2) Mellin／乘法特征；(3) Poisson／Voronoi 型；(4) Hankel／Bessel 型（Voronoi 的 dual summation）；(5) 有限域 Fourier／乘法 Fourier；(6) **adelic Fourier–Mellin（最值得优先）**；每候选**必须实际计算** $\mathcal T(P_{\mathcal A_k}f)\overset{?}{\subseteq}P_{\mathcal B_{k'}}\mathcal Tf$ **及反向**，**且**检查 $T_{k+\ell}\overset{?}{=}T_kT_\ell$ 或等价半群结构；**终止五条**；**「先审计 adelic F–M／Voronoi，再审计其他候选；不进入 RH，不做第二阶段。」**
+
+**§1 判据**：(E1) 正向交换、(E2) 反向交换、(C) 复合律；三条件**同时**且须**逐点**（非平均）成立。
+
+**§2 六候选逐一实算**：**(2.1) DFT**：交换**空间**不交换**族**（$1_{I_N}\mapsto$ Dirichlet 核、$1_{\Omega_Q}\mapsto$ Ramanujan 型和）✗ 命中 #1。**(2.2) Mellin**：确实交换**乘↔加**（$n^s=e^{s\log n}$）但把两族映到**不同空间**、对"区间／小分母"**无像**；其律是**卷积$\mapsto$乘积**（与 $T_{k+\ell}=T_kT_\ell$ **不同型**）✗；且 **Mellin 恰是显式公式的引擎** ⟹ 命中 **#5**。**(2.3) Poisson**：对 $\mathbb Z$ 与 $\mathbb Q\subset\mathbb A$ 均**自对偶** ⟹ 交换＝恒等 ✗ 命中 #1。**(2.4) ⭐ Voronoi／Bessel–Hankel（唯一真正带算术权重的候选）**：交换**确实存在** $$\boxed{N\leftrightarrow q^2/N}$$（**对合**，不动点 $N=q$），核为 Bessel／Kloosterman 型（**算术结构参与对偶**）✓；**但**核来自**函数方程的 $\Gamma$ 因子（archimedean）**，辐角含 $\sqrt{nx}/q$ ⟹ **对模数不乘性** ⟹ $$\boxed{T_{q_1q_2}\ne T_{q_1}T_{q_2}}$$ ⚠️ 虽 $e(a/q)$ 经 CRT **可乘性分解**，**但核不可** ⟹ 乘积律**在核层面失败** ⟹ 命中 **#2**；且交换只在"主项＋误差"意义成立（**非逐点**）⟹ 命中 **#3**；估计本身即**经典 Voronoi 估计** ⟹ 命中 **#4**；⭐ **决定性**：**Voronoi 求和由函数方程导出 ⟹ Voronoi $\equiv$ 函数方程** ⟹ **恰好命中唐先生预设的 #5** ✓✓✓。**(2.5) 有限域 Fourier／乘法 Fourier**：两变换住在**不同群**（$\mathbb F_q$ vs $\mathbb F_q^\times$）⟹ 无自映射交换 ✗；无跨 $q$ 复合 ✗；定量结果均为已证定理 ⟹ 命中 **#4**。**(2.6) ⭐ adelic Fourier–Mellin**：**有限位**：局部 Fourier **把球映为球** $$\boxed{\widehat{1_{\mathbb Z_p}}=1_{\mathbb Z_p},\qquad \widehat{1_{p^k\mathbb Z_p}}=p^{-k}1_{p^{-k}\mathbb Z_p}}$$ ⟹ **球族在 $\mathcal F_p$ 下闭合 ⟹ 族$\leftrightarrow$族是恒等 ⟹ 无交换可言**（命中 #1）✓✓✓；更一般 $\widehat{1_{\mathbb Z_p^\times}}=1_{\mathbb Z_p}-p^{-1}1_{p^{-1}\mathbb Z_p}$ —— **仍是球的组合** ⟹ 乘法群未引出第二个族 ✓；**阿基米德位**：唯一非平凡（$\widehat{1_{[0,1]}}=$ Dirichlet 核，非区间）⟹ **不交换** ✗ ⟹ 综合：**adelic F–M 在有限位自对偶、在 $\mathbb R$ 位不交换** ⟹ **无交换** ✓✓✓；且 $\mathbb R$ **是单个位** ⟹ 无模数乘性分裂 ⊂ 乘积律不可能来自此处。
+
+**⭐⭐ §3 统一结论（核心）**：$$\boxed{\text{「交换」与「乘积律」在算术中位于}\textbf{不相交的位}：\text{交换生于}\ \mathbb R,\ \text{乘积律生于有限位}}$$ 一句话：**要交换就得去 $\mathbb R$，但 $\mathbb R$ 没有乘性；要乘性就得去有限位，但有限位没有交换** ✓✓✓
+
+**§4 终止条件逐条命中**：| #1 不能真正交换 | ✓（2.1／2.3／2.5／2.6）|｜#2 无半群／乘积律 | ✓（2.2／2.4／2.6）|｜#3 只在平均意义 | ✓（2.4）|｜#4 只是已有大筛／G–S／Voronoi 估计 | ✓（2.4／2.5 ＋ `V202` §4）|｜#5 只是显式公式／函数方程重包装 | ✓（2.2 Mellin；2.4 Voronoi $\equiv$ FE）| ⟹ **五条全中** ⟹ 按预设规则 $$\boxed{\textbf{关闭}}$$；**不进入 V204**（唯一可进 V204 的组合「真交换＋乘积律＋新严格缺陷」**未出现**）✓✓✓
+
+**§5 与 `V202` §4 的**同形观察**（模式，非定理）**：`V202` §4 ＝ 大筛法有效区间（$Q\gtrsim\sqrt N$）与 FUP 稀疏需求（$Q\ll\sqrt N$）**相反**；本档 §3 ＝ 交换生于 $\mathbb R$／乘积律生于有限位 **不相交** ⟹ 两档同形：**两个必要条件落在相反区域** ⟹ **层诊断（`V144`）第三次以不同面貌出现** ✓✓（**模式识别，非定理**）。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
