@@ -352,6 +352,21 @@ $$\textbf{⭐ ⑤ 最终分叉 ＋ §E.4 合法化}：\boxed{\text{谱双射依�
 $$\qquad ⚠️\ \text{边界}：§3 并轨骨架为 [结构性] 非定理（需范式穷尽性）；§4 分叉为 [结构性]；"合法化 §E.4 最后问题"为 [制度级]}$$
 $$\qquad\textbf{下一步三选}：①\ \text{攻唯一开口：}\textbf{能否构造不用六大工具的结构性双射 }\Phi？\（\text{真正的第七类候选位}）;\ ②\ \text{把"已知范式穷尽性"形式化（并轨骨架}\to\text{定理）};\ ③\ \text{审 (i)–(vi)}\to W\ \text{归约是否有}\textbf{不经 }W\ \text{的例外} ✓$$
 
+### F.5v ⭐⭐⭐⭐⭐ **六范式 → $W$ 归约审计**（`V160` ✓ 2026-09-15 10:46）—— **V159④ 强命题不成立｜$A1/A3\subsetneq C_{\rm analytic}$｜判死目标＝范式穷尽定理**
+
+$$\text{待审强命题（V159④）}：\text{Proof of }\Phi\Longrightarrow\text{proof about }W;\ \text{更强：}\text{effective content}(\Phi)\subseteq\{\text{Weil positivity/vanishing}\} \Longrightarrow \textbf{不成立} ✗✓\ \text{（逐条如下）}$$
+$$\textbf{① trace／显式公式}\to\textbf{归入 }W ✓：\sum_\rho\widehat f(\rho)=\text{archimedean}(f)+\text{prime}(f)+\cdots\ \text{即}\ W(f)=0;\ \text{若载体谱给出}\ W(f)=\sum_{\lambda\in\Lambda_M}\widehat f(\lambda)\ \text{则谱识别＝比较两个}\textbf{线性泛函} \subset W ✓$$
+$$\textbf{② }\xi+\text{论证原理}\to\textbf{不必然 }W ✗：N_D=\tfrac{1}{2\pi i}\oint_{\partial D}\tfrac{\xi'}{\xi}ds\ \text{直接给}\boxed{\text{零点计数}}\textbf{而非}\text{Weil 正性};\ \text{只有再引测试函数 }f\ \text{并把 }\xi'/\xi\ \text{变换成显式公式才进入 }W ⟹ \boxed{\xi+\text{argument principle}\not\Rightarrow W}\ \text{（逻辑命题）} ⟹ \text{改记为}\boxed{\text{argument principle}\in C_{\rm analytic},\ \text{显式公式化后才进入 }W}\ \text{—— }\textbf{第一个不能直接并入 }A1/A3\ \text{的范式}$$
+$$\textbf{③ Mellin}\to\textbf{不必然 }W ✗：\text{能产生}\ x^\rho=x^\beta e^{i\gamma\log x}\ \text{与完成 ζ 谱变量},\ \text{但 Mellin 本身只是变换}\ \widehat f(s)=\int_0^\infty f(x)x^{s-1}dx,\ \textbf{不自动}\text{产生 }W(f)=0\ \text{更}\textbf{不自动}\text{产生 }W(f)\ge0 ⟹ \boxed{\text{Mellin 是 analytic carrier，不是 Weil positivity 本身}}$$
+$$\textbf{④ L-函数}\to\textbf{不必然 }W ✗：\Lambda_M=\{\lambda:L(\tfrac12+i\lambda,\pi)=0\}\ \text{＋}\ L(s,\pi)=\zeta(s)\ \text{分类定理}\Longrightarrow\Lambda_M=Z_\zeta-\tfrac12;\ \text{核心是}\ L\cong\zeta\ \textbf{而非}\ W(f)\ge0 ⟹ \boxed{\text{L-函数路线}\subset C\ \text{但不必落入 }A3}$$
+$$\textbf{⑤ Hadamard}\to\textbf{不必然 }W ✗：\xi(s)=e^{A+Bs}\prod_\rho(1-\tfrac{s}{\rho})e^{s/\rho}\ \text{给}\boxed{\text{zero set}\leftrightarrow\text{entire factorization}}\ \textbf{而非}\text{Weil 正性};\ \text{两谱 canonical products 相同}\Longrightarrow\text{谱相等},\ \text{此证明甚至不需 }W(f)\ge0\ (\text{仍属 }C)$$
+$$\textbf{⑥ Li／Weil 正性}\to\textbf{归入 }A1/A3 ✓：\lambda_n=\sum_\rho[1-(1-\tfrac1\rho)^n],\ \mathrm{RH}\iff\lambda_n\ge0\ \forall n\ \text{—— Weil 型正性泛函的离散化} \subset A1/A3$$
+$$\qquad\Longrightarrow\ \text{后四个}\textbf{×}\ \textbf{并非}\text{新类},\ \text{只是说明}\ \boxed{A1/A3\subsetneq C_{\rm analytic}}\ \text{（证明形态意义上）};\ \text{⭐ 与 }E106\ \text{相容}（\text{判据空间＝正性}\cup\text{求和-公式}\Longrightarrow\text{封闭}）⟹ \textbf{并轨方向仍对（落旧类），但落点应由 }A1/A3\ \text{改为更大的 }C_{\rm analytic}$$
+$$\textbf{⭐ C6 判死目标改写}：\text{真正要证的不是 }C6\subset A1/A3\ \text{而是}\ \boxed{C6\cap C_{\rm analytic}=\varnothing}（\text{几乎定义层}）\ \text{＋}\ \boxed{\text{所有能证 }\Phi\ \text{的机制}\in C_{\rm analytic}}\ \text{（＝}\textbf{范式穷尽定理}\text{，}\textbf{目前没有} ✗）$$
+$$\textbf{⭐ 独立共同结构审计（本档新增）}：\text{若禁尽 explicit formula／Mellin／L-识别／Hadamard／argument principle／zero-counting／Li-Weil},\ \text{则最后箭头不能通过"计算 ζ 零点"实现} ⟹ \text{须存在}\textbf{独立于 ζ 零集定义的共同结构}\ \boxed{\mathfrak S(M)\cong\mathfrak S(\zeta)}\ \text{且该同构自动送 }\Lambda_M\to Z_\zeta-\tfrac12\ \text{（比 C6.6 更严一层）} ⟹ \text{要不用零点写出 }\mathfrak S(\zeta)\ \text{须一个}\boxed{\text{独立于零点的 ζ 结构刻画}};\ \text{档案唯一已知候选＝Selberg 类公理＋分类定理（degree 1}\Longrightarrow\text{Dirichlet }L;\ \text{conductor 1}\Longrightarrow\zeta\text{），但}\textbf{其证明用解析工具}\in C_{\rm analytic}\（V157\ \text{#8}）⟹ \boxed{\text{"进一步收缩"＝重述而非缩减}},\ \text{残余更新}\ \boxed{\textbf{是否存在非解析的 ζ-结构刻画？}}$$
+$$\qquad ⚠️\ \text{边界}：本档不证明范式穷尽；§5"唯一已知候选"为 [结构性]；}C_{\rm analytic}\ \text{的界定依赖 }E106$$
+$$\qquad\textbf{下一步 ＝ }V161 ✓：\boxed{\text{证明或否定：任何非解析的 }\Phi:\Lambda_M\xrightarrow{\sim}Z_\zeta-\tfrac12\ \text{都必须重新引入某一解析接口}}\ \text{（可证}\Longrightarrow\text{C6 封死于 }C_{\rm analytic}\text{，非 }A1/A3;\ \text{不可证且能构造反例}\Phi\Longrightarrow\textbf{C6＝真正第七类}）$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
