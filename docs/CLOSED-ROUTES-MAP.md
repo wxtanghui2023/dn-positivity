@@ -462,6 +462,18 @@ $$\textbf{⭐ 构造尝试（五个真实实例，本档新增）}：\text{盘�
 $$\qquad ⚠️\ \text{边界}：\text{§5 的"bridge 只有四类"为 [结构性] 非穷尽性定理；§6 是已存在结构的盘点，非穷尽；本档}\textbf{不}\text{证明 I-分类定理} ✗$$
 $$\qquad\textbf{下一步}：①\ \text{攻 I-分类定理}\（\text{是否可证：任何零点独立 }f:D\to\mathbb R\ \text{若 }f(D)=Z_\zeta-\tfrac12\ \text{则识别信息必经定义／选择／解析接口}）;\ ②\ \text{若不能证} ⟹ \textbf{必须马上尝试构造}\text{具体 }(D,f)\（\text{不得再抽象分类}）$$
 
+### F.5ae ⭐⭐⭐⭐⭐ **直接构造 $(D,f)$：三个真实构造全部撞 I 门 ＋ 具体化不变性**（`V169` ✓ 2026-09-15 11:28）
+
+$$\text{目标}：D\ \text{零点独立},\ f:D\to\mathbb R\ \text{零点独立},\ f(D)=Z_\zeta-\tfrac12;\ \text{非解析／非选择／非零点定义};\ \textbf{硬规则}：\textbf{不能}\ f(n)=\gamma_n\ \text{或等价改写}\（\operatorname{Im}\rho_n／\text{第 }n\ \text{个零点}\Rightarrow\textbf{直接 DEAD}）$$
+$$\textbf{最强非解析离散对象}：D\ \text{不应是 }\mathbb N\（\text{单纯 }\mathbb N\ \text{递推只能生成我们自己规定的数列}），\text{而应取有限素数结构／模空间／图／组合对象},\ \text{并要求}\ \boxed{\text{递推具有}\textbf{不可人为调整的刚性}}\ \text{否则退化为 (d)}$$
+$$\textbf{候选一（最小违约尺度）}：f(d)=\inf\{X:E_d(X)\le\varepsilon_d\}\ (\text{169.1}) —— \text{无 }\sin／\text{无周期}／\text{无超积}／\text{无任意指定}／\text{无零点输入},\ \text{纯离散算术数据}\to\mathbb R;\ \text{须}\ \boxed{E_{d_n}(X)\le\varepsilon_n\iff\zeta(\tfrac12+iX)=0}\ (\text{169.2}) \Longrightarrow \text{这已不是生成机制问题，而}\textbf{直接成为"ζ 零点的非解析刻画"}\ ⟹ \boxed{\text{DEAD：缺失 (169.2)}}\ \text{—— }\textbf{没有被抽象分类杀死，而是在实际公式层撞到 I 门}$$
+$$\textbf{候选二（整数递推极限）}：a_{n,k+1}=F(a_{n,k}),\ f(n)=\lim_k a_{n,k}\ (\text{169.3});\ \text{须证}\lim_k a_{n,k}=\gamma_n\ (\text{169.4}),\ \text{而这仍须说明极限为何满足 }\zeta(\tfrac12+i f(n))=0 ⟹ \boxed{\text{DEAD：递推生成}\neq\zeta\text{-identification}};\ ⚠️\ \textbf{不是}"\text{极限属于 }V164\ \text{就结束"},\ \text{而是}\textbf{真正写出候选 }f\ \text{并证明其最后一步必承担逐点识别义务}$$
+$$\textbf{候选三（组合谱，不用算子）}：G_1\subset G_2\subset\cdots,\ \text{纯组合递推 }R_n（\textbf{不能}\text{变自伴算子，否则进 }L1）,\ f(n)=\lim_k\tfrac{A(G_k,n)}{B(G_k,n)}\ (\text{169.5}),\ A,B\ \text{整数计数};\ \text{须证}\lim\tfrac{A}{B}=\gamma_n ⟹ \text{问题：}\textbf{为什么这个组合极限恰是 ζ 第 }n\ \text{个零点？}\ \text{无独立结构恒等式则推不出} ⟹ \boxed{\text{当前构造失败，但失败坐标已精确}}：\boxed{\text{组合结构}\to\text{实数}\ \checkmark}\ \text{而}\ \boxed{\text{实数}\to\zeta\ \text{零点}\ \times}$$
+$$\textbf{⭐ 具体化不变性（本档新增）}：\text{三次}\textbf{独立}\text{具体化（最小尺度／递推极限／组合极限）全部卡在同一位置，且每一个把 I-义务写成}\textbf{同一个方程形态}\ \boxed{\text{（零点独立定义的量）}=0\iff\zeta(\tfrac12+i\lambda)=0}\ \text{（169.2 型）} ⟹ \boxed{\textbf{具体化不变性}：把 I-义务具体化，它}\textbf{不消失}，\text{而是}\textbf{每次变成同一个方程}}\ \text{—— 三点意义：(i)}\textbf{残余是一个对象而非一个族}\（\text{经验证据}）;\ \text{(ii) 解释为何二十轮收缩总回同一句（}V160\ \S5／V168\ \S5）;\ \text{(iii) 把下一刀}\textbf{唯一化}\text{为"找那个方程"};\ \text{⚠️ 基于三次尝试的}\textbf{[归纳性证据]},\ \textbf{非定理}$$
+$$\qquad\textbf{状态与纪律}：\boxed{\text{3 个真实构造尝试：全部撞 I；C6 仍 OPEN}}\ ——\ \textbf{只证了这三个具体构造失败} ✗,\ \textbf{未证}\text{"所有 }(D,f)\ \text{都失败"} ⟹ \textbf{不得升级};\ ✓\ \text{本轮没有"再抽象一层"（三次都是写出公式然后在其上失败）}$$
+$$\qquad\textbf{防循环硬规则（新增候选必须通过）}：\text{(1) 不得 }f(n)=\gamma_n\ \text{或等价改写};\ \text{(2) 必须写出显式公式};\ \text{(3) 必须指出失败位置的精确坐标};\ \text{(4) 不得以"属于 }V164/V165\text{"代替失败定位};\ \text{(5) 只能产生 RH-equivalence 而无逐点谱同一性者 ⟹ 标 I-撞门，不得称"闭合"}$$
+$$\qquad\textbf{V170 预登记}：\text{攻击}\ \boxed{\textbf{组合对象之间的自然同构／互反关系}}\（\textbf{不是}\text{再做极限、极值、计数、递推）;\ \text{若也只能产生 RH-equivalence 而无逐点谱同一性} ⟹ \text{开始把}\ \boxed{\text{"arithmetic relation}\to\text{pointwise spectral identity"}}\ \text{作为}\textbf{具体可证的障碍}\text{处理}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
