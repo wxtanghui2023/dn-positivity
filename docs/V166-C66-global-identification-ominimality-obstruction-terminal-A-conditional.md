@@ -10,7 +10,7 @@
 $$\boxed{\text{① 第一刀成立} ✓✓：C6.6\ \text{要求的不是"生成谱"而是}\ \boxed{\text{独立结构}\Longrightarrow\zeta\ \text{零点谓词}}\ \text{—— }P_M\ \text{必须是一个}\textbf{零点判定器} ✓✓\ \text{（}V164\ \text{只给 }\text{独立结构}\to\{\lambda_n\}\ \text{，故 }V164\ \text{不够}）}$$
 $$\boxed{\text{② B1}\to\textbf{definition smuggling}\ \text{DEAD};\ \text{B2}\to C_{\rm analytic};\ \text{B3}\to\text{GENERATION/COUNT}\not\Rightarrow\text{IDENTIFICATION};\ \text{B4}\to\textbf{唯一生存形态（结构同构）} ✓✓}$$
 $$\boxed{\text{③ ⭐ 本档新增 o-极小性障碍} ✓✓：Z_\zeta-\tfrac12\ \text{是}\textbf{无限离散集} ⟹ \textbf{不可能}\text{在任何 o-minimal 语言中可定义} ⟹ P_M\ \text{的语言必须}\textbf{非 o-minimal} ⟹ \text{而一切已知非 o-minimal 化装置落在}\ \textbf{六接口}\cup\textbf{类 VI} \Longrightarrow \boxed{\text{终局 A（条件性封口）}}}$$
-$$\boxed{\text{④ 残余} ✓✓：\text{不是"更深的 gap"}，而是一张}\ \boxed{\textbf{具体的非 o-minimal 装置表}}\ \text{＋ o-minimal 语言边界界定} ✓\ \text{（有明确判据，可逐条审计）}}$$
+$$\boxed{\text{④ 残余} ✓✓：\text{不是"更深的 gap"}，而是一张}\ \boxed{\textbf{具体的非 o-minimal 装置表}}\ \text{＋ o-minimal 语言边界界定} ✓\ \text{（有明确判据，可逐条审计）}$$
 
 ---
 
@@ -72,8 +72,8 @@ $$\boxed{\textbf{终局 A（条件性封口）} ✓✓：\text{任何满足 C6.6
 $$\boxed{\text{残余 ①：}\textbf{非 o-minimal 化装置的穷尽性} ✓\ \text{—— 是否}\textbf{存在}\text{一个非 o-minimal 化装置，既不在六接口内，也不落类 VI？}}$$
 $$\qquad\text{候选表（可逐条审计 ✓）}：\text{(a) }\mathbb Z\ \text{在 ℝ 中的统一定义（}\sin/\lfloor\cdot\rfloor/\text{exp 型}）;\ \text{(b) 周期／拟周期结构}（\sin,\ \text{Jacobi},\ \text{模形式}）;\ \text{(c) 完整解析对象}（\text{+ 解析延拓}）;\ \text{(d) 集合论／描述性任意定义};\ \text{(e) 非标准模型（}\text{超积 ⟹ 仅模型论容器，}V136\ \text{已判）}$$
 $$\qquad\Longrightarrow\ \text{(a)(b)(c) 皆解析型} ⟹ C_{\rm analytic};\ \text{(d)} ⟹ \text{类 VI};\ \text{(e) 已判无信息} ✓$$
-$$\boxed{\text{残余 ②：o-minimal 语言边界的界定} ✓\ \text{—— "机制的定义语言"是否总可规范为一阶 ℝ-结构？（}\text{若否，须先解决这个建模问题}）}}$$
-$$\qquad ⚠️\ \textbf{诚实边界（三条）}：\text{(i) 引理 1 为}\textbf{经典定理}（o-minimality 定义）；\ \text{(ii) 引理 2 的"无限多零点"为}\textbf{经典无条件};\ \text{(iii) "一切已知非 o-minimal 化装置落六接口}\cup\text{类 VI"}\ \text{为}\textbf{[结构性]} ⚠️\ \textbf{非穷尽性定理} ✗\ \text{—— 故本档为}\textbf{条件性封口}，}\textbf{不是}\text{无条件 }\mathrm{DEAD}$$
+$$\boxed{\text{残余 ②：o-minimal 语言边界的界定} ✓\ \text{—— "机制的定义语言"是否总可规范为一阶 ℝ-结构？（}\text{若否，须先解决这个建模问题}）}$$
+$$\qquad ⚠️\ \textbf{诚实边界（三条）}：\text{(i) 引理 1 为}\textbf{经典定理}（o-minimality 定义）；\ \text{(ii) 引理 2 的"无限多零点"为}\textbf{经典无条件};\ \text{(iii) "一切已知非 o-minimal 化装置落六接口}\cup\text{类 VI"}\ \text{为}\textbf{[结构性]} ⚠️\ \textbf{非穷尽性定理} ✗\ \text{—— 故本档为}\textbf{条件性封口}，}\textbf{不是}\text{无条件 }\mathrm{DEAD$$
 
 ---
 
