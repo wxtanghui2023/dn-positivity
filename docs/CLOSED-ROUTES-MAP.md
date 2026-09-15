@@ -1320,6 +1320,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词**：$$\boxed{\textbf{V217：DEAD} —— \text{非函数关系对象在第一非平凡例子处即失败}}$$ 三条独立理由：(i) case III 七形式全落已封类；(ii) 交叉比双重死角（K1 定理级＋K2 落 (c)）；(iii) canonical quadruple 三情形 ✓✓✓ ⚠️ **纪律**：**不得**声称"任何关系型对象都不可能"（本档证的是七形式映射＋交叉比死角＋四元组三情形，**非全称否定**）；**残余（UNINSTANTIATED）**：一个**既非方程、非谱、非可定义、非测度、非范畴、非序、非同伦、非模型论**的"可验证关系"（判据：① 满足 R1–R4；② 不属于上述任一形式；③ 会合处不落 (a)(b)(c)）✓
 
+### F.5ca ⭐⭐⭐⭐⭐ ⚠️**硬勘误（`V219`／唐先生 15:42）**：**S2 的"独立零点 $1/2$"撤回** —— $\sigma(x):=\sqrt{M_2(x)}$ 是**定义**，$M_2>0$ 与 $E(x)=\psi(x)-x$ 有符号之间无 $symp$；$|E|symp M_2^{1/2}$ 与 $\sup|E|\sim x^{1/2}$ **不可写**（后者 ⟺ RH）；§4 的"两个独立 $1/2$ 相等"**改为**"同一数值的两种来源"；**准确结论＝存在独立的 canonical $1/2$ 尺度源、但未证明它是零点指数**；三源重组为 **A 几何 $1/2$／B 尺度 $1/2$（$lpha/q=1/2$，参数族、非二次型专属）**
+
 ### F.5ca ⭐⭐⭐⭐⭐ **V218：半轴值源审计（H0 攻击）⟹ H0 字面 FALSE（三机制类）＋ RH ＝ S1 轴 ≡ S2 指数 ＋ 不变障碍（相认须归一化 ⟹ (c)）**（`V218` ✓ 2026-09-15 15:38）
 
 **委托（唐先生）**：**"V217 真正封掉的不是'关系对象'，而是'会合点不产生新信息'的关系对象。所以现在不能继续做'第八种关系形式穷举'。"** 压缩障碍定理：会合映射 $X\to\{\text{zeta-zero data}\}$ 处只有三种性质：$$\boxed{\text{值／统计}\quad|\quad\text{结构位置}\quad|\quad\text{精确识别}}$$ 前两类已大量封死，**真正未被封的只剩第三类**：$$\boxed{T_X\Longrightarrow\text{精确恢复零点的 }\beta}$$ **R1–R4 再压一步（★）**：若 $Z_X=Z(\xi)$ 则 Hadamard 型唯一性表明只能恢复 $\xi$ 本身 ⟹ **"识别零集"本身不是突破**；必须 $$\boxed{T_X\Longrightarrow Z_X\subset\{\Re s=\tfrac12\}}\tag{★}$$ 且 $T_X$ 不得：用零点作输入／经显式公式偷换成 Li-Weil／经 self-adjointness 偷换成谱定位／经 FE involution 定义临界线。**反向筛选**：不问"还有什么对象"，而问 **"什么性质能在没有零点数据的情况下直接产生 $\Re s=1/2$ 这个数 $1/2$？"**；**关键缺口（N）**：$$\boxed{\text{产生 }1/2\Longrightarrow\text{必然来自 FE 对称}}$$ **"这个等价性其实还没有被证明"** ⟹ $$\boxed{\text{是否存在非 FE 的数学机制，其内禀标度平衡自然产生 }1/2？}$$ **下一档做"半轴值源审计"**：只检查 $$\boxed{\Lambda_X\stackrel{?}{=}\tfrac12}$$ 且**必须不可调**（不允许 $\frac{a}{a+b}$ 再人为取 $a=b$）；**并加更狠条件**：$1/2$ 必须在**零点出现以前**存在：$$\boxed{X\overset{T_X}{\longrightarrow}\tfrac12\longrightarrow Z_X\overset{\text{识别}}{=}Z(\xi)}$$ **核心命题 H0**：$$\boxed{\textbf{H0:}\ \text{任何独立 canonical 可验证的 RH 机制若产生精确 }\beta=\tfrac12,\text{ 必须等价于 }s\leftrightarrow1-s}$$ **"如果 H0 找到反例，那个反例本身就是目前整个项目最值得追的突破口。"** **指令**：**逐类把所有能产生精确无量纲 $1/2$ 的机制写成方程，算出其 $\Lambda_X$。**
@@ -1337,6 +1339,20 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 **§6 顺序要求审计**：S1／S2／S3 **均满足**"零点出现以前已有 $1/2$" ⟹ **失败点不在顺序，而在 §5 的相认步骤** ⟹ 落 (c) ✓✓
 
 **§7 判词与残余**：$$\boxed{\textbf{V218：H0 字面 FALSE};\ \textbf{H0$'$ 在三机制类上成立}}$$（(i) S2 独立于 FE（反例级）；(ii) S1 是一般机制；(iii) 三源皆封）**残余（UNINSTANTIATED）**：一个**第四类** $1/2$ 源 —— 既非序-2 自对偶、非二次矩指数、非归一化中点，又能给出**精确** $1/2$ 且**可相认为坐标值**（判据：① 内禀强制不可调；② 顺序合规；③ 相认不落 (a)(b)(c)；④ 满足 R1–R4）✓
+
+### F.5cb ⭐⭐⭐⭐⭐ **V219：矩指数 vs 零点指数 —— S2 撤回 ＋ "新桥"定理级判定 ⟹ $\beta_*(\zeta)=\mu_2\iff$ RH ⟹ 用户的链是循环 ＋ Epstein 反例**（`V219` ✓ 2026-09-15 15:42）
+
+**委托（唐先生）**：**"S2 目前还不能作为'RH 的第二个独立 $1/2$'；问题不在它落入 `V199`，而在于 S2 的 $\Lambda_X=1/2$ 推导本身多了一步没有证明的等号。"** **(C1)** $\sigma(x):=\sqrt{M_2(x)}$ 是**定义**；$M_2>0$（正量）与 $E(x)=\psi(x)-x$（**有符号振荡**）只有**很弱**关系 ⟹ $|E|\asymp M_2^{1/2}$、$\sup|E|\sim x^{1/2}$ **均不可写**（后者**⟺ RH**）；**(C2)** §4 的"两个独立 $1/2$ 相等"**撤回** —— 两处都是数值 $1/2$，但这是**"同一数值的两种来源"**，**不是"同一对象的两个独立临界指数"**；**(C3)** 缺失物＝$$\boxed{\text{零点指数}\longleftrightarrow\text{二阶矩指数}}$$（**整个桥**）；**(C4)** $1/2$ 源严格二分：**A 几何 $1/2$**（$s\mapsto1-s$ 不动点）／**B 尺度 $1/2$**（$M_q\asymp x^\alpha L\Rightarrow M_q^{1/q}\asymp x^{\alpha/q}L^{1/q}$，$\alpha/q=1/2$ **非二次型专属**）⟹ "S2 是唯一非 FE 源"**亦不成立**；**(C5)** 应反过来问 $$\boxed{\textbf{什么机制能把"矩指数"强制等同于"零点指数"？}}$$ 需**非显式公式型桥** $$\boxed{\beta_*=\mu_q}\tag{B1}$$（$\mu_q:=\limsup\frac{\log M_q}{q\log x}$、$\beta_*:=\sup_{\rho\in Z(\zeta)}\Re\rho$）；链：$$M_2\overset{\text{内禀}}{\to}\tfrac12\overset{\textbf{新桥}}{\to}\beta_*\overset{\text{定义}}{\to}\mathrm{RH}$$ **桥不许用显式公式**；**(C6)** 反例压力测试：$$\boxed{\text{固定二阶矩指数 }1/2\ \text{能否任意改变零点横坐标？}}$$；**(C7)** 一般问 $$\boxed{\mu_q(F)\stackrel{?}{=}\beta_*(F)}\tag{M}$$ 与 zeta-特有 $E(F)$ 的审计；**(C8)** 判词改写：$$\boxed{\textbf{V218：核心发现保留，但 S2 的"独立零点 }1/2\text{"撤回}}$$
+
+**⭐⭐⭐ §3 本档第一主结果（定理级）**：**事实 1（无条件）** $\beta_*\ge\tfrac12$ —— 证明：FE 给零点集在 $\beta\mapsto1-\beta$ 下**不变**；若某零点 $\beta<\tfrac12$ 则镜像 $1-\beta>\tfrac12$ ⟹ $\beta_*>\tfrac12$；故 $\beta_*\ge\tfrac12$，且**等号 ⟺ 无零点实部 $>\tfrac12$ ⟺ 全部 $=\tfrac12$ ⟺ RH** ✓✓✓；**事实 2（无条件）** $\mu_2=\tfrac12$（$\sum\Lambda^2\asymp x\log x$ ⟹ $\mu_2=\limsup\frac{\log(x\log x)}{2\log x}=\tfrac12$；或取 $a_n\equiv1$：$\sum a_n^2=\lfloor x\rfloor$ ⟹ $\mu_2=\tfrac12$）✓✓ ⟹ $$\boxed{\beta_*(\zeta)=\mu_2\iff\textbf{RH}}$$ ⟹ **用户的链是循环：(B1) 不是缺失引理，它就是要证的定理本身** ✓✓✓✓
+
+**⭐⭐⭐ §4 压力测试成功（核心二）**：**Epstein $\zeta_Q$（类数 1）—— 有欧拉积、有 FE**；$a_n\asymp d(n)$ ⟹ $\sum a_n^2\asymp x\log^3x$ ⟹ $\mu_2=\tfrac12$ **仍为 $1/2$**；而 **Potter–Titchmarsh：Epstein 确有轴外零点** ⟹ $\beta_*>\tfrac12$ ⟹ $$\boxed{\text{同一}\ \mu_2=\tfrac12\ \text{与不同}\ \beta_*}\ \Longrightarrow\ \textbf{不存在"二阶矩}\Longrightarrow\beta_*\text{"的一般定理}$$ ⭐ **即使允许欧拉积＋FE 也不成立** ⟹ **S2 定性降为"数值巧合"** ⟹ 对 (C6) 问句的**答案：能** ✓✓✓✓
+
+**§5 $(\mathrm{M})$ 与 $E(F)$ 审计**：(M) **失败**（Epstein 反例）⟹ 须找 zeta-特有 $E$；逐项审计：Euler product ✗（Epstein 有欧拉积却 $\beta_*>\tfrac12$）；FE ✗（Epstein／DH 均有 FE 而轴外）；positivity ✗（`V199`(a)／`V185`）；spectral determinant ✗（`V145`／`V204`）；explicit formula ✗（`V188` 饱和）⟹ 所余 $E$ 必须强到 $\beta_*=\tfrac12$ ⟹ **$E$ 的强度就是 RH ⟹ 不是独立结构数据** ✓✓✓
+
+**⭐⭐⭐ §6 对唐先生"具体问题"的直接回答**：问"能否证明/否证 $\beta_*(\zeta)=\mu_2(\Lambda)=\tfrac12$（禁显式公式／Li-Weil／谱自伴／FE 定位）" ⟹ 由 §3 **该等式 ⟺ RH** ⟹ **证明它＝证明 RH；否证它＝否证 RH** ⟹ 它**既不是可独立证明的引理，也不是可独立否证的猜想**，而是 **RH 的等价形式** ⟹ ⚠️ **不是"可推进的缺口"**（否则会把 RH 换个名字当作新问题）✓✓✓✓
+
+**§7 判词**：$$\boxed{\textbf{V219：V218 核心发现保留；S2 的"独立零点 }1/2\text{"撤回}}$$ **准确结论**：$$\boxed{\text{存在独立的 canonical }1/2\ \textbf{尺度源};\ \textbf{但未证明它是零点指数}}$$ 三条理由：(i) S2 推导含未证等号；(ii) (B1) ⟺ RH；(iii) Epstein 反例。**保留项**：A/B 二分；`V218` 的**不变障碍（相认须归一化 → (c)）不受影响** ✓ **残余（UNINSTANTIATED）**：是否存在某矩／指数 $\mu$ 使 $\mu=\beta_*$ **可独立证明**（不用显式公式／Li-Weil／谱自伴／FE 定位）；本档未见实例 ✓
 
 ## F.4 与 §E.4 的关系（✓）
 

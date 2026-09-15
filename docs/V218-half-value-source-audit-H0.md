@@ -124,3 +124,15 @@ $$\textbf{(e)}\ \text{§5 的不变障碍为}\ \textbf{本档判断};\ \text{“
 ✅ 净产出：① 三机制类＋逐类 Λ_X ✓✓✓；② H0 字面 FALSE（附反例类）✓✓✓；③ H0′ 修正版（三源皆封）✓✓✓；
    ④ ⭐ RH ＝ S1 轴 ≡ S2 指数（新 reformulation）✓✓✓✓；⑤ 不变障碍（相认须归一化 ⟹ (c)）✓✓✓✓✓；⑥ 残余与判据 ✓
 ```
+
+---
+
+## §8 ⚠️ 硬勘误（唐先生 2026-09-15 15:42；由 `V219` 执行）
+
+$$\textbf{(C1)}\ \sigma(x):=\sqrt{M_2(x)}\ \text{是}\ \textbf{定义};\ \text{只说明}\ \textbf{人为尺度的幂指数} \text{为}\ x^{1/2}，\ \textbf{不说明}\ \psi(x)-x\ \text{的指数} ✓✓✓$$
+$$\qquad M_2>0\ \text{（正量）};\ E(x)=\psi(x)-x\ \text{（}\textbf{有符号振荡}）⟹ \text{二者只有}\ \textbf{很弱} \text{关系} ✓$$
+$$\qquad \Longrightarrow\ |E(x)|\asymp M_2^{1/2}\ \textbf{不可写};\ \ \sup|E(x)|\sim x^{1/2}\ \textbf{不可写}\（\text{后者}\ \textbf{⟺ RH}）✓✓✓$$
+$$\textbf{(C2)}\ \text{§4 的"两个独立}\ 1/2\ \text{相等"}\ \textbf{撤回}：\text{这是}\ \textbf{"同一数值的两种来源"}，\ \textbf{不是"同一对象的两个独立临界指数"} ✓✓$$
+$$\textbf{(C3)}\ \textbf{准确结论}：\boxed{\text{存在独立的 canonical }1/2\ \textbf{尺度源};\ \text{但}\ \textbf{未证明它是零点指数}} ✓✓✓$$
+$$\qquad \text{缺失物}：\boxed{\text{零点指数}\longleftrightarrow\text{二阶矩指数}}\ \（\textbf{整个桥}）;\ \text{而}\ \text{`V219`}\ \text{§3 已证该桥对}\ \zeta\ \textbf{⟺ RH} ✓✓✓$$
+$$\textbf{(C4)}\ \text{§1 的三源须}\ \textbf{重组}：\text{A 几何}\ 1/2\ \text{（}\iota\ \text{不动点）／B 尺度}\ 1/2\ \text{（}\alpha/q=1/2，\textbf{参数族、非二次型专属}）✓✓$$
