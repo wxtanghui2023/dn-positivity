@@ -541,6 +541,28 @@ $$\exists\ \text{纯算术跨素数耦合}\quad\text{s.t.}\quad \text{唯一选�
 
 **下一步（V174 预登记）**：① 攻 #4 OPEN（无 $\Gamma$ 版 FE 唯一性）② 形式化「选择步骤 ⟹ F-leak ∨ A-leak」的条件性定理。
 
+### F.5aj ⭐⭐⭐⭐⭐ **无 $\Gamma$ 版跨素数函数方程审计 —— 反射可内生、轴不可内生；形式级可算术、函数级必 archimedean**（`V174` ✓ 2026-09-15 11:46）
+
+**硬定义（防伪 S）**：允许 $F(s)=\sum a_nn^{-s}=\prod_pF_p(p^{-s})$ 与纯算术跨素数关系 $\mathcal C(\{F_p\})=0$；**禁止任何等价 Archimedean 载体**：$\Gamma$、$Q^s$、$|\cdot|_\infty$、order／growth、vertical-strip bounds，以及用 Fourier／Mellin／Poisson 把上述数据**重新编码**。要求存在 $F(s)=\varepsilon\,\mathcal T(F)(1-s)$，$\mathcal T$ 须由有限素数／算术数据**内部**定义。
+
+**三型区分**：**类型 A**（$\mathcal T=\mathcal T_{\rm arith}$ 完全由 Euler／系数／Galois／Hecke 构造）＝唯一 S 候选；**类型 B**（$\Gamma$ 被消去但信息仍在，如 $F(s)F(1-s)=H(s)$ 而 $H$ 携带增长／零点对称／无限位信息）＝**A-leak disguised**；**类型 C**（形式 $s\mapsto1-s$ 而无内生 involution）＝**公理写入**，无内容。
+
+**⭐ 本档核心（一）：反射可内生，轴不可内生。**
+观察 1：反射 $F(s)\mapsto F(k-s)$ 在**系数侧完全可实现** —— 只需两项系数侧操作：**算术平移** $T_k$（系数按 $n^{-k}$ 重标，$(T_kF)(s)=F(s+k)$）与**算术镜像** $R$（$RG(s):=G(-s)$，即指数符号翻转），于是 $R(T_kF)(s)=F(k-s)$。⟹ **反射不是 archimedean 独占的（正面发现，不得杀掉）**。
+观察 2：但**平移量 $k$ 不唯一**（任意 $k\in\mathbb Z$ 甚至 $k\in\mathbb Q$ 都写得出来），固定点为 $k/2$；有限场数据（只给系数序列 $\{a_n\}$）对 $k$ 的任何取值都同样"配合" ⟹ **有限场数据不能规范选出 $k=1$** ⟺ **反射轴（中心 $k/2$）不被有限场数据确定**。**这就是"1 从哪里来"的直接回答：不从有限场数据来。**
+观察 3：选 $k$ 需额外输入 —— **路径 F**（ζ 系数全为 1／ζ 是 Dirichlet 卷积的单位 ⟹ F-leak）或 **路径 A**（$\Gamma$ 与 $Q$ 钉住临界带宽 ⟹ A-leak）。
+
+$$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{finite places can}\ \textbf{locate the critical axis}}$$
+
+**⭐ 本档核心（二）：形式级可算术，函数级必 archimedean。**
+即使把 $k$ 供给出来，要把 $F(s)=\varepsilon F(k-s)$ 当作**复变量函数**的恒等式，就需要：① 带状域内两侧都有定义；② 解析延拓；③ 带状域上的增长控制 —— **三项全部 archimedean**（参 `V172` §5a 的 A-leak 扩张）。⟹ **形式 Dirichlet 级数层面反射可纯算术；复变量函数层面必引入 archimedean。** 这也给出**类型 B 的机制解释**：消去 $\Gamma$-因子并不消去**解析结构**（带状域存在／宽度／奇点位置／增长型仍携带 archimedean 信息）。⟹ **#4 之所以看似突破口却总落空：能给出零点／谱的必须是函数级对象，而函数级已经含 archimedean。**
+
+**第二关（FE ≠ 选择器）**：$F\mapsto F\cdot F_0$ 可能保留对称结构 ⟹ 成功标准不是"发现无 $\Gamma$ FE"，而是"纯算术公理 ⟹ $\exists!F$ 且 $F=\zeta$"。**⭐ 第二实例**：**素性（primitive）纯算术** ✓，但把素性升级为**唯一选择器**仍需 **degree／conductor**（archimedean，`V171` §3-D）⟹ 与 SMO 同型（`V173`）的第二例。
+
+**终止条件三选**：S-HIT（未达）／A-CLOSURE（**仅部分**：函数级确实必 archimedean，但形式级反射确实纯算术）／**OPEN（本档落此）** ⟹ 判定 ＝ **OPEN（半算术半 archimedean）**；按纪律**不强行杀掉**。
+
+**下一步（V175 预登记）**：① 轴定位是否是**唯一的** archimedean 入口？（若是 ⟹ A-leak 可精确化为"轴定位输入"型）② 允许 $k\in\mathbb Q$ 后是否存在纯算术方式选出 $k=1$？③ 审"函数级"能否被"形式级＋有限组合"替代（若不可 ⟹ 层级二分可升为定理）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
