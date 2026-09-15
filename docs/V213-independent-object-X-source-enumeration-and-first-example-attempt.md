@@ -98,3 +98,14 @@ $$\textbf{(f)}\ \text{§5 残余与}\ \text{`V160`／`V166`／`V171`／`V193`／
 ✅ 净产出：① 逻辑修复（模板不闭合→修复→前提被 V148 封）✓✓✓；② 四预检执行＋per-zero 观察 ✓✓；
    ③ 八类来源枚举＋构造尝试（全败）✓✓✓；④ 重数定理（本档最强）✓✓✓；⑤ 判词＋残余收敛到同一 slot ✓
 ```
+
+---
+
+## §6 ⚠️ 勘误 T10（唐先生 2026-09-15 15:16：**降级**）
+
+$$\text{本档}\ §4\ \text{的表述「任何内部}\ X\ \text{探测}\ \beta\ \text{必须探测重数」}\ \textbf{不是已证的普遍定理} ✓$$
+$$\qquad \text{「}\beta\ne0\iff\text{同一}\ \gamma\ \text{上出现两个零点」}\ \text{仅在}\ \textbf{计入 FE 伴随零点} \text{的语境下成立} ✓$$
+$$\qquad \text{一个内部对象}\ \textbf{理论上可能编码}\ \beta\ \text{而不表现为纵坐标重数};\ \text{若否，这一步本身会成为}\ \textbf{新的过强分类假设} ✓$$
+$$\Longrightarrow\ \text{本档硬核结论}\ \textbf{压缩为}：\qquad \boxed{\text{同一零集内部的自然构造，目前没有产生独立}\ \beta\ \text{坐标的实例}} ✓✓✓$$
+$$\qquad ⚠️\ \textbf{不得} \text{把}\ 0.6818\ \text{ceiling}\ \text{升级为绝对不可能定理} ✓$$
+$$\qquad \text{（}\S4\ \text{的其余部分（重数}\iff\beta\ne0\ \text{的等价、上盖}\ 0.6818287\ \text{的衔接）}\ \text{保持}，\ \text{仅}\ \textbf{普遍性} \text{降级）} ✓$$

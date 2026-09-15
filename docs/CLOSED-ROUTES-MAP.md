@@ -1230,6 +1230,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§6 判词**：$$\boxed{\textbf{V212：异质双约束不存在（canonical 来源内）}}$$ 三条独立理由：(E1) 第一出口＝"无自由轨道"＝RH（循环）；(E2) 第二出口＝严格 $|\beta|$-单调泛函＝正性泛函（已封）；(E3) 七层 $\beta$-内容只经三管道、全部已刻画 ⟹ 无独立性。**残余（UNINSTANTIATED）**：唯一可能逃逸＝一个**非 canonical 的第二全局对象**（即 `V193` 的箭头缺口 $\mathcal A_{\mathbb P}\to X$；`V160` §5 的"$\zeta$ 的非零点刻画"）；判据四条：① 独立于显式公式；② 对 $\beta$ 敏感；③ 非正性泛函；④ 非"无自由轨道"的重述 ✓
 
+### F.5bv ⭐⭐⭐⭐⭐ ⚠️**勘误 T10（`V214`／唐先生 15:16）**：§4 的「任何内部 $X$ 探测 $\beta$ 必须探测重数」**不是已证的普遍定理**（仅在"计入 FE 伴随零点"的语境下成立，且不得把 $0.6818$ ceiling 升级为绝对不可能定理）⟹ 硬核结论**压缩为**「**同一零集内部的自然构造，目前没有产生独立 $\beta$ 坐标的实例**」。
+
 ### F.5bv ⭐⭐⭐⭐⭐ **V213：独立对象 $X$ 的来源枚举与"第一非平凡例子"构造尝试 ⟹ 构造不出来 ⟹ 判死**（`V213` ✓ 2026-09-15 15:11）
 
 **委托（唐先生）**：**「V212 最后一步还差一个关键修正」**（准确表述：**只要机制的基本对象仍是 $\xi/\zeta$ 的同一个零集，就无法产生第二个独立的 $\beta$-坐标**）；新问题 $$\boxed{\text{能否构造一个}\ X\ne\xi\ \text{使}\ X\ \text{对}\ \beta\ \text{有独立信息？}}$$ **六条件**（非 $\xi$ 重编码／非显式公式变形／非正性-谱实现／非 $\iota$ 重述／独立结构定义／与每个零点可证关系）；**关键差别**：不是"第二约束"而是**关系** $\mathcal R(X,\beta,\gamma)=0$；**定向要求** $\mathcal R(X,\beta,\gamma)\ne\mathcal R(X,-\beta,\gamma)$ 且不破坏 FE；**突破门（用户写法）**：$X_\rho^+=X_{1-\rho}^-$ ＋ 独立于 $\zeta$ 的不可兼容性 $X_\rho^+\ne X_\rho^-$（$\beta\ne0$）⟹ 矛盾 ⟹ $\beta=0$；**四道硬预检**；**指令**：$$\boxed{\text{从零枚举"独立对象 }X\text{ 的数学来源，并逐个构造到第一非平凡例子}}$$ **「构造不出来就立即判死，不再包装成候选。」**
@@ -1243,6 +1245,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 **⭐⭐ §4 本档最强新增：探测 $\beta$ ⟺ 探测纵坐标重数**：对任意零点 $\rho$，$\iota(\rho)=1-\bar\rho$ 也是零点且**同 $\gamma$** ⟹ $$\boxed{\ "\beta\ne0"\iff\text{"某个}\ \gamma\ \text{在零点多重集中重数}\ge2"\ }$$ （`V192` 已观察：off-axis pair ＝ one double point）⟹ 任何由 $\zeta$-对象**自身数据**构造的 $X$，要探测 $\beta$ **必须**探测这个重数；而重数控制 ＝ simple／distinct zeros 问题，**上盖 $0.6818287$**（`V184`／`V185`，Alpöge–Furman）⟹ $$\boxed{\text{即使}\ X\ \text{构造成功，也只能给出}\textbf{比例界}，\ \textbf{不能给出 RH}}$$ ⚠️ **唯一逃逸**：$X$ **不由 $\zeta$ 的数据构造（外部 $X$）** ⟹ 其与零点的联系 ＝ **识别定理** ⟹ 单一残留 slot ✓✓✓
 
 **§5 判词**：$$\boxed{\textbf{V213：第一非平凡例子构造不出来} \Longrightarrow \textbf{判死}（\text{不再包装为候选}）}$$ 四条理由：(i) 模板不闭合／修复前提被 `V148` 排除；(ii) 八类来源全部在构造阶段失败；(iii) per-zero 构造必用 $\xi$ 内部数据 ⟹ 落 `V212` 三通道；(iv) **重数定理**：任何内部 $X$ 探 $\beta$ 只能给比例界（上盖 $0.6818287$）。**残余（UNINSTANTIATED）**：收敛到**同一个 slot** —— `V160` §5／`V166` B4／`V171`／`V193`／`V212` 的 **"$\zeta$ 的非零点刻画／识别箭头"** ✓✓✓
+
+### F.5bw ⭐⭐⭐⭐⭐ **V214：识别箭头的完备消元审计 ⟹ 结果式＝行列式 ⟹ 谱条件；匹配 ζ 的 FE 数据 ⟹ Hamburger ⟹ 即 ζ ⟹ 循环 ⟹ "识别箭头" slot 封死**（`V214` ✓ 2026-09-15 15:16）
+
+**委托（唐先生）**：**「V213 的判死我接受……最重要的是残余空间已经发生了质变。」** 不能再沿 $\zeta\to X\to\beta=0$ 制造 $X$（内部派生物只能获得 $\gamma$／对合／重数／显式公式信息）；**⚠️ 纠正 V213 §4**（"任何内部 $X$ 探测 $\beta$ 必须探测重数"不是已证普遍定理；否则成为新的过强分类假设）⟹ V213 硬核结论压缩为 $$\boxed{\text{同一零集内部的自然构造，目前没有产生独立}\ \beta\ \text{坐标的实例}}$$ 新任务：审计识别箭头 $\mathcal A_{\mathbb P}\to X\to\{\rho\}$ 的**逻辑类型**（等式｜谱映射｜零点因子分解｜计数映射｜**代数消元**｜动力系统编码）；**"真正尚未被直接打掉的，是消元／结果式这一类"**：$$\boxed{X\ \text{不含}\ \rho\ \overset{\text{独立方程组}}{\Longrightarrow}\ \operatorname{Res}_u(F_X,G_X)}$$ **七步审计**；**元结论（若封死）**：$$\boxed{\text{任何 RH 证明若不引入全新的外部数学对象，就无法突破当前整个机制族}}$$
+
+**§1 消元的形式**：$(1,1)$ 情形 $F=a_1u+a_0,\ G=b_1u+b_0$ ⟹ Sylvester $2\times2$ ⟹ $$\operatorname{Res}=a_1b_0-a_0b_1\ \text{（二次型／双线性）}$$ $(1,2)$ 情形 ⟹ $3\times3$ ⟹ $$\operatorname{Res}=a_1^2b_0-a_1a_0b_1+a_0^2b_2\ \text{（三次）}$$ ⭐ **一般事实（Sylvester 1853）**：$$\operatorname{Res}(F,G)=\det(\mathrm{Sylvester}(F,G))\ \text{（规模}\ (\deg F+\deg G)^2\text{）}$$ ⟹ $$\boxed{\textbf{结果式就是行列式}}$$；多元消元 ⟹ Koszul／Sylvester 复形；**无限情形 ⟹ Fredholm 行列式** $\det(I-K)$ ⟹ **"消元"这一类没有独立于"行列式"的数学内容** ✓✓
+
+**⭐⭐⭐ §2 第一定理级理由**：$$\det(\mathrm{Sylvester})=0\iff \text{矩阵有非平凡核}\iff 0\in\operatorname{Spec}(\mathrm{Sylvester})$$ 即 **结果式消失＝线性算子的谱／核条件**；无限情形 $\det(I-K)=0\iff 1\in\operatorname{Spec}(K)$ ⟹ 全部内容落进**谱条件**领地，而该领地已由 `V192`（**ordinal degeneracy seal**：实谱实现 $\mathrm{Spec}(T)=\{\gamma\}$，$\gamma$ 本已实数 ⟹ **实谱条件对 $\beta$ 零约束**；$\beta$ 只能经退化／重数）、`V199`**（a）代数／SOS**（最小 $2\times2$ 正落此：二次型通道）、`V204`（对称 ⟹ 盲）覆盖 ⟹ $$\boxed{\text{resultant 一类不产生新的}\ \beta\text{-通道}}$$ ✓✓✓
+
+**§3 第二刀（非定理级）**：多项式消元 ⟹ 零点集**有限** ⟹ 不可能等于 $\zeta$ 的无限零集 ⟹ 须 $F_X,G_X$ 超越；而计数函数 $N(T)\sim\frac{T}{2\pi}\log\frac{T}{2\pi}$ 是**强判别式** —— 算术有限构造（有限态／有限支撑／有限秩）给**有限或 $O(T)$** ⟹ 与 `V183`（线性 Weyl 律源基数障碍）／`V162`（FSC）／`V179`（有限支撑判据）**同族** ✓✓
+
+**§4 第三刀**：canonical 定义 ⟹ 对 $\iota$ 等变 ⟹ $R_X(s)=\pm R_X(1-s)\cdot$(单位) ⟹ $R_X$ **自动** $\iota$-对称 ⟹ 其零点集 $\iota$-不变（匹配零集所**必需**但**不充分**）；要把 $\iota$-配对钉到轴上须引入**非对称输入** ⟹ 破坏 $\iota$-等变 ⟹ `V148` ⟹ §4 归结为 `V212`(c)＋`V148`，**无新内容** ✓✓
+
+**⭐⭐⭐ §5 第二定理级理由（Hamburger 收口）**：要 $R_X$ 的零点集 ＝ $\zeta$ 的零集，须先匹配 $\zeta$ 的 **FE 数据**（同一 $\Gamma$ 因子、同类增长、归一化）⟹ 由 **Hamburger 定理（1921）**：满足 $\zeta$ 的同一函数方程与归一化者 **就是** $\zeta$ ⟹ $$\boxed{R_X\ \text{必为}\ E(s)\xi(s)^m\ \text{型} ⟹ \text{退化为}\ \xi ⟹ X=\xi ⟹ \text{违反独立性} ⟹ \textbf{循环}}$$ ⚠️ 这正是 `V173` §4 的 **"Selection-A：经 Hamburger 的 archimedean 选择器"** 路线的**反面使用**：不是用它选择 $\zeta$，而是用它证明"**匹配 $\zeta$ 数据者只能是 $\zeta$**" ✓✓✓
+
+**§6 判词**：$$\boxed{\textbf{V214：DEAD} —— \text{所有 resultant 都只是已知对象的代数消元}}$$ 两条定理级理由：(A) 结果式＝Sylvester／Fredholm 行列式 ⟹ **谱／核条件** ⟹ `V192`／`V199`／`V204`；(B) 匹配 $\zeta$ 的 FE 数据 ⟹ **Hamburger** ⟹ 即 $\zeta$ ⟹ 循环；第三刀（计数判别式）、第四刀（FE ⟹ `V212`(c)／`V148`）⟹ $$\boxed{\textbf{"识别箭头" slot 封死}}$$（七步任务全部执行完）；范围＝消元／结果式这一类；未用 RH 作推导 ✓✓✓
+
+**§7 元结论**：$$\boxed{\text{任何 RH 证明若不引入}\textbf{全新的外部数学对象}，\text{就无法突破当前整个机制族}}$$ 依据：`V147`–`V214` 已覆盖 序／选择、局部约束／传播、有限→无限、cocycle、index、卷积／混合代数、scale／RG、rewriting、positivity、FUP／localization、inverse spectral、显式公式／Li／Weil、**消元／resultant** ✓ ⚠️ 标签：**结构性元结论**（对已审计机制族），**非定理**；其精确形式即 `V212` §4 的**单对象／单位结构**；⭐ 故下一步若要继续，**唯一合法形态**：引入**全新的外部数学对象**（非 $\xi$ 的派生物）并提供**识别定理** ✓✓
 
 ## F.4 与 §E.4 的关系（✓）
 
