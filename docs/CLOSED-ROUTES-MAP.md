@@ -1918,6 +1918,8 @@ $$\qquad ⚠️⚠️\ \textbf{【撤回 2026-09-15 21:12（唐先生）】}：\
 
 **§5 分流判定**（**只登记，不审判**）：§1 **待深读（最高优先）**；§2 待深读并过 `V242` 三门；§3 低置信但角落新；§4(a)(b) **档案似缺**；§4(c) 方法模板；§4(d) 范式；§4(e) 对照 `V235`。**边界**：为**分流登记、非审计**；全部来源 **untrusted 且未逐条核对原文** ⚠️；未用 RH；未跑 Lean；零数值
 
+$$\qquad ⚠️⚠️\ \textbf{【V249 §1 撤回·2026-09-15 21:26（查档后）】}：\text{本条目 §1 所称"重大新发现"}\ \textbf{实为档案内已有材料的重复发现} —— \text{该论文}\ \textbf{早已在} \text{`V184`＋`V185`（arXiv:2608.13637 逐节精读笔记）＋`V188`／`V229`／`PROTOCOL-R6`／`E7-A3-2`} \text{内};\ \text{且}\ \textbf{"夹在}\ [67.2\%,68.18\%]\ \text{"为误读}：0.68185\ \text{是}\ \textbf{"带宽}\le1\ \text{类证书"的上限}（\text{Remark 1.1}），\ \textbf{不是临界线比例的上限} ⟹ \textbf{不存在夹逼}（\text{真实比例可以更高}）✓\ \textbf{正确读数}：\text{Remark 1.1}＝\text{带宽}\le1\ \textbf{已被证明封顶}，\text{下一步必须 support}>1 \Longrightarrow \textbf{正是 `V162`／A3 那堵墙} ⟹ \textbf{该论文是对我们的独立确认，不是推翻};\ \textbf{不改变} \text{`V192`／`V162`／`V229` 任何判断};\ \text{新增细节：标题（"More than Two Thirds…Simple and on the Critical Line"）、}\ge5/6\ \text{互异、Lean 4.33.0-rc2（与本工作区同版本）、60 子代理、"two papers no one had combined"、未同行评审} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

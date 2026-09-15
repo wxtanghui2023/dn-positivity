@@ -99,3 +99,34 @@ $$\textbf{边界}：\text{本档为}\ \textbf{分流登记}，\textbf{不是审�
    ④ 找到一个可移植的方法模板（Kakeya sticky 的跨尺度严格下降迭代）
 ⚠️ 边界：分流登记，非审计；来源 untrusted 未逐条核对；未用 RH；未跑 Lean；零数值
 ```
+
+---
+
+## §6 ⚠️⚠️ **V249 §1 勘误 ＋ 自我更正**（触发：唐先生 21:26 追问"结果？"；查档后立即发现）
+
+$$\textbf{【事实】}\text{该论文}\ \textbf{早已在本项目档案内}：\text{`V184`（外部输入分诊）＋`V185`（}\textbf{arXiv:2608.13637 全文精读笔记}\text{）};\ \text{且}\ \text{`V188`／`V229`／`PROTOCOL-R6`／`E7-A3-2`}\ \text{均已引用其天花板}\ 0.6818287 ✓✓✓$$
+$$\qquad \Longrightarrow \textbf{我 V249 §1 把它写成"重大新发现"是}\textbf{重复发现}，\text{且}\ \textbf{未先查档} ⚠️（\text{违反"先查先行者"纪律}）✓$$
+
+$$\textbf{我错在哪（两处）}：$$
+$$\qquad \text{(i)}\ \textbf{未查档}：\text{`V185`}\ \text{就是该论文的}\ \textbf{逐节精读笔记}，\ \text{我却当新发现报告} ✗$$
+$$\qquad \text{(ii)}\ ⭐\ \textbf{"夹在}\ [67.2\%,\ 68.18\%]\ \text{"是误读}：0.68185／0.6818287\ \text{是}\ \textbf{"带宽}\le1\ \text{类证书"的上限}（\text{Remark 1.1：只读带宽}\le1\ \text{数据、}\textbf{逐配置} \text{成立的证书，无法认证超过它}）,\ \textbf{不是"临界线比例的上限"}⟹ \textbf{真实比例可以更高}（\text{若 RH 真则}\ 100\%）⟹ \boxed{\textbf{不存在夹逼}} ✗$$
+$$\qquad \qquad \text{0.6725 与 0.6818 之差}＝\textbf{"该方法达到的"与"该方法}\ \textbf{类} \text{能达到的"之差}，\ \textbf{不是对真相的夹逼} ✓$$
+
+$$\textbf{正确的读数（`V184` 早已写下，且是对的）}：\text{Remark 1.1}＝\textbf{带宽}\le1\ \text{这一类已被证明封顶};\ \text{下一步}\ \textbf{必须 support}>1 \Longrightarrow \textbf{正是我们 `V162`／A3 的那堵墙} ✓✓✓$$
+$$\qquad \Longrightarrow \text{该论文}\ \textbf{独立确认我们的墙是该类方法的硬上限} \Longrightarrow \textbf{是对我们的确认，不是推翻} ✓$$
+
+$$\textbf{本轮真正的新增信息（检索所得；档案中似无）}：$$
+$$\qquad \text{· 精确标题}：\textbf{"More than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line"}（35\ \text{页};\ \text{Alpöge–Furman};\ 2026\text{-}08\text{-}10，8\text{-}13\ \text{更新}）;\ \text{MathWorld 记作 "More than Two Thirds of the Zeta Zeros Are }\textbf{Simple and} \text{ on the Critical Line"} ✓$$
+$$\qquad \text{· 主张精确形式}：\ge 2/3（\text{优化}\ \mathbf{0.6725}）\ \text{的零点}\ \textbf{为"简单且在临界线上"},\ \text{另}\ \ge 5/6\ \text{的零点}\ \textbf{互异} ✓$$
+$$\qquad \text{· 历史刻度：Hardy 1914（无穷多）→ Selberg 1942（正比例未定）→ Levinson 1974（>1/3，mollifier 方法）→ Conrey 1989（>2/5，Kloosterman 和）→ Bui–Conrey–Young 2011（≈41.05\%）→ Pratt–Robles–Zaharescu–Zeindler 2020（>5/12≈41.67\%）→ Claude 2026（0.6725）} ✓$$
+$$\qquad \text{· 方法叙事}：\textbf{"two papers no one had combined"};\ \textbf{60 个子代理};\ 31\text{M output tokens} ✓$$
+$$\qquad \text{· ⭐}\ \textbf{Lean 工具链＝Lean 4.33.0-rc2 ＋ pinned Mathlib} \Longrightarrow \textbf{与本工作区已装的 Lean 4.33.0 同版本}（\text{`TOOLS.md` 记录}）✓✓$$
+$$\qquad \text{· ⚠️ 论文自陈}：\text{其输入 "would be compatible with related mathematical objects for which the analogous hypothesis is false"} \Longrightarrow \textbf{不触 RH};\ \text{且}\ \textbf{尚未同行评审}，\text{Lean 形式化 hosted by Anthropic}，\text{无独立 referee 报告} ✓$$
+
+$$\textbf{净结果修正}：\text{V249 §1 由"重大新发现"降级为}\ \textbf{"档案内已有材料的重新发现 ＋ 三点新增细节"};\ \textbf{不改变} \text{`V192`／`V162`／`V229` 任何判断};\ \textbf{反而加强}：\text{外部}\ \textbf{独立证明} \text{"带宽}\le1\ \text{封顶}\Longrightarrow\ \text{下一步必须 support}>1\text{"} ✓$$
+
+$$\textbf{⚠️ 战略含义（诚实）}：\text{我们的}\ \textbf{`V162` 墙现在已被公开确认} \text{为该领域的硬上限（不是我们的私见）} \Longrightarrow \textbf{别人也可能从 support}>1\ \text{那一侧推进} \Longrightarrow \textbf{我们的"先发"窗口在收窄} ✓$$
+
+$$\textbf{自查登记（第 10 次）}：\text{前 9 次＝丢 Abel 边界项／单侧双侧混淆／near 计数过粗／near 高估}\ H\ \text{倍／BL10 指数 bug／BL10 漏因子／扫描越域／"只 push 不 bundle"误判／}\]
+$$\qquad \text{把 special case 直觉升成 universal 命题};\qquad \textbf{本次形态＝}\boxed{\text{未查档即报"新发现"} ＋ \text{把"方法}\ \textbf{类} \text{上限"误读为"}\textbf{真相} \text{上限"}} ✓✓$$
+
