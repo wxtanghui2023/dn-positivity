@@ -589,6 +589,20 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V176 预登记）**：① 攻 **S-ii**（构造非逐素数可分的对合）② 攻 **S-i**（查无 Euler 积情形的经典结果）
 
+### F.5al ⭐⭐⭐⭐⭐ **跨素数混合对合审计：锥定理 ＋ 加强定理 ＋ 平衡因子定理**（`V176` ✓ 2026-09-15 11:52）
+
+**形式化**：$F(\mathbf X)=\sum_{\alpha\in\mathbb N^{(\mathcal P)}}c_\alpha\mathbf X^\alpha$（**不要求**逐素数可分）；单项式型跨素数对合 $\iota(\mathbf X)_p=c_p\prod_qX_q^{A_{pq}}$，$A^2=I$；模拟 $s\mapsto k-s$ 需含负方向，最直接 $A=-P$。
+
+**① 锥定理（单项式，唐先生）**：$A\in GL(C)$ 整数、$A^2=I$、$A(C)=C$ ⟹ $A$ 矩阵元非负；$A^{-1}=A$ 亦非负；$AA^{-1}=I$ 要求非对角元严格抵消，而**两个非负整数矩阵不能通过正数相加产生零** ⟹ 每行每列恰一个 $1$ ⟹ $\boxed{A=P\ \text{（素置换）}}$ ⟹ **保持 Euler 正锥的单项式对合 ＝ 素数置换，无反演**（无法实现 $X_p\mapsto p^{-k}X_p^{-1}$）。二分：**S-ii(a)** 保持正锥 ⟹ 纯置换 ⟹ 死；**S-ii(b)** 真反演 ⟹ $A(C)\not\subseteq C$ ⟹ 锥冲突 ⟹ 交集平凡 ⟹ 回 `V175` 的 $F=1$。
+
+**⭐ ② 加强定理（本档新增，严格强于 `V175`）**：设 $F(s)=\sum_{n\ge1}c_nn^{-s}$ 为**任一** Dirichlet 级数（**不假设** Euler 积、**不假设**逐素数可分）。若 $F(s)=\varepsilon F(k-s)$ 成立，则 $c_n=0\ (n>1)$，即 $F\equiv c_1$（常函数，零谱为空）。**证明（三行）**：$n^{-s}=\mathbf X^{\alpha(n)}$ ⟹ $F$ 支撑 $\subseteq C=\mathbb N^{(\mathcal P)}$；$n^{s-k}=n^{-k}\mathbf X^{-\alpha(n)}$ ⟹ $F(k-s)$ 支撑 $\subseteq -C$；而 $C\cap(-C)=\{0\}$ ⟹ 逐系数比较 ⟹ $c_\alpha=0\ (\alpha\neq0)$；$\alpha=0$ 对应 $n=1$ 且给 $\varepsilon=1$。∎ ⟹ **障碍由"局部因子层"升级为"支撑／锥层"**。
+
+**⭐ ③ 平衡因子定理（本档新增，核心）**：裸反射是空方程 ⟹ 任何非平凡反射必须写成 $F(s)=\varepsilon\Phi(s)F(k-s)$，$\Phi\neq1$。**(i)** 对合条件 $\iota^2=\mathrm{id}$ ⟹ $\Phi(s)\Phi(k-s)=1$（**反自对偶**）。**(ii)** 锥条件：$\Phi(s)F(k-s)$ 支撑须回到正锥，而 $F(k-s)$ 支撑在负锥 ⟹ **$\Phi$ 的支撑必须混合正负指数**。**(iii)** 若 $\Phi$ **算术**，满足反自对偶且混合锥的最一般形态是 $\Phi=\Psi(s)/\Psi(k-s)$（由 $L:=\log\Phi$ 的形式解，**标 [结构性] 待严格化**）⟹ 代入得 $F\Psi=\varepsilon\,\mathrm{mirror}(F\Psi)$ ⟹ 由加强定理 $F\Psi\equiv$ const ⟹ $$\boxed{F=c/\Psi}$$ ⟹ **算术 $\Phi$ 使函数方程退化为对 $F$ 的【定义】而非【约束】** ⟹ **F-leak／走私**。**(iv)** 故要使文本成为真正约束，$\Phi$ **必须非算术** ⟹ 即 **archimedean 完成因子** ⟹ **解释了为什么所有已知函数方程都带 $\Gamma$-因子**（不是"必须写 $\Gamma$"，而是**只有非算术 $\Phi$ 才能使方程非空转**）。
+
+**④ S-ii 判定**：单项式对合（保持正锥）⟹ 素置换 ⟹ 无作用；即使放弃 Euler 积与逐素数可分，裸反射仍只有常解；想救活须引 $\Phi$，而算术 $\Phi$ ⟹ 走私、非算术 $\Phi$ ⟹ archimedean ⟹ $$\boxed{\textbf{S-ii 在"单项式对合＋算术平衡因子"两种情形下均 DEAD}}$$ **残余（OPEN，不杀）**：**(1)** 非线性 substitution 且**不要求**指数单项式化（若要求 $\iota(\mathbf X^\alpha)$ 恰为单个单项式 ⟹ 反射在指数上即 $\alpha\mapsto-\alpha$ ⟹ 乘积的多个单项式无法等于单个 ⟹ 强制 $H_p$ 单项式 ⟹ 退回锥定理）；**(2)** 非 $\Psi/\mathrm{mirror}(\Psi)$ 型的反自对偶算术 $\Phi$。
+
+**下一步（V177 预登记）**：① 攻残余 1（非线性对合且不要求指数单项式化 —— S 的最后一道门）② 攻残余 2（把 $\Phi=\Psi/\mathrm{mirror}(\Psi)$ 严格化，使"算术 $\Phi$ 走私"成为定理）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
