@@ -109,3 +109,42 @@ $$\qquad ⭐\ \textbf{唯一同时满足三项的只有 (VIII)，而它正是循
 $$\qquad \textbf{残差（UNINSTANTIATED）}：\text{一个}\ canonical\ \text{的}\ phase\to sign\ \text{操作},\ \text{其障碍}\ \textbf{非 Brauer 型}、\ \text{产出}\ \textbf{定号形式}（\text{非离散 }\pm1）\ \text{且编码实部};\ \textbf{本档未见实例} ✓$$
 $$\qquad \text{逃逸判据（若将来出现）}：①\ \text{canonical（不依赖 }\rho／\xi／\text{FE 的坐标选择}）；②\ \text{障碍}\ \notin\mathrm{Br}/\mu_N;\ ③\ \text{输出为定号而非离散符号};\ ④\ \text{定号确实编码}\ \Re\rho-\tfrac12;\ ⑤\ \text{不落 (1)–(8)／I–VIII} ✓$$
 $$\qquad \textbf{边界}：\text{§1 强化一（evenization 普适性）}\ \textbf{已核原文}\ \text{Theorem 10.3 ＋ §10 开篇自述} ✓✓\（\text{定理级}）;\ \text{§3 I–VIII 为}\ \textbf{[结构性] 枚举}，\textbf{不是不可能性定理};\ \text{§2 三分法为唐先生提出、本档采纳};\ \text{§4 的“枚举完备”}\ \textbf{未证};\ \text{§5 为结构性论证};\ \text{未用 RH 作推导};\ \text{未跑 Lean};\ \textbf{零数值} ✓$$
+
+---
+
+## §7 **两个"价值"的独立意义**（唐先生 2026-09-15 20:28 追问："这两个价值的意义呢？"）
+
+$$\textbf{所指}：\S3\ \text{中标为}\ \textbf{最有价值}\ \text{的 (II) Hasse–Minkowski};\ \textbf{第二有价值}\ \text{的 (IV) HB／Krein} ✓$$
+$$\qquad \textbf{它们不是"又死了两条"，而是}\ \textbf{各自封住接口的一个角，且封法不同} ✓✓✓$$
+
+### §7.1 **(II) Hasse–Minkowski 的意义（三层）**
+
+$$\textbf{(a)}\ \textbf{接口不空}：\text{唐先生要的"局部相位}\to\text{整体定号"在数学中}\ \textbf{真的存在且经典} ⟹ \text{排除"也许整个操作类型在数学中不存在"这一假设} ✓✓$$
+$$\textbf{(b)}\ ⭐\ \textbf{要害}：\text{它能成立}\ \textbf{正因为} \text{障碍是}\ \textbf{有限扭群}\ \mathrm{Br}[2] ⟹ \textbf{输出只能是离散的}（\text{正定／非正定}）✓✓✓$$
+$$\qquad \text{扭转数据是"平的"}\ \text{—— 它}\ \textbf{带不动连续参数}\ \Re\rho \text{（这正是}\ \textbf{`V237`-A}\ \text{型"模 1 }/\ \text{离散"障碍的同族）} ✓✓$$
+$$\textbf{(c)}\ ⭐⭐\ \textbf{两角窘境（本档最重要的结构性收获）}：\ \text{phase}\to\text{sign 的障碍}\ \textbf{要么是扭}\（\text{输出离散、无 }\beta）,\ \textbf{要么是解析}\（=\ \text{Hilbert 空间正性}\ =\ \textbf{Weil 正性},\ \text{循环}）⟹ \boxed{\textbf{没有第三类}} ✓✓✓$$
+$$\qquad ⟹ \text{这是}\ \textbf{`V242-D`} \text{目前最锐的形式} ✓$$
+$$\textbf{(d)}\ \text{附带}：\text{算术局部-整体机制（Hasse–Minkowski／Ш）接触 }\zeta\ \text{的唯一通道是}\ \textbf{L-值}\（\text{`E2` §4}）⟹ \textbf{值面} ⟹ \textbf{`V157`} ⟹ \text{无 }\beta ✓✓$$
+
+### §7.2 **(IV) HB／Krein 的意义（三层）**
+
+$$\textbf{(a)}\ \textbf{接口在解析侧也真实存在}：|E(\bar z)|<|E(z)|\Longrightarrow \text{零点全在下半平面};\ \text{这是}\ \textbf{真·相位（模比）条件}\to\text{零点位置} ✓✓$$
+$$\textbf{(b)}\ ⭐\ \textbf{但它是}\textbf{恒等}，\textbf{不是}\textbf{桥}：\text{LP／HB 类的}\textbf{完备刻画本身就是零点位置陈述} ⟹ \text{假设已藏着结论} ⟹ \textbf{同义反复} ✓✓✓$$
+$$\textbf{(c)}\ ⭐⭐\ \textbf{更深}：\text{它是"}\textbf{数据已含答案}\text{"的}\ \textbf{原型} \Longrightarrow \text{正是}\ \textbf{`V212` 的"单一对象"} \text{结论} ✓✓✓$$
+$$\qquad \text{即：}\text{相位数据若要决定位置，该数据必须}\ \textbf{与位置等价};\ \text{而等价者}\ \textbf{不构成桥} ✓$$
+$$\textbf{(d)}\ ⭐\ \textbf{给出诊断判据（新，可用）}：\text{未来的}\ \text{phase}\to\text{location 候选，必须其}\ \textbf{假设严格弱于结论}\（\text{strict implication}）,\ \text{而}\ \textbf{不是等价} ✓✓✓$$
+$$\qquad \text{HB／Krein 的假设}\iff\text{结论} \Longrightarrow \text{不合格};\ \text{而按}\ \textbf{`V201` 闸门}：\text{严格更弱的假设若产出 RH 强度的结论},\ \text{该假设本身即 RH 强度} ✓$$
+
+### §7.3 ⭐⭐⭐ **两者合起来的意义（核心）**
+
+$$\text{它们}\ \textbf{独立地} \text{封住接口的}\ \textbf{两个角},\ \text{而封法}\ \textbf{不同}：\ \text{一个是}\ \textbf{代数-扭}（\text{结构性的}）,\ \text{一个是}\ \textbf{逻辑-重述}（\text{恒等性的}）✓✓✓$$
+$$\qquad \textbf{扭角}：\text{连续的}\ \textbf{definite 输出}\ \textbf{不可能} \text{来自扭障碍};\qquad \textbf{恒等角}：\text{location 输出}\ \textbf{不可能} \text{来自非等价假设} ✓✓✓$$
+$$\qquad ⟹ \text{剩下的唯一空间}＝\textbf{连续 ＋ definite ＋ 由解析正性产生}＝\textbf{Weil／Bochner} ⟹ \textbf{循环} ✓✓✓$$
+$$\Longrightarrow \textbf{所以}\ \S5\ \text{的"canonical 二次型只有三条路"}\ \textbf{不是任意断言},\ \text{而是被}\ \textbf{两端实证支持} ✓✓✓$$
+$$\qquad \text{且两角}\ \textbf{相互独立}：\text{即使绕开 Brauer（找到非扭的局部-整体障碍），仍须"假设严格弱于结论"，而由}\ \textbf{`V201`}\ \text{那只等价于 RH 本身} ✓✓$$
+
+### §7.4 **战略意义（最重要的一句）**
+
+$$\boxed{\text{这两个价值的意义}＝\text{把"我们需要一个把相位变成符号的操作"由}\ \textbf{听起来像新机制} \text{翻译成}\ \textbf{两种已知且各自封闭的数学类型}} ✓✓✓$$
+$$\qquad ⟹ \text{残差}\ \textbf{不再是"找一个操作"}，\text{而是"找}\ \textbf{第三种类型}\ \text{的 phase}\to\text{sign 操作"}\ \text{—— 而已知}\ \textbf{没有第三种} ✓$$
+$$\qquad ⚠️\ \textbf{边界}：\text{仍是}\ \textbf{枚举},\ \textbf{不是定理};\ \text{"没有第三类"的证明}＝\text{canonical phase}\to\text{sign 的}\ \textbf{完备分类}（＝\S5\ \text{的 canonical 二次型完备分类}）✓$$
