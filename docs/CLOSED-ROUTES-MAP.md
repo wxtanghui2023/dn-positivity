@@ -992,6 +992,26 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 残余与 V200 预登记**：唯一未被 §3 覆盖的锥源形状 ＝ **组合／单调型**（非代数、非分析、非动力学；候选形态：正关联／FKG 型、单调耦合、格上单调性、关联不等式）；⚠️ 按 §5，若欲过门**必须产生新的无条件输入**，否则立即判死。**V200 唯一动作**：审计组合／单调型锥源 —— 是否存在对 $(\Lambda(n),\log p,p^k)$ 的**单调关联结构**，其正性**不是** SOS／实根性／耗散的重新表述，且能产生新的无条件输入？若否 ⟹ **四类锥源全封、本主线收口**；若是 ⟹ 这是第一个合法 $P$。
 
+### F.5bi ⭐⭐⭐⭐⭐ **V200：跨素数正关联审计（单一预算）⟹ 组合／单调锥源 DEAD；四类锥源全封；A1／A3 主线收口**（`V200` ✓ 2026-09-15 13:43）
+
+**委托（唐先生）**：**「开 V200。这一档要比前面更严格：不要先假定 FKG/正关联能产生 RH 所需的锥；先做『能否产生新无条件输入』的反向审计。」** 只检查 $$\text{prime-side}\overset{?}{\Longrightarrow}P_{\rm comb}\overset{?}{\Longrightarrow}\text{Li／Weil positivity}$$ **四项硬检验**：(1) 先定义对象，**不准使用零点**（只允许 $\Lambda,\psi,\theta,\log p,p^k$）；(2) **计算关联量，而非引用「正关联」**，并特别审计**独立乘法结构 vs 跨素数关联结构**（「若关联最后完全因子化，立即关闭」）；(3) **最关键：测新信息量**（若只是 $\psi(x)\le x+E(x)$／PNT／零自由区／BV／Selberg 型二次估计的变形 ⟹ **立即 DEAD**）；(4) 最后才问 RH 强度，**禁止** $P_{\rm comb}\equiv\text{total positivity}\equiv\text{Jensen hyperbolicity}\equiv\mathrm{RH}$。**预算＝一项**：跨素数正关联是否存在非平凡、可无条件证明、且产生新输入的 canonical 结构。
+
+**§1 对象**：允许 $\Lambda,\psi,\theta,\log p,p^k$；两种 canonical 测度：$\mu_x$（$\{1,\dots,x\}$ 均匀）、$\mu_{\mathbb P}$（$\{p\le x\}$ 均匀）。
+
+**⭐ §2 实测关联量（非引用）**：**(2.1)** $\mu_x$：$\mathbb E[F_pF_q]=\frac{\lfloor x/pq\rfloor}{x}$，$\mathbb E[F_p]=\frac{\lfloor x/p\rfloor}{x}$ ⟹ $$\boxed{\operatorname{Cov}_{\mu_x}(F_p,F_q)=\frac{\lfloor x/pq\rfloor}{x}-\frac{\lfloor x/p\rfloor\lfloor x/q\rfloor}{x^2}=O(1/x)}$$ ⚠️ **主项精确抵消**（$\frac1{pq}-\frac1p\frac1q=0$），剩余 $O(1/x)$ 的**符号由 $\{x/p\},\{x/q\}$ 决定 ⟹ 符号不定** ⟹ 按唐先生判据「关联完全因子化 ⟹ 立即关闭」✓✓。**(2.2)** $\mu_{\mathbb P}$：$p\ne q$ ⟹ $\mathbf 1_{p\mid N}\mathbf 1_{q\mid N}\equiv0$ ⟹ $\operatorname{Cov}=-\frac{1}{\pi(x)^2}<0$（**符号固定但为负**）⟹ 整除型变量在素数测度下**负关联**；正关联型结构只能来自**间隙（元组）**。**(2.3)** 高阶联合累积量 $\kappa_{\mu_x}=O(1/x)$ ⟹ **各阶均因子化** ⟹ 无高阶非平凡跨素数关联 ✓✓✓。
+
+**⭐ §3 FKG 二难 ＋ 子格障碍（结构性）**：FKG $\iff$ log-supermodularity。**二难**：(i) 若 $F_p$ 独立 ⟹ 乘积测度满足 FKG **取等** ⟹ 不等式**平凡**、不含超出独立性的信息 ⟹ **检查 3 必败**；(ii) 若不独立 ⟹ 证 FKG 须证 log-supermodularity ＝ **正关联本身** ⟹ **循环**。**子格障碍**：窗口 $[1,x]$ 关于 $(\gcd,\mathrm{lcm})$ **不是子格**（lcm 可逃出窗口）⟹ canonical FKG 框架**不适用**；若改用有限素数集 $S$ 的除子格（Boole 格），乘积测度满足 FKG 且**取等** ⟹ 回到 (i)。⟹ 组合／单调型锥源在 FKG 框架内**二难闭合** ✓✓✓。
+
+**⭐ §4 硬检验 3（判死点）**：唯一**非因子化**的跨素数结构 ＝ **素数元组／间隙相关** $\sum_{n\le x}\Lambda(n)\Lambda(n+h_1)\cdots\Lambda(n+h_{k-1})$ ⟹ 即 **Hardy–Littlewood 区域**；其**无条件**控制恰为 (a) **水平分布 $\theta=\frac12$（Bombieri–Vinogradov）**、(b) **二阶矩型估计（Selberg）**、(c) pair correlation **Fourier 支撑 $\le1$** ⟹ 越过须 **support $>1$** ⟹ 即 `V162` 承重墙 ⟹ $$\boxed{\text{任何无条件的}\ P_{\rm comb}\ \text{必为 (a)–(c) 的变体}}$$ ⟹ 按唐先生清单 ⟹ $$\boxed{\textbf{立即 DEAD}}$$ ⚠️ 不产生新无条件输入 ⟹ 由 `V199` §5 判据**不可能过门** ✓✓✓。
+
+**§5 硬检验 4**：按协议**不进入**；且未使用被禁止的三项等价 ✓。
+
+**§6 判词**：$$\boxed{\textbf{组合／单调锥源 DEAD}}$$（两条独立路径：协方差因子化；FKG 二难；非因子化残差＝已知墙）⟹ `V199` §3 **四类锥源全封**：(a) 代数／SOS ✓（＝RH 的断言）；(b) 分析／实根性-全正 ✓（强度＝RH）；(c) 动力学／耗散 ✓（需指数膨胀，char-0 缺失）；(d) 组合／单调 ✓（本档）⟹ $$\boxed{\textbf{A1／A3 主线收口}}$$（按 `V199` §5：四类锥源均不能产生新的无条件输入）✓✓✓。
+
+**§7 残余（UNINSTANTIATED，不给方向）**：非 canonical、符号固定、跨素数、可无条件证明、且产生新数论不等式的关联结构；本轮**未见实例**；日后候选判据三条（缺一不可）：① 符号固定且跨素数；② 无条件可证；③ 给出**现有无条件理论没有的**不等式。
+
+**备注**：审计线号段已由 V101–V199 扩至 **V101–V299**（`scripts/id_claim.sh` 注释已记）✓。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

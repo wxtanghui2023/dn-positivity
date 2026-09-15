@@ -17,7 +17,7 @@ case "$STREAM" in
   *) echo "unknown stream: $STREAM (main|audit|spare)" >&2; exit 2 ;;
 esac
 mkdir -p "$ROOT/docs/.idclaims"
-for n in $(seq $((BASE+1)) $((BASE+99))); do
+for n in $(seq $((BASE+1)) $((BASE+199))); do   # 2026-09-15: 扩至 199 槽（V101–V299），原 99 槽已用满
   id="${PREFIX}$n"
   [ -e "$ROOT/docs/.idclaims/$id.lock" ] && continue
   if compgen -G "$ROOT/docs/$id-*" >/dev/null 2>&1; then continue; fi
