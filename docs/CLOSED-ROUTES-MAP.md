@@ -436,6 +436,20 @@ $$\qquad\textbf{残余（不是"更深的 gap"，而是}\textbf{具体设备表}
 $$\qquad ⚠️\ \text{边界}：\text{引理 1 为 o-minimality 定义级经典；引理 2 为经典无条件；"已知装置全落六接口}\cup\text{类 VI"为}\textbf{[结构性]} ⚠️\ \textbf{非穷尽性定理} ⟹ \text{本档为}\textbf{条件性封口}，}\textbf{不是}\text{无条件 DEAD}$$
 $$\qquad\textbf{下一步（二选，不得有第三项）}：①\ \text{审计残余①的 (a)–(e)，看是否有既非六接口亦非类 VI 的非 o-minimal 化装置（一项即够 → 转终局 B 路线）};\ ②\ \text{界定"机制定义语言"能否规范为一阶 ℝ-结构} ✓$$
 
+### F.5ac ⭐⭐⭐⭐⭐ **逐项审计 (a)–(e) ＋ 双义务结构**（`V167` ✓ 2026-09-15 11:16）—— **五项全部不构成 escape ✓✓｜但五项全死 ⟹ 更强的条件性封口（非无条件 DEAD）✓✓**
+
+$$\text{审计标准}：D＝\{\text{装置能定义无限离散 }P_M\subset\mathbb R\}\ \text{＋五问}（\text{零点独立？非解析接口？非选择？逐点输出 }\lambda\text{？可能证 }P_M=P_\zeta\text{？}）$$
+$$\textbf{(a) }\mathbb Z\ \text{统一定义}\（\sin(\pi x)=0,\lfloor x\rfloor=x）⟹ \boxed{\text{DEAD}}：\text{必须区分}\ \boxed{\text{"定义 }\mathbb Z"\neq\text{"定义 ζ 零点"}} ⟹ \text{即使 }P_M=\mathbb Z\ \text{仍无理由得 }P_M=Z_\zeta-\tfrac12;\ \text{若用解析 }F\ \text{使 }F(\lambda)=0\iff\zeta(\tfrac12+i\lambda)=0\ \text{则识别已进入解析接口 —— 死因不是"能定义 ℤ 所以没用"，而是}\ \boxed{\text{离散化能力}\not\Rightarrow\zeta\ \text{逐点识别能力}}$$
+$$\textbf{(b) 周期／拟周期}\（\sin,\text{Jacobi/theta},\text{模形式}）⟹ \boxed{\text{DEAD}}：\text{周期性给 }P(x+T)=P(x)\ \text{或有限/可描述群作用不变性};\ \text{而 ζ 非平凡零点的 ordinates}\textbf{无已知固定周期结构};\ \text{即使拟周期仍须证}\ P(\lambda)=0\iff\zeta(\tfrac12+i\lambda)=0,\ \text{若由 theta/Mellin/模形式建立联系则仍进入既有解析接口 —— 死的是"周期性本身足以完成 identification"}$$
+$$\textbf{(c) 完整解析对象＋延拓}\（F=\zeta\ \text{或同延拓/FE/增长}）⟹ P_M(\lambda)\iff F(\tfrac12+i\lambda)=0\ \textbf{当然可逐点识别}，但已把目标放进定义/证明载体}\ M\rightsquigarrow F\rightsquigarrow Z_\zeta ⟹ \boxed{\text{DEAD}}\ \text{属 B1/B2}$$
+$$\textbf{(d) 集合论／描述性任意定义} ⟹ \boxed{\text{DEAD}}：\text{可直接取 }A=Z_\zeta-\tfrac12,\ \text{但}\textbf{正好违反 }V166\ \text{核心要求}\ \boxed{\text{零点独立性}} ⟹ \text{属 selection／definition smuggling／类 VI};\ ⚠️\ \text{"集合论能定义无限离散集"}\textbf{本身没问题}，\text{死的是用任意定义能力实现 ζ 零点识别}$$
+$$\textbf{(e) 非标准模型／超积} ⟹ \boxed{\text{DEAD}}：\text{超积可产生}\ ^*\mathbb N,{}^*\mathbb R\ \text{把无限过程转成内部对象}，\text{但 }V136\ \text{关键限制}：\textbf{超积改变模型层，不自动产生新的 ζ 点位置信息};\ \text{形式上 }M=\prod_{\mathcal U}M_i\ \text{只提供 }\operatorname{Th}(M)\ \text{／内部结构} ⟹ \text{要得 }\operatorname{Spec}(M)=Z_\zeta-\tfrac12\ \text{仍须 identification theorem（用 ζ 解析性质}\Rightarrow C_{\rm analytic};\ \text{直接放零点序列}\Rightarrow\text{smuggling）}$$
+$$\text{五行表}\（\text{能否产生无限离散集／能否独立产生 ζ 逐点集合／死因}）：\text{(a) ✓/✗/离散化≠identification};\ \text{(b) ✓/✗/周期结构≠ζ 零集};\ \text{(c) ✓/✓/}C_{\rm analytic}\text{／smuggling};\ \text{(d) ✓/表面 ✓/definition,selection（类 VI）};\ \text{(e) ✓/✗/不产生新位置} ⟹ \boxed{(a)\text{–}(e)\ \text{全部不构成 C6 escape}}$$
+$$\textbf{⚠️ 纠正（本档必守）}：\boxed{\text{五项全死}\not\Rightarrow\text{无条件 }\mathrm{DEAD}}\ ——\ \text{最多证明"这五个装置不是逃逸口"} ⟹ \boxed{\text{五种已知非 o-minimal 装置}\not\Rightarrow\text{所有可能装置}};\ \textbf{终局 B 要求}\text{一个}\textbf{五项之外且确实满足 C6.1–C6.6 的具体构造} ⟹ \text{结论强度 ＝}\textbf{更强的条件性封口}（\text{与 }V136/V144/V165\ \text{同型纪律：不得把"全死"写成"不存在其它"}）$$
+$$\textbf{⭐ 双义务结构（本档新增）}：\text{任何零点独立的无限离散生成器须同时通过两项}\textbf{独立}义务：\boxed{\textbf{L-义务}（语言层）：\text{定义 }P_M\ \text{的语言必须非 o-minimal}}\（V166\ \text{引理 1＋2}）\ \text{与}\ \boxed{\textbf{I-义务}（内容层）：\text{必须证明 }P_M=P_\zeta\（逐点同一性）}\（V165\ \text{T3／B3}）⟹\ ⭐\ \textbf{两义务独立}：\text{满足 L 不蕴含满足 I}（(a)(b) 有离散化能力却无识别）；\ \text{满足 I 不蕴含满足 L}（(c)(d) 有识别能力却把目标放进定义）⟹ \text{五项死因}\textbf{各不相同}却\textbf{恰好覆盖两处}：\text{(a)(b)(e) 死於 I-义务};\ \text{(c)(d) 死於 smuggling／类 VI（绕过 L 而非满足）} ⟹ \text{未来候选必须}\textbf{同时}\text{通过 L 与 I} ＝\textbf{双门筛子}（与 }V163\ \text{FSC 卡同层）$$
+$$\qquad\textbf{更锋利的问题}：\boxed{\text{什么东西能产生无限离散实数集，却既非解析离散化、周期结构、任意集合编码，也非超积？}}\ \text{若存在须同时解决}\ \boxed{\text{discreteness}+\text{endogenous }\lambda+\text{pointwise identification}}\ \text{且不偷放 }\gamma_n$$
+$$\qquad\textbf{V168 立项}：\text{不再审计"数学领域"，而审计}\ \boxed{\text{"离散实数生成机制"的逻辑分类}};\ \text{目标（表示定理）}\ \boxed{\text{任何零点独立的无限离散实数生成器}\Rightarrow\text{可归约为某类已审计装置}};\ \text{若证不出} ⟹ \textbf{立即反向构造}\text{一个五项之外的生成器}（\text{符合"定理封口或造出反例性结构"的二分）}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
