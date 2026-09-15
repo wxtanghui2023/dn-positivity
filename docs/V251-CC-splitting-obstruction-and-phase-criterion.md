@@ -53,18 +53,20 @@ $$\qquad \Longrightarrow \text{商}\ \mathcal M_p^\infty/p^{\mathbb Z}\ \textbf{
 
 ## §3 ⭐⭐⭐⭐ **本档提取的新判据：分裂—相位判据（splitting–phase criterion）**
 
-$$\boxed{\textbf{分裂—相位判据}：\quad E_p\ \text{分裂为}\ C_p\times\widetilde{\mathcal X}_\infty\iff\mathrm{Frob}\ \text{在相位因子上作用平凡}\iff\alpha_p\ \text{是实数（无相位）}} ✓✓✓✓$$
+$$\boxed{\textbf{分裂—相位判据（限定版）}：\quad\text{在}\ \textbf{本文的 canonical }\mathbb C^\times\ \textbf{extension 中}，\ \text{非平凡 phase action}\iff\text{canonical real splitting 的失效}} ✓✓✓✓$$
+$$\qquad ⚠️\ \textbf{不作一般扩张定理}：\text{对一般}\ 1\to S^1\to E\to\mathbb R_{>0}\to 1，\ \textbf{不能} \text{仅凭"某个本征值实"推出扩张分裂};\ \text{须}\ \textbf{显式给出} \text{连续同态}\ s:\mathbb R_{>0}\to E\ \text{使}\ \pi\circ s=\mathrm{id};\ \text{本文}\ s(r)=r\ \text{显然存在} ✓✓$$
 $$\qquad \text{等价陈述}：\text{只要 scaling／Frobenius 本征值}\ \alpha_p\in\mathbb R_{>0}\ \text{（无相位）}，\text{算术参数就}\ \textbf{全部} \text{留在长度因子}\ C_p\ \text{内},\ \text{相位因子}\ \textbf{与算术无关} \Longrightarrow \textbf{无耦合} ✓$$
 $$\qquad \Longrightarrow \boxed{\text{任何}\ \beta\ \text{通道}\ \textbf{必须} \text{要求}\ \textbf{非实的}\ \text{scaling 本征值（Frobenius 带非平凡相位）}} ✓✓✓$$
 
 $$\textbf{与}\ \textbf{`V144`}\ \text{接通（关键）}：\text{本项目}\ \text{`V144` 层诊断}：\zeta\ \text{的局部因子}\ \alpha_p\equiv1（\text{平凡 motive}）\Longrightarrow \textbf{相位通道在有限素数处为空}$$
 $$\qquad \Longrightarrow \text{结合本判据}：\text{ζ 的有限素数处}\ \alpha_p=1\ \textbf{是实数} \Longrightarrow \text{该处的几何}\ \textbf{必然分裂} \Longrightarrow \textbf{耦合只能在}\ \textbf{archimedean 层} ✓✓✓$$
 $$\qquad \text{而}\ \textbf{`V215`(c)／`V218` §5}：\text{canonical 地产生坐标值}\ \tfrac12\ \text{须 archimedean 归一化（已封）}✓$$
-$$\qquad \Longrightarrow \textbf{本判据把"本文为何分裂"翻译成"ζ 为何在有限处无相位"——两条独立线在此汇合} ✓✓✓✓$$
+$$\qquad ⚠️\ \textbf{【已收紧·见 §5 T11】}\text{下述"汇合"}\ \textbf{只能是}\ \textbf{独立吻合的结构事实}，\ \textbf{不是} \text{已建立的等价链}：\text{缺}\ \textbf{Gate 4（双向 identification）} ✓✓✓$$
+$$\qquad \text{（正式表述见 §5 T11：}\text{"现在第一次得到一个}\textbf{统一的结构判据}：\text{canonical splitting 与 phase-triviality}\textbf{属于同一 extension-level 机制};\ \text{它与}\ \text{`V144`}\ \text{的 ζ 有限处 phase-triviality}\ \textbf{独立吻合}，\ \text{但}\ \textbf{尚未建立两者的 canonical identification}\text{"）}$$
 
 $$\textbf{对照本项目此前结论（一致性检查）}：$$
 $$\qquad \text{`V144`（层诊断）✓};\ \text{`V171` §3-D（degree/conductor 由 archimedean 因子定义）✓};\ \text{`V227` §4（char-}p\ \text{临界轨迹＝模长／相位侧；char-}0＝竖直线）✓$$
-$$\qquad \text{⭐ 新意}：\text{此前我们知道"有限处无相位"（`V144`）与"乘积分解"（本文）是}\textbf{两条独立事实};\ \textbf{本判据首次给出它们的}\textbf{等价链} ✓✓✓$$
+$$\qquad \text{⭐ 新意（已收紧）}：\text{此前我们知道"有限处无相位"（`V144`）与"乘积分解"（本文）是}\textbf{两条独立事实};\ \textbf{本档给出的不是"等价链"而是}\ \textbf{"同一 extension-level 机制＋两者独立吻合"} \text{——}\textbf{canonical identification 尚缺（Gate 4）} ✓✓✓$$
 
 ---
 
@@ -129,3 +131,40 @@ $$\qquad \text{§3 判据为}\ \textbf{[本档推导]}，\text{未逐条核对�
    ③ ⭐ 提取新判据：分裂 ⟺ Frob 无相位 ④ 与 V144 首次给出等价链（"本文为何分裂"＝"ζ 为何有限处无相位"）
    ⑤ V250 状态表更新：SPLITTING-OBSTRUCTION 由 OPEN → CLOSED（限本文构造）
 ```
+
+---
+
+## §5 ⚠️ **勘误与收紧**（唐先生 2026-09-15 21:45；逐字采纳）
+
+$$\textbf{T10（§2 判据限定范围）}：\text{一般扩张}\ 1\to S^1\to E\to\mathbb R_{>0}\to 1\ \textbf{不能} \text{仅凭"某本征值实"自动推出分裂};\ \text{须}\ \textbf{显式}\ s:\mathbb R_{>0}\to E\ \text{连续同态且}\ \pi\circ s=\mathrm{id}$$
+$$\qquad \text{本文极分解中}\ s(r)=r\ \text{显然存在} \Longrightarrow \text{正式表述改为}\ \boxed{\text{在本文 canonical }\mathbb C^\times\ \text{extension 中},\ \text{非平凡 phase action}\iff\text{canonical real splitting 失效}} ✓✓✓$$
+$$\qquad ⟹ \textbf{不把特殊结构误升为任意扩张的普遍定理} \text{（本档 §3 已就地修正）} ✓$$
+
+$$\textbf{T11（§3 降级 —— 缺一道桥）}：\text{ζ 的}\ \alpha_p=1\ \text{与 CC 的}\ E_p\simeq C_p\times\widetilde{\mathcal X}_\infty\ \textbf{之间尚缺 identification map}：$$
+$$\qquad \boxed{\{\zeta\ \text{local factor at }p\}\longrightarrow\{\text{CC scaling eigenvalue at }p\}}$$
+$$\qquad \text{无此 map，只能说}\ \textbf{两个独立吻合的结构事实}：（\text{i）`V144`：ζ 有限处无 phase};\ \text{（ii）CC：本文 scaling 是 positive real}$$
+$$\qquad \textbf{不能说} \text{已证明}\ \boxed{\text{ζ finite-place trivial phase}\iff\text{CC extension splits}} \text{——}\textbf{这正是我们一直要求的}\ \textbf{Gate 4：bidirectional identification} ✓✓✓$$
+$$\qquad \Longrightarrow \text{"第一次等价链"}\ \textbf{降一级为}：\boxed{\text{目前是}\ \textbf{结构同型／独立复现}，\ \textbf{不是严格等价}} ✓✓$$
+$$\qquad \textbf{正式判词改写（逐字采纳唐先生）}：\text{"现在第一次得到一个}\textbf{统一的结构判据}：\text{canonical splitting 与 phase-triviality}\textbf{属于同一 extension-level 机制};\ \text{它与}\ \text{`V144`}\ \text{的 ζ 有限处 phase-triviality}\ \textbf{独立吻合}，\ \text{但}\ \textbf{尚未建立两者的 canonical identification}\text{"} ✓✓✓$$
+
+$$\textbf{T12（§4 升格为可执行结构测试 —— 本档保留并正式登记）}：\text{真正的新产物仍成立}：$$
+$$\qquad \boxed{\text{若候选机制依赖}\ \mathbb R_{>0}\text{-scaling 与}\ S^1\text{-phase 的}\ \textbf{非平凡耦合},\ \text{则必须先检查}\ \textbf{canonical splitting 是否存在}} ✓✓✓$$
+$$\qquad \text{若存在}\ E\simeq\mathbb R_{>0}\times S^1 \Longrightarrow \text{任何声称的"arithmetic phase→geometry"效应}\ \textbf{必须来自额外结构}，\ \text{不能来自该扩张本身} ✓✓$$
+$$\qquad \text{这比"有限处无相位"强，因为给出}\ \textbf{可执行的结构测试}：\qquad \text{extension}\to\text{canonical section?}\to\text{phase action?}\to\text{coupling?} ✓✓✓$$
+$$\qquad ⭐\ \textbf{登记为预筛（与 `V194` 第四类预筛卡同族）}：\textbf{分裂预筛} \text{——}\text{任何声称"finite arithmetic phase 与 archimedean geometry 耦合"的方案}，\ \textbf{第一件事不是算零，而是先查其 scaling extension 有无 canonical splitting};\ \text{若 split}\Longrightarrow \text{候选必须拿出}\ \textbf{不可由 polar decomposition 消掉的额外 coupling datum}，\ \text{否则}\ \textbf{直接封} ✓✓✓$$
+
+$$\textbf{§5 状态表（逐字采纳唐先生）}：$$
+
+| 命题 | 判定 |
+|:--|:--|
+| CC extension canonical split | **PASS** |
+| 本文 $\mathfrak o_p\equiv0$ | **PASS** |
+| split ⇒ 本文无 phase coupling | **PASS** |
+| ζ finite-place $\alpha_p=1$ | **独立事实 PASS** |
+| 二者已 canonical-identify | **尚缺 Gate 4** |
+| 因而有限处必无任何可能的 β 通道 | **不能这样升级** |
+| CC 本文提供 RH mechanism | **FAIL** |
+
+$$\textbf{§5 登记新硬门}：\boxed{\textbf{Gate 4（bidirectional identification）}}：\text{"同一 absence of phase"}\ \textbf{不蕴含} \text{"两个 phase 对象已 canonical identification"};\ \text{此门与}\ \text{`V215`–`V217`／`V223`／`V242` Gate 2}\ \text{同族} ✓$$
+
+$$\textbf{判词（采纳唐先生）}：\boxed{\textbf{V251 ＝ CLOSED（本文内部 obstruction）}} ✓$$
