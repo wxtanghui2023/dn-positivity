@@ -974,6 +974,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§3 死禁令（写死）**：$$\boxed{\text{「发现一个新的}\ K\text{-theory／群论对象」}\neq\text{发现新的 obstruction mechanism}}$$ 必须先算**值域**与**局部化像**；「对象新」不构成理由。**§4 停止条件**：若自动掉进 $0$／$\mu_N$／$\mathrm{Br}[N]$ ⟹ **立即停止**，不得包装成「新机制」，须记入 §5 清单。**§5 不要重走清单（硬）**：prime$\leftrightarrow$prime canonical map｜product formula｜Hilbert 互反｜Steinberg／tame symbol｜$K_2$ 的 $N$-商｜$\hat{\mathbb Z}^\times$ torsion 当离散 obstruction —— 其 **canonical 版本已被实算排除**，重走须说明**为何不是同一分支**。**§6 残余**：非 tame 边界、非 $\mathrm{Br}[N]$ 的离散不变量 ⟹ 本轮未见实例 ⟹ **UNINSTANTIATED**，不给方向、不投入、不杀。**§7 勘误随行**：不得沿用 `V196` §4 的「$\hat{\mathbb Z}^\times$ 挠 $=\bigoplus_p\mu_{p-1}$ 且离散」；正确 $(\hat{\mathbb Z}^\times)[N]=\prod_p\mu_{\gcd(N,p-1)}$（积非直和），$(\hat{\mathbb Z}^\times)[2]=\mu_2^\infty$ 不可数非离散。**§8 下一站**：$$\boxed{\text{本门}\to\textbf{A1／A3}}$$ ⚠️ **不回** Mechanism II 变体；不再从 Steinberg／$K_2$／局部符号横向挖。
 
+### F.5bh ⭐⭐⭐⭐⭐ **V199：A1／A3 主线（唯一主线）—— 中间正性机制的钉死 ＋ 正性锥三来源分类 ＋ 门的逻辑后果**（`V199` ✓ 2026-09-15 13:39）
+
+**委托（唐先生）**：**「现在回 A1/A3，而且只回这一条主线」**；任务钉死为 $$\boxed{\text{寻找一个严格位于二者之间、可由算术侧独立验证的中间正性／耗散性机制}}$$ 核心审计对象 $$\text{prime-side}\longrightarrow\boxed{?}\longrightarrow\text{Li／Weil}\longrightarrow\mathrm{RH}$$ **「其中真正缺的是中间那个 ?，而不是再证明 RH ⟺ Li ⟺ Weil」**；**硬门（三条件）**：prime-side $\Longrightarrow P\Longrightarrow$ RH；$P\not\Rightarrow Q\succeq0$（仅靠定义等价包装）；$P$ **可在不假设 RH 下被证明** —— 否则立即归入旧等价类；**重检 A1／A3 区别**（A1：从 Li 系数本身找新结构性约束；A3：从 prime-side／explicit-formula 侧找**非显式公式重编码**的 Li 正性产生机制）；**第一问**：$$\boxed{\text{为什么一个本身不含零点位置的信息系统，会强制产生一个全局正性锥？}}$$
+
+**§1 分层表（含实际内容）**：显式公式 ＝ $N(T)=\frac{T}{2\pi}\log\frac{T}{2\pi}-\frac{T}{2\pi}+S(T)$（主项无条件；RH $\iff S(T)=O(\log T/\log\log T)$）｜Weil ＝ $Q(f)=W(f\star f^*)=\sum_\rho|\hat f(\gamma_\rho)|^2$（零侧）／素数项＋archimedean（算术侧）｜Li ＝ $\lambda_n=\sum_\rho[1-(1-\frac1\rho)^n]=\frac{1}{(n-1)!}\frac{d^n}{ds^n}[s^{n-1}\log\xi(s)]|_{s=1}$｜RH ＝ $\beta=\frac12$。四层**在同一等价类内** ⟹ **不再证等价**。
+
+**⭐ §2 关键观察（第一个核心）**：由 $(1-\frac1\rho)^n=\sum_j\binom nj(-1)^j\rho^{-j}$，$\lambda_n$ 是**幂和** $\{\sum_\rho\rho^{-j}\}_{j\le n}$ 的**有限组合**，而幂和由 $\xi'/\xi$ 的 Hadamard 展开在 $s=0$ 的 Taylor 系数给出 ⟹ 可由**显式公式的素数侧＋archimedean 侧**确定 ⟹ $$\boxed{\text{素数侧}\to\lambda_n\ \text{这条复合映射已经是显式的}}$$ ⟹ 中间那个 $?$ **不能是"信息通道"**，只能是**产生正性的结构**；⚠️ 这**排除**一整类候选（任何"再找一条素数→零点信息通道"的提案必然落入已有显式路径）。
+
+**⭐⭐ §3 正性锥的三个来源（第二个核心）**：(a) **代数型＝平方和／二次型**：$Q(f)=\sum_\rho|\hat f(\gamma_\rho)|^2$；全 $\gamma_\rho$ 实时为平方和（自动非负）；离轴对给出两点取值和 $2\mathrm{Re}\,\hat f$，**不是平方和** ⟹ 破坏平方结构 ⟹ **SOS 型锥恰恰就是 RH 的断言** ⟹ 作为独立来源**等价于 RH**。(b) **分析型＝实根性／全正性（Newton–Turán 锥）**：实根 ＋ 正系数 ⟹ Newton 不等式；全正／Pólya 频率 $\iff$ 表示测度支撑半直线（Schoenberg）⟹ 即 `V190`／`V191` 通道，**强度等于 RH**（`V191` 已证不可能由严格更弱命题推出）。(c) **动力学型＝耗散性／熵产生**：双曲膨胀 ＋ 归一化 ⟹ 唯一不变态 ＋ 谱隙 ⟹ 符号确定的锥（RPF 型）；⚠️ 前提**需要指数级轨道增长**，而 char-0 素数增长是**多项式** ⟹ 该机制**不直接适用**（与层诊断一致）。
+
+**§4 硬门逐条检验**：| 来源 | prime-side $\Rightarrow P$？ | $P\Rightarrow$ RH 且非包装？ | $P$ 可无条件证明？ |｜(a) SOS | 是 | **否（定义即 RH）** | 否｜｜(b) 实根性／PF | 是 | **否（强度＝RH）** | 否｜｜(c) 耗散／熵 | **否（需指数膨胀）** | 是（若能建立） | 否｜ ⟹ **三来源无一过门**，且**失败点各不相同**：(a) 失败于"非包装"；(b) 失败于"可无条件证明"；(c) 失败于"prime-side $\Rightarrow P$"。⚠️ 这是**按门对锥源做分类裁决**，**不是**再证等价。
+
+**⭐ §5 门的逻辑后果（第三个核心）**：设 $P$ 过门 ⟹ prime-side（无条件已知事实）$\Longrightarrow P\Longrightarrow$ RH ⟹ **RH 可由无条件已知事实推出**；而**已知无条件事实（PNT／AP 中的 PNT／零自由区／二阶输入）不足以推出 RH** ⟹ $$\boxed{\text{过门的 }P\ \textbf{必然}\text{引入一个}\textbf{新的无条件输入}}$$ ⭐ 可执行判据：**若某提案不产生新的无条件输入，则它不可能过门**，无论包装多精巧；等价陈述：**过门 $\iff$ 存在新无条件输入** ⟹ 本主线的真任务 ＝ **寻找（或制造）该输入**。
+
+**§6 第一问的回答**：**它不"强制"——除非锥来自 §3 三类之一**：(a) 若来自代数（平方和）则"不含零点位置"是**假象**（平方和的项本身含零点位置）；(b) 若来自分析（实根性／全正）则**它就是 RH 的等价形式**，"不含零点位置"只是**表述层面**；(c) 若来自动力学（耗散）则必须**外部**给出膨胀／双曲结构，而这在 char 0 中**缺失** ⟹ **所谓"零位置无关却强制锥"在任何已知机制下都不成立**。
+
+**§7 残余与 V200 预登记**：唯一未被 §3 覆盖的锥源形状 ＝ **组合／单调型**（非代数、非分析、非动力学；候选形态：正关联／FKG 型、单调耦合、格上单调性、关联不等式）；⚠️ 按 §5，若欲过门**必须产生新的无条件输入**，否则立即判死。**V200 唯一动作**：审计组合／单调型锥源 —— 是否存在对 $(\Lambda(n),\log p,p^k)$ 的**单调关联结构**，其正性**不是** SOS／实根性／耗散的重新表述，且能产生新的无条件输入？若否 ⟹ **四类锥源全封、本主线收口**；若是 ⟹ 这是第一个合法 $P$。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
