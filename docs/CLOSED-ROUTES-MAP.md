@@ -850,6 +850,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **下一步（V192 预登记，三选）**：① **核**（低成本、必要）：核 MDPI 与 GORZ 原文，确认 $n\ge C_0^\infty d^4$ 的无条件性、finite strip 的等价性、interlacing-lift vacuity，并解 $d=2$ 红旗 —— 三条若成立 ⟹ 通道 S 的"路线价值"也被压低（**所有已知机制在该区域同时失效**）⟹ 可**封**；② 若①确认 ⟹ **封**，并把"**$d$ vs $n$ 轴**"登记为**已探明的第六类缺口形态**（与 $T$ 轴缺口并列）；③ 转回主线 **A1／A3（Weil／Li 正性）**。
 
+### F.5ba ⭐⭐⭐⭐⭐ **Hedenmalm 审计 ＋ 纵坐标退化封印（谱实现族一次性封）＋ F4（Representation-Change Criterion）上线**（`V192` ✓ 2026-09-15 13:10）
+
+**委托（唐先生）**：第三轮搜索（以"**独立信息载体**"为第一筛选条件）；提出 **F4 ＝ Representation-Change Criterion（六条）**；给出硬问题：**Hedenmalm 的 $\mathbf E=\prod_p\mathbf E^{\langle p\rangle}$ ＋ 补偿质量，能否在不假设 RH 下构造出同时依赖 $(\beta,\gamma)$ 的算术二元对象？若最终仍"只能看到 $\gamma$"，则干净封死。**
+
+**⭐ ① 关键翻译（标准事实，本档核心）**：$\Xi(t):=\xi(\frac12+it)$，**RH $\iff$ $\Xi$ 全实根**（经典，即 `V190` 的 LP 表述）。设 $\Xi$ 零点 $t_0=x+iy$：$\xi(\frac12+i(x+iy))=\xi((\frac12-y)+ix)=0$ ⟹ $$\boxed{\Xi\ \text{的非实零点}\iff\xi\ \text{的离轴零点}\ (\beta=\tfrac12-y,\ \gamma=x)}$$ $\Xi$ 对实 $t$ 取实值 ⟹ 非实零点成共轭对 $x\pm iy$；⚠️ 一次**离轴对** $\{\rho,1-\bar\rho\}$ 给出 $\xi$ 的**两个**零点 $\beta=\frac12\mp y$，且 $$\boxed{\textbf{两者共享同一纵坐标}\ \gamma=x}$$ ⟹ 在"**纵坐标多重集**" $\{\gamma_\rho\}$ 语言里，**离轴对 ＝ 一个二重（退化）点，在线零点 ＝ 单点** ⟹ $$\boxed{\text{RH}\iff\text{纵坐标谱无"非本质退化"}}$$
+
+**⭐ ② 硬问题的答案 ＝ 是的，只能看到 $\gamma$，且原因是结构性的**：Hedenmalm 把 $\Xi$ 的**实根**实现为边值问题特征值（$LDu+\alpha Lu=0$），而 $\Xi(x)=\int_0^\infty\Theta_{00}(it^2)t^{ix}\frac{dt}t$ 只涉及 $\Xi$ 本身 ⟹ 按 ①，"$\Xi$ 的**实**根"**只**对应 $\beta=\frac12$ 的零点；离轴对落在 $\Xi$ 的**非实**零点上 ⟹ **该构造取不到** ⟹ 它看到的是**只依赖 $\gamma$** 的对象，**结构上不可能**给出同时依赖 $(\beta,\gamma)$ 的算术二元对象 —— **与是否假设 RH 无关** ⟹ **这正是"干净封死"**（不是"还没做出来"，而是**对象类型不允许**）。
+
+**⭐ ③ 谱实现族的封印（更一般；本档最重要结构性结论）**：设某"谱实现" $T$ 是**实谱**（自伴／Hilbert–Pólya 型），$\operatorname{Spec}(T)=\{\gamma_\rho\}$；⚠️ $\gamma_\rho=\operatorname{Im}\rho$ **本就为实**，故"谱为实"**对 $\beta$ 零约束** ⟹ **单纯构造自伴算子不触及 RH**；由 ①，$\beta$ 在该语言里**只能经"退化／重数"进入** ⟹ $$\boxed{\text{整个谱实现族的}\ \beta\text{-内容}\ =\ \textbf{退化计数}\ =\ \text{“简单零点／互异零点”问题}\ (N_0^s／N_d)}$$ ⭐ 而 $N_0^s／N_d$ **正是 `V184`／`V185` 审过的 Alpöge–Furman 2026 的主题**，其带宽一上限**已被证明**（0.6818287）⟹ $$\boxed{\text{谱实现族}\ \textbf{不是}\text{第四类};\ \text{它是同一堵墙的}\textbf{A 侧}}$$
+
+**④ compensation 结构的 F1 判定（⚠️ 待核原文）**：$\Theta_{00}(it^2)=t^{1/2}\mathbf E h_{00}(t)$，$\mathbf E=\prod_p\mathbf E^{\langle p\rangle}$，$\mathbf E^{\langle p\rangle}f(t)=\sum_{k\ge0}f(p^kt)$ ⟹ **素数分解的膨胀算子是真正算术来源**（本晚候选中罕见）✓✓；但 "$h_{00}$ 零积分 ⟹ $\mathbf E h_{00}$ 在 $t\ne0$ 为正却须产生补偿性负点质量" ＝ **显式公式的 archimedean 补偿在算子语言中的形式**（素数侧求和 ↔ archimedean 补偿）⟹ 按 F1（`V188` 饱和定理）**不提供新的独立信息** ⚠️✓（判定基于转述，**须核原文**）。
+
+**⑤ F4 采纳（六条）＋ 逐条打分**：$$\boxed{\mathcal R\ \text{须满足}：①\text{非线性}\ ②\text{非显式公式换坐标}\ ③\text{算术侧可独立构造}\ ④\text{对}\beta\text{敏感}\ ⑤\text{非}Q\succeq0\text{重编码}\ ⑥\text{定量 localization}}$$ 打分：**Hedenmalm** $\pm/\pm/\checkmark/\times/\pm/\checkmark$ ⟹ **死于④**（§②）｜**逆谱几何（Hayashi–Sakai）** $\checkmark/\checkmark/\times/\checkmark/\checkmark/\checkmark$ ⟹ **只缺③ arithmetic origin**｜sum rule／covariance（DEAD，`V188`）｜inertia（DEAD，`V186`）｜RG 收缩（DEAD）｜**RMT rigidity（Laguerre）＝统计型 ⟹ DEAD**（`V188`）｜self-adjoint／Hilbert–Pólya 类（**DEAD，§③ 封印**）。⭐ **四筛最终形态**：$$\text{F3 通道分类}\to\text{F1 两问（语义／强度）}\to\text{F2 涨落层级}\to\textbf{F4 表示变换}$$
+
+**下一步（V193 预登记，三选）**：① **核** Hedenmalm 原文四句话（$\Theta_{00}$／$\mathbf E$／零积分／负点质量），确认 §④ 的 F1 判定（若其补偿结构与显式公式**不完全同构**，该资产值得单独立档）② **逆谱几何的③问**："能否把 $\mathcal R$（逆谱变换）的**输入**从零点测度换成素数侧数据？"——若不能 ⟹ 与一切几何侧候选同命（缺同一座桥）；若能 ⟹ **本晚第一个真正的新入口** ③ **收束**：本晚已连关 S 线／N31／线性 Weyl 律／inertia／cancellation／null-relation／通道 S（`V191`）／**谱实现族（`V192`）** ⟹ 转回 **A1／A3**
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
