@@ -964,6 +964,16 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **⑦ 残余**：唯一未被覆盖 ＝ **非 tame 边界、非 $\mathrm{Br}[N]$ 的离散不变量**；本轮**未见实例** ⟹ 登记 **UNINSTANTIATED**，**不给方向、不投入、不杀**。
 
+### F.5bg 🚪 **V198：Mechanism II Closure Gate（V195–V197 收口入口；可执行重启判据）**（`V198` ✓ 2026-09-15 13:35）
+
+**委托（唐先生）**：**「先写 V195–V197 的收口入口，而且要把『为什么不值得重启』写成可执行判据，而不是历史总结。」** ＋ **「这条线完成的事情不是证明 Mechanism II 不可能，而是把它的 canonical arithmetic realization space 实际压缩掉了。未来如果再回来，必须从『非 tame、非 Brauer、真正离散的新 obstruction』起步。」** ＋ **顺序：本门 → A1／A3**；下一轮不再从 Steinberg／$K_2$／局部符号横向挖。
+
+**§1 已经计算掉的（结果导向，非叙事）**：| 分支 | 结果 |｜$p\leftrightarrow q$ canonical local map｜**不存在**（需额外选择 ⟹ 人为编码，`V196` §2.1）｜｜common additive object｜product formula $=0$（加法上闭链；$\log p$ $\mathbb Q$-线性无关，`V196` §3.1）｜｜multiplicative symbol｜$\mathrm{Br}[N]$／经典 torsion（`V196` §3.2）｜｜$a\leftrightarrow1-a$ ＋ tame boundary｜$0$（$\partial_v\{a,1-a\}=1\ \forall v$，`V197` §2）｜｜$K_2$ 的离散 $N$-商｜$\mathrm{Br}[N]$（Merkurjev–Suslin，`V197` §3）｜｜$\hat{\mathbb Z}^\times$ torsion｜**非离散**，不能充当离散 obstruction（`V197` §1）｜ ⟹ $$\boxed{\text{canonical arithmetic transition}\longrightarrow 0\ \text{or}\ \mathrm{Br}[N]/\text{classical torsion}}$$ ⚠️ 收口范围 ＝ **canonical 分支**，**不**声称机制 II 整类死亡。
+
+**§2 重启必要条件（六条；逐条可检验；任一不满足 ⟹ 立即停）**：$$\boxed{(1)\ \text{明确 arithmetic transition/cocycle}\ (2)\ \Omega\ \text{值域离散}\ (3)\ \Omega\not\equiv0\ (4)\ \Omega\notin\mathrm{Br}[N]/\text{已知 torsion}\ (5)\ \text{非 explicit-formula 重编码}\ (6)\ \text{可证 deformation 下}\ \Omega\ \textbf{locally constant}\ (\text{真 rigidity})}$$ 检验口径：(1) 能否写出 $T_{vw}$ **显式局部定义且无需额外选择**；(2) 能否证明 $\Omega$ 取值于离散 $D$ **且 $D$ 在该拓扑下确实离散**（`V197` §1 已给反面范例：挠 $\neq$ 离散）；(4) 能否排除 Merkurjev–Suslin 型识别；(6) 是否存在连续族使 $[T_\lambda]\in D$ 离散 ⟹ $\lambda\mapsto[T_\lambda]$ 局部常值。
+
+**§3 死禁令（写死）**：$$\boxed{\text{「发现一个新的}\ K\text{-theory／群论对象」}\neq\text{发现新的 obstruction mechanism}}$$ 必须先算**值域**与**局部化像**；「对象新」不构成理由。**§4 停止条件**：若自动掉进 $0$／$\mu_N$／$\mathrm{Br}[N]$ ⟹ **立即停止**，不得包装成「新机制」，须记入 §5 清单。**§5 不要重走清单（硬）**：prime$\leftrightarrow$prime canonical map｜product formula｜Hilbert 互反｜Steinberg／tame symbol｜$K_2$ 的 $N$-商｜$\hat{\mathbb Z}^\times$ torsion 当离散 obstruction —— 其 **canonical 版本已被实算排除**，重走须说明**为何不是同一分支**。**§6 残余**：非 tame 边界、非 $\mathrm{Br}[N]$ 的离散不变量 ⟹ 本轮未见实例 ⟹ **UNINSTANTIATED**，不给方向、不投入、不杀。**§7 勘误随行**：不得沿用 `V196` §4 的「$\hat{\mathbb Z}^\times$ 挠 $=\bigoplus_p\mu_{p-1}$ 且离散」；正确 $(\hat{\mathbb Z}^\times)[N]=\prod_p\mu_{\gcd(N,p-1)}$（积非直和），$(\hat{\mathbb Z}^\times)[2]=\mu_2^\infty$ 不可数非离散。**§8 下一站**：$$\boxed{\text{本门}\to\textbf{A1／A3}}$$ ⚠️ **不回** Mechanism II 变体；不再从 Steinberg／$K_2$／局部符号横向挖。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
