@@ -1569,6 +1569,28 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§10 存在性压力测试的回答**：由 §4，**"$\partial_\sigma D_X<0$"不构成约束**（平凡 $h(t)-\sigma$ 已满足）⟹ 该测试须**重述**为 $$\boxed{\text{任意独立算术}\ \Omega_X\supseteq Z(\xi)\ \text{是否必然落回}\ \text{零-free 证书类}？}$$ 本档不判；且由 §6 应**先攻不对称源，而非再枚举 $\Omega_X$** ✓
 
+### F.5cn ⭐⭐⭐⭐⭐ **V232：有限阶局部 log-jet 乘子不变量消退定理 ⟹ ⚠️V231-A 撤回（反例 $Q=m^{-s}$）＋ 命题 V232-A（定理级）＋ 不变性–零点移动分离**（`V232` ✓ 2026-09-15 17:05）
+
+**委托（唐先生）**：**"V231 必须再做一次硬勘误。而且这次不是措辞问题：§8 的 V231-A 按目前表述是假的。不过修正后反而能得到一个比 V231 更强、更干净的结果。"** **反例**：$$Q(s)=n^{-s}\ \text{（标准 Dirichlet 单项式）}:\ \log Q=-s\log n,\ (\log Q)''=0\Longrightarrow(\log FQ)''=(\log F)''$$ 而 $Q$ **非恒定** ⟹ $$\boxed{\text{"Dirichlet 下}\ (\log F)''\ \text{只对常数乘子不变"}\ \textbf{错误}}$$ **正确版本**：$$(\log Q)''=0\iff Q=Ce^{as}$$ 而 Dirichlet 中允许 $Q=Cn^{-s}$ ⟹ **至少存在非平凡不变群** $\{Ce^{as}\}$ ✓✓。**V232 应直接审计乘子作用的局部轨道**：$L_F=\log F$、$K_F=L_F''$、$K_{FQ}=K_F+K_Q$；问 $K_Q(s_0)$ 能走遍多大集合。**最小乘子族** $Q_{a,m}=1-am^{-s}$（$w=\log m$）：$$\log(1-ae^{-ws})=-\sum_{r\ge1}\frac{a^r}{r}e^{-rws},\quad(\log Q_{a,m})''=-\sum_{r\ge1}a^rrw^2e^{-rws}$$ 一阶：$-aw^2e^{-ws_0}+O(a^2)$；**多 $m$ 满秩**：$$M_{kj}=(-1)^{k-1}w_j^ke^{-w_js_0},\quad\det M\propto\Big(\prod_jw_j\Big)\prod_{i<j}(w_j-w_i)\ne0\ (\textbf{Vandermonde})$$ ⟹ 可达集含 0 的开邻域。**V232-A**：$K$ 阶局部微分泛函 $\Phi$ 对含 $Q=\prod_{j\le K}(1-a_jm_j^{-s})$ 的族不变且可微 $\Rightarrow\boxed{\Phi=\text{常数}}$ ⟹ $$\boxed{\textbf{不存在非平凡的有限阶局部 log-jet 乘子不变量}}$$ **E 型三区域**：$$\boxed{E=E_{\rm local}\sqcup E_{\rm nonlocal}\sqcup E_{\rm non\text{-}multiplier\text{-}invariant}}$$ **E1** 有限阶＋乘子不变 ⟹ **DEAD**（V232-A）；**E2** 有限阶＋不乘子不变 ⟹ **DEAD as universal certificate**（乘子改变曲率并把零点移到 $\Re s=\frac{\log|a|}{\log m}$）；**E3** 真正残余＝非局部／无限阶／非乘子商型。⚠️ **无限阶的坑**：$\{F^{(k)}\}$ 可恢复 germ ⟹ 若恢复零点集 ⟹ **R4**；真门槛＝$$\boxed{\text{无限阶但}\ \textbf{不恢复零点}\ \text{且仍产生}\ \Re\rho\le\frac12}$$ ⚠️ **V231-B 降级**：$\xi(s)=e^{A+Bs}\prod_\rho(1-\frac{s}{\rho})e^{s/\rho}$ ⟹ 零点集决定 Hadamard 乘积，**仍有指数因子**；且 $\zeta\ne$ 零点集 ⟹ 正确说法只能是"给定 Hadamard 数据后 ξ 可由零点乘积加指数因子描述"，**不得**把"函数"与"零点集"**偷换成同一对象**。**改判**：有限阶＋局部＋乘子不变 ⟹ **DEAD**；有限阶＋局部＋不乘子不变 ⟹ **DEAD**；真正残余＝**非局部或无限阶结构** ＋ 三硬条件。
+
+**§1 V231-A 撤回 ＋ 正确版本**：不变群 $=\{Ce^{as}\}$（指数单项式，与 `V174` 同族）✓✓✓
+
+**§2–§3 局部轨道审计**：一阶展开；⚠️ **本档诚实标注**：**单个 $m$ 给 1 复维方向**（$w_2=-ww_1$）**不足以推出** $\partial_v\Phi=0$（唐先生 §1 结论在单 $m$ 下过快）；**多 $m$ 是关键一步** ⟹ Vandermonde ⟹ $\det M\ne0$ ⟹ 逆函数定理 ⟹ 可达集含 0 的开邻域 ✓✓✓
+
+**§4 ⭐⭐⭐⭐⭐ 命题 V232-A（定理级，本档核心）**：$$\boxed{\text{不存在非平凡的}\ \textbf{有限阶局部 log-jet 乘子不变量}}$$ **证明（三步）**：① $(\log(FQ))^{(k)}=(\log F)^{(k)}+(\log Q)^{(k)}$ ⟹ 不变 ⟺ $\Phi$ 对 jet 平移不变；② 由 §3 平移集含 0 开邻域 ⟹ $\Phi$ **局部常数**；③ 连通域上局部常数 ⟹ **常数** ⟹ $$\boxed{\text{整个"有限阶局部曲率＋乘子商"构造空间被杀}}$$ ⚠️ **比 V231-A 严格强**（杀全部有限阶，不只二阶）✓✓✓✓✓
+
+**§5 E 三区域**（E1／E2 DEAD；E3 残余）✓✓
+
+**§6 无限阶的坑**：$\{F^{(k)}\}_{k\ge0}$ 可恢复 $F$ 的 germ ⟹ 若恢复零点集 ⟹ **R4／零点编码**；真门槛＝**无限阶但不恢复零点** ✓✓✓
+
+**§7 V231-B 降级**：Hadamard 有 $e^{A+Bs}$；$\zeta\ne\{\rho\}$（还含 Euler 系数结构、极点、解析延拓）⟹ **不得把函数与零点集偷换成同一对象** ✓✓✓
+
+**§8 ⭐⭐⭐⭐⭐ 本档新结果：不变性群与零点移动的分离**：$$\{Ce^{as}\}\ \text{中}\ e^{as}\ \textbf{无零点}\Longrightarrow\textbf{不移动零点}\Longrightarrow\text{该不变性只过滤零自由因子}$$ ⟹ 商掉 $\{Ce^{as}\}$ ⟹ 函子**看得见零点** ⟹ 要求 $\mathcal K_X(\rho)\ge0$ ＝关于零点的陈述 ⟹ $\boxed{\textbf{R4}}$；而含非平凡乘子 ⟹ V232-A 杀（有限阶）⟹ $$\boxed{\text{（有限阶下）}\ \textbf{无中间}}$$ ⚠️ **无限阶半未证**（须 germ 层拓扑判断）✓✓✓✓✓
+
+**§9 判词 ＋ 状态表（七行）**：V231-A **撤回**｜正确不变群 $\{Ce^{as}\}$｜V231-B **降级**｜**命题 V232-A 定理级**｜E1 **DEAD**｜E2 **DEAD**｜E3 $\boxed{\textbf{OPEN}}$（含"无限阶但恢复零点" ⟹ R4）⟹ $$\boxed{\textbf{V232：V231-A 撤回并改写为 V232-A；V231-B 降级；残余压成"必须逃出有限阶局部微分几何"}}$$ ⚠️ 不判 D3 ALIVE、不判 D3 死 ✓✓
+
+**§10 残余精确形式**：$$\text{残余}\ =\ \text{canonical 泛函于}\ \mathcal U_{s_0}\big/\mathcal M\text{-像}$$ 两极端：$\mathcal M=\{Ce^{as}\}$ ⟹ 商＝"本质单位群" ⟹ 不变量＝零点集 ⟹ **R4**；$\mathcal M\supseteq\{1-am^{-s}\}$ ⟹ 有限阶无（V232-A）、无限阶**未证** ⟹ **下一步（唐先生指定）**：$$\boxed{\text{无限阶／非局部的乘子不变量，是否也因 Dirichlet 乘子群的作用而退化？}}$$ 若能封 ⟹ **整个 D3 路线真正死亡**；若封不掉 ⟹ 剩一条明确、此前未被 `V185`–`V231` 覆盖的窄通道 ✓✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

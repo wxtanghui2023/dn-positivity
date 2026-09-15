@@ -171,3 +171,5 @@ V227	audit	V227-ARS-root-spectrum-audit-realpart-not-modulus-invariant	2026-09-1
 V228	audit	V228-root-edge-barrier-audit-analytic-barrier-impossible	2026-09-15T16:42:42+08:00
 V229	audit	V229-zero-sensitive-mechanism-completeness-and-C4-collapse-audit	2026-09-15T16:46:58+08:00
 V230	audit	V230-C4-relation-to-region-sandwich-and-asymmetry-source	2026-09-15T16:51:07+08:00
+V231	audit	V231-asymmetry-source-scale-audit-quotient-curvature-vanishing	2026-09-15T16:55:32+08:00
+V232	audit	V232-finite-order-local-logjet-invariant-vanishing	2026-09-15T17:06:01+08:00
