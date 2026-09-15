@@ -84,6 +84,10 @@ $$\qquad \text{唐先生八条禁用}\ \textbf{逐条落档}：(1)\text{取绝�
 
 ## §5 **为什么**（结构性论证，非定理）—— 三条 canonical 造二次型的路都封
 
+> ⚠️ **§5 表述勘误（唐先生 2026-09-15 20:36；由本档 §8 执行）**
+> $$\textbf{不得再写成}：\text{"我们还缺一个 phase}\to\text{sign 的操作"} ⟹ \textbf{正确形式}＝\textbf{分类问题}（\text{见 §8.3}）✓✓$$
+> $$\text{且}\ \S5\ \text{本节的地位}：\text{它}\ \textbf{不是} \text{"不可能定理"};\ \text{它只说明}\ \textbf{canonical 造二次型的三条已知路各自落点} ✓$$
+
 $$\text{要同时满足}\ \text{(i) canonical、(ii) 给出}\ \textbf{定号}\text{、(iii) 定号}\ \textbf{编码实部}\ \Longrightarrow \text{必须在}\ \textbf{无限维算术空间} \text{上产生}\ \textbf{二次型} ✓$$
 $$\qquad \text{而 canonical 地造二次型只有三条路：}\ \text{① 核的正性}\to\textbf{`V199`(a)／`V185`};\quad \text{② 实根性／变差缩减}\to\textbf{`V190`／`V216`§6（同义反复）};\quad \text{③ 酉性／自伴}\to\textbf{`V242`}（\text{缺 polarization}）✓✓✓$$
 $$\qquad ⟹ \textbf{与 `V242-D` 完全一致}：\text{“证明 }C(v,v)=0\ \text{必然要用 (iii)，而 (iii) 在算术中就是 Weil 正性”} ✓✓$$
@@ -148,3 +152,57 @@ $$\qquad \text{且两角}\ \textbf{相互独立}：\text{即使绕开 Brauer（�
 $$\boxed{\text{这两个价值的意义}＝\text{把"我们需要一个把相位变成符号的操作"由}\ \textbf{听起来像新机制} \text{翻译成}\ \textbf{两种已知且各自封闭的数学类型}} ✓✓✓$$
 $$\qquad ⟹ \text{残差}\ \textbf{不再是"找一个操作"}，\text{而是"找}\ \textbf{第三种类型}\ \text{的 phase}\to\text{sign 操作"}\ \text{—— 而已知}\ \textbf{没有第三种} ✓$$
 $$\qquad ⚠️\ \textbf{边界}：\text{仍是}\ \textbf{枚举},\ \textbf{不是定理};\ \text{"没有第三类"的证明}＝\text{canonical phase}\to\text{sign 的}\ \textbf{完备分类}（＝\S5\ \text{的 canonical 二次型完备分类}）✓$$
+
+---
+
+## §8 ⭐⭐⭐⭐ **唐先生精确化（2026-09-15 20:36）** —— 两角对照表 ＋ §5 改写为分类问题 ＋ 严格弱前提门 ＋ 诚实边界
+
+### §8.1 **两个角的精确对照表（唐先生原表，逐字采纳）**
+
+}$$\boxed{
+\begin{array}{c|c|c}
+&\textbf{Hasse–Minkowski}&\textbf{HB／Krein}\\
+\hline
+\text{接口}&\text{phase}\to\text{definite}&\text{phase}\to\text{location}\\
+\text{为什么成立}&\text{torsion obstruction}&\text{零点条件本身}\\
+\text{失败原因}&\text{离散，不能承载 }\beta&\text{前提已等价于结论}\\
+\text{类型}&\text{代数性}&\text{逻辑恒等性}
+\end{array}} ✓✓✓$$
+
+$$\textbf{两角（彼此独立）}：\ \boxed{\text{torsion horn：没有连续 }\beta}\qquad \boxed{\text{identity horn：没有独立假设}} ✓✓✓$$
+$$\qquad \Longrightarrow \text{即使绕开 Brauer／torsion},\ \text{仍必须面对第二道门：}\ \boxed{H_{\rm new}\ \text{必须严格弱于 RH，且}\ H_{\rm new}\Rightarrow RH} ✓✓$$
+
+### §8.2 **严格弱前提门（新登记；与 `V201` 闸门衔接）**
+
+$$\boxed{H_{\rm new}\Longrightarrow RH,\qquad RH\not\Longrightarrow H_{\rm new}}\quad（\textbf{严格弱}）✓✓✓$$
+$$\qquad \text{否则若}\ H_{\rm new}\iff RH,\ \text{则}\ \textbf{根本没有提供桥} \text{（＝HB／Krein 式重新编码）} ✓✓$$
+$$\qquad ⟹ \text{与}\ \textbf{`V201`} \text{闸门一致}：\text{真正严格弱的假设若能推出 RH},\ \text{才可能成为新内容};\ \text{若假设本身已是 RH 强度},\ \text{只是等价重述} ✓✓$$
+
+### §8.3 ⭐⭐⭐⭐ **§5 的意义改写（唐先生核心指示）**
+
+$$\textbf{不得再写成}：\text{"我们还缺一个 phase}\to\text{sign 的操作"} ✗$$
+$$\textbf{正确形式}：\boxed{\text{我们需要一种此前未出现的}\ \textbf{第三型机制}} ✓✓✓$$
+$$\qquad \text{它必须}\ \textbf{同时} \text{满足六条}：$$
+}$$\boxed{
+\begin{aligned}
+&\textbf{(1) 连续} &&(\text{能携带}\ \Re\rho),\\
+&\textbf{(2) 定号／定性} &&(\text{能产生严格不等式}),\\
+&\textbf{(3) 非等价重述} &&(H\not\iff RH),\\
+&\textbf{(4) 非 Weil 循环},\\
+&\textbf{(5) 非 torsion},\\
+&\textbf{(6) 不以零点作为输入}.
+\end{aligned}} ✓✓✓$$
+$$\Longrightarrow \text{价值}：\text{把}\ \boxed{\text{"寻找 phase}\to\text{sign"}}\ \text{提升为一个明确的}\ \textbf{分类问题}：\ \boxed{\text{寻找第三种既连续、又定号、又独立于零点结论的全局机制}} ✓✓✓$$
+
+### §8.4 ⚠️ **诚实边界（唐先生强调，逐字采纳）**
+
+$$\textbf{"只有这两类、没有第三类"}\ \textbf{目前还不是定理} \text{—— 我方可拥有的只是}\ \textbf{两个方向上的强原型}：$$
+$$\qquad \text{algebraic obstruction}\to\text{torsion};\qquad \text{analytic zero-location criterion}\to\text{RH-equivalence} ✓$$
+$$\qquad \text{要升级为}\ \boxed{\text{不存在第三类}}\ \text{必须完成一个}\ \textbf{真正的分类定理}：\text{至少须}\ \textbf{精确定义} \text{"canonical phase}\to\text{sign mechanism"}\ \text{的类别},\ \text{并证明所有 canonical quadratic／positivity 机制都落入这两类或 Weil／Bochner 型} ✓$$
+$$\qquad ⚠️\ \textbf{这一步目前没有完成} ⟹ \textbf{本档不得写成"不可能定理"} ✓✓✓$$
+$$\qquad \textbf{但确实比此前的"缺 polarization"强了一层}：\boxed{\text{现在知道缺口的两端}\ \textbf{各自为什么会失败},\ \text{而不是只知道它们失败}} ✓✓✓$$
+
+### §8.5 **附：另一种读法的澄清（唐先生）**
+
+$$\text{若"两个"指}\ \textbf{2602.20211／Morishita}：\ \text{其价值}\ \textbf{不同于} \text{上述两角二分} —— \text{主要是}\ \textbf{独立验证} \text{Euler／formal 侧与 topological／DW 侧都}\ \textbf{无法提供这个第三型机制} ✓$$
+$$\qquad ⟹ \text{四种外部／结构来源的落点}：\text{Connes／scaling site}\to\text{需 polarization};\ \text{DW}\to\text{只给 }\mu_N\ \text{相位};\ \text{formal group}\to\text{经典重组};\ \text{且 HM／HB 两角给出}\ \textbf{接口本身的二分} ✓$$

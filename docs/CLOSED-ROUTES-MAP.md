@@ -1850,6 +1850,8 @@ $$\Longrightarrow \boxed{\text{canonical }U(1)\text{-phase}\to\text{sign 的已�
 
 **残差（UNINSTANTIATED）**：canonical phase→sign，障碍**非** Brauer 型、输出**定号形式**（非离散 ±1）且编码实部；本档未见实例。**边界**：§3 为 **[结构性] 枚举，不是不可能性定理**；§4 的"枚举完备"**未证**；§1① 待核 ⚠️
 
+$$\textbf{§8 唐先生精确化（20:36）}：\text{两角对照表（接口／为什么成立／失败原因／类型）} ⟹ \textbf{torsion horn：没有连续 }\beta；\textbf{identity horn：没有独立假设};\ \textbf{严格弱前提门} $$H_{\rm new}\Longrightarrow RH,\ RH\not\Longrightarrow H_{\rm new}$$;\ ⭐\ \textbf{§5 改写}：\text{不是"还缺一个操作"，而是}\boxed{\text{寻找第三种既连续、又定号、又独立于零点结论的全局机制}}（\text{六条：连续／定号／非等价重述／非 Weil 循环／非 torsion／不以零点为输入}）;\ ⚠️\ \textbf{边界}：\text{"没有第三类"}\ \textbf{不是定理}，\text{升级须完成 canonical phase}\to\text{sign 的}\ \textbf{完备分类};\ \text{但已强于"缺 polarization"：}\textbf{知道两端各自为什么会失败} ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
