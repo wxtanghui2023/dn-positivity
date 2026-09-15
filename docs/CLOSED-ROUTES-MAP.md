@@ -317,6 +317,18 @@ $$\qquad\Longrightarrow\ \boxed{\textbf{C6}\ =\ \text{char-0 intrinsic arithmeti
 $$\qquad\textbf{下一步 ✓（唐先生已定）}：\text{转 }\textbf{① C6.6} —— \text{即便找到这样的载体，}\textbf{仍没解释为何其谱就是 }\zeta\ \text{的零谱}，\textbf{这才是目前真正不可替代的第二个箭头} ✓✓$$
 $$\qquad\textbf{诚实边界 ⚠️}：\text{本档 §6 C6 收缩为 [结构性]；}R1_{wt}／R1_{ph}\ \text{为}\textbf{待证表示定理} ✗$$
 
+### F.5s ⭐⭐⭐⭐⭐ **C6.6 内生零谱对应审计**（`V157` ✓ 2026-09-15 10:36）—— **三分（A DEAD／B ⊂ C／C 真问题）｜C6 实为两箭头｜十条身份机制穷举 ⟹ 唯剩空槽**
+
+$$\text{C6.5 给出 }M,\ \Lambda_M=\{\lambda_j\},\ \lambda_j=\sqrt{N_j}e^{i\theta_j};\ \text{C6.6 要求}\ \boxed{\Lambda_M\longleftrightarrow Z_\zeta}\ \text{（非"看起来相似"}）$$
+$$\textbf{对应严格三分}：\text{A 定义型}\（Z_M:=Z_\zeta）\Longrightarrow \boxed{\text{DEAD}}\ ✗\（\text{循环}）;\ \text{B 公式型}\（F(\lambda){=}0\iff\zeta(\rho){=}0;\ \text{显式公式／Mellin／Hadamard／L-函数 FE}\）\Longrightarrow \boxed{\subset C}\ ✗\ \text{（C6 明确排除 B）};\ \text{C 结构型}＝\text{真问题（}M\ \text{自产}\lambda_j\ \text{＋ 独立算术结构定理证}\ \lambda_j\leftrightarrow\rho_j-\tfrac12\text{）}$$
+$$\qquad\textbf{关键}：\boxed{\text{为什么是 }\zeta\text{，而不是另一个谱？}};\ \text{纯谱结构}\not\Rightarrow\zeta\ \text{零谱}（\text{CM/Hecke}\ \alpha_p=\sqrt p e^{i\theta_p}\ \text{及大量几何／表示论对象皆有纯权重谱}）;\ \text{统计／计数（}N_M(T)\sim N_\zeta(T)\text{／间距／矩／对称性）}\textbf{不足} ✗（\text{不同谱可共享 Weyl 主项}）$$
+$$\qquad\text{最强非循环要求}：\text{需独立谱识别不变量}\ I_M(\lambda)=0\iff I_\zeta(\lambda)=0;\ \text{但若 }I_\zeta\ \text{由}\ \zeta(1/2+i\lambda)\ \text{定义} ⟹ \textbf{偷回零点} ⟹ \text{合法形式}\ \boxed{I_M(\lambda)=I_A(\lambda)}\（I_A\ \text{独立算术定义}\）\ \text{再证}\ I_A(\lambda)=0\iff\zeta(1/2+i\lambda)=0\ \text{—— 后者}\textbf{本身就是新的 ζ 身份定理}$$
+$$\textbf{⭐ C6.6 拆成两箭头}：\boxed{M\xrightarrow{P}\Lambda_M}\ \text{（＝C6.5）};\ \boxed{\Lambda_M\xrightarrow{Q}Z_\zeta}\ \text{（Q 才是真难点）};\ \text{Q 七路线判决}：\text{经 }\zeta/\text{显式公式}⟹\textbf{循环／C};\ \text{经 L-function}⟹\textbf{C};\ \text{经 character/Hecke/Artin}⟹\textbf{C};\ \text{经已知 trace formula}⟹\textbf{C};\ \text{经统计／计数}⟹\textbf{不足以逐点};\ \text{经人为选择}⟹\textbf{selection};\ \text{经全新算术定理}⟹\textbf{真正的 C6 新内容} ⟹ \boxed{\textbf{第二箭头不能由第一箭头推出}}\ \text{（即便突破 }V144,\ \textbf{仍撞身份墙}）$$
+$$\textbf{⭐ 非循环谱身份机制穷举（十条，本档新增）}：\text{①定义型}\to A\ \text{DEAD};\ \text{②公式型}\to\subset C;\ \text{③算子酉等价}\to \text{需不用零点定义的第二算子}⟹\text{循环或 C（HP）};\ \text{④迹公式相等}\to \text{就是显式公式}⟹C;\ \text{⑤矩／迹确定性}\to M\ \text{侧 β-free 可行，但 }\zeta\ \text{侧矩＝显式公式素数侧＋archimedean}⟹\textbf{此路线 ≡ 既有主线（Weil／Li 正性）}，已有 }T^2\ \text{律／预算交叉墙};\ \text{⑥FE＋增长刚性}\to ⭐\textbf{反例存在}：D1\ \text{逐字"Epstein }\zeta\ \text{有 FE 却有离轴零点（Potter–Titchmarsh）"}⟹ \text{FE 给临界线不给零点位置};\ \text{⑦统计／计数}\to \text{非逐点};\ \text{⑧L-函数分类定理（Selberg 类：degree 1}⟹\text{Dirichlet L；conductor 1}⟹ζ）\to ⭐\textbf{唯一"由公理识别身份"机制}，但分类证明用解析工具⟹C;\ \text{⑨Hadamard 分解比对}\to \text{公式型}⟹C;\ \text{⑩Lefschetz／正则化 det（Deninger）}\to V145\ \text{逐字：有 canonical 生成元但缺 canonical polarization；det 定义本身把 ζ 放入}⟹\text{定义型／C}$$
+$$\qquad\Longrightarrow\ \boxed{\text{十条全落 A／C／不足／＝既有主线};\ \text{唯剩一个}\textbf{空槽}}\ ⟹ \text{C6.6 压成}\ \boxed{\textbf{非循环的谱身份定理是否可能存在？}} ✓✓$$
+$$\qquad ⚠️\ \text{边界：本表为 [结构性] 已知机制分类，}\textbf{非}"不存在"之定理（与 }V144\ \text{"未找到"≠"不存在"同型）}$$
+$$\qquad\textbf{下一步三选}：①\ \text{形式化空槽（给"谱身份定理"下定义：β-free 输入＋输出逐点相等＋不含零数据，看是否自相矛盾）};\ ②\ \text{审 #8（Selberg 类分类能否去解析化）};\ ③\ \text{审 #5 与既有主线的完全等价性（若 ≡ Weil 正性，则 C6.6 与 A1/A3 同墙）} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
