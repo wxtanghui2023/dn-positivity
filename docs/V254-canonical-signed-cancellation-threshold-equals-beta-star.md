@@ -26,7 +26,8 @@ $$\qquad \qquad \text{它不是技术细节，}\textbf{它就是全部信息所�
 
 $$\textbf{收敛横坐标（经典）}：\sum_n\mu(n)n^{-s}=1/\zeta(s)\ \text{的奇点}\ \textbf{恰为}\ \zeta\ \text{的零点}（\text{注意}\ s=1\ \text{处}\ \zeta\ \text{有极点}\Rightarrow1/\zeta\ \text{正则}）✓$$
 $$\qquad \Longrightarrow\ \text{该级数的收敛横坐标}\sigma_0=\sup\{\Re\rho:\zeta(\rho)=0\}=:\boxed{\beta_*} ✓✓✓$$
-$$\qquad \Longrightarrow\ \textbf{交换合法}\iff c\ge\beta_* \qquad\Longrightarrow\qquad \boxed{\textbf{带符号抵消的阈值}\ \textbf{恰为}\ \beta_*} ✓✓✓✓$$
+$$\qquad \Longrightarrow\ \textbf{交换合法}\iff c\ge\beta_* \qquad\Longrightarrow\qquad \boxed{\textbf{带符号抵消的阈值}\ \textbf{至少为}\ \beta_*} ✓✓✓✓$$
+$$\qquad ⚠️\ \textbf{【已收紧·见 §10 T1】}\ \text{奇点只给}\ \textbf{下界}\ \sigma_c\ge\beta_*;\ \text{反向不等式}\ \sigma_c=\beta_*\ \textbf{需独立证明};\ \text{把"解析延拓"当成"级数收敛"是错的} ✓✓✓$$
 $$\qquad \qquad \text{更直白：}\textbf{带符号权的"优势"就是"可以把积分下限下推到收敛横坐标"};\ \text{而该横坐标}\ \textbf{就是}\ \beta_* ✓✓$$
 
 ## §4 ⭐⭐⭐⭐ 阈值判定：无条件阈值 ＝ 1；"＝1/2" ⟺ RH
@@ -41,14 +42,14 @@ $$\textbf{判词}：\textbf{逃逸 B（用}\ \mu\ \text{做抵消）在最强意
 
 ## §5 同族（同一结论，逐个核对）
 
-| 带符号源 | Dirichlet 级数 | 收敛横坐标（奇点） | 无条件阈值 | 阈值 $=\tfrac12$ 等价于 |
+| 带符号源 | Dirichlet 级数 | 收敛横坐标**下界**（奇点实部） | 无条件阈值 | 阈值 $=\tfrac12$ 等价于 |
 |:--|:--|:--|:--|:--|
 | $\mu$ | $1/\zeta(s)$ | $\beta_*$ | $1$ | **RH** |
 | $\lambda$ | $\zeta(2s)/\zeta(s)$ | $\beta_*$（分子 $\zeta(2s)$ 零点在 $\Re s=\frac14,\ldots$ 不影响右端） | $1$ | **RH** |
 | $\chi$ | $1/L(s,\chi)$ | $L$ 的右端零点 | $1$ | **GRH** |
 | Hecke $a_n$ | $L(s,f)$（倒数族同理） | $L(s,f)$ 右端零点 | $1$ | 该 $L$ 的 RH 型假设 |
 
-$$\Longrightarrow \textbf{整族同构}：\text{典范带符号权的阈值}\ \textbf{恒等于其 L-函数的右端奇点};\ \text{"锁定}\ \tfrac12\text{"}\ \textbf{恒等于该 L-函数的 RH 型假设} ✓✓✓$$
+$$\Longrightarrow \textbf{整族同构（下界形式）}：\text{典范带符号权的阈值}\ \textbf{下界恒等于其 L-函数的右端奇点实部（}\sigma_c\ge\beta_*\text{）};\ \text{故"锁定}\ \tfrac12\text{"}\ \textbf{等价于该 L-函数的 RH 型假设} ✓✓✓$$
 
 ## §6 ⭐ 另一类带符号来源：**筛法权重**（本档新登记，标 [待查]）
 
@@ -123,3 +124,41 @@ $$\qquad \textbf{未用 RH 作推导};\ \text{未跑 Lean};\ \textbf{零数值} 
    ⑤ 把承重墙精确化为"缺一个收敛横坐标恰为 β_* 的非 L-函数商型算术 Dirichlet 级数"
    ⑥ 新登记 parity barrier（[待查]）
 ```
+
+---
+
+## §10 ⚠️ **必留的数学边界 ＋ 收紧后的正式版本**（唐先生 2026-09-15 22:23；逐字采纳）
+
+$$\textbf{T1（核心边界 —— 必留）}：\boxed{\text{"abscissa of convergence}=\beta_*"\ \textbf{不能} \text{直接由}\ 1/\zeta\ \text{的奇点推出}} ✓✓✓$$
+$$\qquad \text{奇点给出的只是}\ \textbf{下界}\ \boxed{\sigma_c\ge\beta_*};\qquad \textbf{反向不等式}\ \sigma_c=\beta_*\ \textbf{需要额外证明} ⚠️$$
+$$\qquad \qquad \text{否则会把}\ \textbf{"解析延拓"误当成"Dirichlet 级数收敛"} ✓✓✓$$
+$$\qquad \text{本档 }\S3\ \text{与}\ \S5\ \text{的过强表述}\ \textbf{已就地收紧} \text{（"恰为"}\to\text{"至少为"};\ \text{"恒等于"}\to\text{"下界恒等于"}）✓$$
+
+$$\textbf{T2（正确的经典等价性）}：\qquad \text{RH}\iff M(x)=O(x^{1/2+\varepsilon})\iff \sum_n\mu(n)n^{-s}\ \textbf{在}\ \Re s>\tfrac12\ \textbf{收敛} ✓✓✓$$
+$$\qquad \Longrightarrow \boxed{\text{把}\ \mu\ \text{型 signed cancellation 的}\textbf{有效阈值推进到}\ \tfrac12\ \text{本身已}\textbf{达到 RH 等价强度}} ✓✓✓$$
+
+$$\textbf{T3（B 门}\textbf{没有} \text{产生新的独立来源）}：\qquad \mu\to\zeta;\qquad \chi\to\text{对应 Dirichlet }L;\qquad \text{Hecke 权}\to\text{对应 Hecke }L ✓$$
+$$\qquad \Longrightarrow \text{若阈值来自}\ \textbf{对应 L-函数的零点边界}，\ \text{它}\ \textbf{不是独立的 arithmetic source}，\ \text{而是在}\ \textbf{重新承载同一个 spectral obstruction} ✓✓✓$$
+
+$$\textbf{T4（sieve weights 的位置 —— 只能作类比）}：\text{Selberg／Rosser–Iwaniec 确实提供}\ \textbf{可证的} \text{ signed weights},\ \text{并存在著名的}\ \textbf{parity barrier} ✓$$
+$$\qquad ⚠️\ \text{但 parity barrier 是"}\textbf{筛法无法区分素数／奇素数因子结构} \text{"的限制},\ \textbf{不等同于}\ \beta_*\ \text{的零点阈值}$$
+$$\qquad \Longrightarrow \textbf{只能作为结构类比，不能作为 RH 障碍定理} ✓✓✓$$
+
+$$\textbf{T5（canonical}\ \tfrac12\ \text{来源压缩成三类，}\textbf{无第四类}）：$$
+$$\qquad \textbf{甲}\ \text{density scale}\ \tfrac1r \to \text{`V235`／`V253`}：\textbf{无零点信息}，\tfrac12\ \text{是}\ \textbf{外生尺度} ✓$$
+$$\qquad \textbf{乙}\ \beta_* \to \text{`V219`／`V254`}：\tfrac12\ \textbf{等价于 RH}，\text{属}\ \textbf{目标本身} ✓$$
+$$\qquad \textbf{丙}\ \text{tunable parameter}\ +\ \text{archimedean normalization} \to \text{`V215`}：\text{需}\ \textbf{额外规范化} ✓$$
+$$\qquad \text{目前}\ \textbf{没有发现第四类} \text{"zero-knowledge 且 canonical 且精确产生}\ \tfrac12\text{"的来源} ✓$$
+
+$$\textbf{T6（最重要的收紧 —— 下一阶段的}\textbf{对象型搜索规格}）：\text{我们真正需要的}\ \textbf{不是"另一个 signed weight"}，\ \text{而是一个满足以下}\ \textbf{六条} \text{的全新对象}：$$
+$$\qquad \text{(1) canonical};\qquad \text{(2) arithmetic};\qquad \text{(3) Dirichlet-series 型};$$
+$$\qquad \text{(4)}\ \textbf{收敛阈值可独立证明为}\ \tfrac12;\qquad \text{(5)}\ \textbf{不以}\ \zeta/L\text{-函数零点为其阈值来源};\qquad \text{(6)}\ \textbf{不等价于已有 RH criterion} ✓✓✓$$
+$$\qquad ⭐\ \textbf{尤其值得强调}：\boxed{\text{"非 L-function quotient"}\ \textbf{只是必要的筛选方向，尚不是充分条件}} ✓✓✓$$
+$$\qquad \qquad \text{真正的硬要求是：它必须拥有一个}\ \textbf{可独立证明的}\ \tfrac12\ \textbf{收敛／抵消机制} ✓✓✓$$
+
+$$\textbf{T7（最终判词）}：\boxed{\textbf{V254}＝\text{CLOSED（canonical signed-weight 路线）}} ✓$$
+$$\qquad \text{更准确地说，`V253` 的}\ \textbf{B 门已被压缩为}：$$
+$$\qquad \qquad \boxed{\text{若 signed cancellation 真能把阈值从}\ 1\ \text{推到}\ \tfrac12,\ \text{就必须出现一个}\textbf{尚未发现的、独立于}\ \zeta/L\ \textbf{零点结构的 cancellation mechanism}} ✓✓✓✓$$
+$$\qquad \Longrightarrow \textbf{这就是下一阶段真正的}\ \textbf{对象型搜索规格}，\ \text{而不是再寻找}\ \mu、\chi、\text{Hecke 的变体} ✓$$
+
+$$\textbf{T8（诚实边界）}：\text{本节所用的}\ \textbf{经典等价性与收敛结论应在正式归档前逐条核验} ⚠️;\qquad \text{"三类而无第四类"}\ \textbf{仍是项目综合审计结论，不是分类定理} ⚠️$$
