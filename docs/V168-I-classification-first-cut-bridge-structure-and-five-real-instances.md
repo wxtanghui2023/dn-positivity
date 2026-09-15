@@ -46,7 +46,7 @@ $$\qquad ⚠️\ \text{真正的问题是}：f(n)=\gamma_n\ \text{是否存在�
 
 ## §4 转向：以 **I** 为分类不变量（✓✓）
 
-$$\boxed{\textbf{不要再分类 L};\ \text{直接以 I 为分类不变量} —— \text{否则重入循环}\（\text{新语言}\to\text{能产生离散集}\to\text{不能识别 ζ}\to\text{再换语言）} ✗✓$$
+$$\boxed{\textbf{不要再分类 L};\ \text{直接以 I 为分类不变量} —— \text{否则重入循环}\（\text{新语言}\to\text{能产生离散集}\to\text{不能识别 ζ}\to\text{再换语言）}} ✗✓$$
 $$\text{设候选给出}\ f:D\to\mathbb R\ \text{与}\ \Lambda=f(D)\ \text{满足}\ \boxed{\Lambda=Z_\zeta-\tfrac12} ⟹ \text{对每个 }x\in\mathbb R ✓：\boxed{x\in f(D)\iff\zeta(\tfrac12+ix)=0}\ \tag{168.2}$$
 $$\qquad\Longrightarrow\ \text{这}\textbf{不再是}\text{"生成 }\lambda_n\text{"问题} ✗,\ \text{而是}\ \textbf{定义域到实数的谓词等价问题} ✓✓$$
 $$\textbf{更硬的问题} ✓：\text{若 }f,D\ \text{都零点独立，则 (168.2) 的证明中，}\textbf{信息"为什么恰好是 ζ 的零点"究竟从哪里进入？} ✓✓$$
