@@ -742,6 +742,30 @@ $$\Longrightarrow\ \Phi=cX^\alpha\ \textbf{单式}\ \Longrightarrow\ \operatorna
 
 **下一步（V186 预登记，三选）**：① 把**转移原理**形式化进筛子表 ② 攻 **support $>1$** 的**已知进展**（BGSTB／Goldston–Lee–Schettler–Suriajaya "Alternative Hypothesis" 2025 等），看 1.04 档是否有人在推 ③ 接受部分比例路线封顶 0.682，转回涨落相消（但按 §3 逻辑仍回到 Weil 正性）
 
+### F.5av ⭐⭐⭐⭐⭐ **Global Cancellation / Elimination Audit：⚡ 核心结构事实（离轴对三面性）＋ 三分分类 ⟹ 整族封闭**（`V187` ✓ 2026-09-15 12:53）
+
+**原型（唐先生）**：$$\text{local DOF}\to\text{elimination}\to\text{effective coupling}\to\text{invariant preserved}$$ 与 Gaussian elimination／Schur complement／RG decimation／Morse cancellation／filtered Lefschetz cancellation 同族；反向原型 ＝ "先定义可消局部自由度，再证消元后 defect 不变"。**任务**：该原型能否产生**新的算术可消自由度**定义？
+
+**⭐⭐⭐ 核心结构事实（证明级，直接来自 `V186` 的 $(1,1)$-block）**：功能方程把离轴零点配成 $\{\rho,1-\bar\rho\}$，压缩块签名 $(1,1)$ ⟹ **同一离轴对，对不同不变量表现完全不同**：
+
+| 不变量类型 | 离轴对贡献 | 结论 |
+|:--|:--|:--|
+| signature $n_+-n_-$ | $0$（中性） | **盲** ⟹ 检测不到 |
+| inertia $n_-$ | $+1$ | 可见，但需 $n_-=0$ ＝正性 |
+| trace $\operatorname{tr}$ | $0$（block 无迹） | 中性 |
+| $\operatorname{tr}(G^2)=\|G\|^2_{\rm HS}$ | $+\lambda^2$ | 可见（$R(\psi)$ 的来源之一） |
+| $\det G$ | 带负特征值 | **可见** |
+
+$$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全局不变量，对离轴零点是}\textbf{结构盲}\text{的}}$$ **⟹ 可直接用作筛提案判据**：凡声称"用 defect／winding／null-sector 证无离轴零点"者，必在某处偷用 signature 之外的信息。
+
+**⭐ 三分分类与归宿（整族封闭）**：**(i) index／signature 型 ⟹ 结构盲**（"把离轴贡献归入可消 null-sector"**不是可证的希望而是事实**：离轴对本来就是 signature-中性块，消掉与留着不变量相同 ⟹ **永远得不到 RH**）；**(ii) count／inertia 型 ⟹ 终点 $n_-=0$ ＝正性 ⟹ Weil 正性 ⟹ RH**（`V186`；只在部分比例处有效）；**(iii) det／regularized-det 型 ⟹ 对离轴对可见，但算术实现 ＝ Deninger 程序**（`V145`：有 canonical generator，缺 canonical polarization）或显式公式 ⟹ 旧墙。⟹ $$\boxed{\text{"global cancellation／elimination"整族落回既有三堵墙}}$$
+
+**四候选逐个判定**：**(A) Bose–Fermi spectral conspiracy** ⟹ 结构上 ＝ "谱求和可由别的路径算出" ＝ **显式公式**；其引擎（涌现对称／large-N）在算术侧**无对应物** ⟹ 退化（A− → 降级）；其中真命题 **cancellation ≠ pairing** 留下（相消机制扩充为四类：逐项配对／迹级／指标级／尺度级）。**(C) supersymmetric spectral quotient／null-sector** ⟹ index 型 ⟹ **盲** ⟹ 封。**(D) index-space RG／Wiener RG** ⟹ 需消元映射**收缩性（谱隙）**，而算术情形的收缩性/谱隙**恰好等价于既有 RH 相邻陈述** ⟹ 退化（但 RG 语言正面用处：$\|\mathcal R^k(C)-C_*\| \le \rho^k\|\cdot\|$ ⟹ 若 $\rho<1$ 可证即得 **$S(T)$ 次线性界**，即缺口位置，也正是缺口无法无条件填的位置）。**(E) Lefschetz／Morse cancellation** ⟹ 需链复形＋同调不变量，而"Spec $\mathbb Z$ 的上同调/相交理论"正是前端**命名缺失构件**（arithmetic site 平方上的 intersection theory ＋ Riemann–Roch）⟹ **不是新路，是同墙新记法**；且 §2 暗示离轴对是 **collapsible**（signature-中性）⟹ 该机制"消元保不变量"恰恰**保证**它看不到它们。**(F) quasicrystal RG** ⟹ B（无 deterministic cancellation，留背景）。**(G) quantum optimal transport** ⟹ B+（提供"一对多耦合＋全局优化"的**框架**，非机制）。**(H) "arithmetic SUSY／p-adic string／emergent spacetime"** ⟹ **丢弃**（把"希望存在的相消"写进模型，无 arithmetic→spectral bridge）。
+
+**唯一逃生口（OPEN，不杀但不投入）**：既非 index／count／det 的**第四类不变量**（非线性／范数型／多层）；但任何"能检测离轴零点"的不变量必须对 $(1,1)$ 块**非中性** ⟹ 必须用量级或符号 ⟹ 而 `V183` 已证量级/密度型信息受**源-基数**限制、且 $T\log T$ 主项无条件而缺口只在涨落 $S(T)$ ⟹ 第四类不变量若真工作，必须直接给 $S(T)$ 的界 ⟹ 即回到 **Weil／Li 正性** ⟹ **形式存在、实质封闭**。
+
+**下一步（V188 预登记，三选）**：① 把**筛提案判据**（§2 表格＋§3 三分归宿）固化成工具卡（与 `V179`／`V182`／`V183`／`V186` 并列）② 攻第四类不变量（预计回到 Weil 正性）③ 接受外部机制普查到此为止：本晚已连关 **S 线（V181）／N31（V182）／线性 Weyl 律（V183）／inertia 终点（V186）／cancellation 族（V187）**，全线收敛到同一核心 ⟹ 转回 **A1／A3（Weil／Li 正性）**
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
