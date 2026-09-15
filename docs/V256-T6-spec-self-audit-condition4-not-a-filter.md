@@ -99,3 +99,24 @@ $$\textbf{边界（诚实）}：\text{§2 引理与五例}\ \textbf{为初等、
    ④ 规格须补第 7、8 条 ⑤ 补完后残余回到识别界面 V215–V217
    ⑥ 结论：T6 规格自审后不打开新方向（省下沿该规格盲搜的代价）
 ```
+
+---
+
+## §7 ⚠️ **勘误与压缩**（唐先生 2026-09-15 22:31；逐字采纳）
+
+$$\textbf{T9（§4 降级）}：\S4\ \text{的"与}\ \zeta\ \text{的关联只有三条（显式公式／正性／identification）"}\ \textbf{继续标为综合审计结论}，\ \textbf{不升级为数学分类定理} ✓$$
+$$\qquad ⚠️\ \text{尤其：}\textbf{未来可能出现目前档案没有覆盖的 correspondence／interface} ✓✓$$
+
+$$\textbf{T10（识别出}\textbf{伪约束} \text{—— 本档真正的价值）}：\text{V256 真正有价值的}\ \textbf{不是"又关掉一条路"}，\ \text{而是识别出搜索规格中的一个}\ \textbf{伪约束}：$$
+$$\qquad \boxed{\text{"可证明得到}\ \tfrac12\ \text{"本身}\ \textbf{几乎没有筛选力}} ✓✓✓$$
+$$\qquad \text{平方层已给出任意廉价的}\ \tfrac12\ \text{横坐标} \Longrightarrow \textbf{真正困难的从来不是制造数字}\ \tfrac12，\ \text{而是制造}：$$
+$$\qquad \qquad \boxed{\text{非归一化的}\ \tfrac12\quad+\quad\text{canonical arithmetic origin}\quad+\quad\text{与}\ \zeta\ \text{零点的}\textbf{非循环连接}} ✓✓✓$$
+
+$$\textbf{T11（T6 修正版 —— 压缩成四条硬条件）}：\text{新对象}\ D\ \text{必须}\ \textbf{同时} \text{满足}：$$
+$$\qquad \text{(1)}\ \tfrac12\ \textbf{不是} \text{通过 halving／}\tfrac1r\text{／normalization 得到};\qquad \text{(2)}\ D\ \text{的}\ \tfrac12\ \text{性质}\ \textbf{可以独立于 RH 证明};$$
+$$\qquad \text{(3)}\ D\ \textbf{不只是}\ \zeta/L\text{-函数的重新编码};\qquad \text{(4)}\ \text{存在从}\ D\ \text{到}\ \zeta\ \textbf{零点位置} \text{的}\ \textbf{严格、非循环、非显式公式、非纯正性} \text{识别链} ✓✓✓$$
+$$\qquad \Longrightarrow \textbf{(1)(2)(3) 解决"假的}\ \tfrac12\text{"};\qquad \textbf{(4) 解决"假的 RH 信息"} ✓✓✓$$
+
+$$\textbf{T12（搜索目标的压缩 —— 结论）}：\boxed{\text{此后"寻找一个自然的}\ \tfrac12\ \text{阈值"}\ \textbf{不再是有效搜索目标}} ✓✓✓$$
+$$\qquad \text{真正目标已被进一步压缩为}：\boxed{\text{寻找一种}\ \textbf{此前档案尚未覆盖} \text{的}\ \textbf{arithmetic}\to\textbf{zero-location identification interface}} ✓✓✓✓$$
+$$\qquad \text{这与}\ \text{`V215`–`V217`}\ \text{的 residual interface}\ \textbf{相接};\ \text{但}\ \textbf{V256 本身没有证明该 residual interface 已经穷尽} ⚠️✓$$
