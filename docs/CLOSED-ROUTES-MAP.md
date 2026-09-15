@@ -657,6 +657,27 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V181 预登记）**：① 攻 (a) 代数系数 ② 攻 (b)/(c) 无限乘积型单位 ③ **撤销 S 线转回主线**（若三项残余经审均为死 ⟹ "$\Gamma$-free 纯算术平衡因子"整条线关闭，转回 A1／A3 同一堵墙）
 
+### F.5aq ⭐⭐⭐⭐⭐ **⭐ S 线结构性关闭（`V171`→`V180`）＋ 主线交接**（`V181` ✓ 2026-09-15 12:11 —— **唐先生拍板：结构性关闭，非暂时搁置**）
+
+**① 关闭链（完整登记）**：
+$$\text{算术平衡因子}\ \Phi\ \text{（Laurent 形式环内 cocycle：}\Phi\iota(\Phi)=1\text{）}\ \downarrow\ \text{三项分解}\ R^\times=\mathbb Q^\times X^{\mathbb Z^{(\mathcal P)}}(1+\mathfrak m)$$
+$$\text{指数部分}\Rightarrow\textbf{精确相消}（\text{只留标量}\prod_pp^{-k\alpha_p}）;\quad \text{常数部分}\Rightarrow\lambda=1;\quad \text{principal-unit}\ \Rightarrow\ \operatorname{supp}\iota(h)\subseteq-C,\ \operatorname{supp}\tfrac{h}{1+h}\subseteq C,\ C\cap(-C)=\{0\}\ \Longrightarrow\ \boxed{h=0}$$
+$$\Longrightarrow\ \Phi=cX^\alpha\ \textbf{单式}\ \Longrightarrow\ \operatorname{supp}(F)\subseteq\{0\le\delta\le\alpha\}\ \textbf{有限}\ \Longrightarrow\ N_F(T)=O(T)\ \text{vs}\ N_\zeta(T)\asymp T\log T\ \Longrightarrow\ \boxed{\textbf{FSC-DEAD}}$$
+
+**② 为什么是"解释性关闭"（层级区分）**：`V180` 的 principal-unit **锥-支撑论证**避开了最危险的漏洞（禁止对 $\sum h_\alpha X^\alpha$ 与 $\sum_\beta(\cdots)X^\beta$ 做无限系数求和比较），只用 $\operatorname{supp}(h)\subseteq C$、$\operatorname{supp}(\iota(h))\subseteq-C$、$C\cap(-C)=\{0\}$ ⟹ $\lambda=1,\ h=0$ 是**真正的支撑几何结论**（非形式级数技巧）⟹ S 线完成的**不是**"又排除若干构造"，而是**证明这一类因子没有足够的自由度** ⟹ 与"再得一条 NO-GO"**层级不同**（后者是清单增长，前者是机制解释）。
+
+**③ 负结构定理（本档新增）**：$$\boxed{\text{Laurent（形式）环内算术因子}\ \overset{\text{cocycle}}{\longrightarrow}\ \text{单式}\ \overset{\text{FSC}}{\longrightarrow}\ \text{有限谱}}$$ 而 RH 所需是**相反性质**：$$\boxed{\text{算术数据}\longrightarrow\text{无限谱对象}\longrightarrow\text{临界线定位}}$$ ⟹ S 线暴露的不是"构造不够复杂"，而是 **纯算术乘法平衡本身无法提供所需的无限谱刚性** ⟹ 主线被推回 `V162` 承重墙。
+
+**④ 类界（§11.2 纪律，必须写清）**：**被关闭**：Laurent 形式环 $R=\mathbb Q[[X_p]][X_p^{-1}]$ 内、逐变量分解成立的算术反自对偶平衡因子。**未覆盖（登记 Uninstantiated，非活跃候选）**：(a) 非 $\mathbb Q$-系数（数域／代数系数）(b) 非逐变量可分形式的无限乘积型单位 (c) 一般 $\prod_p(\cdots)$ 型算术因子。**模型边界**：三项分解对**逐变量 Laurent 环**成立（经典），对**无限多变量完整 Laurent 级数环**需另行验证。**结论精确形式**：**不**声称"全数学 DEAD"，只声称"上述类内 DEAD"。
+
+**⑤ 为什么不攻 (a) 数域系数**：$$\boxed{\text{杀手是}\ C\cap(-C)=\{0\}}$$ 只要系数域嵌入**特征零有序／赋值结构**使 $\mathfrak m$ 保持相同支撑分离，则 $\iota(h)\in-C$ 与 $-\tfrac{h}{1+h}\in C$ 仍迫使 $h=0$ ⟹ 换数域**不触及真正的瓶颈**。
+
+**⑥ 为什么不攻 (b)/(c) 无限乘积单位**：一旦允许任意不可分的无限乘积型单位，**必须先重新定义模型本身**（完备化？支撑良基？乘法逐项定义？$\iota$ 仍是同一自同构？恒等式是否合法？）⟹ 这是**换模型逃避 V180 的结论**，而非突破；除非有**独立理由**证明其具有 RH 所需谱自由度，否则不投入。
+
+**⑦ 重开条件（明确登记）**：**(R1)** 给出**独立于本模型**的算术因子，同时满足：算术可构造／反自对偶／$\operatorname{supp}(F)$ **无限**／不与 $\Phi=c/\Psi$ 型走私等价，**且** $N_F(T)\asymp T\log T$；**(R2)** 证明无限乘积型单位存在**非等价于 V180 框架**的新谱自由度（须先给完备化与良基性）；**(R3)** 发现 $C\cap(-C)=\{0\}$ 在目标类中**不再成立**（即存在允许的"混合锥"算术因子）。⚠️ 三条均未满足 ⟹ 按纪律**不再投入**。
+
+**⑧ 主线交接（A1／A3）**：**承重墙（`V162`）** $$\boxed{T\log T\ +\ \text{Weil 正性}};\qquad \text{核心缺口}：\boxed{\text{局部算术结构}\ \not\Longrightarrow\ \text{全球谱定位}}$$ 已知无条件输入不足：比例天花板 $0.682$｜第三矩／高相关需 support $>1$｜T² 律／预算越界（`V102`／`V162`）⟹ **唯一登记靶点：E102 §8 target1**。**V182 建议：形式化 N31**（char-0 无条件 $\sqrt{\cdot}$-正性 ⟹ origin 可归约到 finiteness）—— 理由：把三条**族级 NO-GO** 升级为**结构结论**（目前只在 known-candidate 级，覆盖性论证未证），杠杆最高。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
