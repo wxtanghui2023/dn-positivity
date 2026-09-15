@@ -563,6 +563,32 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V175 预登记）**：① 轴定位是否是**唯一的** archimedean 入口？（若是 ⟹ A-leak 可精确化为"轴定位输入"型）② 允许 $k\in\mathbb Q$ 后是否存在纯算术方式选出 $k=1$？③ 审"函数级"能否被"形式级＋有限组合"替代（若不可 ⟹ 层级二分可升为定理）
 
+### F.5ak ⭐⭐⭐⭐⭐ **层级定理（局部因子刚性）：逐素数可分的"无 $\Gamma$"反射在 Euler 积类中只有平凡解**（`V175` ✓ 2026-09-15 11:49）
+
+**目标（唐先生钉死）**：Prove or refute: finite arithmetic formal calculus $\not\Rightarrow$ cross-domain analytic reflection。
+
+**三层分离**：形式对象 $\mathcal F=(a_n)$ —（有限次 $+$、$\times$、Dirichlet convolution、index rescaling、$T_k$、$R$）→ 形式级 $\mathcal G$；**函数级** $G(s)=\sum b_nn^{-s}$ 额外要求存在非空复域 $D$ 使 $G:D\to\mathbb C$ 解析且 $G(s)=\varepsilon G(k-s)$ 在 $D\cap(k-D)$ 成立。
+
+**第一刀**：系数代数**不自动产生另一个解析域**（$\Re s>\sigma_0$ 经 $s\mapsto k-s$ 变为 $\Re s<k-\sigma_0$，两域仅特殊情况相交；连接它们**已不是系数有限组合**）。
+**第二刀（纠错）**：**不能说"解析延拓 $=\Gamma$"**（不对，存在许多无显式 $\Gamma$ 的延拓机制）；真正缺的是 **boundary-to-boundary analytic identification**（跨域连接信息）；$\Gamma$ 只是经典实现之一。
+**第三刀（恒等定理的正确用法）**：同一连通开域上一致 ⟹ 恒等定理 ⟹ 延拓唯一。**真正的问题不是"延拓是否唯一"，而是"从形式数据能否证明存在覆盖两侧的共同解析域"** ⟹ 目标变为存在性障碍：$\mathscr A(F)=\{$ 含初始收敛域的解析延拓 $\}$，$\#\mathscr A(F)\le1$，要证 **有限形式运算 $\not\Rightarrow$ $\mathscr A(F)\neq\varnothing$ 跨越反射轴**。
+
+**⭐⭐ 局部因子刚性定理（本档新增，初等三行）**：设 $F(s)=\prod_pF_p(p^{-s})$，$F_p\in\mathbb C[[X]]$、$F_p(0)=1$，记 $X_p=p^{-s}$。方程 $F(s)=\varepsilon F(k-s)$ 逐素数展开为 $\prod_pF_p(X_p)=\varepsilon\prod_pF_p(p^{-k}X_p^{-1})$。
+**(i)** 右端第 $p$ 因子只依赖 $X_p$ ⟹ 在 $\prod_p\mathbb C((X_p))$ 中逐分量比较得 $F_p(X)=\lambda_pF_p(p^{-k}X^{-1})$，$\prod_p\lambda_p=\varepsilon$。
+**(ii)** 幂次支撑冲突：$F_p(X)$ 支撑 $\subseteq\mathbb Z_{\ge0}$；$F_p(p^{-k}X^{-1})$ 支撑 $\subseteq\mathbb Z_{\le0}$。
+**(iii)** 相等 ⟹ 支撑 $\subseteq\{0\}$ ⟹ $F_p$ 常数；归一化 $F_p(0)=1$ ⟹ $F_p\equiv1\ \forall p$ ⟹ $F\equiv1$（**平凡对象，零谱为空**）。
+⟹ $$\boxed{\text{逐素数可分的"无 }\Gamma\text{"反射在 Euler 积类中}\textbf{只有平凡解}}$$ ⚠️ 唯一假设＝**逐素数可分** ＋ 非退化归一化；**不需要任何解析延拓／增长／带状域论证**（障碍在**局部因子层**）。
+
+**推论 1**：非平凡反射恒等式在 Euler 积类中**必然需要 archimedean 平衡项** ⟹ **`V174` 二分由经验观察升级为定理**（与"所有已知函数方程都带 $\Gamma$-因子"一致）。
+**推论 2（更强）**：定理**不依赖 $\Gamma$ 的具体表达式**；它说明的是**局部参数倒置 $X_p\leftrightarrow X_p^{-1}$ 的幂次失配必须由某个"局部↔全局"平衡结构吸收**，$\Gamma$ 只是经典实现。
+**推论 3（机制解释）**：`V174` 类型 B（$\Gamma$ 被消去但信息仍在）＝ **消去 $\Gamma$ 后若不引入"混合素数"结构，方程退化到只有平凡解**；一旦引入混合，archimedean 信息随该混合回流 ⟹ A-leak disguised。
+
+**⭐ S 残余精确化（不杀）**：定理只覆盖逐素数可分反射 ⟹ S 切成两支：**S-i**（无 Euler 积的 Dirichlet 级数，经典属 Koshlyakov／Potter–Titchmarsh 型范围，**OPEN**）与 **S-ii**（**非逐素数可分的跨素数 involution**，本档新隔离的**主残余**）：须满足"**混合素数的对合 ＋ 纯算术构造 ＋ 唯一选出 ζ**"三者齐备（与 `V173` "耦合≠选择"直接衔接）。
+
+**STOP 条件（唐先生）**：若找不到真反例／定理而只能说"通常需要解析延拓"，则只能 OPEN，不能封口；**不得**把"所有已知构造都需要解析延拓"升级为"任何可能构造都需要"。**本档定位**：给出的**不是**经验说法而是**初等定理**，其结论**弱于**"所有构造都需要"、**强于**"已知构造需要" ⟹ 满足 STOP 条件且未过度推广。
+
+**下一步（V176 预登记）**：① 攻 **S-ii**（构造非逐素数可分的对合）② 攻 **S-i**（查无 Euler 积情形的经典结果）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
