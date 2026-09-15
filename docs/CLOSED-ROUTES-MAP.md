@@ -174,7 +174,7 @@ $$\qquad\text{（逐字依据 ✓：`thought-experiment-generator-M`："ζ 的 E
 $$\boxed{\text{函数域}\textbf{平凡 motive 的 }L\ \textbf{无零点}（\zeta_C(u)=\tfrac1{(1-u)(1-qu)}\ \text{纯极点}\ ✓）\ \text{而 char-0 的 }\zeta\ \text{有非平凡零点} \Longrightarrow\ \text{差异 ＝ }\textbf{Archimedean 结构}（\Gamma／\xi\ \text{整性}\ ✓）}$$
 $$\boxed{\textbf{ζ 零点（和 RH）不在 motive 层 —— 在 Archimedean 层}\ ✓✓（`iteration-independent-wplane-archimedean` 方向 B ✓）}$$
 $$\boxed{\textbf{元解释 ✓✓✓}：\text{为什么所有 Frobenius／几何类比失败 —— }\textbf{层错了}（\text{作用在 motive 层，零点在 Archimedean 层}）}$$
-$$\qquad\Longrightarrow\ \textbf{C6（＝"延拓的算术替代物"，`thought-experiment-generator-M` 第 5 步逐字 ✓）的死因 ＝ 层结构} ✗：\text{motive 层}\textbf{不可能};\ \text{Archimedean 层}\textbf{已知仅自伴 ⟹ }HP\ \text{循环} ✗（`iteration-2-5`：}\textbf{机制真空} ✓）$$
+$$\qquad\Longrightarrow\ \textbf{C6（＝"延拓的算术替代物"，`thought-experiment-generator-M` 第 5 步逐字 ✓）的死因 ＝ 层结构} ✗：\text{motive 层}\textbf{不可能};\ \text{Archimedean 层}\textbf{已知仅自伴 ⟹ }HP\ \text{循环} ✗（`iteration-2-5`：\textbf{机制真空} ✓）$$
 $$\qquad\textbf{同时已封 ✓}：\text{Sato–Tate／Hecke 局部统计 ⟹ }\textbf{L3 死}（`dstar-ec-death` ✓；`RESEARCH-CONSTITUTION` N15 ✓）；\text{Gaussian／CM 同源模+相位 ⟹ }\textbf{箱 8} ✓$$
 
 ### F.5g ⭐ **Archimedean 边界对象：三关审计**（`V145` ✓ 2026-09-14 23:52）
@@ -183,7 +183,7 @@ $$\text{提案 ✓}：\text{找"Archimedean arithmetic boundary object"}\ \mathc
 $$\boxed{Gate\ 1\ \textbf{通过 ✓ 且经典 ✓}}：\pi^{-s/2}\Gamma(s/2)\ \text{可由}\ \theta(1/t)=\sqrt t\,\theta(t)\（\mathbb Z\ \text{泊松自对偶}\ ✓）\ \text{＋ Mellin ＋ Tate 局部积分生成}\ ✓\ \text{—— 形状由三事实决定（Gaussian 自对偶}\ \widehat{e^{-\pi x^2}}=e^{-\pi x^2}\ ✓;\ \mathbb Z\ \text{自对偶格}\ ✓;\ \text{局部 ζ 积分}\ ✓）,\ \textbf{不碰 }\zeta,\Lambda,\rho,\gamma\ ✓$$
 $$\boxed{Gate\ 2\ \textbf{失败 ✗}}：\text{档案逐字（`iteration-2-5` 第 2 轮 ✓）：}\zeta\ \text{站在}\textbf{乘法离散}＋\textbf{加法离散} \text{之间；}\textbf{加法侧（}\theta\text{／泊松）通回 }\zeta \Longrightarrow \text{同一延拓对象 ⟹ 非独立 ⟹ 循环}\ ✗✓$$
 $$\boxed{Gate\ 3\ \textbf{结构性失败 ✗}}：\text{FE 是}\textbf{对称性}（\rho\leftrightarrow1-\rho\ ✓）；\text{对称性}\textbf{不强制固定轨迹}、\text{允许离轴对}\ ✗（\text{M-公理表：FE／duality}\ \textbf{安全}\ ✓）$$
-$$\boxed{\text{⭐ 关键命中 ✓}：\det_{\rm ren}(I-\mathcal E(s))\ \textbf{＝ Deninger 纲领};\ \text{档案（`V105` 第 6 行 ✓）判：有 canonical 生成元}\ ✓\ \text{但}\textbf{缺 canonical polarization（正定相交形式）}\ ✗\ +\ \textbf{局部 similitude 只看得见 }\sigma>1\ \text{的 Euler 窗口（算术断裂）⟹ 看不到零点}\ ✗;\ \text{命中箱 6／12；状态 }\textbf{CLOSED*};\ \text{配套 `connes-2026-full-audit`（}\text{未产生独立于 Weil 显式公式的 }\beta\text{-障碍}\ ✓\text{）}$$
+$$\boxed{\text{⭐ 关键命中 ✓}：\det_{\rm ren}(I-\mathcal E(s))\ \textbf{＝ Deninger 纲领};\ \text{档案（`V105` 第 6 行 ✓）判：有 canonical 生成元}\ ✓\ \text{但}\textbf{缺 canonical polarization（正定相交形式）}\ ✗\ +\ \textbf{局部 similitude 只看得见 }\sigma>1\ \text{的 Euler 窗口（算术断裂）⟹ 看不到零点}\ ✗;\ \text{命中箱 6／12；状态 }\textbf{CLOSED*};\ \text{配套 `connes-2026-full-audit`（}\text{未产生独立于 Weil 显式公式的 }\beta\text{-障碍}\ ✓\text{）}}$$
 $$\qquad\Longrightarrow\ \text{三关结论 ＝ }\textbf{有限／无限层断裂 ＋ 有完成函数机制但无 RH 强制力} \text{两者同时成立}\ ✓;\ \text{并核对：}J\text{-unitary}\not\Rightarrow|\lambda|=1\ ✗（\text{不定度量下 }\lambda=r,\lambda'=r^{-1}\ ✓），\text{与 `AOB4` §1 的 E/D/Z}\perp\text{P 同向}\ ✓$$
 
 ### F.5h ⭐ **Iterated Arithmetic Action（$F_N^2=N R_N$，$R_N^\dagger R_N=I$）**（`V146` ✓ 2026-09-14 23:58）—— **DEAD** ✗
@@ -765,6 +765,32 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 **唯一逃生口（OPEN，不杀但不投入）**：既非 index／count／det 的**第四类不变量**（非线性／范数型／多层）；但任何"能检测离轴零点"的不变量必须对 $(1,1)$ 块**非中性** ⟹ 必须用量级或符号 ⟹ 而 `V183` 已证量级/密度型信息受**源-基数**限制、且 $T\log T$ 主项无条件而缺口只在涨落 $S(T)$ ⟹ 第四类不变量若真工作，必须直接给 $S(T)$ 的界 ⟹ 即回到 **Weil／Li 正性** ⟹ **形式存在、实质封闭**。
 
 **下一步（V188 预登记，三选）**：① 把**筛提案判据**（§2 表格＋§3 三分归宿）固化成工具卡（与 `V179`／`V182`／`V183`／`V186` 并列）② 攻第四类不变量（预计回到 Weil 正性）③ 接受外部机制普查到此为止：本晚已连关 **S 线（V181）／N31（V182）／线性 Weyl 律（V183）／inertia 终点（V186）／cancellation 族（V187）**，全线收敛到同一核心 ⟹ 转回 **A1／A3（Weil／Li 正性）**
+
+### F.5aw ⭐⭐⭐⭐⭐ **Null-Relation / Spectral-Compensation Audit：⚡ 饱和定理（线性通道盲）＋ 四通道穷尽 ⟹ 封**（`V188` ✓ 2026-09-15 12:55）
+
+**原型（唐先生）**：$$\text{local DOF}\to\text{global constraint}\to\text{compensation}\to\text{residual defect};\qquad \text{核心是}\ \sum_n w_na_n=C\ \text{或}\ \sum_jK_{ij}X_j=0\（\text{非逐项配对}\bigr)$$ 六条要求：$K$ 非局部／跨尺度／非人为 RH 等价／有 arithmetic origin／迫使局部涨落补偿／压制 $S(T)$。与 `V182`（$Q\succeq0$）、`V186`（$\operatorname{Inertia}Q$）构成三元组，本档为第三支 **$\ker K\neq0$**。
+
+**⭐⭐⭐ 饱和定理（本档核心）**：零测度 $\mu=\sum_\rho m_\rho\delta_{\gamma_\rho}$ 的**全部线性统计量** $\sum_\rho m_\rho\widehat f(\gamma_\rho)$ **已由 Weil 显式公式（经典）与算术侧一并确定**（测试函数类稠密 ⟹ 线性泛函族确定 $\mu$）⟹ 任何**额外的线性（求和／矩／迹／null-relation）关系都是它的推论，不增加信息** ⟹ 该通道**已饱和**。⚠️ 而 **RH $\Longleftrightarrow \operatorname{supp}\mu\subset\mathbb R$** —— 这是**支撑性质**，**不是**线性统计性质（线性泛函只看见位置的加权和，看不见"某点是否离开了轴"）⟹ $$\boxed{\text{线性／全局求和／sum-rule／UV--IR／null-relation 通道对}\ \beta\ \textbf{结构性盲}}$$ 与 `V187` §2（signature／trace 中性）**完全一致**。⚠️ 诚实：饱和 ≠ 无用；把它**反演**成逐点位置需要**无界精度**，那一步正是 $S(T)$ 问题本身。
+
+**六候选逐个判定**：**(1) Optical Hall sum rule／spectral compensation** ⟹ 频率矩恒等式 ⟹ **线性 ⟹ 盲**（留下形状：**矩恒等式强制跨尺度补偿**）。**(2) Spectral covariance sum rule／spectral rigidity** $\left(C(0)+\sum_{\ell\neq0}C(\ell)=0\right)$ ⟹ 对 ζ 的对应物**无条件存在**：**Selberg 中心极限定理** $S(t)/\sqrt{\frac12\log\log T}\Longrightarrow\mathcal N(0,1)$ ⟹ 无条件**典型**尺度 $\asymp\sqrt{\log\log T}$；⚠️ **但目标是最坏情形**，三层结构（经典）：**典型 $\sqrt{\log\log T}$（无条件）／无条件最坏 $O(\log T)$（Littlewood）／目标 $O(\log T/\log\log T)\Longleftrightarrow\text{RH}$（von Koch）** ⟹ **rigidity 型输入恰好只覆盖第 1 层，典型→逐点的过渡恰是 RH 等价陈述** ⟹ 退化。**(3) Interlacing／barrier（Bilu–Linial 改进）** ⟹ 形状"族＋夹逼 barrier"，但**已被 67.2% 证明用尽**（族＝窗／调制族，barrier＝临界线），其天花板**已被证明**（0.68185／形式化 0.6818287）⟹ 非新路。**(4) Index-space RG** ⟹ 需消元映射**收缩性（谱隙）**，算术情形**等价于既有 RH 相邻陈述**（`V187` §4(D)）；正面残留：$\rho<1$ 可证即得 $S(T)$ 次线性界 ＝ 第 3 层。**(5) UV–IR compensation／anomaly sum rules** ⟹ 对 ζ，UV–IR matching 的实例**就是显式公式**（素数＝UV，零点＝IR）⟹ 又是线性 ⟹ 盲。**(6) Spectral decoupling／local nullspace $\to$ global gap** ⟹ B+（正是缺的 local arithmetic → global spectral localization，但算术侧无对应 null-space 分解）。
+
+**⭐⭐ 四（五）通道穷尽（结论表）**：
+
+| 通道 | 典型外部机制 | 对离轴零点 | 归宿 |
+|:--|:--|:--|:--|
+| **线性**（加权和／矩／迹／和恒等式） | sum rule／UV–IR／null relation／covariance | **盲** | §2 饱和 ⟹ 封 |
+| **二次型** | Weil 正性／Li 正性 | 可见 | RH 等价 ⟹ 旧墙 |
+| **符号／惯性** | inertia／rank-迹（`V186`） | 可见（$n_-$） | 终点退回正性 ⟹ 封 |
+| **逐点／时间型** | Selberg CLT／逐点 $S(T)$ | 可见 | 最坏情形 ⟺ RH ⟹ 旧墙 |
+| **det／正则化行列式** | Deninger 程序 | 可见 | 缺 canonical polarization（`V145`）⟹ 封 |
+
+⟹ $$\boxed{\text{四（五）通道全部落回既有墙}}\ \Longrightarrow\ \textbf{封}$$ ⚠️ 特别地：**同时满足六条要求的候选本档未发现** —— 因为**满足前五条者必属线性通道（从而盲），而能压制 $S(T)$ 者必然落到二次型／符号／逐点通道（从而＝旧墙）**。
+
+**⭐ 与 `V187` 的收敛**：`V187`（机制族入口：index／inertia／RG／Lefschetz）与 `V188`（信息类型入口：线性／二次／符号／逐点／det）是**两条独立路径**，却收敛到**同一残余**：$$\boxed{\text{既非线性／index、非二次型、非符号-惯性、非逐点}\ =\ \text{`V187` §5 的"第四类不变量"}}$$ 标 OPEN，**不杀但不投入**（形式存在、实质封闭）⟹ 两个入口 → 一个残余，说明**地图在这两条线上趋于完备**。
+
+**三条可复用筛（进工具箱）**：⭐ **饱和判据**（凡声称用全局和恒等式／sum rule／matching 约束零点者 ⟹ 线性通道 ⟹ 盲）；⭐ **涨落三层表**（典型／无条件最坏／目标⟺RH）；⭐ **四通道穷尽表**（任何未来提案的第一道分类器）。
+
+**下一步（V189 预登记，三选）**：① 三件套固化成工具卡 ② 攻同一残余（第四类不变量）的严格定义 ③ 接受外部机制普查结束，转回 **A1／A3（Weil／Li 正性）** 本身。
 
 ## F.4 与 §E.4 的关系（✓）
 
