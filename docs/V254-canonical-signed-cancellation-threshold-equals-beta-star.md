@@ -162,3 +162,21 @@ $$\qquad \qquad \boxed{\text{若 signed cancellation 真能把阈值从}\ 1\ \te
 $$\qquad \Longrightarrow \textbf{这就是下一阶段真正的}\ \textbf{对象型搜索规格}，\ \text{而不是再寻找}\ \mu、\chi、\text{Hecke 的变体} ✓$$
 
 $$\textbf{T8（诚实边界）}：\text{本节所用的}\ \textbf{经典等价性与收敛结论应在正式归档前逐条核验} ⚠️;\qquad \text{"三类而无第四类"}\ \textbf{仍是项目综合审计结论，不是分类定理} ⚠️$$
+
+---
+
+## §11 **定稿读数 ＋ parity barrier 移出判词**（唐先生 2026-09-15 22:25；逐字采纳）
+
+$$\textbf{T9（本档可作为}\textbf{最终归档文本}）：\text{核心判定成立；边界声明比前版严谨} ✓✓$$
+$$\qquad \textbf{唯一需继续保留的技术警戒}＝\S10\ \text{T1}（\text{不得由解析奇点直接推出收敛横坐标恰为}\ \beta_*）✓✓$$
+
+$$\textbf{V254 不可争议的核心（读法）}：$$
+$$\qquad \text{(1)}\ \text{右端奇点给出}\ \beta_*\ \text{的}\ \textbf{解析障碍} ✓$$
+$$\qquad \text{(2)}\ \text{把}\ \mu\ \text{级数的}\ \textbf{有效收敛／抵消阈值推进到}\ \tfrac12,\ \textbf{需要达到 RH 等价强度} ✓$$
+$$\qquad \text{(3)}\ \text{因而}\ \boxed{\mu/\chi/\text{Hecke}\ \text{这整个 canonical signed-L-function 家族}\ \textbf{没有提供独立的 B 型突破}} ✓✓✓$$
+
+$$\textbf{最有价值的新规格（逐字采纳）}：\boxed{\text{寻找一个}\ \textbf{非 L-function 商型} \text{的 canonical arithmetic Dirichlet object},\ \text{其}\ \tfrac12\ \textbf{阈值能够独立证明}，\ \textbf{而不是由}\ \beta_*\ \textbf{预先编码}} ✓✓✓$$
+$$\qquad \text{（这比继续尝试}\ \mu、\Lambda、\chi、\text{Hecke}\ \text{等权重变体}\ \textbf{明确得多}）✓$$
+
+$$\textbf{T10（parity barrier 移出本档判词）}：\text{另立专档}\ \text{`V255`}\ \text{（状态＝}\textbf{[待核／参照档]}）;\ \textbf{本档判词不含} \ \text{parity barrier} ✓✓$$
+$$\qquad \text{理由：}\text{（i）命题类型不同（"可构造 signed sieve 权重的能力上限"}\ne\text{"canonical L-函数商族"}）;（ii）\textbf{目前无蕴含链} \text{把它接到}\ \beta_*=\tfrac12 ✓✓$$
