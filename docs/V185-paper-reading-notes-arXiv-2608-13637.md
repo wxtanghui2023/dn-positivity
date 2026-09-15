@@ -96,7 +96,7 @@ $$\text{数学论证由}\ \textbf{Claude 自主发现并撰写};\ \text{署名�
 $$\qquad ⭐\ \textbf{全部 Lean 代码由 Claude 撰写}（\text{含 }`LinAlg/`\ \text{的 }\texttt{RHLinalg}）;\ \text{作者}\textbf{不手写 Lean};\ \text{论文作者负责数学方向与审阅}$$
 $$\qquad\text{工具链}\ \texttt{lean4:v4.33.0-rc2}\ +\ \text{Mathlib}\ \texttt{51e6992}\（\text{tag }v4.33.0-rc2）;\ 17\ \text{条定理}\ \text{sorry-free};\ \#\text{print axioms}\ \text{仅}\ \texttt{propext/Classical.choice/Quot.sound}$$
 $$\qquad\text{校验}\：\text{Comparator（Lean FRO）＋ NanoDa 独立内核}\ \text{重放};\ \text{Palomar 注册表投稿};\ \text{CI 对每个 }\texttt{comparator*.json}\ \text{跑同一套}$$
-$$\qquad ⚠️\ 1.0\ \text{版的"C-S 较弱形式"}\（N_0^s/N\ge\tfrac12,\ N_d/N\ge\tfrac34\ \text{等}\bigr）\ \text{仍在库中可证 ✓$$
+$$\qquad ⚠️\ 1.0\ \text{版的"C-S 较弱形式"}\（N_0^s/N\ge\tfrac12,\ N_d/N\ge\tfrac34\ \text{等}\bigr）\ \text{仍在库中可证 ✓}$$
 
 ---
 

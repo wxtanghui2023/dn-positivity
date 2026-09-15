@@ -1,8 +1,8 @@
-# V184-0 · ⭐⭐⭐⭐⭐ **Inertia Mechanism Audit（反向拆解 67.2% 证明）—— ⭐ 关键一刀的答案：终点会【退化回 Weil 正性】⟹ 按预定规则**关；但机制与"转移原理"两个收获必须留下
+# V186 · ⭐⭐⭐⭐⭐ **Inertia Mechanism Audit（反向拆解 67.2% 证明）—— ⭐ 关键一刀的答案：终点会【退化回 Weil 正性】⟹ 按预定规则**关；但机制与"转移原理"两个收获必须留下
 
 > 委托 ✓ 唐先生 2026-09-15 12:50：**"真正值得我们搬运的不是'AI+Lean'，而是论文里的一个结构变化"**；**V184 改题 ＝ Indefinite-Form / Inertia Bridge**；**开 V184-0：Inertia Mechanism Audit**，第一阶段不碰 RH 证明，只做硬拆解（七问），再做关键一刀 **67.2% ⟹ 100%？**（若 100% ⟺ 已等价于 Weil 正性／RH ⟹ **立刻关**）
 > 阅读来源 ✓ 论文 arXiv:2608.13637v2（§1.2 三步 (Z)(P)(L) 与单链；Remark 1.1）＋ 本地形式化 `~/lean-repro/formal-math/zeta23/`（`LinAlg/RankTrace.lean`＝Lemma R **精确形式**；`LinAlg/Inertia.lean`、`PairCeiling/Ceiling.lean`、`ZeroSide/`、`PrimeSideA/B`、`Taper/`、`Poisson.lean`；`README.md`）
-> 执行 ✓ 小灵（**§1 七问拆解、§2 交换率、§3 终点退化、§4 转移原理 为本档核心**）｜**纸面 ✓（零数值 ✓）**｜纪律 ✓ 未用 RH ✓｜编号 ✓ **V184-0**
+> 执行 ✓ 小灵（**§1 七问拆解、§2 交换率、§3 终点退化、§4 转移原理 为本档核心**）｜**纸面 ✓（零数值 ✓）**｜纪律 ✓ 未用 RH ✓｜编号 ✓ **V186**
 
 ---
 
@@ -39,7 +39,7 @@ $$\textbf{Lemma R（论文 §3，形式化精确形式）}：P\succeq0,\ \operat
 $$\qquad\boxed{\|P+Q\|_F^2\ \ge\ c\operatorname{tr}P-\frac{c^2}{4}r+2c\operatorname{tr}Q-c^2b}$$
 $$\qquad\text{证明}：Q=Q_+-Q_-\ \text{谱分解};\ \text{展开}\ \|\cdot\|_F^2;\ \text{弃}\ \operatorname{tr}(PQ_+)\ge0;\ \textbf{von Neumann 迹不等式};\ \text{两个初等序列估计} ✓$$
 $$\qquad\text{取}\ c=2\ \text{并解出}\ r：\ \operatorname{rank}P\ \ge\ 2\operatorname{tr}P+4\operatorname{tr}Q-4b-\|P+Q\|_F^2\ \（\text{论文 (1.1)}）✓\ \text{（本档核算一致）}$$
-$$\qquad ⚠️\ \textbf{纠正一处}：这不是平凡 Cauchy–Schwarz 界 $\operatorname{rank}\ge(\operatorname{tr})^2/\operatorname{tr}(Q^2)$；Lemma R 是\textbf{两矩阵}不等式，且被证明是}\textbf{紧的}（`ZeroSide/TightMult.lean`：`lemmaR_tight`）✓$$
+$$\qquad ⚠️\ \textbf{纠正一处}：这不是平凡 Cauchy–Schwarz 界 $\operatorname{rank}\ge(\operatorname{tr})^2/\operatorname{tr}(Q^2)$；Lemma R 是\textbf{两矩阵}不等式，且被证明是\textbf{紧的}（`ZeroSide/TightMult.lean`：`lemmaR_tight`）✓$$
 
 ### (3) $\operatorname{tr}Q_T$ 从哪里来？——**零点平均密度（RvM）**
 
