@@ -89,7 +89,7 @@ $$\qquad ⭐\ \text{且}\ \text{`V178`}\ \text{的}\ \Phi=-1\ \text{现在被}\ 
 
 $$\textbf{(i) 分解的适用范围} ✓：R^\times=\mathbb Q^\times X^{\mathbb Z^{(\mathcal P)}}(1+\mathfrak m)\ \text{对}\ \textbf{逐变量 Laurent 环}\ \text{成立（经典）};\ \text{对}\ \textbf{无限多变量的完整 Laurent 级数环}\（\text{允许一般指数向量、乘积为无穷和}\）\ \textbf{需另行验证} ⚠️$$
 $$\textbf{(ii) 本档结论的精确形式} ✓：\text{不是"全数学 DEAD"}，而是\ \boxed{\text{"在 Laurent（形式）环模型内，算术反自对偶因子只能是单式"}}\ ✓✓$$
-$$\textbf{(iii) 仍未覆盖} ⚠️：\text{(a) 非}\ \mathbb Q\text{-系数（如代数系数）；(b) 非逐变量可分形式的无限乘积型单位；(c) 一般的"无穷乘积 }\prod_p(\dots)\ \text{型"算术因子}}$$
+$$\textbf{(iii) 仍未覆盖} ⚠️：\text{(a) 非}\ \mathbb Q\text{-系数（如代数系数）；(b) 非逐变量可分形式的无限乘积型单位；(c) 一般的"无穷乘积 }\prod_p(\dots)\ \text{型"算术因子}$$
 $$\Longrightarrow\ \text{三项均标}\ \textbf{OPEN}，\ \textbf{不杀} ✓$$
 
 ---
