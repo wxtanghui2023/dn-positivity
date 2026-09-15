@@ -1649,6 +1649,28 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§7 判词 ＋ 状态表（九行）**：$\mathcal M_{\rm nat}$ 不移动 strip 零点 **已证**｜商 **不** $\beta$-blind **已证**｜唯一明显 $\beta$-读出量＝divisor ⚠️**硬墙**｜Euler 尾部 **DEAD**（给 $\sigma=1$）｜$\log$-导数商 **DEAD**（奇点集仍含全部 $\rho$）｜$r=2$ 层 $\frac12$ **DEAD as bridge**（V235-A）｜**层间兼容律 DEAD**（V235-B）｜**I1–I5** $\boxed{\textbf{无解（条件性）}}$｜非 layer-型商内不变量 $\boxed{\textbf{UNINSTANTIATED}}$ ⟹ $$\boxed{\textbf{V235：Euler 层间兼容支 DEAD；I1--I5 无解（条件性）；残余收窄为"非 layer 型商内不变量"}}$$ ⚠️ 纪律：V235-A/B **定理级**；V235-C **条件性**；**不得**升级为无条件"无解定理" ✓
 
+### F.5cr ⭐⭐⭐⭐⭐ **V236：跨素数确定性关系 ＋ $\sigma$/$t$ 非可分离性审计 ⟹ V236-A/B/C**（`V236` ✓ 2026-09-15 18:01）
+
+**委托（唐先生）**：**"V235 我同意判死：$$\boxed{\text{Euler 层级中的 }1/2\text{ 是密度坐标，不是零点定位坐标。}}$$ 不应再回头碰 $E_r$、prime-power layer、Euler-tail 或它们的非线性组合。但**不同意**把残余简单写成'非 layer 型商内不变量'然后继续盲搜。现在应该先解决一个更基础的问题：$\mathcal A^\times/\mathcal M_{\rm nat}$ 到底还剩下什么类型的结构？"** (1) **商本质**：$F\sim G\iff F/G=\prod_{p\in S}(1-p^{-s})^{k_p}$ ⟹ **"把有限素数的局部修改全部遗忘"** ⟹ $I(F)=I(FQ)$ ⟹ $I$ 只能依赖**无限素数尾部之间的关系**；⚠️ "尾"**不是** $E_1,E_2,\ldots$（V235 已杀）⟹ 真正剩下的是 $$\boxed{\text{不同素数之间的关系}}$$ (2) **三分（替代 layer/non-layer）**：**A 纯乘法**（$p^aq^b=r^c$）⟹ 唯一分解退化；**B 纯统计**（Goldbach 型计数等）⟹ $$\boxed{\text{统计量不能直接产生精确零点支撑}}$$；**C 跨素数确定性关系**（$p+q=r$；$p-q=2^k$；$pq+1=r^m$；一般 $\Phi(p_1,\ldots,p_k)=0$）⟹ **additive $\times$ multiplicative prime geometry**；(3) **有限 Euler 商是否保留这种关系？** ⟹ **保留**（只涉及充分大素数的关系属尾部）⟹ $$\boxed{\text{跨素数关系不会被}\ \mathcal M_{\rm nat}\ \text{自动商掉}}$$ **"这是实质性的"**；(4) **如何进入复平面？** 乘法编码 $pq\to(pq)^{-s}$；加法 Fourier 编码 $e^{it(p+q)}$ ⟹ $$\boxed{\text{加法关系}\Rightarrow t\text{-方向};\quad \text{乘法关系}\Rightarrow\sigma\text{-方向}}$$ **"这实际上重新解释了过去大量路线为什么失败"**；(5) **$\Phi(p,q,p+q,pq)=0$** 首次可能同时耦合 $\sigma$ 与 $t$ ⟹ **"此前 V220 的 amplitude/phase 分裂恰恰把这两个方向拆开了"**；(6) **严格审计**：$(p+q)^2=p^2+2pq+q^2$ 无选择性；$p+q=r$ 只相位；$p+q=pq\iff p=q=2$ 过刚；$p+q\asymp pq$ 无无限尺度；$p+q=r^k$ ⟹ Goldbach 型（B）；$pq=r^k\pm1$ ⟹ $r^k-1=(r-1)(\cdots)$ 因子分解（A）；(7) **苛刻对象**（六条件）；(8) **第一筛选器**：$$\boxed{\partial_\sigma\partial_t\log C\ne0}\iff C\ne A(\sigma)B(t)$$ 若为零 ⟹ separable ⟹ DEAD；(9) **第二筛选器**：须内生 $\sigma(1-\sigma)$ 型平衡（**不能人为写**，否则偷放回 FE 中心）；(10) **五步链**（finite-prime invariant $\to$ cross-prime relation $\to$ nonseparable $\to$ intrinsic balance $\to\Re\rho\le\frac12$）；(11) **判词**：V235 Euler-layer 支路 DEAD，**但不把整个 Euler 商判死**；第一实验＝检查 $\partial_\sigma\partial_t\log C$；**"这一条线不再问'第 $r$ 层的坐标是什么'，而是问：不同素数之间是否存在一个同时作用于 modulus 与 phase 的非可分离算术关系？"**
+
+**§1 采纳 V235 判死**（承诺不再回头碰 $E_r$/prime-power/Euler-tail/非线性组合）✓✓
+
+**§2 三分采纳 ＋ 第一条正面确认**：有限 Euler 商**不**自动商掉跨素数关系（只改有限素数处的因子；涉及充分大素数的关系属尾部）⟹ **与 `V233` 不同** ⟹ **实质性** ✓✓
+
+**§3 采纳 $\sigma$/$t$ 二分 ＋ 给出理由**：$$\boxed{\text{加法关系}\Rightarrow t;\quad \text{乘法关系}\Rightarrow\sigma}$$ **理由**：加法结构 $\Rightarrow$ 指数和/相位 $\Rightarrow t$；乘法结构 $\Rightarrow$ Dirichlet 卷积/横坐标 $\Rightarrow\sigma$ ✓✓
+
+**§4 ⭐⭐⭐ 命题 V236-A（定理级，本档核心一）**：$C(s)=\sum_{\Phi=0}(\prod_jp_j)^{-s}$ 的解析行为（横坐标、增长阶）由**解计计数函数** $N_\Phi(X)=\#\{(p_j)\le X:\Phi=0\}$ 决定 ⟹ $$\boxed{\text{C 类}\ \text{在解析层面}\ \textbf{退回 B 类（统计）}} \Longrightarrow \text{落}\ \text{`V183`/`V188`} \Longrightarrow \textbf{不产生精确零点支撑}$$ ⭐ 例：Goldbach 型 $r_2(n)$ 的 Dirichlet 级数其零点**是其自身的，不是 ζ 的** ⟹ 要连到 ζ 须恒等式 ✓✓✓
+
+**§5 ⭐⭐⭐⭐ 命题 V236-B（核心二）**：与 ζ 零点的唯一桥是**恒等式**；而算术中这类恒等式**只有显式公式族**（$-\zeta'/\zeta=\sum\Lambda(n)n^{-s}$；$\Lambda*\Lambda$；RvM；Weil 显式公式）⟹ $$\boxed{\text{落}\ (\alpha)\ \textbf{R4/divisor}}$$ ⭐⭐⭐ **关键：唐先生 §5 期待的"同一算术关系同时耦合 $\sigma$ 与 $t$"已经存在 —— 它就是** $$\boxed{\textbf{显式公式}}$$（显式公式 ＝ 乘法侧的加法编码：$\sum_{\text{素数}}\leftrightarrow\sum_{\text{零点}}$）⟹ **所以这条路不是"要发现"，而是"已存在且即 $(\alpha)$"** ✓✓✓✓
+
+**§6 ⭐⭐⭐⭐ 第二筛选器的三分**：需内生 $\sigma(1-\sigma)$ 型平衡（不能人为写）；可能来源**只有三条**：**(甲)** 二次型内平衡 $X^2=YZ$ ⟹ Cauchy–Schwarz ⟹ **`V199`**；**(乙)** $s\leftrightarrow1-s$ ⟹ **`V229`**；**(丙)** 卷积恒等式 ⟹ **$(\alpha)$** ⟹ **三条皆落已封通道** ✓✓
+
+**§7 ⭐⭐⭐⭐⭐ 命题 V236-C（核心三，决定性）**：商内不变量 $I$ ＝ **素数集 $\mathbb P$ 上的泛函**；而 $\mathbb P$ **只有一个实例**（素数集不是变量）⟹ "跨素数关系"**不是可变的"额外结构"**，而是**唯一素数集的属性** ⟹ $$\boxed{\text{"商内关系能否产生}\ \sigma\le\tfrac12\text{"}\equiv\text{"素数集本身能否推出 RH"}}$$ ⟹ 可提取内容 ＝（i）**密度**（PNT 型，无条件）＋（ii）**关系**（统计落 B 类；精确联系须恒等式 ⟹ $(\alpha)$）⟹ $$\boxed{\textbf{无新空间}}$$ ⚠️ **这不是"又一条死路"，而是定位：商 $\mathcal Q_{\rm nat}$ 不是"新房间"，它就是素数集本身** ✓✓✓✓✓
+
+**§8 ⚠️ 对第一筛选器的诚实评估（负面）**：取最简 $C=1+2^{-s}$：$$\partial_t\log C=\frac{-i(\log2)2^{-s}}{1+2^{-s}},\qquad \partial_\sigma\partial_t\log C=\frac{i(\log2)^22^{-s}}{(1+2^{-s})^2}\ne0$$ ⟹ $$\boxed{\text{连}\ 1+2^{-s}\ \text{都通过} \Longrightarrow \text{作为筛子}\ \textbf{近乎空洞}}$$ 它只杀**纯分离型**（V220 型）；保留但**降级为弱筛** ✓✓
+
+**§9 判词 ＋ 状态表（八行）**：`V235` Euler-layer **DEAD**（采纳）｜有限 Euler 商**不商**跨素数关系（正面）｜$\sigma$/$t$ 二分 **成立**｜**C 类关系（解析层面）DEAD**（V236-A）｜**与 ζ 的桥 DEAD**（V236-B）｜**第二筛选器三来源 DEAD**｜**商 $\mathcal Q_{\rm nat}$ 的"新空间" 无**（V236-C）｜第一筛选器 ⚠️**过弱** ⟹ $$\boxed{\textbf{V236：跨素数确定性关系在解析层面退回统计；唯一的桥是显式公式；商内无新空间}}$$ ⚠️ 纪律：V236-A/C **定理级**；V236-B 中"只有显式公式族" **[结构性]**；**不**判"整个 Euler 商死"（唐先生要求）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
