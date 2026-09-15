@@ -199,3 +199,4 @@ V255	audit	parity-barrier-standalone-verification	2026-09-15T22:26:08+08:00
 V256	audit	T6-spec-is-not-a-filter-squares-layer-trivial-family	2026-09-15T22:28:52+08:00
 V257	audit	identification-wall-fixedpoint-scheme-first-round	2026-09-15T22:36:45+08:00
 V258	audit	sec7-counterexample-search-global-obstructions-live-on-value-face	2026-09-15T22:42:17+08:00
+V259	audit	finite-local-cannot-decide-offline-and-selection-law-audit	2026-09-15T22:49:31+08:00
