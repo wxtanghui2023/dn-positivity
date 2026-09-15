@@ -1354,6 +1354,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词**：$$\boxed{\textbf{V219：V218 核心发现保留；S2 的"独立零点 }1/2\text{"撤回}}$$ **准确结论**：$$\boxed{\text{存在独立的 canonical }1/2\ \textbf{尺度源};\ \textbf{但未证明它是零点指数}}$$ 三条理由：(i) S2 推导含未证等号；(ii) (B1) ⟺ RH；(iii) Epstein 反例。**保留项**：A/B 二分；`V218` 的**不变障碍（相认须归一化 → (c)）不受影响** ✓ **残余（UNINSTANTIATED）**：是否存在某矩／指数 $\mu$ 使 $\mu=\beta_*$ **可独立证明**（不用显式公式／Li-Weil／谱自伴／FE 定位）；本档未见实例 ✓
 
+### F.5cc ⭐⭐⭐⭐⭐ **V220：指数→位置转换器审计 ⟹ 乘子障碍（定理级、整族反例）＋ 聚合障碍 ⟹ "幅度→位置"整类封死**（`V220` ✓ 2026-09-15 15:46）
+
+**委托（唐先生）**：$$\boxed{\text{不要再寻找"另一个 }1/2\text{"}}$$ **"产生 $1/2$ 很容易，真正稀缺的是让这个 $1/2$ 对 $\beta$ 具有不可替代的约束力。"** 新筛选维度：$$\boxed{\text{某个内禀量 }A_X\longrightarrow\text{复平面位置 }\beta}\ \text{（而非}\ A_X\to\tfrac12\text{）}$$ 需要 $$\boxed{\mathfrak P_X:\{\text{内禀尺度数据}\}\to\mathbb C,\quad \mathfrak P_X(a)=\beta}$$ 且 $\mathfrak P_X$ **本身不能使用 $\beta$**；**第一性测试**：自然转换器＝**Mellin abscissa**（$f\asymp x^\alpha L\Rightarrow$ 边界 $\Re s=\alpha$）但 $$\boxed{\text{abscissa}\ne\text{zero location}}$$（只管奇点／收敛边界）；**须"零点专用"转换器**；**极强反例**：$$F_a(s)=F(s)(1-ae^{-cs})$$ **不改变主要增长阶**却把零点放到 $s=\frac{\log a+2\pi ik}{c}$ ⟹ $$\boxed{\text{增长指数机制全部不足}}$$ **结构分叉**：模型 $F=1+am^{-s}$ 给 $$\beta=\frac{\log|a|}{\log m},\quad \Im s=\frac{2\pi k-\arg a}{\log m}\Longrightarrow\boxed{\beta\leftrightarrow\text{幅度比},\ \gamma\leftrightarrow\text{相位}}$$ **下一道门**：$$\boxed{\mathcal A(X)=\frac{\text{两个 canonical arithmetic amplitudes}}{\text{另两个}}}$$ 须 $\mathcal A(X)=1$ **由 $X$ 内禀定理强制**（非人为归一化）；⚠️ 若只有正量／模长信息大概率掉进 `V199`；**V220 真正应计算的对象**：$$\boxed{\textbf{找 canonical complex ratio，其模长决定 }\beta}$$ 满足 R1 独立于零点／R2 比值由 $X$ 自身定理强制／R3 其值真正编码复平面横坐标／R4 与 $\zeta$ 双向识别／R5 非 Mellin abscissa／R6 非 positivity／spectrum／explicit formula／R7 不能靠归一化任意制造 $1$；**第一步可直接判死**：$R\mapsto R^*$ 或只依赖 $|R|,|R|^2,R\bar R$ ⟹ 实值二次／正性 ⟹ **回 `V199`**；只依赖相位 ⟹ 仅 $\gamma$-类 ⟹ 不能单独定位 $\beta$；**目标**：**"如果不存在，应该能够构造普适反例把整个'幅度→位置'类封掉；如果存在，那个对象才真正值得进入下一轮。"**
+
+**§2 Mellin abscissa**：唯一自然转换器；控制**全纯／收敛边界**而非零点位置 ✓✓
+
+**§3 ⭐⭐ 乘子障碍（定理级）**：$$F_a:=F\cdot(1-am^{-s})$$ **(i)** $1-am^{-s}$ 是 Dirichlet 多项式（2 项）⟹ **abscissa 不变**；**(ii)** $1-am^{-s}=0\Rightarrow m^{-s}=a^{-1}\Rightarrow$ $$\boxed{s=\frac{\log a-2\pi ik}{\log m}}\Rightarrow\Re s=\frac{\log|a|}{\log m}$$ ⭐ $a$ 自由 ⟹ **$\Re s$ 可取任意实值** ⟹ $$\boxed{\text{"增长／abscissa 数据}\mapsto\text{零点位置"}\ \textbf{不是良定义的映射}}$$ ⟹ $$\boxed{\text{增长指数／abscissa 机制}\ \textbf{全部不足}}$$（**定理级、整族反例**，不依赖 FE／欧拉积；比 `V219` 的 Epstein 更一般）✓✓✓
+
+**§4 幅度／相位分叉**：$\beta\leftrightarrow$ 幅度比、$\gamma\leftrightarrow$ 相位；并入 `V144` 层诊断：有限层 $\alpha_p\equiv1$ ⟹ **无算术相位** ⟹ **$\gamma$ 侧算术空**；strip 内局部因子确有相位但来自**取值点 $s$ 本身**（$e^{-it\log p}$），**非算术数据**（函数域 $\alpha_p=\sqrt q e^{i\theta_p}$ 才有真算术相位）⟹ **两侧皆堵** ✓✓✓
+
+**§5 ⭐⭐⭐ 聚合障碍（核心）**：单个比值 $\mathcal A$ 是**一个数** ⟹ 只能编码**一个** $\beta$ 值；但 $\zeta$ 的 $\beta$ 数据是**集合** $\{\Re\rho\}$ ⟹ 转换器必须**聚合** ⟹ 聚合幅度数据＝**渐近／增长量** ⟹ 由 §3 乘子族：渐近量**不变**而零点位置**任意可动** ⟹ $$\boxed{\textbf{幅度}\to\textbf{位置}\ \text{类}\ \textbf{DEAD}}$$ **唯一逃逸**：$\mathcal A$ **逐点** ⟹ 需 (i) 已知零点（**违反 R1**）或 (ii) 零点的**算术参数化** ⟹ (ii) 正是 `V215`／`V216`／`V217` 的**同一残留** ⟹ **无逃逸** ✓✓✓✓
+
+**§6 canonical 幅度比 ＋ 投影判据**：算术 canonical 幅度候选（$p,p^k,\log p,\Lambda(n),|a_n|,|1-p^{-s}|$）两两之比是**素数依赖的算术常数**、非单一 $\mathcal A$；"$\mathcal A=1$"型内禀强制通常来自对合／自对偶（`V148`／`V218` A 类）／正性（`V199`）／归一化（(c)）；**投影判据**：$$\textbf{(P1)}\ R\mapsto R^*\ \text{或只依赖}\ |R|,|R|^2,R\bar R\Longrightarrow\ \text{实值二次／正性}\Longrightarrow\ \text{`V199`(a)}$$ $$\textbf{(P2)}\ \text{只依赖相位}\ R/|R|\Longrightarrow\ \text{仅}\ \gamma\text{-类}\Longrightarrow\ \text{不能单独定位}\ \beta$$ ⟹ 真正困难的对象必须 $$R\in\mathbb C,\ |R|\leftrightarrow\beta,\ \arg R\leftrightarrow\gamma$$ 且对应 **$X$ 内禀产生** ✓✓
+
+**§7 判词**：$$\boxed{\textbf{V220：DEAD} —— \text{"指数／幅度}\to\text{位置"整类封死（普适反例＝乘子族）}}$$ 四条独立理由：(i) 乘子障碍（定理级）；(ii) Mellin abscissa 只管全纯边界；(iii) **聚合障碍**（单个比值只编码单个 $\beta$；$\zeta$ 的 $\beta$ 是集合 ⟹ 必须聚合 ⟹ 被 (i) 杀）；(iv) 两侧皆堵（$\gamma$ 侧算术空；$\beta$ 侧只聚合）＋两条投影判据；**未进入 RH** ✓ **残余（UNINSTANTIATED）**：一个**逐点**的 canonical 复幅度（既非聚合、非 $|\cdot|$ 型、非相位型、非 Mellin abscissa，又能**逐点**对应复平面横坐标；判据：① R1–R7；② 过 (P1)／(P2)；③ 非聚合；④ 会合处不落 (a)(b)(c)）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
