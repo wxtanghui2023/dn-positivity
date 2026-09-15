@@ -1852,6 +1852,20 @@ $$\Longrightarrow \boxed{\text{canonical }U(1)\text{-phase}\to\text{sign 的已�
 
 $$\textbf{§8 唐先生精确化（20:36）}：\text{两角对照表（接口／为什么成立／失败原因／类型）} ⟹ \textbf{torsion horn：没有连续 }\beta；\textbf{identity horn：没有独立假设};\ \textbf{严格弱前提门} $$H_{\rm new}\Longrightarrow RH,\ RH\not\Longrightarrow H_{\rm new}$$;\ ⭐\ \textbf{§5 改写}：\text{不是"还缺一个操作"，而是}\boxed{\text{寻找第三种既连续、又定号、又独立于零点结论的全局机制}}（\text{六条：连续／定号／非等价重述／非 Weil 循环／非 torsion／不以零点为输入}）;\ ⚠️\ \textbf{边界}：\text{"没有第三类"}\ \textbf{不是定理}，\text{升级须完成 canonical phase}\to\text{sign 的}\ \textbf{完备分类};\ \text{但已强于"缺 polarization"：}\textbf{知道两端各自为什么会失败} ✓
 
+### F.5da ⭐⭐⭐⭐⭐ **V245：跨领域"复谱定位机制"普查 ⟹ 七个外部机制全部落 V244 两角，无第三型**（`V245` ✓ 2026-09-15 20:42）
+
+**委托（唐先生）**：**"继续搜索所有数学和物理领域的各项研究，看看有哪些模型能够匹配我们的研究？"** —— 按 `V244` §8.3 六条筛（连续／定号／非等价重述／非 Weil 循环／非 torsion／不以零点为输入）。
+
+**两个命名角（本档核心）**：
+$$\boxed{\textbf{角 I · 模长／度量角}}：\text{定号性}＝\textbf{模长支配}／\textbf{正定度量}／\textbf{相似于 Hermitian}／\textbf{极化} \Longrightarrow \text{落 Weil 正性(VIII) 或结构性不钉实部（}`V227`-A）$$
+$$\boxed{\textbf{角 II · 离散／扭角}}：\text{输出}＝\mathbb Z／\mathbb Z/N／\mu_N／\text{半整数绕数} \Longrightarrow \textbf{离散，不带连续}\ \beta（`V237`-A）$$
+
+**七机制逐门**：**M1 Bridgeland 稳定性**（中心荷相位定序；支撑性质 ⟺ ∃$Q$ 使 $\ker Z$ 负定且 $Q(v(E))\ge0$；等价 $\|Z(E)\|\ge C\|\lambda(E)\|$；Bayer 短证明给 $Q(w,w)=|Z(w)|^2/C^2-\|w\|^2$ ⟹ **正性由中心荷模长生成、非独立正性**；且序来自 $\arg Z$、正性来自 $|Z|$ ⟹ 住模长侧 ⟹ 由 `V227`-A，$\sup\Re z$ 不是 $\{|z|\}$ 的函数；$\ker Z$ 负定＝signature ⟹ `V187`）⟹ **非第三型**；**M2 单环定理**（$R$-对角算子的 Brown 测度支撑在**单环**＝模长轨迹 ⟹ 正是 `V227` §4 的 char-$p$ 侧；char-$p$ 临界轨迹＝圆，char-$0$＝竖直线 ⟹ 移植结构性失败）⟹ **非第三型**；**M3 PT／赝厄米**（Mostafazadeh：实谱 ⟺ 赝厄米 ⟺ (1) 谱实 **或** (2) 复特征值成共轭对且重数相同 ⟹ 正性＝正定度量 ⟹ (VIII) Weil 族；⭐**条件 (2) 对 $\zeta$ 自动成立**（$\xi$ 实系数 ⟹ 零点集对共轭封闭）⟹ 对 $\zeta$ **零排除力**，与 `E151` 一致）⟹ **非第三型**；**M4 非 Hermitian 拓扑**（⭐**line gap ⟹ Hermitianization**（可经旋转取实/虚轴垂直，且此时可经相似变换 flatten 到实/虚轴上 ⟹ 角 I）；**point gap ⟹ 谱绕数** $v\in\mathbb Z$（另有 $w=1/2$）⟹ 角 II；**"线只在旋转下定义"独立重现 `V218` S1/S3 ＋ `V227`-A**）⟹ **非第三型，但它自身给出与 V244 完全相同的二分＝本轮最强外部证据**；**M5 Gasymov**（复周期势（单侧 Fourier）⟹ 谱＝$[0,\infty)$；机制由**单侧／支撑**条件驱动 ⟹ 对 $\zeta$ 的对应物＝`V162` 承重墙；且作用于 $\mathbb R$ 上周期 Schrödinger 算子 ⟹ **宿主缺失**；Papanicolaou arXiv:2409.10266 自陈"**conjecture** a characterization" ⟹ 全刻画是**猜想**⚠️；`PHYSICS-FRONTIER` §1-D 已预警**范数型界**）⟹ **非第三型**；**M6 Frobenius／Arakelov**（已封：模长轨迹；`ESC2` no common carrier；G9 尺度失败）；**M7 "RH as a Stability Condition"**（philarchive NEMTRH：抓取失败＋非数学同行评审 ⟹ 仅登记、可信度待核⚠️；且由 M1 判据必落模长/相位侧）。
+
+**残差（比 V244 更窄，UNINSTANTIATED）**：$$\boxed{\text{非模长／非度量、非离散、能携带 }\Re\rho\ \text{的 phase}\to\text{location 机制}}$$ —— **`V244` 八类 ＋ `V245` 七类 ＝ 十五类，无一满足**。
+
+**边界**：§2 为 **[结构性] 逐门审计，不是不可能性定理**；"两角"是**命名类，不是分类定理**；M5 全刻画是猜想；M7 抓取失败、来源待核；"无第三种"引自已读综述、非穷尽检索。
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
