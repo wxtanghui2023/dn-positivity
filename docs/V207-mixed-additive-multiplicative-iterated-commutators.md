@@ -70,7 +70,7 @@ D4 & \text{临界值依赖人为归一化} & \boxed{\textbf{触发}}\ \（\text{
 D5 & \text{等价于显式公式／Mertens／Liouville} & \text{不需用到}\\
 D6 & \text{"谱半径"只是人为构造的算子范数} & \boxed{\textbf{触发}}\ ✓\\
 \end{array}$$
-$$\textbf{关于}\ \lambda_*\（\text{唐先生}\ §11）}：\text{自然归一化下}\ \|C_k\delta_1\|\ \text{为}\ n(\log n)^{k-1}\ \text{型的}\ \textbf{对数幂} ⟹ \lim_k\|C_k\|^{1/k}\to\boxed{1}\ \text{平凡}$$
+$$\textbf{关于}\ \lambda_*\（\text{唐先生}\ §11）：\text{自然归一化下}\ \|C_k\delta_1\|\ \text{为}\ n(\log n)^{k-1}\ \text{型的}\ \textbf{对数幂} ⟹ \lim_k\|C_k\|^{1/k}\to\boxed{1}\ \text{平凡}$$
 $$\qquad\Longrightarrow\ \text{无内生临界尺度} ⟹ D4／D6\ \textbf{成立} ✓✓$$
 
 ---
