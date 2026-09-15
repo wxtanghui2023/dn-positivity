@@ -342,6 +342,16 @@ $$\qquad\Longrightarrow\ \boxed{\text{C6.6 不可判 DEAD，但被压到两处�
 $$\qquad ⚠️\ \text{边界}：\text{(a) 为 [类型级]（Euler 积收敛域）＋[层诊断一致]};\ \text{(b) 的"唯一途径"为 [结构性] 非定理};\ \text{本档不证明 C6.6 封死}$$
 $$\qquad\textbf{下一步三选}：①\ \text{形式化 (b)"completeness}\Longrightarrow\text{需 }N_\zeta(T)";\ ②\ \text{审 (a) 反面：能否造只用完成结构而不用显式公式的 soundness？};\ ③\ \text{若 (a)+(b) 成立} ⟹ \text{整条 C6 线}\textbf{并入既有主线}（\text{与 }A1/A3/V157\text{-}⑤\ \text{同墙}）$$
 
+### F.5u ⭐⭐⭐⭐⭐ **C6.6 → A1/A3 的等价性审计（含 V158(b) 撤回）**（`V159` ✓ 2026-09-15 10:42）—— **撤回｜谱双射｜并轨骨架｜最终分叉**
+
+$$\textbf{① 撤回 }V158\text{(b)} ✗✓：Z_\zeta-\tfrac12\subseteq\Lambda_M\ \textbf{不逻辑上必然要求先算}\ N_\zeta(T)\ \text{—— 可能存在}\textbf{结构定理}\ \Phi:\Lambda_M\xrightarrow{\sim}Z_\zeta-\tfrac12\ \text{直接证}\ \zeta(\tfrac12+\Phi(\lambda))=0\ \text{及反向存在性},\ \text{此为}\textbf{结构性双射证明}\ \text{未必先用 RvM} ⟹ \boxed{\text{completeness}\not\Rightarrow\text{必须用 }N_\zeta(T)};\ \text{故"需 }N_\zeta(T)\text{／唯一途径是论证原理"}\textbf{降级为结构性观察},\ \text{正确形式}\ \boxed{\text{计数路线}\subset C}$$
+$$\textbf{② C6.6 压缩} ✓✓：\text{设}\Phi:\Lambda_M\to Z_\zeta-\tfrac12\ \text{内部双射};\ (S)\ \forall\lambda:\zeta(\tfrac12+\Phi(\lambda))=0;\ (C)\ \forall\rho\exists\lambda:\Phi(\lambda)=\rho-\tfrac12 ⟹ \boxed{\Lambda_M\xrightarrow{\Phi}\cong Z_\zeta-\tfrac12}\ \text{本身已是}\textbf{完整谱识别定理} ⟹ \boxed{\text{C6.6}＝\textbf{非解析、非循环谱双射}}$$
+$$\textbf{③ 三层必须严格分开}：\text{层 1 逻辑}：\Lambda_M\subset i\mathbb R\ \text{时}\ C6.6+\text{C6.5 purity}\Rightarrow\mathrm{RH};\ \text{但}\ \mathrm{RH}\Rightarrow C6.6\ \textbf{不成立} ⟹ \textbf{C6.6 非逻辑等价于 RH};\ \text{层 2 载体}：\text{若 (*) 唯一有效工具＝trace}\to\text{explicit formula}\to\text{Li/Weil positivity}\ \text{则}\ C6.6\subseteq A1/A3\ \text{（}\textbf{仍需证明}）;\ \text{层 3 新情况}：\Phi\ \text{证明}\textbf{完全不用}\ \text{explicit formula／}\xi\ \text{论证原理／Mellin／L-function／Hadamard／Li-Weil positivity} ⟹ \textbf{真新类}$$
+$$\textbf{⭐ ④ 并轨骨架（本档新增）}：\text{(i)–(vi) 范式}\（\text{trace/显式公式／}\xi\ \text{论证原理／Mellin／L-函数／Hadamard／Li-Weil positivity}\）\textbf{均作用于同一对象}\ \text{Weil 泛函族}\ W(f)=\sum_\rho\hat f(\rho)-(\text{archimedean})-(\text{prime}) ⟹ \text{任一经 (i)–(vi) 的 (*) 证明其}\textbf{有效内容}\text{＝对 }W\ \text{的正性／消失断言} ⟹ \boxed{W\ \text{正性}\equiv A3};\ \text{取 Li 检验族}\Rightarrow\boxed{\lambda_n\ \text{型}\equiv A1} ⟹ \text{须控制}\textbf{统一}\text{的 Weil 正性} ⟹ \text{已知无条件输入不足（}T^2\ \text{律／预算交叉／比例天花板 0.682）} ⟹ \boxed{\text{若 C6 谱双射载体属}\textbf{已知证明范式}\text{，则并入 }A1/A3}\ \text{（}\textbf{[结构性]} ⚠️,\ \text{需范式穷尽性}）$$
+$$\textbf{⭐ ⑤ 最终分叉 ＋ §E.4 合法化}：\boxed{\text{谱双射依赖 ζ 解析结构}\Longrightarrow A1/A3/C\ \text{旧墙};\ \text{存在}\textbf{独立结构性双射}\Longrightarrow\textbf{真正的新 C6}} ⟹ \text{比 }V158\ \text{更严格，且}\textbf{避免}\text{把"没找到其他证明"误写成"没有其他证明"（同 }V136/V144\ \text{纪律）} ⟹ \text{完成后 }§E.4\ \text{可}\textbf{合法地}\text{问}\ \boxed{\textbf{C6 是否真的构成第七种证明类，还是只是 }A1/A3\ \text{的新表示？}}$$
+$$\qquad ⚠️\ \text{边界}：§3 并轨骨架为 [结构性] 非定理（需范式穷尽性）；§4 分叉为 [结构性]；"合法化 §E.4 最后问题"为 [制度级]}$$
+$$\qquad\textbf{下一步三选}：①\ \text{攻唯一开口：}\textbf{能否构造不用六大工具的结构性双射 }\Phi？\（\text{真正的第七类候选位}）;\ ②\ \text{把"已知范式穷尽性"形式化（并轨骨架}\to\text{定理）};\ ③\ \text{审 (i)–(vi)}\to W\ \text{归约是否有}\textbf{不经 }W\ \text{的例外} ✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
