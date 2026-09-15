@@ -619,6 +619,22 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V178 预登记）**：① 攻残余 1（单位环 vs 域：$\Psi$ 落在环外时 $F=c/\Psi$ 还算不算"算术定义"）② 攻残余 2（非有理函数型算术 $\Phi$）
 
+### F.5an ⭐⭐⭐⭐⭐ **环级 Hilbert 90 审计：$H^1(C_2,R_\pm^\times)\neq1$（奇偶×符号）＋ 支撑闭合**（`V178` ✓ 2026-09-15 11:59）
+
+**① 三层次判据化（唐先生）**：**Level 1** 域 coboundary $\Phi=\Psi/\iota\Psi$（$\Psi\in K^\times$；`V177` 已证 $H^1(K^\times)=1$）；**Level 2** 环 coboundary（$\Psi\in R^\times$ ⟹ $F=c/\Psi$ 完全留在允许类内 ⟹ **真正 F-leak**）；**Level 3** 可接受扩张 coboundary（$\Psi\in K^\times\setminus R^\times$ 但 $1/\Psi$ 仍属允许类 ⟹ 不能简单 DEAD）。**关键缺步**：$\Psi\in K^\times\not\Rightarrow\Psi$ 是允许的算术对象 ⟹ `V177` 只给**域层面** coboundary，**不自动**给允许类中的走私。
+
+**② V178-A：定死环（第一行）**：$$R_\pm:=\mathbb Q[X_p^{\pm1}:p\in\mathcal P]=\mathbb Q[\mathbb Z^{(\mathcal P)}]$$（Laurent 多项式环／群环）；$R_+:=\mathbb Q[X_p]$。**单位群（经典）**：$R_+^\times=\mathbb Q^\times$；$$\boxed{R_\pm^\times=\{cX^\alpha:\ c\in\mathbb Q^\times,\ \alpha\in\mathbb Z^{(\mathcal P)}\ \text{有限支撑}\}}$$（无挠阿贝尔群上的群环，系数为域 ⟹ 单位只有系数单位 × 单式）。
+
+**③ V178-B：环级 Hilbert 90 不成立**（本档核心计算）。设 $\Phi=cX^\alpha\in R_\pm^\times$：$\iota(X^\alpha)=(\prod_pp^{-k\alpha_p})X^{-\alpha}$ ⟹ $\Phi\iota(\Phi)=c^2(\prod_pp^{-k\alpha_p})$ ⟹ **cocycle 条件** $c^2=\prod_pp^{k\alpha_p}$；而取 $\Psi=dX^\beta$ 得 $$\frac{\Psi}{\iota\Psi}=\Bigl(\prod_pp^{k\beta_p}\Bigr)X^{2\beta}$$ ⟹ **环 coboundaries** $=\{(\prod_pp^{k\beta_p})X^{2\beta}\}$ ⟹ $\Phi=cX^\alpha$ 是环 coboundary **iff** $\alpha\in2\mathbb Z^{(\mathcal P)}$（**奇偶条件**）且 $c=\prod_pp^{k\alpha_p/2}$（**符号条件**，因 cocycle 只给 $c=\pm\prod_pp^{k\alpha_p/2}$）⟹ $$\boxed{H^1(C_2,R_\pm^\times)\neq1}\ \text{（障碍＝奇偶×符号）}$$ **具体反例**：$\Phi=-1$ 是 cocycle（$(-1)(-1)=1$）但**不是**环 coboundary（需 $\beta=0$ 且 $1=-1$）；⚠️ 而它在**域**层面**是** coboundary（$\Psi=X_p-p^{-k}X_p^{-1}\in K^\times$，$\iota(\Psi)=-\Psi$）—— 但 $\Psi\notin R_\pm^\times$ ⟹ **Level 1 与 Level 2 的差别在此具体化** ✓✓。
+
+**④ ⭐ 支撑论证（本档第二个核心，杀尽非 coboundary 单项式）**：设 $\Phi=cX^\alpha$（任意）。方程 $F=\varepsilon\Phi\,\iota(F)$ 给 $$\operatorname{supp}(F)\subseteq C\cap(\alpha-C)=\{\delta:0\le\delta\le\alpha\ \text{（逐分量）}\}\ \textbf{有限}$$ ⟹ $F$ 是**有限 Dirichlet 多项式** ⟹ 零点集**有限** ⟹ $\operatorname{Spec}(F)$ **不可能** $=Z_\zeta-\tfrac12$ ⟹ $$\boxed{\text{单项式 }\Phi\ \text{（无论是否 coboundary）}\Longrightarrow\operatorname{Spec}(F)\ \text{有限}\Longrightarrow\textbf{非 S}}$$ 特别 $\Phi=-1$：$C\cap(-C)=\{0\}$ ⟹ $F\equiv$ const（零谱为空）。
+
+**⑤ `V177` 结论 A 修正为析取式**：算术 $\Phi$ ⟹ **(I) 环 coboundary** ⟹ $F=c/\Psi$（方程退化为定义）；**或 (II) 环非 coboundary** ⟹ $\operatorname{supp}(F)$ 有限（零谱有限）⟹ $$\boxed{\text{两路皆不通向}\ \zeta}\ \text{—— }S\ \text{在 Laurent 多项式环层面闭合}$$ ⚠️ `V177` 的域级 $H^1=1$ 仍正确；本档补上"**域 coboundary $\neq$ 环 coboundary**"这一步，并把结论从"走私"改为"走私**或**零谱有限"（后者更强）。
+
+**⑥ 残余（精确，OPEN，不杀）**：由 §4 单项式（＝ $R_\pm^\times$ **全部**元素）已被杀光 ⟹ 残余只能是**非单项式单位**，须在**扩张环**（如 Laurent 级数环 $\mathbb Q[[X_p]][X_p^{-1}]$，单位 $=\{X^\alpha u:u(0)\neq0\}$）中，并要求：算术／$\Phi\iota(\Phi)=1$／**非 coboundary**／**支撑可无限**／唯一选出 ζ 且不编码 ζ。⟹ **具体代数问题：在 Laurent 级数环中解无限方程组并检查非 coboundary 且无限支撑**。
+
+**下一步（V179 预登记）**：① 攻残余（扩张环中的非单项式单位）② 把 §4 支撑论证升级为一般定理（"任何使 $F$ 支撑有限的平衡因子 ⟹ 非 S"）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

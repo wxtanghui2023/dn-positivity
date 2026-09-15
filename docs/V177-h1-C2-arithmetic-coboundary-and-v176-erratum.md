@@ -171,3 +171,12 @@ $$\text{算术}\Phi\ \Rightarrow\ \text{coboundary}\ \Rightarrow\ F=c/\Psi\ \Rig
    ③ H¹(C₂,K_arith^×)=1（Artin＋Hilbert 90）✓✓；④ 结论 A：算术 Φ ⟹ coboundary ⟹ F=c/Ψ（V176(iii) 正式闭合）✓✓✓；
    ⑤ Γ ∉ ℚ(X_p) 与"必须非算术"一致 ✓✓；⑥ 残余两点 ✓
 ```
+
+---
+
+## §8 精化注记（`V178` 追问后补 · 2026-09-15 12:0x ✓）
+
+$$\text{本档 §4}\ \textbf{结论 A}\ \text{成立，但它是}\textbf{域级}\text{结论（}K_{\rm arith}^\times\text{）；}\textbf{不等价于}\text{环级结论} ✗✓$$
+$$\qquad\Longrightarrow\ \text{`V178` 已算：}H^1(C_2,R_\pm^\times)\neq1\ \text{（}R_\pm=\mathbb Q[X_p^{\pm1}]\text{；障碍＝奇偶×符号；}\Phi=-1\ \text{即反例）} ✓✓$$
+$$\qquad\Longrightarrow\ \text{故 §4 的"走私"结论须}\textbf{改写为析取式} ✓✓：\text{算术 }\Phi\Longrightarrow\ (\text{环 coboundary}\Longrightarrow F=c/\Psi\ \text{＝定义})\ \textbf{或}\ (\text{环非 coboundary}\Longrightarrow\operatorname{supp}(F)\ \text{有限}\Longrightarrow\ \text{零谱有限})$$
+$$\qquad ⚠️\ \text{本档 }H^1(K^\times)=1\ \text{仍正确};\ \text{只是}\ \textbf{域 coboundary}\not\Rightarrow\textbf{环 coboundary} ✓\ \text{（具体化于}\ \Psi=X_p-p^{-k}X_p^{-1}\notin R^\times）$$
