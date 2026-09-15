@@ -87,3 +87,47 @@ $$\text{我在 }\text{`V252`}\ \S4\ \text{写}：\text{"本文产出}\ \textbf{�
 $$\qquad \text{事实}：\text{#1196／#1217／#164／Banks–Martin 都是}\ \textbf{此前已陈述的猜想}（\text{#1196 为 1966 年}）;\ \text{2026 年新的是}\ \textbf{证明与技术}，\ \textbf{不是不等式本身} ✓$$
 $$\qquad \text{更正表述}：\textbf{"该类产出的是}\ \textbf{已知形状的、新证的无条件定理}\text{"};\ \text{它是否算 `V201` 所要求的"新无条件输入"，}\textbf{取决于 `V201` 的定义是否把"已知形状的新定理"计入} ⚠️$$
 $$\qquad \Longrightarrow \text{本档 }\S7\ \text{判定：}\textbf{不打开 `V201` 开口}（\text{因为它是}\ \textbf{同类型} \text{信息的新定理，不是}\ \textbf{新类型} \text{的输入}）;\ \text{但}\ \textbf{这一点应作为 `V201` 判据的一处收紧登记} ✓$$
+
+---
+
+## §9 ⚠️ **勘误与最终版**（唐先生 2026-09-15 22:06；逐字采纳，共七条）
+
+$$\textbf{T1（突出内生性 —— 单列）}：\boxed{\text{该方法的尺度 } c=1 \text{ 是由其收敛性}\textbf{内生决定} \text{的，而不是人为选择}} ✓✓✓$$
+$$\qquad \text{（此点应从"}\sigma=1\ \text{密度面"的叙述中}\textbf{单独抽出} \text{，因为它是}\ \textbf{机制级} \text{事实}）$$
+
+$$\textbf{T2（收紧"必须引入抵消"）}：\text{我原写"要把结论搬到}\ \tfrac12\ \text{就必须引入抵消——而抵消信息就是零点位置信息"，}\textbf{过强} ⚠️$$
+$$\qquad \text{准确版本}：\boxed{\text{若}\ \textbf{保持同一正项尾和机制}，\text{则搬到}\ \tfrac12\ \textbf{必须改变机制}，\text{不能只改变权指数}} ✓✓✓$$
+$$\qquad \text{理由：还有另一条路}\ \text{正项密度}\to\text{带符号／复权重}\to\text{条件抵消};\ \textbf{这种抵消可能携带比普通密度更多的信息} ✓$$
+$$\qquad \qquad \text{但一旦它}\ \textbf{真能精确产生}\ \beta=\tfrac12，\ \text{就必须继续检查它是否}\ \textbf{偷偷进入} \text{显式公式／零点统计／等价 RH criterion} ⚠️$$
+$$\qquad \Longrightarrow \text{V253 关闭的是}\ \boxed{\text{positive-density-tail transport}}，\ \textbf{不是所有可能的"密度}\to\text{临界线"机制} ✓✓✓$$
+
+$$\textbf{T3（更强的数学表述 —— 可直接推出，本档采纳）}：\text{设}\ w_a\ge0\ \text{且不发生额外抵消},\ \text{则临界指数}\ \textbf{由收敛横坐标决定}：$$
+$$\qquad \sigma_c=\inf\Big\{\sigma:\ \sum_a\frac{w_a}{a^\sigma\log a}<\infty\Big\} ✓$$
+$$\qquad \text{要得到}\ c=\tfrac12\ \text{的}\ \textbf{同型有限尾}，\ \text{必须让权重本身满足}\ \textbf{足够强的衰减}：\ w_a\ll a^{-1/2+\varepsilon} ✓$$
+$$\qquad \Longrightarrow \textbf{这不是"把密度面从}\ 1\ \text{搬到}\ \tfrac12\text{"}，\ \textbf{而是重新植入了一个新的}\ a^{-1/2}\ \textbf{尺度} ✓✓✓$$
+$$\qquad \Longrightarrow \boxed{\text{若}\ \tfrac12\ \text{已经出现在权重中},\quad \tfrac12\ \text{是}\textbf{输入}，\ \textbf{不是输出}} \qquad（\text{与}\ \text{`V220`}\ \text{的 multiplier test 接上}）✓✓✓✓$$
+
+$$\textbf{T4（V253 实际完成的是"三层封口" ＋ 三个逃逸入口）}：$$
+$$\qquad \boxed{\text{正项密度}\ \longrightarrow\ \sigma=1\ \text{尾和}\ \longrightarrow\ \text{不能通过单纯改指数得到}\ \sigma=\tfrac12} ✓$$
+$$\qquad \text{企图逃逸只有三种}：$$
+$$\qquad \qquad \textbf{A. 改权重}\quad w_a\sim a^{-1/2}\ \Longrightarrow\ \tfrac12\ \textbf{已经进入输入} \Longrightarrow \text{`V220`／`V218` 型问题} ✓$$
+$$\qquad \qquad \textbf{B. 引入符号抵消}\quad \sum_a\varepsilon_a a^{-s}\ \Longrightarrow\ \text{必须解释抵消的}\ \textbf{canonical arithmetic source} \Longrightarrow \textbf{进入 `V162`/A3 的真正承重墙} ✓$$
+$$\qquad \qquad \textbf{C. 引入非局部相关}\quad \sum_{a,b}K(a,b)a^{-s}b^{-t}\ \Longrightarrow\ \text{必须证明该相关结构}\ \textbf{不是统计／显式公式的重新编码} \Longrightarrow \text{`V236`／`V241` 已把大部分自然候选压回} ✓✓$$
+
+$$\textbf{T5（更正"非 A 且强于 B"）}：\text{该表述}\ \textbf{混淆了两个维度} ⚠️;\ \text{准确版}：$$
+$$\qquad \boxed{\text{它不是 A 型新 RH 输入}};\qquad\qquad \boxed{\text{它提供了一个比 B 型"新无条件定理"}\textbf{更强的结构性排除}} ✓✓$$
+$$\qquad \text{因为它不仅说"这个定理不够 RH"，而是}\ \textbf{解释"为什么整个正项尾和的尺度被锁在}\ \sigma=1\text{"} \Longrightarrow \textbf{这是"机制级"信息，不是"定理强弱"} ✓✓✓$$
+
+$$\textbf{T6（最终压缩版 —— 逐字采纳）}：$$
+$$\qquad \boxed{\begin{aligned}&\frac{1}{a^c\log a}=\int_c^\infty a^{-s}ds;\\ &\text{正项尾和的临界尺度由收敛半平面决定};\\ &c=1\ \text{给出有限尾量};\qquad c=\tfrac12\ \text{的同型正项尾发散};\\ &\therefore\ \text{不能靠指数替换把该机制迁移到}\ \tfrac12.\end{aligned}} ✓✓✓$$
+$$\qquad \text{进一步}：\boxed{\text{若强行得到}\ \tfrac12,\text{ 必须增加}\ \textbf{权重}、\textbf{抵消} \text{或}\ \textbf{非局部相关}}$$
+$$\qquad \qquad \text{其中：}\textbf{权重} \Longrightarrow \tfrac12\ \text{已进入输入};\qquad \textbf{抵消} \Longrightarrow \text{进入}\ \beta\text{-sensitive cancellation};\qquad \textbf{相关} \Longrightarrow \text{必须通过独立的 arithmetic bridge} ✓$$
+
+$$\textbf{T7（链）}：\text{`V250`／`V251`／`V253` 连起来}：\boxed{\text{canonicality}\to\text{splitting}\to\text{phase}\to\text{density scale}} ✓$$
+$$\qquad \text{目前}\ \textbf{所有自然结构都在把信息导向}\ \sigma=1，\ \textbf{而不是}\ \sigma=\tfrac12 ✓✓✓$$
+
+$$\textbf{§9 判词（采纳唐先生）}：\boxed{\textbf{V253}＝\text{CLOSED（}\textbf{针对该正项密度／尾和机制}）,\ \textbf{不升级为"所有密度机制 CLOSED"}} ✓✓$$
+
+$$\textbf{§9 登记（收紧后的真正硬问题 —— 本档最高优先）}：$$
+$$\qquad \boxed{\textbf{有没有一个 canonical arithmetic source，能产生}\ \textbf{真正的、非输入式的} \text{ signed cancellation}，\ \text{并且其}\ \textbf{cancellation threshold 恰好锁定}\ \tfrac12\ \text{？}} ✓✓✓✓$$
+$$\qquad \text{若}\ \textbf{没有} \Longrightarrow \text{这才会真正把}\ \text{`V162`/A3}\ \text{的承重墙从"目前最大障碍"推进到}\ \textbf{一个可证明的结构性障碍} ✓✓✓$$
