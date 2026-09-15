@@ -11,6 +11,19 @@
 > **① 机制 II 门（`V198`）**：走「globalization obstruction」的提案，先跑 `docs/V198-mechanism-II-closure-gate-executable-restart-criteria.md` §2 六条；
 > **② A1／A3 门（`V201`）**：欲重开正性锥源的提案，先跑 `docs/V201-A1A3-restart-gate-protocol-only.md` §1–§2（五条件＋四类还原判据＋换名清单）；
 > **任一不满足 ⟹ 立即停止、不进入推导**。A1／A3 ＝ **定义域内收口**（`V200`，表述已收紧）；⚠️ **不自动开新线** ✓
+>
+> ## 🛑 **第三道：V242 程序性终局判定（必读 ✓ 2026-09-15 18:38）**
+> **`docs/V242-terminal-verdict-correspondence-collapse-and-search-space-exhaustion.md`**
+> **结论 ✓**：截至 `V242`，**内部机制线（`V185`–`V241`）＋ 外部几何／correspondence 层级（`V242`）皆已坍缩** ⟹
+> $$\boxed{\textbf{当前框架下，本程序的搜索空间已耗尽}}$$
+> **统一原因**：所有机制最终都作用于**同一个对象** —— $\zeta$ 的**迹／显式公式／正性通道** ✓；
+> "外部几何"在有限域有效，靠**基域**提供的 (a) 元素级 Frobenius ＋ (b) intersection pairing（Hodge 指标定理）；
+> **二者在 $\mathbb Z$ 侧无 canonical 替代**（(a) 退化为共轭类／Chebotarev 统计；(b) 退化为迹／Weil 正性）✓
+> **关键古典事实**：① $\mathbb Q$ 的 $\mathrm{Frob}_p$ 是**共轭类**（非元素）⟹ **共轭类不能复合** ⟹ 无 canonical global Frobenius；
+> ② **Lefschetz**：$(C\circ D)\cdot\Delta_X=\mathrm{tr}(C_*D_*)$ ⟹ **intersection multiplicity ＝ trace** ⟹ correspondence 路线只是迹路线的几何语言 ✓
+> **⟹ 任何欲重开本线的提案，必须先给出以下任一项（框架外输入）**：
+> **(a)** 严格的 $\mathbb F_1$-基础；**(b)** canonical polarization 的**构造**；**(c)** 一个被 $\mathbb Z$ 的**泛性质唯一迫出**的几何对象（即第一箭头为**唯一性定理**，而非"选择"）；
+> **三者皆无 ⟹ 不得重启，不得以换包装方式继续（不再制造"又一个候选"）** ✓
 > **任何声称走「机制 II（globalization obstruction）」的提案，开工前先跑 `docs/V198-mechanism-II-closure-gate-executable-restart-criteria.md` §2 六条**；
 > **任一不满足 ⟹ 立即停止、不进入推导**。canonical 分支已实算收口至 $0$／$\mathrm{Br}[N]$；下一站 ＝ **A1／A3** ✓
 
