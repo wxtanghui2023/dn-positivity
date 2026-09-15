@@ -68,7 +68,7 @@ $$\qquad ⚠️\ \text{这一形式}\ \textbf{新于} \text{"缺 polarization"}�
 
 ## §8 判词 ＋ 状态表 ＋ 边界
 
-$$\boxed{\textbf{V246：两刀定理级证实};\ \textbf{角 I 被 KV 精确刻画为"双线性可表示的正性"};\ ⭐\textbf{第三型存在}（Choi 非可分解正映射）⟹ \textbf{唐先生三分律为假};\ \textbf{"两角"升级为"三角"};\ \textbf{III 的障碍＝宿主／识别而非类型}} ✓✓✓$$
+$$\boxed{\textbf{V247：两刀定理级证实};\ \textbf{角 I 被 KV 精确刻画为"双线性可表示的正性"};\ ⭐\textbf{第三型存在}（Choi 非可分解正映射）⟹ \textbf{唐先生三分律为假};\ \textbf{"两角"升级为"三角"};\ \textbf{III 的障碍＝宿主／识别而非类型}} ✓✓✓$$
 
 | 项 | 内容 | 级别 |
 |:--|:--|:--|
