@@ -1886,6 +1886,22 @@ $$\boxed{\textbf{角 II · 离散／扭角}}：\text{输出}＝\mathbb Z／\math
 
 **§8 边界**：经典结果（$U(1)$ 不变量理论、$U(1)$-torsor、Koecher–Vinberg、Choi 定理、正映射锥自对偶仅在 $(2,2),(2,3),(3,2)$）**均凭记忆引用、未逐条核对原文** ⚠️；§3／§6／§7 为 **[结构性]**；"∃ 第三型"是数学事实，但**"它能否服务 RH"完全未触及**（宿主缺失）
 
+### F.5dc ⭐⭐⭐⭐⭐ **V248：锥分离（cone separation）的判别性判定 ⟹ ⚠️两处勘误采纳 ＋ ⭐⭐⭐⭐命题 V248-A：判别锥必自对偶 ⟹ 判别＝单个二次型 ⟹ 角 I ⟹ 锥分离路线定理级关闭**（`V248` ✓ 2026-09-15 21:05）
+
+**委托（唐先生）**：**"必须立即攻击第 8 条"** ＋ **两处勘误**：**"正映射锥不是双线性可表示"$\ne$"无法由任何双线性对象描述"**（Choi 矩阵表明仍生活在有限维线性空间；positive vs completely positive 是**锥的几何性质不同**）⟹ 应写成 $$\boxed{K_{\rm III}\ \text{不是由单一 PSD quadratic form 刻画的自对偶锥}}$$ ＋ **新操作：正性锥的二阶化（cone separation）**（研究 $CP_n\subsetneq Pos_n$ 的严格包含）＋ 目标形式 $\Re\rho=\frac12\iff A_\rho\in CP_n$（或反向）＋ 要求**单边 β-敏感性** ＋ 第一道生死门＝直接做 algebraic test ＋ 最终二分：能 ⟹ 第一条真正不同于 Weil 的路线；不能 ⟹ 证明任何有限维 III 型 realization ⟹ FE-even 或 value-face
+
+**§0 两处勘误采纳**：$$K_{\rm III}\ \text{不是由单一 PSD quadratic form 刻画的自对偶锥};\qquad \text{第三型}＝\text{同一线性宿主中}\ \textbf{严格不同的正性锥}\（CP_n\overset{\rm Choi}{\longleftrightarrow}PSD(M_n\otimes M_n),\ CP_n\subsetneq Pos_n）$$
+
+**§1 锥间隙结构（定理级，Choi）**：$CP_n$ 经 Choi **就是 PSD 锥 ⟹ 自对偶**；$Pos_n$＝块正（**检验只在积向量 $\xi\otimes\eta$ 上**）⟹ 检验锥＝**乘积锥（非自对偶）**⟹ 这正是 `V246` 中 $n\ge3$ 正映射锥非自对偶的根源；差别＝**"检验向量锥是否自对偶"**
+
+**§2 algebraic test 执行 ＋ ⚠️一处诚实更正**：FE 对合在 $(\beta,\gamma)$ 上为 $\iota(\beta,\gamma)=(1-\beta,\gamma)$（竖直线反射）；canonicity ⟹ 条件集 $\iota$-不变；**但 FE-对称并不排除条件集恰为临界线（直线本身自对称），只排除单边集** ⟹ 唐先生"$P_j$ 对称 ⟹ 无法选边"**作为判据不成立** ⚠️；真障碍＝**精确性**（`V218` §5／`V215`(c)：钉到坐标值须 canonical 归一化）＋ `V229`-A（单边界不是资源）
+
+**§3 ⭐⭐⭐⭐ 命题 V248-A（定理级；只需 Choi ＋ 锥自对偶 ＋ 锥对偶初等事实）**：设条件形如 $\Re\rho=\frac12\iff A_\rho\in K$ 且 $K$ 要能**加锐**；则 $K$ **必须自对偶**；而 $K=CP_n$ 由 Choi 即 PSD 锥 ⟹ $$A_\rho\in CP_n\iff\tilde A_\rho\succeq0\iff\langle\psi,\tilde A_\rho\psi\rangle\ge0\ \forall\psi$$ ⟹ **"$\Re\rho=\frac12\iff A_\rho\in CP_n$" 逐字就是"某个由算术数据构造的二次型半正定" ⟹ 二次型正性条件＝角 I（Weil 正性的形状）**；且 $Pos_n\supsetneq CP_n$ 是**更弱**的锥 ⟹ "$\in Pos_n$" 比 "$\in CP_n$" 更松 ⟹ **用非自对偶锥只能放松判据、不能加锐** $$\Longrightarrow \boxed{\text{锥分离不能作为加锐工具};\ \text{第三型不能充当判别谓词}}$$ **直观**：非自对偶性＝缺少对偶描述；而要判定／见证／排除**必须用对偶对象** ⟹ 非自对偶锥无法给出尖锐判据；能给出尖锐判据的（$CP_n$）必自对偶 ⟹ 必二次型。（等价说法，本档推论：因 $CP_n$ 自对偶，$A\notin CP_n$ 总由**单个 PSD witness** 见证 ⟹ "非 CP"本身是二次型事实）
+
+**§4 衔接**：与 `V242`-D（(iii) 就是 Weil 正性）／`V199`(a)／`V244`(VIII)／`V229`-A／`V218` §5 全一致；⭐ 新读数：**`V246`"第三型存在"仍为真，但不能服务判别 ⟹ 两角论在"判别谓词"层仍完备**（即：**类型上三角，判别上两角**）
+
+**§5 边界**：经典事实（Choi 定理；PSD 锥自对偶；乘积锥非自对偶）**凭记忆引用、未逐条核对** ⚠️；§2 更正与唐先生该步判据**相反**（已诚实标注）；§4／§5 为 [结构性]；未用 RH；未跑 Lean；零数值；零外部检索
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
