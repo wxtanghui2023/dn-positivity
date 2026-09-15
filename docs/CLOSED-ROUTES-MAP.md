@@ -1030,6 +1030,28 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§6 与 `V198` 门的关系 ＋ 当前状态**：**两道门并列** —— `V198`（Mechanism II 门：globalization obstruction）／`V201`（A1／A3 门：正性锥源）。**当前状态**：A1／A3 **定义域内收口**（依 `V200` ＋ §3 收紧表述），等**外部新输入**或**第五类**出现；⚠️ **不自动开新线**，不得以"换名"重启同一范式。
 
+### F.5bk ⭐⭐⭐⭐⭐ **V202：Arithmetic Dual-Localization Audit（第一档只做定量不等式与复合律）⟹ canonical 算术对偶局域化 DEAD（$\Delta=0$）**（`V202` ✓ 2026-09-15 13:50）
+
+**委托（唐先生）**：**「V200 的收口不是'研究结束'，而是说明 A1/A3 这条生成器已经耗尽；下一步必须重新找一个不同的数学/物理模型。」** 新模型 ＝ **Dual-localization defect amplification**（核心：**同一个对象不能同时在两个互补表示中过度局域化**；并带**放大机制** $r_{k_1+k_2}\le r_{k_1}r_{k_2}$ ⟹ **局部一个严格缺陷 ⟹ 跨尺度指数放大**）；**「我建议直接开 V201……第一步就算，不再做概念讨论：先求 additive/multiplicative 双局域化的精确定量不等式及其跨尺度复合律。」** ＋ **第一关**：若 $B_{\rm mult}$ 仅由 $\prod_{p\le y}(1-1/p)$ 控制（sieve density）⟹ 死；若加法侧只是 $|\operatorname{supp}f||\operatorname{supp}\hat f|\ge N$ ⟹ 死；要的是**加法尺度 × 乘法尺度 × 非因子化缺陷**；＋ **最终测试**：$\Delta_k>0$ 且 $\Delta_{k+\ell}\ge1-(1-\Delta_k)(1-\Delta_\ell)$ ⟹ $\Delta_{mk}\to1$；＋ **「如果第一阶段本身都做不出来，直接关闭，不碰 RH。」** ⚠️ 编号：`V201` 已被 A1／A3 Restart Gate 占用 ⟹ 本档 **V202**。
+
+**§1 设置**：$B_{\rm add}(S)$（加法坐标可取值数）、$B_{\rm mult}(S)$（小素数模式数）；算子化 $T(N,Q)=P_{\Omega_Q}\mathcal F P_{I_N}$，$r=\|T\|$，$r^{\rm triv}=1$，$\Delta:=1-r$。
+
+**§2 复合律的等价形式**：$\Delta_{k+\ell}\ge1-(1-\Delta_k)(1-\Delta_\ell)\iff$ $$\boxed{\rho_{k+\ell}\le\rho_k\rho_\ell,\quad \rho:=1-\Delta=r}$$ 即 **FUP 型次可乘性**；某项严格 $r_{k_0}<1$ ⟹ $r_{mk_0}\le r_{k_0}^m$ **指数趋零** ✓ ⚠️ **关键警告：次可乘性本身不产生放大** —— 若 $r\equiv1$，律**恒取等且空洞** ⟹ **第一要件＝某尺度存在严格缺陷** ✓✓✓
+
+**⭐ §3 Canonical 对 I（加法 $=n\bmod M$；乘法 ＝ 小素数模式）：因子化 ⟹ $\Delta=0$**：取 $(M,\prod_{p\le y}p)=1$，$$\#\{n\le N:n\equiv r\bmod M,\ \mathbf 1_{p\mid n}=P\}\approx\frac NM\prod_{p\in P}\frac1p\prod_{q\notin P}\Bigl(1-\frac1q\Bigr)$$ **右端完全因子化**（加法因子 × 筛密度因子，**无交叉项**）⟹ 联合支撑 ＝ 直积 ⟹ $$\boxed{\Delta_{\rm I}=0}$$（仅平凡界 $B_{\rm add}B_{\rm mult}\ge|S|$）⟹ 按唐先生第一关：**只是筛密度＋平凡计数 ⟹ 杀** ✓✓
+
+**⭐⭐ §4 Canonical 对 II（加法 ＝ 区间；乘法 ＝ 小分母频率／Farey）：相反区间 ⟹ 缺陷消失**：$\Omega_Q=\{a/q:q\le Q\}$，$|\Omega_Q|\asymp Q^2$；**大筛法**给出节省因子 $\frac{N}{N+Q^2}$ ⟹ **(i)** 大筛法**有内容** $\iff Q\gtrsim\sqrt N$，此时 $|\Omega_Q|\gtrsim N$（**频率集不再稀疏**）；**(ii)** FUP 型**严格节省需正余维** $|\Omega_Q|\ll N\iff Q\ll\sqrt N$ ⟹ $$\boxed{\text{两机制有效区间}\textbf{恰好相反}，\text{仅在}\ Q=\sqrt N\ \textbf{相切}}$$ 该点 $|\Omega_Q|\asymp N$（满维、临界）⟹ 节省 $\to0$、缺陷 $\to0$；且区间与 Farey 集在各自尺度上均**满维**，不满足 FUP 所需维数亏缺 ⟹ $$\boxed{\Delta_{\rm II}=0}$$ ✓✓✓
+
+**§5 第三候选**：$|\operatorname{supp}f|+|\operatorname{supp}\hat f|\ge q+1$ 是 **additive-only**（不含乘法坐标）⟹ 不足以构成对偶；真正的对偶候选（同一 $f$ 上 additive DFT × 乘法特征变换）**确有已知结果** ⟹ 按 `V201` §1(2) **不产生新的无条件输入** ✓
+
+**⭐ §6 FUP 复合律的四个结构前提（逐条对照）**：**(i) 嵌套族** —— 算术侧**满足** ✓；**(ii) 变换把两族互换** —— **不满足** ✗（区间 $\leftrightarrow$ 小分母频率在 DFT 下**不互换**）；**(iii) 乘积律** $T_{k+\ell}=T_kT_\ell$ —— **不满足** ✗；**(iv) 某尺度严格缺陷** —— **不满足** ✗（§3／§4 均得 $\Delta=0$）⟹ $$\boxed{\text{四前提中算术侧只满足 (i)};\ \text{放大引擎}\textbf{无法启动}}$$ ⚠️ 本结论**不**来自四类锥源、**不**来自 `V198` 门 —— 它是双局域化模型**内部**的**几何／临界性**型障碍 ✓✓✓
+
+**§7 Granville–Soundararajan 的诚实定位**：真算术不确定性原理 ✓，但 **(a) 是已证定理** ⟹ 按 `V201` §1(2) **无新无条件输入**；**(b) 阈值仍在 $\sqrt N$（尺度不变）** ⟹ **不提供放大**；**(c)** 故正确位置是**已知语料**，仅"引用它"即被判死 ✓
+
+**§8 判词**：$$\boxed{\textbf{Canonical 算术对偶局域化：DEAD（}\Delta=0\text{／无严格缺陷）}}$$ 两个独立原因：**(I)** 对 I **因子化**（CRT／筛独立）⟹ 只有平凡界；**(II)** 对 II **相反区间＋满维临界** ⟹ 节省与稀疏不可兼得。**第二阶段（$\to\zeta$／$L$-函数谱排除）按指示不进入** ✓✓✓；⚠️ 范围严格限定＝**canonical 对**，**不**声称"对偶局域化模型不可能" ✓
+
+**§9 重开门（四条件，缺一不可）**：(1) **正余维**（两侧都稀疏）；(2) **嵌套**；(3) **存在变换 $\mathcal T$ 把两族互换**；(4) **乘积律** $T_{k+\ell}=T_kT_\ell$；且须产生**不是** G–S／大筛法／NTT 不确定性已给出的定量不等式；⚠️ 按 §4，条件 (1) 与"大筛法有内容"**互斥** ⟹ 若候选仍在大筛法框架内，**立即判死** ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
