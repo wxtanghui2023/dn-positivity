@@ -138,3 +138,14 @@ $$\textbf{(f)}\ \text{§8 第一筛选器评估}\ \textbf{定理级}（1+2^{-s}\
    ④ ⭐⭐⭐⭐ V236-B（σ/t 耦合＝显式公式，已存在）✓✓✓✓；⑤ ⭐⭐⭐⭐ 第二筛选器三分 ✓✓；
    ⑥ ⭐⭐⭐⭐⭐ V236-C（无新空间）✓✓✓✓✓；⑦ ⚠️ 第一筛选器过弱（负面但有用）✓✓
 ```
+
+---
+
+## §11 ⚠️ V236-A/C 降级落档（唐先生 2026-09-15 18:05；由 `V237` 执行）
+
+$$\textbf{降级理由}：\text{"解析行为由计数函数决定"}\ \text{对}\ \textbf{正系数} \text{ Dirichlet 级数自然成立};$$
+$$\qquad \text{但允许}\ \textbf{符号／复权／条件收敛／非 Dirichlet 编码} \text{后}\ \textbf{不能} \text{推出"必然统计化"} ✓✓✓$$
+$$\qquad ⟹ \textbf{正确的分解}：\text{计数函数决定}\ \textbf{横坐标/增长};\ \textbf{不} \text{决定}\ \textbf{零点结构} ✓✓✓$$
+$$\qquad \textbf{反例（本档补充，决定性）}：\zeta\ \text{本身} —— a_n\equiv1\ \text{平凡，零点深} ⟹ \boxed{\text{"统计化"}\ \textbf{只对 abscissa 成立}} ✓✓✓$$
+$$\Longrightarrow \textbf{§4 的 V236-A}\ \text{改写为}\ \textbf{V236-A$'$};\quad \textbf{§7 的 V236-C（"商内无新空间"）}\ \textbf{不能作为定理} ✓✓$$
+$$\qquad ⚠️\ \text{因商确实还可以包含新的}\ \textbf{外部复结构}（\text{见}\ \text{`V237`}）;\ \text{但"若不引入独立复化对象，}\mathcal Q_{\rm nat}\ \text{内无明显}\ \tfrac12\ \text{载体"}\ \text{仍成立} ✓✓$$
