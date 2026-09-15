@@ -1934,6 +1934,18 @@ $$\qquad ⚠️⚠️\ \textbf{【V249 §1 撤回·2026-09-15 21:26（查档后�
 
 **§5 判词**：$$\boxed{\text{canonicity 方向上的}\textbf{真进展};\ \text{但对}\ \beta\ \textbf{无路};\ \textbf{不是关于 RH 的论文}}$$ **边界**：全文精读审计；尚未同行评审；§3 为 [结构性]；**不写"不可能"**；未用 RH；未跑 Lean；零数值
 
+### F.5df ⭐⭐⭐⭐⭐ **V251：CC 分裂 obstruction 审计 ＋ 分裂—相位判据 ⟹ $\mathfrak o_p\equiv0$（V250 结构性终点，限本文构造）；但提取出"分裂 $\iff$ Frob 无相位"并与 `V144` 接通**（`V251` ✓ 2026-09-15 21:39）
+
+**委托（唐先生 21:39）**：提高判定精度；三处校正；新刀＝**问 canonical product/splitting 有无非平凡／非 torsion／非二次型 obstruction**（五条件 G1–G5）；并明令 **不把本文 factorization 升成"所有 host 都不可能"**。
+
+**§1 三处勘误采纳**：**① 限定范围** —— 不能把 $E_p\simeq C_p\times\widetilde{\mathcal X}_\infty$ 直接解释成"没有任何 β 通道"；最多证明**"本文自身构造的几何分解没有提供 β 通道"**（正确逻辑：本文 canonical decomposition ⟹ **本文当前构造中** arithmetic／geometric 变量不发生所需耦合）；**② `V242`-A 升级为层级分辨** —— canonical Frobenius **可以存在**，但其**存在层**可能不是 $\mathrm{Gal}(\bar{\mathbb Q}/\mathbb Q)$：$$\boxed{\text{char-0 Galois Frobenius}\neq\mathbf F_1\text{-site Frobenius}}$$ **③ Gate 2 升级**：canonical $\not\Rightarrow$ β-sensitivity ⟹ Gate 2 由"canonical?"升级为 $$\boxed{\text{canonical}+\text{independent}+\beta\text{-sensitive}}$$
+
+**§2 新刀执行**（原文逐字已核）：§4.3 原文 **"This canonical decomposition precisely isolates the arithmetic data from the geometric data."**；**"The second factor $\widetilde{\mathcal X}_\infty$ is a purely geometric phase circle that is totally independent of $p$"** ⟹ **第二因子按构造与 $p$ 无关**（不是"耦合难找"，而是"耦合被构造排除"）。定义 $\mathfrak o_p:=\mathrm{Ob}(E_p\to C_p\times\widetilde{\mathcal X}_\infty)$。**判定**：该乘积就是**极分解** $z=\lambda e^{i\theta}$；群扩张 $1\to S^1\to\mathbb C^\times\xrightarrow{|\cdot|}\mathbb R_{>0}\to 1$ 被绝对値映射**典范分裂** ⟹ $$\boxed{\mathfrak o_p\equiv0\ (\text{恒零，且典范地零})}$$ 同调读数 $H^2_{\rm cont}(\mathbb R_{>0};S^1)=0$。**G1 ✓ 但结果为零；G2 ✗；G3 ✗（唯一 canonical 混合结构＝复结构 $J$＝乘 $i$＝常数）；G4 ✓；G5 ✗（未定义，对象不是 $\rho$ 的函数）** ⟹ 按唐先生判据 **V250 成结构性终点（限本文构造）**。**恒零的结构性原因**：Frobenius 生成元 $p\in\mathbb R_{>0}$ **是正实数** ⟹ 对相位因子作用平凡、对 $C_p$ 作用为 $p^{\mathbb Z}$ ⟹ 商**必然是乘积**。
+
+**§3 ⭐⭐⭐⭐ 本档提取的新判据（分裂—相位判据）**：$$\boxed{E_p\ \text{分裂}\iff\mathrm{Frob}\ \text{在相位因子上作用平凡}\iff\alpha_p\ \text{是实数（无相位）}}$$ ⟹ **任何 β 通道必须要求非实 scaling 本征值**。**与 `V144` 接通（关键新意）**：ζ 的局部因子 $\alpha_p\equiv1$（平凡 motive）⟹ 相位通道在有限素数处为空 ⟹ 结合本判据 ⟹ **ζ 有限素数处必然分裂** ⟹ **耦合只能在 archimedean 层** ⟹ **`V215`(c)／`V218` §5**。**此前的两条独立事实（"有限处无相位"`V144` 与"乘积分解"本文）首次获得等价链**。
+
+**§4 判词**：$$\boxed{\text{三处勘误采纳};\ \mathfrak o_p\ \text{恒零}\Longrightarrow\text{V250 结构性终点（限本文构造）};\ \text{但提取出分裂—相位判据并与}\ \text{`V144`}\ \text{接通}}$$ **状态表**：canonical Frobenius PASS｜intrinsic moduli PASS｜arithmetic/geometric separation 本文明确出现（§4.3 逐字已核）｜β-sensitive invariant **FAIL**｜**β-sensitive obstruction to separation：CLOSED（本档）**｜RH 完全未触及。**边界**：只关闭**本文构造**的分裂 obstruction，**不**关闭"任何 FF／绝对几何构造"；§2 同调读数凭记忆引用未逐条核对；§3 判据为 **[本档推导]**；未用 RH；未跑 Lean；零数值
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
