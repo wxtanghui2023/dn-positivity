@@ -305,6 +305,18 @@ $$\textbf{⭐ 九种箭头形态穷举审计}：\text{①函数}（\text{β-free
 $$\qquad\Longrightarrow\ \boxed{\text{九形态}\textbf{全部落入已知封闭};\ \text{唯 #7 自指} ⟹ \textbf{残余仍单点}} ✓✓\ ⚠️\ \text{边界：本表为}\textbf{[结构性] 已归档实现分类},\ \textbf{非}"不存在第四箭头"之定理}$$
 $$\qquad\textbf{下一步三选}：①\ \text{审 }\textbf{C6.6}（\text{零谱对应能否}\textbf{内生}\text{而不借显式公式}）＝\text{本档暴露的}\textbf{最硬单点};\ ②\ \text{审 }\textbf{C6.5}（\text{non-analytic carrier 与 }V144\ \text{层诊断}\textbf{直接冲突} ⚠️\ \text{值得单审};\ ③\ \text{把 #7（O2 对应 ⟹ 箭头）}\textbf{形式化} ✓$$
 
+### F.5r ⭐⭐⭐⭐⭐ **C6.5 层诊断审计**（`V156` ✓ 2026-09-15 10:03）—— **不与 V144 矛盾 ✗✓，但被强烈夹逼 ⚠️；C6 收缩为"同一内部结构自产 $\sqrt N e^{i\theta}$"**
+
+$$\text{C6 要有 }A\to\lambda\ \text{且最终得 }\zeta\ \text{零谱位置};\ \rho=\beta+i\gamma\Longrightarrow \text{载体至少需}\ \boxed{\text{模长/权重}\to\sqrt{\text{scale}}}\ +\ \boxed{\text{相位}\to\text{位置参数}}$$
+$$\textbf{第一断裂（有限算术层）}：\zeta\ \text{局部因子}(1-p^{-s})^{-1},\ \text{有限素数处}\ \alpha_p\equiv1 ⟹ \text{无函数域型 }\alpha_p=\sqrt p e^{i\theta_p}\ \text{内部谱数据} ⟹ \boxed{\text{有限算术层}\not\Rightarrow(\sqrt{\text{scale}},\theta)}\ ✓✓\（\text{与 }AOB3\ \text{§1 element vs 共轭类同源}）$$
+$$\text{非解析载体 }M\ \text{须内部产生 }\operatorname{Spec}(F_M)=\{\sqrt{N_j}e^{i\theta_j}\} ⟹ \text{须 }F_M^\dagger QF_M=NQ\（1\）⟹|\lambda_j|=\sqrt N;\ \textbf{但 (1) 只给模长},\ \text{相位还需 }F_M\ \text{的非实谱结构}（\text{canonical phase}）⟹ \text{C6.5 实际要求同时具}\ \textbf{polarization/similitude}\ +\ \textbf{canonical phase}\ \text{的 char-0 载体}$$
+$$\textbf{双重断裂直接出现}：\text{权重侧（能自然产生 }|\lambda|=\sqrt N\ \text{者：二次型／Gram-polarization／rank-2／Hodge-Frobenius weight）}\Longrightarrow\textbf{旧箱 II／8／12}\（=V136\ \text{五来源枚举}）;\ \text{相位侧（能自然产生 }e^{i\theta}\ \text{者：character／reciprocity／holonomy／Artin-Hecke／cocycle-Brauer／L-value）}\Longrightarrow\textbf{character／L-函数类}\（=V140\ \text{相位二分}）⟹ \text{两通道}\textbf{各落旧类};\ \text{拼接}\Longrightarrow\textbf{不产生新 primitive} ✗✓$$
+$$\qquad ⚠️\ \textbf{必须保留的逻辑缝}：\textbf{不得}\text{宣布"不存在任何 non-analytic carrier"}（V144 实为"}\textbf{在已审计的标准 char-0 算术结构中未找到}"\ \neq\ \text{"不存在"}）；真正需要的是两条\textbf{表示定理}：\ \boxed{R1_{wt}: F^\dagger QF=NQ\ \text{的纯算术 char-0 结构}\Rightarrow\text{polarization/Hodge/quadratic}}\ \text{＋}\ \boxed{R1_{ph}:\ \text{canonical phase 的全局 char-0 结构}\Rightarrow\text{character/holonomy/L}}\ ——\ \textbf{档案目前没有这两条}\ ✗$$
+$$\Longrightarrow\ \boxed{\textbf{C6.5 不与 }V144\ \text{矛盾，但被其强烈夹逼}};\ \text{C6 无逻辑不一致，只是被迫寻找}\ \boxed{\text{一种尚未被分类的 char-0 算术载体}}\ \text{同时自产 }\sqrt N+e^{i\theta}\ \text{且来自}\textbf{同一个内部结构}（\text{非两旧模块拼接}）$$
+$$\qquad\Longrightarrow\ \boxed{\textbf{C6}\ =\ \text{char-0 intrinsic arithmetic object}\xrightarrow{\text{one mechanism}}\sqrt N e^{i\theta}\xrightarrow{\text{new correspondence}}\lambda_\zeta}\ \text{须避开：L-function／explicit formula／known polarization／selection／zero data}$$
+$$\qquad\textbf{下一步 ✓（唐先生已定）}：\text{转 }\textbf{① C6.6} —— \text{即便找到这样的载体，}\textbf{仍没解释为何其谱就是 }\zeta\ \text{的零谱}，\textbf{这才是目前真正不可替代的第二个箭头} ✓✓$$
+$$\qquad\textbf{诚实边界 ⚠️}：\text{本档 §6 C6 收缩为 [结构性]；}R1_{wt}／R1_{ph}\ \text{为}\textbf{待证表示定理} ✗$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
