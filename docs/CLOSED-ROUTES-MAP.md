@@ -1591,6 +1591,26 @@ ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅
 
 **§10 残余精确形式**：$$\text{残余}\ =\ \text{canonical 泛函于}\ \mathcal U_{s_0}\big/\mathcal M\text{-像}$$ 两极端：$\mathcal M=\{Ce^{as}\}$ ⟹ 商＝"本质单位群" ⟹ 不变量＝零点集 ⟹ **R4**；$\mathcal M\supseteq\{1-am^{-s}\}$ ⟹ 有限阶无（V232-A）、无限阶**未证** ⟹ **下一步（唐先生指定）**：$$\boxed{\text{无限阶／非局部的乘子不变量，是否也因 Dirichlet 乘子群的作用而退化？}}$$ 若能封 ⟹ **整个 D3 路线真正死亡**；若封不掉 ⟹ 剩一条明确、此前未被 `V185`–`V231` 覆盖的窄通道 ✓✓
 
+### F.5co ⭐⭐⭐⭐⭐ **V233：germ 商空间审计 ⟹ 命题 V233-A（$T_e\mathcal M=\mathfrak m$）＋ V233-B（单式乘子已足够）＋ V233-C（$\beta$-盲 ⟹ D3 整体 DEAD）**（`V233` ✓ 2026-09-15 17:13）
+
+**委托（唐先生）**：**"不能停在'无限阶可能存活'。真正应该审计的是整个 germ 商空间。"** 关键问题：$$\boxed{\mathcal M=\langle 1-am^{-s}\rangle}\ \text{对解析 germ 的作用是否已局部传递到足以把两个非零 germ 连起来？}$$ 若"是"，则 V232-A 升级为 $$\boxed{\textbf{解析 germ 层 no-go}}$$ (1) **群作用写法**：$\mathscr G_{s_0}=\{F:F(s_0)\ne0\}$，$\ell_F=\log F$，$F\mapsto FQ\iff\ell_F\mapsto\ell_F+\ell_Q$ ✓；(2) **关键计算**：$\log(1-ae^{-ws})=-\sum_{r\ge1}\frac{a^r}{r}e^{-rws}$，一阶 $=-e^{-ws}$ ⟹ 切空间含 $\{m^{-s}:m\ge2\}$ ✓；(3) ⚠️ **重要边界**：$\sum c_mm^{-s}$ 只是 Dirichlet 型，**不是任意解析 germ**（$e^{s^2}$ 反例）⟹ $$\boxed{\text{V232-A 不能直接升级为"所有解析 germ 被杀"}}$$；(4) 但 D3 的 $F_X$ 若来自算术 Dirichlet 结构则属 $\mathscr D$（Dirichlet 级数＋有限次完成化）⟹ $T_e\mathcal M\supseteq\{$无常数项 Dirichlet 多项式$\}$；(5) **无限阶压力测试**：$Q_\varepsilon=\prod_m(1-\varepsilon c_mm^{-s})$ ⟹ $$\boxed{DI_F[-FP]=0}$$ 对所有有限 Dirichlet 多项式 $P$ ✓；(6) ⟹ 不变量只能依赖"Dirichlet 方向之外"的信息；三种东西（**Gamma/completion**、**指数 $e^{as}$**、**零点结构**）必须分开；(7) 指数方向＝**零自由**（$e^{as}$ 无零点）⟹ 商掉它不获零点信息；(8) Gamma＝archimedean ⟹ 触发旧墙（$\text{`V212`}$/$\text{`V215`}$）；(9) **最危险剩余**：若 $F_1/F_2$ 对所有 Dirichlet 方向不变，差异可能落在"Dirichlet 部分不可见的 analytic divisor"；⚠️ **但不能把"留下 divisor"直接等同于 R4** —— 须证商是否由 divisor 完全决定；(10) **V233-A/B/C 三层目标**＋二分（completion → `V212`/`V215`；divisor → **R4**）⟹ $$\boxed{\textbf{D3 整体 DEAD}}$$；(11) ⚠️ **不提前判死**：真正问题是"商空间还有没有第三种信息" ✓
+
+**§1 三层结构**：$\mathcal A\cong\mathbb C[[X_p]]$（Dirichlet 级数＝多变量形式幂级数，经典）；$\mathcal A^\times=\mathbb C^\times\cdot(1+\mathfrak m)$；乘子 $Q_{a,m}=1-aX^{\beta(m)}$ ✓✓
+
+**§2 ⭐⭐⭐⭐⭐ 命题 V233-A（定理级，本档核心一）**：$$\log(1-aX^\beta)=-\sum_{r\ge1}\frac{a^r}{r}X^{r\beta}$$ 的 $r=1$ 项给 $-aX^\beta$；$\beta$ 遍历所有非零多重指数 ⟹ $$\boxed{T_e\mathcal M=\mathfrak g=\bigoplus_{\beta\ne0}\mathbb C X^\beta=\mathfrak m}$$（**整个零常数项理想**，比"无常数项 Dirichlet 多项式"**更强**）；连续参数下群闭包 $\overline{\mathcal M}=\exp(\mathfrak m)=1+\mathfrak m$ ✓✓✓✓✓
+
+**§3 ⭐⭐⭐⭐⭐ 命题 V233-B（定理级，本档核心二）**：设 $I$ 可微且 $I(F(1-am^{-s}))=I(F)\ \forall m,a$（**不需**有限阶 $\Phi$ 假设，**不需 Vandermonde**），则 $$\boxed{DI_F[Fh]=0\quad\forall h\in\mathfrak m}$$ 证明：对 $a$ 在 $a=0$ 求导 ⟹ $DI_F[-FX^\beta]=0\ \forall\beta\ne0$ ⟹ $\mathfrak m$ 上恒零 ⟹ 不变量**只能**来自 $\mathfrak m$ 之外 ✓✓✓✓✓
+
+**§4 ⭐⭐⭐⭐⭐⭐ 命题 V233-C（本档核心三）**：乘子零点 $1-ae^{-s\log m}=0\iff\Re s=\frac{\log|a|}{\log m}$；$|a|$ 遍历 $(0,\infty)$ ⟹ $\Re s$ **遍历整个 $\mathbb R$** ⟹ 乘子可在**任意竖直线**上放零点 ⟹ 若 $I(F)=I(F(1-am^{-s}))\ \forall m,a$ 则 $I$ **对零点位置盲** ⟹ $$\boxed{I\ \textbf{不能产生}\ \Re\rho\le\frac12}\Longrightarrow\boxed{\textbf{D3 整体 DEAD}}$$ ⭐ 即使限制为 **FE-尊重配对类** $(1-am^{-s})(1-am^{-(1-s)})$（零点成对移动、保持 FE 对称）⟹ 至多探测"自动的对称性"（`V229`-A ⟹ 无信息）⟹ **仍死** ⚠️ **边界写死**：不变性传递要求 $I$ **连续**（或至少对"零点定位"连续），否则 $\mathcal M$-不变性可能**空洞** ✓✓✓✓✓
+
+**§5 商空间四成分**：常数项 $a_1$（无零点信息）｜指数 $e^{as}$（**零自由**，不动零点）｜completion（→ `V212`/`V215`）｜divisor（→ **R4**）⟹ $$\boxed{\text{无第五类（Dirichlet／完成化世界内）}}$$ ✓✓
+
+**§6 二分＋无中间**：$$\boxed{\text{乘子不变量}\Longrightarrow\begin{cases}\text{completion}\to\text{`V212`/`V215`}\\[2pt]\text{divisor}\to\textbf{R4}\end{cases}}$$ ⭐ **强化版**：含动零点乘子 $\Rightarrow$ $\beta$-盲 $\Rightarrow$ 无用；只含零自由乘子 $\Rightarrow$ 除子灵敏 $\Rightarrow$ **R4** ⟹ **无中间**（`V232` §8 升级到 germ 层）✓✓✓
+
+**§7 诚实边界（唐先生 §3 收紧，写死）**：前提＝$F_X$ 属 Dirichlet／完成化 $\mathscr D$；**非 Dirichlet**（含 $e^{s^2}$ 等）⟹ 乘子群**无合适作用** ⟹ 闭包论证不适用 ⟹ 残余＝$$\boxed{"F_X\ \text{逃出 Dirichlet-完成化世界}"}$$ ⟹ 须**识别定理** ⟹ 落 **`V215`–`V217`** ⟹ 残余亦封闭 ✓✓✓
+
+**§8 判词＋状态表**：`V232`-A 定理级｜**V233-A/B/C 皆定理级**｜E1 **DEAD**｜E2 **DEAD**｜**E3（Dirichlet 型）** $\boxed{\textbf{DEAD}}$（本档）｜非 Dirichlet 型 ⟹ `V215`–`V217` ⟹ $$\boxed{\textbf{V233：D3 整体 DEAD（Dirichlet／完成化世界内）；二分完成；残余＝逃出该世界}}$$ ⚠️ 纪律：不得升级为"所有解析 germ 被杀" ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
