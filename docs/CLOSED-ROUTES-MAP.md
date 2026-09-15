@@ -1304,6 +1304,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词与纪律**：$$\boxed{\textbf{V216：DEAD} —— \text{系数／值域接口不构成独立接口}}$$ 三条独立理由：(i) 幂级数侧**定理级**；(ii) Dirichlet 侧**经典反例级**；(iii) **结构定理**（系数 $\equiv$ 零点，归约 `V190`）⟹ `V215` §4 **修正为五类**（(d)(e) 经本档归约到 (a)(b)(c)＋`V190`）；⚠️ **纪律**：**不得**声称"所有 arithmetic coefficient rigidity DEAD"（本档证的是三项：定理级／反例级／结构归约，**非全称否定**）；**残余（UNINSTANTIATED）**：一个既非 LP/HB 类、又能钉住零点几何的**无限阶系数刚性**（判据：① 非实根性型；② 非正性；③ 非谱行列式；④ 非显式编码）✓
 
+### F.5bz ⭐⭐⭐⭐⭐ **V217：非函数关系对象的类型审计（canonical quadruple／correspondence／moduli invariant）⟹ 交叉比双重死角 ＋ 七形式全落已封 ＋ 四元组三情形 ⟹ DEAD**（`V217` ✓ 2026-09-15 15:35）
+
+**委托（唐先生）**：**"把 $\beta$ 藏进系数系统，本质上仍然是在描述零点几何。但我认为现在不能继续直接去找'另一种无限阶系数刚性'——那会非常容易再次掉进 LP/HB 的同义反复。"** 新任务：审计**非函数对象的关系不变量** —— 到 `V216` 为止 $X$ 最终都是函数 $F_X(s)$ ⟹ 落入"零点 $\leftrightarrow$ Hadamard $\leftrightarrow$ 系数 $\leftrightarrow$ 零点几何"闭环；但外部对象不一定是函数：$\mathcal R_X\subset X\times\mathbb C$ 或 correspondence $\Gamma_X:X\dashrightarrow\mathbb C$，关键是 $\Gamma_X\ne\{\text{某函数零集}\}$ ⟹ **Hadamard／Newton／LP 链第一步不适用**；**纤维三分**：I 方程型 $\to$ `V214`；II 谱型 $\to$ `V192`／`V204`；**III 既非方程亦非谱** ＝ 真正新情况 ⟹ $$\boxed{\text{有没有一种非方程、非谱的 correspondence，可把独立对象与 }\zeta\text{ 零点双向识别？}}$$ **交点形式**：$A_X\cap B_X\leftrightarrow Z(\zeta)$ ⟹ RH 变成"交点只能位于固定 locus"；刚性来源若为 positivity／hyperbolicity／self-adjoint／symmetry／index 又死；**具体候选：交叉比／模空间刚性**（CR **对 Möbius 变换不变**，故非坐标、非统计、非系数、非谱值）；但随便取辅助点可人为制造 $\beta$ ⟹ 违反 R1／R4 ⟹ 真问题：$$\boxed{\text{是否存在完全 canonical 的四元组，由外部对象 }X\text{ 自身产生？}}$$ **"这一轮不要预设它能成功"**；**"我们现在是在测试一个数学对象类型，而不是随意发明一个机制"**；**"如果 canonical quadruple 第一非平凡例子都不存在，就立即封掉这一整类。"**
+
+**⭐ §2 纤维 case III 的七种可实现形式（全部映射到已封类）**：$$\begin{array}{c|l|l}\text{(i) definability} & \text{可定义} & \text{`V166` o-minimal 障碍}＋\text{类 VI（`V149`）}\\ \text{(ii) measure} & \text{满测度／典型} & \text{`V188` 三层＋`V200` 因子化}\\ \text{(iii) categorical} & \text{函子／态射} & \text{`V196` O3：morphism 型 ⟹ module 层}\\ \text{(iv) order} & \text{序／极值} & \text{`V147` T1／T2＋`V210`}\\ \text{(v) combinatorial} & \text{图／组合} & \text{`V209`＋`V200`}\\ \text{(vi) homotopy} & \text{同伦型（非 index）} & ⭐\ \text{零集／纤维是}\textbf{离散集} ⟹ \text{同伦型由基数决定} ⟹ \text{退化为计数} ⟹ \text{`V188`／`V183`};\ \text{非离散则落 `V204`}\\ \text{(vii) model-theoretic} & \text{模型中可定义} & \text{`V150`／`V211`}\\ \end{array}$$ ⟹ $$\boxed{\text{case III 非空，但七形式全部映射到已封类}}$$ ✓✓✓
+
+**⭐⭐ §3 交叉比的双重死角**：**(K1) 定理级** —— $\mathrm{PGL}_2(\mathbb C)$ 可把任一（广义）直线映到任一直线，而 CR 在 $M$ 下不变 ⟹ 若约束集 Möbius 不变且非空，则 $M(\mathcal C)=\mathcal C$ ⟹ **不能推出"在临界线上"** ⟹ $$\boxed{\text{纯 Möbius 不变数据不可能钉住任何固定直线}}$$（注：$\mathrm{CR}\in\mathbb R\iff$ 四点共圆 可紧**圆**，非**固定直线**）✓✓✓ **(K2)** 临界线 $\Re s=\tfrac12$ **不是模不变量**（依赖坐标）⟹ 钉它须**破坏 Möbius 不变性**；算术中唯一 canonical 的 Möbius 破缺 ＝ **归一化**（极点 $s=1$／欧拉积收敛横坐标）⟹ 而"归一化／完成化"**就是** `V215` 的 **(c) archimedean 接口** ⟹ **已封** ✓✓✓ **(K3)** 若把直线**定义为** $\iota$ 的不动轨迹，则条件＝$\iota$-对称 ⟹ **自动** ⟹ 无信息（`V148`／`V212`(c)）✓
+
+**⭐⭐ §4 canonical quadruple 三情形**：$$\begin{array}{c|l|l}\text{A} & \textbf{结构决定的点}（\iota\ \text{不动点、极点}\ s=1、s=0、\infty） & \mathrm{CR}\ \textbf{为常数} ⟹ \text{无}\ \beta\text{-信息}\ ✗\\ \text{B} & \text{含}\ \textbf{零点位置} & \textbf{违反 R1} ⟹ \textbf{循环}（`V213`）\ ✗\\ \text{C} & \text{来自}\ \textbf{外部}\ X & \mathrm{CR}_X\ \text{与零点无关系，除非识别定理挂钩} ⟹ \text{仍须}\ \text{`V215`}\ \text{接口}\ ✗\\ \end{array}$$ ⟹ $$\boxed{\text{A 常数、B 循环、C 仍须接口}} ⟹ \textbf{第一非平凡例子不存在}$$ ⭐ 一般化：任何**结构决定的有限点集**，其 Möbius 不变量都是**常数** ✓✓✓
+
+**§5 交点表述归约**："交点在固定 locus 内" ＝ 交点集被某群作用的不动轨迹包含；canonical 此类作用 ＝ FE 反演 $\iota$（不动轨迹**就是**临界线）⟹ 条件是 $\iota$-对称 ⟹ **自动** ⟹ 无信息；其余五类来源 ⟹ `V199`／`V190`／`V192`／`V204`／`V148` 全封 ✓✓
+
+**§6 ⭐ 元观察**：$$\boxed{\text{`V215`--`V216` 的接口分类是关于"会合点"的，不是关于"对象类型"的}}$$ ⟹ 换对象类型（函数 $\to$ 关系 $\to$ 对应 $\to$ 模不变量）**不改变会合处性质**；只要还要"与 $\zeta$ 双向识别"，必然在某条 canonical 管道会合 ⟹ 接口分类照旧适用 ✓✓✓
+
+**§7 判词**：$$\boxed{\textbf{V217：DEAD} —— \text{非函数关系对象在第一非平凡例子处即失败}}$$ 三条独立理由：(i) case III 七形式全落已封类；(ii) 交叉比双重死角（K1 定理级＋K2 落 (c)）；(iii) canonical quadruple 三情形 ✓✓✓ ⚠️ **纪律**：**不得**声称"任何关系型对象都不可能"（本档证的是七形式映射＋交叉比死角＋四元组三情形，**非全称否定**）；**残余（UNINSTANTIATED）**：一个**既非方程、非谱、非可定义、非测度、非范畴、非序、非同伦、非模型论**的"可验证关系"（判据：① 满足 R1–R4；② 不属于上述任一形式；③ 会合处不落 (a)(b)(c)）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
