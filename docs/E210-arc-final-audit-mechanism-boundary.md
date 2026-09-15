@@ -139,3 +139,11 @@ $$\boxed{\text{命中本节任一条} \Longrightarrow \textbf{当场退回；\\ 
 | **11** | **算术 Dijkgraaf–Witten**（Hirano–Kim–Morishita, CNTP 17(1) 2023） | G1 △（新组装、部件全旧）、G2 ✗（$\mu_N$ 相位 ⟹ `V237`-A／`V196`）、**G3 ✗（局部→整体＝Artin 互反律／Artin–Verdier 对偶 ⟹ `V241-D`：互反律＝coboundary ⟹ δB）**、G4 ✗（$\mathbb Z/N$ 值、不涉 ζ 零点） | **DEAD**（未到 G5）；`V242-B` 逆向审计**答"否"**（只给 phase／partition／reciprocity） |
 
 $$\textbf{强外部交叉结论}：\text{谱几何}／\text{scaling site／Frobenius correspondences}／\text{算术拓扑／DW}\ \textbf{三者都能造 global object，都不能产 polarization} ⟹ \text{与 `V242-D`／`V145`／`AOB3` §47 一致} ✓$$
+
+## §Z.5 **第 12 次落点（2026-09-15 20:2x）** —— **$U(1)$ 相位 → canonical sign 接口（唐先生指定）**
+
+| 项 | 内容 |
+|---|---|
+| **提案外观** | 不再找对象；找"能把 $U(1)$ phase 变成 canonical sign 的数学操作"：$$e^{iS_{\rm arith}}\xrightarrow{\ ?\ }Q_{\rm arithmetic}\ge0$$，且该"？"须避开八条（取绝对值／取实部／averaging／character projection／人为 orientation／Hilbert 完备化／trace／现成 Weil 正性） |
+| **已归档的同族** | **`V244`** 本轮完成：**八类已知实现逐门审计**，全部落回已封通道 ⟹ 值面（`V157`）／$\mathrm{Br}$ 型障碍（`V196`／`V241-D`）／archimedean（`V215`(c)）／**同义反复**（`V216`§6／`V190`）／计数 $S(T)$（`V154`A／`V188`）／character／指标（`V204`／`V241`）／**Weil 正性（循环）** |
+| **判决** | ⭐ **唯一同时满足 canonical＋定号＋编码实部的只有 Bochner／Weil 正性，而它正是应用户禁用的循环项** ⟹ **结构性终端障碍候选（conditional，以枚举完备为前提）**；残差 UNINSTANTIATED（障碍非 Brauer、输出定号、编码实部） |

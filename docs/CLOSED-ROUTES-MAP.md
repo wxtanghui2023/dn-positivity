@@ -1824,6 +1824,32 @@ $$\qquad ⭐\ \text{本次终止的价值}：\text{不是某个候选死了}，\
 $$\left.\begin{array}{l}\text{谱几何（Connes 2026；Hedenmalm 2026）}\\[2pt]\text{scaling site／Frobenius correspondences（Connes–Consani）}\\[2pt]\text{算术拓扑／Dijkgraaf–Witten（Hirano–Kim–Morishita）}\end{array}\right\}\Longrightarrow\boxed{\text{都能构造 global object，但都不能产生 RH 所需的 polarization}}$$
 ① 其 RH 步骤需 **archimedean Weil positivity**（他们自己的 §7.2）＝**需要** polarization；② Frobenius correspondences 的复合数据＝迹（**`V242-B`**）＝显式公式通道；③ $\mu_N$ 纯相位＋局部→整体＝互反律＝coboundary（**`V241-D`**）⟹ **统一原因**：三者在**迹／相位／互反**上着陆，而 RH 需要**配对正性** ⟹ 与 **`V242-D`／`V145`**（canonical generator 有、polarization 缺）／**`AOB3` §47** 完全一致 ✓
 
+### F.5cz ⭐⭐⭐⭐⭐ **V244：$U(1)$ 相位 → canonical sign 接口审计 ⟹ 已知八类实现全部落回已封通道 ⟹ 结构性终端障碍候选**（`V244` ✓ 2026-09-15 20:22）
+
+**委托（唐先生，其本人已自搜并实际读完两篇）**：**"这两篇没有留下第三条隐藏通道。"** ＋ **"不要再寻找'对象'。现在应该寻找的是：$$\boxed{\textbf{能够把 }U(1)\text{ phase 变成 canonical sign 的数学操作。}}$$ 这是这两篇共同留下来的唯一真正缺口。"** ＋ **八条禁用**：(1) 非取绝对值（消灭相位）(2) 非取实部（任意 phase 都能被旋转）(3) 非 averaging（统计）(4) 非 character projection（回 representation／L-value）(5) 非人为 orientation（normalization）(6) 非 Hilbert 完备化（`V242`）(7) 非 trace（explicit formula）(8) 非现成 Weil positivity（循环）＋ **"如果这个接口也能被证明只能落回已有七类，那么我们就得到的不是'又一个候选死掉'，而是一个相当强的结构性终端障碍。"**
+
+**§1 唐先生两条强化（比我 V243 更硬）**：① ⭐ **evenization 是普适算子** —— 论文自己证明 $f(u)\mapsto\exp\big((\log f)_{\rm even}\big)$ 对**任意可逆形式幂级数**可用 ⟹ $\Xi_P(-u)=\Xi_P(u)$ **不是** FE 的发现，而是一个对一切可逆形式级数都成立的构造 ⟹ **FE 声明在定理级被否**（我方待原文 §10 逐行核 ⚠️）；② ⭐ $\frac12$ 由 $T=\frac12+u$ **预先选入**，不是算术机制产生；③ cumulant：$\sigma(P)^2=a_2(P)$、$u\mapsto u/\sigma(P)$ ⟹ **先取二阶系数、再用二阶系数归一化**；$\kappa_4\asymp\frac{\log P}{\sqrt P}\to0$ 论文自标 **heuristic**，"与 explicit formula 比较"列为**未来工作** ⟹ **判词（逐字采纳）：2602.20211 ＝ `V235`/`V218`/`V231`/`V236` 的组合重组** ✓
+
+**§2 ⭐ A/B/C 三分法（唐先生升级版；三种\*不同\*缺口）**：**A 几何／谱型** correspondence→trace→zeros，缺 $$\boxed{\textbf{polarization}}$$；**B 拓扑／量子型** 3-cocycle→$CS$→$e^{2\pi iCS}$→$Z$，缺 $$\boxed{\textbf{positive order／sign}}$$；**C 纯 Euler／形式型** Euler→log→cumulants，缺 $$\boxed{\textbf{zero localization}}$$ ⟹ 三者**不是同一个缺口**（spectral↓needs positivity；topological↓needs order；arithmetic↓needs localization）
+
+**§3 ⭐⭐⭐ 八类 phase→sign 实现，逐门审计（全部落回已封通道）**：
+| # | 实现 | canonical | 定号 | 编码实部 | 落点 | 判定 |
+|:--|:--|:--:|:--:|:--:|:--|:--|
+| I | 根数／$\varepsilon$-因子（**唯一被实际用过**；$\varepsilon$ 给 $\mathrm{ord}_{s/2}$ 的**奇偶性**，BSD/Gross–Zagier 形状） | ✓ | ±1 | ✗ | 值面（`V157`） | **死** |
+| II | ⭐⭐ **Hasse–Minkowski／Hilbert 符号**（局部正定 $\iff$ 全局正定 —— **模板真实存在**） | ✓ | ✓ | ✗ | **$\mathrm{Br}$ 型障碍**（`V196`／`V241-D`） | **死**（最有价值：模板存在而障碍是 Brauer 型） |
+| III | Gauss 和符号（$\tau(\chi)=\pm\sqrt q$，由同余＋$\theta$-Poisson 定） | ✓ | ±1 | ✗ | archimedean（`V215`(c)） | **死** |
+| IV | ⭐⭐ **HB／Krein 模比条件 ⟹ 实零点** | ✓ | — | ✓ | **同义反复**（`V216`§6／`V190`） | **死** |
+| V | $Z(t)$／符号变化（实际算零点的办法；"全部是符号变化" $\iff$ RH 级） | ✓ | — | ✓ | 计数 $S(T)$（`V154`A／`V188`） | **死** |
+| VI | sign character／置换正负号 | ✓ | ±1 | ✗ | character 通道（禁用 4） | **死** |
+| VII | 谱流／指标（相位绕数 ⟹ ℤ） | ✓ | ℤ | ✗ | `V204`／`V241` | **死** |
+| VIII | Bochner／正定核 | ✓ | ✓ | ✓ | **Weil 正性（循环，禁用 8）** | **死** |
+
+$$\Longrightarrow \boxed{\text{canonical }U(1)\text{-phase}\to\text{sign 的已知全部实现，落回 }(\text{离散／}\mathrm{Br})\cup(\text{值面})\cup(\text{archimedean})\cup(\text{HB/LP 同义反复})\cup(\text{计数／}S(T))\cup(\text{character})\cup(\text{指标})\cup(\text{Weil 正性})}$$ ⭐ **唯一同时满足 canonical＋定号＋编码实部的只有 (VIII)，而它正是循环项** ⟹ 这就是"七类之外没有第八类"的原因
+
+**§5 为什么（结构性）**：要同时 canonical＋定号＋编码实部 ⟹ 须在**无限维算术空间**上产生**二次型**；而 canonical 造二次型只有三条路：① 核的正性 ⟹ `V199`(a)／`V185`；② 实根性／变差缩减 ⟹ `V190`／`V216`§6（同义反复）；③ 酉性／自伴 ⟹ `V242`（缺 polarization）⟹ 与 **`V242-D`** 完全一致
+
+**残差（UNINSTANTIATED）**：canonical phase→sign，障碍**非** Brauer 型、输出**定号形式**（非离散 ±1）且编码实部；本档未见实例。**边界**：§3 为 **[结构性] 枚举，不是不可能性定理**；§4 的"枚举完备"**未证**；§1① 待核 ⚠️
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
