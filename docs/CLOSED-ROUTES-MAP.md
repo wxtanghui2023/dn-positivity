@@ -1320,6 +1320,24 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词**：$$\boxed{\textbf{V217：DEAD} —— \text{非函数关系对象在第一非平凡例子处即失败}}$$ 三条独立理由：(i) case III 七形式全落已封类；(ii) 交叉比双重死角（K1 定理级＋K2 落 (c)）；(iii) canonical quadruple 三情形 ✓✓✓ ⚠️ **纪律**：**不得**声称"任何关系型对象都不可能"（本档证的是七形式映射＋交叉比死角＋四元组三情形，**非全称否定**）；**残余（UNINSTANTIATED）**：一个**既非方程、非谱、非可定义、非测度、非范畴、非序、非同伦、非模型论**的"可验证关系"（判据：① 满足 R1–R4；② 不属于上述任一形式；③ 会合处不落 (a)(b)(c)）✓
 
+### F.5ca ⭐⭐⭐⭐⭐ **V218：半轴值源审计（H0 攻击）⟹ H0 字面 FALSE（三机制类）＋ RH ＝ S1 轴 ≡ S2 指数 ＋ 不变障碍（相认须归一化 ⟹ (c)）**（`V218` ✓ 2026-09-15 15:38）
+
+**委托（唐先生）**：**"V217 真正封掉的不是'关系对象'，而是'会合点不产生新信息'的关系对象。所以现在不能继续做'第八种关系形式穷举'。"** 压缩障碍定理：会合映射 $X\to\{\text{zeta-zero data}\}$ 处只有三种性质：$$\boxed{\text{值／统计}\quad|\quad\text{结构位置}\quad|\quad\text{精确识别}}$$ 前两类已大量封死，**真正未被封的只剩第三类**：$$\boxed{T_X\Longrightarrow\text{精确恢复零点的 }\beta}$$ **R1–R4 再压一步（★）**：若 $Z_X=Z(\xi)$ 则 Hadamard 型唯一性表明只能恢复 $\xi$ 本身 ⟹ **"识别零集"本身不是突破**；必须 $$\boxed{T_X\Longrightarrow Z_X\subset\{\Re s=\tfrac12\}}\tag{★}$$ 且 $T_X$ 不得：用零点作输入／经显式公式偷换成 Li-Weil／经 self-adjointness 偷换成谱定位／经 FE involution 定义临界线。**反向筛选**：不问"还有什么对象"，而问 **"什么性质能在没有零点数据的情况下直接产生 $\Re s=1/2$ 这个数 $1/2$？"**；**关键缺口（N）**：$$\boxed{\text{产生 }1/2\Longrightarrow\text{必然来自 FE 对称}}$$ **"这个等价性其实还没有被证明"** ⟹ $$\boxed{\text{是否存在非 FE 的数学机制，其内禀标度平衡自然产生 }1/2？}$$ **下一档做"半轴值源审计"**：只检查 $$\boxed{\Lambda_X\stackrel{?}{=}\tfrac12}$$ 且**必须不可调**（不允许 $\frac{a}{a+b}$ 再人为取 $a=b$）；**并加更狠条件**：$1/2$ 必须在**零点出现以前**存在：$$\boxed{X\overset{T_X}{\longrightarrow}\tfrac12\longrightarrow Z_X\overset{\text{识别}}{=}Z(\xi)}$$ **核心命题 H0**：$$\boxed{\textbf{H0:}\ \text{任何独立 canonical 可验证的 RH 机制若产生精确 }\beta=\tfrac12,\text{ 必须等价于 }s\leftrightarrow1-s}$$ **"如果 H0 找到反例，那个反例本身就是目前整个项目最值得追的突破口。"** **指令**：**逐类把所有能产生精确无量纲 $1/2$ 的机制写成方程，算出其 $\Lambda_X$。**
+
+**§1 半值源三机制类（互相独立）**：$$\begin{array}{c|l|l}\textbf{S1} & \textbf{序-2 自对偶不动点}（involution／self-dual point／\mathbb Z/2\text{-陪集密度／torsor}） & \text{群作用}\ \mathbb Z/2\\ \textbf{S2} & \textbf{二次矩指数}（随机和}\ \Longrightarrow\sqrt N\text{；方差指数） & \text{二次型／二阶矩}\\ \textbf{S3} & \textbf{归一化中点·半权}（canonical 区间中点；权}\ k/2） & \text{坐标归一化}\\ \end{array}$$
+
+**§2 逐类方程与 $\Lambda_X$**：**(S1)** $\iota_k(s)=k-s$ ⟹ $\Lambda_X=k/2$ ⚠️ **可调**（仅 S1 钉不住 $k=1$；算术实例：FE $s\leftrightarrow1-s$、模形式轴 $k/2$、Liouville 密度 $1/2$（无条件、无 RH 信息）；⭐ **非算术实例：方格子键渗流 $p_c=\frac12$（Kesten）—— 同一机制类**）；**(S2)** $\sum_{n\le x}\Lambda(n)\asymp x$、$\sum\Lambda(n)^2\asymp x\log x$（**Chebyshev–Mertens，无条件**）⟹ $\sigma\asymp\sqrt{x\log x}$ ⟹ $$\Lambda_X=\tfrac12$$ ⭐ **不可调**（来自二阶矩定义中的那个 $2$）且 ⭐⭐ **完全不使用 FE** ⟹ **(N) 的直接反例候选**（算术实例：平方根消去 $\psi(x)-x\ll\sqrt x\log^2x$、Weil／Li 正性）；**(S3)** 中点／半权 ⟹ ⚠️ 可调（依赖端点；须 `V171` §3-D 的 archimedean 归一化钉死）
+
+**§3 ⭐⭐⭐ H0 判定**：**H0 字面 FALSE**（S2 完全独立于 FE；S3 亦不由 FE 定义；S1 的非算术实例渗流 $p_c=\tfrac12$ 说明"序-2 自对偶"是**一般机制**、FE 只是其算术实例）⟹ $$\boxed{\textbf{H0 字面：FALSE}}$$ **H0$'$（修正版）**：任何 canonical 无量纲 $1/2$ 源必落 **S1 $\cup$ S2 $\cup$ S3**，且三者**均已封**：S1 ⟹ 用 $\iota$ 定义轴 ＝ `V148`／`V212`(c)（$\iota$-对称自动 ⟹ 无信息）；S2 ⟹ 二次矩／二次型 ⟹ **正性／SOS** ＝ `V199`(a)／`V185`；S3 ⟹ 坐标归一化 ⟹ **archimedean 完成化** ＝ `V215`(c)／`V171` §3-D ⟹ $$\boxed{\textbf{H0$'$ 在已审计类上成立}}$$（范围＝本档三机制类，**非全称定理**）
+
+**§4 ⭐⭐⭐⭐ 本档最强发现**：S1 给**对称轴**（FE 固定轨迹 $\Re s=\tfrac12$）；S2 给**极小极大指数**（$\sigma\asymp x^{1/2}(\log x)^{1/2}$）；而显式公式 $\psi(x)-x=-\sum_\rho\frac{x^\rho}{\rho}+\cdots$ ⟹ **$\Re\rho$ 就是 $x$-幂的指数** ⟹ $$\boxed{\text{RH}\iff\text{"自对偶（对称）轴"}=\text{"二次矩（极小极大）指数"}}$$ ⭐ 解释 V147–V217 层层塌回：**RH 是两个独立产生的 $1/2$ 的相等性**；证等式须在**对称通道（FE）**与**正性通道（二次矩）**之间穿行，而**那次穿行就是缺失的输入** ✓✓✓✓
+
+**§5 ⭐⭐⭐⭐⭐ 不变障碍（最干净形式）**："无量纲 $1/2$"**可免费产生**（对称比值 $\frac{a}{a+b}$ 内禀强制 $a=b$）；**但要把它与 $\zeta$ 的临界线坐标相认，必须有 canonical 坐标归一化** ⟹ 算术中唯一 canonical 的坐标归一化 ＝ **archimedean 完成化**（极点 $s=1$、$\Gamma$ 因子、度／导子）⟹ `V215`(c) ⟹ $$\boxed{\text{“产生 1/2”三步：对称/矩给无量纲值}\to\textbf{归一化给坐标}\to\textbf{相认};\ \text{中间那步唯一候选＝(c)、已封}}$$ ⭐ 这是 `V217` (K2) 的**一般化** ✓✓✓
+
+**§6 顺序要求审计**：S1／S2／S3 **均满足**"零点出现以前已有 $1/2$" ⟹ **失败点不在顺序，而在 §5 的相认步骤** ⟹ 落 (c) ✓✓
+
+**§7 判词与残余**：$$\boxed{\textbf{V218：H0 字面 FALSE};\ \textbf{H0$'$ 在三机制类上成立}}$$（(i) S2 独立于 FE（反例级）；(ii) S1 是一般机制；(iii) 三源皆封）**残余（UNINSTANTIATED）**：一个**第四类** $1/2$ 源 —— 既非序-2 自对偶、非二次矩指数、非归一化中点，又能给出**精确** $1/2$ 且**可相认为坐标值**（判据：① 内禀强制不可调；② 顺序合规；③ 相认不落 (a)(b)(c)；④ 满足 R1–R4）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
