@@ -111,3 +111,14 @@ $$\textbf{(e)}\ \text{§6 的反乘子测试}\ \text{为}\ \textbf{本档正式�
 ✅ 净产出：① 两处范围修正落档＋V220 §5 修正 ✓✓✓；② ⭐⭐⭐⭐⭐ V226-A 类型三分 ✓✓✓✓✓；
    ③ 与 V144 的严丝合缝 ✓✓✓；④ C1–C4 判定＋反乘子测试 ✓✓；⑤ β-extraction 残余五条判据 ✓
 ```
+
+---
+
+## §8 ⚠️ **V226-A 撤回**（唐先生 2026-09-15 16:29；由 `V227` 执行）
+
+$$\text{反例}：P_X(z)=z^n+a_{n-1}z^{n-1}+\cdots+a_0\ (a_j\in\mathbb Z) ⟹ \text{根}\ z_j=r_je^{i\theta_j}\ \textbf{内生复位置} ✓✓✓$$
+$$\qquad z^2+1\Rightarrow\{i,-i\};\quad z^2-1\Rightarrow\{1,-1\};\quad z^n-az-b=0\ \text{改}\ a,b\ \text{即改模长与辐角（}\textbf{同一代数关系耦合}）✓$$
+$$\qquad ⚠️\ \text{且}\ \text{`V144`}\ \text{只控制}\ \textbf{局部 Euler 因子} \text{本身},\ \textbf{不排除} \text{全局算术代数对象具复位置自由度} ✓✓$$
+$$\Longrightarrow \boxed{\text{§4 的"类型三分／无第四类"}\ \textbf{撤回};\ \text{第四类＝}\boxed{\textbf{根定位型}}\ \text{（}\ P_X(C)=0\ \text{内生决定复位置}）} ✓✓✓$$
+$$\qquad ⚠️\ \text{与}\ \text{`V220`}\ \text{"}A+iB\text{"}\ \text{的本质区别}：C\ \text{不是"两个坐标"},\ \text{而是}\ \textbf{由整体关系共同决定的复点} ⟹ |C|\leftrightarrow\arg C\ \textbf{天然耦合} ✓✓$$
+$$\qquad ⚠️\ \text{§4 的 (1)--(4)}\ \text{仍有效}（\text{角度型}）;\ (6)(7)\ \text{仍有效};\ \text{但"仅此两类"}\ \textbf{无效} ✓$$
