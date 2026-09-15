@@ -21,7 +21,7 @@ $$\textbf{A 层使用规则 ✓}：\text{后续任何新机制（多元素联合
 
 ## §2 B 层 · **必须降级：禁止升级为定理（✗）**
 
-$$\textbf{B1 }\ \gamma=G(r)\ \Longrightarrow\ \text{只能写}\ \boxed{\text{局部经验闭合 ✓}}\ ✗（\text{禁止写"}\gamma\ \text{是 }r\ \text{的函数"✓）$$
+$$\textbf{B1 }\ \gamma=G(r)\ \Longrightarrow\ \text{只能写}\ \boxed{\text{局部经验闭合 ✓}}\ ✗（\text{禁止写"}\gamma\ \text{是 }r\ \text{的函数"✓）}$$
 $$\qquad\text{依据 ✓}：\text{E205 支持（跨历史 }|\Delta\gamma|\le0.017\ ✓）\ \text{但 E208 反例（}F\ \text{非全局单零点：}r{=}0.34\ \text{时 }F{=}{+}0.75\ ✗）✓$$
 $$\textbf{B2 }\ r_0=\frac{\rho(r_0)\lambda(r_0)}{\gamma(r_0)-\lambda(r_0)}\ \Longrightarrow\ \text{只能写}\ \boxed{\text{局部自洽关系候选 ✓}}\ ✗$$
 $$\qquad\text{依据 ✓}：\text{E208 单点 6\% 吻合 ✓（可疑的巧合 ✓）};\text{E209 三种子 }r_F=0.142/0.111/-1.61\ ✗\ \text{（斜率差 80 倍 ✗）}✓$$
@@ -35,7 +35,7 @@ $$\textbf{B7 }\ \text{“宽搜索 }\Rightarrow r_{20}\ \text{改善”}\ \Longr
 
 $$\textbf{C1 }\ \boxed{\text{为什么 }r\approx0.14\ \text{会产生动力学反弹？}}\ ✓：\text{现象已确证（A4/A5 ✓），【机制未知 ✗】}$$
 $$\qquad\text{已知 ✓}：\text{反弹与 }\eta\ \text{穿越 1 同时发生 ✓；}\gamma\ \text{已降到 }0.08\!\sim\!0.15\ ✓\ \text{而 }\lambda\approx0.031\ \text{不变 ✓};\ \rho\ \text{降到 }0.40\!\sim\!0.50\ ✓$$
-$$\qquad\text{未知 ✗}：\text{为何 }\gamma\ \text{不能继续以与 }r\ \text{同步的速度下降（从而维持 }\eta>1\ ✓）}$$
+$$\qquad\text{未知 ✗}：\text{为何 }\gamma\ \text{不能继续以与 }r\ \text{同步的速度下降（从而维持 }\eta>1\ ✓）$$
 $$\textbf{C2 }\ \boxed{r=D/|B|\ \text{只是【压缩统计量】✗}}\ ✓：\text{E209 已示}\ \boxed{r\ \text{相同}\not\Rightarrow(\gamma,\rho,\lambda)\ \text{相同}}\ ✓$$
 $$\qquad\Longrightarrow\ \textbf{故第二状态变量不能"凭相关挑一个"✗}，\text{必须经【最小充分状态】审计 ✓（E211 ✓）}$$
 $$\textbf{C3 }\ \text{若任何 }(r,s)\ \text{都压不到同一曲面 ✓} \Longrightarrow \boxed{\text{有限维状态闭合可能本身是错误方向 ✗}}\ ✓（\text{此时应转向机制层重设 ✓，而非加第三变量 ✗）}$$
@@ -130,3 +130,12 @@ $$\boxed{\text{命中本节任一条} \Longrightarrow \textbf{当场退回；\\ 
 | | **⑧ 预测的 $1/2$ ＝ 双计权的密度坐标**：$d=1$ 项给 $(n+1)^2$ ⟹ $\mathfrak D_n(s)$ 含 $(n+1)^{-2s}$ ⟹ 收敛界 $\Re s>\frac12$ **来自轨道＝2 元素的那个 2** ⟹ **`V235`-A 密度型 $1/r$ 横坐标**（无条件、零知识）；而"折返中心 $\log d=\frac12\log n$" ＝ **几何均值中点** ⟹ **`V218` S1（二阶对合不动点）／S3（归一化中点）**，其中 S1 的 $\Lambda_X=k/2$ **可调**（$d\mapsto c/d$ 任意 $c$）⟹ 提案 §0"这里的 1/2 不是归一化"**为误**；钉到坐标值 ＝ **`V215`(c) archimedean 归一化（已封）** |
 | **判决** | **三关表面皆过（$E$ 非乘性 ✓、$\log E$ 非局部可加 ✓、二阶差非 $v_r$ 决定 ✓），但两支均已闭合**：平方自由域退化为 $\tau$ ⟹ G1 失败；非平凡部分为 2-adic 局部 ⟹ 提案自己预登记的 DEAD。**且两个 $1/2$ 来源（密度 $1/r$；对合中点）均已在分类表内。** |
 | **⚠️ 诚实标注** | `E2` §3 二分为【结构性＋电池核验，**非全称定理**】；本档 ①–⑤ 为本档**初等推导**（可独立复核）；⑦ 的落点判断为本档归纳 |
+
+## §Z.4 **第 10／11 次落点（2026-09-15 20:2x）** —— **外部通道两条**
+
+| # | 外部提案 | 闸门结果 | 判决 |
+|---|---|---|---|
+| **10** | **arXiv 2602.20211**（"形式群／非谱 Euler 重组"；声称 local Euler ⟶ 非谱 global object） | G1 ✗（形式 Euler 积＋经典 log；evenization 强加的 FE 类似对称 ⟹ `V218` S1/S3 可调）、G2 ✗、G3 ✗（涨落由 $\theta(x)-x$ 支配 ⟹ 显式公式）、G4 ✗（无 $\Re\rho$ 陈述） | **DEAD**（未到 G5）；**整类一次性关闭** |
+| **11** | **算术 Dijkgraaf–Witten**（Hirano–Kim–Morishita, CNTP 17(1) 2023） | G1 △（新组装、部件全旧）、G2 ✗（$\mu_N$ 相位 ⟹ `V237`-A／`V196`）、**G3 ✗（局部→整体＝Artin 互反律／Artin–Verdier 对偶 ⟹ `V241-D`：互反律＝coboundary ⟹ δB）**、G4 ✗（$\mathbb Z/N$ 值、不涉 ζ 零点） | **DEAD**（未到 G5）；`V242-B` 逆向审计**答"否"**（只给 phase／partition／reciprocity） |
+
+$$\textbf{强外部交叉结论}：\text{谱几何}／\text{scaling site／Frobenius correspondences}／\text{算术拓扑／DW}\ \textbf{三者都能造 global object，都不能产 polarization} ⟹ \text{与 `V242-D`／`V145`／`AOB3` §47 一致} ✓$$

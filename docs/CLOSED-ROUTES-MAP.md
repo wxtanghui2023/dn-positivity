@@ -1796,6 +1796,34 @@ $$\qquad ⭐\ \text{本次终止的价值}：\text{不是某个候选死了}，\
 
 **§7 框架性缺口（不是"下一个方向"，仅登记不投资）**：$$\boxed{\text{canonical 基域（}\mathbb F_1\text{）或等价的"}\mathbb Z\ \text{的 canonical 外部几何"}＋\text{其 canonical polarization}}$$ 落点：`V237`-D（$\mathbb F_1$-曲线／Spec $\mathbb Z$ 的 Frobenius）；`V145`（Deninger：**canonical generator 有、canonical polarization 缺**）✓✓
 
+### F.5cy ⭐⭐⭐⭐⭐ **V243：外部两篇的五闸门审计 ⟹ ① arXiv 2602.20211（形式群／"非谱 Euler 重组"）DEAD；② 算术 Dijkgraaf–Witten DEAD；③ 强外部交叉结论**（`V243` ✓ 2026-09-15 20:19）
+
+**委托（唐先生）**：**"先读。而且必须先读这两条，而不是再造一个内部候选。"** ＋ **"不要只做文献摘要。这次直接按下面五道闸门逐项计算：$$\boxed{\text{对象是否新}\to\text{运算是否新}\to\text{是否真正跨局部到全球}\to\text{是否携带 }\beta\to\text{是否产生独立正性/不等式}}$$ 第五关过不了，就 DEAD；第四关过不了，连第五关都不用做。"**
+
+**① arXiv 2602.20211（Takao Inoue，2026-02-23，33 页，主 MSC 11M06，arXiv 归类 math.GM）** —— 读**全文 HTML**（非摘要）：
+- **Def 2.1**：$\zeta^{\rm for}=\prod_p(1-X_p)^{-1}\in\mathbb Q[[X_p]]$；**Lemma 2.2**：$\log\zeta^{\rm for}=\sum_p\sum_k\frac1kX_p^k$（**其证明即一行经典恒等式，逐因子**）
+- §4："formal completion via evenization"，得 "symmetry **analogous to** the functional equation, **without invoking analytic continuation or Gamma factors**"（**自认 analogous**）；§12：涨落 ＝ $\theta(x)-x$ 的加权积分
+- §1 自述："**not to resolve the Riemann hypothesis**"；"RH would correspond **not to an operator-theoretic statement**, but to constraints on the oscillatory behavior and decay of higher cumulants"；**Appendix B 自标 speculative／exploratory**
+- **G1 ✗不新**（形式 Euler 积＋经典 log＋evenization＝取偶部）；⭐ **致命点**：FE 类似对称是 **evenization 强加**的（$u\mapsto-u$），不动点 $u=0$ 在归一化坐标下才"是" $\frac12$ ⟹ 正是 **`V218` S1／S3**（S1 的 $\Lambda_X=k/2$ **可调**；钉到坐标值 ＝ **`V215`(c)**）
+- **G2 ✗不新**（逐项 log／evenization／归一／cumulant 全经典；"高斯非概率起源"＝对已知现象的解释reframing）
+- **G3 ✗名义跨、实质不跨**（"全局对象"＝形式级数；涨落由 $\theta(x)-x$ 支配 ⟹ **显式公式通道**；原文明确非谱、明确不给零点算子实现）
+- **G4 ✗不携带**（β 只作为输入经 $\theta(x)-x$；**全文无任何 $\Re\rho$ 陈述**；RH 只写成 cumulant 约束）
+⟹ $$\boxed{\textbf{DEAD}}$$（不必 G5）；⭐ **命中预判**："第一步就退化成显式公式／known L-function ⟹ 整类一次性关闭" —— **正是如此** ✓
+
+**② 算术 Dijkgraaf–Witten（Hirano–Kim–Morishita, CNTP 17(1) 2023；Morishita Ch.16；Hirano 2023 mod-2 实二次域）**：
+- **字典**：3-流形 ↔ $\mathrm{Spec}\,O_K$｜纽结 ↔ 极大理想｜链环 ↔ 有限素数集｜$\pi_1(M)$ ↔ modified étale $\pi_1(X)$｜$Z_1\leftrightarrow I_K$｜$B_1\leftrightarrow P_K$｜$H_1\leftrightarrow Cl_K$；
+  ⭐ **mod 2 linking number ↔ Legendre 符号**；⭐ **Hurewicz ↔ Artin 互反**；⭐ **Poincaré 对偶 ↔ Artin–Verdier 对偶**
+- **算术 CS 不变量**：$CS_{X_k}(\rho)$ ＝ $c$ 在 $H^3(G,\mathbb Z/N)\xrightarrow{\rho^*}H^3(\widetilde\Pi_k,\mathbb Z/N)\to H^3(X_k,\mathbb Z/N)\cong\boxed{\mathbb Z/N}$ 下的像；模 2 实二次域给 **explicit Legendre-symbol expression**
+- **G1 △新组装但部件全旧**（modified étale／Artin–Verdier／Galois 上同调／Legendre·幂剩余符号／Artin 互反／类群）
+- **G2 ✗不新**（有限求和＋$\mu_N$ 相位 ⟹ **`V237`-A** 模 1 纯相位；**`V196`** symbol $\in\mu_N\Longrightarrow\mathrm{Br}/\mu_N$ 类）
+- **G3 ✗（最干净的一刀）**：该理论的局部→整体相容性 **就是 Artin 互反律／Artin–Verdier 对偶** ⟹ 由 **`V241-D`**（算术非交换性＝互反律＝"局部符号之积 $\equiv1$"＝**coboundary**）⟹ 落 $\delta B$ ⟹ **DEAD**
+- **G4 ✗不携带**（$\mathbb Z/N$ 值离散挠，无连续实部；不涉及 $\zeta$ 零点；模 2 情形＝纯相位）
+⟹ $$\boxed{\textbf{DEAD}}$$；**`V242-B` 逆向审计（DW action ⟹ polarization？）答：否**（配分函数＝根之单位和；权值 $\mu_N$ 纯相位，**不是正定配对**；只给 topological phase／partition function／reciprocity invariant）
+
+**③ ⭐⭐⭐⭐⭐ 强外部交叉结论（本档核心，[结构性]）**：
+$$\left.\begin{array}{l}\text{谱几何（Connes 2026；Hedenmalm 2026）}\\[2pt]\text{scaling site／Frobenius correspondences（Connes–Consani）}\\[2pt]\text{算术拓扑／Dijkgraaf–Witten（Hirano–Kim–Morishita）}\end{array}\right\}\Longrightarrow\boxed{\text{都能构造 global object，但都不能产生 RH 所需的 polarization}}$$
+① 其 RH 步骤需 **archimedean Weil positivity**（他们自己的 §7.2）＝**需要** polarization；② Frobenius correspondences 的复合数据＝迹（**`V242-B`**）＝显式公式通道；③ $\mu_N$ 纯相位＋局部→整体＝互反律＝coboundary（**`V241-D`**）⟹ **统一原因**：三者在**迹／相位／互反**上着陆，而 RH 需要**配对正性** ⟹ 与 **`V242-D`／`V145`**（canonical generator 有、polarization 缺）／**`AOB3` §47** 完全一致 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
