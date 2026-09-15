@@ -214,7 +214,7 @@ $$\textbf{G1 ✗}：\text{真的 }C_2\text{-torsor}\ \textbf{按定义} \in H^1(
 $$\qquad\textbf{高阶逃逸双封 ✓}：\text{(i) spin（}H^2\text{）／anomaly（}H^3\text{）⟹ 2-上闭链／Brauer ⟹ }\textbf{L-值} ✗（`AOB1` §2(3)）；\text{(ii) }\textbf{CRT 兼容复形 ＝ flag complex ⟹ 无三体/四体 obstruction} ✗（`AOB5` 4000/4000 ✓）$$
 $$\textbf{G2 ✗（≡ G1）}：\text{"局部有定向但}\textbf{无全局截面}"\ \textbf{恰是非平凡 }H^1\ \text{类的定义} ✓ \Longrightarrow \text{无独立内容} ✓$$
 $$\textbf{G3 ✗}：\text{"orientation"}\textbf{按定义} ＝ \text{结构群缩减（}O\to SO\text{）}＝\mathbb Z/2\text{-torsor} ⟹ \text{死} ✗$$
-$$\boxed{\textbf{⭐⭐ 本档核心定理 ✓}：\text{RH}\iff\iota:\rho\mapsto1-\bar\rho\ \textbf{无自由轨道};\ \text{而 canonical symmetry-breaking ＝ 平凡化该 torsor} ⟹ H^1 ⟹ \text{quadratic} ⟹ }\textbf{select 范式与 RH 的陈述类型不匹配} ✓✓\（\text{RH ＝ "无自由轨道"（全局·缺席型）；select ＝ "在轨道中选一个"（局部·选择型）}）}$$
+$$\boxed{\textbf{⭐⭐ 本档核心定理 ✓}：\text{RH}\iff\iota:\rho\mapsto1-\bar\rho\ \textbf{无自由轨道};\ \text{而 canonical symmetry-breaking ＝ 平凡化该 torsor} ⟹ H^1 ⟹ \text{quadratic} ⟹ }\textbf{select 范式与 RH 的陈述类型不匹配} ✓✓\（\text{RH ＝ "无自由轨道"（全局·缺席型）；select ＝ "在轨道中选一个"（局部·选择型）}）$$
 $$\boxed{\textbf{⭐ 三形状皆闭 ✓}：\text{invariant ✗（只见 }\delta^2／|\delta|\text{，无方向）／select ✗（（本行））／size ✗（}T^2\text{／}\log\ \text{墙，W3／W4）}}$$
 $$\textbf{档案决定性 ✓}：`AOB4` §2 逐字二分 —— char 0 中 canonical 对象：\text{① 交换谱化（Hecke／}[n]\text{）⟹ }L\text{-函数 ✗；② 不可全局极化（mixed：Galois／GT／MZV）⟹ 无 similitude ✗；③ pure＋polarizable ⟹ }\textbf{无 canonical element} ✗ ⟹ \textbf{存在性终审：不存在}；\ \textbf{差别不在 Frobenius，而在【非平凡性的来源】}（char $p$ 来自\textbf{元素}；char 0 只能来自\textbf{扩展}）✓✓$$
 $$\qquad\textbf{配套 ✓}：`S9-strict` 第二支箭不成立（\theta=0\Rightarrow a=b ✗，反例 \theta=(a-b)g(a+b)）—— 与 `V147` §1 同型：forcing／selection 论证总需额外假设，而那些假设正是被封闭处 ✓$$
@@ -238,7 +238,7 @@ $$\qquad\text{算术完备的可观察系统 ⟹ 对 }B_R\ge n_0\ \text{的层�
 $$\qquad\text{且候选 height 本身 ＝ 正定二次型 ⟹ 箱 8／12 ✗；Arakelov height ⟹ G9 }\textbf{尺度失败}（\text{height／}\log\ \text{非 }\sqrt X\text{）✗}$$
 $$\textbf{W3 ✗}：\neg\text{RH}\ \text{给【有限见证（非无限）】};\ \text{下降需 canonical 单边映射 ⟹ }\textbf{V147 T1 已封} ✗;\ \text{FE 是 involution 非 descent，转 descent 即 selection ⟹ V148 已封} ✗$$
 $$\boxed{\text{故}\textbf{无第七类} ✓\ \text{（WF 被 II}\cup\text{IV 吸收）};\ \textbf{但不证明类表完整} ✗\（\text{§E.4 仍开} ⚠️）}$$
-$$\qquad\textbf{⭐ 本行收获 ✓}：\text{Π}_1\ \text{必要条件（对 Robin 型见证盲目 ⟹ 必须解析／上同调定义）是 }§E.4\ \text{类表的}\textbf{新增覆盖力证据} ✓（仍非完整性证明 ✗）}$$
+$$\qquad\textbf{⭐ 本行收获 ✓}：\text{Π}_1\ \text{必要条件（对 Robin 型见证盲目 ⟹ 必须解析／上同调定义）是 }§E.4\ \text{类表的}\textbf{新增覆盖力证据} ✓（仍非完整性证明 ✗）$$
 
 ### F.5m ⭐⭐⭐⭐⭐ **§E.4 直接攻击（第一轮）：反例骨架生成器**（`V151` ✓ 2026-09-15 09:38）—— **未逃逸** ✗｜⭐ **§E.4 → (E4′) 精确化** ✓✓｜⭐ **六类表 ＝ big five 的影子** ✓✓
 
