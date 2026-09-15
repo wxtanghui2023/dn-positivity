@@ -110,3 +110,13 @@ $$\textbf{(d)}\ \text{§6 的收口范围}＝\textbf{canonical 构造};\ \text{�
 ✅ 净产出：① 实测跨素数协方差（因子化）✓✓✓；② FKG 二难 ＋ 子格障碍 ✓✓✓；③ 新信息量判死（＝已知二阶估计变体）✓✓✓；
    ④ 组合/单调锥源 DEAD ⟹ 四类锥源全封 ⟹ A1/A3 收口 ✓✓✓；⑤ 残余三条判据 ✓
 ```
+
+---
+
+## §9 ⚠️ 结论**收紧**（唐先生 2026-09-15 13:46；随 `V201` 门一并生效）
+
+$$\boxed{\text{V200 结论（收紧后）}：\ \textbf{现有 canonical 组合／单调构造}\ \text{未产生新的无条件输入}} ✓✓✓$$
+$$\qquad ⚠️\ \textbf{不得} \text{写成}\ \text{"任何组合／单调机制都不可能"}\ \text{（原 §6／§4 的措辞按此收紧）} ✓$$
+$$\qquad \textbf{理由}：\text{本档使用}\ \textbf{两种 canonical 测度}（\mu_x,\ \mu_{\mathbb P}）\ \text{与 canonical 构造};\ \text{它穷尽的是}\ \textbf{当前定义域内} \text{的候选构造}$$
+$$\qquad\qquad\Longrightarrow\ \textbf{不是} \text{数学上的不存在性证明};\ \text{故}\ §6\ \text{的"收口"须读作"}\textbf{定义域内收口}" ✓✓$$
+$$\qquad ⭐\ \text{逻辑边界因此}\ \textbf{最干净}：\text{本档}\ \textbf{不} \text{声称第五类不存在，}\ \textbf{只} \text{声称其未在定义域内出现} ✓✓✓

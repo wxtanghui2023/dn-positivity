@@ -7,7 +7,10 @@
 > **任何新想法／新方向，开工前先读 `docs/MASTER-STATUS-AND-CLOSURES.md`（项目状态与路径关闭总表 ✓）**
 > —— 看是否已被关闭（附判据与指针）、是否撞根本墙（§1）、是否与在办同题（`ID-ALLOCATION-PROTOCOL.md` §7 跨线同题查重 ✓）
 > —— **本日已有三例跨线同题**（`V109`↔`E146`／`V115`↔`E146`／`V118`↔`E147`）⟹ 该表就是为"**避免重复掉坑**"而建 ✓
-> ## 🚪 **机制 II 收口门（`V198`，必读 ✓ 2026-09-15）**
+> ## 🚪 **两道重启门（必读 ✓ 2026-09-15）**
+> **① 机制 II 门（`V198`）**：走「globalization obstruction」的提案，先跑 `docs/V198-mechanism-II-closure-gate-executable-restart-criteria.md` §2 六条；
+> **② A1／A3 门（`V201`）**：欲重开正性锥源的提案，先跑 `docs/V201-A1A3-restart-gate-protocol-only.md` §1–§2（五条件＋四类还原判据＋换名清单）；
+> **任一不满足 ⟹ 立即停止、不进入推导**。A1／A3 ＝ **定义域内收口**（`V200`，表述已收紧）；⚠️ **不自动开新线** ✓
 > **任何声称走「机制 II（globalization obstruction）」的提案，开工前先跑 `docs/V198-mechanism-II-closure-gate-executable-restart-criteria.md` §2 六条**；
 > **任一不满足 ⟹ 立即停止、不进入推导**。canonical 分支已实算收口至 $0$／$\mathrm{Br}[N]$；下一站 ＝ **A1／A3** ✓
 
