@@ -603,6 +603,22 @@ $$\boxed{\text{finite places can couple local data}\ \not\Rightarrow\ \text{fini
 
 **下一步（V177 预登记）**：① 攻残余 1（非线性对合且不要求指数单项式化 —— S 的最后一道门）② 攻残余 2（把 $\Phi=\Psi/\mathrm{mirror}(\Psi)$ 严格化，使"算术 $\Phi$ 走私"成为定理）
 
+### F.5am ⭐⭐⭐⭐⭐ **$\Phi\Phi^\iota=1$ 的群上同调审计：$H^1(C_2,K_{\rm arith}^\times)=1$ ⟹ 算术 $\Phi$ 必为 coboundary**（`V177` ✓ 2026-09-15 11:56）
+
+**① `V176`-② 勘误（降级为形式域版本）**：原表述"任一 Dirichlet 级数若 $F(s)=\varepsilon F(k-s)$ 则 $F=$ constant"**过强** —— $F$ 只在**右半平面**收敛、$F(k-s)$ 在**左半平面**，逐系数比较隐含"两边可在同一层面比较"，而 ζ 的 FE 之所以能联系两个方向**恰恰因为存在跨越两个收敛域的完成结构** ⟹ 原表述把该结构**偷渡成前提**。修正版本须含"**且该恒等式可在共同的 Dirichlet／Laurent 形式域中逐系数解释**" ⟹ 定理适用域 ＝ **形式域中可逐系数解释的恒等式**（该降级不影响 §4 链条，因那条链本就在 Laurent 形式域中运作）。
+
+**② 群上同调形式化**：$\iota(s)=k-s$；$\Phi\Phi^\iota=1$ ⟹ $\Phi\in Z^1(C_2,K^\times)$；coboundary ＝ $\Psi/\iota\Psi$ ＝ $B^1$；$H^1=Z^1/B^1$。**若 $H^1=1$ 则 $\Phi\Phi^\iota=1\Rightarrow\Phi=\Psi/\Psi^\iota$** ⟹ 代入 $F=\varepsilon\Phi\,\iota F$ 得 $F\Psi=\varepsilon\,\iota(F\Psi)$ ⟹（修正版锥定理）⟹ $F\Psi=$ const ⟹ $F=c/\Psi$。
+
+**③ ⭐ $K_{\rm arith}$ 严格定义与 $H^1$ 计算**：取 $$K_{\rm arith}:=\mathbb Q\bigl(X_p:\ p\in\mathcal P\bigr)$$（局部参数 $X_p=p^{-s}$ 的有理函数域；系数在 $\mathbb Q$ —— "纯算术"的最自然含义：只有素数 $p$ 与有理系数进入，**不含任何 archimedean 因子**）。反射在局部参数上作用为 $\iota:X_p\mapsto p^{-k}X_p^{-1}$：**(i)** 单项式替换（$p^{-k}\in\mathbb Q$）；**(ii)** $\iota^2(X_p)=p^{-k}(p^{-k}X_p^{-1})^{-1}=X_p$ ⟹ $\iota^2=\mathrm{id}$；**(iii)** 像生成整个域 ⟹ $\iota\in\operatorname{Aut}\mathbb Q(X_p)$，$\operatorname{ord}(\iota)=2$ ✓。记固定域 $L=K_{\rm arith}^\iota$：**Artin 定理** ⟹ $[K_{\rm arith}:L]=2$ ⟹ $K_{\rm arith}/L$ 为二次 Galois 扩张 ⟹ **Hilbert 90** ⟹ $$\boxed{H^1\bigl(C_2,K_{\rm arith}^\times\bigr)=1}$$ 即 $\{\Phi:\Phi\Phi^\iota=1\}=\{\Psi/\Psi^\iota\}$（Hilbert 90 的"范数 1"条件**逐字**就是反自对偶条件）。
+
+**④ 结论 A（本档命中）：算术平衡因子 ＝ coboundary ＝ gauge 变换** ⟹ $F=c/\Psi$ ⟹ **F-leak／走私**（不再是"看起来像"，而是**严格定理**）—— **`V176`(iii) 正式闭合** ✓✓✓。**机制解释的最后一环**：$\Gamma(s/2)\notin\mathbb Q(X_p)$（因 $s=-\log X_p/\log p$，$\Gamma$ 是 $X_p$ 的**超越函数**，非有理函数）⟹ **不在定理作用域内** ⟹ 可合法充当"非 coboundary"平衡因子 ⟹ 与 `V176`(iv)"$\Phi$ 必须非算术"**完全一致** ✓✓。完整因果链：$$\text{算术}\Phi\Rightarrow\text{coboundary}\Rightarrow F=c/\Psi\Rightarrow\text{空转（走私）};\quad \text{非算术}\Phi\Rightarrow\text{archimedean 完成因子}$$
+
+**⑤ 三选判定**：**A 命中**（$H^1=1$ ⟹ 算术 $\Phi$ 必为 coboundary ⟹ 走私）；**B 未出现**；**C 未出现**（S 未命中）。
+
+**⑥ 残余（精确，OPEN，不杀）**：**(1)** $\Phi$ 在**单位环**而非**域**中 —— Hilbert 90 给出的 $\Psi$ **可能落在环外** ⟹ $F=c/\Psi$ 仍成立，但"$\Psi$ 是否算算术对象"需另议（本档新暴露的**唯一严格残余**）；**(2)** **非有理函数型的算术 $\Phi$**（如含算术指数的无穷乘积 $\prod_p(\dots)$ 型），超出 $\mathbb Q(X_p)$，Hilbert 90 不适用 ⟹ **未判**。
+
+**下一步（V178 预登记）**：① 攻残余 1（单位环 vs 域：$\Psi$ 落在环外时 $F=c/\Psi$ 还算不算"算术定义"）② 攻残余 2（非有理函数型算术 $\Phi$）
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

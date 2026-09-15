@@ -172,3 +172,17 @@ $$\boxed{\textbf{S-ii 在"单项式对合 ＋ 算术平衡因子"两种情形下
 ✅ 净产出：① 锥定理（单项式）✓；② ⭐ 加强定理（裸反射只有常解，无需 Euler 积）✓✓；
    ③ ⭐ 平衡因子定理（算术 Φ ⟹ 定义而非约束）✓✓；④ S-ii 两情形 DEAD ＋ 残余收窄为两点 ✓
 ```
+
+---
+
+## §7 ⚠️ ERRATUM（T10 勘误 · 唐先生 2026-09-15 11:56 ✓✓）
+
+**§3 "加强定理"的表述过强，须降级为【形式域版本】。**
+
+$$\text{原表述（撤回）}：\text{任一 Dirichlet 级数}\ F=\sum c_nn^{-s}\ \text{若}\ F(s)=\varepsilon F(k-s)\ \text{则}\ F=\text{constant}\qquad ✗$$
+$$\text{问题}：F(s)=\sum c_nn^{-s}\ \text{只在}\textbf{右半平面}\text{绝对收敛};\ F(k-s)\ \text{对应}\textbf{左半平面};\ \text{逐系数比较}\ n^{-s}\leftrightarrow n^{s-k}\ \text{隐含"两边可在同一层面比较"} ✗✓$$
+$$\qquad\text{而 ζ 的函数方程之所以能联系两个方向，}\textbf{恰恰因为存在跨越两个收敛域的完成结构} ⟹ \text{原表述把该结构}\textbf{偷渡成了前提} ✗$$
+$$\boxed{\text{修正后的严格版本} ✓✓：F(s)=\sum c_nn^{-s};\ F(s)=\varepsilon F(k-s);\ \textbf{且该恒等式可在共同的 Dirichlet／Laurent 形式域中逐系数解释}\ \Longrightarrow\ F=\text{constant}}$$
+$$\qquad\Longrightarrow\ \text{定理的适用域 ＝}\boxed{\text{"形式域（共同 Laurent 形式域）中可逐系数解释的恒等式"}},\ \textbf{不是}\text{"任意 Dirichlet 级数的解析函数方程"} ✓✓$$
+$$\qquad ⚠️\ \text{该降级}\textbf{不影响} §4\ \text{的逻辑链（那条链本来就在 Laurent 形式域中运作）} ✓;\ \text{但}\textbf{必须}\text{先写明，否则 coboundary 消去步骤会建立在未证的跨域比较上} ✓✓$$
+$$\qquad\Longrightarrow\ \text{后续见 }V177\ \text{（}H^1(C_2,K_{\rm arith}^\times)=1\ \text{＋ 结论 A：算术 }\Phi\ \text{必为 coboundary）} ✓✓$$
