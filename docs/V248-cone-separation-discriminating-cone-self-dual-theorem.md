@@ -105,3 +105,38 @@ $$\qquad \textbf{未用 RH 作推导} ✓;\ \text{未跑 Lean} ✓;\ \textbf{零
   非自对偶）③ ⭐⭐⭐⭐ 命题 V248-A：判别锥必自对偶 ⟹ 判别 = 单个二次型 ⟹ 角 I；非自对偶锥只能放松不能加锐
   ④ 更正唐先生 algebraic test 中"FE-对称 ⟹ 无法选边"这一步（直线自对称）⑤ 锥分离路线**定理级关闭**
 ```
+
+---
+
+## §6 ⚠️⚠️ **V248-A 撤回**（唐先生 2026-09-15 21:12；三维显式反例）
+
+$$\textbf{【撤回】}\text{命题 V248-A 及其战略结论"锥分离路线定理级关闭"}\ \textbf{为假} \text{，本档撤回} ✓✓✓$$
+
+$$\textbf{反例（唐先生，逐字采纳；本档已验算）}：$$
+$$\qquad C=\mathbb R^3_{\ge0}\ \text{（自对偶）};\quad T=\begin{pmatrix}1&1&0\\0&1&0\\0&0&1\end{pmatrix}\ (T\ne T^{-\mathsf T});\quad K=T(C)\ \text{（闭、凸、尖）}$$
+$$\qquad K^*=T^{-\mathsf T}C\ne TC=K \Longrightarrow \boxed{K\ne K^*}\ \textbf{（非自对偶）} ✓$$
+$$\qquad A(t)=T(1,t,-t)^{\mathsf T};\quad T\ \text{可逆}\Longrightarrow A(t)\in K\iff(1,t,-t)\in C\iff t\ge0\ \wedge\ -t\ge0\iff\boxed{t=0}$$
+$$\qquad \Longrightarrow \boxed{A(t)\in K\iff t=0}\ \text{而}\ K\ \textbf{非自对偶} \Longrightarrow \textbf{精确判别}\ \Re\rho=\tfrac12\ \textbf{不需要判别锥自对偶} ✓✓✓$$
+
+$$\textbf{错在何处}：\text{我把}\ \textbf{membership} \text{与}\ \textbf{separation} \text{混为一谈},\ \text{并写了}\ \text{"非自对偶}＝\text{缺少对偶描述"}\Longrightarrow\text{"无法给出尖锐判据"}\ \textbf{—— 两处都错}：$$
+$$\qquad \text{(i)}\ \textbf{双极定理（bipolar）}：K\ \text{闭凸}\Longrightarrow K=K^{**} \Longrightarrow \textbf{任何闭凸锥都有完整对偶描述}（\text{用}\ K^*,\ \text{只是}\ K^*\ne K）\Longrightarrow \text{"缺对偶描述"}\ \textbf{为假} ✗$$
+$$\qquad \text{(ii)}\ \textbf{尖锐性不需要自对偶}：\text{membership}\ x\in K\ \text{是}\ \textbf{闭条件},\ \text{其精确性由}\ K\ \text{闭凸决定},\ \text{与}\ K=K^*\ \textbf{无关} ✗$$
+$$\qquad \qquad \text{自对偶}\iff K^*=K\ \text{只意味着}\ \textbf{对偶见证恰好住在同一个锥里},\ \textbf{不} \text{意味着}\ \text{membership}\ \text{必须经由}\ K^*\ \text{定义} ✓$$
+
+$$\textbf{V248 中仍然成立的（未被撤回）}：$$
+$$\qquad \text{(a)}\ \text{两处勘误（唐先生）：}K_{\rm III}\ \text{不是由单一 PSD quadratic form 刻画的自对偶锥};\ \text{第三型}＝\text{同一线性宿主中严格不同的正性锥} ✓$$
+$$\qquad \text{(b)}\ \text{锥间隙结构}：CP_n\overset{\rm Choi}{\longleftrightarrow}PSD\（\text{自对偶}）;\ Pos_n\ \text{＝块正（检验锥＝乘积锥，非自对偶）};\ CP_n\subsetneq Pos_n ✓$$
+$$\qquad \text{(c)}\ \text{§2 更正}：FE\ \text{对称}\ \textbf{不} \text{排除条件集恰为直线（直线自对称）} ✓$$
+$$\qquad \text{(d)}\ \text{一个}\ \textbf{部分结论} \text{仍有效}：\text{若判别式恰取}\ \Re\rho=\tfrac12\iff A_\rho\in CP_n，\ \text{则它确为}\ \textbf{角 I}（\text{Choi 即 PSD 锥}）✓$$
+$$\qquad \qquad ⚠️\ \text{但这只是唐先生提议的}\ \textbf{一个特例}（\text{取}\ K=CP_n），\ \textbf{不是全部}：\text{一般}\ K\ \textbf{可非自对偶且尖锐} ✓$$
+
+$$\textbf{修正后的战略结论}：$$
+$$\qquad \boxed{\textbf{V248-A：DEAD（命题本身错误）}}\qquad \boxed{\textbf{V248 的 III 型算术 realization：OPEN}}$$
+$$\qquad \text{真正尚未被消灭的命题（唐先生 21:12，逐字）}：$$
+$$\qquad \qquad \boxed{\exists\ \text{canonical arithmetic cone}\ K,\ K\ne K^*;\ \exists\ \text{canonical}\ A_\rho;\ A_\rho\in K\iff\Re\rho=\tfrac12;\ \text{且}\ A_\rho\ \textbf{不以零点信息为输入}}$$
+$$\qquad \qquad ⚠️\ \text{它}\ \textbf{严于"找第三型"}：\text{第三型已存在};\ \text{真正缺的是}\ \textbf{arithmetic realization ＋ beta-sensitive membership} ✓$$
+$$\qquad \qquad ⚠️\ \text{且与 §2 的独立障碍}\ \textbf{并存}：\text{canonicity}\Longrightarrow\ \text{条件集}\ \iota\text{-不变};\ \text{若}\ K\ \textbf{自身}\ \iota\text{-不变},\ \text{则"}\in K\text{"不能}\ \textbf{单边} \text{敏感（但仍可恰为直线，见 §2）} ✓$$
+
+$$\textbf{自查登记（第 9 次）}：\text{前 8 次＝丢 Abel 边界项／单侧双侧混淆／near 计数过粗／near 高估}\ H\ \text{倍／BL10 指数 bug／BL10 漏因子／扫描越域／"只 push 不 bundle"误判} ✓$$
+$$\qquad \textbf{规律再次应验：结论"太顺"时先怀疑自己的推导} \text{；本次错误形态＝}\boxed{\text{把 special case 的直觉升成 universal 命题}}（\text{"能给出尖锐判据的锥只有}\ CP_n\text{"}）✓✓$$
+

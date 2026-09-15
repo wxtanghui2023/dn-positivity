@@ -1902,6 +1902,8 @@ $$\boxed{\textbf{角 II · 离散／扭角}}：\text{输出}＝\mathbb Z／\math
 
 **§5 边界**：经典事实（Choi 定理；PSD 锥自对偶；乘积锥非自对偶）**凭记忆引用、未逐条核对** ⚠️；§2 更正与唐先生该步判据**相反**（已诚实标注）；§4／§5 为 [结构性]；未用 RH；未跑 Lean；零数值；零外部检索
 
+$$\qquad ⚠️⚠️\ \textbf{【撤回 2026-09-15 21:12（唐先生）】}：\text{本条目下方"命题 V248-A／锥分离路线定理级关闭"}\ \textbf{已撤回} \text{—— 三维显式反例：}C=\mathbb R^3_{\ge0},\ T=\begin{pmatrix}1&1&0\\0&1&0\\0&0&1\end{pmatrix},\ K=T(C),\ K^*=T^{-\mathsf T}C\ne K\ \text{（非自对偶）},\ \text{但}\ A(t)=T(1,t,-t)^{\mathsf T}\in K\iff t=0 \Longrightarrow \textbf{精确 membership 不需要自对偶} ✓✓✓\ \text{错因：把 membership 与 separation 混淆 ＋ 误用"非自对偶＝缺对偶描述"（双极定理}\ K=K^{**}\ \text{直接否掉）} ✓\ \textbf{修正结论}：\text{V248-A：DEAD（命题本身错误）};\ \text{III 型算术 realization：}\textbf{OPEN};\ \text{尚未消灭的命题}＝\exists\ \text{canonical arithmetic cone}\ K\ne K^*\ \text{＋}\ \exists\ \text{canonical}\ A_\rho\ \text{使}\ A_\rho\in K\iff\Re\rho=\tfrac12\ \text{且不以零点为输入}$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
