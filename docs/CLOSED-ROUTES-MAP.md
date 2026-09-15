@@ -1196,6 +1196,22 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§9 新筛查条件**：$$\boxed{\text{任何"选择／边界"型提案须先说明它如何逃出}\ \text{`V147`}\ \text{T2}}$$ 即若其选择机制最终给出"唯一 admissible 对象"，则必为算术相容全序 ⟹ 大小序 ⟹ **立即封档** ✓
 
+### F.5bt ⭐⭐⭐⭐⭐ **V211：Finite–Infinite Anomaly Audit（第一性原理枚举）⟹ 框架自击（差式恒为望远镜 ⟹ A2 自动）＋八类全落已封类＋RH∈$\Pi_1$ ⟹ DEAD**（`V211` ✓ 2026-09-15 15:03）
+
+**委托（唐先生）**：**「V210 这一刀比前几轮更彻底……不能再做 V211＝另一种选择机制。」** 模式：状态选择／边界选择／历史选择／无限延拓选择／竞争极限 $\Longrightarrow$ 唯一性 $\Longrightarrow$ 序 $\Longrightarrow$ `V147`。新逻辑：**不可拼接性，而非选择性** —— $$\boxed{\text{finite satisfiability}\not\Rightarrow\text{global realizability}}$$ 危险：**紧致性定理** ⟹ 须存在**不满足一阶紧致性**的全局结构；新对象：**有限可实现、无限维一致性失败**；**三杀门 A1** $\delta_N\equiv0$；**A2** $\sum\delta_N$ 只是 telescope（coboundary）；**A3** 异常只是 $\mu,\Lambda,d,\sigma,\varphi$ 或显式公式／Li／Weil 重编码；**「不要再先找 RH」**：先证独立事实（"某天然算术有限层构造存在不可消除的无限异常"），再问能否约束横向位置，**第三步才是** $\mathcal A(\sigma+it)=0\Rightarrow\sigma=0$；**「V210 应成为一次搜索范式的终点……下一条真正有价值的工作应该直接做 FINITE–INFINITE ANOMALY AUDIT，并第一性原理枚举哪些数学结构允许'有限层完全正常、无限层产生不可消除异常'。」**
+
+**⭐ §1 框架自击（本档第一刀）**：你的异常定义 $\mathcal A=\lim_N[I_N-I_{N-1}]$、$\delta_N:=I_N-I_{N-1}$ ⟹ **对任意 $I,X$**：$$\sum_{N=1}^{M}\delta_N=I_M(X_M)-I_0(X_0)\ \text{（恒等式）}$$ $$\Longrightarrow\ \boxed{\mathcal A=\lim_N I_N-\lim_N I_0\ \text{＝两端之差；它按定义就是望远镜和}}\Longrightarrow\textbf{A2 自动触发}$$ ⚠️ **"先给不变量、再看差分累积"这一表述不可能产生非望远镜异常**（与 $I$ 的选取无关）✓✓✓ **逃出 A2 的唯一 canonical 形态**：缺陷**不能是** $I_{N+1}-I_N$ 型，须是 **cocycle（转移数据）而非 coboundary（不变量差）**，满足 $\delta_{N+1,N-1}=\delta_{N+1,N}\circ\delta_{N,N-1}$ 且非平凡 ⟹ **这恰是 `V196`–`V198` 的 Mechanism II** ⟹ 而 `V197`–`V198` 已**实算**：canonical 算术转移（$p\leftrightarrow q$／$p\leftrightarrow\infty$／尺度）⟹ $$\boxed{[T]=0\ \text{或}\ \mathrm{Br}[N]\ \text{（经典 torsion）}}$$ ✓✓✓
+
+**⭐ §2 八类机制第一性原理枚举（全部映射到已封类）**：(1) **非一阶**（无穷合取／二阶／良基性 $\Pi^1_1$）⟹ `V150`（WF $\subseteq$ II$\cup$IV，Mostowski／Gentzen ＋ $\Pi_1$ 论证）✓；(2) **选择**（ultrafilter／Banach 极限）⟹ `V153` class B（选择依赖 ⟹ 无新信息）✓；(3) **拓扑不完备** ⟹ `V153` §5（B 不连续即新原语；C 补全＝**解析结构**）✓；(4) **测度零**（典型 vs 全）⟹ `V200`（canonical 测度**协方差因子化**）✓；(5) **上同调非平凡类** ⟹ `V196`–`V198`（canonical ⟹ $0$ 或 $\mathrm{Br}[N]$）✓；(6) **index／anomaly inflow** ⟹ `V204`（**对称 ⟹ 盲**；非对称 ⟹ 失唯一算术对合）✓；(7) **非标准模型** ⟹ `V150` W1/W2（良基缺口）✓；(8) **非交换极限**（$\lim_N\mathcal F_N$ vs $\mathcal F_\infty\lim_N$）⟹ `V208`（$\mathcal C$ vs $\mathcal M$ 的不可交换性**就是**显式公式的内容）✓ ⟹ $$\boxed{\text{八类全部映射到已封类}}$$（其中 (5)(6)(8) 三个"看起来最新"的，恰分别对应 Mechanism II／index／尺度重整化）✓✓✓ **补充**：你 §"关键变化"里的 $\Phi(A)=\lim_N\frac1N\log|\det A_N|$ ＝**内生指数／Lyapunov 型量** ⟹ 属 `V204` §5（$\lambda_*$ 内生性）＋`V209` §10（深度须独立于 $n$）⟹ 该路线亦已封 ✓✓
+
+**⭐⭐⭐ §3 最深一击**：`V150` W2 已确立 **RH 是 $\Pi_1$**（Robin：$\text{RH}\iff\sigma(n)<e^\gamma n\log\log n\ \forall n>5040$，每项可判定）⟹ $\neg$RH **有有限见证** $n_0$ ⟹ **"有限层全部正常、全球失败"就是 $\Pi_1$ 陈述的标准形状** ⟹ $$\boxed{\text{你的框架不是新入口，它是 RH 自身的逻辑形状}}$$ ⭐ 且由 W2：任何能承载它的机制必须**对 Robin 型见证盲** ⟹ 必须是**解析／上同调**的；而该通道已由 `V193`（箭头 $\mathcal A_\mathbb P\to X$）／`V204`（index 盲）**封闭** ⟹ 故本框架**必然回到解析／上同调通道** ⟹ 而该通道已封 ✓✓✓
+
+**§4 三条独立收敛 ⟹ 判词**：(i) 框架自击（差式恒为望远镜 ⟹ A2 自动；逃出须用 cocycle ⟹ Mechanism II ⟹ 已实算封闭）；(ii) 枚举穷尽（八类全落已封类）；(iii) 逻辑形状（RH $\in\Pi_1$ ⟹ 本框架＝RH 的逻辑形状；W2 强制解析／上同调 ⟹ 已封）⟹ $$\boxed{\textbf{V211：DEAD}}$$ 范围＝本档枚举的八类（＋$\Phi$-内生指数类）；**不**声称"异常机制不可能"；未进入第二阶段；**未使用 RH 作推导**（仅在 $\Pi_1$ 结构事实处引用）；⭐ **不依赖** `V198`／`V201` 门 —— 结论**内生**于框架本身 ✓✓✓
+
+**§5 残余（UNINSTANTIATED，不给方向）**：唯一未覆盖形状 ＝ 一个**非加性、非上同调、非 index、非 $\Pi^1_1$、非选择**的"有限→无限缺陷"；本轮未见实例；判据四条：① 不自动望远镜；② 非 coboundary；③ 非已封类；④ 满足 W2 的"对算术见证盲" ✓
+
+**§6 新筛查条件（对"有限—无限"型提案）**：$$\boxed{\text{S1 先说明为何不自动望远镜};\quad \text{S2 若靠上同调须给出非 coboundary 且非}\ \mathrm{Br}[N]\ \text{的 canonical 类};\quad \text{S3 须说明如何满足 W2 的"对 Robin 型见证盲"}}$$ 任一无法回答 ⟹ 按 §4 **立即封档** ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
