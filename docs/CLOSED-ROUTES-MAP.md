@@ -2674,6 +2674,20 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§7 接口审计登记**：读 `Ceiling.lean` 全文找首次 $\{\log(n/m)\}$ 处 ⟹ **Certificate ceiling theorem**；$$\mathcal E:=\{K:\text{非证书型}\wedge\text{仍有可证明的无条件控制}\}$$ ✓
 **§8 边界**：断点 1 已入 V296 勘误；未锁死点待 §5 求值；$F\le1$ 未在 Lean 核对；不声称一般核 $R_{\rm off}>0$；未用 RH；零数值 ✓
 
+### F.5fc ⭐⭐⭐⭐⭐ **V298：Ceiling.lean 三层审计 ＋ R_off 谱离散度代数化 —— 天花板无 bandwidth；差集反向蕴含未用；$R_{\rm off}$ ＝ 非负成对离散度**（`V298` ✓ 2026-09-16 13:52）
+
+委托（唐先生 13:21）：继续打第 2 步；三层输出；不早称逃逸；顺手代数化 $F\leftrightarrow R_{\rm off}$ ✓
+
+**§1 ⭐⭐⭐⭐ 层 1（核心发现）**：`ceiling_of_valid_at` 假设 ＝ $\{N>0;\ r\in C^2;\ |E|\le M;\ \textbf{单配置}\ c_0+\sum s_jr(j/N)\le p_1\}$ ⟹ $$\boxed{\text{天花板}\ \textbf{不含}\ \text{bandwidth／Fourier 支撑／Toeplitz／正性／trace／rank／HS}}$$ （稳定性-离散化不等式；$D:=C_{\rm step}-x^2/2$、$E:=\int D$）；**bandwidth 仅从有效性侧进入**；配置 $s_j=S_j/N$ 置于 $j/N$ ⟹ $\alpha=j/N\in(0,1]$ ⟹ $$\boxed{\mathcal C_{\rm actual}\subsetneq\{\text{bandwidth}\le1\}}$$；0.68185 还依赖 256-周期律＋`EnclOK` ⟹ **不得**压缩成 bandwidth≤1 ✓✓✓
+
+**§2 ⭐⭐⭐ 层 2**：$\{\log(n/m)\}$ **不显式出现**（归一化为 $\alpha=j/N$）；链 (i) 素数侧和 → 差集 ⊆ $[0,\log X]$；(ii) Montgomery $F(\alpha)$；(iii) $\alpha=\log(n/m)/\log X$；(iv) $D,E$；(v) $v\le p_1+$误差；**逻辑方向**：$$\boxed{\text{证书}\Rightarrow\text{差集支撑}\ \text{成立};\quad \text{差集支撑}\Rightarrow\text{证书}\ \textbf{未被使用}}$$ ⟹ 逃逸空间**定义上**严格大于带宽一类 ✓✓✓
+
+**§3 ⭐⭐⭐⭐ 层 3**：**(3a)** $$G(K)\le0.68185\ \text{仅于}\ \mathcal C_{\rm actual}$$；**(3b)** $$\boxed{N\!\sum\lambda_i^2-\big(\sum\lambda_i\big)^2=\tfrac12\sum_{i,j}(\lambda_i-\lambda_j)^2}\Rightarrow\boxed{R_{\rm off}=\frac{\text{成对离散度}}{(\operatorname{tr}\hat G)^2}\ge0}$$；$R_{\rm off}=0\iff$ 谱全等 ⟹ $$\boxed{G\to1\iff\textbf{谱离散度}\to0}$$；**(3c)** 链：certificate → log-difference support → restricted pair correlation → **spectral dispersion** → $G<1$ ✓✓✓
+
+**§4 逃逸空间**：$$\mathcal E=\{K:\text{谱离散度}\to0\}\setminus\mathcal C_{\rm actual}$$ ⟹ 下一步 ＝ **能否让谱趋于等谱而保持无条件控制** ✓✓✓
+
+**§5 边界**：源码文本（未跑构建）；"bandwidth 只从有效性侧进入"为本档判断；恒等式标准代数；0.68185 依赖 256 律＋EnclOK；不声称逃逸；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
