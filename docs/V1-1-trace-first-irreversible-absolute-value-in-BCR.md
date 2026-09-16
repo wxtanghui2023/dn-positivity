@@ -48,3 +48,11 @@ $$\text{(ii) ⭐ 判定}\ \textbf{V1-B DEAD}（\text{配置间无共同相位}�
 $$\text{(iii) V1-A／V1-C}\ \textbf{均归结} \text{为"改善估计"，}\ \text{不构成独立自由度}✓$$
 $$\text{(iv) ⭐⭐ 闭环：该架构内}\ \textbf{全部剩余自由度＝}\ (r,t) \Longrightarrow \text{无此前未覆盖的新对象} \Longrightarrow \textbf{V2 是正确下一步}✓$$
 $$\text{(v) ALIVE 判据三条件登记（需}\ T^{1-\delta}\ \text{级）✓}$$
+
+---
+
+## 【勘误 T10 · 措辞收紧】（2026-09-16 20:23，唐先生指定）
+$$\text{原表述："架构内全部剩余自由度＝}\ (r,t)\text{"}\ \Longrightarrow\ \textbf{收紧为}：$$
+$$\boxed{\text{在}\ \textbf{已核出的 §3.4 模型} \text{中，V1-B DEAD}}✓$$
+$$\qquad\textbf{不得} \text{写成"BCR 原文已证明不存在跨配置抵消"} \Longrightarrow \text{残余 ①（是否先合并配置再取绝对值）}\ \textbf{未核} \Longrightarrow \text{该升级}\ \textbf{不成立}✓$$
+$$\qquad\text{同理残余 ②（配置间权重是否振荡）}\ \textbf{未核} \Longrightarrow \text{"架构完全刻画"}\ \textbf{只能作为模型中结论}✓$$
