@@ -2223,6 +2223,22 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§8 边界**：(i)(iii) 依赖 `V262`-B（须非空紧致＋连续）与**标准障碍理论（引用·经典，未逐字证明）** ⚠️；"非紧致 ⟹ A-leak"依 `V172` §5a（[结构性]）；§5 为本档**新定义**（[定义] 级）；**不声称** non-cylinder 存在或不存在 ⚠️；未用 RH；未跑 Lean；零数值 ✓。
 **§9 下一刀（建议）**：V270 目标 ＝ $$\boxed{\text{cylinder}+\text{紧致}+\textbf{非上同调}+\text{判据可判定}=\varnothing}$$ ⟹ 逃逸只剩 **non-compact（A-leak）** 与 **non-cylinder** ⟹ **第一次"每类都封"的结构性收口**（非清单增长）✓
 
+### F.5dy ⚠️ **勘误 T10（`V269` 技术收紧 ＋ `V270` 预登记）**（唐先生 2026-09-16 10:37 ✓ 逐条采纳）
+
+委托（唐先生）："V269 的主线有价值，但这里必须做一个**关键技术纠正**，否则 V269-A 会被写成**过强定理**。"
+
+**(1) V269-A(i) 保留** ✓：有限层、紧致 $X_S$，若所有有限个兼容条件具 **FIP**，则 Tychonoff＋FIP ⟹ $$\boxed{\varprojlim_SX_S\ne\varnothing}$$ **且不需要 bonding map 满射** ✓ —— 正式登记为 `V262`-B 的应用。
+
+**(2) V269-A(iii) 收紧** ✗（原表述**过强**）：原写"存在全局点失败 ⟹ $\lim^1\ne0$／$H^n\ne0$" —— **这不是一般逆极限定理** ✗；**仅当系统已具群／群胚／链复形结构、且 obstruction 被证明由该上同调控制**时方可如此写 ✓。**正确版本**：$$\boxed{\text{cylinder}＋\text{compact}\Longrightarrow\text{若所有有限兼容条件成立，则}\textbf{全局实现存在}}$$ ⟹ **纯"无限层才突然不存在"被封掉** ✓；**若仍有 obstruction，必须额外说明它来自什么结构**：若是群论／纤维化／链复形兼容性 ⟹ **G3**；**否则不得自动宣布 G3** ✗。⚠️ 自查登记**第 10 次**；错误形态 ＝ $$\boxed{\text{把"某类障碍恰是上同调类"的一般定理，用在了尚无代数结构的场合}}$$
+
+**(3) V269-A′ 结论保留** ✓（pairwise commutator／associator 只要是"有限层数据＋逐层一致性方程" ⟹ 属 cylinder 系统 ⟹ **不能靠"higher"三个字逃逸**）**但重新表述**：$\omega\ne0\Rightarrow H^3$ **需要具体代数结构**，**不能把所有 higher compatibility 自动命名为 $H^3$** ✗。
+
+**(4) 三分律**：① 保留 ✓ $$\boxed{\text{cylinder}＋\text{compact}\Longrightarrow\text{finite-compatible}\Longrightarrow\text{global realization}}$$；② **降级** ⚠️ —— 原写"cylinder＋non-compact ⟹ A-leak"**不是纯拓扑定理** ✗，"非紧致算术对象必然是 archimedean"**过强** ✗ ⟹ 只能作为**当前 R1 候选（Deninger／缩放位点／有限体积几何／解析域）审计范围内**的**审计结论**，**不得写成一般定理** ✗；③ non-cylinder ⟹ **唯一活口** ✓（不变）。
+
+**(5) V269-C 定义钉死（采纳唐先生版）** ✓：$$\boxed{T\ \textbf{non-cylinder}\iff\forall S<\infty,\ \exists x,y:\quad x|_S=y|_S,\ \ T(x)\ne T(y)}$$ 理由：这与"不是某个 $T_S$ 的极限"**并不自动等价**；特别是 **cylinder functions 的点态极限可以产生更大的函数类** ✓✓。**本档补一例**：$x\in\{0,1\}^{\mathbb N}$，$T_n(x):=x_n$（cylinder），$T(x):=\lim_nx_n$（存在时）⟹ $T$ 是 cylinder 函数族的**点态极限**，但 $T$ **满足上式**（对任意有限 $S$，取 $x,y$ 在 $S$ 上一致、在 $S$ 之后一为全 $0$ 一为全 $1$）⟹ $$\boxed{\text{NC-定义不排除"有限层数据的点态极限"}}$$ ⚠️ 登记（**不擅自加**）：若日后要额外排除"点态极限型"，须另加一条。
+
+**§11 ⭐ V270 预登记（唐先生指定，比原计划更干净）**：$$\boxed{\text{cylinder}＋\text{compact}＋\textbf{non-cohomological}＋\text{finite-decidable}\Longrightarrow\varnothing\ \text{（作为 RH-sensitive 机制）}}$$ **第一部分已完成** ✓（＝ V269-A(i)）；**第二部分待证**：**归因二分** —— 若 global failure **真是 obstruction**，则在**已有代数结构**下必进入 **G3**；**否则不能叫 obstruction**，只能进入 **non-cylinder 残差** ✓。**唐先生判词**：目前最重要的结果**不是"二分已完成"** ✗，而是 $$\boxed{\textbf{V269 把"higher associator"从最后活口中拿掉了}}$$ 真正剩下的只有 $$\boxed{\textbf{non-cylinder}}$$ —— 一个**任何有限算术层都无法决定**、又**不能靠 cohomology／archimedean 数据／ζ 指纹／聚合表示**构造的 canonical 无限对象 ⟹ **目前墙体最干净的剩余口** ✓✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

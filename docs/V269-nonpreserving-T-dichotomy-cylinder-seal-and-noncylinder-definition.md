@@ -146,3 +146,68 @@ $$\qquad ⚠️\ \text{继承的闸门（`V150` W2／`E4` §2 ＋ 唐稿 indepen
    —— 若成，则逃逸只剩 **non-compact（A-leak）** 与 **non-cylinder** 两端，
    ⟹ 第一次达到"**每类都封**"的**结构性收口**（而非清单增长）✓
 ```
+
+---
+
+## §10 ⚠️ **【勘误 T10】（唐先生 2026-09-16 10:37 技术纠正，逐条采纳）**
+
+$$	ext{唐先生}：	ext{"`V269` 的主线有价值，但必须做一个关键技术纠正，否则 `V269`-A 会被写成}\ 	extbf{过强定理}"\ ✓$$
+
+### (1) **V269-A(i) 保留** ✓（正式登记为 `V262`-B 的应用）
+
+$$	ext{有限层、紧致}\ X_S;\ 	ext{若所有有限个兼容条件具}\ 	extbf{有限交性质}（FIP），	ext{则}\ 	ext{Tychonoff＋FIP} \Longrightarrow oxed{arprojlim_SX_S
+earnothing} ✓✓$$
+$$\qquad 	ext{且}\ 	extbf{确实不需要 bonding map 满射} ✓\ 	ext{（＝}\ `V262`	ext{-A 的注释：满射条件多余）} ⟹ 	ext{本节}\ 	extbf{不变} ✓$$
+
+### (2) **V269-A(iii) 收紧** ✗（原表述**过强**，撤回其一般性）
+
+$$	ext{原写} ✗：	ext{"存在全局点失败"} \Longrightarrow \lim^1
+e0\,/\,H^n
+e0\ ——\ 	extbf{这不是一般逆极限定理} ✗✓$$
+$$\qquad 	ext{仅当系统}\ 	extbf{已具群／群胚／链复形结构}，	ext{且}\ 	ext{obstruction}\ 	extbf{被证明由该上同调控制} 	ext{时，方可如此写} ✓✓$$
+$$	extbf{正确版本（本档采纳）}：\qquad oxed{	ext{cylinder}＋	ext{compact}\ \Longrightarrow\ 	ext{若所有有限兼容条件成立，则}\ 	extbf{全局实现存在}} ✓✓$$
+$$\qquad ⟹ oxed{	ext{纯"}	extbf{无限层才突然不存在}	ext{"}\ 	extbf{被封掉}} ✓✓$$
+$$\qquad ⟹ 	ext{若仍有 obstruction，}	extbf{必须额外说明它来自什么结构} ✓：	ext{若是群论／纤维化／链复形兼容性} \Longrightarrow 	extbf{G3};\ 	extbf{否则不得自动宣布 G3} ✗✓$$
+$$\qquad ⚠️\ 	ext{本条为}\ 	extbf{本档最严重的一处过强}（自查登记第 10 次）⟹ 	ext{错误形态}：oxed{	ext{把"某类障碍恰是上同调类"的一般定理，用在了尚无代数结构的场合}} ✓$$
+
+### (3) **V269-A′ 保留** ✓（但需重新表述，同一条毛病）
+
+$$	ext{pairwise commutator、associator 等，只要是}\ oxed{	ext{有限层数据}＋	ext{逐层一致性方程}} ⟹ 	ext{属}\ 	extbf{cylinder 系统} ⟹ 	extbf{不能靠"higher"三个字逃逸} ✓✓\ 	ext{（结论不变 ✓）}$$
+$$\qquad ⚠️\ 	ext{但}\ \omega
+e0\Rightarrow H^3\ 	extbf{需要具体代数结构} ✓;\ 	extbf{不能把所有 higher compatibility 自动命名为}\ H^3 ✗✓$$
+$$\qquad ⟹ 	ext{正确写法}：	ext{"}\omega\ 	ext{属 cylinder 系统 ⟹ 其非平凡性若要被}\ 	extbf{命名}	ext{为上同调类，须先给出承载它的代数结构"} ✓$$
+
+### (4) **三分律**：① 保留 ✓；② **降级** ⚠️
+
+$$	ext{① 保留 ✓}：\qquad oxed{	ext{cylinder}＋	ext{compact}\ \Longrightarrow\ 	ext{finite-compatible}\ \Longrightarrow\ 	ext{global realization}} ✓✓$$
+$$	ext{② 降级 ⚠️}：	ext{原写"cylinder}＋	ext{non-compact} \Longrightarrow 	ext{A-leak}"\ 	extbf{不是纯拓扑定理} ✗;\ 	ext{"}	extbf{非紧致算术对象必然是 archimedean}	ext{"}\ 	extbf{过强} ✗✓$$
+$$\qquad ⟹ 	ext{该式只能作为}\ oxed{	ext{当前 R1 候选}（Deninger／缩放位点／有限体积几何／解析域）	extbf{审计范围内} 	ext{的审计结论}} ✓，\ 	extbf{不得} 	ext{写成一般定理} ✗$$
+$$	ext{③ non-cylinder ⟹ 唯一活口} ✓\ 	ext{（不变）}$$
+
+### (5) **V269-C 的定义钉死** ✓（**采纳唐先生版本**，替换本档原表述）
+
+$$oxed{T\ 	extbf{non-cylinder}\ifforall S<\infty,\ \exists x,y:\quad x|_S=y|_S,\ \ T(x)
+e T(y)} ✓✓✓$$
+$$\qquad 	extbf{理由（唐先生）} ✓：	ext{这与"}	extbf{不是某个}\ T_S\ 	ext{的极限}	ext{"}\ 	extbf{并不自动等价};\ 	ext{特别是}\ 	extbf{cylinder functions 的点态极限可以产生更大的函数类} ✓✓$$
+$$\qquad 	extbf{本档补一例（支持该判断）}：	ext{取}\ x\in\{0,1\}^{\mathbb N}，T_n(x):=x_n\（	ext{cylinder}）,\ T(x):=\lim_nx_n\（	ext{存在时}）$$
+$$\qquad\qquad ⟹ T\ 	ext{是 cylinder 函数族的}\ 	extbf{点态极限}，	ext{但}\ T\ 	extbf{满足上式}：	ext{对任意有限}\ S，	ext{取}\ x,y\ 	ext{在}\ S\ 	ext{上一致、在}\ S\ 	ext{之后一为全}\ 0\ 	ext{一为全}\ 1 \Longrightarrow T\ 	ext{分别为}\ 0,1 ✗✓$$
+$$\qquad ⟹ oxed{	ext{NC-定义}\ 	extbf{不排除}\ 	ext{"有限层数据的点态极限"}} ✓✓\ 	ext{（＝唐先生所指出的那一层差别 ✓）}$$
+$$\qquad ⚠️\ 	ext{登记（不擅自加）}：	ext{若日后要}\ 	extbf{额外排除"点态极限型"}，	ext{须另加一条（如"}\ orall\{T_S\}:\ T
+e\lim T_S\ 	ext{"）} —— 	ext{本档}\ 	extbf{不加}，	ext{仅留记号} ✓$$
+
+### (6) 勘误后的**净效果**（本档收口）
+
+$$oxed{	ext{(1) 第一支}\ 	extbf{封口不变};\ 	ext{(2) (iii)}\ 	extbf{降为条件式／归因问题};\ 	ext{(3) A′}\ 	extbf{结论不变、命名需结构};\ 	ext{(4) 第二支}\ 	extbf{降为审计结论};\ 	ext{(5) non-cylinder 定义按唐先生版}} ✓$$
+$$\qquad ⟹ oxed{	ext{唐先生判词}：	extbf{"`V269` 已经把'higher associator'从最后活口中拿掉了"}} ✓✓;\ 	ext{真正剩下的只有}\ 	extbf{non-cylinder} ✓$$
+
+---
+
+## §11 📌 **V270 预登记**（唐先生 10:37 指定：比原计划**更干净**的版本）
+
+$$oxed{	ext{直接证明}：\quad 	ext{cylinder}＋	ext{compact}＋	extbf{non-cohomological}＋	ext{finite-decidable}\ \Longrightarrow\ arnothing\ 	ext{（作为 RH-sensitive 机制）}} ✓✓$$
+$$\qquad 	extbf{第一部分（已完成 ✓）}：	ext{finite compatibility} \Longrightarrow 	ext{global realization}（＝ 	ext{V269-A(i)}）✓$$
+$$\qquad 	extbf{第二部分（待证 ⚠️）}：	extbf{归因二分} —— 	ext{若 global failure}\ 	extbf{真是 obstruction}，	ext{则在}\ 	extbf{已有代数结构} 	ext{下它必进入}\ 	extbf{G3};\ 	ext{否则}\ 	extbf{它不能叫 obstruction}，	ext{只能进入}\ 	extbf{non-cylinder 残差} ✓$$
+$$\qquad 	extbf{由此得到的判词（照抄唐先生）}：	ext{目前最重要的结果}\ 	extbf{不是"二分已完成"} ✗，	ext{而是}$$
+$$\qquad\qquad oxed{	extbf{V269 把"higher associator"从最后活口中拿掉了}} ✓✓$$
+$$\qquad\qquad 	ext{真正剩下的只有}\ oxed{	extbf{non-cylinder}}\：	ext{一个}\ 	extbf{任何有限算术层都无法决定}、	ext{又}\ 	extbf{不能靠 cohomology／archimedean 数据／}\zeta\ 	extbf{指纹／聚合表示} 	ext{构造的 canonical 无限对象} ✓✓$$
+$$\qquad ⟹ 	ext{这是目前墙体}\ 	extbf{最干净的剩余口} ✓$$
