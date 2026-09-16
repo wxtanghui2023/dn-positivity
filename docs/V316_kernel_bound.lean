@@ -592,3 +592,45 @@ theorem vStar_EL {lam s : ℝ} (h0 : 0 < lam)
   try ring
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **① 接线**：`kernel_bound ⟹ |B| ≤ ½N ⟹ Q_pos` —— V316-A 自洽闭环。
+不包任何抽象层，直接消费两条已 CLOSED 的定理。 -/
+theorem kernel_bound_to_Q_pos {v : ℝ → ℝ} {lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hN : 0 ≤ ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+    (hmain : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2) (Irest.prod Irest))
+    (habs : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * |v p.1| * |v p.2|) (Irest.prod Irest))
+    (h2 : Integrable (fun p : ℝ × ℝ => (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2)) (Irest.prod Irest))
+    (hA : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 ^ 2) (Irest.prod Irest))
+    (hB : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.2 ^ 2) (Irest.prod Irest))
+    (hF : IntervalIntegrable (fun s => v s ^ 2 * (∫ t in Icc', |s - t|)) volume
+      (-(1 / 2 : ℝ)) (1 / 2))
+    (hG : IntervalIntegrable (fun s => (1 / 2) * v s ^ 2) volume (-(1 / 2 : ℝ)) (1 / 2)) :
+    (1 / 2 : ℝ) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+      ≤ (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+        + lam ^ 2 * (∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)) :=
+  Q_pos h0 h1 hN (kernel_bound hmain habs h2 hA hB hF hG)
+
+/-- **② `Qfun` 定义**：只封装现有二次型，**不引入** `B`／inner product／operator／Hilbert 空间。
+与 `Q_pos` 中的表达式**逐字对齐**。 -/
+noncomputable def Qfun (lam : ℝ) (u : ℝ → ℝ) : ℝ :=
+  (∫ s in (-(1 / 2 : ℝ))..(1 / 2), u s ^ 2)
+    + lam ^ 2 * (∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
+
+/-- **③-a 点态极化（纯代数层）**：`u(s)u(t) − v(s)v(t) = v(s)(u(t)−v(t)) + (u(s)−v(s))v(t) + (u(s)−v(s))(u(t)−v(t))`。 -/
+theorem pol_pointwise (u v : ℝ → ℝ) (s t : ℝ) :
+    u s * u t - v s * v t
+      = v s * (u t - v t) + (u s - v s) * v t + (u s - v s) * (u t - v t) := by
+  ring
+
+/-- **③-b 点态极化（核对）**：核加权版，直接供下一轮积分层使用（`h = u − v`）。 -/
+theorem pol_pointwise_kernel (u v : ℝ → ℝ) (s t : ℝ) :
+    |s - t| * (u s * u t) - |s - t| * (v s * v t)
+      = |s - t| * (v s * (u t - v t)) + |s - t| * ((u s - v s) * v t)
+        + |s - t| * ((u s - v s) * (u t - v t)) := by
+  ring
+
+end Zeta23.ThmD.V316
