@@ -310,3 +310,29 @@ theorem Q_pos {v : ℝ → ℝ} {lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1)
   exact hQ
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- `θ_λ = λ/√2`（本文件自足定义；项目自身 olean 未生成 ⟹ 不能 import ThmD 模块）。 -/
+noncomputable def vtheta (lam : ℝ) : ℝ := lam / Real.sqrt 2
+
+/-- **仿射截距 `C_λ = β = sin ϑ/(√2 λ) + cos ϑ/λ²`**（`ϑ = θ_λ = λ/√2`）。
+      语义：`Kv_λ = C_λ·1 − λ⁻²v_λ` 中的**截距**。**严禁**与 `c*_λ` 混用。 -/
+noncomputable def vStarAffineConst (lam : ℝ) : ℝ :=
+  Real.sin (vtheta lam) / (Real.sqrt 2 * lam) + Real.cos (vtheta lam) / lam ^ 2
+
+/-- **E–L 常数 `D_λ = λ²C_λ`**。`(I + λ²K)v_λ = D_λ·1` 中的常数。**注意 `D_λ ≠ c*_λ`**。 -/
+noncomputable def vStarELConst (lam : ℝ) : ℝ := lam ^ 2 * vStarAffineConst lam
+
+/-- 三层关系之一：`D_λ = cos ϑ + ϑ sin ϑ`（`ϑ = λ/√2`）。 -/
+theorem vStarELConst_eq {lam : ℝ} (h : lam ≠ 0) :
+    vStarELConst lam = Real.cos (vtheta lam) + vtheta lam * Real.sin (vtheta lam) := by
+  have hs : Real.sqrt 2 ≠ 0 := by positivity
+  have h2 : (Real.sqrt 2) ^ 2 = 2 := Real.sq_sqrt (by norm_num)
+  unfold vStarELConst vStarAffineConst vtheta
+  field_simp
+  nlinarith [h2]
+
+end Zeta23.ThmD.V316
