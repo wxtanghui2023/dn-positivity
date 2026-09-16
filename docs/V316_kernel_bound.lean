@@ -1077,3 +1077,9 @@ theorem Qfun_diff {u : ℝ → ℝ} (lam : ℝ)
   ring
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316

@@ -1,0 +1,44 @@
+/-- **⑤-3 E–L 消项（显式 `hmean`）**：`∫_I (u−v_λ) = 0` 时，一阶项被 `weak_EL_constrained` 杀死，
+得 `Q_λ(u) − Q_λ(v_λ) = Q_λ(h)`。约束**显式**给出，不由 Lean 推断。 -/
+theorem Qfun_diff_constrained {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1 : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2 : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0) :
+    Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+      = Qfun lam (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
+  rw [Qfun_diff (u := u) lam hUU hVV hC hD hE hu hv h1 h2]
+  have hwe := weak_EL_constrained (h := (fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s)))
+    hu_cont lam h0 hmean
+  have hswap : (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) * Real.cos (Real.sqrt 2 * lam * s)
+      ∂Irest) = (∫ s, Real.cos (Real.sqrt 2 * lam * s)
+        * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest) :=
+    MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun s => by ring))
+  have hprod : (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s))
+        * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest) ∂Irest)
+      = Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
+          (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
+    rw [nested_eq_prod_integral hu_cont lam, prod_integral_eq_Bfun hu_cont lam]
+  rw [hswap, hprod] at hwe
+  rw [hwe]
+  ring
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316

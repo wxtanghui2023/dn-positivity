@@ -1,0 +1,30 @@
+/-- **⑤-4 全局严格二次 gap**（A/B 合流结果）：
+`Q_λ(u) − Q_λ(v_λ) ≥ ½ ∫_I (u − v_λ)²`（V316-A 的 `Q_pos` 收尾；**不含唯一性**）。 -/
+theorem Qfun_global_gap {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1i : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2i : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0)
+    (hN : 0 ≤ ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hb : |∫ p, |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+        * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2)) ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest) :
+    (1 / 2) * (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+      ≤ Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) := by
+  rw [Qfun_diff_constrained (u := u) lam h0 hu_cont hUU hVV hC hD hE hu hv h1i h2i hmean]
+  unfold Qfun
+  exact Q_pos h0 h1 hN hb
+
+end Zeta23.ThmD.V316
