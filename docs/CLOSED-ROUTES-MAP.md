@@ -2399,6 +2399,21 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 **§8 边界**：不断言 RH 落 P 行、不断言其有／无 D1_C 证书；Con 型反例依赖 Gödel 第二（引用·经典）；**不**把 Con 型推广成"所有 $\Pi_1$ 语句都无 D1_C 证书" ✗；未用 RH 作推导；未跑 Lean；零数值 ✓
 
+### F.5ei ⭐⭐⭐⭐⭐ **V279：乙-4 Finite-Quotient Separation —— C0 ⟺ ¬FQS（集合论）；D1_C 内容在 (ii)+(iii)；唯一未封生成方式 ＝ canonical 非退化群作用**（`V279` ✓ 2026-09-16 11:22）
+
+委托（唐先生 11:15）："**打 D1_C，不打 D1_P**"；战略修正（**"non-ζ-local" 只是来源分类，不是数学结构**）；**硬纪律（本轮起）**："任何新候选若不能写成具体有限商 $X_S$、具体等价关系、具体 $A_S$，一律不进入研究"；关键约束"**不能从 `V278` 推出 C0**"。
+
+**§1–§4 形式化**：D1_C 靶点 $\exists S\ \exists A_S:\pi_S^{-1}(A_S)=\mathcal R$｜$$\boxed{\mathrm{FQS}:\forall S<\infty,\ \pi_S(\mathcal R)\cap\pi_S(\mathcal N)\ne\varnothing}$$ **量词为 $\forall S\,\exists(x_S,y_S)$（允许依赖 $S$），非 $\exists(x,y)\forall S$** ⟹ 比 Tail-Separation **弱**；且 $$\mathrm{FQS}\Rightarrow\mathrm{C0}$$（单向）
+
+**§5 ⭐⭐⭐ 本档核心澄清（三项）**：$X_S$ **有限** ⟹ 取 $A_S:=\pi_S(\mathcal R)$ 自动有 $\pi_S^{-1}(A_S)\supseteq\mathcal R$，且 $$\boxed{\pi_S^{-1}(A_S)=\mathcal R\iff\pi_S(\mathcal R)\cap\pi_S(\mathcal N)=\varnothing}$$ ⟹ $$\boxed{\mathrm{C0}\iff\neg\mathrm{FQS}}$$（**存在层面，纯集合论；canonical 不参与**）⟹ **D1_C 三分**：(i) 分离存在（集合论）｜(ii) $A_S$ 的 canonical 可描述（不引用 RH／零点）｜(iii) 等价性的**非循环**可证 ⟹ ⭐ **新中间态**：分离存在但 (ii)/(iii) 失败 ⟹ **仍无机制** ⟹ **"机制" 严格强于 "分离存在"**
+
+**§6 ⭐⭐⭐⭐ canonical 有限商／分区生成方式分类（六条，全部写成具体形式以执行硬纪律）**：
+**(a) 纤维型**（$\sim=\pi_S$-相等；$A_S$ ＝若干纤维之并）＝ 证书本身｜**(b) 有限聚合型**（$A_S=\{x_S:P(\sum_{p\in S}f(a_p))=1\}$）⟹ Euler 层（`V276` §5／`V258`）｜**(c) 有限谱型**（局部有限维矩阵不变量）⟹ 局部／谱层｜**(d) ⭐ 轨道型**（canonical 群作用 $G_S\curvearrowright X_S$ 轨道等价；$A_S$ 须 $G_S$-不变）＝ **唯一非聚合非谱的 canonical 分区**，但**已审计实例退化**（`V241`-D／`V177`）⟹ 无新分区｜**(e) 阈值／单调型** ⟹ 归 (b)｜**(f) 描述复杂度型** ⟹ 被 `V271` §1 技术点＋P1／D2 排除 ⟹ $$\boxed{\text{唯一未封生成方式}＝\textbf{canonical 非退化群作用}\ G_S\curvearrowright X_S}$$ ⟹ 与 "canonical 非交换性" 墙同址（`V241`／`V177`／`V176`）✓✓✓
+
+**§7 判词**：① $\mathrm{C0}\iff\neg\mathrm{FQS}$（集合论）；② D1_C 真正内容 ＝ (ii)＋(iii)；③ 新中间态：存在分离但不可描述；④ 唯一未封生成方式 ＝ canonical 非退化群作用 ✓✓✓
+
+**§8 边界**：**不能从 `V278` 推出 C0**；§5 依赖 $X_S$ 有限；§6 六类为**枚举非穷尽定理**（不得升成"仅此六类"，与 `POS3` §6 同边界）；(d) 退化性为**引用**；**本轮未出现**写出具体形式且不落 (a)–(f) 的新候选 ⟹ 按硬纪律不入研究；未用 RH 作推导；未跑 Lean；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
