@@ -1083,3 +1083,97 @@ namespace Zeta23.ThmD.V316
 open MeasureTheory
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **⑤-3 E–L 消项（显式 `hmean`）**：`∫_I (u−v_λ) = 0` ⟹ 一阶项被 `weak_EL_constrained` 杀死
+⟹ `Q_λ(u) − Q_λ(v_λ) = Q_λ(h)`。
+桥接用 **`.trans` calc 链**（不盲 `rw at hwe`），先显式构造 `hvar_cont`。 -/
+theorem Qfun_diff_constrained {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1 : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2 : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0) :
+    Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+      = Qfun lam (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
+  rw [Qfun_diff (u := u) lam hUU hVV hC hD hE hu hv h1 h2]
+  have hvar_cont : ContinuousOn
+      (fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s)) Icc' :=
+    hu_cont.sub ((by fun_prop : Continuous
+      (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))).continuousOn)
+  have hwe := weak_EL_constrained (h := fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s))
+    hvar_cont lam h0 hmean
+  have e1 : (∫ s, Real.cos (Real.sqrt 2 * lam * s)
+        * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
+      = (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s))
+        * Real.cos (Real.sqrt 2 * lam * s) ∂Irest) :=
+    MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun s => by ring))
+  have e2 : (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s))
+        * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest) ∂Irest)
+      = Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
+          (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) :=
+    (nested_eq_prod_integral (h := fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s))
+        hvar_cont lam).trans
+      (prod_integral_eq_Bfun (h := fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s))
+        hvar_cont lam)
+  have hEL : (∫ s, Real.cos (Real.sqrt 2 * lam * s)
+        * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
+      + lam ^ 2 * Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
+          (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) = 0 := by
+    rw [e1, ← e2]
+    exact hwe
+  rw [hEL]
+  ring
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **⑤-4 全局严格二次 gap（A/B 合流结果）**
+`Q_λ(u) − Q_λ(v_λ) ≥ ½ ∫_I (u − v_λ)²`。
+收尾用 `Q_pos_alg`（**同层的纯代数核心**，避免在此处再做 interval↔Irest 桥）。
+**不含唯一性**（唯一性作为下一层 corollary 单独处理 a.e. 等价）。 -/
+theorem Qfun_global_gap {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1i : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2i : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0)
+    (hN : 0 ≤ ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hb : |∫ p, |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+        * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2)) ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest) :
+    (1 / 2) * (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+      ≤ Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) := by
+  rw [Qfun_diff_constrained (u := u) lam h0 hu_cont hUU hVV hC hD hE hu hv h1i h2i hmean]
+  unfold Qfun Bfun
+  exact Q_pos_alg h0 h1 hN hb
+
+end Zeta23.ThmD.V316
