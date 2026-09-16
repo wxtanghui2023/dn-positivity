@@ -17,7 +17,8 @@ case "$STREAM" in
   *) echo "unknown stream: $STREAM (main|audit|spare)" >&2; exit 2 ;;
 esac
 mkdir -p "$ROOT/docs/.idclaims"
-for n in $(seq $((BASE+1)) $((BASE+199))); do   # 2026-09-15: 扩至 199 槽（V101–V299），原 99 槽已用满
+for n in $(seq $((BASE+1)) $((BASE+299))); do   # 2026-09-15: 扩至 199 槽（V101–V299），原 99 槽已用满
+  # 2026-09-16: 再扩至 299 槽（V101–V399），V299 已用满（见 docs/ID-ALLOCATION-PROTOCOL.md 治理行）
   id="${PREFIX}$n"
   [ -e "$ROOT/docs/.idclaims/$id.lock" ] && continue
   if compgen -G "$ROOT/docs/$id-*" >/dev/null 2>&1; then continue; fi

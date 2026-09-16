@@ -2700,6 +2700,20 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§7 边界**：§2／§3 为[推断]（未逐行核对论文 §5）；$c^{\rm geom}$ 读数间接；$F\equiv1$ 理想性为引用；不声称 $W_\phi$ 不存在；未用 RH；零数值 ✓
 **下一步**：(4a) 核验 §2／§3 的[推断]（读论文 §5）；(4b) $c^{\rm geom}$ 作为窗口泛函的最优化；(4c) $\operatorname{supp}\widehat\psi\le\sigma$ 与 $c^{\rm geom}$ 的定量关系（反解 $\sigma(c)$）✓
 
+### F.5fe ⭐⭐⭐⭐⭐ **V300：(4a) §5 逐行核验 —— 情形 A（源码级）；离对角由尺寸型不等式压掉、不用配对相关；AF 常数＝最坏情形几何常数**（`V300` ✓ 2026-09-16 14:12）
+
+委托（唐先生 13:26）：先打 (4a)，不能跳；须读 §5 求值过程（不得从两形式反推）；找"第一次把 $n\ne m$ 吸收进误差"处；三情形 A/B/C ✓
+
+**依据（现场读源码）**：`PPOffDiag.lean`（全文 173 行，[prop:PP] 𝒪₁ §5.4）｜`PPKernel.lean`｜`MV.lean`（`MVHilbert_of_diag`）｜`Hypotheses.lean`（`PaperInputs.MV`）｜`Final.lean` ✓
+
+**§1 链条**：8 项 `sub_mul_Aminus_eq` ／ $\theta=\log n-\log m$ 可除 ／ `MV_real`＋`MV_size_le` ⟹ $|\mathcal O_1|\le16CW\Lambda_2$ ⟹ 代入 $\Lambda_2\ll XL$、$W\le2\pi L$ ⟹ $$\boxed{\mathcal O_1\ll L^2X}$$ ✓✓
+**§2 ⭐⭐⭐⭐ 量级比较**：主项 $\asymp TL^3$ ⟹ $$\boxed{\mathcal O_1/\text{主项}\asymp T^{\lambda-1}/L\to0}\ (\lambda\le1)$$ ⟹ **情形 A**；非 B、非 C ⟹ **V299 判词源码级成立** ✓✓✓
+**§3 ⭐⭐⭐ 附加发现**：MV 只用 $\ell^2$ 范数 ⟹ **不用配对相关** ⟹ $$\boxed{\text{AF 常数}＝\text{最坏情形几何常数}}$$ ⟹ 与 V299 §4 反例**互证且更强**；两处细化：(a) 误差层是**界**；(b) bandwidth 经 **MV 适用域**进入 ✓✓✓
+**§4（[推断]）**：MVDiag（输入）→ MVHilbert → MV_real → Chebyshev；**bandwidth ＝ $\log X\le L\iff X\le T$ 经 MV 适用域进入**；MV 是纯调和分析 ⟹ 解释"无 mollifier／无密度／无零自由区" ✓✓
+**§5 边界**：源码文本（未跑构建）；MVDiag 为输入 ⟹ §4 为[推断]；不声称论文无其它隐含输入；未用 RH；零数值 ✓
+
+**下一步（4b＋4c）**：$$c_{\rm geom}(\sigma)=\sup_{\phi\in\mathcal A_\sigma}c_{\rm geom}(\phi)$$（$\mathcal A_\sigma$ 须含无条件性约束）＋ 反问题 $\sigma(\varepsilon)$；⚠️ **须先证单调性**（"更宽 $\phi$" ⟹ "更大 $c_{\rm geom}$" 不是定理）✓✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
