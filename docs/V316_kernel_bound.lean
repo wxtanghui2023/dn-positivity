@@ -268,7 +268,4 @@ namespace Zeta23.ThmD.V316
 
 open MeasureTheory
 
-/-- **`Q_pos`**：`Q_λ(v) = ‖v‖² + λ²B(v) ≥ (1/2)‖v‖²`（`0 < λ ≤ 1`）。
-这是 V316 中**第一次正式引入 `λ ≤ 1`**；`‖v‖² = ∫_I v²`，`B(v) = ∬|s−t|v(s)v(t)`。
-依赖：`kernel_bound`（`|B| ≤ ½‖v‖²`）—— 不再触碰任何积分估计。 -/
 end Zeta23.ThmD.V316
