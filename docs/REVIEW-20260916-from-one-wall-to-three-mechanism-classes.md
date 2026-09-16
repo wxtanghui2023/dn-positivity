@@ -182,3 +182,26 @@ $$\text{残余 D：}\ \mathfrak F^{\rm uncond}\ \text{完整形状仍只有两�
 ## 6. 边界（N1/N2 严守）
 $$\text{① 本档为收口与状态登记，}\textbf{不引入新机制}；\quad\text{② BCR 原文关键语句}\ \textbf{逐字引用}（外部来源，仅作数据）；$$
 $$\text{③ }\textbf{未用 RH}；零数值；\ \text{未跑 Lean}✓$$
+
+---
+
+# 【最终纪律块 · 封存】（2026-09-16 20:10，唐先生确认冻结，**不再追加任何搜索或机制**）
+
+## 1. 必须牢牢记住的映射（本日最后一层）
+$$\boxed{\mathfrak E_{\rm raw}\ \overset{\mathcal R_{\rm application}}{\longrightarrow}\ \mathfrak F\ \overset{(r,t)}{\longrightarrow}\ L=17r+t}$$
+$$\Longrightarrow\ \textbf{下一次真正应该攻击的是}\ \boxed{\textbf{Q1}}\，\ \textbf{而不是} \text{继续寻找更小的}\ (r,t)✓$$
+
+## 2. Q1 的判定地位（决定 Wall A 全后续命运）
+$$\boxed{\mathcal R_{\rm application}\ \textbf{必须统一化}\ ?}$$
+$$\qquad\text{不必须} \Longrightarrow \text{突破点}\ \textbf{转向应用架构}：\ \text{让局部强估计}\ \textbf{不被 worst-case envelope 吃掉}✓$$
+$$\qquad\text{必须} \Longrightarrow \text{才有资格研究 Q2}：\ \text{uniformization}\to\text{worst-case}\to 17r+t\ge8✓$$
+
+## 3. ⭐ 三条防偷换（本日形成**闭环**）
+$$\boxed{\theta\ \text{可推进}\ \not\Rightarrow\ \mathrm{RH}}\ \ (\text{猎-3A/B})$$
+$$\boxed{\text{局部估计改善}\ \not\Rightarrow\ (r,t)\ \text{改善}}\ \ (\text{猎-6 判定 C})$$
+$$\boxed{\text{坐标灵敏度}\ \not\Rightarrow\ \text{数学可推进性}}\ \ (\text{猎-3B 降级})$$
+$$\Longrightarrow\ \text{这三条使下一轮}\ \textbf{不会再回到} \text{"找一篇更强论文}\to\text{套公式}\to\text{发现还是原墙"}\ \text{的循环}✓✓$$
+
+## 4. 下次开工指令（唐先生）
+$$\boxed{\textbf{直接 Q1}；\ \textbf{不需要重新定位}}✓$$
+$$\qquad(\text{本档案已含：目标函数}\ L=17r+t；\ \mathfrak F=\mathfrak F_{\rm estimate}\ \text{（原文 §3.4 支撑）}；\ \text{上闭性}；\ \text{残余 A--D})✓$$
