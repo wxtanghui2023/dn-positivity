@@ -87,3 +87,16 @@ $$\boxed{\textbf{V308 判词}：\text{① A2}\ ✓（v_\lambda>0）；\ \text{�
   (a′-2) **攻 A4 全局性**：路线 ① 核 $K$ 在 $\{v\ge0,\int v=1\}$ 上的正定性／凸性；路线 ② 用 $|x-y|=x+y-2\min(x,y)$ 分解 ＋ $\min$ 的经典谱（Brownian bridge）做**谱展开**，直接判 $v_\lambda$ 是极小／鞍／极大 ✓✓
   (a′-3) 复核 §3 的奇共振点结论是否影响 $\lambda\le1$（**已判定：不影响**）✓
 ```
+
+---
+
+## §7 ⚠️【勘误 T10】（2026-09-16 14:00 起，唐先生指出；见 `V309`）
+
+$$\text{本档 §4 的}\ \boxed{Kv_\lambda=-\lambda^{-2}v_\lambda}\ \textbf{整个作废}（\textbf{代数误读}）✓✓$$
+$$\qquad \text{正确移项}：Kv_\lambda=\frac{\kappa}{\lambda^{2}}\mathbf 1-\frac1{\lambda^{2}}v_\lambda\ ——\ \textbf{仿射关系，常数项不可丢};\qquad v_\lambda\ \textbf{不是}\ K\ \text{的特征函数} ✓✓✓$$
+$$\qquad \text{正确值}：(Kv_\lambda)(x)=C_\lambda-\lambda^{-2}v_\lambda,\ C_\lambda=\frac{\sin(\omega/2)}\omega+\frac{2\cos(\omega/2)}{\omega^{2}};\qquad \kappa=\lambda^{2}C_\lambda ✓$$
+$$\text{四条"独立核验"}\ \textbf{不独立}：\text{(i)/(iv) 预设}\ Kv=\mu v;\ \text{(ii) 微分只给}\ v''+2\lambda^{2}v=0\（\text{差常数}）;\ \text{(iii)}\ f'=cg'\Rightarrow f=cg+\textbf C ✓$$
+$$\text{故本档 §4／§5 的判词}\ \textbf{"A4 真缺口／GAP（凸性不适用）"}\ \textbf{撤回} ⟹ \textbf{实际结果相反（好消息）}：$$
+$$\qquad \|K\|\le\sup_x\int|x-y|dy=x^{2}+\tfrac14\le\tfrac12 ⟹ H_\lambda=I+\lambda^{2}K\ge\tfrac12I>0 ⟹ Q_\lambda\ \textbf{严格凸} ⟹ v_\lambda\ \textbf{唯一全局极小} ✓✓✓$$
+$$\qquad ⚠️\ \textbf{无需}\ K\ge0;\ \text{本档 §1 的"A4 缺口 / 0.67250 不可标 ceiling"}\ \textbf{亦随之撤回} ✓$$
+$$\text{本档}\ \textbf{保留}：\text{§1 }\mathcal A\ \text{条件清单（不完整）};\ \text{§2 A2}\ (v_\lambda>0) ✓;\ \text{§3 偶归约须}\ Q(v_o)\ge0 ✓$$

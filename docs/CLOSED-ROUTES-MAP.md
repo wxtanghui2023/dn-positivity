@@ -2784,6 +2784,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 判词**：**GAP** ⟹ 0.67250 暂不可标"链内已证 ceiling" ✓✓
 **§6 边界**：`AdmWindow` 未取到；两项四分类为初判；不声称 LIVE／GAP 确证；未用 RH；零数值 ✓
 
+### F.5fn ⭐⭐⭐⭐⭐ **V309：A4 作废（代数误读）—— 仿射关系 ＋ Schur 界 ⟹ $H_\lambda\ge\frac12I>0$ ⟹ 全局严格凸 ⟹ $v_\lambda$ 唯一全局极小**（`V309` ✓ 2026-09-16 14:08）
+
+**§1 仿射关系（独立验算）**：$$\boxed{Kv_\lambda=C_\lambda\mathbf 1-\lambda^{-2}v_\lambda},\quad C_\lambda=\frac{\sin(\omega/2)}\omega+\frac{\cos(\omega/2)}{\lambda^2};\qquad \kappa=\lambda^2C_\lambda$$ ✓✓✓
+**§2 四核验同错**：共享未声明前提 $Kv=\mu v$ ⟹ **不独立** ⟹ 📌 新教训：核验须审前提独立性 ✓✓✓
+**§3 救援**：$$\|K\|\le\tfrac12⟹H_\lambda\ge\tfrac12I>0⟹Q_\lambda\ \text{严格凸}⟹v_\lambda\ \text{唯一全局极小}$$（**不需 $K\ge0$**）✓✓✓
+**§4 谱核验**：$$\tan\tfrac\omega2=-\tfrac2\omega$$（特征函数条件）；$\mu_1\approx-0.06384$（偶）／$-0.20265$（奇，本档补充）✓✓
+**§5 判词**：A4 原论证 **撤回**；剩余墙 ＝ $$\mathcal A_{\rm ThmD}\stackrel?=\mathcal A_{\rm variational}$$ ✓✓
+**§6 边界**：纸面；谱根值为引用；奇子空间补充须复核；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
