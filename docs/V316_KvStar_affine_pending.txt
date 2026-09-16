@@ -1,0 +1,77 @@
+/- V316-B KvStar_abs_split / KvStar_affine_general / KvStar_affine 尝试稿（待修，11 errors）
+   ✅ 已修好的部分：
+     (a) integral_congr 给的是 min/max 形式 ⟹ 须先 `rw [max_eq_right hs1]`（得 t ≤ s）/
+         `rw [min_eq_left hs2]`（得 s ≤ t）—— 这两处已通过 ✓
+     (b) KvStar_affine 收尾：去掉多余的 `rw [hhalf]`，直接 `field_simp [ne_of_gt h0]; ring` ✓
+   ❌ 剩余唯一病根：`integral_add_adjacent_intervals` 用了 (μ := volume) (f := …) 但
+      **未给端点** ⟹ `don't know how to synthesize implicit argument a / b / c`
+      ⟹ 修法：显式传 (a := -(1/2:ℝ)) (b := s) (c := (1/2:ℝ))
+        即 `intervalIntegral.integral_add_adjacent_intervals (μ := volume)
+              (a := -(1/2:ℝ)) (b := s) (c := (1/2:ℝ)) (f := fun t => |s-t| * Real.cos (a*t)) hf hg`
+   （注意：只给 (μ := volume) 会把端点变成无法合成的 metavariable —— 这是本轮教训）
+   另一条退路：把 abs 拆分定理直接以 `∫_{−1/2}^{s} + ∫_s^{1/2}` 的形式陈述，
+   然后用 `intervalIntegral.integral_add_adjacent_intervals` 的**完整实参**实例化。 -/
+
+/-- **abs 拆分**：`∫_{−1/2}^{1/2}|s−t|cos(at) = ∫_{−1/2}^{s}(s−t)cos(at) + ∫_s^{1/2}(t−s)cos(at)`
+（`s ∈ [−1/2,1/2]`；在 `t ≤ s` 上 `|s−t| = s−t`，在 `t ≥ s` 上 `= t−s`）。 -/
+theorem KvStar_abs_split {a s : ℝ} (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (a * t)
+      = (∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t))
+        + ∫ t in s..(1 / 2), (t - s) * Real.cos (a * t) := by
+  have h1 : ∫ t in (-(1 / 2 : ℝ))..s, |s - t| * Real.cos (a * t)
+      = ∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t) := by
+    refine intervalIntegral.integral_congr fun t ht => ?_
+    rcases ht with ⟨ht1, ht2⟩
+    have hts : t ≤ s := by
+      have h := ht2
+      rwa [max_eq_right hs1] at h
+    rw [abs_of_nonneg (by linarith : (0:ℝ) ≤ s - t)]
+  have h2 : ∫ t in s..(1 / 2), |s - t| * Real.cos (a * t)
+      = ∫ t in s..(1 / 2), (t - s) * Real.cos (a * t) := by
+    refine intervalIntegral.integral_congr fun t ht => ?_
+    rcases ht with ⟨ht1, ht2⟩
+    have hst : s ≤ t := by
+      have h := ht1
+      rwa [min_eq_left hs2] at h
+    rw [abs_of_nonpos (by linarith : s - t ≤ 0)]
+    ring
+  have hadd := intervalIntegral.integral_add_adjacent_intervals
+    (μ := volume) (f := fun t : ℝ => |s - t| * Real.cos (a * t))
+    ((by continuity : Continuous fun t : ℝ => |s - t| * Real.cos (a * t)).intervalIntegrable _ _)
+    ((by continuity : Continuous fun t : ℝ => |s - t| * Real.cos (a * t)).intervalIntegrable _ _)
+  rw [← hadd, h1, h2]
+
+/-- **$a$-层恒等式（未特化 $\lambda$）**：
+`∫_{−1/2}^{1/2}|s−t|cos(at) = sin(a/2)/a + 2cos(a/2)/a² − 2cos(as)/a²`。 -/
+theorem KvStar_affine_general {a s : ℝ} (ha : a ≠ 0)
+    (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (a * t)
+      = Real.sin (a / 2) / a + 2 * Real.cos (a / 2) / a ^ 2
+        - 2 * Real.cos (a * s) / a ^ 2 := by
+  rw [KvStar_abs_split hs1 hs2, KvStar_left ha, KvStar_right ha]
+  ring
+
+/-- **`KvStar_affine`**：`Kv_λ(s) = C_λ − λ⁻²v_λ(s)`（**只证 $C_λ$ 层**，不碰 `vStarELConst`）。
+`v_λ(t) = cos(√2 λ t)`，`a := √2 λ`。 -/
+theorem KvStar_affine {lam s : ℝ} (h0 : 0 < lam)
+    (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (Real.sqrt 2 * lam * t)
+      = vStarAffineConst lam - Real.cos (Real.sqrt 2 * lam * s) / lam ^ 2 := by
+  have hsqrt : Real.sqrt 2 ≠ 0 := by positivity
+  have ha : Real.sqrt 2 * lam ≠ 0 := mul_ne_zero hsqrt (ne_of_gt h0)
+  have ha_sq : (Real.sqrt 2 * lam) ^ 2 = 2 * lam ^ 2 := by
+    rw [mul_pow, Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 2)]
+  have hhalf : (Real.sqrt 2 * lam) / 2 = vtheta lam := by
+    unfold vtheta
+    field_simp
+    nlinarith [Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 2)]
+  have hcos_sq : 2 * Real.cos (vtheta lam) / (2 * lam ^ 2) - 2 * Real.cos (Real.sqrt 2 * lam * s) / (2 * lam ^ 2)
+      = Real.cos (vtheta lam) / lam ^ 2 - Real.cos (Real.sqrt 2 * lam * s) / lam ^ 2 := by
+    field_simp [ne_of_gt h0]
+    ring
+  rw [KvStar_affine_general ha hs1 hs2]
+  rw [hhalf, ha_sq]
+  unfold vStarAffineConst
+  field_simp [ne_of_gt h0]
+  ring
+

@@ -409,3 +409,98 @@ namespace Zeta23.ThmD.V316
 open MeasureTheory
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- 端点形状规范化 ①：`a * (1/2) = a/2`（共享，避免各 theorem 内重复证明）。 -/
+theorem mul_half (a : ℝ) : a * (1 / 2 : ℝ) = a / 2 := by ring
+
+/-- 端点形状规范化 ②：`a * (-(1/2)) = -(a/2)`。 -/
+theorem mul_neg_half (a : ℝ) : a * (-(1 / 2 : ℝ)) = -(a / 2) := by ring
+
+/-- **`KvStar_left`**：`L_a(s) = ∫_{−1/2}^{s} (s−t)cos(at)dt`
+`= s sin(a/2)/a + sin(a/2)/(2a) − cos(as)/a² + cos(a/2)/a²`。 -/
+theorem KvStar_left {a s : ℝ} (ha : a ≠ 0) :
+    ∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t)
+      = s * Real.sin (a / 2) / a + Real.sin (a / 2) / (2 * a)
+        - Real.cos (a * s) / a ^ 2 + Real.cos (a / 2) / a ^ 2 := by
+  have hcos := cos_integral (a := a) (x := -(1 / 2 : ℝ)) (y := s) ha
+  rw [mul_neg_half] at hcos
+  rw [Real.sin_neg] at hcos
+  have hcos' : ∫ t in (-(1 / 2 : ℝ))..s, Real.cos (a * t)
+      = (Real.sin (a * s) + Real.sin (a / 2)) / a := by
+    rw [hcos]; ring
+  have htc := t_cos_integral (a := a) (x := -(1 / 2 : ℝ)) (y := s) ha
+  rw [mul_neg_half] at htc
+  rw [Real.sin_neg, Real.cos_neg] at htc
+  have htc' : ∫ t in (-(1 / 2 : ℝ))..s, t * Real.cos (a * t)
+      = s * Real.sin (a * s) / a + Real.cos (a * s) / a ^ 2
+        - Real.sin (a / 2) / (2 * a) - Real.cos (a / 2) / a ^ 2 := by
+    rw [htc]; ring
+  have hsplit : ∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t)
+      = s * (∫ t in (-(1 / 2 : ℝ))..s, Real.cos (a * t))
+        - ∫ t in (-(1 / 2 : ℝ))..s, t * Real.cos (a * t) := by
+    have h1 : ∫ t in (-(1 / 2 : ℝ))..s, s * Real.cos (a * t)
+        = s * ∫ t in (-(1 / 2 : ℝ))..s, Real.cos (a * t) :=
+      intervalIntegral.integral_const_mul s (fun t : ℝ => Real.cos (a * t))
+    have h2 : ∫ t in (-(1 / 2 : ℝ))..s, (s * Real.cos (a * t) - t * Real.cos (a * t))
+        = (∫ t in (-(1 / 2 : ℝ))..s, s * Real.cos (a * t))
+          - ∫ t in (-(1 / 2 : ℝ))..s, t * Real.cos (a * t) :=
+      intervalIntegral.integral_sub
+        ((by continuity : Continuous fun t : ℝ => s * Real.cos (a * t)).intervalIntegrable _ _)
+        ((by continuity : Continuous fun t : ℝ => t * Real.cos (a * t)).intervalIntegrable _ _)
+    have h3 : ∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t)
+        = ∫ t in (-(1 / 2 : ℝ))..s, (s * Real.cos (a * t) - t * Real.cos (a * t)) := by
+      refine intervalIntegral.integral_congr fun t _ => ?_
+      ring
+    rw [h3, h2, h1]
+  rw [hsplit, hcos', htc']
+  field_simp [ha, pow_ne_zero 2 ha]
+  ring
+
+/-- **`KvStar_right`**：`R_a(s) = ∫_s^{1/2} (t−s)cos(at)dt`
+`= −s sin(a/2)/a + sin(a/2)/(2a) − cos(as)/a² + cos(a/2)/a²`（区间方向按纸面 `s..1/2`）。 -/
+theorem KvStar_right {a s : ℝ} (ha : a ≠ 0) :
+    ∫ t in s..(1 / 2 : ℝ), (t - s) * Real.cos (a * t)
+      = -(s * Real.sin (a / 2) / a) + Real.sin (a / 2) / (2 * a)
+        - Real.cos (a * s) / a ^ 2 + Real.cos (a / 2) / a ^ 2 := by
+  have hcos := cos_integral (a := a) (x := s) (y := (1 / 2 : ℝ)) ha
+  rw [mul_half] at hcos
+  have hcos' : ∫ t in s..(1 / 2 : ℝ), Real.cos (a * t)
+      = (Real.sin (a / 2) - Real.sin (a * s)) / a := hcos
+  have htc := t_cos_integral (a := a) (x := s) (y := (1 / 2 : ℝ)) ha
+  rw [mul_half] at htc
+  have htc' : ∫ t in s..(1 / 2 : ℝ), t * Real.cos (a * t)
+      = Real.sin (a / 2) / (2 * a) + Real.cos (a / 2) / a ^ 2
+        - (s * Real.sin (a * s) / a + Real.cos (a * s) / a ^ 2) := by
+    rw [htc]; ring
+  have hsplit : ∫ t in s..(1 / 2 : ℝ), (t - s) * Real.cos (a * t)
+      = (∫ t in s..(1 / 2 : ℝ), t * Real.cos (a * t))
+        - s * (∫ t in s..(1 / 2 : ℝ), Real.cos (a * t)) := by
+    have h1 : ∫ t in s..(1 / 2 : ℝ), s * Real.cos (a * t)
+        = s * ∫ t in s..(1 / 2 : ℝ), Real.cos (a * t) :=
+      intervalIntegral.integral_const_mul s (fun t : ℝ => Real.cos (a * t))
+    have h2 : ∫ t in s..(1 / 2 : ℝ), (t * Real.cos (a * t) - s * Real.cos (a * t))
+        = (∫ t in s..(1 / 2 : ℝ), t * Real.cos (a * t))
+          - ∫ t in s..(1 / 2 : ℝ), s * Real.cos (a * t) :=
+      intervalIntegral.integral_sub
+        ((by continuity : Continuous fun t : ℝ => t * Real.cos (a * t)).intervalIntegrable _ _)
+        ((by continuity : Continuous fun t : ℝ => s * Real.cos (a * t)).intervalIntegrable _ _)
+    have h3 : ∫ t in s..(1 / 2 : ℝ), (t - s) * Real.cos (a * t)
+        = ∫ t in s..(1 / 2 : ℝ), (t * Real.cos (a * t) - s * Real.cos (a * t)) := by
+      refine intervalIntegral.integral_congr fun t _ => ?_
+      ring
+    rw [h3, h2, h1]
+  rw [hsplit, hcos', htc']
+  field_simp [ha, pow_ne_zero 2 ha]
+  ring
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316
