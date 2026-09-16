@@ -2740,6 +2740,14 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§4 判词**：第一支 ⟹ $$C_{\rm uncond}=c_1^{*},\ G_{\max}=0.67250\ \Longrightarrow\ \boxed{G>0.6725\Rightarrow\lambda>1}$$ ✓✓✓
 **§5 边界**：单调性未形式化（五点算术核验）；第三点差 0.02；谱类识别为[判断]；C₁ 依赖引用；未用 RH；数值仅闭式算术 ✓
 
+### F.5fi ⭐⭐⭐⭐⭐ **V304：(6) $\lambda$-单调性定理（初等三行）—— ceiling 锁死成定理；$G>0.6725\Rightarrow\lambda>1$；绝对天花板 $2\sqrt2/\pi$**（`V304` ✓ 2026-09-16 13:44）
+
+**§1 定理**：$$f(\vartheta)=\frac{\sqrt2\tan\vartheta}{1+\vartheta\tan\vartheta}\Longrightarrow f'(\vartheta)=\frac{\sqrt2}{(1+\vartheta\tan\vartheta)^2}>0$$ （$\vartheta TT'$ 项精确抵消）⟹ 严格递增于 $(0,\frac\pi2)$ ⟹ **V303 §3 的 ⚠️ 撤销** ✓✓✓
+**§2 推论 1**：$$\sup_{\lambda\le1}C(\lambda)=C(1)=c_1^{*}\Rightarrow C_{\rm uncond}=c_1^{*},\ G_{\max}=0.672501;\qquad \boxed{G>0.6725\Rightarrow\lambda>1}\ \text{（定理）}$$ ✓✓✓
+**§3 推论 2**：$$\sup_{\lambda>0}C(\lambda)=\frac{2\sqrt2}\pi=0.900316\ (\lambda\to\pi/\sqrt2)\Rightarrow\boxed{G\le0.889280<1}\ \forall\lambda$$ ⟹ **即使 $\lambda>1$ 也到不了 $G=1$**；**路线图第三点 $0.90$ 本族内不可达（△ 解释）** ✓✓✓
+**§4 推论 3**：$$\tan\vartheta=\frac{c}{\sqrt2-c\vartheta}$$ ＋ 自洽核验（$c=\frac{2\sqrt2}\pi\iff\vartheta=\frac\pi2$）✓✓
+**§5 边界**：前提 $C(\lambda)=c^{*}_\lambda$ 依赖 `CCLM17 Cor.14`（引用未复核）⟹ 定理**条件性**；域限 $\vartheta<\frac\pi2$；限本窗族；未形式化到 Lean；未用 RH ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
