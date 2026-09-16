@@ -173,3 +173,57 @@ theorem kernel_sq_swap {v : ℝ → ℝ}
           (f := fun q : ℝ × ℝ => |q.1 - q.2| * v q.1 ^ 2)
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`schur_L2`**：`∬_{I×I} |s−t||v s||v t| ≤ (1/2)∫_I v²`。
+组合层：只拼接已通过的 4 条 lemma；measure conversion 只在此处做一次。
+可积性**显式前提**（不引入 `Continuous v`，把正则性留给 `Q_pos` 自决）。 -/
+theorem schur_L2 {v : ℝ → ℝ}
+    (h1 : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * |v p.1| * |v p.2|) (Irest.prod Irest))
+    (h2 : Integrable (fun p : ℝ × ℝ => (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2)) (Irest.prod Irest))
+    (hA : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 ^ 2) (Irest.prod Irest))
+    (hB : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.2 ^ 2) (Irest.prod Irest))
+    (hF : IntervalIntegrable (fun s => v s ^ 2 * (∫ t in Icc', |s - t|)) volume
+      (-(1 / 2 : ℝ)) (1 / 2))
+    (hG : IntervalIntegrable (fun s => (1 / 2) * v s ^ 2) volume (-(1 / 2 : ℝ)) (1 / 2)) :
+    ∫ p, |p.1 - p.2| * |v p.1| * |v p.2| ∂(Irest.prod Irest)
+      ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := by
+  have step1 := schur_integrand_bound (μ := Irest) h1 h2
+  have hsplit : ∫ p, (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2) ∂(Irest.prod Irest)
+      = (1 / 2) * (∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest)
+          + ∫ p, |p.1 - p.2| * v p.2 ^ 2 ∂(Irest.prod Irest)) := by
+    rw [← MeasureTheory.integral_add hA hB, ← MeasureTheory.integral_const_mul]
+    exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall fun p => by ring)
+  have hBA : ∫ p, |p.1 - p.2| * v p.2 ^ 2 ∂(Irest.prod Irest)
+      = ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest) := kernel_sq_swap (v := v) hA
+  have hTon : ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest)
+      = ∫ s, v s ^ 2 * (∫ t, |s - t| ∂Irest) ∂Irest := by
+    rw [MeasureTheory.integral_prod (f := fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 ^ 2) hA]
+    refine MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall fun s => ?_)
+    show (∫ y, |s - y| * v s ^ 2 ∂Irest) = v s ^ 2 * ∫ t, |s - t| ∂Irest
+    rw [← MeasureTheory.integral_const_mul]
+    exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall fun t => by ring)
+  have hconv : ∫ s, v s ^ 2 * (∫ t, |s - t| ∂Irest) ∂Irest
+      = ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 * (∫ t in Icc', |s - t|) := by
+    have hL : ∫ s, v s ^ 2 * (∫ t, |s - t| ∂Irest) ∂Irest
+        = ∫ s in Icc', v s ^ 2 * (∫ t in Icc', |s - t|) := rfl
+    rw [hL]
+    unfold Icc'
+    rw [MeasureTheory.integral_Icc_eq_integral_Ioc]
+    rw [← intervalIntegral.integral_of_le (show -(1 / 2 : ℝ) ≤ 1 / 2 by norm_num)]
+  have hleft := kernel_sq_left (v := v) hF hG
+  calc ∫ p, |p.1 - p.2| * |v p.1| * |v p.2| ∂(Irest.prod Irest)
+      ≤ ∫ p, (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2) ∂(Irest.prod Irest) := step1
+    _ = (1 / 2) * (∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest)
+          + ∫ p, |p.1 - p.2| * v p.2 ^ 2 ∂(Irest.prod Irest)) := hsplit
+    _ = (1 / 2) * (∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest)
+          + ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest)) := by rw [hBA]
+    _ = ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest) := by ring
+    _ = ∫ s, v s ^ 2 * (∫ t, |s - t| ∂Irest) ∂Irest := hTon
+    _ = ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 * (∫ t in Icc', |s - t|) := hconv
+    _ ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := hleft
+
+end Zeta23.ThmD.V316
