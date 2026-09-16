@@ -166,3 +166,17 @@ $$\qquad ⚠️\ \text{但}\ \textbf{不得} \text{声称封住了"RH 有有限�
 【今日全线】V262–V284（23 档）＋ 勘误 6 处（V270／V275／V280／V281 各若干）＋ 自查累计 12 次 ✓
 【本档承诺】不推数学；只做状态归档与防升级纪律 ✓
 ```
+
+---
+
+## 10. 补记（V285–V287；把 O1 更新为最新口径）
+
+$$\textbf{O1（原表述）}：\mathrm{C0}\ \text{是否为空} \iff \text{非 ζ-local 有限证书是否存在} ✓$$
+$$\textbf{O1（更新后·等价形式）}：\boxed{\text{O1 的达成}\iff\text{在合法算术类内 settle GRH（任一方向）}} ✓✓✓$$
+$$\qquad \text{依据}：\text{打开}\ \mathrm{C0}\（\text{证}\ \mathrm{FQS}）\ \text{需}\ \textbf{双向} \text{——可证 on-line 对象 ＋ 可证 off-line 对象，}\textbf{共享有限数据}（`V286` §3／`V287` §5）✓$$
+$$\qquad \qquad \text{封口}\ \mathrm{C0}\（\text{证}\ \neg\mathrm{FQS}）\ \text{需"某层有限数据}\ \textbf{决定} \text{状态"} ⟹ \text{即一条可证的}\ \textbf{有限判据}（`V279` §5／`V287` §5(b)）✓$$
+$$\qquad \qquad \text{逐候选驳倒（`V286`-A）}\ \text{只需}\ \textbf{单向}（\text{off-line 侧}）⟹ \text{可执行、可计算，但仅命中}\ \mathrm{REF}\ \text{内已知者} ✓$$
+$$\textbf{三处新增状态标签（沿用四态）}：$$
+$$\qquad \text{① `V286`-L：}\textbf{有局部数据}\ne\textbf{有 Euler 积}（b_p^2-b_{p^2}=2uv(1-\Re\chi(p)^2)\ne0）⟹ \text{off-line 对象}\ \textbf{可获有限局部数据} ✓$$
+$$\qquad \text{② V287-A：甲}\iff\textbf{合法类内 GRH 反例} ⟹ \text{记}\ \textbf{④}（\text{目标＝开问题}），\textbf{不是} \mathrm{②} ✓$$
+$$\qquad \text{③ V287-B：off-line 零点必落}\ \big(\tfrac12,1-\tfrac{c_d}{\log C}\big]\ \text{且}\ q(2+|t|)\gtrsim e^{c_d/(1-\beta)} ⟹ \textbf{唯一可攻窗口} ✓$$
