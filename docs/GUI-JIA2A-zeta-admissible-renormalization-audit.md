@@ -57,3 +57,12 @@ $$\text{(ii) 二阶约束：阈值／误差／尺度}\ \textbf{三者链动} \Lo
 $$\text{(iii) ⭐ 核心识别：}\Gamma_w\ \leftrightarrow\ \textbf{mollifier 长度参数}\ \theta\（\text{已知天花板＝平方根型屏障}）；$$
 $$\text{(iv) ⭐⭐ 结构后果：}\Gamma_w\ \textbf{候选同一} \text{于 V316 的}\ \lambda \Longrightarrow \text{甲方向的"最后自由度"}\ \textbf{不是新的}；$$
 $$\text{(v) 判定}\ \mathbf{WALL}（\text{墙被识别，非 DEAD）＋三项可证伪核验 V1--V3}。$$
+
+---
+
+## 【勘误 T10】（2026-09-16 19:36，唐先生提供权威资料；正文不修改）
+$$\textbf{错处 1}：\S3\ \text{把}\ \Gamma_w\le1\ \text{等同于"平方根型屏障"} \Longrightarrow \textbf{降级为}\ \textbf{历史技术屏障}$$
+$$\qquad\text{依据}：\text{Levinson}\ \theta<1/2\ \longrightarrow\ \text{Conrey}\ \theta<4/7\ \longrightarrow\ \text{进一步算术输入}\ \theta=9/17>1/2 \Longrightarrow \theta=1/2\ \textbf{非普适硬墙}✓$$
+$$\textbf{错处 2}：\S4\ \text{把}\ \Gamma_w\ \textbf{候选同一} \text{于 V316 的}\ \lambda \Longrightarrow \textbf{降级为"尚未建立"}$$
+$$\qquad\text{依据}：\text{K1--K3 皆未建立}（\text{仅"同为长度／T 的对数比"；机制不同：mollifier 依赖算术输入，V316 来自 MV 解析域）}$$
+$$\textbf{详据}：\text{核-甲1（K4 先行）文档。}$$
