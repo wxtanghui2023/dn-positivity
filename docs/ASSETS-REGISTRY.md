@@ -1,0 +1,107 @@
+# 📚 **资产总表**（ASSETS REGISTRY）
+
+> **唐先生 2026-09-16 23:28 定位指令**：
+> $$\boxed{\text{不追求论文产出；成果}\ \textbf{登记为自用资产}（\text{可被我们后续研究引用}）}$$
+> $$\boxed{\text{这是我们在研究中比其他同行更强的部分——包括以前的几篇论文，都是后续可引用的成果}}✓✓$$
+>
+> **性质**：本表是**资产登记册**，不是成果汇报，不是投稿规划✓
+> **用途**：后续工作中**引用**（"我们在 X 已建立 Y"），避免重复劳动 ✓
+
+---
+
+## 0. 登记纪律
+
+$$\text{(1) 只登记}\ \textbf{我们自己的}（\text{非文献已有}）\ \text{且}\ \textbf{已核验／已定稿} \text{的条目}✓$$
+$$\text{(2) 每条必须有}\ \textbf{可查位置}（\text{文件路径／DOI／commit}）✓$$
+$$\text{(3) 状态须标}\ \textbf{已定稿／已核验／已封闭}，\ \text{不得写"已证明"若仅有结构判定}✓$$
+$$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-DIRECTION｜NOGO-registry}\ \text{｜}\texttt{CLOSED-ROUTES-MAP｜MASTER-STATUS-AND-CLOSURES｜PENDING-ITEMS-MASTER}✓$$
+
+---
+
+## A 类 · **已定稿论文资产**（外部可引用）
+
+| ID | 资产 | 位置 | 内容（可引用表述） | 状态 |
+|:--|:--|:--|:--|:--|
+| **A-1** | **Li 系数线性范围** | `papers/li-range/` | $\lambda_n\ge0$ 对 $2\le n\le2T-O(1)$；$T$ ＝已验证高度；**无假设**；完全初等；含 **T-最优性 Remark**（范围上限由相位窗口须落在已验证区内决定；离轴项从不是瓶颈） | 已定稿（5 页，编译通过）✓ |
+| **A-2** | **Brown Conjecture 3.2.7 经典情形** | `papers/brown-thm2-classical/` | $\tau=1$ 情形对**所有** $k\ge2,\ H>e$ 成立；**强于** Droll 的 $k\le2T^2\log T$；证明链＝六引理＋**Abel 含边界项**；**精确余量** $=\tfrac23\lvert b\rvert H^{-3}$（$b<0$ 是"燃料"；实测吻合 6 位且与 $k$ 无关） | 已定稿（5 页）✓ |
+| **A-3** | **共享恒等式** | A-1／A-2 共用 | $\lvert1-\tfrac1\rho\rvert^2=1+\tfrac{1-2\beta}{\beta^2+\gamma^2}$（A 用相位窗口⟹正性；B 用 Abel⟹不等式；双向引用） | 已定稿 ✓ |
+| **A-4** | **dn-positivity 定稿** | Zenodo **DOI 10.5281/zenodo.22044629** (v2.0.1) | $D_n>0$ 无条件正性；全常数解析化；作者 Hui Tang；ORCID 0009-0003-5745-4820 | 已发布 ✓ |
+| **A-5** | **GitHub 公开仓库** | `wxtanghui2023/dn-positivity` (public) | A-4 的代码／论文 | 已发布 ✓ |
+| **A-6** | **投稿包（备用）** | `submission/ANNALS-*`｜`release/paper-dn-positivity-{CN,EN}.*` | Annals 方案 A/B ＋检查清单；arXiv tex | 就绪未投 ✓ |
+
+---
+
+## B 类 · **形式化资产（Lean）**
+
+| ID | 资产 | 位置 | 内容 | 状态 |
+|:--|:--|:--|:--|:--|
+| **B-1** | **V316 变分闭合** | `~/lean-repro/zeta23-local/V316_kernel_bound.lean` ＋ `docs/V316_kernel_bound.lean` | **60 条声明**，ERROR_COUNT=0，**零 sorry／零 axiom**，**未用 RH**；kernel_bound→Q_pos→Bfun→弱 E–L 全链 | 已冻结为基线 ✓ |
+| **B-2** | **Zeta23 三层审计** | `docs/V298`｜`V300`｜`V301/V302` | Ceiling.lean 三层审计（带宽仅从 validity 侧进入）；§5 off-diagonal 𝒪₁ 逐行核（MV 无 pair-correlation 内容 ⟹ $c^{\rm geom}$ 是普适几何常数） | 已完成 ✓ |
+
+---
+
+## C 类 · **技术观察**（关于已发表论文的具体、可核验事实）
+
+| ID | 资产 | 位置 | 内容 | 状态 |
+|:--|:--|:--|:--|:--|
+| **C-1** | **$F_3$ branch-SHARP** | `docs/V2-28A` | BC §3 退化支（$a_1\ell_1=a_2\ell_2$）的**构造性 witness**：$D_b^{\rm deg}\asymp LM^{1-o(1)}$ ＝ BC 上界 ⟹ **§3 退化计数无幂次改进空间** | 已封闭 ✓ |
+| **C-2** | **$L^5$ 逐幂分解** | `docs/V2-35C`｜`V2-35D`｜`V2-36` | $L^5=L_{\rm Weil}\cdot L_{\rm transition}\cdot L_{\ell_2,\ell_2'}\cdot L_u$ **（$1+1+2+1$）**，逐字溯源 (4.9)–(4.29)；每幂的数学来源已指名 | 已定位 ✓ |
+| **C-3** | **反向 C–S 净幂次 $=0$** | `docs/V2-33/33b/33c/33d` | 单 $\ell$ 反向 C–S：$L^{-1}\times L\times L^{o(1)}=L^0$；机制＝**同指标相位共轭相消**（代数事实）⟹ 不产生新估计对象 | **CLOSED** ✓ |
+| **C-4** | **$17/33\iff17r+t=8$** | `docs/V2-13`｜`LIE3A` | BCR 坐标下的精确边界线；$(9/20,7/20)$ 恰在线上；**17/33 是历史最优点，非架构天花板** | 已核 ✓ |
+| **C-5** | **互反恒等式在 BC 中的角色** | `docs/V2-32` | 三变量两两互素：$\frac{\overline{\alpha\gamma}}\beta+\frac{\overline{\beta\gamma}}\alpha+\frac{\overline{\alpha\beta}}\gamma\equiv\frac1{\alpha\beta\gamma}$；BC **自己**用它把 $\tilde\ell\tilde\ell'$ 模逆元改写为分母型 | 逐字取证 ✓ |
+| **C-6** | **$L^{5/2}$ 的产生机制** | `docs/V2-28B` | $L^5=L^4_{\ell\text{-count}}\times L_{PQ}$，经 C–S 开方；**绝对值化损失已被 BC 显式回收**；**Weil 不产生 $L$-幂**（Weil 在 $n_2'$ 上） | 已定 ✓ |
+
+---
+
+## D 类 · **封闭判据／负面资产**（可引用为"此路已封"）
+
+| ID | 资产 | 位置 | 内容 |
+|:--|:--|:--|:--|
+| **D-1** | **有限⟹无限（八类穷尽）** | `docs/V211` | 望远镜自击 ＋ 八类机制全部映射到已封类 ＋ **RH 自身是 $\Pi_1$** ⟹ 框架＝RH 的逻辑形状 |
+| **D-2** | **极限交换** | `docs/V320-A`｜`V321`｜`V262` | 紧致＋连续 ⟹ $\varprojlim\ne\emptyset$；**非满射不制造空极限**；$\lim^1\ne0$ 只在有限阶段可见 |
+| **D-3** | **层诊断（Archimedean）** | `docs/V144`｜`V145` | **ζ 零点不在 motive 层，在 Archimedean 层** ⟹ 所有 Frobenius／几何类比失败的根因＝**层错了** |
+| **D-4** | **Buium $\delta$-几何 NO-GO** | `docs/gate10-*` | $\delta_p(x)\sim x^p/p$ ⟹ **Frobenius 尺度 ≠ RH 尺度** ⟹ P-Scale 双杀 |
+| **D-5** | **自守输入关闭** | `docs/gate18-*` | 高阶自守陈述**包含** GL(1) 而非外部约束；尖点情形 ζ 不出现；诱导情形伴随因子同深度 |
+| **D-6** | **单一缺口形式** | `CLOSED-ROUTES-MAP.md` | 【算术特异 ＋ 非 completion ＋ 非 $L$-测量 ＋ limit-seeing/finite-blind】 |
+| **D-7** | **$\theta$ vs $\lambda$ 不等价** | `docs/HE-JIA1-K4-*` | mollifier 长度与 V316 变分载体**机制不等价** ⟹ "一堵墙" doctrine 的部分证伪 |
+| **D-8** | **GM vs mollifier H3-A** | `docs/LIE1B-*` | GM 的 $N^{3/4}$ 大值机器**不攻击** mollifier 非对角墙（对象不同型） |
+| **D-9** | **V316 三出口封闭** | `V316-FREEZE`｜`V317`｜`V318` | $\lambda>1$ 的已有来源（S1–S8／C1–C8／K1–K7）**全部 DEAD** |
+| **D-10** | **理论类型不匹配** | `docs/V148` | RH ⟺ ι: $\rho\mapsto1-\bar\rho$ 无自由轨道（**缺席型**）；canonical symmetry-breaking ＝ torsor 平凡化（**局部选择型**） |
+
+---
+
+## E 类 · **方法论资产**（可复用工具，跨项目适用）
+
+| ID | 资产 | 出处 | 用途 |
+|:--|:--|:--|:--|
+| **E-1** | **T10 勘误纪律** | 全项目 | 勘误**追加**于原档，绝不重写；错误留痕 |
+| **E-2** | **四态标签** | MASTER §5 | ①不可能／②族内失败（**不移为①**）／③⟺RH（重述）／④未决 |
+| **E-3** | **N1–N13 反升级清单** | 全项目 | 不得把"没找到"写成"不存在" |
+| **E-4** | **净幂次账** | `docs/V2-33*` | 新自由度收益 × 代价 × 新增稀疏度，**三者同时看** |
+| **E-5** | **反走私铁律** | `docs/E6-13` | 同一指数 $\ne$ 同一机制；形式复杂度 $\ne$ 幂次障碍 |
+| **E-6** | **取证升级** | 本日 | **本地抓取＋剥标签＋grep** 远比定向抽取可靠（1.05 MB HTML 一次取到 (4.9)/(4.10) 全文） |
+| **E-7** | **饱和 witness 优先** | `docs/V2-28A` | 判定"上界是否可改进"时，**先构造达到上界的 witness** |
+| **E-8** | **定义层归一化** | 全项目 | 先证"搜索空间未被缩小"，再投入搜索 |
+
+---
+
+## F 类 · **早期数值／验证资产**（2026-09-11 登记，沿用）
+
+| ID | 资产 | 状态 |
+|:--|:--|:--|
+| **F-1** | **Guinand 相位锁定**：$\sum_k\sin(\gamma_k\log p)=O(1)$ 机制＝Guinand/Weil 显式公式；微扰 $10^{-7}$ 即爆炸到 33000 | 已核验 ✓ |
+| **F-2** | **Mellin 算子 β-提取**：由**素数单独构造**，读出前 ~500 零点 $\beta\approx1/2$（最大偏差 <0.1） | 已核验 ✓ |
+| **F-3** | **经典核 Φ 的 TP₅ 失败**：TP₂–TP₄ 但非 TP₅；120 位复核＋Gaussian 对照 ⚠️（TP₅ 读数已于 09-12 撤回对象层面） | 数值成立 ✓ |
+| **F-4** | **大规模负面地图**：数十处已定位停滞点，含外部独立验证的 $\beta$-墙 | 已审计 ✓ |
+
+---
+
+## 维护规则
+
+$$\text{(1) 新资产产生时}\ \textbf{当日登记} \text{（含路径＋状态＋可引用表述）}✓$$
+$$\text{(2) 状态变化（如 OPEN→CLOSED）}\ \textbf{追加勘误}，\ \text{不覆盖原文}✓$$
+$$\text{(3) 引用时}\ \textbf{引本表 ID}（\text{如 "见 C-2"}）✓$$
+$$\text{(4) 与}\ \texttt{DIRECTION-LOOP-STOP-verdict-and-assets.md}\ \text{（09-11）}\ \text{并存：后者为当时的 A1–A5 快照，本表为}\ \textbf{统一总表}✓$$
+
+---
+*建档：2026-09-16 23:30｜依据：唐先生"资产而非论文"定位指令*
