@@ -2802,6 +2802,14 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 精确 GAP**：P1（读 `ThmD.AdmWindow`）／P2（核 $bv$）／P3（域 $\lambda<1$）；⚠️ 副产品：ξ′ vs ζ 常数差异 ⟹ V303 §3 统一**降为[待复核]** ✓
 **§6 边界**：直读转述；不声称归属已完成；未用 RH；零数值 ✓
 
+### F.5fp ⭐⭐⭐⭐⭐ **V311：P1 `AdmWindow` 逐字段审计 —— 12 字段原文；候选通过全部数值界（$c=4$）；P1-GAP ＝ 尺度约定**（`V311` ✓ 2026-09-16 14:22）
+
+**§1 12 字段（`ThmD/WindowCore.lean:31–43`）**：`one_le_w`／`w8`／$$\boxed{4\le c}$$／`even`／`nonneg`／`le_one`／$$\texttt{contDiff}:C^{2}$$／$$\texttt{support}:L/2\le|u|\Rightarrow vu=0$$／$$\int|v'|\le2$$／$$\int|(v^{2})'|\le2$$／$$\int|v''|\le c/w$$／$$\int|(v^{2})''|\le c/w$$ ✓✓✓
+**§2 数值核算**：正性**严格**（不产生 $\lambda\to1^-$ 退化）；$4(1-\cos w)\le0.96$；$2(1-\cos2w)\le1.69$；$4w\sin w$、$4w\sin2w$ ⟹ $$\boxed{c=4\ \text{可行}}$$ ✓✓✓
+**§3 尺度缺口**：`AdmWindow.v` 支撑于 $[-L/2,L/2]$＋$C^2$ ⟹ 与 §4 的 profile（$C^3$、$\mathrm{pos}$）**不同尺度**；实现式 $\varphi_v=\sqrt{v(u/L)}\varphi$ ⟹ taper 归零 ⟹ **P1 取决于尺度约定** ✓✓✓
+**§4 判词**：**P1-GAP**（缺失：尺度约定、$\varrho$/`phiV`）；但 **profile 读法下全部数值界通过** ⟹ 读数① ⟹ P1-YES ✓；$c$ ＝ 情形(iii)（预固定＋$4\le c$，存在性已证可取 4）✓✓
+**§5 边界**：手算积分；`l1_deriv_sq` 逼近但成立；不声称 P1-YES；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
