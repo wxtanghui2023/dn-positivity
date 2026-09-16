@@ -789,3 +789,36 @@ theorem kernel_domination {f g : ℝ → ℝ}
   exact hmain
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-1e 合并**：`kernel_hv_integrable`
+`F(s,t) = |s−t| h(s) cos(√2λt) ∈ L¹(I×I)`。
+组合 ④-1a（h 可积）＋ ④-1b（cos 可积）＋ ④-1c（mul_prod）＋ ④-1d（核支配）。
+关键：h 只 `ContinuousOn Icc'`（非全局连续）⟹ 在 `Icc' ×ˢ Icc'` 上构造 `ContinuousOn`
+（紧集连续性 ⟹ a.e. 强可测），再用 `Measure.prod_restrict` 接回 `Irest.prod Irest`。 -/
+theorem kernel_hv_integrable {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2))
+      (Irest.prod Irest) := by
+  have hG : Integrable (fun p : ℝ × ℝ => h p.1 * Real.cos (Real.sqrt 2 * lam * p.2))
+      (Irest.prod Irest) :=
+    mul_prod_integrable (integrable_of_continuousOn_Icc' hh) (integrable_cos_Irest lam)
+  have hcont : ContinuousOn
+      (fun p : ℝ × ℝ => |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2))
+      (Icc' ×ˢ Icc') := by
+    refine ContinuousOn.mul (ContinuousOn.mul ?_ ?_) ?_
+    · exact (continuous_abs.comp (continuous_fst.sub continuous_snd)).continuousOn
+    · exact ContinuousOn.comp hh continuous_fst.continuousOn (fun p hp => hp.1)
+    · exact (by fun_prop : Continuous fun p : ℝ × ℝ =>
+        Real.cos (Real.sqrt 2 * lam * p.2)).continuousOn
+  have hAB : AEStronglyMeasurable
+      (fun p : ℝ × ℝ => |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2))
+      (Irest.prod Irest) := by
+    rw [MeasureTheory.Measure.prod_restrict]
+    exact hcont.aestronglyMeasurable_of_isCompact (isCompact_Icc.prod isCompact_Icc)
+      (measurableSet_Icc.prod measurableSet_Icc)
+  exact kernel_domination (f := h) (g := fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t)) hG hAB
+
+end Zeta23.ThmD.V316
