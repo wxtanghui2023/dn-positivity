@@ -2723,6 +2723,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§6 判死/判活**：$$f\ \text{严格递增于}\ (0,\sqrt3)\Rightarrow\boxed{c>3/4\iff\lambda>1}$$ ⟹ **定量必要条件：$2/3\to1$ 必破 MV 无条件支持墙** ✓✓✓；$$\boxed{c\le\sqrt3/2<1}$$ ⟹ **结构性天花板**；反解 $\lambda(c)$；$c=0.90$ 无解 ✓；⚠️ 张力：MT 窗 $0.7533>0.75$ ⟹ 窗自由度 ≲0.004 ✓
 **§7 边界**：§1 为[推断]（未与 §5/§6 逐行核对）；"$\lambda\le1$ 无条件域"承 `V300` §4（[推断]）；**路线图属另一机制（ceiling 框架）⟹ 不得混用**；未用 RH；零数值 ✓
 
+### F.5fg ⭐⭐⭐⭐⭐ **V302：(5a) §5/§6 恒等式审计 —— V301 变分结论撤回；$c_\lambda(v;D)=\mathcal J_D(\lambda;v)/\lambda$；必要条件改为 $c>0.6725\Rightarrow\lambda>1$**（`V302` ✓ 2026-09-16 13:34）
+
+**§1 问题 2**：$$c_\lambda(v;D)=\frac{\mathcal J_D(\lambda;v)}{\lambda}\ (\text{窗口＋权重＋带宽})$$ ⟹ V301 公式漏 $(v,D)$ 依赖 ⟹ **$\Delta_\phi=O(1)$** ✓✓✓
+**§2 问题 1**：$\frac34$ 只是**指示窗**值；最优 $(v,D)\Rightarrow c_1^{*}=0.7532960$（$\Delta\approx0.0033$），**但已饱和**（CCLM17 Cor.14）✓✓✓
+**§3 检查点**：A 否（漏 $D$-泛函）；B 待定（$v*v$ 卷积 ⟹ 替换可能含窗口）；**D：类含 $b\ge\frac34$ ⟹ 非尺度不变 ⟹ V301 推理失效** ✓✓✓
+**§4**：$c_1^{*}$ ＝ Theorem D 最优窗常数（`ChallengeDeps.lean` 逐字）；$\lambda_1$ vs $\lambda$ 差 $O(1/l)$ ✓
+**§5 重构**：$$C_{\rm uncond}(\lambda\le1)=\sup_{v,D}\frac{\mathcal J_D(\lambda;v)}{\lambda};\quad C_{\rm uncond}(1)=c_1^{*}\Rightarrow G=0.6725$$ $$\boxed{c>0.6725\Rightarrow\lambda>1}$$；撤回 $\phi$-无关／窗口非自由度／$\sqrt3/2$ 上界／$\frac34$ ✓✓✓
+**§6 边界**：语句级源码；$\mathcal J_D$ 未展开；检查点 B 未定论；C₁ 依赖引用；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

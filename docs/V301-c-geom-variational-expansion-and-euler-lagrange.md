@@ -102,3 +102,14 @@ $$\boxed{\textbf{V301 判词}：\text{① }c^{\rm geom}=a^{2}\lambda/(1+\lambda^
   (5b) 若 (5a) 通过 ⟹ **把 $\lambda$ 与 $\sigma$（Fourier／支撑）的精确关系写出来**，把定量必要条件改写为 $$\boxed{c>3/4\Longrightarrow\sigma>\sigma_{\rm uncond}}$$ 的形式 ✓✓
   (5c) **区分两条机制**（trace 路线 vs ceiling/certificate 框架）并把路线图（1.04／1.26／1.70）归位到 ceiling 框架下单独处理 ⟹ 避免混用 ✓✓
 ```
+
+---
+
+## §8 ⚠️【撤回勘误 T10】（2026-09-16 13:32 起，唐先生 5a 指令；见 `V302`）
+
+$$\text{本档 §2 的"尺度失败}\Rightarrow\text{必取}\ a=1\Rightarrow c^{\rm geom}\ \text{与}\ \phi\ \text{无关"}\ ✗\ \textbf{撤回} ✓$$
+$$\qquad \text{因（`XiPrime/Window*.lean` 源码）：常数真实形态是}\ \boxed{c_\lambda(v;D)=\frac{\mathcal J_D(\lambda;v)}{\lambda}}\ \text{（\textbf{窗口}\ v\ ＋\ \textbf{权重}\ D\ 的泛函）} ✓✓$$
+$$\qquad \text{且可容许类含约束}\ b\ge\frac34（`FlatAdm.lean`"in fact 3/4 ≤ b"）⟹ \textbf{类非尺度不变} ⟹ "a=1"不能无失一般性 ✓✓$$
+$$\text{本档 §5–§6 的下列结论}\ \textbf{撤回}：c^{\rm geom}\ \text{与}\ \phi\ \text{无关};\ \text{"窗口非实质自由度"};\ \text{族内上界}\ \sqrt3/2=0.866;\ \text{单变量 E–L 的约束最优}\ \frac34 ✓$$
+$$\qquad \text{更正}：\text{最优}\ (v,D)\ \text{给}\ c_1^{*}=0.7532960\（\text{Theorem D}）⟹ C_{\rm uncond}(1)=c_1^{*},\ G=2-\frac1{c_1^{*}}=0.6725;\ \textbf{必要条件改为}\ c>0.6725\Rightarrow\lambda>1 ✓✓$$
+$$\text{保留（未撤回）}：\ell_1=l+2\log2-1\ \text{为 T-确定（非窗口泛函）};\ \text{主导杠杆仍是}\ \lambda;\ \text{必要条件的形式}\ \lambda>1 ✓$$

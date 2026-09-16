@@ -12,3 +12,4 @@ V263	legacy-alias	superseded-by-V262(inverse-limit-wall-audit; 昨夜23:08领号
 V263	legacy-alias	RETIRED(tombstone; 别名→V262; 保留锁位以免重领)	2026-09-16T09:29:30+08:00
 V287	audit	V286-Yi-offline-objects-local-datum-and-obstruction-relocation	2026-09-16T11:46:47+08:00	重领号作废（同一 slug 二次领号；无文档使用；已释放）
 V302	audit	SEPT-CLAIM-VOID	2026-09-16T13:30:55+08:00	作废：id_claim 因 V301 档已存在而误发 V302；见 V301 正行
+V302	audit	SEPT-CLAIM-REINSTATED	2026-09-16T13:33:00+08:00	更正：V302 先前"误发作废"已撤销；唐先生 13:32 指定 V302 ＝ 5a 正式启用（slug V302-section5-6-identity-audit-c1star-vs-3over4）
