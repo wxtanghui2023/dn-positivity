@@ -6,6 +6,9 @@ V316 `kernel_bound` 第一层：`kernel_mass`。
   (iii) 故 ∫|s−t| ≤ ∫(1/2 − 2st) = 1/2
 -/
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+import Mathlib.Analysis.Calculus.Deriv.Basic
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
 import Mathlib.MeasureTheory.Integral.Prod
 
@@ -334,5 +337,69 @@ theorem vStarELConst_eq {lam : ℝ} (h : lam ≠ 0) :
   unfold vStarELConst vStarAffineConst vtheta
   field_simp
   nlinarith [h2]
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **原函数引理 ①**：`∫_x^y cos(a t) dt = (sin(a y) − sin(a x))/a`（`a ≠ 0`）。 -/
+theorem cos_integral {a x y : ℝ} (ha : a ≠ 0) :
+    ∫ t in x..y, Real.cos (a * t) = (Real.sin (a * y) - Real.sin (a * x)) / a := by
+  have hderiv : ∀ z ∈ uIcc x y,
+      HasDerivAt (fun t : ℝ => Real.sin (a * t) / a) (Real.cos (a * z)) z := by
+    intro z _
+    have hlin : HasDerivAt (fun t : ℝ => a * t) a z := hasDerivAt_const_mul a
+    have h1 : HasDerivAt (fun t : ℝ => Real.sin (a * t)) (Real.cos (a * z) * a) z :=
+      (Real.hasDerivAt_sin (a * z)).comp z hlin
+    have h2 := h1.div_const a
+    have hval : Real.cos (a * z) * a / a = Real.cos (a * z) := by field_simp
+    rwa [hval] at h2
+  have hint : IntervalIntegrable (fun t : ℝ => Real.cos (a * t)) volume x y :=
+    (by continuity : Continuous fun t : ℝ => Real.cos (a * t)).intervalIntegrable _ _
+  rw [intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint]
+  ring
+
+/-- **原函数引理 ②**：`∫_x^y t cos(a t) dt = [t sin(a t)/a + cos(a t)/a²]_x^y`（`a ≠ 0`）。
+`KvStar_affine` 的计算核心。 -/
+theorem t_cos_integral {a x y : ℝ} (ha : a ≠ 0) :
+    ∫ t in x..y, t * Real.cos (a * t)
+      = y * Real.sin (a * y) / a + Real.cos (a * y) / a ^ 2
+        - (x * Real.sin (a * x) / a + Real.cos (a * x) / a ^ 2) := by
+  have hderiv : ∀ z ∈ uIcc x y,
+      HasDerivAt (fun t : ℝ => t * Real.sin (a * t) / a + Real.cos (a * t) / a ^ 2)
+        (z * Real.cos (a * z)) z := by
+    intro z _
+    have hlin : HasDerivAt (fun t : ℝ => a * t) a z := hasDerivAt_const_mul a
+    have hsin : HasDerivAt (fun t : ℝ => Real.sin (a * t)) (Real.cos (a * z) * a) z :=
+      (Real.hasDerivAt_sin (a * z)).comp z hlin
+    have hcos : HasDerivAt (fun t : ℝ => Real.cos (a * t)) (-Real.sin (a * z) * a) z :=
+      (Real.hasDerivAt_cos (a * z)).comp z hlin
+    have h1 : HasDerivAt (fun t : ℝ => t * Real.sin (a * t))
+        (Real.sin (a * z) + z * (Real.cos (a * z) * a)) z := by
+      have hh := (hasDerivAt_id z).mul hsin
+      have hfun : (id * fun t : ℝ => Real.sin (a * t)) = fun t : ℝ => t * Real.sin (a * t) := by
+        funext t
+        simp [id]
+      have hval1 : (1 * Real.sin (a * z) + id z * (Real.cos (a * z) * a))
+          = Real.sin (a * z) + z * (Real.cos (a * z) * a) := by
+        simp [id]
+      rw [hfun, hval1] at hh
+      exact hh
+    have h2 : HasDerivAt (fun t : ℝ => t * Real.sin (a * t) / a)
+        ((Real.sin (a * z) + z * (Real.cos (a * z) * a)) / a) z := h1.div_const a
+    have h3 : HasDerivAt (fun t : ℝ => Real.cos (a * t) / a ^ 2)
+        ((-Real.sin (a * z) * a) / a ^ 2) z := hcos.div_const (a ^ 2)
+    have hval : (Real.sin (a * z) + z * (Real.cos (a * z) * a)) / a
+        + (-Real.sin (a * z) * a) / a ^ 2 = z * Real.cos (a * z) := by
+      field_simp [ha, pow_ne_zero 2 ha]
+      ring
+    have h4 := h2.add h3
+    rw [hval] at h4
+    exact h4
+  have hint : IntervalIntegrable (fun t : ℝ => t * Real.cos (a * t)) volume x y :=
+    (by continuity : Continuous fun t : ℝ => t * Real.cos (a * t)).intervalIntegrable _ _
+  rw [intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint]
 
 end Zeta23.ThmD.V316
