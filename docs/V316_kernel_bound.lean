@@ -1177,3 +1177,86 @@ theorem Qfun_global_gap {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam) (h1 : lam �
   exact Q_pos_alg h0 h1 hN hb
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **⑥-1**：零 gap ⟹ `∫_I (u−v_λ)² = 0`（只证【积分等于零】，不涉及 a.e.）。 -/
+theorem integral_sq_eq_zero_of_min {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1i : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2i : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0)
+    (hN : 0 ≤ ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hb : |∫ p, |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+        * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2)) ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hmin : Qfun lam u = Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))) :
+    ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest = 0 := by
+  have hgap := Qfun_global_gap (u := u) lam h0 h1 hu_cont hUU hVV hC hD hE hu hv h1i h2i
+    hmean hN hb
+  rw [hmin, sub_self] at hgap
+  linarith [hN, hgap]
+
+/-- **⑥-2**：`∫ h² = 0` ⟹ `h² = 0` **a.e.**（非负函数积分零引理；
+API 已核验：`MeasureTheory.integral_eq_zero_iff_of_nonneg`，Bochner/Basic.lean:735）。 -/
+theorem sq_eq_zero_ae {u : ℝ → ℝ} (lam : ℝ)
+    (hint : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hzero : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest = 0) :
+    (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) =ᵐ[Irest] 0 :=
+  (MeasureTheory.integral_eq_zero_iff_of_nonneg (fun s : ℝ => sq_nonneg _) hint).mp hzero
+
+/-- **⑥-3**：`h² = 0` a.e. ⟹ `h = 0` a.e.（逐点 `sq_eq_zero_iff`，不合并 ⑥-2）。 -/
+theorem sub_eq_zero_ae {u : ℝ → ℝ} (lam : ℝ)
+    (h : (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) =ᵐ[Irest] 0) :
+    (fun s : ℝ => u s - Real.cos (Real.sqrt 2 * lam * s)) =ᵐ[Irest] 0 := by
+  filter_upwards [h] with s hs
+  simpa only [Pi.zero_apply] using (sq_eq_zero_iff.mp hs)
+
+/-- **⑥ 唯一性 corollary（a.e. 意义）**：两个 minimizer ⟹ `u =ᵐ v_λ`（`Irest` 上 a.e.）。
+输入是【最小性等式】`Q(u) = Q(v_λ)`（非人为加入）；三层严格分离：
+积分零 → a.e. 平方零 → a.e. 函数零。 -/
+theorem minimizer_uniqueness_ae {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hu_cont : ContinuousOn u Icc')
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1i : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2i : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest)
+    (hmean : ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest = 0)
+    (hN : 0 ≤ ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hb : |∫ p, |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+        * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2)) ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest)
+    (hmin : Qfun lam u = Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))) :
+    (fun s : ℝ => u s) =ᵐ[Irest] (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) := by
+  have hzero := integral_sq_eq_zero_of_min (u := u) lam h0 h1 hu_cont hUU hVV hC hD hE hu hv
+    h1i h2i hmean hN hb hmin
+  have hsq := sq_eq_zero_ae (u := u) lam h2i hzero
+  have hsub := sub_eq_zero_ae (u := u) lam hsq
+  filter_upwards [hsub] with s hs
+  simpa using sub_eq_zero.mp hs
+
+end Zeta23.ThmD.V316
