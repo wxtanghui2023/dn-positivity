@@ -77,3 +77,12 @@ $$\text{(i) 把 §5 形式化为}\ \textbf{证书族＋一致延拓＋兼容性}
 $$\text{(ii) 正面回答了 §3 的}\ \textbf{跃迁危险}：\text{跃迁只发生在已被分类的逃逸口内；}$$
 $$\text{(iii) 结论：}\textbf{V211 §5 DEAD（已审计范围）}，\mathfrak M\ \text{残余收缩为单一}\ C_0；$$
 $$\text{(iv) 明确了下一步的唯一残余与它的性质（＝RH 可有限证书化，V274-B）。}$$
+
+---
+
+## 【勘误 T10】（2026-09-16 17:00，唐先生指出；正文不修改，勘误留档）
+
+$$\textbf{错处}：\S4.1\ \text{把}\ \textbf{存在性}（\lim_{\leftarrow}\ne\varnothing，\text{Tychonoff＋FIP，}\textbf{无需 ML}\）\ \text{与}\ \textbf{提升性}（\text{给定}\ C_T\ \text{可延拓}\ \Longleftrightarrow\ \pi_T\ \text{满射}，\textbf{需 ML／满射}）\ \text{混为一谈}。$$
+$$\textbf{后果}：\S5\ \text{的}"\text{V211 §5}\ \mathrm{DEAD}"\ \textbf{判定尚未成立}；\ \text{本档}\ §5\text{／§7}\ \text{的}\ \mathfrak M=\mathfrak M_{\text{closed}}\sqcup C_0\ \textbf{作废}。$$
+$$\textbf{修正后的状态}：\mathfrak M=\mathfrak M_{\text{closed}}\ \sqcup\ C_0\ \sqcup\ \S5\text{-L}\quad(\S5\text{-L}：\text{lifting failure，}\textbf{未分类})$$
+$$\textbf{详据}：\text{V320-A（V262-B finite-witness 条件核验）}\ \text{—— 存在性部分正确；B 分支需附加 ML／满射条件。}$$
