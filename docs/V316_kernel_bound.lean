@@ -114,3 +114,36 @@ theorem schur_integrand_bound {v : ℝ → ℝ} {μ : Measure ℝ}
   integral_mono h1 h2 (fun p => amgm_kernel v p.1 p.2)
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- 限制测度（`I × I` 上的 Lebesgue）。 -/
+abbrev Irest : Measure ℝ := volume.restrict Icc'
+
+/-- **接口黑盒**：唯一出现 `Icc ↔ 区间积分` 换算的地方。 -/
+lemma kernel_mass_restrict {s : ℝ} (hs : s ∈ Icc') :
+    ∫ t in Icc', |s - t| ≤ 1 / 2 := by
+  unfold Icc' at hs ⊢
+  rw [MeasureTheory.integral_Icc_eq_integral_Ioc]
+  rw [← intervalIntegral.integral_of_le (show -(1 / 2 : ℝ) ≤ 1 / 2 by norm_num)]
+  exact kernel_mass hs
+
+/-- **层 3a（`kernel_sq_left`）**：`T₁ ≤ 1/2 ∫ v²`；**唯一使用 `kernel_mass`**（经接口黑盒）。 -/
+theorem kernel_sq_left {v : ℝ → ℝ}
+    (h1 : IntervalIntegrable (fun s => v s ^ 2 * (∫ t in Icc', |s - t|)) volume
+      (-(1 / 2 : ℝ)) (1 / 2))
+    (h2 : IntervalIntegrable (fun s => (1 / 2) * v s ^ 2) volume (-(1 / 2 : ℝ)) (1 / 2)) :
+    ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 * (∫ t in Icc', |s - t|)
+      ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := by
+  have hpt : ∀ s ∈ Icc (-(1 / 2 : ℝ)) (1 / 2),
+      v s ^ 2 * (∫ t in Icc', |s - t|) ≤ (1 / 2) * v s ^ 2 := by
+    intro s hs
+    have hm : (∫ t in Icc', |s - t|) ≤ 1 / 2 := kernel_mass_restrict hs
+    nlinarith [hm, sq_nonneg (v s)]
+  have hmain := intervalIntegral.integral_mono_on (a := -(1 / 2 : ℝ)) (b := (1 / 2 : ℝ))
+    (show -(1 / 2 : ℝ) ≤ 1 / 2 by norm_num) h1 h2 hpt
+  rwa [intervalIntegral.integral_const_mul] at hmain
+
+end Zeta23.ThmD.V316
