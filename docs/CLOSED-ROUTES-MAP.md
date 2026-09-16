@@ -2551,6 +2551,20 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **④ 排除性分叉**：$\mathrm{GRH}_{\mathcal C}\Rightarrow$ O1-1 **永久关闭**（逻辑为假）；$\mathrm{O1\!-\!1}\Rightarrow\neg\mathrm{GRH}_{\mathcal C}$ ⟹ **O1-1 是"条件性利用 GRH 反例存在性"的机制路线，非 RH／GRH 证明路线** ✓✓
 **⑤ 下一靶（预登记）**：**FiniteSep 锚定实例化** —— 以已知 off-line 反例 $x_0$ 为锚，必要第一子目标 $$\boxed{\exists S:\ x_0\ \text{的}\ S\text{-层纤维内只有 off-line 成员}}$$；$\mathrm{REF}$ 由"驳倒工具"转为"**构造锚点**" ✓
 
+### F.5et ⭐⭐⭐⭐ **V289：FS+/FS− 纤维二分审计 —— 锚定程序两难（有锚点 ⟹ FS− ⟹ 认证死；认证可能 ⟹ 无锚点）**（`V289` ✓ 2026-09-16 12:03）
+
+委托（唐先生 11:59）："**不要马上构造 $S$，先做二分审计**"；"FS− 若成立是很有价值的 NO-GO：证明'以任何已知 off-line 锚点做有限数据认证'不可能"；纪律 $x_0$ off-line $\not\Rightarrow$ 可有限认证 ✓
+
+**§2 ⭐⭐⭐ FS− 构造性成立（允许空虚成员的类）**：**Beurling 广义素数系统**（前 $N$ 个 ≡ 真素数 ＋ 尾部自由工程）＋ **空虚成员**（有限 Euler 积，`E103` Lemma A 无零点；倒数型 $\mathrm L(s,\chi)^{-1}$）⟹ $$\boxed{\forall S\exists y_S\in\mathcal R:\pi_S(y_S)=\pi_S(x_0)}$$ ⟹ **FS− 成立、FS+ 被反驳**；⚠️ 空虚成员**可**用于 FS−／反驳 FS+，**不可**用作 $A_S$（P3）✓✓✓
+
+**§3 ⭐⭐ 合法算术类内**：$\mathrm{FS-}\iff$ **on-line 侧输入**（＝某对象之 RH，`V286` §3）⟹ **④**（与 `V287` 的 off-line 侧对称）✓
+
+**§4 ⭐ FS+ 强度**：整条纤维全 off-line ⟹ 远超 $x_0$ 自身 ⟹ ④；不得从 $x_0$ off-line 推出认证 ✓
+
+**§5 ⭐⭐⭐ 锚定程序两难（核心）**：**A** 允许空虚成员 ⟹ FS− ⟹ **认证不可能**；**B** 合法算术类 ⟹ 须 on-line 侧 ⟹ ④，且**锚点本身不可得**（`V287`）⟹ $$\boxed{\text{有锚点的类}\Rightarrow\mathrm{FS-}\Rightarrow\text{认证死};\quad \text{认证可能的类}\Rightarrow\text{无锚点}}$$ ⟹ `V288` §9.5 锚定程序**已审计范围内封**；唯一出口 ＝ `V287` 靶 ✓✓✓
+
+**§6 边界**：Beurling／DMV 与 `E103` Lemma A 为引用；倒数型对象归属取决于类定义（[结构性]）；空虚成员双重用法须严守；**不声称**合法算术类内 FS− 真／假（④）；未用 RH；未跑 Lean；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
