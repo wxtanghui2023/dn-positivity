@@ -137,3 +137,14 @@ $$\qquad \text{(e) }\textbf{未用 RH 作推导} ✓;\ \text{未跑 Lean} ✓;\ 
 ⑥ **回答**：不能压死所有 cylinder 机制（Robin 反例）；能压死的是"ζ 载体 ＋ 类级"的 cylinder 判据
 ⑦ **防重复映射**（§8）：与 POS1/2/3、V259-A、V150 W2、V269 勘误、V262、V211 §5 的双向指针 ✓
 ```
+
+---
+
+## §11 ⚠️ 【勘误 T10】（`V274` §1，唐先生 2026-09-16 10:57 复核触发）
+
+$$\textbf{本档 §1 的分类学错误}：\text{把}\ \boxed{\text{"嵌套有限条件（可有限反驳，}\Pi_1\ \text{型）"}}\ \text{误当成了}\ \boxed{\text{"由单个有限层决定（＝cylinder）"}}\ ⚠️✓$$
+$$\qquad \text{复核}：\text{Robin 的裁决 } D(x):=\forall n>5040:\sigma(n)<e^\gamma n\log\log n\ \text{满足前者，}\textbf{不满足后者}$$
+$$\qquad \qquad \text{任取 }N：\text{取 }x,y\text{ 在 }n\le N\text{ 上相同，}y\text{ 在大 }n\text{ 处违反 Robin} \Longrightarrow D(x)\ne D(y) \Longrightarrow \textbf{Robin 是 NC} ✓✓✓$$
+$$\Longrightarrow\ \boxed{\text{§1 的结论"原目标按字面为假"}\ \textbf{不成立}} ✗✓\quad(\text{修正后：原目标}\ \textbf{未被反证}，\text{其地位 ＝ 与"证书屏障"}\ \textbf{等价}，\text{见 }`V274`\ \text{§2–§3}) ✓$$
+$$\qquad ⚠️\ \textbf{§2 的"判据／证书"之分不受影响}（不依赖 §1 的分类）✓；\text{§3–§10 的结论亦不受影响} ✓$$
+$$\qquad ⚠️\ \text{自查登记}\ \textbf{第 12 次}；\text{错误形态 ＝ }\boxed{\text{把"可有限反驳（}\Pi_1\ \text{嵌套）"误当作"由有限层决定（cylinder）"}} ✓$$
