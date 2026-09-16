@@ -403,3 +403,9 @@ theorem t_cos_integral {a x y : ℝ} (ha : a ≠ 0) :
   rw [intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint]
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316
