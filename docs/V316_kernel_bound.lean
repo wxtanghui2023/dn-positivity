@@ -269,3 +269,22 @@ namespace Zeta23.ThmD.V316
 open MeasureTheory
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`Q_pos`**：`Q_λ(v) = ‖v‖² + λ²B(v) ≥ (1/2)‖v‖²`（`0 < λ ≤ 1`）。
+V316 中**第一次正式引入 `λ ≤ 1`**。显式两段链，不用 `linarith/nlinarith` 处理混合乘积：
+`(1/2)N ≤ N − (1/2)λ²N ≤ N + λ²B`，其中 `N = ∫_I v²`，`B = ∬|s−t|v(s)v(t)`。 -/
+theorem Q_pos_alg {N B lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1) (hN : 0 ≤ N)
+    (hb : |B| ≤ (1 / 2) * N) : (1 / 2) * N ≤ N + lam ^ 2 * B := by
+  have hb1 : -(1 / 2) * N ≤ B := by linarith [(abs_le.mp hb).1]
+  have hlam0 : 0 ≤ lam ^ 2 := sq_nonneg lam
+  have key : lam ^ 2 * (-(1 / 2) * N) ≤ lam ^ 2 * B :=
+    mul_le_mul_of_nonneg_left hb1 hlam0
+  have hlam1 : lam ^ 2 ≤ 1 := by nlinarith [h0, h1]
+  have hNlam : lam ^ 2 * N ≤ 1 * N := mul_le_mul_of_nonneg_right hlam1 hN
+  nlinarith [key, hNlam, hN, hlam0]
+
+end Zeta23.ThmD.V316
