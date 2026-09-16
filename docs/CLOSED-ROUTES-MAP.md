@@ -2660,6 +2660,20 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **净产出**：① $G=1-R_{\rm off}$（$G\le1$ 与论文"比例法达不到 1"**独立互证**）② 障碍型 B ③ 判死刀砍证书类 ④ 逃逸目标 ＝ 非 Toeplitz 需另找无条件控制源 ✓
 **下一步**：(一) 核验经典分裂（读 Montgomery 1973＋论文 §5）；(二) 读 `Ceiling.lean` 全文对照假设；(三) 攻第一代非 Toeplitz 候选 ✓
 
+### F.5fb ⭐⭐⭐⭐⭐ **V297：$G=1-R_{\rm off}$ 链条逐项锁死 —— 断点 1（$R=1/F(\lambda_1)$）；修正后存活；焊接成功**（`V297` ✓ 2026-09-16 13:44）
+
+委托（唐先生 13:18）：第 1 步**先于**任何非 Toeplitz 构造；目标是核验"$G=1-R_{\rm off}$"是否为**无损重参数化**；四项硬检查 A–D；**命令：任何换元非恒等即标断点，不得补假设保 V296** ✓
+
+**依据（现场读源）**：`PrimeSideTemp.lean`（[thm:traces] 逐字）｜`Concrete.lean`｜`RankTrace.lean`｜`ChallengeDeps.lean`（`cMT` 闭式）✓
+
+**§2 ⚠️ 断点 1（检查 A）**：V296 写 $\|\widetilde G\|^2_{\rm HS}=(R+o(1))N$ **不精确**；论文承载语句是**比值** $$\frac{(\operatorname{tr}\widetilde G)^2}{\operatorname{tr}\widetilde G^2}=F(\lambda_1)N(T,2T)(1+O(\mathcal E_T))$$ ⟹ 修正 $R:=1/F(\lambda_1)$，$\hat G=\widetilde G/(aL)$ ⟹ 单链 $=\big(2-\frac1F\big)N$ ⟹ **恒等式存活** ✓✓✓
+**§3 检查 B**：trace 侧**带重数**（无需简单零假设）；$$\boxed{R_{\rm diag}=1\ \text{＝归一化恒等式，非经典读数}}$$；$F=$ 有效秩$/N\le1$（Cauchy–Schwarz）⟹ $$G\to1\iff F\to1\iff \textbf{有效秩}\to N$$ ✓✓✓
+**§4 检查 C**：$\alpha=\log(n/m)/L\in[0,\lambda_1]\subseteq[0,1]$ ⟹ 恰落 Montgomery 无条件区 ⟹ 通过 ✓；⚠️ 定量等同未做
+**§5 检查 D**：$$\boxed{\text{焊接：rank--trace 损失}\equiv\frac1F-1\equiv R_{\rm off}}$$（$F=\frac34\iff R_{\rm off}=\frac13$；MT 闭式核验）✓✓✓
+**§6 护栏**：**不得**推出 $\forall$ 核 $R_{\rm off}>0$；正确形式 ＝ "AF／Toeplitz／带宽一证书 ⟹ 不可消除质量" ✓✓
+**§7 接口审计登记**：读 `Ceiling.lean` 全文找首次 $\{\log(n/m)\}$ 处 ⟹ **Certificate ceiling theorem**；$$\mathcal E:=\{K:\text{非证书型}\wedge\text{仍有可证明的无条件控制}\}$$ ✓
+**§8 边界**：断点 1 已入 V296 勘误；未锁死点待 §5 求值；$F\le1$ 未在 Lean 核对；不声称一般核 $R_{\rm off}>0$；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

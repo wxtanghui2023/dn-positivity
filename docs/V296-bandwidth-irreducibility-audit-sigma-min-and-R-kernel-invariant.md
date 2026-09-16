@@ -90,3 +90,13 @@ $$\boxed{\textbf{V296 判词}：\text{① }G=1-R_{\rm off}（\textbf{问题被�
   (二) 读 `Ceiling.lean` **全文**，把天花板的假设**逐条对照** $\sigma_{\min}$，把 §3 的"缺口"变成**精确的定理**（"天花板不适用于非 Toeplitz"）✓
   (三) 若 (二) 成立 ⟹ 攻**非 Toeplitz 核的第一代候选**（＝寻找替代的无条件控制源）✓
 ```
+
+---
+
+## §7 ⚠️ 【勘误 T10】（2026-09-16 13:18 起，唐先生命令"标断点、不补假设"；见 `V297`）
+
+$$\text{本档 §1 原写} ✗：\ \|\widetilde G\|^{2}_{\rm HS}=\big(R(\psi)+o(1)\big)N ⚠️\ \textbf{不精确}（隐含}\ \widetilde G\ \text{已归一化使}\ \operatorname{tr}=N）✓$$
+$$\qquad \text{论文 §5 实际承载语句是}\ \textbf{比值}\（`PrimeSideTemp.lean` 逐字）：\ \frac{(\operatorname{tr}\widetilde G)^{2}}{\operatorname{tr}\widetilde G^{2}}=F(\lambda_1)N(T,2T)\big(1+O(\mathcal E_T)\big) ✓✓$$
+$$\boxed{\text{更正：}R：＝\frac1{F(\lambda_1)}\ \text{（非独立窗口泛函）；归一化}\ \hat G：＝\widetilde G/(aL)\Rightarrow\operatorname{tr}\hat G=N,\ \operatorname{tr}\hat G^{2}=\frac N{F(\lambda_1)}} ✓✓✓$$
+$$\qquad ⟹ \text{单链给出}\ \big(2-\frac1{F(\lambda_1)}\big)N ⟹ \textbf{本档核心恒等式} G=1-R_{\rm off}\ \textbf{在修正后存活}（R_{\rm off}:=\frac1F-1）✓✓$$
+$$\qquad ⚠️\ \text{本档 §1 的} R_{\rm diag}=1／R_{\rm off}=1/3\ \text{的"经典读数"标签亦更正为：}\textbf{归一化恒等式}（$R_{\rm diag}=1$）＋ \text{闭式读数}（$F=\frac34\Rightarrow R_{\rm off}=\frac13$）✓$$
