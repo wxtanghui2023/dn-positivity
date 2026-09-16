@@ -192,3 +192,17 @@ $$\boxed{\text{正确分解}：\mathrm{O1\!-\!1}\iff\big[\neg\mathrm{GRH}_{\math
 $$\qquad \text{机制}：\mathrm{GRH}_{\mathcal C}\ \text{真} \Longrightarrow \mathcal R=\mathcal C \Longrightarrow \pi_S(\mathcal R)=X_S \Longrightarrow A_S=X_S \Longrightarrow \textbf{撞 P1（真子集）} ⟹ \mathrm{O1\!-\!1}\ \text{假} ✓$$
 $$\qquad \qquad \text{即：}\mathrm{O1\!-\!1}\ \text{被锁定在}\ \neg\mathrm{GRH}_{\mathcal C}\ \text{的世界里}（\text{＝}\ `V281`\ \text{§5"空虚真"的排除代价}）✓$$
 【定位改写】$\mathrm{O1\!-\!1}$ **不是**通往"证明 RH／GRH"的路（与 $\mathrm{GRH}_{\mathcal C}$ 互斥）；应改写为"**若类内存在可证 off-line 成员且分离可有限描述，则得机制**" ✓
+
+---
+
+## 12. O1-1 **最终状态归档**（V289–V290；结构性封口，非全局数学封口）
+
+$$\boxed{\mathrm{O1\!-\!1}\ ＝\ \big[\text{合法类内 off-line 锚点}\big]\ +\ \big[\text{有限纤维分离}\big]} ✓✓$$
+$$\qquad \text{两墙（分别锁定）}：\big[\text{off-line 锚点}\big]\longleftrightarrow\textbf{GRH 反例问题};\qquad \big[\text{有限纤维分离}\big]\longleftrightarrow\textbf{on-line 伪装排除问题} ✓✓$$
+$$\qquad \text{两难的机制（`V289`）}：\text{有锚点的类}\ \mathrm{FS-}\ \text{成立（认证死）};\qquad \text{认证有可能的类}\ \textbf{无锚点} ✓✓$$
+$$\boxed{\text{定性}：\textbf{结构性封口，非全局数学封口}}$$
+$$\qquad \textbf{允许}：\text{"现有两类锚定路线均已被精确封锁"};\ \text{"锚定策略存在结构性二难"} ✓$$
+$$\qquad \textbf{禁止}：\text{"O1-1 不存在"} ✗;\ \text{"已全局数学封口"} ✗;\ \text{"}\mathrm{GRH}_{\mathcal C}\ \text{已证"} ✗ ✓$$
+$$\qquad \text{剩余出口}：\text{唯一}\ ＝\ `V287`\ \text{的靶（合法算术类内可证 off-line 成员）},\ \text{且}\ \textbf{该出口本身已触及 GRH} ✓$$
+$$\qquad \text{且}：\text{继续在 O1-1 内换}\ S／\sim_S／\text{有限系数}\ \textbf{会重新落入 `V289` 两难} ✓$$
+$$\Longrightarrow \boxed{\text{O1-1}\ \textbf{完成了它作为搜索工具的使命}} —— \text{把"找机制"精确化为两堵已知墙的合取} ✓✓$$
