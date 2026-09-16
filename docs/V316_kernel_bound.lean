@@ -860,3 +860,48 @@ theorem nested_eq_prod_integral {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (la
   exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun p => by ring))
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-3 swap**：`∬ |s−t| h(s) v_λ(t) = Bfun(v_λ, h)`。
+复用 ③″ 已审计的 swap 机制（`integral_prod_swap` ＋ `abs_sub_comm`），**不重新包装 Fubini**。 -/
+theorem prod_integral_eq_Bfun {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    (∫ p, |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2)
+        ∂(Irest.prod Irest))
+      = Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t)) h := by
+  have hpt : ∀ p : ℝ × ℝ,
+      |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2)
+        = (fun q : ℝ × ℝ => |q.1 - q.2| * Real.cos (Real.sqrt 2 * lam * q.1) * h q.2) p.swap := by
+    intro p
+    show |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2)
+        = |p.2 - p.1| * Real.cos (Real.sqrt 2 * lam * p.2) * h p.1
+    rw [abs_sub_comm]
+    ring
+  rw [MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall hpt)]
+  rw [MeasureTheory.integral_prod_swap (μ := Irest) (ν := Irest)
+      (f := fun q : ℝ × ℝ => |q.1 - q.2| * Real.cos (Real.sqrt 2 * lam * q.1) * h q.2)]
+  unfold Bfun
+  rfl
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-4 第一块**：把逐点 E–L（`vStar_EL`）升成 `Irest` 上的 a.e. 形式
+（内层区间积分经 ④-2a 的桥换成 `Irest` 积分）。 -/
+theorem vStar_EL_ae (lam : ℝ) (h0 : 0 < lam) :
+    ∀ᵐ s ∂Irest,
+      Real.cos (Real.sqrt 2 * lam * s)
+        + lam ^ 2 * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest)
+      = vStarELConst lam := by
+  filter_upwards [ae_restrict_mem (μ := volume) measurableSet_Icc] with s hs
+  have h1 := vStar_EL (lam := lam) (s := s) h0 hs.1 hs.2
+  rw [← intervalIntegral_eq_integral_Irest
+    (f := fun t : ℝ => |s - t| * Real.cos (Real.sqrt 2 * lam * t))]
+  exact h1
+
+end Zeta23.ThmD.V316
