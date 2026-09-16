@@ -2748,6 +2748,16 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§4 推论 3**：$$\tan\vartheta=\frac{c}{\sqrt2-c\vartheta}$$ ＋ 自洽核验（$c=\frac{2\sqrt2}\pi\iff\vartheta=\frac\pi2$）✓✓
 **§5 边界**：前提 $C(\lambda)=c^{*}_\lambda$ 依赖 `CCLM17 Cor.14`（引用未复核）⟹ 定理**条件性**；域限 $\vartheta<\frac\pi2$；限本窗族；未形式化到 Lean；未用 RH ✓
 
+### F.5fj ⭐⭐⭐⭐⭐ **V305：(A) A1/A2/A3 拆分 —— A2 完成（$\sqrt2$ 抵消）；A3 归约为 resolvent＋ODE（未证，引用保留）**（`V305` ✓ 2026-09-16 13:48）
+
+**纠正采纳**：形式化 $f'>0$ **不消除** `CCLM17 Cor.14` 依赖 ⟹ A 目标 ＝ 拆"最优性定理＋单调性定理"✓
+
+**§2 A2 ✓**：$$\frac{dc^{*}}{d\lambda}=\frac{1}{(1+\frac{\lambda}{\sqrt2}\tan\frac{\lambda}{\sqrt2})^2}>0$$（$\sqrt2$ 抵消已核验）✓✓✓
+**§3 A3（归约完成）**：$$\boxed{(I+\lambda K_\lambda)v=\mu\mathbf 1};\qquad \boxed{C(\lambda)=\lambda\langle\mathbf 1,(I+\lambda K_\lambda)^{-1}\mathbf 1\rangle}$$；内生化三步：核识别 → ODE（**$\tan$ 为指纹**）→ **锥约束 $v\ge0$** ⟹ $$\boxed{\text{A3 未证}\Rightarrow\text{引用保留}}$$ ✓✓✓
+**§4 两墙表（条件性）**：$\lambda\le1\Rightarrow G\le0.67250$；$1<\lambda<\frac\pi{\sqrt2}\Rightarrow G<0.889280$；$$G=1\ \text{本族不可达}$$ ✓✓✓
+**§5 验收**：A1 ✓／A2 ✓／**A3 ✗** ⟹ **不冒充自足** ✓✓✓
+**§6 边界**：$|x-y|$ 求逆为经典引用；锥约束为新注意点；两墙表条件性；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
