@@ -35,6 +35,16 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 | **A-4** | **dn-positivity 定稿** | Zenodo **DOI 10.5281/zenodo.22044629** (v2.0.1) | $D_n>0$ 无条件正性；全常数解析化；作者 Hui Tang；ORCID 0009-0003-5745-4820 | 已发布 ✓ |
 | **A-5** | **GitHub 公开仓库** | `wxtanghui2023/dn-positivity` (public) | A-4 的代码／论文 | 已发布 ✓ |
 | **A-6** | **投稿包（备用）** | `submission/ANNALS-*`｜`release/paper-dn-positivity-{CN,EN}.*` | Annals 方案 A/B ＋检查清单；arXiv tex | 就绪未投 ✓ |
+| **A-7** | **两条转换律 ＋ 突破点判据** | `papers/conversion-laws/main.md` | 「Two conversion laws for criteria equivalent to RH, and a criterion for where a breakthrough can occur」（Hui Tang, draft v1, 2026-09-12）。比较**六个** RH 等价判据的可达参数范围，观察到两条**转换律**：**T² 律**（系数型判据：可达指标 ＝ 已验证高度的平方）与 **log 律**（矩／阶／相位型：有效自由度 ~ log）；由此给出**突破点的可操作判据**：探针的"指标↔高度"对应 $h(n)$ 若慢于 $\sqrt n$ 增长，则可达范围优于目前的 T²；理想探针 $h(n)$ 应尽量接近常数。⚠️ 两律均为**跨方向经验观察，机制未证**；不主张 RH 真值 | 草稿 v1 ✓ |
+| **A-8** | **GRH 配正性判据 ＋ 八模验证 ＋ GRH→哥德巴赫链** | `papers/grh-criterion/main.md` | 「A Pair-Positivity Criterion for the GRH, with Eight-Modulus Verification and the GRH→Goldbach Chain」（Hui Tang, draft v1, 2026-09-12）。**轨道恒等式** $Q_\chi-Q'_{RH,\chi}=\sum_{\rm orbits}m_\rho P_{\gamma_\rho}(\delta_\rho)$，$P_\gamma(\delta)=\delta^2M_2/(2U^2D_+D_-)$ 系数**全正**只要 $\gamma>1/\sqrt5$；而每个 L-零点有 $\gamma\ge6.02>1/\sqrt5$ ⟹ $Q_\chi=Q'_{RH,\chi}\iff$ 全零点在 $\Re s=\frac12$。**判据非证明**（等式未证，与 GRH 同难）。数值：模 3,4,5,7,8,9,11,13，最大相对偏差 $1.4\times10^{-10}$，$P_\gamma$ 按 $\gamma^{-6}$ 衰减。**先前一次无条件证明尝试记录为 broken，不再复活** | 草稿 v1 ✓ |
+| **A-9** | **九条转换判据观察（N1–N9）** | `papers/notes/main.md` | 「Notes on conversion criteria and their obstructions」——九条自足短观察（结构恒等式／数值标定律／解释性二分／关于某具体路线的负面结果）。**明示：无一条是朝 RH 证明的进展**；每条或为经典事实的小实例核验，或为对已测路线的负面陈述；附档案诚实规则（**not found ≠ does not exist**）与四标签（核验／引用／推导／猜想） | 草稿 v1 ✓ |
+
+> **⭐ A-2 的 Droll 关系（唐先生指定重点）**：`papers/brown-thm2-classical/` **正是 Droll 相关论文** ——
+> $$\textbf{我们的 Theorem 1}\ 	extbf{强于}\ 	ext{Droll 已发表内容}：\text{[Dr12] Conjecture 1.7.10}\ 	extbf{限制}\ k\le2T^2\log T，\ 	ext{而我们覆盖}\ \textbf{所有}\ k\ge2,\ H>e✓✓$$
+> $$\text{且}\ \texttt{docs/N2-chain-confirmed.md}：\ 	ext{Droll 原文明确}\ \textbf{Conjecture 3.2.7 就是 Brown Lemma 5 的修复}✓$$
+> $$\text{取证档：}\ \texttt{docs/P8-DROLL-verbatim-reading.md}（逐字读）✓$$
+> **诚实缺口（README §7 自述）**：① near 积分的**闭式界**；② **显式局部计数**；③ 原文被 paywall（未取得 Brown 2005 原文）✓
+> **数值可复现**：每个数值声明均由归档脚本产生（`scripts/BL7_*`｜`BL10_*`｜`BL11_*`｜`BL14_*`｜`NB1_*`），按 `PROTOCOL-CODE-ARCHIVE.md` R1–R7，**无临时代码支撑的结论** ✓
 
 ---
 
@@ -118,6 +128,9 @@ $$	extbf{过程性判据}：	ext{封闭某条路线／给出负面判据／记�
 | **A-3** 共享恒等式 | 随 A-1/A-2 附属✓ | 非独立 |
 | **A-4/A-5** Zenodo／GitHub | **已发布轨**✓ | 定稿＋公开 |
 | **A-6** 投稿包 | **待决**（等 A-1/A-2 定稿策略） | 非新成果 |
+| **A-7** 两条转换律 | **过程性（但含可操作判据）** | 跨方向经验观察，机制未证；★ 但"$h(n)$ 慢于 $\sqrt n$ ⟹ 优于 T²"是**可操作的攻墙判据** |
+| **A-8** GRH 配正性判据 | **过程性（判据类）** | 与 GRH 同难的等价重述；八模验证是有价值的具体核验；broken 纪录保留 |
+| **A-9** 九条观察 | **过程性** | 明示非进展；负面结果与经典事实核验 |
 | **B-1** V316 60 lemmas | **过程性**（形式化资产） | 工具，非猜想级结论 |
 | **B-2** Zeta23 三层审计 | **过程性** | 审计 |
 | **C-1** $F_3$ branch-SHARP | **过程性**（可升级为技术注记） | 关于 BC 论文的具体事实；★ 若与 C-2/C-3 合并，可成一篇针对该论文的技术注记 |
@@ -141,4 +154,4 @@ $$\text{(3) 引用时}\ \textbf{引本表 ID}（\text{如 "见 C-2"}）✓$$
 $$\text{(4) 与}\ \texttt{DIRECTION-LOOP-STOP-verdict-and-assets.md}\ \text{（09-11）}\ \text{并存：后者为当时的 A1–A5 快照，本表为}\ \textbf{统一总表}✓$$
 
 ---
-*建档：2026-09-16 23:30｜修正：2026-09-16 23:36（双轨定位＋发表轨判定）｜依据：唐先生 23:28 ＋ 23:33 指令*
+*建档：2026-09-16 23:30｜修正：23:36（双轨＋发表轨）／23:46（补 A-7/A-8/A-9 ＋ A-2 的 Droll 关系）｜依据：唐先生 23:28／23:33／23:45 指令*
