@@ -227,3 +227,48 @@ theorem schur_L2 {v : ℝ → ℝ}
     _ ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := hleft
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`kernel_bound`**：`|B(v)| ≤ (1/2)∫_I v²`，其中 `B(v) = ∬ |s−t| v(s) v(t)`。
+依赖链**极短**：积分三角不等式 → 点态绝对值归一 → `schur_L2`。
+（不重新触碰 `kernel_mass` / Tonelli / `kernel_sq_swap` —— 它们已封装进 `schur_L2`。） -/
+theorem kernel_bound {v : ℝ → ℝ}
+    (hmain : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2) (Irest.prod Irest))
+    (habs : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * |v p.1| * |v p.2|) (Irest.prod Irest))
+    (h2 : Integrable (fun p : ℝ × ℝ => (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2)) (Irest.prod Irest))
+    (hA : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 ^ 2) (Irest.prod Irest))
+    (hB : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.2 ^ 2) (Irest.prod Irest))
+    (hF : IntervalIntegrable (fun s => v s ^ 2 * (∫ t in Icc', |s - t|)) volume
+      (-(1 / 2 : ℝ)) (1 / 2))
+    (hG : IntervalIntegrable (fun s => (1 / 2) * v s ^ 2) volume (-(1 / 2 : ℝ)) (1 / 2)) :
+    |∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := by
+  -- 第一段：积分三角不等式（Bochner 版，实数上即 |∫f| ≤ ∫|f|）
+  have h1 : |∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)|
+      ≤ ∫ p, |(|p.1 - p.2| * v p.1 * v p.2)| ∂(Irest.prod Irest) := by
+    simpa only [Real.norm_eq_abs] using
+      norm_integral_le_integral_norm (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2)
+  -- 点态绝对值归一（基础 abs 引理，**不用 AM–GM**）
+  have h2' : ∫ p, |(|p.1 - p.2| * v p.1 * v p.2)| ∂(Irest.prod Irest)
+      = ∫ p, |p.1 - p.2| * |v p.1| * |v p.2| ∂(Irest.prod Irest) := by
+    refine MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall fun p => ?_)
+    simp only [abs_mul, abs_abs]
+  -- 第二段：直接消费 schur_L2
+  calc |∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)|
+      ≤ ∫ p, |(|p.1 - p.2| * v p.1 * v p.2)| ∂(Irest.prod Irest) := h1
+    _ = ∫ p, |p.1 - p.2| * |v p.1| * |v p.2| ∂(Irest.prod Irest) := h2'
+    _ ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2 := schur_L2 habs h2 hA hB hF hG
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`Q_pos`**：`Q_λ(v) = ‖v‖² + λ²B(v) ≥ (1/2)‖v‖²`（`0 < λ ≤ 1`）。
+这是 V316 中**第一次正式引入 `λ ≤ 1`**；`‖v‖² = ∫_I v²`，`B(v) = ∬|s−t|v(s)v(t)`。
+依赖：`kernel_bound`（`|B| ≤ ½‖v‖²`）—— 不再触碰任何积分估计。 -/
+end Zeta23.ThmD.V316

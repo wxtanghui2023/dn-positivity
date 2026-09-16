@@ -1,0 +1,29 @@
+/- V316 Q_pos 尝试稿（未通过编译：末尾 nlinarith 关不掉乘积归一化）
+   依赖：kernel_bound（已通过 12 条）。下一步建议：改用显式 add_le_add / 逐项链，不用自动化策略。 -/
+
+theorem Q_pos {v : ℝ → ℝ} {lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hN : 0 ≤ ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+    (hb : |∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) :
+    (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2
+      ≤ ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2
+        + lam ^ 2 * ∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest) := by
+  obtain ⟨hb1, hb2⟩ := abs_le.mp hb
+  have hb1' : -(1 / 2) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+      ≤ ∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest) := by linarith [hb1]
+  have key : lam ^ 2 * (-(1 / 2) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2))
+      ≤ lam ^ 2 * ∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest) :=
+    mul_le_mul_of_nonneg_left hb1' (sq_nonneg lam)
+  have h1m : 0 ≤ 1 - lam ^ 2 := by nlinarith [h0, h1]
+  have hmono : (1 / 2) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+      ≤ (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) * (1 - lam ^ 2 / 2) := by
+    have hp : 0 ≤ (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) * (1 - lam ^ 2) :=
+      mul_nonneg hN h1m
+    have hrw : (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) * (1 - lam ^ 2 / 2)
+        = (1 / 2) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+          + (1 / 2) * ((∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) * (1 - lam ^ 2)) := by
+      ring
+    rw [hrw]
+    linarith [hp]
+  nlinarith [key, hmono]
+
