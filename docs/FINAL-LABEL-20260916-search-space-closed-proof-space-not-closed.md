@@ -40,3 +40,16 @@ $$\qquad\textbf{理由}：\text{E3--E7 内部的任何"小变形"}\ \text{大概
 $$\text{① "SEARCH-SPACE CLOSED"}\ \textbf{仅指} \text{当前枚举框架与已审计机制空间}，\ \textbf{非} \text{"RH 不存在新机制"}；$$
 $$\text{② 枚举}\ \textbf{非完备分类}（\text{13 项为定义决策，可修订）}；\quad\text{③ 全部档案引用}\ \textbf{未逐行重验}；$$
 $$\text{④ }\textbf{未用 RH}；零数值；\ \text{未跑 Lean}。}$$
+
+---
+
+## 【方向纠正·附注】（2026-09-16 19:28，唐先生）
+$$\textbf{唐先生}：\ \boxed{\text{"我们是来破墙，而不是探索 NO-GO"}}$$
+$$\textbf{含义}：\ \text{本档的}\ \text{"SEARCH-SPACE CLOSED"}\ \textbf{不得} \text{被读作终局}；\ \text{负空间测绘}\ \textbf{只是工具}，\ \text{用途是}\ \textbf{不再重复投人}，\ \text{而非宣告不可为}✓$$
+$$\textbf{今天的产出应重新记作}\ \textbf{攻击资产}：$$
+$$\qquad\text{(a) 60 条 Lean 声明（变分层机器：E--L／唯一极小／coercivity）——}\textbf{可复用}；$$
+$$\qquad\text{(b) }C^\star\ \text{天花板＋显式常数}\ 0.672501\ ——\ \textbf{可瞄准的量化靶}；$$
+$$\qquad\text{(c) "三副面孔一堵墙"}\ ——\ \text{说明}\ \textbf{只打一堵墙}（\text{省预算}）；$$
+$$\qquad\text{(d) 负空间测绘}\ ——\ \textbf{不再重复投入} \text{（工具，非结论）}.$$
+$$\textbf{墙的正面表述（可攻靶）}：\ \lambda>1\ (=\ \textbf{无条件支撑}>1)\ \text{＝把}\ \textbf{大值／均值估计的无条件有效范围} \text{推过当前阈值}$$
+$$\qquad\text{且}\ \textbf{该墙会移动}：\ \text{GM 通过改进 Dirichlet 多项式大值估计改进了密度指数} \Longrightarrow \text{墙＝}\textbf{前沿}，\ \text{非死墙}✓$$
