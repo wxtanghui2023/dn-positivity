@@ -1015,3 +1015,9 @@ theorem sq_diff_Irest {u : ℝ → ℝ} (lam : ℝ)
   exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun s => by ring))
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316
