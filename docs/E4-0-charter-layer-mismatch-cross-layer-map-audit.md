@@ -54,3 +54,32 @@ $$\text{③ }\textbf{未用 RH}；零数值；\text{未跑 Lean}。}$$
 $$\text{(i) 钉住关键逻辑点：}\text{层级改变}\ \ne\ \text{换对象／量／关系；}\quad\text{(ii) 重新定向：}\text{从"新载体"转向"}\textbf{新的映射关系（对应／定位机制）}"；$$
 $$\text{(iii) E4-0 审计设定（}\mathscr A\xrightarrow{\Phi}\mathscr S_{\infty}\ \text{＋六类}\ \Phi\ \text{逐一追问）；}$$
 $$\text{(iv) ⭐ 决定性检查：}\textbf{representation}\ \ne\ \textbf{localization}；\quad\text{(v) 两种结局的预先登记。}$$
+
+---
+
+## 9. 【补充登记 2026-09-16 17:49】开工顺序与"首份产物"规格（唐先生指定）
+
+### 9.1 核心待答问题（保持原样，不提前给答案）
+$$\boxed{\mathscr A\xrightarrow{\ \Phi\ }\mathscr S_\infty\quad\text{究竟只有 representation，还是已经包含 localization？}}$$
+$$\textbf{且}\ \text{localization}\ \textbf{必须被数学化}，\text{不得当作漂亮的新名词使用（否则一开工即落回}\ \text{新对象}\to\text{新性质}\to\text{新关系}\to\text{旧结构}）$$
+
+### 9.2 三步骤严格顺序（三步不可并、不可跳）
+$$\textbf{第一步：把"定位"写成可检验命题（先定义，不先提机制）}$$
+$$\qquad\text{须区分}\quad a\mapsto F_a(t)\qquad\text{与}\qquad a\in\mathscr A_{\rm adm}\Longrightarrow\operatorname{supp/spectrum}(F_a)\subseteq\Omega_{\rm forced}$$
+$$\qquad\Longrightarrow\ \textbf{只有第二种} \text{才有资格承担 RH 桥接任务}$$
+$$\textbf{第二步：逐项审计六类已有}\ \Phi\（\text{重点不是证其"存在"，而是检查是否已蕴含}）$$
+$$\qquad\boxed{\text{arithmetic admissibility}\Longrightarrow\text{restriction on spectral location}}$$
+$$\qquad\text{若某一类}\ \textbf{已经做到}\ \Longrightarrow\ \text{E4-0 结论＝}\textbf{"缺口不在跨层映射本身"}，\text{不能再从这里造新东西}；$$
+$$\qquad\text{若六类}\ \textbf{全部只能}\ a\mapsto F_a(t)\ \text{而不能做到任何非平凡的谱位置约束} \Longrightarrow\ \text{得到干净缺口}：\boxed{\text{representation}\not\Rightarrow\text{localization}}$$
+$$\textbf{第三步：才问缺失结构是什么（由前两步产生的缺口反推，不得先宣布候选）}$$
+
+### 9.3 明确禁止（本阶段）
+$$\text{① }\textbf{不得}\ \text{提前给}\ E4\text{-}1／E4\text{-}2；\quad\text{② }\textbf{不得}\ \text{枚举"可能的 localization 机制"；}$$
+$$\text{③ }\textbf{不得}\ \text{把 localization／transport／realization 任一宣布为候选}（\text{须先由第一、二步产生}\ \textbf{不可由六类映射承担的数学缺口}）$$
+
+### 9.4 下一次开工的**首份实质产物规格**
+$$\boxed{\text{六类跨层映射的"}\textbf{表示能力 vs 谱定位能力}\text{"逐项硬审计}}\qquad\textbf{而不是}\ \text{候选机制清单}$$
+$$\text{（六类＝Euler/Mellin、Fourier/Poisson、explicit formula、trace formula、functional equation、representation-theoretic realization）}$$
+
+### 9.5 当前状态
+$$\boxed{\text{V328 冻结；E4-0 仅作为下一次开工入口}}$$
