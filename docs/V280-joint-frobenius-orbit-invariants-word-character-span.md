@@ -101,3 +101,13 @@ $$\boxed{\textbf{V280 判词}：\text{① 轨道不变量}\ ＝\ \text{词-字�
 ④ ⭐ **ALIVE\* 由直接计算纳入已审计墙**（未用一般性命题，符合唐先生本轮指令）✓
 ⑤ ⭐ **硬纪律与反向纪律双向执行**：候选全具体化；并已确认"未出现 character 分解挡不住的不变量"✓
 ```
+
+---
+
+## §7 ⚠️ 【勘误 T10】（唐先生 2026-09-16 11:23 更正；见 `V281` §0）
+
+$$\text{本档 §2(ii) 原写} ✗：\ k\ge2\ \Longrightarrow\ \text{"恰是}\ k\text{-点 Chebotarev 相关量"}\ \Longrightarrow\ \text{"}\ `V258`\ \text{接管"} ⚠️$$
+$$\qquad \textbf{过强之处}：\text{"属 Chebotarev 型数据"}\ \ne\ \text{"已被既有相关预算墙（`V102`／`V162`／`V217b`）完全覆盖"} ✗✓$$
+$$\qquad \qquad \text{尤其：}\text{固定有限 Galois 表示时，}\textbf{词的代数关系} \text{可能携带}\ \textbf{非交换的相对位置}，\ \text{而非单纯独立素数统计} ✓✓$$
+$$\Longrightarrow \boxed{\text{降级为}：\textbf{V280-A：不变量分类成立};\qquad \text{"}\ `V258`\ \text{接管"}\ \textbf{尚需额外证明}} ✓✓$$
+$$\qquad ⚠️\ \text{本勘误}\ \textbf{不影响} \text{§1（V280-A 本身）};\ \textbf{只降级 §2(ii) 的判定强度} ✓$$
