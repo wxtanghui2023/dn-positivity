@@ -2793,6 +2793,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 判词**：A4 原论证 **撤回**；剩余墙 ＝ $$\mathcal A_{\rm ThmD}\stackrel?=\mathcal A_{\rm variational}$$ ✓✓
 **§6 边界**：纸面；谱根值为引用；奇子空间补充须复核；未用 RH；零数值 ✓
 
+### F.5fo ⭐⭐⭐⭐⭐ **V310：(a′-1) §4 原文恢复 —— 判词重构 STRICT SUPERSET ＋ 候选归属性；三类量词/域差异**（`V310` ✓ 2026-09-16 14:14）
+
+**§1 原文**：$$\texttt{WindowProfile}：\text{even}\wedge C^3\wedge \text{pos}\wedge\le1$$；producer 前提含 $\texttt{P.lam}<1$、`ThmD.AdmWindow`（带 $c$）、$\tfrac12\le\texttt{bv}$；`CertFlat` $0.85838$／`CertQuartic` $0.86864$ ✓
+**§2 量词/域差异**：(A) $\lambda<1$ **严格**（Cert 避开 $\lambda=1$）；(B) $bv\ge\tfrac12$ 硬条件；(C) `ThmD.AdmWindow` 带常数 $c$ ✓✓✓
+**§3 候选**：$$\tilde v_\lambda:=\cos(2wx)$$ ⟹ **四条件全满足**（原 $w/\sin w$ 违反 `le_one`；重标因比值尺度不变而无损）✓✓✓
+**§4 判词重构**：$$\mathcal A_{\rm var}\ \text{STRICT SUPERSET}\ \mathcal A_{\rm ThmD}\Rightarrow \text{正确命题＝}\tilde v_\lambda\in\mathcal A_{\rm ThmD}?$$ ✓✓✓
+**§5 精确 GAP**：P1（读 `ThmD.AdmWindow`）／P2（核 $bv$）／P3（域 $\lambda<1$）；⚠️ 副产品：ξ′ vs ζ 常数差异 ⟹ V303 §3 统一**降为[待复核]** ✓
+**§6 边界**：直读转述；不声称归属已完成；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
