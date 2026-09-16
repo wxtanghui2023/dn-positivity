@@ -2714,6 +2714,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 **下一步（4b＋4c）**：$$c_{\rm geom}(\sigma)=\sup_{\phi\in\mathcal A_\sigma}c_{\rm geom}(\phi)$$（$\mathcal A_\sigma$ 须含无条件性约束）＋ 反问题 $\sigma(\varepsilon)$；⚠️ **须先证单调性**（"更宽 $\phi$" ⟹ "更大 $c_{\rm geom}$" 不是定理）✓✓
 
+### F.5ff ⭐⭐⭐⭐⭐ **V301：(4b)+(4c) $c_{\rm geom}$ 变分展开 ＋ E–L —— $C_{\rm uncond}=3/4$；定量必要条件 $c>3/4\Rightarrow\lambda>1$；$c\le\sqrt3/2<1$**（`V301` ✓ 2026-09-16 14:24）
+
+**§1 第一输出**：$a=L^{-1}\!\int\phi^2$、$b=L^{-1}\!\int\phi^4$、$$\boxed{\ell_1=l+2\log2-1\ (\text{T-确定})}$$、$$\boxed{1/3=\int_0^1x^2dx\ (\text{几何核})}$$ ⟹ $$\boxed{c^{\rm geom}=\frac{a^2\lambda}{1+\lambda^2/3}+o(1)}$$ ✓✓
+**§2 尺度检查**：$c^{\rm geom}(c\phi)=c^4c^{\rm geom}(\phi)$ ⟹ 必须 $a=1$ ⟹ **$c^{\rm geom}=\frac{\lambda}{1+\lambda^2/3}$ 与 $\phi$ 无关** ✓✓✓
+**§4 $\mathcal A_\sigma$**：$\{(R),(N)\ a=1,(V),(MV)\ \lambda\le1,(E)\ \mathcal E_T\to0\}$ ⟹ 三元 $(c^{\rm geom},\sigma,\lambda)$ ✓✓
+**§5 ⭐⭐⭐⭐ E–L**：$f(\lambda)=\frac{\lambda}{1+\lambda^2/3}$，$$\boxed{\lambda^*=\sqrt3\ (\text{值}\ \sqrt3/2=0.8660)\ \notin(0,1]}$$ ⟹ $$\boxed{C_{\rm uncond}=f(1)=3/4\Rightarrow G=2/3}$$ ✓✓✓
+**§6 判死/判活**：$$f\ \text{严格递增于}\ (0,\sqrt3)\Rightarrow\boxed{c>3/4\iff\lambda>1}$$ ⟹ **定量必要条件：$2/3\to1$ 必破 MV 无条件支持墙** ✓✓✓；$$\boxed{c\le\sqrt3/2<1}$$ ⟹ **结构性天花板**；反解 $\lambda(c)$；$c=0.90$ 无解 ✓；⚠️ 张力：MT 窗 $0.7533>0.75$ ⟹ 窗自由度 ≲0.004 ✓
+**§7 边界**：§1 为[推断]（未与 §5/§6 逐行核对）；"$\lambda\le1$ 无条件域"承 `V300` §4（[推断]）；**路线图属另一机制（ceiling 框架）⟹ 不得混用**；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
