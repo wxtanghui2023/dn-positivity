@@ -504,3 +504,70 @@ namespace Zeta23.ThmD.V316
 open MeasureTheory
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **abs 拆分**：`∫_{−1/2}^{1/2}|s−t|cos(at) = ∫_{−1/2}^{s}(s−t)cos(at) + ∫_s^{1/2}(t−s)cos(at)`。 -/
+theorem KvStar_abs_split {a s : ℝ} (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (a * t)
+      = (∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t))
+        + ∫ t in s..(1 / 2), (t - s) * Real.cos (a * t) := by
+  have h1 : ∫ t in (-(1 / 2 : ℝ))..s, |s - t| * Real.cos (a * t)
+      = ∫ t in (-(1 / 2 : ℝ))..s, (s - t) * Real.cos (a * t) := by
+    refine intervalIntegral.integral_congr fun t ht => ?_
+    rcases ht with ⟨ht1, ht2⟩
+    have hts : t ≤ s := by
+      have h := ht2
+      rwa [max_eq_right hs1] at h
+    rw [abs_of_nonneg (by linarith : (0:ℝ) ≤ s - t)]
+  have h2 : ∫ t in s..(1 / 2), |s - t| * Real.cos (a * t)
+      = ∫ t in s..(1 / 2), (t - s) * Real.cos (a * t) := by
+    refine intervalIntegral.integral_congr fun t ht => ?_
+    rcases ht with ⟨ht1, ht2⟩
+    have hst : s ≤ t := by
+      have h := ht1
+      rwa [min_eq_left hs2] at h
+    rw [abs_of_nonpos (by linarith : s - t ≤ 0)]
+    ring
+  have hf : IntervalIntegrable (fun t : ℝ => |s - t| * Real.cos (a * t)) volume
+      (-(1 / 2 : ℝ)) s :=
+    (by continuity : Continuous fun t : ℝ => |s - t| * Real.cos (a * t)).intervalIntegrable _ _
+  have hg : IntervalIntegrable (fun t : ℝ => |s - t| * Real.cos (a * t)) volume
+      s (1 / 2 : ℝ) :=
+    (by continuity : Continuous fun t : ℝ => |s - t| * Real.cos (a * t)).intervalIntegrable _ _
+  have hadd := intervalIntegral.integral_add_adjacent_intervals
+    (μ := volume) (a := -(1 / 2 : ℝ)) (b := s) (c := (1 / 2 : ℝ))
+    (f := fun t : ℝ => |s - t| * Real.cos (a * t)) hf hg
+  rw [← hadd, h1, h2]
+
+/-- **$a$-层恒等式**：`∫_{−1/2}^{1/2}|s−t|cos(at) = sin(a/2)/a + 2cos(a/2)/a² − 2cos(as)/a²`。 -/
+theorem KvStar_affine_general {a s : ℝ} (ha : a ≠ 0)
+    (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (a * t)
+      = Real.sin (a / 2) / a + 2 * Real.cos (a / 2) / a ^ 2
+        - 2 * Real.cos (a * s) / a ^ 2 := by
+  rw [KvStar_abs_split hs1 hs2, KvStar_left ha, KvStar_right ha]
+  ring
+
+/-- **`KvStar_affine`**：`Kv_λ(s) = C_λ − λ⁻²v_λ(s)`（只证 $C_λ$ 层，不碰 `vStarELConst`）。 -/
+theorem KvStar_affine {lam s : ℝ} (h0 : 0 < lam)
+    (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| * Real.cos (Real.sqrt 2 * lam * t)
+      = vStarAffineConst lam - Real.cos (Real.sqrt 2 * lam * s) / lam ^ 2 := by
+  have hsqrt : Real.sqrt 2 ≠ 0 := by positivity
+  have ha : Real.sqrt 2 * lam ≠ 0 := mul_ne_zero hsqrt (ne_of_gt h0)
+  have ha_sq : (Real.sqrt 2 * lam) ^ 2 = 2 * lam ^ 2 := by
+    rw [mul_pow, Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 2)]
+  have hhalf : (Real.sqrt 2 * lam) / 2 = vtheta lam := by
+    unfold vtheta
+    field_simp
+    nlinarith [Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 2)]
+  rw [KvStar_affine_general ha hs1 hs2]
+  rw [hhalf, ha_sq]
+  unfold vStarAffineConst
+  field_simp [ne_of_gt h0]
+  try ring
+
+end Zeta23.ThmD.V316
