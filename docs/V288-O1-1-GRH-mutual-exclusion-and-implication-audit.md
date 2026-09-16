@@ -96,3 +96,49 @@ $$\qquad ⟹ \text{对唐先生预告的回应}：\textbf{"反向蕴含不成立
 ⑤ ⭐ 附加推论（[结构性]）：O1-1 的可建立性应可**产出具体 off-line 反例** ⟹ 强于"判定 GRH" ✓
 ⑥ ⭐ **定位改写建议**：O1-1 不是通往 RH 证明的路（与 GRH 互斥）；须改写为"若类内有可证 off-line 成员且分离可有限描述，则得机制" ✓
 ```
+
+---
+
+## §9 ✅ **精化（唐先生 2026-09-16 11:53 要求；本档 T10 追加，不回改正文）**
+
+### 9.1 ⭐ **P1 的地位与敏感性分析**（把"互斥"的强度条件钉死）
+
+$$\text{互斥定理的成立}\ \textbf{完全依赖两点}，\text{两者必须同时作为}\ \textbf{O1-1 的内生要求} \text{（而非外加选择）}：$$
+$$\qquad \textbf{(i)}\ X_S：＝\pi_S(\mathcal C)\ \textbf{（取"像"）} \Longrightarrow \pi_S\ \textbf{满射};\qquad \textbf{(ii)}\ \text{(P1)}\ A_S\subsetneq X_S\ \textbf{内生} ✓$$
+$$\text{依据（内生性来源）}：\text{P1 源自}\ `V285`\ \text{§2 五条件之(1)，其动机是}\ \textbf{N12（排除"空虚真"）} ✓✓$$
+$$\boxed{\textbf{敏感性（若任一点放松，互斥即退化）}}：$$
+$$\qquad \text{(α)}\ \text{若}\ X_S\ \textbf{⊋}\ \pi_S(\mathcal C)（\text{取"更大的有限集"）} \Longrightarrow \pi_S\ \text{不必满射} \Longrightarrow \text{可取}\ A_S\supseteq\pi_S(\mathcal C)\ \text{且}\ A_S\subsetneq X_S ⟹ \pi_S^{-1}(A_S)=\mathcal C=\mathcal R ✓$$
+$$\qquad \qquad ⟹ \textbf{此时}\ \mathrm{O1\!-\!1}\ \textbf{不再蕴含}\ \neg\mathrm{GRH}_{\mathcal C} ⟹ \textbf{互斥失效} ✗（\text{本档 §7 边界①的精确化}）✓$$
+$$\qquad \text{(β)}\ \text{若放弃 P1（允许}\ A_S=X_S）⟹ \text{GRH 真时}\ A_S=X_S=\pi_S(\mathcal R)\ \text{可行} ⟹ \mathrm{O1\!-\!1}\ \text{真但}\ \textbf{空虚}（＝`V281` §5／N12）✗$$
+$$\Longrightarrow \boxed{\text{读法}：\textbf{互斥是"排除空虚真"的代价}};\ \text{放弃 P1 则无互斥、也无机制} ✓✓✓$$
+
+### 9.2 ⚠️ **措辞钉死**（不得把 O1-1 与 ¬GRH 写成纯恒等式）
+
+$$\boxed{\mathrm{O1\!-\!1}\iff \mathrm{FiniteSep}_{\rm P1\text{-}P3}}\quad（\textbf{定义级}：\text{右侧即"}\exists S,A_S\ \text{满足 P1–P3"之缩写}）✓$$
+$$\boxed{\mathrm{O1\!-\!1}\Longrightarrow\neg\mathrm{GRH}_{\mathcal C}}\quad（\textbf{定理级}，\text{§2／§3 已证}）✓✓$$
+$$\text{故}\ \mathrm{O1\!-\!1}\iff\big[\neg\mathrm{GRH}_{\mathcal C}\wedge\mathrm{FiniteSep}\big]\ \text{虽成立，但其中}\ \neg\mathrm{GRH}_{\mathcal C}\ \text{是}\ \textbf{导出项，非定义项} ✓$$
+$$\boxed{\text{⚠️ 未证且不得默认}：\neg\mathrm{GRH}_{\mathcal C}\ \Longrightarrow\ \mathrm{FiniteSep}_{\rm P1\text{-}P3}} ⚠️$$
+$$\qquad ⟹ \textbf{不得} \text{把}\ \mathrm{O1\!-\!1}\ \text{与}\ \neg\mathrm{GRH}_{\mathcal C}\ \text{等同};\qquad \text{唐先生逐字}：\boxed{\text{存在 off-line 成员}\ \ne\ \text{存在有限可描述的 off-line 集合}} ✓✓$$
+$$\qquad ⟹ \text{即：}\ `V281`\ \text{§5 的"}\textbf{存在 vs 可描述}\text{"分离被}\ \textbf{完整保留}，\text{未被抹掉} ✓✓$$
+
+### 9.3 ⚠️ **§5 降级**（不得承担互斥定理的证明责任）
+
+$$\boxed{\text{§5（Σ}_1\text{-见证提取）}\ \text{正式改为}：\textbf{结构性候选推论（未形式化）}} ✓$$
+$$\text{待补（至少五项，缺一不可形式化）}：$$
+$$\qquad \text{① }\mathcal C\ \text{的可计算编码};\quad \text{② "}F\ \text{off-line"}\ \text{取何种}\ \Sigma_1\ \text{表述};\quad \text{③ 零点存在见证的}\ \textbf{有限编码};\quad \text{④ O1-1 的构造是否}\ \textbf{有效给出} \text{这些编码};\quad \text{⑤ Kreisel／Herbrand 的}\ \textbf{具体形式} ✓$$
+$$\qquad ⟹ \text{在①–⑤之前，§5}\ \textbf{不参与} \text{§2–§4 的任何证明} ✓✓$$
+
+### 9.4 ⭐⭐ **排除性分叉（正式登记）**
+
+$$\boxed{\mathrm{GRH}_{\mathcal C}\ \Longrightarrow\ \mathrm{O1\!-\!1}\ \textbf{永久关闭}}\qquad（\text{不是"暂时无解"}，是\textbf{逻辑为假}）✓✓$$
+$$\boxed{\mathrm{O1\!-\!1}\ \Longrightarrow\ \neg\mathrm{GRH}_{\mathcal C}} ✓✓$$
+$$\qquad ⟹ \text{故}\ \mathrm{O1\!-\!1}\ \text{只存在于}\ \neg\mathrm{GRH}_{\mathcal C}\ \text{的世界，}\textbf{且} \text{还须额外满足}\ \mathrm{FiniteSep}_{\rm P1\text{-}P3} ✓✓$$
+$$\qquad \Longrightarrow \boxed{\mathrm{O1\!-\!1}\ \text{不是 RH／GRH 的}\ \textbf{证明路线}，\text{而是}\ \textbf{"条件性地利用 GRH 反例存在性"的机制路线}} ✓✓✓$$
+
+### 9.5 ⭐ **下一靶（本档预登记，待领号）**：FiniteSep 的**锚定实例化**
+
+$$\text{唐先生逐字}：\text{真正剩下的}\ \textbf{不是} \text{"再造一个 off-line 对象"，而是}\ \boxed{\text{能否把一个}\ \textbf{已经存在} \text{的 off-line 反例}\ \textbf{压缩成有限可分辨状态}？} ✓✓$$
+$$\text{形式化（本档）}：\text{以已知 off-line 反例}\ x_0\ \text{为}\ \textbf{锚}，\text{求}\ (S,X_S,\sim_S,A_S)\ \text{满足 P1–P3};\ \text{其}\ \textbf{必要第一子目标}：$$
+$$\qquad \boxed{\exists S：\ x_0\ \text{的}\ S\text{-层纤维内}\ \textbf{只有 off-line 成员}}（\text{等价说法：}\ x_0\ \text{的有限数据}\ \textbf{认证} \text{其 off-line 性}）✓✓$$
+$$\qquad \text{工具}：`V286`-A 的}\ \mathrm{REF}\ \text{（已知 off-line 有限清单）在此}\ \textbf{由"驳倒工具"转为"构造锚点"} ✓$$
+$$\qquad ⚠️\ \text{与 GRH 的关系}：\text{本条}\ \textbf{不要求} \text{settle GRH};\ \text{但要求}\ \mathcal C\ \text{内有 off-line 成员（＝}\neg\mathrm{GRH}_{\mathcal C}\ \text{已给定/已证）} ✓$$

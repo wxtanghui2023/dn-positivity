@@ -2543,6 +2543,14 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§6 同步**：`REVIEW-2026-09-16` 已追加 **§11 勘误（V288）**；并提出**定位改写**：O1-1 不是通往 RH 证明的路 ✓
 **§7 边界**：依赖 $\pi_S$ 满射；不声称 $\mathrm{GRH}_{\mathcal C}$ 真／假；§5 为 [结构性]；P1 取法决定互斥结论；未用 RH；未跑 Lean；零数值 ✓
 
+### F.5es ⭐⭐⭐⭐ **V288 精化（唐先生 11:53）：P1 地位与敏感性 ＋ 措辞钉死 ＋ §5 降级 ＋ 排除性分叉 ＋ 下一靶（FiniteSep 锚定实例化）**
+
+**① P1 地位与敏感性**：互斥**完全依赖** $(i)$ $X_S:=\pi_S(\mathcal C)$（取像 ⟹ 满射）与 $(ii)$ P1 **内生**（源自 `V285` §2 五条件之(1)；动机 ＝ N12 排除空虚真）✓ **敏感性**：若 $X_S\supsetneq\pi_S(\mathcal C)$ ⟹ $\pi_S$ 不必满射 ⟹ 可取 $A_S\supseteq\pi_S(\mathcal C),A_S\subsetneq X_S$ ⟹ $\pi_S^{-1}(A_S)=\mathcal C=\mathcal R$ ⟹ **互斥失效**；若放弃 P1 ⟹ GRH 真时 $A_S=X_S$ 可行 ⟹ **空虚真** ⟹ $$\boxed{\text{互斥是"排除空虚真"的代价}}$$ ✓✓
+**② 措辞钉死**：$\mathrm{O1\!-\!1}\iff\mathrm{FiniteSep}_{\rm P1\text{-}P3}$（**定义级**）；$\mathrm{O1\!-\!1}\Longrightarrow\neg\mathrm{GRH}_{\mathcal C}$（**定理级**）；⟹ $\mathrm{O1\!-\!1}\iff[\neg\mathrm{GRH}_{\mathcal C}\wedge\mathrm{FiniteSep}]$ 中 $\neg\mathrm{GRH}_{\mathcal C}$ 为**导出项**；**⚠️ 未证**：$\neg\mathrm{GRH}_{\mathcal C}\Longrightarrow\mathrm{FiniteSep}$ ⟹ **不得**等同（"**存在 off-line 成员 $\ne$ 存在有限可描述的 off-line 集合**"）⟹ `V281` §5 分离**完整保留** ✓
+**③ §5 降级**为**结构性候选推论（未形式化）**＋ 五项待补清单 ⟹ 不参与任何证明 ✓
+**④ 排除性分叉**：$\mathrm{GRH}_{\mathcal C}\Rightarrow$ O1-1 **永久关闭**（逻辑为假）；$\mathrm{O1\!-\!1}\Rightarrow\neg\mathrm{GRH}_{\mathcal C}$ ⟹ **O1-1 是"条件性利用 GRH 反例存在性"的机制路线，非 RH／GRH 证明路线** ✓✓
+**⑤ 下一靶（预登记）**：**FiniteSep 锚定实例化** —— 以已知 off-line 反例 $x_0$ 为锚，必要第一子目标 $$\boxed{\exists S:\ x_0\ \text{的}\ S\text{-层纤维内只有 off-line 成员}}$$；$\mathrm{REF}$ 由"驳倒工具"转为"**构造锚点**" ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
