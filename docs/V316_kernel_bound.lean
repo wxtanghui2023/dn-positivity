@@ -288,3 +288,25 @@ theorem Q_pos_alg {N B lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1) (hN : 0 ≤ N)
   nlinarith [key, hNlam, hN, hlam0]
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+-- 诊断：elaborated 类型（若 Q_pos 失败，用它与目标逐字比对）
+#check @Q_pos_alg
+
+/-- **`Q_pos`**：`Q_λ(v) = ‖v‖² + λ²B(v) ≥ (1/2)‖v‖²`（`0 < λ ≤ 1`）。
+statement **直接对齐 `Q_pos_alg` 的结论形状**；body 只负责把 `N, B` 实例化。 -/
+theorem Q_pos {v : ℝ → ℝ} {lam : ℝ} (h0 : 0 < lam) (h1 : lam ≤ 1)
+    (hN : 0 ≤ ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+    (hb : |∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)|
+      ≤ (1 / 2) * ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2) :
+    (1 / 2 : ℝ) * (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+      ≤ (∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+        + lam ^ 2 * (∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)) := by
+  have hQ := Q_pos_alg (N := ∫ s in (-(1 / 2 : ℝ))..(1 / 2), v s ^ 2)
+    (B := ∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)) h0 h1 hN hb
+  exact hQ
+
+end Zeta23.ThmD.V316
