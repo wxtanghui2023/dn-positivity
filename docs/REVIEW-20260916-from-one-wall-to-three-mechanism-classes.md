@@ -144,3 +144,41 @@ $$\qquad\text{只有}\ \mathfrak F\ \text{写清楚以后，才有资格问}\ \i
 ## 保留的机制级关系（本次冻结的核心资产）
 $$T^{\frac12-t}N^{\frac12+r+2t}\lesssim T\ \Longrightarrow\ \theta<\frac{1+2t}{1+2r+4t}$$
 $$\text{意义}：\ \theta\text{-公式不再是仅应用层的"参数映射"}，\ \text{而可追溯到}\ \textbf{误差项进入主项预算的具体位置}✓\quad(\text{比"17/33 只是某个点"扎实})✓$$
+
+---
+
+# 【𝔽-1c 收口 · 第四轮 · 今日终局】（2026-09-16 20:09，唐先生裁定）
+
+## 1. ⭐⭐ 首条核心结论（比"C 判定"更重要）
+$$\boxed{(r,t)\ \textbf{不是原始估计的内禀坐标}，\ \text{而是}\ \textbf{把估计嵌入 BCR 应用链后产生的统一化坐标}}✓$$
+$$\Longrightarrow\ \text{逻辑发生实质变化}：\ \boxed{\text{"有没有更强的 Kloosterman 估计？"}\ \textbf{不能} \text{直接等价于}\ \text{"有没有}\ L<8\ \text{的}\ (r,t)\text{"}}✓$$
+$$\text{真正的映射}：\quad\boxed{\mathfrak E_{\rm raw}\ \xrightarrow{\ \mathcal R_{\rm application}\ }\ \mathfrak F\ \xrightarrow{\ (r,t)\ }\ L=17r+t}$$
+$$\text{而猎-6 已给出}\ \textbf{具体反例型现象}：\ \text{原始估计在}\ \textbf{局部区域} \text{得到改善，}\ \textbf{并不自动} \text{改变统一坐标}✓$$
+
+## 2. 今日最终状态（唐先生版）
+$$\boxed{\begin{array}{c}\text{BCR estimate}\\ \downarrow\\ \text{application-side uniformization}\\ \downarrow\\ (r,t)\\ \downarrow\\ 17r+t=8\end{array}}$$
+$$\text{其中真正}\ \textbf{活着的未知量} \text{已经不是"有没有更好的数字"，而是}：$$
+$$\boxed{\text{uniformization 是否是}\ \textbf{不可避免的损失机制}？}✓$$
+
+## 3. 下次开工的两个问题 —— **不得合并**（唐先生指定）
+$$\boxed{\textbf{第一问（更基础、更硬）}：\ \mathcal R_{\rm application}\ \textbf{为什么必须} \text{把一个非一致估计压缩成统一}\ (r,t)\ ?}$$
+$$\boxed{\textbf{第二问（仅在第一问之后）}：\ \text{这种统一化是否}\ \textbf{必然} \text{引入一个最坏情形损失，且该损失}\ \textbf{恰好导致}\ 17r+t\ge8\ ?}$$
+$$\textbf{分支}：$$
+$$\qquad\text{若第一问答"}\textbf{不是必须}\text{"} \Longrightarrow \text{真正的突破口可能}\ \textbf{不是} \text{改善 BC 的估计，}$$
+$$\qquad\qquad\text{而是}\ \boxed{\text{改变 BCR 的应用架构，使局部强估计能够保留下来，而不被统一化消掉}}✓$$
+$$\qquad\text{若第一问证明"}\textbf{必须}\text{"} \Longrightarrow \text{第二问才真正成为一个}\ \textbf{刚性问题}：$$
+$$\qquad\qquad\boxed{\text{uniformization}\to\text{worst-case envelope}\to 17r+t\ge8\ ?}$$
+$$\qquad\Longrightarrow\ \text{那会比单纯继续搜论文}\ \textbf{有价值很多}✓$$
+
+## 4. 今日成果链（完整版，含收口）
+$$\underbrace{\text{BCR 三线性估计族}}_{\text{猎-2C：(}r,t\text{)}\ \text{链内充分}}\to\underbrace{\theta(r,t)}_{\text{猎-2A}}\to\underbrace{17r+t<8}_{\text{猎-3A}}\to\underbrace{\mathfrak F=\mathfrak F_{\rm estimate}}_{\text{猎-4／5（原文 §3.4 支撑）}}\to\underbrace{\text{局部改进}\ne\mathfrak F\ \text{点}}_{\text{猎-6 判定 C}}\to\boxed{\text{uniformization 是否为不可避免损失}}$$
+
+## 5. 残余（跨轮结转，不得省略）
+$$\text{残余 A：post-BC 论文（含 2026 KF I／II）}\ \textbf{未读全文} \Longrightarrow \text{subdyadic／partial moduli 精确定义未知}✓$$
+$$\text{残余 B：}\ \textbf{未判定} \text{BCR 的配置是否落入那些子情形（若落入，须}\textbf{重跑 BCR 应用} \text{方可判定）}✓$$
+$$\text{残余 C：BC Theorem 1 两顶结构}\to(9/20,7/20)\ \text{的}\ \textbf{提取过程未核}✓$$
+$$\text{残余 D：}\ \mathfrak F^{\rm uncond}\ \text{完整形状仍只有两点已映射（DFI／BC）}✓$$
+
+## 6. 边界（N1/N2 严守）
+$$\text{① 本档为收口与状态登记，}\textbf{不引入新机制}；\quad\text{② BCR 原文关键语句}\ \textbf{逐字引用}（外部来源，仅作数据）；$$
+$$\text{③ }\textbf{未用 RH}；零数值；\ \text{未跑 Lean}✓$$
