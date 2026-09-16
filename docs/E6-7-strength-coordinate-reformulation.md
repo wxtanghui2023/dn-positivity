@@ -69,3 +69,12 @@ $$\text{(ii) 酉-1X 正式等级：独立性假设}\ \textbf{撤回}；定量强
 $$\text{(iii) E6-4 查 3 的"对象不同"论证}\ \textbf{正式撤销}；$$
 $$\text{(iv) X1--X4 四任务固定（X3 的关键量＝}\theta'-\theta\ \text{的符号／依赖性）；}$$
 $$\text{(v) 墙的定义改为}\ \partial\Theta(\mathfrak K)；\ \text{＋校准点 ledger 计划（Huxley／GM／反向）。}$$
+
+---
+
+## 【勘误 T10】（2026-09-16 18:21，唐先生指出；正文不修改，勘误留档）
+$$\textbf{原（§6）}：\ \mathcal K_{\rm GM}\ \longmapsto\ \theta_{\rm GM}=\tfrac{30}{13}(1-\sigma)+o(1)\ \text{易被误读为}\ \mathcal K\ \text{自身的坐标值}$$
+$$\textbf{更正}：\boxed{q_{\rm GM}\ \xrightarrow{\ \Theta\ }\ \theta_{\rm GM}(\sigma)=\tfrac{30}{13}(1-\sigma)+o(1)}$$
+$$\qquad\tfrac{30}{13}(1-\sigma)\ \text{是}\ \textbf{density exponent（}\Theta\ \text{的输出）}，\ \textbf{不得} \text{混入}\ q=(\kappa,\mathfrak b,\tau,\delta,\dots)；$$
+$$\qquad\text{理由：GM 的贡献为 large-value bounds}\to\text{zero-density estimate} \Longrightarrow \text{其输出是}\ \theta\ \text{而非坐标。}$$
+$$\textbf{详据}：\text{E6-8（X2 定量反向 strength map 审计）§3。}$$
