@@ -34,3 +34,20 @@ $$\text{③ }\textbf{未用 RH}；\ \text{零数值}✓$$
 
 ## 7. 今日 V2 弧线全表
 $$\underbrace{\mathrm{V2\text{-}1}}_{\mathfrak F\ \text{下边界}}\to\underbrace{\mathrm{V2\text{-}3/4}}_{1/20\ \text{分解／}\mathrm{E1}\ \text{内部最优}}\to\underbrace{\mathrm{V2\text{-}6/6b}}_{\text{两链溯源，}\beta}\to\underbrace{\mathrm{V2\text{-}7}}_{\text{8 变量清单}}\to\underbrace{\mathrm{V2\text{-}8/8b/9/10/11}}_{a_2\ \text{线}\Rightarrow\text{干净关闭}}\to\underbrace{\mathrm{V2\text{-}12/13/14}}_{\text{第二项}\Rightarrow\text{SECOND-TERM-ALREADY-USED}}\to\underbrace{\mathrm{V2\text{-}15/16}}_{\text{勘误＋判定}\mathrm{D}}\to\underbrace{\mathrm{V2\text{-}18A}}_{b\ \text{＝结构变量}}\to\boxed{\textbf{本冻结}}✓$$
+
+---
+
+# 【下会话正式工作单】（2026-09-16 21:24，唐先生确认）
+
+## 1. 今日弧线的停止位置（不越界）
+$$\boxed{17/33\ \xleftarrow{\text{第一项}}\ (\tfrac7{20},\tfrac14)\ \xleftarrow{\ L\text{-optimization}}\ \text{BC current architecture}}✓$$
+$$\qquad\textbf{而未} \text{越过证据边界，把它升级成"普遍不可突破墙"}✓$$
+
+## 2. ⭐ 下会话的正式入口（四步追因链）
+$$\boxed{\text{(5.1) 六项中，究竟是哪一个}\ \textbf{原始结构} \text{承载了}\ 17/33\ ?}$$
+$$\qquad\textbf{重点}\ \ne\ \text{再算一次指数，而是继续向下追}：$$
+$$\boxed{\text{最终指数}\to L^{*}\ \text{中对应项}\to\text{(3.1)/(4.4) 输入项}\to\text{产生该输入项的}\ \textbf{具体}\ \mathrm{C\text{-}S／diagonal／Weil／}\delta\text{-split}\ \text{结构}}✓✓$$
+$$\qquad\text{（与 §5 登记的起手一致，但此处给出}\ \textbf{逐级追因} \text{的四段式）}✓$$
+
+## 3. 边界（保持）
+$$\text{① 仍不声称"普遍不可突破"；}\quad\text{② 取证以 BC 原文}\ \S3／\S4／\S5\ \text{逐字为准}✓；\quad\text{③ }\textbf{未用 RH}；\ \text{零数值}✓$$
