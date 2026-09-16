@@ -693,3 +693,49 @@ theorem Bfun_polarization {u v : ℝ → ℝ}
   exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun p => by ring))
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`Bfun_quadratic_gap`**：`B(u,u) − B(v,v) = 2B(v,h) + B(h,h)`，`h = u − v`。
+路线：`Bfun_polarization` → 拆三项（`integral_add`）→ `Bfun_symm` 换序 → `ring`。
+可积性**显式列出**（`hC`/`hD`/`hE`），与文件既有风格一致。 -/
+theorem Bfun_quadratic_gap {u v : ℝ → ℝ}
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * (u p.2 - v p.2))
+      (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * v p.2)
+      (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2))
+      (Irest.prod Irest)) :
+    Bfun u u - Bfun v v
+      = 2 * Bfun v (fun t => u t - v t)
+        + Bfun (fun t => u t - v t) (fun t => u t - v t) := by
+  have hpol := Bfun_polarization (u := u) (v := v) hUU hVV
+  have hsym := Bfun_symm (v := v) (h := fun t => u t - v t) hC
+  have hsplit : ∫ p, (|p.1 - p.2| * v p.1 * (u p.2 - v p.2)
+        + |p.1 - p.2| * (u p.1 - v p.1) * v p.2
+        + |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2)) ∂(Irest.prod Irest)
+      = Bfun v (fun t => u t - v t) + Bfun (fun t => u t - v t) v
+        + Bfun (fun t => u t - v t) (fun t => u t - v t) := by
+    show ∫ p, (((fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * (u p.2 - v p.2))
+            + fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * v p.2) p
+          + (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2)) p)
+        ∂(Irest.prod Irest)
+      = Bfun v (fun t => u t - v t) + Bfun (fun t => u t - v t) v
+        + Bfun (fun t => u t - v t) (fun t => u t - v t)
+    rw [MeasureTheory.integral_add (hC.add hD) hE]
+    show ∫ p, (|p.1 - p.2| * v p.1 * (u p.2 - v p.2)
+            + |p.1 - p.2| * (u p.1 - v p.1) * v p.2) ∂(Irest.prod Irest)
+          + ∫ p, |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2) ∂(Irest.prod Irest)
+        = Bfun v (fun t => u t - v t) + Bfun (fun t => u t - v t) v
+          + Bfun (fun t => u t - v t) (fun t => u t - v t)
+    rw [MeasureTheory.integral_add hC hD]
+    unfold Bfun
+    rfl
+  rw [hpol, hsplit, ← hsym]
+  ring
+
+end Zeta23.ThmD.V316
