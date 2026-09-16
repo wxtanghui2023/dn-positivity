@@ -83,3 +83,34 @@ theorem kernel_mass {s : ℝ} (hs : s ∈ Icc') :
   linarith [hmain, hval]
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **黑盒消费**（不重新展开 `∫|s−t|dt`）：`kernel_mass` 的唯一使用入口。 -/
+theorem kernel_mass_black_box {s : ℝ} (hs : s ∈ Icc') :
+    ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| ≤ 1 / 2 := kernel_mass hs
+
+/-- **层 1（`amgm_kernel`）**：点态 AM–GM
+`|s−t| |v s| |v t| ≤ (|s−t|/2)(v s² + v t²)`（本质即 `2|ab| ≤ a²+b²` 加 `|s−t| ≥ 0`）。 -/
+lemma amgm_kernel (v : ℝ → ℝ) (s t : ℝ) :
+    |s - t| * |v s| * |v t| ≤ (|s - t| / 2) * (v s ^ 2 + v t ^ 2) := by
+  have h2 : 2 * (|v s| * |v t|) ≤ v s ^ 2 + v t ^ 2 := by
+    nlinarith [sq_nonneg (|v s| - |v t|), sq_abs (v s), sq_abs (v t)]
+  have h3 : |v s| * |v t| ≤ (v s ^ 2 + v t ^ 2) / 2 := by linarith
+  calc |s - t| * |v s| * |v t| = |s - t| * (|v s| * |v t|) := by ring
+    _ ≤ |s - t| * ((v s ^ 2 + v t ^ 2) / 2) :=
+        mul_le_mul_of_nonneg_left h3 (abs_nonneg _)
+    _ = (|s - t| / 2) * (v s ^ 2 + v t ^ 2) := by ring
+
+/-- **层 2（`schur_integrand_bound`）**：把层 1 积分起来。
+可积性按唐先生要求**作为显式前提**（不为好看而偷设 `Continuous v`）。 -/
+theorem schur_integrand_bound {v : ℝ → ℝ} {μ : Measure ℝ}
+    (h1 : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * |v p.1| * |v p.2|) (μ.prod μ))
+    (h2 : Integrable (fun p : ℝ × ℝ => (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2)) (μ.prod μ)) :
+    ∫ p, |p.1 - p.2| * |v p.1| * |v p.2| ∂(μ.prod μ)
+      ≤ ∫ p, (|p.1 - p.2| / 2) * (v p.1 ^ 2 + v p.2 ^ 2) ∂(μ.prod μ) :=
+  integral_mono h1 h2 (fun p => amgm_kernel v p.1 p.2)
+
+end Zeta23.ThmD.V316
