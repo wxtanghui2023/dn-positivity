@@ -822,3 +822,41 @@ theorem kernel_hv_integrable {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam :
   exact kernel_domination (f := h) (g := fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t)) hG hAB
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-2a 区间积分桥**：`∫_{−1/2}^{1/2} f = ∫ f ∂Irest`（通用 helper，后续 weak E–L 可复用）。
+路线复用 `kernel_mass_restrict`：`integral_of_le`（区间→`Ioc`）＋
+`integral_Icc_eq_integral_Ioc`（`Icc = Ioc` a.e.，端点零测）。 -/
+theorem intervalIntegral_eq_integral_Irest {f : ℝ → ℝ} :
+    ∫ s in (-(1 / 2 : ℝ))..(1 / 2), f s = ∫ s, f s ∂Irest := by
+  rw [intervalIntegral.integral_of_le (show -(1 / 2 : ℝ) ≤ 1 / 2 by norm_num)]
+  rw [← MeasureTheory.integral_Icc_eq_integral_Ioc]
+  rfl
+
+/-- **④-2b 首次 Fubini**：nested `Irest` 积分 = 乘积测度积分。
+方向用 `MeasureTheory.integral_integral`（已核验：`∫ x,∫ y,f x y ∂ν ∂μ = ∫ z, f z.1 z.2 ∂μ.prod ν`，
+**正是所需方向**，不用 `symm`）。
+最后一步只是 ④-1e 形式与 Fubini 形式的**结合律对齐**（`ring`），
+**不修改** 已冻结的 `kernel_hv_integrable`。 -/
+theorem nested_eq_prod_integral {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    ∫ s, h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest) ∂Irest
+      = ∫ p, |p.1 - p.2| * h p.1 * Real.cos (Real.sqrt 2 * lam * p.2)
+          ∂(Irest.prod Irest) := by
+  have hF : Integrable
+      (fun p : ℝ × ℝ => h p.1 * (|p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.2)))
+      (Irest.prod Irest) := by
+    refine (kernel_hv_integrable hh lam).congr ?_
+    filter_upwards with p
+    ring
+  have hstep : ∫ s, h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest) ∂Irest
+      = ∫ s, ∫ t, h s * (|s - t| * Real.cos (Real.sqrt 2 * lam * t)) ∂Irest ∂Irest := by
+    refine MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun s => ?_))
+    exact (MeasureTheory.integral_const_mul (μ := Irest) (h s)
+      (fun t : ℝ => |s - t| * Real.cos (Real.sqrt 2 * lam * t))).symm
+  rw [hstep, MeasureTheory.integral_integral hF]
+  exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun p => by ring))
+
+end Zeta23.ThmD.V316
