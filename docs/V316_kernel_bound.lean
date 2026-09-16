@@ -666,3 +666,9 @@ theorem Bfun_symm {v h : ℝ → ℝ}
           (f := fun q : ℝ × ℝ => |q.1 - q.2| * h q.1 * v q.2)
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+end Zeta23.ThmD.V316

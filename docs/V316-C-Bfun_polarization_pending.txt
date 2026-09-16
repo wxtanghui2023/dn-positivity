@@ -1,0 +1,42 @@
+/- V316-C ③′ Bfun_polarization 尝试稿（待修，1 error）
+   ⚠️ 病根：**函数级和 vs 点态和 的形状错配**（同早前 beta-redex 陷阱）
+   `integral_add` 的匹配模式是 `∫ ((fun p => C) + fun p => D) a + …`
+   而目标里是点态写法 `∫ p, C p + D p + E p` ⟹ rw 找不到模式。
+   修法（二选一）：
+     (a) 先 `show` 归一化：
+         rw [show (fun p => C p + D p + E p)
+                = ((fun p => C p) + fun p => D p) + fun p => E p by funext p; rfl]
+         再 rw [MeasureTheory.integral_add (hVW.add hWV) hWW,
+                MeasureTheory.integral_add hVW hWV]
+     (b) 或改陈述为**不分拆**形式（只需 hUU/hVV，零 integral_add）：
+         Bfun u u - Bfun v v = ∫ p, (C p + D p + E p) ∂(Irest.prod Irest)
+         证明：  unfold Bfun; rw [← MeasureTheory.integral_sub hUU hVV, hcongr]
+   ✅ 其余部分已验证正确：点态恒等式由 ring 过关；
+      integral_sub(hUU,hVV) 与 hcongr 链接方向正确；
+      Bfun 的 integrand 左结合写法与 hVW/hWV/hWW 逐字匹配 ✓ -/
+
+/-- **③′ 积分极化**：`B(u,u) − B(v,v) = B(v,h) + B(h,v) + B(h,h)`（`h = u − v`）。
+只用点态恒等式（`ring`）＋ `integral_sub`／`integral_add`；
+可积性作**显式前提**（与 `kernel_bound` 既有 7 条可积性假设的风格一致，不造黑箱）。 -/
+theorem Bfun_polarization {u v : ℝ → ℝ}
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2) (Irest.prod Irest))
+    (hVW : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * (u p.2 - v p.2))
+      (Irest.prod Irest))
+    (hWV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * v p.2)
+      (Irest.prod Irest))
+    (hWW : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2))
+      (Irest.prod Irest)) :
+    Bfun u u - Bfun v v
+      = Bfun v (fun t => u t - v t) + Bfun (fun t => u t - v t) v
+        + Bfun (fun t => u t - v t) (fun t => u t - v t) := by
+  have hcongr : ∫ p, (|p.1 - p.2| * u p.1 * u p.2 - |p.1 - p.2| * v p.1 * v p.2)
+        ∂(Irest.prod Irest)
+      = ∫ p, (|p.1 - p.2| * v p.1 * (u p.2 - v p.2)
+          + |p.1 - p.2| * (u p.1 - v p.1) * v p.2
+          + |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2)) ∂(Irest.prod Irest) :=
+    MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun p => by ring))
+  unfold Bfun
+  rw [← MeasureTheory.integral_sub hUU hVV, hcongr]
+  rw [MeasureTheory.integral_add (hVW.add hWV) hWW, MeasureTheory.integral_add hVW hWV]
+
