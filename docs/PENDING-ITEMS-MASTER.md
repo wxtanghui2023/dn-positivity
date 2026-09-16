@@ -34,7 +34,7 @@
 |:--:|---|:--:|---|
 | **A1-1** | ✅ 证明组装（六引理 + 五区间覆盖 ✓） | ✅ | `A1-PROOF-final-status.md` ✓ |
 | **A1-2** | ✅ **= P2 已闭合**（near 显式界 7/24 ✓） | ✅ | 见上 ✓ |
-| **A1-3** | **Palojärvi Thm 4.1（至多一个离轴零点）推广到有限多个** | 🟡 | 需读 Thm 4.1 全文 ✓（PDF 已归档 ✓） |
+| **A1-3** | **Palojärvi Thm 4.1**：把判据的**假设**"至多一个例外零点"放宽到"至多 $m$ 个"并重推 | 🟡**降级** | ⚠️ **原文已核验**（2026-09-16 `V291`）：Thm 4.1 的"至多一个"是**假设**、结论是 **iff 判据**（**不给个数界**）；扩展＝**纯技术推广但收益为空**（`E4-palojarvi-finitely-many.md` §7 判词："cheap but buys nothing unless you can independently bound the number of off-line zeros"）｜**若做，先读 Montgomery《Ten Lectures》Ch.5 Thm 11**（`E4` §8 未读）✓ |
 | **A1-4** | ⭐ **找 Lagarias 的测试函数 g_n 的显式形式**（接通 Weil 正性 ✓） | 🟡 | A1↔A3 桥 ✓ |
 | **A1-5** | ~~用二阶矩补 A1~~ | ⚪ | 已证明**不需要**（计数假设即足 ✓✓） |
 

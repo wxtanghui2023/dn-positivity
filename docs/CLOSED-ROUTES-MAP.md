@@ -2578,6 +2578,18 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§4 边界**：不声称 O1-1 不存在；`A1-3` 开工前须先读 Thm 4.1 全文；筛选为枚举非穷尽；未用 RH；未跑 Lean；零数值 ✓
 **同步**：`REVIEW-2026-09-16` 追加 **§12** ✓
 
+### F.5ev ⭐⭐⭐⭐ **V291：A1-3 文献对象核验 ＋ 勘误 ＋ 三项审计 —— 错在 V290 推荐；档案 E4 早已完成分析 ⟹ A1-3 降级**（`V291` ✓ 2026-09-16 12:10）
+
+委托（唐先生 12:03）：开论文线但**不批准"首攻 A1-3 的数学证明"**；其检索到的是 **Stevenhagen《Redei Reciprocity…》**（其 Thm 4.1 ＝ $r_8=r_4-\mathrm{rank}_{\mathbf F_2}R_8$，与离轴零点无关）⟹ "不能凭档案二手描述直接开证明"；要求三项审计 ✓
+
+**§1 核验（亲自抽正文）**：归档 PDF ＝ **Neea Palojärvi, "Explicit zero-free regions and a τ-Li-type criterion", arXiv:1807.01506v3（2020, 26 页）** ✓；摘要 ＝ "**至少一个**"方向 ＋ **iff** 判据；**"至多一个"只在假设中** ✓✓；**Thm 4.1**：假设"至多一个 $\rho_1$ 满足 $|\rho_1/(\rho_1-\tau)|>1$"，结论 ＝ $\rho_1$ 存在 $\iff$ $|\Re\lambda_F(n,\tau)|\ge(K_1+K_4)n\log n$ 对某 $n\in[N,5N],N\mid n$；$|\rho/(\rho-\tau)|=1\iff\Re\rho=\tau/2$ ✓✓✓
+**§2 ⚠️ T10 勘误**：`V290` §3 三错（条件性判据写成无条件界／混淆假设与结论／凭 terse 行推荐未读验证档）⟹ 更正表述 ✓
+**§3 ⭐⭐⭐ 档案早已完成**：`E4-palojarvi-finitely-many.md`（09-12，逐字读原文）—— 三条 locus（A/B/C）＋ 扩展代价（$m$ ＋ 窗口 $m$ 倍 ＋ 常数降级；$m=1$ 复现）＋ **§7 判词**："cheap generalization, **but it buys nothing unless you can independently bound the number of off-line zeros**" ⟹ **纯技术推广＝是，收益为空** ⟹ **A1-3 推荐降级** ✓✓✓（`E4` §8 未读 Montgomery Thm 11／Brown 2005／McCurley 1984）
+**§4 三项审计**：① 原定理＝**假设下的 iff 判据**（非个数界）② "有限多个"**不**逻辑直接；**逐对象界 $\not\Rightarrow$ 类级有限性**（唐先生警告成立）③ **纯技术推广**（引擎 Lemma 2.2 本就是 $M$ 个复数陈述），但建立在未读引擎证明上 ✓
+**§5 ⭐ N13 纪律**：推荐前必须核对"**已验证原文的那份档**"，不得依赖 terse 台账行 ✓
+**§6 修正建议**：论文线优先 **P6／P8／A1-4**；A1-3 降级 ✓
+**同步**：`PENDING-ITEMS-MASTER.md` A1-3 行已更正（降级＋指向）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

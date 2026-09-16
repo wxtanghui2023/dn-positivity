@@ -71,3 +71,13 @@ $$\Longrightarrow \boxed{\text{推荐}：\textbf{开论文线，首攻 `A1-3`}} 
 ④ ⭐ **纪律**：不声称 O1-1 不存在；筛选为枚举非穷尽；`A1-3` 须先读全文 ✓
 【下一步】待唐先生拍板：是否开论文线（首攻 `A1-3`）？
 ```
+
+---
+
+## §5 ⚠️ 【勘误 T10】（2026-09-16 12:03，唐先生指出；见 `V291`）
+
+$$\text{本档 §3 对 `A1-3` 的描述} ✗：\text{"}\textbf{无条件结构定理（对离轴零点个数的界）}\text{"} ⚠️$$
+$$\qquad \textbf{错处}：\text{Palojärvi Thm 4.1 的"至多一个"是}\textbf{假设}，\text{结论是}\ \textbf{iff 判据};\ \text{定理}\ \textbf{不给} \text{个数界} ✓$$
+$$\qquad \textbf{错处（流程）}：\text{本档凭 terse 台账行推荐，}\textbf{未读} \text{已验证原文的 }`E4-palojarvi-finitely-many.md`（2026-09-12）✓$$
+$$\Longrightarrow \boxed{\text{更正}：\text{`A1-3`}\ ＝\ \text{"把 Thm 4.1 的}\textbf{假设} \text{从'至多一个'放宽到'至多}\ m\ \text{个'，并重推判据"}};\ \textbf{价值判定：低}（\text{收益条件在未知输入}\ m\ \text{上}）✓✓$$
+$$\qquad ⟹ \text{本档 §3 的"推荐开论文线首攻 `A1-3`"}\ \textbf{降级};\ \text{论文线优先项改为}\ \textbf{P6／P8／A1-4} ✓$$
