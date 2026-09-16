@@ -571,3 +571,24 @@ theorem KvStar_affine {lam s : ℝ} (h0 : 0 < lam)
   try ring
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **`vStar_EL`**：E–L 方程 `v_λ(s) + λ²(Kv_λ)(s) = D_λ`，
+其中 `v_λ(s) = cos(√2 λ s)`，`D_λ = vStarELConst λ = λ²C_λ`。
+**不引入新积分引理**：只代入 `KvStar_affine` ＋ 展开 `vStarELConst` ＋ 纯代数。 -/
+theorem vStar_EL {lam s : ℝ} (h0 : 0 < lam)
+    (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2) :
+    Real.cos (Real.sqrt 2 * lam * s)
+      + lam ^ 2 * (∫ t in (-(1 / 2 : ℝ))..(1 / 2),
+          |s - t| * Real.cos (Real.sqrt 2 * lam * t))
+      = vStarELConst lam := by
+  have hlam : lam ≠ 0 := ne_of_gt h0
+  rw [KvStar_affine h0 hs1 hs2]
+  unfold vStarELConst vStarAffineConst
+  field_simp [hlam]
+  try ring
+
+end Zeta23.ThmD.V316
