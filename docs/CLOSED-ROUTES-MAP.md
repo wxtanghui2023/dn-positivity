@@ -2202,6 +2202,27 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 命题 V268-A（[结构性]）**：R1 ⟺ $\exists$ canonical 算术 $f$：不泄漏 ζ 指纹 ＋ 不用 archimedean ＋ **半密度** ⟹ 核心张力**被命名**：需要一个"**半密度**"、**不引用 ζ 局部数据**的 canonical 算术对象 ✓。
 **§6 判词**：R1 **未被满足**（类界扩大：两个自然实现被逐条排除）；**不声称** R1 不可能 ✗。**§7 边界**：R1 的部分尝试；"反自对偶免费"须逐例检验 $f(1-s)$ 非退化；引理只覆盖幂族；"半密度"为 [结构性]；未用 RH；未跑 Lean；零数值 ✓
 
+### F.5dx ⭐⭐⭐⭐⭐ **V269：非保锥 T 的二分（降级精确版）—— 第一支结构性封口 ＋ non-cylinder 严格定义**（`V269` ✓ 2026-09-16 10:38）
+
+委托（唐先生 10:34）："接着攻。二分值得做，但**先把命题降到可证明的精确版本**，否则'任何非保锥 $T$'肯定过强" ＋ 关键一刀：**只证满足 R1 接口条件的 $T$**（"否则可以随手构造一个完全外加的算术编码 $T$，直接绕过 F/A leak 定义"）＋ 指定更强判死候选（**cylinder-consistency ⟹ 有限层表示／compactness 延拓**）。
+
+**§0 降级采纳**：放弃 $\forall T$ ✗；改证 $T:\mathcal A\to\mathcal A$：canonical／**非保锥**／**无限支撑**／$\nabla$F-leak／$\nabla$A-leak ✓。
+**§1 一刀**：$K=T(C)$, $A(x)=T(v(x))$ ⟹ $$\boxed{A(x)\in K\iff v(x)\in C}$$ ⟹ **非自对偶性本身不是信息源（只是坐标变形）** ⟹ 必须有 $\Delta(T)$ ＝ **$T$ 引入的、不可由原结构推出的 canonical relation** ✓✓。
+**§2 二／三／四刀**：$[T_p,T_q]=0\Longrightarrow T=\prod_p T_p^{a_p}$ **重新因子化**；`V241`-D：非交换缺陷入 reciprocity／coboundary；真逃逸须**不可约三元及以上全局组合律**；三元 cocycle $d(p,q)d(pq,r)=d(q,r)d(p,qr)$，coboundary ⟹ **global holonomy 自动零** ⟹ 须 **nontrivial higher associator $\omega(p,q,r)$** ⟹ 定义 $H^3$ 型对象（更高阶 ⟹ $H^4,H^5,\dots$）✓。
+
+**§3 ⭐⭐⭐⭐ 定理 V269-A（本档核心，cylinder 封口）**：设 $T$ 由**有限层算术数据 ＋ 逐层可验证的一致性方程**定义（cylinder-consistency：① 每个有限素数集 $S$ 的可见部分 $T_S$ 是有限数据；② 相容；③ 条件逐层可验证），各层**非空紧致**、限制连续。则 **(i)** $$\boxed{\varprojlim X_S\ne\varnothing\ \text{—— 全局实现必存在}}$$（＝`V262`-B：Tychonoff＋闭集 FIP，**不要求满射**）；**(ii)** 故 $T$ 的"失败"**不可能是存在性失败**；**(iii)** 逐层相容族不可提升为全局截面的障碍 ＝ $\lim^1\ne0$／$H^n$（degree ＝ 一致性方程 arity）⟹ **落 G3**；**(iv)** 若判据还可由算术数据判定 ⟹ **落 `V267` 情形 (A)（Robin-seeing ⟹ 排除）**。
+**推论 V269-A′**：$$\boxed{\text{pairwise}\ d(p,q)\ \text{与更高}\ \omega(p,q,r)\ \text{都是"有限层数据＋一致性方程"} ⟹ \textbf{都属第一支}}$$ ⟹ **"higher associator 逃逸"本身不逃逸 —— 它只是 $H^3$ 的一个实例面**（唐稿第三／四刀被吸收，**无需 MacLane 高阶相干机器**）✓✓✓。
+
+**§4 ⭐⭐⭐⭐ 三分律（本档核心结论）**（在 $\nabla$F-leak 前提下）：$$\boxed{\begin{array}{ll}\text{① cylinder＋紧致} &\Longrightarrow \varprojlim\ne\varnothing\ (V269\text{-A(i)}) \Longrightarrow \text{障碍只能是上同调（G3）或有限层可见（`V259`-A）}\\ \text{② cylinder＋非紧致} &\Longrightarrow \text{存在性可失败}；\textbf{而非紧致在算术中＝archimedean／无界} \Longrightarrow \textbf{A-leak}（`V172` §5a）\\ \text{③ non-cylinder} &\Longrightarrow \textbf{真无限层对象（唯一活口）}\end{array}}$$ ⟹ 与 `V262` 的"逃逸 ∈ {非紧致, 非投射}"**逐字一致**，并把**"非投射"精确化为 non-cylinder** ✓✓✓。
+
+**§5 ⭐⭐⭐⭐ 定义 V269-C（唐稿要求"从模糊残差变成严格对象"）**：$T$ 称 **non-cylinder**，若**不存在**任何由可数有限层算术数据定义的族 $\{T_S\}$ 使 $T=\lim_S T_S$（等价：对任意有限 $S$，$T$ 在 $S$-层不可判别者上仍有不同作用）。⚠️ **必须先说清：可定义 $\ne$ cylinder-决定** —— 例：$T:=$"取值 ⟺ RH" 是**有限公式可定义**的但**非 cylinder**（无有限层数据能判它）⟹ non-cylinder **不是"不可定义"，而是"不由有限层决定"** ⟹ **正是独立性闸门所在**。**与既有三名对照（防重复 ✓）**：`V259` **非聚合** ⟹ **不蕴含** non-cylinder（无限乘积仍是 cylinder 型）⚠️；`V211` §5 **非有限缺陷** ⟹ **近似但更宽**，本档**收紧**为 non-cylinder；**non-cylinder ＝ 最紧且可检验** ✓✓。**判死标准（可操作）**：(a) 给出 $T_S$；(b) 验证相容性；(c) 检查 $T=\lim T_S$？ ⟹ 若 $\exists S$ 使 $T|_S$ 不由 $T_S$ 决定 ⟹ non-cylinder；若对每个 $S$ 都能决定 ⟹ 落第一支（V269-A）✓✓。
+
+**§6 判词**：(1) **第一支结构性封口**；(2) **第二支非空性未定** ⚠️；(3) non-cylinder 获**严格定义 ＋ 判死标准**；⚠️ **不宣称二分已证** ✗（唐稿已预判）；净效果 ＝ **目标从"寻找非自对偶锥"推进为"寻找真正的无限层 arithmetic operation"**（须同时 canonical ＋ arithmetic ＋ non-archimedean ＋ non-$\zeta$-fingerprint ＋ **non-cohomological** ＋ **non-cylinder**，并继承 `V150` W2／`E4` §2 ＋ 唐稿 independence gate 闸门）✓✓。
+
+**§7 对齐**：⭐ **`V262` 两定理从"重发现"升为本档关键引理**（`V262`-B ＝ V269-A(i) 全部内容；`V262`-A／C′ 支撑 §3(iv)／§5 判死标准）✓；`V241`-D／`V206`–`V208`／`V181` §7 R1（本档 §0 命题 ＝ R1 的**算子版改写**）／`V267` 三情形（(A)＝有限读、(B)＝A-leak、(C)＝non-cylinder **逐支对齐**）／`V259` ✓。
+**§8 边界**：(i)(iii) 依赖 `V262`-B（须非空紧致＋连续）与**标准障碍理论（引用·经典，未逐字证明）** ⚠️；"非紧致 ⟹ A-leak"依 `V172` §5a（[结构性]）；§5 为本档**新定义**（[定义] 级）；**不声称** non-cylinder 存在或不存在 ⚠️；未用 RH；未跑 Lean；零数值 ✓。
+**§9 下一刀（建议）**：V270 目标 ＝ $$\boxed{\text{cylinder}+\text{紧致}+\textbf{非上同调}+\text{判据可判定}=\varnothing}$$ ⟹ 逃逸只剩 **non-compact（A-leak）** 与 **non-cylinder** ⟹ **第一次"每类都封"的结构性收口**（非清单增长）✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
