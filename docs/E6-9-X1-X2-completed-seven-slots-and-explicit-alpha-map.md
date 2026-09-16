@@ -76,3 +76,12 @@ $$\text{(ii) }\alpha(\theta)\ \textbf{显式抽取}：\text{LV-exponent}=\max_{\
 $$\text{(iii) }\textbf{自校验成功}：\text{DH 下复现论文的}\ T^{2\nu+\varepsilon}\ \text{结论；}$$
 $$\text{(iv) 第二关判定：对象层同在、}\textbf{参数层为受限切片}\Longrightarrow\ \text{X2 偏(乙)}；$$
 $$\text{(v) X3 首次计算：切片内}\ \Delta=O(\varepsilon)\ (\textbf{A 零损失})，\ \textbf{但明确不可外推} \text{至全局}\ \mathfrak K。}$$
+
+---
+
+## 【勘误 T10】（2026-09-16 18:25，唐先生指出；正文不修改，勘误留档）
+$$\textbf{错处}：\S5\ \text{直接把 X2 的输出（LV}\ \textbf{测度}\text{）代入 X1 的输入（one-spaced LV}\ \textbf{计数}\text{）}，\text{得}\ \Delta=O(\varepsilon)\ \text{（"零损失"）}$$
+$$\textbf{原因}：\text{二者}\ \textbf{不是同一坐标} \Longrightarrow \text{不能当作同一}\ K\text{-坐标上的逆变换}；$$
+$$\qquad\text{MT 给的是}\ \mathcal D\xrightarrow{\Phi_{\rm MT}}\mathcal K_{\rm meas}；\ \text{X1 用的是}\ \mathcal K_{\rm disc}\xrightarrow{\Phi_{\rm det}}\mathcal D \Longrightarrow \text{中间缺一座桥}$$
+$$\textbf{等级更正}：\boxed{\text{X3 preliminary：账本主指数目前未显示额外幂次损失；}\ \textbf{实际 round-trip loss OPEN}}$$
+$$\textbf{详据}：\text{E6-10（牛-0 桥审计）M1／M2／M3。}$$
