@@ -2775,6 +2775,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 (c) 字典闭合**：(W2) ⟹ $$\boxed{F(\lambda_1)=c_\lambda(v;D)}$$ ⟹ **0.67250 墙为真 F-ceiling**（条件 (i)–(iv)）✓✓✓
 **§6 边界**：纸面推导；依赖 (W2) 转述；最优性条件性；不声称 A3 全证；未用 RH；零数值 ✓
 
+### F.5fm ⭐⭐⭐⭐ **V308：(a′) admissible cone 对齐 —— A2 ✓；A3 ⚠️；A4 真缺口（$\mu=-1/\lambda^2<0$）⟹ GAP**（`V308` ✓ 2026-09-16 14:04）
+
+**§1 A1**：$\mathcal A$ 已取条件 7 条（taper 结构／$1\le w,8w\le L$／`av,bv,gv`／$\frac34\le b$／窗型／$0<\lambda\le1$／$c_\lambda,\kappa_\Xi$）；**四分类**：$\lambda\le1$＝硬约束（MV）；$8w\le L$＝误差控制；$b\ge\frac34$＝待判；taper／窗型＝构造条件 ⟹ **不断言两 $\mathcal A$ 相等** ✓✓
+**§2 A2 ✓**：$$\boxed{v_\lambda=\tfrac w{\sin w}\cos(2wx)>0}\ (\lambda\le1)$$ ⟹ 锥不排斥候选 ✓✓✓
+**§3 A3 ⚠️**：偶归约须 $Q(v_o)\ge0$；奇共振点 $\lambda=\frac{(2k+1)\pi}{\sqrt2}$（域外）失效 ⟹ 全局性不得依赖偶归约 ✓✓
+**§4 ⚠️⚠️ A4 缺口**：四条独立推导 ⟹ $$\boxed{Kv_\lambda=-\tfrac1{\lambda^2}v_\lambda,\ \mu=-\tfrac1{\lambda^2}<0}$$ ⟹ $K$ 非正定 ⟹ **严格凸性论证不适用** ⟹ 全局性未闭合 ✓✓✓
+**§5 判词**：**GAP** ⟹ 0.67250 暂不可标"链内已证 ceiling" ✓✓
+**§6 边界**：`AdmWindow` 未取到；两项四分类为初判；不声称 LIVE／GAP 确证；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
