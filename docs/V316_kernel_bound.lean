@@ -905,3 +905,27 @@ theorem vStar_EL_ae (lam : ℝ) (h0 : 0 < lam) :
   exact h1
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-4a-i**：`h · v_λ` 可积 —— 由 `|cos| ≤ 1` 支配 `h`（`h ∈ L¹` 来自 ④-1a）。 -/
+theorem integrable_h_mul_cos {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    Integrable (fun s : ℝ => h s * Real.cos (Real.sqrt 2 * lam * s)) Irest := by
+  have h1 : Integrable h Irest := integrable_of_continuousOn_Icc' hh
+  refine h1.abs.mono' ?_ ?_
+  · exact h1.aestronglyMeasurable.mul
+      ((by fun_prop : Continuous fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)).aestronglyMeasurable)
+  · filter_upwards with s
+    rw [Real.norm_eq_abs, abs_mul]
+    calc |h s| * |Real.cos (Real.sqrt 2 * lam * s)| ≤ |h s| * 1 :=
+          mul_le_mul_of_nonneg_left (Real.abs_cos_le_one _) (abs_nonneg _)
+      _ = |h s| := mul_one _
+
+/-- **④-4a-ii**：`D_λ · h` 可积 —— 常数倍。 -/
+theorem integrable_const_mul_h {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    Integrable (fun s : ℝ => vStarELConst lam * h s) Irest :=
+  (integrable_of_continuousOn_Icc' hh).const_mul (vStarELConst lam)
+
+end Zeta23.ThmD.V316
