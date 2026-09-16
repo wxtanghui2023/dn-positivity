@@ -1,17 +1,12 @@
 /-
-V316 `kernel_bound` 第一块：|B v| ≤ 1/2 ∫v²，拆成三层（唐先生 2026-09-16 14:22 指令）
-  kernel_mass  : ∀ s ∈ I, ∫ t in I, |s − t| ≤ 1/2
-  schur_L2     : ∬ |s−t| |v s| |v t| ≤ (1/2) ∫ v²
-  kernel_bound : |B v| ≤ (1/2) ∫ v²
-数学路线（避免抽象 Schur 算子理论）：
-  (a) m(s) := ∫_I |s−t| dt = s² + 1/4 ≤ 1/2   （kernel_mass）
-  (b) AM–GM: |v s| |v t| ≤ (v s² + v t²)/2
-  (c) Tonelli + 对称性: ∬|s−t||vs||vt| ≤ ∬|s−t|(vs²+vt²)/2 = ∫ vs² m(s) ds ≤ (1/2)∫v²
-本文件为**首块编译测试**，只求编译通过。
+V316 `kernel_bound` 第一层：`kernel_mass`。
+数学路线：
+  (i)  点态  |s − t| ≤ 1/2 − 2 s t  （s,t ∈ [−1/2,1/2]，角点取等）
+  (ii) ∫_{−1/2}^{1/2} t dt = 0      （对称性，用 integral_comp_neg）
+  (iii) 故 ∫|s−t| ≤ ∫(1/2 − 2st) = 1/2
 -/
-import Mathlib.MeasureTheory.Integral.IntervalIntegral
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
 
 open MeasureTheory Set intervalIntegral
 open scoped Real
@@ -20,45 +15,71 @@ noncomputable section
 
 namespace Zeta23.ThmD.V316
 
-/-- 区间 I := [−1/2, 1/2]。 -/
 def Icc' : Set ℝ := Set.Icc (-(1 / 2 : ℝ)) (1 / 2)
 
-/-- **(kernel_mass)** 核算子的行质量：对 `s ∈ [−1/2,1/2]`，`∫_t |s−t| ≤ 1/2`。
-证明：`∫_{−1/2}^{1/2}|s−t|dt = s² + 1/4 ≤ 1/2`（用 `|s| ≤ 1/2` 得 `s² ≤ 1/4`）。 -/
+/-- 双线性版：`s - t + 2 s t ≤ 1/2`（盒约束下）。 -/
+lemma bilin_le {s t : ℝ} (hs1 : -(1 / 2 : ℝ) ≤ s) (hs2 : s ≤ 1 / 2)
+    (ht1 : -(1 / 2 : ℝ) ≤ t) (ht2 : t ≤ 1 / 2) : s - t + 2 * s * t ≤ 1 / 2 := by
+  by_cases ht : 0 ≤ t
+  · have h2s : 2 * s - 1 ≤ 0 := by linarith
+    have hmul : t * (2 * s - 1) ≤ 0 := mul_nonpos_of_nonneg_of_nonpos ht h2s
+    nlinarith [hmul]
+  · have htneg : t < 0 := lt_of_not_ge ht
+    have hu2 : -t ≤ 1 / 2 := by linarith
+    have h1m : 0 ≤ 1 - 2 * s := by linarith
+    have hmul : (-t) * (1 - 2 * s) ≤ (1 / 2) * (1 - 2 * s) :=
+      mul_le_mul_of_nonneg_right hu2 h1m
+    nlinarith [hmul]
+
+/-- 点态不等式：`|s − t| ≤ 1/2 − 2 s t`。 -/
+lemma abs_sub_le_half_sub_two_mul {s t : ℝ} (hs : |s| ≤ 1 / 2) (ht : |t| ≤ 1 / 2) :
+    |s - t| ≤ 1 / 2 - 2 * s * t := by
+  have hs' : -(1 / 2 : ℝ) ≤ s ∧ s ≤ 1 / 2 := by rw [abs_le] at hs; exact hs
+  have ht' : -(1 / 2 : ℝ) ≤ t ∧ t ≤ 1 / 2 := by rw [abs_le] at ht; exact ht
+  rw [abs_le]
+  constructor
+  · have h := bilin_le ht'.1 ht'.2 hs'.1 hs'.2
+    linarith
+  · have h := bilin_le hs'.1 hs'.2 ht'.1 ht'.2
+    linarith
+
+/-- `∫_{-1/2}^{1/2} t dt = 0`。 -/
+lemma integral_self_zero : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), t = 0 := by
+  have h : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), t
+      = ∫ t in (-(1 / 2 : ℝ))..(1 / 2), (-t) := by
+    rw [intervalIntegral.integral_comp_neg (f := fun t : ℝ => t)]
+    norm_num
+  rw [intervalIntegral.integral_neg] at h
+  linarith
+
+/-- **(kernel_mass)**：`∀ s ∈ [−1/2,1/2]，∫_t |s − t| ≤ 1/2`。 -/
 theorem kernel_mass {s : ℝ} (hs : s ∈ Icc') :
     ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t| ≤ 1 / 2 := by
   have hs' : |s| ≤ 1 / 2 := by
     rcases hs with ⟨h1, h2⟩
     rw [abs_le]
     exact ⟨h1, h2⟩
-  -- 先证积分值 = s^2 + 1/4
-  have hsplit : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t|
-      = ∫ t in (-(1 / 2 : ℝ))..s, (s - t) + ∫ t in s..(1 / 2), (t - s) := by
-    rw [← intervalIntegral.integral_add_adjacent_intervals (c := s)]
-    · refine intervalIntegral.integral_congr fun t ht => ?_
-      rcases ht with ⟨ht1, ht2⟩
-      rw [abs_of_nonneg]
-      linarith
-    · refine intervalIntegral.integral_congr fun t ht => ?_
-      rcases ht with ⟨ht1, ht2⟩
-      rw [abs_of_nonpos]
-      · ring
-      · linarith
-  have h1 : ∫ t in (-(1 / 2 : ℝ))..s, (s - t) = (s + 1 / 2) ^ 2 / 2 := by
-    have h : ∀ t : ℝ, s - t = -(t - s) := fun t => by ring
-    simp only [h]
-    rw [integral_neg]
-    rw [integral_sub]
-    · simp; ring
-    · exact intervalIntegral.intervalIntegrable_const
-    · exact intervalIntegral.intervalIntegrable_id
-  have h2 : ∫ t in s..(1 / 2), (t - s) = (1 / 2 - s) ^ 2 / 2 := by
-    rw [integral_sub]
-    · simp; ring
-    · exact intervalIntegral.intervalIntegrable_id
-    · exact intervalIntegral.intervalIntegrable_const
-  rw [hsplit, h1, h2]
-  nlinarith [sq_nonneg (s + 1 / 2), sq_nonneg (1 / 2 - s), sq_nonneg s, hs',
-             abs_nonneg s, sq_abs s]
+  have hpt : ∀ t ∈ Icc (-(1 / 2 : ℝ)) (1 / 2), |s - t| ≤ 1 / 2 - 2 * s * t := by
+    intro t ht
+    rw [Set.mem_Icc] at ht
+    exact abs_sub_le_half_sub_two_mul hs' (by rw [abs_le]; exact ⟨ht.1, ht.2⟩)
+  have hcont1 : Continuous fun t : ℝ => |s - t| := by continuity
+  have hcont2 : Continuous fun t : ℝ => 1 / 2 - 2 * s * t := by continuity
+  have hmain : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), |s - t|
+      ≤ ∫ t in (-(1 / 2 : ℝ))..(1 / 2), (1 / 2 - 2 * s * t) :=
+    intervalIntegral.integral_mono_on (a := -(1 / 2 : ℝ)) (b := (1 / 2 : ℝ))
+      (by norm_num) (hcont1.intervalIntegrable _ _) (hcont2.intervalIntegrable _ _) hpt
+  have hval : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), (1 / 2 - 2 * s * t) = 1 / 2 := by
+    have hI1 : IntervalIntegrable (fun _ : ℝ => (1 / 2 : ℝ)) volume (-(1 / 2 : ℝ)) (1 / 2) :=
+      continuous_const.intervalIntegrable _ _
+    have hI2 : IntervalIntegrable (fun t : ℝ => 2 * s * t) volume (-(1 / 2 : ℝ)) (1 / 2) :=
+      (by continuity : Continuous fun t : ℝ => 2 * s * t).intervalIntegrable _ _
+    rw [intervalIntegral.integral_sub hI1 hI2, intervalIntegral.integral_const]
+    have hmul : ∫ t in (-(1 / 2 : ℝ))..(1 / 2), (2 * s * t)
+        = (2 * s) * ∫ t in (-(1 / 2 : ℝ))..(1 / 2), t :=
+      intervalIntegral.integral_const_mul (2 * s) (fun t : ℝ => t)
+    rw [hmul, integral_self_zero]
+    ring
+  linarith [hmain, hval]
 
 end Zeta23.ThmD.V316
