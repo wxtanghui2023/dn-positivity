@@ -102,3 +102,14 @@ $$\boxed{\textbf{V281 判词}：\text{① 勘误 `V280` §3（}\ge2\ \text{素�
 ⑤ ⭐ **缺失输入命名**：类内一个可证 off-line 的 Euler-积成员（或打破 L3）✓
 ⑥ ⚠️ **退化警示**：$\mathcal N=\varnothing$ 时 C0 为"空虚的真" ⟹ 有价值形式须加"真子集 $A_S$"条件 ✓
 ```
+
+---
+
+## §7 ⚠️ 【勘误 T10】（唐先生 2026-09-16 11:26 指出；见 `V282` §0）
+
+$$\textbf{(a) 步 3 漏洞}：\text{本档 §3 步 1–2 定义}\ \pi_S\ \textbf{含 conductor／degree／archimedean};\ \text{而}\ \operatorname{cond}(\chi_q)=q\ne1$$
+$$\qquad ⟹ \pi_S(\mathrm L(s,\chi_q))\ne\pi_S(\zeta) ✗✓\quad\Longrightarrow\ \textbf{本档实际证明的只是"有限局部投影非单射"}，\textbf{不是}\ \text{"同纤维对"} ⚠️$$
+$$\textbf{(b) 诊断降级}：\text{本档 §4 写"C0 卡在 Euler 全局约束本身"}\ \textbf{过强} ✗ ⟹ \text{降级为}：$$
+$$\qquad \boxed{\mathrm{C0}\ \text{当前卡在：}\exists\ \text{Euler-class 内有限局部同纤维},\ \text{其 off-line 状态可不同？}};\quad \mathrm{L3}\ \textbf{是待证命题},\ \text{不是封口前提} ✓✓$$
+$$\textbf{(c) 量词更正}：\mathrm{L3^\star}(S)\ \text{成立} ⟹ \text{该层分离} ⟹ \boxed{\neg\mathrm{FQS}\iff\exists S:\ \mathrm{L3^\star}(S)};\quad \mathrm{FQS}\iff\forall S:\ \text{每层都有同层异状态对} ✓✓$$
+$$\textbf{(d) 后续}：\text{分层审计见}\ `V282`\ \text{（E1–E5）：E1／E2 ⟹ $\mathrm{L3^\star}$ 假（Beurling，但非算术）／level 1 ⟹ 真而平凡（Hamburger）／其余 ⟹ 未决（GRH 型）} ✓✓✓$$
