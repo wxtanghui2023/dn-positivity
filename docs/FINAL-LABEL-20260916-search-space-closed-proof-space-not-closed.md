@@ -53,3 +53,11 @@ $$\qquad\text{(c) "三副面孔一堵墙"}\ ——\ \text{说明}\ \textbf{只�
 $$\qquad\text{(d) 负空间测绘}\ ——\ \textbf{不再重复投入} \text{（工具，非结论）}.$$
 $$\textbf{墙的正面表述（可攻靶）}：\ \lambda>1\ (=\ \textbf{无条件支撑}>1)\ \text{＝把}\ \textbf{大值／均值估计的无条件有效范围} \text{推过当前阈值}$$
 $$\qquad\text{且}\ \textbf{该墙会移动}：\ \text{GM 通过改进 Dirichlet 多项式大值估计改进了密度指数} \Longrightarrow \text{墙＝}\textbf{前沿}，\ \text{非死墙}✓$$
+
+---
+
+## 【状态更正】（2026-09-16 19:44，唐先生裁定猎-3 冻结）
+$$\text{本档 §"SEARCH-SPACE：CLOSED"}\ \textbf{已被取代}：$$
+$$\qquad\Longrightarrow\ \boxed{\text{SEARCH-SPACE：}\ \textbf{继续开放}}$$
+$$\text{理由}：\text{墙 A（mollifier 非对角／Kloosterman 结构）}\ \textbf{活着且有历史推进记录} \Longrightarrow \text{"无入口"判断不成立}✓$$
+$$\text{详据}：\text{REVIEW-20260916-from-one-wall-to-three-mechanism-classes.md §2。}$$
