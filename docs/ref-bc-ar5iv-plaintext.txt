@@ -1,0 +1,808 @@
+ 
+ [1502.00769] Trilinear forms with Kloosterman fractions 
+ function detectColorScheme(){
+ var theme="light";
+ var current_theme = localStorage.getItem("ar5iv_theme");
+ if(current_theme){
+ if(current_theme == "dark"){
+ theme = "dark";
+ } }
+ else if(!window.matchMedia) { return false; }
+ else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+ theme = "dark"; }
+ if (theme=="dark") {
+ document.documentElement.setAttribute("data-theme", "dark");
+ } else {
+ document.documentElement.setAttribute("data-theme", "light"); } }
+ detectColorScheme();
+ function toggleColorScheme(){
+ var current_theme = localStorage.getItem("ar5iv_theme");
+ if (current_theme) {
+ if (current_theme == "light") {
+ localStorage.setItem("ar5iv_theme", "dark"); }
+ else {
+ localStorage.setItem("ar5iv_theme", "light"); } }
+ else {
+ localStorage.setItem("ar5iv_theme", "dark"); }
+ detectColorScheme(); }
+ Trilinear forms with Kloosterman fractions 
+ Sandro Bettin
+ Vorrapan Chandee
+ Abstract 
+ We give new bounds for $\sum_{{a,m,n}}\alpha_{m}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{a\overline{m}}{n}}}\right)$ where $\alpha_{m}$ , $\beta_{n}$ and $\nu_{a}$ are arbitrary coefficients, improving upon a result of Duke, Friedlander and Iwaniec [ DFI97 ] . We also apply these bounds to problems on representations by determinant equations and on the equidistribution of solutions to linear equations. 
+ 1 Introduction 
+ For $a,b,c$ positive integers, one defines the classical Kloosterman sum as 
+ $\begin{split}S(a,b;c):=\operatornamewithlimits{\sum\nolimits^{*}}_{x\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ c}}\right)}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{a\overline{x}+bx}{c}}}\right)\end{split}$ 
+ where, as usual, $\overline{x}$ denotes the multiplicative inverse of $x$ modulo the denominator $c$ , $\operatornamewithlimits{\sum\nolimits^{*}}$ denotes a sum over the reduced residues modulo $c$ , and $\operatorname{e}\mathopen{}\mathclose{{\left(x}}\right):=e^{2\pi ix}$ . 
+ Several important results in number theory have been obtained by using bounds for single Kloosterman sums such as Weil’s bound, $S(a,b,c)\ll(a,b,c)^{\frac{1}{2}}c^{\frac{1}{2}+\varepsilon}$ , or, more recently, for averages of Kloosterman sums, in particular the bounds of Deshouillers and Iwaniec [ DI ] . 
+ The results of [ DI ] are particularly efficient when considering averages of $S(a,b,c)$ with weights $f(a,b,c)$ that are smooth or have at least some special structure.
+For many applications, however, one would like to have non-trivial bounds in the case of arbitrary weights and such bounds would be useful also when the coefficients have arithmetic/geometric nature, but have conductor which is too large to be able to employ the extra information. 
+ In the beautiful paper [ DFI97 ] , Duke, Friedlander and Iwaniec addressed this problem, obtaining a non-trivial bound for the following “bilinear form with Kloosterman fractions”: 
+ $\begin{split}\mathcal{B}_{a}(M,N):=\operatorname*{\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\alpha_{m}\beta_{n}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{a\overline{m}}{n}}}\right),\end{split}$ 
+ where $\alpha_{m},\beta_{n}$ are arbitrary coefficients supported on $\mathcal{M}:=[M/2,M]$ and $\mathcal{N}:=[N/2,N]$ respectively, and $a\neq 0$ . The main result of [ DFI97 ] is the bound 
+ $\begin{split}\mathcal{B}_{a}(M,N)&\ll\|\alpha\|\|\beta\|(a+MN)^{\frac{3}{8}}(M+N)^{\frac{11}{48}+\varepsilon},\end{split}$ 
+ (1.1) 
+ where $\|\cdot\|$ denotes the $L^{2}$ -norm. Notice that, in the important case $M\approx N$ , $a\ll MN$ , the bound in ( 1.1 ) saves roughly a power of $N^{\frac{1}{48}}$ over the trivial bound $\mathcal{B}_{a}(M,N)\ll\|\alpha\|\|\beta\|(MN)^{\frac{1}{2}}$ . In this paper, we refine the arguments of Duke, Friedlander and Iwaniec and improve upon their bound, obtaining a saving of $N^{\frac{1}{20}}$ when $M\approx N$ , $a\ll MN$ . More generally, we consider the case when an extra average over $a$ is introduced, as this often appears in applications. We then provide a new bound for sums of the form 
+ $\begin{split}\mathcal{B}(M,N,A):=\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a\in\mathcal{A},m\in\mathcal{M},n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\alpha_{m}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{n}}}\right),\end{split}$ 
+ where $\nu_{a}$ are arbitrary coefficients supported on $\mathcal{A}:=[A/2,A]$ and $\vartheta\neq 0$ . 
+ Theorem 1 . 
+ Let $\vartheta\neq 0$ . Then 
+ $\begin{split}\mathcal{B}(M,N,A)&\ll\|\alpha\|\|\beta\|\|\nu\|\Big(1+\frac{|\vartheta|A}{MN}\Big)^{\frac{1}{2}}\\
+&\hskip 1.00006pt\times\hskip-2.5pt\mathopen{}\mathclose{{\left((AMN)^{\frac{7}{20}+\varepsilon}(M+N)^{\frac{1}{4}}+(AMN)^{\frac{3}{8}+\varepsilon}(AN+AM)^{\frac{1}{8}}}}\right).\end{split}$ 
+ (1.2) 
+ Notice that when $|\vartheta|A\ll MN$ and $M\approx N$ , the above bound improves the trivial bound $\mathcal{B}(M,N,A)\ll\|\alpha\|\|\beta\|\|\nu\|(AMN)^{\frac{1}{2}}$ by roughly $\min(A^{\frac{3}{20}}N^{\frac{1}{20}},N^{\frac{1}{8}}$ ). 
+ Remark 1 . 
+ One can perturb slightly the argument of the exponential function and still get the same bound. Indeed, if $f_{a,\vartheta}(x,y)\in\mathcal{C}^{1}(\mathbb{R}^{2})$ is such that 
+ $\begin{split}\frac{\partial}{\partial x}f_{a,\vartheta}(x,y)\ll\frac{X}{x^{2}y},\qquad\frac{\partial}{\partial y}f_{a,\vartheta}(x,y)\ll\frac{X}{xy^{2}},\qquad\forall x\in\mathcal{N},\forall y\in\mathcal{M}\end{split}$ 
+ (1.3) 
+ for some $X>1$ and any $a,\vartheta$ , then when $\theta\neq 0$ we have that 
+ $\begin{split}\mathcal{B}_{f}(M,N,A)&:=\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},n\in\mathcal{N}a\in\mathcal{A},\ (m,n)=1\end{subarray}}\alpha_{m}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{n}+f_{a,\vartheta}(m,n)}}\right)\end{split}$ 
+ satisfies the same bound ( 1.2 ) of $\mathcal{B}(M,N,A)$ provided that the factor $(1+{|\vartheta|A}/({MN}))^{\frac{1}{2}}$ is replaced by $(1+(|\vartheta|A+X)/({MN}))^{\frac{1}{2}}$ . 
+ Our main motivation for this paper concerns the second moment of the Riemann zeta-function times an arbitrary Dirichlet polynomial, 
+ $\begin{split}I:=\int_{\mathbb{R}}\mathopen{}\mathclose{{\left|\zeta(\tfrac{1}{2}+it)A(\tfrac{1}{2}+it)}}\right|^{2}\Phi\mathopen{}\mathclose{{\left(t/{T}}}\right)\,dt,\end{split}$ 
+ where $\Phi(x)$ is a test function (supported on $[1,2]$ , say) and $A(s):=\sum_{n\leq T^{\theta}}\frac{a_{n}}{n^{s}}$ with $a_{n}$ arbitrary coefficients with $a_{n}\ll n^{\varepsilon}$ . Balasubramanian, Conrey and Heath-Brown [ BCH ] computed the asymptotic for $I$ when $\theta 1.1 ) and the stronger Theorem 1 provide such non-trivial bounds, and so, in a joint work with Radziwiłł [ BCR ] , we were able to compute the asymptotic for $I$ for $\theta 1.1 ) would have given the same result on the smaller range $\theta 
+ The flexibility of Theorem 1 makes it feasible to be applied to a wide class of problems in number theory. Moreover, the strength of the new bound is now competitive even in some cases when one knows and could potentially employ some information on the coefficients. 
+ We also give two easy applications of Theorem 1 . One could use the new bound also to improve some results proved using ( 1.1 ) (e.g. [ DFI12 ] and [ BS ] ) or, possibly, to sharpen sub-convexity bounds for automorphic $L$ -functions (see [ DFI02 ] ) or to handle sums such as those considered by Fouvry [ Fou ] and Bombieri, Friedlander and Iwaniec [ BFI ] . 
+ The first corollary deals with representations by determinant equations and improves the main result of [ DFI95 ] , whereas the second concerns with the equidistribution of solutions to linear equations and improves upon a theorem of Shparlinski [ Shp ] . 
+ Corollary 1 . 
+ Let $\Delta\neq 0$ and let 
+ $\begin{split}\mathcal{T}(M_{1},M_{2},N_{1},N_{2}):=\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}m_{1}\in\mathcal{M}_{1},m_{2}\in\mathcal{M}_{2},n_{1}\in\mathcal{N}_{1},n_{2}\in\mathcal{N}_{2},\\
+m_{1}n_{2}-m_{2}n_{1}=\Delta\end{subarray}}f(m_{1})g(m_{2})\alpha_{n_{1}}\beta_{n_{2}},\end{split}$ 
+ where $f(m_{1})$ , $g(m_{2})$ , $\alpha_{n_{1}}$ and $\beta_{n_{2}}$ are supported on $\mathcal{M}_{1}:=[M_{1}/2,M_{1}]$ , $\mathcal{M}_{2}:=[M_{2}/2,M_{2}]$ , $\mathcal{N}_{1}:=[N_{1}/2,N_{1}]$ and $\mathcal{N}_{2}:=[N_{2}/2,N_{2}]$ respectively. Moreover, assume
+ $f^{(j)}\ll\eta^{j}M_{1}^{-j},g^{(j)}\ll\eta^{j}M_{2}^{-j}$ , for all $j\geq 0$ and some $\eta>1$ . Then 
+ $\begin{split}\mathcal{T}(M_{1},M_{2},N_{1},N_{2})&=\sum_{\begin{subarray}{c}n_{1}\in\mathcal{N}_{1},n_{2}\in\mathcal{N}_{2},\\
+(n_{1},n_{2})|\Delta\end{subarray}}\frac{(n_{1},n_{2})}{n_{1}n_{2}}\alpha_{n_{1}}\beta_{n_{2}}\int_{\mathbb{R}}f\mathopen{}\mathclose{{\left(\frac{x+\Delta}{n_{2}}}}\right)g\mathopen{}\mathclose{{\left(\frac{x}{n_{1}}}}\right)\,dx\\
+&\quad+O\bigg((\eta R)^{\frac{3}{2}}\|\alpha\|\|\beta\|(N_{1}N_{2})^{\frac{7}{20}}(N_{1}+N_{2})^{\frac{1}{4}+\varepsilon}(M_{1}M_{2})^{\varepsilon}\bigg),\end{split}$ 
+ (1.4) 
+ where $R:=\frac{M_{1}N_{2}}{M_{2}N_{1}}+\frac{M_{2}N_{1}}{M_{1}N_{2}}$ . 
+ For comparison, Duke, Friedlander and Iwaniec [ DFI95 ] obtained the same result with the error term 
+ $\begin{split}O\Big((\eta R)^{\frac{19}{8}}\|\alpha\|\|\beta\|(N_{1}N_{2})^{\frac{3}{8}}(N_{1}+N_{2})^{\frac{11}{48}+\varepsilon}(M_{1}M_{2})^{\varepsilon}\Big).\end{split}$ 
+ We remark that one can use Theorem 1 to obtain stronger results when averaging over $\Delta$ (cf. [ BCR ] ). 
+ Corollary 2 . 
+ For any positive coprime integers $m,n$ , let $\rho_{m,n}:=\frac{a_{0}}{m}$ where $(a_{0},b_{0})$ is the smallest positive solution to $am-bn=1$ . For any set of integers $\mathcal{X}_{N}\subseteq[0,N]$ , let $\mathcal{R}_{\mathcal{X}_{N}}:=\mathopen{}\mathclose{{\left\{\rho_{m,n}\mid m,n\in\mathcal{X}_{N}}}\right\}$ . Then, if $\mathcal{X}_{N}$ has cardinality $|\mathcal{X}_{N}|\gg N^{1-\frac{1}{20}}$ for some $\varepsilon>0$ , then the set $\mathcal{R}_{\mathcal{X}_{N}}$ is equidistributed on the interval $[0,1]$ as $N\rightarrow\infty$ . 
+ Shparlinski obtained the same result with $\frac{1}{20}$ replaced by $\frac{1}{48}$ . We skip the proof of this corollary as it can be obtained in a straightforward manner by proceeding as in [ Shp ] , using ( 1.2 ) instead of ( 1.1 ). 
+ As observed in [ DFI97 ] , a variation of the arguments used to bound $\mathcal{B}(M,N,A)$ can be used to treat the twisted sum 
+ $\begin{split}\mathscr{A}(M,N,A):=\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a\in\mathcal{A},m\in\mathcal{M},n\in\mathcal{N},\\
+(m,n)=(2,mn)=1\end{subarray}}\alpha_{m}\beta_{n}\nu_{a}\mathopen{}\mathclose{{\left(\frac{m}{n}}}\right)\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{n}}}\right),\end{split}$ 
+ where $\mathopen{}\mathclose{{\left(\frac{\cdot}{\cdot}}}\right)$ is the Jacobi symbol. We thus conclude the introduction with the analogue of Theorem 1 for $\mathscr{A}(M,N,A)$ . 
+ Theorem 2 . 
+ Let $\vartheta\neq 0$ . Then 
+ $\begin{split}\mathscr{A}(M,N,A)&\ll\|\alpha\|\|\beta\|\|\nu\|\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}\\
+&\quad\times\big((MN)^{\frac{3}{10}}(AM+AN)^{\frac{7}{20}+\varepsilon}+A^{\frac{1}{2}}(N+M)^{\frac{7}{8}+\varepsilon}\big).\end{split}$ 
+ (1.5) 
+ Acknowledgements .
+We would like to thank S. Drappeau, A. Harper, D. Koukoulopoulos, X. Li and M. Radziwiłł for useful discussions and M.B. Milinovich and N. Ng for bringing the paper [ DFI97 ] to our attention. 
+ 2 Outline of the proof of Theorem 1 
+ Our proof has roughly the same structure of Duke, Friedlander and Iwaniec’s proof of ( 1.1 ) and follows their clever application of the amplification method. However we introduce several refinements in their arguments, among which is particularly important the fact that we keep a longer diagonal when using the Cauchy-Schwartz inequality (a possibility mentioned in [ DFI97 ] ). This change, together with the extra average over $a$ , introduces new subtle complications and requires a rather careful analysis. 
+ We now give an outline of the proof of Theorem 1 . The proof of Theorem 2 is very similar and the required changes are described in Section 8 . 
+ First, we notice that we can assume that $\beta_{n}$ is supported on integers coprime to $\vartheta$ , as can be seen by pulling out the common factor between $n$ and $\vartheta$ and applying the Cauchy-Schwarz inequality.
+Then, following [ DFI97 ] , we
+apply the Cauchy-Schwarz inequality to the sum over $m$ and obtain that 
+ $\begin{split}\mathcal{B}(M,N,A)\ll\|\alpha\|\mathcal{C}_{1}(M,N,A;\beta,\nu)^{\frac{1}{2}},\end{split}$ 
+ (2.1) 
+ where for any positive integer $b$ , 
+ $\begin{split}\mathcal{C}_{b}(M,N,A;\beta,\nu):=\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b)=1\end{subarray}}\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A}\end{subarray}}\sum_{\begin{subarray}{c}n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{bn}}}\right)\bigg|^{2}.\end{split}$ 
+ At this point, we assume that $\beta_{n}$ is supported on square-free integers coprime to $b$ and that $(\vartheta,b)=1$ . We will first give a bound for $\mathcal{C}_{b}$ in this case and in Section 6 we will use the freedom given by the parameter $b$ to obtain a bound for $\mathcal{C}_{1}$ valid in the general case. 
+ We introduce an amplifier and consider the sum $\mathcal{D}_{b}(M,N,A,L;\beta,\nu)$ 
+defined by 
+ $\begin{split}\mathcal{D}_{b}:=\!\!\!\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b)=1\end{subarray}}\frac{1}{\varphi(m)}\sum_{\chi\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right)}\hskip-3.99994pt\big|\!\sum_{\begin{subarray}{c}\ell\in\mathcal{L},\\
+(\ell,\vartheta b)=1\end{subarray}}\hskip-3.99994pt\chi(\ell)\big|^{2}\bigg|\operatorname*{\sum\sum}_{\begin{subarray}{c}n\in\mathcal{N},a\in\mathcal{A},\\
+(m,n)=1\end{subarray}}\chi(n)\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{bn}}}\right)\bigg|^{2},\end{split}$ 
+ where $\mathcal{L}:=\{\ell\ \textrm{is prime}\ |\ L 2\log(b\vartheta M)$ , then 
+ $\begin{split}\sum_{\ell\in\mathcal{L},\ (\ell,\vartheta b)=1}\chi_{0}(\ell)\gg\frac{L}{\log L},\end{split}$ 
+ where $\chi_{0}$ is the principal character modulo $m$ . Thus, 
+ $\begin{split}\mathcal{C}_{b}&\ll\frac{M\log^{2}L}{L^{2}}\hskip-1.99997pt\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b)=1\end{subarray}}\frac{1}{\varphi(m)}\bigg|\sum_{\begin{subarray}{c}(\ell,\vartheta b)=1,\\
+\ell\in\mathcal{L}\end{subarray}}\chi_{0}(\ell)\bigg|^{2}\bigg|\hskip-3.99994pt\sum_{\begin{subarray}{c}n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\sum_{a\in\mathcal{A}}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a\overline{m}}{bn}}}\right)\bigg|^{2}\\
+&\ll{ML^{-2+\varepsilon}}\mathcal{D}_{b}(M,N,A,L;\beta,\nu),\end{split}$ 
+ (2.2) 
+ provided that $L>2\log(b\vartheta M)$ . Thus, we have reduced the problem of bounding $\mathcal{C}_{b}$ to that of bounding the more flexible $\mathcal{D}_{b}$ . Squaring out and exploiting the orthogonality relation of character sums, we obtain 
+ $\displaystyle\mathcal{D}_{b}(M,N,A;\beta,\nu)$ 
+ $\displaystyle=\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A},\ell_{1},\ell_{2}\in\mathcal{L},\\
+(mb\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=(m,b)=1,\\
+\ell_{1}n_{1}\equiv\ell_{2}n_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right)\end{subarray}}\beta_{n_{1}}\nu_{a_{1}}\overline{\beta_{n_{2}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a_{1}\overline{m}}{bn_{1}}-\vartheta\frac{a_{2}\overline{m}}{bn_{2}}}}\right)$ 
+ $\displaystyle=\mathscr{D}_{b}(M,N,A,L;\beta,\nu)+\mathscr{O}_{b}(M,N,A,L;\beta,\nu),$ 
+ (2.3) 
+ where $\mathscr{D}_{b}$ is the contribution to $\mathcal{D}_{b}$ from the “diagonal terms” $\ell_{1}n_{1}=\ell_{2}n_{2}$ , and $\mathscr{O}_{b}$ is the sum restricted to the “off-diagonal” terms $\ell_{1}n_{1}\neq\ell_{2}n_{2}.$ 
+ We bound $\mathscr{D}_{b}$ in Section 3 by using Weil’s bound (and thus the name “diagonal terms” is perhaps misleading in this case), treating it differently from [ DFI97 ] where $\mathscr{D}_{b}$ is bounded trivially. 
+ The treatment of $\mathscr{O}_{b}$ is performed in Section 4 and the argument proceeds roughly this way: 
+ • 
+ In Section 4.1.1 , we switch to the complementary divisor $d$ of the congruence relation $\ell_{1}n_{1}\equiv\ell_{2}n_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right)$ , eliminating the variable $m$ . This also requires that we first split the sum over $m$ into certain congruence classes. 
+ • 
+ In Section 4.1.2 , we apply the Cauchy-Schwarz inequality to the sums over $n_{1},n_{2},a_{2}$ but not to the sums over $d,a_{1},\ell_{1},\ell_{2}$ . As a comparison, in [ DFI97 ] the Cauchy-Schwarz inequality is applied to all the sums except those over $\ell_{1}$ and $\ell_{2}$ . 
+ • 
+ In Section 4.1.3.2 , we apply the elementary reciprocity law ( 4.17 ), which roughly allows one to change $\frac{\overline{\alpha}}{\beta}$ into $-\frac{\overline{\beta}}{\alpha}$ modulo 1, and so we arrive to an expression involving a sum of the form $\sum_{n_{2}}\operatorname{e}(\Delta\frac{\overline{n_{2}}}{\ell_{1}\ell_{1}^{\prime}n_{1}})$ . We then use Weil’s bound when $\Delta\neq 0$ and a trivial estimation when $\Delta=0$ . 
+ When following the above steps, several complications arise when some of the variables are not pairwise coprime. Typically, we first deal with the case when the variables are coprime and then we remove these assumptions by using the bounds proved in the coprime case. 
+ In Section 5 we combine the bounds obtained for the diagonal and off-diagonal terms, and we optimize the parameter $L$ . Finally, in Section 6 we remove the square-free condition on $\beta_{n}$ , and in Section 7 we deduce Theorem 1 . 
+ As mentioned above, we conclude the paper by explaining, in Section 8 , the modifications needed in the above arguments to prove Theorem 2 and, in Section 9 , we give a proof to Corollary 1 . 
+ Remark . 
+ Throughout the paper, we use the common convention in analytic number theory that $\varepsilon$ denotes an arbitrarily small positive quantity that may vary from line to line. 
+ 3 The diagonal terms 
+ In this section we bound the diagonal terms $\mathscr{D}_{b}:=\mathscr{D}_{b}(M,N,A,L;\beta,\nu)$ . As mentioned in Section 2 , we assume that $(\vartheta,b)=1$ and that $\beta_{n}$ is supported on square-free integers which are coprime to $b$ . For convenience of notation, we will also assume that $A,b,\vartheta,N\ll M^{C}$ for some constant $C>0$ . We will remove these assumptions at the end of the argument. 
+ By symmetry and the inequality $2|ab|\leq a^{2}+b^{2}$ , we see that the diagonal terms are bounded by 
+ $\displaystyle\mathscr{D}_{b}$ 
+ $\displaystyle:=\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},\ell_{1},\ell_{2}\in\mathcal{L},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A}\\
+(mb\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=(m,b)=1,\ \ell_{1}n_{1}=\ell_{2}n_{2}\end{subarray}}\nu_{a_{1}}\overline{\nu_{a_{2}}}\beta_{n_{1}}\overline{\beta}_{n_{2}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a_{1}\overline{m}}{bn_{1}}-\vartheta\frac{a_{2}\overline{m}}{bn_{2}}}}\right)$ 
+ $\displaystyle\leq\operatorname*{\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A}\\
+(b\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=1,\ \ell_{1}n_{1}=\ell_{2}n_{2}\end{subarray}}(|\beta_{n_{1}}\nu_{a_{1}}|^{2}+|\beta_{n_{2}}\nu_{a_{2}}|^{2})\times$ 
+ $\displaystyle\hskip 130.0002pt\times\bigg|\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b\ell_{1}\ell_{2}n_{1}n_{2})=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a_{1}\ell_{1}\overline{m}}{b\ell_{1}n_{1}}-\vartheta\frac{a_{2}\ell_{2}\overline{m}}{b\ell_{2}n_{2}}}}\right)\bigg|$ 
+ $\displaystyle\ll\operatorname*{\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A}\\
+(b\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=1,\ \ell_{1}n_{1}=\ell_{2}n_{2}\end{subarray}}|\beta_{n_{1}}\nu_{a_{1}}|^{2}\bigg|\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b\ell_{1}\ell_{2}n_{1}n_{2})=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{(a_{1}\ell_{1}-a_{2}\ell_{2})\overline{m}}{b\ell_{1}n_{1}}}}\right)\bigg|.$ 
+ For the terms satisfying $a_{1}\ell_{1}\neq a_{2}\ell_{2}$ we use the version of Weil’s bound given in Lemma 1 , in the appendix. We obtain 
+ $\begin{split}\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b\ell_{1}\ell_{2}n_{1}n_{2})=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{(a_{1}\ell_{1}-a_{2}\ell_{2})\overline{m}}{b\ell_{1}n_{1}}}}\right)\ll(bLN)^{\frac{1}{2}+\varepsilon}+(a_{1}\ell_{1}-a_{2}\ell_{2},bn_{1}\ell_{1})\frac{M^{1+\varepsilon}}{bLN},\end{split}$ 
+ since $(\vartheta,b\ell_{1}n_{2})=1$ .
+It follows that the contribution to $\mathscr{D}_{b}$ coming from these terms is bounded by 
+ $\begin{split}&\ll\operatorname*{\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},n_{1}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A},\ \ \ell_{2}|\ell_{1}n_{1}\end{subarray}}|\beta_{n_{1}}\nu_{a_{1}}|^{2}(bLN)^{\frac{1}{2}+\varepsilon}+{}\\
+&\quad+\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}n_{1}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A}\end{subarray}}|\beta_{n_{1}}\nu_{a_{1}}|^{2}\frac{M^{1+\varepsilon}}{bLN}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\\
+a_{1}\ell_{1}\neq a_{2}\ell_{2},\,\ell_{2}|\ell_{1}n_{1}\end{subarray}}(a_{1}\ell_{1}-a_{2}\ell_{2},bn_{1})(a_{2}\ell_{2},\ell_{1})\\
+&\ll\|\beta\|^{2}\|\nu\|^{2}ALM^{\varepsilon}\Big((bLN)^{\frac{1}{2}}+\frac{M}{bN}\Big),\end{split}$ 
+ since 
+ $\begin{split}\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},a_{2},\\
+a_{1}\ell_{1}\neq a_{2}\ell_{2},\ \ell_{2}|\ell_{1}n_{1}\end{subarray}}\hskip-3.99994pt(a_{1}\ell_{1}-a_{2}\ell_{2},bn)&\ll\sum_{\begin{subarray}{c}|c|\leq 4AL,\\
+c\neq 0\end{subarray}}\hskip-1.99997pt(c,bn)\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},a_{2},\\
+a_{1}\ell_{1}-a_{2}\ell_{2}=c,\\
+\ell_{2}|\ell_{1}n_{1}\end{subarray}}(a_{2}\ell_{2},\ell_{1})\\
+&\ll AL^{2}M^{\varepsilon}.\end{split}$ 
+ (3.1) 
+ The contribution to $\mathscr{D}_{b}$ coming from the terms with $a_{1}\ell_{1}=a_{2}\ell_{2}$ is trivially $O(\|\beta\|^{2}\|\nu\|^{2}L^{1+\varepsilon}M)$ , and thus 
+ $\begin{split}\mathscr{D}_{b}(M,N,A,L;\beta,\nu)&\ll\|\beta\|^{2}\|\nu\|^{2}L\Big(A(bLN)^{\frac{1}{2}}+\frac{AM}{bN}+M\Big)M^{\varepsilon}.\end{split}$ 
+ (3.2) 
+ 4 The off-diagonal terms 
+ In this section we bound the off-diagonal terms $\mathscr{O}_{b}(M,N,A,L;\beta,\nu)$ . Again, we have the same assumptions for $\beta_{n},\vartheta,b,A,N$ as in Section 3 . 
+ We start by dividing $\mathscr{O}_{b}$ according to whether $(\ell_{1},\ell_{2})=1$ or not: 
+ $\begin{split}\mathscr{O}_{b}(M,N,A,L;\beta,\nu)&=\mathscr{E}_{b,1}(M,N,A,L;\beta,\nu)+\mathscr{E}_{b,1}^{*}(M,N,A,L;\beta,\nu),\end{split}$ 
+ (4.1) 
+ where, for any $\eta$ satisfying $(\eta,b)=1$ and $(\eta,\ell)=1$ for all $\ell\in\mathcal{L}$ , we define 
+ $\begin{split}\mathscr{E}_{b,\eta}:=\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},m\in\mathcal{M},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A}\\
+(mb\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=(m,b)=(\ell_{1},\ell_{2})=1,\ \eta|m,\\
+\ell_{1}n_{1}\equiv\ell_{2}n_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right),\ \ell_{1}n_{1}\neq\ell_{2}n_{2}\end{subarray}}\hskip-3.00003pt\beta_{n_{1}}\nu_{a_{1}}\overline{\beta_{n_{2}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a_{1}\overline{m}}{bn_{1}}-\vartheta\frac{a_{2}\overline{m}}{bn_{2}}}}\right),\end{split}$ 
+ (4.2) 
+ and $\mathscr{E}^{*}_{b,\eta}(M,N,A,L;\beta,\nu)$ is the same sum with $(\ell_{1},\ell_{2})=1$ replaced by $(\ell_{1},\ell_{2})>1$ . We notice that 
+ $\begin{split}\mathscr{E}^{*}_{b,1}=\sum_{1 
+ (4.3) 
+ where we extended the definition of $\mathscr{E}_{b,\eta}$ to the case where $\mathcal{L}=\{1\}$ . Thus it suffices to bound $\mathscr{E}_{b,\eta}$ . 
+ We introduce some notation: 
+ $\begin{split}n_{1}^{\prime}&:=\frac{n_{1}}{(n_{1},\ell_{1}\ell_{2})}=\frac{n_{1}}{\mathfrak{p}_{1}\mathfrak{p}_{2}},\quad\mathfrak{p}_{2}=(\ell_{2},n_{1}),\quad\mathfrak{p}_{1}=(\ell_{1},n_{1}),\\
+n_{2}^{\prime}&:=\frac{n_{1}}{(n_{2},\ell_{1}\ell_{2})}=\frac{n_{2}}{\mathfrak{q}_{1}\mathfrak{q}_{2}},\quad\mathfrak{q}_{1}=(\ell_{1},n_{2}),\quad\mathfrak{q}_{2}=(\ell_{2},n_{2}),\\
+\end{split}$ 
+ (4.4) 
+ and notice that, for square-free integers $n_{1},n_{2}$ , this automatically gives $(\ell_{1}\ell_{2},n_{1}^{\prime}n_{2}^{\prime})=1$ .
+We also divide $\mathscr{E}_{b,\eta}(M,N,A,L;\beta,\nu)$ further into 
+ $\begin{split}\mathscr{E}_{b,\eta}=\mathscr{S}_{b,\eta}+\mathscr{S}^{*}_{b,\eta},\end{split}$ 
+ (4.5) 
+ where $\mathscr{S}_{b,\eta}$ and $\mathscr{S}^{*}_{b,\eta}$ are obtained by restricting the sums to $(n_{1}^{\prime},n_{2}^{\prime})=1$ and $(n_{1}^{\prime},n_{2}^{\prime})>1$ respectively. 
+ 4.1 The terms with $(n_{1}^{\prime},n_{2}^{\prime})=1$ 
+ In this section we consider the sum 
+ $\begin{split}&\mathscr{S}_{b,\eta}:=\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},n_{1},n_{2}\in\mathcal{N},m\in\mathcal{M},a_{1},a_{2}\in\mathcal{A}\\
+(mb\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=(m,b)=(\ell_{1},\ell_{2})=(n_{1}^{\prime},n_{2}^{\prime})=1\\
+\ell_{1}n_{1}\equiv\ell_{2}n_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right),\ (\ell_{1}\ell_{2},n_{1}^{\prime}n_{2}^{\prime})=1,\\
+\ell_{1}n_{1}\neq\ell_{2}n_{2},\ \eta|m\end{subarray}}\hskip-3.00003pt\beta_{n_{1}}\nu_{a_{1}}\overline{\beta_{n_{2}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{a_{1}\overline{m}}{bn_{1}}-\vartheta\frac{a_{2}\overline{m}}{bn_{2}}}}\right).\end{split}$ 
+ 4.1.1 Introducing the complementary divisor 
+ We wish to switch to the complementary divisor of the congruence condition $\ell_{1}n_{1}\equiv\ell_{2}n_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right)$ (with $\ell_{1}n_{1}\neq\ell_{2}n_{2}$ ), so we write this as 
+ $\begin{split}md_{0}=\ell_{1}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}-\ell_{2}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime},\qquad d_{0}\in\mathbb{Z}_{\neq 0}\end{split}$ 
+ with $\mathfrak{p}_{i},\mathfrak{q}_{i}$ as in ( 4.4 ). We simplify the common factors and rewrite this equality as 
+ $\begin{split}md=\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}-\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\end{split}$ 
+ (4.6) 
+ for $d:={d_{0}}/{\mathfrak{q}_{1}\mathfrak{p}_{2}}$ and 
+ $\begin{split}\tilde{\ell}_{1}:=\frac{\ell_{1}}{\mathfrak{q}_{1}},\quad\tilde{\ell}_{2}:=\frac{\ell_{2}}{\mathfrak{p}_{2}}.\end{split}$ 
+ (4.7) 
+ We notice that the condition $(m,b\ell_{1}\ell_{2}n_{1}n_{2})=1$ can be factored into $(m,b\mathfrak{q}_{1}\mathfrak{p}_{2})\linebreak=1$ and $(m,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1$ . Moreover, for $(\ell_{1}n_{1}^{\prime},\ell_{2}n_{2}^{\prime})=1$ ,
+the conditions $(m,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1$ , $\eta|m$ and ( 4.6 ) can be expressed in the equivalent form 
+ $\displaystyle(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1,$ 
+ $\displaystyle\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ |d|\eta}}\right),$ 
+ $\displaystyle\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\leq D:=3\frac{NL}{M},$ 
+ $\displaystyle n_{2}^{\prime}\in\mathcal{I},$ 
+ for a certain interval $\mathcal{I}:=\mathcal{I}(\ell_{1},\ell_{2},\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},d,n_{2}^{\prime})$ . Thus, to eliminate the variable $m$ , it remains to express the condition $(m,b\mathfrak{q}_{1}\mathfrak{p}_{2})=1$ and the argument of the exponential in terms of the remaining variables. 
+ We do this by dividing the sum over $m$ according to the residue classes $m\equiv c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right)$ for $c\in(\mathbb{Z}/b\mathfrak{q}_{1}\mathfrak{p}_{2}\mathbb{Z})^{*}$ . Thus, using also ( 4.6 ), we obtain that $m$ satisfies the following congruence conditions 
+ $\begin{split}m\equiv\overline{d}\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ \mathfrak{q}_{2}n_{2}^{\prime}}}\right),\hskip 5.0ptm\equiv-\overline{d}\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ \mathfrak{p}_{1}n_{1}^{\prime}}}\right),\hskip 5.0ptm\equiv c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right)\end{split}$ 
+ and the argument of the exponential function 
+ $\begin{split}\vartheta\mathopen{}\mathclose{{\left(\frac{a_{1}\overline{m}}{bn_{1}}-\frac{a_{2}\overline{m}}{bn_{2}}}}\right)=\vartheta\mathopen{}\mathclose{{\left(\frac{a_{1}\overline{m}}{b\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}}-\frac{a_{2}\overline{m}}{b\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}}}\right)\end{split}$ 
+ is congruent modulo 1 to 
+ $\displaystyle\vartheta\bigg(-d\frac{a_{1}\overline{b\mathfrak{p}_{2}\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\mathfrak{p}_{1}n_{1}^{\prime}}-d\frac{a_{2}\overline{\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}b\mathfrak{q}_{1}}}{\mathfrak{q}_{2}n_{2}^{\prime}}+\frac{a_{1}\overline{c\mathfrak{p}_{1}n_{1}^{\prime}}}{b\mathfrak{p}_{2}}-\frac{a_{2}\overline{c\mathfrak{q}_{2}n_{2}^{\prime}}}{b\mathfrak{q}_{1}}\bigg)$ 
+ $\displaystyle\hskip 20.00003pt\equiv\vartheta\bigg(\overline{c}\bigg(\frac{a_{1}\overline{\mathfrak{p}_{1}n_{1}^{\prime}}}{b\mathfrak{p}_{2}}-\frac{a_{2}\overline{\mathfrak{q}_{2}n_{2}^{\prime}}}{b\mathfrak{q}_{1}}\bigg)-d\bigg(\frac{a_{1}\overline{b\mathfrak{p}_{2}\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\mathfrak{p}_{1}n_{1}^{\prime}}+\frac{a_{2}\overline{\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}b\mathfrak{q}_{1}}}{\mathfrak{q}_{2}n_{2}^{\prime}}\bigg)\bigg),$ 
+ (4.8) 
+ since for $(\beta,\gamma)=(\alpha,\beta\gamma)=1$ , we have $\frac{\overline{\alpha}}{\beta\gamma}\equiv\frac{\overline{\alpha\beta}}{\gamma}+\frac{\overline{\alpha\gamma}}{\beta}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ 1}}\right).$ Finally, the conditions $m\equiv c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right)$ and $\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ |d|\eta}}\right)$ can be combined into the equivalent 
+ $\begin{split}\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-c\eta d\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right).\end{split}$ 
+ Thus, 
+ $\begin{split}\mathscr{S}_{b,\eta}&=\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},n_{1},n_{2}\in\mathcal{N},a_{1},a_{2}\in\mathcal{A},d\leq{D}/{\mathfrak{q}_{1}\mathfrak{p}_{2}}\\
+(b\vartheta,\ell_{1}\ell_{2}n_{1}n_{2})=(\ell_{1},\ell_{2})=(n_{1}^{\prime},n_{2}^{\prime})=1,\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=(n_{1}^{\prime}n_{2}^{\prime},\ell_{1}\ell_{2})=1,\ n_{2}^{\prime}\in\mathcal{I},\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\\
+\hskip 12.2917pt\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)\end{subarray}}\beta_{n_{1}}\nu_{a_{1}}\overline{\beta_{n_{2}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\cdots}}\right),\\
+\end{split}$ 
+ where the argument of the exponential is given by ( 4.8 ) and $n_{i}^{\prime},\mathfrak{p}_{i},\mathfrak{q}_{i},\tilde{\ell}_{i}$ are defined in ( 4.4 ) and ( 4.7 ). Now, we treat $\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},n_{1}^{\prime},n_{2}^{\prime}$ as variables and, after switching the order of summation, we have 
+ $\begin{split}\mathscr{S}_{b,\eta}&=\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2}\in\mathcal{L}\cup\{1\},\\
+(b\vartheta\mathfrak{p}_{1}\mathfrak{q}_{1},\mathfrak{p}_{2}\mathfrak{q}_{2})=1,\\
+(b\vartheta,\mathfrak{p}_{1}q_{1})=1\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N},\\
+(b\vartheta,n_{1}^{\prime}n_{2}^{\prime})=1,\\
+(n_{1}^{\prime},n_{2}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1},\,\mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2},\\
+(bn_{1}^{\prime}n_{2}^{\prime}\vartheta,\ell_{1}\ell_{2})=(\ell_{1},\ell_{2})=1,\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\sum_{\begin{subarray}{c}0\neq|d|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1\\
+\ n_{2}^{\prime}\in\mathcal{I}\end{subarray}}\\
+&\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)\end{subarray}}\operatorname*{\sum\sum}_{a_{1},a_{2}\in\mathcal{A}}\beta_{\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}}\nu_{a_{1}}\overline{\beta_{\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\cdots}}\right),\\
+\end{split}$ 
+ with the argument of the exponential still given by ( 4.8 ). 
+ 4.1.2 Applying the Cauchy-Schwarz inequality 
+ Next, we apply the Cauchy-Schwarz inequality with respect to the sums over $\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},n_{1}^{\prime},n_{2}^{\prime},c,a_{2}$ . After squaring out, we get 
+ $\begin{split}&\mathscr{S}_{b,\eta}^{2}\ll M^{\varepsilon}\|\beta\|^{4}\|\nu\|^{2}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2}\in\mathcal{L}\cup\{1\},\\
+\mathfrak{p}_{1}\neq\mathfrak{q}_{1}\Rightarrow 1\in\{\mathfrak{p}_{1},\mathfrak{q}_{1}\},\\
+\mathfrak{p}_{2}\neq\mathfrak{q}_{2}\Rightarrow 1\in\{\mathfrak{p}_{2},\mathfrak{q}_{2}\}\end{subarray}}b\mathfrak{q}_{1}\mathfrak{p}_{2}\mathscr{T}_{b,\eta},\end{split}$ 
+ (4.9) 
+ where $\mathscr{T}_{b,\eta}$ is defined as 
+ $\begin{split}\mathscr{T}_{b,\eta}&:=\operatorname*{\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\\
+(b,n_{1}^{\prime}n_{2}^{\prime})=(n_{1}^{\prime},\vartheta n_{2}^{\prime})=1,\\
+\mu^{2}(n_{1}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\ \mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\\
+(b\vartheta n_{1}^{\prime}n_{2}^{\prime},\ell_{1}\ell_{2}\ell_{1}^{\prime}\ell_{2}^{\prime})=(\ell_{1},\ell_{2})=(\ell_{1}^{\prime},\ell_{2}^{\prime})=1,\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime},\ \tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}0\neq|d|,|d^{\prime}|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1\\
+(d^{\prime},\tilde{\ell}_{1}^{\prime}\tilde{\ell}_{2}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1\\
+\ n_{2}^{\prime}\in\mathcal{I}\cap\mathcal{I}^{\prime}\end{subarray}}\\
+&\quad\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right),\\
+\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}-cd^{\prime}\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d^{\prime}|\eta}}\right)\end{subarray}}\operatorname*{\sum\sum\sum}_{a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A}}\nu_{a_{1}}\overline{\nu_{a_{1}^{\prime}}}\operatorname{e}\mathopen{}\mathclose{{\left(\cdots}}\right),\\
+\end{split}$ 
+ (4.10) 
+ with $\mathcal{I}^{\prime}:=\mathcal{I}(\ell_{1}^{\prime},\ell_{2}^{\prime},\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},d^{\prime},n_{2}^{\prime})$ , $\tilde{\ell}_{1}^{\prime}:=\ell_{1}^{\prime}/{\mathfrak{q}_{1}},\tilde{\ell}_{2}^{\prime}:=\ell_{2}^{\prime}/{\mathfrak{p}_{2}}$ and where we introduced the condition $\mu^{2}(n_{1}^{\prime})=1$ , which was implicit in the previous formulae, and we dropped the condition $(n_{2}^{\prime},\vartheta)=1$ .
+The argument of the exponential is now 
+ $\begin{split}\vartheta\bigg(\overline{c}(a_{1}-a_{1}^{\prime})\frac{\overline{\mathfrak{p}_{1}n_{1}^{\prime}}}{b\mathfrak{p}_{2}}-\frac{(da_{1}{\tilde{\ell}_{2}^{\prime}}-d^{\prime}a_{1}^{\prime}{\tilde{\ell}_{2}})\overline{\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}b\mathfrak{p}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\mathfrak{p}_{1}n_{1}^{\prime}}-\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\overline{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}b\mathfrak{q}_{1}}}{\mathfrak{q}_{2}n_{2}^{\prime}}\bigg).\end{split}$ 
+ (4.11) 
+ We divide the right hand side of ( 4.10 ) into two parts: 
+ $\begin{split}&\mathscr{T}_{b,\eta}=\mathscr{U}_{b,\eta}+\mathscr{U}^{*}_{b,\eta},\end{split}$ 
+ (4.12) 
+ where $\mathscr{U}_{b,\eta}$ is the contribution of the terms with $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1$ . We will bound $\mathscr{U}_{b,\eta}$ in Section 4.1.3 , and in Section 4.1.4 we will explain the modifications needed to bound $\mathscr{U}^{*}_{b,\eta}$ . 
+ 4.1.3 Bounding $\mathscr{U}_{b,\eta}$ : the case $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1$ 
+ We start by dividing $\mathscr{U}_{b,\eta}(M,N,A,\mathcal{L},\nu)$ into 
+ $\begin{split}\mathscr{U}_{b,\eta}=\mathscr{V}_{b,\eta}+\mathscr{V}^{*}_{b,\eta},\end{split}$ 
+ (4.13) 
+ where $\mathscr{V}^{*}_{b,\eta}$ is the contribution of the terms such that $d=d^{\prime},\ell_{1}=\ell_{1}^{\prime},\ell_{2}=\ell_{2}^{\prime}$ and $a_{1}\neq a_{1}^{\prime}$ . 
+ 4.1.3.1  Bounding $\mathscr{V}^{*}_{b,\eta}$ : the case $d=d^{\prime},\ell_{1}=\ell_{1}^{\prime},\ell_{2}=\ell_{2}^{\prime},a_{1}\neq a_{1}^{\prime}$ 
+ In this section we deal with $\mathscr{V}^{*}_{b,\eta}$ , which is given by 
+ $\begin{split}&\mathscr{V}^{*}_{b,\eta}:=\operatorname*{\sum\sum}_{\begin{subarray}{c}p_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\\
+(b,n_{1}^{\prime}n_{2}^{\prime})=(n_{1}^{\prime},\vartheta n_{2}^{\prime})=1,\\
+\mu^{2}(n_{1}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1},\ \mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2}\\
+(b\vartheta n_{1}^{\prime}n_{2}^{\prime},\ell_{1}\ell_{2})=(\ell_{1},\ell_{2})=1,\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\sum_{\begin{subarray}{c}0\neq|d|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1,\\
+n_{2}^{\prime}\in\mathcal{I}\end{subarray}}\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\\
+\hskip 11.4722pt\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)\end{subarray}}\\
+&\qquad\quad\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+a_{1}\neq a_{1}^{\prime}\end{subarray}}\nu_{a_{1}}\overline{\nu_{a_{1}^{\prime}}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\bigg(\overline{c}(a_{1}-a_{1}^{\prime})\frac{\overline{\mathfrak{p}_{1}n_{1}^{\prime}}}{b\mathfrak{p}_{2}}-\frac{d(a_{1}-a_{1}^{\prime})\overline{\tilde{\ell}_{2}b\mathfrak{p}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\mathfrak{p}_{1}n_{1}^{\prime}}\bigg)}}\right).\\
+\end{split}$ 
+ We reintroduce the complementary divisor in the congruence condition $\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\linebreak\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)$ and reverse the previous computations. We then arrive at 
+ $\begin{split}\mathscr{V}^{*}_{b,\eta}&=\hskip-8.69995pt\operatorname*{\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\\
+(b,n_{1}^{\prime}n_{2}^{\prime})=1,\\
+(n_{1}^{\prime},\vartheta n_{2}^{\prime})=1,\\
+\mu^{2}(n_{1}^{\prime})=1\end{subarray}}\hskip-5.09995pt\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1},\ \mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2}\\
+(b\vartheta n_{1}^{\prime}n_{2}^{\prime},\ell_{1}\ell_{2})=(\ell_{1},\ell_{2})=1,\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},\,a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\ \eta|m\\
+(m,b\ell_{1}\ell_{2}n_{1}^{\prime}n_{2}^{\prime})=1,\ a_{1}\neq a_{1}^{\prime}\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right),\end{subarray}}\hskip-5.0pt\nu_{a_{1}}\overline{\nu_{a_{1}^{\prime}}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{(a_{1}-a_{1}^{\prime})\overline{m}}{b\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}}}}\right).\\
+\end{split}$ 
+ Now, we introduce once again the complementary divisor, but this time we get rid of the variable $n_{2}^{\prime}$ : 
+ $\begin{split}\mathscr{V}^{*}_{b,\eta}&=\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\in\mathcal{N},\\
+(b\vartheta,n_{1}^{\prime})=1,\\
+\mu(n_{1}^{\prime})^{2}=1\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1},\ \mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2}\\
+(b\vartheta n_{1}^{\prime},\ell_{1}\ell_{2})=(\ell_{1},\ell_{2})=1\end{subarray}}\sum_{\begin{subarray}{c}0\neq|d|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+a_{1}\neq a_{1}^{\prime}\end{subarray}}\nu_{a_{1}}\overline{\nu_{a_{1}^{\prime}}}F(\cdots),\\
+\end{split}$ 
+ where 
+ $\begin{split}F(\cdots):=\sum_{\begin{subarray}{c}m\in\mathcal{M}\cap\mathcal{J},\ (m,b\ell_{1}\ell_{2}n_{1}^{\prime})=1,\\
+m\equiv\overline{d}\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\ (\textnormal{mod }\tilde{\ell}_{2}\mathfrak{q}_{2}),\ m\equiv 0\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ \eta}}\right),\\
+(md-\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime},b\mathfrak{q}_{1}\ell_{2}\mathfrak{q}_{2})=\tilde{\ell}_{2}\mathfrak{q}_{2}\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta\frac{(a_{1}-a_{1}^{\prime})\overline{m}}{b\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}}}}\right),\\
+\end{split}$ 
+ for some interval $\mathcal{J}=\mathcal{J}(\ell_{1},\ell_{2},\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},d,n_{2}^{\prime})$ .
+Notice that, in order not to lose the condition $(n_{2}^{\prime},b\mathfrak{q}_{1}\mathfrak{p}_{2})=1$ , we have to introduce the condition $(md-\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime},b\mathfrak{q}_{1}\ell_{2}\mathfrak{q}_{2})=\tilde{\ell}_{2}\mathfrak{q}_{2}$ .
+We apply ( A.2 ) with $\beta=0$ , $\chi$ the trivial character and 
+ $\begin{split}&k:=\eta\tilde{\ell_{2}}\mathfrak{q}_{2},\quad\gamma:=b\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\quad\gamma_{1}:=\frac{\gamma}{h_{1}}=\frac{b\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}}{(\mathfrak{q}_{2},\mathfrak{p}_{2})(\eta,n_{1}^{\prime})},\quad c=b\mathfrak{q}_{1}\ell_{2}\mathfrak{q}_{2}\\
+&h:=(k,\gamma)=(\eta,n_{1}^{\prime})(\tilde{\ell}_{2}\mathfrak{q}_{2},\mathfrak{p}_{2})=(\eta,n_{1}^{\prime})(\mathfrak{q}_{2},\mathfrak{p}_{2}),\qquad h_{1}:=(k^{\infty},\gamma)=h,\\
+\end{split}$ 
+ where we used that $(\eta,b\ell_{1}\ell_{2})=(n_{1}^{\prime},\ell_{2})=1$ and that $\gamma/b$ is square-free.
+It follows that 
+ $\begin{split}F(\cdots)&\ll(bN)^{\frac{1}{2}+\varepsilon}+(a_{1}-a_{1}^{\prime},bn_{1}^{\prime}\mathfrak{p}_{1}\mathfrak{p}_{2})^{\frac{1}{2}}\frac{M}{\tilde{\ell_{2}}(b\mathfrak{p}_{1}\mathfrak{p}_{2}\mathfrak{q}_{2}n_{1}^{\prime})^{\frac{1}{2}}},\end{split}$ 
+ since $(\vartheta,bn_{1}^{\prime}\ell_{1}\ell_{2})=1$ .
+Dealing with the GCD as in ( 3.1 ), we obtain 
+ $\displaystyle\mathscr{V}^{*}_{b,\eta}$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{A^{2}DM^{\varepsilon}}{\mathfrak{q}_{1}\mathfrak{p}_{2}}\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\in\mathcal{N}\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1},\ \mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2}\end{subarray}}\mathopen{}\mathclose{{\left((bN)^{\frac{1}{2}}+\frac{M}{\tilde{\ell_{2}}(b\mathfrak{p}_{1}\mathfrak{p}_{2}\mathfrak{q}_{2}n_{1}^{\prime})^{\frac{1}{2}}}}}\right)$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{A^{2}DM^{\varepsilon}}{\mathfrak{q}_{1}\mathfrak{p}_{2}}\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\in\mathcal{N}\end{subarray}}\frac{L^{2}}{(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})}\mathopen{}\mathclose{{\left((bN)^{\frac{1}{2}}+\frac{M}{\tilde{\ell_{2}}(b\mathfrak{q}_{2}N)^{\frac{1}{2}}}}}\right)$ 
+ $\displaystyle\ll\frac{\|\nu\|^{2}A^{2}DL^{2}NM^{\varepsilon}\mathopen{}\mathclose{{\left(\frac{(bN)^{\frac{1}{2}}}{\mathfrak{p}_{1}\mathfrak{p}_{2}}+\frac{M}{\mathfrak{p}_{1}L(b\mathfrak{q}_{2}N)^{\frac{1}{2}}}}}\right)}{\mathfrak{q}_{1}\mathfrak{p}_{2}(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})}\ll\frac{\|\nu\|^{2}b^{\frac{1}{2}}L^{2}N^{\frac{3}{2}}M^{\varepsilon}DA^{2}}{\mathfrak{q}_{1}\mathfrak{p}_{2}(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})},$ 
+ (4.14) 
+ where we could assume without loss of generality that $1\leq D=3\frac{LN}{M}$ , since otherwise the sum over $d$ in the definition of $\mathscr{V}^{*}_{b,\eta}$ is empty. 
+ 4.1.3.2  Bounding $\mathscr{V}_{b,\eta}$ : the case $(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})$ if $a_{1}\neq a_{1}^{\prime}$ 
+ Here we deal with $\mathscr{V}_{b,\eta}$ , which consists of the terms of $\mathscr{U}_{b,\eta}$ such that $(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})$ if $a_{1}\neq a_{1}^{\prime}$ (we remark that here $(\cdot,\cdot,\cdot)$ indicates a triple and not a GCD). Specifically, 
+ $\begin{split}&\mathscr{V}_{b,\eta}:=\operatorname*{\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\\
+(b,n_{1}^{\prime}n_{2}^{\prime})=(n_{1}^{\prime},\vartheta n_{2}^{\prime})=1,\\
+\mu^{2}(n_{1}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\ \mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\\
+(bn_{1}^{\prime}n_{2}^{\prime}\vartheta,\ell_{1}\ell_{2}\ell_{1}^{\prime}\ell_{2}^{\prime})=(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1,\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime},\ \tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}0\neq|d|,|d^{\prime}|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1\\
+(d^{\prime},\tilde{\ell}_{1}^{\prime}\tilde{\ell}_{2}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime})=1\\
+\ n_{2}^{\prime}\in\mathcal{I}\cap\mathcal{I}^{\prime}\end{subarray}}\\
+&\hskip 20.00003pt\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right),\\
+\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}-cd^{\prime}\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d^{\prime}|\eta}}\right)\end{subarray}}\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+a_{1}\neq a_{1}^{\prime}\Rightarrow(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})\end{subarray}}\nu_{a_{1}}\overline{\nu}_{a_{1}^{\prime}}\operatorname{e}\mathopen{}\mathclose{{\left(\cdots}}\right),\\
+\end{split}$ 
+ with the argument of the exponential given by ( 4.11 ). 
+ We start the analysis of $\mathscr{V}_{b,\eta}$ by noticing that the conditions 
+ $\begin{split}\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}-\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}+cd\eta&\equiv 0\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)\\
+\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}-\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}+cd^{\prime}\eta&\equiv 0\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d^{\prime}|\eta}}\right)\end{split}$ 
+ imply the congruence conditions 
+ $\displaystyle(\tilde{\ell}_{2}^{\prime}\tilde{\ell}_{1}-\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime})\mathfrak{p}_{1}n_{1}^{\prime}+(\tilde{\ell}_{2}^{\prime}d-\tilde{\ell}_{2}d^{\prime})c\eta\equiv 0\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}\eta}}\right),$ 
+ (4.15) 
+ $\displaystyle(d^{\prime}\tilde{\ell}_{1}-d\tilde{\ell}_{1}^{\prime})\mathfrak{p}_{1}n_{1}^{\prime}\equiv(d^{\prime}\tilde{\ell}_{2}-d\tilde{\ell}_{2}^{\prime})\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b}}\right)$ 
+ and thus also 
+ $\begin{split}(d^{\prime}\tilde{\ell}_{1}-d\tilde{\ell}_{1}^{\prime})\overline{\mathfrak{q}_{2}n_{2}^{\prime}}\equiv(d^{\prime}\tilde{\ell}_{2}-d\tilde{\ell}_{2}^{\prime})\overline{\mathfrak{p}_{1}n_{1}^{\prime}}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b}}\right),\end{split}$ 
+ (4.16) 
+ since $(b,\mathfrak{p}_{1}n_{1}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime})=1$ . 
+ Now, we use the congruence relation 
+ $\begin{split}\frac{\overline{\alpha\gamma}}{\beta}+\frac{\overline{\beta\gamma}}{\alpha}+\frac{\overline{\alpha\beta}}{\gamma}\equiv\frac{1}{\alpha\beta\gamma}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ 1}}\right),\end{split}$ 
+ (4.17) 
+ which holds for $\alpha,\beta,\gamma$ pairwise coprime, to rewrite $-\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\overline{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}b\mathfrak{q}_{1}}}{\mathfrak{q}_{2}n_{2}^{\prime}}$ (modulo 1) as 
+ $\begin{split}&\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\overline{\mathfrak{q}_{2}n_{2}^{\prime}b}}{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{1}n_{1}^{\prime}}+\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\overline{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{1}n_{1}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}}}{b}-\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}\\
+&\equiv\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\overline{\mathfrak{q}_{2}n_{2}^{\prime}b}}{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{1}n_{1}^{\prime}}+\frac{a_{2}(d^{\prime}\tilde{\ell}_{2}-d\tilde{\ell}_{2}^{\prime})\overline{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}^{2}\mathfrak{q}_{1}n_{1}^{\prime}n_{1}^{\prime 2}}}{b}-\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}},\end{split}$ 
+ (4.18) 
+ by ( 4.16 ),
+and thus the argument ( 4.11 ) of the exponential becomes 
+ $\begin{split}&\vartheta\bigg(\Delta\frac{\overline{\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}b\mathfrak{p}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{p}_{1}n_{1}^{\prime}}-\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}+(a_{1}-a_{1}^{\prime})\frac{\overline{c\mathfrak{p}_{1}n_{1}^{\prime}}}{b\mathfrak{p}_{2}}-\frac{a_{2}(d^{\prime}\tilde{\ell}_{2}-d\tilde{\ell}_{2}^{\prime})\overline{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}^{2}\mathfrak{q}_{1}n_{1}^{\prime 2}}}{b}\bigg),\end{split}$ 
+ (4.19) 
+ where 
+ $\begin{split}\Delta:=a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}\mathfrak{p}_{2}-(da_{1}{\tilde{\ell}_{2}^{\prime}}-d^{\prime}a_{1}^{\prime}{\tilde{\ell}_{2}})\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1}.\end{split}$ 
+ We divide $\mathscr{V}_{b,\eta}$ into two parts, depending on whether $\Delta$ is equal to $0$ or not: 
+ $\begin{split}\mathscr{V}_{b,\eta}=\mathscr{V}^{\Delta=0}_{b,\eta}+\mathscr{V}^{\Delta\neq 0}_{b,\eta}.\end{split}$ 
+ (4.20) 
+ We shall give a trivial bound for the terms with $\Delta=0$ , whereas we will use Weil’s bound on the sum over $n_{2}^{\prime}$ to handle the terms with $\Delta\neq 0$ . 
+ The terms with $\Delta=0$ . 
+The condition $\Delta=0$ gives that 
+ $\begin{split}a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}\mathfrak{p}_{2}=(da_{1}{\tilde{\ell}_{2}^{\prime}}-d^{\prime}a_{1}^{\prime}{\tilde{\ell}_{2}})\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1},\end{split}$ 
+ (4.21) 
+ and it allows us to express either $a_{1}$ or $a_{1}^{\prime}$ in terms of all the other variables: 
+ $\begin{split}a_{1}&=f(a_{1}^{\prime},a_{2},d,d^{\prime},\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime},\mathfrak{p}_{1},\mathfrak{q}_{1},\mathfrak{p}_{2},\mathfrak{q}_{2}),\\
+a_{1}^{\prime}&=g(a_{1},a_{2},d,d^{\prime},\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime},\mathfrak{p}_{1},\mathfrak{q}_{1},\mathfrak{p}_{2},\mathfrak{q}_{2}),\end{split}$ 
+ for some functions $f$ and $g$ .
+Moreover, since $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=(d,\tilde{\ell}_{1}\tilde{\ell}_{2})=(d^{\prime},\tilde{\ell}_{1}^{\prime}\tilde{\ell}_{2}^{\prime})\linebreak=1$ , then ( 4.21 ) implies that $\tilde{\ell}_{1}|a_{2}\tilde{\ell}_{1}^{\prime}$ , $\tilde{\ell}_{1}^{\prime}|a_{2}\tilde{\ell}_{1}$ and $\tilde{\ell}_{2}|a_{1}\tilde{\ell}_{2}^{\prime}$ , $\tilde{\ell}_{2}^{\prime}|a_{1}^{\prime}\tilde{\ell}_{2}$ , which, by definition of $\tilde{\ell}_{i},\tilde{\ell}_{i}^{\prime}$ , is equivalent to $\ell_{1}|a_{2}\ell_{1}^{\prime}$ , $\ell_{1}^{\prime}|a_{2}\ell_{1}$ , $\ell_{2}|a_{1}\ell_{2}^{\prime}$ , $\ell_{2}^{\prime}|a_{1}^{\prime}\ell_{2}$ . It follows that $\mathscr{V}^{\Delta=0}_{b,\eta}$ is bounded by 
+ $\displaystyle\mathscr{V}^{\Delta=0}_{b,\eta}$ 
+ $\displaystyle\ll\operatorname*{\sum\sum}_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\ \mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime}),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime},\ \tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}0\neq|d|,|d^{\prime}|\leq\frac{D}{\mathfrak{q}_{1}\mathfrak{p}_{2}},\\
+d^{\prime}|(\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}-\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime})\end{subarray}}$ 
+ $\displaystyle\sum_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta,\\
+\hskip 16.38895pt\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)\end{subarray}}\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+\ell_{1}|a_{2}\ell_{1}^{\prime},\ell_{1}^{\prime}|a_{2}\ell_{1},\ell_{2}|a_{1}\ell_{2}^{\prime},\ell_{2}^{\prime}|a_{1}^{\prime}\ell_{2},\\
+a_{1}=f(\cdots),\ a_{1}^{\prime}=g(\cdots)\end{subarray}}(|\nu_{a_{1}}|^{2}+|\nu_{a_{1}^{\prime}}|^{2})$ 
+ $\displaystyle\ll M^{\varepsilon}\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime},\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N}\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\\
+\mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}a_{1},a_{2}\in\mathcal{A},\\
+\ell_{1}|a_{2}\ell_{1}^{\prime},\ \ell_{1}^{\prime}|a_{2}\ell_{1},\\
+\ell_{2}|a_{1}\ell_{2}^{\prime}\end{subarray}}|\nu_{a_{1}}|^{2}$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{AN^{2}M^{\varepsilon}}{\mathfrak{p}_{1}\mathfrak{p}_{2}\mathfrak{q}_{1}\mathfrak{q}_{2}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|\ell_{1}^{\prime},\ \mathfrak{p}_{2},\mathfrak{q}_{2}|\ell_{2}^{\prime}\end{subarray}}1\ll\frac{\|\nu\|^{2}AL^{2}N^{2}M^{\varepsilon}}{\mathfrak{p}_{1}\mathfrak{p}_{2}\mathfrak{q}_{1}\mathfrak{q}_{2}(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})},$ 
+ (4.22) 
+ where we dropped the condition $(c,b\mathfrak{q}_{1}\mathfrak{p}_{2})=1$ by positivity, and the sum over $c$ has the only effect of turning the congruence condition $\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right)$ into $\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ |d|\eta}}\right)$ , which then implies $d|(\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}-\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2})$ . 
+ The terms with $\Delta\neq 0$ . 
+Here we bound $\mathscr{V}^{\Delta\neq 0}_{b,\eta}$ . Exchanging the order of summation and indicating with $G(\dots)$ the sum over $n_{2}^{\prime}$ , we see that 
+ $\begin{split}\mathscr{V}^{\Delta\neq 0}_{b,\eta}&\ll\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\in\mathcal{N},\\
+(b\vartheta,n_{1}^{\prime})=1,\\
+\mu^{2}(n_{1}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\ \mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\\
+(bn_{1}^{\prime}\vartheta,\ell_{1}\ell_{2}\ell_{1}^{\prime}\ell_{2}^{\prime})=(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}0\neq|d|,|d^{\prime}|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+(d,\tilde{\ell}_{1}\tilde{\ell}_{2}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime})=1\\
+(d^{\prime},\tilde{\ell}_{1}^{\prime}\tilde{\ell}_{2}^{\prime}\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime})=1\end{subarray}}\\
+&\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right),\\
+(\tilde{\ell}_{2}^{\prime}\tilde{\ell}_{1}-\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime})\mathfrak{p}_{1}n_{1}^{\prime}\equiv(\tilde{\ell}_{2}d^{\prime}-\tilde{\ell}_{2}^{\prime}d)c\eta\\
+\hskip 40.97237pt\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}\eta}}\right)\end{subarray}}\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+\Delta\neq 0,\\
+(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})\end{subarray}}|\nu_{a_{1}}{\nu_{a_{1}^{\prime}}}||G(\cdots)|,\end{split}$ 
+ (4.23) 
+ where 
+ $\begin{split}G(\cdots):=\sum_{n_{2}^{\prime},\,(*)}\operatorname{e}\mathopen{}\mathclose{{\left(\cdots}}\right),\end{split}$ 
+ (4.24) 
+ and the argument of the exponential is 
+ $\begin{split}&\vartheta\Delta\frac{\overline{\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}b\mathfrak{p}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}}{\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{p}_{1}n_{1}^{\prime}}-\frac{\vartheta a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}b\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}\quad\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ 1}}\right).\\
+\end{split}$ 
+ (4.25) 
+ The condition $(*)$ indicates that $n_{2}^{\prime}$ satisfies the following conditions: 
+ $\displaystyle n_{2}^{\prime}\in\mathcal{I}\cap\mathcal{I}^{\prime},\quad\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}\in\mathcal{N},$ 
+ $\displaystyle\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}-cd\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d|\eta}}\right),$ 
+ $\displaystyle(n_{2}^{\prime},bdd^{\prime}n_{1}^{\prime}\ell_{1}\ell_{2}\ell_{1}^{\prime}\ell_{2}^{\prime})=1,$ 
+ $\displaystyle\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\equiv\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}-cd^{\prime}\eta\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ b\mathfrak{q}_{1}\mathfrak{p}_{2}|d^{\prime}|\eta}}\right),$ 
+ $\displaystyle\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime},$ 
+ $\displaystyle\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\neq\tilde{\ell}_{2}^{\prime}\mathfrak{q}_{2}n_{2}^{\prime}.$ 
+ We remark that we could keep the condition ( 4.15 ) and drop the last two summands of ( 4.19 )
+as they do not depend on $n_{2}^{\prime}$ . Also, notice that the condition $(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})$ if $a_{1}\neq a_{1}^{\prime}$ becomes simply $(d,\ell_{1},\ell_{2})\neq(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})$ since if these triples are equal then $\Delta\neq 0$ implies $a_{1}\neq a_{1}^{\prime}$ . 
+ We apply Lemma 1 to the sum over $n_{2}^{\prime}$ , removing the second summand of ( 4.25 ) by using partial summation with the bound 
+ $\begin{split}\vartheta\frac{a_{2}(d\tilde{\ell_{1}^{\prime}}-d^{\prime}\tilde{\ell_{1}})}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{p}_{1}n_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}\ll\frac{|\vartheta|ADL}{b\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1}^{2}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{q}_{2}n_{2}^{\prime}}\ll\frac{|\vartheta|AD}{bLN^{2}}.\end{split}$ 
+ Note that $n_{2}^{\prime}$ runs over a finite union of intervals of length at most $O\mathopen{}\mathclose{{\left({N}/{\mathfrak{q}_{1}\mathfrak{q}_{2}}}}\right)$ , with a congruence condition modulo $b\mathfrak{q}_{1}\mathfrak{p}_{2}[d,d^{\prime}]\eta$ (provided that the sum is non-empty), where $[a,b]$ is the LCM of $a$ and $b$ . 
+ In the notation of Lemma 1 (and under the various conditions of the sums in ( 4.23 )), we have $\gamma=\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}\mathfrak{q}_{1}\mathfrak{p}_{1}n_{1}^{\prime}$ , $k=b\mathfrak{q}_{1}\mathfrak{p}_{2}[d,d^{\prime}]\eta$ and 
+ $\displaystyle h=(\gamma,k)=\mathfrak{q}_{1}([d,d^{\prime}],\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime})(\eta,n_{1}^{\prime})=\mathfrak{q}_{1}(d,\tilde{\ell}_{1}^{\prime})(d^{\prime},\tilde{\ell}_{1})(\eta,n_{1}^{\prime}),$ 
+ $\displaystyle h_{1}=(k^{\infty},\gamma)=(\mathfrak{q}_{1}^{\infty}[d,d^{\prime}]^{\infty},\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime})(\eta,n_{1}^{\prime})\mathfrak{q}_{1}(\mathfrak{p}_{1},\mathfrak{q}_{1})=(\mathfrak{p}_{1},\mathfrak{q}_{1})h,$ 
+ since $\mathfrak{q}_{1}>1$ implies $\tilde{\ell}_{1}=\tilde{\ell}_{1}^{\prime}=1$ , whence 
+ $\displaystyle\gamma_{1}:=\frac{\gamma}{h_{1}}=\frac{\mathfrak{p}_{1}}{(\mathfrak{p}_{1},\mathfrak{q}_{1})}\frac{n_{1}^{\prime}}{(\eta,n_{1}^{\prime})}\frac{\tilde{\ell}_{1}}{(d^{\prime},\tilde{\ell}_{1})}\frac{\tilde{\ell}_{1}^{\prime}}{(d,\tilde{\ell}_{1}^{\prime})}.$ 
+ Thus, Lemma 1 gives 
+ $\displaystyle G(\cdots)$ 
+ $\displaystyle\ll M^{\varepsilon}\bigg((\mathfrak{p}_{1},\mathfrak{q}_{1})\bigg(\frac{N\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime}}{(\mathfrak{p}_{1},\mathfrak{q}_{1})\mathfrak{p}_{2}}\bigg)^{\frac{1}{2}}+\frac{(\vartheta\Delta,\gamma_{1})}{\gamma_{1}}\frac{N}{b\eta\mathfrak{q}_{1}^{2}\mathfrak{q}_{2}\mathfrak{p}_{2}[d,d^{\prime}]}\bigg)\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)$ 
+ $\displaystyle\ll M^{\varepsilon}\mathopen{}\mathclose{{\left(LN^{\frac{1}{2}}+\frac{(\Delta,n_{1}^{\prime})\mathfrak{p}_{1}}{b\mathfrak{q}_{1}^{2}\mathfrak{q}_{2}[d,d^{\prime}]}}}\right)\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big).$ 
+ Now, if we define 
+ $\begin{split}u:=(\tilde{\ell}_{2}^{\prime}d-\tilde{\ell}_{2}d^{\prime},b\mathfrak{q}_{1}\mathfrak{p}_{2}),\qquad v:=(\tilde{\ell}_{2}^{\prime}d-\tilde{\ell}_{2}d^{\prime})/u\end{split}$ 
+ (so that $(v,b\mathfrak{q}_{1}\mathfrak{p}_{2}/u)=1$ ), then by the congruence condition ( 4.15 )
+we have 
+ $\displaystyle\tilde{\ell}_{2}^{\prime}d\equiv\tilde{\ell}_{2}d^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right),$ 
+ (4.26) 
+ $\displaystyle\mathfrak{p}_{1}\tilde{\ell}_{1}\equiv\mathfrak{p}_{1}\overline{\tilde{\ell}_{2}^{\prime}}\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)$ 
+ (4.27) 
+ since $(\tilde{\ell}_{2}^{\prime},b\mathfrak{q}_{1}\mathfrak{p}_{2})=1$ . Also, if $v\neq 0$ , then 
+ $\begin{split}c\equiv-\overline{v\eta}\frac{(\tilde{\ell}_{2}^{\prime}\tilde{\ell}_{1}-\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime})\mathfrak{p}_{1}n_{1}^{\prime}}{u}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ \frac{b\mathfrak{q}_{1}\mathfrak{p}_{2}}{u}}}\right).\end{split}$ 
+ (4.28) 
+ We remark that we can assume $u\leq\frac{10DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}}$ . Indeed, if $u>\frac{10DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}}>\tilde{\ell}_{2}^{\prime}d+\tilde{\ell}_{2}d^{\prime}$ then ( 4.26 ) implies $\tilde{\ell}_{2}^{\prime}d=\tilde{\ell}_{2}d^{\prime}$ . Thus $u=b\mathfrak{q}_{1}\mathfrak{p}_{2}$ and $d=d^{\prime}$ , $\ell_{2}=\ell_{2}^{\prime}$ since $(d,\tilde{\ell}_{2})=(d^{\prime},\tilde{\ell}_{2}^{\prime})=1$ . Moreover, ( 4.27 ) would give $\mathfrak{p}_{1}\tilde{\ell}_{1}=\mathfrak{p}_{1}\tilde{\ell}_{1}^{\prime}$ (since we can assume $D/\mathfrak{q}_{1}\mathfrak{p}_{2}\geq 1$ ) and thus $\ell_{1}=\ell_{1}^{\prime}$ .
+So $(d,\ell_{1},\ell_{2})=(d^{\prime},\ell_{1}^{\prime},\ell_{2}^{\prime})$ , and these terms have been previously excluded. 
+ Thus, if we bound trivially the sum over $c$ using ( 4.28 ) and drop some conditions by positivity, we find 
+ $\displaystyle\mathscr{V}^{\Delta\neq 0}_{b,\eta}\ll M^{\varepsilon}\sum_{\begin{subarray}{c}\mathfrak{p}_{1}\mathfrak{p}_{2}n_{1}^{\prime}\in\mathcal{N}\end{subarray}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\ \mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime}),\\
+(\ell_{2}^{\prime},b\mathfrak{q}_{1}\mathfrak{p}_{2})=1\end{subarray}}\sum_{\begin{subarray}{c}u|b\mathfrak{q}_{1}\mathfrak{p}_{2},\ u\leq\frac{10DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}},\\
+\mathfrak{p}_{1}\tilde{\ell}_{1}\equiv\mathfrak{p}_{1}\overline{\tilde{\ell}_{2}^{\prime}}\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)\end{subarray}}\operatorname*{\sum\sum}_{\begin{subarray}{c}|d|,|d^{\prime}|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+d\equiv\overline{\tilde{\ell}_{2}^{\prime}}\tilde{\ell}_{2}d^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)\end{subarray}}$ 
+ $\displaystyle\hskip 40.00006pt\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}a_{1},a_{1}^{\prime},a_{2}\in\mathcal{A},\\
+\Delta\neq 0\end{subarray}}\,u\,|\nu_{a_{1}}{\nu_{a_{1}^{\prime}}}|\mathopen{}\mathclose{{\left(LN^{\frac{1}{2}}+\frac{(\Delta,n_{1}^{\prime})\mathfrak{p}_{1}}{b\mathfrak{q}_{1}^{2}\mathfrak{q}_{2}[d,d^{\prime}]}}}\right)\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{A^{2}LN^{\frac{3}{2}}M^{\varepsilon}}{\mathfrak{p}_{1}\mathfrak{p}_{2}}\operatorname*{\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2},\ell_{1}^{\prime},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{1},\mathfrak{q}_{1}|(\ell_{1},\ell_{1}^{\prime}),\\
+\mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime}),\\
+(\ell_{2}^{\prime},b\mathfrak{q}_{1}\mathfrak{p}_{2})=1\end{subarray}}\sum_{\begin{subarray}{c}u|b\mathfrak{q}_{1}\mathfrak{p}_{2},\ u\leq\frac{10DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}},\\
+\mathfrak{p}_{1}\tilde{\ell}_{1}\equiv\mathfrak{p}_{1}\overline{\tilde{\ell}_{2}^{\prime}}\tilde{\ell}_{2}\tilde{\ell}_{1}^{\prime}\\
+\hskip 16.38895pt\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)\end{subarray}}\hskip-6.00006pt\operatorname*{\sum\sum}_{\begin{subarray}{c}|d|,|d^{\prime}|\leq D/\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+\hskip 6.5556ptd\equiv\overline{\tilde{\ell}_{2}^{\prime}}\tilde{\ell}_{2}d^{\prime}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)\end{subarray}}\hskip-5.0ptu\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{A^{2}DL^{2}N^{\frac{3}{2}}M^{\varepsilon}}{(\mathfrak{p}_{1}+\mathfrak{q}_{1})\mathfrak{p}_{1}\mathfrak{q}_{1}\mathfrak{p}_{2}^{2}}\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{2},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\end{subarray}}\sum_{\begin{subarray}{c}u|b\mathfrak{q}_{1}\mathfrak{p}_{2},\\
+u\leq\frac{10DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}}\end{subarray}}\hskip-1.99997ptu\mathopen{}\mathclose{{\left(\frac{L}{u}+1}}\right)\mathopen{}\mathclose{{\left(\frac{D}{u\mathfrak{q}_{1}\mathfrak{p}_{2}}+1}}\right)\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)$ 
+ $\displaystyle\ll\|\nu\|^{2}\frac{A^{2}DL^{2}N^{\frac{3}{2}}M^{\varepsilon}}{(\mathfrak{p}_{1}+\mathfrak{q}_{1})\mathfrak{p}_{1}\mathfrak{q}_{1}\mathfrak{p}_{2}^{2}}\hskip-1.00006pt\operatorname*{\sum\sum}_{\begin{subarray}{c}\ell_{2},\ell_{2}^{\prime}\in\mathcal{L},\\
+\mathfrak{p}_{2},\mathfrak{q}_{2}|(\ell_{2},\ell_{2}^{\prime})\end{subarray}}\frac{DL}{\mathfrak{q}_{1}\mathfrak{p}_{2}}\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)$ 
+ $\displaystyle\ll\frac{\|\nu\|^{2}A^{2}D^{2}L^{5}N^{\frac{3}{2}}M^{\varepsilon}}{(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})\mathfrak{p}_{1}\mathfrak{q}_{1}^{2}\mathfrak{p}_{2}^{3}\mathfrak{q}_{2}}\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big).$ 
+ (4.29) 
+ 4.1.3.3  Total bound for the terms with $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1$ 
+ By ( 4.20 ), ( 4.22 ) and ( 4.29 ), we obtain 
+ $\begin{split}\mathscr{V}_{b,\eta}\ll\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big)\frac{A^{2}D^{2}L^{5}N^{\frac{3}{2}}+AL^{2}N^{2}}{\mathfrak{q}_{1}\mathfrak{p}_{2}(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})}\end{split}$ 
+ and thus, by ( 4.13 ) and ( 4.14 ), we have 
+ $\begin{split}\mathscr{U}_{b,\eta}&\ll\|\nu\|^{2}A^{2}L^{2}N^{\frac{3}{2}}M^{\varepsilon}\frac{(Db^{\frac{1}{2}}+L^{3}D^{2}+N^{\frac{1}{2}}/A)}{\mathfrak{q}_{1}\mathfrak{p}_{2}(\mathfrak{p}_{1}+\mathfrak{q}_{1})(\mathfrak{p}_{2}+\mathfrak{q}_{2})}\Big(1+\frac{|\vartheta|AD}{bLN^{2}}\Big).\end{split}$ 
+ (4.30) 
+ 4.1.4 Bounding $\mathscr{U}^{*}_{b,\eta}$ : the case $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})>1$ 
+ First, we observe that if $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})>1$ , then $(\ell_{2},\ell_{2}^{\prime})=(\ell_{1},\ell_{1}^{\prime})=1$ since we have $(\ell_{1},\ell_{2})=(\ell_{1}^{\prime},\ell_{2}^{\prime})=1$ , and so $\mathfrak{p}_{1}=\mathfrak{q}_{1}=\mathfrak{p}_{2}=\mathfrak{q}_{2}=1.$ Thus, we can repeat the same arguments of Section 4.1.3 in a slightly different but simplified form, and we obtain that the bound ( 4.30 ) holds also for $\mathscr{U}^{*}_{b,\eta}$ . 
+ The only difference between this case and the $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})=1$ case is that we cannot make the same choice of $\alpha,\beta,\gamma$ 
+in ( 4.17 ) as $\alpha,\beta,\gamma$ would not be pairwise coprime (and neither we could invert $\tilde{\ell}_{2}\tilde{\ell}_{2}^{\prime}\ (\textnormal{mod }\tilde{\ell}_{1}\tilde{\ell}_{1}^{\prime})$ in ( 4.19 )). To overcome this problem, it is enough to divide the sum over $n_{2}^{\prime}$ into congruence classes modulo $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})$ and apply ( 4.17 ) with $\gamma=b(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})$ rather than $\gamma=b$ as in ( 4.18 ). The extra sum over the congruence classes modulo $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})$ has the effect of making us lose a factor of $(\ell_{1}\ell_{1}^{\prime},\ell_{2}\ell_{2}^{\prime})$ in the $\Delta\neq 0$ terms, but this loss is recovered by the extra condition between the $\ell_{1},\ell_{1}^{\prime},\ell_{2},\ell_{2}^{\prime}$ . In fact, one can obtain a bound stronger than ( 4.30 ) in this case, since the resulting Kloosterman has smaller modulus. 
+ 4.1.5 The final bound for $\mathscr{S}_{b,\eta}$ 
+ Putting together ( 4.9 ), ( 4.12 ) with the bound ( 4.30 ) and its analogue for $\mathscr{U}^{*}_{b,\eta}$ , we obtain 
+ $\begin{split}\mathscr{S}_{b,\eta}&\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|AD}{LN^{2}}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(D^{\frac{1}{2}}b^{\frac{1}{4}}+L^{\frac{3}{2}}D+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg)\\
+&\hskip 0.0pt\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}L^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{L^{\frac{5}{2}}N}{M}+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg),\end{split}$ 
+ (4.31) 
+ since $D=3\frac{NL}{M}$ . 
+ 4.2 The terms with $(n_{1}^{\prime},n_{2}^{\prime})>1$ 
+ In this section we bound $\mathscr{S}^{*}_{b,\eta}(M,N,A,L;\beta,\nu)$ , which consists of the sum ( 4.2 ) restricted to $(n_{1}^{\prime},n_{2}^{\prime})>1$ .
+We recall the definition ( 4.4 ) of $n_{1}^{\prime}$ , $n_{2}^{\prime}$ : 
+ $\begin{split}n_{1}^{\prime}:=\frac{n_{1}}{(n_{1},\ell_{1}\ell_{2})},\quad n_{2}^{\prime}:=\frac{n_{2}}{(n_{2},\ell_{1}\ell_{2})}\end{split}$ 
+ We write $\mu=(n_{1}^{\prime},n_{2}^{\prime})$ . This implies $(\mu,\ell_{1}\ell_{2})=1$ and $n_{1}=\mu h_{1}$ , $n_{2}=\mu h_{2}$ . Thus, denoting $h_{1}^{\prime}:=\frac{h_{1}}{(h_{1},\ell_{1},\ell_{2})}$ , $h_{2}^{\prime}:=\frac{h_{2}}{(h_{2},\ell_{1},\ell_{2})}$ , we automatically have $(h_{1}^{\prime},h_{2}^{\prime})=(h_{1}^{\prime}h_{2}^{\prime},\ell_{1}\ell_{2})=1$ since $n_{1},n_{2}$ are square-free. It follows that 
+ $\begin{split}\mathscr{S}^{*}_{b,\eta}&=\hskip-3.99994pt\sum_{\begin{subarray}{c}\mu>1,\\
+(\mu,\vartheta b)=1\end{subarray}}\operatorname*{\sum\sum\sum\sum\sum\sum\sum}_{\begin{subarray}{c}\ell_{1},\ell_{2}\in\mathcal{L},m\in\mathcal{M},h_{1},h_{2}\in\mathcal{N}_{\mu},a_{1},a_{2}\in\mathcal{A}\\
+(mb\mu\vartheta,\ell_{1}\ell_{2}h_{1}h_{2})=(m,\mu b)=(\ell_{1},\ell_{2})=(h_{1}^{\prime},h_{2}^{\prime})=1,\\
+\ell_{1}h_{1}\equiv\ell_{2}h_{2}\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ m}}\right),\ (h_{1}^{\prime}h_{2}^{\prime},\ell_{1}\ell_{2})=1\\
+\ell_{1}h_{1}\neq\ell_{2}h_{2},\ \eta|m\end{subarray}}\hskip-6.99997pt\beta_{\mu h_{1}}\nu_{a_{1}}\overline{\beta_{\mu h_{2}}\nu_{a_{2}}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{a_{1}\overline{m}}{b\mu h_{1}}-\frac{a_{2}\overline{m}}{b\mu h_{2}}}}\right)\\
+&=\sum_{\begin{subarray}{c}1 
+ where $\beta_{\mu}(n):=\beta_{\mu n}$ and $\mathcal{N}_{\mu}=[N/(2\mu),N/\mu]$ . Thus, by ( 4.31 ) 
+ $\displaystyle\mathscr{S}^{*}_{b,\eta}$ 
+ $\displaystyle\ll\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\sum_{\mu\leq N}\frac{\|\beta_{\mu}\|^{2}}{\mu^{\frac{1}{4}}}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}L^{\frac{1}{2}}}{\mu^{\frac{1}{4}}M^{\frac{1}{2}}}+\frac{L^{\frac{5}{2}}N}{\mu M}+\frac{N^{\frac{1}{4}}}{\mu^{\frac{1}{4}}A^{\frac{1}{2}}}\bigg)$ 
+ $\displaystyle\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}L^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{L^{\frac{5}{2}}N}{M}+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg).$ 
+ (4.32) 
+ 4.3 The final bound for the off-diagonal term 
+ By ( 4.5 ) and the bounds ( 4.31 ) and ( 4.32 ), we have 
+ $\begin{split}\mathscr{E}_{b,\eta}&\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}L^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{L^{\frac{5}{2}}N}{M}+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg).\end{split}$ 
+ Thus, by ( 4.3 ) 
+ $\begin{split}\mathscr{E}_{b,1}^{*}\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{N}{M}+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg)\end{split}$ 
+ and so, by ( 4.1 ), 
+ $\begin{split}\mathscr{O}_{b}&\ll\|\beta\|^{2}\|\nu\|^{2}\Big(b+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}ALN^{\frac{3}{4}}M^{\varepsilon}\bigg(\frac{b^{\frac{1}{4}}N^{\frac{1}{2}}L^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{L^{\frac{5}{2}}N}{M}+\frac{N^{\frac{1}{4}}}{A^{\frac{1}{2}}}\bigg).\end{split}$ 
+ (4.33) 
+ 5 Optimizing the parameter $L$ 
+ Combining ( 2 ) with the bounds for the diagonal ( 3.2 ) and off-diagonal terms ( 4.33 ) we obtain 
+ $\begin{split}\mathcal{D}_{b}&\ll\|\beta\|^{2}\|\nu\|^{2}\Big(1+\frac{|\vartheta|A}{bNM}\Big)^{\frac{1}{2}}LM^{\varepsilon}\bigg(A(bLN)^{\frac{1}{2}}+\frac{AM}{bN}+M\\
+&\hskip 100.00015pt+\frac{b^{\frac{3}{4}}AN^{\frac{5}{4}}L^{\frac{1}{2}}}{M^{\frac{1}{2}}}+\frac{b^{\frac{1}{2}}AL^{\frac{5}{2}}N^{\frac{7}{4}}}{M}+b^{\frac{1}{2}}A^{\frac{1}{2}}N\bigg)\end{split}$ 
+ and thus, by ( 2.2 ), 
+ $\begin{split}\mathcal{C}_{b}&\ll\|\beta\|^{2}\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{bNM}\Big)^{\frac{1}{2}}\bigg(\frac{AM(bN)^{\frac{1}{2}}}{L^{\frac{1}{2}}}+\frac{AM^{2}}{bLN}+\frac{M^{2}}{L}\\
+&\hskip 100.00015pt+\frac{b^{\frac{3}{4}}AM^{\frac{1}{2}}N^{\frac{5}{4}}}{L^{\frac{1}{2}}}+b^{\frac{1}{2}}AL^{\frac{3}{2}}N^{\frac{7}{4}}+\frac{b^{\frac{1}{2}}A^{\frac{1}{2}}MN}{L}\bigg).\end{split}$ 
+ (5.1) 
+ We wish to choose $L$ so that 
+ $\begin{split}b^{\frac{1}{2}}AL^{\frac{3}{2}}N^{\frac{7}{4}}\approx\frac{AM^{2}}{bLN}+\frac{M^{2}}{L}+\frac{b^{\frac{1}{2}}A^{\frac{1}{2}}MN}{L},\end{split}$ 
+ and $L\geq 2\log(b\vartheta M)$ . So we take 
+ $\begin{split}L=\frac{M^{\frac{4}{5}}}{b^{\frac{3}{5}}N^{\frac{11}{10}}}+\frac{M^{\frac{4}{5}}}{b^{\frac{1}{5}}A^{\frac{2}{5}}N^{\frac{7}{10}}}+\frac{M^{\frac{2}{5}}}{A^{\frac{1}{5}}N^{\frac{3}{10}}}+M^{\varepsilon}.\end{split}$ 
+ With this choice ( 5.1 ) implies 
+ $\displaystyle\mathcal{C}_{b}$ 
+ $\displaystyle\ll\|\beta\|^{2}\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{bNM}\Big)^{\frac{1}{2}}\bigg(AM(bN)^{\frac{1}{2}}+b^{\frac{3}{4}}AM^{\frac{1}{2}}N^{\frac{5}{4}}$ 
+ $\displaystyle\qquad+b^{\frac{1}{2}}AN^{\frac{7}{4}}\bigg(\frac{M^{\frac{4}{5}}}{b^{\frac{3}{5}}N^{\frac{11}{10}}}+\frac{M^{\frac{4}{5}}}{b^{\frac{1}{5}}A^{\frac{2}{5}}N^{\frac{7}{10}}}+\frac{M^{\frac{2}{5}}}{A^{\frac{1}{5}}N^{\frac{3}{10}}}+M^{\varepsilon}\bigg)^{\frac{3}{2}}\bigg)$ 
+ $\displaystyle\ll\|\beta\|^{2}\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{bNM}\Big)^{\frac{1}{2}}\bigg(AM(bN)^{\frac{1}{2}}+b^{\frac{3}{4}}AM^{\frac{1}{2}}N^{\frac{5}{4}}$ 
+ $\displaystyle\qquad+\frac{AM^{\frac{6}{5}}N^{\frac{1}{10}}}{b^{\frac{2}{5}}}+b^{\frac{1}{5}}A^{\frac{2}{5}}M^{\frac{6}{5}}N^{\frac{7}{10}}+A^{\frac{7}{10}}b^{\frac{1}{2}}M^{\frac{3}{5}}N^{\frac{13}{10}}+b^{\frac{1}{2}}AN^{\frac{7}{4}}\bigg).$ 
+ (5.2) 
+ 6 Removing the square-free condition 
+ We write $n=bn^{\prime}$ , where $n^{\prime}$ is square-free, $b$ is square-full, and $(b,n^{\prime})=1$ . We have 
+ $\begin{split}&\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A},\end{subarray}}\sum_{\begin{subarray}{c}n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta a\frac{\overline{m}}{n}}}\right)\bigg|^{2}=\bigg|\sum_{\begin{subarray}{c}b\leq N,\\
+(b,\vartheta)=1,\\
+b\textnormal{ square-full}\end{subarray}}\sum_{\begin{subarray}{c}a\in\mathcal{A},\end{subarray}}\sum_{\begin{subarray}{c}bn^{\prime}\in\mathcal{N},\\
+(b\vartheta m,n^{\prime})=1,\\
+\ n^{\prime}\textnormal{square-free}\end{subarray}}\beta_{bn^{\prime}}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta a\frac{\overline{m}}{bn^{\prime}}}}\right)\bigg|^{2}\\
+&\hskip 20.00003pt\ll\bigg(\sum_{\begin{subarray}{c}b\leq N,\\
+b\textnormal{ square-full}\end{subarray}}\hskip-1.99997ptb^{-\frac{1}{2}}\bigg)\bigg(\sum_{\begin{subarray}{c}b\leq N,\ (b,\vartheta)=1\\
+b\textnormal{ square-full}\end{subarray}}b^{\frac{1}{2}}\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A},\end{subarray}}\sum_{\begin{subarray}{c}bn^{\prime}\in\mathcal{N},\\
+(b\vartheta m,n^{\prime})=1\end{subarray}}\mu(n^{\prime})^{2}\beta_{bn^{\prime}}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta a\frac{\overline{m}}{bn^{\prime}}}}\right)\bigg|^{2}\bigg)\\
+&\hskip 20.00003pt\ll\sum_{\begin{subarray}{c}b\leq N,\ (b,\vartheta)=1\\
+b\textnormal{ square-full}\end{subarray}}b^{\frac{1}{2}}\,\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A},\end{subarray}}\sum_{\begin{subarray}{c}bn^{\prime}\in\mathcal{N},\\
+(b\vartheta m,n^{\prime})=1\end{subarray}}\mu(n^{\prime})^{2}\beta_{bn^{\prime}}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta a\frac{\overline{m}}{bn^{\prime}}}}\right)\bigg|^{2}M^{\varepsilon}.\end{split}$ 
+ Thus, 
+ $\begin{split}\mathcal{C}_{1}(M,N,A;\beta,\nu)&=\sum_{\begin{subarray}{c}m\in\mathcal{M}\end{subarray}}\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A},\end{subarray}}\sum_{\begin{subarray}{c}n\in\mathcal{N},\\
+(m,n)=1\end{subarray}}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(a\frac{\overline{m}}{n}}}\right)\bigg|^{2}\\
+&\ll\hskip-3.99994pt\sum_{\begin{subarray}{c}b\leq N,\ (b,\vartheta)=1,\\
+b\textnormal{ square-full}\end{subarray}}\hskip-3.99994ptb^{\frac{1}{2}}\sum_{\begin{subarray}{c}m\in\mathcal{M},\\
+(m,b)=1\end{subarray}}\bigg|\sum_{\begin{subarray}{c}a\in\mathcal{A}\end{subarray}}\sum_{\begin{subarray}{c}n^{\prime}\in\mathcal{N}_{b},\\
+(b\vartheta m,n^{\prime})=1\end{subarray}}\mu(n^{\prime})^{2}\beta_{bn^{\prime}}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(\vartheta a\frac{\overline{m}}{bn^{\prime}}}}\right)\bigg|^{2}M^{\varepsilon}\\
+&=M^{\varepsilon}\sum_{\begin{subarray}{c}b\leq N,\ (b,\vartheta)=1\\
+b\textnormal{ square-full}\end{subarray}}b^{\frac{1}{2}}\mathcal{C}_{b}(M,N/b,A;\beta_{b},\nu)\\
+\end{split}$ 
+ where $\beta_{b}(n):=\mu(n)^{2}\beta_{bn}$ and $\mathcal{N}_{b}:=[N/(2b),N/b]$ . Now, if $b\leq B$ , we apply ( 5.2 ) and obtain that the contribution of those terms to $\mathcal{C}_{1}$ is bounded by 
+ $\begin{split}&\ll\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}\sum_{\begin{subarray}{c}b\leq B,\\
+b\textnormal{ square-full}\end{subarray}}b^{\frac{1}{2}}\|\beta_{b}\|^{2}\bigg(AMN^{\frac{1}{2}}+\frac{AM^{\frac{1}{2}}N^{\frac{5}{4}}}{b^{\frac{1}{2}}}\\
+&\hskip 70.0001pt+\frac{AM^{\frac{6}{5}}N^{\frac{1}{10}}}{b^{\frac{1}{2}}}+\frac{A^{\frac{2}{5}}M^{\frac{6}{5}}N^{\frac{7}{10}}}{b^{\frac{1}{2}}}+\frac{A^{\frac{7}{10}}M^{\frac{3}{5}}N^{\frac{13}{10}}}{b^{\frac{4}{5}}}+\frac{AN^{\frac{7}{4}}}{b^{\frac{5}{4}}}\bigg)\\
+&\ll\|\beta\|^{2}\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}\bigg(AMN^{\frac{1}{2}}B^{\frac{1}{2}}+AM^{\frac{1}{2}}N^{\frac{5}{4}}+AM^{\frac{6}{5}}N^{\frac{1}{10}}+\\
+&\hskip 130.0002pt+A^{\frac{2}{5}}M^{\frac{6}{5}}N^{\frac{7}{10}}+A^{\frac{7}{10}}M^{\frac{3}{5}}N^{\frac{13}{10}}+AN^{\frac{7}{4}}\bigg).\\
+\end{split}$ 
+ (6.1) 
+ For $b>B$ we apply the trivial bound $\mathcal{C}_{b}(M,N/b,A,\beta_{b},\nu)\ll\|\nu\|^{2}A\frac{MN}{b}\|\beta_{b}\|$ and get that these terms contribute 
+ $\begin{split}\ll\|\nu\|^{2}ANM^{1+\varepsilon}\sum_{\begin{subarray}{c}b>B,\\
+b\textnormal{ square-full}\end{subarray}}\|\beta_{b}\|^{2}\frac{1}{b^{\frac{1}{2}}}\ll\|\beta\|^{2}\|\nu\|^{2}\frac{ANM^{1+\varepsilon}}{B^{\frac{1}{2}}}.\end{split}$ 
+ (6.2) 
+ We choose $B=N^{\frac{1}{2}}$ , so that combining ( 6.2 ) and ( 6.1 ) we obtain 
+ $\begin{split}\mathcal{C}_{1}&\ll\|\beta\|^{2}\|\nu\|^{2}M^{\varepsilon}\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}\\
+&\times\hskip 0.0pt\big(AMN^{\frac{3}{4}}+AM^{\frac{1}{2}}N^{\frac{5}{4}}+AM^{\frac{6}{5}}N^{\frac{1}{10}}+A^{\frac{2}{5}}M^{\frac{6}{5}}N^{\frac{7}{10}}+A^{\frac{7}{10}}M^{\frac{3}{5}}N^{\frac{13}{10}}+AN^{\frac{7}{4}}\big).\\
+\end{split}$ 
+ Notice that the third summand on the second line can be absorbed. Indeed, if $M\ll N^{2}$ , then $AM^{\frac{6}{5}}N^{\frac{1}{10}}\ll AMN^{\frac{3}{4}}$ , whereas if $M\gg N^{2}$ then one can obtain a stronger bound from Theorem 5 of [ DFI97 ] , which gives 
+ $\begin{split}\mathcal{C}_{1}&\ll\|\beta\|^{2}\|\nu\|^{2}AM^{1+\varepsilon}\end{split}$ 
+ (6.3) 
+ in such range. Moreover, we also have $AM^{\frac{1}{2}}N^{\frac{5}{4}}\ll AMN^{\frac{3}{4}}+AN^{\frac{7}{4}}$ and thus 
+ $\begin{split}\mathcal{C}_{1}&\ll\|\beta\|^{2}\|\nu\|^{2}(MN)^{\varepsilon}\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{2}}\\
+&\quad\times\big(AMN^{\frac{3}{4}}+AN^{\frac{7}{4}}+A^{\frac{2}{5}}M^{\frac{6}{5}}N^{\frac{7}{10}}+A^{\frac{7}{10}}M^{\frac{3}{5}}N^{\frac{13}{10}}\big),\end{split}$ 
+ (6.4) 
+ and this bound holds also without the assumption $\vartheta,A,N\ll M^{C}$ , for some $C>0$ , since it is trivial otherwise. 
+ 7 Completion of the proof of Theorem 1 
+ Combining the bound ( 6.4 ) for $\mathcal{C}_{1}$ and ( 2.1 ), we deduce 
+ $\begin{split}\mathcal{B}(M,N,A)&\ll\|\alpha\|\|\beta\|\|\nu\|(AMN)^{\varepsilon}\Big(1+\frac{|\vartheta|A}{NM}\Big)^{\frac{1}{4}}\\
+&\quad\big(A^{\frac{1}{2}}M^{\frac{1}{2}}N^{\frac{3}{8}}+A^{\frac{1}{2}}N^{\frac{7}{8}}+A^{\frac{1}{5}}M^{\frac{3}{5}}N^{\frac{7}{20}}+A^{\frac{7}{20}}M^{\frac{3}{10}}N^{\frac{13}{20}}\big).\end{split}$ 
+ (7.1) 
+ If $M\geq N$ this implies 
+ $\begin{split}\mathcal{B}(M,N,A)&\ll\|\alpha\|\|\beta\|\|\nu\|(MN)^{\varepsilon}\Big(1+\frac{|\vartheta|A}{MN}\Big)^{\frac{1}{4}}\big(A^{\frac{1}{2}}M^{\frac{1}{2}}N^{\frac{3}{8}}+A^{\frac{7}{20}}M^{\frac{3}{5}}N^{\frac{7}{20}}\big),\end{split}$ 
+ which is Theorem 1 in the range $M\geq N$ . We then use the following remark to obtain ( 1.2 ) also in the range $M 
+ Remark 2 . 
+ All the computations of Section 3 and 4 work, applying partial summation at appropriate places, also when an extra addend $f_{a,\vartheta}(m,bn)$ (with $f_{a,\vartheta}(x,y)$ satisfying ( 1.3 )) is inserted in the exponential function in the definition ( 2.2 ) of $\mathcal{C}_{b}$ . Thus, one arrives at the bound 
+ $\begin{split}\mathcal{B}(f;M,N,A)&\ll\|\alpha\|\|\beta\|\|\nu\|(MN)^{\varepsilon}\Big(1+\frac{|\vartheta|A+X}{MN}\Big)^{\frac{1}{2}}\\
+&\quad\times\big(A^{\frac{1}{2}}M^{\frac{1}{2}}N^{\frac{3}{8}}+A^{\frac{7}{20}}M^{\frac{3}{5}}N^{\frac{7}{20}}\big)\end{split}$ 
+ (7.2) 
+ in the case $M\geq N$ . Notice that the exponent of $(1+\frac{|\vartheta|A+X}{MN})$ is now $\frac{1}{2}$ because in this case we need to apply partial summation also when dealing with the diagonal term and for the analogue of ( 6.3 ). 
+ We now observe that the elementary reciprocity law allows us to write $\mathcal{B}(M,N,A)$ as 
+ $\begin{split}\mathcal{B}(M,N,A)=\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}m\in\mathcal{M},n\in\mathcal{N},a\in\mathcal{A},\\
+(m,n)=1\end{subarray}}\alpha_{m}\beta_{n}\nu_{a}\operatorname{e}\mathopen{}\mathclose{{\left(-\vartheta\frac{a\overline{n}}{m}+\frac{\vartheta a}{mn}}}\right).\end{split}$ 
+ Thus, if $M 7.2 ) with the role of $M$ and $N$ switched and with $f_{a,\vartheta}(x,y):=\frac{\vartheta a}{xy}$ . Since $f_{a,\vartheta}(x,y)$ satisfies the condition ( 1.3 ) with $X=|\vartheta|A$ , we obtain ( 1.2 ) for $M 1 is complete. 
+ 8 Proof of Theorem 2 
+ We proceed in the same way as in the proof of Theorem 1 , with very minor modifications. First, we assume $bN\geq M$ and in the off-diagonal term we split the sum modulo $m$ into classes $m\equiv c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ 4b\mathfrak{q}_{1}\mathfrak{p}_{2}}}\right)$ with $(m,b\mathfrak{q}_{1}\mathfrak{p}_{2})=1$ rather than modulo $b\mathfrak{q}_{1}\mathfrak{p}_{2}$ . Notice that this implies $\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}\equiv\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}-cd\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ 4d}}\right)$ . Then, we can repeat the same arguments keeping the Jacobi symbol $(\frac{m}{n_{1}n_{2}})$ inside the summations, so that in the analogue of Section 4.1.1 this factor will become 
+ $\begin{split}\mathopen{}\mathclose{{\left(\frac{m}{n_{1}n_{2}}}}\right)&=\mathopen{}\mathclose{{\left(\frac{c}{\mathfrak{q}_{1}\mathfrak{p}_{2}}}}\right)\mathopen{}\mathclose{{\left(\frac{m}{\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime}}}}\right)=\mathopen{}\mathclose{{\left(\frac{c}{\mathfrak{q}_{1}\mathfrak{p}_{2}}}}\right)\mathopen{}\mathclose{{\left(\frac{d}{\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime}}}}\right)\mathopen{}\mathclose{{\left(\frac{dm}{\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}n_{2}^{\prime}}}}\right)\\
+&=\bigg(\frac{c}{\mathfrak{q}_{1}\mathfrak{p}_{2}}\bigg)\bigg(\frac{d}{\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}}\bigg)\bigg(\frac{d}{\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}\bigg)\bigg(\frac{d}{\tilde{\ell}_{2}\mathfrak{q}_{2}}\bigg)\bigg(\frac{-\tilde{\ell}_{2}\mathfrak{q}_{2}n_{2}^{\prime}}{\mathfrak{p}_{1}n_{1}^{\prime}}\bigg)\bigg(\frac{\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}}{\mathfrak{q}_{2}n_{2}^{\prime}}\bigg)\\
+&=f\mathopen{}\mathclose{{\left(c,\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},n_{1}^{\prime},n_{2}^{\prime}}}\right)g\mathopen{}\mathclose{{\left(c,\mathfrak{p}_{1},\mathfrak{p}_{2},\mathfrak{q}_{1},\mathfrak{q}_{2},n_{1}^{\prime},\ell_{1},\ell_{2}}}\right)\bigg(\frac{\tilde{\ell}_{1}}{n_{2}^{\prime}}\bigg),\\
+\end{split}$ 
+ where 
+ $\begin{split}f\mathopen{}\mathclose{{\left(\dots}}\right)&:=\mathopen{}\mathclose{{\left(\frac{c}{\mathfrak{q}_{1}\mathfrak{p}_{2}}}}\right)\mathopen{}\mathclose{{\left(\frac{-\mathfrak{q}_{2}n_{2}^{\prime}}{\mathfrak{p}_{1}n_{1}^{\prime}}}}\right)\mathopen{}\mathclose{{\left(\frac{\mathfrak{p}_{1}n_{1}^{\prime}}{\mathfrak{q}_{2}n_{2}^{\prime}}}}\right),\\
+g\mathopen{}\mathclose{{\left(\dots}}\right)&:=\bigg(\frac{d}{\mathfrak{p}_{1}\mathfrak{q}_{2}n_{1}^{\prime}}\bigg)\bigg(\frac{d}{\tilde{\ell}_{1}\mathfrak{p}_{1}n_{1}^{\prime}-cd}\bigg)\bigg(\frac{d}{\tilde{\ell}_{2}\mathfrak{q}_{2}}\bigg)\bigg(\frac{\tilde{\ell}_{2}}{\mathfrak{p}_{1}n_{1}^{\prime}}\bigg)\bigg(\frac{\tilde{\ell}_{1}}{\mathfrak{q}_{2}}\bigg),\end{split}$ 
+ and where we used that $\mathopen{}\mathclose{{\left(\frac{a}{b}}}\right)$ is periodic modulo $b$ in $a$ if $b\geq 1$ and is periodic modulo $4|a|$ in $b$ if $a\neq 0$ . 
+ Thus, we arrive at the analogue of ( 4.24 ) which will include an extra factor of $(\frac{\tilde{\ell}_{1}}{n_{2}^{\prime}})$ . The rest of the argument is identical, with the difference that we apply ( A.2 ) rather than ( A.1 ). The fact that the former bound is weaker than the latter does not effect the arguments when $bN\geq M$ . Thus, we obtain ( 7.1 ) and whence ( 1.5 ) when $N\geq M$ . This also implies ( 1.5 ) for $M>N$ , as can be seen by using the reciprocity formulae for the Jacobi symbol and for $\frac{\overline{m}}{n}$ and applying the bound for the case $N\geq M$ . 
+ 9 Proof of Corollary 1 
+ Proceeding as in [ DFI95 ] , we see that the error term in ( 1.4 ) is equal to 
+ $\begin{split}&\sum_{d|\Delta}\int_{0}^{4D}\hskip-11.99998pt\operatorname*{\sum\sum\sum}_{\begin{subarray}{c}dn_{1}\in\mathcal{N}_{1},dn_{2}\in\mathcal{N}_{2},h\in\mathbb{Z}\\
+1\leq|h|\leq HD^{\varepsilon},\,(n_{1},n_{2})=1\end{subarray}}\hskip-3.00003pt\!\frac{\tilde{\alpha}_{dn_{1}}(x)\tilde{\beta}_{dn_{2}}(x+\Delta)}{dn_{1}n_{2}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{h\Delta}{d}\frac{\overline{n}_{1}}{n_{2}}}}\right)\!\operatorname{e}\mathopen{}\mathclose{{\left(\frac{hx}{dn_{1}n_{2}}}}\right)\,dx+O(\eta),\end{split}$ 
+ with $H=\frac{\eta}{d}(\frac{N_{1}}{M_{1}}+\frac{N_{2}}{M_{2}})$ , $D=M_{1}N_{2}+M_{2}N_{1}$ and $\alpha_{r}(x):=\alpha_{r}g\mathopen{}\mathclose{{\left(x/{r}}}\right)$ , $\tilde{\beta}_{r}:=\beta_{r}f\mathopen{}\mathclose{{\left({x}/{r}}}\right)$ . Applying Theorem 1 (in the version given by Remark 1 ) we see that we can bound the above sum by 
+ $\begin{split}&\ll\sum_{d|\Delta}\sum_{1\leq|h|\leq HD^{\varepsilon}}\frac{dD}{N_{1}N_{2}}\frac{\|\alpha\|\|\beta\|}{d^{\frac{1}{2}}}\Big(1+\frac{dHD}{N_{1}N_{2}}\Big)^{\frac{1}{2}}(N_{1}N_{2})^{\frac{7}{20}}(N_{1}+N_{2})^{\frac{1}{4}+\varepsilon},\\
+&\ll\eta^{\frac{3}{2}}\mathopen{}\mathclose{{\left(\frac{M_{1}N_{2}}{M_{2}N_{1}}+\frac{M_{2}N_{1}}{M_{1}N_{2}}}}\right)^{\frac{3}{2}}\|\alpha\|\|\beta\|(N_{1}N_{2})^{\frac{7}{20}}(N_{1}+N_{2})^{\frac{1}{4}+\varepsilon}(M_{1}M_{2})^{\varepsilon},\\
+\end{split}$ 
+ since we can assume $|\Delta|\leq 4D$ (otherwise both $\mathcal{T}$ and the main term on the right hand side of ( 1.4 ) are identically zero) and since 
+ $\begin{split}\frac{dHD}{N_{1}N_{2}}={\eta}\mathopen{}\mathclose{{\left(\frac{N_{1}}{M_{1}}+\frac{N_{2}}{M_{2}}}}\right)\mathopen{}\mathclose{{\left(\frac{M_{1}}{N_{1}}+\frac{M_{2}}{N_{2}}}}\right)\leq 2\eta\mathopen{}\mathclose{{\left(\frac{M_{1}N_{2}}{M_{2}N_{1}}+\frac{M_{2}N_{1}}{M_{1}N_{2}}}}\right).\end{split}$ 
+ Appendix A Appendix: Weil’s bound for incomplete Kloosterman sums 
+ In this appendix we give the following bounds for incomplete Kloosterman sums where the sums are subject to some coprimality and congruence conditions. 
+ Lemma 1 . 
+ Let $\delta,k,\gamma\geq 1$ , $\alpha,a,b,v\in\mathbb{Z}$ and let $I=\{x\in[X^{\prime},X^{\prime}+X],x\equiv v\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ k}}\right)\}$ . Let $h:=(k,\gamma)$ , $h_{1}:=(k^{\infty},\gamma)$ , $\gamma_{1}:=\frac{\gamma}{h_{1}}$ , where $(m^{\infty},n):=\lim_{r\rightarrow\infty}(m^{r},n)$ . Then, 
+ $\begin{split}\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma\delta)=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)\ll(\gamma\delta)^{\varepsilon}\frac{h_{1}}{h}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}}{(\alpha,\gamma_{1})}}}\right)^{\frac{1}{2}}+(\alpha,\gamma_{1})\frac{X\delta^{\varepsilon}}{\gamma_{1}k}.\end{split}$ 
+ (A.1) 
+ Moreover, if $\chi$ is a Dirichlet character modulo $\gamma$ and $c,d\geq 1$ , $a,b,\beta\in\mathbb{Z}$ , then 
+ $\begin{split}\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma\delta)=1,\\
+(ax+b,c)=d\end{subarray}}\!\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}}}\right)\ll(c\gamma\delta)^{\varepsilon}\frac{h_{1}}{h}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}}{(\alpha,\gamma_{1})}}}\right)^{\frac{1}{2}}+(\alpha,\gamma_{1})^{\frac{1}{2}}\gamma_{1}^{\frac{1}{2}+\varepsilon}\frac{X(c\delta)^{\varepsilon}}{\gamma_{1}k}.\end{split}$ 
+ (A.2) 
+ Proof. 
+ We start by proving ( A.1 ).
+First of all, we notice that we can assume that $(\delta,\gamma k)=(v,h)=1$ and $k\leq X$ . Also, the case $\delta>1$ can be easily obtained from the case $\delta=1$ by Möbius inversion. Indeed 
+ $\begin{split}\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma\delta)=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)&=\sum_{\begin{subarray}{c}r_{1}|\delta\end{subarray}}\mu(r_{1}){\sum_{\begin{subarray}{c}x\in I,\ (x,\gamma)=1,\\
+x\equiv 0\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ r_{1}}}\right)\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)}\\
+&\ll\sum_{d|\delta}\mathopen{}\mathclose{{\left(\gamma^{\varepsilon}\frac{h_{1}}{h}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}}{(\alpha,\gamma_{1})}}}\right)^{\frac{1}{2}+\varepsilon}+(\alpha,\gamma_{1})\frac{X}{\gamma_{1}k}}}\right)\\
+&\ll(\gamma\delta)^{\varepsilon}\frac{h_{1}}{h}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}}{(\alpha,\gamma_{1})}}}\right)^{\frac{1}{2}}+\frac{(\alpha,\gamma_{1})X\delta^{\varepsilon}}{\gamma_{1}k},\end{split}$ 
+ by ( A.1 ) in the case $\delta=1$ . Similarly, the case $(k,\gamma)>1$ can be recovered from the case $h=(k,\gamma)=1$ : 
+ $\begin{split}&\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma)=1\end{subarray}}\!\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)=\hskip-2.5pt\!\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ h_{1}}}\right),\\
+c\equiv v\,(\textnormal{mod}\,h)\end{subarray}}\sum_{\begin{subarray}{c}x\in I_{c},\\
+(x,\gamma_{1})=1\end{subarray}}\!\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)=\hskip-4.49997pt\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ h_{1}}}\right),\\
+c\equiv v\,(\textnormal{mod}\,h)\end{subarray}}\!\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{c\gamma_{1}}}{h_{1}}}}\right)\!\!\sum_{\begin{subarray}{c}x\in I_{c},\\
+(x,\gamma_{1})=1\end{subarray}}\!\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{h_{1}x}}{\gamma_{1}}}}\right)\\
+&\hskip 30.00005pt\ll\operatornamewithlimits{\sum\nolimits^{*}}_{\begin{subarray}{c}c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ h_{1}}}\right),\\
+c\equiv v\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ h}}\right)\end{subarray}}\bigg(\frac{\gamma_{1}^{\frac{1}{2}+\varepsilon}}{(\alpha,\gamma_{1})^{\frac{1}{2}}}+\frac{(\alpha,\gamma_{1})X}{\gamma_{1}k\frac{h_{1}}{h}}\bigg)\ll\delta^{\varepsilon}\frac{h_{1}}{h}\frac{\gamma_{1}^{\frac{1}{2}+\varepsilon}}{(\alpha,\gamma_{1})^{\frac{1}{2}}}+\delta^{\varepsilon}(\alpha,\gamma_{1})\frac{X}{\gamma_{1}k},\end{split}$ 
+ where $I_{c}:=I\cap\{x\equiv c\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ h_{1}}}\right)\}$ . Thus, we can assume $h=1$ and similarly also that $(\alpha,\gamma)=1$ .
+Now, applying the Erdös-Turán inequality as in Lemma 8 of [ DFI97 ] , we find 
+ $\begin{split}\bigg|{\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma)=1\end{subarray}}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}}{\gamma}}}\right)}\bigg|\leq\frac{X+k}{\gamma k}|S(\alpha,0;\gamma)|+\sum_{1\leq r\leq\frac{\gamma}{2}}\frac{1}{r}|S(\alpha,r\overline{k};\gamma)|.\end{split}$ 
+ Thus, using Weil’s bound for $|S(\alpha,r\overline{k};\gamma)|$ and observing that $|S(\alpha,0;\gamma)|$ is a Ramanujan sum and thus is bounded by $(\alpha,\gamma)$ , we obtain ( A.1 ). 
+ To prove ( A.2 ) we can proceed in a similar way. As before, we assume $(\delta,\gamma k)=(v,h)=1$ , $k\leq X$ and $\delta=1$ . Also, we can assume $d|c$ , $(a,c)=1$ . 
+ Moreover, we can deduce the case $c>1$ from the case $c=1$ as the following. For the case $\delta>1$ , we start by using Möbius inversion and we obtain 
+ $\begin{split}\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma)=1,\\
+(ax+b,c)=d\end{subarray}}\!\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}}}\right)&=\sum_{\begin{subarray}{c}r|c,\\
+d|r\end{subarray}}\mu(r)\sum_{\begin{subarray}{c}x\in I,\ (x,\gamma)=1,\\
+x\equiv-\overline{a}b\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ r}}\right)\end{subarray}}\hskip-6.00006pt\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}}}\right).\\
+\end{split}$ 
+ (A.3) 
+ Next, we let $r=g_{1}g_{2}$ , where $g_{1}$ is the largest divisor of $r$ such that $(\gamma/(\gamma,g_{1}),g_{1})=1$ . Also, we write $\gamma=f_{1}f_{2}$ where $f_{1}=(\gamma,g_{1})$ and notice that $(g_{1},g_{2})=(f_{1},f_{2})=1$ and $f_{1}|g_{1}$ , $g_{2}|f_{2}$ (and thus also $(f_{1},g_{2})=(g_{1},f_{2})=1$ ). Also, we can write $\chi$ as $\chi_{1}\chi_{2}$ , where for $i=1,2$ , $\chi_{i}$ is a Dirichlet character modulo $f_{i}$ . Using the orthogonality of additive character we obtain that the left hand side of ( A.3 ) is equal to 
+ $\begin{split}&\sum_{\begin{subarray}{c}r|c,\\
+d|r\end{subarray}}\frac{\mu(r)}{g_{2}}\sum_{u\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ g_{2}}}\right)}\operatorname{e}\mathopen{}\mathclose{{\left(\frac{u\overline{a}b}{g_{2}}}}\right)\sum_{\begin{subarray}{c}x\in I,\ (x,\gamma)=1,\\
+x\equiv-\overline{a}b\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ g_{1}}}\right)\end{subarray}}\!\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}+\frac{ux}{g_{2}}}}\right)\\
+&\leq\sum_{\begin{subarray}{c}r|c,\\
+d|r\end{subarray}}\frac{1}{g_{2}}\sum_{u\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ g_{2}}}\right)}\bigg|\sum_{\begin{subarray}{c}x\in I,\ (x,\gamma)=1,\\
+x\equiv-\overline{a}b\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ g_{1}}}\right)\end{subarray}}\!\chi_{2}(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{f_{1}x}+(\beta\overline{f_{1}}+uf_{2}/g_{2})x}{f_{2}}}}\right)\bigg|,\\
+\end{split}$ 
+ since $x\equiv-\overline{a}b\penalty\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ f_{1}}}\right)$ and thus the Chinese remainder theorem gives 
+ $\begin{split}\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}}}\right)=\chi_{1}(-\overline{a}b)\operatorname{e}\mathopen{}\mathclose{{\left(-\frac{\alpha a\overline{bf_{2}}+\beta a\overline{b}f_{2}}{f_{1}}}}\right)\chi_{2}(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{f_{1}x}+\beta\overline{f_{1}}x}{f_{2}}}}\right).\end{split}$ 
+ Thus, applying ( A.2 ) in the case $c=1$ we obtain 
+ $\begin{split}\sum_{\begin{subarray}{c}x\in I,\\
+(x,\gamma)=1,\\
+(ax+b,c)=d\end{subarray}}\!\chi(x)\operatorname{e}\mathopen{}\mathclose{{\left(\frac{\alpha\overline{x}+\beta x}{\gamma}}}\right)&\ll\sum_{r|c}\Big(\gamma^{\varepsilon}\frac{h_{1}^{\prime}}{h^{\prime}}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}^{\prime}}{(\alpha,\gamma_{1}^{\prime})}}}\right)^{\frac{1}{2}}+(\alpha,\gamma_{1}^{\prime})^{\frac{1}{2}}{\gamma_{1}^{\prime}}^{\frac{1}{2}+\varepsilon}\frac{X}{\gamma_{1}^{\prime}k^{\prime}}\bigg)\\[-15.00002pt]
+&\ll(\gamma c)^{\varepsilon}\frac{h_{1}}{h}\mathopen{}\mathclose{{\left(\frac{\gamma_{1}}{(\alpha,\gamma_{1})}}}\right)^{\frac{1}{2}}+(\alpha,\gamma_{1})^{\frac{1}{2}}{\gamma_{1}}^{\frac{1}{2}+\varepsilon}\frac{X}{\gamma_{1}k},\end{split}$ 
+ where we used the notation 
+ $\begin{split}&k^{\prime}:=[g_{1},k],\quad h^{\prime}=({k^{\prime}},f_{2}):=(k,f_{2}),\quad h_{1}^{\prime}:=({k^{\prime}}^{\infty},f_{2})=(k^{\infty},f_{2}),\quad\gamma_{1}^{\prime}:=f_{2}/h_{1}^{\prime}\end{split}$ 
+ since $(c,k)=1$ . Moreover $\gamma_{1}^{\prime}|\gamma_{1}$ and ${\gamma_{1}^{\prime}}^{\frac{1}{2}}k^{\prime}=[g_{1},k]f_{2}^{\frac{1}{2}}(k^{\infty},f_{2})^{-\frac{1}{2}}\geq\gamma_{1}^{\frac{1}{2}}k$ since $f_{1}|g_{1}$ and thus $[g_{1},k]\geq[f_{1},k]=f_{1}k/(k,f_{1})\geq f_{1}^{\frac{1}{2}}k(k,f_{1})^{-\frac{1}{2}}$ . 
+ The rest of the argument is essentially identical as in the case of ( A.1 ), with the only difference being in the last step, where we need to use Weil’s bound for both summands.
+∎ 
+ References 
+ [BCH] 
+ R. Balasubramanian, J. B. Conrey, and D. R. Heath-Brown, Asymptotic mean square of the
+product of the Riemann zeta-function and a Dirichlet polynomial . J. Reine Angew. Math. 357 (1985), 161-181.
+ [BS] 
+Banks, W.D.; Shparlinski, I.E. Fractional parts of Dedekind sums , arXiv: 1411.1820.
+ [BCR] 
+Bettin, S.; Chandee V.; and Radziwiłł, M. The mean square of the product of the Riemann zeta function with Dirichlet polynomials , arXiv: 1411.7764.1, to appear in J. Reine Angew. Math.
+ [BFI] 
+Bombieri, E.; Friedlander, J.B.; Iwaniec, H. Primes in arithmetic progressions to large moduli . Acta Math. 156 (1986), no. 3-4, 203–251.
+ [DI] 
+Deshouillers, J.-M.; Iwaniec, H. Kloosterman sums and Fourier coefficients of cusp forms . Invent. Math. 70 (1982/83), no. 2, 219–288.
+ [DFI95] 
+Duke, W.; Friedlander, J.; Iwaniec, H. Representations by the determinant and mean values of L-functions . Sieve methods, exponential sums, and their applications in number theory (Cardiff, 1995), 109–115, London Math. Soc. Lecture Note Ser., 237, Cambridge Univ. Press, Cambridge, 1997.
+ [DFI97] 
+Duke, W.; Friedlander, J.B.; Iwaniec, H. Bilinear forms with Kloosterman fractions . Invent. Math. 128 (1997), no. 1, 23–43.
+ [DFI02] 
+Duke, W.; Friedlander, J. B.; Iwaniec, H. The subconvexity problem for Artin L-functions. Invent. Math. 149 (2002), no. 3, 489–577.
+ [DFI12] 
+Duke, W.; Friedlander, J.B.; Iwaniec, H. Weyl sums for quadratic roots . Int. Math. Res. Not. IMRN 2012, no. 11, 2493–2549.
+ [Fou] 
+Fouvry, Étienne Autour du théorème de Bombieri-Vinogradov . Acta Math. 152 (1984), no. 3-4, 219–244.
+ [Shp] 
+Shparlinski, I.E. On the distribution of solutions to linear equations . Glas. Mat. Ser. III 44(64) (2009), no. 1, 7–10.
+ S. Bettin, Centre de Recherches Mathématiques, Université de Montréal C.P. 6128;
+succursale Centre-ville, Montréal (Québec); H3C 3J7 Canada 
+ E-mail address : bettin@crm.umontreal.ca 
+ V. Chandee, Department of Mathematics, Burapha University; Chonburi; 20131 Thailand 
+ E-mail address : vorrapan@buu.ac.th 
+ ◄ 
+ Feeling lucky? 
+ Conversion report 
+ Report an issue 
+ View original on arXiv ► 
+ Copyright 
+ Privacy Policy 
+ Generated by L a T e XML oxide 
+ var canMathML = typeof(MathMLElement) == "function";
+ if (!canMathML) {
+ var body = document.querySelector("body");
+ body.firstElementChild.setAttribute('style', 'opacity: 0;');
+ var loading = document.createElement("div");
+ loading.setAttribute("id", "mathjax-loading-spinner");
+ var message = document.createElement("div");
+ message.setAttribute("id", "mathjax-loading-message");
+ message.innerText = "Typesetting Equations...";
+ body.prepend(loading);
+ body.prepend(message);
+ var el = document.createElement("script");
+ el.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+ document.querySelector("head").appendChild(el);
+ window.MathJax = {
+ startup: {
+ pageReady: () => {
+ return MathJax.startup.defaultPageReady().then(() => {
+ body.removeChild(loading);
+ body.removeChild(message);
+ body.firstElementChild.removeAttribute('style');
+ }); } } };
+ }
+ // Auxiliary function, building the preview feature when
+ // an inline citation is clicked
+ function clicked_cite(e) {
+ e.preventDefault();
+ let cite = this.closest('.ltx_cite');
+ let next = cite.nextSibling;
+ if (next && next.nodeType == Node.ELEMENT_NODE && next.getAttribute('class') == "ar5iv-bibitem-preview") {
+ next.remove();
+ return; }
+ // Before adding a preview modal,
+ // cleanup older previews, in case they're still open
+ document.querySelectorAll('span.ar5iv-bibitem-preview').forEach(function(node) {
+ node.remove();
+ })
+ // Create the preview
+ preview = document.createElement('span');
+ preview.setAttribute('class','ar5iv-bibitem-preview');
+ let target = document.getElementById(this.getAttribute('href').slice(1));
+ target.childNodes.forEach(function (child) {
+ preview.append(child.cloneNode(true));
+ });
+ let close_x = document.createElement('button');
+ close_x.setAttribute("aria-label","Close modal for bibliography item preview");
+ close_x.textContent = "×";
+ close_x.setAttribute('class', 'ar5iv-button-close-preview');
+ close_x.setAttribute('onclick','this.parentNode.remove()');
+ preview.append(close_x);
+ preview.querySelectorAll('.ltx_tag_bibitem').forEach(function(node) {
+ node.remove();
+ });
+ cite.parentNode.insertBefore(preview, cite.nextSibling);
+ return;
+ }
+ // Global Document initialization:
+ // - assign the preview feature to all inline citation links
+ document.querySelectorAll(".ltx_cite .ltx_ref").forEach(function (link) {
+ link.addEventListener("click", clicked_cite);
+ });
