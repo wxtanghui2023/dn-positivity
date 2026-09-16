@@ -63,3 +63,13 @@ $$\text{(ii) 三道严格降级：三墙}\to\text{三机制类／GM-DEAD}\not\Ri
 $$\text{(iii) ⭐ 墙 A 四项资格（明确对象＋历史可移动参数＋明确算术输入＋未确定空间）}；$$
 $$\text{(iv) 防偷换：}\theta\ \text{可推进}\not\Rightarrow\mathrm{RH}\ \text{可推进；}$$
 $$\text{(v) 两个入口：猎-2（先算}\ (r,t)\to\theta\ \text{映射）／换-1（新外部结构）。}$$
+
+---
+
+## 【下一轮登记】（2026-09-16 19:46，唐先生确认冻结后指定）
+$$\textbf{猎-2 第一刀}：\ \boxed{\text{彻底计算}\ (r,t)\ \longrightarrow\ \theta_{\max}}$$
+$$\qquad\textbf{重点不是再找一个更强工具}，\ \text{而是把}\ \textbf{映射本身拆开}：$$
+$$\qquad\quad (r,t)\ \longrightarrow\ \text{Kloosterman 估计}\ \longrightarrow\ \mathcal E_{\rm off}(\theta)\ \longrightarrow\ \theta_{\max}$$
+$$\textbf{随后单独审计}：\ \boxed{\theta<1\ \text{的 conjectural input 究竟缺哪一个}\ \textbf{不可替代的算术估计}？}$$
+$$\textbf{最终状态确认（唐先生）}：\ \text{SEARCH-SPACE}\ \textbf{继续开放}；\ \text{三机制类}\ A\ (\text{ALIVE})／B\ (\text{DEAD 该 carrier})／\mathrm{GM}\ (\text{独立机制})；$$
+$$\qquad\text{最值得保留的资产＝}\ A：\ \text{不是凭空创造的新符号，而是已存在的}\ \textbf{"算术输入增强}\to\text{非对角控制增强}\to\theta\ \text{推进"}\ \text{真实历史链条}✓$$
