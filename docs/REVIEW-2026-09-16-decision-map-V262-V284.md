@@ -206,3 +206,22 @@ $$\qquad \textbf{禁止}：\text{"O1-1 不存在"} ✗;\ \text{"已全局数学�
 $$\qquad \text{剩余出口}：\text{唯一}\ ＝\ `V287`\ \text{的靶（合法算术类内可证 off-line 成员）},\ \text{且}\ \textbf{该出口本身已触及 GRH} ✓$$
 $$\qquad \text{且}：\text{继续在 O1-1 内换}\ S／\sim_S／\text{有限系数}\ \textbf{会重新落入 `V289` 两难} ✓$$
 $$\Longrightarrow \boxed{\text{O1-1}\ \textbf{完成了它作为搜索工具的使命}} —— \text{把"找机制"精确化为两堵已知墙的合取} ✓✓$$
+
+---
+
+## 13. ⚓ **目标锚定**（唐先生 2026-09-16 12:09）
+
+> 唐先生逐字：**「读文献可以，但我们的目标不是几篇小论文，请务必牢记」**
+
+$$\textbf{与锚页同旨}（`00-ANCHOR-purpose-and-discipline.md`，唐先生 2026-09-12 14:18 定）：$$
+$$\qquad \text{"我们和那 25 位数学家的目的是一样的，不是用 AI 做拔苗助长的事，而是认真踏实做 }\mathrm{RH}\ \text{以及其它猜想的证明，并不会为了一两个论文去急于求成"} ✓✓$$
+$$\qquad \text{四条"要"}：\text{① 要理解，不要战绩}\ \text{② 要可核验，不要自述}\ \text{③ 要慢，不要抢（}\textbf{不为凑论文而写；只在真懂了时写}\text{）}\ \text{④ 要少而精，不要多而杂} ✓✓$$
+
+$$\boxed{\textbf{对今日的修正}：\text{本档 §7 与 `V290` §3 的"}\textbf{开论文线}\text{"框架}\ ＝\ \textbf{漂移}} ⚠️✓$$
+$$\qquad \text{论文线（P1–P8／A1-3／A1-4）的}\ \textbf{正确位置}\ ＝\ \textbf{副产品}（\text{可交付}\ \ne\ \text{目标}）;\qquad \text{A1-3 已降级（`V291`）} ✓$$
+$$\qquad \textbf{目标侧唯一尚有数学内容的靶}：\ `V181`\ \text{交回的}\ \textbf{承重墙}：$$
+$$\qquad \qquad \boxed{\text{承重墙}\ ＝\ \text{T}\log\text{T}\ ＋\ \text{Weil 正性};\qquad \text{核心缺口}\ ＝\ \textbf{局部算术结构}\ \not\Longrightarrow\ \textbf{全球谱定位}} ✓✓$$
+$$\qquad \qquad ⟹ \text{攻此靶的两种可能产物}：\textbf{(i) 结构定理（＝理解）}\ \text{或}\ \textbf{(ii) 突破（RH 级）};\ \text{两者}\ \textbf{都不是"小论文"} ✓✓$$
+$$\qquad \textbf{任何"突破"主张} \Rightarrow \text{须先过}\ \textbf{突破判据}（\text{档案既有资产}：`E30-2`\ \text{机制与精化判据};\ `E30-UNIFIED-CONVERSION-LAW`\ \text{的 T}^2\ \text{律＋log 律}）✓✓$$
+
+$$\textbf{纪律}：\text{读文献只用于}\ \textbf{锁定事实}（\text{如 `V291` 的核验}）,\ \textbf{不得} \text{把"可发表"当作进展度量} ✓✓$$
