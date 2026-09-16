@@ -117,3 +117,30 @@ $$\textbf{另一入口}：\ \text{换-1（\text{离开 mollifier／LV／MV 语�
 $$\text{① 本档为冻结与状态登记，}\textbf{不引入新机制}；\quad\text{② BCR 原文关键语句}\ \textbf{逐字引用}（\text{外部来源，仅作数据}）；$$
 $$\text{③ 残余未消}：\ \text{§3 恒等为本档计算，}\textbf{未逐行核验定理 2 完整证明}；\ \text{A 范围公式未验推导}；\ \mathfrak F\ \text{完整形态未写出}；$$
 $$\text{④ }\textbf{未用 RH}；零数值（\text{仅代数恒等式与分数演算）}；\ \text{未跑 Lean}✓$$
+
+---
+
+# 【下次开工第一刀 · 登记】（2026-09-16 20:01，唐先生正式冻结后指定）
+
+## ⚠️ 防偷渡铁律（唐先生新立，首要）
+$$\boxed{\mathfrak F\ \ne\ \{(r,t):r,t\ge0\}}$$
+$$\text{理由}：\text{定理的 Kloosterman 猜想对}\ \text{"all}\ r,t\ge0\text{"}\ \text{成立} \ \textbf{不蕴含} \ \text{应用层可达域＝整个第一象限}✓$$
+$$\qquad\text{本档已核出的}\ A\ll(NM)^{\frac{1/2-r}{1+2t}+\varepsilon}\ \text{与定理误差项的}\ (r,t)\ \text{耦合，}\ \textbf{正说明} \text{须真算交集}✓$$
+
+## $\mathfrak F$ 的四分量分解（唐先生指定）
+$$\boxed{\mathfrak F\ =\ \mathfrak F_{\rm estimate}\ \cap\ \mathfrak F_A\ \cap\ \mathfrak F_{\rm error}\ \cap\ \mathfrak F_{\rm application}}$$
+$$\qquad\text{(i)}\ \mathfrak F_{\rm estimate}：\text{(1.3) 假设本身成立的}\ (r,t)\ \text{域}（\text{猜想域}\ r,t\ge0\ \text{为其}\ \textbf{推测上界}）；$$
+$$\qquad\text{(ii)}\ \mathfrak F_A：\text{由}\ A\ll(NM)^{\frac{1/2-r}{1+2t}+\varepsilon}\ \text{与所需}\ A\ \text{范围相容的}\ (r,t)；$$
+$$\qquad\text{(iii)}\ \mathfrak F_{\rm error}：\text{定理 2 主误差}\ T^{\frac12-t+\varepsilon}N^{\frac12+r+2t}\ \text{次于主项的}\ (r,t)\ (\text{即}\ \theta<\tfrac{1+2t}{1+2r+4t})；$$
+$$\qquad\text{(iv)}\ \mathfrak F_{\rm application}：\text{应用侧所需}\ (\text{mollifier 长度／}\theta\ \text{目标／平衡条件})✓$$
+
+## 消元后的二分判据（唐先生指定）
+$$\boxed{\inf_{(r,t)\in\mathfrak F}\bigl(17r+t\bigr)\ \begin{cases}<8 &\Rightarrow \textbf{BCR 架构内已存在突破空间}\\ =8 &\Rightarrow \textbf{17/33 是应用可达域边界}\\ >8 &\Rightarrow \textbf{当前 17/33 点需重新解释}\end{cases}}$$
+
+## 执行顺序（唐先生锁定）
+$$\textbf{第一刀＝}\mathfrak F\ \text{的}\ \textbf{完整消元}，\ \textbf{而非} \text{优化}\ t✓$$
+$$\qquad\text{只有}\ \mathfrak F\ \text{写清楚以后，才有资格问}\ \inf_{\mathfrak F}(17r+t)\stackrel{?}{<}8，\ \text{并据此决定 T1 是否有值得下注的突破口}✓$$
+
+## 保留的机制级关系（本次冻结的核心资产）
+$$T^{\frac12-t}N^{\frac12+r+2t}\lesssim T\ \Longrightarrow\ \theta<\frac{1+2t}{1+2r+4t}$$
+$$\text{意义}：\ \theta\text{-公式不再是仅应用层的"参数映射"}，\ \text{而可追溯到}\ \textbf{误差项进入主项预算的具体位置}✓\quad(\text{比"17/33 只是某个点"扎实})✓$$
