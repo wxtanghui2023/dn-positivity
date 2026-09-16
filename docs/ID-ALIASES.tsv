@@ -9,3 +9,4 @@ E131	legacy-alias	superseded-by-V107	2026-09-14T10:42:19
 E132	legacy-alias	superseded-by-V110	2026-09-14T10:54:48
 V110	legacy-alias	superseded-by-V111(TP5-O3-test) / V110=已由 r1-scan-and-audit-b 先占	2026-09-14T10:57:13
 V263	legacy-alias	superseded-by-V262(inverse-limit-wall-audit; 昨夜23:08领号未落盘)	2026-09-16T09:24:50+08:00
+V263	legacy-alias	RETIRED(tombstone; 别名→V262; 保留锁位以免重领)	2026-09-16T09:29:30+08:00
