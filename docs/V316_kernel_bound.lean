@@ -929,3 +929,65 @@ theorem integrable_const_mul_h {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam
   (integrable_of_continuousOn_Icc' hh).const_mul (vStarELConst lam)
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **Step 1**：从 ④-2b 抽出 `hF` 为独立 lemma（**括号形状以 ④-2b 原文为准**，不重定义）。 -/
+theorem kernel_hv_prod_integrable {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    Integrable
+      (fun p : ℝ × ℝ => h p.1 * (|p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.2)))
+      (Irest.prod Irest) := by
+  refine (kernel_hv_integrable hh lam).congr ?_
+  filter_upwards with p
+  ring
+
+/-- **Step 2**：`hg` —— 由 ④-2b 的 `hF` 经 **Fubini-section**（`Integrable.integral_prod_left`）
+得到 `s ↦ ∫ t, h s (|s−t| cos) ∂Irest` 可积，再用 `integral_const_mul` 把 `h s` 提出。
+**数学来源就是同一个 `hF`，不是新的 domination 论证**（唐先生要求）。 -/
+theorem integrable_h_mul_kernel_int {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) :
+    Integrable
+      (fun s : ℝ => h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest))
+      Irest := by
+  have hF := kernel_hv_prod_integrable hh lam
+  refine (hF.integral_prod_left).congr ?_
+  filter_upwards with s
+  exact MeasureTheory.integral_const_mul (μ := Irest) (h s)
+    (fun t : ℝ => |s - t| * Real.cos (Real.sqrt 2 * lam * t))
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-4b 弱 Euler–Lagrange 方程**（**不使用** `∫ h = 0`，以便与约束明确区分）：
+`∫ h v_λ + λ² ∫ h(s)(∫ K(s,t)v_λ(t)dt)ds = D_λ ∫ h`。
+只做纯代数＋积分线性：两次 `integral_const_mul`、`integral_add`、`integral_congr_ae`、`vStar_EL_ae`。 -/
+theorem weak_EL {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) (h0 : 0 < lam) :
+    (∫ s, h s * Real.cos (Real.sqrt 2 * lam * s) ∂Irest)
+      + lam ^ 2 * (∫ s, h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest)
+          ∂Irest)
+      = vStarELConst lam * (∫ s, h s ∂Irest) := by
+  have h2 : Integrable (fun s : ℝ => h s * Real.cos (Real.sqrt 2 * lam * s)) Irest :=
+    integrable_h_mul_cos hh lam
+  have hg := integrable_h_mul_kernel_int hh lam
+  rw [← MeasureTheory.integral_const_mul (μ := Irest) (lam ^ 2)
+      (fun s : ℝ => h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest))]
+  rw [← MeasureTheory.integral_add h2 (hg.const_mul (lam ^ 2))]
+  rw [← MeasureTheory.integral_const_mul (μ := Irest) (vStarELConst lam) h]
+  refine MeasureTheory.integral_congr_ae ?_
+  filter_upwards [vStar_EL_ae lam h0] with s hs
+  linear_combination (h s) * hs
+
+/-- **④-4c 约束版（tangent space）**：admissible variation 满足 `∫ h = 0` ⟹ 弱 E–L 退化为 0。
+这一步才调用约束；不重新碰 Fubini。 -/
+theorem weak_EL_constrained {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : ℝ) (h0 : 0 < lam)
+    (hmean : ∫ s, h s ∂Irest = 0) :
+    (∫ s, h s * Real.cos (Real.sqrt 2 * lam * s) ∂Irest)
+      + lam ^ 2 * (∫ s, h s * (∫ t, |s - t| * Real.cos (Real.sqrt 2 * lam * t) ∂Irest)
+          ∂Irest) = 0 := by
+  rw [weak_EL hh lam h0, hmean, mul_zero]
+
+end Zeta23.ThmD.V316
