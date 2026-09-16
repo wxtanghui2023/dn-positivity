@@ -2732,6 +2732,14 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 重构**：$$C_{\rm uncond}(\lambda\le1)=\sup_{v,D}\frac{\mathcal J_D(\lambda;v)}{\lambda};\quad C_{\rm uncond}(1)=c_1^{*}\Rightarrow G=0.6725$$ $$\boxed{c>0.6725\Rightarrow\lambda>1}$$；撤回 $\phi$-无关／窗口非自由度／$\sqrt3/2$ 上界／$\frac34$ ✓✓✓
 **§6 边界**：语句级源码；$\mathcal J_D$ 未展开；检查点 B 未定论；C₁ 依赖引用；未用 RH；零数值 ✓
 
+### F.5fh ⭐⭐⭐⭐⭐ **V303：(5c) $\mathcal J_D$ 闭式 ＋ $\lambda\le1$ 全域极值 —— ceiling 锁死；$G>0.6725\Rightarrow\lambda>1$**（`V303` ✓ 2026-09-16 13:38）
+
+**§1 闭式（源码逐字）**：$$\mathcal J_D(\lambda;v)=2\!\int_0^1\!D(\lambda r)(v⋆v)(r)dr;\quad c_\lambda(v;D)=\frac{\lambda(\int v)^2}{\int v^2+\lambda\mathcal J_D}$$；**$D$ 由定理指定**（ThmD $D(s)=s$）⟹ DOF $=(v,\lambda)$（收窄 V302 的"双自由度"）✓✓
+**§2 情形 A**：$\mathcal J_D=\langle v,\mathcal T_{K_\lambda}v\rangle$ ⟹ **Rayleigh 商／距离核（Brownian bridge 类，经典）** ⟹ **不包装为新机制**；**V301 公式＝平坦窗实例**（$v\equiv1,D=s\Rightarrow\mathcal J=\lambda/3$）✓✓✓
+**§3 单调性**：$c^{*}_\lambda=\frac{\sqrt2\tan\vartheta}{1+\vartheta\tan\vartheta}$（$\vartheta=\lambda/\sqrt2$）；五点核验递增 ⟹ $$\boxed{\sup_{\lambda\le1}C(\lambda)=C(1)=c_1^{*}}$$；路线图复现（$1.04/1.26/1.70\Rightarrow0.71/0.79/0.88$）⟹ **support＝$\lambda$，两机制统一** ✓✓✓
+**§4 判词**：第一支 ⟹ $$C_{\rm uncond}=c_1^{*},\ G_{\max}=0.67250\ \Longrightarrow\ \boxed{G>0.6725\Rightarrow\lambda>1}$$ ✓✓✓
+**§5 边界**：单调性未形式化（五点算术核验）；第三点差 0.02；谱类识别为[判断]；C₁ 依赖引用；未用 RH；数值仅闭式算术 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
