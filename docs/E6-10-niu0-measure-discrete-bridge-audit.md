@@ -58,3 +58,11 @@ $$\text{(ii) 正确结构：}\mathcal D\xrightarrow{\Phi_{\rm MT}}\mathcal K_{\r
 $$\text{(iii) M1（覆盖，严格）}\Longrightarrow R\ge|E|/2；\ \text{M2（稳定性）}\Longrightarrow R\lesssim|E|\log T，\ \ell_{\rm bridge}=O(\log T)；$$
 $$\text{(iv) M3：}\Delta=\ell_{\rm bridge}+\ell_{\rm detection}+O(\varepsilon)，\text{DH 下}\ \ell_{\rm det}\ \text{支配性吸收；}$$
 $$\text{(v) 状态四行更新＋GM 暂缓理由（五项同时变化 ⟹ 损失不可定位）。}$$
+
+---
+
+## 【更正 T10】（2026-09-16 18:27，唐先生指出；正文不修改，更正留档）
+$$\textbf{原（§M2／M3）}：\ \ell_{\rm bridge}\le\log T=O(\varepsilon)\quad\textbf{不严谨}$$
+$$\textbf{更正}：\ \log T=T^{o(1)} \Longrightarrow \text{若}\ r\asymp(\log T)^{-1}，\ \text{则}\ r^{-1}\asymp\log T=T^{o(1)} \Longrightarrow \boxed{\ell_{\rm bridge}=0\ (\text{幂指数层级})\ \text{或}\ o(1)}$$
+$$\qquad\ \textbf{不得} \text{写}\ O(\varepsilon)\ ——\ \varepsilon\ \text{为固定小参数，}\ o(1)\ \text{为}\ T\to\infty\ \text{渐近量，两者不同层级。}$$
+$$\textbf{另}：\text{经 E6-11（虎-1）核验，}\textbf{MT 未使用该桥}（\text{判定 M2-C}）\Longrightarrow r\asymp1/\log T\ \text{仅为独立结构判定。}$$
