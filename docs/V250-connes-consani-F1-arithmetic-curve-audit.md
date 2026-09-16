@@ -48,7 +48,7 @@ $$\qquad ⟹ \textbf{精确回应}：\text{不是"Frobenius 不可能"，而是}
 
 $$\textbf{(a)}\ \textbf{Thm 5 是直积隔离} \Longrightarrow \text{`V239`-C／`V205` KILL-2 ＋ `ESC2` no common carrier} $$
 $$\qquad \text{原文逐字}：\text{"perfectly isolating the arithmetic from the geometric data"},\ E_p\cong C_p\times\widetilde{\mathcal X}_\infty ✓$$
-$$\qquad \text{两个因子}\ \textbf{独立};\ \text{唯一"耦合"是}\ \textbf{复结构的选取}（\text{"矩形复结构"}＝格}\ \langle1,iy\rangle\ \text{，纠缠靠乘}\ i\ \text{——一个}\textbf{常数}，\ \text{不是算术耦合}）✓$$
+$$\qquad \text{两个因子}\ \textbf{独立};\ \text{唯一"耦合"是}\ \textbf{复结构的选取}（\text{"矩形复结构"}＝格\ \langle1,iy\rangle\ \text{，纠缠靠乘}\ i\ \text{——一个}\textbf{常数}，\ \text{不是算术耦合}）✓$$
 $$\qquad \text{本项目}：\text{`V239`-C：加／乘数据互相独立}\Rightarrow\text{联合态是直积}\Rightarrow\text{holonomy＝独立因子之积}\Rightarrow\text{落 `V205` KILL-2}\Rightarrow DEAD;\ \text{`ESC2`：正性在一侧、谱数据在另一侧}\Rightarrow\text{no common carrier} ✓✓✓$$
 $$\qquad ⟹ \textbf{没有"通道"能让算术数据（}\log p\text{）去约束任何谱／实部量} ✓✓✓$$
 $$\textbf{(b)}\ \textbf{典范输出是比值} \Longrightarrow \text{`V220`} $$
@@ -77,7 +77,7 @@ $$\text{(5)}\ \textbf{统一性宣称}：\text{"common geometric origin for}\ p\
 
 ## §5 判词 ＋ 状态表 ＋ 边界
 
-$$\boxed{\textbf{V250：Connes–Consani 绝对 }\mathbf F_1\text{-曲线＝}\textbf{canonicity 方向上的真进展}（模空间／泛性质；Frobenius 自同态存在于 }\mathbf F_1\text{ 侧）};\ \textbf{但对 }\beta\ \textbf{ 无路，且理由全部来自本项目已有定理（五条）}} ✓✓✓$$
+$$\boxed{\textbf{V250：Connes–Consani 绝对 }\mathbf F_1\text{-曲线＝}\textbf{canonicity 方向上的真进展}（模空间／泛性质；Frobenius 自同态存在于 }\mathbf F_1\text{ 侧）};\ \textbf{但对 }\beta\ \textbf{ 无路，且理由全部来自本项目已有定理（五条）} ✓✓✓$$
 
 | 项 | 判定 | 依据 |
 |:--|:--|:--|
