@@ -1,49 +1,24 @@
-/- ⑤-2 Qfun_diff 待办（修法已进展：unfold Qfun 后需过 ④-2a 桥）
-   ⚠️ 病根（第二轮）：**Qfun 定义里 u² 项用「区间积分」，而 hs/hgap' 是 Irest 积分** ⟹ 形状不匹配。
-   修法：unfold Qfun 之后插 `rw [intervalIntegral_eq_integral_Irest]`（通用桥，会把所有区间积分
-         一次性换成 Irest 积分），再进入 show/ring 重排 + rw [hgap', hs]。
-   第一轮病根（已修）：先 unfold 后 hgap 不匹配 ⟹ 先 `have hgap' := by simpa only [Bfun] using hgap`。
-   ✅ ⑤-1 sq_diff_Irest 保留 ✓ -/
+/- ⑤-2 Qfun_diff 待办（第三轮诊断 —— 建议改为结构性修法）
 
-/-- **⑤-2 `Qfun_diff`**：`Qfun λ u − Qfun λ v_λ = 2[∫v_λ h + λ²Bfun(v_λ,h)] + Qfun λ h`
-（`h = u − v_λ`，**显式保持** `u s - Real.cos (…)`）。
-顺序：**先 `hgap' := simpa only [Bfun] using hgap` → 再 `unfold Qfun` → `rw [hgap']`**。 -/
-theorem Qfun_diff {u : ℝ → ℝ} (lam : ℝ)
-    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
-    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
-      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
-    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
-      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
-    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
-      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
-    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
-      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
-    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
-    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
-    (h1 : Integrable (fun s : ℝ =>
-      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
-    (h2 : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest) :
-    Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
-      = 2 * ((∫ s, Real.cos (Real.sqrt 2 * lam * s)
-                * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
-             + lam ^ 2 * Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
-                 (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)))
-        + Qfun lam (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
-  have hgap := Bfun_quadratic_gap (u := u)
-    (v := fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) hUU hVV hC hD hE
-  have hgap' := by simpa only [Bfun] using hgap
-  have hs := sq_diff_Irest (u := u) lam hu hv h1 h2
-  unfold Qfun
-  rw [show (∫ s, u s ^ 2 ∂Irest)
-        + lam ^ 2 * (∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
-        - ((∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest)
-        + lam ^ 2 * (∫ p, |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
-            * Real.cos (Real.sqrt 2 * lam * p.2) ∂(Irest.prod Irest)))
-      = ((∫ s, u s ^ 2 ∂Irest) - (∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest))
-        + lam ^ 2 * ((∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
-            - (∫ p, |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
-                * Real.cos (Real.sqrt 2 * lam * p.2) ∂(Irest.prod Irest))) from by ring]
-  rw [hgap', hs]
-  ring
+【三轮症状】
+ 1轮: 先 unfold Qfun 后 rw [hgap] 找不到模式 ⟹ 改 `have hgap' := by simpa only [Bfun] using hgap` ✓
+ 2轮: Qfun 的 u² 项是**区间积分**、hs/hgap' 是 **Irest 积分** ⟹ 需桥
+ 3轮(本轮): 插桥后仍不过 —— 错误信息显示目标里有两个并存形态：
+     (a) `∫ s in -(1/2)..1/2, (fun s => Real.cos (√2*lam*s)) s ^ 2`  ← **区间积分 + beta-redex**
+     (b) `∫ s, u s ^ 2 ∂Irest`                                        ← 已被桥改写
+   ⟹ rw 默认只重写**第一个**匹配；且 `(fun s => …) s ^ 2` 是 **beta-redex**（s 同时被外层捕获），
+      必须先进 beta 归约（`simp only []` 或 `beta_reduce`/`show` 到 `Real.cos (√2*lam*s) ^ 2`）
+      ⟹ 之后再对**全部**出现应用桥（两次 rw 或 `simp only [intervalIntegral_eq_integral_Irest]`）
 
-end Zeta23.ThmD.V316
+【⭐ 结构性修法（推荐，比继续微迭代更好）】
+  把 **Qfun 的定义改为 Irest 层**：
+     noncomputable def Qfun (lam : ℝ) (u : ℝ → ℝ) : ℝ :=
+       (∫ s, u s ^ 2 ∂Irest) + lam ^ 2 * Bfun u u
+  理由：
+   ① ④-2a 已提供 `intervalIntegral_eq_integral_Irest`（区间 ↔ Irest 的**唯一**桥）；
+   ② V316-A（kernel_bound/Q_pos）与 V316-C（④ 全链）**全部**在 Irest 层；
+   ③ ⑤-2/⑤-3/⑤-4 因此全部同层，**彻底消除**这一类形状错配（本轮三轮迭代的根因）；
+   ④ Qfun 目前**只**在 ⑤ 的陈述中使用（未扩散）⟹ 改动风险极低；
+   ⑤ 若需要 Q_pos 的区间积分形式，用桥一次性转换即可（已 CLOSED ✓）。
+  ⟹ 建议：先改 Qfun 定义（一条 def），再落 ⑤-2（应一次通过）。
+   ✅ ⑤-1 sq_diff_Irest 保留 ✓（本文件 53 条仍全通过） -/
