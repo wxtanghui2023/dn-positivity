@@ -2758,6 +2758,14 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§5 验收**：A1 ✓／A2 ✓／**A3 ✗** ⟹ **不冒充自足** ✓✓✓
 **§6 边界**：$|x-y|$ 求逆为经典引用；锥约束为新注意点；两墙表条件性；未用 RH；零数值 ✓
 
+### F.5fk ⭐⭐⭐⭐⭐ **V306：A′-① 核识别（$K=|x-y|$）＋ A′-② 完整积分 BC —— 核心不一致 ⟹ 隐藏 admissibility**（`V306` ✓ 2026-09-16 13:56）
+
+**§1 A′-①（独立验算）**：$$\mathcal J_D=\lambda\iint|x-y|v(x)v(y)dxdy\ \Longrightarrow\ \boxed{K(x,y)=|x-y|},\ K''=2I$$（我的"$|x-y|/\min$"猜测作废）✓✓✓
+**§2 A′-②**：$v'(\pm\frac12)=\mp\lambda$、$v''+2\lambda v=0$、$B=0$、$\int v=1$ ⟹ $$\boxed{\omega^2=2\lambda}\ \text{（恒等式；无特征方程）}$$ ⟹ **唐先生判断成立**；**补取值条件**：$$\kappa=\frac\omega2\cot\frac\omega2+\frac{\omega^2}4\Longrightarrow \boxed{C_{\rm cone}(\lambda)=\frac{2w\sin w}{\cos w+w\sin w}\Big|_{w=\sqrt{\lambda/2}}}$$ ✓✓✓
+**§3 ⭐⭐⭐⭐⭐ 核心不一致**：与 $c^{*}_\lambda$ **同形**（$\frac{\sqrt2\tan w}{1+w\tan w}$），但 $w=\sqrt{\lambda/2}$ vs $\vartheta=\lambda/\sqrt2$（比值 $\sqrt\lambda$）⟹ **仅 $\lambda=1$ 相合**（0.7532957 vs 0.7532960）；$\lambda=0.5/2$ 不一致 ⟹ $$\boxed{\text{隐藏 admissibility／边界条件存在}}$$ ⟹ **A3 缺的是 admissibility 类，不是 ODE**；**频率标度**为不一致的精确位置 ✓✓✓
+**§4 ⚠️ 告警**：$C_{\rm cone}(2)>1$ 与 $F\le1$ 冲突 ⟹ **字典待定标**；本档值不得代入两墙表 ✓✓
+**§5 边界**：手算积分（可复核）；"论文频率 $\sqrt2\lambda$"为[推断]（未读 Cor.14）；不声称 A3 已证/已推翻；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
