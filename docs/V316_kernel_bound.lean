@@ -672,3 +672,24 @@ namespace Zeta23.ThmD.V316
 open MeasureTheory
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **③′ 积分极化（方案 (b)：不分拆）**：
+`B(u,u) − B(v,v) = ∫ p, [ K·v(p₁)(u(p₂)−v(p₂)) + K·(u(p₁)−v(p₁))v(p₂) + K·(u(p₁)−v(p₁))(u(p₂)−v(p₂)) ]`，
+`K(p) = |p.1 − p.2|`。只需 `hUU`/`hVV`；**不用 `integral_add`**（少一组可积性接口，更稳）。
+证明绕开函数相等 rw：`← integral_sub` 后用 `integral_congr_ae` ＋ 点态 `ring`。 -/
+theorem Bfun_polarization {u v : ℝ → ℝ}
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * v p.2) (Irest.prod Irest)) :
+    Bfun u u - Bfun v v
+      = ∫ p, (|p.1 - p.2| * v p.1 * (u p.2 - v p.2)
+          + |p.1 - p.2| * (u p.1 - v p.1) * v p.2
+          + |p.1 - p.2| * (u p.1 - v p.1) * (u p.2 - v p.2)) ∂(Irest.prod Irest) := by
+  unfold Bfun
+  rw [← MeasureTheory.integral_sub hUU hVV]
+  exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun p => by ring))
+
+end Zeta23.ThmD.V316
