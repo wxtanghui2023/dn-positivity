@@ -2414,6 +2414,22 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 **§8 边界**：**不能从 `V278` 推出 C0**；§5 依赖 $X_S$ 有限；§6 六类为**枚举非穷尽定理**（不得升成"仅此六类"，与 `POS3` §6 同边界）；(d) 退化性为**引用**；**本轮未出现**写出具体形式且不落 (a)–(f) 的新候选 ⟹ 按硬纪律不入研究；未用 RH 作推导；未跑 Lean；零数值 ✓
 
+### F.5ej ⭐⭐⭐⭐⭐ **V280：乙-6 —— Q_S = X_S/G 的全部轨道不变量（直接计算）：词-字符 span；k=1 → `V241`/L1；k≥2 → 相关预算墙；RF* 无实例**（`V280` ✓ 2026-09-16 11:26）
+
+委托（唐先生 11:21）："**先枚举具体实例，不要先证明'什么条件下必平凡'**"；乙-5 的 $G1$–$G6$ 严格定义（**G4 ＝ $A_S$ 为轨道的 canonical 并**，最要紧）；(d)-Audit 表（模乘／素数置换／单 Frobenius 共轭／人为群作用 皆 DEAD；**联合 Frobenius 相对轨道 ALIVE\***；任意 $\rho$ DEAD）；乙-6 指令"**直接计算 $Q_S=X_S/G$ 的全部轨道不变量**"；反向纪律"**若连 character-class-function 分解都挡不住某个 genuinely relational invariant，就继续追它**"。
+
+**§0 设定**：有限群 $G$；$X_S=\prod_{p\in S}G$；$h\cdot(g_p)=(hg_ph^{-1})$（**对角共轭**）✓
+
+**§1 ⭐⭐⭐⭐ 定理 V280-A（经典·表示论）**：$\mathbb C[G]=\bigoplus_\rho V_\rho\otimes V_\rho^*$ ⟹ $\mathbb C[G]^{\otimes n}=\bigoplus_{\rho_1..\rho_n}(\bigotimes V_{\rho_i})\otimes(\bigotimes V_{\rho_i})^*$ ⟹ 对角共轭不变量 $=\bigoplus\mathrm{End}_G(\bigotimes V_{\rho_i})$ ⟹ $$\\boxed{\\mathbb C[X_S]^{G}=\\mathrm{span}\\{\\langle v,\\rho_1(g_{p_1})\\cdots\\rho_k(g_{p_k})w\\rangle\\}_{k\\le|S|}}$$（**词-字符／矩阵系数**）⟹ 任何 $G$-不变 $A_S$ 只是**词-数据的函数** ⟹ **不存在超出词-字符的"真关联不变量"**（级别：经典，未逐字重证）✓✓
+
+**§2 分类结局**：**k=1** ⟹ Artin 型局部数据／共轭类 ⟹ 正是 `V241` 已审计（**char-0 Frobenius ＝ 共轭类，无方向**）＋ **ζ-local** ⟹ **L1** ✗；**k≥2** ⟹ **恰是 $k$-点 Chebotarev 相关量** ⟹ 档案已审计（**第三矩／高相关需 support $>1$；T² 律／预算越界；0.682 天花板**，`V102`／`V162`／`V217b`）⟹ **相关预算墙／值面** ⟹ `V258` 接管 ✗ ⟹ **ALIVE\* 被词-字符完全捕获** ✓✓
+
+**§3 ⭐⭐ RF* 收口**：$\rho$ 须 canonical（否则 P1）；**裸算术可得者只有 cyclotomic character（及整幂／有限阶扭）与平凡表示** ⟹ 词-数据 $\chi_{\rm cyc}(\mathrm{Frob}_p)=p^{-1}$ ⟹ $p^{-k}$ 型 ⟹ **ζ-local ⟹ L1**（与 `V144` $\alpha_p\equiv1$、`V172` F-leak 同向）；其它 $\rho$ ⟹ **P1** ⟹ **RF\* 无实例** ✓✓✓
+
+**§4 双向纪律执行**：候选全部具体化（未出现"global invariant"型候选）；**反向纪律已检查** —— 未出现"character 分解挡不住"的不变量 ⟹ 按规则转入 character／L-value 通道（`V258` 接管），不提前判死 ✓
+
+**§5 边界**：§1 为经典未逐字重证；§2(ii) 为**引用**；§3 的 canonical $\rho$ 清单为 [结构性]（"canonical"未形式化）；**不宣称**六类穷尽；未用 RH 作推导；未跑 Lean；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
