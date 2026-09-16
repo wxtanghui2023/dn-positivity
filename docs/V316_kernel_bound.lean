@@ -739,3 +739,53 @@ theorem Bfun_quadratic_gap {u v : ℝ → ℝ}
   ring
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **④-1a**：`ContinuousOn f I ⟹ Integrable f (volume.restrict I)`。
+API：`IsCompact.exists_bound_of_continuousOn` ＋ `ContinuousOn.aestronglyMeasurable_of_isCompact`
+＋ `Integrable.of_bound`（`IsFiniteMeasure` 由 instance `isFiniteMeasure_restrict_Icc` 自动满足）。 -/
+theorem integrable_of_continuousOn_Icc' {f : ℝ → ℝ} (hf : ContinuousOn f Icc') :
+    Integrable f Irest := by
+  haveI : IsFiniteMeasure Irest :=
+    inferInstanceAs (IsFiniteMeasure (volume.restrict (Icc (-(1 / 2 : ℝ)) (1 / 2))))
+  obtain ⟨C, hC⟩ := isCompact_Icc.exists_bound_of_continuousOn hf
+  refine Integrable.of_bound (hf.aestronglyMeasurable_of_isCompact isCompact_Icc measurableSet_Icc) C ?_
+  filter_upwards [ae_restrict_mem (μ := volume) measurableSet_Icc] with x hx
+  exact hC x hx
+
+/-- **④-1b**：`v_λ(t) = cos(√2λt)` 在 `I` 上可积（复用 ④-1a）。 -/
+theorem integrable_cos_Irest (lam : ℝ) :
+    Integrable (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t)) Irest :=
+  integrable_of_continuousOn_Icc' (by fun_prop)
+
+/-- **④-1c**：product integrability —— `Integrable.mul_prod`。 -/
+theorem mul_prod_integrable {f g : ℝ → ℝ} (hf : Integrable f Irest) (hg : Integrable g Irest) :
+    Integrable (fun p : ℝ × ℝ => f p.1 * g p.2) (Irest.prod Irest) :=
+  hf.mul_prod hg
+
+/-- **④-1d**：核支配 —— `|s−t| ≤ 1` on `I×I` ⟹ `|s−t||f(s)g(t)| ≤ |f(s)g(t)|` ⟹ 带核 product 可积。
+不借 `simp`/`norm_num` 隐式承担数学步骤：pointwise bound 单独建立（`hst`/`hb`）。 -/
+theorem kernel_domination {f g : ℝ → ℝ}
+    (hG : Integrable (fun p : ℝ × ℝ => f p.1 * g p.2) (Irest.prod Irest))
+    (hAB : AEStronglyMeasurable (fun p : ℝ × ℝ => |p.1 - p.2| * f p.1 * g p.2)
+      (Irest.prod Irest)) :
+    Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * f p.1 * g p.2) (Irest.prod Irest) := by
+  have hae : ∀ᵐ p ∂(Irest.prod Irest), p ∈ Icc' ×ˢ Icc' := by
+    rw [MeasureTheory.Measure.prod_restrict]
+    exact ae_restrict_mem (measurableSet_Icc.prod measurableSet_Icc)
+  refine hG.abs.mono' hAB ?_
+  filter_upwards [hae] with p hp
+  have hst : |p.1 - p.2| ≤ 1 := by
+    rw [abs_le]
+    exact ⟨by linarith [hp.1.1, hp.2.2], by linarith [hp.1.2, hp.2.1]⟩
+  have hb : |p.1 - p.2| * |f p.1| ≤ |f p.1| := by
+    simpa using mul_le_of_le_one_left (abs_nonneg (f p.1)) hst
+  have hmain : ‖|p.1 - p.2| * f p.1 * g p.2‖ ≤ ‖f p.1 * g p.2‖ := by
+    simp only [Real.norm_eq_abs, abs_mul, abs_abs]
+    exact mul_le_mul_of_nonneg_right hb (abs_nonneg (g p.2))
+  exact hmain
+
+end Zeta23.ThmD.V316
