@@ -80,3 +80,14 @@ $$\boxed{\textbf{V306 判词}：\text{① 核}\ K=|x-y|\ \textbf{（你的判断
   (b) **核对频率**：论文 $\omega_{\rm ThmD}=\sqrt2\lambda$——查其 ODE／算子来源（是否核带 $\lambda$ 因子，或 $\mathcal J$ 的 $\lambda$ 次幂不同）✓✓
   (c) **定标字典**：把 $C_{\rm cone}$ 与 $F$（含 $N$／$\lambda_1$／$\ell_1$）的关系写清 ⟹ 解决 §4 告警 ✓
 ```
+
+---
+
+## §6 ⚠️【勘误 T10】（2026-09-16 13:54 起，唐先生指出；见 `V307`）
+
+$$\text{本档 §2 的 E–L 方程}\ \boxed{(I+\lambda K)v=\kappa\mathbf 1}\ \textbf{漏掉外层}\ \lambda ⟹ \textbf{已修正} ✓$$
+$$\qquad \text{正确分母}：\int v^{2}+\lambda\mathcal J_D=\int v^{2}+\lambda\cdot\lambda\langle v,Kv\rangle=\int v^{2}+\lambda^{2}\langle v,Kv\rangle ⟹ \boxed{(I+\lambda^{2}K)v=\kappa\mathbf 1} ✓✓$$
+$$\qquad ⟹ \omega=\sqrt2\,\lambda,\quad w=\frac\omega2=\boxed{\frac{\lambda}{\sqrt2}} ⟹ \textbf{与论文}\ \vartheta\ \textbf{一致} ⟹ C_{\rm cone}(\lambda)=c^{*}_\lambda\ \textbf{（代数恒等）} ✓✓✓$$
+$$\text{本档下列判断}\ \textbf{撤回}：\text{① §3 的"}\lambda=1\ \text{六位巧合并存在隐藏 admissibility"}\ ——\ \textbf{撤回}（真因＝漏}\ \lambda）；$$
+$$\qquad \text{② §4 的"}\ F\le1\ \text{告警／normalization 字典冲突"}\ ——\ \textbf{撤回}（修正后}\ C(2)=0.8990<1\ ✓）✓$$
+$$\text{本档}\ \textbf{保留}：\text{① 核}\ K(x,y)=|x-y|（\text{独立验算}）;\ \text{② "二阶 ODE＋一阶端点＋归一化只给恒等式"（修正后}\ \omega^{2}=2\lambda^{2}，仍为恒等式）;\ \text{③ 取值条件定}\ \kappa ✓$$

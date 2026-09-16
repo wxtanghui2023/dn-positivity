@@ -2766,6 +2766,15 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§4 ⚠️ 告警**：$C_{\rm cone}(2)>1$ 与 $F\le1$ 冲突 ⟹ **字典待定标**；本档值不得代入两墙表 ✓✓
 **§5 边界**：手算积分（可复核）；"论文频率 $\sqrt2\lambda$"为[推断]（未读 Cor.14）；不声称 A3 已证/已推翻；未用 RH；零数值 ✓
 
+### F.5fl ⭐⭐⭐⭐⭐ **V307：漏掉外层 $\lambda$ 的修正 —— 系数链闭合；三异常统一；T10 撤回 V306；(c) 字典闭合**（`V307` ✓ 2026-09-16 13:58）
+
+**§1 修正链**：$$\lambda\ \text{漏项}\Rightarrow\boxed{(I+\lambda^2K)v=\kappa\mathbf 1}\Rightarrow\omega=\sqrt2\lambda\Rightarrow w=\frac{\lambda}{\sqrt2}\Rightarrow\boxed{C_{\rm cone}=\frac{\sqrt2\tan w}{1+w\tan w}=c^{*}_\lambda}$$ **（代数恒等）**；关键：$$(Kv)(\tfrac12)=\tfrac12\ \text{与}\ \omega\ \text{无关}$$ ⟹ $\kappa=w\cot w+w^2$ ✓✓✓
+**§2 三异常同源**：$\sqrt{\lambda/2}$ vs $\lambda/\sqrt2$ ⟹ $C(2)$：1.2179→**0.8990** ⟹ 仅 $\lambda=1$ 相合为假巧合 ✓✓✓
+**§3 T10 撤回**：V306"隐藏 admissibility（频率）"＋"$F\le1$ 告警"**均撤回**；保留核识别／恒等式／取值条件 ✓✓
+**§4 A3 剩余五项**：$\mathcal A$ 定义／$v\ge0$ 锥／偶对称化／**全局性**／CCLM17 精确对应 ✓✓
+**§5 (c) 字典闭合**：(W2) ⟹ $$\boxed{F(\lambda_1)=c_\lambda(v;D)}$$ ⟹ **0.67250 墙为真 F-ceiling**（条件 (i)–(iv)）✓✓✓
+**§6 边界**：纸面推导；依赖 (W2) 转述；最优性条件性；不声称 A3 全证；未用 RH；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
