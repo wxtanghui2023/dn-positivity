@@ -7,6 +7,7 @@ V316 `kernel_bound` 第一层：`kernel_mass`。
 -/
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
+import Mathlib.MeasureTheory.Integral.Prod
 
 open MeasureTheory Set intervalIntegral
 open scoped Real
@@ -145,5 +146,30 @@ theorem kernel_sq_left {v : ℝ → ℝ}
   have hmain := intervalIntegral.integral_mono_on (a := -(1 / 2 : ℝ)) (b := (1 / 2 : ℝ))
     (show -(1 / 2 : ℝ) ≤ 1 / 2 by norm_num) h1 h2 hpt
   rwa [intervalIntegral.integral_const_mul] at hmain
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **层 3b（`kernel_sq_swap`）**：`T₂ = T₁`（盒子对称）。
+停在 restricted measure 层：只用 `Measure.prod` 的对称性与 `abs_sub_comm`，
+**不涉及 `intervalIntegral`**。 -/
+theorem kernel_sq_swap {v : ℝ → ℝ}
+    (hInt : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 ^ 2) (Irest.prod Irest)) :
+    ∫ p, |p.1 - p.2| * v p.2 ^ 2 ∂(Irest.prod Irest)
+      = ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest) := by
+  have hpt : ∀ p : ℝ × ℝ, |p.1 - p.2| * v p.2 ^ 2
+      = (fun q : ℝ × ℝ => |q.1 - q.2| * v q.1 ^ 2) p.swap := by
+    intro p
+    show |p.1 - p.2| * v p.2 ^ 2 = |p.2 - p.1| * v p.2 ^ 2
+    rw [abs_sub_comm]
+  calc ∫ p, |p.1 - p.2| * v p.2 ^ 2 ∂(Irest.prod Irest)
+      = ∫ p, (fun q : ℝ × ℝ => |q.1 - q.2| * v q.1 ^ 2) p.swap ∂(Irest.prod Irest) :=
+        MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall hpt)
+    _ = ∫ p, |p.1 - p.2| * v p.1 ^ 2 ∂(Irest.prod Irest) :=
+        MeasureTheory.integral_prod_swap (μ := Irest) (ν := Irest)
+          (f := fun q : ℝ × ℝ => |q.1 - q.2| * v q.1 ^ 2)
 
 end Zeta23.ThmD.V316
