@@ -2379,6 +2379,26 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§8 判词**：⭐ **工具升级**（"连续／可计算？"作**判据**替代逐例审计）；⭐ **本档未出现第 5 行形态** ⟹ 按触发规则**不追新对象**，C0 依旧唯一活口；⭐ **C2 诚实价值**：不能独立封口（出口＝证书），但新增两条可证工具 ＋ 把非 cylinder 分量归结到已封八类 ⟹ **结构性收缩** ✓
 **§9 边界**：不宣称"不存在非 cylinder 有限压缩"／不宣称 C0 已证；V277-A 连续情形自足，可计算情形引用经典；"八类全封"为引用未重算；未用 RH；未跑 Lean；零数值 ✓
 
+### F.5eh ⭐⭐⭐⭐⭐ **V278：乙-3 —— (D1_P ⟹ D1_C) 还原定理否证（Con 型反例）＋ `V275` 的 D1 勘误**（`V278` ✓ 2026-09-16 11:18）
+
+委托（唐先生 11:13）：指出 `V277` 的漏洞 —— **"命题有有限证明" $\ne$ "命题是有限输入函数的 cylinder"**；要求**更强判别定理**；硬验收标准：**"若还原定理失败，必须给出一个具体的'有限证明但不存在有限算术 witness'的结构例子"**。
+
+**§1 三种语义**：**C** finite-data certificate（$\exists S:\ V(w,x)=V_{w,S}(\pi_Sx)$ ⟹ **cylinder** ⟹ C0）｜**P** finite-proof certificate（$\exists\pi,\ |\pi|<\infty,\ \pi\vdash$RH ⟹ **不自动** cylinder）｜**U** oracle／global（全局谓词 ⟹ 通常 NC）✓
+
+**§2 ⚠️ T10 勘误（唐先生指出）**：原 $D1$ 把"有限步可检验"一次读成"裁决由有限数据决定"，**同时覆盖 C 与 P** ⟹ $$\boxed{\mathrm{D1}\ \text{须拆为}\ \mathrm{D1_C}／\mathrm{D1_P};\ \text{封口段}\ \textbf{只对}\ \mathrm{D1_C}\ \text{成立}}$$
+
+**§3 ⭐⭐⭐⭐ 定理 V278-A（否证）：还原定理 $\mathrm{D1_P}\Rightarrow\mathrm{D1_C}$ 为假** —— **Con 型结构反例**：$T'=T+\mathrm{Con}(T)$：(i) $T'$ 中**一行**即证 $\mathrm{Con}(T)$（$\Pi_1$）；(ii) **不存在 D1_C 型证书**：若 $T\vdash[D_S(\pi_S)\iff\mathrm{Con}(T)]$ 且 $D_S$ 可判定，则 $T$ 判定 $D_S(\pi_S)$ ⟹ $T\vdash\mathrm{Con}(T)$ 或 $\vdash\neg\mathrm{Con}(T)$；后者与 $T$ 一致矛盾，前者与 **Gödel 第二**矛盾 ∎ ⟹ **Con(T) 有有限证明却不可能有有限数据证书**；且此为 $\Pi_1$ 语句的**普遍现象**：**可证性 $\ne$ 有限数据可分离性** ✓✓✓。对 RH 的类比：RH 是 $\Pi_1$；若其在基础系统中不可证则落 P 行 ⟹ **P 与 C 分离**；⚠️ 但**不得**断言 RH 落 P 行 ⟹ 本档只证 **"P $\not\Rightarrow$ C"** ✓
+
+**§4 推论**：D1_C ＋ 可证等价 ⟹ **RH 真值可计算**（`V274`-B）；D1_P **不给**此 ⟹ **二者不同阶** ✓✓
+
+**§5 第 5 行正确分裂**：$$\boxed{\text{第 5 行}＝\begin{cases}\text{有限数据 witness} &\Rightarrow \textbf{cylinder}\Rightarrow\mathrm{C0}\\ \text{无限验证 witness} &\Rightarrow \textbf{NC／不可计算类}\\ \text{有限形式证明} &\Rightarrow \textbf{C0 不适用}\end{cases}}$$
+
+**§6 `V275` 适用范围更正**：Certificate Barrier **⊂ D1_C** ⟹ "在 D1_C 下唯一未封出口 ＝ 非 ζ-local 的有限 cylinder carrier（C0）；在 D1_P 下靶另设（＝可证明性）" ✓
+
+**§7 目标裁定（本档建议）**：唐先生原始目标（"从算术结构内部产生有限、可执行、可检查、非循环的 RH 机制"）**正是 D1_C** ⟹ $\mathrm{D1}:=\mathrm{D1_C}$ **是正当的目标澄清**；⚠️ **但不得**声称封住"RH 有有限形式证明"路线（＝标准可证明性问题，非机制问题）✓
+
+**§8 边界**：不断言 RH 落 P 行、不断言其有／无 D1_C 证书；Con 型反例依赖 Gödel 第二（引用·经典）；**不**把 Con 型推广成"所有 $\Pi_1$ 语句都无 D1_C 证书" ✗；未用 RH 作推导；未跑 Lean；零数值 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$

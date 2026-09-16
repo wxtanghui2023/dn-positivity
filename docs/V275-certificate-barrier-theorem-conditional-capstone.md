@@ -113,3 +113,14 @@ $$\boxed{\text{在 }D1\text{–}D3,\ P1\text{–}P3,\ L1,\ L2,\ S1\ \text{下，
 【下一步（按唐先生顺序）】甲**已完成**；乙现在是**干净二元问题**：
    $$\boxed{\text{C0}\ \text{成立}\quad\text{或}\quad \text{构造一个通过}\ D2／S／S′\ \text{的新有限证书}}$$
 ```
+
+---
+
+## §10 ⚠️ 【勘误 T10】（唐先生 2026-09-16 11:13 指出；见 `V278` §2–§3／§6）
+
+$$\textbf{原 D1 的漏洞}：\text{把"有限步可检验谓词"}\ \text{一次性地读成"裁决由有限数据决定"} ⚠️ ✗$$
+$$\qquad \text{实际上它}\ \textbf{同时} \text{覆盖两种不同东西}：\quad \boxed{\mathrm{D1_C}}：\text{验证器读取}\ \textbf{输入的有限数据} ⟹ \textbf{cylinder} ✓;\ \quad \boxed{\mathrm{D1_P}}：\text{命题有}\ \textbf{有限形式证明} ⟹ \textbf{不} \text{推出 cylinder} ⚠️✓$$
+$$\Longrightarrow \boxed{\text{更正}：\mathrm{D1}\ \text{须拆为}\ \mathrm{D1_C}／\mathrm{D1_P};\ \text{本档封口段}\ \textbf{只对}\ \mathrm{D1_C}\ \text{成立}} ✓✓$$
+$$\qquad \text{理由（`V278` §3）}：\text{还原定理}\ \mathrm{D1_P}\Rightarrow\mathrm{D1_C}\ \textbf{为假} —— \text{Con 型结构反例}（T'\ \text{中一行即证}\ \mathrm{Con}(T)，\text{但}\ T\ \text{内不可能有有限数据证书；用 Gödel 第二不完备性}）✓✓$$
+$$\qquad ⟹ \text{在}\ \mathrm{D1_C}\ \text{下：唯一未封出口}\ ＝\ \text{非 ζ-local 的有限 cylinder carrier（C0）};\ \text{在}\ \mathrm{D1_P}\ \text{下：靶另设（＝可证明性）} ✓✓$$
+$$\qquad ⚠️\ \text{唐先生原始目标（"从算术结构内部产生有限、可执行、可检查、非循环的机制"）}\ \textbf{正是}\ \mathrm{D1_C} ⟹ \mathrm{D1}:=\mathrm{D1_C}\ \textbf{是正当的目标澄清} ✓$$
