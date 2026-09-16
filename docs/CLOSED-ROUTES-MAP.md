@@ -2643,6 +2643,23 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 **§4 边界**：`V185` 自标未独立复核；Lean 仅读源码文本未构建；§1(6) 为本档推导；天花板依赖 `EnclOK`；不外推"任何非局部核达不到 1"；未用 RH；零数值 ✓
 
+### F.5fa ⭐⭐⭐⭐⭐ **V296：非局部核"带宽不可约性"审计 —— G(K) ＝ 1 − R_off；判死刀砍证书类非核；逃逸口 ＝ 非 Toeplitz 全局投影**（`V296` ✓ 2026-09-16 13:34）
+
+委托（唐先生 13:15）：定 **(乙′)**，**要做成结构性判别定理**（非候选综述）；四步 V296.1–V296.4 ＋ 三障碍型 ＋ 三轴定位 ✓
+
+**§1 V296.1**：Poisson–Gabor ⟹ $\langle v_\rho,v_{\rho'}\rangle=L\widehat{\phi^2}(\gamma_\rho-\gamma_{\rho'})$ ⟹ $$\mathfrak R(K)=\text{零对测度在}\ \mathbb K(\gamma,\gamma')=|\widehat{\phi^2}(\gamma-\gamma')|^2\ \text{下的归一化质量}$$；$\alpha$-支撑 ＝ 指数差集，"带宽≤1" $\iff X\le T$；经典分裂 $\mathfrak R=R_{\rm diag}+R_{\rm off}$（$R_{\rm diag}=1$）；**Montgomery：$F(\alpha)=1$ 无条件于 $|\alpha|\le1$，$|\alpha|>1$ 需 RH** ⟹ **障碍型 ＝ B** ✓✓✓
+
+**§2 V296.2**：$\sigma_{\min}(K)=\inf\{\text{bandwidth}(P):K=P^*P\}$；**Toeplitz 表示无关**；**非 Toeplitz 无定义 ⟹ 定义缺口** ✓✓
+
+**§3 ⭐⭐⭐ V296.3（判死刀）**：证书框架内成立（$0.68185\Rightarrow\mathfrak R\ge1.318>1$，$c\approx0.318$）；**但假设是"带宽一逐配置证书"，不是 $\sigma_{\min}\le1$** ⟹ $$\boxed{\text{判死刀砍证书类};\ \sigma_{\min}\le1\ne\text{属证书类} \Longrightarrow \text{缺口＝逃逸空间}}$$ ✓✓✓
+
+**§4 ⭐⭐⭐ V296.4（逃逸刀）**：目标 ＝ $\sigma_{\min}\le1\wedge$ 非证书类 $\wedge\ R_{\rm off}\to0$；**候选 ＝ 非 Toeplitz 全局投影**（逃出适用域，但失去无条件控制源）⟹ **逃逸困难 ＝ 另找无条件控制源**（结构性，非枚举）✓✓✓
+
+**§5–§6**：AF 位于（非局部，带宽≤1，无条件二阶矩）；边界：经典分裂为[推断]未复算；Ceiling.lean 未读全文；不声称逃逸存在；未用 RH；零数值 ✓
+
+**净产出**：① $G=1-R_{\rm off}$（$G\le1$ 与论文"比例法达不到 1"**独立互证**）② 障碍型 B ③ 判死刀砍证书类 ④ 逃逸目标 ＝ 非 Toeplitz 需另找无条件控制源 ✓
+**下一步**：(一) 核验经典分裂（读 Montgomery 1973＋论文 §5）；(二) 读 `Ceiling.lean` 全文对照假设；(三) 攻第一代非 Toeplitz 候选 ✓
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
