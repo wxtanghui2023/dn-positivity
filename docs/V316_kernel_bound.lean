@@ -991,3 +991,27 @@ theorem weak_EL_constrained {h : ℝ → ℝ} (hh : ContinuousOn h Icc') (lam : 
   rw [weak_EL hh lam h0, hmean, mul_zero]
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **5-1 平方差** -/
+theorem sq_diff_Irest {u : ℝ → ℝ} (lam : ℝ)
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1 : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2 : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest) :
+    (∫ s, u s ^ 2 ∂Irest) - (∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest)
+      = 2 * (∫ s, Real.cos (Real.sqrt 2 * lam * s)
+            * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
+        + (∫ s, (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2 ∂Irest) := by
+  rw [← MeasureTheory.integral_sub hu hv]
+  rw [← MeasureTheory.integral_const_mul (μ := Irest) 2
+      (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)
+        * (u s - Real.cos (Real.sqrt 2 * lam * s)))]
+  rw [← MeasureTheory.integral_add (h1.const_mul 2) h2]
+  exact MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall (fun s => by ring))
+
+end Zeta23.ThmD.V316

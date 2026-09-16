@@ -1,0 +1,47 @@
+/- ⑤-2 Qfun_diff 待办（1 error: rw [hgap] 找不到模式）
+   ⚠️ 病根=**顺序问题**：先 `unfold Qfun` 使 B 项变成具体积分，而 hgap 是 Bfun 述句 ⟹ 不匹配。
+   修法（两条）：
+   (a) 先 derive hgap 的**展开形式**：
+       have hgap' : (∫ p, |p.1-p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
+           - (∫ p, |p.1-p.2| * cos(...) * cos(...) ∂(Irest.prod Irest))
+         = 2 * (∫ p, |p.1-p.2| * cos(...p.1) * (u p.2 - cos(...p.2)) ∂…)
+           + (∫ p, |p.1-p.2| * (u p.1 - cos(...p.1)) * (u p.2 - cos(...p.2)) ∂…) :=
+           by simpa only [Bfun] using hgap
+       再 rw [show ... from ring] 后用 hgap'（而不是 hgap）。
+   (b) 或不做 unfold，直接在 Qfun 层用 `Qfun lam u - Qfun lam v` 的
+       `show ... = ... from by unfold Qfun; ring` 把 B 项显式写成 Bfun 形式，再 rw [hgap]。
+   ✅ ⑤-1 sq_diff_Irest 已通过（保留）✓ ；⑤-3 由 weak_EL_constrained（已 CLOSED）+ ⑤-2 直接得 -/
+
+/-- **5-2 Qfun 差值恒等式** -/
+theorem Qfun_diff {u : ℝ → ℝ} (lam : ℝ) (h0 : 0 < lam)
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest)) :
+    Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+      = 2 * ((∫ s, Real.cos (Real.sqrt 2 * lam * s)
+                * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
+             + lam ^ 2 * Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
+                 (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)))
+        + Qfun lam (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
+  have hgap := Bfun_quadratic_gap (u := u)
+    (v := fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) hUU hVV hC hD hE
+  unfold Qfun
+  rw [show (∫ s, u s ^ 2 ∂Irest)
+        + lam ^ 2 * (∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
+        - ((∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest)
+        + lam ^ 2 * (∫ p, |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+            * Real.cos (Real.sqrt 2 * lam * p.2) ∂(Irest.prod Irest)))
+      = ((∫ s, u s ^ 2 ∂Irest) - (∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest))
+        + lam ^ 2 * ((∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
+            - (∫ p, |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+                * Real.cos (Real.sqrt 2 * lam * p.2) ∂(Irest.prod Irest))) from by ring]
+  rw [hgap]
+  ring
+
+end Zeta23.ThmD.V316
