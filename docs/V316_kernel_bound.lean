@@ -614,12 +614,6 @@ theorem kernel_bound_to_Q_pos {v : ℝ → ℝ} {lam : ℝ} (h0 : 0 < lam) (h1 :
         + lam ^ 2 * (∫ p, |p.1 - p.2| * v p.1 * v p.2 ∂(Irest.prod Irest)) :=
   Q_pos h0 h1 hN (kernel_bound hmain habs h2 hA hB hF hG)
 
-/-- **② `Qfun` 定义**：只封装现有二次型，**不引入** `B`／inner product／operator／Hilbert 空间。
-与 `Q_pos` 中的表达式**逐字对齐**。 -/
-noncomputable def Qfun (lam : ℝ) (u : ℝ → ℝ) : ℝ :=
-  (∫ s in (-(1 / 2 : ℝ))..(1 / 2), u s ^ 2)
-    + lam ^ 2 * (∫ p, |p.1 - p.2| * u p.1 * u p.2 ∂(Irest.prod Irest))
-
 /-- **③-a 点态极化（纯代数层）**：`u(s)u(t) − v(s)v(t) = v(s)(u(t)−v(t)) + (u(s)−v(s))v(t) + (u(s)−v(s))(u(t)−v(t))`。 -/
 theorem pol_pointwise (u v : ℝ → ℝ) (s t : ℝ) :
     u s * u t - v s * v t
@@ -1025,5 +1019,61 @@ end Zeta23.ThmD.V316
 namespace Zeta23.ThmD.V316
 
 open MeasureTheory
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **②′ `Qfun`（Irest 层，结构性规范化）**：定义在**与 V316-A／V316-C 相同的工作层**，
+彻底消除 ⑤ 系列三轮迭代中的 interval/Irest 层错配。
+（旧定义用区间积分 + λ²·B 项；新定义全在 Irest 层。唐先生 2026-09-16 16:43 指示。） -/
+noncomputable def Qfun (lam : ℝ) (u : ℝ → ℝ) : ℝ :=
+  (∫ s, u s ^ 2 ∂Irest) + lam ^ 2 * Bfun u u
+
+end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **⑤-2 `Qfun_diff`（同层代数版）**：`Q_λ(u) − Q_λ(v_λ) = 2(∫v_λ h + λ²B(v_λ,h)) + Q_λ(h)`，`h = u − v_λ`。
+新 `Qfun` 在 Irest/Bfun 层 ⟹ 直接用 `sq_diff_Irest` + `Bfun_quadratic_gap` + `ring`，
+**ring 只负责标量结合/交换/分配，不再承担 interval↔Irest 语义转换**。 -/
+theorem Qfun_diff {u : ℝ → ℝ} (lam : ℝ)
+    (hUU : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * u p.1 * u p.2) (Irest.prod Irest))
+    (hVV : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hC : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * Real.cos (Real.sqrt 2 * lam * p.1)
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hD : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * Real.cos (Real.sqrt 2 * lam * p.2)) (Irest.prod Irest))
+    (hE : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * (u p.1 - Real.cos (Real.sqrt 2 * lam * p.1))
+      * (u p.2 - Real.cos (Real.sqrt 2 * lam * p.2))) (Irest.prod Irest))
+    (hu : Integrable (fun s : ℝ => u s ^ 2) Irest)
+    (hv : Integrable (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s) ^ 2) Irest)
+    (h1 : Integrable (fun s : ℝ =>
+      Real.cos (Real.sqrt 2 * lam * s) * (u s - Real.cos (Real.sqrt 2 * lam * s))) Irest)
+    (h2 : Integrable (fun s : ℝ => (u s - Real.cos (Real.sqrt 2 * lam * s)) ^ 2) Irest) :
+    Qfun lam u - Qfun lam (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+      = 2 * ((∫ s, Real.cos (Real.sqrt 2 * lam * s)
+                * (u s - Real.cos (Real.sqrt 2 * lam * s)) ∂Irest)
+             + lam ^ 2 * Bfun (fun t : ℝ => Real.cos (Real.sqrt 2 * lam * t))
+                 (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)))
+        + Qfun lam (fun t : ℝ => u t - Real.cos (Real.sqrt 2 * lam * t)) := by
+  have hgap := Bfun_quadratic_gap (u := u)
+    (v := fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)) hUU hVV hC hD hE
+  have hs := sq_diff_Irest (u := u) lam hu hv h1 h2
+  unfold Qfun
+  rw [show ((∫ s, u s ^ 2 ∂Irest) + lam ^ 2 * Bfun u u)
+        - ((∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest)
+           + lam ^ 2 * Bfun (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+               (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s)))
+      = ((∫ s, u s ^ 2 ∂Irest) - (∫ s, Real.cos (Real.sqrt 2 * lam * s) ^ 2 ∂Irest))
+        + lam ^ 2 * (Bfun u u - Bfun (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))
+            (fun s : ℝ => Real.cos (Real.sqrt 2 * lam * s))) from by ring]
+  rw [hs, hgap]
+  ring
 
 end Zeta23.ThmD.V316
