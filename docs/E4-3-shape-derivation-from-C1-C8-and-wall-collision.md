@@ -77,3 +77,14 @@ $$\text{(ii) C1 的形状推论}\ \to\ \text{"零点上的非显式公式型算�
 $$\text{(iii) C8 的诚实语义}\ \to\ \text{"区域型}\to\text{线型的强度升级"} \to\ \textbf{V316}\ C^{\star}／\text{V162 墙}；$$
 $$\text{(iv) ⭐ 结构性收获：}\textbf{两个独立推导的缺口重合于已测绘墙}；$$
 $$\text{(v) 搜索空间显式化为}\ \textbf{两只具名的角}（\text{角 I／角 II}），\text{且仍未命名候选。}$$
+
+---
+
+## 【勘误 T10】（2026-09-16 18:01，唐先生指出；正文不修改，勘误留档）
+
+$$\textbf{错处}：\S1.2\ \text{由}\ C2+C6+C7\ \text{推出"仅余乘性附着"，进而断言"角 I 撞 V280／V294-A"}。$$
+$$\textbf{原因}：C6\ \text{排除的是}\ \textbf{已定义好的}\ \mathcal A_{\rm old}，\textbf{不是}\ \text{"一切非零点集函数且非旧语言的结构"}；C2／C7\ \text{亦不推出乘性。}$$
+$$\textbf{更正}：\boxed{\text{C1--C7}\ \not\Rightarrow\ X\in\text{V280／V294-A}}\quad(\text{除非先证形状完备性定理})$$
+$$\qquad\text{严格成立者仅为}：\textbf{乘性子族 T1}\ \text{与}\ V280／V294-A\ \text{相撞}。$$
+$$\textbf{状态更正}：\ \text{E4-3-A（C1}\Rightarrow\text{零点集外依赖）}\ \textbf{严格成立}；\ \text{E4-3-B（角 I ＝唯一乘性附着）}\ \textbf{尚未证明}。$$
+$$\textbf{详据}：\text{E4-3-R（角 I 形状完备性审计）—— 判定＝}\textbf{结局 B（完备性失败）}，\ \text{T2／T3／T4 未分类。}$$
