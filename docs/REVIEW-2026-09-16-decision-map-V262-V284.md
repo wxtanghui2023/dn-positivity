@@ -180,3 +180,15 @@ $$\textbf{三处新增状态标签（沿用四态）}：$$
 $$\qquad \text{① `V286`-L：}\textbf{有局部数据}\ne\textbf{有 Euler 积}（b_p^2-b_{p^2}=2uv(1-\Re\chi(p)^2)\ne0）⟹ \text{off-line 对象}\ \textbf{可获有限局部数据} ✓$$
 $$\qquad \text{② V287-A：甲}\iff\textbf{合法类内 GRH 反例} ⟹ \text{记}\ \textbf{④}（\text{目标＝开问题}），\textbf{不是} \mathrm{②} ✓$$
 $$\qquad \text{③ V287-B：off-line 零点必落}\ \big(\tfrac12,1-\tfrac{c_d}{\log C}\big]\ \text{且}\ q(2+|t|)\gtrsim e^{c_d/(1-\beta)} ⟹ \textbf{唯一可攻窗口} ✓$$
+
+---
+
+## 11. ⚠️ 勘误（V288；更正 §10 的 O1 描述）
+
+$$\text{§10 原写} ✗：\mathrm{O1\!-\!1}\ \text{达成}\iff\text{在合法类内 settle}\ \mathrm{GRH}（\text{任一方向}）\ ⚠️$$
+$$\qquad \textbf{错在}：\text{把两个蕴含合并} ⟹ \text{经逐行审计（`V288`）：}\textbf{二者并不同真，而是}\ \textbf{互斥} ✓✓✓$$
+$$\boxed{\text{更正后的正确关系}：\mathrm{O1\!-\!1}\Longrightarrow\neg\mathrm{GRH}_{\mathcal C};\qquad \mathrm{GRH}_{\mathcal C}\Longrightarrow\neg\mathrm{O1\!-\!1}（\text{互斥}）} ✓✓✓$$
+$$\boxed{\text{正确分解}：\mathrm{O1\!-\!1}\iff\big[\neg\mathrm{GRH}_{\mathcal C}\big]\wedge\big[\text{有限可分性实现（P1–P3）}\big]\quad（＝\textbf{"}\neg\text{GRH-plus"}\ \text{，}\textbf{不是} \text{"GRH-plus"}）} ✓✓$$
+$$\qquad \text{机制}：\mathrm{GRH}_{\mathcal C}\ \text{真} \Longrightarrow \mathcal R=\mathcal C \Longrightarrow \pi_S(\mathcal R)=X_S \Longrightarrow A_S=X_S \Longrightarrow \textbf{撞 P1（真子集）} ⟹ \mathrm{O1\!-\!1}\ \text{假} ✓$$
+$$\qquad \qquad \text{即：}\mathrm{O1\!-\!1}\ \text{被锁定在}\ \neg\mathrm{GRH}_{\mathcal C}\ \text{的世界里}（\text{＝}\ `V281`\ \text{§5"空虚真"的排除代价}）✓$$
+【定位改写】$\mathrm{O1\!-\!1}$ **不是**通往"证明 RH／GRH"的路（与 $\mathrm{GRH}_{\mathcal C}$ 互斥）；应改写为"**若类内存在可证 off-line 成员且分离可有限描述，则得机制**" ✓
