@@ -634,3 +634,35 @@ theorem pol_pointwise_kernel (u v : ℝ → ℝ) (s t : ℝ) :
   ring
 
 end Zeta23.ThmD.V316
+
+namespace Zeta23.ThmD.V316
+
+open MeasureTheory
+
+/-- **③″-0 记号**：核双线性式（仅 def，**非新数学对象**；`u,w` 为函数、核 `|s−t|`）。
+注意 `Bfun u w = ∬ K(s,t) u(s) w(t)`，而 `Bfun w u = ∬ K(s,t) w(s) u(t)`。 -/
+noncomputable def Bfun (u w : ℝ → ℝ) : ℝ :=
+  ∫ p, |p.1 - p.2| * u p.1 * w p.2 ∂(Irest.prod Irest)
+
+/-- **③″ 交叉项换序（product-measure symmetry，不引入 Fubini）**：
+`Bfun v h = Bfun h v`，即 `∬K(s,t)v(s)h(t) = ∬K(s,t)h(s)v(t)`。
+骨架复用已 CLOSED 的 `kernel_sq_swap`：`integral_prod_swap` ＋ `abs_sub_comm`。 -/
+theorem Bfun_symm {v h : ℝ → ℝ}
+    (hint : Integrable (fun p : ℝ × ℝ => |p.1 - p.2| * v p.1 * h p.2) (Irest.prod Irest)) :
+    Bfun v h = Bfun h v := by
+  have hpt : ∀ p : ℝ × ℝ, |p.1 - p.2| * v p.1 * h p.2
+      = (fun q : ℝ × ℝ => |q.1 - q.2| * h q.1 * v q.2) p.swap := by
+    intro p
+    show |p.1 - p.2| * v p.1 * h p.2 = |p.2 - p.1| * h p.2 * v p.1
+    rw [abs_sub_comm]
+    ring
+  unfold Bfun
+  calc ∫ p, |p.1 - p.2| * v p.1 * h p.2 ∂(Irest.prod Irest)
+      = ∫ p, (fun q : ℝ × ℝ => |q.1 - q.2| * h q.1 * v q.2) p.swap
+          ∂(Irest.prod Irest) :=
+        MeasureTheory.integral_congr_ae (Filter.Eventually.of_forall hpt)
+    _ = ∫ p, |p.1 - p.2| * h p.1 * v p.2 ∂(Irest.prod Irest) :=
+        MeasureTheory.integral_prod_swap (μ := Irest) (ν := Irest)
+          (f := fun q : ℝ × ℝ => |q.1 - q.2| * h q.1 * v q.2)
+
+end Zeta23.ThmD.V316
