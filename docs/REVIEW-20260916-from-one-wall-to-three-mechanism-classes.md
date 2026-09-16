@@ -73,3 +73,47 @@ $$\qquad\quad (r,t)\ \longrightarrow\ \text{Kloosterman 估计}\ \longrightarrow
 $$\textbf{随后单独审计}：\ \boxed{\theta<1\ \text{的 conjectural input 究竟缺哪一个}\ \textbf{不可替代的算术估计}？}$$
 $$\textbf{最终状态确认（唐先生）}：\ \text{SEARCH-SPACE}\ \textbf{继续开放}；\ \text{三机制类}\ A\ (\text{ALIVE})／B\ (\text{DEAD 该 carrier})／\mathrm{GM}\ (\text{独立机制})；$$
 $$\qquad\text{最值得保留的资产＝}\ A：\ \text{不是凭空创造的新符号，而是已存在的}\ \textbf{"算术输入增强}\to\text{非对角控制增强}\to\theta\ \text{推进"}\ \text{真实历史链条}✓$$
+
+---
+
+# 【T3 冻结 · 第三轮】（2026-09-16 19:59，唐先生裁定，承 T2 通过）
+
+## 1. 今日成果链（干净版）
+$$\boxed{\begin{array}{c}\text{BCR 三线性估计族}\\ \downarrow\\ (r,t)\ \textbf{充分坐标}\ (\text{猎-2C：条件于模板形式与固定架构})\\ \downarrow\\ \theta(r,t)=\tfrac12+\frac{0.5-r}{1+2(r+2t)}\ (\text{猎-2A；自校验}\ \tfrac{17}{33}\ ✓)\\ \downarrow\\ \theta>\tfrac{17}{33}\iff \boxed{17r+t<8}\ (\text{猎-3A；边界点}\ (9/20,7/20)\ \text{恰在线上})\\ \downarrow\\ \textbf{17/33＝历史最佳点，非架构天花板}\ (\text{猎-3A 判定 N3-C；猎-3B 机制级证明})\\ \downarrow\\ \textbf{真正攻击对象：BCR 可达域}\end{array}}$$
+
+## 2. T2 的三项核验（全部通过，据原文逐字）
+$$\text{① 可达域}\ =\ \{r,t\ge0\}\ (\text{"holds true for all}\ r,t\ge0\text{"})\ \textbf{＋两处隐藏耦合}：\ A\ll(NM)^{\frac{0.5-r}{1+2t}+\varepsilon}\ (\text{A 范围})；\ \text{误差项含}\ (r,t)；$$
+$$\text{② 端点}\ (0,0)\ \textbf{合法} \text{（在猜想集内，}\textbf{非} \text{形式外推）}；\ \text{上界}\ \theta<1\ \textbf{严格}；$$
+$$\text{③ Conjecture 1}\Longrightarrow\theta<1\ \textbf{逐字确认}（+\ \text{Corollary 1: Lindelöf}；\text{"strictly stronger than Lindelöf"}）✓$$
+
+## 3. ⭐ 机制级成果（本日最硬的一条）
+$$\boxed{\text{定理 2 的}\ \theta\ \text{-上界}\ =\ \textbf{误差项次于主项条件}}：\ \tfrac12+\tfrac{0.5-r}{1+2(r+2t)}=\tfrac{1+2t}{1+2r+4t}\ \textbf{（恒等）}$$
+$$\Longrightarrow\ \theta>\tfrac{17}{33}\iff 17r+t<8\iff \text{主误差次于主项} \Longrightarrow \textbf{17/33 非架构天花板有机制级证明}✓$$
+
+## 4. ⚠️ 已执行的降级
+$$\boxed{\text{"}t\ \text{高效 17 倍"}\ \to\ \textbf{坐标灵敏度}：\text{固定}\ \theta(r,t)\ \text{下越过}\ 17/33\ \text{边界的权重}\ 17:1}；\ \textbf{≠ 数学可推进性}✓$$
+$$\text{（据原文：}\textbf{t 是}\ A\ \text{的指数}，\textbf{r 是}\ (M+N)\ \text{的指数} \Longrightarrow \text{两侧算术难度}\ \textbf{是不同问题}）✓$$
+
+## 5. 状态总表（终局）
+$$\begin{array}{c|c|c|c}
+\text{墙} & \text{对象} & \text{机制} & \text{状态}\\ \hline
+B & \text{V316：}\lambda\le1 & \text{MV／解析域约束} & \textbf{DEAD（该 carrier）}\\
+A & \text{mollifier 非对角} & \text{Kloosterman／shifted-correlation} & \textbf{ALIVE}；\ \text{天花板＝可达域}\ (17r+t<8)\\
+\mathrm{GM} & R(N,V,T)\ \text{large values} & \text{scalar LV／高阈值} & \textbf{独立机制}（\text{接口 H3-A DEAD}）
+\end{array}$$
+$$\text{SEARCH-SPACE：}\ \textbf{继续开放}\quad\big|\quad \text{"三墙"}\ \text{应写作}\ \textbf{三个机制类}✓$$
+
+## 6. 保留的防偷换铁律（三条）
+$$\boxed{\theta\ \text{可推进}\ \not\Rightarrow\ \mathrm{RH}\ \text{可推进}}\qquad(\theta<1\Rightarrow\text{Lindelöf}\ne\mathrm{RH};\ \theta=\infty\Rightarrow\mathrm{RH})$$
+$$\boxed{\mathrm{GM}\text{-DEAD}\ \not\Rightarrow\ G\text{-DEAD}}\qquad(\text{只关闭}\ \mathrm{GM}\to\text{mollifier-}G\ \text{具体接口})$$
+$$\boxed{\text{"坐标灵敏度"}\ \ne\ \text{"数学可推进性"}}✓$$
+
+## 7. 未开与下次入口
+$$\textbf{T1 暂不开}（\text{唐先生}）：\ \text{在}\ t\ \text{的精确定义与可达域约束未完全核实前，}\ \text{"压}\ t\text{"}\ \text{仍只是坐标层优先级}✓$$
+$$\textbf{下次第一件事（建议）}：\ \boxed{\text{写出}\ \mathfrak F\ \text{的完整形态}（\text{A 范围耦合}\ \cap\ \text{误差条件}\ \cap\ r,t\ge0）} \Longrightarrow \text{此后才谈"压}\ 17r+t\text{"}✓$$
+$$\textbf{另一入口}：\ \text{换-1（\text{离开 mollifier／LV／MV 语言，从新的外部数学结构进入}）}✓$$
+
+## 8. 边界（N1/N2 严守）
+$$\text{① 本档为冻结与状态登记，}\textbf{不引入新机制}；\quad\text{② BCR 原文关键语句}\ \textbf{逐字引用}（\text{外部来源，仅作数据}）；$$
+$$\text{③ 残余未消}：\ \text{§3 恒等为本档计算，}\textbf{未逐行核验定理 2 完整证明}；\ \text{A 范围公式未验推导}；\ \mathfrak F\ \text{完整形态未写出}；$$
+$$\text{④ }\textbf{未用 RH}；零数值（\text{仅代数恒等式与分数演算）}；\ \text{未跑 Lean}✓$$
