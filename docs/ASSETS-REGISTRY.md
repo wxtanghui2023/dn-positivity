@@ -187,3 +187,30 @@ $$\text{(4) 与}\ \texttt{DIRECTION-LOOP-STOP-verdict-and-assets.md}\ \text{（0
 
 ---
 *建档：2026-09-16 23:30｜修正：23:36（双轨＋发表轨）／23:46（补 A-7/A-8/A-9＋Droll）／23:49（增战术轨待攻目标）｜依据：唐先生 23:28／23:33／23:45／23:47 指令*
+
+---
+
+## 🔒 **CLOSED_scoped** · BC Internal 线（2026-09-17 冻结，唐先生裁定）
+
+$$\boxed{\text{BC Internal}\ =\ \text{T1／T2／T3}\ +\ (\text{甲})\text{-1}\ +\ (\text{甲})\text{-2}\ =\ \mathrm{CLOSED}_{\rm scoped}}✓✓$$
+
+### 结论（**严格限定作用域**）
+$$\text{在既定 BC／BCR 应用架构内，}\ \textbf{固定幂级出口未找到}✓$$
+
+### ⭐ **R1／R2 同因 FAIL**（本 closure 的核心，比普通 NO-GO 更干净）
+$$A\ \lesssim\ N^{1/17}\quad\text{同时导致}\quad A\not\gg N^{4/5}\quad\text{与}\quad g\ \lesssim\ AN\ \le\ N^{18/17}\ \ll\ N^{9/5}✓$$
+$$\Longrightarrow\ \text{这不是"某个估计不够强"，而是}\ \boxed{\text{唯一潜在 conductor-rescue 层在实际应用参数区间中}\ \textbf{根本不存在}}✓✓$$
+$$\qquad(\text{不是"某候选被排除"，而是}\ \text{BC 这条线从多个独立入口}\ \textbf{压缩到一个清晰的 scoped closure})✓$$
+
+### 🚫 四条**明确不声称**（绑定本 closure，不得解绑）
+$$\text{(1)}\ \textbf{不声称} \text{BC 普适不可改进}✓$$
+$$\text{(2)}\ \textbf{不声称}\ 17/33\ \text{是普适硬墙}✓$$
+$$\text{(3)}\ \textbf{不声称} \text{所有可能的 C--S 重组已经数学上穷尽}✓$$
+$$\text{(4)}\ \text{结论}\ \textbf{仅针对} \text{当前 BC／BCR 参数与已审计的 transformation families}✓$$
+
+### 📌 （丙）**入场判据**（下次进入时先过此关）
+$$\boxed{\text{新外部结构必须改变}\ \ \underbrace{\text{conductor 形成机制}}_{\text{BC 已封闭}}\ \ \text{或}\ \ \underbrace{\text{finite-scale}\to\text{global-scale 的桥接机制}}_{\text{RH 真正缺口}}}✓✓$$
+$$\qquad\text{否则}\ \text{容易只是换一个名字重新回到 Weil／C--S／conductor 这条}\ \textbf{已关闭的轨道}✓$$
+
+### 状态
+$$\boxed{\text{停在此处（2026-09-17）}\ ——\ \text{不以"再找一个能给}\ N^{-\delta}\ \text{的估计"作为（丙）的起点}}✓$$
