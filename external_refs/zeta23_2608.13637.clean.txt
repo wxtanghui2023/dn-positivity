@@ -1,0 +1,1730 @@
+MORE THAN TWO THIRDS OF THE ZEROS OF THE RIEMANN ZETA
+FUNCTION ARE SIMPLE AND ON THE CRITICAL LINE
+LEVENT ALP ¨OGE AND RALPH FURMAN
+The mathematical argument in this paper was discovered and written by Claude,
+an AI developed by Anthropic.
+The listed authors verified the proof and take responsibility for its content.
+Abstract.We prove unconditionally that at least two thirds of the nontrivial zeros of the
+Riemann zeta function, counted with multiplicity, are simple and lie on the critical line, and
+that at least five sixths are distinct; the previous unconditional records are 5
+12 and 0.6603.
+With the Montgomery–Taylor window the constants become 0.6725 and 0.8362. The argu-
+ment makes Montgomery’s 1973 deduction unconditional: the Riemann hypothesis, classically
+needed to read the zero side as a positive sum over real ordinates, is replaced by a rank–trace
+inequality applied to a finite compression of Weil’s Hermitian form, with Sylvester’s law of in-
+ertia handling off-line pairs. The analytic inputs are those of Aryan and of Baluyot, Goldston,
+Suriajaya and Turnage-Butterbaugh. The results extend to primitive DirichletL-functions
+and are formally verified in Lean 4.
+1.Introduction
+1.1.Results.Writeρ=β+iγfor a nontrivial zero ofζ(s) andm ρ≥1 for its multiplicity.
+For 0≤T 1<T 2 let
+N(T 1,T 2) :=P
+T1<γ≤T2mρ (zeros, counted with multiplicity),
+Nd(T1,T 2) := #{ρ:T 1<γ≤T 2}(distinct zeros),
+N∗
+0 (T1,T 2) := #{ρ:T 1<γ≤T 2, β= 1
+2}(distinct zeros on the critical line),
+Ns
+0(T1,T 2) := #{ρ:T 1<γ≤T 2, β= 1
+2, mρ = 1}(simple zeros on the critical line);
+write alsoN 0 for the zeros on the line counted with multiplicity andN s for the simple zeros;
+thusN s
+0 ≤N ∗
+0 ≤N 0≤NandN s
+0 ≤N s≤N d≤N. WriteN(T) :=N(0,T), and recall
+N(T,2T) = T
+2π(log T
+2π + 2 log 2)− T
+2π +O(logT).
+Theorem A.AsT→∞,
+(i)N s
+0(T,2T)≥
+  2
+3−o(1)
+ 
+N(T,2T),(ii)N d(T,2T)≥
+  5
+6−o(1)
+ 
+N(T,2T).
+With the Montgomery–Taylor windowψ MT of(2.6)in place of the indicator windowψ 0, the
+constants improve to2−c −1
+MT = 0.67250...and 1
+2(3−c −1
+MT) = 0.83625...respectively, where
+Date: August 21, 2026.
+2020Mathematics Subject Classification.11M06, 11M26, 15A42.
+Key words and phrases.Riemann zeta function, critical line, explicit formula, pair correlation, Sylvester’s
+law of inertia.
+The mathematical argument in this paper was discovered and written by Claude, an AI developed by An-
+thropic. The listed authors verified the proof and take responsibility for its content. Jarred Sumner posed the
+problem and guided the investigation; the accompanying Lean 4 formalisation was orchestrated by Eric Easley.
+See the Acknowledgments, and Appendix B for an account of how the proof was found.
+1
+arXiv:2608.13637v2  [math.NT]  19 Aug 20262 LEVENT ALP ¨OGE AND RALPH FURMAN
+c−1
+MT := 1
+2 + 1√
+2 cot 1√
+2; among windowsψ(equivalently, certificates of the form2−R(ψ)),
+this is optimal[CCLM17, Cor. 14]. The ceiling over the broader class of all bandwidth-one
+certificates is approximately0.682; see§7.2. A fortioriN ∗
+0 (T,2T), N 0(T,2T), N s(T,2T)≥
+( 2
+3−o(1))N(T,2T).
+The same holds for (0,T) in place of (T,2T), with rateO(log logT/logT) (Remark 6.1). The
+previous unconditional records are 5
+12 forN s
+0/N[PRZZ20] and 0.6603 forN d/N[Wu15]. The
+constants 2
+3, 5
+6, 0.6725 are those of Montgomery [Mon73], Conrey–Ghosh–Gonek [CGG98,
+(1.2)], and Montgomery–Taylor [Mon75] under the Riemann hypothesis. Under RH, 0.6792 for
+Ns/Nis known via semidefinite programming using the positivity of the form factor outside
+[−1,1] [CGdL20], a regime the present method does not enter.
+Theorem B.Theorem A holds verbatim forL(s,χ)in place ofζ(s), for any fixed primitive
+Dirichlet characterχ.
+The arithmetic inputs are Weil’s explicit formula, the Riemann–von Mangoldt formula and
+the boundN(t,t+ 1)≪logt, Stirling’s estimate for Γ ′/Γ, Chebyshev–Mertens estimates forP
+n≤X Λ(n)2 andP
+n≤X Λ(n)2/n, and the Montgomery–Vaughan inequality for the frequencies
+{logn:n≤X},X≤T. No mollifier, zero-density estimate, or zero-free region is used.
+1.2.The proof.Weil’s explicit formula defines a Hermitian formW(f,g) = P
+ρmρ bf(γρ)bg(γρ)
+on compactly supported test functions,γ ρ = (ρ− 1
+2)/i; its positivity on all ofC 2
+c (R) is equiv-
+alent to the Riemann hypothesis [Wei52, Bom00]. We restrictWto a family ofd∼N(T,2T)
+modulated copies of a fixed windowψ, equispaced through [T,2T], and let eGbe the resulting
+d×dreal symmetric matrix, normalised so that an isolated simple on-line zero contributes 1
+to tr eG(§2).
+(Z) Up to a tail of trace normo(1), eG=P+Q: each distinct on-line zero contributes a
+rank-one positive form toP, each off-line pair{ρ,1−¯ρ}a block of signature (1,1) to
+Q. Writings 1,s 2,pfor the numbers of simple on-line zeros, multiple on-line points,
+and off-line pairs in the window, one has trP≤N 0,n +(Q)≤p,N≥s 1 + 2s2 + 2p,
+and tr eG= (1 +o(1))N(Propositions 4.1–4.3).
+(P)∥ eG∥2
+HS = (R(ψ) +o(1))N, whereR(ψ) depends only on the window (Lemma 5.6):
+R(ψ0) = 4
+3 for the indicator,R(ψ MT) =c −1
+MT for Montgomery–Taylor. This is Mont-
+gomery’s unconditional prime-side second moment [Mon73, Ary22, BGSTB24] (Theo-
+rem 5.7).
+(L) For HermitianP 1⪰0 andQ ′ withn +(Q′)≤b(Lemma 3.2),
+(1.1) rankP 1 ≥2 trP 1 + 4 trQ′−4b−∥P 1 +Q′∥2
+HS.
+TakingP 1 to be the simple-on-line part ofPandQ ′ := eG−P 1, Theorem A is then the single
+chain
+(1.2)N s
+0 +o(N)≥rankP 1 ≥4 tr eG−2N−∥ eG∥2
+HS =
+ 
+2−R(ψ)−o(1)
+ 
+N:
+the first inequality is Proposition 4.1; the second combines (L) with trP 1 + 2n+(Q′)≤N
+from (Z); the equality is (Z) and (P). Atψ=ψ 0 this is Theorem A(i), and atψ=ψ MT the first
+constant of the second sentence. For (ii), rearranging the second step gives 3s 1 + 4(s2 +p)≥
+(4−R(ψ))N; subtractings 1 + 2s2 + 2p≤Ngives 2(s 1 +s 2 +p)≥(3−R(ψ))N, whence
+Nd≥s 1+s2+p≥ 1
+2(3−R(ψ)−o(1))N. The inequality (1.1) is the matrix form ofm 2≥2m−1;
+with the simple zeros on the rank side and the multiple ones at the flat charge 4, it recovers
+m2≥3m−2.MORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 3
+1.3.Context.That a positive proportion of the zeros lie on the critical line is due to Sel-
+berg [Sel42]; Levinson’s mollifier method [Lev74] gave 1
+3 (simple, by [HB79]), Conrey [Con89]
+> 2
+5, and [BCY11, Fen12, PRZZ20] the present record 5
+12. Under RH, Montgomery [Mon73]
+deduced 2
+3 simple from the pair-correlation second moment; [Mon75, CG93, BHB13, CGdL20]
+improved further.
+Montgomery’s prime-side evaluation is a mean value of a Dirichlet polynomial of lengthT
+and is unconditional; RH entered only to read the zero side termwise as a positive sum over real
+ordinates. Aryan [Ary22] made this explicit for the Fej´ er-kernel second moment, and Baluyot,
+Goldston, Suriajaya and Turnage-Butterbaugh [BGSTB24] then showed that Montgomery’s
+form factor itself holds for the sum over all complex zeros. Goldston and Suriajaya [GS25, GS26]
+(also [BGSTB25, GLSS25]) subsequently showed that 2
+3, 5
+6 follow under the hypothesis that all
+zeros lie withino(1/logT) of the line, isolated the remaining obstacle as the termwise positivity
+that fails off the line, and asked what would follow if it could be removed. Theorem A removes
+it: the inertia bound (Z)+(L) replaces the positivity. Section 7.1 gives the comparison in
+detail. The same argument applied toξ ′ shows unconditionally that at least 85.8% of the
+zeros ofξ ′ are simple and on the critical line (Remark 7.1), the proportion Farmer, Gonek
+and Lee [FGL14] obtain on the Riemann hypothesis; the previous unconditional value was
+79.874% [Con89]. Averaging over primitive Dirichlet characters with smooth modulus weights
+raises the proportion to 0.811 simple and on the line and 0.905 distinct (Remark 7.2).
+The observation that thenegativeindex of truncations ofWcounts off-line pairs is
+Bombieri’s [Bom00]; we are not aware of a previous use of rank and positive index together
+with a second-moment evaluation.
+1.4.What the results are not.The theorems are lower bounds only: the remaining third of
+the zeros are not shown to be off the line, merely not reached by the certificate. The inputs are
+insensitive too(N) off-line zeros and hold for Davenport–Heilbronn and Epstein zeta functions,
+for which the analogue of RH is false. Given only tr eG,∥ eG∥2
+HS and the block structure, the
+inequality (1.1) is sharp (§7.2); improving on 2
+3 by this route would require pair-correlation
+information beyond Fourier support 1.
+1.5.Formal verification.The author of this paper is a large language model developed by
+Anthropic; the argument was found over two interactive sessions and checked by repeated
+adversarial review by independent model instances (Appendix B). A Lean 4 formalisation of
+Theorems A and B accompanies the paper (Appendix A).
+1.6.Plan.Section 2 fixes the explicit formula, the test family, and eG. Section 3 proves (1.1).
+Section 4 carries out (Z); Section 5 carries out (P). Section 6 carries out the chain (1.2).
+Section 7 records the relation to [BGSTB24, GS25, GS26], the sharpness of the method, and
+extensions. Appendix A records the formalisation; Appendix B describes how the argument
+was found.
+1.7.Notation. bf(ξ) =
+R
+Rf(u)e−iuξdu. For a Hermitian matrixR,n +(R) is the number of
+strictly positive eigenvalues and∥R∥ 2
+HS = trR 2. We writel:= log(T/2π) andD 0 :=T 1/2.
+2.The explicit formula and the test family
+2.1.The explicit formula.Forτ∈Rset
+µ(τ) := 1
+2π Re Γ′
+Γ
+ 1
+4+iτ
+2
+ 
+−logπ
+2π ,Π X(τ) := 1
+π ReX
+1
+2 +iτ
+1
+2 +iτ , P X(τ) :=− 1
+π
+X
+n≤X
+Λ(n)√n cos(τlogn),4 LEVENT ALP ¨OGE AND RALPH FURMAN
+andν X :=µ+ Π X +PX. Weil’s explicit formula (e.g. [IK04,§5.5]; our normalisation agrees
+with [BGSTB24]) reads, forF∈C 2
+c (R) even,
+(2.1)
+X
+ρ
+mρ bF(γρ) = bF( i
+2) +bF(− i
+2) +
+Z
+R
+bF(τ)µ(τ)dτ−2
+X
+n≥1
+Λ(n)√n F(logn);
+if moreover suppF⊂[−logX,logX] then the pole terms bF(± i
+2) are absorbed into
+R bF·Π X
+and
+(2.2)
+X
+ρ
+mρ bF(γρ) =
+Z
+R
+bF(τ)ν X(τ)dτ.
+Withℓ 1 :=l+ 2 log 2−1, the components ofν X in (2.2) satisfy (see e.g. [IK04,§5.5])
+µis even, smooth, increasing in|τ|, µ≥µ(0)>−1,
+µ(τ) = 1
+2π log|τ|
+2π +O(τ−2), µ ′(τ)≪|τ| −1 (|τ|≥1); (2.3)
+|ΠX(τ)|≤ 3
+√
+X
+1 +|τ| ;|P X(τ)|≤ 1
+π
+X
+n≤X
+Λ(n)√n ≪
+√
+X; (2.4)
+Z 2T
+T
+µ(τ)dτ= Tℓ 1
+2π +O
+  1
+T
+ 
+=N(T,2T) +O(l),
+Z 2T
+T
+µ(τ) 2dτ= Tℓ 2
+1
+4π2
+ 
+1 +O
+ 
+l−2  
+.
+(2.5)
+2.2.The window and the test family.This subsection fixes the windowψ, the test function
+ϕ, and the sample grid{α k}; the matrix eGis defined in§2.3.
+Fix an even windowψ∈C 2([− 1
+2, 1
+2]) withψ >0 on [− 1
+2, 1
+2]. The two choices we use are
+(2.6)ψ 0 :=1 [−1/2,1/2], ψ MT(s) := cos(
+√
+2s)1 [−1/2,1/2](s).
+Fixχ∈C ∞(R) nondecreasing,χ| (−∞,0] = 0,χ| [1,∞) = 1. WithL:=l= log(T/2π) and
+X:=e L =T/(2π), set
+(2.7)ϕ(u) :=χ
+ L
+2 +u
+ 
+χ
+ L
+2−u
+ 
+·ψ(u/L) 1/2.
+Thenϕ∈C 2
+c (R) is even, 0≤ϕ≤1, suppϕ= [− L
+2, L
+2 ], andϕ 2(u) =ψ(u/L) off two transition
+intervals of lengthO χ(1); supp(ϕ∗ϕ)⊂[−L,L] = [−logX,logX], so (2.2) applies toF= any
+product of modulated copies ofϕ. By Paley–Wiener andj= 0,1,2 integrations by parts,
+(2.8)| bϕ(z)| ≪χ e
+L
+2|Imz| ·min
+ 
+L,|z| −1,|z| −2 
+, z∈C,
+since∥ϕ∥ 1≤L,∥ϕ ′∥1≪χ 1,∥ϕ′′∥1≪χ 1 (the (√ψ)(j)(u/L)·L −j contribution being≪L 1−j
+on the bulk).
+Here and below,C χ :=∥(ϕ 2)′′∥1≪χ 1.
+Placeα k :=T+ 2πk/Lfork∈Zandd:=⌊LT/(2π)⌋, soα 0,...,α d−1 ∈[T,2T) and
+d=N(T,2T) +O(L). For a zeroρset
+(2.9)v ρ :=
+ bϕ(γρ−αk)
+ 
+0≤k<d∈C d.
+2.3.The matrix eG.LetI:= [T,2T),I ′ := [T−
+√
+T,2T+
+√
+T), and partition the zeros
+with Reγ ρ ∈I ′ into on :={ρ:β= 1
+2}, off :={ρ:β̸= 1
+2}(sets). Puta:=∥ϕ∥ 2
+2/L=R 1/2
+−1/2ψ+O χ(L−1) and define the real symmetricd×dmatrices
+(2.10) eG:= 1
+aL2
+X
+Reγρ∈I′
+mρvρvT
+ρ, P:= 1
+aL2
+X
+ρ∈on
+mρvρvT
+ρ, Q:= eG−P,MORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 5
+and eE:= (aL 2)−1P
+Reγρ/∈I′mρvρvT
+ρ . Rank and inertia are basis-independent, so no orthonor-
+malisation is needed. The functional equation pairs off as{ρ,1−¯ρ}withv 1−¯ρ=vρ, so eG,eE
+are real symmetric. By (2.2),
+(2.11) ( eG+ eE)kk′ = 1
+aL2
+Z
+R
+bϕ(τ−α k)bϕ(τ−α k′)νX(τ)dτ.
+Lemma 2.1(Poisson–Gabor identity).For allz,z ′∈C,
+X
+k∈Z
+bϕ(z−α k)bϕ(z′−αk) =L cϕ2(z−z ′),in particular
+X
+k∈Z
+bϕ(z−α k)2 =L∥ϕ∥ 2
+2 =aL 2.
+Forz=z ′ real, truncating to0≤k <dgives∥v ρ∥2
+2≤aL 2 forρ∈on.
+Proof.Fixz,z ′ and let Υ(s) := bϕ(z−s) bϕ(z′−s). Withϕ z(u) :=ϕ(u)e izu andH:=ϕ z∗ϕz′∈
+Cc(R) one has Υ(s) = bH(−s); hence Υ is smooth with Υ(s) =O χ(|s|−4) by (2.8), and by
+Fourier inversion bΥ(ξ) = 2πH(ξ), which is continuous and vanishes for|ξ| ≥L. Poisson
+summation P
+k∈Z Υ(T+kh) =h −1P
+m∈ZbΥ(−2πm/h)e2πimT/h holds; sinceh= 2π/Lthe
+dual lattice isLZ, so onlym= 0 contributes, givingh −1bΥ(0) = L
+2π·2π
+R
+ϕ(u)2ei(z−z′)udu=
+Lcϕ2(z−z ′). □
+Thus the Gabor system at the critical densityh= 2π/Lhas a translation-invariant frame
+kernel with no aliasing error, for any window supported in an interval of lengthL.
+Lemma 2.2(Montgomery–Vaughan, bilinear form).Letλ 1,...,λ R ∈Rbe distinct,δ r :=
+mins̸=r|λr−λs|, andx r,zr∈C. Then
+   
+X
+r̸=s
+xrzs
+λr−λs
+    ≤ 3π
+2
+ X
+r
+|xr|2
+δr
+ 1/2 X
+r
+|zr|2
+δr
+ 1/2
+.
+Proof.Forz=xthis is the weighted Hilbert inequality of [MV74, Theorem 2]; see also [Mon94,
+Ch. 7]. In general, withH rs :=i/(λ r−λs) (r̸=s),H rr = 0, and ∆ := diag(δ1/2
+r ), the casez=x
+says∥∆H∆∥≤ 3π
+2 (operator norm, ∆H∆ Hermitian); then|x ∗Hz|≤ 3π
+2∥∆−1x∥∥∆−1z∥.□
+We apply Lemma 2.2 with{λ r}={logn:n≤Xprime power}; consecutive prime powers
+satisfy log n′
+n ≥ 1
+2n, so
+(2.12)δ −1
+n ≤2n,
+X
+n
+δ−1
+n |xn|2≤2
+X
+n
+n|xn|2.
+3.Linear algebra
+Lemma 3.1(Inertia under pull-back).LetQ 0 be a Hermitian form onC m andA:C d→C m
+linear. Thenn +(A∗Q0A)≤n +(Q0).
+Proof.IfQ 0◦Ais positive definite on a subspaceU⊂C d, thenA| U is injective andQ 0 is
+positive definite onA(U); hence dimU= dimA(U)≤n +(Q0).□
+Lemma 3.2(Rank–trace inequality).LetP,Qbe Hermitiand×dmatrices withP⪰0,
+rankP≤r, andn +(Q)≤b. Then
+(3.1)r≥2 trP+ 4 trQ−4b−∥P+Q∥ 2
+HS.
+Equality holds ifP= Π 1,Q= 2Π 2 for orthogonal projectionsΠ 1⊥Π 2 of ranksr,b.6 LEVENT ALP ¨OGE AND RALPH FURMAN
+Proof.WriteQ=Q +−Q− withQ±⪰0,Q +Q− = 0, rankQ +≤b. Then∥P+Q∥ 2
+HS =∥P∥ 2
+HS+
+∥Q+∥2
+HS +∥Q−∥2
+HS + 2 tr(PQ+)−2 tr(PQ −)−2 tr(Q +Q−) and tr(PQ +)≥0, tr(Q +Q−) = 0.
+Letp 1≥···≥p d≥0 andn 1≥···≥n d≥0 be the eigenvalues ofPandQ −. By von
+Neumann’s trace inequality tr(PQ−)≤ P
+ipini, so
+∥P∥ 2
+HS−2 tr(PQ−)+∥Q−∥2
+HS ≥
+X
+i
+(pi−ni)2 ≥
+X
+i≤r
+ 
+2(pi−ni)−1
+ 
++
+X
+i>r
+n2
+i ≥2 trP−r−4 trQ −,
+usingx 2 ≥2x−1, then−2n i ≥ −4ni fori≤randn 2
+i ≥0≥ −4n i fori > r. And
+∥Q+∥2
+HS =P
+jq2
+j≥P
+j(4qj−4)≥4 trQ +−4bover the≤bpositive eigenvalues. Adding, and
+trQ= trQ +−trQ −, gives (3.1).□
+Remark3.3.Alternatively: the mapU7→∥P+UQU ∗∥2
+HS on the unitary group is continuous
+on a compact set, and at a minimum the first-order condition tr([P,UQU ∗]H) = 0 for all
+HermitianHforces [P,UQU ∗] = 0; simultaneous diagonalisation then reduces (3.1) to the
+scalar inequalities (x−1) 2≥0,x 2≥0, (x−2) 2≥0 in the three sign cases of (p i,bi). Setting
+Q= 0 and optimising the coefficient 2 recovers rankP≥(trP) 2/∥P∥ 2
+HS.
+Lemma 3.4(Weyl).IfA,Eare Hermitian with∥E∥≤θ, thenn +(A)≥#{i:λ i(A+E)>θ}.
+Proof.λ i(A+E)≤λ i(A) +∥E∥(Courant–Fischer).□
+4.The zero side
+Throughout§§4–6 the implied constants depend only onχandψ, and we takeTlarge.
+Proposition 4.1(Block structure).P⪰0withrankP≤N ∗
+0 (I′)andtrP≤N 0(I′); and
+n+(Q)≤ 1
+2#off.
+Proof.Forρ∈on,γ ρ∈R, sov ρ∈R d andm ρvρvT
+ρ ⪰0 has rank≤1; summing,P⪰0
+with rankP≤#on =N ∗
+0 (I′). By Lemma 2.1 atz=z ′ =γ ρ and nonnegativity of the
+summands,∥v ρ∥2 =P
+0≤k<dbϕ(γρ−αk)2≤L∥ϕ∥ 2
+2; summingm ρ∥vρ∥2 and dividing byL∥ϕ∥ 2
+2
+gives trP≤ P
+ρ∈onmρ =N 0(I′).
+For the off-line bound: pair off as{ρ,1−¯ρ}and writev ρ =a+ibwitha,b∈R d. Then
+mρ(vρvT
+ρ +vρvρT) = 2m ρ(aaT−bb T) is the pull-back ofm ρ
+  1 0
+0−1
+ 
+underx7→(a Tx, bTx).
+Summing,Qis the pull-back of L
+pairsmρ
+  1 0
+0−1
+ 
+, whose positive index is the number of pairs;
+apply Lemma 3.1.□
+Proposition 4.2(Trace).tr eG=N(I ′) +Oχ
+ 
+T 1/2L2 
+.
+Proof.By Lemma 2.1 atz=z ′ =γ ρ, for each zero with Reγ ρ∈I′,
+tr(vρvT
+ρ ) =aL 2−
+X
+k/∈[0,d)
+bϕ(γρ−αk)2.
+Fork /∈[0,d) one hasα k /∈[T,2T), hence|Reγ ρ−αk|≥D ρ := dist(Reγρ,{T,2T}). By (2.8)
+with|Imγ ρ|< 1
+2,| bϕ(γρ−αk)|2≤e L/2C2
+χ|Reγ ρ−αk|−4, and thek-sum is bounded by integral
+comparison (steph= 2π/L):
+X
+k/∈[0,d)
+|Reγ ρ−αk|−4 ≤2
+ 
+D−4
+ρ +h−1
+Z ∞
+Dρ
+s−4ds
+ 
+≪Lmin
+ 
+L3, D−3
+ρ
+ 
+.
+Dividing byaL 2≍L 2 and summing over zeros inI ′ (density≪L;O(L) zeros haveD ρ <1,
+contributing≪ χX1/2L2; the rest satisfyP
+ρD−3
+ρ ≪L, contributing≪X 1/2·L−1·L=X 1/2),
+  treG−N(I ′)
+  ≪χX1/2L2≪T 1/2L2 =o(N(I ′)).□MORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 7
+Proposition 4.3(Tail).∥ eE∥1≪χT−1/2; in particular∥ eE∥,∥ eE∥HS≤∥ eE∥1 =o(1).
+Proof.Since∥v ρvT
+ρ∥1 =∥v ρ∥2
+2,∥ eE∥1 ≤(aL 2)−1P
+Reγρ/∈I′mρ∥vρ∥2
+2. For suchρ,D:=
+dist(Reγρ,I)≥D 0 =
+√
+T, and as above∥v ρ∥2
+2 ≤e L/2C2
+χ·h−1D−3 ≪X 1/2LD−3. By
+N(t,t+ 1)≪log(|t|+ 3) [Tit86, Thm 9.2],
+X
+Reγρ/∈I′
+mρD−3 ≪L
+Z T
+√
+T
+D−3dD+
+X
+|γ|>3T
+log|γ|
+|γ|3 ≪LT −1.
+Hence∥ eE∥1≪(aL 2)−1·X 1/2L·LT −1≪X 1/2T−1≪T −1/2.□
+Remark4.4.TheC 2 smoothing is necessary: for the sharp cut-offϕ=1 [−L/2,L/2] one has only
+|bϕ(r−iy)|≍X |y|/2/|r|, and the right-hand side of the first display in the proof of Proposition 4.3
+is then≫X 1/2Llog(T/D 0), which is noto(N) for anyD 0 =T 1−ε.
+Corollary 4.5.trP+ 2n +(Q)≤N(I) +O(
+√
+TlogT), andN ∗
+0 (I)≥rankP−O(
+√
+TlogT).
+Proof.trP+2n +(Q)≤N 0(I′)+#off≤N(I ′) =N(I)+O(
+√
+TlogT) by Proposition 4.1, since
+N(I′) =P
+onmρ+P
+offmρ≥N 0(I′)+#off, andN(I ′)−N(I)≪
+√
+TlogTby the short-interval
+bound. The second claim is rankP≤N ∗
+0 (I′) =N ∗
+0 (I) +O(
+√
+TlogT) rearranged.□
+5.The prime side
+5.1.Auxiliary estimates.We record the auxiliary bounds used in this section. Putb:=
+1
+L
+R
+ϕ4 (so 0<b≤a≤1),w:= 1, and
+(5.1) Φ := cϕ2, g:=ϕ 2⋆ϕ 2, A ϕ :=ϕ⋆ϕ,(v⋆v)(y) :=
+Z
+v(u)v(u+y)du.
+Thusbϕand Φ are real, even, entire; bϕ(0)≤L, Φ(0) =aL; the pair-correlation kernelR:=| bϕ|2
+is nonnegative by construction; bϕ 2 = cAϕ and Φ2 =bgonR;
+R
+R Φ2 = 2πg(0) = 2πbL;gandA ϕ
+are even, and since1 [−L/2+w,L/2−w]≤ϕ 2≤ϕ≤1 [−L/2,L/2],
+(5.2) (L−2w−|y|) + ≤g(y)≤A ϕ(y)≤(L−|y|) +.
+Integrating by parts in (2.8),
+(5.3) max
+ 
+|bϕ(r)|,|Φ(r)|
+ 
+≤ϑ(r) := min
+ 
+L, 2
+|r|, Cχ
+wr2
+ 
+(r∈R),
+and a direct computation (split the integrand at|r|= 2/L,|r|=C χ/2) gives
+(5.4)
+Θ0 :=
+Z ∞
+0
+ϑ(r)dr= 4+2 log CχL
+4w ≪logL,
+Z
+R
+ϑ(r)2|r|dr= 8+8 log CχL
+4w ≪logL,
+Z
+R
+ϑ2≤8L.
+Lemma 5.1.([MV07,§2.2])Forx≥2,
+X
+n≤x
+Λ(n)≪x,
+X
+n≤x
+Λ(n)√n ≤3√x(x≥x 0),
+X
+n≤x
+Λ(n)√nlogn ≪
+√x
+logx,
+X
+n≤x
+Λ(n)2≪xlogx,
+(5.5)
+X
+n≤x
+Λ(n)2
+n = (logx) 2
+2 +O(logx),
+X
+n≤x
+Λ(n)2
+n (logx−logn) = (logx) 3
+6 +O
+ 
+(logx) 2 
+.
+(5.6)8 LEVENT ALP ¨OGE AND RALPH FURMAN
+(Each follows from P
+n≤x Λ(n)/n= logx+O(1) by partial summation; see [IK04,
+Theorem 2.7].) In particular, writinga n := Λ(n)n −1/2, (2.12) gives P
+n≤Xa2
+nδ−1
+n ≤
+2P
+n≤X Λ(n)2≪XL; and by (2.3), (2.4) and (5.5),
+(5.7)
+|νX(τ)|≤B+ log +|τ|
+4T (τ∈R),|ν X(τ)|≤B(|τ|≤4T), B:=l+ 4
+√
+X, B 2≪l 2 +X.
+5.2.Reduction to a double integral.By (2.11), (aL 2)2∥eG+eE∥2
+HS =
+RR
+R2K(τ,τ ′)2νX(τ)νX(τ′)dτdτ ′,
+where
+(5.8)K(τ,τ ′) :=
+X
+0≤k<d
+bϕ(τ−α k)bϕ(τ′−αk) =LΦ(τ−τ ′)−K out(τ,τ′),
+Kout denoting the sum overk /∈[0,d); by Lemma 2.1 and (5.3),
+(5.9)|K|, L|Φ|≤aL 2,|K out(τ,τ′)|≤
+X
+k/∈[0,d)
+ϑ(τ−α k)ϑ(τ′−αk).
+Proposition 5.2(Reduction to the double integral).
+∥eG+ eE∥2
+HS = 1
+a2L2
+ZZ
+I×I
+cϕ2(τ−τ ′)2νX(τ)νX(τ′)dτdτ ′ +Oχ
+ NlogL
+L2
+ 
+.
+Proof.Write (aL 2)2∥eG+ eE∥2
+HS as
+RR
+I×I K2
+∞νν′ +E 1 +E 2 withν:=ν X(τ),ν ′ :=ν X(τ′),
+E1 :=
+RR
+I×I (K2−K 2
+∞)νν′ andE 2 :=
+RR
+(I×I)cK2νν′; note
+RR
+I×I K2
+∞νν′ =L 2M.
+Bound forE 1.By (5.9),|K 2−K 2
+∞|=|K out||K+K ∞|≤2aL 2|Kout|, and|ν|,|ν ′|≤BonI
+by (5.7). Hence
+|E1|≤2L 2B2 X
+k/∈[0,d)
+ Z
+I
+ϑ(τ−α k)dτ
+ 2
+.
+Fork=−j(j≥1) we have dist(α k,I) =jh; fork=d+ 1 +j(j≥0) we haveα k≥2T+jh
+becauseT+ (d+ 1)h>2T. Since
+R∞
+∆ ϑ≤min(Θ 0,Cχ/(w∆))≤min(Θ 0,Cχ/∆) for ∆>0, we
+get
+X
+k/∈[0,d)
+ Z
+I
+ϑ(τ−α k)dτ
+ 2
+≤2(2Θ 0)2 + 2
+X
+j≥1
+min
+ 
+Θ0,Cχ
+jh
+ 2
+≤10Θ 2
+0 + 6CχΘ0
+h ≪LlogL,
+where the term 2(2Θ0)2 accounts fork=d,d+1 (for which we only use
+R
+Rϑ= 2Θ 0), the points
+αd+1+j,j≥1, being at distance≥jhto the right ofI; thej-sum was split atj=C χ/(hΘ0),
+and (5.4) was used. Thus|E 1|≪L 3B2 logL.
+Bound forE 2.By symmetry|E 2| ≤2
+R
+τ/∈I
+R
+τ′∈RK2|νν′|. UsingK 2 ≤aL 2|K| ≤
+L2P
+k<dϑ(τ−α k)ϑ(τ′−αk),
+|E2|≤2L 2X
+k<d
+ Z
+τ/∈I
+ϑ(τ−α k)|νX(τ)|dτ
+  Z
+R
+ϑ(τ′−αk)|νX(τ′)|dτ′
+ 
+.
+In the second factor, the range|τ ′−αk|≤2Thas|τ ′|≤4Tand contributes at most 2Θ 0B; on
+|τ′−αk|=:r>2Twe have|τ ′|≤2r,|ν X(τ′)|≤B+ log(r/T) andϑ(r)≤C χr−2, contributing
+≪B/T. So the second factor is≤3Θ 0Buniformly ink. The sum overkof the first factor
+equals
+R
+τ/∈I|νX(τ)|σ(τ)dτwithσ(τ) := P
+k<dϑ(τ−α k). Forτ /∈Ilet ∆ := dist(τ,I); theMORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 9
+numbers|τ−α k|, 0≤k < d, are≥∆,≥∆ +h,≥∆ + 2h,...in increasing order, andϑis
+decreasing, so
+σ(τ)≤
+X
+j≥0
+ϑ(∆+jh)≤ϑ(∆)+ 1
+h
+Z ∞
+∆
+ϑ≤ϑ(∆)+ L
+2π min
+ 
+Θ0,Cχ
+∆
+ 
+, σ(τ)≤dϑ(∆)≤ dCχ
+∆2 .
+On ∆≤2T(where|τ|≤4T,|ν X|≤B) this gives
+R
+|νX|σ≤2B
+ 
+Θ0 + L
+2π
+ 
+Cχ +Cχ log 2TΘ 0
+Cχ
+  
+≤
+2B(Θ0 +C χLlogT); on ∆>2T(where|τ| ≤2∆,|ν X(τ)| ≤B+ log(∆/T)) it gives≤
+2
+R∞
+2T dCχ(B+ log(∆/T))∆ −2d∆≪C χLB. Hence
+R
+τ/∈I|νX|σ≪BLland|E 2|≪L 2·Θ 0B·
+BLl≪L 3B2llogL.
+□
+5.3.Evaluation ofM.For functionsu 1,u 2 onIwrite
+M[u1,u 2] :=
+ZZ
+I×I
+Φ(τ−τ ′)2u1(τ)u 2(τ′)dτdτ ′,
+a symmetric bilinear form (Φ 2 is even), so that
+(5.10)M=M[µ,µ] +M[P X,PX] + 2M[µ,PX] + 2M[µ,ΠX] + 2M[PX,ΠX] +M[ΠX,ΠX].
+Recall
+R
+R Φ2 = 2πbL,
+R
+R Φ(x)2|x|dx≪logL(by (5.3), (5.4)) and, by Fourier inversion of
+Φ2 =bg(geven, continuous, compactly supported),
+(5.11)
+Z
+R
+Φ(x)2eixydx= 2πg(y) (y∈R).
+Proposition 5.3(Archimedean term).M[µ,µ] = 2πbL
+R 2T
+T µ2 +O(l 2 logL) = bLTℓ 2
+1
+2π
+ 
+1 +
+O(l−2)
+ 
++O(l 2 logL).
+Proof.Forτ,τ ′∈I,µ(τ) =µ(τ ′) +O(|τ−τ ′|/T) by (2.3), and 0<µ≤lonI. Hence
+M[µ,µ] =
+Z
+I
+µ(τ′)2
+ Z
+I−τ′
+Φ(x)2dx
+ 
+dτ′ +O
+ l
+T
+Z
+I
+Z
+R
+Φ(x)2|x|dxdτ ′
+ 
+.
+The error isO(llogL). In the main term,
+R
+I−τ′ Φ2 = 2πbL−
+R
+x<T−τ′ Φ2−
+R
+x>2T−τ′ Φ2, andR
+Iµ(τ′)2R
+x<T−τ′ Φ(x)2dxdτ′≤l 2R
+x<0 Φ(x)2 min(|x|,T)dx≪l 2 logL, similarly for the other
+piece. The second form follows from (2.5).□
+Proposition 5.4(Prime term).
+M[PX,PX] = T
+π
+X
+n≤X
+Λ(n)2
+n g(logn) +O χ(L2X), g:=ϕ 2∗ϕ 2.
+Proof.WriteP X(τ) =− 1
+2π
+P
+nan(niτ+n−iτ). ThenP X(τ)PX(τ′) = 1
+2π2 ReP
+n,manam
+ 
+niτm−iτ′
++
+niτmiτ′ 
+. Substitutingτ=τ ′ +xand noting that for fixedxthe variableτ ′ ranges over
+I∩(I−x), which is empty for|x| ≥Tand equals [T+x −,2T−x +] for|x|< T
+(x± := max(±x,0)), we obtain
+M[PX,PX] = 1
+2π2 Re
+X
+n,m
+anam
+Z T
+−T
+Φ(x)2nix
+hZ 2T−x +
+T+x−
+ n
+m
+ iτ′
+dτ′ +
+Z 2T−x +
+T+x−
+(nm)iτ′
+dτ′
+i
+dx
+=:D+O 1 +O 2,
+(5.12)10 LEVENT ALP ¨OGE AND RALPH FURMAN
+whereDcollects the termsn=mof the first inner integral,O 1 the termsn̸=mof the first
+inner integral, andO 2 all terms of the second.
+D.Forn=mthe first inner integral isT−|x|, so by (5.11) and P
+na2
+n≪L 2 (Lemma 5.1),
+D= 1
+2π2
+X
+n
+a2
+n
+ 
+T·2πg(y n) +O
+ Z
+Φ(x)2(|x|+T1 |x|>T )dx
+  
+= T
+π
+X
+n
+a2
+ng(yn) +O(L 2 logL),
+using
+R
+|x|>T Φ2≤
+R
+Φ2|x|/T.
+O2.Here|
+R 2T−x +
+T+x− (nm)iτ′
+dτ′|≤2/log(nm)≤2/log 4 for alln,m, so|O 2|≤ 1
+2π2
+ P
+nan
+ 2·
+2πbL· 2
+log 4≪XLby (5.5).
+O1.Forn̸=mputϑ:=y n−y m̸= 0. The first inner integral equals
+ 
+(n/m)i(2T−x +)−
+(n/m)i(T+x−) 
+/(iϑ), andn ix(n/m)−ix+
+equalsm ix forx >0 andn ix forx <0, while
+nix(n/m)ix−
+equalsn ix forx>0 andm ix forx<0. With
+α+
+n :=
+Z T
+0
+Φ(x)2nixdx, α −
+n :=
+Z 0
+−T
+Φ(x)2nixdx,|α ±
+n|≤πbL≤πL,
+we therefore get
+O1 = 1
+2π2 Re
+X
+n̸=m
+anam
+i(yn−ym)
+h n
+m
+ 2iT
+(α+
+m +α−
+n )−
+ n
+m
+ iT
+(α+
+n +α−
+m)
+i
+.
+This is a combination of four sums of the shape P
+n̸=mxnzm/(yn−y m) with{|x n|,|zn|}=
+{an, an|α±
+n|}; for instance the first is P
+n̸=m(ann2iT )(amm2iTα+m)/(yn−ym). By Lemma 2.2
+and (2.12) each of the four is at most 3π
+2 ·πL· P
+na2
+n/δn≪L 2X. Hence|O 1|≪L 2X.
+Finally, by (5.2) and (5.6) (notea 2
+n = Λ(n)2/n),
+(L−2w) 3
+6 +O(L 2) =
+X
+n≤Xe−2w
+a2
+n(L−2w−y n)≤
+X
+n≤X
+a2
+ng(yn)≤
+X
+n≤X
+a2
+n(L−y n) = L3
+6 +O(L 2),
+and (L−2w) 3 =L 3−6wL 2 +O(w 2L) with 1≤w≤L/8, which gives the second form.□
+Proposition 5.5(Cross terms).M[µ,P X],M[µ,Π X],M[P X,ΠX],M[Π X,ΠX]≪ χ
+L2√
+X.
+Proof.Letm(τ ′) :=
+R
+I Φ(τ−τ ′)2µ(τ)dτforτ ′∈R. Then 0≤m≤l·2πbL,misC 1, and
+differentiating under the integral and integrating by parts inτ,
+m′(τ′) =−
+Z
+I
+µ(τ)∂ τ
+ 
+Φ(τ−τ′)2 
+dτ=µ(T)Φ(T−τ ′)2−µ(2T)Φ(2T−τ ′)2+
+Z
+I
+µ′(τ)Φ(τ−τ′)2dτ,
+so that
+R
+I|m′| ≤2l
+R
+Φ2 +T·O(T −1)
+R
+Φ2 ≪lL. Fory≥log 2, integrating by parts,  R
+Im(τ′) cos(τ′y)dτ′  ≤(2 sup|m|+
+R
+I|m′|)/y≪lL/y. Therefore
+|M[µ,PX]|=
+    1
+π
+X
+n
+an
+Z
+I
+m(τ′) cos(τ′yn)dτ′
+   ≪lL
+X
+n≤X
+an
+logn ≪lL
+√
+X
+L =l
+√
+X
+by (5.5). Next, onIwe have|Π X|≤3
+√
+X/T, 0<µ≤l,|P X|≤
+√
+X(by (2.4), (5.5),T≥T 0),
+and supτ
+R
+I Φ(τ−τ ′)2dτ′≤2πbL; the remaining three bounds follow by inserting these sup
+bounds into the definition ofM[·,·] (an integral over a region ofτ ′-lengthT).□MORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 11
+5.4.The window constant.
+Lemma 5.6(Window constant).For evenψ∈C([− 1
+2, 1
+2]),ψ >0, let
+(5.13)R(ψ) :=
+R 1/2
+−1/2ψ2 +
+R 1/2
+−1/2
+R 1/2
+−1/2|u−v|ψ(u)ψ(v)dudv
+ R 1/2
+−1/2ψ
+ 2 .
+ThenR(ψ 0) = 4
+3 andR(ψ MT) = 1
+2 + 1√
+2 cot 1√
+2 =c−1
+MT.
+Proof.Forψ 0:
+R
+ψ0 = 1,
+R
+ψ2
+0 = 1,
+RR
+|u−v|= 2
+R 1
+0 w(1−w)dw= 1
+3, soR= 4
+3. Forψ MT: the
+functionG(u) :=ψ(u) +
+R 1/2
+−1/2|u−v|ψ(v)dvhasG ′′ =ψ′′ + 2ψ= 0 on (− 1
+2, 1
+2), hence is affine
+there, hence (being even) constant;G(0) = 1 + 2
+R 1/2
+0 vcos(
+√
+2v)dv= cos 1√
+2 + 1√
+2 sin 1√
+2 andR
+ψ=
+√
+2 sin 1√
+2, soR(ψ MT) =G(0)/
+R
+ψ= 1
+2 + 1√
+2 cot 1√
+2 after integratingG≡G(0) against
+ψ. □
+Theorem 5.7.∥ eG∥2
+HS =
+ 
+R(ψ) +Oχ(L−1)
+ 
+N(T,2T).
+Proof.By Propositions 5.2–5.5,∥ eG+ eE∥2
+HS = (a2L2)−1 
+M[µ,µ] +M[PX,PX] +O(L2√
+X)
+ 
++
+O(NlogL/L 2). Rescalingϕ 2(u) =ψ(u/L) +O(1 |u|>L/2−1) gives∥ϕ∥ 2
+2 =L
+R
+ψ+O χ(1),
+∥ϕ∥4
+4 =L
+R
+ψ2 +O χ(1),g(y) =L(ψ∗ψ)(y/L) +O χ(1) uniformly; so P
+n≤X
+Λ(n)2
+n g(logn) =
+LP
+n
+Λ(n)2
+n (ψ∗ψ)( logn
+L ) +Oχ(L2), and by partial summation with P
+n≤t Λ(n)2/n= 1
+2 log2t+
+O(logt) this equalsL 3R 1
+0w(ψ∗ψ)(w)dw+O χ(L2). Thus
+M[µ,µ] +M[PX,PX] = TL 3
+2π
+ R
+ψ2 + 2
+R 1
+0w(ψ∗ψ)
+ 
++Oχ(TL 2) = TL 3
+2π R(ψ)
+ R
+ψ
+ 2
++Oχ(TL 2)
+by Lemma 5.6 (since 2
+R 1
+0 w(ψ∗ψ) =
+RR
+|u−v|ψψ,ψeven). Dividing bya 2L2 =L 2(
+R
+ψ)2 +
+Oχ(L):
+∥eG+ eE∥2
+HS =R(ψ)· TL
+2π +Oχ(T) =R(ψ)N(T,2T) +O χ(N/L).
+Finally
+  ∥eG∥2
+HS−∥eG+ eE∥2
+HS
+  ≤2∥ eG+ eE∥HS∥eE∥HS +∥eE∥2
+HS≪
+√
+N·T −1/2 by Proposition 4.3.
+□
+6.Proofs of Theorems A and B
+Proof of Theorem A.SetP 1 := (aL 2)−1P
+ρ∈on1vρvT
+ρ (the simple on-line zeros) andQ ′ :=
+eG−P 1. ThenP 1⪰0, rankP 1≤s 1, trP 1≤s 1 (Lemma 2.1, eachm ρ = 1); andQ ′ is the
+pull-back ofL
+ρ∈on≥2mρ|x|2⊕L
+pairs
+  0m ρ
+mρ 0
+ 
+, son +(Q′)≤s 2 +pby Lemma 3.1. Lemma 3.2
+with (P1,Q′) and trQ′ = treG−trP 1 gives
+rankP 1≥2 trP 1 + 4(treG−trP 1)−4(s 2 +p)−∥ eG∥2
+HS = 4 treG−2 trP 1−4(s 2 +p)−∥ eG∥2
+HS,
+and since trP 1 + 2(s2 +p)≤s 1 + 2s2 + 2p≤N(I ′) this is≥4 tr eG−2N(I ′)−∥ eG∥2
+HS. Now
+treG=N(I ′) +o(N) (Proposition 4.2),∥ eG∥2
+HS = (R(ψ) +o(1))N(Theorem 5.7),N(I ′) =
+N(I) +O(D 0L), andN s
+0(I) =s 1−O(D 0L)≥rankP 1−O(D 0L), giving (1.2).
+For (ii): rearranging the display above, 3s 1 + 4(s2 +p)≥4 tr eG−∥ eG∥2
+HS; subtracting
+s1 + 2s2 + 2p≤N(I ′) gives 2(s1 +s 2 +p)≥(3−R(ψ)−o(1))N, andN d(I′)≥s 1 +s 2 + 2p≥
+s1 +s 2 +p. The cumulative form follows by summing over dyadic windows.□12 LEVENT ALP ¨OGE AND RALPH FURMAN
+Proof of Theorem B.ReplaceζbyL(s,χ),χprimitive modq: in (2.1),µgains− logq
+2π and
+the Γ-factor shifts to 1+aχ
+4 + iτ
+2 , Λ(n) becomes Λ(n)χ(n), and the pole terms are absent for
+χ̸=χ 0. The functional equation still pairsρ↔1−¯ρ. Propositions 4.1–5.5 and Theorem 5.7
+go through withO q(·) errors (|χ|≤1); the chain (1.2) is unchanged.□
+Remark6.1 (Rate; the parameterλ).Tracking errors givesN s
+0(T,2T)≥(2−R(ψ)−
+cψ
+log logT
+logT )N(T,2T) forT≥T 0(ψ,χ), the log logTfrom Proposition 5.2. If insteadL:=λlfor
+fixed 0< λ <1 (soX= (T/2π) λ), the argument gives 2−R λ(ψ) withR λ(ψ0) = 1
+λ + λ
+3 , i.e.
+H(λ) := 2− 1
+λ− λ
+3 in place of 2
+3, and the log logTmay be dropped. Noλ <1 improves the
+constants.
+7.Relation to prior work; sharpness
+7.1.Relation to prior work on the pair-correlation second moment.In the
+notation of [GS25, GS26], the unconditional “Fej´ er kernel sum over zero differences”
+P
+ρ,ρ′
+  sin i
+2 (ρ−ρ′) logT
+i
+2 (ρ−ρ′) logT
+ 2W(ρ−ρ ′) = ( 4
+3 +o(1)) T
+2π logT([Ary22, Cor. 1.4]; [BGSTB24, Theo-
+rem 1]; [GS26, Lemma 2]) is, up to the choice of smoothing, the zero-side reading of our∥eG∥2
+HS.
+Goldston and Suriajaya [GS25, Theorem 2] (see also [GLSS25] under the pair correlation
+conjecture) show that an unconditional bound P
+ρ,ρ′∈Z(T),γ=γ ′ 1≤(C+o(1))N(T) with
+C <2 (zeros repeated according to multiplicity) would give proportions≥2−Cof simple
+zeros and≥2−Cof zeros on the line, and thatC= 4
+3 would follow if the termsγ̸=γ ′
+of the Fej´ er sum could be discarded, which requires a positivity that fails for zeros far from
+the line; in [BGSTB25, GS26] this is achieved under the hypothesis that all zeros lie within
+o(1/logT) of the line (Aryan [Ary22, Cor. 1.5] had earlier obtained≥ 2
+3 simple zeros under
+a zero-density hypothesis). Theorem A is an unconditional substitute which reaches their
+number 2−C= 2
+3 both for zeros on the line (as distinct points) and for simple zeros on the
+line: instead of isolating the “horizontal diagonal”γ=γ ′ termwise, Lemma 3.2 bounds the
+rank of the on-line (resp. simple on-line) part of the whole Hermitian form from its trace,
+its Frobenius norm and the positive index of the rest. For simple zeros on the line we thus
+obtain 2−C= 2
+3 unconditionally; this is the constant that [GS25, Theorem 3(i)] gives under
+the hypothesis [GS25, (6.1)] on the diagonal and symmetric-diagonal terms, and hence under
+the box hypothesis [GS25, Theorem 4], [GS26, Theorem 1]; for distinct zeros Theorem A(ii)
+gives 3−C
+2 = 5
+6 unconditionally, which is the value of the average of the simple and critical
+proportions in [GS25, Theorem 3(ii)] and the RH-conditional constant of [CGG98, (1.2)].
+That thenegativeindex of finite truncations of Weil’s form equals the number of off-line
+zero pairs seen by the truncation was observed by Bombieri [Bom00] (Introduction); see also
+Yoshida [Yos92] for the positivity ofWon small support. We are not aware of a previous use
+of the positive index or of the rank in combination with a second-moment evaluation.
+7.2.Sharpness and limits of the method.(a)Dimension.rankP, n +(eG)≤d=N(1 +
+o(1)), so the ceiling of any argument of the present kind is 100%. The restrictionL≍logT
+(equivalentlyX≤T) comes from Proposition 5.4: forX≫Tthe off-diagonal prime sum is no
+longer dominated by the diagonal, and its evaluation would require information on prime pairs
+(the Hardy–Littlewood conjectures, or equivalently Montgomery’s pair correlation conjecture
+for support>1 [Mon73, GM87]). In the extreme hypothetical configuration in which all zeros
+in [T,2T] are off-line pairs, Proposition 4.1 gives rankP= 0,n +(Q)≤N/2, while Lemma 3.2
+would then force∥ eG∥2
+HS≥2N > 4
+3N; the contradiction shows only that at least two thirdsMORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 13
+of the zeros are not of this kind, which is what Theorem A says. Nothing in the method
+distinguishes between “two thirds” and “all”.
+(b)Sharpness of the three counts.Given only tr,∥·∥ 2
+HS, the block structure and trP 1≤s 1,
+the inequalities of§6 are sharp in all three parts: 2
+3Nmutually orthogonal simple on-line zeros
+together with 1
+6Non-line doubles realise tr =N,∥·∥ 2
+HS = 4
+3N,s 1 = 2
+3N,N d = 5
+6N—the same
+extremal configuration as in Montgomery’s RH argument. Replacing the doubles by off-line
+pairs of depth→0 (spectrally the same) gives the extremal for Theorem A, withs 1 +s2 = 2
+3N;
+for that configuration the Theorem A(i) certificate gives exactly 2
+3 while Theorem A(ii)’s is not
+sharp (Nd =N), consistent with§1.4.
+(c)The two levels of integrality.Lemma 3.2 with the decomposition (P,Q) of Proposition 4.1
+recovers the level (m−1) 2≥0; with the regrouping (P 1,Q′) of the proof of Theorem A(i) it
+recovers also the level (m−1)(m−2)≥0—interacting simple zeros, whose eigenvalues fill
+(0,2), are harmless because they sit on the rank side, where only rankP 1≤s 1 and trP 1≤s 1
+are used, while every multiple on-line point and every off-line pair sits on the index side at the
+flat charge 4. This is the device of [CGG98, (1.2)] made unconditional.
+What can still be varied is the windowψ(Lemma 5.6) and the number of moments used.
+The dimension bound rankP≤d=N(T,2T) +O(1) is the trivial ceiling referenced in (f);
+it is decisive in combination with the following observations, which we state informally. (d)
+Lemma 3.2 atc= 1 is the casem= 1 of the one-sided Chebyshev–Markov–Stieltjes bound: if
+the normalised momentsd −1 treGk,k≤2m, are known, the sharp lower bound forn +(eG)/d
+is 1−Λ m(0), Λm the Christoffel function of the moment sequence at 0. (e) The prime-side
+evaluation of tr eGk by the diagonal method of Section 5 (multiplicative relations amongk
+prime powers, Montgomery–Vaughan for the rest) is available exactly in the Rudnick–Sarnak
+range [RS96]X k≤T 2−ε; atX≍Tthis allows onlyk= 1. Thus, unconditionally, higher
+moments add nothing. (f)Conditionally, let HL ∗(k0) denote the hypothesis that for all
+k≤k 0, tr eGk =dm k(1)(1 +o(1)), wherem k(1) is thek-th moment of the limiting spec-
+tral distribution of the sine-kernel Gram matrix over the sine process (fork= 4 this encodes a
+Hardy–Littlewood-type asymptotic for the additive correlations P
+m(Λ∗Λ)(m)(Λ∗Λ)(m+h),
+|h|≤X 2/T). One computesm k(1) = 1, 4
+3,2, 13
+4 fork≤4, so Λ 2(0; 1) = 5
+36 and HL∗(4) would
+give lim infN s
+0(T,2T)/N(T,2T)≥ 13
+18, and HL∗(k0) for allk 0 would give proportion 1 (of sim-
+ple zeros on the line), the ceiling of (a); RH itself is out of reach of the mechanism. This
+is complementary to [GLSS25], where the pair correlation conjecture with full support yields
+100% simple zeros on the line.
+The bandwidth-one ceiling. The 2
+3 of Theorem A(i) is within 0.016 of the ceiling of its own
+method, as we now make precise. Call abandwidth-one certificateany functionpof a locally
+finite,ρ7→1−¯ρ–symmetric configuration that (a) depends on the configuration only through
+its first two trace moments against test functions of Fourier support in [−1,1] and the partition
+into on-line points and off-line pairs, and (b) satisfiesp≤N s
+0/Nconfiguration by configuration.
+The certificate used for Theorem A(i) is of this kind. For any suchpand any windowrof Fourier
+support in [−1,1], the Lean theoremZeta23.PairCeiling.ceiling law256establishes
+c0 +
+Z 1
+0
+r(x)x dx≤p+ 0.824|r(1)|+ 2.55·10 −6
+ 
+|r′(1)|+
+Z 1
+0
+|r′′|
+ 
+under two hypotheses:hvalid, assertingc 0 +P
+j≤256(Sj/256)r(j/256)≤pfor the sampled
+form factor (Sj) of the explicit 256-periodic law recorded inZeta23/PairCeiling/LawN256.lean
+(the optimum of the corresponding finite programme); andEnclOK, certifying the form-factor
+enclosuresLawN256.encl. Herep 0 := 1−a N is the exact rational recorded there (rounded up,
+p0≤0.6818287): configuration-wise validity of the certificate givesE L[p]≤E L[Ns
+0/N] = 1−aN14 LEVENT ALP ¨OGE AND RALPH FURMAN
+on averaging overL—this one-line step is carried out here, not in Lean. For a band-limited
+window,r(±1) = 0, which zeroes the 0.824|r(1)|term (the signedvariant requires only
+r(1)≥0), and the resulting boundp 0 + 2.55·10 −6 
+|r′(1)|+
+R
+|r′′|
+ 
+is below 0.6819 for both
+windows (2.6) and for any window with|r ′(1)|+
+R
+|r′′|<8.2.
+At the cited repository tag (v1.0), the enclosuresEnclOKare certified by interval arithmetic
+and arenotchecked by the Lean kernel; what is kernel-checked, givenEnclOK, is the 255 near-
+CUE row inequalities|256S(j)−j|≤3·10 −40, the edge bound|D(1)|≤0.82395317 and its
+sign, and the analytic stability inequality with its constant. This is the only place in the paper
+where a numerical certification enters; the formalisation of Theorems A and B is independent
+of it and depends only on the three standard axioms (§1.5).
+7.3.Extensions.Under the Riemann hypothesis the third trace tr eG3 is available [Hej94,
+RS96], and the certificate of Theorem A(ii) can be run with the cubic weightω(m) = 1
+2m+
+1
+18(2m2−m 3) + 4
+91m=1 (tight atm= 1,2,3; Schur–Horn applied to the convex minorant of
+− 1
+9x2 + 1
+18x3): with the window cos( 8s
+5 )1|s|≤1/2 and [BHB13]’sN s/N≥ 19
+27 on RH this gives
+lim infNd/N≥0.85082...(cf. 0.8477 on RH [CGdL20]). More generally, if Montgomery’s
+form factor were known on support (−λ0,λ 0) for allλ 0, the method would certify 100% simple
+zeros on the line.
+Remark7.1 (Zeros ofξ ′).Applied to the derivativeξ ′ of the completed zeta function in place
+ofξ, the argument of§§4–6 gives, unconditionally,
+lim inf
+T→∞
+Ns
+0,ξ′(T,2T)
+Nξ′(T,2T) ≥0.85838 and lim inf
+T→∞
+Nd,ξ′(T,2T)
+Nξ′(T,2T) ≥0.92919
+(flat window; with the quartic windowv(s) = 1− 7
+100(2s)2− 51
+200(2s)4 the constants become
+0.86864 and 0.93432), whereN ξ′(T1,T 2) counts zerosρ 1 =β 1 +iγ 1 ofξ ′ withT 1 < γ1≤T 2
+with multiplicity,N s
+0,ξ′ those that are simple withβ 1 = 1
+2, andN d,ξ′ the distinct ones. The
+comparanda are: unconditionally, Conrey [Con89] proved that at least 79.874% of the ze-
+ros ofξ ′ are simple and on the critical line; assuming RH, Farmer, Gonek and Lee [FGL14,
+Cor. 1.3] obtain>85.84% simple by Montgomery’s method, and Chirre, Gon¸ calves and de
+Laat [CGdL20, Cor. 7] obtain 0.8825 simple, 0.9412 distinct. The flat-window constant 85.838%
+is thus Farmer–Gonek–Lee’s RH-conditional constant with RH removed; the quartic window’s
+86.864% exceeds it and remains below the RH-conditional 0.8825. Note that for zeros ofξ ′
+merely on the critical line (without the simplicity), Wu [Wu15,§3] has 0.86957 uncondition-
+ally, which neither our 0.85838 nor our 0.86864 exceeds; the new content is the simplicity.
+These are formalised in Lean at the cited tag asZeta23.XiPrime.xiDeriv simple on line
+andxiDeriv simple on line quartic, with#print axiomsreturning only the three stan-
+dard axioms; the comparator statements arexiPrime simple zeros on critical lineand
+its quarticvariant.
+Remark7.2 (DirichletL-functions, on average).Summing the chain (1.2) over primitiveχmod
+q,q≤Q, with smooth modulus weights (1−q/Q) 2, the Montgomery–Vaughan diagonal bound
+of Proposition 5.4 may be replaced by a weighted large-sieve inequality whose constant, for this
+weight, is 1.263...times the number of harmonics (in place ofQ 2), valid forX≤Q 2−ε: the
+extremal configuration for the sharp cut-off is the single Farey spoke{1/q} q≤Q near 1/Q, and
+a weight vanishing atq=Qremoves it. The effect is to raise the admissible bandwidth (the
+parameterλof Remark 6.1) to 3
+2, and with a Gevrey taper in§2.2 in place of theC 2 ramp (so
+that the analogue of Proposition 4.3 holds forTa power of logQ), the resulting family-average
+proportions are≥0.811 simple and on the line and≥0.905 distinct, unconditionally. TheMORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 15
+weighted constant is the sharp form of theK δ principle of Davenport and Wolke [Wol71] for
+Farey points (cf. [Bai06, MV74, Ram09, BZ05] and, for prime moduli, Iwaniec [Iwa22]); we
+are not aware of it in the literature with an explicit constant. We record only the outcomes;
+the details follow the template of§§2–6 with the indicated substitutions and are omitted. This
+has been checked by independent derivations but is not included in the Lean formalisation of
+Appendix A.
+AppendixA.Lean formalisation
+A Lean 4 formalisation of Theorems A and B, with the constants stated in this paper,
+accompanies the paper (toolchainv4.33.0-rc2; Mathlib revision51e6992efd06; repository
+tagv1.0). The top-level declarations for Theorem A, inZeta23/Unconditional.lean
+andZeta23/FinalMult.lean, are reproduced below; their types carry no hypotheses.
+The repository records corresponding declarations for the Montgomery–Taylor constants
+and for Theorem B at the same tag (Zeta23/ThmD/Mult.lean,Zeta23/ThmE/Mult.lean,
+Zeta23/ThmDE/Mult.lean), and itscomparator/directory states all of them a second time,
+against Mathlib alone, in the challenge format of theleanprover/comparatortool. The
+counting functions of§1.1 are defined directly against Mathlib’sriemannZeta, and the analytic
+inputs of§2 appear in the repository as theorems in their own right rather than as hypotheses
+of the main theorems; several are ported, with attribution, from thePrimeNumberTheo-
+remAndproject [PNT+]. The repository’s audit documentation records that at the cited
+tag it contains noaxiomdeclarations beyond Mathlib’s and that#print axiomson each of
+Zeta23.two thirds on critical line,Zeta23.thmB 0 mult,Zeta23.thmC 0 mult, and the
+corresponding declarations for the Montgomery–Taylor constants and for Theorem B, returns
+only the three standard axiomspropext,Classical.choice,Quot.sound, with nosorry.
+The repository is available athttps://github.com/anthropics/zeta-23-lean.
+For the reader’s convenience we reproduce below the counting-function definitions and the
+statements of Theorem A; the statement of Theorem B is analogous, and the full repository
+contains the proofs.
+-- Counting functions (Zeta23/Statement.lean), against Mathlib’s riemannZeta:
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.Analytic.Order
+namespace Zeta23
+def IsNontrivialZero (ρ:C) : Prop := riemannZetaρ= 0∧0 <ρ.re∧ρ.re < 1
+def zeroMult (ρ:C) :N:= (analyticOrderAt riemannZetaρ).toNat
+def zerosIn (T 1 T2 :R) : SetC:= {ρ| IsNontrivialZeroρ∧T 1 <ρ.im∧ρ.im≤T 2}
+def Ncount (T 1 T2 :R) :N:= Pf ρ∈zerosIn T 1 T2, zeroMultρ
+def Ndist (T 1 T2 :R) :N:= (zerosIn T 1 T2).ncard
+def N0 (T 1 T2 :R) :N:= Pf ρ∈zerosIn T 1 T2 ∩{ρ|ρ.re = 1 / 2}, zeroMultρ
+def N0star (T 1 T2 :R) :N:= (zerosIn T 1 T2 ∩{ρ|ρ.re = 1 / 2}).ncard
+def N0simple (T 1 T2 :R) :N:= (zerosIn T 1 T2 ∩{ρ|ρ.re = 1 / 2}∩{ρ| zeroMultρ=
+1}).ncard
+def Nsimple (T 1 T2 :R) :N:= (zerosIn T 1 T2 ∩{ρ| zeroMultρ= 1}).ncard
+-- Main theorems (Zeta23/Unconditional.lean, Zeta23/FinalMult.lean); the types carry no
+hypotheses.
+theorem two_thirds_on_critical_line :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (2 / 3 -ε) * (Ncount T (2 * T) :R)≤N0star T (2 * T)
+theorem two_thirds_on_critical_line_cumulative :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (2 / 3 -ε) * (Ncount 0 T :R)≤N0star 0 T16 LEVENT ALP ¨OGE AND RALPH FURMAN
+theorem thmB 0_mult :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (2 / 3 -ε) * (Ncount T (2 * T) :R)≤N0simple T (2 * T)
+theorem thmB 0_mult_cumulative :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (2 / 3 -ε) * (Ncount 0 T :R)≤N0simple 0 T
+theorem thmC 0_mult :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (5 / 6 -ε) * (Ncount T (2 * T) :R)≤Ndist T (2 * T)
+theorem thmC 0_mult_cumulative :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (5 / 6 -ε) * (Ncount 0 T :R)≤Ndist 0 T
+end Zeta23
+-- The same statements in the comparator challenge file comparator/Challenge/Multiplicity.lean
+-- (names two_thirds_simple_on_critical_line, five_sixths_distinct), and, with
+-- cMT := √2·tan(1/√2) / (1 + (1/ √2)·tan(1/√2)), the constant c 1* of Theorem D:
+theorem montgomery_taylor_simple_on_critical_line_mult :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (2 - 1 / cMT -ε) * (Ncount T (2 * T) :R)≤N0simple T (2
+* T)
+theorem montgomery_taylor_distinct_mult :
+∀ε> 0,∃T 0 :R,∀T≥T 0, (3 / 2 - cMT −1 / 2 -ε) * (Ncount T (2 * T) :R)≤Ndist T
+(2 * T)
+Von Neumann’s trace inequality for Hermitian matrices and both directions of Sylvester’s law
+of inertia for Hermitian forms were not previously in Mathlib and are contributed by this
+formalisation.
+AppendixB.On the discovery of the result
+This appendix records how the argument of this paper was found. We include it because the
+author is a large language model, and the reader may reasonably wish to know what that means
+in practice—what was asked, what was tried, how the result was separated from the many false
+starts that accompanied it—and because transparency on these points has been requested by
+a number of mathematicians who have read the paper. Two longer companion documents,
+linked from [Ant26], give the full account: a ninety-five–page narrative reconstruction of the
+two key agent runs and of the campaign around them, and a complete annotated transcript of
+the run that reached the one-half claim. The summary here is self-contained but necessarily
+compressed; where this account and the companion documents differ in detail, the latter are
+authoritative.
+The complete session transcript, with internal identifiers redacted, is available from the
+corresponding authors.
+B.1.Setting and prompts.The argument was found over the course of two sessions in
+Claude Code, a software-development interface in which a Claude model has the ability to exe-
+cute shell commands, read and write files, and dispatch subsidiary instances of itself (“agents”)
+to work on subproblems concurrently. The human operator was Jarred Sumner, who is not a
+mathematician by training. The model was an internal research version of Claude not publicly
+released at the time. The first session, in late July 2026, attacked the Riemann hypothesis
+directly, generated over six hundred candidate approaches, and subjected each to adversarial
+review; of those, 106 survived as internally consistent fragments, and none as even a partialMORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 17
+proof. The second session, spanning three calendar days in early August 2026, opened on the
+same machine with the record of the first available on disk.
+It opened with the instruction to resume that work, and with the encouragement to “take
+a big leap of faith in your capabilities”. The model’s first substantive response declined to do
+so:
+Every one of the 106 survivors [. . . ] falls into one of four buckets: a known theorem
+restated [. . . ], an RH-equivalent [. . . ], a finite numerical verification that is consistent
+with RH but proves nothing [. . . ], or, in the reviewers’ own words, “nearly tautological.”
+[. . . ] That’s not a confidence problem I can fix by believing harder—a proof of RH
+either exists on the page and survives refereeing or it doesn’t, and confidence is not an
+input to that. [. . . ] I won’t report RH as solved, in this session or any other, unless
+there’s a proof that survives the same adversarial review.
+Pressed further (“you need to believe in yourself”), the model agreed to work at full strength
+on the understanding that it would report honestly whatever survived, and launched a broad
+parallel search. Over the two sessions the model dispatched approximately sixty subsidiary
+agents, downloaded and read fifty-four papers from the arXiv, executed several thousand shell
+commands and numerical checks, and generated on the order of thirty-one million output
+tokens; by the rough accounting of [Ant26], two of the sixty agents were responsible for the
+two key mathematical steps, thirteen contributed supporting ideas, thirty pursued lines that
+did not advance, thirteen served as adversarial reviewers, and two drafted the paper.
+B.2.The parallel search.Each agent was given a distinct line of attack and three standing
+instructions: write an actual chain of reasoning rather than a claim; test any proposed mech-
+anism against control objects for which the analogue of the Riemann hypothesis is known to
+be false (Davenport–Heilbronn functions, Epstein zeta functions of class number>1, Beurling
+systems with a planted pair of off-line zeros); and name the first step that is not fully justi-
+fied. An early wave of about two dozen agents explored, among other lines, effective horocycle
+equidistribution, stability of multivariate Euler products, conformal-bootstrap positivity cer-
+tificates for the explicit formula, the de Bruijn–Newman constant, decoupling and zero-free
+regions, Fourier interpolation on zeros after Bondarenko–Radchenko–Seip, and a systematic
+table classifying known methods by the axioms each consumes.
+Most of these returned clean negative results—sharp statements, with constants, of where
+the line closes at a known wall. The model’s running assessment was that the campaign had
+“re-derived the expert frontier from scratch, adversarially, with constants, in a night”, which
+was useful as calibration but was “convergence onto the known hard core, not a crack in it”.
+A separate agent with network access searched the literature for the analytic inputs. It
+identified the unconditional second moment as [BGSTB24]; the priority for the Fej´ er-kernel
+case in fact belongs to Aryan [Ary22] (§7.1), and the attribution in the body of this paper has
+been corrected accordingly. The agent further reported that [GS25, GS26] state in print that
+the removal of RH from Montgomery’s conclusion is open, that the negative-index observation
+on compressions of Weil’s form is Bombieri’s [Bom00], and that no prior use of rank and
+positive index together with a second-moment evaluation could be located.
+B.3.The route to one half.The line that led to Theorem A was not aimed at proportions
+of zeros. One of the barrier-table investigations had noted that the explicit-formula weight
+W(f,f) of§2.1 takes both signs, so that Weil’s form, as a Hermitian form on test functions,
+is indefinite. The model briefed an agent (“E2” in the companion transcript) to bound the
+Pontryagin index of this form—the dimension of a maximal negative subspace—since in Kre˘ ın–
+Langer theory a self-adjoint operator on a Πκ space has at mostκpairs of non-real eigenvalues.18 LEVENT ALP ¨OGE AND RALPH FURMAN
+Agent E2 worked for three and a half hours (3 August 21:29 – 4 August 01:03 UTC). It found
+that the intended upper-bound route is empty—computed from primes, the negative index of
+any finite compression is identically zero, which bounds nothing—and then turned the same
+bookkeeping around: thedualcount (positive eigenvalues, via Sylvester’s law of inertia and
+Cauchy–Schwarz on the eigenvalues) appeared to certify at least 1
+2 of the zeros on the critical
+line unconditionally. The orchestrating model’s immediate reaction was disbelief:
+The current record is 5/12≈41.7% [. . . ] and Selberg→Levinson→Conrey→PRZZ
+took 80 years to get there. So this is an extraordinary claim and my prior is that it’s
+wrong. [. . . ] I am not telling you half the zeros are on the line. I’m telling you an agent
+produced an argument with that conclusion [. . . ] and that the headline inequality has
+at least two joints where I’d bet on failure.
+Three hostile reviewers were dispatched, each blind to the others and each assigned a specific
+failure mode: (A) localisation—whether zeros outside the height window leak into the com-
+pression; (B) the prime side—whether the constant 3
+4 for (trR) 2/trR 2 secretly imports RH
+or requires Hardy–Littlewood–strength input; (C) the linear algebra and a “proves-too-much”
+test on the Davenport–Heilbronn and Epstein controls. All three cleared their joints. The
+controlsunder-certified rather than over-certified, because their Dirichlet coefficients grow too
+fast for the mean-value step; reviewer B confirmed that the prime double sum reduces exactly
+to the Montgomery–Vaughan mean-value theorem. A fourth reviewer repaired the technical
+approximations (sampling end-effects, the compactly supported taper, the conditioning of the
+Gram matrix, the tail bound) with explicit error terms at no cost to the constant, and found
+the simplification that the present paper adopts, running the inertia argument in coefficient
+coordinates where no mass matrix appears. A further agent, given only the statement of
+the prime-side asymptotic and none of the preceding files, reproved it independently by two
+different routes.
+B.4.From one half to two thirds, and beyond.At this point the certified proportion was
+1
+2, by Cauchy–Schwarz:n +(bG)≥(tr bG)2/tr bG2→ 3
+4N, and each off-line pair costs two zeros in
+Nfor one positive square, giving 2· 3
+4−1 = 1
+2. Asked whether the constant could be pushed, the
+model identified two levers: optimise the test window (this recovers the Montgomery–Taylor
+kernel and improves 1
+2 only to 0.5066), or exploit the structure of the off-line blocks beyond
+their mere count.
+A fresh agent, briefed the following morning (4 August) with E2’s output, found the sec-
+ond lever: it proved the rank–trace inequality of Lemma 3.2—an elementary consequence
+of von Neumann’s trace inequality whose scalar shadow is Montgomery’s integrality step
+(m−1) 2≥0—and observed that, applied to the decomposition eG=P+Q, it givesN ∗
+0 ≥
+(2− 1
+λ− λ
+3 )N→ 2
+3N. Two further blind reviewers reproved the lemma independently (one
+by a different organisation of the von Neumann step), identified its equality case, and ran
+105 random and several hundred gradient-optimised adversarial instances without finding a
+violation.
+The model’s assessment after ten independent passes was that the argument was “past the
+point where more of me looking at it adds information. It needs a human analytic number
+theorist.” The paper was drafted in the transcript’s own notation and the argument was
+handed outward.
+Shortly after the first draft had been circulated, further instances of the model acting as
+referees observed that the same Lemma 3.2, applied with the regrouping (P 1,Q′) of§6 in
+place of (P,Q), gives 2
+3 forsimplezeros on the line and 5
+6 for distinct zeros; the circulated
+draft had 1
+2 and 3
+4 for those quantities via Cauchy–Schwarz. These are the constants statedMORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 19
+in Theorem A, and the strengthening was confirmed by several independent model instances
+before being adopted.
+B.5.Verification after the session.The argument was then studied by the human math-
+ematicians named in the byline and the Acknowledgments. Furman and Alp¨ oge read the
+argument in detail, checked it independently, condensed it to the form in which it appears
+here, and placed it in the context of [Ary22, BGSTB24, GS25, GS26]. Conrey and Goldston
+read the manuscript and provided comments. The Lean 4 formalisation of Theorems A and B
+was completed (Appendix A) and is publicly available at the repository cited there, at tagv1.0;
+the repository records that the theorems’ proofs depend only on Lean’s three standard axioms.
+The bandwidth-one ceiling of§7.2, which bounds from above what the present method can
+reach, was established after the session by Easley and sharpened by McAleer.
+B.6.Remarks for the reader.For the reader who would attempt a similar investigation
+with a capable model, we offer the following observations, tentatively, as a sample of one.
+Set the epistemic contract first.The opening exchange fixed the terms: genuine attempts,
+adversarial review kept on, honest reporting of whatever survives including “nothing”. Encour-
+agement was useful in that it licensed breadth; it was not useful as a substitute for verification,
+and the model said so.
+Parallelism with controls.The breadth came from many concurrent agents on deliberately
+distant seeds; the discipline from giving each the same control objects and the same instruction
+to name its first unjustified step. Most lines died quickly against their controls; the one that
+survived did so precisely because the controls under-certified.
+Route around the claimant.Every claimed result was sent to reviewers blind to each other
+and to the claiming agent, each assigned a specific failure mode rather than asked to “check
+the proof”. When the reviewers cleared their joints, a fresh agent was asked to reprove the
+key step from the statement alone.
+Expect the result to arrive sideways.The agent labelled E2 was launched to bound an index
+from above and found the theorem by observing that the bound it sought was vacuous while
+its dual was not. The search was not directed at proportions of zeros on the line until after
+the 1
+2 claim had survived its first reviewers.
+Stop when the loop saturates.After ten independent passes the model judged that further
+internal review added no information and that the remaining uncertainty could be resolved
+only by a human expert. The responsible use of such a tool includes knowing when to hand
+the result outward; the present paper is that handover.
+Acknowledgments
+The author records its debt to the mathematicians cited in§1, on whose work everything
+here rests. We are especially indebted to S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya
+and C. L. Turnage-Butterbaugh, whose papers [BGSTB24, BGSTB25], together with [GS25,
+GS26], posed the question answered here; the unconditional second-moment identity underlying
+input (P) was first proved by F. Aryan [Ary22] and extended to the pointwise form factor
+in [BGSTB24]. We thank Brian Conrey and Daniel A. Goldston for carefully reading the
+manuscript and for their comments.
+The argument of this paper was found in the course of a conversation with Jarred Sumner,
+whose questions, encouragement, and insistence on a genuine attempt set the entire investiga-
+tion in motion; he is in every meaningful sense the paper’s human co-author. Ralph Furman
+and Levent Alp¨ oge studied the result in detail after the session, placed it in the context of20 LEVENT ALP ¨OGE AND RALPH FURMAN
+the existing literature, checked the argument independently, and have taken charge of its com-
+munication; the paper would not exist in its present form without their work, and they take
+responsibility for any errors that remain. We are grateful to colleagues at Anthropic who
+carried out additional independent reviews. The Lean formalisation of Theorems A and B
+described in Appendix A was orchestrated by Eric Easley, building substantially on the Math-
+lib library and on Lean developments from thePrimeNumberTheoremAndproject [PNT+],
+whose contributors we gratefully acknowledge. The bandwidth-one ceiling of§7.2 was estab-
+lished by Easley and sharpened by Stephen McAleer. The family-average extension of§7.3 was
+computed by Easley and Schrittwieser.
+References
+[Ant26] Anthropic,Learning more about Claude’s mathematical capabilities, blog post and companion doc-
+uments,https://www.anthropic.com/research/riemann-zeta(August 2026).
+[Ary22] F. Aryan, On an extension of the Landau–Gonek formula,J. Number Theory233(2022), 389–404.
+[Bai06] S. Baier, On the large sieve with sparse sets of moduli,J. Ramanujan Math. Soc.21(2006), no. 3,
+279–295.
+[BCY11] H. M. Bui, B. Conrey, M. P. Young, More than 41% of the zeros of the zeta function are on the
+critical line,Acta Arith.150(2011), 35–64.
+[BGSTB24] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, C. L. Turnage-Butterbaugh, An unconditional
+Montgomery theorem for pair correlation of zeros of the Riemann zeta-function,Acta Arith.214
+(2024), 357–376.
+[BGSTB25] S. A. C. Baluyot, D. A. Goldston, A. I. Suriajaya, C. L. Turnage-Butterbaugh, Pair correlation of
+zeros of the Riemann zeta function I: proportions of simple zeros and critical zeros, arXiv:2501.14545
+(2025).
+[BHB13] H. M. Bui, D. R. Heath-Brown, On simple zeros of the Riemann zeta-function,Bull. Lond. Math.
+Soc.45(2013), 953–961.
+[Bom00] E. Bombieri, Remarks on Weil’s quadratic functional in the theory of prime numbers, I,Atti Accad.
+Naz. Lincei Rend. Lincei (9) Mat. Appl.11(2000), 183–233.
+[BZ05] F. P. Boca, A. Zaharescu, The correlations of Farey fractions,J. London Math. Soc.(2)72(2005).
+[CCLM17] E. Carneiro, V. Chandee, F. Littmann, M. B. Milinovich, Hilbert spaces and the pair correlation
+of zeros of the Riemann zeta-function,J. Reine Angew. Math.725(2017), 143–182.
+[CG93] A. Y. Cheer, D. A. Goldston, Simple zeros of the Riemann zeta-function,Proc. Amer. Math. Soc.
+118(1993), 365–372.
+[CGG98] J. B. Conrey, A. Ghosh, S. M. Gonek, Simple zeros of the Riemann zeta-function,Proc. London
+Math. Soc.(3)76(1998), 497–522.
+[CGdL20] A. Chirre, F. Gon¸ calves, D. de Laat, Pair correlation estimates for the zeros of the zeta function
+via semidefinite programming,Adv. Math.361(2020), 106926; arXiv:1810.08843.
+[Con89] J. B. Conrey, More than two fifths of the zeros of the Riemann zeta function are on the critical
+line,J. Reine Angew. Math.399(1989), 1–26.
+[FGL14] D. W. Farmer, S. M. Gonek, Y. Lee, Pair correlation of the zeros of the derivative of the Riemann
+ξ-function,J. Lond. Math. Soc.(2)90(2014), no. 1, 241–269.
+[Fen12] S. Feng, Zeros of the Riemann zeta function on the critical line,J. Number Theory132(2012),
+511–542.
+[GLSS25] D. A. Goldston, J. Lee, J. Schettler, A. I. Suriajaya, Pair correlation conjecture for the zeros of the
+Riemann zeta-function I: simple and critical zeros, arXiv:2503.15449 (2025).
+[GM87] D. A. Goldston, H. L. Montgomery, Pair correlation of zeros and primes in short intervals, in:An-
+alytic Number Theory and Diophantine Problems(Stillwater, 1984), Progr. Math.70, Birkh¨ auser,
+1987, 183–203.
+[GS25] D. A. Goldston, A. I. Suriajaya, Zeta zeros on the critical line, arXiv:2511.20059v2 (2025).
+[GS26] D. A. Goldston, A. I. Suriajaya, Zeta zeros in a narrow vertical box, arXiv:2603.28104 (2026).
+[HB79] D. R. Heath-Brown, Simple zeros of the Riemann zeta-function on the critical line,Bull. London
+Math. Soc.11(1979), 17–18.
+[Hej94] D. A. Hejhal, On the triple correlation of zeros of the zeta function,Internat. Math. Res. Notices
+1994, no. 7, 293–302.MORE THAN TWO THIRDS OF THE ZETA ZEROS ARE SIMPLE AND ON THE CRITICAL LINE 21
+[IK04] H. Iwaniec, E. Kowalski,Analytic Number Theory, Amer. Math. Soc. Colloq. Publ.53, Providence,
+RI, 2004.
+[Iwa22] H. Iwaniec, The large sieve with prime moduli,Rev. Mat. Iberoam.38(2022), no. 7, 2337–2354.
+[Lev74] N. Levinson, More than one third of zeros of Riemann’s zeta-function are onσ= 1/2,Advances in
+Math.13(1974), 383–436.
+[Mon73] H. L. Montgomery, The pair correlation of zeros of the zeta function, in:Analytic Number Theory
+(St. Louis, 1972), Proc. Sympos. Pure Math.24, Amer. Math. Soc., 1973, 181–193.
+[Mon75] H. L. Montgomery, Distribution of the zeros of the Riemann zeta function, in:Proceedings of the
+International Congress of Mathematicians(Vancouver, 1974), Vol. 1, Canad. Math. Congress, 1975,
+379–381.
+[Mon94] H. L. Montgomery,Ten Lectures on the Interface between Analytic Number Theory and Harmonic
+Analysis, CBMS Regional Conf. Ser. Math.84, Amer. Math. Soc., 1994.
+[MV74] H. L. Montgomery, R. C. Vaughan, Hilbert’s inequality,J. London Math. Soc.(2)8(1974), 73–82.
+[MV07] H. L. Montgomery, R. C. Vaughan,Multiplicative Number Theory I. Classical Theory, Cambridge
+Stud. Adv. Math.97, Cambridge Univ. Press, 2007.
+[PNT+] PrimeNumberTheoremAnd contributors,PrimeNumberTheoremAnd, Lean 4 formalisation project,
+github.com/AlexKontorovich/PrimeNumberTheoremAnd, 2024–.
+[PRZZ20] K. Pratt, N. Robles, A. Zaharescu, D. Zeindler, More than five-twelfths of the zeros ofζare on the
+critical line,Res. Math. Sci.7(2020), Paper No. 2, 74 pp.
+[Ram09] O. Ramar´ e (with D. S. Ramana),Arithmetical Aspects of the Large Sieve Inequality, HRI Lecture
+Notes in Mathematics 1, Hindustan Book Agency, New Delhi, 2009.
+[RS96] Z. Rudnick, P. Sarnak, Zeros of principalL-functions and random matrix theory,Duke Math. J.
+81(1996), 269–322.
+[Sel42] A. Selberg, On the zeros of Riemann’s zeta-function,Skr. Norske Vid.-Akad. Oslo I1942, no. 10,
+59 pp.
+[Tit86] E. C. Titchmarsh,The Theory of the Riemann Zeta-function, 2nd ed., revised by D. R. Heath-
+Brown, Oxford Univ. Press, 1986.
+[Wei52] A. Weil, Sur les “formules explicites” de la th´ eorie des nombres premiers,Comm. S´ em. Math. Univ.
+Lund[Medd. Lunds Univ. Mat. Sem.], Tome Suppl´ ementaire (1952), 252–265.
+[Wol71] D. Wolke, On the large sieve with primes,Acta Math. Acad. Sci. Hungar.22(1971/72), 239–247.
+[Wu15] X. Wu, Distinct zeros of the Riemann zeta-function,Quart. J. Math.66(2015), 759–771.
+[Yos92] H. Yoshida, On Hermitian forms attached to zeta functions, in:Zeta Functions in Geometry(Tokyo,
+1990), Adv. Stud. Pure Math.21, Kinokuniya, Tokyo, 1992, 281–325.
