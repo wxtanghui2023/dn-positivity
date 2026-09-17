@@ -46,7 +46,12 @@ $$\textbf{禁令}：\text{不得把"攻击失败"写成"定理"；不得把"未�
 $$\boxed{\text{⑤ 已执行攻击}}\ \text{已覆盖}\ \textbf{20/22}\ \text{项（D8/D9 为纪律项）；其中}\ \textbf{明确 FAIL/撤回}：\text{W6-majorant、W9、W11、W5(第七类)、D3(余项)}✓✓$$
 $$\qquad \text{而}\ \textbf{明确通过/已解}：\text{W1-数值、W4-A-leak扩张、W8-更正、D1-撤回、D2-数值、D3-素数侧、D6、D10}✓✓$$
 $$\boxed{\text{⑥ 前沿}}\ \text{与}\ \text{⑤}\ \textbf{高度重叠}：\text{我方执行过的攻击多落在"已审手段"内}；\text{前沿独有而未用}：\text{Jensen／de Bruijn–Newman、Guth–Maynard、Harper、rank–trace、区间算术}✓✓$$
-## §1d **出处级别（外部可检验性）**—— 22 项逐条（2026-09-17 18:00，唐先生 17:53 批评的处置）
+## §1d **出处级别（外部可检验性）**—— 22 项逐条（2026-09-17 18:00）
+
+> ⛔ **本表已被更正**（2026-09-17 18:15）：下表把 [O]（我方自推）**错读**成"外部不可复核" ✗。
+> 正确做法＝**两轴分立（K 可核性 × P 归属）**，且 **K1＝Lean 内核检查** 已是实测状态：
+> `V316_kernel_bound.lean`（1262 行，0 sorry／0 axiom／0 error，编译通过）⟹ **一条命令即可外部核验** ✓✓
+> 更正表见 `docs/LEAN-ASSET-INVENTORY-and-corrected-two-axis-reviewability.md` §4 ✓
 
 $$	extbf{级别}：[	extbf{L}]\ 	ext{文献可查}\ ig|\ [	extbf{O}]\ 	ext{我方自推（可复核但需读我方档）}\ ig|\ [	extbf{M}]\ 	ext{自造元语言（外部无对应物）}✓$$
 

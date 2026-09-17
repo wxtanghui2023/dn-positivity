@@ -2813,6 +2813,10 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 ### F.5fq 🔍 **出处审计与外部可检验性（唐先生 17:53 批评的处置）**（2026-09-17 18:00）
 
+$$	extbf{⛔ 本条目已更正}（18:15）：\ 	ext{原写的"}\ [	extbf{O}]\Rightarrow	ext{外部不可复核"}\ 	extbf{是错的}⟹ 	ext{改用}\ 	extbf{两轴（K 可核性 × P 归属）}；$$
+$$\qquad 	extbf{K1＝Lean 内核检查}\ 	ext{已实测}：	exttt{V316\_kernel\_bound.lean}\（1262\ 	ext{行}，	ext{0 sorry／0 axiom／0 error}）⟹\ 	extbf{一条命令外部可核}✓✓$$
+$$\qquad 	ext{详档}\ 	exttt{docs/LEAN-ASSET-INVENTORY-and-corrected-two-axis-reviewability.md}✓
+
 $$	extbf{级别定义}：[	extbf{L}]\ 	ext{＝文献可查}\ ig|\ [	extbf{O}]\ 	ext{＝我方自推（可复核但需读我方档）}\ ig|\ [	extbf{M}]\ 	ext{＝自造元语言（外部无对应物）}✓$$
 
 $$	extbf{逐条归属（详档} 	exttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md}	ext{）}：$$
