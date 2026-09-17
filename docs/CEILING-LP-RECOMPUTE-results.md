@@ -55,6 +55,13 @@ $$\text{数值}：S(N)=1\（\text{sine-kernel 端值}）\Rightarrow p=1.49804687
 $$\Longrightarrow\ \boxed{\text{两值皆}\ne p_0=0.681828687\ \text{且}\ne\tfrac23\ \Longrightarrow\ \textbf{最优律非网格对齐}✓✓}$$
 $$\qquad\Longrightarrow\ \text{位置必为非整数有理数}（\text{与 docstring 逐字「rational positions}\ x_{c,i}\in[0,256)\text{」一致}✓✓）$$
 $$\qquad\Longrightarrow\ \textbf{Parseval 不适用}\ \text{（DFT 只对整数位置构成周期群）}\ \Longrightarrow\ p\ \text{与}\ S\ \text{之间存在}\ \textbf{自由耦合}$$
+
+### §3.1 ⭐ **追加：由公布包络**直接**排除整数位置（不依赖 Parseval 求和约定）**
+$$\text{对}\ \textbf{任何}\ \text{位置}：\ \widehat\mu(0)=\sum_im_i=N\ \Longrightarrow\ S(0)=N^2/N=256\ \text{恒成立}✓$$
+$$\text{而}\ x_i\in\mathbb Z\ \text{时}：\ e^{2\pi i\cdot256\,x_i/256}=e^{2\pi ix_i}=1\ \Longrightarrow\ |\widehat\mu(256)|^2=\Big(\sum_im_i\Big)^2=N^2\ \Longrightarrow\ \boxed{S(N)=256}✓✓$$
+$$\text{公布包络}（j=256）：\ S(256)\in\big[211.432009\ldots,\ 211.432009\ldots+2^{-140}\big]\ \ne\ 256\quad(\text{差}\approx44.57)✓✓$$
+$$\Longrightarrow\ \boxed{\text{最优律的原子位置}\ \textbf{必不为整数}（\text{mod}\ 256）\ \text{—— 仅由 Lean 公布数据即可判定}}✓✓✓$$
+$$\qquad\text{故前 255 行与第 256 行不在同一 Parseval 周期内}\ \Longrightarrow\ p\ \text{不被行条件锁定，}\ p\ \text{与}\ S\ \text{的耦合（marks 几何）}\ \textbf{不可本地重建}✓✓$$
 $$\qquad\qquad\boxed{\text{该耦合＝任务所称「marks 几何」——它}\ \textbf{不在 Lean 内，也不在本地任何档}✓✓}$$
 
 ---

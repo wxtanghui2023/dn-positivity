@@ -76,6 +76,14 @@ for lab, SN in (("S(N)=1 (sine-kernel 端值)", F(1)), (f"S(N)=盒上端 {float(
     p = 2 - (rows_sum + SN) / N
     print(f"  {lab:28s} ⟹ p = {float(p):.9f}")
 print(f"  记录值 p0 = {float(P0_EXACT):.9f} 与 2/3 = {float(THIRD):.7f} 均不在此二值上")
+# 追加：整数位置恒有 S(N) = |Σm_i|²/N = N = 256（因为 e^{2πi·256·x_i/256} = 1），
+# 而公布包络给 S(256) = 211.432 ⟹ 最优律位置必非整数（仅由 Lean 数据即可判定）
+SN_int = F(N)                                     # 整数位置律：S(N) = N = 256
+p_int = 2 - (rows_sum + SN_int) / N
+print(f"  追加（不依赖 Parseval 求和约定）：整数位置律恒有 S(N)=N=256 ⟹ p = {float(p_int):.9f}")
+print(f"     而公布包络 j=256 给 S(256) = {float(S256):.6f} ≠ 256（差 {float(F(N)-S256):.3f}）")
+print(f"     ⟹ 最优律的原子位置 **必不为整数**（mod 256）—— 仅由 Lean 数据即可判定 ✓✓")
+out["p_if_integer_positions"] = float(p_int)
 print("  ⟹ 可硬算的结论：最优律**非网格对齐**（位置必为非整数有理数，与 docstring 逐字一致），")
 print("     故 Parseval 不适用，p 与 S 之间**没有**可硬算的刚性耦合 ⟹ 这正是缺失的 marks 几何。")
 out["p_grid_SN1"] = float(2 - (rows_sum + F(1)) / N)
