@@ -79,7 +79,7 @@ $$\textbf{级别}：[\textbf{L}]\ \text{文献可查}\ \big|\ [\textbf{O}]\ \tex
 | 20–21 | D8／D9 | [M] | 纪律项（自造）| ✗ 无对应物 |
 | 22 | D10 | [O]+[M] | [O] AOB2／DISCOVERY-R3；[M] "τ 来源缺口" | ⚠️ 部分 |
 
-$$\boxed{\textbf{汇总}：\text{外部独立可判者}\ pprox\ 5\ \text{项}（\text{W1-文献／W6／W9／W11-经典／W12}）\ \text{＋少数可复算数值}；\ \text{其余多数}\ \textbf{＝框架内自洽}}✓✓$$
+$$\boxed{\textbf{汇总}：\text{外部独立可判者}\ \approx\ 5\ \text{项}（\text{W1-文献／W6／W9／W11-经典／W12}）\ \text{＋少数可复算数值}；\ \text{其余多数}\ \textbf{＝框架内自洽}}✓✓$$
 $$\qquad ⟹ \textbf{本台账证明的是"框架内该路已闭合"}，\ \textbf{不等于}\ \text{"RH 的某子命题成立／不成立"}✓\qquad(\text{详档}\ \texttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md})✓$$
 
 ## §2 优先序（建议，按"攻击价值 ÷ 成本"）

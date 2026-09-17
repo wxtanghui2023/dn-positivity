@@ -1320,7 +1320,7 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词**：$$\boxed{\textbf{V217：DEAD} —— \text{非函数关系对象在第一非平凡例子处即失败}}$$ 三条独立理由：(i) case III 七形式全落已封类；(ii) 交叉比双重死角（K1 定理级＋K2 落 (c)）；(iii) canonical quadruple 三情形 ✓✓✓ ⚠️ **纪律**：**不得**声称"任何关系型对象都不可能"（本档证的是七形式映射＋交叉比死角＋四元组三情形，**非全称否定**）；**残余（UNINSTANTIATED）**：一个**既非方程、非谱、非可定义、非测度、非范畴、非序、非同伦、非模型论**的"可验证关系"（判据：① 满足 R1–R4；② 不属于上述任一形式；③ 会合处不落 (a)(b)(c)）✓
 
-### F.5ca ⭐⭐⭐⭐⭐ ⚠️**硬勘误（`V219`／唐先生 15:42）**：**S2 的"独立零点 $1/2$"撤回** —— $\sigma(x):=\sqrt{M_2(x)}$ 是**定义**，$M_2>0$ 与 $E(x)=\psi(x)-x$ 有符号之间无 $symp$；$|E|symp M_2^{1/2}$ 与 $\sup|E|\sim x^{1/2}$ **不可写**（后者 ⟺ RH）；§4 的"两个独立 $1/2$ 相等"**改为**"同一数值的两种来源"；**准确结论＝存在独立的 canonical $1/2$ 尺度源、但未证明它是零点指数**；三源重组为 **A 几何 $1/2$／B 尺度 $1/2$（$lpha/q=1/2$，参数族、非二次型专属）**
+### F.5ca ⭐⭐⭐⭐⭐ ⚠️**硬勘误（`V219`／唐先生 15:42）**：**S2 的"独立零点 $1/2$"撤回** —— $\sigma(x):=\sqrt{M_2(x)}$ 是**定义**，$M_2>0$ 与 $E(x)=\psi(x)-x$ 有符号之间无 $\asymp$；$|E|\asymp M_2^{1/2}$ 与 $\sup|E|\sim x^{1/2}$ **不可写**（后者 ⟺ RH）；§4 的"两个独立 $1/2$ 相等"**改为**"同一数值的两种来源"；**准确结论＝存在独立的 canonical $1/2$ 尺度源、但未证明它是零点指数**；三源重组为 **A 几何 $1/2$／B 尺度 $1/2$（$\alpha/q=1/2$，参数族、非二次型专属）**
 
 ### F.5ca ⭐⭐⭐⭐⭐ **V218：半轴值源审计（H0 攻击）⟹ H0 字面 FALSE（三机制类）＋ RH ＝ S1 轴 ≡ S2 指数 ＋ 不变障碍（相认须归一化 ⟹ (c)）**（`V218` ✓ 2026-09-15 15:38）
 
@@ -2820,7 +2820,7 @@ $$\textbf{级别定义}：[\textbf{L}]\ \text{＝文献可查}\ \big|\ [\textbf{
 $$\textbf{逐条归属（详档} \texttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md}\text{）}：$$
 $$\qquad [\textbf{L}]\ 0.68185\（\text{前沿 Remark 1.1＋Lean}\）\ \big|\ 0.6725\（\text{CCLM17 Cor 14}\）\ \big|\ \Lambda\ge0\（\text{Rodgers–Tao}\）\ \big|\ \Lambda\le0.2\（\text{Polymath15}\）✓$$
 $$\qquad [\textbf{O}]\ \boxed{"\lambda\le1\Rightarrow G\le0.672501"}\ -\ \textbf{我方变分自推}（V316\to V302\to V303）\ \text{且}\ \textbf{V301 版曾被我们自己撤回}⚠️;$$
-$$\qquad\qquad |\delta_T|symp(\log T)^{1.0}、\text{分辨率地板}\ \gtrsim0.15、\text{素数侧 44 倍余量}、\text{GM 改进窗口}\ -\ \text{皆我方计算}⚠️$$
+$$\qquad\qquad |\delta_T|\asymp(\log T)^{1.0}、\text{分辨率地板}\ \gtrsim0.15、\text{素数侧 44 倍余量}、\text{GM 改进窗口}\ -\ \text{皆我方计算}⚠️$$
 $$\qquad [\textbf{M}]\ \text{"承重墙／三面一墙／NO-GO 商空间／N1--N13 机制母类／两轴结构／防伪门／攻击·穿透·封口／✓✓ 标记"}$$
 $$\qquad\qquad ⚠️\ \textbf{且我方档案自己就记过}：\text{"三面一墙"}\ \textbf{已降级为待核}（\texttt{REVIEW-E4-FINAL §0}）；\text{"类表完整"}\ \textbf{未证}（\text{§E.4 仍开}）✓$$
 
