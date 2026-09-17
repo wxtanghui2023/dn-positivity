@@ -1,0 +1,15 @@
+# git hooks（dn-project）
+
+`.git/hooks/` **不受版本控制** ⟹ 本目录为**入库副本**，克隆后请执行：
+
+```bash
+cp scripts/git-hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+```
+
+## 两条规则
+1. **已查地图**：`docs/` 下**新增** `.md` 必须首 20 行内带「已查地图：」标记（`ERRATUM*` 豁免）。
+2. **NEWNESS RULE**（2026-09-17 17:47）：新档若含 `不重复|新手段|新用途|从未触及|首次|新发现` ⟹ **必须**同时含一行 `技术词…命中文件数=`（由 `scripts/tech_word_check.sh` 产出）。
+
+## 起因（血泪）
+- 规则1：唐先生 16:02「这个纪律早就有，但你没有一次遵照执行」
+- 规则2：唐先生 17:45「所以你又一次跳过了历史分析」—— 我宣称 S1/S2"与档案不重复"却**只查编号/专名、不查技术词**（Tsang／带宽／对相关），实际档案 `lamzouri-vs-p27-mapping.md`（2026-09-07）早有全部内容 ✗
