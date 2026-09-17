@@ -219,3 +219,28 @@ $$\text{第 4 轮}：\text{W2--W5／W10--W12}\quad(\text{结构关系复核})$$
 ② 结论须标证据等级；"未找到"不得写成"不存在"（N1／N2）✓
 ③ 撤回以勘误留档（T10）✓
 ```
+
+---
+
+# 【勘误 T10】（2026-09-17 · 复核结果；**不覆盖上文**）
+
+## 勘误一：W3–W5 的「三面一墙」⟹ **降级为「§1 断言 ＋ 待核（未证）」**
+
+$$\text{原文逐字}（\texttt{STRATEGY §1}）：\text{"这}\textbf{四者}\ \text{不是四道独立的墙，而是}\ \textbf{同一道墙的三面}"\ ✓✓✓\ \text{（断言级，}\textbf{档内未给证明}）✓$$
+$$\text{① 同类断言在本项目内}\ \textbf{已被降级过}：\texttt{RESEARCH-CONSTITUTION.md:932}／\texttt{R-A8.3-s2-mechanism-audit.md:158}：$$
+$$\qquad\text{"③ 三支线统一（}\theta=\tfrac12\ /\ \lambda=1\ /\ \eta=0^+\ \text{同一道墙）} \Longrightarrow \textbf{降级为待核}（\text{按本项目自身 N28 对象混淆}）"✓✓$$
+$$\text{② 措辞纪律}（\texttt{REVIEW-E4-FINAL-freeze-20260916.md §0}）：\text{"E4 弧线}\ \textbf{在审计范围内闭合}"；\ \textbf{"one wall" 是}\textbf{结构合并结果，不是定理}；\ \lambda>1\ \textbf{不得泛化}✓✓$$
+$$\text{③ }\textbf{T1 重命名风险}：\texttt{V187}\ \text{已用"}\textbf{三面性}\text{"指}\ \textbf{另一对象}（\text{离轴对的 signature 中性／inertia 可见／det 可见}）✓$$
+$$\Longrightarrow\ \boxed{\text{本台账 W3--W5 应改述为：}\text{「§1 断言 ＋ 待核（未证）；同类统一曾被降级；措辞限于审计范围」}}✓✓$$
+
+## 勘误二：W1 的「$\beta$ 盲」⟹ **措辞过强，须改**
+
+$$\texttt{CLOSED-ROUTES-MAP.md:883}\ \text{已有明确自查勘误（逐字）}：$$
+$$\qquad\text{"}\textbf{⑥ 自查勘误（F1 措辞级）}：\texttt{V188}／\texttt{V192}\ \text{的"线性／求和／null-relation 通道对}\ \beta\ \textbf{结构性盲}"}\ \textbf{措辞过强}✓✗$$
+$$\qquad\text{正确表述：线性通道}\ \textbf{饱和}（\text{不提供新的独立信息}），\ \text{但其}\ \textbf{提取} \text{需要}\ \textbf{一致性／无界精度}⟹ \text{障碍是}\ \textbf{定量-一致性}，\ \textbf{不是盲}✓✓$$
+$$\qquad\text{根源}：\gamma_\rho=\gamma-i(\beta-\tfrac12)\ \textbf{为复数} \Longrightarrow \textbf{显式公式的线性统计量确实编码}\ \beta✓✓$$
+$$\Longrightarrow\ \boxed{\text{W1 定义应改为：「不是'对}\beta\text{盲'，而是}\ \textbf{线性通道饱和 ＋ 提取需无界精度／一致性}（\text{障碍＝}\textbf{定量-一致性}）」}✓✓$$
+
+## 勘误三：台账自身的可靠性标注
+$$\text{本台账形成于}\ 2026\text{-09-17 11:47--11:52，}\ \text{来源＝三张地图＋口述整理}；$$
+$$\qquad ⚠️\ \text{其中}\ \textbf{W1／W3--W5}\ \text{两处表述经复核后}\ \textbf{已降级/更正}（\text{见上}）；\ \text{其余各项}\ \textbf{未逐条回到原始档案重核}✓$$
