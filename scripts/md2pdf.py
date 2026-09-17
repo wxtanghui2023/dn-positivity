@@ -78,7 +78,7 @@ def bare_textcmds(s):
         s2 = re.sub(r'\\(%s)\{([^{}]*)\}'
                     % '|'.join(['textbf','texttt','textrm','textsf','textit','textnormal','textup',
                                 'text','emph','mathrm','mathbf','mathcal','mathbb','boxed','overline','widehat']),
-                    r'\\2', s)
+                    lambda m: m.group(2), s)
         if s2 == s: break
         s = s2
     return s
@@ -144,6 +144,10 @@ h = ('<!DOCTYPE html><html><head><meta charset="utf-8"><style>'+CSS+'</style></h
      '<h1>'+html.escape(title)+'</h1>'
      '<div class="q">源档 '+html.escape(src)+' ｜ 生成 '+datetime.datetime.now().strftime('%Y-%m-%d %H:%M')+'</div>'
      + '\n'.join(out) + '</body></html>')
+# backref 泄漏自检（re.sub 替换串写错会把 \1/\2 写进正文）
+_leak = re.findall(r'\\[0-9]', h)
+if _leak:
+    sys.stderr.write('WARN backref 泄漏 %d 处：%s\n' % (len(_leak), sorted(set(_leak))))
 h = deemoji(h)
 io.open('/tmp/_md2pdf.html', 'w', encoding='utf-8').write(h)
 print('HTML ok', len(h))
