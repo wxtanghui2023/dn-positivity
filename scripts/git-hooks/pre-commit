@@ -9,6 +9,8 @@ bad=""
 newness_bad=""
 for f in $(git diff --cached --name-only --diff-filter=A | grep -a '^docs/.*\.md$' || true); do
   case "$f" in *ERRATUM*) continue;; esac
+  # 外部复核件豁免（唐先生 17:53 建议的"剥叙事"件：按设计【不得】带内部编号/标记）
+  if head -20 "$f" 2>/dev/null | grep -aq "外部复核件"; then continue; fi
   # 规则1
   if ! head -20 "$f" 2>/dev/null | grep -aq "已查地图"; then bad="$bad $f"; fi
   # 规则2
