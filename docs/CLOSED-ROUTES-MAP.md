@@ -1372,10 +1372,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 **§7 判词**：$$\boxed{\textbf{V220：DEAD} —— \text{"指数／幅度}\to\text{位置"整类封死（普适反例＝乘子族）}}$$ 四条独立理由：(i) 乘子障碍（定理级）；(ii) Mellin abscissa 只管全纯边界；(iii) **聚合障碍**（单个比值只编码单个 $\beta$；$\zeta$ 的 $\beta$ 是集合 ⟹ 必须聚合 ⟹ 被 (i) 杀）；(iv) 两侧皆堵（$\gamma$ 侧算术空；$\beta$ 侧只聚合）＋两条投影判据；**未进入 RH** ✓ **残余（UNINSTANTIATED）**：一个**逐点**的 canonical 复幅度（既非聚合、非 $|\cdot|$ 型、非相位型、非 Mellin abscissa，又能**逐点**对应复平面横坐标；判据：① R1–R7；② 过 (P1)／(P2)；③ 非聚合；④ 会合处不落 (a)(b)(c)）✓
 
-### F.5cd ⭐⭐⭐⭐⭐ ⚠️**两处勘误（`V222`／唐先生 16:03）**：**T10** §3 推论 2 **降级**为条件性推论（$\iota_X
-e\mathrm{id}\Rightarrow
-eg$RH 只是**RH 的反证机制**，**不是**"该 $X$ 不存在"的证明）；**T11** §4 的"$\beta$ 反称配对 $\Rightarrow I_X$ 必带对合"**撤回** —— 仅由双射只能**定义** $\iota_X:=\Phi^{-1}\iota\Phi$，而该 $\iota_X$ 是**从识别映射反推的**，R1 要求 $I_X,\Phi$ 独立于零点 ⟹ $$\boxed{\text{FE 对合}
-ot\Rightarrow\text{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅当 $\iota_X$ **可先独立构造**时才生效；**残余不能被 S1 自动吃掉**。
+### F.5cd ⭐⭐⭐⭐⭐ ⚠️**两处勘误（`V222`／唐先生 16:03）**：**T10** §3 推论 2 **降级**为条件性推论（$\iota_X\ne\mathrm{id}\Rightarrow\neg$RH 只是**RH 的反证机制**，**不是**"该 $X$ 不存在"的证明）；**T11** §4 的"$\beta$ 反称配对 $\Rightarrow I_X$ 必带对合"**撤回** —— 仅由双射只能**定义** $\iota_X:=\Phi^{-1}\iota\Phi$，而该 $\iota_X$ 是**从识别映射反推的**，R1 要求 $I_X,\Phi$ 独立于零点 ⟹ $$\boxed{\text{FE 对合}
+$$\qquad\boxed{\text{零点的 FE 对合}\not\Rightarrow\text{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅当 $\iota_X$ **可先独立构造**时才生效；**残余不能被 S1 自动吃掉**。 〔勘误：此二行曾被转义破坏，已据 `V221-pointwise-escape-parametrization-audit.md` 130–132 行复原 ✓〕
 
 ### F.5cd ⭐⭐⭐⭐⭐ **V221：逐点逃逸的参数化审计 ⟹ 不判 DEAD ＋ 命题 V221-A（$\iota$-等变子情形关闭 ＋ 可证伪预测）**（`V221` ✓ 2026-09-15 15:57）
 
