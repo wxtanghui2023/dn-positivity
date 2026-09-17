@@ -57,3 +57,38 @@ $$\qquad ⚠️\ \text{本刀}\ \textbf{不碰}\ \Lambda_1／\Lambda_2（\text{�
 ## §6 边界
 $$\text{(i)}\ §1／§2\ \text{为}\ [\textbf{档·重构}] \text{（须回原档逐字核，}\texttt{N13}）✓\quad\text{(ii)}\ §3\ \text{的两侧墙引}\ \texttt{V126-L3}／\texttt{V286-L}／\texttt{V187}\ \text{逐字}✓$$
 $$\text{(iii)}\ §4--§5\ \text{为本档新增（未在既有档中见过此写法）}✓\quad\text{(iv)}\ \textbf{未用 RH}；\ \textbf{零计算}✓$$
+
+---
+
+# §7 【第一刀执行】P3 补丁的四类退化 —— 逐条查覆盖（2026-09-17 13:36）
+
+## §7.1 四类退化逐条
+$$\textbf{D3}\ A_S=\varnothing：\textbf{已被 P3 本身排除}（\text{定义级，}\ \text{无引理需求}）✓$$
+$$\textbf{D4}\ A_S=X_S：\textbf{已被 P3 本身排除}（\text{即}\ D_S\equiv1\ \text{常数，}\texttt{V276}\ \text{点名}）✓$$
+$$\textbf{D1}\ \mathcal N=\varnothing\（\text{类中无离线成员}）：\text{排除它} \iff \boxed{\exists\ \text{一个离线类成员}}✓✓$$
+$$\qquad\Longrightarrow\ ⚠️\ \text{对}\ \textbf{合法（含 Euler 积）载体}：\textbf{未知} ✗\ —\ \text{已知离线实例}\ \text{D--H／Epstein／Beurling}\ \textbf{全无 Euler 积}✓✓$$
+$$\textbf{D2}\ \mathcal R=\varnothing\（\text{无在线成员}）：\text{排除它} \iff \boxed{\exists\ \text{一个零点全在线的成员}}⟹ \textbf{逐成员 GRH 型陈述}✓$$
+$$\qquad\Longrightarrow\ \text{对}\ \textbf{char-0 算术载体}：\textbf{未知} ✗（\text{除非载体允许含}\ \textbf{函数域型} \text{对象}——\text{那里 RH 是定理}）✓$$
+
+## §7.2 ⭐⭐ 覆盖检查结果：**未被覆盖**
+$$\texttt{V270-A}／\texttt{V271-A}／\texttt{V273-A}／\texttt{V286-L}\ \text{全部是}\ \textbf{机制型} \text{排除（cylinder／非-cylinder／局部-整体／乘法性）}$$
+$$\qquad\text{而}\ D1／D2\ \text{是}\ \textbf{载体构成型} \text{（carrier composition）} \Longrightarrow \boxed{\textbf{未被覆盖}}✓✓$$
+
+## §7.3 ⭐⭐⭐ 但 P3 补丁**归约到锚定困境**（`V289`）
+$$\text{D1 排除须"锚点"（\text{一个可证离线或可证在线的成员}）；D2 同理}✓$$
+$$\texttt{V289}\ \text{逐字}：\boxed{\text{类有锚} \Longrightarrow \mathrm{FS}^- \Longrightarrow \textbf{认证不可能}；\quad \textbf{合法类} \Longrightarrow \textbf{无锚}}✓✓✓$$
+$$\Longrightarrow\ \boxed{\text{P3 补丁}\ \textbf{不是独立开口}，\ \text{它就是锚定困境的另一种写法}}✓✓$$
+$$\Longrightarrow\ ⚠️\ \textbf{§4 的希望被否证}（\text{"可能可做"}\ ⟹ \textbf{不可做}，\ \text{因它}\ \textbf{等价于已登记困境}）✓✗$$
+
+## §7.4 ⭐⭐⭐ 由此得到的**结构性结论**（本档最重要）
+$$\boxed{C_0\ \textbf{是紧的}：\text{它没有任何可被独立攻击的子问题}}✓✓✓$$
+$$\qquad\text{子件只有两类}：\textbf{(a) 平凡}（D3／D4）\ \big|\ \textbf{(b) 已是登记墙或困境}（D1／D2 ⟹ 锚定困境）✓✓$$
+$$\Longrightarrow\ \boxed{\text{攻缺口}\ \textbf{与}\ \text{攻两侧墙}\ \textbf{在此点重合}}✓✓✓$$
+$$\qquad ⭐\ \textbf{这解释了此前"攻缺口"\ \text{总落地到墙上的}\ \textbf{结构原因}：\ C_0\ \textbf{无边界松弛}}✓✓✓$$
+$$\qquad(\text{不是执行不力，而是}\ C_0\ \text{的}\ \textbf{紧性}）✓$$
+
+## §7.5 因此唯一正确的前进动作
+$$\text{既然}\ C_0\ \text{紧，}\ \text{"继续攻缺口"}\ \Longrightarrow \ \boxed{\text{直接攻}\ \Lambda_1\ \text{或}\ \Lambda_2\ ——\ \text{而这两个现在有}\ \textbf{精确陈述}}✓✓$$
+$$\qquad \Lambda_1：\exists\ \text{非-}\zeta\text{-local 不变量，对}\ (1,1)\ \text{块非中性，且具}\ \textbf{独立算术上界}✓\quad(\text{V187：形式存在、实质封闭})✓$$
+$$\qquad \Lambda_2：\forall S,\forall\sigma\in X_S\ \exists F:\pi_S(F)=\sigma\ \text{且}\ F\ \text{离线}✓\quad(\text{阻碍：V126-L3／V286-L})✓$$
+$$\qquad\Longrightarrow\ ⚠️\ \text{须先声明：}\ \text{这两条}\ \textbf{就是}\ \text{V181 核心缺口}\ \text{与}\ \text{V162／SUPPORT-1 墙}\ \text{的}\ \textbf{同一内容}⟹ \textbf{不是新墙，是被钉到单点的缺口}✓✓$$
