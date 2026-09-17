@@ -67,6 +67,11 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 | **C-4** | **$17/33\iff17r+t=8$** | `docs/V2-13`｜`LIE3A` | BCR 坐标下的精确边界线；$(9/20,7/20)$ 恰在线上；**17/33 是历史最优点，非架构天花板** | 已核 ✓ |
 | **C-5** | **互反恒等式在 BC 中的角色** | `docs/V2-32` | 三变量两两互素：$\frac{\overline{\alpha\gamma}}\beta+\frac{\overline{\beta\gamma}}\alpha+\frac{\overline{\alpha\beta}}\gamma\equiv\frac1{\alpha\beta\gamma}$；BC **自己**用它把 $\tilde\ell\tilde\ell'$ 模逆元改写为分母型 | 逐字取证 ✓ |
 | **C-6** | **$L^{5/2}$ 的产生机制** | `docs/V2-28B` | $L^5=L^4_{\ell\text{-count}}\times L_{PQ}$，经 C–S 开方；**绝对值化损失已被 BC 显式回收**；**Weil 不产生 $L$-幂**（Weil 在 $n_2'$ 上） | 已定 ✓ |
+| **C-7** | ⭐⭐⭐ **BCR Appendix A · Proposition 4（Conjecture 1 的匹配下界）** | `external_refs/bettin_chandee_radziwill_1411.7764.txt` L3783+｜`docs/T1-2-*` | $A\ll(MN)^{1/2+\varepsilon}$ 时 $\max_{\alpha,\beta,\nu}|S_{A,M,N}|\gg(AMN)^{1/2-\varepsilon}(M+N)^{1/2}+A(M+N)^{1-\varepsilon}$；BCR 逐字自述 (1.4) **best possible, up to $\varepsilon$-powers** ⟹ **目标形态已证最优**（全部难度＝从 $(9/20,7/20)$ 走到 $(0,0)$）。方法：互反＋素数 $\equiv1,3\bmod4$ 极值系数＋Poisson→Ramanujan 和 | 已核 ✓ |
+| **C-8** | ⭐⭐⭐ **BC 全文无谱理论**（引擎清单） | `docs/T1-3-*`｜`docs/ref-bc-ar5iv-plaintext.txt` | Kuznetsov／spectral／eigenvalue／Maass／Petersson／Poincaré／large sieve **全 0 命中**；`amplification` 仅 1 处且属 DFI 方法；$[DI]$ 仅 2 处（引言**背景对比**：DI 需权重特殊结构／DFI–BC 处理任意权重＋参考文献）⟹ **BC 引擎＝Weil 单点界（附录 A「Weil bound for incomplete Kloosterman sums」）＋Ramanujan 和＋整除计数＋C–S 变量选择** ⟹ **谱升级路线出局** | 已核 ✓ |
+| **C-9** | ⭐⭐⭐ **DFI→BC 增量机制＝架构变更**（非估计改进） | `docs/T1-3-*` §5｜`docs/ref-bc-ar5iv-plaintext.txt` L98 | 增量 $\tfrac1{48}\to\tfrac1{20}$ 来自逐字 “we keep a **longer diagonal** when using the Cauchy-Schwartz inequality” ⟹ C–S 作用集由｛除 $\ell_1,\ell_2$ 外｝收缩到｛除 $d,a_1,\ell_1,\ell_2$ 外｝ ⟹ **下一次增量大概率同样需架构变更** | 已核 ✓ |
+| **C-10** | ⭐⭐ **BCR Corollary 2：三阶矩正确阶无条件成立** | `external_refs/bettin_chandee_radziwill_1411.7764.txt` L233+ | $\int_T^{2T}|\zeta(\tfrac12+it)|^3dt\ll T(\log T)^{9/4}$；逐字 “Previously Corollary 2 was known **only on the assumption of the RH**”；§6.1 给出 $2k$ 矩（$k=1+1/n$）路径 ⟹ **T3 须重新定位** | 已核 ✓ |
+| **C-11** | **BCR 的 [DI]/Watt 使用范围** | `docs/T1-3-*` §1 | BCR 中 `Deshouillers` 7 处**全部**在另一应用：$[DI84]\to$Proposition 2（Theorem 3 用）；$[DI83]$＋Watt$\to$Theorem 4/J（两多项式之积）⟹ **与 Theorem 2／(1.3) 无关** | 已核 ✓ |
 
 ---
 
@@ -156,9 +161,9 @@ $$\qquad	ext{定位：}\ 	extbf{技术注记／评论}，\ 	ext{非猜想级突�
 
 | # | 目标 | 判据 | 状态 |
 |:--|:--|:--|:--|
-| **T1** | Kloosterman 分数指数路线（主攻） | $17r+t<8$ | 待开工 |
+| **T1** | Kloosterman 分数指数路线（主攻） | $17r+t<8$ | **T1-1～T1-4 全部完成（2026-09-17）**；入口已逼至「需表述新 C–S／对角架构」 |
 | **T2** | $F_5$ sharpness 收尾（副线） | 饱和 witness 或 $L^{-\delta}$ | 90% |
-| **T3** | 三阶矩 | $X>T^{2/3-\varepsilon}$ | 未开 |
+| **T3** | 三阶矩 | $X>T^{2/3-\varepsilon}$ | ⚠️ **须重定位**（BCR Cor 2 已给正确阶，见 C-10） |
 | **T4** | 大值估计可移植性 | 族内推进 | 部分 |
 
 ## 维护规则
