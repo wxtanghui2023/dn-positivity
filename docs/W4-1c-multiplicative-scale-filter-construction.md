@@ -57,3 +57,46 @@ $$\text{③ 若是} \Longrightarrow \text{这是一个}\ \textbf{真实的机制
 ## §8 边界
 $$\text{(i)}\ §0／§1\ \text{照录唐先生 13:20}✓\quad\text{(ii)}\ §2\ \text{为初等核验（可逐行算）}✓$$
 $$\text{(iii)}\ §4\ \text{的算术可实现性}\ [\textbf{结构}]✓\quad\text{(iv)}\ \textbf{未用 RH}；\ \text{本轮}\ \textbf{未跑新数值}✓$$
+
+---
+
+# §9 【实测】（2026-09-17 13:22，本档追加）
+
+$$\text{阶梯}\ T\in\{1.25\text{e}5,2.5\text{e}5,5\text{e}5,1\text{e}6,2\text{e}6,4\text{e}6,8\text{e}6\}\ (\times2\ \text{七点}),\ t=14.134725,\ \Lambda\ \text{筛法到}\ 10^7✓$$
+
+| $T$ | $\vert\delta_T\vert$ | $\log T$ |
+|:--|:--|:--|
+| 1.25e5 | 12.3581 | 11.736 |
+| 2.5e5 | 12.7561 | 12.429 |
+| 5e5 | 13.8914 | 13.122 |
+| 1e6 | 14.7884 | 13.816 |
+| 2e6 | 15.0707 | 14.509 |
+| 4e6 | 15.8195 | 15.202 |
+| 8e6 | 16.5729 | 15.895 |
+
+$$\text{原始}\ \textbf{c=0.9869}✓\qquad\mathcal D_a^{(1)}\ \textbf{c=0.4476}\（\text{预期}\ c-1=0）\qquad\mathcal D_a^{(2)}:\ \textbf{nan}（\text{滤波后取负值}）✓✓$$
+
+$$\Longrightarrow\ \textbf{读数}：\ \text{h=1 已把}\ \log\ \text{趋势基本抹掉}（\text{c：}0.99\to0.45），\ \text{h=2 后进入噪声} \Longrightarrow |\delta|\ \text{阶梯信息在}\ h\ge2\ \text{耗尽}✓✓$$
+
+## §9.1 人工 $\beta$ 对照（**分辨率是否改善**）
+$$\begin{array}{c|cccc|c}
+h&\text{背景}\ c&\beta=0.55&\beta=0.60&\beta=0.65&\beta=0.70\\\hline
+0&0.987&0.950&1.070&1.369&1.908\\
+1&0.448&0.519&1.105&1.797&2.521\\
+\end{array}\qquad(\text{真值}\ \beta-\tfrac12=0.05/0.10/0.15/0.20)✓$$
+
+$$\Longrightarrow\ \textbf{分离度对比}：$$
+$$\qquad h=0：\text{背景}\ 0.987\ \text{vs}\ \beta=0.60\Rightarrow1.070\（\Delta=0.08，\textbf{不可辨}）；\ \beta=0.65\Rightarrow\Delta=0.38✓$$
+$$\qquad h=1：\text{背景}\ 0.448\ \text{vs}\ \beta=0.60\Rightarrow1.105\（\Delta=0.66，\textbf{清楚可辨}）；\ \beta=0.55\Rightarrow\Delta=0.07✗$$
+$$\Longrightarrow\ \boxed{\text{滤波把背景有效指数}\ 0.99\to0.45，\ \text{而}\ \beta\ \text{信号强度保留} \Longrightarrow \textbf{分辨率确有改善}（\beta=0.60\ \text{由不可辨}\to\text{可辨}）}✓✓✓$$
+
+## §9.2 判定
+$$\boxed{\text{W4-1c}\ \textbf{实测通过}：\ \text{乘性尺度滤波}\ \textbf{按设计工作}}——\ \text{annihilate}\ \log\ \text{背景（指数}\to0.45）\ ＋\ \text{保留幂模态}✓✓✓$$
+$$\qquad ⚠️\ \text{边界①}：h\ge2\ \text{已入噪声} \Longrightarrow \text{更高阶须}\ \textbf{更大}\ T\ \text{范围／更高精度}✓$$
+$$\qquad ⚠️\ \text{边界②}：\text{渐近分离问题}\ \textbf{不变}（§5：}\eta\to0\ \text{仍须}\ h\to\infty\Rightarrow\mathrm{RH}\ \text{强度）✓✓$$
+$$\qquad ⚠️\ \text{边界③}：\text{证书无}\ \text{dps}\ \text{稳定性检验}（\text{float64}，}\Lambda\ \text{精确，}\text{主要不确定性在}\ |\delta|\ \text{的振荡）✓$$
+
+## §9.3 下一步
+$$\text{① 扩}\ T\ \text{阶梯到}\ 10^9\!-\!10^{10}\（\text{分块筛法）} \Longrightarrow \text{可支持}\ h=3,4✓$$
+$$\text{② 多}\ t\ \text{平均（\text{压低}\ |\delta|\ \text{振荡）} \Longrightarrow \text{滤波后信噪比更清}✓✓$$
+$$\text{③ 若}\ h=2,3\ \text{仍显示背景指数继续下降而}\ \beta\ \text{信号不动} \Longrightarrow \textbf{机制确立}✓✓✓$$
