@@ -53,3 +53,10 @@ $$\qquad ⚠️\ \text{成本只与}\ T_{\max}\ \text{有关（流式筛，}\tex
 ## §8 边界
 $$\text{(i)}\ §2--§5\ \text{为本档实测（流式分块筛，}\Lambda\ \text{精确）}✓\quad\text{(ii)}\ \text{带宽}\ \pm2.05\ \text{偏宽}，\ \text{使}\ 20.88/33.13\ \text{定位偏}\ 0.15\!-\!0.2✓$$
 $$\text{(iii)}\ \textbf{未用 RH}；\ \gamma\ \text{仅作对照；全部有限整数计算}✓$$
+
+---
+
+# §9 【勘误 T10】对 §5 措辞（2026-09-17 13:33）
+$$\text{原文写"与 GAP-2 的分辨率地板}\approx0.15\ \textbf{独立同值}" \Longrightarrow \textbf{应改为}：$$
+$$\boxed{\text{两条独立实验路线给出}\ \textbf{同量级} \text{的 resolution floor}（\text{一为}\ 0.05\!-\!0.10，\text{一为}\approx0.15）}✓✓$$
+$$\qquad(\text{意义是}\ \textbf{同一数量级的障碍}，\ \textbf{不是数值相等}）✓✓$$
