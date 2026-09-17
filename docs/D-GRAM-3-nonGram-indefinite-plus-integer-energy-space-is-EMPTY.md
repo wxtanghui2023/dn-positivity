@@ -38,3 +38,11 @@ $$\boxed{\begin{array}{ll}\textbf{D-GRAM-1:}&\text{实}\ t\ \text{Gram}\to\Re s\
 ## §6 边界
 $$\text{(i)}\ §1\ \text{为逐行可核算术；}\ §2\ \text{引}\ \texttt{V271-A}／\texttt{V181}\ \text{逐字}✓\quad\text{(ii)}\ \textbf{未用 RH}；\ \textbf{零计算}✓$$
 $$\text{(iii)}\ ⚠️\ §2\ \text{的"cylinder}\Rightarrow\text{零点盲"}\ \text{为}\ [\textbf{结构}] \text{级}✓\quad\text{(iv)}\ \textbf{不声称} \text{一切 Hermitian 型皆盲（仅整数仅可算者）}✓$$
+
+---
+
+# §7 【勘误 T10】措辞收紧（依唐先生 14:05，不覆盖上文）
+$$\text{§3 的}\ \boxed{\text{中间}=\varnothing}\ \textbf{应收紧为}：\ \boxed{\text{在}\ \textbf{当前已审计的 construction class} \text{内，中间地带为空}}✓✓$$
+$$\qquad \text{已审计类}\ =\ \{\text{正测度 Gram}\}\ \cup\ \{\text{monomial／}\partial_\sigma\ \text{闭包}\}\ \cup\ \{\text{整数可计算 cylinder 数据}\}✓✓$$
+$$\text{要升级为}\ \textbf{绝对空集}，\ \text{须先证}\ \Lambda_{HS}：\ \text{任何 zero-sensitive 不定型}\Longrightarrow \text{其 HS 必须重新承载显式公式素侧信息}\ ——\ \boxed{\textbf{未证}}✓✓$$
+$$\Longrightarrow \text{故本档}\ \textbf{不} \text{声称绝对空集；}\ \text{已完成的更有用的事是：}\text{把下一次真正需要突破的命题}\ \textbf{精确化}✓✓$$
