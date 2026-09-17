@@ -100,3 +100,57 @@ $$\qquad ⚠️\ \text{边界③}：\text{证书无}\ \text{dps}\ \text{稳定�
 $$\text{① 扩}\ T\ \text{阶梯到}\ 10^9\!-\!10^{10}\（\text{分块筛法）} \Longrightarrow \text{可支持}\ h=3,4✓$$
 $$\text{② 多}\ t\ \text{平均（\text{压低}\ |\delta|\ \text{振荡）} \Longrightarrow \text{滤波后信噪比更清}✓✓$$
 $$\text{③ 若}\ h=2,3\ \text{仍显示背景指数继续下降而}\ \beta\ \text{信号不动} \Longrightarrow \textbf{机制确立}✓✓✓$$
+
+---
+
+# §10 【扩大阶梯＋多 $t$ 平均后的判定】＋ **勘误 T10（对 §9）**
+
+$$\text{阶梯}\ T=2^k\ \text{八点}\ (1.5625\text{e}6\to2\text{e}8),\qquad t\ \text{取 5 个零点高度取平均},\qquad \Lambda\ \text{分块筛到}\ 2\text{e}8\ (\text{素幂}\ 11{,}080{,}801\ \text{项})✓$$
+
+## §10.1 各级别数值
+
+| 级别 | $\alpha$（斜率 $\log T$） | $c$（斜率 $\log\log T$） | 数值序列 |
+|:--|:--|:--|:--|
+| $h=0$ | $+0.0600$ | $\mathbf{+0.9955}$ | 14.63, 15.01, 16.08, 16.76, 17.12, 18.19, 18.52, 19.61 |
+| $h=1$ | $+0.0623$ | $+1.0475$ | 0.56, 1.53, 0.99, 0.52, 1.54, 0.48, 1.57 |
+| $h=2$ | $+0.1402$ | $+2.3510$ | 1.40, $-0.79$, $-0.67$, 1.47, $-1.54$, 1.58 |
+| $h=3$ | $+0.5679$ | $+9.8675$ | $-3.16$, 0.17, 3.09, $-4.34$, 4.50 |
+
+$$\text{判据}\ c(h+1)<c(h)：\ \textbf{全部不成立}（0.996\to1.048\to2.351\to9.868）✗✗$$
+
+## §10.2 ⭐⭐ 判据为何不成立（**结构原因，不是数值故障**）
+$$\text{h=1 的序列}\ \textbf{已是常数级振荡}（0.48\!-\!1.57，均值}\approx1.0）\Longrightarrow \text{系统性}\ \log\ \text{趋势}\ \textbf{被完全移除}✓✓$$
+$$\Longrightarrow\ \text{h}\ge2\ \text{作用的对象}\ \textbf{只剩噪声} \Longrightarrow \text{放大噪声}（c\ \text{虚高）}✗✗$$
+$$\Longrightarrow\ \boxed{\text{背景只有}\ \textbf{一个} \log\ \text{幂}\ (|\delta|\asymp A\log T) \Longrightarrow \textbf{h=1 一次用尽，无累积增益}}✓✓✓$$
+
+## §10.3 人工 $\beta$ 注入（$\Delta\alpha$，背景 $\alpha_{\rm bg}$ 见 §10.1）
+
+| $h$ | $\alpha_{\rm bg}$ | $\beta{=}0.55$ | $\beta{=}0.60$ | $\beta{=}0.65$ | $\beta{=}0.70$ |
+|:--|:--|:--|:--|:--|:--|
+| 0 | $+0.060$ | $-0.001$ | $+0.010$ | $+0.038$ | $+0.087$ |
+| 1 | $+0.062$ | $-0.006$ | $+0.034$ | $+0.082$ | $+0.134$ |
+| 2 | $+0.140$ | $-0.125$ | $-0.049$ | $+0.004$ | $+0.056$ |
+| 3 | $+0.568$ | $-0.016$ | $-0.217$ | $-0.309$ | $-0.321$ |
+
+$$\Longrightarrow\ \text{可分辨阈值}\ \approx\ \beta\gtrsim0.65\ \text{级}（\text{h=0 与 h=1 同档）}✓$$
+
+## §10.4 ⚠️ **【勘误 T10】对 §9.1（不覆盖上文）**
+$$\text{§9.1 曾报"h=1 时}\ \beta=0.60\ \text{由不可辨}\to\textbf{清楚可辨}（\Delta c=0.66）"\ \textbf{不能复现}✗✗$$
+$$\text{原因}：\text{§9 用}\ \textbf{7 点、单}\ t；\ \text{本轮}\ \textbf{8 点、5 个}\ t\ \text{平均} ⟹ \text{噪声特征改变} ⟹ \text{原来的大}\ \Delta\ \text{含未平均涨落成分}✗$$
+$$\Longrightarrow\ \textbf{降级}：\text{滤波的真实增益是}\ \textbf{把}\ \log\ \text{趋势变成常数}（\text{一步）}，\ \text{检测器分辨率的提升是}\ \textbf{温和的}（\beta\gtrsim0.65）✓$$
+
+## §10.5 判定（更新）
+$$\boxed{\text{W4-1c}\ =\ \textbf{MECHANISM-ALIVE（限一步）}}✓$$
+$$\qquad\text{滤波器}\ \textbf{真实有效}（\text{h=1 抹掉}\ \log\ \text{趋势、保留幂模态}）✓✓$$
+$$\qquad\textbf{但} \text{增益}\ \textbf{不累积}：\text{背景只有一个}\ \log\ \text{幂} \Longrightarrow \text{一次用尽} \Longrightarrow \textbf{不存在"解析选择律"的累积层级}✗✗$$
+$$\qquad \text{故唐先生期待的"可持续追问的选择律"}\ \textbf{在当前背景结构下不成立}✗$$
+
+## §10.6 下一步（若继续）
+$$\text{① 要获得累积增益，须背景含}\ \textbf{多个可分离的尺度成分}（\text{当前}\ |\delta|\ \text{只有单一}\ \log\ \text{幂}）✓$$
+$$\text{② 或改观测量：}\text{不用}\ |\delta_T|\ \text{标量，而用}\ \textbf{全复偏差}\ \delta_T(s)\ \text{的谱}
+\ \text{（}\text{可能含更多尺度层次）}✓✓$$
+$$\text{③ 或接受：}\text{该机制到此为止（}\text{一步增益，且分辨率}\ \beta\gtrsim0.65）✓$$
+
+## §10.7 边界
+$$\text{(i)}\ §10.1--§10.3\ \text{为本档实测（分块筛法，}\Lambda\ \text{精确，}\text{float64}）✓\quad\text{(ii)}\ §10.2\ \text{的"单一}\ \log\ \text{幂"为}\ [\textbf{结构}]✓$$
+$$\text{(iii)}\ \textbf{勘误已标}（\text{§10.4}）✓\quad\text{(iv)}\ \textbf{未用 RH}；\ \text{人工注入}\ \text{非真实离轴零点}✓$$
