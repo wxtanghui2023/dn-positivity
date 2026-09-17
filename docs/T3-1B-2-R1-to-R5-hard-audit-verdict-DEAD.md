@@ -95,3 +95,14 @@ $$\qquad\Longrightarrow\ \text{T3-1B 的 ALIVE（有条件）}\ \textbf{已被�
 ## 9. 边界
 $$\text{(i)}\ \text{本档结论}\ \textbf{限定 BC §4 的已读范围}✓\quad\text{(ii)}\ \text{§2.1 相消为}\ \textbf{本档推导}（\text{初等}）✓\quad\text{(iii)}\ \text{§5.1 用}\ L^*\ \text{属（V2-19）已定位结果}✓$$
 $$\text{(iv)}\ \textbf{未用 RH；零数值}✓$$
+
+---
+
+## 10. 【归档措辞钉死】（2026-09-17 09:38，唐先生指令）
+
+$$\text{比值链复核：}\ q=\mathfrak p_1n_1'\asymp\frac{N}{\mathfrak p_2}\Rightarrow\sqrt q\asymp\sqrt{\frac N{\mathfrak p_2}}\Rightarrow\frac{X}{\sqrt q}\asymp\frac{L}{\mathfrak p_2\mathfrak q_2}\sqrt{\frac{\mathfrak p_2}{N}}=\frac{L}{\mathfrak q_2\sqrt{\mathfrak p_2N}}\ \textbf{（本档原式正确，无需勘误）}✓$$
+$$\text{最有利}\ \mathfrak p_2=\mathfrak q_2=1：\ \frac{X}{\sqrt q}\asymp\frac{L}{\sqrt N}；\ L^*\asymp N^{1/10}\Rightarrow\frac{X}{\sqrt q}\asymp N^{-2/5}✓✓$$
+
+$$\boxed{\textbf{正式归档句}：\ \text{T3-1B}\ =\ \mathrm{DEAD}\ \text{on the balanced/optimal}\ L\ \text{regime};\quad \text{global application-range status requires R5-1}}✓✓✓$$
+
+$$\text{即：}\ \textbf{不得} \text{把整个}\ \theta<17/33\ \text{应用区一并判 DEAD；}\ \text{极端不平衡}\ M\gg N^{3/2}\ \text{的状态}\ \textbf{保留为 R5-1}✓$$
