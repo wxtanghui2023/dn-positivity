@@ -185,3 +185,23 @@ unless you can independently bound the number of off-line zeros.
 input), §7 verdict. · **未读** Montgomery, *Ten Lectures*, Ch. 5 Thm 11 (Lemma 2.2's proof); Brown 2005;
 McCurley 1984. · **核验** none — this item is proof-level, not numerical. · No git commit; no existing file
 modified.
+
+---
+
+## 9. 后续（2026-09-17，**不变动上文**）：引擎自足化 ＋ 常数改善
+
+`[后续-勘误留档]` 唐先生 2026-09-17 19:39–19:46 指示"引擎自足化"，产出如下（详见 `E4-ENGINE-1-...md`、`E4-ENGINE-2-...md`、`E4-STATUS-AUDIT-...md`，资产 `C-39`/`C-40`/`C-41`）：
+
+**(a) $m=1$（本档 §1 的 Theorem 4.1 本体）：已自足重证，且常数改善 10 倍** `[严格]`
+原档 §4 指出引擎 Lemma 2.2 是 M-统一的，但 Lemma 2.2 的**证明始终未读**（Montgomery Ch.5）。新增**初等覆盖引理 C**：
+
+$$|z|=1\ \Longrightarrow\ \max_{1\le k\le5}\mathrm{Re}\,z^k\ \ge\ \tfrac12$$
+
+（证明：五段区间并集无缝覆盖全圆周；常数 $\tfrac12$ 最优，$z=e^{i\pi/3}$ 取到；数值 $0.500009$ ✓。）$\tfrac12>\tfrac1{20}$ ⟹ 本档 §1 的定理**不再需要 Montgomery**，且阈值由
+$$R^n\ \ge\ 20n\log n+40(K_{F,1}+K_{F,4})n\log n\qquad\longrightarrow\qquad R^n\ \ge\ 4(K_{F,1}+K_{F,4})n\log n+2$$
+$(K_{F,1}+K_{F,4})$ 项**恰降 10 倍**并省去源文 $20n\log n$ 主项；窗口 $[N,5N]$、$N\mid n$ 与 §5b 的 $\tfrac{12}{\log R}$ 槽位**均不变** ✓。
+
+**(b) $m\ge2$（本档 §5 的推广）**：
+- §5 的"$R^n\ge n\log n\cdot[40(K_1+K_4)+20m]$"应读作**充分条件**（两式差 $20m(n\log n-1)\ge0$），非严格等价 —— 措辞级精确化；
+- 模长参差的处理见 `E4-ENGINE-2` §3（Fejér 二阶矩路线）＋ `E4-ENGINE-3`（衰减松弛，消除可比性假设）；
+- **残留缺口**：等模长子集上的**实部**引理（$r\ge2$ 时仍等价于 Montgomery Lemma 2.2）；$r=1$ 已由引理 C 覆盖 ✓。
