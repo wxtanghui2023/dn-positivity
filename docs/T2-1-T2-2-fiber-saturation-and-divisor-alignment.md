@@ -99,3 +99,25 @@ $$\Longrightarrow\ \boxed{\textbf{BC 路线在已审范围内形成干净的架�
 $$\text{(i)}\ \text{本闭合}\ \textbf{限定于已审范围}，\ \text{不等于"17/33 不可突破"}✓$$
 $$\text{(ii)}\ \text{唯一剩余入口仍是}\ \textbf{改变 §4 的 C--S／对角架构}（\text{T1-4 已登记}）✓$$
 $$\text{(iii)}\ \text{T3（Architecture Search）首条纪律：新架构须在写第一条估计}\ \textbf{之前} \text{证明它不退化为 V2-7--V2-11／DFI／BC／现有 C--S 变量选择}✓✓$$
+
+---
+
+## 6. 【勘误 T10 · 措辞校正】（2026-09-17 09:28，唐先生指令；**不覆盖上文**）
+
+$$\textbf{校正对象}：\text{上文 T2-1 §1 的表述"}\tilde\ell_1\ \text{消去} \Longrightarrow \textbf{可解性自动} \text{"} \Longrightarrow \textbf{过强／留有审计漏洞}✓$$
+
+### 6.1 精确表述（替换）
+$$\text{令}\quad \boxed{Y:＝\overline{\tilde\ell_2'}\tilde\ell_2\tilde\ell_1'} \Longrightarrow (4.27)\ \text{等价于}\quad \mathfrak p_1(\tilde\ell_1-Y)\equiv0\ \mathopen{}\mathclose{{\left(\textnormal{mod}\penalty\ u}}\right)✓$$
+$$\text{它至少有一个}\ \textbf{显式解}：\quad \boxed{\tilde\ell_1=Y}✓✓$$
+$$\Longrightarrow\ \textbf{归档措辞（替换"可解性自动"）}：$$
+$$\qquad\boxed{\text{(4.27) 本身}\ \textbf{不给}\ (\ell_2,\ell_2')\ \textbf{施加新的模约束}；\ \text{剩余限制来自}\ \textbf{admissibility 条件}}✓✓✓$$
+$$\qquad\text{（强度更高；且}\ \textbf{不留漏洞}：\ \text{不声称"自动"，只声称"同余不新增约束"}）✓$$
+
+### 6.2 仍须核对的一项（**登记为残余**）
+$$\textbf{残余 T2-1-R1}：\ \text{上述显式解}\ \tilde\ell_1=Y\ \text{是否落在原文要求的}\ \textbf{全部} \text{admissibility 条件中}（\text{如}\ (\ell_1,\ell_2)=(\ell_1',\ell_2')=1、(\ell_1\ell_1',\ell_2\ell_2')=1、\tilde\ell_1\ \text{的范围}/上限）✓$$
+$$\qquad\text{若 BC 的消元步骤}\ \textbf{本身已证明} \text{admissible fiber 的计数，则 saturation 结论成立}✓\quad(\text{本档}\ \textbf{未} \text{逐行核})✓$$
+
+### 6.3 封线措辞校正（BC 支线正式封存）
+$$\textbf{可写}：\ \boxed{F_5=b^{1/2}AL^{3/2}N^{7/4+o(1)}}\ \text{中的}\ L^5\ \textbf{在当前 BC §4 的变量组织、C--S 次序、对角／非对角分解和计数方式下没有发现固定幂次 slack}✓✓$$
+$$\textbf{不可写}：\ \boxed{\text{BC 的任何可能证明都必须付}\ L^5} \Longrightarrow \textbf{越过自设边界（禁止）}✓$$
+$$\Longrightarrow\ \boxed{\text{BC 支线（T1＋T2）正式封存}}✓✓$$
