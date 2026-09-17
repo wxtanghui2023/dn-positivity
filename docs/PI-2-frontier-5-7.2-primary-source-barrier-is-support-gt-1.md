@@ -56,3 +56,11 @@ $$\qquad ⚠️\ \text{即：}\text{(i)}\ \text{不能靠"搬 GM"解决；要靠
 ## 7. 边界
 $$\text{(i)}\ §1--§3\ \textbf{全部逐字}（\text{本地 PDF 现场下载并抽取，行号基于}\ \texttt{.clean.txt}）✓\quad\text{(ii)}\ §4--§5\ \text{为}\ \textbf{本档判定}✓$$
 $$\text{(iii)}\ \textbf{未用 RH；零数值}✓\quad\text{(iv)}\ \text{新增文件}：\texttt{external\_refs/zeta23\_2608.13637.pdf/.txt/.clean.txt}✓$$
+
+---
+
+## 8. 【勘误 T10】（2026-09-17 11:41，唐先生指令；**不覆盖上文**）
+
+$$\text{上文 §6 曾写"}\text{(i)}\ \text{的缺口}\ \textbf{等价于} \text{一个已知开放猜想"} \Longrightarrow \textbf{过强}✓✗$$
+$$\textbf{正确表述}：\ \boxed{\text{达到该}\ \text{support}>1\ \text{区域所需的}\ \textbf{信息强度}，\ \textbf{至少进入}\ \text{Hardy--Littlewood／Montgomery 配对相关型信息层级}}✓✓$$
+$$\qquad(\text{除非原文明确给出}\ \textbf{严格 equivalence} \text{的数学命题及假设范围}，\ \text{否则}\ \textbf{不写"等价"})✓✓$$
