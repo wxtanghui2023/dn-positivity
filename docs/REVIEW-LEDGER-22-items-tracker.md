@@ -59,3 +59,9 @@ $$\text{② 每项审完}\ \textbf{立即}\ \text{更新状态列＋（若需）
 ## §4 边界
 $$\text{(i)}\ \text{本档}\ \textbf{只建流程＋列攻击方向}，\ \textbf{未执行} \text{任何审核}⟹ \text{状态全}\ ⬜✓$$
 $$\text{(ii)}\ \textbf{未用 RH}；\ \textbf{零数值}；\ \text{攻击方向为}\ [\textbf{结构}] \text{级建议，非结论}✓✓$$
+
+## §5 PDF 导出（2026-09-17 16:38，唐先生 16:36 委托）
+$$	ext{产物}：	exttt{/home/node/.openclaw/workspace/dn-project/docs/REVIEW-LEDGER-22-items.pdf}\ （	extbf{2 页 A3 横向}，约 184 KB）$$
+$$	ext{生成器}：	exttt{scripts/make\_ledger\_pdf.py}（	ext{weasyprint ＋ 文泉驿正黑＋DejaVu 回退；}	extbf{无 LaTeX 中文栈} ⟹ 	ext{LaTeX 转 Unicode}）$$
+$$	ext{自检}：	extbf{缺字 0}、	extbf{残留 LaTeX 命令 0}、	ext{表格 22 行全部落页}✓✓\qquad(	ext{本轮修 2 个 bug：显示公式块被转义、}\\textbf/\\texttt\ 	ext{未转换})$$
+$$	ext{注}：	ext{PDF}\ 	extbf{未入 git}（	ext{二进制}）；\ 	ext{如需 A4／分表版可另出}✓$$
