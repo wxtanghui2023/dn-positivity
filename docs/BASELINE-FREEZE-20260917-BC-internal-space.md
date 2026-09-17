@@ -90,3 +90,23 @@ $$\textbf{(甲)-1.3}\ \text{三判据筛选：新重复结构？新模数层？�
 $$\textbf{(甲)-1.4}\ \text{仅对三判据齐备者继续推导；其余判 reparameterization／DEAD}✓$$
 
 $$\Longrightarrow\ \textbf{（甲）-1 的产出格式}：\ \text{一张候选表 ＋ 每行的三判据打钩／判死理由}✓$$
+
+---
+
+## 5. 【补记】（2026-09-17 09:55，唐先生）—— 第一刀目标**锐化** ＋ 防漂移
+
+### 5.1 技术底线（**须保留**，下一轮起手即用）
+$$\boxed{\text{候选 C--S 对象}\ \to\ \text{重复集}\ \to\ \text{diagonal}\ \to\ \text{剩余振荡变量}\ \to\ q(\mathcal S)\ \to\ \text{指数收益}}✓$$
+$$\mathrm{ALIVE}\iff\boxed{\text{新重复结构}\ +\ \text{新模数层／新约束}\ +\ N^{-\delta}\ (\delta>0)}\quad(\text{三者同时出现才进入真正推导})✓✓$$
+
+### 5.2 ⚠️ 防漂移（**硬规则**）
+$$\boxed{\textbf{不要把"新的平方对象"本身当成进展}}✓✓$$
+$$\qquad\text{（}\text{新平方对象}\ne\text{新架构；}\ \text{判据仍是三条件同时成立}）✓$$
+
+### 5.3 ⭐⭐⭐ 第一刀目标（**锐化**）
+$$\boxed{\text{是否存在一种平方组织，使}\ \textbf{diagonal constraint 本身改变 phase conductor}？}✓✓✓$$
+$$\qquad\text{若}\ \textbf{没有} \Longrightarrow \textbf{迅速判死}，\ \text{而不是再做几十页估计}✓✓$$
+$$\qquad\text{（即：}\ \text{第一刀判的是}\ \textbf{conductor 是否随 diagonal 组织而变}，\ \text{不是"能否找到新对象"}）✓$$
+
+### 5.4 基线定位
+$$\boxed{\text{基线已足够干净，}\ \text{作为后续所有（甲）审计的}\ \textbf{固定参照}}✓✓$$
