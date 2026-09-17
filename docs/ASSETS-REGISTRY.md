@@ -72,6 +72,9 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 | **C-9** | ⭐⭐⭐ **DFI→BC 增量机制＝架构变更**（非估计改进） | `docs/T1-3-*` §5｜`docs/ref-bc-ar5iv-plaintext.txt` L98 | 增量 $\tfrac1{48}\to\tfrac1{20}$ 来自逐字 “we keep a **longer diagonal** when using the Cauchy-Schwartz inequality” ⟹ C–S 作用集由｛除 $\ell_1,\ell_2$ 外｝收缩到｛除 $d,a_1,\ell_1,\ell_2$ 外｝ ⟹ **下一次增量大概率同样需架构变更** | 已核 ✓ |
 | **C-10** | ⭐⭐ **BCR Corollary 2：三阶矩正确阶无条件成立** | `external_refs/bettin_chandee_radziwill_1411.7764.txt` L233+ | $\int_T^{2T}|\zeta(\tfrac12+it)|^3dt\ll T(\log T)^{9/4}$；逐字 “Previously Corollary 2 was known **only on the assumption of the RH**”；§6.1 给出 $2k$ 矩（$k=1+1/n$）路径 ⟹ **T3 须重新定位** | 已核 ✓ |
 | **C-11** | **BCR 的 [DI]/Watt 使用范围** | `docs/T1-3-*` §1 | BCR 中 `Deshouillers` 7 处**全部**在另一应用：$[DI84]\to$Proposition 2（Theorem 3 用）；$[DI83]$＋Watt$\to$Theorem 4/J（两多项式之积）⟹ **与 Theorem 2／(1.3) 无关** | 已核 ✓ |
+| **C-12** | ⭐⭐⭐ **T2-1：fiber **饱和**（变量识别证明）** | `docs/T2-1-T2-2-*` | $\tilde\ell_1=\ell_1/\mathfrak q_1$、$\tilde\ell_2=\ell_2/\mathfrak p_2$（L216/L279 逐字）：**(4.26) 约束 $(d,d')$**（$\tilde\ell_2'd\equiv\tilde\ell_2d'$ 给定 $\ell$ 时确定 $d$）；**(4.27) 消去 $\tilde\ell_1$**（$\tilde\ell_1$ 只现于 LHS ⟹ 是未知量 ⟹ 可解性自动，$(\mathfrak p_1,u)\mid\mathfrak p_1(\cdots)=0$ 恒成立）⟹ **$(\ell_2,\ell_2')$ 只承担整除约束** ⟹ $N_2=L^{2+o(1)}$ **饱和**（三情形核对：同阶／同阶／保守）。**不是「$u<L$ ⟹ 有解」跳步** | 已证 ✓ |
+| **C-13** | ⭐⭐⭐ **T2-2：divisor alignment 无幂次 saving** | `docs/T2-1-T2-2-*` | 计数增益 $(\mathfrak p_2\mathfrak q_2)^{-2}$ vs 分母 $\mathfrak p_2^{-3}\mathfrak q_2^{-1}$ ⟹ 差异仅单幂次 $\mathfrak p_2^{\pm1},\mathfrak q_2^{\pm1}$ ⟹ 求和 $=\log^{O(1)}L=L^{o(1)}$；$\mathfrak q_2=1$ 情形链的计数（$L^2/\mathfrak p_2$）**保守大于**实际（$L^2/\mathfrak p_2^2$）⟹ 无「已入分母又被重复兑现」；§4.1.4 逐字：非平凡除因子**只**在 $(\ell_1\ell_1',\ell_2\ell_2')=1$ 情形，此时四者全 $=1$ 自动坍缩 | 已关闭 ✓ |
+| **C-14** | ⭐⭐⭐ **BC 架构级 closure（六条合成）** | `docs/T2-1-T2-2-*` §T2 最终判据 | (1) BCR Prop 4 目标形态已证最优；(2) BC 全无谱机器 ⟹ 无谱升级；(3) $F_3$ SHARP；(4) $L^5$ 四源审计全锁定；(5) $N_2$ 饱和（T2-1）；(6) divisor alignment 无幂次 saving（T2-2）⟹ **BC 路线在已审范围内形成干净的架构级 closure**（$17/33$ 与 $L^5$ ＝结构性成本，非粗估） | 已合成 ✓ |
 
 ---
 
@@ -162,7 +165,7 @@ $$\qquad	ext{定位：}\ 	extbf{技术注记／评论}，\ 	ext{非猜想级突�
 | # | 目标 | 判据 | 状态 |
 |:--|:--|:--|:--|
 | **T1** | Kloosterman 分数指数路线（主攻） | $17r+t<8$ | **T1-1～T1-4 全部完成（2026-09-17）**；入口已逼至「需表述新 C–S／对角架构」 |
-| **T2** | $F_5$ sharpness 收尾（副线） | 饱和 witness 或 $L^{-\delta}$ | 90% |
+| **T2** | $F_5$ sharpness（副线） | 饱和 witness 或 $L^{-\delta}$ | ✅ **完成（2026-09-17）**：T2-1 饱和（变量识别）＋ T2-2 关闭 ⟹ 架构级 closure |
 | **T3** | 三阶矩 | $X>T^{2/3-\varepsilon}$ | ⚠️ **须重定位**（BCR Cor 2 已给正确阶，见 C-10） |
 | **T4** | 大值估计可移植性 | 族内推进 | 部分 |
 
