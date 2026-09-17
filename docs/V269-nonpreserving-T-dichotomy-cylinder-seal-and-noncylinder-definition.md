@@ -155,8 +155,8 @@ $$\text{唐先生}：\text{"`V269` 的主线有价值，但必须做一个关键
 
 ### (1) **V269-A(i) 保留** ✓（正式登记为 `V262`-B 的应用）
 
-$$\text{有限层、紧致}\ X_S;\ \text{若所有有限个兼容条件具}\ \textbf{有限交性质}（FIP），\text{则}\ \text{Tychonoff＋FIP} \Longrightarrow \boxed{arprojlim_SX_S
-earnothing} ✓✓$$
+$$\text{有限层、紧致}\ X_S;\ \text{若所有有限个兼容条件具}\ \textbf{有限交性质}（FIP），\text{则}\ \text{Tychonoff＋FIP} \Longrightarrow \boxed{\varprojlim_SX_S
+e\varnothing} ✓✓$$
 $$\qquad \text{且}\ \textbf{确实不需要 bonding map 满射} ✓\ \text{（＝}\ `V262`\text{-A 的注释：满射条件多余）} ⟹ \text{本节}\ \textbf{不变} ✓$$
 
 ### (2) **V269-A(iii) 收紧** ✗（原表述**过强**，撤回其一般性）
@@ -204,7 +204,7 @@ $$\qquad ⟹ \boxed{\text{唐先生判词}：\textbf{"`V269` 已经把'higher as
 
 ## §11 📌 **V270 预登记**（唐先生 10:37 指定：比原计划**更干净**的版本）
 
-$$\boxed{\text{直接证明}：\quad \text{cylinder}＋\text{compact}＋\textbf{non-cohomological}＋\text{finite-decidable}\ \Longrightarrow\ arnothing\ \text{（作为 RH-sensitive 机制）}} ✓✓$$
+$$\boxed{\text{直接证明}：\quad \text{cylinder}＋\text{compact}＋\textbf{non-cohomological}＋\text{finite-decidable}\ \Longrightarrow\ \varnothing\ \text{（作为 RH-sensitive 机制）}} ✓✓$$
 $$\qquad \textbf{第一部分（已完成 ✓）}：\text{finite compatibility} \Longrightarrow \text{global realization}（＝ \text{V269-A(i)}）✓$$
 $$\qquad \textbf{第二部分（待证 ⚠️）}：\textbf{归因二分} —— \text{若 global failure}\ \textbf{真是 obstruction}，\text{则在}\ \textbf{已有代数结构} \text{下它必进入}\ \textbf{G3};\ \text{否则}\ \textbf{它不能叫 obstruction}，\text{只能进入}\ \textbf{non-cylinder 残差} ✓$$
 $$\qquad \textbf{由此得到的判词（照抄唐先生）}：\text{目前最重要的结果}\ \textbf{不是"二分已完成"} ✗，\text{而是}$$
