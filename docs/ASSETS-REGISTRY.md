@@ -231,3 +231,5 @@ $$\qquad\text{否则}\ \text{容易只是换一个名字重新回到 Weil／C--S
 
 ### 状态
 $$\boxed{\text{停在此处（2026-09-17）}\ ——\ \text{不以"再找一个能给}\ N^{-\delta}\ \text{的估计"作为（丙）的起点}}✓$$
+
+| C-38 | **严格化重做：反证链 $D=0\Rightarrow$RH（首版论文期）** | `docs/RIGORIZATION-candidate-proof-v1-D0-implies-RH.md`（2026-09-17）| 提取 `candidate-proof-v1.md`（2026-08-31，首版论文 `rh-discriminator-v28.tex` 同期）并逐引理严格化：**定理 A**（轨道正性，自推闭式 $P_\gamma(\delta)=\frac{2N}{(1+\gamma^2)^2W^2}$，$N\ge\delta^2(10\gamma^6+18\gamma^4+6\gamma^2-2)>0$）、**定理 B**（轨道分解＋绝对收敛，$P\asymp20\delta^2\gamma^{-6}$）、**定理 C**（$\sum_\rho[1-(\rho-\frac12)^2]^{-2}=C_1$ 无条件，Hadamard＋偏分式，$B=L(0)$ 相消，全部绝对收敛）、**定理 D/E**（$D=S_\gamma-C_1$ 且无条件 $S_\gamma\ge C_1$）、**定理 F**（判据：RH$\iff S_\gamma=C_1\iff D=0$）、**定理 H$_m$**（离轴轨道至多 $m$ 个 $\Rightarrow D=\sum_{j\le m}P_{\gamma_j}(\delta_j)$ 有限显式正项和；推论 H$_m'$ 定量检测下界 $\kappa(\delta_0,\Gamma)>0$）｜**唯一缺口**＝原引理 F，且 F$\iff$RH（严格双向）⟹ 原链为判据非证明，与 `A13-2b` 记"失败的尝试"一致且此处给出严格理由｜原档 4 漏洞处置：关闭 3、消解 1｜数值：$C_1=7.3772455e$-5、偏分式精确、前 300 零点 $2\sum=7.376929e$-5（差=尾部估计）、$P$ 渐近吻合｜不声称 RH；与 v2.8 判据同一；`E30-2` 视角属"机械×输入"型，与 W6/SUPPORT-1 同址 |
