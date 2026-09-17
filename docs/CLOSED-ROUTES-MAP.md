@@ -2810,6 +2810,23 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 **§4 判词**：**P1-GAP**（缺失：尺度约定、$\varrho$/`phiV`）；但 **profile 读法下全部数值界通过** ⟹ 读数① ⟹ P1-YES ✓；$c$ ＝ 情形(iii)（预固定＋$4\le c$，存在性已证可取 4）✓✓
 **§5 边界**：手算积分；`l1_deriv_sq` 逼近但成立；不声称 P1-YES；未用 RH；零数值 ✓
 
+
+### F.5fz 🔍 **出处审计与外部可检验性（唐先生 17:53 批评的处置）**（2026-09-17 18:00）
+
+$$	extbf{级别定义}：[	extbf{L}]\ 	ext{＝文献可查}\ ig|\ [	extbf{O}]\ 	ext{＝我方自推（可复核但需读我方档）}\ ig|\ [	extbf{M}]\ 	ext{＝自造元语言（外部无对应物）}✓$$
+
+$$	extbf{逐条归属（详档} 	exttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md}	ext{）}：$$
+$$\qquad [	extbf{L}]\ 0.68185\（	ext{前沿 Remark 1.1＋Lean}\）\ ig|\ 0.6725\（	ext{CCLM17 Cor 14}\）\ ig|\ \Lambda\ge0\（	ext{Rodgers–Tao}\）\ ig|\ \Lambda\le0.2\（	ext{Polymath15}\）✓$$
+$$\qquad [	extbf{O}]\ oxed{"\lambda\le1\Rightarrow G\le0.672501"}\ -\ 	extbf{我方变分自推}（V316	o V302	o V303）\ 	ext{且}\ 	extbf{V301 版曾被我们自己撤回}⚠️;$$
+$$\qquad\qquad |\delta_T|symp(\log T)^{1.0}、	ext{分辨率地板}\ \gtrsim0.15、	ext{素数侧 44 倍余量}、	ext{GM 改进窗口}\ -\ 	ext{皆我方计算}⚠️$$
+$$\qquad [	extbf{M}]\ 	ext{"承重墙／三面一墙／NO-GO 商空间／N1--N13 机制母类／两轴结构／防伪门／攻击·穿透·封口／✓✓ 标记"}$$
+$$\qquad\qquad ⚠️\ 	extbf{且我方档案自己就记过}：	ext{"三面一墙"}\ 	extbf{已降级为待核}（	exttt{REVIEW-E4-FINAL §0}）；	ext{"类表完整"}\ 	extbf{未证}（	ext{§E.4 仍开}）✓$$
+
+$$oxed{	extbf{批评属实}：	ext{这套元语言只在项目内部自洽，未被外部检验}✗；\ 	ext{22 项台账中外部可判者仅有文献条目与少数可复算数值}}✓$$
+
+$$	extbf{处置（依唐先生两条建议）}：	ext{(E1)}\ 	ext{已产出}\ 	extbf{剥叙事单页标准陈述}：	exttt{docs/EXTERNAL-REVIEW-1-BC-reciprocity-claim-standalone.md}\（	ext{BC 互反恒等式 (4.17) 的归属核查，}	extbf{与 RH 无关}，	ext{附"何种观察会推翻"}）✓✓$$
+$$\qquad 	ext{(E2)}\ 	ext{找外部独立研究者复核}\ -\ 	extbf{只能由唐先生执行}（	ext{并提醒：应先给}\ 	extbf{单页陈述}，\ 	extbf{不是} 	ext{22 项台账}）✓$$
+
 ## F.4 与 §E.4 的关系（✓）
 
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
