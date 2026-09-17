@@ -39,6 +39,37 @@ $$\textbf{禁令}：\text{不得把"攻击失败"写成"定理"；不得把"未�
 | 21 | **D9** 对象混淆 | 纪律项 | 检查全档是否违反 | 找一处实际混淆（如 $t$ 的三种含义） | ⬜ |
 | 22 | **D10** τ/相位来源 | AOB2 极分解；DISCOVERY-R3（D1=0） | 核两档 | **D1$=0$** 是否可被**外生结构**绕过 | ⬜ |
 
+## §1b **扩展台账：＋两列（已执行攻击／前沿手段）**（依唐先生 16:29）
+> 列义：**⑤ 已执行攻击 ＋ 具体结果**（可复算/可引 ID）｜**⑥ 前沿技术手段 ＋ 成果**（含 `[未核]` 标注）
+
+| # | 项 | ⑤ **已执行攻击 ＋ 具体结果** | ⑥ **前沿技术手段 ＋ 成果** |
+|:--:|:--|:--|:--|
+| 1 | **W1** β墙 | **Λ₁ 攻证伪**（`C-34`）：不可能性＝条件命题，条件 $(D')$ 作为**全称陈述为假**（Mertens 反例）⟹ **Λ₁ 仍 OPEN** ✗；**A-2 数值提取已做**（前 ~500 零点 $\beta\approx1/2$，偏差 $<0.1$）✓；P27–P33 已定位 | **Jensen 多项式**（Griffin–Ono–Rolen–Zagier：最终双曲）｜**de Bruijn–Newman**（Polymath 15／Rodgers–Tao）｜Lamzouri `[未核]`｜Banks（GRH ⟺ RH＋模 $q$ 均匀）｜Guth–Maynard 大值→零密度 |
+| 2 | **W2** V181 | **V293（Track II-0）**：B1–B5 必要性反推；**局部下 B1⊥B2**；**局部无第三缩放律**；**战场＝聚合侧** ✓ | 显式公式／Weil 正性｜Rudnick–Sarnak｜Montgomery 二阶矩｜level of distribution |
+| 3 | **W3** 值面墙 | **V211 §5**：八类 $\Phi$ 全未实例化（UNINSTANTIATED）✗；**E1–E4 映射**（`V292`）；**V293 公理化**。结果：**无逃逸者** | Connes 迹公式｜Weil 正性｜非交换几何重构｜$F_1$／绝对几何｜de Branges |
+| 4 | **W4** A-leak | ⭐ **`V172` A-leak 扩张**：$\text{A-leak}\supseteq\{FE,\Gamma,Q,\text{degree},\text{conductor}\}\cup\{\text{增长／阶／全纯性／垂直带}\}$ ✓；＋**局部灵活性论证**（带 Euler 积的级数由局部因子族完全决定；**结构性公理只约束形状不约束值**）⟹ 结构性公理**不足** ✓✓ | Tate／adelic｜Connes–Consani｜**非阿基米德正性载体**（Track III **未开**）｜$p$-adic $L$｜Buium $\delta$-几何 |
+| 5 | **W5** 正性 | ⭐ **`V150`**（Well-foundedness 作第七类候选）⟹ **不成立** ✗（WF 被 II∪IV 吸收）⟹ **"无第七类"✓ 但不证类表完整**（§E.4 仍开）；**`V284`** 五族全数失败 ＋ **(III)⊥(V) 原理性互斥 ⟹ DEAD** ✓；**D-GRAM-1/2/3**（**正测度 Gram ⟹ PSD ⟹ 无 (1,1)**）✓；**POS3 六类穷举无逃逸者** ✓ | Connes 6.6(i)(ii)｜完全正性｜Hodge 极化｜Perron–Frobenius｜Deninger｜平方和／Gram |
+| 6 | **W6** SUPPORT-1 | ⭐ **W6-MAJORANT-1a→1g（七段）**：1a 卡点＝**MV 步**；1b 乘子＝四个平移 sign；1c **对称化 ⟹ 奇点消 ＋ 带限 $[-3T/2,3T/2]$ ＋ 带外＝0** ⟹ 裸 Hilbert 障碍**不成立**；1d 归一化勘误（离散 $\log n$ 网格 $\|S_B\|\asymp X$）；1g ⟹ **J3 ＋ cross-$X>T$ 正式 FAIL** ✗；**SUPPORT-1 合封**（`C-26`）；**Ceiling LP 重算**（`C-36`）：**0.6818287 是输入非输出**；行条件 $1.8367\times10^{-40}<3\times10^{-40}$ ✓；**Parseval 刚性 ⟹ 最优律原子位置必非整数** ✓✓；卡点＝**外部 JSON** | **Guth–Maynard 2026**（窗口 $N^{7/10}\lesssim V\lesssim N^{8/10}$，**对象类型不匹配**）｜**Harper 超 $\sqrt{}$**（squarefree／$k$-free）｜decoupling（BDG）｜Bettin–Chandee 三线性｜Matomäki $\theta<1/3$｜Heath-Brown–Jia $\theta<16/49$｜**Zeta23 rank–trace**（"**inertia bound replaces the positivity**"） |
+| 7 | **W7** 相位墙 | **⑫关修正**（"不在 RH 路径"）；**`E123` 量化第二证明**（与 `E96` 独立同向）✓ | Erdős–Turán 差异｜Weyl 等分布｜Banks |
+| 8 | **W8** 信息墙 | **FPCA 撤回**：输出信息量应为 $(x/\log x)\log\log x$；"排除一切有限状态机制"**无效** ✗；**`V271-A` 柱障碍** ✓ | 信息论上界（熵／数据处理／通信复杂度）｜sieve parity｜计算机辅助下界 |
+| 9 | **W9** 复杂度墙 | **已撤回**（素性 $\in$ P；AKS／筛法即低复杂度位置决定器）✗ | —（AKS 2002） |
+| 10 | **W10** 散射钉住 | **`G19`／`G20`**；**`V284` 五族全数失败** ⟹ **四线全不足**；**非自伴共振 ⟹ 无 $\mathrm{Re}\,\rho$ 夹逼**（第二次总封口）✓ | 散射理论（Lax–Phillips／Faddeev–Pavlov）｜共振谱刚性｜Krein–Pontryagin｜谱流 |
+| 11 | **W11** L1 | ⭐ **`V284` 五族审计全数失败**：(a) S 线对 ⟹ cocycle ⟹ `V177` $H^1=1$ ⟹ **coboundary ⟹ 平凡**；(b) Hecke 对 ⟹ 谱参数非 $\beta$；(c) $\theta$–Euler 对 ⟹ 闭合律…；＋**(III)⊥(V) 原理性互斥**；＋**虚 Airy 硬反例** ⟹ **DEAD** ✓✓ | 伪谱／resolvent growth｜Krein–Pontryagin 指标｜谱流／指标定理｜QNR｜虚 Airy 族 |
+| 12 | **W12** 2/3 天花板 | **Ceiling 审计 9 步**（`1e62446/394c68d/de475c7/addf952/50a35bc/19bccd8/a865977/0b7dd70/3304fa0`）：链追踪 ✓／逐区间核 ✓／**3 次勘误**／精确闭式 ✓／极值构型 ✓／自建码复现 $d_1$ ✓。结果：**数据侧无缺口**；仅剩 marks geometry ＋ **外部 JSON**；**Parseval 刚性**（新）✓ | rank–trace／inertia｜Montgomery–Taylor｜CCLM17 Cor.14｜Christoffel／单边 C–M–S｜near-CUE｜**Lean 内核化**（EnclOK 为唯一非内核项） |
+| 13 | **D1** 相位均匀性 | **CONV2**（局部撤回）＋**CONV3**（进一步撤回："不需零密度／不需分散界／不需均匀性"）⟹ **不是统一墙** ✓ | 分散法／大筛｜零密度｜Burnol 方法 |
+| 14 | **D2** 灾难消解 | **数值层**：A1-PROOF-SKELETON float 抵消 → **高精度已解** ✓；**方法层**：`E160` 诊断（audit-and-reduce **无生成步**）✗ | 精确／**区间算术**（EnclOK）｜符号计算｜Lean 内核化｜AI 辅助（NS 事件） |
+| 15 | **D3** 振荡项 | **`E92`**：±支，(A)$32.96$／(B)$2.3982\times10^4$，**44 倍余量** ✓；**`E93`** 账本：(2a)$2.6236\times10^6$ **死** ✗、(2b)$2.3351\times10^5$ **但错误替换** ✗；**`E96`** 封档＋存留更窄开放问题；**`E123`** $M_R=\infty$ ⟹ 素数侧可消解、**余项三路皆堵** | Selberg CLT／矩方法｜**Karatsuba** Theorem 4/3/C（$S_1$ 级）｜Rodgers–Tao｜Guth–Maynard｜Harper |
+| 16 | **D4** 相位感知聚合 | **`E123`** 量化第二证明（增益 $1.11\times10^5$）✓；**`E117`／`E121` 已关** ⟹ 唯一未探口＝**相位感知聚合** ✗ | 零点对相关｜大值｜Harper｜大筛／分散 |
+| 17 | **D5** moving-edge | **P27–P33 定位**（有限惯性**不**向无限维传输）✓ | 算子强／弱谱收敛｜有限截面｜伪谱 |
+| 18 | **D6** K2-E″ | **`V113`／`V114` 两次独立确认** ⟹ 模式成立 ✓；改秩输入**未找到** ✗ | ⭐ **rank–trace／inertia**（**恰是"改秩"工具**）｜覆盖秩框架｜大筛对偶 |
+| 19 | **D7** 负结果三关 | 三关已立并**实际用于否决** ✓；**穷尽性未证** ✗ | 元方法（无特定前沿） |
+| 20–21 | **D8／D9** | 纪律项；攻击方式＝找一处**实际**混用／混淆（本轮尚未找到实例） | 检查表（−） |
+| 22 | **D10** τ/相位来源 | **AOB2**：$\alpha/\tau$ 极分解 ⟹ **关闭"寻找 $\tau$"** ✓；**DISCOVERY-R3**：**算术无内生动力学（D1$=0$）** ⟹ 路径依赖只能来自观察者压缩 ✓ | 极化 Hodge／周期域｜重正化群｜随机矩阵｜熵／混沌 |
+
+## §1c 两列的**分布**（本轮归纳）
+$$\boxed{\text{⑤ 已执行攻击}}\ \text{已覆盖}\ \textbf{20/22}\ \text{项（D8/D9 为纪律项）；其中}\ \textbf{明确 FAIL/撤回}：\text{W6-majorant、W9、W11、W5(第七类)、D3(余项)}✓✓$$
+$$\qquad \text{而}\ \textbf{明确通过/已解}：\text{W1-数值、W4-A-leak扩张、W8-更正、D1-撤回、D2-数值、D3-素数侧、D6、D10}✓✓$$
+$$\boxed{\text{⑥ 前沿}}\ \text{与}\ \text{⑤}\ \textbf{高度重叠}：\text{我方执行过的攻击多落在"已审手段"内}；\text{前沿独有而未用}：\text{Jensen／de Bruijn–Newman、Guth–Maynard、Harper、rank–trace、区间算术}✓✓$$
 ## §2 优先序（建议，按"攻击价值 ÷ 成本"）
 $$\textbf{第 0 轮（最省，先做）}：\text{4 处}\ \texttt{[未核]} \text{文献位} —— \text{W3／W4／W7／W10} \Longrightarrow \text{成本最低、最可能产出}\ \textbf{修正}✓✓$$
 $$\textbf{第 1 轮}：\text{两根承重}\ \text{W1}／\text{W6} \quad(\text{分类的结论全压在它们上})✓✓$$
