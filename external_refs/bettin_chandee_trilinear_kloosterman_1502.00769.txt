@@ -1,0 +1,3648 @@
+Trilinear forms with Kloosterman fractions
+Sandro Bettin and Vorrapan Chandee
+January 10, 2018
+Abstract
+We give new bounds for ∑
+a,m,nαmβnνa e
+(am
+n
+)
+where αm, βn and
+νa are arbitrary coeﬃcients, improving upon a result of Duke, Fried-
+lander and Iwaniec [DFI97]. We also apply these bounds to problems
+on representations by determinant equations and on the equidistribu-
+tion of solutions to linear equations.
+1 Introduction
+Fora,b,c positive integers, one deﬁnes the classical Kloosterman sum as
+S(a,b ;c) :=
+∑*
+x (mod c)
+e
+(ax +bx
+c
+)
+where, as usual, x denotes the multiplicative inverse of x modulo the de-
+nominator c, ∑* denotes a sum over the reduced residues modulo c, and
+e(x) :=e2πix.
+Several important results in number theory have been obtained by us-
+ing bounds for single Kloosterman sums such as Weil’s bound, S(a,b,c )≪
+(a,b,c )
+1
+2c
+1
+2 +ε, or, more recently, for averages of Kloosterman sums, in partic-
+ular the bounds of Deshouillers and Iwaniec [DI].
+The results of [DI] are particularly eﬃcient when considering averages of
+S(a,b,c ) with weightsf(a,b,c ) that are smooth or have at least some special
+2010 Mathematics subject classiﬁcation. 11M06, 11M26
+Key words and phrases. Kloosterman sums, Trilinear forms.
+1
+structure. For many applications, however, one would like to have non-trivial
+bounds in the case of arbitrary weights and such bounds would be useful also
+when the coeﬃcients have arithmetic/geometric nature, but have conductor
+which is too large to be able to employ the extra information.
+In the beautiful paper [DFI97], Duke, Friedlander and Iwaniec addressed
+this problem, obtaining a non-trivial bound for the following “bilinear form
+with Kloosterman fractions”:
+Ba(M,N ) :=
+∑∑
+m∈M,n∈N,
+(m,n)=1
+αmβn e
+(am
+n
+)
+,
+where αm,βn are arbitrary coeﬃcients supported on M := [M/2,M ] and
+N := [N/2,N ] respectively, and a⁄= 0. The main result of [DFI97] is the
+bound
+Ba(M,N )≪‖α‖‖β‖(|a| +MN )
+3
+8 (M +N)
+11
+48 +ε, (1.1)
+where‖·‖ denotes theL2-norm. Notice that, in the important case M≈N,
+a≪ MN , the bound in (1.1) saves roughly a power of N
+1
+48 over the trivial
+boundBa(M,N )≪‖α‖‖β‖(MN )
+1
+2 . In this paper, we reﬁne the arguments
+of Duke, Friedlander and Iwaniec and improve upon their bound, obtaining
+Ba(M,N )≪‖α‖‖β‖(|a| +MN )
+1
+2 (MN )− 3
+20 +ε(M +N)
+1
+4.
+We get a saving of N
+1
+20 when M ≈ N, a≪ MN . More generally, we
+consider the case when an extra average over a is introduced, as this often
+appears in applications. We then provide a new bound for sums of the form
+B(M,N,A ) :=
+∑∑∑
+a∈A,m∈M,n∈N,
+(m,n)=1
+αmβnνa e
+(
+ϑam
+n
+)
+,
+where νa are arbitrary coeﬃcients supported on A := [A/2,A ] and ϑ⁄= 0.
+Theorem 1. Letϑ be a nonzero integer. Then
+B(M,N,A )≪‖α‖‖β‖‖ν‖
+(
+1 +|ϑ|A
+MN
+) 1
+2
+×
+(
+(AMN )
+7
+20 +ε(M +N)
+1
+4 + (AMN )
+3
+8 +ε(AN +AM)
+1
+8
+)
+.
+(1.2)
+2
+Notice that when |ϑ|A ≪ MN and M ≈ N, the above bound im-
+proves the trivial bound B(M,N,A ) ≪ ‖α‖‖β‖‖ν‖(AMN )
+1
+2 by roughly
+min(A
+3
+20N
+1
+20,N
+1
+8 ).
+Remark 1. One can perturb slightly the argument of the exponential function
+and still get the same bound. Indeed, if fa,ϑ(x,y )∈C 1(R2) is such that
+∂
+∂xfa,ϑ(x,y )≪ X
+x2y, ∂
+∂yfa,ϑ(x,y )≪ X
+xy2, ∀x∈N ,∀y∈M (1.3)
+for some X >1 and any a,ϑ , then when ϑ⁄= 0 we have that
+Bf(M,N,A ) :=
+∑∑∑
+m∈M,n∈Na∈A, (m,n)=1
+αmβnνa e
+(
+ϑam
+n +fa,ϑ(m,n )
+)
+satisﬁes the same bound (1.2) ofB(M,N,A ) provided that the factor (1 +
+|ϑ|A/(MN ))
+1
+2 is replaced by (1 + (|ϑ|A +X)/(MN ))
+1
+2 .
+Our main motivation for this paper concerns the second moment of the
+Riemann zeta-function times an arbitrary Dirichlet polynomial,
+I :=
+∫
+R
+⏐⏐ζ( 1
+2 +it)A( 1
+2 +it)
+⏐⏐2
+Φ(t/T )dt,
+where Φ(x) is a test function (supported on [1, 2], say) andA(s) :=∑
+n≤Tθ
+an
+ns
+with an arbitrary coeﬃcients with an≪ nε. Balasubramanian, Conrey and
+Heath-Brown [BCH] computed the asymptotic for I when θ < 1
+2. In this
+case only the “diagonal terms” contribute. In order to break the 1
+2 barrier
+one has to deal with the “oﬀ-diagonal terms”, which quickly leads to the
+problem of obtaining non-trivial bounds forB(M,N,A ). Equation (1.1) and
+the stronger Theorem 1 provide such non-trivial bounds, and so, in a joint
+work with Radziwi l l [BCR], we were able to compute the asymptotic for I
+for θ < 17
+33. As a comparison, the use of (1.1) would have given the same
+result on the smaller range θ < 48
+95. In the same work, we also formulate
+a conjectural bound for B which, if true, would allow to extend the range
+to θ < 1 and thus imply the Lindel¨ of hypothesis (indeed, taking an = niτ,
+T =|τ|, and N =T 1−ε, one obtains ζ( 1
+2 +iτ)≪ (1 +|τ|)ε by using an easy
+modiﬁcation of (7.20.2) in [Tit]).
+The ﬂexibility of Theorem 1 makes it feasible to be applied to a wide class
+of problems in number theory. Moreover, the strength of the new bound is
+3
+now competitive even in some cases when one knows and could potentially
+employ some information on the coeﬃcients.
+We also give two easy applications of Theorem 1. One could use the
+new bound also to improve some results proved using (1.1) (e.g. [DFI12]
+or, possibly, to sharpen sub-convexity bounds for automorphic L-functions
+(see [DFI02]) or to handle sums such as those considered by Fouvry [Fou] and
+Bombieri, Friedlander and Iwaniec [BFI]. Another application was recently
+given in [BS], where our bound was used to study the distribution of the
+fractional parts of Dedekind sums.
+The ﬁrst corollary deals with representations by determinant equations
+and improves the main result of [DFI95], whereas the second concerns with
+the equidistribution of solutions to linear equations and improves upon a
+theorem of Shparlinski [Shp].
+Corollary 1. Let ∆⁄= 0 and let
+T (M1,M 2,N 1,N 2) :=
+∑∑∑∑
+m1∈M1,m2∈M2,n1∈N1,n2∈N2,
+m1n2−m2n1=∆
+f(m1)g(m2)αn1βn2,
+wheref(m1),g(m2),αn1 andβn2 are supported onM1 := [M1/2,M 1],M2 :=
+[M2/2,M 2],N1 := [N1/2,N 1] andN2 := [N2/2,N 2] respectively. Moreover,
+assume f (j)≪ηjM−j
+1 ,g (j)≪ηjM−j
+2 , for all j≥ 0 and some η >1. Then
+T (M1,M 2,N 1,N 2) =
+∑
+n1∈N1,n2∈N2,
+(n1,n2)|∆
+(n1,n 2)
+n1n2
+αn1βn2
+∫
+R
+f
+(x + ∆
+n2
+)
+g
+(x
+n1
+)
+dx
++O
+(
+(ηR)
+3
+2‖α‖‖β‖(N1N2)
+7
+20 (N1 +N2)
+1
+4 +ε(M1M2)ε
+)
+,
+(1.4)
+whereR := M1N2
+M2N1
++ M2N1
+M1N2
+.
+For comparison, Duke, Friedlander and Iwaniec [DFI95] obtained the
+same result with the error term
+O
+(
+(ηR)
+19
+8‖α‖‖β‖(N1N2)
+3
+8 (N1 +N2)
+11
+48 +ε(M1M2)ε
+)
+.
+We remark that one can use Theorem 1 to obtain stronger results when
+averaging over ∆ (cf. [BCR]).
+4
+Corollary 2. For any positive coprime integers m,n , let ρm,n := a0
+m where
+(a0,b 0) is the smallest positive solution toam−bn = 1. For any set of integers
+XN ⊆ [0,N ], let RXN :={ρm,n|m,n∈X N}. Then, if XN has cardinality
+|XN|≫ N 1− 1
+20 for some ε > 0, then the set RXN is equidistributed on the
+interval [0, 1] as N→∞ .
+Shparlinski obtained the same result with 1
+20 replaced by 1
+48. We skip the
+proof of this corollary as it can be obtained in a straightforward manner by
+proceeding as in [Shp], using (1.2) instead of (1.1).
+As observed in [DFI97], a variation of the arguments used to bound
+B(M,N,A ) can be used to treat the twisted sum
+A (M,N,A ) :=
+∑∑∑
+a∈A,m∈M,n∈N,
+(m,n)=(2,mn)=1
+αmβnνa
+(m
+n
+)
+e
+(
+ϑam
+n
+)
+,
+where
+(·
+·
+)
+is the Jacobi symbol. We thus conclude the introduction with the
+analogue of Theorem 1 for A (M,N,A ).
+Theorem 2. Letϑ⁄= 0. Then
+A (M,N,A )≪‖α‖‖β‖‖ν‖
+(
+1 +|ϑ|A
+NM
+) 1
+2
+×
+(
+(MN )
+3
+10 (AM +AN)
+7
+20 +ε +A
+1
+2 (N +M)
+7
+8 +ε)
+.
+(1.5)
+Acknowledgements. We would like to thank S. Drappeau, A. Harper,
+D. Koukoulopoulos, X. Li and M. Radziwi l l for useful discussions and M.B.
+Milinovich and N. Ng for bringing the paper [DFI97] to our attention.
+2 Outline of the proof of Theorem 1
+Our proof has roughly the same structure of Duke, Friedlander and Iwaniec’s
+proof of (1.1) and follows their clever application of the ampliﬁcation method.
+However we introduce several reﬁnements in their arguments, among which
+is particularly important the fact that we keep a longer diagonal when using
+the Cauchy-Schwartz inequality (a possibility mentioned in [DFI97]). This
+change, together with the extra average over a, introduces new subtle com-
+plications and requires a rather careful analysis.
+5
+We now give an outline of the proof of Theorem 1. The proof of Theorem 2
+is very similar and the required changes are described in Section 8.
+First, we notice that we can assume that βn is supported on integers
+coprime to ϑ, as can be seen by pulling out the common factor between n
+andϑ and applying the Cauchy-Schwarz inequality. Then, following [DFI97],
+we apply the Cauchy-Schwarz inequality to the sum over m and obtain that
+B(M,N,A )≪‖α‖C1(M,N,A ;β,ν )
+1
+2, (2.1)
+where for any positive integer b,
+Cb(M,N,A ;β,ν ) :=
+∑
+m∈M,
+(m,b)=1
+⏐⏐⏐⏐
+∑
+a∈A
+∑
+n∈N,
+(m,n)=1
+βnνa e
+(
+ϑam
+bn
+)⏐⏐⏐⏐
+2
+.
+At this point, we assume thatβn is supported on square-free integers coprime
+to b and that (ϑ,b ) = 1. We will ﬁrst give a bound for Cb in this case and
+in Section 6 we will use the freedom given by the parameter b to obtain a
+bound forC1 valid in the general case.
+We introduce an ampliﬁer and consider the sum Db(M,N,A,L ;β,ν ) de-
+ﬁned by
+Db :=
+∑
+m∈M,
+(m,b)=1
+1
+ϕ(m)
+∑
+χ (mod m)
+⏐⏐ ∑
+𝓁∈L,
+(𝓁,ϑb)=1
+χ(𝓁)
+⏐⏐2
+⏐⏐⏐⏐
+∑∑
+n∈N,a∈A,
+(m,n)=1
+χ(n)βnνa e
+(
+ϑam
+bn
+)⏐⏐⏐⏐
+2
+,
+whereL :={𝓁 is prime| L<𝓁< 2L} and L is a parameter to be chosen at
+the end of the argument. If L> 2 log(bϑM), then
+∑
+𝓁∈L, (𝓁,ϑb)=1
+χ0(𝓁)≫ L
+logL,
+where χ0 is the principal character modulo m. Thus,
+Cb≪ M log2L
+L2
+∑
+m∈M,
+(m,b)=1
+1
+ϕ(m)
+⏐⏐⏐⏐
+∑
+(𝓁,ϑb)=1,
+𝓁∈L
+χ0(𝓁)
+⏐⏐⏐⏐
+2⏐⏐⏐⏐
+∑
+n∈N,
+(m,n)=1
+∑
+a∈A
+βnνa e
+(
+ϑam
+bn
+)⏐⏐⏐⏐
+2
+≪ML−2+εDb(M,N,A,L ;β,ν ),
+(2.2)
+6
+provided thatL> 2 log(bϑM). Thus, we have reduced the problem of bound-
+ingCb to that of bounding the more ﬂexibleDb. Squaring out and exploiting
+the orthogonality relation of character sums, we obtain
+Db(M,N,A ;β,ν ) =
+∑∑∑∑∑∑∑
+m∈M,n1,n2∈N,a1,a2∈A,𝓁1,𝓁2∈L,
+(mbϑ,𝓁1𝓁2n1n2)=(m,b)=1,
+𝓁1n1≡𝓁2n2 (mod m)
+βn1νa1βn2νa2 e
+(
+ϑa1m
+bn1
+−ϑa2m
+bn2
+)
+= Db(M,N,A,L ;β,ν ) + Ob(M,N,A,L ;β,ν ), (2.3)
+where Db is the contribution to Db from the “diagonal terms” 𝓁1n1 = 𝓁2n2,
+and Ob is the sum restricted to the “oﬀ-diagonal” terms 𝓁1n1⁄=𝓁2n2.
+We bound Db in Section 3 by using Weil’s bound (and thus the name
+“diagonal terms” is perhaps misleading in this case), treating it diﬀerently
+from [DFI97] where Db is bounded trivially.
+Section 4 is devoted to bounding Ob which constitutes the most delicate
+part of the proof. The argument proceeds roughly in the following way (where
+the bounds stated below refer to the case when ϑ, A and b are not too big
+with respect to MN )
+• In Section 4.1.1, we switch to the complementary divisor d of the con-
+gruence relation𝓁1n1≡𝓁2n2 (mod m), eliminating the variablem. This
+also requires that we ﬁrst split the sum over m into congruence classes
+c (mod b). Notice that the divisor switching makes the conductor drop
+from size M to size D =NL/M≈L when N≈M.
+• In Section 4.1.2, we apply the Cauchy-Schwarz inequality to the sums
+overn1,n 2,a 2,c but not to the sums over d,a 1,𝓁 1,𝓁 2. As a comparison,
+in [DFI97] the Cauchy-Schwarz inequality is applied to all the sums
+except those over 𝓁1 and 𝓁2. After this operation we obtain that Ob
+is bounded by b
+1
+2‖β‖2‖ν‖ times the square-root of a sum which has
+roughly the following shape:
+∑
+n1,n2≍N,
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2≍L,
+0⁄=|d1|,|d1|≪D,
+a1,a′
+1,a2≍A
+νa1νa′
+1
+∑*
+c (mod b),
+𝓁1n1≡𝓁2n2−cd (mod b|d|),
+𝓁′
+1n1≡𝓁′
+2n2−cd′ (mod b|d′|)
+e
+(
+δ1
+𝓁2𝓁′
+2bn2
+n1
++δ2
+𝓁1𝓁′
+1bn1
+n2
+)
+,
+whereδ1 =−ϑ(da1𝓁′
+2−d′a′
+1𝓁2),δ2 =−ϑa2(d𝓁′
+1−d′𝓁1) andD =NL/M≈
+L if N≈M. (Notice that we lost a factor of b
+1
+2 over the trivial bound
+when applying Cauchy-Schwarz with respect to c.)
+7
+• In Section 4.1.3.2, we apply the elementary reciprocity law (4.18), which
+roughly allows one to change bα
+β into−bβ
+α− αβ
+b modulo 1, and so the
+above exponential becomes e
+(
+δ1
+𝓁2𝓁′
+2bn2
+n1
++δ2
+bn2
+𝓁1𝓁′
+1n1
++ φ
+b
+)
+= e
+(
+∆𝓁2𝓁′
+2bn2
+𝓁1𝓁′
+1n1
++ φ
+b
+)
+,
+where ∆ =a2(d𝓁′
+1−d′𝓁1)𝓁2𝓁′
+2−(da1𝓁′
+2−d′a′
+1𝓁2)𝓁1𝓁′
+1 andφ doesn’t depend
+on n2 (since the above congruence conditions determine n2 modulo b).
+• If ∆⁄= 0, then we use the congruence conditions to determinec (mod b)
+(independently from n2) and we apply Weil’s bound to the sum over
+n2. This way we gain a factor of N
+1
+2/L and lose a factor of D2 (since
+the congruence conditions modulo d,d′ get lost) over the trivial bound
+for the above sum. Thus, the contribution of the ∆ ⁄= 0 terms to Ob is
+≪b
+1
+2‖β‖2‖ν‖2L
+7
+2N
+3
+4A if N≈M.
+• If ∆ = 0, then from this equality we can express two out of the 𝓁 and
+one out of the a variables in terms of the remaining variables, saving
+(the square root of) a factor of L2A so that the contribution of the
+∆ = 0 terms to Ob is≪b
+1
+2‖β‖2‖ν‖2LNA
+1
+2 ifN≈M. We remark that
+here we are able to use fully the information given by the condition
+∆ = 0. Indeed, interpreting it as a congruence modulo 𝓁i,𝓁′
+i we can
+determine two of this variables (as in [DFI97]), whereas interpreting it
+as an equation we can determine one amonga1,a′
+1;1 it is also important
+that we can do this without losing the congruence conditions modulo
+d1,d 2.
+In Section 5 we combine the bounds obtained for the diagonal and oﬀ-
+diagonal terms, and we optimize the parameter L. If N ≈ M and ϑ, A
+andb are not too big, then the main contribution come from the oﬀ-diagonal
+terms, so from (2.2) we obtain Cb≪ b
+1
+2‖β‖2‖ν‖2N
+7
+4 +εA
+1
+2 (A
+1
+2L
+3
+2 +L−1N
+1
+4 ).
+Equalizing A
+1
+2L
+3
+2 and L−1N
+1
+4 we are led to take L ≈ A− 1
+5N
+1
+10 and so
+Cb ≪ b
+1
+2‖β‖2‖ν‖2N
+19
+10 +εA
+7
+10 . Inserting this in (2.1) we obtain Theorem 1
+in the case where βn is supported on square-free integers, N≈M and ϑ, A
+and b not too big.
+Finally, in Section 6 we remove the square-free condition on βn, and in
+Section 7 we complete the proof of Theorem 1.
+When following the above steps, several complications arise when some
+of the variables are not pairwise coprime or are far from the “main” ranges.
+1In particular not applying Cauchy-Schwarz with respect to a2 would not help, since
+we can use ∆ = 0 as an equation to determine a variable only once.
+8
+Typically, we ﬁrst deal with the case when the variables are coprime and then
+we remove these assumptions by using the bounds proved in the coprime case.
+As mentioned above, we conclude the paper by explaining, in Section 8,
+the modiﬁcations needed in the above arguments to prove Theorem 2 and,
+in Section 9, we give a proof to Corollary 1.
+Remark. Throughout the paper, we use the common convention in analytic
+number theory that ε denotes an arbitrarily small positive quantity that may
+vary from line to line.
+3 The diagonal terms
+In this section we bound the diagonal terms Db := Db(M,N,A,L ;β,ν ) as
+the following lemma.
+Lemma 1. Assume that (ϑ,b ) = 1 and thatβn is supported on integers which
+are coprime to b. Also let A,b,ϑ,N ≪MC for some constant C >0. Then
+Db(M,N,A,L ;β,ν )≪‖β‖2‖ν‖2L
+(
+A(bLN)
+1
+2 + AM
+bN +M
+)
+Mε. (3.1)
+Proof. By symmetry and the inequality 2 |ab|≤ a2 +b2 , we see that the
+diagonal terms are bounded by
+Db :=
+∑∑∑∑∑∑∑
+m∈M,𝓁1,𝓁2∈L,n1,n2∈N,a1,a2∈A
+(mbϑ,𝓁1𝓁2n1n2)=(m,b)=1, 𝓁1n1=𝓁2n2
+νa1νa2βn1βn2 e
+(
+ϑa1m
+bn1
+−ϑa2m
+bn2
+)
+≤
+∑∑∑∑∑∑
+𝓁1,𝓁2∈L,n1,n2∈N,a1,a2∈A
+(bϑ,𝓁1𝓁2n1n2)=1, 𝓁1n1=𝓁2n2
+(|βn1νa1|2 +|βn2νa2|2)
+×
+⏐⏐⏐⏐
+∑
+m∈M,
+(m,b𝓁1𝓁2n1n2)=1
+e
+(
+ϑa1𝓁1m
+b𝓁1n1
+−ϑa2𝓁2m
+b𝓁2n2
+)⏐⏐⏐⏐
+≪
+∑∑∑∑∑∑
+𝓁1,𝓁2∈L,n1,n2∈N,a1,a2∈A
+(bϑ,𝓁1𝓁2n1n2)=1, 𝓁1n1=𝓁2n2
+|βn1νa1|2
+⏐⏐⏐⏐
+∑
+m∈M,
+(m,b𝓁1𝓁2n1n2)=1
+e
+(
+ϑ(a1𝓁1−a2𝓁2)m
+b𝓁1n1
+)⏐⏐⏐⏐.
+(3.2)
+9
+For the terms satisfyinga1𝓁1⁄=a2𝓁2 we use the version of Weil’s bound given
+in Lemma 3, in the appendix. We obtain
+∑
+m∈M,
+(m,b𝓁1𝓁2n1n2)=1
+e
+(
+ϑ(a1𝓁1−a2𝓁2)m
+b𝓁1n1
+)
+≪ (bLN)
+1
+2 +ε + (a1𝓁1−a2𝓁2,bn 1𝓁1)M 1+ε
+bLN ,
+since (ϑ,b𝓁 1n2) = 1. It follows that the contribution to Db coming from these
+terms is bounded by
+≪
+∑∑∑∑∑
+𝓁1,𝓁2∈L,n1∈N,a1,a2∈A, 𝓁 2|𝓁1n1
+|βn1νa1|2(bLN)
+1
+2 +ε +
++
+∑∑∑
+n1∈N,a1,a2∈A
+|βn1νa1|2M 1+ε
+bLN
+∑∑
+𝓁1,𝓁2
+a1𝓁1⁄=a2𝓁2,𝓁 2|𝓁1n1
+(a1𝓁1−a2𝓁2,bn 1)(a2𝓁2,𝓁 1)
+≪‖β‖2‖ν‖2ALMε
+(
+(bLN)
+1
+2 + M
+bN
+)
+,
+since∑∑∑
+𝓁1,𝓁2,a2,
+a1𝓁1⁄=a2𝓁2, 𝓁2|𝓁1n1
+(a1𝓁1−a2𝓁2,bn 1)≪
+∑
+|c|≤4AL,
+c⁄=0
+(c,bn 1)
+∑∑∑
+𝓁1,𝓁2,a2,
+a1𝓁1−a2𝓁2=c,
+𝓁2|𝓁1n1
+(a2𝓁2,𝓁 1)
+≪AL2Mε.
+(3.3)
+The contribution to Db coming from the terms with a1𝓁1 = a2𝓁2 is trivially
+O(‖β‖2‖ν‖2LM 1+ε), and we thus obtain (3.1).
+4 The oﬀ-diagonal terms
+In this section we bound the oﬀ-diagonal terms Ob(M,N,A,L ;β,ν ). We
+start by dividing Ob according to whether (𝓁1,𝓁 2) = 1 or not:
+Ob(M,N,A,L ;β,ν ) = Eb,1(M,N,A,L ;β,ν ) + E∗
+b,1(M,N,A,L ;β,ν ), (4.1)
+where, for any η satisfying (η,b ) = 1 and (η,𝓁 ) = 1 for all 𝓁∈L , we deﬁne
+Eb,η :=
+∑∑∑∑∑∑∑
+𝓁1,𝓁2∈L,m∈M,n1,n2∈N,a1,a2∈A
+(mbϑ,𝓁1𝓁2n1n2)=(m,b)=(𝓁1,𝓁2)=1, η|m,
+𝓁1n1≡𝓁2n2 (mod m), 𝓁1n1⁄=𝓁2n2
+βn1νa1βn2νa2 e
+(
+ϑa1m
+bn1
+−ϑa2m
+bn2
+)
+,
+(4.2)
+10
+and E∗
+b,η(M,N,A,L ;β,ν ) is the same sum with ( 𝓁1,𝓁 2) = 1 replaced by
+(𝓁1,𝓁 2)> 1. We notice that
+E∗
+b,1 =
+∑
+1<𝓁∈L
+(Eb,1(M,N,A, {1};β,ν )− Eb,𝓁(M,N,A, {1};β,ν )), (4.3)
+where we extended the deﬁnition of Eb,η to the case whereL ={1}. Thus it
+suﬃces to bound Eb,η as in the following Lemma.
+Lemma 2. Assume that (ϑ,b ) = 1 and that βn is supported on square-free
+integers which are coprime to b. Also let A,b,ϑ,N ≪MC for some constant
+C >0. Then
+Eb,η≪‖β‖2‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+(b
+1
+4N
+1
+2L
+1
+2
+M
+1
+2
++ L
+5
+2N
+M + N
+1
+4
+A
+1
+2
+)
+.
+It then follows that
+E∗
+b,1≪‖β‖2‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+(b
+1
+4N
+1
+2
+M
+1
+2
++ N
+M + N
+1
+4
+A
+1
+2
+)
+,
+and so, by (4.1), we obtain the following bound for Ob.
+Corollary 3. Under the same conditions of Lemma 2 we have
+Ob≪‖β‖2‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+(b
+1
+4N
+1
+2L
+1
+2
+M
+1
+2
++ L
+5
+2N
+M + N
+1
+4
+A
+1
+2
+)
+. (4.4)
+The remaing part of Section 4 is devoted to proving Lemma 2.
+We start by introducing some notation:
+n′
+1 := n1
+(n1,𝓁 1𝓁2) = n1
+p1p2
+, p2 = (𝓁2,n 1), p1 = (𝓁1,n 1),
+n′
+2 := n1
+(n2,𝓁 1𝓁2) = n2
+q1q2
+, q1 = (𝓁1,n 2), q2 = (𝓁2,n 2),
+(4.5)
+and notice that, for square-free integersn1,n 2, this automatically gives (𝓁1𝓁2,n′
+1n′
+2) =
+1. We also divide Eb,η(M,N,A,L ;β,ν ) further into
+Eb,η = Sb,η + S∗
+b,η, (4.6)
+where Sb,η and S∗
+b,η are obtained by restricting the sums to (n′
+1,n′
+2) = 1 and
+(n′
+1,n′
+2) > 1 respectively. We will prove a bound for Sb,η in Subsection 4.1
+(cf. equation (4.32)), and in Subsection 4.2 we will deduce from this bound
+a bound for S∗
+b,η.
+11
+4.1 The terms with (n′
+1,n′
+2) = 1
+In this section we consider the sum
+Sb,η :=
+∑∑∑∑∑∑∑
+𝓁1,𝓁2∈L,n1,n2∈N,m∈M,a1,a2∈A
+(mbϑ,𝓁1𝓁2n1n2)=(m,b)=(𝓁1,𝓁2)=(n′
+1,n′
+2)=1
+𝓁1n1≡𝓁2n2 (mod m), (𝓁1𝓁2,n′
+1n′
+2)=1,
+𝓁1n1⁄=𝓁2n2, η|m
+βn1νa1βn2νa2 e
+(
+ϑa1m
+bn1
+−ϑa2m
+bn2
+)
+.
+4.1.1 Introducing the complementary divisor
+We wish to switch to the complementary divisor of the congruence condition
+𝓁1n1≡𝓁2n2 (mod m) (with 𝓁1n1⁄=𝓁2n2), so we write this as
+md0 =𝓁1p1p2n′
+1−𝓁2q1q2n′
+2, d 0∈ Z⁄=0
+with pi, qi as in (4.5). We simplify the common factors and rewrite this
+equality as
+md = ˜𝓁1p1n′
+1− ˜𝓁2q2n′
+2 (4.7)
+for d :=d0/q1p2 and
+˜𝓁1 := 𝓁1
+q1
+, ˜𝓁2 := 𝓁2
+p2
+. (4.8)
+We notice that the condition (m,b𝓁 1𝓁2n1n2) = 1 can be factored into (m,b q1p2)
+= 1 and (m, ˜𝓁1˜𝓁2p1q2n′
+1n′
+2) = 1. Moreover, for (𝓁1n′
+1,𝓁 2n′
+2) = 1, the conditions
+(m, ˜𝓁1˜𝓁2p1q2n′
+1n′
+2) = 1,η|m and (4.7) can be expressed in the equivalent form
+(d, ˜𝓁1˜𝓁2p1q2n′
+1n′
+2) = 1, ˜𝓁1p1n′
+1≡ ˜𝓁2q2n′
+2 (mod|d|η),
+q1p2|d|≤ D := 3NL
+M , n ′
+2∈I ,
+for a certain interval I :=I(𝓁1,𝓁 2, p1, p2, q1, q2,d,n′
+2). Thus, to eliminate
+the variable m, it remains to express the condition ( m,b q1p2) = 1 and the
+argument of the exponential in terms of the remaining variables.
+We do this by dividing the sum over m according to the residue classes
+m≡ c (mod bq1p2) for c∈ (Z/bq1p2Z)∗. Thus, using also (4.7), we obtain
+that m satisﬁes the following congruence conditions
+m≡d˜𝓁1p1n′
+1 (mod q2n′
+2), m≡−d˜𝓁2q2n′
+2 (mod p1n′
+1), m≡c (mod bq1p2)
+12
+and the argument of the exponential function
+ϑ
+(a1m
+bn1
+− a2m
+bn2
+)
+=ϑ
+( a1m
+bp1p2n′
+1
+− a2m
+bq1q2n′
+2
+)
+is congruent modulo 1 to
+ϑ
+(
+−da1bp2˜𝓁2q2n′
+2
+p1n′
+1
+−da2˜𝓁1p1n′
+1bq1
+q2n′
+2
++ a1cp1n′
+1
+bp2
+− a2cq2n′
+2
+bq1
+)
+≡ϑ
+(
+c
+(a1p1n′
+1
+bp2
+− a2q2n′
+2
+bq1
+)
+−d
+(a1bp2˜𝓁2q2n′
+2
+p1n′
+1
++ a2˜𝓁1p1n′
+1bq1
+q2n′
+2
+))
+, (4.9)
+since for ( β,γ ) = ( α,βγ ) = 1, we have α
+βγ ≡ αβ
+γ + αγ
+β (mod 1). Finally,
+the conditions m≡ c (mod bq1p2) and ˜𝓁1p1n′
+1≡ ˜𝓁2q2n′
+2 (mod|d|η) can be
+combined into the equivalent
+˜𝓁1p1n′
+1≡ ˜𝓁2q2n′
+2−cηd (mod bq1p2|d|η).
+Thus,
+Sb,η =
+∑∑∑∑∑∑∑
+𝓁1,𝓁2∈L,n1,n2∈N,a1,a2∈A,d≤D/q1p2
+(bϑ,𝓁1𝓁2n1n2)=(𝓁1,𝓁2)=(n′
+1,n′
+2)=1,
+(d,˜𝓁1˜𝓁2p1q2n′
+1n′
+2)=(n′
+1n′
+2,𝓁1𝓁2)=1, n′
+2∈I,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2
+∑*
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη
+(mod bq1p2|d|η)
+βn1νa1βn2νa2 e(··· ),
+where the argument of the exponential is given by (4.9) and n′
+i, pi, qi, ˜𝓁i are
+deﬁned in (4.5) and (4.8). Now, we treat p1, p2, q1, q2,n′
+1,n′
+2 as variables and,
+after switching the order of summation, we have
+Sb,η =
+∑∑∑∑
+p1,p2,q1,q2∈L∪{1},
+(bϑp1q1,p2q2)=1,
+(bϑ,p1q1)=1
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N,
+(bϑ,n′
+1n′
+2)=1,
+(n′
+1,n′
+2)=1
+∑∑
+𝓁1,𝓁2∈L,
+p1,q1|𝓁1, p2,q2|𝓁2,
+(bn′
+1n′
+2ϑ,𝓁1𝓁2)=(𝓁1,𝓁2)=1,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2
+∑
+0⁄=|d|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1n′
+2)=1
+n′
+2∈I
+∑*
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη (mod bq1p2|d|η)
+∑∑
+a1,a2∈A
+βp1p2n′
+1νa1βq1q2n′
+2νa2 e(··· ),
+with the argument of the exponential still given by (4.9).
+13
+4.1.2 Applying the Cauchy-Schwarz inequality
+Next, we apply the Cauchy-Schwarz inequality with respect to the sums over
+p1, p2, q1, q2,n′
+1,n′
+2,c,a 2. After squaring out, we get
+S 2
+b,η≪Mε‖β‖4‖ν‖2
+∑∑∑∑
+p1,p2,q1,q2∈L∪{1},
+p1⁄=q1⇒1∈{p1,q1},
+p2⁄=q2⇒1∈{p2,q2}
+bq1p2Tb,η,
+(4.10)
+where Tb,η is deﬁned as
+Tb,η :=
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N
+(b,n′
+1n′
+2)=(n′
+1,ϑn′
+2)=1,
+µ2(n′
+1)=1
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1), p2,q2|(𝓁2,𝓁′
+2)
+(bϑn′
+1n′
+2,𝓁1𝓁2𝓁′
+1𝓁′
+2)=(𝓁1,𝓁2)=(𝓁′
+1,𝓁′
+2)=1,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2, ˜𝓁′
+1p1n′
+1⁄=˜𝓁′
+2q2n′
+2
+∑∑
+0⁄=|d|,|d′|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1n′
+2)=1
+(d′,˜𝓁′
+1˜𝓁′
+2p1q2n′
+1n′
+2)=1
+n′
+2∈I∩I ′
+∑*
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη (mod bq1p2|d|η),
+˜𝓁′
+1p1n′
+1≡˜𝓁′
+2q2n′
+2−cd′η (mod bq1p2|d′|η)
+∑∑∑
+a1,a′
+1,a2∈A
+νa1νa′
+1 e(··· ),
+(4.11)
+withI′ :=I(𝓁′
+1,𝓁′
+2, p1, p2, q1, q2,d′,n′
+2), ˜𝓁′
+1 := 𝓁′
+1/q1, ˜𝓁′
+2 := 𝓁′
+2/p2 and where
+we introduced the condition µ2(n′
+1) = 1, which was implicit in the previous
+formulae, and we dropped the condition ( n′
+2,ϑ ) = 1. The argument of the
+exponential is now
+ϑ
+(
+c(a1−a′
+1) p1n′
+1
+bp2
+− (da1˜𝓁′
+2−d′a′
+1˜𝓁2)˜𝓁2˜𝓁′
+2bp2q2n′
+2
+p1n′
+1
+− a2(d ˜𝓁′
+1−d′ ˜𝓁1)˜𝓁1˜𝓁′
+1p1n′
+1bq1
+q2n′
+2
+)
+.
+(4.12)
+We divide the right hand side of (4.11) into two parts:
+Tb,η = Ub,η + U∗
+b,η, (4.13)
+where Ub,η is the contribution of the terms with ( 𝓁1𝓁′
+1,𝓁 2𝓁′
+2) = 1. We will
+bound Ub,η in Section 4.1.3, and in Section 4.1.4 we will explain the modiﬁ-
+cations needed to bound U∗
+b,η.
+14
+4.1.3 Bounding Ub,η: the case (𝓁1𝓁′
+1,𝓁 2𝓁′
+2) = 1
+We start by dividing Ub,η(M,N,A, L,ν ) into
+Ub,η = Vb,η + V∗
+b,η, (4.14)
+where V∗
+b,η is the contribution of the terms such that d =d′,𝓁 1 =𝓁′
+1,𝓁 2 =𝓁′
+2
+and a1⁄=a′
+1.
+4.1.3.1 Bounding V∗
+b,η: the case d =d′,𝓁 1 =𝓁′
+1,𝓁 2 =𝓁′
+2,a 1⁄=a′
+1
+In this section we deal with V∗
+b,η, which is given by
+V∗
+b,η :=
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N
+(b,n′
+1n′
+2)=(n′
+1,ϑn′
+2)=1,
+µ2(n′
+1)=1
+∑∑
+𝓁1,𝓁2∈L,
+p1,q1|𝓁1, p2,q2|𝓁2
+(bϑn′
+1n′
+2,𝓁1𝓁2)=(𝓁1,𝓁2)=1,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2
+∑
+0⁄=|d|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1n′
+2)=1,
+n′
+2∈I
+∑*
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη
+(mod bq1p2|d|η)
+∑∑∑
+a1,a′
+1,a2∈A,
+a1⁄=a′
+1
+νa1νa′
+1 e
+(
+ϑ
+(
+c(a1−a′
+1) p1n′
+1
+bp2
+− d(a1−a′
+1)˜𝓁2bp2q2n′
+2
+p1n′
+1
+))
+.
+We reintroduce the complementary divisor in the congruence condition˜𝓁1p1n′
+1
+≡ ˜𝓁2q2n′
+2−cdη (mod bq1p2|d|η) and reverse the previous computations. We
+then arrive at
+V∗
+b,η =
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N
+(b,n′
+1n′
+2)=1,
+(n′
+1,ϑn′
+2)=1,
+µ2(n′
+1)=1
+∑∑
+𝓁1,𝓁2∈L,
+p1,q1|𝓁1, p2,q2|𝓁2
+(bϑn′
+1n′
+2,𝓁1𝓁2)=(𝓁1,𝓁2)=1,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2
+∑∑∑∑
+m∈M,a 1,a′
+1,a2∈A, η|m
+(m,b𝓁1𝓁2n′
+1n′
+2)=1, a1⁄=a′
+1
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2 (mod m),
+νa1νa′
+1 e
+(
+ϑ(a1−a′
+1)m
+bp1p2n′
+1
+)
+.
+Now, we introduce once again the complementary divisor, but this time we
+get rid of the variable n′
+2:
+V∗
+b,η =
+∑
+p1p2n′
+1∈N,
+(bϑ,n′
+1)=1,
+µ(n′
+1)2=1
+∑∑
+𝓁1,𝓁2∈L,
+p1,q1|𝓁1, p2,q2|𝓁2
+(bϑn′
+1,𝓁1𝓁2)=(𝓁1,𝓁2)=1
+∑
+0⁄=|d|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1)=1
+∑∑∑
+a1,a′
+1,a2∈A,
+a1⁄=a′
+1
+νa1νa′
+1F (··· ),
+15
+where
+F (··· ) :=
+∑
+m∈M∩J, (m,b𝓁1𝓁2n′
+1)=1,
+m≡d˜𝓁1p1n′
+1 (mod ˜𝓁2q2), m≡0 (mod η),
+(md−˜𝓁1p1n′
+1,bq1𝓁2q2)=˜𝓁2q2
+e
+(
+ϑ(a1−a′
+1)m
+bp1p2n′
+1
+)
+,
+for some intervalJ =J (𝓁1,𝓁 2, p1, p2, q1, q2,d,n′
+2). Notice that, in order not
+to lose the condition ( n′
+2,b q1p2) = 1, we have to introduce the condition
+(md− ˜𝓁1p1n′
+1,b q1𝓁2q2) = ˜𝓁2q2. We apply (A.2) with β = 0, χ the trivial
+character and
+k :=η ˜𝓁2q2, γ :=bp1p2n′
+1, γ 1 := γ
+h1
+= bp1p2n′
+1
+(q2, p2)(η,n′
+1), c =bq1𝓁2q2
+h := (k,γ ) = (η,n′
+1)(˜𝓁2q2, p2) = (η,n′
+1)(q2, p2), h 1 := (k∞,γ ) =h,
+where we used that ( η,b𝓁 1𝓁2) = (n′
+1,𝓁 2) = 1 and that γ/b is square-free. It
+follows that
+F (··· )≪ (bN)
+1
+2 +ε + (a1−a′
+1,bn′
+1p1p2)
+1
+2
+M
+˜𝓁2(bp1p2q2n′
+1)
+1
+2
+,
+since (ϑ,bn′
+1𝓁1𝓁2) = 1. Dealing with the GCD as in (3.3), we obtain
+V∗
+b,η≪‖ν‖2A2DMε
+q1p2
+∑
+p1p2n′
+1∈N
+∑∑
+𝓁1,𝓁2∈L,
+p1,q1|𝓁1, p2,q2|𝓁2
+(
+(bN)
+1
+2 + M
+˜𝓁2(bp1p2q2n′
+1)
+1
+2
+)
+≪‖ν‖2A2DMε
+q1p2
+∑
+p1p2n′
+1∈N
+L2
+(p1 + q1)(p2 + q2)
+(
+(bN)
+1
+2 + M
+˜𝓁2(bq2N)
+1
+2
+)
+≪
+‖ν‖2A2DL2NMε
+(
+(bN)
+1
+2
+p1p2
++ M
+p1L(bq2N)
+1
+2
+)
+q1p2(p1 + q1)(p2 + q2) ≪ ‖ν‖2b
+1
+2L2N
+3
+2MεDA2
+q1p2(p1 + q1)(p2 + q2),
+(4.15)
+where we could assume without loss of generality that 1 ≤ D = 3LN
+M , since
+otherwise the sum over d in the deﬁnition of V∗
+b,η is empty.
+16
+4.1.3.2 Bounding Vb,η : the case (d,𝓁 1,𝓁 2)⁄= (d′,𝓁′
+1,𝓁′
+2) if a1⁄=a′
+1
+Here we deal withVb,η, which consists of the terms ofUb,η such that (d,𝓁 1,𝓁 2)⁄=
+(d′,𝓁′
+1,𝓁′
+2) if a1⁄=a′
+1 (we remark that here (·,·,·) indicates a triple and not a
+GCD). Speciﬁcally,
+Vb,η :=
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N
+(b,n′
+1n′
+2)=(n′
+1,ϑn′
+2)=1,
+µ2(n′
+1)=1
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1), p2,q2|(𝓁2,𝓁′
+2)
+(bn′
+1n′
+2ϑ,𝓁1𝓁2𝓁′
+1𝓁′
+2)=(𝓁1𝓁′
+1,𝓁2𝓁′
+2)=1,
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2, ˜𝓁′
+1p1n′
+1⁄=˜𝓁′
+2q2n′
+2
+∑∑
+0⁄=|d|,|d′|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1n′
+2)=1
+(d′,˜𝓁′
+1˜𝓁′
+2p1q2n′
+1n′
+2)=1
+n′
+2∈I∩I ′
+∑*
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη (mod bq1p2|d|η),
+˜𝓁′
+1p1n′
+1≡˜𝓁′
+2q2n′
+2−cd′η (mod bq1p2|d′|η)
+∑∑∑
+a1,a′
+1,a2∈A,
+a1⁄=a′
+1⇒(d,𝓁1,𝓁2)⁄=(d′,𝓁′
+1,𝓁′
+2)
+νa1νa′
+1 e(··· ),
+with the argument of the exponential given by (4.12).
+We start the analysis of Vb,η by noticing that the conditions
+˜𝓁1p1n′
+1− ˜𝓁2q2n′
+2 +cdη≡ 0 (mod bq1p2|d|η)
+˜𝓁′
+1p1n′
+1− ˜𝓁′
+2q2n′
+2 +cd′η≡ 0 (mod bq1p2|d′|η)
+imply the congruence conditions
+(˜𝓁′
+2˜𝓁1− ˜𝓁2˜𝓁′
+1)p1n′
+1 + (˜𝓁′
+2d− ˜𝓁2d′)cη≡ 0 (mod bq1p2η), (4.16)
+(d′˜𝓁1−d˜𝓁′
+1)p1n′
+1≡ (d′˜𝓁2−d˜𝓁′
+2)q2n′
+2 (mod b)
+and thus also
+(d′˜𝓁1−d˜𝓁′
+1)q2n′
+2≡ (d′˜𝓁2−d˜𝓁′
+2)p1n′
+1 (mod b), (4.17)
+since (b, p1n′
+1q2n′
+2) = 1.
+Now, we use the congruence relation (which is also in some sense an
+instance of divisor switching)
+αγ
+β + βγ
+α + αβ
+γ ≡ 1
+αβγ (mod 1), (4.18)
+which holds for α,β,γ pairwise coprime, to rewrite −a2(d ˜𝓁′
+1−d′ ˜𝓁1)˜𝓁1˜𝓁′
+1p1n′
+1bq1
+q2n′
+2
+17
+(modulo 1) as
+a2(d ˜𝓁′
+1−d′ ˜𝓁1)q2n′
+2b
+˜𝓁1˜𝓁′
+1p1q1n′
+1
++ a2(d ˜𝓁′
+1−d′ ˜𝓁1)˜𝓁1˜𝓁′
+1p1q1n′
+1q2n′
+2
+b − a2(d ˜𝓁′
+1−d′ ˜𝓁1)
+b˜𝓁1˜𝓁′
+1p1n′
+1q1q2n′
+2
+≡ a2(d ˜𝓁′
+1−d′ ˜𝓁1)q2n′
+2b
+˜𝓁1˜𝓁′
+1p1q1n′
+1
++ a2(d′˜𝓁2−d˜𝓁′
+2)˜𝓁1˜𝓁′
+1p2
+1q1n′
+1n′2
+1
+b − a2(d ˜𝓁′
+1−d′ ˜𝓁1)
+b˜𝓁1˜𝓁′
+1p1n′
+1q1q2n′
+2
+,
+(4.19)
+by (4.17), and thus the argument (4.12) of the exponential becomes
+ϑ
+(
+∆
+˜𝓁2˜𝓁′
+2bp2q2n′
+2
+˜𝓁1˜𝓁′
+1q1p1n′
+1
+− a2(d ˜𝓁′
+1−d′ ˜𝓁1)
+b˜𝓁1˜𝓁′
+1p1n′
+1q1q2n′
+2
++ (a1−a′
+1)cp1n′
+1
+bp2
+− a2(d′˜𝓁2−d˜𝓁′
+2)˜𝓁1˜𝓁′
+1p2
+1q1n′2
+1
+b
+)
+,
+(4.20)
+where
+∆ :=a2(d ˜𝓁′
+1−d′ ˜𝓁1)˜𝓁2˜𝓁′
+2p2− (da1˜𝓁′
+2−d′a′
+1˜𝓁2)˜𝓁1˜𝓁′
+1q1.
+We divide Vb,η into two parts, depending on whether ∆ is equal to 0 or
+not:
+Vb,η = V ∆=0
+b,η + V ∆⁄=0
+b,η . (4.21)
+We shall give a trivial bound for the terms with ∆ = 0, whereas we will use
+Weil’s bound on the sum over n′
+2 to handle the terms with ∆ ⁄= 0.
+The terms with ∆ = 0. The condition ∆ = 0 gives that
+a2(d ˜𝓁′
+1−d′ ˜𝓁1)˜𝓁2˜𝓁′
+2p2 = (da1˜𝓁′
+2−d′a′
+1˜𝓁2)˜𝓁1˜𝓁′
+1q1, (4.22)
+and it allows us to express either a1 ora′
+1 in terms of all the other variables:
+a1 =f(a′
+1,a 2,d,d′,𝓁 1,𝓁 2,𝓁′
+1,𝓁′
+2, p1, q1, p2, q2),
+a′
+1 =g(a1,a 2,d,d′,𝓁 1,𝓁 2,𝓁′
+1,𝓁′
+2, p1, q1, p2, q2),
+for some functionsf andg. Moreover, since (𝓁1𝓁′
+1,𝓁 2𝓁′
+2) = (d, ˜𝓁1˜𝓁2) = (d′, ˜𝓁′
+1˜𝓁′
+2)
+= 1, then (4.22) implies that ˜𝓁1|a2˜𝓁′
+1, ˜𝓁′
+1|a2˜𝓁1 and ˜𝓁2|a1˜𝓁′
+2, ˜𝓁′
+2|a′
+1˜𝓁2, which, by
+18
+deﬁnition of ˜𝓁i, ˜𝓁′
+i, is equivalent to 𝓁1|a2𝓁′
+1, 𝓁′
+1|a2𝓁1, 𝓁2|a1𝓁′
+2, 𝓁′
+2|a′
+1𝓁2. It follows
+that V ∆=0
+b,η is bounded by
+V ∆=0
+b,η ≪
+∑∑
+p1p2n′
+1,q1q2n′
+2∈N
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1), p2,q2|(𝓁2,𝓁′
+2),
+˜𝓁1p1n′
+1⁄=˜𝓁2q2n′
+2, ˜𝓁′
+1p1n′
+1⁄=˜𝓁′
+2q2n′
+2
+∑∑
+0⁄=|d|,|d′|≤ D
+q1p2
+,
+d′|(˜𝓁′
+1p1n′
+1−˜𝓁′
+2q2n′
+2)
+∑
+c (mod bq1p2),
+˜𝓁1p1n′
+1≡˜𝓁2q2n′
+2−cdη,
+(mod bq1p2|d|η)
+∑∑∑
+a1,a′
+1,a2∈A,
+𝓁1|a2𝓁′
+1,𝓁′
+1|a2𝓁1,𝓁2|a1𝓁′
+2,𝓁′
+2|a′
+1𝓁2,
+a1=f(··· ), a′
+1=g(··· )
+(|νa1|2 +|νa′
+1|2)
+≪Mε
+∑
+p1p2n′
+1,q1q2n′
+2∈N
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1),
+p2,q2|(𝓁2,𝓁′
+2)
+∑∑
+a1,a2∈A,
+𝓁1|a2𝓁′
+1, 𝓁′
+1|a2𝓁1,
+𝓁2|a1𝓁′
+2
+|νa1|2
+≪‖ν‖2AN 2Mε
+p1p2q1q2
+∑∑
+𝓁′
+1,𝓁′
+2∈L,
+p1,q1|𝓁′
+1, p2,q2|𝓁′
+2
+1≪ ‖ν‖2AL2N 2Mε
+p1p2q1q2(p1 + q1)(p2 + q2), (4.23)
+where we dropped the condition (c,b q1p2) = 1 by positivity, and the sum over
+c has the only eﬀect of turning the congruence condition ˜𝓁1p1n′
+1≡ ˜𝓁2q2n′
+2−
+cdη (mod bq1p2|d|η) into ˜𝓁1p1n′
+1 ≡ ˜𝓁2q2n′
+2 (mod|d|η), which then implies
+d|(˜𝓁1p1n′
+1− ˜𝓁2q2n′
+2).
+The terms with ∆⁄= 0. Here we bound V ∆⁄=0
+b,η . Exchanging the order
+of summation and indicating with G(... ) the sum over n′
+2, we see that
+V ∆⁄=0
+b,η ≪
+∑
+p1p2n′
+1∈N,
+(bϑ,n′
+1)=1,
+µ2(n′
+1)=1
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1), p2,q2|(𝓁2,𝓁′
+2)
+(bn′
+1ϑ,𝓁1𝓁2𝓁′
+1𝓁′
+2)=(𝓁1𝓁′
+1,𝓁2𝓁′
+2)=1
+∑∑
+0⁄=|d|,|d′|≤D/q1p2,
+(d,˜𝓁1˜𝓁2p1q2n′
+1)=1
+(d′,˜𝓁′
+1˜𝓁′
+2p1q2n′
+1)=1
+∑*
+c (mod bq1p2),
+(˜𝓁′
+2˜𝓁1−˜𝓁2˜𝓁′
+1)p1n′
+1≡(˜𝓁2d′−˜𝓁′
+2d)cη
+(mod bq1p2η)
+∑∑∑
+a1,a′
+1,a2∈A,
+∆⁄=0,
+(d,𝓁1,𝓁2)⁄=(d′,𝓁′
+1,𝓁′
+2)
+|νa1νa′
+1||G(··· )|,
+(4.24)
+where
+G(··· ) :=
+∑
+n′
+2, (∗)
+e(··· ), (4.25)
+19
+and the argument of the exponential is
+ϑ∆
+˜𝓁2˜𝓁′
+2bp2q2n′
+2
+˜𝓁1˜𝓁′
+1q1p1n′
+1
+− ϑa2(d ˜𝓁′
+1−d′ ˜𝓁1)
+b˜𝓁1˜𝓁′
+1p1n′
+1bq1q2n′
+2
+(mod 1). (4.26)
+The condition (∗) indicates that n′
+2 satisﬁes the following conditions:
+n′
+2∈I∩I ′, q1q2n′
+2∈N , ˜𝓁1p1n′
+1≡ ˜𝓁2q2n′
+2−cdη (mod bq1p2|d|η),
+(n′
+2,bdd′n′
+1𝓁1𝓁2𝓁′
+1𝓁′
+2) = 1, ˜𝓁′
+1p1n′
+1≡ ˜𝓁′
+2q2n′
+2−cd′η (mod bq1p2|d′|η),
+˜𝓁1p1n′
+1⁄= ˜𝓁2q2n′
+2, ˜𝓁′
+1p1n′
+1⁄= ˜𝓁′
+2q2n′
+2.
+We remark that we could keep the condition (4.16) and drop the last two
+summands of (4.20) as they do not depend on n′
+2. Also, notice that the con-
+dition (d,𝓁 1,𝓁 2)⁄= (d′,𝓁′
+1,𝓁′
+2) if a1⁄=a′
+1 becomes simply (d,𝓁 1,𝓁 2)⁄= (d′,𝓁′
+1,𝓁′
+2)
+since if these triples are equal then ∆ ⁄= 0 implies a1⁄=a′
+1.
+We apply Lemma 3 to the sum over n′
+2, removing the second summand
+of (4.26) by using partial summation with the bound
+ϑ a2(d ˜𝓁′
+1−d′ ˜𝓁1)
+b˜𝓁1˜𝓁′
+1p1n′
+1q1q2n′
+2
+≪ |ϑ|ADL
+b˜𝓁1˜𝓁′
+1q2
+1p1p2n′
+1q1q2n′
+2
+≪|ϑ|AD
+bLN 2.
+Note thatn′
+2 runs over a ﬁnite union of intervals of length at mostO(N/q1q2),
+with a congruence condition modulo bq1p2[d,d′]η (provided that the sum is
+non-empty), where [a,b ] is the LCM of a and b.
+In the notation of Lemma 3 (and under the various conditions of the sums
+in (4.24)), we have γ = ˜𝓁1˜𝓁′
+1q1p1n′
+1, k =bq1p2[d,d′]η and
+h = (γ,k ) = q1([d,d′], ˜𝓁1˜𝓁′
+1)(η,n′
+1) = q1(d, ˜𝓁′
+1)(d′, ˜𝓁1)(η,n′
+1),
+h1 = (k∞,γ ) = (q∞
+1 [d,d′]∞, ˜𝓁1˜𝓁′
+1)(η,n′
+1)q1(p1, q1) = (p1, q1)h,
+since q1 > 1 implies ˜𝓁1 = ˜𝓁′
+1 = 1, whence
+γ1 := γ
+h1
+= p1
+(p1, q1)
+n′
+1
+(η,n′
+1)
+˜𝓁1
+(d′, ˜𝓁1)
+˜𝓁′
+1
+(d, ˜𝓁′
+1)
+.
+Thus, Lemma 3 gives
+G(··· )≪Mε
+(
+(p1, q1)
+( N ˜𝓁1˜𝓁′
+1
+(p1, q1)p2
+) 1
+2
++ (ϑ∆,γ 1)
+γ1
+N
+bηq2
+1q2p2[d,d′]
+)(
+1 +|ϑ|AD
+bLN 2
+)
+20
+≪Mε
+(
+LN
+1
+2 + (∆,n′
+1)p1
+bq2
+1q2[d,d′]
+)(
+1 +|ϑ|AD
+bLN 2
+)
+.
+Now, if we deﬁne
+u := (˜𝓁′
+2d− ˜𝓁2d′,b q1p2), v := (˜𝓁′
+2d− ˜𝓁2d′)/u
+(so that (v,b q1p2/u) = 1), then by the congruence condition (4.16) we have
+˜𝓁′
+2d≡ ˜𝓁2d′ (mod u), (4.27)
+p1˜𝓁1≡ p1˜𝓁′
+2˜𝓁2˜𝓁′
+1 (mod u) (4.28)
+since (˜𝓁′
+2,b q1p2) = 1. Also, if v⁄= 0, then
+c≡−vη (˜𝓁′
+2˜𝓁1− ˜𝓁2˜𝓁′
+1)p1n′
+1
+u
+(
+mod bq1p2
+u
+)
+. (4.29)
+We remark that we can assume u≤ 10DL
+q1p2
+. Indeed, if u > 10DL
+q1p2
+> ˜𝓁′
+2d + ˜𝓁2d′
+then (4.27) implies ˜𝓁′
+2d = ˜𝓁2d′. Thus u = bq1p2 and d = d′, 𝓁2 = 𝓁′
+2 since
+(d, ˜𝓁2) = (d′, ˜𝓁′
+2) = 1. Moreover, (4.28) would give p1˜𝓁1 = p1˜𝓁′
+1 (since we can
+assume D/q1p2≥ 1) and thus 𝓁1 = 𝓁′
+1. So ( d,𝓁 1,𝓁 2) = (d′,𝓁′
+1,𝓁′
+2), and these
+terms have been previously excluded.
+Thus, if we bound trivially the sum over c using (4.29) and drop some
+conditions by positivity, we ﬁnd
+V ∆⁄=0
+b,η ≪Mε
+∑
+p1p2n′
+1∈N
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1), p2,q2|(𝓁2,𝓁′
+2),
+(𝓁′
+2,bq1p2)=1
+∑
+u|bq1p2, u≤ 10DL
+q1p2
+,
+p1˜𝓁1≡p1˜𝓁′
+2˜𝓁2˜𝓁′
+1 (mod u)
+∑∑
+|d|,|d′|≤D/q1p2,
+d≡˜𝓁′
+2˜𝓁2d′ (mod u)
+∑∑∑
+a1,a′
+1,a2∈A,
+∆⁄=0
+u|νa1νa′
+1|
+(
+LN
+1
+2 + (∆,n′
+1)p1
+bq2
+1q2[d,d′]
+)(
+1 +|ϑ|AD
+bLN 2
+)
+≪‖ν‖2A2LN
+3
+2Mε
+p1p2
+∑∑∑∑
+𝓁1,𝓁2,𝓁′
+1,𝓁′
+2∈L,
+p1,q1|(𝓁1,𝓁′
+1),
+p2,q2|(𝓁2,𝓁′
+2),
+(𝓁′
+2,bq1p2)=1
+∑
+u|bq1p2, u≤ 10DL
+q1p2
+,
+p1˜𝓁1≡p1˜𝓁′
+2˜𝓁2˜𝓁′
+1
+(mod u)
+∑∑
+|d|,|d′|≤D/q1p2,
+d≡˜𝓁′
+2˜𝓁2d′ (mod u)
+u
+(
+1 +|ϑ|AD
+bLN 2
+)
+≪‖ν‖2 A2DL2N
+3
+2Mε
+(p1 + q1)p1q1p2
+2
+∑∑
+𝓁2,𝓁′
+2∈L,
+p2,q2|(𝓁2,𝓁′
+2)
+∑
+u|bq1p2,
+u≤ 10DL
+q1p2
+u
+(L
+u + 1
+)( D
+uq1p2
++ 1
+)(
+1 +|ϑ|AD
+bLN 2
+)
+21
+≪‖ν‖2 A2DL2N
+3
+2Mε
+(p1 + q1)p1q1p2
+2
+∑∑
+𝓁2,𝓁′
+2∈L,
+p2,q2|(𝓁2,𝓁′
+2)
+DL
+q1p2
+(
+1 +|ϑ|AD
+bLN 2
+)
+≪ ‖ν‖2A2D2L5N
+3
+2Mε
+(p1 + q1)(p2 + q2)p1q2
+1p3
+2q2
+(
+1 +|ϑ|AD
+bLN 2
+)
+. (4.30)
+4.1.3.3 Total bound for the terms with (𝓁1𝓁′
+1,𝓁 2𝓁′
+2) = 1
+By (4.21), (4.23) and (4.30), we obtain
+Vb,η≪‖ν‖2Mε
+(
+1 +|ϑ|AD
+bLN 2
+)A2D2L5N
+3
+2 +AL2N 2
+q1p2(p1 + q1)(p2 + q2)
+and thus, by (4.14) and (4.15), we have
+Ub,η≪‖ν‖2A2L2N
+3
+2Mε (Db
+1
+2 +L3D2 +N
+1
+2/A)
+q1p2(p1 + q1)(p2 + q2)
+(
+1 +|ϑ|AD
+bLN 2
+)
+. (4.31)
+4.1.4 Bounding U∗
+b,η: the case (𝓁1𝓁′
+1,𝓁 2𝓁′
+2)> 1
+First, we observe that if ( 𝓁1𝓁′
+1,𝓁 2𝓁′
+2) > 1, then (𝓁2,𝓁′
+2) = ( 𝓁1,𝓁′
+1) = 1 since
+we have (𝓁1,𝓁 2) = ( 𝓁′
+1,𝓁′
+2) = 1, and so p1 = q1 = p2 = q2 = 1. Thus, we
+can repeat the same arguments of Section 4.1.3 in a slightly diﬀerent but
+simpliﬁed form, and we obtain that the bound (4.31) holds also for U∗
+b,η.
+The only diﬀerence between this case and the (𝓁1𝓁′
+1,𝓁 2𝓁′
+2) = 1 case is that
+we cannot make the same choice of α,β,γ in (4.18) as α,β,γ would not be
+pairwise coprime (and neither we could invert ˜𝓁2˜𝓁′
+2 (mod ˜𝓁1˜𝓁′
+1) in (4.20)). To
+overcome this problem, it is enough to divide the sum overn′
+2 into congruence
+classes modulo ( 𝓁1𝓁′
+1,𝓁 2𝓁′
+2) and apply (4.18) with γ = b(𝓁1𝓁′
+1,𝓁 2𝓁′
+2) rather
+than γ =b as in (4.19). The extra sum over the congruence classes modulo
+(𝓁1𝓁′
+1,𝓁 2𝓁′
+2) has the eﬀect of making us lose a factor of ( 𝓁1𝓁′
+1,𝓁 2𝓁′
+2) in the
+∆⁄= 0 terms, but this loss is recovered by the extra condition between the
+𝓁1,𝓁′
+1,𝓁 2,𝓁′
+2. In fact, one can obtain a bound stronger than (4.31) in this case,
+since the resulting Kloosterman has smaller modulus.
+22
+4.1.5 The ﬁnal bound for Sb,η
+Putting together (4.10), (4.13) with the bound (4.31) and its analogue for
+U∗
+b,η, we obtain
+Sb,η≪‖β‖2‖ν‖2
+(
+b +|ϑ|AD
+LN 2
+) 1
+2
+ALN
+3
+4Mε
+(
+D
+1
+2b
+1
+4 +L
+3
+2D + N
+1
+4
+A
+1
+2
+)
+≪‖β‖2‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+(b
+1
+4N
+1
+2L
+1
+2
+M
+1
+2
++ L
+5
+2N
+M + N
+1
+4
+A
+1
+2
+)
+,
+(4.32)
+since D = 3NL
+M .
+4.2 The terms with (n′
+1,n′
+2)> 1
+In this section we bound S∗
+b,η(M,N,A,L ;β,ν ), which consists of the sum
+(4.2) restricted to (n′
+1,n′
+2)> 1. We recall the deﬁnition (4.5) of n′
+1, n′
+2:
+n′
+1 := n1
+(n1,𝓁 1𝓁2), n ′
+2 := n2
+(n2,𝓁 1𝓁2)
+We write µ = (n′
+1,n′
+2). This implies ( µ,𝓁 1𝓁2) = 1 and n1 = µh1, n2 =
+µh2. Thus, denoting h′
+1 := h1
+(h1,𝓁1,𝓁2), h′
+2 := h2
+(h2,𝓁1,𝓁2), we automatically have
+(h′
+1,h′
+2) = (h′
+1h′
+2,𝓁 1𝓁2) = 1 since n1,n 2 are square-free. It follows that
+S∗
+b,η =
+∑
+µ>1,
+(µ,ϑb)=1
+∑∑∑∑∑∑∑
+𝓁1,𝓁2∈L,m∈M,h1,h2∈Nµ,a1,a2∈A
+(mbµϑ,𝓁1𝓁2h1h2)=(m,µb)=(𝓁1,𝓁2)=(h′
+1,h′
+2)=1,
+𝓁1h1≡𝓁2h2 (mod m), (h′
+1h′
+2,𝓁1𝓁2)=1
+𝓁1h1⁄=𝓁2h2, η|m
+βµh1νa1βµh2νa2 e
+(a1m
+bµh1
+− a2m
+bµh2
+)
+=
+∑
+1<µ≤N,
+(µ,ϑb)=1
+Sb,η(M,N/µ,A, L,βµ,ν ),
+where βµ(n) :=βµn andNµ = [N/(2µ),N/µ ]. Thus, by (4.32)
+S∗
+b,η≪‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+∑
+µ≤N
+‖βµ‖2
+µ
+1
+4
+(b
+1
+4N
+1
+2L
+1
+2
+µ
+1
+4M
+1
+2
++ L
+5
+2N
+µM + N
+1
+4
+µ
+1
+4A
+1
+2
+)
+≪‖β‖2‖ν‖2
+(
+b +|ϑ|A
+NM
+) 1
+2
+ALN
+3
+4Mε
+(b
+1
+4N
+1
+2L
+1
+2
+M
+1
+2
++ L
+5
+2N
+M + N
+1
+4
+A
+1
+2
+)
+. (4.33)
+Combining (4.6) and the bounds (4.32) and (4.33), we obtain Lemma 2.
+23
+5 Optimizing the parameter L
+Combining (2.3) with the bounds for the diagonal (3.1) and oﬀ-diagonal
+terms (4.4) we obtain
+Db≪‖β‖2‖ν‖2
+(
+1 + |ϑ|A
+bNM
+) 1
+2
+LMε
+(
+A(bLN)
+1
+2 + AM
+bN +M
++ b
+3
+4AN
+5
+4L
+1
+2
+M
+1
+2
++ b
+1
+2AL
+5
+2N
+7
+4
+M +b
+1
+2A
+1
+2N
+)
+and thus, by (2.2),
+Cb≪‖β‖2‖ν‖2Mε
+(
+1 + |ϑ|A
+bNM
+) 1
+2
+(AM(bN)
+1
+2
+L
+1
+2
++ AM 2
+bLN + M 2
+L
++ b
+3
+4AM
+1
+2N
+5
+4
+L
+1
+2
++b
+1
+2AL
+3
+2N
+7
+4 + b
+1
+2A
+1
+2MN
+L
+)
+.
+(5.1)
+We wish to choose L so that
+b
+1
+2AL
+3
+2N
+7
+4≈ AM 2
+bLN + M 2
+L + b
+1
+2A
+1
+2MN
+L ,
+and L≥ 2 log(bϑM). So we take
+L = M
+4
+5
+b
+3
+5N
+11
+10
++ M
+4
+5
+b
+1
+5A
+2
+5N
+7
+10
++ M
+2
+5
+A
+1
+5N
+3
+10
++Mε.
+With this choice (5.1) implies
+Cb≪‖β‖2‖ν‖2Mε
+(
+1 + |ϑ|A
+bNM
+) 1
+2
+(
+AM(bN)
+1
+2 +b
+3
+4AM
+1
+2N
+5
+4
++b
+1
+2AN
+7
+4
+( M
+4
+5
+b
+3
+5N
+11
+10
++ M
+4
+5
+b
+1
+5A
+2
+5N
+7
+10
++ M
+2
+5
+A
+1
+5N
+3
+10
++Mε
+) 3
+2
+)
+≪‖β‖2‖ν‖2Mε
+(
+1 + |ϑ|A
+bNM
+) 1
+2
+(
+AM(bN)
+1
+2 +b
+3
+4AM
+1
+2N
+5
+4
++ AM
+6
+5N
+1
+10
+b
+2
+5
++b
+1
+5A
+2
+5M
+6
+5N
+7
+10 +A
+7
+10b
+1
+2M
+3
+5N
+13
+10 +b
+1
+2AN
+7
+4
+)
+. (5.2)
+24
+6 Removing the square-free condition
+We write n = bn′, where n′ is square-free, b is square-full, and ( b,n′) = 1.
+We have
+⏐⏐⏐⏐
+∑
+a∈A,
+∑
+n∈N,
+(m,n)=1
+βnνa e
+(
+ϑam
+n
+)⏐⏐⏐⏐
+2
+=
+⏐⏐⏐⏐
+∑
+b≤N,
+(b,ϑ)=1,
+b square-full
+∑
+a∈A,
+∑
+bn′∈N,
+(bϑm,n′)=1,
+n′square-free
+βbn′νa e
+(
+ϑam
+bn′
+)⏐⏐⏐⏐
+2
+≪
+( ∑
+b≤N,
+b square-full
+b− 1
+2
+)( ∑
+b≤N, (b,ϑ)=1
+b square-full
+b
+1
+2
+⏐⏐⏐⏐
+∑
+a∈A,
+∑
+bn′∈N,
+(bϑm,n′)=1
+µ(n′)2βbn′νa e
+(
+ϑam
+bn′
+)⏐⏐⏐⏐
+2)
+≪
+∑
+b≤N, (b,ϑ)=1
+b square-full
+b
+1
+2
+⏐⏐⏐⏐
+∑
+a∈A,
+∑
+bn′∈N,
+(bϑm,n′)=1
+µ(n′)2βbn′νa e
+(
+ϑam
+bn′
+)⏐⏐⏐⏐
+2
+Mε.
+Thus,
+C1(M,N,A ;β,ν ) =
+∑
+m∈M
+⏐⏐⏐⏐
+∑
+a∈A,
+∑
+n∈N,
+(m,n)=1
+βnνa e
+(
+am
+n
+)⏐⏐⏐⏐
+2
+≪
+∑
+b≤N, (b,ϑ)=1,
+b square-full
+b
+1
+2
+∑
+m∈M,
+(m,b)=1
+⏐⏐⏐⏐
+∑
+a∈A
+∑
+n′∈Nb,
+(bϑm,n′)=1
+µ(n′)2βbn′νa e
+(
+ϑam
+bn′
+)⏐⏐⏐⏐
+2
+Mε
+=Mε
+∑
+b≤N, (b,ϑ)=1
+b square-full
+b
+1
+2Cb(M,N/b,A ;βb,ν )
+where βb(n) := µ(n)2βbn andNb := [N/(2b),N/b ]. Now, if b ≤ B, we
+apply (5.2) and obtain that the contribution of those terms to C1 is bounded
+25
+by
+≪‖ν‖2Mε
+(
+1 +|ϑ|A
+NM
+) 1
+2 ∑
+b≤B,
+b square-full
+b
+1
+2‖βb‖2
+(
+AMN
+1
+2 + AM
+1
+2N
+5
+4
+b
+1
+2
++ AM
+6
+5N
+1
+10
+b
+1
+2
++ A
+2
+5M
+6
+5N
+7
+10
+b
+1
+2
++ A
+7
+10M
+3
+5N
+13
+10
+b
+4
+5
++ AN
+7
+4
+b
+5
+4
+)
+≪‖β‖2‖ν‖2Mε
+(
+1 +|ϑ|A
+NM
+) 1
+2
+(
+AMN
+1
+2B
+1
+2 +AM
+1
+2N
+5
+4 +AM
+6
+5N
+1
+10 +
++A
+2
+5M
+6
+5N
+7
+10 +A
+7
+10M
+3
+5N
+13
+10 +AN
+7
+4
+)
+.
+(6.1)
+Forb>B we apply the trivial bound Cb(M,N/b,A,β b,ν )≪‖ν‖2AMN
+b ‖βb‖
+and get that these terms contribute
+≪‖ν‖2ANM 1+ε
+∑
+b>B,
+b square-full
+‖βb‖2 1
+b
+1
+2
+≪‖β‖2‖ν‖2ANM 1+ε
+B
+1
+2
+. (6.2)
+We chooseB =N
+1
+2 , so that combining (6.2) and (6.1) we obtain
+C1≪‖β‖2‖ν‖2Mε
+(
+1 +|ϑ|A
+NM
+) 1
+2
+×
+(
+AMN
+3
+4 +AM
+1
+2N
+5
+4 +AM
+6
+5N
+1
+10 +A
+2
+5M
+6
+5N
+7
+10 +A
+7
+10M
+3
+5N
+13
+10 +AN
+7
+4
+)
+.
+Notice that the third summand on the second line can be absorbed. Indeed,
+if M≪ N 2, then AM
+6
+5N
+1
+10 ≪ AMN
+3
+4 , whereas if M≫ N 2 then one can
+obtain a stronger bound from Theorem 5 of [DFI97], which gives
+C1≪‖β‖2‖ν‖2AM 1+ε (6.3)
+in such range. Moreover, we also have AM
+1
+2N
+5
+4≪AMN
+3
+4 +AN
+7
+4 and thus
+C1≪‖β‖2‖ν‖2(MN )ε
+(
+1 +|ϑ|A
+NM
+) 1
+2
+×
+(
+AMN
+3
+4 +AN
+7
+4 +A
+2
+5M
+6
+5N
+7
+10 +A
+7
+10M
+3
+5N
+13
+10
+)
+,
+(6.4)
+and this bound holds also without the assumption ϑ,A,N ≪MC, for some
+C >0, since it is trivial otherwise.
+26
+7 Completion of the proof of Theorem 1
+Combining the bound (6.4) for C1 and (2.1), we deduce
+B(M,N,A )≪‖α‖‖β‖‖ν‖(AMN )ε
+(
+1 +|ϑ|A
+NM
+) 1
+4
+(
+A
+1
+2M
+1
+2N
+3
+8 +A
+1
+2N
+7
+8 +A
+1
+5M
+3
+5N
+7
+20 +A
+7
+20M
+3
+10N
+13
+20
+)
+.
+(7.1)
+If M≥N this implies
+B(M,N,A )≪‖α‖‖β‖‖ν‖(MN )ε
+(
+1 +|ϑ|A
+MN
+) 1
+4(
+A
+1
+2M
+1
+2N
+3
+8 +A
+7
+20M
+3
+5N
+7
+20
+)
+,
+which is slightly stronger than the bound stated in Theorem 1 in the range
+M≥N. We then use the following remark to obtain (1.2) also in the range
+M <N.
+Remark 2. All the computations of Section 3 and 4 work, applying par-
+tial summation at appropriate places, also when an extra addend fa,ϑ(m,bn )
+(withfa,ϑ(x,y ) satisfying (1.3)) is inserted in the exponential function in the
+deﬁnition (2.2) ofCb. Thus, one arrives at the bound
+B(f;M,N,A )≪‖α‖‖β‖‖ν‖(MN )ε
+(
+1 +|ϑ|A +X
+MN
+) 1
+2
+×
+(
+A
+1
+2M
+1
+2N
+3
+8 +A
+7
+20M
+3
+5N
+7
+20
+) (7.2)
+in the case M≥N. Notice that the exponent of (1+|ϑ|A+X
+MN ) is now 1
+2 because
+in this case we need to apply partial summation also when dealing with the
+diagonal term and for the analogue of (6.3). For example, in Section 3, when
+we add fa,ϑ(m,bn ), the sum over m in (3.2) becomes
+⏐⏐⏐⏐
+∑
+m∈M,
+(m,b𝓁1𝓁2n1n2)=1
+e
+(
+ϑ(a1𝓁1−a2𝓁2)m
+b𝓁1n1
+)
+e(fa1,ϑ(m,bn 1)−fa2,ϑ(m,bn 2))
+⏐⏐⏐⏐.
+From the condition offa,ϑ, we have that ∂
+∂xfa,ϑ(x,bn )≪ X
+x2bn. Applying Weil’s
+bound in Lemma 3 and partial summation to the terms satisfying a1𝓁1⁄=a2𝓁2,
+we obtain that the sum over m above is bounded by
+(
+(bLN)
+1
+2 +ε + (a1𝓁1−a2𝓁2,bn 1𝓁1)M 1+ε
+bLN
+)(
+1 + X
+bMN
+)
+.
+27
+We now observe that the elementary reciprocity law allows us to write
+B(M,N,A ) as
+B(M,N,A ) =
+∑∑∑
+m∈M,n∈N,a∈A,
+(m,n)=1
+αmβnνa e
+(
+−ϑan
+m + ϑa
+mn
+)
+.
+Thus, if M < N we can apply (7.2) with the role of M and N switched
+and with fa,ϑ(x,y ) := ϑa
+xy . Since fa,ϑ(x,y ) satisﬁes the condition (1.3) with
+X =|ϑ|A, we obtain (1.2) for M < N, and so the proof of Theorem 1 is
+complete.
+8 Proof of Theorem 2
+We proceed in the same way as in the proof of Theorem 1, with very minor
+modiﬁcations. First, we assume bN ≥ M and in the oﬀ-diagonal term we
+split the sum modulo m into classes m≡c (mod 4bq1p2) with (m,b q1p2) =
+1 rather than modulo bq1p2. Notice that this implies ˜𝓁2q2n′
+2 ≡ ˜𝓁1p1n′
+1−
+cd (mod 4d). Then, we can repeat the same arguments keeping the Jacobi
+symbol ( m
+n1n2
+) inside the summations, so that in the analogue of Section 4.1.1
+this factor will become
+( m
+n1n2
+)
+=
+( c
+q1p2
+)( m
+p1q2n′
+1n′
+2
+)
+=
+( c
+q1p2
+)( d
+p1q2n′
+1n′
+2
+)( dm
+p1q2n′
+1n′
+2
+)
+=
+( c
+q1p2
+)( d
+p1q2n′
+1
+)( d
+˜𝓁2q2n′
+2
+)( d
+˜𝓁2q2
+)(−˜𝓁2q2n′
+2
+p1n′
+1
+)( ˜𝓁1p1n′
+1
+q2n′
+2
+)
+=f(c, p1, p2, q1, q2,n′
+1,n′
+2)g(c, p1, p2, q1, q2,n′
+1,𝓁 1,𝓁 2)
+( ˜𝓁1
+n′
+2
+)
+,
+where
+f(... ) :=
+( c
+q1p2
+)(−q2n′
+2
+p1n′
+1
+)( p1n′
+1
+q2n′
+2
+)
+,
+g(... ) :=
+( d
+p1q2n′
+1
+)( d
+˜𝓁1p1n′
+1−cd
+)( d
+˜𝓁2q2
+)( ˜𝓁2
+p1n′
+1
+)( ˜𝓁1
+q2
+)
+,
+and where we used that
+(a
+b
+)
+is periodic modulo b ina ifb≥ 1 and is periodic
+modulo 4|a| in b if a⁄= 0.
+28
+Thus, we arrive at the analogue of (4.25) which will include an extra
+factor of (
+˜𝓁1
+n′
+2
+). The rest of the argument is identical, with the diﬀerence
+that we apply (A.2) rather than (A.1). The fact that the former bound is
+weaker than the latter does not aﬀect the arguments when bN≥M. Thus,
+we obtain (7.1) and whence (1.5) when N≥ M. This also implies (1.5) for
+M > N, as can be seen by using the reciprocity formulae for the Jacobi
+symbol and for m
+n and applying the bound for the case N≥M.
+9 Proof of Corollary 1
+Proceeding as in [DFI95], we see that the error term in (1.4) is equal to
+∑
+d|∆
+∫ 4D
+0
+∑∑∑
+dn1∈N1,dn2∈N2,h∈Z
+1≤|h|≤HDε, (n1,n2)=1
+˜αdn1(x) ˜βdn2(x + ∆)
+dn1n2
+e
+(h∆
+d
+n1
+n2
+)
+e
+( hx
+dn1n2
+)
+dx +O(η),
+with H = η
+d(N1
+M1
++ N2
+M2
+), D = M1N2 +M2N1 and αr(x) := αrg(x/r), ˜βr :=
+βrf(x/r). Applying Theorem 1 (in the version given by Remark 1) we see
+that we can bound the above sum by
+≪
+∑
+d|∆
+∑
+1≤|h|≤HDε
+dD
+N1N2
+‖α‖‖β‖
+d
+1
+2
+(
+1 + dHD
+N1N2
+) 1
+2
+(N1N2)
+7
+20 (N1 +N2)
+1
+4 +ε,
+≪η
+3
+2
+(M1N2
+M2N1
++ M2N1
+M1N2
+) 3
+2
+‖α‖‖β‖(N1N2)
+7
+20 (N1 +N2)
+1
+4 +ε(M1M2)ε,
+since we can assume|∆|≤ 4D (otherwise bothT and the main term on the
+right hand side of (1.4) are identically zero) and since
+dHD
+N1N2
+=η
+(N1
+M1
++ N2
+M2
+)(M1
+N1
++ M2
+N2
+)
+≤ 2η
+(M1N2
+M2N1
++ M2N1
+M1N2
+)
+.
+A Appendix: Weil’s bound for incomplete
+Kloosterman sums
+In this appendix we give the following bounds for incomplete Kloosterman
+sums where the sums are subject to some coprimality and congruence con-
+ditions.
+29
+Lemma 3. Letδ,k,γ ≥ 1, α,a,b,v ∈ Z and let I ={x∈ [X′,X′ +X],x≡
+v (mod k)}. Let h := (k,γ ), h1 := (k∞,γ ), γ1 := γ
+h1
+, where (m∞,n ) :=
+limr→∞(mr,n ). Then,
+∑
+x∈I,
+(x,γδ)=1
+e
+(αx
+γ
+)
+≪ (γδ)εh1
+h
+( γ1
+(α,γ 1)
+) 1
+2
++ (α,γ 1)Xδε
+γ1k. (A.1)
+Moreover, if χ is a Dirichlet character modulo γ and c,d ≥ 1, a,b,β ∈ Z,
+then
+∑
+x∈I,
+(x,γδ)=1,
+(ax+b,c)=d
+χ(x) e
+(αx +βx
+γ
+)
+≪ (cγδ)εh1
+h
+( γ1
+(α,γ 1)
+) 1
+2
++ (α,γ 1)
+1
+2γ
+1
+2 +ε
+1
+X(cδ)ε
+γ1k .
+(A.2)
+Proof. We start by proving (A.1). First of all, we notice that we can assume
+that (δ,γk ) = (v,h ) = 1 and k≤ X. Also, the case δ > 1 can be easily
+obtained from the case δ = 1 by M¨ obius inversion. Indeed
+∑
+x∈I,
+(x,γδ)=1
+e
+(αx
+γ
+)
+=
+∑
+r1|δ
+µ(r1)
+∑
+x∈I, (x,γ)=1,
+x≡0 (mod r1)
+e
+(αx
+γ
+)
+≪
+∑
+d|δ
+(
+γεh1
+h
+( γ1
+(α,γ 1)
+) 1
+2 +ε
++ (α,γ 1) X
+γ1k
+)
+≪ (γδ)εh1
+h
+( γ1
+(α,γ 1)
+) 1
+2
++ (α,γ 1)Xδε
+γ1k ,
+by (A.1) in the case δ = 1. Similarly, the case ( k,γ ) > 1 can be recovered
+from the case h = (k,γ ) = 1:
+∑
+x∈I,
+(x,γ)=1
+e
+(αx
+γ
+)
+=
+∑*
+c (mod h1),
+c≡v (modh)
+∑
+x∈Ic,
+(x,γ1)=1
+e
+(αx
+γ
+)
+=
+∑*
+c (mod h1),
+c≡v (modh)
+e
+(αcγ1
+h1
+) ∑
+x∈Ic,
+(x,γ1)=1
+e
+(αh1x
+γ1
+)
+≪
+∑*
+c (mod h1),
+c≡v (mod h)
+( γ
+1
+2 +ε
+1
+(α,γ 1)
+1
+2
++ (α,γ 1)X
+γ1kh1
+h
+)
+≪δεh1
+h
+γ
+1
+2 +ε
+1
+(α,γ 1)
+1
+2
++δε(α,γ 1) X
+γ1k,
+30
+where Ic := I∩{x≡ c (mod h1)}. Thus, we can assume h = 1 and simi-
+larly also that ( α,γ ) = 1. Now, applying the Erd¨ os-Tur´ an inequality as in
+Lemma 8 of [DFI97], we ﬁnd
+⏐⏐⏐⏐
+∑
+x∈I,
+(x,γ)=1
+e
+(αx
+γ
+)⏐⏐⏐⏐≤ X +k
+γk |S(α, 0;γ)| +
+∑
+1≤r≤γ
+2
+1
+r|S(α,rk;γ)|.
+Thus, using Weil’s bound for |S(α,rk;γ)| and observing that |S(α, 0;γ)| is
+a Ramanujan sum and thus is bounded by ( α,γ ), we obtain (A.1).
+To prove (A.2) we can proceed in a similar way. As before, we assume
+(δ,γk ) = (v,h ) = 1, k≤X and δ = 1. Also, we can assume d|c, (a,c ) = 1.
+Moreover, we can deduce the case c > 1 from the case c = 1 as the
+following. For the case δ > 1, we start by using M¨ obius inversion and we
+obtain
+∑
+x∈I,
+(x,γ)=1,
+(ax+b,c)=d
+χ(x) e
+(αx +βx
+γ
+)
+=
+∑
+r|c,
+d|r
+µ(r)
+∑
+x∈I, (x,γ)=1,
+x≡−ab (mod r)
+χ(x) e
+(αx +βx
+γ
+)
+.
+(A.3)
+Next, we letr =g1g2, whereg1 is the largest divisor ofr such that (γ/(γ,g 1),g 1) =
+1. Also, we write γ = f1f2 where f1 = (γ,g 1) and notice that ( g1,g 2) =
+(f1,f 2) = 1 and f1|g1, g2|f2 (and thus also (f1,g 2) = (g1,f 2) = 1). Also, we
+can write χ asχ1χ2, where for i = 1, 2,χi is a Dirichlet character modulo fi.
+Using the orthogonality of additive character we obtain that the left hand
+side of (A.3) is equal to
+∑
+r|c,
+d|r
+µ(r)
+g2
+∑
+u (mod g2)
+e
+(uab
+g2
+) ∑
+x∈I, (x,γ)=1,
+x≡−ab (mod g1)
+χ(x) e
+(αx +βx
+γ + ux
+g2
+)
+≤
+∑
+r|c,
+d|r
+1
+g2
+∑
+u (mod g2)
+⏐⏐⏐⏐
+∑
+x∈I, (x,γ)=1,
+x≡−ab (mod g1)
+χ2(x) e
+(αf1x + (βf1 +uf2/g2)x
+f2
+)⏐⏐⏐⏐,
+since x≡−ab (mod f1) and thus the Chinese remainder theorem gives
+χ(x) e
+(αx +βx
+γ
+)
+=χ1(−ab) e
+(
+−αabf2 +βabf2
+f1
+)
+χ2(x) e
+(αf1x +βf1x
+f2
+)
+.
+31
+Thus, applying (A.2) in the case c = 1 we obtain
+∑
+x∈I,
+(x,γ)=1,
+(ax+b,c)=d
+χ(x) e
+(αx +βx
+γ
+)
+≪
+∑
+r|c
+(
+γεh′
+1
+h′
+( γ′
+1
+(α,γ′
+1)
+) 1
+2
++ (α,γ′
+1)
+1
+2γ′
+1
+1
+2 +ε X
+γ′
+1k′
+)
+≪ (γc)εh1
+h
+( γ1
+(α,γ 1)
+) 1
+2
++ (α,γ 1)
+1
+2γ1
+1
+2 +ε X
+γ1k,
+where we used the notation
+k′ := [g1,k ], h ′ = (k′,f 2) := (k,f 2), h ′
+1 := (k′∞,f 2) = (k∞,f 2), γ ′
+1 :=f2/h′
+1
+since (c,k ) = 1. Moreover γ′
+1|γ1 andγ′
+1
+1
+2k′ = [g1,k ]f
+1
+2
+2 (k∞,f 2)− 1
+2≥γ
+1
+2
+1k since
+f1|g1 and thus [g1,k ]≥ [f1,k ] =f1k/(k,f 1)≥f
+1
+2
+1k(k,f 1)− 1
+2 .
+The rest of the argument is essentially identical as in the case of (A.1),
+with the only diﬀerence being in the last step, where we need to use Weil’s
+bound for both summands.
+References
+[BCH] Balasubramanian R., Conrey J.B., and Heath-Brown D.R., Asymp-
+totic mean square of the product of the Riemann zeta-function and a
+Dirichlet polynomial. J. Reine Angew. Math. 357 (1985), 161-181.
+[BS] Banks, W.D.; Shparlinski, I.E. Fractional parts of Dedekind sums ,
+arXiv: 1411.1820.
+[BCR] Bettin, S.; Chandee V.; and Radziwi l l, M. The mean square of the
+product of the Riemann zeta function with Dirichlet polynomials , to ap-
+pear in J. Reine Angew. Math, available online at DOI: 10.1515/crelle-
+2014-0133.
+[BFI] Bombieri, E.; Friedlander, J.B.; Iwaniec, H. Primes in arithmetic pro-
+gressions to large moduli . Acta Math. 156 (1986), no. 3-4, 203–251.
+[DI] Deshouillers, J.-M.; Iwaniec, H. Kloosterman sums and Fourier coeﬃ-
+cients of cusp forms . Invent. Math. 70 (1982/83), no. 2, 219–288.
+32
+[DFI95] Duke, W.; Friedlander, J.; Iwaniec, H. Representations by the deter-
+minant and mean values of L-functions. Sieve methods, exponential sums,
+and their applications in number theory (Cardiﬀ, 1995), 109–115, London
+Math. Soc. Lecture Note Ser., 237, Cambridge Univ. Press, Cambridge,
+1997.
+[DFI97] Duke, W.; Friedlander, J.B.; Iwaniec, H. Bilinear forms with Kloost-
+erman fractions. Invent. Math. 128 (1997), no. 1, 23–43.
+[DFI02] Duke, W.; Friedlander, J. B.; Iwaniec, H. The subconvexity problem
+for Artin L-functions. Invent. Math. 149 (2002), no. 3, 489–577.
+[DFI12] Duke, W.; Friedlander, J.B.; Iwaniec, H. Weyl sums for quadratic
+roots. Int. Math. Res. Not. IMRN 2012, no. 11, 2493–2549.
+[Fou] Fouvry, ´Etienne Autour du th´ eor` eme de Bombieri-Vinogradov. Acta
+Math. 152 (1984), no. 3-4, 219–244.
+[Shp] Shparlinski, I.E. On the distribution of solutions to linear equations .
+Glas. Mat. Ser. III 44(64) (2009), no. 1, 7–10.
+[Tit] Titchmarsh, E.C. The theory of the Riemann zeta-function. Second
+edition. Edited and with a preface by D. R. Heath-Brown. The Clarendon
+Press, Oxford University Press, New York, 1986. ISBN: 0-19-853369-1
+S. Bettin, Dipartimento di Matematica, Universit `a di Genova; Via Dode-
+caneso, 35; 16146 Genova; ITALY
+E-mail address : bettin@dima.unige.it
+V. Chandee, Department of Mathematics, Burapha University; Chonburi;
+20131 Thailand
+E-mail address : vorrapan@gmail.com
+33

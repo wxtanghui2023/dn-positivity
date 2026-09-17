@@ -1,0 +1,4021 @@
+arXiv:1411.7764v1 [math.NT] 28 Nov 2014
+THE MEAN SQUARE OF THE PRODUCT OF THE RIEMANN
+ZETA FUNCTION WITH DIRICHLET POLYNOMIALS
+SANDRO BETTIN, VORRAPAN CHANDEE, AND MAKSYM RADZIWI/suppress L/suppress L
+Abstract. Improving earlier work of Balasubramanian, Conrey and Heath-Bro wn
+[BCHB85], we obtain an asymptotic formula for the mean-square of the Riemann zeta-
+function times an arbitrary Dirichlet polynomial of lengthT 1/2+δ, with δ = 0.01515 . . ..
+As an application we obtain an upper bound of the correct order of m agnitude for
+the third moment of the Riemann zeta-function. We also reﬁne prev ious work of
+Deshouillers and Iwaniec [DI84], obtaining asymptotic estimates in plac e of bounds.
+Using the work of Watt [Wat95], we compute the mean-square of th e Riemann zeta-
+function times a Dirichlet polynomial of length going up to T 3/4 provided that the
+Dirichlet polynomial assumes a special shape. Finally, we exhibit a conj ectural esti-
+mate for trilinear sums of Kloosterman fractions which implies the Lindel¨ of Hypothesis.
+1. Introduction
+We are interested in the mean-square of the product of the Rieman n zeta-function
+ζ(s) with an arbitrary Dirichlet polynomial A(s). More precisely, we would like to
+understand
+(1.1) I =
+∫
+/CA
+⏐⏐ζ
+{1
+2 +it
+)⏐⏐2
+·
+⏐⏐A
+{1
+2 +it
+)⏐⏐2
+φ
+(t
+T
+)
+dt
+with φ(x) a smooth function supported in [1 , 2] and
+A(s) :=
+∑
+n⩽T θ
+an
+ns, a n ≪nε, θ < 1.
+Asymptotic estimates forI have been used consistently to understand the distribution
+of values ofL-functions, the location of their zeros, and upper and lower bound s for the
+size of L-functions. See, for example, [CGG86, Con89, Rad, Sou95].
+It is crucially important to allowθ to be as large as possible. For example, if we could
+takeθ = 1 −ε in (1.1) then the Lindel¨ of Hypothesis would follow.
+Balasubramanian, Conrey and Heath-Brown obtained an asymptot ic formula for I
+when θ < 1
+2. For θ < 1
+2 and φ(t) the indicator function of the interval [1 , 2], they show
+Date: December 1, 2014.
+2010 Mathematics Subject Classiﬁcation. 11M06, 11M26.
+Key words and phrases. Riemann zeta function, Twisted second moment, Kloosterman frac tions,
+Bilinear sums, Lindel¨ of Hypothesis.
+The third author was partially supported by NSF grant DMS-112815 5.
+1
+2 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+that
+(1.2) I =T
+∑
+d,e⩽T θ
+adae
+[d,e ] ·
+(
+log
+(T (d,e )2
+2πde
+)
++ 2γ + log 4− 1
+)
++o(T ).
+When A(s) is a molliﬁer, they show that one can go further and take θ < 1
+2 + 1
+34 =
+0.529411... . Their motivation was to understand the location of the zeros of th e
+Riemann zeta-function. Speciﬁcally they deduce that at least 38% o f the complex zeros
+of ζ(s) are on the critical line ℜs = 1
+2. Improvements on the admissible length of A(s)
+will lead to a further understanding of the zeros of ζ(s) on the critical line. (See also
+[Con89]).
+In complete generality the formula (1.2) fails when θ >1. Balasubramanian, Conrey
+and Heath-Brown conjecture that it remains true provided that θ <1. This is known
+as the θ = 1 conjecture. An important change occurs at θ = 1
+2 . When θ < 1
+2 only the
+diagonal terms (in the sense of Section 3.1 below) contribute to I, while for θ >1
+2 there
+is also a contribution from the non-diagonal terms which seems diﬃcult to manage given
+the generality of the Dirichlet polynomial A(s). The main result of our paper consists
+in breaking the 1
+2 barrier for an arbitrary Dirichlet polynomial. In fact, we prove (1.2)
+for θ< 17
+33 = 1
+2 +δ with δ = 1
+66 ≈ 0.01515....
+Theorem 1. LetI and A(s) be as above. If θ< 1
+2 +δ, with δ = 1
+66 then,
+I =
+∑
+d,e⩽T θ
+adae
+[d,e ] ·
+∫
+R
+(
+log
+(t (d,e )2
+2πde
+)
++ 2γ
+)
+φ
+(t
+T
+)
+dt +O
+(
+T
+3
+20 +εN
+33
+20 +T
+1
+3 +ε
+)
+,
+whereN :=T θ.
+We notice that the oﬀ-diagonal terms contribute to the main term r oughly those d
+and e for which the logarithm in the above expression is negative.
+Our main tool in the proof of Theorem 1 is an estimate for trilinear for ms of Kloost-
+erman fractions, which will appear in [BC]. This estimate improves a res ult of Duke,
+Friedlander, Iwaniec in [DFI97a], dealing with bilinear sums. The use of T heorem 2
+in their paper is also enough to break the 1
+2 barrier, though with the smaller constant
+δ = 1/190 ≈ 0.00526 in Theorem 1.
+If we assume a general estimate for trilinear forms of Kloosterman fractions, such as,
+SA,M,N :=
+∑
+a
+∑∑
+(m,n)=1
+νaαmβn e
+(am
+n
+)
+≪ε ‖α‖‖β‖‖ν‖(M +N)
+1
+2 +r+εAt + ‖ν‖A
+1
+2
+(
+‖α‖∞‖β‖N
+1
+2 +ε + ‖α‖‖β‖∞M
+1
+2 +ε
+)
+,
+(1.3)
+where M ≤ m < 2M, N ≤ n <2N, A ≤ a <2A, A ≪ (NM )
+0.5−r
+1+2t +ε, and ‖ · ‖ and
+‖ · ‖∞ denote the L2 and L∞ norms respectively, then the statement of Theorem 1 can
+be replaced as follows.
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 3
+Theorem 2. Suppose that (1.3) is true for some r,t ≥ 0. Then
+I =
+∑
+d,e⩽T θ
+adae
+[d,e ]·
+∫
+R
+(
+log
+(t (d,e )2
+2πde
+)
++ 2γ
+)
+φ
+(t
+T
+)
+dt +O
+(
+T
+1
+2 −t+εN
+1
+2 +r+2t +T
+1
+3 +ε
+)
+,
+for θ <1
+2 + 0.5−r
+1+2(r+2t) and where N :=T θ.
+The estimate of Duke, Friedlander, Iwaniec implies (1.3) withr = 23
+48 andt = 1
+2, while
+the estimate of Bettin and Chandee allows us to take r = 9
+20 andt = 7
+20. We conjecture
+that (1.3) holds true for all r,t ≥ 0.
+Conjecture 1. LetA ≪ (NM )
+1
+2 +ε. Then
+(1.4) SA,M,N ≪ ‖α‖‖β‖‖ν‖(M +N)
+1
+2 +ε+‖ν‖A
+1
+2
+(
+‖α‖∞‖β‖N
+1
+2 +ε + ‖α‖‖β‖∞M
+1
+2 +ε
+)
+.
+This conjecture essentially states that we expect square-root cancellation in the short-
+est two sums, as long as the total saving does not exceed M orN. In the Appendix we
+show that this is best possible, up to ε-powers.
+Using the estimate (1.4) and Theorem 2, we obtain an asymptotic for mula forI valid
+for any θ < 1, and this implies the Lindel¨ of hypothesis. We state this as a corollar y
+below.
+Corollary 1. Suppose that Conjecture 1 holds. Then the Lindel¨ of Hypothe sis is true.
+Conjecture 1 appears to be strictly stronger than the Lindel¨ of H ypothesis. Indeed
+Conjecture 1 implies (1.2) with θ < 1, while the Lindel¨ of Hypothesis only gives the
+cruder bound
+I ≪T 1+ε
+∑
+n≤T θ
+|an|2
+n .
+The proof of Theorem 2, on which Corollary 1 depends, is the same as that of The-
+orem 1 except that we use (1.3) instead of Proposition 1. The modiﬁc ation will be
+discussed at the end of Section 3.
+Duke, Friedlander and Iwaniec apply their estimate to obtain bounds for the twisted
+second moment of a Dirichlet L-function [DFI97b]. They show that,
+∑
+χ mod q
+⏐⏐L
+{1
+2,χ
+)⏐⏐2
+·
+⏐⏐D
+{1
+2,χ
+)⏐⏐2
+≪q1+ε
+for Dirichlet polynomials D(s,χ ) with coeﬃcients an ≪ nε and of length q1/2+δ′
+with
+some δ′ > 0. Our proof of Theorem 1 would not extend to give an asymptotic fo rmula
+in this case, and additional input is needed.
+As an application of Theorem 1 we obtain an upper bound of the corre ct order of
+magnitude for the third moment of the Riemann zeta-function.
+Corollary 2. We have,
+∫ 2T
+T
+⏐⏐ζ
+{1
+2 +it
+)⏐⏐3
+dt ≪T (logT )9/4.
+4 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+We further indicate in Section 6.1 how to reﬁne this result to obtain co rrect upper
+bounds for the 2k-th moment, whenk has the formk = 1 + 1/n. Previously Corollary 2
+was known only on the assumption of the Riemann Hypothesis [HB81]. T he only
+sharp unconditional upper bounds that were previously known are for the classic cases
+k = 0, 1, 2 and for k = 1/n, due to Heath-Brown [HB81].
+With further applications in mind we investigate how much θ can be increased when
+the Dirichlet polynomial A(s) is specialized.
+1.1. Products of two Dirichlet polynomials. WhenA(s) can be written as a prod-
+uct of two Dirichlet polynomials B(s)C(s), one can appeal to stronger estimates for
+sums of Kloosterman sums due to Deshouillers and Iwaniec. In [DI84], Deshouillers and
+Iwaniec consider the product of ζ(s) with two Dirichlet polynomials,
+(1.5) J =
+∫
+/CA
+⏐⏐ζ
+{1
+2 +it
+)⏐⏐2
+·
+⏐⏐A
+{1
+2 +it
+)⏐⏐2
+·
+⏐⏐B
+{1
+2 +it
+)⏐⏐2
+dt
+with
+A(s) :=
+∑
+n⩽N
+αn
+ns, B (s) :=
+∑
+k⩽K
+βk
+ks, where αn ≪nε, βk ≪kε.(1.6)
+They show that if N ≥K, then
+J ≪T ε · (T +T 1/2N 3/4K +T 1/2NK 1/2 +N 7/4K 3/2).
+Their proof depends on estimates for incomplete Kloosterman sums as developed in
+[DI84]. Proceeding similarly as in the proof of Theorem 1, and using Des houillers and
+Iwaniec’s estimate, we reﬁne their bound to an asymptotic estimate .
+Theorem 3. Let J,A (s) and B(s) be as deﬁned in (1.5) and (1.6), and let N /greaterorequalslantK.
+Then,
+J =
+∑
+d,e⩽N K
+adae
+[d,e ] ·
+∫
+R
+(
+log
+(t(d,e )2
+2πde
+)
++ 2γ
+)
+φ
+(t
+T
+)
+dt
++O(T ε · (T 1/2N 3/4K +T 1/2NK 1/2 +N 7/4K 3/2)),
+with ad :=∑
+nk=dαnβk.
+When the length ofN andK is chosen suitably, Theorem 3 allows us to takeθ <1
+2+ 1
+10.
+1.2. Specializing one of the Dirichlet polynomials. A speciﬁc case of interest is
+A(s)B(s) withA(s) of length N =
+√
+T and smooth coeﬃcients, and B(s) arbitrary and
+as long as possible. One can think of such estimates as estimates for the twisted fourth
+moment of the Riemann zeta-function. In this case we can go furth er by combining the
+trilinear sums estimate used to prove Theorem 1 with Watt’s strengt hening [Wat95] of
+the groundbreaking work of Deshouillers-Iwaniec on estimates for sums of Kloosterman
+sums [DI83].
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 5
+Theorem 4. Let J,A (s) and B(s) be as deﬁned in (1.5) and (1.6). Let N ≪ T
+1
+2 +ε
+for all ε > 0 and assume that αn = ψ(n) with ψ(x) a smooth function such that
+ψ(j)(x) ≪j x−j for all j > 0. Let K ≪ T
+1
+4 and βk ≪ kε for all ε > 0. Moreover
+assume αn is supported on [NT −ξ1, 2N] and βk is supported on [KT −ξ2, 2K], where
+0 ≤ξ1 ≤ 1
+5, 0 ≤ξ2 ≤ 1
+16. Then,
+J =
+∑
+d,e⩽N K
+adae
+[d,e ] ·
+∫
+R
+(
+log
+(t(d,e )2
+2πde
+)
++ 2γ
+)
+φ
+(t
+T
+)
+dt +
++O
+(
+T
+1
+2 +εK 2 +KN
+3
+4T
+3
+8 +ε + T
+39
+40 + 1
+8 ξ1+ 2
+5 ξ2+ε
+)
+,
+wheread =∑
+nk=dαnβk.
+Remark. Theorem 4 yields an asymptotic formula for 5ξ1 + 16ξ2 < 1 (and N ≪ T
+1
+2 ,
+K ≪T
+1
+2 −ε). We remark that this range could be enlarged with a little mo re work.
+We notice that Theorem 4 allows us to take θ < 3
+4 for Dirichlet polynomials of
+the form A(s)B(s) with A(s) pretending to be ζ(s) and B(s) of length up to T 1/4−ε.
+Thus, following the work of Radziwi/suppress l/suppress l [Rad12], Theorem 4 could be applied to give
+a sharp upper bound for the 2 k-th moment of the Riemann zeta function for 2 k <
+5, conditionally on the Riemann hypothesis (however, we remark tha t this has been
+recently proven for all k ≥ 0 by Harper [Har]). It would be interesting to investigate if
+Theorem 4 has other applications, for example to the study of large gaps between the
+zeros of the Riemann zeta-function (see [Bre]).
+Theorem 4 reﬁnes upon Watt’s result, who uses his Kloosterman sum estimate to give
+(essentially) an upper bound of the form J ≪ T 1+ε +T 1/2+εK 2, for an,b n supported
+on dyadic intervals. Theorem 4 should also be compared with the asym ptotic formula
+for the twisted fourth moment of Hughes and Young [HY10]. Their re sult allows to get
+an asymptotic formula for the second moment of ζ 2(s)B(s) with B(s) of length up to
+T 1/11−ε.
+Acknowledgments
+We are very grateful to Brian Conrey for suggesting to us the pro blem of breaking
+the 1
+2 barrier in Theorem 1 and to Micah B. Milinovich and Nathan Ng for pointin g out
+the paper of Duke, Friedlander, Iwaniec [DFI97a]. We also wish to thank the referee for
+a very careful reading of the paper and for indicating several inac curacies and mistakes.
+2. Estimates for sums of Kloosterman sums
+Remark. Throughout the paper, we use the common convention in analyt ic number
+theory that ε denotes an arbitrarily small positive quantity that may var y from line to
+line.
+In this section, we collect the estimates for sums of Kloosterman su ms that will be
+used to prove the theorems.
+6 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+The following Proposition is from [BC], and we will use it when dealing with t he
+contribution of the oﬀ-diagonal terms in Theorem 1 and 4.
+Proposition 1. Let αm, βn, νa be complex numbers, where M ≤ m <2M, N ≤ n <
+2N, and A ≤a< 2A. Then for any ε> 0, we have
+∑
+a
+∑∑
+(m,n)=1
+νaαmβn e
+(am
+n
+)
+≪ε ‖α‖‖β‖‖ν‖
+(
+1 + A
+MN
+) 1
+2
+×
+(
+(AMN )
+7
+20 +ε(M +N)
+1
+4 + (AMN )
+3
+8 +ε(AN +AM)
+1
+8
+)
+,
+(2.1)
+where ‖ · ‖ denotes the L2 norm.
+The oﬀ-diagonal terms in Theorem 3 will be estimated using the followin g bound,
+due to Deshouillers and Iwaniec [DI84].
+Proposition 2 (Deshouillers, Iwaniec). Let L,J,U,V ≥ 1 and |c(u,v )| ≤ 1. We then
+have
+∑
+1≤ℓ≤L
+∑
+1≤j≤J
+(ℓ,̺j)=1
+⏐⏐⏐⏐⏐⏐⏐⏐
+∑
+1≤u≤U
+∑
+1≤v≤V
+(v,ℓ)=1
+c(u,v ) e
+(
+u̺vj
+ℓ
+)
+⏐⏐⏐⏐⏐⏐⏐⏐
+≪ (LJUV )1/2+ε{
+(LJ)1/2 + (U +V )1/4[LJ(U +̺V )(L +̺V 2) +̺UV 2J 2]1/4}
+.
+Finally, to estimate the oﬀ-diagonal terms in Theorem 4, we will use th e following
+Proposition, which can be derived easily from Proposition 4.1 of Watt [ Wat95].
+Proposition 3 (Watt). Let H,C,P,V,R,S ≥ 1 and δ ≤ 1. Assume that for some
+ε> 0 we have
+X :=
+(RVSP
+HC
+) 1
+2
+≫ (RSPV )ε,
+(RS)2 ≥ max
+(
+H 2C,SP
+V (RSPV )ε
+)
+.
+(2.2)
+Moreover, assume that α(x),β (x) are complex valued smooth functions, supported on
+the intervals [1/2,H ] and [1/2,C ] respectively, such that
+α(j)(x),β (j)(x) ≪j (δx)−j
+for all j ≥ 0. Assume ar,b s are sequences of complex numbers supported on [R/2,R ],
+[S/2,S ] respectively and are such that ar ≪ rε, bs ≪ sε. Finally, assume that for all
+i,j ≥ 0,
+di+j
+dyidyjγr,s(x,y ) ≪i,j x−iy−j,
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 7
+where for all r and s, γr,s(x,y ) is supported on [V/2,V ] × [P/2,P ]. Then
+∑∑
+s∼S, r ∼R
+∑∑∑∑
+h,c,p,v,
+(rv,sp)=1
+α(h)β(c)γr,s(v,p )arbs e
+(
+±hcrv
+sp
+)
+≪δ− 7
+2HCR (V +SX )
+(
+1 +HC
+RS
+) 1
+2
+(
+1 + P
+VR
+) 1
+2
+(
+1 +H 2CPX 2
+VS 3R4
+) 1
+4
+(HCRVPS )20ε.
+(2.3)
+Proof. Firstly using smooth partitions of unity, we can assume that α(x),β (x) are
+supported on [ H/2,H ] and [ C/2,C ], since the bound (2.3) is weaker (and the con-
+ditions (2.2) stricter) for larger values of H and C. Moreover, by dividing by Rε and
+Sε if necessary, we can assume ar,b s ≪ 1.
+By Poisson’s formula,
+∑
+(v,sp)=1
+γ(v,p ) e
+(
+±hcrv
+sp
+)
+=
+∑∗
+u (mod sp)
+e
+(
+±hcru
+sp
+) ∑
+v≡u (mod sp)
+γ(v,p )
+=
+∑∗
+u (mod sp)
+e
+(
+±hcru
+sp
+) 1
+sp
+∑
+ℓ
+e
+(
+−ℓu
+sp
+)∫
+R
+γ(y,p ) e
+(ℓy
+sp
+)
+dy
+=
+∑
+ℓ
+S(hcr, ∓ℓ,sp )
+∫
+R
+γ(ysp,p ) e(ℓy)dy.
+Ifℓ = 0, the Kloosterman sum reduces to a Ramanujan sum, and one hasS(hcr, ∓ℓ,sp ) ≪
+(hc,sp ). Thus, the contribution to (2.3) coming from the terms ℓ = 0 is bounded by
+∑∑
+s∼S, r ∼R
+∑∑∑
+h,c,p
+(r,sp)=1
+α(h)β(c)arbs
+(hc,sp )
+sp V ≪RVHC (HCP )ε.
+Also, integrating by parts repeatedly, we see that the terms with ℓ ≥ SP
+V (RSPV )ε give
+a negligible contribution. For the remaining terms, we introduce a smo oth partition of
+unity
+1 =
+∑′
+L
+θL(x), ∀x ≥ 1,
+whereθL(x) is supported in [L/2, 3L] (with L ≪ SP
+V (RSPV )ε), satisﬁes θL(x)j ≪j L−j
+for all j ≥ 0, and is such that ∑′
+L≤X 1 ≪ log(2 +X) for all X ≥ 1. Thus, we need to
+bound
+∑∑
+s∼S, r ∼R
+∑∑∑
+h,c,p,
+(r,sp)=1
+∑
+0<|ℓ|< SP
+V (RSP V )ε
+α(h)β(c)arbsS(hcr, ∓ℓ,sp )
+∫
+R
+γ(ysp,p ) e(ℓy)dy
+=
+∑′
+L
+∫
+y∼ V
+SP
+∑∑
+s∼S,r∼R
+∑∑∑
+h,c,p,
+(r,sp)=1
+∑
+ℓ∼L
+α(h)β(c)ω(ℓ,y )arbsS(hcr, ∓ℓ,sp )fs(p,y )dy,
+8 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+where fs(p,y ) := γ(ysp,p ), ω(ℓ,y ) = θ(ℓ) e(ℓy), and ∑′ denotes the sum over the
+partitions of unity. We remark that for y ∼ V
+SP , we have dj
+dpjfs(p,y ) ≪ p−j, and that
+dj
+dℓjω(ℓ,y ) ≪ (L−1 + V
+SP )j ≪ L−j(RSPV )jε. By Proposition 4.1 of Watt [Wat95], the
+sums inside the integral are bounded by
+δ− 7
+2 (RVLP )
+7
+2 εHCL (RSX )1+ε
+(
+1 +HC
+RS
+) 1
+2
+(
+1 + L
+RS
+) 1
+2
+(
+1 +H 2CLX 2
+(RS)4
+) 1
+4
+,
+and summing over L and integrating overy completes the proof of the proposition. □
+3. The proof of Theorem 1
+We start by expressing
+⏐⏐ζ
+{1
+2 +it
+)⏐⏐2
+as a sum of length approximatelyT 1+ε. Let G(w)
+be an entire function with rapid decay along vertical lines, that is G(x +iy) ≪y−A for
+any ﬁxedx andA> 0. Suppose G(−w) =G(w),G (0) = 1,G (1/2) = 0. We will use the
+following form of the approximate functional equation for |ζ(s)|2.
+Lemma 1 (Approximate functional equation). ForT <t< 2T, we have
+⏐⏐⏐⏐ζ
+(1
+2 +it
+)⏐⏐⏐⏐
+2
+= 2
+∑
+m1,m2
+1
+(m1m2)
+1
+2
+(m1
+m2
+)it
+W
+(2πm1m2
+t
+)
++O
+{
+T −2/3)
+,
+where
+W (x) := 1
+2πi
+∫
+(2)
+x−wG(w)dw
+w ,
+and where we use the notation
+∫
+(c) to mean an integration up the vertical line from
+c −i∞ to c +i∞.
+The proof of the lemma can be found in Lemma 3 of [LR].
+Remark. Notice that W (ℓ)(x) ≪ℓ,A min
+{
+1,x −A)
+for x> 0 and all ℓ ∈ N .
+The error term in Lemma 1 produces an error term bounded by T
+1
+3 +ε, and thus
+I = 2
+∑
+n1,n2,m1,m2
+an1an2
+(m1m2n1n2)
+1
+2
+∫
+R
+(m1n2
+m2n1
+)it
+W
+(2πm1m2
+t
+)
+φ
+(t
+T
+)
+dt +O(T
+1
+3 +ε)
+= D + S +O(T
+1
+3 +ε),
+where the sum is over n1,n 2 ≤N, D is the sum when m1n2 =m2n1, and S is the sum
+when m1n2 ⁄=m2n1.
+3.1. Diagonal terms. Firstly, we consider the diagonal terms m1n2 = m2n1. For
+j = 1, 2, we write mj =ℓn∗
+j, where n∗
+j = nj
+(n1,n2). The contribution of the diagonal term
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 9
+is
+D = 2
+∑
+n1,n2,ℓ
+an1an2(n1,n 2)
+ℓn1n2
+∫
+R
+W
+(2πℓ2n∗
+1n∗
+2
+t
+)
+φ
+(t
+T
+)
+dt
+= 2
+2πi
+∑
+n1,n2,ℓ
+an1an2(n1,n 2)
+ℓn1n2
+∫
+R
+∫
+(2)
+(2πℓ2n∗
+1n∗
+2
+t
+)−w
+G(w)dw
+w φ
+(t
+T
+)
+dt
+= 2
+2πi
+∑
+n1,n2
+an1an2(n1,n 2)
+n1n2
+∫
+R
+∫
+(2)
+( t
+2πn∗
+1n∗
+2
+)w
+ζ(1 + 2w)G(w)dw
+w φ
+(t
+T
+)
+dt.
+(3.1)
+This term will be later combined with a contribution from the oﬀ-diagon al terms.
+Together, they give the main term in Theorem 1.
+3.2. Oﬀ-Diagonal terms. In this section, we consider the terms with m1n2 ⁄=m2n1.
+We writem1n2 −m2n1 = ∆.
+Since W (x) ≪ x−A when x ≫ 1, we can truncate the sum over m1,m 2 to when
+m1m2 ≤T 1+ε. We introduce a smooth partition of unity
+1 =
+∑′
+M
+FM(x), T −100 ≤x ≤T 1+ε,(3.2)
+where FM(x) is smooth, supported in [ M/2, 3M], and it satisﬁes F (j)
+M (x) ≪j
+1
+M j for all
+j ≥ 0. Moreover we can choose a partition of unity which satisﬁes ∑′
+M 1 ≪ log(2 +T ).
+Therefore
+S = 2
+∑′
+N1
+∑′
+N2
+∑′
+M
+∑
+∆⁄=0
+∑
+n1,n2,m1,m2
+m1n2−m2n1=∆
+an1an2
+(m1m2n1n2)
+1
+2
+×
+(∫
+R
+(
+1 + ∆
+m2n1
+)it
+W
+(2πm1m2
+t
+)
+φ
+(t
+T
+)
+dt
+)
+FN1(n1)FN2(n2)FM(m2) +O(1),
+(3.3)
+where N1,N 2 ≤N and M ≤T 1+ε.
+Next we show that the terms with |∆|>D ,D := M N1
+T 1−ε , give a negligible contribution.
+In fact,
+dℓ
+dtℓW
+(2πm1m2
+t
+)
+≪ℓ,A
+1
+tℓ min
+(
+1,
+(2πm1m2
+t
+)−A)
+,
+10 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+whence, integrating by part ℓ times, we have
+∑′
+N1,N2,M
+∑
+|∆|>D
+∑
+n1,m2
+∑
+n2,m1
+m1n2−m2n1=∆
+an1an2
+(m1m2n1n2)
+1
+2
+(∫
+R
+(
+1 + ∆
+m2n1
+)it
+W
+(2πm1m2
+t
+)
+φ
+(t
+T
+)
+dt
+)
+×FN1(n1)FN2(n2)FM(m2)
+≪ℓ
+∑′
+N1,M
+∑
+|∆|>D
+∑
+n1∼N1,m2∼M
+∑
+m1≤T 1+ε
+n2≤N,
+m1n2−m2n1=∆
+T −ℓ+1+ε
+(m1m2n1n2)
+1
+2
+⏐⏐⏐⏐log
+(
+1 + ∆
+m2n1
+)⏐⏐⏐⏐
+−ℓ
+≪ℓ
+∑′
+N1,M
+∑
+|∆|>D
+∑
+n1∼N1,m2∼M
+1√n1m2
+∑
+m1≤T 1+ε
+n2≤N,
+m1n2−m2n1=∆
+1√n2m1
+T −ℓ+1+ε ·
+(m2n1
+|∆|
+)ℓ
+≪A,εT −A,
+where ℓ is large enough.
+Now, if |∆|<D , then ∆
+m2n1
+≪ 1
+T 1−ε, and
+m1 = m2n1 + ∆
+n2
+=m2
+n1
+n2
+(
+1 + ∆
+m2n1
+)
+.
+Hence for T <t< 2T,
+1
+m1
+= n2
+m2n1
+(
+1 − ∆
+m2n1
++O
+( 1
+T 2−ε
+))
+;
+(
+1 + ∆
+m2n1
+)it
+=eit log
+(
+1+ ∆
+m2n1
+)
+=eit ∆
+m2n1
+(
+1 − it∆2
+2m2
+2n2
+1
++O
+( 1
+T 2−ε
+))
+,
+and
+W
+(2πm1m2
+t
+)
+=W
+(2πm2
+2n1
+tn2
+)
++ 2πm2∆
+tn2
+W ′
+(2πm2
+2n1
+tn2
+)
++O
+( 1
+T 2−ε
+)
+.
+Since m1m2 ≤ T 1+ε, we have m2(m2n1 + ∆) ≤ n2T 1+ε. Hence M ≪ T 1/2+ε
+√
+N2
+N1
+, and
+the error term from using the above approximations in (3.3) is
+≪ T
+T 2−ε
+∑′
+N1
+∑′
+N2
+∑′
+M ≪T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤D
+∑
+n1∼N1
+n2∼N2
+∑
+m2∼M
+1
+m2n1
+≪
+∑′
+N1
+∑′
+N2
+∑′
+M ≪T 1/2+ε
+√
+N2/N1
+MN 1N2
+T 2−ε ≪
+√
+TN 3/2
+2 N 1/2
+1
+T 2−ε ≪ N 2
+T 3/2−ε,
+using that D =MN 1/T 1−ε and that M ≪T 1/2+ε
+√
+N2
+N1
+. Thus, we have
+S = A + E +O
+(
+1 + N 2
+T 3/2−ε
+)
+,
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 11
+where
+A = 2
+∑′
+N1
+∑′
+N2
+∑′
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤D
+∑
+n1,n2
+∑
+n1m2≡−∆ (mod n2)
+m2>0
+an1an2
+m2n1
+×
+×
+(∫
+R
+e
+( ∆t
+2πm2n1
+)
+W
+(2πm2
+2n1
+tn2
+)
+φ
+(t
+T
+)
+dt
+)
+FM(m2)FN1(n1)FN2(n2),
+(3.4)
+and
+E = 2
+∑′
+N1
+∑′
+N2
+∑′
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤D
+∑
+n1,n2
+∑
+n1m2≡−∆ (mod n2)
+m2>0
+an1an2
+m2n1
+FM(m2)FN1(n1)FN2(n2)×
+×
+∫
+R
+e
+( ∆t
+2πm2n1
+)[
+W
+(2πm2
+2n1
+tn2
+)(
+− ∆
+2m2n1
+− it∆2
+2m2
+2n2
+1
+)
++ 2πm2∆
+tn2
+W ′
+(2πm2
+2n1
+tn2
+)]
+φ
+(t
+T
+)
+dt,
+(3.5)
+since the rest of the terms arising from the above approximations also give a contribution
+which is O
+{
+N 2T −3/2+ε)
+.
+First, we consider A. Giving an eligible bound for E is easy and we will do it in the
+next section.
+Extracting the common divisor d of n1 and n2, we re-write the sum (3.4) as
+A = 2
+∑
+d≤N
+1
+d
+∑′
+N1,N2≤N
+∑′
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2 FN1(dn1)FN2(dn2)AM,Ni(n1,n 2, ∆),
+where
+AM,Ni(n1,n 2, ∆) =
+∑
+m2≡−n1∆ (mod n2)
+FM(m2)
+m2n1
+(∫
+R
+e
+( ∆t
+2πm2n1
+)
+W
+(2πm2
+2n1
+tn2
+)
+φ
+(t
+T
+)
+dt
+)
+.
+By Poisson summation formula,
+AM,Ni(n1,n 2, ∆) = 1
+n1n2
+∑
+h∈Z
+e
+(
+−hn1∆
+n2
+)∫ ∞
+0
+e
+(
+−hx
+n2
+)FM(x)
+x ×
+×
+∫
+R
+e
+( ∆t
+2πxn1
+)
+W
+(2πx2n1
+tn2
+)
+φ
+(t
+T
+)
+dtdx.
+After the change of variable x → x
+n1
+, this becomes
+AM,Ni(n1,n 2, ∆) = 1
+n1n2
+∑
+h∈Z
+~AM,Ni(h,n 1,n 2, ∆) e
+(
+−hn1∆
+n2
+)
+,
+where
+~AM,Ni(h,n 1,n 2, ∆) =
+∫ ∞
+0
+e
+(
+− hx
+n1n2
+)FM
+(
+x
+n1
+)
+x
+∫
+R
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+)
+φ
+(t
+T
+)
+dtdx.
+To understand the contribution of ~AM,Ni(h,n 1,n 2, ∆), we consider the following three
+cases.
+12 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+Case 1: h = 0. The contribution to A from h = 0 is
+A0 = 2
+∑
+d≤N
+∑′
+N1≤N
+∑′
+N2≤N
+∑′
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2 FN1(dn1)FN2(dn2)
+dn1n2
+×
+∫
+R
+∫ ∞
+0
+FM
+(x
+n1
+)
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+)dx
+x φ
+(t
+T
+)
+dt.
+(3.6)
+Now, we can extend the sum over ∆ to ∆ ∈ Z \ {0}, since it can be shown as before
+that the terms |∆| ≥ D/d give a negligible contribution. Making the change of variables
+y =t/x and integrating by parts twice we see that the second line of (3.6) is e qual to
+− 1
+∆2
+∫
+R
+∫ ∞
+0
+e
+(∆y
+2π
+) d2
+dy2
+(
+FM
+( t
+n1y
+)
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt
+= − 1
+∆2
+∫
+R
+∫
+R(t,n1)
+e
+(∆y
+2π
+) d2
+dy2
+(
+FM
+( t
+n1y
+)
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt +O
+( 1
+∆2
+)
+,
+where R(t,n 1) = {y |T −100 < t
+n1y <T 1/2+ε
+√
+N2
+N1
+} and where we estimated trivially the
+part of the integral over y with y ∈ R>0 \R(t,n 1), using the properties of W and FM
+(and n1 ≪T ). Thus, summing over M we have
+∑′
+M
+∫
+R
+∫ ∞
+0
+FM
+(x
+n1
+)
+e
+( ∆t
+2πx
+)
+W
+( 2πx2
+n1n2t
+)dx
+x φ
+(t
+T
+)
+dt =
+= − 1
+∆2
+∫
+R
+∫
+R(t,n1)
+e
+(∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt +O
+(log(2 +T )
+∆2
+)
+= − 1
+∆2
+∫
+R
+∫ ∞
+0
+e
+(∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt +O
+(log(2 +T )
+∆2
+)
+.
+Therefore, summing over N1,N 2, we have
+A0 = −2
+∑
+d≤N
+∑
+|∆|⁄=0
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1adn2
+dn1n2∆2
+∫
+R
+∫ ∞
+0
+e
+(∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt
++O(T ε)
+= −2
+∑
+d≤N
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1adn2
+dn1n2
+∫
+R
+∫ ∞
+0
+∑
+|∆|⁄=0
+1
+∆2 e
+(∆y
+2π
+) d2
+dy2
+(
+W
+( 2πt
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt
++O(T ε)
+= A0,+ + A0,− +O(T ε),
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 13
+where we can take the sum over ∆ inside the integrals since they conv erge absolutely,
+and after a change of variables,
+A0,± = −2
+∑
+d≤N
+∑
+n1,n2≤ N
+d
+(n1,n2)=1
+adn1adn2
+dn1n2
+∫
+R
+∫ ∞
+0
+∞∑
+∆=1
+(eiy +e−iy) d2
+dy2
+(
+W
+( 2π∆2t
+n1n2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt
+= −2
+∑
+n1,n2≤N
+an1an2(n1,n 2)
+n1n2
+∫
+R
+∫ ∞
+0
+∞∑
+∆=1
+2 cos(y) d2
+dy2
+(
+W
+( 2π∆2t
+n∗
+1n∗
+2y2
+)1
+y
+)
+dyφ
+(t
+T
+)
+dt,
+where we recall that n∗
+i = ni
+(n1,n2) for i = 1, 2. We notice that
+∞∑
+∆=1
+d2
+dy2
+(
+W
+( 2π∆2t
+n∗
+1n∗
+2y2
+)1
+y
+)
+= 1
+2πi
+∞∑
+∆=1
+∫
+(2)
+(2π∆2t
+n∗
+1n∗
+2
+)−w
+(2w − 1)(2w − 2)y2w−3G(w)dw
+w
+= 1
+2πi
+∫
+( 5
+4 )
+ζ(2w)
+( 2πt
+n∗
+1n∗
+2
+)−w
+(2w − 1)(2w − 2)y2w−3G(w)dw
+w .
+For 0< ℜ(s)< 1, we have
+∫ ∞
+0
+cos(y)ys−1dy = Γ(s) cos
+(πs
+2
+)
+(see, for example, [GR07], formula 3.381, 5., page 346), whence we a re left with
+−2
+2πi
+∫
+( 1
+4 )
+Γ(2w) cos(πw)ζ(2w)
+( 2πt
+n∗
+1n∗
+2
+)−w
+G(w)dw
+w ,
+where we used the multiplication formula for the gamma function, the identity cos(x −
+π) = − cos(x), and we moved the line of integration without encountering any pole, due
+to the assumption that G(w) vanishes at w = 1
+2. Thus,
+A0 +O(T ε)
+= 2
+2πi
+∑
+n1,n2
+an1an2(n1,n 2)
+n1n2
+∫
+R
+∫
+( 1
+4 )
+2 cos(πw)Γ(2w)ζ(2w)
+( 2πt
+n∗
+1n∗
+2
+)−w
+G(w)dw
+w φ
+(t
+T
+)
+dt
+= −2
+2πi
+∑
+n1,n2
+adn1an2(n1,n 2)
+n1n2
+∫
+R
+∫
+(− 1
+4 )
+ζ(1 + 2w)
+( t
+2πn∗
+1n∗
+2
+)w
+G(w)dw
+w φ
+(t
+T
+)
+dt,
+where we used the functional equation of the Riemann zeta functio n (e.g. Chapter 10
+in [Dav00]), and then we made the change of variables w → −w and use the fact that
+G(w) =G(−w).
+14 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+From (3.1), we have
+D + A0 = 2
+2πi
+∑
+n1,n2
+an1an2(n1,n 2)
+n1n2
+∫
+R
+∫
+(2)
+( t
+2πn∗
+1n∗
+2
+)w
+ζ(1 + 2w)G(w)dw
+w φ
+(t
+T
+)
+dt
+− 2
+2πi
+∑
+n1,n2
+an1an2(n1,n 2)
+n1n2
+∫
+R
+∫
+(−1/4)
+( t
+2πn∗
+1n∗
+2
+)w
+ζ(1 + 2w)G(w)dw
+w φ
+(t
+T
+)
+dt +O(T ε)
+=
+∑
+n1,n2
+an1an2(n1,n 2)
+n1n2
+∫
+R
+(
+log t
+2πn∗
+1n∗
+2
++ 2γ
+)
+φ
+(t
+T
+)
+dt +O(T ε),
+since
+Resw=0xwζ(1 + 2w)G(w)
+w = 1
+2 logx +γ.
+Now we have the main term. The rest of the oﬀ-diagonal terms cont ribute to the error
+term as shown in the following two cases.
+Case 2: |h| ≥ N2
+dMT ε. In this case and in Case 3, we deﬁne Hd := N2
+dMT ε. By changing
+variablet =xy, we have
+1
+n1n2
+~AM,Ni(h,n 1,n 2, ∆) = 1
+n1n2
+∫
+R
+e
+(∆y
+2π
+)∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+(x
+n1
+)
+W
+( 2πx
+n1n2y
+)
+φ
+(yx
+T
+)
+dxdy.
+Since FM is supported in [ M/2, 3M], x ≍ N1M
+d . Moreover, y
+T ≍ 1
+x ≍ d
+N1M due to the
+support ofφ, and 1
+n1n2y ≪ T ε1
+x ≍ dT ε1
+N1M because of the rapid decay ofW. Hence integrating
+by parts ℓ + 1 times, for T ≤t ≤ 2T we have
+1
+n1n2
+∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+(x
+n1
+)
+W
+( 2πx
+n1n2y
+)
+φ
+(yx
+T
+)
+dx
+≪ℓ,ε
+d2
+N1N2
+(n1n2
+h
+dT ε1
+MN 1
+)ℓ+1MN 1
+d
+≪
+(T ε1
+h
+)ℓ+1(N2
+dM
+)ℓ
+.
+Therefore, the contribution to S when |h|>H d is
+≪
+∑
+d≤N
+∑′
+N1,N2≤N,
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2 FN1(dn1)FN2(dn2)
+d
+∑
+|h|≥Hd
+dT
+hN1M
+(N2T ε1
+dMh
+)ℓ
+≪T −A,
+when ℓ is suﬃciently large. Thus, the terms |h|>H d give a negligible contribution.
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 15
+Case 3: 0 < |h|< Hd. It is suﬃcient to consider the terms 0 < h < Hd. By changing
+variablest =yx, and x to xn1n2, we will consider the dyadic contribution
+A∗
+M,N1,N2 :=
+∑
+n1,n2
+(n1,n2)=1
+∑
+0<|∆|≤ D
+d
+∑
+0<h<Hd
+adn1adn2 FN1(dn1)FN2(dn2)
+d ×
+× e
+(
+−h∆n1
+n2
+)∫ ∞
+0
+e(−hx)FM(xn2)
+∫
+R
+e
+(∆y
+2π
+)
+W
+(2πx
+y
+)
+φ
+(yxn1n2
+T
+)
+dydx.
+We write φ in term of its Mellin transform ~φ, to separate the variables n1 and n2.
+Let h∆ =a, A = DHd
+d = N1N2
+d2T 1−ε, and νx,y(a) =∑
+h∆=a e
+{
+−hx + ∆y
+2π
+)
+. Therefore we have
+A∗
+M,N1,N2 = 1
+(2πi)d
+∫ ∞
+0
+∫
+R
+∫
+(ε)
+W
+(2πx
+y
+) ∑
+0<|a|<A
+νx,y(a)×
+×
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2 FN1(dn1)FN2(dn2)FM(xn2)
+nw
+1nw
+2
+e
+(
+−an1
+n2
+)
+~φ(w) T w
+xwyw dwdydx.
+SinceFM is supported in [M/2, 3M],x ≍ dM
+N2
+. Moreover, y ≍ T
+xn1n2
+≍ T d
+M N1
+because φ is
+supported in [1,2]. Thus, using Proposition 1, we have
+A∗
+M,N1,N2 ≪ 1
+d
+∫
+x≍ dM
+N2
+∫
+y≍ T d
+M N1
+(
+(N1N2A)
+17
+20 +ε
+d
+17
+10 −ε
+(N1 +N2)
+1
+4
+d
+1
+4
++ (N1N2A)
+7
+8 +ε
+d
+7
+4 −ε
+(AN1 +AN2)
+1
+8
+d
+1
+8
+)
+dydx
+≪
+(
+T
+3
+20 +ε (N1N2)
+7
+10
+d
+53
+20
+(N1 +N2)
+1
+4 +T ε (N1N2)
+7
+8
+d
+23
+8
+(N1 +N2)
+1
+8
+)
+(3.7)
+Summing over dyadic intervals forM ≤T 1/2+ε
+√
+N2
+N1
+,Ni ≤N, and d ≤N, we have that
+the contribution to A when |h| ≤ Hd is bounded by T
+3
+20 +εN
+33
+20 +T εN
+15
+8. Therefore we
+takeN up to T
+17
+33 −ε to obtain an eligible error term in Theorem 1.
+3.3. A trivial bound for E. Extracting the common divisord fromn1 andn2, applying
+Poisson summation formula, and changing variables, we can write (3.5 ) as
+E = 2
+∑
+d≤N
+1
+d
+∑′
+N1,N2≤N
+∑′
+M ≤T 1/2+ε
+√ N2
+N1
+∑
+0<|∆|≤ D
+d
+∑
+n1,n2
+(n1,n2)=1
+adn1adn2 FN1(dn1)FN2(dn2)EM,Ni(n1,n 2, ∆),
+where
+EM,Ni(n1,n 2, ∆) = 1
+n1n2
+∑
+h∈Z
+e
+(
+−hn1∆
+n2
+)∫ ∞
+0
+e
+(
+− hx
+n1n2
+)
+FM
+(x
+n1
+)∫
+R
+e
+( ∆t
+2πx
+)
+φ
+(t
+T
+)
+×
+×
+[
+W
+( 2πx2
+n1n2t
+)(
+− ∆
+2x2 − it∆2
+2x3
+)
++ 2π∆
+n1n2tW ′
+( 2πx2
+n1n2t
+)]
+dtdx.
+16 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+Integrating by parts, as in Case 2 of the previous section, we see t hat the contribution
+coming from the terms with |h|>H d isO(1). Thus, estimating trivially the rest of the
+terms we have
+EM,Ni(n1,n 2, ∆) ≪ T ε
+n1n2
+(
+1 + N2
+dM
+)
+,
+whence
+E ≪ T −1/2+εN +T −1+εN 2 ≪NT ε
+and the proof of Theorem 1 is complete.
+3.4. The proof of Theorem 2. The proof of Theorem 2 is the same as Theorem 1
+except that we use (1.3) instead of Proposition 1 in (3.7). Notice that (1.3) is applicable,
+since A = N1N2
+d2T 1−ε ≤
+{N1N2
+d2
+) 0.5−r
+1+2t +ε
+by Ni
+d ≤N ≤T
+1
+2 + 0.5−r
+1+2(r+2t) . Thus, we obtain that
+A∗
+M,N1,N2 ≪ T ε
+d
+∫
+x≍ dM
+N2
+∫
+y≍ T d
+M N1
+√N1N2A
+d
+(
+(N1 +N2)
+1
+2 +rAt
+d
+1
+2 +r
+)
++ AN1
+d + AN2
+d dydx
+≪T
+1
+2 +ε−t
+(
+(N1 +N2)
+1
+2 +r(N1N2)t
+d
+3
+2 +r+2t
+)
++ N1
+d2 + N2
+d2.
+Summing over dyadic intervals forM,N i, we have that the contribution to A from these
+terms is T
+1
+2 +ε−tN
+1
+2 +r+2t +N 1+ε and Theorem 2 follows.
+4. Proof of Theorem 3
+The proof of Theorem 3 follows the proof of Theorem 1 except the la st part when
+0< |h|<H d. Here we only modify the last part of the proof using the same argum ents
+by Deshouillers and Iwaniec in [DI84]. By the same change of variables, we have to
+consider
+A∗
+M,N1,N2 =
+∑
+n1,n2
+(n1,n2)=1
+∑
+0<|∆|≤ D
+d
+∑
+0<|h|<Hd
+adn1adn2FN1(dn1)FN2(dn2)×
+× e
+(
+−hn1∆
+n2
+)∫ ∞
+0
+e(−hx)FM(xn2)
+∫
+R
+e
+(∆y
+2π
+)
+W
+(2πx
+y
+)
+φ
+(xyn1n2
+T
+)
+dydx.
+We now write adn1 as αµjβνr, where µ|d∞, (d,j ) = 1, n1 =̺rj, ν= d
+(µ,d) and ̺ = µ
+(µ,d).
+Therefore, we have to bound
+∑
+d≤T
+1
+d
+∑′
+N1,N2,M
+∑
+µ|d∞
+ν=d/(µ,d)
+∑
+0<|∆|≤ D
+d
+∑
+0<|h|<Hd
+∑
+(n2,̺)=1
+adn2
+∑
+(j,dn2)=1
+αµj
+∑
+(r,n2)=1
+βνr e
+(
+−h∆̺rj
+n2
+)
+×FN1(d̺rj)FN2(dn2)
+∫ ∞
+0
+e(−hx)FM(xn2)
+∫
+R
+e
+(∆y
+2π
+)
+W
+(2πx
+y
+)
+φ
+(xy̺rjn 2
+T
+)
+dydx,
+(4.1)
+where the sums over N1, N2, M are dyadic sums up to NK , NK , and T 1/2+ǫ√
+N2/N1.
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 17
+To bound the above sum, we use Proposition 2. However, ﬁrst we ne ed to apply
+Mellin’s transform toFN1 andφ to separate variablesn2,r,j . The technique is standard,
+so we skip the details. From Proposition 2, the sum over ℓ is the sum over n2, and
+L = N2
+d . The sum overj is the sum over j, and J ≤ N
+µ . The sum over u is the sum over
+h∆, and U = N1N2
+d2T 1−2ε . Finally the sum over v is the sum over r, and V ≤ K
+ν. Moreover,
+we note that JV ≤ N1
+d̺. Applying Proposition 2, we obtain that (4.1) is bounded by
+(after summing over dyadic M)
+≪T ε
+∑
+d≤T
+∑
+µ|d∞
+ν=d/(µ,d)
+∑′
+N1
+∑′
+N2
+dT
+N1N2
+( N1N2
+̺1/2d2T 1/2
+){(N2N
+dµ
+)1/2
++
+(N1N2
+d2T + K
+ν
+)1/4
+×
+×
+[N2N
+dµ
+(N1N2
+Td 2 + ̺K
+ν
+)(N2
+d + ̺K 2
+ν2
+)
++ ̺N1N2N 2K 2
+d2Tµ 2ν2
+]1/4}
+≪
+∑
+d≤T
+∑
+µ|d∞
+ν=d/(µ,d)
+T
+1
+2 +ε
+̺1/2d
+{(N 2K
+dµ
+)1/2
++
+(N 2K 2
+d2T + K
+ν
+)1/4
+×
+×
+[N 2K
+dµ
+(N 2K 2
+Td 2 + ̺K
+ν
+)(NK
+d + ̺K 2
+ν2
+)
++ ̺N 4K 4
+d2Tµ 2ν2
+]1/4}
+≪T ε{
+T 1/2N 3/4K +T 1/2NK 1/2 +N 7/4K 3/2)∑
+d≤T
+∑
+µ|d∞
+ν=d/(µ,d)
+1
+d5/4
+1
+µ1/4
+≪T ε{
+T 1/2N 3/4K +T 1/2NK 1/2 +N 7/4K 3/2)
+,
+and this completes the proof of Theorem 3.
+5. Proof of Theorem 4
+The proof of Theorem 4 follows the proof of Theorem 1 except the la st part when
+0< |h|<H d.
+We recall that we have ab = ∑
+nk=bαnβk, and we assume that αn is supported on
+[NT −ξ1, 2N], where N ≪ T
+1
+2 +ε and 0 ≤ ξ1 ≤ 1
+5. Moreover βk is supported on k ∈
+[KT −ξ2, 2K], and 0 ≤ ξ1 ≤ 1
+16. Let ξ1 +ξ2 = ξ. We introduce smooth partitions of
+unity in the sums overn andk (without indicating it, to save notation). Thus, ni ≈Ni,
+ki ≈ Ki (note that in the notation of Section 3 Ni was the size of b = nk, so NiKi in
+the current notation). Thus, dbi ≍NiKi. Moreover, we assume that αn =ψ(n), where
+ψ(x) is a smooth function such that ψ(j)(x) ≪j x−j for j ≥ 0.
+18 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+We have to bound
+A′
+N,K :=
+∑
+d≤N K
+∑′
+N1,N2,K1,K2
+∑′
+M ≤T
+1
+2 +ε
+√ N2K2
+N1K1
+∑
+b1,b2
+(b1,b2)=1
+∑
+0<|∆|≤ M N1K1
+dT 1−ε
+∑
+0<|h|< N2K2T ε
+dM
+adb1adb2FN1K1(db1)FN2K2(db2)
+db1b2
+e
+(
+−hb1∆
+b2
+)∫ ∞
+0
+e
+(
+− hx
+b1b2
+)FM
+(
+x
+b1
+)
+x ×
+×
+∫
+R
+e
+( ∆t
+2πx
+)
+W
+(2πx2
+b1b2t
+)
+φ
+(t
+T
+)
+dtdx.
+After the change of variables y = t
+2πx and then z = x
+b1b2
+, it becomes
+A′
+N,K = 2π
+∑
+d≤N K
+∑′
+N1,N2,K1,K2
+∑′
+M ≤T
+1
+2 +ε
+√ N2K2
+N1K1
+∑
+b1,b2
+(b1,b2)=1
+∑
+0<|∆|≤ M N1K1
+dT 1−ε
+∑
+0<|h|< N2K2T ε
+dM
+adb1adb2FN1K1(db1)FN2K2(db2)
+d e
+(
+−hb1∆
+b2
+)∫ ∞
+0
+e(−hz)FM(zb2)×
+×
+∫
+R
+e(∆y)W
+(z
+y
+)
+φ
+(2πyzb 1b2
+T
+)
+dydz,
+Firstly we claim that we can truncate the sum overd at heightY := (N1K1N2K2)
+1
+2/T
+1
+2 +η
+for some small η > 0, up to an error term with a power saving. This is because for
+larger values of d we are essentially left with the contribution coming from a Dirichlet
+polynomial of length T
+1
+2 +η, which we can bound using the method used to prove The-
+orem 1. More precisely, by (3.7), we have that the contribution fro m the terms with
+d ≥Y is bounded by
+≪
+∑′
+N1,N2,K1,K2
+∑
+Y ≤d≤N K
+(T
+3
+20 +ε(N1K1 +N2K2)
+1
+4 (N1K1N2K2)
+7
+10
+d
+53
+20
++
++T ε (N1K1 +N2K2)
+1
+8 (N1K1N2K2)
+7
+8
+d
+23
+8
+)
+≪
+∑′
+N1,N2,K1,K2
+(
+T
+39
+40 + 33
+20 η+ε
+(N1K1
+N2K2
++ N2K2
+N1K1
+) 1
+8
++T
+15
+16 + 15
+8 η+ε
+(N1K1
+N2K2
++ N2K2
+N1K1
+) 1
+16
+)
+≪T
+39
+40 + 33
+20 η+ 1
+8 ξ+ε +T
+15
+16 + 15
+8 η+ 1
+16 ξ+ε,
+(5.1)
+since T −ξ ≪ N1K1
+N2K2
+≪T ξ.
+For the remaining part of the proof we use Watt’s arguments in [Wat9 5]. We write
+adbi =
+∑
+hiki=dbi
+αhiβki =
+∑
+figi=bi, µ iνi=d,
+(gi, d
+νi
+)=1
+αfiµiβgiνi,
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 19
+so that fi ≍Ni/µi and gi ≍Ki/νi. We will apply Proposition 3 to bound
+∑′
+M ≤T
+1
+2 +ε
+√ N2K2
+N1K1
+∑
+d≤Y
+1
+d
+∑
+µ1,ν1,µ2,ν2,
+µ1ν1=µ2ν2=d
+∫
+z≍ dM
+N2K2
+∫
+y≍ dT
+M N1K1
+⏐⏐⏐⏐W
+(z
+y
+)
+×
+(5.2)
+×
+∑
+g1,g2(
+gi, d
+νi
+)
+=1
+∑
+f1,f2
+(f1g1,f2g2)=1
+∑
+0<|∆|≤ M N1K1
+dT 1−ε
+∑
+0<|h|< N2K2T ε
+dM
+αf1µ1βg1ν1αf2µ2βg2ν2 e
+(h∆f1g1
+f2g2
+)
+×FN1K1(f1g1µ1ν1)FN2K2(f2g2µ2ν2) e(−hz) e(∆y)FM(zf2g2)φ
+(2πyzf 1f2g1g2
+T
+)⏐⏐⏐⏐dydz.
+Before using Proposition 3 (with H = M N1K1
+dT 1−ε , C = N2K2T ε
+dM ,r =g1,s =g2,v =f1,p =
+f2 in the proposition respectively), we verify that X 2 = N1N2K1K2
+HCd 2 =T 1−ε ≫T ε, which
+is clearly satisﬁed if ε is small enough, and that
+(K1K2
+ν1ν2
+)2
+≥ N 2
+1K 2
+1N2K2M
+d3T 2−ε ,
+(K1K2
+ν1ν2
+)2
+≥ N2K2µ1
+N1µ2ν2
+T ε = K2N2µ1
+dN1
+T ε = K2N2
+ν1N1
+T ε.
+Since M ≤ T
+1
+2 +ε(N2K2/N1K1)
+1
+2 , and d ≤ (N1K1N2K2)
+1
+2
+T
+1
+2 +η , the ﬁrst condition is implied
+by T 2−ε ≥ N 2
+1N 2
+2T ε−η, which is true if 2 ε < η. The second condition is equivalent
+to K 2
+1K2 ≥ ν1ν2
+2T ε N2
+N1
+. This is true as long as η > 1
+6ξ2 + 4
+3ε, since Ni ≤ T 1/2+ε,
+K2/K1 ≪T ξ2, and
+ν1ν2
+2
+N2
+N1
+T ε ≤d3N2
+N1
+T ε ≤ N
+1
+2
+1N
+5
+2
+2K
+3
+2
+1K
+3
+2
+2T ε−3η
+T 3/2 ≤K 2
+1K2
+K
+1
+2
+2
+K
+1
+2
+1
+T 4ε−3η ≤K 2
+1K2T 4ε−3η+ ξ2
+2.
+Applying Proposition 3 with δ−1 = max(zC,yH ) + 1 ≪ T ε and using that µi,ν i ≤
+d ≤ (N1K1N2K2)
+1
+2
+T
+1
+2 +η , we obtain that (5.2) is bounded by
+∑′
+M ≤T
+1
+2 +ε
+√ N2K2
+N1K1
+∑
+d≤Y
+T ε
+d
+∑
+µ1,ν1,µ2,ν2,
+µ1ν1=µ2ν2=d
+dM
+N2K2
+dT
+MN 1K1
+N1N2K1K2
+Td 2
+K1
+ν1
+(N1
+µ1
++ K2
+ν2
+T
+1
+2
+)
+×
+×
+(
+1 +N1N2ν1ν2
+Td 2
+) 1
+2
+(
+1 + dN2
+µ2K1N1
+) 1
+2
+(
+1 + MN 1N 2
+2ν3
+1ν2
+2
+(K1K2)2dTµ 2
+2
+) 1
+4
+≪
+∑′
+M ≤T
+1
+2 +ε
+√ N2K2
+N1K1
+∑
+d≤Y
+T ε
+d
+∑
+µ1,ν1,µ2,ν2,
+µ1ν1=µ2ν2=d
+K1
+ν1
+(N1
+µ1
++ K2
+ν2
+T
+1
+2
+)(
+1 + dN2
+µ2K1N1
+) 1
+2
+(
+1 + MN 1N 2
+2ν3
+1ν2
+2
+(K1K2)2dTµ 2
+2
+) 1
+4
+≪
+∑
+d≤Y
+T ε
+d
+∑
+µ1,ν1,µ2,ν2,
+µ1ν1=µ2ν2=d
+(
+K1K2T
+1
+2
+ν1ν2
++ K1N1
+d + K
+3
+8
+1N
+9
+8
+1N
+5
+8
+2
+µ
+3
+4
+1µ2K
+3
+8
+2T
+1
+8
++ K
+3
+8
+1K
+5
+8
+2T
+3
+8N
+1
+8
+1N
+5
+8
+2
+ν
+1
+4
+1d
+3
+4
++
+20 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
++K
+1
+2
+1K2T
+1
+2N
+1
+2
+2
+ν1ν
+1
+2
+2N
+1
+2
+1
++ K
+1
+2
+1N
+1
+2
+1N
+1
+2
+2
+d
+1
+2µ
+1
+2
+2
++ N
+5
+8
+1N
+9
+8
+2d
+1
+2
+µ
+3
+4
+1µ
+3
+2
+2K
+3
+8
+2K
+1
+8
+1T
+1
+8
++ T
+3
+8N
+9
+8
+2K
+5
+8
+2
+N
+3
+8
+1K
+1
+8
+1d
+1
+4ν
+1
+4
+1µ
+1
+2
+2
+)
+≪K1K2T
+1
+2 +ε +K1N1T ε + K
+3
+8
+1N
+9
+8
+1N
+5
+8
+2
+K
+3
+8
+2T
+1
+8 −ε
++K
+3
+8
+1K
+5
+8
+2T
+3
+8 +εN
+1
+8
+1N
+5
+8
+2 + K
+1
+2
+1K2T
+1
+2 +εN
+1
+2
+2
+N
+1
+2
+1
++
++K
+1
+2
+1N
+1
+2
+1N
+1
+2
+2T ε + N
+7
+8
+1N
+11
+8
+2 K
+1
+8
+1
+K
+1
+8
+2T
+3
+8 + η
+2 −ε
++ T
+3
+8 +εN
+9
+8
+2K
+5
+8
+2
+N
+3
+8
+1K
+1
+8
+1
+.
+Summing over Ki and Ni, we obtain that (5.2) is bounded by
+K 2T
+1
+2 +ε +T
+3
+4 + 3ξ2
+8 +ε +KN
+3
+4T
+3
+8 +ε +K
+3
+2T
+1
+2 +ε+ ξ1
+2 +T
+3
+4 + ξ2
+8 − η
+2 +ε +K
+1
+2N
+3
+4T
+3
+8 + 3ξ1
+8 + ξ2
+8.
+Theorem 4 then follows by taking η = ξ2
+6 + 3ε and collecting the error term (5.1).
+6. Proof of Corollary 2
+The proof of Corollary 2 requires the following two lemmas.
+Lemma 2. Let G be a compactly supported function. If F = −G′ for x >0 and F is
+three times continuously diﬀerentiable and compactly supp orted, then,
+∑
+n
+G
+(
+log n
+log x
+)
+ns = 1
+2πi
+∫
+(c)
+ζ(s +w) · ˆF
+(
+−iw logx
+2π
+)dw
+w ,
+for c> max(1 − ℜ(s), 0) and x> 1, where ˆF denotes the Fourier transform of F ,
+ˆF(x) :=
+∫ ∞
+−∞
+F (u)e−2πiuxdu.
+Proof. First of all ˆF (x) is entire because F is compactly supported. We expand the
+function ζ(s +w) into its Dirichlet series and compute
+(6.1) 1
+2πi
+∫
+(c)
+n−w · ˆF
+(
+−iw logx
+2π
+)dw
+w .
+Notice that
+ˆF
+(
+− iw logx
+2π
+)
+=
+∫ ∞
+−∞
+F (u)xuwdu.
+Inserting this representation into (6.1) and inter-changing integr als, we obtain
+∫ ∞
+−∞
+F (u) · 1
+2πi
+∫
+(c)
+(xu
+n
+)w
+· dw
+w du =
+∫ ∞
+log n
+log x
+F (u)du =G
+(logn
+logx
+)
+.
+In order to justify the interchange of the two integrations we tru ncate the integral
+in (6.1) at a large height X, committing an error which goes to zero as X → ∞ (since
+the Fourier transform ˆF will decay suﬃciently fast), and interchange. Then, we use
+a Perron formula with error term in order to compute the conditiona lly convergent
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 21
+Perron integral appearing above. Taking the height X → ∞ returns the desired result,
+as stated. □
+Lemma 3. LetA ≥ 0 and let 0<η < 1
+66 be ﬁxed constants. Let v ∈ R andx<T 1/2+η.
+Lets =σ +it, where σ = 1
+2 + A
+log T and T ≤t ≤ 2T. Then
+∫ 2T
+T
+|ζ(s)|2 ·
+⏐⏐⏐⏐⏐
+∑
+n≤x
+d1/2(n)
+ns+iv
+⏐⏐⏐⏐⏐
+2
+dt ≪T (logT )9/4,
+whered1/2(n) are the coeﬃcients of the Dirichlet series expansion
+ζ(s)
+1
+2 =
+∑
+n≥1
+d1/2(n)
+ns , ℜ(s)> 1.
+Proof. Let
+Φx,v(s) :=ζ(s) ·
+∑
+n≤x
+d1/2(n)
+ns+iv
+and
+ft(s) = s − 1
+s − 3 exp
+{
+(s −it)2)
+.
+Then, by Gabriel’s convexity theorem (see [HB81], Lemma 3)
+∫
+R
+|Φx,v(σ +iu)ft(σ +iu)|2du ≤
+(∫
+R
+|Φx,v( 1
+2 +iu)ft( 1
+2 +iu)|2du
+) 5/2−σ
+2
+×
+(∫
+R
+|Φx,v( 5
+2 +iu)ft( 5
+2 +iu)|2du
+) σ−1/2
+2
+We now integrate both sides over T ≤t ≤ 2T and use H¨ older’s inequality to get
+∫
+R
+|Φx,v(σ +iu)|2~fT (σ +iu)du ≤
+(∫
+R
+|Φx,v( 1
+2 +iu)|2~fT ( 1
+2 +iu)du
+) 5/2−σ
+2
+×
+(∫
+R
+|Φx,v( 5
+2 +iu)|2~fT ( 5
+2 +iu)du
+) σ−1/2
+2
+where
+~fT (σ +iu) :=
+∫ 2T
+T
+|ft(σ +iu)|2dt.
+Clearly ~fT (σ +iu) ≍ 1 if T ≤u ≤ 2T . In addition
+~fT (σ +iu) ≪
+{
+1 if T/2 ≤u ≤ 3T
+e−|u| otherwise.
+22 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+We also note that Φ x,v(s) ≪ (1 + |s|)1/4+ε ·
+√
+T . Therefore the previous inequality
+becomes
+∫ 2T
+T
+|Φx,v(σ +it)|2dt ≪
+(∫ 3T
+T /2
+|Φx,v( 1
+2 +it)|2dt +O(T )
+) 5/2−σ
+2
+×
+(∫ 3T
+T /2
+|Φx,v(5/2 +it)|2dt +O(T )
+) σ−1/2
+2
+.
+According to Theorem 1 the ﬁrst integral on the right-hand side isO
+{
+T (logT )9/4)
+while
+the second integral on the right hand side is O(T ).
+□
+Let δ >0 be a small positive real number to be chosen later. We pick a parame ter θ
+close to 1, with δ <θ <1, and deﬁne
+ˆF (z) =e2πi(θ−δ)z ·
+(e2πi(1−θ)z − 1
+2πi(1 −θ)z
+)N
+with some bounded N >10. We see that F is compactly supported on [ θ −δ,θ −δ +
+(1 −θ)N]. Deﬁne for x> 0,
+G(x) = 1 −
+∫ x
+0
+F (u)du,
+andG(x) = 0 forx ≤ −1. Moreover, we let G(x) decay smoothly until 0 on the interval
+[−1, 0]. This way F = −G′ for x >0. We notice that G(x) = 1 for 0 < x < θ−δ and
+thatG(x) = 1 −ˆF(0) = 0 for x>θ −δ + (1−θ)N. Finally we notice that G isN times
+diﬀerentiable, and consequently that ˆG(x) ≪ (1 + |x|)−N.
+Now we make a choice forθ andδ. Let θ = logy/ logx withy =T 1/2+2δ andx chosen
+so thatθ −δ+(1 −θ)N <1. We pick 1 −θ = (δ/2)/(N −1) so thatx =y1/(1−(δ/2)/(N −1)).
+Then, we choose δ small enough but positive so as to ensure that x<T 1/2+0.01.
+Note that
+ˆF
+(
+−iw logx
+2π
+)
+= (yx−δ)w ·
+( (x/y)w − 1
+w(1 −θ) logx
+)N
+Let s =σ +it with t ≍T and σ = 1
+2 + A
+log T , with A> 0. Using Lemma 2 and shifting
+contours to ℜ(w) = 1
+2 −σ we get
+ζ(s) =
+∑
+n
+G
+(
+log n
+log x
+)
+ns +κ(4N)N (yx−δ)1/2−σ
+(δ logx)N
+∫ ∞
+−∞
+⏐⏐ζ
+{1
+2 +it +iv
+)⏐⏐dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2 +O(T −1)
+where O(1/T ) is the contribution from the pole at w = 1 −s and with |κ| ≤ 1. Let
+c(m) =∑
+m=f e,f,e≤xd1/2(e)d1/2(f). Importantly, notice that c(m) = 1 for m ≤x. Since
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 23
+in addition G(v) = 0 for v >1 we get
+∑
+n
+G
+(
+log n
+log x
+)
+ns =
+∑
+n
+c(n)
+G
+(
+log n
+log x
+)
+ns
+= logx
+2π
+∫
+/CA
+∑
+n
+c(n)
+ns+iv · ˆG
+(v logx
+2π
+)
+dv
+= logx
+2π
+∫
+/CA
+(∑
+n≤x
+d1/2(n)
+ns+iv
+)2
+ˆG
+(v logx
+2π
+)
+dv.
+Combining the above two equations, we have obtained the following ine quality
+|ζ(s)| ≤ logx
+∫
+/CA
+⏐⏐⏐⏐
+∑
+n≤x
+d1/2(n)
+ns+iv
+⏐⏐⏐⏐
+2
+·
+⏐⏐⏐⏐ˆG
+(v logx
+2π
+)⏐⏐⏐⏐dv
++ (4N)N (yx−δ)1/2−σ
+(δ logx)N
+∫ ∞
+−∞
+|ζ( 1
+2 +it +iv)|dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2 +O(1/T ).
+Therefore we have obtained
+∫ 2T
+T
+|ζ(s)|3dt ⩽ logx
+∫
+/CA
+⏐⏐⏐⏐ˆG
+(v logx
+2π
+)⏐⏐⏐⏐
+∫ 2T
+T
+|ζ(s)|2 ·
+⏐⏐⏐⏐⏐
+∑
+n≤x
+d1/2(n)
+ns+iv
+⏐⏐⏐⏐⏐
+2
+dtdv + E +O(T ε),
+where
+E ⩽ (4N)N · (yx−δ)1/2−σ
+(δ logx)N
+∫ ∞
+−∞
+(∫ 2T
+T
+|ζ(s)|2 ·
+⏐⏐ζ
+{1
+2 +it +iv
+)⏐⏐dt
+)
+· dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2.
+(6.2)
+By H¨ older’s inequality and the bound |ζ( 1
+2 +it)| ≪ (1 + |t|)1/6+ε, for |v| < T1/100 we
+have
+∫ 2T
+T
+|ζ(s)|2⏐⏐ζ
+{1
+2 +it +iv
+)⏐⏐dt ⩽
+(∫ 2T
+T
+|ζ(s)|3dt
+)2/3(∫ 2T
+T
+|ζ(1/2 +it +iv)|3dt
+)1/3
+⩽M3(σ,T )2/3 ·
+{
+M3
+{1
+2,T
+)
++O(|v|T 1/2+ε)
+)1/3
+,
+where
+M3(σ,T ) :=
+∫ 2T
+T
+|ζ(σ +it)|3dt.
+By a minor modiﬁcation of Lemma 4 in Heath-Brown’s paper [HB81] we h ave
+M3
+{1
+2,T
+)
+⩽C ·T (3/2)(σ−1/2)M3(σ,T ).
+Therefore,
+∫ 2T
+T
+|ζ(s)|2|ζ( 1
+2 +it +iv)|dt ≤M3(σ,T )2/3 ·
+(
+CT (3/2)(σ− 1
+2 )M3(σ,T ) +O(|v|T 1/2+ε)
+)1/3
+24 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+≤CT (1/2)(σ− 1
+2 ) ·
+{
+M3(σ,T ) +O(T 1−ε)
+)
+.
+The contribution of |v|> T1/100 to (6.2) is negligible, provided that N is chosen to be
+large enough. We conclude that
+E ⩽ C(4N)N
+δN
+(T 1/2xδ
+y
+)σ− 1
+2
+· M3(σ,T )
+(logx(σ − 1
+2))N +OA(T 1−ε).
+Using Lemma 3, we ﬁnd that
+logx
+∫
+/CA
+⏐⏐⏐⏐ˆG
+(v logx
+2π
+)⏐⏐⏐⏐
+∫ 2T
+T
+|ζ(s)|2 ·
+⏐⏐⏐⏐⏐
+∑
+n≤x
+d1/2(n)
+ns+iv
+⏐⏐⏐⏐⏐
+2
+dtdv ≪T (logT )9/4.
+We have obtained the inequality
+M3(σ,T ) ≪T (logT )9/4 +OA(T 1−ε) +C(4N)N
+δN ·
+(T 1/2xδ
+y
+)σ− 1
+2
+· M3(σ,T )
+((σ − 1
+2) logx)N.
+Recall that y =T 1/2+2δ <x<T . Since σ = 1
+2 + A
+log T , the third term on the right-hand
+side in the above equation is less than
+≤C(8N/A)Nδ−Ne−δAM3(σ,T )
+with C an absolute constant. Thus, if A is large enough (but bounded) then the third
+term on the right-hand side in the above equation is absorbed into th e left-hand side,
+and we conclude that
+M3(σ,T ) ≪T (logT )9/4.
+Since M3( 1
+2,T ) ≪ T (3/2)·(σ− 1
+2 )M3(σ,T ) by Lemma 4 of Heath-Brown [HB81] and since
+σ = 1
+2 + A
+log T , we obtain that
+M3( 1
+2,T ) ≪T (logT )9/4.
+6.1. Moments of the form k = 1+1/n. Since we do not claim the result for moments
+withk = 1 + 1/n we only sketch the necessary modiﬁcations of the previous argume nt,
+for the convenience of the interested reader. In order to adapt our argument above to
+moments of the form 1 + 1/n, it suﬃces to prove the inequality
+|ζ(s)|2/n ≪ logT
+∫ σ+
+σ−
+∫
+/CA
+⏐⏐⏐ ˆG
+( v
+2π
+)⏐⏐⏐
+2/n
+·
+⏐⏐⏐⏐⏐
+∑
+m⩽x
+d1/n(m)
+ms+σ+iv/ log x
+⏐⏐⏐⏐⏐
+2
+dvdσ
++ (yx−δ)2(1/2−σ)/n
+(δ logx)2N/n · logT
+∫ σ+
+σ−
+∫ ∞
+−∞
+|ζ(σ +it +iv)|2/n ·dvdσ
+({
+σ − 1
+2
+)2
++v2
+)(N +1)/n ,
+whereσ− = 1
+2 − 1
+log T ,σ+ = 1
+2 + 1
+log T and with the implicit constant depending at most on
+n,N and the same choice of parameters θ,x,y,δ . This is suﬃcient because the previous
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 25
+argument does not depend on some speciﬁc quantiﬁcation of the de pendence on N.
+First we note that
+∑
+n
+G
+(
+log n
+log x
+)
+ns = 1
+2π
+∫
+/CA
+(∑
+m⩽x
+d1/n(m)
+ms+iv/ log x
+)n
+· ˆG
+( v
+2π
+)
+dv.
+Combining this with Lemma 2, and using the same choice of parameters θ,x,y,δ as
+before, it follows that
+|ζ(s)| ≪
+∫
+/CA
+⏐⏐⏐ ˆG
+( v
+2π
+)⏐⏐⏐ ·
+⏐⏐⏐⏐⏐
+∑
+m⩽x
+d1/n(m)
+ms+σ+iv/ log x
+⏐⏐⏐⏐⏐
+n
+dv + (yx−δ)1/2−σ
+(δ logx)N
+∫
+/CA
+⏐⏐ζ
+{1
+2 +it +iv
+)⏐⏐dv
+({
+σ − 1
+2
+)2
++v2
+)(N +1)/2.
+Taking the 2/n power on both sides, it remains to show that
+(∫
+/CA
+⏐⏐⏐ ˆG
+( v
+2π
+)⏐⏐⏐ ·
+⏐⏐⏐⏐⏐
+∑
+m⩽x
+d1/n(m)
+ms+iv/ log x
+⏐⏐⏐⏐⏐
+n
+dv
+) 2
+n
+≪ logT
+∫ σ+
+σ−
+∫
+/CA
+⏐⏐⏐ ˆG
+( v
+2π
+)⏐⏐⏐
+2
+n
+·
+⏐⏐⏐⏐⏐
+∑
+m⩽x
+d1/n(m)
+ms+σ+iv/ log x
+⏐⏐⏐⏐⏐
+2
+dvdσ,
+and that
+(6.3)
+(∫ ∞
+−∞
+|ζ( 1
+2 +it +iv)|dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2
+)2/n
+≪ logT
+∫ σ+
+σ−
+∫ ∞
+−∞
+|ζ(σ +it +iv)|2/ndv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/ndσ.
+We will only show how to prove the second inequality since the proof of the ﬁrst is very
+similar. We bound the integral
+∫ ∞
+−∞
+|ζ( 1
+2 +it +iv)|dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2 ≤ (σ − 1
+2)−N −1∑
+k
+Mk
+(1 + |k|)N +1,
+whereMk is the maximum of ζ( 1
+2 +it +iv) over the interval |v −k(σ − 1
+2)|< (σ − 1
+2)/2.
+Therefore
+(6.4)
+(∫ ∞
+−∞
+|ζ( 1
+2 +it +iv)|dv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/2
+)2/n
+≤ (σ − 1
+2)−2(N +1)/n
+∑
+k
+M 2/n
+k
+(1 + |k|)2(N +1)/n.
+By sub-harmonicity,
+M 2/n
+k ≪ logT
+∫ σ+
+σ−
+∫ (k+1)(σ− 1
+2 )
+(k−1)(σ− 1
+2 )
+|ζ(σ +it +ix)|2/ndxdσ.
+We conclude that
+(σ − 1
+2)−2(N +1)/n
+∑
+k
+M 2/n
+k
+(1 + |k|)2(N +1)/n
+≪ logT
+∫ σ+
+σ−
+∑
+k
+∫ (k+1)(σ− 1
+2 )
+(k−1)(σ− 1
+2 )
+|ζ(σ +it +ix)|2/ndxdσ
+((σ − 1
+2)2 + (k(σ − 1
+2))2)2(N +1)/n
+≪ logT
+∫ σ+
+σ−
+∫ ∞
+−∞
+|ζ(σ +it +iv)|2/ndv
+{{
+σ − 1
+2
+)2
++v2)(N +1)/n dσ.
+26 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+Combining these equations together, we obtain the desired inequalit y (6.3).
+Appendix A. On Conjecture 1
+Proposition 4. LetA,M,N ≥ 1 and let A ≪ (MN )
+1
+2 +ε. Then
+max
+α,β,ν
+|SA,M,N | ≫ (AMN )
+1
+2 −ε(M +N)
+1
+2 +A(M +N)1−ε,
+for all ε> 0, where the maximum is taken over all choices of coeﬃcients αm,β n,ν a ≪ 1.
+Proof. By the reciprocity relation m
+n ≡ − n
+m + 1
+mn (mod 1) we can assume M ≥ N.
+Moreover, we can assumeN,A ≫M ε for some smallε> 0 andM arbitrary large, since
+otherwise the result is easy.
+First, we consider the case M 1−δ ≫ N for some δ >0 and we take αm = f(m) for
+some smooth function f : [M, 2M] → [0, 1] which is such that f (j)(x) ≪j x−j for all
+j ≥ 0 and
+∫
+Rf(x) =KM, for someK >0. Also, let βn = −γn, whereγn is the indicator
+function of the primes congruent to 1 (mod 4) in [ N, 2N], and let νa be the indicator
+function of the primes congruent to 3 (mod 4) in [ A, 2A].
+By Poisson summation, we have
+∑
+m
+f(m) e
+(am
+n
+)
+=KM
+N (cn(a) +O(M −100)),
+where
+cn(a) =
+n∑
+b=1,
+(b,n)=1
+e
+(ba
+n
+)
+=µ
+( n
+(n,a )
+) ϕ(n)
+ϕ
+(
+n
+(n,a)
+)
+is the Ramanujan sum. It follows that
+SA,M,N =KM
+N
+∑
+a
+∑
+n
+βnνa(cn(a) +O(M −100))
+=KM
+N
+∑
+a
+∑
+n
+γnνa(1 +O(M −100)) ≫ (MA)1−ε.
+We now prove
+max
+α,β,ν
+|SA,M,N | ≫ M(AN)
+1
+2 −ε,
+which then implies the Proposition even in the case M 1−δ ≪N for all δ >0.
+By choosing αm appropriately, we have
+max
+α,β,ν
+|SA,M,N | ≫ max
+β,ν
+∑
+m
+Fm;β,ν,
+where
+Fm;β,ν :=
+⏐⏐⏐⏐⏐⏐
+∑
+a
+∑
+(n,m)=1
+νaβn e
+(am
+n
+)⏐⏐⏐⏐⏐⏐
+.
+THE MEAN SQUARE OF THE PRODUCT OF ζ(s) WITH DIRICHLET POLYNOMIALS 27
+First, notice that we have
+max
+β,ν
+∑
+m
+Fm;β,ν ≥ 1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+Fm;β(χ1),ν(χ2)
+with q any prime greater than 4( A4 +N 4) and where β(χ1),ν (χ2) denotes sequences
+deﬁned by β(χ1)n = χ1(n) and ν(χ2)a = χ2(a) respectively. Moreover, by H¨ older’s
+inequality,
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+F 2
+m;β(χ1),ν(χ2) ≤
+(
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+Fm;β(χ1),ν(χ2)
+) 2
+3
+×
+×
+(
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+F 4
+m;β(χ1),ν(χ2)
+) 1
+3
+.
+The left hand side is
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+F 2
+m;β(χ1),ν(χ2) =
+∑
+m
+∑
+a
+∑
+(n,m)=1
+1 ≫MAN,
+and we also have
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+∑
+m
+F 4
+m;β(χ1),ν(χ2) =
+∑
+m
+∑
+a1a2=a3a4
+∑
+n1n2=n3n4,
+(m,n1n2)=1
+1 ≪M(AN)2+ε.
+Thus,
+1
+ϕ(q)2
+∑
+χ1,χ2 (mod q)
+Fm;β(χ1),ν(χ2) ≫M(AN)
+1
+2 −ε
+and the proposition follows. □
+References
+[BC] S. Bettin and V. Chandee, Trilinear forms with kloosterman fractions , preprint.
+[BCHB85] R. Balasubramanian, J. B. Conrey, and D. R. Heath-Brow n, Asymptotic mean square of the
+product of the Riemann zeta-function and a Dirichlet polyno mial, J. Reine Angew. Math.
+357 (1985), 161–181. MR 783539 (87f:11061)
+[Bre] J. Bredberg, Large gaps between consecutive zeros, on the critical line, of the Riemann
+zeta-function, arXiv: 1101.3197.
+[CGG86] J. B. Conrey, A. Ghosh, and S. M. Gonek, Large gaps between zeros of the zeta-function ,
+Mathematika 33 (1986), no. 2, 212–238 (1987). MR 882495 (88g:11057)
+[Con89] J. B. Conrey, More than two ﬁfths of the zeros of the Riemann zeta function a re on the
+critical line, J. Reine Angew. Math. 399 (1989), 1–26. MR 1004130 (90g:11120)
+[Dav00] Harold Davenport, Multiplicative number theory , third ed., Graduate Texts in Mathemat-
+ics, vol. 74, Springer-Verlag, New York, 2000, Revised and with a pr eface by Hugh L.
+Montgomery. MR 1790423 (2001f:11001)
+[DFI97a] W. Duke, J. Friedlander, and H. Iwaniec, Bilinear forms with Kloosterman fractions , Invent.
+Math. 128 (1997), no. 1, 23–43. MR 1437494 (97m:11109)
+28 S. BETTIN, V. CHANDEE, AND M. RADZIWI/suppress L/suppress L
+[DFI97b] , Representations by the determinant and mean values of L-functions, Sieve methods,
+exponential sums, and their applications in number theory (Cardiﬀ, 1995), London Math.
+Soc. Lecture Note Ser., vol. 237, Cambridge Univ. Press, Cambridg e, 1997, pp. 109–115.
+MR 1635738 (99f:11105)
+[DI84] J.-M. Deshouillers and H. Iwaniec, Power mean-values for Dirichlet’s polynomials and the
+Riemann zeta-function. II , Acta Arith. 43 (1984), no. 3, 305–312. MR 738142 (85g:11076)
+[DI83] , Kloosterman sums and Fourier coeﬃcients of cusp forms , Invent. Math. 70
+(1982/83), no. 2, 219–288. MR 684172 (84m:10015)
+[GR07] I. S. Gradshteyn and I. M. Ryzhik, Table of integrals, series, and products , seventh ed., El-
+sevier/Academic Press, Amsterdam, 2007, Translated from the Russian, Translation edited
+and with a preface by Alan Jeﬀrey and Daniel Zwillinger, With one CD-RO M (Windows,
+Macintosh and UNIX). MR 2360010 (2008g:00005)
+[Har] A. Harper, Sharp conditional bounds for moments of the riemann zeta fun ction,
+arXiv:1305.4618.
+[HB81] D. R. Heath-Brown, Fractional moments of the Riemann zeta function , J. London Math.
+Soc. (2) 24 (1981), no. 1, 65–78. MR 623671 (82h:10052)
+[HY10] C. P. Hughes and Matthew P. Young, The twisted fourth moment of the Riemann zeta
+function, J. Reine Angew. Math. 641 (2010), 203–236. MR 2643931 (2011h:11092)
+[LR] X. Li and M. Radziwi/suppress l/suppress l,The Riemann-zeta function on vertical arithmetic progress ions, Int.
+Math. Res. Not. IMRN, to appear, arXiv: 1208.2684.
+[Rad] Maksym Radziwi/suppress ll,Limitations to mollifying ζ(s), arXiv:1207.6583.
+[Rad12] , The 4.36th moment of the Riemann zeta-function , Int. Math. Res. Not. IMRN
+(2012), no. 18, 4245–4259. MR 2975381
+[Sou95] K. Soundararajan, Mean-values of the Riemann zeta-function , Mathematika 42 (1995),
+no. 1, 158–174. MR 1346680 (96h:11086)
+[Wat95] N. Watt, Kloosterman sums and a mean value for Dirichlet polynomials , J. Number Theory
+53 (1995), no. 1, 179–210. MR 1344840 (96f:11109)
+Centre de Recherches Mathematiques Universite de Montreal P. O Box 6128, Centre-
+Ville Station Montreal, Quebec H3C 3J7
+E-mail address : bettin@crm.umontreal.ca
+Department of Mathematics, Burapha University, 169 Long-h ard bangsaen rd Saen-
+suk, Mueang, Chonburi, Thailand 20131
+E-mail address : vorrapan@buu.ac.th
+School of Mathematics, Institute for Advanced Study, 1 Eins tein Drive, Princeton,
+NJ, 08540
+E-mail address : maksym@ias.edu
+Current address : Centre de Recherches Mathematiques Universite de Montreal P. O Box 6128,
+Centre-Ville Station Montreal, Quebec H3C 3J7

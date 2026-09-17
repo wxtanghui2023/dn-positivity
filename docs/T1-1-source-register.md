@@ -77,3 +77,28 @@ $$\boxed{\begin{array}{c|l}
 
 $$\textbf{下一步 T1-2}：\ \text{抽出}\ \text{BCR Theorem 2 模板 (1.3) 的}\ (r,t)\ \text{如何被谱输入束缚}✓$$
 $$\qquad\text{起手材料}：\ \texttt{refs/bcr.pdf}＋\texttt{refs/BC2018-*.pdf}\ \text{（§4 的}\ (4.26)\text{--}(4.33)\ \text{链已逐字在手）}✓$$
+
+---
+
+## 7. 【勘误 T10】（2026-09-17 补记，不覆盖上文）
+
+$$\textbf{(a) 更正}：\ \text{上文 §2 称"}\ \texttt{.gitignore}\ \text{已排除}\ \texttt{*.pdf}\ \text{"} \Longrightarrow \boxed{\textbf{错误}}✓$$
+$$\qquad\text{实际：本仓库}\ \texttt{.gitignore}\ \textbf{只排除}\ \texttt{\_\_pycache\_\_/}\text{、}\texttt{*.pyc}\ \text{、LaTeX 编译产物}；\ \textbf{无}\ \texttt{*.pdf}\ \text{规则}✓✓$$
+$$\qquad\text{仓库惯例（实测）：}\ \text{参考 PDF 存于}\ \texttt{external\_refs/}\ \textbf{并纳入版本控制}（\text{已有 23 份／16 MB}）✓✓\ \text{本档已按此惯例归置}✓$$
+
+$$\textbf{(b) 新增：四篇的正文本地化}（\text{用}\ \texttt{pypdf}\ \text{提取，因}\ \texttt{pdftotext}\ \text{不可用；}\ \text{tril I/II 无 ar5iv 版本}）✓$$
+$$\begin{array}{c|c|c}
+\text{文件（}\texttt{external\_refs/}\text{）}&\text{页数}&\text{正文字符}\\
+\hline
+\texttt{bettin\_chandee\_trilinear\_kloosterman\_1502.00769.pdf/.txt}&33&48{,}663\\
+\texttt{bettin\_chandee\_radziwill\_1411.7764.pdf/.txt}&28&49{,}808\\
+\texttt{trilinear\_kloosterman\_I\_2604.25177.pdf/.txt}&11&17{,}553\\
+\texttt{trilinear\_kloosterman\_II\_2608.27732.pdf/.txt}&9&14{,}987\\
+\end{array}✓$$
+$$\qquad\Longrightarrow\ \textbf{四篇全可本地 grep} \Longrightarrow \text{T1-2 起手材料完备}✓✓$$
+
+$$\textbf{(c) 更正：Trilinear I/II 的作者}——\ \textbf{Thomas Wright}（\text{逐字："}\text{TRILINEAR KLOOSTERMAN FRACTIONS II: SUBDYADIC INTERVALS AND NEARLY BALANCED CONVOLUTIONS, }\textbf{THOMAS WRIGHT}\text{"}）✓✓$$
+$$\qquad\text{其主题：}\ \text{"broadens the range on which }\textbf{Fouvry and Radziwi\l\l}\text{'s results on nearly balanced convolutions apply"}✓$$
+$$\qquad⚠️\ \text{与已撤回的}\ 2601.00292\ (\textbf{Dirk Zeindler})\ \textbf{无关}——\ \text{昨日记录若混淆须一并更正}✓$$
+
+$$\textbf{(d) Tril I/II 的定位（沿用昨日判定）}：\ \text{range-local 改进（"in the case where}\dots\text{"），}\ \textbf{不能} \text{直接给出统一}\ (r,t)\ \text{点}✓\quad(\text{猎-6 判定 C})✓$$
