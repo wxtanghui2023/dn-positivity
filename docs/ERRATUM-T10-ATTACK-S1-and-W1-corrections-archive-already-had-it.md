@@ -57,7 +57,7 @@ $$\text{(ii)}\ \textbf{未用 RH}；\ \textbf{零数值}；\ \text{本档}\ \tex
 ⟹ Tsang／Baluyot／带宽／水平带／对相关 **全部命中** ⟹ **S1 绝非"未触及"**✓✓
 
 ## §8 闸门**实测**记录（17:50 补，避免"说了没测"）
-$$\text{第一版 NEWNESS RULE}\ 	extbf{是死码}✗：	ext{老 hook 第 19 行有}\ 	exttt{exit 0}，	ext{其后追加的判据永不执行} \Longrightarrow 	ext{测试A 未被拒}✗$$
-$$\text{重写 hook 后}\ 	extbf{两测均通过}✓✓：	ext{测试A（已查地图 ✓＋宣称新＋无技术词）}\Rightarrow 	extbf{⛔ 拒}；\ 	ext{测试B（＋有技术词输出）}\Rightarrow 	extbf{✓ 放行}$$
-$$\text{持久化}：	exttt{scripts/git-hooks/pre-commit}\ ＋\ 	exttt{README.md}（	ext{含安装说明与起因}）；\ 	exttt{scripts/prework\_map\_check.sh}\ 	extbf{补入库}（	ext{此前漏提交}）✓✓$$
-$$\text{技术词回查自测}：	exttt{Tsang}\ 	ext{命中}\ 17\ 	ext{档}；\ 	exttt{带宽}\ 54\ 	ext{档}；\ 	exttt{对相关}\ 71\ 	ext{档} \Longrightarrow 	extbf{三项皆非"未触及"}✓✓$$
+$$\text{第一版 NEWNESS RULE}\ \textbf{是死码}✗：\text{老 hook 第 19 行有}\ \texttt{exit 0}，\text{其后追加的判据永不执行} \Longrightarrow \text{测试A 未被拒}✗$$
+$$\text{重写 hook 后}\ \textbf{两测均通过}✓✓：\text{测试A（已查地图 ✓＋宣称新＋无技术词）}\Rightarrow \textbf{⛔ 拒}；\ \text{测试B（＋有技术词输出）}\Rightarrow \textbf{✓ 放行}$$
+$$\text{持久化}：\texttt{scripts/git-hooks/pre-commit}\ ＋\ \texttt{README.md}（\text{含安装说明与起因}）；\ \texttt{scripts/prework\_map\_check.sh}\ \textbf{补入库}（\text{此前漏提交}）✓✓$$
+$$\text{技术词回查自测}：\texttt{Tsang}\ \text{命中}\ 17\ \text{档}；\ \texttt{带宽}\ 54\ \text{档}；\ \texttt{对相关}\ 71\ \text{档} \Longrightarrow \textbf{三项皆非"未触及"}✓✓$$

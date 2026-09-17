@@ -53,7 +53,7 @@ $$\boxed{\text{⑥ 前沿}}\ \text{与}\ \text{⑤}\ \textbf{高度重叠}：\te
 > `V316_kernel_bound.lean`（1262 行，0 sorry／0 axiom／0 error，编译通过）⟹ **一条命令即可外部核验** ✓✓
 > 更正表见 `docs/LEAN-ASSET-INVENTORY-and-corrected-two-axis-reviewability.md` §4 ✓
 
-$$	extbf{级别}：[	extbf{L}]\ 	ext{文献可查}\ ig|\ [	extbf{O}]\ 	ext{我方自推（可复核但需读我方档）}\ ig|\ [	extbf{M}]\ 	ext{自造元语言（外部无对应物）}✓$$
+$$\textbf{级别}：[\textbf{L}]\ \text{文献可查}\ \big|\ [\textbf{O}]\ \text{我方自推（可复核但需读我方档）}\ \big|\ [\textbf{M}]\ \text{自造元语言（外部无对应物）}✓$$
 
 | # | 项 | 级别 | 该级别落在哪 | **外部独立复核可行性** |
 |:--:|:--|:--:|:--|:--|
@@ -79,8 +79,8 @@ $$	extbf{级别}：[	extbf{L}]\ 	ext{文献可查}\ ig|\ [	extbf{O}]\ 	ext{我�
 | 20–21 | D8／D9 | [M] | 纪律项（自造）| ✗ 无对应物 |
 | 22 | D10 | [O]+[M] | [O] AOB2／DISCOVERY-R3；[M] "τ 来源缺口" | ⚠️ 部分 |
 
-$$oxed{	extbf{汇总}：	ext{外部独立可判者}\ pprox\ 5\ 	ext{项}（	ext{W1-文献／W6／W9／W11-经典／W12}）\ 	ext{＋少数可复算数值}；\ 	ext{其余多数}\ 	extbf{＝框架内自洽}}✓✓$$
-$$\qquad ⟹ 	extbf{本台账证明的是"框架内该路已闭合"}，\ 	extbf{不等于}\ 	ext{"RH 的某子命题成立／不成立"}✓\qquad(	ext{详档}\ 	exttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md})✓$$
+$$\boxed{\textbf{汇总}：\text{外部独立可判者}\ pprox\ 5\ \text{项}（\text{W1-文献／W6／W9／W11-经典／W12}）\ \text{＋少数可复算数值}；\ \text{其余多数}\ \textbf{＝框架内自洽}}✓✓$$
+$$\qquad ⟹ \textbf{本台账证明的是"框架内该路已闭合"}，\ \textbf{不等于}\ \text{"RH 的某子命题成立／不成立"}✓\qquad(\text{详档}\ \texttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md})✓$$
 
 ## §2 优先序（建议，按"攻击价值 ÷ 成本"）
 $$\textbf{第 0 轮（最省，先做）}：\text{4 处}\ \texttt{[未核]} \text{文献位} —— \text{W3／W4／W7／W10} \Longrightarrow \text{成本最低、最可能产出}\ \textbf{修正}✓✓$$
@@ -97,7 +97,7 @@ $$\text{(i)}\ \text{本档}\ \textbf{只建流程＋列攻击方向}，\ \textbf
 $$\text{(ii)}\ \textbf{未用 RH}；\ \textbf{零数值}；\ \text{攻击方向为}\ [\textbf{结构}] \text{级建议，非结论}✓✓$$
 
 ## §5 PDF 导出（2026-09-17 16:38，唐先生 16:36 委托）
-$$	ext{产物}：	exttt{/home/node/.openclaw/workspace/dn-project/docs/REVIEW-LEDGER-22-items.pdf}\ （	extbf{2 页 A3 横向}，约 184 KB）$$
-$$	ext{生成器}：	exttt{scripts/make\_ledger\_pdf.py}（	ext{weasyprint ＋ 文泉驿正黑＋DejaVu 回退；}	extbf{无 LaTeX 中文栈} ⟹ 	ext{LaTeX 转 Unicode}）$$
-$$	ext{自检}：	extbf{缺字 0}、	extbf{残留 LaTeX 命令 0}、	ext{表格 22 行全部落页}✓✓\qquad(	ext{本轮修 2 个 bug：显示公式块被转义、}\\textbf/\\texttt\ 	ext{未转换})$$
-$$	ext{注}：	ext{PDF}\ 	extbf{未入 git}（	ext{二进制}）；\ 	ext{如需 A4／分表版可另出}✓$$
+$$\text{产物}：\texttt{/home/node/.openclaw/workspace/dn-project/docs/REVIEW-LEDGER-22-items.pdf}\ （\textbf{3 页 A3 横向}，约 200 KB）$$
+$$\text{生成器}：\texttt{scripts/md2pdf.py}（\text{weasyprint ＋ 文泉驿正黑＋DejaVu 回退；}\textbf{无 LaTeX 中文栈} ⟹ \text{LaTeX 转 Unicode}）$$
+$$\text{自检}：\textbf{缺字 0}、\textbf{残留 LaTeX 命令 0}、\text{表格 22 行全部落页}✓✓\qquad（本轮修 2 个 bug：显示公式块被转义、加粗/等宽命令未转换）$$
+$$\text{注}：\text{PDF}\ \textbf{未入 git}（\text{二进制}）；\ \text{如需 A4／分表版可另出}✓$$

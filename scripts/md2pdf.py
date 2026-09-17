@@ -64,8 +64,27 @@ def conv(s):
     s = s.replace('{','').replace('}','').replace('$','').replace('\\','')
     return re.sub(r'[ \t]{2,}', ' ', s).strip()
 
+
+_EMO = {'\u26d4':'[否]','\u2705':'[✓]','\u2b1c':'[ ]','\u2b50':'★','\ufe0f':''}
+def deemoji(x):
+    x = x.replace('\U0001f534','[承重]').replace('\U0001f7e1','[部分]')
+    x = x.replace('\U0001f5c2','').replace('\U0001f527','[勘误]')
+    for k,v in _EMO.items(): x = x.replace(k,v)
+    return x
+
 ls = t.split('\n'); out = []; i = 0
+def bare_textcmds(s):
+    for _ in range(4):
+        s2 = re.sub(r'\\(%s)\{([^{}]*)\}'
+                    % '|'.join(['textbf','texttt','textrm','textsf','textit','textnormal','textup',
+                                'text','emph','mathrm','mathbf','mathcal','mathbb','boxed','overline','widehat']),
+                    r'\\2', s)
+        if s2 == s: break
+        s = s2
+    return s
+
 def inline(s):
+    s = bare_textcmds(s)
     s = re.sub(r'\$(.+?)\$', lambda m: conv(m.group(1)), s, flags=re.S)
     s = html.escape(s)
     s = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', s)
@@ -82,7 +101,9 @@ while i < len(ls):
         rows = []
         while i < len(ls) and ls[i].strip().startswith('|'):
             rows.append([c.strip() for c in ls[i].strip().strip('|').split('|')]); i += 1
-        out.append('<table><thead><tr>'+''.join('<th>'+inline(c)+'</th>' for c in rows[0])+'</tr></thead><tbody>')
+        ncol = len(rows[0])
+        cls = {7:' class="c7"', 4:' class="c4"'}.get(ncol, '')
+        out.append('<table'+cls+'><thead><tr>'+''.join('<th>'+inline(c)+'</th>' for c in rows[0])+'</tr></thead><tbody>')
         for r in rows[2:]: out.append('<tr>'+''.join('<td>'+inline(c)+'</td>' for c in r)+'</tr>')
         out.append('</tbody></table>'); continue
     s = L.rstrip()
@@ -107,10 +128,22 @@ table{width:100%;border-collapse:collapse;table-layout:fixed;margin:1mm 0;}
 th,td{border:.35pt solid #99a;padding:.85mm 1mm;vertical-align:top;font-size:6.4pt;overflow-wrap:anywhere;}
 th{background:#dde;font-size:6.8pt;} tbody tr:nth-child(even){background:#fafafd;}
 tr{page-break-inside:avoid;}
+table.c7 th:nth-child(1),table.c7 td:nth-child(1){width:1.5%;text-align:center;}
+table.c7 th:nth-child(2),table.c7 td:nth-child(2){width:5.2%;}
+table.c7 th:nth-child(3),table.c7 td:nth-child(3){width:17.6%;}
+table.c7 th:nth-child(4),table.c7 td:nth-child(4){width:10.8%;}
+table.c7 th:nth-child(5),table.c7 td:nth-child(5){width:2.3%;text-align:center;}
+table.c7 th:nth-child(6),table.c7 td:nth-child(6){width:34.5%;}
+table.c7 th:nth-child(7),table.c7 td:nth-child(7){width:28.1%;}
+table.c4 th:nth-child(1),table.c4 td:nth-child(1){width:4%;text-align:center;}
+table.c4 th:nth-child(2),table.c4 td:nth-child(2){width:10%;}
+table.c4 th:nth-child(3),table.c4 td:nth-child(3){width:43%;}
+table.c4 th:nth-child(4),table.c4 td:nth-child(4){width:43%;}
 code{font-family:"DejaVu Sans Mono","WenQuanYi Zen Hei Mono",monospace;}'''
 h = ('<!DOCTYPE html><html><head><meta charset="utf-8"><style>'+CSS+'</style></head><body>'
      '<h1>'+html.escape(title)+'</h1>'
      '<div class="q">源档 '+html.escape(src)+' ｜ 生成 '+datetime.datetime.now().strftime('%Y-%m-%d %H:%M')+'</div>'
      + '\n'.join(out) + '</body></html>')
+h = deemoji(h)
 io.open('/tmp/_md2pdf.html', 'w', encoding='utf-8').write(h)
 print('HTML ok', len(h))

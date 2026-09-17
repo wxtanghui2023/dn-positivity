@@ -1374,8 +1374,8 @@ $$\Longrightarrow\ \boxed{\text{任何 index／signature／Euler 特征型的全
 
 ### F.5cd ⭐⭐⭐⭐⭐ ⚠️**两处勘误（`V222`／唐先生 16:03）**：**T10** §3 推论 2 **降级**为条件性推论（$\iota_X
 e\mathrm{id}\Rightarrow
-eg$RH 只是**RH 的反证机制**，**不是**"该 $X$ 不存在"的证明）；**T11** §4 的"$eta$ 反称配对 $\Rightarrow I_X$ 必带对合"**撤回** —— 仅由双射只能**定义** $\iota_X:=\Phi^{-1}\iota\Phi$，而该 $\iota_X$ 是**从识别映射反推的**，R1 要求 $I_X,\Phi$ 独立于零点 ⟹ $$oxed{	ext{FE 对合}
-ot\Rightarrow	ext{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅当 $\iota_X$ **可先独立构造**时才生效；**残余不能被 S1 自动吃掉**。
+eg$RH 只是**RH 的反证机制**，**不是**"该 $X$ 不存在"的证明）；**T11** §4 的"$\beta$ 反称配对 $\Rightarrow I_X$ 必带对合"**撤回** —— 仅由双射只能**定义** $\iota_X:=\Phi^{-1}\iota\Phi$，而该 $\iota_X$ 是**从识别映射反推的**，R1 要求 $I_X,\Phi$ 独立于零点 ⟹ $$\boxed{\text{FE 对合}
+ot\Rightarrow\text{独立构造中的 canonical }\iota_X}$$ ⟹ 命题 V221-A 仅当 $\iota_X$ **可先独立构造**时才生效；**残余不能被 S1 自动吃掉**。
 
 ### F.5cd ⭐⭐⭐⭐⭐ **V221：逐点逃逸的参数化审计 ⟹ 不判 DEAD ＋ 命题 V221-A（$\iota$-等变子情形关闭 ＋ 可证伪预测）**（`V221` ✓ 2026-09-15 15:57）
 
@@ -2813,23 +2813,23 @@ $$\qquad ⚠️⚠️\ \textbf{【§F.5dh 勘误·2026-09-15 22:06（唐先生�
 
 ### F.5fq 🔍 **出处审计与外部可检验性（唐先生 17:53 批评的处置）**（2026-09-17 18:00）
 
-$$	extbf{⛔ 本条目已更正}（18:15）：\ 	ext{原写的"}\ [	extbf{O}]\Rightarrow	ext{外部不可复核"}\ 	extbf{是错的}⟹ 	ext{改用}\ 	extbf{两轴（K 可核性 × P 归属）}；$$
-$$\qquad 	extbf{K1＝Lean 内核检查}\ 	ext{已实测}：	exttt{V316\_kernel\_bound.lean}\（1262\ 	ext{行}，	ext{0 sorry／0 axiom／0 error}）⟹\ 	extbf{一条命令外部可核}✓✓$$
-$$\qquad 	ext{详档}\ 	exttt{docs/LEAN-ASSET-INVENTORY-and-corrected-two-axis-reviewability.md}✓
+$$\textbf{⛔ 本条目已更正}（18:15）：\ \text{原写的"}\ [\textbf{O}]\Rightarrow\text{外部不可复核"}\ \textbf{是错的}⟹ \text{改用}\ \textbf{两轴（K 可核性 × P 归属）}；$$
+$$\qquad \textbf{K1＝Lean 内核检查}\ \text{已实测}：\texttt{V316\_kernel\_bound.lean}\（1262\ \text{行}，\text{0 sorry／0 axiom／0 error}）⟹\ \textbf{一条命令外部可核}✓✓$$
+$$\qquad \text{详档}\ \texttt{docs/LEAN-ASSET-INVENTORY-and-corrected-two-axis-reviewability.md}✓
 
-$$	extbf{级别定义}：[	extbf{L}]\ 	ext{＝文献可查}\ ig|\ [	extbf{O}]\ 	ext{＝我方自推（可复核但需读我方档）}\ ig|\ [	extbf{M}]\ 	ext{＝自造元语言（外部无对应物）}✓$$
+$$\textbf{级别定义}：[\textbf{L}]\ \text{＝文献可查}\ \big|\ [\textbf{O}]\ \text{＝我方自推（可复核但需读我方档）}\ \big|\ [\textbf{M}]\ \text{＝自造元语言（外部无对应物）}✓$$
 
-$$	extbf{逐条归属（详档} 	exttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md}	ext{）}：$$
-$$\qquad [	extbf{L}]\ 0.68185\（	ext{前沿 Remark 1.1＋Lean}\）\ ig|\ 0.6725\（	ext{CCLM17 Cor 14}\）\ ig|\ \Lambda\ge0\（	ext{Rodgers–Tao}\）\ ig|\ \Lambda\le0.2\（	ext{Polymath15}\）✓$$
-$$\qquad [	extbf{O}]\ oxed{"\lambda\le1\Rightarrow G\le0.672501"}\ -\ 	extbf{我方变分自推}（V316	o V302	o V303）\ 	ext{且}\ 	extbf{V301 版曾被我们自己撤回}⚠️;$$
-$$\qquad\qquad |\delta_T|symp(\log T)^{1.0}、	ext{分辨率地板}\ \gtrsim0.15、	ext{素数侧 44 倍余量}、	ext{GM 改进窗口}\ -\ 	ext{皆我方计算}⚠️$$
-$$\qquad [	extbf{M}]\ 	ext{"承重墙／三面一墙／NO-GO 商空间／N1--N13 机制母类／两轴结构／防伪门／攻击·穿透·封口／✓✓ 标记"}$$
-$$\qquad\qquad ⚠️\ 	extbf{且我方档案自己就记过}：	ext{"三面一墙"}\ 	extbf{已降级为待核}（	exttt{REVIEW-E4-FINAL §0}）；	ext{"类表完整"}\ 	extbf{未证}（	ext{§E.4 仍开}）✓$$
+$$\textbf{逐条归属（详档} \texttt{docs/EXTERNAL-TESTABILITY-AUDIT-provenance-triage.md}\text{）}：$$
+$$\qquad [\textbf{L}]\ 0.68185\（\text{前沿 Remark 1.1＋Lean}\）\ \big|\ 0.6725\（\text{CCLM17 Cor 14}\）\ \big|\ \Lambda\ge0\（\text{Rodgers–Tao}\）\ \big|\ \Lambda\le0.2\（\text{Polymath15}\）✓$$
+$$\qquad [\textbf{O}]\ \boxed{"\lambda\le1\Rightarrow G\le0.672501"}\ -\ \textbf{我方变分自推}（V316\to V302\to V303）\ \text{且}\ \textbf{V301 版曾被我们自己撤回}⚠️;$$
+$$\qquad\qquad |\delta_T|symp(\log T)^{1.0}、\text{分辨率地板}\ \gtrsim0.15、\text{素数侧 44 倍余量}、\text{GM 改进窗口}\ -\ \text{皆我方计算}⚠️$$
+$$\qquad [\textbf{M}]\ \text{"承重墙／三面一墙／NO-GO 商空间／N1--N13 机制母类／两轴结构／防伪门／攻击·穿透·封口／✓✓ 标记"}$$
+$$\qquad\qquad ⚠️\ \textbf{且我方档案自己就记过}：\text{"三面一墙"}\ \textbf{已降级为待核}（\texttt{REVIEW-E4-FINAL §0}）；\text{"类表完整"}\ \textbf{未证}（\text{§E.4 仍开}）✓$$
 
-$$oxed{	extbf{批评属实}：	ext{这套元语言只在项目内部自洽，未被外部检验}✗；\ 	ext{22 项台账中外部可判者仅有文献条目与少数可复算数值}}✓$$
+$$\boxed{\textbf{批评属实}：\text{这套元语言只在项目内部自洽，未被外部检验}✗；\ \text{22 项台账中外部可判者仅有文献条目与少数可复算数值}}✓$$
 
-$$	extbf{处置（依唐先生两条建议）}：	ext{(E1)}\ 	ext{已产出}\ 	extbf{剥叙事单页标准陈述}：	exttt{docs/EXTERNAL-REVIEW-1-BC-reciprocity-claim-standalone.md}\（	ext{BC 互反恒等式 (4.17) 的归属核查，}	extbf{与 RH 无关}，	ext{附"何种观察会推翻"}）✓✓$$
-$$\qquad 	ext{(E2)}\ 	ext{找外部独立研究者复核}\ -\ 	extbf{只能由唐先生执行}（	ext{并提醒：应先给}\ 	extbf{单页陈述}，\ 	extbf{不是} 	ext{22 项台账}）✓$$
+$$\textbf{处置（依唐先生两条建议）}：\text{(E1)}\ \text{已产出}\ \textbf{剥叙事单页标准陈述}：\texttt{docs/EXTERNAL-REVIEW-1-BC-reciprocity-claim-standalone.md}\（\text{BC 互反恒等式 (4.17) 的归属核查，}\textbf{与 RH 无关}，\text{附"何种观察会推翻"}）✓✓$$
+$$\qquad \text{(E2)}\ \text{找外部独立研究者复核}\ -\ \textbf{只能由唐先生执行}（\text{并提醒：应先给}\ \textbf{单页陈述}，\ \textbf{不是} \text{22 项台账}）✓$$
 
 ## F.4 与 §E.4 的关系（✓）
 

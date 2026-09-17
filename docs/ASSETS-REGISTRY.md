@@ -2,10 +2,10 @@
 
 > ## 🎯 **唐先生定位指令（2026-09-16 23:28 初版 ／ 23:33 修正为双轨）**
 >
-> $$oxed{	extbf{双轨制度}}$$
-> $$	ext{(i)}\ 	extbf{突破级成果}\ \Longrightarrow\ 	extbf{可以发表论文}✓$$
-> $$\qquad	ext{适用范围：LH／RH／GRH／哥德巴赫／孪生素数／}	extbf{任意其它素数猜想}	ext{／其它物理、数学模型}✓✓$$
-> $$	ext{(ii)}\ 	extbf{过程性、价值不高的成果}\ \Longrightarrow\ 	extbf{自用资产}（	ext{登记即可，不发表}）✓$$
+> $$\boxed{\textbf{双轨制度}}$$
+> $$\text{(i)}\ \textbf{突破级成果}\ \Longrightarrow\ \textbf{可以发表论文}✓$$
+> $$\qquad\text{适用范围：LH／RH／GRH／哥德巴赫／孪生素数／}\textbf{任意其它素数猜想}\text{／其它物理、数学模型}✓✓$$
+> $$\text{(ii)}\ \textbf{过程性、价值不高的成果}\ \Longrightarrow\ \textbf{自用资产}（\text{登记即可，不发表}）✓$$
 >
 > **唐先生原话**：
 > - 23:28：「我对这种小论文没啥兴趣，不用关注这种产出，但需要标记为我们自用的资产，
@@ -40,8 +40,8 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 | **A-9** | **九条转换判据观察（N1–N9）** | `papers/notes/main.md` | 「Notes on conversion criteria and their obstructions」——九条自足短观察（结构恒等式／数值标定律／解释性二分／关于某具体路线的负面结果）。**明示：无一条是朝 RH 证明的进展**；每条或为经典事实的小实例核验，或为对已测路线的负面陈述；附档案诚实规则（**not found ≠ does not exist**）与四标签（核验／引用／推导／猜想） | 草稿 v1 ✓ |
 
 > **⭐ A-2 的 Droll 关系（唐先生指定重点）**：`papers/brown-thm2-classical/` **正是 Droll 相关论文** ——
-> $$\textbf{我们的 Theorem 1}\ 	extbf{强于}\ 	ext{Droll 已发表内容}：\text{[Dr12] Conjecture 1.7.10}\ 	extbf{限制}\ k\le2T^2\log T，\ 	ext{而我们覆盖}\ \textbf{所有}\ k\ge2,\ H>e✓✓$$
-> $$\text{且}\ \texttt{docs/N2-chain-confirmed.md}：\ 	ext{Droll 原文明确}\ \textbf{Conjecture 3.2.7 就是 Brown Lemma 5 的修复}✓$$
+> $$\textbf{我们的 Theorem 1}\ \textbf{强于}\ \text{Droll 已发表内容}：\text{[Dr12] Conjecture 1.7.10}\ \textbf{限制}\ k\le2T^2\log T，\ \text{而我们覆盖}\ \textbf{所有}\ k\ge2,\ H>e✓✓$$
+> $$\text{且}\ \texttt{docs/N2-chain-confirmed.md}：\ \text{Droll 原文明确}\ \textbf{Conjecture 3.2.7 就是 Brown Lemma 5 的修复}✓$$
 > $$\text{取证档：}\ \texttt{docs/P8-DROLL-verbatim-reading.md}（逐字读）✓$$
 > **诚实缺口（README §7 自述）**：① near 积分的**闭式界**；② **显式局部计数**；③ 原文被 paywall（未取得 Brown 2005 原文）✓
 > **数值可复现**：每个数值声明均由归档脚本产生（`scripts/BL7_*`｜`BL10_*`｜`BL11_*`｜`BL14_*`｜`NB1_*`），按 `PROTOCOL-CODE-ARCHIVE.md` R1–R7，**无临时代码支撑的结论** ✓
@@ -152,8 +152,8 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 
 ## 🚦 发表轨判定（按 23:33 双轨制度逐条标注）
 
-$$	extbf{突破级判据}：	ext{(a) 解决／实质推进一个公开猜想（LH／RH／GRH／哥德巴赫／孪生／其它素数猜想）；}\ 	ext{(b) 或给出其它物理／数学模型的}	extbf{新定理}✓$$
-$$	extbf{过程性判据}：	ext{封闭某条路线／给出负面判据／记录一个技术事实／建立方法论工具}✓$$
+$$\textbf{突破级判据}：\text{(a) 解决／实质推进一个公开猜想（LH／RH／GRH／哥德巴赫／孪生／其它素数猜想）；}\ \text{(b) 或给出其它物理／数学模型的}\textbf{新定理}✓$$
+$$\textbf{过程性判据}：\text{封闭某条路线／给出负面判据／记录一个技术事实／建立方法论工具}✓$$
 
 | 资产 | 判定 | 理由 |
 |:--|:--|:--|
@@ -175,10 +175,10 @@ $$	extbf{过程性判据}：	ext{封闭某条路线／给出负面判据／记�
 | **E-1～E-8** | **过程性**（方法论工具） | 跨项目可复用 |
 | **F-1～F-4** | **过程性**（数值／验证） | F-1 敏感性结果醒目，但非猜想级 |
 
-$$	extbf{当前无}\ 	extbf{突破级} 	ext{条目}✓\quad\Longrightarrow\ 	ext{全部按}\ 	extbf{自用资产} 	ext{登记；}\ 	ext{突破级出现时}\ 	extbf{另行走发表流程}✓✓$$
+$$\textbf{当前无}\ \textbf{突破级} \text{条目}✓\quad\Longrightarrow\ \text{全部按}\ \textbf{自用资产} \text{登记；}\ \text{突破级出现时}\ \textbf{另行走发表流程}✓✓$$
 
-$$	extbf{唯一"发表轨预备候选"}：\ oxed{	ext{C-1＋C-2＋C-3 合并为"关于 BC (Adv. Math. 328) }\S4.1.3	ext{ 的幂次账与技术注记"}}✓$$
-$$\qquad	ext{定位：}\ 	extbf{技术注记／评论}，\ 	ext{非猜想级突破} \Longrightarrow\ 	ext{按唐先生标准仍属}\ 	extbf{过程性}✓\quad(	ext{登记即可，不必发})✓$$
+$$\textbf{唯一"发表轨预备候选"}：\ \boxed{\text{C-1＋C-2＋C-3 合并为"关于 BC (Adv. Math. 328) }\S4.1.3\text{ 的幂次账与技术注记"}}✓$$
+$$\qquad\text{定位：}\ \textbf{技术注记／评论}，\ \text{非猜想级突破} \Longrightarrow\ \text{按唐先生标准仍属}\ \textbf{过程性}✓\quad(\text{登记即可，不必发})✓$$
 
 
 ---
