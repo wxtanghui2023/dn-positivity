@@ -55,3 +55,9 @@ $$\text{(ii)}\ \textbf{未用 RH}；\ \textbf{零数值}；\ \text{本档}\ \tex
 技术词 mollifier        命中文件数=38
 ```
 ⟹ Tsang／Baluyot／带宽／水平带／对相关 **全部命中** ⟹ **S1 绝非"未触及"**✓✓
+
+## §8 闸门**实测**记录（17:50 补，避免"说了没测"）
+$$\text{第一版 NEWNESS RULE}\ 	extbf{是死码}✗：	ext{老 hook 第 19 行有}\ 	exttt{exit 0}，	ext{其后追加的判据永不执行} \Longrightarrow 	ext{测试A 未被拒}✗$$
+$$\text{重写 hook 后}\ 	extbf{两测均通过}✓✓：	ext{测试A（已查地图 ✓＋宣称新＋无技术词）}\Rightarrow 	extbf{⛔ 拒}；\ 	ext{测试B（＋有技术词输出）}\Rightarrow 	extbf{✓ 放行}$$
+$$\text{持久化}：	exttt{scripts/git-hooks/pre-commit}\ ＋\ 	exttt{README.md}（	ext{含安装说明与起因}）；\ 	exttt{scripts/prework\_map\_check.sh}\ 	extbf{补入库}（	ext{此前漏提交}）✓✓$$
+$$\text{技术词回查自测}：	exttt{Tsang}\ 	ext{命中}\ 17\ 	ext{档}；\ 	exttt{带宽}\ 54\ 	ext{档}；\ 	exttt{对相关}\ 71\ 	ext{档} \Longrightarrow 	extbf{三项皆非"未触及"}✓✓$$
