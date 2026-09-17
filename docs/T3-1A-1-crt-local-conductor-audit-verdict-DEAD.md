@@ -97,3 +97,13 @@ $$\text{(R1)}\ (\mathfrak p_1,n_1')=1\ \text{的推导依赖}\ (\ell_1,n_1'n_2'b
 $$\text{(R2)}\ q_0\ \text{的量级}\ \ll L^{o(1)}\ \text{为}\ [\textbf{结构判定}]（\text{未证}\ \gcd(d,\mathfrak p_1n_1')\ \text{的上界}）✓\quad\Longrightarrow\ \textbf{若存在}\ d\ \text{使}\ \gcd(d,q)\gg N^\delta\ \text{则须重审}✓$$
 $$\text{(R3)}\ a_1,\ \vartheta\ \text{与}\ q\ \text{的互素性}\ \textbf{未核}✓\qquad\text{(R4)}\ (4.10)\ \text{全部条件}\ \textbf{未逐条穷举}（\text{只用了承载振荡所必需者}）✓$$
 $$\text{(R5)}\ \textbf{未用 RH；零数值}✓$$
+
+---
+
+## 8. 【勘误 T10】（2026-09-17 09:52，唐先生指令；**不覆盖上文**）
+
+$$\textbf{越界处}：\text{上文 §2 写}\ q_0\mid d\asymp L\Longrightarrow q_0\ll L^{o(1)} \Longrightarrow \textbf{不成立}✓$$
+$$\qquad q_0\mid d\ \text{只给出}\ q_0\le d\asymp L，\ \textbf{推不出}\ q_0=L^{o(1)}✓$$
+$$\textbf{正确表述}：\ \boxed{q_0\mid d,\ d\asymp L\ \Longrightarrow\ q_0\le L}✓✓$$
+$$\qquad\text{要得到}\ L^{o(1)}\ \text{须}\ \textbf{额外证明}\ \gcd(d,\mathfrak p_1n_1')\ll L^{o(1)}\ \text{（在整个有效求和域上）}✓$$
+$$\qquad\Longrightarrow\ \textbf{可能存在允许的}\ d\ \text{使}\gcd(d,q)\asymp L^\eta\ (\eta>0) \Longrightarrow \text{该项}\ \textbf{必须保留为 R2}，\ \text{不得当作已证}✓✓✓$$
