@@ -47,8 +47,8 @@ def conv(s):
         s2 = re.sub(r'\\(%s)\{([^{}]*)\}' % '|'.join(KEEPARG), r'\2', s)
         if s2 == s: break
         s = s2
-    s = re.sub(r'\\(mathcal|mathbb|mathrm|mathbf|mathit|mathfrak|mathsf|mathtt|operatorname)\s*([A-Za-z])', r'\2', s)
     for k, v in sorted(SET.items(), key=lambda x: -len(x[0])): s = s.replace(k, v)
+    s = re.sub(r'\\(mathcal|mathbb|mathrm|mathbf|mathit|mathfrak|mathsf|mathtt|operatorname)\s*([A-Za-z])', r'\2', s)
     for k, v in sorted(SYM.items(), key=lambda x: -len(x[0])): s = s.replace(k, v)
     for k, v in sorted(GREEK.items(), key=lambda x: -len(x[0])): s = re.sub(r'\\'+k+r'(?![a-zA-Z])', v, s)
     for w in sorted(WORDS, key=len, reverse=True): s = re.sub(r'\\'+w+r'(?![a-zA-Z])', w, s)
