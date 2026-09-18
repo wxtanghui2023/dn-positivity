@@ -129,8 +129,8 @@ $$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textb
 ### 【型标注·定级修正】（`NEG-REGISTER-2`，2026-09-18 20:2x）
 
 $$\text{本档定级修正}：\textbf{混合：刀法＝T-I／T-II；结论＝T-III}✓✓$$
-$$\qquad \text{第一刀（}\textbf{T-I 级}）}：\text{`Theorem A（不变量理论）`：}U(1)\text{-不变多项式环由}\ \textbf{二次不变量} \text{生成} ⟹ \text{经典引用，干净}✓$$
-$$\qquad \text{第二刀（}\textbf{T-II 级}）}：\text{相位数据是}\ U(1)\text{-torsor};\ \textbf{torsor 无 canonical 基点} ⟹ \text{逻辑必然（torsor 定义的直接推论）}✓✓$$
-$$\qquad \text{结论（}\textbf{T-III}）}：\text{"第三型不能加锐"}\ \text{依赖}\ \text{`V248`}\ \text{的}\ P1\text{–}P3 \Longrightarrow \textbf{前提承重}✓✓$$
+$$\qquad \text{第一刀（}\textbf{T-I 级}）：\text{`Theorem A（不变量理论）`：}U(1)\text{-不变多项式环由}\ \textbf{二次不变量} \text{生成} ⟹ \text{经典引用，干净}✓$$
+$$\qquad \text{第二刀（}\textbf{T-II 级}）：\text{相位数据是}\ U(1)\text{-torsor};\ \textbf{torsor 无 canonical 基点} ⟹ \text{逻辑必然（torsor 定义的直接推论）}✓✓$$
+$$\qquad \text{结论（}\textbf{T-III}）：\text{"第三型不能加锐"}\ \text{依赖}\ \text{`V248`}\ \text{的}\ P1\text{–}P3 \Longrightarrow \textbf{前提承重}✓✓$$
 $$\qquad \Longrightarrow \text{故标题"两刀定理级"}\ \text{应读作}\ \textbf{"刀法为经典引用／逻辑必然"}，\ \textbf{非} \text{新定理}✓$$
 $$\text{依据}：\text{`NEG-REGISTER-2-step2-settlements-and-distribution-erratum.md`}✓$$
