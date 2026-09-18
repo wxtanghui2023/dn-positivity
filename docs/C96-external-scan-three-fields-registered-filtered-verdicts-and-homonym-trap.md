@@ -50,10 +50,10 @@ $$\Longrightarrow\ \text{三块}\ \textbf{全部}\ \text{命中同一壁垒}：\
 
 ## §4 ⭐ 同名陷阱（**本档新标**；与 `V219` 纪律同类）
 
-$$\text{对数气体／GMC 文献里的}\ \beta\ \text{＝}\textbf{系综逆温度}（\text{如 "临界 GMC 参数恰为 2"、"}\beta=2\ \text{即 GUE／Coulomb gas"）✓$$
+$$\text{对数气体／GMC 文献里的}\ \beta\ \text{＝}\textbf{系综逆温度}（\text{如 "临界 GMC 参数恰为 2"、"}\beta=2\ \text{即 GUE／Coulomb gas"）}✓$$
 $$\qquad ⚠️\ \text{而}\ \text{我方}\ \beta\ \text{＝}\text{零点实部}\ \Re\rho✓✓$$
 $$\Longrightarrow\ \boxed{\text{两个}\ \beta\ \textbf{同名不同量}} \Longrightarrow \textbf{严禁} \text{把"}\beta=2\ \text{临界"读作"}\tfrac12\ \text{特殊"}\ ✗✓$$
-$$\qquad \text{同类前例}：\text{`V219`}\ \text{的"}\textbf{同一个}\ \tfrac12\ \ne\ \textbf{同一个零点机制}}✓✓$$
+$$\qquad \text{同类前例}：\text{`V219`}\ \text{的"}\textbf{同一个}\ \tfrac12\ \ne\ \textbf{同一个零点机制}✓✓$$
 
 ## §5 唯一值得记一笔的线索（**已在档案**）
 
