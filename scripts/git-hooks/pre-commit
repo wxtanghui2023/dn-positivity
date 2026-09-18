@@ -59,8 +59,13 @@ count=$((seed+scan))
 # 本档自身 D1（取第一个新增档）
 myd1=$(printf '%s' "$staged_new" | head -1 | xargs -r -I{} grep -a -m1 -E '^D1[:：]' {} 2>/dev/null || true)
 myd1_zero=no; myd1_missing=no
-[ -z "$myd1" ] && myd1_missing=yes
-printf '%s' "$myd1" | grep -aqE '^D1[:：][[:space:]]*(0|零)' && myd1_zero=yes
+first=$(printf '%s\n' $staged_new | head -1)
+# 健壮判定：任意一行形如 D1: 0 ⟹ 记 0（避免被档内模板行规避）；完全无 D1 行 ⟹ missing
+if grep -aqE '^D1[:：][[:space:]]*(0|零)([[:space:]]|$)' "$first" 2>/dev/null; then
+  myd1_zero=yes
+elif ! grep -aqE '^D1[:：]' "$first" 2>/dev/null; then
+  myd1_missing=yes
+fi
 projected=$count
 if [ "$checked" -gt 0 ] && [ "$myd1_missing" = no ]; then
   if [ "$myd1_zero" = yes ]; then projected=$((count+1)); else projected=0; fi
@@ -75,10 +80,19 @@ if [ "$checked" -gt 0 ]; then
   echo "────────────────────────────────────────────────────────────"
 fi
 
-if [ "$projected" -ge "$THRESHOLD" ] && [ "$checked" -gt 0 ]; then
+if [ "$count" -ge "$THRESHOLD" ] && [ "$checked" -gt 0 ]; then
+  # 冻结期（以【当前状态】判定，不靠本档投影，避免用"写成非零 D1"绕过）
   for f in $staged_new; do
     case "$f" in *ERRATUM*) continue;; esac
-    grep -aq "FREEZE-ACK" "$f" 2>/dev/null || freeze_bad="$freeze_bad $f"
+    head -20 "$f" 2>/dev/null | grep -aq "外部复核件" && continue
+    if ! grep -aq "FREEZE-ACK" "$f" 2>/dev/null; then
+      freeze_bad="$freeze_bad $f"
+      continue
+    fi
+    # 声称非零 D1 ⟹ 须带 D1-ESCAPE 理由
+    if ! grep -aqE '^D1[:：][[:space:]]*(0|零)([[:space:]]|$)' "$f" 2>/dev/null; then
+      grep -aq "D1-ESCAPE" "$f" 2>/dev/null || freeze_bad="$freeze_bad $f"
+    fi
   done
 fi
 
