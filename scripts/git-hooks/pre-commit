@@ -1,36 +1,116 @@
 #!/usr/bin/env bash
-# dn-project pre-commit 机械闸门（唐先生 16:02 / 17:47）
-#  规则1：docs/ 下【新增】.md 必须带「已查地图：」标记
-#  规则2（NEWNESS RULE）：新档若宣称"新"，必须附【技术词回查】输出（技术词…命中文件数=）
+# dn-project pre-commit 机械闸门
+# ── 规则1（唐先生 16:02）：docs/ 下【新增】.md 必须带「已查地图：」标记
+# ── 规则2 NEWNESS RULE（唐先生 17:47）：新档若宣称"新"，必须附【技术词回查】输出
+# ── 规则3 D0/D1 LEDGER RULE（唐先生 2026-09-18 19:13 批准；依 RESEARCH-CONSTITUTION §8.1）
+#      3a 新增 docs/*.md 必须显式写 D0: 与 D1: 两行（对象新颖性／独立自由度）
+#      3b 连续 D1=0 计数（git 扫描 ＋ 账本种子）≥3 ⟹ 新档必须含 FREEZE-ACK: 令牌
+#      3c 每次新增 docs 档都打印当前计数（可见性＝防"静默漂移"）
+# ── 豁免：*ERRATUM* ；档首 20 行含「外部复核件」
 set -uo pipefail
 cd "$(git rev-parse --show-toplevel)" || exit 0
 
-bad=""
-newness_bad=""
-for f in $(git diff --cached --name-only --diff-filter=A | grep -a '^docs/.*\.md$' || true); do
+LEDGER="docs/D0-D1-LEDGER.md"
+THRESHOLD=3
+SCAN_N=30
+
+staged_new=$(git diff --cached --name-only --diff-filter=A | grep -a '^docs/.*\.md$' || true)
+
+bad=""; newness_bad=""; d01_bad=""; freeze_bad=""
+checked=0
+
+for f in $staged_new; do
   case "$f" in *ERRATUM*) continue;; esac
-  # 外部复核件豁免（唐先生 17:53 建议的"剥叙事"件：按设计【不得】带内部编号/标记）
   if head -20 "$f" 2>/dev/null | grep -aq "外部复核件"; then continue; fi
+  checked=$((checked+1))
   # 规则1
   if ! head -20 "$f" 2>/dev/null | grep -aq "已查地图"; then bad="$bad $f"; fi
   # 规则2
   if grep -aq -E "不重复|新手段|新用途|从未触及|首次|新发现" "$f" 2>/dev/null; then
     if ! grep -aq -E "技术词.*命中文件数=" "$f" 2>/dev/null; then newness_bad="$newness_bad $f"; fi
   fi
+  # 规则3a
+  if ! grep -aqE '^D0[:：]' "$f" 2>/dev/null || ! grep -aqE '^D1[:：]' "$f" 2>/dev/null; then
+    d01_bad="$d01_bad $f"
+  fi
 done
+
+# ── 规则3b/3c：连续 D1=0 计数（git 扫描最近 SCAN_N 个【新增】档，自新向旧，遇非0即停）
+seed=0
+if [ -f "$LEDGER" ]; then
+  seed=$(grep -a -m1 -oE 'LEDGER-SEED:[[:space:]]*[0-9]+' "$LEDGER" 2>/dev/null | grep -oE '[0-9]+' || true)
+  seed=${seed:-0}
+fi
+scan=0
+if [ "$checked" -gt 0 ]; then
+  recent=$(git log --diff-filter=A --name-only --pretty=format: -n 200 -- docs 2>/dev/null | grep -aE '^docs/.*\.md$' | head -"$SCAN_N" || true)
+  for g in $recent; do
+    d1line=$(git show "HEAD:$g" 2>/dev/null | grep -a -m1 -E '^D1[:：]' || true)
+    [ -z "$d1line" ] && break                       # 旧档无 D1 行 ⟹ 计数在此断代
+    if printf '%s' "$d1line" | grep -aqE '^D1[:：][[:space:]]*(0|零)'; then
+      scan=$((scan+1))
+    else
+      break                                          # 遇到非零 D1 ⟹ 清零重启
+    fi
+  done
+fi
+count=$((seed+scan))
+
+# 本档自身 D1（取第一个新增档）
+myd1=$(printf '%s' "$staged_new" | head -1 | xargs -r -I{} grep -a -m1 -E '^D1[:：]' {} 2>/dev/null || true)
+myd1_zero=no; myd1_missing=no
+[ -z "$myd1" ] && myd1_missing=yes
+printf '%s' "$myd1" | grep -aqE '^D1[:：][[:space:]]*(0|零)' && myd1_zero=yes
+projected=$count
+if [ "$checked" -gt 0 ] && [ "$myd1_missing" = no ]; then
+  if [ "$myd1_zero" = yes ]; then projected=$((count+1)); else projected=0; fi
+fi
+
+if [ "$checked" -gt 0 ]; then
+  first=$(printf '%s\n' $staged_new | head -1)
+  echo "── D0/D1 账本（RESEARCH-CONSTITUTION §8.1）──────────────────"
+  echo "   连续 D1=0：当前 ${count}／阈值 ${THRESHOLD}　⟹ 本档后 = ${projected}"
+  grep -a -m1 -E '^D0[:：]' "$first" 2>/dev/null | sed 's/^/   /'
+  grep -a -m1 -E '^D1[:：]' "$first" 2>/dev/null | sed 's/^/   /'
+  echo "────────────────────────────────────────────────────────────"
+fi
+
+if [ "$projected" -ge "$THRESHOLD" ] && [ "$checked" -gt 0 ]; then
+  for f in $staged_new; do
+    case "$f" in *ERRATUM*) continue;; esac
+    grep -aq "FREEZE-ACK" "$f" 2>/dev/null || freeze_bad="$freeze_bad $f"
+  done
+fi
 
 rc=0
 if [ -n "$bad" ]; then
-  echo "⛔ 拒绝：以下新增 docs 档缺「已查地图：」标记："
+  echo "⛔ 拒绝（规则1）：以下新增 docs 档缺「已查地图：」标记："
   for f in $bad; do echo "   - $f"; done
   echo "   先跑： scripts/prework_map_check.sh <关键词...>  然后把结论行粘到档首"
   rc=1
 fi
 if [ -n "$newness_bad" ]; then
-  echo "⛔ 拒绝（NEWNESS RULE）：以下新档宣称『新』但缺【技术词回查】输出："
+  echo "⛔ 拒绝（规则2 NEWNESS RULE）：以下新档宣称『新』但缺【技术词回查】输出："
   for f in $newness_bad; do echo "   - $f"; done
   echo "   请先跑： scripts/tech_word_check.sh <技术词...>  并把结果粘进档内"
   echo "   依据： docs/ERRATUM-T10-ATTACK-S1-and-W1-corrections-archive-already-had-it.md §5"
+  rc=1
+fi
+if [ -n "$d01_bad" ]; then
+  echo "⛔ 拒绝（规则3a D0/D1）：以下新增 docs 档缺 D0: 或 D1: 声明行："
+  for f in $d01_bad; do echo "   - $f"; done
+  echo "   请在档首（已查地图行之后）加两行，例："
+  echo "     D0: 本档对象 = 档案已有 <哪个对象> 的 <什么关系>　（重命名／新对象／无对象）"
+  echo "     D1: 独立自由度 = <…>　或　D1: 0"
+  echo "   依据： docs/D0-D1-LEDGER.md ＋ RESEARCH-CONSTITUTION.md §8.1（D0 明文：非已知 RH 对象重命名）"
+  rc=1
+fi
+if [ -n "$freeze_bad" ]; then
+  echo "⛔ 拒绝（规则3b FREEZE）：连续 D1=0 = ${count} ≥ ${THRESHOLD} ⟹ 依 §8.1 应执行冻结程序。"
+  echo "   以下新档未含 FREEZE-ACK 令牌："
+  for f in $freeze_bad; do echo "   - $f"; done
+  echo "   若本档【就是】冻结程序 ⟹ 在档内写一行： FREEZE-ACK: 本档即冻结审计"
+  echo "   若在冻结期声称非零 D1 ⟹ 另加一行： FREEZE-ACK: D1-ESCAPE <理由（须为可检验的新自由度）>"
   rc=1
 fi
 exit $rc
