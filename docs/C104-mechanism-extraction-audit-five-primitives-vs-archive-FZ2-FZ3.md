@@ -81,9 +81,9 @@ $$\Longrightarrow\ \text{即}\ \text{`M1`}\ \text{的}\ \textbf{唯一真正新�
 ```
 技术词 机制提取审计   命中文件数=1  :: ./C104-mechanism-extraction-audit-five-primitives-vs-archive-FZ2-FZ3.md
 技术词 hereditary   命中文件数=1  :: ./C104-mechanism-extraction-audit-five-primitives-vs-archive-FZ2-FZ3.md
-技术词 原语覆盖表    命中文件数=1  :: ./C104-mechanism-extraction-audit-five-primitives-vs-archive-FZ2-FZ3.md
+技术词 原语覆盖表    命中文件数=2  :: ./FREEZE-AUDIT-FZ1-FZ4.md ./C104-mechanism-extraction-audit-five-primitives-vs-archive-FZ2-FZ3.md
 ```
-**读数（按实测）**：三项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓
+**读数（按实测）**：`机制提取审计`／`hereditary`＝**1 档（仅本档）⟹ 本档新增** ✓；⚠️ `原语覆盖表`＝**2 档 ⟹ 档案已有**（`FREEZE-AUDIT-FZ1-FZ4.md`）⟹ 本档为**引用** ✓
 
 ## §7 边界
 
