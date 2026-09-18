@@ -14,7 +14,7 @@ LEDGER="docs/D0-D1-LEDGER.md"
 THRESHOLD=3
 SCAN_N=30
 
-staged_new=$(git diff --cached --name-only --diff-filter=A | grep -a '^docs/.*\.md$' || true)
+staged_new=$(git diff --cached --name-only --diff-filter=A | grep -aE '^(docs|papers)/.*\.md$' || true)
 
 bad=""; newness_bad=""; d01_bad=""; freeze_bad=""
 checked=0
@@ -23,12 +23,17 @@ for f in $staged_new; do
   case "$f" in *ERRATUM*) continue;; esac
   if head -20 "$f" 2>/dev/null | grep -aq "外部复核件"; then continue; fi
   checked=$((checked+1))
-  # 规则1
-  if ! head -20 "$f" 2>/dev/null | grep -aq "已查地图"; then bad="$bad $f"; fi
-  # 规则2
-  if grep -aq -E "不重复|新手段|新用途|从未触及|首次|新发现" "$f" 2>/dev/null; then
-    if ! grep -aq -E "技术词.*命中文件数=" "$f" 2>/dev/null; then newness_bad="$newness_bad $f"; fi
-  fi
+  case "$f" in
+    papers/*) ;;   # 外部件：免规则1、2（内部标记不入外部件），保留规则3
+    *)
+      # 规则1
+      if ! head -20 "$f" 2>/dev/null | grep -aq "已查地图"; then bad="$bad $f"; fi
+      # 规则2
+      if grep -aq -E "不重复|新手段|新用途|从未触及|首次|新发现" "$f" 2>/dev/null; then
+        if ! grep -aq -E "技术词.*命中文件数=" "$f" 2>/dev/null; then newness_bad="$newness_bad $f"; fi
+      fi
+    ;;
+  esac
   # 规则3a
   if ! grep -aqE '^D0[:：]' "$f" 2>/dev/null || ! grep -aqE '^D1[:：]' "$f" 2>/dev/null; then
     d01_bad="$d01_bad $f"
@@ -43,7 +48,7 @@ if [ -f "$LEDGER" ]; then
 fi
 scan=0
 if [ "$checked" -gt 0 ]; then
-  recent=$(git log --diff-filter=A --name-only --pretty=format: -n 200 -- docs 2>/dev/null | grep -aE '^docs/.*\.md$' | head -"$SCAN_N" || true)
+  recent=$(git log --diff-filter=A --name-only --pretty=format: -n 200 -- docs papers 2>/dev/null | grep -aE '^(docs|papers)/.*\.md$' | head -"$SCAN_N" || true)
   for g in $recent; do
     d1line=$(git show "HEAD:$g" 2>/dev/null | grep -a -m1 -E '^D1[:：]' || true)
     [ -z "$d1line" ] && break                       # 旧档无 D1 行 ⟹ 计数在此断代
