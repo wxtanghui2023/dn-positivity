@@ -406,3 +406,81 @@ $$\qquad \text{关联改动}：\text{`V248`／`V191`／`V188`／`AUDIT-WALLS-AND
 $$\text{⚠️ 分布勘误（`NEG-REGISTER-2` §4）}：\text{上表／上行的型分布}\ \textbf{算错};\ \text{正确（18 条表内）}＝T_{\rm IV}=6,\ T_{\rm VI}=1✓✓$$
 $$\qquad \text{有效（移出 }\#10\ \text{`V226`，已撤回）}＝\mathbf{17}\ \text{条}：T\text{-I}=2,\ T\text{-II}=1,\ T\text{-III}=3,\ T\text{-IV}=5,\ T\text{-V}=5,\ T\text{-VI}=1✓✓$$
 $$\qquad \text{口径}：\text{今后引用本表以}\ \textbf{17 条有效版本} \text{为准}✓$$
+
+---
+
+## 【定点更新·C-110–C-129 ＋ CREATE-SPEC-1～12 ＋ NEG-REGISTER-1～4】冻结期后的**规格级**收束（2026-09-18 22:3x）
+
+$$\textbf{背景}：\text{唐先生 22:32「先 b」} \Longrightarrow \textbf{把 12＋ 份档案固化入主图}（\text{此前仅存于文件}）✓$$
+
+### §1 本轮净结构（一句话）
+
+$$\text{本轮}\ \textbf{未新增路线}，\ \text{但把"为什么各路线都死"从}\ \textbf{四次孤立见证} \text{升级为}\ \textbf{一份四条款规格 ＋ 三张候选表 ＋ 五条已证引理}✓✓$$
+
+### §2 ⭐ 四条款规格（"被机制认可的对象"须同时满足）
+
+$$\textbf{(i)}\ \text{算术的（非坐标）};\quad \textbf{(ii)}\ \text{无欧拉积仍可定义};\quad \textbf{(iii)}\ \text{极限恢复零结构（钉点）};\quad \textbf{(iv$'$)}\ \textbf{变形须移动对象自身的零点}✓✓$$
+$$\qquad ⚠️\ \textbf{(iv) 的原表述（"作用于有零点的因子"）已被更正}：\text{欧拉积的局部因子}\ \textbf{本身零-free};\ \text{ζ 的零点}\ \textbf{涌现}（`V227` §5）✓$$
+$$\textbf{张力三角}：\text{系数侧} \Longrightarrow \textbf{不能移零点}（\text{引理 L1}）;\ \ s\text{-空间} \Longrightarrow \textbf{坐标};\ \text{保乘性} \Longrightarrow \textbf{欧拉积回归}✓✓$$
+$$\textbf{逐点通道三分}：\text{b1}\ F\ \text{乘性}\Rightarrow\text{欧拉积}; \quad \text{b2}\ \text{作用 ζ 自身系数}\Rightarrow\text{平凡}; \quad \text{b3}\ F\ \text{非乘性＋派生序列}\Rightarrow\textbf{唯一活口}✓✓$$
+
+### §3 候选总表（各死于不同门／不同条款）
+
+| 候选 | 内容 | 死在哪 |
+|:--|:--|:--|
+| **A** | 部分欧拉积 $\prod_{p\le y}$ | 门 1 `TESTABLE-1`（需局部因子，DH 无） |
+| **B** | DBN 热流 $H_t$ | `F2`（坐标操作）＋ `F5`（$\Lambda\le0$ ⟺ RH）＋ 端点 ½ 阶分支 |
+| **C** | 级数截断 $\sum_{n\le N}$ | `F3`（部分和零点不收敛） |
+| **D** | 导子／$\Gamma$ 因子变形 | `F3`——**带证明**：$\Gamma$ 零-free ⟹ 保零集变换 |
+| **E** | Dirichlet 卷积变形 | **＝ACPC 线 ＋ 乘性卷积线，两条已判死** |
+| **M1** | 素数限制系数（$P(s)$） | 延拓必经 $\log\zeta$ ⟹ 值面 |
+| **M2** | 除子卷积 | 引理 L1 所辖（只"借入"零点） |
+| **M3** | 平滑／平均 | 截断类（需无界精度） |
+| **M4** | $\Lambda$／极值型 | `F5` ＋ 端点；**唯一 F5 可满足者，其墙改为"上限 $c_\infty>0$"** |
+| **M5** | ACPC 的 $C=A\cdot M$（系数侧 Hadamard 积） | ⚠️ **原"实验判死"已撤回**（探针 $\sigma=1/2$ 落在收敛半平面外，横标实测 $=2$）；改判 **结构性死**：求和集饱和（`CREATE-SPEC-10`) |
+
+### §3A ⭐ **新增资产登记（本会话）**
+
+| # | 资产 | 位置 | 性质 |
+|:--|:--|:--|:--|
+| **L1** | 整因子乘法不移零点 | `CREATE-SPEC-4` §2 | **已证（初等）** |
+| **L2** | 常数系数逐点操作平凡 | `CREATE-SPEC-8` §2 | **已证（初等）** |
+| **L3** | $F$ 乘性 ⟹ 乘性保持 | `CREATE-SPEC-8` §3 | **已证（初等）** |
+| **T1** | 横标引理 | `CREATE-SPEC-11` §1 | **已证（初等）** |
+| **T2** | $k$ 重部分和 $\sim X^k/k!$ | `CREATE-SPEC-11` §2 | **已证（PNT 归纳）** |
+| **D-F3** | 完成化变形保零集 | `CREATE-SPEC-2` §2 | **已证（初等）** |
+| **规格** | 四条款 (i)–(iv$'$) ＋ 张力三角 ＋ b1/b2/b3 | `CREATE-SPEC-1～8` | **规格（非定理）** |
+| **字典** | 位置↔求和（Dirichlet 乘／加性卷积） | `CREATE-SPEC-10` §2 | 结构原理（Barnes 核待核） |
+| **饱和** | 求和集饱和（$k\beta_*\le k$ 恒饱和） | `CREATE-SPEC-10` §3 | 结构论证（非定理） |
+| **注记** | `zero-free-factor-lemma` / `cone-criteria-selfduality` | `papers/` | 说明性（**不得当成果引**） |
+| **过滤器** | `TESTABLE-1` 前提／元问题卡 | `FILTER-TESTABLE-1` / `META-1` | 筛选门槛（非结果） |
+
+### §4 本会话**已证**引理／定理（五条，均为初等且完整）
+
+$$\textbf{L1}：\text{若}\ g\ \text{整，则}\ Z(fg)=Z(f)\cup Z(g) \Longrightarrow \textbf{乘性／完成化变形不移零点}✓✓$$
+$$\textbf{L2}：a_n\equiv c \Longrightarrow \sum F(a_n)n^{-s}=F(c)\zeta(s) \Longrightarrow \textbf{作用 ζ 自身系数是平凡的}✓✓$$
+$$\textbf{L3}：F(xy)=F(x)F(y)\ \text{＋}\ a_n\ \text{乘性} \Longrightarrow F(a_n)\ \text{乘性} \Longrightarrow \textbf{欧拉积回归}✓✓$$
+$$\textbf{T1（横标引理）}：a_n\ge0,\ \sum_{n\le X}a_n\sim cX^k \Longrightarrow \sigma_c=k✓✓$$
+$$\textbf{T2（}k\ \text{重部分和）}：\sum_{n\le X}A_k(n)\sim X^k/k! \Longrightarrow \sigma_c(A_k)=k✓✓$$
+$$\qquad \textbf{另有}：\text{候选 D 的}\ F3\ \text{死（}\Gamma\ \text{零-free）亦为证明级}✓✓$$
+
+### §5 **同址收敛清单**（本会话共 **10 次**）
+
+$$\text{C-61 §2C（第四类不变量）／C-64-65（簿记→`SUPPORT-1`）／C-69（识别侧接口）／C-70／C-71（三入口定死）／C-72（第三通道→`SUPPORT-1`）／C-82（值 vs 界）／C-83（带号加权＝`V254` 类）／C-90（对象转换 III）／C-107（自由概率＝`V247/V248`）／CREATE-SPEC-2（完成化盲）／CREATE-SPEC-11（聚合→PNT 幂次节省）}✓✓$$
+
+### §6 仍**未判死**的两处（活口，非候选）
+
+$$\text{(甲)}\ \text{ACPC 的}\ L_1（\text{单闭环量}）\ \text{——原档自述"未判"，但仅"单块和"}✓$$
+$$\text{(乙)}\ \textbf{b3 全类为空}（\text{"聚合保持定理"}）\ \text{——} \textbf{尚未证明};\ \text{其形态已缩为}：\text{"任何点逐＋加性卷积生成的序列，其 DS 零点信息必为聚合型或不存在"}✓✓$$
+$$\qquad \Longrightarrow ⚠️\ \text{"聚合保持"}\ \textbf{已归约到经典障碍}（\text{PNT 幂次节省＝固定零-free 区}） \Longrightarrow \text{其地位＝经典开放问题，}\ \textbf{非新障碍}✓✓$$
+
+### §7 两份独立小注记的状态（**不得误引**）
+
+$$\text{`papers/cone-criteria-selfduality/note.md`}：\textbf{已停}（\text{定理初等 ＋ Lemma 2 属 folklore ＋ §6 前提 (P2) 可能 RH 强度}）⟹ \text{内部记录}✓$$
+$$\text{`papers/zero-free-factor-lemma/note.md`}：\textbf{说明性}（\text{引理 folklore；文献检索已确认无具名来源}）;\ \text{已附可引文献缺口}（\text{Tao：反向"常数}\Rightarrow\text{零-free 区"可设想但未尝试，惟其自评"极低效"}）✓✓$$
+
+### §8 引用纪律（新增两条，与 `NEG-REGISTER-1` 的"随引其型"并列）
+
+$$\text{(1)}\ \textbf{成分级引用}：\text{混合档须引到成分}（\text{如"}\text{`V253`（T-I：恒等式／T-V：§5）}\text{"}）✓$$
+$$\text{(2)}\ \textbf{四条款引法}：\text{今后任何"新对象／新变形"提案，须先声明}\ \textbf{如何通过 (i)–(iv$'$) 四条}，\ \text{并注明死于哪一条}✓✓$$
+$$\qquad ⚠️\ \textbf{归纳不得获得否决权}（\text{`C-116`}）：\text{`F1`–`F8` ＋ 检验床为}\ \textbf{唯一前置门};\ \textbf{警示清单} \text{（如同址收敛 N 次、零实例）}\ \textbf{无否决权}✓✓$$
