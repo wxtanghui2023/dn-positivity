@@ -84,11 +84,14 @@ $$\qquad ⚠️\ \textbf{但在作者、原文定理与定义全部核实之前}
 ## §8 【技术词回查】输出（`scripts/tech_word_check.sh`，2026-09-18 13:5x）`[纪律]`（先跑后写）
 
 ```
-技术词 Planat accident  命中文件数=1    :: ./C94-U1-U6-evidence-chain-cleanup.md
-技术词 端点归约      命中文件数=1    :: ./C94-U1-U6-evidence-chain-cleanup.md
-技术词 承重引用      命中文件数=1    :: ./C94-U1-U6-evidence-chain-cleanup.md
+技术词 Planat accident         命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+技术词 端点归约                命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+技术词 承重引用                命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+技术词 corroboration candidate 命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
 ```
-**读数（按实测，先跑后写）**：三项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓；⚠️ 但须注明：**其概念在档案已有**——`V194` §7 对应表述为 "**Planat 事故**"（本次已逐字引作纪律依据）⟹ 本档为**呼应**而非首次提出 ✓
+**读数（按实测，先跑后写；改写后重跑）**：四项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓；⚠️ 两点须注明：
+（i）`端点归约` 的 1 处命中即**本节输出块自身**（自指；正文其余处已随改写删除）✓；
+（ii）**其概念在档案已有**——`V194` §7 对应表述为 "**Planat 事故**"（本档逐字引作纪律依据）⟹ 本档为**呼应**而非首次提出 ✓
 
 ## §9 边界
 
