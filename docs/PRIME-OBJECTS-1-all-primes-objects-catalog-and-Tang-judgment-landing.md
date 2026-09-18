@@ -86,3 +86,28 @@ $$\qquad \Longrightarrow \textbf{压缩审计自己又落回}\ \text{SUPPORT-1}�
 技术词 九箭              命中文件数=2  :: ./V155-…（**已有**）
 ```
 **读数（按实测）**：`含法三义`／`全素数对象目录`＝**1 档（仅本档）⟹ 本档新增** ✓；⚠️ `九箭`＝**2 档**（`V155` **已有**）⟹ 本档为**沿用** ✓
+
+## §6 ⚠️ 强度澄清（唐先生 2026-09-18 20:51 追问）
+
+$$\textbf{追问}：\text{"所以除了欧拉乘积，}\textbf{不可能} \text{有任何一个新函数能够包含所有素数，且能压成一个可寻址的数？"}✓$$
+$$\boxed{\textbf{答}：\text{这个断言}\ \textbf{过强，且不是良构命题}}——\text{至少三处需要修正}✓✓$$
+
+$$\textbf{(a)}\ \textbf{逻辑上不是良构命题}：\text{"}\textbf{任何新函数}\text{"}\ \textbf{没有定义域} \Longrightarrow \text{无法成为定理}（\text{即本会话}\ §1\ \text{的}\ \textbf{判据 J2}）✓✓$$
+$$\qquad \qquad \text{若要先限定为良定义的类（如"以素数局部因子为输入的 Dirichlet 级数"），}\ \textbf{类内确实有一个二分}（\text{§2}）;$$
+$$\qquad \qquad \text{但}\ \textbf{类外}\ \text{无定义域} \Longrightarrow \text{"不可能"}\ \textbf{不能作为数学命题陈述}✓$$
+
+$$\textbf{(b)}\ \textbf{支撑证据的等级不足}：\text{两条支撑}\ \textbf{都自标非定理}✓✓$$
+$$\qquad \qquad \text{`ACA1`}：\text{结论}\ \textbf{[强支持但未证明]};\quad \text{`V155` §5}：\textbf{[结构性] 已归档实现分类，}\textbf{非定理}✓$$
+
+$$\textbf{(c)}\ ⚠️\ \textbf{有反例面}：\text{"除欧拉积外没有函数能压成}\ \beta_*\text{"}\ \textbf{为假}✓✓$$
+$$\qquad \qquad P(s)=\sum_p p^{-s}\ \textbf{既含全部素数，又携带}\ \beta：\text{其奇点}\ =\ \{\rho/k\}\ \text{含}\ k=1\ \text{的}\ \rho \Longrightarrow \textbf{右端奇点实部}\ =\ \beta_*✓✓$$
+$$\qquad \qquad \Longrightarrow \text{故正确说法是}\ \textbf{"独立性"}，\ \textbf{不是"存在性"}✓$$
+
+$$\textbf{正确的最紧陈述（三档）}：$$
+$$\qquad \text{① 含全部素数}：\text{七类皆可} \Longrightarrow \textbf{不稀}✓$$
+$$\qquad \text{② 含全部素数 ＋ 携带}\ \beta：\text{多类可}（P(s)、\text{显式公式、…}） \Longrightarrow \textbf{也不稀}✓$$
+$$\qquad \text{③ 含全部素数 ＋ }\textbf{独立地} \text{把}\ \beta_*\ \text{压成单点}：\textbf{已知只有欧拉积型} \Longrightarrow \textbf{[强支持·非定理]}✓✓$$
+$$\qquad \qquad \text{（"不独立"的含义：}P(s)\ \text{的延拓必经}\ \log\zeta \Longrightarrow \text{必经 ζ} \Longrightarrow \text{值面};\ \text{且其奇点是}\ \textbf{整条轨道}\ \{\rho/k\}\ \text{而非单点）}✓✓$$
+
+$$\Longrightarrow \boxed{\text{方向的正确状态}：\text{收窄到}\ \textbf{一个可命名的问题}\ \text{（非循环谱身份定理是否存在）};\ \textbf{未证、未否}}✓✓$$
+$$\qquad \text{它不是"死了"，而是}\ \textbf{"只剩一个名字，且这个名字就是 RH 级难度"}（\text{`V157` 的"身份墙"}）✓✓$$
