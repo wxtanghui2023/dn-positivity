@@ -86,6 +86,24 @@ Numerically `[复核]`: if all $|z_j|=1$, $\sum_j D_j\approx(5M/2)M$ gives the b
 - ✅ `[出处·已逐字核]`(2026-09-18): the source's threshold formula, including its $20\,n\log n$ term, is **verbatim confirmed** against Palojärvi arXiv:1807.01506v3 (p.20). The core comparison of this note therefore rests on verified source text, not on an archive transcription.
 - No RH is used anywhere in this note; the input is the source theorem plus elementary covering.
 
+## §5 Positioning and literature check (2026-09-18)
+
+**Searched** (web, 2026-09-18): single-unit-circle power sums, Turán power-sum lemma, covering of the circle by arcs, optimal constants.
+
+**Found** — Lemma C sits inside the classical **power-sum (Turán) family**:
+- Turán's method gives lower bounds for exponential/complex power sums; it was introduced by **Turán (1947) in connection with the zeros of the Riemann zeta function** `[外搜]`.
+- Known *multi-point* statements: for $z_1,\dots,z_n$ on the unit circle, $\max_{1\le\ell\le n}\big|\sum_{j=1}^n z_j^\ell\big|\ge1$ (equality iff the $z_j$ are the vertices of a regular $(n+1)$-gon) `[外搜]`; **Cassels' lemma** ($b_j>0$, $|z_j|=1$, $K>N$): $\max_{k\le K}\big|\sum_{j\le N}b_jz_j^k\big|\ge\sqrt{(K-N)/K}\,(\sum b_j^2)^{1/2}$ `[外搜]`.
+- Turán's second theorem: for $|z_n|\ge1$, any $\nu$-range of length $N$ contains some $\nu$ with $|s_\nu|\ge c(M,N)|s_0|$ `[外搜]`.
+- The **source's own engine** is the $M$-point quantitative form (Montgomery, *Ten Lectures*, Ch. 5 Thm 11 $=$ Palojärvi Lemma 2.2), with constant $1/20$ over $1\le n\le5M$.
+
+**Not found**: the **single-term** case ($M=1$) in *optimal* form — i.e. $\max_{1\le k\le5}\mathrm{Re}\,z^k\ge\frac12$ with an elementary covering proof — stated anywhere. ⚠️ This is a **search-level** statement, **not** a claim that it is absent from the literature; the lemma is elementary and is a specialization of a classical family, so it may well be folklore.
+
+**Therefore this note's claimable content is**:
+1. the elementary optimal-constant lemma, recorded with a short self-contained proof (possibly folklore; presented as a tool, not as a novelty claim), and
+2. ⭐ **the application**: in the $m=1$ case of a *published* theorem, the $(K_{F,1}+K_{F,4})$-coefficient of the detection threshold is reduced by a factor $10$ and the source's $20\,n\log n$ main term is removed — **checked verbatim against the source** (p. 20).
+
+Recommendation: state Lemma C with a provenance note ("elementary; to our knowledge not recorded in optimal form"), and rest the note's claim on item 2.
+
 ## References
 
 - M. Palojärvi, *On the Li criterion and the explicit zero-free region*, arXiv:1807.01506v3, Theorem 4.1 (and Lemma 2.2, Theorem 2.1).
