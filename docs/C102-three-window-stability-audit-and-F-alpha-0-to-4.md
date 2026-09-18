@@ -111,3 +111,12 @@ $$\textbf{(3)}\ \text{可选}：\text{用未截断解析拟合分离慢变分量
    ⚠️ 两个命题分开: 存在通过当前展开控制的大 s residual（R2(100)=1.0124, R2(140)=1.0216 未收敛到 1）≠ 这是 support>1 的 residual（仍无证据）
 ✅ 净产出：①GUE control 修好（间距方差 0.17982）✓ ②三窗审计（α≥1.25 稳定 / α≈1 漂移）✓ ③F(α) 0≤α≤4 结果 ✓ ④两个命题分离 ✓ ⑤负结果加固 ✓
 ```
+
+---
+
+## §8 ⚠️ **措辞勘误（唐先生 2026-09-18 15:33 指定；"真实边界"过强）**
+
+$$\text{原写（过强）}：\text{"}\text{support}=1\ \text{是当前可用对偶带宽的}\textbf{真实边界}"✗$$
+$$\text{应写（本档起适用）}：\boxed{\text{support}=1\ \text{is the empirically observed }\textbf{stable boundary of the current usable dual-bandwidth detector}}✓✓$$
+$$\qquad \text{中文}：\boxed{\text{在当前}\textbf{探测器}、\textbf{当前零点数据范围} \text{及}\textbf{已完成控制} \text{下，}\ 1\ \text{是可稳定恢复的对偶带宽边界；}\textbf{未观察到可用的}\ >1\ \text{结构}}✓✓$$
+$$\text{理由（唐先生）}：\text{这样}\ \textbf{即使将来 B1／B2 查明}\ \alpha=1\ \text{的来源}，\ \text{也不会反过来污染}\ \text{`C-102`}\ \text{的结论}✓$$
