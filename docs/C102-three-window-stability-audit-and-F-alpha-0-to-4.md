@@ -20,7 +20,7 @@ $$\textbf{(4)}\ ⭐\ \Longrightarrow\ \textbf{负结果明显更扎实}：\text{
 
 ## §1 方法（消混叠＋三窗）
 
-$$R_2(s)：\text{细网格}\ \Delta s=0.0173\（\textbf{非整除}，避免}\ 1/\Delta s\in\mathbb Z）＋\ \textbf{4 组 dither 平均}✓$$
+$$R_2(s)：\text{细网格}\ \Delta s=0.0173\（\textbf{非整除}，避免\ 1/\Delta s\in\mathbb Z）＋\ \textbf{4 组 dither 平均}✓$$
 $$\qquad ⚠️\ \textbf{动机}：\text{`C-101`}\ \text{判定}\ \alpha=1\ \text{尖峰源自"展开差值近整数聚集}\times\text{整除 binning"的周期-1 混叠}✓$$
 $$w_1=\text{高斯}(\sigma=60,\ s_{\text{cut}}=120);\quad w_2=\text{余弦}(\cos\frac{\pi s}{2s_{\text{cut}}});\quad w_3=\text{四次光滑}\Bigl(1-(s/s_{\text{cut}})^2\Bigr)^2\quad(s\le s_{\text{cut}})✓$$
 $$F_w(\alpha)=1+2\int_0^{s_{\text{cut}}}(R_2(s)-1)\,w(s)\cos(2\pi\alpha s)\,ds✓$$
