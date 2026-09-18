@@ -111,3 +111,32 @@ $$\qquad \qquad \text{（"不独立"的含义：}P(s)\ \text{的延拓必经}\ \
 
 $$\Longrightarrow \boxed{\text{方向的正确状态}：\text{收窄到}\ \textbf{一个可命名的问题}\ \text{（非循环谱身份定理是否存在）};\ \textbf{未证、未否}}✓✓$$
 $$\qquad \text{它不是"死了"，而是}\ \textbf{"只剩一个名字，且这个名字就是 RH 级难度"}（\text{`V157` 的"身份墙"}）✓✓$$
+
+## §7 ⚠️ "目前没有 vs 不能新建"——两半强度不同（唐先生 2026-09-18 20:55）
+
+$$\textbf{追问}：\text{"目前没有，}\textbf{也不能新建}\text{？"}✓$$
+$$\boxed{\textbf{前半}\ \text{"目前没有"}\ \Longrightarrow\ \textbf{可以断言}\ ✓\quad(\text{关于文献状态的事实})}$$
+$$\boxed{\textbf{后半}\ \text{"不能新建"}\ \Longrightarrow\ \textbf{不能断言}\ ✗\quad(\text{未证；且作为全称命题需先固定类})}$$
+
+$$\textbf{更精确的形式}：\text{问题}\ \textbf{不是}\ \text{"有没有新函数"}，\ \textbf{而是}\ \text{"是否存在}\ \textbf{一种新的『素数据}\to\text{零点定位』转换机制}\text{"}✓✓$$
+$$\qquad \text{把档案}\ \textbf{四套分类投影到这条轴}（\text{本档做法}，\ \textbf{非新分类}）：$$
+
+| 转换机制 | 对应档案条目 | 结论 |
+|:--|:--|:--|
+| M1 解析延拓＋奇点位置（Landau 型） | `V254`／`V253`／`viii-monodromy` | 需**乘性局部因子** ⟹ 只有欧拉积型；其余延拓必经 ζ ✗ |
+| M2 极限／截断 | `V188` §2 | 需**无界精度** ✗ |
+| M3 聚合／平均（线性泛函） | `V188` §2 饱和 | **饱和** ⟹ 不增信息 ✗ |
+| **M4 极值／上确界（稳定性型）** | ⭐ `C-110` `C6`／`C-111` | **唯一活口**；唯一实例（DBN／`Λ`）**死于端点 `\tfrac12` 阶分支** ⚠️ |
+| M5 动力学／算子谱 | `V192` §③／L2／M2 | 需**内禀流**（char 0 无）✗ |
+| M6 代数不变量（Frobenius／上同调） | `V242`／`V145`／M2 | char 0 **无 Frobenius**；几何侧缺 canonical polarization ✗ |
+| M7 递推／回路 | `C-117`（Euclid–Mullin） | **信息率 `\log\prod\approx p\gg\log p`** ⟹ 分辨率不足 ✗ |
+| M8 计数＋整数性 | `C-126`／`C-127` | 只对**有限范围**有效；渐近失效 ✗ |
+| M9 L-值／自守 | `V157`（值面） | 只看**取值** ⟹ 不带 β ✗ |
+| M10 概率／随机模型 | `E19`／GUE 线 | 同分布但**不给确定性定位** ✗ |
+
+$$\Longrightarrow \text{十类}\ \textbf{全被排除或未实例化};\ \textbf{唯一活口}＝\text{M4}（\text{极值／稳定性型}）✓✓$$
+$$\qquad ⚠️\ \textbf{但这不是定理}：\text{本表是}\ \textbf{四套已归档分类的投影}，\ \textbf{不是} \text{"不存在第 11 种机制"的定理}✓✓$$
+$$\qquad \qquad \text{（同一纪律：}\text{`V155`}\ \text{自标}\ \text{"[结构性] 已归档实现分类，非定理"}\text{；本表照抄该边界）}✓$$
+
+$$\textbf{故准确状态}：\boxed{\text{不是"死路"},\ \text{而是"只剩一个可命名的缺口"},\ \text{且该缺口}\ \textbf{未被证明不可填}}✓✓$$
+$$\qquad \text{若要试，}\ \textbf{第一条过滤网＝`TESTABLE-1`}：\text{候选定义必须能在}\ \textbf{Davenport–Heilbronn}\ \text{上写出（即}\textbf{不需要欧拉积}）⟹ \text{零成本第一刀}✓✓$$
