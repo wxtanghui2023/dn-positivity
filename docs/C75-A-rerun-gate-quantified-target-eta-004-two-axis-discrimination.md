@@ -19,7 +19,7 @@ $$\text{新查证实（本档）}：\texttt{BGSTB25}\ \text{的}\ b=0.3185\ \tex
 
 $$\text{阶梯（`V185`／前沿 §7.3）}：\text{support}\ 1.04/1.26/1.70\ \Longrightarrow\ 0.70/0.80/0.90\（\textbf{超出已知}）✓$$
 $$\text{泛函（同一两矩输入）}：\text{Christoffel}\quad 1-\Lambda_1(0)=\frac{m_1^2}{m_2}=\frac{(\sum\lambda)^2}{d\sum\lambda^2}\ \（\text{Cauchy--Schwarz，}E8\ \text{§3}）✓$$
-$$\qquad 0.6725\to0.682\ \text{的}\ 0.01＝同一泛函＋同一两矩输入用 Christoffel 而非单一标量}\ R(\psi)✓$$
+$$\qquad 0.6725\to0.682\ \text{的}\ 0.01＝同一泛函＋同一两矩输入用 Christoffel 而非单一标量\ R(\psi)✓$$
 $$\text{天花板机制}：\text{越}\ 0.682\ \textbf{需无条件三阶矩}（X\asymp T）——\text{而前沿 §7.2(e) 逐字}：$$
 $$\qquad\text{"…available exactly in the Rudnick--Sarnak range}\ X^k\le T^{2-\varepsilon};\ \textbf{at}\ X\asymp T\ \textbf{this allows only}\ k=1.\ \textbf{Thus, unconditionally, higher moments add nothing.}"✓✓$$
 $$\qquad\Longrightarrow\ k=3\ \text{的对角法只覆盖}\ X\le T^{2/3-\varepsilon};\ \text{推到}\ X\asymp T\ \text{需再进}\ T^{1/3}✓$$

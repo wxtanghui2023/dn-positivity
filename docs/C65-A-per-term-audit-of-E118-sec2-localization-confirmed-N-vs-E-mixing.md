@@ -41,7 +41,7 @@ $$E119\ \text{§1 的两个数（majorant}\ \sqrt N\log^2N\ \text{、相干值}\
 $$\textbf{(i) 点态自洽}：\mathfrak E\approx Y|\Delta|^2\ \Longrightarrow\ |\Delta|^2\approx\frac{hN\log^2N}{\sqrt N}=N\log^2N\ \Longrightarrow\ |\Delta|\approx\sqrt N\log N\ \checkmark\ \text{与 RH 的 }O(\sqrt N\log^2N)\ \textbf{同阶}\ ✓$$
 $$\qquad\Longrightarrow\ \text{与}\ E119\ \text{③ 的「RH 差一个}\ \log^2\text{」}\ \textbf{一致}\ ✓$$
 $$\textbf{(ii) 与承重墙一致}：o(hN)\equiv\text{"满相干被压制"}\equiv\text{pair-correlation 跨 support }1\ ✓\ \text{（}SUPPORT\text{-}1\ \text{＋}\ E118\ \text{⑤）}✓$$
-$$\textbf{(iii) 定位更硬（本档补强）}：C\text{-}64\ \text{只指出"对角与非对角不同权"；本档进一步指出}\ \textbf{E118 §2 第 5 项与其自述的}\ F_T\ \textbf{定义本身就不匹配}（F_T=K_Y\ \text{无 }x\ \text{权}，而对角按带 }x\ \text{权计算）✓✓$$
+$$\textbf{(iii) 定位更硬（本档补强）}：C\text{-}64\ \text{只指出"对角与非对角不同权"；本档进一步指出}\ \textbf{E118 §2 第 5 项与其自述的}\ F_T\ \textbf{定义本身就不匹配}（F_T=K_Y\ \text{无 }x\ \text{权}，而对角按带\ x\ \text{权计算}）✓✓$$
 
 $$\textbf{⚠️ 一处订正（`C-64` 未及）}：E118\ \text{§2 称"相干增益}=\sqrt N/\log^3N"；\ \text{按本档修正，相干／典型}=\sqrt N\log N\ ✓$$
 $$\qquad \Longrightarrow\ \textbf{量级}\ \sqrt N\ \textbf{一致}\ ✓\ \text{但}\ \textbf{log 幂次方向可疑}（\log^{1}\ \text{vs}\ \log^{-3}）⚠️\ \text{留待核，不据此下结论} ✓$$

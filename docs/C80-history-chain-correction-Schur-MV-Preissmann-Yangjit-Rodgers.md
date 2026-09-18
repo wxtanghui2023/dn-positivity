@@ -29,7 +29,7 @@ $$\textbf{(3)}\ \text{Rodgers（`arXiv:2608.12315`）}\ \textbf{逐字}：\text{
 ## §2 对 `C-78` 的两处精化
 
 $$\textbf{(a)}\ \textbf{历史链}（`C-78` §1 只列了 MV／Preissmann／Rodgers）\ \Longrightarrow\ \text{补入}\ \textbf{Schur 1911} \text{与}\ \textbf{Yangjit 2022/23}✓$$
-$$\textbf{(b)}\ \textbf{余量区间}（`C-78` §0(ii) 写"总余量}\ \lesssim1.5\ \text{倍"）\ \Longrightarrow\ \text{精确化为区间}：$$
+$$\textbf{(b)}\ \textbf{余量区间}（`C-78` §0(ii) 写"总余量\ \lesssim1.5\ \text{倍}"）\ \Longrightarrow\ \text{精确化为区间}：$$
 $$\qquad \text{上端}：\text{MV}\ \tfrac32\pi=4.71239\ \text{vs 已知下界}\ 3.19497 \Longrightarrow\ \textbf{余量}\ \le1.475\times✓$$
 $$\qquad \text{下端}：\text{MV}\ \tfrac32\pi\ \text{vs 已证最优上界}\ 1.28\pi=4.02124 \Longrightarrow\ \textbf{余量}\ \ge1.172\times\ ⚠️（1.28π 为 MO 转述，待一手核）✓$$
 $$\qquad \Longrightarrow\ \text{结论不变}：\text{余量}\ \textbf{至多约 1.5 倍（常数级）} \Longrightarrow\ \text{补不了幂级缺口}✓✓$$

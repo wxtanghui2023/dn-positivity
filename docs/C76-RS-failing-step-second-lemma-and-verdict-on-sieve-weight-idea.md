@@ -43,7 +43,7 @@ $$\qquad ⚠️\ \text{但不排除}\ \textbf{换机制}：\text{若用}\ \text{
 
 $$\textbf{(1)}\ ⭐\ \text{`Problem A` 的}\ \texttt{SQ1}：\text{MV 对该核是否}\ \textbf{sharp}？\ \text{即真实算子范数}\ \sup|O_1|/(\sum n|a_n|^2)\ \text{是否}\ \ll L^2X\cdot T^{-c} \Longrightarrow\ \text{若否，障碍是}\ \textbf{ℓ² 方法伪影} \text{而非硬墙}✓✓$$
 $$\textbf{(2)}\ \text{`Problem A` 的}\ \texttt{SQ3}：\Lambda\ \text{vs}\ \mu^2\ \text{判别实验}\ \Longrightarrow\ \text{障碍在"素数提取"还是"双体双线性结构"}✓$$
-$$\textbf{(3)}\ \text{指数}\ \textbf{2}\ \text{的来源审计}：\text{`}T^{2-\delta}\text{` 中的 2}\ \text{是否可换来源}（\text{k 阶矩的 }L^2\text{ 结构／large sieve／diagonal 结构）\ \Longrightarrow\ \text{这是"能否在同一支撑下换估计"的技术问}✓$$
+$$\textbf{(3)}\ \text{指数}\ \textbf{2}\ \text{的来源审计}：\text{`}T^{2-\delta}\text{` 中的 2}\ \text{是否可换来源}（\text{k 阶矩的 }L^2\text{ 结构／large sieve／diagonal 结构}）\ \Longrightarrow\ \text{这是"能否在同一支撑下换估计"的技术问}✓$$
 
 ## §5 出处与可信度（⚠️ 必读）
 

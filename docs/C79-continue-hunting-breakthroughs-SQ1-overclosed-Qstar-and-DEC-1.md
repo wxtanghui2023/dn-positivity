@@ -11,7 +11,7 @@
 
 $$\textbf{① ⚠️ 自我更正（对 `C-78` §3）}：\text{`C-78` 把 `SQ1` 判"关闭"}\ \textbf{过早};\ \text{它只回答了两层中的}\ \textbf{第一层}✗$$
 $$\qquad \text{第一层（已答）}：\textbf{一般}\ \text{MV／Hilbert 不等式的}\ \textbf{尖锐常数} \Longrightarrow\ \text{余量}\ \lesssim1.5\ \text{倍（常数级）}✓$$
-$$\qquad \text{第二层（}\textbf{仍开}）}：\textbf{对实际稀疏算术权} a_n=\Lambda(n)/\sqrt n（\text{支撑在素数幂}）\ \text{的}\ \textbf{算子范数}\ \text{是否}\ \ll L^2X\cdot T^{-c}？\ ✓✓$$
+$$\qquad \text{第二层（}\textbf{仍开}）：\textbf{对实际稀疏算术权} a_n=\Lambda(n)/\sqrt n（\text{支撑在素数幂}）\ \text{的}\ \textbf{算子范数}\ \text{是否}\ \ll L^2X\cdot T^{-c}？\ ✓✓$$
 $$\qquad\Longrightarrow\ \boxed{\text{若第二层为"是"}\ \Longrightarrow\ \text{对角支配在}\ X=T^{1.04}\ \text{成立} \Longrightarrow\ \textbf{无需 prime-pair 即可破 0.682}}✓✓✓$$
 $$\textbf{② 未登记面 `DEC-1`}：\Lambda=\mu*\log\ \text{的}\ \textbf{双层分解重排}（\text{关键词 0 档}）✓$$
 $$\textbf{③ 三视图同一簇}：Q★（权稀疏性）\ \big|\ \text{SQ3}（\Lambda\ \text{vs}\ \mu^2）\ \big|\ \text{DEC-1}（\text{分解重排}）\ \Longrightarrow\ \text{三者互为闸门}✓$$

@@ -59,7 +59,7 @@ $$\qquad ⚠️\ \text{但必须先过}\ \text{`C-79` §4 的}\ \textbf{K1--K4}�
 ## §6 边界（⚠️ 必读）
 
 $$\text{(i)}\ §1\ \text{为}\ \textbf{逐字}（源档 `W6-MAJORANT-1` §2，L839 与 §2.1）✓$$
-$$\text{(ii)}\ §2\ \text{为}\ \textbf{本档量级推导}：\text{用}\ \text{majorant}\ \min(T,2/|h|)\ \text{与标准}\ \textbf{上界筛} \text{的 PP-对计数}（\textbf{无条件}，但}\ \text{本档}\ \textbf{未逐字核} \text{其精确形式}）⚠️;\ \text{结论按}\ \textbf{量级} \text{读，非定理}✓$$
+$$\text{(ii)}\ §2\ \text{为}\ \textbf{本档量级推导}：\text{用}\ \text{majorant}\ \min(T,2/|h|)\ \text{与标准}\ \textbf{上界筛} \text{的 PP-对计数}（\textbf{无条件}，但\ \text{本档}\ \textbf{未逐字核} \text{其精确形式}）⚠️;\ \text{结论按}\ \textbf{量级} \text{读，非定理}✓$$
 $$\text{(iii)}\ \text{不得写"已证离对角 > 对角"}\ ✗;\ \text{须写"}\textbf{量级推导表明}\ \dots\text{"}✓$$
 $$\text{(iv)}\ \textbf{未用 RH}\ \text{作推导}✓;\ \textbf{零数值}✓;\ \text{不修改原档}✓$$
 
