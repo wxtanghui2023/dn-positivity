@@ -55,7 +55,7 @@ $$\qquad \text{若塌}：\text{记录}\ \textbf{塌在哪一步}（\text{聚合�
 
 $$\text{用途 1}：\text{快速识破}\ \textbf{伪装}（\text{候选看似新，实则落同一模式}）✓$$
 $$\text{用途 2}：\text{定位}\ \textbf{塌缩点}（\text{哪一步把}\ \beta\ \text{信息吃掉}） \Longrightarrow \text{可指导}\ \textbf{改造候选}，\ \text{而非放弃}✓$$
-$$\text{用途 3}：\text{积累}\ \textbf{反例}（\text{若某候选过了门却}\ \textbf{不塌}，则链本身须修订}）✓✓$$
+$$\text{用途 3}：\text{积累}\ \textbf{反例}（\text{若某候选过了门却}\ \textbf{不塌}，则链本身须修订）✓✓$$
 
 ## §6 边界 ＋ 回查
 
