@@ -82,7 +82,7 @@ $$\textbf{追问}：\text{"如果机制不可能，为啥文献还会有成果�
 $$\boxed{\textbf{前提先纠}：\text{本档}\ \textbf{未证} \text{"机制不可能"}——所证仅为}\ M4\ \text{关闭}＋\text{一个}\ \textbf{[强支持·非定理]} \text{的模式}✓✓$$
 
 $$\textbf{(1)}\ \text{`F5`-模式}\ \textbf{只禁止一件事}：\text{判定}\ \beta_*\ \text{且}\ \textbf{不带独立算术输入}✓$$
-$$\qquad 而文献成果}\ \textbf{全在另一侧}：$$
+$$\qquad \text{而文献成果}\ \textbf{全在另一侧}：$$
 $$\qquad \qquad \text{(i) 部分／单侧}（\sigma>1-c/\log T;\ N(\sigma,T);\ \text{比例}\ \ge\tfrac23;\ \Lambda\le0.22）$$
 $$\qquad \qquad \text{(ii) 有限范围}（\text{验证到高度}\ 3\times10^{12}）\quad \text{(iii) 条件结果}（\text{RH／GRH 下}）$$
 $$\qquad \qquad \text{(iv) 已知框架内的定量改进}（A=30/13;\ \text{常数优化}）\quad \text{(v) 别的问题}（\text{cs.DS 三篇}）✓✓$$
