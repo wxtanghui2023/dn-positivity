@@ -18,6 +18,8 @@
 | **`U5`** | 8/23 第二环"无条件" | ⚠️ **降调**：档案第 30 行确写"**反证法（无条件）**"；我方 `C-62`／`C-63` 已给**两条输入皆循环** ⟹ 加注 **"输入不可达"** ✗ |
 | **`U6`** | 转述风险面 | ✅ **产协议**：**83 档**含转述／二手 ⟹ 出**承重引用优先复核清单**＋书写协议 |
 
+$$\textbf{硬规则（唐先生 2026-09-18 13:55 确认）}：\boxed{\text{"\textbf{外部命中}"}\ \ne\ \text{"\textbf{外部独立证明}"}}✓\ \Longrightarrow\ \text{HAL Prop.\ 9 与 Michalowski／Toeplitz 两条}\ \textbf{均维持 pending verification}✓✓$$
+
 ---
 
 ## §1 `U1`：`Burnol` 门⑤ 引语——**降级**
@@ -73,6 +75,18 @@ $$\qquad \text{(2)}\ \textbf{非承重引用} \text{可转述，但必须显式�
 $$\qquad \text{(3)}\ \text{前例}：\text{`C-76` 已抓到一处二手源}\ \textbf{转录错误}（`|ξ_1+\cdots|` vs `Σ|ξ_j|`）⟹ \text{承重引用错误率}\ \textbf{不为零}✓✓$$
 $$\textbf{优先复核清单（承重者）}：\text{Burnol（`U1`，}\textbf{已降级}）\ \big|\ \text{Planat/MDPI（`U2`，}\textbf{已定位}）\ \big|\ \text{vdC 常数（`U4`）}\ \big|\ \text{1.28π（`U3`）}\ \big|\ \text{RS `Lemma 3.2`／`Lemma 3.5`（}\textbf{唐先生已核} ✓）\ \big|\ \text{BGSTB24（}\textbf{逐字已取} ✓）✓$$
 
+## §6A 三条区分 ＋ 一条规则（唐先生 2026-09-18 13:55 确认）
+
+$$\textbf{区分 1（`U1`）}：\text{本次结论是}\ \text{"}\textbf{外部检索没有核到逐字原句}\text{"} \Longrightarrow \text{降为}\ \text{[转述／待核]};$$
+$$\qquad \textbf{不是} \text{判定 Burnol 的命题为假}✗\（\text{其命题本身}\ \textbf{未受质疑}）✓$$
+$$\textbf{区分 2（`U2`）}：\text{定义为}\ \textbf{definition-level defect} \Longrightarrow \textbf{EXCLUDED};\qquad \textbf{不是} \text{credibility downgrade}✗$$
+$$\qquad \text{且}\ \text{S-channel 的}\ \textbf{CLOSED} \ \text{仍由}\ \textbf{V191}\ \text{承担}（\text{非 Planat}）✓$$
+$$\textbf{区分 3（`U5`）}：\text{必须区分"}\textbf{档案写了无条件}\text{"} \text{与}\ \text{"}\textbf{输入本身不可达}\text{"}：$$
+$$\qquad \text{保留原档案事实}（\textbf{不直接改写历史记录}）✓ ＋ \text{给}\ \textbf{结论} \text{加}\ \text{"输入不可达"}\ \textbf{限定}✓✓$$
+$$\textbf{规则（本档起适用，与 §6 协议并列）}：$$
+$$\boxed{\text{"\textbf{外部命中}"}\ \ne\ \text{"\textbf{外部独立证明}"}}✓✓$$
+$$\qquad \Longrightarrow\ \text{`HAL` Prop.\ 9 与 Michalowski／Toeplitz}\ \textbf{两条均维持}\ \text{pending verification}✓$$
+
 ## §7 外部命中 `R1-②`（证据等级：**待核**）
 
 $$\boxed{\text{外部命中}\ R1\text{-②}\ +\ \text{independence／source verification pending}}✓$$
@@ -84,10 +98,12 @@ $$\qquad ⚠️\ \textbf{但在作者、原文定理与定义全部核实之前}
 ## §8 【技术词回查】输出（`scripts/tech_word_check.sh`，2026-09-18 13:5x）`[纪律]`（先跑后写）
 
 ```
-技术词 Planat accident         命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
-技术词 端点归约                命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
-技术词 承重引用                命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
-技术词 corroboration candidate 命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（末次运行）技术词 外部命中      命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（末次运行）技术词 外部独立证明  命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（末次运行）技术词 Planat accident         命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（末次运行）技术词 corroboration candidate 命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（前次运行）技术词 端点归约     命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
+（前次运行）技术词 承重引用     命中文件数=1  :: ./C94-U1-U6-evidence-chain-cleanup.md
 ```
 **读数（按实测，先跑后写；改写后重跑）**：四项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓；⚠️ 两点须注明：
 （i）`端点归约` 的 1 处命中即**本节输出块自身**（自指；正文其余处已随改写删除）✓；
@@ -123,4 +139,9 @@ $$\qquad ⚠️\ \textbf{但在作者、原文定理与定义全部核实之前}
    价值仅在于：外部文献**再次把 Toeplitz/全正性方向放到与 Jensen/Pólya 型实根性机制相邻的位置**；
    在作者、原文定理与定义全部核实之前，**不能升级为独立证明**，亦不能写成"已获已发表等价性支持"
 ✅ 净产出：①6 项逐项处置（4 清 + 2 降调）✓；②降调登记（不得改原档）✓；③承重引用协议 ✓；④U2 定性更正为「定义级归一化缺陷」+ HAL 降为 corroboration candidate ✓
+📌 唐先生 13:55 确认三处区分 + 一条规则（已写入 §6A）：
+   ① U1 = "外部检索没有核到逐字原句" ⟹ 降为转述/待核，**不是**判定 Burnol 命题为假；
+   ② U2 = definition-level defect ⟹ EXCLUDED，**不是** credibility downgrade；S-channel CLOSED 仍由 V191 承担；
+   ③ U5 = 必须区分"档案写了无条件"与"输入本身不可达" ⟹ 保留原档案事实（**不直接改写历史记录**）+ 给**结论**加"输入不可达"限定；
+   ⭐ 规则：**"外部命中" ≠ "外部独立证明"** ⟹ HAL Prop.9 与 Michalowski/Toeplitz 两条**均维持 pending verification**
 ```
