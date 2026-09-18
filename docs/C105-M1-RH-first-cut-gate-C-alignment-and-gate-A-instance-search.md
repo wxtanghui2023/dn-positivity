@@ -1,4 +1,4 @@
-已查地图（所查：`RESEARCH-CONSTITUTION.md`（**`N46` 登记原文 ＋ 附录 `N25–N46` 表 ＋ §4.3 禁止重复表**）、`V107-N31-formalization.md`（引用格式范式）、`FREEZE-AUDIT-FZ1-FZ4.md`（`FZ-2`／`FZ-3`／六筛子）、`CLOSED-ROUTES-MAP.md`、`C-104`（五 primitive 审计）、`MATH-STATEMENT-A-*`（`O_1`／支撑）、`W6-MAJORANT-1g`、`V226`／`V227`（完成化层））。**结论**：正式开 **`M1-RH: Hereditary Arithmetic Null Separation`** 第一刀 ⟹ **Gate C ✓**：`N46` 原文＝「**`null 能复现 ⟹ 无信号资格`**」（来源 `T4`，证据等级＝**方法学门槛**）⟹ **`N46` 是"零模型可复现性"筛子，与 `M1` 的量词结构不同一一事 ⟹ `M1` 不是 `N46` 的重命名** ✓✓（但**实现须过 `N46`**）；**Gate E ✓**（`∀S` 形式上不是 `lim F_n` 有限局部聚合）；**Gate A ✗**：搜索 6 个具体 restriction family，**无一**同时满足 `A+B+C`；**最接近者＝部分欧拉积族**（有限 `S` **全无零点**，统一成立 ✓✓，但**对 ζ 的 `β` 无响应** ⟹ **B 失败**）⟹ 按预注册：**`M1` DEAD（bounded-family 意义）** ✓✓；⚠️ **不升级为"原则上不可能"** ✓
+已查地图（所查：`RESEARCH-CONSTITUTION.md`（**`N46` 登记原文 ＋ 附录 `N25–N46` 表 ＋ §4.3 禁止重复表**）、`V107-N31-formalization.md`（引用格式范式）、`FREEZE-AUDIT-FZ1-FZ4.md`（`FZ-2`／`FZ-3`／六筛子）、`CLOSED-ROUTES-MAP.md`、`C-104`（五 primitive 审计）、`MATH-STATEMENT-A-*`（`O_1`／支撑）、`W6-MAJORANT-1g`、`V226`／`V227`（完成化层））。**结论**：正式开 **`M1-RH: Hereditary Arithmetic Null Separation`** 第一刀 ⟹ **Gate C ✓**：`N46` 原文＝「**`null 能复现 ⟹ 无信号资格`**」（来源 `T4`，证据等级＝**方法学门槛**）⟹ **`N46` 是"零模型可复现性"筛子，与 `M1` 的量词结构不是同一件事 ⟹ `M1` 不是 `N46` 的重命名** ✓✓（但**实现须过 `N46`**）；**Gate E ✓**（`∀S` 形式上不是 `lim F_n` 有限局部聚合）；**Gate A ✗**：搜索 6 个具体 restriction family，**无一**同时满足 `A+B+C`；**最接近者＝部分欧拉积族**（有限 `S` **全无零点**，统一成立 ✓✓，但**对 ζ 的 `β` 无响应** ⟹ **B 失败**）⟹ 按预注册：**`M1` DEAD（bounded-family 意义）** ✓✓；⚠️ **不升级为"原则上不可能"** ✓
 
 # C-105 · **`M1-RH` 第一刀：Gate C（对齐 `N46`）＋ Gate A（具体实例搜索）**
 
@@ -10,7 +10,7 @@
 
 $$\textbf{Gate C}\ ✓：\text{`N46` 登记原文（逐字）}＝\boxed{\text{RH 中}\ \text{"null 能复现} \Longrightarrow \text{无信号资格"}}（\text{"非零／三体／非交换"永久失去资格}）✓$$
 $$\qquad \text{来源}\ T4;\quad \textbf{证据等级＝方法学门槛};\quad \text{且 §4.3 禁止重复表：}\text{"新的 prime invariant"} \ ❌\ N3/N46✓$$
-$$\qquad \Longrightarrow\ \text{`N46`＝}\textbf{"零模型可复现性"筛子};\quad \text{`M1`＝}\textbf{量词结构}（\forall S\ \text{一致}） \Longrightarrow \boxed{\text{不同一一事，非重命名}}✓✓$$
+$$\qquad \Longrightarrow\ \text{`N46`＝}\textbf{"零模型可复现性"筛子};\quad \text{`M1`＝}\textbf{量词结构}（\forall S\ \text{一致}） \Longrightarrow \boxed{\text{不是同一件事，非重命名}}✓✓$$
 $$\qquad \qquad ⚠️\ \text{但}\ \textbf{实现必须过}\ \text{`N46`}✓$$
 $$\textbf{Gate E}\ ✓：\text{`M1` 的形态}\ \forall S\in\mathfrak R_T:\ \mathcal P(\mathcal O_{T,S})\ge B(T)\ \textbf{形式上}\ne\lim_n F_n✓✓\（\text{唯一已获绿灯}）$$
 $$\textbf{Gate A}\ ✗：\text{审计 6 个具体 family}，\textbf{无一过}\ A+B+C✓$$
@@ -64,7 +64,7 @@ $$\qquad \qquad ⚠️\ \text{更根本}：\text{在}\ \textbf{每个有限层}\
 
 $$\textbf{Gate B（三重 realization）}：\text{六个候选}\ \textbf{无一}\ \text{同时具备}\ A+B+C;\ \text{`A6` 有}\ A+C\ \text{但}\ \textbf{B 失败}✓$$
 $$\qquad ⚠️\ \text{而}\ B\ \text{正是生死点（唐先生原话）}：\beta\ne\tfrac12 \Longrightarrow \textbf{可计算的 defect}✓$$
-$$\textbf{Gate D（`FZ-3`）}：\text{`A6`}\ \text{落}\ \textbf{horn ①}（canonical} \Longrightarrow \beta\ \text{盲}）;\ \text{`A5`}\ \text{落}\ \textbf{horn ②}（循环）✓$$
+$$\textbf{Gate D（`FZ-3`）}：\text{`A6`}\ \text{落}\ \textbf{horn ①}（canonical \Longrightarrow \beta\ \text{盲}）;\ \text{`A5`}\ \text{落}\ \textbf{horn ②}（循环）✓$$
 $$\qquad \Longrightarrow\ \text{六个候选}\ \textbf{全部落}\ \text{`FZ-3`}\ \text{两端之一}✓✓$$
 
 ## §5 判词与预注册
