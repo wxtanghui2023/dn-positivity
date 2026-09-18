@@ -38,11 +38,19 @@ $$\qquad \text{（即：}\textbf{自对偶锥不能被严格扩大} \text{——
 
 ## §3 定理 A：Choi 宿主中的松紧结构（自足陈述）
 
-$$\textbf{引用（外部）}：\text{Choi 1975}（\text{完全正映射的 Choi 矩阵刻画}）：\ \phi\ \text{完全正}\iff C_\phi\ \text{半正定（PSD）}✓$$
-$$\qquad \Longrightarrow\ \text{经 Choi 同一化，}\ CP_n\ \textbf{对应 PSD 锥} \Longrightarrow \boxed{CP_n\ \textbf{自对偶}}✓✓$$
-$$\qquad \qquad \text{（PSD 锥自对偶为标准事实：}\ \operatorname{tr}(AB)\ge0\ \forall B\succeq0\iff A\succeq0）✓$$
-$$\textbf{引用（外部）}：\text{Choi 1975}\ \text{又证}：n=2\ \text{时}\ Pos_2=CP_2;\quad n\ge3\ \text{时}\ \boxed{Pos_n\supsetneq CP_n}✓✓$$
-$$\textbf{定理 A}：n\ge3\ \text{时}\ Pos_n\ \textbf{不是自对偶锥}，\ \text{且}\ Pos_n\ \text{判据}\ \textbf{严格松于}\ CP_n\ \text{判据}✓✓$$
+$$\textbf{引用（外部）}：\text{Choi 1975, Theorem}：\ \phi\ \text{完全正}\iff C_\phi:=\sum_{i,j}E_{ij}\otimes\phi(E_{ij})\ \text{半正定（PSD）}✓$$
+$$\qquad ⭐\ \text{且}\ \phi\mapsto C_\phi\ \text{是}\ \textbf{Hilbert--Schmidt 等距}（\text{本档验算}） \Longrightarrow \textbf{自对偶性精确传递}✓✓$$
+$$\qquad \qquad \langle C_\phi,C_\psi\rangle_{\rm HS}=\sum_{i,j}\operatorname{tr}\bigl(\phi(E_{ij})^{*}\psi(E_{ij})\bigr)=\langle\phi,\psi\rangle_{\rm HS}\quad\blacksquare✓$$
+$$\qquad \Longrightarrow\ CP_n\ \textbf{自对偶}\iff\text{PSD 锥自对偶}\（\text{标准：}\operatorname{tr}(AB)\ge0\ \forall B\succeq0\iff A\succeq0）✓✓$$
+$$\textbf{Pos}\supsetneq CP\ \textbf{的初等证人（本档给出；}\textbf{无需引用}）：\text{转置}\ T(A)=A^{\!\top}\ \text{正}\（A\succeq0\Longrightarrow A^{\!\top}\succeq0）✓$$
+$$\qquad \text{其 Choi 矩阵}\ C_T=\sum_{i,j}E_{ij}\otimes E_{ji}=\textbf{翻转算子}\ F;\quad F^{2}=1,\ \text{特征值}\pm1✓$$
+$$\qquad \qquad n\ge2\ \text{时反对称子空间非空} \Longrightarrow -1\ \text{是特征值} \Longrightarrow C_T\not\succeq0 \Longrightarrow T\ \textbf{不全正}✓✓$$
+$$\qquad \Longrightarrow \boxed{Pos_n\supsetneq CP_n\quad\forall n\ge2}✓✓$$
+$$\textbf{定理 A}：n\ge2\ \text{时}\ Pos_n\ \textbf{不是自对偶锥}，\ \text{且}\ Pos_n\ \text{判据}\ \textbf{严格松于}\ CP_n\ \text{判据}✓✓$$
+$$\qquad ⚠️\ \textbf{本档自查勘误（原稿错误，已修）}：\text{原稿写"}\ n=2\ \text{时}\ Pos_2=CP_2\text{"} —— \textbf{错误} \text{（转置即反例，}n=2\ \text{亦然）}✓✓$$
+$$\qquad \qquad \text{正确归属}：\text{Choi 1975 的}\ n\ \text{二分是}\ \textbf{可分解性} \text{二分，}\textbf{不是} \text{"}Pos=CP\text{"}：n=2\ \text{时一切正映射}\ \textbf{可分解};\ n\ge3\ \text{时存在}\ \textbf{不可分解} \text{正映射}✓$$
+$$\qquad \qquad \text{（Choi 1975 显式例：}\tau_{3,1}(X)=\bigl(x_{11}+x_{33},\,-x_{12},\,-x_{13};\,-x_{21},\,x_{11}+x_{22},\,-x_{23};\,-x_{31},\,-x_{32},\,x_{22}+x_{33}\bigr)\ \text{正且不可分解}）✓$$
+$$\qquad \text{⭐ 影响评估}：\textbf{定理 A 的方向不受影响};\ \text{且}\ \textbf{加强为}\ n\ge2（\text{原稿只写}\ n\ge3）;\ \text{核心论证}\ \textbf{反而更初等}（\text{转置证人，零引用}）✓✓$$
 $$\qquad \text{证明}：CP_n\subseteq Pos_n\ \text{且}\ CP_n\ \text{自对偶};\ \text{代入推论 2′}\ \Longrightarrow Pos_n\ \text{非自对偶}✓$$
 $$\qquad \qquad \text{判据松紧由}\ \S1\ \text{的单调性即得}（CP_n\subsetneq Pos_n \Longrightarrow \Theta_{CP}\subsetneq\Theta_{Pos}）\quad\blacksquare✓$$
 $$\qquad ⚠️\ \textbf{注意方向}：\text{非自对偶的那个锥}（Pos_n）\ \textbf{恰是更松的那个}✓✓$$
@@ -85,7 +93,7 @@ $$\Longrightarrow \textbf{本笔记只排除}：\text{在 (P1)–(P3) 下的"}\t
 
 | 编号 | 内容 | 用途 |
 |:--|:--|:--|
-| **[C75]** | Choi, *Completely positive linear maps on complex matrices*, LAA **10** (1975) 285–290：Choi 矩阵刻画；`n\ge3` 时 `Pos_n\supsetneq CP_n` | §3 的**全部外部输入** `[经典·本档未逐字核原文]` |
+| **[C75]** | Choi, *Completely positive linear maps on complex matrices*, LAA **10** (1975) 285–290 —— 定理（完全正 `\iff` Choi 矩阵 PSD）**已核**（见 §11 回执）；`n=2` 可分解 / `n\ge3` 存在不可分解例 `\tau_{3,1}` **已核** | §3 的**唯一外部输入**（`Pos\supsetneq CP` 的证人已改为**本档自足**的转置）|
 | **[标准]** | PSD 锥自对偶；闭凸锥对偶 `K^{**}=K`；分离定理 | §2／§5 |
 | **[背景]** | 自对偶齐次锥分类（Koecher–Vinberg）| **仅背景**，本笔记**不使用**（`§7(b)` 提示该方向未被排除）|
 
@@ -106,3 +114,22 @@ $$\Longrightarrow \textbf{本笔记只排除}：\text{在 (P1)–(P3) 下的"}\t
 ```
 **读数（按实测）**：三项在 `docs/` 口径下均＝**0 档 ⟹ 本笔记措辞在内部档案中未出现（新）**；
 ⚠️ 说明：`tech_word_check.sh` 只扫 `docs/`，本笔记位于 `papers/` ⟹ **本档自称"新措辞"仅就 `docs/` 口径成立** ✓
+
+## §11 核查回执（文献核查，2026-09-18）
+
+### 11.1 引理 2 的 folklore 状态（唐先生 19:54 检索结果）
+
+$$\text{结论}：\textbf{未找到独立的、具名的} \text{"自对偶锥不能被严格扩大" 文献来源}✓$$
+$$\qquad ⚠️\ \text{但}\ \textbf{这不等于原创}：\text{它是}\ \textbf{标准对偶理论}（\text{对偶运算保持包含关系反序}，＝本文引理 1）\ \text{的}\ \textbf{直接两步推论}✓✓$$
+$$\qquad \Longrightarrow \text{数学界大概率视其为}\ \textbf{过于初等、不值得单独发表} \text{的事实，}\ \textbf{而非"未被发现的新结果"}✓✓$$
+$$\qquad \text{（唐先生原话口径：}\text{"未找到具名来源};\ \text{但它是标准对偶理论的直接两步推论}，\ \text{数学界大概率视其为过于初等、不值得单独发表的事实}"）✓$$
+$$\Longrightarrow \textbf{对本笔记定位的含义}：\text{价值}\ \textbf{不在引理 2}，\ \text{而在}\ \textbf{把它与"证书对称／严格加锐"连接起来的框架}（\S5／\S6）✓✓$$
+
+### 11.2 Choi 1975 两条事实的核对（本档自查，2026-09-18 19:5x）
+
+$$\textbf{事实 (i) 已核}：\text{线性映射完全正}\iff\text{Choi 矩阵}\ C_\phi=\sum_{i,j}E_{ij}\otimes\phi(E_{ij})\ \text{正}✓✓$$
+$$\qquad \text{（多重独立来源一致；并含等价说法：}\phi\ \text{完全正}\iff\phi\ \text{min}\{m,n\}\text{-正}）✓$$
+$$\textbf{事实 (ii) ⚠️ 原稿记错，已修}：\text{Choi 1975 的}\ n\ \text{二分＝}\textbf{可分解性} \text{二分}：n=2\ \text{可分解};\ n\ge3\ \text{存在不可分解例}\ \tau_{3,1}✓✓$$
+$$\qquad \textbf{不存在} \text{"}n=2\ \text{时}\ Pos_2=CP_2\text{"} \text{这一事实}（\text{转置在}\ n=2\ \text{已是不全正的正映射}）✓✓$$
+$$\qquad \Longrightarrow \text{故}\ \S3\ \text{的}\ Pos\supsetneq CP\ \text{证人均改为}\ \textbf{本档自足} \text{的转置；（原稿的}\ n\ge3\ \text{限制定向被移除，定理加强为}\ n\ge2）✓✓$$
+$$\textbf{教训（登记）}：\text{凭记忆引经典结果的}\ \textbf{维数条件与包含方向} \text{是最易错处};\ \text{本次即命中一处}✓✓$$
