@@ -291,3 +291,68 @@ $$D10(a)：\textbf{对象墙}（\text{须找}\ \text{`C-68` 四件套＋`ARS1`�
 $$W8(b)：\textbf{结构源墙}（\text{已收敛到}\ V199\ \text{三源};\ \text{下一步＝逐源最后核验，}\textbf{不是}\ \text{重新展开}\ W8\ \text{文献空间}）✓$$
 
 *（本节为指针段，正本见 `C-91`；本文件其余内容不变 ✓）*
+
+| C-92 | ⭐ **三叶子逐项审计 ＋ 核验深度四级 ＋ 残余风险清单** | `docs/C92-item-by-item-audit-three-leaves-verification-depth-and-residual-risk-list.md`（2026-09-18）| 逐项审计 3 叶子共 17 项，按**核验深度**分四级（A 逐字／B 定理级／C 推导型／D 推理·类比型）。关键：`W8(b)` 三源中 (b) 实根性/PF = **定理级但仅对该族**（`V191`），`V199` §3(b) 的族外推广是**推理型** ⟹ `R1`；(c) 耗散/熵 = **推理型**，只排除"需指数增长"者 ⟹ `R2`。`UQRL` 四族：2 逐字／1 推导／1 实测＋类比。`D10(a)`：7 项未实例化、候选数 0。**残余风险清单 `R1`–`R5`**（推理型关闭中尚未保守化者，含降调建议）。待办 `U1`–`U6`。 | |
+| C-93 | ⭐ **`R1`：`𝓕_V191` 族外 PF/Newton 机制审计（bounded-family）＋对象级二分** | `docs/C93-R1-FV191-outside-family-audit-object-level-dichotomy.md`（2026-09-18）| `𝓕_V191` 精确边界：对象＝Ξ 的 Jensen 多项式 `J_γ^{d,n}`、公理＝双曲性；`Pólya 1927` RH ⟺ 全族双曲；`GORZ 2019` 覆盖 `n≥N(d)` 与 `1≤d≤8`；剩余区 `R` 上一致陈述 ≡ RH（只用 Pólya＋GORZ）⟹ `V191-①`=NO（定理级）。按对象枚举 6 族外候选：①乘子序列 ②Toeplitz 全正 ③变差递减核 ⟹ **经典等价 ⟹ 坍缩（`R1-B`）**；④Laguerre–Pólya 类 ⟹ 定义式；⑤序数测度 Hankel 矩 ⟹ `β`-盲；⑥Turán ⟹ 强度不足（`R1-C`）。`R1-A`=0、`R1-B`=3、`R1-C`=3、`R1-D` 适用。⭐**对象级二分**：Ξ-系数侧 ⟹ 坍缩（强度＝RH）；γ-序数侧 ⟹ `β`-盲 ⟹ 与项目既有"两面"结构**同址**。**不声称**族外空间已排除。 | |
+| C-94 | ⭐ **`U1`–`U6` 证据链一次性清理 ＋ 硬规则「外部命中 ≠ 外部独立证明」** | `docs/C94-U1-U6-evidence-chain-cleanup.md`（2026-09-18，148 行）| `U1` `Burnol` 门⑤ 引语：外部检索（含摘要）**未核到逐字原句** ⟹ 降为 `[转述／待核]`（**不是**判定其命题为假）。`U2` Planat／MDPI（`Mathematics` 14(11):1884, 2026）：**definition-level normalization defect**（`M_n=∫Φ₁u^{2n}du` 少一个随 `n` 变化的 `n!` 因子 ⟹ 对象与 GORZ 不一致；`d=2` 的 `Δ<0` 与 GORZ `d≤8` **定义层冲突**）⟹ 三条结构性结论 **EXCLUDED**；S-channel **CLOSED 依据 `V191`**（非 Planat）；`HAL` Prop.9＝**corroboration candidate, independence unverified**。`U3` `1.28π` **算术自检通过**。`U4` vdC 常数 **待核但不承重**。`U5` 8/23 第二环：保留原档案事实 ＋ 结论加"**输入不可达**"限定（**不改写历史记录**）。`U6` **承重引用协议**＋优先复核清单。⭐硬规则：**「外部命中」≠「外部独立证明」**。 | |
+| C-95 | ⭐ **`R2`：非双曲耗散机制审计（bounded-family）＋ 同根发现** | `docs/C95-R2-nonhyperbolic-dissipative-audit-same-root-as-R1.md`（2026-09-18）| 操作定义：耗散／熵／单调性且**不要求指数轨道增长**。⚠️ **核心项已被档案预注册关闭**：`p11-zero-flow-lyapunov.md` 第一轮判词逐字"Sobolev 耗散**不含 β**（无害）——'含 β 的耗散'**两难**（Φ 侧不含——零点侧循环）"。按对象枚举 8 候选：①DBN 热流（`CLOSED-ROUTES-MAP:228` 闭环为循环）②Sobolev/entropy/Fisher 耗散泛函 ③流上单调性 ④Mayer/Gauss 转移算子（`det=ζ`，但 `V239-D`：`Re s=1/2` 是 **Selberg 世界**）⑤抛物/非超曲内禀流（`L2` 否决）⑥⑦⑧ 残余（非一致双曲谱隙／曲率·熵凸／多项式轨道增长热力学）。`R2-A`=0、`R2-B`=2、`R2-C`=6、`R2-D` 适用。⭐**同根发现**：`R1` 二分 ≡ `R2` 两难 ⟹ **同一"两面"二分** ⟹ `C-92` 的"唯二合法入口"**实为同一结构**，均已 bounded-family 实质关闭。 | |
+
+
+---
+
+# 📌 【2026-09-18 14:01 定点更新 · `C-92`／`C-93`／`C-94`／`C-95`】`R1`、`R2` 双审计 ＋ 证据链清理
+
+> 本段为**指针段**，正本见各档（`docs/C92-…`／`C93-…`／`C94-…`／`C95-…`）✓
+
+## 一、`R1`（`C-93`）：`𝓕_V191` 族外 PF/Newton 机制 —— **bounded-family audit**
+
+$$\text{`𝓕_V191` 精确边界（逐字）}：\text{对象}＝\Xi\ \text{的}\ \textbf{Jensen 多项式}\ J_\gamma^{d,n};\ \text{公理}＝\textbf{双曲性};\ \text{参数区}＝(d,n)✓$$
+$$\text{Pólya 1927}：\text{RH}\iff\text{全族双曲};\quad \text{GORZ 2019}：n\ge N(d)\ \text{与}\ 1\le d\le8\ \text{无条件};\quad \mathcal R=\{d\ge9\}\times\{n\ \text{小}\}\ \Longrightarrow\ \mathcal R\ \text{上一致陈述}\equiv\text{RH}✓$$
+
+| # | 对象 | 判定 |
+|:--:|:--|:--|
+| ① | 系数序列作乘子算子 | **坍缩（`R1-B`，经典等价）** |
+| ② | Toeplitz `(γ_{k-l})` 全正 | **坍缩（`R1-B`，同链）** |
+| ③ | 变差递减核 | **坍缩（`R1-B`，VD ⟺ TP）** |
+| ④ | `Ξ ∈ Laguerre–Pólya` 类 | **门②失败（定义式＝RH）** |
+| ⑤ | 序数测度 `μ_γ` 的 Hankel 矩 | **`β`-盲（门①②）** |
+| ⑥ | Turán 不等式 | **强度不足（真实但弱于全族双曲）** |
+
+$$R1\text{-A}=0;\quad R1\text{-B}=3;\quad R1\text{-C}=3;\quad R1\text{-D}=\textbf{适用}\ \Longrightarrow\ \text{降调为}\ \boxed{\text{bounded-family audit}}✓$$
+$$\qquad ⭐\ \textbf{对象级二分（核心产出）}：\text{Ξ-系数侧} \Longrightarrow \textbf{坍缩（强度＝RH）};\qquad \gamma\text{-序数侧} \Longrightarrow \textbf{`β`-盲}✓✓$$
+
+## 二、`R2`（`C-95`）：非双曲耗散机制 —— **bounded-family audit**
+
+$$\textbf{操作定义}：\text{对象}＝\text{算术／动力学对象};\ \text{公理}＝\textbf{耗散／熵／单调性}\ \text{且}\ \textbf{不要求指数轨道增长};\ \text{结论}\supseteq\text{零点实部约束}✓$$
+$$\textbf{档案预注册关闭（关键）}：\text{`p11-zero-flow-lyapunov.md` 第一轮判词逐字}：\text{"Sobolev 耗散}\ \textbf{不含}\ \beta\ \text{（无害）——}\textbf{"含}\ \beta\ \text{的耗散"}\ \textbf{两难}\（\Phi\ \text{侧不含——零点侧循环）}\text{"}✓✓$$
+
+| # | 对象 | 判定 |
+|:--:|:--|:--|
+| ① | DBN 热流 | **`R2-C`**（`CLOSED-ROUTES-MAP:228`：形变型**闭环为循环**，`RH ⟺ Λ≤0`）|
+| ② | Sobolev／entropy／Fisher 耗散泛函 | **`R2-C`**（`p11` 两难：Φ 侧不含 `β`）|
+| ③ | 流上单调性（P11 框架 C）| **`R2-B/C`**（第一轮收口）|
+| ④ | Mayer／Gauss 转移算子（`det = ζ`）| **`R2-C`**（`V239-D`：`Re s=1/2` 是 **Selberg 世界**；`V219`：同一个 `1/2` ≠ 同一个零点机制）|
+| ⑤ | 抛物／非超曲内禀流 | **`R2-B`**（`L2` 否决判据：`Spec ℤ` 无内禀流）|
+| ⑥⑦⑧ | 残余（非一致双曲谱隙／曲率·熵凸／多项式轨道增长热力学）| **`R2-C`**（统计型无谱正性／需算术凸性／动力学 ζ 非亚纯）|
+
+$$R2\text{-A}=0;\quad R2\text{-B}=2;\quad R2\text{-C}=6;\quad R2\text{-D}=\textbf{适用}✓$$
+$$\qquad ⭐\ \textbf{同根发现（核心产出）}：\text{`R1` 二分}\ \equiv\ \text{`R2` 两难} \Longrightarrow \textbf{同一"两面"二分};\ \text{`C-92` 的"唯二合法入口"}\ \textbf{实为同一结构}✓✓$$
+
+## 三、`U1`–`U6` 证据链清理（`C-94`）
+
+| 项 | 处置 |
+|:--|:--|
+| `U1` `Burnol` 门⑤ 引语 | **降为 [转述／待核]**（外部检索未核到逐字原句）；⚠️ **不是**判定其命题为假 |
+| `U2` Planat／MDPI | **definition-level normalization defect** ⟹ 三条结构性结论 **EXCLUDED**；S-channel **CLOSED 依据 `V191`**（非 Planat）|
+| `U3` `1.28π` | **算术自检通过**：`π(1+(6/5)^{1/2})^{1/3} = 1.2795π ≈ 4.0196` |
+| `U4` `PAPERA` vdC 常数 | **待核但不承重**（`C-90` 依据＝定号假设实测失效）|
+| `U5` 8/23 第二环 | 保留原档案事实 ＋ 给**结论**加"**输入不可达**"限定（**不改写历史记录**）|
+| `U6` 转述风险面 | **承重引用协议**：承重必须逐字＋出处可查；非承重可转述但须标注 |
+
+$$\textbf{硬规则（本档起适用）}：\boxed{\text{"\textbf{外部命中}"}\ \ne\ \text{"\textbf{外部独立证明}"}} \Longrightarrow\ \text{`HAL` Prop.9 与 Michalowski／Toeplitz}\ \textbf{均维持 pending verification}✓✓$$
+
+## 四、叶子现状（收缩）
+
+$$\boxed{W6\ \textbf{原子墙}\ +\ \begin{cases}UQRL & \textbf{四族已关}\\ D10(a) & \textbf{0 候选}\\ W8(b) & \textbf{`R1`、`R2` 已实质关闭}\end{cases}} \Longrightarrow\ \text{剩余可动}\：\ W6\ +\ UQRL\ +\ D10(a)✓$$
+
+*（本节为指针段；本文件其余内容不变 ✓）*
