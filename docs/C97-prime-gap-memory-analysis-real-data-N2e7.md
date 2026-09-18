@@ -74,7 +74,7 @@ $$\textbf{三层结论}：\text{(i)}\ \textbf{硬记忆}＝\text{可容许性（
 $$\textbf{地图定位}：\text{以上全是}\ \textbf{素数侧局部（两体、相邻对）结构} \Longrightarrow \textbf{不含}\ \beta✓$$
 $$\qquad \text{而项目缺口}\ \text{（`SUPPORT-1`）}＝\textbf{长程／跨尺度} \text{的素数对相关};\ \text{本分析给出}\ \textbf{局部尺度} \text{的完整图像};\ \text{长程＝Hardy--Littlewood 猜想领域}✓$$
 $$\qquad ⚠️\ \text{故}\ \textbf{不构成新机制};\ \text{但提供两项可复用资产}：(a)\ \textbf{LS 2016 残类偏置的新登记};\ \text{(b)}\ \textbf{"超奇异级数偏差"的定量标定}✓$$
-$$\qquad ⭐\ \text{可复用点}：\text{若未来需要一个}\ \textbf{可测量的"素数对结构量"}，本档的}\ \text{模式偏差表（§6）可作}\ \textbf{经验基线}✓$$
+$$\qquad ⭐\ \text{可复用点}：\text{若未来需要一个}\ \textbf{可测量的"素数对结构量"}，本档的\ \text{模式偏差表（§6）可作}\ \textbf{经验基线}✓$$
 
 ## §8 【技术词回查】输出（`scripts/tech_word_check.sh`，2026-09-18 14:1x）`[纪律]`（先跑后写）
 
