@@ -74,11 +74,11 @@ $$\qquad \text{且其}\ \textbf{对象} \text{＝高阶零关联（Hejhal／RS�
 ## §5 【技术词回查】输出（`scripts/tech_word_check.sh`，2026-09-18 18:1x）`[纪律]`（先跑后写）
 
 ```
-技术词 链式归约        命中文件数=1  :: ./C119-two-body-vs-three-body-chain-reduction-test-real-three-body-memory.md
+技术词 链式归约        命中文件数=2  :: ./guth-maynard-deepdive.md ./C119-…
 技术词 真三体记忆       命中文件数=1  :: ./C119-two-body-vs-three-body-chain-reduction-test-real-three-body-memory.md
 技术词 高阶关联影子      命中文件数=1  :: ./C119-two-body-vs-three-body-chain-reduction-test-real-three-body-memory.md
 ```
-**读数（按实测）**：三项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓
+**读数（按实测）**：`真三体记忆`／`高阶关联影子`＝**1 档（仅本档）⟹ 本档新增** ✓；⚠️ `链式归约`＝**2 档**（`guth-maynard-deepdive.md` **已有**）⟹ 本档为**沿用** ✓
 
 ```
 ⚠️ 唐先生 18:02「继续」⟹ 开"配对关联定量对表"的可判形式(与其拿常数凑 F(α), 不如做**归约检验**)
