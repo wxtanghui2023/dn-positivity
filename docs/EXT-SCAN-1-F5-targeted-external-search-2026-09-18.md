@@ -85,3 +85,35 @@ $$\textbf{下一步（建议序）}：\text{① 核 §4 候选（成本极低，
 技术词 拼装型错误        命中文件数=1  :: ./EXT-SCAN-1-…（本档）
 ```
 **读数（按实测）**：三项均＝**1 档（仅本档）⟹ 本档新增** ✓
+
+## §8 ⚠️ §4 候选的核实结果（2026-09-18 21:0x，**当场所做**）
+
+$$\text{全文不可得}（\text{preprints.org 被 Akamai 反爬挡住; 两次尝试皆返回保护页}） \Longrightarrow \text{改用}\ \textbf{摘要级核实}✓$$
+$$\text{作者}：\textbf{Avi Gershon}（2026-04，preprints.org 202604.0159／202604.1513）✓$$
+$$\text{摘要}\ \textbf{逐字}：\text{"We prove strict log-concavity of the Riemann-Jacobi kernel, establish hyperbolicity of the Jensen
+polynomials}\ J_{d,n}(x)\ \text{for}\ \boxed{d\le22,\ n\le14}\text{, and prove that the global Riemann Hypothesis is }\textbf{algebraically equivalent to}\ \text{a subluminal condition on the Wronskian components."}✓✓$$
+
+$$\textbf{否掉的四条理由（全部来自其自身材料或独立文献）}：$$
+$$\qquad \textbf{(i)}\ \text{它证明的是}\ \boxed{\textbf{有限范围}}\（d\le22,\ n\le14）—— \text{而 GORZ 2019}\ \textbf{已证}\ n\ge N(d)\ \text{及}\ 1\le d\le8✓✓$$
+$$\qquad \textbf{(ii)}\ ⭐\ \text{其摘要}\ \textbf{自认关键步开放}：\text{"the passage to the full Laguerre–Pólya condition (TP}_\infty\text{)}\ \textbf{remains open}\text{"} ⟹ \textbf{与其标题"}\Lambda=0\text{"}\ \textbf{自相矛盾}✓✓$$
+$$\qquad \textbf{(iii)}\ ⭐⭐\ \text{其摘要}\ \textbf{自带反例}：\text{"The converse (that TP}_2\ \text{implies all zeros real) is }\textbf{false in general}\（\text{a counterexample is}\ e^{-t^4}\text{）}\text{"} ⟹ \textbf{其路线本身被其自身材料否掉}✓✓$$
+$$\qquad \textbf{(iv)}\ ⭐\ \textbf{独立反证}\：\text{Michałowski}\（\text{arXiv:2602.20313, 2026-02}\）：\text{"}\textbf{De Bruijn–Newman kernel}\notin PF_5\text{"} ⟹ \textbf{该路线被独立结果封锁}✓✓$$
+$$\Longrightarrow \boxed{\textbf{判定}：\text{该候选}\ \textbf{高置信度错误};\ \text{不是 F5 的证伪}}✓✓$$
+
+## §9 ⭐ 本次附带获得的**两个新外部事实**（值得单独登记）
+
+$$\textbf{(A)}\ \text{Michałowski, arXiv:2602.20313（2026-02）}：\textbf{"De Bruijn–Newman kernel}\notin PF_5\text{"}✓✓$$
+$$\qquad \Longrightarrow \text{与本项目}\ \text{`R1`／`R2`}\ \text{的}\ \textbf{PF／Newton 面封闭}\ \text{独立同向};\ \text{外部}\ \textbf{独立给出"该面被封"} \text{的证据}✓✓$$
+$$\qquad \qquad \text{（即：本项目对 PF／Newton 面的关闭}\ \textbf{获得了外部的独立支持}）✓$$
+
+$$\textbf{(B)}\ \text{社区普查档：}\textbf{"RH Proof Landscape: Verification Survey"}\（\text{BitConcepts/riemann-solver},\ \text{2026-05}\）✓$$
+$$\qquad \text{分层}：\text{Tier 1 同行评议程序（Connes／Rodgers–Tao／超椭圆曲线 Lean）};\ \text{Tier 2 投稿中};\ \text{Tier 3 预印本};\ \text{Tier 4 未核实声称};\ \text{Tier 5 伪科学}✓$$
+$$\qquad \text{且}\ \textbf{自带 falsification framework}，\ \text{明言"可施用于任何使用 log-concavity 路线的声称证明"}✓✓$$
+$$\qquad \Longrightarrow \textbf{建议登记为外部扫描的常驻资源}（\text{今后检索的起点之一}）✓$$
+
+## §10 本次检索的最终结论
+
+$$\boxed{\text{① 未证伪}\ \text{`F5`};\quad \text{② 唯一候选经核实}\ \textbf{高置信度错误};\quad \text{③ 且外部文献}\ \textbf{独立支持}\ \text{本项目两条结论}}✓✓$$
+$$\qquad \text{支持一}：\text{"no single value}\ \delta>0\text{"}（\text{前沿逐字}）\ \leftrightarrow\ \text{`C-126`／`C-127`}✓$$
+$$\qquad \text{支持二}：\text{"DBN kernel}\notin PF_5\text{"}（\text{外部定理}）\ \leftrightarrow\ \text{`R1`／`R2` 的 PF／Newton 面封闭}✓✓$$
+$$\Longrightarrow \text{`F5`-模式}\ \textbf{从 [强支持] → [强支持 ＋ 外部逐字支持 ＋ 一次候选证伪失败]} \Longrightarrow \textbf{仍非定理}✓✓$$
