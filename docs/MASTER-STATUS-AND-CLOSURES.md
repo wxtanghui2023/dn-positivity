@@ -855,3 +855,8 @@ $$\text{已就近加型标注}：\text{`V248`（T-III）／`V191`（T-II）／`V
 $$\textbf{对本图的要求}：\text{总册的"已封"状态栏今后}\ \textbf{须区分}\ \text{定理级封闭／分类级封闭／诊断级封闭}✓$$
 $$\qquad \text{本档已把 18 条中最常用的四条就近标注，其余 14 条按需补标}✓$$
 
+
+
+$$\text{⚠️ 分布勘误（`NEG-REGISTER-2` §4）}：\text{上表／上行的型分布}\ \textbf{算错};\ \text{正确（18 条表内）}＝T_{\rm IV}=6,\ T_{\rm VI}=1✓✓$$
+$$\qquad \text{有效（移出 }\#10\ \text{`V226`，已撤回）}＝\mathbf{17}\ \text{条}：T\text{-I}=2,\ T\text{-II}=1,\ T\text{-III}=3,\ T\text{-IV}=5,\ T\text{-V}=5,\ T\text{-VI}=1✓✓$$
+$$\qquad \text{口径}：\text{今后引用本表以}\ \textbf{17 条有效版本} \text{为准}✓$$

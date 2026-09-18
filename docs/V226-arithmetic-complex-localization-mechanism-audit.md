@@ -132,3 +132,12 @@ $$\text{本档定级}：\textbf{T-IV}\ \text{（分类穷尽性：两型分类�
 $$\qquad ⚠️\ \textbf{已有撤回}：\text{`V227` 撤回}\ \text{`V226`-A 的"仅此两类"};\ \text{现仅余}\ \textbf{两型描述}✓✓$$
 $$\qquad \text{软步}：\text{分类断言};\ \text{核验深度＝首行级} \Longrightarrow \text{定级}\ \textbf{待正文核}✓$$
 $$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$
+
+
+### 【型标注·定级修正】（`NEG-REGISTER-2`，2026-09-18 20:2x）
+
+$$\text{本档定级修正}：\textbf{已撤回，不计（本档不作判定）}✓✓$$
+$$\qquad \text{逐字依据}：\text{`§8`}\ \textbf{"`V226`-A 撤回"（由 `V227` 执行）};\ \text{"类型三分／无第四类"}\ \textbf{撤回};\ \text{第四类＝根定位型}✓✓$$
+$$\qquad \qquad \text{档首自述纪律}：\textbf{"不称"定理级穷尽"};\ \text{委托段唐先生}：\textbf{"我不同意现在就把 `§4` 的接口定理称为定理级穷尽"}✓✓$$
+$$\qquad \Longrightarrow \text{本档}\ \textbf{移出}\ \text{`NEG-REGISTER-1`}\ \text{的判定表}（\text{有效判定}\ 18\to17）;\ \text{现存内容＝}\textbf{残余问题}✓$$
+$$\text{依据}：\text{`NEG-REGISTER-2-step2-settlements-and-distribution-erratum.md`}✓$$

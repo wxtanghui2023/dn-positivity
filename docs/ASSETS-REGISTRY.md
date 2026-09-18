@@ -401,3 +401,8 @@ $$\textbf{登记（资产）}：\text{`NEG-REGISTER-1`}\ \text{＝}\ \textbf{负
 $$\qquad \text{价值}：\text{防止}\ \textbf{条件性结论被无条件引用} \text{—— 属}\ \text{`D-1`–`D-10` 型过程资产}✓✓$$
 $$\qquad \text{关联改动}：\text{`V248`／`V191`／`V188`／`AUDIT-WALLS-AND-DIFFICULTIES-20260917` 四处已加【型标注】}✓$$
 
+
+
+$$\text{⚠️ 分布勘误（`NEG-REGISTER-2` §4）}：\text{上表／上行的型分布}\ \textbf{算错};\ \text{正确（18 条表内）}＝T_{\rm IV}=6,\ T_{\rm VI}=1✓✓$$
+$$\qquad \text{有效（移出 }\#10\ \text{`V226`，已撤回）}＝\mathbf{17}\ \text{条}：T\text{-I}=2,\ T\text{-II}=1,\ T\text{-III}=3,\ T\text{-IV}=5,\ T\text{-V}=5,\ T\text{-VI}=1✓✓$$
+$$\qquad \text{口径}：\text{今后引用本表以}\ \textbf{17 条有效版本} \text{为准}✓$$

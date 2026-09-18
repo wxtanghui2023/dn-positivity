@@ -114,3 +114,12 @@ $$\text{本档定级}：\textbf{T-IV}\ \text{（分类穷尽性：三分之穷�
 $$\qquad \text{软步}：\text{谱对应机制的}\ \textbf{枚举穷尽性};\ \text{"结构型"分支靠}\ \textbf{"身份墙"} \text{描述}✓✓$$
 $$\qquad ⚠️\ \text{核验深度＝首行级};\ \text{定级}\ \textbf{待正文核}✓$$
 $$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$
+
+
+### 【型标注·定级修正】（`NEG-REGISTER-2`，2026-09-18 20:2x）
+
+$$\text{本档定级修正}：\textbf{混合：三分＝T-I（定义级穷尽）／十条枚举＝T-IV}✓✓$$
+$$\qquad \text{逐字依据}：\text{第 98 行自述"`§2` 三分为}\textbf{【定义级穷尽 ✓】}\（\text{定义／公式／结构}）\text{"}✓✓$$
+$$\qquad \qquad \Longrightarrow \text{三分是}\ \textbf{逻辑划分}（\text{假定／算出／结构性证明}） \Longrightarrow \textbf{穷尽性由构造保证}✓$$
+$$\qquad \text{而}\ \textbf{"十条机制穷举"}\ \text{的穷尽性}\ \textbf{未获证明} \Longrightarrow \textbf{T-IV}✓✓$$
+$$\text{依据}：\text{`NEG-REGISTER-2-step2-settlements-and-distribution-erratum.md`}✓$$

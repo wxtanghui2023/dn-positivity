@@ -79,7 +79,7 @@ $$K2\text{-E}''＋\text{负结果三关}（\text{2026-09-14 入档}）✓$$
 $$\text{①}\ \textbf{真正剩下的只有两件}：\boxed{\text{W1 的}\ \beta\text{-盲性（检测}\ne\text{排除）}}\quad\text{与}\quad\boxed{\text{W6 的 support}>1}✓✓$$
 $$\text{②}\ \text{W3--W5}\ \textbf{三面一墙}（\text{桥}）；\ \text{W6／W12}\ \textbf{同一对象}；\ \text{W11}\ \textbf{已封}；\ \text{W9}\ \textbf{已撤回}✓$$
 $$\text{③}\ \text{D1（相位均匀性）}\ \textbf{不是统一墙}：\text{在}\ \texttt{CONV2}／\texttt{CONV3}\ \text{处}\ \textbf{已撤回}；\ \text{仅在 Burnol 型转换处仍为关键步}✓✓$$
-$$\text{④}\ \text{D2 的}\ \textbf{方法层}"消解式模式"（E160）}\ \text{与今日}\ \texttt{Audit}\ne\texttt{Discovery}\ \text{诊断}\ \textbf{同一条}✓✓$$
+$$\text{④}\ \text{D2 的}\ \textbf{方法层}"消解式模式"（E160）\ \text{与今日}\ \texttt{Audit}\ne\texttt{Discovery}\ \text{诊断}\ \textbf{同一条}✓✓$$
 $$\text{⑤}\ \text{D3（振荡项消解）}\ \textbf{部分完成}：\ M(T)\ \text{线撞 Lindelöf}；\ \text{PAPERA 线端点障碍未全线闭合}✓$$
 $$\text{⑥}\ \text{D4（相位感知聚合）}\ \text{与}\ \text{W6}\ \textbf{同址} \Longrightarrow \textbf{不必分别开案}✓✓$$
 
