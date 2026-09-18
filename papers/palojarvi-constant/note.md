@@ -58,7 +58,9 @@ $$|\mathrm{Re}\,\lambda_F(n,\tau)|\ \ge\ \tfrac12 R'^{\,n}-1-\big(K_{F,1}+K_{F,4
 as soon as
 $$\boxed{\,R^{\,n}\ \ge\ 4\big(K_{F,1}(\tau)+K_{F,4}(\tau)\big)\,n\log n+2\,}$$
 
-**Comparison with the source** `[出处·待复核]`: the source's threshold is
+**Comparison with the source** `[出处·已逐字核]`(2026-09-18): the source's threshold is
+> **Verbatim (source, p.20)**: "It is sufficient to show $R^n\ge 40n\log n(\tfrac12+K_{F,1}(\tau)+K_{F,4}(\tau))$."
+
 $$R^{\,n}\ \ge\ 40\,n\log n\Big(\tfrac12+K_{F,1}+K_{F,4}\Big)=20\,n\log n+40\big(K_{F,1}+K_{F,4}\big)n\log n,$$
 so
 $$\big[20n\log n+40(K_{F,1}+K_{F,4})n\log n\big]-\big[4(K_{F,1}+K_{F,4})n\log n+2\big]=20n\log n+36(K_{F,1}+K_{F,4})n\log n-2>0$$
@@ -81,7 +83,7 @@ Numerically `[复核]`: if all $|z_j|=1$, $\sum_j D_j\approx(5M/2)M$ gives the b
 
 - **Claimed**: Lemma C (elementary, complete proof, constant optimal) and, via it, a **self-contained** proof of the $m=1$ case of Palojärvi's Theorem 4.1 **with a strictly better threshold** ($(K_{F,1}+K_{F,4})$-coefficient reduced by a factor $10$; the $20n\log n$ term removed).
 - **Not claimed**: any progress on the $m\ge2$ case; any new equivalence criterion; any RH-related statement. The source theorem's *structure* is used as-is (`[出处]`), including its decomposition (37) and Theorem 2.1.
-- ⚠️ `[出处·待复核]`: the source's threshold formula as quoted here (with its $20\,n\log n$ term) was transcribed from the archive; it must be re-verified **verbatim against Palojärvi's text** before this note is submitted.
+- ✅ `[出处·已逐字核]`(2026-09-18): the source's threshold formula, including its $20\,n\log n$ term, is **verbatim confirmed** against Palojärvi arXiv:1807.01506v3 (p.20). The core comparison of this note therefore rests on verified source text, not on an archive transcription.
 - No RH is used anywhere in this note; the input is the source theorem plus elementary covering.
 
 ## References
