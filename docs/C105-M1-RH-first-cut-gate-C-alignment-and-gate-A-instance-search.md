@@ -111,3 +111,32 @@ $$\qquad \text{其价值＝}\textbf{说明为何"有限层平凡 ⟹ 极限困�
 ✅ 保留资产: A6 给出一个**具体**的"hereditary 一致性 + 极限断裂"实例 ⟹ 说明"有限层平凡 ⟹ 极限困难"在算术中是**结构性**的
 ✅ 净产出: ①N46 对齐（非重命名，但为必过筛子）✓ ②Gate E 形式绿灯确认 ✓ ③六族审计表 ✓ ④A6 最近实例＋B 失败根因 ✓ ⑤M1 DEAD 判定（bounded-family）✓
 ```
+
+---
+
+## §8 ⭐ **资产登记 ＋ 保留结论（唐先生 2026-09-18 15:48 指定）**
+
+### §8.1 **独立资产：`A6`（有限层—极限断裂样本）**
+
+$$\boxed{\text{finite arithmetic objects can be uniformly trivial while their infinite limit acquires the zero structure}}✓✓$$
+$$\qquad \text{具体}：\forall\ \text{finite}\ S:\ P_S(s)=\prod_{p\in S}(1-p^{-s})^{-1}\ \textbf{无零点}（\text{极点全在}\ \text{Re}\,s=0）;\quad S\uparrow\mathbb P \Longrightarrow \zeta\ \textbf{在临界带获得零点}✓$$
+$$\qquad \text{价值}：\text{它给出}\ \textbf{"有限层统一平凡 → 极限获得零点结构"}\ \text{的一个}\ \textbf{具体、可枚举、arithmetic}\ \text{样本}✓✓$$
+$$\qquad \qquad \Longrightarrow\ \text{即}\ \text{`V259`}\ \text{的}\ \textbf{反例型资产}：\textbf{"每个有限层都没问题 ⟹ 极限也没问题"在算术中是危险推理}✓✓$$
+$$\qquad ⚠️\ \text{边界}：\textbf{不是} RH 新桥（B 失败）;\ \text{仅作}\ \textbf{机制样本} \text{保存}✓$$
+
+### §8.2 **三个必须保留的判词（唐先生指定）**
+
+$$\textbf{(i)}\ \text{`M1` 的形式独立性（真区别）}：\underbrace{\forall S\in\mathfrak R_T}_{\text{M1 新形式}}\ \not\Rightarrow\ \underbrace{\lim_n F_n}_{\text{V259}} \Longrightarrow \boxed{\text{M1 在形式上逃过 V259}}✓✓$$
+$$\qquad \text{但随后}：\text{六个具体}\ \mathfrak R_T \Longrightarrow A+B+C=0 \Longrightarrow \boxed{\text{bounded-family 意义下 M1 DEAD}} \ne \text{M1 impossible in principle}✓✓$$
+$$\qquad \qquad ⚠️\ \textbf{该区分必须保留}（\text{与}\ \text{`R1`／`R2`}\ \text{同格式}）✓$$
+$$\textbf{(ii)}\ \text{`N46` 与 `M1` 成功去重}：\boxed{\text{`N46`＝signal-validity sieve};\quad \text{`M1`＝restriction-quantifier mechanism}} \Longrightarrow \textbf{未发生"换名字重开旧路线"}✓✓$$
+$$\textbf{(iii)}\ ⭐\ \text{Gate E 的绿灯是}\textbf{真绿灯}（\text{最易被忽略}）：\text{`M1` DEAD 的}\ \textbf{原因不是} \text{`M1`}\subset\text{`V259`}，\ 而是：✓$$
+$$\qquad \boxed{\text{M1}\not\subset\text{`V259`}\quad\text{but}\quad \text{known arithmetic realizations fail B/D}} \Longrightarrow \textbf{比普通 NO-GO 更有信息量}✓✓$$
+
+### §8.3 **重开门槛（六条，缺第一项不再开工）**
+
+$$\text{若将来重开}\ \text{`M1`}，门槛直接写成：\exists\,(\mathcal X_T,\mathfrak R_T,\mathcal P_T)\ \text{满足}✓$$
+$$\qquad \text{(1) Arithmetic realization};\ \text{(2) }\beta\text{-testable response};\ \text{(3) uniform over }\mathfrak R_T;\ \text{(4) passes }\text{`N46`};$$
+$$\qquad \text{(5) avoids both }\text{`FZ-3`}\ \text{horns};\ \text{(6) not }\text{`V259`}\ \text{finite-local aggregation}✓$$
+$$\qquad \Longrightarrow\ \boxed{\textbf{缺第一项具体对象，就不再开工}}✓✓$$
+$$\qquad ⚠️\ \text{且}\ \text{唐先生 15:48}：\textbf{不继续扩大 `M1` 六族}（\text{继续枚举 Euler subsets／Dirichlet supports／characters／zero subsets 的变体}\ \Longrightarrow \textbf{易回到旧档案}）✓$$
