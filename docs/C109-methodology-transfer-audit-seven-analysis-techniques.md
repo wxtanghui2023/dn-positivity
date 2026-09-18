@@ -14,7 +14,7 @@ $$\textbf{(2)}\ ⭐\ \textbf{唯 1 项含真正新槽位}：\text{"}\textbf{模�
 $$\qquad \text{其 RH 对应物}＝\textbf{DBN 形变线（}\Lambda\text{）}：\text{档案逐字（`:228`）}：\boxed{\text{RH}\iff\Lambda\le0};\ \Lambda\ge0\ \text{无条件（Rodgers--Tao）};\ \text{上界}\ \mathbf{0.22}\（\text{Polymath 15}）✓$$
 $$\qquad ⭐\ \text{而档案中}\ \text{Poincaré}\ \textbf{只有两种用法}：\text{char }p\ \textbf{Poincaré 对偶}（`AOB1`）;\ \text{动力系统}\ \textbf{Poincaré 指数}（`:16`） \Longrightarrow \textbf{"Poincaré 型不等式" 0 命中}✓✓$$
 $$\qquad \Longrightarrow\ \text{该技术把}\ \text{"DBN 需要}\ \Lambda\le0\text{"}\ \textbf{细化为}：\boxed{\text{需要一个沿算术形变的}\ \textbf{Poincaré 型不等式}}✓✓$$
-$$\textbf{(3)}\ ⭐\ \textbf{迁移失败的共同结构原因}：\text{这些技术全靠}\ \text{"}\textbf{模型情形保留结论类型}\text{"};\ \text{而}\ \text{我们的模型情形（独立／随机素数）}\ \textbf{按构造}\ \beta\ \textbf{盲}（\text{`V254`／`V255` parity ＋ }\text{`FZ-3` ①） \Longrightarrow \textbf{模板在本问题缺燃料}✓✓$$
+$$\textbf{(3)}\ ⭐\ \textbf{迁移失败的共同结构原因}：\text{这些技术全靠}\ \text{「}\textbf{模型情形保留结论类型}\text{」};\ \text{而}\ \text{我们的模型情形（独立／随机素数）}\ \textbf{按构造}\ \beta\ \textbf{盲}（\text{`V254`／`V255` parity ＋ `FZ-3` ①） \Longrightarrow \textbf{模板在本问题缺燃料}✓✓$$
 
 ---
 
