@@ -122,3 +122,13 @@ $$\qquad ⚠️\ \text{且}\ \text{`V144`}\ \text{只控制}\ \textbf{局部 Eul
 $$\Longrightarrow \boxed{\text{§4 的"类型三分／无第四类"}\ \textbf{撤回};\ \text{第四类＝}\boxed{\textbf{根定位型}}\ \text{（}\ P_X(C)=0\ \text{内生决定复位置}）} ✓✓✓$$
 $$\qquad ⚠️\ \text{与}\ \text{`V220`}\ \text{"}A+iB\text{"}\ \text{的本质区别}：C\ \text{不是"两个坐标"},\ \text{而是}\ \textbf{由整体关系共同决定的复点} ⟹ |C|\leftrightarrow\arg C\ \textbf{天然耦合} ✓✓$$
 $$\qquad ⚠️\ \text{§4 的 (1)--(4)}\ \text{仍有效}（\text{角度型}）;\ (6)(7)\ \text{仍有效};\ \text{但"仅此两类"}\ \textbf{无效} ✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-IV}\ \text{（分类穷尽性：两型分类（且本档相关结论已有撤回记录））}✓$$
+$$\qquad ⚠️\ \textbf{已有撤回}：\text{`V227` 撤回}\ \text{`V226`-A 的"仅此两类"};\ \text{现仅余}\ \textbf{两型描述}✓✓$$
+$$\qquad \text{软步}：\text{分类断言};\ \text{核验深度＝首行级} \Longrightarrow \text{定级}\ \textbf{待正文核}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

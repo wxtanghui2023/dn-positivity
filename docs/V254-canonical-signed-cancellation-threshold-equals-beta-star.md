@@ -180,3 +180,14 @@ $$\qquad \text{（这比继续尝试}\ \mu、\Lambda、\chi、\text{Hecke}\ \tex
 
 $$\textbf{T10（parity barrier 移出本档判词）}：\text{另立专档}\ \text{`V255`}\ \text{（状态＝}\textbf{[待核／参照档]}）;\ \textbf{本档判词不含} \ \text{parity barrier} ✓✓$$
 $$\qquad \text{理由：}\text{（i）命题类型不同（"可构造 signed sieve 权重的能力上限"}\ne\text{"canonical L-函数商族"}）;（ii）\textbf{目前无蕴含链} \text{把它接到}\ \beta_*=\tfrac12 ✓✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-III}\ \text{（框架性重述：自标 `§10` T1 收紧（奇点只给下界））}✓$$
+$$\qquad \text{硬内容}：\\sum_a\\mu(a)/(a^c\\log a)=\\int_c^\\infty ds/\\zeta(s);\ \text{Landau}✓$$
+$$\qquad ⚠️\ \textbf{自标收紧}：\text{奇点只给}\ \textbf{下界}\ \sigma_c\\ge\\beta_*;\ \text{反向（}\sigma_c=\\beta_*）\ \textbf{需独立证明}✓✓$$
+$$\qquad \Longrightarrow \text{"canonical 源不可达}\ \\tfrac12\text{"}\ \text{是}\ \textbf{归纳级};\ \text{不可引为定理}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

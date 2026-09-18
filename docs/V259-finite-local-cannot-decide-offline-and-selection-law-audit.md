@@ -137,3 +137,14 @@ $$\textbf{边界（诚实）}：\S2\ \text{的构造与计算}\ \textbf{为本�
    ⑤ 残余最锐形式：canonical 全球兼容性的失败 ⟺ off-line
    ⑥ 下一步可判定审计：无限局部兼容性能否脱离聚合/上同调/显式公式
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据：判死标准为启发式，无定理）}✓$$
+$$\qquad \text{内容}：\textbf{"可写成}\ \\lim F_n\（\text{有限局部聚合}）\Longrightarrow\text{DEAD"}\ \text{是}\ \textbf{启发式判据}✓✓$$
+$$\qquad ⚠️\ \text{无证明};\ \text{残余压成}\ \textbf{"非聚合组合律"}\ \text{（未实例化）}✓$$
+$$\qquad \Longrightarrow \text{可作}\ \textbf{筛子};\\ \textbf{不得} \text{引为"有限局部路线已被证明不可能"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

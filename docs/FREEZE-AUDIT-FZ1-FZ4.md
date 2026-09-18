@@ -148,3 +148,14 @@ $$\boxed{\text{不是"还没找到好模型"，而是搜索坐标系的可允许
 ```
 b3a1478 Round 3 → 本篇（Freeze FZ-1–FZ-4）
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-IV（`FZ-1`）／T-V（`FZ-3`）}\ \text{（分类穷尽性（`FZ-1`）＋ 诊断性二分（`FZ-3`））}✓$$
+$$\qquad \textbf{`FZ-1`}：\text{46 条 NO-GO}\Longrightarrow\text{6 母机制＋6 筛子} \Longrightarrow \textbf{T-IV}（\text{分类归纳；"独立障碍数"依赖分类粒度}）✓$$
+$$\qquad \textbf{`FZ-3`}：\text{canonical}\Longrightarrow\beta\ \text{盲／信息承载}\Longrightarrow\text{循环} \Longrightarrow \textbf{T-V}（\text{分类性二分，无证明}）✓✓$$
+$$\qquad \Longrightarrow \text{两者}\ \textbf{皆可作筛子};\ \textbf{不得} \text{引为穷尽性定理}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

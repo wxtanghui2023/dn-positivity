@@ -37,3 +37,14 @@ $$\text{③}\ §5(b)\ \textbf{结案}：\ \boxed{\text{重述不存在（或存�
 ## §5 边界
 $$\text{(i)}\ §0\ \text{为原档逐字（}\texttt{N13}\ \text{已执行）}✓\quad\text{(ii)}\ §1\ \text{的两条为经典事实}✓\quad\text{(iii)}\ §2--§4\ \text{为本档}✓$$
 $$\text{(iv)}\ \textbf{未用 RH}；\ \textbf{零计算}✓\quad\text{(v)}\ ⚠️\ \text{"层-}\alpha\ \text{筛级数横坐标}\ \ge1-\alpha"\ \text{为}\ [\textbf{结构}] \text{级示例，非已验证定理}✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据：`§5(b)` 自标未建立；产出为型判据）}✓$$
+$$\qquad \text{硬内容}：\text{Liouville 例（}\sum\\lambda(n)n^{-s}=\\zeta(2s)/\\zeta(s)，\ \text{横坐标}\ 1）✓$$
+$$\qquad ⚠️\ \text{`§5(b)`}\ \textbf{自标未建立};\ \text{产出为}\ \textbf{型判据} \text{（需构造系数侧}\to\text{零侧转换）}✓✓$$
+$$\qquad \Longrightarrow \text{可作}\ \textbf{筛子};\\ \textbf{不得} \text{引为定理}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

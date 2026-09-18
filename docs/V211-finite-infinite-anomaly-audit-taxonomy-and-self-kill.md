@@ -102,3 +102,14 @@ $$\textbf{(e)}\ \text{§5／§6 为}\ \textbf{登记与筛查条件}，\ \textbf
    ③ RH ∈ Π₁ ⟹ 框架＝RH 逻辑形状＋W2 强制解析／上同调 ✓✓✓；④ 三条收敛判词 DEAD ✓✓✓；
    ⑤ 残余与四条判据 ✓；⑥ 三条筛查条件 ✓
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-IV}\ \text{（分类穷尽性：八类机制的穷尽性为归纳级）}✓$$
+$$\qquad \text{硬内容}：\text{`RH`}\in\Pi_1（Robin 判据）;\ \text{`V150` W2}✓$$
+$$\qquad \text{软步}：\textbf{八类的穷尽性};\ \text{"非加性／非上同调／非 }index／\text{非}\ \Pi^1_1／\text{非选择"残余}\ \textbf{未实例化}✓✓$$
+$$\qquad \Longrightarrow \text{可宣称}：\text{八类}\ \textbf{皆落已封类};\ \textbf{不可} \text{宣称"有限}\to\text{无限缺陷不存在"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

@@ -76,3 +76,13 @@ $$\text{§2 三行}\ \textbf{凭记忆};\ \text{§4 的对照表为本档}\ \tex
 ⚠️ §6 判词：V255 状态＝[待核/参照档]，不是结论；V254 判词不含 parity barrier
 ⚠️ §7 边界：§2 凭记忆；§4 为整理；§5(b) 是唯一接链候选但目前不存在；未用 RH；未跑 Lean；零数值
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据：档首自标 [待核／参照档]）}✓$$
+$$\qquad ⚠️\ \text{档首}\ \textbf{自标}\ \text{`[待核／参照档]`，}\ \textbf{不并入}\ \text{`V254` 判词}✓✓$$
+$$\qquad \Longrightarrow \text{只能作}\ \textbf{参照／筛子} \text{引用}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

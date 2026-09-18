@@ -61,3 +61,14 @@ $$\boxed{\text{所有正性路线的失败【是同一个原因】：消失轨�
 ```
 e8a933e（撤回 + 合并）→ 本篇（POS1：正性二分）
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据：正性三分是描述性三分，非穷尽性定理）}✓$$
+$$\qquad \text{硬内容}：\text{经典正性恒等式}\ 3+4\cos t+\cos 2t=2(1+\cos t)^2\ge0✓$$
+$$\qquad \text{软步}：\text{三分的}\ \textbf{穷尽性} \text{未证};\ \text{且"恰在离临界}\iff\text{RH"分支的真值来自}\ \textbf{该法条件本身即 RH}✓✓$$
+$$\qquad \Longrightarrow \text{可引为}\ \textbf{筛子};\\ \textbf{不得} \text{引为"正性方法全被排除"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

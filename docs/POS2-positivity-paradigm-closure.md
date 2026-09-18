@@ -72,3 +72,13 @@ $$\boxed{\text{两问题都缺"中间物"：可证但不薄（YM：uniform；RH�
 ```
 5b94d90（正性二分）→ 本篇（修正 + 正性范式封口）
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据：正性范式的类级封口为范式性描述）}✓$$
+$$\qquad \text{软步}：\textbf{"可证}\Longrightarrow\text{不足；充分}\Longrightarrow\text{等价于 RH"}\ \text{是}\ \textbf{范式描述}，\ \text{其真值依赖}\ \text{`POS1` 的三分}✓✓$$
+$$\qquad \Longrightarrow \text{与}\ \text{`POS1`}\ \textbf{同型（T-V）};\ \text{不得单独升格为定理}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

@@ -108,3 +108,13 @@ $$\qquad\Longrightarrow\ ⭐\ \text{这也}\ \textbf{加强}\text{了}\ \text{`V
 ✅ 净产出：① Planat 剔除＋S 通道按 V191 关闭 ✓✓；② 直接替换 NO ＋ BRIDGE-ONLY ✓✓；③ 二分封闭 ✓✓✓；
    ④ 自查勘误 ✓✓✓；⑤ 第三次收敛 ✓✓；⑥ 纪律升级（定义级核对）✓✓
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-VI}\ \text{（方法特定封闭：结论封闭的是"秩–迹界 ＋ 带宽一"的方法族，非普遍不可能性）}✓$$
+$$\qquad \text{软步}：\textbf{"}\beta\ \text{只经重数"}\ \text{依赖对"实谱实现"的}\textbf{建模};\ \text{`0.68185` 是}\ \textbf{带宽一方法的上限}✓✓$$
+$$\qquad \text{可宣称}：\text{自伴支与"非自伴声称实谱"支}\ \textbf{在该建模下皆封};\ \text{第三支存在时本封闭不适用}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

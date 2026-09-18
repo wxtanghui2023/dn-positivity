@@ -113,3 +113,14 @@ $$\qquad \text{未用 RH 作推导} ✓;\ \text{未跑 Lean} ✓;\ \textbf{零�
   ③ 第三型存在（Choi 非可分解正映射）⟹ 三分律被反例否证 ④ 两角升级为三角，III 的障碍是宿主/识别
   ⑤ 残差改写为可检验形式："非双线性可表示的算术正性？"
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-III？待核}\ \text{（框架性重述（待核）：第二刀"须 canonical"是否为引理待核）}✓$$
+$$\qquad \text{两刀}：\text{(i) gauge 商}\Longrightarrow\text{二次不变量};\ (ii)\ \text{保留相位}\Longrightarrow\text{须 canonical}✓$$
+$$\qquad ⚠️\ \text{第 (ii) 刀}\ \textbf{是引理还是断言} \text{本档未核} \Longrightarrow \text{定级}\ \textbf{暂标 T-III？}✓✓$$
+$$\qquad \Longrightarrow \text{若 (ii) 为引理}\ \Longrightarrow \text{可升 T-I/II};\ \text{若为断言}\ \Longrightarrow \text{确为 T-III}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

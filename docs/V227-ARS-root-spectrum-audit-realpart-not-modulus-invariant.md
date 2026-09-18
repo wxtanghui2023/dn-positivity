@@ -102,3 +102,14 @@ $$\textbf{(e)}\ \text{§6 污染测试为}\ \textbf{本档正式化} \text{（�
    ③ ⭐⭐⭐⭐ char-p 对照与不可移植性（圆 vs 竖直线）✓✓✓✓；④ ⭐⭐⭐ 构造性 vs 涌现性 ✓✓✓；
    ⑤ 污染测试正式化 ✓✓；⑥ ARS 残余四条判据 ✓
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-I}\ \text{（干净小结果：`sup Re z` 不是模不变量）}✓$$
+$$\qquad \text{硬内容（自足）}：R_1=\\{i,-i\\}\ \text{与}\ R_2=\\{1,-1\\}\ \text{模多重集同为}\ \\{1,1\\};\ \sup\operatorname{Re}\ \text{为}\ 0\ \text{与}\ 1✓✓$$
+$$\qquad \Longrightarrow \text{两行反例，}\textbf{无隐藏前提};\ \text{结论精确}✓✓$$
+$$\qquad \text{用途}：\text{经典"模长钉定"机制（极化／Hodge／正性）}\ \textbf{结构上无法} \text{钉定}\ \beta✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

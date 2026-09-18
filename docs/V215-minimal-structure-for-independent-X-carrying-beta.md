@@ -125,3 +125,14 @@ $$\textbf{(2)}\ \text{§4 的"三型"}\ \textbf{不构成穷尽}：\text{漏掉}
 $$\qquad \text{Taylor 系数／Dirichlet 系数／integrality／代数依赖／递推／det 子式};\ \ \xi(s)=\sum a_ns^n\ \text{的}\ \{a_n\}\ \textbf{不在 (a)(b)(c) 内} ✓$$
 $$\qquad \Longrightarrow\ \text{接口}\ \textbf{升级为五类}：\text{(a) zero-statistical};\ \text{(b) special-value};\ \text{(c) archimedean};\ \textbf{(d) coefficient-arithmetic};\ \textbf{(e) functional-algebraic} ✓✓$$
 $$\qquad ⚠️\ \text{且本档 §4 关于"三型皆单对象管道"的论证}\ \textbf{对 (d)(e) 无效} ⟹ \text{须单独审计（见 `V216`）} ✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-IV}\ \text{（分类穷尽性："三型之外无 canonical 可寻址数据"是分类断言（归纳级））}✓$$
+$$\qquad \text{硬内容}：\text{Hadamard＋FE 收口};\ \text{`V188` 线性饱和}✓$$
+$$\qquad \text{软步}：\textbf{三型的穷尽性} \text{为分类断言};\ \text{残余}\ \textbf{未实例化}✓✓$$
+$$\qquad \Longrightarrow \text{可宣称}：\text{三型}\ \textbf{各自封闭};\ \textbf{不可} \text{宣称"三型即全部"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

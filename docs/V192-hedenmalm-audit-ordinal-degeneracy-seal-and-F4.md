@@ -95,3 +95,13 @@ $$\qquad ⭐\ \textbf{四筛的最终形态}：\text{F3 通道分类}\to\text{F1
 ✅ 净产出：① 硬问题干净答案（只看到 γ，结构性）✓✓✓；② 谱实现族封印 ✓✓✓；③ F4 上线＋四筛成型 ✓✓；
    ④ compensation 的 F1 判定（资产 vs 饱和）✓⚠️；⑤ 两 OPEN 的精确定位（Hedenmalm 死于④；逆谱几何只缺③）✓✓
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-VI}\ \text{（方法特定封闭：纵坐标退化封印针对谱实现族）}✓$$
+$$\qquad \text{可宣称}：\text{自伴（实谱）实现中，}\beta\ \text{信息}\ \textbf{＝退化信息};\ \text{故该类方法只能产出}\ \textbf{退化计数型} \text{结论}✓✓$$
+$$\qquad ⚠️\ \text{不得} \text{引用为"任何谱实现都不可能携带}\ \beta\text{"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

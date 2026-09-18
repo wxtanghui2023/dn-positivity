@@ -131,3 +131,14 @@ $$\textbf{§9 判词（采纳唐先生）}：\boxed{\textbf{V253}＝\text{CLOSED
 $$\textbf{§9 登记（收紧后的真正硬问题 —— 本档最高优先）}：$$
 $$\qquad \boxed{\textbf{有没有一个 canonical arithmetic source，能产生}\ \textbf{真正的、非输入式的} \text{ signed cancellation}，\ \text{并且其}\ \textbf{cancellation threshold 恰好锁定}\ \tfrac12\ \text{？}} ✓✓✓✓$$
 $$\qquad \text{若}\ \textbf{没有} \Longrightarrow \text{这才会真正把}\ \text{`V162`/A3}\ \text{的承重墙从"目前最大障碍"推进到}\ \textbf{一个可证明的结构性障碍} ✓✓✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-I}\ \text{（干净小结果：关键恒等式 ＋ `\sigma=1` 位置被尾和有限性强制）}✓$$
+$$\qquad \text{硬内容（本档推导）}：\\frac{1}{a\\log a}=\\int_1^\\infty a^{-s}ds \Longrightarrow \text{Erdős 和住}\ \sigma=1✓$$
+$$\qquad \Longrightarrow \sigma=\\tfrac12\ \text{版}\ \textbf{不存在}（\text{尾和发散}） \Longrightarrow \text{对该机制的定位}\ \textbf{干净、无隐藏前提}✓✓$$
+$$\qquad ⚠️\ \text{可宣称}：\textbf{该机制} \text{无法移到}\ \\tfrac12;\ \textbf{不可} \text{宣称"一切带符号加权不可达"}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$
