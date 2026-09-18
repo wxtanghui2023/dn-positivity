@@ -140,3 +140,13 @@ $$\qquad \qquad ⚠️\ \text{且与 §2 的独立障碍}\ \textbf{并存}：\te
 $$\textbf{自查登记（第 9 次）}：\text{前 8 次＝丢 Abel 边界项／单侧双侧混淆／near 计数过粗／near 高估}\ H\ \text{倍／BL10 指数 bug／BL10 漏因子／扫描越域／"只 push 不 bundle"误判} ✓$$
 $$\qquad \textbf{规律再次应验：结论"太顺"时先怀疑自己的推导} \text{；本次错误形态＝}\boxed{\text{把 special case 的直觉升成 universal 命题}}（\text{"能给出尖锐判据的锥只有}\ CP_n\text{"}）✓✓$$
 
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-III}\ \text{（框架性重述：依赖具体前提，其中至少一条可能与 RH 等价）}✓$$
+$$\qquad \text{前提承重}：\text{本档 }P1\text{–}P3\ \text{中，}\textbf{(P2) 可能本身就是 RH 强度前提};\ \text{且引理 2 为 folklore}✓$$
+$$\qquad \text{可宣称}：\text{推论 2′（自对偶锥不可被严格扩大）＋ Choi 实例（}CP_n\ \text{自对偶}\subsetneq Pos_n）＋ \text{定理 B（唯一性）}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

@@ -99,3 +99,13 @@ $$\qquad ⭐\ \text{一句话}：\boxed{\text{信息更多}\ \neq\ \text{更易�
 ✅ 净产出：① 定理级 NO（V191-① 封闭）✓✓✓；② 通道 S 降级定位 ✓✓；③ F1 两问制 ✓✓✓；④ d^{−1/2} 机制 ✓✓；
    ⑤ MDPI 证据同向 ＋ 红旗标注 ✓⚠️；⑥ V192 三选 ✓
 ```
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-II}\ \text{（逻辑必然：三行推导，对任意 RH 等价重述都成立）}✓$$
+$$\qquad \text{唯一非平凡内容}：\operatorname{dist}(H_d,\partial\mathcal H_d)\asymp d^{-1/2}\Longrightarrow N(d)\to\infty\ \Longrightarrow\ \textbf{不存在统一}\ (D,N)✓$$
+$$\qquad ⚠️\ \text{原标签"定理级"}\ \text{应读作}\ \textbf{逻辑必然（方法论观察）};\ \text{价值在"确认 GORZ 型前沿进展不降低问题强度"}✓✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$

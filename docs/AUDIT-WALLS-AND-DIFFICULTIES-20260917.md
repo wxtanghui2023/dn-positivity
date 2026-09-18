@@ -82,3 +82,13 @@ $$\text{③}\ \text{D1（相位均匀性）}\ \textbf{不是统一墙}：\text{�
 $$\text{④}\ \text{D2 的}\ \textbf{方法层}"消解式模式"（E160）}\ \text{与今日}\ \texttt{Audit}\ne\texttt{Discovery}\ \text{诊断}\ \textbf{同一条}✓✓$$
 $$\text{⑤}\ \text{D3（振荡项消解）}\ \textbf{部分完成}：\ M(T)\ \text{线撞 Lindelöf}；\ \text{PAPERA 线端点障碍未全线闭合}✓$$
 $$\text{⑥}\ \text{D4（相位感知聚合）}\ \text{与}\ \text{W6}\ \textbf{同址} \Longrightarrow \textbf{不必分别开案}✓✓$$
+
+
+---
+
+## 【型标注】（`NEG-REGISTER-1`，2026-09-18 20:1x）
+
+$$\text{本档定级}：\textbf{T-V}\ \text{（诊断性判据（W1 行）：“检测 ≠ 排除”是诊断，非定理）}✓$$
+$$\qquad \text{涉本档行}：\textbf{W1（}\beta\ \text{墙）};\ \text{`V193` §⑤ 已把"结构性盲"改口为}\ \textbf{"饱和＋提取需一致性"}✓✓$$
+$$\qquad ⚠️\ \text{故 W1}\ \textbf{不得} \text{引用为"检测不可能排除"};\ \text{只可引为}\ \textbf{诊断（T-V）}✓$$
+$$\textbf{引用纪律（本档确立）}：\text{引用本档时必须}\ \textbf{随引其型};\ \textbf{不得} \text{去条件化引用}✓✓$$
