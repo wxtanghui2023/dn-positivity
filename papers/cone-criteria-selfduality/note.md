@@ -71,11 +71,19 @@ $$\boxed{\text{(II)}\ \textbf{严格加锐} \Longrightarrow \textbf{必非自对
 $$\qquad \text{而非自对偶的代价：}\text{判据锥}\ K\ \text{与证书锥}\ K^*\ \text{不再相同}⟹ \textbf{对偶缺口}✓✓$$
 $$\qquad \qquad \text{（}\text{即：}\text{若}\ A\notin K，\ \text{分离定理给}\ \ell\in K^*\ \text{使}\ \langle\ell,A\rangle<0;\ \text{但}\ \ell\ \text{一般}\ \textbf{不在}\ K\ \text{中} \Longrightarrow \text{"判据语言"与"见证语言"分离}）✓$$
 $$\Longrightarrow \textbf{主结论}：\text{在锥判据框架内，}\boxed{\text{"自对偶（证书对称）"} \ \textbf{与}\ \text{"严格加锐"} \ \textbf{不可兼得}}✓✓✓$$
+$$\qquad ⚠️\ \textbf{本档自查（H1）}：\text{(II)}\ \textbf{不是} \text{独立的一半 —— 它是 (I)／推论 2′ 的}\textbf{逆否}✓✓$$
+$$\qquad \qquad \text{而"对偶缺口"条款是}\ \textbf{定义性} \text{的：判据由}\ K\ \text{给出时，其证书锥}\ =\ K^* \text{（分离定理），}\ \text{故}\ K\ne K^* \iff \text{缺口}✓$$
+$$\qquad \qquad \Longrightarrow \textbf{§5 实为}\ \textbf{一条初等事实} \text{（推论 2′）＋ 定义，}\ \textbf{不宜当作两条独立结论}✓✓$$
 
 ## §6 RH 读数（**框架层**，附明确前提；非定理）
 
 $$\text{设某性质}\ P（\text{例：}\operatorname{Re}\rho=\tfrac12）\ \text{被提议写成锥成员性}\ P(\rho)\iff A_\rho\in K✓$$
 $$\textbf{前提 (P1)}：\text{判据须为}\ \textbf{锥成员性};\quad \textbf{(P2)}：\text{"真集合"的锥包}\ \textbf{自对偶};\quad \textbf{(P3)}：\text{判据须}\ \textbf{证书对称}（\text{同一锥兼作判据与见证}）✓$$
+$$\qquad ⚠️\ \textbf{本档自查（H2／H3／H4）}：$$
+$$\qquad \qquad \textbf{(H2)}\ \text{(P2)}\ \textbf{可能是 RH 强度的前提}：\text{若已知"真集合的锥包自对偶"，}\ \text{则}\ \textbf{判据本身基本已到手}✓✓$$
+$$\qquad \qquad \qquad \Longrightarrow \text{故 §6 是}\ \textbf{条件性的，且可能循环};\ \text{读者不得略过 (P2) 引用}✓✓$$
+$$\qquad \qquad \textbf{(H3)}\ \text{"唯一锥为}\ CP_n\text{"}\ \textbf{是额外前提}，\ \textbf{不是} \text{定理 B 的推论}✓$$
+$$\qquad \qquad \textbf{(H4)}\ \text{(P3) 是}\ \textbf{本笔记选定的定义}，\ \text{故"不可兼得"}\ \textbf{部分是定义性的};\ \text{不得读作深层张力}✓✓$$
 $$\text{则在 (P1)–(P3) 下：}\text{由 §5(I)}\ \text{判据锥}\ \textbf{唯一} \Longrightarrow \textbf{不能改换};\ \text{由 §5(II)}\ \text{任何}\ \textbf{严格加锐} \text{必破坏 (P3)}✓✓$$
 $$\qquad \Longrightarrow \text{若在 Choi 宿主中该唯一锥为}\ CP_n（\text{经 Choi}＝PSD）\ \text{则判据}\ \textbf{就是单个二次型（}\text{PSD}\ \text{条件）}✓✓$$
 $$\qquad \qquad ⚠️\ \text{而在算术侧，}\text{PSD 型（正性）判据与 RH 的等价性}\ \textbf{是另一个独立事实}（\text{Weil／Li 正性} \iff \text{RH}）\ \text{—— }\textbf{本笔记不证明该等价性}✓$$
@@ -133,3 +141,30 @@ $$\textbf{事实 (ii) ⚠️ 原稿记错，已修}：\text{Choi 1975 的}\ n\ \
 $$\qquad \textbf{不存在} \text{"}n=2\ \text{时}\ Pos_2=CP_2\text{"} \text{这一事实}（\text{转置在}\ n=2\ \text{已是不全正的正映射}）✓✓$$
 $$\qquad \Longrightarrow \text{故}\ \S3\ \text{的}\ Pos\supsetneq CP\ \text{证人均改为}\ \textbf{本档自足} \text{的转置；（原稿的}\ n\ge3\ \text{限制定向被移除，定理加强为}\ n\ge2）✓✓$$
 $$\textbf{教训（登记）}：\text{凭记忆引经典结果的}\ \textbf{维数条件与包含方向} \text{是最易错处};\ \text{本次即命中一处}✓✓$$
+
+## §12 本档自查：隐藏前提清单（对 §1–§6 逐条审视）
+
+$$\text{动机}：\text{§11.2 的}\ n=2\ \text{引用错误与本节发现的 (H2) 属}\ \textbf{同一失效模式}：$$
+$$\qquad \boxed{\text{某个前提／细节在}\ \textbf{看着无害} \text{的同时}\ \textbf{承担了实际重量}}✓✓$$
+
+| 编号 | 位置 | 性质 | 处置 |
+|:--|:--|:--|:--|
+| **H1** | §5(II) | (II) ＝ (I)／推论 2′ 的**逆否**；"对偶缺口"条款为**定义性** | §5 已加注；**不得**当作两条独立结论 |
+| **H2** | §6 (P2) | ⚠️ **可能是 RH 强度的前提**（若知锥包自对偶，判据基本到手） | §6 已加注；**条件性且可能循环** |
+| **H3** | §6 | "唯一锥为 `CP_n`" 是**额外前提** | 已加注 |
+| **H4** | §6 (P3) | "证书对称"是**选定的定义** ⟹ 不可兼得部分是定义性的 | 已加注 |
+| **H5** | §2 闭性 | 需一致性检查：`K` 自对偶 ⟹ `K` 闭（因 `K^*` 恒闭，为闭半空间之交）| ✓ **无问题**（本条为**通过的检查**，非缺陷）|
+
+$$\Longrightarrow \textbf{净效果}：\text{本笔记的可宣称强度}\ \textbf{再次下调}：$$
+$$\qquad \text{可宣称}：\text{推论 2′（自对偶锥不可被严格扩大）＋ 其在 Choi 宿主中的实例（}CP_n\ \text{自对偶} \subsetneq Pos_n\text{）}＋ \text{定理 B（唯一性）}✓$$
+$$\qquad ⚠️\ \textbf{不可宣称}：\text{§5 是"两条独立结论"};\ \text{§6 是无条件的 RH 陈述};\ \text{引理 2 为原创}✓✓$$
+$$\textbf{登记教训}：\text{核外引要核}\ \textbf{维数与方向};\ \text{自查要核}\ \textbf{哪个前提在承重} \text{—— 本条清单应作为投稿前必检项}✓✓$$
+
+### 11.3 一手来源的可得性与"已核"的准确含义（2026-09-18 19:5x）
+
+$$\text{原文}（\text{LAA 10 (1975) 285--290}）\ \textbf{不可得}（\text{Elsevier 付费墙}）✓$$
+$$\qquad \text{但}\ \textbf{事实 (i) 获得强于原文的确认}：\text{存在}\ \textbf{Lean 形式化} \text{（}\texttt{MatrixMap.choi\_PSD\_iff\_CP\_map}：\ M.\text{IsCompletelyPositive}\iff M.\text{choi\_matrix}.\text{PosSemidef}，\ \textbf{机器核验}）✓✓$$
+$$\qquad \qquad \text{＋}\ \text{多重独立二手来源一致（含等价说法：完全正}\iff\min\{m,n\}\text{-正}）✓$$
+$$\qquad \text{事实 (ii)}：\tau_{3,1}\ \text{的}\ 3\times3\ \text{系数与}\ \textbf{二手一手性较好的讲义} \text{（JMM 2022 Osaka handout）}\ \textbf{逐字一致}，\ \text{并判"}\textbf{不可分解}\text{"}✓✓$$
+$$\Longrightarrow ⚠️\ \textbf{"已核"的准确含义}：\textbf{多源一致 ＋ 一处机器核验};\ \textbf{不等于} \text{已核原文}✓✓$$
+$$\qquad \Longrightarrow \textbf{投稿前必办}：\text{取一手（原文或}\ \text{Paulsen}\ \text{教科书相应定理／页码）}\ \text{并核}\ \tau_{3,1}\ \text{的原文排版}✓$$
