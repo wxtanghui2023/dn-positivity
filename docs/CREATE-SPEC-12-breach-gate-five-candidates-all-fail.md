@@ -65,7 +65,7 @@ $$\qquad ⚠️\ \text{但渐近仍}\ \to\infty \Longrightarrow \text{此放宽}
 
 $$\textbf{得到}：\text{门槛 (a)--(d) ＋ 五候选全败 ＋ 四重对称放宽 ＋ "边界定理不可变形"与"正项恒等式自动满足"两条}\ \textbf{结构性死因}✓✓$$
 $$\textbf{未得到}：\text{突破口对象}\ \textbf{仍未被占据} \Longrightarrow \text{log-free 排除路线}\ \textbf{对已知机制仍封闭}✓✓$$
-$$\qquad ⚠️\ \text{这与}\ \text{`C-126`}\ \text{的"渐近零例"}\ \textbf{一致}，且本档把"为什么零例"}\ \textbf{细化到对象级}✓✓$$
+$$\qquad ⚠️\ \text{这与}\ \text{`C-126`}\ \text{的"渐近零例"}\ \textbf{一致}，且本档把"为什么零例"\ \textbf{细化到对象级}✓✓$$
 
 ## §7 边界与回查
 
