@@ -75,8 +75,8 @@ $$\qquad \Longrightarrow\ \text{故"避开}\ \beta\ \text{盲"}\ \textbf{的充�
 ## §6 【技术词回查】输出（`scripts/tech_word_check.sh`，2026-09-18 16:3x）`[纪律]`（先跑后写）
 
 ```
-技术词 模长通道      命中文件数=1  :: ./C113-where-is-beta-and-did-we-avoid-beta-blindness.md
-技术词 相位通道      命中文件数=1  :: ./C113-where-is-beta-and-did-we-avoid-beta-blindness.md
+技术词 模长通道      命中文件数=2  :: ./V121-criterion-space-channel-audit.md ./C113-…
+技术词 相位通道      命中文件数=8  :: ./V172-rigidity-source-separation-FAS-trichotomy.md ./V144-CM-model-verified-layer-diagnosis-motive-vs-archimedean.md …
 技术词 退化聚合读     命中文件数=1  :: ./C113-where-is-beta-and-did-we-avoid-beta-blindness.md
 ```
-**读数（按实测）**：三项均＝**1 档（仅本档）⟹ 本档新增措辞** ✓
+**读数（按实测）**：`退化聚合读`＝**1 档（仅本档）⟹ 本档新增** ✓；⚠️ `模长通道`＝**2 档**（`V121` **已有**）、`相位通道`＝**8 档**（`V172`／`V144` 等**已有**）⟹ **本档为引用，非新造** ✓✓
