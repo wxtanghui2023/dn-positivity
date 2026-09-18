@@ -75,3 +75,29 @@ $$M4\ \text{的关闭方式}\ \textbf{与其余 6＋ 条完全同址} \Longright
 技术词 普适墙           命中文件数=2  :: ./V2-34-four-ell-…（**已有**）
 ```
 **读数（按实测）**：`门序复审`＝**1 档（仅本档）⟹ 本档新增** ✓；⚠️ `报火`＝**4 档**、`普适墙`＝**2 档**（`V2-34` **已有**）⟹ 本档为**沿用** ✓
+
+## §7 ⚠️ "文献有成果" vs "机制不可能"——相容性与可证伪判据（唐先生 2026-09-18 21:00）
+
+$$\textbf{追问}：\text{"如果机制不可能，为啥文献还会有成果？是不是说明机制推导不对？"}✓✓$$
+$$\boxed{\textbf{前提先纠}：\text{本档}\ \textbf{未证} \text{"机制不可能"}——所证仅为}\ M4\ \text{关闭}＋\text{一个}\ \textbf{[强支持·非定理]} \text{的模式}✓✓$$
+
+$$\textbf{(1)}\ \text{`F5`-模式}\ \textbf{只禁止一件事}：\text{判定}\ \beta_*\ \text{且}\ \textbf{不带独立算术输入}✓$$
+$$\qquad 而文献成果}\ \textbf{全在另一侧}：$$
+$$\qquad \qquad \text{(i) 部分／单侧}（\sigma>1-c/\log T;\ N(\sigma,T);\ \text{比例}\ \ge\tfrac23;\ \Lambda\le0.22）$$
+$$\qquad \qquad \text{(ii) 有限范围}（\text{验证到高度}\ 3\times10^{12}）\quad \text{(iii) 条件结果}（\text{RH／GRH 下}）$$
+$$\qquad \qquad \text{(iv) 已知框架内的定量改进}（A=30/13;\ \text{常数优化}）\quad \text{(v) 别的问题}（\text{cs.DS 三篇}）✓✓$$
+$$\textbf{判据}：\text{文献在"}\textbf{决定}\ \beta_*\text{"这个目标上有成果没有？}\ \textbf{没有}（\text{否则 RH 已解}）✓✓$$
+
+$$\textbf{(2)}\ ⭐\ \textbf{`\Lambda` 就是最好的例证}（\text{相容而非矛盾}）：$$
+$$\qquad \Lambda\ \textbf{看得见}\ \beta（\text{§2}\ \text{`F7` 报火}:\ \Lambda_{\rm DH}\neq\Lambda_\zeta）;\ \text{文献}\ \textbf{确实在推它}：\text{Rodgers–Tao}\ \Lambda\ge0;\ \text{Polymath 15}\ \Lambda\le0.22✓✓$$
+$$\qquad \qquad \Longrightarrow \textbf{这些都是真成果};\quad \textbf{但没有一条判定}\ \beta_*✓✓$$
+$$\qquad \Longrightarrow \text{故"文献有成果"与"}\text{`F5`}\ \text{模式"}\ \textbf{并不冲突};\ \text{`\Lambda` 恰是"}\textbf{看得见、证不动} \text{"的标本}✓✓$$
+
+$$\textbf{(3)}\ ⭐\ \text{你这一问}\ \textbf{真正该问的} \text{是}：\text{"}\textbf{我们的清单是否漏了一类机制？}\text{"} \Longrightarrow \textbf{可证伪}：$$
+$$\qquad \boxed{\text{`F5`-模式被证伪} \iff \text{出现}\ \textbf{已发表结果}，\ \text{做到}\ \text{(a)}\ \text{排除}\ \textbf{任意小}\ \beta-\tfrac12;\ \text{(b)}\ \Lambda\le0;\ \text{(c)}\ \text{support}>1\ \text{的无条件信息}\to\text{零点定位}}$$
+$$\qquad \qquad \text{且其机制}\ \textbf{不带独立算术输入} \Longrightarrow \text{届时}\ \textbf{机制推导确实错了}\ \text{（或清单不完备）}✓✓$$
+$$\qquad \text{至今}\ \textbf{未出现}（\text{本项目多次外部扫描：}\text{`V249`}\ \text{等}） \Longrightarrow \textbf{模式存活}✓$$
+
+$$\textbf{(4)}\ ⚠️\ \textbf{但边界必须守住}：\text{`F5`-模式}\ \textbf{是 [强支持·非定理]};\ \text{同理}\ \textbf{"我们的清单完备"也不是定理}（\text{即今日所立}\ T\text{-IV}）✓✓$$
+$$\qquad \Longrightarrow \textbf{正确用法}：\text{把}\ \text{`F5`-模式当}\ \textbf{可证伪的工作假设}，\ \textbf{而非} \text{"机制不可能"的结论}✓✓$$
+$$\qquad \Longrightarrow \textbf{推论}：\text{外部检索}\ \textbf{正是唯一可能证伪} \text{`F5` 的动作} \Longrightarrow \text{与"文献接口线"合流}✓✓$$
