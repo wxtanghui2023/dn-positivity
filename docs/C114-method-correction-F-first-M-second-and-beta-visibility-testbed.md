@@ -12,7 +12,7 @@
 $$\textbf{(1)}\ \text{根因（本档接受批评）}：\text{我把}\ \textbf{档案分类} \text{当}\textbf{主筛}，\ \text{而档案分类表}\ \textbf{就是}\ \beta\ \text{盲的分类表}✓✓$$
 $$\qquad \Longrightarrow\ \text{用}\ \beta\ \text{盲的分类表筛候选} \Longrightarrow \boxed{\text{放行的必然还是}\ \beta\ \text{盲}} \Longrightarrow \text{九条同址是}\ \textbf{方法保证}，\ \text{非运气}✓✓$$
 $$\textbf{(2)}\ ⚠️\ \text{而}\ \text{`F1`–`F8`}\ \text{八过滤器}\ \textbf{档案已有}（含\ \text{`F7` Epstein 测试}），\ \text{我把它用在"地图去重}\ \textbf{之后} \text{"}\ ＝\ \textbf{等于没用}✓✓$$
-$$\qquad \Longrightarrow\ \textbf{修正}：\boxed{\text{`F`-先 ／ `M`-后}：\text{先过}\ \text{`F1`–`F8`}，\ \textbf{再} \text{查地图}✓✓$$
+$$\qquad \Longrightarrow\ \textbf{修正}：\boxed{\text{F-先 ／ M-后：先过 F1–F8，再查地图}}✓✓$$
 $$\textbf{(3)}\ ⭐\ \textbf{检验床逻辑立刻给出的重要修正}：\text{按"能否在已知}\ \beta\ne\tfrac12\ \text{对象上}\ \textbf{报火} \text{"分}，\ \text{九条}\ \textbf{不是全盲}✓$$
 $$\qquad \text{`DBN`／}\Lambda\ \text{是}\ \textbf{形变参数}（\text{对离轴零点}\ \textbf{有响应}） \Longrightarrow \boxed{\text{`S1`／`C6`}\ \textbf{`β`-可见}}✓✓$$
 $$\qquad \qquad \text{它的墙是}\ \text{`C-111`}\ \text{的}\ \textbf{端点退化}（\text{`1/2` 阶分支}），\ \textbf{不是}\ \beta\ \text{盲}✓✓$$
@@ -67,7 +67,7 @@ $$\Longrightarrow\ \boxed{\text{八条}\ \beta\ \text{盲}\ ＋\ \textbf{一条}
 
 ## §4 修正后的目标（**本档真正的产出**）
 
-$$\text{目标由"找新对象"改为}：\boxed{\text{找一个}\ \textbf{输出类型} \text{，使其}\ \textbf{同时}：\text{(i)}\ \textbf{在检验床上报火}（\text{`β` 可见，}\ \text{`F1`/`F7`}）;\ \text{(ii)}\ \text{在 ζ 端点}\ \textbf{可证}（\text{非}\ \text{`C-111`}\ \text{型退化}）✓✓$$
+$$\text{目标由「找新对象」改为}：\boxed{\text{找一种输出类型，使其同时：(i) 在检验床上报火（β 可见，过 F1/F7）；(ii) 在 ζ 端点可证（非 C-111 型退化）}}✓✓$$
 $$\qquad \text{已知唯一满足 (i) 的实例}＝\text{DBN／}\Lambda（\text{形变参数}）;\ \text{其 (ii) 失败} \Longrightarrow \text{目标＝}\boxed{\text{另一种}\ \textbf{`β` 可见输出类型}}（\text{非形变参数}）✓✓$$
 $$\qquad ⚠️\ \text{且须过}\ \text{`F4`}（\text{非模长型}）、\text{`F3`}（\text{钉点不钉轴}）、\text{`F1`}（\text{非正性}）、\text{`F2`}（\text{非坐标型}）✓$$
 $$\qquad \Longrightarrow\ \text{这比"再找一个对象"精确：}\textbf{要求的是一种输出类型}，\ \text{不是又一个构造}✓✓$$
