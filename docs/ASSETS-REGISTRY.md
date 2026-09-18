@@ -244,3 +244,50 @@ $$\boxed{\text{停在此处（2026-09-17）}\ ——\ \text{不以"再找一个�
 | C-47 | ⭐ **严格化（合并本）：至多 $m$ 个离轴零点的检测定理 —— A1-3／E4 全线** | `docs/RIGORIZATION-EXTENSION-at-most-m-off-axis-zeros-consolidated.md`（2026-09-17）| 把 C-39～C-44 合并为**一份完整证明**。**定理 E4-$m$**：$F$ 至多 $m$ 个零点满足 $\|w_\rho\|>1$ ⟹ ①无例外 $\Rightarrow\|\mathrm{Re}\lambda_F\|\le(K_{F,1}+K_{F,4})n\log n\ \forall n$（**用模 $\|1-w^n\|\le2$，与源文同常数，不损**）；②有例外且 $\max\|w_j\|\ge R$ $\Rightarrow$ 存在 $n\in[N_m,5mN_m]$、$N_m\mid n$ 使 $\|\mathrm{Re}\lambda_F\|\ge$ 阈值。**证明结构**：分解 (37)＋检测不等式＋引擎＋$N_m$ 四项显式。**⭐引擎 $m'=1$ 完全自足**（引理 C：初等五段区间覆盖 $\Rightarrow\max_{k\le5}\mathrm{Re}z^k\ge\frac12$，常数最优，数值 $0.500009$）⟹ 阈值 $4(K_{F,1}+K_{F,4})n\log n+2$，**比源文 $20n\log n+40(K_1+K_4)n\log n$ 恰降 10 倍且不再引 Montgomery** ✓✓。$m'\ge2$：**主路线引 Montgomery Lemma 2.2**（正确性无缺口，阈值 $40(K_1+K_4)n\log n+20m$）＋两条自足路线（A 模＋可比性 Fejér 二阶矩；B **衰减松弛**消除可比性）**但归约终点仍是该引理**，且（C-44）二阶矩族在 $M\gtrsim12$ **可证不足** ⟹ 自足性为**开放加分项** ✗。**$N_m$ 四项**：$T_0/(e\tau)$／Lambert-$W$ 槽／$12\log C(m)/\log R$（**12 承重**）／$\log(40(m-r))/(5r\log(1/\rho))$（本档新增）。**§5 关键**："至多 $m$"起作用处＝检测项为**有限和**且 $C(m)$ **线性于 $m$**——若例外无限，$m$ 无界 ⟹ 无满足阈值的 $n$ ⟹ 定理不适用（$F_\sigma=\zeta(s)(1-q^{\sigma-s})$ 因**无限多**例外而非反例）。数值：$m=1$ 退化精确（相对差 0）、60 格点全过、最差 log-比 $+32.1289$、最小值在左端点 | |
 | C-48 | ⭐ **任务1：经 E4 框架把反证法单向化 —— (H1) 自动、(H2) 不需要，天花板不动** | `docs/E4-ONESIDED-reductio-via-E4-framework-H1-automatic-H2-unneeded.md`（2026-09-17）| 回答唐先生任务 1（"符号朝向本来就对"的框架里能否单向化成 $\lambda_n<0$）。**结论：能 ✓✓** —— E4 框架的好部分**双向有界**（$\|G_n\|\le(K_{F,1}+K_{F,4})n\log n$ 是**上界** ✓），故 $\mathrm{Re}\lambda_F\le(K_1{+}K_4)n\log n+m'-cR^n<-\,$阈值 ⟹ **单向**：$\exists n:\mathrm{Re}\lambda_F(n,\tau)<-(K_1{+}K_4)n\log n\iff\exists$ 例外零点 ✓。⟹ **(H1) 自动成立**（不需另找上界 ✓）、**(H2) 完全不需要**（引擎施于**整个例外集**，与模长/速率分布无关 ✓）。**天花板未动 ✗**：阈值仍需 $n\gtrsim8\gamma^2\log T/\delta$，且 $R\to1^+$（边际例外）时 $N_m\propto\log C(m)/\log R\to\infty$ ⟹ 与 C-46"$n\sim2\gamma^2/\delta$"**同一堵墙**。**两框架差别精确定位**：(H1) 的"自动"仅在 E4 框架内（(T2.1)/(T2.3) 公理 ✓）；退回一般 $\zeta$（例外可能无限）则 $\|G_n\|$ 有界本身失效，(H2) 仍出现。**任务 3 附带**：C-47 §4.1/§4.2 朝向逐行复核**正确** ✓（无同类缺陷）；但 §4.3"自足路线 A"**过度陈述**（Fejér 二阶矩只给模、不传导实部）已被勘误 ✗ | |
 | C-49 | ⚠️ **源文逐字对齐：Theorem 2.3 的真实引擎结构 ⟹ 我方"至多 $m$"框架**不是**源文结构** | `docs/SOURCE-ALIGNMENT-palojarvi-verbatim-thm2.1-2.3-and-my-at-most-m-framing-is-not-the-source-structure.md`（2026-09-17）| 从本地 PDF（26 页）逐字提取，6 项校正。**C1（结构性 ✗）**：Theorem 2.3 的引擎施于 $\{\rho:\|\Im\rho\|\le N\}$ 的**全部**零点（$M=N_F(N)$，由 (3) 界住；**有限性自动** ✓），**不是**"至多 $m$ 个离轴例外" ⟹ C-46/C-47 的"at most $m$"是**外加假设**、非源文结构 ✗（"至多一个⟹至多 $m$"属 **Theorem 4.1** 那条线，非 Thm 2.3）；**好消息**：去掉该假设后结论**更强**（任意满足 (3) 的构型均适用）✓✓。**C2**：常数记号是 $A_F,B_F,C_{F,j}(T_0),c_{F,j}(T_0)$；$K_{F,1}$ 是 Thm 2.1 的**结论常数**，$K_{F,4}$ 本次提取**未见** ✗。**C3**：$K_{F,1}(\tau)$ **显式**（$=\frac{2\tau}{3}(e+\frac1e)(A_F+\|A_F\log(8e\tau)+B_F\|)+\frac4{27}(1+\frac1{e^2})(\frac{c_{F,1}}{3\log2}+c_{F,1}\log(e^2\tau)+c_{F,2}+\frac{2c_{F,3}}{7e\tau})$）✓。**C4**：窗口 $[N,5N\cdot2(A_F\log N+M_F)]$、$N\mid n$（非 $[N,5mN_m]$）✗。**C5**：Lemma 2.2 引用**逐字一致** ✓（$\max_j\|z_j\|=1$、$5M$、$\frac1{20}$）。**C6**：$N\ge\lceil\max\{e,T_0,\frac{\tau}{\sqrt{R^2-1}},e^{(1-15M_F)/(15A_F)}\}\rceil$ 显式 ✓（$M_F=B_F+\frac{C_{F,1}}e+\frac{C_{F,2}}3+\frac{C_{F,3}}9$）。**待续**：Thm 4.1 的"at most one"确切作用／$\zeta$ 是否满足 (a)–(d) 及实例化常数／按源文机制**重写** C-46・C-47 ✗ | |
+| C-91 | ⭐ **本会话收束台账（C-61–C-90）＋项目级四级地图** | `docs/C91-session-consolidation-ledger-C61-C90-project-level-map.md`（2026-09-18）| 结构＝**墙 → 叶子 → 技术族 → 剩余缺口**。①主图：`W6`＝**原子墙** → `{UQRL, D10(a), W8(b)}` → （`UQRL` 四族已关 ／ `D10(a)` 新对象未发现 ／ `W8(b)` 收敛到 `V199` 三源）。②`UQRL` 四族关闭表：`Burnol`＝α 参数失配；`FINT`＝α＋β；`large sieve`＝β（`L²`）；`decoupling`＝A＋B（对象／曲率）。③**B 门精确限定语**（不得写成"decoupling 原则不可能"）＝"在当前候选转换及当前曲率模型下，所需的非退化曲率条件没有得到满足；现有实测的二阶差分符号混合及 gap 跳变不能支持所需的标准曲率估计"。④两个 `≠` 升级：`UQRL` 开放 ≠ 不可解；四族已知工具关闭 ≠ 所有可能机制不存在。⑤**禁止重开条件（硬过滤器）**：`UQRL` 重开必须出现新对象或新机制；逐条禁止再换 exponential-sum theorem／再换 `L^p`／再写成 Dirichlet polynomial／再换 Fourier·Hilbert 表示／再把平均估计包装成 uniform estimate。⑥叶子性质四分：`W6` 原子墙／`UQRL` 定量墙／`D10(a)` 对象墙（候选数 0）／`W8(b)` 结构源墙。⑦含本会话勘误与引用完整性台账（`Burnol` 门⑤ 引用 ⚠️ 待核；`C-77` 漏提交已补；花括号 7 处已修）。**性质＝过程性/负面判据类（D 类自用资产），非突破级** ✓ | |
+
+
+---
+
+# 📌 【2026-09-18 定点更新 · 收束台账 `C-91`】项目级四级地图（墙 → 叶子 → 技术族 → 剩余缺口）
+
+> 依据：唐先生 2026-09-18 13:41「直接开 (A)」；台账正本＝`docs/C91-session-consolidation-ledger-C61-C90-project-level-map.md` ✓
+
+$$\text{主图}：\boxed{W6=\textbf{原子墙}}\ \longrightarrow\ \boxed{\{UQRL,\ D10(a),\ W8(b)\}}\ \longrightarrow\ \begin{cases}UQRL & \textbf{四族已关}\\ D10(a) & \textbf{新对象未发现}\\ W8(b) & \textbf{收敛到}\ V199\ \text{三源（逐源待核）}\end{cases}$$
+
+## 一、四级结构（本会话固化）
+
+| 级 | 对象 | 内容 |
+|:--|:--|:--|
+| ① 墙 | `W6` | **原子墙**（无条件三阶矩 at `X≍T` ≡ prime-pair ≡ support>1；不可再分）|
+| ② 叶子 | `UQRL` / `D10(a)` / `W8(b)` | 定量墙 / 对象墙 / 结构源墙 |
+| ③ 技术族 | `UQRL` 下 4 族 | `Burnol`／`FINT`／`large sieve`（＋频率正则性）／`decoupling` |
+| ④ 剩余缺口 | 三者 | `UQRL` 命题开放（已知技术族穷尽）；`D10(a)` 候选数 0；`W8(b)` 逐源核验未做 |
+
+## 二、`UQRL` 四族关闭表
+
+| 技术族 | 关闭原因 |
+|:--|:--|
+| `Burnol` | **α 参数失配**（`λ→0` vs `n≲T₀²`；`C-88`）|
+| `FINT` | **α＋β**（频率＝`log n`；定量内容＝框架／范数等价 `L²` 型；`C-89`）|
+| `large sieve`（＋频率正则性）| **β**（天然 `L²`／平均；`C-89`）|
+| `decoupling` | **A＋B：对象／曲率**（`C-90`）|
+
+$$\textbf{B 门精确限定语（不得写成"decoupling 原则不可能"）}：\text{在}\ \textbf{当前候选转换及当前曲率模型}\ \text{下，所需的}\ \textbf{非退化曲率条件没有得到满足};\ \text{现有实测的二阶差分符号混合及 gap 跳变}\ \textbf{不能支持}\ \text{所需的标准曲率估计}✓$$
+
+## 三、两个 `≠` 升级（必须保留）
+
+$$UQRL\ \textbf{开放}\ \ne\ UQRL\ \textbf{不可解};\qquad \text{四族}\ \textbf{已知工具关闭}\ \ne\ \textbf{所有可能机制不存在}✓$$
+
+## 四、禁止重开条件（硬过滤器）
+
+$$UQRL\ \text{重新开案}：\boxed{\text{必须出现}\ \textbf{新的对象} \text{或}\ \textbf{新的机制}};\qquad \text{以下}\ \textbf{不构成} \text{理由}：$$
+$$\qquad (1)\ \text{再换 exponential-sum theorem};\ (2)\ \text{再换}\ L^p;\ (3)\ \text{再写成 Dirichlet polynomial};\ (4)\ \text{再换 Fourier／Hilbert 表示};\ (5)\ \text{再把平均估计包装成 uniform estimate}✓$$
+
+## 五、叶子性质区分（不可混类）
+
+$$W6：\textbf{原子墙}（\text{结构承重点，非普通候选路线}）;\qquad UQRL：\textbf{定量墙}（\sup_{n\lesssim T_0^2}|E(n,T_0)|\to0）$$
+$$D10(a)：\textbf{对象墙}（\text{须找}\ \text{`C-68` 四件套＋`ARS1`–`ARS6`}\ \text{要求的新对象};\ \#\{\text{候选}\}=0;\ \textbf{不得}\ \text{与"技术族失败"混为一类}）$$
+$$W8(b)：\textbf{结构源墙}（\text{已收敛到}\ V199\ \text{三源};\ \text{下一步＝逐源最后核验，}\textbf{不是}\ \text{重新展开}\ W8\ \text{文献空间}）✓$$
+
+*（本节为指针段，正本见 `C-91`；本文件其余内容不变 ✓）*

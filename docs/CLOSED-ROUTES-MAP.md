@@ -2834,3 +2834,49 @@ $$\qquad \text{(E2)}\ \text{找外部独立研究者复核}\ -\ \textbf{只能�
 $$\text{§E.4 的活问题 ✓}：\text{"类表（六类）【是否完整】？"}\qquad\text{本节的回答 ✓}：\text{在【第四箭头}／\sqrt{\ }\text{-正性}／\text{稳定性】这三条具体支线上已给出}\textbf{逐项封闭} ✓\ \text{与}\textbf{一个命名残量} ⚠️$$
 $$\qquad\Longrightarrow\ \text{本节}\textbf{不} \text{回答 §E.4 的完整性问题 ✗ —— 二者是同一缺口的两个视角 ✓}$$
 $$\boxed{\textbf{V137 ＝ SEARCH BRANCH CLOSED}\ ✓\qquad\ne\qquad\text{RH CLOSED}\ ✗}$$
+
+
+---
+
+# 📌 【2026-09-18 定点更新 · 收束台账 `C-91`】项目级四级地图（墙 → 叶子 → 技术族 → 剩余缺口）
+
+> 依据：唐先生 2026-09-18 13:41「直接开 (A)」；台账正本＝`docs/C91-session-consolidation-ledger-C61-C90-project-level-map.md` ✓
+
+$$\text{主图}：\boxed{W6=\textbf{原子墙}}\ \longrightarrow\ \boxed{\{UQRL,\ D10(a),\ W8(b)\}}\ \longrightarrow\ \begin{cases}UQRL & \textbf{四族已关}\\ D10(a) & \textbf{新对象未发现}\\ W8(b) & \textbf{收敛到}\ V199\ \text{三源（逐源待核）}\end{cases}$$
+
+## 一、四级结构（本会话固化）
+
+| 级 | 对象 | 内容 |
+|:--|:--|:--|
+| ① 墙 | `W6` | **原子墙**（无条件三阶矩 at `X≍T` ≡ prime-pair ≡ support>1；不可再分）|
+| ② 叶子 | `UQRL` / `D10(a)` / `W8(b)` | 定量墙 / 对象墙 / 结构源墙 |
+| ③ 技术族 | `UQRL` 下 4 族 | `Burnol`／`FINT`／`large sieve`（＋频率正则性）／`decoupling` |
+| ④ 剩余缺口 | 三者 | `UQRL` 命题开放（已知技术族穷尽）；`D10(a)` 候选数 0；`W8(b)` 逐源核验未做 |
+
+## 二、`UQRL` 四族关闭表
+
+| 技术族 | 关闭原因 |
+|:--|:--|
+| `Burnol` | **α 参数失配**（`λ→0` vs `n≲T₀²`；`C-88`）|
+| `FINT` | **α＋β**（频率＝`log n`；定量内容＝框架／范数等价 `L²` 型；`C-89`）|
+| `large sieve`（＋频率正则性）| **β**（天然 `L²`／平均；`C-89`）|
+| `decoupling` | **A＋B：对象／曲率**（`C-90`）|
+
+$$\textbf{B 门精确限定语（不得写成"decoupling 原则不可能"）}：\text{在}\ \textbf{当前候选转换及当前曲率模型}\ \text{下，所需的}\ \textbf{非退化曲率条件没有得到满足};\ \text{现有实测的二阶差分符号混合及 gap 跳变}\ \textbf{不能支持}\ \text{所需的标准曲率估计}✓$$
+
+## 三、两个 `≠` 升级（必须保留）
+
+$$UQRL\ \textbf{开放}\ \ne\ UQRL\ \textbf{不可解};\qquad \text{四族}\ \textbf{已知工具关闭}\ \ne\ \textbf{所有可能机制不存在}✓$$
+
+## 四、禁止重开条件（硬过滤器）
+
+$$UQRL\ \text{重新开案}：\boxed{\text{必须出现}\ \textbf{新的对象} \text{或}\ \textbf{新的机制}};\qquad \text{以下}\ \textbf{不构成} \text{理由}：$$
+$$\qquad (1)\ \text{再换 exponential-sum theorem};\ (2)\ \text{再换}\ L^p;\ (3)\ \text{再写成 Dirichlet polynomial};\ (4)\ \text{再换 Fourier／Hilbert 表示};\ (5)\ \text{再把平均估计包装成 uniform estimate}✓$$
+
+## 五、叶子性质区分（不可混类）
+
+$$W6：\textbf{原子墙}（\text{结构承重点，非普通候选路线}）;\qquad UQRL：\textbf{定量墙}（\sup_{n\lesssim T_0^2}|E(n,T_0)|\to0）$$
+$$D10(a)：\textbf{对象墙}（\text{须找}\ \text{`C-68` 四件套＋`ARS1`–`ARS6`}\ \text{要求的新对象};\ \#\{\text{候选}\}=0;\ \textbf{不得}\ \text{与"技术族失败"混为一类}）$$
+$$W8(b)：\textbf{结构源墙}（\text{已收敛到}\ V199\ \text{三源};\ \text{下一步＝逐源最后核验，}\textbf{不是}\ \text{重新展开}\ W8\ \text{文献空间}）✓$$
+
+*（本节为指针段，正本见 `C-91`；本文件其余内容不变 ✓）*
