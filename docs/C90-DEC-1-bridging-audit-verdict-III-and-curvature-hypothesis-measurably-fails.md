@@ -24,7 +24,7 @@ $$\qquad \Longrightarrow\ \text{未见第四类}\ \mathcal T \Longrightarrow \te
 
 ## §2 ⭐ **Gate B（曲率来源）**：✗ **失败——且在假设层面**（档案已实测）
 
-$$\text{档案逐字（`PAPERA-uniformity-attack.md` 首段）}：\text{"}\text{[§4 区域 B 的结论}\textbf{已撤回}\text{]}}\ \text{标准 van der Corput 二阶导检验要求}\ \lambda\le|f''|\le\alpha\lambda\ \textbf{（定号＋下有界）}，\text{而}\ \phi_k=n\theta(\gamma_k)\ \text{的二阶差分}\ \textbf{符号 50/50 混合}\ \text{（实测 正 999942／负 1001108）——由符号随机 gap 跳变主导} \Longrightarrow \textbf{标准检验／sup-form／run-split 均为误用}\text{"}✓✓$$
+$$\text{档案逐字（`PAPERA-uniformity-attack.md` 首段）}：\text{"}\text{[§4 区域 B 的结论}\textbf{已撤回}\text{]}\ \text{标准 van der Corput 二阶导检验要求}\ \lambda\le|f''|\le\alpha\lambda\ \textbf{（定号＋下有界）}，\text{而}\ \phi_k=n\theta(\gamma_k)\ \text{的二阶差分}\ \textbf{符号 50/50 混合}\ \text{（实测 正 999942／负 1001108）——由符号随机 gap 跳变主导} \Longrightarrow \textbf{标准检验／sup-form／run-split 均为误用}\text{"}✓✓$$
 $$\text{vdC 离散式（`PAPERA-expsum.md` §4 复现）}：\Bigl|\sum e^{i\phi_k}\Bigr|\le M\sqrt\Lambda+\Lambda^{-1/2},\qquad \Lambda=\max_k|n\,\Delta^2\theta_k|,\quad \Delta^2\theta_k=\theta_{k+2}-2\theta_{k+1}+\theta_k✓$$
 $$\Longrightarrow\ \textbf{B 失败的两重理由}：\text{(i)}\ \textbf{定号假设} \text{不成立（实测 50/50）};\ \text{(ii)}\ \text{即便形式套用，也得不出所需界（配额不足）}✓✓$$
 $$\qquad ⭐\ \text{推论（本档）}：\text{decoupling 与 vdC}\ \textbf{同族}（\text{均需曲率／横截性"非退化且有下界"） \Longrightarrow \text{定号失效} \Rightarrow \textbf{decoupling 亦不能咬}}✓✓$$
