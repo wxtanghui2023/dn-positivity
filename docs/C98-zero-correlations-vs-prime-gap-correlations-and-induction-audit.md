@@ -144,3 +144,13 @@ $$\Longrightarrow\ \boxed{\text{归纳法不能解决无限问题}：\textbf{归
    ⟹ 归纳不能解决无限问题，理由 = 归纳步所需的算术输入正是那堵墙本身（与 R1/R2 同址）
 ✅ 净产出：①零点侧五项实测（含 493σ 自相关、饱和刚性）✓ ②两侧关系定位（= support>1 等价链）✓ ③归纳法判词 ✓ ④三处自我错误修正记录 ✓
 ```
+
+---
+
+## §6 ⚠️ **勘误（唐先生 2026-09-18 15:09 指定）**
+
+$$\textbf{(1)}\ \text{§1 A4 的}\ \textbf{措辞降级}：\text{不得写"零点过程本身具有}\ \textbf{饱和刚性}"✗$$
+$$\qquad \text{应写}\ \boxed{\text{observed finite-range saturation of the chosen }S\text{-increment statistic}}✓\（\text{即：所测统计量在有限范围内饱和}）$$
+$$\qquad ⚠️\ \text{且}\ \textbf{不得} \text{升级为"GUE 数方差的内禀饱和"}✗\（\text{因}\ S(t)\ \text{的定义、平滑／非平滑计数、端点误差、归一化}\ \textbf{均未严格拆开}）✓$$
+$$\textbf{(2)}\ \text{§1 A5(iii) 已显示"窗口锚在零点上会改变被测对象"} \Longrightarrow \text{正说明此处}\ \textbf{必须极谨慎}✓✓$$
+$$\textbf{(3)}\ \text{待办（新登记）}：\text{把}\ \textbf{统计量定义与文献 convention} \text{彻底统一}（\frac1{2\pi^2}\log\log T\ \text{与另一种常数系数版本}\ \textbf{不应长期并列}）⟹ \text{另开一档专做}✓$$
