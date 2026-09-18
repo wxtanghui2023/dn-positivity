@@ -62,11 +62,11 @@ $$\Longrightarrow\ \boxed{\text{成功攻击必须提供}\ \textbf{真正的}\ n
 
 $$\text{FINT 是}\ \textbf{恒等式} \Longrightarrow \text{按}\ \text{`C-82`}：\text{恒等式}\ \textbf{不给界};\ \text{要给界须用}\ \textbf{衰减界}✓$$
 $$\qquad \text{但衰减界给的是}\ \textbf{框架／范数等价（}\ L^2\text{）} \Longrightarrow \text{落}\ \textbf{(β)}✓✓$$
-$$\qquad ⚠️\ \text{故}\ \text{`C-82`} \text{与本节}\ \textbf{独立同向}：\text{两条不同的路都指向"}\textbf{恒等式＋}L^2\ \text{定量内容不足以修一个}\ L^\infty\text{-in-}n\ \text{的缺口"}}✓$$
+$$\qquad ⚠️\ \text{故}\ \text{`C-82`} \text{与本节}\ \textbf{独立同向}：\text{两条不同的路都指向"}\textbf{恒等式＋}L^2\ \text{定量内容不足以修一个}\ L^\infty\text{-in-}n\ \text{的缺口"}✓$$
 
 ## §5 判词 ＋ **升级条件**（预注册）
 
-$$\boxed{\text{FINT}\ \textbf{不闭合}\ UQRL};\ \text{结构上属"}\textbf{两套完备极小系统}\text{"对偶族（与}\ \text{Burnol}\ \text{同族}）\Longrightarrow \text{按过滤器}\ \textbf{关闭}}✓$$
+$$\boxed{\text{FINT}\ \textbf{不闭合}\ UQRL};\ \text{结构上属"}\textbf{两套完备极小系统}\text{"对偶族（与}\ \text{Burnol}\ \text{同族}）\Longrightarrow \text{按过滤器}\ \textbf{关闭}✓$$
 $$\qquad ⚠️\ \text{但}\ \textbf{不比 Burnol 更差}：\text{FINT}\ \textbf{RH-free}✓;\ \text{且它给的是}\ \textbf{显式基}（\text{非仅存在性}）✓$$
 $$\textbf{升级条件（若满足则重新开案）}：\text{能从基函数衰减}\ \textbf{直接} \text{提取一个}$$
 $$\qquad \boxed{\sup_{n\le cT^2}\ \text{意义下的尾项界},\ \text{且}\ \textbf{不引入零点分布信息}}✓$$
