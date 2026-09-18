@@ -29,7 +29,7 @@ $$\qquad \text{即}\ \text{唐先生的"M 个素数关联"直觉}\ \textbf{落�
 $$\text{模型 G（全局，1 参数）}：\lambda_{\mathcal D}=C\cdot S(\mathcal D)\cdot e^{-span/\log x}✓$$
 $$\text{模型 S（逐跨度，17 参数）}：\lambda_{\mathcal D}=C_{span}\cdot S(\mathcal D) \Longrightarrow \text{彻底移除跨度效应}✓$$
 $$\text{Pearson}：\chi^2=\sum_{\mathcal D}\frac{(O_{\mathcal D}-\lambda_{\mathcal D})^2}{\lambda_{\mathcal D}}✓$$
-$$\qquad \text{（计数为}\ \textbf{多项分布}：每个位置恰落一个型}\ \Longrightarrow \text{Pearson 定理适用}）✓$$
+$$\qquad \text{（计数为}\ \textbf{多项分布}：每个位置恰落一个型\ \Longrightarrow \text{Pearson 定理适用}）✓$$
 
 | `N` | 模型 G `χ²/df` | 模型 S `χ²/df` | 跨度内 `χ²/df` 范围 |
 |:--|--:|--:|:--|
