@@ -32,7 +32,7 @@ $$[0,60]_{(1)}\to[60,84]_{(5)}\to[75,105]_{(4)}\to[100,140]_{(3)}\to[132,156]_{(
 $$\to[165,195]_{(4)}\to[204,228]_{(5)}\to[220,260]_{(3)}\to[255,285]_{(4)}\to[276,300]_{(5)}\to[300,360]_{(1)} .$$
 $\square$
 
-**Numerical check** : minimizing numerically over a fine grid gives $\min_\theta\max_{1\le k\le5}\cos k\theta=0.5$, attained at $\theta=60^\circ$ and 00^\circ$ (grid value /usr/bin/sh.5000014$).
+**Numerical check** (复核): minimizing numerically over a fine grid gives $\min_\theta\max_{1\le k\le5}\cos k\theta=0.5$, attained at $\theta=60^\circ$ and $300^\circ$ (finest-grid value $0.5000014$).
 
 **Optimality.** The constant $1/2$ is best possible: at $\theta=60^\circ$, $(\cos k\theta)_{k=1}^{5}=(1/2,-1/2,-1,-1/2,1/2)$, so the maximum equals exactly $1/2$. Hence no larger constant can hold uniformly.
 
