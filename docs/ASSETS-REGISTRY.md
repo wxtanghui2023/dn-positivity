@@ -493,9 +493,9 @@ $$\textbf{(一) 经验线（M-窗口记忆／零点相关）}：$$
 $$\qquad \text{`C-97`}：\text{素数间隙记忆（}N=2\times10^7\text{）——}\textbf{硬记忆＝可容许性（}\mathfrak S=0\ \text{精确对上）};\ \text{残类反重复（LS 2016，}\textbf{首次登记}）;\ \text{间隙负自相关}\ r_1=-0.0356（40\sigma）✓$$
 $$\qquad \text{`C-98`}：\text{零点侧}\ r_1=-0.34889（493\sigma）;\ \text{配对相关合 GUE};\ \textbf{数方差平坦}\ 0.33\text{–}0.43（\text{有限范围饱和，}\textbf{措辞已降级}）✓$$
 $$\qquad \text{`C-99`～`C-102`}：\text{support>1 对偶残差探针——}\textbf{三窗稳定性 ＋ 合成 GUE 对照（自校准）};\ \text{结论：}\textbf{1 是可稳定恢复的对偶带宽边界，未观察到可用的}\ >1\ \text{结构}✓$$
-$$\qquad \text{`C-117`～`C-121`}：\text{M-窗口 ——}\textbf{纯跨度律}（\text{斜率}\to-1/\log x）;\ \textbf{非两体}（\text{链式归约被拒：}\chi^2/df\ 109.6\to855.3）;\ \text{标度律＝路线边界资产（未扩展）✓$$
+$$\qquad \text{`C-117`～`C-121`}：\text{M-窗口 ——}\textbf{纯跨度律}（\text{斜率}\to-1/\log x）;\ \textbf{非两体}（\text{链式归约被拒：}\chi^2/df\ 109.6\to855.3）;\ \text{标度律＝路线边界资产（未扩展）}✓✓$$
 
-$$\textbf{(二) 机制提取线}：\text{`C-104`（五原语 vs `FZ-2`／`FZ-3`，无逃逸）／`C-105`（`M1-RH` 五门：Gate C ✓、Gate E ✓、Gate A ✗ ⟹ 有界类 DEAD）／`C-106`（`M2`＋赋值提升交叉，双半皆有关键点）／`C-107`（`FZ-2` 未测项 T1–T3 全 ✗，吸收目标精确化到 `V247`／`V248`）／`C-108`（三论文细节 D1–D7，6/7 已有）／`C-109`（七技术 S1–S7：3 在用／3 已覆／**1 新槽 S1**＝沿形变的算术 Poincaré 型不等式，落 DBN 循环线）✓$$
+$$\textbf{(二) 机制提取线}：\text{`C-104`（五原语 vs `FZ-2`／`FZ-3`，无逃逸）／`C-105`（`M1-RH` 五门：Gate C ✓、Gate E ✓、Gate A ✗ ⟹ 有界类 DEAD）／`C-106`（`M2`＋赋值提升交叉，双半皆有关键点）／`C-107`（`FZ-2` 未测项 T1–T3 全 ✗，吸收目标精确化到 `V247`／`V248`）／`C-108`（三论文细节 D1–D7，6/7 已有）／`C-109`（七技术 S1–S7：3 在用／3 已覆／**1 新槽 S1**＝沿形变的算术 Poincaré 型不等式，落 DBN 循环线）}✓✓$$
 
 $$\textbf{(三) `CREATE-SPEC-12`（突破口）}：\text{门槛 (a)–(d)}\ \text{＋}\ \textbf{五候选全败}（\text{B1/B2 循环};\ \text{B3 过强};\ \text{B4 边界定理不可变形};\ \text{B5 正项恒等式自动满足}）;\ \text{新增：}\textbf{四重对称} \Longrightarrow \text{离轴计数}\in4\mathbb Z \Longrightarrow \text{门槛放宽为}\ \le3✓✓$$
 $$\qquad \Longrightarrow \textbf{突破口对象仍未被占据};\ \text{log-free 排除路线对已知机制仍封闭（}\text{`C-126` 的"渐近零例"细化到对象级}）✓✓$$
