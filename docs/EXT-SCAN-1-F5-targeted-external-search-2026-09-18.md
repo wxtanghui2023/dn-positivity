@@ -90,8 +90,7 @@ $$\textbf{下一步（建议序）}：\text{① 核 §4 候选（成本极低，
 
 $$\text{全文不可得}（\text{preprints.org 被 Akamai 反爬挡住; 两次尝试皆返回保护页}） \Longrightarrow \text{改用}\ \textbf{摘要级核实}✓$$
 $$\text{作者}：\textbf{Avi Gershon}（2026-04，preprints.org 202604.0159／202604.1513）✓$$
-$$\text{摘要}\ \textbf{逐字}：\text{"We prove strict log-concavity of the Riemann-Jacobi kernel, establish hyperbolicity of the Jensen
-polynomials}\ J_{d,n}(x)\ \text{for}\ \boxed{d\le22,\ n\le14}\text{, and prove that the global Riemann Hypothesis is }\textbf{algebraically equivalent to}\ \text{a subluminal condition on the Wronskian components."}✓✓$$
+$$\text{摘要}\ \textbf{逐字}：\text{"We prove strict log-concavity of the Riemann-Jacobi kernel, establish hyperbolicity of the Jensenpolynomials}\ J_{d,n}(x)\ \text{for}\ \boxed{d\le22,\ n\le14}\text{, and prove that the global Riemann Hypothesis is }\textbf{algebraically equivalent to}\ \text{a subluminal condition on the Wronskian components."}✓✓$$
 
 $$\textbf{否掉的四条理由（全部来自其自身材料或独立文献）}：$$
 $$\qquad \textbf{(i)}\ \text{它证明的是}\ \boxed{\textbf{有限范围}}\（d\le22,\ n\le14）—— \text{而 GORZ 2019}\ \textbf{已证}\ n\ge N(d)\ \text{及}\ 1\le d\le8✓✓$$
