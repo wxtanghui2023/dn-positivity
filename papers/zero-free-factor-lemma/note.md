@@ -49,6 +49,14 @@ $$\qquad \Longrightarrow \textbf{投稿前必办}：\text{检索}\ \text{"factor
 $$\textbf{推论 2／3}\ \text{的内容量更大}，\ \text{但}\ \text{其各部分在文献中}\ \textbf{可能已散见}（\text{"完成化因子零-free"是常识}）✓$$
 $$\qquad \Longrightarrow \text{本文可主张的}\ \textbf{唯一形态}：\text{把}\ (1)(2)(3)\ \text{组织为}\ \textbf{"变形分类"的一个判据}，\ \text{并明确指出}\ \textbf{非乘性＋系数侧的第四类尚未实例化}✓✓$$
 
+### §4.1 ⭐ 文献缺口（2026-09-18 核查所得，可引）
+
+$$	ext{Tao（Polymath15 博客，}\Lambda\ 	ext{非负一文）}\ 	extbf{逐字}：	ext{"The literature so far has almost exclusively focused on implications of the form 'information about zeroes of zeta'}	o	ext{'information about the de Bruijn–Newman constant'}	ext{, with the notable exception of course of the implication }\Lambda\le0\Rightarrow\mathrm{RH}	ext{. It is conceivable that one could work on }	extbf{the converse}	ext{ and eventually show, for instance, that }	extbf{smallness of }\Lambda\ 	extbf{implies a zero free region for zeta}	ext{"}✓✓$$
+
+$$\Longrightarrow 	ext{(i)}\ 	ext{已研方向＝"零点}	o\ 	ext{常数"};\quad 	ext{(ii)}\ ⭐\ 	extbf{反向（常数}	o\ 	ext{零-free 区域）"可设想但未尝试"} \Longrightarrow 	ext{本文 §3 的攻向有}\ 	extbf{具名缺口}✓✓$$
+$$\qquad 	ext{(iii)}\ ⚠️\ 	ext{Tao 同段}\ 	extbf{自评"extremely inefficient route"} \Longrightarrow 	ext{引用时}\ 	extbf{须一并写出} 	ext{此先验悲观}✓✓$$
+$$\qquad ⚠️\ 	ext{引文为}\ 	extbf{检索片段级}（	ext{`[外搜·未读全文]`}） \Longrightarrow 	ext{对外引用前须核博客原文}✓$$
+
 ## §5 何者可证伪本文的相关判断
 
 $$\text{若出现}\ \textbf{一个乘性变形却改变了零点位置} \Longrightarrow \text{引理 1 有误}（\text{不可能：}\blacksquare\ \text{已证}）✓$$
