@@ -4,7 +4,7 @@
 $$\textbf{(二)}\ ⭐\ \textbf{第一刀实算（本档新）}：\min_\theta\sum_{k\le5M}(\mathrm{Re}\,S(k))^2\ \approx\ \frac{KM}{4}\ (\text{对抗最优化}) \Longrightarrow \text{相对阈值}\ K/4\ \text{的比值}\ \textbf{约等于}\ M✓✓$$
 $$\textbf{(三)}\ ⚠️\ \textbf{更正}\ \text{`ENGINE-5`}\ \text{的悲观估计}：\text{其粗略界}\ \tfrac12MK-cM^2\log K\ \text{在}\ M=11\ \text{时已}\ \textbf{为负}（302.5-484<0）\ \textbf{完全无用};\ \text{而真实最小值}\approx134✓✓$$
 $$\textbf{(四)}\ ⭐\ \text{真障碍}＝\text{对角项／cross 项的}\ \delta\text{-依赖}（\theta_j\approx0\bmod\pi\ \text{时}\ D_K\ \text{尾大}）\Longrightarrow \text{需}\ \textbf{分离二分}✓✓$$
-$$\textbf{(五)}\ \text{下一步}＝\text{写这个二分}：\textbf{近退化}（多个}\ \theta_j\approx0\bmod\pi）\ \text{直接给}\ \max f\ \text{大};\ \textbf{非退化}\Longrightarrow\text{cross 项受}\ 1/\delta\ \text{控制}✓✓$$
+$$\textbf{(五)}\ \text{下一步}＝\text{写这个二分}：\textbf{近退化}（多个\ \theta_j\approx0\bmod\pi）\ \text{直接给}\ \max f\ \text{大};\ \textbf{非退化}\Longrightarrow\text{cross 项受}\ 1/\delta\ \text{控制}✓✓$$
 
 FREEZE-ACK: 本档即冻结期内的第一刀实算与更正（依 `§8.1`；不产候选结论）
 
