@@ -84,3 +84,28 @@ $$\textbf{③ 对"修复 Brown Lemma 5"的定位}：\text{所需}\ \textbf{只�
 技术词 参数假设充分性  命中文件数=0 ::  ⟹ 本档新增
 ```
 **读数（按实测）**：三项**全 0 档 ⟹ 均本档新增** ✓
+
+---
+
+## §8 【定位更正·唐先生 20:14 提问】这是我们的，还是别人本来就有的？
+
+$$	ext{问}：	ext{本档的"第二条＝初等定理"，}	extbf{是我们证的，还是别人论文本来就有的}？$$
+$$	extbf{答（逐条核实后）}：	ext{两者都不是 —— 需要分三层说清}✓$$
+
+$$	extbf{① 计算是我们做的}：	ext{该}\ D=\tfrac98B_2-B_1\ 	ext{的系数展开在}\ 	ext{`C-67`}\ 	ext{与}\ 	ext{Droll 原文中}\ 	extbf{均未出现}✓$$
+$$\qquad （	ext{检索}\ 	ext{Droll 全文：}(9/4)\ 	ext{因子}\ 	extbf{仅出现在猜想陈述本身}，	ext{无单独推导}✓）$$
+
+$$	extbf{② 但 Droll}\ 	extbf{自己也没证}（	ext{逐字}）：$$
+> "We relegate the proof of variants of Conjecture 3.2.7 to future work."
+
+$$\qquad 	ext{他把"修复 Lemma 5 / 证明 3.2.7"明确定为}\ 	extbf{将来的工作}✓；	ext{且他指出}\ 	ext{Conjecture 3.2.7}\ 	ext{的}\ 	extbf{必要性来自 Brown [3, Lemma 5] 证明中的两处错误}✓$$
+
+$$	extbf{③ }\ 	extbf{关键在于：这是}\ 	extbf{初等事实}，	ext{很可能是其设定下的}\ 	extbf{显然推论}✓✗：$$
+$$\qquad 	ext{由他自己假定的}\ a,c,d>0\ 	ext{与}\ H>e，\ 	ext{比较式只需几行} \Longrightarrow 	extbf{任何读者都能立刻验证}✓$$
+$$\qquad \Longrightarrow\ 	extbf{不得作为"我们的新定理/贡献"主张}✗\（	ext{这与}\ 	ext{NEG-REGISTER}\ 	ext{的引用纪律一致}）✓$$
+
+$$	extbf{④ 那么它有什么价值}（	ext{诚实版}）：	ext{仅一条 —— }	extbf{澄清猜想的实质}：$$
+$$\qquad 	ext{3.2.7 的}\ 	extbf{全部实质内容＝第一条}；	ext{第二条不构成额外要求} \Longrightarrow 	ext{论文 B 的覆盖声明可以}\ 	extbf{写完整}✓$$
+$$\qquad 	ext{建议措辞（Remark，}	extbf{不宣称新性}）："	ext{the second inequality is an elementary consequence of the parameter hypotheses; the substance of the conjecture is its first inequality}"✓$$
+
+$$	extbf{⑤ 建议定位}：	ext{`C-179`}\ 	ext{的记录改为}\ 	extbf{澄清性注记（clarification）}，	ext{不列}\ 	ext{ASSETS-REGISTRY}\ 	ext{的成果栏}✓$$

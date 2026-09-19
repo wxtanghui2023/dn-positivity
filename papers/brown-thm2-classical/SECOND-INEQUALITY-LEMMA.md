@@ -58,3 +58,14 @@ Note: `3a + b > 0` is **not** used.
 
 `scripts/second_inequality_check.py` — exact rational coefficients, sample sweep
 (`(H,a,b⁺,c,d)` incl. the ζ-type `a ≈ 0.159`, `b⁺ = 0`); all samples give `D > 0`.
+
+## Positioning (read before citing)
+
+This is a **clarification, not a novel theorem**. The computation is ours, but the fact
+is elementary and almost certainly implicit in Droll's setup (his hypotheses `a,c,d>0`,
+`H>e`). Droll himself does not prove it — verbatim: *"We relegate the proof of variants
+of Conjecture 3.2.7 to future work."* Its only value: it shows that the **substance of
+Conjecture 3.2.7 is its first inequality** (which `main.md` proves at `τ = 1`), so the
+paper may honestly state its coverage of the conjecture. Suggested wording: *"the second
+inequality is an elementary consequence of the parameter hypotheses; the substance of the
+conjecture is its first inequality."* Do **not** claim novelty for this step.
