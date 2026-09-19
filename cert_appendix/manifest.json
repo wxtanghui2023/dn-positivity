@@ -1,0 +1,48 @@
+{
+ "generated_utc": "2026-09-19T07:16:22Z",
+ "algorithm": "adaptive branch-and-bound + exact per-box lower bound",
+ "conservative": {
+  "SLACK_per_term": 1e-12,
+  "TEST_EPS_pi_test": 1e-09
+ },
+ "certifier_script": "scripts/rpM_adaptive_certificate_idx.py",
+ "runs": [
+  {
+   "M": 3,
+   "ok": true,
+   "neval": 17440,
+   "unresolved": 0,
+   "min_margin": 0.002004961256163118,
+   "max_depth": 4,
+   "N0": 10,
+   "seconds": 0.06,
+   "recorded_seconds_wall": 0.2,
+   "command": "python3 scripts/rpM_adaptive_certificate_idx.py 3 10 20000000 40"
+  },
+  {
+   "M": 4,
+   "ok": true,
+   "neval": 1036096,
+   "unresolved": 0,
+   "min_margin": 0.0002099798169962197,
+   "max_depth": 3,
+   "N0": 20,
+   "seconds": 5.55,
+   "recorded_seconds_wall": 5.69,
+   "command": "python3 scripts/rpM_adaptive_certificate_idx.py 4 20 20000000 40"
+  },
+  {
+   "M": 5,
+   "ok": true,
+   "neval": 72440000,
+   "unresolved": 0,
+   "min_margin": 3.956783786618345e-06,
+   "max_depth": 4,
+   "N0": 10,
+   "seconds": 951.27,
+   "source": "C-168 记录（已跑完，未在本次重跑）",
+   "command": "python3 scripts/rpM_adaptive_certificate_idx.py 5 10 400000000 40"
+  }
+ ],
+ "manifest_sha256_16": "7404cb37e7258940"
+}
