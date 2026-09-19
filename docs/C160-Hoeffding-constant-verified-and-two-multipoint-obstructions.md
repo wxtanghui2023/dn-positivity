@@ -30,7 +30,7 @@ $$\qquad \text{本处}\ X=\cos(k\varphi_j)\in[-1,1] \Longrightarrow (b-a)=\mathb
 $$\qquad \text{和}：\mathbb Ee^{sS}\le e^{s^2\cdot4M/8}=e^{s^2M/2}\ ;\ \ \text{Chernoff}：\ \mathbb P(S\ge t)\le e^{-st+s^2M/2}\ \xrightarrow{s=t/M}\ e^{-t^2/(2M)}✓$$
 $$\qquad \text{两侧}\Longrightarrow\boxed{2e^{-t^2/(2M)}}✓✓$$
 $$\text{与标准形式对照}：\mathbb P\le2e^{-2t^2/\sum_i(b_i-a_i)^2}\ \text{且}\ \textstyle\sum_i(b_i-a_i)^2=4M \Longrightarrow 2t^2/(4M)=t^2/(2M)✓✓$$
-$$\Longrightarrow \textbf{原常数正确}；\ \text{"}2t^2/M\text{"}\ \text{对应区间宽度}\ 1（\text{相当于}\ \cos\in[-\tfrac12,\tfrac12]），\ \text{与本处不符}✓$$
+$$\Longrightarrow \textbf{原常数正确}；"2t^2/M\text{"}\ \text{对应区间宽度}\ 1（\text{相当于}\ \cos\in[-\tfrac12,\tfrac12]），\ \text{与本处不符}✓$$
 
 $$\textbf{蒙特卡洛独立裁决}（M=12,t=8.0,n=4\times10^5）：$$
 $$\begin{array}{c|r|r|r}
@@ -77,7 +77,7 @@ $$\qquad \text{③}\ \text{未覆盖类}：\mathrm{lcm}>5(M+1)\ \text{（无理�
 
 ## §5 边界与回查
 
-- ⚠️ §1 的重推为**逐行**；蒙特卡洛为**实算**（`n=4\times10^5`，三个不同 `k`）⟹ 裁决为**经验级**（非证明），但足以否定"}\ 2t^2/M\ \text{"}（因其小于经验值）✓✓
+- ⚠️ §1 的重推为**逐行**；蒙特卡洛为**实算**（`n=4\times10^5`，三个不同 `k`）⟹ 裁决为**经验级**（非证明），但足以否定 "2t^2/M" 这个常数（因其小于经验值）✓✓
 - ⚠️ §2／§3 为**实算＋初等估计** ✓
 - ⚠️ **不声称** 多点情形可证或不可证；**不声称** 一般单调性 ✓
 - **未用** RH；**未改**任何原档 ✓
