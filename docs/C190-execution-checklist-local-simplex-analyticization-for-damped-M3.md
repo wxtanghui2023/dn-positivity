@@ -240,3 +240,55 @@ $$\qquad \Longrightarrow \text{Step 1-6 仍作为}\ \textbf{独立局部引理} 
 - ⚠️ 本次修复两个实现 bug（`mincos` 的 π-命中判据 ✗；`inside_ball` 的坐标清零 ✗）—— 均由"结果过好/过坏"触发 ✓
 - **未用** RH；**未改**他档 ✓
 - ⚠️ 更高目标的推进（0.37310／0.373108／0.373110）**仍在运行** ✓
+
+---
+
+## §14 【等级归档 · 唐先生 2026-09-19 22:32】CA-1 标记 ＋ 两条方法论结论
+
+### §14.1 当前正式账本
+
+$$\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}✓\qquad \Delta C_3\ \le\ 3.866\times10^{-5}✓$$
+$$\qquad \text{相对旧的}\ 0.023\ \text{区间}：\textbf{缩窄约}\ 590\ \text{倍}✓✓$$
+
+### §14.2 ⚠️ 证明等级：**CA-1（computer-assisted lower-bound certificate）**，**不是**无条件数学定理
+
+$$\text{准确表述}：\boxed{\textbf{computer-assisted lower-bound certificate}}\qquad\textbf{不得} \text{写作"已完成严格解析证明"}✗$$
+$$\text{三个 rigor gate（均未闭合）}：$$
+$$\qquad \textbf{①}\ \text{区间算术版}：⏳（\text{本轮启动}）\qquad\qquad \textbf{②}\ \text{第二独立实现}：⏳$$
+$$\qquad \textbf{③}\ \text{当前仍用}\ \texttt{SLACK}=10^{-12}、\texttt{TEST\_EPS}=10^{-9}\ \text{浮点参数}✓$$
+$$\text{三网格（}N_0=10,14,18\text{）一致}\ = \ \textbf{robustness evidence}✓，\ \textbf{不能} \text{替代 ①②}✗$$
+
+### §14.3 ⭐ 方法论结论（一）：**Step 7 不依赖 Step 6 即可闭合**
+
+$$\textbf{原先判断}：\text{Step 7 必须靠"局部（Step 6）＋远场"拼接}✗ \Longrightarrow \textbf{该判断被数据修正}✓✓$$
+$$\text{实际发生的}：\boxed{\text{separable LB 虽松，但通过足够细分仍能达到}\ 0.3730721881}✓✓$$
+$$\qquad \text{证据}：\text{终端盒}\ 317{,}006\（N_0=10\text{）}\sim 2{,}248{,}231\（N_0=18\text{）}，\textbf{0 未认证}✓$$
+
+### §14.4 ⭐ 方法论结论（二）：weak-cell 的**负面**结论（两条假设均被否掉）
+
+$$\text{原怀疑}：\mathcal W\subset B_\rho(x_\ast)\ \text{或} \text{集中于}\ r_2,r_3\approx1\ \Longrightarrow \textbf{均被数据否定}✗✗$$
+$$\qquad \#(\mathcal W\cap B_\rho)=0✓；\ \frac{|\mathcal W|}{N}=8.45\%✓；\ q_{50}(d)=1.92，\ q_{99}(d)=3.32✓$$
+$$\qquad r\ge0.99\ \text{占比}\ \mathbf{0.0\%}✓；\text{两坐标均}\ge0.9\ \text{仅}\ 11.2\%✓$$
+$$\Longrightarrow \textbf{弱区是全域匀布的分可性松弛}✓\ \text{—— 既非情况 A 也非情况 B，而是}\ \textbf{情形 C}✓$$
+$$\qquad \Longrightarrow \text{局部技巧}\ \textbf{修不掉} \text{它}✗；\textbf{细分可以}✓✓\ \text{—— 值得单独归档}✓$$
+
+### §14.5 审计优先级（唐先生指定）
+
+$$\boxed{\text{Interval arithmetic}\ \to\ \text{independent implementation}\ \to\ \text{再推}\ 0.37310\to0.37311}✓$$
+$$\text{理由}：\text{上下界已只差}\ 3.87\times10^{-5}✓；\text{在浮点 B\&B 上继续抬}\ T\ \text{只得到}\ \textbf{同等级的更窄数值证书}✗$$
+$$\qquad \text{而先把}\ 0.3730721881\ \text{做成}\ \textbf{interval-certified ＋ 独立重实现} \Longrightarrow \textbf{可信度质变}✓✓$$
+
+### §14.6 状态表（按唐先生格式）
+
+$$\begin{array}{l|c}
+\text{项目} & \text{状态}\\\hline
+\text{上界}\ 0.3731108480 & ✅\ \text{interval}\\
+\text{下界}\ 0.3730721881 & ✅\ \text{computer-assisted}\\
+\text{三种}\ N_0 & ✅\ \text{一致}\\
+\text{Step 6 局部引理} & ✅\ \text{独立成立}\\
+\text{Step 7 全局证书} & ✅\ \text{当前阈值闭合}\\
+\text{Interval B\&B} & ⏳\ \text{本轮启动}\\
+\text{第二独立实现} & ⏳\\
+0.37310+\ \text{下界} & ⏳\\
+C_3\ \text{精确值} & ❌\ \text{尚不能声称}\\
+\end{array}✓$$
