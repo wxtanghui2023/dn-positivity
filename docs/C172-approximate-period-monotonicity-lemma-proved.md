@@ -85,3 +85,13 @@ $$\qquad \text{与既有教训一致}：\textbf{结果异常先怀疑自己的�
 技术词 阈值形式          命中文件数=0 ::  ⟹ 本档新增
 ```
 **读数（按实测）**：三项**全 0 档 ⟹ 均本档新增** ✓
+
+---
+
+## §8 【状态更新·C-176】`m_M\le M-1` 已严格化（本引理的推论现无条件）
+
+$$⚠️\ §3\ \text{原写"}\ M\le11\ \text{为数值}"✗ \Longrightarrow \textbf{现已补证}（\text{`C-176`}）✓✓$$
+$$\qquad \text{对}\ 2\le M\le11：\text{显式配置 ＋ 区间算术证书} \Longrightarrow m_M\le M-1\ \textbf{严格}（\text{余量}\ 0.5\text{–}7.8）✓$$
+$$\qquad \text{配}\ M\ge12\ \text{的概率方法（本档同引用）} \Longrightarrow m_M\le M-1\ \textbf{对一切}\ M\ge2\ \textbf{严格}✓✓$$
+$$\Longrightarrow \textbf{本引理的推论（单调性步）不再依赖数值输入}✓✓$$
+$$\qquad （\text{唯一例外}\ M=1：m_1=\tfrac12>0=M-1，\text{与}\ \text{`C-171`}\ \text{一致}）✓$$
