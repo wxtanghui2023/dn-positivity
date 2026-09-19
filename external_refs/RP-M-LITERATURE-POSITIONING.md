@@ -109,3 +109,14 @@ $$\qquad （\text{因}\ |\Re|\le|\cdot|\ \text{只给上界}；\text{且窗口�
 2. **定位句**：本工作研究 **Montgomery Thm 11（实部版、线性窗口 5M）的常数尖锐化**；该窗口在文献中**尚无结果** ✓
 3. **工具对接**：Andersson [4] 用 **Fejér 核** —— 与我方 `C-181` §3(a) 的 Fejér 权路线**同族** ✓（可对照）
 4. **Turán 1984 专著**是幂和法的系统来源（若能取得，可补工具）✓
+
+---
+
+## §11 【丁 · 2026-09-19 21:2x 追加】本轮四项结果并入定位
+
+$$\textbf{(a)}\ \text{Fejér 机制}\ \textbf{可达}\ 5M\ \text{但}\ \textbf{结构上不尖锐}：\text{单位模情形给出}\ \max_{\nu\le5M}\Re S\ge\tfrac{M+1}{20M}\to\tfrac1{20}（\text{C-186}）✓$$
+$$\textbf{(b)}\ \text{尖锐障碍出现在}\ \textbf{阻尼＋非光滑} \text{区}：\inf_{\mathbb D^3}=0.3731<\inf_{\mathbb T^3}=0.8090（\text{C-187}）✓✓$$
+$$\textbf{(c)}\ \text{线性（fixed-λ）证书存在}\ \textbf{可证零均值障碍}：\forall\lambda,\ \inf_x\sum\lambda_k S_k<0（\text{C-188}）✓✓$$
+$$\textbf{(d)}\ \text{新精确值候选}：\text{单模}\ M=3\ \text{极小}\ \approx\cos36°=\tfrac{1+\sqrt5}{4}\ \text{（数值 6 位吻合，}\textbf{待证}）✓$$
+$$\Longrightarrow \text{论文定位句（建议）}：$$
+> **Fejér reaches 5M but is structurally non-sharp; the sharp obstruction occurs in the damped, nonsmooth regime.**
