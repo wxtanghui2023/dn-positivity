@@ -203,7 +203,7 @@ $$\textbf{★ 触及}\ B_\rho(x_\ast)\ \text{的弱格}=0/14317=\mathbf{0.0\%}�
 $$(r_2,r_3)\ \text{投影}：r\ge0.9\ \text{约}\ 32\!-\!34\%；\textbf{两坐标均}\ge0.9\ \text{仅}\ 11.2\%；\ r\ge0.99\ \textbf{为}\ 0.0\%✓$$
 
 $$\Longrightarrow \textbf{诊断结论}：\text{弱区}\ \textbf{既不在}\ x_\ast\ \text{附近}，\textbf{也不沿}\ r\approx1\ \text{成片}✗$$
-$$\qquad 	ext{而是全域匀布的 separability slack}\ ✓\ —— 	ext{既非情况 A 也非情况 B，而是情形 C}\ ✓$$
+$$\qquad \text{而是全域匀布的 separability slack}\ ✓\ —— \text{既非情况 A 也非情况 B，而是情形 C}\ ✓$$
 $$\qquad \Longrightarrow \text{局部技巧（Step 6）}\ \textbf{不能} \text{修掉这些弱格}✗；\text{但}\ \textbf{纯细分可以}✓（\text{下界随盒收缩收敛到真值}）✓$$
 
 ### §13.2 第二刀：直接在 T₁ 上做全局证书 —— **成功** ✓✓
@@ -458,3 +458,38 @@ $$\qquad \Longrightarrow ⭐\ \text{这正是唐先生让}\ \textbf{保留 Step 
 $$\text{阶梯前两档}\ \textbf{仍在纯 B\&B 能力内}：0.37308\ ⟹\ 0.37309✓（\text{各}\ \sim22\ \text{分钟}）✓$$
 $$\qquad \Longrightarrow \text{可先把下界从}\ 0.3730721881\ \text{抬到}\ \mathbf{0.37309}✓（\text{四门照旧}）✓$$
 $$\qquad \text{而}\ 0.37310／0.373108／0.373110\ \text{需要}\ α\ \text{或}\ β✓$$
+
+---
+
+## §20 第二档 target certificate：**T=0.37309 四门全过** ✓✓（2026-09-20 00:10 完成）
+
+$$\text{纪律（§18.2）}：\text{框架}\ \textbf{完全不动}（\text{v3}／N_0=10），\textbf{只改 target}✓\qquad \text{日志}：\texttt{/tmp/t2iv.log}✓$$
+
+$$\textbf{① 铺砌}：\sum_C\mathrm{vol}(C)\overset{?}{=}1\cdot1\cdot\texttt{PI\_UP}^3\ \text{精确相等}=\textbf{True}✓\qquad \text{sha256[:32]}=\texttt{6195e20e3d77e520998d65fe62597021}✓$$
+$$\qquad \text{终端盒}\ 385{,}832\（\text{总评估}\ 771{,}664）✓\qquad \texttt{PI\_UP}>\pi✓$$
+
+$$\textbf{② 严格正性}：\text{验证盒}\ 385{,}832\ |\ \textbf{违反}\ 0\ |\ \min_C\mathrm{LB}^{\rm IV}_C=\mathbf{3.774862\times10^{-10}}>0✓✓$$
+$$\qquad ⭐\ \textbf{最危险格}：\text{id}=384{,}376✓$$
+$$\qquad \qquad lo=(0.7905197143554689,\ 0.8302108764648438,\ 0.3427799912779519,\ 2.5781950660291324,\ 1.4505346298696438)✓$$
+$$\qquad \qquad hi=(0.7905212402343751,\ 0.83021240234375,\ 0.342782388122933,\ 2.578196264451623,\ 1.4505370267146247)✓$$
+
+$$\textbf{③ 区间层双实现}：\text{抽样}\ 2001\ \text{盒（含最危险格）}✓$$
+$$\qquad \max|\mathrm{LB}_A^{\rm IV}-\mathrm{LB}_B^{\rm IV}|=\mathbf{4.441\times10^{-16}}✓（\text{中位}\ 5.551\times10^{-17}）\qquad \text{T-判定一致}=\textbf{True}✓✓$$
+
+### §20.1 内部一致性核对（对称性检查 ✓）
+
+$$\text{最危险格中心}：r_2\approx0.79052,\ r_3\approx0.83021,\ \varphi\approx(0.3428,\ 2.5782,\ 1.4506)✓$$
+$$\Longrightarrow \textbf{本档最危险格即}\ x_\ast\ \textbf{本体}✓\qquad \text{而基线档（§17.1）的最危险格是}\ x_\ast\ \textbf{的镜像}✓✓$$
+$$\Longrightarrow \text{两档在}\ x_\ast\ \text{的两个对称拷贝上轮流取最危险格，与问题固有对称性完全一致}✓✓$$
+
+### §20.2 账本更新
+
+$$\text{旧}：0.3730721881\ \le\ C_3\ \le\ 0.3731108480\qquad（\text{宽}\ 3.866\times10^{-5}）$$
+$$\boxed{\textbf{新}：0.3730900000\ \le\ C_3\ \le\ 0.3731108480}\qquad（\text{宽}\ \mathbf{2.0848\times10^{-5}}）✓✓$$
+$$\qquad \text{下界}：\text{本档 target certificate}✓\qquad \text{上界}：\text{C-189 §9 构型 ＋ 区间算术}✓\qquad \text{精确值}：\textbf{未声称}✗$$
+$$\qquad \text{宽度相对旧档收窄}\ \mathbf{46\%}✓（3.866\times10^{-5}\to2.085\times10^{-5}）$$
+
+### §20.3 ⚠️ 工程记录（须修）
+
+$$\text{本轮}\ v3\ \text{脚本把结果写死为}\ \texttt{/tmp/t1iv3\_result.json}✗ \Longrightarrow \textbf{基线档 JSON 已被本档覆盖}✗（\text{基线数值仅存于}\ \texttt{/tmp/t1iv3.log}✓）$$
+$$\Longrightarrow \text{纪律修正：}\textbf{输出文件名必须按}\ T\ \text{命名}✓（\text{如}\ \texttt{t1iv\_T0.3730721881.json}）\Longrightarrow \text{每档独立证书方可长期审计}✓$$
