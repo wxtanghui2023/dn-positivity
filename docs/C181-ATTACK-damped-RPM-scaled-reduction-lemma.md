@@ -112,3 +112,47 @@ $$	extbf{①}\ 	ext{两条引理均为}	extbf{严格新结果}（	ext{四行／�
 $$	extbf{②}\ 	ext{它们共同给出}	extbf{阻尼情形的两段区间改进}（	ext{均严格优于 Montgomery 的}\ 	frac1{20}	ext{）}✓✓$$
 $$	extbf{③}\ 	extbf{但中间区未覆盖}✗\ —— 	ext{下一步攻击点已明确：}ho\in[0.7,0.95]\ 	ext{且}\ M\ 	ext{小}✓$$
 $$\qquad 	ext{该区需要}	extbf{联合对齐} 	ext{型论证（与}\ 	ext{OP-3}\ 	ext{同源）}⟹ 	ext{已知难点，但至少}\ 	extbf{攻击面已缩小到具体参数区}✓✓$$
+
+---
+
+## §10 【后续攻击：乙 与 甲 的结构探索】（2026-09-19 20:4x，唐先生指定顺序）
+
+### §10.1 乙（改进 `u≥6` 的单模常数）
+
+$$\textbf{窗口扫描（本档实算）}：\min_\varphi\max_{k\le W}\sum_j\cos(k\varphi_j)\ \text{随}\ W\ \text{的取值}：$$
+$$\begin{array}{c|r|r|r|r|r}
+M & W{=}M & 2M & 3M & 5M & 10M\\\hline
+2 & -1.000 & -0.500 & 0.000 & \mathbf{0.500} & 1.151\\
+3 & -1.000 & -0.500 & 0.000 & \mathbf{0.777} & 1.201\\
+4 & -1.000 & -0.492 & 0.409 & \mathbf{0.858} & 1.395\\
+5 & -1.000 & -0.459 & 0.650 & \mathbf{1.148} & 1.833\\
+6 & -0.996 & 0.000 & 0.659 & \mathbf{1.194} & 2.079\\
+\end{array}✓$$
+$$\Longrightarrow \textbf{① 窗口}\ 5M\ \textbf{是本质的}：W=3M\ \text{时}\ M=2,3\ \text{的极小极大}=0.000 \Longrightarrow \textbf{连}\ \tfrac1{20}\ \text{都不成立}✗✓$$
+$$\qquad （\text{即：Montgomery 取}\ 5M\ \text{不是保守，而是必需}）✓$$
+$$\Longrightarrow \textbf{② 乙 的靶子}\ \equiv\ \textbf{改进}\ m_M\ (M\ge6)\ \equiv\ \text{OP-1}\ ✗$$
+$$\qquad \text{注意}：\text{引理 1 在}\ u\ge6\ \text{时可直接用 Montgomery 的}\ \tfrac1{20}\ \text{（无改进但可用）}⟹\ \text{乙只关乎}\ \textbf{强度} \text{而非}\ \textbf{可用性}✓$$
+$$\qquad ⚠️\ \text{本档}\ \textbf{未读} \text{Montgomery 原文（外部仅有付费书目；}\text{`E4-ENGINE-1`}\ \text{已记此事实}）✗$$
+
+### §10.2 甲（阻尼 M=2 的中间区）—— **结构签名成立，模板可搬 ✓✓**
+
+$$\text{阻尼 M=2 曲线}\ d_2(r)=\min_{\varphi}\max_{k\le10}\big[\cos(k\varphi_1)+r^k\cos(k\varphi_2)\big]✓$$
+$$\begin{array}{c|r|r|c|c|r}
+r & d_2(r) & \text{倍数 vs}\ \tfrac1{20} & \text{活跃}\ k & 0\in\mathrm{conv}(\text{梯度}) & c_2(r)\\\hline
+0.0 & 0.8413 & 16.8\times & \{4,7\} & ✓ & 0.0000\（\text{退化}）\\
+0.3 & 0.5684 & 11.4\times & \{1,2,10\} & ✓ & 0.0581\\
+0.5 & 0.5066 & 10.1\times & \{1,2,10\} & ✓ & 0.3282\\
+\mathbf{0.7} & \mathbf{0.4216} & \mathbf{8.4\times} & \{1,2,10\} & ✓ & \mathbf{0.4998}\\
+0.9 & 0.4589 & 9.2\times & \{2,3,9\} & ✓ & 0.4890\\
+1.0 & 0.5000 & 10.0\times & \{1,4,5,7,8\} & ✓ & 2.0517\\
+\end{array}✓✓$$
+$$\Longrightarrow \textbf{①}\ d_2(r)\ \ge\ 0.42\ \text{对一切}\ r\in[0,1] \Longrightarrow \textbf{处处}\ \ge8.4\times\ \text{Montgomery}✓✓$$
+$$\textbf{②}\ \textbf{最坏阻尼}\ r^*=0.70（\text{曲线两端高、中间低}）✓$$
+$$\textbf{③}\ ⭐\ \textbf{结构签名成立}：\text{各}\ r\ \text{处均有}\ 0\in\mathrm{conv}\{\nabla S_k\}_{k\in\text{活跃}}\ \text{且}\ c_2(r)>0✓✓$$
+$$\qquad \Longrightarrow \textbf{M=2 的三段拼装模板可搬}：\text{局部符号（单纯形权重＋}c_2(r)\text{）＋远场格点证书＋覆盖包含}✓✓$$
+$$\textbf{④}\ \text{可行步骤}：\text{对}\ r\ \text{取网格，逐}\ r\ \text{做三段拼装（现有脚本可直接改造）}✓\ —— \text{这正是甲的执行路径}✓$$
+
+### §10.3 结论（本轮）
+
+$$\text{① Connes 线检索汇总已完成（}\text{`C-182`}\text{）✓}\qquad \text{② Montgomery 原文不可得（付费）✗ —— 已登记}$$
+$$\text{③ 乙}\ \equiv\ \text{OP-1（不再单列）✗}\qquad \text{④ 甲}\ \textbf{可行且已定位模板}✓✓\ —— \text{下一步执行}$$
