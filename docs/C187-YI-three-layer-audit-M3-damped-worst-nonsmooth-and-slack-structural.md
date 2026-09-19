@@ -87,3 +87,15 @@ $$\textbf{④}\ \text{新的精确值发现}：\text{单模}\ M=3\ \text{的极�
 技术词 可分性松弛    命中文件数=0 ::  ⟹ 本档新增
 技术词 非光滑极值    命中文件数=0 ::  ⟹ 本档新增
 ```
+
+---
+
+## §8 【勘误指针 · C-189／C-190】§3 的"局部机制失效"判定 **REVOKED**
+
+$$\boxed{\text{C-187}\ §3\ \text{的"阻尼局部机制失效"判定：}\ \textbf{REVOKED}}\ ✓（\text{2026-09-19 22:0x}）$$
+$$\text{错因}：\text{该判定仅在}\ \textbf{3 维}\ \varphi\ \text{子空间} \text{求梯度，而问题维数为}\ \textbf{5}（r_2,r_3,\varphi_1,\varphi_2,\varphi_3）✓$$
+$$\qquad \text{故}\ 0\notin\mathrm{conv}\{\nabla S_k\}\ \text{是}\ \textbf{维数不足的必然结果}✗\ \text{而非结构性阻塞}✓$$
+$$\text{正确结果（}\text{C-189}\text{）}：\text{全 5 维空间中活跃集}\ A=\{1,2,3,4,5,15\}，\#A=6=\dim+1✓$$
+$$\qquad \mathbf{0\in\mathrm{conv}\{\nabla S_\nu:\nu\in A\}}✓（\text{权重全正，残差}\ 3\times10^{-16}），\ c=0.437928>0✓✓$$
+$$\text{状态}：\boxed{\text{阻尼局部 simplex mechanism：ALIVE（数值层，尚未成定理）}}✓$$
+$$\qquad \text{注}：\text{本档}\ §1\（\text{阻尼最坏}）\text{与}\ §2\（\text{可分性松弛}）\ \textbf{不受影响}✓\ —— \text{原文}\ \textbf{保留不覆盖}✓$$
