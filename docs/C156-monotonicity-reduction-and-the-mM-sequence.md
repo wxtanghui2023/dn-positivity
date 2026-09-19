@@ -9,7 +9,7 @@ $$\qquad \Longrightarrow \textbf{只在}\ M=1,2\ \text{取等}；\ M\ge3\ \text{
 $$\textbf{(三)}\ ⭐\ \textbf{文献定位}：(\text{RP}_M)\ \text{是}\ \textbf{Turán–Montgomery–Palojärvi 引理的锐化}（1/20\to\ge1/2，10\times）✓✓$$
 $$\qquad \text{动机（具体）}：\text{可}\ \textbf{补上}\ \text{Palojärvi 注记}\ §3\ \text{的}\ m\ge2\ \text{自足缺口}✓✓$$
 $$\textbf{(四)}\ ⚠️\ \text{单调性}\ \textbf{不是显然}：\text{加点会给每个}\ k\ \text{添一项}\ \cos(k\varphi)\in[-1,1]，\text{可直接压低 max}✓✓$$
-$$\qquad \text{故需证"窗口增大（}5M\to5M+5）\ \text{抵得上"\ \textbf{——这就是真难点}✓✓$$
+$$\qquad \text{故需证"窗口增大（}5M\to5M+5）\ \text{抵得上"}\ \textbf{——这就是真难点}✓✓$$
 
 FREEZE-ACK: 本档即冻结期内的序列实算与归约（依 `§8.1`；不产候选结论）
 
