@@ -41,7 +41,7 @@ $$\begin{array}{c|l|l}
 1 & \text{引理 C：}|z|=1\Rightarrow\max_{k\le5}\Re z^k\ge\tfrac12\ （60^\circ\ \text{取等}） & \textbf{已证}（初等）\\
 2 & \text{鸽笼定理：}\max_{k\le N}\cos(k\theta)\ge\cos\tfrac{2\pi}{N+1}（最优） & \textbf{已证}（三行）\\
 3 & \text{定理 1（}M=2\text{）：}\max_{k\le10}\ge\tfrac12 & \textbf{已证}（三段拼装）\\
-4 & \text{定理 2--4（}M=3,4,5\text{）：}\max_{k\le5M}\ge\tfrac12 & \textbf{证书}（双实现＋误差模型）\\
+4 & \text{定理 2--4（}M=3,4,5\text{）：}\max_{k\le5M}\ge\tfrac12 & \textbf{证书}（\text{`M=3`}\ \text{已有区间算术版（}\text{`C-177`}\text{）；其余为双实现＋误差模型}）\\
 5 & \text{Case A（任意}\ M\text{）：}\ge\tfrac{2M}3+\tfrac13\ \text{点在}\ \pi\mathbb Z\ \text{附近}\Rightarrow f(2)\ge\tfrac12 & \textbf{已证}（三行）\\
 6 & \text{周期单调性引理（}\mathrm{lcm}\le5(M+1)\ \text{类）} & \textbf{已证}（用\ \#2）\\
 7 & m_M\le\sqrt{2M\ln10M}\ (M\ge12\ \Rightarrow\ \le M-1) & \textbf{已证}（概率方法）\\
