@@ -429,3 +429,32 @@ $$\qquad \text{每个新}\ T\ \text{都必须形成}\ \textbf{独立 target cert
 $$\qquad \text{四门照旧}：\text{exact tiling}\to\text{strict interval positivity}\to\text{dual interval check}\to\text{boundary coverage}✓$$
 $$\qquad \text{后续}：0.373108\to0.373110✓$$
 $$\qquad ⚠️\ \textbf{不动} \text{Step 6／局部证书（本刀只改靶）}✓$$
+
+---
+
+## §19 P1 先导诊断：**纯 B&B 的成本天花板 ≈ T=0.37309**（2026-09-19 23:5x）
+
+$$\text{方法}：\text{固定 v3 框架与}\ N_0=10，\text{仅扫描}\ T\ \text{对终端盒数的影响}✓$$
+$$\begin{array}{c|r|r|r}
+T & \text{终端盒数} & \text{总评估} & \text{P2 区间验证预估}\\\hline
+0.3730721881\ (\text{基线}) & 371{,}447 & 742{,}894 & \sim21.7\ \text{分钟}✓\\
+0.3730800000 & 374{,}637 & 749{,}274 & \sim21.9\ \text{分钟}✓\\
+0.3730900000 & 385{,}832 & 771{,}664 & \sim22.5\ \text{分钟}✓\\
+\mathbf{0.3730950000} & \textbf{未收敛}✗ & \text{爆炸}✗ & \textbf{不可行}✗✗\\
+\end{array}✓$$
+$$\Longrightarrow \textbf{关键结论}：\text{从}\ 0.37309\ \text{到}\ 0.373095，\text{成本}\ \textbf{突然爆炸}✗✗$$
+$$\qquad \text{实测}：T=0.373095\ \text{运行}\ 3.5\ \text{分钟时 RSS 已达}\ \mathbf{3.9\ GB}\ \text{且未收敛}✗（\text{宿主仅}\ 7.86\ GB）$$
+$$\qquad \text{原因}：\text{目标逼近真极小}\ 0.3731108\ \text{时，极小点邻域需}\ \textbf{极深细分}✗；\text{边界堆指数增长}✗$$
+
+### §19.1 战略含义（已验证唐先生的预判 ✓）
+
+$$\boxed{\text{纯 B\&B 路线在}\ T\approx0.37309\ \text{处见顶}}✗\qquad \text{若要}\ 0.37310+ \Longrightarrow \textbf{必须换路线}✓$$
+$$\qquad \textbf{路线}\ α：\text{更紧的盒界}（\text{非可分／mixed-}\lambda，\text{C-170 测得 gap 改善}\ 7\!-\!17\times✓）$$
+$$\qquad \textbf{路线}\ β：\textbf{Step 6 局部证书}（B_\rho\ \text{内已有}\ F\ge0.3730722✓）\ +\ \text{远场在}\ B_\rho\ \text{补集上做高靶证书}✓✓$$
+$$\qquad \Longrightarrow ⭐\ \text{这正是唐先生让}\ \textbf{保留 Step 6} \text{的用处所在}✓✓\ —— \text{预判正确}✓$$
+
+### §19.2 可立即执行的（便宜且合法）
+
+$$\text{阶梯前两档}\ \textbf{仍在纯 B\&B 能力内}：0.37308\ ⟹\ 0.37309✓（\text{各}\ \sim22\ \text{分钟}）✓$$
+$$\qquad \Longrightarrow \text{可先把下界从}\ 0.3730721881\ \text{抬到}\ \mathbf{0.37309}✓（\text{四门照旧}）✓$$
+$$\qquad \text{而}\ 0.37310／0.373108／0.373110\ \text{需要}\ α\ \text{或}\ β✓$$
