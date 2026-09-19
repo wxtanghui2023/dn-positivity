@@ -407,3 +407,25 @@ $$\qquad \text{下界}：\text{v3 区间证书}✓\qquad \text{上界}：\text{C
 $$0.37310\ \to\ 0.373108\ \to\ 0.373110✓$$
 $$\qquad ⚠️\ \text{最危险格余量仅}\ 2.83\times10^{-10}✓ \Longrightarrow \text{抬}\ T\ \text{会很快变得更贵}✓；\text{若成本爆炸，}\textbf{Step 6 局部支撑件} \text{已备}✓✓$$
 $$\qquad \textbf{Step 6 保留}（\text{独立局部结构事实，非当前全局下界的必要条件}）✓$$
+
+---
+
+## §18 【勘误 · C-190】目标抬升量算错 10 倍（唐先生 2026-09-19 23:42 指出）
+
+$$\text{原述}✗：T=0.37310\ \text{时目标只比最危险格现在的位置低}\ \sim2.8\times10^{-6}✗$$
+$$\text{正确}✓：\ 0.37310-0.3730721881=\mathbf{2.78119\times10^{-5}}\（\text{即}\ 2.78\times10^{-5}，\text{差}\ \mathbf{10\ \text{倍}}）✓$$
+$$\text{后果}：\text{新目标整体抬高}\ 2.78\times10^{-5}✓ \Longrightarrow \text{下一刀 B\&B 成本}\ \textbf{明显增加}✓（\text{而非微增}）✗$$
+
+### §18.1 收口确认（唐先生 23:42 判定）
+
+$$\boxed{C_3\ \ge\ 0.3730721881}✓\qquad \text{证书链四门全过（见 §17）}✓✓$$
+$$\text{等级}：\text{CA-1 已从"数值计算证据"升级为}\ \textbf{可审计的区间计算机辅助证明}✓✓$$
+$$\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}\qquad（\text{宽}\ 3.866\times10^{-5}）✓$$
+
+### §18.2 下一刀纪律（唐先生指定）
+
+$$\boxed{T_2=0.37310}\qquad \text{保持已通过审计的}\ \textbf{v3 框架不变}，\textbf{只改 target}✓$$
+$$\qquad \text{每个新}\ T\ \text{都必须形成}\ \textbf{独立 target certificate}✓，\ \textbf{不得} \text{当作"继续跑程序"}✗$$
+$$\qquad \text{四门照旧}：\text{exact tiling}\to\text{strict interval positivity}\to\text{dual interval check}\to\text{boundary coverage}✓$$
+$$\qquad \text{后续}：0.373108\to0.373110✓$$
+$$\qquad ⚠️\ \textbf{不动} \text{Step 6／局部证书（本刀只改靶）}✓$$
