@@ -49,7 +49,7 @@ $$\boxed{\text{极值点}\ \varphi^*：\ \#\{\text{活跃}\ k\}=M+1；\ 0\in\mat
 $$\text{含义}：\text{极小极大点在}\ \varphi^*\ \text{附近是}\ \textbf{"单纯形型谷"} \Longrightarrow \text{沿任何方向移动，}$$
 $$\qquad \text{总有某个活跃}\ k\ \text{的一阶项}\ \ge c_M|u|\ \text{把值抬起来}✓✓$$
 $$\text{与}\ M=2\ \text{对照}：M=2\ \text{是}\ \textbf{退化情形}（5\ \text{个活跃}，值}\ \textbf{恰}\ 1/2，7g_5+5g_7=0\ \text{精确共线）✓$$
-$$\qquad M\ge3\ \text{是}\ \textbf{一般情形}（恰好}\ M+1\ \text{个活跃，值是}\ \textbf{有余量的}\ 0.776/0.811）✓✓$$
+$$\qquad M\ge3\ \text{是}\ \textbf{一般情形}（恰好\ M+1\ \text{个活跃，值是}\ \textbf{有余量的}\ 0.776/0.811）✓✓$$
 $$\Longrightarrow \textbf{局部结构对}\ M\ge3\ \textbf{比}\ M=2\ \textbf{更"正规"} \Longrightarrow \text{先前的担忧（}M\ge3\ \text{结构不清）}\ \textbf{被数值否定}✓✓$$
 
 ## §4 ⚠️ 真正的障碍在哪（本档定位）
