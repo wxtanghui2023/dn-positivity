@@ -65,3 +65,47 @@ $$\qquad \qquad \text{我方窗口}\ 5n\ \text{正落在"线性窗口"区，恰�
 2. 查 [2]/[3]（Andersson 前作）中 $m=n^2-n$ 的**精确值**结果，确认是否有我们窗口附近的显式值 ✓
 3. 论文文献栏按 §3/§5 定位改写（**不再写"与文献无关"**）✓
 4. Turán 幂和教科书（Turán 1984）是否可得 —— 幂和法的系统表述 ✓
+
+---
+
+## §7 Andersson 全文（arXiv:0706.4131v3）其余结果（逐字）
+
+$$\textbf{Lemma 1}：h\ge2,\ q\ \text{素数幂} \Longrightarrow \exists\ \text{单位模}\ z_1,\ldots,z_q：\max_{\nu\le q^h-2}\Big|\sum_{k\le q}z_k^\nu\Big|\le(h-1)\sqrt q✓$$
+$$\textbf{Theorem 1}（\text{解 Montgomery Problem 13}）：\sqrt{Bn}\ \ll\ \inf_{|z_k|=1}\max_{\nu\le\lfloor n^B\rfloor}\Big|\sum_{k\le n}z_k^\nu\Big|\ \ll\ B\sqrt n\quad(1+\delta\le B\le n)✓$$
+$$\textbf{Corollary 1}：\text{Turán Problem 2（}w(x)\ \text{不存在）}✓\qquad\textbf{Theorem 2}：C_h\sqrt n-O(n^{-1/2})\le\inf_{|z_k|\ge1}\max_{\nu\le n^h}\Big|\sum\Big|\le(h-1)\sqrt n+O(n^{0.2625+\epsilon})✓$$
+$$\qquad C_{2m}=(m!)^{1/2m},\ C_{2m+1}=C_{2m}；\textbf{Remark 1}：h=3\ \text{时下界可改进为}\ \sqrt{2n}✓$$
+$$\textbf{Problem 3（$\text{本文提出，开放}$）}：\text{找递增}\ \Lambda(x)\ \text{使}\ \inf_{|z_k|=1}\max_{\nu\le\lfloor n^B\rfloor}|\sum|\sim\Lambda(B)\sqrt n✓$$
+
+## §8 Andersson 系列（同族全部论文）
+
+| 编号 | 文献 | 内容（逐字/摘要） |
+|---|---|---|
+| [1] | Acta Math. Hungar. **70**(4):305–316 (1996) | On some power sum problems of Turán and Erdős |
+| [2] | arXiv:math/0607238（Indag. Math.） | **精确值**：$\sqrt n\le\inf_{|z_k|\ge1}\max_{\nu\le n^2}|s_\nu|\le\sqrt{n+1}$（$n+1$ 素）；$\inf_{|z_k|=1}\max_{\nu\le n^2-n}|s_\nu|=\sqrt{n-1}$（$n-1$ 素数幂）；$\inf_{|z_k|\ge1}\max_{\nu\le n^2-i}|s_\nu|=\sqrt n$（$n$ 素数幂，$2\le i\le n-1$）✓ **给出显式构造并证明为全局极小**✓ |
+| [3] | arXiv:math/0609271 | Turán's problem 10 revisited |
+| [4] | arXiv:0704.1879 | **下界**（用 **Fejér 核**的特征）：$m\sim cn^2$（$c>1$）、单位模情形 ✓ |
+| [12] | **Montgomery, Ten Lectures（CBMS 84）** | p.100 Thm 10（下界）；p.197 Problem 13（= 本文解决）；**Ch.5 Thm 11 = Palojärvi Lemma 2.2** |
+| [14] | **Turán 1984, _On a new method of analysis and its applications_（Wiley）** | 幂和法专著（系统工具）✓ |
+
+## §9 ⭐⭐ 窗口 regime 地图（我们的位置）
+
+$$\begin{array}{c|c|l}
+\text{窗口}\ m & (\star)\ \text{（模长版）} & \text{出处}\\\hline
+m\le n-1 & 0 & \text{平凡}（z_k=e(k/n)）\\
+m=n & \mathbf{1} & \text{Turán [13]}\\
+\mathbf{m=5n\ （\text{我方}）} & \textbf{未知}✗ & \text{—— 文献空白区}\\
+m=n^{1+\delta}\sim n^2 & \asymp\sqrt n & \text{Andersson [3]}\\
+m=n^2\ (\text{特殊}) & \text{精确值}\ \sqrt{n-1},\ \sqrt n\ \ldots & \text{Andersson [2]}\\
+m=n^B,\ B>1 & \asymp\sqrt n & \text{本文（0706.4131）}\\
+\end{array}✓$$
+
+$$\Longrightarrow ⭐\ \textbf{我方}\ (RP_M)\ \text{正落在"线性窗口"区}\ （m=5n）⟹\ \textbf{文献空白}✗✓$$
+$$\qquad \textbf{且}\ 实部版 \ne\ 模长版：\max_\nu|\Sigma|\ge c\ \Longrightarrow\ \text{不能推出}\ \max_\nu\Re\Sigma\ge c\ ✗$$
+$$\qquad （\text{因}\ |\Re|\le|\cdot|\ \text{只给上界}；\text{且窗口取正指标 ⟹ 共轭对称帮不上忙}）✓$$
+
+## §10 对论文的直接用途
+
+1. **文献栏必须写**（原稿"与文献无关"是错的 ✗）：Turán 幂和法 → Montgomery Thm 10/Thm 11 → Andersson 0706.4131（Problem 13）✓
+2. **定位句**：本工作研究 **Montgomery Thm 11（实部版、线性窗口 5M）的常数尖锐化**；该窗口在文献中**尚无结果** ✓
+3. **工具对接**：Andersson [4] 用 **Fejér 核** —— 与我方 `C-181` §3(a) 的 Fejér 权路线**同族** ✓（可对照）
+4. **Turán 1984 专著**是幂和法的系统来源（若能取得，可补工具）✓
