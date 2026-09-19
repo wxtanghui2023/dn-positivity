@@ -1,4 +1,4 @@
-已查地图（**先查后写**）：`C-131`（非聚合 step 2 三型 ＋ 唯一实例 F3＝支撑大小刚性）、`C-130`（S1/S2/S3 三分类）、`C-125`（sumset 饱和／R1/R2 无上界）、`C-122`／`C-123`（Toeplitz PSD＝K2 repackaging；mixture essentiality）、`V188 §2`（支撑性质非线性；线性泛函只看见位置加权和）、`V193 §⑤`（残余形状）、`CLOSED-ROUTES-MAP:1089`（**KILL-1／KILL-2：素数直积 ⟹ 运算结构因子化 ⟹ 无法产生全局刚性**；含 CRT `ℤ/M ≅ ∏_p ℤ/p^{a_p}`）。关键词回查：`窗口隐形`=0、`幂等测度`=0（**新**）；`完整周期`=4（**沿用**，见 `C87`／`PAPERA-block-method` 等）。
+已查地图（**先查后写**）：`C-131`（非聚合 step 2 三型 ＋ 唯一实例 F3＝支撑大小刚性）、`C-130`（S1/S2/S3 三分类）、`C-125`（sumset 饱和／R1/R2 无上界）、`C-122`／`C-123`（Toeplitz PSD＝K2 repackaging；mixture essentiality）、`V188 §2`（支撑性质非线性；线性泛函只看见位置加权和）、`V193 §⑤`（残余形状）、`CLOSED-ROUTES-MAP:1092`（§4：设计 1／2 均 $\mathcal X_N=\prod_{p\le N}\mathcal X_{N,p}$ 等号成立 ⟹ **立即 DEAD**，即 **KILL-2＝素数直积因子化**）＋`:1095`（三难：有限记忆⟹周期⟹KILL-1／无限记忆⟹框架空洞／精确局部⟹表示刚性）＋`:1097`（判词 V205-A：DEAD）。关键词回查：`窗口隐形`=0、`幂等测度`=0（**新**）；`完整周期`=4（**沿用**，见 `C87`／`PAPERA-block-method` 等）。
 **本档任务（唐先生 2026-09-19 11:25「继续攻，看看这个定理能不能攻击」）**：**攻 F3。**
 **结论（先行）**：$$\textbf{(一)}\ \text{F3 作为\ \textbf{独立定理}\ \textbf{不成立}}\ \Longrightarrow\ \textbf{显式反例（窗口隐形测度）}✓✓$$
 $$\qquad \text{窗口幅频偏差}\ \lesssim5\times10^{-12}\ \text{（浮点噪声）},\ \text{而秩}\ R:\ 47\to256\ ✓✓$$
@@ -49,7 +49,7 @@ $$\Longrightarrow\ \boxed{\textbf{整数性＋固定总量＝F3 成立所必需�
 ## §4 ⭐⭐ 反例引擎的识别（**跨线同一物**）
 
 $$\text{反例的引擎}＝\text{"}\textbf{完整周期测度／幂等测度}"（u*u=u，\hat u\ \text{在窗口内恒 0}）✓$$
-$$\qquad \text{对照}\ \text{`CLOSED-ROUTES-MAP:1089`}\ \text{的}\ \textbf{KILL-2}：\text{运算结构}\ \textbf{因子化于素数}（\text{CRT}：\mathbb Z/M\cong\prod_p\mathbb Z/p^{a_p}）$$
+$$\qquad \text{对照}\ \text{`CLOSED-ROUTES-MAP:1092`}\ \text{的}\ \textbf{KILL-2}：\text{运算结构}\ \textbf{因子化于素数}（\mathcal X_N=\prod_{p\le N}\mathcal X_{N,p}\ \text{等号成立}\Longrightarrow\text{DEAD}）$$
 $$\qquad \Longrightarrow\ \textbf{无法产生全局刚性}✓✓$$
 $$\Longrightarrow\ \boxed{\text{同一个障碍在两条线上再现}：\textbf{周期/直积退化}＝\text{KILL-2}}✓✓$$
 
