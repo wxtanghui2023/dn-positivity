@@ -3,7 +3,7 @@
 **结论（先行）**：$$\textbf{(一)}\ ⭐\ \text{梯度是}\ \textbf{代数数}：\ g_k=(-k\sin\tfrac{k\pi}3,\ -k\sin\tfrac{k\pi}2)\in\mathbb Q(\sqrt3)^2✓$$
 $$\qquad g_1=(-\tfrac{\sqrt3}2,-1),\ g_4=(2\sqrt3,0),\ g_5=(\tfrac{5\sqrt3}2,-5),\ g_7=(-\tfrac{7\sqrt3}2,7),\ g_8=(-4\sqrt3,0)✓✓$$
 $$\textbf{(二)}\ ⭐⭐\ \boxed{c\ =\ \frac{28\sqrt{1677}}{559}\ =\ \frac{28\sqrt3}{\sqrt{559}}\ \approx\ 2.0512224201}\qquad(c^2=\tfrac{2352}{559})✓✓$$
-$$\qquad \text{切点}\ u^*=\Big(\tfrac{14}{\sqrt{559}},\ \tfrac{11\sqrt3}{\sqrt{559}}\Big)\approx(0.5921369,\ 0.8058374)\ \text{（}\textbf{精确}：}\langle g_4,u^*\rangle=\langle g_7,u^*\rangle=c)✓✓$$
+$$\qquad \text{切点}\ u^*=\Big(\tfrac{14}{\sqrt{559}},\ \tfrac{11\sqrt3}{\sqrt{559}}\Big)\approx(0.5921369,\ 0.8058374)\ \text{（}\textbf{精确}：\langle g_4,u^*\rangle=\langle g_7,u^*\rangle=c)✓✓$$
 $$\textbf{(三)}\ ⭐\ \text{共线关系有}\ \textbf{代数原因}：\text{对}\ k+k'=12\ \text{有}\ k'g_k+k\,g_{k'}=0\ \textbf{恒成立}✓✓$$
 $$\qquad (\text{因}\ \sin\tfrac{k\pi}3+\sin\tfrac{(12-k)\pi}3=0\ \text{且}\ \sin\tfrac{k\pi}2+\sin\tfrac{(12-k)\pi}2=0\ \text{——}12\ \text{是}\ 6\ \text{与}\ 4\ \text{的公倍数})✓✓$$
 $$\qquad \Longrightarrow 7g_5+5g_7=0\ \text{与}\ 8g_4+4g_8=0\ \text{都是}\ (k,k')=(5,7),(4,8)\ \text{的\ 特例}✓✓$$
