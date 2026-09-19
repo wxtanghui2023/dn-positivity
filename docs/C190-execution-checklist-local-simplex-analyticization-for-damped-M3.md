@@ -325,3 +325,45 @@ $$\begin{array}{l|c|l}
 \text{③ 浮点参数} & ✅\ \text{已被取代} & \text{终端验证改由区间算术承担}\\
 \end{array}✓$$
 $$\text{账本不变}：\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}✓$$
+
+---
+
+## §16 审计链归档（唐先生 2026-09-19 23:14 指令）＋ v3 终版设计
+
+### §16.1 原则：**域覆盖先于余量**（本档第 3 条自我更正的重要教训）
+
+$$\text{v1 最小严格余量仅}\ 2.834741\times10^{-10}✓\qquad \text{端点缺口宽度约}\ 10^{-16}✗$$
+$$\textbf{但绝不能用"薄片很薄"来忽略}✗✗\ —— \text{因认证裕量本身只有}\ 10^{-10}\ \text{量级}✓$$
+$$\qquad \Longrightarrow \text{必须坚持}\ \boxed{\textbf{domain coverage precedes margin}}✓✓$$
+
+### §16.2 审计链（两条记录**不得混同**）
+
+$$\begin{array}{c|l|l}
+\text{版本} & \text{结果} & \text{状态}\\\hline
+\text{v1（旧 φ 网格}\ \texttt{float}(\pi)\text{）} & 317{,}006\ \text{盒}；\text{违反}\ 0；\text{余量}\ 2.83\times10^{-10} & \mathbf{PRELIMINARY／SUPERSEDED}✗\\
+\text{v3（φ 上界}\ \texttt{PI\_UP}>\pi\text{）} & \text{运行中} & \text{待}\ \text{Gate 1A/1B/2}\\
+\end{array}✓$$
+$$\qquad \textbf{纪律}：\text{v1}\ \textbf{只能} \text{作 preliminary}，\textbf{不得} \text{与修正版结果混在一起}✓✓$$
+
+### §16.3 v3 终版（一次到位，含 3 个 Gate）
+
+$$\textbf{Gate 1A——domain completeness}：\text{确认}\ r_2,r_3\in[0,1]、\varphi\in[0,\pi]\ \text{全部覆盖}✓$$
+$$\qquad \text{做法}：\varphi\ \text{网格上界}\ \texttt{PI\_UP}=\texttt{nextafter}(\pi,+\infty)>\pi✓；\text{端点}\ 0.0/1.0\ \text{精确}✓$$
+$$\qquad ⭐\ \textbf{精确铺砌体积校验}（\text{坐标皆二进制有理} \Longrightarrow \text{用}\ \texttt{Fraction}\ \text{精确比较}）：\sum\text{vol}(C)\ \overset{?}{=}\ 1\cdot1\cdot\texttt{PI\_UP}^3✓✓$$
+$$\textbf{Gate 1B——interval positivity ＋ 最危险格固定}：\text{记录}\ \min_C\mathrm{LB}_{\rm IV}(C)>0✓$$
+$$\qquad \text{并}\ \textbf{固定最小余量格}：\text{cell id ＋ 五维区间（lo/hi）}✓\ —— \text{后续所有复核针对此格}✓✓$$
+$$\textbf{Gate 2——区间层双实现}：\text{同一批终端盒（含最危险格）上算}\ \mathrm{LB}_A^{\rm IV}\ \text{与}\ \mathrm{LB}_B^{\rm IV}✓$$
+$$\qquad A：\texttt{mpmath.iv}\ \text{区间模块}✓\qquad B：\texttt{mpf}\ +\ \textbf{显式外向误差}\ \text{EPS}=10^{-50}✓（\text{独立机件}）✓$$
+$$\qquad \text{记录}\ \max|\mathrm{LB}_A^{\rm IV}-\mathrm{LB}_B^{\rm IV}|✓✓$$
+
+### §16.4 抬 T 阶梯（Gate ① 关闭后才进行）
+
+$$0.37310\ \to\ 0.373108\ \to\ 0.373110\qquad（\text{注意}\ 0.373110<0.3731108480✓）$$
+$$\qquad \text{若严格认证到}\ 0.373110 \Longrightarrow \text{上下界缩到}\ 8.48\times10^{-7}✓$$
+$$\qquad ⚠️\ \textbf{不得} \text{把}\ 0.3731108480\ \text{写成"真值"}✗\ —— \text{它只是}\ \textbf{上界构型的数值}✓$$
+
+### §16.5 最终账本格式（唐先生保留）
+
+$$\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}✓$$
+$$\qquad \text{下界}：\text{修正版 interval B\&B 完成后正式锁定}⏳\qquad \text{上界}：\text{C-189 §9 合法有理构型 ＋ 区间算术}✓$$
+$$\qquad \text{精确值}：\textbf{未声称}✗\qquad \text{路线}：\textbf{封实现漏洞}\to\textbf{双实现交叉}\to\textbf{再抬阈值}✓（\text{不再引入新数学机制}）✓$$
