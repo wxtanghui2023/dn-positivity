@@ -87,3 +87,23 @@ $$\textbf{③}\ \text{若三件套闭合} \Longrightarrow \text{阻尼}\ M=3\ \t
 技术词 全空间KKT   命中文件数=0 ::  ⟹ 本档新增
 技术词 维度匹配    命中文件数=0 ::  ⟹ 本档新增
 ```
+
+---
+
+## §9 【严格上界 · 2026-09-19 22:0x 补】候选合法性核实 ＋ 区间算术严格上界（账本升级）
+
+$$\text{候选（乙-5）：}r_1=1（\text{单位模，归一化}）,\ r_2=\tfrac{79051}{100000},\ r_3=\tfrac{83021}{100000}✓$$
+$$\qquad \Longrightarrow \max_j|z_j|=1\ \textbf{合法}✓；\ \varphi/\pi=\big(\tfrac{10911}{10^5},\tfrac{82066}{10^5},\tfrac{46172}{10^5}\big)\ \textbf{精确有理数}✓✓$$
+$$\text{区间算术（60 位，}\pi\ \text{作为区间，}\textbf{向上取端}）：$$
+$$\begin{array}{c|r}
+\nu & S_\nu\ \text{的上端}\\\hline
+3 & 0.3731108480\\
+1 & 0.3730984171\\
+5 & 0.3730946288\\
+4 & 0.3730910595\\
+15 & 0.3730847305\\
+2 & 0.3730721881\\
+\end{array}✓$$
+$$\Longrightarrow \boxed{C_3\ \le\ \max_\nu S_\nu\ \le\ 0.3731108480}\qquad（\textbf{已证}：\text{只需一个合法构型 ＋ 区间算术}）✓✓$$
+$$\qquad \textbf{账本升级}：0.35\ \le\ C_3\ \le\ \mathbf{0.3731108480}\quad（\text{上界由"数值候选"}\to\textbf{"严格"}）✓✓$$
+$$\qquad \text{附}：\nu=14\ \text{的上端}=0.093475 \Longrightarrow \text{与活跃值的间隙}\ 0.2796✓（\text{活跃集干净的证据更硬}）✓$$
