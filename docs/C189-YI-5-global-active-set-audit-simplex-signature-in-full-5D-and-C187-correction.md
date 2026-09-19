@@ -107,3 +107,14 @@ $$\begin{array}{c|r}
 $$\Longrightarrow \boxed{C_3\ \le\ \max_\nu S_\nu\ \le\ 0.3731108480}\qquad（\textbf{已证}：\text{只需一个合法构型 ＋ 区间算术}）✓✓$$
 $$\qquad \textbf{账本升级}：0.35\ \le\ C_3\ \le\ \mathbf{0.3731108480}\quad（\text{上界由"数值候选"}\to\textbf{"严格"}）✓✓$$
 $$\qquad \text{附}：\nu=14\ \text{的上端}=0.093475 \Longrightarrow \text{与活跃值的间隙}\ 0.2796✓（\text{活跃集干净的证据更硬}）✓$$
+
+---
+
+## §10 【勘误指针 · C-190】§3 的 covering constant $c=0.437928$ **过估** ✗
+
+$$\text{C-189}\ §3\ \text{报}\ c=0.437928\（4\times10^5\ \text{随机方向采样}）\ \color{red}{\text{过估}}\ ✗$$
+$$\text{真值（精确 facet 法，C-190 §7③）}：\boxed{c=0.302091535}✓$$
+$$\text{采样序列（均为上界，单调下降）}：4\times10^5\to0.437928；\ 1.5\times10^6\to0.402910；\ 8\times10^6\to0.355901✓$$
+$$\text{原因}：\text{5 维球面随机采样收敛慢，}\textbf{采样 min 只是上界}✗；\text{已改用精确内切球法}✓$$
+$$\Longrightarrow \text{结构性结论}\ \textbf{不变}（c=0.302>0\ ⟹\ \text{单纯形 ALIVE}✓）；\text{仅}\ \textbf{数值} \text{更正}✓$$
+$$\qquad \text{连带}：\text{局部半径由}\ c/R\ \text{重算为}\ 0.1769°\（\text{原按}\ 0.4379\ \text{算得}\ 0.2564°）✓$$
