@@ -58,7 +58,7 @@ $$\qquad \text{③}\ \textbf{极小点降维参数化}（\text{数值观察：�
 
 $$\text{①}\ \text{稳健性循环把}\ \min_k\big[F_k.\min()\big]\ \text{当}\ \min_x\max_kF_k\ \text{用} \Longrightarrow \text{得到}\ -3.0\ \text{（反例级异常）}✓$$
 $$\qquad \text{表现：认证下界}\ -3.59\ \text{荒谬} \Longrightarrow \textbf{先怀疑自己的实现}✓$$
-$$\text{②}\ \texttt{rpM\_global\_certificate.py}\ \text{广播维数写错}（\texttt{sh} \text{少成块维） \Longrightarrow \texttt{ValueError}✓$$
+$$\text{②}\ \texttt{rpM\_global\_certificate.py}\ \text{广播维数写错}（\texttt{sh} \text{少成块维）} \Longrightarrow \texttt{ValueError}✓$$
 $$\Longrightarrow \text{本会话"结果异常先怀疑实现"累计}\ \textbf{14 次应验}✓✓$$
 
 ## §5 状态与下一步
