@@ -46,8 +46,9 @@ $$\begin{array}{c|l|l}
 6 & \text{周期单调性引理（}\mathrm{lcm}\le5(M+1)\ \text{类）} & \textbf{已证}（用\ \#2）\\
 7 & m_M\le\sqrt{2M\ln10M}\ (M\ge12\ \Rightarrow\ \le M-1) & \textbf{已证}（概率方法）\\
 8 & \text{一般}\ M\ \text{的困难分析 ＋ 开放问题} & \text{登记（本论文的诚实部分）}\\
-9 & \text{近似周期单调性引理（}\text{`C-172`}\text{；}\text{`C-174`}\ \text{加强）} & \textbf{已证}（\text{三行 ＋ 1-D 证书}）\\
+9 & \text{近似周期单调性引理 ＋ 其推论（}\text{`C-172`}\text{；}\text{`C-176`}\ \text{关闭数值输入；}\text{`C-174`}\ \text{加强）} & \textbf{已证}（\text{引理三行；推论现无条件}）\\
 10 & \text{一维极小极大}\ \kappa_N(\lambda)\ \text{与闭式}\ \lambda_{\max}=2-\sqrt3 & \textbf{已证}（\text{解析}）＋\ \text{1-D 证书}\\
+11 & m_M\le M-1\ \text{对一切}\ M\ge2 & \textbf{已证}（\text{区间算术证书}\ \text{`C-176`}；\text{概率方法}\ \text{`C-159`}）\\
 \end{array}✓$$
 
 ---
