@@ -46,7 +46,7 @@ $$\qquad \text{可用内容（若需）}：§11.2\ \text{Exceptional zeros；}§
 
 ## §4 ⭐ 文献指针（本档真正的副产品）
 
-$$\text{p502 逐字}："\text{Littlewood (1937) was led to consider a question concerning a \textbf{sum of cosines}. Turán (1946) discovered that the theorem formulated by Littlewood is false — the argument provided establishes a weaker result than claimed. Turán undertook a detailed study of such power sums."✓$$
+p502 注记逐字（我方转抄）："Littlewood (1937) was led to consider a question concerning a **sum of cosines**. Turán (1946) discovered that the theorem formulated by Littlewood is false — the argument provided establishes a weaker result than claimed. Turán undertook a detailed study of such power sums."
 $$\qquad \text{出处}：\text{Littlewood, \textit{An inequality for a sum of cosines}, J. London Math. Soc. \textbf{12} (1937), 217–221}✓$$
 $$\qquad \text{关联}：\text{Knapowski (1961) 用 Turán 幂和方法给出}\ c\ \text{的有效上界；Turán (1984) 专著}✓$$
 $$\Longrightarrow ⭐\ \text{我方}\ (RP_M)\ \text{正是"余弦和"型极值问题} \Longrightarrow \textbf{这条谱系（Littlewood 1937 → Turán 幂和法）应纳入论文的文献位置}✓✓$$
@@ -66,5 +66,10 @@ $$\Longrightarrow ⭐\ \text{我方}\ (RP_M)\ \text{正是"余弦和"型极值�
 ```
 技术词 全阻尼三维   命中文件数=0 ::  ⟹ 本档新增
 技术词 文献指针    命中文件数=0 ::  ⟹ 本档新增
-技术词 余弦和问题   命中文件数=0 ::  ⟹ 本档新增
+技术词 余弦和问题   命中文件数=1 :: ./RPM-LEMMA-CONJECTURE-LEDGER.md  ⟹ 【沿用，非新增】
 ```
+
+**读数（按实测，逐字）**：`全阻尼三维`=0【新】、`文献指针`=0【新】、`余弦和问题`=**1**【**沿用**——
+命中 `RPM-LEMMA-CONJECTURE-LEDGER.md`，说明该词此前已用于 (RP_M) 的同类表述】✓
+**自我更正**：本档写作时初稿曾把第三项记为 0（凭印象），与实测不符 ⟹ 已按实测改写（同 `TOOLS.md` 记录的
+「先跑后写」纪律）✓
