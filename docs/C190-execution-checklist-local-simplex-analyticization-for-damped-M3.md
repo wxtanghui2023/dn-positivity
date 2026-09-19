@@ -367,3 +367,43 @@ $$\qquad ⚠️\ \textbf{不得} \text{把}\ 0.3731108480\ \text{写成"真值"}
 $$\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}✓$$
 $$\qquad \text{下界}：\text{修正版 interval B\&B 完成后正式锁定}⏳\qquad \text{上界}：\text{C-189 §9 合法有理构型 ＋ 区间算术}✓$$
 $$\qquad \text{精确值}：\textbf{未声称}✗\qquad \text{路线}：\textbf{封实现漏洞}\to\textbf{双实现交叉}\to\textbf{再抬阈值}✓（\text{不再引入新数学机制}）✓$$
+
+---
+
+## §17 v3 终版结果：**四个硬点全部通过** ✓✓（2026-09-19 23:40）
+
+$$\textbf{① 铺砌（domain coverage）}：\sum_C\mathrm{vol}(C)=1\cdot1\cdot\texttt{PI\_UP}^3\ \textbf{精确相等}✓✓$$
+$$\qquad \text{用}\ \texttt{Fraction}\ \text{精确比较（坐标皆二进制有理，无浮点近似）} \Longrightarrow \textbf{无 overlap／无 gap}✓$$
+$$\qquad \text{铺砌 sha256[:32]} = \texttt{75947683279fa46ff761bc95b3b4b900}✓$$
+$$\textbf{② 严格正性（interval positivity）}：\text{验证盒}\ 371{,}447\ |\ \textbf{违反}\ 0\ |\ \min_C\mathrm{LB}^{\rm IV}_C=\mathbf{2.834729\times10^{-10}}>0✓✓$$
+$$\qquad ⭐\ \textbf{最危险格已固定}：id=368400✓$$
+$$\qquad \qquad lo=(0.8302978515625,\ 0.7905761718750002,\ 0.3427680070530466,\ 1.4505705825443598,\ 2.578161510199397)✓$$
+$$\qquad \qquad hi=(0.830322265625,\ 0.7906250000000001,\ 0.3428063565727437,\ 1.450608932064057,\ 2.5781998597190943)✓$$
+$$\textbf{③ 区间层双实现（cross implementation）}：\text{抽样}\ 2001\ \text{盒（含最危险格）}✓$$
+$$\qquad A：\texttt{mpmath.iv}✓\qquad B：\texttt{mpf}+外向误差\ 10^{-50}✓（\text{独立机件}）$$
+$$\qquad \max|\mathrm{LB}_A^{\rm IV}-\mathrm{LB}_B^{\rm IV}|=\mathbf{2.220\times10^{-16}}✓（\text{中位}\ 5.55\times10^{-17}）；\text{T-判定一致}=\textbf{True}✓✓$$
+$$\textbf{④ 边界覆盖（mathematical domain）}：\texttt{PI\_UP}>\pi\ \text{于 60 位精度成立}✓（\text{差}\ 3.216\times10^{-16}）$$
+$$\qquad r\ \text{端点精确}\ 0.0／1.0✓ \Longrightarrow [0,\texttt{PI\_UP}]^3\supseteq[0,\pi]^3✓ \Longrightarrow \textbf{证明的是数学域}\ [0,1]^2\times[0,\pi]^3✓✓$$
+
+### §17.1 ⭐ 内部一致性核对（强证据）
+
+$$\text{最危险格中心}：r_2\approx0.8303,\ r_3\approx0.7906,\ \varphi\approx(0.3428,\ 1.4506,\ 2.5782)✓$$
+$$\text{对照}\ x_\ast：r_2=0.79051,\ r_3=0.83021,\ \varphi=(0.3428,\ 2.5782,\ 1.4506)✓$$
+$$\Longrightarrow \textbf{最危险格恰为}\ x_\ast\ \textbf{的镜像}（r_2\leftrightarrow r_3,\ \varphi_2\leftrightarrow\varphi_3）✓✓\ —— \text{与问题固有对称性完全一致}✓✓$$
+
+### §17.2 等级升级
+
+$$\text{旧}：\text{CA-1}\ \text{preliminary（多网格 ＋ 初版区间验证，含}\ \varphi\ \text{薄片缺口}）✗$$
+$$\textbf{新}：\boxed{\text{域完整（精确铺砌）＋ 区间认证 ＋ 双实现交叉验证的计算机辅助下界}}✓✓$$
+$$\boxed{C_3\ \ge\ 0.3730721881}\qquad（\text{下界正式锁定}）✓✓$$
+
+### §17.3 账本（唐先生保留格式）
+
+$$\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}\qquad（\text{宽}\ 3.866\times10^{-5}）✓$$
+$$\qquad \text{下界}：\text{v3 区间证书}✓\qquad \text{上界}：\text{C-189 §9 合法有理构型 ＋ 区间算术}✓\qquad \text{精确值}：\textbf{未声称}✗$$
+
+### §17.4 下一步（按唐先生阶梯，且不再改审计结构）
+
+$$0.37310\ \to\ 0.373108\ \to\ 0.373110✓$$
+$$\qquad ⚠️\ \text{最危险格余量仅}\ 2.83\times10^{-10}✓ \Longrightarrow \text{抬}\ T\ \text{会很快变得更贵}✓；\text{若成本爆炸，}\textbf{Step 6 局部支撑件} \text{已备}✓✓$$
+$$\qquad \textbf{Step 6 保留}（\text{独立局部结构事实，非当前全局下界的必要条件}）✓$$
