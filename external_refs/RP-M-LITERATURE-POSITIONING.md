@@ -120,3 +120,8 @@ $$\textbf{(c)}\ \text{线性（fixed-λ）证书存在}\ \textbf{可证零均值
 $$\textbf{(d)}\ \text{新精确值候选}：\text{单模}\ M=3\ \text{极小}\ \approx\cos36°=\tfrac{1+\sqrt5}{4}\ \text{（数值 6 位吻合，}\textbf{待证}）✓$$
 $$\Longrightarrow \text{论文定位句（建议）}：$$
 > **Fejér reaches 5M but is structurally non-sharp; the sharp obstruction occurs in the damped, nonsmooth regime.**
+
+$$	ext{【修正·唐先生 21:26】"丁"的措辞升级}：	ext{Fejér}\ 	extbf{不是} 	ext{"待尝试的工具"，而是}\ 	extbf{已完成机制级审计} 	ext{并}\ 	extbf{被纳入边界结果}✓✓$$
+$$\qquad 	ext{理由}：	ext{NO-GO 覆盖}\ 	extbf{整个单纯形}\ \Delta_{15}（	ext{非仅 Fejér 权}）⟹\ 	ext{任何固定线性加权证书都不行}✓（	ext{C-188 §7}）$$
+$$\qquad 	ext{据此，文献定位应写}：	ext{Fejér／Andersson}\ 	ext{一线给出}\ 5M\ 	ext{窗口的}\ 	frac1{20}，	ext{但}\ 	extbf{其机制天然不尖锐}；$$
+$$\qquad \qquad 	ext{尖锐障碍落在}\ 	extbf{阻尼＋非光滑} 	ext{区，且已由两条互补 NO-GO 刻画}✓✓$$

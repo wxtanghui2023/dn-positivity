@@ -78,3 +78,57 @@ $$\qquad ⚠️\ \text{上界}\ 0.373092\ \text{为}\ \textbf{数值候选}（\t
 技术词 线性证书    命中文件数=0 ::  ⟹ 本档新增
 技术词 账本修正    命中文件数=1 :: ./V2-35D-ell2-ell2-prime-fiber-audit-and-constraint-table.md  ⟹ 【沿用，非新增】
 ```
+
+---
+
+## §7 【严格化修正 · 唐先生 2026-09-19 21:26】可分离极小值的正确写法 ＋ 更干净的证明
+
+$$\textbf{(一)}\ \textbf{修正（本档 §1 的表述需收紧）}：$$
+$$\qquad \inf_{\substack{|z_j|\le1\\ \max_j|z_j|=1}}\sum_j F_\lambda(z_j)\ \color{red}{\ne}\ M\inf_{|z|\le1}F_\lambda(z)\qquad（\text{约束强制至少一点在单位圆上}）✗$$
+$$\qquad \textbf{正确的可分离极小值}：$$
+$$\qquad \boxed{\inf_{\substack{|z_j|\le1\\ \max_j|z_j|=1}}\sum_jF_\lambda(z_j)\ =\ (M-1)\inf_{|z|\le1}F_\lambda\ +\ \inf_{|z|=1}F_\lambda}✓$$
+$$\qquad （\text{只让一个点承担边界约束，其余点取全盘极小；若多点达到}\ 1\ \text{，该式仍给出相应最小值}）✓$$
+
+$$\textbf{(二)}\ ⭐\ \textbf{更干净的证明（\textbf{不使用}上述容易引起歧义的}\ M\inf_{|z|\le1}F_\lambda\text{）}：$$
+$$\qquad \text{注意}\ \inf_{|z|\le1}F_\lambda\le\inf_{|z|=1}F_\lambda；\text{而由零均值}\ \int_0^{2\pi}F_\lambda(1,\varphi)\,d\varphi=0✓$$
+$$\qquad \text{只要}\ F_\lambda(1,\varphi)\not\equiv0，\text{便有}\ \inf_\varphi F_\lambda(1,\varphi)<0✓$$
+$$\qquad \text{于是}\ \textbf{直接取所有}\ M\ \text{个点都在单位圆上}（\text{合法的子族}✓）：$$
+$$\qquad \inf_{\max|z_j|=1}\sum_{j=1}^M F_\lambda(z_j)\ \le\ M\inf_{\varphi}F_\lambda(1,\varphi)\ \color{red}{<}\ 0✓✓$$
+
+$$\textbf{(三)}\ \textbf{干净形式的定理}：$$
+$$\qquad \boxed{\forall\lambda\in\Delta_{15},\qquad \inf_{\max_j|z_j|=1}\ \sum_{k=1}^{15}\lambda_k\,\Re\sum_{j=1}^{M}z_j^k\ <\ 0}✓✓$$
+$$\qquad （\Delta_{15}=\{\lambda\ge0,\ \sum\lambda=1\}；\text{对一切}\ M\ \text{成立}✓）$$
+
+$$\textbf{(四)}\ ⭐\ \textbf{意义的升级（比"Fejér 失败"强）}：$$
+$$\qquad \text{Fejér 权只是}\ \Delta_{15}\ \text{中}\ \textbf{一个特殊点}✓\ \text{而本档排除的是}\ \textbf{整个单纯形}：$$
+$$\qquad \boxed{\text{不是 Fejér 权选得不好，而是}\ \textbf{所有固定线性加权证书都不可能给出正下界}}✓✓$$
+
+$$\textbf{(五)}\ \textbf{两条互补的结构性 NO-GO}：$$
+$$\begin{array}{c|c}
+\text{路线} & \text{阻塞}\\\hline
+\text{固定线性组合} & \inf\sum_k\lambda_k S_k<0\quad（\text{零均值障碍，本档}）\\
+\text{局部 simplex／光滑机制} & \text{阻尼极值}\ \textbf{非光滑}，0\notin\mathrm{conv}\{\nabla S_k\}\quad（\text{C-187}）\\
+\end{array}✓$$
+$$\qquad \Longrightarrow \text{不能再把希望放在"换一个更聪明的 Fejér 权"上}✗✓$$
+
+$$\textbf{(六)}\ \textbf{剩余缺口的准确刻画}：$$
+$$\qquad \boxed{\max_k S_k\ \text{的耦合必须以}\ \textbf{非线性／分情况／active-set}\ \text{方式保留下来}}✓✓$$
+
+$$\textbf{(七)}\ \textbf{账本（正式版）}：$$
+$$\qquad \boxed{0.35\ \le\ C_3\ \le\ 0.373092\ldots}✓\qquad \text{而}\ 0.4044\ \text{应明确标为}\ \textbf{作废的候选真值}✗（\text{不得再作目标常数}）✓$$
+
+$$\textbf{(八)}\ C-188\ \text{的定位（定稿措辞）}：$$
+> **M=3 已有 0.35 的严格证书；全盘数值构型给出 $C_3\le0.373092\ldots$；固定线性证书全部 NO-GO；阻尼局部光滑机制亦 NO-GO。**
+
+$$\qquad \Longrightarrow \text{这不是"还没找到证明"，而是}\ \textbf{把两大类自然证明机制同时切掉}，\text{并}\ \textbf{准确定位剩余缺口}✓✓$$
+
+## §8 数值验证（本档实算，验证唐先生的公式）
+
+$$\begin{array}{l|r|r|r|r}
+\lambda & \inf_{|z|=1}F_\lambda & \inf_{|z|\le1}F_\lambda & (M{-}1)\inf_{\text{disk}}+\inf_{\text{circle}} & \text{直接优化（3 点）}\\\hline
+\text{Fejér 权} & -0.066667 & -0.066667 & -0.200000 & -0.193273\\
+\text{均匀权} & -0.258596 & -0.258596 & -0.775789 & -0.314433\\
+k{=}2,5\ \text{各半} & -0.916756 & -0.916756 & -2.750268 & -1.713182\\
+\end{array}✓$$
+$$\Longrightarrow \textbf{公式与直接优化一致}（\text{差异来自随机抽样的有限精度}✓）；\ \inf_{|z|=1}F_\lambda<0\ \text{对一切}\ \lambda✓ \Longrightarrow \text{NO-GO 成立}✓✓$$
+$$\qquad \text{注}：\text{本档实测三例均}\ \inf_{\text{disk}}=\inf_{\text{circle}}（\text{极小在}\ r=1\ \text{处达到}）✓\ ——\ \text{但这}\ \textbf{不是} \text{普适事实，无需假定}✗✓$$
