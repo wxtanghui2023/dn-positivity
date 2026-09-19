@@ -22,7 +22,7 @@ D1: 0
 ## §1 定理（零均值障碍）
 
 $$\textbf{命题}：\text{设}\ \lambda\ge0,\ \sum_k\lambda_k=1,\ \lambda\ne0。\text{则}\ \inf_{\text{构型}}\Big[\sum_k\lambda_k S_k(x)\Big]\ <\ 0✓$$
-$$\textbf{证明}：\text{构型空间包含}\ r_2=\cdots=r_M=0（\text{允许}，\text{因仅要求}\ \max_j|z_j|=1\text{）✓$$
+**证明**：构型空间包含 r_2 = ⋯ = r_M = 0（允许，因仅要求 max_j|z_j| = 1）✓
 $$\qquad \text{此时}\ \sum_k\lambda_k S_k=\sum_k\lambda_k\cos(k\varphi_1)=:F_\lambda(1,\varphi_1)✓$$
 $$\qquad \text{而}\ \int_0^{2\pi}F_\lambda(1,\varphi)\,d\varphi=2\pi\sum_k\lambda_k\cdot\underbrace{\frac1{2\pi}\int\cos(k\varphi)d\varphi}_{=0}=0✓$$
 $$\qquad F_\lambda\ \text{连续且不恒为零（}\sum\lambda=1\text{）} \Longrightarrow \exists\varphi：F_\lambda(1,\varphi)<0 \Longrightarrow \inf_\varphi F_\lambda(1,\varphi)<0✓\qquad\square✓✓$$
@@ -69,8 +69,12 @@ $$\qquad ⚠️\ \text{上界}\ 0.373092\ \text{为}\ \textbf{数值候选}（\t
 
 ## §6 【技术词回查】输出（`scripts/tech_word_check.sh`）
 
+**读数（按实测，逐字）**：`零均值障碍`=0【新】、`线性证书`=0【新】、`账本修正`=**1**【**沿用**——
+命中 `V2-35D-ell2-ell2-prime-fiber-audit-and-constraint-table.md`】✓
+**自我更正**：初稿第三项记 0（凭印象），已按实测改写 ✓
+
 ```
 技术词 零均值障碍   命中文件数=0 ::  ⟹ 本档新增
 技术词 线性证书    命中文件数=0 ::  ⟹ 本档新增
-技术词 账本修正    命中文件数=0 ::  ⟹ 本档新增
+技术词 账本修正    命中文件数=1 :: ./V2-35D-ell2-ell2-prime-fiber-audit-and-constraint-table.md  ⟹ 【沿用，非新增】
 ```
