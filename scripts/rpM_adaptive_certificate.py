@@ -18,7 +18,7 @@ rpM_adaptive_certificate.py
 
 输出: 认证箱数 / 未决箱数 / 已认证箱的最小余量 / 最大深度
 """
-import numpy as np, sys, time, hashlib, json
+import numpy as np, sys, time, hashlib, json, os
 from itertools import product
 
 SLACK = 1e-12          # 每项安全余量 (远大于 double 的 cos 误差 ~1e-16)
@@ -74,7 +74,9 @@ if __name__ == "__main__":
     res_all = []
     for M in Ms:
         t = time.time()
-        r = certify(M, N0=(10 if M<=4 else 8), maxdepth=24, budget=400000)
+        N0 = int(os.environ.get("N0", 10 if M <= 4 else 8))
+        BUD = int(os.environ.get("BUDGET", 400000))
+        r = certify(M, N0=N0, maxdepth=24, budget=BUD)
         r["seconds"] = round(time.time()-t, 2)
         print(json.dumps({k:v for k,v in r.items() if k!="depth_hist"}, ensure_ascii=False,
                          default=str), flush=True)
