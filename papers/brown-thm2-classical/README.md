@@ -1,7 +1,7 @@
 # Paper draft: the classical case of Brown's theorem
 
 **Status**: draft v1 (2026-09-11) — **not submitted**.
-**Claims**: Theorem 1 (stronger than the statement in [Dr12] Conjecture 1.7.10, which restricts k ≤ 2T²logT).
+**Claims**: Theorem 1 = the **first** of the two inequalities in [Dr12] Conjecture 3.2.7 (classical case τ = 1), for **all k ≥ 2**; in range it is stronger than [Dr12] Conjecture 1.7.10, which requires k ≤ 2T²logT. Only the first inequality of Conjecture 3.2.7 is addressed; the second (factor 9/4, term b⁺H) is not.
 **Honest gaps**: see §7 of `main.md` — the closed-form near bound, the explicit local count, and the paywalled
 original.
 **Verification**: every numerical claim in §5–§6 is produced by an archived script:

@@ -30,7 +30,7 @@ with N(T) the number of zeros with 0 < Im ρ ≤ T. For ζ one has a = 1/(2π), 
 >    ≤ 2 (r_H^k + r_H^{−k} − 2) [ (a/3) H log H + (4a/9) H + 2c log H + 2d + c/4 ],
 > *where γ_ρ = Im ρ and r_H = (1 + 1/H²)^{1/2}.*
 
-This is exactly inequality (3.2.7)-type of [Dr12] in the classical case, but with **no restriction k ≤ 2H²logH**: our range is all k ≥ 2. This inequality is the key input of the classical case. The passage from the inequality to the non-negativity of the corresponding Li coefficients invokes the implication of Brown's Lemma 5, whose proof contains an unresolved error; we therefore state that consequence conditionally, pending repair of that step.
+This is exactly the **first** of the two inequalities in [Dr12, Conjecture 3.2.7], in the classical case (τ = 1), for all k ≥ 2. (The restriction k ≤ 2T²logT belongs to [Dr12, Conjecture 1.7.10]; it does not constrain Conjecture 3.2.7 itself.) Conjecture 3.2.7 contains a **second** inequality (with the factor 9/4 and the term b⁺H); the present paper addresses only the **first** one. This inequality is the key input of the classical case. The passage from the inequality to the non-negativity of the corresponding Li coefficients invokes the implication of Brown's Lemma 5, whose proof contains an unresolved error; we therefore state that consequence conditionally, pending repair of that step.
 
 ## 2. The summand
 
