@@ -292,3 +292,36 @@ $$\begin{array}{l|c}
 0.37310+\ \text{下界} & ⏳\\
 C_3\ \text{精确值} & ❌\ \text{尚不能声称}\\
 \end{array}✓$$
+
+---
+
+## §15 严格化进展（唐先生指定顺序：interval → 第二实现 → 再抬 T）
+
+### §15.1 gate ① 区间算术（第一版，旧网格）—— **通过** ✓
+
+$$\text{P2 逐盒区间验证：验证盒}\ 317{,}006\ |\ \textbf{违反}\ 0\ |\ \text{最小严格余量}=\mathbf{2.834741\times10^{-10}}>0✓✓$$
+$$\qquad \text{方法}：\text{P1 浮点 B\&B 生成终端盒清单（仅作组织装置）} \to \text{P2 每盒用}\ \texttt{mpmath.iv}\ \text{算严格下界}✓$$
+$$\qquad \Longrightarrow \text{终端验证}\ \textbf{不再依赖}\ \texttt{SLACK}✗✓\ \text{（浮点参数仅影响铺砌，不影响每盒下界}✓\text{）}$$
+
+### §15.2 ⚠️ 自查发现的缺口：φ 上界薄片（已修）
+
+$$\text{第一版网格用}\ \texttt{float}(\pi)\ (\approx\pi-1.2\times10^{-16}) \Longrightarrow \text{漏掉}\ [\texttt{float}(\pi),\pi]\ \text{薄片}\ ✗$$
+$$\text{修正}：\varphi\ \text{网格上界改取}\ \pi\ \text{的下一个可表浮点上界}\ \texttt{PI\_UP}=\texttt{nextafter}(\pi,+\infty)>\pi✓$$
+$$\qquad \Longrightarrow [0,\texttt{PI\_UP}]\supseteq[0,\pi]✓\ \text{无薄片遗漏}✓；\text{修正版运行中（终端盒}\ 371{,}447，\sim22\ \text{分钟）}⏳$$
+
+### §15.3 gate ② 第二独立实现 —— **通过（浮点层）** ✓
+
+$$\text{实现 B：纯 Python、无 numpy、独立逻辑分支}；\text{实现 A：numpy 向量化}✓$$
+$$\text{抽样}\ 20{,}000\ \text{终端盒比对}：\text{最大绝对差}=\mathbf{0.000e{+}00}✓；\text{中位差}=0✓$$
+$$\qquad \text{对}\ T\ \text{的判定完全一致}=\textbf{True}✓✓ \Longrightarrow \text{向量化路径无 bug}✓$$
+$$\qquad ⚠️ \text{区间路径（P2）目前仍是单实现}✗\ —— \text{待补抽样交叉验证}⏳$$
+
+### §15.4 等级状态（更新）
+
+$$\begin{array}{l|c|l}
+\text{gate} & \text{状态} & \text{说明}\\\hline
+\text{① 区间算术} & ⏳ & \text{第一版通过；修正版（补 φ 薄片）运行中}\\
+\text{② 第二独立实现} & ✅（\text{浮点层}） & \text{逐位一致；区间层待补}\\
+\text{③ 浮点参数} & ✅\ \text{已被取代} & \text{终端验证改由区间算术承担}\\
+\end{array}✓$$
+$$\text{账本不变}：\boxed{0.3730721881\ \le\ C_3\ \le\ 0.3731108480}✓$$

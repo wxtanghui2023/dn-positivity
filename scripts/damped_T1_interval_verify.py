@@ -10,7 +10,8 @@ import sys, itertools, numpy as np, time, hashlib, json
 T=float(sys.argv[1]) if len(sys.argv)>1 else 0.3730721881
 N0=int(sys.argv[2]) if len(sys.argv)>2 else 10
 LIMIT=int(sys.argv[3]) if len(sys.argv)>3 else 0     # >0 时只验前 LIMIT 个盒（基准用）
-PI=float(np.pi); K=15; SLACK,TE=1e-12,1e-9
+PI=float(np.pi); PI_UP=float(np.nextafter(np.pi,np.inf)); K=15; SLACK,TE=1e-12,1e-9
+print(f"  φ 网格上界 = {PI_UP!r} (> π = {PI!r}) ✓ 覆盖 [0,π] ⊇ 无薄片遗漏")
 def mincos_v(k,lo,hi):
     out=-np.ones_like(lo); wide=(k*(hi-lo)>=2*PI-TE); t0,t1=k*lo,k*hi
     nA=np.ceil((t0-PI)/(2*PI)); nB=np.floor((t1-PI)/(2*PI))
@@ -25,7 +26,7 @@ def boxlb(lo,hi):
         best=np.maximum(best,c1+r2*c2+r3*c3)
     return best-3*SLACK
 print(f"=== P1: 浮点 B&B 生成终端盒清单（T={T:.10f}, N0={N0}）===",flush=True)
-g=[np.linspace(0,1,N0+1),np.linspace(0,1,N0+1)]+[np.linspace(0,PI,N0+1)]*3
+g=[np.linspace(0,1,N0+1),np.linspace(0,1,N0+1)]+[np.linspace(0,PI_UP,N0+1)]*3
 LO=[];HI=[]
 for i in itertools.product(*[range(N0)]*5):
     LO.append([g[0][i[0]],g[1][i[1]],g[2][i[2]],g[3][i[3]],g[4][i[4]]])
