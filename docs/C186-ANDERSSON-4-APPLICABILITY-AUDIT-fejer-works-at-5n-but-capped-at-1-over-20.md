@@ -35,7 +35,7 @@ $$\text{对称化}：\text{把}\ M\ \text{个点}\ \{z_k\}\ \text{扩为}\ 2M\ \
 $$\qquad （\text{实值}\ ✓、\text{偶}\ ✓：g(-\nu)=\tfrac12\sum(z_k^{-\nu}+\bar z_k^{-\nu})=\tfrac12\sum(\bar z_k^{\nu}+z_k^{\nu})=g(\nu)✓）$$
 $$\qquad A=g(0)=M,\qquad B=\sum b_k^2=\tfrac M2,\qquad |g(\nu)|\le\sum_k|z_k|^\nu\le M$$
 $$\text{代入}\ [4]\ \text{Theorem 1}（|g(\nu)|\le M\Rightarrow\max_{\nu\le m}g^+\ge\tfrac{B(m+1)-AM-A^2}{2Mm}）\text{取}\ m=5M：$$
-$$\qquad \max_{1\le\nu\le5M}\Re S(\nu)\ \ge\ \frac{\tfrac M2(5M+1)-\tfrac{M^2}{2}\cdot 2}{2\cdot M\cdot5M}\Big|_{\text{代入}A=M,B=M/2}=\frac{\tfrac M2(5M+1)-M^2-M^2}{10M^2}=\frac{M^2+M}{20M^2}=\boxed{\frac{M+1}{20M}}✓✓$$
+$$\qquad \max_{1\le\nu\le5M}\Re S(\nu)\ \ge\ \frac{B(m+1)-AM-A^2}{2Mm}\Big|_{A=M,\,B=M/2,\,m=5M}=\frac{\tfrac M2(5M+1)-M^2-M^2}{10M^2}=\frac{M^2+M}{20M^2}=\boxed{\frac{M+1}{20M}}✓✓$$
 $$\Longrightarrow \forall M\ge1,\ \forall|z_k|=1：\ \max_{1\le\nu\le5M}\Re\sum_k z_k^\nu\ \ge\ \frac{M+1}{20M}\ >\ \frac1{20}✓✓$$
 $$\qquad \textbf{意义}：①\ \textbf{全 M 的严格下界}（\text{不再只靠转引}）✓；②\ \textbf{解释了 1/20 与窗口 5M 的来源}✓✓$$
 $$\qquad \qquad ③\ \text{该路线}\ \textbf{给出 Montgomery Lemma 2.2 的单位模情形的自足重证}（\text{常数同 1/20，余量}\ \tfrac1{20M}）✓$$
@@ -81,8 +81,12 @@ $$\qquad \Longrightarrow \text{要把常数从}\ \tfrac1{20}\ \text{推到}\ \tf
 
 ## §7 【技术词回查】输出（`scripts/tech_word_check.sh`）
 
+**读数（按实测，逐字）**：`可套性审计`=0【新】、`对角项衰减`=0【新】、`机制封顶`=**1**【**沿用**——
+命中 `V2-1-lower-boundary-of-F-uncond.md`】✓
+**自我更正**：初稿把第三项记为 0（凭印象），已按实测改写 ✓
+
 ```
 技术词 可套性审计   命中文件数=0 ::  ⟹ 本档新增
 技术词 对角项衰减   命中文件数=0 ::  ⟹ 本档新增
-技术词 机制封顶    命中文件数=0 ::  ⟹ 本档新增
+技术词 机制封顶    命中文件数=1 :: ./V2-1-lower-boundary-of-F-uncond.md  ⟹ 【沿用，非新增】
 ```
