@@ -5,7 +5,7 @@ $$\qquad \text{方法}：2000\times2000\ \text{网格}\ +\ \text{Lipschitz 常�
 $$\qquad ⟹\ \textbf{认证} \text{任意}\ M=2\ \text{配置}：\max_k|f(k)|\ \ge\ \sqrt{4.2467/10}=0.6517\ >\ \tfrac12✓✓$$
 $$\textbf{(二)}\ \text{余量结论（回答唐先生）}：\text{二阶矩路线}\ \textbf{不需要锋利}；\ \text{约束点}\ \text{余量}\ \ge1.70\times\ (\text{认证})✓✓$$
 $$\textbf{(三)}\ ⚠️\ \textbf{符号问题仍在}：\text{认证只给}\ \max_k|f|\ge0.65，\ \text{未给}\ \max_k f\ge\tfrac12✓$$
-$$\textbf{(四)}\ ⚠️\ \textbf{本档诚实记录一个失败的思路}：\text{"旋转平均"}\ \text{不可用（\text{反例集并非旋转不变}）✓✓$$
+$$\textbf{(四)}\ ⚠️\ \textbf{本档诚实记录一个失败的思路}：\text{"旋转平均"}\ \text{不可用}（\text{反例集并非旋转不变}）✓✓$$
 
 FREEZE-ACK: 本档即冻结期内的认证计算与失败思路记录（依 `§8.1`；不产候选结论）
 
@@ -35,7 +35,7 @@ $$\Longrightarrow\ \text{二阶矩路线在}\ M=2\ \text{上}\ \textbf{处处有
 ## §3 ⚠️ 剩余唯一障碍：符号（`\max|f|` → `\max f`）
 
 $$\text{认证给}：\exists k:\ |f(k)|\ge0.6517；\ \text{目标}：\exists k:\ f(k)\ge\tfrac12✓$$
-$$\qquad \text{若最大值只落在}\ \textbf{负侧}，即}\ \min_kf(k)\le-0.65 \Longrightarrow \text{结论未得}✓✓$$
+$$\qquad \text{若最大值只落在}\ \textbf{负侧}，即\ \min_kf(k)\le-0.65 \Longrightarrow \text{结论未得}✓✓$$
 
 ## §4 ⚠️ 本档诚实记录：**"旋转平均"思路失败**
 
