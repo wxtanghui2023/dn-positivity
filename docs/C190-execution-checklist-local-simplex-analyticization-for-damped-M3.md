@@ -139,3 +139,52 @@ $$\qquad \textbf{拼接检查}：\text{局部半径}\ 0.1769°<0.3538°<\text{�
 - **两条自我更正**：① 修正 §5 的 Hessian 装配索引 ✗；② 更正 C-189 §3 的 $c$ 过估 ✗✓
 - **技术词回查勘误**：本节前文（C-190 初稿）若曾把 `执行清单` 记为 0 命中 ⟹ **勘误为 6 命中【沿用】** ✓（实测：`./IMPL-1-...md` 等 6 档）✓
 - **未用** RH；**未改**他档正文（C-187/C-189 均以**勘误指针**追加 ✓）；**纪律**：先跑后写 ✓
+
+---
+
+## §12 Step 4 结果：局部二阶不等式（**本地闭合**，不含全局主张）
+
+### §12.1 框架（唐先生给定 ＋ 符号审计）
+
+$$x=x_\ast+\delta,\quad \forall\nu\in A：\ S_\nu(x)=S_\nu(x_\ast)+\langle g_\nu,\delta\rangle+\tfrac12\delta^{\mathsf T}H_\nu(\xi)\delta✓$$
+$$\|H_\nu(\xi)\|_2\le R \Longrightarrow S_\nu(x)\ \ge\ S_\nu(x_\ast)+\langle g_\nu,\delta\rangle-\tfrac12R\|\delta\|^2✓$$
+$$\text{又}\ \max_{\nu\in A}\langle g_\nu,\delta\rangle\ \ge\ c\|\delta\|✓\qquad \rho:=\|\delta\|✓$$
+$$\Longrightarrow \boxed{F(x)\ \ge\ S_\ast+c\rho-\tfrac12R\rho^2}✓\qquad \text{正性条件}\ c\rho-\tfrac12R\rho^2>0\iff\boxed{\rho<\tfrac{2c}{R}}✓✓$$
+
+### §12.2 $R$ 的定义澄清（唐先生要求区分两本账）
+
+$$\begin{array}{c|r|r}
+\rho\ (\text{rad}) & R_A=\sup_{\nu\in A,\,x\in B_\rho}\|H_\nu\|_F & R_{\text{all}}=\sup_{1\le\nu\le15,\,x\in B_\rho}\|H_\nu\|_F\\\hline
+0.0030 & 124.655 & 124.655\\
+0.0060 & 150.113 & 150.113\\
+0.0096 & 176.902 & 176.902\\
+\end{array}✓$$
+$$\Longrightarrow \textbf{本例两本账相等}（\text{峰值由}\ \nu=11\in A\ \text{达到}）✓；\text{但计算已分开记账}✓✓$$
+$$\qquad \text{注}：\text{此处用}\ \textbf{Frobenius} \text{上界（逐项区间最大值）}，\text{保守于谱范数}✓；\text{且含邻域放大}✓$$
+
+### §12.3 固定点求解（两版并存，唐先生指定）
+
+$$\text{标准版（余项}\ \tfrac12R\rho^2）：\rho\le\tfrac{2c}{R_A(\rho)} \Longrightarrow \rho=0.004412\ \text{rad}=\mathbf{0.2528°}，R_A=136.956✓$$
+$$\text{超保守版（余项}\ R\rho^2）：\rho\le\tfrac{c}{R_A(\rho)} \Longrightarrow \rho=0.002512\ \text{rad}=\mathbf{0.1439°}，R_A=120.277✓$$
+$$\qquad \textbf{两版均}\ <\ \text{隔离半径}\ 0.5485°✓ \Longrightarrow \textbf{Step 3 不是瓶颈}✓✓$$
+$$\qquad \text{保留两版的理由（唐先生）}：\text{若后续 Hessian 范数转换再损失常数，证明仍有余量}✓$$
+
+### §12.4 局部结论（**不得**升级为全局）
+
+$$\text{因}\ \rho\le\tfrac{2c}{R}\ \Longrightarrow\ c\rho'-\tfrac12R(\rho')^2\ \text{在}\ [0,\rho]\ \text{上单调不减} \Longrightarrow \text{最小在}\ \rho'=0✓$$
+$$\Longrightarrow \boxed{\forall x\in B_\rho(x_\ast)：\ F(x)\ \ge\ S_\ast=\mathbf{0.3730721881}}✓✓\qquad（S_\ast=\text{active band 严格下界}）✓$$
+$$\qquad \text{该局部下界}\ \textbf{严格高于} \text{现有全局证书}\ 0.35✓✓$$
+$$\qquad ⚠️\ \textbf{本步只覆盖}\ B_\rho(x_\ast)✓；\textbf{不声称}\ C_3\ge0.3731✗（\text{属 Step 7}）✓$$
+
+### §12.5 数值自检（抽样，非证明）
+
+$$\text{在}\ B_\rho\ \text{内随机抽 40000 点（三档}\ \rho）：\text{最小}\ F\ \text{均}\ \ge S_\ast，\textbf{违反数}=0✓✓$$
+
+### §12.6 边界
+
+- ⚠️ $R$ 用 Frobenius 上界（保守）✓；邻域放大用区间包络 ✓
+- ⚠️ 局部球 $B_\rho$ 是 $(r_2,r_3,\varphi_1,\varphi_2,\varphi_3)$ 空间的欧氏球（与 Step 3 隔离半径同度量 ✓）
+- ⚠️ 本步**不**证明 $x_\ast$ 是极小点（只证附近 $F\ge S_\ast$ ✓）
+- ⚠️ 抽样自检**不构成证明** ✓
+- **Step 4 状态**：✅ **本地闭合**（严格局部二阶不等式 ＋ 两个半径版本 ＋ 自检）✓
+- **下一步**：Step 6（把局部证书形式化）→ Step 7（远场覆盖，方得全局）✓
