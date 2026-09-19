@@ -203,7 +203,7 @@ $$\textbf{★ 触及}\ B_\rho(x_\ast)\ \text{的弱格}=0/14317=\mathbf{0.0\%}�
 $$(r_2,r_3)\ \text{投影}：r\ge0.9\ \text{约}\ 32\!-\!34\%；\textbf{两坐标均}\ge0.9\ \text{仅}\ 11.2\%；\ r\ge0.99\ \textbf{为}\ 0.0\%✓$$
 
 $$\Longrightarrow \textbf{诊断结论}：\text{弱区}\ \textbf{既不在}\ x_\ast\ \text{附近}，\textbf{也不沿}\ r\approx1\ \text{成片}✗$$
-$$\qquad \text{而是}\ \textbf{全域匀布的 separability slack}✓\ —— \text{既非"情况 A"也非"情况 B"，而是情形 C ✓$$
+$$\qquad 	ext{而是全域匀布的 separability slack}\ ✓\ —— 	ext{既非情况 A 也非情况 B，而是情形 C}\ ✓$$
 $$\qquad \Longrightarrow \text{局部技巧（Step 6）}\ \textbf{不能} \text{修掉这些弱格}✗；\text{但}\ \textbf{纯细分可以}✓（\text{下界随盒收缩收敛到真值}）✓$$
 
 ### §13.2 第二刀：直接在 T₁ 上做全局证书 —— **成功** ✓✓
