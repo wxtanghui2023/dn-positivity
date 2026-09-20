@@ -12,7 +12,7 @@ $$\text{impl A}（\text{均值形式}）：|\cos(a\pi)-\cos(a\pi_{\rm mid})|\le 
 $$\text{impl B}（\texttt{mpmath.iv}\ \text{区间算术}）：\pi\in[\pi_{\rm lo}-10^{-150},\ \pi_{\rm hi}+10^{-150}]✓（\text{吃掉端点转换误差}✓）；\cos\ \text{直接取区间}✓$$
 $$\qquad \text{工作精度}：\mathrm{dps}=220✓,\ \mathrm{iv.prec}=500✓$$
 
-$$\textbf{结果}：两实现逐}\ k\ \text{的}\ U_k\ \text{差}\le6.8\times10^{-100}✓（\text{同量级于区间宽度}✓ \Longrightarrow \text{一致}✓）$$
+$$\textbf{结果}：\text{两实现逐}\ k\ \text{的}\ U_k\ \text{差}\le6.8\times10^{-100}✓（\text{同量级于区间宽度}✓ \Longrightarrow \text{一致}✓）$$
 $$\qquad U_{\rm new}^{\rm safe}(\text{A})=U_{\rm new}^{\rm safe}(\text{B})=0.764081100745853885147562674721✓（k=1✓）$$
 
 $$\boxed{\ U_{\rm new}^{\rm safe}=0.76408110074585388514756267472105✓✓\ }$$
@@ -55,7 +55,7 @@ $$\textbf{层 2 —— 数值自洽性审计}✓（\text{可引用，但须注�
 $$\qquad \text{另属层 2}：\text{census 四项硬输出}✓、\text{KKT／rank 数据}✓、\text{盆地捕获校准}✓、\text{自洽性检验（否决型）}✓$$
 
 $$\textbf{层 3 —— 尚未覆盖}✗（\text{明确列出，避免误引用}✓）$$
-$$\qquad \text{① 每簇的极小半径区}：(0,\ \rho_{\rm lower}]✓（\delta_A\ \text{控制跌幅}✓，但无严格上升}✗）$$
+$$\qquad \text{① 每簇的极小半径区}：(0,\ \rho_{\rm lower}]✓（\delta_A\ \text{控制跌幅}✓，\text{但无严格上升}✗）$$
 $$\qquad \text{② 簇间空档}：[\rho_{\rm upper},\ 0.4425]✓（\text{三簇两两距离}2.359／0.4425✓）\textbf{无任何证书}✗$$
 $$\qquad \text{③ 全局缺口}：m_3\in[0.76,\ 0.7640811\ldots]✓ \text{ 的下界侧}——\text{即"是否存在更低极小"}\textbf{未解决}✗✓$$
 
