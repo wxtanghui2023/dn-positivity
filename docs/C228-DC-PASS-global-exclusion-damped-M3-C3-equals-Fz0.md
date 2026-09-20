@@ -68,5 +68,5 @@ $$\textbf{② 体积精确核对}：\text{T13-A C 阶段做过有理数精确体
 
 $$\textbf{① }C_3=F(z_0)\ \text{现在可写}✓（\text{但数值仍为区间级：上界来自合法有理构型＋区间算术}✓）$$
 $$\textbf{② 最小点集}=\{z_0,\sigma z_0\}✓（\text{两点不同}✓：r_2=0.79051\neq r_3=0.83021✓）$$
-$$\textbf{③ 严格性层级}：\text{区间乘积＋有向舍入}✓；\text{facet 法向仍用 float SVD}⚠️（\text{与 B5 同，\varepsilon\sim0.2\gg10^{-15}✓）$$
+$$\textbf{③ 严格性层级}：\text{区间乘积＋有向舍入}✓；\text{facet 法向仍用 float SVD}⚠️（\text{与 B5 同，}\varepsilon\sim0.2\gg10^{-15}✓）$$
 $$\textbf{④ 未用 RH}✓；\text{未改他档}✓；\textbf{⑤ 本档不主张}：\text{任何关于无阻尼}\ m_3\ \text{或一般}\ M\ \text{的外推}✗$$
