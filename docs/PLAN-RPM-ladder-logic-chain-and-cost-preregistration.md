@@ -87,3 +87,36 @@ $$\text{若被 timeout 杀死}✓：\text{金标准锚点缺失}✗（\text{但 
 
 $$\text{① 再优化速度}✗（\text{唐先生：重点＝语义分层}✓）\qquad \text{② 任何并发}✗\qquad \text{③ 未经批准的 kill／启动}✗$$
 
+---
+
+## §9 【2026-09-20 23:02 正式收缩】阶梯状态重定义（承 `C-268` 依赖地图 ✓✓）
+
+$$\boxed{\textbf{① }\(\text{RP}_M\)\ 阶梯【不再是 S1 主线】✗✓ —— \text{"}M\le11\ \text{定理表"}\,\textbf{计划正式撤销}✗✓}$$
+$$\boxed{\textbf{② }M=6..11\ \textbf{全部 STOP}✗✓（\text{不是"没做完"}✗，\text{而是}\textbf{需求地图证明继续做没有启下}✓✓）}$$
+$$\boxed{\textbf{③ }M=1\ \overset{\texttt{ENGINE-2}}{\Longrightarrow}\ \text{E4 原定理自足}✓✓；\ r=2,3,4\ \overset{\text{已有资产}}{\Longrightarrow}\ \text{阈值}\ 3/40\ \text{已覆盖}✓✓}$$
+$$\boxed{\textbf{④ }r\ge5\ \text{仅在【独立的离线零点数量界】出现后才产生下游价值}✗ ✓ \Longrightarrow \text{条件性资产}✓}$$
+
+### 9.1 三层定位（锁定 ✓）
+
+| 层级 | 内容 | 状态 |
+|---|---|---|
+| $\text{RP}_1$–$\text{RP}_4$ | 已经足够支撑 E4 的核心资产 | ✓✓ **已证**（`C-159`／`C-193`／`T13-A`／`C-265`）|
+| $\text{RP}_5$ | 正在完成的额外资产 | ⬜ 慢版运行中（身份＝**独立资产／交叉验证**，非 E4 必需品）|
+| $\text{RP}_{6..11}$ | 无下游需求 | ✗ **不立项** |
+
+$$\textbf{关键}✓：\text{慢版 }M=5\ \text{结束后}\ \textbf{不自动触发 }M=6✗✓$$
+
+## §10 【新判据·四条】＋【新纪律】✓✓
+
+$$\boxed{\text{任何新候选先过四条}✓：\text{① 独立性}\to\text{② 资产相邻}\to\text{③ RH 形式相关}\to\text{④ }\textbf{有明确启下}✓✓}$$
+$$\qquad \text{其中 ④ 是硬门槛}✓：\text{答不出"完成后使什么成为可能"} \Longrightarrow \textbf{不立项}✗$$
+
+$$\boxed{\textbf{项目纪律（唐先生 2026-09-20 23:02）}✓✓：\textbf{先证明下游需要，再允许计算扩大}}$$
+$$\qquad \textbf{反模式（明令禁止}）✗✗：\text{"既然几秒能算，那就把 }M=11\ \text{做完吧"} \Longrightarrow \text{典型的}\textbf{工具能力反过来制造任务}✗✓$$
+$$\qquad \textbf{已确立的事实}✓✓：\text{能算}\ \neq\ \text{值得算}✓（\texttt{C-268}\ \text{已证}✓）$$
+
+## §11 余下动作（按唐先生给序 ✓）
+
+$$\text{① 等慢版 }M=5\ \text{自然收尾}✓（\text{不追加阶梯}✗）\to \text{② 归档本次"需求闭合"}✓ \to \text{③ 从候选清单中寻找下一个【同时满足四条】的项目}✓$$
+$$\qquad \textbf{禁止}✗：\text{再找新的 }(\text{RP}_M)\ \text{目标}✗；\text{因 v3 快就扩大计算}✗$$
+
