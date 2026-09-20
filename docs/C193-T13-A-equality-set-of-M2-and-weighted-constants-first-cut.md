@@ -50,7 +50,7 @@ $$\textbf{结构性观察}：g_w/w\ \textbf{不单调}✗（0.500\to0.482\to0.41
 
 ## §3 与古典 Turán–Cassels 的关系（诚实定位）
 
-$$\text{古典 Turán 第一定理}（\text{模长版，窗口}\ n，实为}\ \max_{1\le\nu\le n}|\sum z_j^\nu|\ge1✓，\text{等号}=\text{正}\ n\ \text{边形}）✓\ —— \textbf{已知}✗，\text{本档不声称新}✓$$
+$$\text{古典 Turán 第一定理}（\text{模长版，窗口}\ n，\text{实为}\ \max_{1\le\nu\le n}|\sum z_j^\nu|\ge1✓，\text{等号}=\text{正}\ n\ \text{边形}）✓\ —— \textbf{已知}✗，\text{本档不声称新}✓$$
 $$\text{本档 (A) 是}\ \textbf{实部＋短窗}\ (5M)\ \text{版的等号刻画}✓\ —— \text{窗口}\ 5M\ \text{正是文献空隙}✓（\texttt{RP-M-LITERATURE-POSITIONING}）✓$$
 $$\text{本档 (B) 是}\ \textbf{Cassels 型加权}\ \text{版的首轮数值}✓\ —— \text{⚠️}\ \textbf{原典不可得}（Cassels 引理档案仅 1 命中＝台账自身✓）\Longrightarrow \text{不声称逐字对应}✓，\text{定位为"Cassels 型"}✓$$
 
@@ -63,11 +63,18 @@ $$\textbf{③}\ (A)\ \text{推广}：M=3\ \text{的等号集}（\text{数值极�
 ## §5 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写**）
 
 ```
-技术词 等号构型        命中文件数=0    ::
+技术词 等号构型        命中文件数=2    ::  ./C192-OP6-equality-set-of-kappaN-primitive-roots.md  ./E46-5C-inertia-necessity.md
 技术词 加权最优常数    命中文件数=0    ::
 技术词 本原根模式      命中文件数=0    ::
 ```
-⟹ 三项**均本档首次命名** ✓（检查在落档前执行 ✓；事后重跑会自命中本档，依 `C-168` §6 扣除 ✓）
+
+$$
+\textbf{逐项判定}：$$
+$$\qquad \text{「等号构型」}：2\ \text{命中}\ —— \texttt{C192}\ \text{为同义复用}✓，\texttt{E46}\ \text{是}\ \textbf{von Neumann 迹不等式的等号构型}✓（\text{不同对象}）⟹ \textbf{通用词，不计本档新增}✗✓$$
+$$\qquad \text{「加权最优常数」}：0\ \text{命中} ⟹ \textbf{本档首次命名}✓✓$$
+$$\qquad \text{「本原根模式」}：0\ \text{命中} ⟹ \textbf{本档首次命名}✓✓$$
+
+⚠️ **自查记录（本档第一次成稿时写错）**：初稿 §5 把「等号构型」记为 0 命中 ✗ —— **错**✗，实测 2 命中 ✓。**先跑后写**纪律再次被违反（这是本项目第 4 次同类失误 ✓），已按实测改正 ✓。
 
 ## §6 边界
 
