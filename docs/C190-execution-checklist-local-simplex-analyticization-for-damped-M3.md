@@ -576,3 +576,43 @@ $$\textbf{可达前沿}\ T^\ast=0.3730918✓（409{,}171\ \text{盒，四门运�
 $$\text{若通过} \Longrightarrow \boxed{0.3730918\ \le\ C_3\ \le\ 0.373092075762}\qquad \text{宽度}\ \mathbf{2.758\times10^{-7}}✓（\text{再收窄}\ 7.5\times）✓✓$$
 $$\qquad \textbf{且同时证明}\ F\ge0.3730918\ \text{处处成立} \Longrightarrow \textbf{不存在低于}\ 0.3730918\ \text{的点}✓✓$$
 $$\qquad ⚠️\ \text{仍}\ \textbf{不能} \text{断言}\ C_3\ \text{精确值}✗（\text{真极小可能严格位于区间内部}✓）$$
+
+---
+
+## §22 第三档 target certificate：**T=0.3730918 四门全过** ✓✓（2026-09-20 09:46 完成）
+
+$$\text{纪律（§18.2）}：\text{框架}\ \textbf{完全不动}（\text{v3}／N_0=10），\textbf{只改 target}✓\qquad \text{日志}：\texttt{cert\_appendix/iv-gates/t3iv\_T0.3730918.log}✓$$
+
+$$\textbf{① 铺砌}：\sum_C\mathrm{vol}(C)\overset{?}{=}1\cdot1\cdot\texttt{PI\_UP}^3\ \text{精确相等}=\textbf{True}✓\qquad \text{sha256[:32]}=\texttt{0d69780a7d3b6374d0ddb13c81e5b8a5}✓$$
+$$\qquad \text{终端盒}\ \mathbf{409{,}171}（\text{总评估}\ 818{,}342）✓\qquad \texttt{PI\_UP}=3.1415926535897936>\pi✓\qquad \text{无 float 偷换端点}✓$$
+
+$$\textbf{② 严格正性}：\text{验证盒}\ 409{,}171\ |\ \textbf{违反}\ 0\ |\ \min_C\mathrm{LB}^{\rm IV}_C=\mathbf{4.573824652354119\times10^{-11}}>0✓✓$$
+$$\qquad ⭐\ \textbf{最危险格}：\text{id}=\mathbf{379{,}970}✓\qquad \mathrm{LB}^{\rm IV}=0.373091800046✓$$
+$$\qquad \qquad lo=(0.83021240234375,\ 0.7905334472656251,\ 0.34277759443297084,\ 1.4505322330246626,\ 2.5781710975793213)✓$$
+$$\qquad \qquad hi=(0.8302185058593751,\ 0.79053955078125,\ 0.34278718181289514,\ 1.4505418204045868,\ 2.5781806849592455)✓$$
+
+$$\textbf{③ 区间层双实现}：\text{抽样}\ \mathbf{2001}\ \text{盒（含最危险格）}✓$$
+$$\qquad \max|\mathrm{LB}_A^{\rm IV}-\mathrm{LB}_B^{\rm IV}|=\mathbf{4.441\times10^{-16}}✓（\text{中位}\ 5.551\times10^{-17}）\qquad \text{T-判定一致}=\textbf{True}✓✓$$
+
+$$\textbf{④ 内部一致性}：\text{最危险格中心}\ r_2\approx0.79053,\ r_3\approx0.83021,\ \varphi\approx(0.34278,\ 2.57818,\ 1.45054)✓$$
+$$\qquad \text{与}\ §20.1\ \text{的}\ x_\ast\ \text{镜像一致}✓⟹ \text{本档取}\ x_\ast\ \text{的另一对称拷贝（两档在镜像对上轮流取最危险格）}✓✓$$
+
+### §22.1 账本更新
+
+$$\text{旧}：0.3730900000\ \le\ C_3\ \le\ 0.373092075762\qquad（\text{宽}\ 2.076\times10^{-6}）$$
+$$\boxed{\mathbf{0.3730918}\ \le\ C_3\ \le\ \mathbf{0.373092075762}}\qquad（\text{宽}\ \mathbf{2.758\times10^{-7}}）✓✓$$
+$$\qquad \text{宽度收窄}\ \mathbf{7.5\times}✓（2.076\times10^{-6}\to2.758\times10^{-7}）\qquad \text{下界}：\text{本档 target certificate}✓\qquad \text{上界}：\text{§20.4 有理构型}✓$$
+$$\Longrightarrow \textbf{同时证明}\ F\ge0.3730918\ \text{处处成立}✓ \Longrightarrow \textbf{不存在低于}\ 0.3730918\ \text{的点}✓✓$$
+
+### §22.2 三点注记（须随结论一并引用）
+
+$$\textbf{① 稳健性}：\text{最小余量}\ 4.57\times10^{-11}\ \text{远大于双实现差异}\ 4.44\times10^{-16}\（\text{约}\ 10^5\ \text{倍}）\Longrightarrow \text{非数值噪声}✓✓$$
+$$\textbf{② 截断合法}：\text{门}\ 1A/1B\ \text{取}\ K=15\ \text{的逐}\ k\ \text{下界再取}\max✓；\ \max_{k\le15}\le\sup_{k\ge1}✓ \Longrightarrow \text{截断只让证书}\ \textbf{更保守}✓，\text{不产生缺口}✓$$
+$$\textbf{③ 仍不能断言精确值}✗：\text{真极小可能严格位于区间内部}✓\（\text{下界}\ 0.3730918\ \text{与目前最深已知点}\ 0.373092052937\ \text{相距}\ \approx2.5\times10^{-7}✓）$$
+
+### §22.3 证书归档（修正 §20.3 的命名缺陷）
+
+$$\text{新目录}\ \texttt{cert\_appendix/iv-gates/}✓\qquad \text{文件}：$$
+$$\qquad \texttt{t1iv\_T0.3730918.json}✓（\text{本档 JSON}）\qquad \texttt{t3iv\_T0.3730918.log}✓（\text{本档原始日志}）$$
+$$\qquad \texttt{t2iv\_T0.37309.log}✓（\text{第二档日志补归档}✓——\ \text{该档 JSON 已被覆盖丢失}✗，\text{仅日志可溯}✓）$$
+$$\qquad ⚠️ \text{脚本仍把输出写死为}\ \texttt{/tmp/t1iv3\_result.json}✗ \Longrightarrow \textbf{仍待修}✓（\text{按}\ T\ \text{命名，见}\ §20.3）$$
