@@ -72,3 +72,21 @@ $$\textbf{③ 通用词（不计）}✓：\text{「serender／天花板／对象
 $$\textbf{① 本档为反证审计}✓，\text{不产候选结论}✗；\textbf{② 未用 RH}✓；\text{未改他档正本}✓（\text{仅追加 C-257 指针}✓）$$
 $$\textbf{③ 本档【不声称】M1–M6 中未找到 survivor 的三格不可能}✗（\text{只记 failed audit}✓，\text{遵唐先生原话}✓）$$
 $$\textbf{④ survivor 的「结算」限于【是否产出非平凡量}】✓，\textbf{不含「能否推到 RH」✗}（\text{后者由天花板栏负责}✓）$$
+
+---
+
+## §9 【追加·唐先生 2026-09-20 20:57 修正】SURVIVOR-5 第五项的**二级标签**
+
+$$\textbf{问题}✗✓：\text{本档 §4 对 M5 只写了 } RH\Rightarrow\text{Lindel\"o}f\Rightarrow\text{subconvexity}✓，\text{这是【单向 RH-interface}】✓—— \text{若第五项只要求「严格可追踪的 RH 接口」，M5 可过}✓；\textbf{但不得与「直接产生 RH 障碍敏感量」混为一谈}✗✓$$
+
+$$\boxed{\text{第五项的二级标签}✓✓：\quad R_1=\text{RH 导出型}；\qquad R_2=\text{RH 障碍敏感型}}$$
+
+| 格 | 本档判定的强度 | 依据 |
+|---|---|---|
+| **M3** | $R_2$ ✓✓ | 无零区域＝对**障碍本身**（零点位置）敏感；且是 τ-Li 判据的输入 |
+| **M4** | $\ge R_2$ ✓ | Siegel 零点接口＝障碍敏感（Siegel 零点即最坏情形零点） |
+| **M5** | $R_1$ ✓ | 目前只展示 RH $\Rightarrow$ Lindelöf $\Rightarrow$ subconvexity（导出型） |
+
+$$\Longrightarrow \textbf{本档 §4 的 M5 survivor 判定不变}✓（\text{它仍然满足第五项}）；\text{但强度须标为 }R_1✓，\textbf{不得与 M3／M4 并列}✗✓$$
+$$\qquad \text{该二级标签已写入 }\texttt{PROTOCOL}\ \S12\ \text{层 3}✓✓（\text{避免以后强度混用}）$$
+

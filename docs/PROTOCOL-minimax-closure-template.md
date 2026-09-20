@@ -145,3 +145,42 @@ $$\textbf{③ 与 }\texttt{V188}✓：\text{四通道穷尽表＝Rule T 第③�
 
 $$\boxed{\text{不再是「哪个数学对象有趣」}\ \longrightarrow\ \text{而是「}\texttt{V188}\text{ 六类之外的机制有哪些」}\ \to\ \text{再找承载它的算术对象}}✓✓$$
 $$\qquad \text{第一问}✓：\text{是否存在一种自然算术操作，Fourier／谱化之后【既不退化成 }\gcd/\text{Euler，也不等价于已有六类】，且产生【可检测的跨尺度耦合}】？✓$$
+
+## §12 ⭐ FZ-1 修正后的**逻辑层级**（唐先生 2026-09-20 定规 ✓✓，三层）
+
+> **立规理由**：由【近期成功案例】归纳机制优先级，极易把「实践优势」误读成「机制排他性」✓。
+> 本层级的目的是让后续恢复枚举时**不能**再犯此误 ✓✓。
+
+### 层 1 · Rule T（保留 ✓，见 §11）
+
+$$\boxed{\text{新对象}\neq\text{新机制}}✓✓\qquad \text{先翻译／查重／最小解析闭合，再决定是否实验}✓$$
+
+### 层 2 · **Rule F — Falsification-before-generalization**（新增 ✓✓）
+
+$$\boxed{\text{观察性归纳}\ \xrightarrow{\text{SURVIVOR-5}}\ \begin{cases}\text{找到 survivor} &\Rightarrow\ \textbf{撤销强读法}✓✓\\ \text{未找到} &\Rightarrow\ \textbf{仅保留弱读法}✓\end{cases}}$$
+
+$$\textbf{禁止}✗✗：\text{从 } N=4\ \text{个成功案例推出「该机制结构上更有能力」}✗$$
+$$\textbf{当前唯一允许的表述}✓✓：\boxed{\text{第三族}\ =\ \text{近期实践观察}\ +\ \text{已有对象侧路线的天花板对照}}✓$$
+$$\qquad （\text{不得写成「第三族是唯一有效机制」}✗）$$
+
+### 层 3 · **SURVIVOR-5 硬门槛**（✓✓）
+
+$$\boxed{N\wedge NR\wedge A\wedge Q\wedge R}✓✓：\text{N Natural｜NR Non-redundant｜A Arithmetic origin｜Q 新的 quantitative observable｜R 严格 RH-interface}$$
+$$\boxed{\text{任何一项失败}\Rightarrow\text{不能作为反例}✗；\qquad\text{五项全过}\Rightarrow\textbf{立即修正当前机制判断}✓✓}$$
+$$\textbf{R 的二级标签}✓✓（唐先生 2026-09-20 追加）：\boxed{R_1=\text{RH 导出型}\qquad R_2=\text{RH 障碍敏感型}}\ \text{——}\textbf{不得混用强度}✗✓$$
+
+### 实例链（本层级的来源 ✓）
+
+| 档 | 内容 | 后果 |
+|---|---|---|
+| `C257` | 机制空间搜索：第三族（量侧／换量） | 提出强读法 |
+| `C258` | 反证审计：M3／M4／M5 找到 survivor | 强读法**撤销**，弱读法保留 |
+| R 强度 | M3＝R₂（无零区＝障碍敏感）；M4 ≥ R₂（Siegel 零点接口）；M5＝R₁（目前仅 RH 导出） | 避免强度混用 |
+
+## §13 （甲）恢复 `C142` 枚举时的**审查链**（唐先生指定 ✓✓）
+
+$$\boxed{\text{已有 survivor}\ \to\ \text{quantity 是否真正改变}\ \to\ \text{是否越过已知尺度墙}\ \to\ \text{才考虑 RH bridge}}✓✓$$
+$$\textbf{禁止}✗✗：\text{survivor}\Rightarrow\text{「优先路线已确认」}✗ —— \text{survivor 只意味着【允许进入候选池】}✓$$
+$$\textbf{对 T5 的具体问法}✓✓：\text{能否从现有 de la Vallée Poussin 型正性结构中获得【新的 quantity】}✗，\text{而不是继续优化}\ c/(\log t)^{2/3}(\log\log t)^{1/3}✓$$
+$$\qquad \text{若答案只是优化常数或已知同类零区} \Longrightarrow \textbf{仍只是邻近定理资产}✓（\text{优秀 survivor，但非 RH 路线}✓）$$
+
