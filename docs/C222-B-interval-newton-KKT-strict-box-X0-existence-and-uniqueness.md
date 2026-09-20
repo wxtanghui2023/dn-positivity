@@ -26,7 +26,7 @@ $$\qquad D=\mathrm{diag}\big(\!-\!\textstyle\sum_k\lambda_k k^2\cos(k\varphi_j)\
 $$\textbf{数值基点}✓：120\ \mathrm{dps}\ \text{Newton 精修} \Longrightarrow \text{残差}\ \max|G|=1.45\times10^{-120}✓✓；\ \varphi/\pi=(0.11584425719970138111,\ 0.33188742342310058638,\ 0.7355764367410260154)✓$$
 $$\qquad \lambda=(0.81582831255097778801,\ 0.10370188850320431125,\ 0.05441534828030017616,\ 0.026054450665517724573)✓,\ \sum\lambda-1=0✓（\text{与}\ C-212\ \text{完全一致}✓）$$
 $$\qquad Y\approx J(m)^{-1},\quad \|YJ-I\|_{\max}=1.661\times10^{-124}✓✓（\text{数值层}✓）$$
-$$\textbf{⭐ 关键发现}：\text{该系统【病态}】✓ —— 条件数}\ \sim2\times10^4✓（\lambda\ \text{跨}\ 0.026\text{–}0.82✓、\text{频率到}\ 13✓）$$
+$$\textbf{⭐ 关键发现}：\text{该系统【病态】}✓ —— \text{条件数}\ \sim2\times10^4✓（\lambda\ \text{跨}\ 0.026\text{–}0.82✓、\text{频率到}\ 13✓）$$
 $$\qquad \Longrightarrow r=10^{-6}\ \text{时}\ \|I-YJ(X)\|_\infty\approx6>1✗ \Longrightarrow \textbf{必须用更小初始盒}✓（1=1.7\times10^{-7}）$$
 
 ## §3 ⭐ 结果（Krawczyk 迭代 $X\leftarrow K(X)\cap X$）
