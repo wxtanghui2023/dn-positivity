@@ -33,7 +33,7 @@ $$\textbf{② 真区间乘积}✓✓（\text{关键修正}✓）：S_k=r_2^k\cos
 $$\qquad \mathrm{iprod}([a_1,a_2],[b_1,b_2])=[\min_{4\ \text{积}},\max_{4\ \text{积}}]✓；\ r^k\in[r_{\rm lo}^k,r_{\rm hi}^k]✓（\text{单调}✓）$$
 $$\textbf{③ }c\ \text{用 facet 法}✓（5\ \text{维}6\ \text{顶点}\Longrightarrow6\ \text{个 omit-one 面}✓；\text{法向由 SVD 零空间}✓；\text{containment 由被omit顶点同侧判定}✓）＋\text{扰动界}\ c_X=c_{\rm mid}-\varepsilon✓，\varepsilon=\max_k\|\text{半宽}\|_2✓$$
 $$\textbf{④ }R\ \text{用}\ 5\times5\ \text{Hessian 的保守上界}✓（|\cos|\le\max✓）$$
-$$\textbf{⑤ 自洽规则}✓✓：\textbf{数据球半径}\ \rho\ \ge\ \text{认证半径}\ \rho_{\rm up}✓（\text{本轮先写错}✗，已修正}✓）$$
+$$\textbf{⑤ 自洽规则}✓✓：\textbf{数据球半径}\ \rho\ \ge\ \text{认证半径}\ \rho_{\rm up}✓（\text{本轮先写错}✗，已修正✓）$$
 
 ## §3 ⭐ 自洽扫描（$c$ 在半径 $\rho$ 的球上算；取满足 $\rho_{\rm up}\le\rho$ 的最大 $\rho_{\rm up}$）
 
