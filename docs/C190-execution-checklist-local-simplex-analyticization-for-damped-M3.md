@@ -493,3 +493,51 @@ $$\qquad \text{宽度相对旧档收窄}\ \mathbf{46\%}✓（3.866\times10^{-5}\
 
 $$\text{本轮}\ v3\ \text{脚本把结果写死为}\ \texttt{/tmp/t1iv3\_result.json}✗ \Longrightarrow \textbf{基线档 JSON 已被本档覆盖}✗（\text{基线数值仅存于}\ \texttt{/tmp/t1iv3.log}✓）$$
 $$\Longrightarrow \text{纪律修正：}\textbf{输出文件名必须按}\ T\ \text{命名}✓（\text{如}\ \texttt{t1iv\_T0.3730721881.json}）\Longrightarrow \text{每档独立证书方可长期审计}✓$$
+
+---
+
+## §20 β-2 五项输出 ＋ ⭐⭐ 账本级发现：**x\* 不是极小点**（2026-09-20 09:2x）
+
+### §20.1 ⭐⭐ 关键发现：真极小点在别处（距 x\* 仅 1.25e-5）
+
+$$F(x_\ast)=0.373110848000✓\qquad F(x_{\ast\ast})=\mathbf{0.373092052937}\ \color{red}{<}\ F(x_\ast)✗✗\qquad \|x_{\ast\ast}-x_\ast\|=1.247\times10^{-5}✓$$
+$$x_{\ast\ast}=(r_2,r_3,\varphi/\pi)=(0.7905132461,\ 0.8302071370,\ 0.1091101624,\ 0.8206636560,\ 0.4617193264)✓$$
+$$\Longrightarrow \textbf{此前所有优化器（DE／NM）都停在}\ x_\ast\ \text{这个非极小点}✗；\text{真极小在其}\ 1.25\times10^{-5}\ \text{邻域}✓$$
+
+### §20.2 β-2 五项（按唐先生指定格式）
+
+$$\textbf{①}\ H_\nu(x_\ast)\ \text{（5×5）谱：}\ \|H_\nu\|_2=1.04,\ 3.12,\ 6.10,\ 8.51,\ 11.95,\ \mathbf{93.65}\（\nu=15\ \text{主导}）✓$$
+$$\textbf{②}\ \text{统一二阶常数}\ R=\max_\nu\|H_\nu\|_2=\mathbf{93.65}✓$$
+$$\textbf{③}\ \text{三阶余项}\ M_\nu=7.1,\ 48.6,\ 140.8,\ 287.9,\ 488.0,\ \mathbf{4914.9}\qquad M_{\max}=4914.9✓$$
+$$\textbf{④}\ \text{二阶模型球内最小}：\text{锚}\ x_\ast：\mathbf{0.373093055}\（\|\delta\|=1.39\times10^{-5}）；\text{锚}\ x_{\ast\ast}：\mathbf{0.373094931}\（\|\delta\|=4.01\times10^{-6}）✓$$
+$$\textbf{⑤}\ LB_{\rm local}-T：$$
+$$\begin{array}{c|r|r|c}
+T & \text{锚}\ x_\ast（\text{毛值}） & \text{锚}\ x_{\ast\ast}（\text{毛值}） & \text{判定}\\\hline
+0.37310 & -6.945\times10^{-6} & -5.069\times10^{-6} & ✗\ \textbf{FAIL}\\
+0.37309 & +3.055\times10^{-6} & +4.931\times10^{-6} & ✅\\
+0.3730925 & +5.553\times10^{-7} & +2.431\times10^{-6} & ✅\\
+\end{array}✓$$
+
+### §20.3 对 β 的解释（**不是界太弱，而是事实**）
+
+$$\text{二阶模型的球内最小}\ 0.3730931\ \text{与真实下陷}\ 0.3730921\ \text{仅差}\ \sim10^{-6}✓⟹ \textbf{模型是准的}✓✓$$
+$$\qquad \Longrightarrow T=0.37310\ \text{的门}\ \textbf{本来就不可能过}✗\ —— \text{因}\ x_\ast\ \text{附近真的有}\ F<0.37310\ \text{的点}✓✓$$
+$$\qquad \Longrightarrow \text{二阶／三阶机制}\ \textbf{有效}✓；\text{只是靶子（0.37310）设得高于真极小（0.3730921）}✗$$
+
+### §20.4 账本改进（立即生效）
+
+$$\text{新上界}（\text{有理点＋区间算术}）：C_3\ \le\ \mathbf{0.373092075762}✓\qquad（\text{旧}\ 0.3731108480 ⟹ \text{改善}\ 1.877\times10^{-5}）✓$$
+$$\boxed{0.3730900000\ \le\ C_3\ \le\ 0.373092075762}✓\qquad \text{宽度}=\mathbf{2.076\times10^{-6}}✓（\text{旧}\ 2.0848\times10^{-5} ⟹ \textbf{收窄}\ 10.0\times）✓✓$$
+
+### §20.5 ⚠️ 对 §19 的解释修正
+
+$$\text{§19 原述}✗：\text{纯 B\&B 的成本天花板} \approx0.37309\（\text{算力问题}）✗$$
+$$\text{正确}✓：T=0.373095\ \textbf{本就不可能}✗\ —— \text{因真极小}\ 0.3730921<0.373095✓$$
+$$\qquad \Longrightarrow \text{那次"爆炸"}\ \textbf{不是算力天花板}✗，\text{而是}\ \textbf{目标超过了真极小}✓✓\（\text{无任何算力可认证}）$$
+$$\qquad \text{同时}\ 0.37309\ \text{的成功}\ \textbf{仍然有效}✓（\text{它低于真极小}✓）；\text{阶梯应改为}\ 0.373090\to0.3730915\to0.373092（\text{上限}\approx0.3730921）✓$$
+
+### §20.6 下一步（最短信息量最高）
+
+$$\textbf{①}\ \text{把下界从}\ 0.373090\ \text{推到}\ 0.3730915／0.373092（\text{纯 B\&B，现已知真极小位置，成本可控}）✓$$
+$$\textbf{②}\ \text{β 局部分析}\ \textbf{重新以}\ x_{\ast\ast}\ \text{为中心}（\text{锚点／梯度／Hessian 全部重算}）✓，\text{并同时对镜像}\ \sigma x_{\ast\ast}\ ✓$$
+$$\textbf{③}\ \text{局部球在}\ T\lesssim0.3730925\ \text{上可过}✓（\text{§20.2⑤}）；\text{远场再做补集证书}✓$$
