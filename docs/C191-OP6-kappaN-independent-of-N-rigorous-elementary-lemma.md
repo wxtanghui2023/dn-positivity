@@ -51,7 +51,12 @@ $$\qquad \qquad \text{即：周期／κ 路线到此}\ \textbf{封顶}✓，\tex
 ## §7 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写**）
 
 ```
-技术词 κ_N 与 N 无关   命中文件数=0    ::  ⟹ 本档新增
-技术词 1−16λ 判据      命中文件数=0    ::  ⟹ 本档新增
-技术词 二分法假象      命中文件数=0    ::  ⟹ 本档新增
+技术词 κ_N 与 N 无关   命中文件数=1    ::  ./C191-OP6-kappaN-independent-of-N-rigorous-elementary-lemma.md
+技术词 1−16λ 判据      命中文件数=1    ::  ./C191-OP6-kappaN-independent-of-N-rigorous-elementary-lemma.md
+技术词 二分法假象      命中文件数=0    ::
 ```
+
+⚠️ **自命中说明（依 `C-168` §6 惯例）**：前两项的 1 命中**就是本档自身**（全仓扫描必然自命中）✓；**扣除自身后均为 0 命中** ⟹ 判定：
+
+$$	ext{κ_N 与 N 无关}：本档	extbf{首次命名}✓\qquad 1-16\lambda\ 	ext{判据}：本档	extbf{首次命名}✓\qquad 	ext{二分法假象}：本档	extbf{首次命名}✓$$
+$$\qquad 	ext{通用词}：\kappa_N／\lambda_{\max}\ 	ext{等符号沿用}\ 	exttt{C-158}／	exttt{C-173}✓（	ext{不计新增}）✓$$
