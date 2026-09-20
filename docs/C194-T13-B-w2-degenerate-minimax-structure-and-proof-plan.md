@@ -41,10 +41,10 @@ $$\text{数值等号集}：\text{网格（}3000^2\text{，}π/3\ \text{与}\ π/
 $$\qquad \Longrightarrow \text{与无阻尼}\ M=2\ \text{同型：紧、孤立}✓（\texttt{C-162}\ \text{的紧／松二分}✓）$$
 
 $$\textbf{证明计划（三段拼装，模板}= \texttt{C-152}／\texttt{C-154}\text{）}：$$
-$$\qquad \textbf{① 局部解析}：\text{球}\ |\delta|\le R\ \text{内三区划分}（W\ \text{的符号 ＋ 修正项）✓，\text{各自用显式 Taylor 余项}✓$$
+$$\qquad \textbf{① 局部解析}：\text{球}\ |\delta|\le R\ \text{中做三区划分}\ （W\ \text{的符号 \dots 修正项}）✓，\text{各区用显式 Taylor 余项}✓$$
 $$\qquad \qquad \text{预期形式}：\delta_2\le\sqrt3\delta_1-\alpha\delta_1^2⟹S_5\ge1✓；\delta_2\ge\sqrt3\delta_1+\beta\delta_1^2⟹S_7\ge1✓；\text{中间条带}⟹S_6\ge1✓$$
 $$\qquad \textbf{② 环形证书}：r_0\le|\delta|\le R\ \text{用分离箱 B\&B（2 维，廉价）✓}$$
-$$\qquad \qquad ⚠️\ \text{实测教训：含原点的箱【永远】无法被分离界认证}✗（因}\ \max_k\min_B S_k<1\text{）}⟹ \text{原点必须解析处理}✓✓$$
+$$\qquad \qquad ⚠️\ \text{实测教训：含原点的箱永远无法被分离界认证}✗\ （\text{因}\ \max_k\min_B S_k<1\ \text{）}⟹ \text{原点必须解析处理}✓✓$$
 $$\qquad \textbf{③ 远场}：|\delta|>R\ \text{用网格＋Lipschitz}✓$$
 
 ## §5 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写**）
