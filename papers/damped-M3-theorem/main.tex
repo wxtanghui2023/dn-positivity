@@ -1,0 +1,506 @@
+% 已查地图（先查后写）：查 C-230（最终闭合）、C-229（勘误＋覆盖修补）、C-227（B5）、C-226（D-B）、C-224（T13-A C 严格模板）。
+% D0: 本档对象 = 阻尼 M=3 常数的英文正式定理/证明版本（Theorem A + Lemma 1--5 + 复现 + caveat）—— 关系 = 正式化与冻结登记
+% D1: 0
+% FREEZE-ACK: 本档即冻结期内的正式化与登记（依 §8.1；不产候选结论）
+
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CA}{\textsf{[CA]}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Dd}{\mathbb{D}}
+\newcommand{\Om}{\Omega}
+\newcommand{\hd}{\operatorname{hd}}
+\newcommand{\far}{\operatorname{far}}
+
+\title{The damped three-point cosine min--max constant:\\ a certified identification}
+\author{Hui Tang}
+\date{Draft v1 --- \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For $z_j=r_j e^{i\varphi_j}$ with $|z_j|\le 1$ and $\max_j|z_j|=1$, consider the
+\emph{short-window} real-part power sum $\max_{1\le k\le 5M}\operatorname{Re}\sum_{j\le M}z_j^k$.
+For $M=3$ the worst configuration is \emph{damped}, i.e.\ it lies in the interior of the polydisc.
+We determine the corresponding constant exactly:
+\[
+C_3 \;=\; 0.373\,091\,892\,895\,816\,4\ldots
+\]
+and show that, in the domain of definition $\Om=[0,1]^2\times[0,\pi]^3$, the minimiser set consists of
+exactly two points, $z_*$ and its partner $\sigma z_*$ under the paired swap of the two damped factors.
+The proof is a three-piece splice: a certified interval Krawczyk enclosure of a six-branch nonsmooth KKT
+root (existence, uniqueness, strict positivity of all multipliers, and exact tangency at the root); a
+strict local-growth lemma centred at that root; and a certified global branch-and-bound exclusion on the
+complement of two balls. All computer-assisted statements carry an explicit interval certificate and a
+structurally independent reproduction.
+\end{abstract}
+
+\tableofcontents
+
+\section{Setting and statement of the theorem}
+
+\subsection{Definitions}
+
+Throughout, $M=3$, $K:=5M=15$, and the \emph{domain} is the five-dimensional box
+\begin{equation}
+\Om \;:=\; [0,1]^{2}\times[0,\pi]^{3}\;\subset\;\R^{5},
+\qquad x=(r_2,r_3,\varphi_1,\varphi_2,\varphi_3).
+\end{equation}
+For $1\le k\le K$ define
+\begin{equation}
+S_k(x) \;:=\; \cos(k\varphi_1)+r_2^k\cos(k\varphi_2)+r_3^k\cos(k\varphi_3),
+\qquad
+F(x) \;:=\; \max_{1\le k\le K} S_k(x),
+\qquad
+C_3 \;:=\; \inf_{x\in\Om}F(x).
+\end{equation}
+The \emph{active set} at $x$ is $A(x):=\{k\le K: S_k(x)=F(x)\}$, and the \emph{active spread} is
+\begin{equation}\label{eq:spread}
+\delta_A(x) \;:=\; F(x)-\min_{k\in A(x)}S_k(x)\;\ge\;0 .
+\end{equation}
+The \emph{paired swap} is the involution
+\begin{equation}\label{eq:swap}
+\sigma:(r_2,r_3,\varphi_1,\varphi_2,\varphi_3)\longmapsto(r_3,r_2,\varphi_1,\varphi_3,\varphi_2),
+\qquad C_2:=\{\mathrm{id},\sigma\} .
+\end{equation}
+
+\paragraph{Provenance of the parametrisation.}
+Writing $z_j=r_je^{i\varphi_j}$ one has $\operatorname{Re}z_j^k=r_j^k\cos(k\varphi_j)$. Normalising the
+largest modulus to $1$ and placing it first yields $r_1=1$, so the three-point, linear-window problem
+$\max_{1\le k\le 5M}\operatorname{Re}\sum_{j\le M}z_j^k$ reduces to the study of $F$ on $\Om$. Since
+$\cos$ is even and $2\pi$-periodic, the angle reductions $\varphi_j\mapsto-\varphi_j$ and
+$\varphi_j\mapsto 2\pi-\varphi_j$ make $[0,\pi]$ a fundamental domain in each angle coordinate; no
+generality is lost.
+
+\paragraph{The certified box.}
+$X_0\subset\R^{11}$ denotes the interval Krawczyk box produced in Lemma~\ref{lem:kkt} (seed radius
+$r_0=10^{-12}$, final coordinate width $\le 10^{-21}$), $\hd(X_0)$ its half-diagonal, and $z_*$ the unique
+point of $\Om$ solving the KKT system of Lemma~\ref{lem:kkt} inside $X_0$. We write $c_0$ for the decimal
+centre of $X_0$, used as the numerical centre of the exclusion balls in Lemma~\ref{lem:global}. Finally,
+$B(c,\rho)$ denotes the closed Euclidean ball in $\R^5$, $\far(X,c):=\max_{y\in X}\|y-c\|$ (attained at a
+vertex of $X$), and $\underline F_{\mathrm{IA}}(X)$ an interval-arithmetic lower bound for $\min_X F$.
+
+\subsection{Main theorem}
+
+\begin{theorem}[Global minimisation for damped $M=3$]\label{thm:A}
+With $\Om,F,C_3$ as above,
+\[
+\boxed{\;C_3 \;=\; F(z_*) \;=\; 0.373\,091\,892\,895\,816\,4\ldots\;}
+\]
+and the minimiser set in the normalised domain is
+\[
+\boxed{\;\operatorname*{arg\,min}_{x\in\Om}F(x)\;=\;\{z_*,\;\sigma z_*\}\;},
+\]
+two distinct points of $\Om$.
+\end{theorem}
+
+The proof is given in \S\ref{sec:proof}; it is the splice of Lemma~\ref{lem:kkt}
+(the certified KKT root), Lemma~\ref{lem:sep} (active/non-active separation),
+Lemma~\ref{lem:cover} (a uniform first-order covering estimate), Lemma~\ref{lem:growth}
+(strict local growth at the root) and Lemma~\ref{lem:global} (certified global exclusion).
+
+\begin{remark}[Minimiser set: normalised domain versus raw permutations]\label{rem:frozen}
+The minimiser set \emph{in the normalised domain $\Om$} consists of the two points $z_*$ and $\sigma z_*$.
+The corresponding \emph{raw} permutation orbit contains six configurations, whose images under the
+normalisation map $\mathcal N$ reduce to these two points, i.e.
+$|\mathcal O_{\mathrm{raw}}|=6$ while $|\mathcal N(\mathcal O_{\mathrm{raw}})|=2$
+(Proposition~\ref{prop:orbit}). Statements about the number of minimisers always refer to $\Om$.
+\end{remark}
+
+\section{Lemma 1: certified KKT root and active-set positivity \CA}\label{lem:kkt}
+
+Let $A_*:=\{1,2,3,4,5,15\}$ and consider the system in the eleven unknowns
+\[
+z=(r_2,r_3,\varphi_1,\varphi_2,\varphi_3,\lambda_1,\lambda_2,\lambda_3,\lambda_4,\lambda_5,\lambda_{15}),
+\]
+\begin{equation}\label{eq:kkt}
+G(z)\;=\;
+\begin{pmatrix}
+\sum_{k\in A_*}\lambda_k\,\nabla S_k \\[2pt]
+S_1-S_2 \\ S_1-S_3 \\ S_1-S_4 \\ S_1-S_5 \\ S_1-S_{15} \\[2pt]
+\sum_{k\in A_*}\lambda_k-1
+\end{pmatrix}
+\;=\;0
+\qquad(5+5+1=11\ \text{equations}).
+\end{equation}
+
+\begin{lemma}\label{lem:kkt}
+There is exactly one solution $z_*$ of \eqref{eq:kkt} with coordinate vector in the box $X_0$.
+At that solution
+\[
+\lambda_{\min}=\min_{k\in A_*}\lambda_k = 0.111\,860\,12 >0,
+\qquad
+\|I-YJ(X_0)\|_\infty = 1.965\,1\times10^{-10} < 1,
+\]
+and every coordinate width of $X_0$ is $\le 10^{-21}$. Consequently the exact root satisfies the six
+tangency equations, i.e.\ $S_k(z_*)=F(z_*)$ for all $k\in A_*$, and hence
+\begin{equation}\label{eq:deltaA0}
+\delta_A(z_*)\;=\;0 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Certification]
+The system \eqref{eq:kkt} is solved by an interval Krawczyk operator
+\[
+K(X)\;=\;m-Y\,G(m)+\bigl(I-Y\,J(X)\bigr)(X-m),\qquad m=\operatorname{mid}(X),
+\]
+where $J$ is the analytic Jacobian and $Y$ an approximate inverse of $J$ at the high-precision root. Two
+\emph{separate} operator conditions are verified in interval arithmetic:
+\[
+K(X)\subset\operatorname{int}X \quad\text{(existence of a solution in $X$);}\qquad
+\|I-YJ(X)\|_\infty<1 \quad\text{(uniqueness).}
+\]
+Existence and uniqueness are stated separately for this reason. The seed radius is $r_0=10^{-12}$; the
+system is ill-conditioned ($\operatorname{cond}\approx2\times10^4$, multipliers spanning $0.112$--$0.816$,
+frequencies reaching $15$) and with $r_0=10^{-6}$ one gets $\|I-YJ\|\approx6>1$, so the contraction test
+fails --- the small seed is necessary, not cosmetic. The six multipliers certified in $X_0$ are
+\[
+(\lambda_1,\lambda_2,\lambda_3,\lambda_4,\lambda_5,\lambda_{15})
+=(0.200\,054,\ 0.178\,488,\ 0.165\,510,\ 0.194\,819,\ 0.111\,860,\ 0.149\,270),
+\]
+all strictly positive. Since the solution of \eqref{eq:kkt} inside $X_0$ is unique and the interval
+enclosures of the five tie differences $S_1-S_k$ ($k=2,3,4,5,15$) all contain $0$, the unique root
+satisfies the ties exactly; together with $\sum_k\lambda_k=1$ and $\lambda_k>0$ this gives $S_k(z_*)=F(z_*)$
+for every $k\in A_*$, whence \eqref{eq:deltaA0}.
+\end{proof}
+
+\begin{remark}
+Containment of $0$ in the interval enclosure of a tie \emph{over the whole box} does not assert that the
+ties hold identically on $X_0$. Only the equality at the unique root, \eqref{eq:deltaA0}, is used below.
+\end{remark}
+
+\section{Lemma 2: active/non-active separation \CA}\label{lem:sep}
+
+\begin{lemma}\label{lem:sep2}
+On the reference box $X_{\mathrm{ref}}$ (the variable part of $X_0$),
+\begin{equation}\label{eq:Deltaref}
+\Delta_{\mathrm{ref}}
+\;:=\;\min_{k\in A_*}\inf_{X_{\mathrm{ref}}}S_k\;-\;\max_{k\notin A_*}\sup_{X_{\mathrm{ref}}}S_k
+\;=\;0.279\,596\,813\,6 \;>\;0 .
+\end{equation}
+With the Lipschitz constants of the two families on $\Om$,
+\[
+L_{\mathrm{act}}:=\max_{k\in A_*}k\sqrt5=15\sqrt5=33.541\,02,
+\qquad
+L_{\mathrm{non}}:=\max_{k\notin A_*}k\sqrt5=14\sqrt5=31.304\,952,
+\]
+the active set is constant on the ball $B\bigl(c_0,\rho_{\mathrm{iso}}\bigr)$ with
+\begin{equation}\label{eq:rhoiso}
+\rho_{\mathrm{iso}}\;=\;\frac{\Delta_{\mathrm{ref}}}{L_{\mathrm{act}}+L_{\mathrm{non}}}
+\;=\;4.311\,71\times10^{-3}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Certification]
+For a box $X$, $\inf_X S_k$ and $\sup_X S_k$ are evaluated \emph{exactly per coordinate}: the extrema of
+$\cos(k\varphi)$ on an interval are attained at an endpoint or at an odd (resp.\ even) multiple of $\pi$
+inside it, and the damping factor $r^k$ enters as an \emph{interval product}. The Lipschitz bound
+$\|\nabla S_k\|\le k\sqrt5$ holds because each of the five partial derivatives is bounded by $k$
+(displayed: $\partial_{r_j}(r_j^k\cos k\varphi_j)=kr_j^{k-1}\cos k\varphi_j$ and
+$\partial_{\varphi_j}(r_j^k\cos k\varphi_j)=-kr_j^k\sin k\varphi_j$, all $\le k$ in modulus). Separation
+\eqref{eq:Deltaref} then forces the active set to be constant on any ball of radius at most
+$\Delta_{\mathrm{ref}}/(L_{\mathrm{act}}+L_{\mathrm{non}})$, giving \eqref{eq:rhoiso}.
+\end{proof}
+
+\begin{remark}[Why the interval product is indispensable]
+Bounding $r^k\cos(k\varphi)$ as ``a positive factor times a cosine'' by treating the two factors
+independently gives the spurious value $\Delta_{\mathrm{ref}}=-0.522<0$, i.e.\ a false failure. The
+genuine product bound yields \eqref{eq:Deltaref}.
+\end{remark}
+
+\section{Lemma 3: uniform first-order covering estimate \CA}\label{lem:cover}
+
+\begin{lemma}\label{lem:cover2}
+At the certified root $z_*$ the origin lies in the interior of the convex hull of the active gradients,
+and, after accounting for the data ball $B(c_0,\rho_{\mathrm{data}})$ with $\rho_{\mathrm{data}}=2.05\times10^{-3}$,
+the covering constant
+\begin{equation}\label{eq:cX}
+c_X \;=\; c-\varepsilon_{\mathrm{pert}}
+\;=\;0.302\,091\,5-0.203\,2\;=\;0.098\,812\,009\,77\;>\;0
+\end{equation}
+satisfies
+\[
+\max_{k\in A_*}\langle\nabla S_k(x),u\rangle\;\ge\;c_X\qquad\text{for all }x\in B(c_0,\rho_{\mathrm{data}})
+\text{ and all }\|u\|=1 .
+\]
+\end{lemma}
+
+\begin{proof}[Certification]
+The six points $\{\nabla S_k(z_*)\}_{k\in A_*}\subset\R^5$ span a simplex. The quantity
+$c:=\min_{\|u\|=1}\max_{k\in A_*}\langle\nabla S_k(z_*),u\rangle$ equals the largest ball about the origin
+contained in that simplex, i.e.\ the minimum, over its six facets, of the distance from the origin to the
+facet hyperplane. The facet normals are obtained from the null space of the corresponding $5\times5$ facet
+matrix, and a containment certificate (all remaining vertices strictly on one side of each facet) verifies
+that the inscribed ball is indeed interior. Propagating the enclosing data ball of radius
+$\rho_{\mathrm{data}}$ by the maximal gradient variation $\varepsilon_{\mathrm{pert}}=0.203\,2$ yields the
+usable constant $c_X$ in \eqref{eq:cX}.
+\end{proof}
+
+\section{Lemma 4: strict local growth at the certified root \CA}\label{lem:growth}
+
+\begin{lemma}\label{lem:growth2}
+Let
+\begin{equation}\label{eq:R}
+R\;:=\;\max_{k\in A_*}\ \sup_{x\in B(c_0,\rho_{\mathrm{data}})}\bigl\|\nabla^2S_k(x)\bigr\|_2
+\;=\;99.899\,695\,515\,930\,13,
+\qquad
+\rho_g\;:=\;\frac{2c_X}{R}\;=\;1.978\,224\,4\times10^{-3}.
+\end{equation}
+Then for every $\delta$ with $0<\|\delta\|\le\rho_g$,
+\begin{equation}\label{eq:locgrowth}
+\boxed{\;F(z_*+\delta)\;\ge\;F(z_*)+c_X\|\delta\|-\frac{R}{2}\|\delta\|^{2}\;>\;F(z_*)\;}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix $x\in B(c_0,\rho_{\mathrm{data}})$. By Taylor's theorem and \eqref{eq:R},
+\[
+S_k(x+\delta)\;\ge\;S_k(x)+\langle\nabla S_k(x),\delta\rangle-\frac{R}{2}\|\delta\|^2
+\qquad(k\in A_*).
+\]
+Taking the maximum over $k\in A_*$ and using the elementary fact
+\begin{equation}\label{eq:subadditive}
+\max_{k}\bigl(a_k+b_k\bigr)\;\ge\;\min_{k}a_k+\max_{k}b_k
+\end{equation}
+(valid for arbitrary finite families; note that $\max$ is \emph{sub}additive, so the reverse inequality is
+false) we obtain the \emph{spread form}
+\begin{equation}\label{eq:spreadform}
+\boxed{\;F(x+\delta)\;\ge\;F(x)-\delta_A(x)+c_X\|\delta\|-\frac{R}{2}\|\delta\|^{2}\;}
+\end{equation}
+where $\delta_A(x)$ is the active spread \eqref{eq:spread}. Centred at the root $x=z_*$, the identity
+\eqref{eq:deltaA0} of Lemma~\ref{lem:kkt} gives $\delta_A(z_*)=0$, and \eqref{eq:spreadform} becomes
+\eqref{eq:locgrowth}. Finally $\rho_g=2c_X/R$ is precisely the (smaller) root of
+$c_X\rho-\tfrac R2\rho^2=0$, so the right-hand side of \eqref{eq:locgrowth} is strictly positive for all
+$0<\|\delta\|<\rho_g$ and equals $F(z_*)$ only in the limit $\|\delta\|\to\rho_g$.
+\end{proof}
+
+\begin{remark}[The spread term is the true logical consumer of the tangency]
+If \eqref{eq:spreadform} were available with $\min_{k\in A_*}S_k(x)$ at an \emph{arbitrary} point $x$ of
+the reference box, then every such $x$ would be a strict local minimiser of $F$, which is impossible. The
+honest statement therefore carries the spread $\delta_A(x)$, and Lemma~\ref{lem:kkt} is consumed at exactly
+one place: the identity $\delta_A(z_*)=0$.
+\end{remark}
+
+\begin{remark}[Self-consistency of the reference ball]\label{rem:selfcons}
+The constants $c_X$ and $R$ must be valid on the whole ball on which \eqref{eq:locgrowth} is asserted.
+This is a \emph{proof condition}, not an implementation detail:
+\begin{equation}\label{eq:selfcons}
+\boxed{\;\rho_{\mathrm{data}}\;\ge\;\rho_g+\hd(X_0)\;}
+\end{equation}
+Indeed $c_X$ is obtained by propagating the data ball $B(c_0,\rho_{\mathrm{data}})$, while
+\eqref{eq:locgrowth} is applied on $B(z_*,\rho_g)$; since $\|z_*-c_0\|\le\hd(X_0)$, \eqref{eq:selfcons} is
+exactly what makes the application legitimate. Here
+$\rho_{\mathrm{data}}=2.05\times10^{-3}\ge1.978\,224\,4\times10^{-3}+10^{-21}$. A configuration with
+$\rho_{\mathrm{data}}=10^{-5}$ and certified radius $4.3\times10^{-3}$ violates \eqref{eq:selfcons} and was
+discarded.
+\end{remark}
+
+\section{Lemma 5: certified global exclusion \CA}\label{lem:global}
+
+\begin{lemma}\label{lem:global2}
+Let $\rho_g$ be as in \eqref{eq:R}, put $B_1:=B(z_*,\rho_g)$, $B_2:=B(\sigma z_*,\rho_g)$, and
+\begin{equation}\label{eq:TC}
+T_C\;:=\;\sup_{X_0}F+10^{-9}\;=\;F(z_*)+10^{-9}\;=\;0.373\,091\,893\,895\,817 .
+\end{equation}
+Then $F(x)\ge T_C$ for every $x\in\Om\setminus(B_1\cup B_2)$.
+\end{lemma}
+
+\begin{proof}[Certification]
+Run an adaptive branch-and-bound on $\Om$ with the exact separable box lower bound
+\[
+\mathrm{LB}(X)=\max_{1\le k\le K}\Bigl[\min_{I_1}\cos k\varphi_1+\min_{I_2}\bigl(r_2^k\cos k\varphi_2\bigr)
++\min_{I_3}\bigl(r_3^k\cos k\varphi_3\bigr)\Bigr]\;\le\;\min_X F ,
+\]
+the damped terms again evaluated as interval products. A box $X$ is
+\emph{discarded} if $\far(X,c_0)\le\rho_g-10^{-9}$ from one of the two centres --- then
+$X\subseteq B(c_0,\rho_g-10^{-9})\subseteq B(z_*,\rho_g)$ because $\hd(X_0)\le10^{-21}$, so $X$ lies in the
+region certified by Lemma~\ref{lem:growth2}; \emph{certified} if
+$\underline F_{\mathrm{IA}}(X)\ge T_C$; and \emph{split} (bisection along the widest coordinate) otherwise,
+unless the box is already below the minimum width $10^{-7}$, in which case it is counted
+\emph{unresolved} and would invalidate the lemma. The outcome is:
+\begin{center}
+\begin{tabular}{lrl}
+\toprule
+boxes evaluated & $N_{\mathrm{eval}}$ & $472\,766$\\
+interval-certified & $N_{\mathrm{cert}}$ & $252\,282$\\
+discarded & $N_{\mathrm{disc}}$ & $485$\\
+split & $N_{\mathrm{split}}$ & $219\,999$\\
+\textbf{unresolved} & $N_{\mathrm{unres}}$ & $\mathbf 0$\\
+float-pass / interval-fail & & $\mathbf 0$\\
+$\min_X\bigl(\underline F_{\mathrm{IA}}(X)-T_C\bigr)$ & & $4.628\,931\times10^{-8}$\\
+$\max\{\far(X,c_0):X\text{ discarded}\}$ & & $0.001\,978\,039\,980\le\rho_g-10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The adaptive segmentation is a disjoint tiling of $\Om$, and $N_{\mathrm{unres}}=0$ means every terminal
+box is either certified or discarded. Writing $\mathcal C_{\mathrm{cert}}$ for the union of the certified
+boxes and $\mathcal D$ for the union of the discarded ones,
+\begin{equation}\label{eq:setdecomp}
+\boxed{\;\Om=\mathcal C_{\mathrm{cert}}\;\sqcup\;\mathcal D,\qquad
+\mathcal D\subseteq B_1\cup B_2,\qquad F\ge T_C \text{ on }\mathcal C_{\mathrm{cert}}\;}
+\end{equation}
+Consequently $\Om=\mathcal C_{\mathrm{cert}}\cup B_1\cup B_2$ is a valid cover: the first decomposition of
+\eqref{eq:setdecomp} is exact, so no gap is possible, and overlaps among the three pieces are harmless.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:A}}\label{sec:proof}
+
+Let $x\in\Om$. By Lemma~\ref{lem:global2} and \eqref{eq:setdecomp},
+$\Om=\mathcal C_{\mathrm{cert}}\cup B_1\cup B_2$.
+
+\begin{enumerate}
+\item If $x\in\mathcal C_{\mathrm{cert}}$, then $F(x)\ge T_C=F(z_*)+10^{-9}>F(z_*)$.
+\item If $x\in B_1\cup B_2$, write $x=\sigma^{i}z_*+\delta$ with $i\in\{0,1\}$ and $\|\delta\|\le\rho_g$.
+If $\delta=0$, then $F(x)=F(z_*)$ by $F\circ\sigma=F$ (Lemma~\ref{lem:symmetry}). Otherwise
+Lemma~\ref{lem:growth2} applied at the corresponding centre gives $F(x)>F(z_*)$.
+\end{enumerate}
+
+The two cases cover $\Om$, so $F(x)\ge F(z_*)$ on $\Om$ with equality exactly at $z_*$ and $\sigma z_*$;
+hence $C_3=F(z_*)$ and the minimiser set in $\Om$ is exactly $\{z_*,\sigma z_*\}$. The two points are
+distinct because $r_2=0.7905\ne0.8302=r_3$. \qed
+
+The hypotheses consumed are: \eqref{eq:deltaA0} from Lemma~\ref{lem:kkt}; the constants of
+Lemmas~\ref{lem:sep2}--\ref{lem:growth2}; and the target \eqref{eq:TC} with the partition outcome of
+Lemma~\ref{lem:global2}. No property of the Riemann zeta function is used.
+
+\section{The minimiser set in the normalised domain}\label{sec:orbit}
+
+\begin{lemma}[Symmetry]\label{lem:symmetry}
+$F\circ\sigma=F$, where $\sigma$ is the paired swap \eqref{eq:swap}.
+\end{lemma}
+
+\begin{proof}
+Applying $\sigma$ to $x$ merely exchanges the second and third summands of every $S_k$, and the maximum
+over $k$ is unchanged.
+\end{proof}
+
+\begin{proposition}\label{prop:orbit}
+Let $z_*$ be the root of Lemma~\ref{lem:kkt}. Then
+\begin{enumerate}
+\item[(i)] the raw permutation orbit of $z_*$ under $S_3$ has six points,
+$|\mathcal O_{\mathrm{raw}}|=6$;
+\item[(ii)] under the normalisation map $\mathcal N$ (re-order the pairs so that the unit-modulus pair
+comes first) the orbit collapses to exactly two points,
+\[
+\bigl|\mathcal N(\mathcal O_{\mathrm{raw}})\bigr|=2,\qquad
+\mathcal N(\mathcal O_{\mathrm{raw}})=\{z_*,\sigma z_*\};
+\]
+\item[(iii)] permuting the three angles while keeping the radii fixed is \emph{not} a symmetry of $F$: for
+the certified root,
+\[
+F(r_2,r_3,\varphi_2,\varphi_1,\varphi_3)=1.126\,876\,598\,534\,850
+\;\ne\;0.373\,091\,892\,895\,817=F(z_*) .
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) The three pairs $(1,\varphi_1),(r_2,\varphi_2),(r_3,\varphi_3)$ are pairwise distinct because
+$r_2\ne r_3$; permuting them gives six distinct raw configurations, and the underlying functional
+$\max_k\operatorname{Re}\sum_jz_j^k$ is permutation invariant, so all six carry the same value.
+(ii) Of the six permutations, four move the unit-modulus pair into position $2$ or $3$. Re-normalising
+(moving the unit pair back to the first position and keeping the relative order of the remaining two)
+identifies those four with either $\mathrm{id}$ or $\sigma$ according to whether the relative order is
+preserved or reversed. Hence at most two distinct normalised points, and they are distinct since
+$r_2\ne r_3$.
+(iii) Interchanging $\varphi_1$ and $\varphi_2$ alone merges the undamped term $\cos k\varphi_1$ with the
+damped term $r_2^k\cos k\varphi_2$, which is not an invariance; the numerical values differ as stated.
+\end{proof}
+
+\section{Independent computational reproduction}
+
+The interval layer of Lemma~\ref{lem:global2} was implemented twice. The second implementation shares only
+the (deterministic) floating-point partition and differs structurally: the interval verification is
+distributed over three processes with an independently written interval class. It reproduces
+\[
+N_{\mathrm{cert}}=252\,282,\qquad \text{interval failures}=0,\qquad
+\min_X\bigl(\underline F_{\mathrm{IA}}(X)-T_C\bigr)=4.628\,931\,107\,212\,973\,4\times10^{-8},
+\]
+matching the primary implementation to sixteen significant digits. The two implementations are recorded as
+scripts \texttt{dC2iv\_strict.py} (sequential) and \texttt{dC2par\_parallel\_iv.py} (parallel).
+
+\section{Implementation caveats}
+
+\begin{enumerate}
+\item \textbf{Facet normals via floating-point SVD.} Lemma~\ref{lem:cover2} obtains the facet normals from
+a floating-point SVD. The perturbation allowance in the data ball is
+$\varepsilon_{\mathrm{pert}}\approx0.203$, so $10^{-15}\ll\varepsilon_{\mathrm{pert}}$ and the
+floating-point error cannot change the sign of $c_X$. This is a numerical-implementation caveat: the lemma
+is \emph{not} formalised in interval linear algebra.
+\item \textbf{Self-built interval arithmetic.} Lemma~\ref{lem:global2} uses a hand-rolled interval class
+over \texttt{mpmath} at $40$ decimal digits, with an outward slack of $10^{-30}$ per operation and $\pi$
+enclosed by rational endpoints. An alternative line using \texttt{mpmath.iv} reproduces the bounds
+independently.
+\item \textbf{\texttt{mpmath} correctness} is assumed, as elsewhere in this project. The interval layer
+also reports the float-pass / interval-fail count, which is $0$.
+\item \textbf{Lipschitz constants.} The bounds $k\sqrt5$ in Lemma~\ref{lem:sep2} are analytic, not computed.
+\item \textbf{$R$} in \eqref{eq:R} is an explicit conservative bound obtained from the $5\times5$ Hessians
+with $|\cos|,|\sin|\le1$ and the damping factors retained; since it is an upper bound,
+\eqref{eq:locgrowth} is conservative.
+\item \textbf{Size of the exclusion radius.} $\rho_g=2c_X/R$ is covering-limited (it is smaller than the
+isolation radius $\rho_{\mathrm{iso}}$ of \eqref{eq:rhoiso}); the growth inequality \eqref{eq:locgrowth} is
+sharp only in its linear regime, and the margin at $\|\delta\|=\rho_g$ vanishes in the limit.
+\end{enumerate}
+
+\section{Boundaries: what is not claimed}
+
+\begin{enumerate}
+\item Theorem~\ref{thm:A} concerns $M=3$ in the damped setting. No extrapolation to general $M$, to damped
+$M\ge4$, or to the undamped constant $m_M$ is claimed.
+\item The value of $C_3$ is known at interval level; the displayed decimal is the upper-bound
+configuration's value together with the certified threshold $T_C=F(z_*)+10^{-9}$, not a closed form.
+\item No property of the Riemann zeta function is used.
+\item Earlier brackets ($0.373\,091\,8\le C_3\le0.373\,092\,075\,762$ and
+$0.76\le m_3\le0.764\,081\,100\,745\,854$) are superseded and retained only as checkpoints.
+\item The proof is computer-assisted: Lemmas~\ref{lem:kkt}--\ref{lem:global2} are \CA\ statements. The
+elementary layer --- Lemma~\ref{lem:symmetry}, Proposition~\ref{prop:orbit}, inequality
+\eqref{eq:subadditive}, the Lipschitz bounds and the Taylor step --- is proved by hand in this note.
+\end{enumerate}
+
+\appendix
+
+\section{Numerical certificate table}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+item & value & source \\
+\midrule
+certified root $z_*$ ($\varphi_j/\pi$) & $(0.10911016482862308881,\ 0.8206637095202066754,\ 0.46171937101861024265)$ & \texttt{dB\_krawczyk\_11.py}\\
+radii & $r_2=0.79051323395036623846$, $r_3=0.83020729481457293027$ & idem\\
+Krawczyk seed / width / $\|I-YJ\|_\infty$ & $10^{-12}$ / $3.93\times10^{-22}$ / $1.9651\times10^{-10}$ & idem\\
+$\lambda_{\min}$ ($k=1,2,3,4,5,15$) & $0.111\,860\,12$ & idem\\
+$\Delta_{\mathrm{ref}}$, $\rho_{\mathrm{iso}}$ & $0.279\,596\,813\,6$, $4.311\,71\times10^{-3}$ & \texttt{dB5\_local\_growth\_5d.py}\\
+$c$, $c_X$, $\rho_{\mathrm{data}}$ & $0.302\,091\,5$, $0.098\,812\,009\,77$, $2.05\times10^{-3}$ & idem\\
+$R$, $\rho_g$ & $99.899\,695\,515\,930\,13$, $1.978\,224\,4\times10^{-3}$ & idem\\
+$T_C-F(z_*)$ & $10^{-9}$ & \texttt{dC2iv\_strict.py}\\
+$N_{\mathrm{eval}},N_{\mathrm{cert}},N_{\mathrm{disc}},N_{\mathrm{split}},N_{\mathrm{unres}}$ & $472\,766$, $252\,282$, $485$, $219\,999$, $0$ & idem\\
+$\min_X(\underline F_{\mathrm{IA}}(X)-T_C)$ & $4.628\,931\times10^{-8}$ & idem\\
+cross-check & identical to $16$ significant digits & \texttt{dC2par\_parallel\_iv.py}\\
+$C_3$ & $0.373\,091\,892\,895\,816\,4\ldots$ & Theorem~\ref{thm:A}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{Andersson} J.~Andersson, \emph{On some power sum problems of Montgomery and Tur\'an},
+arXiv:0706.4131; \emph{Lower bounds in some power sum problems}, arXiv:0704.1879.
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{Ten Lectures on the Interface between Analytic Number Theory
+and Harmonic Analysis}, CBMS Regional Conf.\ Ser.\ Math.\ 84, AMS, 1994 (Chapter 5, Theorem 11).
+\bibitem{Palojarvi} L.~Palojarvi, arXiv:1807.01506 (Lemma 2.2 and Theorem 4.1).
+\bibitem{Turan} P.~Tur\'an, \emph{On a New Method of Analysis and its Applications},
+Wiley--Interscience, 1984.
+\end{thebibliography}
+
+\end{document}
