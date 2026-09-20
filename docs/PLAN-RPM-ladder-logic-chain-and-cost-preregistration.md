@@ -74,7 +74,7 @@ $$\text{v3 任一自检失败} \Longrightarrow \boxed{\text{先审 v3，不进�
 ### 8.3 语义分层（本轮最重要的不是速度，而是这条 ✓✓）
 
 $$\boxed{\text{v3 ＝ 发现／筛选}✓\qquad \text{慢版 ＝ 最终认证}✓✓}$$
-$$\text{故：仅 v3 通过的格只能叫}\ \textbf{"v3 证书结果"}✗；\text{只有慢版复核通过才能写}\ \textbf{"无浮点假设定理"}✓✓$$
+$$\text{故：仅 v3 通过的格只能叫}\ \textbf{「v3 证书结果」}✗；\text{只有慢版复核通过才能写}\ \textbf{「无浮点假设定理」}✓✓$$
 $$\text{理由}✓：\text{目标是把它从【数值表】升级为【定理表}】✓；\text{若留 }M=6..11\text{ 未复核} \Longrightarrow \text{最后一步没做完}✗$$
 
 ### 8.4 已识别风险（待观察 ✓）
@@ -91,8 +91,8 @@ $$\text{① 再优化速度}✗（\text{唐先生：重点＝语义分层}✓）
 
 ## §9 【2026-09-20 23:02 正式收缩】阶梯状态重定义（承 `C-268` 依赖地图 ✓✓）
 
-$$\boxed{\textbf{① }\(\text{RP}_M\)\ 阶梯【不再是 S1 主线】✗✓ —— \text{"}M\le11\ \text{定理表"}\,\textbf{计划正式撤销}✗✓}$$
-$$\boxed{\textbf{② }M=6..11\ \textbf{全部 STOP}✗✓（\text{不是"没做完"}✗，\text{而是}\textbf{需求地图证明继续做没有启下}✓✓）}$$
+$$\boxed{\textbf{① }\(\text{RP}_M\)\ 阶梯【不再是 S1 主线】✗✓ —— \text{「}M\le11\ \text{定理表」}\,\textbf{计划正式撤销}✗✓}$$
+$$\boxed{\textbf{② }M=6..11\ \textbf{全部 STOP}✗✓（\text{不是「没做完」}✗，\text{而是}\textbf{需求地图证明继续做没有启下}✓✓）}$$
 $$\boxed{\textbf{③ }M=1\ \overset{\texttt{ENGINE-2}}{\Longrightarrow}\ \text{E4 原定理自足}✓✓；\ r=2,3,4\ \overset{\text{已有资产}}{\Longrightarrow}\ \text{阈值}\ 3/40\ \text{已覆盖}✓✓}$$
 $$\boxed{\textbf{④ }r\ge5\ \text{仅在【独立的离线零点数量界】出现后才产生下游价值}✗ ✓ \Longrightarrow \text{条件性资产}✓}$$
 
@@ -109,15 +109,15 @@ $$\textbf{关键}✓：\text{慢版 }M=5\ \text{结束后}\ \textbf{不自动触
 ## §10 【新判据·四条】＋【新纪律】✓✓
 
 $$\boxed{\text{任何新候选先过四条}✓：\text{① 独立性}\to\text{② 资产相邻}\to\text{③ RH 形式相关}\to\text{④ }\textbf{有明确启下}✓✓}$$
-$$\qquad \text{其中 ④ 是硬门槛}✓：\text{答不出"完成后使什么成为可能"} \Longrightarrow \textbf{不立项}✗$$
+$$\qquad \text{其中 ④ 是硬门槛}✓：\text{答不出「完成后使什么成为可能」} \Longrightarrow \textbf{不立项}✗$$
 
 $$\boxed{\textbf{项目纪律（唐先生 2026-09-20 23:02）}✓✓：\textbf{先证明下游需要，再允许计算扩大}}$$
-$$\qquad \textbf{反模式（明令禁止}）✗✗：\text{"既然几秒能算，那就把 }M=11\ \text{做完吧"} \Longrightarrow \text{典型的}\textbf{工具能力反过来制造任务}✗✓$$
+$$\qquad \textbf{反模式（明令禁止}）✗✗：\text{「既然几秒能算，那就把 }M=11\ \text{做完吧」} \Longrightarrow \text{典型的}\textbf{工具能力反过来制造任务}✗✓$$
 $$\qquad \textbf{已确立的事实}✓✓：\text{能算}\ \neq\ \text{值得算}✓（\texttt{C-268}\ \text{已证}✓）$$
 
 ## §11 余下动作（按唐先生给序 ✓）
 
-$$\text{① 等慢版 }M=5\ \text{自然收尾}✓（\text{不追加阶梯}✗）\to \text{② 归档本次"需求闭合"}✓ \to \text{③ 从候选清单中寻找下一个【同时满足四条】的项目}✓$$
+$$\text{① 等慢版 }M=5\ \text{自然收尾}✓（\text{不追加阶梯}✗）\to \text{② 归档本次「需求闭合」}✓ \to \text{③ 从候选清单中寻找下一个【同时满足四条】的项目}✓$$
 $$\qquad \textbf{禁止}✗：\text{再找新的 }(\text{RP}_M)\ \text{目标}✗；\text{因 v3 快就扩大计算}✗$$
 
 ---
@@ -126,7 +126,7 @@ $$\qquad \textbf{禁止}✗：\text{再找新的 }(\text{RP}_M)\ \text{目标}�
 
 $$\boxed{\textbf{当前：0 新计算、0 新路线、不写包装文档}✗ — \textbf{只等 M=5 收尾}✓}$$
 $$\boxed{\textbf{M=5 收尾后：只做一次 GAP-A 定向审计}✓：\text{问【实际应用对象中，究竟什么结构给出 }|K|=u\le5\text{？}】✓}$$
-$$\qquad \text{（\textbf{不是}重新搜"任何能证 RH 的东西"✗，\textbf{也不是}继续扩梯✗）}$$
+$$\qquad \text{（\textbf{不是}重新搜「任何能证 RH 的东西」✗，\textbf{也不是}继续扩梯✗）}$$
 
 ### 12.1 GAP-A 分叉（锁定 ✓）
 
@@ -140,10 +140,10 @@ $$\qquad \not\Longrightarrow\ \text{E4／}\tau\text{-Li 应用闭合}✗\qquad \
 
 ### 12.3 ⭐ 长期判据（`C-186` 带来的 ✓✓）
 
-$$\boxed{\textbf{1/20 级}\ (\text{RP}_M)\ \textbf{已对所有 }M\ \textbf{自足}✓✓（\texttt{C-186}✓）} \Longrightarrow \text{"是否需要做到所有 }M\text{"这一疑问}\ \textbf{已被消除}✓$$
+$$\boxed{\textbf{1/20 级}\ (\text{RP}_M)\ \textbf{已对所有 }M\ \textbf{自足}✓✓（\texttt{C-186}✓）} \Longrightarrow \text{「是否需要做到所有 }M\text{」这一疑问}\ \textbf{已被消除}✓$$
 $$\qquad \Longrightarrow \textbf{今后任何继续做 }M=6,7,\ldots\ \textbf{的理由，必须来自【新的 }1/2\text{ 级下游用途】，}\textbf{不得再以 E4 原需求为据}✗✓$$
 
 ### 12.4 复用记录（暂缓 ✓）
 
-$$\text{"阻尼线引擎复用记录"}\ \textbf{暂不写}✗（\text{唐先生 23:08}✓）\ —— \text{理由}✓：\text{若 GAP-A 判死}，\text{该记录≈包装}✗；\text{若 GAP-A 成立}，\text{再写才是真启下资产}✓✓$$
+$$\text{「阻尼线引擎复用记录」}\ \textbf{暂不写}✗（\text{唐先生 23:08}✓）\ —— \text{理由}✓：\text{若 GAP-A 判死}，\text{该记录≈包装}✗；\text{若 GAP-A 成立}，\text{再写才是真启下资产}✓✓$$
 
