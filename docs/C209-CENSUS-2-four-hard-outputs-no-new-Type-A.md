@@ -10,8 +10,8 @@ FREEZE-ACK: 本档即冻结期内的收束与登记（依 §8.1；不产候选�
 
 $$\textbf{① basin 数据只叫}\ \boxed{\texttt{CENSUS-2 basin-capture calibration}}✓✓\ —— \textbf{不叫}"basin radius"／"basin volume estimate"✗$$
 $$\qquad \Longrightarrow \text{唯一稳健结论}：\boxed{\text{局部 basin-capture 随距离单调下降，且在}\ 3\times10^{-2}\ \text{内仍有显著捕获率}}✓$$
-$$\textbf{② 禁止外推}✗✗：\text{全局 basin 体积}✗；\text{体积分数}\sim10^{-5}✗；\text{"800 次必然漏掉}\ x_0\text{"✗；\text{其他两个 Type-A 的 basin 更大}✗$$
-$$\qquad （\text{这三条都需要【另外设计的全域测量】}✓；本档前一条消息中的相关推断}\ \textbf{已撤回}✓✗）$$
+$$\textbf{② 禁止外推}✗✗：\text{全局 basin 体积}✗；\text{体积分数}\sim10^{-5}✗；\text{“800 次必然漏掉}\ x_0\text{”}✗；\text{其他两个 Type-A 的 basin 更大}✗$$
+$$\qquad （\text{这三条都需要【另外设计的全域测量】}✓；\text{本档前一条消息中的相关推断}\ \textbf{已撤回}✓✗）$$
 $$\textbf{③ census 的定位}：\boxed{\text{发现工具，不是穷尽性证明}}✓✓$$
 $$\textbf{④ 分类入口锁死}：\boxed{|A|=4\quad\wedge\quad\mathrm{rank}\,\Delta=3\quad\wedge\quad c>0}✓✓$$
 $$\qquad \text{单凭 NM 能下降／"看起来像局部极小"}\ \textbf{不再作为认证依据}✗（\text{只能叫 numerical stagnation}✓）$$
