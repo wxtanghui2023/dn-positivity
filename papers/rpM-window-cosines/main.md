@@ -29,6 +29,8 @@ Results of this draft:
 | 3 | (RP$_3$), (RP$_4$), (RP$_5$) hold | **[CA]** §5 |
 | 4 | $m_M\le M-1$ for all $M\ge2$ | **[P]**+**[CA]** §6 |
 | 5 | Monotonicity $m_{M+1}\ge m_M$ holds on the *commensurable class*; general $M$ open | **[P]** §7 |
+| 5$'$ | $\kappa_N(\lambda)=\kappa_3(\lambda)$ for all $N\ge4$ (so the $\varepsilon$-threshold cannot be improved by using more multiples) | **[P]** §7.2 |
+| 5$''$ | Equality set of $\kappa_N$ = primitive $(N+1)$-th roots of unity | **[P]** §2 |
 | 6 | Damped analogue: $M=2$ uniform bound $0.364984$ for **all** radii | **[CA]** §8 |
 | 7 | Damped $M=3$: certified bracket $0.3730918\le C_3\le0.373092075762$ | **[CA]** §8 |
 
@@ -119,6 +121,16 @@ and the bound is attained, e.g. at $\theta=\frac{2\pi}{N+1}$.
 $$\cos(m\theta)\ \ge\ \cos\frac{2\pi}{N+1}. \qquad\square$$
 
 **Corollary 2.2 [P].** $\kappa_N:=\inf_\theta\max_{m\le N}\cos(m\theta)=\cos\frac{2\pi}{N+1}$.
+
+**Corollary 2.3 (equality set) [P].** Equality holds in Theorem 2.1 if and only if
+$$\theta\equiv\frac{2\pi k}{N+1}\pmod{2\pi},\qquad k=1,\dots,N,\quad\gcd(k,N+1)=1 .$$
+Equivalently: *the extremal angles are exactly the primitive $(N+1)$-th roots of unity*, and there are $\varphi(N+1)$ of them (Euler's totient). In particular no irrational $\theta$ attains the bound.
+
+**Proof.** For $m\le N$, $\cos(m\theta)=\cos\big(2\pi\|m\theta/2\pi\|\big)$, so
+$$\max_{m\le N}\cos(m\theta)=\cos\Big(2\pi\min_{1\le m\le N}\big\|m\theta/2\pi\big\|\Big)$$
+because $\cos(2\pi x)$ is strictly decreasing on $[0,\tfrac12]$ and the minimum is $\le\frac1{N+1}\le\frac12$. The differences of the $N+1$ points $\{0,\theta,\dots,N\theta\}$ are exactly the $m\theta$, so the minimum above is $g/2\pi$ where $g$ is the minimal spacing of those $N+1$ points on the circle. Always $g\le\frac{2\pi}{N+1}$, with equality iff the points are equally spaced; that happens iff $(N+1)\theta\equiv0\pmod{2\pi}$ and $\theta$ has orbit size $N+1$, i.e. iff $\theta=\frac{2\pi k}{N+1}$ with $\gcd(k,N+1)=1$. $\square$
+
+*(Numerical check: $N=3$ gives $\{1/4,3/4\}$ and $N=4$ gives $\{1/5,2/5,3/5,4/5\}$, in exact agreement. Note that for $N=3$ the value $k=2$, i.e. $\theta=\pi/2$, is an equality point while $\theta=0$ is not, since $\max_{m\le3}\cos(m\cdot0)=1$.)*
 
 Two instances are used repeatedly below:
 $$\kappa_5=\cos\frac{2\pi}{6}=\frac12\qquad\text{(Lemma C, §3.1)},\qquad \kappa_3=\cos\frac{2\pi}{4}=0\qquad\text{(covering lemma, §3.2)}.$$
