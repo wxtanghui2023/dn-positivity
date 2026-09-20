@@ -184,3 +184,33 @@ $$\textbf{禁止}✗✗：\text{survivor}\Rightarrow\text{「优先路线已确�
 $$\textbf{对 T5 的具体问法}✓✓：\text{能否从现有 de la Vallée Poussin 型正性结构中获得【新的 quantity】}✗，\text{而不是继续优化}\ c/(\log t)^{2/3}(\log\log t)^{1/3}✓$$
 $$\qquad \text{若答案只是优化常数或已知同类零区} \Longrightarrow \textbf{仍只是邻近定理资产}✓（\text{优秀 survivor，但非 RH 路线}✓）$$
 
+## §14 ⭐ **Scale Gate**（新增硬门槛，唐先生 2026-09-20 定规 ✓✓）
+
+> **立规理由**：本轮（`C257`→`C258`→`C259`）发现 **"quantity changed ⟹ scale changed" 为假** ✗✗ ——
+> 新量常常仍受同一 analytic scale 约束 ✓。若无此门，会重演
+> 「发现漂亮新量 → 兴奋开新线 → 最后才发现仍撞原墙」的循环 ✗✓。
+
+$$\boxed{\text{三门（C142 乙类候选必过）}✓✓：\textbf{Rule T}\ \to\ \textbf{SURVIVOR-5}\ \to\ \textbf{Scale Gate}}$$
+
+$$\boxed{\text{Scale Gate}✓✓：\text{若新 quantity 最终仍受既有 }1/\log T\ \text{或已知 value-face／log-degradation 天花板约束}\ \Longrightarrow\ \textbf{不升 RH 主线}✗✓}$$
+
+### 五档判定表（按 novelty 层级 ✓）
+
+| 层级 | 判定 |
+|---|---|
+| 只有 quantity 改变 | 保留，但不升主线 ✓ |
+| quantity ＋ **新尺度** | **重点候选** ✓✓ |
+| quantity ＋ 新尺度 ＋ 新 RH-interface | **真正主线候选** ✓✓✓ |
+| quantity 改变但仍落旧尺度墙 | **邻近定理资产** ✓ |
+| quantity 实际只是旧量重参数化 | **Rule T CLOSED** ✗ |
+
+### 校准器实例：T5（`C259` ✓）
+
+$$\text{T5}\ \Longrightarrow\ \text{QUALIFIED SURVIVOR ／ ADJACENT-THEOREM ASSET}✓（\text{两级成功：survivor}✓\ \text{quantity}✓\ \text{scale}✗\ \text{bridge}✗）$$
+$$\textbf{校准器身份}✓✓：\text{T5 证明 }\textbf{SURVIVOR-5}\not\Longrightarrow\textbf{突破}✓✓\ \text{—— 故其后必须再过 Scale Gate}✓$$
+
+### 措辞纪律（`C259` §6 ✓✓）
+
+$$\textbf{禁止}✗✗：\text{「正性产生的所有 quantity 都必然 log-degrading」}（\text{无条件定理形式}）✗$$
+$$\textbf{正确}✓✓：\textbf{本次已审计的 quantity classes 均未越过既有尺度墙}✓\（\text{仅限本次审计范围}✓）$$
+
