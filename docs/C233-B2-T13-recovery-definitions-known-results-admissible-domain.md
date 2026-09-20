@@ -8,8 +8,8 @@ FREEZE-ACK: 本档即冻结期内的回收与规格化（依 §8.1；不产候�
 
 ## §0 回收结论（先行）
 
-$$\boxed{\text{B2/T13 的完整规格已恢复}✓：定义 ✓／已知结果（我方 2 条定理＋2 条数值）✓／古典家族（Turán 两定理＋Cassels 1941＋Andersson）✓／可行域的 3 个可选约定 ✓／6 个开口 ✓}$$
-$$\boxed{\text{建议第一刀}：\textbf{w}\to\infty\ \text{的渐近定理}✓（\text{可证路线已定位}✓）\text{，不做数值扫描}✗}$$
+$$\boxed{\text{本档即【定义与文献边界锁定}】✓：\text{不做 }g_w\ \text{数值扫描}✗；\text{工作对象固定为 }g_w:=g_w(10)✓}$$
+$$\boxed{\textbf{审计（唐先生 2026-09-20 18:49 指定）}✓✓：\text{不得把古典的权重结构与 }g_w\ \text{说成同一对象}✗}$$
 
 ## §1 定义（逐字）
 
@@ -18,7 +18,11 @@ $$\boxed{\text{建议第一刀}：\textbf{w}\to\infty\ \text{的渐近定理}✓
 $$\boxed{\ g_w(N)\ :=\ \inf_{\varphi_1,\varphi_2}\ \max_{1\le k\le N}\ \bigl[\ w\cos(k\varphi_1)+\cos(k\varphi_2)\ \bigr]\ }✓,\qquad w\ge1✓,\ (\varphi_1,\varphi_2)\in[0,\pi]^2✓$$
 
 $$\text{来历}：M=2\ \text{的阻尼/加权 (RP}_M\text{) 版}✓：Z_k:=[w\cos k\varphi_1+\cos k\varphi_2]✓\ \text{即两点幂和}\ \operatorname{Re}\sum_j b_j z_j^k✓\ \text{于}\ b=(w,1)✓,\ |z_1|=|z_2|=1✓$$
-$$\text{约定}：N=5M=10✓（\text{与 (RP}_M\text{) 一致}✓）；\text{权重比}\ w\ge1✓（\text{不失一般性}：\text{可整体缩放并交换}✓）$$
+
+$$\boxed{\textbf{工作对象的固定}✓（唐先生 18:49）：g_w\ :=g_w(10)✓✓\ \text{（}N=5M=10\ \text{固定}✓）}$$
+$$\qquad \textbf{理由}✓：\text{继承 }N=5M\ (M=2)✓\ \text{与已证的 }g_1(10)=\tfrac12✓,\ g_2(10)=1✓$$
+$$\qquad \textbf{反面}✗：\text{若让 }N\ \text{随 }w\ \text{漂移}✓，\text{则最后不知在研【权重依赖】还是【窗口依赖}】✗$$
+$$\qquad \Longrightarrow \textbf{第一阶段只问}：\text{固定 }N=10✓,\ w\mapsto g_w(10)\ \text{是否存在【可证明的结构}】✓$$
 
 ### 1.2 古典 Turán–Cassels 家族（**逐字**，外搜所得 ✓）
 
@@ -45,7 +49,13 @@ $$\Longrightarrow \text{两族在【窗口 regime ＋常数量级 ＋权重位�
 | R1 | $g_1(10)=\tfrac12$，等号集 $=\{\pi/3,\pi/2\}$（两点） | **定理** ✓✓ | `C-193`（§1，T13-A） |
 | R2 | $g_2(10)=1$，等号集 $=\{(0,\pi/2)\}$ 中心（**单点**） | **定理** ✓✓ | `C-199` ＋ `C-200` |
 | R3 | $w=1.2,1.5,2,3,5$ 的 $g_w(10)$ 数值 | 数值 ✗ | `C-193` §2（表） |
-| R4 | 下界 $g_w\gtrsim w\kappa_{10}-1=w\cos\tfrac{2\pi}{11}-1$ | 初等 ✓ | `C-193` §2（证明 ✓） |
+
+$$\textbf{R4}（\textbf{双边边界结果}✓✓，唐先生 18:49 指定为正式结论 ✓）：w\kappa_{10}-1\ \le\ g_w(10)\ \le\ w\kappa_{10}+1✓\ \Longrightarrow\ \boxed{\Bigl|\frac{g_w(10)}{w}-\kappa_{10}\Bigr|\le\frac1w}✓✓$$
+$$\qquad \text{下界证}✓：\text{取 }k^*=\arg\max_k\cos k\varphi_1\ \text{（不依赖 }w✓） \Longrightarrow \max_k[\cdots]\ge w\max_k\cos k\varphi_1-1\ge w\kappa_{10}-1✓$$
+$$\qquad \textbf{上界证}✓（本档新增 ✓）：\text{取 }\varphi_1=\theta_1^*\ \text{（单点最优}✓，\max_k\cos k\theta_1^*=\kappa_{10}✓）\text{与}\ \varphi_2=0✓ \Longrightarrow g_w\le w\kappa_{10}+1✓$$
+$$\qquad \Longrightarrow \boxed{g_w(10)=w\kappa_{10}+O(1)}✓✓\qquad（w\to\infty✓）$$
+$$\qquad \textbf{与数值的差别}✓：\text{实测 }w=5：3.2468\ \text{vs}\ w\kappa_{10}-1=3.2065✓（\text{差}0.040✓）；\text{但}\ \boxed{g_w\stackrel{?}{=}w\kappa_{10}-1+\cdots}\ \textbf{不得写成猜想-定理}✗✓$$
+$$\qquad \textbf{真正该做}✓：\text{分析 leading-order active set}\ \{k_1,k_{10}\}\ \text{在 }w\to\infty\ \text{的控制下}✓，\text{第二相位能否在 active constraints 上产生【可精确计算的 }O(1)\ \text{修正}】✓✓$$
 
 $$\textbf{R3 的关键读数}✓：g_w/w=0.500\to0.482\to0.417\to0.500\to0.600\to0.649✓（w=1,1.2,1.5,2,3,5✓）$$
 $$\qquad \Longrightarrow \textbf{非单调}✗，w\approx1.5\ \text{处有极小}✓，\text{最优构型在}\ w\in(1.2,1.5)\ \text{与}\ (1.5,2)\ \text{之间切换}✓（\text{两个相变点}✓）$$
@@ -71,6 +81,12 @@ $$\textbf{我方的形状}✗：\text{当}\ M=2✓\ \text{时}，b=(w,1)✓\ \te
 $$\qquad \text{但窗口不是}\ n=2✗\ \text{而是}\ N=10✓ \Longrightarrow \text{古典界}\ \bigl(\tfrac{2}{8e(\cdot)}\bigr)^2✓\ \text{在此 regime 完全无用}✗（\text{量级}10^{-3}\ \text{级}✗）$$
 $$\Longrightarrow \textbf{我方 = 古典家族在【短线性窗＋实部】下的【最优常数}】问题✓ —— 即：\text{古典给指数小下界}✓，\text{我方问同族的【sharp}】值✓$$
 
+$$\boxed{\textbf{审计条款}✓✓（唐先生 18:49）：\text{Turán--Cassels 的 weighted coefficient functional}\ \neq\ \text{T13-B 的 weighted minimax value}✓✓}$$
+$$\qquad \text{古典}：\max_{m+1\le v\le m+n}\Bigl|\sum_j b_jz_j^v\Bigr|\ \ge\ C(n,m)\,\mathcal B(b_1,\dots,b_n)✓\ \text{——}\ b_j\ \text{进入【右侧泛函}】✓$$
+$$\qquad \text{我方}：w\cos(k\varphi_1)+\cos(k\varphi_2)=\operatorname{Re}\bigl(we^{ik\varphi_1}+e^{ik\varphi_2}\bigr)✓\ \text{——}\ w\ \text{直接进入【被取 max 的值}】✓$$
+$$\qquad \Longrightarrow \textbf{准确定位}✓：\text{同属 weighted exponential-sum / power-sum 【家族}】✓，\text{但 【minimax functional 不同}】✗✓$$
+$$\qquad \text{⚠️ 这也正是 B2/T13 值得继续切的地方}✓；\text{否则只是经典结果的重新参数化}✗$$
+
 ## §5 ⭐ 开口清单 ＋ 候选机制（不在此做数值扫描 ✓）
 
 $$\textbf{Q1}（常数的闭式）✓：\exists\ \text{闭式}\ g_w(10)\ \forall w\ge1\ ✓？\text{已知}：w=1\Rightarrow\tfrac12✓,\ w=2\Rightarrow1✓（\text{两端精确}✓）$$
@@ -81,9 +97,12 @@ $$\textbf{Q5}（一般 }M\text{ 与一般权重）✓：b=(w_1,\dots,w_M)✓\ \t
 $$\textbf{Q6}（与古典泛函的关系）✓：\text{古典的}\ \min_k|\sum_{i\le k}b_i|\ \text{型泛函}\ \text{在短窗 regime 对应何物}✓？$$
 
 $$\textbf{候选机制（按可证性排序}✓，\text{供唐先生选一刀}✓\text{）}：$$
-$$\textbf{(a) 大 }w\ \text{渐近定理}✓✓（\textbf{推荐}✓）：\text{取}\ k=k_1(w)=\arg\max\cos k\varphi_1✓\ \text{（鸽笼}✓，\kappa_{10}=\cos\tfrac{2\pi}{11}✓） \Longrightarrow g_w\ge w\kappa_{10}-1✓；$$
-$$\qquad \text{断言}：w\ \text{充分大时【等号可达}】✓ \Longrightarrow g_w=w\kappa_{10}-1✓\ \textbf{精确}✓（\text{需证：第二点可同时被推到}\ \cos k\varphi_2=-1✓\ \text{或至少其贡献可算}✓）$$
-$$\qquad \text{可证性}：\text{一维鸽笼＋显式误差}✓，\text{不需证书}✓ \Longrightarrow \text{预计一条引理}✓$$
+$$\textbf{(a) 固定窗加权 minimax}✓\to\textbf{w 方向的 active-set 相变}✓\to\textbf{精确 }g_w(10)✓✓\ \textbf{（推荐，唐先生 18:49 锁定}✓）$$
+$$\qquad \text{工作命名}：\textbf{B2-1}✓：\text{固定 }N=10✓，\text{建立 }g_w\ \text{的解析结构与三个 regime}✓$$
+$$\qquad \text{已知锚点}：w=1\Rightarrow\tfrac12✓；w=2\Rightarrow1✓；w\to\infty\Rightarrow g_w=w\cos\tfrac{2\pi}{11}+O(1)✓$$
+$$\qquad \text{待检假设}✓：\exists\ \text{有限个【active-set 相变点}】\ 1=w_0<w_1<\cdots<w_r<\infty✓\ \text{使 }g_w\ \text{在各区间由【不同有限约束系统】控制}✓$$
+$$\qquad \text{若可证此 piecewise-KKT 结构并获得某非平凡区间的精确公式} \Longrightarrow \textbf{真正的 B2/T13 新内容}✓✓$$
+$$\qquad \textbf{禁止}✗：\text{先跑 }w=1.01,1.02,\dots\ \text{的扫描}✗（\text{唐先生 18:49 明令}✓）$$
 $$\textbf{(b) 相变点定位}✓：\text{把}\ g_w\ \text{写成关于}\ w\ \text{的分段函数}✓\ \text{并定位阈值}✓（\text{需一阶 KKT 参数化}✓）$$
 $$\textbf{(c) 等号集演化}✓：\text{沿}\ w\ \text{追踪等号集}✓（\text{依赖 (b)}✓）$$
 $$\textbf{(d) 一般 }M✓：\text{把 (a) 推广到}\ M\ \text{点}✓\ \text{与权重}\ (w_1,\dots,w_M)✓$$
