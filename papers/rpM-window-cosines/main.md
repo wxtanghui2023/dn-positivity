@@ -27,6 +27,7 @@ Results of this draft:
 | 1 | $\inf_\theta\max_{1\le m\le N}\cos(m\theta)=\cos\frac{2\pi}{N+1}$, **sharp** | **[P]** §2 |
 | 2 | (RP$_1$) and (RP$_2$) hold, with $1/2$ **optimal** | **[P]** §3, §4 |
 | 3 | (RP$_3$), (RP$_4$), (RP$_5$) hold | **[CA]** §5 |
+| 3$'$ | $M=3$ **minimizer identified**: $m_3=F_3(\varphi_0)$ with $\mathcal M_3=S_3\cdot\varphi_0$ (unique KKT root; interval local growth + strict far-field exclusion) | **[CA]** §5.5 |
 | 4 | $m_M\le M-1$ for all $M\ge2$ | **[P]**+**[CA]** §6 |
 | 5 | Monotonicity $m_{M+1}\ge m_M$ holds on the *commensurable class*; general $M$ open | **[P]** §7 |
 | 5$'$ | $\kappa_N(\lambda)=\kappa_3(\lambda)$ for all $N\ge4$ (so the $\varepsilon$-threshold cannot be improved by using more multiples) | **[P]** §7.2 |
@@ -269,10 +270,55 @@ The $M=3$ interval run uses domain $[0,P]^3$ with $P$ a rational upper bound for
 
 The box count grows like $N_0^M$ with a small constant ($\approx17N_0^3$ at $M=3$, $\approx6.5N_0^4$ at $M=4$). For $T=1/2$ the needed resolution is $N_0\approx90$ at $M=3$ and $N_0\approx20$ at $M=4$. The route does not scale past $M\approx5$; this is discussed in §7.5.
 
-### §5.4 An interior value for $M=3$
+### §5.4 An interior value for $M=3$, and the current bracket
 
-Using the same scheme with $T=3/4$ gives $m_3\ge0.75$; the certified *upper* bounds of §6.2 give $m_3\le0.777171$. Hence
-$$0.75\ \le\ m_3\ \le\ 0.777\,171 .$$
+Using the same scheme with higher targets gives, in interval arithmetic (no slack, $\pi$ as an interval, domain $[0,P]^3$ with $P>\pi$):
+
+| target $T$ | boxes | max depth | unresolved | min margin |
+|---|---|---|---|---|
+| $0.7640811$ | 70,805 | 99 | 0 | $5.59\times10^{-12}$ |
+| $0.7640811007$ | 72,217 | 111 | 0 | $1.56\times10^{-12}$ |
+| $0.764081100745$ | 74,233 | 129 | 0 | $1.11\times10^{-13}$ |
+| $\mathbf{0.7640811007458}$ | 75,565 | 141 | 0 | $1.911\times10^{-16}$ |
+
+Together with the certified upper bound of §6.2 this gives
+$$0.7640811007458\ \le\ m_3\ \le\ 0.76408110074585388514756267472105 ,$$
+a bracket of relative width $\approx7\times10^{-14}$. The weaker bounds $m_3\ge3/4$ and $m_3\le0.777171$ of earlier versions are superseded.
+
+In fact the minimizer is not merely bracketed but *identified*; see §5.5.
+
+### §5.5 The $M=3$ minimizer is identified: $m_3=F_3(\varphi_0)$
+
+**Theorem 5.5 [CA].** For $F_3(\varphi)=\max_{1\le k\le15}\sum_{j=1}^3\cos(k\varphi_j)$ on $[0,\pi]^3$,
+$$\forall\varphi\in[0,\pi]^3:\quad F_3(\varphi)\ \ge\ F_3(\varphi_0),$$
+with equality **iff** $\varphi\in S_3\cdot\varphi_0$. Hence
+$$m_3=F_3(\varphi_0),\qquad \mathcal M_3=S_3\cdot\varphi_0\quad(\text{unique up to permutation}).$$
+
+**The three-part assembly.**
+
+*(A) Interval local growth.* Let $A=\{1,5,11,13\}$ be the active set and let $X_{\mathrm{ref}}$ be a box of half-width $\le10^{-6}$. Provided the four active branches are **tied** at $x$,
+$$F_3(x+\delta)\ \ge\ F_3(x)+c_X\|\delta\|-\tfrac{R}{2}\|\delta\|^2\qquad(0<\|\delta\|\le\rho_{\mathrm{up}}),$$
+with $c_X=0.319306988$ (an interval-certified covering constant of the four active gradients, computed by the facet method with an explicit containment certificate), $R=\max_{k\in A}k^2=169$ (exact, analytic), and $\rho_{\mathrm{up}}=1.4658\times10^{-3}$ (the self-consistent solution of $\rho=\min(\rho_{\mathrm{iso}},2c/R)$). The boundary margin is
+$$c_X\rho_{\mathrm{up}}-\tfrac{169}{2}\rho_{\mathrm{up}}^2\approx2.87\times10^{-4}>0 .$$
+(Isolation is taken over the *reference box*, while the covering constant must be taken over the *ball*; conflating the two radii gives a wrong radius — this was a genuine error, caught by a self-consistency test.)
+
+*(B) Existence and uniqueness of the KKT root.* Consider the $7\times7$ system in $z=(\varphi_1,\varphi_2,\varphi_3,\lambda_1,\lambda_2,\lambda_3,\lambda_4)$:
+$$\sum_{k\in A}\lambda_k\nabla S_k(\varphi)=0\ (3),\qquad S_1-S_5=S_1-S_{11}=S_1-S_{13}=0\ (3),\qquad \sum_{k\in A}\lambda_k=1\ (1),$$
+where the last equation is kept **explicitly** rather than eliminating one $\lambda$ by an asymmetric choice. A Krawczyk operator for this system contracts:
+$$2\times10^{-7}\to2.3\times10^{-12}\to1.1\times10^{-23}\to1.198\times10^{-46},$$
+with $K(X)\subset\mathrm{int}\,X$ (existence) and $\|I-YJ(X_0)\|_\infty\le1.086\times10^{-45}<1$ (uniqueness), recorded separately. At the resulting root, $\lambda_{\min}=0.026054\ldots>0$, and the three tangency differences each contain $0$ with width $\sim10^{-47}$.
+
+> **Careful.** Interval containment of $0$ in the three tie *components* does not by itself give $\delta_A\equiv0$ on the box. The exact tangency holds at the **unique root** $z_0\in X_0$ guaranteed by Krawczyk: this is the precise form of the A+B combination, $\delta_A(\varphi_0)=0$.
+
+*(C) Strict far-field exclusion.* With $R_B=\rho_{\mathrm{up}}-10^{-6}$ (a deliberate $10^{-6}$ buffer) and the six $S_3$-images of $\varphi_0$ as centres,
+$$[0,\pi]^3\ =\ \Big(\bigcup_{\sigma\in S_3}B_\sigma(R_B)\Big)\ \cup\ \mathcal C,$$
+where $\mathcal C$ is the union of certified terminal boxes. On $\mathcal C$, interval branch-and-bound gives $F_3\ge T_C=0.7640811017461542>F_3(\varphi_0)$ (box coordinates exact dyadic rationals; critical points decided by exact integer tests; $66{,}564$ boxes evaluated, $40{,}156$ certified, $38$ discarded inside the balls, **$0$ unresolved**, minimum margin $3.49\times10^{-6}$). The decomposition is verified in *exact rational volume*:
+$$\frac{57\,982\,058\,467}{57\,982\,058\,496}+\frac{29}{57\,982\,058\,496}=1,$$
+so there is neither gap nor overlap.
+
+*(Splice.)* On $\mathcal C$: $F_3>F_3(\varphi_0)$. Inside each ball: $F_3\ge F_3(\varphi_0)$, strictly unless $\delta=0$. Hence the global minimum is attained exactly on $S_3\cdot\varphi_0$. $\square$
+
+**Rigor level.** Theorem 5.5 is computer-assisted: box coordinates are exact dyadic rationals, the critical-point tests are exact integer arithmetic, the volume decomposition is exact rational, and the trigonometric endpoints carry a conservative slack of $10^{-13}$ (double-precision $\cos$ deviates from the true value by $\lesssim5\times10^{-15}$, and arguments are bounded by $15\pi$). A fully interval-arithmetic (endpoints as intervals) version is a possible hardening; it is not needed for the qualitative conclusion, whose margins are all $\ge3\times10^{-6}\gg10^{-13}$.
 
 ---
 
