@@ -118,7 +118,7 @@ $$\textbf{⑤ 外部 67.2\% 未独立复核}✗（\text{标}\ [\text{需核}]✓
 
 $$\boxed{0.6818287\ \neq\ \text{「Lean 已证明的 RH 常数」}}✗✗$$
 
-$$\boxed{0.6818287\ =\ \text{该特定 rank–trace／LP 实现族在既定信息通道下的能力上界}✓✓$$
+$$\boxed{0.6818287\ =\ \text{该特定 rank–trace／LP 实现族在既定信息通道下的能力上界}}✓✓$$
 
 $$\text{真正具有结构意义的是}✓✓：\boxed{\beta\longmapsto\text{multiplicity only}\quad\Longrightarrow\quad \text{β-information}\subseteq\text{degeneracy／counting data}}✓$$
 
