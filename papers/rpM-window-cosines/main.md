@@ -35,9 +35,9 @@ Results of this draft:
 | 5$'''$ | Equality set of the $M=2$ problem = $\{\pi/3,\pi/2\}$ (primitive 6th and 4th roots) | **[P]** §4 |
 | 8 | Cassels-type weighted constants $g_w(10)$: table for $w\le5$; **$g_2(10)=1$ exactly, with equality only at $(\pi/3,\pi/2)$** | **[CA]** §7.4 |
 | 6 | Damped analogue: $M=2$ uniform bound $0.364984$ for **all** radii | **[CA]** §8 |
-| 7 | Damped $M=3$: certified bracket $0.3730918\le C_3\le0.373092075762$ | **[CA]** §8 |
+| 7 | Damped $M=3$: **the constant is identified**, $C_3=F(z_*)=0.3730918928958164\ldots$, with $\arg\min_\Omega F=\{z_*,z_*^{(2)}\}$ in $\Omega=[0,1]^2\times[0,\pi]^3$ | **[CA]** §8.2 |
 
-Here $m_M$ denotes the undamped min–max constant and $C_M$ the damped one (§1.1). The bracket in row 7 has relative width $<8\times10^{-7}$.
+Here $m_M$ denotes the undamped min–max constant and $C_M$ the damped one (§1.1). Row 3$'$ and row 7 are the two *identification* results: in each case the minimiser is pinned by an interval-certified KKT root together with a local growth lemma and a strict global exclusion; the minimiser set is registered in the domain of definition ($\Omega$ for row 7, where the orbit of the six raw permutations collapses to two points).
 
 ---
 
@@ -457,17 +457,53 @@ inside an adaptive branch-and-bound (768–2624 boxes per $r$, $0$ unresolved, w
 $$d_2(r)\ \ge\ 0.38-10\cdot\tfrac1{2\cdot333}\ =\ 0.364\,984 .$$
 The target $0.40$ fails at $r\approx0.75$ (budget exhausted), so $0.38$ is used for the grid.
 
-### §8.2 $M=3$: a certified bracket
+### §8.2 $M=3$: the exact value, with a three-piece certificate
 
-**Theorem 8.2 [CA].** $0.373\,091\,8\ \le\ C_3\ \le\ 0.373\,092\,075\,762$, i.e. the damped three-point constant is determined to a relative width $<8\times10^{-7}$.
+**Theorem 8.2 [CA].** The damped three-point constant is *identified*:
+$$\boxed{\ C_3\ =\ F(z_*)\ =\ 0.373\,091\,892\,895\,816\,4\ldots\ }$$
+and the minimizer set in $\Omega=[0,1]^2\times[0,\pi]^3$ is
+$$\operatorname*{arg\,min}_{\Omega}F\ =\ \{z_*^{(1)},z_*^{(2)}\},$$
+two points, being the two equivalence classes of the six raw permutations of the three pairs $(r_j,\varphi_j)$ under the normalisation that puts $r=1$ first ($j=1$ has $r_1=1$ by definition of $\mathbb D^3$).
 
-The lower bound is a full global certificate: target $T=0.3730918$, initial grid $N_0=10$ in each of the five coordinates (two radii, three angles), $409\,171$ terminal boxes, $0$ unresolved, **minimum interval margin** $4.573\,825\times10^{-11}$; the most dangerous cell was recorded explicitly (id $379970$, with its five-dimensional box). The upper bound comes from an explicit rational configuration
-$$(r_2,r_3,\varphi_1,\varphi_2,\varphi_3)=(0.79051325,\ 0.83020714,\ 0.10911016\pi,\ 0.82066366\pi,\ 0.46171933\pi),$$
-evaluated in interval arithmetic ($\pi$ as an interval, upper endpoint): $\max_\nu S_\nu\le0.373\,092\,075\,762$.
+**The proof is a three-piece splice.**
 
-> **Not claimed.** The bracket is *not* claimed to be centered on a proven minimizer. A numerical minimizer $x^{**}=(0.7905132461,0.8302071370,0.1091101624\pi,0.8206636560\pi,0.4617193264\pi)$ with $F(x^{**})=0.373\,092\,052\,937$ was located only *after* an earlier candidate failed; it is used **only** to produce an upper bound, not as an anchor for any further claim.
+*(A+B) The local piece.* The six-branch non-smooth KKT system for $A=\{1,2,3,4,5,15\}$, namely
+$$\sum_{k\in A}\lambda_k\nabla S_k=0\ (5\ \text{equations}),\qquad S_1=S_2=S_3=S_4=S_5=S_{15}\ (5\ \text{equations}),\qquad \sum_{k\in A}\lambda_k=1,$$
+for the $11$ unknowns $(r_2,r_3,\varphi_1,\varphi_2,\varphi_3,\lambda_1,\lambda_2,\lambda_3,\lambda_4,\lambda_5,\lambda_{15})$ is solved by an **interval Krawczyk operator**: starting from the box of radius $r_0=10^{-12}$ around the high-precision root, the operator satisfies $K(X)\subset\operatorname{int}X$ (existence) and $\|I-YJ(X_0)\|_\infty=1.09\times10^{-45}<1$ (uniqueness). The certified box has coordinate width $\sim4\times10^{-22}$, all six multipliers are strictly positive ($\lambda_{\min}=0.111\,860\,12$), and the five tie differences all contain $0$ — so the *unique* root satisfies the six-way tie, whence $\delta_A(z_*)=0$.
 
-**Two consistency checks that came for free.** In both global runs, the *most dangerous cell* of the certificate turned out to be exactly a symmetry image of the numerically deepest configuration ($r_2\leftrightarrow r_3$, $\varphi_2\leftrightarrow\varphi_3$) rather than a previously unsuspected region — evidence that the certificate is resolving the right object.
+*(B5) The growth piece.* With constants computed entirely afresh in five dimensions (nothing transplanted from the undamped case),
+$$\Delta_{\rm ref}=0.279\,596\,813\,6,\quad c_X=0.098\,812\,009\,77,\quad R=99.899\,695\,515\,930\,13,\quad \rho_g=\frac{2c_X}{R}=1.978\,224\,4\times10^{-3},$$
+the local lemma reads: for the unique Krawczyk root $z_*$,
+$$0<\|\delta\|\le\rho_g\ \Longrightarrow\ F(z_*+\delta)\ \ge\ F(z_*)+c_X\|\delta\|-\tfrac{R}{2}\|\delta\|^2\ >\ F(z_*).$$
+The constants $c_X,R$ are uniform on a reference ball of radius $2.05\times10^{-3}\ge\rho_g$, and the inequality is *centred at the root* (this is the only form in which it is true; if it held centred at an arbitrary point of the reference box, every such point would be a strict local minimiser).
+
+*(C) The far-field piece.* Excluding only the two balls $B(z_*,\rho_g)$ and $B(\sigma z_*,\rho_g)$, a global interval branch-and-bound at the legal target
+$$T_C=\sup F(X_0)+10^{-9}=F(z_*)+10^{-9}=0.373\,091\,893\,895\,817$$
+yields
+| quantity | value |
+|---|---|
+| boxes evaluated | $472\,766$ |
+| interval-certified | $252\,282$ |
+| discarded (inside the two balls) | $485$ |
+| split | $219\,999$ |
+| **unresolved** | $\mathbf 0$ |
+| float-pass / interval-fail | $\mathbf 0$ |
+| minimum margin $\min_X(\underline F_{\rm IA}(X)-T_C)$ | $4.628\,931\times10^{-8}$ |
+| max distance of a discarded box from a ball centre | $0.001\,978\,039\,980\le\rho_g-10^{-9}$ |
+
+Hence $\Omega=\mathcal C_{\rm cert}\cup B(z_*,\rho_g)\cup B(\sigma z_*,\rho_g)$ with $F\ge T_C>F(z_*)$ on $\mathcal C_{\rm cert}$ and $F>F(z_*)$ on the open balls; the two pieces overlap harmlessly. This closes the determination.
+
+**Independent implementation.** A structurally different three-process version of the interval layer, sharing only the (deterministic) float partition, reproduces $N_{\rm cert}=252\,282$, $0$ interval failures and the minimum margin $4.628\,931\,107\,212\,973\,4\times10^{-8}$ — identical to sixteen significant digits.
+
+**Symmetry, stated carefully.** The symmetry group acting on $\Omega$ is $C_2=\{\mathrm{id},\sigma\}$ with $\sigma:(r_2,r_3,\varphi_1,\varphi_2,\varphi_3)\mapsto(r_3,r_2,\varphi_1,\varphi_3,\varphi_2)$ — the *paired* swap. Permuting the three angles alone is **not** a symmetry (e.g. $F(r_2,r_3,\varphi_2,\varphi_1,\varphi_3)=1.126\,876\,6\ne F(z_*)$): the normalisation $r_1=1$ forbids it. In the unnormalised parameter space the orbit of $z_*$ under $S_3$ has $6$ points, but the normalisation quotient $\mathcal N$ collapses it: $|\mathcal N(\mathcal O_{\rm raw})|=2$.
+
+**Boundaries.** The facet normals used in the first-order covering constant are computed with a floating-point SVD; since the perturbation allowance is $\varepsilon\approx0.2\gg10^{-15}$ this does not affect the conclusion, but a fully interval-linear-algebra version remains a (non-blocking) hardening item.
+
+The earlier bracket $0.373\,091\,8\le C_3\le0.373\,092\,075\,762$ is superseded by Theorem 8.2; it is retained only as a checkpoint.
+
+The self-contained audit of this section — verbatim definitions, the lemma chain with its dependency
+DAG (D-A′ → D-B → B5 → C2), the orbit proposition, the exact `cert / discard / split` set decomposition,
+and the numerical certificate table — is in `papers/damped-M3-theorem/note.md`.
 
 ### §8.3 Why the Fejér mechanism is capped near $1/20$
 
@@ -500,6 +536,10 @@ All scripts are in `dn-project/scripts/`. Absolute paths are relative to `dn-pro
 | $M=3$ interval version | `m3_certificate_interval_arith.py` | `python3 scripts/m3_certificate_interval_arith.py 3000000 60 3 0.5` | certified $\ge T$ |
 | $m_3\ge0.75$ | idem, target $0.75$ | `... 3000000 60 3 0.75` | 54,045 boxes, margin $9.889\times10^{-5}$ |
 | certified upper bounds $U_M$ | `mM_upper_bounds_certificate.py` | `python3 scripts/mM_upper_bounds_certificate.py` | prints all $\le M-1$; data in `data/mM_upper_bounds_certified.json` |
+| damped $M=3$: KKT root (Lemma 1) | `dB_krawczyk_11.py` | `python3 scripts/dB_krawczyk_11.py` | box width $\sim4\times10^{-22}$, $\|I-YJ\|_\infty=1.97\times10^{-10}$ |
+| damped $M=3$: local growth (Lemmas 2–4) | `dB5_local_growth_5d.py` | `python3 scripts/dB5_local_growth_5d.py` | $c_X,R,\rho_g$; self-consistent rung $\rho=2.05\times10^{-3}$ |
+| damped $M=3$: global exclusion (Lemma 5) | `dC2iv_strict.py` | `python3 scripts/dC2iv_strict.py` | $472\,766$ evaluated, $252\,282$ certified, $0$ unresolved |
+| damped $M=3$: independent implementation | `dC2par_parallel_iv.py` | `python3 scripts/dC2par_parallel_iv.py` | identical to 16 significant digits |
 | damped $M=2$, all $r$ | `damped_m2_grid_certificate.py` | `python3 scripts/damped_m2_grid_certificate.py 334 0.38 6000000` | `bridged_bound` $=0.364984$ |
 | damped $M=3$, four gates | `damped_T1_interval_verify_v3.py` | `python3 scripts/damped_T1_interval_verify_v3.py 0.3730918 10 2000` | `min_margin`, `min_cell_id`, tiling sha, Gate 2 max diff |
 | weak-cell inventory | `damped_weakcell_vec.py` | `python3 scripts/damped_weakcell_vec.py 0.35 0.3730721881 6 8000000` | $|\mathcal W|/N$, distance percentiles |
