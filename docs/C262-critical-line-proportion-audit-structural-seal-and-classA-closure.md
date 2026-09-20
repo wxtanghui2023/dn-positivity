@@ -94,3 +94,45 @@ $$\textbf{① 本档为审计与定级}✓，\text{不产候选结论}✗；\ \t
 $$\textbf{② 未用 RH}✓；\text{未改他档正本}✓；\ \textbf{③ 不声称经典占比方法已穷尽}✗（\text{只判本次已审框架}✓）$$
 $$\textbf{④}✗：\text{EnclOK 的包络未经内核}✗✓\text{（}\texttt{IMPL-2}✓\text{）—— 故「封口」在审计／文档层成立}✓\text{，形式层尚有缺口}✗\text{（可形式化＝缺口补全）}✓$$
 $$\textbf{⑤ 外部 67.2\% 未独立复核}✗（\text{标}\ [\text{需核}]✓）$$
+
+---
+
+## §10 【追加·唐先生 2026-09-20 21:36 定稿措辞】分层收口
+
+### 10.1 C-262 最终判定表（唐先生给定 ✓）
+
+| 项目 | 审计结论 |
+|---|---|
+| $0.6818287$ 的对象 | **档案自身 rank–trace ／ LP 方法族的定量天花板** |
+| 其数值来源 | `LawN256.lean` 中的**显示性输入**，不是 Lean kernel 独立推出的常数 |
+| Lean `ceiling_law256` | 有形式化定理，**但依赖** `EnclOK` |
+| `EnclOK` 地位 | 区间算术包络**未由 Lean kernel 内核检验** |
+| 天花板机制 | **β 只通过重数进入** ⟹ 可见 β-information 被退化计数截断 |
+| 方法族是否达到 1 | **否**，档案审计得到 $\kappa^*_{\mathcal M}<1$ |
+| 经典临界线占比 | **另一对象**；属 mollifier／moment 方法族，**不得与** $0.6818287$ **混同** |
+| RH 接口 | $\kappa_\infty=1$ 与 RH 的等价＝**端点等价**，不是新桥 |
+| 新尺度 | **没有**；mollifier／moment 路线仍属既有渐近尺度 |
+| 主线价值 | **结构诊断 ＋ 定量资产**，**非** RH 新证明机制 |
+
+### 10.2 ⭐ 最关键的一刀（措辞纪律 ✓✓）
+
+$$\boxed{0.6818287\ \neq\ \text{「Lean 已证明的 RH 常数」}}✗✗$$
+
+$$\boxed{0.6818287\ =\ \text{该特定 rank–trace／LP 实现族在既定信息通道下的能力上界}✓✓$$
+
+$$\text{真正具有结构意义的是}✓✓：\boxed{\beta\longmapsto\text{multiplicity only}\quad\Longrightarrow\quad \text{β-information}\subseteq\text{degeneracy／counting data}}✓$$
+
+$$\qquad \Longrightarrow \text{该族即使继续优化有限维参数，也}\textbf{不能自动获得新的 β-sensitive channel}✗✓$$
+$$\qquad \Longrightarrow \boxed{\textbf{这才是 C-262 的「封口」内容}✓✓；\ 0.6818287\ \text{只是该封口的【定量实例}】✓}$$
+
+### 10.3 甲类收口的**措辞修正**（✓✓）
+
+$$\textbf{本档 §8 原写}✗：\text{「甲类四项全部判完，零主线」} \Longrightarrow \text{可用，但须补一句}✓$$
+
+$$\boxed{\textbf{甲类四项均已完成【方法族级分类}】✓；\text{其中 C-262 给出的是}\textbf{结构性封口}✓，\textbf{而非 RH 不可能性的数学定理}✗✓}$$
+
+### 10.4 §5 的 Rule F 结果**只能标审计结果**（✓✓）
+
+$$\text{§5 的「未发现自然的 }\kappa\text{-接口避开 }\kappa=1\text{」} \Longrightarrow \textbf{标成【审计结果}】✓，\textbf{不得升级}✗为$$
+$$\qquad \text{「所有可能占比接口均不存在」}✗✗（\text{遵 }\texttt{C-116}：\text{经验归纳不得升格为否决}✓）$$
+
