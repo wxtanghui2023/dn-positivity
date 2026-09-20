@@ -8,7 +8,7 @@ FREEZE-ACK: 本档即冻结期内的收束与登记（依 §8.1；不产候选�
 
 ## §0 唐先生的提问与**先决事实**
 
-$$\text{问}：\text{为什么目前只能证}\ m_3\ge0.76？\ 0.76\ \text{是否有解析升级路径？✓$$
+$$\text{问}：\text{为什么目前只能证}\ m_3\ge0.76？\ 0.76\ \text{是否有解析升级路径？}✓$$
 $$\textbf{先决事实}：\text{数值极小}\ m_3\approx0.7640811\ \Longrightarrow \textbf{任何}>0.7640811\ \text{的下界都是假的}✗✗$$
 $$\qquad \Longrightarrow \text{"}0.76\to0.77\text{"在数学上不可能}✗；\text{剩余缺口的【上限】就是}\ m_3\ \text{本身}✓$$
 
@@ -52,7 +52,7 @@ $$\text{原先担心的"全局缺口}\ 4.0811\times10^{-3}\text{"}\ \textbf{在�
 $$\qquad \text{可分 B&B 的天然射程}\ \approx m_3-\varepsilon✓（\varepsilon\sim10^{-9}✓）,\ \text{唯一遗留}=x_0\ \text{邻域的小球}✓$$
 $$\Longrightarrow \text{若把该 B&B 做成【区间算术版】}✓ \Longrightarrow \text{账本可望变为}$$
 $$\qquad \boxed{\ 0.7640811\ \le\ m_3\ \le\ 0.76408110074585388514756267472105\ }✓（\text{缺口}\sim7.5\times10^{-10}✓，\text{较原}\ 4.08\times10^{-3}\ \text{改善}\ \sim5.4\times10^6\ \text{倍}✓✓）$$
-$$\qquad \text{这是【此前无人预料到】的结构性好消息}✓✓（\text{与"缺想法"无关 ✓）$$
+$$\qquad \text{这是【此前无人预料到】的结构性好消息}✓✓（\text{与"缺想法"无关}✓）$$
 
 ## §5 边界（严格）
 
