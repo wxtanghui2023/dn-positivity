@@ -34,8 +34,8 @@ $$\textbf{(iii) 二阶界}：R=\max_{k\in A}k^2=169✓（\textbf{解析严格}�
 ## §3 ⭐ 关键修正：**两个半径必须分开**
 
 $$\textbf{层 2 版（}\texttt{C-206}\text{）}：\text{用同一个球半径同时算隔离与覆盖}✗ \Longrightarrow \Delta\ \text{被【球上的 sup/inf】吃小}✗ \Longrightarrow \text{自洽与不自洽混在一起}✗$$
-$$\textbf{正确版}✓✓：\textbf{隔离}用【参考盒}\ X_{\rm ref}\text{】的 sup/inf}✓（\text{因}\ x\in X_{\rm ref}\ \text{而}\ x+\delta\in X_{\rm ref}\oplus B(0,\rho)✓ \Longrightarrow S_k(x+\delta)\le\sup_{X_{\rm ref}}S_k+L_k\|\delta\|✓）；$$
-$$\qquad \textbf{覆盖}必须用【球}\ B(0,\rho)\text{】}✓（\text{因均值形式要}\ \nabla S_k\ \text{在【中间点】}✓，\text{而中间点在球内}✓）$$
+$$\textbf{正确版}✓✓：\textbf{隔离}用【参考盒】\ X_{\rm ref}\ \text{的 sup/inf}✓（\text{因}\ x\in X_{\rm ref}\ \text{而}\ x+\delta\in X_{\rm ref}\oplus B(0,\rho)✓ \Longrightarrow S_k(x+\delta)\le\sup_{X_{\rm ref}}S_k+L_k\|\delta\|✓）；$$
+$$\qquad \textbf{覆盖}必须用【球】\ B(0,\rho)\ \text{的均值形式}✓（\text{因均值形式要}\ \nabla S_k\ \text{在【中间点】}✓，\text{而中间点在球内}✓）$$
 $$\qquad \Longrightarrow \Delta_{\rm ref}=0.071085496✓（\text{几乎就是点值}✓）,\ \rho_{\rm iso}=\Delta_{\rm ref}/(L_{\rm non}+L_{\rm act})=1.4658\times10^{-3}✓$$
 $$\qquad \Longrightarrow \text{定点迭代}\ \rho=\min(\rho_{\rm iso},\ 2c(\rho)/R)✓ \Longrightarrow \rho_{\rm up}=1.4658\times10^{-3}✓ \text{（受隔离限制✓，非二次项✓）}$$
 $$\qquad \textbf{结论}：\texttt{C-206}\ \text{的}\ 1.4658\times10^{-3}\ \textbf{数值幸存}✓✓，\text{但其【理由】必须按本节修正}✓（\text{这是我上一版代码混用半径后自查发现的}✓）$$
