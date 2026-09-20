@@ -77,7 +77,7 @@ $$\qquad \Longrightarrow \text{作 CENSUS-2 与将来全局证书的【校验样
 
 $$\textbf{① 容差过宽}：\text{命中判据用}\ 10^{-4}✗ \Longrightarrow \text{假"3/3 命中"}✗ \Longrightarrow \text{改为}\ 10^{-6}✓$$
 $$\textbf{② 判据错误}：\text{用 NM 下降检验判局部极小}✗ \Longrightarrow \text{漏掉}\ 0\notin\mathrm{conv}\ \text{的伪点}✗ \Longrightarrow \text{改用}\ c\ \text{符号}✓✓（§3）$$
-$$\textbf{③ 网格布种假设错}：\text{以为低网格点可作种子}✗ \Longrightarrow F<0.78\ \text{格点为 0}✗（盆地在网格尺度下不可见}✓）$$
+$$\textbf{③ 网格布种假设错}：\text{以为低网格点可作种子}✗ \Longrightarrow F<0.78\ \text{格点为 0}✗（盆地在网格尺度下不可见✓）$$
 $$\qquad \Longrightarrow \text{①–③ 全为实现/方法错，非数学错}✓（\text{第}\ 25\text{–}27\ \text{次同类应验}）✓$$
 
 ## §9 下一步
