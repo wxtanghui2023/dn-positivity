@@ -541,3 +541,38 @@ $$\qquad \text{同时}\ 0.37309\ \text{的成功}\ \textbf{仍然有效}✓（\t
 $$\textbf{①}\ \text{把下界从}\ 0.373090\ \text{推到}\ 0.3730915／0.373092（\text{纯 B\&B，现已知真极小位置，成本可控}）✓$$
 $$\textbf{②}\ \text{β 局部分析}\ \textbf{重新以}\ x_{\ast\ast}\ \text{为中心}（\text{锚点／梯度／Hessian 全部重算}）✓，\text{并同时对镜像}\ \sigma x_{\ast\ast}\ ✓$$
 $$\textbf{③}\ \text{局部球在}\ T\lesssim0.3730925\ \text{上可过}✓（\text{§20.2⑤}）；\text{远场再做补集证书}✓$$
+
+---
+
+## §21 ⚠️ 措辞更正（唐先生 2026-09-20 09:18）＋ 方法论更正 ＋ 三分法 ＋ 可达前沿
+
+### §21.1 更正：上界合法，但"上限≈真极小"是**越界表述** ✗
+
+$$\text{账本}\ C_3\le0.373092075762\ \textbf{本身合法}✓\ —— \text{上界只需}\ \textbf{一个合法构型}✓，\text{不要求它是极小点}✓$$
+$$\qquad ⚠️\ \text{但我 §20 行文把它当成"真极小"✗} \Longrightarrow \textbf{越界}✗✗$$
+$$\qquad \text{已证}：\text{"}x_{\ast\ast}\ \text{是目前}\ \textbf{找到的} \text{最深点"}\ ✓；\ \textbf{未证} \text{"}x_{\ast\ast}\ \text{是全局最小点"}\ ✗$$
+$$\qquad \text{按唐先生逻辑}：\text{刚被}\ x_{\ast\ast}\ \text{教训过一次} \Longrightarrow \text{此刻更须警惕第三次}✓✓$$
+
+### §21.2 ⭐ 方法论更正：证"没有更深的点"要用**证明**，不是搜索
+
+$$\text{原建议（粗网格＋Lipschitz）}\ \textbf{在本问题无效}✗✗\qquad \text{实测}\ 12^5\ \text{网格（248,832 点）最小}=0.5434 \Longrightarrow \textbf{看不到下陷}✗$$
+$$\qquad \text{原因}：\text{下陷盆地极窄（}\sim1\times10^{-5}✓） \Longrightarrow \text{任何粗网格必然漏掉}✗✗$$
+$$\textbf{正确工具}：\text{把 v3 证书 B\&B 设在}\ T\ \textbf{略低于当前最优} \Longrightarrow \text{0 residual} \Longrightarrow \textbf{严格证明}\ F\ge T\ \text{处处成立}✓✓$$
+$$\qquad \Longrightarrow \textbf{不存在比}\ T\ \text{更深的点}✓✓（\text{这是证明，不是启发式}）✓$$
+
+### §21.3 三分法（把两种"爆炸"分开）
+
+$$\begin{array}{l|l|l}
+\text{情形} & \text{含义} & \text{例}\\\hline
+T>\text{真极小} & \textbf{逻辑上不可能}✗（\text{无算力可认证}） & 0.37310,\ 0.373095\\
+0.3730919\le T<\text{真极小} & \textbf{实用上不可行}✗（\text{分辨率墙}） & 0.3730919（\text{峰值 6.09M}）\\
+T\le0.3730918 & \textbf{可达}✓（\text{廉价}） & 0.373090／0.3730915／0.3730918\\
+\end{array}✓$$
+$$\text{实测稳（}N_0=10\text{）}：0.3730915\to396{,}446✓；0.3730916\to398{,}770✓；0.3730917\to402{,}133✓；\mathbf{0.3730918\to409{,}171✓}；0.3730919\to\textbf{爆炸}✗$$
+
+### §21.4 本刀产出
+
+$$\textbf{可达前沿}\ T^\ast=0.3730918✓（409{,}171\ \text{盒，四门运行中}）$$
+$$\text{若通过} \Longrightarrow \boxed{0.3730918\ \le\ C_3\ \le\ 0.373092075762}\qquad \text{宽度}\ \mathbf{2.758\times10^{-7}}✓（\text{再收窄}\ 7.5\times）✓✓$$
+$$\qquad \textbf{且同时证明}\ F\ge0.3730918\ \text{处处成立} \Longrightarrow \textbf{不存在低于}\ 0.3730918\ \text{的点}✓✓$$
+$$\qquad ⚠️\ \text{仍}\ \textbf{不能} \text{断言}\ C_3\ \text{精确值}✗（\text{真极小可能严格位于区间内部}✓）$$
