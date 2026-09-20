@@ -616,3 +616,15 @@ G3 缺口 ≠ envelope 精度
 **■ ⭐ 单一汇合点**：`一致有限性界 ≡ support>1 ≡ W6 ≡ C-126 SUSPENDED ≡ C-128／C-129`。
 
 **■ ⚠️ 未立档三问（复述型）**：ζ 的 `s` 归纳／素数间隙→RH／可迭代下降量 —— 均为档案既有判词的复述，无新内容。
+
+## 【定点更新·C-231：资产 T13-Damped-M3 FROZEN】（2026-09-20）
+
+| 资产 | 内容 | 位置 | 状态 |
+|---|---|---|---|
+| T13-Damped-M3（冻结） | 阻尼 M=3 常数的精确认定：C_3 = F(z_*) = 0.3730918928958164...，argmin_Omega = {z_*, sigma z_*} | `papers/damped-M3-theorem/main.tex` ＋ `main.pdf` ＋ `note.md` | FROZEN |
+| 证书脚本组 | dB_krawczyk_11.py / dB5_local_growth_5d.py / dC2iv_strict.py / dC2par_parallel_iv.py | `scripts/` | 可复现 |
+| 决策链文书 | C-224 → C-226 → C-227 → C-228 → C-229 → C-230 → C-231 | `docs/` | 已登记 |
+
+- 定位：**自用数学资产**（非论文级突破；唐先生 2026-09-16 双轨定位之 (ii) 类）
+- 价值：定理链完整、依赖 DAG 无循环、证书双层互验、边界与 caveat 如实
+- 维护规则：仅数学错误才改动；改动须 append 勘误指针

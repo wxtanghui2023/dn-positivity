@@ -1054,3 +1054,13 @@ G3 缺口 ≠ envelope 精度
 **■ ⭐ 单一汇合点**：`一致有限性界 ≡ support>1 ≡ W6 ≡ C-126 SUSPENDED ≡ C-128／C-129`。
 
 **■ ⚠️ 未立档三问（复述型）**：ζ 的 `s` 归纳／素数间隙→RH／可迭代下降量 —— 均为档案既有判词的复述，无新内容。
+
+## 【定点更新·C-231：T13-Damped-M3 FROZEN】（2026-09-20）
+
+- 甲线（阻尼 M=3 常数）**正式冻结**：Theorem A ＋ Lemma 1--5 ＋ 英文正式版（papers/damped-M3-theorem/main.tex，9 页编译通过）＋ 审计档 note.md
+- 结论：C_3 = F(z_*) = 0.3730918928958164...；argmin_Omega = {z_*, sigma z_*}（2 点）
+- 四门统计：N_unresolved = 0；min 余量 = 4.628931e-08；float 过/区间不过 = 0；disc_far_max = 0.001978039980 <= rho_g - 1e-9
+- 独立实现交叉验证：并行三进程版与主版逐位一致（16 位）
+- 现状口径：D-A' PASS → D-B PASS → B5 PASS → C2 覆盖几何 PASS → C2 float PASS → C2 interval PASS → 冻结
+- 维护规则：仅发现数学错误才改动；不改结论以适配后续路线
+- 详见 `docs/C231-T13-Damped-M3-FROZEN-registration.md`

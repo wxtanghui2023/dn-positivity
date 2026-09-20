@@ -3183,3 +3183,15 @@ G3 缺口 ≠ envelope 精度
 **■ ⭐ 单一汇合点**：`一致有限性界 ≡ support>1 ≡ W6 ≡ C-126 SUSPENDED ≡ C-128／C-129`。
 
 **■ ⚠️ 未立档三问（复述型）**：ζ 的 `s` 归纳／素数间隙→RH／可迭代下降量 —— 均为档案既有判词的复述，无新内容。
+
+## 【定点更新·C-231：T13-Damped-M3 FROZEN】（2026-09-20）
+
+- **甲线正式冻结**：`papers/damped-M3-theorem/main.tex`（英文正式版，9 页，pdflatex 0 错误 0 未定义引用）＋ `main.pdf` ＋ `note.md`（自洽审计档，373 行）＋ `C231` 登记档
+- **结论**：C_3 = F(z_*) = 0.3730918928958164...；argmin 在 Omega = [0,1]^2 x [0,pi]^3 上 = {z_*, sigma z_*}（Omega 内 2 点；raw 轨道 6 点，经归一化商 N 塌缩为 2）
+- **依赖链（无循环）**：Lemma 1（KKT 区间 Krawczyk：存在性 K 子集 intX ＋ 唯一性 ||I-YJ|| 无穷 = 1.9651e-10 < 1，lambda_min = 0.11186012 > 0，六路 tie 故 delta_A(z_*) = 0）→ Lemma 2（Delta_ref = 0.2795968136，L = k*sqrt5，rho_iso = 4.31171e-3）／Lemma 3（facet 法 c = 0.3020915，c_X = 0.09881200977）／Lemma 4（R = 99.89969551593013，rho_g = 1.9782244e-3，在根处严格局部增长）→ Lemma 5（T_C = F(z_*) + 1e-9；N_eval = 472766，N_cert = 252282，N_disc = 485，N_split = 219999，N_unresolved = 0；精确集合分解 Omega = C_cert 并 D，D 子集 B_1 并 B_2）→ Theorem A
+- **两条不可删公式**：(1) F(x+delta) >= F(x) - delta_A(x) + c_X ||delta|| - (R/2)||delta||^2（解释 Lemma 1 的 tie 是 Lemma 4 的唯一逻辑消费点）；(2) rho_data >= rho_g + hd(X_0)（reference-ball 自洽，是证明条件而非实现细节）
+- **措辞铁律**：不得写 "the S_3-orbit consists of two minimizers"；必须写 "minimizer set in the normalized domain Omega = {z_*, sigma z_*}；raw orbit = 6，经 N 塌缩为 2"
+- **维护规则**：仅当发现【数学错误】才改动；措辞润色与格式调整不在其列；改动须 append 勘误指针，不覆盖
+- **未决项（不改结论）**：facet 法向用 float SVD（1e-15 远小于 eps_pert 约 0.203）；体积精确核对（可选）
+- **下一刀候选（仅登记，未启动）**：由 M=3 六路 active-set 结构抽象出的结构性猜想 —— 5 个构型自由度 → 6 个正权 active branches（|A| = n+1 的单纯形签名）及其与全局最小化、归一化商结构的关系
+- 详见 `docs/C231-T13-Damped-M3-FROZEN-registration.md`
