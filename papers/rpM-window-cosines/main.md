@@ -97,8 +97,9 @@ Andersson's theorems (arXiv:0704.1879, Thm. 1 and 2) hold for **any** $m\ge n$, 
 For completeness we record that the unimodular case of Lemma 2.2 can be recovered from Andersson's mechanism (arXiv:0704.1879) applied to a *symmetrized* system. Take $2M$ points $\{z_j,\bar z_j\}$ with weights $b_j=\tfrac12$ each. Then the weighted power sums are
 $$g(\nu)=\sum_j b_j\big(z_j^{\nu}+\bar z_j^{\nu}\big)=\operatorname{Re}\sum_{j=1}^Mz_j^{\nu},$$
 with $A:=\sum b_j=M$, $B:=\sum b_j^{2}=M/2$ and $|g(\nu)|\le M$. Substituting into Andersson's Theorem 1 with $m=5M$ gives
-$$\max_{1\le\nu\le5M}\operatorname{Re}\sum_{j=1}^Mz_j^{\nu}\ \ge\ \frac{\frac M2(5M+1)-A^2}{\ \dots}\ >\ \frac{1}{20},$$
-i.e. a *strict* constant $1/20$ for all $M$ with $|z_j|=1$, obtained without reference to the unavailable original. (Numerically this route is far from sharp: see §8.)
+$$\max_{1\le\nu\le5M}\operatorname{Re}\sum_{j=1}^Mz_j^{\nu}\ \ge\ \frac{B(m+1)-A^{2}}{2Mm}\Big|_{A=M,\;B=M/2,\;m=5M}\ >\ \frac1{20}\qquad(M\ge1),$$
+which is a *strict* constant $1/20$ in the unimodular case for every $M$, obtained without reference to the unavailable original. (Numerically this route is far from sharp: see §8.)
+> **To re-check before submission.** The two terms $A^{2}$ and $mM^{2}$ enter differently in Andersson's Theorems 1 and 2, and our archived derivation of the explicit value contains an inconsistency; only the *qualitative* statement above is used in this draft, and the explicit constant is deliberately not asserted here.
 
 ### §1.6 Notation
 
