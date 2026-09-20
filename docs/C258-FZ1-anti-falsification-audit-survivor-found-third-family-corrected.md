@@ -77,7 +77,7 @@ $$\textbf{④ survivor 的「结算」限于【是否产出非平凡量}】✓�
 
 ## §9 【追加·唐先生 2026-09-20 20:57 修正】SURVIVOR-5 第五项的**二级标签**
 
-$$\textbf{问题}✗✓：\text{本档 §4 对 M5 只写了 } RH\Rightarrow\text{Lindel\"o}f\Rightarrow\text{subconvexity}✓，\text{这是【单向 RH-interface}】✓—— \text{若第五项只要求「严格可追踪的 RH 接口」，M5 可过}✓；\textbf{但不得与「直接产生 RH 障碍敏感量」混为一谈}✗✓$$
+$$\textbf{问题}✗✓：\text{本档 §4 对 M5 只写了 }RH\Rightarrow\text{Lindelöf}\Rightarrow\text{subconvexity}✓\text{，这是【单向 RH-interface】}✓\text{—— 若第五项只要求「严格可追踪的 RH 接口」，M5 可过}✓\text{；}\textbf{但不得与「直接产生 RH 障碍敏感量」混为一谈}✗✓$$
 
 $$\boxed{\text{第五项的二级标签}✓✓：\quad R_1=\text{RH 导出型}；\qquad R_2=\text{RH 障碍敏感型}}$$
 
