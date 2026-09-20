@@ -31,6 +31,8 @@ Results of this draft:
 | 5 | Monotonicity $m_{M+1}\ge m_M$ holds on the *commensurable class*; general $M$ open | **[P]** §7 |
 | 5$'$ | $\kappa_N(\lambda)=\kappa_3(\lambda)$ for all $N\ge4$ (so the $\varepsilon$-threshold cannot be improved by using more multiples) | **[P]** §7.2 |
 | 5$''$ | Equality set of $\kappa_N$ = primitive $(N+1)$-th roots of unity | **[P]** §2 |
+| 5$'''$ | Equality set of the $M=2$ problem = $\{\pi/3,\pi/2\}$ (primitive 6th and 4th roots) | **[P]** §4 |
+| 8 | Cassels-type weighted constants $g_w(10)$: table for $w\le5$; $g_2=1$ exactly | numeric §7.4 |
 | 6 | Damped analogue: $M=2$ uniform bound $0.364984$ for **all** radii | **[CA]** §8 |
 | 7 | Damped $M=3$: certified bracket $0.3730918\le C_3\le0.373092075762$ | **[CA]** §8 |
 
@@ -231,6 +233,12 @@ The exclusion box used in §4.3 has diagonal $2.9133^\circ<\varepsilon=3.672\,69
 $$\max_{1\le k\le10}\Big[\cos k\varphi_1+\cos k\varphi_2\Big]\ \ge\ \tfrac12 ,$$
 and $\frac12$ is optimal.
 
+**Theorem 4.2 (equality set) [P, computer-assisted].** Equality holds if and only if $\{\varphi_1,\varphi_2\}=\{\frac\pi3,\frac\pi2\}$ as an unordered pair.
+
+**Proof.** Both directions use only §4.2 and §4.3. Write $x_*=(\pi/3,\pi/2)$. By §4.2, $F(\delta)\ge\frac12+c|\delta|-32|\delta|^2>\frac12$ whenever $0<|\delta|<c/32=3.672\,7^\circ$; hence inside that disc equality occurs only at the centre (and likewise for the swapped point). By §4.3, $F\ge0.527\,832>\frac12$ outside the $1^\circ$-neighbourhood. Every point lies in one of the two regions, since $1^\circ<3.672\,7^\circ$. $\square$
+
+> **Structural remark.** $\pi/3=2\pi/6$ and $\pi/2=2\pi/4$ are the *primitive* $6$-th and $4$-th roots of unity, exactly mirroring Corollary 2.3 (where the extremal angles are the primitive $(N+1)$-th roots). Moreover $12=\operatorname{lcm}(6,4)$ is precisely the period appearing in the exact collinearity $7g_5+5g_7=0$ of §4.2, and $k+k'=12$ is the structural reason for it. Two independent features — the extremal angles and the gradient degeneration — are governed by the same lcm.
+
 > **Implementation note.** During development the second exclusion box was initially coded with the wrong sign and produced the anomalous value $0.4827<1/2$; the anomaly was resolved by inspecting the code rather than by weakening the target. We record this because it is the standard failure mode of certified numerics.
 
 ---
@@ -327,7 +335,16 @@ $$\max_{k\le5(M+1)}\Big[\sum_{j\le M}\cos(k\varphi_j)+\cos(k\psi)\Big]\ \ge\ M-\
 $$\kappa_3(\lambda):=\inf_\theta\max_{m\le3}\big[\cos(m\theta)-\lambda m^2\big]\ \ge\ -1\quad\text{for}\quad \lambda\le\lambda_{\max}=2-\sqrt3=0.267\,949\,19\ldots$$
 (the value $2-\sqrt3$ is the tangency point of the two constraints $m=1$ and $m=2$, obtained by solving $(\lambda-1)^2=2\lambda$), the admissible deviation becomes
 $$\varepsilon\ \le\ \frac{\sqrt{2\lambda_{\max}}}{\sqrt M}=\frac{0.731\,984}{\sqrt M},$$
-an improvement by the factor $\sqrt2/(\sqrt{9/2}-\ldots)=1.553$ over the crude $\sqrt{2/(9M)}=0.471\,405/\sqrt M$.
+an improvement by the factor $0.731\,984/0.471\,405=1.553$ over the crude $\sqrt{2/(9M)}=0.471\,405/\sqrt M$.
+
+**Lemma 7.3 ($\kappa_N(\lambda)$ does not depend on $N$) [P].** Let $\kappa_N(\lambda):=\inf_\theta\max_{1\le m\le N}[\cos(m\theta)-\lambda m^2]$. Then for every $\lambda\in[\frac18,\lambda_{\max}]$ and every $N\ge4$,
+$$\kappa_N(\lambda)=\kappa_3(\lambda),\qquad\text{hence}\qquad \lambda_{\max}(N)=\lambda_{\max}(3)=2-\sqrt3\quad\text{for all }N\ge3 .$$
+
+**Proof.** $\kappa_N$ is non-decreasing in $N$ (the max ranges over more terms). For $\lambda\ge\frac18$ and $m\ge4$,
+$$\cos(m\theta)-\lambda m^2\ \le\ 1-16\lambda\ \le\ -1\ \le\ \kappa_3(\lambda),$$
+the last inequality because $\lambda\le\lambda_{\max}$ means $\kappa_3(\lambda)\ge-1$ by definition. Hence the terms $m\ge4$ never determine the maximum, and the two minimax problems coincide; monotonicity in $N$ then upgrades this to equality of the thresholds. $\square$
+
+> **Mechanism-level consequence.** The $\varepsilon$-threshold $0.732\,051/\sqrt M$ of Lemma 7.2 **cannot be improved by using more multiples of $P$**: the higher frequencies are dominated once $\lambda\ge\frac18$. Together with Corollary 2.3 this pins down where the $\kappa$-route ends.
 
 ### §7.3 The extremal configurations are *not* commensurable
 
@@ -343,7 +360,28 @@ Direct measurement of the numerical minimizers: $\delta(q)=\max_j\operatorname{d
 
 Moreover the minimizers are *spread*: the minimal adjacent angular gap is $30^\circ,36.9^\circ,16.1^\circ,10.7^\circ$ for $M=2,3,4,5$. Hence neither the periodic route nor a "cluster-merge" reduction can reach the hardest configurations.
 
-### §7.4 Four quantitative obstructions (recorded so they are not re-tried)
+### §7.4 Cassels-type weighted constants (numerical)
+
+A natural weighted ("Cassels-type") variant of the $M=2$ problem is
+$$g_w(N)\ :=\ \inf_{\varphi_1,\varphi_2}\ \max_{1\le k\le N}\Big[w\cos(k\varphi_1)+\cos(k\varphi_2)\Big],\qquad w\ge1 .$$
+Multi-start local optimisation on $[0,\pi]^2$ (not certified) gives, at $N=10$:
+
+| $w$ | $g_w(10)$ | $g_w/w$ | optimal $\varphi/\pi$ |
+|---|---|---|---|
+| 1.0 | $0.500\,000$ | $0.500$ | $(1/3,\ 1/2)$ — recovers Theorem 4.1 |
+| 1.2 | $0.578\,407$ | $0.482$ | $(0.3478,\ 0.5154)$ |
+| 1.5 | $0.625\,406$ | $0.417$ | $(0.9075,\ 0.3592)$ |
+| 2.0 | $1.000\,000$ | $0.500$ | $(1/3,\ 1/2)$ — exactly $1$ |
+| 3.0 | $1.799\,343$ | $0.600$ | $(0.0857,\ 0.5943)$ |
+| 5.0 | $3.246\,775$ | $0.649$ | $(7/11,\ 2/11)$ |
+
+Two features are worth recording. First, the elementary asymptotic bound
+$$g_w\ \ge\ w\,\kappa_{10}-1\ =\ w\cos\tfrac{2\pi}{11}-1$$
+(pick $k$ maximising $\cos k\varphi_1$ and use $\cos k\varphi_2\ge-1$) is approached from above: at $w=5$ it gives $3.206$ against the measured $3.247$. Second, $g_w/w$ is *not* monotone in $w$ ($0.500,0.482,0.417,0.500,0.600,0.649$), with a transition near $w\approx1.5$ where the optimal configuration changes shape.
+
+> **Status.** These constants are numerical only, and the direction of the inequalities was not separated (upper vs lower bounds). The weighted family is the Cassels-type direction of the Turán family; its certification is 2-dimensional and hence cheap, and is left to later work. The classical Turán statements themselves are *known* and are not claimed as new here; the original sources are unavailable to us, so the phrase "Cassels-type" is our own labelling and is not asserted to match any specific classical formulation verbatim.
+
+### §7.5 Four quantitative obstructions (recorded so they are not re-tried)
 
 | route | obstruction | measured |
 |---|---|---|
