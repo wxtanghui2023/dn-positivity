@@ -41,7 +41,7 @@ $$\qquad \text{（}\text{注}：\text{球外直到}\ \approx0.44\ \text{的区�
 ## §4 相容性检查
 
 $$\text{对每个簇检验}\ \Delta F\ \ge\ \frac c2\,d\ \text{（球内点必须满足；\text{球外点该式不适用}}✗）$$
-$$\qquad \text{球内非零簇数}=1✓（\#1\text{）\text{且相容}✓ \Longrightarrow \textbf{无冲突}✓✓$$
+$$\qquad \text{球内非零簇数}=1✓（\#1），\text{且相容}✓ \Longrightarrow \textbf{无冲突}✓✓$$
 $$\qquad \text{反推硬约束}（\text{若在球内则}\ d\le\Delta F/(c/2)\text{）}：\#1\Rightarrow d\le6.509\times10^{-4}✓（\text{实测}\ 2.348\times10^{-4}✓\text{相容}✓）$$
 
 ## §5 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写**）
