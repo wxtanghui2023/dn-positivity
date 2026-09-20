@@ -54,7 +54,7 @@ $$\qquad \lambda=(0.1492699829,\ 0.2000536555,\ 0.1655100171,\ 0.1118601223,\ 0.
 $$\textbf{解处独立复核}（\text{不预设 tie}）：\text{六分支}\ S_k\ \text{精确并列到}\ \mathbf{1\times10^{-51}}✓✓（\Delta_k=7.8\times10^{-52}\!\sim\!4.2\times10^{-51}✓）；\text{外部最小}\ \Delta=0.279602✓$$
 $$\qquad F(\text{解})=0.3730918928958164248599364✓ \Longrightarrow \text{落在 bracket}\ [0.3730918,\ 0.373092075762]✓ \text{内，且比 census 候选}\ (0.3730920540)\ \textbf{低}\ 1.6\times10^{-7}✓✓$$
 $$\qquad \Longrightarrow \textbf{"census 候选未收敛"被证实}✓✓；\text{真凹点更低}✓，\text{其几何为【六分支精确并列}】✓✓$$
-$$\qquad ⚠️\ \text{输出中"exact argmax}=[15]"是用【精确相等】判定的假象}✗（\text{六值实际相等至}\ 10^{-51}✓） \Longrightarrow \text{确为六路 tie}✓✓$$
+$$\qquad ⚠️\ \text{输出中 exact argmax}=[15]\ \text{是用【精确相等】判定的假象}✗（\text{六值实际相等至}\ 10^{-51}✓） \Longrightarrow \text{确为六路 tie}✓✓$$
 
 ## §5 $h$ 三档稳定性检查（唐先生指定）
 
