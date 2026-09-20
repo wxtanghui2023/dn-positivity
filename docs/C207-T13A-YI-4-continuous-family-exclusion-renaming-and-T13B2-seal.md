@@ -26,7 +26,7 @@ $$\Delta:=\Big[\nabla S_{k}-\nabla S_{k_1}\Big]_{k\in A\setminus\{k_1\}}✓（3\
 | **5** | $\{1,3,13,15\}$ | $(25.065,\ 18.925,\ 4.066)$ | $-1.929\times10^{3}$ | **3 ✓** | 6.17 | $(0.63767,\ 0.28608,\ 0.03808,\ 0.03817)$ | $3.808\times10^{-2}$ | $1.2\times10^{-16}$ | $0.750466653$ |
 
 $$\textbf{三例均}：\mathrm{rank}\,\Delta=3=M✓（\ker\Delta=\{0\}✓）\Longrightarrow \text{四个活跃梯度【仿射张成}\ \mathbb R^3✓\text{】}\ \Longrightarrow \textbf{一阶可行集为单点}✓✓$$
-$$\qquad \text{KKT 权重【唯一】}✓（4\ \text{方程}4\ \text{未知}✓，因}\ \mathrm{rank}\Delta=3✓）；\ \min\lambda>0✓ \Longrightarrow 0\in\mathrm{int}\,\mathrm{conv}\{\nabla S_k:k\in A\}✓✓$$
+$$\qquad \text{KKT 权重【唯一】}✓（4\ \text{方程}4\ \text{未知}✓，\text{因}\ \mathrm{rank}\Delta=3✓）；\ \min\lambda>0✓ \Longrightarrow 0\in\mathrm{int}\,\mathrm{conv}\{\nabla S_k:k\in A\}✓✓$$
 $$\qquad \textbf{交叉验证}✓：\text{本档线性求解的}\ \min\lambda=2.605\times10^{-2}／5.648\times10^{-2}／3.808\times10^{-2}✓\ \text{与}\ \texttt{C-201}\ \text{的 LP 结果【完全一致}✓✓\text{】}$$
 $$\qquad \text{条件数}\ 2.2\sim6.2✓ \Longrightarrow \text{不退化}✓；\text{残差}\sim10^{-16}✓（\text{数值 KKT 几乎精确}✓）$$
 
@@ -76,5 +76,5 @@ $$\qquad \text{已有档名不改}✓（\text{项目惯例：不回溯改名}✓
 
 $$\textbf{(甲)}\ \boxed{\text{三孤立 Type-A 轨道是否为全部候选？}}✓ \Longrightarrow \text{这才是全局问题}✓（\text{唐先生明确指出}✓）$$
 $$\qquad \text{可能路径}：\text{对}\ \mathcal M_{\rm cand}\ \text{做【穷尽性】论证}✓（\text{例如分区 ＋ 每区一个局部刚性}✓）\ ——\ \text{即}\ \texttt{C-207}\ \text{之后的"全局分区"✗（此前被你暂缓}✓）$$
-$$\textbf{(乙)}\ \text{其余近极小数值簇批量过模块}✓（\texttt{C-206} 脚本已就绪，廉价}✓）\ \Longrightarrow \text{扩充}\ \mathcal M_{\rm cand}\ \text{清单}✓$$
+$$\textbf{(乙)}\ \text{其余近极小数值簇批量过模块}✓（\texttt{C-206} 脚本已就绪，廉价✓）\ \Longrightarrow \text{扩充}\ \mathcal M_{\rm cand}\ \text{清单}✓$$
 $$\textbf{(丙)}\ \text{不动}：\text{账本冻结}✓ \Longrightarrow \text{等唐先生决定是否进全局}✓$$
