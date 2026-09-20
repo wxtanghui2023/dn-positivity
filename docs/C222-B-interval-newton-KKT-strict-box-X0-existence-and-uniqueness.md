@@ -53,6 +53,8 @@ $$\varphi/\pi:\quad [0.1158442571997]✓,\ [0.3318874234231]✓,\ [0.73557643674
 
 ## §5 ⭐⭐ A ＋ B 合成：局部核缺口一次性消掉
 
+> ⚠️ **本节原表述有误，已由 §5.1 更正（唐先生 2026-09-20 13:41）**：原写“$\delta_A\equiv0$ 于 $X_0$”**过强 ✗**；正确表述见 §5.1 ✓。
+
 $$\textbf{B 的产出不只是"更小的小数点"}✓，\text{而是【严格相切关系}】✓✓：$$
 $$\qquad \forall x\in X_0:\ S_1(x)=S_5(x)=S_{11}(x)=S_{13}(x)✓ \Longrightarrow \boxed{\delta_A\equiv0\ \text{于}\ X_0}✓✓（\S4\ \text{⑥ 的直接后果}✓）$$
 $$\textbf{于是 C-221 的条件式升级为【无条件】}✓✓：$$
@@ -61,7 +63,24 @@ $$\qquad \text{其中}\ c_X=0.319306988✓（\text{含 containment}✓）、R=16
 $$\qquad \textbf{接口自洽}：X_0\ \text{宽}\ 1.2\times10^{-46}\ll10^{-6}✓ \Longrightarrow X_0\subset X_{\rm ref}\subset B(x^*,\rho_{\rm up})✓✓$$
 $$\textbf{结论}：\text{局部核（}\delta_A\ \text{缺口）}\ \textbf{确实被一次性消掉}✓✓；\text{但【不】声称全局极小}✗（\text{那是 C}✓）$$
 
-## §6 本档自我失误（第 39 次，五条）
+## §5.1 【更正·唐先生 2026-09-20 13:41】区间含 0 ≠ 盒上恒等
+
+$$\textbf{原表述（过强，撤销）}✗：\text{“}G(X_0)\ \text{的三个 tie 分量都含}\ 0\text{”}\ \not\Longrightarrow\ \text{“}\delta_A=0\ \text{对所有}\ x\in X_0\text{”}✗✗$$
+$$\qquad \text{区间包含}\ 0\ \text{只说明【逐点 tie 未被排除】}✓，\textbf{不能证明整个盒上恒有}\ S_1(x)=S_5(x)=S_{11}(x)=S_{13}(x)✗$$
+
+$$\textbf{正确表述}✓✓：\text{精确等式属于}\ \text{Krawczyk}\ \text{所保证存在的【唯一根】}✓：$$
+$$\boxed{\ \exists!\ z_0=(\varphi_0,\lambda^0)\in X_0\ \text{(KKT 根)}\ \Longrightarrow\ S_1(\varphi_0)=S_5(\varphi_0)=S_{11}(\varphi_0)=S_{13}(\varphi_0)\ \Longrightarrow\ \delta_A(\varphi_0)=0\ }✓✓$$
+
+$$\textbf{于是 A＋B 的严谨合成}✓✓\ \text{（针对【精确根】}\varphi_0\text{，而非整个盒）}：$$
+$$\boxed{\ F_3(\varphi_0+\delta)\ \ge\ F_3(\varphi_0)\ +\ c_X\|\delta\|\ -\ \tfrac{R}{2}\|\delta\|^2\ }✓✓（0<\|\delta\|\le\rho_{\rm up}=1.4658\times10^{-3}✓）$$
+$$\qquad \text{严格正增量}：\ c_X\rho_{\rm up}-\tfrac{169}{2}\rho_{\rm up}^2\approx2.87\times10^{-4}>0✓✓ \Longrightarrow \varphi_0\ \textbf{是}\ F_3\ \text{的严格局部极小点}✓（\text{区间认证，非数值观察}✓）$$
+
+$$\textbf{附带一个精度项（本更正同时补上）}✓：A\ \text{的}\ c_X\ \text{是在【以}\ x^*\ \text{为心】的球上算的}✓，\text{而增长点是}\ \varphi_0✓，|\varphi_0-x^*|\le10^{-6}✓；$$
+$$\qquad \text{需}\ B(\varphi_0,\rho_{\rm up})\subseteq\text{数据球}✓ \Longrightarrow \text{取}\ \rho_{\rm up}'=\rho_{\rm up}-10^{-6}✓（\text{损失}\ 0.07\%✓，\text{可忽略}✓） \Longrightarrow \text{C 阶段按此口径使用}✓$$
+
+$$\textbf{仍然【不】主张}✗：m_3=F_3(\varphi_0)✗、\text{全局唯一性}✗ —— \text{这正是}\ \textbf{C}\ \text{的职责}✓✓$$
+
+
 
 $$\textbf{39a 矩阵求逆 API}✗：\texttt{lu\_solve(J,\ eye(7))}\ \text{报 IndexError}✗ \Longrightarrow \text{改}\ \texttt{J**-1}✓$$
 $$\textbf{39b Jacobian 未初始化}✗✗：\text{梯度行的【非对角}\ \varphi\ \text{项】没置 0}✗ ⟹ \texttt{NoneType}\ \text{比较错}✗ \Longrightarrow \text{整块先}\ \texttt{Iv.pt(0)}✓$$
