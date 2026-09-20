@@ -85,5 +85,5 @@ $$\qquad \textbf{不通过}＝\text{只得数值正值}✗\ \text{或}\ \max(A,B
 
 ## §8 边界
 
-$$\textbf{① 未用 RH}✓；\text{未改他档}✓；\text{未塞回 }C_\infty✓；\textbf{② 数值层}：§3 为 50 位网格}✓，\text{非证明}✗$$
+$$\textbf{① 未用 RH}✓；\text{未改他档}✓；\text{未塞回 }C_\infty✓；\textbf{② 数值层}：§3\ \text{为 50 位网格}✓，\text{非证明}✗$$
 $$\textbf{③ 本档含一项【诚实警示}】✗（§4✓）；\textbf{④ 未证}✗：\mathcal E\ge0\ \text{的解析证明}✓（\text{二阶余项＋耦合}✓）；\text{Case I 的严格常数版}✓$$
