@@ -1,0 +1,105 @@
+已查地图（**先查后写**）：`ls docs/ | grep -iE "template|模板|PROTOCOL"` ⟹ 现有 12 份 `PROTOCOL-*`，**无** minimax 闭合类模板 ✓ ⟹ 本档为首次建立 ✓。
+
+D0: 本档对象 = **PROTOCOL-minimax-closure-template：可复用审计模板（由 T13-A/T13-B2/B2-1 三条闭合线提炼）** —— 关系 = 方法论沉淀
+D1: 0
+FREEZE-ACK: 本档为方法论模板，不产候选结论（依 §8.1）
+
+---
+
+# 审计模板：minimax 型常数的**闭合流水线**
+
+> **适用对象**：形如 $\displaystyle C=\inf_{x\in\Omega}\max_{1\le k\le K}f_k(x)$ 的极小极大常数，
+> 其中 $f_k$ 显式（三角/代数），目标是**精确确定** $C$ 及等号集。
+> **不适用**：需要 RH/零点信息的对象（本模板**全程不使用** RH）。
+
+## §0 三种交付等级（先声明，再动手）
+
+$$\textbf{L1 数值}✗：\text{网格/多起点搜索给出}\ C\ \text{的近似值} \Longrightarrow \textbf{不得}✗\ \text{写作"已确定"}$$
+$$\textbf{L2 夹逼}✓：[\text{严格下界}L,\ \text{严格上界}U]✓✓\ \text{且}\ U-L\ \text{很小} \Longrightarrow \text{可写"已夹逼到}\ \varepsilon"✓$$
+$$\textbf{L3 精确}✓✓✓：U=L\ \text{（上界由合法构造达成，下界由全域覆盖达成）} \Longrightarrow \text{可写}\ C=F(x_0)✓✓$$
+$$\Longrightarrow \textbf{纪律}✓：\text{每档必须显式标注等级}✗✓；\text{L1 冒充 L3 是最常见事故}✗✗$$
+
+## §1 A+B+C 架构（闭合的三件套）
+
+$$\boxed{\textbf{A 上界}✓：\text{显式构造一个合法点}\ x_0\Longrightarrow C\le F(x_0)✓\（\text{初等、可手算}✓）}$$
+$$\boxed{\textbf{B 局部}✓：x_0\ \text{邻域内}\ F(x)\ge F(x_0)\ ✓\（\textbf{覆盖半径内}✓\ \text{的局部不等式}✓）}$$
+$$\boxed{\textbf{C 全域}✓：\Omega\setminus B(x_0,\rho)\ \text{上}\ F\ge F(x_0)+\delta✓\（\delta>0\ \text{显式}✓）}$$
+$$\Longrightarrow \text{A}+\text{B}+\text{C} \Longrightarrow C=F(x_0)✓✓ \Longrightarrow \textbf{L3}$$
+$$\textbf{常见变体}✓：\text{多极小点}\Longrightarrow\ \text{C 只需排除}\ \bigcup_j B(x_j,\rho_j)✓\（\text{集合等式}\ \Omega=\bigcup B_j\sqcup \mathcal C✓\ \text{须精确}✓）$$
+
+## §2 模板 A：**错误的统一界 → branch-consistent 结构 → 可证明门槛**
+
+$$\textbf{病征}✗：\text{用统一常数}\ C_j=\max(\text{各分支参数})^2\ \text{惩罚所有方向} \Longrightarrow \text{门槛}\ cK-\tfrac{CK^2}5\ \text{怎么选}\ K\ \text{都不够}✗✓$$
+$$\textbf{根因}✓：\text{极小点处各分支}\ f_k\ \text{的【活跃性不同}】✓ \Longrightarrow \text{各方向真正生效的分支不同}✓$$
+$$\qquad \text{例}✓（\text{尖点}）：F(\theta_j+\varepsilon)-\kappa=s_j\max(-a_j\varepsilon,\ +b_j\varepsilon)+\cdots✓$$
+$$\qquad \qquad \varepsilon<0\ \text{侧 binding}\ k=a_j \Longrightarrow \text{曲率}\ \tfrac{a_j^2\kappa}2✓；\varepsilon>0\ \text{侧}\ \tfrac{b_j^2\kappa}2✓✓$$
+$$\qquad \qquad \text{统一取}\ \max(a,b)^2 \Longrightarrow \text{小侧高估}\ (b/a)^2\ \text{倍}✓（\text{实例}：j=1\ \text{高估}\sim100\times✗✗）$$
+$$\textbf{修法}✓✓：\text{按【方向/符号}】\ \text{分支写不等式}✓：\ F-\kappa\ \ge\ \begin{cases}s_j(-a_j\varepsilon)-C^-_j\varepsilon^2✓\\ s_j(b_j\varepsilon)-C^+_j\varepsilon^2✓\end{cases},\quad C^\pm_j=\tfrac{(a_j\ \text{或}\ b_j)^2\kappa}2✓$$
+$$\textbf{验收}✓：\text{门槛}\ \min_j\bigl[c_jK-\tfrac{\text{curv}_j}5K^2\bigr]\ \ge\ \text{need}✓✓\ \text{且}\ K\ \text{与另一侧（Case II）在【同一点}】\ \text{对接}✓✓$$
+
+## §3 模板 B：**数值发现 → 有限分割证书**
+
+$$\textbf{判据}✓✓：\text{若在相邻候选点之间}\ F=\max_k f_k\ \text{为【单一分支}】✓ \Longrightarrow \text{段内极小在端点}✓ \Longrightarrow \text{只需查有限点}✓✓$$
+$$\boxed{\textbf{候选点集}=\{\text{全部分支交点}\}\ \cup\ \{\text{约束边界}\}\ \cup\ \{\text{区域端点}\}✓✓}$$
+$$\qquad \text{分支交点}✓：f_k=f_{k'}\ \text{的解析解}✓（\text{如}\ \cos(k\varphi)=\cos(k'\varphi)\Longrightarrow\varphi=\tfrac{2\pi m}{k\mp k'}✓，\text{有限}✓）$$
+$$\qquad \textbf{约束边界必入集}✗✓：\text{真最小点常在}\ \operatorname{dist}=\varepsilon_0\ \text{处}✓，\text{不是交点}✗✓$$
+$$\textbf{闭集纪律}✗✓：\operatorname{dist}\ge\varepsilon_0\ \text{须用} \ge\varepsilon_0-\text{TOL}\ \text{（含边界}✓）\ \textbf{否则边界点被浮点过滤}✗$$
+$$\textbf{验收}✓✓：\text{报告四件}：\text{(1) 候选点数}✓；\text{(2) 含切换段数}=0✓；\text{(3) }\min-\text{门槛}✓；\text{(4) 最接近门槛的点的位置类型}✓$$
+
+## §4 陷阱清单（由 5 项 errata 泛化 ✓✓）
+
+| # | 陷阱 | 症状 | 防御 |
+|---|---|---|---|
+| 1 | **符号配对** | 界给出系统性负值 | 用具体数值**逐项对质**（直接算 vs 分支算）✓ |
+| 2 | **最优化顺序** | $\min_{(u,\eta)}$ 与 $\min_u\min_\eta$ 混用 | 写出对象定义式，标清哪个变量内层 ✓ |
+| 3 | **单位混用** | 边界点位置错位、分段异常小 | 全程标注单位（$\varphi$ vs $\varphi/\pi$）✓ |
+| 4 | **空值短路** | 枚举漏点（如 `y and (...)` 对 $y=0$ 返回 0） | 枚举后**计数校验**＋对称性校验 ✓ |
+| 5 | **先提交后修正** | 不平衡花括号入库 | 提交前跑自检（花括号/行数），合格才 commit ✓ |
+
+$$\Longrightarrow \textbf{共性}✓✓：\text{五类都是【实现层}】✓，\textbf{不污染数学}✓；\text{但会制造"伪障碍"（让人误判方向已死}✗）$$
+
+## §5 停止条件（**判断式停止** ✓✓）
+
+$$\textbf{允许}✓：\text{形式化（区间/代数数精确比较、机器检验}✓）｜\text{证明文本压缩}✓$$
+$$\textbf{不允许}✗：\text{再推精度}✗｜\text{求更漂亮的常数}✗｜\text{重开已闭合环节}✗$$
+$$\boxed{\text{停止的判据}=\text{证明链完整（A+B+C 齐备、等级 L3）}✓\ \textbf{而非}\ \text{算力见底或外部催促}✗}$$
+
+## §6 两条已验证实例（模板出处 ✓✓）
+
+$$\textbf{实例 1}（\text{论文 A 线}）：\text{T13-A}\ m_3\ \text{（C-216…C-220，夹逼到}\ 5\times10^{-14}✓）＋\text{T13-B2}\ g_2(10)=1✓✓（\text{等号集单点}✓）$$
+$$\textbf{实例 2}（\text{B2-1 线}）：\forall w\ge5,\ g_w(10)=w\cos\tfrac{2\pi}{11}-\cos\tfrac{\pi}{11}✓✓\ \text{（C-238＋C-250＋C-251/C-253＋C-254 冻结}✓✓）$$
+$$\qquad \textbf{两实例共同点}✓：\text{上界初等}✓｜\text{分裂为"近-远"或"井内-井外"}✓｜\text{远区用有限分割证书}✓｜\text{全程无 RH}✓✓$$
+
+## §7 使用流程（五步）
+
+```
+  ① 定义对象 C=inf max f_k，写清 Ω、k 范围、单位          → 交付等级目标 L?
+  ② A: 显式构造候选点 x_0，手算 F(x_0)                    → 上界 ✓
+  ③ B: 在 x_0 邻域写分支一致的不等式，得显式 ρ、margin    → 局部门槛 ✓
+  ④ C: 全域 = ∪B(x_j,ρ_j) ⊔ C，C 上用有限分割证书        → 全域覆盖 ✓
+  ⑤ 自检: 等级标注 / 单位 / 闭集 / 分支单一切换段数=0      → 才可写 CLOSED
+```
+
+## §9 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写** ✓）
+
+```
+技术词 分支一致曲率 命中文件数=0    :: 
+技术词 有限分割证书 命中文件数=8    :: ./ASSETS-REGISTRY.md ./C254-...md ./C252-...md ...
+技术词 判断式停止  命中文件数=2    :: ./C254-...md ./PROTOCOL-minimax-closure-template.md
+技术词 三条交付等级 命中文件数=0    ::
+```
+
+$$	extbf{① 本档新增}✓：	ext{"分支一致曲率"（0 命中）}✓、	ext{"三条交付等级"（0 命中）}✓$$
+$$	extbf{② 档案已有（引用，不列为本档提出）}✓✓：	ext{"有限分割证书"（8 命中}✓，	ext{首见 C-252}✓）\ 	ext{"判断式停止"（2 命中}✓，	ext{首见 C-254}✓）$$
+$$\qquad 	ext{本档对其【给出模板化定义}】✓，	ext{但不主张首次命名}✗✓\（	ext{依 MEMORY 硬规矩}✓）$$
+$$	extbf{③ 通用词（不计）}✓：	ext{"候选点"/"段内单一分支"/"闭集"}✓$$
+
+## §10 边界（续 §8）
+
+$$\textbf{⑤ 回查后修正}✗✓：\text{原拟称"有限分割证书}】\text{与"判断式停止"为本档新名}✗，\text{回查否决}✗✓（\text{均已在档}✓）$$
+
+## §8 边界
+
+$$\textbf{① 本模板不产数学结论}✓，\text{仅约束【流程与措辞}】✓；\textbf{② 未用 RH}✓；\text{未改他档}✓$$
+$$\textbf{③ 模板来源}✓：\text{C-216…C-220（T13-A）}✓、\text{C-193/C-199/C-200（T13-B2）}✓、\text{C-238…C-254（B2-1）}✓$$
+$$\textbf{④ 待补}✗：\text{三条线的形式化（区间/机器检验）尚未做}✗（\text{属允许动作}✓，\text{非关闭条件}✓）$$
