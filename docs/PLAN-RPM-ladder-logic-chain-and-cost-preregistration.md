@@ -120,3 +120,30 @@ $$\qquad \textbf{已确立的事实}✓✓：\text{能算}\ \neq\ \text{值得�
 $$\text{① 等慢版 }M=5\ \text{自然收尾}✓（\text{不追加阶梯}✗）\to \text{② 归档本次"需求闭合"}✓ \to \text{③ 从候选清单中寻找下一个【同时满足四条】的项目}✓$$
 $$\qquad \textbf{禁止}✗：\text{再找新的 }(\text{RP}_M)\ \text{目标}✗；\text{因 v3 快就扩大计算}✗$$
 
+---
+
+## §12 【2026-09-20 23:08】待办队列（承 `C-269`／`C-270` ✓）
+
+$$\boxed{\textbf{当前：0 新计算、0 新路线、不写包装文档}✗ — \textbf{只等 M=5 收尾}✓}$$
+$$\boxed{\textbf{M=5 收尾后：只做一次 GAP-A 定向审计}✓：\text{问【实际应用对象中，究竟什么结构给出 }|K|=u\le5\text{？}】✓}$$
+$$\qquad \text{（\textbf{不是}重新搜"任何能证 RH 的东西"✗，\textbf{也不是}继续扩梯✗）}$$
+
+### 12.1 GAP-A 分叉（锁定 ✓）
+
+$$\text{① 找到独立的 }u\le5 \Longrightarrow (RP_5)\to c_5=\tfrac12\to\text{阻尼引理}\to \text{检查下游【真增益}】✓$$
+$$\text{② 找不到} \Longrightarrow \texttt{C-181}\ \text{阻尼线正式标为}\ \textbf{conditional capability／GAP-A blocked}✗，\textbf{不再投入 }M>5✗✓$$
+
+### 12.2 冻结的依赖图（不得延伸 ✓✓）
+
+$$(RP_5)\Longrightarrow c_u=\tfrac12\ (u\le5)\Longrightarrow \texttt{C-181}\ \text{阻尼引理条件成立}✓$$
+$$\qquad \not\Longrightarrow\ \text{E4／}\tau\text{-Li 应用闭合}✗\qquad \text{因缺}\ \boxed{\text{application structure}\Longrightarrow u\le5}✗✓$$
+
+### 12.3 ⭐ 长期判据（`C-186` 带来的 ✓✓）
+
+$$\boxed{\textbf{1/20 级}\ (\text{RP}_M)\ \textbf{已对所有 }M\ \textbf{自足}✓✓（\texttt{C-186}✓）} \Longrightarrow \text{"是否需要做到所有 }M\text{"这一疑问}\ \textbf{已被消除}✓$$
+$$\qquad \Longrightarrow \textbf{今后任何"继续做 }M=6,7,\ldots\text{"的理由，必须来自【新的 }1/2\text{ 级下游用途}】✓，}\textbf{不得再以 E4 原需求为据}✗✓$$
+
+### 12.4 复用记录（暂缓 ✓）
+
+$$\text{"阻尼线引擎复用记录"}\ \textbf{暂不写}✗（\text{唐先生 23:08}✓）\ —— \text{理由}✓：\text{若 GAP-A 判死}，\text{该记录≈包装}✗；\text{若 GAP-A 成立}，\text{再写才是真启下资产}✓✓$$
+
