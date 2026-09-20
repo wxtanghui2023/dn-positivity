@@ -41,7 +41,7 @@ $$\text{在}\ \theta_j\ \text{处写}\ \varphi_1=\theta_j+\varepsilon✓，\text
 $$\text{均衡（tie）}：\varepsilon=-\frac{c'-c}{(k+k')w\sin\theta_j}✓ \Longrightarrow \textbf{共同值}=w\kappa+\frac{k\,c'+k'\,c}{k+k'}✓✓$$
 $$\Longrightarrow \boxed{\ \text{常数}=\min_{j}\ \min_{\varphi_2}\ \frac{k_j\cos(k'_j\varphi_2)+k'_j\cos(k_j\varphi_2)}{k_j+k'_j}\ }✓（k_j,k'_j\ \text{为}\ \theta_j\ \text{的分支对}✓）$$
 
-$$\textbf{数值（400\,000 点细扫，与 }w\text{ 无关}✓）}：\text{五个 }j\ \text{全部给同一值}✓✓$$
+$$\textbf{数值}✓（\text{400000 点细扫}✓，\text{与 }w\text{ 无关}✓）：\text{五个 }j\ \text{全部给同一值}✓✓$$
 ```
   j=1 {1,10}: min = -0.9594929736  at φ2/π = 0.90909 = 10/11
   j=2 {6,5} : min = -0.9594929736  at φ2/π = 0.18182 = 2/11
