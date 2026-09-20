@@ -8,7 +8,7 @@ FREEZE-ACK: 本档即冻结期内的收束与登记（依 §8.1；不产候选�
 
 ## §0 ⚠️ 边界收紧（唐先生 2026-09-20 12:13，全盘采纳）
 
-$$\textbf{① 核心发现成立}：\text{此前的}\ 0.76\ \textbf{不能再视为结构性墙}✓✓ \Longrightarrow \textbf{撤销}"仍有}\ 4.08\times10^{-3}\ \text{困难全局缺口}"的读法}✓$$
+$$\textbf{① 核心发现成立}：\text{此前的}\ 0.76\ \textbf{不能再视为结构性墙}✓✓ \Longrightarrow \textbf{撤销}\text{「仍有}\ 4.08\times10^{-3}\ \text{困难全局缺口」}\text{的读法}✓$$
 $$\qquad \text{准确表述}：\boxed{\text{此前的}\ 0.76\ \text{是当前实现／工作量上的【停点】，而非已发现的解析墙}}✓✓$$
 $$\textbf{② 但}\ T=0.76408110075\ \text{的 66 个 unresolved 要单独看}✓：\text{价值不在数量}✗，\text{而在}\ \textbf{空间集中性}✓✓（\min d\simeq2.740\times10^{-9}✓）$$
 $$\qquad \text{⚠️ 该统计须先【严格固定】距离定义（箱代表点 vs 箱集合 ✓）之后才可引用为层 2 事实}✓$$
