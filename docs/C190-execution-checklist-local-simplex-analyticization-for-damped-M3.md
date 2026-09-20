@@ -616,3 +616,47 @@ $$\text{新目录}\ \texttt{cert\_appendix/iv-gates/}✓\qquad \text{文件}：$
 $$\qquad \texttt{t1iv\_T0.3730918.json}✓（\text{本档 JSON}）\qquad \texttt{t3iv\_T0.3730918.log}✓（\text{本档原始日志}）$$
 $$\qquad \texttt{t2iv\_T0.37309.log}✓（\text{第二档日志补归档}✓——\ \text{该档 JSON 已被覆盖丢失}✗，\text{仅日志可溯}✓）$$
 $$\qquad ⚠️ \text{脚本仍把输出写死为}\ \texttt{/tmp/t1iv3\_result.json}✗ \Longrightarrow \textbf{仍待修}✓（\text{按}\ T\ \text{命名，见}\ §20.3）$$
+
+---
+
+## §22 ⭐⭐ T=0.3730918 四门全过 → **C₃ 本阶段封版**（2026-09-20 09:50）
+
+### §22.1 四门结果
+
+$$\textbf{Gate 1A}：\text{终端盒总体积}\ \textbf{精确相等}✓（\texttt{Fraction}，无 overlap／无 gap）✓$$
+$$\textbf{Gate 1B}：\text{验证盒}\ \mathbf{409{,}171}\ |\ \textbf{违反}\ 0\ |\ \min_C\mathrm{LB}^{\rm IV}_C=\mathbf{4.573825\times10^{-11}}>0✓✓$$
+$$\qquad \text{最危险格 id=379970}✓\qquad lo=(0.83021240234375,\ 0.7905334472656251,\ 0.34277759443297084,\ 1.4505322330246626,\ 2.5781710975793213)✓$$
+$$\qquad \qquad\qquad hi=(0.8302185058593751,\ 0.79053955078125,\ 0.34278718181289514,\ 1.4505418204045868,\ 2.5781806849592455)✓$$
+$$\textbf{Gate 2}：\text{区间层双实现（2001 盒含最危险格）}\ \max|\mathrm{LB}_A^{\rm IV}-\mathrm{LB}_B^{\rm IV}|=\mathbf{4.441\times10^{-16}}✓✓\ \text{T-判定一致}✓$$
+
+### §22.2 ⭐ 内部一致性核对（第二次遇到，且这次更强）
+
+$$\text{最危险格中心}\approx(0.8302155,\ 0.7905365,\ 0.3427824,\ 1.4505370,\ 2.5781759)✓$$
+$$\text{对照}\ x_{\ast\ast}=(r_2{=}0.7905132461,\ r_3{=}0.8302071370,\ \varphi/\pi{=}0.1091101624,\ 0.8206636560,\ 0.4617193264)✓$$
+$$\Longrightarrow \text{最危险格}\ \textbf{恰为}\ \sigma x_{\ast\ast}\（\text{镜像：}r_2\leftrightarrow r_3,\ \varphi_2\leftrightarrow\varphi_3\text{）}✓✓$$
+$$\qquad \Longrightarrow \text{证书最难的格子}\ \textbf{正好落在最深已知点的对称像上}✓✓\ —— \text{与问题固有对称性完全一致}✓$$
+
+### §22.3 ⭐⭐ 封版：**certified bracket asset**
+
+$$\boxed{0.3730918\ \le\ C_3\ \le\ 0.373092075762}✓\qquad \text{宽度}=\mathbf{2.75762\times10^{-7}}✓✓$$
+$$\text{下界}：\text{v3 四门证书（域完整＋区间认证＋双实现交叉）}✓\qquad \text{上界}：x_{\ast\ast}\ \text{构型＋区间算术}✓$$
+$$\textbf{且本档同时证明}\ F\ge0.3730918\ \text{处处成立} \Longrightarrow \boxed{\textbf{不存在低于}\ 0.3730918\ \text{的点}}✓✓\（\textbf{证明}，非搜索）✓$$
+$$\qquad ⚠️\ \text{仍}\ \textbf{不} \text{断言}\ C_3\ \text{精确值}✗（\text{真极小可能严格位于区间内部}✓）$$
+
+### §22.4 决策规则（唐先生 2026-09-20 09:49 预先锁定，与结果无关）
+
+$$\textbf{若四门通过}（\text{本轮情形}✓） \Longrightarrow \boxed{\text{C}_3\ \text{本阶段封版}}\ ✓\ \ \textbf{不} \text{立即冲}\ 0.3730919✗$$
+$$\qquad \text{随后做}\ \textbf{总产出盘点 ＋ 优先级重排}✓（\text{见 §23}）$$
+$$\textbf{若四门失败} \Longrightarrow \text{先判定失败类型}：\text{真违反／覆盖错／实现错／发现新的更深候选}✓$$
+$$\qquad \text{只有第四种会改变数学对象}✓$$
+
+### §22.5 为什么"不硬冲 0.3730919"（结构理由，非精度理由）
+
+$$\text{关键}：0.3730919<0.373092052937 \Longrightarrow T=0.3730919\ \textbf{并非数学上不可能}✗，\text{只是}\ \textbf{当前实现的困难区}✓$$
+$$\qquad \text{但成本已陡增}：4.09\times10^5\ \text{盒}\ \longrightarrow\ 6.09\times10^6\ \text{盒峰值}✗（\text{仅差}\ 10^{-7}\ \text{量级的目标}）✗$$
+$$\Longrightarrow \text{再缩区间}\ \textbf{必须换机制}✓，\text{四条候选}：$$
+$$\qquad \text{① 利用 active-set／KKT 结构（非逐盒独立排除）}✓$$
+$$\qquad \text{② 把}\ x_{\ast\ast}\ \text{及其对称点附近的窄盆地}\ \textbf{解析化}✓$$
+$$\qquad \text{③ 局部二／三阶严格下界 ＋ 全球 B\&B 只管外部}✓$$
+$$\qquad \text{④ 找到比 separability 更强的联合约束}✓$$
+$$\qquad \Longrightarrow \boxed{\text{不是继续加算力，而是提高每个盒子的"证明密度"}}✓✓$$
