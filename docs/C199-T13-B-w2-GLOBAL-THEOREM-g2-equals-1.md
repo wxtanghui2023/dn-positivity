@@ -18,7 +18,7 @@ $$\qquad ⚠️\ \textbf{锁死}：\text{C-198 的}\ 1.0194821\ \textbf{只是�
 $$\text{每箱三分支}：\ \textbf{(i)}\ \text{箱整体落在闭球}\ B_{0.1}(0)\ \text{内}⟹\textbf{丢弃}✓（\text{由 C-197 覆盖}）✓；$$
 $$\qquad\qquad\qquad \textbf{(ii)}\ \mathrm{LB}(\text{箱})\ge1⟹\textbf{认证}✓；\qquad \textbf{(iii)}\ \text{否则沿最宽维二分}✓$$
 $$\mathrm{LB}(\text{箱})=\max_{k\le10}\Big[2\min_{\delta_1\in I_1}\cos(k\tfrac\pi3+k\delta_1)+\min_{\delta_2\in I_2}\cos(k\tfrac\pi2+k\delta_2)\Big]✓\ \le\ \min_{\text{箱}}\max_k S_k✓✓$$
-$$\qquad （S_k\ \text{二维可分}⟹\text{逐坐标 min 精确}✓；"最远角"判定闭球用精确有理}✓）$$
+$$\qquad （S_k\ \text{二维可分}⟹\text{逐坐标 min 精确}✓；\text{最远角判定闭球用精确有理}✓）$$
 $$\Longrightarrow \textbf{两尺度结构由证明驱动自动出现}✓✓（\text{边界层细分、bulk 粗化}）✓$$
 
 ## §3 结果（脚本 `scripts/c199_farfield_certificate.py`）
@@ -55,7 +55,7 @@ $$\qquad ⚠️\ \textbf{注意}：\text{交换点}\ (\tfrac\pi2,\tfrac\pi3)\ \t
 $$\textbf{bug ①}：\text{Phase2 的"含}\ \pi\ \text{奇数倍"检测写成}\ \texttt{range(n0-1,n1+2)}✗ \Longrightarrow \textbf{几乎必然命中}✗ \Longrightarrow \text{一律返回}-1✗ \Longrightarrow \text{报出 1,759 个假违反}✗$$
 $$\qquad \Longrightarrow \text{改为紧检测}（\text{只查}\ [y_0,y_1]\ \text{内是否真有奇数整数}）✓ \Longrightarrow \textbf{违反骤降为 0}✓✓$$
 $$\textbf{bug ②}：\text{报告行用}\ \texttt{Fraction.hypot}✗（\text{不存在}）\Longrightarrow \text{已修}✓$$
-$$\qquad \textbf{教训}：\text{"全违反"}与"全通过"一样都是红旗}✓✓；\text{两次均为实现错，非数学错}✓（\text{第}\ 14/15\ \text{次同类应验}）✓$$
+$$\qquad \textbf{教训}：\text{全违反与全通过一样都是红旗}✓✓；\text{两次均为实现错，非数学错}✓（\text{第}\ 14/15\ \text{次同类应验}）✓$$
 
 ## §7 【技术词回查】输出（`scripts/tech_word_check.sh`，**先跑后写**）
 

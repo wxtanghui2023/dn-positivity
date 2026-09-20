@@ -32,7 +32,7 @@ Results of this draft:
 | 5$'$ | $\kappa_N(\lambda)=\kappa_3(\lambda)$ for all $N\ge4$ (so the $\varepsilon$-threshold cannot be improved by using more multiples) | **[P]** §7.2 |
 | 5$''$ | Equality set of $\kappa_N$ = primitive $(N+1)$-th roots of unity | **[P]** §2 |
 | 5$'''$ | Equality set of the $M=2$ problem = $\{\pi/3,\pi/2\}$ (primitive 6th and 4th roots) | **[P]** §4 |
-| 8 | Cassels-type weighted constants $g_w(10)$: table for $w\le5$; $g_2=1$ exactly | numeric §7.4 |
+| 8 | Cassels-type weighted constants $g_w(10)$: table for $w\le5$; **$g_2(10)=1$ exactly, with equality only at $(\pi/3,\pi/2)$** | **[CA]** §7.4 |
 | 6 | Damped analogue: $M=2$ uniform bound $0.364984$ for **all** radii | **[CA]** §8 |
 | 7 | Damped $M=3$: certified bracket $0.3730918\le C_3\le0.373092075762$ | **[CA]** §8 |
 
@@ -379,7 +379,7 @@ Two features are worth recording. First, the elementary asymptotic bound
 $$g_w\ \ge\ w\,\kappa_{10}-1\ =\ w\cos\tfrac{2\pi}{11}-1$$
 (pick $k$ maximising $\cos k\varphi_1$ and use $\cos k\varphi_2\ge-1$) is approached from above: at $w=5$ it gives $3.206$ against the measured $3.247$. Second, $g_w/w$ is *not* monotone in $w$ ($0.500,0.482,0.417,0.500,0.600,0.649$), with a transition near $w\approx1.5$ where the optimal configuration changes shape.
 
-> **Status.** These constants are numerical only, and the direction of the inequalities was not separated (upper vs lower bounds). The weighted family is the Cassels-type direction of the Turán family; its certification is 2-dimensional and hence cheap, and is left to later work. The classical Turán statements themselves are *known* and are not claimed as new here; the original sources are unavailable to us, so the phrase "Cassels-type" is our own labelling and is not asserted to match any specific classical formulation verbatim.
+> **Status.** For $w=2$ the constant is now proved: $g_2(10)=1$ exactly, with equality only at $(\varphi_1,\varphi_2)=(\pi/3,\pi/2)$. The proof has two parts: (a) a local lemma in the ball of radius $0.1$ around $(\pi/3,\pi/2)$, using the exact identity $S_6-1=2[\sin^2(3\delta_2)-2\sin^2(3\delta_1)]$, an $S_6$-splitting, and two certified one-dimensional inequalities; (b) an adaptive two-scale far-field certificate (1\,759 interval-verified boxes, exact rational tiling, certified margin $3.1495\times10^{-4}$). The remaining entries of the table are numerical only, and their inequality directions were not separated. The weighted family is the Cassels-type direction of the Turán family; its certification is 2-dimensional and hence cheap, and is left to later work. The classical Turán statements themselves are *known* and are not claimed as new here; the original sources are unavailable to us, so the phrase "Cassels-type" is our own labelling and is not asserted to match any specific classical formulation verbatim.
 
 ### §7.5 Four quantitative obstructions (recorded so they are not re-tried)
 
