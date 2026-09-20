@@ -59,3 +59,19 @@ $$\textbf{③ 通用词（不计）}✓：\text{「Rule T／SURVIVOR-5／Scale G
 $$\textbf{① 本档为枚举与定级}✓，\text{不产候选结论}✗；\textbf{② 未用 RH}✓；\text{未改他档正本}✓$$
 $$\textbf{③ 不声称两项资产「不值得做}✗（\text{它们是已完成清单里的正当产出}✓）；\text{不声称甲类必成}✗$$
 $$\textbf{④ §1 的 #3／#6 判定基于档案描述}✓，\text{未逐字重读论文B／论文A 全文}✗（\text{标}\ [\text{需核}]✓）$$
+
+---
+
+## §7 【勘误·2026-09-20 21:18】本档 §1 的 #1 行**误标** ✗✓
+
+$$\textbf{错}✗：\text{本档 §1 把 #1「}(\text{RP}_M),\ M\le11\ \text{完整证明」标为}\ \textbf{✅ 已完成}✗✗$$
+$$\textbf{对}✓✓\text{（逐字依 }\texttt{E4-ENGINE-5}\text{:64）}✓：\text{「}(\text{RP}_M),\ M\le11\text{ ｜ 数值成立（ENGINE-4）＋二阶矩路线}\textbf{可证}\text{（}M^2\log K\text{ 损失尚可容忍）—— }\textbf{仍未写出完整证明}\text{」}$$
+
+$$\textbf{我的混淆}✗：\text{把 T13 侧已完成的}\ \textbf{M=2, M=3 情形}✓✓（\texttt{C-199}/\texttt{C-200}/\texttt{T13-A}/\texttt{B2-1}✓）\text{误当成【}(\text{RP}_M)\ \text{一般}\ M\le11\ \text{的完整证明}】✗$$
+$$\textbf{修正后}✓✓：\boxed{(\text{RP}_M),\ M\le11\ \text{的完整证明}\ \textbf{仍是【未完成}】✗\ \text{—— 属【低成本、路线已可证}】的\ \textbf{资产}✓✓}$$
+
+$$\Longrightarrow \textbf{本档 §0–§1 的「已完成 2」应改为}\ \textbf{已完成 1（仅 #4）}✗✓，\text{ #1 改列【资产】}✓$$
+$$\qquad \text{受影响的分类}✓：\text{已完成 1}｜\text{已排除 2}｜\textbf{资产 3}（\text{#1、#3、#6}）｜\text{主线候选 0}✓$$
+
+$$\textbf{纪律}✓✓：\text{本勘误立即发出}✓；\text{不追改 §1 原表}✗\text{（依「追加不覆盖」惯例）}✓$$
+
