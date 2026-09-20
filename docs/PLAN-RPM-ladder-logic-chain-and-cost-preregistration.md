@@ -141,7 +141,7 @@ $$\qquad \not\Longrightarrow\ \text{E4／}\tau\text{-Li 应用闭合}✗\qquad \
 ### 12.3 ⭐ 长期判据（`C-186` 带来的 ✓✓）
 
 $$\boxed{\textbf{1/20 级}\ (\text{RP}_M)\ \textbf{已对所有 }M\ \textbf{自足}✓✓（\texttt{C-186}✓）} \Longrightarrow \text{"是否需要做到所有 }M\text{"这一疑问}\ \textbf{已被消除}✓$$
-$$\qquad \Longrightarrow \textbf{今后任何"继续做 }M=6,7,\ldots\text{"的理由，必须来自【新的 }1/2\text{ 级下游用途}】✓，}\textbf{不得再以 E4 原需求为据}✗✓$$
+$$\qquad \Longrightarrow \textbf{今后任何继续做 }M=6,7,\ldots\ \textbf{的理由，必须来自【新的 }1/2\text{ 级下游用途】，}\textbf{不得再以 E4 原需求为据}✗✓$$
 
 ### 12.4 复用记录（暂缓 ✓）
 
