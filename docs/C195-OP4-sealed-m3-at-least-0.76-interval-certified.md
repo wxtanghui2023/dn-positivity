@@ -10,7 +10,7 @@ FREEZE-ACK: 本档即冻结期内的收束与登记（依 §8.1；不产候选�
 
 $$\text{命令}：\texttt{python3 scripts/m3\_certificate\_interval\_arith.py 3000000 60 3 0.76}✓$$
 $$\text{输出}：\text{最大深度}=32✓；\ \textbf{认证最小余量}=1.6286913487028377\ldots\times10^{-5}>0✓✓；\ \text{耗时}=427.4\ \mathrm{s}✓；\ \textbf{全部认证}=\mathrm{True}✓✓$$
-$$\boxed{\ m_3\ \ge\ 0.76\ }✓✓\qquad（\textbf{区间算术}：域为}\ [0,P]^3（P\ \text{为}\ \pi\ \text{的有理上界}）✓，\text{箱端点精确有理}✓，\cos\ \text{用区间算术}✓，\textbf{无 SLACK、无浮点误差假设}✓✓）$$
+$$\boxed{\ m_3\ \ge\ 0.76\ }✓✓\qquad（\textbf{区间算术}：域为\ [0,P]^3（P\ \text{为}\ \pi\ \text{的有理上界}）✓，\text{箱端点精确有理}✓，\cos\ \text{用区间算术}✓，\textbf{无 SLACK、无浮点误差假设}✓✓）$$
 
 ## §2 账本更新
 
