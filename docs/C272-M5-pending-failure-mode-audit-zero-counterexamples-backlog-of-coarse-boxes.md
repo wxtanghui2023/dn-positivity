@@ -41,16 +41,16 @@ $$\textbf{③ }\text{粗箱上分离式下界天然弱}✓（\text{区间含}\ \
 
 ## §4 对下一步的含义（✓✓）
 
-$$\textbf{① 预注册实验（\texttt{C-271} §4.2）得到支持}✓：60M \text{单次预算扩展}\ \text{—— 因 backlog 属"可认证型"}✓（\text{零反例 ＋ 巨大间隙}✓）$$
+$$\textbf{① 预注册实验（\texttt{C-271} §4.2）得到支持}✓：60M \text{单次预算扩展}\ \text{—— 因 backlog 属「可认证型」}✓（\text{零反例 ＋ 巨大间隙}✓）$$
 $$\textbf{② 但更根本的方向}✓✓：\text{给盒证书加入}\ \textbf{共享}\ k／\text{相位信息}✓ \Longrightarrow \text{在粗箱上直接认证}✓，\text{逼近}\ \min_B\max_k✓ \text{而非堆}\ \max_k\min_B✗$$
 $$\qquad \text{否则每次扩预算都只是在同一松弛下多拆箱}✓（\text{吞吐换进度}✓）$$
 
 ## §5 边界（✓）
 
-$$\textbf{① }U_{\rm sample}\ \text{是盒内最小值的}\textbf{上估计}✓ \Longrightarrow \text{"零反例"}\textbf{不是证明}✗（\text{只否证"抽样可见的反例"}✓）$$
+$$\textbf{① }U_{\rm sample}\ \text{是盒内最小值的}\textbf{上估计}✓ \Longrightarrow \text{「零反例」}\textbf{不是证明}✗（\text{只否证「抽样可见的反例」}✓）$$
 $$\textbf{② 抽样率}\ 3.0\%✓；\text{采样点}\ 9／\text{箱}✓；\text{采样用 float cos}✓（\text{误差}\ \sim10^{-12}✓，\text{与}\ 0.05\ \text{级判据无关}✓）$$
 $$\textbf{③ 未用 RH}✓；\text{未改他档正本}✓；\text{未动}\ v4\ \text{数学}✓；\text{未提高预算}✓（\text{重放仅为抽取 pending}✓）$$
-$$\textbf{④ }m_5\ \text{真值仍未知}✗：\text{本档只证"pending 中无可见反例"及"backlog 为粗箱"}✓$$
+$$\textbf{④ }m_5\ \text{真值仍未知}✗：\text{本档只证「pending 中无可见反例」及「backlog 为粗箱」}✓$$
 
 ## §6 【技术词回查】输出（**先跑后写**✓）
 
