@@ -1,0 +1,15 @@
+=== knife 2: Newton power sums of A (e1=1) ===
+   p_1 = 1
+   p_3 = -3*e2 + 3*e3 + 1
+   p_5 = 5*e2**2 - 5*e2*e3 - 5*e2 + 5*e3 + 1
+   p_7 = -7*e2**3 + 7*e2**2*e3 + 14*e2**2 - 21*e2*e3 - 7*e2 + 7*e3**2 + 7*e3 + 1
+
+=== B (pair): e1B = 1 ; e2B = e2 - e3 ===
+
+=== knife 3: the two polynomial conditions ===
+   E1 (degree 1 in e2/e3) = 5*e2*e3 - 5*e3**2
+   E2 (degree 2) = -14*e2**2*e3 + 21*e2*e3**2 + 7*e2*e3 - 7*e3**3 - 7*e3**2
+
+=== resultant (eliminating e3) ===
+   R(e2) = 0
+   factor: 0

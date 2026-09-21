@@ -1,0 +1,25 @@
+=== step 1: factor the two conditions ===
+   E1 = 5*e3*(e2 - e3)
+   E2 = -7*e3*(e2 - e3)*(2*e2 - e3 - 1)
+
+=== step 2: the e3 != 0 branch forces e2 = e3 ===
+   E1 / e3 = 5*(e2 - e3)
+   E2 with e2 = e3 : 0   (identically zero?) True
+
+=== step 3: A-polynomial on that branch ===
+   P_A(x) = x^3 - x^2 + t x - t  = t*(t - 1)*(t + 1)
+   check (x-1)(x^2+t) = t**3 - t -- symbolic: True
+   discriminant of P_A in x: 4
+   roots: [-1, 0, 1]
+
+=== step 4: numerical confirmation that the cube has <=1 real root for t>0 ===
+   t=0.05 : roots = ['1.0', '(0.0 - 0.2236068j)', '(0.0 + 0.2236068j)'] ; #real = 1
+   t=0.30 : roots = ['1.0', '(0.0 - 0.54772256j)', '(0.0 + 0.54772256j)'] ; #real = 1
+   t=1.00 : roots = ['1.0', '(0.0 + 1.0j)', '(0.0 - 1.0j)'] ; #real = 1
+   t=3.00 : roots = ['1.0', '(0.0 - 1.7320508j)', '(0.0 + 1.7320508j)'] ; #real = 1
+   t=7.00 : roots = ['1.0', '(0.0 - 2.6457513j)', '(0.0 + 2.6457513j)'] ; #real = 1
+   t=-0.30 : roots = ['-0.54772256', '0.54772256', '1.0'] ; #real = 3
+   t=-1.00 : roots = ['-1.0', '1.0', '1.0'] ; #real = 3
+
+NOTE: e3 = abc > 0 whenever a,b,c > 0, so t = e3 > 0 is forced in the regular layer.
+DONE
