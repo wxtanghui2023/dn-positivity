@@ -1,0 +1,21 @@
+KKT residual 2.0225e-59 ; L = 1.99676941227516035204325246457
+
+=== C3870 item 1: rank of the six-active system ===
+   det(Mtilde) = -11564885.981695011236
+   |det| nonzero ? True
+   rank = 6.0
+
+=== C3870 item 2/3: solve and verify c* = 1/L ===
+   h* = ['0.024405050075993352221', '0.014620495662729679876', '-0.018416312753146666444', '0.023060436477621457227', '0.048961658787930519805']
+   ||h*||_inf = 0.04896165879 (box inactive)
+   c* = 0.500808953629041885590052265792
+   1/L = 0.500808953629041885590052265792
+   *** L*c* - 1 = -1.5558e-61 ***
+   residual of the six rows: v13h+1 = 0.0 ; v19h+1 = 0.0 ; max_q(w_qh - c*) = 8.6903e-62
+
+=== the algebraic derivation (independent of numerics) ===
+   multiply KKT by h*: omega13(v13 h*) + omega19(v19 h*) + sum_q lambda_q (w_q h*) = 0
+   with v13 h* = -1, v19 h* = -1 and w_q h* = c* for all four q:
+   -(omega13+omega19) + c* * sum_q lambda_q = 0  =>  c* L = 1  =>  c* = 1/L  (forced by KKT)
+   numeric check of that identity: -(1) + c*L = -1.5558e-61
+DONE
