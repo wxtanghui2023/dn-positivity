@@ -1,0 +1,23 @@
+=== candidate from C-3850 (g = 0.876069) ===
+   g = 0.876060  at sigma* = [-1  1  1 -1  1] , active odd index r* = 6 (frequency 13)
+   even margins 1/2 - F_2r : [3.187907 1.043541 0.000154 0.001372 0.031594 1.860644 0.03909  0.376705
+ 0.012103 1.034159 0.159045 1.837178]
+   near-binding even indices (margin < 0.02) : [(3, 0.00015433433616196535), (4, 0.0013722980266029916), (9, 0.012103064556552967)]
+   min margin = 0.000154 at r = 3
+   grad F_odd (phi-coords) = [ -3.670922  -0.14483  -12.129592  10.075096  12.945502]  ||grad|| = 20.729622
+   -> all margins > 0 ? True ; if yes and ||grad|| > 0 then a first-order improving FEASIBLE direction exists
+   KKT attempt with near-binding even gradients: lambda = [0.085517 0.366579 0.037764] (>=0 ? True), residual = 20.026300
+=== candidate from knife A phase 3 (g = 0.9878) ===
+   g = 0.987800  at sigma* = [-1 -1  1 -1  1] , active odd index r* = 11 (frequency 23)
+   even margins 1/2 - F_2r : [3.189334 0.981372 0.09831  0.007252 0.094955 1.432715 0.517401 0.294316
+ 0.120173 0.380639 0.792785 1.870943]
+   near-binding even indices (margin < 0.02) : [(4, 0.0072515659917338215)]
+   min margin = 0.007252 at r = 4
+   grad F_odd (phi-coords) = [ 14.644376  20.196557  22.144508 -21.252702 -13.574037]  ||grad|| = 41.817098
+   -> all margins > 0 ? True ; if yes and ||grad|| > 0 then a first-order improving FEASIBLE direction exists
+   KKT attempt with near-binding even gradients: lambda = [-0.108551] (>=0 ? False), residual = 41.796772
+
+=== exact second-order identities (for the record) ===
+   F_k(phi+h) = F_k - k sum_j g_j sin(k phi_j) h_j - (k^2/2) sum_j g_j cos(k phi_j) h_j^2 + O(|h|^3)
+   Hessian of every F_k is DIAGONAL in phi-coordinates (separable).
+DONE
