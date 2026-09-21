@@ -9,7 +9,7 @@ FREEZE-ACK: 本档即冻结审计
 ## §0 结论（四条 ✓✓）
 
 $$\textbf{① 本体审计第一阶段完成}✓：\text{按}\ \text{Problem} \to \text{Structure} \to \text{Existing theorem／identity} \to \text{genuine unresolved interface}\ \text{推进}✓$$
-$$\textbf{② 结构丰富且}\ \textbf{内禀}✓✓：\text{对象为}\ \textbf{代数整数的乘法动力学}✓，\textbf{不是} 有限整数频率三角}✗／\textbf{不是} B\&B 箱}✗／\textbf{不是} divisor 局部指数向量}✗$$
+$$\textbf{② 结构丰富且}\ \textbf{内禀}✓✓：\text{对象为}\ \textbf{代数整数的乘法动力学}✓，\textbf{不是}\ \text{有限整数频率三角}✗／\textbf{不是}\ \text{B\&B 箱}✗／\textbf{不是}\ \text{divisor 局部指数向量}✗$$
 $$\textbf{③ 现成非平凡兼容关系}\ \textbf{存在}✓：\text{Jensen 恒等式}✓／\text{Kronecker 刚性}✓／\text{Smyth 二分}✓／\text{Northcott 有限性}✓／\text{Boyd 型}L\text{-值链接}✓$$
 $$\textbf{④ 不预设}\ RH\ \text{接口}✓；\text{有效出口包括}\ \text{「独立且有趣，但无}\ RH\ \text{接口」}✓✓$$
 
@@ -43,7 +43,7 @@ $$\textbf{Galois 不变性}✓✓：\text{共轭置换不改}\ M✓ \Longrightar
 
 ## §4 真正的"异常"是什么（✓✓）
 
-$$\textbf{异常}✓✓：\ \text{「存在}\ M\ \text{仅略高于}\ 1\ \text{的非分圆对象」}✓ \Longrightarrow \text{载体}\ \textbf{具体}✓（\text{Lehmer 十次式}✓；次小已知}\ d = 18,\ M = 1.18836815✓）$$
+$$\textbf{异常}✓✓：\ \text{「存在}\ M\ \text{仅略高于}\ 1\ \text{的非分圆对象」}✓ \Longrightarrow \text{载体}\ \textbf{具体}✓（\text{Lehmer 十次式}✓；\text{次小已知}\ d = 18,\ M = 1.18836815✓）$$
 $$\textbf{结构来源}✓✓：\ \textbf{Salem 数}✓（\text{全部共轭模} \le 1✓，\text{且至少一个恰在单位圆上}✓）\ \Longrightarrow \text{异常＝}\ \textbf{近 Salem 配置}✓✓$$
 $$\textbf{且}\ \textbf{内禀}✓✓：\text{无需参照模型}✓（\text{与}\ C\text{-309 零点间距的「模型相对」形成对比}✓✓）$$
 
@@ -75,3 +75,18 @@ $$\textbf{未决子类}✓：\ \textbf{互反情形}✓（Smyth 已解决非互�
 - **零计算** ✗；未读 pending ✗；未改他档正本 ✓（仅追加 ✓）；未动 v4 ✗；`C-181` 的 `u<=5` 仍为 **GAP-A** ✓
 - **不得**写成：Lehmer 问题已解决 ✗；Lehmer 十次式＝定理 ✗；Breuillard 2011 解决原猜想 ✗；已有 RH bridge ✗
 - **M=5** ✓：仍保持 **OPEN/AUDIT** ✓，**暂不**当作下一条 RH 主线 ✗✓
+
+
+## §9 注册范围确认（唐先生口径 ✓，追加不覆盖 ✓）
+
+- **四层范围** ✓：① Problem（Lehmer 精确定义 ✓／Mahler measure 精确定义 ✓／已知边界与真正未决部分 ✓——见 §1、§6）；② Internal structure（根结构 ✓／单位圆内外根的乘法分离 ✓——即 §2 的乘积公式与阿基米德位贡献 ✓／cyclotomic 分解 ✓（Kronecker ✓）／已知刚性、不等式、极值 ✓——§3）；③ Existing mechanism（§5：**只记已经存在**的非平凡机制 ✓；且**只有乘法公式、共轭、因子分解等内建代数恒等式者，不人为升级** ✗✓）；④ 仅最后才问 RH 接口 ✓（§7：**无天然接口即直接记为"独立问题，无 bridge"** ✓，**不制造接口** ✗✓）
+- **硬纪律①** ✓：**不新增 F9／F10** ✗——C-321 **本身不是筛选框架** ✓
+- **硬纪律②** ✓：**不预设成功或失败** ✗✓——特别**不因 Mahler measure 有漂亮代数结构就自动认为它比此前候选更接近 RH** ✗✓
+- **两条线分离（不得合并）** ✓✓：
+
+  | 线 | 状态 |
+  |---|---|
+  | **M=5 certificate** | **OPEN/AUDIT** ✓（工程／证书债务 ✓） |
+  | **C-321 Mahler/Lehmer** | **NEW EXTERNAL PROBLEM** ✓（外部独立问题路线 ✓） |
+
+- **C-273 二分不得合并** ✓✓：`C-273 CLOSED(reopen)` **∧** `M=5 OPEN` ✓ —— 两句**同时保留** ✓
