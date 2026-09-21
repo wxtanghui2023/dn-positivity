@@ -1,0 +1,23 @@
+point residual 1.6e-15
+
+=== (1) UNBOUNDED version (no box) ===
+   status=0 (Optimization terminated successfully)
+   c_full(unbounded) = 0.500808953629 ; h=[ 0.024405  0.01462  -0.018416  0.02306   0.048962]
+
+=== (2) BOX version |h|inf <= 1 ===
+   c_full(box) = 0.500808953629 ; h = [ 0.024405  0.01462  -0.018416  0.02306   0.048962]
+   constraint values (<=0): [ 0.          0.          0.          0.         -0.          0.
+ -0.97559495 -0.9853795  -1.01841631 -0.97693956 -0.95103834 -1.02440505
+ -1.0146205  -0.98158369 -1.02306044 -1.04896166]
+   duals: nu13=-0.452590 nu19=-0.048219 mu=[-0.419636 -0.495658 -0.02096  -0.063746] box_duals(nonzero)=[]
+   dual feasibility (y>=0) ? False ; sum(mu) = -1.000000000000
+   nu13+nu19 = -0.500808953629 ; |c_primal - (nu13+nu19)| = 1.002e+00
+   |c_primal - c_dual_objective| = 1.002e+00
+   cross-check with C-3864 (t*=0 => c_full >= 0) : c_full = +5.008e-01 -> OK
+   [40 dps] a13=-1.0 a19=-1.0 max_q(b_q - c)=8.464967e-16
+
+=== (3) odd-only CONTROL (b rows deleted) ===
+   status=3 (The problem is unbounded) -> no finite impedance: c_control = 0 (odd descent is unconstrained by any even functional)
+
+=== (4) (lambda,omega) comparison deliberately NOT performed this cut (order preserved) ===
+DONE
