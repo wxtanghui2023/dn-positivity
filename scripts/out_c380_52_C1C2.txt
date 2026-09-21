@@ -1,0 +1,13 @@
+=== C1: find zero points of G(.,sigma) (4 eqs, 5 unknowns -> 1-dim family) ===
+/home/node/.openclaw/workspace/dn-project/scripts/c380_52_c3852_C1C2.py:16: RuntimeWarning: divide by zero encountered in divide
+  return (Gmat(x, s) * np.ones((1, 5))).sum(1) if False else np.array([np.sum(s * (2*r+1)*U(2*r, np.sqrt(np.clip(x,0,1)))/(2*np.sqrt(np.clip(x,0,1)))) for r in range(4)])
+/usr/local/lib/python3.11/dist-packages/numpy/core/fromnumeric.py:88: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+   distinct zero points found : 0
+   *** no zero found in the sampled region ***
+
+=== C2: explicit constant chain and its numerical validation ===
+   chain: eta = 1.72032e6 * delta^3 Delta^6 ; ||DG|| <= 109.6/sqrt(delta) ;
+          m >= |det|/||DG||^3 >= 1.307 * delta^4.5 Delta^6 ; C_x = 2/m <= 1.53/(delta^4.5 Delta^6)
+   max over samples of  dist(x,Z) / (C_explicit * ||G(x)||_inf)  = 0.000000   (<= 1 means the bound holds)
+DONE

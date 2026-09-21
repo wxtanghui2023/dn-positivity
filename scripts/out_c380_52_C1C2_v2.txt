@@ -1,0 +1,11 @@
+=== C1: regular zero points of G(.,sigma) over the 16 sign classes ===
+   regular zero points found (x>0, distinct, rank 4) : 0
+
+=== C2: explicit constant chain + validation at any regular zero ===
+   eta = 1.72032e6 delta^3 Delta^6 ; ||DG|| <= 109.6/sqrt(delta) ; m >= |det|/||DG||^3
+   => m >= 1.307 delta^4.5 Delta^6 ; C_x = 2/m <= 1.53/(delta^4.5 Delta^6)
+   samples = 0 ; max dist/(C_explicit * ||G||_inf) = 0.000000  (<=1 -> bound holds)
+
+=== C1b: does a regular zero exist AT ALL? (probe for structural obstruction) ===
+   min over the probe of ||G||_inf = 2.286e-10   at x = [ 1.32642e+00  1.04627e+00  1.00000e-05  1.00000e-05 -1.29880e-01], sigma = [ 1 -1  1 -1  1] (min x_j = -0.1299)
+DONE
