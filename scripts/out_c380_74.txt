@@ -1,0 +1,38 @@
+=== Q1a: is the system semi-algebraic in c_j = cos(phi_j) ? ===
+   T_6(c) == cos(6*phi)  : False
+   T_8(c) == cos(8*phi)  : True
+   T_13(c) == cos(13*phi)  : False
+   T_14(c) == cos(14*phi)  : False
+   T_18(c) == cos(18*phi)  : False
+   T_19(c) == cos(19*phi)  : False
+   T_23(c) == cos(23*phi)  : False
+   T_12(c) == cos(12*phi)  : False
+   T_16(c) == cos(16*phi)  : True
+   T_28(c) == cos(28*phi)  : False
+   T_36(c) == cos(36*phi)  : False
+   => F_k = sum_j gamma_j T_k(c_j): POLYNOMIAL in c for BOTH odd and even    [Q1a: YES]
+   => x = c^2 works for even (deg 4q even) but adds sqrt(x) for odd; c is the natural algebraic variable
+
+=== Q1b: naive interval-subdivision scale estimate ===
+   box side 0.01 -> need ~ 0.1 boxes in 5 dims (1296*eps resolution) = 2.38e-06
+   box side 0.001 -> need ~ 0.8 boxes in 5 dims (1296*eps resolution) = 2.38e-01
+   box side 0.0001 -> need ~ 7.7 boxes in 5 dims (1296*eps resolution) = 2.38e+04
+   => naive uniform subdivision is hopeless (curse of dimensionality).
+
+=== Q2: how many distinct candidate regions? (multi-start local descent, sigma=(-1,1,1,-1,1)) ===
+   feasible descents: 80 ; distinct values < 1.5 : [0.570995, 0.616267, 0.688921, 0.694934, 0.714742, 0.72188, 0.734671, 0.742379, 0.754788, 0.768651, 0.906383, 0.909517]
+   best found = 0.570995000 (known V_sigma candidate 0.868850348)
+   active odd FREQUENCY at each local min (frequency -> count, best value):
+      k= 1 : 9 hits, best 0.688921
+      k= 3 : 11 hits, best 0.694934
+      k= 5 : 20 hits, best 0.616267
+      k= 7 : 14 hits, best 0.570995
+      k= 9 : 5 hits, best 0.965012
+      k=11 : 6 hits, best 0.946003
+      k=13 : 4 hits, best 1.199492
+      k=15 : 4 hits, best 1.324130
+      k=17 : 3 hits, best 1.513392
+      k=19 : 3 hits, best 2.052026
+      k=23 : 1 hits, best 0.714742
+   => number of distinct active-odd branches observed: 11
+DONE
