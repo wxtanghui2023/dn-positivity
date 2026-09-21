@@ -31,9 +31,9 @@ $$\text{即：}\textbf{未}发现遗漏的 failure-driven 机制 ✗ \Longrighta
 
 ## §4 纪律执行确认（✓✓）
 
-$$\textbf{① 未}因反例包络而给 Λ 人工附加 failure 解释}✗✓$$
-$$\textbf{② 未}把「漂亮的定量上界」当作「failure-driven bridge」}✗✓（\text{唐先生钉死}✓✓）$$
-$$\textbf{③ 未}重开天花板墙}✗✓（`ATTACK-S2` 四判据：T² 强／log 弱 ✓；`Λ \lesssim c/\log T` 永不可闭合}✓）$$
+$$\textbf{① 未}因反例包络而给 $\Lambda$ 人工附加 failure 解释✗✓$$
+$$\textbf{② 未}把「漂亮的定量上界」当作「failure-driven bridge」✗✓（\text{唐先生钉死}✓✓）$$
+$$\textbf{③ 未}重开天花板墙✗✓（\texttt{ATTACK-S2} 四判据：T² 强／log 弱 ✓；$\Lambda \lesssim c/\log T$ 永不可闭合✓）$$
 $$\textbf{④ 资产地位不变}✓：\text{本档}\ \textbf{不改} C\text{-261 的「定量资产」登记}✗✓$$
 
 ## §5 校准表更新（✓）
