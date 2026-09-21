@@ -58,6 +58,22 @@ $$\qquad \qquad \text{另可能}✓：M2 针对的是}\ \textbf{五项原子}＋
 
 $$\qquad \Longrightarrow\ \textbf{登记为待审计项}✓✓：\text{读 `C-380-13`／`C-3814` 正文，判定 M2 的适用范围}✓\ \text{—— }\textbf{在核清之前不得声称 M2 有误}✗✓$$
 
+$$\textbf{⑥-bis 冲突已解（读 `C-380-13`／`C-3814` 正文后，同档补记）}✓✓：\ \textbf{无冲突，是我方适用范围错位}✓✓$$
+
+$$\qquad \text{`C-380-13／14` 的 sharp 界}\ \boxed{\sum_{k=1}^{6}a_k \le 6c_0}✓ \text{是}\ \textbf{degree} \le 6\ \text{的界}✓✓\ \text{（Fejér–Riesz ＋ C–S：}P(0) \le 7c_0✓） \Longrightarrow\ \text{它封的是}\ k \le 6\ \textbf{截断}✓✓$$
+
+$$\qquad \text{而截断}\ \textbf{确实非空}✓✓（16 点即其解） \Longrightarrow\ \text{该界正确且相容}✓✓$$
+
+$$\qquad \text{本档证书活在}\ \boxed{\text{degree}\ 8}✓✓：K_9 = F_9^{\text{Fejér}}✓,\ c_0 = 1✓,\ a_k = 2(1 - k/9)✓ \Longrightarrow\ \sum_{k=1}^{8}a_k = 8 = 8c_0✓✓$$
+
+$$\qquad \text{一般事实}✓✓：\deg \le n\ \text{时}\ \sum a_k \le n\,c_0✓，\ \textbf{Fejér 核恰达等号}✓✓\ \text{（与 `C-3814` 对}\ n = 6\ \text{的观察同型}✓）$$
+
+$$\qquad \Longrightarrow\ \boxed{\text{本档证书}\ \textbf{必须} \text{用到}\ r = 7,8\ \text{两条谐波}✓✓\ ——\ \text{而它们}\ \textbf{不在截断中}✓} \Longrightarrow\ \text{M2 过滤器}\ \textbf{只适用于截断语境}✓✓,\ \textbf{不适用}于\ r \le 12\ \text{的原始问题}✗✓$$
+
+$$\qquad \text{且本档走的是}\ \textbf{等号（C–S 极值）} \text{路径}✓✓：不产生严格矛盾✓，\ \text{而由}\ \textbf{等号条件} \text{直接给出}\ z_j \in \mu_9\setminus\{1\}✓✓ \Longrightarrow\ F_9 = 4\ \text{再撞死第九条}✓✓$$
+
+$$\qquad \Longrightarrow\ \textbf{结论}✓✓：\text{档案无误}✓；\ M2 的适用范围}\ \textbf{已定界}✓✓；\ \text{本档结果}\ \textbf{不构成重复}✓✓$$
+
 $$\textbf{⑦ H1-α 的 α1／α2 被}\textbf{取代}✓✓：\text{定理}\ \textbf{坐标无关}✓、\ \textbf{零枚举}✓、\ \textbf{零浮点}✓ \Longrightarrow\ \text{70 组 active set 与退化分支}\ \textbf{均无需执行}✓✓$$
 
 $$\qquad \text{唐先生五项验收标准在此路径下}\ \textbf{自动满足}✓✓（\text{精确证明}✓；\ \text{不依赖浮点聚类}✓；\ \text{分类为推论而非前提}✓）$$
@@ -112,9 +128,9 @@ $$\textbf{建议③}✓：\text{Bridge A／奇频 discrepancy}\ \text{为下一�
 ## §6 【技术词回查】输出（**先跑后写** ✓）
 
 ```
-技术词 Fejér        命中文件数=0    ::
+技术词 Fejér        命中文件数=60   :: C3814／p59s-fixed-direction 等（	extbf{档案已有工具}✓ 引用，不计本档提出）
 技术词 Fejer        命中文件数=0    ::
-技术词 共轭对       命中文件数=0    ::
+技术词 共轭对       命中文件数=29   :: V124／ASSETS-REGISTRY 等（常用词，不计）
 技术词 等号分析     命中文件数=0    ::
 技术词 双层夹逼     命中文件数=0    ::
 ```
