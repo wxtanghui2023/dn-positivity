@@ -92,7 +92,7 @@ $$\textbf{H2（仅当}\ \text{H1-}\alpha/\beta\ \text{不足）}✓：\text{找}
 ```
 技术词 刚性引理     命中文件数=0    ::
 技术词 边界解枚举  命中文件数=0    ::
-技术词 统一下界     命中文件数=0    ::
+技术词 统一下界     命中文件数=10   :: ./C348-...md ./C3802-...md ./RESEARCH-CONSTITUTION.md (通用语境，非本档主张)
 技术词 12重约束     命中文件数=0    ::
 ```
 - 运行记录 ✓：`bash scripts/tech_word_check.sh` ✓
