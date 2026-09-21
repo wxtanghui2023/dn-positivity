@@ -1,0 +1,21 @@
+=== A: map of M over E_even (random feasible sampling) ===
+   feasible samples: 1 (from 4000 draws)
+   min M = 3.063318 ; median = 3.063318 ; max = 3.063318
+   count(M < c0) = 0 ; count(M < 1.5) = 0 ; count(M < 1.0) = 0
+   => {M < c0} appears EMPTY in this random map
+
+=== A2: the pairing locus (c1=c3, c2=c4) -- where even-blind M=0 lived ===
+   on that locus F_k = sigma5*T_k(c5) -> M = max_k |T_k(c5)| :
+   min over c5 of max_odd|T_k(c5)| = 0.000000 at c5 = 0.0000  (>= c0 ? False)
+   (at c5=0 we get M=0 -- the excluded zero-atom point of C-3849)
+
+=== B: does M < c0 force x into the tiny local box rho_cert=1.18278e-4 ? ===
+   local sharpness (C3875'): for |phi-phi*|_2 < 1.18278e-4 we have M >= c0 + eta r - K r^2 > c0
+   => inside the box the claim is CLOSED; the map above shows no sub-c0 feasible point OUTSIDE either
+   but the Taylor extension to arbitrary h fails: max_i[(Gh)_i + delta_i] - K|h|^2 < 0 once |h| >~ eta/K
+   => no local->global transfer; a genuine global argument is still missing
+
+=== C: point-independent Gordan certificate? ===
+   Even-blind witness (M=0, zero-atom layer) has a non-trivial cone {G h <= 0}, hence NO y>0 with G^T y = 0 there.
+   => 'exists point-independent y>0 for all x' is FALSE in general; the Gordan route cannot be globalised.
+DONE
