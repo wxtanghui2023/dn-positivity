@@ -1,0 +1,27 @@
+KKT point rebuilt (60 dps): x = ['0.8009302155414330192646', '0.5611431997255226913605', '0.7024571606623587274759', '0.6261014034243929958332', '0.8688438905530294285225']
+
+=== R1: rank of the 6x5 gradient matrix G ===
+   singular values: ['69.6619077168', '42.7323518037', '39.4997801442', '25.5862345169', '3.05942491899']
+   rank = 5
+
+   the six 5x5 minors (drop one row each):
+     drop row 0 (k=13): det = -5234152.18315
+     drop row 1 (k=19): det = -557646.264183
+     drop row 2 (k=12): det = 4853046.75176
+     drop row 3 (k=16): det = -5732224.33157
+     drop row 4 (k=28): det = 242405.222311
+     drop row 5 (k=36): det = -737209.676056
+
+=== Chebyshev reduction: G_k = -k * diag(gamma_j sin(phi_j)) * (U_{k-1}(z_j))_j ===
+   => row dependence <=> dependence of the U-evaluation rows (sin(k phi)=sin(phi) U_{k-1}(cos phi))
+   max |row entry - Chebyshev prediction| = 21.431
+
+=== R2: e_E in col(G) ? (e_E=(0,0,1,1,1,1)) ===
+   rank[G] = 5 ; rank[M] = 6 ; det(M) = 11564885.981695
+   R2 holds (e_E not in col G) <=> rank[M] = 6 : True
+   (a solution of  Gh = e_E  would appear here if it existed)
+
+=== discipline note ===
+   Chebyshev systems alone do NOT give R1: a combination of U_5,U_7,U_12,U_13,U_17,U_18 is a polynomial
+   of degree <= 18 and can vanish at the five sampled z_j; hence R1 needs the specific sample structure.
+DONE
