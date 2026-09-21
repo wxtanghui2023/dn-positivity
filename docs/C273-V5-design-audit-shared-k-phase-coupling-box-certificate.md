@@ -69,3 +69,12 @@ $$\textbf{④ }\texttt{C-181}\ \text{的}\ u\le5\ \text{仍为 GAP-A}✗（\text
 $$\textbf{① 本档新增}✓：\textbf{好集扩张}✓（0 命中）、\textbf{损失分离}✓（0 命中）\Longrightarrow \textbf{本档首次命名}✓$$
 $$\qquad \textbf{覆盖证书}✗：\text{命中}\ 1\ \text{处} \Longrightarrow \textbf{档案已有}✓（\texttt{C197}\ \text{一维已证实例}✓）；\text{本档}\textbf{引用}\text{而不列为提出}✗✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{可证余弦包围}✓（v4✓）；\text{认证间隙／交换损失}✓（\texttt{C-271}✓）；\text{粗箱积压／零反例审计}✓（\texttt{C-272}✓）$$
+
+---
+
+## §7 勘误指针（**追加不覆盖**✓，2026-09-21，见 `C-274` §1）
+
+$$\textbf{勘误}✗：\S1\ \text{损失 II 原写作"某坐标区间含}\ \pi\ \text{的奇数倍}⟹\text{该项被强制}\ -1（\text{与}\ k\ \text{无关}）"✗$$
+$$\qquad \textbf{正确}✓✓：\text{对固定}\ k，\ \cos(k\theta)=-1\iff\theta=\frac{(2m+1)\pi}{k}\ (\mathrm{mod}\ 2\pi) \Longrightarrow \textbf{危险点本身}\ k\text{-依赖}✓$$
+$$\Longrightarrow \text{损失 II 的坏点位置随}\ k\ \text{移动}✓ \Longrightarrow \text{这}【\text{正是}】\text{v5 要利用的信息}✓（\S1\ \text{的"两损失分离"因此更精确}✓）$$
+$$\textbf{实质结论不变}✓：\text{损失源仍是"逐坐标最坏化"}✓；\text{变更点＝坏点位置随}\ k\ \text{移动}✓$$
