@@ -20,7 +20,7 @@ $$\textbf{④ C 支符号核验（如预期）}✓✓：R_C(u) = 1024u^2 - 448u 
 $$\qquad \boxed{R_C\big(\tfrac{4489}{62500}\big) = \tfrac{25718619}{244140625} \approx \mathbf{+0.1053} > 0}✓✓ \ —— \ \textbf{符号如预期}✓✓$$
 $$\qquad ⚠️ \textbf{但}✗✓：R_C \ge 0 \iff u \le u_1\ \textbf{或}\ u \ge u_2✓✓，\ u_1 = \tfrac{7}{32} - \tfrac{\sqrt{22}}{32} \approx 0.072175✓，\ u_2 = \tfrac{7}{32} + \tfrac{\sqrt{22}}{32} \approx \mathbf{0.365325}✓✓$$
 $$\qquad \qquad \Longrightarrow \ \textbf{正集是两带}✗✓ \Longrightarrow \ \textbf{仅凭}③\ \text{不能}\ \text{排除上带}\ [u_2,\ \tfrac{7}{16}]✗✓ \Longrightarrow \ \textbf{C 支覆盖未完成}✗✓$$
-$$\textbf{⑤ 上带排除（数值）}✓：\text{在 A 支上、u \in [0.3654,\ 0.4375]\ \text{的双约束可行点数} = \boxed{0／20001}✓✓$$
+$$\textbf{⑤ 上带排除（数值）}✓：\ \text{在 A 支上、}u \in [0.3654,\ 0.4375]\ \text{的双约束可行点数} = \boxed{0／20001}✓✓$$
 $$\qquad \textbf{对照}✓：\text{同区段 A 支对称性下}\ Q_2\ \text{可行点亦}\ 0✓✓ \Longrightarrow \ \textbf{上带确被排除}✓✓$$
 $$\qquad \qquad ⚠️ \textbf{诚实标注}✗✓：\textbf{这是数值}，\ \textbf{须补解析证明}✗✓$$
 $$\textbf{⑥ B 支窗口下端来源（解析）}✓✓：Q_1 \le -\tfrac12 \iff 4m \le -\tfrac12 \iff m \le -\tfrac18 \iff \boxed{t \ge \tfrac18}✓✓ \ —— \ \textbf{解析}✓✓$$
