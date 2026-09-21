@@ -72,13 +72,33 @@ $$\textbf{Step 2}✓（Newton）:q_k\ \text{为配对}\ (u,v)\ \text{的幂和}�
 $$\textbf{Step 3}✓（两条件因式分解）:E_1 = 5e_3(e_2 - e_3)✓,\ E_2 = -7e_3(e_2 - e_3)(2e_2 - e_3 - 1)✓✓$$
 $$\textbf{Step 4}✓（分支）:e_3 \ne 0 \Rightarrow e_2 = e_3 \Rightarrow P_A = (x-1)(x^2+t)✓,\ t = abc > 0 \Rightarrow \text{仅 1 实根} \Rightarrow \text{矛盾}✓✓\ \Longrightarrow e_3 = 0✓✓$$
 
+## §1bis 措辞固定（唐先生 2026-09-21 21:58 定稿 ✓✓）
+
+$$\textbf{C3853／刀三：正则层排除（定稿措辞）}✓✓：\ e_3 \ne 0 \Longrightarrow e_2 = e_3 = t > 0✓ \Longrightarrow P_A(x) = (x-1)(x^2 + t)✓✓ \Longrightarrow P_A\ \textbf{仅有一个实根}✓✓ \Longrightarrow \textbf{不可能由三个正实数构成}✓✓$$
+
+$$\qquad \Longrightarrow\ \text{三正实根候选}\ \textbf{不存在于正则层}✓✓;\qquad \text{代数系统的剩余候选}\ \textbf{只能位于}\ e_3 = 0\ \text{的}\ \textbf{零原子层}✓✓$$
+
+$$\qquad \Longrightarrow\ \boxed{\text{Z-CLAIM 在「正则层} \to \text{零原子层」这一分叉上完成}}✓✓$$
+
+$$\textbf{承重环节声明（唐先生）}✓✓：\textbf{不需要判别式}✗✓ \ ——\ e_3 > 0\ \text{已给}\ t > 0✓，\ \text{而显式因式分解}\ \textbf{直接} \text{产生}\ x^2 + t✓，\ \text{其}\ \textbf{非实性} \text{已足以完成排除}✓✓$$
+
+$$\qquad \Longrightarrow\ \text{判别式仅作}\ \textbf{独立 sanity check}✓，\ \textbf{不是} \text{证明链的承重环节}✗✓$$
+
+$$\textbf{状态判词（唐先生 21:58）}✓✓：\ \boxed{\text{刀三} = \textbf{CLOSED}}✓✓（\textbf{不是} \text{GAP}✗✓）$$
+
+$$\textbf{分层结论（明确写入）}✓✓：\text{原代数条件}\ (E_1 = E_2 = 0)\ \textbf{不会} \text{继续排除}\ e_3 = 0\ \text{这一层}✓✓ \Longrightarrow\ \text{该层}\ \textbf{必须} \text{由}\ \textbf{外部资产} \text{回填}✓✓：$$
+
+$$\qquad \text{零原子} \leftarrow `C\text{-}3849`✓（\text{证明级}✓）;\qquad \text{共用位置（cross-collision）} \leftarrow `C\text{-}369`✓（\textbf{限}\ \mathcal Z \cap E\ \text{语境}✓✓）$$
+
+$$\qquad \Longrightarrow\ \text{两分支（正则层排除 ＋ 零原子层回填）}\ \textbf{合起来} \text{才给出}\ Z_\sigma \cap E_{\mathrm{even}} = \varnothing✓✓$$
+
 ## §2 账本（✓✓）
 
 | 项目 ✓ | 状态 ✓ |
 |---|---|
 | 刀一 齐次归约 ✓ | **完成** ✓✓ |
 | 刀二 Newton ＋ 符号吸收核对 ✓ | **完成** ✓✓ |
-| 刀三 正则层排除 ✓ | **完成（代数证明）** ✓✓ |
+| 刀三 正则层排除 ✓ | **CLOSED（唐先生 21:58 判定；代数证明）** ✓✓ |
 | 刀四 两退化层回填 ✓ | **完成（C3849 ＋ C-369）** ✓✓ |
 | `Z_\sigma \cap E_{\mathrm{even}} = \varnothing` ✓ | **PROVEN** ✓✓ |
 | `\gamma_* > 0` ✓ | **由紧性得（定性）** ✓✓ |
