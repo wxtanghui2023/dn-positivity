@@ -1,0 +1,279 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\col}{\operatorname{col}}
+\newcommand{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\supp}{supp}
+
+\title{Strict Cone Separation from Positive KKT Certificates:\\ a Gordan--Farkas Mechanism and a Local Sharpness Theorem}
+\author{Hui Tang}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate a reusable mechanism that converts a \emph{strictly positive} KKT certificate into a
+strictly quantitative separation statement, and we determine its sharp constant in a concrete
+non-smooth extremal problem. Let $G\in\R^{m\times n}$ admit $y>0$ with $G^{\top}y=0$. Gordan's
+theorem of alternatives then forces the descent cone to collapse, $\{h:Gh\le 0\}=\{0\}$, hence
+$\rank G=n$, and the column space contains no nonzero nonnegative vector; consequently the augmented
+matrix $[G\mid -e]$ with $e\ge 0$, $e\neq0$ is nonsingular. For the associated linear program
+$\min c$ subject to $v_ih\le-1$ and $w_qh\le c$ we prove $c_*=1/L$ with $L=\sum_q\lambda_q$, where
+$\lambda$ are the positive multipliers of $G^{\top}y=0$; the dual-optimal Farkas certificate is
+exactly $c_*(\omega,\lambda)$. Quantitatively, the sharpness constant $\eta=\min_{\|u\|=1}\max_i(Gu)_i$
+is certified strictly positive ($\eta\ge 0.0766443030678\ldots$ in the instance), and a second-order
+Taylor bound with explicit constant $K=648$ yields a certified local radius
+$\rho_{\rm cert}=\eta/K=1.18278\times10^{-4}$ inside which the local maximum strictly exceeds its
+boundary value. Finally we characterise the \emph{scope boundary} of the mechanism: the certificate
+is a positive combination and therefore belongs to the sum-of-nonnegative type; canonical
+involution-invariant data cannot yield the one-sided, axis-breaking separator that an arithmetic
+realisation would require, and the orientation available at the membership boundary we examine is
+Archimedean in origin. Thus the mechanism is a strictly proved \emph{local geometric} separation
+statement, and it does not by itself upgrade to an arithmetic or spectral one. No claim about the
+Riemann Hypothesis is made or used.
+\end{abstract}
+
+\section{Setting and hypotheses}\label{sec:setting}
+
+Fix $n=5$, $m=n+1=6$, and a sign vector $\sigma=(\sigma_1,\dots,\sigma_5)\in\{\pm1\}^5$. For
+$\phi=(\phi_1,\dots,\phi_5)\in(0,\pi/2)^5$ put
+\begin{equation}\label{eq:F}
+F_k(\phi)=\sum_{j=1}^{5}\gamma_j\cos(k\phi_j),\qquad
+\gamma_j=\begin{cases}\sigma_j,& k \text{ odd},\\ 1,& k \text{ even},\end{cases}
+\end{equation}
+so that $F_k$ is a trigonometric polynomial of degree $k$. Let $\phi^\ast$ be a point at which the
+\emph{six-active} conditions hold for the odd frequencies $13,19$ and the even functionals with
+$2q\in\{6,8,14,18\}$, i.e. frequencies $12,16,28,36$. Define the signed active functions
+\begin{equation}\label{eq:g}
+g_{13}=-F_{13},\qquad g_{19}=F_{19},\qquad g_{q}=F_{q}-\tfrac12\quad(q\in\mathcal A:=\{6,8,14,18\}).
+\end{equation}
+Write $G\in\R^{6\times5}$ for the matrix whose rows are the gradients $\nabla g_i(\phi^\ast)$, ordered
+as $(13,19,6,8,14,18)$.
+
+\begin{itemize}
+\item[\textbf{(H1)}] \emph{(strict positive KKT certificate.)} There is $y\in\R^{6}$ with $y>0$
+componentwise and $G^{\top}y=0$; we write $y=(\omega_{13},\omega_{19},\lambda_6,\lambda_8,\lambda_{14},\lambda_{18})$
+and $L=\sum_{q\in\mathcal A}\lambda_q>0$.
+\item[\textbf{(H2)}] \emph{(normalisation.)} $\omega_{13}+\omega_{19}=1$.
+\item[\textbf{(H3)}] \emph{(attainment of the active square system.)} There exist $h^\ast\in\R^5$ and
+$c^\ast\in\R$ with $v_ih^\ast=-1$ for $i\in\{13,19\}$ and $w_qh^\ast=c^\ast$ for all $q\in\mathcal A$,
+where $v_i,w_q$ are the corresponding rows of $G$.
+\end{itemize}
+
+\medskip
+\noindent
+In the concrete instance we use, $\sigma=(-1,1,1,-1,1)$ and the numerical realisation of
+$\phi^\ast$ gives (to the stated precision)
+\[
+L=1.99676941227516035204325246457,\qquad
+c^\ast=0.500808953629041885590052265792 .
+\]
+Hypothesis (H1) is a strict-complementarity/positive-KKT hypothesis: it holds at the point
+considered and is \emph{not} automatic at degenerate points (see \S\ref{sec:scope}).
+
+\section{The abstract mechanism}\label{sec:mechanism}
+
+We use the following classical alternative; see e.g.\ Gordan's original note and standard texts.
+
+\begin{theorem}[Gordan, \cite{Gordan1873,Mangasarian1969}]\label{thm:gordan}
+For $G\in\R^{m\times n}$, exactly one of the following holds:
+\emph{(i)} there is $h\neq0$ with $Gh\le0$; \emph{(ii)} there is $y>0$ with $G^{\top}y=0$.
+\end{theorem}
+
+\begin{lemma}[Trivial descent cone]\label{lem:cone}
+Assume \textup{(H1)}. Then $\{h\in\R^n: Gh\le0\}=\{0\}$.
+\end{lemma}
+\begin{proof}
+By \textup{(H1)}, alternative \textup{(ii)} of Theorem~\ref{thm:gordan} holds; hence \textup{(i)}
+fails, which is the assertion.
+\end{proof}
+
+\begin{corollary}[Structural full column rank]\label{cor:rank}
+Assume \textup{(H1)}. Then $\rank G=n$.
+\end{corollary}
+\begin{proof}
+If $\rank G<n$ then $\ker G\neq\{0\}$; choosing $0\neq h\in\ker G$ gives $Gh=0\le0$, contradicting
+Lemma~\ref{lem:cone}.
+\end{proof}
+
+\begin{corollary}[No nonzero nonnegative vector in the column space]\label{cor:col}
+Assume \textup{(H1)}. Then $\col(G)\cap\{z\ge0,\ z\neq0\}=\varnothing$. In particular, for every
+$e\ge0$, $e\neq0$, one has $e\notin\col(G)$.
+\end{corollary}
+\begin{proof}
+Suppose $0\neq z\ge0$ and $z\in\col(G)$. Since $\col(G)$ is a linear subspace, $-z\in\col(G)$ as well,
+so there is $h$ with $Gh=-z\le0$. Moreover $h\neq0$, because $z\neq0$. This contradicts
+Lemma~\ref{lem:cone}.
+\end{proof}
+
+Note that Corollary~\ref{cor:col} yields nonsingularity of the augmented matrix \emph{structurally},
+i.e.\ from the positive certificate and not from a numerical determinant:
+\begin{equation}\label{eq:aug}
+m=n+1,\quad \rank G=n,\quad e\notin\col(G)\ \Longrightarrow\ \rank[G\mid -e]=n+1 .
+\end{equation}
+
+\section{The exact bridge constant}\label{sec:bridge}
+
+Consider the linear program
+\begin{equation}\label{eq:LP}
+c_*=\min_{h,c}\ c\quad\text{subject to}\quad v_ih\le-1\ (i\in\{13,19\}),\qquad w_qh-c\le0\ (q\in\mathcal A).
+\end{equation}
+
+\begin{theorem}[Exact bridge constant]\label{thm:bridge}
+Assume \textup{(H1)}, \textup{(H2)} and \textup{(H3)}. Then
+\[
+c_*=\frac1L,\qquad L=\sum_{q\in\mathcal A}\lambda_q .
+\]
+Moreover the Farkas dual certificate $(\nu,\mu)=(\omega/L,\lambda/L)$ is dual-optimal and satisfies
+$(\nu,\mu)=c_*(\omega,\lambda)$.
+\end{theorem}
+\begin{proof}
+\emph{Lower bound.} Let $h$ be primal-feasible. Using $v_{13}h\le-1$, $v_{19}h\le-1$ and
+\textup{(H2)} with $\omega\ge0$,
+\[
+\omega_{13}(v_{13}h)+\omega_{19}(v_{19}h)\le-(\omega_{13}+\omega_{19})=-1 .
+\]
+By \textup{(H1)}, $\omega_{13}v_{13}+\omega_{19}v_{19}=-\sum_{q}\lambda_qw_q$, hence
+$\sum_q\lambda_qw_qh\ge1$. Since $w_qh\le\max_r w_rh$ and $\lambda\ge0$,
+$L\max_q(w_qh)\ge\sum_q\lambda_qw_qh\ge1$, so $c_*\ge1/L$.
+
+\emph{Upper bound.} Let $(h^\ast,c^\ast)$ be as in \textup{(H3)} and take the inner product of
+$G^{\top}y=0$ with $h^\ast$. The odd components contribute $-\omega_{13}-\omega_{19}=-1$ and the even
+components $\sum_q\lambda_qw_qh^\ast=c^\ast L$, so $-1+c^\ast L=0$, i.e.\ $c^\ast=1/L$. By
+\textup{(H3)}, $h^\ast$ is primal-feasible, whence $c_*\le c^\ast=1/L$.
+
+Combining the two bounds gives $c_*=1/L$. Finally, $(\nu,\mu)=(\omega/L,\lambda/L)$ satisfies
+$\nu,\mu\ge0$, $\sum_q\mu_q=1$ and $\nu_{13}v_{13}+\nu_{19}v_{19}+\sum_q\mu_qw_q=0$, so it is
+dual-feasible with value $\nu_{13}+\nu_{19}=1/L=c_*$; dual optimality follows, and the displayed
+identity $(\nu,\mu)=c_*(\omega,\lambda)$ is immediate.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:bridge} shows that $c_*$ is not an isolated numerical constant: it is the
+reciprocal of the sum of the active even multipliers, and the Farkas separator is the KKT certificate
+rescaled by $c_*$.
+\end{remark}
+
+\section{Quantitative sharpness and a certified local radius}\label{sec:sharp}
+
+Define the sharpness constant
+\begin{equation}\label{eq:eta}
+\eta=\min_{\|u\|_2=1}\ \max_{i}(Gu)_i .
+\end{equation}
+By Lemma~\ref{lem:cone}, $\max_i(Gu)_i>0$ for every $u\neq0$, and the unit sphere is compact, so
+$\eta>0$; this is a second, quantitative consequence of the positive certificate.
+
+To certify a numerical lower bound we exploit the sign decomposition: every $u\neq0$ is uniquely
+$u=s\odot w$ with $s\in\{\pm1\}^5$, $w\ge0$, $\sum_jw_j=1$, and $\max_i(Gu)_i/\|u\|_2\ge
+\max_i(Gu)_i/\|u\|_1$. Hence $\eta_1=\min_s\min\{\max_i(G(s\odot w))_i: w\ge0,\ \mathbf{1}^{\top}w=1\}$
+satisfies $\eta\ge\eta_1$, and each inner problem is a linear program. By weak duality, for any $y$ in
+the simplex, $\max_i(G(s\odot w))_i\ge\min_j((G_s)^{\top}y)_j$, which requires only $y\ge0$ and
+$\sum_iy_i=1$. Enclosing the coefficients rationally gives the certified bound
+\begin{equation}\label{eq:etab}
+\boxed{\ \eta\ \ge\ \underline{\eta}=0.076644303067798235521\ldots\ }>0 .
+\end{equation}
+
+For the Taylor step, work in the coordinates $\phi$. Since
+$\partial^2F_k/\partial\phi_j^2=-k\gamma_j\cos(k\phi_j)$, the Hessian is diagonal with
+$|\partial^2F_k/\partial\phi_j^2|\le k^2$, hence for the even rows $k\le36$ and the odd rows $k\le23$,
+the remainder satisfies $|R_i(h)|\le K\|h\|_2^2$ with
+\begin{equation}\label{eq:K}
+K=\tfrac12\cdot 36^2=648 .
+\end{equation}
+Writing $g_i(\phi^\ast+h)=g_i(\phi^\ast)+\nabla g_i(\phi^\ast)\cdot h+R_i(h)$ and using
+$g_{13}(\phi^\ast)=g_{19}(\phi^\ast)=c_0$, $g_q(\phi^\ast)=0$, we obtain for every $h\neq0$
+\begin{equation}\label{eq:sharp}
+\max_i g_i(\phi^\ast+h)\ \ge\ c_0+\eta\|h\|_2-K\|h\|_2^2 .
+\end{equation}
+Consequently
+\begin{equation}\label{eq:radius}
+\boxed{\ 0<\|h\|_2<\rho_{\rm cert}:=\frac{\eta}{K}\ \Longrightarrow\ \max_i g_i(\phi^\ast+h)>c_0\ }
+\end{equation}
+and in the instance at hand $\rho_{\rm cert}=1.18278\times10^{-4}$ (the tightest coordinate
+half-width in the original variable is $7.99\times10^{-5}$).
+
+\begin{remark}
+Statement \eqref{eq:radius} is a \emph{local} sharpness theorem: it certifies that $\phi^\ast$ is a
+strict local minimiser of the local maximum, inside a fully explicit neighbourhood. It does not assert
+global optimality; in particular no equality $V=c_0$ is claimed for the global problem.
+\end{remark}
+
+\section{Scope of the mechanism: an interface obstruction}\label{sec:scope}
+
+The mechanism above is a statement of linear-algebraic/convex duality. We record honestly why it does
+not automatically upgrade to an arithmetic or spectral statement.
+
+\begin{proposition}[Class of the certificate]\label{prop:class}
+The certificate in \textup{(H1)} is a positive combination, $\sum_i y_ig_i=0$ with $y>0$. Consequently
+the mechanism belongs to the sum-of-nonnegatives positivity type, and renaming it (e.g.\ as a
+``Farkas separation'' or ``positive KKT certificate'') does not make it a new positivity mechanism.
+\end{proposition}
+\begin{proof}
+Immediate from the displayed identity, which is exactly \textup{(H1)} rewritten row-wise.
+\end{proof}
+
+\begin{proposition}[Symmetry obstruction]\label{prop:iota}
+Suppose the available arithmetic data are invariant under the involution $\iota$ associated with the
+functional equation (so that condition sets are $\iota$-invariant). Then no one-sided, axis-breaking
+separator can be produced from them: a symmetric datum cannot generate an asymmetric (one-sided)
+separation object.
+\end{proposition}
+\begin{proof}
+If a predicate $P$ satisfies $P(\beta)=P(\iota\beta)$ for all admissible data, then it cannot separate
+$\beta$ from $\iota\beta$; a one-sided separator by definition takes different values on the two sides,
+so it cannot be realised by such $P$.
+\end{proof}
+
+\begin{proposition}[Archimedean orientation at the membership boundary]\label{prop:robin}
+For the membership boundary we examined, the available orientation is Archimedean in origin: the
+comparison involves an Archimedean constant and an Archimedean iterated logarithm, so the resulting
+direction is not arithmetic.
+\end{proposition}
+\begin{proof}
+Direct inspection of the comparison defining the boundary: the two sides involve $\sigma(n)$ and
+$e^{\gamma}n\log\log n$ respectively, and $e^{\gamma}$, $\log\log n$ are Archimedean objects.
+\end{proof}
+
+\begin{remark}[Scope boundary]
+Together, Propositions~\ref{prop:class}--\ref{prop:robin} delimit the scope of the mechanism: it is a
+strictly proved \emph{local geometric} separation statement with an exact constant, and the passage to
+arithmetic/spectral content requires an interface that is not supplied here. We state the resulting
+separation as a scope boundary,
+\[
+\text{local arithmetic structure}\ \not\Rightarrow\ \text{global spectral localisation},
+\]
+rather than as a claim about any particular spectral problem. No Riemann Hypothesis statement is used
+or asserted anywhere in this paper.
+\end{remark}
+
+\section{Data and reproducibility}\label{sec:data}
+
+All numerical statements are accompanied by scripts and machine-checked outputs in the accompanying
+repository: the reconstruction of $\phi^\ast$ at high precision, the six-active gradient matrix $G$,
+the Gordan certificate $y$, the $32$-sign linear programs certifying \eqref{eq:etab}, and the
+Taylor/remainder computation. The certified lower bound $\underline{\eta}$ is obtained from dual
+feasible points (only $y\ge0$, $\sum_iy_i=1$ are used) together with a rational enclosure of the
+coefficients; the margin used in the enclosure is $10^{-30}$, against a truncation error of order
+$10^{-45}$ at the working precision.
+
+\begin{thebibliography}{9}
+\bibitem{Gordan1873} P.~Gordan, \emph{Ueber die Aufl\"osung linearer Gleichungen mit reellen
+Coefficienten}, Math.\ Ann.\ \textbf{6} (1873), 23--28.
+\bibitem{Mangasarian1969} O.~L.~Mangasarian, \emph{Nonlinear Programming}, McGraw--Hill, 1969
+(theorems of the alternative).
+\bibitem{Rockafellar1970} R.~T.~Rockafellar, \emph{Convex Analysis}, Princeton Univ.\ Press, 1970.
+\bibitem{Schrijver1986} A.~Schrijver, \emph{Theory of Linear and Integer Programming}, Wiley, 1986.
+\bibitem{Rivlin1990} T.~J.~Rivlin, \emph{Chebyshev Polynomials}, Wiley, 1990.
+\end{thebibliography}
+
+\end{document}
