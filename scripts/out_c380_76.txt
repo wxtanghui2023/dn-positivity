@@ -1,0 +1,24 @@
+x* rebuilt (40 dps): x = ['0.8009302155414330192646', '0.5611431997255226913605', '0.7024571606623587274759', '0.6261014034243929958332', '0.8688438905530294285225']
+  phi/pi = ['0.1472131729733695487', '0.23048867882095517497', '0.18365067170450866496', '0.20942249633500208877', '0.1179588313706160604']
+
+=== eta_1 = min over the L1-sphere of max_i (G u)_i  (LP) ===
+   status=0 ; eta_1 = -0.000000000000
+   minimising direction u* = [ 0.  0.  0.  0. -1.] ; ||u*||_1 = 1.000000000000
+   max_i (G u*)_i = 25.175858796101  (= eta_1 * |u*|_1)
+   => Gordan implies eta_1 > 0 : False
+
+=== K : explicit diagonal-Hessian bound (phi coordinates) ===
+   F_2q = sum_j cos(4q phi_j) -> |d^2/dphi_j^2| = (4q)^2 <= 36^2 = 1296
+   F_13,F_19 -> |d^2| <= 23^2 = 529
+   K := 0.5 * 1296 = 648.0   (|R_i(h)| <= K ||h||_2^2)
+
+=== sharpness closure: eta_1*r - K*r^2 > 0  <=>  0 < r < eta_1/K ===
+   certified radius in ||.||_2 (phi units): r_cert = -0.000000000e+00
+   (eta_1/K = -0.000000000 / 648.0)
+   per-coordinate phi-halfwidth that is certified: min_j sin(2phi_j)*r_cert = -0.000e+00
+   corresponding x-halfwidth (dx = sin(2phi) dphi): rho_j = -0.000e+00 for the tightest coordinate
+
+=== verdict inputs ===
+   eta_1 > 0 : False   (so the first-order closure EXISTS in a nonempty box)
+   box radius certified: -0.000e+00 (phi, L2) -- very small => global part still needed
+DONE

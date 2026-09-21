@@ -1,0 +1,12 @@
+=== CORRECTED eta_1 LP ===
+   status=0 ; eta_1 = -0.000000000000
+   u* = [-0. -0. -0. -0. -0.] ; ||u*||_1 = 0.000000000000 ; max_i(Gu*)_i = 0.000000000000
+   consistency (max_i(Gu*) == eta_1*||u*||_1) : True
+   => eta_1 > 0 : False
+   random-direction minimum of max_i(Gu)_i over the L1-sphere = 0.448803 (should be > 0)
+
+=== sharpness closure ===
+   eta_1 = -0.000000000 ; K = 648.0 ; r_cert = eta_1/K = -0.000000e+00
+   per-coordinate phi halfwidth (sin(2phi)*r_cert, tightest) = -0.000e+00
+   => LOCAL-SHARP-CLOSED on a nonempty (but small) box : False
+DONE
