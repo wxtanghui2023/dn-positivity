@@ -1,0 +1,15 @@
+=== C3875': 32 sign patterns, LP  min t  s.t. G(s.w) <= t*1 , w>=0 , sum w = 1 ===
+   statuses all 0 : True ; min_s t_s* = 0.076644303068 ; max_s t_s* = 25.175858796101
+   sanity (Gordan: every t_s* >= 0) : True
+   number of t_s* < 1e-9 : 0  (0 would contradict Gordan)
+   argmin sign pattern s = (-1, -1, -1, -1, -1) ; t* = 0.076644303068
+   primal w = [0.3289024  0.16037046 0.19471226 0.15658896 0.15942592] ; ||w||_1 = 1.000000000000
+   dual y = [-0.33842323 -0.         -0.27066262 -0.31568509 -0.02725903 -0.04797003] ; y >= 0 ? False ; sum y = -1.000000000000
+
+=== rigorous lower bound via weak duality ===
+   variational form: t_s* >= max_{y in simplex} min_j (G_s^T y)_j
+Traceback (most recent call last):
+  File "/home/node/.openclaw/workspace/dn-project/scripts/c380_77_C3875p_32sign.py", line 61, in <module>
+    print("   per-sign dual lower bounds: min = %s ; max = %s"%(float(min(lbs)),float(max(lbs))),flush=True)
+                                                                      ^^^^^^^^
+ValueError: min() arg is an empty sequence
