@@ -11,7 +11,7 @@ FREEZE-ACK: 本档即冻结期内的纯数学审计（依 §8.1）
 $$\boxed{\textbf{① 精确刻画}✓✓：\delta_I(\lambda)=0\iff M_p\cap M_q\ne\varnothing\quad(\lambda\in(0,1))✓，\ M_p:=\operatorname*{argmin}_{x\in I}\cos(px)}$$
 $$\boxed{\textbf{② 一般定量框架}✓：\delta_I(\lambda)\ \ge\ \min(\lambda,1-\lambda)\cdot\inf_{x\in I}\big(g_p(x)+g_q(x)\big)✓，\ g_p:=\cos(px)-\min_I\cos(p\cdot)\ge0✓}$$
 $$\boxed{\textbf{③ 共振二分（可证}✓✓）：\text{比率}\ q/p\ \textbf{为奇}\Longrightarrow M_p\subseteq M_q \Longrightarrow \delta=0✗；\text{比率}\ \textbf{为偶}\Longrightarrow M_p\cap M_q=\varnothing✓}$$
-$$\boxed{\textbf{④ 比率 2 的显式统一下界}✓✓（\text{ALIVE}✓）：q=2p \Longrightarrow \delta_I\ \ge\ \inf_{t\in[0,\pi/2]}\Big[\lambda(1-\cos t)+(1-\lambda)\big(1+\cos 2t\big)\Big]>0✓\ \text{（位置无关}✓）}$$
+$$\boxed{\textbf{④ 比率 2 的显式下界}✓✓（\text{ALIVE}✓，\textbf{须加几何前提}✓）：q=2p\ \textbf{且}\ \operatorname{dist}(M_p,M_{2p})\ge\tfrac{\pi}{2p} \Longrightarrow \delta_I(\lambda)\ \ge\ \inf_{t\in[0,\pi/2]}\Big[\lambda(1-\cos t)+(1-\lambda)\big(1+\cos 2t\big)\Big]>0✓}$$
 
 $$\textbf{纪律}✓：\text{零计算}✗；\text{不选数值}\lambda✗；\textbf{不碰五维}✗（\text{全程单区间}✓）；\text{不用 pending 数据}✗$$
 
@@ -85,3 +85,14 @@ $$\textbf{⑤ 不声称}✓：\text{不声称}\ \sum_j\delta_j\ \text{足以越�
 ```
 $$\textbf{① 本档新增}✓：\text{三项各 0 命中} \Longrightarrow \textbf{本档首次命名}✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{同点耦合增益}✓（\texttt{C-275}✓）；\text{组合空洞定理}✓（\texttt{C-275}✓）；\text{Fejér 淘汰}✓（\texttt{C-274}\ \S6✓）$$
+
+---
+
+## §9 勘误（**数学错误就地改正 ＋ 追加指针**✓，2026-09-21，见 `C-277` §0）
+
+$$\textbf{错误}✗：\S0\ \text{④ 与}\ \S4\ \text{原写作「对}\textbf{任意}\ I：\delta_I(\tfrac12)\ge\tfrac{7}{16}」✗ \Longrightarrow \textbf{与}\ \S5\ \text{自相矛盾}✗✓$$
+$$\qquad \S5\ \text{已证}✓：\text{同向单调的短区间} \Longrightarrow M_p=M_{2p}=\{\beta\} \Longrightarrow \delta_I=0✗（\text{由}\ \S1✓）$$
+$$\textbf{正确}✓✓：\rho=\tfrac{\pi}{2p}\ \text{是}\textbf{格错位值}✓，\text{仅在}\ \operatorname{dist}(M_p,M_{2p})=\tfrac{\pi}{2p}\ \text{成立时才可用}✓ \Longrightarrow $$
+$$\qquad \boxed{\operatorname{dist}(M_p,M_{2p})\ge\tfrac{\pi}{2p}\ \Longrightarrow\ \delta_I(\tfrac12)\ge\tfrac{7}{16}✓\qquad\textbf{而非}\ \text{任意}\ I\Longrightarrow\cdots✗}$$
+$$\textbf{性质}✓：\text{这是}\ \textbf{soundness 边界}✗（\text{非修辞}✓）；\S2\ \text{的一般框架本身无条件正确}✓（\text{它已带}\ \rho>0\ \text{前提}✓）$$
+$$\textbf{责任}✓：\text{该内部不一致应由作者自查发现}✗ —— \text{记为本轮自误}\#1✓$$
