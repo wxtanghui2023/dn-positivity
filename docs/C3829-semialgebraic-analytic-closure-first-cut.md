@@ -25,8 +25,8 @@ $$\qquad \Longrightarrow \ \boxed{\min_s Q_5 = 4(-\tfrac18)(-\tfrac{341}{64}) = 
 $$\qquad \qquad ⭐ \textbf{这是}\ \textbf{解析结果}✓✓（\text{凸性} ＋ \text{端点比较} ＋ \text{精确有理算术}✓✓），\ \textbf{非数值}✗✓ \ —— \ \textbf{Level 2 的一个真实片段}✓✓$$
 $$\textbf{⑤ ⭐ 逐切片数值（支撑）}✓✓：\text{非空切片}\ 365✓；\ \boxed{365／365\ \text{切片}\ \min Q_5 \ge \tfrac{341}{128}}✓✓$$
 $$\qquad \text{全局}\ \min Q_5 = +2.6640625000 = \tfrac{341}{128}✓✓，\ \text{恰在}\ (m, s) = (-0.125, 0.4375)✓✓$$
-$$\qquad \text{靠近}\ m = -\tfrac18\ \text{时切片最小值}\ \textbf{递增}✓✓（2.6641 \to 2.6713 \to 2.6785✓） \Longrightarrow \ \textbf{支持}「m = -\tfrac18\ \text{是唯一危险切片」✓✓$$
-$$\textbf{⑥ 剩余（Level 2 尚缺）}✗✓：\textbf{m < -\tfrac18\ \text{的解析证明未完成}✗✓（Q_5 > \tfrac{341}{128}✓；\ \text{数值支持}✓）$$
+$$\qquad \text{靠近}\ m = -\tfrac18\ \text{时切片最小值}\ \textbf{递增}✓✓（2.6641 到 2.6713 到 2.6785✓） \Longrightarrow \ \textbf{支持}\ m = -\tfrac18\ \text{是唯一危险切片}✓✓$$
+$$\textbf{⑥ 剩余（Level 2 尚缺）}✗✓：\ m < -\tfrac18\ \text{的解析证明}\ \textbf{未完成}✗✓（Q_5 > \tfrac{341}{128}✓；\ \text{数值支持}✓）$$
 $$\qquad \textbf{明确结构}✓✓：\min_sQ_5 = 4m \cdot \max_sB✓（\text{凸} \Longrightarrow \text{端点}✓） \Longrightarrow \ \text{归结为}\ \textbf{两个端点分支的比较}✓✓：$$
 $$\qquad \qquad \text{①}\ s = \tfrac{7}{16}✓（Q_2\ \text{活跃}✓）；\ \text{②}\ s = A(m)✓（Q_3\ \text{活跃}✓）；\ \text{③}\ Q_4\ \text{根分支}✓ \ —— \ \textbf{这就是}\ C\text{-}380\text{-}30\ \text{的明确入口}✓✓$$
 $$\textbf{⑦ 边界几何收获}✓✓：Q_2 \Longrightarrow s \le \tfrac{7}{16}✓；\ Q_3 \Longrightarrow s \ge A(m)✓；\ Q_4 \Longrightarrow \text{二次区间}✓ \Longrightarrow \ \textbf{可行域}\ \textbf{窄}✓✓$$
