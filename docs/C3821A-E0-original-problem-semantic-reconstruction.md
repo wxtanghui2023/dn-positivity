@@ -76,4 +76,4 @@ $$\textbf{有计算}✓（档案检索✓）；\ D1 = 0✓；\ \text{未改他�
 技术词 量词等价     命中文件数=0    :: 
 技术词 坐标归属     命中文件数=0    :: 
 ```
-- 检索记录 ✓：`grep -a -n -E "z_j = e\^\{2i|z_j = e\^\{i|= \\\\varnothing|inf_\{E_|forall x \\\\in E|对称|置换|S_5"`✓（\text{显式路径}✓）
+- 检索记录 ✓：`grep -a -n`（显式路径 ✓；模式含 z_j 的两套写法、varnothing、inf、forall、对称／置换／S_5 各关键词 ✓）
