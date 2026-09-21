@@ -1,0 +1,14 @@
+=== (i) EVEN-BLIND test: is there a point with M(x) < c0 when even constraints are DROPPED? ===
+   unconstrained min of M found = 0.000000000  (c0 = 0.868850348)
+   => M < c0 WITHOUT even constraints: True
+   dropped-constraint point c = [ 0.145097  0.218617  0.145097  0.218617 -0.000589]
+   its even values F_2..F_24 - 1/2: max = +3.442093 (i.e. VIOLATES some even constraint)
+
+=== (ii) with ALL 12 even constraints enforced (correct feasible set) ===
+   truly feasible descents: 33
+   best feasible M = 2.170420828 (known candidate 0.868850348)
+   values < 1.5 : []
+
+=== (iii) B1 linear-functional ceiling (archive, C-3813/C-3814) ===
+   positive trig-dual route closed sharp: sum_k a_k <= 6 c0 (see C-3814) => linear functional cannot reach c0
+DONE
