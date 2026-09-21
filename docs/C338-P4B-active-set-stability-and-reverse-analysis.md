@@ -8,18 +8,18 @@ FREEZE-ACK: 本档即冻结审计
 
 ## §0 结论（五条 ✓✓）
 
-$$\textbf{① 一致性}✓✓：\text{高精度精化后}\ G = \textbf{0.9738227074}✓（与 C-337 的 0.9738227358 ✓ 一致到}\ 10^{-8}✓）\ \Longrightarrow \ \textbf{数值稳定}✓$$
+$$\textbf{① 一致性}✓✓：\text{高精度精化后}\ G = \textbf{0.9738227074}✓（\text{与 C-337 的 }0.9738227358✓ \text{一致到}\ 10^{-8}✓）\ \Longrightarrow \ \textbf{数值稳定}✓$$
 $$\textbf{② active set 修正}✗✓：\text{容差}\ 10^{-9}\ \text{下}\ \textbf{A} = \{5,\ 12,\ 14\}✓，\ \textbf{21 掉出}✗✓ \Longrightarrow \ \textbf{21 是近似并列，不是真等式}✓$$
 $$\textbf{③ 第 4 项被判为近似}✓✓：\text{故 C-337 的「A＝四个」}\ \textbf{应改述为「A 有 3 元核心 ＋ 1 个近邻」}✓✓$$
 $$\textbf{④ 边界／退化全面不低于}✓✓：\text{11 类边界／对称退化起点}\ \textbf{全部}\ \ge 0.9924✓ \Longrightarrow \ \textbf{无更低构型}✓（\text{sanity check 通过}✓）$$
-$$\textbf{⑤ ⭐ 频率结构发现}✓✓：\ \textbf{5 + 21 = 26 = 12 + 14}✓✓（\text{成对和}\ 26 = 5M+1✓）；\ \gcd = 1✓（\textbf{不}被}\ C\text{-284 解释}✓✓）$$
+$$\textbf{⑤ ⭐ 频率结构发现}✓✓：\ \textbf{5 + 21 = 26 = 12 + 14}✓✓（\text{成对和}\ 26 = 5M+1✓）；\ \gcd = 1✓（\textbf{不}\ \text{被}\ C\text{-284 解释}✓✓）$$
 
 ## §1 检查 A：多起点一致性（✓）
 
 $$\textbf{设定}✓：180\ \text{随机起点} ＋ \text{模式搜索}（每起}\ 250\ \text{轮，预算保守）✓$$
 $$\textbf{结果}✓：\text{最好}\ 0.984519✓；\textbf{无一低于}\ 0.9739✓（0/180✓）$$
 $$\textbf{关键观察}✓✓：\text{最佳随机构型}\ c \approx [-0.862,\ -0.735,\ -0.133,\ +0.099,\ +0.904]✓ \ \textbf{与冠军构型几乎同形}✓✓（\text{冠军}\ c \approx [-0.872,\ -0.744,\ -0.137,\ +0.091,\ +0.910]✓）\ \Longrightarrow \ \textbf{同一盆地、结构可复现}✓✓$$
-$$\textbf{诚实标注}⚠️：\text{短期预算}\ \textbf{未达} \text{冠军值}✗ \Longrightarrow \textbf{不能}断定全局最小性}✗✓$$
+$$\textbf{诚实标注}⚠️：\text{短期预算}\ \textbf{未达}\ \text{冠军值}✗ \Longrightarrow \textbf{不}\ \text{能断定全局最小性}✗✓$$
 
 ## §2 检查 B：边界／退化（✓✓，全部不低于 ✓）
 
@@ -39,13 +39,13 @@ $$\Longrightarrow \textbf{边界／退化架}\ \textbf{无一低于}\ 0.9738✓�
 
 $$G = \textbf{0.9738227074211}✓；\ c = [-0.87200469,\ -0.74381232,\ -0.13677624,\ +0.09143819,\ +0.90994467]✓（\text{13 位收敛}✓）$$
 $$\textbf{容差}\ 10^{-9}\ \text{下的}\ A = \textbf{\{5,\ 12,\ 14\}}✓；\text{其中}\ F_{12} = F_{14} = 0.973822707✓；F_5\ \text{同值}✓ \Longrightarrow \ \textbf{3 元核心}✓$$
-$$\textbf{21 的状态}✗✓：\text{在}\ C\text{-337 的粗容差下并列}✓，\text{高精度下}\ \textbf{掉出}✗ \Longrightarrow \text{应记为}\ \textbf{近邻（near-tie）}✓，\textbf{不}计入核心}✗✓$$
+$$\textbf{21 的状态}✗✓：\text{在}\ C\text{-337 的粗容差下并列}✓，\text{高精度下}\ \textbf{掉出}✗ \Longrightarrow \text{应记为}\ \textbf{近邻（near-tie）}✓，\textbf{不}\ \text{计入核心}✗✓$$
 $$\textbf{次高}✓：F_{13} \approx 0.7626✓（\text{与}\ 0.9738\ \text{有明显间隙}✓）\ \Longrightarrow \ \textbf{核心}\ \{5,12,14\}\ \text{是干净的}✓$$
 
 ## §4 ⭐ 频率结构（✓✓，本档最有价值 ✓）
 
 $$5 + 21 = 26 = 12 + 14✓✓ \ \Longrightarrow \ \text{四个频率}\ \textbf{成对和相同}✓✓（= 5M + 1 = 26✓）$$
-$$\gcd(5,12,14,21) = 1✓✓ \ \Longrightarrow \ \textbf{不能}被}\ C\text{-284 的 gcd 坍缩解释}✗✓（\text{与唐先生预判一致}✓✓）$$
+$$\gcd(5,12,14,21) = 1✓✓ \ \Longrightarrow \ \textbf{不}\ \text{能被}\ C\text{-284 的 gcd 坍缩解释}✗✓（\text{与唐先生预判一致}✓✓）$$
 $$\text{模结构}✓：\text{mod}\ 7\ \to \{5, 5, 0, 0\}✓；\text{mod}\ 3\ \to \{2, 0, 2, 0\}✓；\text{mod}\ 4\ \to \{1, 0, 2, 1\}✗ \Longrightarrow \text{未见单一模结构}✗✓$$
 $$\textbf{读法}✓✓：\ \textbf{「对偶和 26」}\ \text{是}\ \textbf{新的具体线索}✓ \Longrightarrow \text{值得作为}\ \textbf{反推的代数入口}✓✓（\text{而非再扩搜索}✓）$$
 
