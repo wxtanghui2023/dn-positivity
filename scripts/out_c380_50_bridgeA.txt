@@ -1,0 +1,19 @@
+=== A. feasible x in E_even (vectorised multistart descent, N=20000   fea   feasible starts: 9678 / 20000  (pen == 0)
+   empirical min_j x_j over feasible samples : 0.003925
+
+=== B. odd-frequency probe over the 16 sign classes ===
+   best 5 (g, x, sigma):
+     g = 0.903917   x = [0.33252 0.17837 0.24848 0.41233 0.47838]   sigma = [ 1  1 -1 -1  1]
+     g = 0.912055   x = [0.33143 0.47412 0.4137  0.17729 0.24873]   sigma = [-1 -1  1 -1  1]
+     g = 0.935284   x = [0.33208 0.41169 0.24812 0.17661 0.47899]   sigma = [ 1 -1 -1  1  1]
+     g = 0.948891   x = [0.33313 0.47595 0.17721 0.24816 0.41128]   sigma = [-1 -1 -1  1  1]
+     g = 0.958021   x = [0.41276 0.3334  0.47454 0.17625 0.24871]   sigma = [ 1 -1 -1 -1  1]
+   BEST g = 0.903917      (Bridge A target: inf g > 1/2)
+   any g <= 1/2 (would REFUTE Bridge A) : False
+
+=== C. local minimisation of g over x in E_even (vectorised, M=3000 starts) ===
+   BEST g (penalised objective) = 0.876069
+   x = [0.801874 0.561119 0.703473 0.627211 0.869546]
+   max(F_2r - 1/2) at that x = -1.603e-04  (feasible if <= 0)
+   min_j x_j = 0.561119
+DONE
