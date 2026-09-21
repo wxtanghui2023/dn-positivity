@@ -69,3 +69,13 @@ $$\textbf{④ 不声称}✓：\text{不声称}\ M=5\ \text{不可闭合}✗；\t
 ```
 $$\textbf{① 本档新增}✓：\text{三项各 0 命中} \Longrightarrow \textbf{本档首次命名}✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{Type A/B ＋ 阈值引理}✓（\texttt{C-277}✓）；\text{零点刻画}\ \delta=0\iff M_p\cap M_q\ne\varnothing✓（\texttt{C-276}\ \S1✓）；\text{组合空洞定理}✓（\texttt{C-275}✓）$$
+
+---
+
+## §8 归档钉死两条（**唐先生指定**✓，2026-09-21）
+
+$$\textbf{钉死 1（判死范围}✓✓）：\text{死的是}\ \mathcal P_2=\{(p,2p)\}_{p\le12}\ \textbf{作为统一供给族} \text{的能力}✗，\textbf{不是} \text{coupling gap 本身}✗$$
+$$\qquad \text{保留}✓：\delta_{\rm total}(I)=\sum_\nu\alpha_\nu\delta_I(p_\nu,2p_\nu)✓ \ \text{仍是一个}\textbf{真加法通道}✓（\S4✓）；\text{只是}\ \exists I\ \text{使全部项同时为 0}✓$$
+$$\textbf{钉死 2（正向引理链条写全}✓✓）：\operatorname{diam}I\ge\tfrac{\pi}{p}\Longrightarrow I\ \text{含奇数倍}\ \pi/(2p)\ \text{的内部点}\ x_0✓ \Longrightarrow \min_I\cos(2px)=-1✓$$
+$$\qquad \Longrightarrow M_{2p}\ \text{至少含一个}\ \textbf{不属于}\ M_p\ \text{的点}✓ \Longrightarrow M_p\cap M_{2p}=\varnothing✓ \Longrightarrow \text{由}\ \texttt{C-276}\ \S1\ \text{精确刻画得}\ \delta_I(p,2p)>0✓$$
+$$\qquad \textbf{关键}✓：\text{不是"内部有}\ -1"\text{本身}✗，\text{而是它}\textbf{保证两极小集不相交}✓ \Longrightarrow \text{链条干净}✓$$
