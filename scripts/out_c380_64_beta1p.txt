@@ -1,0 +1,17 @@
+point: residual 1.6e-15 ; x=[0.80093022 0.5611432  0.70245716 0.6261014  0.86884389]
+
+=== 1) full problem: cone {gradF_2q.h<=0, s_k gradF_k.h<=0} ===
+   [full] t* = -0.000000e+00  (t*>0 -> C1/B1: strict descent exists) ; h = [-0. -0. -0. -0. -0.]
+
+=== 2) CONTROL: even constraints deleted ===
+   [control] t* = +1.000000e+00  (t*>0 -> C1/B1: strict descent exists) ; h = [-1. -1. -1.  1.  1.]
+   => paired-control difference: t*_full = -0.000e+00 vs t*_control = +1.000e+00 ; changed? True
+
+=== 3) baseline direction h0 (is it in the corrected cone?) ===
+   even first-order: [-0.  0. -0. -0.] (all <= 0 ? False)
+   odd  first-order: [-0.481644  4.520787] (both <= 0 ? False)
+
+=== 4) second-order ledger on sampled cone directions ===
+   cone samples: 0 / 60000 ; strict C1 directions: 0 ; both-odd-equality: 0
+   no second-order descent found within the sampled cone (see exit classification)
+DONE
