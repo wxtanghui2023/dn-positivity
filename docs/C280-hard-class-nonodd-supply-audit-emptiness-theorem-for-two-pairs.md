@@ -30,7 +30,7 @@ $$\Longrightarrow \textbf{推论}✓✓：B\in H_\le\Longrightarrow \sum_j\cos\b
 
 ## §3 Type B(1,2) 的充要条件（**双向**✓✓）
 
-$$\textbf{命题}✓✓：\text{对}\ I_j=[\alpha_j,\beta_j]\subset[0,\pi]：\ M_1(I_j)\cap M_2(I_j)\ne\varnothing\iff \beta_j\le\tfrac{\pi}{2}$$
+$$\textbf{命题}✓✓（\textbf{须}\ \alpha_j<\beta_j✓，见}\ \S9\ \text{勘误}✓）：\text{对}\ I_j=[\alpha_j,\beta_j]\subset[0,\pi]，\alpha_j<\beta_j：\ M_1(I_j)\cap M_2(I_j)\ne\varnothing\iff \beta_j\le\tfrac{\pi}{2}$$
 $$\textbf{必要性}✓：M_1=\{\beta_j\}✓ \Longrightarrow \beta_j\in M_2✓ \Longrightarrow \cos(2\beta_j)\le\cos(2\theta)\ \forall\theta\in I_j✓$$
 $$\qquad \text{若}\ \beta_j>\tfrac{\pi}{2}：\text{① }2\alpha_j<\pi<2\beta_j\Longrightarrow \min=-1\Longrightarrow \cos(2\beta_j)=-1\Longrightarrow 2\beta_j=\pi\ \text{矛盾}✗；\text{② }2\alpha_j\ge\pi\Longrightarrow \text{区间}\subset[\pi,2\beta_j]\subset[\pi,2\pi]✓\ \text{上}\cos\ \textbf{递增}✓ \Longrightarrow \cos(2\beta_j)>\cos(2\alpha_j)✗\ \text{矛盾}✓$$
 $$\textbf{充分性}✓：\beta_j\le\tfrac{\pi}{2}\Longrightarrow 2\theta\ \text{在}\ [2\alpha_j,2\beta_j]\subset[0,\pi]\ \text{上递减}✓ \Longrightarrow \min=\cos(2\beta_j)\Longrightarrow \beta_j\in M_2✓ \blacksquare$$
@@ -39,7 +39,7 @@ $$\Longrightarrow \textbf{箱级}✓：Z_{1,2}=\Big\{B:\ \beta_j\le\tfrac{\pi}{2
 
 ## §4 Type B(1,4) 在 $\beta\le\tfrac{\pi}{2}$ 下的必要性（✓✓）
 
-$$\textbf{命题}✓✓：\text{若}\ \beta_j\le\tfrac{\pi}{2}\ \text{且}\ \beta_j\in M_4(I_j)，\text{则}\ \beta_j\le\tfrac{\pi}{4}$$
+$$\textbf{命题}✓✓（\textbf{须}\ \alpha_j<\beta_j✓，见}\ \S9✓）：\text{若}\ \beta_j\le\tfrac{\pi}{2}\ \text{且}\ \beta_j\in M_4(I_j)，\text{则}\ \beta_j\le\tfrac{\pi}{4}$$
 $$\textbf{证明}✓：\beta_j\in M_4\Longrightarrow\cos(4\beta_j)\le\cos(4\theta)\ \forall\theta\in I_j✓。\text{若}\ 4\beta_j>\pi：$$
 $$\qquad \text{① }4\alpha_j<\pi<4\beta_j\Longrightarrow \min=-1\Longrightarrow 4\beta_j=\pi\ \text{矛盾}✗；\qquad \text{② }4\alpha_j\ge\pi\Longrightarrow [4\alpha_j,4\beta_j]\subset[\pi,2\pi]\ \text{上}\cos\ \textbf{递增}✓ \Longrightarrow \cos(4\beta_j)>\cos(4\alpha_j)✗$$
 $$\qquad \Longrightarrow \text{唯一可行为}\ 4\beta_j\le\pi\iff \boxed{\beta_j\le\tfrac{\pi}{4}}✓ \blacksquare$$
@@ -81,3 +81,15 @@ $$\textbf{④ 未用}\ RH✓；\text{未改他档正本}✓；\text{未动}\ v4�
 ```
 $$\textbf{① 本档新增}✓：\text{三项各 0 命中} \Longrightarrow \textbf{本档首次命名}✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{零点刻画}✓（\texttt{C-276}\ \S1✓）；\text{Type B}✓（\texttt{C-277}✓）；\text{原点窗口／困难类}✓（\texttt{C-279}✓）；\text{组合空洞}✓（\texttt{C-275}✓）$$
+
+
+---
+
+## §9 勘误（**数学错误就地改正 ＋ 追加指针**✗✓，2026-09-21，见 `C-281` §4）
+
+$$\textbf{缺口}✗✓：\S3\ \text{的"Type B}(1,2)\iff\beta_j\le\tfrac{\pi}{2}"\ \textbf{对退化区间失效}✗：$$
+$$\qquad \alpha_j=\beta_j \Longrightarrow I_j\ \text{为单点} \Longrightarrow M_p=M_q=\{\beta_j\}\ \forall p,q \Longrightarrow \textbf{一切频率对同时 Type B}✗（\text{与}\ \beta_j\ \text{无关}✓）$$
+$$\Longrightarrow \S3/\S4\ \text{须补前提}\ \boxed{\alpha_j<\beta_j}✓；\S5\ \text{主定理}\ \textbf{成立于非退化箱类}✓$$
+$$\textbf{退化情形的等价化}✓✓：\text{全退化}\ B=\{\theta\}:\ B\in H_\le\iff\max_{k\le25}\sum_j\cos(k\theta_j)\le\tfrac12✓（\textbf{点态命题}✓，\textbf{弱于}\ m_5\ge\tfrac12✗，\textbf{未证}✗）$$
+$$\textbf{经验支持}⚠️✓：\texttt{C-272}\ \text{抽查}\ 100\%\ \text{箱采样点上}\ \max_k\sum\cos>\tfrac12✓ \Longrightarrow \text{未见反例}✓$$
+$$\textbf{责任}✓：\text{该退化缺口应由作者自查发现}✗ —— \text{记为本轮自误}\#2✓$$
