@@ -1,0 +1,14 @@
+point ok (res 1.6e-15)
+   [UNBOUNDED-h (as specified)] status=3 (The problem is unbounded) -> no finite optimum
+   [COMPACTIFIED |h|inf<=1] c = -14.8063885032 ; h=[ 1.        0.89613   1.       -0.260672 -1.      ] ; duals=[-0.       -0.       -0.566644 -0.404991 -0.       -0.028365]
+   [COMPACTIFIED |h|inf<=0.25] c = -3.7015971258 ; h=[ 0.25      0.224033  0.25     -0.065168 -0.25    ] ; duals=[-0.       -0.       -0.566644 -0.404991 -0.       -0.028365]
+
+recession check (why the unbounded version fails):
+Traceback (most recent call last):
+  File "/home/node/.openclaw/workspace/dn-project/scripts/c380_65_beta2_v2.py", line 25, in <module>
+    r=linprog(np.array([0,0,0,0,0,0.0]),A_ub=np.vstack([-v13,-v19,np.hstack([W,-np.ones((4,1))])]),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/numpy/core/shape_base.py", line 289, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 5 and the array at index 2 has size 6
