@@ -1,0 +1,33 @@
+=== B1-alpha-2: subdifferential KKT search over the 16 sign classes ===
+  sigma=[-1 -1 -1 -1  1] : g=2.170921 | |I|=1 (r=[12]) | A=[] | margin_max=2.52e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1 -1 -1  1  1] : g=1.980786 | |I|=1 (r=[8]) | A=[] | margin_max=3.73e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1 -1  1 -1  1] : g=1.610158 | |I|=1 (r=[11]) | A=[] | margin_max=4.08e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1 -1  1  1  1] : g=2.185363 | |I|=1 (r=[2]) | A=[] | margin_max=4.29e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1  1 -1 -1  1] : g=2.126723 | |I|=1 (r=[6]) | A=[] | margin_max=2.39e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1  1 -1  1  1] : g=2.074890 | |I|=1 (r=[3]) | A=[] | margin_max=3.46e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1  1  1 -1  1] : g=1.991008 | |I|=1 (r=[10]) | A=[] | margin_max=4.11e+00 | subdiff-KKT=False residual=nan
+  sigma=[-1  1  1  1  1] : g=2.114467 | |I|=1 (r=[11]) | A=[] | margin_max=3.17e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1 -1 -1 -1  1] : g=2.208618 | |I|=1 (r=[2]) | A=[] | margin_max=2.57e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1 -1 -1  1  1] : g=2.033457 | |I|=1 (r=[1]) | A=[] | margin_max=4.12e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1 -1  1 -1  1] : g=2.205453 | |I|=1 (r=[12]) | A=[] | margin_max=2.97e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1 -1  1  1  1] : g=2.084076 | |I|=1 (r=[0]) | A=[] | margin_max=4.04e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1  1 -1 -1  1] : g=2.116650 | |I|=1 (r=[2]) | A=[] | margin_max=3.36e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1  1 -1  1  1] : g=2.100589 | |I|=1 (r=[12]) | A=[] | margin_max=3.06e+00 | subdiff-KKT=False residual=nan
+  sigma=[ 1  1  1 -1  1] : g=2.303374 | |I|=1 (r=[3]) | A=[] | margin_max=2.17e+00 | subdiff-KKT=False residual=nan
+  sigma=[1 1 1 1 1] : g=2.345353 | |I|=1 (r=[0]) | A=[] | margin_max=4.54e+00 | subdiff-KKT=False residual=nan
+
+=== surviving subdifferential-KKT candidates (sorted) ===
+  g=1.610158 sigma=[-1 -1  1 -1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.989007 0.4519   0.8086   0.767185 0.963867]
+  g=1.980786 sigma=[-1 -1 -1  1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.990414 0.552348 0.1732   0.96739  0.232531]
+  g=1.991008 sigma=[-1  1  1 -1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.965079 0.228076 0.543507 0.179556 0.988917]
+  g=2.033457 sigma=[ 1 -1 -1  1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.543865 0.221132 0.987526 0.033113 0.168015]
+  g=2.074890 sigma=[-1  1 -1  1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.966047 0.250698 0.166552 0.457886 0.989834]
+  g=2.084076 sigma=[ 1 -1  1  1  1] |I|=1 A=[] KKT=False resid=nan
+     x = [0.456368 0.964856 0.816607 0.243485 0.987422]
+   total surviving (subdiff-KKT feasible) = 0 / 16
+DONE
