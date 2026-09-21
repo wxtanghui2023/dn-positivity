@@ -3226,3 +3226,15 @@ G3 缺口 ≠ envelope 精度
 结束不自动触发 M=6；「M≤11 定理表」计划正式撤销。
 **新纪律**：**先证明下游需要，再允许计算扩大**；禁止反模式「工具能力反过来制造任务」（能算 ≠ 值得算）。
 详 `C-268`／`PLAN-RPM-ladder-…` §9–§11。
+
+【定点更新·C-302：Hecke defect-existence 入口关闭】（2026-09-21 13:17，唐先生判定）
+**入口**：`C-301 §5` 强定义（单对象 ＋ 逐点失败 ＋ 其关系来自 `T_2 T_3 = T_3 T_2` 且非改名）⟹ **NO**。
+**检得三类对象均不合格**：① 交换恒等式本身及系数关系（Hecke algebra → commuting operators → simultaneous
+eigenvalues，无「失败后才出现」的逐点量）；② discrepancy 类（两对象比较，非单对象由失败生成）；③ Hecke 关系中的
+「误差项」（`a_m a_n = sum_{d|(m,n)} d^{k-1} a_{mn/d^2}`，为**精确关系**；(2,3)=1 时退化完全乘法，无剩余 defect）。
+**判定**：**Hecke 路 CLOSED / NO-GO** —— 不进 FSD 审计、不设计 defect、不把 Hecke 关系改写成 defect。
+**措辞纪律**：**不得**写成「RH 侧不存在此类对象」；正确陈述＝「在本次文献检索范围内未找到满足 C-301 强定义的现成 defect」。
+**负结论正收益**：拆掉诱人的表面同构（Liouville「2/3 交换」＝ failure-driven ≠ Hecke `T_2 T_3 = T_3 T_2` ＝
+algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failure ＋ 至少两种可交换的局部传播」，且二者须**文献中本来
+就存在**，不由我们为 RH 人工定义。
+详 `C-302`／`C-301`／`C-300`。
