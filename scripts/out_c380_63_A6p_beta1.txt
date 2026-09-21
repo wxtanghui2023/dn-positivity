@@ -1,0 +1,36 @@
+=== point restored: residual 1.55e-15 ; x = [0.80093022 0.5611432  0.70245716 0.6261014  0.86884389] ===
+   odd values (freq): {1: 0.833127, 3: -0.072341, 5: -0.468517, 7: -0.026699, 9: 0.040953, 11: -0.6516, 13: -0.86885, 15: 0.006992, 17: 0.860035, 19: 0.86885, 21: 0.739004, 23: 0.747002, 25: -0.334529}
+   t = 0.868850348322
+
+=== A6'-(1) base tie precision, 40 dps ===
+   Delta_tie = | |F_13| - |F_19| | = 1.3531521e-15
+   F_13 = -0.86885034832244968202 ; F_19 = 0.86885034832244832887 (40 dps)
+
+=== A6'-(2) relative perturbation test ===
+   sd=1e-08 : max delta_odd=5.840e-07 (6.72e-07 relative to t=0.8689) ; F_13 dominant 144/300 ; expected ~150
+   sd=1e-06 : max delta_odd=6.222e-05 (7.16e-05 relative to t=0.8689) ; F_13 dominant 145/300 ; expected ~150
+   sd=1e-04 : max delta_odd=7.386e-03 (8.50e-03 relative to t=0.8689) ; F_13 dominant 129/300 ; expected ~150
+   sd=1e-02 : max delta_odd=6.330e-01 (7.28e-01 relative to t=0.8689) ; F_13 dominant 159/300 ; expected ~150
+   => dominance flips freely and delta_odd scales linearly with sd: consistent with an EXACT base tie
+
+=== A6'-(3) omega is structural, not a tie-break ===
+   omega=(0.903717944,0.096282056): residual=1.500e-09 ; lambda=[0.83791706 0.98971406 0.04185319 0.12728511] ; lambda>=0? True
+   omega=(0.500000000,0.500000000): residual=2.020e+00 ; lambda=[ 1.00234653  1.208776   -0.12501982  0.0698692 ] ; lambda>=0? False
+   omega=(1.000000000,0.000000000): residual=4.816e-01 ; lambda=[0.79870254 0.93747032 0.08165047 0.14097813] ; lambda>=0? True
+   omega=(0.000000000,1.000000000): residual=4.521e+00 ; lambda=[ 1.20599051e+00  1.48008167e+00 -3.31690110e-01 -1.23974000e-03] ; lambda>=0? False
+
+=== B1-beta-1: critical cone and second-order ledger ===
+   singular values of the active-even gradient matrix: [69.04807155 41.25383956 28.93114893 14.04917038]
+   null direction h0 = [0.69753232 0.34098495 0.40239657 0.33576379 0.35002514]
+   first-order odd changes: s1 dF13.h0 = -4.816444e-01 ; s2 dF19.h0 = +4.520787e+00 ; omega*a+(1-omega)*b = -1.500e-09
+   oriented so the odd MAX decreases: max(a,b) = +4.816444e-01 (<0 required)
+   --- ledger: D2 F_k[h,h] = -k^2 sum_j gamma_j cos(k phi_j) h_j^2 ---
+   k=13 (odd active      ): D2 = +7.497015e+01
+   k=19 (odd active      ): D2 = -1.462387e+02
+   k=12 (even F_6 active ): D2 = -5.304081e+01
+   k=16 (even F_8 active ): D2 = -4.691532e+01
+   k=28 (even F_14 active): D2 = -2.771844e+02
+   k=36 (even F_18 active): D2 = +2.221884e+02
+
+   (constraint F<=1/2 active at the point: D2 > 0 => violated for any step along +-h => blocked)
+DONE
