@@ -14,7 +14,7 @@ $$\textbf{三出口}✓✓：\text{① }\textbf{REOPEN}✓（\text{确曾漏掉�
 
 $$\textbf{不重开（写死）}✗✓：C\text{-284}／C\text{-285（有限整数频率族}✓）；\text{M-TOWER 已知 β-wall}✓；\text{explicit-formula} \to \text{zero-statistics 旧墙}✓；\text{Palojärvi／}RP_M\ \textbf{已封存分支}✓；\text{已证只是线性代数重编码者}✓；\text{已证与当前机制同构者}✓$$
 
-$$\textbf{防循环}✗✓：\textbf{不允许}因「旧 GAP 可能漏审」而}\ \textbf{重新发明筛选框架}✗；\textbf{不}设新判据 ✗$$
+$$\textbf{防循环}✗✓：\textbf{不允许}因「旧 GAP 可能漏审」而\ \textbf{重新发明筛选框架}✗；\textbf{不}设新判据 ✗$$
 
 ## §1 优先级口径（✓✓）
 
