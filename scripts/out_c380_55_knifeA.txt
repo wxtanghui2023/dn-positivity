@@ -1,0 +1,22 @@
+=== phase 1: random starts (N=6000, 600 it) ===
+   [rand] trajectory: ['100:2.3845', '200:1.3912', '300:1.3912', '400:1.3912', '500:1.3912', '600:1.3912']
+   [phase1] g = 1.391234 | min_j x_j = 0.548137 (dist to D_partial) | min |c_i-c_j| = 0.041850 (dist to D_coll)
+        even slack: max_r F_2r = 0.484578 at r=9 ; margin 1/2 - max = +0.015422 ; feasible = True
+        x = [0.548137 0.680479 0.855959 0.613185 0.772942]
+
+=== phase 2: degenerate-biased (near x_j=0 / near-coincident) ===
+   [degen] trajectory: ['100:1.8443', '200:1.8443', '300:1.8443', '400:1.6539', '500:1.3001', '600:1.3001']
+   [phase2] g = 1.300077 | min_j x_j = 0.058936 (dist to D_partial) | min |c_i-c_j| = 0.057719 (dist to D_coll)
+        even slack: max_r F_2r = 0.434577 at r=7 ; margin 1/2 - max = +0.065423 ; feasible = True
+        x = [0.10793  0.311372 0.215427 0.165179 0.058936]
+
+=== phase 3: fine refinement (N=1500, 1500 it, step 1e-2) ===
+   [fine] trajectory: ['250:1.2122', '500:1.0604', '750:1.0129', '1000:1.0100', '1250:1.0100', '1500:0.9878']
+   [refined] g = 0.987800 | min_j x_j = 0.551115 (dist to D_partial) | min |c_i-c_j| = 0.041481 (dist to D_coll)
+        even slack: max_r F_2r = 0.492755 at r=4 ; margin 1/2 - max = +0.007245 ; feasible = True
+        x = [0.702989 0.873806 0.797976 0.551115 0.628434]
+
+=== summary ===
+   best g = 0.987800   (C-3850 gave 0.876069)
+   multiplicity within 1e-3 of best = 1
+DONE
