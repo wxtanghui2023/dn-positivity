@@ -244,8 +244,27 @@ Direct inspection of the comparison defining the boundary: the two sides involve
 $e^{\gamma}n\log\log n$ respectively, and $e^{\gamma}$, $\log\log n$ are Archimedean objects.
 \end{proof}
 
+\begin{proposition}[Incompatibility of non-vacuity and one-sided discrimination]\label{prop:incompat}
+Suppose that \textup{(i)} every non-vacuous balancing factor for the involution $\iota$ is Archimedean,
+\textup{(ii)} the Archimedean factors available in the canonical framework are $\iota$-symmetric, and
+\textup{(iii)} producing a separator whose output is one-sided in the $\iota$-variable requires data that
+are not $\iota$-invariant. Then no separator can be simultaneously non-vacuous and one-sided: the two
+requirements are mutually exclusive within this framework.
+\end{proposition}
+\begin{proof}
+By \textup{(i)} a non-vacuous balancing factor is Archimedean; by \textup{(ii)} it is $\iota$-symmetric,
+hence every datum derived from it is $\iota$-symmetric as well; by \textup{(iii)} a one-sided output
+requires non-$\iota$-invariant data. Contradiction.
+\end{proof}
+
+\begin{remark}
+Proposition~\ref{prop:incompat} isolates the remaining degree of freedom to a non-canonical,
+$\iota$-breaking Archimedean object. We neither construct such an object nor assert its existence or
+non-existence; the statement is about the framework, not about the objects alone.
+\end{remark}
+
 \begin{remark}[Scope boundary]
-Together, Propositions~\ref{prop:class}--\ref{prop:robin} delimit the scope of the mechanism: it is a
+Together, Propositions~\ref{prop:class}--\ref{prop:incompat} delimit the scope of the mechanism: it is a
 strictly proved \emph{local geometric} separation statement with an exact constant, and the passage to
 arithmetic/spectral content requires an interface that is not supplied here. We state the resulting
 separation as a scope boundary,
