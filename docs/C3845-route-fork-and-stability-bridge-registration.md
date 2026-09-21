@@ -63,8 +63,8 @@ $$\textbf{零计算}✓（\text{登记}✓）；\ D1 = 0✓；\ \text{未改他�
 $$\textbf{① 收束点}✓✓：\boxed{\text{C-380 系列最干净的收束点} = C\text{-}380\text{-}44：\textbf{Level 2 完成，Level 3 入口发现 GAP，停}}✓✓$$
 $$\textbf{② 两条永久审计原则（冻结）}✓✓：$$
 $$\qquad \textbf{(a)}✓✓ \ \boxed{\text{constraint symmetry} \ne \text{solution symmetry}}✓✓（\text{永久保留}✓）；$$
-$$\qquad \textbf{(b)}✓✓ \ \textbf{不}把\ \Delta_4 \approx 0.000878\ \textbf{强行解释成} \text{趋于零的数值噪声}✗✓（\text{不得当作"近似坍缩"}✓）$$
-$$\textbf{③ 停止令}✓✓：\textbf{不再}在 C-380 支上做任何"补丁式"计算✗✓$$
+$$\qquad \textbf{(b)}✓✓ \ \textbf{不}把\ \Delta_4 \approx 0.000878\ \textbf{强行解释成} \text{趋于零的数值噪声}✗✓（\text{不得当作「近似坍缩」}✓）$$
+$$\textbf{③ 停止令}✓✓：\textbf{不再}在 C-380 支上做任何「补丁式」计算✗✓$$
 $$\textbf{④ 唯一值得重开的数学问题（}\textbf{未列为现成路线}✗✓）✓✓：$$
 $$\qquad \boxed{Q_5(X) - \tfrac{341}{128} \ge \Psi(\Delta_4)}✓✓，\ \text{其中}\ \Psi(\delta) > 0\ \text{对}\ \delta > 0✓✓$$
 $$\qquad \Longrightarrow \ \text{比要求严格}\ \Delta_4 = 0\ \textbf{弱得多}✓✓ \Longrightarrow \textbf{可能绕过}\ C\text{-}380\text{-}44\ \text{的坍缩 GAP}✓✓$$
