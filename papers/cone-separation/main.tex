@@ -223,15 +223,18 @@ Immediate from the displayed identity, which is exactly \textup{(H1)} rewritten 
 \end{proof}
 
 \begin{proposition}[Canonical (universal) obstruction]\label{prop:iota}
-Suppose the available arithmetic data are invariant under the involution $\iota$ associated with the
-functional equation (so that condition sets are $\iota$-invariant). Then no one-sided, axis-breaking
-separator can be produced from them: a symmetric datum cannot generate an asymmetric (one-sided)
-separation object.
+Let $\iota$ be the involution attached to the functional equation, and suppose the datum used by a
+candidate separator is \emph{canonical}, i.e.\ determined by the completion type alone and not by the zero
+configuration of the object. Then the datum is $\beta$-blind: it takes the same value for every object of
+the given type. Consequently a canonical construction cannot supply a separator that discriminates $\beta$,
+and in particular cannot supply the one-sided, axis-breaking separator required at the interface.
 \end{proposition}
 \begin{proof}
-If a predicate $P$ satisfies $P(\beta)=P(\iota\beta)$ for all admissible data, then it cannot separate
-$\beta$ from $\iota\beta$; a one-sided separator by definition takes different values on the two sides,
-so it cannot be realised by such $P$.
+By canonicity the datum is a function of the completion type only, hence constant across all objects of that
+type, whereas $\beta$ varies with the object's zero configuration; a constant cannot separate two different
+values of $\beta$, so no $\beta$-discriminating output arises. We do \emph{not} assume that arithmetic data
+are $\iota$-invariant: $\iota$ remains the background structure of the functional equation, and no general
+invariance claim about arithmetic data is asserted.
 \end{proof}
 
 \begin{proposition}[Archimedean orientation at the membership boundary]\label{prop:robin}
