@@ -1,0 +1,27 @@
+=== B1-alpha-2b: SLSQP refinement from the C-3850 point (multi-start per sigma) ===
+  sigma=[-1 -1 -1 -1  1] : g=3.240859005 | active even A=[] | tied odd r=[2] | min margin=1.54e-04
+  sigma=[-1 -1 -1  1  1] : g=2.729758871 | active even A=[] | tied odd r=[12] | min margin=1.54e-04
+  sigma=[-1 -1  1 -1  1] : g=2.488020775 | active even A=[] | tied odd r=[10] | min margin=1.54e-04
+  sigma=[-1 -1  1  1  1] : g=3.258069180 | active even A=[] | tied odd r=[12] | min margin=3.31e-03
+  sigma=[-1  1 -1 -1  1] : g=2.721005559 | active even A=[] | tied odd r=[8] | min margin=1.54e-04
+  sigma=[-1  1 -1  1  1] : g=3.058522092 | active even A=[] | tied odd r=[8] | min margin=1.54e-04
+  sigma=[-1  1  1 -1  1] : g=0.876060870 | active even A=[] | tied odd r=[6] | min margin=1.54e-04
+  sigma=[-1  1  1  1  1] : g=2.841183978 | active even A=[] | tied odd r=[9] | min margin=1.54e-04
+  sigma=[ 1 -1 -1 -1  1] : g=3.872187239 | active even A=[] | tied odd r=[4] | min margin=1.54e-04
+  sigma=[ 1 -1 -1  1  1] : g=2.009147656 | active even A=[] | tied odd r=[4] | min margin=1.54e-04
+  sigma=[ 1 -1  1 -1  1] : g=3.042421554 | active even A=[] | tied odd r=[6] | min margin=1.54e-04
+  sigma=[ 1  1 -1 -1  1] : g=3.025557638 | active even A=[] | tied odd r=[7] | min margin=1.54e-04
+  sigma=[ 1  1  1 -1  1] : g=2.623813881 | active even A=[] | tied odd r=[0] | min margin=1.54e-04
+  sigma=[1 1 1 1 1] : g=4.207745676 | active even A=[] | tied odd r=[0] | min margin=2.72e-04
+
+=== checks on the overall best point ===
+   g = 0.876060870  (< 0.876069 + eps ? True)
+   all even constraints satisfied ? True (min margin 1.545e-04)
+   active even set A = [] ; tied odd indices = [6]
+   phi/pi = [0.146837 0.230496 0.183297 0.209057 0.117627] ; x = [0.801874 0.561119 0.703473 0.627211 0.869546]
+
+=== subdifferential LP audit (only meaningful if the above is a genuine local min) ===
+   tol=1e-07 : |I|=1 A=[] -> subdiff-KKT=False residual=nan
+   tol=1e-06 : |I|=1 A=[] -> subdiff-KKT=False residual=nan
+   tol=1e-05 : |I|=1 A=[] -> subdiff-KKT=False residual=nan
+DONE
