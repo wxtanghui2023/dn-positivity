@@ -77,3 +77,30 @@ $$\qquad \text{OpenAI, \emph{Ten advances in mathematics and theoretical compute
 $$\qquad \text{OpenAI, GPT-6 Astra 模型页 ✓（数学成果＝}\textbf{素数间隙}✓\text{）}$$
 $$\qquad \text{MathOverflow 307479}\ \emph{Goldbach's conjecture for the Liouville function}✓（\text{GPY 线索}⚠️\text{，论坛主张}✗）$$
 $$\qquad \text{中文报道（加西网／新智元系）✓ —— \textbf{二手}✗，仅作事件来源}✓$$
+
+---
+
+## §8 追加：唐先生独立核查（2026-09-21 12:52）＋状态修正（✓✓）
+
+**① 可下载、可审计的一手论文（已确认存在）**：
+
+- **Mangerel, IMRN 2024（Open Access）**：《On a Goldbach-Type Problem for the Liouville Function》
+  - 定理（转述）：`N >= 11 => |sum_{n<N} lambda(n) lambda(N-n)| < N - 1`
+  - 链接：arXiv:2404.12117 ／ Durham Repository PDF ／ Oxford Academic 正式版
+- **Mangerel, arXiv:2412.17199（2024-12）**：《On Shusterman's Goldbach-type problem for sign patterns of the Liouville function》
+  - **此处才明确出现**：`a + b = N` 且 `lambda(a) = lambda(b) = -1`
+  - 结论：**在 GRH 假设下**，对**充分大的偶数 N** 成立（✓ 与唐先生先前所述一致）
+
+**② 状态修正（作者自我纠正）**：唐先生指出自己上一条把"网上所谓 Astra 无条件解决此问题"**说得太接近已确认事实**。本档确认：
+
+- OpenAI 官方页面当前公开的数学突破只有两项：**素数间隙 240 -> 186** ✓；**大素数间隙一个长期不变项得到改进** ✓
+- **未**在该页给出"无条件证明 Liouville-Goldbach"的论文或 Lean 仓库 ✗
+- 因此严谨状态为：`Mangerel 两篇可下载并审计` ✓ ／ `"Astra 无条件证明 lambda(a)=lambda(b)=-1" 的原始证明材料，尚未找到` ✗
+
+**③ 审计建议（唐先生提出，我方采纳）**：
+
+- **优先下载 arXiv:2412.17199** ✓ —— 理由：它把 **GRH 假设在证明中的进入点**写得很清楚
+- 若 Astra 真把它变成无条件结果，则**可直接做"前后证明链差分审计"** ✓ —— 即对比"哪一步用了 GRH、Astra 用什么替代" ✓
+- 这比听二手报道有价值得多 ✓；且**不需要**新的判据体系 ✓（沿用既有审计纪律 ✓）
+
+**④ 纪律不变**：仍为 `[外部报道 · 待核验]` ✗；不进 RH 主线 ✗；不进候选池排序 ✗；核验前不更新任何档案结论 ✗。
