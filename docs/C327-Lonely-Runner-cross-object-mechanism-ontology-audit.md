@@ -10,7 +10,7 @@ FREEZE-ACK: 本档即冻结审计
 
 $$\textbf{① 出口}✓：\boxed{\textbf{NO SUCH COMPATIBILITY FOUND}}✓（\text{操作级}✓）$$
 $$\textbf{② 核心审计点答案}✓✓：\text{「速度组} \to \text{torus flow／orbit」}\ \textbf{是}\ \textbf{定义级／等价级重述}✓，\textbf{不是}\ \textbf{第二操作}✗✓（\text{见 §3}✓）$$
-$$\textbf{③ 资产}✓✓：\text{LR 拥有三者中}\ \textbf{最丰富的等价网络}✓（\text{view-obstruction／flow／chromatic／zonotope／Bohr／Diophantine}✓）\ —— \textbf{仍是等价级}✗✓，\textbf{不}计为兼容律}✗$$
+$$\textbf{③ 资产}✓✓：\text{LR 拥有三者中}\ \textbf{最丰富的等价网络}✓（\text{view-obstruction／flow／chromatic／zonotope／Bohr／Diophantine}✓）\ —— \textbf{仍是等价级}✗✓，\textbf{不}\ \text{计为兼容律}✗$$
 
 ## §1 ① 精确定义（✓✓，防混淆 ✓）
 
@@ -37,11 +37,11 @@ $$\textbf{防误写}✓✓：\textbf{「某个等价 formulation」} \ne \textbf
 
 ## §3 ③ 跨对象操作（✓✓，**核心审计点** ✓）
 
-$$\textbf{入口}✓：V \mapsto \text{torus 轨道}\ t \mapsto (t v_1,\dots,t v_n) \bmod 1✓（\text{单参数子群轨道}✓，已有结构}✓）$$
+$$\textbf{入口}✓：V \mapsto \text{torus 轨道}\ t \mapsto (t v_1,\dots,t v_n) \bmod 1✓（\text{单参数子群轨道}✓，\text{已有结构}✓）$$
 $$\textbf{关键判定}✓✓：\text{该映射}\ \textbf{由}\ V\ \text{完全决定}✓，\text{且}\ G(V)\ \textbf{由该流定义}✓ \Longrightarrow \textbf{定义级重述}✗✓，\textbf{不是}\ \textbf{第二独立操作}✗✓$$
 $$\qquad \textbf{判据}✓：\text{要成为第二操作，须存在}\ T_2: X \to X\ \textbf{与}\ T_1\ \text{独立}✓；\text{此处}\ T_1\ \text{与}\ T_2\ \text{实为同一动力系统的两种语言}✗✓$$
 $$\textbf{其它跨对象对应}✓：\text{轨道} \to \text{view-obstruction／覆盖}✓；\to \text{格／zonotope}✓；\to \text{同步 Diophantine 逼近}✓；\to \text{间距／谱对象}✓ \Longrightarrow \text{均属}\ \textbf{等价级}✓✓$$
-$$\textbf{排除}✗✓：V \mapsto aV✓（\text{归一化／重参数化}✓，C\text{-312}／C\text{-313 已判 ✓）；t \mapsto t + s✗$$
+$$\textbf{排除}✗✓：V \mapsto aV✓（\text{归一化／重参数化}✓，\text{C-312／C-313 已判}✓）；t \mapsto t + s✗$$
 
 ## §4 ④ compatibility（✓✓）
 
