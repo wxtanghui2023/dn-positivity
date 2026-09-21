@@ -1,0 +1,33 @@
+=== 0) feasibility certification of the known seeds (TRUE functions, item by item) ===
+  C-3850 : max(F_2r - 1/2) = -1.543e-04  certified? True | max F_2r = 0.499846 | min margin = 1.543e-04
+  C-3855 : max(F_2r - 1/2) = -7.252e-03  certified? True | max F_2r = 0.492748 | min margin = 7.252e-03
+
+=== 1) feasibility recovery (independent object, on demand) ===
+
+=== 2) per-sigma bundle/trust-region from certified feasible points (true-function acceptance) ===
+  sigma=[-1 -1 -1 -1  1] : V_sigma >= 2.579755268 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[-1 -1 -1  1  1] : V_sigma >= 2.630631235 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[-1 -1  1 -1  1] : V_sigma >= 0.868850348 | certified feasible (viol=1.8e-15) | boundary=False
+  sigma=[-1 -1  1  1  1] : V_sigma >= 2.388866440 | certified feasible (viol=-9.1e-03) | boundary=False
+  sigma=[-1  1 -1 -1  1] : V_sigma >= 2.567816089 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[-1  1 -1  1  1] : V_sigma >= 2.874981047 | certified feasible (viol=9.9e-13) | boundary=False
+  sigma=[-1  1  1 -1  1] : V_sigma >= 0.868850348 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[-1  1  1  1  1] : V_sigma >= 2.501385000 | certified feasible (viol=1.8e-15) | boundary=False
+  sigma=[ 1 -1 -1 -1  1] : V_sigma >= 2.844372058 | certified feasible (viol=9.9e-13) | boundary=False
+  sigma=[ 1 -1 -1  1  1] : V_sigma >= 1.766624708 | certified feasible (viol=-1.1e-16) | boundary=False
+  sigma=[ 1 -1  1 -1  1] : V_sigma >= 2.696477896 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[ 1 -1  1  1  1] : V_sigma >= 2.840709463 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[ 1  1 -1 -1  1] : V_sigma >= 2.844372058 | certified feasible (viol=2.7e-15) | boundary=False
+  sigma=[ 1  1 -1  1  1] : V_sigma >= 2.429976600 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[ 1  1  1 -1  1] : V_sigma >= 2.579774782 | certified feasible (viol=1.0e-12) | boundary=False
+  sigma=[1 1 1 1 1] : V_sigma >= 4.100586139 | certified feasible (viol=9.7e-13) | boundary=False
+
+=== 3) gamma = min over sigma of V_sigma (order locked: min_sigma then min_x) ===
+   gamma^(13) upper bound (this run) = 0.868850348 at sigma = [-1  1  1 -1  1]
+   x = [0.80093022 0.5611432  0.70245716 0.6261014  0.86884389] ; min margin = -9.984e-13
+
+=== 4) KKT audit (subdifferential LP, interior/boundary separated) ===
+   tol=1e-07 : |I|=2 A=[3, 4, 7, 9] bnd=[] -> KKT=True (INTERIOR)
+   tol=1e-06 : |I|=2 A=[3, 4, 7, 9] bnd=[] -> KKT=True (INTERIOR)
+   tol=1e-05 : |I|=2 A=[3, 4, 7, 9] bnd=[] -> KKT=True (INTERIOR)
+DONE
