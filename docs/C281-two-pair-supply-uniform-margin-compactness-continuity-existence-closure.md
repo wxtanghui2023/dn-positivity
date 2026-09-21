@@ -79,3 +79,43 @@ $$\textbf{④ 不声称}✓：\text{不声称}\ c_*\ \text{足够大}✗；\text
 ```
 $$\textbf{① 本档新增}✓：\text{三项各 0 命中} \Longrightarrow \textbf{本档首次命名}✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{min 的 Lipschitz 性}✓（\text{经典}✓）；\text{零点刻画}✓（\texttt{C-276}✓）；\text{两对空交定理}✓（\texttt{C-280}✓）；\text{困难类}✓（\texttt{C-279}✓）$$
+
+---
+
+## §8 定理范围降级 ＋ 路径宽度封死 ＋ 新缺口（2026-09-21 唐先生指令 ✓）
+
+### §8.1 C 级降级为 $C_\varepsilon$（**严格表述**✓✓）
+
+$$\textbf{正确表述}✓✓（\textbf{不得}简称「无条件 C 级统一余量」✗）：$$
+$$\qquad \boxed{\forall\varepsilon>0,\ \exists c_*(\varepsilon)>0:\ \Delta(B)\ge c_*(\varepsilon)\quad\forall B\in H_\le\cap\mathcal K_\varepsilon}✓$$
+$$\qquad \textbf{而非}✗：\inf_{B\in H_\le}\Delta(B)>0\quad（\text{退化点会摧毁全空间统一余量}✗，见\ \S4✓）$$
+$$\textbf{定名}✓：\textbf{带宽度下限箱类上的统一 coupling gap}（记\ C_\varepsilon✓），\text{不得写成无条件 C}✗$$
+
+### §8.2 路径宽度下限引理（**已按代码封死**✓✓）
+
+$$\textbf{代码证据}✓✓（\texttt{scripts/rpm\_certificate\_v4.py}）：$$
+$$\qquad \text{L142：}\texttt{jm = argmax(wid)} \Longrightarrow \textbf{只取最宽维}✓；\qquad \text{L143：}\texttt{mid = (A+B)/2} \Longrightarrow \textbf{只取中点}✓$$
+$$\qquad \text{L144–146：两子箱共享 mid，}Dn=Dq+1 \Longrightarrow \textbf{每次分裂恰把一个坐标二等分}✓$$
+$$\qquad \Longrightarrow \textbf{无} \text{非均匀分裂}✗、\textbf{无} \text{提前按坐标细分}✗、\textbf{无} \text{重切／合并}✗✓$$
+$$\textbf{引理}✓✓：\text{叶箱深度}\ d\le D_{\max} \Longrightarrow \text{每个坐标被二等分}\le d\ \text{次} \Longrightarrow \min_j(\beta_j-\alpha_j)\ \ge\ h\cdot2^{-D_{\max}}\cdot(1-\delta_{\rm fp})✓$$
+$$\qquad h=\tfrac{P_f}{N_0}✓（\text{初始格宽}✓）；\delta_{\rm fp}＝中点浮点舍入累积余量✓ \Longrightarrow \textbf{取}\ \varepsilon_0:=h\cdot2^{-(D_{\max}+2)}>0✓✓$$
+$$\qquad \Longrightarrow \text{L137–139：超限箱计未决并丢弃}✓ \Longrightarrow \textbf{成功运行（未决=0）中所有认证箱}\subseteq\mathcal K_{\varepsilon_0}✓✓$$
+$$\textbf{实参}✓：\text{M=5 运行}\ (N_0=12,\ P_f\approx\pi,\ D_{\max}=80) \Longrightarrow h\approx0.2618 \Longrightarrow \varepsilon_0\approx5.4\times10^{-26}>0✓$$
+
+### §8.3 ⚠️ 新缺口：域端点 $P_f$ 略小于 $\pi$（✗✓ **v4 回归**）
+
+$$\textbf{事实}✗✓：\texttt{L94}\ P_f=\texttt{float(Decimal(}\pi\texttt{))}=\texttt{math.pi}=3.141592653589793✓，\text{而}\ \pi=3.141592653589793238\ldots \Longrightarrow P_f<\pi\ \text{差}\approx1.22\times10^{-16}✓$$
+$$\qquad \Longrightarrow \text{域}\ [0,P_f]^5\subsetneq[0,\pi]^5✓ \Longrightarrow \textbf{漏掉薄片}\ \{\varphi:\ \exists j\ \varphi_j\in(P_f,\pi]\}✗$$
+$$\textbf{对照}✓：\texttt{scripts/m3\_certificate\_interval\_arith.py}\ \text{用}\ P=\texttt{PI\_HI}=\tfrac{3141592653589794}{10^{15}}>\pi✓（\text{严格覆盖}✓）；\texttt{C-224}\ \text{亦如此}✓$$
+$$\qquad \Longrightarrow \textbf{这是 v4 引入的回归}✗✓（\text{老证书无此问题}✓）$$
+$$\textbf{后果}✗：\text{v4 的「}\forall\varphi\in[0,P_f]^5」\ \textbf{不足以} \text{推出}\ \forall\varphi\in[0,\pi]^5✗ \Longrightarrow \textbf{须修复}✓$$
+$$\qquad \textbf{修法}✓：P_f\leftarrow\texttt{nextafter}(\pi,+\infty)✓\ \text{或直接复用有理}\ \texttt{PI\_HI}✓ \Longrightarrow \textbf{需重跑}✓ \Longrightarrow \text{登记为遗留}✓$$
+$$\qquad \textbf{性质}⚠️✓：\text{不影响本档的}\ C_\varepsilon\ \text{结论}✓（\text{那是在抽象箱类上证的}✓）；\text{只影响 v4 的数值证书覆盖}✗$$
+
+### §8.4 `C-282` 预注册（**阈值桥审计**，暂不执行 ✓）
+
+$$\textbf{桥}✓：\text{由 pair}\ (p,q)\ \text{的证书需}\ \Delta(B)>\Gamma_{p,q}(B):=\tfrac12-\tfrac{q_p(B)+q_q(B)}{2}✓（\text{即}\ \inf_B H_\lambda>\tfrac12\Lambda✓，见\ \texttt{C-281}\ \S3✓）$$
+$$\qquad \Longrightarrow \text{真正待证}✓：\boxed{\inf_{B\in H_\le\cap\mathcal K_{\varepsilon_0}}\big[\Delta(B)-\Gamma(B)\big]\ >\ 0\ ?}✓$$
+$$\textbf{预注册判据}✓✓（\text{进入计算前必须先写}✗）：\text{① 成功＝给出显式正下界或严格闭合的紧性论证}✓；\text{② 失败＝只能给数值证据}✗；\text{③ 禁止无界数值搜索}✗；\text{④ 先定}\ \varepsilon_0\ \text{与}\ \Gamma\ \text{的定义域}✓$$
+$$\textbf{战略链条}✓✓：H_\le\stackrel{\texttt{C-280}}{\Longrightarrow}\text{两对不能同时零耦合}\stackrel{\texttt{C-281}}{\Longrightarrow}\Delta\ge c_*(\varepsilon)>0✓$$
+$$\qquad \textbf{但}\ \textbf{不得} \text{写成「M=5 已可证」}✗ —— \text{所缺正是}\ c_*(\varepsilon)\ \text{vs}\ \Gamma(B)\ \text{这道阈值桥}✗✓$$
