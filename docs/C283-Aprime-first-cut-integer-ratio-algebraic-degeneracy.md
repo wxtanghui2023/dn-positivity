@@ -78,3 +78,12 @@ $$\boxed{\textbf{因此}✓：\textbf{不应} \text{一刀切降级「有限频�
 $$\textbf{① 本档新增}✓：\text{三项各 0 命中} \Longrightarrow \textbf{本档首次命名}✓$$
 $$\textbf{② 档案已有（引用）}✓✓：\text{零点刻画}✓（\texttt{C-276}\ \S1✓）；\text{常数}\ \tfrac{7}{16}✓（\texttt{C-276}\ \S4✓）；\text{奇比率}\ \delta\equiv0✓（\texttt{C-276}\ \S3✓）；\text{组合空洞定理}✓（\texttt{C-275}✓）；\Delta-\Gamma\ \text{恒等式}✓（\texttt{C-282}✓）$$
 $$\textbf{③ 边界}✓：\text{零计算}✗；\text{未读 pending}✗；\text{未枚举}\ (p,q,\lambda)✗；\text{只做}\ q=2p,\lambda=\tfrac12✓；\text{未用}\ RH✓；\text{未动}\ v4✗；\texttt{C-181}\ \text{的}\ u\le5\ \text{仍为 GAP-A}✗✓$$
+
+---
+
+## §8 勘误（**数学错误就地改正 ＋ 追加指针**✗✓，2026-09-21，唐先生指出，见 `C-284`）
+
+$$\textbf{撤回}✗：\S6\ \text{称存活面为非整数比（例：(2,3),(2,5)）}\textbf{，完全错误}✗$$
+$$\textbf{错因}✗✓：\text{我用的判据是「}\cos(qx)\ \text{是否为}\ \cos(px)\ \text{的函数}✓」；\textbf{正确判据}是「\text{两者是否}\textbf{同为} \cos(dx)\ \text{的函数}，d=\gcd(p,q)✓」 —— \textbf{恒为真}✓✓$$
+$$\qquad \text{切比雪夫}✓：\cos(px)=T_{p/d}(\cos dx)✓，\ \cos(qx)=T_{q/d}(\cos dx)✓ \Longrightarrow \textbf{任意}\ p,q\ \text{皆退化为单变量}✗✓$$
+$$\Longrightarrow \S6\ \text{的「存活集」}\textbf{为空}✗ \Longrightarrow \text{整个 A 出口由}\ \texttt{C-284}\ \text{统一封口}✓✓；\text{记为本轮自误}\#3✓$$
