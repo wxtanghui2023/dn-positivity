@@ -40,7 +40,7 @@ $$\Longrightarrow \textbf{两个 gap 均已被后续链闭合}✓✓ \Longrighta
 ## §4 四问回答与判定（✓✓）
 
 $$\textbf{① Failure}✗：\text{无 failure set}✓（\text{分析型缺口}✓）$$
-$$\textbf{② 两传播}✗：\text{未见}✓（\text{「two remaining gaps」 中的「two」}\ \textbf{指两处缺口}✓，\textbf{不是} 两个传播}✗✓——\text{正合唐先生提醒}✓✓）$$
+$$\textbf{② 两传播}✗：\text{未见}✓（\text{「two remaining gaps」中的「two」}\ \textbf{指两处缺口}✓，\textbf{不是}\ \text{两个传播}✗✓\ \text{—— 正合唐先生提醒}✓✓）$$
 $$\textbf{③ 兼容律}✗：\text{未见}✓$$
 $$\textbf{④ 出口}✓✓：\text{不从四问判} \text{GAP CONFIRMED}✗，\text{而是}\ \textbf{回查即已闭合}✓ \Longrightarrow \boxed{\textbf{CLOSED}}✓$$
 $$\textbf{校准样本}✓✓（\text{唐先生}✓）：\text{「存在一个尚未证明的结构性命题」} \ne \text{「存在一个值得 FSD 重开的 failure」}✓✓ \Longrightarrow \text{本档复核确认}✓$$
@@ -52,5 +52,5 @@ $$\textbf{校准样本}✓✓（\text{唐先生}✓）：\text{「存在一个�
 技术词 封口链        命中文件数=1    :: ./E215-two-element-audit-mechanism-family-sealed.md 
 技术词 校准样本     命中文件数=3    :: ./PROTOCOL-R-A1-de-branges-audit.md ./C-BC-FINAL-CLOSURE-2026-09-10.md ./R-A1-de-branges-audit.md 
 ```
-$$\textbf{① 本档新增}✓：\text{封口链}✓／\text{校准样本}✓（\text{依上表判}✓）；\textbf{② 既有引用}✓：\text{定向回查}（\texttt{C-314}✓）；\textbf{GAP CONFIRMED}／\textbf{CLOSED}（\texttt{C-314}✓）\ ——\ \textbf{不}作新增主张}✗$$
+$$\textbf{① 本档新增}✓：\text{封口链}✓／\text{校准样本}✓（\text{依上表判}✓）；\textbf{② 既有引用}✓：\text{定向回查}（\texttt{C-314}✓）；\textbf{GAP CONFIRMED}／\textbf{CLOSED}（\texttt{C-314}✓）\ \text{——}\ \textbf{不作新增主张}✗$$
 $$\textbf{零计算}✗；未读 pending ✗；未改他档正本 ✓（仅追加 ✓）；未动 v4 ✗；`C-181` 的 `u<=5` 仍为 \textbf{GAP-A}✓$$
