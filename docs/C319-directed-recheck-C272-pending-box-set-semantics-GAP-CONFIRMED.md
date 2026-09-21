@@ -9,7 +9,7 @@ FREEZE-ACK: 本档即冻结审计
 ## §0 结论
 
 $$\boxed{\textbf{C-272}\ \to\ \textbf{GAP CONFIRMED}}✓（\text{工程型缺口}✓；\text{原状态保留}✓）$$
-$$\textbf{新增关键发现}✓✓：\text{待审箱集合是}\ \textbf{运行相关集（run-dependent）}✓，\textbf{不是} \text{内禀数学对象}✗ \Longrightarrow \textbf{不能}充当机制载体}✗✓（\text{见 §3}✓）$$
+$$\textbf{新增关键发现}✓✓：\text{待审箱集合是}\ \textbf{运行相关集（run-dependent）}✓，\textbf{不是}\ \text{内禀数学对象}✗ \Longrightarrow \textbf{不能}充当机制载体✗✓（\text{见 §3}✓）$$
 
 ## §1 协议（沿用 `C-314` ＋ 本组附加纪律 ✓）
 
