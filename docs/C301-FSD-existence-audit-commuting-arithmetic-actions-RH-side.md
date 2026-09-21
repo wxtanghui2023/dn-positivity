@@ -15,7 +15,7 @@ FREEZE-ACK: 本档即冻结审计
 | **C** | 交换性产生**可用 defect compatibility**，并可进一步刚性化 | **未发现** ✗ |
 
 $$\boxed{\textbf{Existence Audit：PASS}✓✓\quad\text{且}\quad\textbf{FSD compatibility：OPEN}✗✓}$$
-$$\text{两命题}\ \textbf{不可混}✗✓：\text{"存在天然可交换作用"}\ \text{已成立}✓\ne\ \text{"存在可承载}\ FSD\ \text{的}\ RH\text{-native 作用对"}\ \text{尚未成立}✗$$
+$$\text{两命题}\ \textbf{不可混}✗✓：\text{「存在天然可交换作用」}\ \text{已成立}✓\ne\ \text{「存在可承载}\ FSD\ \text{的}\ RH\text{-native 作用对」}\ \text{尚未成立}✗$$
 
 ## §1 候选一：Hecke 作用对 `T_2, T_3`（✓）
 
@@ -35,9 +35,9 @@ $$\text{两命题}\ \textbf{不可混}✗✓：\text{"存在天然可交换作�
 ## §3 ⭐ 为什么 C 缺（**结构性观察**✓，非定理 ✓）
 
 $$\textbf{① Hecke 交换性是}\ \textbf{算子层面恒等式}✓\ \Longrightarrow\ \textbf{对一切向量自动成立}✓ \Longrightarrow\ \textbf{不携带任何}\ \textbf{局部失败}✗$$
-$$\textbf{② Liouville 侧的关键恰恰是}\ \textbf{局部（逐点）失败}✓：\texttt{noPP}\ \text{是"在}\ 2p\ \text{处不存在正-正对"这一}\ \textbf{逐点}\ \text{输入}✓$$
+$$\textbf{② Liouville 侧的关键恰恰是}\ \textbf{局部（逐点）失败}✓：\texttt{noPP}\ \text{是「在}\ 2p\ \text{处不存在正-正对」这一}\ \textbf{逐点}\ \text{输入}✓$$
 $$\textbf{③ 于是：}\text{交换性}\ \text{只有在}\ \textbf{先有一个逐点失败} \text{时才产生 defect}✓；\text{否则}\ \text{只给出算子恒等式}✓$$
-$$\Longrightarrow \textbf{层 C 所缺的}\ \text{不是"交换对"}✗，\text{而是}\ \textbf{"逐点失败机制"}✓\text{（}\text{Liouville 侧的}\ \texttt{noPP}\ \text{的角色}✓）$$
+$$\Longrightarrow \textbf{层 C 所缺的}\ \text{不是「交换对」}✗，\text{而是}\ \textbf{「逐点失败机制」}✓\text{（}\text{Liouville 侧的}\ \texttt{noPP}\ \text{的角色}✓）$$
 - **纪律** ✓：**不得**据此开始"设计 defect" ✗ —— 本观察只用于**判定层 C 的性质** ✓
 
 ## §4 排雷（**写死**✗✓）
@@ -50,7 +50,7 @@ $$\textbf{④ 与}\ C\text{-286-B 的关系}✓：\text{那次死墙是}\ \textb
 
 ## §5 下一刀（**窄问句，唐先生指定**✓✓）
 
-$$\boxed{\text{Hecke}\ T_2, T_3\ \text{的标准作用中，文献里是否}\ \textbf{已现成存在}\ \text{"两种局部失败／偏差量"}\text{，其交换关系}\ \textbf{不是恒等式本身}\text{，而是对这些偏差量的}\ \textbf{非平凡约束}✓？}$$
+$$\boxed{\text{Hecke}\ T_2, T_3\ \text{的标准作用中，文献里是否}\ \textbf{已现成存在}\ \text{「两种局部失败／偏差量」}\text{，其交换关系}\ \textbf{不是恒等式本身}\text{，而是对这些偏差量的}\ \textbf{非平凡约束}✓？}$$
 - **出口** ✓✓：**NO** ⟹ **关掉 Hecke 路** ✗（不再堆候选 ✓）；**YES** ⟹ 才值得进入 **FSD 审计** ✓
 - **纪律** ✓：只审**文献中现成存在的**对象 ✓，**不构造**新对象 ✗、**不提** RH 方案 ✗、**不设计** defect ✗
 
