@@ -1,0 +1,29 @@
+=== B1-alpha-3: cutting-plane multistart per sigma (objective = min over x, sigma fixed) ===
+  sigma=[-1 -1 -1 -1  1] : g=2.043684310  feasible(margin=-1.83e+00)  boundary(phi_j~0)=False
+  sigma=[-1 -1 -1  1  1] : g=1.014971389  feasible(margin=-2.26e+00)  boundary(phi_j~0)=False
+  sigma=[-1 -1  1 -1  1] : g=2.032784959  feasible(margin=-2.20e+00)  boundary(phi_j~0)=False
+  sigma=[-1 -1  1  1  1] : g=1.065565134  feasible(margin=-3.31e+00)  boundary(phi_j~0)=False
+  sigma=[-1  1 -1 -1  1] : g=1.333829459  feasible(margin=-1.51e+00)  boundary(phi_j~0)=False
+  sigma=[-1  1 -1  1  1] : g=1.034328559  feasible(margin=-2.73e+00)  boundary(phi_j~0)=False
+  sigma=[-1  1  1 -1  1] : g=1.457058722  feasible(margin=-2.67e+00)  boundary(phi_j~0)=False
+  sigma=[-1  1  1  1  1] : g=1.883265366  feasible(margin=-1.59e+00)  boundary(phi_j~0)=False
+  sigma=[ 1 -1 -1 -1  1] : g=1.611200658  feasible(margin=-2.42e+00)  boundary(phi_j~0)=False
+  sigma=[ 1 -1 -1  1  1] : g=1.341644210  feasible(margin=-2.13e+00)  boundary(phi_j~0)=False
+  sigma=[ 1 -1  1 -1  1] : g=0.947967464  feasible(margin=-1.33e+00)  boundary(phi_j~0)=False
+  sigma=[ 1 -1  1  1  1] : g=1.977019721  feasible(margin=-3.16e+00)  boundary(phi_j~0)=False
+  sigma=[ 1  1 -1 -1  1] : g=1.173797200  feasible(margin=-3.13e+00)  boundary(phi_j~0)=False
+  sigma=[ 1  1 -1  1  1] : g=1.997533608  feasible(margin=-2.04e+00)  boundary(phi_j~0)=False
+  sigma=[ 1  1  1 -1  1] : g=1.948881561  feasible(margin=-1.54e+00)  boundary(phi_j~0)=False
+  sigma=[1 1 1 1 1] : g=2.584371481  feasible(margin=-8.45e-01)  boundary(phi_j~0)=False
+
+=== best sigma = [ 1 -1  1 -1  1] ; g = 0.947967464 ===
+   even margins: [ 0.49203736  4.43153497  0.48913646 -0.84653853  0.56582318 -0.77923909
+  0.46529539  3.01913678  0.27951038 -1.33410796  1.16683212  0.32085474]
+   active even A (tol 1e-6) = [4, 6, 10] | tied odd = [0] | boundary indices (phi=0) = []
+   phi/pi = [0.34346706 0.10189856 0.1239827  0.34747938 0.08928552] ; x = [0.22295439 0.90097394 0.85580602 0.21255038 0.92336243]
+
+=== interior/boundary-separated subdifferential LP audit ===
+   tol=1e-07 : |I|=1 A=[4, 6, 10] bnd=[] -> KKT=False residual=nan (INTERIOR)
+   tol=1e-06 : |I|=1 A=[4, 6, 10] bnd=[] -> KKT=False residual=nan (INTERIOR)
+   tol=1e-05 : |I|=1 A=[4, 6, 10] bnd=[] -> KKT=False residual=nan (INTERIOR)
+DONE
