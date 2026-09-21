@@ -1,0 +1,28 @@
+=== STEP 1: KKT ray divided by L gives a dual-feasible certificate ===
+   nu13=omega13/L = 0.4525900379104290715353253
+   nu19=omega19/L = 0.04821891571861281405472701
+   mu_q = lambda_q/L : ['0.41963636817844662328', '0.4956576606673542569', '0.020960450686222334605', '0.063745520467976785216']
+   sum(mu) - 1 = 7.0113e-31 ; all >=0 ? True
+   dual objective nu13+nu19 = 0.5008089536290418855900523 ; 1/L = 0.5008089536290418855900523 ; difference = 0.0
+   compare with C-3867 duals: nu13 = 0.4525900379104290715353253 ; mu = ['0.41963636817844662328', '0.4956576606673542569', '0.020960450686222334605', '0.063745520467976785216']
+
+=== STEP 2/3: for every primal-feasible h, sum lambda_q w_q h >= 1 => max_q w_q h >= 1/L ===
+   derivation (algebrA): omega13*v13*h + omega19*v19*h <= -(omega13+omega19) = -1
+   KKT: omega13*v13 + omega19*v19 = -sum lambda_q w_q  =>  sum lambda_q w_q h >= 1
+   with lambda >= 0: L*max_q(w_q h) >= sum lambda_q (w_q h) >= 1  =>  max_q w_q h >= 1/L
+   1/L = 0.500808953629041885590052265792  (= c_full to 30 digits? -1.7981e-31)
+
+=== STEP 4/5: weak duality direction ===
+   primal: min c s.t. v13h<=-1, v19h<=-1, w_q h - c <= 0   =>   c_* = inf_h max_q w_q h
+   weak duality with the certificate (nu,mu)=(omega/L,lambda/L):   c_* >= nu13+nu19 = 1/L
+   => the dual certificate yields the LOWER bound c_* >= 1/L, NOT c_* <= 1/L.
+   equality c_* = 1/L additionally needs an ATTAINMENT step (an explicit primal-feasible h
+   with max_q w_q h = 1/L), i.e. solvability of the 6x6 vertex system (v13h=-1, v19h=-1, w_q h=c).
+   instance-level: C-3867 solved exactly that system at 60 dps -> c_p = 0.500808953629041885590052265792 = 1/L (30 digits).
+
+=== VERDICT ===
+   steps 1,2,3 valid  =>  c_* >= 1/L is a RIGOROUS one-sided KKT->Farkas bridge lemma.
+   step 4 as stated has the wrong direction (should be >=).
+   step 5 equality holds at this KKT point (verified to 30 digits) but a general theorem still
+   requires the attainment/rank step.
+DONE
