@@ -659,3 +659,22 @@ G3 缺口 ≠ envelope 精度
 结束不自动触发 M=6；「M≤11 定理表」计划正式撤销。
 **新纪律**：**先证明下游需要，再允许计算扩大**；禁止反模式「工具能力反过来制造任务」（能算 ≠ 值得算）。
 详 `C-268`／`PLAN-RPM-ladder-…` §9–§11。
+
+【定点更新·C-300：外部独立算术机制资产 —— FSD（Failure → Symmetry → Descent）】（2026-09-21 13:13）
+**登记判定（唐先生）**：从「审计对象」升级为「**独立算术机制资产**」✓；**性质＝外部资产**（**非**本项目成果 ✗）。
+**来源**：公开 GitHub artifact `CaptainSude/Liouville-Goldbach` ✓；**provenance 未闭合** ✗（媒体归因 Astra ＝ provenance claim
+≠ 仓库自证；证据链只到「公开 GitHub artifact」✓）。
+**对象命题**：Shusterman 的 **Liouville 版**哥德巴赫（∀ 偶数 `N>2`，∃ 正 `a,b`：`a+b=N` ∧ `λ(a)=λ(b)=−1` ✓）；
+**注意层级**：Liouville 版 ⟸ 经典版（单向 ✓），**不是**经典哥德巴赫 ✗。
+**与 Mangerel 的关系**：Mangerel（`arXiv:2412.17199`）＝ **GRH 条件定理** ✓，承重点＝非主特征乘积 L-函数的一致零自由区
+⟹ 短素数区间特征和抵消；本 artifact 走 **路线 B**（绕开 Dirichlet L／特征正交／GRH ✓）。
+**审计级别**：语句级 ✓✓（主定理与目标命题逐字一致；用 Mathlib 的 `ArithmeticFunction.liouville`；假设仅 `Even N`＋`2<N`）｜
+公理级 ✓✓（12 项关键声明只依赖 `propext`／`Classical.choice`／`Quot.sound`；无 `sorryAx`）｜路线审计 ✓（九项新组件全出现、
+七项旧组件全缺席）｜**核心闭环 ✓✓**（`IntervalSigns` 四字段 → 非负／支撑 → 交换方阵 → `A=B` → `A=B=0` → `G(2x)=G(3x)=−G(x)`）｜
+终局 ✓（`exists_prime_square_below_half` ＋ Mathlib 二次互反 ＋ `no_multiplicative_agreement`）。
+**残余** ⚠️：`*_nat` 深层引理正文（`doubleReflection`／`upperBand`／`quarterBand`／`centralBand`）＋ `oddCompletion`／
+`centralRepresentative` 构造正文；**独立复现未做** ✗。
+**机制（标签，非框架 ✗）**：七步模板 ＋ **发动机＝4 个局部公理（sign／doubling／tripling／noPP）＋两个可交换作用** ✓。
+**纪律（写死）**：不接 RH 主线 ✗；不照搬 ✗（把 λ 换成 RH 对象＝repackaging ✗）；不与 L／F／B／R 排序 ✗；
+不声称已复现或已评审 ✗；provenance 与逻辑正确性分离 ✓；FSD 只作标签，不建新判据体系 ✗。
+详 `C-300`／`C-299`／`C-298`／`C-297`／`C-296`／`C-295`／`C-294`／`C-291`。
