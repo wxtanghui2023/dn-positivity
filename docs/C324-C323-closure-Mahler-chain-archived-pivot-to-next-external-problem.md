@@ -38,7 +38,7 @@ $$\textbf{自循环防护}✓✓：\text{再在 Mahler／}L\text{-值内部找�
 
 $$\textbf{原则}✓✓：\textbf{不}新建标准✗、\textbf{不}新建框架✗，\textbf{直接换下一个真正外部问题}✓$$
 $$\textbf{候选}✓（均已登记「档案未注册」 ✓）：\text{Barker}✓／\text{Littlewood-flat}✓／\text{Lonely Runner}✓$$
-$$\textbf{信息增量所在}✓✓：\text{三者此前}\ \textbf{只做到反例校准}✓（\text{四格 × 三档，见}\ C\text{-310／311／313}✓），\textbf{尚未}做与 Mahler 链同规格的}\ \textbf{现成跨对象机制审计}✗✓$$
+$$\textbf{信息增量所在}✓✓：\text{三者此前}\ \textbf{只做到反例校准}✓（\text{四格 × 三档，见}\ C\text{-310／311／313}✓），\textbf{尚未}\ \text{做与 Mahler 链同规格的}\ \textbf{现成跨对象机制审计}✗✓$$
 
 ## §4 建议（**非约束** ✓，唐先生定 ✓）
 
