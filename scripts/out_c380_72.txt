@@ -1,0 +1,25 @@
+=== Gordan certificate (symbolic KKT ray) ===
+   y = (omega13, omega19, lambda6, lambda8, lambda14, lambda18) =
+       ['0.9037179437001577937', '0.096282056299842206299', '0.83791706425695966585', '0.98971405578043382354', '0.041853186797750652561', '0.1272851054400162101']
+   all strictly positive ? True
+   ||G^T y||_inf = 2.0244e-59  (KKT stationarity)
+   => Gordan alternative (ii) holds  =>  no nonzero h with G h <= 0  =>  cone {Gh<=0} = {0}
+
+=== sanity check A: is there any nonzero h with Gh <= 0 ? (tiny LP, verification only) ===
+   max h_1 over {Gh<=0, |h|inf<=1} = -0.000e+00 (0 => cone trivial in that direction)
+   max h_2 over {Gh<=0, |h|inf<=1} = -0.000e+00 (0 => cone trivial in that direction)
+   max h_3 over {Gh<=0, |h|inf<=1} = -0.000e+00 (0 => cone trivial in that direction)
+   max h_4 over {Gh<=0, |h|inf<=1} = -0.000e+00 (0 => cone trivial in that direction)
+   max h_5 over {Gh<=0, |h|inf<=1} = -0.000e+00 (0 => cone trivial in that direction)
+
+=== sanity check B: R2 numerically (Gh = -e_E unsolvable) ===
+   min ||G h + e_E||_2 = 1.256459e+00  (>0 => e_E not in col G)
+   rank(G) = 5 ; singular values = [69.661908 42.732352 39.49978  25.586235  3.059425]
+
+=== structural consequence chain ===
+   KKT strict positivity + Gordan  =>  {Gh<=0} = {0}
+   =>  rank G = 5        (else 0 != h in ker G would be in the cone)
+   =>  e_E not in col G  (else Gh = -e_E != 0 is in the cone)
+   =>  det Mtilde != 0   =>  c_* = 1/L  becomes a THEOREM
+   =>  C-3864's numerical cone degeneracy (t*=0) is now a theorem (Gordan).
+DONE
