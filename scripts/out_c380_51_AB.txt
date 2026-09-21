@@ -1,0 +1,16 @@
+=== A0. sanity: derivative formula vs finite difference ===
+   max |finite-diff  -  closed form| = 6.907e-10
+
+=== A. rank claim: rank DG = min(4, #distinct x_j) ===
+   5 distinct                 #distinct=5  rank=4  (predicted 4)
+   1 coincidence (4 distinct) #distinct=4  rank=4  (predicted 4)
+   1 coincidence (4 distinct) #distinct=4  rank=4  (predicted 4)
+   2 coincidences (3 distinct) #distinct=3  rank=3  (predicted 3)
+
+=== B. closed form for the 4x4 minors ===
+   max relative deviation from closed form = 5.000e-01
+   min/max of |det| / closed-form = 0.500000 / 0.500000  (closed form is |det| exactly, sigma-independent)
+
+=== B2. explicit uniform bound: |det| >= 3.44064e6 * delta_*^3 * Delta^6 ===
+   min over samples of  max_jhat|det| / (3.44064e6 delta_*^3 Delta^6) = 313.393684  (>= 1 means bound valid)
+DONE

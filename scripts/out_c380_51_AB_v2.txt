@@ -1,0 +1,5 @@
+=== B (corrected closed form: |det| = 105*4096 * prod 1/(2c_j) * Vandermonde) ===
+   max relative deviation from closed form = 2.390e-09
+   |det| / closed-form in [1.000000000, 1.000000002]  -> closed form exact, sigma-independent
+   min of max_jhat|det| / (1.72032e6 * delta_*^3 * Delta^6) = 626.7874  (>= 1 -> uniform bound holds)
+DONE
