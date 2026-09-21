@@ -1,0 +1,19 @@
+=== A. Fejer identity: sum_j K_9(psi_j) == 4 + (2/9) sum_{r<=8}(9-r) F_r ===
+/home/node/.openclaw/workspace/dn-project/scripts/c380_49_fejer_rigidity.py:13: DeprecationWarning: Calling np.sum(generator) is deprecated, and in the future will give a different result. Use np.sum(np.fromiter(generator)) or the python sum builtin instead.
+  return np.array([np.abs(np.sum(np.exp(1j * k * t) for k in range(9)))**2 / 9.0 for t in th])
+   max residual (identity)      = 1.421e-14
+   max residual (weighted form) = 7.105e-14
+
+=== B. exact combinatorial classification: 4-subsets of mu_9 \ {1} ===
+   #subsets with F_r<=-1/2 (r<=8) : 16
+   F_9 values at those subsets    : {'4.0'}
+   all 8 constraints tight (exactly)? True
+   'one from each conjugate pair {k,9-k}' : 16 subsets (2^4 = 16 expected)
+   matches the feasible list exactly? True
+   list: [(1, 2, 3, 4), (1, 2, 3, 5), (1, 2, 4, 6), (1, 2, 5, 6), (1, 3, 4, 7), (1, 3, 5, 7), (1, 4, 6, 7), (1, 5, 6, 7), (2, 3, 4, 8), (2, 3, 5, 8), (2, 4, 6, 8), (2, 5, 6, 8), (3, 4, 7, 8), (3, 5, 7, 8), (4, 6, 7, 8), (5, 6, 7, 8)]
+
+=== C. the sandwich on the 16 extremal points ===
+   S=(1, 2, 3, 4)  sum_r (9-r)(F_r+1/2) = -5.329e-15   sum_j K_9 = 1.427e-30   F_9 = +4.000000000000
+   S=(1, 2, 3, 5)  sum_r (9-r)(F_r+1/2) = +1.499e-15   sum_j K_9 = 1.418e-30   F_9 = +4.000000000000
+   S=(1, 2, 4, 6)  sum_r (9-r)(F_r+1/2) = +1.665e-16   sum_j K_9 = 4.119e-30   F_9 = +4.000000000000
+DONE
