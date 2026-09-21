@@ -6,6 +6,16 @@ FREEZE-ACK: 本档即冻结审计
 
 ---
 
+## ⚠️ 更正前置（`C-380-47` 回填审计后，2026-09-21 ✓✓）
+
+$$\textbf{更正①}✓：\text{本档 §0① 的 "}\mathcal F_0 \ne \varnothing\text{"}\ \textbf{仅对截断松弛（}k \le 6\text{）成立}✓✓；\ \text{对}\ \textbf{原始}\ E_0\ (r = 1..12)\ \textbf{不成立}✗✗\ \text{（证书在}\ r = 9\ \text{处}\ \Re\sum z^9 = +4\text{）}✓✓$$
+$$\textbf{更正②}✓：\text{本档 §0④ 的坍缩反驳}\ \textbf{限截断对象}✓；\ \textbf{原始对象未反驳}✗✓$$
+$$\textbf{更正③}✓：\text{本档 §0⑦ 的}\ \boxed{\text{NO-GO}}\ \textbf{撤回}✗✓ \Longrightarrow\ \text{状态改为}\ \boxed{E_0\ \text{路线：暂不判 NO-GO}}✓✓$$
+$$\textbf{不变项}✓✓：§0②（截断完全解集 16 组）✓、§0③（孤立性）✓、§0⑤（\Psi(\Delta_4)\ \text{形式为假}）✓、§0⑥（非配对模态精确仿射）✓\ \text{全部仍成立}✓✓$$
+$$\Longrightarrow\ \text{详见}\ \texttt{docs/C3847-definition-backfill-audit-certificate-membership-and-judgment-correction.md}✓✓$$
+
+---
+
 ## §0 结论（八条 ✓✓）
 
 $$\textbf{① ⭐⭐⭐ 主结果：}\mathcal F_0 \ne \varnothing\ \textbf{（精确证书）}✓✓：\ \omega = e^{2\pi i/9}✓,\ \boxed{S = \{1,2,3,4\} \subset \mathbb Z/9}✓✓,\ z_j := \omega^j\ (j \in S)✓ \Longrightarrow$$

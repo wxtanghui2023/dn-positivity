@@ -1,0 +1,29 @@
+=== A. certificate vs ORIGINAL E_0 (n=9, S={1,2,3,4}) ===
+   r= 1  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 2  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 3  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 4  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 5  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 6  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 7  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 8  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r= 9  Re sum z^r = +4.0000000000   need <= -0.5 : *** VIOLATION ***
+   r=10  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r=11  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+   r=12  Re sum z^r = -0.5000000000   need <= -0.5 : OK
+
+=== B. induced five-coordinate point (x_5 = 0) ===
+   y = ['0.93969262', '0.76604444', '0.50000000', '0.17364818', '-1.00000000']
+   x = ['0.96984631', '0.88302222', '0.75000000', '0.58682409', '0.00000000']  in [0,1]: True
+   s1 = sum y^2 = 2.7500000000   (need <= 11/4 = 2.750000) OK
+   s2 = sum y^4 = 2.1875000000   (need <= s1 - 9/16 = 2.187500) OK
+   s2 >= 11/12 ? True
+   F_2 = 2 s1 - 5 = 0.5000000000 (<=1/2: True) ; F_4 = 8 s2 - 8 s1 + 5 = 0.5000000000 (<=1/2: True)
+
+=== C. sweep n=3..30 : 4-subsets with Re sum z^r <= -1/2 for ALL r=1..12 ===
+   -> any n with hits in 3..30 : False
+
+=== D. general probe: min over samples of max_{r<=6} vs max_{r<=12} (Re sum z^r + 1/2) ===
+   K= 6 : min max = +0.033469   feasible frac = 0.000e+00
+   K=12 : min max = +0.686425   feasible frac = 0.000e+00
+DONE
