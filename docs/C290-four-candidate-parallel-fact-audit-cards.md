@@ -79,3 +79,24 @@ $$\textbf{① 零计算}✗（\text{无任何运行}✓）；\text{未读 pendin
 $$\textbf{② 外部来源}✓：\text{经}\ \texttt{web\_search}／\texttt{tavily\_extract}\ \text{取得}✓，\textbf{按不可信外部数据处理}✓；\text{关键论断均附来源}✓（\text{Terdelyi 综述／Jedwab／Schmidt 综述／Tao 博文／Wikipedia／Epoch AI}✓）$$
 $$\textbf{③ 精度声明}✓：\text{R 的 indexing}\ \textbf{不统一}✗✓；\text{B 的层级 3 为}\textbf{有限计算排除}✓；\text{F 的 2020 定理}\textbf{仅给有界平坦}✓（\text{非 ultraflat}✗）$$
 $$\textbf{④ 三处假碰撞已核}✓✓；\text{未新登记任何}\ NO-GO✓；\texttt{C-181}\ \text{的}\ u\le5\ \text{仍为 GAP-A}✗✓$$
+
+---
+
+## §8 三条审计标记（**唐先生指定，钉死**✓✓，2026-09-21）
+
+$$\textbf{标记① R 的 indexing 纪律}✓✓：\text{三来源原文}\textbf{并列}✓（\text{Wikipedia}\ 1/n✓；\text{Tao}\ n\le6✓；\text{Epoch AI}\ n\le12✓）；\ \textbf{不} \text{折算成统一的}\ n✗；\ \textbf{不} \text{判冲突}✗$$
+$$\qquad \Longrightarrow \text{差异＝}\textbf{计数约定问题}⚠️✓，\text{非结果冲突}✓；\text{本档}\textbf{不自行统一}✗✓$$
+
+$$\textbf{标记② B 的层级纪律}✓✓：548\,964\,900\ \text{明确标为}\ \boxed{\textbf{有限计算排除边界}}✓（\text{层级 3}✓）$$
+$$\qquad \Longrightarrow \ \textbf{不得} \text{与 Turyn 的}\textbf{结构性必要条件} \text{混成同一层级}✗✓：\text{层级 2＝形状约束}\ s=4S^2✓（\text{无条件定理，经完美二进制序列}✓）；\text{层级 3＝有限排除}✓（\text{计算型}✓）$$
+
+$$\textbf{标记③ F 的分离纪律}✓✓：\text{2020 定理}\ \textbf{＝bounded-flat existence}✓（\text{有界平坦存在}✓）$$
+$$\qquad \Longrightarrow \ \textbf{不得} \text{写成「2020 已解决 Littlewood 平坦问题」}✗✓；\ \textbf{必须} \text{限定为}\ \textbf{有界平坦存在性}✓$$
+$$\qquad \text{而}\ \textbf{ultraflat 存在性}（L_n\ \text{情形}✓）\ \textbf{仍开放}✓✓（\text{Erdős 猜想 L}_n\ \text{情形未定}✓）$$
+
+## §9 本阶段结论（**仅此一条**✓✓）
+
+$$\boxed{\text{L、F、B、R}\quad\text{均为档案中}\textbf{尚未登记的独立外部问题}✓✓}$$
+$$\textbf{不能推出}✗✓：\text{独立}\Longrightarrow\text{有}\ RH\ \text{接口}✗ \qquad（\text{该推断}\textbf{明确禁止}✗）$$
+$$\textbf{不能推出}✗：\text{四者之间存在优先级}✗$$
+$$\textbf{下一步边界}✓✓：\text{「哪一个值得做}\textbf{只读深审}」 \ \text{属于}\ \textbf{下一轮新动作}✓，\textbf{不得} \text{偷偷塞进}\ \texttt{C-290}✗✓$$
