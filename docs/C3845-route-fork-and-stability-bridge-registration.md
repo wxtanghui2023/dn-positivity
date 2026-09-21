@@ -55,3 +55,20 @@ $$\textbf{零计算}✓（\text{登记}✓）；\ D1 = 0✓；\ \text{未改他�
 技术词 偏离惩罚项  命中文件数=0    ::
 ```
 - 运行记录 ✓：`scripts/tech_word_check.sh`✓（本档**零计算** ✓）
+
+---
+
+## §7 系列收束（2026-09-21 20:40，唐先生确认冻结）
+
+$$\textbf{① 收束点}✓✓：\boxed{\text{C-380 系列最干净的收束点} = C\text{-}380\text{-}44：\textbf{Level 2 完成，Level 3 入口发现 GAP，停}}✓✓$$
+$$\textbf{② 两条永久审计原则（冻结）}✓✓：$$
+$$\qquad \textbf{(a)}✓✓ \ \boxed{\text{constraint symmetry} \ne \text{solution symmetry}}✓✓（\text{永久保留}✓）；$$
+$$\qquad \textbf{(b)}✓✓ \ \textbf{不}把\ \Delta_4 \approx 0.000878\ \textbf{强行解释成} \text{趋于零的数值噪声}✗✓（\text{不得当作"近似坍缩"}✓）$$
+$$\textbf{③ 停止令}✓✓：\textbf{不再}在 C-380 支上做任何"补丁式"计算✗✓$$
+$$\textbf{④ 唯一值得重开的数学问题（}\textbf{未列为现成路线}✗✓）✓✓：$$
+$$\qquad \boxed{Q_5(X) - \tfrac{341}{128} \ge \Psi(\Delta_4)}✓✓，\ \text{其中}\ \Psi(\delta) > 0\ \text{对}\ \delta > 0✓✓$$
+$$\qquad \Longrightarrow \ \text{比要求严格}\ \Delta_4 = 0\ \textbf{弱得多}✓✓ \Longrightarrow \textbf{可能绕过}\ C\text{-}380\text{-}44\ \text{的坍缩 GAP}✓✓$$
+$$\qquad ⚠️ \textbf{在没有独立来源证明之前，}\textbf{不把它列为现成路线}✗✓$$
+
+$$\textbf{⑤ 最终账本（冻结，采纳唐先生表）}✓✓：$$
+$$\qquad \boxed{\begin{array}{c|c} \text{对象} & \text{状态} \\ \hline \text{two-level 五约束} & \textbf{CLOSED} \\ \text{A／B／C}＋s = m^2\ \text{端点穷尽} & \textbf{CLOSED} \\ \text{global coverage（two-level 内）} & \textbf{CLOSED} \\ \mathcal F_0\ \text{（一般四点）} & \textbf{OPEN} \\ \text{Level 3 入口} & \textbf{GAP} \\ \text{Level 3 主证明} & \textbf{FROZEN} \\ \inf Q_5 = \tfrac{341}{128} & \text{不作为已证结论} \end{array}}✓✓$$
