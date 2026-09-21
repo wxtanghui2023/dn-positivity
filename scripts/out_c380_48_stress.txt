@@ -1,0 +1,20 @@
+=== T1 (vectorized penalty descent, N=60000) ===
+   feasible points found : 343  (out of 60000 starts)
+   distinct feasible points : 16
+   distinct F_9 values : [4.0]
+   cyclotomic (multiple of 2pi/9) : 0 / 16
+   #tight constraints (of 8) : [0]
+
+=== T2. over-determined active sets (size 5..8), few starts each ===
+   size 5 : degenerate feasible solutions found = 8
+   size 6 : degenerate feasible solutions found = 12
+   size 7 : degenerate feasible solutions found = 11
+   size 8 : degenerate feasible solutions found = 3
+
+=== T3. exact equivalence: F_9 = 4  <=>  all nodes are 9th roots of unity ===
+   S=(1, 2, 3, 4)   F_9 = +4.000000000000
+   S=(1, 4, 6, 7)   F_9 = +4.000000000000
+   S=(0, 1, 2, 3)   F_9 = +4.000000000000
+   S=(2, 4, 6, 8)   F_9 = +4.000000000000
+   generic point  F_9 = +0.078658   (global max = 4)
+DONE
