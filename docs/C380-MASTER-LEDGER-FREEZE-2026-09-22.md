@@ -174,3 +174,25 @@ FREEZE-ACK: 本档 = 冻结登记（**零计算** ✓；**不产新结论** ✓�
 【下一道墙】 `C380-LAYER5-GATE`（登记，未启动）：**五层分离 ⟹ 什么新的算术/谱机制？**
    ；验收过滤器 = 既有 **`SURVIVOR-5`（N∧NR∧A∧Q∧R）＋ Scale Gate**（引用，不重定义）✓✓
 ```
+
+---
+
+## §10 C-380 终局（2026-09-22 18:53；依 `C380-FINAL-STAGE-REPORT.md`）
+
+```
+【C-380 状态】 ⭐ **真正结束（终期报告已落档）** ✓✓
+【正成果（LOCKED）】 ① `(2,2,1)` machine certificate ② `[k ≤ 3] = CLOSED`
+   ③ `k=4 T-a` machine certificate（118,068 盒／残集 0）④ ⭐ **`k_min = 5`**（support rigidity：E_even ⊆ {k = 5}）
+   ⑤ 两证书**互为交叉验证** ✓✓
+【负成果（分离登记）】 S1-A FALSE｜S1-B DECLINED｜**S1 DEAD/ARCHIVED**｜四节点 ARCHIVED｜
+   `M3-α(G)` CLOSED｜T1 = T1a only｜二参数路线永久停止 ✓
+【⭐ `C380-LAYER5-GATE` = **ARCHIVED / CLOSED**（EXIT-B；**非 HOLD**）】 ✗✓
+   三候选（插值／离散消元／Chebyshev 整数化）分别撞三种不同的墙；**不留"第四候选"尾巴** ✓✓
+【限定版算术结论】 **C-380 原始约束本身没有内生的 prime/congruence/multiplicative arithmetic interface** ✓✓
+   （**禁止**写成"C-380 数据不含算术结构"；Chebyshev 整数系数／代数数／差商／整数频率**确实存在** ✓）
+【一句话摘要】 C-380 已证实 E_even 的最小绝对值支持为五层；Layer-5 Gate 检查表明五层分离本身
+   **既不产生奇频率控制、也未发现内生非平凡算术接口**，故 **C-380 结构性产出到此封顶** ✓✓
+【⭐ 消费规则】 今后任何新路线若要用 C-380，**必须明确回答"它消费了哪一个 C-380 输出？"** ✗✓
+【换轨】 资源立即转回**独立问题主线**（原则：**independent problem > adjacent asset > RH relevance**）✓✓
+【五条防重审规则】 **不变** ✓✓
+```
