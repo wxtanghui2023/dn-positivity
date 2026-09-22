@@ -1,0 +1,25 @@
+=== (a) certified five-node KKT point (started from the C-3862 point) ===
+  residual = 7.550e-15 | omega = [0.903717943700, 0.096282056300] (sum 1.000000000000, both >= 0: True) | lambda = [0.83791706 0.98971406 0.04185319 0.12728511] (all >= 0: True)
+  x = [0.80093022 0.5611432  0.70245716 0.6261014  0.86884389]
+  t = 0.86885034832245 | tied odd I = [6, 9] | active even A = [3, 4, 7, 9]
+  z = [0.01495396 0.06360626 0.16395561 0.36223598 0.54418326] | k = 5
+  signed nodes c_j = [-0.89494705  0.74909492  0.83812717 -0.7912657   0.93211796]
+
+--- stationarity polynomial P(c) (Chebyshev basis, P(c_j)=0 at the 5 nodes) ---
+  deg P = 35 ; even/odd Chebyshev coefficient split: #even-deg coeffs != 0 -> 10 ; #odd-deg != 0 -> 18
+  P(c_j) at the 5 nodes = [ 0. -0. -0.  0.  0.]
+  P at 7 random test points = [  7.743324   7.08834  -13.577692  25.839888 -17.30874  -48.734075
+ 361.074907]
+  roots: 35 total, 15 real, 15 real inside (-1,1)
+  real roots inside (-1,1): [-0.97211947 -0.89494705 -0.7912657  -0.6311947  -0.58161326 -0.47571304
+ -0.25506919 -0.02367018  0.18833713  0.38647441  0.57734707  0.74909492
+  0.83812717  0.93211796  0.97765389]
+  => #distinct real roots of P in (-1,1) = 15  (nodes occupy 5 of them)
+
+=== (b) refined support-stratum minima (t = max_q sum_i n_i T_q(2z_i-1) ; feasible iff <= 0.5) ===
+  k=1 mults=[5] : refined min max_q F_2q = +4.427280 at z=[0.125745] -> INFEASIBLE
+  k=2 mults=[1, 4] : refined min max_q F_2q = -4874614189.314194 at z=[1. 1.] -> FEASIBLE
+  k=2 mults=[2, 3] : refined min max_q F_2q = -38025.376003 at z=[0.091592 0.533599] -> FEASIBLE
+  k=3 mults=[1, 1, 3] : refined min max_q F_2q = +1.525714 at z=[0.629145 0.795295 0.012887] -> INFEASIBLE
+  k=3 mults=[1, 2, 2] : refined min max_q F_2q = +0.977063 at z=[0.780847 0.955153 0.143679] -> INFEASIBLE
+  k=4 mults=[1, 1, 1, 2] : refined min max_q F_2q = +0.607807 at z=[0.007928 0.286618 0.61478  0.947289] -> INFEASIBLE

@@ -1,0 +1,26 @@
+=== C-3899 candidate census: 16 sign layers x multi-start ===
+  sigma=[-1, -1, -1, -1, 1] : n_cand=21 | best t=2.171549247 k=5 (tol1e-9:5) A=[2, 6, 8, 10, 11] I=[11] | k-hist=[(5, 21)]
+  sigma=[-1, -1, -1, 1, 1] : n_cand=14 | best t=2.223815312 k=5 (tol1e-9:5) A=[2, 8, 9, 12] I=[4, 5] | k-hist=[(5, 14)]
+  sigma=[-1, -1, 1, -1, 1] : n_cand=14 | best t=0.868850348 k=5 (tol1e-9:5) A=[3, 4, 7, 9] I=[6, 9] | k-hist=[(5, 14)]
+  sigma=[-1, -1, 1, 1, 1] : n_cand=18 | best t=1.860121155 k=5 (tol1e-9:5) A=[2, 3, 4, 7, 11] I=[6] | k-hist=[(5, 18)]
+  sigma=[-1, 1, -1, -1, 1] : n_cand=15 | best t=2.207112122 k=5 (tol1e-9:5) A=[2, 3, 4, 6, 8, 10, 12] I=[7] | k-hist=[(5, 15)]
+  sigma=[-1, 1, -1, 1, 1] : n_cand=13 | best t=1.258087384 k=5 (tol1e-9:5) A=[3, 5, 6, 8] I=[7, 11] | k-hist=[(5, 13)]
+  sigma=[-1, 1, 1, -1, 1] : n_cand=16 | best t=0.868850348 k=5 (tol1e-9:5) A=[3, 4, 7, 9] I=[6, 9] | k-hist=[(5, 16)]
+  sigma=[-1, 1, 1, 1, 1] : n_cand=14 | best t=1.812836231 k=5 (tol1e-9:5) A=[] I=[0] | k-hist=[(5, 14)]
+  sigma=[1, -1, -1, -1, 1] : n_cand=12 | best t=1.300886563 k=5 (tol1e-9:5) A=[3, 4, 5, 8] I=[1, 9] | k-hist=[(5, 12)]
+  sigma=[1, -1, -1, 1, 1] : n_cand=15 | best t=1.766624708 k=5 (tol1e-9:5) A=[3, 4, 7, 9] I=[3, 4] | k-hist=[(5, 15)]
+  sigma=[1, -1, 1, -1, 1] : n_cand=12 | best t=1.959412525 k=5 (tol1e-9:5) A=[4, 5] I=[2, 4] | k-hist=[(5, 12)]
+  sigma=[1, -1, 1, 1, 1] : n_cand=18 | best t=2.014936294 k=5 (tol1e-9:5) A=[4, 9, 10, 11] I=[0, 10] | k-hist=[(5, 18)]
+  sigma=[1, 1, -1, -1, 1] : n_cand=19 | best t=2.006890544 k=5 (tol1e-9:5) A=[4, 5, 7, 12] I=[1, 11] | k-hist=[(5, 19)]
+  sigma=[1, 1, -1, 1, 1] : n_cand=17 | best t=1.771205093 k=5 (tol1e-9:5) A=[3, 4, 5, 7, 8] I=[9] | k-hist=[(5, 17)]
+  sigma=[1, 1, 1, -1, 1] : n_cand=10 | best t=2.475709034 k=5 (tol1e-9:5) A=[5, 7, 9, 10, 12] I=[8] | k-hist=[(5, 10)]
+  sigma=[1, 1, 1, 1, 1] : n_cand=15 | best t=2.899680473 k=5 (tol1e-9:5) A=[6, 8, 9, 10, 11] I=[0] | k-hist=[(5, 15)]
+
+=== summary ===
+  global best t = 0.868850348 ; k = 5 ; A=[3, 4, 7, 9] ; I=[6, 9]
+  z (sorted) = [0.01495396 0.06360626 0.16395561 0.36223598 0.54418326]
+  u = [0.60186043 0.1222864  0.40491432 0.25220281 0.73768778]
+  k-histogram over all certified candidates (tol 1e-7): [(5, 243)]
+  min k observed = 5 ; any k<=3 ? []
+  elapsed = 175.1 s
+DONE-CENSUS
