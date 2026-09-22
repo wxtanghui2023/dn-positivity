@@ -1,0 +1,55 @@
+[probe] spec: F_q = 2cos(q th1)+cos(q th2)+cos(q th3)+cos(q th4), theta in [0,pi]^4, q=1..12
+[probe] OUTPUT 1 (initial): N0=8  initial boxes = 4096  initial edge h = pi/8 = 0.392699
+[probe] caps: maxdepth=16  timecap=840s  boxcap=2000000
+[probe] level  0: leaves=    4096  certified=    1855  residual=   2241  min_cert_margin=0.530734  edge=3.927e-01
+[probe] level  1: leaves=    6337  certified=    2857  residual=   3480  min_cert_margin=0.511684  edge=1.963e-01
+[probe] level  2: leaves=    9817  certified=    4318  residual=   5499  min_cert_margin=0.504519  edge=9.817e-02
+[probe] level  3: leaves=   15316  certified=    6886  residual=   8430  min_cert_margin=0.501321  edge=4.909e-02
+[probe] level  4: leaves=   23746  certified=   11788  residual=  11958  min_cert_margin=0.501321  edge=2.454e-02
+[probe] level  5: leaves=   35704  certified=   20531  residual=  15173  min_cert_margin=0.500081  edge=1.227e-02
+[probe] level  6: leaves=   50877  certified=   34622  residual=  16255  min_cert_margin=0.500081  edge=6.136e-03
+[probe] level  7: leaves=   67132  certified=   52475  residual=  14657  min_cert_margin=0.500081  edge=3.068e-03
+[probe] level  8: leaves=   81789  certified=   71457  residual=  10332  min_cert_margin=0.500035  edge=1.534e-03
+[probe] level  9: leaves=   92121  certified=   84298  residual=   7823  min_cert_margin=0.500035  edge=7.670e-04
+[probe] level 10: leaves=   99944  certified=   92595  residual=   7349  min_cert_margin=0.500035  edge=3.835e-04
+[probe] level 11: leaves=  107293  certified=  102048  residual=   5245  min_cert_margin=0.500035  edge=1.917e-04
+[probe] level 12: leaves=  112538  certified=  110342  residual=   2196  min_cert_margin=0.500035  edge=9.587e-05
+[probe] level 13: leaves=  114734  certified=  113255  residual=   1479  min_cert_margin=0.500035  edge=4.794e-05
+[probe] level 14: leaves=  116213  certified=  115138  residual=   1075  min_cert_margin=0.500035  edge=2.397e-05
+[probe] level 15: leaves=  117288  certified=  116760  residual=    528  min_cert_margin=0.500035  edge=1.198e-05
+[probe] level 16: leaves=  117816  certified=  117630  residual=    186  min_cert_margin=0.500035  edge=5.992e-06
+
+==============================================================================
+[probe] OUTPUT 2 (growth curve):  level | leaves | certified | residual | min cert margin
+[probe]    0 |     4096 |     1855 |    2241 | 0.530734
+[probe]    1 |     6337 |     2857 |    3480 | 0.511684
+[probe]    2 |     9817 |     4318 |    5499 | 0.504519
+[probe]    3 |    15316 |     6886 |    8430 | 0.501321
+[probe]    4 |    23746 |    11788 |   11958 | 0.501321
+[probe]    5 |    35704 |    20531 |   15173 | 0.500081
+[probe]    6 |    50877 |    34622 |   16255 | 0.500081
+[probe]    7 |    67132 |    52475 |   14657 | 0.500081
+[probe]    8 |    81789 |    71457 |   10332 | 0.500035
+[probe]    9 |    92121 |    84298 |    7823 | 0.500035
+[probe]   10 |    99944 |    92595 |    7349 | 0.500035
+[probe]   11 |   107293 |   102048 |    5245 | 0.500035
+[probe]   12 |   112538 |   110342 |    2196 | 0.500035
+[probe]   13 |   114734 |   113255 |    1479 | 0.500035
+[probe]   14 |   116213 |   115138 |    1075 | 0.500035
+[probe]   15 |   117288 |   116760 |     528 | 0.500035
+[probe]   16 |   117816 |   117630 |     186 | 0.500035
+
+[probe] OUTPUT 3 (thinnest certified margin): 0.5000354136517904
+[probe]   attained on box [0.392699, 0.490874, 1.276272, 1.374447, 2.454369, 2.552544, 2.159845, 2.25802]
+[probe]   order of magnitude: 3.541e-05 above 1/2
+
+[probe] OUTPUT 4 (scale estimate):
+[probe]   residual growth per level: slope = -0.226 bits/level => effective dimension of residual set ~ -0.23 (in 4-D ambient)
+[probe]   thinnest margin / 60 => required edge h* = 5.902e-07 => required level d* = 19.34
+[probe]   residual now = 186 at level 16; extrapolating x 2^(-0.23 * 3.34) => estimated residual boxes at d* = 1.103e+02
+[probe]   (certified boxes ~ initial_117816 + residual, so full-cert scale ~ 1 + 1.10e+02 x correction from re-certification)
+
+[probe] status = maxdepth-reached   elapsed = 7.5 s   levels run = 16   S3 hits = 0
+[probe] VERDICT (gate classification): <=1e5 : stable growth -> T-a justified
+==============================================================================
+EXIT=0
