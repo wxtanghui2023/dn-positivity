@@ -1,0 +1,5 @@
+=== C-3900 Gate (corrected): stratum minima over the CLOSED domain z in [0,1]^k ===
+  note: z_i = 0 <-> u_i = 0 <-> x_i = 1/2 (an allowed interior point of the x-domain)
+  k=1 m=[5] : min max_q F_2q = +4.427280 | margin vs 0.5 = +3.927280 | active q = [4, 9] | #z at 0 boundary = 0 | z = [0.560268] -> INFEASIBLE
+      F_2q = [ 0.602683 -4.854709 -1.773024  4.42728   2.840324 -3.742554 -3.742554
+  2.840324  4.42728  -1.773024 -4.854709  0.602683]

@@ -1,0 +1,51 @@
+=== C-3900 Gate: dense systematic grids (fully deterministic) ===
+  m=[5]            grid N=20001 (2e+04 pts) : min max_q F_2q = +4.42728013 | margin = +3.92728013 | active q=[3, 10] | z=[0.32269756] | INFEASIBLE
+      F_2q = [-1.773024 -3.742554  4.42728   0.602683 -4.854709  2.840324  2.840324
+ -4.854709  0.602683  4.42728  -3.742554 -1.773024]
+  m=[4, 1]         grid N= 2001 (4e+06 pts) : min max_q F_2q = +2.79331336 | margin = +2.29331336 | active q=[2, 11] | z=[0.0145291  0.32269744] | INFEASIBLE
+      F_2q = [-4.238372  2.793313 -2.108586  2.392793 -2.389359  1.050211  1.050213
+ -2.389365  2.392801 -2.108591  2.793313 -4.23837 ]
+  m=[3, 2]         grid N= 2001 (4e+06 pts) : min max_q F_2q = +1.89348734 | margin = +1.39348734 | active q=[2, 3, 10] | z=[0.11214927 0.95299082] | INFEASIBLE
+      F_2q = [-0.515141  1.893487  1.893487 -3.105078  1.735228 -3.466471 -2.198355
+  0.172803 -4.37648   1.893487 -0.812949  0.010817]
+  m=[3, 1, 1]      grid N=  401 (6e+07 pts) : min max_q F_2q = +1.52571372 | margin = +1.02571372 | active q=[2, 4, 9, 11] | z=[0.01288715 0.62914525 0.79529468] | INFEASIBLE
+      F_2q = [-2.073797  1.525714 -3.981536  1.525714 -0.311273  1.405766  0.057186
+ -0.901586  1.525714 -2.079173  1.525714 -3.480765]
+  m=[2, 2, 1]      grid N=  321 (3e+07 pts) : min max_q F_2q = +0.97706337 | margin = +0.47706337 | active q=[2, 3, 11] | z=[0.14367872 0.95515278 0.7808471 ] | INFEASIBLE
+      F_2q = [ 0.95702   0.977063  0.977063 -2.998452  0.55986  -0.860146 -2.451523
+  0.128936 -3.833858 -1.652829  0.977063 -0.554134]
+  m=[2, 1, 1, 1]   grid N=   97 (9e+07 pts) : min max_q F_2q = +0.60780729 | margin = +0.10780729 | active q=[1, 2, 4, 9, 10] | z=[0.94728894 0.00792789 0.28661821 0.61477967] | INFEASIBLE
+      F_2q = [ 0.607807  0.607807 -0.171438  0.607807 -1.875003 -0.69097  -3.250259
+ -2.750514  0.607807  0.607807 -0.419884  0.571928]
+  m=[1, 1, 1, 1, 1] grid N=   29 (2e+07 pts) : min max_q F_2q = +0.29976630 | margin = -0.20023370 | active q=[1, 4, 5, 9, 12] | z=[0.03826999 0.32632617 0.59728851 0.735086   0.95291247] | FEASIBLE
+      F_2q = [ 0.299766 -0.894261 -0.798756  0.299766  0.299766 -0.458427 -0.15731
+ -3.60147   0.299766  0.084568 -0.270191  0.299766]
+  elapsed 22 s
+
+=== reduced boundary sub-problems: one coordinate pinned at z = 0 (binding pattern (2,1,1,1)) ===
+  pin z_0=z=0 : min max_q F_2q = +1.55001125 | margin = +1.05001125 | z = [0.     0.3875 0.95   0.8125] -> INFEASIBLE
+  pin z_0=z=1 : min max_q F_2q = +2.52413061 | margin = +2.02413061 | z = [1.      0.1625  0.575   0.94375] -> INFEASIBLE
+  pin z_1=z=0 : min max_q F_2q = +1.02660020 | margin = +0.52660020 | z = [0.9625  0.      0.725   0.34375] -> INFEASIBLE
+  pin z_1=z=1 : min max_q F_2q = +1.94648924 | margin = +1.44648924 | z = [0.6    1.     0.3375 0.775 ] -> INFEASIBLE
+  pin z_2=z=0 : min max_q F_2q = +1.02660020 | margin = +0.52660020 | z = [0.9625  0.725   0.      0.34375] -> INFEASIBLE
+  pin z_2=z=1 : min max_q F_2q = +1.94648924 | margin = +1.44648924 | z = [0.6    0.3375 1.     0.775 ] -> INFEASIBLE
+  pin z_3=z=0 : min max_q F_2q = +1.02660020 | margin = +0.52660020 | z = [0.9625  0.725   0.34375 0.     ] -> INFEASIBLE
+  pin z_3=z=1 : min max_q F_2q = +1.94648924 | margin = +1.44648924 | z = [0.6    0.3375 0.775  1.    ] -> INFEASIBLE
+
+=== gate summary ===
+  pattern [1, 1, 1, 1, 1] : +0.29976630 -> FEASIBLE
+  pattern [2, 1, 1, 1]   : +0.60780729 -> INFEASIBLE
+  pattern [2, 2, 1]      : +0.97706337 -> INFEASIBLE
+  pattern [3, 1, 1]      : +1.52571372 -> INFEASIBLE
+  pattern [3, 2]         : +1.89348734 -> INFEASIBLE
+  pattern [4, 1]         : +2.79331336 -> INFEASIBLE
+  pattern [5]            : +4.42728013 -> INFEASIBLE
+  best over all patterns: [1, 1, 1, 1, 1] -> +0.29976630
+Traceback (most recent call last):
+  File "/home/node/.openclaw/workspace/dn-project/scripts/c380_82_dense_grid.py", line 67, in <module>
+    print("  ==> numerical support lower bound : k >= %s"%("5" if all(v>0.5 for v,_ in out.values() if len(v)<=4) else "?"),flush=True)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/node/.openclaw/workspace/dn-project/scripts/c380_82_dense_grid.py", line 67, in <genexpr>
+    print("  ==> numerical support lower bound : k >= %s"%("5" if all(v>0.5 for v,_ in out.values() if len(v)<=4) else "?"),flush=True)
+                                                                                                       ^^^^^^
+TypeError: object of type 'numpy.float64' has no len()

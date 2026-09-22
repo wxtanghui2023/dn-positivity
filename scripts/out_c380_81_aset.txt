@@ -1,0 +1,4 @@
+=== (A) active-set enumeration census (systematic local-min catalogue) ===
+  m=[5] : best stationary t = +4.42728013 | margin = +3.92728013 | active Q = [4, 9] | z = [0.56026834] | #cands = 107 | INFEASIBLE
+  m=[4, 1] : best stationary t = +2.79331335 | margin = +2.29331335 | active Q = [6, 7] | z = [0.78403237 0.56026834] | #cands = 37 | INFEASIBLE
+  m=[3, 2] : best stationary t = +1.94364587 | margin = +1.44364587 | active Q = [1, 8, 12] | z = [0.78857909 0.55304283] | #cands = 35 | INFEASIBLE

@@ -1,0 +1,2 @@
+=== C-3900 Gate: thorough global search over the <=4 strata (closed domain) ===
+  binding pattern is (2,1,1,1) [k=4]; others are cheaper
