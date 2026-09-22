@@ -77,3 +77,31 @@ FREEZE-ACK: **零计算（解析）／零数值／未写程序**／未碰 RH 新
 【地图回查】 命中 10 ⟹ 实质命中＝`C-1`（异境）／`V192`／`V290` ⟹ **引用** ✓
 【档级引用】 `V192`（`RH ⟺ 纵坐标谱无非本质退化`；β 只能经退化／重数进入；`N_0^s／N_d`；`Alpöge–Furman 2026`；同一堵墙 A 侧）✓｜
 　`V290`（`O1-1` 两墙 ＋ 禁语纪律）✓｜`V194` F1（`RH-EQUIVALENT-TOO-STRONG`）✓｜`ASSETS-REGISTRY` `C-1`（异境）✓
+
+---
+
+## §5 **正式收口**（唐先生 2026-09-22 22:32 ✓✓）
+
+```
+【档案出口（照录）】
+　$$\boxed{\text{O1-1：两墙退化计数路线} = \textbf{FAIL / 精确封锁}}$$ ✓✓
+【⭐ 本轮真正的收获（照录）】 关键不是"退化计数没有 β"，而是失败结构更精确：
+　$$\boxed{\text{β-sensitive} \;\not\Rightarrow\; \text{β-operational}}$$ ✓✓
+【压缩失败链（照录）】
+　$$\mathcal N_{\rm deg} \overset{\text{形式}}{\longrightarrow} \beta
+　\quad\text{但}\quad
+　\mathcal N_{\rm deg} \not\longrightarrow
+　\begin{cases}
+　\text{独立算术定义},\\
+　\text{稳定的两墙间计数变化},\\
+　\text{Euler／乘性结构}
+　\end{cases}$$ ✓✓
+　而**剩下的 β–RH 关系又是 equivalence-level** ⟹ 落入**已登记**的 `RH-EQUIVALENT-TOO-STRONG` ⟹
+　⛔ **不能把"它最终等价于 RH"当成新的桥** ✓✓
+【为什么不做第二类计数（照录）】 若第二类计数仍满足
+　`从零谱定义 → 重数/退化 → β`，而无**新的算术输入**，那只是把 `\mathcal N_{\rm deg}` **换成另一个谱计数符号**，
+　**仍会撞同一堵墙** ⟹ ⭐ **除非开题前能证**该计数至少拥有下列之一，否则**不值得再开一档**：
+　$$\boxed{\text{prime／Euler 侧定义}\ \ \text{或}\ \ \text{非等价级 }β\text{-observable}\ \ \text{或}\ \ \text{新的 multiplicative／additive law}}$$ ✓✓
+【链上状态（照录）】
+　$$\boxed{C380\text{-L3-2 CLOSED}\ \to\ \text{O1-1 CLOSED}\ \to\ \text{KERNEL-HUNT / independent-problem pivot}}$$ ✓✓
+【本档禁语复查】 **允许**"该路线已被精确封锁"；**禁止**"`O1-1` 不存在"／"已全局数学封口" ✓✓（守 `V290` ✓）
