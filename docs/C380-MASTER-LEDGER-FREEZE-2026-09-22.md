@@ -155,3 +155,22 @@ FREEZE-ACK: 本档 = 冻结登记（**零计算** ✓；**不产新结论** ✓�
 【未变】 (2,2,1) CLOSED 永久结束｜S1-A FALSE｜S1-B DECLINED｜S1 ARCHIVE/DEAD｜T1a only｜M3-α(G) CLOSED
    ｜旧四节点 ARCHIVED ＋ **五条防重审规则不变** ✓✓
 ```
+
+---
+
+## §9 硬收官（2026-09-22 18:36；依 `C380-SUPPORT-CLOSURE-AND-LAYER5-GATE.md`）
+
+```
+【定性】 **C-380 主线硬收官点** ✓✓ —— k_min = 5 为**证书级事实**（非数值证据）✓✓
+【账本（最终）】
+   k=1 CLOSED｜(4,1) CLOSED｜(3,2) CLOSED｜(3,1,1) CLOSED｜(2,2,1) CLOSED(machine cert)
+   ｜**k ≤ 3 CLOSED**｜**k=4 CLOSED(machine cert)**｜**k_min = 5**｜k=5 FEASIBLE
+   ｜S1 DEAD/ARCHIVED｜C-3900 HOLD（**目标已达成**）｜旧四节点 ARCHIVED ✓✓
+【实质】 **support separation：E_even ⊆ {k = 5}**（5 个互异 |u_j| 层必要；无 |u| 碰撞）✓✓
+   —— 存在性 ＋ 最小性**同时闭合** ✓✓
+【负边界】 **不得**表述为 RH 进展（本步只解决 **E_even ⟹ k ≥ 5** 的有限支持结构问题）✗✓
+【支持下界证书】 **已闭合 ⟹ 此后不得再优化／重跑**（不追 margin／不跑 B2／不"漂亮化"／
+   不因 9.73 s 而觉得预算没花完 ⟹ **预算没有剩余价值**）✗✗
+【下一道墙】 `C380-LAYER5-GATE`（登记，未启动）：**五层分离 ⟹ 什么新的算术/谱机制？**
+   ；验收过滤器 = 既有 **`SURVIVOR-5`（N∧NR∧A∧Q∧R）＋ Scale Gate**（引用，不重定义）✓✓
+```
