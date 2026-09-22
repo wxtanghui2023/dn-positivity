@@ -1,8 +1,33 @@
+# C-3894 — T3-PASS: Second-order F14 obstruction eliminates all nonzero tangent directions
+# at the two-level point (m,a)=(-1/8, 3 sqrt3/8)
+
+**状态：`T3-PASS / LOCAL-RIGIDITY`**
+
 已查地图（**先查后写**）：`C3893`（**活跃集核对；`4P_3` 不迁移** ✓✓）、`C3892`（**`P_3` 分解；`(P_3,\Delta_4)` 双坐标** ✓✓）、`C-3862`（**活跃集 `\{3,4,7,9\}`** ✓✓）、`C-3856`（**`\phi`-坐标对角 Hessian** ✓✓）、`C-3876`（**远区 OPEN** ✓✓）。回查见 §5 ✓
 
 D0: 本档对象 = **C-380-101：C-3894 —— T3 二阶可行性（真实活跃集上，`T3-PASS`）**（唐先生 2026-09-22 09:35 令：立即执行 ③）
 D1: 0
 FREEZE-ACK: 本档即冻结审计
+
+## §0bis 收紧后的最终陈述（唐先生 2026-09-22 09:38 令 ✓✓）
+
+$$\boxed{\text{所有非零切向扰动在}\ F_{14}\ \text{上二阶立即出界}}✓✓\ \text{（}\textbf{不是}\text{"目标有正二阶曲率"}✗） \Longrightarrow \textbf{确实不需要}\ \text{KKT 对偶证书}✓✓$$
+
+$$\text{固定}\ \sum Y_j = 0,\ \sum Y_j^2 = 4a^2✓;\ v = (v_1,-v_1,v_3,-v_3)✓;\ \dot P_3 = 0✓,\ \dot\Delta_4 = 0✓;\ P_3(t) = 6av_1^2t^2 - 6av_3^2t^2 + O(t^3)✓,\ \Delta_4(t) = 3a^2(v_1^2+v_3^2)t^2 + O(t^3) > 0\ (v \ne 0)✓✓$$
+
+$$\rho := v_3^2/v_1^2 \in [0,\infty]✓（v_1 = 0\ \text{取}\ \rho = \infty✓） \Longrightarrow F_{14}''(\rho) = 70.842572 + 933.219928\rho > 0✓✓$$
+
+$$\Longrightarrow F_{14}(t) = F_{14}(0) + \tfrac12F_{14}''(\rho)t^2 + O(t^3) > -\tfrac12\ \text{（充分小}\ t \ne 0✓） \Longrightarrow \textbf{违反原约束}\ F_{14} \le -\tfrac12✓✓$$
+
+$$\boxed{T_{(m,a)}E_{\mathrm{even}} = \{0\}\quad\text{（在该固定球面约束下）}}✓✓$$
+
+$$\textbf{精确措辞（替代旧句}✓✓**）：\textit{任意非零切向扰动}\ v \ne 0\ \textit{均使}\ F_{14}\ \textit{的二阶项严格增加，因此不存在保持全部原始偶频约束的一阶切向二阶可行曲线。}✓✓$$
+
+$$\qquad （\textbf{理由}✓：\text{旧句把"切向量"与"two-level／非 two-level 点"混为一谈}✗；\text{新句只谈切向}✓）$$
+
+$$\textbf{更强的实情}✓✓：P_3 = 0,\ \Delta_4 \ne 0\ \text{只是最纯的非 two-level 二阶方向（}\rho = 1✓）；\text{本档实际证明了}\ \rho \in [0,\infty)\ \textbf{的所有} \text{非零方向都被}\ F_{14}\ \text{杀掉}✓✓$$
+
+$$\textbf{四条禁写（超出 C-3894 射程}✗✓**）：\text{(1) 全局 two-level collapse}✗；\text{(2) 全局}\ F_0 = \varnothing✗；\text{(3) 全局}\ \Delta_4 > 0\ \text{稳定性}✗；\text{(4) 已证全局最优点必须是该 two-level 点}✗✓$$
 
 ---
 
