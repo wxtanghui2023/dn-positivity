@@ -1,0 +1,21 @@
+===== G1 唯一 Core =====
+  ① 全仓 theorem no_failure 精确定义处 = 1   (须 = 1)
+  ② 良基引用分布 = {'TLDC/Core.lean': 1, 'TLDC/Instances/A2.lean': 0, 'TLDC/Instances/Liouville.lean': 1}
+  ③ 实例内自行定义 theorem no_failure = 0 (须 0)；实例调用核次数 = 2
+===== G2 Core 零污染（去注释后）=====
+  Interface.lean 禁用词命中 = 无
+  Core.lean 禁用词命中 = 无
+  Core 去注释后的全部标识符 = ['C', 'Nat', 'Nat.lt_wfRel.wf.induction', 'P', 'Prop', 'Std', 'TLDC', 'Type', 'X', 'by', 'end', 'exact', 'fun', 'h', 'hP0', 'hPx', 'hPy', 'have', 'hkey', 'hlt', 'hylt', 'ih', 'import', 'intro', 'n', 'namespace', 'no_failure', 'obtain', 'rfl', 'rintro', 'step', 'suffices', 'theorem', 'x', 'x0', 'y']
+===== G3 A2 层 =====
+  ① 三声明齐备: derive_Target=True reenter_P=True a2_no_failure=True
+  ② derive_Target 中反证假设 h 的引用 = 0  (须 0)
+  ③ a2_no_failure 调用核 = 1 处
+===== G4 Liouville 层 =====
+  ① 层内三声明: H_of_inner=True outer_induction=True step_via_core=True
+  ② 层内 lt_wfRel 次数 = 1  (须 >= 1，外层强归纳在本层)
+  ③ 核内 IsGood/exact/H 命中 = 无  (须空)
+  ④ Liouville 层调用核 = 1 处 (步内调用)
+===== G5 双实例共享 =====
+  ① import TLDC.Core: A2=True Liouville=True
+  ② TLDC 顶层模块 = ['Audit.lean', 'Core.lean', 'Interface.lean']
+  ③ 全仓 import TLDC.Core 的文件数 = 5

@@ -1,0 +1,5 @@
+name = "tldc"
+defaultTargets = ["TLDC"]
+
+[[lean_lib]]
+name = "TLDC"

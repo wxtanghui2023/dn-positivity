@@ -11,3 +11,8 @@ latex_v2*.txt
 
 # 证书证据例外（非 LaTeX 产物）：门控日志须长期可审计 ⟹ 允许 cert_appendix/iv-gates/ 下的 *.log 入仓（2026-09-20）
 !cert_appendix/iv-gates/*.log
+
+# Lean 构建产物（乙-3）
+.lake/
+*.olean
+*.ilean

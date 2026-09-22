@@ -1,0 +1,24 @@
+⚠ [3/8] Replayed TLDC.Interface
+warning: TLDC/Interface.lean:18:17: Variable name `hx` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [4/8] Replayed TLDC.Instances.A2
+warning: TLDC/Instances/A2.lean:31:20: Variable name `hx` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [6/8] Replayed TLDC.Audit
+info: TLDC/Audit.lean:9:0: 'TLDC.no_failure' does not depend on any axioms
+info: TLDC/Audit.lean:10:0: 'TLDC.step_of_slots' does not depend on any axioms
+info: TLDC/Audit.lean:11:0: 'TLDC.no_failure_of_slots' does not depend on any axioms
+info: TLDC/Audit.lean:12:0: 'TLDC.Instances.A2.derive_Target' does not depend on any axioms
+info: TLDC/Audit.lean:13:0: 'TLDC.Instances.A2.reenter_P' does not depend on any axioms
+info: TLDC/Audit.lean:14:0: 'TLDC.Instances.A2.a2_no_failure' does not depend on any axioms
+info: TLDC/Audit.lean:15:0: 'TLDC.Instances.Liouville.H_of_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TLDC/Audit.lean:16:0: 'TLDC.Instances.Liouville.outer_induction' depends on axioms: [propext, Quot.sound]
+Build completed successfully (8 jobs).
