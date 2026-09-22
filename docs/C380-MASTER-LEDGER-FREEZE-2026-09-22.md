@@ -119,3 +119,21 @@ FREEZE-ACK: 本档 = 冻结登记（**零计算** ✓；**不产新结论** ✓�
 【未变】 T1a only｜M3-α(G) CLOSED｜S1 OPEN｜k=4 OPEN｜C-3900 HOLD｜四节点 ARCHIVED ✓
 【§5 五条规则**不变**】CLOSED 不重开｜OPEN 须声明新机制｜HOLD 不得自行启动｜ARCHIVED 默认不适用｜新案先读本档 ✓✓
 ```
+
+---
+
+## §7 状态更新（2026-09-22 17:55；依 `C380-S1-STEP0.md` §7 与 `C380-K4-GATE-FREEZE.md`）
+
+```
+【变更（仅状态，不动架构 ✓）】
+   S1-A    → **FALSE / CLOSED**（结构性反例族：k=5、max|F| = 0.06644、开集性稳健）✗✗
+   S1-B    → **DECLINED / 不立项**（域改 E_even ⟹ 陈述即原目标 ⟹ 失效独立机制资格）✗
+   S1      → **PRIMARY → ARCHIVE / DEAD** ✗
+   K4      → **OPEN ＋ 唯一主动资源资格**（**C-3900 仍 HOLD**，须先通过 K4-GATE-FREEZE）✓
+   C-3900  → **HOLD**（Gate 未冻结前不得 ACTIVE）✓✓
+【新增永久资产】 **方法过滤器：support separation ≠ spectral separation**；
+   近碰撞（near-collision）可灭奇层而 z 仍互异 ⟹ 任何 `k>=4 ⟹ odd-layer 下界` 路线须先付
+   **separation / anti-cancellation cost** ✓✓
+【未变】 (2,2,1) CLOSED 永久结束｜[k ≤ 3] CLOSED｜T1a only｜M3-α(G) CLOSED｜旧四节点 ARCHIVED
+   ＋ **五条防重审规则不变** ✓✓
+```
