@@ -118,6 +118,7 @@ $$\text{(4) 与既有索引交叉引用：}\ \texttt{B-SERIES-INDEX｜INDEX-BY-D
 | **D-8** | **GM vs mollifier H3-A** | `docs/LIE1B-*` | GM 的 $N^{3/4}$ 大值机器**不攻击** mollifier 非对角墙（对象不同型） |
 | **D-9** | **V316 三出口封闭** | `V316-FREEZE`｜`V317`｜`V318` | $\lambda>1$ 的已有来源（S1–S8／C1–C8／K1–K7）**全部 DEAD** |
 | **D-10** | **理论类型不匹配** | `docs/V148` | RH ⟺ ι: $\rho\mapsto1-\bar\rho$ 无自由轨道（**缺席型**）；canonical symmetry-breaking ＝ torsor 平凡化（**局部选择型**） |
+| **D-11** | 🆕 **C-α 组合刚性纯计数下降环的反例障碍 ＋ 继承规则** | `docs/C-alpha-ledger-lock-and-novelty-audit.md`｜`docs/C-alpha-rigidity-MAP-CHECK-and-13-gate-screen.md`｜commit `d4ec772` | **MAP-NEW ⟹ GAP-HOLD ⟹ DEAD**（一轮文献级 novelty audit）✓ ① 组合刚性在本 RH 地图**零覆盖**（`Laman`／`pebble` 仅自命中）⟹ **MAP-NEW** ✓ ② `(3,6)`-稀疏在 3D **仅必要不充分**（标准反例 **double banana**）⟹ 「**失败保持下降**」**被结构性排除** ⟹ **`C3/C4` 缺口由「尚未找到证明」升级为「当前纯计数机制下存在明确反例障碍」** ✓✓ ③ 对称刚性（轨道刚性矩阵／Fowler–Guest 特征公式／gain-sparsity 计数）与曲面刚性（Laman 型**充要**定理）**均已发表** ⟹ 本仓无新不变量 ✓ ④ ⭐ **继承规则**：**不能只换对象；必须同时换出一个尚未被现有理论吸收的新不变量** ✓✓ ⑤ ⚠️ **DEAD 针对本仓 C-α 候选，非对 rigidity 领域的价值判断** ✓。**状态＝已封闭** ✓ |
 
 ---
 
