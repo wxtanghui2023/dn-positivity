@@ -40,7 +40,7 @@ $$\qquad \textbf{\Delta_4 方向}✗✓：\text{一阶只现于}\ Q_4\ (+32\Delt
 
 $$\qquad \Longrightarrow \boxed{\text{T3 结构}＝\text{一个一阶方向}\ (P_3)＋\text{一个需二阶的方向}\ (\Delta_4)}✓✓$$
 
-$$\textbf{⑥ 数值核验（本档}✓✓**）：\text{分解恒等式对}\ i = 1,2,3,4\ \textbf{全部成立}✓✓（sympy 核验}✓）；\ \text{且}\ (u+v)^2 - 4uv = 4a^4 - 4a^4 = 0✓✓$$
+$$\textbf{⑥ 数值核验（本档}✓✓**）：\text{分解恒等式对}\ i = 1,2,3,4\ \textbf{全部成立}✓✓（sympy 核验 ✓ —— ⚠️ **更正记录**：首次数值核验失败（四项皆 False），原因是**比较时只把约束代入左边**✗；将约束**两边同时**代入后，四项**全部成立** ✓✓；并核验等价形式 $\Sigma Y^3 = -3(Y_1+Y_2)(Y_2+Y_3)(Y_3+Y_1)$ ✓）；\ \text{且}\ (u+v)^2 - 4uv = 4a^4 - 4a^4 = 0✓✓$$
 
 $$\textbf{⑦ 立即可检验的下一点}✓✓：\text{在}\ \textbf{真实极值点} \text{处，}\ Q_3\ \text{与}\ Q_4\ \text{哪些}\ \textbf{活跃}✓\ \text{（须区分}\ C\text{-}3846\ \text{截断系统的}\ Q_k\ \text{与}\ C\text{-}3861\ \text{的}\ F_{2q}\ \text{活跃集}✗✓,\ \textbf{不得混用}✗）$$
 
