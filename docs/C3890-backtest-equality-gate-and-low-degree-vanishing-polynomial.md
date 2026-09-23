@@ -92,3 +92,9 @@ $$\textbf{① T1a-}\beta\ \textbf{小探针}✓✓：\text{在约束张量}\ \op
 $$\qquad \text{成本}✓：\text{线性代数 ＋ 根计数}✓,\ \textbf{无需} \text{学完整门理论}✓✓$$
 $$\textbf{② M0 收尾}✓：\text{奇偶族 T-system 逐字判别 ＋ 精确定理号定位}✓$$
 $$\textbf{③ T2／T3}✓：\text{按 } C3889\ \text{登记推进}✓✓$$
+
+---
+
+**【2026-09-23 09:30 术语规范化注记】** 本档 `§6①` 的 `T1a-β` 探针中「低次」一词，**正式定义为「次数 `\le2`」** ✓；
+　今后本议题统一写作 **「次数 `\le2` 消失元」**（正式 Spec 见 `docs/C380-T1a-beta-CLOSURE-and-OPEN-inventory.md` §1）✓；
+　`C-380/T1a-β` 现判 **`CLOSED AS STRUCTURAL ROUTE`**（`P0` FAIL；**事后证书保留**；重开条件＝独立 rank-collapse/recurrence/annihilator 机制 ✓）✓

@@ -210,3 +210,17 @@ FREEZE-ACK: 本档 = 冻结登记（**零计算** ✓；**不产新结论** ✓�
 　· 采用**五出口**（A 空／B 无／C 无／D 弱／E **可能有，须审**）＋ **反循环窄检查**（须真改 quantity；`36 \to 2` 量级改善方向）✓
 【下一刀】 `T1a-β` 的"**前置推导 vs 事后认证**"判定 ✓
 ```
+
+---
+
+## 【2026-09-23 09:30 更新】**`T1a-β` 收口（`CLOSED AS STRUCTURAL ROUTE`）＋ 术语规范化**
+
+```
+【判词（照录）】 $$\boxed{\texttt{C-380/T1a-}\beta = \text{CLOSED AS STRUCTURAL ROUTE}}$$（**非 DEAD**；`E` 出口保留）✓
+【八项】 `P0` FAIL｜前置结构推导**未发现**｜**事后证书保留**｜A 空/至多间接｜B 无｜C 无｜D 弱｜**E 保留**｜**重开条件＝出现独立 rank-collapse/recurrence/annihilator 机制** ✓
+【闭环】 $$\text{次数}\le2\ \text{消失元} \iff |\operatorname{supp}|\le2$$ ⟹ 同义循环（`rank E_2=\min(3,|\operatorname{supp}|)`）✓
+【术语规范化】 ⭐ **`低次` 在本议题一律改称「次数 `\le2` 消失元」**（正式定义见 `docs/C380-T1a-beta-CLOSURE-and-OPEN-inventory.md` §1）✓；
+　涉及档：本台账｜`C3890`｜`C380-T1a-local-audit.md`｜`C380-T1a-beta-PRE-VS-POST.md` ✓
+【活项排序】 `M0` 收尾（卫生项，⭐ 最优先且成本低）→ `S1` 本身评估（唯一可能带新 quantity 的 OPEN 项）→ 再决定 `T2`/`T3`（**暂不启动**）✓
+【状态】 `T1a only` → **`T1a-β` 已收口；`T1a` 剩余内容＝`M0` 收尾 ＋ `S1`评估** ✓
+```
