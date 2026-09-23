@@ -82,3 +82,22 @@ $$\boxed{\begin{aligned}&\text{SOURCE cards}=4,\\&\text{S4-format admissible}=4,
 【⑥ 卡 1 最终状态（照录 ✓✓）】 $$\boxed{\begin{array}{ll}S1&\checkmark\\S2&\checkmark\\S3&\checkmark\\S4\text{-PRE}&\checkmark\\S4\text{-EXACT}&\checkmark\（\text{作用方向已补钉}\）\\COMPUTATION&\textbf{LOCKED}\\RUN&\textbf{尚未授权}\end{array}}$$ ✓
 【⑦ 纪律（照录）】 $$\boxed{\text{先钉死 }S4\text{，再跑第一笔；绝不先跑再解释}}$$ ✓；卡 3 已正确 `CLOSED`；卡 2／4 **暂不抢跑** ✓
 ```
+
+---
+
+## §5 **执行层边界错位修正（唐先生 2026-09-23 14:00 ✓✓；`RUN` 仍未授权）**
+
+```
+【⚠️ 错位（唐先生指出，本档确认 ✓）】 原写法 `(R_JX)_h=\sum_{j=0}^Jc_jX_{h+j}`，`h\le40,\ J\le4` ⟹ 当 `h=40,\ J=4` 需 **`X_{40},X_{41},X_{42},X_{43},X_{44}`**，
+　而数据只声明到 `0\le h\le40` ⟹ **最后四个 `h` 的递推方程并不存在** ✗
+【✅ 采用方案 A（照录并采纳 ✓✓）】 保持 `h\le40` 为**递推方程范围**，而把**数据范围扩展**为 $$\boxed{0\le h\le44}$$，
+　于是对 $$h=0,\dots,40$$ **完整构造方程** ✓
+　（语义不变：$$\boxed{\text{固定 }h\le40\text{ 的 }41\text{ 个目标位置}}$$；`h+J` 仅是**递推所需右侧数据**，**不改变测试对象** ✓✓）
+【✅ 方程与堆叠（修正后）】 对每个 `J\in\{1,2,3,4\}`，`h\in\{0,\dots,40\}`：$$\sum_{j=0}^{J}c_jX^{(i)}_{h+j}=0\ (\,i=1,2\,)$$ ⟹ `M^{(i)}` 为 **41×(J+1)** 矩阵 ⟹ 堆叠 $$M=\begin{pmatrix}M^{(1)}\\M^{(2)}\end{pmatrix}$$ ✓
+【⭐⭐ 最终判定口径修正（照录 ✓✓）】 必须报告 $$\boxed{\exists\,c\in\mathbb Z^{J+1}:\ Mc=0,\quad c_J=1}$$ ⛔ **而不是**仅报 $$\dim_{\mathbb Q}\ker M>0$$ ✓✓
+　**理由（照录）**：有非零有理零空间**并不自动**意味着存在**首一整系数**递推 ✓
+　**本档机械化（等价形式）**：`\exists c` ⟺ 存在有理零空间向量 `v` 使 `v_J\neq0` **且** `v/v_J\in\mathbb Z^{J+1}` ⟹ 逐 `J` 报告：`\dim\ker`、**是否存在首一整解**、以及**若存在则给出显式 `c`** ✓
+【卡 1 状态（照录 ✓✓）】 $$\boxed{\begin{array}{c}S1\text{–}S4\text{-EXACT}=\checkmark\\\text{execution-boundary}=1\ \text{项待修正}\to\textbf{已修正}\\COMPUTATION=\textbf{LOCKED}\\RUN=\textbf{NOT YET AUTHORIZED}\end{array}}$$ ✓
+【授权后首轮 `RUN-1` 的冻结范围（照录 ✓✓）】 $$X^{(1)},X^{(2)}\to M\to\ker_{\mathbb Q}M\to\text{首一整系数可行性}$$；
+　⛔ **不增加 `J`、不增加尺度、不扩大 `h`、不改变 `S4`** —— 这才是一次真正**可审计**的 `RUN-1` ✓✓
+```
