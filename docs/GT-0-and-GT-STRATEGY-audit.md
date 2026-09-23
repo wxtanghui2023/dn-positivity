@@ -40,12 +40,16 @@ FREEZE-ACK: **零计算／零数值／未写程序**／未证 RH／未接 ζ／�
 ## §2 ⭐ **有价值的残留：诊断层面的交叉验证**（非新 quantity ✓）
 
 ```
-【Tao 的失败诊断（照录）】 **AP（两个独立参数）可做**；**孪生素数／偶 Goldbach（一参数、共轭型）超出该技术** ✓（缘于相关 affine-linear forms 的**局部障碍**）
-【⭐ 与我方档案的对应】 我方已独立记录了**同一结构性诊断**：
-　· **局部障碍（`p=2`）** ⟺ 我方 **parity barrier** 登记（`D-11`／`奇偶障碍` 7 档）✓
+【Tao 的失败诊断（照录）】 **AP（两个独立参数）可做**；**孪生素数／偶 Goldbach（一参数、共轭型）超出该技术** ✓✓
+　⚠️ **修正（2026-09-23 09:43 唐先生令）**：**不得**把 GT 无法解决孪生素数的**全部原因**归结为 **`p=2` 的局部不可容许性**——它只是**最直观的局部现象之一** ✓
+　⚠️ **三层必须分开（与本仓 `S6` 的精度一致）**：**local admissibility** ≠ **parity problem／sieve limitation** ≠ **configuration complexity** ✓✓
+【⭐ 与我方档案的对应（修正后表述 ✓）】 准确说法是：**GT 框架对某些线性配置可转移**（如 AP），**而孪生素数等一参数模式仍受 sieve／parity／complexity 型障碍** ✓ ⟹
+　· **parity／sieve 型障碍** ⟺ 我方 **parity barrier** 登记（`D-11` 系／`奇偶障碍` 7 档）✓
 　· **奇异级数只记 local admissibility** ⟺ 我方 **`S6` 锁死**（"活口不能是更漂亮的奇异级数"）✓
 　· **一参数／共轭型模式的顽固性** ⟺ 我方 **原子墙**（`W6`：无条件三阶矩 ≡ prime-pair ≡ support`>1`，**不可再分**）＋ 二参数路线永久停止 ✓
-【判定】 这是一次**诊断层面的交叉验证**（我们与前沿对"为何某些模式顽固"的**结构判断一致**）⟹
+【判定】 ⚠️ **这是诊断层交叉验证，不是机制同一性证明** ✓✓；即
+　$$oxed{	ext{GT 失败诊断}\ \longleftrightarrow\ 	ext{我方已有 parity／S6／atomic-wall 诊断}}$$
+　这是一次**诊断层面的交叉验证**（我们与前沿对"为何某些模式顽固"的**结构判断一致**）⟹
 　**属"adjacent asset"级收获，不构成新 quantity** ✓✓（依令：⛔ 不得据此宣布新桥 ✓）
 ```
 
@@ -90,4 +94,26 @@ FREEZE-ACK: **零计算／零数值／未写程序**／未证 RH／未接 ζ／�
 　· **通用词（不计）**：无 ✓
 ✗ 零计算／零数值／未写程序／未证 RH／未接 ζ／未开案／**未进入 Gowers/transference 技术细节** ✓
 ⚠️ 外部文献（唐先生所引 `arXiv:math/0404188`／`math/0512114`／Tao 讲义）为 **untrusted 指针**，本档**未逐字核原文** ✓
+```
+
+
+---
+
+## §6 **修正后增补**（2026-09-23 09:43 唐先生令 ✓✓）
+
+```
+【E-15 定性（照录）】 $$oxed{	ext{E-15} = 	ext{方法论资产}\ /\ 	ext{candidate-generation principle}\quad(	extbf{KEEP / METHODOLOGICAL})}$$ ✓
+　⛔ **不是**：新数学机制｜新 arithmetic quantity｜RH bridge｜live mainline ✓✓
+【⭐ 新增硬门（transfer mechanism 专用）】
+　任何所谓 transfer mechanism，**必须在 transfer 之后产生一个此前不存在的 arithmetic observable**；
+　若只是已有 **majorant／Gowers／singular series／explicit-formula／positivity／zero statistic** 的**重新组织** ⟹ **立即 FAIL** ✓✓
+【⭐ 硬限制】 $$oxed{	ext{方法论可迁移} 
+eq 	ext{quantity 可迁移}}$$ —— 用以阻断"把 transfer principle 本身再包装成新对象" ✓✓
+【⭐ 主线新形式（照录）】 $$oxed{	ext{GT-STRATEGY} 	o 	ext{寻找 transfer mechanism} 	o N0' 	o 	ext{新 quantity}}$$
+　（⛔ 而非 `GT → Gowers → majorant → 再撞旧墙` ✓）
+【⭐ 战略结论（照录）】 这轮**不是又没方向**，而是**把"方向生成器"升级了一层** ✓✓：
+　连续排除（`T1a-β` 循环｜`E-10` 候选池 `N0′` 大面积失败｜`GT` quantity 池 `N0′` 失败）之后，
+　留下的是**新的搜索原则**：**从"新量"搜索转向"新转移机制"搜索** ✓
+　且**不是无限开放**：新硬门（上文）即其准入判据 ✓
+【精度要求（承修正 ✓）】 凡涉"障碍"表述，须保持三层分离：**local admissibility ≠ parity／sieve limitation ≠ configuration complexity** ✓✓
 ```
