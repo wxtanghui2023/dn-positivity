@@ -31,3 +31,21 @@ STOP:              <什么结果立即证明该来源只是 CAS/B/C 的变体？
 ④ **0 号指标优先**：是否真的产生了新的数学对象？（`AMEND-5`）⟹ 0 号未过则不得进入 (1)-(4) 检查 ✓
 ⑤ ⛔ 不得以 parameter／order／window／matrix size 的变化替代 SOURCE 的变化 ✓
 ```
+
+---
+
+## §2 **`S4` 的 anti-post-hoc 声明（`AMEND-7`；⛔ 计算前必写，事后不得改写 ✓）**
+
+```
+【为什么】 $$\text{SOURCE 先验资格}\neq\text{候选机制资格}$$ ⟹ 进入研究轮的**唯一理由**＝**存在可预先声明的、可判定的 `S4` 对象生成检验** ✓
+　（否则滑回"先算一堆数据，再从异常中找故事" ✗）
+【模板追加行（写在 `S4` 之下）】
+S4-PRE:            <预先声明：若出现何种结构，则何种"对象"被强迫出现？该检验如何判定？>
+S4-ANTI-POST-HOC:  <四点自查（计算后填写，不得改写 S4-PRE）：
+                    1) F 的形式不是预选来拟合数据的；
+                    2) 至少第二层/第二尺度迫使同一结构；
+                    3) F 不是既有恒等式/Euler–Dirichlet/有限差分缩放/稀疏支持的重命名；
+                    4) F 有脱离本实验的定义域。>
+【流程】 $$\text{SOURCE CARD}\to\text{S1–S4/STOP 审核}\to\text{第一笔最小计算}\to\text{结构判定}\to\begin{cases}\text{forced object}\Rightarrow\text{继续}\\\text{numerical pattern only}\Rightarrow\text{STOP}\\\text{CAS/B/C 型}\Rightarrow\text{STOP}\end{cases}$$ ✓
+【状态】 `S4` ＝ **primary admission gate**；`STOP` **必须在计算前声明** ✓
+```

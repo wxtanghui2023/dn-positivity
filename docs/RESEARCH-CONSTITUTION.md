@@ -629,6 +629,27 @@ m new}	oegin{array}{c}	ext{突破 }2/3?\	ext{有限排除离轴零点?}\	ext{�
 【⭐ `AMEND-5` 的核心价值（照录 ✓✓）】 把"**继续算**"和"**值得继续算**"彻底分开了 ✓✓
 ```
 
+### §8.1-AMEND-7 ⭐⭐ **`SOURCE 先验资格 ≠ 候选机制资格` ＋ `S4` anti-post-hoc 四条件（唐先生 2026-09-23 13:50 批准 ✓✓）**
+
+```
+【⭐⭐ 压缩成一句（照录 ✓✓）】 $$\boxed{\text{SOURCE 先验资格}\ \neq\ \text{候选机制资格}}$$ ✓
+　即：一个来源**即使 `S1`–`S3` 全部通过**，也**不能因为"看起来可能有用"就进入计算** ✓；
+　真正进入研究轮的理由只能是 $$\boxed{\text{存在\textbf{可预先声明的、可判定的} } S4 \text{ 对象生成检验}}$$ ✓✓
+　（否则又滑回"**先算一堆数据，再从异常中找故事**" ✓）
+【⭐⭐ 下一轮合法流程（照录 ✓✓）】
+　$$\boxed{\text{SOURCE CARD}\to\text{S1–S4/STOP 审核}\to\text{第一笔最小计算}\to\text{结构判定}\to\begin{cases}\text{forced object}\Rightarrow\text{继续}\\\text{numerical pattern only}\Rightarrow\text{立即 STOP}\\\text{CAS/B/C 型}\Rightarrow\text{立即 STOP}\end{cases}}$$ ✓
+【⭐⭐ ⚠️ `S4` **不得事后修改**（照录 ✓✓）】 事前写"若出现异常，可能产生递推对象 `F`"；计算后**不能**因为看到某数值规律就改写成"我们发现了 `F`" ✗ ✓
+　**必须能证明四点（anti-post-hoc 条件 ✓✓）**：
+　**(1)** `F` 的形式**不是预先为了数据拟合而选择**的 ✓
+　**(2)** **至少有第二层／第二尺度数据迫使同一结构** ✓
+　**(3)** `F` **不是**已有恒等式、Euler–Dirichlet 结构、有限差分缩放、稀疏支持等**旧机制的重新命名** ✓
+　**(4)** `F` 作为数学对象**具有脱离当前实验的定义域** ✓
+【⭐⭐ 当前真正值得寻找的东西（照录 ✓✓）】 ⛔ 不是"候选机制"；✅ 而是 $$\boxed{\text{一个已有数学问题}+\text{一个天然可计算的结构}+\text{一个可能被计算强迫出来的对象}}$$，
+　然后才检查 $$\text{该对象}\to\text{已有 }\zeta/L\text{ 接口}\to RH$$ ✓✓
+【⭐⭐ 状态（照录 ✓✓）】 $$\boxed{D/B/C:\text{discovery channels CLOSED};\ D_{\rm new}=0;\ RH:\text{OPEN};\ JAM:\text{ARCHIVED};\ SOURCE:\text{唯一搜索自由度};\ S4:\text{primary admission gate};\ STOP:\text{必须在计算前声明}}$$ ✓
+【工具层note（照录 ✓）】 `\xrightarrow` 转义问题属**工具执行层错误，不进入数学研究账本**；raw string 修复即可，**不需产生研究资产** ✓
+```
+
 ### §8.2 Discovery Round 2 记录：双滤过算术耦合 ⟹ D1 = 0
 ```
 命题：研究 P_A(Y)P_M(X)P_A(X) 型【跨尺度重构算子】，期望平衡律 Y²≍X 内生导出 √X
