@@ -1,0 +1,26 @@
+=== [1] Batcher odd-even mergesort for n=13 ===
+size = 48 comparators ; sorts(0-1 principle) = True
+
+=== [2] search-space quantification ===
+possible comparators on 13 lines     : C(13,2) = 78
+raw sequences, 44 comparators        : 78^44 = 10^83.3
+max matchings per layer (13 odd)     : T(13) = 568504
+layered upper bound (8 layers of max) : ~10^46.0
+even with canonical first layer (/T(13)): ~10^40.3
+
+=== [3] random-network needle test (how rare is 'sorting'?) ===
+size  30: sorting fraction over 300 random networks = 0/300
+size  40: sorting fraction over 300 random networks = 0/300
+size  44: sorting fraction over 300 random networks = 0/300
+size  50: sorting fraction over 300 random networks = 0/300
+
+=== [4] naive search baseline: can we shrink below the construction? ===
+construction size          : 48
+after deletion-only pruning: 48   (elapsed 0.1s)
+gap to 44                  : 4
+
+=== [5] budget reality check ===
+verified networks/sec (this machine): 654
+networks verifiable/day            : 5.651e+07
+raw 44-search space                : 1.787e+83
+ratio (space / daily capacity)     : 3.163e+75
