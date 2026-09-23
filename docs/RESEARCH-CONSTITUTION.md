@@ -553,22 +553,50 @@ Round 2 : 双滤过算术耦合 —— **D1 = 0**（本轮）⟹ 计数 1/3，fr
 ```
 【要区分的两件事】 $$oxed{	ext{"独立"指	extbf{发现机制的来源}独立，	extbf{不是}数学对象与 RH 毫无关系}}$$ ✓✓
 【合法发现通道（照录 ✓✓）】
-　$$oxed{	ext{RH 相关对象}\ \overset{	ext{具体计算}}{\longrightarrow}\ 	ext{异常／新结构}\ \overset{	ext{机制提炼}}{\longrightarrow}\ M_{m new}\ \longrightarrow\ 	ext{既有 RH 接口}\ \longrightarrow\ RH}$$ ✓
+　$$oxed{	ext{RH 相关对象}\ \overset{	ext{具体计算}}{\longrightarrow}\ 	ext{异常／新结构}\ \overset{	ext{机制提炼}}{\longrightarrow}\ M_{
+m new}\ \longrightarrow\ 	ext{既有 RH 接口}\ \longrightarrow\ RH}$$ ✓
 【⭐ 关键（照录）】 $$oxed{	ext{新结构必须由计算"逼出来"，	extbf{而不能}由旧 RH 墙"设计出来"}}$$ ✓✓
 【合法可计算对象（示例，照录 ✓）】 `\zeta` 零点／零点相关函数／显式公式｜素数·素数对·加法结构｜Dirichlet `L`-函数｜
 　Mellin／Fourier 变换中的 RH 对象｜临界带内某可计算算术量｜零点与某独立算术对象的对应数据 ⟹ **这些完全可以是 RH 相关的** ✓
 【⛔ 启动逻辑不得是】 「`eta` 不可见」`	o`「我要找一个 `eta`-sensitive quantity」`	o`「构造新符号」＝**回到旧方向** ✓
 【✅ 启动逻辑应是】 先选一个 **RH 相关、但问题本身有独立数学内容**的具体量 `	o` 实际算 `Q_1,\dots,Q_N` `	o`
 　发现**此前未被账本描述的**稳定关系／守恒量／消失阶／整数性／分层现象：$$oxed{Q_N\ 	ext{呈现新规律}}$$ `	o`
-　再问 $$oxed{	ext{这个规律	extbf{强迫}什么新的数学对象？}}$$ `	o` **最后才**检查 `M_{m new}` 能否接
+　再问 $$oxed{	ext{这个规律	extbf{强迫}什么新的数学对象？}}$$ `	o` **最后才**检查 `M_{
+m new}` 能否接
 　① `eta`-visibility ② global coercivity ③ zero exclusion ④ prime problems ⑤ other conjectures ✓
-【⭐ 搜索空间（照录 ✓✓）】 $$oxed{\mathcal D_{m legal}=\{	ext{RH-connected problems}\}\setminus\{	ext{old-wall-driven discovery}\}}$$ ✓
+【⭐ 搜索空间（照录 ✓✓）】 $$oxed{\mathcal D_{
+m legal}=\{	ext{RH-connected problems}\}\setminus\{	ext{old-wall-driven discovery}\}}$$ ✓
 【⭐ `D-22` 的边界读法（照录）】 **并未把我们赶到 RH 外面去**；它只要求：**不要再从已封死的 RH 内部接口寻找新机制；
 　要从 RH 相关对象的	extbf{另一个可计算侧面}让新机制自己冒出来** ✓✓
 【⭐ 四指标同步记账（照录）】 从**第一笔计算**起同时记账：
-　$$	ext{计算现象}	o M_{m new}	oegin{array}{c}	ext{突破 }2/3?\	ext{有限排除离轴零点?}\	ext{推进素数问题?}\	ext{推进非素数猜想?}\end{array}$$ ✓
+　$$	ext{计算现象}	o M_{
+m new}	oegin{array}{c}	ext{突破 }2/3?\	ext{有限排除离轴零点?}\	ext{推进素数问题?}\	ext{推进非素数猜想?}\end{array}$$ ✓
 【⭐ 本仓补充的可操作前置过滤（**本档提议** ⚠️）】 任一未来计算，其"现象"须能**不借助 `rank`／`support`／`parity`／`majorant`／`β`-blind 术语**被描述，
 　否则即**旧账本改写**（`E-20` 第 4 条 ⟹ FAIL）✓
+```
+
+### §8.1-AMEND-5 ⭐⭐ **`D`/`B`/`C` 三入口收口的正确读法 ＋ 来源筛选器 `S1–S4` ＋ 0 号指标（唐先生 2026-09-23 13:46 批准 ✓✓）**
+
+```
+【⭐ 正确读法（照录 ✓✓）】 $$\boxed{\text{D/B/C 三入口}\xrightarrow{\text{具体计算}}\text{无新结构}\Longrightarrow D_{\rm new}=0}$$ ✓
+　⛔ **不得**由此推出：$$D_{\rm new}=0\Longrightarrow\text{RH 没有新攻击点}$$ —— **后一推论仍完全不能成立** ✓✓
+【⛔ 纪律：不得建议 `D`/`B`/`C`-2（照录 ✓✓）】 再找"更高 `k`／更大 `N`／更多零点／更多卷积／更多截断／更多矩阵"**不应自动获得研究资格** ⟹
+　$$\boxed{\text{那是\textbf{换参数}，不是换 discovery channel}}$$ ✓；下一阶段改变的不是"参数"，而是 $$\boxed{\textbf{问题来源}}$$（**仍保持 RH-connected**）✓
+【⭐⭐ 更高层来源筛选器 `S1–S4`（跑之前先问，照录 ✓✓）】
+　**`S1`** **它的数学问题是否先于 RH？** —— 即使完全不谈 RH，该计算问题本身仍有明确内容（算术恒等式／组合计数／变换结构／递推／极值问题）⛔ 而非"为了证明 RH，我定义了 `Q`" ✓
+　**`S2`** **它是否天然与 RH 相连？** —— 须存在**已有的、非人工制造的接口** $$\mathcal P\leftrightarrow\zeta/L/\text{prime/zero structure}$$ ✓
+　**`S3`** **第一笔计算是否可在不使用旧墙坐标下完成？** —— 程序输入与第一阶段输出都**不需要** `\beta`／`rank`／`support`／`parity`／`majorant` ✓（此条尤重 ✓）
+　**`S4`**（**现最看重**）**若发现异常，异常能否迫使"对象"而不只是"常数"？** ——
+　　弱：`Q(N)\sim cN^\alpha`（即使 `c` 很漂亮也未必有价值）｜强：`Q_{m+1}=F(Q_m)` 或 `Q_m=0` 或 `Q_m=R_m\cdot S_m`（出现此前无自然解释的结构）⟹
+　　$$\boxed{\text{计算结果迫使数学对象，而不是仅仅给出一个数值规律}}$$ ✓✓
+【⭐⭐ 四指标改写：新增 0 号指标（照录 ✓✓）】 $$\boxed{\text{0 号指标：是否真的产生了新的数学对象？}}$$
+　**只有 0 号通过**，才有资格检查：**(1)** 在线零点比例｜**(2)** 有限离轴排除｜**(3)** 素数问题｜**(4)** 其它猜想 ✓✓
+　（目的：避免"某个漂亮常数／渐近式看起来可能有 RH 用途 ⟹ 一路包装"的循环 ✓）
+【⭐⭐ 状态板（照录 ✓✓）】 $$\boxed{D\text{-channel}:\text{CLOSED};\ B\text{-channel}:\text{CLOSED};\ C\text{-channel}:\text{CLOSED};\ D_{\rm new}=0}$$ 但
+　$$\boxed{\text{RH target = OPEN}}\qquad\boxed{\text{discovery channel = WAITING FOR A NEW SOURCE}}$$
+　⚠️ **`WAITING` 不是停摆**：搜索条件变为"**找到一个有自身数学生命、同时又天然连接 RH 的问题**，然后从它的**第一笔计算**开始" ✓✓（此即 `AMEND-4` 最终锁定的状态 ✓）
+【⭐ 本轮的正面意义（照录 ✓✓）】 三入口全部干净关闭**反而是好事**：终于把"任何 RH 相关对象随便做一点差分／缺陷／双表示，就可能冒出新机制"这个**宽搜索空间实际压缩掉了**；
+　下一轮候选必须在**来源**上与 `CAS`／`B`／`C` 有**明显区别**，⛔ 不能只是它们的**第四种变体** ✓✓
 ```
 
 ### §8.2 Discovery Round 2 记录：双滤过算术耦合 ⟹ D1 = 0
