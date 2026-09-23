@@ -94,3 +94,30 @@ FREEZE-ACK: **零计算／零数值／未写程序**／未做数值实验／未�
 【地图回查】 关键词 5 项 = **未覆盖** ⟹ 可开档 ✓；档案覆盖：`Giuga` 1／`算导` 0／`pseudoperfect` 0／`不动点` 94（通用词 ⚠️）／`形变` 35（异义 ⚠️）✓
 【文献引用（untrusted）】 Barbeau (1961)／Ufnarovski–Åhlander (2003)／Kovič (2012)／Haukkanen (2019)／Haukkanen–Merikoski–Tossavainen (2016, 2017, 2018)／Merikoski et al. (2019) ✓
 【档级引用】 `E-10-ROUND2-candidate-generation.md` §7 ✓｜`E-13`（五出口框架）✓
+
+---
+
+## §7 **归档：`C-A` ＝ 校准负例（`GAP / WATCHLIST`）**（唐先生 2026-09-23 08:49 定 ✓✓）
+
+```
+【归档判词（照录）】 $$\boxed{\text{C-A} = \mathrm{GAP}\ /\ \mathrm{WATCHLIST}}$$ —— ⛔ **非 DEAD** ✓✓
+【理由（照录，逐条干净）】
+　· `N1–N5`：**通过** ✓｜· `N6`：**核心参数被 `D_S` 吸收** ⛔｜· `N7`：**独立开放问题仍存在** ✓
+　· 出口 `A/B/C`：**目前没有 RH／零点出口** ✗｜· 出口 `D`：**只有弱的潜在素数出口** ⚠️｜· 出口 `E`：**确实有独立数学价值** ✓
+　· ⟹ **现阶段不足以证明【新的机制或新的参数化空间】** ⟹ 不能 Promote，也不能 DEAD ✓✓
+【⭐ 作为"校准负例"的价值（照录）】 $$\text{独立开放问题} + \theta\text{ 看似新}\ \not\Longrightarrow\ \mathrm{Promote}$$ ✓✓
+　真正致命的是：$$\boxed{\theta\ \text{本身已经被成熟理论显式参数化}}$$ —— `D_S` 恰好说明这一点 ✓✓
+【⭐ `N6` 优先级教训（照录）】 以后看到一个"自然参数"时，`N6` **必须优先问**：
+　$$\boxed{\text{这个参数是不是早已作为某种限制／twist／子集／权／局部化／deformation 在文献中出现？}}$$ ✓✓
+　—— **而不是先投入 `N5` 结构展开**（否则会走完 `N1–N5` 才发现参数早已有名字）✓✓
+【复活条件】 若后续发现 `D_S` 框架之外的、未被 Haukkanen 线覆盖的**新不变量**，可从 watchlist 复活 ✓
+```
+
+## §8 **本轮冻结（`E-10` 第二轮成果）**
+
+```
+【冻结内容】 ① 候选三件（`C-A`／`C-B`／`C-C`）＋ 各自 `N1–N5` 初筛结论 ✓
+　② `C-A` 的完整 `N6/N7` 审计 ＋ **文献级矩阵**（Barbeau 1961 → Haukkanen 2019）✓
+　③ ⭐ **本轮净产出（方法论级）**：**`N0′` 参数独立性前置门**（由 `C-A` 校准得出）✓✓
+【去向】 postmortem ＋ 新门 ＋ 候选再生见 `docs/E-10-ROUND2-candidate-generation.md` §8–§9 与 `docs/E-10-ROUND2.5-candidate-regeneration.md` ✓
+```
