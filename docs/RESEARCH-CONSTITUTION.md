@@ -548,6 +548,29 @@ Round 2 : 双滤过算术耦合 —— **D1 = 0**（本轮）⟹ 计数 1/3，fr
 【⛔ `D3/D4` 不执行（唐先生裁定 ✓）】 "**唯一未执行**"**不是充分理由**；未先证明其 witness 产生**不属于旧账本的新算术量**之前执行它，**极易重入已明令禁止的循环** ✓
 ```
 
+### §8.1-AMEND-4 ⭐⭐ **「独立」的精确含义：发现来源独立 ≠ 对象与 RH 无关（唐先生 2026-09-23 13:26 批准 ✓✓）**
+
+```
+【要区分的两件事】 $$oxed{	ext{"独立"指	extbf{发现机制的来源}独立，	extbf{不是}数学对象与 RH 毫无关系}}$$ ✓✓
+【合法发现通道（照录 ✓✓）】
+　$$oxed{	ext{RH 相关对象}\ \overset{	ext{具体计算}}{\longrightarrow}\ 	ext{异常／新结构}\ \overset{	ext{机制提炼}}{\longrightarrow}\ M_{m new}\ \longrightarrow\ 	ext{既有 RH 接口}\ \longrightarrow\ RH}$$ ✓
+【⭐ 关键（照录）】 $$oxed{	ext{新结构必须由计算"逼出来"，	extbf{而不能}由旧 RH 墙"设计出来"}}$$ ✓✓
+【合法可计算对象（示例，照录 ✓）】 `\zeta` 零点／零点相关函数／显式公式｜素数·素数对·加法结构｜Dirichlet `L`-函数｜
+　Mellin／Fourier 变换中的 RH 对象｜临界带内某可计算算术量｜零点与某独立算术对象的对应数据 ⟹ **这些完全可以是 RH 相关的** ✓
+【⛔ 启动逻辑不得是】 「`eta` 不可见」`	o`「我要找一个 `eta`-sensitive quantity」`	o`「构造新符号」＝**回到旧方向** ✓
+【✅ 启动逻辑应是】 先选一个 **RH 相关、但问题本身有独立数学内容**的具体量 `	o` 实际算 `Q_1,\dots,Q_N` `	o`
+　发现**此前未被账本描述的**稳定关系／守恒量／消失阶／整数性／分层现象：$$oxed{Q_N\ 	ext{呈现新规律}}$$ `	o`
+　再问 $$oxed{	ext{这个规律	extbf{强迫}什么新的数学对象？}}$$ `	o` **最后才**检查 `M_{m new}` 能否接
+　① `eta`-visibility ② global coercivity ③ zero exclusion ④ prime problems ⑤ other conjectures ✓
+【⭐ 搜索空间（照录 ✓✓）】 $$oxed{\mathcal D_{m legal}=\{	ext{RH-connected problems}\}\setminus\{	ext{old-wall-driven discovery}\}}$$ ✓
+【⭐ `D-22` 的边界读法（照录）】 **并未把我们赶到 RH 外面去**；它只要求：**不要再从已封死的 RH 内部接口寻找新机制；
+　要从 RH 相关对象的	extbf{另一个可计算侧面}让新机制自己冒出来** ✓✓
+【⭐ 四指标同步记账（照录）】 从**第一笔计算**起同时记账：
+　$$	ext{计算现象}	o M_{m new}	oegin{array}{c}	ext{突破 }2/3?\	ext{有限排除离轴零点?}\	ext{推进素数问题?}\	ext{推进非素数猜想?}\end{array}$$ ✓
+【⭐ 本仓补充的可操作前置过滤（**本档提议** ⚠️）】 任一未来计算，其"现象"须能**不借助 `rank`／`support`／`parity`／`majorant`／`β`-blind 术语**被描述，
+　否则即**旧账本改写**（`E-20` 第 4 条 ⟹ FAIL）✓
+```
+
 ### §8.2 Discovery Round 2 记录：双滤过算术耦合 ⟹ D1 = 0
 ```
 命题：研究 P_A(Y)P_M(X)P_A(X) 型【跨尺度重构算子】，期望平衡律 Y²≍X 内生导出 √X
