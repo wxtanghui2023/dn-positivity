@@ -650,6 +650,29 @@ m new}	oegin{array}{c}	ext{突破 }2/3?\	ext{有限排除离轴零点?}\	ext{�
 【工具层note（照录 ✓）】 `\xrightarrow` 转义问题属**工具执行层错误，不进入数学研究账本**；raw string 修复即可，**不需产生研究资产** ✓
 ```
 
+### §8.1-AMEND-8 ⭐⭐ **SOURCE-SEARCH 执行宪法：不蕴含式 ＋ 三层 ＋ 零号 STOP ＋ 账本极简（唐先生 2026-09-23 13:53 批准 ✓✓）**
+
+```
+【⭐⭐ 不可逆逻辑（照录 ✓✓）】 $$S1\!-\!S3\ \not\Rightarrow\ \text{RUN}$$ 而必须有
+　$$\boxed{S1\!-\!S3+\mathrm{S4\text{-}PRE}+\operatorname{ANTI\text{-}POST\text{-}HOC}+\operatorname{STOP}\ \Rightarrow\ \text{RUN}}$$ ✓✓
+【⭐⭐ 三层（照录 ✓✓）】
+　| 层 | 内容 | 当前处理 |
+　| **SOURCE** | 本身已有独立数学生命的问题 | **搜索对象** |
+　| **OBJECT** | 由计算**强迫**出的新对象 | **`S4` admission 后**才允许 |
+　| **MECHANISM** | 新对象与 RH 的连接机制 | **更后面**才研究 |
+　⟹ 防倒置：⛔ ~~先猜 RH 机制 → 反造对象 → 寻找数值支持~~ ✓
+　✅ 正确方向：$$\boxed{\text{SOURCE}\to\text{DATA}\to\text{FORCED OBJECT}\to\text{INTERFACE}\to\text{RH}}$$ ✓✓
+【⭐⭐ 零号 STOP（照录 ✓✓）】 搜索候选 SOURCE 时，只写出"**这个问题可能和 RH 有关系**"**不够** ✗；至少须能写出：
+　$$\boxed{\text{"若计算结果出现 }X\text{，则依事前声明的判据，将被迫引入对象 }F\text{，而 }F\text{ 的定义域不依赖本实验"}}$$
+　否则**连 `SOURCE CARD` 都不应进入计算阶段** ✓✓
+【⭐ 账本极简（照录 ✓✓）】 保持 $$D_{\rm new}=0$$，且这**不是负面数学结论**，而是**搜索状态**：$$\boxed{\text{NO ADMITTED NEW SOURCE YET}}$$；
+　同时 $$\boxed{\mathrm{RH\ target}=\text{OPEN}}$$ —— ⛔ **无任何必要因 `D_{\rm new}=0` 而重新解释 RH 本身** ✓✓
+【⭐⭐ 下一步真正值得做的工作（照录 ✓✓）】 ⛔ 不再跑 `CAS`、不扩大 `N,k,T`；✅ 做一次 **`SOURCE` 候选盘点**：
+　$$\boxed{\text{已有数学问题}\cap\text{天然 }\zeta/L\text{ 接口}\cap\text{可计算}\cap\text{存在可预声明 }S4}$$，
+　每个候选**只写 `SOURCE CARD`，先不计算** ✓；即使全部 FAIL 仍有价值：**在压缩合法 discovery-source 空间**，而非重复消耗计算预算 ✓✓
+【⭐⭐ 状态（照录 ✓✓）】 $$\boxed{\text{D/B/C}=\text{CLOSED};\ JAM=\text{ARCHIVED};\ D_{\rm new}=0;\ \text{RH target}=\text{OPEN};\ \text{SOURCE search}=\text{ACTIVE};\ \text{COMPUTATION}=\text{LOCKED until SOURCE CARD passes};\ S4=\text{primary admission gate};\ STOP=\text{predeclared}}$$ ✓✓
+```
+
 ### §8.2 Discovery Round 2 记录：双滤过算术耦合 ⟹ D1 = 0
 ```
 命题：研究 P_A(Y)P_M(X)P_A(X) 型【跨尺度重构算子】，期望平衡律 Y²≍X 内生导出 √X
