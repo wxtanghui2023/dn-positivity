@@ -49,3 +49,23 @@ S4-ANTI-POST-HOC:  <四点自查（计算后填写，不得改写 S4-PRE）：
 【流程】 $$\text{SOURCE CARD}\to\text{S1–S4/STOP 审核}\to\text{第一笔最小计算}\to\text{结构判定}\to\begin{cases}\text{forced object}\Rightarrow\text{继续}\\\text{numerical pattern only}\Rightarrow\text{STOP}\\\text{CAS/B/C 型}\Rightarrow\text{STOP}\end{cases}$$ ✓
 【状态】 `S4` ＝ **primary admission gate**；`STOP` **必须在计算前声明** ✓
 ```
+
+---
+
+## §3 ⭐ **下一轮（`E-37` 起）`SOURCE CARD` 的 7 问版（**取代 §1 五行版** ✓；唐先生 2026-09-23 14:23 ✓✓）**
+
+```
+【前置：搜索形状冻结 ✓】 $$\text{SOURCE}_{\rm new}\not\sim\text{sequence/correlation}\xrightarrow{\text{common low-order recurrence}}\text{OBJECT}$$ ⟹
+　下一张卡**必须同时**：$$\boxed{\text{SOURCE 的数学生成机制改变}+\text{OBJECT 的数学类型改变}}$$（⛔ 不得把递推写成矩阵／核／生成函数／差分算子等**改名** ✓）
+【7 问（必须逐条填写，⛔ 空或含糊即不合格，不得先跑再补 ✓）】
+SOURCE:      1) 自身是什么**独立数学问题**？
+Q-1:         2) 第一项真正要计算的 `Q_1,\dots,Q_N` 是什么？
+Q-2:         3) 若现异常，**被迫出现的 `OBJECT` 是什么类型**？
+Q-3:         4) 它**为什么不是**递推／秩／核／支撑／有限差分／Hecke／Chebotarev 等**旧结构换名**？
+Q-4:         5) 在**第二尺度／第二层**是否仍被迫出现？
+Q-5:         6) 是否有**实验域之外**的数学定义？
+STOP:        7) 若结果为**平凡**，什么明确条件**立即 STOP**？
+【出口（照录 ✓✓）】 online zero proportion｜finite off-axis exclusion｜other prime problems｜other conjectures
+　⭐ **任一项都必须从 `OBJECT` 本身出发**，⛔ 不得计算后再找 RH 联系 ✓
+【治理禁令 ✓】 ⛔ 不要再寻找"另一个会产生共同递推的 SOURCE" ✓
+```
