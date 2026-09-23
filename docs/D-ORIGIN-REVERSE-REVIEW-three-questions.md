@@ -74,3 +74,20 @@ FREEZE-ACK: D1=0 ✓
 【⭐⭐ 措辞纪律】 结论**只**是"**在同一 SOURCE 下未找到本质不同的自然对象；且既有 RH 接口须经已封通道**" —— ⛔ **不写成**"加性组合与 RH 无关"✗ ✓
 【边界】 ✗ 未计算／⛔ 未重开 `D`／⛔ 未纵向上阶 GAP／⛔ 未新增治理条目／⛔ 未把领域自身价值倒装为 RH 入口 ✓
 ```
+
+---
+
+## §6 ⭐ **`D`-origin 彻底退出 ＋ `SOURCE-SEARCH` 边界合表 ＋ `STOP SEARCH` 状态锁定（唐先生 2026-09-23 14:33 ✓✓）**
+
+```
+【`D`-origin 处置（照录 ✓✓）】 链条已闭合：$$\text{加法组合 SOURCE}\xrightarrow{Q1}\text{PFR 同源}\xrightarrow{Q2}\text{经典对象穷尽}\xrightarrow{Q3}\text{唯一 RH 接口已封}$$
+　⟹ $$\boxed{D\text{-origin 已可彻底退出，无需再保留"也许换一个加性对象"的尾巴}}$$ ✓✓
+【⭐ `SOURCE-SEARCH` 实际边界合表（`E-39`＋`E-40`，照录 ✓✓）】
+　$$\boxed{\begin{array}{c|c}\text{搜索区域/通道}&\text{死亡位置}\\\hline\text{sequence}\to\text{linear recurrence}&\text{S4 前负}\\\text{极值/变分}&\text{SOURCE 同源}\\\text{几何/拓扑}&\text{OBJECT 旧型}\\\text{Diophantine}&\text{SOURCE/interface 双断}\\\text{加法组合}&Q1/Q2/Q3\\\text{随机矩阵}&RH\ interface\\\text{动力系统}&RH\ interface\end{array}}$$ ✓
+【⭐ 工作状态（照录 ✓✓）】 $$\boxed{\textbf{WAITING — 等待独立数学问题自然产生可审计 OBJECT}}$$ —— ⛔ **不是"还欠一次候选搜索"** ✓；
+　**不应因为有搜索空间就继续搜索**（候选区域扫描的**边际价值已明显下降**）✓✓
+【⭐⭐ `D_{\rm new}=0` 的正确读法（照录 ✓✓）】 ⛔ **不意味着负面数学结论**；它**只**意味着：**到 `E-40` 为止没有找到满足既定 discovery 条件的新对象** ✓✓
+【状态箱（照录 ✓✓）】 $$\boxed{\text{STOP SEARCH}\quad|\quad\text{COMPUTATION LOCKED}\quad|\quad D_{\rm new}=0\quad|\quad RH\ \text{TARGET}=\text{OPEN}}$$ ✓
+【重启条件（照录 ✓）】 **直到出现真正不同来源的具体数学问题，再重新从 `SOURCE CARD` 开始** ✓
+【本档自身状态】 ⛔ **新增治理条目数＝0**（仅本档追加结项节 ✓）；⛔ 未改 `E-40` 口径／未重开 `D` ✗ ✓
+```
