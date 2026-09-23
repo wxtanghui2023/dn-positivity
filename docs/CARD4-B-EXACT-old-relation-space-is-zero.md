@@ -87,3 +87,20 @@ FREEZE-ACK: D1=0 ✓
 【下一步（供裁 ✓，⛔ 仍不计算）】 若您核可本档三引理与推论 ⟹ $$S4\text{-EXACT}=\text{PASS}\Longrightarrow\text{方可授权 }RUN$$ ✓
 【边界】 ✗ 未计算／⛔ 未改 `S4` 判定标准／⛔ 未事后增补机制／⛔ 未把"机制不解释"偷换为"关系空间为零"／⛔ 未把候选写成 `FORCED OBJECT` ✓
 ```
+
+
+---
+
+## §7 【**M5 引理 3 严格版**（唐先生 14:14 文字修正，照录 ✓✓）】
+
+```
+【结论保留，证明升级 ✓】 "含 `\log` 因子"**本身不是**排除常系数递推的充分条件（有些递推序列可含多项式/振荡因子）⟹ 改为标准渐近结构论证：
+　若非零序列满足**固定阶常系数线性递推**，则其一般形式为 $$\boxed{x_h=\sum_iP_i(h)\lambda_i^h}$$（`P_i` 多项式）✓
+　而 M5 中 $$\boxed{p_h\sim h\log h}\Longrightarrow\boxed{\log p_h\sim\log h},\qquad \boxed{\sqrt{p_h}\sim h^{1/2}(\log h)^{1/2}}$$ ✓
+　这些量具**非整数幂的对数渐近因子**，**不可能等于有限个 `P_i(h)\lambda_i^h` 的非零组合** ✓ ⟹
+　$$\boxed{\mathcal A_{\rm dens/log/sqrt}=\{0\}}\quad\text{（"含 log 因子"升级为"}\textbf{不属于有限阶常系数线性递推序列的渐近类}\text{"）}$$ ✓✓
+【⚠️ 补充澄清（照录 ✓）】 "**density**"本身**不是单独的精确序列机制**；M5 的正式定义＝"**仅允许由 `p_h,\log p_h,\sqrt{p_h}` 的这些预注册渐近恒等式生成关系**" ⟹ 零空间结论成立 ✓
+【⭐ 逻辑边界（照录 ✓✓）】 $$\mathcal A_{\rm old}=\{0\}$$ **不是**"不存在任何旧机制能解释命中关系"，而是
+　$$\boxed{\text{M1–M5 事前规定的生成规则}\Longrightarrow\text{生成空间}=0}$$；RUN 后若得 `c\ne0` ⟹ 正确结论仍只是 $$c\notin\mathcal A_{\rm old}\Longrightarrow\boxed{\text{FORCED-OBJECT CANDIDATE}}$$（⛔ 非"证明了数学上全新的机制"）✓✓
+【正式状态（照录 ✓✓）】 $$\boxed{\textbf{S4-EXACT}=\textbf{PASS}}\quad(\text{附 M5 wording fix：已落实 ✓})$$
+```
