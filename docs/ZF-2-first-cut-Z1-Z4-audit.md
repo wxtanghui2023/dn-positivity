@@ -62,3 +62,28 @@ FREEZE-ACK: D1=0 ✓
 　`ZF` **母问题本身仍 OPEN**（`ZF-1` GAP、`ZF-3` GAP；`E-11` 路线已封 ✓）
 【边界】 ✗ 零计算／⛔ 未找第五步 invariant／⛔ 未宣称 `ZF` 不可能／⛔ 未把 `Z1` 残项当作已控／⚠️ 档案残项为引用（未逐字核）✓
 ```
+
+
+---
+
+## §7 ⭐⭐ **`Z1` 残项 ＋ 防重开条款 ＋ `ZF` 状态表（唐先生 2026-09-23 14:55 ✓✓）**
+
+```
+【⭐ `Z1` 残项（照录 ✓✓；比 `Z3` 更值得注意的技术缺口）】
+　$$n_-(Q_T)=N_{\rm off}(T)+\mathcal E(T)$$，其中档案只有来自 **small trace-norm tail** 的控制，**不是严格为零** ⟹
+　$$\boxed{\text{E-11 本身甚至还没有给出一个无条件、严格的 finite-defect 计数器}}$$ ✓✓
+【⛔⛔ 防重开条款（照录 ✓✓；必须写入以免日后有人因见 `Z1=\text{CONDITIONAL}` 而重开 `E-11`）】
+　・若只为**比例**：`\mathcal E(T)` 可被相应范数控制 ✓；・若为**有限性**：须至少 $$\mathcal E(T)=O(1)$$（甚至需更精确的**整数值稳定性**）✓；
+　・**即便 `Z1` 被修成严格等式，`Z3` 已证现有 rank–trace 机器仍只有 `O(N(T))` 型资源** ⟹
+　$$\boxed{\text{修复 }Z1\ \text{并不能救活 }ZF\text{-}2\ \text{的 finite-budget 路线}}$$ ✓✓
+　⛔ 故 **不要重新打开 `E-11`** ✓
+【⭐ `ZF` 状态表（照录 ✓✓）】
+| 子问题 | 状态 | 含义 |
+|:--|:--|:--|
+| `ZF-0` | **PENDING** | finite `\not\Rightarrow` RH 尚需文献级正式核验 |
+| `ZF-1` | **GAP** | 近 `1/2` 无一致幂次节省 |
+| **`ZF-2`** | **CLOSED** | **E-11 惯性路线只有 extensive budget，没有 finite budget** |
+| `ZF-3` | **GAP** | 缺少算术输入 |
+| `LH` | **次级** | growth/density channel，不直接给 finite defect |
+| **`ZF` 母问题** | **OPEN** | **仍不能由上述 CLOSED 推出不可能** |
+```
