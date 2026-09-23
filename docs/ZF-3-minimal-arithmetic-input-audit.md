@@ -88,3 +88,34 @@ FREEZE-ACK: D1=0 ✓
 　⛔ 如此可不再进入最不希望出现的循环：$$\text{GAP}\to\text{新符号}\to\text{新 invariant}\to\text{计算}\to\text{旧结构}\to\text{CLOSED}$$ ✓✓
 【边界】 ✗ 零计算／⛔ 未把相关性写成机制／⛔ 未把 gap 写成不可能定理／⛔ 未启 `ZF-4`／⚠️ `ZF-0` 待一手文献核验 ✓
 ```
+
+
+---
+
+## §6 ⭐⭐ **阶段稳定锚点（唐先生 2026-09-23 14:58 ✓✓；⛔ 本档不再增 `ZF-4/5/6`）**
+
+```
+【状态箱（照录 ✓✓）】 $$\boxed{\text{ZF OPEN}\quad\land\quad\text{ZF-internal search FROZEN}\quad\land\quad\text{RH SOURCE-SEARCH FROZEN}}$$ ✓
+【分层含义（照录 ✓✓）】
+| 层 | 状态 | 含义 |
+|:--|:--|:--|
+| `ZF-1` density | **CLOSED（本轮内部变体）** | 不能从现有密度预算自然压到 `O(1)` |
+| `ZF-2` inertia | **CLOSED** | 计数机制存在，但预算是 extensive |
+| `ZF-3` growth/Hadamard | **CLOSED** | 解析增长本身不给有限离轴缺陷 |
+| `ZF-0` | **PENDING** | **只欠一手文献核验，不应凭 MO 定案** |
+| **`ZF` 母问题** | **OPEN** | "最终仅有限个离轴零点"仍是**合法弱问题** |
+| **`ZF` 内部 candidate generation** | **FROZEN** | **不再从 gap 反向制造输入** |
+| **RH SOURCE-SEARCH** | **FROZEN** | **等待真正独立的问题入口** |
+【⭐ 背书修正（照录 ✓✓）】 ✅ $$\boxed{\text{finite-defect examples}\Rightarrow\text{目前已找到的例子具有算术有限性}}$$ ⛔ **而非** $$\text{infinite Euler product}\Rightarrow\text{finite-defect impossible}$$（后者**越过了目前证据允许的范围**）✓✓
+【⭐ 缺口分解（照录 ✓✓）】 $$\underbrace{\text{counting}}_{\text{已有}}+\underbrace{\text{analytic control}}_{\text{已有但不够}}+\boxed{\text{finite effective arithmetic constraint}}_{\text{缺失}}$$ ⟹
+　**`ZF` 现在不缺一个新的"计数器"**；缺的是某种**独立来源的算术有限性定理**，能产生 $$\#\{\rho:\Re\rho\ne\tfrac12,\ |\Im\rho|\le T\}\ \le\ C$$ 且 `C` **不随 `T` 增长** —— 与追求 $$N_{\rm off}(T)=o(N(T))$$ **性质完全不同** ✓✓
+【⭐ 搜索方向（照录 ✓✓）】 $$\boxed{\text{Independent Problem}\to\text{Theorem}\to\text{Spillover}\to ZF/RH}$$ ⛔ **而非** $$ZF\to\text{找尚未封口的数学工具}\to\text{新 invariant}\to\text{CLOSED}$$
+　⟹ **下一轮研究对象甚至不必以 RH 为名字出现** ✓✓
+【⭐ 五条准入判据（照录 ✓✓）】 真正值得进入下一轮的独立问题应至少满足：
+　**1.** 自身就是一个**有明确数学命题**的问题；**2.** **不需要假设 RH 才有意义**；**3.** 有一个**可在一轮内证明/证伪**的具体子命题；**4.** **首轮成功即产生独立数学价值**；**5.** ⭐ **只有在定理产生以后**，才检查它是否给出 `finite defect`／`zero exclusion`／`prime consequence`／`other conjecture` 中的某一项 ✓✓
+　⟹ 如此**即使最后与 RH 完全无关，研究也不是废品** ✓
+【⭐⭐ 关键分离（照录 ✓✓；本档最重要的账本修正）】 $$D_{\rm new}=0\ \text{不再意味着"没有新数学可做"}$$；更准确的是
+　$$\boxed{D_{\rm RH\text{-}discovery}=0}\qquad\text{而}\qquad\boxed{D_{\rm independent\ problem}\ \text{仍然完全开放}}$$ —— **这两者现在应该彻底分离** ✓✓
+【⛔ 指令（照录 ✓✓）】 `E-46` 作为**当前阶段的稳定锚点**；⛔ **不再往 `ZF` 文档里增加 `ZF-4/5/6`**；
+　**下一次真正启动时，直接从"独立问题母题"开始，而不是从 `ZF` 的 gap 开始** ✓✓
+```
