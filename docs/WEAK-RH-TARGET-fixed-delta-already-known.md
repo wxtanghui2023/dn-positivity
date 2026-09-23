@@ -65,3 +65,12 @@ FREEZE-ACK: D1=0
 ```
 【三分类】 **本档新增**：`定量废退公式`／`密度层级结构性不足`（表述级）✓；**档案已有（引用）**：`次线性`／`zero-density`（若命中）；**通用词（不计）**：`Huxley`（人名）✓
 【边界】 ⚠️ Huxley 1972／Guth–Maynard 2024 指数按**档级**引述（未逐字核原文）⟹ 采用前须核；⭐ §2 废退公式、§3 的 `N_{\rm off}\le(R-1)N` 为**本档自行推导** ✓；⛔ 未制造候选／未启动搜索／未改状态 ✓
+
+## §7 **⚠️ 回查追加（本档自我更正）：档案本已有 zero-density 覆盖**
+
+```
+【回查揭示（逐字见 §6）】 `zero-density` **34** 档｜`Huxley` **21** 档｜`次线性` **7** 档 ⟹ 关键既有档：
+　`E20-E40-zero-density-2026-read.md`｜`TYPE-MATCH-matching-types-exist-explicit-formula-and-large-value-density.md`｜`FRONTIER-PRIMEGAP-SURVEY-2026-09.md`｜`CLOSED-ROUTES-MAP.md`（含 `次线性`）✓✓
+【⟹ 更正与加强】 本档 §1 的核验结论（一档靶已知）**不是首次发现** —— 档案已有 zero-density 读档与"显式公式＋大值估计＝同一类型"的类型匹配档 ⟹ $$\boxed{\text{一档靶不仅"已知"，且在档案内\textbf{已被读过并归入既有类型}}$$ ✓✓
+【⟹ 强化 §5 建议】 启动一档靶 ＝ **既非新结果，又撞既有关闭路线** ⟹ ⛔ 明确不建议 ✓✓
+【纪律登记】 本档首行"已查地图"应补列上述三档；已在 §7 补记 ✓（后续同类核对须先跑 `tech_word_check` 再写首行 ✓）
