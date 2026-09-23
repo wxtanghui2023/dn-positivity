@@ -228,3 +228,18 @@ $$\boxed{\text{当前缺口已经不再是"从哪里得到 }1/2\text{"；而是"
 　出现**参数非已有命名对象**的新候选时可**立即重启** ✓✓
 【下一主线】 待定（可选：回归 `C-380` 活支 `T1a`／归档侧其他未结线／暂停研究线转工程任务）✓
 ```
+
+
+---
+
+## §12 **准入门序增补：`FCG-Sep` ＋ `FCG` 硬门**（2026-09-23 09:48；登记 `E-16` ✓✓）
+
+```
+【新门序（正式）】 FCG-Sep → N0′ → N1 → … → N7 → 五出口 → 去 RH 化测试 ✓
+　· FCG-Sep：候选量须至少击穿一个已登记的 adversarial model（存在 pair (M_i,M_j) 使 Q(M_i) ≠ Q(M_j)），且不得靠把目标编码进 Q ✓
+　· FCG 硬门：transfer 后必须产生一个此前不存在的 arithmetic observable；否则（已有 majorant／Gowers／singular series／explicit-formula／positivity／zero statistic 的重新组织）立即 FAIL ✓✓
+【第一条规则（照录）】 一个候选量只有在能击穿至少一个既有 adversarial model 时，才值得进入 N1 ✓
+【三模型（E-16）】 M_loc／M_stat／M_trans（＋真对象 M_arith）✓
+【⭐ 当前强搜索结论】 三模型全被现有墙覆盖 ⟹ 『缺的不是新公式，而是一个全新的可区分维度』✓✓
+【禁项】 ⛔ 不得把 adversarial test model 当 RH counterexample；⛔ 不得用分离反例之名行目标编码之实 ✓
+```
