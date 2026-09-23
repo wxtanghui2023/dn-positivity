@@ -58,3 +58,27 @@ $$\boxed{\begin{aligned}&\text{SOURCE cards}=4,\\&\text{S4-format admissible}=4,
 ```
 
 **状态**：`D/B/C`＝CLOSED｜`JAM`＝ARCHIVED｜`D_new`＝0｜RH target＝OPEN｜SOURCE search＝ACTIVE｜**COMPUTATION＝LOCKED**｜`S4`＝primary gate｜`STOP`＝predeclared ✓
+
+---
+
+## §4 **卡 1 的 `RUN` 前三项补钉（照录唐先生令 2026-09-23 13:58 ✓✓）**
+
+```
+【必须补的原因】 "`\mathcal X` 是 `h\le40` 的整数阵列"**不足以唯一确定** `R_J` 作用于哪个离散坐标（沿 `h`？沿 `X` 的两个尺度？两者同时？）⟹
+　$$\boxed{R_J\ \text{到底沿哪个离散坐标作用？}}$$ —— **必须在计算前固定** ✓
+【① 作用坐标（照录用 ✓✓）】 $$\boxed{(R_JX)_h=\sum_{j=0}^{J}c_jX_{h+j},\qquad c_j\in\mathbb Z,\quad J\le4}$$ ✓
+【② 数据与双尺度（照录）】 $$X^{(1)}_h=\sum_{n\le10^6}d(n)d(n+h),\qquad X^{(2)}_h=\sum_{n\le10^7}d(n)d(n+h),\qquad 0\le h\le40$$ ✓
+　要求**同一组** `(c_0,\dots,c_J)` 同时满足 $$R_JX^{(1)}=0\quad\text{和}\quad R_JX^{(2)}=0$$ ✓
+【③ 归一化（本档钉死 ✓）】 **首一归一化**：`c_J=1`（消除整体倍数自由度）✓；`c_j\in\mathbb Z` ⟹ 解集是 `\mathbb Z`-格 ✓
+【④ 有限枚举规则（照录精神 ＋ 本档机械实现 ✓✓）】 ⛔ **不是**"先找某个共同系数族再测试"；✅ **先规定搜索空间 `J\le4,\ c_j\in\mathbb Z`，然后完整确定该空间中全部合法归一化解**：
+　$$\text{解空间}=\{\,c\in\mathbb Z^{J+1}:\ \begin{pmatrix}H_1\\H_2\end{pmatrix}c=0\,\},\qquad H_i=(\text{Hankel}(X^{(i)})),\ i=1,2$$
+　**实现＝精确有理零空间**（有限、完备、非抽样）：对堆叠系统取 `\mathbb Q` 上零空间 ⟹ 再查整性与 `c_J=1` 归一 ⟹ 报告维数与全部解 ✓
+　（若坚持有界枚举：**事前固定** `|c_j|\le B`，`B=40`；与零空间法等价，且零空间法更完备 ✓）
+【⑤ 解释纪律（照录 ✓✓）】 若结果为**无 `R_J`**，结论**只能**是：
+　$$\boxed{\text{在 }h\le40,\ X\in\{10^6,10^7\},\ J\le4\ \text{的预设实验域内，没有发现共同低阶整系数递推}}$$ ✓
+　⛔ **不能**写成"除数相关不存在递推结构" ✗；⛔ **更不能**因预期负结果而**提前归入 `CLOSED`** ✗ ✓
+　若真得 $$R_JX^{(1)}=R_JX^{(2)}=0$$ ⟹ **才触发真正 `S4`**：$$\boxed{\text{共同精确递推}\Rightarrow\text{检查是否被 }\mathfrak S(h)\text{、已知卷积结构等吸收}}$$；
+　**只有无法被事前列出的旧结构解释**，才进入 `FORCED OBJECT` 审核 ✓✓
+【⑥ 卡 1 最终状态（照录 ✓✓）】 $$\boxed{\begin{array}{ll}S1&\checkmark\\S2&\checkmark\\S3&\checkmark\\S4\text{-PRE}&\checkmark\\S4\text{-EXACT}&\checkmark\（\text{作用方向已补钉}\）\\COMPUTATION&\textbf{LOCKED}\\RUN&\textbf{尚未授权}\end{array}}$$ ✓
+【⑦ 纪律（照录）】 $$\boxed{\text{先钉死 }S4\text{，再跑第一笔；绝不先跑再解释}}$$ ✓；卡 3 已正确 `CLOSED`；卡 2／4 **暂不抢跑** ✓
+```
