@@ -1,0 +1,8 @@
+[1] S(S(f))/f = x
+[2] S(1) = x/t  ; S(t^{-1}) = 1
+    S 在 {1,t^{-1}} 上的矩阵 = Matrix([[0, x], [1, 0]])  特征值 = {-sqrt(x): 1, sqrt(x): 1}
+[3] J 实现 s->1-s（因 (1/t)f(1/t) 的 Mellin 为 f^(1-s)）；sigma 实现 s->-s（乘 x^s）
+[4] J 在 L2(dt) 上保距（重量 1/t 与 dt 相消）；在 L2(dt/t) 上重量 1/t 残留
+[5] <sig f,g>_{dt/t} 经 u=x/t 化为 <f,sig g>_{dt/t} ⟹ sigma 在 Haar 上自伴（无需加权）
+[6] 若要求 sigma 保距 -> Haar（重量 t^0，即 r=0）; 若要求 J 保距 -> Lebesgue（重量 t^{-1}）;
+    而 S=J∘D 的保距化给出范数因子 x^{1/2} ⟹ 谱 {±x^{1/2}}（由 S^2=x*Id 逼出，非手工插入）
