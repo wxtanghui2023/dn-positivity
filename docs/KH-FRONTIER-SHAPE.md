@@ -100,3 +100,30 @@ $$\boxed{\text{当前缺口已经不再是"从哪里得到 }1/2\text{"；而是"
 【地图回查】 关键词 4 项 = **未覆盖** ⟹ 可开档 ✓
 【档级引用】 `KH-2`（六候选 DEAD）｜`KH-3`（漏斗／`P2-FEASIBILITY`／`P2-COUPLED-FLOW`）｜`KH-4`（`EXPONENT-TO-SPECTRUM`／`POSITION-TO-EIGENVALUE`）｜
 　`ASSETS-REGISTRY` `D-11`–`D-14`／`F-2`／`P-3`｜`NOGO-registry-and-screens`／`HOT-STATE`／`EXPLORATION-POINTS-REGISTER` ✓
+
+---
+
+## §7 **`KH-5` 线封口 ＋ 封口链冻结 ＋ 工作区纪律**（2026-09-23 08:37 定 ✓✓）
+
+```
+【已封闭入口（本表新增行 ✓）】
+　| 入口 | 当前结论 | 再开条件 |
+　| **`KH-5` 整线**（`S2` → 非局部三类 `A/B/C`） | **`CLOSED`**（分层：`C = CLOSED`；`NONLOCAL = CLOSED under current three-class map`；
+　　⛔ **不写"非局部方法不存在"**）✓ | **须出现完全不同的 global arithmetic object**（届时可调用 **`E-11`／`E-12`** 后置接口）✓ |
+【链条（存档指针）】 `R8 → S2 缺主项 → 有限阶 G(K) ≤ 0 → 非局部三类 → A 已封／B 饱和／C 部分计数 → 2/3 → 1/3 = R−1 → support>1 → W6 原子墙` ✓
+　（`2/3 → 1` 的终点 ＝ `n₋(Q_T)=0` ⟺ Weil 正性 ⟺ RH）✓
+【封口链冻结 ✓】 `KH-5` 四提交（`07f9580`／`dfb525f`／`7f723ad`／`2e6ba2c`）＝ 本线**封口链**，**保持原样** ✓
+【工作区纪律（照录）】 `scripts/dB_krawczyk_11.py`（修改）／`scripts/out_c380_81_aset.txt`（修改）／未跟踪 `C298`／`C305`／`PDF`
+　⟹ **保留现状，待所属主线判定**；⛔ **不与 `KH-5` 混 commit**（避免错误并入旧档、丢失 provenance、制造无数学意义的混合提交）✓✓
+```
+
+## §8 **`E-10` 第二轮（依令启动 ✓）**
+
+```
+【严格三要素（照录）】 $$\boxed{\text{prime-native object} + \text{independent problem} + \text{genuine parameter}}$$
+　然后才问 $$\boxed{\text{new arithmetic observable/interface} \to \text{RH relevance}}$$ ✓
+【⛔ 禁反向】 **不再从 `1/2`／Weil／惯性／`R8`／`S2`／`W6` 反向寻找对象** ✓✓
+【目标形态】 找一个 **"即使完全不谈 RH，也值得研究"** 的问题；**RH 只作第二阶段的一个特殊结构/性质** ✓
+【`E-11`／`E-12` 定位】 **工具箱**（以后遇到完全不同 global arithmetic object 时的后置接口），**不是下一候选本身** ✓
+【第二轮产出】 见 `docs/E-10-ROUND2-candidate-generation.md` ✓
+```
