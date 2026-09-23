@@ -1,0 +1,37 @@
+=== 零点侧（修正窗口）===
+  前 12 个零点: ['14.1347', '21.0220', '25.0109', '30.4249', '32.9351', '37.5862', '40.9187', '43.3271', '48.0052', '49.7738', '52.9703', '56.4462']
+  c_k (k=14..50) = [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0]
+  N(k) (k=14..50) = [0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 9, 10]
+  --- c_k ---
+    M= 3: rank=1   det=0
+    M= 4: rank=1 (Δrank=0)  det=0
+    M= 5: rank=3 (Δrank=2)  det=0
+    M= 6: rank=5 (Δrank=2)  det=0
+    M= 7: rank=7 (Δrank=2)  det=-1
+    M= 8: rank=8 (Δrank=1)  det=1
+    M= 9: rank=9 (Δrank=1)  det=2
+    M=10: rank=10 (Δrank=1)  det=3
+    M=11: rank=11 (Δrank=1)  det=-12
+    M=12: rank=12 (Δrank=1)  det=17
+  --- N(k) ---
+    M= 3: rank=2   det=0
+    M= 4: rank=2 (Δrank=0)  det=0
+    M= 5: rank=3 (Δrank=1)  det=0
+    M= 6: rank=5 (Δrank=2)  det=0
+    M= 7: rank=7 (Δrank=2)  det=-1
+    M= 8: rank=7 (Δrank=0)  det=0
+    M= 9: rank=9 (Δrank=2)  det=1
+    M=10: rank=10 (Δrank=1)  det=-5
+    M=11: rank=11 (Δrank=1)  det=-6
+    M=12: rank=12 (Δrank=1)  det=26
+  --- 对照（随机 0/1 同长度）---
+    M= 3: rank=3   det=-1
+    M= 4: rank=4 (Δrank=1)  det=-1
+    M= 5: rank=5 (Δrank=1)  det=-1
+    M= 6: rank=6 (Δrank=1)  det=1
+    M= 7: rank=7 (Δrank=1)  det=1
+    M= 8: rank=8 (Δrank=1)  det=-4
+    M= 9: rank=9 (Δrank=1)  det=-1
+    M=10: rank=10 (Δrank=1)  det=17
+    M=11: rank=11 (Δrank=1)  det=16
+    M=12: rank=12 (Δrank=1)  det=-49

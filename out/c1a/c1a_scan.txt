@@ -1,0 +1,50 @@
+=== C-1a 算术侧：Λ 的 Hankel 结构（精确整数/有理）===
+  λ(1..14) = ['1', '-1', '-1', '1', '-1', '1', '-1', '-1', '1', '1', '-1', '-1', '-1', '1']   (Liouville，精确整数 ✓)
+  μ(1..14) = ['1', '-1', '-1', '0', '-1', '1', '-1', '0', '0', '1', '-1', '0', '-1', '1']   (Möbius，精确整数 ✓)
+  --- 算术侧 λ 的 Hankel ---
+    M= 3: rank=3   det=4
+    M= 4: rank=3 (Δrank=0)  det=0
+    M= 5: rank=5 (Δrank=2)  det=-16
+    M= 6: rank=6 (Δrank=1)  det=32
+    M= 7: rank=6 (Δrank=0)  det=0
+    M= 8: rank=8 (Δrank=2)  det=-128
+    M= 9: rank=9 (Δrank=1)  det=512
+    M=10: rank=10 (Δrank=1)  det=1536
+    M=11: rank=11 (Δrank=1)  det=3072
+    M=12: rank=12 (Δrank=1)  det=-16384
+  --- 算术侧 μ 的 Hankel ---
+    M= 3: rank=3   det=3
+    M= 4: rank=4 (Δrank=1)  det=3
+    M= 5: rank=5 (Δrank=1)  det=-7
+    M= 6: rank=6 (Δrank=1)  det=-5
+    M= 7: rank=7 (Δrank=1)  det=12
+    M= 8: rank=8 (Δrank=1)  det=-19
+    M= 9: rank=9 (Δrank=1)  det=-52
+    M=10: rank=10 (Δrank=1)  det=-52
+    M=11: rank=11 (Δrank=1)  det=-20
+    M=12: rank=12 (Δrank=1)  det=73
+
+=== C-1a 零点侧：整数计数 N(k) 与 c_k 的 Hankel 结构（精确整数）===
+  γ_1..γ_6 = ['14.134725', '21.022040', '25.010858', '30.424876', '32.935062', '37.586178']
+  N(1..26) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3]
+  c_k      = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1]
+  --- N(k) ---
+    M= 3: rank=0   det=0
+    M= 4: rank=0 (Δrank=0)  det=0
+    M= 5: rank=0 (Δrank=0)  det=0
+    M= 6: rank=0 (Δrank=0)  det=0
+    M= 7: rank=0 (Δrank=0)  det=0
+    M= 8: rank=1 (Δrank=1)  det=0
+    M= 9: rank=3 (Δrank=2)  det=0
+    M=10: rank=5 (Δrank=2)  det=0
+    M=11: rank=7 (Δrank=2)  det=0
+  --- c_k ---
+    M= 3: rank=0   det=0
+    M= 4: rank=0 (Δrank=0)  det=0
+    M= 5: rank=0 (Δrank=0)  det=0
+    M= 6: rank=0 (Δrank=0)  det=0
+    M= 7: rank=0 (Δrank=0)  det=0
+    M= 8: rank=2 (Δrank=2)  det=0
+    M= 9: rank=4 (Δrank=2)  det=0
+    M=10: rank=6 (Δrank=2)  det=0
+    M=11: rank=8 (Δrank=2)  det=0
