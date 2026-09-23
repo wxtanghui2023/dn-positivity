@@ -1,0 +1,14 @@
+[C1] 核维数 = 1
+[C1] 消失元 p_a(x) = 4*(-a + x)*(x + 1)*(2*a*x - a - x + 1)/(2*a - 1)
+[C1] p_a/((x+1)(x-a)) = 4*(2*a*x - a - x + 1)/(2*a - 1)
+[C1] 残根 r(a) = [(a - 1)/(2*a - 1)]
+[C1] 取 r(a) = (a - 1)/(2*a - 1)   验证：r(1/4)= 3/2  r(-3/4)= 7/10
+[C1] r(r(a)) - a = 0
+[C1] dr/da = (2*a - 1)**(-2)
+[C1] r(a)=1 的解 = [0]
+[C1] r(a)=-1 的解 = [2/3]
+Traceback (most recent call last):
+  File "/home/node/.openclaw/workspace/dn-project/scripts/ip1_c1_residual_root.py", line 38, in <module>
+    S = eval(t['S'])
+             ~^^^^^
+KeyError: 'S'
