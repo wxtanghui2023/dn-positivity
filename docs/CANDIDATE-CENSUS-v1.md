@@ -256,3 +256,15 @@ $$\qquad \boxed{\text{本轮未进入任何大规模计算} \Longrightarrow \tex
 $$\textbf{Zone-A 余项更新}:\ \text{保留 }2\ (Mt07\to\textbf{CLOSED}),\ (C06\to\textbf{ACTIVE, 只开 C06-G0})$$
 $$\textbf{下一步}:\ \text{C06-G0（先锁具体 }(q,n,d)\text{）}；\ \text{若两轮内被覆盖} \Longrightarrow \text{回完整候选表重做“独立问题 × 新量 × 可证明性”筛选}$$
 ```
+
+## §10 C06 收口（2026-09-24 22:12）
+
+```
+$$\textbf{C06} = \boxed{\text{CLOSED — 无 Gate-0 PASS 格}}$$
+$$\qquad \text{依据}:\ \text{计数/分类族清查（7 族）显示"凡可算者皆已被系统枚举"，未算者为渐近型或规模不可行型；}$$
+$$\qquad \textbf{四条件格（值已定＋有限＋计数未完成＋新量有空间）本轮未找到}$$
+$$\qquad \text{关键校准（先生指出并被证实）}:\ \text{Brouwer 表"值已定"}\not\Rightarrow\text{"计数未研究"}$$
+$$\textbf{Zone-A 状态}:\ C07\ \text{CLOSED},\ M03\ \text{CLOSED},\ Mt07\ \text{CLOSED},\ \textbf{C06 CLOSED} \Longrightarrow \text{Zone-A 余项 = }D03\ (G0)\ \text{一项}$$
+$$\textbf{下一步}:\ \text{回完整候选表重做四维重筛（独立问题 × 新量 × 可证明性 × 前沿新性）；候选来源限 census 余项（\textsc{amend-22}）；}$$
+$$\qquad \text{若余项不足} \Longrightarrow \boxed{\text{WAITING FOR NEW SOURCE}}$$
+```
