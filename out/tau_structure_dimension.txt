@@ -1,0 +1,8 @@
+|W*| = 31  basis = [1, 2, 4, 8, 16]  free points = 26  free bits = 104
+lines of PG(4,2) = 155   (31*15/3 = 155 )
+free variables = 104 bits
+line-colour outputs = 620 bits  (155*4 = 620 )
+rank of  (g_free -> tau)  map = 104
+independent compatibility equations on tau line-values = 516
+=> dim of realizable tau space = 104    (g free = 104 )
+pure-quadratic g subspace dim (mod linear) = 60
