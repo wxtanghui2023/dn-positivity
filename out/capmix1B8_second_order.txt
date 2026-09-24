@@ -1,0 +1,39 @@
+n= 2 q=    4 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n= 3 q=    8 d=   7 blind=True  I2=   6 I3=  43 Valid=   24 E2=      301 退化差=19
+n= 4 q=   16 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n= 4 q=   16 d=   5 blind=False I2=   0 I3=  13 Valid=    0 E2=       65 退化差=13
+n= 4 q=   16 d=  15 blind=True  I2=  14 I3= 211 Valid=  168 E2=     3165 退化差=43
+n= 5 q=   32 d=  31 blind=True  I2=  30 I3= 931 Valid=  840 E2=    28861 退化差=91
+n= 6 q=   64 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n= 6 q=   64 d=   7 blind=True  I2=   6 I3=  43 Valid=   24 E2=      301 退化差=19
+n= 6 q=   64 d=   9 blind=False I2=   2 I3=  25 Valid=    0 E2=      225 退化差=25
+n= 6 q=   64 d=  21 blind=False I2=   8 I3= 157 Valid=   96 E2=     3297 退化差=61
+n= 6 q=   64 d=  63 blind=True  I2=  62 I3=3907 Valid= 3720 E2=   246141 退化差=187
+n= 8 q=  256 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n= 8 q=  256 d=   5 blind=False I2=   0 I3=  13 Valid=    0 E2=       65 退化差=13
+n= 8 q=  256 d=  15 blind=True  I2=  14 I3= 211 Valid=  168 E2=     3165 退化差=43
+n= 8 q=  256 d=  17 blind=False I2=   0 I3=  49 Valid=    0 E2=      833 退化差=49
+n= 8 q=  256 d=  51 blind=False I2=   2 I3= 631 Valid=  480 E2=    32181 退化差=151
+n= 8 q=  256 d=  85 blind=False I2=  24 I3=2461 Valid= 2208 E2=   209185 退化差=253
+n= 9 q=  512 d=   7 blind=True  I2=   6 I3=  43 Valid=   24 E2=      301 退化差=19
+n= 9 q=  512 d=  73 blind=False I2=  18 I3= 937 Valid=  720 E2=    68401 退化差=217
+n=10 q= 1024 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n=10 q= 1024 d=  11 blind=False I2=   0 I3=  31 Valid=    0 E2=      341 退化差=31
+n=10 q= 1024 d=  31 blind=True  I2=  30 I3= 931 Valid=  840 E2=    28861 退化差=91
+n=10 q= 1024 d=  33 blind=False I2=   2 I3=  97 Valid=    0 E2=     3201 退化差=97
+n=10 q= 1024 d=  93 blind=False I2=  32 I3=1477 Valid= 1200 E2=   137361 退化差=277
+n=11 q= 2048 d=  23 blind=False I2=   0 I3=  67 Valid=    0 E2=     1541 退化差=67
+n=11 q= 2048 d=  89 blind=False I2=   0 I3= 529 Valid=  264 E2=    47081 退化差=265
+n=12 q= 4096 d=   3 blind=True  I2=   2 I3=   7 Valid=    0 E2=       21 退化差=7
+n=12 q= 4096 d=   5 blind=False I2=   0 I3=  13 Valid=    0 E2=       65 退化差=13
+n=12 q= 4096 d=   7 blind=True  I2=   6 I3=  43 Valid=   24 E2=      301 退化差=19
+n=12 q= 4096 d=   9 blind=False I2=   2 I3=  25 Valid=    0 E2=      225 退化差=25
+n=12 q= 4096 d=  13 blind=False I2=   0 I3=  37 Valid=    0 E2=      481 退化差=37
+n=12 q= 4096 d=  15 blind=True  I2=  14 I3= 211 Valid=  168 E2=     3165 退化差=43
+n=12 q= 4096 d=  21 blind=False I2=   8 I3= 157 Valid=   96 E2=     3297 退化差=61
+n=12 q= 4096 d=  35 blind=False I2=   6 I3= 127 Valid=   24 E2=     4445 退化差=103
+n=12 q= 4096 d=  39 blind=False I2=   2 I3= 115 Valid=    0 E2=     4485 退化差=115
+n=12 q= 4096 d=  45 blind=False I2=  14 I3= 301 Valid=  168 E2=    13545 退化差=133
+n=12 q= 4096 d=  63 blind=True  I2=  62 I3=3907 Valid= 3720 E2=   246141 退化差=187
+n=12 q= 4096 d=  65 blind=False I2=   0 I3= 193 Valid=    0 E2=    12545 退化差=193
+n=12 q= 4096 d=  91 blind=False I2=   6 I3= 391 Valid=  120 E2=    35581 退化差=271
