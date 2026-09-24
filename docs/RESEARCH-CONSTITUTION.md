@@ -3708,3 +3708,37 @@ $$\text{性质}:\ \textbf{非第五种出口};\ \text{与三态正交（可挂�
 $$\text{触发（至少一项缺失）}:\ \text{状态数／字母表大小／类别限定／量明确定义／参数范围／达到者唯一性要求}$$ ✓
 $$\text{纪律}:\ \text{不得因规格不足判 }COVERED;\ \text{亦不得判 }REJECT$$ ✓
 ```
+
+---
+
+# **AMEND-17：`P4` 严格化 ＋ 多标签归并规则 ＋ 逐批独立统计 —— 2026-09-25 立**
+
+> 判例来源：唐先生 17:39 `Batch-1` 审查（`G01` 与 `P02` 两处纪律点）。
+
+D0: 本档对象 = 三条口径修正：① `P4` 严格化 ② 多标签行的**唯一归类**规则 ③ 逐批独立统计（`SPEC` 正交，不得混入）
+D1: 0（制度档）
+[REVIEW]
+
+## §1 `P4` 严格化（**关键**）
+
+```
+$$\textbf{不构成 }P4:\ \text{存在\textbf{通用／全集数据库}}（\text{如 SmallGroups、House of Graphs、La Jolla 等}）;\quad \text{亦不构成 }P4:\ \text{"我们自己拿数据库跑计算"}$$ ✗✗
+$$\textbf{构成 }P4\ \text{的条件}:\ \boxed{\text{已有枚举／数据库结果\textbf{已覆盖目标对象的一部分}}}（\text{即目标统计量或目标对象类已有现成的部分枚举输出}）$$ ✓✓✓
+$$\textbf{判据}:\ \text{问"目标统计量是否已存在于现成输出中"}\ \ne\ \text{问"底层对象是否已被枚举完"}$$ ✓✓
+```
+
+## §2 多标签归并规则
+
+```
+$$\text{一行可先标多个 }P\ \text{类，但\textbf{最终统计须归入唯一一类}};\ \text{取}\boxed{\text{证据最直接指向目标命题的那一类}}（\text{非最强、非最弱}）$$ ✓✓
+$$\text{若无法判定}\ \Longrightarrow\ \text{记 }\texttt{PENDING};\ \textbf{不得强行合并};\ \text{并须记下待判点}$$ ✓
+$$\text{实例（本批）}:\ P02\to P3;\quad P05\to P4;\quad P07\to P3$$ ✓
+```
+
+## §3 逐批独立统计
+
+```
+$$\text{每批独立给出}\ \boxed{(C,P_1,P_2,P_3,P_4,U,\texttt{SPEC})};\ \text{批内 }\Sigma=\text{批大小};\ \textbf{不对全局提前下结论}$$ ✓✓
+$$\boxed{\texttt{SPEC-REQUIRED}\ \text{与 }C/P/U\ \textbf{正交}};\ \text{统计时\textbf{单列}，\textbf{不得}混入 }C/P/U$$ ✓✓✓
+$$\text{既有口径不得漂移}:\ S2\text{-}30\ \text{锁定 }C=4,P=17,U=9\ \text{保持不变};\ \text{新批次\textbf{分开}统计}$$ ✓
+```
