@@ -1,0 +1,6 @@
+integer points: [(5, 5), (5, -6), (16, 60), (16, -61)]
+torsion: [(5, -6), (5, 5), (16, -61), (16, 60)]
+non-torsion candidates: []
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+IndexError: list index out of range

@@ -1,0 +1,19 @@
+E: y^2+y=x^3-x (37a1, rank 1, torsion trivial); P=(0,0) infinite order
+ASSERT nP!=O, 1<=n<=12 : OK
+audit(1) B_n: I={n:B_n=1} = [1, 2, 3, 4, 6]
+audit(2) m|n=>B_m|B_n : OK
+audit(3) gcd(B_m,B_n)=B_gcd : OK
+ n= 1 digits=   1 Supp=[]  Prim=[] big=0
+ n= 2 digits=   1 Supp=[]  Prim=[] big=0
+ n= 3 digits=   1 Supp=[]  Prim=[] big=0
+ n= 4 digits=   1 Supp=[]  Prim=[] big=0
+ n= 5 digits=   1 Supp=[2]  Prim=[2] big=0
+ n= 6 digits=   1 Supp=[]  Prim=[] big=0
+ n= 7 digits=   1 Supp=[3]  Prim=[3] big=0
+ n= 8 digits=   1 Supp=[5]  Prim=[5] big=0
+ n= 9 digits=   1 Supp=[7]  Prim=[7] big=0
+ n=10 digits=   1 Supp=[2]  Prim=[] big=0
+ n=11 digits=   2 Supp=[23]  Prim=[23] big=0
+ n=12 digits=   2 Supp=[29]  Prim=[29] big=0
+X (exceptional pool) = [10]
+CAP-1 max |T(S)|-|S| = 1  S= [2]  T= [5, 10]  counterexample? True

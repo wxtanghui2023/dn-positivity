@@ -1,0 +1,12 @@
+E=37a1 P=(0,0)  N=28
+I={n:B_n=1} = [1, 2, 3, 4, 6]
+X = exceptional indices = [10]
+
+ n   B_n            Supp        Prim       Q1:exists q|B_n with r_q|n   Q2:exists m|n parent   Q3:multi-cover&no single parent
+ 10  4              [2]  []  [2] (rq=[5])   [5]   False
+
+Q1 (all exceptional n have q|B_n with r_q | n) : PASS
+Q2 (all exceptional n have m|n with Supp inheritance) : PASS
+Q3 counterexamples (multi-cover, no single parent) : none
+
+rank of apparition table r_q = {2: 5, 3: 7, 5: 8, 7: 9, 11: 17, 13: 16, 17: 18, 19: 20, 23: 11, 29: 12, 31: 18, 43: 14, 59: 13, 107: 20, 139: 17, 157: 15, 283: 28, 983: 25, 1847: 27, 4003: 25, 4943: 22, 8209: 19, 9257: 21, 9803: 27, 10903: 28, 16433: 24, 118669: 26, 620297: 23}

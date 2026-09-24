@@ -1,0 +1,4 @@
+rational points found: 26  non-torsion candidates: 0
+Traceback (most recent call last):
+  File "<stdin>", line 20, in <module>
+IndexError: list index out of range
