@@ -1,0 +1,40 @@
+n= 2 q=    4 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n= 3 q=    8 d=   7 blind=True  λraw=   6 λvalid=   6 D=0 |Valid|=   24 cap=False
+n= 4 q=   16 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n= 4 q=   16 d=   5 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n= 4 q=   16 d=  15 blind=True  λraw=  14 λvalid=  14 D=0 |Valid|=  168 cap=False
+n= 5 q=   32 d=  31 blind=True  λraw=  30 λvalid=  30 D=0 |Valid|=  840 cap=False
+n= 6 q=   64 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n= 6 q=   64 d=   7 blind=True  λraw=   6 λvalid=   6 D=0 |Valid|=   24 cap=False
+n= 6 q=   64 d=   9 blind=False λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n= 6 q=   64 d=  21 blind=False λraw=   8 λvalid=   8 D=0 |Valid|=   96 cap=False
+n= 6 q=   64 d=  63 blind=True  λraw=  62 λvalid=  62 D=0 |Valid|= 3720 cap=False
+n= 8 q=  256 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n= 8 q=  256 d=   5 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n= 8 q=  256 d=  15 blind=True  λraw=  14 λvalid=  14 D=0 |Valid|=  168 cap=False
+n= 8 q=  256 d=  17 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n= 8 q=  256 d=  51 blind=False λraw=   2 λvalid=   2 D=0 |Valid|=  480 cap=False
+n= 8 q=  256 d=  85 blind=False λraw=  24 λvalid=  24 D=0 |Valid|= 2208 cap=False
+n= 9 q=  512 d=   7 blind=True  λraw=   6 λvalid=   6 D=0 |Valid|=   24 cap=False
+n= 9 q=  512 d=  73 blind=False λraw=  18 λvalid=  18 D=0 |Valid|=  720 cap=False
+n=10 q= 1024 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n=10 q= 1024 d=  11 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n=10 q= 1024 d=  31 blind=True  λraw=  30 λvalid=  30 D=0 |Valid|=  840 cap=False
+n=10 q= 1024 d=  33 blind=False λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n=10 q= 1024 d=  93 blind=False λraw=  32 λvalid=  32 D=0 |Valid|= 1200 cap=False
+n=11 q= 2048 d=  23 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n=11 q= 2048 d=  89 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=  264 cap=False
+n=12 q= 4096 d=   3 blind=True  λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=   5 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=   7 blind=True  λraw=   6 λvalid=   6 D=0 |Valid|=   24 cap=False
+n=12 q= 4096 d=   9 blind=False λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=  13 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=  15 blind=True  λraw=  14 λvalid=  14 D=0 |Valid|=  168 cap=False
+n=12 q= 4096 d=  21 blind=False λraw=   8 λvalid=   8 D=0 |Valid|=   96 cap=False
+n=12 q= 4096 d=  35 blind=False λraw=   6 λvalid=   6 D=0 |Valid|=   24 cap=False
+n=12 q= 4096 d=  39 blind=False λraw=   2 λvalid=   2 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=  45 blind=False λraw=  14 λvalid=  14 D=0 |Valid|=  168 cap=False
+n=12 q= 4096 d=  63 blind=True  λraw=  62 λvalid=  62 D=0 |Valid|= 3720 cap=False
+n=12 q= 4096 d=  65 blind=False λraw=   0 λvalid=   0 D=0 |Valid|=    0 cap=True
+n=12 q= 4096 d=  91 blind=False λraw=   6 λvalid=   6 D=0 |Valid|=  120 cap=False
+TABLE: {'blind': {'n': 17, 'eq': 17, 'zero_agree': 17, 'dne0': 0, 'cap': 6, 'noncap': 11, 'valid_pos': 11}, 'nonblind': {'n': 22, 'eq': 22, 'zero_agree': 22, 'dne0': 0, 'cap': 12, 'noncap': 10, 'valid_pos': 10}}
