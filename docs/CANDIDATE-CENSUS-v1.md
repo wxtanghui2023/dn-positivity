@@ -246,3 +246,13 @@ $$\textbf{下一步（待先生指定）}:\ \text{候选按"准备度"排序}:\ 
 $$\qquad \text{(ii) }C06\ \text{非线性读（须定 }(q,n,d)\ \text{格 + 分类文献核查）};\ \text{(iii) Zone-B WATCH 五项（须先生给 spec）};\ \text{(iv) 清单 v2 余三项}.$$
 $$\boxed{\textbf{硬门（}\textsc{amend-20/21}\text{）}:\ \text{任一候选进入计算前，必须过 \textbf{Gate 0}（三合一未覆盖 + 族字面检索 + 三列覆盖表）}}$$ ✓✓
 【⛔ 纪律】 本轮**零计算**；`U_{2,3}` 暂停；**不回 RH** ✓
+
+## §9 Mt07 收口（2026-09-24 22:05）
+
+```
+$$\textbf{Mt07} = \boxed{\text{CLOSED — 无可用格}}:\ \text{DS1.18 筛出的两个最有希望有限缺口（}G_A=R(C_4,K_{1,n}),\ G_B=R(3,10)\text{）均不提供符合 \textsc{amend-21} 的新机制入口}$$
+$$\qquad \text{两格均压缩为“已知图类上的有限存在性问题”；对象族/等价问题/极性图路线均已有系统研究；}G_A\ \text{当前 }f(39),f(51)\ \text{正被 2026 未评审 AI 仓库直接攻击}$$
+$$\qquad \boxed{\text{本轮未进入任何大规模计算} \Longrightarrow \text{Gate 0 成功阻断重复投资}}$$
+$$\textbf{Zone-A 余项更新}:\ \text{保留 }2\ (Mt07\to\textbf{CLOSED}),\ (C06\to\textbf{ACTIVE, 只开 C06-G0})$$
+$$\textbf{下一步}:\ \text{C06-G0（先锁具体 }(q,n,d)\text{）}；\ \text{若两轮内被覆盖} \Longrightarrow \text{回完整候选表重做“独立问题 × 新量 × 可证明性”筛选}$$
+```
