@@ -202,7 +202,10 @@ Batch-1 (F1+F2+F3, 19条): C=0  P1=0  P2=2  P3=3  P4=3  U=11  SPEC=1
              核对 0+2+3+3+11 = 19 OK;  本批无 COVERED
              P2={Gr09,P03}  P3={G03,P02,P07}  P4={G07,P01,P05}  SPEC={P02}
 
-Batch-2 (F4+F5+F6, 18条): 待跑
+Batch-2 (F4+F5+F6, 18条): C=3  P1=0  P2=3  P3=1  P4=3  U=8  SPEC=6
+             核对 3+0+3+1+3+8 = 18 OK
+             C={L04,Po03,Po07}  P2={L07,C08,Po04}  P3={L08}  P4={C06,C07,C09}
+             U={L02,L05,L06,C04,C05,Po01,Po05,Po08}  SPEC={L02,L06,C04,C05,Po05,Po08}
 Batch-3 (F7+F8+F9, 15条): 待跑
 Batch-4 (F10+F11+F12, 18条): 待跑
 
