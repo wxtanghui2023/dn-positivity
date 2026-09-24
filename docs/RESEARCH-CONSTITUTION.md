@@ -3681,3 +3681,30 @@ $$\textbf{旧}:\ \boxed{\text{先证明"新"}\to\text{才允许研究}}\quad(\te
 $$\textbf{新}:\ \boxed{\text{大量生成}\to\text{具体命题}\to\text{逐字覆盖}\to\text{可攻击性}\to\text{价值信息}\to\text{候选池}}$$ ✓✓✓
 $$\boxed{\text{筛选器的任务\textbf{不是}提前找出"值得做的题"，而是\textbf{尽可能不误杀}真正值得检查的题}}$$ ✓✓✓
 ```
+
+---
+
+# **AMEND-16：`S2` 细化 —— `PARTIAL` 四分类 ＋ `SPEC-REQUIRED` 标记 —— 2026-09-25 立**
+
+> 判例来源：唐先生 17:30 `S2-30/Pass-1` 的结论与要求（`PARTIAL` 细分／命题规格不足者不得混入三态）。
+
+D0: 本档对象 = `S2` 门细化：① `PARTIAL` 拆四类 ② 新增 `SPEC-REQUIRED`（**数据完整性标记，非第五出口**）
+D1: 0（制度档）
+[REVIEW]
+
+## §1 `PARTIAL` 四分类（互不排斥，可叠加）
+
+```
+$$\texttt{P1}\ \text{已有\textbf{界}}（\text{upper/lower bounds，未达精确}）;\qquad \texttt{P2}\ \text{已有\textbf{渐近}／一般理论（未含目标参数区精确值）};$$
+$$\texttt{P3}\ \text{已有\textbf{相邻参数}／部分参数族（未覆盖目标参数）};\qquad \texttt{P4}\ \text{已有\textbf{部分枚举}／数据库（best-known 表，非全部 exact）}$$ ✓✓
+$$\text{记录要求}:\ \text{每条 }PARTIAL\ \text{须标注属于 }\texttt{P1/P2/P3/P4}\ \text{中的哪几类};\ \text{可叠加}$$ ✓
+```
+
+## §2 `SPEC-REQUIRED`（数据完整性标记）
+
+```
+$$\boxed{\texttt{SPEC-REQUIRED}:\ \text{命题尚未达到可执行"逐字覆盖"核验的最小形式}}$$ ✓✓
+$$\text{性质}:\ \textbf{非第五种出口};\ \text{与三态正交（可挂在 }P\ \text{或 }U\ \text{上）};\ \text{补齐参数后\textbf{重新进入 }S2$$ ✓✓
+$$\text{触发（至少一项缺失）}:\ \text{状态数／字母表大小／类别限定／量明确定义／参数范围／达到者唯一性要求}$$ ✓
+$$\text{纪律}:\ \text{不得因规格不足判 }COVERED;\ \text{亦不得判 }REJECT$$ ✓
+```
