@@ -231,3 +231,18 @@ Batch-4 (F10+F11+F12, 18条): C=0  P1=0  P2=3  P3=0  P4=5  U=10  SPEC=10
 - Zone-A：6 DROP（D04/D06/D07/Mt06/Mt08/C09）＋ 1 CLOSED（C07）＋ 2 保留（Mt07 需非著名格、C06 仅非线性读）＋ 1 G0（D03）
 - 后续节点（挂起）：`\ell_2(11,4) \le 20` CONSTRUCTED（**新 P1 = `\ell_2(11,4)\ge20`，需先逐步重推与 t 表参数的对换关系**）
 - 指针：下一步 = Zone-B
+
+## §8 指针更新（2026-09-24 21:52）
+
+```
+$$\textbf{Zone-B 首次击穿结果}:\ \text{唯一 KEEP = }M03\ (\text{SNIEP }n=5)\ \textbf{已收口}:\ \text{机制成功／独立新性失败}\ \Longrightarrow\ \text{降级为复核资产}$$
+$$\qquad \text{（覆盖证据}:JMP\,2017\ \text{同族};\ Marijuán\,2023\ \text{阈值}\ \tfrac{\sqrt5-1}4\ \text{覆盖我方点};\ WSU\,2026\ \text{同族已知充分区}）$$
+$$\textbf{Zone-B 余项}:\ \text{DROP }2\ (G01,G02)\ +\ \textbf{WATCH }5\ (\boxed{G05,G06,G08,M04,Au06})\ \text{—— 均缺参数/族/目标，需先生给定 spec};$$
+$$\qquad \text{缺口清单}:\ G05\ (\text{群族}/n/\text{目标量缺});\ G06\ (\text{"最少生成元"歧义});\ G08\ (\text{"独立量"未定义});\ M04\ (n\ \text{与域未定});\ Au06\ (\text{收割未知}).$$
+$$\textbf{Zone-A 余项}:\ \textbf{保留 }2\ (\boxed{Mt07}\ \text{需"非著名格"}; \boxed{C06}\ \text{仅非线性读})+\ \text{G0 }1\ (D03);\quad \text{余 }6\ \text{DROP};\ C07\ \text{CLOSED}.$$
+$$\textbf{清单 v2（}P1\text{–}P8\text{）余项}:\ P4\ \text{REJECT};\ P5\text{-乙-}1=\text{CAP-MIX}\ \text{ARCHIVED};\ P7\text{-}2\ \text{REJECT};\ P5\text{-乙-}3\ \text{REJECT};$$
+$$\qquad \text{合法余项}=\boxed{P8\ (\text{硬禁 RH 变体}),\ P5\text{-乙-}2\ (\text{coset 余维}),\ P6\ (\text{仅 failure-mechanism})}.$$
+$$\textbf{下一步（待先生指定）}:\ \text{候选按"准备度"排序}:\ \text{(i) }Mt07\ \text{非著名格（须先定具体 }(s,t,\mathcal C)\ \text{格 + 收割核查）};$$
+$$\qquad \text{(ii) }C06\ \text{非线性读（须定 }(q,n,d)\ \text{格 + 分类文献核查）};\ \text{(iii) Zone-B WATCH 五项（须先生给 spec）};\ \text{(iv) 清单 v2 余三项}.$$
+$$\boxed{\textbf{硬门（}\textsc{amend-20/21}\text{）}:\ \text{任一候选进入计算前，必须过 \textbf{Gate 0}（三合一未覆盖 + 族字面检索 + 三列覆盖表）}}$$ ✓✓
+【⛔ 纪律】 本轮**零计算**；`U_{2,3}` 暂停；**不回 RH** ✓
