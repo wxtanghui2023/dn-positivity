@@ -80,3 +80,11 @@ FREEZE-ACK: D1=0
 ```
 【三分类】 **本档新增**：`A1`–`A5`／`P1`–`P3` 的**评级表**（清点性表述）✓；**档案已有（引用）**：`可迁移`／`负结果`（若命中，见上逐字）；**通用词（不计）**：`价值清点` ✓
 【边界】 ⚠️ `A5` 各条"是否已属教科书"**须逐条核查**（本档只标 ⚠️ 不裁）✓；⛔ 未制造候选／未启动搜索／未改状态 ✓
+
+---
+## ⚠️ 勘误（2026-09-25，据 `docs/LANE-A-FORMAL-DENT-audit-1.md` §2／§3）
+```
+原文声称：「Lean 侧还补了 Mathlib 缺的 von Neumann 迹不等式与 Sylvester 惯性」。
+实况：(1) Sylvester 惯性 —— Mathlib 已有（Mathlib/LinearAlgebra/QuadraticForm/Real 下三条 theorem 自述为 Sylvester's law of inertia）；(2) von Neumann 迹不等式 —— 本仓库全部 .lean 文件中 vonNeumann/Sylvester/inertia/signature/singularValues/trace_mul 命中数 = 0，无工件支持该声称。
+更正为：(1) Sylvester 惯性：Mathlib 已有，dent 作废；(2) von Neumann 迹不等式：本仓库无工件，声称待核（最可能为「论文阅读笔记」与「我方 Lean 工件」混淆）。
+```
