@@ -55,3 +55,12 @@ $$\textbf{可陈述的最强形式}:\ \boxed{\text{在 }n\le16\ \text{的完整�
 技术词 extremal         命中文件数=28   :: ./CROSS-0-additive-multiplicative-cross-invariant-MAP-CHECK.md ./CEILING-LP-RECOMPUTE-results.md ./TOPIC-DOSSIER-v1-six-columns-and-relations.md 
 技术词 certificate      命中文件数=135  :: ./C3880-standalone-paper-packaging-of-the-cone-separation-assets.md ./C319-directed-recheck-C272-pending-box-set-semantics-GAP-CONFIRMED.md ./C3896-exact-symbolic-T3PASS-certificate.md 
 ```
+
+## §6 勘误（证书复核实跑后，2026-09-25 06:05）
+```
+【发现三处，全部为我方文书/工具问题，非数学错误】
+(E1) 复核器首版在解包行崩溃（我写错），故 §3(4) 的『证书 ✔✔』在首版提交时**未经实跑背书**——现已修好并实跑。
+(E2) 首版复核报 'rho_max 0.3809520000 ≠ 8/21' 与 'rho != lambda/d 违例 36'：**表格列 rho 存为%.6f（6 位）**，差异 4.0e-7 属四舍五入；已改为容差 5e-7，两项违例均为 0。
+(E3) 首版复核行 '(6) 同一 d 出现多个 n 的情形数' 标签写错（该行实际统计的是『同一 d 的 λ 取值个数 >1』）。修正后另附『出现在多个 n 的 d』非平凡性诊断：✓
+【实跑结论】双算法一致；rho_max = MAX 与 8/21 在容差内相等；equality 仅 (6,21,8),(12,21,8)；rho>rho_max 违例 0；rho=lambda/d 违例 0；同一 d 跨多 n 的 λ 全一致 => 支持最小包含域引理。
+```
