@@ -1,0 +1,440 @@
+p= 2 n= 2 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n= 3 d=     7 Q=      8 λ=     6 main=6.1 dev=0.1 √Q=2.8 ratio=0.044
+p= 2 n= 4 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n= 4 d=     5 Q=     16 λ=     0 main=1.6 dev=1.6 √Q=4.0 ratio=0.391
+p= 2 n= 4 d=    15 Q=     16 λ=    14 main=14.1 dev=0.1 √Q=4.0 ratio=0.016
+p= 2 n= 5 d=    31 Q=     32 λ=    30 main=30.0 dev=0.0 √Q=5.7 ratio=0.006
+p= 2 n= 6 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n= 6 d=     7 Q=      8 λ=     6 main=6.1 dev=0.1 √Q=2.8 ratio=0.044
+p= 2 n= 6 d=     9 Q=     64 λ=     2 main=1.3 dev=0.7 √Q=8.0 ratio=0.092
+p= 2 n= 6 d=    21 Q=     64 λ=     8 main=6.9 dev=1.1 √Q=8.0 ratio=0.139
+p= 2 n= 6 d=    63 Q=     64 λ=    62 main=62.0 dev=0.0 √Q=8.0 ratio=0.002
+p= 2 n= 7 d=   127 Q=    128 λ=   126 main=126.0 dev=0.0 √Q=11.3 ratio=0.001
+p= 2 n= 8 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n= 8 d=     5 Q=     16 λ=     0 main=1.6 dev=1.6 √Q=4.0 ratio=0.391
+p= 2 n= 8 d=    15 Q=     16 λ=    14 main=14.1 dev=0.1 √Q=4.0 ratio=0.016
+p= 2 n= 8 d=    17 Q=    256 λ=     0 main=1.1 dev=1.1 √Q=16.0 ratio=0.071
+p= 2 n= 8 d=    51 Q=    256 λ=     2 main=10.2 dev=8.2 √Q=16.0 ratio=0.510
+p= 2 n= 8 d=    85 Q=    256 λ=    24 main=28.2 dev=4.2 √Q=16.0 ratio=0.264
+p= 2 n= 8 d=   255 Q=    256 λ=   254 main=254.0 dev=0.0 √Q=16.0 ratio=0.000
+p= 2 n= 9 d=     7 Q=      8 λ=     6 main=6.1 dev=0.1 √Q=2.8 ratio=0.044
+p= 2 n= 9 d=    73 Q=    512 λ=    18 main=10.4 dev=7.6 √Q=22.6 ratio=0.336
+p= 2 n= 9 d=   511 Q=    512 λ=   510 main=510.0 dev=0.0 √Q=22.6 ratio=0.000
+p= 2 n=10 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n=10 d=    11 Q=   1024 λ=     0 main=0.1 dev=0.1 √Q=32.0 ratio=0.004
+p= 2 n=10 d=    31 Q=     32 λ=    30 main=30.0 dev=0.0 √Q=5.7 ratio=0.006
+p= 2 n=10 d=    33 Q=   1024 λ=     2 main=1.1 dev=0.9 √Q=32.0 ratio=0.029
+p= 2 n=10 d=    93 Q=   1024 λ=    32 main=8.4 dev=23.6 √Q=32.0 ratio=0.736
+p= 2 n=10 d=   341 Q=   1024 λ=   120 main=113.6 dev=6.4 √Q=32.0 ratio=0.201
+p= 2 n=10 d=  1023 Q=   1024 λ=  1022 main=1022.0 dev=0.0 √Q=32.0 ratio=0.000
+p= 2 n=11 d=    23 Q=   2048 λ=     0 main=0.3 dev=0.3 √Q=45.3 ratio=0.006
+p= 2 n=11 d=    89 Q=   2048 λ=     0 main=3.9 dev=3.9 √Q=45.3 ratio=0.085
+p= 2 n=11 d=  2047 Q=   2048 λ=  2046 main=2046.0 dev=0.0 √Q=45.3 ratio=0.000
+p= 2 n=12 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n=12 d=     5 Q=     16 λ=     0 main=1.6 dev=1.6 √Q=4.0 ratio=0.391
+p= 2 n=12 d=     7 Q=      8 λ=     6 main=6.1 dev=0.1 √Q=2.8 ratio=0.044
+p= 2 n=12 d=     9 Q=     64 λ=     2 main=1.3 dev=0.7 √Q=8.0 ratio=0.092
+p= 2 n=12 d=    13 Q=   4096 λ=     0 main=0.0 dev=0.0 √Q=64.0 ratio=0.001
+p= 2 n=12 d=    15 Q=     16 λ=    14 main=14.1 dev=0.1 √Q=4.0 ratio=0.016
+p= 2 n=12 d=    21 Q=     64 λ=     8 main=6.9 dev=1.1 √Q=8.0 ratio=0.139
+p= 2 n=12 d=    35 Q=   4096 λ=     6 main=0.3 dev=5.7 √Q=64.0 ratio=0.089
+p= 2 n=12 d=    39 Q=   4096 λ=     2 main=0.4 dev=1.6 √Q=64.0 ratio=0.025
+p= 2 n=12 d=    45 Q=   4096 λ=    14 main=0.5 dev=13.5 √Q=64.0 ratio=0.211
+p= 2 n=12 d=    63 Q=     64 λ=    62 main=62.0 dev=0.0 √Q=8.0 ratio=0.002
+p= 2 n=12 d=    65 Q=   4096 λ=     0 main=1.0 dev=1.0 √Q=64.0 ratio=0.016
+p= 2 n=12 d=    91 Q=   4096 λ=     6 main=2.0 dev=4.0 √Q=64.0 ratio=0.062
+p= 2 n=12 d=   105 Q=   4096 λ=    20 main=2.7 dev=17.3 √Q=64.0 ratio=0.270
+p= 2 n=12 d=   117 Q=   4096 λ=     2 main=3.3 dev=1.3 √Q=64.0 ratio=0.021
+p= 2 n=12 d=   195 Q=   4096 λ=    14 main=9.3 dev=4.7 √Q=64.0 ratio=0.074
+p= 2 n=12 d=   273 Q=   4096 λ=    32 main=18.2 dev=13.8 √Q=64.0 ratio=0.216
+p= 2 n=12 d=   315 Q=   4096 λ=    74 main=24.2 dev=49.8 √Q=64.0 ratio=0.778
+p= 2 n=12 d=   455 Q=   4096 λ=     6 main=50.5 dev=44.5 √Q=64.0 ratio=0.696
+p= 2 n=12 d=   585 Q=   4096 λ=    86 main=83.6 dev=2.4 √Q=64.0 ratio=0.038
+p= 2 n=12 d=   819 Q=   4096 λ=   194 main=163.8 dev=30.2 √Q=64.0 ratio=0.472
+p= 2 n=12 d=  1365 Q=   4096 λ=   440 main=454.9 dev=14.9 √Q=64.0 ratio=0.233
+p= 2 n=12 d=  4095 Q=   4096 λ=  4094 main=4094.0 dev=0.0 √Q=64.0 ratio=0.000
+p= 2 n=13 d=  8191 Q=   8192 λ=  8190 main=8190.0 dev=0.0 √Q=90.5 ratio=0.000
+p= 2 n=14 d=     3 Q=      4 λ=     2 main=2.2 dev=0.2 √Q=2.0 ratio=0.125
+p= 2 n=14 d=    43 Q=  16384 λ=     0 main=0.1 dev=0.1 √Q=128.0 ratio=0.001
+p= 2 n=14 d=   127 Q=    128 λ=   126 main=126.0 dev=0.0 √Q=11.3 ratio=0.001
+p= 2 n=14 d=   129 Q=  16384 λ=     2 main=1.0 dev=1.0 √Q=128.0 ratio=0.008
+p= 2 n=14 d=   381 Q=  16384 λ=   128 main=8.9 dev=119.1 √Q=128.0 ratio=0.931
+p= 2 n=14 d=  5461 Q=  16384 λ=  1848 main=1820.2 dev=27.8 √Q=128.0 ratio=0.217
+p= 2 n=14 d= 16383 Q=  16384 λ= 16382 main=16382.0 dev=0.0 √Q=128.0 ratio=0.000
+p= 3 n= 2 d=     4 Q=      9 λ=     1 main=1.8 dev=0.8 √Q=3.0 ratio=0.259
+p= 3 n= 2 d=     8 Q=      9 λ=     7 main=7.1 dev=0.1 √Q=3.0 ratio=0.037
+p= 3 n= 3 d=    13 Q=     27 λ=     7 main=6.3 dev=0.7 √Q=5.2 ratio=0.143
+p= 3 n= 3 d=    26 Q=     27 λ=    25 main=25.0 dev=0.0 √Q=5.2 ratio=0.007
+p= 3 n= 4 d=     4 Q=      9 λ=     1 main=1.8 dev=0.8 √Q=3.0 ratio=0.259
+p= 3 n= 4 d=     5 Q=     81 λ=     1 main=0.3 dev=0.7 √Q=9.0 ratio=0.077
+p= 3 n= 4 d=     8 Q=      9 λ=     7 main=7.1 dev=0.1 √Q=3.0 ratio=0.037
+p= 3 n= 4 d=    10 Q=     81 λ=     1 main=1.2 dev=0.2 √Q=9.0 ratio=0.026
+p= 3 n= 4 d=    16 Q=     81 λ=     7 main=3.2 dev=3.8 √Q=9.0 ratio=0.427
+p= 3 n= 4 d=    20 Q=     81 λ=     1 main=4.9 dev=3.9 √Q=9.0 ratio=0.438
+p= 3 n= 4 d=    40 Q=     81 λ=    19 main=19.8 dev=0.8 √Q=9.0 ratio=0.084
+p= 3 n= 4 d=    80 Q=     81 λ=    79 main=79.0 dev=0.0 √Q=9.0 ratio=0.001
+p= 3 n= 5 d=    11 Q=    243 λ=     1 main=0.5 dev=0.5 √Q=15.6 ratio=0.032
+p= 3 n= 5 d=    22 Q=    243 λ=     1 main=2.0 dev=1.0 √Q=15.6 ratio=0.064
+p= 3 n= 5 d=   121 Q=    243 λ=    61 main=60.3 dev=0.7 √Q=15.6 ratio=0.048
+p= 3 n= 5 d=   242 Q=    243 λ=   241 main=241.0 dev=0.0 √Q=15.6 ratio=0.000
+p= 3 n= 6 d=     4 Q=      9 λ=     1 main=1.8 dev=0.8 √Q=3.0 ratio=0.259
+p= 3 n= 6 d=     7 Q=    729 λ=     1 main=0.1 dev=0.9 √Q=27.0 ratio=0.035
+p= 3 n= 6 d=     8 Q=      9 λ=     7 main=7.1 dev=0.1 √Q=3.0 ratio=0.037
+p= 3 n= 6 d=    13 Q=     27 λ=     7 main=6.3 dev=0.7 √Q=5.2 ratio=0.143
+p= 3 n= 6 d=    14 Q=    729 λ=     1 main=0.3 dev=0.7 √Q=27.0 ratio=0.027
+p= 3 n= 6 d=    26 Q=     27 λ=    25 main=25.0 dev=0.0 √Q=5.2 ratio=0.007
+p= 3 n= 6 d=    28 Q=    729 λ=     1 main=1.1 dev=0.1 √Q=27.0 ratio=0.003
+p= 3 n= 6 d=    52 Q=    729 λ=    25 main=3.7 dev=21.3 √Q=27.0 ratio=0.789
+p= 3 n= 6 d=    56 Q=    729 λ=     7 main=4.3 dev=2.7 √Q=27.0 ratio=0.100
+p= 3 n= 6 d=    91 Q=    729 λ=    19 main=11.4 dev=7.6 √Q=27.0 ratio=0.283
+p= 3 n= 6 d=   104 Q=    729 λ=    31 main=14.8 dev=16.2 √Q=27.0 ratio=0.599
+p= 3 n= 6 d=   182 Q=    729 λ=    55 main=45.4 dev=9.6 √Q=27.0 ratio=0.354
+p= 3 n= 6 d=   364 Q=    729 λ=   181 main=181.8 dev=0.8 √Q=27.0 ratio=0.028
+p= 3 n= 6 d=   728 Q=    729 λ=   727 main=727.0 dev=0.0 √Q=27.0 ratio=0.000
+p= 3 n= 7 d=  1093 Q=   2187 λ=   547 main=546.3 dev=0.7 √Q=46.8 ratio=0.016
+p= 3 n= 7 d=  2186 Q=   2187 λ=  2185 main=2185.0 dev=0.0 √Q=46.8 ratio=0.000
+p= 3 n= 8 d=     4 Q=      9 λ=     1 main=1.8 dev=0.8 √Q=3.0 ratio=0.259
+p= 3 n= 8 d=     5 Q=     81 λ=     1 main=0.3 dev=0.7 √Q=9.0 ratio=0.077
+p= 3 n= 8 d=     8 Q=      9 λ=     7 main=7.1 dev=0.1 √Q=3.0 ratio=0.037
+p= 3 n= 8 d=    10 Q=     81 λ=     1 main=1.2 dev=0.2 √Q=9.0 ratio=0.026
+p= 3 n= 8 d=    16 Q=     81 λ=     7 main=3.2 dev=3.8 √Q=9.0 ratio=0.427
+p= 3 n= 8 d=    20 Q=     81 λ=     1 main=4.9 dev=3.9 √Q=9.0 ratio=0.438
+p= 3 n= 8 d=    32 Q=   6561 λ=     7 main=0.2 dev=6.8 √Q=81.0 ratio=0.084
+p= 3 n= 8 d=    40 Q=     81 λ=    19 main=19.8 dev=0.8 √Q=9.0 ratio=0.084
+p= 3 n= 8 d=    41 Q=   6561 λ=     1 main=0.3 dev=0.7 √Q=81.0 ratio=0.009
+p= 3 n= 8 d=    80 Q=     81 λ=    79 main=79.0 dev=0.0 √Q=9.0 ratio=0.001
+p= 3 n= 8 d=    82 Q=   6561 λ=     1 main=1.0 dev=0.0 √Q=81.0 ratio=0.000
+p= 3 n= 8 d=   160 Q=   6561 λ=    79 main=3.9 dev=75.1 √Q=81.0 ratio=0.927
+p= 3 n= 8 d=   164 Q=   6561 λ=     1 main=4.1 dev=3.1 √Q=81.0 ratio=0.038
+p= 3 n= 8 d=   205 Q=   6561 λ=    25 main=6.4 dev=18.6 √Q=81.0 ratio=0.230
+p= 3 n= 8 d=   328 Q=   6561 λ=     7 main=16.4 dev=9.4 √Q=81.0 ratio=0.116
+p= 3 n= 8 d=   410 Q=   6561 λ=    25 main=25.6 dev=0.6 √Q=81.0 ratio=0.008
+p= 3 n= 8 d=   656 Q=   6561 λ=     7 main=65.6 dev=58.6 √Q=81.0 ratio=0.723
+p= 3 n= 8 d=   820 Q=   6561 λ=    73 main=102.5 dev=29.5 √Q=81.0 ratio=0.364
+p= 3 n= 8 d=  1312 Q=   6561 λ=   223 main=262.4 dev=39.4 √Q=81.0 ratio=0.486
+p= 3 n= 8 d=  1640 Q=   6561 λ=   379 main=409.9 dev=30.9 √Q=81.0 ratio=0.382
+p= 3 n= 8 d=  3280 Q=   6561 λ=  1639 main=1639.8 dev=0.8 √Q=81.0 ratio=0.009
+p= 3 n= 8 d=  6560 Q=   6561 λ=  6559 main=6559.0 dev=0.0 √Q=81.0 ratio=0.000
+p= 3 n= 9 d=    13 Q=     27 λ=     7 main=6.3 dev=0.7 √Q=5.2 ratio=0.143
+p= 3 n= 9 d=    26 Q=     27 λ=    25 main=25.0 dev=0.0 √Q=5.2 ratio=0.007
+p= 3 n= 9 d=   757 Q=  19683 λ=    55 main=29.1 dev=25.9 √Q=140.3 ratio=0.185
+p= 3 n= 9 d=  1514 Q=  19683 λ=   109 main=116.5 dev=7.5 √Q=140.3 ratio=0.053
+p= 3 n= 9 d=  9841 Q=  19683 λ=  4921 main=4920.3 dev=0.7 √Q=140.3 ratio=0.005
+p= 3 n= 9 d= 19682 Q=  19683 λ= 19681 main=19681.0 dev=0.0 √Q=140.3 ratio=0.000
+p= 5 n= 2 d=     3 Q=     25 λ=     2 main=0.4 dev=1.6 √Q=5.0 ratio=0.328
+p= 5 n= 2 d=     4 Q=      5 λ=     3 main=3.2 dev=0.2 √Q=2.2 ratio=0.089
+p= 5 n= 2 d=     6 Q=     25 λ=     2 main=1.4 dev=0.6 √Q=5.0 ratio=0.112
+p= 5 n= 2 d=     8 Q=     25 λ=     3 main=2.6 dev=0.4 √Q=5.0 ratio=0.088
+p= 5 n= 2 d=    12 Q=     25 λ=     5 main=5.8 dev=0.8 √Q=5.0 ratio=0.152
+p= 5 n= 2 d=    24 Q=     25 λ=    23 main=23.0 dev=0.0 √Q=5.0 ratio=0.008
+p= 5 n= 3 d=     4 Q=      5 λ=     3 main=3.2 dev=0.2 √Q=2.2 ratio=0.089
+p= 5 n= 3 d=    31 Q=    125 λ=    12 main=7.7 dev=4.3 √Q=11.2 ratio=0.386
+p= 5 n= 3 d=    62 Q=    125 λ=    30 main=30.8 dev=0.8 √Q=11.2 ratio=0.067
+p= 5 n= 3 d=   124 Q=    125 λ=   123 main=123.0 dev=0.0 √Q=11.2 ratio=0.001
+p= 5 n= 4 d=     3 Q=     25 λ=     2 main=0.4 dev=1.6 √Q=5.0 ratio=0.328
+p= 5 n= 4 d=     4 Q=      5 λ=     3 main=3.2 dev=0.2 √Q=2.2 ratio=0.089
+p= 5 n= 4 d=     6 Q=     25 λ=     2 main=1.4 dev=0.6 √Q=5.0 ratio=0.112
+p= 5 n= 4 d=     8 Q=     25 λ=     3 main=2.6 dev=0.4 √Q=5.0 ratio=0.088
+p= 5 n= 4 d=    12 Q=     25 λ=     5 main=5.8 dev=0.8 √Q=5.0 ratio=0.152
+p= 5 n= 4 d=    13 Q=    625 λ=     0 main=0.3 dev=0.3 √Q=25.0 ratio=0.011
+p= 5 n= 4 d=    16 Q=    625 λ=     3 main=0.4 dev=2.6 √Q=25.0 ratio=0.104
+p= 5 n= 4 d=    24 Q=     25 λ=    23 main=23.0 dev=0.0 √Q=5.0 ratio=0.008
+p= 5 n= 4 d=    26 Q=    625 λ=     0 main=1.1 dev=1.1 √Q=25.0 ratio=0.043
+p= 5 n= 4 d=    39 Q=    625 λ=     2 main=2.4 dev=0.4 √Q=25.0 ratio=0.017
+p= 5 n= 4 d=    48 Q=    625 λ=    23 main=3.7 dev=19.3 √Q=25.0 ratio=0.773
+p= 5 n= 4 d=    52 Q=    625 λ=     3 main=4.3 dev=1.3 √Q=25.0 ratio=0.053
+p= 5 n= 4 d=    78 Q=    625 λ=     2 main=9.7 dev=7.7 √Q=25.0 ratio=0.309
+p= 5 n= 4 d=   104 Q=    625 λ=     3 main=17.3 dev=14.3 √Q=25.0 ratio=0.572
+p= 5 n= 4 d=   156 Q=    625 λ=    41 main=38.9 dev=2.1 √Q=25.0 ratio=0.082
+p= 5 n= 4 d=   208 Q=    625 λ=    63 main=69.2 dev=6.2 √Q=25.0 ratio=0.249
+p= 5 n= 4 d=   312 Q=    625 λ=   155 main=155.8 dev=0.8 √Q=25.0 ratio=0.030
+p= 5 n= 4 d=   624 Q=    625 λ=   623 main=623.0 dev=0.0 √Q=25.0 ratio=0.000
+p= 5 n= 5 d=     4 Q=      5 λ=     3 main=3.2 dev=0.2 √Q=2.2 ratio=0.089
+p= 5 n= 5 d=    11 Q=   3125 λ=     0 main=0.0 dev=0.0 √Q=55.9 ratio=0.001
+p= 5 n= 5 d=    22 Q=   3125 λ=     0 main=0.2 dev=0.2 √Q=55.9 ratio=0.003
+p= 5 n= 5 d=    44 Q=   3125 λ=     3 main=0.6 dev=2.4 √Q=55.9 ratio=0.043
+p= 5 n= 5 d=    71 Q=   3125 λ=     0 main=1.6 dev=1.6 √Q=55.9 ratio=0.029
+p= 5 n= 5 d=   142 Q=   3125 λ=     0 main=6.5 dev=6.5 √Q=55.9 ratio=0.115
+p= 5 n= 5 d=   284 Q=   3125 λ=    33 main=25.8 dev=7.2 √Q=55.9 ratio=0.129
+p= 5 n= 5 d=   781 Q=   3125 λ=   180 main=195.2 dev=15.2 √Q=55.9 ratio=0.272
+p= 5 n= 5 d=  1562 Q=   3125 λ=   780 main=780.8 dev=0.8 √Q=55.9 ratio=0.013
+p= 5 n= 5 d=  3124 Q=   3125 λ=  3123 main=3123.0 dev=0.0 √Q=55.9 ratio=0.000
+p= 5 n= 6 d=     3 Q=     25 λ=     2 main=0.4 dev=1.6 √Q=5.0 ratio=0.328
+p= 5 n= 6 d=     4 Q=      5 λ=     3 main=3.2 dev=0.2 √Q=2.2 ratio=0.089
+p= 5 n= 6 d=     6 Q=     25 λ=     2 main=1.4 dev=0.6 √Q=5.0 ratio=0.112
+p= 5 n= 6 d=     7 Q=  15625 λ=     0 main=0.0 dev=0.0 √Q=125.0 ratio=0.000
+p= 5 n= 6 d=     8 Q=     25 λ=     3 main=2.6 dev=0.4 √Q=5.0 ratio=0.088
+p= 5 n= 6 d=     9 Q=  15625 λ=     2 main=0.0 dev=2.0 √Q=125.0 ratio=0.016
+p= 5 n= 6 d=    12 Q=     25 λ=     5 main=5.8 dev=0.8 √Q=5.0 ratio=0.152
+p= 5 n= 6 d=    14 Q=  15625 λ=     0 main=0.0 dev=0.0 √Q=125.0 ratio=0.000
+p= 5 n= 6 d=    18 Q=  15625 λ=     2 main=0.0 dev=2.0 √Q=125.0 ratio=0.016
+p= 5 n= 6 d=    21 Q=  15625 λ=     2 main=0.0 dev=2.0 √Q=125.0 ratio=0.016
+p= 5 n= 6 d=    24 Q=     25 λ=    23 main=23.0 dev=0.0 √Q=5.0 ratio=0.008
+p= 5 n= 6 d=    28 Q=  15625 λ=     3 main=0.1 dev=2.9 √Q=125.0 ratio=0.024
+p= 5 n= 6 d=    31 Q=    125 λ=    12 main=7.7 dev=4.3 √Q=11.2 ratio=0.386
+p= 5 n= 6 d=    36 Q=  15625 λ=     5 main=0.1 dev=4.9 √Q=125.0 ratio=0.039
+p= 5 n= 6 d=    42 Q=  15625 λ=     2 main=0.1 dev=1.9 √Q=125.0 ratio=0.015
+p= 5 n= 6 d=    56 Q=  15625 λ=     3 main=0.2 dev=2.8 √Q=125.0 ratio=0.022
+p= 5 n= 6 d=    62 Q=    125 λ=    30 main=30.8 dev=0.8 √Q=11.2 ratio=0.067
+p= 5 n= 6 d=    63 Q=  15625 λ=     2 main=0.3 dev=1.7 √Q=125.0 ratio=0.014
+p= 5 n= 6 d=    72 Q=  15625 λ=    23 main=0.3 dev=22.7 √Q=125.0 ratio=0.181
+p= 5 n= 6 d=    84 Q=  15625 λ=     5 main=0.5 dev=4.5 √Q=125.0 ratio=0.036
+p= 5 n= 6 d=    93 Q=  15625 λ=    14 main=0.6 dev=13.4 √Q=125.0 ratio=0.108
+p= 5 n= 6 d=   124 Q=    125 λ=   123 main=123.0 dev=0.0 √Q=11.2 ratio=0.001
+p= 5 n= 6 d=   126 Q=  15625 λ=     2 main=1.0 dev=1.0 √Q=125.0 ratio=0.008
+p= 5 n= 6 d=   168 Q=  15625 λ=    23 main=1.8 dev=21.2 √Q=125.0 ratio=0.170
+p= 5 n= 6 d=   186 Q=  15625 λ=    32 main=2.2 dev=29.8 √Q=125.0 ratio=0.238
+p= 5 n= 6 d=   217 Q=  15625 λ=    24 main=3.0 dev=21.0 √Q=125.0 ratio=0.168
+p= 5 n= 6 d=   248 Q=  15625 λ=   123 main=3.9 dev=119.1 √Q=125.0 ratio=0.953
+p= 5 n= 6 d=   252 Q=  15625 λ=     5 main=4.1 dev=0.9 √Q=125.0 ratio=0.007
+p= 5 n= 6 d=   279 Q=  15625 λ=    32 main=5.0 dev=27.0 √Q=125.0 ratio=0.216
+p= 5 n= 6 d=   372 Q=  15625 λ=   125 main=8.9 dev=116.1 √Q=125.0 ratio=0.929
+p= 5 n= 6 d=   434 Q=  15625 λ=    60 main=12.1 dev=47.9 √Q=125.0 ratio=0.384
+p= 5 n= 6 d=   504 Q=  15625 λ=    23 main=16.3 dev=6.7 √Q=125.0 ratio=0.054
+p= 5 n= 6 d=   558 Q=  15625 λ=    50 main=19.9 dev=30.1 √Q=125.0 ratio=0.241
+p= 5 n= 6 d=   651 Q=  15625 λ=    50 main=27.1 dev=22.9 √Q=125.0 ratio=0.183
+p= 5 n= 6 d=   744 Q=  15625 λ=   143 main=35.4 dev=107.6 √Q=125.0 ratio=0.861
+p= 5 n= 6 d=   868 Q=  15625 λ=   153 main=48.2 dev=104.8 √Q=125.0 ratio=0.838
+p= 5 n= 6 d=  1116 Q=  15625 λ=   179 main=79.7 dev=99.3 √Q=125.0 ratio=0.794
+p= 5 n= 6 d=  1302 Q=  15625 λ=   158 main=108.5 dev=49.5 √Q=125.0 ratio=0.396
+p= 5 n= 6 d=  1736 Q=  15625 λ=   279 main=192.9 dev=86.1 √Q=125.0 ratio=0.689
+p= 5 n= 6 d=  1953 Q=  15625 λ=   302 main=244.1 dev=57.9 √Q=125.0 ratio=0.463
+p= 5 n= 6 d=  2232 Q=  15625 λ=   395 main=318.8 dev=76.2 √Q=125.0 ratio=0.609
+p= 5 n= 6 d=  2604 Q=  15625 λ=   503 main=434.0 dev=69.0 √Q=125.0 ratio=0.552
+p= 5 n= 6 d=  3906 Q=  15625 λ=   932 main=976.4 dev=44.4 √Q=125.0 ratio=0.356
+p= 5 n= 6 d=  5208 Q=  15625 λ=  1763 main=1735.9 dev=27.1 √Q=125.0 ratio=0.217
+p= 5 n= 6 d=  7812 Q=  15625 λ=  3905 main=3905.8 dev=0.8 √Q=125.0 ratio=0.006
+p= 5 n= 6 d= 15624 Q=  15625 λ= 15623 main=15623.0 dev=0.0 √Q=125.0 ratio=0.000
+p= 7 n= 2 d=     3 Q=      7 λ=     2 main=1.3 dev=0.7 √Q=2.6 ratio=0.270
+p= 7 n= 2 d=     4 Q=     49 λ=     0 main=0.3 dev=0.3 √Q=7.0 ratio=0.047
+p= 7 n= 2 d=     6 Q=      7 λ=     5 main=5.1 dev=0.1 √Q=2.6 ratio=0.054
+p= 7 n= 2 d=     8 Q=     49 λ=     0 main=1.3 dev=1.3 √Q=7.0 ratio=0.187
+p= 7 n= 2 d=    12 Q=     49 λ=     5 main=2.9 dev=2.1 √Q=7.0 ratio=0.294
+p= 7 n= 2 d=    16 Q=     49 λ=     6 main=5.2 dev=0.8 √Q=7.0 ratio=0.111
+p= 7 n= 2 d=    24 Q=     49 λ=    11 main=11.8 dev=0.8 √Q=7.0 ratio=0.108
+p= 7 n= 2 d=    48 Q=     49 λ=    47 main=47.0 dev=0.0 √Q=7.0 ratio=0.003
+p= 7 n= 3 d=     3 Q=      7 λ=     2 main=1.3 dev=0.7 √Q=2.6 ratio=0.270
+p= 7 n= 3 d=     6 Q=      7 λ=     5 main=5.1 dev=0.1 √Q=2.6 ratio=0.054
+p= 7 n= 3 d=     9 Q=    343 λ=     2 main=0.2 dev=1.8 √Q=18.5 ratio=0.095
+p= 7 n= 3 d=    18 Q=    343 λ=     5 main=0.9 dev=4.1 √Q=18.5 ratio=0.219
+p= 7 n= 3 d=    19 Q=    343 λ=     6 main=1.1 dev=4.9 √Q=18.5 ratio=0.267
+p= 7 n= 3 d=    38 Q=    343 λ=     6 main=4.2 dev=1.8 √Q=18.5 ratio=0.097
+p= 7 n= 3 d=    57 Q=    343 λ=    14 main=9.5 dev=4.5 √Q=18.5 ratio=0.244
+p= 7 n= 3 d=   114 Q=    343 λ=    35 main=37.9 dev=2.9 √Q=18.5 ratio=0.156
+p= 7 n= 3 d=   171 Q=    343 λ=    86 main=85.3 dev=0.7 √Q=18.5 ratio=0.040
+p= 7 n= 3 d=   342 Q=    343 λ=   341 main=341.0 dev=0.0 √Q=18.5 ratio=0.000
+p= 7 n= 4 d=     3 Q=      7 λ=     2 main=1.3 dev=0.7 √Q=2.6 ratio=0.270
+p= 7 n= 4 d=     4 Q=     49 λ=     0 main=0.3 dev=0.3 √Q=7.0 ratio=0.047
+p= 7 n= 4 d=     5 Q=   2401 λ=     0 main=0.0 dev=0.0 √Q=49.0 ratio=0.000
+p= 7 n= 4 d=     6 Q=      7 λ=     5 main=5.1 dev=0.1 √Q=2.6 ratio=0.054
+p= 7 n= 4 d=     8 Q=     49 λ=     0 main=1.3 dev=1.3 √Q=7.0 ratio=0.187
+p= 7 n= 4 d=    10 Q=   2401 λ=     0 main=0.0 dev=0.0 √Q=49.0 ratio=0.001
+p= 7 n= 4 d=    12 Q=     49 λ=     5 main=2.9 dev=2.1 √Q=7.0 ratio=0.294
+p= 7 n= 4 d=    15 Q=   2401 λ=     2 main=0.1 dev=1.9 √Q=49.0 ratio=0.039
+p= 7 n= 4 d=    16 Q=     49 λ=     6 main=5.2 dev=0.8 √Q=7.0 ratio=0.111
+p= 7 n= 4 d=    20 Q=   2401 λ=     0 main=0.2 dev=0.2 √Q=49.0 ratio=0.003
+p= 7 n= 4 d=    24 Q=     49 λ=    11 main=11.8 dev=0.8 √Q=7.0 ratio=0.108
+p= 7 n= 4 d=    25 Q=   2401 λ=     0 main=0.3 dev=0.3 √Q=49.0 ratio=0.005
+p= 7 n= 4 d=    30 Q=   2401 λ=     5 main=0.4 dev=4.6 √Q=49.0 ratio=0.094
+p= 7 n= 4 d=    32 Q=   2401 λ=     6 main=0.4 dev=5.6 √Q=49.0 ratio=0.114
+p= 7 n= 4 d=    40 Q=   2401 λ=     0 main=0.7 dev=0.7 √Q=49.0 ratio=0.014
+p= 7 n= 4 d=    48 Q=     49 λ=    47 main=47.0 dev=0.0 √Q=7.0 ratio=0.003
+p= 7 n= 4 d=    50 Q=   2401 λ=     0 main=1.0 dev=1.0 √Q=49.0 ratio=0.021
+p= 7 n= 4 d=    60 Q=   2401 λ=     5 main=1.5 dev=3.5 √Q=49.0 ratio=0.071
+p= 7 n= 4 d=    75 Q=   2401 λ=     2 main=2.3 dev=0.3 √Q=49.0 ratio=0.007
+p= 7 n= 4 d=    80 Q=   2401 λ=    18 main=2.7 dev=15.3 √Q=49.0 ratio=0.313
+p= 7 n= 4 d=    96 Q=   2401 λ=    47 main=3.8 dev=43.2 √Q=49.0 ratio=0.881
+p= 7 n= 4 d=   100 Q=   2401 λ=     0 main=4.2 dev=4.2 √Q=49.0 ratio=0.085
+p= 7 n= 4 d=   120 Q=   2401 λ=    11 main=6.0 dev=5.0 √Q=49.0 ratio=0.102
+p= 7 n= 4 d=   150 Q=   2401 λ=     5 main=9.4 dev=4.4 √Q=49.0 ratio=0.089
+p= 7 n= 4 d=   160 Q=   2401 λ=    18 main=10.7 dev=7.3 √Q=49.0 ratio=0.150
+p= 7 n= 4 d=   200 Q=   2401 λ=    12 main=16.7 dev=4.7 √Q=49.0 ratio=0.095
+p= 7 n= 4 d=   240 Q=   2401 λ=    59 main=24.0 dev=35.0 √Q=49.0 ratio=0.714
+p= 7 n= 4 d=   300 Q=   2401 λ=     5 main=37.5 dev=32.5 √Q=49.0 ratio=0.663
+p= 7 n= 4 d=   400 Q=   2401 λ=    78 main=66.6 dev=11.4 √Q=49.0 ratio=0.232
+p= 7 n= 4 d=   480 Q=   2401 λ=   119 main=96.0 dev=23.0 √Q=49.0 ratio=0.470
+p= 7 n= 4 d=   600 Q=   2401 λ=   131 main=149.9 dev=18.9 √Q=49.0 ratio=0.386
+p= 7 n= 4 d=   800 Q=   2401 λ=   258 main=266.6 dev=8.6 √Q=49.0 ratio=0.175
+p= 7 n= 4 d=  1200 Q=   2401 λ=   599 main=599.8 dev=0.8 √Q=49.0 ratio=0.015
+p= 7 n= 4 d=  2400 Q=   2401 λ=  2399 main=2399.0 dev=0.0 √Q=49.0 ratio=0.000
+p= 7 n= 5 d=     3 Q=      7 λ=     2 main=1.3 dev=0.7 √Q=2.6 ratio=0.270
+p= 7 n= 5 d=     6 Q=      7 λ=     5 main=5.1 dev=0.1 √Q=2.6 ratio=0.054
+p= 7 n= 5 d=  2801 Q=  16807 λ=   510 main=466.8 dev=43.2 √Q=129.6 ratio=0.333
+p= 7 n= 5 d=  5602 Q=  16807 λ=  1890 main=1867.2 dev=22.8 √Q=129.6 ratio=0.176
+p= 7 n= 5 d=  8403 Q=  16807 λ=  4202 main=4201.3 dev=0.7 √Q=129.6 ratio=0.006
+p= 7 n= 5 d= 16806 Q=  16807 λ= 16805 main=16805.0 dev=0.0 √Q=129.6 ratio=0.000
+p=11 n= 2 d=     3 Q=    121 λ=     2 main=0.1 dev=1.9 √Q=11.0 ratio=0.175
+p=11 n= 2 d=     4 Q=    121 λ=     0 main=0.1 dev=0.1 √Q=11.0 ratio=0.012
+p=11 n= 2 d=     5 Q=     11 λ=     3 main=2.3 dev=0.7 √Q=3.3 ratio=0.219
+p=11 n= 2 d=     6 Q=    121 λ=     2 main=0.3 dev=1.7 √Q=11.0 ratio=0.155
+p=11 n= 2 d=     8 Q=    121 λ=     0 main=0.5 dev=0.5 √Q=11.0 ratio=0.048
+p=11 n= 2 d=    10 Q=     11 λ=     9 main=9.1 dev=0.1 √Q=3.3 ratio=0.027
+p=11 n= 2 d=    12 Q=    121 λ=     2 main=1.2 dev=0.8 √Q=11.0 ratio=0.074
+p=11 n= 2 d=    15 Q=    121 λ=     5 main=1.9 dev=3.1 √Q=11.0 ratio=0.285
+p=11 n= 2 d=    20 Q=    121 λ=     9 main=3.3 dev=5.7 √Q=11.0 ratio=0.518
+p=11 n= 2 d=    24 Q=    121 λ=     2 main=4.8 dev=2.8 √Q=11.0 ratio=0.251
+p=11 n= 2 d=    30 Q=    121 λ=    11 main=7.4 dev=3.6 √Q=11.0 ratio=0.324
+p=11 n= 2 d=    40 Q=    121 λ=    15 main=13.2 dev=1.8 √Q=11.0 ratio=0.162
+p=11 n= 2 d=    60 Q=    121 λ=    29 main=29.8 dev=0.8 √Q=11.0 ratio=0.068
+p=11 n= 2 d=   120 Q=    121 λ=   119 main=119.0 dev=0.0 √Q=11.0 ratio=0.001
+p=11 n= 3 d=     5 Q=     11 λ=     3 main=2.3 dev=0.7 √Q=3.3 ratio=0.219
+p=11 n= 3 d=     7 Q=   1331 λ=     0 main=0.0 dev=0.0 √Q=36.5 ratio=0.001
+p=11 n= 3 d=    10 Q=     11 λ=     9 main=9.1 dev=0.1 √Q=3.3 ratio=0.027
+p=11 n= 3 d=    14 Q=   1331 λ=     0 main=0.1 dev=0.1 √Q=36.5 ratio=0.004
+p=11 n= 3 d=    19 Q=   1331 λ=     0 main=0.3 dev=0.3 √Q=36.5 ratio=0.007
+p=11 n= 3 d=    35 Q=   1331 λ=     3 main=0.9 dev=2.1 √Q=36.5 ratio=0.057
+p=11 n= 3 d=    38 Q=   1331 λ=     0 main=1.1 dev=1.1 √Q=36.5 ratio=0.030
+p=11 n= 3 d=    70 Q=   1331 λ=     9 main=3.7 dev=5.3 √Q=36.5 ratio=0.146
+p=11 n= 3 d=    95 Q=   1331 λ=    21 main=6.8 dev=14.2 √Q=36.5 ratio=0.390
+p=11 n= 3 d=   133 Q=   1331 λ=    24 main=13.3 dev=10.7 √Q=36.5 ratio=0.294
+p=11 n= 3 d=   190 Q=   1331 λ=    27 main=27.1 dev=0.1 √Q=36.5 ratio=0.003
+p=11 n= 3 d=   266 Q=   1331 λ=    60 main=53.2 dev=6.8 √Q=36.5 ratio=0.187
+p=11 n= 3 d=   665 Q=   1331 λ=   333 main=332.3 dev=0.7 √Q=36.5 ratio=0.021
+p=11 n= 3 d=  1330 Q=   1331 λ=  1329 main=1329.0 dev=0.0 √Q=36.5 ratio=0.000
+p=11 n= 4 d=     3 Q=    121 λ=     2 main=0.1 dev=1.9 √Q=11.0 ratio=0.175
+p=11 n= 4 d=     4 Q=    121 λ=     0 main=0.1 dev=0.1 √Q=11.0 ratio=0.012
+p=11 n= 4 d=     5 Q=     11 λ=     3 main=2.3 dev=0.7 √Q=3.3 ratio=0.219
+p=11 n= 4 d=     6 Q=    121 λ=     2 main=0.3 dev=1.7 √Q=11.0 ratio=0.155
+p=11 n= 4 d=     8 Q=    121 λ=     0 main=0.5 dev=0.5 √Q=11.0 ratio=0.048
+p=11 n= 4 d=    10 Q=     11 λ=     9 main=9.1 dev=0.1 √Q=3.3 ratio=0.027
+p=11 n= 4 d=    12 Q=    121 λ=     2 main=1.2 dev=0.8 √Q=11.0 ratio=0.074
+p=11 n= 4 d=    15 Q=    121 λ=     5 main=1.9 dev=3.1 √Q=11.0 ratio=0.285
+p=11 n= 4 d=    16 Q=  14641 λ=     0 main=0.0 dev=0.0 √Q=121.0 ratio=0.000
+p=11 n= 4 d=    20 Q=    121 λ=     9 main=3.3 dev=5.7 √Q=11.0 ratio=0.518
+p=11 n= 4 d=    24 Q=    121 λ=     2 main=4.8 dev=2.8 √Q=11.0 ratio=0.251
+p=11 n= 4 d=    30 Q=    121 λ=    11 main=7.4 dev=3.6 √Q=11.0 ratio=0.324
+p=11 n= 4 d=    40 Q=    121 λ=    15 main=13.2 dev=1.8 √Q=11.0 ratio=0.162
+p=11 n= 4 d=    48 Q=  14641 λ=     2 main=0.2 dev=1.8 √Q=121.0 ratio=0.015
+p=11 n= 4 d=    60 Q=    121 λ=    29 main=29.8 dev=0.8 √Q=11.0 ratio=0.068
+p=11 n= 4 d=    61 Q=  14641 λ=     0 main=0.3 dev=0.3 √Q=121.0 ratio=0.002
+p=11 n= 4 d=    80 Q=  14641 λ=    15 main=0.4 dev=14.6 √Q=121.0 ratio=0.120
+p=11 n= 4 d=   120 Q=    121 λ=   119 main=119.0 dev=0.0 √Q=11.0 ratio=0.001
+p=11 n= 4 d=   122 Q=  14641 λ=     0 main=1.0 dev=1.0 √Q=121.0 ratio=0.008
+p=11 n= 4 d=   183 Q=  14641 λ=     2 main=2.3 dev=0.3 √Q=121.0 ratio=0.002
+p=11 n= 4 d=   240 Q=  14641 λ=   119 main=3.9 dev=115.1 √Q=121.0 ratio=0.951
+p=11 n= 4 d=   244 Q=  14641 λ=     0 main=4.1 dev=4.1 √Q=121.0 ratio=0.034
+p=11 n= 4 d=   305 Q=  14641 λ=     3 main=6.4 dev=3.4 √Q=121.0 ratio=0.028
+p=11 n= 4 d=   366 Q=  14641 λ=    14 main=9.1 dev=4.9 √Q=121.0 ratio=0.040
+p=11 n= 4 d=   488 Q=  14641 λ=    12 main=16.3 dev=4.3 √Q=121.0 ratio=0.035
+p=11 n= 4 d=   610 Q=  14641 λ=     9 main=25.4 dev=16.4 √Q=121.0 ratio=0.136
+p=11 n= 4 d=   732 Q=  14641 λ=    50 main=36.6 dev=13.4 √Q=121.0 ratio=0.111
+p=11 n= 4 d=   915 Q=  14641 λ=    53 main=57.2 dev=4.2 √Q=121.0 ratio=0.035
+p=11 n= 4 d=   976 Q=  14641 λ=    60 main=65.1 dev=5.1 √Q=121.0 ratio=0.042
+p=11 n= 4 d=  1220 Q=  14641 λ=     9 main=101.7 dev=92.7 √Q=121.0 ratio=0.766
+p=11 n= 4 d=  1464 Q=  14641 λ=   122 main=146.4 dev=24.4 √Q=121.0 ratio=0.202
+p=11 n= 4 d=  1830 Q=  14641 λ=   203 main=228.7 dev=25.7 √Q=121.0 ratio=0.213
+p=11 n= 4 d=  2440 Q=  14641 λ=   339 main=406.6 dev=67.6 √Q=121.0 ratio=0.559
+p=11 n= 4 d=  2928 Q=  14641 λ=   614 main=585.6 dev=28.4 √Q=121.0 ratio=0.235
+p=11 n= 4 d=  3660 Q=  14641 λ=   869 main=914.9 dev=45.9 √Q=121.0 ratio=0.380
+p=11 n= 4 d=  4880 Q=  14641 λ=  1599 main=1626.6 dev=27.6 √Q=121.0 ratio=0.228
+p=11 n= 4 d=  7320 Q=  14641 λ=  3659 main=3659.8 dev=0.8 √Q=121.0 ratio=0.006
+p=11 n= 4 d= 14640 Q=  14641 λ= 14639 main=14639.0 dev=0.0 √Q=121.0 ratio=0.000
+p=13 n= 2 d=     3 Q=     13 λ=     2 main=0.7 dev=1.3 √Q=3.6 ratio=0.363
+p=13 n= 2 d=     4 Q=     13 λ=     0 main=1.2 dev=1.2 √Q=3.6 ratio=0.341
+p=13 n= 2 d=     6 Q=     13 λ=     2 main=2.8 dev=0.8 √Q=3.6 ratio=0.213
+p=13 n= 2 d=     7 Q=    169 λ=     0 main=0.3 dev=0.3 √Q=13.0 ratio=0.022
+p=13 n= 2 d=     8 Q=    169 λ=     0 main=0.4 dev=0.4 √Q=13.0 ratio=0.029
+p=13 n= 2 d=    12 Q=     13 λ=    11 main=11.1 dev=0.1 √Q=3.6 ratio=0.021
+p=13 n= 2 d=    14 Q=    169 λ=     0 main=1.2 dev=1.2 √Q=13.0 ratio=0.089
+p=13 n= 2 d=    21 Q=    169 λ=     8 main=2.6 dev=5.4 √Q=13.0 ratio=0.415
+p=13 n= 2 d=    24 Q=    169 λ=    11 main=3.4 dev=7.6 √Q=13.0 ratio=0.584
+p=13 n= 2 d=    28 Q=    169 λ=     6 main=4.6 dev=1.4 √Q=13.0 ratio=0.105
+p=13 n= 2 d=    42 Q=    169 λ=     8 main=10.4 dev=2.4 √Q=13.0 ratio=0.188
+p=13 n= 2 d=    56 Q=    169 λ=    18 main=18.6 dev=0.6 √Q=13.0 ratio=0.043
+p=13 n= 2 d=    84 Q=    169 λ=    41 main=41.8 dev=0.8 √Q=13.0 ratio=0.058
+p=13 n= 2 d=   168 Q=    169 λ=   167 main=167.0 dev=0.0 √Q=13.0 ratio=0.000
+p=13 n= 3 d=     3 Q=     13 λ=     2 main=0.7 dev=1.3 √Q=3.6 ratio=0.363
+p=13 n= 3 d=     4 Q=     13 λ=     0 main=1.2 dev=1.2 √Q=3.6 ratio=0.341
+p=13 n= 3 d=     6 Q=     13 λ=     2 main=2.8 dev=0.8 √Q=3.6 ratio=0.213
+p=13 n= 3 d=     9 Q=   2197 λ=     2 main=0.0 dev=2.0 √Q=46.9 ratio=0.042
+p=13 n= 3 d=    12 Q=     13 λ=    11 main=11.1 dev=0.1 √Q=3.6 ratio=0.021
+p=13 n= 3 d=    18 Q=   2197 λ=     2 main=0.1 dev=1.9 √Q=46.9 ratio=0.040
+p=13 n= 3 d=    36 Q=   2197 λ=    11 main=0.6 dev=10.4 √Q=46.9 ratio=0.222
+p=13 n= 3 d=    61 Q=   2197 λ=     6 main=1.7 dev=4.3 √Q=46.9 ratio=0.092
+p=13 n= 3 d=   122 Q=   2197 λ=     6 main=6.8 dev=0.8 √Q=46.9 ratio=0.017
+p=13 n= 3 d=   183 Q=   2197 λ=    26 main=15.2 dev=10.8 √Q=46.9 ratio=0.229
+p=13 n= 3 d=   244 Q=   2197 λ=     6 main=27.1 dev=21.1 √Q=46.9 ratio=0.450
+p=13 n= 3 d=   366 Q=   2197 λ=    80 main=61.0 dev=19.0 √Q=46.9 ratio=0.406
+p=13 n= 3 d=   549 Q=   2197 λ=   134 main=137.2 dev=3.2 √Q=46.9 ratio=0.068
+p=13 n= 3 d=   732 Q=   2197 λ=   251 main=243.9 dev=7.1 √Q=46.9 ratio=0.152
+p=13 n= 3 d=  1098 Q=   2197 λ=   548 main=548.8 dev=0.8 √Q=46.9 ratio=0.016
+p=13 n= 3 d=  2196 Q=   2197 λ=  2195 main=2195.0 dev=0.0 √Q=46.9 ratio=0.000
+p=13 n= 4 d=     3 Q=     13 λ=     2 main=0.7 dev=1.3 √Q=3.6 ratio=0.363
+p=13 n= 4 d=     4 Q=     13 λ=     0 main=1.2 dev=1.2 √Q=3.6 ratio=0.341
+p=13 n= 4 d=     5 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=     6 Q=     13 λ=     2 main=2.8 dev=0.8 √Q=3.6 ratio=0.213
+p=13 n= 4 d=     7 Q=    169 λ=     0 main=0.3 dev=0.3 √Q=13.0 ratio=0.022
+p=13 n= 4 d=     8 Q=    169 λ=     0 main=0.4 dev=0.4 √Q=13.0 ratio=0.029
+p=13 n= 4 d=    10 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    12 Q=     13 λ=    11 main=11.1 dev=0.1 √Q=3.6 ratio=0.021
+p=13 n= 4 d=    14 Q=    169 λ=     0 main=1.2 dev=1.2 √Q=13.0 ratio=0.089
+p=13 n= 4 d=    15 Q=  28561 λ=     2 main=0.0 dev=2.0 √Q=169.0 ratio=0.012
+p=13 n= 4 d=    16 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    17 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    20 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    21 Q=    169 λ=     8 main=2.6 dev=5.4 √Q=13.0 ratio=0.415
+p=13 n= 4 d=    24 Q=    169 λ=    11 main=3.4 dev=7.6 √Q=13.0 ratio=0.584
+p=13 n= 4 d=    28 Q=    169 λ=     6 main=4.6 dev=1.4 √Q=13.0 ratio=0.105
+p=13 n= 4 d=    30 Q=  28561 λ=     2 main=0.0 dev=2.0 √Q=169.0 ratio=0.012
+p=13 n= 4 d=    34 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    35 Q=  28561 λ=     0 main=0.0 dev=0.0 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    40 Q=  28561 λ=     0 main=0.1 dev=0.1 √Q=169.0 ratio=0.000
+p=13 n= 4 d=    42 Q=    169 λ=     8 main=10.4 dev=2.4 √Q=13.0 ratio=0.188
+p=13 n= 4 d=    48 Q=  28561 λ=    11 main=0.1 dev=10.9 √Q=169.0 ratio=0.065
+p=13 n= 4 d=    51 Q=  28561 λ=     2 main=0.1 dev=1.9 √Q=169.0 ratio=0.011
+p=13 n= 4 d=    56 Q=    169 λ=    18 main=18.6 dev=0.6 √Q=13.0 ratio=0.043
+p=13 n= 4 d=    60 Q=  28561 λ=    11 main=0.1 dev=10.9 √Q=169.0 ratio=0.064
+p=13 n= 4 d=    68 Q=  28561 λ=     0 main=0.2 dev=0.2 √Q=169.0 ratio=0.001
+p=13 n= 4 d=    70 Q=  28561 λ=     0 main=0.2 dev=0.2 √Q=169.0 ratio=0.001
+p=13 n= 4 d=    80 Q=  28561 λ=     0 main=0.2 dev=0.2 √Q=169.0 ratio=0.001
+p=13 n= 4 d=    84 Q=    169 λ=    41 main=41.8 dev=0.8 √Q=13.0 ratio=0.058
+p=13 n= 4 d=    85 Q=  28561 λ=     0 main=0.3 dev=0.3 √Q=169.0 ratio=0.001
+p=13 n= 4 d=   102 Q=  28561 λ=     2 main=0.4 dev=1.6 √Q=169.0 ratio=0.010
+p=13 n= 4 d=   105 Q=  28561 λ=     8 main=0.4 dev=7.6 √Q=169.0 ratio=0.045
+p=13 n= 4 d=   112 Q=  28561 λ=    18 main=0.4 dev=17.6 √Q=169.0 ratio=0.104
+p=13 n= 4 d=   119 Q=  28561 λ=     0 main=0.5 dev=0.5 √Q=169.0 ratio=0.003
+p=13 n= 4 d=   120 Q=  28561 λ=    11 main=0.5 dev=10.5 √Q=169.0 ratio=0.062
+p=13 n= 4 d=   136 Q=  28561 λ=     0 main=0.6 dev=0.6 √Q=169.0 ratio=0.004
+p=13 n= 4 d=   140 Q=  28561 λ=    18 main=0.7 dev=17.3 √Q=169.0 ratio=0.102
+p=13 n= 4 d=   168 Q=    169 λ=   167 main=167.0 dev=0.0 √Q=13.0 ratio=0.000
+p=13 n= 4 d=   170 Q=  28561 λ=     0 main=1.0 dev=1.0 √Q=169.0 ratio=0.006
+p=13 n= 4 d=   204 Q=  28561 λ=    11 main=1.5 dev=9.5 √Q=169.0 ratio=0.056
+p=13 n= 4 d=   210 Q=  28561 λ=     8 main=1.5 dev=6.5 √Q=169.0 ratio=0.038
+p=13 n= 4 d=   238 Q=  28561 λ=     0 main=2.0 dev=2.0 √Q=169.0 ratio=0.012
+p=13 n= 4 d=   240 Q=  28561 λ=    11 main=2.0 dev=9.0 √Q=169.0 ratio=0.053
+p=13 n= 4 d=   255 Q=  28561 λ=     2 main=2.3 dev=0.3 √Q=169.0 ratio=0.002
+p=13 n= 4 d=   272 Q=  28561 λ=     0 main=2.6 dev=2.6 √Q=169.0 ratio=0.015
+p=13 n= 4 d=   280 Q=  28561 λ=    30 main=2.7 dev=27.3 √Q=169.0 ratio=0.161
+p=13 n= 4 d=   336 Q=  28561 λ=   167 main=4.0 dev=163.0 √Q=169.0 ratio=0.965
+p=13 n= 4 d=   340 Q=  28561 λ=     0 main=4.0 dev=4.0 √Q=169.0 ratio=0.024
+p=13 n= 4 d=   357 Q=  28561 λ=     8 main=4.5 dev=3.5 √Q=169.0 ratio=0.021
+p=13 n= 4 d=   408 Q=  28561 λ=    11 main=5.8 dev=5.2 √Q=169.0 ratio=0.031
+p=13 n= 4 d=   420 Q=  28561 λ=    53 main=6.2 dev=46.8 √Q=169.0 ratio=0.277
+p=13 n= 4 d=   476 Q=  28561 λ=    30 main=7.9 dev=22.1 √Q=169.0 ratio=0.131
+p=13 n= 4 d=   510 Q=  28561 λ=     2 main=9.1 dev=7.1 √Q=169.0 ratio=0.042
+p=13 n= 4 d=   560 Q=  28561 λ=    66 main=11.0 dev=55.0 √Q=169.0 ratio=0.326
+p=13 n= 4 d=   595 Q=  28561 λ=    12 main=12.4 dev=0.4 √Q=169.0 ratio=0.002
+p=13 n= 4 d=   680 Q=  28561 λ=     0 main=16.2 dev=16.2 √Q=169.0 ratio=0.096
+p=13 n= 4 d=   714 Q=  28561 λ=    20 main=17.8 dev=2.2 √Q=169.0 ratio=0.013
+p=13 n= 4 d=   816 Q=  28561 λ=    23 main=23.3 dev=0.3 √Q=169.0 ratio=0.002
+p=13 n= 4 d=   840 Q=  28561 λ=   179 main=24.7 dev=154.3 √Q=169.0 ratio=0.913
+p=13 n= 4 d=   952 Q=  28561 λ=    42 main=31.7 dev=10.3 √Q=169.0 ratio=0.061
+p=13 n= 4 d=  1020 Q=  28561 λ=    11 main=36.4 dev=25.4 √Q=169.0 ratio=0.150
+p=13 n= 4 d=  1190 Q=  28561 λ=    24 main=49.6 dev=25.6 √Q=169.0 ratio=0.151
+p=13 n= 4 d=  1360 Q=  28561 λ=    24 main=64.8 dev=40.8 √Q=169.0 ratio=0.241
+p=13 n= 4 d=  1428 Q=  28561 λ=   137 main=71.4 dev=65.6 √Q=169.0 ratio=0.388
+p=13 n= 4 d=  1680 Q=  28561 λ=   239 main=98.8 dev=140.2 √Q=169.0 ratio=0.829
+p=13 n= 4 d=  1785 Q=  28561 λ=   176 main=111.6 dev=64.4 √Q=169.0 ratio=0.381
+p=13 n= 4 d=  1904 Q=  28561 λ=   174 main=126.9 dev=47.1 √Q=169.0 ratio=0.279
+p=13 n= 4 d=  2040 Q=  28561 λ=    11 main=145.7 dev=134.7 √Q=169.0 ratio=0.797
+p=13 n= 4 d=  2380 Q=  28561 λ=   222 main=198.3 dev=23.7 √Q=169.0 ratio=0.140
+p=13 n= 4 d=  2856 Q=  28561 λ=   407 main=285.6 dev=121.4 √Q=169.0 ratio=0.718
+p=13 n= 4 d=  3570 Q=  28561 λ=   416 main=446.2 dev=30.2 √Q=169.0 ratio=0.179
+p=13 n= 4 d=  4080 Q=  28561 λ=   479 main=582.8 dev=103.8 √Q=169.0 ratio=0.614
+p=13 n= 4 d=  4760 Q=  28561 λ=   762 main=793.3 dev=31.3 √Q=169.0 ratio=0.185
+p=13 n= 4 d=  5712 Q=  28561 λ=  1223 main=1142.4 dev=80.6 √Q=169.0 ratio=0.477
+p=13 n= 4 d=  7140 Q=  28561 λ=  1829 main=1784.9 dev=44.1 √Q=169.0 ratio=0.261
+p=13 n= 4 d=  9520 Q=  28561 λ=  3210 main=3173.2 dev=36.8 √Q=169.0 ratio=0.218
+p=13 n= 4 d= 14280 Q=  28561 λ=  7139 main=7139.8 dev=0.8 √Q=169.0 ratio=0.004
+p=13 n= 4 d= 28560 Q=  28561 λ= 28559 main=28559.0 dev=0.0 √Q=169.0 ratio=0.000
+STATS: {'cases': 439, 'dev_gt_sqrtQ': 0, 'dev_gt_2sqrtQ': 0, 'maxratio': 0.9647763149525909, 'maxcase': (13, 4, 28561, 336, 4, 28561, 167, 3.9528027730121496, 163.0, 169.0), 'mean_absdev': 11.070247058065641, 'sum_absdev': 4859.838458490816}
