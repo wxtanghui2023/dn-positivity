@@ -1,0 +1,4 @@
+|GL(4,2)| = 20160
+canonical of rep1: 0x35e  rep2: 0x37c
+17 file masks: n=17 distinct=17 orbit tally={1: 8, 2: 9} anomalies=[]
+28 gen_asets masks: n=28 distinct=28 orbit tally={1: 8, 2: 9, 0: 11} anomalies=[('0xfe00', 7, False), ('0x7e80', 7, False), ('0x7cc0', 7, False), ('0xd660', 7, False), ('0xf608', 7, False), ('0xd628', 7, False), ('0xe868', 7, False), ('0x7868', 7, False), ('0x6668', 7, False), ('0x9668', 7, False), ('0x5668', 7, False)]

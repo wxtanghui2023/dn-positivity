@@ -1,0 +1,7 @@
+rest size: 11 C(11,4)= 330
+|S4| = 24
+A) 330 S4-candidates -> lex-min representatives = 28 (A-masks)
+B) among them, |A|=7 & 1-saturating = 17
+C) gen_asets.c 4 7 output set == my computed A-mask set : True (gen 28 mine 28 )
+D) {sat among gen output} == {17 file masks} : True (sat 17 file 17 )
+E) non-saturating among the 28 : ['0x5668', '0x6668', '0x7868', '0x7cc0', '0x7e80', '0x9668', '0xd628', '0xd660', '0xe868', '0xf608', '0xfe00']
