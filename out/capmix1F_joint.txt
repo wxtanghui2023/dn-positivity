@@ -1,0 +1,205 @@
+p= 3 q=    9 d=    4 cap=Y   mu=None J=[] witness=None
+p= 3 q=    9 d=    8 cap=N   mu=None J=[] witness=None
+p= 3 q=   27 d=   13 cap=N   mu=None J=[] witness=None
+p= 3 q=   27 d=   26 cap=N   mu=None J=[] witness=None
+p= 3 q=   81 d=    4 cap=Y   mu=None J=[] witness=None
+p= 3 q=   81 d=    5 cap=Y   mu=1    J=[(2, 4, 1), (3, 2, 1)] witness=(2,)
+p= 3 q=   81 d=    8 cap=N   mu=None J=[] witness=None
+p= 3 q=   81 d=   10 cap=Y   mu=None J=[(3, 7, 2)] witness=None
+p= 3 q=   81 d=   16 cap=N   mu=None J=[(3, 11, 8)] witness=None
+p= 3 q=   81 d=   20 cap=Y   mu=None J=[(3, 7, 2)] witness=None
+p= 3 q=   81 d=   40 cap=N   mu=None J=[] witness=None
+p= 3 q=   81 d=   80 cap=N   mu=None J=[] witness=None
+p= 3 q=  243 d=   11 cap=Y   mu=1    J=[(3, 5, 1), (4, 4, 1)] witness=(3,)
+p= 3 q=  243 d=   22 cap=Y   mu=None J=[(3, 5, 2), (4, 15, 2)] witness=None
+p= 3 q=  243 d=  121 cap=N   mu=None J=[] witness=None
+p= 3 q=  243 d=  242 cap=N   mu=None J=[] witness=None
+p= 3 q=  729 d=    4 cap=Y   mu=None J=[] witness=None
+p= 3 q=  729 d=    7 cap=Y   mu=1    J=[(2, 2, 1), (3, 6, 1), (4, 4, 1), (5, 5, 1)] witness=(2,)
+p= 3 q=  729 d=    8 cap=N   mu=None J=[] witness=None
+p= 3 q=  729 d=   13 cap=N   mu=None J=[] witness=None
+p= 3 q=  729 d=   14 cap=Y   mu=None J=[(3, 13, 2), (4, 11, 2), (5, 5, 2)] witness=None
+p= 3 q=  729 d=   26 cap=N   mu=None J=[] witness=None
+p= 3 q=  729 d=   28 cap=Y   mu=None J=[(4, 25, 4), (5, 19, 4)] witness=None
+p= 3 q=  729 d=   52 cap=N   mu=None J=[(4, 29, 26), (5, 35, 28)] witness=None
+p= 3 q=  729 d=   56 cap=N   mu=None J=[(4, 25, 8), (5, 19, 8)] witness=None
+p= 3 q=  729 d=   91 cap=N   mu=None J=[(5, 61, 31)] witness=None
+p= 3 q=  729 d=  104 cap=N   mu=None J=[(5, 35, 32)] witness=None
+p= 3 q=  729 d=  182 cap=N   mu=None J=[(5, 61, 56)] witness=None
+p= 3 q=  729 d=  364 cap=N   mu=None J=[] witness=None
+p= 3 q=  729 d=  728 cap=N   mu=None J=[] witness=None
+p= 3 q= 2187 d= 1093 cap=N   mu=None J=[] witness=None
+p= 5 q=   25 d=    3 cap=N   mu=None J=[(1, 2, 2)] witness=None
+p= 5 q=   25 d=    4 cap=Y   mu=None J=[] witness=None
+p= 5 q=   25 d=    6 cap=N   mu=None J=[] witness=None
+p= 5 q=   25 d=    8 cap=Y   mu=None J=[] witness=None
+p= 5 q=   25 d=   12 cap=N   mu=None J=[] witness=None
+p= 5 q=   25 d=   24 cap=N   mu=None J=[] witness=None
+p= 5 q=  125 d=    4 cap=Y   mu=None J=[] witness=None
+p= 5 q=  125 d=   31 cap=N   mu=None J=[] witness=None
+p= 5 q=  125 d=   62 cap=N   mu=None J=[] witness=None
+p= 5 q=  125 d=  124 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=    3 cap=N   mu=None J=[(1, 2, 2)] witness=None
+p= 5 q=  625 d=    4 cap=Y   mu=None J=[] witness=None
+p= 5 q=  625 d=    6 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=    8 cap=Y   mu=None J=[] witness=None
+p= 5 q=  625 d=   12 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=   13 cap=Y   mu=None J=[(2, 12, 0), (3, 8, 0)] witness=None
+p= 5 q=  625 d=   16 cap=Y   mu=None J=[(2, 9, 4), (3, 13, 4)] witness=None
+p= 5 q=  625 d=   24 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=   26 cap=Y   mu=None J=[(3, 21, 2)] witness=None
+p= 5 q=  625 d=   39 cap=N   mu=None J=[(3, 8, 2)] witness=None
+p= 5 q=  625 d=   48 cap=N   mu=None J=[(3, 29, 24)] witness=None
+p= 5 q=  625 d=   52 cap=Y   mu=None J=[(3, 21, 4)] witness=None
+p= 5 q=  625 d=   78 cap=N   mu=None J=[(3, 47, 3)] witness=None
+p= 5 q=  625 d=  104 cap=Y   mu=None J=[(3, 21, 4)] witness=None
+p= 5 q=  625 d=  156 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=  208 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=  312 cap=N   mu=None J=[] witness=None
+p= 5 q=  625 d=  624 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=    3 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=    4 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p= 7 q=   49 d=    6 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=    8 cap=Y   mu=None J=[] witness=None
+p= 7 q=   49 d=   12 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=   16 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=   24 cap=N   mu=None J=[] witness=None
+p= 7 q=   49 d=   48 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=    3 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=    6 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=    9 cap=N   mu=None J=[(2, 4, 2)] witness=None
+p= 7 q=  343 d=   18 cap=N   mu=None J=[(2, 13, 6)] witness=None
+p= 7 q=  343 d=   19 cap=N   mu=None J=[(2, 11, 6)] witness=None
+p= 7 q=  343 d=   38 cap=N   mu=None J=[(2, 11, 7)] witness=None
+p= 7 q=  343 d=   57 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=  114 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=  171 cap=N   mu=None J=[] witness=None
+p= 7 q=  343 d=  342 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=    3 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=    4 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p= 7 q= 2401 d=    5 cap=Y   mu=None J=[(1, 2, 0), (2, 4, 0), (3, 3, 0)] witness=None
+p= 7 q= 2401 d=    6 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=    8 cap=Y   mu=None J=[] witness=None
+p= 7 q= 2401 d=   10 cap=Y   mu=None J=[(2, 9, 1), (3, 3, 1)] witness=None
+p= 7 q= 2401 d=   12 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=   15 cap=N   mu=None J=[(2, 4, 2), (3, 13, 3)] witness=None
+p= 7 q= 2401 d=   16 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=   20 cap=Y   mu=None J=[(2, 9, 1), (3, 3, 1)] witness=None
+p= 7 q= 2401 d=   24 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=   25 cap=Y   mu=None J=[(2, 24, 0), (3, 18, 0)] witness=None
+p= 7 q= 2401 d=   30 cap=N   mu=None J=[(2, 19, 6), (3, 13, 6)] witness=None
+p= 7 q= 2401 d=   32 cap=N   mu=None J=[(2, 17, 7), (3, 23, 7)] witness=None
+p= 7 q= 2401 d=   40 cap=Y   mu=None J=[(2, 9, 1), (3, 23, 7)] witness=None
+p= 7 q= 2401 d=   48 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=   50 cap=Y   mu=None J=[(3, 43, 2)] witness=None
+p= 7 q= 2401 d=   60 cap=N   mu=None J=[(3, 43, 6)] witness=None
+p= 7 q= 2401 d=   75 cap=N   mu=None J=[(3, 43, 3)] witness=None
+p= 7 q= 2401 d=   80 cap=N   mu=None J=[(3, 23, 19)] witness=None
+p= 7 q= 2401 d=   96 cap=N   mu=None J=[(3, 55, 48)] witness=None
+p= 7 q= 2401 d=  100 cap=Y   mu=None J=[(3, 43, 2)] witness=None
+p= 7 q= 2401 d=  120 cap=N   mu=None J=[(3, 103, 28)] witness=None
+p= 7 q= 2401 d=  150 cap=N   mu=None J=[(3, 43, 6)] witness=None
+p= 7 q= 2401 d=  160 cap=N   mu=None J=[(3, 23, 19)] witness=None
+p= 7 q= 2401 d=  200 cap=N   mu=None J=[(3, 143, 13)] witness=None
+p= 7 q= 2401 d=  240 cap=N   mu=None J=[(3, 103, 60)] witness=None
+p= 7 q= 2401 d=  300 cap=N   mu=None J=[(3, 43, 6)] witness=None
+p= 7 q= 2401 d=  400 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=  480 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=  600 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d=  800 cap=N   mu=None J=[] witness=None
+p= 7 q= 2401 d= 1200 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=    3 cap=N   mu=None J=[(1, 2, 2)] witness=None
+p=11 q=  121 d=    4 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p=11 q=  121 d=    5 cap=Y   mu=None J=[] witness=None
+p=11 q=  121 d=    6 cap=N   mu=None J=[(1, 5, 3)] witness=None
+p=11 q=  121 d=    8 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p=11 q=  121 d=   10 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   12 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   15 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   20 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   24 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   30 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   40 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=   60 cap=N   mu=None J=[] witness=None
+p=11 q=  121 d=  120 cap=N   mu=None J=[] witness=None
+p=11 q= 1331 d=    5 cap=Y   mu=None J=[] witness=None
+p=11 q= 1331 d=    7 cap=Y   mu=None J=[(1, 4, 0), (2, 2, 0)] witness=None
+p=11 q= 1331 d=   10 cap=N   mu=None J=[] witness=None
+p=11 q= 1331 d=   14 cap=Y   mu=None J=[(2, 9, 1)] witness=None
+p=11 q= 1331 d=   19 cap=Y   mu=None J=[(2, 7, 0)] witness=None
+p=11 q= 1331 d=   35 cap=Y   mu=None J=[(2, 16, 3)] witness=None
+p=11 q= 1331 d=   38 cap=Y   mu=None J=[(2, 7, 1)] witness=None
+p=11 q= 1331 d=   70 cap=N   mu=None J=[(2, 51, 10)] witness=None
+p=11 q= 1331 d=   95 cap=N   mu=None J=[(2, 26, 21)] witness=None
+p=11 q= 1331 d=  133 cap=N   mu=None J=[] witness=None
+p=11 q= 1331 d=  190 cap=N   mu=None J=[] witness=None
+p=11 q= 1331 d=  266 cap=N   mu=None J=[] witness=None
+p=11 q= 1331 d=  665 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=    3 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=    4 cap=Y   mu=None J=[] witness=None
+p=13 q=  169 d=    6 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=    7 cap=Y   mu=None J=[(1, 6, 0)] witness=None
+p=13 q=  169 d=    8 cap=Y   mu=None J=[(1, 5, 1)] witness=None
+p=13 q=  169 d=   12 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   14 cap=Y   mu=None J=[] witness=None
+p=13 q=  169 d=   21 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   24 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   28 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   42 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   56 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=   84 cap=N   mu=None J=[] witness=None
+p=13 q=  169 d=  168 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=    3 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=    4 cap=Y   mu=None J=[] witness=None
+p=13 q= 2197 d=    6 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=    9 cap=N   mu=None J=[(1, 4, 2), (2, 7, 2)] witness=None
+p=13 q= 2197 d=   12 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=   18 cap=N   mu=None J=[(2, 7, 3)] witness=None
+p=13 q= 2197 d=   36 cap=N   mu=None J=[(2, 25, 12)] witness=None
+p=13 q= 2197 d=   61 cap=N   mu=None J=[(2, 47, 6)] witness=None
+p=13 q= 2197 d=  122 cap=N   mu=None J=[(2, 47, 7)] witness=None
+p=13 q= 2197 d=  183 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=  244 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=  366 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=  549 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d=  732 cap=N   mu=None J=[] witness=None
+p=13 q= 2197 d= 1098 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=    3 cap=N   mu=None J=[(1, 2, 2)] witness=None
+p=17 q=  289 d=    4 cap=Y   mu=None J=[] witness=None
+p=17 q=  289 d=    6 cap=N   mu=None J=[(1, 5, 3)] witness=None
+p=17 q=  289 d=    8 cap=Y   mu=None J=[] witness=None
+p=17 q=  289 d=    9 cap=N   mu=None J=[(1, 8, 2)] witness=None
+p=17 q=  289 d=   12 cap=N   mu=None J=[(1, 5, 3)] witness=None
+p=17 q=  289 d=   16 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   18 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   24 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   32 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   36 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   48 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   72 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=   96 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=  144 cap=N   mu=None J=[] witness=None
+p=17 q=  289 d=  288 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=    3 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=    4 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p=19 q=  361 d=    5 cap=Y   mu=None J=[(1, 4, 0)] witness=None
+p=19 q=  361 d=    6 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=    8 cap=Y   mu=None J=[(1, 3, 1)] witness=None
+p=19 q=  361 d=    9 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   10 cap=Y   mu=None J=[(1, 9, 1)] witness=None
+p=19 q=  361 d=   12 cap=N   mu=None J=[(1, 7, 3)] witness=None
+p=19 q=  361 d=   15 cap=N   mu=None J=[(1, 4, 2)] witness=None
+p=19 q=  361 d=   18 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   20 cap=Y   mu=None J=[] witness=None
+p=19 q=  361 d=   24 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   30 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   36 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   40 cap=Y   mu=None J=[] witness=None
+p=19 q=  361 d=   45 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   60 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   72 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=   90 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=  120 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=  180 cap=N   mu=None J=[] witness=None
+p=19 q=  361 d=  360 cap=N   mu=None J=[] witness=None
+STATS: {'case': 204, 'mu1': 3, 'mu2': 0, 'mu3': 0, 'none': 75, 'alldegen': 126, 'Qzero_ok': 458, 'Qzero_bad': 0, 'jointPASS': 3, 'FP': 0, 'cap': 54, 'cert_cap': 3}
