@@ -1,0 +1,102 @@
+ρ>1/2: p= 2 n= 2 q=     4 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 3 q=     8 d=    7 λ=    6 ρ=0.8571 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 4 q=    16 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 4 q=    16 d=   15 λ=   14 ρ=0.9333 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 5 q=    32 d=   31 λ=   30 ρ=0.9677 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 6 q=    64 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 6 q=    64 d=    7 λ=    6 ρ=0.8571 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 6 q=    64 d=   63 λ=   62 ρ=0.9841 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 7 q=   128 d=  127 λ=  126 ρ=0.9921 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 8 q=   256 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 8 q=   256 d=   15 λ=   14 ρ=0.9333 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 8 q=   256 d=  255 λ=  254 ρ=0.9961 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 9 q=   512 d=    7 λ=    6 ρ=0.8571 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n= 9 q=   512 d=  511 λ=  510 ρ=0.9980 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=10 q=  1024 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=10 q=  1024 d=   31 λ=   30 ρ=0.9677 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=10 q=  1024 d= 1023 λ= 1022 ρ=0.9990 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=11 q=  2048 d= 2047 λ= 2046 ρ=0.9995 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 2 n=12 q=  4096 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=12 q=  4096 d=    7 λ=    6 ρ=0.8571 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=12 q=  4096 d=   15 λ=   14 ρ=0.9333 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=12 q=  4096 d=   63 λ=   62 ρ=0.9841 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=12 q=  4096 d= 4095 λ= 4094 ρ=0.9998 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 2 n=13 q=  8192 d= 8191 λ= 8190 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 2 n=14 q= 16384 d=    3 λ=    2 ρ=0.6667 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=14 q= 16384 d=  127 λ=  126 ρ=0.9921 subfield=True AA\{1}⊆A=True
+ρ>1/2: p= 2 n=14 q= 16384 d=16383 λ=16382 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 3 n= 2 q=     9 d=    8 λ=    7 ρ=0.8750 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 3 q=    27 d=   13 λ=    7 ρ=0.5385 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 3 q=    27 d=   26 λ=   25 ρ=0.9615 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 4 q=    81 d=    8 λ=    7 ρ=0.8750 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 4 q=    81 d=   80 λ=   79 ρ=0.9875 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 5 q=   243 d=  121 λ=   61 ρ=0.5041 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 5 q=   243 d=  242 λ=  241 ρ=0.9959 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 6 q=   729 d=    8 λ=    7 ρ=0.8750 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 6 q=   729 d=   13 λ=    7 ρ=0.5385 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 6 q=   729 d=   26 λ=   25 ρ=0.9615 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 6 q=   729 d=  728 λ=  727 ρ=0.9986 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 7 q=  2187 d= 1093 λ=  547 ρ=0.5005 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 7 q=  2187 d= 2186 λ= 2185 ρ=0.9995 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 3 n= 8 q=  6561 d=    8 λ=    7 ρ=0.8750 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 8 q=  6561 d=   80 λ=   79 ρ=0.9875 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 8 q=  6561 d= 6560 λ= 6559 ρ=0.9998 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 3 n= 9 q= 19683 d=   13 λ=    7 ρ=0.5385 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 9 q= 19683 d=   26 λ=   25 ρ=0.9615 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 3 n= 9 q= 19683 d= 9841 λ= 4921 ρ=0.5001 subfield=False AA\{1}⊆A=None
+ρ>1/2: p= 3 n= 9 q= 19683 d=19682 λ=19681 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 5 n= 2 q=    25 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 5 n= 2 q=    25 d=    4 λ=    3 ρ=0.7500 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 2 q=    25 d=   24 λ=   23 ρ=0.9583 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 3 q=   125 d=    4 λ=    3 ρ=0.7500 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 3 q=   125 d=  124 λ=  123 ρ=0.9919 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 4 q=   625 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 5 n= 4 q=   625 d=    4 λ=    3 ρ=0.7500 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 4 q=   625 d=   24 λ=   23 ρ=0.9583 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 4 q=   625 d=  624 λ=  623 ρ=0.9984 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 5 q=  3125 d=    4 λ=    3 ρ=0.7500 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 5 q=  3125 d= 3124 λ= 3123 ρ=0.9997 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 5 n= 6 q= 15625 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 5 n= 6 q= 15625 d=    4 λ=    3 ρ=0.7500 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 6 q= 15625 d=   24 λ=   23 ρ=0.9583 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 6 q= 15625 d=  124 λ=  123 ρ=0.9919 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 5 n= 6 q= 15625 d=15624 λ=15623 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 7 n= 2 q=    49 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 7 n= 2 q=    49 d=    6 λ=    5 ρ=0.8333 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 2 q=    49 d=   48 λ=   47 ρ=0.9792 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 3 q=   343 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 7 n= 3 q=   343 d=    6 λ=    5 ρ=0.8333 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 3 q=   343 d=  171 λ=   86 ρ=0.5029 subfield=False AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 3 q=   343 d=  342 λ=  341 ρ=0.9971 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 4 q=  2401 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 7 n= 4 q=  2401 d=    6 λ=    5 ρ=0.8333 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 4 q=  2401 d=   48 λ=   47 ρ=0.9792 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 4 q=  2401 d= 2400 λ= 2399 ρ=0.9996 subfield=True AA\{1}⊆A=None
+ρ>1/2: p= 7 n= 5 q= 16807 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p= 7 n= 5 q= 16807 d=    6 λ=    5 ρ=0.8333 subfield=True AA\{1}⊆A=False
+ρ>1/2: p= 7 n= 5 q= 16807 d= 8403 λ= 4202 ρ=0.5001 subfield=False AA\{1}⊆A=None
+ρ>1/2: p= 7 n= 5 q= 16807 d=16806 λ=16805 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p=11 n= 2 q=   121 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p=11 n= 2 q=   121 d=    5 λ=    3 ρ=0.6000 subfield=False AA\{1}⊆A=False
+ρ>1/2: p=11 n= 2 q=   121 d=   10 λ=    9 ρ=0.9000 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 2 q=   121 d=  120 λ=  119 ρ=0.9917 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 3 q=  1331 d=    5 λ=    3 ρ=0.6000 subfield=False AA\{1}⊆A=False
+ρ>1/2: p=11 n= 3 q=  1331 d=   10 λ=    9 ρ=0.9000 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 3 q=  1331 d=  665 λ=  333 ρ=0.5008 subfield=False AA\{1}⊆A=False
+ρ>1/2: p=11 n= 3 q=  1331 d= 1330 λ= 1329 ρ=0.9992 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 4 q= 14641 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p=11 n= 4 q= 14641 d=    5 λ=    3 ρ=0.6000 subfield=False AA\{1}⊆A=False
+ρ>1/2: p=11 n= 4 q= 14641 d=   10 λ=    9 ρ=0.9000 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 4 q= 14641 d=  120 λ=  119 ρ=0.9917 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=11 n= 4 q= 14641 d=14640 λ=14639 ρ=0.9999 subfield=True AA\{1}⊆A=None
+ρ>1/2: p=13 n= 2 q=   169 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p=13 n= 2 q=   169 d=   12 λ=   11 ρ=0.9167 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=13 n= 2 q=   169 d=  168 λ=  167 ρ=0.9940 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=13 n= 3 q=  2197 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p=13 n= 3 q=  2197 d=   12 λ=   11 ρ=0.9167 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=13 n= 3 q=  2197 d= 2196 λ= 2195 ρ=0.9995 subfield=True AA\{1}⊆A=None
+ρ>1/2: p=13 n= 4 q= 28561 d=    3 λ=    2 ρ=0.6667 subfield=False AA\{1}⊆A=True
+ρ>1/2: p=13 n= 4 q= 28561 d=   12 λ=   11 ρ=0.9167 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=13 n= 4 q= 28561 d=  168 λ=  167 ρ=0.9940 subfield=True AA\{1}⊆A=False
+ρ>1/2: p=13 n= 4 q= 28561 d=28560 λ=28559 ρ=1.0000 subfield=True AA\{1}⊆A=None
+TOT=439 HITS=101 NONSUB=24 PROCFAIL=50
