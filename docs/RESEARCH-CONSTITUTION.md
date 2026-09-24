@@ -3545,3 +3545,71 @@ $$\text{不得以}:\ \text{对象标准／方法标准／有人研究（}AMEND\t
 技术词 auxiliary        命中文件数=2    :: ./E18-NOGO-ALIGNMENT-2.md ./M-NOGO-P0-P1-ISRG-and-loopholes.md 
 技术词 research line    命中文件数=0    :: 
 ```
+
+---
+
+# **AMEND-14：闸门校准修正（反证驱动）—— 2026-09-25 立**
+
+> 反证来源：唐先生 16:41「如果按照你这样的筛选机制，GPT、Claude 都不可能找到一个课题，你觉得合适么？」＋ 校准测试（见 `CALIBRATION-gate-vs-frontier-dents.md`：**旧闸门 5/5 杀掉已证可行的前沿成果**）。
+
+D0: 本档对象 = **闸门误校的承认与修正**：① 类别级杀伤禁令 ② 逐字覆盖声明要求 ③ 准入改为 **attackability**（可攻击性）④ 校准绊线（连续 3 拒 ⟹ 审闸门）⑤ 收窄重开条款 ⑥ 对 GPT/Claude 的对标检验
+D1: 0（制度档）
+[REVIEW]
+
+## §1 承认（不含模糊）
+
+```
+$$\textbf{事实}:\ \text{以我方现行闸门，GPT/Claude \textbf{同样找不到课题}} —— \text{这不是"标准高"，而是}\boxed{\textbf{误校}}$$ ✓✓
+$$\text{校准测试实证}:\ \text{旧闸门（}G1\text{–}G5\ \text{＋原 }AMEND\text{-}9\text{）对 }\mathbf{5/5}\ \text{已证可行的前沿成果（含 }\ell_2(10,2)\le50\text{、Sidon }0.94301\text{、union-closed }0.38305\ \text{等）}\ \textbf{全部判死}$$ ✓✓✓
+$$\Longrightarrow\ \boxed{\text{一个 100\% 拒绝的筛子，问题在筛子，不在候选空间}}$$ ✓
+```
+
+## §2 根因（机制性）
+
+```
+$$\text{我反复使用的杀伤理由（领域活跃／方法标准／对象经典／属辅助）}\ \Longrightarrow\ \text{等价于要求}\boxed{\text{开工前就保证"未被覆盖"}}\ \Longrightarrow\ \text{等于}\boxed{\text{要求先知道答案}}$$ ✗✗
+$$\text{而 }research\ \text{恰恰是"不可预先知道"的活动};\ \text{把"未被覆盖"设为准入前提} \Longrightarrow \textbf{恒拒}$$ ✗✗✓
+$$\textbf{正确的不对称}:\ \text{前沿队的"新"在\textbf{具体值／证书}层面};\ \text{我把"新"设在\textbf{框架}层面} \Longrightarrow \text{系统性误杀}$$ ✗✓
+```
+
+## §3 修正一：**类别级判断一律不构成杀伤**
+
+```
+$$\textbf{允许的杀伤（仅两类，照 }AMEND\text{-}12\ \S2\text{）}:\ (i)\ \text{已有定理\textbf{逐字}覆盖我们的目标断言};\ (ii)\ \text{只是把已知定理\textbf{换符号重述}}$$ ✓✓
+$$\boxed{\text{凡 }REJECT\ \text{必须给出\textbf{逐字覆盖声明}（可引用的定理原文）}};\ \textbf{无逐字声明不得 }REJECT$$ ✓✓✓
+$$\textbf{明确列出的非杀伤理由（禁止再用于拒绝）}:\ \text{领域活跃／有人在做};\ \text{方法标准};\ \text{对象经典};\ \text{属辅助工具};\ \text{我方无独占优势};\ \text{NP-hard（除非它\textbf{逐字阻断我们的具体断言}）}$$ ✓✓
+```
+
+## §4 修正二：准入改为 **可攻击性（`attackability`）**
+
+```
+$$\text{候选准入 ⟺ 能写出三项}:\quad \boxed{\texttt{A1}\ \text{具体可证伪断言（含数值／证书／枚举域）}};\quad \boxed{\texttt{A2}\ \text{检验方法}};\quad \boxed{\texttt{A3}\ \text{失败形态（residue）}}$$ ✓✓✓
+$$\boxed{\text{"已知对象、未知值"＝一等公民}};\ \text{不要求"对象新"、"机制新"、"无邻近理论"}$$ ✓✓
+$$\text{（与 }AMEND\text{-}11\text{ 的四差异一致：价值函数＝可验证新增信息；输出粒度含 }residue$$ ✓）
+```
+
+## §5 修正三：校准绊线
+
+```
+$$\boxed{\text{连续 }3\ \text{个候选被 }REJECT\ \Longrightarrow\ \textbf{触发闸门自身审计}}（\text{停止找候选}）$$ ✓✓
+$$\text{审计必答}:\ \text{这三个杀伤\textbf{各自引用了哪一条逐字覆盖声明}？}\ \text{若答不出 ⟹ 撤销 }REJECT\ \text{并重开该条}$$ ✓✓✓
+$$\text{（本档即为首次触发后的产物）}$$ ✓
+```
+
+## §6 修正四：**收窄重开**条款
+
+```
+$$\text{既往出局条目允许以\textbf{收窄子命题}重开（\textbf{无需新案}）}:\quad \begin{cases}
+P7\text{-}2&\to\ \text{具体仍未定的边界 }F\ (\text{核其逐字未覆盖})\\
+P5\text{-}\text{乙-}3&\to\ \text{小 }|H|\ \text{的\textbf{精确值}（非"一般界"）}\\
+Q1'&\to\ \text{指数 }m\notin\{2,3,4\}\ \text{的精确值（无经典闭式区）}\\
+\end{cases}$$ ✓✓
+$$\text{条件}:\ \text{须先给出逐字覆盖声明\textbf{不存在}的证据（或指明该区无闭式）}$$ ✓
+```
+
+## §7 修正五：对 GPT/Claude 的对标检验（常规化）
+
+```
+$$\textbf{任何闸门新版本上线前，须对 }\ge5\ \text{个\textbf{已证可行的前沿成果}做回归}:\ \text{闸门必须\textbf{放行全部}};\ \text{同时须对 }2\ \text{个\textbf{逐字已覆盖的"重述型"目标}做回归}:\ \text{必须\textbf{拦下全部}}$$ ✓✓✓
+$$\text{双向校准（放行真 }dent\ +\ 拦下真重述）＝闸门合格判据};\ \text{单向（只拦不放）＝误校}$$
+```
