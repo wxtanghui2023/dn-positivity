@@ -3430,3 +3430,55 @@ $$\text{新增}:\ LANE\text{-}A\ \text{允许轻量并行 ＋ 允许生成式探
 技术词 throughput       命中文件数=0    :: 
 技术词 generator        命中文件数=31   :: ./KERNEL-HUNT-1-two-minimization-problems.md ./final-convergence-2026-09-09.md ./V145-archimedean-boundary-three-gate-audit-deninger-hit.md 
 ```
+
+---
+
+# **AMEND-12：筛选器两阶段化 ＋ `G4-E` 资产生成闸 —— 2026-09-25 立**
+
+> 判例来源：连续三次 `REJECT`（`CAP-MIX`／`P7-2`／`P5-乙-3`）＋ 唐先生 16:23 诊断：问题不在"没有课题"，而在**筛选器把候选空间过度压缩**。
+
+D0: 本档对象 = **筛选器结构性修正**：① `G3` 去绝对化（新量非必要，新可证命题必要）② `G2` 去苛刻化（不要求在开工前证明资产独占）③ `AMEND-9` 从"新颖性否决器"回归为**窄化 Novelty Gate** ④ 新增 `G4-E`（资产生成候选命题）⑤ 闭环改为**资产 → 机制变换 → 候选命题 → Novelty → 小规模验证 → 定理化**
+D1: 0（制度档）
+[REVIEW]
+
+## §1 三条结构性诊断（照唐先生口径）
+
+```
+**(1)** `G3` "必须产生新量"**过强**：把"新量"与"新结果"混同;\ \text{合法形态许多}:\ \boxed{\text{旧对象}+\text{新约束}\Rightarrow\text{新定理}},\ \boxed{\text{旧量}+\text{特殊参数区间}\Rightarrow\text{首次精确结果}}$$ ✗✗
+**(2)** `G2` "资产天然适配"被解释为"该问题是否恰好为 }A/B/D/E/G\ \text{量身定做" —— 这\textbf{等于要求开工前就知道攻击方法}}$$ ✗✗
+**(3)** `AMEND-9` 从"防止 CAP-MIX 重演"**滑成"新颖性否决器"**: \boxed{\text{已有理论存在}\not\Rightarrow\text{该问题没有新的可证结果}}$$ ✗✗（`P7-2` 为典型：边界被覆盖 ≠ 所有具体构造/参数/常数/反例/分类都无新结果）
+```
+
+## §2 修正后的两阶段门
+
+```
+$$\textbf{阶段一 Novelty Gate（\textbf{只}排除两类）}:\ (i)\ \boxed{\text{已有定理\textbf{直接}覆盖我们要证的命题}};\quad (ii)\ \boxed{\text{只是把已知定理\textbf{换符号重述}}}$$ ✓✓
+$$\textbf{不得}因"对象标准／方法标准／有人研究"而 REJECT$$ ✗（**本次修正的核心**）
+$$\textbf{阶段二 Researchability Gate（允许四类，禁一类）}:$$
+$$\begin{array}{c|c}
+\text{类型}&\text{允许}\\
+\hline
+\text{新对象}+\text{新结果}&\checkmark\\
+\text{旧对象}+\text{新参数区间}&\checkmark\\
+\text{旧对象}+\text{新结构约束}&\checkmark\\
+\text{旧对象}+\text{新精确结果／新反例／新算法证书}&\checkmark\\
+\text{旧对象}+\text{已知定理换写法}&\times\\
+\end{array}$$ ✓✓
+$$\Longrightarrow\ \boxed{\text{"新量"不再是必要条件};\quad \text{"新可证命题"才是必要条件}}$$ ✓✓✓
+```
+
+## §3 新增 `G4-E`（探索闸）
+
+```
+$$\textbf{旧}:\ \text{要求"文献已告知 gap 在哪里"}\ \Longrightarrow\ \text{天然越筛越空}$$ ✗
+$$\textbf{新}:\ \boxed{\texttt{G4-E}:\ \text{能否由}\ \textbf{资产}\ \text{生成候选命题？}}:\quad (P,X,K,A)\to\{Q_1,\dots,Q_n\}\ \text{（\textbf{先}生成，\textbf{后}逐条文献核验）}$$ ✓✓
+$$\boxed{\text{合法闭环}:\ \text{资产}\to\text{机制变换}\to\text{候选命题}\to\text{Novelty}\to\text{小规模验证}\to\text{定理化}}$$ ✓✓（**取代**：文献 OPEN → 标准化 → 发现别人在做 → REJECT）
+```
+
+## §4 与既有档的关系
+
+```
+$$\text{保留}:\ AMEND\text{-}10\ \text{双轨};\ AMEND\text{-}11\ \text{四差异（价值函数／吞吐／生成器用法／residue 计产出）};\ LANE\text{-}A\ \S4\ \text{协议}$$ ✓
+$$\text{收紧}:\ AMEND\text{-}9\ \text{仅保留 §2 的 }L1\text{（对象是否标准）与 }L2\text{（\textbf{是否直接覆盖}}）；L3/L4\ \text{降为"信息项"，\textbf{不单独构成 REJECT 理由}}$$ ✓✓
+$$\text{禁止}:\ \text{以"领域活跃／有人在做"为由拒绝单个具体命题};\ \text{以"量不新"为由拒绝};\ \text{以"资产不独占"为由拒绝}$$ ✓✓
+```
