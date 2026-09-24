@@ -3613,3 +3613,71 @@ $$\text{条件}:\ \text{须先给出逐字覆盖声明\textbf{不存在}的证�
 $$\textbf{任何闸门新版本上线前，须对 }\ge5\ \text{个\textbf{已证可行的前沿成果}做回归}:\ \text{闸门必须\textbf{放行全部}};\ \text{同时须对 }2\ \text{个\textbf{逐字已覆盖的"重述型"目标}做回归}:\ \text{必须\textbf{拦下全部}}$$ ✓✓✓
 $$\text{双向校准（放行真 }dent\ +\ 拦下真重述）＝闸门合格判据};\ \text{单向（只拦不放）＝误校}$$
 ```
+
+---
+
+# **AMEND-15：六阶段候选机制（`S0`–`S5`）＋ 五态出口 ＋ 盲标定 —— 2026-09-25 立**
+
+> 判例来源：唐先生 16:45「先把『候选生成→文献筛查→准入/拒绝→足够大的候选池』这套机制校准正确；否则只是在一个可能仍有偏差的筛子里消耗时间」。
+
+D0: 本档对象 = **机制重构**：① 目标改为**建池**（每轮 20–50 原始 → 5–15 可开工）② **`N`／`A`／`V` 三者彻底拆开** ③ `S0`–`S5` 六阶段 ④ 五态出口（废 `REJECT`）⑤ 反路径依赖（`Asset×Object×Quantity×PropType`）⑥ 盲标定 `B1/B2/B3`
+D1: 0（制度档）
+[REVIEW]
+
+## §1 目标重定义（照您 §一）
+
+```
+$$\textbf{每轮}: \text{资产盘点}\to\textbf{大批量生成}\to\text{去明显重复}\to\textbf{逐条文献覆盖}\to\text{分层}\to\text{选 }ACTIVE$$ ✓✓
+$$\boxed{\text{每轮原始候选 }20\text{–}50};\qquad \boxed{\text{筛后仍留 }5\text{–}15\ \text{可开工}}$$ ✓✓
+$$\text{连续两轮达不到数量}\ \Longrightarrow\ \textbf{先审"候选生成机制"}，\text{而不是提高拒绝标准}$$ ✓✓✓
+```
+
+## §2 `N`／`A`／`V` 彻底拆开（照您 §二）
+
+```
+$$\boxed{\texttt{N}\ (\text{是否新})\ \ne\ \texttt{A}\ (\text{能否攻击})\ \ne\ \texttt{V}\ (\text{值不值得})}$$ ✓✓✓
+$$\text{三者\textbf{不得}再揉进同一个 }G3;\qquad \boxed{\text{"旧对象 + 未知精确值"必须可入池}}$$ ✓✓
+```
+
+## §3 六阶段（照您 §三–§八）
+
+```
+$$\texttt{S0}\ \text{Asset Mining}:\ \text{从资产出发}\to\ \text{可测量 quantity}\to\ \text{可变参数}\to\ \text{候选命题};\quad \textbf{资产不直接绑定问题类型}$$ ✓✓
+$$\texttt{S1}\ \text{Candidate Factory}:\ \textbf{故意过生产};\ \text{每资产}\ \ge5\ \text{类命题}:\ \texttt{C1}\ \text{精确值};\ \texttt{C2}\ \text{极值};\ \texttt{C3}\ \text{唯一/分类};\ \texttt{C4}\ \text{边界/sharpness};\ \texttt{C5}\ \text{反例};\ \texttt{C6}\ \text{二阶/误差项};\ \texttt{C7}\ \text{参数族};\ \texttt{C8}\ \text{结构条件}$$ ✓✓
+$$\texttt{S2}\ \textbf{逐字覆盖门}（仅三态）:\ \begin{cases}\texttt{COVERED}&\text{须记录 theorem／原文／假设／参数范围／结论／逐项对应};\ \textbf{缺一不可}\\\texttt{PARTIAL}&\text{仅渐近／仅上下界／更一般但不含我们的精确命题／相邻参数／数值／conjecture／方法}\\\texttt{UNVERIFIED}&\text{暂时未找到直接覆盖};\ \textbf{不得写作"新"}\end{cases}$$ ✓✓✓
+$$\qquad \boxed{\texttt{PARTIAL}\ \text{不得 }REJECT};\qquad \boxed{\texttt{UNVERIFIED}\ \text{不得写作"新"}}$$ ✓✓
+$$\texttt{S3}\ \text{Attackability}:\ \texttt{A1}\ \text{明确命题（具体值／界／分类，非"研究一下"）};\ \texttt{A2}\ \text{现实验证入口（穷举／精确算术／证书／SAT-ILP／符号推导／计算+独立检查／有限分类／构造性证明，至少一个）};\ \texttt{A3}\ \text{失败也须产 }\textbf{residue}（具体反例／缺口／异常参数）$$ ✓✓
+$$\texttt{S4}\ \text{Value Matrix}:\ \texttt{V1}\ \text{明确数学结果};\ \texttt{V2}\ \text{可成 theorem／exact classification／counterexample};\ \texttt{V3}\ \text{可迁移};\ \texttt{V4}\ \text{与现有资产直接复用};\ \textbf{每项只记 }high/medium/low/unknown,\ \textbf{不做总分排名}$$ ✓✓✓
+$$\texttt{S5}\ \text{五态出口}（\textbf{废除 }REJECT）:\ \boxed{\texttt{COVERED}\ |\ \texttt{DUPLICATE}\ |\ \texttt{ACTIVE-CANDIDATE}\ |\ \texttt{PENDING}\ |\ \texttt{ARCHIVED}}$$ ✓✓✓
+$$\qquad \texttt{ARCHIVED}\ \text{须写明\textbf{具体事实依据}};\ \text{禁止"感觉像经典问题"}$$ ✓
+```
+
+## §4 反路径依赖（照您 §九–§十）
+
+```
+$$\textbf{禁止再问}:\ \text{"}A\ \text{资产还能研究什么有限结构？"}\quad \textbf{改问}:\ \boxed{\text{"}A\ \text{能测量哪些数学量？这些量出现在哪些\textbf{完全不同的}对象中？"}$$ ✓✓
+$$\boxed{\text{候选矩阵}=\ \text{Asset}\times\text{Object}\times\text{Quantity}\times\text{PropType}};\quad \text{每格机械生成多个命题}$$ ✓✓✓
+$$\text{对象族须}\ \ge10\ (\text{群／图／排列／格／码／多项式／有限域／递推／设计／矩阵谱／拟阵／自动机／离散动力…})$$ ✓
+```
+
+## §5 数量目标（照您 §十一）
+
+```
+$$\textbf{第一批}:\ \boxed{\ge100\ \text{原始候选}},\ \text{来自}\ \ge10\ \text{对象族};\qquad \textbf{第二批}:\ \text{逐条 }\texttt{S2}\ \text{核验};\qquad \textbf{第三批}:\ \text{非 COVERED/DUPLICATE 者跑 }\texttt{A1/A2/A3}$$ ✓✓
+$$\boxed{\text{最终}\ \ge20\ \text{个}\ \texttt{ACTIVE-CANDIDATE}/\texttt{PENDING}}\ \text{才进入人工判断}$$ ✓✓
+```
+
+## §6 盲标定（照您 §十二）
+
+```
+$$\textbf{三组盲测}:\ \texttt{B1}\ \text{已知精确结果}\ \to\ \text{期望 }\texttt{COVERED};\quad \texttt{B2}\ \text{已知但仅渐近/界}\ \to\ \text{期望 }\texttt{PARTIAL/PENDING};\quad \texttt{B3}\ \text{真正未解决的具体数值/证书}\ \to\ \text{期望 }\texttt{ACTIVE-CANDIDATE}$$ ✓✓✓
+$$\text{"}5/5\ \text{真 }dent\ \text{放行"是单向测试};\ \textbf{盲测测的是分类器整体校准}$$ ✓✓
+```
+
+## §7 一句话（照您 §末）
+
+```
+$$\textbf{旧}:\ \boxed{\text{先证明"新"}\to\text{才允许研究}}\quad(\textbf{错})$$
+$$\textbf{新}:\ \boxed{\text{大量生成}\to\text{具体命题}\to\text{逐字覆盖}\to\text{可攻击性}\to\text{价值信息}\to\text{候选池}}$$ ✓✓✓
+$$\boxed{\text{筛选器的任务\textbf{不是}提前找出"值得做的题"，而是\textbf{尽可能不误杀}真正值得检查的题}}$$ ✓✓✓
+```
