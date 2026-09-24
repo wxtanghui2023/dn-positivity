@@ -1,0 +1,40 @@
+n= 2 q=    4 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=0 mixed(G)=1
+n= 3 q=    8 d=   7 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+n= 4 q=   16 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n= 4 q=   16 d=   5 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n= 4 q=   16 d=  15 λ=  14 |Γorbs|=(2, 12) mixed(I)=2 mixed(G)=3
+n= 5 q=   32 d=  31 λ=  30 |Γorbs|=(15, 15) mixed(I)=0 mixed(G)=1
+n= 6 q=   64 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n= 6 q=   64 d=   7 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+n= 6 q=   64 d=   9 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n= 6 q=   64 d=  21 λ=   8 |Γorbs|=(2, 3, 3) mixed(I)=8 mixed(G)=9
+n= 6 q=   64 d=  63 λ=  62 |Γorbs|=(2, 3, 3, 18, 18, 18) mixed(I)=8 mixed(G)=9
+n= 8 q=  256 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n= 8 q=  256 d=   5 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n= 8 q=  256 d=  15 λ=  14 |Γorbs|=(2, 12) mixed(I)=2 mixed(G)=3
+n= 8 q=  256 d=  17 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n= 8 q=  256 d=  51 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n= 8 q=  256 d=  85 λ=  24 |Γorbs|=(24,) mixed(I)=0 mixed(G)=1
+n= 9 q=  512 d=   7 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+n= 9 q=  512 d=  73 λ=  18 |Γorbs|=(9, 9) mixed(I)=18 mixed(G)=19
+n=10 q= 1024 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n=10 q= 1024 d=  11 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=10 q= 1024 d=  31 λ=  30 |Γorbs|=(15, 15) mixed(I)=0 mixed(G)=1
+n=10 q= 1024 d=  33 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n=10 q= 1024 d=  93 λ=  32 |Γorbs|=(2, 15, 15) mixed(I)=2 mixed(G)=3
+n=11 q= 2048 d=  23 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=11 q= 2048 d=  89 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=12 q= 4096 d=   3 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n=12 q= 4096 d=   5 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=12 q= 4096 d=   7 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+n=12 q= 4096 d=   9 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n=12 q= 4096 d=  13 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=12 q= 4096 d=  15 λ=  14 |Γorbs|=(2, 12) mixed(I)=2 mixed(G)=3
+n=12 q= 4096 d=  21 λ=   8 |Γorbs|=(2, 3, 3) mixed(I)=8 mixed(G)=9
+n=12 q= 4096 d=  35 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+n=12 q= 4096 d=  39 λ=   2 |Γorbs|=(2,) mixed(I)=2 mixed(G)=3
+n=12 q= 4096 d=  45 λ=  14 |Γorbs|=(2, 12) mixed(I)=2 mixed(G)=3
+n=12 q= 4096 d=  63 λ=  62 |Γorbs|=(2, 3, 3, 18, 18, 18) mixed(I)=8 mixed(G)=9
+n=12 q= 4096 d=  65 λ=   0 |Γorbs|=() mixed(I)=0 mixed(G)=1
+n=12 q= 4096 d=  91 λ=   6 |Γorbs|=(3, 3) mixed(I)=6 mixed(G)=7
+STATS: {'case': 39, 'FT_commute_ok': 11, 'FT_bad': 0, 'lam0': 9, 'lam0_mixed_G': 9, 'lam0_nomixed_G': 0, 'orbdiv3n_bad': 0}
