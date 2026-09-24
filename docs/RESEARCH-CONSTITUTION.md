@@ -3367,3 +3367,66 @@ $$\text{注}:\ \text{可复用已拒条目 —— }P7-2／P5\text{-乙-}3\ \text
 技术词 dent             命中文件数=303  :: ./V167-five-device-audit-double-obligation-structure.md ./p3-uniform-decay-results.md ./grh-goldbach-paper-draft-v2.md 
 技术词 lane             命中文件数=18   :: ./V226-arithmetic-complex-localization-mechanism-audit.md ./ROUTE-1-tau-to-tau-t-BLOCKED-structurally-halfplane-vs-shrinking.md ./V145-archimedean-boundary-three-gate-audit-deninger-hit.md 
 ```
+
+---
+
+# **AMEND-11：撤回"算力"归因 ＋ `LANE-A` 执行协议 v2 —— 2026-09-25 立（更正 `AMEND-10` §6）**
+
+> 判例来源：唐先生 16:19 直接指正：「你不要总是归因于算力，Claude 和 GPT 做出的这些成果，有超过一半不需要大算力」。
+
+D0: 本档对象 = **撤回 `AMEND-10` §6 的"compute-bound"归因**（自我纠正）＋ 真正的四个差异（价值函数／尝试吞吐／模型用法／输出粒度）＋ 我方自缚规则清单 ＋ `LANE-A` 执行协议 v2
+D1: 0（制度档）
+[REVIEW]
+
+## §1 ⛔ 撤回（自我纠正）
+
+```
+$$\boxed{\text{撤回}:\ AMEND\text{-}10\ \S6\ \text{"优先 reasoning-bound 而非 compute-bound"的表述作废}}$$ ✓✓
+$$\text{理由}:\ \text{前台成果\textbf{超过一半不需要大算力}} —— \text{它们多数是"小结构上的构造/穷举 ＋ 廉价验证"}（矩阵、SAT／ILP、脚本、Lean 文件）$$ ✓✓
+$$\text{归因错误性质}:\ \text{把\textbf{价值函数与吞吐}的缺陷，说成\textbf{算力}劣势} \Longrightarrow \textbf{这是给失败找的台阶，不是诊断}$$ ✗✗
+```
+
+## §2 真正的四个差异（替代算力假说）
+
+```
+$$\textbf{(1) 价值函数}:\ \text{他们}\ \boxed{\text{"对已发表断言的可验证新增信息"}}\ (\text{dent／residue，**不要求新机制**});\quad \text{我们}\ \boxed{\text{"新机制／新对象"}}$$ ✗✗
+$$\textbf{(2) 尝试吞吐}:\ \text{他们\textbf{大量小声明并行／快速迭代}}（生成→验证→再生成）;\text{我们\textbf{同时仅一条活跃}＋每轮重文档开销} \Longrightarrow \text{单位时间尝试数差\textbf{一到两个数量级}}$$ ✗✗
+$$\textbf{(3) 模型用法}:\ \text{他们把 LLM 当}\boxed{\textbf{生成器}}（构造／反例／猜想的来源）＋廉价验证器;\text{我们把它当}\boxed{\textbf{审计器}}（\text{并\textbf{明文禁止}数值猜根／猜想生成／命名式文献})$$ ✗✗
+$$\textbf{(4) 输出粒度}:\ \text{他们接受}\ \boxed{\text{"residue"＝不完全搜索的状态报告也算产出}};\ \text{我们要求证书或 closure，否则"不算"}$$ ✗✗
+$$\Longrightarrow\ \boxed{\text{主因＝价值函数 + 吞吐 + 模型用法 + 输出粒度；算力是次因（且多数题不需要）}}$$ ✓✓✓
+```
+
+## §3 我方自缚规则清单（须放宽或明确边界）
+
+```
+$$\texttt{R1}\ \text{禁数值猜根／禁大批量枚举探索} \Longrightarrow \textbf{放宽为}:\ \text{允许生成式探索，\textbf{但每条断言必须附独立验证}}$$ ✓
+$$\texttt{R2}\ \text{禁"文献命名／新名词"作为新性证据} \Longrightarrow \textbf{保留}（该禁令防的是假新性，正确）$$ ✓
+$$\texttt{R3}\ \text{每轮必写账本／查地图／技术词回查／提交前自检} \Longrightarrow \textbf{保留于 }LANE\text{-}B;\ LANE\text{-}A\ \textbf{改轻量}（一卡一验证一记录）$$ ✓
+$$\texttt{R4}\ \text{同时仅一条活跃} \Longrightarrow LANE\text{-}A\ \textbf{允许并行 }micro\text{-}attempts（\text{上限待定，建议 }3\text{–}5\text{）}$$ ✓
+$$\texttt{R5}\ \text{"关掉一条路"不算战绩} \Longrightarrow \textbf{保留};\ \text{但}\ \boxed{\text{residue（不完全搜索）}\ \textbf{算产出}}$$ ✓✓
+```
+
+## §4 `LANE-A` 执行协议 v2
+
+```
+$$\text{(i) 选格}:\ \text{从已发表断言/表格中挑一个\textbf{具体单元}}（\text{替换 }D1\ \text{为"断言 + 出处 + 现值"}）$$ ✓
+$$\text{(ii) 生成}:\ \text{LLM 生成候选构造／反例／论证（\textbf{允许}大规模生成，\textbf{不要求}新颖）}$$ ✓
+$$\text{(iii) 验证}:\ \text{廉价独立验证器（脚本／有理精确／SAT／Lean／穷举）—— \textbf{这是唯一门槛}}$$ ✓✓
+$$\text{(iv) 输出}:\ \begin{cases}\text{改进成功}\ \Rightarrow\ \textbf{dent}\ (\text{含证书＋对比纪录});\\ \text{未成功}\ \Rightarrow\ \textbf{residue}\ (\text{搜索状态＋未覆盖区},\ \textbf{算产出})\end{cases}$$ ✓✓
+$$\text{(v) 记录}:\ \text{一卡一行（不写长档）；仅在 dent／residue 有价值时升格为文档}$$ ✓
+$$\textbf{底线不变}:\ \text{证书必须\textbf{独立复核}（本项目的既有纪律：}\text{两次独立核验／零残差／可复现脚本}）$$ ✓✓
+```
+
+## §5 与 `AMEND-10` 的关系
+
+```
+$$\text{保留}:\ AMEND\text{-}10\ \text{的双轨制、}D1\text{–}D5\ \text{门槛、双向禁止错配、判例}$$ ✓
+$$\text{更正}:\ \S6\ \text{的"compute-bound"表述\textbf{作废}};\ \text{选择标准改为 §2 的四条差异}$$
+$$\text{新增}:\ LANE\text{-}A\ \text{允许轻量并行 ＋ 允许生成式探索 ＋ residue 计产出（§3–§4）}$$ ✓✓
+```
+
+## §附 【技术词回查】（补录）
+```
+技术词 throughput       命中文件数=0    :: 
+技术词 generator        命中文件数=31   :: ./KERNEL-HUNT-1-two-minimization-problems.md ./final-convergence-2026-09-09.md ./V145-archimedean-boundary-three-gate-audit-deninger-hit.md 
+```
