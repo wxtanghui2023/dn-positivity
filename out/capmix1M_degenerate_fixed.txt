@@ -1,0 +1,205 @@
+p= 3 n=2 q=    9 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=2 q=    9 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=3 q=   27 d=   13 |G|=  13 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=3 q=   27 d=   26 |G|=  26 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=    5 |G|=   5 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=   10 |G|=  10 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=   16 |G|=  16 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=   20 |G|=  20 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=   40 |G|=  40 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=4 q=   81 d=   80 |G|=  80 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=5 q=  243 d=   11 |G|=  11 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=5 q=  243 d=   22 |G|=  22 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=5 q=  243 d=  121 |G|= 121 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=5 q=  243 d=  242 |G|= 242 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=    7 |G|=   7 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   13 |G|=  13 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   14 |G|=  14 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   26 |G|=  26 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   28 |G|=  28 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   52 |G|=  52 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   56 |G|=  56 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=   91 |G|=  91 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=  104 |G|= 104 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=  182 |G|= 182 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=  364 |G|= 364 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=6 q=  729 d=  728 |G|= 728 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 3 n=7 q= 2187 d= 1093 |G|=1093 1∈G=Y -2∈G=Y -1/2∈G=Y theo=1 meas_diff=1 OK
+p= 5 n=2 q=   25 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=2 q=   25 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=2 q=   25 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=2 q=   25 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=2 q=   25 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=2 q=   25 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=3 q=  125 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=3 q=  125 d=   31 |G|=  31 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=3 q=  125 d=   62 |G|=  62 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=3 q=  125 d=  124 |G|= 124 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=    4 |G|=   4 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   13 |G|=  13 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=   16 |G|=  16 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   26 |G|=  26 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=   39 |G|=  39 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=   48 |G|=  48 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   52 |G|=  52 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=   78 |G|=  78 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 5 n=4 q=  625 d=  104 |G|= 104 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=  156 |G|= 156 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=  208 |G|= 208 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=  312 |G|= 312 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 5 n=4 q=  625 d=  624 |G|= 624 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=2 q=   49 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=2 q=   49 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=2 q=   49 d=    6 |G|=   6 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=2 q=   49 d=    8 |G|=   8 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=2 q=   49 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=2 q=   49 d=   16 |G|=  16 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=2 q=   49 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=2 q=   49 d=   48 |G|=  48 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=3 q=  343 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=    6 |G|=   6 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=3 q=  343 d=    9 |G|=   9 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=   18 |G|=  18 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=3 q=  343 d=   19 |G|=  19 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=   38 |G|=  38 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=   57 |G|=  57 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=  114 |G|= 114 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=3 q=  343 d=  171 |G|= 171 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=3 q=  343 d=  342 |G|= 342 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=    5 |G|=   5 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=    6 |G|=   6 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=    8 |G|=   8 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   10 |G|=  10 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=   15 |G|=  15 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   16 |G|=  16 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   20 |G|=  20 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=   25 |G|=  25 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   30 |G|=  30 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=   32 |G|=  32 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   40 |G|=  40 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   48 |G|=  48 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=   50 |G|=  50 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   60 |G|=  60 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=   75 |G|=  75 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   80 |G|=  80 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=   96 |G|=  96 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  100 |G|= 100 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=  120 |G|= 120 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  150 |G|= 150 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  160 |G|= 160 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=  200 |G|= 200 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=  240 |G|= 240 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  300 |G|= 300 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  400 |G|= 400 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d=  480 |G|= 480 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  600 |G|= 600 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p= 7 n=4 q= 2401 d=  800 |G|= 800 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p= 7 n=4 q= 2401 d= 1200 |G|=1200 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=    5 |G|=   5 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=    8 |G|=   8 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=   10 |G|=  10 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=   12 |G|=  12 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=   15 |G|=  15 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=   20 |G|=  20 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=   24 |G|=  24 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=2 q=  121 d=   30 |G|=  30 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=   40 |G|=  40 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=   60 |G|=  60 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=2 q=  121 d=  120 |G|= 120 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=    5 |G|=   5 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=    7 |G|=   7 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=   10 |G|=  10 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=   14 |G|=  14 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=   19 |G|=  19 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=   35 |G|=  35 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=   38 |G|=  38 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=   70 |G|=  70 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=   95 |G|=  95 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=  133 |G|= 133 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=  190 |G|= 190 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=11 n=3 q= 1331 d=  266 |G|= 266 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=11 n=3 q= 1331 d=  665 |G|= 665 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=2 q=  169 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=    7 |G|=   7 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=    8 |G|=   8 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=2 q=  169 d=   14 |G|=  14 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   21 |G|=  21 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=2 q=  169 d=   28 |G|=  28 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   42 |G|=  42 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   56 |G|=  56 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=2 q=  169 d=   84 |G|=  84 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=2 q=  169 d=  168 |G|= 168 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=3 q= 2197 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=    9 |G|=   9 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=   12 |G|=  12 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=3 q= 2197 d=   18 |G|=  18 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=   36 |G|=  36 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=3 q= 2197 d=   61 |G|=  61 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  122 |G|= 122 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  183 |G|= 183 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  244 |G|= 244 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  366 |G|= 366 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  549 |G|= 549 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=13 n=3 q= 2197 d=  732 |G|= 732 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=13 n=3 q= 2197 d= 1098 |G|=1098 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=    8 |G|=   8 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=    9 |G|=   9 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=   12 |G|=  12 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=   16 |G|=  16 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=   18 |G|=  18 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=   24 |G|=  24 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=   32 |G|=  32 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=   36 |G|=  36 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=17 n=2 q=  289 d=   48 |G|=  48 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=   72 |G|=  72 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=   96 |G|=  96 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=  144 |G|= 144 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=17 n=2 q=  289 d=  288 |G|= 288 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=    3 |G|=   3 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=    4 |G|=   4 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=    5 |G|=   5 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=    6 |G|=   6 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=    8 |G|=   8 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=    9 |G|=   9 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=   10 |G|=  10 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   12 |G|=  12 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   15 |G|=  15 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   18 |G|=  18 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=   20 |G|=  20 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   24 |G|=  24 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   30 |G|=  30 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   36 |G|=  36 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=   40 |G|=  40 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   45 |G|=  45 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=   60 |G|=  60 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=   72 |G|=  72 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=   90 |G|=  90 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=  120 |G|= 120 1∈G=Y -2∈G=N -1/2∈G=N theo=0 meas_diff=0 OK
+p=19 n=2 q=  361 d=  180 |G|= 180 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+p=19 n=2 q=  361 d=  360 |G|= 360 1∈G=Y -2∈G=Y -1/2∈G=Y theo=3 meas_diff=3 OK
+STATS: {'case': 204, 'match': 204, 'mismatch': 0, 'sum_diff': 268}
