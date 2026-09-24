@@ -3284,3 +3284,86 @@ $$\text{本档即为首次记录（CAP-MIX：}4\ \text{轮）};\ \text{此后同
 技术词 novelty gate     命中文件数=7    :: ./WHY-CANNOT-CREATE-TOOLS-bohr-and-tao.md ./II-D-CLOSED-and-why-RH-question.md ./RH-LINE-ASSET-VALUE-INVENTORY.md 
 技术词 literature check 命中文件数=3    :: ./E29-A5-4-burnol-li-isomorphism-check.md ./E18-NOGO-ALIGNMENT-2.md ./LIT1-turan-line-occupied.md 
 ```
+
+---
+
+# **AMEND-10：双轨选题制（DENT LANE ＋ MECHANISM LANE）—— 2026-09-25 立**
+
+> 判例来源：连续三次闸门结果（`CAP-MIX` 已知理论实例｜`P7-2` REJECT｜`P5-乙-3` REJECT）＋ 唐先生 16:17 质询：「GPT 用同样资产能产出大量成果，我们连课题都筛不出来 ⟹ 筛选机制有问题」。
+
+D0: 本档对象 = **`AMEND-10` 双轨选题制**：诊断（标准与资产错配）＋ `LANE-A`（DENT：可验证的已发表纪录改进）＋ `LANE-B`（MECHANISM：现行严格管线）＋ 禁止错配 ＋ 选择规则 ＋ 判例
+D1: 0（制度档）
+[REVIEW]
+
+## §1 诊断（三条，须分清）
+
+```
+**(1) 感知纠正（不是产出为零）**: 我们**确实有产出** —— `C-380` 的 `k=4` 机器证书、`Brown/Droll` 经典情形定理、`EDR-1` 严格定理、`B9` 定理、`Lemma R` 的 Lean 形式化。**但最近三轮全是"闸门轮"（零计算）**，按构造**不产出结果** ⟹ 用筛选轮的产出来评判管线是**范畴错误** ✓
+**(2) 真缺陷（标准与资产错配）**: 我方闸门（`SURVIVOR-5`／`E-gate`／`P1`–`P8`／`AMEND-9`）**筛的是"新机制/新对象"**（研究品味型、高门槛、难满足）；而我方资产（`A/B/D/E`：有限结构／容量／精确核验／谱结构）**擅长的正是"已知对象上的可验证计算"** ⟹ 闸门**恰好杀掉资产能干的活** ✗✗
+**(3) 闸门无罪、选择有罪**: `AMEND-9` 三次都正确拦截了"会被领域自己收割"的题（省下十余档）。**但一个把所有候选都拒掉的筛子，说明该换"选什么"，而不是放宽筛子** ✓✓
+```
+
+## §2 前台 AI 队的真实产出标准（对照）
+
+```
+$$\text{基准词}:\ \textbf{"dent"}=\text{对已发表纪录的\textbf{可验证有限改进}};\qquad \textbf{"residue"}=\text{不完全搜索}$$ ✓（我方档案已收录该口径）
+$$\text{他们的产出例}:\ \ell_2(10,2)\le50\ (\text{原 }51);\ \text{Sidon 二阶项 }0.94301;\ \text{union-closed }0.38305;\ \text{Cohn–Elkies 精确 }R;\ \text{CH }F_4\ \text{证书};\ \dots$$ ✓
+$$\textbf{关键}:\ \text{"dent"标准\textbf{不要求新机制}} —— \text{只要}\ \textbf{可验证 + 相对已发表纪录有改进}$$ ✓✓✓
+$$\Longrightarrow\ \text{我们在一场"比 dent"的比赛里，用的是"比新机制"的尺子}$$ ✗✗（**核心错配**）
+```
+
+## §3 `LANE-A`（DENT LANE）：**主轨**
+
+```
+$$\textbf{目标}:\ \text{对某个\textbf{已发表纪录}做可验证的有限改进（界／精确小情形／表格单元／证书）}$$ ✓✓
+$$\textbf{门槛}\ \texttt{D1}–\texttt{D5}\ (\text{取代 novelty 闸门}):$$
+$$\quad \texttt{D1}\ \text{明确纪录}:\ \text{谁的、什么值、出处};\qquad \texttt{D2}\ \text{我方目标值};\qquad \texttt{D3}\ \text{我方方法（可用成熟方法）};$$
+$$\quad \texttt{D4}\ \textbf{证书类型}:\ \text{机器可核（穷举／有理精确／Lean／可复现脚本）};\qquad \texttt{D5}\ \text{算力估计与上限}$$ ✓✓
+$$\textbf{不设}:\ \text{novelty／新机制／新对象要求};\qquad \textbf{但设}:\ \text{若该格已被收割 ⟹ 换格（不换标准）}$$ ✓
+$$\textbf{允许}:\ \text{对象是经典的};\ \text{方法是标准的};\ \text{结果是小 dent —— \textbf{只要可验证且相对纪录有改进}}$$ ✓✓
+```
+
+## §4 `LANE-B`（MECHANISM LANE）：**稀轨**
+
+```
+$$\text{现行严格管线全部保留}:\ \text{独立问题}\to\text{新对象/新机制}\to \texttt{P1}\text{–}\texttt{P8}\to SURVIVOR\text{-}5\to \texttt{AMEND-9}$$ ✓
+$$\text{触发条件}:\ \textbf{仅当出现真正的新源}（\text{见 }CAPMIX\ \S15\ \text{与 }AMEND\text{-}9\ \S3）$$ ✓
+$$\text{定位}:\ \text{不追求产出量，只追求突破级资产};\ \textbf{不设配额} $$ ✓
+```
+
+## §5 禁止错配（双向）
+
+```
+$$\boxed{\text{不得用 }LANE\text{-}B\ \text{的 novelty 闸门去杀 }LANE\text{-}A\ \text{候选}}$$ ✓✓（**这正是 `P7-2`／`P5-乙-3` 被拒的真实原因 —— 它们是"该被当 dent 打"的题）$$
+$$\boxed{\text{不得把 }LANE\text{-}A\ \text{的 dent 包装成"新机制"}}$$ ✓（`CONSTITUTION` 既有禁令不变）
+$$\text{归属判定}:\ \text{先问"这是要比纪录，还是比机制"}\ \Longrightarrow\ \text{再选闸门}$$
+```
+
+## §6 选择规则（`LANE-A` 内部）
+
+```
+$$\textbf{优先}\ \boxed{\text{reasoning-bound 而非 compute-bound}}\ \text{的格子（我方可胜）};\qquad \textbf{优先}\ \boxed{\text{verification-heavy}}\ \text{的格子}$$ ✓✓
+$$\textbf{回避}:\ \text{已大批量 LLM 演化搜索/并行算力收割的格子}（\text{如 }R(5,5)\text{／Hadamard／Zarankiewicz 前沿}）$$ ✓
+$$\textbf{我方独特点}:\ \text{精确证书 ＋ 穷举小情形 ＋ Lean ＋ 有理精确 ＋ "把含糊问题变成可验证断言"的能力}$$ ✓✓
+```
+
+## §7 判例
+
+```
+$$\boxed{LANE\text{-}A\ \text{成例}}:\ \texttt{C-380}\ \text{的 }k=4\ \text{不可行机器证书（}118{,}068\ \text{盒、零残差）};\quad \texttt{EDR-1}\ \text{严格定理}+\text{反例};\quad \text{两次独立证书互检}$$ ✓✓
+$$\boxed{LANE\text{-}B\ \text{成例}}:\ \texttt{Brown/Droll}\ \text{经典情形定理};\ \texttt{B9}\ \text{定理};\ \texttt{Lemma R}\ \text{Lean 形式化}$$ ✓
+$$\boxed{\text{误判判例}}:\ \texttt{CAP-MIX}\ (\text{12 档，事后属 }LANE\text{-}B\ \text{却按"可计算"启动})};\ \texttt{P7-2}／\texttt{P5-乙-3}\ (\text{被 }LANE\text{-}B\ \text{门拒，实为 }LANE\text{-}A\ \text{候选})$$ ✓✓
+$$
+
+## §8 首次执行
+
+```
+$$\textbf{下一动作}:\ \text{出 }1\ \text{张 }LANE\text{-}A\ \text{候选卡（填 } \texttt{D1}\text{–}\texttt{D5}）\ \Longrightarrow\ \text{由唐先生定夺是否开工}$$ ✓（**方向选择权保留给唐先生**）
+$$\text{注}:\ \text{可复用已拒条目 —— }P7-2／P5\text{-乙-}3\ \text{的"格"若存在\textbf{未被收割的具体单元}，可直接改写成 }LANE\text{-}A\ \text{卡（换格不换标准）}$$ ✓✓
+```
+
+## §附 【技术词回查】（补录）
+```
+技术词 dent             命中文件数=303  :: ./V167-five-device-audit-double-obligation-structure.md ./p3-uniform-decay-results.md ./grh-goldbach-paper-draft-v2.md 
+技术词 lane             命中文件数=18   :: ./V226-arithmetic-complex-localization-mechanism-audit.md ./ROUTE-1-tau-to-tau-t-BLOCKED-structurally-halfplane-vs-shrinking.md ./V145-archimedean-boundary-three-gate-audit-deninger-hit.md 
+```
