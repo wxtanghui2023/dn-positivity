@@ -5,7 +5,7 @@ exec(open("scripts/capmix1i_case4_and_falsewall.py").read().split("def main()")[
 def main():
     S={"case":0,"branch_ok":0,"branch_bad":0,"Jmatch":0,"Jmismatch":0}
     bad=[]
-    out=open("out/capmix1N_charExpansion.txt","w")
+    out=open("out/capmix1N_charExpansion_fixed.txt","w")
     plan=[(3,range(2,8)),(5,range(2,5)),(7,range(2,5)),(11,range(2,4)),(13,range(2,4)),(17,range(2,3)),(19,range(2,3))]
     for p,nr in plan:
         for n in nr:
@@ -59,7 +59,7 @@ def main():
                     w=negi(inv(addi(z,one)))
                     if w in Sset: Nstar+=1
                 size=len(G)-(1 if neg1 in Sset else 0)
-                JHp = mm*mm*Nstar - mm*size + A
+                JHp = mm*mm*Nstar - mm*size + 2*A
                 okbr = (lam_raw*mm*mm == pred + JH)
                 if okbr: S["branch_ok"]+=1
                 else: S["branch_bad"]+=1
