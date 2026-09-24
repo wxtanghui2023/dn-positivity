@@ -1,0 +1,57 @@
+n= 2 q=    4 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n= 3 q=    8 d=    7 ord2=3 3∤d=True  λ=   6 hyp=False
+n= 4 q=   16 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n= 4 q=   16 d=    5 ord2=4 3∤d=True  λ=   0 hyp=True 
+n= 4 q=   16 d=   15 ord2=4 3∤d=False λ=  14 hyp=False
+n= 5 q=   32 d=   31 ord2=5 3∤d=True  λ=  30 hyp=False
+n= 6 q=   64 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n= 6 q=   64 d=    7 ord2=3 3∤d=True  λ=   6 hyp=False
+n= 6 q=   64 d=    9 ord2=6 3∤d=False λ=   2 hyp=False
+n= 6 q=   64 d=   21 ord2=6 3∤d=False λ=   8 hyp=False
+n= 6 q=   64 d=   63 ord2=6 3∤d=False λ=  62 hyp=False
+n= 7 q=  128 d=  127 ord2=7 3∤d=True  λ= 126 hyp=False
+n= 8 q=  256 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n= 8 q=  256 d=    5 ord2=4 3∤d=True  λ=   0 hyp=True 
+n= 8 q=  256 d=   15 ord2=4 3∤d=False λ=  14 hyp=False
+n= 8 q=  256 d=   17 ord2=8 3∤d=True  λ=   0 hyp=True 
+n= 8 q=  256 d=   51 ord2=8 3∤d=False λ=   2 hyp=False
+n= 8 q=  256 d=   85 ord2=8 3∤d=True  λ=  24 hyp=False
+n= 8 q=  256 d=  255 ord2=8 3∤d=False λ= 254 hyp=False
+n= 9 q=  512 d=    7 ord2=3 3∤d=True  λ=   6 hyp=False
+n= 9 q=  512 d=   73 ord2=9 3∤d=True  λ=  18 hyp=False
+n= 9 q=  512 d=  511 ord2=9 3∤d=True  λ= 510 hyp=False
+n=10 q= 1024 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n=10 q= 1024 d=   11 ord2=10 3∤d=True  λ=   0 hyp=True 
+n=10 q= 1024 d=   31 ord2=5 3∤d=True  λ=  30 hyp=False
+n=10 q= 1024 d=   33 ord2=10 3∤d=False λ=   2 hyp=False
+n=10 q= 1024 d=   93 ord2=10 3∤d=False λ=  32 hyp=False
+n=10 q= 1024 d=  341 ord2=10 3∤d=True  λ= 120 hyp=False
+n=10 q= 1024 d= 1023 ord2=10 3∤d=False λ=1022 hyp=False
+n=11 q= 2048 d=   23 ord2=11 3∤d=True  λ=   0 hyp=False
+n=11 q= 2048 d=   89 ord2=11 3∤d=True  λ=   0 hyp=False
+n=11 q= 2048 d= 2047 ord2=11 3∤d=True  λ=2046 hyp=False
+n=12 q= 4096 d=    3 ord2=2 3∤d=False λ=   2 hyp=False
+n=12 q= 4096 d=    5 ord2=4 3∤d=True  λ=   0 hyp=True 
+n=12 q= 4096 d=    7 ord2=3 3∤d=True  λ=   6 hyp=False
+n=12 q= 4096 d=    9 ord2=6 3∤d=False λ=   2 hyp=False
+n=12 q= 4096 d=   13 ord2=12 3∤d=True  λ=   0 hyp=True 
+n=12 q= 4096 d=   15 ord2=4 3∤d=False λ=  14 hyp=False
+n=12 q= 4096 d=   21 ord2=6 3∤d=False λ=   8 hyp=False
+n=12 q= 4096 d=   35 ord2=12 3∤d=True  λ=   6 hyp=False
+n=12 q= 4096 d=   39 ord2=12 3∤d=False λ=   2 hyp=False
+n=12 q= 4096 d=   45 ord2=12 3∤d=False λ=  14 hyp=False
+n=12 q= 4096 d=   63 ord2=6 3∤d=False λ=  62 hyp=False
+n=12 q= 4096 d=   65 ord2=12 3∤d=True  λ=   0 hyp=True 
+n=12 q= 4096 d=   91 ord2=12 3∤d=True  λ=   6 hyp=False
+n=12 q= 4096 d=  105 ord2=12 3∤d=False λ=  20 hyp=False
+n=12 q= 4096 d=  117 ord2=12 3∤d=False λ=   2 hyp=False
+n=12 q= 4096 d=  195 ord2=12 3∤d=False λ=  14 hyp=False
+n=12 q= 4096 d=  273 ord2=12 3∤d=False λ=  32 hyp=False
+n=12 q= 4096 d=  315 ord2=12 3∤d=False λ=  74 hyp=False
+n=12 q= 4096 d=  455 ord2=12 3∤d=True  λ=   6 hyp=False
+n=12 q= 4096 d=  585 ord2=12 3∤d=False λ=  86 hyp=False
+n=12 q= 4096 d=  819 ord2=12 3∤d=False λ= 194 hyp=False
+n=12 q= 4096 d= 1365 ord2=12 3∤d=False λ= 440 hyp=False
+n=12 q= 4096 d= 4095 ord2=12 3∤d=False λ=4094 hyp=False
+n=13 q= 8192 d= 8191 ord2=13 3∤d=True  λ=8190 hyp=False
+STATS: {'cases': 56, 'hyp': 7, 'hyp_lam0': 7, 'hyp_viol': 0, 'noHyp_lam0': 2, 'noHyp_lam_pos': 47, 'ord_odd_lam0': 2, 'ord_odd_lam_pos': 38, 'd3_total': 6, 'd3_lam_pos': 6, 'cond2_only_drop_viol': 9, 'cond1_only_drop_viol': 16}
