@@ -1,0 +1,62 @@
+n= 3 q=     8 d=    7 r=   3 3|d=False sub=True  λ=    6 ρ=0.8571 α=1.00000
+n= 4 q=    16 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.20000
+n= 4 q=    16 d=    5 r=   4 3|d=False sub=False λ=    0 ρ=0.0000 α=0.33333
+n= 4 q=    16 d=   15 r=   4 3|d=True  sub=True  λ=   14 ρ=0.9333 α=1.00000
+n= 5 q=    32 d=   31 r=   5 3|d=False sub=True  λ=   30 ρ=0.9677 α=1.00000
+n= 6 q=    64 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.04762
+n= 6 q=    64 d=    7 r=   3 3|d=False sub=True  λ=    6 ρ=0.8571 α=0.11111
+n= 6 q=    64 d=    9 r=   6 3|d=True  sub=False λ=    2 ρ=0.2222 α=0.14286
+n= 6 q=    64 d=   21 r=   6 3|d=True  sub=False λ=    8 ρ=0.3810 α=0.33333
+n= 6 q=    64 d=   63 r=   6 3|d=True  sub=True  λ=   62 ρ=0.9841 α=1.00000
+n= 7 q=   128 d=  127 r=   7 3|d=False sub=True  λ=  126 ρ=0.9921 α=1.00000
+n= 8 q=   256 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.01176
+n= 8 q=   256 d=    5 r=   4 3|d=False sub=False λ=    0 ρ=0.0000 α=0.01961
+n= 8 q=   256 d=   15 r=   4 3|d=True  sub=True  λ=   14 ρ=0.9333 α=0.05882
+n= 8 q=   256 d=   17 r=   8 3|d=False sub=False λ=    0 ρ=0.0000 α=0.06667
+n= 8 q=   256 d=   51 r=   8 3|d=True  sub=False λ=    2 ρ=0.0392 α=0.20000
+n= 8 q=   256 d=   85 r=   8 3|d=False sub=False λ=   24 ρ=0.2824 α=0.33333
+n= 8 q=   256 d=  255 r=   8 3|d=True  sub=True  λ=  254 ρ=0.9961 α=1.00000
+n= 9 q=   512 d=    7 r=   3 3|d=False sub=True  λ=    6 ρ=0.8571 α=0.01370
+n= 9 q=   512 d=   73 r=   9 3|d=False sub=False λ=   18 ρ=0.2466 α=0.14286
+n= 9 q=   512 d=  511 r=   9 3|d=False sub=True  λ=  510 ρ=0.9980 α=1.00000
+n=10 q=  1024 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.00293
+n=10 q=  1024 d=   11 r=  10 3|d=False sub=False λ=    0 ρ=0.0000 α=0.01075
+n=10 q=  1024 d=   31 r=   5 3|d=False sub=True  λ=   30 ρ=0.9677 α=0.03030
+n=10 q=  1024 d=   33 r=  10 3|d=True  sub=False λ=    2 ρ=0.0606 α=0.03226
+n=10 q=  1024 d=   93 r=  10 3|d=True  sub=False λ=   32 ρ=0.3441 α=0.09091
+n=10 q=  1024 d=  341 r=  10 3|d=False sub=False λ=  120 ρ=0.3519 α=0.33333
+n=10 q=  1024 d= 1023 r=  10 3|d=True  sub=True  λ= 1022 ρ=0.9990 α=1.00000
+n=11 q=  2048 d=   23 r=  11 3|d=False sub=False λ=    0 ρ=0.0000 α=0.01124
+n=11 q=  2048 d=   89 r=  11 3|d=False sub=False λ=    0 ρ=0.0000 α=0.04348
+n=11 q=  2048 d= 2047 r=  11 3|d=False sub=True  λ= 2046 ρ=0.9995 α=1.00000
+n=12 q=  4096 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.00073
+n=12 q=  4096 d=    5 r=   4 3|d=False sub=False λ=    0 ρ=0.0000 α=0.00122
+n=12 q=  4096 d=    7 r=   3 3|d=False sub=True  λ=    6 ρ=0.8571 α=0.00171
+n=12 q=  4096 d=    9 r=   6 3|d=True  sub=False λ=    2 ρ=0.2222 α=0.00220
+n=12 q=  4096 d=   13 r=  12 3|d=False sub=False λ=    0 ρ=0.0000 α=0.00317
+n=12 q=  4096 d=   15 r=   4 3|d=True  sub=True  λ=   14 ρ=0.9333 α=0.00366
+n=12 q=  4096 d=   21 r=   6 3|d=True  sub=False λ=    8 ρ=0.3810 α=0.00513
+n=12 q=  4096 d=   35 r=  12 3|d=False sub=False λ=    6 ρ=0.1714 α=0.00855
+n=12 q=  4096 d=   39 r=  12 3|d=True  sub=False λ=    2 ρ=0.0513 α=0.00952
+n=12 q=  4096 d=   45 r=  12 3|d=True  sub=False λ=   14 ρ=0.3111 α=0.01099
+n=12 q=  4096 d=   63 r=   6 3|d=True  sub=True  λ=   62 ρ=0.9841 α=0.01538
+n=12 q=  4096 d=   65 r=  12 3|d=False sub=False λ=    0 ρ=0.0000 α=0.01587
+n=12 q=  4096 d=   91 r=  12 3|d=False sub=False λ=    6 ρ=0.0659 α=0.02222
+n=12 q=  4096 d=  105 r=  12 3|d=True  sub=False λ=   20 ρ=0.1905 α=0.02564
+n=12 q=  4096 d=  117 r=  12 3|d=True  sub=False λ=    2 ρ=0.0171 α=0.02857
+n=12 q=  4096 d=  195 r=  12 3|d=True  sub=False λ=   14 ρ=0.0718 α=0.04762
+n=12 q=  4096 d=  273 r=  12 3|d=True  sub=False λ=   32 ρ=0.1172 α=0.06667
+n=12 q=  4096 d=  315 r=  12 3|d=True  sub=False λ=   74 ρ=0.2349 α=0.07692
+n=12 q=  4096 d=  455 r=  12 3|d=False sub=False λ=    6 ρ=0.0132 α=0.11111
+n=12 q=  4096 d=  585 r=  12 3|d=True  sub=False λ=   86 ρ=0.1470 α=0.14286
+n=12 q=  4096 d=  819 r=  12 3|d=True  sub=False λ=  194 ρ=0.2369 α=0.20000
+n=12 q=  4096 d= 1365 r=  12 3|d=True  sub=False λ=  440 ρ=0.3223 α=0.33333
+n=12 q=  4096 d= 4095 r=  12 3|d=True  sub=True  λ= 4094 ρ=0.9998 α=1.00000
+n=13 q=  8192 d= 8191 r=  13 3|d=False sub=True  λ= 8190 ρ=0.9999 α=1.00000
+n=14 q= 16384 d=    3 r=   2 3|d=True  sub=True  λ=    2 ρ=0.6667 α=0.00018
+n=14 q= 16384 d=   43 r=  14 3|d=False sub=False λ=    0 ρ=0.0000 α=0.00262
+n=14 q= 16384 d=  127 r=   7 3|d=False sub=True  λ=  126 ρ=0.9921 α=0.00775
+n=14 q= 16384 d=  129 r=  14 3|d=True  sub=False λ=    2 ρ=0.0155 α=0.00787
+n=14 q= 16384 d=  381 r=  14 3|d=True  sub=False λ=  128 ρ=0.3360 α=0.02326
+n=14 q= 16384 d= 5461 r=  14 3|d=False sub=False λ= 1848 ρ=0.3384 α=0.33333
+n=14 q= 16384 d=16383 r=  14 3|d=True  sub=True  λ=16382 ρ=0.9999 α=1.00000
