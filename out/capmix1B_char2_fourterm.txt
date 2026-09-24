@@ -1,0 +1,40 @@
+n= 2 q=    4 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n= 3 q=    8 d=   7 pairs=    30 |valid|=   24 |V*|=    30 blind=True  truth=NONCAP  valid⊆V*
+n= 4 q=   16 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n= 4 q=   16 d=   5 pairs=    12 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n= 4 q=   16 d=  15 pairs=   182 |valid|=  168 |V*|=   182 blind=True  truth=NONCAP  valid⊆V*
+n= 5 q=   32 d=  31 pairs=   870 |valid|=  840 |V*|=   870 blind=True  truth=NONCAP  valid⊆V*
+n= 6 q=   64 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n= 6 q=   64 d=   7 pairs=    30 |valid|=   24 |V*|=    30 blind=True  truth=NONCAP  valid⊆V*
+n= 6 q=   64 d=   9 pairs=    56 |valid|=    0 |V*|=     2 blind=False truth=CAP     valid⊆V*
+n= 6 q=   64 d=  21 pairs=   380 |valid|=   96 |V*|=   104 blind=False truth=NONCAP  valid⊆V*
+n= 6 q=   64 d=  63 pairs=  3782 |valid|= 3720 |V*|=  3782 blind=True  truth=NONCAP  valid⊆V*
+n= 8 q=  256 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n= 8 q=  256 d=   5 pairs=    12 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n= 8 q=  256 d=  15 pairs=   182 |valid|=  168 |V*|=   182 blind=True  truth=NONCAP  valid⊆V*
+n= 8 q=  256 d=  17 pairs=   240 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n= 8 q=  256 d=  51 pairs=  2450 |valid|=  480 |V*|=   482 blind=False truth=NONCAP  valid⊆V*
+n= 8 q=  256 d=  85 pairs=  6972 |valid|= 2208 |V*|=  2232 blind=False truth=NONCAP  valid⊆V*
+n= 9 q=  512 d=   7 pairs=    30 |valid|=   24 |V*|=    30 blind=True  truth=NONCAP  valid⊆V*
+n= 9 q=  512 d=  73 pairs=  5112 |valid|=  720 |V*|=   738 blind=False truth=NONCAP  valid⊆V*
+n=10 q= 1024 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n=10 q= 1024 d=  11 pairs=    90 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n=10 q= 1024 d=  31 pairs=   870 |valid|=  840 |V*|=   870 blind=True  truth=NONCAP  valid⊆V*
+n=10 q= 1024 d=  33 pairs=   992 |valid|=    0 |V*|=     2 blind=False truth=CAP     valid⊆V*
+n=10 q= 1024 d=  93 pairs=  8372 |valid|= 1200 |V*|=  1232 blind=False truth=NONCAP  valid⊆V*
+n=11 q= 2048 d=  23 pairs=   462 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n=11 q= 2048 d=  89 pairs=  7656 |valid|=  264 |V*|=   264 blind=False truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=   3 pairs=     2 |valid|=    0 |V*|=     2 blind=True  truth=CAP     valid⊆V*
+n=12 q= 4096 d=   5 pairs=    12 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n=12 q= 4096 d=   7 pairs=    30 |valid|=   24 |V*|=    30 blind=True  truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=   9 pairs=    56 |valid|=    0 |V*|=     2 blind=False truth=CAP     valid⊆V*
+n=12 q= 4096 d=  13 pairs=   132 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n=12 q= 4096 d=  15 pairs=   182 |valid|=  168 |V*|=   182 blind=True  truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=  21 pairs=   380 |valid|=   96 |V*|=   104 blind=False truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=  35 pairs=  1122 |valid|=   24 |V*|=    30 blind=False truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=  39 pairs=  1406 |valid|=    0 |V*|=     2 blind=False truth=CAP     valid⊆V*
+n=12 q= 4096 d=  45 pairs=  1892 |valid|=  168 |V*|=   182 blind=False truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=  63 pairs=  3782 |valid|= 3720 |V*|=  3782 blind=True  truth=NONCAP  valid⊆V*
+n=12 q= 4096 d=  65 pairs=  4032 |valid|=    0 |V*|=     0 blind=False truth=CAP     valid⊆V*
+n=12 q= 4096 d=  91 pairs=  8010 |valid|=  120 |V*|=   126 blind=False truth=NONCAP  valid⊆V*
+STATS: {'case': 39, 'blind': 17, 'compress': 19, 'wall': 3, 'valid_not_in_Vstar': 0, 'cap_with_valid': 0, 'noncap_no_valid': 0}
