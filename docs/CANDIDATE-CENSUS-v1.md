@@ -179,3 +179,14 @@ $$\textbf{目标}:\ \text{非 }\texttt{COVERED/DUPLICATE}\ \text{者}\ \ge20\ \t
 技术词 candidate        命中文件数=125  :: ./candidate-proof-v1.md ./E-38-PRECEDENCE-CHAIN-and-NEXT-ROUND-DISCIPLINE.md ./RIGORIZATION-candidate-proof-v1-D0-implies-RH.md 
 技术词 census           命中文件数=17   :: ./C264-beta-sensitive-channel-census-three-gates-zero-candidates-and-the-location-vs-counting-criterion.md ./C3844-level3-entrance-audit.md ./C225-DAp-convergence-audit-six-branch-structure-resolved.md 
 ```
+
+---
+
+## §5 `S2-30 Final` 状态（2026-09-25，锁档 `docs/S2-30-FINAL-LOCK.md`）
+
+```
+C=4 (Gr05, Mt01, R03, Po02)  |  P=17  |  U=9  |  N=30
+Direct-cover rate=4/30=13.33%  |  survival=26/30=86.67%
+Po02 移出池; Po06 = U + SPEC-REQUIRED; Gr03 = P1(守)
+剩余 70 条 S2: 待跑 (iii 阶段); S3 冻结
+```
