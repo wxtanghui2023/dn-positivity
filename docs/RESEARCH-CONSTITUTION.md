@@ -3482,3 +3482,66 @@ $$\text{保留}:\ AMEND\text{-}10\ \text{双轨};\ AMEND\text{-}11\ \text{四差
 $$\text{收紧}:\ AMEND\text{-}9\ \text{仅保留 §2 的 }L1\text{（对象是否标准）与 }L2\text{（\textbf{是否直接覆盖}}）；L3/L4\ \text{降为"信息项"，\textbf{不单独构成 REJECT 理由}}$$ ✓✓
 $$\text{禁止}:\ \text{以"领域活跃／有人在做"为由拒绝单个具体命题};\ \text{以"量不新"为由拒绝};\ \text{以"资产不独占"为由拒绝}$$ ✓✓
 ```
+
+---
+
+# **AMEND-13：`Lean`／`Mathlib` 定位为**辅助工作**（不作研究线）—— 2026-09-25 立**
+
+> 判例来源：唐先生 16:40 定调：「Mathlib 和 Lean 都是配套辅助工作，并不是有明确价值的新项目。」
+
+D0: 本档对象 = **`Lean`/`Mathlib` 的定位裁定**：辅助类（非研究线）＋ `LANE-A/FORMAL-DENT` 线关闭 ＋ 指针更新 ＋ 判例台账与一条未来选题硬约束
+D1: 0（制度裁定档）
+[REVIEW]
+
+## §1 裁定（逐字口径）
+
+```
+$$\boxed{\text{Mathlib 与 Lean ＝ }\textbf{配套辅助工作};\quad \textbf{不是有明确价值的新项目}}$$ ✓✓
+```
+
+## §2 后果（三条）
+
+```
+**(1)** `LANE-A/FORMAL-DENT` 线（`LANE-A` 第二候选）\ \boxed{\textbf{CLOSED}} —— 不得再作为研究线推进 ✓
+**(2)** 现有 Lean 工件（`dn-project/lean/` 的 `PB-*`／`PA-*` 族、`tldc-lean/` 的 TLDC 骨架、`lean-frontier-audit/`、`external/liouville-goldbach/`）\ \textbf{保留为辅助资产};\ \textbf{不得据以申报 dent／成果} ✓✓
+**(3)** 未来任何"形式化／补 Mathlib 缺口"型提案，\textbf{一律归入辅助类};\ 若要升为研究线，须唐先生\textbf{显式解禁} ✓
+$$\text{同时作废此前口径}:\ \text{"Lean 侧补了 Mathlib 缺口"类声称\textbf{不得再出现}（与 }LANE\text{-}A\text{/}FORMAL\text{-}DENT\ \text{audit-1 的勘误一致）}$$ ✓
+```
+
+## §3 指针更新（照运行规则 6）
+
+```
+$$\textbf{研究线活跃条目}:\ \boxed{\textbf{无}}$$ —— `LANE-A` 两次尝试均出局:$$
+$$\qquad (i)\ Q1'\ \text{撞经典分圆数（}REJECT\text{）};\qquad (ii)\ FORMAL\text{-}DENT\ \text{被定调为辅助（CLOSED）}$$ ✓✓
+$$\textbf{合法状态}:\ \boxed{\text{等新源}}（\text{依 }AMEND\text{-}12\ \S3\ \text{与 }CAPMIX\ \S15）;\quad \text{不得造候选};\ \text{不得扫文献 OPEN 清单充数}$$ ✓
+$$\textbf{剩余条目}:\ P1\text{–}P8\ \text{清单仍在档};\ \text{若要动，须逐条过 }AMEND\text{-}12\ \text{两阶段门（零计算先验）}$$ ✓
+```
+
+## §4 判例台账（本线连续出局清单）
+
+```
+$$\begin{array}{c|c|c}
+\text{条目}&\text{结局}&\text{死因}\\
+\hline
+CAP\text{-}MIX&ARCHIVED&已知理论实例（乘法子群平移交集）\\
+P7\text{-}2&REJECT&本层边界已完全判定 ＋ 领域自收割 ＋ NP-hard 阻塞我方 }D\\
+P5\text{-}\text{乙-}3&REJECT&标准化后＝标准量组合（加法/乘法/混合能量）\\
+Q1'&REJECT&经典三次分圆数（}\lambda=(Q-8+A)/9\text{）}\\
+FORMAL\text{-}DENT&CLOSED&\textbf{定调为辅助工作}\\
+\end{array}$$ ✓✓
+$$\textbf{已关闭的通用抱怨（不得重开）}:\ \text{"缺算力"（}AMEND\text{-}11\ \text{已撤回）};\ \text{"闸门过严"（}AMEND\text{-}12\ \text{已修正）};\ \text{"换个名字继续"}$$ ✓
+```
+
+## §5 ⭐ 未来选题硬约束（本线教训的正式条款）
+
+```
+$$\text{任何新候选（不论 }LANE\text{-}A/B\text{）须先正面回答两问}:\quad \boxed{\text{Q-i}\ \text{为什么它不是"经典版图上的计数"？}}\quad \boxed{\text{Q-ii}\ \text{为什么它不是辅助工具？}}$$ ✓✓
+$$\text{背景}:\ LANE\text{-}A\ \text{两次出局的死因分别是"经典版图计数"（}Q1'\text{）与"辅助工具"（}FORMAL\text{-}DENT\text{）—— \textbf{这正是两问的由来}}$$ ✓✓
+$$\text{不得以}:\ \text{对象标准／方法标准／有人研究（}AMEND\text{-}12\ \S2\ \text{已禁）};\ \text{亦不得以"形式化／补库"充答} $$ ✓
+```
+
+## §附 【技术词回查】（补录）
+```
+技术词 auxiliary        命中文件数=2    :: ./E18-NOGO-ALIGNMENT-2.md ./M-NOGO-P0-P1-ISRG-and-loopholes.md 
+技术词 research line    命中文件数=0    :: 
+```
