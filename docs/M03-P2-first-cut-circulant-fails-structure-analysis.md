@@ -34,7 +34,7 @@ $$\begin{array}{c|c|c}
 \text{循环（}D_5\text{ 不变）} & 3 & \boxed{1,2,2}\ \checkmark\ \text{但 }c_2<0\ \textbf{FAIL}\\
 S_3\times S_2\text{ 不变} & 5 & 2,1,1,1\ ✗\\
 S_4\text{（含固定点）不变} & 3 & 1,1,3\ ✗\\
-\mathbb Z_2\text{ 对合 }(12)(34)\text{ 不变} & 10 & 2+3\ \text{分解};\ \text{可经}\ \textbf{2 条条件}\ \text{逼出}\ 1,2,2\ \checkmark\ \text{待搜}\\
+\mathbb Z_2\text{ 对合 }(12)(34)\text{ 不变} & \textbf{9（勘误：原记 10，实为 9）} & 2+3\ \text{分解};\ \text{可经}\ \textbf{2 条条件}\ \text{逼出}\ 1,2,2\ \checkmark\ \text{待搜}\\
 \text{块对角 }\operatorname{diag}(B_4,t) & — & 1,2,2\ \checkmark\ \text{但仅 }y=0\ (\text{可约})
 \end{array}$$ ✓✓
 $$\Longrightarrow\ \textbf{可用候选}:\ \mathbb Z_2\text{-不变族}（10\ \text{参数},\ 2\ \text{条件}:\ \text{奇部为标量}＋\text{偶部判别式}=0）\ \text{维数计数充足} \Longrightarrow \text{存在性可能，但需搜索}$$ ✓✓
