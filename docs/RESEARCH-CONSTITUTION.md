@@ -3202,3 +3202,85 @@ $\text{arithmetic compatibility}\Rightarrow\text{critical scale }X^{1/2}\Rightar
 ⚠️ 构造约束（非死亡审计）：本形状与 E3 重整化不动点同型；成败系于 C1/C2（操作与守恒律是否"定理级天然"）
 ```
 **⚠️ 本轮明确未做**：任何审计（G1–G5/反调参/Gate V/V-b）；未声称临界指数存在；未声称与 RH 连接
+
+---
+
+# **AMEND-9：文献新性闸门（NOVELTY GATE）—— 2026-09-25 立**
+
+> 判例来源：`CAP-MIX`（`docs/CAPMIX-FINAL-STAGE-REPORT.md` §17）。立规理由：CAP-MIX 全程未违反既有任何闸门，却在 `B11` 把问题形状从「判定 `\lambda=0`」换成「`\lambda` 的尺度是多少」，**恰好跨进经典对象**（有限域乘法子群 ∩ 加法平移的**大小**估计），而**换形状时未重跑文献核查** ⟹ 约 4 轮重推已知理论。故本闸门**绑定"问题形状"而非"入档课题"**。
+
+D0: 本档对象 = **`AMEND-9` 文献新性闸门**（触发信号／四层核查／硬门槛／顺序修正／绑定规则／判例／违规判定）
+D1: 0（制度档）
+[REVIEW]
+
+## §1 触发信号（出现任一即**立即**执行文献核查，不得继续计算）
+
+```
+$$\texttt{S1}:\ \text{得到平凡/无信息上界（如 }\lambda\le d\text{）且该量是某"计数"}\ \Longrightarrow\ \text{说明对象是标准计数问题}$$ ✓
+$$\texttt{S2}:\ \text{主项形如}\ \frac{d^2}{q}\ \text{（＝两密度 }\frac dq\ \text{集合的随机交主项）}\ \Longrightarrow\ \text{标准交集问题}$$ ✓✓
+$$\texttt{S3}:\ \text{余项出现}\ O(\sqrt q)\ \text{或}\ O(\sqrt Q)\ \text{型}\ \Longrightarrow\ \text{Weil/character-sum 领域}$$ ✓✓
+$$\texttt{S4}:\ \text{现象可自然写成"某代数结构}\ \cap\ \text{某平移"（或"某结构}\ \cap\ \text{某结构"}）\ \Longrightarrow\ \text{交集类文献}$$ ✓✓
+$$\texttt{S5}:\ \text{一个自然参数（如指标 }m\text{）同时控制全部观测（如 }\rho\approx1/m\text{）}\ \Longrightarrow\ \text{多为已知密度现象}$$ ✓
+$$\text{纪律}:\ \textbf{信号出现即触发；不得"先把现象做漂亮再查"}$$ ✓✓
+```
+
+## §2 四层核查表（**缺一层不算通过**）
+
+```
+$$\begin{array}{c|l}
+\text{层}&\text{必须查}\\
+\hline
+\text{L1 对象}&\text{该对象是否标准（如 }\text{mult. subgroup}\cap\text{additive translate）}\\
+\text{L2 计数}&|\ |G\cap(G+a)|\ |\ \text{型计数是否已有一般结果}\\
+\text{L3 方法}&\text{character sums／Jacobi sums／Weil／Stepanov／Garcia–Voloch 线}\\
+\text{L4 特殊化}&\text{本支线特殊参数（如 char 2、单平移、最小包含域）是否被覆盖}\\
+\end{array}$$ ✓✓
+$$\text{工具要求}:\ \textbf{对象}＋\textbf{等价表述}＋\textbf{标准方法}＋\textbf{特殊参数域}＋\textbf{已有 sharp bound}\ \text{五项皆须检索}$$ ✓✓（**禁止只搜关键词**）
+```
+
+## §3 硬门槛
+
+```
+$$\boxed{\text{凡结论可自然写成"有限域中乘法子群（或更一般的代数结构）}\cap\text{加法平移}\cap\text{交集计数"，投入计算前必须完成 L1–L4 文献封锁}}$$ ✓✓✓
+$$\text{未完成者}:\ \text{不得进入}\ \ge2\ \text{轮的计算/机制开发};\ \text{只允许做"能把它写成标准形状"的标准化本身}$$ ✓
+```
+
+## §4 顺序修正（**取代旧顺序**）
+
+```
+$$\textbf{旧（错误）}:\ \text{结构}\to\text{大量计算}\to\text{最后查文献}\qquad\textbf{新}:\ \boxed{\text{独立问题}\to\text{对象标准化}\to\text{NOVELTY GATE}\to\text{已有理论边界}\to\text{只剩缺口才算}}$$ ✓✓✓
+```
+
+## §5 绑定规则（本闸门的核心）
+
+```
+$$\boxed{\text{核查\textbf{绑定当前问题形状}，不绑定入档课题}};\qquad \text{对象/计数/主项/余项任一项换形状}\ \Longrightarrow\ \textbf{重跑 L1–L4}}$$ ✓✓✓
+$$\text{判例}:\ \text{CAP-MIX 入档时已核（源论文开放）\textbf{但} }\lambda\ \text{的尺度未核}\ \Longrightarrow\ \text{违规形态 = "换形状未重跑"}$$ ✓
+```
+
+## §6 判例档（`CAP-MIX`，供日后直接引用）
+
+```
+$$\textbf{价值定性}:\ \text{数学资产\textbf{有}（}B9\ \text{定理等）};\ \text{新机制\textbf{无}};\ \text{新问题\textbf{无}};\ \textbf{流程教训\textbf{很大}}$$ ✓
+$$\text{早该触发的信号}:\ \texttt{S1}（\lambda\le d\ \text{平凡}）\ \text{与}\ \texttt{S2/S3}（d^2/q+O(\sqrt q)\ \text{出现在 }B11\ \text{前即可预见）$$ ✓✓
+$$\textbf{本支线保留资产}:\ B9\ \text{定理（唯一自证，新性未核）};\ \text{三个否定证书};\ \text{最小包含域引理};\ \text{子域精确值}$$ ✓
+```
+
+## §7 违规判定与记录
+
+```
+$$\text{若跳过闸门且导致}\ \ge2\ \text{轮重推已知理论}\ \Longrightarrow\ \textbf{记为流程违规};\ \text{须在阶段报告中标出并计入"新性误判复盘"}$$ ✓
+$$\text{本档即为首次记录（CAP-MIX：}4\ \text{轮）};\ \text{此后同类情形一律按本条款记录}$$ ✓
+```
+
+## §8 提交链
+
+```
+58cfa53 CAPMIX 终期审计报告（§17 新性误判复盘）→ 本档（AMEND-9）
+```
+
+## §附 【技术词回查】（补录）
+```
+技术词 novelty gate     命中文件数=7    :: ./WHY-CANNOT-CREATE-TOOLS-bohr-and-tao.md ./II-D-CLOSED-and-why-RH-question.md ./RH-LINE-ASSET-VALUE-INVENTORY.md 
+技术词 literature check 命中文件数=3    :: ./E29-A5-4-burnol-li-isomorphism-check.md ./E18-NOGO-ALIGNMENT-2.md ./LIT1-turan-line-occupied.md 
+```
