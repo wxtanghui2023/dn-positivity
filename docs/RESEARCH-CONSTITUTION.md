@@ -3776,3 +3776,38 @@ $$\text{Zone-A 归类}:\ \boxed{\texttt{A+}\ \text{独立精确缺口}}\ |\ \tex
 $$\boxed{\text{extremal value}\ \ne\ \text{extremizer census}\ \ne\ \text{non-isomorphic extremizer census}}$$ ✓✓（\text{三者不得混}）
 $$\texttt{SP}\ \text{型须把"谱"具体化为}\ \operatorname{Spec}=\{\text{哪些 invariant}\},\ \text{否则只是标签}$$ ✓
 ```
+
+---
+
+# **AMEND-19：证明链优先（`proof-chain-first`）—— 2026-09-25 立**
+
+> 判例来源：唐先生 18:07「先建立证明链框架，再决定这个课题值不值得攻」。
+
+D0: 本档对象 = **方法论固化**：`P0`–`P5` 六层表 ＋ 链条顺序（定义→下界→存在→最优→分类）＋ **障碍链**要求 ＋ **进入计算的门槛**
+D1: 0（制度档）
+[REVIEW]
+
+## §1 六层（每个候选课题先填此表）
+
+```
+$$\begin{array}{c|c|c}
+\text{层}&\text{必须证明什么}&\text{攻击对象}\\
+\hline
+P0&\text{定义／参数／等价关系}&—\\
+P1&\text{下界}&\text{理论障碍}\\
+P2&\text{上界}&\text{显式构造}\\
+P3&\text{上下界相撞（＝最终命题）}&—\\
+P4&\text{（如需）极值对象分类}&\text{分类}\\
+P5&\text{（如需）唯一性／非同构计数}&\text{census}\\
+\end{array}$$ ✓✓
+```
+
+## §2 链条顺序（不得跳步）
+
+```
+$$\boxed{\text{目标命题}\to\text{必要条件}\to\text{障碍}\to\text{构造}\to\text{相撞}\to\text{结论}}$$ ✓✓✓
+$$\textbf{硬门槛}:\ \boxed{\text{只有 }P1\ \text{或 }P2\ \text{至少有一个真正的攻击入口，才值得继续}}$$ ✓✓
+$$\textbf{禁用}:\ \text{一上手就"枚举代码／找结构／跑 }SAT\text{"};\ \text{若连\textbf{关键缺口是什么}都说不清} \Longrightarrow \textbf{不进入大规模搜索}$$ ✓✓
+$$\textbf{障碍链要求}:\ \text{主链断时，先问"为什么另一侧不可能"},\ \text{把计算题转成\textbf{有数学内容的障碍证明链}}$$ ✓✓
+$$\textbf{可攻击判定}:\ \text{关键缺口已具体成一个数学对象（如"19 个 10-bit 列}\to\text{1024 syndromes"}）才算进入可攻击课题}$$ ✓
+```
