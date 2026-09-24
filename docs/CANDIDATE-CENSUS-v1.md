@@ -268,3 +268,15 @@ $$\textbf{Zone-A 状态}:\ C07\ \text{CLOSED},\ M03\ \text{CLOSED},\ Mt07\ \text
 $$\textbf{下一步}:\ \text{回完整候选表重做四维重筛（独立问题 × 新量 × 可证明性 × 前沿新性）；候选来源限 census 余项（\textsc{amend-22}）；}$$
 $$\qquad \text{若余项不足} \Longrightarrow \boxed{\text{WAITING FOR NEW SOURCE}}$$
 ```
+
+## §11 四维重筛结果（2026-09-24 22:15）
+
+```
+$$\textbf{重筛池（9 项）}:\ D03\ |\ G05,G06,G08,M04,Au06\ |\ P5\text{-乙-}2,P6,P8$$
+$$\boxed{\text{ENTER G0 的候选数}=\textbf{0}}$$
+$$\qquad \text{CLOSED（5）}:\ D03,\ G06,\ M04,\ Au06,\ P5\text{-乙-}2\ (\text{主因 }G2\ \text{新量不足})$$
+$$\qquad \text{DROP-pending-spec（2）}:\ G05,\ G08;\quad \text{DROP（形式受限）（2）}:\ P6,\ P8$$
+$$\Longrightarrow\ \boxed{\textbf{WAITING FOR NEW SOURCE}}$$
+$$\textbf{复活条件}:\ (a)\ \text{Zone-B 补 spec};(b)\ P6/P8\ \text{登记具体实例};(c)\ \text{CLOSED 项须出现新数学量};(d)\ \text{独立新来源直接进四闸}$$
+$$\textbf{纪律}:\ \text{不制造候选；不让 }D03\ \text{因“最后一项”获得优先权}$$
+```
