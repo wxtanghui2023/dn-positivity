@@ -1,0 +1,41 @@
+n= 2 q=    4 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 3 q=    8 d=   7 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=1
+n= 4 q=   16 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 4 q=   16 d=   5 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n= 4 q=   16 d=  15 λ=  14 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n= 5 q=   32 d=  31 λ=  30 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=1
+n= 6 q=   64 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 6 q=   64 d=   7 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=0
+n= 6 q=   64 d=   9 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 6 q=   64 d=  21 λ=   8 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n= 6 q=   64 d=  63 λ=  62 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n= 8 q=  256 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 8 q=  256 d=   5 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n= 8 q=  256 d=  15 λ=  14 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n= 8 q=  256 d=  17 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n= 8 q=  256 d=  51 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n= 8 q=  256 d=  85 λ=  24 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=0
+n= 9 q=  512 d=   7 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=1
+n= 9 q=  512 d=  73 λ=  18 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=1
+n=10 q= 1024 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n=10 q= 1024 d=  11 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n=10 q= 1024 d=  31 λ=  30 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=0
+n=10 q= 1024 d=  33 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n=10 q= 1024 d=  93 λ=  32 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n=11 q= 2048 d=  23 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=1
+n=11 q= 2048 d=  89 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=1
+n=12 q= 4096 d=   3 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n=12 q= 4096 d=   5 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n=12 q= 4096 d=   7 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=0
+n=12 q= 4096 d=   9 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n=12 q= 4096 d=  13 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=1 n2=0
+n=12 q= 4096 d=  15 λ=  14 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n=12 q= 4096 d=  21 λ=   8 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n=12 q= 4096 d=  35 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=2 n2=0
+n=12 q= 4096 d=  39 λ=   2 λmod3=2 fix=2 orbits=[1] dmod3=0 n2=0
+n=12 q= 4096 d=  45 λ=  14 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n=12 q= 4096 d=  63 λ=  62 λmod3=2 fix=2 orbits=[1, 3] dmod3=0 n2=0
+n=12 q= 4096 d=  65 λ=   0 λmod3=0 fix=0 orbits=[] dmod3=2 n2=0
+n=12 q= 4096 d=  91 λ=   6 λmod3=0 fix=0 orbits=[3] dmod3=1 n2=0
+STATS: {'case': 39, 'T_inv_bad': 0, 'lam_mod3_ok': 39, 'lam_mod3_bad': 0, 'orbit3_all': 19, 'orbit_not3': 20, 'fix2_when_3d': 20, 'fix0_when_not3d': 19, 'lam0_cases': 9, 'lam0_d3': 0, 'lam0_n_odd': 2, 'lam0_n_even': 7, 'lam0_other': 0}
+ORBHIST: {(1,): 11, (3,): 10, (): 9, (1, 3): 9}
