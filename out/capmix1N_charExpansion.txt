@@ -1,0 +1,205 @@
+p= 3 q=    9 d=    4 m=   2 -1∈G=True  λraw=    1 A=    1 J_H=       0 J_H'=      -1 N*=    1 MISMATCH
+p= 3 q=    9 d=    8 m=   1 -1∈G=True  λraw=    7 A=    0 J_H=       0 J_H'=       0 N*=    7 OK
+p= 3 q=   27 d=   13 m=   2 -1∈G=False λraw=    7 A=   -1 J_H=       0 J_H'=       1 N*=    7 MISMATCH
+p= 3 q=   27 d=   26 m=   1 -1∈G=True  λraw=   25 A=    0 J_H=       0 J_H'=       0 N*=   25 OK
+p= 3 q=   81 d=    4 m=  20 -1∈G=True  λraw=    1 A=   19 J_H=     378 J_H'=     359 N*=    1 MISMATCH
+p= 3 q=   81 d=    5 m=  16 -1∈G=False λraw=    1 A=   -1 J_H=     174 J_H'=     175 N*=    1 MISMATCH
+p= 3 q=   81 d=    8 m=  10 -1∈G=True  λraw=    7 A=    9 J_H=     648 J_H'=     639 N*=    7 MISMATCH
+p= 3 q=   81 d=   10 m=   8 -1∈G=True  λraw=    1 A=    7 J_H=       6 J_H'=      -1 N*=    1 MISMATCH
+p= 3 q=   81 d=   16 m=   5 -1∈G=True  λraw=    7 A=    4 J_H=     108 J_H'=     104 N*=    7 MISMATCH
+p= 3 q=   81 d=   20 m=   4 -1∈G=True  λraw=    1 A=    3 J_H=     -54 J_H'=     -57 N*=    1 MISMATCH
+p= 3 q=   81 d=   40 m=   2 -1∈G=True  λraw=   19 A=    1 J_H=       0 J_H'=      -1 N*=   19 MISMATCH
+p= 3 q=   81 d=   80 m=   1 -1∈G=True  λraw=   79 A=    0 J_H=       0 J_H'=       0 N*=   79 OK
+p= 3 q=  243 d=   11 m=  22 -1∈G=False λraw=    1 A=   -1 J_H=     240 J_H'=     241 N*=    1 MISMATCH
+p= 3 q=  243 d=   22 m=  11 -1∈G=True  λraw=    1 A=   10 J_H=     -90 J_H'=    -100 N*=    1 MISMATCH
+p= 3 q=  243 d=  121 m=   2 -1∈G=False λraw=   61 A=   -1 J_H=       0 J_H'=       1 N*=   61 MISMATCH
+p= 3 q=  243 d=  242 m=   1 -1∈G=True  λraw=  241 A=    0 J_H=       0 J_H'=       0 N*=  241 OK
+p= 3 q=  729 d=    4 m= 182 -1∈G=True  λraw=    1 A=  181 J_H=   32940 J_H'=   32759 N*=    1 MISMATCH
+p= 3 q=  729 d=    7 m= 104 -1∈G=False λraw=    1 A=   -1 J_H=   10086 J_H'=   10087 N*=    1 MISMATCH
+p= 3 q=  729 d=    8 m=  91 -1∈G=True  λraw=    7 A=   90 J_H=   57510 J_H'=   57420 N*=    7 MISMATCH
+p= 3 q=  729 d=   13 m=  56 -1∈G=False λraw=    7 A=   -1 J_H=   21222 J_H'=   21223 N*=    7 MISMATCH
+p= 3 q=  729 d=   14 m=  52 -1∈G=True  λraw=    1 A=   51 J_H=    2130 J_H'=    2079 N*=    1 MISMATCH
+p= 3 q=  729 d=   26 m=  28 -1∈G=True  λraw=   25 A=   27 J_H=   18954 J_H'=   18927 N*=   25 MISMATCH
+p= 3 q=  729 d=   28 m=  26 -1∈G=True  λraw=    1 A=   25 J_H=      24 J_H'=      -1 N*=    1 MISMATCH
+p= 3 q=  729 d=   52 m=  14 -1∈G=True  λraw=   25 A=   13 J_H=    4212 J_H'=    4199 N*=   25 MISMATCH
+p= 3 q=  729 d=   56 m=  13 -1∈G=True  λraw=    7 A=   12 J_H=     492 J_H'=     480 N*=    7 MISMATCH
+p= 3 q=  729 d=   91 m=   8 -1∈G=False λraw=   19 A=   -1 J_H=     486 J_H'=     487 N*=   19 MISMATCH
+p= 3 q=  729 d=  104 m=   7 -1∈G=True  λraw=   31 A=    6 J_H=     810 J_H'=     804 N*=   31 MISMATCH
+p= 3 q=  729 d=  182 m=   4 -1∈G=True  λraw=   55 A=    3 J_H=     162 J_H'=     159 N*=   55 MISMATCH
+p= 3 q=  729 d=  364 m=   2 -1∈G=True  λraw=  181 A=    1 J_H=       0 J_H'=      -1 N*=  181 MISMATCH
+p= 3 q=  729 d=  728 m=   1 -1∈G=True  λraw=  727 A=    0 J_H=       0 J_H'=       0 N*=  727 OK
+p= 3 q= 2187 d= 1093 m=   2 -1∈G=False λraw=  547 A=   -1 J_H=       0 J_H'=       1 N*=  547 MISMATCH
+p= 5 q=   25 d=    3 m=   8 -1∈G=False λraw=    2 A=   -1 J_H=     102 J_H'=     103 N*=    2 MISMATCH
+p= 5 q=   25 d=    4 m=   6 -1∈G=True  λraw=    3 A=    5 J_H=     100 J_H'=      95 N*=    3 MISMATCH
+p= 5 q=   25 d=    6 m=   4 -1∈G=True  λraw=    2 A=    3 J_H=      18 J_H'=      15 N*=    2 MISMATCH
+p= 5 q=   25 d=    8 m=   3 -1∈G=True  λraw=    3 A=    2 J_H=      10 J_H'=       8 N*=    3 MISMATCH
+p= 5 q=   25 d=   12 m=   2 -1∈G=True  λraw=    5 A=    1 J_H=       0 J_H'=      -1 N*=    5 MISMATCH
+p= 5 q=   25 d=   24 m=   1 -1∈G=True  λraw=   23 A=    0 J_H=       0 J_H'=       0 N*=   23 OK
+p= 5 q=  125 d=    4 m=  31 -1∈G=True  λraw=    3 A=   30 J_H=    2850 J_H'=    2820 N*=    3 MISMATCH
+p= 5 q=  125 d=   31 m=   4 -1∈G=False λraw=   12 A=   -1 J_H=      66 J_H'=      67 N*=   12 MISMATCH
+p= 5 q=  125 d=   62 m=   2 -1∈G=True  λraw=   30 A=    1 J_H=       0 J_H'=      -1 N*=   30 MISMATCH
+p= 5 q=  125 d=  124 m=   1 -1∈G=True  λraw=  123 A=    0 J_H=       0 J_H'=       0 N*=  123 OK
+p= 5 q=  625 d=    3 m= 208 -1∈G=False λraw=    2 A=   -1 J_H=   85902 J_H'=   85903 N*=    2 MISMATCH
+p= 5 q=  625 d=    4 m= 156 -1∈G=True  λraw=    3 A=  155 J_H=   72850 J_H'=   72695 N*=    3 MISMATCH
+p= 5 q=  625 d=    6 m= 104 -1∈G=True  λraw=    2 A=  103 J_H=   21318 J_H'=   21215 N*=    2 MISMATCH
+p= 5 q=  625 d=    8 m=  78 -1∈G=True  λraw=    3 A=   77 J_H=   17860 J_H'=   17783 N*=    3 MISMATCH
+p= 5 q=  625 d=   12 m=  52 -1∈G=True  λraw=    5 A=   51 J_H=   13050 J_H'=   12999 N*=    5 MISMATCH
+p= 5 q=  625 d=   13 m=  48 -1∈G=False λraw=    0 A=   -1 J_H=    -626 J_H'=    -625 N*=    0 MISMATCH
+p= 5 q=  625 d=   16 m=  39 -1∈G=True  λraw=    3 A=   38 J_H=    4054 J_H'=    4016 N*=    3 MISMATCH
+p= 5 q=  625 d=   24 m=  26 -1∈G=True  λraw=   23 A=   25 J_H=   15000 J_H'=   14975 N*=   23 MISMATCH
+p= 5 q=  625 d=   26 m=  24 -1∈G=True  λraw=    0 A=   23 J_H=    -554 J_H'=    -577 N*=    0 MISMATCH
+p= 5 q=  625 d=   39 m=  16 -1∈G=False λraw=    2 A=   -1 J_H=    -114 J_H'=    -113 N*=    2 MISMATCH
+p= 5 q=  625 d=   48 m=  13 -1∈G=True  λraw=   23 A=   12 J_H=    3300 J_H'=    3288 N*=   23 MISMATCH
+p= 5 q=  625 d=   52 m=  12 -1∈G=True  λraw=    3 A=   11 J_H=    -158 J_H'=    -169 N*=    3 MISMATCH
+p= 5 q=  625 d=   78 m=   8 -1∈G=True  λraw=    2 A=    7 J_H=    -474 J_H'=    -481 N*=    2 MISMATCH
+p= 5 q=  625 d=  104 m=   6 -1∈G=True  λraw=    3 A=    5 J_H=    -500 J_H'=    -505 N*=    3 MISMATCH
+p= 5 q=  625 d=  156 m=   4 -1∈G=True  λraw=   41 A=    3 J_H=      42 J_H'=      39 N*=   41 MISMATCH
+p= 5 q=  625 d=  208 m=   3 -1∈G=True  λraw=   63 A=    2 J_H=     -50 J_H'=     -52 N*=   63 MISMATCH
+p= 5 q=  625 d=  312 m=   2 -1∈G=True  λraw=  155 A=    1 J_H=       0 J_H'=      -1 N*=  155 MISMATCH
+p= 5 q=  625 d=  624 m=   1 -1∈G=True  λraw=  623 A=    0 J_H=       0 J_H'=       0 N*=  623 OK
+p= 7 q=   49 d=    3 m=  16 -1∈G=False λraw=    2 A=   -1 J_H=     462 J_H'=     463 N*=    2 MISMATCH
+p= 7 q=   49 d=    4 m=  12 -1∈G=True  λraw=    0 A=   11 J_H=     -14 J_H'=     -25 N*=    0 MISMATCH
+p= 7 q=   49 d=    6 m=   8 -1∈G=True  λraw=    5 A=    7 J_H=     294 J_H'=     287 N*=    5 MISMATCH
+p= 7 q=   49 d=    8 m=   6 -1∈G=True  λraw=    0 A=    5 J_H=     -32 J_H'=     -37 N*=    0 MISMATCH
+p= 7 q=   49 d=   12 m=   4 -1∈G=True  λraw=    5 A=    3 J_H=      42 J_H'=      39 N*=    5 MISMATCH
+p= 7 q=   49 d=   16 m=   3 -1∈G=True  λraw=    6 A=    2 J_H=      13 J_H'=      11 N*=    6 MISMATCH
+p= 7 q=   49 d=   24 m=   2 -1∈G=True  λraw=   11 A=    1 J_H=       0 J_H'=      -1 N*=   11 MISMATCH
+p= 7 q=   49 d=   48 m=   1 -1∈G=True  λraw=   47 A=    0 J_H=       0 J_H'=       0 N*=   47 OK
+p= 7 q=  343 d=    3 m= 114 -1∈G=False λraw=    2 A=   -1 J_H=   25648 J_H'=   25649 N*=    2 MISMATCH
+p= 7 q=  343 d=    6 m=  57 -1∈G=True  λraw=    5 A=   56 J_H=   16072 J_H'=   16016 N*=    5 MISMATCH
+p= 7 q=  343 d=    9 m=  38 -1∈G=False λraw=    2 A=   -1 J_H=    2544 J_H'=    2545 N*=    2 MISMATCH
+p= 7 q=  343 d=   18 m=  19 -1∈G=True  λraw=    5 A=   18 J_H=    1518 J_H'=    1500 N*=    5 MISMATCH
+p= 7 q=  343 d=   19 m=  18 -1∈G=False λraw=    6 A=   -1 J_H=    1600 J_H'=    1601 N*=    6 MISMATCH
+p= 7 q=  343 d=   38 m=   9 -1∈G=True  λraw=    6 A=    8 J_H=     169 J_H'=     161 N*=    6 MISMATCH
+p= 7 q=  343 d=   57 m=   6 -1∈G=False λraw=   14 A=   -1 J_H=     160 J_H'=     161 N*=   14 MISMATCH
+p= 7 q=  343 d=  114 m=   3 -1∈G=True  λraw=   35 A=    2 J_H=     -20 J_H'=     -22 N*=   35 MISMATCH
+p= 7 q=  343 d=  171 m=   2 -1∈G=False λraw=   86 A=   -1 J_H=       0 J_H'=       1 N*=   86 MISMATCH
+p= 7 q=  343 d=  342 m=   1 -1∈G=True  λraw=  341 A=    0 J_H=       0 J_H'=       0 N*=  341 OK
+p= 7 q= 2401 d=    3 m= 800 -1∈G=False λraw=    2 A=   -1 J_H= 1277598 J_H'= 1277599 N*=    2 MISMATCH
+p= 7 q= 2401 d=    4 m= 600 -1∈G=True  λraw=    0 A=  599 J_H=    -602 J_H'=   -1201 N*=    0 MISMATCH
+p= 7 q= 2401 d=    5 m= 480 -1∈G=False λraw=    0 A=   -1 J_H=   -2402 J_H'=   -2401 N*=    0 MISMATCH
+p= 7 q= 2401 d=    6 m= 400 -1∈G=True  λraw=    5 A=  399 J_H=  798798 J_H'=  798399 N*=    5 MISMATCH
+p= 7 q= 2401 d=    8 m= 300 -1∈G=True  λraw=    0 A=  299 J_H=   -1502 J_H'=   -1801 N*=    0 MISMATCH
+p= 7 q= 2401 d=   10 m= 240 -1∈G=True  λraw=    0 A=  239 J_H=   -1682 J_H'=   -1921 N*=    0 MISMATCH
+p= 7 q= 2401 d=   12 m= 200 -1∈G=True  λraw=    5 A=  199 J_H=  198198 J_H'=  197999 N*=    5 MISMATCH
+p= 7 q= 2401 d=   15 m= 160 -1∈G=False λraw=    2 A=   -1 J_H=   48798 J_H'=   48799 N*=    2 MISMATCH
+p= 7 q= 2401 d=   16 m= 150 -1∈G=True  λraw=    6 A=  149 J_H=  133048 J_H'=  132899 N*=    6 MISMATCH
+p= 7 q= 2401 d=   20 m= 120 -1∈G=True  λraw=    0 A=  119 J_H=   -2042 J_H'=   -2161 N*=    0 MISMATCH
+p= 7 q= 2401 d=   24 m= 100 -1∈G=True  λraw=   11 A=   99 J_H=  107898 J_H'=  107799 N*=   11 MISMATCH
+p= 7 q= 2401 d=   25 m=  96 -1∈G=False λraw=    0 A=   -1 J_H=   -2402 J_H'=   -2401 N*=    0 MISMATCH
+p= 7 q= 2401 d=   30 m=  80 -1∈G=True  λraw=    5 A=   79 J_H=   29838 J_H'=   29759 N*=    5 MISMATCH
+p= 7 q= 2401 d=   32 m=  75 -1∈G=True  λraw=    6 A=   74 J_H=   31573 J_H'=   31499 N*=    6 MISMATCH
+p= 7 q= 2401 d=   40 m=  60 -1∈G=True  λraw=    0 A=   59 J_H=   -2222 J_H'=   -2281 N*=    0 MISMATCH
+p= 7 q= 2401 d=   48 m=  50 -1∈G=True  λraw=   47 A=   49 J_H=  115248 J_H'=  115199 N*=   47 MISMATCH
+p= 7 q= 2401 d=   50 m=  48 -1∈G=True  λraw=    0 A=   47 J_H=   -2258 J_H'=   -2305 N*=    0 MISMATCH
+p= 7 q= 2401 d=   60 m=  40 -1∈G=True  λraw=    5 A=   39 J_H=    5718 J_H'=    5679 N*=    5 MISMATCH
+p= 7 q= 2401 d=   75 m=  32 -1∈G=False λraw=    2 A=   -1 J_H=    -354 J_H'=    -353 N*=    2 MISMATCH
+p= 7 q= 2401 d=   80 m=  30 -1∈G=True  λraw=   18 A=   29 J_H=   13888 J_H'=   13859 N*=   18 MISMATCH
+p= 7 q= 2401 d=   96 m=  25 -1∈G=True  λraw=   47 A=   24 J_H=   27048 J_H'=   27024 N*=   47 MISMATCH
+p= 7 q= 2401 d=  100 m=  24 -1∈G=True  λraw=    0 A=   23 J_H=   -2330 J_H'=   -2353 N*=    0 MISMATCH
+p= 7 q= 2401 d=  120 m=  20 -1∈G=True  λraw=   11 A=   19 J_H=    2058 J_H'=    2039 N*=   11 MISMATCH
+p= 7 q= 2401 d=  150 m=  16 -1∈G=True  λraw=    5 A=   15 J_H=   -1074 J_H'=   -1089 N*=    5 MISMATCH
+p= 7 q= 2401 d=  160 m=  15 -1∈G=True  λraw=   18 A=   14 J_H=    1693 J_H'=    1679 N*=   18 MISMATCH
+p= 7 q= 2401 d=  200 m=  12 -1∈G=True  λraw=   12 A=   11 J_H=    -638 J_H'=    -649 N*=   12 MISMATCH
+p= 7 q= 2401 d=  240 m=  10 -1∈G=True  λraw=   59 A=    9 J_H=    3528 J_H'=    3519 N*=   59 MISMATCH
+p= 7 q= 2401 d=  300 m=   8 -1∈G=True  λraw=    5 A=    7 J_H=   -2058 J_H'=   -2065 N*=    5 MISMATCH
+p= 7 q= 2401 d=  400 m=   6 -1∈G=True  λraw=   78 A=    5 J_H=     424 J_H'=     419 N*=   78 MISMATCH
+p= 7 q= 2401 d=  480 m=   5 -1∈G=True  λraw=  119 A=    4 J_H=     588 J_H'=     584 N*=  119 MISMATCH
+p= 7 q= 2401 d=  600 m=   4 -1∈G=True  λraw=  131 A=    3 J_H=    -294 J_H'=    -297 N*=  131 MISMATCH
+p= 7 q= 2401 d=  800 m=   3 -1∈G=True  λraw=  258 A=    2 J_H=     -71 J_H'=     -73 N*=  258 MISMATCH
+p= 7 q= 2401 d= 1200 m=   2 -1∈G=True  λraw=  599 A=    1 J_H=       0 J_H'=      -1 N*=  599 MISMATCH
+p=11 q=  121 d=    3 m=  40 -1∈G=False λraw=    2 A=   -1 J_H=    3078 J_H'=    3079 N*=    2 MISMATCH
+p=11 q=  121 d=    4 m=  30 -1∈G=True  λraw=    0 A=   29 J_H=     -32 J_H'=     -61 N*=    0 MISMATCH
+p=11 q=  121 d=    5 m=  24 -1∈G=False λraw=    3 A=   -1 J_H=    1606 J_H'=    1607 N*=    3 MISMATCH
+p=11 q=  121 d=    6 m=  20 -1∈G=True  λraw=    2 A=   19 J_H=     738 J_H'=     719 N*=    2 MISMATCH
+p=11 q=  121 d=    8 m=  15 -1∈G=True  λraw=    0 A=   14 J_H=     -77 J_H'=     -91 N*=    0 MISMATCH
+p=11 q=  121 d=   10 m=  12 -1∈G=True  λraw=    9 A=   11 J_H=    1210 J_H'=    1199 N*=    9 MISMATCH
+p=11 q=  121 d=   12 m=  10 -1∈G=True  λraw=    2 A=    9 J_H=     108 J_H'=      99 N*=    2 MISMATCH
+p=11 q=  121 d=   15 m=   8 -1∈G=False λraw=    5 A=   -1 J_H=     198 J_H'=     199 N*=    5 MISMATCH
+p=11 q=  121 d=   20 m=   6 -1∈G=True  λraw=    9 A=    5 J_H=     220 J_H'=     215 N*=    9 MISMATCH
+p=11 q=  121 d=   24 m=   5 -1∈G=True  λraw=    2 A=    4 J_H=     -57 J_H'=     -61 N*=    2 MISMATCH
+p=11 q=  121 d=   30 m=   4 -1∈G=True  λraw=   11 A=    3 J_H=      66 J_H'=      63 N*=   11 MISMATCH
+p=11 q=  121 d=   40 m=   3 -1∈G=True  λraw=   15 A=    2 J_H=      22 J_H'=      20 N*=   15 MISMATCH
+p=11 q=  121 d=   60 m=   2 -1∈G=True  λraw=   29 A=    1 J_H=       0 J_H'=      -1 N*=   29 MISMATCH
+p=11 q=  121 d=  120 m=   1 -1∈G=True  λraw=  119 A=    0 J_H=       0 J_H'=       0 N*=  119 OK
+p=11 q= 1331 d=    5 m= 266 -1∈G=False λraw=    3 A=   -1 J_H=  210936 J_H'=  210937 N*=    3 MISMATCH
+p=11 q= 1331 d=    7 m= 190 -1∈G=False λraw=    0 A=   -1 J_H=   -1332 J_H'=   -1331 N*=    0 MISMATCH
+p=11 q= 1331 d=   10 m= 133 -1∈G=True  λraw=    9 A=  132 J_H=  158268 J_H'=  158136 N*=    9 MISMATCH
+p=11 q= 1331 d=   14 m=  95 -1∈G=True  λraw=    0 A=   94 J_H=   -1047 J_H'=   -1141 N*=    0 MISMATCH
+p=11 q= 1331 d=   19 m=  70 -1∈G=False λraw=    0 A=   -1 J_H=   -1332 J_H'=   -1331 N*=    0 MISMATCH
+p=11 q= 1331 d=   35 m=  38 -1∈G=False λraw=    3 A=   -1 J_H=    3000 J_H'=    3001 N*=    3 MISMATCH
+p=11 q= 1331 d=   38 m=  35 -1∈G=True  λraw=    0 A=   34 J_H=   -1227 J_H'=   -1261 N*=    0 MISMATCH
+p=11 q= 1331 d=   70 m=  19 -1∈G=True  λraw=    9 A=   18 J_H=    1974 J_H'=    1956 N*=    9 MISMATCH
+p=11 q= 1331 d=   95 m=  14 -1∈G=False λraw=   21 A=   -1 J_H=    2784 J_H'=    2785 N*=   21 MISMATCH
+p=11 q= 1331 d=  133 m=  10 -1∈G=False λraw=   24 A=   -1 J_H=    1068 J_H'=    1069 N*=   24 MISMATCH
+p=11 q= 1331 d=  190 m=   7 -1∈G=True  λraw=   27 A=    6 J_H=      12 J_H'=       6 N*=   27 MISMATCH
+p=11 q= 1331 d=  266 m=   5 -1∈G=True  λraw=   60 A=    4 J_H=     183 J_H'=     179 N*=   60 MISMATCH
+p=11 q= 1331 d=  665 m=   2 -1∈G=False λraw=  333 A=   -1 J_H=       0 J_H'=       1 N*=  333 MISMATCH
+p=13 q=  169 d=    3 m=  56 -1∈G=False λraw=    2 A=   -1 J_H=    6102 J_H'=    6103 N*=    2 MISMATCH
+p=13 q=  169 d=    4 m=  42 -1∈G=True  λraw=    0 A=   41 J_H=     -44 J_H'=     -85 N*=    0 MISMATCH
+p=13 q=  169 d=    6 m=  28 -1∈G=True  λraw=    2 A=   27 J_H=    1482 J_H'=    1455 N*=    2 MISMATCH
+p=13 q=  169 d=    7 m=  24 -1∈G=False λraw=    0 A=   -1 J_H=    -170 J_H'=    -169 N*=    0 MISMATCH
+p=13 q=  169 d=    8 m=  21 -1∈G=True  λraw=    0 A=   20 J_H=    -107 J_H'=    -127 N*=    0 MISMATCH
+p=13 q=  169 d=   12 m=  14 -1∈G=True  λraw=   11 A=   13 J_H=    2028 J_H'=    2015 N*=   11 MISMATCH
+p=13 q=  169 d=   14 m=  12 -1∈G=True  λraw=    0 A=   11 J_H=    -134 J_H'=    -145 N*=    0 MISMATCH
+p=13 q=  169 d=   21 m=   8 -1∈G=False λraw=    8 A=   -1 J_H=     342 J_H'=     343 N*=    8 MISMATCH
+p=13 q=  169 d=   24 m=   7 -1∈G=True  λraw=   11 A=    6 J_H=     390 J_H'=     384 N*=   11 MISMATCH
+p=13 q=  169 d=   28 m=   6 -1∈G=True  λraw=    6 A=    5 J_H=      64 J_H'=      59 N*=    6 MISMATCH
+p=13 q=  169 d=   42 m=   4 -1∈G=True  λraw=    8 A=    3 J_H=     -30 J_H'=     -33 N*=    8 MISMATCH
+p=13 q=  169 d=   56 m=   3 -1∈G=True  λraw=   18 A=    2 J_H=       1 J_H'=      -1 N*=   18 MISMATCH
+p=13 q=  169 d=   84 m=   2 -1∈G=True  λraw=   41 A=    1 J_H=       0 J_H'=      -1 N*=   41 MISMATCH
+p=13 q=  169 d=  168 m=   1 -1∈G=True  λraw=  167 A=    0 J_H=       0 J_H'=       0 N*=  167 OK
+p=13 q= 2197 d=    3 m= 732 -1∈G=False λraw=    2 A=   -1 J_H= 1069450 J_H'= 1069451 N*=    2 MISMATCH
+p=13 q= 2197 d=    4 m= 549 -1∈G=True  λraw=    0 A=  548 J_H=    -551 J_H'=   -1099 N*=    0 MISMATCH
+p=13 q= 2197 d=    6 m= 366 -1∈G=True  λraw=    2 A=  365 J_H=  266812 J_H'=  266447 N*=    2 MISMATCH
+p=13 q= 2197 d=    9 m= 244 -1∈G=False λraw=    2 A=   -1 J_H=  116874 J_H'=  116875 N*=    2 MISMATCH
+p=13 q= 2197 d=   12 m= 183 -1∈G=True  λraw=   11 A=  182 J_H=  366730 J_H'=  366548 N*=   11 MISMATCH
+p=13 q= 2197 d=   18 m= 122 -1∈G=True  λraw=    2 A=  121 J_H=   27936 J_H'=   27815 N*=    2 MISMATCH
+p=13 q= 2197 d=   36 m=  61 -1∈G=True  λraw=   11 A=   60 J_H=   38916 J_H'=   38856 N*=   11 MISMATCH
+p=13 q= 2197 d=   61 m=  36 -1∈G=False λraw=    6 A=   -1 J_H=    5578 J_H'=    5579 N*=    6 MISMATCH
+p=13 q= 2197 d=  122 m=  18 -1∈G=True  λraw=    6 A=   17 J_H=    -200 J_H'=    -217 N*=    6 MISMATCH
+p=13 q= 2197 d=  183 m=  12 -1∈G=False λraw=   26 A=   -1 J_H=    1546 J_H'=    1547 N*=   26 MISMATCH
+p=13 q= 2197 d=  244 m=   9 -1∈G=True  λraw=    6 A=    8 J_H=   -1685 J_H'=   -1693 N*=    6 MISMATCH
+p=13 q= 2197 d=  366 m=   6 -1∈G=True  λraw=   80 A=    5 J_H=     700 J_H'=     695 N*=   80 MISMATCH
+p=13 q= 2197 d=  549 m=   4 -1∈G=False λraw=  134 A=   -1 J_H=     -54 J_H'=     -53 N*=  134 MISMATCH
+p=13 q= 2197 d=  732 m=   3 -1∈G=True  λraw=  251 A=    2 J_H=      70 J_H'=      68 N*=  251 MISMATCH
+p=13 q= 2197 d= 1098 m=   2 -1∈G=True  λraw=  548 A=    1 J_H=       0 J_H'=      -1 N*=  548 MISMATCH
+p=17 q=  289 d=    3 m=  96 -1∈G=False λraw=    2 A=   -1 J_H=   18142 J_H'=   18143 N*=    2 MISMATCH
+p=17 q=  289 d=    4 m=  72 -1∈G=True  λraw=    0 A=   71 J_H=     -74 J_H'=    -145 N*=    0 MISMATCH
+p=17 q=  289 d=    6 m=  48 -1∈G=True  λraw=    2 A=   47 J_H=    4462 J_H'=    4415 N*=    2 MISMATCH
+p=17 q=  289 d=    8 m=  36 -1∈G=True  λraw=    3 A=   35 J_H=    3706 J_H'=    3671 N*=    3 MISMATCH
+p=17 q=  289 d=    9 m=  32 -1∈G=False λraw=    2 A=   -1 J_H=    1758 J_H'=    1759 N*=    2 MISMATCH
+p=17 q=  289 d=   12 m=  24 -1∈G=True  λraw=    2 A=   23 J_H=     934 J_H'=     911 N*=    2 MISMATCH
+p=17 q=  289 d=   16 m=  18 -1∈G=True  λraw=   15 A=   17 J_H=    4624 J_H'=    4607 N*=   15 MISMATCH
+p=17 q=  289 d=   18 m=  16 -1∈G=True  λraw=    2 A=   15 J_H=     270 J_H'=     255 N*=    2 MISMATCH
+p=17 q=  289 d=   24 m=  12 -1∈G=True  λraw=    5 A=   11 J_H=     466 J_H'=     455 N*=    5 MISMATCH
+p=17 q=  289 d=   32 m=   9 -1∈G=True  λraw=   15 A=    8 J_H=     952 J_H'=     944 N*=   15 MISMATCH
+p=17 q=  289 d=   36 m=   8 -1∈G=True  λraw=    8 A=    7 J_H=     246 J_H'=     239 N*=    8 MISMATCH
+p=17 q=  289 d=   48 m=   6 -1∈G=True  λraw=   17 A=    5 J_H=     340 J_H'=     335 N*=   17 MISMATCH
+p=17 q=  289 d=   72 m=   4 -1∈G=True  λraw=   23 A=    3 J_H=      90 J_H'=      87 N*=   23 MISMATCH
+p=17 q=  289 d=   96 m=   3 -1∈G=True  λraw=   35 A=    2 J_H=      34 J_H'=      32 N*=   35 MISMATCH
+p=17 q=  289 d=  144 m=   2 -1∈G=True  λraw=   71 A=    1 J_H=       0 J_H'=      -1 N*=   71 MISMATCH
+p=17 q=  289 d=  288 m=   1 -1∈G=True  λraw=  287 A=    0 J_H=       0 J_H'=       0 N*=  287 OK
+p=19 q=  361 d=    3 m= 120 -1∈G=False λraw=    2 A=   -1 J_H=   28438 J_H'=   28439 N*=    2 MISMATCH
+p=19 q=  361 d=    4 m=  90 -1∈G=True  λraw=    0 A=   89 J_H=     -92 J_H'=    -181 N*=    0 MISMATCH
+p=19 q=  361 d=    5 m=  72 -1∈G=False λraw=    0 A=   -1 J_H=    -362 J_H'=    -361 N*=    0 MISMATCH
+p=19 q=  361 d=    6 m=  60 -1∈G=True  λraw=    2 A=   59 J_H=    7018 J_H'=    6959 N*=    2 MISMATCH
+p=19 q=  361 d=    8 m=  45 -1∈G=True  λraw=    0 A=   44 J_H=    -227 J_H'=    -271 N*=    0 MISMATCH
+p=19 q=  361 d=    9 m=  40 -1∈G=False λraw=    5 A=   -1 J_H=    7638 J_H'=    7639 N*=    5 MISMATCH
+p=19 q=  361 d=   10 m=  36 -1∈G=True  λraw=    0 A=   35 J_H=    -254 J_H'=    -289 N*=    0 MISMATCH
+p=19 q=  361 d=   12 m=  30 -1∈G=True  λraw=    2 A=   29 J_H=    1528 J_H'=    1499 N*=    2 MISMATCH
+p=19 q=  361 d=   15 m=  24 -1∈G=False λraw=    2 A=   -1 J_H=     790 J_H'=     791 N*=    2 MISMATCH
+p=19 q=  361 d=   18 m=  20 -1∈G=True  λraw=   17 A=   19 J_H=    6498 J_H'=    6479 N*=   17 MISMATCH
+p=19 q=  361 d=   20 m=  18 -1∈G=True  λraw=    0 A=   17 J_H=    -308 J_H'=    -325 N*=    0 MISMATCH
+p=19 q=  361 d=   24 m=  15 -1∈G=True  λraw=    2 A=   14 J_H=     133 J_H'=     119 N*=    2 MISMATCH
+p=19 q=  361 d=   30 m=  12 -1∈G=True  λraw=    2 A=   11 J_H=     -38 J_H'=     -49 N*=    2 MISMATCH
+p=19 q=  361 d=   36 m=  10 -1∈G=True  λraw=   17 A=    9 J_H=    1368 J_H'=    1359 N*=   17 MISMATCH
+p=19 q=  361 d=   40 m=   9 -1∈G=True  λraw=    0 A=    8 J_H=    -335 J_H'=    -343 N*=    0 MISMATCH
+p=19 q=  361 d=   45 m=   8 -1∈G=False λraw=   11 A=   -1 J_H=     342 J_H'=     343 N*=   11 MISMATCH
+p=19 q=  361 d=   60 m=   6 -1∈G=True  λraw=    8 A=    5 J_H=     -56 J_H'=     -61 N*=    8 MISMATCH
+p=19 q=  361 d=   72 m=   5 -1∈G=True  λraw=   23 A=    4 J_H=     228 J_H'=     224 N*=   23 MISMATCH
+p=19 q=  361 d=   90 m=   4 -1∈G=True  λraw=   29 A=    3 J_H=     114 J_H'=     111 N*=   29 MISMATCH
+p=19 q=  361 d=  120 m=   3 -1∈G=True  λraw=   38 A=    2 J_H=     -11 J_H'=     -13 N*=   38 MISMATCH
+p=19 q=  361 d=  180 m=   2 -1∈G=True  λraw=   89 A=    1 J_H=       0 J_H'=      -1 N*=   89 MISMATCH
+p=19 q=  361 d=  360 m=   1 -1∈G=True  λraw=  359 A=    0 J_H=       0 J_H'=       0 N*=  359 OK
+STATS: {'case': 204, 'branch_ok': 204, 'branch_bad': 0, 'Jmatch': 14, 'Jmismatch': 190}
