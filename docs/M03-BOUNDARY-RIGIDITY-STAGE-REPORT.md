@@ -26,6 +26,16 @@ $$\boxed{\text{其它情形}}:\ \text{Case I（未 CLOSED）、Case III（已 CL
 $$\text{注}:\ \text{上述"未封"}\ne\text{"不存在封口"};\ \text{亦}\ne\text{"}Z_2\ \text{族整体可实现"}.$$
 ```
 
+## §2b ⚠️ 区域表补正（`R3` 结果回填，2026-09-24）
+
+```
+$$\text{闭区判据须}\ 	extbf{同时}\ A=2\beta+3t-1\ge0\ \text{且}\ B=2(t-\beta)\ge0\Longrightarrow\boxed{\text{闭区}=[\max(0,\tfrac{1-3t}2),\ \min(t,\tfrac{1-t}2)]}$$
+$$\quad t\ge\tfrac13:\ \text{闭区}=(0,t]\ (\text{先前的"}\beta<t\Rightarrow\text{封"仅在此时成立});\quad t<\tfrac13:\ \text{闭区为有界区间},\ \textbf{两侧皆失效}$$
+$$\quad \text{逃逸区}= \{\beta>t\}\cup\{\beta<\tfrac{1-3t}2\};\qquad \text{临界线 }\beta=t\ \text{在 }t=\tfrac15\ \text{处分叉（}t\ge\tfrac15\ \text{封}）$$
+$$\quad \text{且 }\beta=t\ \text{仅当 }t<\tfrac13\ \text{可允许}\Longrightarrow\ \text{原表中" }t\ge\tfrac13,\beta=t\text{ "为}\textbf{空集}$$
+$$\text{（恒等式}:\ D=(1-t)(1+3t)=2W^2\ \text{于 }\beta=t\text{）}$$
+```
+
 ## §3 临界线（最值得关注的新对象）
 
 ```
