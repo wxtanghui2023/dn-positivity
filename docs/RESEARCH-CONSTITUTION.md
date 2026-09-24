@@ -3742,3 +3742,37 @@ $$\text{每批独立给出}\ \boxed{(C,P_1,P_2,P_3,P_4,U,\texttt{SPEC})};\ \text
 $$\boxed{\texttt{SPEC-REQUIRED}\ \text{与 }C/P/U\ \textbf{正交}};\ \text{统计时\textbf{单列}，\textbf{不得}混入 }C/P/U$$ ✓✓✓
 $$\text{既有口径不得漂移}:\ S2\text{-}30\ \text{锁定 }C=4,P=17,U=9\ \text{保持不变};\ \text{新批次\textbf{分开}统计}$$ ✓
 ```
+
+---
+
+# **AMEND-18：`X/G` 五元组 schema（候选标准化）—— 2026-09-25 立**
+
+> 判例来源：唐先生 17:53「先做逐条 `X/G` 补全；`甲→乙→丙`，甲乙先标准化再筛」。
+
+D0: 本档对象 = **候选标准化 schema**：`X=(𝒪,𝒫,ℐ,𝒢,𝒯)` ＋ 四态 `G0/G1/G2/DROP`
+D1: 0（制度档）
+[REVIEW]
+
+## §1 五元组（每条候选必填）
+
+```
+$$\boxed{X=(\mathcal O,\mathcal P,\mathcal I,\mathcal G,\mathcal T)}$$
+$$\mathcal O:\ \text{明确数学 object};\quad \mathcal P:\ \text{参数窗口};\quad \mathcal I:\ \text{要求的 invariant／observable};$$
+$$\mathcal G:\ \text{现有文献/已知表\textbf{究竟缺什么}};\quad \mathcal T:\ \text{可执行检验任务（枚举/证书/SAT/精确算术等）}$$ ✓✓
+```
+
+## §2 四态（替代"感觉可做"）
+
+```
+$$\texttt{G0}:\ \text{命题本身未闭合};\ \textbf{暂不能筛};\quad \texttt{G1}:\ \mathcal O+\mathcal P+\mathcal G\ \text{均闭合，可检索};$$
+$$\texttt{G2}:\ \text{已有明确入口，可直接计算/枚举};\quad \texttt{DROP}:\ \text{补全后发现非独立问题或 gap 已被解决}$$ ✓✓
+$$\boxed{\text{不得在 }\texttt{G0}\ \text{上做 coverage/prop 拆因（防把规格不全误判为研究密度低）}}$$ ✓✓
+```
+
+## §3 `A` 类与三角分离（`EX` 型专用）
+
+```
+$$\text{Zone-A 归类}:\ \boxed{\texttt{A+}\ \text{独立精确缺口}}\ |\ \texttt{A0}\ \text{有缺口但主要补表}\ |\ \texttt{A?}\ \text{规格/目标未闭合}\ |\ \texttt{AX}\ \text{已被现有结果覆盖}$$ ✓
+$$\boxed{\text{extremal value}\ \ne\ \text{extremizer census}\ \ne\ \text{non-isomorphic extremizer census}}$$ ✓✓（\text{三者不得混}）
+$$\texttt{SP}\ \text{型须把"谱"具体化为}\ \operatorname{Spec}=\{\text{哪些 invariant}\},\ \text{否则只是标签}$$ ✓
+```
