@@ -280,3 +280,15 @@ $$\Longrightarrow\ \boxed{\textbf{WAITING FOR NEW SOURCE}}$$
 $$\textbf{复活条件}:\ (a)\ \text{Zone-B 补 spec};(b)\ P6/P8\ \text{登记具体实例};(c)\ \text{CLOSED 项须出现新数学量};(d)\ \text{独立新来源直接进四闸}$$
 $$\textbf{纪律}:\ \text{不制造候选；不让 }D03\ \text{因“最后一项”获得优先权}$$
 ```
+
+## §12 HUNT-R3 第二轮（2026-09-24 22:25）：S1–S4 全 CLOSED
+
+```
+$$\textbf{判定（照先生格式）}:$$
+$$\qquad S1\ (C_{2t}\ \text{诱导饱和}):\ \text{\textsc{amend-20} 命中 2026-08 预印本（对一切偶环已构造）}\ |\ \text{\textsc{amend-21} 对象未覆盖 ✗}\ |\ \boxed{\text{CLOSED}}$$
+$$\qquad S2\ (\text{OEIS }A110000):\ \text{参数化落入 }p(m,n)\ \text{框架（含三角形目标）＋ glass-cut 下界}\ |\ \text{参数化未覆盖 ✗}\ |\ \boxed{\text{CLOSED}}$$
+$$\qquad S3\ (\text{OEIS }A046057 = \text{moa}(n)):\ \text{定义/计算框架已建（CDO 2008）＋“无 0”猜想已登记；剩余为规模型}\ |\ \text{充要条件未覆盖 ✗}\ |\ \boxed{\text{CLOSED}}$$
+$$\qquad S4\ (\text{Barbados 2026 问题 24}):\ \text{arXiv:2607.12090 (2026) 已给出完整分类}\ |\ \text{覆盖＋2026 内推进}\ |\ \boxed{\text{CLOSED}}$$
+$$\boxed{\text{四项全 CLOSED} \Longrightarrow \text{离开 }S1\text{–}S4,\ \text{回 }L1/L3/L4\ \text{重新抽取}};\ \text{禁止改参数硬救}$$
+$$\textbf{元发现}:\ (1)\ 2026\ \text{新条目半衰期短（}S1\ \text{同年 8 月解决}）;\ (2)\ \text{“接口已覆盖”为主杀手}（S2/S3）;\ (3)\ \text{未来优先取“记录型（证书型）缺口”而非“证明型（下界型）缺口”}$$
+```
