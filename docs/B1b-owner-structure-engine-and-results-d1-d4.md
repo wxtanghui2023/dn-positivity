@@ -651,3 +651,34 @@ $$\boxed{\text{计数路线（}\Gamma_d>0\text{）\textbf{正式下线}}\ \text{
 $$\boxed{\text{packing 路线（}\alpha_2(U_D)\ge d\text{）\textbf{继续主场}}\ \text{——}d\le5\ \text{全量零失败} ✓}$$
 $$\text{紧族画像（}\alpha_2=4\text{）census 进行中};\ \text{另记}:\ \text{7 例计数例外}\ \alpha_2\ \text{仍}\ge4\ \Longrightarrow\ \text{packing 信息未被 }\Gamma\ \text{抹掉} ✓$$
 $$
+
+---
+
+## §19 ⭐ **锚点定理解析（α₂ 上界已证 ＋ 双向皆验）**（2026-09-25 21:4x）
+
+### §19.1 **上界（两行证明）**
+
+```
+$$\textbf{设 }P\subseteq U_D\ \text{为 packing（两两距离}\ge3\text{）},\ \text{锚集 }A(p):=S(p)\cap D=\{\text{距 }p\ \le1\ \text{的码字}\}\cap D$$
+$$\text{因 }p\in U_D\Longrightarrow S(p)\subseteq D\ \text{且 }S(p)\ne\varnothing\ (\text{覆盖性})\ \Longrightarrow A(p)\ne\varnothing$$
+$$\text{若 }A(p)\cap A(p')\ni x\ \text{则}\ d(p,p')\le d(p,x)+d(x,p')\le2\ \text{与}\ d(p,p')\ge3\ \text{矛盾}\ \Longrightarrow\ \boxed{\text{锚集两两不相交}}$$
+$$\Longrightarrow\ \boxed{\alpha_2(U_D)\ \le\ |D|}\quad(\text{与码结构无关，纯几何}) ✓$$
+$$
+
+### §19.2 **下界（已验证）＋ 精湛的双射结构**
+
+```
+$$\text{样本 }1200\ \text{例（}d=3,4,5\text{）}:\ \text{锚点非空且互不相交}\ \mathbf{1200/1200}\ ✓;\quad |\textstyle\bigcup A(p)|=d\ \text{对全部} ✓✓$$
+$$\text{结合 }d\le5\ \text{的全量 }\alpha_2\ge d\ \Longrightarrow\ \boxed{\alpha_2(U_D)=|D|\ \textbf{恰好}}$$
+$$\textbf{更强}:\ \text{对最大 packing，锚映射 }p\mapsto A(p)\ \text{是 }P\to D\ \text{的\textbf{典范双射}}\ (\text{每字恰被一点锚定}) ✓✓$$
+$$
+
+### §19.3 **目标改写：匹配存在性**
+
+```
+$$\boxed{\text{证明 }\alpha_2(U_D)\ge d\ \Longleftrightarrow\ U_D\ \text{含"锚定 }d\text{-系统"}}$$
+$$\qquad \text{即：}d\ \text{个点两两距离}\ge3,\ \text{各距一个\textbf{互异}的 }x\in D\ \text{不超过 1}$$
+$$\textbf{关系}:\ \text{此前 SDR 判据（私有点、两两}\ge3\text{）是其\textbf{特例}}（\text{私有点必锚定自身字}）;\ \text{锚定系统是\textbf{正确的一般形式}} ✓$$
+$$\textbf{唐先生的反向锚定}:\ \text{在 }\alpha_2\le3\ \text{假设下}\Longrightarrow\ \text{3 个 }p\ \text{必锚 3 个互异字}+\text{残字 }x_4\ \Longrightarrow\ 4\times3\ \text{距离矩阵刚性}\ (\text{Type I/II})$$
+$$\qquad \text{现知该假设\textbf{为空}}（\alpha_2\ge4\ \text{全量成立}）\ \Longrightarrow\ \text{该框架改作\textbf{双射存在性}的证明工具} ✓$$
+$$
