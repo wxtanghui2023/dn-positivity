@@ -405,3 +405,60 @@ $$\text{下一步（照唐先生 20:36 的预案）}:\ \text{① 用"热字集"(
 $$\qquad \text{② 若极值机制"抬升"成功}\ \Longrightarrow\ \text{再决定 }d=4\ \text{是否全量};\ \text{③ 不盲目跑 8.2M}$$
 \text{产物}:\ \texttt{gamma\_d3\_full.py}\mid\texttt{gamma\_d3\_full.jsonl}(19.4\text{MB})\mid\texttt{gamma\_d3\_summary.json}
 ```
+
+---
+
+## §13 **d=3 包络曲线 ＋ 局部容量引理**（2026-09-25 20:5x）
+
+### §13.1 包络表 `m_3(u)`（全量，u = |U_D|）
+
+```
+$$\textbf{Step A–C}:\ m_3(u):=\max\{M(D):|U_D|=u\},\quad g_3(u):=u-2m_3(u)$$
+\begin{array}{c|c|c|c|c}
+u&m_3(u)&g_3&\#D(u)&\#\text{达包络}\\ \hline
+7&2&3&4&4\\
+8&2&4&14&14\\
+9&2&5&32&32\\
+10&3&4&144&29\\
+11&4&3&516&8\\
+12&4&4&846&22\\
+13&4&5&1988&119\\
+14&5&4&5401&19\\
+15&6&3&8838&1\\
+16&5&6&12277&102\\
+17&6&5&21784&1\\
+18\!-\!29&6&6\!-\!17&\ldots&\ldots\\
+30&5&20&300&42\\
+31&6&19&180&18\\
+33&6&21&20&20
+\end{array}$$
+$$\boxed{g_3\ge3};\qquad g_3=3\ \text{恰在}\ \boxed{u\in\{7,11,15\}}\ (m_3=2,4,6)\ \Longleftrightarrow\ \text{13 个极值构型} ✓$$
+$$\textbf{注意}:\ m_3(u)\ \textbf{非单调}（m_3(15)=6>m_3(16)=5）\ \Longrightarrow\ \text{增量式单调律路线\textbf{不可用}} ✗$$
+$$
+
+### §13.2 ⭐ **局部容量引理（穷举验证，最干净的可证候选）**
+
+```
+$$\forall w\notin C_{120},\ \forall x\in C_{120}:\quad \boxed{|B_1(w)\cap\{v:x\in S(v)\}|\ \le\ 2}$$
+$$\text{穷举 }664\times120=79{,}680\ \text{对，取值分布 }\boxed{\{0:\ 102{,}278\ \mid\ 2:\ 6{,}202\}}\ \Longrightarrow\ \textbf{只有 0 或 2，绝无 1}$$
+$$\textbf{同一性}:\ |B_1(w)\cap P_1(x)|\le2\ \text{同样成立} ✓$$
+$$\textbf{推论（已证）}:\ M(D)=\max_w|B_1(w)\cap U_D|\ \le\ \sum_{x\in D}|B_1(w)\cap\{v:x\in S(v)\}|\ \le\ \boxed{2|D|}$$
+$$\qquad \Longrightarrow\ \textbf{对 }d=3:\ M\le6\ \text{（与实测 max }M=6\ \text{吻合）} ✓$$
+$$\textbf{结构母题}:\ \text{捕获值}\in\{0,2\}\ \Longrightarrow\ \boxed{\text{被捕获的点成对出现}}\ \text{—— 与唐先生从 LMOV 提炼的"坏项配对"同构} ✓$$
+$$
+
+### §13.3 Step D：witness 贡献谱
+
+```
+$$\text{随机 4000 例：} \max_x m_x(w)\ \text{分布}=\{1{:}5,\ 2{:}3995\}\ \Longrightarrow\ \text{恒}\le2\ ✓$$
+$$\text{达包络者的贡献向量}:\ (2,2,2)\times24\mid(2,2,0)\times3\mid(2,2,1)\times2\ \Longrightarrow\ \textbf{(2,2,2) 主导} ✓\ (\text{与唐先生猜测一致})$$
+$$
+
+### §13.4 d=3 的证明靶（已锁定）
+
+```
+$$\boxed{\text{靶 1（局部容量引理）}:\ m_x(w)\le2\ \text{且取值}\in\{0,2\}\ \Longleftarrow\ \text{穷举已验，待证}}$$
+$$\boxed{\text{靶 2（耦合）}:\ |U_D|\ \ge\ 2M(D)+3\ \Longleftrightarrow\ \Gamma\ge3\ (\text{等号在 }u\in\{7,11,15\})}$$
+$$\text{机制线索}:\ M=2k\ (k=\text{参与贡献的字数})\ \text{时}\ u\ge4k+3;\ \text{即"每个字的 2 点被捕获，迫使缺口额外增长"}$$
+$$\textbf{注}:\ \text{粗合并（}M\le2d\ \text{＋ }|U|\ \text{下界）\textbf{不足以}推出靶 2（d=3 时 }u_{\min}=7<2\cdot2\cdot3+3)\ \Longrightarrow\ \text{必须用\textbf{耦合}} ✓$$
+```
