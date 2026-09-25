@@ -4004,7 +4004,7 @@ $$\qquad \text{数据库按\textbf{实例}组织};\ \text{文献大量按\textbf
 $$\textbf{反向选择器（为何反复发生）}:\ \text{越适合计算}\Rightarrow\text{越可能是经典小参数}\Rightarrow\text{越可能已有上位定理}\Rightarrow\ \boxed{\text{越容易被 E4 杀}}$$
 ```
 
-**四实例记录（F-4 命中，累计）**：`CAP-MIX`（→ 经典 $\lambda=|G\cap(G+1)|$ 理论）｜`P7-2`（→ EJC DS20v2 Thm 1.13/1.14 完全判定）｜`P5-乙-3`（→ 已知小 doubling 结果）｜`Q1`（→ 经典 order-3 cyclotomic numbers）｜`Mt07`（→ DS1.18 ＋ Boza 2026 系统研究）｜`B-LJCR-1` 首格（→ CXS 指数界）。**待先生确认"四案例"取哪四项做反向测试**；本制度默认**全部六项**皆须被新闸挡在入场前。
+**四实例记录（F-4 命中，累计）**：`CAP-MIX`（→ 经典 $\lambda=|G\cap(G+1)|$ 理论）｜`P7-2`（→ EJC DS20v2 Thm 1.13/1.14 完全判定）｜`P5-乙-3`（→ 已知小 doubling 结果）｜`Q1`（→ 经典 order-3 cyclotomic numbers）｜`Mt07`（→ DS1.18 ＋ Boza 2026 系统研究）｜`B-LJCR-1` 首格（→ CXS 指数界）。**六项＝完整回归测试集（唐先生 13:30 确认）**：前四项（`CAP-MIX`／`P7-2`／`P5-乙-3`／`Q1`）= **最初发现该故障的历史案例**；`Mt07`／`B-LJCR-1` 首格 = **后续暴露的同类案例**，用于扩充回归集。⟹ 表述规范：**"四个案例"** 只用于描述"最初发现的四个历史案例"；**"六项案例"** 才是对 closure gate 做回归测试的完整测试集。v1 回归结果见 §8。
 
 ### §2 新增 **E0：上位定理闭包（Theorem-Family Closure）**
 
@@ -4061,3 +4061,25 @@ $$\qquad \text{若 }Q_{\rm sub}\neq Q_{\rm src}\ \Longrightarrow\ \boxed{\text{�
 $$\textbf{强制自检}:\ \text{把定理预测回灌数据源已知的正例（}Yes\ \text{格）};\ \text{冲突则先怀疑语义，再怀疑定理} ✓$$
 ```
 **本制度为 §6 反向测试的组成部分**；`F4` 清单新增 `F4-s` 条目：`B-LJCR-1`（skew vs general 语义越界，已由 §1 更正档撤回批量结论）。
+
+### AMEND-28 补 §8（2026-09-25 13:30）：**Closure Gate v1 —— 回归结果与状态固化**
+
+```
+$$\boxed{\text{Closure Gate v1}:\ \text{反向回归}\ \mathbf{6/6\ BLOCKED};\quad \text{LJCR-243 原始 }No\ \text{判定}\ \textbf{已撤回};\quad F4\ \text{＋}\ F4\text{-}s\ \text{＋}\ E4\text{-}0\ \text{正式成为筛选前置条件}}$$
+$$\text{回归集（6 项）}:\ \underbrace{CAP\text{-}MIX\ /\ P7\text{-}2\ /\ P5\text{-}乙\text{-}3\ /\ Q1}_{\text{最初发现的四个历史案例}}\ +\ \underbrace{Mt07\ /\ LJCR\text{-}243}_{\text{后续同类案例}}$$
+$$\text{阻断方式}:\ 5\ \text{项走\textbf{指纹命中}}（登记表定理族）;\quad LJCR\text{-}243\ \text{走\textbf{机器判定理}}（CXS 指数界）✓$$
+$$
+
+**本次修复同时堵住两个不同的漏口**（唐先生定位）：
+```
+$$\text{漏口①}\ F4:\ \text{instance-open / family-closed mismatch}\ (\text{实例空白}\not\Rightarrow\text{数学空白})$$
+$$\text{漏口②}\ F4\text{-}s:\ \text{semantic mismatch}\ (\text{一般对象 vs 特殊子类};\ \text{skew Hadamard DS}\neq\text{general difference set})$$
+$$
+
+**E4-0 的完整约束链（v1 定稿）**：
+```
+$$\boxed{\text{对象定义}\to\text{数据库问题定义}\to\text{定理假设}\to\text{结论类型}}$$
+$$\text{不得只检查"定理覆盖该数学对象"};\ \text{必须检查"\textbf{定理覆盖的是数据库正在问的那个问题}"} ✓$$
+$$
+
+**当前状态**：**只有通过 Closure Gate v1 的候选**才允许进入空间 B 计算；否则一律 `HOLD`。下一批空间 B 候选自此按 `AMEND-28 §4` 的**倒置顺序**（机制 → 对象类 → 候选族 → 闭环 → 未解决者）产生。
