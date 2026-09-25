@@ -179,3 +179,43 @@ $ bash scripts/tech_word_check.sh "universal 修补字" "纯新字" "ρ(D)" "局
 - **本档新增**：`universal 修补字`、`纯新字`、`ρ(D)`（回查前均 0 档）
 - **档案已有（引用）**：`局部刚性`（30 档，但均**异语境**）⟹ 列为通用词，不计新性
 - **⚠️ 新性边界**：本档**无**数学新性主张；结果为**特定码的局部计算事实**
+
+---
+
+## §8 A 线第二刀（15:2x）：packing 证书 ＋ M₃ 分类
+
+### §8.1 `d=3` 升级为 **packing 证书**（不再需要精确覆盖搜索）
+
+```
+$$\alpha_2(U_D)\ \text{分布（158 个幸存者，精确值）}=\boxed{\{3:\ 158\}}\ \Longrightarrow\ \text{全部 }\alpha_2=3$$
+$$\text{被剪的 }280{,}682\ \text{个 }D:\ \text{其 }u_1\subseteq U_D\ \text{内已含 3 点两两距离}\ge3\ \text{的贪心见证} ✓$$
+$$\boxed{\forall D,\ |D|=3:\ \alpha_2(U_D)\ge3}\ \Longrightarrow\ \text{半径-1 球至多覆盖其中 1 点}\ \Longrightarrow\ \min|A|\ge3>d-1=2$$
+$$\Longrightarrow\ \text{无 delete-3-add-2}\ \Longrightarrow\ \text{该距离内无 }119\text{-码}\ ✓\quad(\text{证书形式}=\text{有限个 3 点见证})$$
+$$
+
+### §8.2 `M₃ = 5` 与 owner-pattern 分类（**"统一 ≤4" 猜想已撤**）
+
+```
+$$M(D)\ \text{分布}=\{3:23\mid4:124\mid5:11\}\ \Longrightarrow\ \boxed{M_3=5}\ (\text{与唐先生 15:09 的观察一致})$$
+$$\text{达到 }M_3\ \text{的 }(D,w)\ \text{对}=12\ \text{个，分层模式}:\quad \boxed{q_1=5:\ 8\ \text{例}}\mid\boxed{q_1=4,\ q_2=1:\ 4\ \text{例}}\mid q_3\ \text{从不参与}$$
+$$\text{例}:D=[18,47,83],\ w=182,\ \text{owner\_sets}=[(18),(18),(47),(47),(83)]$$
+$$\Longrightarrow\ \boxed{\text{overlap}=5\ \text{只能来自"近乎私有"的点}}\ (\text{唐先生 15:09 的严格 owner-pattern 猜想成立}) ✓$$
+$$
+
+### §8.3 框架级发现：**所有 119-码都在"删除 d／补入 d−1"族内**
+
+```
+$$\text{设 }C'\ \text{为 119-码},\ D:=C_{120}\setminus C',\ A:=C'\setminus C_{120};\quad |A|=119-|C'\cap C_{120}|=|D|-1\ ✓$$
+$$\Longrightarrow\ \boxed{\text{packing 引理}\ \alpha_2(U_D)\ge|D|\ \text{对给定 }d\ \text{成立}\ \Longrightarrow\ \text{该 }d\ \text{处无 }119\text{-码}}$$
+$$\text{上限}:\ \alpha_2\le A(10,3)=\mathbf{72}\ \Longrightarrow\ \text{该引理只能覆盖小 }d\ (\text{恰为 B1-b 邻域设定})$$
+$$\text{对比}:\ d=3\ \text{已证}\ \alpha_2\ge3=|D|\ ✓;\quad d=4\ \text{进行中（见 §8.4）}$$
+$$
+
+### §8.4 `d=4` packing 证书（进行中）
+
+```
+$$\text{进度}(4{,}000{,}000/8{,}214{,}570):\quad \text{cand}=3{,}815{,}295,\ \text{贪心见证成功}=3{,}796{,}612\ (99.5\%)$$
+$$\text{剩余}\approx18{,}700\ \text{例贪心失败}\ \Longrightarrow\ \text{待精确 }\alpha_2\ \text{复核（便宜）}$$
+\text{脚本}:\ \texttt{work/k10/b1b\_pack\_cert.py}\mid\text{产物}:\ \texttt{b1b\_packcert\_d4*.json}
+$$
+**【边界】** `d=3` 的 packing 证书为**局部邻域证书**（仅排除与 `C_{120}` 删除距离 3 的 119-码）；**不构成**全局 `K(10,1)>119`；`d=4` 尚在进行。
