@@ -498,3 +498,41 @@ $$\textbf{结构母题}:\ \text{捕获值}\in\{0,2\}\ \text{（成对）}\ \Long
 $$\textbf{容器思想}:\ \text{Lemma 与码的具体结构\textbf{无关}}（\text{纯 Hamming 度量}）\ \Longrightarrow\ \text{对所有半径-1 覆盖码成立，可直接复用} ✓$$
 $$\textbf{仍缺（靶 2 剩余部分）}:\ \text{有限残量内}\ \Gamma>0\ \text{的\textbf{统一论证}}（\text{当前靠 census/穷举}）$$
 $$
+
+---
+
+## §15 **极值几何解剖 ＋ 精化靶（4k+3）**（2026-09-25 21:1x）
+
+### §15.1 球交公式（唐先生逐项验证，已穷举核验）
+
+```
+$$|B_1(x)\cap B_1(w)|=\begin{cases}n+1=11,&d(x,w)=0\\ 2,&d(x,w)=1\\ 2,&d(x,w)=2\\ 0,&d(x,w)\ge3\end{cases}\quad(\text{穷举 }1024^2\ \text{对，无反例}) ✓$$
+$$\Longrightarrow\ S_x=\{v:x\in S(v)\}=B_1(x)\ \Longrightarrow\ |B_1(w)\cap S_x|\le2\ (w\ne x)\ \Longrightarrow\ M(D)\le2d\ ✓$$
+$$
+
+### §15.2 **13 个极值构型的球交几何**（全部算出）
+
+```
+$$\textbf{样板（唯一 }M=6\text{ 的极值）}:\ D=[49,77,89],\ |U_D|=15,\ P^\downarrow=(6,6,3),\ w=673$$
+$$\qquad d(w,x_i)=[2,2,2];\quad B(w)\cap B(x_i)=\text{"交换对"两点，且\textbf{两点皆为该字私有点}}$$
+$$\qquad B(w)\cap B(417)=\{161,929\}\ (\text{owner }49);\quad B(w)\cap B(643)=\{641,675\}\ (\text{owner }77);\quad B(w)\cap B(745)=\{681,737\}\ (\text{owner }89)$$
+$$\textbf{三条规律}:\ (i)\ \text{贡献字皆在距离 2};\quad (ii)\ \text{捕获点\textbf{全为私有点}}（\Delta=0\ \text{一致}）;\quad (iii)\ \text{捕获对互不相交}\ \Longrightarrow\ M=2k$$
+$$
+
+### §15.3 ⭐ **精化靶：`M=2k ⟹ |U_D| ≥ 4k+3`**
+
+```
+$$\text{由 census 包络（偶数行）}: \quad k=1:\ |U|\ge7;\quad k=2:\ |U|\ge11;\quad k=3:\ |U|\ge15\ \Longleftrightarrow\ \boxed{|U_D|\ge2M(D)+3}\ \Longleftrightarrow\ \Gamma\ge3\ ✓$$
+$$\textbf{与度量的关系}:\ \text{Hamming 度量只给 }|U|\ge2k\ (=\text{每字贡献 2 点的下界});\ \text{而 }4k+3\ \textbf{超出度量} \Longrightarrow$$
+$$\qquad \boxed{\text{该耦合\textbf{依赖 }C_{120}\ \text{的具体结构}}\ (\text{"码的有限局部引理"})}\ \Longleftrightarrow\ \text{LMOV 中"特殊 ring／容器"那一招的位置} ✓$$
+$$
+
+### §15.4 证明架构（当前最优形态）
+
+```
+$$\boxed{\text{Case A（已证）}:\ |U_D|>2d(d-1)\ \Longrightarrow\ \rho\ge d\ \text{（仅用容量引理）}}$$
+$$\boxed{\text{Case B（有限残量）}:\ |U_D|\le2d(d-1)}$$
+$$\qquad \text{d=3}:\ \text{残量 }|U|\le12;\ \text{只需 6 个值}\ m_3(7..12)=(2,2,2,3,4,4)\ \Longrightarrow\ \Gamma\ge3\ ✓$$
+$$\qquad \text{若要\textbf{消掉}残量} \Longrightarrow \text{证明 §15.3 的 }4k+3\ \text{（码结构引理）}$$
+$$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
+```
