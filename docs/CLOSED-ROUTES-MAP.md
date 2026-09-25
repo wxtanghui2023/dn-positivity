@@ -3238,3 +3238,29 @@ eigenvalues，无「失败后才出现」的逐点量）；② discrepancy 类�
 algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failure ＋ 至少两种可交换的局部传播」，且二者须**文献中本来
 就存在**，不由我们为 RH 人工定义。
 详 `C-302`／`C-301`／`C-300`。
+
+---
+
+## D4-LANE-A. **d=4 packing 局部机制（2026-09-25 收口 · 10 条 NO-GO）**
+
+> **死因（新 bin 签名）**：**局部约束传播（local constraint propagation）**——即"在固定层级上把局部约束往前推"。
+> 本线证明：该层级**不是** tightness 的来源。新候选若仍属此层级，可直接对号判死。
+> **全部细节**：`docs/B1b-owner-structure-engine-and-results-d1-d4.md` §38F
+
+| # | 候选机制 | 机制签名（一句话判死） | 检验数据 |
+|---|---|---|---|
+| D4-1 | 一步锚定增广 | 假定"任意 k-packing 可一步加锚定点" | 反例 2/1600 ✗ |
+| D4-2 | 三元组交叉 F∩U_D≠∅ | 把"自由集必含合法候选"当一般必要条件 | 反例 3/35 ✗ |
+| D4-3 | Level-I ≤2 | 单球对候选簇覆盖上界 2 | 4 例达 3；正确上界 **≤3** |
+| D4-4 | owner 容量鸽笼 | 由 owner 邻域大小推容量矛盾 | 97.1%/93.1%/87.7% **装得进 D** ✗ |
+| D4-5 | 核心局部禁形 | `x—1—p—2—q`（p 为 x 私有点）为禁形 | **存在 3655/5472** ✗ |
+| D4-6 | 一般 separation law | 由 C₁₂₀ 码结构推 `d(q,x_i)≥4` | 前提 `d_min=4` 假（**实为 1**）；C120-PP 违反 9332/20208 ✗ |
+| D4-7 | 紧型 separation 推广 | 把紧型 `≥4` 升为一般 packing law | 仅经验事实 ✗ |
+| D4-8 | `A_j=A_k=∅` 普遍化 | 把紧型空集条件推广到一般 D | 一般 **2307/9576 非空**（24.09%）✗ |
+| D4-9 | D-structure 普遍约束 | 用 D 的删除结构强制空集条件 | 同上 ✗ |
+| D4-10 | 局部机制 → 全局结构定理 | 由 code geometry／owner／D-structure 任一推全局定理 | 无有效桥梁 ✗ |
+
+**严格分野（禁止混同）**：`138/138`（紧型实例 `A_j=A_k=∅`）= **经验事实**；`2307/9576`（一般）= **反例**。
+**保留**：d=4 finite certificate（`C(120,4)` 全量 8.2M，zero failure，exact K₄）＋ Level-A 必要条件（`M≤2d`｜`α₂≤d`｜Level A｜`|A_f|≤3`｜覆盖三分判据｜Sat 引理｜`C_i=P₁(x_i)`）✓
+**交付类别**：LANE-A / **finite certificate**（非 structural theorem）
+**STATUS: CLOSED** ｜ **下一未探域**：general d ／ **non-local saturation invariant**（见 `STRATEGY-2026-09-25-two-lines-missing-global-invariant.md`）
