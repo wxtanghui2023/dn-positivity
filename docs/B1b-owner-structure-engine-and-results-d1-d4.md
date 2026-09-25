@@ -1300,3 +1300,232 @@ $$
 $$\boxed{\text{一般 }d\ \text{的 }\alpha_2(U_D)\ge d\ \text{完全未触及}};\quad \text{且已知计数路线在 }d=4\ \text{失效（}\Gamma_{\min}=-1\text{）}\ ✗$$
 $$\text{可选后续}:\ \text{① 接受 d≤5 的计算证书并收口};\quad \text{② 走 packing 路线攻一般 }d;\quad \text{③ 换目标（新资产）}$$
 $$
+
+---
+
+# §38F **LANE-A / d=4 Packing 线正式收口报告（唐先生定稿 · 取代 §38 工作稿）**
+
+> **归档标签**：LANE-A / d=4 / finite-certificate ｜ **STATUS: CLOSED** ｜ **DELIVERABLE: COMPUTATIONAL CERTIFICATE** ｜ **STRUCTURAL UPGRADE: NO-GO** ｜ **NEXT UNEXPLORED DOMAIN: GENERAL d / NON-LOCAL SATURATION INVARIANT**
+
+## 38.1 收口结论
+
+```
+本线目标是研究 d=4 packing 中 α₂=|D| 是否能够从有限穷举现象提升为一个可推广的结构性定理。截至本节，围绕该目标已经依次检验并排除了三类潜在局部机制：
+
+ 码几何层 → owner/容量层 → D-结构层
+
+三层均未形成能够普遍推出目标结论的必要条件。
+
+因此本线正式收口为：
+  d=4 的当前结论属于有限穷举证书型结果，而不是已经获得局部结构证明的结构定理。
+
+特别地，不能把紧型实例中观察到的若干高度稳定性质，未经额外证明而提升为一般 d=4 packing 的必要结构。
+```
+
+## 38.2 已确立的主结果
+
+```
+在当前有限搜索范围内，d=4 的目标 packing 结论已经由完整穷举得到支持。核心计算证书包括：
+  · 约 8.2×10⁶ 个候选情形的 exhaustive enumeration
+  · 零失败
+  · 配套 exact K₄ checks
+  · 相关实例的完整 certificate 输出
+  · 仓库中对应计算与证书均已提交
+
+可以安全表述为:  在已枚举的有限实例范围内，α₂=|D|
+而不能表述为:    对所有相应 d=4 实例，α₂=|D| 已由结构定理证明。
+后一个升级目前没有完成。
+```
+
+## 38.3 Level A：已经保留的硬结构
+
+```
+(A1) 基本容量界      M ≤ 2d
+(A2) 二重覆盖容量    α₂ ≤ d
+(A3) Level-A 结构    对应必要条件已证明
+(A4) 私有点数量界    |A_f| ≤ 3
+(A5) 覆盖三分判据    已建立
+(A6) Sat 引理        已完成，可继续作为有限证书的逻辑组件
+(A7) 核心簇结构      目标簇 C_i = P₁(x_i) 已确立
+
+这些结果本身不被本次 NO-GO 推翻。问题在于：它们不足以继续推出一个能够覆盖全部 d=4 实例的全局结构性禁形。
+```
+
+## 38.4 Level I：几何层的正式 NO-GO
+
+```
+最初希望从码本身的局部距离结构推出更强的 separation property。核心尝试是利用链 x—1—p—2—q（p 是 x 的 private point），试图证明这种结构在关键位置必须禁止，从而推出 d(q,x_i) ≥ 4。该推断已经被直接反例否证。
+```
+
+### 38.4.1 d=2：确实存在硬几何约束
+
+```
+对于 d(x,q)=2，中间点不能成为相应的 x-private point。
+计算得到 298 个对应码字对，private-point 中间点数为 0。
+⟹ d=2 的禁止关系可以保留为几何引理。
+```
+
+### 38.4.2 d=3：几何禁形彻底失效
+
+```
+对于 d(x,q)=3，得到 1824 个码字对，共涉及 5472 个中间点。
+其中属于 x-private point 的中间点达到 3655。即 3655/5472 ≈ 66.8%。
+因此存在大量真实反例:  x—1—p—2—q，p ∈ P_priv(x)  并不是禁止构型。
+于是原先试图使用「d=3 ⟹ 禁形」再推出 d(q,x_i) ≥ 4 的路线失效。
+```
+
+### 38.4.3 Level-I 结论
+
+```
+「分离性 d(q,x_i) ≥ 4」不能由 C₁₂₀ 码的局部几何一般推出。
+紧型实例中观察到的 separation ≥4 只能登记为 tight-instance empirical property，
+而不是 general structural lemma。
+```
+
+## 38.5 Owner 层：容量鸽笼正式 NO-GO
+
+```
+第二层尝试是把 private-point owner 信息转换成容量约束。预期机制为：
+  多个 witness ⟹ 大量 private points ⟹ D 容量不足 ⟹ 某个候选必须被排除
+这一机制已经被实际容量统计击穿：D 对所需 owner 分布具有足够容量，此前测试的容量比例分别达到约 97%、93%、88%。
+因此不能建立所需的普遍鸽笼矛盾。
+⟹ owner 容量不是 d=4 的一般性排除机制。
+尤其不能从 |A_f| ≤ 3 进一步自动推出足以消灭第五个 witness 的容量矛盾。
+```
+
+## 38.6 Level II：D-结构层最后检验
+
+```
+在码几何和 owner 层均失效后，最后保留的抓手是 A_j = A_k = ∅。
+这一性质在紧型实例中表现得非常稳定：138/138 个测试簇均满足。
+因此曾考虑：是否可以不使用一般码几何，而直接利用 D 的具体删除结构证明 A_j = A_k = ∅？
+如果能够做到，则仍可能获得一个独立于前两层的结构证明。本轮进行了决定性反查。
+```
+
+## 38.7 D-结构反例统计
+
+```
+总检查数 9576。结果 A_j ∪ A_k ≠ ∅ 出现 2307 次，比例约 2307/9576 ≈ 24.09%。
+因此 A_j = A_k = ∅ 不是一般 D-structure constraint。
+```
+
+### 38.7.1 明确反例
+
+```
+D=[29,40,64,89], t=0, cluster=3  ⟹  A_j=[7,9], A_k=∅
+D=[5,34,43,67],  t=1, cluster=0  ⟹  A_j=[0,6], A_k=[0,3,4]
+所以即使完全进入 D 的删除结构层，也不能建立 A_j = A_k = ∅ 这一普遍约束。
+```
+
+## 38.8 一个重要的实验控制
+
+```
+本轮还检查了一个容易造成误判的问题：packing point 是否本身为 codeword。
+统计为 {False: 28437, True: 291}，即绝大多数一般-setting packing points 并不是码字。
+因此此前 D-structure 反例并不是简单因为把「非真实码字的 packing point」误当成真实对象所造成的虚假反例；
+在实际定义域中，真正相关的结构也确实不足以产生普遍的 A_j = A_k = ∅ 约束。
+```
+
+## 38.9 三层剥离总表
+
+| 层级 | 原候选机制 | 检验结果 | 最终状态 |
+|------|-----------|---------|---------|
+| Code geometry | private point + distance-3 禁形 | 3655/5472 反例 | **NO-GO** |
+| Owner layer | owner 容量鸽笼 | 容量不足矛盾不存在 | **NO-GO** |
+| D structure | A_j = A_k = ∅ | 2307/9576 非空 | **NO-GO** |
+| Tight-instance empirical layer | separation ≥4 | 紧型实例中稳定 | **仅经验事实** |
+| Finite exhaustive layer | 完整 enumeration | 约 8.2M cases, zero failure | **保留** |
+
+```
+⟹ 三层局部结构抓手全部剥离。
+```
+
+## 38.10 NO-GO Registry
+
+```
+NO-GO-1  一步锚定增广: 不能由当前局部结构推出一步 augmentation 必然存在。CLOSED.
+NO-GO-2  三元组交叉条件: 以 F ∩ U_D ≠ ∅ 作为一般必要条件失败。CLOSED.
+NO-GO-3  Level-I ≤2: |C_i ∩ B₂(z)| ≤ 2 已有 4 个实例达到 3；正确几何上界为 ≤3。
+         原命题 CLOSED；修正上界保留。
+NO-GO-4  owner 容量鸽笼: private-point owner 数量不能制造普遍容量矛盾。CLOSED.
+NO-GO-5  核心局部禁形: x—1—p—2—q, p ∈ P_priv(x) 不是禁止构型。CLOSED.
+NO-GO-6  一般 separation law: 不能从 C₁₂₀ 码结构推出 d(q,x_i) ≥ 4。CLOSED.
+NO-GO-7  紧型 separation 的推广: 不能升级为一般 packing law。CLOSED.
+NO-GO-8  A_j = A_k = ∅ 一般化: tight instances 138/138 成立，一般 setting 2307/9576 出现非空。CLOSED.
+NO-GO-9  D-structure universal constraint: 不能利用 D 的一般删除结构强制得到上述空集条件。CLOSED.
+NO-GO-10 局部机制 → 全局结构定理: 尚无有效桥梁。CLOSED.
+```
+
+## 38.11 当前可以安全宣称的结果
+
+```
+Level A（有限计算证书）:  已检查有限实例 ⟹ α₂=|D|  （依据完整 enumeration、zero failure、exact checks）
+                          这是可以正式进入 deliverable 的结果。
+Level B（结构定理）:      目前没有完成 ∀D, α₂(D)=|D| 形式的结构性证明。
+                          特别是不能用以下未经证明的经验性质填补缺口：
+                          d(q,x_i) ≥ 4、A_j = A_k = ∅、或 owner 容量必然不足。
+```
+
+## 38.12 紧型实例为何仍然特殊
+
+```
+值得保留一个重要但必须谨慎表述的观察：138/138 个 tight clusters 都满足 A_j = A_k = ∅；同时 tight instances 中还观察到 separation ≥4。
+因此紧型实例显然具有比一般 setting 更强的饱和结构。但当前证据只支持
+   tightness ⟹ observed special structure
+而没有证明
+   tightness ⟹ 某个可局部验证的必要结构定理
+这是后续若重新启用该问题时唯一值得重新定位的地方：
+   如果以后继续研究，应从「tightness/saturation 本身」出发，而不是重新回到 private-point / owner / distance-3 禁形。
+```
+
+## 38.13 对本线方法论的最终判定
+
+```
+本轮最重要的成果不是又得到一个「NO-GO」，而是完成了三个不同层次的机制剥离：
+   Code geometry → Owner capacity → D deletion structure
+三层都分别进行了反例或容量检验。
+因此当前不能再合理地说：「只差找到一个更巧妙的局部禁形。」
+现有证据更准确的描述是：这类局部机制本身并不是当前有限 d=4 结论的普遍来源。
+```
+
+## 38.14 LANE-A 最终 deliverable 类型
+
+```
+本线正式归档为 LANE-A / Certificate-type result，而不是 LANE-A / Structural-theorem result。
+价值来自：① 有限候选空间；② 完整 exhaustive enumeration；③ zero failure；④ exact K₄ verification；
+⑤ 一组已经证明的 Level-A 必要条件；⑥ 对可能的结构升级路径进行了系统 NO-GO 审计。
+因此它不是「没有结果」，而是一个完整的 finite computational certificate + structural obstruction audit 交付物。
+```
+
+## 38.15 后续边界
+
+```
+本线在 d=4 上不再继续进行以下重复搜索：
+  · 新的 distance-3 private-point 禁形
+  · 新的 owner pigeonhole
+  · 新的 A_j = A_k = ∅ 普遍化
+  · 从一般 D structure 重新推导 separation
+  · 对已经否证的局部机制换符号重写
+若未来重新启动，应当改变问题层级，而不是继续细化同一局部机制。
+目前真正尚未触及的是：general d，以及 tightness 本身是否存在一个此前未进入三层框架的全局不变量。
+```
+
+## 38.16 最终状态
+
+```
+d=4 finite certificate           ✓
+Level-A lemmas                   ✓
+Code-geometry upgrade            ×
+Owner-layer upgrade              ×
+D-structure upgrade              ×
+General structural theorem       OPEN
+Current LANE-A line              CLOSED
+```
+
+**最终结论**
+
+```
+d=4 packing result 当前由有限穷举证书支撑；
+现有 code geometry → owner → D-structure 三层局部机制均不足以将其提升为结构定理。
+因此，本线到 §38 正式收口。
+```
