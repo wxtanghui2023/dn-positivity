@@ -728,3 +728,32 @@ $$\boxed{\alpha_2(U_D)\ \le\ d}\quad\text{已证明（锚点不相交，§19.1�
 $$\boxed{\alpha_2(U_D)\ \ge\ d}\quad\text{已在 }d\le5\ \text{全量穷举验证}$$
 $$\Longrightarrow\ \alpha_2(U_D)=d\ \text{目前是 }d\le5\ \text{的计算定理};\ \text{一般 }d\ \text{尚无证明（\textbf{不得}称已证）} ✓$$
 $$
+
+---
+
+## §21 ⚠️ **一步锚定增广被否（2/1600 反例）＋ 需改为交换型增广**（2026-09-25 21:3x）
+
+### §21.1 样本中的强结构
+
+```
+$$\text{样本 }1600\text{ 例（}d=4,\ \text{每个 }x\ \text{配一个 }k=3\text{ packing）}:\ \boxed{C_x=B_1(x)\cap U_D\ \textbf{全部由 }x\ \text{的私有点构成}} ✓$$
+$$\text{存活候选分布}:\ 0{:}2\mid 1{:}8\mid 2{:}56\mid 3{:}127\mid 4{:}205\mid 5{:}240\mid 6{:}569\mid\ldots\ \Longrightarrow\ \textbf{2 例存活}=0\ ✗$$
+```
+
+### §21.2 **反例结构（一步增广失败）**
+
+```
+$$\textbf{例 1}:\ D=\{356,516,572,865\},\ P=\{324,353,540\}\ (\text{锚到字 }0/3/2),\ x=516$$
+$$\qquad x\ \text{私有点}=[4,516,524,532,580,772];\quad p{=}324\ \text{吃}\ [4,580,772],\ p{=}540\ \text{吃}\ [516,524,532]\ \Longrightarrow\ \textbf{全灭}$$
+$$\qquad \text{但精确 }\alpha_2{=}4\ \text{见证}=[4,352,540,609]\ \Longleftarrow\ \textbf{换了一套 packing（保留 }540,4,\ \text{换掉 }324,353)$$
+$$\textbf{例 2}:\ D=\{3,14,390,549\},\ P=\{6,37,386\},\ x=3;\ \text{私有点 }[1,2,3,7,35]\ \text{全灭};\ \text{见证}=[1,6,386,557]$$
+$$
+
+### §21.3 **结论（对证明路线的修正）**
+
+```
+$$\boxed{\alpha_2(U_D)=4\ \text{仍成立}\ ✓\quad\text{但"从任意 }k\text{-packing 一步加锚定到 }x\text{ 的点"}\ \textbf{不成立}\ ✗}$$
+$$\Longrightarrow\ \text{正确形式}=\textbf{交换型增广}（\text{augmenting path / 匹配论}）：\ \text{允许置换已有 packing 点}$$
+$$\textbf{机制}:\ r_i=2\ \text{的 }p\ \text{一次可吃 3 个私有点} \Longrightarrow C_x\ \text{可被清空} \Longrightarrow \text{必须靠置换腾位} ✓$$
+$$\textbf{新靶}:\ \text{把锚点引理（锚集两两不交）+ 交换型增广}\ \text{合成一个 Hall 型定理}\ \Longrightarrow\ \text{存在大小 }d\ \text{的 packing}$$
+$$
