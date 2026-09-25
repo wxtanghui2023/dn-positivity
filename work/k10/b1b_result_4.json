@@ -1,0 +1,12 @@
+[
+ {
+  "d": 4,
+  "tested": 8214570,
+  "pruned_size": 278771,
+  "pruned_pack": 7904062,
+  "need_lower": 31737,
+  "best_defect": null,
+  "found": [],
+  "seconds": 674.3
+ }
+]
