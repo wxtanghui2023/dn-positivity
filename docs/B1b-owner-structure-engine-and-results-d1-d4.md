@@ -824,3 +824,37 @@ $$\textbf{已否证}:\ \text{一步锚定增广}\ ✗\ (2/1600)$$
 $$\textbf{待证}:\ \text{交换型增广（augmenting path）}\ \text{或}\ \text{Hall-型定理} \Longrightarrow \exists\ d\ \text{元 packing}$$
 $$\textbf{边界}:\ \alpha_2=d\ \text{与}\ \mu=4\ \text{中，下界仍属计算证据（}d\le5\ \text{全量/样本）；}\textbf{不得}称一般 }d\ \text{已证}$$
 $$
+
+---
+
+## §24 ⭐ **四型覆盖表（纯几何定理）：阻塞不可能**（2026-09-25 21:3x）
+
+### §24.1 符号化枚举（x₄=0，|supp(qᵢ)|∈{2,3}，两两 XOR ≥3）
+
+```
+\begin{array}{c|c|c}
+\text{型 }(|{\rm supp}|)&\max\left|\bigcup_iB_2(q_i)\cap B_1(0)\right|&\text{自由点}\ \ge\\ \hline
+(2,2,2)&7/11&4\\
+(2,2,3)&8/11&3\\
+(2,3,3)&9/11&2\ (\text{紧})\\
+(3,3,3)&9/11&2\ (\text{紧})
+\end{array}
+```
+
+### §24.2 证明（每字覆盖 ≤3）
+
+```
+$$m=d(q,x):\quad m=2\Rightarrow\{x\}\cup\{x\oplus e_a,x\oplus e_b\}\ (3\ \text{点});\quad m=3\Rightarrow\{x\oplus e_a,x\oplus e_b,x\oplus e_c\}\ (3\ \text{点});\quad m\ge4\Rightarrow\varnothing$$
+$$\Longrightarrow\ \left|\bigcup_{i=1}^{3}B_2(q_i)\cap B_1(x)\right|\ \le\ 3\times3\ =\ 9\ <\ 11$$
+$$\Longrightarrow\ \boxed{\left|B_1(x)\setminus\bigcup_iB_2(q_i)\right|\ \ge\ 2}\quad(\textbf{纯几何，已证，与码无关}) ✓✓$$
+$$\text{紧型}:\ 9\ \text{仅在支撑两两不交时取到（}(2,3,3)\ \text{与}\ (3,3,3)\text{）};\ \text{且此时自由点}=\varnothing\ \text{于}\ B_1(x)\ \text{的 9 点之外}$$
+$$
+
+### §24.3 缺口收窄到唯一一项
+
+```
+$$\textbf{阻塞成立需}:\ C_4\subseteq\bigcup_iB_2(q_i)\ \Longrightarrow\ C_4\cap\left(B_1(x_4)\setminus\bigcup_iB_2(q_i)\right)=\varnothing$$
+$$\qquad \text{但已证该自由集}\ \ge2\ \text{点}\ \Longrightarrow\ \textbf{阻塞要求 }C_4\ \textbf{避开确定的 2 个自由点}$$
+$$\Longrightarrow\ \boxed{\text{剩余唯一缺口}=\text{纯码结构陈述}：自由点中必有合法候选 }(q\in U_D)}$$
+$$\textbf{实证}:\ C_4\ \text{上的阻塞余量}\ge2\ (1200/1200)\ \text{——已含码结构信息}$$
+$$
