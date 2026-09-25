@@ -1201,3 +1201,25 @@ $$\qquad \text{阻塞余量}\ge2\ (1200/1200);\ A_j{=}A_k{=}\varnothing\ (138\ \
 $$\textbf{已否证}:\ \text{一步锚定增广}\ (2/1600);\ \text{任意三元组 }F\cap U_D\ne\varnothing\ (3/35);\ \text{Level I 原式}\le2\ (4/72);\ \text{分离性作一般律}\ ✗;\ \textbf{owner 容量鸽笼}\ ✗$$
 $$\textbf{待证（唯一）}:\ \mathrm{supp}(q\oplus x_i)\cap P_1(x_i)\text{-坐标}=\varnothing\ (d\ge4);\quad \text{一般 }d\ \text{完全未触及}$$
 $$
+
+---
+
+## §36 ⚠️⚠️ **决定性否证：核心禁形不成立（分离性不可由码局部结构推出）**（2026-09-25 23:4x）
+
+### §36.1 核心构型检验（真实码 C₁₂₀）
+
+```
+$$\text{构型}:\ x\xrightarrow{1}p\xrightarrow{2}q\quad(d(x,q)=3,\ p=x\oplus e_r\ \text{为一级中间点}),\ \text{问}\ p\ \text{能否是 }x\ \text{的私有点}$$
+$$\textbf{结果}:\ d(x,q){=}3\ \text{的码字对}\ =\mathbf{1824}\ (\text{中间点 }5472);\quad \text{中间点 owner 大小分布}=\{1{:}3655\mid2{:}1336\mid3{:}240\mid4{:}51\mid5{:}190\}$$
+$$\boxed{\text{中间点为 }x\ \text{私有点的次数}\ =\ \mathbf{3655/5472}}\ ✗✗\ \Longrightarrow\ \textbf{核心禁形\textbf{大量存在}}$$
+$$\textbf{对照}\ d(x,q){=}2:\ 298\ \text{对，其中间点为 }x\ \text{私有点的次数}=0\ ✓\ (\text{与纯几何一致：}d{=}2\Rightarrow d(p,q){=}1\Rightarrow\text{违反私有性})$$
+$$
+
+### §36.2 结论（按唐先生预设判据）
+
+```
+$$\boxed{\text{紧型分离性}\ d(q,x_i)\ge4\ \textbf{不能}由 }C_{120}\ \text{的码/私有点局部结构推出}\ ✗$$
+$$\Longrightarrow\ \text{它只能是\textbf{紧型实例特有（经验性）性质}}，\ \textbf{不是可证引理}$$
+$$\text{边界恰在}\ d=3:\ d=2\ \text{纯几何强制（}0\ \text{例} ✓\text{）};\ d=3\ \textbf{失效}\ ✗$$
+$$\textbf{对路线的影响}:\ \text{Level II 的"分离性"支柱\textbf{撤销}};\ \text{须另找输入（}D\ \text{的具体删除结构 / 紧型饱和的额外约束）或放弃该目标}$$
+$$
