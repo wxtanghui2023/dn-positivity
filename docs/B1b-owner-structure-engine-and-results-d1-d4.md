@@ -219,3 +219,52 @@ $$\text{剩余}\approx18{,}700\ \text{例贪心失败}\ \Longrightarrow\ \text{�
 \text{脚本}:\ \texttt{work/k10/b1b\_pack\_cert.py}\mid\text{产物}:\ \texttt{b1b\_packcert\_d4*.json}
 $$
 **【边界】** `d=3` 的 packing 证书为**局部邻域证书**（仅排除与 `C_{120}` 删除距离 3 的 119-码）；**不构成**全局 `K(10,1)>119`；`d=4` 尚在进行。
+
+---
+
+## §9 **统一 packing 证书：`d ≤ 4` 完成**（2026-09-25 16:2x）
+
+### §9.1 `d=4` packing 证书（完整）
+
+```
+$$\text{枚举全量}:\ \text{tested}=\mathbf{8{,}214{,}570}\ (\text{全部 }\binom{120}{4})$$
+$$\text{需查（u1 内无 4 点见证者）}=\text{cand}=7{,}950{,}947;\quad \text{贪心见证成功}=\text{cert}=7{,}919{,}048$$
+$$\text{贪心失败}=\mathbf{31{,}899}\ (0.40\%)\ \Longrightarrow\ \text{对这 31{,}899 例做\textbf{精确 }4\text{-clique decision}}$$
+$$\boxed{\text{精确判定}:\ \text{PASS}=31{,}899\ \mid\ \text{FAIL}=\mathbf{0}}\ \Longrightarrow\ \forall D,\ |D|=4:\ \alpha_2(U_D)\ge4\ ✓✓$$
+$$\text{判定仅用 }6\ \text{秒（clique decision，非 }\tau\ \text{搜索）}$$
+```
+
+### §9.2 **统一证书（d ≤ 4）**
+
+```
+$$\boxed{\forall D\subseteq C_{120},\ |D|\le4:\quad \alpha_2(U_D)\ \ge\ |D|}$$
+$$\Longrightarrow\ \text{半径-1 球至多覆盖 packing 中 1 点}\ \Longrightarrow\ \rho(D)\ \ge\ |D|\ >\ |D|-1$$
+$$\Longrightarrow\ \boxed{\text{deletion distance}\le4\ \text{内不存在 }119\text{-码}}\ (\text{局部证书})$$
+$$\text{对照旧形式}:\ \text{旧}=280{,}840+8{,}214{,}570\ \text{个精确覆盖问题全失败};\ \text{新}=\text{统一 packing 命题}+\text{有限见证}$$
+```
+
+### §9.3 方法（照唐先生 16:0x 指示）
+
+```
+$$\text{① 贪心见证}（\text{快}）\to\text{② 失败例做\textbf{精确 clique decision}}（\text{只判是否存在 }K_d，不求完整 }\alpha_2）$$
+$$\text{判定器自检（同一套 }has\_clique）：60\ \text{个已知 }\alpha_2=3\ \text{的 }d=3\ \text{例}:\ \text{target3}=\mathbf{60/60\ PASS},\ \text{target4}=\mathbf{0/60\ PASS}\ ✓✓$$
+$$\text{上界提醒}:\ \alpha_2\le A(10,3)=72\ \Longrightarrow\ \text{packing 证书只能覆盖小 }d\ (\text{与邻域设定吻合})$$
+```
+
+### §9.4 本阶段自查出的 4 个自身缺陷（全部已修）
+
+```
+(i)\ \textbf{键类型 bug}:\ 分层索引把单点层键写成元组、查询用 int\ \Longrightarrow\ \text{私有点丢失}\ \Longrightarrow\ d=5\ \text{早期 }\text{cert}=0\ \text{是\textbf{假象}}（\text{已修}; \text{引擎版无此错}）
+(ii)\ \text{失败例列表原封顶 }20\ \Longrightarrow\ \text{改为\textbf{流式落盘}}（\text{否则无法做精确阶段}）
+(iii)\ \texttt{pkill}\ \text{自杀陷阱}\ \times2:\ \text{同一命令行含目标字面名}\ \Longrightarrow\ \text{杀自身 shell}（\text{TOOLS.md 已记，仍复发}）
+(iv)\ \text{重复启动 }6\ \text{个同任务进程写同一文件}\ \Longrightarrow\ \text{数据污染};\ \text{改为\textbf{单次运行纪律}}
+$$
+
+### §9.5 状态与边界
+
+```
+$$\text{进行中}:\ \boxed{d=5}\ (\text{四片并行，目标 }\alpha_2\ge5)\ \text{预计}\sim45\ \text{分钟}$$
+$$\textbf{边界（必须遵守）}:\ \text{本证书为\textbf{邻域证书}}（\text{仅排除与 }C_{120}\ \text{删除距离}\le4\ \text{的 }119\text{-码}）$$
+$$\qquad \textbf{不得}写成全局\ K(10,1)>119;\quad \text{全局结论需 }packing\ \text{引理对所有 }D\ \text{成立（含大 }D）\ \text{或其它论证}$$
+\text{产物}:\ \texttt{b1b\_packcert\_d4.json}\mid\texttt{b1b\_packfail\_d4.jsonl}\mid\texttt{b1b\_packfail\_d4\_exact4.json}\mid\texttt{exact\_pack.py}
+```
