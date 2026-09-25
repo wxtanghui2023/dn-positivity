@@ -536,3 +536,46 @@ $$\qquad \text{d=3}:\ \text{残量 }|U|\le12;\ \text{只需 6 个值}\ m_3(7..12
 $$\qquad \text{若要\textbf{消掉}残量} \Longrightarrow \text{证明 §15.3 的 }4k+3\ \text{（码结构引理）}$$
 $$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
 ```
+
+---
+
+## §16 **M=6 全分类 ＋ 并集引理**（2026-09-25 21:2x）
+
+### §16.1 M=6 的类型分类（全量 1,484 例）
+
+```
+$$\text{类型 }t=(d(w,x_1),d(w,x_2),d(w,x_3)):\quad (1,1,1)\ \textbf{与}\ (1,1,2)\ \textbf{完全不出现}\ ✓$$
+\begin{array}{c|c|c|c}
+t&\text{例数}&\min|U_D|&|U_D|\ \text{分布（前几项）}\\ \hline
+(1,2,2)&310&18&18{:}1,\ 19{:}7,\ 20{:}14,\ 21{:}26,\ldots\\
+(2,1,2)&386&18&18{:}1,\ 19{:}4,\ 20{:}24,\ldots\\
+(2,2,1)&215&19&19{:}5,\ 20{:}10,\ 21{:}24,\ldots\\
+(2,2,2)&573&\mathbf{15}&15{:}\mathbf{1},\ 17{:}1,\ 18{:}45,\ 19{:}28,\ldots
+\end{array}$$
+$$\boxed{M=6\ \Longrightarrow\ |U_D|\ge15};\quad \text{唯一等号}=\boxed{D=[49,77,89],\ w=673}\ (\text{即 §15 解剖的那一例}) ✓✓$$
+$$
+
+### §16.2 ⭐ **并集引理（纯 Hamming 几何，已证）**
+
+```
+$$\boxed{M(D)\ \le\ \left|\bigcup_{x\in D}\bigl(B_1(w)\cap B_1(x)\bigr)\right|}\quad(\text{对达到 }M\ \text{的 }w)$$
+$$\text{球交的\textbf{两种形态}}:\quad d(w,x)=1\Rightarrow B_1(w)\cap B_1(x)=\{x,w\}\ (\textbf{都含 }w);\quad d(w,x)=2\Rightarrow\{\text{两中点}\}\ (\text{不含 }w,x)$$
+$$\Longrightarrow\ \text{并集大小}:\ t=(1,1,1)\to\mathbf{4};\quad (1,1,2)\to\mathbf{5};\quad (1,2,2)/(2,2,2)\to\mathbf{6}\quad(\text{已逐例验证} ✓)$$
+$$\Longrightarrow\ \boxed{M=6\ \Longrightarrow\ \text{至多一个字满足 }d(w,x)=1}\ ✓\ (\text{与 census 类型分布完全吻合} ✓✓)$$
+$$
+
+### §16.3 d=3 的最终状态
+
+```
+$$\textbf{已证（几何）}:\ M(D)\le2d;\quad \text{并集引理};\quad M=6\Rightarrow\ge\text{少一距离-1}$$
+$$\textbf{已穷举验证}:\ \forall|D|=3:\ \boxed{|U_D|\ge2M(D)+3}\iff\Gamma\ge3;\quad \text{等号 13 例（}(7,2){\times}4,(11,4){\times}8,(15,6){\times}1\text{）} ✓$$
+$$\textbf{仍缺（唯一）}:\ \text{把 }|U|\ge2M+3\ \text{的耦合证成\textbf{结构性引理}};\ \text{已知它\textbf{超出 Hamming 度量}}\ \Longrightarrow\ \text{依赖 }C_{120}\ \text{的局部结构}$$
+$$\qquad \text{候选形式}:\ M=2k\ (\text{k 个字贡献 2 点})\ \Longrightarrow\ |U_D|\ge4k+3\ \text{（}k=1,2,3:\ 7,11,15\text{）}$$
+$$
+
+### §16.4 d=4 后台（census 进行中）
+
+```
+$$\text{进度（i1 分片 mod 2）}:\ \Gamma_{\min}\ \text{已见 }1\ (\text{i1}=0,2,10)\ \text{与 }3\text{--}4\ (\text{奇数片}) \Longrightarrow\ \textbf{d=4 的裕度小于 d=3} ✓$$
+$$\text{（按唐先生指示：先用 d=3 机制预测，不急着全量判读 d=4）}$$
+$$
