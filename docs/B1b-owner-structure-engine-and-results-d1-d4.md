@@ -1164,3 +1164,40 @@ $$\Longrightarrow\ \text{紧型分离性证明必须用 \textbf{D 的具体删�
 $$\Longrightarrow\ \text{即 }S(e)\subseteq D\ \text{是"恰好装进"而非"装不进"}:\ \text{真正的 code-specific 耦合在此}$$
 $$\textbf{方法学}:\ \text{这是今日第 7 类陷阱的镜像——\textbf{用计数替代结构}（与"把 code-specific 事实几何化"同源）} ✗\to ✓$$
 $$
+
+---
+
+## §35 ⭐⭐ **结构识别：C_i = P₁(x_i)（候选集=私有点集）＋ joint-deletion 模式**（2026-09-25 23:2x）
+
+### §35.1 joint-deletion census（1320 点 = 紧型每簇 B₁(x_i) 的 10 个邻点）
+
+```
+\begin{array}{c|c|c|c}
+\text{legal}?&|S(e)\setminus D|&|S(e)|&\text{计数}\\ \hline
+\text{是}&0&1&842\\
+\text{否}&1&2&337\\
+\text{否}&2&3&78\\
+\text{否}&3&4&16\\
+\text{否}&4&5&47
+\end{array}
+$$\boxed{\text{合法候选中 }|S(e)\setminus D|>0\ \text{的}=0}\ ✓\ (\text{定义自洽});\quad \textbf{且合法候选恒有}\ |S(e)|=1$$
+$$
+
+### §35.2 ⭐ **结构识别（新）**
+
+```
+$$\boxed{C_i=P_1(x_i)\ \textbf{恰好}}\quad(\text{候选集 = 簇锚点的\textbf{私有点集}}) ✓✓$$
+$$\text{非候选者全部带"逃逸 owner"}:\ |S(e)\setminus D|\ge1\ (\text{即 }S(e)\not\subseteq D) ✓$$
+$$\Longrightarrow\ T_i=x_i\ \text{私有点的坐标集};\quad A_j=T_i\cap\mathrm{supp}(q_j\oplus x_i)\ (d(q_j,x_i)\in\{2,3\})$$
+$$\Longrightarrow\ \boxed{\text{待证}:\ \mathrm{supp}(q_j\oplus x_i)\cap T_i=\varnothing}\iff d(q_j,x_i)\ge4$$
+$$
+
+### §35.3 **本线最终状态表（d=4 packing 路线）**
+
+```
+$$\textbf{已证（纯几何/集合论）}:\ M\le2d;\ \alpha_2\le d;\ \text{Level A};\ |A_f|\le3;\ \text{覆盖三分判据};\ \textbf{Sat 引理};\ C_i=P_1(x_i)\ \text{的机制刻画}$$
+$$\textbf{强证据（全量/样本）}:\ \alpha_2(U_D)=d\ (d\le5,\ 8.2\text{M 零失败});\ \mu(D)=4\ (500/500);\ \text{对角 }R_{ii}{=}1,R_{ij}{\ge}2\ (500/500);$$
+$$\qquad \text{阻塞余量}\ge2\ (1200/1200);\ A_j{=}A_k{=}\varnothing\ (138\ \text{簇});\ \text{紧型分离}\ge4\ ({\sim}700\ D,\ \text{三次独立})$$
+$$\textbf{已否证}:\ \text{一步锚定增广}\ (2/1600);\ \text{任意三元组 }F\cap U_D\ne\varnothing\ (3/35);\ \text{Level I 原式}\le2\ (4/72);\ \text{分离性作一般律}\ ✗;\ \textbf{owner 容量鸽笼}\ ✗$$
+$$\textbf{待证（唯一）}:\ \mathrm{supp}(q\oplus x_i)\cap P_1(x_i)\text{-坐标}=\varnothing\ (d\ge4);\quad \text{一般 }d\ \text{完全未触及}$$
+$$
