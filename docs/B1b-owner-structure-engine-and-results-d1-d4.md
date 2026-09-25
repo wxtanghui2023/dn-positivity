@@ -781,7 +781,7 @@ $$
 ### §22.3 ⭐ **对角结构（唐先生猜想成立）**
 
 ```
-$$\text{取 }4\text{-见证 }(q_1,\ldots,q_4)\ \text{并\txbf{按簇序}标号}:\ \text{距离矩阵 }R_{ij}=d(q_i,x_j)$$
+$$\text{取 }4\text{-见证 }(q_1,\ldots,q_4)\ \text{并\textbf{按簇序}标号}:\ \text{距离矩阵 }R_{ij}=d(q_i,x_j)$$
 $$\textbf{对角}:\ \max_i d(q_i,x_i)=1\ \text{于}\ \mathbf{500/500}\ \text{例} \Longrightarrow \boxed{R_{ii}\le1\ (\text{恒为 }1)} ✓✓$$
 $$\textbf{非对角}:\ \min_{i\ne j}d(q_i,x_j)\ \text{分布}\ 2{:}186\mid3{:}221\mid4{:}87\mid5{:}5\mid6{:}1 \Longrightarrow \boxed{R_{ij}\ge2} ✓✓$$
 $$\Longrightarrow\ \boxed{\text{存在"对角锚定 packing"}:d(q_i,x_i)\le1,\ d(q_i,q_j)\ge3,\ d(q_i,x_j)\ge2\ (i\ne j)} ✓✓$$
