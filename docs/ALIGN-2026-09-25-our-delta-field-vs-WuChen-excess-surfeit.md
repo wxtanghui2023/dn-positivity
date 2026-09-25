@@ -65,6 +65,7 @@ Layer-2 层式族（δ_i≥0 ∀x,i）的 LP = 1024/11 ⟸ 均匀解 z_c=1/11 �
 技术词 割平面        命中文件数=1    :: ./C3860-B1alpha3-first-cut-void-no-feasible-initialisation.md 
 ```
 
-- **本档新增**：surfeit、层重分配、均匀分数解、割平面（回查仅本档自命中）
-- **档案已有（引用）**：—
+- **本档新增**（回查命中数=0，即**全档未出现过**）：`surfeit`、`层重分配`
+- **档案已有（引用，不列为提出）**：`均匀分数解`（早档 `X1-K10-5-global-cp-sat-run1-result.md` ✓）、`割平面`（早档 `C3860-B1alpha3-first-cut-void-no-feasible-initialisation.md` ✓）
 - **通用词（不计）**：—
+- （说明：`均匀分数解`/`割平面` 虽在本档使用，但**非本档新增** ⟹ 已从"新增"栏移出 ✓）
