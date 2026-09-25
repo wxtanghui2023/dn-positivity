@@ -103,3 +103,79 @@ D=[3,47,83] |U|=21: 1字=None 2字=None 3字=[41, 406, 662]
 τ ≤ d+1 近命中候选留存（≤50 例/档，含 D, τ, |U|）| τ > d+2 的 cap_hits
 ```
 **⑤ 状态登记**：`B1-b = OPEN`；`d≤4 = COMPLETE/found=0`；`d=5 = RUNNING`（4 分片，按 `i₁ mod 4` 均衡）；`K(10,1) ≤ 119 = 尚未证明`。
+
+---
+
+## §7 A 线：158 个 `(d=3, τ=3)` 近命中的四层结构分析（2026-09-25 15:0x）
+
+### §7.1 先自查并**更正**一处我自己的错误结论
+
+```
+$$\text{我此前称 "}406,662\ \text{是通用修补字"}\ \Longrightarrow\ \boxed{\textbf{假象（取样假象＋重加结构）}}$$
+$$\text{原因}:\ \text{三例里我\textbf{固定了索引 }47,83\ (\text{字 }406,692)\ \text{只变第一个};\ \text{且覆盖面 }\{WORDS[i],406,662\}\ \text{中 }406,692\in D\ \text{是\textbf{重加}}$$
+$$\text{正式判定见 §7.3}:\ L2\ \text{universal}=\varnothing,\ L3\ \text{forced}=\varnothing \Longrightarrow \textbf{不存在跨 }D\ \text{的通用／强制修补字}$$
+```
+
+### §7.2 极小覆盖的频率（L1）
+
+```
+$$\text{全部极小 3-覆盖（含重加）top}:\ 406(218)\mid 662(119)\mid 692(119)\mid 475(26)\mid 505(26)\mid 492,939,959,1010(14)$$
+$$\text{其中 }406,692\ \text{是\textbf{码字}（在 }D\ \text{内 ⟹ 重加）};\ 662,475\ \text{才是新字}$$
+$$\boxed{\text{纯新字 }3\text{-覆盖}: \textbf{0 例}/158}\ \Longrightarrow\ \text{任何极小修补都必须把已删字放回}\ ✓$$
+```
+
+### §7.3 L2 universal / L3 forced（正式定义下）
+
+```
+$$L2:\ \bigcap_{D}\bigcup_{A\in\mathcal S_D}A=\varnothing\ \Longrightarrow\ \textbf{无 universal 修补字}$$
+$$L3:\ \bigcap_{D}\bigcap_{A\in\mathcal S_D}A=\varnothing\ \Longrightarrow\ \textbf{无 forced 修补字}$$
+$$\Longrightarrow\ \text{局部缺陷\textbf{不集中于固定字集}};\ \text{不存在"}\{406,662\}\ \text{核心"这样的结构} ✓$$
+```
+
+### §7.4 为什么它们不特殊（L4）＋ orbit
+
+```
+$$662:\ |B(662)\cap U_D|\in[0,5],\ \text{均值 }2.89;\quad 475:\ \text{均值 }0.35\ (\text{几乎无用})$$
+$$\text{平移稳定子}\ |\mathrm{Stab}(C_{120})|=1\ (\text{仅恒等})\ \Longrightarrow\ \text{码无平移对称}\ \Longrightarrow\ 406,662\ \text{不可能同 orbit} ✓$$
+$$\text{L5 聚类}:\ 15\ \text{个签名类（按 }|U_D|,\ \text{覆盖型签名）};\ \text{主类}=\{2\ \text{重加}+1\ \text{新字}\}\ \text{或}\ \{3\ \text{重加}\}$$
+```
+
+### §7.5 ⭐ 真正的结构量 `ρ(D)`（**纯新字**最小覆盖）
+
+```
+$$\rho(D):=\min\{|A|:\ A\subseteq Q_{10}\setminus C_{120},\ A\supseteq\text{覆盖 }U_D\}$$
+$$\textbf{d=3（全 158 例）}:\quad \rho=5:\ 7\ \text{例}\mid \rho=6:\ 28\ \text{例}\mid \rho\ge7:\ 123\ \text{例}$$
+$$\textbf{d=4（抽 60 例）}:\quad \rho\ge6\ (\text{全部};\ \text{cap=5 未命中})\ \Longrightarrow\ \rho-d\ge2$$
+$$\text{对照目标}:\ 119\ \text{码需 }|A|=d-1\ \Longrightarrow\ \text{纯新字路线差}\ \ge3\ \text{个量级裕度} ✓$$
+```
+
+### §7.6 机制：为什么新字不够用
+
+```
+$$\text{新字最大重叠}:\ \max_{w\notin C_{120}}|B(w)\cap U_D|\le 5\ (\text{124/158 例}=4)$$
+$$\text{重加字重叠}:\ \max_{c\in D}|B(c)\cap U_D|=7\text{–}11\quad(\text{因其\textbf{拥有} }U_D\ \text{的点})$$
+$$\Longrightarrow\ \text{计数下界}\ \lceil |U_D|/\max_{\text{new overlap}}\rceil\approx 3\text{–}6\ (\text{均值 }4.56)\ \text{与实测 }\rho=5\text{–}7\ \text{同量级} ✓$$
+$$\boxed{\text{机制}:\ U_D\ \text{的点"几乎私有"于被删字};\ \text{新字每次只能吃掉 }4\text{–}5\ \text{点} \Longrightarrow \text{修补必须重加}}$$
+```
+
+### §7.7 可写的结构结论（**本档范围**）
+
+```
+$$\boxed{\text{对 }|D|=3:\ \text{任何极小修补必须重加}\ge2\ \text{个被删字};\ \text{纯新字修补需}\ge5\ \text{个}}$$
+$$\boxed{\text{对 }|D|=4\ (\text{抽样}):\ \text{纯新字修补需}\ge6\ \text{个}}$$
+【边界】 \text{以上为} C_{120}\ \text{的\textbf{局部}计算事实};\ \textbf{不构成} K(10,1)>119\ \text{的全局论断};\ \rho\ \text{的 d=4 部分为抽样}
+【产物】 \texttt{work/k10/b1b\_a\_line.py}\mid\texttt{b1b\_a\_line.json}\mid\texttt{b1b\_a\_line\_rho.json}\mid\texttt{b1b\_a\_overlap*.json}
+【进行中】 \text{d=4 仪器化}（CAP=4）\mid \text{d=5 四片}（CAP=4，决策阈值 d−1=4）
+
+## §附 A 线【技术词回查】（**先跑后写**）
+
+```
+$ bash scripts/tech_word_check.sh "universal 修补字" "纯新字" "ρ(D)" "局部刚性"
+技术词 universal 修补字 命中文件数=0    ::
+技术词 纯新字        命中文件数=0    ::
+技术词 ρ(D)            命中文件数=0    ::
+技术词 局部刚性     命中文件数=30   :: ./C207-T13A-YI-4-continuous-family-exclusion-renaming-and-T13B2-seal.md ./C204-T13-A-YI-1-cluster-separation.md ./C222-B-interval-newton-KKT-strict-box-X0-existence-and-uniqueness.md
+```
+- **本档新增**：`universal 修补字`、`纯新字`、`ρ(D)`（回查前均 0 档）
+- **档案已有（引用）**：`局部刚性`（30 档，但均**异语境**）⟹ 列为通用词，不计新性
+- **⚠️ 新性边界**：本档**无**数学新性主张；结果为**特定码的局部计算事实**

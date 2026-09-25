@@ -1,0 +1,6191 @@
+{
+ "perD": [
+  {
+   "D": [
+    0,
+    47,
+    83
+   ],
+   "Dwords": [
+    3,
+    406,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    2,
+    47,
+    83
+   ],
+   "Dwords": [
+    24,
+    406,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    3,
+    47,
+    83
+   ],
+   "Dwords": [
+    41,
+    406,
+    692
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    4,
+    24,
+    83
+   ],
+   "Dwords": [
+    52,
+    230,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    4,
+    26,
+    83
+   ],
+   "Dwords": [
+    52,
+    246,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    5,
+    47,
+    83
+   ],
+   "Dwords": [
+    63,
+    406,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    6,
+    47,
+    83
+   ],
+   "Dwords": [
+    69,
+    406,
+    692
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    8,
+    47,
+    83
+   ],
+   "Dwords": [
+    91,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    9,
+    47,
+    83
+   ],
+   "Dwords": [
+    98,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    10,
+    47,
+    83
+   ],
+   "Dwords": [
+    108,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    10,
+    55,
+    117
+   ],
+   "Dwords": [
+    108,
+    492,
+    994
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    11,
+    47,
+    83
+   ],
+   "Dwords": [
+    113,
+    406,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    12,
+    26,
+    83
+   ],
+   "Dwords": [
+    140,
+    246,
+    692
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    13,
+    47,
+    83
+   ],
+   "Dwords": [
+    141,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    14,
+    49,
+    77
+   ],
+   "Dwords": [
+    143,
+    417,
+    643
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    15,
+    47,
+    83
+   ],
+   "Dwords": [
+    147,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    16,
+    47,
+    83
+   ],
+   "Dwords": [
+    157,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    17,
+    47,
+    83
+   ],
+   "Dwords": [
+    170,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    18,
+    47,
+    83
+   ],
+   "Dwords": [
+    186,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    19,
+    47,
+    83
+   ],
+   "Dwords": [
+    189,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    20,
+    47,
+    83
+   ],
+   "Dwords": [
+    192,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    21,
+    47,
+    83
+   ],
+   "Dwords": [
+    208,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    22,
+    47,
+    83
+   ],
+   "Dwords": [
+    216,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    22,
+    58,
+    107
+   ],
+   "Dwords": [
+    216,
+    505,
+    939
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    22,
+    58,
+    111
+   ],
+   "Dwords": [
+    216,
+    505,
+    959
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    22,
+    58,
+    118
+   ],
+   "Dwords": [
+    216,
+    505,
+    1010
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    23,
+    47,
+    83
+   ],
+   "Dwords": [
+    227,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    24,
+    46,
+    83
+   ],
+   "Dwords": [
+    230,
+    404,
+    692
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    24,
+    47,
+    83
+   ],
+   "Dwords": [
+    230,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    24,
+    69,
+    83
+   ],
+   "Dwords": [
+    230,
+    572,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    24,
+    74,
+    83
+   ],
+   "Dwords": [
+    230,
+    628,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    25,
+    47,
+    83
+   ],
+   "Dwords": [
+    231,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    26,
+    47,
+    83
+   ],
+   "Dwords": [
+    246,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    26,
+    69,
+    83
+   ],
+   "Dwords": [
+    246,
+    572,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    26,
+    74,
+    83
+   ],
+   "Dwords": [
+    246,
+    628,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    27,
+    47,
+    83
+   ],
+   "Dwords": [
+    247,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    28,
+    47,
+    83
+   ],
+   "Dwords": [
+    256,
+    406,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    28,
+    76,
+    83
+   ],
+   "Dwords": [
+    256,
+    642,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    29,
+    47,
+    83
+   ],
+   "Dwords": [
+    277,
+    406,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    30,
+    47,
+    83
+   ],
+   "Dwords": [
+    283,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    31,
+    47,
+    83
+   ],
+   "Dwords": [
+    295,
+    406,
+    692
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    32,
+    47,
+    83
+   ],
+   "Dwords": [
+    300,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    32,
+    55,
+    117
+   ],
+   "Dwords": [
+    300,
+    492,
+    994
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    33,
+    47,
+    83
+   ],
+   "Dwords": [
+    306,
+    406,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    34,
+    47,
+    83
+   ],
+   "Dwords": [
+    329,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    35,
+    47,
+    83
+   ],
+   "Dwords": [
+    330,
+    406,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    36,
+    47,
+    83
+   ],
+   "Dwords": [
+    335,
+    406,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    37,
+    47,
+    83
+   ],
+   "Dwords": [
+    339,
+    406,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    38,
+    47,
+    83
+   ],
+   "Dwords": [
+    348,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    39,
+    47,
+    83
+   ],
+   "Dwords": [
+    356,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    39,
+    55,
+    117
+   ],
+   "Dwords": [
+    356,
+    492,
+    994
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    40,
+    47,
+    83
+   ],
+   "Dwords": [
+    363,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    41,
+    47,
+    83
+   ],
+   "Dwords": [
+    376,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    42,
+    47,
+    83
+   ],
+   "Dwords": [
+    381,
+    406,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    42,
+    50,
+    90
+   ],
+   "Dwords": [
+    381,
+    433,
+    761
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    43,
+    47,
+    83
+   ],
+   "Dwords": [
+    382,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    44,
+    47,
+    83
+   ],
+   "Dwords": [
+    385,
+    406,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    44,
+    76,
+    83
+   ],
+   "Dwords": [
+    385,
+    642,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    45,
+    49,
+    77
+   ],
+   "Dwords": [
+    390,
+    417,
+    643
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    47,
+    48,
+    83
+   ],
+   "Dwords": [
+    406,
+    416,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    49,
+    83
+   ],
+   "Dwords": [
+    406,
+    417,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    50,
+    83
+   ],
+   "Dwords": [
+    406,
+    433,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    51,
+    83
+   ],
+   "Dwords": [
+    406,
+    442,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    52,
+    83
+   ],
+   "Dwords": [
+    406,
+    458,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    53,
+    83
+   ],
+   "Dwords": [
+    406,
+    459,
+    692
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    54,
+    83
+   ],
+   "Dwords": [
+    406,
+    479,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    55,
+    83
+   ],
+   "Dwords": [
+    406,
+    492,
+    692
+   ],
+   "U_size": 13,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    56,
+    83
+   ],
+   "Dwords": [
+    406,
+    493,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    57,
+    83
+   ],
+   "Dwords": [
+    406,
+    497,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    58,
+    83
+   ],
+   "Dwords": [
+    406,
+    505,
+    692
+   ],
+   "U_size": 12,
+   "owner_sig": null,
+   "n_covers3": 4,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "cover_union_size": 5,
+   "cover_core_size": 1
+  },
+  {
+   "D": [
+    47,
+    59,
+    83
+   ],
+   "Dwords": [
+    406,
+    508,
+    692
+   ],
+   "U_size": 13,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    60,
+    83
+   ],
+   "Dwords": [
+    406,
+    516,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    61,
+    83
+   ],
+   "Dwords": [
+    406,
+    523,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    62,
+    83
+   ],
+   "Dwords": [
+    406,
+    529,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    65,
+    83
+   ],
+   "Dwords": [
+    406,
+    544,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    66,
+    83
+   ],
+   "Dwords": [
+    406,
+    549,
+    692
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    67,
+    83
+   ],
+   "Dwords": [
+    406,
+    550,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    68,
+    83
+   ],
+   "Dwords": [
+    406,
+    563,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    69,
+    83
+   ],
+   "Dwords": [
+    406,
+    572,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    70,
+    83
+   ],
+   "Dwords": [
+    406,
+    579,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    71,
+    83
+   ],
+   "Dwords": [
+    406,
+    584,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    72,
+    83
+   ],
+   "Dwords": [
+    406,
+    605,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    73,
+    83
+   ],
+   "Dwords": [
+    406,
+    623,
+    692
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    74,
+    83
+   ],
+   "Dwords": [
+    406,
+    628,
+    692
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    75,
+    83
+   ],
+   "Dwords": [
+    406,
+    634,
+    692
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    77,
+    83
+   ],
+   "Dwords": [
+    406,
+    643,
+    692
+   ],
+   "U_size": 13,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    78,
+    83
+   ],
+   "Dwords": [
+    406,
+    659,
+    692
+   ],
+   "U_size": 13,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    79,
+    83
+   ],
+   "Dwords": [
+    406,
+    670,
+    692
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    80,
+    83
+   ],
+   "Dwords": [
+    406,
+    676,
+    692
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    81,
+    83
+   ],
+   "Dwords": [
+    406,
+    677,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    82,
+    83
+   ],
+   "Dwords": [
+    406,
+    688,
+    692
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    84
+   ],
+   "Dwords": [
+    406,
+    692,
+    713
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    85
+   ],
+   "Dwords": [
+    406,
+    692,
+    718
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    86
+   ],
+   "Dwords": [
+    406,
+    692,
+    725
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    87
+   ],
+   "Dwords": [
+    406,
+    692,
+    734
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    88
+   ],
+   "Dwords": [
+    406,
+    692,
+    744
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    89
+   ],
+   "Dwords": [
+    406,
+    692,
+    745
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    90
+   ],
+   "Dwords": [
+    406,
+    692,
+    761
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    91
+   ],
+   "Dwords": [
+    406,
+    692,
+    763
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    92
+   ],
+   "Dwords": [
+    406,
+    692,
+    771
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    93
+   ],
+   "Dwords": [
+    406,
+    692,
+    781
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    94
+   ],
+   "Dwords": [
+    406,
+    692,
+    798
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    95
+   ],
+   "Dwords": [
+    406,
+    692,
+    810
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    96
+   ],
+   "Dwords": [
+    406,
+    692,
+    820
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    97
+   ],
+   "Dwords": [
+    406,
+    692,
+    825
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    98
+   ],
+   "Dwords": [
+    406,
+    692,
+    838
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    99
+   ],
+   "Dwords": [
+    406,
+    692,
+    848
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    100
+   ],
+   "Dwords": [
+    406,
+    692,
+    859
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    101
+   ],
+   "Dwords": [
+    406,
+    692,
+    865
+   ],
+   "U_size": 21,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    102
+   ],
+   "Dwords": [
+    406,
+    692,
+    876
+   ],
+   "U_size": 15,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    103
+   ],
+   "Dwords": [
+    406,
+    692,
+    887
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    104
+   ],
+   "Dwords": [
+    406,
+    692,
+    904
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    105
+   ],
+   "Dwords": [
+    406,
+    692,
+    920
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    106
+   ],
+   "Dwords": [
+    406,
+    692,
+    921
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    107
+   ],
+   "Dwords": [
+    406,
+    692,
+    939
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    108
+   ],
+   "Dwords": [
+    406,
+    692,
+    942
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    109
+   ],
+   "Dwords": [
+    406,
+    692,
+    943
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    110
+   ],
+   "Dwords": [
+    406,
+    692,
+    951
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    111
+   ],
+   "Dwords": [
+    406,
+    692,
+    959
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    112
+   ],
+   "Dwords": [
+    406,
+    692,
+    964
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    113
+   ],
+   "Dwords": [
+    406,
+    692,
+    965
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    114
+   ],
+   "Dwords": [
+    406,
+    692,
+    967
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    115
+   ],
+   "Dwords": [
+    406,
+    692,
+    978
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    116
+   ],
+   "Dwords": [
+    406,
+    692,
+    981
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    117
+   ],
+   "Dwords": [
+    406,
+    692,
+    994
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    118
+   ],
+   "Dwords": [
+    406,
+    692,
+    1010
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    47,
+    83,
+    119
+   ],
+   "Dwords": [
+    406,
+    692,
+    1020
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    49,
+    77,
+    81
+   ],
+   "Dwords": [
+    417,
+    643,
+    677
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    51,
+    58,
+    105
+   ],
+   "Dwords": [
+    442,
+    505,
+    920
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    55,
+    85,
+    88
+   ],
+   "Dwords": [
+    492,
+    718,
+    744
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    85,
+    89
+   ],
+   "Dwords": [
+    492,
+    718,
+    745
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    85,
+    104
+   ],
+   "Dwords": [
+    492,
+    718,
+    904
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    85,
+    117
+   ],
+   "Dwords": [
+    492,
+    718,
+    994
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    104,
+    108
+   ],
+   "Dwords": [
+    492,
+    904,
+    942
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    104,
+    109
+   ],
+   "Dwords": [
+    492,
+    904,
+    943
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    104,
+    117
+   ],
+   "Dwords": [
+    492,
+    904,
+    994
+   ],
+   "U_size": 19,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    112,
+    117
+   ],
+   "Dwords": [
+    492,
+    964,
+    994
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    55,
+    113,
+    117
+   ],
+   "Dwords": [
+    492,
+    965,
+    994
+   ],
+   "U_size": 17,
+   "owner_sig": null,
+   "n_covers3": 1,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ]
+   ],
+   "cover_union_size": 3,
+   "cover_core_size": 3
+  },
+  {
+   "D": [
+    57,
+    58,
+    91
+   ],
+   "Dwords": [
+    497,
+    505,
+    763
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    57,
+    58,
+    107
+   ],
+   "Dwords": [
+    497,
+    505,
+    939
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    57,
+    58,
+    111
+   ],
+   "Dwords": [
+    497,
+    505,
+    959
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    57,
+    58,
+    118
+   ],
+   "Dwords": [
+    497,
+    505,
+    1010
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    84,
+    91
+   ],
+   "Dwords": [
+    505,
+    713,
+    763
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    84,
+    107
+   ],
+   "Dwords": [
+    505,
+    713,
+    939
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    84,
+    111
+   ],
+   "Dwords": [
+    505,
+    713,
+    959
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    84,
+    118
+   ],
+   "Dwords": [
+    505,
+    713,
+    1010
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    91,
+    105
+   ],
+   "Dwords": [
+    505,
+    763,
+    920
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    91,
+    106
+   ],
+   "Dwords": [
+    505,
+    763,
+    921
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    91,
+    116
+   ],
+   "Dwords": [
+    505,
+    763,
+    981
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    105,
+    107
+   ],
+   "Dwords": [
+    505,
+    920,
+    939
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    105,
+    111
+   ],
+   "Dwords": [
+    505,
+    920,
+    959
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    105,
+    118
+   ],
+   "Dwords": [
+    505,
+    920,
+    1010
+   ],
+   "U_size": 18,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    106,
+    107
+   ],
+   "Dwords": [
+    505,
+    921,
+    939
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    106,
+    111
+   ],
+   "Dwords": [
+    505,
+    921,
+    959
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    106,
+    118
+   ],
+   "Dwords": [
+    505,
+    921,
+    1010
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    107,
+    116
+   ],
+   "Dwords": [
+    505,
+    939,
+    981
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    111,
+    116
+   ],
+   "Dwords": [
+    505,
+    959,
+    981
+   ],
+   "U_size": 14,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  },
+  {
+   "D": [
+    58,
+    116,
+    118
+   ],
+   "Dwords": [
+    505,
+    981,
+    1010
+   ],
+   "U_size": 16,
+   "owner_sig": null,
+   "n_covers3": 2,
+   "n_covers3_pure": 0,
+   "minsize": 3,
+   "readd_counts": [
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ]
+   ],
+   "new_counts": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "cover_union_size": 4,
+   "cover_core_size": 2
+  }
+ ],
+ "freq_all": [
+  [
+   406,
+   218
+  ],
+  [
+   662,
+   119
+  ],
+  [
+   692,
+   119
+  ],
+  [
+   475,
+   26
+  ],
+  [
+   505,
+   26
+  ],
+  [
+   492,
+   14
+  ],
+  [
+   939,
+   14
+  ],
+  [
+   959,
+   14
+  ],
+  [
+   1010,
+   14
+  ],
+  [
+   763,
+   12
+  ],
+  [
+   920,
+   12
+  ],
+  [
+   230,
+   10
+  ],
+  [
+   246,
+   10
+  ],
+  [
+   497,
+   10
+  ],
+  [
+   713,
+   10
+  ],
+  [
+   921,
+   10
+  ],
+  [
+   981,
+   10
+  ],
+  [
+   994,
+   9
+  ],
+  [
+   216,
+   8
+  ],
+  [
+   572,
+   6
+  ],
+  [
+   628,
+   6
+  ],
+  [
+   718,
+   6
+  ],
+  [
+   904,
+   6
+  ],
+  [
+   417,
+   5
+  ],
+  [
+   643,
+   5
+  ],
+  [
+   52,
+   4
+  ],
+  [
+   256,
+   4
+  ],
+  [
+   642,
+   4
+  ],
+  [
+   385,
+   4
+  ],
+  [
+   442,
+   4
+  ]
+ ],
+ "freq_pure": [],
+ "universal_union": [],
+ "forced_inter": [],
+ "deep": {
+  "662": {
+   "S_in_code": false,
+   "n_cases_available": 158,
+   "inter_min": 0,
+   "inter_max": 5,
+   "inter_mean": 2.89
+  },
+  "475": {
+   "S_in_code": false,
+   "n_cases_available": 158,
+   "inter_min": 0,
+   "inter_max": 2,
+   "inter_mean": 0.35
+  }
+ },
+ "stab": [
+  0
+ ],
+ "pure_missing": 158
+}

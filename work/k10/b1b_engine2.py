@@ -195,7 +195,7 @@ def run(d, limit=None, verbose=True, i1_lo=0, i1_hi=119, imod=None):
         # 需要 |A| <= d-1 才得 119
         pc2 = U.bit_count()
         stats["u_hist"][str(pc2)] = stats["u_hist"].get(str(pc2), 0) + 1
-        cap_tau = d + 2
+        cap_tau = CAP
         tau = min_cover(U, cap_tau, set(D))
         if tau > cap_tau:
             stats["cap_hits"] += 1
@@ -221,6 +221,9 @@ def run(d, limit=None, verbose=True, i1_lo=0, i1_hi=119, imod=None):
           f"found={len(stats['found'])} {stats['seconds']}s", flush=True)
     return stats
 
+
+import os
+CAP = int(os.environ.get('B1B_TAU_CAP', '4'))
 
 if __name__ == "__main__":
     args = sys.argv[1:]
