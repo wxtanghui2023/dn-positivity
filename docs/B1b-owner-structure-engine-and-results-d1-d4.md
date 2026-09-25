@@ -893,3 +893,31 @@ $$\qquad \text{（\textbf{不}是"任意三元组"；3/35 反例已证前者为�
 $$\textbf{等价}:\ \text{阻塞余量}\ge2\ \text{（1200/1200 实证）};\quad \textbf{待证}=\text{上述存在性}$$
 $$\textbf{边界}:\ \mu=4\ \text{与}\ \alpha_2=d\ \text{仍为 }d\le5\ \text{计算证据};\ \text{一般 }d\ \text{未证}$$
 $$
+
+---
+
+## §26 ⭐ **紧型有限禁形分类：交换对被强制产生（24/24）**（2026-09-25 21:4x）
+
+### §26.1 坏自由点与溜出码字的形态（紧型 (2,3,3)/(3,3,3)，|F|=2）
+
+```
+$$\textbf{坏 }f\ \text{归一化形态}:\ x(0)\times8\mid e_0\times4\mid e_7\times8\mid e_1\times1\mid e_2\times3$$
+$$\textbf{溜出码字 }y\in S(f)\setminus D\ \text{形态}:\ |y|{=}2\ \text{含相邻对}\times15\mid|y|{=}1\times9\ \Longrightarrow\ \textbf{仅两类}:\ y=f\ \text{或}\ y=x\oplus e_a\oplus e_b$$
+$$\textbf{实证}:\ d(y,x)\in\{1,2\}\ (\text{与理论一致}),\ \text{且 }y\notin D$$
+$$
+
+### §26.2 **交换对存在性（关键结果）**
+
+```
+$$\text{对每个坏 }f,\ \text{检验三簇}:\ \exists q'\in C_i:\ d(q',f)\ge3\ \wedge\ d(q',q_j)\ge3\ (j\ne i,\ \text{保留点})$$
+$$\boxed{\text{各簇交换对}=(T,T,T)\times24\ \Longrightarrow\ \textbf{至少一个可交换簇}=100\%\ (24/24)}$$
+$$\text{样例}:\ D=[23,54,56,102],\ t{=}2,\ rs{=}(3,3,3),\ F_{norm}{=}[0,64],\ f{=}0,\ y{=}1,\ d(y,q){=}(2,4,4)$$
+$$
+
+### §26.3 证明链闭合（本样本）
+
+```
+$$\boxed{\text{blocking}\Longrightarrow\exists y\in S(f)\setminus D\ \text{（形态仅 2 类）}\Longrightarrow\ \exists\ \text{可交换对}\Longrightarrow\ \text{新兼容三元组}\Longrightarrow|F\cap U_D|\ge2}$$
+$$\textbf{机制（经验）}:\ \text{不是单一支撑型，而是\textbf{簇内备选充足}}\ (|C_i|\ \text{通常}\ge5)\ \text{下的鸽子洞} ✓$$
+$$\textbf{边界}:\ 24\ \text{例、}100\%\ \text{为\textbf{强证据非证明}};\ \text{且散点分布警示不宜过度拟合支撑型}$$
+$$
