@@ -613,3 +613,41 @@ $$\Longrightarrow\ \boxed{\text{计数路线 }\Gamma_d>0\ \textbf{对 }d=4\ \tex
 $$\textbf{但}:\ \text{packing 路线（}\alpha_2(U_D)\ge d\text{）在 }d\le5\ \textbf{已穷举通过} ✓ \Longrightarrow\ \boxed{\text{packing 是稳健路线，计数只是 }d=3\ \text{的便利}} ✓$$
 $$
 $$
+
+---
+
+## §18 **d=4 全量 Γ-census 完成 ＋ 7 例计数例外**（2026-09-25 21:2x）
+
+### §18.1 全量结果
+
+```
+$$\text{两片合计}\ n=\mathbf{8{,}214{,}570}=\binom{120}{4}\ ✓\ (\text{各片 }4{,}176{,}610/4{,}037{,}960;\ \text{用时 }1753/1711\ \text{s})$$
+$$\Gamma_4=u-3M\ \text{分布（升序）}:\ \boxed{-1{:}7}\mid 0{:}19\mid 1{:}59\mid 2{:}399\mid 3{:}998\mid 4{:}2775\mid 5{:}8516\mid 6{:}19578\mid 7{:}39522\mid 8{:}87555\mid\ldots$$
+$$M\ \text{分布}:\ \{2{:}481{,}507\mid3{:}2{,}123{,}586\mid4{:}\mathbf{4{,}658{,}282}\mid5{:}776{,}523\mid6{:}168{,}943\mid7{:}5{,}389\mid8{:}340\}$$
+$$\Longrightarrow\ M\le8=2d\ ✓\ (\text{容量引理上界被 \textbf{340} 例取到})$$
+$$
+
+### §18.2 ⚠️ **计数路线在 d=4 失效，但只差 7 例**
+
+```
+$$\boxed{\Gamma_4\ge-1};\quad \Gamma_4=-1\ \text{仅 }\mathbf{7}\ \text{例};\quad \Gamma_4=0\ \text{仅 }19\ \text{例}$$
+\begin{array}{c|c|c|c|c}
+D&|U|&M&\Gamma&P^\downarrow\\ \hline
+[22,57,58,106]&20&7&-1&(6,6,6,2)\ \Delta{=}1\\
+[26,46,57,59]&20&7&-1&(6,6,5,3)\\
+[26,79,83,110]&20&7&-1&(6,6,6,2)\\
+[46,79,83,86]&20&7&-1&(6,6,6,2)\\
+[51,57,58,91]&20&7&-1&(6,6,6,2)\ \Delta{=}1\\
+[49,58,77,89]&17&6&-1&(6,6,3,2)\\
+[49,77,83,89]&17&6&-1&(6,6,3,2)
+\end{array}$$
+$$\textbf{结构洞察}:\ \text{后两例}=\text{d=3 极值}\ D=[49,77,89]\ +\ \text{一个字}\ \Longrightarrow\ \boxed{\text{"d=3 极值}\to\text{d=4 例外"的\textbf{抬升关系}}} ✓$$
+$$
+
+### §18.3 路线判定
+
+```
+$$\boxed{\text{计数路线（}\Gamma_d>0\text{）\textbf{正式下线}}\ \text{——d=4 已出现 }-1}$$
+$$\boxed{\text{packing 路线（}\alpha_2(U_D)\ge d\text{）\textbf{继续主场}}\ \text{——}d\le5\ \text{全量零失败} ✓}$$
+$$\text{紧族画像（}\alpha_2=4\text{）census 进行中};\ \text{另记}:\ \text{7 例计数例外}\ \alpha_2\ \text{仍}\ge4\ \Longrightarrow\ \text{packing 信息未被 }\Gamma\ \text{抹掉} ✓$$
+$$
