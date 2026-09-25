@@ -1076,3 +1076,39 @@ $$\text{① 索引 vs 码字（}3\times\text{）；② 双层循环未绑定当�
 $$\text{③ 统计量取反（阻塞判据须用\textbf{最小}覆盖而非最大）；④ 公式越界（支撑公式仅对 }|{\rm supp}|\in\{2,3\}\text{）}$$
 $$\text{⑤ 推断越界（把 code-specific 的 }A_j=\varnothing\ \text{误归因于纯几何分离性）} \Longrightarrow \textbf{本轮自查抓回} ✓$$
 $$
+
+---
+
+## §32 ⭐⭐ **精确分离引理（簇锚点 ≥4）＋ Level II 闭环**（2026-09-25 22:4x）
+
+### §32.1 覆盖判据（修正 §31 的错判）
+
+```
+$$\text{令 }S=\mathrm{supp}(q\oplus x_i),\ D_q=|S|:\quad a\in S\Rightarrow d(x_i\oplus e_a,q)=D_q-1;\quad a\notin S\Rightarrow D_q+1$$
+$$\Longrightarrow\ A_j=\begin{cases}T_i,&D_q\le1\\ T_i\cap S,&D_q\in\{2,3\}\\ \varnothing,&D_q\ge4\end{cases}\quad\Longrightarrow\ \boxed{A_j=\varnothing\iff D_q\ge4}\ (\text{当 }D_q\ge2)$$
+$$
+
+### §32.2 ⭐ **精确分离（实证，35 实例）**
+
+```
+$$(q,\ \textbf{簇锚点}\ x_i)\ \text{距离谱}:\ \boxed{\{4{:}9\mid5{:}37\mid6{:}99\mid7{:}65\}}\ \Longrightarrow\ \textbf{最小}=4,\ \text{零}\le3\ \text{违例} ✓✓$$
+$$(q,\ \textbf{目标字}\ x_t)\ \text{距离谱}:\ \{2{:}21\mid3{:}84\}\ \Longrightarrow\ \text{恰为紧型定义}\ r\in\{2,3\} ✓$$
+$$\Longrightarrow\ \textbf{§31 的"分离性被否证"须再修正}:\ \text{近距离只发生在\textbf{靶本身}};\ \textbf{簇锚点必}\ge4 ✓✓$$
+$$
+
+### §32.3 **Level II 闭环（模紧型分离引理）**
+
+```
+$$\boxed{\textbf{紧型分离引理}:\ \text{紧型下}\ d(q,x_i)\ge4\ \text{对一切 }q\in Q\ \text{与簇锚点}\ x_i\ (i\ne q\ \text{所属簇})}$$
+$$\Longrightarrow A_j=A_k=\varnothing\ \Longrightarrow\ \bigcup=A_f\ \Longrightarrow\ \left|\bigcup\right|\le3\ (\text{已证几何})$$
+$$\Longrightarrow e_i\ge|C_i|-3\ge2\ \Longrightarrow\ \text{交换}\ \Longrightarrow\ \mu(D)=4 ✓$$
+$$\textbf{机制解释}:\ \text{紧型最大覆盖 }9/11\ \text{要求三个覆盖块互不重叠};\ d(q,x_i)\le3\ \text{会在 }x_i\ \text{球上产生额外块（}T_i\cap\mathrm{supp}(q\oplus x_i)\ne\varnothing\text{，实测常非空）}\ \Longrightarrow\ \text{与饱和冲突} ✓$$
+$$
+
+### §32.4 状态表（严格区分）
+
+```
+$$\textbf{已证}:\ M\le2d;\ \alpha_2\le d;\ \text{Level A};\ |A_f|\le3;\ \text{覆盖判据（三分）} ✓$$
+$$\textbf{强证据}:\ \text{紧型分离}\ge4\ (35\ \text{实例，零违例});\ A_j{=}A_k{=}\varnothing\ (138\ \text{簇});\ \mu{=}4;\ \alpha_2{=}d\ (d\le5)\ \text{全量}$$
+$$\textbf{待证}:\ \text{紧型分离引理本身};\ \text{一般 }d$$
+$$
