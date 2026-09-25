@@ -858,3 +858,38 @@ $$\qquad \text{但已证该自由集}\ \ge2\ \text{点}\ \Longrightarrow\ \textb
 $$\Longrightarrow\ \boxed{\text{剩余唯一缺口}=\text{纯码结构陈述}：自由点中必有合法候选 }(q\in U_D)}$$
 $$\textbf{实证}:\ C_4\ \text{上的阻塞余量}\ge2\ (1200/1200)\ \text{——已含码结构信息}$$
 $$
+
+---
+
+## §25 ⭐ **Level B 紧型解剖 ＋ 正确形式修正**（2026-09-25 21:4x）
+
+### §25.1 紧型实例（(2,3,3)/(3,3,3), |F|=2；35 例）
+
+```
+$$\boxed{|F\cap U_D|\ \text{分布}:\ 0{:}3\mid1{:}18\mid2{:}14}\ \Longrightarrow\ \textbf{存在 3 例}F\cap U_D=\varnothing$$
+$$\Longrightarrow\ \boxed{\text{"给定三元组的 }F\cap U_D\ne\varnothing"\ \textbf{为假}} ✗$$
+$$\textbf{正确形式}:\ \exists\ \text{兼容三元组使}\ |F\cap U_D|\ \ge\ 2\quad(\text{即已验证的"阻塞余量}\ge2"\ ) ✓$$
+```
+
+### §25.2 "缺失见证"结构（`S(f)\setminus D`）
+
+```
+\begin{array}{c|c|c}
+\text{签名}&\text{次数}&\text{含义}\\ \hline
+|S(f)|{=}2,\ \text{bad}{=}1,\ d(f,x){=}0&5&f=x\ \text{本身},\ S(x)\ \text{中一个码字不在 }D\ \Longrightarrow x\notin U_D\\
+|S(f)|{=}2,\ \text{bad}{=}1,\ d(f,x){=}1&5&f\ \text{是 }x\ \text{的邻居，}S(f)\ \text{有码字在 }D\ \text{外}\\
+|S(f)|{=}3,\ \text{bad}{=}2,\ d{=}1&3&S(f)\ \text{三个码字中两个在 }D\ \text{外}\\
+|S(f)|{=}4,\ \text{bad}{=}3,\ d{=}1&2&S(f)\ \text{四个中三个在 }D\ \text{外}
+\end{array}$$
+$$\textbf{机制}:\ f\notin U_D\iff S(f)\ \text{中有码字"溜出"D（近邻码字未被删除）}\ \Longleftrightarrow\ \text{需\textbf{交换}腾位} ✓$$
+$$
+
+### §25.3 结论（Level B 精确化）
+
+```
+$$\textbf{Level A（已证）}:\ \left|B_1(x)\setminus\bigcup_iB_2(q_i)\right|\ge2\ \text{对任意兼容三元组、任意型}$$
+$$\textbf{Level B（精确形式）}:\ \exists\ \text{兼容三元组}\ (q_1,q_2,q_3)\ \text{使}\ |F\cap U_D|\ge2$$
+$$\qquad \text{（\textbf{不}是"任意三元组"；3/35 反例已证前者为假} ✗）$$
+$$\textbf{等价}:\ \text{阻塞余量}\ge2\ \text{（1200/1200 实证）};\quad \textbf{待证}=\text{上述存在性}$$
+$$\textbf{边界}:\ \mu=4\ \text{与}\ \alpha_2=d\ \text{仍为 }d\le5\ \text{计算证据};\ \text{一般 }d\ \text{未证}$$
+$$
