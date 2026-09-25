@@ -364,3 +364,44 @@ $$\text{不再机械扩 }d=6;\ \text{转而攻\textbf{结构性证明}};\ \text{
 $$\text{可用部件}:\ \text{① 对偶引理（0/7140 普适）}\mid \text{② }P_1(c)\ \text{恒含相邻对（120/120）}\mid \text{③ 私有性（新字重叠受限于"私有"结构）}$$
 $$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
 ```
+
+---
+
+## §12 **d=3 全量 Γ-census（精确有限分类）**（2026-09-25 20:4x）
+
+### §12.1 精确结果
+
+```
+$$\text{全量 } \binom{120}{3}=280{,}840\ \text{例};\qquad \Gamma(D):=|U_D|-(d-1)M(D)=|U_D|-2M(D)$$
+$$\boxed{\Gamma_{\min}=\mathbf{3}}\ (\text{13 例});\quad \Gamma\ \text{分布}: 3{:}13,\ 4{:}84,\ 5{:}445,\ 6{:}1249,\ 7{:}2817,\ 8{:}5962,\ 9{:}11802,\ 10{:}19436,\ 11{:}24729,$$
+$$\qquad 12{:}33791,\ 13{:}35136,\ 14{:}38780,\ 15{:}34093,\ 16{:}24690,\ 17{:}20075,\ 18{:}10962,\ 19{:}7886,\ 20{:}4178,\ 21{:}2411,\ 22{:}1365,\ 23{:}538,\ 24{:}386,\ 25{:}12$$
+$$\Longrightarrow\ \Gamma(D)\ge3\ \text{（d=3 全量）}\ \Longleftrightarrow\ \boxed{|U_D|\ \ge\ 2M(D)+3}\quad(\text{比 }\Gamma>0\ \text{更强})$$
+$$\textbf{抽样教训}:\ \text{660 抽样给 }\Gamma_{\min}=6;\ \text{全量给 }\mathbf{3}\ \Longrightarrow\ \text{抽样\textbf{系统性低估极值}} ✓\ (\text{已记})$$
+```
+
+### §12.2 **13 个极值构型（全部）**
+
+```
+$$(|U|,M)\in\{(7,2),(11,4),(15,6)\}\ \text{且恒满足}\ \boxed{|U|=2M+3}\ (\text{等号族});\quad M\ \text{恒为\textbf{偶数}}$$
+$$\Delta=0\ \text{全部成立}\ \Longrightarrow\ \textbf{极值均为"纯私有"缺陷（无共享）} ✓\ (\text{猜想①成立})$$
+$$P^\downarrow\ \text{仅 4 种形态}:\ (6,3,2)\times6\mid(3,2,2)\times4\mid(5,4,2)\times2\mid(6,6,3)\times1\ \Longrightarrow\ \text{极值族\textbf{小且可枚举}} ✓$$
+$$\text{被删热字}:\ 83(9)\mid77(8)\mid58(7)\mid49(3)\mid89(3)\mid13,90(2)\mid\ldots$$
+$$\text{修补热字}:\ 673(6)\mid475(4)\mid662(4)\mid645(3)\mid\ldots$$
+$$
+
+### §12.3 **否定结果：`P↓ → M` 无函数关系**
+
+```
+$$\text{统计}: 164\ \text{种 }P^\downarrow\ \text{形态};\ \text{其中 57 种都能达到 }M=6\ \Longrightarrow\ \boxed{\text{不存在 }P^\downarrow\Rightarrow M\ \text{的简单关系}} ✗$$
+$$\qquad \Longrightarrow\ \text{联合不等式必须以\textbf{其它耦合量}表达（\text{不能靠 partition 决定 }M）}$$
+$$
+
+### §12.4 结论与下一步
+
+```
+$$\textbf{Lemma C（d=3）已从"抽样支持"升级为\textbf{精确有限分类}}:\ \text{极值 = 13 个可枚举构型} ✓$$
+$$\text{等价目标}:\ \boxed{|U_D|\ge2M(D)+3}\ (\text{等号恰在 13 例})$$
+$$\text{下一步（照唐先生 20:36 的预案）}:\ \text{① 用"热字集"(83,77,58,49,89,\ldots)\ 做 }d=4\ \text{\textbf{定向扫描}}\ (\text{廉价});$$
+$$\qquad \text{② 若极值机制"抬升"成功}\ \Longrightarrow\ \text{再决定 }d=4\ \text{是否全量};\ \text{③ 不盲目跑 8.2M}$$
+\text{产物}:\ \texttt{gamma\_d3\_full.py}\mid\texttt{gamma\_d3\_full.jsonl}(19.4\text{MB})\mid\texttt{gamma\_d3\_summary.json}
+```
