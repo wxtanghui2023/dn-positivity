@@ -1112,3 +1112,30 @@ $$\textbf{已证}:\ M\le2d;\ \alpha_2\le d;\ \text{Level A};\ |A_f|\le3;\ \text{
 $$\textbf{强证据}:\ \text{紧型分离}\ge4\ (35\ \text{实例，零违例});\ A_j{=}A_k{=}\varnothing\ (138\ \text{簇});\ \mu{=}4;\ \alpha_2{=}d\ (d\le5)\ \text{全量}$$
 $$\textbf{待证}:\ \text{紧型分离引理本身};\ \text{一般 }d$$
 $$
+
+---
+
+## §33 ⭐ **Sat 引理 ＋ 5 格定向检验（0 出现）**（2026-09-25 23:0x）
+
+### §33.1 Sat 引理（纯集合论，已证）
+
+```
+$$\text{设 }|B_1\cup B_2\cup B_3|=9,\ |B_r|\le3\ (r=1,2,3).\ \text{则}\ 9=|\cup|\le\sum_r|B_r|\le9\ \Longrightarrow\ \text{全部取等}$$
+$$\Longrightarrow\ \boxed{|B_r|=3\ \text{且}\ B_r\cap B_s=\varnothing\ (r\ne s)}\quad(\textbf{两行证明，无需任何 census}) ✓$$
+$$
+
+### §33.2 5 格定向检验（大样本 700 个 D）
+
+```
+$$\textbf{关注 5 格}\ (d,|T_i\cap S|)=(2,1),(2,2),(3,1),(3,2),(3,3):\quad \boxed{\text{总计数}=0} ✓$$
+$$\boxed{D_q\le3\ \text{的全部计数}=0}\ \Longrightarrow\ \text{簇锚点距离谱}\subseteq\{4,5,6,7\}\ (\textbf{第三次独立确认}:35\to138\to{\sim}700\ D) ✓$$
+$$\text{距离 }\ge4\ \text{时}\ |T_i\cap S|\ \text{可自由取 }1..D_q;\ \text{而}\ A=\varnothing\iff D_q\ge4\ \text{无条件成立} ✓$$
+$$
+
+### §33.3 诚实的证明缺口（照唐先生 §7 提醒，不越界）
+
+```
+$$\textbf{Sat \textbf{不能}单独杀 }d\le3:\ \text{单/双坐标完全可能塞进同一个 }B_r\ \text{而不破坏两两不交}\ ✗$$
+$$\Longrightarrow\ \text{紧型分离引理\textbf{必须}用 owner 一步}:\ e\mapsto S(e)\ \text{与}\ T_i,T_j,T_k\ \text{的交集关系}$$
+$$\Longrightarrow\ \text{"}9/11\ \text{饱和}\Rightarrow\text{分离"}\ \textbf{只是部分论证};\ \text{纯组合部分只给 Sat}$$
+$$
