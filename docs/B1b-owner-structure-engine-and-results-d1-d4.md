@@ -757,3 +757,41 @@ $$\Longrightarrow\ \text{正确形式}=\textbf{交换型增广}（\text{augmenti
 $$\textbf{机制}:\ r_i=2\ \text{的 }p\ \text{一次可吃 3 个私有点} \Longrightarrow C_x\ \text{可被清空} \Longrightarrow \text{必须靠置换腾位} ✓$$
 $$\textbf{新靶}:\ \text{把锚点引理（锚集两两不交）+ 交换型增广}\ \text{合成一个 Hall 型定理}\ \Longrightarrow\ \text{存在大小 }d\ \text{的 packing}$$
 $$
+
+---
+
+## §22 ⭐ **私有簇 ＋ 独立横截面（d=4 结构性证书）**（2026-09-25 21:3x）
+
+### §22.1 目标升级（唐先生修正）
+
+```
+$$\textbf{普通 Hall 不足}:\ \text{只保证"不同"，不保证两两距离}\ge3\ \Longrightarrow\ \text{必须升级为\textbf{独立横截面}}$$
+$$\boxed{\text{求 }q_x\in C_x\ (C_x:=B_1(x)\cap U_D)\ \text{使}\ d(q_x,q_y)\ge3\ (x\ne y)}\quad(\text{anchored independent transversal})$$
+$$
+
+### §22.2 私有簇 census（500 例，d=4）
+
+```
+$$\textbf{① 簇是否 partition }U_D:\ \text{是 }441\mid\text{否 }59\ (\text{共享点 }1{:}52,\ 2{:}7)\ \Longrightarrow\ \text{近似但不精确 partition} ✓$$
+$$\textbf{② }\min_x|C_x|\ \text{分布}:\ 2{:}37\mid3{:}44\mid4{:}42\mid5{:}117\mid6{:}243\mid7{:}14\mid8{:}3\ \Longrightarrow\ \min\ge2 ✓\ (\text{与"每字}\ge2\text{ 私有点"吻合})$$
+$$\textbf{③ }\kappa(x,y)=\max_{q\in C_x,r\in C_y}d(q,r)\ \text{分布}:\ 3{:}24\mid4{:}55\mid5{:}412\mid6{:}720\mid7{:}775\mid8{:}594\mid9{:}344\mid10{:}76\ \Longrightarrow\ \kappa\ge3 ✓$$
+$$\textbf{④ }\mu(D)\ \text{（最大独立横截面）分布}:\ \boxed{4{:}500}\quad\Longrightarrow\ \textbf{无失败}\ ✓✓\ (\text{与 }\alpha_2=4\ \text{一致})$$
+$$
+
+### §22.3 ⭐ **对角结构（唐先生猜想成立）**
+
+```
+$$\text{取 }4\text{-见证 }(q_1,\ldots,q_4)\ \text{并\txbf{按簇序}标号}:\ \text{距离矩阵 }R_{ij}=d(q_i,x_j)$$
+$$\textbf{对角}:\ \max_i d(q_i,x_i)=1\ \text{于}\ \mathbf{500/500}\ \text{例} \Longrightarrow \boxed{R_{ii}\le1\ (\text{恒为 }1)} ✓✓$$
+$$\textbf{非对角}:\ \min_{i\ne j}d(q_i,x_j)\ \text{分布}\ 2{:}186\mid3{:}221\mid4{:}87\mid5{:}5\mid6{:}1 \Longrightarrow \boxed{R_{ij}\ge2} ✓✓$$
+$$\Longrightarrow\ \boxed{\text{存在"对角锚定 packing"}:d(q_i,x_i)\le1,\ d(q_i,q_j)\ge3,\ d(q_i,x_j)\ge2\ (i\ne j)} ✓✓$$
+$$
+
+### §22.4 意义与下一步
+
+```
+$$\textbf{组合结构}:\ \text{私有候选簇}\ +\ \text{簇间独立横截面}\ +\ \text{对角锚定} \Longleftarrow \text{干净的离散模型} ✓$$
+$$\textbf{注}:\ \alpha_2(U_D)=4\ \text{仍为}\ d\le5\ \text{计算定理};\ \text{本节的}\ \mu=4\ \text{为样本证据（500 例）}$$
+$$\textbf{下一步靶}:\ \text{从失败假设 }\mu(D)\le3\ \text{出发，对四个私有簇做\textbf{有限禁形分类}}$$
+$$\qquad \text{（\textbf{不}再跑更大 census；}\mu=4\ \text{已 500/500）}$$
+$$
