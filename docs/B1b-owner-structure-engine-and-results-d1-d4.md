@@ -579,3 +579,37 @@ $$
 $$\text{进度（i1 分片 mod 2）}:\ \Gamma_{\min}\ \text{已见 }1\ (\text{i1}=0,2,10)\ \text{与 }3\text{--}4\ (\text{奇数片}) \Longrightarrow\ \textbf{d=4 的裕度小于 d=3} ✓$$
 $$\text{（按唐先生指示：先用 d=3 机制预测，不急着全量判读 d=4）}$$
 $$
+
+---
+
+## §17 **M=6 的支撑结构定理 ＋ d=4 的反向观察**（2026-09-25 21:3x）
+
+### §17.1 ⭐ **支撑不相交定理（M=6）**
+
+```
+$$\text{设 }a_i:=x_i\oplus w,\ \text{则 }d(w,x_i)=2\Longleftrightarrow |a_i|=2,\ \text{支撑 }A_i=\mathrm{supp}(a_i)\ (\text{2-子集})$$
+$$\text{对 }M=6\ \text{的}\ (2,2,2)\ \text{型（573 例）逐例统计}\ \boxed{(d_{12},d_{13},d_{23})=(4,4,4)\ \textbf{全部}}$$
+$$\Longrightarrow\ \boxed{\text{三个支撑 }A_1,A_2,A_3\ \text{两两不相交}}\ \Longleftrightarrow\ \text{三个字在 }\mathbf{6}\ \text{个互异坐标上与 }w\ \text{相异}\ ✓✓$$
+$$\textbf{可证性}:\ \text{若 }A_i\cap A_j\ne\varnothing\ (\text{共享坐标})\ \Longrightarrow\ \text{中点集相交}\ \Longrightarrow\ \left|\bigcup C_i\right|<6\ \Longrightarrow\ M<6\ ✗\ \text{（由 §16.2 并集引理）} ✓$$
+$$\text{唯一 }|U|=15\ \text{例}:\ D=[49,77,89],\ w=673;\quad |S_x\cap U_D|\ \text{两两交}=0,\ \text{三交}=0\ \Longrightarrow\ U_D\ \textbf{无重叠分解}\ (\Delta=0)$$
+$$
+$$
+
+### §17.2 M=6 的完整局部图景
+
+```
+$$\text{3 个字}\ \times\ \text{2 个互异坐标}\ =\ 6\ \text{个中点}\ \Longrightarrow\ \text{6 个中点全部}\in U_D\ \text{且\textbf{全为私有点}}$$
+$$\text{总缺口}:\ |U_D|\ge15;\quad \text{极值 }=15=6\ (\text{中点})+(6,6,3)\ \text{的其余私有部分}$$
+$$\textbf{仍缺}\ (\text{唯一}) :\ \text{在"支撑两两不相交"的刚性构型下证明 }|U_D|\ge15$$
+\qquad \Longrightarrow\ \text{已压缩为一个\textbf{有限局部 Hamming 构型分类问题}}（\text{非全量 census}） ✓$$
+$$
+$$
+
+### §17.3 ⚠️ **d=4 的反向观察（census 进行中）**
+
+```
+$$\text{d=4 census 已见}\ \Gamma_{\min}=\mathbf{-1}\ (\text{i1}=0,2,10,24\ \text{等片})\ \text{与 }0\ (\text{i1}=25) \Longrightarrow\ \textbf{存在 }|U_D|<3M(D)\ \text{的构型}$$
+$$\Longrightarrow\ \boxed{\text{计数路线 }\Gamma_d>0\ \textbf{对 }d=4\ \text{不成立}}\ (\text{与唐先生预判一致：}d=3\ \text{的斜率 }1/2\ \text{不能直接推广})$$
+$$\textbf{但}:\ \text{packing 路线（}\alpha_2(U_D)\ge d\text{）在 }d\le5\ \textbf{已穷举通过} ✓ \Longrightarrow\ \boxed{\text{packing 是稳健路线，计数只是 }d=3\ \text{的便利}} ✓$$
+$$
+$$
