@@ -921,3 +921,39 @@ $$\boxed{\text{blocking}\Longrightarrow\exists y\in S(f)\setminus D\ \text{（�
 $$\textbf{机制（经验）}:\ \text{不是单一支撑型，而是\textbf{簇内备选充足}}\ (|C_i|\ \text{通常}\ge5)\ \text{下的鸽子洞} ✓$$
 $$\textbf{边界}:\ 24\ \text{例、}100\%\ \text{为\textbf{强证据非证明}};\ \text{且散点分布警示不宜过度拟合支撑型}$$
 $$
+
+---
+
+## §27 ⭐ **容量表：每簇最多丢 2 个候选（e_i ≥ |C_i|−2）**（2026-09-25 21:5x）
+
+### §27.1 定义与结果
+
+```
+$$E_i:=C_i\setminus\left(B_2(f)\cup B_2(q_j)\cup B_2(q_k)\right);\quad e_i:=|E_i|;\quad e_i\ge1\iff\text{该簇可直接交换}$$
+$$\textbf{紧型坏 }f\ \text{实例 24 例}:\quad \boxed{\min_i e_i\in\{4,6\}\ (4{:}12\mid6{:}12)}\ \Longrightarrow\ \mathbf{e_i\ge4}\ ✓✓$$
+\begin{array}{c|c|c}
+|C_i|&e_i\ \text{取值}&\text{簇数}\\ \hline
+5&4&2\\
+6&4,\ 6&33\ (\text{多为 }e_i=|C_i|)\\
+7&4,\ 7&13\\
+8&6,\ 8&15\\
+9&6,\ 9&9
+\end{array}$$
+$$\Longrightarrow\ \boxed{e_i\ \ge\ |C_i|-2}\quad\Longleftrightarrow\quad \boxed{\left|C_i\cap\left(B_2(f)\cup B_2(q_j)\cup B_2(q_k)\right)\right|\ \le\ 2}\ ✓$$
+$$
+
+### §27.2 证明链（本样本全满足）
+
+```
+$$\text{紧型}\Longrightarrow|F|=2;\quad f\notin U_D\Longrightarrow\exists y\in S(f)\setminus D\ (\text{形态仅 }y=f\ \text{或}\ y=x\oplus e_a\oplus e_b)$$
+$$\Longrightarrow\ \forall i:\ e_i\ \ge\ |C_i|-2\ \ge\ 3\quad(\text{紧型下 }|C_i|\ge5)\ \Longrightarrow\ \exists q'\in E_i\ \Longrightarrow\ \text{交换}\ \Longrightarrow\ f\ \text{入 packing}\ \Longrightarrow\ \mu(D)=4\ ✓$$
+$$\textbf{注意}:\ \text{交换\textbf{不需要} }y\ \text{的精确形态};\ y\ \text{只用于说明 }f\ \text{为何不合法} ✓$$
+$$
+
+### §27.3 边界（严格区分）
+
+```
+$$\textbf{已证}:\ \text{Level A};\ \text{容量引理 }M\le2d;\ \text{锚点引理 }\alpha_2\le d$$
+$$\textbf{已获强证据（样本）}:\ e_i\ge|C_i|-2\ (24/24);\ \mu(D)=4\ (500/500);\ \text{对角结构}\ R_{ii}{=}1,R_{ij}{\ge}2\ (500/500);\ \text{阻塞余量}\ge2\ (1200/1200)$$
+$$\textbf{未证}:\ \text{上述容量不等式与存在性陈述}\ \textbf{仍属计算证据};\ \text{一般 }d\ \text{更未触及}$$
+$$
