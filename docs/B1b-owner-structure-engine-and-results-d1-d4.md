@@ -1048,3 +1048,31 @@ $$\textbf{该分离性非一般律}:\ \text{witness 的 off-diagonal 距离分�
 $$\Longrightarrow\ \text{分离性为\textbf{紧型特有}}:\ \text{紧型的最大覆盖}\ 9/11\ \text{强制三个支撑近乎不交}\ \Longrightarrow\ \text{各 }q\ \text{远离 }x_i ✓$$
 $$\textbf{已证}:\ |A_f|\le3;\quad \textbf{待证}:\ \text{紧型下}\ A_j=A_k=\varnothing\ (\text{即分离性})$$
 $$
+
+---
+
+## §31 ⚠️ **分离性否证 ＋ Level II 机制修正**（2026-09-25 22:3x）
+
+### §31.1 分离性普查（70 个紧型实例，630 非锚点对）
+
+```
+$$\textbf{非锚点距离谱}:\ \boxed{\{2{:}50\mid3{:}160\mid4{:}21\mid5{:}72\mid6{:}203\mid7{:}124\}}$$
+$$\text{每个 }q\ \text{的 }\min\ \text{非锚点距离分布}:\ \{2{:}50\mid3{:}160\}\ \Longrightarrow\ \textbf{距离 2/3 大量出现}\ ✗✗$$
+$$\Longrightarrow\ \boxed{d(q,x_i)\ge4\ \textbf{为假}}\ (\text{§30.3 的推断须修正})$$
+$$
+
+### §31.2 **Level II 机制修正（坐标交集条件）**
+
+```
+$$A_j=\{a\in T_i:d(x_i\oplus e_a,\ q_j)\le2\};\quad d(q_j,x_i)=3\ \text{时覆盖落在}\ \mathrm{supp}(q_j\oplus x_i)\ \text{这些坐标上}$$
+$$\Longrightarrow\ A_j=\varnothing\ \text{还需}\ \textbf{这些坐标不在}\ T_i\ \text{中} ✓\ \Longleftarrow\ \text{真正的机制（码/删除结构的\textbf{联合}事实）}$$
+$$\Longrightarrow\ \textbf{Level II 实质仍为}:\ \boxed{\left|A_j\cup A_k\right|\le2}\ (63/63,\ \text{零}\ge3)\ \text{——\textbf{code-specific}，不可被分离性替代}$$
+$$
+
+### §31.3 当日方法学小结（五类脚本陷阱）
+
+```
+$$\text{① 索引 vs 码字（}3\times\text{）；② 双层循环未绑定当前对象（}1\times\text{，假禁形 }126\to0\text{）}$$
+$$\text{③ 统计量取反（阻塞判据须用\textbf{最小}覆盖而非最大）；④ 公式越界（支撑公式仅对 }|{\rm supp}|\in\{2,3\}\text{）}$$
+$$\text{⑤ 推断越界（把 code-specific 的 }A_j=\varnothing\ \text{误归因于纯几何分离性）} \Longrightarrow \textbf{本轮自查抓回} ✓$$
+$$
