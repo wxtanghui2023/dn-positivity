@@ -3989,3 +3989,63 @@ $$\boxed{\text{“某篇论文未覆盖”}\ \textbf{绝不能}\ \text{作为“
 - **账本规则（新增）**：登记表改为按**机制 → 独立靶点 → 交付物**记账；"独立结果（定理/界/构造/证书）"计入**实质性产出**。
 
 **边界**：仅"审计/核验/有限计算/形式化/跨域判别"已实证；不得把"能判别"说成"能创造" ✓
+
+## AMEND-28（2026-09-25）：**F-4 故障模式** ＋ **E0 上位定理闭包** ＋ **E4 拆四闸** ＋ **筛选顺序倒置**
+
+**起因（唐先生 13:2x，第四次同类撞墙后）**："我们一直在筛选**看起来**值得做的 Open 问题，而不是筛选**经过独立闭包审计后仍然 Open** 的问题。" 并明确 ① 这是**筛选机制的结构性缺陷**（非偶发漏查）；② **E4 不应是入场后的审计步骤，而应是入场门槛**；③ 修好后须用**已撞过的四个案例做反向测试**。
+
+### §1 故障模式 **F-4：Instance-Open / Family-Closed mismatch**
+
+```
+$$\boxed{\text{F-4}:\quad \mathrm{DB}(C)=Open\ \land\ \exists T_{\rm family}:\ T_{\rm family}(C)\Rightarrow\text{Resolved}(C)}$$
+$$\text{典型实例}:\ \boxed{Z_3{\times}Z_9{\times}Z_9}\ (\text{DB}=Open,\ \text{但 CXS 指数界直接判 }No)$$
+$$\text{根源错位}:\ \boxed{\text{instance-level DB}}\quad\text{vs.}\quad\boxed{\text{theorem-family literature}}$$
+$$\qquad \text{数据库按\textbf{实例}组织};\ \text{文献大量按\textbf{族／条件／参数}组织} \Longrightarrow \text{实例空白}\not\Rightarrow\text{数学空白}$$
+$$\textbf{反向选择器（为何反复发生）}:\ \text{越适合计算}\Rightarrow\text{越可能是经典小参数}\Rightarrow\text{越可能已有上位定理}\Rightarrow\ \boxed{\text{越容易被 E4 杀}}$$
+```
+
+**四实例记录（F-4 命中，累计）**：`CAP-MIX`（→ 经典 $\lambda=|G\cap(G+1)|$ 理论）｜`P7-2`（→ EJC DS20v2 Thm 1.13/1.14 完全判定）｜`P5-乙-3`（→ 已知小 doubling 结果）｜`Q1`（→ 经典 order-3 cyclotomic numbers）｜`Mt07`（→ DS1.18 ＋ Boza 2026 系统研究）｜`B-LJCR-1` 首格（→ CXS 指数界）。**待先生确认"四案例"取哪四项做反向测试**；本制度默认**全部六项**皆须被新闸挡在入场前。
+
+### §2 新增 **E0：上位定理闭包（Theorem-Family Closure）**
+
+```
+$$\text{对候选 }C,\ \text{不得只搜 exact instance};\ \text{须先枚举其}\textbf{结构祖先链}:$$
+$$C\to\{\text{same order}\}\to\{\text{same group class}\}\to\{\text{same parameter family}\}\to\{\text{same necessary-condition family}\}$$
+$$\text{再问}:\ \boxed{\exists\,T:\ H(C)\Rightarrow P(C)\ \text{且 }P(C)\ \text{已决定目标真假}}\ \Longrightarrow\ C=\textbf{KNOWN-RESOLVED}\ (\text{禁止入场计算})$$
+```
+
+### §3 **E4 拆成四闸**（全部通过方可入场）
+
+```
+$$\begin{array}{c|l|l}
+\text{闸}&\text{名称}&\text{通过条件}\\\hline
+E4\text{-}1&\text{Exact-instance search}&\text{无同实例论文／构造／反例}\\
+E4\text{-}2&\text{Family-theorem search}&\text{无覆盖该实例的\textbf{参数族定理}}（\text{本次 CXS 死于此}\\
+E4\text{-}3&\text{Necessary-condition closure}&\text{无已知必要条件直接排除／确定}\\
+E4\text{-}4&\text{Current-state verification}&\text{文献未被后续结果推翻／改进／重开}\\
+\end{array}$$
+$$\text{入场必要条件}:\ \boxed{E4\text{-}1=OPEN\ \land\ E4\text{-}2=OPEN\ \land\ E4\text{-}3=OPEN\ \land\ E4\text{-}4=PASS}$$
+```
+
+### §4 **筛选顺序倒置**（新增硬流程）
+
+```
+$$\textbf{旧（废止）}:\ \text{DB}=Open\to\text{找机制}\to E4\to\text{开算}$$
+$$\textbf{新（强制）}:\ \boxed{\text{我方机制}}\to\boxed{\text{该机制最自然攻击哪类数学对象}}\to\boxed{\text{生成候选族}}\to\boxed{\text{E0＋}E4\text{-}1..4}\to\boxed{\text{留下真正未解决者}}\to\text{才谈计算}$$
+$$\textbf{评分顺序亦倒置}:\ \text{先算}\ Novelty\ survival=\mathbf 1[\text{exact unresolved}\land\text{family unresolved}\land\text{NC unresolved}];\ \text{仅当}=1\ \text{才谈机制契合}\times\text{可算性}\times\text{证书难度}$$
+```
+
+### §5 **"可验证"定位修正**
+
+```
+$$\boxed{\text{“容易验证”是\textbf{交付物优势}，不是 novelty 筛选条件}}$$
+$$\qquad \text{否则会产生偏好}:\ \text{小}+\text{规则}+\text{易验证}+\text{DB }Open\ ——\ \text{恰为最易被小参数旧理论覆盖的区域}$$
+```
+
+### §6 反向测试（强制）
+
+```
+$$\text{新闸上线后，须对 F-4 命中清单逐项回放}:\ \text{若新流程仍把它们选出入场}\Longrightarrow\text{修复不足};\ \text{若能全部挡在入场前}\Longrightarrow\text{才算修复} ✓$$
+```
+
+**边界（诚实）**：本修正为**筛选机制的故障模式确认与流程加固**，**不是**数学发现；`E0` 的"枚举结构祖先＋匹配定理族"在通用情形**不可完全机械化**（依赖文献检索与人工判定），故其实现为"**必填证据表 ＋ 已知定理族登记表**"，不声称完备 ✓
