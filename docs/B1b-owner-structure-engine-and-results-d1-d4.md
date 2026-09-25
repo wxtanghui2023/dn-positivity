@@ -1139,3 +1139,28 @@ $$\textbf{Sat \textbf{不能}单独杀 }d\le3:\ \text{单/双坐标完全可能�
 $$\Longrightarrow\ \text{紧型分离引理\textbf{必须}用 owner 一步}:\ e\mapsto S(e)\ \text{与}\ T_i,T_j,T_k\ \text{的交集关系}$$
 $$\Longrightarrow\ \text{"}9/11\ \text{饱和}\Rightarrow\text{分离"}\ \textbf{只是部分论证};\ \text{纯组合部分只给 Sat}$$
 $$
+
+---
+
+## §34 ⚠️ **owner 容量鸽笼不成立（极小表实测）**（2026-09-25 23:1x）
+
+### §34.1 极小表（真实码 C₁₂₀，120 旋转 × 坐标组合）
+
+```
+\begin{array}{c|c|c}
+|E_S|&|S(E_S)|\ \text{union 分布}&\min\\ \hline
+1&\{1{:}746\mid2{:}308\mid3{:}85\mid4{:}26\mid5{:}35\}&1\\
+2&\{1{:}2112\mid2{:}1742\mid3{:}834\mid4{:}341\mid5{:}330\mid6{:}33\mid7{:}8\}&1\\
+3&\{1{:}3610\mid2{:}4425\mid3{:}3043\mid4{:}1549\mid5{:}1436\mid6{:}261\mid7{:}67\mid8{:}9\}&1
+\end{array}
+$$\text{装得进 }D\ (\text{union}\le4=|\mathbf{D}|)\ \text{的比例}:\ 97.1\%\ /\ 93.1\%\ /\ 87.7\%\ \Longrightarrow\ \textbf{容量鸽笼不成立}\ ✗$$
+$$
+
+### §34.2 结论与修正
+
+```
+$$\left|S(E_S)\right|\ge5\ \text{仅少数（}|E_S|{=}1\ \text{时 }35/1200\approx3\%\text{）}\ \Longrightarrow\ \text{不能作普遍机制} ✗$$
+$$\Longrightarrow\ \text{紧型分离性证明必须用 \textbf{D 的具体删除结构}}\ (\text{joint}:D\cap\text{owner 邻域}),\ \text{而非单点计数}$$
+$$\Longrightarrow\ \text{即 }S(e)\subseteq D\ \text{是"恰好装进"而非"装不进"}:\ \text{真正的 code-specific 耦合在此}$$
+$$\textbf{方法学}:\ \text{这是今日第 7 类陷阱的镜像——\textbf{用计数替代结构}（与"把 code-specific 事实几何化"同源）} ✗\to ✓$$
+$$
