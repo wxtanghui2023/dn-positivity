@@ -1253,3 +1253,50 @@ $$\Longrightarrow\ \text{它是\textbf{实例层现象}}:\ U_D\ \text{删除结�
 $$\Longrightarrow\ \text{按唐先生自设判据：\textbf{分离性路线正式关闭}};\ \text{Level II 须另找输入或降级为计算证据}$$
 $$\textbf{今日累计否证}:\ \text{一步锚定增广};\ \text{三元组 }F\cap U_D\ne\varnothing;\ \text{Level I}\le2;\ \text{分离性（一般律）};\ \text{owner 容量鸽笼};\ \text{核心禁形};\ \textbf{C120-PP};\ \textbf{d}_{\min}\textbf{=4 前提} ✗$$
 $$
+
+---
+
+# §38 ⭐ **收口报告：d=4 局部证书路线的三层剥离**（2026-09-25 22:5x）
+
+## §38.1 主结论
+
+```
+$$\boxed{\text{d=4 的 }\alpha_2(U_D)=|D|\ \text{只能由\textbf{有限穷举证书}支撑};\ \text{现有局部机制无法升级为结构定理}} ✓$$
+$$\text{证书}: \binom{120}{4}=8{,}214{,}570\ \text{全量}; \ \text{贪心 4-packing 成功}\ 7{,}919{,}048;\ \text{失败}\ 31{,}899\ \text{经\textbf{精确 4-clique 判定}全 PASS}\ (0\ \text{FAIL}) ✓$$
+$$
+
+## §38.2 三层剥离记录（按唐先生要求逐层剥离）
+
+```
+$$\text{① \textbf{码几何层}}:\ \text{核心禁形 }x\xrightarrow{1}p\xrightarrow{2}q\ \text{中 }p\ \text{为 }x\ \text{私有点}:\ \mathbf{3655/5472}\ \text{存在}\ ✗\ (\text{§36})$$
+$$\qquad \text{前提修正}:\ \boxed{d_{\min}(C_{120})=\mathbf{1}}\ (\text{覆盖码，非 }4);\ \text{距离分布}\{1{:}50\mid2{:}149\mid3{:}912\mid4{:}1684\mid\ldots\}\ (\text{§37})$$
+$$\qquad \text{C120-PP（四点形）}: \text{违反}\ \mathbf{9332/20208}\ ✗$$
+$$\text{② \textbf{owner 层}}:\ \text{容量鸽笼}\ |S(E_S)|\ge5\ \text{仅少数}\ (3\%);\ \text{装得进 }D\ \text{比例}\ 97.1\%/93.1\%/87.7\%\ ✗\ (\text{§34})$$
+$$\text{③ \textbf{D 结构层}}:\ \text{一般设置下}\ A_j\cup A_k\ne\varnothing\ \text{出现}\ \mathbf{2307/9576}\ (24\%)\ ✗\ (\text{§38.3})$$
+$$\Longrightarrow\ A_j=A_k=\varnothing\ \text{只是\textbf{紧型实例特有}}（138/138），\ \textbf{非}普遍 D-结构约束$$
+$$
+
+## §38.3 本线 NO-GO 条目（10 项，逐层记录）
+
+```
+$$\text{① 一步锚定增广}\ (2/1600)\ ✗;\quad \text{② 任意三元组 }F\cap U_D\ne\varnothing\ (3/35)\ ✗;\quad \text{③ Level I 原式}\le2\ (4/72)\ ✗$$
+$$\text{④ 分离性作一般律}\ ✗;\quad \text{⑤ owner 容量鸽笼}\ ✗;\quad \text{⑥ 核心禁形（私有点中间点）}\ ✗$$
+$$\text{⑦ C120-PP 四点禁形}\ ✗;\quad \text{⑧ }d_{\min}=4\ \text{前提}\ ✗;\quad \text{⑨ 分离性由码局部结构推出}\ ✗;\quad \text{⑩ }A_j{=}A_k{=}\varnothing\ \text{作 D-结构律}\ ✗$$
+$$
+
+## §38.4 仍然成立的结果（正面清单）
+
+```
+$$\textbf{已证}:\ M(D)\le2|D|;\quad \alpha_2(U_D)\le|D|;\quad \text{Level A}\ (k\le3\Rightarrow|B_1(x)\setminus\cup B_2|\ge2);$$
+$$\qquad |A_f|\le3;\quad \textbf{覆盖三分判据};\quad \textbf{Sat 引理};\quad C_i=P_1(x_i)\ \text{机制刻画}$$
+$$\textbf{计算证据}:\ \alpha_2(U_D)=|D|\ (d\le5,\ \text{全量零失败});\ \mu(D)=4\ (500/500);\ \text{对角 }R_{ii}{=}1,R_{ij}{\ge}2\ (500/500);$$
+$$\qquad \text{阻塞余量}\ge2\ (1200/1200);\ e_i\ge|C_i|-2\ (24/24);\ A_j{=}A_k{=}\varnothing\ (138\ \text{簇，紧型特有})$$
+\textbf{交付类别}:\ \text{有限穷举证书（K1 型"证书"交付，无需结构定理）} ✓
+$$
+
+## §38.5 唯一开放项
+
+```
+$$\boxed{\text{一般 }d\ \text{的 }\alpha_2(U_D)\ge d\ \text{完全未触及}};\quad \text{且已知计数路线在 }d=4\ \text{失效（}\Gamma_{\min}=-1\text{）}\ ✗$$
+$$\text{可选后续}:\ \text{① 接受 d≤5 的计算证书并收口};\quad \text{② 走 packing 路线攻一般 }d;\quad \text{③ 换目标（新资产）}$$
+$$
