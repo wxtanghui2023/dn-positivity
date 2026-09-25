@@ -1223,3 +1223,33 @@ $$\Longrightarrow\ \text{它只能是\textbf{紧型实例特有（经验性）�
 $$\text{边界恰在}\ d=3:\ d=2\ \text{纯几何强制（}0\ \text{例} ✓\text{）};\ d=3\ \textbf{失效}\ ✗$$
 $$\textbf{对路线的影响}:\ \text{Level II 的"分离性"支柱\textbf{撤销}};\ \text{须另找输入（}D\ \text{的具体删除结构 / 紧型饱和的额外约束）或放弃该目标}$$
 $$
+
+---
+
+## §37 ⚠️⚠️ **基本前提修正（d_min(C₁₂₀)=1）＋ C120-PP 否证**（2026-09-25 22:5x）
+
+### §37.1 事实修正：C₁₂₀ 的最小距离 = 1
+
+```
+$$\text{距离分布}:\ \{1{:}50\mid2{:}149\mid3{:}912\mid4{:}1684\mid5{:}1698\mid6{:}1360\mid7{:}868\mid8{:}341\mid9{:}72\mid10{:}6\}$$
+$$\boxed{d_{\min}(C_{120})=\mathbf{1}}\ \Longrightarrow\ C_{120}\ \text{是\textbf{覆盖码}（无最小距离约束）};\ \textbf{存在 50 对距离 1 的码字}$$
+$$\Longrightarrow\ \text{唐先生 §1–2 的推导前提（}d_{\min}{=}4\Rightarrow S(q_j){=}\{x_j\}\text{）\textbf{不成立}} ✗;\ \text{§2 的 }d\ne2\ \text{论证亦失效}$$
+$$
+
+### §37.2 C120-PP 否证（四点禁形）
+
+```
+$$\text{距离 4 码字对}=1684;\quad \text{候选 }(r,s)\ (s\ne r)\ \text{检验}=20208$$
+$$\boxed{\text{违反 C120-PP}=\mathbf{9332/20208}}\ ✗✗\ \Longrightarrow\ \text{四点形}\ (0000,1000,1110,1111)\ \textbf{大量存在}$$
+$$\textbf{证伪样本}:\ (x,y)=(3,24),\ r{=}0,\ s{=}1:\ p{=}2\ \text{是 }3\ \text{私有点},\ q{=}26\ \text{是 }24\ \text{私有点},\ d(p,q){=}2 ✓\ (\text{反例})$$
+$$\textbf{方法论}:\ \text{§8 的配对判据亦需修正}:\ d(e_r,y\oplus e_s)=2\iff s\ne r\ (\text{非 }s{=}r)\ \Longrightarrow\ \text{候选 }12\ \text{组/对，非 4}$$
+$$
+
+### §37.3 结论（分离路线关闭）
+
+```
+$$\boxed{\text{紧型分离性}\ d(q,x_i)\ge4\ \textbf{不能}由 }C_{120}\ \text{局部结构推出（第二次、更锐的否证）}$$
+$$\Longrightarrow\ \text{它是\textbf{实例层现象}}:\ U_D\ \text{删除结构}+\text{覆盖饱和}+\text{锚定}\ \text{的\textbf{联合}结果};\ \textbf{非局部可证}$$
+$$\Longrightarrow\ \text{按唐先生自设判据：\textbf{分离性路线正式关闭}};\ \text{Level II 须另找输入或降级为计算证据}$$
+$$\textbf{今日累计否证}:\ \text{一步锚定增广};\ \text{三元组 }F\cap U_D\ne\varnothing;\ \text{Level I}\le2;\ \text{分离性（一般律）};\ \text{owner 容量鸽笼};\ \text{核心禁形};\ \textbf{C120-PP};\ \textbf{d}_{\min}\textbf{=4 前提} ✗$$
+$$
