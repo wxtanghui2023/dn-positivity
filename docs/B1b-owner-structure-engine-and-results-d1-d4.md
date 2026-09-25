@@ -682,3 +682,49 @@ $$\textbf{关系}:\ \text{此前 SDR 判据（私有点、两两}\ge3\text{）�
 $$\textbf{唐先生的反向锚定}:\ \text{在 }\alpha_2\le3\ \text{假设下}\Longrightarrow\ \text{3 个 }p\ \text{必锚 3 个互异字}+\text{残字 }x_4\ \Longrightarrow\ 4\times3\ \text{距离矩阵刚性}\ (\text{Type I/II})$$
 $$\qquad \text{现知该假设\textbf{为空}}（\alpha_2\ge4\ \text{全量成立}）\ \Longrightarrow\ \text{该框架改作\textbf{双射存在性}的证明工具} ✓$$
 $$
+
+---
+
+## §20 ⭐ **增广容量（Level A 已证）＋ 两级引理架构**（2026-09-25 21:1x）
+
+### §20.1 纯几何增广容量（穷举）
+
+```
+$$\text{规范化 }x=0,\ B_1(x)=\{0,e_1,\ldots,e_{10}\}\ (11\ \text{点});\ p_i\ \text{满足}\ d(p_i,x)\ge2,\ \text{两两}\ge3$$
+$$\textbf{单词覆盖数（按 }m=d(p,x)\text{）}:\quad m=2\Rightarrow3\ \text{点};\quad m=3\Rightarrow3\ \text{点};\quad m\ge4\Rightarrow0$$
+\begin{array}{c|c|c}
+k&\max\left|B_1(x)\cap\bigcup_iB_2(p_i)\right|&\text{自由候选}\ \ge\\ \hline
+1&3/11&8\\
+2&6/11&5\\
+3&\mathbf{9/11}&\mathbf{2}\ ✓\\
+4&\mathbf{11/11}&0\ ✗\ (\text{几何恰好失效})
+\end{array}$$
+$$
+
+### §20.2 **Level A 引理（证明）**
+
+```
+$$\text{设 }m=d(p,x)\ge2,\ v\in B_1(x)=\{x\}\cup\{x\oplus e_j\}.$$
+$$m=2:\ \begin{cases}d(p,x)=2\le2&\Rightarrow x\ \text{被覆盖}\\ d(p,x\oplus e_j)=1\ (j\in\mathrm{supp}\,p)\ \text{或}\ 3&\Rightarrow\text{当且仅当 }j\in\mathrm{supp}\,p\end{cases}\ \Longrightarrow\ \textbf{恰 3 点}$$
+$$m=3:\ d(p,x)=3>2\Rightarrow x\ \text{不覆盖};\quad d(p,x\oplus e_j)=2\ (j\in\mathrm{supp}\,p)\ \text{或}\ 4\ \Longrightarrow\ \textbf{恰 3 点}$$
+$$m\ge4:\ d(p,x\oplus e_j)\ge3\ \Longrightarrow\ 0$$
+$$\Longrightarrow\ \boxed{k\le3\ \text{时}\ \left|B_1(x)\setminus\bigcup_iB_2(p_i)\right|\ \ge\ 11-3k\ \ge\ 2}\quad(\text{两行证明},\ \text{与码结构无关}) ✓✓$$
+$$
+
+### §20.3 **两级引理架构（d ≤ 4 的新证明路线）**
+
+```
+$$\boxed{\text{Level A（已证，纯 Hamming 几何）}:\ C_x\setminus\bigcup_{i}B_2(p_i)\ne\varnothing\ \text{对}\ k\le3}$$
+$$\boxed{\text{Level B（唯一剩余，code-specific）}:\ \text{自由候选中存在 }q\ \text{使}\ S(q)\subseteq D\ (\text{即 }q\in U_D)}$$
+$$\Longrightarrow\ \text{对 }d\le4:\ \text{锚定增广引理}\ \Longleftarrow\ \text{Level A}\ (\text{已证})+\text{Level B}\ (\text{待证})$$
+$$\textbf{注}:\ d=5\ (k=4)\ \text{时几何可吃满 11} \Longrightarrow \text{须自始接入码支撑条件};\quad \textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部结果}$$
+$$
+$$
+
+### §20.4 证据链（α₂ 的严格性说明）
+
+```
+$$\boxed{\alpha_2(U_D)\ \le\ d}\quad\text{已证明（锚点不相交，§19.1）}$$
+$$\boxed{\alpha_2(U_D)\ \ge\ d}\quad\text{已在 }d\le5\ \text{全量穷举验证}$$
+$$\Longrightarrow\ \alpha_2(U_D)=d\ \text{目前是 }d\le5\ \text{的计算定理};\ \text{一般 }d\ \text{尚无证明（\textbf{不得}称已证）} ✓$$
+$$
