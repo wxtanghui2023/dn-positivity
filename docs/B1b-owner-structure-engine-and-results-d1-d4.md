@@ -314,3 +314,53 @@ $$\text{若 }d=5\ \text{亦 }\text{fail}=0\ \Longrightarrow\ \textbf{立即攻�
 $$\text{证明种子}:\ \text{(i) 对偶引理（}\mathbf{0/7140}\ \text{普适）};\quad \text{(iii) }P_1(c)\ \text{的相邻对结构};\quad \text{(ii) 的 }4\ \text{个反例（界定了贪心边界）}$$
 $$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
 ```
+
+---
+
+## §11 **d=5 完成** ＋ 计数路线 ＋ CPU/内存护栏（2026-09-25 20:2x）
+
+### §11.1 `d=5` SDR 证书：**全量通过，零失败**
+
+```
+$$\text{A 片 } i_1\in[0,14]:\quad \text{tot}=94{,}017{,}378\ =\ \text{cert},\quad \text{fail}=0,\ \text{unk}=0\quad (680\ \text{s})$$
+$$\text{B 片 } i_1\in[15,119]:\ \text{tot}=96{,}560{,}646\ =\ \text{cert},\quad \text{fail}=0,\ \text{unk}=0\quad (702\ \text{s})$$
+$$\text{合计}=\mathbf{190{,}578{,}024}=\binom{120}{5}\ \text{（正好全量）};\quad \text{失败文件 0 行}\ \Longrightarrow\ \forall D,|D|=5:\ \text{SDR 存在}\ \Longrightarrow\ \alpha_2(U_D)\ge5\ ✓✓$$
+$$\textbf{统一证书（d ≤ 5）}:\ \boxed{\forall D,\ |D|\le5:\ \alpha_2(U_D)\ge|D|}\ \Longrightarrow\ \rho(D)\ge|D|>|D|-1$$
+$$\Longrightarrow\ \boxed{\text{deletion distance}\le5\ \text{内不存在 }119\text{-码}}\quad(\text{仍为局部证书})$$
+$$
+
+### §11.2 计数路线（**更简洁的证明靶**）
+
+```
+$$\text{定义 } M(D):=\max_{w\notin C_{120}}|B_1(w)\cap U_D|\ \ (\text{新字对缺口的最大重叠})$$
+$$\text{则}\ \rho(D)\ \ge\ \left\lceil \frac{|U_D|}{M(D)}\right\rceil;\qquad \textbf{证明靶}:\ \boxed{\left\lceil \frac{|U_D|}{M(D)}\right\rceil\ >\ |D|-1}\iff |U_D|>M(D)\cdot(|D|-1)$$
+$$
+| d | `|U_D|` 范围（均值） | `M(D)` 分布 | `⌈|U|/M⌉` | 需 > d−1 |
+|---|---|---|---|---|
+| 3 | [12,30]（20.1） | {2:64,3:99,4:128,5:8,6:1} | [4,13] | >2 ✓ |
+| 4 | [18,37]（26.8） | {2:13,3:78,4:180,5:27,6:2} | [5,16] | >3 ✓ |
+| 5 | [25,44]（33.9） | {3:8,4:36,5:15,6:1} | [6,12] | >4 ✓ |
+
+```
+$$\text{抽样 }300/300/60\ \text{例\textbf{全部满足}} ✓✓\quad \textbf{裕度}\ge2\ (\text{如 }d=5:\ \ge6\ \text{vs 需}>4)$$
+$$\textbf{注意}:\ M(D)\ \text{可达 }6\text{–}7\ \Longrightarrow\ \textbf{不存在固定统一上界}（\text{与唐先生 15:09 的判断一致}）\ \Longrightarrow\ \text{应证\textbf{联合不等式}}$$
+$$
+
+### §11.3 CPU/内存护栏（唐先生 20:24 令）
+
+```
+$$\text{事故}:\ \text{当日多次并发/大循环}\ \Longrightarrow\ \text{load 峰值 104}\ \Longrightarrow\ \text{容器重启};\ \text{另有 Killed(OOM)}$$
+$$\textbf{规则（已入 }TOOLS.md\ \text{＋}\ AGENTS.md\ §11\text{，违反视为任务失败）}:\ \text{后台 Python}\le2;\ \text{一律经 }pyguard.sh;\ \text{断点续跑};\ \text{流式落盘};\ \text{禁 }|tail;$$
+$$\qquad \text{内存目标}<500\text{MB};\ \text{启动前查 load/free};\ \text{结束核验}$$
+$$\textbf{护栏 } \texttt{scripts/pyguard.sh}:\ \text{① }\mathtt{ulimit -v}\ \text{② 单线程(}{\rm OMP/OPENBLAS/MKL}{=}1)\ \text{③ }\mathtt{nice}\ \text{④ 并发闸}\le2\ \text{⑤ 槽位自动回收}$$
+$$\text{三项自检通过}:\ \text{单线程 ✓}\mid \text{内存上限生效（800MB 申请 → MemoryError）✓}\mid \text{并发闸（第 3 个自动等待）✓}$$
+$$\textbf{实战拦截}:\ pyguard\ \text{当场拦下我把 }1.9\times10^8\ \text{组合物化成 list 的 MemoryError} ✓✓$$
+$$
+
+### §11.4 下一步（照唐先生 17:0x）
+
+```
+$$\text{不再机械扩 }d=6;\ \text{转而攻\textbf{结构性证明}};\ \text{首推\textbf{计数路线}（§11.2 的联合不等式）}$$
+$$\text{可用部件}:\ \text{① 对偶引理（0/7140 普适）}\mid \text{② }P_1(c)\ \text{恒含相邻对（120/120）}\mid \text{③ 私有性（新字重叠受限于"私有"结构）}$$
+$$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
+```
