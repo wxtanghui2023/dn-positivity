@@ -462,3 +462,39 @@ $$\boxed{\text{靶 2（耦合）}:\ |U_D|\ \ge\ 2M(D)+3\ \Longleftrightarrow\ \G
 $$\text{机制线索}:\ M=2k\ (k=\text{参与贡献的字数})\ \text{时}\ u\ge4k+3;\ \text{即"每个字的 2 点被捕获，迫使缺口额外增长"}$$
 $$\textbf{注}:\ \text{粗合并（}M\le2d\ \text{＋ }|U|\ \text{下界）\textbf{不足以}推出靶 2（d=3 时 }u_{\min}=7<2\cdot2\cdot3+3)\ \Longrightarrow\ \text{必须用\textbf{耦合}} ✓$$
 ```
+
+---
+
+## §14 ⭐ **定理骨架：容量引理（已证）＋ 有限残量**（2026-09-25 21:0x）
+
+### §14.1 **Lemma（容量上界）——两行纯度量证明**
+
+```
+$$\textbf{Claim}:\quad \forall w\notin C_{120},\ \forall x\in C_{120}:\quad |B_1(w)\cap\{v:x\in S(v)\}|\ \le\ 2$$
+$$\textbf{Proof}:\quad w\ne x\ \Longrightarrow\ \{v:x\in S(v)\}\subseteq B_1(x)\ \Longrightarrow\ |B_1(w)\cap\{v:x\in S(v)\}|\le|B_1(w)\cap B_1(x)|$$
+$$\qquad \text{而 Hamming 球交（10 维，半径 1）}:\quad |B_1(w)\cap B_1(x)|=\begin{cases}2,&d(w,x)\in\{1,2\}\\0,&d(w,x)\ge3\end{cases}$$
+$$\qquad \text{（}d=1,2\ \text{时两球交于"交换对"两点；}d\ge3\ \text{时不相交）}\ \Longrightarrow\ \le2\ \square$$
+$$\text{穷举核验}:\ 664\times120=79{,}680\ \text{对，公式\textbf{无反例}；取值分布}\{0{:}102{,}278\mid2{:}6{,}202\}\ \text{（\textbf{只有 0 或 2}）} ✓$$
+$$\textbf{Corollary}:\quad M(D)=\max_w|B_1(w)\cap U_D|\ \le\ \sum_{x\in D}2\ =\ \boxed{2|D|}\quad(\text{完全严格，与码结构无关})$$
+$$
+
+### §14.2 **定理骨架（d ≤ 5 局部证书的结构化证明）**
+
+```
+$$\text{设 }|D|=d.\quad \text{Case A}:\ |U_D|>2d(d-1)\ \Longrightarrow\ \rho(D)\ge\left\lceil\frac{|U_D|}{M(D)}\right\rceil\ge\left\lceil\frac{2d(d-1)+1}{2d}\right\rceil=d>d-1\ ✓$$
+$$\qquad (\text{只需 Lemma};\ \textbf{无需任何穷举})\ ✓✓$$
+$$\text{Case B}:\ |U_D|\le2d(d-1)\ \Longrightarrow\ \textbf{有限残量}\ (\text{可逐个验证})$$
+$$\textbf{d=3}:\ \text{A 覆盖 }|U|\ge13;\quad \text{B 残量}=\{|U|\le12\}\ \text{共}\ \mathbf{1{,}556}\ \text{个构型}\ (0.55\%)\ \text{（}u{=}7{:}4,\ 8{:}14,\ 9{:}32,\ 10{:}144,\ 11{:}516,\ 12{:}846\text{）}$$
+$$\qquad \text{逐例}\ \max M\ \text{由 census 已知}:\ m_3(7..12)=2,2,2,3,4,4\ \Longrightarrow\ \Gamma\ge3\ ✓$$
+$$\textbf{d=4}:\ \text{A 覆盖 }|U|\ge25;\ \text{B 残量}=\{|U|\le24\}\ (\text{由 d=4 census 给出，进行中})$$
+$$\textbf{d=5}:\ \text{A 覆盖 }|U|\ge41;\ \text{B 残量}=\{|U|\le40\}$$
+$$
+
+### §14.3 意义（对照 LMOV 方法论）
+
+```
+$$\textbf{原形式}:\ \text{"28 万例全部通过"} \Longrightarrow \textbf{现形式}:\ \boxed{\text{一条两行度量引理}\ +\ \text{有限残量}}$$
+$$\textbf{结构母题}:\ \text{捕获值}\in\{0,2\}\ \text{（成对）}\ \Longleftrightarrow\ \text{LMOV 的"坏项成对配对"} ✓$$
+$$\textbf{容器思想}:\ \text{Lemma 与码的具体结构\textbf{无关}}（\text{纯 Hamming 度量}）\ \Longrightarrow\ \text{对所有半径-1 覆盖码成立，可直接复用} ✓$$
+$$\textbf{仍缺（靶 2 剩余部分）}:\ \text{有限残量内}\ \Gamma>0\ \text{的\textbf{统一论证}}（\text{当前靠 census/穷举}）$$
+$$
