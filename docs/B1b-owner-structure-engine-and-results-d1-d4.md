@@ -992,3 +992,31 @@ $$\boxed{\text{Level II（已获 72/72 样本支持）}:\ \left|C_i\cap\bigcup_{
 $$\textbf{证明链}:\ \text{紧型}\Rightarrow|F|=2\Rightarrow\ \exists y\in S(f)\setminus D\Rightarrow e_i\ge|C_i|-3\ge2\Rightarrow\ \text{交换}\Rightarrow\mu=4 ✓$$
 $$\textbf{边界}:\ \text{Level II 仍属\textbf{样本证据}（72 簇）};\ \text{Level I 的修正已由几何证明} ✓$$
 $$
+
+---
+
+## §29 ⭐ **Level II 精确分解：(i) ≤2 与 (ii) ≤1**（2026-09-25 22:1x）
+
+### §29.1 结果（63 簇，d=6 全部紧型实例）
+
+```
+$$\text{禁形筛选}\ \left|A_j\cup A_k\right|\ge3:\quad \boxed{0/63}\ \Longrightarrow\ \boxed{\left|A_j\cup A_k\right|\ \le\ 2}\ ✓✓\ (\textbf{零违例})$$
+$$\text{重量型分布（}|\mathrm{supp}(q_j)|,|\mathrm{supp}(q_k)|\ \text{相对 }x_i\text{）}=\varnothing\ \Longrightarrow\ \text{无任何越界重量型}$$
+$$
+
+### §29.2 **正确分解（与唐先生猜想一致）**
+
+```
+$$\boxed{\left|A_f\cup A_j\cup A_k\right|\ \le\ 3}\quad\Longleftarrow\quad \text{(i)}\ \left|A_j\cup A_k\right|\le2\ \ \text{＋}\ \ \text{(ii)}\ \left|A_f\setminus(A_j\cup A_k)\right|\le1$$
+$$\text{与 §28.2 的并集分布}\ \{0{:}55\mid1{:}2\mid2{:}11\mid3{:}4\}\ \text{完全吻合} ✓$$
+$$\Longrightarrow\ e_i\ \ge\ |C_i|-3\ \ge\ 2\quad(\text{紧型 }|C_i|\ge5)\ ✓$$
+$$
+
+### §29.3 ⚠️ **脚本陷阱（今日第 4 类）**
+
+```
+$$\text{内层循环}\ \texttt{for k, ck in enumerate(other\_idx)}\ \text{未限定}\ ck=ci\ \Longrightarrow\ \text{用错 keep 对}$$
+$$\Longrightarrow\ \text{凭空产生 }\mathbf{126}\ \text{个假禁形（重量含 }0/1\text{，即"保留点距 }x_i\le1\text{"}\ \text{——那会覆盖整个 }C_i\text{）} ✗$$
+$$\text{修正}:\ \texttt{for k in [other\_idx.index(ci)]}\ \Longrightarrow\ \text{禁形数归零}\ 0/63 ✓$$
+$$\textbf{教训}:\ \text{双层循环中"\text{当前对象}"必须显式绑定，否则会静默错配（与索引/码字混用同源）}$$
+$$
