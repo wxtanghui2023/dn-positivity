@@ -957,3 +957,38 @@ $$\textbf{已证}:\ \text{Level A};\ \text{容量引理 }M\le2d;\ \text{锚点�
 $$\textbf{已获强证据（样本）}:\ e_i\ge|C_i|-2\ (24/24);\ \mu(D)=4\ (500/500);\ \text{对角结构}\ R_{ii}{=}1,R_{ij}{\ge}2\ (500/500);\ \text{阻塞余量}\ge2\ (1200/1200)$$
 $$\textbf{未证}:\ \text{上述容量不等式与存在性陈述}\ \textbf{仍属计算证据};\ \text{一般 }d\ \text{更未触及}$$
 $$
+
+---
+
+## §28 ⭐ **覆盖表：并集恒 ≤3（Level I 需修正为 ≤3）**（2026-09-25 22:0x）
+
+### §28.1 Level I 检验与修正
+
+```
+$$\text{紧型最小枚举（24 案例 × 3 簇）}:\quad \left|C_i\cap B_2(z)\right|\ \text{分布}\ (z\in\{f,q_j,q_k\})\ =\ 0{:}199\mid1{:}2\mid2{:}11\mid\boxed{3{:}4}$$
+$$\Longrightarrow\ \boxed{\text{"}\le2\text{"\ \textbf{为假}}\ ✗\quad\text{正确上界}\ =\mathbf{3}\ (\text{因 }C_i\subseteq B_1(x_i)\ \text{且}\ d(z,x_i)\ge2\Rightarrow|B_2(z)\cap B_1(x_i)|\le3) ✓}$$
+$$
+
+### §28.2 **并集恒 ≤3（主结果）**
+
+```
+$$\left|P_f\cup P_j\cup P_k\right|\ \text{分布}:\ 0{:}55\mid1{:}2\mid2{:}11\mid\boxed{3{:}4}\ \Longrightarrow\ \textbf{恒}\le3\ ✓✓\ (\text{从不}\ge4)$$
+$$\Longrightarrow\ \boxed{e_i=|C_i|-|\text{并集}|\ \ge\ |C_i|-3\ \ge\ 2}\quad(\text{紧型下 }|C_i|\ge5) ✓$$
+$$\Longrightarrow\ \text{交换余量}\ge2\ \Longrightarrow\ \exists q'\in E_i\ \Longrightarrow\ Q'\cup\{f\}\ \text{构成 4-packing}\ \Longrightarrow\ \mu(D)=4 ✓$$
+$$
+
+### §28.3 owner 模式（样例）
+
+```
+$$D=[41,70,94,99],\ \text{簇}=1\ (x_i=70):\ C_i=[577,578,579,583,595,611]$$
+$$P_f=[578,595],\ P_j=P_k=\varnothing\ \Longrightarrow\ \text{并集}=\{578,595\},\quad \text{owner}(578)=\text{owner}(595)=[70]$$
+$$\Longrightarrow\ \text{被覆盖的候选皆为 }x_i\ \textbf{的私有点}\ ✓\ (\text{与 }C_x\ \text{全为私有点的既有观察一致})$$
+$$
+
+### §28.4 结论
+
+```
+$$\boxed{\text{Level II（已获 72/72 样本支持）}:\ \left|C_i\cap\bigcup_{z}B_2(z)\right|\le3}$$
+$$\textbf{证明链}:\ \text{紧型}\Rightarrow|F|=2\Rightarrow\ \exists y\in S(f)\setminus D\Rightarrow e_i\ge|C_i|-3\ge2\Rightarrow\ \text{交换}\Rightarrow\mu=4 ✓$$
+$$\textbf{边界}:\ \text{Level II 仍属\textbf{样本证据}（72 簇）};\ \text{Level I 的修正已由几何证明} ✓$$
+$$
