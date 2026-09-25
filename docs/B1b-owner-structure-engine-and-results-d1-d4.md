@@ -795,3 +795,32 @@ $$\textbf{注}:\ \alpha_2(U_D)=4\ \text{仍为}\ d\le5\ \text{计算定理};\ \t
 $$\textbf{下一步靶}:\ \text{从失败假设 }\mu(D)\le3\ \text{出发，对四个私有簇做\textbf{有限禁形分类}}$$
 $$\qquad \text{（\textbf{不}再跑更大 census；}\mu=4\ \text{已 500/500）}$$
 $$
+
+---
+
+## §23 ⭐ **最小阻塞证书：阻塞不存在且余量 ≥2**（2026-09-25 21:3x）
+
+### §23.1 正确的阻塞判据（唐先生框架）
+
+```
+$$\mu(D)\ge4\iff\exists\ \text{兼容三元组}\ (q_1,q_2,q_3)\ \text{使}\ C_4\not\subseteq\bigcup_iB_2(q_i)\iff\boxed{\min_{\text{三元组}}\ \text{覆盖}(C_4)\ <\ |C_4|}$$
+$$\qquad(\textbf{注}:\ \text{须用\textbf{最小}覆盖；用"最大覆盖"判断是错的} ✗\ \text{——本日自查一次})$$
+$$
+
+### §23.2 结果（1200 例 = 300 D × 4 个 target 簇）
+
+```
+$$\text{未覆盖余量}\ |C_4|-\min\text{覆盖}\ \text{分布}:\ 2{:}26\mid3{:}34\mid4{:}23\mid5{:}124\mid6{:}505\mid7{:}99\mid8{:}226\mid9{:}108\mid11{:}55$$
+$$\boxed{\text{满覆盖（阻塞成立）}=0\ \text{例}};\quad \boxed{\text{最小余量}=2}\ (\text{非 1})$$
+$$\Longrightarrow\ \text{对任意目标簇 }C_4,\ \exists\ \text{兼容三元组使 }C_4\ \text{至少剩 }2\ \text{个自由候选}\ ✓✓$$
+$$
+
+### §23.3 本轮 d=4 完整结构图
+
+```
+$$\textbf{已证（纯几何）}:\ \text{容量引理 }M\le2d;\quad \text{锚点引理 }\alpha_2\le d;\quad \text{Level A}（k\le3\ \text{恒剩}\ge2\ \text{自由点})$$
+$$\textbf{已验证}:\ \alpha_2(U_D)=d\ \text{恰好}\ (d\le5\ \text{全量});\quad C_x=B_1(x)\cap U_D\ \text{近分割 }441/500;\quad R_{ii}=1,\ R_{ij}\ge2\ (500/500);\quad \mu(D)=4\ (500/500);\ \text{阻塞余量}\ge2\ (1200/1200)$$
+$$\textbf{已否证}:\ \text{一步锚定增广}\ ✗\ (2/1600)$$
+$$\textbf{待证}:\ \text{交换型增广（augmenting path）}\ \text{或}\ \text{Hall-型定理} \Longrightarrow \exists\ d\ \text{元 packing}$$
+$$\textbf{边界}:\ \alpha_2=d\ \text{与}\ \mu=4\ \text{中，下界仍属计算证据（}d\le5\ \text{全量/样本）；}\textbf{不得}称一般 }d\ \text{已证}$$
+$$
