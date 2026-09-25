@@ -1020,3 +1020,31 @@ $$\Longrightarrow\ \text{凭空产生 }\mathbf{126}\ \text{个假禁形（重量
 $$\text{修正}:\ \texttt{for k in [other\_idx.index(ci)]}\ \Longrightarrow\ \text{禁形数归零}\ 0/63 ✓$$
 $$\textbf{教训}:\ \text{双层循环中"\text{当前对象}"必须显式绑定，否则会静默错配（与索引/码字混用同源）}$$
 $$
+
+---
+
+## §30 ⭐⭐ **Level II 塌缩：A_j = A_k = ∅（63/63）**（2026-09-25 22:2x）
+
+### §30.1 分布结果（远超"≤2"）
+
+```
+$$\left|A_j\cup A_k\right|\ \text{分布}:\quad \boxed{0{:}63}\ \Longrightarrow\ \textbf{两个保留 q-块贡献\textbf{完全为零}} ✓✓\ (\text{不只}\le2)$$
+$$\text{细分/重量型/owner 签名/重复 owner}\ \text{四张表}\ \textbf{全空}\ (\text{因无 }=2\ \text{实例})$$
+$$
+
+### §30.2 **Level II 塌缩为已证几何**
+
+```
+$$\text{并集}=|A_f|\ \Longrightarrow\ \text{union}\le3\iff|A_f|\le3\quad(\textbf{已证}:C_i\subseteq B_1(x_i)\ \text{且}\ d(f,x_i)\ge2\Rightarrow|B_2(f)\cap B_1(x_i)|\le3)$$
+$$\boxed{e_i\ \ge\ |C_i|-3\ \ge\ 2}\quad(\text{紧型 }|C_i|\ge5)\ \Longrightarrow\ \text{交换}\ \Longrightarrow\ \mu(D)=4 ✓$$
+$$\Longrightarrow\ \textbf{Level II 的实质内容只剩一个分离性事实}:\ \boxed{d(q,x_i)\ge4\ \text{（}x_i\ \text{非 }q\ \text{的锚点）}}$$
+$$\qquad \text{（因 }d(q,x_i)\le3\ \text{才可能覆盖 }B_1(x_i);\ \ge4\Rightarrow\text{覆盖必空}）$$
+$$
+
+### §30.3 ⚠️ 边界（诚实标注）
+
+```
+$$\textbf{该分离性非一般律}:\ \text{witness 的 off-diagonal 距离分布}=\{2{:}186\mid3{:}221\mid4{:}87\mid5{:}5\mid6{:}1\}\ \Longrightarrow\ \exists d(q,x_j)=2\ ✗$$
+$$\Longrightarrow\ \text{分离性为\textbf{紧型特有}}:\ \text{紧型的最大覆盖}\ 9/11\ \text{强制三个支撑近乎不交}\ \Longrightarrow\ \text{各 }q\ \text{远离 }x_i ✓$$
+$$\textbf{已证}:\ |A_f|\le3;\quad \textbf{待证}:\ \text{紧型下}\ A_j=A_k=\varnothing\ (\text{即分离性})$$
+$$
