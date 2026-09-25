@@ -17,7 +17,29 @@
   "deliverable": "K4",
   "question": "Turyn/Camion-Mann/Johnsen 型指数界能否批量判定 abelian p-群 Open 格？",
   "existing_evidence": "E4-0 已锁：DB 问题=一般差集（README 逐字）；CXS 仅 skew ⟹ 不适用",
-  "e4": {}
+  "e4": {
+   "e4_0": {
+    "verdict": "PASS",
+    "evidence": "对象定义(DB README 逐字): (v,k,λ)-DS in group G, 每非零元素恰 λ 次 ⟹ 一般差集; 定理对象: abelian G 的 (v,k,λ)-DS ⟹ 一致; 结论: 违反 ⟹ 不存在 = 与 DB No 语义一致。三一致 ✓"
+   },
+   "e4_1": {
+    "verdict": "OPEN",
+    "evidence": "逐格无同实例论文；138 格的 DB comment 均空（无引用）"
+   },
+   "e4_2": {
+    "verdict": "OPEN",
+    "evidence": "族定理: Turyn Thm 9.11（Trout 2017 UDel, 导师 Qing Xiang，逐字）; Schmidt Thm 9.12 因需 G/U 循环阶 k 且 k∤v 而不适用; CXS 仅 skew（不适用）"
+   },
+   "e4_3": {
+    "verdict": "OPEN",
+    "evidence": "必要条件 p^{2a}|n (a>=1) + p 自共轭 mod exp(G); Hadamard 型恒 p∤n ⟹ 该族不受 Turyn 约束（243 格未被触及 ✓）"
+   },
+   "e4_4": {
+    "verdict": "PASS",
+    "evidence": "实证自检: 在 31388 个 Yes 格中，假设成立 940 例，违反 0 例 ✓；Turyn 1965 为经典未撤回；原文为扫描件（无文本层）已记边界"
+   }
+  },
+  "status": "ADMIT 候选"
  },
  {
   "id": "S3-M5-circulant-weighing",

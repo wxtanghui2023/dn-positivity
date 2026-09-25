@@ -116,8 +116,8 @@ def main():
         hits = fingerprint_hits(c, registry)
         e4 = c.get("e4") or {}
         ok4 = all(str((e4.get(g) or {}).get("verdict", "")).upper() in ("OPEN", "PASS")
-                  for g in ("e4_1", "e4_2", "e4_3", "e4_4"))
-        missing = [g for g in ("e4_1", "e4_2", "e4_3", "e4_4") if not (e4.get(g) or {}).get("evidence")]
+                  for g in ("e4_0", "e4_1", "e4_2", "e4_3", "e4_4"))
+        missing = [g for g in ("e4_0", "e4_1", "e4_2", "e4_3", "e4_4") if not (e4.get(g) or {}).get("evidence")]
         if kills or hits:
             verdict = "BLOCKED"
             n_block += 1
