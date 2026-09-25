@@ -1,0 +1,121 @@
+{
+ "note": "上位定理族登记表（AMEND-28 §2/§3）。machine_check=yes 者可被 closure_gate.py 自动判定；no 者作为指纹匹配＋证据表强制项。",
+ "entries": [
+  {
+   "id": "CXS-exponent-bound",
+   "name": "Chen–Xiang–Sehgal 指数界（经 Schmidt Thm 4.4 / Ding–Wang–Xiang 2007 Thm 1.1 双源）",
+   "object_type": "difference_set_skew_hadamard",
+   "machine_check": "yes",
+   "predicate": "abelian p-group, p ≡ 3 (mod 4), |G| = p^m, exp(G) = p^s, s >= 2, s > floor((m+1)/4)",
+   "conclusion": "No — 该群不存在 skew Paley–Hadamard 差集",
+   "source": "Chen, Xiang, Sehgal, Des. Codes Cryptogr. 4 (1994) 313–317; Schmidt survey Thm 4.4; Ding–Wang–Xiang JCTA 114 (2007) Thm 1.1",
+   "verified_sources": 2,
+   "verified_how": "两篇独立二手汇总逐字一致；原始付费墙未取得（已记录边界）"
+  },
+  {
+   "id": "SHDS-v-prime-power",
+   "name": "abelian skew Hadamard 差集 ⟹ v = p^m ≡ 3 (mod 4) 必为素数幂",
+   "object_type": "difference_set_skew_hadamard",
+   "machine_check": "yes",
+   "predicate": "abelian + skew Hadamard 参数型 (v,k,λ)=(4n-1,2n-1,n-1) + v 非素数幂",
+   "conclusion": "No — 素数幂为必要条件",
+   "source": "Ding–Wang–Xiang JCTA 114 (2007) Thm 1.1（归 Johnsen / Camion–Mann）",
+   "verified_sources": 1,
+   "verified_how": "单一二手源；已做数据库一致性抽查（Yes 格无合数 v）⟹ 待第二源"
+  },
+  {
+   "id": "SHDS-counting-relation",
+   "name": "(v,k,λ) 计数必要条件 k(k−1) = λ(v−1)",
+   "object_type": "difference_set_any",
+   "machine_check": "yes",
+   "predicate": "k*(k-1) != lam*(v-1)",
+   "conclusion": "No — 违者不存在差集（且 skew Hadamard 型自动满足）",
+   "source": "初等计数",
+   "verified_sources": 2,
+   "verified_how": "恒等式；用于参数合法性自检"
+  },
+  {
+   "id": "EJC-DS20v2-Thm-1.13-1.14",
+   "name": "forbidden configuration 边界（固定 k 的 Θ(m^k) vs Θ(m^{k−1})）已完全判定",
+   "object_type": "forbidden_configuration_boundary",
+   "machine_check": "no",
+   "fingerprint": "固定 k 的 forbidden configuration 数目边界分类；主张给出该边界的完整刻画",
+   "conclusion": "KNOWN — 边界已被完全判定（下一层由 Anstee–Sali 猜想支配）",
+   "source": "EJC DS20v2 Thm 1.13/1.14（叠加 Anstee–Sali，arXiv:1210.8189）",
+   "verified_sources": 1,
+   "verified_how": "综述逐字行已在 F-4 记录中引用",
+   "keywords": [
+    "forbidden configuration",
+    "固定 k",
+    "边界分类"
+   ]
+  },
+  {
+   "id": "mult-subgroup-intersection-classical",
+   "name": "乘法子群 × 加法平移 交计数 λ=|G∩(G+1)| 的经典理论",
+   "object_type": "additive_capacity_of_multiplicative_subgroup",
+   "machine_check": "no",
+   "fingerprint": "对象为有限域乘法子群与加法平移的交计数／3项或4项加法容量；参数空间为 (q,d) 小参数",
+   "conclusion": "KNOWN-THEORY — 归 Vyugin–Solodkova–Shkredov 2016（Stepanov 法）及经典 cyclotomic/Frobenius 处理",
+   "source": "Vyugin–Solodkova–Shkredov 2016；本项目 B12 复核",
+   "verified_sources": 2,
+   "verified_how": "本项目 B11/B12 已逐项复核，判定为已知理论实例",
+   "keywords": [
+    "乘法子群",
+    "加法平移",
+    "交计数",
+    "加法容量"
+   ]
+  },
+  {
+   "id": "small-doubling-known",
+   "name": "乘法子群 × 加法能量失配（小 |G| 区）为已知开放／已知界",
+   "object_type": "multiplicative_subgroup_additive_energy",
+   "machine_check": "no",
+   "fingerprint": "主张 new quantity = 加法/乘法能量比或差；且为 small-|H| 区",
+   "conclusion": "KNOWN — 无新量；small-|G| 区本身是已知开放问题（|G|≤c·p^{3/4} 经 Jacobi sums）",
+   "source": "F-4 记录（P5-乙-3 REJECT）",
+   "verified_sources": 1,
+   "verified_how": "≥3 定义标准化后无新量",
+   "keywords": [
+    "乘法能量",
+    "能量比",
+    "small-|H|",
+    "doubling"
+   ]
+  },
+  {
+   "id": "cyclotomic-order-3",
+   "name": "特征 2 上 ρ=λ/d 景观归经典 order-3 cyclotomic numbers",
+   "object_type": "finite_field_character_sum_landscape",
+   "machine_check": "no",
+   "fingerprint": "对象为 d | 2^n−1 上的 ρ_max／λ 极值；小 n 精确表",
+   "conclusion": "KNOWN — λ=Q−8+A)/9 型经典闭式（Dickson；Berndt–Evans–Williams）",
+   "source": "Q1-C REJECT（项目内记录）",
+   "verified_sources": 2,
+   "verified_how": "经典文献 + 本项目 m=3 七例全等",
+   "keywords": [
+    "cyclotomic",
+    "ρ_max",
+    "极值",
+    "2^n"
+   ]
+  },
+  {
+   "id": "ramsey-DS1.18-systematic",
+   "name": "小 Ramsey 数具体格已被 EJC DS1.18 ＋ 系统研究覆盖",
+   "object_type": "ramsey_number_cell",
+   "machine_check": "no",
+   "fingerprint": "R(C4,K_{1,n}) 或 R(3,k) 的单个具体格；主张上下界收窄",
+   "conclusion": "ROUTE-OCCUPIED — Boza arXiv:2409.12770v2（2026）系统解出 n≤38；DS1.18 动态综述在编",
+   "source": "EJC DS1.18；Boza 2026；ChenZZ7 2025 综述",
+   "verified_sources": 2,
+   "verified_how": "Mt07 CLOSURE 记录",
+   "keywords": [
+    "R(C4",
+    "R(3",
+    "上下界收窄"
+   ]
+  }
+ ]
+}

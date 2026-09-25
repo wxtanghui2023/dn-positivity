@@ -1,0 +1,21 @@
+[
+ {"id":"F4-1-CAP-MIX","object_type":"additive_capacity_of_multiplicative_subgroup",
+  "fingerprint":"对象为有限域乘法子群与加法平移的交计数／3项或4项加法容量；参数空间为 (q,d) 小参数",
+  "e4":{}},
+ {"id":"F4-2-P7-2","object_type":"forbidden_configuration_boundary",
+  "fingerprint":"固定 k 的 forbidden configuration 数目边界分类；主张给出该边界的完整刻画",
+  "e4":{}},
+ {"id":"F4-3-P5-Y3","object_type":"multiplicative_subgroup_additive_energy",
+  "fingerprint":"主张 new quantity = 加法/乘法能量比或差；且为 small-|H| 区",
+  "e4":{}},
+ {"id":"F4-4-Q1","object_type":"finite_field_character_sum_landscape",
+  "fingerprint":"对象为 d | 2^n−1 上的 ρ_max／λ 极值；小 n 精确表",
+  "e4":{}},
+ {"id":"F4-5-Mt07","object_type":"ramsey_number_cell",
+  "fingerprint":"R(C4,K_{1,n}) 或 R(3,k) 的单个具体格；主张上下界收窄",
+  "e4":{}},
+ {"id":"F4-6-LJCR-243","object_type":"difference_set_skew_hadamard",
+  "params":{"v":243,"k":121,"lam":60,"G":[3,9,9],"abelian":true,"skew":true},
+  "fingerprint":"最小 Open 格 DS(243,121,60,[3,9,9]) 的构造或不存在性",
+  "e4":{}}
+]
