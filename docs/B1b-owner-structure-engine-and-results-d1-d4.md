@@ -268,3 +268,49 @@ $$\textbf{边界（必须遵守）}:\ \text{本证书为\textbf{邻域证书}}�
 $$\qquad \textbf{不得}写成全局\ K(10,1)>119;\quad \text{全局结论需 }packing\ \text{引理对所有 }D\ \text{成立（含大 }D）\ \text{或其它论证}$$
 \text{产物}:\ \texttt{b1b\_packcert\_d4.json}\mid\texttt{b1b\_packfail\_d4.jsonl}\mid\texttt{b1b\_packfail\_d4\_exact4.json}\mid\texttt{exact\_pack.py}
 ```
+
+---
+
+## §10 SDR 路线（结构性升级的第二刀，2026-09-25 17:1x）
+
+### §10.1 判据替换：从 "greedy + U_D" 到 **私有代表系（SDR）**
+
+```
+$$\textbf{SDR 判据}:\ \exists\ \text{选取 } v_c\in P_1(c)\ (c\in D)\ \text{使}\ d_H(v_c,v_{c'})\ge3\ \forall c\ne c'$$
+$$\Longrightarrow\ \text{所有 }v_c\in U_D\ \Longrightarrow\ \alpha_2(U_D)\ge|D|\ \Longrightarrow\ \rho(D)\ge|D|>|D|-1\ ✓$$
+$$\text{优点}:\ \text{只需预计算 }P_1(c)\ (\text{内存极小})\ \text{且速度快}\ \sim8\times\ (\text{greedy 版 }17.5\text{k/s}\to\text{SDR 版 }134\text{k/s})$$
+$$
+
+### §10.2 三条结构事实（实测）
+
+```
+$$\textbf{(i) 对偶引理}:\ \forall c\ne c'\ \exists v\in P_1(c),\ v'\in P_1(c'):\ d(v,v')\ge3\quad\Longrightarrow\ \text{失败 }\mathbf{0/7140}\ ✓\ \textbf{普适}$$
+$$\textbf{(ii) 命中性}:\ \forall c,\ \forall X\ (\le4\ \text{点，来自它字私有点})\ \exists v\in P_1(c):\ d(v,X)\ge3\ \Longrightarrow\ \text{失败 }\mathbf{4/4800}\ ✗\ \textbf{非普适}$$
+$$\qquad \Longrightarrow\ \text{贪心\textbf{必须回溯}}（\text{解释了 }sdr\_ok\ \text{需要 backtrack}）$$
+$$\textbf{(iii) }P_1(c)\ \text{内部}:\ \mathbf{120/120}\ \text{个字的私有点都含"距离}=1\ \text{的相邻对}\ \Longrightarrow\ \text{私有点成对相邻（强规律）}$$
+$$
+
+### §10.3 `d=5` 证书（进行中，2 片 · 断点续跑）
+
+```
+$$\text{分片}:\ i_1\in[0,14]\ (\text{A})\ \text{与}\ [15,119]\ (\text{B});\quad \text{每完成一个 }i_1\ \text{写 state 文件}\ \Longrightarrow\ \text{重启可续} ✓$$
+$$\text{实测速率}:\ 134\text{k D/s/片};\quad \text{已证 }12{,}506{,}877/190{,}578{,}024\ (\text{fail}=\mathbf{0},\ \text{unk}=\mathbf{0})$$
+$$\text{ETA}\approx12\ \text{分钟}$$
+$$
+
+### §10.4 **CPU/内存纪律（唐先生 17:13 提醒后立规）**
+
+```
+$$\text{事故}:\ \text{我曾同时跑 6+ 个进程}\ \Longrightarrow\ \text{load 峰值 }\mathbf{104}\ (\text{4 核})\ \Longrightarrow\ \text{容器于 }17{:}06\ \text{重启};\ \text{后台任务全失}$$
+$$\textbf{新纪律}:\ (a)\ \text{后台进程}\le\mathbf{2};\quad (b)\ \textbf{必须断点续跑}（state 文件）;\quad (c)\ \text{低内存设计}（\text{流式落盘、勿累积}）$$
+$$\qquad (d)\ \text{勿在 exec 内用 }|\ tail\（\text{缓冲吞输出}）;\quad (e)\ \text{不并发跑额外测试脚本}$$
+$$\text{现状}:\ \text{load }3.0/4\ \text{核};\ \text{可用内存 }5.9\text{G}\ ✓$$
+$$
+
+### §10.5 下一步（照唐先生 17:0x）
+
+```
+$$\text{若 }d=5\ \text{亦 }\text{fail}=0\ \Longrightarrow\ \textbf{立即攻击 SDR 引理的结构性证明}（\text{不再机械扩到 }d=6）$$
+$$\text{证明种子}:\ \text{(i) 对偶引理（}\mathbf{0/7140}\ \text{普适）};\quad \text{(iii) }P_1(c)\ \text{的相邻对结构};\quad \text{(ii) 的 }4\ \text{个反例（界定了贪心边界）}$$
+$$\textbf{边界}:\ \text{仍为相对 }C_{120}\ \text{的局部证书};\ \textbf{不得}写成 }K(10,1)>119$$
+```
