@@ -70,7 +70,7 @@ $$\textbf{方法论价值}:\ \text{这是\textbf{语义更正之后}的正确续
 ```
 (i)\ \text{逐字陈述取自 }\mathbf{Trout\ 2017}\ \text{学位论文（单一二手源，含证明）};\ \textbf{Turyn 1965 原文为扫描件（无文本层）} \Longrightarrow \text{未能核对原始铅字}
 (ii)\ \text{Schmidt 界（Thm 9.12）形式更强但因 }k\mid v\ \text{不成立而\textbf{未使用}}
-(iii)\ \text{138 格为\textbf{机器批量}结果};\ \text{虽经 }Yes\ \text{格 0 违反校验，仍应做\textbf{第二套独立实现}复核（待办）}
+(iii)\ \text{138 格为机器批量结果};\ \text{已双重验证}:\ (a)\ Yes\ \text{格 0/940 违反} ✓;\ (b)\ \textbf{第二套独立实现}（不同分解\/阶判定\/界比较路径）\Longrightarrow 138=138\ \text{完全一致} ✓✓\ (\texttt{turyn\_checker.py})
 (iv)\ \textbf{不声称}数据库"错误"（其 }Open\ \text{语义=未见构造）;\ \text{只主张"按 Turyn 界应为 }No\text{"}
 (v)\ \text{结论依赖定理假设的逐项验证};\ \text{自共轭判定用 }\exp(G)=\mathrm{lcm}(\text{不变量因子})\ \text{精确计算} ✓
 ```
