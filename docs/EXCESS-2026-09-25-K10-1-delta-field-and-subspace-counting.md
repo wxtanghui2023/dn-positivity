@@ -42,7 +42,9 @@ $$\textbf{二阶}:\quad \sum\delta^2=4(A_1+A_2)-285\ \Longrightarrow\ \sum\delta
 $$\textbf{由 }\delta\ge0\ \text{与 }\sum\delta\ \text{固定}:\ \sum\delta^2\ge\sum\delta\ (\text{等号}\iff\delta\in\{0,1\}\ \text{全体}),\ \text{且}\ \sum\delta^2\le10\sum\delta$$
 ```
 
-**结论：矩条件（一/二/三阶）在 `|C|=119` 下不产生障碍** ✗ —— 存在满足全部恒等式的 δ-场 ✓（与"已知下界仅 107"一致：excess 矩族不足以排除 119 ✓）
+**结论（按唐先生 2026-09-25 23:03 修正）**：这些恒等式的**必要条件区间未排除 `119`** ✓；
+但**不得**写成"存在满足全部恒等式的 δ-场"✗ —— 目前**未**证整数可行（除非代码级三阶交谱实际给出可行整数解）✓
+与"已知下界仅 107"一致：excess 矩族本身不足以排除 119 ✓
 
 ## §4 本项目自算的子空间计数界（诚实结果）
 
@@ -55,6 +57,9 @@ $$\textbf{由 }\delta\ge0\ \text{与 }\sum\delta\ \text{固定}:\ \sum\delta^2\g
   m=4: τ=4, 面数 13440, K=1470 ⟹ c ≥ 37
 ⟹ **本项目自算的 m-面计数界远弱于平凡球覆盖 ⌈1024/11⌉=94，更弱于文献 107** ✗
 ```
+
+**正式封口（Layer 1 CLOSED）**：由唐先生给出闭式 `K_m = C(10,m)(11−m)`、`N_m = C(10,m)2^{10−m}` ⟹
+`|C| ≥ K(m,1)·2^{10−m}/(11−m)`，代 `K(m,1)` 值后**最强仅 m=0 给 ⌈93.09⌉ = 94**，即**不超过平凡球覆盖** ⟹ 该线正式关闭 ✓
 
 **诚实诊断**：单靠"每个 m-面需 τ(m) 球"再求和，损失过大 ✗；真正达到 107 的机制是
 **更精细的 excess/密度 + 子空间计数耦合（van Wee / Haas 型）**，本档**未能**自行复现该强度 ✓（不夸大）。
@@ -95,3 +100,49 @@ $$\textbf{由 }\delta\ge0\ \text{与 }\sum\delta\ \text{固定}:\ \sum\delta^2\g
 - **档案已有（引用，不列为提出）**：`van Wee`（5 档，含 `X1-AMEND-20-21-22-verdict-CLOSED.md`）、`球交`（3 档，含 `B1b-...-d1-d4.md`）
 - **通用词（不计）**：—
 - **说明**：本档**不**主张任一技术词为本项目首创；`δ-场`等仅为本档内部对该坐标系的命名 ✓
+
+---
+
+## §7 ⭐ **Haas 2013 层式恒等式：校准通过 ＋ LP 结果（Layer 2 首测）**（2026-09-25 23:0x）
+
+### §7.1 层式恒等式（唐先生给出，本档在真实 120-码上校验）
+
+```
+$$A_j(x):=|\{c\in C:d(c,x)=j\}|;\qquad \boxed{\delta_i(x)=(11-i)A_{i-1}(x)+A_i(x)+(i+1)A_{i+1}(x)-\binom{10}{i}}$$
+$$\textbf{我方可独立推出该式}:\ \sum_{y\in L_i(x)}m(y)=\sum_{c\in C}|B_1(c)\cap L_i(x)|=A_i+(11-i)A_{i-1}+(i+1)A_{i+1}\ ✓\ (\text{与 }A_{-1}=A_{11}=0\text{ 约定一致})$$
+```
+
+### §7.2 ⭐⭐ **局部守恒律（本档新发现，已在 120-码上验证）**
+
+```
+$$\boxed{\sum_{i=0}^{10}\delta_i(x)\ =\ 11|C|-2^n\ =\ E\quad\textbf{对每一个中心 }x\ \textbf{都成立}}$$
+$$120\text{-码}: E=296;\ \text{实测}\ \sum_i\delta_i(x)=296\ \textbf{对全部 }1024\ \text{个 }x\ ✓✓\ (\text{与 }x\ \text{无关！})$$
+$$\text{且}\ \boxed{\delta_i(x)\ge0\ \text{对一切 }(x,i)}\ ✓\ (0\ \text{违例})\ \Longleftrightarrow\ \text{层式不等式族}\ (11-i)A_{i-1}+A_i+(i+1)A_{i+1}\ge\binom{10}{i}\ \text{在真实码上成立}$$
+$$\text{层紧度}:\ \delta_i=0\ \text{的 }x\ \text{数}=\{i{=}0{:}801,\ i{=}1{:}6,\ i{=}9{:}6,\ i{=}10{:}801\}\ (\text{紧层在两端})$$
+$$
+
+### §7.3 **LP 首测：该族强度 = 平凡球覆盖** ✗
+
+```
+$$\text{变量 }z_c\in[0,1];\quad \text{目标 }\min\sum z_c;\quad \text{约束}:\ \text{全部 }(x,i)\ \text{的层式不等式}\ (11264\ \text{条})$$
+$$\textbf{LP 最优值}=\mathbf{93.0909}=\frac{1024}{11}\ \Longrightarrow\ \textbf{该族给出的界 = 平凡球覆盖}\ \lceil94\rceil\ ✗\ (\text{远低于 107})$$
+$$120\text{-码代入}:\ \min(\text{LHS}-\text{RHS})=0.000000\ \Longrightarrow\ \textbf{可行且处处紧}\ ✓\ (\text{族正确})$$
+$$\textbf{全部 }1024\ \text{个变量分数}\ \Longrightarrow\ \text{LP 松弛极弱};\ \text{整数版（ILP）须另解}$$
+$$
+
+### §7.4 **校准门纪律（唐先生 23:03 定，本档采纳）**
+
+```
+$$\boxed{\text{模型必须先精确复现真实 120-码（}|C|{=}120,\ E{=}296,\ \delta\ \text{分布},\ 一/二/三阶恒等式},\ \text{子空间 incidence}\text{）才允许代 }c=119}$$
+$$\text{本档达成}:\ \text{层式族已复现（}\delta_i\ge0\ \text{且}\ \sum_i\delta_i\equiv E\ ✓\text{）};\ \text{但\bf{强度不足}} ✗\ (\text{LP}=93.09)$$
+$$\Longrightarrow\ \textbf{Layer 2 首测结论}:\ \text{单靠层式族不够};\ \text{必须引入\bf{子空间耦合变量}}\ (N_S(t)\ \text{与跨维 incidence})\ ✓$$
+```
+
+### §7.5 状态表（本格）
+
+```
+Layer 0  球总量 11|C|≥2^n                       ⟹ |C|≥94            （太弱）
+Layer 1  m-面未加权计数                          ⟹ 最强仍 94          **CLOSED** ✓
+Layer 2  层式不等式族（Haas 2013 局部形式）        ⟹ LP=93.09           **不足** ✗（校准✓）
+Layer 2+ 子空间耦合变量 + incidence + 整数可行     ⟹ 未做                **下一步** ✓
+```
