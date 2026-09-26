@@ -63,5 +63,6 @@ $$\qquad\text{注}: n=8\ \text{的 }b\le2\ \text{正是由 NP1CC（van Wee 取�
 技术词 矩墙           命中文件数=3    :: ./P1LB3-2026-09-26-triangle-lower-bound-and-moment-wall.md ./E10-rank-trace-inertia-joint.md ./C3899d-c3900-hold-and-gamma13-mechanism-precheck.md 
 技术词 坐标等价性  命中文件数=1    :: ./P1LB3-2026-09-26-triangle-lower-bound-and-moment-wall.md
 ```
-- **本档新增**（扣自引后 = 0）：三角形下界、矩墙、坐标等价性
+- **本档新增**（扣自引后 = 0，命中 1 = 自引 ✓）：三角形下界、坐标等价性
+- **档案已有（引用，不列为提出）**：**矩墙**（命中 3 文件 ⟹ 非新 ✗，已在 `E10-rank-trace-inertia-joint.md`、`C3899d-c3900-HOLD-and-gamma13-mechanism-precheck.md`）｜T₃、Q₂、N₄
 - **档案已有（引用，不列为提出）**：T₃、Q₂、N₄
