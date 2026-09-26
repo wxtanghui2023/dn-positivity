@@ -4237,3 +4237,27 @@ $$\Longrightarrow\ \rho=\frac{3}{12.52}\approx\mathbf{0.24}\ \ll1\ \Longrightarr
 
 **G-CAL 附加**：候选 `I` 须过 C1（genuinely new）／C2（显著压缩 feasible region）／C3（连接 P1/P2/P3），任一失败 ⟹ STOP ✗。
 **FRONTIER-R1**：五格**不启动**，直到有"改变 feasible region 的 mechanism"被示范 ✓。
+
+
+---
+
+## AMEND-32 · 目标可见性与四门链（2026-09-26 唐先生立；RH／119 同构教训 ✓）
+
+**统一框架**：`Target → target-sensitive observable → correct-direction constraint → collision` ✓
+RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} → 上界型约束 → A_1≤49` ✓
+**共同失败模式**：`observable exists ≠> correct-direction constraint exists` ✗
+
+**二分（同构）**：RH `β-sensitive/β-blind`；119 `A_1-sensitive/A_1-blind` ✓
+- `β-盲 ⟹ 不能推进 RH` ✓；`A_1-盲 ⟹ 不能推进 A_1≤49` ✓
+- **信息矩阵**：`target-sensitive × 有约束力`＝真正突破（当前**缺** ✗）；其余三格为大量已得成果／强但无法对接／纯背景 ✓
+
+**两条纪律不等式（并列）**：`independence ≠ usefulness` ✓；**`sensitivity ≠ leverage`** ✓
+**可用判据（119）**：需 `I ≤ C` **且** `I 随 A_1 单调增` ⟹ `A_1 > C' ⇒ I > C` 才排除 `A_1>49` ✓（下界型且随 `A_1` 下降者 **压不住** ✗）
+
+**四门链（硬门）**：`Novel → Independent → Target-sensitive → Correct-direction` ✓；四门全过方可进入 P1/P2 ✓；任一失败 ⟹ 出局（可存审计记录，**不计推进** ✗）。
+（AMEND-31 的 `D` ＝ 第 3＋4 门合取；本修正**拆为两门** ✓）
+
+**搜索顺序反转**：弃 `mechanism → observable → 再问用途` ✗；采 **`target → direction → mechanism → observable`** ✓
+
+**FRONTIER-R1 筛选器**：目标＝存在性 ⟹ 结构量→必要条件→不可实现；目标＝最小参数 ⟹ 结构量→`v`-依赖界；目标＝分类 ⟹ 结构量→class separator ✓。
+**强制声明**：任何 invariant 必须写明"对哪个 target variable sensitive"＋"约束方向" ✓（禁止只写"很新" ✗）
