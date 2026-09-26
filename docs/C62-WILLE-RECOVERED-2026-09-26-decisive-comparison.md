@@ -75,3 +75,27 @@ $$
 
 - **本档新增**（扣自引后 = 0）：Wille 指纹全中、刚性集判决、归档部分回滚
 - **档案已有（引用，不列为提出）**：Q₂、剖面、switching class、方阵
+
+
+---
+
+## §7 ⭐⭐⭐ **在真实 Wille 码上：shell 机制被"实际实现"** ✓✓（追加 ✓）
+
+```
+$$	ext{Wille 码（码#2}，M=K=62\ ✓):\ |C|=62,\ 	ext{方阵}=3\ ✓,\ |V_\square|=10\ ✓,\ I=27,\ S=67,\ I_{m nw}=17\ ✓$$
+$$	ext{十个方阵顶点}: 	extbf{2 个 }|\cap\mathrm{dirs}|=1\ (	ext{即在 2 个方阵中}\ ✓)\ 	ext{且其 }d_C=\mathbf{3}\ ✓✓;\ 	ext{其余 8 个 }|\cap|=2,\ d_C\in\{2,3\}\ ✓$$
+$$\Longrightarrow\ oxed{	extbf{"}|\cap|<2\ \Longrightarrow\ d_C\ge3	ext{" 在真实极值对象上	extbf{成立}}\ ✓✓\ (	ext{重复见证机制被实现}\ ✓✓)}$$
+$$	extbf{更强读数}: 	ext{该码中 }d_C=3\ 	ext{的码字	extbf{恰是}落在 2 个方阵中的那两个顶点}\ ✓✓$$
+$$\qquad\Longrightarrow\ oxed{h>0\ 	ext{（即 }d_{\max}=3	ext{）在 }M=K(9,1)\ 	ext{上由	extbf{方阵重叠直接解释}}\ ✓✓}$$
+$$	ext{shell 三态}: P=60,\ M=6,\ C=6\ ✓\ \Longrightarrow\ L_\square=\mathbf{12}>0\ ✓\ (	ext{故 shell 线在 }M=K\ 	extbf{非空}\ ✓✓\ ——\ \S4\ 	ext{的回滚得到确认}\ ✓)$$
+$$	ext{已否不等式在此成立}: L_\square=12\le S+I_{m nw}=84\ ✓\ (	ext{但 }(4,8)\ 	ext{反例使其	extbf{非定理}}\ ✗)$$
+$$
+
+## §8 修正后的最终图景
+
+```
+$$	extbf{刚性（真实对象双码验证}\ ✓✓)}: E,\ Q_2=38,\ A_{\le2}=73,\ (N_j),\ d_{\max}=3,\ N_1=432$$
+$$	extbf{非刚性（分叉}\ ✗)}: A_1,\ A_2,\ I,\ S,\ S_q,\ |V_\square|,\ I_{m nw}$$
+$$	extbf{机制（已验证}\ ✓✓)}: 	ext{方阵重叠}\ \Longrightarrow\ d_C\ge3\ \Longrightarrow\ h>0\ ✓\ (	ext{在真实极值对象上实现}\ ✓✓)$$
+$$\Longrightarrow\ 	extbf{正确靶心}: oxed{	ext{为何 }Q_2\ 	ext{与 }(N_j)\ 	ext{刚性，而 }I/S\ 	ext{分叉}}\ ✓✓\ ——\ 	ext{而非"控制 }I	ext{"}\ ✗✓$$
+$$
