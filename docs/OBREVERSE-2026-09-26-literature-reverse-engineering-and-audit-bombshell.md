@@ -80,5 +80,6 @@ $$
 技术词 审计发现     命中文件数=43   :: ./AUDIT-direction-depth.md ./APPRECIATION-AUDIT-2026-09-11.md ./E90-karatsuba-audit.md 
 技术词 反演算法     命中文件数=1    :: ./OBREVERSE-2026-09-26-literature-reverse-engineering-and-audit-bombshell.md
 ```
-- **本档新增**（扣自引后 = 0）：候选指纹表、审计发现、反演算法
+- **本档新增**（扣自引后 = 0，命中 1 = 自引 ✓）：候选指纹表、反演算法
+- **档案已有（引用，不列为提出）**：**审计发现**（命中 43 ⟹ 非新 ✗）｜Layer A/B、M-covering、weighted covering
 - **档案已有（引用，不列为提出）**：Layer A/B、M-covering、weighted covering
