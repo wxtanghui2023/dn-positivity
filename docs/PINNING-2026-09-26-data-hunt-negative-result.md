@@ -86,3 +86,27 @@ $$\text{② **附录代表码表**: } n\le8,\ R=1,\ M=K(n,1)\ \text{的代表元
 拿到后流程（严格不变 ✓）：`代表元 → B_n-等价核验 → Q(C) → 是否 pinning` ✓
 
 **状态**：pinning 支线 = **B / OPEN** ✓（不升级为定理 ✓，不外推 n=10 ✓）；119 主线 = **UNKNOWN** ✓
+
+---
+
+## §6 终局发现（2026-09-26 10:06，**数据问题彻底钉死** ✓）
+
+```
+$$\text{唐先生指出的 "(codes in digital form)" 在 pub 列表中——**其链接指向 } \texttt{8-2-12.html}\ ✗$$
+$$\text{逐字核对（我方抓取 } \texttt{patric\_pub.html}\ \text{原文）}:\ \textit{"Classification of binary covering codes} ,\ \text{P. R. J. Östergård and W. D. Weakley, J. Combin. Des. 8 (2000), 391–401. }\textbf{( codes in digital form )}$$
+$$\qquad\text{该行唯一的 href }=\ \texttt{http://users.aalto.fi/\~pat/8-2-12.html}\ ✗$$
+$$\Longrightarrow\ \boxed{\text{2000 论文的**唯一数字化数据} = }(n,M,R)=(8,12,\mathbf{2})\ \text{的 }277\ \text{个码 ✗}$$
+$$\Longrightarrow\ \boxed{\textbf{R=1 的代表元从未数字化}\ ✗\ \text{（只存在于论文附录 ✓）}}$$
+```
+
+**Wiley PDF 入口**: HTTP **403 + Cloudflare challenge** ✗（程序不可抓 ✗；我方**不绕** ✓）
+$$\Longrightarrow\ \text{路径①仍需唐先生用浏览器 + 机构订阅下载 ✓（附录应含 R=1 表 ✓）}$$
+
+**本线数据结论（定稿）**
+```
+① 作者站点: R=1 数据**不存在** ✗（9 处探测 ✓ + pub 列表链接核对 ✓）
+② 数字化版本: 仅 (8,12,R=2) ✗
+③ 唯一来源: **论文附录** ✓ ⟹ 需 PDF ✓
+④ 若附录无 R=1 表 ⟹ 才考虑 n=6 有序生成（唐先生已裁: 暂不 ✗）
+```
+状态不变：pinning = **B / OPEN** ✓；119 主线 = **UNKNOWN** ✓
