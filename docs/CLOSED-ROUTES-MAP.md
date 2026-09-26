@@ -3264,3 +3264,38 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **保留**：d=4 finite certificate（`C(120,4)` 全量 8.2M，zero failure，exact K₄）＋ Level-A 必要条件（`M≤2d`｜`α₂≤d`｜Level A｜`|A_f|≤3`｜覆盖三分判据｜Sat 引理｜`C_i=P₁(x_i)`）✓
 **交付类别**：LANE-A / **finite certificate**（非 structural theorem）
 **STATUS: CLOSED** ｜ **下一未探域**：general d ／ **non-local saturation invariant**（见 `STRATEGY-2026-09-25-two-lines-missing-global-invariant.md`）
+
+---
+
+## ZBALL-LOCAL. **零过量球 / gadget 局部机制（2026-09-26 收口 · 7 类 NO-GO）**
+
+**对象**：K(10,1)／K(9,1) 语境下的 `t_x = OC(B_1(x)) = Σ_{y∈B_1(x)}(b(y)−1)`、`Z := #{x∉C : t_x=0}`、`Z`-gadget（`{c}∪{c_ij}`）、square、私有点。
+
+**已确认硬信息（保留 ✓）**：
+- `t_x = 0 ⟹ B_1(x) 全 b=1 ∧ 恰一个距离-1 码字 ∧ 其余 n−1 坐标完美匹配` ✓（数值 270/270 ✓）
+- `Q_2 = [(n−1)E − Σ_{x∉C} OC(B_1(x))]/2` ✓✓（全枚举精确验证 ✓）；`n=9,M=62`: `Q_2 = 432 − ΣOC/2` ✓
+- `18 ≤ Z ≤ 44`（n=9, M=62）✓
+- gadget 刚性：`(n+1)/2` 个码字两两距离 3/4 ⟹ **球两两不交** ✓✓
+- gadget 局部完美：对 `E` 贡献恒为 0（每点恰 1 次 incidence；9/9、112/112 ✓）
+- square 资产：`4S ≤ Q_2` ✓（＋(9,64) 取等饱和 ✓）＋等号分类 ✓
+
+**NO-GO 表（7 类）**：
+
+| # | 机制 | 形式 | 否证 |
+|---|------|------|------|
+| ZB-1 | local ledger | 单球容量账本推 Q≤1 | 单位成本 ≤33 ≪ headroom 285 ✗ |
+| ZB-2 | Ψ₂/Z₂（generic 二阶） | 距离-2 点对 `o(x)o(y)` 相关 | Q=0 组内自变 {24,26} ✗ |
+| ZB-3 | Ψ_mid（中点泛函） | `Σ o(m₁)o(m₂)` | 极值壳被距离分布决定 ✗ |
+| ZB-4 | ladder/σ 系统 | binary ladder 结构 | 共享壳下界与 `u_ℓ/v_ℓ` 断言数值证伪 ✗ |
+| ZB-5 | private-point 复用 | "不可复用私有点"推 Z≤N₁ | 完美码 reuse = **28** ✗✗ |
+| ZB-6 | ball-disjointness 计数 | 球不交推 Z 上界 | 完美码 Z=112 而结论平凡 ✗ |
+| ZB-7 | gadget 外溢强制 excess | 外溢 ⟹ b≥2 | 完美码外部 b≥2 数 = 0 ✗✓ |
+
+**根因（结构性）**：`Z`-gadget 局部**完全模拟** perfect-code 的零 excess 结构 ⟹ **任何局部 lemma 无法区分 E=0 与 E>0** ✗✓
+
+**机制三要件判据（战略产出 ✓✓）**：突破必须同时具备
+① **global propagation**（跨 `B_1(x)` 耦合）② **minimality** ③ **excess sensitivity**（内在用 `E>0`）
+
+**保留**：上述四项资产（`t_x=0` 匹配结构／`Q_2` 重写／`Z∈[18,44]`／gadget 刚性＋局部完美／square `4S≤Q_2`）
+**交付类别**：NO-GO 诊断包（非定理）
+**STATUS: 本支 PAUSED（非 CLOSED ✗）** ｜ **下一入口**：必须满足机制三要件；候选尚未出现 ⚠️
