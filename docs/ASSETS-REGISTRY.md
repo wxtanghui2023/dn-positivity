@@ -751,3 +751,18 @@ G3 缺口 ≠ envelope 精度
 
 **已淘汰（7 类）**：见 CLOSED-ROUTES-MAP §ZBALL-LOCAL
 **STATUS: 本支 PAUSED（资产保留为检测器 ✓）**
+
+---
+
+## A23-D4 — depth-4 local optimality of the 2969-word (23,6,10) incumbent
+
+**Status**: `CLOSED / AUDITED ASSET` ✓ (2026-09-26)
+**Type**: finite certificate theorem (not a global bound)
+**Statement**: 对 C₀ = `a23.6.10.2969H`（2969 词）不存在 |D|≤4 的正增益交换 ⟹ C₀ 是 4-deletion local optimum
+**Fills**: arXiv:2607.19550 明确标为 unresolved 的 depth-4 open problem
+**Certificates**: 14,671-state table (`work/k10/a23/a23_d4_state_table.tsv`) + 独立 V1–V4 verifier (无 solver)
+**Fingerprints**: sha256(C0)=f2cc5595…09cd ｜ sha256(table)=7de3407d…e8b4
+**Key numbers**: max|S(D)|=6 ｜ max α=4 ｜ α 分布 {1:13, 2:746, 3:6787, 4:7125}
+**Mechanism template**: global exchange → blocker hypergraph → small local state → α-certificate
+**Docs**: `docs/A23D4-ARCHIVE-2026-09-26.md`, `docs/A23D4-CLOSURE-2026-09-26-depth-four-local-optimality-theorem.md`
+**Boundary**: 限于 |D|≤4；不主张 A(23,6,10) 上下界
