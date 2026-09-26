@@ -4217,3 +4217,23 @@ $$\Longrightarrow\ \rho=\frac{3}{12.52}\approx\mathbf{0.24}\ \ll1\ \Longrightarr
 · 与 AMEND-9/20/21/24 正交（那四条管"是否已被做"）；本门槛管"该机制能否产生全局信息" ✓
 · 适用 space A（RH）与 space B 双空间 ✓
 ```
+
+
+---
+
+## AMEND-31 · PROGRESS-GATE（2026-09-26 唐先生立；吸取 RH 线教训 ✓）
+
+**背景**：RH 线累计 100+ 条 NO-GO/约束，最终**未缩小真正的未知自由度** ⟹ 教训：**NO-GO 的数量本身几乎没有价值；有价值的是它是否改变了剩余问题的可解结构** ✓。
+
+**条文**：任何新 lemma／invariant／certificate，**必须回答**："**它消灭了哪个以前允许存在的自由度？**" 并给出 `F_old ⊋ F_new` **且与目标耦合** ✓。
+
+**进度公式**：`Progress = N × L × G × D`（N＝新颖；L＝问题杠杆；G＝可证增益；**D＝自由度缩减**）✓
+- `D = 0` ⟹ **即使 N > 0，也不算推进** ✗
+- 只能回答"它是新的／不是 A_1,A_2 的线性组合／给出了新不等式" ⟹ **NO-GO，不计进度** ✗
+
+**禁止**：把"证明链环节数"当进度 ✗；把 NO-GO 数量当研究积累 ✗；把"independent"误当"useful" ✗（须 independent ＋ constraining ＋ connected-to-target 三者同时 ✓）。
+
+**P1 定义升级**：P1 ＝ 找一个**能缩小可行域**的独立 obstruction（非仅"新下界"✓）。
+
+**G-CAL 附加**：候选 `I` 须过 C1（genuinely new）／C2（显著压缩 feasible region）／C3（连接 P1/P2/P3），任一失败 ⟹ STOP ✗。
+**FRONTIER-R1**：五格**不启动**，直到有"改变 feasible region 的 mechanism"被示范 ✓。
