@@ -3467,3 +3467,17 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **禁止用法** ✗：读成"119 不可达"或"低阶计数无用"；把 `Σ`-型恒等式的新包装当新机制。
 **119 状态**：UNKNOWN（上界 120 已知；下界 107；新 SDP 106）✓ — 未排除、未构造 ✓。
 详 `docs/L2-CLOSURE-2026-09-26-literature-audit-closed.md`、`docs/GAPTHEOREM-2026-09-26-K101-119-independent-input-gap.md`
+
+---
+
+## 2026-09-26 · §119-ARCHIVE — **K(10,1)=119 线正式归档（状态：OPEN — structurally audited）**
+
+**标签** ✓：`OPEN — structurally audited / current mechanisms NO-GO`（**不是** CLOSED ✗；**不是**"119 不存在" ✗）。
+**NO-GO 诊断**：现有一阶／二阶局部 incidence 量**全部存在 conservation law**，无法产生严格亏损 ⟹ 119 的障碍**不是**缺局部 counting trick，而是缺**改变 quantity 的新不变量**（或新外部资产）✓。
+**审计总表**：`A₁≤59`(基线)｜**`Delsarte×Q=1 ⟹ A₁≤49`（本轮新定理 ✓）**｜`|I|≥21`(非 binding)｜三阶 `ΣC(b,3)=1`(等价 Q=1 ✗)｜isolated→private **失败**(=已有 (C-1) ✗)｜midpoint capacity **精确饱和** ✗｜`G_m`/ADJCOUP **饱和/重述** ✗｜三点/Terwilliger 文献已有、本 cell 仅 105.22 ✗｜**119 不存在：未证明（OPEN）** ✓。
+**十一族机制同向汇合**：线性求和→二次符号→双重计数→packing 方向→行闭合→Haas×Q₁→中点 load→层限制→L₄ 局部图→相邻耦合→孤立码字/三阶唯一性 ⟹ 全部只触及 `Σ_x f(δ(x))` 型或由之决定的量 ✗。
+**参数现状**：`0≤A₁≤49`｜`A₂∈[94,143]`｜`|I|≥21`｜指纹 `(740,283,1)`｜恒等式 `2A₂−3 = 283−2A₁`｜基线 `107 ≤ K₂(10,1) ≤ 120` ✓。
+**重开条件**：① 新 P1 机制（非线性重排）｜② 针对 `n=10,R=1` 的特殊结构定理（产生非守恒型 obstruction）｜③ 能咬此格的更强外部工具（>107）✓。**禁止**为"再压 A₁"跑同类 LP ✗。
+**消费规则**：复用者须声明消费 ① 11 类机制清单 ② `A₁≤49` 及其路径 ③ 指纹与恒等式 ④ 缺口＝支撑型 ✓；**禁止误读**为"119 不可达"／"局部计数无用"／"已 CLOSED" ✗。
+**新资产**：`A-DELSARTE-1`（Delsarte × covering-identity ⟹ `A₁` 上界；**可迁移到任意 `(n,R=1)`** ✓）见 `docs/ASSETS-REGISTRY.md` ✓。
+详 `docs/K101-119-LINE-ARCHIVE-2026-09-26-OPEN-structurally-audited.md`
