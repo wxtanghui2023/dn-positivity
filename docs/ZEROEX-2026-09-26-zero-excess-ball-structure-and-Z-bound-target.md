@@ -65,5 +65,12 @@ $$
 
 ## 【技术词回查】（定稿前逐字输出）
 
-- **本档新增**（扣自引后 = 0）：零过量球结构引理、完美匹配结构、目标上界化 Z、共享私有点陷阱
+实跑 `scripts/tech_word_check.sh` 逐字输出：
+```
+技术词 零过量球结构引理 命中文件数=1    :: ./ZEROEX-2026-09-26-zero-excess-ball-structure-and-Z-bound-target.md 
+技术词 完美匹配结构 命中文件数=1    :: ./ZEROEX-2026-09-26-zero-excess-ball-structure-and-Z-bound-target.md 
+技术词 目标上界化  命中文件数=1    :: ./ZEROEX-2026-09-26-zero-excess-ball-structure-and-Z-bound-target.md 
+技术词 共享私有点陷阱 命中文件数=1    :: ./ZEROEX-2026-09-26-zero-excess-ball-structure-and-Z-bound-target.md 
+```
+- **本档新增**（命中数=1 但**仅本档自身 = self-hit** ⟹ 扣自引后 = 0 ✓）：零过量球结构引理、完美匹配结构、目标上界化 Z、共享私有点陷阱
 - **档案已有（引用，不列为提出）**：over-covering、Struik
