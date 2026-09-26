@@ -3396,3 +3396,18 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **保留资产**: A1 Layer-A/B 分离定理｜A2 fiber 尺寸定量（265 bit）｜A3 M-covering 重建（含闭式 A 矩阵 + 收紧律）｜A4 分类无关结构诊断（T₃ 普适 / Σp₂ 恒等式 / d(P₁₀)≥3 / 12 项跨表示刚性 / 14 条否证）｜A5 OB-2001 方法复原（候选 LP 指纹表 + 重建算法）
 **隔离条款**: ① 一般 n 的 pinning 问题**未被覆盖**（仍 UNKNOWN，但不设为活跃靶心）；② 「分类无关证明」不升级为主靶心（仅可作后续方法学项目）
 **未跑**: solver / LP / SAT ✓
+
+---
+
+## 2026-09-26 · §A5-FORM-RECONSTRUCTED — **A5 形式闭合（实现状态留 gap）**
+
+**定档**: `A5 = FORM-RECONSTRUCTED`（**非 COMPLETE**）
+**已闭（文献确认 ＋ 我方推导）**:
+  · A 轴：M-covering system（A_{ii}=10−m、A_{ij}=1{d=1}）→ inequivalent 整数 y → m=1..9 refinement → cell 维数 0
+  · B 轴：covering inequalities ∀S⊆Q₉: Σ_c|B(c)∩S| ≥ |S|；部分状态形式（剪枝工具）；对偶 = weighted covering
+  · ① 单球 LP 非关键（OC(B(x)) ≡ 0 mod 2，独立推导）；② subspace 机制解释；③ weighted covering = 对偶解释（带审计限定）
+  · **分数下界恒 51.2（m=0..6）⟹ 强度必须来自整性 + 分支**（与 LMT "LP-based bounding" 吻合）
+**唯一 gap**: 实现状态 ν ∈ {y, F, (y,F,·)} 未定（**历史实现细节**，非数学结构缺失）
+**若不可获**: 正式封口为 "FORM-RECONSTRUCTED; implementation-state unresolved" ✓
+**已撤除**: TU Delft 引文（标题不匹配，citation bug）✗
+**隔离**: 119 保持 UNKNOWN ✓；G = COVERED ✓；不因方法复原转入计算 ✓
