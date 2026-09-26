@@ -129,5 +129,6 @@ $$
 技术词 中点结构定理 命中文件数=1    :: ./PACKB-2026-09-26-matching-theorem-and-strong-parameter-bounds.md 
 技术词 非码字归约  命中文件数=1    :: ./PACKB-2026-09-26-matching-theorem-and-strong-parameter-bounds.md
 ```
-- **本档新增**：匹配定理、中点结构定理、非码字归约（见上方命中数）
+- **本档新增**（扣自引后）：中点结构定理、非码字归约（各 1 文件 ✓）
+- **档案已有（不得列为新命名）**：`匹配定理`（命中 3 档：LJCR-B1-batch-E4…／RESEARCH-CONSTITUTION／本档）⟹ 术语已存在，本档只是**在该语义下**给出 $Q=1$ 处的新结论 ✓
 - **档案已有（引用，不列为提出）**：$A_1+A_2=143$、$E-2A_1$、$\delta(c)=d_1(c)$
