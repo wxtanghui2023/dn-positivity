@@ -63,6 +63,9 @@ $$
 
 ```
 $$\textbf{桥}: \text{主桥（}M=K\Rightarrow A_{\le2}\text{）\textbf{仍未打通}}\ ✗;\ \text{本支\textbf{暂停}（非废弃 ✓）}$$
+$$\textbf{⚠️ 措辞修正（2026-09-26 14:26 唐先生 ✓，详\ STATUS-2026-09-26-three-layer-phase-separation.md）}:$$
+$$\quad\text{"未打通"是\textbf{单层}说法，易被误读为"整条证明链断裂"}\ ✗\ \Longrightarrow\ \text{正确分层}: \textbf{P0 完成}\ ✓\ /\ \textbf{局部 P1 候选全 NO-GO}\ ✗\ /\ \textbf{全球 P1 入口 OPEN}\ ⚠️$$
+$$\quad\textbf{断的是几条路，不是整个证明链}\ ✓✓$$
 $$\textbf{119}: \textbf{UNKNOWN}\ ✓\ (\text{未被本支触及}\ ✗)$$
 $$\textbf{下一入口}: \text{必须满足§2三要件；候选尚未出现}\ ⚠️$$
 $$
