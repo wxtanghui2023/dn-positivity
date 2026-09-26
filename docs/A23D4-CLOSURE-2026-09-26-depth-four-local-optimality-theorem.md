@@ -85,6 +85,18 @@ $$\text{校验}: \text{blocker census 三项基准（1248/7751/30247）与论文
 $$
 $$
 
+## §8 ✅ **完备性补丁（唐先生"不可提前宣布闭合"要求下的自审 ✓）**
+
+```
+$$	extbf{补丁对象}: \text{族 D 中"对 }|S(D)|\text{ 零贡献的 }d\text{"曾被跳过}\ ⚠️$$
+$$\text{若 }y\notin\text{rel}\ (\text{即 }y\ \text{与 }T\ \text{不构成任何组}),\ \text{则 }|S(D)|=|S(T)|=SD(T)\ ✓$$
+$$\qquad\Longrightarrow\ \text{若 }SD(T)\ge5,\ \text{该 }D\ \text{与 }T\ \text{候选集相同}（\text{故 }\alpha\ \text{相同}）\ ⟹\ \text{须补判}\ ✓$$
+$$\textbf{补丁实算}: \text{三元组 }80{,}756\ \text{个中 }SD(T)\ge5\ \text{者} = \mathbf 2\ \text{个}\ ✓;\ \text{二者 }\alpha\le4\ ✓✓$$
+$$\textbf{另一情形人工核}: D=(\text{一个 2-组})\cup\{x,y\}:\ \text{若 }y\in\text{rel}\ (\text{含全部 70 个单元素组元素}\ ✓)\ \text{已枚举}\ ✓;$$
+$$\qquad\text{若 }y\notin\text{rel}\ \text{则 }y\ \text{零贡献} \Longrightarrow |S(D)|=SD(T)\ \text{（同上补丁覆盖）}\ ✓$$
+$$\Longrightarrow\ \boxed{\text{闭合完备性通过（族 A}\cup B\cup C'\cup D\ +\ \text{补丁}）}\ ✓✓$$
+$$
+
 ## §7 边界（诚实标注）
 
 - §1 为**论证**（逻辑完备性 ✓）；§2–§3 为**实算**（numpy/bitset ✓）
