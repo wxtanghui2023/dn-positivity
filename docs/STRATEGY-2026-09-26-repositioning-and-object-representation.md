@@ -76,6 +76,23 @@ $$
 
 ---
 
+## §4bis ⚠️ **核实结果（重要 · 修正 §3 的"待核实" ✓）**
+
+```
+$$\textbf{结论}:\ \text{incidence 几何（＝本日"第二中心线"）}\ \textbf{已被追过并封档}\ ✗\ \text{（同日下午 ✓）}$$
+$$\textbf{(a) }\texttt{T3SPLIT-2026-09-26}\ (14{:}47\ ✓):\ T_3\ \text{几何拆分 }I/II/III\ ✓;\ I\le2A_2,\ II,III\le\tfrac23A_2\ \Longrightarrow\ \boxed{T_3\le\tfrac{10}{3}A_2}\ ✓$$
+$$\qquad\Longrightarrow\ \text{载体的上界\textbf{确实只用 }A_{\le2}\ \text{表达}\ ✗\ ——\ \text{正是唐先生判据所警告的坍缩模式 }✓✓\ \text{（载体死 }✗)$$
+$$\textbf{(b) }\texttt{P1LB4FINAL-2026-09-26}\ (16{:}55\ ✓):\ \Delta(x)\ \text{内部几何终判 ＋ }\textbf{P1-LB.4 封存}\ ✗$$
+$$\qquad\text{预设判据（唐先生 ✓）}:\ \text{"若只产生可自由实现的局部型，则\textbf{第二中心线整体封存}"}\ ✓;\quad \text{直接理由}:\ \text{计数路线不足}\ ✗$$
+$$\qquad\text{结果}:\ (3,4,4)\ \text{模式刚性两码全同}\ ✓;\ \text{度量分叉}\ ✗\mathbf{✓};\ T_3=\#K_3(G_{\le2})\ \text{普适}\ ✓;\ T_3\ge Q_2=38\ ✓\ \Longrightarrow\ \textbf{封存}\ ✓$$
+$$\textbf{(c) }\texttt{G-COVERED-2026-09-26}\ (18{:}23\ ✓):\ \text{终局}\ \textbf{COVERED}\ \text{判定（唐先生裁定 ✓）};\ \text{资产 }A1\text{--}A5\ \text{定名}\ ✓;\ 119\ \text{与一般 }n\ \text{隔离}\ ✓$$
+$$\Longrightarrow\ \textbf{修正}\ \S3:\ \text{incidence 方向\textbf{非"唯一未死载体}"，而是\textbf{已封档}}} ✗\ \text{（登记表需更正 ✓）}$$
+$$
+$$
+```
+
+---
+
 ## §5 状态锁定（本档 ✓）
 
 ```

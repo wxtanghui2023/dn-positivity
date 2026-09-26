@@ -3555,3 +3555,15 @@ RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} →
 **FRONTIER-R1 筛选器** ✓：存在性 ⟹ 结构量→必要条件→不可实现；最小参数 ⟹ 结构量→`v`-依赖界；分类 ⟹ 结构量→class separator。**强制声明**：对哪个 target variable sensitive ＋ 约束方向 ✓。
 **回溯判定** ✓：近期 119 产出中**唯一过四门者＝`A_1≤49`**（`L` 弱 ⚠️）；`|I|≥21`／`9:1`／`q_F≤2`／`p` 下界（**第四门被截：方向反** ✓）／`τ₂`（第三门：已解耦）／`G_k`／`Green 核` 全部出局 ✓ —— 与 FREEDOM-AUDIT 一致 ✓。
 详 `docs/FOURGATE-2026-09-26-amend32-target-visibility.md`、`docs/RESEARCH-CONSTITUTION.md`（AMEND-32 ✓）
+
+---
+
+## 2026-09-26 · §STRATEGY-REPOSITION ＋ §SECOND-CENTER-LINE-ARCHIVED
+
+**定位修正**（唐先生 22:37 ✓）：119 的"无解感"主要来自**未找到正确表示**，非 RH 级困难 ✓；分叉：RH＝找新**信息源**；**119＝找新对象表示（非新不等式）** ✓。低阶坐标尽墨表：`A₁`（无 target-coupled compression）／`A₂,moments`（distance-distribution collapse）／`2-faces`（回到 A₁,A₂）／`3-point`（不够强）／`Green`（mixed-sign）／`PREIMAGE 1-point`（局部可行）／`PREIMAGE 2-point`（全部可行 ⟹ CLOSED）✗。
+**关键核实** ⚠️：incidence 几何（＝本日**第二中心线**）**已被追过并封档** ✗ ——
+- `T3SPLIT`(14:47) ✓：`T₃` 几何拆分 `I/II/III`；`I ≤ 2A₂`，`II,III ≤ 2A₂/3` ⟹ **`T₃ ≤ (10/3)A₂`** ✓ ⟹ 载体上界**确实只用 `A_{≤2}` 表达** ✗（＝判据所警告的坍缩模式 ✓）。
+- `P1LB4FINAL`(16:55) ✓：`Δ(x)` 内部几何终判 ＋ **P1-LB.4 封存** ✗（预设判据："若只产生可自由实现的局部型 ⟹ 第二中心线整体封存" ✓；直接理由＝计数路线不足 ✗）。
+- `G-COVERED`(18:23) ✓：终局 **COVERED** 判定（唐先生裁定 ✓）；资产 `A1–A5` 定名 ✓。
+⟹ **三族自然表示均已出局**：① scalar-invariant（BLOCKED）✗ ② local preimage 1/2 点（BLOCKED/CLOSED）✗ ③ incidence／高阶交（**ARCHIVED**）✗ ⟹ "表示问题"诊断成立 ✓ 但档案中**已无未试的自然表示** ⚠️（不得制造候选 ✗）。
+详 `docs/STRATEGY-2026-09-26-repositioning-and-object-representation.md`
