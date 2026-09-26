@@ -68,5 +68,6 @@ $$
 技术词 完全解耦     命中文件数=9    :: ./MATH-STATEMENTS-all-22-items-rigorous.md ./r3-kernel-expansion-2026-09-09.md ./P10X4-2026-09-26-decoupling-and-four-one-line-lemmas.md 
 技术词 P₁₀ 结构引理 命中文件数=1    :: ./P10X4-2026-09-26-decoupling-and-four-one-line-lemmas.md
 ```
-- **本档新增**（扣自引后 = 0）：跨层不等式、完全解耦、P₁₀ 结构引理
+- **本档新增**（扣自引后 = 0，命中 1 = 自引 ✓）：跨层不等式、P₁₀ 结构引理
+- **档案已有（引用，不列为提出）**：**完全解耦**（命中 9 文件 ⟹ 非新 ✗，已在 `MATH-STATEMENTS-all-22-items-rigorous.md`、`r3-kernel-expansion-2026-09-09.md` 等）｜p(c)、d₁、X₄
 - **档案已有（引用，不列为提出）**：p(c)、d₁、X₄
