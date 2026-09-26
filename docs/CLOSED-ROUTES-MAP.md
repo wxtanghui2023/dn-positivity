@@ -3401,7 +3401,7 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 
 ## 2026-09-26 · §A5-FORM-RECONSTRUCTED — **A5 形式闭合（实现状态留 gap）**
 
-**定档**: `A5 = FORM-RECONSTRUCTED`（**非 COMPLETE**）
+**定档**: `A5 = ALGORITHM-FORM-RECONSTRUCTED` ✓（升级：状态变量已由 2003 + 2001 措辞支撑）
 **已闭（文献确认 ＋ 我方推导）**:
   · A 轴：M-covering system（A_{ii}=10−m、A_{ij}=1{d=1}）→ inequivalent 整数 y → m=1..9 refinement → cell 维数 0
   · B 轴：covering inequalities ∀S⊆Q₉: Σ_c|B(c)∩S| ≥ |S|；部分状态形式（剪枝工具）；对偶 = weighted covering
@@ -3411,3 +3411,18 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **若不可获**: 正式封口为 "FORM-RECONSTRUCTED; implementation-state unresolved" ✓
 **已撤除**: TU Delft 引文（标题不匹配，citation bug）✗
 **隔离**: 119 保持 UNKNOWN ✓；G = COVERED ✓；不因方法复原转入计算 ✓
+
+---
+
+## 2026-09-26 · §A5-EQUIV — **投影定理（已证）＋ 机制结论**
+
+**投影定理** ✓✓: 节点级 sphere-covering 不等式 ∀S⊆Q₉: Σ_c|B(c)∩S| ≥ |S|，取 S = 单 cell 并按 cell 归并（逐码字覆盖替换为 cell 内最大覆盖 A_{ji}）⟹ **恰为我方系统 Σ_j A_{ji}y_j ≥ 2^{9−m}** ✓
+  ⟹ 我方 M-covering 系统 = 节点级 sphere-covering 不等式在 cell 计数变量上的**投影** ✓
+**投影损失** = fiber（cell 内逐点差异）: log₂|F(y)| 265 bit (m=1) → 0 (m=9) ⟹ **单层投影必然弱** ⟹ 强度不可能来自任一单层 LP
+**机制结论** ✓✓: 强度来自**树**（整数 refinement y_i=y_{i0}+y_{i1} + equivalence 剪枝 + 节点 LP 定界）；
+  整数性在深层咬合（m=9 时 y_i∈{0,1} ⟹ 分布 = 码本体）；与 LMT 三技术逐字对应
+**A5 状态变量**: ν = (row-prefix subspace distribution y^(m), partial-subcode equivalence class [C_m])
+  Level A = y^(m)（coarse fingerprint）；Level B = [C_m]（2003 "equivalence tests on subcodes" 支撑）
+**边界（诚实）** ⚠️: 更一般的投影（带权 S / 任意 cell 并）可能强于单 cell 族 —— 本档只证"单 cell 族 = 我方系统"
+**唯一剩余未知**: OB-LP 的确切变量与目标函数（候选：distribution feasibility LP / weighted-covering LP / partial-state LP / 等价重写）
+
