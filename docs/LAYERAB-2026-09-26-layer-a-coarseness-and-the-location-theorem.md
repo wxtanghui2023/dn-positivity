@@ -91,5 +91,6 @@ $$
 技术词 定位定理     命中文件数=3    :: ./L1-nonselfadjoint-spectral-rigidity-audit.md ./M0-T-system-verbatim-and-theorem-locations.md ./LAYERAB-2026-09-26-layer-a-coarseness-and-the-location-theorem.md 
 技术词 临界层        命中文件数=2    :: ./M03-W0-third-order-axis-point.md ./LAYERAB-2026-09-26-layer-a-coarseness-and-the-location-theorem.md
 ```
-- **本档新增**（扣自引后 = 0）：Layer A 粗度、定位定理、临界层
+- **本档新增**（扣自引后 = 0，命中 1 = 自引 ✓）：**Layer A 粗度**
+- **档案已有（引用，不列为提出）**：**定位定理**（命中 3 文件 ⟹ 非新 ✗，已在 `L1-nonselfadjoint-spectral-rigidity-audit.md`、`M0-T-system-verbatim-and-theorem-locations.md`）｜**临界层**（命中 2 ⟹ 非新 ✗，已在 `M03-W0-third-order-axis-point.md`）｜M-covering system、y-SIP、b-profile
 - **档案已有（引用，不列为提出）**：M-covering system、y-SIP、b-profile
