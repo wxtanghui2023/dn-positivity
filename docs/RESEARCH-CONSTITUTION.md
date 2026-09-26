@@ -4083,3 +4083,61 @@ $$\text{不得只检查"定理覆盖该数学对象"};\ \text{必须检查"\text
 $$
 
 **当前状态**：**只有通过 Closure Gate v1 的候选**才允许进入空间 B 计算；否则一律 `HOLD`。下一批空间 B 候选自此按 `AMEND-28 §4` 的**倒置顺序**（机制 → 对象类 → 候选族 → 闭环 → 未解决者）产生。
+
+---
+
+## AMEND-29（2026-09-26）：**外部机制移植四步法**（默认筛选标准；119 与 RH 通用）
+
+**立法**：唐先生 2026-09-26 09:47。原话要点：「**学习它们的发动机，而不是搬运它们的外壳。**」
+
+### §1 立法理由（当日两次 CLOSED 的实证）
+
+```
+$$\text{① BM/Krawtchouk 谱路线}:\ \text{推到两步}\Longrightarrow\text{只是 }A_1+A_2\ \text{的恒等重写（且谱层对"覆盖假设"结构性失明）}\Longrightarrow \textbf{C 类}\ ✓$$
+$$\text{② Chen–Hu intersection-set 原型}:\ \text{发动机（无界族}\to\text{Ramsey 放大}\to\text{维数溢出）在\textbf{固定有限实例}中前提不存在}\Longrightarrow \textbf{D 类}\ ✓$$
+$$\text{若沿用旧习惯（"像}\to\text{直接套"）}:\ \text{两条都会先烧掉大量计算再发现无接口}\ ✗$$
+```
+
+### §2 四步法（硬顺序，不得跳步）
+
+```
+$$\text{第一步 对象匹配}:\ \text{外部定理的核心对象在我方的\textbf{真正对应物}}（不得凭名称相似\ ✗）$$
+$$\qquad\text{示例（当日实证）}:\ \text{BM 路线的真对象是 }\delta=(S_0+S_1)*\mathbf1_C-\mathbf1,\ \textbf{不是}\ \mathbf1_C\ ✓$$
+$$\text{第二步 机制匹配}:\ \text{把外部证明\textbf{至少往前推两层}，检查其最关键约束在我方是否仍存在}\ ✓$$
+$$\text{第三步 寻找"本课题版本"}:\ \text{问原方法的\textbf{发动机是什么}，再按我方结构重设对象/权重/状态变量/几何编码}\ ✓$$
+$$\text{第四步 才决定是否投入计算}\ ✓$$
+```
+
+### §3 分类与判据（A/B/C/D）
+
+```
+$$\textbf{A}:\ \text{两步后产生\textbf{新约束}}\ \Longrightarrow\ \text{正式投入}\ ✓$$
+$$\textbf{B}:\ \text{机制有接口、但原形式不适合}\ \Longrightarrow\ \textbf{先改造再验}\ ✓$$
+$$\textbf{C}:\ \text{只是坐标变换 / 重包装}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
+$$\textbf{D}:\ \text{所依赖的关键假设在本课题\textbf{不存在}}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
+$$\boxed{\textbf{硬规则}:\ \text{两步后没有新信息，就不进入大计算}}\ ✓$$
+```
+
+### §4 待裁提案（唐先生定，暂不纳入正式四类）
+
+```
+$$\text{是否需要 }\textbf{E 类}:\ \text{机制正确、新信息为真，但\textbf{量级上被证明不可能达标}}\ ✗$$
+$$\text{当日实例（局部账本）}:\ \text{单位成本}\le33\ \text{点}\ \ll\ \text{余量 }285\ \Longrightarrow\ \text{原理上无法把 triple-center 数压到 }1\ ✗$$
+（若采纳，E 类同样**立即 CLOSED** ✓）
+```
+
+### §5 与既有宪章的接口
+
+```
+· 细化 **AMEND-25**（NEW-INFO GATE A–E）：本修正给出**外部机制**场景下的具体执行序 ✓
+· 与 **AMEND-9 / AMEND-20 / AMEND-21** 正交：那三条管"是否已被做/是否已有覆盖"；
+  本修正管"**即使没被做，机制能否在我方长成**" ✓
+· 适用 **space A（RH）与 space B 双空间** ✓ —— 作为 119 与 RH 的**默认筛选标准** ✓
+```
+
+### §6 首次应用记录（2026-09-26）
+
+```
+BM/Krawtchouk ⟹ **C** ✗ ｜ Chen–Hu 原型 ⟹ **D** ✗ ｜ 两案均**未进入大计算**即判定 ✓
+（档案：KRAWTCHOUK-2026-09-26-first-verification-and-no-go.md ／ PROTO-2026-09-26-intersection-set-no-go-and-pinning-experiment.md）
+```
