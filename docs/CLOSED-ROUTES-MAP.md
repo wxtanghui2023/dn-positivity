@@ -3527,3 +3527,14 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **证据四层（严格分开 ✓）**：(1) frontier/status＝Ji–Zhu 2002 Table I ＋ KKW 2025 ✓；(2) calibration＝作者站 `steiner3.html`（GAP 可读，`v≤50`）—— **非 frontier evidence** ✗；(3) target certificate＝[29]（**Zenodo**）＋ 作者页 —— **未下载 ⟹ 不写"已验证"** ✗；(4) 自己的新结果＝A23-D4/G-CAL 输出（未产生 ✗）。
 **保留可迁移资产**：Green 核混号性 ✓；匹配定理封死 `d=1`-Gram ✓。
 详 `docs/CLOSURE-2026-09-26-operator-routes-and-frontier-status.md`
+
+---
+
+## 2026-09-26 · §PROGRESS-GATE — **AMEND-31 ＋ 119 状态升级为 BLOCKED（无已知 D>0 机制）**
+
+**AMEND-31（唐先生 22:08 立）** ✓：任何新 lemma/invariant/certificate 必须回答"**它消灭了哪个以前允许存在的自由度？**"并给 `F_old ⊋ F_new` 且与目标耦合 ✓。进度 `Progress = N×L×G×D`；**`D=0 ⟹ 不算推进`（即使 N>0）** ✗。禁止把"证明链环节数"当进度 ✗、把 NO-GO 数量当积累 ✗、把 independent 误当 useful ✗。P1 升级为"**能缩小可行域**的独立 obstruction" ✓。G-CAL 须过 C1/C2/C3，任一失败 ⟹ STOP ✗。
+**回溯降级（诚实 ✓）**：近期 119 产出中**唯一 D>0 者＝`A₁≤49`**（窗口 59→49 ✓），但其 **L 弱**（不触及存在性 ⚠️）；`|I|≥21`／`9:1 面多重度`／`q_F≤2`／`profile`／`Σ C(b,3)=1`／11 族机制／FOURIER-GREEN-T3MIN1 否证 **全部 D=0** ⟹ **降级为审计记录** ✗（不删档 ✓，仅改判 ✓）。
+**119 剩余自由度审计**：pinned ＝ `b`-profile／`A₁+A₂=143`／`A₁≤49`／中点 injectivity／`q_F≤2`／`(C−1)`／`|𝒯|=1`／壳能量两矩 ✓；free ＝ `A₁∈[0,49]`／三阶量 `p,τ₂`／局部 `b`-profile／码 `C` 本身 ✓。**关键测试**：哪个 free 变量被压缩会迫使矛盾 ⟹ `A₁` 窗口需新工具（Delsarte 已尽 ✗）；`p,τ₂`／局部 profile **不耦合目标** ✗ ⟹ **当前不存在已知 D>0 机制** ✗。
+**状态**：119 线 → `BLOCKED — no known D>0 mechanism` ✓（**措辞**：不写"不可能" ✗，只写"未知" ✓）。
+**FRONTIER-R1**：五格**不启动** ✗ —— 直到有"改变 feasible region 的 mechanism"被示范 ✓。
+详 `docs/PROGRESS-GATE-2026-09-26-amend31-and-119-freedom-audit.md`、`docs/RESEARCH-CONSTITUTION.md`（AMEND-31 ✓）
