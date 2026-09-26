@@ -3538,3 +3538,20 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **状态**：119 线 → `BLOCKED — no known D>0 mechanism` ✓（**措辞**：不写"不可能" ✗，只写"未知" ✓）。
 **FRONTIER-R1**：五格**不启动** ✗ —— 直到有"改变 feasible region 的 mechanism"被示范 ✓。
 详 `docs/PROGRESS-GATE-2026-09-26-amend31-and-119-freedom-audit.md`、`docs/RESEARCH-CONSTITUTION.md`（AMEND-31 ✓）
+
+---
+
+## 2026-09-26 · §FOUR-GATE — **AMEND-32：目标可见性与四门链（RH／119 同构）**
+
+**统一框架** ✓：`Target → target-sensitive observable → correct-direction constraint → collision`。
+RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} → 上界型约束 → A_1≤49` ✓。
+**共同失败模式** ✗：`observable exists ⇏ correct-direction constraint exists`。
+**二分（同构）** ✓：RH `β-sensitive/β-blind`；119 `A_1-sensitive/A_1-blind` ⟹ `β-盲⇒不能推进 RH`；`A_1-盲⇒不能推进 A_1≤49` ✓。
+**信息矩阵**：`target-sensitive × 有约束力` ＝ 真正突破 —— **当前该格为空** ✗；其余三格＝已得成果／强但无法对接／纯背景 ✓。
+**两条不等式** ✓：`independence ≠ usefulness`；**`sensitivity ≠ leverage`**。
+**可用判据（119）**：需 `I ≤ C` **且** `I` 随 `A_1` **单调增** ⟹ 才能排除 `A_1 > 49`；下界型且随 `A_1` 下降者 **压不住** ✗（本线绝大多数情形 ✓）。
+**四门链（硬门）** ✓：`Novel → Independent → Target-sensitive → Correct-direction`；四门全过方可进 P1/P2；任一失败 ⟹ 出局（可存审计记录，不计推进 ✗）。
+**搜索顺序反转** ✓：弃 `mechanism→observable→再问用途`；采 `target→direction→mechanism→observable` ✓。
+**FRONTIER-R1 筛选器** ✓：存在性 ⟹ 结构量→必要条件→不可实现；最小参数 ⟹ 结构量→`v`-依赖界；分类 ⟹ 结构量→class separator。**强制声明**：对哪个 target variable sensitive ＋ 约束方向 ✓。
+**回溯判定** ✓：近期 119 产出中**唯一过四门者＝`A_1≤49`**（`L` 弱 ⚠️）；`|I|≥21`／`9:1`／`q_F≤2`／`p` 下界（**第四门被截：方向反** ✓）／`τ₂`（第三门：已解耦）／`G_k`／`Green 核` 全部出局 ✓ —— 与 FREEDOM-AUDIT 一致 ✓。
+详 `docs/FOURGATE-2026-09-26-amend32-target-visibility.md`、`docs/RESEARCH-CONSTITUTION.md`（AMEND-32 ✓）
