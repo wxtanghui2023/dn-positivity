@@ -3481,3 +3481,15 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **消费规则**：复用者须声明消费 ① 11 类机制清单 ② `A₁≤49` 及其路径 ③ 指纹与恒等式 ④ 缺口＝支撑型 ✓；**禁止误读**为"119 不可达"／"局部计数无用"／"已 CLOSED" ✗。
 **新资产**：`A-DELSARTE-1`（Delsarte × covering-identity ⟹ `A₁` 上界；**可迁移到任意 `(n,R=1)`** ✓）见 `docs/ASSETS-REGISTRY.md` ✓。
 详 `docs/K101-119-LINE-ARCHIVE-2026-09-26-OPEN-structurally-audited.md`
+
+---
+
+## 2026-09-26 · §FACE-CLOSURE — **2-面语言封口（STRUCTURAL REFINEMENT / NO NEW COLLISION）**
+
+**标签** ✓：`STRUCTURAL REFINEMENT / NO NEW COLLISION`（局部结构有新 ✓；**无 P3** ✗；非 CLOSED ✗）。
+**已覆盖（直接封口）**：2-面数 `11520` ✓（`46080` 是点-面关联数 ✗）；`EXCESS-2026-09-25` 的 face–ball double count 仅给 `c ≥ 57 ≪ 94 ≪ 107` ⟹ 无 leverage ✗；`BUDGET` 的 `Q_k⊆C ⟹ E≥k·2^k` 在 `k=2` 已排除 `q_F=4` ✓ ⟹ **换 2-面语言本身不算新 mechanism** ✗。
+**保留资产（两条 ✓）**：**(A)** `d=1 ↔ 9 个公共面 / d=2 ↔ 1 个`（一般 `n`: `n−1 / 1`）⟹ `Σ_F C(q_F,2) = 9A₁+A₂` ✓（登记 `A-FACE-MULT-1` ✓）；**(B)** `q_F=3 ⟹ 该面唯一"中间"角＝全局唯一 b=3 点 z` ⟹ 分支 A `q_F ≤ 2` ✓（**与 STAR3 同源机制，不宣称全新** ⚠️）。
+**更正** ⚠️：`q_F=3` 时 `b≥3` 的是**中间的码字角**（与另两码字皆距 1），**不是**第 4 角（与二者距 1、与对角距 2）✗；量界应写 `2A₂−3 ≤ N₂` ✓（非 `2A₂ ≤ N₂` ✗）。
+**为何无 collision**：`q_F≤2 ⟹ #\{q_F=2\} = 9A₁+A₂`；距离-2 对的中点闭合于既有恒等式 `2A₂−3 = 283−2A₁` ⟹ face 语言 → `(A₁,A₂)` → 既有局部数据 ⟹ 无新独立量 ✗。
+**停止条件**：不再在 2-面语言堆 counting identity ✗；下一步只找**独立于 `(A₁,A₂)` 的类型不同**的局部结构量 ✓。
+详 `docs/FACE-CLOSURE-2026-09-26-structural-refinement.md`、`docs/FACE-2026-09-26-two-face-occupancy-audit.md`
