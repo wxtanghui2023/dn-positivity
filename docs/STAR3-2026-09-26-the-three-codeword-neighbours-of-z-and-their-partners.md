@@ -60,18 +60,18 @@ $$\textbf{而更早一步的 8 点集}\ \{e_i+e_j+e_l:l\notin\{i,j\}\}\ \text{�
 $$\qquad\text{证}:\ \{i,j_i,l\}=\{i',j_{i'},l'\}\ \text{同前推得}\ l=i',\ l'=i\ \Longrightarrow\ \{i,i',j_i\}=\{i,j_{i'},i\}\ \Longrightarrow\ j_i=j_{i'}\ ✓$$
 $$\qquad\Longrightarrow\ \text{重合}\iff\sigma(i)=\sigma(i')\ ✓\ \text{且重合点}=\{i,i',j\}\ (\in F_3\ ✓)$$
 $$\Longrightarrow\ \begin{array}{c|c|c|c}
-\text{Type} & \text{8 点集并} & \text{其中}\ \in F_3 & \textbf{全新}\ \\ \hline
-\text{I（全异）} & 24 & 6\ (=2\times3) & \mathbf{18}\\
-\text{II（恰两个同）} & 24-1=23 & 6+1=7 & \mathbf{18}\\
-\text{III（全同）} & 24-3=21 & 6+3=9 & \mathbf{18}\\
+\text{Type} & |S^8_1\cup S^8_2\cup S^8_3| & \text{其中}\ \in F_3 & \textbf{全新}\ \\ \hline
+\text{I（全异）} & 24 & 6 & \mathbf{18}\\
+\text{II（恰两个同）} & 24-1=23 & 5 & \mathbf{18}\\
+\text{III（全同）} & 24-3=21 & 3 & \mathbf{18}\ (\text{该型由 §4 另行排除}\ ✓)\\
 \end{array}$$
 $$\Longrightarrow\ \boxed{\text{三类\textbf{全新量恒为}\ 18}\ (6\times3)\ ✓✓\ —— \text{Type 分类对计数\textbf{无影响}}\ ✓}$$
 $$
 $$
 ```
 
-**⚠️ 诚实说明**：用户在 P-4.4 已预警"不能错误宣布 partner 坐标必须不同" ✓ —— **该预警正确** ✓："
-Three Type II/III 完全合法 ✓；且本档证明它们与 Type I **同值** ✓。
+**⚠️ 诚实说明**：用户在 P-4.4 已预警「不能错误宣布 partner 坐标必须不同」 ✓ —— **该预警正确** ✓："
+Three Type II 完全合法 ✓（Type III 由 §4 另行排除 ✓）；且本档证明其新增量与 Type I **同值（18）** ✓✓。
 
 ---
 
