@@ -67,5 +67,5 @@ $$
 技术词 壳层重数     命中文件数=1    :: ./SHELLWIT-2026-09-26-shell-witness-lemma-and-exact-match.md 
 技术词 精确匹配     命中文件数=16   :: ./breakthrough-exploration.md ./E2-transport-second-order-dichotomy.md ./EXPLORATION-POINTS-REGISTER.md
 ```
-- **本档新增**（扣自引后 = 0）：见证引理、非码字中点见证、壳层重数、精确匹配
-- **档案已有（引用，不列为提出）**：shell、私有点、方阵、excess
+- **本档新增**（扣自引后 = 0）：见证引理、非码字中点见证、壳层重数
+- **档案已有（引用，不列为提出）**：shell、私有点、方阵、excess、**精确匹配**（命中 16 档 ⟹ **不计**为新增 ✗✓）
