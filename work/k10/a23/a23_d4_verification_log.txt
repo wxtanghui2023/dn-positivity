@@ -1,0 +1,56 @@
+[pyguard] mem=4096MB load=1.30/1cores slots=2/2 script=verify_d4.py
+=== V1) C0 integrity ===
+   [PASS] |C0| = 2969 实际 2969
+   [PASS] 全部重量 = 10 
+   [PASS] d_min >= 6 实际 6
+   [PASS] 互异 
+   sha256(C0) = f2cc5595ae9e788b1e706b2bc1dfa97d9f16f3fa43c0a4a0f453aaf4e3ed09cd
+
+=== V2) blocker certificate（生成式算法）===
+   生成式得到 (s,c) 关联: 10,807,160
+   [PASS] N0 (未出现 blocker 的候选) = 0 （生成式只产出 >=1 blocker 的候选）
+   [PASS] N1 = 70 实际 70
+   [PASS] N2 = 1178 实际 1178
+   [PASS] N3 = 6503 实际 6503
+   [PASS] N4 = 22496 实际 22496
+   [PASS] N<=2 = 1248 实际 1248
+   [PASS] N<=3 = 7751 实际 7751
+   [PASS] N<=4 = 30247 实际 30247
+   小-blocker 候选 = 30247 | 用时 10s
+
+=== V3) alpha verifier（2^|S| 穷举）===
+   [PASS] 状态表 14671 行独立复核一致 不一致 0
+   [PASS] 行数 = 14,671 实际 14671
+   [PASS] max |S(D)| = 6 实际 6
+   [PASS] max alpha = 4 实际 4
+   [PASS] alpha 分布 = {1:13, 2:746, 3:6787, 4:7125} 实际 {4: 7125, 3: 6787, 2: 746, 1: 13}
+
+=== V4) machine-readable summary ===
+# A23-D4 independent verification summary
+C0_file = a23.6.10.2969H.txt
+C0_sha256 = f2cc5595ae9e788b1e706b2bc1dfa97d9f16f3fa43c0a4a0f453aaf4e3ed09cd
+state_table_file = a23_d4_state_table.tsv
+state_table_sha256 = 7de3407d6ee5658816e5d3d19cb02dbf0b1056199709e18d24f4a07dbbe0e8b4
+C0_words = 2969
+C0_weight_ok = true
+C0_dmin = 6
+candidate_count = 1141097
+blocker_N0 = 0
+blocker_N1 = 70
+blocker_N2 = 1178
+blocker_N3 = 6503
+blocker_N4 = 22496
+blocker_N_le2 = 1248
+blocker_N_le3 = 7751
+blocker_N_le4 = 30247
+surviving_D_states = 14671
+max_S_size = 6
+max_alpha = 4
+alpha_1 = 13
+alpha_2 = 746
+alpha_3 = 6787
+alpha_4 = 7125
+DEPTH4_LOCAL_OPTIMUM = TRUE
+
+总用时 138s
+EXIT=0
