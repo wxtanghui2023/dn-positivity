@@ -85,6 +85,6 @@ $$\boxed{\text{space A 新候选必须能造出 } D_T\in\mathbb{Z}\ (\text{或�
 技术词 压缩机制     命中文件数=11   :: ./TOPIC-DOSSIER-v1-six-columns-and-relations.md ./LJCR-A5-difference-sets-source-check.md ./G2p5-R-executable-compression-spec.md
 ```
 
-- **本档新增**（命中数=0）：`S–Z 型筛器`、`坍缩点`、`整数接口`、`压缩机制`
-- **档案已有（引用，不列为提出）**：—
+- **本档新增**（命中数=0）：`S–Z 型筛器`、`整数接口`
+- **档案已有（引用，不列为提出）**：`坍缩点`（3 档: `ASSETS-REGISTRY.md`、`T3-CLOSURE-fixed-q-scope.md`、`T3-1C-0-C-1-partial-diagonal-search.md` ✓）、`压缩机制`（11 档，含 `G2p5-R-executable-compression-spec.md`、`TOPIC-DOSSIER-v1-six-columns-and-relations.md` ✓）
 - **通用词（不计）**：—
