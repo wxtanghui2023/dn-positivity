@@ -4108,23 +4108,53 @@ $$\text{第三步 寻找"本课题版本"}:\ \text{问原方法的\textbf{发动
 $$\text{第四步 才决定是否投入计算}\ ✓$$
 ```
 
-### §3 分类与判据（A/B/C/D）
+### §3 分类与判据（**五类闸门**：A/B/C/D/E）
 
 ```
-$$\textbf{A}:\ \text{两步后产生\textbf{新约束}}\ \Longrightarrow\ \text{正式投入}\ ✓$$
+$$\textbf{A}:\ \text{两步后产生新约束、且足以形成目标约束}\ \Longrightarrow\ \text{正式投入}\ ✓$$
 $$\textbf{B}:\ \text{机制有接口、但原形式不适合}\ \Longrightarrow\ \textbf{先改造再验}\ ✓$$
-$$\textbf{C}:\ \text{只是坐标变换 / 重包装}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
-$$\textbf{D}:\ \text{所依赖的关键假设在本课题\textbf{不存在}}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
-$$\boxed{\textbf{硬规则}:\ \text{两步后没有新信息，就不进入大计算}}\ ✓$$
+$$\textbf{C}:\ \text{只是坐标变换 / 重包装（信息论上未增加约束）}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
+$$\textbf{D}:\ \text{所依赖的关键假设在本课题不存在}\ \Longrightarrow\ \textbf{立即 CLOSED}\ ✗$$
+$$\textbf{E}:\ \textbf{Quantitative Insufficiency（定量不足）}:\ \text{机制匹配且两步产生【新信息】},\ \text{但经严格量级/容量/尺度审计},\ \text{已证明其强度上限不足以触达目标矛盾}\ \Longrightarrow\ \textbf{CLOSED}\ ✗$$
 ```
 
-### §4 待裁提案（唐先生定，暂不纳入正式四类）
+**决策树（投入前五分类闸门）**
 
 ```
-$$\text{是否需要 }\textbf{E 类}:\ \text{机制正确、新信息为真，但\textbf{量级上被证明不可能达标}}\ ✗$$
-$$\text{当日实例（局部账本）}:\ \text{单位成本}\le33\ \text{点}\ \ll\ \text{余量 }285\ \Longrightarrow\ \text{原理上无法把 triple-center 数压到 }1\ ✗$$
-（若采纳，E 类同样**立即 CLOSED** ✓）
+两步验证
+ ├─ 无新信息 ──────────── C  CLOSED
+ ├─ 关键假设不存在 ─────── D  CLOSED
+ └─ 有新信息
+     ├─ 足以形成目标约束 ──── A  投入
+     ├─ 有接口但需重构 ───── B  改造再验
+     └─ 机制有效但尺度不足 ── E  CLOSED
 ```
+
+**C 与 E 的区别（关键，不得混同）**
+
+```
+$$\textbf{C}:\ \text{信息论意义上\textbf{没有增加约束}，只是换坐标}\ ✗$$
+$$\textbf{E}:\ \text{确实\textbf{增加了约束}，但已证明其\textbf{强度上限不够}}\ ✗$$
+```
+
+**硬规则（2026-09-26 升级版）**
+
+```
+$$\boxed{\text{有新信息}\ \not\Rightarrow\ \text{值得计算};\qquad \textbf{必须先通过"量级可达性审计"}}\ ✓$$
+```
+
+### §4 **E 类细则 — Quantitative Insufficiency（定量不足）**
+
+**立法**：唐先生 2026-09-26 09:49 批准增设 ✓
+
+```
+$$\textbf{定义}:\ \text{机制匹配}\ +\ \text{两步产生新信息},\ \text{但该信息经\textbf{严格量级/容量/尺度审计}后},\ \text{已\textbf{证明}不足以触达目标矛盾}\ \Longrightarrow\ \textbf{CLOSED}\ ✓$$
+$$\textbf{E}\ \text{不是"算出来没成功"}\ ✗;\ \text{而是已证明存在\textbf{不可跨越的 quantitative gap}}\ ✓$$
+**首个实例（2026-09-26，局部账本）**：机制确实给出真实约束（shadow = 28 ✓ 为真结论 ✓），
+但单元贡献上界 ≤ 33 点 ≪ 缺口 285 ⟹ **扩大枚举不会改变结论** ⟹ 判 **E** ✓
+```
+
+### §5 与既有宪章的接口
 
 ### §5 与既有宪章的接口
 
