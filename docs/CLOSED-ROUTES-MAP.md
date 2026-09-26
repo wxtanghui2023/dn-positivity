@@ -3383,3 +3383,16 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
   iv. `b=3` 点 `3/3` 不同第二中心 ✓
   v. **跨 n 反转事实**（n=5,6: `Δ(X₃)⊆X₂` ✗；n=9: `∩X₂=∅` ✓）—— **零交叉非普适** ✗✓
 **附带登记**: `P1-LB second-center total-capacity = NO-GO` ✗（`2A₁≤32+3N₄` 不界 N₄ ✓；且 A₁ 无统一正下界（n=6 有 A₁=0 ✓））
+
+---
+
+## 2026-09-26 · §G-COVERED — **G 靶心终局判 COVERED（唐先生裁定 ✓）**
+
+**判定**: `G_target = COVERED`（**conditional on the completeness of the cited (9,62) classification and the stated switching invariant**）
+**覆盖链**: (9,62) 完备分类 ⟹ 全部最优码同一 switching class ⟹ b-profile 不变量保持 ⟹ N₄ = 10
+**理由**: 满足 AMEND-24「目标命题已有 achieved-result coverage」；**判决干净，不留灰区** ✓
+**Gate-P（未关闭 ⚠️）**: 须确认文献在作 **complete classification of optimal (9,62) codes**（而非 two representatives）
+  · 现有强证据：K_9_1_**classif**.txt（两份 62 码）+ ALCOMA10「one switching class」+ n≤8 已分类口径
+**保留资产**: A1 Layer-A/B 分离定理｜A2 fiber 尺寸定量（265 bit）｜A3 M-covering 重建（含闭式 A 矩阵 + 收紧律）｜A4 分类无关结构诊断（T₃ 普适 / Σp₂ 恒等式 / d(P₁₀)≥3 / 12 项跨表示刚性 / 14 条否证）｜A5 OB-2001 方法复原（候选 LP 指纹表 + 重建算法）
+**隔离条款**: ① 一般 n 的 pinning 问题**未被覆盖**（仍 UNKNOWN，但不设为活跃靶心）；② 「分类无关证明」不升级为主靶心（仅可作后续方法学项目）
+**未跑**: solver / LP / SAT ✓
