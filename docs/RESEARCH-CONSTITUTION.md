@@ -4171,3 +4171,49 @@ $$\textbf{E}\ \text{不是"算出来没成功"}\ ✗;\ \text{而是已证明存�
 BM/Krawtchouk ⟹ **C** ✗ ｜ Chen–Hu 原型 ⟹ **D** ✗ ｜ 两案均**未进入大计算**即判定 ✓
 （档案：KRAWTCHOUK-2026-09-26-first-verification-and-no-go.md ／ PROTO-2026-09-26-intersection-set-no-go-and-pinning-experiment.md）
 ```
+
+---
+
+## AMEND-30（2026-09-26）：**`LOCAL-AVG-GATE`** —— 局部线性界求和的预筛门槛
+
+**来源**：119 主线 `07d32ea` 的实例（$\delta_2$ 逐点下界 $3$ vs 其固定平均值 $12.52$）。
+
+**登记口径（严格，不得扩大）**：
+
+$$\boxed{\text{登记的是}\;:\ \textbf{线性 incidence-sum forcing alone carries no code-dependent global information.}}$$
+$$\qquad \textbf{不登记}\ :\ \text{"linear local functional = useless"}\ ✗\ \text{—— 线性泛函仍可能通过与\emph{非线性}约束\textbf{联立}发挥作用}\ ✓$$
+
+### Gate 1 — 恒等式检查
+
+$$\text{若}\ f(z)=\sum_jc_jA_j(z),\qquad A_j(z):=\#\{c\in C:\ d(z,c)=j\},\qquad \sum_zA_j(z)=M\binom{n}{j}\ \text{（恒等式 ✓）}$$
+$$\Longrightarrow\ \sum_zf(z)=M\sum_jc_j\binom{n}{j}\quad\text{—— 与具体码}\ C\ \textbf{无关}\ ✗$$
+
+### Gate 2 — 平均值检查
+
+$$\text{若}\ f(z)\ge K\ \forall z,\ \text{则求和版只给}\quad K\ \le\ \frac{1}{2^n}\sum_zf(z)\ =:\ \operatorname{Avg}(f)$$
+$$\text{定义}\quad \rho:=\frac{K}{\operatorname{Avg}(f)}\qquad\Longrightarrow\qquad \begin{cases}\rho\ll1\ (\text{本例}\ \approx0.24):\ \textbf{STOP}\ ✓\ \text{直接判弱}\\
+\rho\approx1:\ \text{才值得研究 equality/slack 结构}\ ✓\\
+\rho>1:\ \text{若推导无误，则已是矛盾}\ ✓✓\end{cases}$$
+
+### 首个应用记录
+
+$$\text{本次}:\ f=\delta_2,\ K=3,\ \sum_z\delta_2(z)=\binom{10}{2}E=45\times285=12825,\ \operatorname{Avg}=\frac{12825}{1024}\approx12.52$$
+$$\Longrightarrow\ \rho=\frac{3}{12.52}\approx\mathbf{0.24}\ \ll1\ \Longrightarrow\ \textbf{STOP 区域}\ ✓$$
+
+### 定位（防止误用）
+
+```
+· 本门槛是**搜索空间剪枝规则**（pre-screen），**不是** 119 的新数学障碍 ✗ ✓
+· 它排除的是**"单独求和 forcing → 全局矛盾"**这一机制 ✓
+· 它**不**排除：① 线性泛函与他约束联立；② 二次/Gram 型耦合；③ 逐点界提升到 K > Avg(f) 后重试 ✓
+· 真正的候选突破路径仍是：Σ_z A_a(z)A_b(z) 型（含 D_r 的二次恒等式族），
+  用以寻找对 **A₁+A₂ ≤ 143** 的**独立上界** ✓ —— 与 119 缺口直接对接 ✓
+```
+
+### 与既有宪章的接口
+
+```
+· 细化 AMEND-25（NEW-INFO GATE）与 AMEND-29（机制移植四步法）：本门槛给出"局部界求和"场景的**首选检查** ✓
+· 与 AMEND-9/20/21/24 正交（那四条管"是否已被做"）；本门槛管"该机制能否产生全局信息" ✓
+· 适用 space A（RH）与 space B 双空间 ✓
+```
