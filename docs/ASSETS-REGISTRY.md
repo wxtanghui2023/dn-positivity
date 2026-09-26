@@ -766,3 +766,14 @@ G3 缺口 ≠ envelope 精度
 **Mechanism template**: global exchange → blocker hypergraph → small local state → α-certificate
 **Docs**: `docs/A23D4-ARCHIVE-2026-09-26.md`, `docs/A23D4-CLOSURE-2026-09-26-depth-four-local-optimality-theorem.md`
 **Boundary**: 限于 |D|≤4；不主张 A(23,6,10) 上下界
+
+
+---
+
+## A-DELSARTE-1 · Delsarte × covering-identity ⟹ A₁ 上界（2026-09-26 立 ✓）
+
+**陈述**：设 `|C|=M`、覆盖半径 1，且已知 `Σ_x C(b(x),2) = 2(A₁+A₂)`（等价地已知 `b`-指纹或 `Q`-分支）。把 **Delsarte 不等式族** `M_r = Σ_j a_j K_r(j) ≥ 0`（`a_j`＝有序对比例，`Σ_j a_j = M`）与**覆盖恒等式**并联求解 LP，即得 `A₁` 的严格上界。
+**本例**：`M=119`、`Q=1`（`a₁+a₂ = 286/119`）⟹ `max a₁ = 0.825236` ⟹ **`A₁ ≤ 49`**（三法一致 ✓；直测 `a₁≥0.8255` 不可行 ✓；去掉恒等式后上界崩到 429 ✓ ⟹ 该界为**联合产物** ✓）。
+**可迁移**：任意 `(n, R=1)` 参数，只要掌握 `b`-指纹即可照搬；亦可作**快速筛选工具**（判某 `(n,R)` 的 `A₁` 窗）。
+**细档**：`docs/DELSARTE-2026-09-26-krawtchouk-route-and-the-a1-bound.md`
+**同类**：`A-…`（本表其他条目）
