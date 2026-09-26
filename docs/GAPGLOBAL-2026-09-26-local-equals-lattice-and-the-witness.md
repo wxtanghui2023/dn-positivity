@@ -100,5 +100,6 @@ $$
 技术词 Boolean 纤维缺口 命中文件数=1    :: ./GAPGLOBAL-2026-09-26-local-equals-lattice-and-the-witness.md 
 技术词 n=4 证人       命中文件数=1    :: ./GAPGLOBAL-2026-09-26-local-equals-lattice-and-the-witness.md
 ```
-- **本档新增**：局部＝格 定理、Boolean 纤维缺口、n=4 证人（见上方命中数；0 命中者为自造语 ✓）
+- **本档新增**：Boolean 纤维缺口（1 档 ✓）、n=4 证人（1 档 ✓）
+- ⚠️ `局部=格 定理` **命中 0** —— 本档正文写作「局部＝格」（全角等号），检索词形式不匹配 ⟹ 按纪律**不列为新命名**，仅记为**本项目内部称法** ✓
 - **档案已有（引用，不列为提出）**：PREIMAGE 1/2 点、Green 核、P1LB4FINAL 封档、G-PROGRESS 需求
