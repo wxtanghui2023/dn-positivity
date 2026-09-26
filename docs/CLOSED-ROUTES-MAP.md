@@ -3515,3 +3515,15 @@ algebraically built-in）；收紧 FSD 搜索目标为「天然 arithmetic failu
 **判定**：路 A（三阶／全局算子）三档全部 STOP（THIRD → T3MIN1 → L-GREEN-1）⟹ **移交 FRONTIER-R1**（第一步＝校准门 G-CAL ✓）。
 自纠两点 ⚠️：谱式交叉核验公式有 bug（递推已独立验证 ✓）；径向检查脚本误比各层与 `d=0` 层（已修 ✓）。
 详 `docs/LGREEN1-2026-09-26-laplacian-green-kernel-audit.md`
+
+---
+
+## 2026-09-26 · §CLOSURE-OPERATOR ＋ §FRONTIER-R1-STATUS — **算子路封档 ＋ 五格状态**
+
+**L-GREEN-1 = STRUCTURAL NO-GO** ✓（结构性，非偶然）：`Green` 核混号（正 `{0,1,4,5,8,9}`／负 `{2,3,6,7,10}`）⟹ 非 order-preserving ⟹ **maximum principle 不存在** ✗；根因 `11I−L` 本征值有正有负 ⟹ 算子不定 ⟹ 核必变号 ✓。
+**四路排除图** ✓：`FACE`（二阶 incidence → 汇合 `(A₁,A₂)`）✗｜`FOURIER`（壳能量被两矩式钉死）✗｜`GREEN`（核混号）✗｜`HEAT`（`e^{−tL}` 谱展开 ⟹ 回到 Fourier shells）✗ —— 四条路各自有**结构性**障碍 ✓。
+**FRONTIER-R1 = OPEN / CALIBRATION PENDING** ✓：五格 `v=56,70,82,86,98`（fingerprint＝基块证书 ≲150–440 块 ✓）；**先做 G-CAL**，不进 SAT/搜索 ✓。
+**G-CAL 硬 STOP** ✓：若只验证"已有 RoSQS 可被重新编码/验证"⟹ **不计 G4** ✗；只有 calibration 暴露**文献未使用、且能导出 P1/P2** 的结构机制才继续五格 ✓。
+**证据四层（严格分开 ✓）**：(1) frontier/status＝Ji–Zhu 2002 Table I ＋ KKW 2025 ✓；(2) calibration＝作者站 `steiner3.html`（GAP 可读，`v≤50`）—— **非 frontier evidence** ✗；(3) target certificate＝[29]（**Zenodo**）＋ 作者页 —— **未下载 ⟹ 不写"已验证"** ✗；(4) 自己的新结果＝A23-D4/G-CAL 输出（未产生 ✗）。
+**保留可迁移资产**：Green 核混号性 ✓；匹配定理封死 `d=1`-Gram ✓。
+详 `docs/CLOSURE-2026-09-26-operator-routes-and-frontier-status.md`
