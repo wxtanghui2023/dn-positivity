@@ -1422,3 +1422,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**结构**】距离型 **33** 种／含候选 **12** 型／达 excess$=1$ **5** 型；**型不决定 excess**（同型可取 $-1/0/1$）⟹ 型分析须配 $E$ 的 $A$-专有结构 ⚠️
 - 档：`docs/CORE-2026-09-27-excess-verification-and-c2-precision-fix.md`｜脚本：`/tmp/kopt37b_core.py`、`/tmp/kopt38_types.py`
 - 红线 🔴：**有限核验**（16 例，**非定理**）✗；不外推 $K(10,1)$ ✗；不改 L3-α 证书 ✗
+
+**🆕 C-382（2026-09-27 · A-型最小分析：全距 2 型 ⟹ **STOP → B**）** ✓
+- 【**形状二分**】取 $z_1=0$ ⟹ $z_2,z_3,z_4$ 权恰 2 且支撑两两交恰 1 元 ⟹ **仅两种形状**：**STAR**（$z_2=e_a{+}e_b$ 型：四球交 $=\{e_a\}$ 重数 4 ＋ 6 个配对中点）／**TRI**（$z_2=e_a{+}e_b,z_3=e_b{+}e_c,z_4=e_a{+}e_c$：无公共点，4 个 $n{=}3$ 角点）✓✓ —— **index-free 几何** ✓
+- 【**重叠恒等式**】STAR：$L=3\cdot[y^\ast\in E]+\#\{\text{6 中点}\in E\}$；TRI：$L=2k$（$k$ 个角点 $\in E$）✓
+- 【**命题 G1／G2（紧 ✓✓）**】G1：STAR $\wedge\ y^\ast\in E\Rightarrow L\ge3$（实测 1585 例 $\min L=\mathbf{3}$ **取等** ✓）；G2：TRI $\wedge\ \ge3$ 角点 $\in E\Rightarrow L\ge6$（实测 93 例 $\min L=\mathbf{6}$ **取等** ✓）
+- 【**STOP → B 依据**】STAR $\wedge\ y^\ast\in E$ 时 $\min L=\mathbf{3}<4$ ✗ ⟹ **几何推不出 $L\ge4$**；第 4 个单位须用 $\Sigma\ge|E|$（742 个「特殊点 $\notin E$」四元组中候选 **0** 个）＝**尺寸条件** ⟹ 本质是 $A/E$ 具体结构 ⟹ **非 index-free** ⟹ STOP ✓
+- 【**sharp 定位**】excess$=1$ 仅出现在 $A=(92,94,108,109)$（$|E|{=}18$）：STAR **4** 个（$L{=}7$，含 $n{=}4$ 公共点）＋ TRI **1** 个（$L{=}6$），均 $\ge6>4$ ✓
+- 档：`docs/CORE-2026-09-27b-all-distance2-minimal-analysis-STOP-to-B.md`｜脚本：`scripts/CORE_all_distance2_analysis.py`、`scripts/CORE_all_distance2_forcing_probe.py`
+- ⚠️ 方法自勘：上一档 §4 的「距离型」签名（各行距离三元组排序）**看不见** STAR／TRI（两者签名相同）✗ ⟹ 该签名不足支撑型分析 ✓（已修）
