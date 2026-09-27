@@ -1007,3 +1007,9 @@ e v\in S\Rightarrow u+v\in S$ ⟹ $S\cong PG(d'-1,2)$（$n=16$：$d'=3$ 给 Fano
 
 ## A-P2COLLISION-1（2026-09-27）⭐
 **已验证 P2 反例**：$C=(H_{15},0)\cup(V_\lambda,1)$，$V_\lambda=\{(x,x+c,p(x)\oplus\lambda(c))\}$，$\lambda=\mathbf 1[c\ne0]$ ⟹ (i) $V_\lambda$ 完美码（掩码＋修正版暴力 400 目标 0 未覆盖 ✓）；(ii) $C$ 为 NP1CC（$|C|=4096=2^{16}/16$、200 目标 0 未覆盖、$\max b=2$、$|Z|=M$ ✓）；(iii) **flatness 违反** ✗：$\nu=\{1:288,2:1760\}$，star ✓，切片 $q_v\in\{288,224\}$ 两值，$A_2/|S|=251.43\notin\mathbb Z$ ⟹ $\mathrm{NP1CC}\not\subseteq$ Theorem-13 β-shape ✓✓。逐坐标计数多重集 $\{288^3,224^4\}$ 为码不变量 ⟹ 不与族内码等价 ✓。对照：$\lambda\equiv0$ 与 $\lambda=c_0c_1$ 均通过 ✓ ⟹ **β-shape 依赖具体半码** ✓。**两处实现 bug**（第三块未截单比特；暴力检验目标写在生成式内）已更正 ✓。**A-ALIGNTHM-1 适用范围收紧**：只对线性半码族成立，不得作通用不变量 ✗。
+
+
+## A-COSETLAW-1（2026-09-27）⭐
+**145 例 $\lambda$ 扫描**（affine 16 + 二次 64 + 具名 5 + 随机 60）：**INVALID=0**；**star 145/145**；flat 89 / **非 flat 56**。**判据**：flat $\iff$ $|S|\mid A_2$（此时切片 $\equiv A_2/|S|$）。**精化律（详验 ✓✓）**：$\mathrm{supp}\,
+u=(a+W)\setminus\{0\}\sqcup(b+W)$，$W=\mathrm{span}\{2,4\}=\{0,2,4,6\}$，且 $
+u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM-1 为线性半码退化特例 ✓。**affine $\lambda$（16/16）全部 flat** ✓；$a=7$ 给单陪集 $|S|=3$、$A_2=1536$ 仍 flat ✓。十二结果类与 $J$ 已登记（见档 §1）。边界：非全部 $2^{15}$ 个 $\lambda$ ⚠️；$W$ 恒定性未证 ⚠️。
