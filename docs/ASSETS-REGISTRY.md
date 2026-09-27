@@ -853,3 +853,15 @@ $$\beta^{\rm paper}_{i,j,k,t}=[p^{i-k}q^{j-k}r^t]\,(r-1)^k\big(1+p+q+pqr\big)^{n
 **核心独立链** ✓：$D/U\to H_k\to\rho_u=(-1)^{k-u}\binom ku\to c_{k,i}=((i-k)!)^2\binom{n-2k}{i-k}\to\beta^{\rm paper}=[p^{i-k}q^{j-k}r^t](r-1)^k(1+p+q+pqr)^{n-2k}$（(i) ✓）。
 **仍开三项** ⏳：(A) $V_k$ 无重 $S_n$-分解（**classical input**）；(B) $M''$ border 的 $D^{1/2}$ 归一化（convention lemma）；(C) $N$ 中 $\eta$ 的符号闭式。
 **细档**：`docs/L3B-FINAL-2026-09-27-three-block-assembly-and-ledger.md`
+
+
+---
+
+## A-L3B-2 · Classical representation-theoretic input（2026-09-27 立 ✓，**非新资产** ✓）
+
+**性质** ✓：**classical input**（经典引用 ✓），**不计入** N×L×G×D 的 D ✓。
+**内容** ✓：$V_k=\mathbb C[\binom{[n]}k]\cong M^{(n-k,k)}\cong\bigoplus_{j=0}^{k}S^{(n-j,j)}$（各不可约**恰一次** ✓，$k\le\lfloor n/2\rfloor$ ✓）；$\dim V_k=\binom nk$ ✓；$H_k\simeq S^{(n-k,k)}$，$\dim=m_k=\binom nk-\binom{n}{k-1}$ ✓（hook-length 显式：$\dim S^{(n-k,k)}=\frac{n!(n-2k+1)}{(n-k+1)!k!}$ ✓）。
+**引用** ✓：Young's rule ＋ 两行 Kostka 数 $=1$ ＋ hook-length formula（**不重证** ✓）。
+**在 Level 3B 中的角色** ✓：提供层分解无重性、$H_k$ 的类型与维数；**不承担 PSD 等价** ✓（后者由 Maschke＋Schur＋谱事实 ✓）。
+**数值核对** ✓：$n=4..10$ 全吻合 ✓；与 L2 的 $\dim\ker D_k$ 实算交叉一致 ✓。
+**细档**：`docs/A-L3B-2-2026-09-27-classical-two-row-input.md`
