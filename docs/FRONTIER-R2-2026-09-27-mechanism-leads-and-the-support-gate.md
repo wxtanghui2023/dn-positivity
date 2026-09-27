@@ -104,5 +104,7 @@ $$
 技术词 SUPPORT-VISIBILITY GATE 命中文件数=1    :: ./FRONTIER-R2-2026-09-27-mechanism-leads-and-the-support-gate.md 
 技术词 机制线索     命中文件数=5    :: ./PROTOCOL-R6-support-ceiling.md ./p49-g274iia1-material.md ./FRONTIER-R2-2026-09-27-mechanism-leads-and-the-support-gate.md
 ```
-- **本档新增**：SUPPORT-VISIBILITY GATE、三层判停结论、三条机制线索（见上方命中数；0 命中者为自造语／内部标签 ✓）
+- **本档新增**：`SUPPORT-VISIBILITY GATE`（1 档 ✓）、`三层判停结论`（内部标签 ✓）
+- **档案已有（引用，不列为提出）**：`机制线索` —— 命中 **5 档** ⚠️（含 `PROTOCOL-R6-support-ceiling.md`、`p49-g274iia1-material.md` 等）⟹ 该词为既有术语 ✓，本档仅**沿用** ✓（**不**列为新命名 ✓）
+- 📌 附带发现：档案中已有 `PROTOCOL-R6-support-ceiling.md`（**support ceiling** 协议 ✓）⟹ 与 AMEND-35 主题相邻，**下一步须先读该档**以免重复 ✓（属 PRE-WORK 纪律 ✓）
 - **档案已有（引用，不列为提出）**：格＋盒、区分量扫描、GAPTHEOREM 诊断
