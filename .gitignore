@@ -16,3 +16,6 @@ latex_v2*.txt
 .lake/
 *.olean
 *.ilean
+
+# core dump 排除（2026-09-27 加 ✓ 理由：崩溃遗留的 ELF core dump 无档案价值；且 4.84 MB 二进制不应入仓）
+core
