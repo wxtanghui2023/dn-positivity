@@ -947,3 +947,9 @@ e J(C_1)$ 且非 $(A_1,A_2)$ 的函数；测试集 = 两 witness ✓。
 **分离类（9 项 ✓）**：$A_1,A_2,D,N_2,N_3,N_4,I,S,\sum_F\binom{q_F}2$ ✓。
 **方法学** ✓：quadratic appearance $\not\Rightarrow$ quadratic information ✓。
 **细档**：`docs/CLOSURE-2026-09-27-Q0-STOP-and-the-separation-pair.md`
+
+
+## A-VWEQCHAIN-1（2026-09-27）
+**van Wee 等号链（self-contained $b\le2$）** —— 来源：van Wee 1988（TU/e 仓储 353803.pdf ✓ 原文核）Lemma 8 ＋ Theorem 9（$K(n,1)\ge2^n/n$ ✓、$K(2^r,1)=2^{2^r-r}$ ✓）；等号分析（唐先生 12:56 ✓）；数值审计 8/8×2 码 ✓✓。
+产出：$n=2^m$ ⟹ $b\in\{1,2\}$ ✓、$d_1\le1$（matching）✓、$J_2=2A_1$、$J_3=J_6=0$、$A_1+A_2=M/2$ ✓、二部结构 $\deg_Z(a)=1$/$\deg_{\mathcal A}(z)=n-1$ ✓。
+边界：不解决 P1-2（剩余 $\Sigma a_i^2$、$\Sigma q_{ij}^2$ 两量 OPEN ✓）；不涉 $n=10/119$ 判定 ✓。
