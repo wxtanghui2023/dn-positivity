@@ -1086,3 +1086,9 @@ otin\mathrm{im}$，大小 $1/2/4$ 自由，纤维谱 $\{4{:}4\}/\{8{:}2\}/\{16{:
 **商群 $Q=I/W$ 上的高阶 Walsh 审计 ✓✓**：对池内 **662 码**逐个计算，$N_{\ge2}=\#\{C:\exists S,|S|\ge2,\widehat F(S)\ne0\}=\mathbf 0$ ✓（分支 1 ✓）；**一阶等幅性 96/96 ✓** ⟹ $F=\bar X*c-\bar m=a\sum_{j=1}^{k'}\chi_j$ **恰好成立** ⟹ 二项式谱与 $J$ 闭式成为**模型内推论** ✓✓。
 **剩余唯一待证命题 ✓**：从 **extend→puncture ＋ $X*C$** 的代数结构推出「$Q$ 上二阶及以上 Walsh 系数恒为 0 且一阶等幅」（等价：$c$ 的分布只含一阶 Fourier 分量）。
 $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
+
+
+## A-PROOF-1（2026-09-27）⭐⭐
+**已推导 ✓**：$\widehat X$ 支撑于 $W^\perp$ ⟹ $\mathrm{supp}\,\widehat f\subseteq W^\perp$ ⟹ $f$ 是 $W$-不变 ⟹ $f(g)=32\sum_{u\in W}c(g\oplus u)$。
+**$k'{=}1$ 分支 = THEOREM ✓✓**：$\mathrm{supp}(c)\subseteq V=W\sqcup(9{+}W)$（由 $\beta(H_7)\subseteq V$ 与 $15\in V$）⟹ 两级、$v_1+v_2=512=2\bar m$、多重度 $m/2$ 各一 —— 完整推导 ✓。
+**$k'{=}2$ 缺口 ⚠️**：annihilation（$\widehat c(S)=0,\ |S|\ge2$）未从构造推出；$N_{\ge2}=0/662$ 为经验证据。**判定**：A-WALSH-1 = **强 SUPPORTED**（$k'{=}1$ 已升 THEOREM），**不包装为定理** ✓（遵唐先生 STOP 条件）。
