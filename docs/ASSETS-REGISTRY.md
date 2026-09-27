@@ -888,3 +888,15 @@ $$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\bin
 **核对** ✓✓：暴力 η vs 闭式 $29$ 组零不符 ✓；暴力 vs $G_\eta$ 项数 $32{=}32,32{=}32,46{=}46$ 恒等 ✓；$N_k$ 接口与 R1b 谱级审计一致（$\sim10^{-13}$ ✓）。
 **约定** ⚠️：论文 Prop 2.4(iii) 钉死 $d=|w|$ ✓；作者代码用 $\texttt{dist}=d(v,w)$ 另一参数化 ⚠️ ⟹ **最终钉死须 R2**（块式 SDP vs 已验 unreduced 锚点 $11.5980553/16.0000000$）⏳。
 **细档**：`docs/C-L3B-1-2026-09-27-lasserre-eta-closed-form.md`
+
+
+---
+
+## A-ZETABOUND-1 · surfeit 诱导的显式 $A$ 上界（2026-09-27 立 ✓，**小资产** ✓）
+
+**性质** ✓：显式有效界（**不计为机制** ✗）。
+**内容** ✓：对任意 radius-1 覆盖码 $C\subseteq\{0,1\}^n$, $|C|=M$：$A_1+A_2\le\frac{M(n^2+2n+3)-(n+1)2^n}{4}$ ✓。
+**来源** ✓：$\zeta=M(n^2+2n+2)-(n+2)2^n-4(A_1+A_2)$ ✓（本机 6/6 精确验证 ✓）＋ $\zeta\ge-(2^n-M)$ ✓。
+**比较** ✓：6 例中 5 例强于纯 Delsarte LP 上界 ⟹ 不在 Delsarte 线性包络内 ✓；但高于实测 $3\times\sim8\times$ ⟹ **valid but non-leveraging** ✓。
+**诚实备注** ⚠️：实质等价于 $\zeta\ge-(2^n-M)$ 的重写；文献是否已有未查 ✓。
+**细档**：`docs/PHASE2-AUDIT-2026-09-27-surfeit-global-pair-collapse.md`
