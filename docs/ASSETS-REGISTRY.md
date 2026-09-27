@@ -1431,3 +1431,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**sharp 定位**】excess$=1$ 仅出现在 $A=(92,94,108,109)$（$|E|{=}18$）：STAR **4** 个（$L{=}7$，含 $n{=}4$ 公共点）＋ TRI **1** 个（$L{=}6$），均 $\ge6>4$ ✓
 - 档：`docs/CORE-2026-09-27b-all-distance2-minimal-analysis-STOP-to-B.md`｜脚本：`scripts/CORE_all_distance2_analysis.py`、`scripts/CORE_all_distance2_forcing_probe.py`
 - ⚠️ 方法自勘：上一档 §4 的「距离型」签名（各行距离三元组排序）**看不见** STAR／TRI（两者签名相同）✗ ⟹ 该签名不足支撑型分析 ✓（已修）
+
+**🆕 C-383（2026-09-27 · **B 档收口定型**：T1–T5 ＋ 停止理由）** ✓
+- 【**停止理由（唐先生 20:56 定稿 · 逐字保留）**】🔴
+  > **STOP：纯几何层的统一 overlap 下界为 $L\ge3$，而目标 $L\ge4$ 的第 4 个单位依赖 $E(A)$ 的专有尺寸耦合；继续枚举不能产生新的机制资产。**
+- 【**精确化（本档补 · 不改收口作用）**】仅形状 ⟹ $L\ge0$（取等）；形状 $+y^\ast\in E$ ⟹ $L\ge3$（1585 例**取等** ✓✓）；形状 $+k$ 角点 $\in E$ ⟹ $L\ge2k$（93 例**取等** ✓✓）⟹ 严格读法＝「**几何 ＋ $E$-成员假设** ⟹ $L\ge3$」，而 $E$-成员由尺寸条件 $\Sigma\ge|E|$ 提供（742 个「特殊点 $\notin E$」四元组中候选 **0** 个）⟹ **能力边界结论不变** ✓
+- 【**T1–T5 定型**】T1 top-4 恒等式（免枚举）｜T2 sharp excess（$\Sigma-|E|\le1$ 且 $+1$ 实现）｜T3 Lemma A／A′／A″｜T4 **修正** $c\ge2$ 链（**弃** $c{=}0\Rightarrow\Sigma\le16$ ✗）｜T5 **STAR／TRI 形状二分＋overlap ledger**（本轮新增 · 最有价值）✓
+- 【**关键结论**】$$\boxed{\text{geometry supplies }L\ge3,\quad\text{but the fourth unit requires }(A,E)\text{-specific coupling}}$$
+- 【**sharp 双实现 ⟹ 收益削弱**】$A=(92,94,108,109)$：STAR（$L{=}7$，含 $n{=}4$ 公共点）×4 ＋ TRI（$L{=}6$）×1 ⟹ excess$=1$ **无唯一几何实现机制** ⟹ 纯 distance-type classification 收益削弱 ✓
+- 【**本线完成的工作**】$9{,}381{,}251$ 个局部交换 → 逐层压缩 → 少数可复用几何不变量 ＋ **纯几何机制的能力边界**（精确）✓ ⟹ **B ＝ machine certificate ＋ transferable mechanism ＝ 正确收口**（**非失败转场** ✓）
+- **不再行动** ✗：不扩枚举／不重扫 873,472／不优化 L3-α 证书／不重启 distance-type classification ✓
+- 档：`docs/BFREEZE-2026-09-27-transferable-assets-T1-T5-and-stop-rationale.md`
