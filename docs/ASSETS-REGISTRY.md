@@ -1662,3 +1662,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**本档增量 ✓**】$\tau$ 公式修正 ＋ 正确二分 ＋ closure test 的诚实边界定位 ✓
 - 【**边界**】零程序计算；未上 SDP/Terwilliger；未碰 R3 线/$\mu$/PSD/SAT；不跨空间；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）
 - 档：`docs/R4-T-2026-09-27-tau-formula-correction-and-triple-distribution-closure-test.md`
+
+**🔷 C-405（2026-09-27 · **R6：$K_4$／共同球心兼容性 ＋ 可实现性亏空层级 ＋ 团级 cap**）** ✓
+- 【**★$K_4$ 反例（自证 ✓✓）**】取 $c_1{=}0,c_2{=}e_1{+}e_2,c_3{=}e_2{+}e_3,c_4{=}e_1{+}e_3\in\mathbb F_2^{10}$ ⟹ **两两距离皆 2** ⟹ $K_4\subseteq G_2$ ✓；共同球心 $x$ 须 $\in B_1(0)=\{0\}\cup\{e_j\}$，逐点排除（$x=0:d(0,c_2)=2$ ✗；$x=e_1:d(e_1,c_3)=3$ ✗；$x=e_2:d(e_2,c_4)=3$ ✗；$x=e_3:d(e_3,c_2)=3$ ✗；$x=e_j,j\ge4:d=3$ ✗）⟹ $$\boxed{\text{4 个 pairwise-close 码字}\not\Rightarrow\text{共同 radius-1 球心}}$$ ✓✓ —— **本线第一个真正的兼容性缺口** ✓
+- 【**★唯一性定理 ✓✓**】$x\ne y$ 同为共同球心 ⟹ $\{c_i\}\subseteq B_1(x)\cap B_1(y)$，而 $|B_1\cap B_1|\in\{0,2\}$ ⟹ $k\ge3$ 不可能 ⟹ $\big|\bigcap_iB_1(c_i)\big|\le1$ ✓（可实现性＝**二值** ✓）
+- 【**★团级 cap（Kleitman 直径定理，档级引用 ✓）**】直径 $\le2$ 的 $Q_{10}$ 子集最大 $\sum_{i\le1}\binom{10}i=11$，等号 $\iff$ 球 $B_1(x)$ ⟹ $$\boxed{\text{任一 }G_2\text{-团}\le11\ \text{点};\ 11\ \text{点}\iff\text{团＝某球}\iff b(x)=11}$$ ✓✓（把"局部 cap $b(x)\le11$"升级为**团级定理** ✓）
+- 【**★可实现性亏空层级（新对象 ✓✓）**】$\Delta_k:=\#\{k\text{-cliques of }G_2\}-\sum_x\binom{b(x)}k\ge0$ ✓（定义性 ✓）；**定理**：$\boxed{\Delta_3\equiv0}$（每个三角形都被实现 ✓）；**$\Delta_4$ 可 $>0$**（§1 构型即一个未实现 $K_4$ ✓✓）；$\Delta_k$ 随 $k$ **单调不减** ✓；**局部化问题**：给定团 $K_j$，被多少个 $x$ 实现为 $S(x)$？答案 $\in\{0,1\}$ ✓ ⟹ $\Delta_k$ ＝ 未实现 $k$-团计数 ✓；$k=2$ 全实现 ✓、$k=3$ 全实现 ✓、$k=4$ **首个真缺口** ✓✓
+- 【**★矩系统 ＋ 一处新结论 ✓✓**】$\sum n_j=1024$、$\sum jn_j=1309$、$\sum j^2n_j=\mathbf{1879}+2Q$ ✓（**唐先生 §5 公式正确** ✓：$1024+2\cdot285+(285+2Q)$ ✓）；**新结论**：$Q$ **被 $A$ 钉死** —— 由 $\sum_x\binom{b(x)}2=2(N_1+N_2)=285+Q$ ⟹ $\boxed{Q=2(N_1+N_2)-285}$ ✓✓ ⟹ $m_2$ 亦被 $A$ 钉死 ⟹ **profile 自由度始于三阶** $\sum_x\binom{\delta(x)}3$（＝$T_3-Q$）✓✓（与 FIBER 证人一致 ✓）
+- 【**⚠️ 耦合诚实评估**】已有：$T_3$ collapse（→profile ✗）、$U$ 值集、全局恒等式（**恒真无约束力** ✗）、$\Delta_3=0$、$\Delta_4$ 可正；**缺口**：尚未找到 $\Delta_4$（或 $\sum\binom\delta3$）与 119 必要条件的**夹逼** ⚠️（＝R5 §5 同一缺口）；**可证伪耦合目标**：$\exists L>U:\ L\le\Delta_4\le U$ ✓；上界候选：团级 cap ＋ $\sum_j\binom j4n_j$ 的 profile 钉死部分 ＋ $\sum_c|S(c)\cup V(H_c)|\le451$ ✓；下界候选：§1 四面体构型**是否被迫使**（未证 ⚠️）、$N_1+N_2\ge143$ 能否推 $\Delta_4$ 下界 ✓
+- 【**边界**】零程序计算；未上 SDP/Terwilliger；未开②；未改门；不跨空间；Kleitman 为**档级引用** ✓；不声称 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R6-2026-09-27-K4-common-centre-compatibility-and-realizability-deficit-hierarchy.md`
