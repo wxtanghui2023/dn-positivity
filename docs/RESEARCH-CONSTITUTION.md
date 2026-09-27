@@ -4294,3 +4294,17 @@ RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} →
 **条款 4（防循环）**：禁止以"又发现一个漂亮结构"为由，在已封存机制内继续加阶（`4→5→…` ✗）。
 
 **首次应用（2026-09-27 ✓）**：`Boolean fiber → triple neighborhood` 终止性实验（n=4 全枚举 ✓）⟹ 邻域结构被 `(|C|,N₁,N₂,case)` 完全决定 ⟹ **无独立杠杆** ⟹ 封存三阶耦合 ✗（强度边界见 `docs/SEAL-2026-09-27-...md` §1 ✓）。
+
+
+---
+
+## AMEND-35 · SUPPORT-VISIBILITY GATE（2026-09-27 唐先生立 ✓）
+
+**条文**：任何进入 frontier 候选集的机制／对象，**必须解释**：
+
+> **"为什么它能看到 support，而 moment／local machinery 看不到？"**
+
+**判据**：解释不了 ⟹ **DROP** ✗。
+**依据（本线实证 ✓）**：`lattice＋box → f≥0 → 低阶/自然统计量` 在 `n=4` 穷举下**全部不分离** Boolean／非 Boolean（2720/7860 非 Boolean ✓；7 坐标全重叠 ✗）⟹ **任何只依赖这些低阶统计坐标的证明不可能识别 `f∈{0,1}`** ✓。
+
+**配套检索方向反转**：不再搜"covering-code invariant" ✗；改搜 **"局部 multiplicity 约束 → global support／representation 约束"** 的机制 ✓（五类：Fourier／character 表征｜association scheme／Delsarte 非线性增强｜switching／分类／同构｜set-system／超图｜exact-cover／near-cover 刚性 ✓）。
