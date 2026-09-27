@@ -43,3 +43,13 @@ $$
 技术词 reproduction     命中文件数=6    :: ./P2SEARCH-VALIDATION-2026-09-27-m120-gate-failed.md ./LEVELS-2026-09-27-four-tier-separation-and-3B-pending.md ./E12-A3-5-bombieri-crosscheck.md
 ```
 - **本档新增**：自检门（$m{=}120$ 已知可行）之失败记录与归因、三条实现路径对比、reproduction 优先下一步（见上方命中数；0 命中者为自造语／内部标签 ✓）
+
+
+## §2 续：向下删＋修之瓶颈（2026-09-27 17:00+ ✓）
+
+```
+$$	extbf{(UD-1 诊断 ✓)}:\ 	ext{从 124 词码向下（删最无用者＋repair ✓）}:\ m{=}123\ 	ext{删 1 词产生 3 洞，}	extbf{两次 restart 卡在 3 洞 ✗（50s/次）}$$
+$$\qquad	extbf{根因 ✓}:\ 	ext{124 词码	extbf{不可约}（每词有独有点 ✓）} \Longrightarrow 	ext{删一词后	extbf{移动任何他词都造新洞} ✗ ⟹ 	extbf{1-opt 邻域无解} ✗}$$
+$$\qquad\Longrightarrow\ oxed{	ext{必须用	extbf{ruin \& recreate（LNS）}：随机删 }kpprox3	ext{--}8\ 	ext{词 ⟹ 贪心重覆盖（每洞取"覆盖面最大"的词 ✓）⟹ 补回词数 }<\ 	ext{删掉词数即下降 ✓✓}}$$
+$$\qquad	ext{这与文献一致 ✓}:\ 	ext{Östergård 1997 明确指出其贡献即	extbf{新邻域函数} ✓ ⟹ 邻域设计是本问题的核心 ✓}$$
+```
