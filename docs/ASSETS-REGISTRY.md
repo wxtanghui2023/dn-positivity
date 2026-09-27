@@ -809,3 +809,15 @@ G3 缺口 ≠ envelope 精度
 **强制自检门** ✓：任何 LP/SDP 重建须满足 **LP ≤ 已知 SDP**（否则建模错，数值禁止入档 ✗）——本项目已连续两次靠它拦下无效值（110.03、170.67 ✓）。
 **边界** ⚠️：仅线性层 ✓；**1B（SDP 逐组件消融）本机不可执行** ✗（无 SDP 求解器 ✓）。
 **细档**：`docs/DLP1A-2026-09-27-validated-ablation-and-1B-blocker.md`
+
+
+---
+
+## A-SDP-HARNESS-1 · covering-code SDP harness（未约化 Thm 2.5）（2026-09-27 立 ✓，**Level 1 PASS** ✓✓）
+
+**内容** ✓：按 Gijswijt–Polak（arXiv:2504.01932）**Theorem 2.5** 未约化实现的 SDP：变量 = 三点轨道 $\mathrm{orb}(u,v)=\mathrm{sort}(d(u,v),|u|,|v|)$ ✓；$M'=\sum_t x_tB_t$，$M''=\sum_t x_t(D_t-B_t)$，$N=\sum_t x_tH_t$（常数矩阵线性组合 ⟹ 避免表达式树爆炸 ✓）；约束 = Prop 2.1(ii)(iii) ＋ Prop 2.2（$M'\succeq0,M''\succeq0,R(1-x^0_{0,0},M'')\succeq0$）＋ Prop 2.4(i)(iii)(iv 四族)；目标 $2^n\sum_{u,v}M'_{u,v}$ ⟹ 界 $=(\cdot)^{1/3}$ ✓。
+**验证证据** ✓✓：$n=6$：本机 **11.5980553** vs 论文 Table 4 **11.5980** ✓；$n=7$：本机 **16.0000000** vs **15.9999** ✓（残差 $\sim10^{-9}$／$10^{-13}$ ✓）。
+**关键坑（必记 ✗）**：第 (iv) 族求和是 $\sum_{w\in S_\ell(v)}$ ✓ —— 误写成 $\sum_{w\in S_\ell(0)}$ 会使界偏低 **0.0820** ✗（正确转换 $w=v\oplus w_0$ ✓）。
+**强制自检门** ✓：任何 LP/SDP 重建须满足 **LP ≤ 已知 SDP** 及 **锚点残差 ≪ 目标缺口**；违反 ⟹ 建模/mapping 有错，数值禁止入档 ✗。
+**边界** ⚠️：未约化形式对 $n=10$（$1024\times1024$ PSD）不可行 ✗ ⟹ Level 4 须先做 Level 3（Terwilliger 块对角化 ✓）。
+**细档**：`docs/P2-1-2026-09-27-LEVEL1-PASS.md`
