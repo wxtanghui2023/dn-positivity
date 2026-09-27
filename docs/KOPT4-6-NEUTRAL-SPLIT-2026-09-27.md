@@ -575,6 +575,11 @@ $$\boxed{\text{能否得到不依赖具体 }A\text{、不依赖逐例枚举的�
 **备选终局 ✓**：若该残余不能统一封口，则保留 pattern-compressed certificate，并锁定 **Lemma A／A′／A″** 为可迁移资产 ✓
 kopt26 的 `12/16` 硬编码文案已修正 ✓（cosmetic，不影响结果 ✓）
 
+**🔚 收口规则（下一轮判据 ✓ 唐先生 20:28）**：对 $B_2(a_i)$ 内退化残余
+- **可压成统一 lemma** ⟹ 合成 **index-free 结构定理**（Lemma A／A′／A″ ＋ 鸽笼步 ＋ δ-pattern 压缩）✓
+- **不可压** ⟹ **停止**于 **pattern-compressed finite certificate**，并把 **Lemma A／A′／A″ 独立登记为可迁移资产** ✓
+（本轮不再行动 ✗；下一轮直接攻此残余 ✓）
+
 ## §6 红线（硬 ✓）
 
 - 找不到 ⟹ 只记"该邻域／该预算未找到" ✗，**绝不推出** $K(10,1)\ge120$ 或任何下界 ✗
