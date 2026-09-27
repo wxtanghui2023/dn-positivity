@@ -992,3 +992,8 @@ e v\in S\Rightarrow u+v\in S$ ⟹ $S\cong PG(d'-1,2)$（$n=16$：$d'=3$ 给 Fano
 
 ## A-P2A-1（2026-09-27）
 **P2-A 工具与正控**：内蕴差向量分布 $\nu$（仅用论文 §II 伙伴对划分 ⟹ 对任意 NP1CC 有定义 ✓）。**正控通过 ✓✓**：$n=16$ Type C 实例（$|C|=4096$、$k=256$、伙伴对 2048、$\nu=\{1:256,2:1792\}$）满足星性质（$\ell=15$ ✓）与 flatness（切片 $\equiv\lambda=256$ ✓）。**自纠**：$|Z|=M=4096$（非 $M/2$ ✗）。**缺失成分**：非线性半码 NP1CC（Vasil'ev 型）或 ENP1CC puncturing ✓。E3：非星 ∨ 非 flat ∨ 支撑非几何 ⟹ NP1CC ⊄ Theorem-13 β-shape ✓。警告：构造新 ≠ gate 新 ✓。
+
+
+## A-PERFCOND-1（2026-09-27）
+**系统形式完美码的判定条件（导出并双向验证 ✓）**：$C=\{(u,\psi(u))\}\subset\mathbb F_2^{15}$ 是完美 $[15,11,3]$ 码 $\iff$ $orall a$：$\{\psi(a+e_j)\oplus\psi(a)\}_{j=1}^{11}=W_2$（$W_2$ = $\mathbb F_2^4$ 中重量 $\ge2$ 的 11 个向量 ✓）。验证：线性 $\psi=A$（11 列 = $W_2$）违反 0/2048 ✓；朴素非线性 $\psi=A\oplus\varphi$ 违反 1984/2048 ✗。
+**首次尝试失败记录**：$\psi=A\oplus\varphi$（$arphi$ 二次）⟹ 覆盖核验失败 ✗ ⟹ 非 NP1CC ⟹ 其 $\nu$ 的"非星"结论**无效**，不得记为 P2 collision ✓（纪律验证 ✓）。
