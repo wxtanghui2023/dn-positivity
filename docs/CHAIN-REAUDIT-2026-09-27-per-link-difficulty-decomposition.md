@@ -1,5 +1,10 @@
 # CHAIN-REAUDIT-2026-09-27 — **RH 证明链逐环难点拆解**（重审 `CHAIN-AUDIT` · 充分拆解）
 
+> ⚠️ **空间隔离横幅（2026-09-27 21:32 唐先生令）**：**本档＝空间 A（RH 链）专用** ✓。
+> **与 119 线（空间 B：$K(10,1)$ 覆盖码构造）严格分账** ✗ —— 两空间**证据不得互相挪用／不得并入同一论证** ✓。
+> 本档 §7 中出现的 B 空间条目（C-380／TLDC／池级清扫）**仅作“对 RH 链无推进”的边界声明** ✓，**不得**读作“两链相关” ✗。
+> **119 链自身的逐环审计见**：`docs/CHAIN-REAUDIT-119-2026-09-27-…md` ✓
+
 **已查地图：命中（重审既有链档，非新案）**
 所查：`docs/CHAIN-AUDIT-do-we-have-a-proof-chain.md`（**09-12 原链档** ✓）｜`docs/AUDIT-WALLS-AND-DIFFICULTIES-20260917.md`（**W1–W12 ／ D1–D10** ✓✓）｜`docs/WALLS-DIFFICULTIES-LEDGER.md`｜`docs/ACTION-START-TABLE-W-D.md`｜`docs/MASTER-STATUS-AND-CLOSURES.md`｜`docs/CLOSED-ROUTES-MAP.md`｜`docs/MASTER-NOGO-AND-LIVE-PATHS.md`｜`docs/STRATEGY-2026-09-16…`｜`docs/ASSETS-REGISTRY.md`｜`docs/C380-LAYER5-GATE…`｜`docs/BFREEZE-2026-09-27-…`
 **强制查重门** ✓：`scripts/tech_word_check.sh`（六词，见 §9）
