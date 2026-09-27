@@ -1693,3 +1693,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**档案对照 ✓**】$|\cap_3|\in\{0,1\}$（唯一性）**仅在 `C3-119` IA-1 交叉引用** ⟹ 不重复登记 ✗✓；$K_4$ 反例／亏空层级＝`R6` ✓；四族目录＝`R7` ✓；**本档新增＝接口恒等式 ＋ 干净计数 ＋ 状态锁** ✓
 - 【**边界**】零程序计算；未上 SDP/SAT/Terwilliger；未开②；未改门；不跨空间；不声称 $K(10,1)\ge120$ ✗（V290）
 - 档：`docs/R7-LOCK-2026-09-27-status-lock-and-the-K4-deficit-interface-identity.md`
+
+**🎯 C-408（2026-09-27 · **P1 攻坚：$N_{\rm tetra}>0$ —— 几何刻画 ＋ 中点定理 ＋ 可达反证 ＋ 上界**）** ✓
+- 【**(P1) 未证成（诚实落判 ✗）**】$N_{\rm tetra}>0$ **未能证明**，亦未找到矛盾 ✗；**不声称**它成立 ✓（V290）
+- 【**★结果 1／2：几何刻画 ＋ 中点定理 ✓✓**】**square** $=\{v,v{+}e_i,v{+}e_j,v{+}e_i{+}e_j\}=v+\mathbb F_2^{\{i,j\}}$ ＝**完整 2 维仿射子空间** ✓（对角线中点落在其**内部** ✗）；**tetra** $=v+\big(\mathrm{span}(e_i,e_j,e_k)\big)_{\rm even}$ ＝ **3 维 coset 的偶部** ✓✓；**★中点定理**：tetra 六对的中点（12 实例）**集合恰为该 3-coset 的奇部** $\{v{+}e_i,v{+}e_j,v{+}e_k,v{+}e_i{\oplus}e_j{\oplus}e_k\}$ ✓✓，且**每奇点恰为 3 对的共同中点** ✓
+- 【**★结果 3：$\Delta_4=0$ 可达（反证约束 ✓✓）**】球型码 $C=B_1(x)$（非覆盖码 ✓）：任两点 $d\le2\Rightarrow G_2=K_{11}\Rightarrow\#K_4=\binom{11}4=330$ ✓；$b(x)=11\Rightarrow\binom{11}4=330$ ✓、$b(x{+}e_i)=2\Rightarrow\binom24=0$ ✓、其余 $b\le1$ ⟹ $T_4=330=\#K_4$ ⟹ **$\Delta_4=0$** ✓✓ ⟹ **不存在"任何码都有 $\Delta_4>0$"的普适逼迫** ✗ ⟹ **P1 必须使用 covering／近最优性的特异信息** ✓
+- 【**★结果 4：上界（新 ✓）**】tetra 偶部中恰 3 点与给定奇点 $o$ 相距 1（第 4 点距离 3 ✓）⟹ 该三点在 $S(o)$ 内 ⟹ $\#\{T:o\in{\rm odd}(T)\}\le\binom{b(o)}3$ ⟹ $\sum_o\binom{b(o)}3\ge4N_{\rm tetra}$ ⟹ $$\boxed{N_{\rm tetra}\le T_3/4}$$ ⟹ $T_3\le28\binom{10}3+\binom53=3370\Rightarrow N_{\rm tetra}\le\mathbf{842}$ ✓（**上界**；P1 所求为**正下界** ✗ —— 方向相反 ✓）
+- 【**⚠️ §2 配对级修正（本档自查 ✓）**】claw（$3\times$距1$+3\times$距2）与 square（$4\times$距1$+2\times$距2）**配对谱不同** ✗ ⟹ "亏空整体配对不可见"一语**不成立** ✗✓；**但** star ≡ tetra（六距全 2 ✓）成立 ✓；且 $N_{\rm square},N_{\rm tetra}$ 是**团计数**，**不由** $(N_1,N_2)$ 或任何 profile 矩决定 ✓
+- 【**P1 精确剩余任务 ✓**】证"任一 119-cover 恰含至少一个 square/tetra 型极大 $K_4$"；**必须**用到：① 覆盖性（每点 $b\ge1$）② 近最优（$|C|=119,\sum b=1309$）③ 局部占用预算 $\sum_c|S(c)\cup V(H_c)|\le451$ ✓
+- 【**P2 预告（照唐先生 ✓）**】若 tetra 假设不矛盾 ⟹ 转向 $N_{\rm square}+N_{\rm tetra}$ 的**联合 cap**：找 $(S(c),H_c)$ 对四类 $K_4$ 的容量约束 ✓；**反例警示登记**：球型码 $\Delta_4=0$ ⟹ "局部密集"本身**不**逼出亏空 ⟹ 须找**覆盖强制**的局部形状，而非"密"本身 ✓
+- 【**边界**】零程序计算；未碰 $T_4$／$n_j$／profile 极值（照令 ✓）；未上 SDP/SAT/Terwilliger；未开②；未改门；不跨空间；不声称 $N_{\rm tetra}>0$ ✗
+- 档：`docs/P1-TETRA-2026-09-27-tetrahedron-geometry-midpoint-theorem-and-achievability-of-zero-deficit.md`
