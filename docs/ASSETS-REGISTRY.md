@@ -798,3 +798,14 @@ G3 缺口 ≠ envelope 精度
 **标签（强制 ✓）**：`P1-A mechanism: verified at n=4; no leverage on P1-B` ✓。
 **边界** ⚠️：仅 $n=4$ 穷举（未外推 ✗）；**无载荷于规模下界** ✗；**不得**包装为 119 进展 ✗。
 **细档**：`docs/SUPPVIS-2026-09-27-support-excess-determines-booleanity-and-its-irrelevance.md`
+
+
+---
+
+## A-DLP-HARNESS-1 · covering-code Delsarte-LP harness（2026-09-27 立 ✓，**已校准** ✓）
+
+**内容** ✓：按 Gijswijt–Polak（arXiv:2504.01932 §1）公式实现的 LP：变量 `x_0..x_n ≥ 0`，目标 `min q^n x_0`，约束 (i) Krawtchouk 正性 ＋ (ii)(iii)（对每个有效不等式 `(λ,β)`、每个 `k=0..n`）✓；`α^k_{i,j}`（q=2）与 `P_k(i)` 逐字实现 ✓。
+**校准证据** ✓：精确复现 `94.0197982166`／`101.0073567955`／`101.4081693983`（7 位小数 ✓✓）；关键参数 = Van Wee 读法 **`λ=(6,1,1,0,…,0)`, `β=6`** ✓（探针：`(1,6,5)`→21.62 ✗，`(1,6,1)`→58.62 ✗）。
+**强制自检门** ✓：任何 LP/SDP 重建须满足 **LP ≤ 已知 SDP**（否则建模错，数值禁止入档 ✗）——本项目已连续两次靠它拦下无效值（110.03、170.67 ✓）。
+**边界** ⚠️：仅线性层 ✓；**1B（SDP 逐组件消融）本机不可执行** ✗（无 SDP 求解器 ✓）。
+**细档**：`docs/DLP1A-2026-09-27-validated-ablation-and-1B-blocker.md`
