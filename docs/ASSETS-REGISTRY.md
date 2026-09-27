@@ -1575,3 +1575,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**门②接口（§7）**】把 $J$ 写成 $\gamma$ 在坐标向量上的线性/二次泛函 ⟹ 与 §4 的 $A$-不变方向**正交**；**$A$-纤维（固定层和的自相关族）内的 $J$-变化 ＝ 门②的作用域** ✓
 - 【**边界**】零计算 ✓；**未开门②** ✓；**未改门** ✓；§4 为**充分**机制（逆不主张 ✗）；只用本线既有资产 ✓
 - 档：`docs/R2-2prime-2026-09-27-near-optimal-irreducible-support-separation-mechanism.md`
+
+**🎛️ C-397（2026-09-27 · **R3：coordinate-labelled excess ＋ NO-GO 检验**）** ✓
+- 【**范围**】只做 R3（把 $\delta\ge0$ 逐坐标化）；零计算；不开新课题；未开门② ✓
+- 【**★R3-1 平移超额恒等式（3 行可证 ✓✓）**】$$\boxed{\sum_{x\in C\oplus e_i}\delta(x)=m+\mathrm{star}_i,\qquad \mathrm{star}_i:=\gamma(e_i)+\sum_{j\ne i}\gamma(e_i\oplus e_j)}$$ 证明：$x=c\oplus e_i$ 代换 ＋ $b(y)-1=\mathbf 1[y\in C]+\#\{j:y\oplus e_j\in C\}$ ＋ 对 $j$ 计数 ⟹ $\sum_j\gamma(e_i\oplus e_j)$ ✓；**对照 $i=0$：$\sum_{c\in C}\delta(c)=2N_1=A_1$（无标号 ✗）⟹ 标号内容只在 $i\ge1$ 出现** ✓
+- 【**★R3-2 逐坐标上界（新形式 ✓✓）**】$\delta\ge0\wedge C\oplus e_i\subseteq H$ ⟹ $0\le\mathrm{star}_i\le11m-1024$ ⟹ $m=119$：$\mathrm{star}_i\le\mathbf{166}$ ⟹ 换对计数：$$\boxed{N_1^{(i)}+\sum_{j\ne i}q_{ij}\le83}$$ （每坐标至多承载 83 个二阶关联 ⟹ 距离-2 质量**不能过于均匀摊开**）✓；全求和给 $N_1+2N_2\le830$ ✓（弱但真）
+- 【**★R3-3 标号正定性（Gram/PSD ✓✓）**】$G_{ij}:=\langle\mathbf 1_{C\oplus e_i},\mathbf 1_{C\oplus e_j}\rangle=\gamma(e_i\oplus e_j)$ ⟹ $$\boxed{G\succeq0}$$（对角 $=\gamma(0)=m$，非对角 $=2q_{ij}$）⟹ $q_{ij}\le m/2$（$m{=}119$：$\le\mathbf{59}$）✓；扩展：$D_1=\{0\}\cup\{e_i\}\cup\{e_i\oplus e_j\}$（$|D_1|=56$）上的 $(\gamma(v\oplus w))_{D_1}\succeq0$ ✓
+- 【**★★NO-GO 检验（唐先生要求）**】逐坐标量是否必然坍缩到 $A_1,\dots,A_{10}$？**结论：不坍缩 ✓✓** —— $\sum_i\mathrm{star}_i=A_1+2A_2$ **坍缩** ✓，但**单项 $\mathrm{star}_i$ 与 $G$ 的标号项不坍缩** ✓（$A$ 只给 $\sum_i\gamma(e_i)=A_1$、$\sum_{i<j}\gamma(e_i\oplus e_j)=A_2$；单项 $i$ 的 $N_1^{(i)},q_{ij}$ 不可由 $A$ 决定 —— P12-PASS 见证同 $A$ 异 $\{q_{ij}\}$ ✓）⟹ **二阶 coordinate-labelled 路线未被 $A_i$ 吃掉**（**不是** NO-GO 情形 ✓）
+- 【**⚠️ 诚实标注**】所得约束**目前偏弱**——尚无 $m=119$ 的矛盾 ✗；**路线活着但未通** ✓
+- 【**下一步两路径**】**甲**：需逐坐标**下界** $N_1^{(i)}+\sum_{j\ne i}q_{ij}\ge L_i$；若 $\exists i:L_i>83$ ⟹ 118/119 直接证否 ✓（候选来源：固定坐标 $i$ 的一维覆盖局部论证 ⚠️）｜**乙**：**三阶标号** $\sum_x F_iF_j\delta=\sum_{x\in C_i\cap C_j}\delta$（＝ $|C_i\cap C_j\cap C_k|$ 型二差相关 $\gamma^{(2)}$），与无标号的 $T=\sum\binom b3=Q+\sum\binom\delta3$ 形成标号/无标号对照 ✓
+- 【**与既有档的关系 ✓**】`SECOND-ORDER-2026-09-25` 为**无标号**二阶链（$P=E+Q$、$P=2(A_1{+}A_2)$、$Q$ 奇、$A_1\le142$）；**本档为其逐坐标加标签**（非重复 ✓）
+- 档：`docs/R3-2026-09-27-coordinate-labelled-excess-and-the-no-go-test.md`
