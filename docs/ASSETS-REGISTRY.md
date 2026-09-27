@@ -1166,3 +1166,9 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **$k{=}2$ 理论封口 🔴**：成对边际的全部信息 $=\{$1-点密度$\}\cup\{d{=}1,2\ \text{成对相关}\}$ ⟹ 恰可定出 $(A_1,A_2,M)$ ⟹ 按 A4-GATE **STOP** ✓。
 **$k\ge3$ 被支配 ⭐⭐**：$k$-窗口边际松弛 $\mathcal L_k$ 属 **Sherali–Adams 型**，而 $\mathrm{SA}_k\subseteq\mathrm{SOS/Lasserre}_{O(k)}$ ⟹ $\mathcal L_k\subseteq$Lasserre ⟹ 同阶 Lasserre 更强 ⟹ **A4 全族不能在 Lasserre 之外给新证书** ✗（档案实测 Delsarte+SDP = **105.2223** < 119 ✓）。
 **真正收获 ✓**：定位唯一活口 = 档案 **L3B Level 4（$n{=}10$，$1024\times1024$ PSD）"BLOCKED pending reduced implementation"**，且**两个后台 run（tidal-glade／marine-nudibranch）从未轮询** ⚠️ —— 这是 119 线上唯一具体、未完成、可推进的对象（计算型）。
+
+
+## A-LEDGER119-1（2026-09-27）
+**(乙) 清账结论**：运行环境干净（仅 gateway ✓，无 python3 残留/core ✓）；**两个后台 run（tidal-glade／marine-nudibranch）无日志/产物 ✗**（work 树无 reduced-SDP/bmat/Terwilliger 产物）⟹ **低成本恢复路已尽，须重算** ✓。
+**剩余项定位 ✓**：L3B 线今日 12:01–12:07 有进展（A-L3B-2 ✓／B-L3B-1 ✓／**C-L3B-1 Lasserre $\eta$ 闭式**，D1=0 纯重建）；**AC-5 ⚠️ 约定未钉死**（论文 $d=|w|$ vs 作者代码 $\texttt{dist}=d(v,w)$）⟹ 唯一剩余工程项 = **R2（块约化 SDP ＋ $(\eta,\lambda)$ 索引约定）**，且其 $\texttt{bmat}$ **border-assembly bug 已知**（$\texttt{cp.vstack}$ 尺寸 6 vs 5，$k{=}0$ bordered 块）。
+**期望收益（诚实）**：完成 R2 ⟹ 关闭 **Level 3（复现/验证层）**；**不**直接产出 $\ge120$ 新界（档案 SDP = 105.2223 < 119）。
