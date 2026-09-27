@@ -1741,3 +1741,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) C-411 NO-GO 作用域修正（诚实 ✓✓）**】C-411 §3 的"本文全部局部构型的点皆 $\le1$"**只对该档研究的构型类**（square／tetra／中点／公共邻居 ✓，其点皆为码字或其 1-邻居）成立 ✓；**$d=3$ 点不在其作用域内** —— $x$ 与 $B_1(c)$ 不相交 ⟹ 覆盖责任**真实存在** ✓✓ ⟹ **$d=3$ 路线不是 C-410 的重复；唐先生判定正确** ✓（"自动覆盖"检查 **PASS，未关闭** ✓）；**NO-GO 的正确表述**：covering 只在"到所有码字距离 $\ge2$"的点上有约束力，而 $d=3$ 点**可能**远离一切码字 ⟹ 约束真实 ✓
 - 【**边界**】零程序计算；**未进入 tetra 共存分析** ✓（照唐先生"先做最小检查" ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；**不声称**已产生矛盾 ✗（"没有自动覆盖" $\ne$"已产生矛盾" ✓）；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-D3-2026-09-27-forced-high-layer-codeword-theorem-and-the-no-go-scope-correction.md`
+
+**🔀 C-413（2026-09-27 · **P1-D3b：共享判据核验 ＋ $C(s,4,3)$ 方向纠正 ＋ 零改进判定**）** ✓
+- 【**★(1) 共享判据核验通过 ✓✓**】$y=c\oplus S$（$|S|=4$）同时覆盖 $x_{T_1},x_{T_2}$ $\iff d(y,x_{T_i})=1\iff T_i\subset S$ 且 $|S\setminus T_i|=1$ $\iff T_1\cup T_2\subseteq S$（$|S|=4$）$\iff|T_1\cap T_2|\ge2$ ⟹ $$\boxed{\text{共用一 weight-4 码字}\iff|T_1\cap T_2|=\mathbf 2\ (\text{此时 }S=T_1\cup T_2\ \textbf{唯一})}$$ ✓（$|T_1\cap T_2|=0,1$ 不能共享 ✓）
+- 【**★(2) 结构澄清（本档 ✓）**】4-集 $S$ 的四个 triples 两两交 2 ✓（＝ tetra 的**面**组合学 ✓）；对应四点 $x_T=c{\oplus}e_{(T)}$ 满足 $d(x_{T_1},x_{T_2})=|T_1\triangle T_2|=2$ ✓、$d(y,x_T)=1$ ✓ ⟹ 四点是 $y$ 的四个邻居 ⟹ 按 R7 四族目录为 **star（已实现，球心 $y$）** ✓✓ ⟹ **该结构计入 $T_4=N_{\rm claw}+N_{\rm star}$ 而非 $\Delta_4$** ✓（forced-$d_4$ 结构耦合到 realized 计数 ✓）
+- 【**✗(3) 方向性纠正（关键）**】covering-design 框架**结构正确** ✓（$F_4(c)$ 须覆盖 $S(c)$ 的全部 3-子集 ✓），但 $$\boxed{d_4(c)\ge C(s(c),4,3)\ \textbf{未成立}}$$ ✗✓ —— **原因：混合块（$j=|S\cap S(c)|=3$，即 3 内＋1 外）未被任何已证约束禁止** ⚠️：$j=4$ 块计入 $\binom43=4$ 个待覆盖 $T$ ✓、$j=3$ 块仅计入 $\binom33=\mathbf 1$ ✓、$j\le2$ 计入 0 ✗ ⟹ 容混合块的族其**块数可少于 $C(s,4,3)$** ✓ ⟹ **有效下界仍是容量界 $\lceil\binom s3/4\rceil$** ✓；$C(s,4,3)$ 属**上界侧参考**（方向须颠倒才自洽 ✓）
+- 【**★(4) 数值现实检查：零改进 ✗**】$s\equiv2,4\ (\mathrm{mod}\ 6)$ 时 Steiner 系 $S(3,4,s)$ 存在 ⟹ $C(s,4,3)=\binom s3/4$ **恰为容量界** ✓✓；**关键例**：$s=\mathbf{10}$：$C(10,4,3)=30=\lceil\binom{10}3/4\rceil$ ✓（Witt $S(3,4,10)$ ✓）；$s=8$：$14=14$ ✓（$\mathrm{SQS}(8)$ ✓）⟹ **最大情形下 covering-design 升级给出恰好零改进** ✗✗；只有 $s\not\equiv2,4\ (\mathrm{mod}\ 6)$ 才有小差额（如 $s=7$：容量 9 vs 无 Steiner ⟹ $>9$；具体值档级 ⚠️）
+- 【**现状 ＋ 下一步（诚实 ✓）**】已确立：① 共享判据；② 共享结构 ＝ 已实现 star（入 $T_4$ ✓）；③ $d_4$ 有效下界 ＝ 容量界 ✓；④ $C(s,4,3)$ 不作下界 ✗；**仍缺**：**独立的 $d_4$ 上界**（用于夹逼 ⚠️），且须**非 profile 型**（见 R7 STOP／C-409 ✓）；**本档未产生矛盾** ✗
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）；$s=7$ 具体值标档级 ✓；Witt／SQS 存在性为档级引用 ✓
+- 档：`docs/P1-D3b-2026-09-27-sharing-criterion-verified-and-the-covering-design-direction-correction.md`
