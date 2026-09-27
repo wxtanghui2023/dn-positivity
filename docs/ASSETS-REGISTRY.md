@@ -1508,3 +1508,16 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**首批扫描提案（round-1 ⚠️ · 非候选 · 下轮走全流程）**】B1 unicyclic／bicyclic 图 inertia（DMGAA）｜B2 树的 inverse eigenvalue（重数表／generalized stars）｜B3 spectral arbitrariness for trees（JCTA 2024）｜B4 Turán $(r+1,r)$-systems（2026-08-25 改进界）｜B5 $\pm$-rank 及 rank 不等式族（ILAS 2026，与 T-8 同源 ⚠️ HOLD）✓
 - 【**本轮研究资产（比单个 $K(10,1)$ 结果更重要）**】$$\boxed{\text{无【对象指纹＋后继链＋资产隔离】的大候选池，会系统性产生\textbf{假开放问题}}}$$（五连 DROP ＋ T-4 ＋ M1 族级关闭为证 ✓）
 - 档：`docs/POOL-SWEEP-2026-09-27-T2-T3-T8-final-cleanup-and-restock-protocol.md`
+
+**📋 C-391（2026-09-27 · **RH 证明链逐环难点拆解**（重审 `CHAIN-AUDIT`））** ✓
+- 【**难点的分布（核心结论）**】$$\boxed{\text{难点\textbf{不}均匀}:\ [C]\ \text{古典但循环};\ [A]\ \text{数十族已关闭＋算术接口负结果};\ [B]\ \text{唯一缺口}}$$ 且 **$[B]$ 内部 11 子难点在依赖图上收敛到 1–2 个节点** ⟹ **"很多难点"压成"一个对象 + 若干侧写"** ✓✓
+- 【**该对象（精确形式）**】$$\boxed{\text{正性}P:\ \text{充分（非必要）}\wedge\text{算术内生（非重述）}\wedge\beta\text{-敏感（非盲）}\wedge\text{越过 support }1\text{（相位感知对相关）}}$$ 同时被 **W1／W5／W6／W12／W2** 从五侧封住 ✓
+- 【**环 [A] $S$（5 条）**】A1 内生性（W3 值面墙）｜A2 非重述（零杠杆／T7）｜A3 $\tau$／相位双产（D10/AOB2，"寻找 $\tau$"已关闭）｜A4 对象防线（D8 三个 $\frac12$／D9 对象混淆）｜A5 已关闭候选数十族（§三关键词表＋G8–G20＋$c_p$ 线）✓
+- 【**环 [B] $P$（11 条，四组）**】①合法性：**B1** 充分≠必要（Newton/Turán 必要非充分；RH 为 $\Pi_1$ ⟹ 有限验证不构成证明）｜**B2** 正性即循环（W5 已封／W2 承重墙）；②能力边界：**B3** $\beta$-盲（**W1，唯一数学残差**，"检测≠排除"）｜**B4** support $>1$（W6 合并登记／W12 $=\frac23$，我方 $0.682$）｜**B5** 非自伴谱刚性（W11／L1 NO-GO；虚 Airy 振子反例）｜**B6** 信息墙（W8）；③输入—选择力：**B7** K2-E″（只给大小界/可和性/截断 ⟹ NO-GAIN；V113/V114 两次确认）｜**B8** 相位感知聚合缺口（单频压制可行 $\delta_0=2.93993$／$C_0=23.6114$／增益 $1.11\times10^5$；但 $M_R=\sum|b_j|=\infty$ ⟹ 障碍＝谱系数**可和性**，与截断/坐标无关 ⟹ 需零点对相关；E117/E121 已关）；④转换处：**B9** 均匀性（D1：Burnol 原文"uniformity as $A\to0$"三次出现；但 CONV2/CONV3 多处**撤回** ⟹ **非统一墙**）｜**B10** 振荡项（D3：$M(T)=O(1)\iff$ Lindelöf 级）✓
+- 【**环 [C] $P\Rightarrow Z$（2 条）**】**C1** 古典但零杠杆（$P$ 本身 ≡ RH）｜**C2** 有限⟹无限传输失败（D5 moving-edge；W10 散射钉住＝第二次总封口）✓
+- 【**元环 [M]（3 条）**】**M1** 消解式模式（E160 逐字："audit-and-reduce：只能产出负结果与等价关系，**没有生成步**"⟹ **反复复发的元难题**）｜**M2** 墙体汇聚（W3–W5 **三面一墙**；W6／W12 **同一对象**；W4 限定 DEAD ⟹ 三墙汇合 ⟹ **结构性非执行性**）｜**M3** 实现级自查（8 次实现错误 ⟹ "结果异常先怀疑自己的分支"）✓
+- 【**§6 同一性（最关键的拆解结果）**】$B3\equiv B4$（W6 合并：support>1 ⟺ prime-pair ⟺ $X\le T$ ⟺ bandwidth-one ceiling ⟺ $0.682$ ⟺ $\frac23$ ⟺ FSC/MV）｜$B2\equiv C1$｜$B5\Rightarrow C2$｜$B8\Rightarrow$ 需要 $B4$ ✓
+- 【**§7 两周增量对链的影响**】**无任何一环被关闭或推进** ⚠️：C-380（完成＋关闭，**不得**当 RH 进展；新增一条 [A] 负结果）｜算术接口负结果（加强 A1/A5）｜TLDC 冻结（**PL 门整批排除聚合类** ⟹ 加强 [B] 无候选）｜model-first 生成器路线耗尽（再次落到 B3/B4）｜A/B 空间解耦｜本轮池级清扫属 B 空间（仅新增方法论纪律）✓
+- 【**项目级"最小最不坏"提法**（E102 §8 靶1）】"$\zeta$ 零点能否**不经解析延拓**被素数数据 canonically 识别？" ⟹ 绕开 $P$ 的循环形态，**但仍需 $\beta$-敏感** ⟹ 落回 **B3** ✓
+- 【**一句话**】链的难点**不在任一环节的技术细节**，而在"$[B]$ 要求一个既充分又不循环、且能穿透 $\beta$-盲与 support-1 天花板的正性"——**而这两道天花板本身就是同一道墙** ✓✓
+- 档：`docs/CHAIN-REAUDIT-2026-09-27-per-link-difficulty-decomposition.md`（**纯审计 · 零新术语 · 未动算** ✓）
