@@ -1201,3 +1201,10 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **一般命题 ⭐⭐**：任何 $\lambda\ge0$ 的 $\sum_x\lambda_x(\text{covering at }x)$ 都是原约束正组合 ⟹ **恒被蕴含** ⟹ **全部正系数和式型割（投影／子立方／局部和式）先验上不可能改进 LP** ✗✓（解释 A4/SA 之无力为**结构性**）；有用割必须来自锥外（Boolean/整数性或 SOS 二次层）✓。
 **实测**：$n{=}4..8$ 加割后 LP **完全不变**（+0.0000）✓。
 **状态锁定**：ILP RUNNING ＋ projection-cut STOP；不增加 119 计算 ✗；ILP 若 UNKNOWN ⟹ 再启专用随机搜索（先做 source-first 算法核验 ✓）。
+
+
+## A-MIPRUN-1（2026-09-27）
+**bound 表述纠错 ✅（接受唐先生 ✓）**：$94.027>93.09=2^{10}/11$ ⟹ 当前 MIP 的节点松弛＋切割体系较裸 LP 提升约 $0.94$ ✓（**具体运行观察**）；但**不是**对任何 relaxation family 理论最优值的证明 ✗（有限时间 bound ≠ 族下确界 ✗）—— 撤回我"线性/对偶侧根本够不着 119"之过度主张 ✗。唯一可确认：$94.027\ll119$ ⟹ 本次运行未显示接近 P1 迹象 ✓。
+**分叉锁定 🔒**：单次 exact MIP 跑满 900s（成本已付 ✓，无需截断 ✓）；终态后：① $\le119$ 整数解 ⟹ 取 $C=\mathrm{supp}(f)$ ＋ **独立验证** $|C|\le119\wedge\forall x:|C\cap B_1(x)|\ge1$ ⟹ P2 witness（方成立 ✓）；② BestBound 远低于 120 或 UNKNOWN ⟹ **MIP STOP** ⟹ **source-first 核验后转专用随机搜索** ✓。
+**区分 ✓**：MIP = 证 feasibility/infeasibility；专用搜索 = **直接构造 119-word witness** ⟹ 后者属明确 **P2 construction attack**，非"换 solver 再赌" ✓。
+**运行记录 ✓**：int10c.py（min Σf, Tf≥1, f∈{0,1}, f₀=1, HIGHS 1.15.1, 900s）—— 51.1s: bound 94.027/sol 150; 181.7s: bound 95.312/sol 139; 232.9s: bound 95.318/sol 139, gap 31.43% ✓（对称检测找到 10 生成元 ✓ 印证平移破缺 ✓）。
