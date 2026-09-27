@@ -1470,3 +1470,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**正面 open 证据 vs 检索缺口**】作者自述（2026-08 自检索）"$q\ge6$ 自 2011 无任一侧改进"＝**正面证据** ✓；但**同篇已收割 58 个 $6\le q\le21$ 下界** ⟹ 剩余"未见表"格属**检索缺口**，依 G-2/G-4 **不得当 open** ✗
 - 【**唯一副产品（登记为可迁移资产观察 ⚠️ 档级 · 3 行可证 · 未跑）**】**Lemma A 的 $q$ 元推广**：$\mathbb Z_q^n$ 中 $|B_1(x)\cap B_1(y)|=2$（$d\in\{1,2\}$）／$0$（$d\ge3$）✓ —— 仅给**局部**重叠计数，**不**自动给全局下界 ⟹ 不足支撑 T-6 ✓
 - 档：`docs/T6-CHECK-2026-09-27-fingerprint-successor-chain-race-check-DROP.md`｜库存已标 DROP：`TOPIC-DOSSIER-v1`、`CONCRETE-TOPIC-LIST-r2` ✓
+
+**🔴 C-387（2026-09-27 · T-7 `PG(2,q)` minimal 1-saturating sets ＝ **DROP**）** ✗
+- 【**资产隔离检查：失败** ✗（唐先生 21:15 专门要求）】$\ell_1(2,q)$（1-saturating set 最小尺寸）与 $K_q(n,1)$ 经**经典 parity-check／syndrome 桥**为**同一 functional** ⟹ 只是把 Hamming 空间的覆盖证书逻辑**换成射影平面的割线覆盖逻辑**；`TOPIC-DOSSIER-v1` T-7 **自陈**"与 T-6 **同机制**（syndrome 覆盖 ↔ saturating）" ✓ ⟹ 依规则**直接 DROP，不许进入计算** ✓
+- 【**后继链（逐字 ✓）**】Pambianco 等 2003（Australas. J. Combin. 28:161–169）表基座；**分类已到 $q\le23$**（Bartoli–Marcugini–Milani–Pambianco, ACCT 2012；Bartoli–Davydov–Faina–Marcugini–Pambianco, *J. Geometry* 2013：*"the minimal 1-saturating sets of the smallest size in $PG(2,q)$ are classified for $16\le q\le23$"*）✓✓；上界线连续（arXiv:1505.01426、arXiv:1702.07939、Nagy 渐近界）；**2026 仍有新文**（**arXiv:2606.16669** 几何法广义覆盖半径）⚠️
+- 【**同形赛跑：逐项撞上 ✗**】同参数／同等价／同构造族（割线覆盖构造）／**同作者血统**（Pambianco｜Bartoli｜Marcugini｜Davydov｜Faina｜Nagy，与 T-6 的 Kéri／Marosi 社区交叉）✓
+- 【**P1/P2 novelty gate：答不出 ⟹ DROP**】T1（删 4 码字的局部捕获账本）／T2·T4（$E$-专有耦合）／T5（仅局部重叠计数）／L3-α（单码有限证书）**均不**对"全局最小尺寸"产生新约束 ⟹ 强行做＝**旧约束换参数／换表示**（禁止形态 ✗）
+- 【**P3：deliverable 无法预先说清**】最可能产物＝"某 $q$ 的上界改进"或"小 $q$ 重算／形式化" ⟹ 两者均为唐先生**明确排除**者 ✗
+- 【**⚠️ 阈值漂移（第二轮）**】库存 T-7"前沿"写 $q\le16$；实际**分类到 $q\le23$** ⟹ 同 T-5 的 $6\to7$ ⟹ 强化 **G-4**（阈值类须追后继链）✓
+- 【**池级读数（本档真正产出 ⚠️）**】四连 DROP 三类死因：T-1 预登记撞车＋赛跑｜T-5 对象级收割＋阈值漂移｜T-6 赛跑全面＋证书链工业化｜T-7 **资产隔离失败**＋同族＋阈值漂移 ⟹ 池内**"表填空族 M1" 四格全落在"覆盖／支配／饱和"同一生态且已被工业化** ⚠️ ⟹ 建议（非决定）：**(a)** 对 M1 族做**族级判决**；或 **(b)** 转向**非同族**余项（**T-4** SNIEP $n=5$／**T-8** $\pm$-rank，属**方法族 M2：秩/惯性**，不涉覆盖证书）✓
+- 档：`docs/T7-CHECK-2026-09-27-fingerprint-race-and-asset-isolation-DROP.md`｜库存已标 DROP：`TOPIC-DOSSIER-v1`、`CONCRETE-TOPIC-LIST-r2` ✓

@@ -81,6 +81,8 @@ FREEZE-ACK: D1=0
 
 ## **T-7 `PG(2,q)` 的 minimal `1`-saturating sets**（候选）
 
+> ⛔ **2026-09-27 出口：T-7 ＝ DROP**（**资产隔离检查失败**：$\ell_1(2,q)$ 与 $K_q(n,1)$ 同一覆盖逻辑，仅换表示；图书馆自陈"与 T-6 同机制"）；同族赛跑（Pambianco/Bartoli/Marcugini/Davydov/Faina/Nagy）；**分类已到 $q\le23$**（库存旧记 $q\le16$ 过时 ✗）；2026 仍有新文 ⟹ 详见 `docs/T7-CHECK-2026-09-27-fingerprint-race-and-asset-isolation-DROP.md` ✓
+
 ```
 **【领域】** 有限几何 / 射影平面 ✓
 **【内容与要求】** `P`：具体 `q` 的最小 1-saturating set 尺寸。要求：精确值或改进界 ✓

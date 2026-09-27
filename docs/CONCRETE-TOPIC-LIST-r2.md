@@ -44,6 +44,7 @@ FREEZE-ACK: D1=0
 **【T-7】`PG(2,q)` 的 minimal `1`-saturating sets（具体 `q`）**
 　已知：`q\le16` 有表；大 `q` 只有界｜ 缺口：**具体 `q` 的精确最小尺寸**｜ 资产：`A✓ D✓`（有限几何 + 精确枚举/证书）｜ 规模：`PG(2,q)` 点数 `q^2+q+1`，小 `q` 可行 ✓ ｜ 等级：**档级**（表存在性须核）
 　**状态：候选** ⚠️
+　⛔ **2026-09-27 出口：DROP**（资产隔离失败：与 $K_q(n,1)$ 同一覆盖逻辑；同族赛跑；分类已到 $q\le23$，库存旧记 $q\le16$ 过时）⟹ 见 `docs/T7-CHECK-2026-09-27-fingerprint-race-and-asset-isolation-DROP.md` ✓
 
 **【T-8】`\pm`-rank of `(0,\pm1)`-matrices（小阶/特定类）**
 　已知：`ILAS 2026` 有报告建立 `\pm`-rank 与 binary/term/实秩的不等式｜ 缺口：**具体阶数或类（如 ASM）上的精确值/界** —— **未锁定** ⚠️ ｜ 资产：`E D`
