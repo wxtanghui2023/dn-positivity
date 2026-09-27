@@ -1140,3 +1140,9 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **正确耦合 (C3′) ✓**：$\sum_kN_k\binom k3=\#\{\{c_1,c_2,c_3\}:\mathrm{wt}(u),\mathrm{wt}(v),\mathrm{wt}(u\!+\!v)\le2\}$（左 profile、右坐标几何）。
 **三元组分类 ✓**：星型（$u{=}e_i,v{=}e_j$ 或 $u{=}e_i,v{=}e_i{+}e_j$，支撑并 $\le2$）／带状（$u{=}e_i{+}e_j,v{=}e_i{+}e_k$，支撑并 3）／**非可达**（不相交 2-集 ⟹ $\mathrm{wt}(u{+}v){=}4$ ⟹ 交 $\varnothing$，贡献 0）。
 **判定 = 坍缩（第 16 次同向收敛）**：(C3′) 两侧由恒等式相连 ⟹ 右侧非独立量；自然独立界（三角计数）对相关 $T$ 值太松（$Q{=}1$ 时 $T{=}1$）⟹ 未得独立坐标不变量 ⟹ **封口** ✓。$K(10,1)=119$ 保持 UNKNOWN。
+
+
+## A-INCIDENCE-1（2026-09-27）⭐⭐
+**关系全表 ✓**：$A=T\,P_C$（$T=I+\sum_i\sigma_i$）；$b=A\mathbf 1_M=T\mathbf 1_C$；$\boxed{A^{\mathsf T}A=(n{+}1)I+2\mathrm{Adj}(G_{\le2}(C))}$（**纯码侧距离结构**）；$(AA^{\mathsf T})_{x,y}=|B_1(x)\cap B_1(y)\cap C|$；$\widehat T(\chi)=n{+}1{-}2|\chi|$ 无零 ⟹ $T$ 可逆（$n{=}10$：$\{11,9,7,5,3,1,-1,-3,-5,-7,-9\}$）。
+**新定理 ⭐**：$0\in\sigma(A^{\mathsf T}A)\iff-\tfrac{n+1}{2}\in\sigma(\mathrm{Adj})$；$\mathrm{Adj}$ 整对称 ⟹ 特征值皆代数整数 ⟹ **$n$ 偶时 $A$ 列满秩 $=|C|$ ⟹ 映射 $C\mapsto b$ 单射（profile 决定码 ✓✓）**；对照：$n{=}1,C=\mathbb F_2$ 秩 1 < 2（故"偶"不可去）。
+**定理级解释 ✓**：由满秩得 $\mathbf 1_C=(A^{\mathsf T}A)^{-1}A^{\mathsf T}b$ **线性** ⟹ 唯一非线性 = Booleanity ⟹ **任何只用 $b$ 的证书自动等价原问题（不可松弛）** ⟹ 这解释了档案 M-1(CIRCULAR)／M-2A(CLOSED)／Fourier audit("坐标变换而非松弛") 三处封口。难处被定位为 **"哪些 $b$ 可实现"**（= P1-B BLOCKED 处）。
