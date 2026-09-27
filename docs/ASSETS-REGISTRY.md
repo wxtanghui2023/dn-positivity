@@ -895,9 +895,9 @@ $$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\bin
 ## A-ZETABOUND-1 · surfeit 诱导的显式 $A$ 上界（2026-09-27 立 ✓，**小资产** ✓）
 
 **性质** ✓：显式有效界（**不计为机制** ✗）。
-**内容** ✓：对任意 radius-1 覆盖码 $C\subseteq\{0,1\}^n$, $|C|=M$：$A_1+A_2\le\frac{M(n^2+2n+3)-(n+1)2^n}{4}$ ✓。
+**内容** ✓：对任意 radius-1 覆盖码 $C\subseteq\{0,1\}^n$, $|C|=M$：$A_1+A_2\le\frac{(n+1)E}{4}=\frac{(n+1)(M(n+1)-2^n)}{4}$ ✓（2026-09-27 **更正** ✓：旧式 $n^2{+}2n{+}3$ 为笔误 ✗）。
 **来源** ✓：$\zeta=M(n^2+2n+2)-(n+2)2^n-4(A_1+A_2)$ ✓（本机 6/6 精确验证 ✓）＋ $\zeta\ge-(2^n-M)$ ✓。
-**比较** ✓：6 例中 5 例强于纯 Delsarte LP 上界 ⟹ 不在 Delsarte 线性包络内 ✓；但高于实测 $3\times\sim8\times$ ⟹ **valid but non-leveraging** ✓。
+**比较** ✓：6/6 例强于纯 Delsarte LP 上界 ⟹ 不在 Delsarte 线性包络内 ✓；但高于实测 $3\times\sim8\times$ ⟹ **valid but non-leveraging** ✓。
 **诚实备注** ⚠️：实质等价于 $\zeta\ge-(2^n-M)$ 的重写；文献是否已有未查 ✓。
 **细档**：`docs/PHASE2-AUDIT-2026-09-27-surfeit-global-pair-collapse.md`
 
@@ -912,3 +912,12 @@ $$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\bin
 **决定性数据** ✓✓：$n=9,K=62$ 双码 —— profile／$A=73$／$T_3,T_4,S_2,S_{2b},H_H,P_2$ **全同** ✓，而 $(A_1,A_2)=(7,66)$ **vs** $(26,47)$ ⟹ **分裂自由度存在** ✓。
 **细档**：`docs/PHASE2-KEY-2026-09-27-ball-collapse-theorem-and-the-A1-A2-split.md`
 **数据源**：`work/k10/c62/K_9_1_classif.txt` ✓
+
+
+---
+
+## A-Q0-1 · Q0 二次展开判定（2026-09-27 立 ✓）
+
+**结论** ✓：$\zeta+(2^n-M)=(n+1)E-4A=\sum_x\delta(x)(n-\delta(x))$ ✓（本机 6/6 精确 ✓）⟹ 码层内容 = **线性界** $A_1+A_2\lerac{(n+1)E}{4}$ ✓ ⟹ **Q0-a 与 Q0-b 双命中 ⟹ STOP，不上 SDP** ✓。
+**登记类别** ✓：valid / non-profile-appearing quadratic constraint, but **no leverage beyond the linear bound** ✓。
+**细档**：`docs/PHASE2-Q0-2026-09-27-quadratic-expansion-verdict.md`
