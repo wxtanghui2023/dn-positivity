@@ -830,3 +830,15 @@ G3 缺口 ≠ envelope 精度
 **性质 = 复现／验证 harness** ✓（**非**已证数学资产 ✗）：其证据属 **计算验证**（外部锚点 $n=6,7$ 命中 ＋ 特征值审计 $10^{-13}$ 级 ✓），**不含**数学证明 ✓。
 **分级纪律** ✓：`文献复现 → 计算验证 → 数学证明 → 新数学结果` 四层**不得混写**；在 Level 3B（独立证明链：基／代数分解／重数／$eta$ 来源／归一来源 ⟹ PSD 等价）完成前，**禁止**写"已证明 formulation 等价" ✗。
 **细档**：`docs/LEVELS-2026-09-27-four-tier-separation-and-3B-pending.md`
+
+
+---
+
+## A-BETA-GF-1 · $eta$ 的显式生成函数（2026-09-27 立 ✓，**(i) 闭合** ✓✓）
+
+**内容** ✓：论文的 Terwilliger block 系数满足
+$$\beta^{\rm paper}_{i,j,k,t}=[p^{i-k}q^{j-k}r^t]\,(r-1)^k\big(1+p+q+pqr\big)^{n-2k}\ ✓$$
+**两条独立证明** ✓：(a) $\nu$-侧（$\alpha$-展开 ＋ $(r-1)^k$ 二项 ⟹ 逐项系数 ✓）；(b) $u$-侧（生成函数求和：$t$-和 $=(r-1)^u$ ✓、$i,j$-和 $=(1+p)^{n-k-u},(1+q)^{n-k-u}$ ✓、二项式收口 ✓）。**关键代数巧合** ✓：$(1+p)(1+q)+(r-1)pq=1+p+q+pqr=\alpha$ ✓。
+**桥（raw ↔ Schrijver）** ✓：$\widehat\beta=[(j-k)!/((i-k)!\binom{n-2k}{i-k})]\,\beta^{\rm paper}$ ✓（$6$ 组 $501$ 组 $(i,j,t)$ 零不符 ✓）。
+**边界** ⚠️：本式对 $\beta^{\rm paper}$（标准化 block 系数 ✓）成立；raw 链侧须经上述桥 ✓；Level 3B 的最终合并（(iv)）未做 ✗。
+**细档**：`docs/IDX2-2026-09-27-u-side-generating-function-identity-CLOSED.md`、`docs/L45-...md`
