@@ -1013,3 +1013,7 @@ e v\in S\Rightarrow u+v\in S$ ⟹ $S\cong PG(d'-1,2)$（$n=16$：$d'=3$ 给 Fano
 **145 例 $\lambda$ 扫描**（affine 16 + 二次 64 + 具名 5 + 随机 60）：**INVALID=0**；**star 145/145**；flat 89 / **非 flat 56**。**判据**：flat $\iff$ $|S|\mid A_2$（此时切片 $\equiv A_2/|S|$）。**精化律（详验 ✓✓）**：$\mathrm{supp}\,
 u=(a+W)\setminus\{0\}\sqcup(b+W)$，$W=\mathrm{span}\{2,4\}=\{0,2,4,6\}$，且 $
 u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM-1 为线性半码退化特例 ✓。**affine $\lambda$（16/16）全部 flat** ✓；$a=7$ 给单陪集 $|S|=3$、$A_2=1536$ 仍 flat ✓。十二结果类与 $J$ 已登记（见档 §1）。边界：非全部 $2^{15}$ 个 $\lambda$ ⚠️；$W$ 恒定性未证 ⚠️。
+
+
+## A-CLOSEDFORM-1（2026-09-27）⭐
+**ν 闭式（推导 ＋ 143 例验证 ✓）**：$q=X*C$，$X(x)=\alpha(x)\oplus\beta(x)\oplus15|x|$，$C(c)=\beta(c)\oplus15\lambda(c)$；**$X$-分布 $=\{0,2,4,6\}$ 各 32** ⟹ $X$ 在 $W=\mathrm{span}\{2,4\}$ 上均匀 ⟹ **陪集常值被强制**（非经验 ✓）。两陪集值 $=\mathbf{32s}$ 与 $\mathbf{32(16-s)}$ ⟹ **和恒 512 ✓**；**flat $\iff s=8$**（$q\equiv256$ ✓）；$A_2=2048-32s$ ⟹ $7\mid A_2\iff s\equiv1\pmod 7$，实测 $s\in\{2..14,16\}$ ⟹ 唯一 $s=8$ ⟹ **经验判据「flat $\iff|S|\mid A_2$」由此推导解释 ✓**。统计：flat 89 / 两值 54（54/54 和=512 ✓）/ 三值以上 **0** ✓。**两处实现层更正 ✓**（距离-2 对双重中点致重复计数；互补检验误用值列表）。余项：$s(\lambda)$ 纤维表达式 ⚠️、$s\notin\{0,1,15\}$ ⚠️、$W$ 恒定性 ⚠️。
