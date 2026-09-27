@@ -1893,3 +1893,16 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
  ③ **真正新的部分 ＝ "$\mathrm{structured}\ S$ 而非完整层"** ⚠️：须与 (a) Habsieger 的**层同余** ✓ 与 (b) **C-417 的层坍缩** ✓ **皆不同** ⟹ 需**新的证明机制**（Habsieger 的证明依赖层/湮灭多项式结构 ✓）⟹ **HOLD** ✓
 - 【**状态 ✓**】候选 #1（私邻/Hall）：**STOP（归约 ⟹ 非新 ✓）**；候选 #2（结构子集同余）：**HOLD** ✓；**战略更新**：**上界侧可达**（$120\to119$ ✓）、起步用文献 120 ✓；本档零程序计算；未改门；不跨空间；不声称 P1 成立／不成立 ✗（V290）
 - 档：本条目（registry-only ✓）
+
+**🔁 C-428（2026-09-27 23:52 · **两候选 P0：fort ⟹ STOP；开邻域+Walsh ⟹ STOP（＝已审计对象第 3 次回潮）＋ 复现守卫**）** ✓
+- 【**✗候选 A：fort transversal ⟹ STOP**】① 唐先生已自证：**纯 fort-transversal ＝ domination 本身**（$D\cap N(v)\ne\varnothing$ 就是 domination ✓）⟹ 无新下界 ✓；② **本档补**：minimum fort 刚性（$d\ne4$ ⟹ 最小 fort 皆 open neighbourhoods $N(v)$ ✓）⟹ "击中全部 $N(v)$" 的条件 $=$ **全支配（total domination）** ✓✓ ⟹ **与 domination 是\*\*不同参数\*\*** ✗（支配集 $D$ 不必全支配：孤立码字 $c$ 有 $N(c)\cap D=\varnothing$ ✓）⟹ **不存在"119-支配 ⟹ fort-transversal 性质"的交叉不等式** ✗✓；③ 且零强迫参数与 domination 仅在**维数为 2 的幂**时等同 ✓（$10\ne2^k$ ✗，照唐先生 ✓）
+- 【**★★候选 B：开邻域 incidence ＋ Walsh 谱 ⟹ STOP（＝已审计对象 ✓✓）**】
+ ① **对象同一性 ✓✓**：$m=A\mathbf 1_D=b-f$（**派生量** ✗，因 $b=m+f$ ✓）；覆盖条件 $A\mathbf 1_D+\mathbf 1_D\ge\mathbf 1\iff Tf\ge1$，$T:=A+I$ ✓ —— **这正是档案 `P1-REAUDIT-2026-09-27` 的 OB-1 模 11 定理对象** ✓✓（$T=I+\sum_{i=1}^{10}\sigma_i$ ✓ 被 Walsh 基对角化、特征值 $\mathbf{11-2w}$ ✓）
+ ② **档案已审且结论为\*\*否定\*\* ✓**：OC-1 ⟹ **线性内容 $=\{f\in\mathbb Z^{1024}:Tf\ge1,\ \sum f=119\}$（整数/多重覆盖松弛 ✓）**；**非线性内容 ＝ 二值性 ＝ Booleanity** ⟹ **"$g$-形不产生新必要条件"** ✗✓（与 A-INCIDENCE-FIX-1 的 Booleanity 等价判同 ✓）
+ ③ **自测判据（唐先生 ✓）逐条触发** ✗：(i) $\|Af\|^2=10|D|+4N_2=1190+4N_2$ ⟹ **完全由 $|D|$ 与 profile（$N_2$）决定** ✗；(ii) 谱质量 $\sum_{|u|=j}\hat f(u)^2$ ＝ 距离分布的 **Krawtchouk 变换** ⟹ profile ✓✗；(iii) "平均值 $1190/1024\approx1.1621$ 很低" ≡ **excess 恒等式**（$E=11|D|-1024=285$ ✓）⟹ profile ✗
+ ⟹ **按唐先生自己的 STOP 判据：立即 STOP** ✓（未出现"无法由 profile 恢复的 eigenspace mass／sign 约束" ✗）
+- 【**★★★复现守卫（本档新增 ✓✓，可复用）**】该对象（$T=A+I$ ＋ Walsh 对角化 ＋ mod-11 ＋ Booleanity）现 **第 3 次**独立回潮：**R3 坐标标记 excess（dda3630 ✓）→ C-417 层坍缩（682bffb ✓）→ 本次开邻域+Walsh（C-428 ✓）** ⟹ **登记守卫**：$$\boxed{\text{任何 119-攻击须同时满足：① 过 C-418 预筛门；② \textbf{不可}表为算子 }T=A+I\ \text{的 Walsh/谱形式（已穷尽 ✓）}}$$ ✓✓ —— 该守卫**解释了"为何第 3 次又回到同一对象"**，并把"新不变量"的定义收紧为"**必须携带 $T$ 之 Walsh 谱看不到的信息 ⟺ Booleanity 之外的排列/交叠结构**" ✓✓
+- 【**状态表（更新 ✓）**】private-neighbor／Hall：**DOWNGRADE**（核心机制老旧 ✓ 照唐先生 ＋ C-427 P0 已证其 Hall 形式＝最小性 ⟹ 无额外内容 ✗）；excess congruence：**HOLD** ✓；fort transversal：**STOP** ✗；**开邻域+Walsh：STOP（本档，＝已审计 ✓）** ✗；**上界侧（文献 120 → 119）**：**LIVE ✓✓**（C-427 战略更新 ✓）；D-LP-1B：**OPEN** ✓
+- 【**战略不变 ✓**】可达一侧仍是**上界侧**：起点用**文献已知 120-cover**（非我们的 124 ✓），目标 119 ✓；且**先做 D-LP-1B 归因**（定"新不变量必须超过的标杆" ✓）
+- 【**边界 ✓**】本档为 P0 审计（非新数学命题 ✓）；零程序计算；未改门；不跨空间；不声称 P1 成立／不成立 ✗（V290）；谱/Krawtchouk 对应为标准事实（档级 ✓）
+- 档：本条目（registry-only ✓）
