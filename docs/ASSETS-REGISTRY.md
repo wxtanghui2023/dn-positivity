@@ -970,3 +970,8 @@ e J(C_1)$ 且非 $(A_1,A_2)$ 的函数；测试集 = 两 witness ✓。
 **Alignment Quantization Theorem（已证 ✓，n=8）**：$H=\ker\sigma$ Hamming $[7,4,3]$，$C_2=\pi H+e$ 不交 ⟹ $q_i=\lambda\mathbf 1_{\{i:t_i\in s+\mathrm{Im}f\}}$，$\lambda=2^{4-d'}$，$|S|=2^{d'}-\mathbf 1[s\in\mathrm{Im}f]\le7$ ⟹ $A_2=\lambda|S|$，$J_7=A_2^2/|S|$ ✓✓。证明 = 初等线性代数（直方图 $n(x)=2^{4-d'}\mathbf 1[x\in\mathrm{Im}f]$ ✓）。七情形完整分类 ✓（$(3,ot)$ 不可达 ✓）；3840 表示数值全吻合 ✓。预测 $n=16$ 同型（$\lambda=2^{11-d'}$ ✓）。边界：限 Theorem-13 域与 $R=1$ ✓；不涉 119 ✓。
 
 **升级（2026-09-27 P2）**：A-ALIGNTHM-1 升级为 **$2^m-1$ 族统一定理**（证明与维数无关 ✓）；$n=16$ 16 配置验证零反例 ✓✓（覆盖 $(d',|S|)=(0,0),(1,1),(2,3),(3,8),(4,15)$ ✓）；$(d'=m-1,s\notin\mathrm{Im}f)$ 不可达 ✓（$|S|=2^{d'}>n$ ✓）。$J$ 非单调（须看整结构 ✓）。自捉 $\pi^{-1}$ 方向 bug（$|S|$ 满时不可见 ✓）。未覆盖：非线性 $C_1$ ✓；$n\geq32$ 未验证 ✓。
+
+
+## A-P3ALPHA-1（2026-09-27）
+**P3-α 判定 = PASS**：文献（Boruchovsky–Etzion–Roth）距离/重量分布层**不能**蕴含 alignment 量子化。自足证明：三个 n=8 见证码全距离分布相同（0,16,160,176,64,48,32,0）而 $J_7\in\{64,128,256\}$ ⟹ $B
+ot\Rightarrow q$ ✓✓。**归属更正**：完美匹配已在 §II Cor 14(2)（重推导，不新 ✗）；新增 = 量子化 ＋ 仿射支撑 ＋ $(d',s)$ 转移结构 ✓。文献无 syndrome 语言（命中 0 ✓）。arXiv:2605.12148（2026 统一重量分布）仍在 weight-distribution 层 ✓。边界：不涉 119 ✓。
