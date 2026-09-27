@@ -921,3 +921,16 @@ $$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\bin
 **结论** ✓：$\zeta+(2^n-M)=(n+1)E-4A=\sum_x\delta(x)(n-\delta(x))$ ✓（本机 6/6 精确 ✓）⟹ 码层内容 = **线性界** $A_1+A_2\lerac{(n+1)E}{4}$ ✓ ⟹ **Q0-a 与 Q0-b 双命中 ⟹ STOP，不上 SDP** ✓。
 **登记类别** ✓：valid / non-profile-appearing quadratic constraint, but **no leverage beyond the linear bound** ✓。
 **细档**：`docs/PHASE2-Q0-2026-09-27-quadratic-expansion-verdict.md`
+
+
+---
+
+## A-COVERCAP-1 · 覆盖侧二阶矩封顶定理 ＋ 缺口坐标（2026-09-27 立 ✓）
+
+**定理 A** ✓：$\sum_xb=M(n+1)$、$\sum_xinom{b(x)}2=2(A_1+A_2)$ ⟹ $\sum_xb^2=M(n+1)+4(A_1+A_2)$ ⟹ **一切 $b$-二阶矩／球对交叠型不变量至多看到 $A_1+A_2$** ✓。
+**定理 B（witness）** ✓：$n=9,K=62$ 两码 $I_1/I_2$ 统计量**逐项相同**，而 $D=A_1-A_2=-59$ **vs** $-21$ ✓ ⟹ 盲区非空 ✓。
+**信息分层** ✓：$\mathcal I_1\subset\mathcal I_2\subset\mathcal I_3$；$\mathcal I_1,\mathcal I_2\Rightarrow A_1+A_2$ 但 $
+ot\Rightarrow(A_1,A_2)$ ✓。
+**缺口定理 ＋ β gate** ✓：下一轮必须构造 $J$ 使 $J(C_0)
+e J(C_1)$ 且非 $(A_1,A_2)$ 的函数；测试集 = 两 witness ✓。
+**细档**：`docs/CLOSURE-2026-09-27-covering-side-ceiling-and-gap-theorem.md`
