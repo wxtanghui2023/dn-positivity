@@ -1021,3 +1021,9 @@ u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM
 
 ## A-SUBSPACE-1（2026-09-27）⭐ 闭式完备
 **四陪集一般律（唐先生修正）**：$W=\mathrm{span}\{2,4\}$，$q(z)=32\sum_{u\in W}C(z\oplus u)=32s([z])$ ⟹ $q$ 在每个 $W$-陪集内恒定，$\sum_i s_i=16$。**本族两陪集定理（证明 ✓✓）**：$V=\mathrm{span}\{2,4,9\}=\{0,2,4,6,9,11,13,15\}$（dim 3），$W\le V$、$15\in V$、$\beta(H_7)=\{0,4,11,15\}\subseteq V$ ⟹ $C=\beta(c)\oplus15\lambda(c)\in V$ 恒成立 ⟹ $s_1=s_2=0$，$\mathrm{supp}\,q=(W_0\setminus\{0\})\sqcup W_3$ 恰 7 坐标 ⟹ **star 与 $|S|=7$ 导出**。**闭式 ✓✓**：$s_0=8+(b-a)$（$a,b$ 为 $\lambda$ 两侧计数），$s_3=16-s_0$ ⟹ **512-互补为定理**；flat $\iff a=b$。**卷积恒等式**：16 syndrome 全验 $\max|\Delta|=0$ ✓✓（修正作者漏 $\beta(x)$ 之测量 bug）。$A_2=2048-32s_0$ ⟹ 经验判据「flat $\iff|S|\mid A_2$」被推导。余项：可实现 $(a,b)$ 刻画 ⚠️。
+
+
+## A-SAGREE-1（2026-09-27）⭐ 更正
+**$s$ = agreement number**：$C_\lambda=\beta(c)\oplus15\lambda(c)$，$\mathrm{im}\beta=U=\{0,4,11,15\}$（4/4/4/4），$r=\pi\circ\beta$（$\pi(0){=}\pi(4){=}0,\pi(11){=}\pi(15){=}1$；分布 $\{0:8,1:8\}$）⟹ $s=\#\{c:r(c)=\lambda(c)\}$ ⟹ $s\ge1$（$\lambda(0){=}0{=}r(0)$）、$s\in\{1,\dots,16\}$ **全可达** ✓。
+**硬门验证 ✓✓**：$s{=}1$（$\lambda{=}1\oplus r$）、$s{=}15$（$r$ 翻一处）、$s{=}16$（$\lambda{=}r$）三例 $V$ 完美、$C$ 覆盖 **全部通过** ⟹ 皆为合法 NP1CC ✓。
+**🔴 判据证伪 ✗✗**：「flat $\iff|S|\mid A_2$」双向证伪（$s{=}1$：$7\mid2016$ 但非 flat；$s{=}16$：flat 但 $7\nmid1536$）⟹ 上档 FINAL-CLOSEDFORM 之「flat $\iff s{=}8$ 由 $7\mid A_2$ 推出」**作废**，其前提 $s\in\{2..14,16\}$ 系抽样假象 ✗。**正确**：flat $\iff s{=}8$；$7\mid A_2\iff s\in\{1,8,15\}$。
