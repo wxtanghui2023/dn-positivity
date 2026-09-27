@@ -97,3 +97,5 @@ $$
 ```
 - **本档新增**：逐点平方恒等式的修正形式、三阶不变量 $\sum_xP(x)^2$（见上方命中数；0 命中者为自造语 ✓）
 - **档案已有（引用，不列为提出）**：匹配定理、$\Sigma\binom b2$ 恒等式、$N_1+N_2=143$、$|\mathcal T|=1$、$T_3$ 窗口、Boolean fiber 接口
+
+> ⚠️ **本档 (Z-4) 已被撤回**：见 `docs/TRIP-2026-09-27-unique-triple-point-and-the-withdrawal-of-z4.md` ✓（唯一 triple 类中 $\sum P^2$ 被 $(|C|,N_1,d_3)$ 完全钉死 ⟹ 非独立量 ✗）
