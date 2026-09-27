@@ -842,3 +842,14 @@ $$\beta^{\rm paper}_{i,j,k,t}=[p^{i-k}q^{j-k}r^t]\,(r-1)^k\big(1+p+q+pqr\big)^{n
 **桥（raw ↔ Schrijver）** ✓：$\widehat\beta=[(j-k)!/((i-k)!\binom{n-2k}{i-k})]\,\beta^{\rm paper}$ ✓（$6$ 组 $501$ 组 $(i,j,t)$ 零不符 ✓）。
 **边界** ⚠️：本式对 $\beta^{\rm paper}$（标准化 block 系数 ✓）成立；raw 链侧须经上述桥 ✓；Level 3B 的最终合并（(iv)）未做 ✗。
 **细档**：`docs/IDX2-2026-09-27-u-side-generating-function-identity-CLOSED.md`、`docs/L45-...md`
+
+
+---
+
+## A-L3B-1 · Level 3B 三块统一装配（2026-09-27 立 ✓）
+
+**总标签** ✓：**Level 3B: structurally assembled, symbolically complete except for 3 bookkeeping/classical lemmas.**
+**内容** ✓：论文三处 PSD 条件（`eq:Mprimesymmetryreduction`／Prop 4.3 后半／Prop 4.5）的**独立符号重建**：$M',M'',N\in\mathcal A_{2,n}=\mathrm{End}_{S_n}(V)$ ⟹ 均形如 $I_{m_k}\otimes(\cdot)_k$，且 **border 只存在于 trivial $k=0$ 扇区**；PSD 等价来源 = Maschke ＋ Schur ＋ 谱事实（**非** $sl_2$ 半单性 ✗）。
+**核心独立链** ✓：$D/U\to H_k\to\rho_u=(-1)^{k-u}\binom ku\to c_{k,i}=((i-k)!)^2\binom{n-2k}{i-k}\to\beta^{\rm paper}=[p^{i-k}q^{j-k}r^t](r-1)^k(1+p+q+pqr)^{n-2k}$（(i) ✓）。
+**仍开三项** ⏳：(A) $V_k$ 无重 $S_n$-分解（**classical input**）；(B) $M''$ border 的 $D^{1/2}$ 归一化（convention lemma）；(C) $N$ 中 $\eta$ 的符号闭式。
+**细档**：`docs/L3B-FINAL-2026-09-27-three-block-assembly-and-ledger.md`
