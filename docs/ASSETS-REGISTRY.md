@@ -1826,3 +1826,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**下一步（登记未做 ⚠️）**】① 对 weight-5 层建**排列级**约束（非 avoidance／非容量 ✓）；② 用"生成集"定义新的 global 量（$\sum_u|\{i\notin u:c{\oplus}e_u{\oplus}e_i\in C\}|$ 的排列敏感函数 ✓）；③ 检验其是否与 119 的覆盖需求碰撞 ⚠️
 - 【**边界**】零程序计算；未上 SDP/SAT；未开门②；未改门；不跨空间（回查已分栏 ✓）；不声称 119-cover 中 $b_4$ 可大 ✗；不声称重量 5 层路线有效 ✗；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-D5-2026-09-27-missing-neighbour-structure-and-the-layer5-interface.md`
+
+**🖐️ C-422（2026-09-27 · **P1-L5：内部 4-面判定定理 ＋ 精细 layer-5 容量（排列级，首个非平凡界）**）** ✓
+- 【**★★(1) 分类定理（新 ✓✓）**】$w=c{\oplus}e_v$（$v\in M_5(c)$ ✓）的 4-面 $u_i:=v\setminus\{i\}$（$i\in v$）是**内部 block** $$\iff\boxed{i\in S(w)\ \textbf{且}\ v\setminus\{i\}\subseteq S(c)}$$ ✓✓（**证明**：⟸ $i\in S(w)\Rightarrow w{\oplus}e_i=c{\oplus}e_{u_i}\in C$ ✓；⟹ 由 $w{\oplus}e_i\in C$ 与 $u_i\subseteq S(c)$ ✓；**关键** $v\setminus\{i\}\subseteq S(c)\iff(v\setminus S(c))\subseteq\{i\}$ ✓）
+- 【**★(2) 三情形推论（按 $a:=|v\setminus S(c)|$ ✓✓）**】$a=0$（$v\subseteq S(c)$）：内部面数 $=|v\cap S(w)|\le5$ ✓；$$\boxed{a=1\Rightarrow\#\le\mathbf 1}$$ ✓✓（**唯一性现象**：设 $v\setminus S(c)=\{j\}$，唯一候选面 $u_j$，成为内部 block $\iff j\in S(w)$ ✓）；$a\ge2\Rightarrow\#=0$ ✓
+- 【**★★(3) 精细容量不等式（新，排列级 ✓✓）**】$$\boxed{I(c)\ \le\ 5\,|M_5^{(0)}|\ +\ 1\,|M_5^{(1)}|}\qquad\big(M_5^{(k)}:=\{v\in M_5(c):|v\setminus S(c)|=k\}\ ✓\big)$$ 对照**平凡界** $I(c)\le5|M_5(c)|$ ✓ —— 精化来自 $a\ge1$ 的**位置敏感压制** ✓✓；**过 C-418 门** ✓（依赖 $v$ 相对 $S(c)$ 的**位置** ⟹ 非 degree/profile ✓）
+- 【**$I(c)$ 三重表达（接口恒等式 ✓）**】$I(c)=\sum_{u\in M_4(c)}|E_5(u)|=\sum_{u\in M_4^{\rm int}}d_1(c{\oplus}e_u)=\sum_{v\in M_5(c)}\#\{\text{内部 4-面 of }v\}$ ✓ ⟹ **双层接口 $M_4\to I\leftarrow M_5$** ✓（本档补上右侧第一次精化 ✓）；**注**：非内部 $u$ 时 $d_1(c{\oplus}e_u)=|E_5(u)|+\#\{i\in u:c{\oplus}e_{(u\setminus i)}\in C\}$（不可省项 ✓）
+- 【**⚠️(4) 诚实：下界不可得**】内部 block 可满足 $E_5(u)=\varnothing$（即 $d_1(c{\oplus}e_u)=0$，**孤立内部块** ✓）⟹ $A(c)=0$ 与 $(\alpha)$ 皆不禁 ✓ ⟹ $I(c)$ **只有上界（本档）＋平凡下界 0** ✗ ⟹ **无法夹逼、尚不能形成 collision** ⚠️；**另一条下界通道（未做）**：若能把 C-419 需求 $b_3+4b_4\ge\binom s3$ 与 $I(c)$ 相连 ⟹ 方可碰撞 ⚠️
+- 【**★(5) 状态锁（照唐先生 23:27 ✓）**】avoidance／missing-set **STOP** ✗；degree／profile／capacity **STOP** ✗；$4\to5$ 精确邻接接口 **LIVE** ✓；C-419 $b_3/b_4$ tradeoff **HOLD** ✓；**新的全局碰撞尚未形成** ⚠️；**C-421 不 CLOSED** ✗，是合格 **LIVE interface**、**尚不是攻击点本身** ✓（本档为其补上"右侧第一次精化" ✓）
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间（回查已分栏 ✓）；不声称 $I(c)$ 路线有效 ✗；不声称 119-cover 中存在内部块 ✗（$C_1$ 非覆盖码 ✓）；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-L5-2026-09-27-internal-4face-criterion-and-refined-layer5-capacity.md`
