@@ -1208,3 +1208,10 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **分叉锁定 🔒**：单次 exact MIP 跑满 900s（成本已付 ✓，无需截断 ✓）；终态后：① $\le119$ 整数解 ⟹ 取 $C=\mathrm{supp}(f)$ ＋ **独立验证** $|C|\le119\wedge\forall x:|C\cap B_1(x)|\ge1$ ⟹ P2 witness（方成立 ✓）；② BestBound 远低于 120 或 UNKNOWN ⟹ **MIP STOP** ⟹ **source-first 核验后转专用随机搜索** ✓。
 **区分 ✓**：MIP = 证 feasibility/infeasibility；专用搜索 = **直接构造 119-word witness** ⟹ 后者属明确 **P2 construction attack**，非"换 solver 再赌" ✓。
 **运行记录 ✓**：int10c.py（min Σf, Tf≥1, f∈{0,1}, f₀=1, HIGHS 1.15.1, 900s）—— 51.1s: bound 94.027/sol 150; 181.7s: bound 95.312/sol 139; 232.9s: bound 95.318/sol 139, gap 31.43% ✓（对称检测找到 10 生成元 ✓ 印证平移破缺 ✓）。
+
+
+## A-MIPRUN-2（2026-09-27 16:36）⭐
+**终态 ✅（分支 ② 执行 ✓）**：`int10c.py` 跑满 900.17s ⟹ **Status = Time limit reached**；Dual=99.0，Primal=138，Gap=28.26%，Nodes=3751 ⟹ 无 ≤119 解 ✗ → **MIP STOP ✓**（Dual 为有限时间 bound ⟹ 不得当作「119 不存在」之证明 ✗）。详 `MIPRUN2-2026-09-27-int10c-terminal-and-source-first-gate.md`。
+**source-first 核验 ✓（4 项）**：① `kamenetsky120.txt` 独立复核 = 120 词 / 0 重复 / 覆盖 1024-1024 ✓（基线成立）；② **`code119_candidate.txt` ✗ 无效** —— 119 词但 **17 点未覆盖**（生成于 2026-09-24 22:59，此前从未独立验证 ⚠️）⟹ 「历史 n=10,R=1 最好 = 120」维持 ✓；③ `tabu_np.py` 崩溃（IndexError 92/92）⟹ `np120.log` 的 k<120 行全部作废 ✗；④ `cp119.py`（CP-SAT, min Σx, hint）3600s = UNKNOWN，档案已锁「不得表述为 119 不存在」✓。
+**新增结构发现 ⭐**：120-码删去私有覆盖最少的词 ⟹ k=119, **unc=2**；余词私有覆盖数 ≥2 ⟹ 单字替换 loss≥2 而 gain≤2 ⟹ **unc=2 是 1-flip 平台**（除非两未覆盖点距离 ≤2）⟹ 单字局部搜索（v4 实测 40s/8147 it 停在 unc=2）与历史 tabu（k=120, best unc=92）一致 ⟹ 突破须 **2-opt/k-opt 或退火** ✓。
+**P2 首轮**：`work/k10/p2_119k_search.py`（k=119 固定、权重 breakout、900s 后台、日志 `/tmp/p2k119.log`）；**不启动额外 exact 119 计算** ✗；未得 witness 前不得表述「119 不可达」✗。
