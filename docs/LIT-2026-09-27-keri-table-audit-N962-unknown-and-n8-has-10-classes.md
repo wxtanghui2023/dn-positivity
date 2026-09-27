@@ -42,7 +42,7 @@ $$
 ## §2 A1／A2 的判定（**✓**）
 
 ```
-$$\textbf{A1（}n=6\text{）} ✓:\ \text{文献明确 }\mathbf{2}\ \text{个不等价最优码} \Longrightarrow \text{我实验的 }(A_1,A_2)=(4,8)\ \text{与}\ (0,12)\ \text{就是全部} \Longrightarrow \textbf{桶全 singerleton 是结构性事实，非生成器不足} ✓✓$$
+$$\textbf{A1（}n=6\text{）} ✓:\ \text{文献明确 }\mathbf{2}\ \text{个不等价最优码} \Longrightarrow \text{我实验的 }(A_1,A_2)=(4,8)\ \text{与}\ (0,12)\ \text{就是全部} \Longrightarrow \textbf{桶全 singleton 是结构性事实，非生成器不足} ✓✓$$
 $$\qquad\Longrightarrow\ n=6\ \textbf{退出"寻找固定 }(A_1,A_2)\ \text{分叉"的主实验池} ✓\ \text{（与唐先生判断一致 ✓）}$$
 $$\textbf{A2（}n=9\text{）} ✓:\ \text{该格\textbf{未分类}} \Longrightarrow \textbf{N}_{9,62}\ \text{未知} \Longrightarrow$$
 $$\qquad\text{• 不能断言}P1-2\text{关闭（}N=2\text{ ✗ 未证）};\qquad \text{• 也不能断言重开（}N>2\text{ ✗ 未证）} \Longrightarrow \textbf{P1-2 保持 OPEN} ✓$$
