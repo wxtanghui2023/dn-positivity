@@ -1146,3 +1146,9 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **关系全表 ✓**：$A=T\,P_C$（$T=I+\sum_i\sigma_i$）；$b=A\mathbf 1_M=T\mathbf 1_C$；$\boxed{A^{\mathsf T}A=(n{+}1)I+2\mathrm{Adj}(G_{\le2}(C))}$（**纯码侧距离结构**）；$(AA^{\mathsf T})_{x,y}=|B_1(x)\cap B_1(y)\cap C|$；$\widehat T(\chi)=n{+}1{-}2|\chi|$ 无零 ⟹ $T$ 可逆（$n{=}10$：$\{11,9,7,5,3,1,-1,-3,-5,-7,-9\}$）。
 **新定理 ⭐**：$0\in\sigma(A^{\mathsf T}A)\iff-\tfrac{n+1}{2}\in\sigma(\mathrm{Adj})$；$\mathrm{Adj}$ 整对称 ⟹ 特征值皆代数整数 ⟹ **$n$ 偶时 $A$ 列满秩 $=|C|$ ⟹ 映射 $C\mapsto b$ 单射（profile 决定码 ✓✓）**；对照：$n{=}1,C=\mathbb F_2$ 秩 1 < 2（故"偶"不可去）。
 **定理级解释 ✓**：由满秩得 $\mathbf 1_C=(A^{\mathsf T}A)^{-1}A^{\mathsf T}b$ **线性** ⟹ 唯一非线性 = Booleanity ⟹ **任何只用 $b$ 的证书自动等价原问题（不可松弛）** ⟹ 这解释了档案 M-1(CIRCULAR)／M-2A(CLOSED)／Fourier audit("坐标变换而非松弛") 三处封口。难处被定位为 **"哪些 $b$ 可实现"**（= P1-B BLOCKED 处）。
+
+
+## A-INCIDENCE-FIX-1（2026-09-27）
+**接受纠错 ✅**：$A_C$ 满列秩只给**固定 $C$ 内部**单射；反解 $\mathbf 1_C=(A_C^{\mathsf T}A_C)^{-1}A_C^{\mathsf T}b$ 需先知 $C$ ⟹ 原 §② 论证跳跃 ✗（抽象反例 $A{=}I,B{=}$ 交换阵 ✓）。
+**校正定理 ⭐⭐**：$T=I+\sum_i\sigma_i$ 谱 $=\{n{+}1{-}2w\}$ ⟹ $0\in\sigma(T)\iff n$ 奇 ⟹ **$n$ 偶时 $\mathbf 1_C=T^{-1}b$ ⟹ $C\mapsto b$ 单射**（与 $A_C$、$|C|$ 无关 ✓，比原版更强）；$n$ 奇可塌（$n{=}1$ 反例 ✓）。
+**Booleanity Gate 🔴 可证等价**：$T^{-1}$ 双射 ⟹ $\{b:T^{-1}b\in\{0,1\}^{1024},\sum{=}119\}$ 恰为像集 ⟹ **"$b$ 可实现" $\iff T^{-1}b$ Boolean，与原问题逐字等价（无松弛）** ✗（与档案 Fourier audit 判定一致）；自然松弛皆在档（M-1 CIRCULAR／能量条件 profile／Delsarte CLOSED）⟹ 该形状封口 **（第 18 次）**。
