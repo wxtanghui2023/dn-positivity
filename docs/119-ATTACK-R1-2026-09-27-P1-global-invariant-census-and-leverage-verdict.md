@@ -165,3 +165,12 @@ $ bash scripts/tech_word_check.sh "Booleanity"
 $$\boxed{R2\!-\!1\ \textbf{DROP}\ |\ R2\!-\!2\ \textbf{ALIVE}\ |\ R2\!-\!3\ \textbf{HOLD}\ |\ R2\!-\!4\ \textbf{PRIORITY（已由 P1-5 执行）}}$$
 - **R2-1 理由翻转 ✓✓**：**不是**"$n=10$ 未被同余路线覆盖"，而是**恰恰相反** —— **Habsieger 原文（FPSAC 95）明确研究 $n\equiv2,4\bmod6$**，$n=10$ 给 $K(10,1)\ge104$，Zhang 提高至 $105$（远低于 119）⟹ **该路线已处理过且缺口巨大** ⟹ **DROP** ✓
 - **R2-4 ＝ PRIORITY 并已执行**：见 `docs/P1-5-2026-09-27-van-Wee-proof-decomposition-at-n10-and-R2-1-DROP.md`（**A 型输出：未消耗自由度＝坐标支撑层，且可证其在 van Wee／Habsieger 体系内不可见** ✓✓；条件挂在 R2-2 ✓）
+
+
+## §13 ⚠️ 更新（2026-09-27 21:45 唐先生令：只做 R2-2）
+
+$$\boxed{\text{R2-2 必行结论}:\ \textbf{分支①「发现 10D 分离」成立 ✓（构造性）}:\ A\not\Rightarrow J\ \text{在}\ n=10\ \text{成立}}$$
+- **构造 ✓**：$C=C_1\times\mathbb F_2^2$ 与 $C'=C_2\times\mathbb F_2^2$（$C_1,C_2$ ＝ P12-PASS 的 $n=8$ 见证）⟹ 均为 $\mathbb F_2^{10}$ 半径 1 覆盖码、$|C|=128$、$A(C)=A(C')$、support 指纹不同 ✓✓（**提升引理**，3 行可自证 ✓）
+- **但（本档第二产出）**：**自由坐标引理** ⟹ $|C|\le123$ 的 $\mathbb F_2^{10}$ 覆盖码**不可分**（由 $K(9,1)=62$）⟹ 上述分离**必然**落在 $|C|=128$ 的可分族，**与 P1 相关范围（119–120）不相交** ⚠️
+- ⟹ **下一刀收紧为 R2-2′**：**近最优范围（$|C|\le123$，无自由坐标）内的分离**；门②（$J$ 进覆盖条件）**须建立在门①之上**，否则空转 ⚠️
+- 档：`docs/R2-2-2026-09-27-n10-support-layer-separation-constructible-and-free-coordinate-lemma.md`（**零计算** ✓）

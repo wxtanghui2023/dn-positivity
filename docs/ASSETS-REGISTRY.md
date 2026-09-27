@@ -1555,3 +1555,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**A 型的两个条件（必须随结论引用 ✗）**】① **存在性未定**：P12-PASS 见证在 $n=8$；**$n=10$ 是否也有"同距离分布、异 $J$"未知** ⟹ 归 **R2-2**（若不存在 ⟹ 落 **B**）｜② **不等式转换未完成**：有维度 ≠ 有约束，须写成对任意 119-cover 成立的不等式（不得只在构造族内成立 ✗）
 - 【**R2 状态**】$\text{R2-1 }\textbf{DROP}\ |\ \text{R2-2 }\textbf{ALIVE（下一档）}\ |\ \text{R2-3 }\textbf{HOLD}\ |\ \text{R2-4 }\textbf{已执行（A 型出）}$ ✓
 - 档：`docs/P1-5-2026-09-27-van-Wee-proof-decomposition-at-n10-and-R2-1-DROP.md`｜（R1 档已补 §12 更新 ✓）
+
+**🧩 C-395（2026-09-27 · **R2-2：$n=10$ support 层分离** ⟹ **分支①成立（构造性）** ＋ **自由坐标引理**）** ✓
+- 【**结论**】**$A\not\Rightarrow J$ 在 $n=10$ 成立 ✓✓（构造性、零计算）**：$C=C_1\times\mathbb F_2^2$、$C'=C_2\times\mathbb F_2^2$，$C_1,C_2$ ＝ P12-PASS 的 $n=8$ 见证 ⟹ 二者均为 $\mathbb F_2^{10}$ **半径 1 覆盖码**、$|C|=|C'|=\mathbf{128}$、$A(C)=A(C')$（全距离分布相同），但 **support 指纹（$q$-多重集）不同** ✓
+- 【**提升引理（3 行 · index-free ✓✓）**】$\widetilde C:=C\times\mathbb F_2$：**(L-1)** 覆盖性 ✓、$|\widetilde C|=2|C|$；**(L-2)** $d((c,b),(c',b'))=d(c,c')+\mathbf 1[b\ne b']$ ⟹ $\boxed{A_i(\widetilde C)=2[A_i(C)+A_{i-1}(C)]}$ ✓（可逆 ⟹ 等价关系被提升）；**(L-3)** $q_{ij}(\widetilde C)=2q_{ij}(C)$（$i<j\le n$）、$\boxed{q_{i,n+1}(\widetilde C)=2m_i(C)}$、$m_i(\widetilde C)=2m_i(C)$、$m_{n+1}(\widetilde C)=2|C|$ ⟹ $q$-多重集 $\{q_{ij}(\widetilde C)\}=2(\{q_{ij}(C)\}\cup\{m_i(C)\})$ ✓
+- 【**★★自由坐标引理（本档第二产出 · 决定适用边界 ⚠️）**】$C=D\times\mathbb F_2$ 覆盖 ⟹ $D$ 覆盖且 $|C|=2|D|\ge2K(n-1,1)$；取 $n=10$、$K(9,1)=\mathbf{62}$ ⟹ $\boxed{|C|\le123\Longrightarrow C\ \textbf{不可分（无自由坐标）}}$ ✓✓（$|D|\le61.5<62$ 矛盾 ⟹ **§3 分离必然落在分离族 $|C|=128$，与 P1 相关范围 119–120 不相交** ✗）
+- 【**附赠初等级资产**】任何 $\le123$ 词的 $\mathbb F_2^{10}$ 覆盖码**坐标不可约** ✓（＝ $K(10,1)\ge2K(9,1)$ 的构造侧对偶 ✓）
+- 【**与 P1 的两门（诚实）**】门① **近最优范围内的分离** ⚠️ 未决（须 **R2-2′** 另找构造）；门② **$J$ 进覆盖条件**（$|C|=119\Longrightarrow J\in\mathcal J_{\rm impossible}$）⚠️ 未决，**且须建立在门①之上**（否则约束只作用于 $|C|\ge124$ 族，对 119 无着力 ✗）
+- 【**停判（照唐先生三分支）**】分支①成立 ⟹ "继续寻找 $J$ 的覆盖不等式"，**但须先补 R2-2′** ⚠️
+- 【**边界**】零计算 ✓（构造性推导）；**未碰** excess／Habsieger／Van Wee／Fourier ✓；**未改门** ✓；只引 P12-PASS 见证 ＋ 档案基准 $K(9,1)=62$ ✓
+- 档：`docs/R2-2-2026-09-27-n10-support-layer-separation-constructible-and-free-coordinate-lemma.md`｜（R1 档补 §13 ✓）
