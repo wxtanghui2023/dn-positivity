@@ -72,3 +72,14 @@ $$
 ```
 - **本档新增**：M-1 循环判定、P1-A/P1-B 拆分（见上方命中数；0 命中者为自造语／内部标签 ✓）
 - **档案已有（引用，不列为提出）**：BQP 提升、$y_{uv}\le x_v$、SUPPORT-VISIBILITY GATE、RH support ceiling
+
+
+---
+
+## §5 ⚠️ 状态更正：M-1 = **KILL**（唐先生 09:38 裁定 ✓）＋ P1-A 永久关闭 ✓
+
+```
+$$\textbf{AMEND-35 记账更正}:\ \text{M-1 记为}\ \boxed{\textbf{KILL}}\ ✗\ \text{（此前记为 PASS ✗，更正 ✓）}——\text{理由：其"分离"等价于 }f_u\le1\ \text{的改写 ⟹ 循环 ✓}$$
+$$\boxed{\textbf{P1-A 永久关闭}}\ ✓:\ \text{此后\textbf{禁止}再把 Booleanity 作为独立研究问题引入}\ ✗\ \text{（防再走 }f\to f^2\to f\otimes f\to f\le1\ \text{一轮 ✓）}$$
+$$\text{故 119 的问题形态被\textbf{锁定}为}:\quad C\subseteq\mathbb F_2^{10},\ \forall x:\ |B_1(x)\cap C|\ge1,\ |C|\le119?\ \Longleftrightarrow\ \boxed{K(10,1)\ge120?}\ ✓$$
+```
