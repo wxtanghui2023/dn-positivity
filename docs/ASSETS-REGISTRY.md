@@ -1845,3 +1845,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) 定位（照唐先生 23:30 ✓）**】C-421 ＝ 发现 $4\to5$ 接口 ✓；C-422 ＝ 发现该接口的 $0/1/5$ 面数分类及精细容量 ✓；**C-422 ＝ 新的排列级上界／结构分类、尚不是 P1** ✓（**保留**、**不关闭**、**不升级** ✓）；**下一关** ＝ covering 能否给该接口制造**正需求** ✓
 - 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间（回查已分栏 ✓）；不声称 $4\to5$ 路线死 ✗（须 (b) 才 STOP ✓）；不声称 119-cover 中存在内部块 ✗；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-BRIDGE-2026-09-27-local-zero-demand-lemma-and-the-no-bridge-theorem.md`
+
+**🌐 C-424（2026-09-27 · **P1-GLOBAL：状态锁 ＋ 跨中心三重相关恒等式（过 C-418 门）＋ 覆盖侧仍缺**）** ✓
+- 【**★(1) 状态锁（照唐先生 23:33 ✓）**】$$\text{local layer-5 forcing: STOP}\ \Big|\ \text{local missing-set: STOP}\ \Big|\ \text{profile/capacity bridge: STOP}\ \Big|\ \textbf{global }4\leftrightarrow5\text{ incidence: HOLD}\ \Big|\ \text{C-422 structural asset: LIVE}$$（前两项依据 C-423 §1／C-421 §2 ✓、第三项依据 C-409／C-417 ✓）；**不**把整个方向 CLOSED ✗；**最关键新增信息 ＝ C-423 零需求证明** ⟹ $M_4^{\rm int}\ne\varnothing\not\Rightarrow M_5\ne\varnothing$ ✓，且 $E_5(u)=0$ 与局部覆盖职责**完全兼容** ✓
+- 【**★★(2) 跨中心全局恒等式（新 ✓✓）**】$$\boxed{\sum_{c\in C}I(c)\ =\ \sum_{u\subset v,\,|u|=4,|v|=5}\big|C\cap(C\oplus e_u)\cap(C\oplus e_v)\big|}$$ ✓✓ **推导**：$I(c)=\#\{u\subset v:c{\oplus}e_u\in C,c{\oplus}e_v\in C\}$ ⟹ 交换求和 ✓；**读法**：右侧 ＝ 对 $\binom{10}4\cdot6=1260$ 个 $(u\subset v)$ 对求**三重相关** ✓（**跨中心**：$c$ 跑遍 $C$ ✓）
+- 【**★★(3) 过 C-418 门（✓✓ 正面答复唐先生）**】该量是**三重相关级**（排列级 ✓），依赖"哪些 $u$ 是内部块"与"哪些码字在何处" ⟹ **非 degree/profile 函数** ⟹ S1 否／S2 是／S3 定义于任意 119-cover ⟹ **PASS** ✓✓ ⟹ **"过门的全局对象"确实存在** ✓（**同一对象三形态**：$\sum_cI(c)$／三重相关之和／$\sum_c\sum_{u\in M_4^{\rm int}(c)}d_1(c{\oplus}e_u)$（配 C-421 ✓））
+- 【**⚠️(4) 覆盖侧仍缺（诚实 ✓）**】C-423 零需求引理 ⟹ **无局部覆盖下界** ✓；全局亦然：covering 是"逐点 $\ge1$"（单调下型 ✓）⟹ 只产生**下层**（覆盖需求）结论，而 $\sum_cI(c)$ 统计的是**码字邻接 incidence（上层）** ⟹ **对象不同（C-423 §2 无桥 ✓）** ⟹ 覆盖侧不等式仍无 ✗ ⟹ **HOLD** ✓（**照判据**：若找不到"过门 **且** 有覆盖侧独立不等式"的全局量 ⟹ 此 $4\to5$ 线应 STOP ✗；现状＝**对象过门 ✓、覆盖侧缺 ✗** ⟹ 既未 STOP、也未 P1）
+- 【**★(5) 唯一剩余形态（登记未做 ⚠️）**】要形成碰撞须经**跨中心**约束：① 119 的**全局最小性**能否约束三重相关 $\sum_{u\subset v}|C\cap(C\oplus e_u)\cap(C\oplus e_v)|$？② 若能且证明**不是** C-409／C-417 型 profile 重包装（过 C-418 ＋ 独立性闸 ✓）⟹ 真正的新 P1 ✓；③ 若不能 ⟹ 照判据 **STOP** 此线、**不再堆 layer identities** ✓（照唐先生 23:33 ✓）
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间（回查已分栏 ✓）；不声称 $4\to5$ 线已死 ✗；不声称三重相关路线有效 ✗；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-GLOBAL-2026-09-27-status-lock-and-cross-centre-triple-correlation-identity.md`
