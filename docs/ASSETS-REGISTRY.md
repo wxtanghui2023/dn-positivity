@@ -1750,3 +1750,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**现状 ＋ 下一步（诚实 ✓）**】已确立：① 共享判据；② 共享结构 ＝ 已实现 star（入 $T_4$ ✓）；③ $d_4$ 有效下界 ＝ 容量界 ✓；④ $C(s,4,3)$ 不作下界 ✗；**仍缺**：**独立的 $d_4$ 上界**（用于夹逼 ⚠️），且须**非 profile 型**（见 R7 STOP／C-409 ✓）；**本档未产生矛盾** ✗
 - 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）；$s=7$ 具体值标档级 ✓；Witt／SQS 存在性为档级引用 ✓
 - 档：`docs/P1-D3b-2026-09-27-sharing-criterion-verified-and-the-covering-design-direction-correction.md`
+
+**📶 C-414（2026-09-27 · **P1-D4：球面覆盖恒等式 ＋ 独立 $d_4$ 上界的\*\*两类来源排除\*\***）** ✓
+- 【**★(0) C-413 状态锁（照唐先生 ✓）**】**LIVE / P1 incomplete** ✗（未 CLOSED ✗）；链条压缩形态：D3 forcing $\Rightarrow$ 3-subset coverage demand $\Rightarrow d_4\ge\lceil\binom s3/4\rceil$；缺 **independent upper bound on $d_4$** ✗
+- 【**★(1) 球面覆盖恒等式（新 ✓✓）**】令 $S_3(c)=\{x:d(x,c)=3\}$（$|S_3|=120$ ✓）⟹ $$\boxed{8d_2(c)+d_3(c)+4d_4(c)=120+E_3(c)}$$ ✓✓（$E_3(c):=\sum_{x\in S_3(c)}(b(x)-1)\ge0$ ✓）；**证明（逐类阴影计数 ✓）**：覆盖 $x=c{\oplus}u$（$|u|=3$）者必为 $c{\oplus}(u{\oplus}e_i)$，$|u{\oplus}e_i|\in\{2,4\}$ ⟹ 只能取重量 2／3／4（$|u{\oplus}v|\ge||u|-|v||$ 排除 1／5 ✓）；weight-2 码字覆盖 $8$ 个球面点（$i\notin\mathrm{supp}(v)$ ✓）、weight-3 覆盖仅自身 $1$ 个（奇偶性排除距离 1 ✓）、weight-4 覆盖 $\binom43=4$ 个（$i\in\mathrm{supp}(v)$ ✓）
+- 【**✗(2) 方向判定：只给下界**】$E_3\ge0$ ⟹ $8d_2+d_3+4d_4\ge120$（**下界** ✓）；与 forced-$d_4$ 下界**同向** ⟹ **无 squeeze** ✗✓（本档**未**产生 squeeze ✗）
+- 【**✗(3) 聚合 ＝ profile 级恒等式**】$$16N_2+2N_3+8N_4=14280+\sum_x\big(b(x)-1\big)d_3(x)$$ ✓（新恒等式 ✓；因 $\sum_cE_3(c)=\sum_x(b(x)-1)d_3(x)$ ✓）；左＝$A$-data ✓、右含 $b(x)$ 与 $d_3(x)$ 的**联合分布** ⟹ 仍属**容量／profile 侧**（与 C-409 占用恒等式同族 ✓）⟹ **不构成独立 handle** ✗✓
+- 【**★★(4) 两类来源排除（本档最重要 ✓✓）**】① **覆盖类**：covering 为 $b\ge1$ 型（**单调下型**）⟹ 其推论天然为**下界**，结构上不可能给 $d_4$ 上界 ✗✓（本档球面覆盖实测确认 ✓）；② **容量类**：上界只能来自容量／计数型恒等式，而 C-409 已证占用类量与 $\{n_j\}$ **同源** ✗✓（R7 STOP 同形态 ✓）⟹ $$\boxed{\text{独立 }d_4\ \text{上界不能来自"覆盖类"或"容量类"这两大来源}}$$ ✓✓ ⟹ 若要继续夹逼，须找**第三类**独立全局资源约束（既非 $b\ge1$ 型、也非度数／占用型）⚠️
+- 【**未判死 ✓**】路线**未**判定为死 ✗（照唐先生判据：仅当"独立上界不可能"才判死 ✓；本档只排除**两类来源** ✓）；下一步候选（登记未做）：① 第三类全局资源（$d_4$ 与 $G_2(C)$ 团结构／极大团计数耦合 ✓）；② 用 $B(c)=0$ 给 $d_4$ 侧约束 ⚠️；③ 检验新恒等式是否与已知 $A$-data 界冲突 ✓
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间；C-413 ＝ LIVE/P1 incomplete ✓；不声称 P1 成立 ✗（V290）；不声称 D3→D4 线已死 ✗
+- 档：`docs/P1-D4-2026-09-27-sphere-covering-identity-and-the-two-source-exclusion.md`
