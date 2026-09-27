@@ -1033,3 +1033,9 @@ u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM
 **(甲) External-Cover Gate = NO-GO**：覆盖性初等 ✓；**inclusion-minimality 本机实测 ✓✓**（$\lambda=\mathbf 1(s{=}9),1{\oplus}r(s{=}1),r$翻一$(s{=}15),r(s{=}16)$ 四例 $V$ 与 $\mathcal C$ 皆最小）⟹ **外部覆盖/最小性均不含 $s$-信息**，$s\in\{1,\dots,16\}$ 全可达 ⟹ 「NP1CC $\Rightarrow s\in$ 小子集」被 $s{=}1,15,16$ 击穿 ✓。
 **(乙) 3/7 分裂定理 ✓✓**：$\mathrm{supp}$ 来自 $(W_0\setminus\{0\})$（3 列）$\sqcup\,W_3$（4 列）⟹ $1\le s\le15\Rightarrow|S|=7$；$s=16\Rightarrow|S|=3$；$A_2=2048-32s$ ✓。
 **flat 再更正**：flat $\iff q$ 在 $\mathrm{supp}$ 上恒定 $\iff s\in\{8,\mathbf{16}\}$（上档"flat $\iff s=8$"漏 $s=16$ ✗）。
+
+
+## A-STEP01-1（2026-09-27）⭐
+**Step 0 闭合 ✓✓**：$s\in\{1,\dots,16\}$ 全可达；本机六例（$s{=}1,2,3,4,8,16$）逐项验证 $(A_1,A_2,J)=(32s,\,2048-32s,\,1024(3s^2+4(16-s)^2))$ **全命中**，硬门（$|V|{=}2048\wedge\mathfrak B_1(V)\wedge\mathfrak B_1(\mathcal C)$）全过 ✓ ⟹ $(A_1,A_2)$ 单参数线、$A_2=2048-A_1$。
+**Step 1 族外池 ⚠️**：七个完美半码两两拼接共 28 对，**全部过覆盖门**；桶 $(A_1,A_2)$（去重后）：$(128,1920)\times2,(896,1152)\times2,(1024,1024)\times6,(1152,896)\times7,(1280,768)\times3,(2048,0)\times7$，**每桶 $J$ 唯一 ⟹ 未见 P1-2 分叉** ⟹ 单参数塌缩可能深于 Vasil'ev。边界：仍未触及 ENP1CC puncturing ⚠️。
+**更正**：$A_1+A_2$ 曾=4096（双计 bug，距离-1/-2 对各有 2 公共中点）；配对去重后 = $M/2=2048$ ✓。
