@@ -1565,3 +1565,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**停判（照唐先生三分支）**】分支①成立 ⟹ "继续寻找 $J$ 的覆盖不等式"，**但须先补 R2-2′** ⚠️
 - 【**边界**】零计算 ✓（构造性推导）；**未碰** excess／Habsieger／Van Wee／Fourier ✓；**未改门** ✓；只引 P12-PASS 见证 ＋ 档案基准 $K(9,1)=62$ ✓
 - 档：`docs/R2-2-2026-09-27-n10-support-layer-separation-constructible-and-free-coordinate-lemma.md`｜（R1 档补 §13 ✓）
+
+**🔗 C-396（2026-09-27 · **R2-2$'$：近最优不可约 support 分离的机制构造**）** ✓
+- 【**结论**】分支落位 **③ HOLD（带具体机制）**：既未构造出 $[119,123]$ 的分离对，也未证明其不存在；**但机制已得**（机制 ≠ 缺口，**缺口＝存在性**）✓
+- 【**框架（§2 ✓✓）**】$\gamma_C(v)=\#\{(a,b)\in C^2:a\oplus b=v\}$（自相关）；$A_i=\sum_{|v|=i}\gamma(v)$ ⟹ **$A$ 只固定 $\gamma$ 的层和**；**支撑层 ＝ $\gamma$ 限制在坐标向量 $\{e_i\}\cup\{e_i\oplus e_j\}$ 上** ✓（$q_{ij}=\frac12\gamma(e_i\oplus e_j)$ ✓）⟹ **分离问题 ⟺ $\gamma$ 在坐标向量上的取值可否变而层和不变** ✓✓
+- 【**载体：平移对族（§3 ✓）**】$C=D\cup(D+x)$ ⟹ $|C|=2|D|\in\{120,122\}\subseteq[119,123]$ ✓（**不受**自由坐标引理排除 ✓）；$\gamma_C(v)=2\gamma_D(v)+2\gamma_D(v\oplus x)$ ⟹ $\boxed{A_i(C)=2[A_i(D)+A_i(D,x)]}$ ⟹ **$A(C)=A(C')\iff A_i(D,x)=A_i(D,x')\ \forall i$** ✓（把 $A$-等价归约为**移位剖面相等** ✓）；支撑 $q_{ij}(C)=\gamma_D(e_i\oplus e_j)+\gamma_D(e_i\oplus e_j\oplus x)$ ✓
+- 【**★机制（§4，3 行可证 ✓✓）**】取等距 $\sigma$（permute coords ⋊ translate）使 $\sigma(D)=D\oplus t$，令 $x'=\sigma(x)$、$C'=D\cup(D+x')$（**同一 $D$**）⟹ **(i)** $A_i(D,x')=A_i(\sigma D,\sigma x)=A_i(D,x)$ ✓（$\sigma$ 等距＋平移不变性）⟹ **$A(C)=A(C')$ ✓**；**(ii)** $q_{ij}(C')-q_{ij}(C)=\gamma_D(e_i\oplus e_j\oplus x')-\gamma_D(e_i\oplus e_j\oplus x)$ **一般非零**（当 $\sigma$ 不保坐标向量集）⟹ **support 变 ✓** ⟹ **A 不变、J 变** ✓✓（与 $n=8$ 的"两半对齐 $(\pi,e)$"**同一机制、换载体** ✓）
+- 【**缺口（§6）**】**存在性** ⚠️：需 $D$ ＋ $\sigma,t,x$ 使 $D\cup(D+x)$、$D\cup(D+x')$ **均覆盖** $\mathbb F_2^{10}$（且 $C$ **不可分**，须逐例核 ✓）；**奇偶观察** ✓：平移对族只给**偶数** $|C|$ ⟹ $|C|=119$（奇）须换载体（如 $D\cup(D+x)\cup\{y\}$，得 $121/123$ ✓）
+- 【**门②接口（§7）**】把 $J$ 写成 $\gamma$ 在坐标向量上的线性/二次泛函 ⟹ 与 §4 的 $A$-不变方向**正交**；**$A$-纤维（固定层和的自相关族）内的 $J$-变化 ＝ 门②的作用域** ✓
+- 【**边界**】零计算 ✓；**未开门②** ✓；**未改门** ✓；§4 为**充分**机制（逆不主张 ✗）；只用本线既有资产 ✓
+- 档：`docs/R2-2prime-2026-09-27-near-optimal-irreducible-support-separation-mechanism.md`
