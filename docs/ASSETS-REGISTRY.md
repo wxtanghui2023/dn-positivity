@@ -1836,3 +1836,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) 状态锁（照唐先生 23:27 ✓）**】avoidance／missing-set **STOP** ✗；degree／profile／capacity **STOP** ✗；$4\to5$ 精确邻接接口 **LIVE** ✓；C-419 $b_3/b_4$ tradeoff **HOLD** ✓；**新的全局碰撞尚未形成** ⚠️；**C-421 不 CLOSED** ✗，是合格 **LIVE interface**、**尚不是攻击点本身** ✓（本档为其补上"右侧第一次精化" ✓）
 - 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间（回查已分栏 ✓）；不声称 $I(c)$ 路线有效 ✗；不声称 119-cover 中存在内部块 ✗（$C_1$ 非覆盖码 ✓）；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-L5-2026-09-27-internal-4face-criterion-and-refined-layer5-capacity.md`
+
+**🌉 C-423（2026-09-27 · **P1-BRIDGE：局部无需求引理 ＋ 无桥定理 ＋ 生死关判据**）** ✓
+- 【**★★(1) 局部无需求引理（新 ✓✓）**】内部块 $y=c{\oplus}e_u$ 的 6 个 layer-5 点 $c{\oplus}e_{u\cup\{i\}}$（$i\notin u$）**全部在 $B_1(y)$ 内** ✓（$d(y,c{\oplus}e_{u\cup\{i\}})=|e_i|=1$ ✓）⟹ **已被 $y$ 覆盖** ⟹ $$\boxed{\text{covering 对它们\textbf{零需求}}}$$ ✓✓ 即：$$\boxed{\text{layer-5 点被覆盖}\ \not\Rightarrow\ \text{layer-5 码字存在}}$$ ✓✓（照唐先生 23:30 ✓，本档给证明 ✓）；与 $C_1$ 对照：$E_5(u)=\varnothing$ 与全 avoidance 兼容 ⟹ 非漏洞、是结构允许 ✓
+- 【**★★(2) 无桥定理（局部层面 ✓✓）**】内部块产生的**局部需求的全部对象都是 weight-3 点**（4 个面 ✓，且 $y$ 自身覆盖它们 ✓）；**没有任何局部需求以 layer-5 为对象** ✗ ⟹ 两链在**局部**无方向正确的桥：需求链 $b_4\to(\text{weight-3 demand})$ 与接口链 $b_4\to M_4^{\rm int}\to I(c)\to M_5$ ✓ ⟹ **这解释了"下界自然缺失"的\*\*原因\*\*** ✓✓（比"暂无下界"更强 ✓）；**推论**：任何桥都必须是**全局的** ⟹ 与 C-409／C-417 风险同源 ⚠️（须过 C-418 门 ✓）
+- 【**★(3) 生死关判据（精确 ✓）**】**(a) 继续**：若证 covering $\Longrightarrow E_5(u)\ne\varnothing$（某内部块有 layer-5 邻接码字 ✓）；**(b) STOP**：若给出**覆盖兼容机制**使某内部块 $E_5(u)=\varnothing$ ⟹ 此路线在此 STOP ✓；**现状**：(a) 在**局部被排除** ✓（§1）、(b) **未给出** ✗ ⟹ **HOLD ＋ 精确理由** ✓（照唐先生：**不关闭** C-422 ✗、**不升级**为 collision ✗）
+- 【**★(4) 方向性观察（结构 ✓）**】添加 layer-5 码字会引入其**自身需求**（成本 ✓），而 $E_5(u)=\varnothing$ **无成本** ✓ ⟹ 该路线的自然方向**与 forcing 相反** ✓
+- 【**★(5) 定位（照唐先生 23:30 ✓）**】C-421 ＝ 发现 $4\to5$ 接口 ✓；C-422 ＝ 发现该接口的 $0/1/5$ 面数分类及精细容量 ✓；**C-422 ＝ 新的排列级上界／结构分类、尚不是 P1** ✓（**保留**、**不关闭**、**不升级** ✓）；**下一关** ＝ covering 能否给该接口制造**正需求** ✓
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间（回查已分栏 ✓）；不声称 $4\to5$ 路线死 ✗（须 (b) 才 STOP ✓）；不声称 119-cover 中存在内部块 ✗；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-BRIDGE-2026-09-27-local-zero-demand-lemma-and-the-no-bridge-theorem.md`
