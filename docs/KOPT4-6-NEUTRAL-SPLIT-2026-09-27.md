@@ -168,6 +168,12 @@ $$\textbf{推论.}\quad d(c_1,c_2)\ge5\ \Longrightarrow\ E\ \text{不可能由 2
 **证明**：$H_{c_1}\subseteq B_1(c_1)$、$H_{c_2}\subseteq B_1(c_2)$；$d(c_1,c_2)\ge5$ ⟹ 任意 $z_1\in H_{c_1},z_2\in H_{c_2}$ 有 $d(z_1,z_2)\ge3$ ⟹ **无单词同时覆盖两簇** ⟹ 每簇须由**单个**外部词整覆盖，而引理说这对 $H_{c_1}$ 不可能 ⟹ 不可动 ✓
 本码 $d(c_1,c_2)\ge5$ 的 pair 占压倒多数 ⟹ 观测到的 `mobility=0` **大部分可证** ✓；仅 $d\le4$ 的 pair 属真计数 ✓
 
+⚠️ **陈述纪律（唐先生 19:26 更正 ✓）**：该推论的**正确形式是局部的**：
+$$d(a,b)\ge5\ \Longrightarrow\ B_1(a),B_1(b)\ \text{对不可共覆盖 witness 的贡献不能合并}$$
+**不得**写成"所有词两两 $d\ge5$" ✗ —— 实测 $d_{\min}(C)=1$（40 对距离 1、2985 对 $d\le4$）⟹
+$$\boxed{\text{local rigidity}\ \ne\ \text{global separation}}$$
+即 3-exchange 刚性**并非**来自"最小距离大"的单一解释 ✓ —— 这正支持下一阶段研究 $E(A)$ 的 **incidence hypergraph**，而非继续找"距离大所以不能动"的单一理由 ✓
+
 ### 5.4 净结论（严格，k≤2 阶段）
 
 - **三个代数（A：delete-refill／B：1-for-1／C：k=2）在基准码上全部零位移** ⟹ 基准 124 码在这些邻域内是**强局部刚性** ✓
@@ -202,7 +208,8 @@ $$\forall A\subset C\ (|A|{=}3),\ \forall D\subset\mathbb F_2^{10}\setminus C\ (
 
 ### 5.6 k=4 阶段（进行中；措辞已收紧 ✓）
 
-$$\boxed{k=1:0\quad k=2:0\quad k=3:0\ (\text{完备})\quad k=4:\ \textbf{完备计算进行中}}$$
+$$\boxed{k=1:0\quad k=2:0\ (\text{全 }7{,}626)\quad k=3:0\ (\text{全 }310{,}124)\quad k=4:\ \textbf{完备计算进行中}}$$
+且真正的 P3 目标始终是：$\boxed{\tau(E(A))\le |A|-1}$（等基数移动 $\tau\le|A|$ 与降基数碰撞 $\tau\le|A|{-}1$ **永不混淆** ✓）
 
 计算链条 ✓：
 $$A\ \longrightarrow\ \textbf{安全组合筛}\ \longrightarrow\ E(A)\ \longrightarrow\ \textbf{局部 exact}$$
@@ -246,6 +253,12 @@ $\tau(E(A))$ ＝ 该二部结构的 covering number ⟹ 目标＝寻找 **candid
 **方向反转（唐先生 19:23 ✓）**：$k\le4$ 全无出口时**不要**机械升 $k{=}5,6,7$ ✗（会退回搜索工程），应先问**"为何该 124 构造如此局部刚性"**：
 757 private points ｜ $d_{\min}=1$（**更正：非 $\ge5$** ✗）｜ $k\le3$ 全堵 ｜ $k{=}4$ 收尾 ｜ **$124\xrightarrow{\text{overshoot}}125\ (R>0)\xrightarrow{\text{cleanup}}124$**
 最后一条说明**冗余层并非不可达**，而是**需先支付一个额外中心的"能量成本"，等基数交换消不掉它** ✓✓（本档认为这是比"124 很刚"更值得研究的对象 ✓）
+
+**k=4 完成后的 P3 分解计划（唐先生 19:26 拍板 ✓）**
+- 若 $m_4=0$ ⟹ **不马上上 $k{=}5$** ✗；先对**全部 exact 的 $A$** 做结构统计：$|E(A)|$、$|Q(E)|$、$\alpha(E)$、$\tau(E)$（$\alpha$ **不用**普通距离 packing，而研究**候选中心兼容性** ✓）
+- 目标 ＝ 找**统一证书** $\tau(E(A))\ge5$ ✓，而非对 $9{,}381{,}251$ 个 $A$ 逐个报"不行" ⟹ 这才把**计算资产升级为数学资产** ✓
+- 若 $m_4>0$ ⟹ **相反**：**立即冻结第一个 moved witness**，不扩大搜索，直接审计其是否满足 $\tau(E)\le3$ ✓
+- 当前：750k/≈1.65M、`MOVED=0` ⟹ **运行中的强信号，不提前结案** ✓；决策 ＝ **等 k=4 完备结果 → 再定 incidence-hypergraph 攻击的具体形式** ✓
 
 ## §6 红线（硬 ✓）
 
