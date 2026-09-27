@@ -1808,3 +1808,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) 状态锁（照唐先生 23:19 ✓）**】**C-418 ＝ 筛选器已成立** ✓；**$N_{\rm int}$ ＝第一候选** ✓；**尚无新数学约束** ✗；**119 主问题仍完全 LIVE** ✓；**不**把任何短名单项提前升级成 closure／NO-GO ✗（照令 ✓）；**未改** closure gate／nogo gate ✗；**优先级**：$N_{\rm int}(c)\to G_2(C)$ 谱接口 $\to$ 见证超图 ✓（每项须先过 C-418 门 ＋ 独立性闸 ✓）
 - 【**边界**】零程序计算；未上 SDP/SAT；未开门②；未改门；不跨空间（回查已分栏 ✓）；**本档未产生对 119 的新数学约束** ✗（诚实 ✓）；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-NINT-2026-09-27-witness-count-tradeoff-relation-and-independence-gate.md`
+
+**🧱 C-420（2026-09-27 · **P1-B4：$b_4$ 独立控制 micro-check —— 新局部事实 ＋ avoidance 侧无界 ＋ 三来源汇总**）** ✓
+- 【**★★(1) 新局部事实（本档 ✓✓）**】内部块 $y=c{\oplus}u$（$u\subseteq S(c),|u|=4$ ✓）⟹ $$\boxed{S(y)\cap u=\varnothing}\ \Longrightarrow\ \boxed{d_1(y)\le10-4=6}$$ ✓✓ **证明 3 行**：$i\in u\Rightarrow y{\oplus}e_i=c{\oplus}e_{(u\setminus i)}$（重量 3、支撑 $\subseteq S(c)$ ✓）$\overset{(\alpha)}{\Longrightarrow}\notin C\Rightarrow i\notin S(y)$ ✓；**性质**：**纯排列级**、非 degree-profile 函数 ⟹ 过 C-418 门 ＋ 独立性闸 ✓；**注**：此前局部事实皆"以 $c$ 为中心"，本事实是**以内部块为中心**的第二条（第一条 ＝ P1-D4b 的 $C_0$ ✓）
+- 【**★★(2) avoidance 侧：$b_4$ 无界（$\le\binom{10}4=210$ ✓✓）**】显式族 $$C_1:=\{0\}\cup\{e_i\}\cup\{e_u:u\in\mathfrak U\},\quad \mathfrak U\subseteq\binom{[10]}4\ \text{任意},\ b_4(0)=\#\mathfrak U$$ **逐类核验 ✓**：① 无重量 2／3／5／6 点 ⟹ $A(0)=0$ ✓、$(\alpha)$ 在 0 成立 ✓；② **无 square**（2-coset 需重量 2／3／5 点 ✗）；③ **无 tetra**（3-coset 偶部需重量 2／1／3／2／6 点 ✗；$v=e_u$ 情形按 $|u|$ 落入数细分：全在内⟹重量 2 ✗、1 在外⟹一对重量 2 ✗、2 在外⟹重量 6 ✗、3 在外⟹全重量 6 ✗）；④ $A(y)=0$ 空真 ✓ ⟹ **$C_1$ 满足全 avoidance** ✓✓，取 $\mathfrak U=\binom{[10]}4$ 得 $b_4(0)=210$（**上界可达** ✓）⟹ **在 avoidance 层面 $b_4$ 可任意大** ⟹ **"$N_{\rm int}$ 路线自然极限"支获明确支持** ✓✓（**但 $C_1$ 非覆盖码** ✗，不证明 119-cover 中可大 ✗）
+- 【**⚠️(3) 三来源汇总（皆不给独立控制 ✓）**】① avoidance ✗（$C_1$ ✓）；② degree／profile ✗（只见 $d_4=\sum_jb_j$ 总数 ✓）；③ covering ✗（只给 $b_3+4b_4\ge\binom s3$，需求型、不能上界 ✓）；④ 新事实 §1 ⚠️ 部分（约束 $d_1(y)$、不直接界 $b_4$ ✓）⟹ **尚无任何已证机制能独立压低 $b_4$** ⟹ **C-419 折衷式暂不能产生实质 squeeze** ✗
+- 【**★(4) 状态锁（照唐先生 23:21 ✓）**】C-419：**PASS ＋ 新排列级关系，未闭合** ✓；**下一攻击点 ＝ 独立控制 $b_4$** ✓；**无理由 CLOSED** ✗、**无理由 NO-GO** ✗；**HOLD** ✓；未升级短名单项 ✗；**未改** closure gate／nogo gate ✗；119 主问题仍完全 LIVE ✓
+- 【**下一步两出口（登记未做 ✓）**】① 找新机制界 $b_4$（如用 §1 的 $d_1(y)\le6$ 做全局计数 ⚠️）；② 若在 119-cover 中 $b_4$ 可大 ⟹ 明确记为 natural limit ✓
+- 【**边界**】零程序计算；未上 SDP/SAT；未开门②；未改门；不跨空间（回查已分栏 ✓）；不声称 119-cover 中 $b_4$ 可大 ✗；不声称折衷式无用 ✗
+- 档：`docs/P1-B4-2026-09-27-internal-block-local-fact-and-avoidance-side-unboundedness.md`
