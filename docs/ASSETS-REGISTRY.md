@@ -1929,3 +1929,22 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**（登记未做 ✓ 后续可攻点）**】① 用"见证星"共享同一球心 $p_T$ 的**互斥性**（两星是否不交？✓）收紧；② 用 $p_T$ 间的距离结构（$|T\cap T'|$ 决定 $d(p_T,p_{T'})$ ✓）建**第二计数** ⚠️
 - 【**边界 ✓**】**零程序计算** ✓；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不做路线决定** ✓（照唐先生 23:54 令 ✓：本档只给结果与缺口，STOP／切换由唐先生裁定 ✗）；不跨空间（回查已分栏 ✓）；不声称 P1 成立 ✗（V290）；不声称与 C-419 联用已获增强 ✗（§3 已标注 ✓）
 - 档：`docs/P1-WIT-2026-09-27-witness-redundancy-sandwich-and-first-independent-b4-bound.md`
+
+**🧪 C-431（2026-09-28 00:0x · **SUBSPACELP：level-$m$ 系统 LP 松弛 ≡ 体积界（零增益）＋ 引擎定位**）** ✓
+- 【**★★等号定理（新 ✓✓）**】对 binary $R=1$、任意 $n$、任意 $1\le m\le n$：$$\boxed{L(m)=\frac{2^n}{n+1}\ \textbf{恰好等号}}$$ ✓ ① 聚合 $t$ 约束 ⟹ $(n+1)\sum_iy_i\ge2^n$ ⟹ $L(m)\ge\frac{2^n}{n+1}$ ✓；② **均匀解** $y_i\equiv\frac{2^{n-m}}{n+1}$ 可行（每列和 $=\sum_iA_{ji}=|B_1(c)|=n+1$ ✓，且 $\le s$ ✓）⟹ $L(m)\le\frac{2^n}{n+1}$ ✓ ⟹ 等号 ✓✓
+- 【**★★零增益实测 ✓✓**】$n=9$：$L(m)\equiv\mathbf{51.200000}$（$m=1..9$ ✓）；$n=10$：$L(m)\equiv\mathbf{93.090909}$（$m=1..10$ ✓）⟹ **refinement 增益 ＝ 0** ✗✓（含 $m=n$ 即覆盖条件本体层 ✓）
+- 【**★★引擎定位（诊断 ✓✓）**】**OB 机制的引擎不是 LP** ✗，而是**整性 ＋ 不等价分布分类 ＋ 递归** ✓✓；**LP 的真实角色 ＝ 剪枝／校验** ✓（其松弛**恰好只给体积界** ✓）；**全部强度必来自整性约束 + 分支** ✓
+- 【**结构原因 ✓**】系统**双重平衡**（每列和 $=|B_1(c)|=n+1$ ✓、每行同值 $s$ ✓）⟹ **均匀分数解恒最优** ⟹ 松弛恒等于体积界 ✓✓
+- 【**与基线对照 ✓**】$93.090909$（体积界 ✓）$<$ $94.0197982$（Delsarte LP ✓）$<$ $101.0073568$（Van Wee ✓）$<$ $101.4081694$（combined classical ✓）$<$ $105.2223$（SDP ✓）$<$ $107$（文献下界 BÖW 2004 ✓）$<$ $120$（文献上界 ✓）⟹ **本 cell-LP 严格弱于关联方案 LP** ✓
+- 【**★Test C 下一步（登记未跑 ⚠️，照唐先生 ✓）**】既然 LP 层零增益 ⟹ 直接测**整层**：$\#\big\{y\in\mathbb Z_{\ge0}^{2^m}:A^Ty\ge s\mathbf 1,\ 0\le y\le s,\ \sum_iy_i=M\big\}$ 的**码等价轨道数** ⟹ 即唐先生要的 **branch factor** ✓；$m\le4$（$t\le16$）可枚举 ✓，更大需 DP/母函数 ⚠️；**进一步可挂**：① 自由坐标引理（顶层剪枝 ✓）② $(\alpha)(\alpha')$ ✓ ③ C-419／C-430 折衷 ✓ ④ 有效 120-码 `work/k10/kamenetsky120.txt` 的对称/切换模式对比 ✓
+- 【**产物**】`scripts/SUBSPACE_LP_2026-09-28_level_m_bound.py` ＋ `scripts/SUBSPACE_LP_2026-09-28_level_m_bound.txt`（逐字输出 ✓；经 `pyguard.sh 800` ✓ 单线程 ✓）；档 `docs/SUBSPACELP-2026-09-28-level-m-lp-relaxation-equals-volume-bound.md`
+- 【**边界**】有计算（小 LP ✓）；未上 SDP/SAT；未改门；**不作路线裁定** ✗（照 23:54 令 ✓）
+
+**🌟 C-432（2026-09-28 00:0x · **WITSTAR：见证星交叠精确分类 ＋ 私/公二分 ＋ Johnson 恒等式**）** ✓
+- 【**★★精确分类（sharp，无条件 ✓✓）**】对 $T,T'\subseteq S(c)$、$|T|=|T'|=3$：$$\boxed{\big|W(T)\cap W(T')\big|=\mathbf 1_{\{|T\cap T'|=2\}}\cdot\mathbf 1_{\{c\oplus e_{T\cup T'}\in C\}}}\quad(\in\{0,1\}✓)$$ ✓✓ 特别：$|T\cap T'|\le1\Rightarrow W(T)\cap W(T')=\varnothing$ ✓（＝唐先生所写 ✓）；$|T\cap T'|=2\Rightarrow\le1$ ✓✓（**严于唐先生的 $\le2$** ✓）
+- 【**★★锐化理由（无条件 ✓✓）**】两球心 $p_T,p_{T'}$ 在 $d=2$ 时确有 2 个公共邻点，但**只有一个可达见证**：$c\oplus e_{T\cap T'}$（距离 2 ✓ **非见证** ✗）与 $c\oplus e_{T\cup T'}$（距离 4 ✓ 唯一候选 ✓）⟹ 因**见证必为距离-4 码字** ✓ 故 $\le1$ ✓（无需 $A(c)=0$ ✓）
+- 【**★★私/公二分（新 ✓✓）**】按 $|S_y\cap S(c)|$ 分类距离-4 见证：**b_3 型**（$=3$）**只属于一个星**（私有 ✓）；**b_4 型（内部块）**（$=4$）**恰属于 $\binom43=4$ 个星**（公有 ✓）$$\Longrightarrow\ \boxed{\sum_Tm_T=4b_4+b_3}\ \text{的系数 }4,1\ \textbf{由此而来}✓✓\ \big(\text{由计数整理升为结构事实}✓\big)$$
+- 【**★★精确 Johnson 恒等式（新 ✓✓）**】$$\boxed{\sum_T\binom{m_T}2=\sum_{y<y'\in D_4(c)}\binom{|S_y\cap S_{y'}\cap S(c)|}3}=\#\{\{y,y'\}:d(y,y')=2,\ S_y\cap S_{y'}\subseteq S(c)\}=E_J+E_{\rm cross}$$ ✓✓（Johnson 边 ＋ 交叉对 ✓）
+- 【**★纪律（照唐先生 §3 ✓）**】保持 $4b_4+b_3$ 口径 ✓；**不得**偷换为 $4d_4(c)$ ✗（$\binom{|S_y\cap S(c)|}3=0$ 当 $\le2$ ✓ ⟹ $4d_4(c)$ 会**高估** ✗）
+- 【**评估（照判据 ✓，不做裁定 ✗）**】① **过门 ✓✓**：$\sum_T\binom{m_T}2$ 取决于 4-集**成对交叠** ✓，非 profile 量 ⟹ **未落入 STOP** ✓（属 C-417／C-425 之外**第三种** ✓）；② ⚠️**下界侧为空** ✓（$\sum_Tm_T=\binom s3$ 时 $\forall T:m_T=1$ ⟹ 二阶量 $=0$ ✓，凸性不给正下界 ✗）；③ ⚠️**上界侧＝唯一活口** ✓（登记未做 ✗；可用局部界：$E_J\le2b_4(s-4)$ ✓、$E_{\rm cross}\le b_3b_4$ ✓）
+- 【**不碰 $E_3$** ✓（照唐先生 §7 刹车 ✓）】；**零程序计算** ✓；**不作路线裁定** ✗；档 `docs/WITSTAR-2026-09-28-witness-star-overlap-classification-private-public-and-johnson-identity.md`
