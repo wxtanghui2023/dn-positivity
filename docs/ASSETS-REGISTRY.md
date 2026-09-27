@@ -1450,3 +1450,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 门缺口（只登记，不擅改门）**】**G-1** 无 owner／工业化（**E5**）前置问；**G-2** 未实现「未覆盖≠未知」禁令（"无人做"可伪装成 E4 的 OPEN）；**G-3** E4 五闸 evidence 可同源重复填 ⟹ 门会**放行项目已判除的条目** ⚠️（建议须唐先生批）
 - 【**交棒**】**T-5 三点**：① 目标阶**图数**核实（库存"约 $10^4$"为估计）② 已知**完备阶数阈值** ③ **公开证书状态**（结果已解决 vs 仅有算法／部分族）；**不得预设 $n=8$ 首攻** ✓
 - 档：`docs/T1-CHECK-2026-09-27-zL-5-5-three-point-source-verification-DROP-to-T5.md`、`docs/GATE-RUN-2026-09-27-T1-closure-gate-admits-but-preregistration-drops.md`｜脚本：`scripts/T1_CHECK_gate_candidates.json`、`scripts/T1_CHECK_closure_gate.txt`
+
+**🔴 C-385（2026-09-27 · **ERRATUM + T-5 ＝ DROP**）** ✗
+- 【**勘误（阈值 6 → 7）**】**inertia sets 完备阈值 ＝ $n\le7$**（**LAA 436(12), 2012-06-15, 4489–4502**，DOI 10.1016/j.laa.2011.08.026）逐字：> *"We term such graphs **atoms** and give the inertia sets for all atoms on at most seven vertices. **This can be used to compute the inertia sets for all graphs on at most seven vertices.**"* ✓✓ —— **库存旧记 $n\le6$（ELA 2010）为过期指纹** ✗（该 2010 文自称只到 6 阶，未追后继）
+- 【**T-5 终局 ＝ DROP（对象级收割）**】① min rank $n\le8$（2025 ELA ✓）② max nullity $n\le8$（对偶 ✓）③ **inertia set $n\le7$（2012 LAA ✓）** ④ $n=8$ inertia **不判 open**（2012 文只称 can be applied to many graphs，**未**称全体 8 阶）⑤ inverse inertia 结构刻画已有成套 reduction ⟹ **不进 P1/P2** ✓
+- 【**DROP 记录（唐先生 21:10 逐字 · 供直接引用）**】
+  > **T-5 / graph inertia-set small-order classification — DROPPED: complete through $n=7$ (2012); min-rank/max-nullity through $n=8$ (2025). Do not treat $n=8$ absence of a table as evidence of openness.**
+- 【**$\operatorname{mr}$ 与 $\mathcal I$ 不可互推 ✓**】$\operatorname{mr}(G)=\min_{(p,q)\in\mathcal I(G)}(p+q)$ ⟹ $\operatorname{mr}$ 是 $\mathcal I$ 的**投影**；2025 的 min rank/max nullity 完成**不**收割 $\mathcal I$ ✓
+- 【**纪律收获**】**"未见表" ≠ "open"** ⟹ 新目标须**正面证据**（作者自述 open／明确未做）✓；与 T-1 对照：T-1 的 open 是**作者自述**（可用 ✓），T-5 的 $n=8$ 是**检索缺口**（不可用 ✗）
+- 【**建议条款（只登记 · 不改门）**】**G-4**：阈值／缺口类事实**须追后继引用链**；目标 open **须有正面证据** ⚠️｜连同 **G-1/G-2/G-3** 一并**待宪章审批** ✓
+- 【**为何比 T-1 更干净**】T-1 ＝ 预登记撞车（09-24 A3 判定 D）＋同形赛跑；**T-5 ＝ 对象指纹本身已被 2012 文献收割**（零赛跑风险）✓
+- 档：`docs/ERRATUM-T5-2026-09-27-threshold-6-to-7-and-final-DROP.md`｜（勘误对象）`docs/T5-CHECK-2026-09-27-…-HOLD.md`（已加勘误横幅 ✓）

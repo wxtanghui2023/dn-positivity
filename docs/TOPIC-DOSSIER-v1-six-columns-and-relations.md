@@ -55,6 +55,8 @@ FREEZE-ACK: D1=0
 
 ## **T-5 图的 minimum rank / inertia set：小阶完备表** ⭐（规模最友好）
 
+> ⛔ **2026-09-27 勘误＋出口：T-5 ＝ DROP**（三个分支均**对象级收割**）：min rank／max nullity $n\le8$（2025 ELA ✓）；**inertia set 完备阈值 $n\le7$**（**2012 LAA**，**非**库存旧记的 $n\le6$ ✗）；$n=8$ inertia **不得**以"未见表"当作 open ✗ ⟹ 详见 `docs/ERRATUM-T5-2026-09-27-threshold-6-to-7-and-final-DROP.md` ✓
+
 ```
 **【领域】** 图谱论 / 矩阵分析（min rank、inverse inertia、零强迫数）✓
 **【内容与要求】** `P`：确定 `n` 阶**所有图**的 min rank（或 inertia set）。要求：**完备表 ＋ 每图双证书** ✓
