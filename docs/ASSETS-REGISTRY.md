@@ -988,3 +988,7 @@ ot\Rightarrow q$ ✓✓。**归属更正**：完美匹配已在 §II Cor 14(2)�
 ## A-P3BETACORE-1（2026-09-27）
 **β-Core 修正与验证**：$q=\lambda\mathbf 1_{U\setminus\{0\}}$（$\lambda=A_2/|S|=2^{n-m-d'}$，**非** $J$ ✗，第三处修正 ✓）。**卷积修正（已验）**：$(q*q)(x)=\lambda(2^{d'}-2)q(x)+\lambda^2(2^{d'}-1)\delta_0(x)$ ⟹ 代数 $\mathrm{span}\{q,\delta_0\}$ 为 2 维（**非** $q*q=\mu q$ ✗）。**Fourier 修正（已验）**：$\widehat q\in\{A_2,-\lambda\}$（双值 ✓，**非** $\{0,\mu\}$ ✗）。**已验证结构 ✓**：加法闭合 $u
 e v\in S\Rightarrow u+v\in S$ ⟹ $S\cong PG(d'-1,2)$（$n=16$：$d'=3$ 给 Fano 7 线、$d'=4$ 给 $PG(3,2)$ 35 线 ✓✓）。Gate 逻辑地位不变：族内为定理 ⟹ 剪枝力 = 检验族外候选（违 gate = 非 Theorem-13 形证书）✓。
+
+
+## A-P2A-1（2026-09-27）
+**P2-A 工具与正控**：内蕴差向量分布 $\nu$（仅用论文 §II 伙伴对划分 ⟹ 对任意 NP1CC 有定义 ✓）。**正控通过 ✓✓**：$n=16$ Type C 实例（$|C|=4096$、$k=256$、伙伴对 2048、$\nu=\{1:256,2:1792\}$）满足星性质（$\ell=15$ ✓）与 flatness（切片 $\equiv\lambda=256$ ✓）。**自纠**：$|Z|=M=4096$（非 $M/2$ ✗）。**缺失成分**：非线性半码 NP1CC（Vasil'ev 型）或 ENP1CC puncturing ✓。E3：非星 ∨ 非 flat ∨ 支撑非几何 ⟹ NP1CC ⊄ Theorem-13 β-shape ✓。警告：构造新 ≠ gate 新 ✓。
