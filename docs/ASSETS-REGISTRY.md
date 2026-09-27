@@ -1906,3 +1906,16 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**战略不变 ✓**】可达一侧仍是**上界侧**：起点用**文献已知 120-cover**（非我们的 124 ✓），目标 119 ✓；且**先做 D-LP-1B 归因**（定"新不变量必须超过的标杆" ✓）
 - 【**边界 ✓**】本档为 P0 审计（非新数学命题 ✓）；零程序计算；未改门；不跨空间；不声称 P1 成立／不成立 ✗（V290）；谱/Krawtchouk 对应为标准事实（档级 ✓）
 - 档：本条目（registry-only ✓）
+
+**🧩 C-429（2026-09-27 23:55 · **subspace distribution ＋ conditional LP：P0 已在档案（2026-09-26 三档）＋ n=10 系统推广（新）**）** ✓
+- 【**★P0 状态：已做完（2026-09-26 ✓✓，勿重做）**】档案三档已给出 source-first 拆解：
+ ① `PROVENANCE-2026-09-26-how-62-was-proved-and-the-diagnosis.md` ✓：**2001 摘要逐字**——"possible **distributions of codewords in subspaces** are refined until each subspace is of **dimension zero**… Repeatedly, a **linear programming problem** is solved considering only **inequivalent distributions**. A connection between this approach and **weighted coverings** is also presented" ✓✓ ⟹ **62 的证明类型 ＝ 计算机辅助的分类／LP 细分** ✓（非解析局部不等式 ✓）
+ ② `OBREVERSE-2026-09-26-…` ✓：**引文网络（OB2001 被引 21 篇 ✓）**＋ **候选 LP 指纹表**＋ **重建算法**（节点 LP 不可行 ⟹ 剪枝；可行 ⟹ 按 inequivalent refinements 分支；至 cell 维 0 ⟹ 精确 IP／certificate ✓）＋ **审计发现：目标很可能已被分类文献覆盖** ⚠️✓
+ ③ `MCOVER-2026-09-26-…` ✓：**精确重建 binary $n=9$, $R=1$ 的 level-$m$ M-covering system** ✓✓：固定前 $m$ 坐标 ⟹ $t=2^m$ cells、每 cell $s=2^{9-m}$ 词 ✓；$y_i=|C\cap C_i|$ ✓；$$\boxed{A_{ii}=10-m;\quad A_{ij}=\mathbf 1_{\{d(p_i,p_j)=1\}};\quad A_{ij}=0\ (d\ge2)};\qquad \sum_jA_{ji}y_j\ \ge\ 2^{9-m}\ (\forall i)$$ ✓✓（推导一行 ✓）；实测**逐层收紧律 $1.21\to1.09$** ✓；$m=9$ 极限 ＝ 覆盖条件本体 ✓
+- 【**★★n=10 系统推广（本档新 ✓✓，一行推导）**】同样"固定 $m$ 坐标"分区 ⟹ $t=2^m$ cells、每 cell $s=2^{10-m}$ ✓；$y_i=|C\cap C_i|$、$\sum_i y_i=|C|\le119$ ✓；$$\boxed{A_{ii}=\mathbf{11-m}\ \big(=1+(10-m)\ ✓\big);\qquad A_{ij}=\mathbf 1_{\{d(p_i,p_j)=1\}};\qquad A_{ij}=0\ (d\ge2)};\qquad \sum_jA_{ji}y_j\ \ge\ 2^{10-m}\ (\forall i)$$ ✓✓ —— **即"对角线 $=n+1-m$"的一般化** ✓（$n=9$ 档的 $10-m$ ✓ → $n=10$ 的 $11-m$ ✓）；该 LP 家族＝OB 机制的**可执行形式** ✓
+- 【**★P0→P1 桥（登记未跑 ⚠️）**】把**我们自己的剪枝引理**作为节点级附加约束：① **自由坐标引理**（$C=D\times\mathbb F_2\Rightarrow|C|\ge124$ ⟹ **任何 $\le123$-cover 必须坐标不可约** ✓，C-422／R2-2 ✓）—— 顶层最强的分区剪枝 ✓✓；② $(\alpha)(\alpha')$ 内部子立方体排斥 ✓（最细层可用 ✓）；③ C-419 折衷关系 $b_3+4b_4\ge\binom s3$ ✓；**据此的 P1 形态**：顶层 $m=1$ 的 $n=10$ LP ＋ 上述约束 ⟹ **问是否不可行** ✓
+- 【**STOP 判据（两条 ✓）**】① 若 $n=10$ 各级 LP **在加入我们的约束后仍全可行** ⟹ 分支无增益 ⟹ **STOP** ✗；② **新颖性闸（AMEND-21／24 ✓）**：`OBREVERSE` 已自查"目标**很可能已被分类文献覆盖**" ⚠️（含 [2009] Linderoth–Margot–Thain：isomorphism pruning ＋ subcode enumeration ＋ LP bounding ✓；[2003] Östergård：无 balanced 码达 $K(9,1)=62$ ✓）⟹ **方法可借用（LANE-A 合规 ✓），但不得声称"新机制"** ✓✓
+- 【**⚠️ 规模警告（诚实 ✓）**】$n=9$ 的缺口 $57\to62=\mathbf 5$ ✓；$n=10$ 的缺口 $107\to120=\mathbf{13}$ ✓（≈2.6 倍 ✓）且状态空间远大于 $n=9$ ✓；档案实测收紧律仅 $1.21\to1.09$（**温和** ✓）⟹ **很可能瓶颈在规模而非强度** ⚠️（与唐先生猜测一致 ✓，但须实跑方能断言 ✗）
+- 【**⚠️ 命名碰撞提醒（纪律 ✓）**】`P2-α`（2026-09-26 ✓）里的"$N_4\le9$"是**当时另一条线的刚性命题** ✓，**与**本线 C-419 的 $N_4$（距离-4 对数 ✓）**不是同一对象** ✗ —— 引用时必须显式区分 ✓
+- 【**边界 ✓**】本档＝**档案核对 ＋ 一行推广**（非新数学命题 ✓）；零程序计算（**未跑 solver** ✓）；未改门；不跨空间；不声称 P1 成立／不成立 ✗（V290）
+- 档：本条目（registry-only ✓；源档三份见上 ✓）
