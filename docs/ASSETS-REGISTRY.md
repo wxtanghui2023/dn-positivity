@@ -1596,3 +1596,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**定向查重 ✓**】"1660" 在档案中**无内容命中**（仅行号）；"十坐标桶"／"$Q\le$ 型上界"**无先例** ⟹ 本档 (i) $1555$ 上界、(ii) 甲总量版死亡判定、(iii) 容量 slack ≥ 53 为新增 ✓
 - 【**边界**】未计算 ✓（纯符号）；未做 PSD 可行性计算 ✓（照令）；未开门② ✓；未改门 ✓；**不声称** $K(10,1)\ge120$ ✗（V290 ✓）
 - 档：`docs/R3-A-2026-09-27-ten-coordinate-buckets-symbolic-verdict-total-version-dead.md`
+
+**🧮 C-399（2026-09-27 · **R3-甲 P2/P3：十桶＋PSD＋整数性的压缩形式**）** ✓
+- 【**判定确认**】**总量版 DROP** ✗（$A_1+2A_2\le1555<1660$ ✓）｜**十桶＋PSD＋整数版 ALIVE** ✓
+- 【**系统清单（八条 ✓）**】$G\succeq0$｜$G_{ii}=119$｜$G_{ij}=2q_{ij}$｜$q_{ij}\in\mathbb Z_{\ge0}$｜$B_i:=N_1^{(i)}+\sum_{j\ne i}q_{ij}\le83$｜$\sum_iB_i=\frac{A_1+2A_2}2\le777$｜$A_1+2A_2=285+Q-A_1$、$Q\le1270$、$Q$ 奇 ⟹ $[144,1555]$｜$A_1=2N_1,A_2=2N_2$ ✓
+- 【**★压缩形式 I（矩阵/谱）：PSD 有牙 ✓✓**】$G=mI+2\tilde Q$（$\tilde Q$ 零对角、$\tilde Q_{ij}=q_{ij}$）⟹ $$\boxed{G\succeq0\iff\lambda_{\min}(\tilde Q)\ge-\tfrac m2=-59.5}$$ 而 **Gershgorin＋桶约束只给 $\lambda_{\min}\ge-83$** ⟹ **PSD 严格更强（差 23.5）** ✓✓；$\mathrm{trace}\,\tilde Q=0\Rightarrow|\lambda_{\min}|\le59.5$ ✓；$2\times2$ 给 $q_{ij}\le59$ ✓
+- 【**★压缩形式 II（$\mu$-线性/谱测度）**】$\mu(u):=|\widehat C(u)|^2\ge0$，$\gamma(v)=\frac1{1024}\sum_u\mu(u)(-1)^{u\cdot v}$ ⟹ $q_{ij}=\frac1{2048}\sum_u\mu(u)(-1)^{u\cdot(e_i\oplus e_j)}$ ✓；**距离层 $A_i=\frac1{1024}\sum_u\mu(u)K_i(u)$（Krawtchouk 层泛函）** ⟹ **二阶量（$A$ 与 $q_{ij}$）皆为 $\mu$ 的线性泛函** ✓✓；约束 $\mu(0)=m^2$、$\sum_u\mu(u)=1024m$、$\mu(u)=(m-2k(u))^2$（$k(u)\in\mathbb Z\cap[0,m]$）✓
+- 【**★压缩形式 III（符号/相位：covering 的完整重述，无松弛 ✓✓）**】$g=b=\sum_{i=0}^{10}\mathbf 1_{C\oplus e_i}$、$\widehat g(u)=(11-2|u|)\widehat C(u)$（即模 11 定理的乘子 $T$）⟹ covering ⟺ $g\ge1$；码 ⟺ $\mathbf 1_C=F^{-1}(\widehat C)\in\{0,1\}$ ⟹ $$\boxed{\text{完整重述}:\ \widehat C:\mathbb F_2^{10}\to\mathbb Z\ \text{使}\ (i)\ F^{-1}(\widehat C)\in\{0,1\};\ (ii)\ F^{-1}\big((11-2|u|)\widehat C\big)\ge1}$$ ✓✓ —— **三分读数**：距离层 $=A=\mu$ 的 Krawtchouk 层泛函｜支撑层 $=q_{ij}=\mu$ 的坐标泛函｜**covering $=\widehat C$ 的符号（$\mu$ 看不见 ✓）**
+- 【**可行性问题的精确陈述（本档不跑 ✓）**】是否存在零对角非负整数 $\tilde Q$（$\sum_{i<j}q_{ij}=N_2$）满足 $\lambda_{\min}(\tilde Q)\ge-59.5$ 与桶约束 ✓；**不可行 ⟹ $K(10,1)\ge120$（真 P1 ✓，因任一 119-cover 必给可行点）**；**可行 ⟹ 只说明二阶（含 PSD）不足 ⟹ 进三阶（乙）** ✗（不推出 119 存在 ✓）
+- 【**边界**】未跑可行性计算 ✓（照令）；零计算；未开门②；未改门；不写 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R3-A2-2026-09-27-ten-bucket-PSD-integer-compressed-form.md`
