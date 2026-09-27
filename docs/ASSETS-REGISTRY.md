@@ -934,3 +934,16 @@ ot\Rightarrow(A_1,A_2)$ ✓。
 **缺口定理 ＋ β gate** ✓：下一轮必须构造 $J$ 使 $J(C_0)
 e J(C_1)$ 且非 $(A_1,A_2)$ 的函数；测试集 = 两 witness ✓。
 **细档**：`docs/CLOSURE-2026-09-27-covering-side-ceiling-and-gap-theorem.md`
+
+
+---
+
+## A-SEPPAIR-1 · $n=9,K=62$ separation pair ＋ 判据清单（2026-09-27 立 ✓✓）
+
+**性质** ✓：**测试集资产**（下一阶段所有候选不变量必须先在两码上求值 ✓）。
+**数据源** ✓：`work/k10/c62/K_9_1_classif.txt`；指纹：码#0 `3639c34b…`／码#1 `a2fed1d7…` ✓。
+**关键量** ✓：$A=A_1{+}A_2=73$ **相同** ✓；$D=A_1{-}A_2=-59$ **vs** $-21$ ✓；(7,66) vs (26,47) ✓。
+**盲区类（12 项 ⟹ 同值即 DROP ✓）**：profile、$\sum b$、$\sum b^2$、$A$、$T_3$、$T_4$、$S_2$、$S_{2b}$、$H_H$、$P_2$、$\sum\delta(n-\delta)$、$N_{\ge5}$ ✓。
+**分离类（9 项 ✓）**：$A_1,A_2,D,N_2,N_3,N_4,I,S,\sum_F\binom{q_F}2$ ✓。
+**方法学** ✓：quadratic appearance $\not\Rightarrow$ quadratic information ✓。
+**细档**：`docs/CLOSURE-2026-09-27-Q0-STOP-and-the-separation-pair.md`
