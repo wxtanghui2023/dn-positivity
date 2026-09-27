@@ -1682,3 +1682,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**档案对照 ✓**】$|\cap_3|\in\{0,1\}$（唯一性）**已在 `C3-119-2026-09-27` IA-1** ⟹ **不重复主张** ✗（引用 ✓）
 - 【**边界**】零程序计算；未上 SDP/SAT/Terwilliger；未开②；未改门；不跨空间；不声称 $K(10,1)\ge120$ ✗（V290）
 - 档：`docs/R7-2026-09-27-K4-shape-catalog-correction-and-T4-profile-STOP.md`
+
+**🔒 C-407（2026-09-27 · **R7 状态锁 ＋ $K_4$ 亏空接口恒等式**）** ✓
+- 【**★状态锁 ✓✓**】$$\boxed{\textbf{R7 = PROFILE-LEVEL STOP};\qquad \textbf{STRUCTURAL }K_4\textbf{-DEFICIT REMAINS OPEN}}$$（**不判整个 R6 机制 CLOSED** ✗；照唐先生 ✓）
+- 【**★★接口恒等式（本档核心 ✓✓）**】由唯一性（$|\cap_3|\le1$，档案 `C3-119` IA-1 ✓）⟹ $T_4=\sum_x\binom{b(x)}4$ 与"已实现 $K_4$"一一对应 ✓；已实现者按球心是否属于该团分两类（$x\in K\Rightarrow$ **claw**；$x\notin K\Rightarrow$ **star**）⟹ $$\boxed{T_4=N_{\rm claw}+N_{\rm star}}$$ ⟹ 四族构成 $G_2(C)$ 内全部 $K_4$ 的**划分** ⟹ $$\boxed{\Delta_4(C)=\#K_4(G_2(C))-T_4=N_{\rm square}+N_{\rm tetra}}$$ ✓✓ —— **profile 量被完全消去** ✓✓
+- 【**★四族目录（钉死；并给更干净推导 ✓）**】固定球心 $x$：$B_1(x)$ 的 4-子集分**含 $x$**（$=\{x\}\cup$3 邻点 $=$ **claw**，每 $x$ 有 $\binom{10}3=120$ ✓）与**不含 $x$**（$=4$ 邻点 $=$ **star**，每 $x$ 有 $\binom{10}4=210$ ✓）⟹ **claw $=1024\cdot120=122880$**、**star $=1024\cdot210=215040$** ✓✓（**无需对称商** ✓）；**square** $=\frac{2^{10}\binom{10}2}4=11520$ ✓、**tetrahedron** $=\frac{2^{10}\binom{10}3}4=30720$ ✓ ⟹ $\#K_4(G_2(Q_{10}))=\mathbf{380160}$ ✓；实现性：**claw/star ✓**（球心存在）、**square/tetra ✗**；**恒等校验**：$\binom{10}3+\binom{10}4=330=\binom{11}4$ ✓
+- 【**满图层亏空 ✓**】$C=Q_{10}$：$b\equiv11\Rightarrow T_4=1024\binom{11}4=\mathbf{337920}=N_{\rm claw}+N_{\rm star}$ ✓ ⟹ 亏空 $=380160-337920=\mathbf{42240}=11520+30720$ ✓
+- 【**R7 STOP 的精确含义 ✓✓**】STOP 对象＝"仅凭 $(n,|C|,\sum b,b\le11,Q,$ 既有 profile moment$)\not\Rightarrow$ 非平凡 $T_4$ 界" ✓；上端 $T_4^{\max}=28\binom{11}4+\binom64=\mathbf{9255}$ ✓；下端 $T_4=0$（$b\le3$，$Q\le142$ 相容 ✓）⟹ $T_4\in[0,9255]$ **两端皆相容** ✓；**但结构亏空 $N_{\rm square}+N_{\rm tetra}$ 不是 profile 量 ⟹ 不被此 STOP 触及** ✓✓
+- 【**★下一次回来的精确攻击点（P1 candidate ✓）**】$$\text{119-cover}\Longrightarrow N_{\rm tetra}>0\ ?\quad\text{或}\quad N_{\rm square}+N_{\rm tetra}\ge L>0\ ?$$ ✓ —— **本线第一个非 profile 型（真几何）对象** ✓✓；**诚实边界 ⚠️**：本档**无** $N_{\rm square}+N_{\rm tetra}$ 的下界 handle；已知仅 ① 二者皆**极大团**（不可延拓 ✓）、② 与 $b$-profile **无关** ✓；可攻接口：$\sum_c|S(c)\cup V(H_c)|\le451$／团级 cap 与实现耦合／$N_1+N_2\ge143$ 能否逼出 square/tetra ✓
+- 【**档案对照 ✓**】$|\cap_3|\in\{0,1\}$（唯一性）**仅在 `C3-119` IA-1 交叉引用** ⟹ 不重复登记 ✗✓；$K_4$ 反例／亏空层级＝`R6` ✓；四族目录＝`R7` ✓；**本档新增＝接口恒等式 ＋ 干净计数 ＋ 状态锁** ✓
+- 【**边界**】零程序计算；未上 SDP/SAT/Terwilliger；未开②；未改门；不跨空间；不声称 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R7-LOCK-2026-09-27-status-lock-and-the-K4-deficit-interface-identity.md`
