@@ -964,3 +964,7 @@ e J(C_1)$ 且非 $(A_1,A_2)$ 的函数；测试集 = 两 witness ✓。
 ## A-ALIGNLAW-1（2026-09-27）
 **Type-B alignment-profile 律（n=8 完整域）**：$q=rac{A_2}{|S|}\mathbf 1_S$，$J_7=A_2^2/|S|$，$|S|\in\{1,2,3,4,7\}$；$S$ 恒为 $\mathbb F_2^3$ 仿射几何集（点/直线/平面/全空间减 0）；数量分布 $7,21,7,1,7$ ✓。双计数给出 $H\leftrightarrow C_2$ 完美匹配（唯一）⟹ 覆盖几何对 $q$ 无方向约束 ✗；约束来源 = 完美码综合征算术 ✓。
 边界：n=8 完整验证 ✓（非一般定理 ✗）；不涉 119 ✓。
+
+
+## A-ALIGNTHM-1（2026-09-27）
+**Alignment Quantization Theorem（已证 ✓，n=8）**：$H=\ker\sigma$ Hamming $[7,4,3]$，$C_2=\pi H+e$ 不交 ⟹ $q_i=\lambda\mathbf 1_{\{i:t_i\in s+\mathrm{Im}f\}}$，$\lambda=2^{4-d'}$，$|S|=2^{d'}-\mathbf 1[s\in\mathrm{Im}f]\le7$ ⟹ $A_2=\lambda|S|$，$J_7=A_2^2/|S|$ ✓✓。证明 = 初等线性代数（直方图 $n(x)=2^{4-d'}\mathbf 1[x\in\mathrm{Im}f]$ ✓）。七情形完整分类 ✓（$(3,ot)$ 不可达 ✓）；3840 表示数值全吻合 ✓。预测 $n=16$ 同型（$\lambda=2^{11-d'}$ ✓）。边界：限 Theorem-13 域与 $R=1$ ✓；不涉 119 ✓。
