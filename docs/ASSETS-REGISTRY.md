@@ -1732,3 +1732,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**未闭 ✗ ＋ 尺度判断 ✓**】local rigidity $\not\Rightarrow$ covering 矛盾（§3 说明在 $\le3$ 尺度上**不可能**）⟹ **必须换尺度** ⚠️；可换尺度（登记未做）：① **远点覆盖**（到所有码字距离 $\ge2$ 的点 —— covering 唯一"有牙"处 ✓）；② 全局计数（须避免落回 profile ✗，见 R7 STOP ✓）；③ distance $\ge4$ 的内部点（(α′) 未覆盖 ⚠️）
 - 【**边界**】零程序计算；未求和（照令 ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）；§2 前提（$a\in S(c),b\notin S(c)$）须显式保留 ✓
 - 档：`docs/P1-TWO-2026-09-27-two-point-cross-analysis-and-the-automatic-coverage-mechanism-no-go.md`
+
+**📐 C-412（2026-09-27 · **P1-D3：$d=3$ 最小检查核验 ＋ 被迫高层码字定理 ＋ NO-GO 作用域修正**）** ✓
+- 【**★(1) 最小检查核验通过 ✓✓**】$c=0$、$x=e_a{\oplus}e_b{\oplus}e_c$（$d=3$）⟹ $B_1(x)=\{$3 个 weight-2$\}\cup\{x\}\cup\{$7 个 weight-4$\}$ ✓（照唐先生 ✓）；且 $B_1(c)\cap B_1(x)=\varnothing$ ✓✓（$d(0,x)=3$；$d(e_i,x)=2$ 或 $4$ ⟹ 皆 $>1$ ✓）—— 与 $d=2$ 情形 $|B_1\cap B_1|=2$ **本质不同** ✓✓ ⟹ $x$ 及其 1-邻域的覆盖**不能**由 $c$ 的 radius-1 邻域自动补掉 ✓
+- 【**★(2) 精化（本档 ✓）**】$A(c)=0$ **只排除支撑含于 $S(c)$ 的 weight-2 点** ✓ ⟹ 三类 weight-2 邻居$x{\oplus}e_i$ 全被排除的**充要条件是 $\{a,b,c\}\subseteq S(c)$** ✓✓（非自动 ✓）
+- 【**★★(3) 被迫高层码字定理（新 ✓✓，本线第一个正强制）**】$$\{a,b,c\}\subseteq S(c)\ \Longrightarrow\ \exists\,i\notin\{a,b,c\}:\ c\oplus e_a\oplus e_b\oplus e_c\oplus e_i\in C$$ ✓✓ **证明**：由 §2 与 (α)（$x\notin C$ ✓）⟹ $C\cap B_1(x)$ 只能落在 7 个 weight-4 点中 ⟹ $x$ 的覆盖迫使某 weight-4 码字存在 ✓；**性质**：此前全部结果为**界**（上界为主），本定理为**存在性强制** ✓
+- 【**★(4) $d_4$ 计数下界（新 ✓，本线第一个下界）**】一个 weight-4 码字 $w=c{\oplus}S$（$|S|=4$）与 $d=3$ 点 $x_T=c{\oplus}e_{(T)}$ 距离 1 $\iff T\subset S$ 且 $|S\setminus T|=1$ $\iff T$ 为 $S$ 的 3-子集 ⟹ 每个 $w$ 至多覆盖 $\binom43=4$ 个待覆盖 $T$ ⟹ $$\boxed{d_4(c)\ \ge\ \Big\lceil\tfrac14\binom{s(c)}3\Big\rceil}$$ ✓✓；聚合 $2N_4=\sum_cd_4(c)\ge\frac14\sum_c\binom{d_1(c)}3$ ✓；**类型**：与 $d_2,d_3$ 的**上界**相反，此为**下界** ⟹ 方向可用（若另有 $d_4$ 上界即可夹逼 ✓）
+- 【**★(5) C-411 NO-GO 作用域修正（诚实 ✓✓）**】C-411 §3 的"本文全部局部构型的点皆 $\le1$"**只对该档研究的构型类**（square／tetra／中点／公共邻居 ✓，其点皆为码字或其 1-邻居）成立 ✓；**$d=3$ 点不在其作用域内** —— $x$ 与 $B_1(c)$ 不相交 ⟹ 覆盖责任**真实存在** ✓✓ ⟹ **$d=3$ 路线不是 C-410 的重复；唐先生判定正确** ✓（"自动覆盖"检查 **PASS，未关闭** ✓）；**NO-GO 的正确表述**：covering 只在"到所有码字距离 $\ge2$"的点上有约束力，而 $d=3$ 点**可能**远离一切码字 ⟹ 约束真实 ✓
+- 【**边界**】零程序计算；**未进入 tetra 共存分析** ✓（照唐先生"先做最小检查" ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；**不声称**已产生矛盾 ✗（"没有自动覆盖" $\ne$"已产生矛盾" ✓）；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-D3-2026-09-27-forced-high-layer-codeword-theorem-and-the-no-go-scope-correction.md`
