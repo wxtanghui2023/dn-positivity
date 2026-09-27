@@ -1714,3 +1714,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**下一步（登记未做 ✓）**】① 找**比 $d_2(c)\le45-\binom{|S(c)|}2$ 更强**的 avoidance 局部推论（尤其 $B(c)=0$ 对 $\sum|S\cup V|$ 的直接压制）⚠️；② **必须避免再落回 profile 量** ✗；③ 候选：把 $b\ge4$ 的点与 avoidance 的局部形状禁令对撞；或用 $|S\cup V|$ 的**逐 $c$ 分布**（而非只和）✓
 - 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-AVOID-2026-09-27-erratum-occupancy-identity-and-the-avoidance-interface.md`
+
+**🎛️ C-410（2026-09-27 · **P1-MICRO：固定 $c$ 局部结构 —— 内部子立方体排斥定理 ＋ covering 步失效**）** ✓
+- 【**★(α) 内部子立方体排斥定理（新 ✓✓）**】$A(c)=0$（无含 $c$ 的 square）∧ 相异 $i,j,x\in S(c)$ ⟹ $$\boxed{c\oplus e_i\oplus e_j\oplus e_x\notin C}$$ ✓✓**证明**：反设 $w=c{\oplus}e_i{\oplus}e_j{\oplus}e_x\in C$，则四点 $K=\{c{\oplus}e_x,\ c{\oplus}e_i,\ c{\oplus}e_j,\ w\}\subseteq C$ ✓；以 $v=c{\oplus}e_x$ 为基，三差分为 $e_i{\oplus}e_x,\ e_j{\oplus}e_x,\ e_i{\oplus}e_j$（皆重 2 ✓，两两相交**但不共点** ⟹ **tetra 型** ✗）；六距全 2 ✓ ⟹ $K=v+\big(\mathrm{span}(e_i,e_j,e_x)\big)_{\rm even}$ ⟹ **tetra ⟹ 与 avoidance 矛盾** ✓✓
+- 【**★(α′) 合并形式**】与 R4-P1 合读：**在内部子立方体 $c+\mathrm{span}(S(c))$ 内，除 $c$ 与 $\{c\oplus e_i\}_{i\in S(c)}$ 外别无 $C$ 点** ✓✓（即内部子立方体内 $c$ 是"孤点＋一阶星"）；**注**：仅依赖 $A(c)=0$；对 distance $\ge4$ 的内部点**不主张** ⚠️
+- 【**✗(β) 诚实失效报告：covering 步失效**】原链条 $S(c)\xrightarrow{\text{no square}}\text{缺失 }d_2\xrightarrow{\text{covering}}\cdots$ 的**第 2 步不成立** ✗✓：缺失点 $m=c{\oplus}e_i{\oplus}e_j$ 被 $c{\oplus}e_i\in C$ **自动覆盖**（$d(c{\oplus}e_i,m)=|e_j|=1$ ✓）⟹ **covering 不产生新约束、不迫使 $d_3$** ✗；**教训**：缺失点天生被一阶邻居覆盖 ⟹ 该链条**不可能**产生 $\sum|\cdot|$ 型占用冲突 ✗
+- 【**★(γ) 对偶新上界 ✓**】$d_3(c)\le\binom{10}3-\binom{|S(c)|}3=120-\binom s3$ ✓✓（与 R4-P1 的 $d_2(c)\le45-\binom s2$ 对偶 ⟹ "内部方向的 $\ell$-层点被逐个排除" ✓）；聚合：$2N_3\le119\cdot120-\sum_c\binom{d_1(c)}3$（弱 ✗，尚无矛盾 ⚠️）
+- 【**缺口 ⚠️**】① 定理**只用 $A(c)=0$**，未用 $B(c)=0$；② 未找到任何反证；③ 聚合仍弱 ✗
+- 【**下一步候选（登记未做 ✓）**】① 用 $B(c)=0$ 对**非内部**方向的约束（如 $c{\oplus}e_a{\oplus}e_b{\oplus}e_c$ 与 $c{\oplus}e_a{\oplus}e_b{\oplus}e_d$ 并存是否逼出 tetra？）⚠️；② 把 (α′) 与 covering 的**距离-1 层**对撞（内部"太空" ⟹ 外部须承担覆盖 ⟹ 能否压出 $\sum|\cdot|$ 型冲突而**不落回** $\{n_j\}$？）⚠️
+- 【**边界**】零程序计算；**未求和**（照令 ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-MICRO-2026-09-27-inner-subcube-repulsion-theorem-and-covering-step-failure.md`
