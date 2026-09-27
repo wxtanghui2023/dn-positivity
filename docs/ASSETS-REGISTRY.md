@@ -1724,3 +1724,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**下一步候选（登记未做 ✓）**】① 用 $B(c)=0$ 对**非内部**方向的约束（如 $c{\oplus}e_a{\oplus}e_b{\oplus}e_c$ 与 $c{\oplus}e_a{\oplus}e_b{\oplus}e_d$ 并存是否逼出 tetra？）⚠️；② 把 (α′) 与 covering 的**距离-1 层**对撞（内部"太空" ⟹ 外部须承担覆盖 ⟹ 能否压出 $\sum|\cdot|$ 型冲突而**不落回** $\{n_j\}$？）⚠️
 - 【**边界**】零程序计算；**未求和**（照令 ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）
 - 档：`docs/P1-MICRO-2026-09-27-inner-subcube-repulsion-theorem-and-covering-step-failure.md`
+
+**🔗 C-411（2026-09-27 · **P1-TWO：两点交叉分析 ＋ 自动覆盖机制级否定**）** ✓
+- 【**★(1) 定向引理（新 ✓）**】$c'=c\oplus e_a\oplus e_b\ (a\ne b)$ ⟹ $$\big[a\in S(c)\iff b\in S(c')\big]\ \wedge\ \big[b\in S(c)\iff a\in S(c')\big]$$ ✓（2 行：$a\in S(c)\iff c{\oplus}e_a\in C\iff c'{\oplus}e_b\in C\iff b\in S(c')$ ✓）；**推论**：$\{a,b\}\subseteq S(c)\Rightarrow\{a,b\}\subseteq S(c')\Rightarrow$ square $\{c',c'{\oplus}e_a,c'{\oplus}e_b,c\}\subseteq C$ ✗ 与 $A(c')=0$ 矛盾 ⟹ $\{a,b\}\not\subseteq S(c)$ 且 $\not\subseteq S(c')$ ✓
+- 【**★(2) 两点刚性（新 ✓✓）**】取 $c'=c{\oplus}e_a{\oplus}e_b$ 且 $a\in S(c),\ b\notin S(c)$ ⟹（定向引理）$b\in S(c'),\ a\notin S(c')$；逐项判定：$c\notin U'$（$a\notin S(c')$ ✓）、$c'\notin U$（$b\notin S(c)$ ✓）、$c{\oplus}e_i\in U'\iff i=a$ ✓、$c'{\oplus}e_j\in U\iff j=b$ ✓ ⟹ $$\boxed{C\cap(U\cap U')=\{c\oplus e_a\}}$$ ✓✓（**唯一公共码字 ＝ 公共一阶邻居**；两子立方体不共享中心、不共享任何二阶点 ✓）
+- 【**★★(3) 机制级否定（路线级，有证明 ✓✓）**】**自动覆盖原理**：rigidity／avoidance 分析涉及的点全部满足"是码字"或"到某码字距离 ≤ 1"——① 码字本身 ✓ ② 其一阶邻居 ✓ ③ **中点**（$c{\oplus}e_i{\oplus}e_j$ 对 $i\in S(c)$ ⟹ $d(c{\oplus}e_i,\cdot)=1$ ✓，即 P1-MICRO (β) ✓）④ 两点构型的公共邻居（§2 ✓）⑤ square/tetra 顶点 ✓ ⟹ $$\boxed{\text{covering 只在"到所有码字距离}\ge2\text{"的点上有约束力};\ \text{本文全部局部构型皆}\le1\ ⟹ \textbf{自动满足}}$$ ⟹ **任何仅由 distance $\le3$ 局部构型导出的刚性，都不可能通过 covering 产生矛盾** ✗✓ —— **路线级结论**（非"未找到" ✓）；**解释**了本线反复的"局部有结构、无法闭环"（P1-MICRO (β)／P1-AVOID §3／R7 STOP ✓）—— **不是技巧不足，是机制边界** ✓✓
+- 【**未闭 ✗ ＋ 尺度判断 ✓**】local rigidity $\not\Rightarrow$ covering 矛盾（§3 说明在 $\le3$ 尺度上**不可能**）⟹ **必须换尺度** ⚠️；可换尺度（登记未做）：① **远点覆盖**（到所有码字距离 $\ge2$ 的点 —— covering 唯一"有牙"处 ✓）；② 全局计数（须避免落回 profile ✗，见 R7 STOP ✓）；③ distance $\ge4$ 的内部点（(α′) 未覆盖 ⚠️）
+- 【**边界**】零程序计算；未求和（照令 ✓）；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）；§2 前提（$a\in S(c),b\notin S(c)$）须显式保留 ✓
+- 档：`docs/P1-TWO-2026-09-27-two-point-cross-analysis-and-the-automatic-coverage-mechanism-no-go.md`
