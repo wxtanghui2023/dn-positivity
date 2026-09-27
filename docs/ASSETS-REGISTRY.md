@@ -1617,3 +1617,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★松弛性判定 ＋ 收敛性发现（✓✓）**】在 R3-P$^{\ast}$ 取具体可行点（$N_1=60$ 每坐标 6、$N_2=100$ 均摊 $q\approx2.2$、$B_i\approx26\ll83$、$\lambda_{\min}\gtrsim-2.2$）⟹ **R3-P$^{\ast}$ 亦松弛：可行区域远未被 covering 逼紧** ⟹ **该层级（必要条件的任何弱化）都不能给 P1** ✓；逼紧只在**极端超额集中**（$Q\to1270\Longrightarrow\sum_iB_i\to777\Longrightarrow$ 平均桶 77.7 逼近 83），但那仍是**必要**条件 ✓；⟹ **收敛性发现**：本线（R3 链）与**档案独立路线**（$g$-形／模 11／21 机制封口）**结论一致——真约束在 Booleanity／符号层** ✓✓
 - 【**边界**】零计算 ✓；未跑 SAT/SDP ✓（照令）；未开门②；未改门；**不**声称 $K(10,1)\ge120$ 不可得 ✗（V290）；§6 收敛性为**路线一致性陈述**，非定理 ✓
 - 档：`docs/R3-A3-2026-09-27-row-capacity-compression-fails-and-necessary-system-slackness.md`
+
+**🅿️ C-401（2026-09-27 · **R4-P1：private-point deficit 引理** ⟹ 前提修正 ＋ 精确局部公式 ＋ 可删性判据 ＋ 聚合界）** ✓
+- 【**范围**】只做 R4-P1；**不碰** $\mu$／PSD／Gershgorin／Fourier／SAT／124-deletion ✓；零计算 ✓
+- 【**⚠️ 前提修正（必须，有证明 ✓✓）**】$P:=\sum_cp(c)=\#\{x:b(x)=1\}=n_1$ ✓；而 $n_1=\mathbf{739}+\sum_{j\ge3}(j-2)n_j\ \ge\mathbf{739}$ ✓（2 行：$\sum n_j=1024$、$\sum(j-1)n_j=285$）⟹ **"$P\le118$" 不可得 ⟹ 唐先生原设想的 "$119\le P\le118$" 计数路线死** ✗✓；**且平均每码字私有 $\ge739/119\approx6.21$** ✓；**私有计数完全由 $b$-profile 决定** ⟹ 与 R3 的"$\delta$-型泛函被 profile 钉死"**同型** ✓
+- 【**★新结果 1：精确局部公式 ✓✓**】两球交 $\ne\varnothing\iff d\le2$、$|B_1\cap B_1|=2$ ✓；距离-1 邻居给 $\{c,c\oplus e_i\}$ ✓、距离-2 邻居给 $\{c\oplus e_i,c\oplus e_j\}$ ✓ ⟹（**midpoint 共享**）非私有集 $=\{c\}\cup\{c\oplus e_i:i\in S(c)\cup V(H_c)\}$ ⟹ $$\boxed{p(c)=10-\big|S(c)\cup V(H_c)\big|}$$ （精确，无估计 ✓）
+- 【**★新结果 2：可删性判据 ✓✓**】$c$ 可删（$p(c)=0$）$\iff|S(c)\cup V(H_c)|=10\iff$ **十个坐标方向全被局部占用** ✓（与档案 $U(c)=\varnothing$／$R(C)$ 一致 ✓）
+- 【**★新结果 3：不可约 ⟹ 聚合界 ✓✓**】WLOG 不可约（若 $\exists c:p(c)=0$ 则 $|C|=119\Rightarrow118$-cover $\Rightarrow K\le118$，更早结束 ✓）⟹ $\forall c:|S\cup V(H)|\le9$ ⟹ $$\boxed{\sum_c|S(c)\cup V(H_c)|=1190-n_1=451-\sum_{j\ge3}(j-2)n_j\le\mathbf{451}}$$ ⟹ **平均 $\le451/119\approx\mathbf{3.79}$ 个方向/10** ✓✓ —— 即每个码字平均只在约 4 个坐标方向上"局部被看见"，其余约 6 方向**既无距离-1 也无距离-2 邻居** ✓
+- 【**新轴：codeword-labelled（谁的重复）✓✓**】R3＝**坐标标号**（哪个坐标对承载距离-2 对）；R4＝**码字标号**（哪个码字的球被占）✓；精确关系：$\sum_c d_1(c)=2N_1$、$\sum_c d_2(c)=2N_2$（**总量无新息** ✗）✓，**但逐 $c$ 的 $(d_1(c),d_2(c),|S\cup V(H)|)$ 不被总量决定** ✓✓ —— 正对应唐先生"$Q=\sum\binom\delta2$ 把'谁造成重复'忘掉了" ✓
+- 【**下一步 R4-P1′（本档不跑）**】目标改写（**避免 union bound 真空** ✗）：直接用 $\sum_c|S\cup V(H_c)|\le451$ 与**局部图 $H_c$** 结构耦合；两条攻击面：(a) 把 451 与 excess 恒等式（285）及 $n_j$ 分布耦合；(b) 证某全局计数迫使某 $c$ 的 $|S\cup V(H)|\ge10$ ⟹ 可删 ⟹ $\bot$ ✓；**若两条都证不出 ⟹ 登记"codeword-labelled 局部层同样松弛"** ✗（与 R3-A3 同型收束）✓
+- 【**边界**】零计算；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）；451 为**必要条件**非矛盾 ✓
+- 档：`docs/R4-P1-2026-09-27-private-point-deficit-lemma-and-codeword-labelled-occupancy.md`
