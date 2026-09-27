@@ -34,6 +34,8 @@ $$\textbf{但对应点的几何 ✓}:\ \text{四点为 }x_T=c\oplus e_{(T)}\ (|T
 $$\Longrightarrow\ \text{四点是}\ y=c\oplus S\ \text{的\textbf{四个邻居}} \Longrightarrow\ \text{按 R7 四族目录}: \textbf{star}✓（\textbf{已实现}，球心 }y✓）$$
 $$\Longrightarrow\ \textbf{故该结构计入 }T_4=N_{\rm claw}+N_{\rm star}\ \textbf{而非 }\Delta_4✓✓\ \text{—— 它不产生亏空 ✓（有价值：说明 forced-}d_4\ \text{结构与 }T_4\ \text{耦合 ✓）}$$
 
+> 🩹 **勘误横幅（2026-09-27，见 P1-G2 档 §1 ✓）**：本节原有的「四点构成\*\*已实现 star\*\*、计入 $T_4$」断言**有误** ✗ —— 四个 forced 点 $x_T$（$T\subset S$，$|T|=3$）满足 $T\subseteq S(c)$，由 $(\alpha)$ 知 $x_T\notin C$ ⟹ **皆非码字** ⟹ **不构成 $G_2(C)$ 的团、不计入 $T_4$** ✓。仍成立的部分：四点两两距离 2、共享 $y$、构成 $G_2(Q_{10})$（**全图**）的 $K_4$ —— 但那是全图结构，与 $C$ 无关 ✓。
+
 ## §3 ✗ **方向性纠正**（**$C(s,4,3)$ 不能直接作 $d_4$ 下界**）
 
 $$\textbf{框架 ✓（唐先生对）}:\ F_4(c):=\{S:\ c\oplus S\in C,\ |S|=4\}\ \text{须覆盖 }S(c)\ \text{的全部 3-子集 }T✓;\ \text{故这是\textbf{覆盖设计型}问题 ✓✓}$$
