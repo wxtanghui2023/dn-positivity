@@ -3567,3 +3567,13 @@ RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} →
 - `G-COVERED`(18:23) ✓：终局 **COVERED** 判定（唐先生裁定 ✓）；资产 `A1–A5` 定名 ✓。
 ⟹ **三族自然表示均已出局**：① scalar-invariant（BLOCKED）✗ ② local preimage 1/2 点（BLOCKED/CLOSED）✗ ③ incidence／高阶交（**ARCHIVED**）✗ ⟹ "表示问题"诊断成立 ✓ 但档案中**已无未试的自然表示** ⚠️（不得制造候选 ✗）。
 详 `docs/STRATEGY-2026-09-26-repositioning-and-object-representation.md`
+
+---
+
+## 2026-09-27 · §TERM-TRIPLE — **triple 邻域终止性实验（封存三阶耦合）**
+
+**判定** ✓：`n=4` **全枚举**（480 例，唯一 triple 类 ✓）⟹ 固定 `(|C|,N₁,N₂,case)` 时**邻域结构（距 t 为 1／2 的 b-值分布）零变化** ⟹ 被完全决定 ✗ ⟹ **无独立杠杆** ⟹ 按唐先生 09:22 判停条件**封存三阶耦合**（Boolean-fiber／triple-neighbourhood 机制）✗。**不升级四阶** ✗。
+**n=5**：构造式局部搜索（4000 重启）命中 **0** 例 ⚠️ ⟹ 无数据，**不断言不存在** ✗。
+**Boolean-fiber 线自 09-26 22:52 净产出**：① 逐点平方恒等式（含修正：仅 `x∈C` 时为 `f+3S+2P` ✓）；② **(Z-4) 已撤回** ✗（独立三阶不变量实为 `(|C|,N₁,d₃)` 重参数化 ✓）；③ 唐先生三条恒等式**核验通过** ✓；④ 终止性否定 ✗ ⟹ **无新定理** ✗（诚实 ✓）。
+**119 状态**：不变 —— `OPEN`／表示待寻 ✓；**未**排 $Q=1$ ✗、**未**排 119 ✗。
+详 `docs/TERM-2026-09-27-triple-neighbourhood-terminating-experiment.md`、`docs/TRIP-2026-09-27-unique-triple-point-and-the-withdrawal-of-z4.md`
