@@ -85,14 +85,3 @@ $$
 
 - **本档新增**：LP harness 校准、1B 阻断判定
 - **档案已有（引用，不列为提出）**：Van Wee (6,1,1)_6、Krawtchouk、Lasserre、matrix cuts、Terwilliger、BÖW 107
-
-
-## 【技术词回查】（定稿前逐字输出）
-
-实跑 `scripts/tech_word_check.sh` 逐字输出：
-```
-技术词 LP harness 校准 命中文件数=1    :: ./DLP1A-2026-09-27-validated-ablation-and-1B-blocker.md 
-技术词 1B 阻断        命中文件数=1    :: ./DLP1A-2026-09-27-validated-ablation-and-1B-blocker.md
-```
-- **本档新增**：LP harness 校准、1B 阻断判定（见上方命中数；0 命中者为自造语／内部标签 ✓）
-- **档案已有（引用，不列为提出）**：Van Wee (6,1,1)_6、Krawtchouk、Lasserre、matrix cuts、Terwilliger、BÖW 107
