@@ -875,3 +875,16 @@ $$\beta^{\rm paper}_{i,j,k,t}=[p^{i-k}q^{j-k}r^t]\,(r-1)^k\big(1+p+q+pqr\big)^{n
 **内容** ✓：(1) $z\in W_0$ ✓；(2) $\langle b_i,b_j\rangle=\delta_{ij}\binom ni$ ⟹ $D_0=\mathrm{diag}\binom ni$（$\{b_i\}_{i=0}^{n}$，共 $n+1$ 个 ✓）；(3) $Q_0=E_0D_0^{-1/2}$ 列正交归一 ✓；(4) $\boxed{z_{\rm block}=D_0^{1/2}z_{\rm raw}}$ ✓（**reciprocal 陷阱**：**非** $D_0^{-1/2}$ ✗）；(5) 与论文 $D^{1/2}$ 形式一致（audit criterion = **先定义 $D$，再判平方根** ✓）；(6) 关闭 Level 3B 的 normalization gap ✓。
 **独立交叉** ✓✓：与 R1a 数值审计（1e-13 级 ✓）中 $B_h$ 的构造**完全一致** ✓。
 **细档**：`docs/B-L3B-1-2026-09-27-Mpp-border-normalization.md`
+
+
+---
+
+## C-L3B-1 · Lasserre $\eta$ coefficient closed form（2026-09-27 立 ✓）
+
+**性质** ✓：closure/reconstruction（**非新数学资产** ✗ ✓）。
+**内容** ✓：平移 $w$ 使原四类 (both, u-only, v-only, neither) 按 $w_x$ **互换**（both↔neither、u-only↔v-only）⟹ 记 $(c,a,b,d')$ 为四区域取 $w_x{=}1$ 的个数 ⟹
+$$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\binom{n-i-j+t}{d'}\ ✓$$
+**母函数** ✓：$G_\eta=(A+sD)^t(B+sC)^{i-t}(C+sB)^{j-t}(D+sA)^{n-i-j+t}$ ✓（$A{=}B{=}C{=}D{=}1\Rightarrow(1+s)^n$ ✓）。
+**核对** ✓✓：暴力 η vs 闭式 $29$ 组零不符 ✓；暴力 vs $G_\eta$ 项数 $32{=}32,32{=}32,46{=}46$ 恒等 ✓；$N_k$ 接口与 R1b 谱级审计一致（$\sim10^{-13}$ ✓）。
+**约定** ⚠️：论文 Prop 2.4(iii) 钉死 $d=|w|$ ✓；作者代码用 $\texttt{dist}=d(v,w)$ 另一参数化 ⚠️ ⟹ **最终钉死须 R2**（块式 SDP vs 已验 unreduced 锚点 $11.5980553/16.0000000$）⏳。
+**细档**：`docs/C-L3B-1-2026-09-27-lasserre-eta-closed-form.md`
