@@ -1704,3 +1704,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**P2 预告（照唐先生 ✓）**】若 tetra 假设不矛盾 ⟹ 转向 $N_{\rm square}+N_{\rm tetra}$ 的**联合 cap**：找 $(S(c),H_c)$ 对四类 $K_4$ 的容量约束 ✓；**反例警示登记**：球型码 $\Delta_4=0$ ⟹ "局部密集"本身**不**逼出亏空 ⟹ 须找**覆盖强制**的局部形状，而非"密"本身 ✓
 - 【**边界**】零程序计算；未碰 $T_4$／$n_j$／profile 极值（照令 ✓）；未上 SDP/SAT/Terwilliger；未开②；未改门；不跨空间；不声称 $N_{\rm tetra}>0$ ✗
 - 档：`docs/P1-TETRA-2026-09-27-tetrahedron-geometry-midpoint-theorem-and-achievability-of-zero-deficit.md`
+
+**🩹 C-409（2026-09-27 · **勘误 C-408 ＋ 占用恒等式 ＋ avoidance 反证接口**）** ✓
+- 【**勘误（照唐先生 ✓）**】C-408 §4 的 $T_3\le28\binom{10}3+\binom53=3370$（及 $N_{\rm tetra}\le842$）**不是无条件** ✗ ✓；它**依赖 profile-concentration 前提**（$28\times10+5=285$ ＝把 $E=285$ 集中成 28 个 $\delta{=}10$ ＋ 1 个 $\delta{=}5$）✓；**仅凭 $b\le11$ 得不到** ✗；勘误后表述：**在既有 profile-concentration 框架下** $T_3\le3370$、$N_{\rm tetra}\le842$ ✓（结论不变：仍为**上界**，不产生 P1 lower bound，不改变 STOP ✓）
+- 【**★★占用恒等式（本档核心 ✓✓）**】由 R4-P1：$p(c)=10-|S(c)\cup V(H_c)|$、$\sum_c p(c)=n_1$、$n_1=739+\sum_{j\ge3}(j-2)n_j$ ⟹ $$\boxed{\sum_c\big|S(c)\cup V(H_c)\big|=451-\sum_{j\ge3}(j-2)n_j\ \le\ 451}$$（**恒等式，非猜测** ✓✓）
+- 【**⚠️ 方向性纠正（重要 ✗✓）**】占用量是**恒等式锁定**的，**不是自由预算** ⟹ "avoidance $\Longrightarrow\sum|\cdot|>451$" **逻辑上不可能成立** ✗（上界恒真）；**可用方向是下界**：avoidance $\Longrightarrow\sum|\cdot|\ge\mathbf{452}$（covering 平均 $451/119\approx3.7899$ ⟹ **只差一个单位** ✓）；**但**由恒等式该陈述 $\iff\sum_{j\ge3}(j-2)n_j\le-1$ **不可能** ⟹ **本接口＝P1 的\*\*重述\*\*，不是减弱** ✗✓（诚实标注；价值在"一个单位的定量缺口"形态 ✓）
+- 【**★avoidance 的第一个几何推论（新 ✓）**】$N_{\rm square}=N_{\rm tetra}=0\iff\forall c:A(c)=B(c)=0$ ✓；$A(c)=0$ 且 $i,j\in S(c)\Longrightarrow c{\oplus}e_i{\oplus}e_j\notin C$ ⟹ 距离-2 邻居坐标对中**至多一个**属 $S(c)$ ⟹ $$\boxed{d_2(c)\le45-\binom{|S(c)|}2}$$ ✓✓；**求和弱** ✗：$N_2\le2671$（劣于既有 $N_2\le388$ ✗）⟹ 单靠此不足以逼近刀锋，**须更强推论** ⚠️；但它是**本线第一个由 avoidance 产生的真几何约束（非 profile 型 ✓）**
+- 【**⚠️ 重要副结论（诚实）**】占用预算与 $\{n_j\}$ **同源** ⟹ **不是独立几何 handle** ✗ —— 与 R7 STOP 同一形态 ✓；用它作 handle 会重演 STOP ✓
+- 【**下一步（登记未做 ✓）**】① 找**比 $d_2(c)\le45-\binom{|S(c)|}2$ 更强**的 avoidance 局部推论（尤其 $B(c)=0$ 对 $\sum|S\cup V|$ 的直接压制）⚠️；② **必须避免再落回 profile 量** ✗；③ 候选：把 $b\ge4$ 的点与 avoidance 的局部形状禁令对撞；或用 $|S\cup V|$ 的**逐 $c$ 分布**（而非只和）✓
+- 【**边界**】零程序计算；未上 SDP/SAT；未开②；未改门；不跨空间；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-AVOID-2026-09-27-erratum-occupancy-identity-and-the-avoidance-interface.md`
