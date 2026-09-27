@@ -1461,3 +1461,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**建议条款（只登记 · 不改门）**】**G-4**：阈值／缺口类事实**须追后继引用链**；目标 open **须有正面证据** ⚠️｜连同 **G-1/G-2/G-3** 一并**待宪章审批** ✓
 - 【**为何比 T-1 更干净**】T-1 ＝ 预登记撞车（09-24 A3 判定 D）＋同形赛跑；**T-5 ＝ 对象指纹本身已被 2012 文献收割**（零赛跑风险）✓
 - 档：`docs/ERRATUM-T5-2026-09-27-threshold-6-to-7-and-final-DROP.md`｜（勘误对象）`docs/T5-CHECK-2026-09-27-…-HOLD.md`（已加勘误横幅 ✓）
+
+**🔴 C-386（2026-09-27 · T-6 `K_q(n,R)` 具体格子 ＝ **DROP**）** ✗
+- 【**对象指纹锁定**】$K_q(n,R)=\min\{|C|:C\subseteq\mathbb Z_q^n,\ \text{覆盖半径}\le R\}$；cell ＝ $(q,n,R)$；"open" ＝ **上下界未重合**（整数问题，非分类）✓；**不可混**：混合码 $K_{q_1,q_2}$／重量受限／**saturating sets**（相邻但分账）／二元 $K_2(n,1)$（＝超立方体支配数 ⟹ **属已冻结的 $K(10,1)$ 邻域，严禁借 T-6 复活**）✗
+- 【**后继链（逐字 ✓）**】Kéri 表（$q\ge3$）**last revised November 2011** ✓；`arXiv:2608.19872v3`（Marosi, BME, **2026-09**）：**84 例／83 格**被改（**26 上界** $5\le q\le15$ 显式码＋LNS；**58 下界** $6\le q\le21$ 由 **Gijswijt–Polak SDP** ＋多精度＋**精确有理证书**）✓；$K_6(10,4)$：$417$–$2952$ → **$441$–$2751$** ✓；**"every certificate is checked by a standalone program in exact arithmetic"**；**"codes, certificates, and checkers … ancillary files"** ✓⚠️；并行线：Wu–Chen 二元下界、**Florath 证明助手形式化** ⚠️
+- 【**同形赛跑：全面撞上 ✗**】同参数／同等价／同构造族（显式码＋direct sum／product propagation＋SDP）／同作者群（Marosi｜**Kéri 表主**｜Haas–Halupczok–Schlage-Puchta｜Gijswijt–Polak｜Wu–Chen｜Florath）⟹ 依规则**先 DROP/HOLD，不进计算** ✓
+- 【**严格 novelty gate：答不出 ⟹ DROP**】T1（删 4 码字的局部捕获账本）／T2·T4（$E$-专有耦合）／L3-α 证书 **均不适用**（全局极小 vs 局部修复）✗；T5 仅给**局部**重叠计数，**不**给全局下界 ✗ ⟹ 不可证明"T-6 能让 T1–T5 产新约束"；强行做即＝"把 $K(10,1)$ 局部证书**换参数再跑**"（禁止形态 ✗）
+- 【**正面 open 证据 vs 检索缺口**】作者自述（2026-08 自检索）"$q\ge6$ 自 2011 无任一侧改进"＝**正面证据** ✓；但**同篇已收割 58 个 $6\le q\le21$ 下界** ⟹ 剩余"未见表"格属**检索缺口**，依 G-2/G-4 **不得当 open** ✗
+- 【**唯一副产品（登记为可迁移资产观察 ⚠️ 档级 · 3 行可证 · 未跑）**】**Lemma A 的 $q$ 元推广**：$\mathbb Z_q^n$ 中 $|B_1(x)\cap B_1(y)|=2$（$d\in\{1,2\}$）／$0$（$d\ge3$）✓ —— 仅给**局部**重叠计数，**不**自动给全局下界 ⟹ 不足支撑 T-6 ✓
+- 档：`docs/T6-CHECK-2026-09-27-fingerprint-successor-chain-race-check-DROP.md`｜库存已标 DROP：`TOPIC-DOSSIER-v1`、`CONCRETE-TOPIC-LIST-r2` ✓

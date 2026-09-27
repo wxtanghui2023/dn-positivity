@@ -68,6 +68,8 @@ FREEZE-ACK: D1=0
 
 ## **T-6 covering code `K_q(n,R)` 具体格子**（候选，须逐格筛）
 
+> ⛔ **2026-09-27 出口：T-6 ＝ DROP**（同形赛跑全面撞上 ＋ novelty gate 答不出）：`arXiv:2608.19872`（Marosi, 2026-09）已改 84 例／83 格（26 上界、58 下界），**附精确有理证书 ＋ standalone checker ＋ ancillary files**；Kéri 表停在 2011-11 ⟹ **不得**当 open 证据 ✗ ⟹ 详见 `docs/T6-CHECK-2026-09-27-fingerprint-successor-chain-race-check-DROP.md` ✓
+
 ```
 **【领域】** 编码理论 / 覆盖半径 ✓
 **【内容与要求】** `P`：具体格 `(q,n,R)` 的 `K_q(n,R)` 精确值。要求：精确值或**改进一方界 ＋ 机器可核证书** ✓
