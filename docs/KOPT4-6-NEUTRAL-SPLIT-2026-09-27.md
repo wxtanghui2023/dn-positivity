@@ -260,6 +260,29 @@ $\tau(E(A))$ ＝ 该二部结构的 covering number ⟹ 目标＝寻找 **candid
 - 若 $m_4>0$ ⟹ **相反**：**立即冻结第一个 moved witness**，不扩大搜索，直接审计其是否满足 $\tau(E)\le3$ ✓
 - 当前：750k/≈1.65M、`MOVED=0` ⟹ **运行中的强信号，不提前结案** ✓；决策 ＝ **等 k=4 完备结果 → 再定 incidence-hypergraph 攻击的具体形式** ✓
 
+### 5.8 P3 六层分解（唐先生 19:32 ✓）—— 攻击树与优先级
+
+**母问题（统一定义 ✓）**：$A\subset C,|A|=k$；$E(A)=\big(\bigcup_{a\in A}B_1(a)\big)\setminus\big(\bigcup_{c\in C\setminus A}B_1(c)\big)$；$Q(E)=\{z\notin C:B_1(z)\cap E\ne\varnothing\}$
+$$\tau_C(E(A))=\min\{|D|:D\subseteq Q(E),\ E\subseteq B_1(D)\}$$
+$$\tau(E)\le k-1\Rightarrow124\to123;\quad \tau(E)=k\Rightarrow124\to124;\quad \tau(E)>k\Rightarrow k\text{-exchange 不存在}$$
+
+| 层 | 内容 | 产出 |
+|:--:|------|------|
+| **L1 删除几何** | $A\mapsto E(A)$：$|E|$、距离谱 $N_j(E)$、候选度 $q(x)$、$q(x,y)$ | $E$ 的"债务结构" |
+| **L2 单中心容量** | $S_z=B_1(z)\cap E$；$M_1,M_2,M_3=\max|S_{z_1}\cup\cdots|$ | 容量上界 |
+| **L3 中心兼容性** | 交叠图 $z_i\sim z_j\iff S_{z_i}\cap S_{z_j}\ne\varnothing$（带权 $w=|S_{z_i}\cap S_{z_j}|$）＋ 容斥 | **真正的兼容性证书** ⭐ |
+| **L4 covering number** | $\tau(E)\le3$？ | YES ⟹ $124\to123$；NO ⟹ 降阶出口堵 |
+| **L5 结构分类** | fingerprint $F(A)$ ⟹ $9.38\text{M}A\to$ 少数结构类 | **计算资产 → 数学资产** ⭐ |
+| **L6 overshoot 势垒** | 势函数 $\Phi$，$\Delta\Phi=\Phi(C')-\Phi(C)$；解释 $124\to125(R>0)\to124$ | 候选：private-point 数／redundancy／overlap 谱／uncovered mass／球交数 |
+
+**优先级（唐先生 ✓）**：**L4 → L3 → L5 → L6**；**不机械升 $k$** ✗
+
+⚠️ **本轮补充（定义等价 ✓ 省力记录）**：$M_r(E)<|E|\iff\tau(E)>r$ **是定义等价**（**不是**更强的证书）⟹
+- **L4 已由本次 $k{=}4$ 运行完备解答** ✓：**全部** residual $A$ 均跑 `can_cover(E,3)` 且 `k3bad=0`；豁免类由"3 簇互不可共享 ⟹ 各需 $\ge2$ 词"得 $\tau\ge6$ ⟹ **$\forall|A|{=}4:\tau(E(A))\ge4$** ⟹ **$4\to3$ 降基数出口堵死** ✓（P3 层结论，**强于**"无 moved" ✓）
+- ⟹ M 判据的价值在**计算路线**（max-union 枚举替代 SAT）；真正的新内容在 **L3／L5／L6** ✓
+
+**待命脚本** ✓：`/tmp/kopt16_L5fingerprint.py`（L1／L3／L5 统计器：$|E|$／$N_j$ 谱／$|Q(E)|$／$\alpha(E)$／$q$ 度数直方图／$\tau$ 桶／fingerprint 类计数）——零 CPU 已就绪，$k{=}4$ 收尾后可立开 ✓
+
 ## §6 红线（硬 ✓）
 
 - 找不到 ⟹ 只记"该邻域／该预算未找到" ✗，**绝不推出** $K(10,1)\ge120$ 或任何下界 ✗
