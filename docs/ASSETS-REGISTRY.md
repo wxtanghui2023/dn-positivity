@@ -1017,3 +1017,7 @@ u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM
 
 ## A-CLOSEDFORM-1（2026-09-27）⭐
 **ν 闭式（推导 ＋ 143 例验证 ✓）**：$q=X*C$，$X(x)=\alpha(x)\oplus\beta(x)\oplus15|x|$，$C(c)=\beta(c)\oplus15\lambda(c)$；**$X$-分布 $=\{0,2,4,6\}$ 各 32** ⟹ $X$ 在 $W=\mathrm{span}\{2,4\}$ 上均匀 ⟹ **陪集常值被强制**（非经验 ✓）。两陪集值 $=\mathbf{32s}$ 与 $\mathbf{32(16-s)}$ ⟹ **和恒 512 ✓**；**flat $\iff s=8$**（$q\equiv256$ ✓）；$A_2=2048-32s$ ⟹ $7\mid A_2\iff s\equiv1\pmod 7$，实测 $s\in\{2..14,16\}$ ⟹ 唯一 $s=8$ ⟹ **经验判据「flat $\iff|S|\mid A_2$」由此推导解释 ✓**。统计：flat 89 / 两值 54（54/54 和=512 ✓）/ 三值以上 **0** ✓。**两处实现层更正 ✓**（距离-2 对双重中点致重复计数；互补检验误用值列表）。余项：$s(\lambda)$ 纤维表达式 ⚠️、$s\notin\{0,1,15\}$ ⚠️、$W$ 恒定性 ⚠️。
+
+
+## A-SUBSPACE-1（2026-09-27）⭐ 闭式完备
+**四陪集一般律（唐先生修正）**：$W=\mathrm{span}\{2,4\}$，$q(z)=32\sum_{u\in W}C(z\oplus u)=32s([z])$ ⟹ $q$ 在每个 $W$-陪集内恒定，$\sum_i s_i=16$。**本族两陪集定理（证明 ✓✓）**：$V=\mathrm{span}\{2,4,9\}=\{0,2,4,6,9,11,13,15\}$（dim 3），$W\le V$、$15\in V$、$\beta(H_7)=\{0,4,11,15\}\subseteq V$ ⟹ $C=\beta(c)\oplus15\lambda(c)\in V$ 恒成立 ⟹ $s_1=s_2=0$，$\mathrm{supp}\,q=(W_0\setminus\{0\})\sqcup W_3$ 恰 7 坐标 ⟹ **star 与 $|S|=7$ 导出**。**闭式 ✓✓**：$s_0=8+(b-a)$（$a,b$ 为 $\lambda$ 两侧计数），$s_3=16-s_0$ ⟹ **512-互补为定理**；flat $\iff a=b$。**卷积恒等式**：16 syndrome 全验 $\max|\Delta|=0$ ✓✓（修正作者漏 $\beta(x)$ 之测量 bug）。$A_2=2048-32s_0$ ⟹ 经验判据「flat $\iff|S|\mid A_2$」被推导。余项：可实现 $(a,b)$ 刻画 ⚠️。
