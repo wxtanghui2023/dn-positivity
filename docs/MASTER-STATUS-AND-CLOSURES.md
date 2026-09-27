@@ -1171,3 +1171,22 @@ G3 缺口 ≠ envelope 精度
 **L-4 UNEXPLORED / NOT PRIORITIZED ⚠️**：对象 = `b(m)=2, m∉C` 的非码字中点；须**从条件分布出发**找 `Φ(m;C)`，**不得**再做全局双计数（防重撞 MIDSUP/matching/capacity 旧闭环 ✗）
 **诚实边界**：⚠️ 曾拟用"中间结果"推出的两条更强主张（Q=1 因无 2-面而不可能 ⟹ Sidon 界 ≤45）**已被自证否**（仅排除字面正方形，其真空性由奇权点集 512 例证实）⟹ 不保留、不得引用 ✗
 详 `docs/K101-119-ARCHIVE-2026-09-26.md` 与八档（PACKB/ISOB3/TCOLL/STAR3/SCOL/HQ1/MIDSUP/K1AUDIT）
+
+
+## 2026-09-27 · §119-P1-CONSOLIDATION（总图侧摘要 ✓ 唐先生 15:55 裁定）
+
+**状态行（逐字 ✓）**：**119：P1 未闭合；低阶统计、局部一致性及线性／整数重参数化路线已审计并封口；剩余核心为 exact Boolean feasibility。唯一运行计算为等价 ILP。**
+
+**区分 ✓**：「没有找到 obstruction」≠「不存在 obstruction」；**不写「119 无攻击点」** ✗。
+
+**21 条封口**（档案既有 18 ＋ 本会话 3：A5／A4／`g=11T⁻¹δ`）⟹ 末端表述：**21 mechanisms CLOSED ⟶ irreducible core = Boolean covering feasibility** ✓。
+
+**整数覆盖形 ＝ 等价重参数化**（`min = K(n,1)` ✓）⟹ **非松弛** ✗ ⟹ solver 路由 ✓。
+
+**唯一运行**：`min Σf, Tf≥1, f∈ℤ≥0`（HIGHS，后台）✓；不轮询 ✗；不追加 solver ✗。
+
+**分叉**：`Σf=119` ⟹ 取支撑 ＋ 独立验证 ⟹ 正向突破；`opt=120` ⟹ P1 完成；UNKNOWN ⟹ 再定 exact 路线。
+
+**RH**：暂缓至 ILP 有结论 ✓。
+
+详 `docs/CLOSED-ROUTES-MAP.md` §119-P1-CONSOLIDATION 与 `docs/INTRELAX-REFILE-2026-09-27-...md`

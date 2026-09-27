@@ -3606,3 +3606,55 @@ RH：`β → O_β → 零点位置约束 → β=½`；119：`A_1 → O_{A_1} →
 **M-2B 无入口（DROP）** ✗（纯 PRE-WORK ✓）：supercode 需 `C⊆C₀`。① 唯一典范线性 `C₀=span(C)` 由 `C` 决定 ⟹ 量身定制 ⟹ **循环** ✗；② 一般位置 `rank=10` ⟹ 余维 0 ⟹ 无结构 ✗；③ 超平面情形**可能但不被强迫** ✗（H-内球大小 `1+(10−wt u)` ⟹ 计数门槛 `|C|≥51.2 <119` ⟹ 未排除 ⚠️）⟹ **嵌入非强迫、非典范 ⟹ Klapper 方法对 119 属外加假设** ✗。
 **本轮（Frontier R2）四杀** ✗：`M-1`（KILL，循环）｜`M-2A`（KILL，LP=1024/11）｜`M-2A′`（无入口）｜`M-2B`（无入口）。**唯一真收获＝P1-A 永久关闭** ✓✓ ⟹ 问题形态锁定为 **`K(10,1)≥120?`**，唯一靶心＝**规模下界** ✓。
 详 `docs/M2B-2026-09-27-embedding-gate-and-m2ap-status.md`
+
+## 2026-09-27 · §119-P1-CONSOLIDATION — 119 线知识状态固化（唐先生 15:55 裁定 ✓）
+
+**状态行（唐先生指定措辞 ✓ 逐字）**：
+
+> **119：P1 未闭合；低阶统计、局部一致性及线性／整数重参数化路线已审计并封口；剩余核心为 exact Boolean feasibility。唯一运行计算为等价 ILP。**
+
+**禁止／区分（✓）**：不得写「119 无攻击点」✗。**「没有找到 obstruction」≠「不存在 obstruction」** ✓ —— 本档只登记「已审计并封口的路线」，**不**声称障碍不存在 ✓。
+
+**结构 ✓**：**P0** ＝ 119-cover feasibility（`|C|=119 ∧ B₁(C)=𝔽₂¹⁰`）✓；**P1** ＝ 其不可行性（⇔ `K(10,1) ≥ 120`）✓。
+
+**21 条封口（档案既有 ＋ 本会话 ✓；逐条可核 ✓）**：
+
+| # | 路线 | 状态 | 结论 |
+|---|---|---|---|
+| 1 | `Σ_x f(δ(x))` 十类（GAPTHEOREM） | CLOSED | 被 `Q=1` 指纹钉死 |
+| 2 | 二阶传播 propagation | CLOSED | 引理成立 ✓ 但 ladder 数值证伪 ✗、不聚合 |
+| 3 | FAILSET 失败集 | CLOSED | 修正恒等式为**定义性**，无新信息 |
+| 4 | SCOL 行闭合 | CLOSED | 容量内容依赖 `Q=1`（SCOL-0 解耦否定） |
+| 5 | MIDSUP 中点支撑 | CLOSED | 中点层不受约束 |
+| 6 | FACE 2-面 | CLOSED | 面占用被 `A₁` 吸收 |
+| 7 | T3-MIN-1 三点 PSD | CLOSED | `d=1/2` 不可区分 ⟹ 平凡 |
+| 8 | L-GREEN-1 Laplacian/Green | CLOSED | 核必变号 ⟹ 无最大值原理 |
+| 9 | GRAM-LIFT | CLOSED | 全为正系数下界 ⟹ 无上界方向 |
+| 10 | HQ1 Haas×Q1 | CLOSED | 不产生 `A₁` 依赖 |
+| 11 | L4AUDIT 局部邻域 | CLOSED | 局部量被容量恒等式吸收 |
+| 12 | STAR3 Type III | CLOSED | 强制集不足（第 5 次汇合） |
+| 13 | M-1 BQP-lift | CLOSED | 循环（`y_uv ≤ x_v ≡ x_u ≤ 1`） |
+| 14 | M-2A LP | CLOSED | `1024/11 = 93.09`（远低于 119） |
+| 15 | M-2A′ surfeit 割 | BLOCKED | 有效性未证；`n=10` 落在好同余之外 |
+| 16 | M-2B supercode 嵌入 | DROP | 非强迫、非典范 ⟹ 外加假设 |
+| 17 | Fourier audit | CLOSED | 「坐标变换而非松弛」 |
+| 18 | Del6/Delsarte 二阶 LP | CLOSED | `Q=1` 下 `A₁ ≤ 49`（线性路线已用尽） |
+| 19 | A5 surplus×支撑耦合 | CLOSED | 平移不变聚合全塌（本会话） |
+| 20 | A4 局部一致性（`k=2`） | CLOSED | `k=2` ⟺ `(M,A₁,A₂)`；`k≥3` ⊆ SA ⊆ Lasserre（本会话） |
+| 21 | `g = 11T⁻¹δ` | CLOSED | 模 11 核定理 ⟹ 线性内容恰为**整数性**；非线性即 Booleanity（本会话） |
+
+**末端表述 ✓**：**21 mechanisms CLOSED ⟶ irreducible core = Boolean covering feasibility**（**不写「21 次失败」** ✓）。
+
+**整数形之归位 ✓**：`min{1ᵀf : Tf≥1, f∈ℤ≥0} = K(n,1)` ✓（等价定理 PA-1）⟹ **整数覆盖形 ＝ 等价重参数化（REPARAMETERIZATION）**，**非松弛** ✗ ⟹ 落在**solver 路由**一侧，**不**入松弛族（profile／`A_d`／local-SA／Lasserre ✗）。
+
+**唯一运行计算 ✓**：`/tmp/int10.py` ＝ `min Σf s.t. Tf ≥ 1, f ∈ ℤ≥0`（HIGHS，后台 `setsid` ＋ `pyguard` 2500MB）✓；**不轮询** ✗；**不追加第二 solver** ✗。
+
+**ILP 返回后唯一分叉 ✓**：
+
+| ILP 结果 | 下一步 |
+|---|---|
+| 找到 `Σf = 119` | 取 `C = supp(f)`；**独立验证** `|C|=119 ∧ ∀x: |C∩B₁(x)|≥1` ⟹ 正向突破（P2） |
+| 证 `opt = 120` | **P1 完成** ⟹ `K(10,1) ≥ 120` |
+| UNKNOWN | 才重新决定 exact 路线（Level-4／其它） |
+
+**RH 线 ✓**：**暂缓至 ILP 有结论**（唐先生 ✓；非因 RH 次重要，而是 119 已到干净分叉点 ✓）。
