@@ -560,6 +560,21 @@ $$\boxed{\text{pattern-compressed finite certificate}}$$
 $$\boxed{\text{residual }(1{,}657{,}842)\ \text{的 100\% 现均有可读证书：容量证书 }1{,}657{,}826\ +\ \text{完整交叠证书 }16}$$
 ⟹ **L3-α ＝ COMPLETE FINITE CERTIFICATE（全 residual 覆盖 ✓）**
 
+### 5.20 📒 k=4 收官账本（精确恒等式 ✓ 唐先生 20:27 落账 ✓）
+
+$$\boxed{9{,}381{,}251=\underbrace{7{,}723{,}409}_{\tau\ge6\ (\text{结构豁免，index-free})}+\underbrace{1{,}657{,}826}_{\tau\ge5\ (\text{容量证书})}+\underbrace{16}_{\tau\ge5\ (\text{完整交叠证书})}}$$
+（核验 ✓：$7{,}723{,}409+1{,}657{,}826+16=9{,}381{,}251$ ✓）
+⟹ $\forall A\subset C,|A|=4:\ \tau(E(A))\ge5$，且**每一类都有显式、可读、穷尽的证书** ✓✓
+（结构豁免类＝"3 簇互不可共享 ⟹ 各需 $\ge2$ 词 ⟹ $\ge6$"，index-free ✓）
+
+**L3-α 收官 ✓**：**COMPLETE FINITE CERTIFICATE**；**不再优化本证书** ✗（唐先生 20:27 ✓）
+**下一阶段（唯一入口 ✓）**：**从完整证书中抽取可证明的统一机制**
+$$\boxed{\text{能否得到不依赖具体 }A\text{、不依赖逐例枚举的结构定理？}}$$
+**已有素材 ✓**：Lemma A／A′／A″（均可证、index-free）＋ 鸽笼步（已证）＋ $\delta$-pattern 压缩（$310{,}124\to56\to4$，且 4 个模式 $\nu=2$ ✓）
+**精确残余 ⚠️**：鸽笼落到**单个 $B_2(a_i)$**；仅剩"多中心仅邻近同一 $a_i$"的退化情形
+**备选终局 ✓**：若该残余不能统一封口，则保留 pattern-compressed certificate，并锁定 **Lemma A／A′／A″** 为可迁移资产 ✓
+kopt26 的 `12/16` 硬编码文案已修正 ✓（cosmetic，不影响结果 ✓）
+
 ## §6 红线（硬 ✓）
 
 - 找不到 ⟹ 只记"该邻域／该预算未找到" ✗，**绝不推出** $K(10,1)\ge120$ 或任何下界 ✗
