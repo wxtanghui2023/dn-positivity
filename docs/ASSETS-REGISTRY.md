@@ -1027,3 +1027,9 @@ u$ **在每个陪集上恒定**；flatness ＝ 两陪集值相等 ⟹ A-ALIGNTHM
 **$s$ = agreement number**：$C_\lambda=\beta(c)\oplus15\lambda(c)$，$\mathrm{im}\beta=U=\{0,4,11,15\}$（4/4/4/4），$r=\pi\circ\beta$（$\pi(0){=}\pi(4){=}0,\pi(11){=}\pi(15){=}1$；分布 $\{0:8,1:8\}$）⟹ $s=\#\{c:r(c)=\lambda(c)\}$ ⟹ $s\ge1$（$\lambda(0){=}0{=}r(0)$）、$s\in\{1,\dots,16\}$ **全可达** ✓。
 **硬门验证 ✓✓**：$s{=}1$（$\lambda{=}1\oplus r$）、$s{=}15$（$r$ 翻一处）、$s{=}16$（$\lambda{=}r$）三例 $V$ 完美、$C$ 覆盖 **全部通过** ⟹ 皆为合法 NP1CC ✓。
 **🔴 判据证伪 ✗✗**：「flat $\iff|S|\mid A_2$」双向证伪（$s{=}1$：$7\mid2016$ 但非 flat；$s{=}16$：flat 但 $7\nmid1536$）⟹ 上档 FINAL-CLOSEDFORM 之「flat $\iff s{=}8$ 由 $7\mid A_2$ 推出」**作废**，其前提 $s\in\{2..14,16\}$ 系抽样假象 ✗。**正确**：flat $\iff s{=}8$；$7\mid A_2\iff s\in\{1,8,15\}$。
+
+
+## A-EXTGATE-1 + A-SPLIT37-1（2026-09-27）⭐
+**(甲) External-Cover Gate = NO-GO**：覆盖性初等 ✓；**inclusion-minimality 本机实测 ✓✓**（$\lambda=\mathbf 1(s{=}9),1{\oplus}r(s{=}1),r$翻一$(s{=}15),r(s{=}16)$ 四例 $V$ 与 $\mathcal C$ 皆最小）⟹ **外部覆盖/最小性均不含 $s$-信息**，$s\in\{1,\dots,16\}$ 全可达 ⟹ 「NP1CC $\Rightarrow s\in$ 小子集」被 $s{=}1,15,16$ 击穿 ✓。
+**(乙) 3/7 分裂定理 ✓✓**：$\mathrm{supp}$ 来自 $(W_0\setminus\{0\})$（3 列）$\sqcup\,W_3$（4 列）⟹ $1\le s\le15\Rightarrow|S|=7$；$s=16\Rightarrow|S|=3$；$A_2=2048-32s$ ✓。
+**flat 再更正**：flat $\iff q$ 在 $\mathrm{supp}$ 上恒定 $\iff s\in\{8,\mathbf{16}\}$（上档"flat $\iff s=8$"漏 $s=16$ ✗）。
