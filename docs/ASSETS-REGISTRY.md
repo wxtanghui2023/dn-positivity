@@ -788,3 +788,13 @@ G3 缺口 ≠ envelope 精度
 **推论**：$\sum_F inom{q_F}{2} = (n-1)A_1 + A_2$ ✓ —— 首次把 $A_1+A_2$ **按距离分开加权**（此前两者系数相同而不可分 ⚠️）。
 **局限（诚实 ✓）**：与 $A_1+A_2=$ 常数联立后该量仍**由 $A_1$ 仿射决定** ⟹ 不独立收缩可行域 ✗；**登记为可迁移小工具**，不登记为 leverage ✓。
 **细档**：`docs/FACE-2026-09-26-two-face-occupancy-audit.md`
+
+
+---
+
+## A-SUPPEX-1 · support–excess label determines Booleanity on Q₄（2026-09-27 立 ✓）
+
+**陈述** ✓：在 $n=4$ 穷举（非负整数 $f$，$\Sigma f\in[4,9]$，$b\in[1,3]^{16}$，7860 解）中，标签 $(\mathrm{supp}\,f,\ \delta|_{\mathrm{supp}f})$ 经 $\mathrm{Aut}(Q_4)$（阶 384 ✓）规范化后 **完全决定 Booleanity** ✓：49 个规范轨道，**0 个**轨道内不定（纯非 Boolean 16；纯 Boolean 33 ✓）；同一标签亦决定 $D_0=\Sigma f(f-1)$ ✓。**标签不含 $f$** ✓。
+**标签（强制 ✓）**：`P1-A mechanism: verified at n=4; no leverage on P1-B` ✓。
+**边界** ⚠️：仅 $n=4$ 穷举（未外推 ✗）；**无载荷于规模下界** ✗；**不得**包装为 119 进展 ✗。
+**细档**：`docs/SUPPVIS-2026-09-27-support-excess-determines-booleanity-and-its-irrelevance.md`
