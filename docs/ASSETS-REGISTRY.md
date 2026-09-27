@@ -1606,3 +1606,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**可行性问题的精确陈述（本档不跑 ✓）**】是否存在零对角非负整数 $\tilde Q$（$\sum_{i<j}q_{ij}=N_2$）满足 $\lambda_{\min}(\tilde Q)\ge-59.5$ 与桶约束 ✓；**不可行 ⟹ $K(10,1)\ge120$（真 P1 ✓，因任一 119-cover 必给可行点）**；**可行 ⟹ 只说明二阶（含 PSD）不足 ⟹ 进三阶（乙）** ✗（不推出 119 存在 ✓）
 - 【**边界**】未跑可行性计算 ✓（照令）；零计算；未开门②；未改门；不写 $K(10,1)\ge120$ ✗（V290）
 - 档：`docs/R3-A2-2026-09-27-ten-bucket-PSD-integer-compressed-form.md`
+
+**🔧 C-400（2026-09-27 · **R3-A3：修正钉死 ＋ 行容量压缩失败 ＋ 必要系统松弛性判定**）** ✓
+- 【**修正 1（trace，照唐先生）**】$\mathrm{tr}\,\tilde Q=0$ **单独不给** 59.5 ✗；正确：$\mathrm{tr}\,\tilde Q=0\wedge G\succeq0\Longrightarrow-59.5\le\lambda_{\min}\le0$ ✓（两个来源不同，须分开写 ✓）
+- 【**修正 2（$2\times2$）**】$m^2-4q_{ij}^2\ge0\Longrightarrow q_{ij}\le59.5\overset{\mathbb Z}{\Longrightarrow}q_{ij}\le\mathbf{59}$ ✓
+- 【**保留（PSD 谱压缩）**】$G=mI+2\tilde Q$ ⟹ $\lambda_{\min}\ge-59.5$；桶＋Gershgorin 只给 $-83$ ⟹ **结构压缩增量 $-83\to-59.5$** ✓；**表述保留**：PSD 不是"又一个上界"，而是把十桶之间的**全局谱耦合**加入问题 ✓
+- 【**R3-P 精确定义（照唐先生）**】$q_{ij}\in\mathbb Z_{\ge0}$、$q_{ii}=0$、$\sum_{i<j}q_{ij}=N_2$、$\sum_{j\ne i}q_{ij}\le83$、$\lambda_{\min}(\tilde Q)\ge-59.5$ ✓；逻辑方向：真实 119-cover ⟹ R3-P 可行 ⟹ **R3-P 不可行 ＝ 真 P1 反证 ⟹ $K(10,1)\ge120$** ✓
+- 【**⚠️ 判定 B（本档新发现，要紧）**】**$N_2$ 在 R3-P 中自由（仅上界 388）⟹ $q\equiv0$（或 $N_2{=}1$ 最小配置）即可行点** ⟹ **R3-P 平凡可行 ⟹ 不能单独给 P1** ✗ ⟹ 须保留 labelled 数据 ⟹ 本档提出**最小有用松弛 R3-P$^{\ast}$**（外加 $\sum_iN_1^{(i)}=N_1$、$B_i\le83$、pair 区域 $N_1+N_2\ge72$／$N_1+2N_2\le777$／$N_1\le71$、$Q$ 奇）✓
+- 【**★判定 A：行容量压缩失败 ✗（反例族 ✓✓）**】取 $\tilde Q=w(J-I)$（$w\le59.5$）⟹ $\lambda_{\min}=-w\ge-59.5$ 成立而**行和 $9w\le535.5$** ⟹ **PSD 单独不能把 83 压小** ✗（83 是**标号桶**约束，非谱约束）；唯一可证新界 $\sum_{i<j}q_{ij}^2\le34445$（弱，被 $q_{ij}\le59$ 支配）✗；**失败的结构原因**：桶 ＝ **标号（坐标分解）**约束｜PSD ＝ **非标号（谱）**条件 ⟹ 改进容量须用**更高阶标号数据**（$D_1$ 扩展 PSD／三阶 $\gamma$）✓
+- 【**★★松弛性判定 ＋ 收敛性发现（✓✓）**】在 R3-P$^{\ast}$ 取具体可行点（$N_1=60$ 每坐标 6、$N_2=100$ 均摊 $q\approx2.2$、$B_i\approx26\ll83$、$\lambda_{\min}\gtrsim-2.2$）⟹ **R3-P$^{\ast}$ 亦松弛：可行区域远未被 covering 逼紧** ⟹ **该层级（必要条件的任何弱化）都不能给 P1** ✓；逼紧只在**极端超额集中**（$Q\to1270\Longrightarrow\sum_iB_i\to777\Longrightarrow$ 平均桶 77.7 逼近 83），但那仍是**必要**条件 ✓；⟹ **收敛性发现**：本线（R3 链）与**档案独立路线**（$g$-形／模 11／21 机制封口）**结论一致——真约束在 Booleanity／符号层** ✓✓
+- 【**边界**】零计算 ✓；未跑 SAT/SDP ✓（照令）；未开门②；未改门；**不**声称 $K(10,1)\ge120$ 不可得 ✗（V290）；§6 收敛性为**路线一致性陈述**，非定理 ✓
+- 档：`docs/R3-A3-2026-09-27-row-capacity-compression-fails-and-necessary-system-slackness.md`
