@@ -1159,3 +1159,10 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **两条新恒等式 ✓**：$\boxed{\sum_{x\in C}\delta(x)=2A_1}$（由 $\sum_{x\in C}b=M+2A_1$）；$\boxed{\sum_x b\delta=4(A_1+A_2)}$（由 $\sum_{x\in B_1(c)}\delta=2(d_1(c)+d_2(c))$）⟹ **$\sum_x\delta^2=4(A_1+A_2)-285$**（surplus 二阶矩被钉死 ✗）。
 **判定**：一切平移不变加权和退化为 $(M,A_1,A_2)$ 函数 ⟹ 无独立不变量 ⟹ **A5 封口（第 19 次）**；AMEND-35 第(3)问答不出 ⟹ STOP ✓。
 **A2 预警 ⚠️**：仅放松 rank-1 而保留 $\{Y\succeq0,Y_{xx}=f_x\}$ 的松弛**为空**（任意 $f\ge0$ 取 $Y=ff^{\mathsf T}$）⟹ A2 须带坐标级条目约束（= Booleanity 回归）；下一步更适合直接审 **A4（局部一致性 = 真松弛 ✓）**。
+
+
+## A-A4-1（2026-09-27）
+**关键钉死 ⭐**：覆盖约束 $(Tf)(x)\ge1$ 涉及**整颗星 $B_1(x)$（11 点）** ⟹ 真正的局部对象＝**星边际**；星-星 overlap 仅在 $d\le2$ 且 $\le2$ 点。
+**$k{=}2$ 理论封口 🔴**：成对边际的全部信息 $=\{$1-点密度$\}\cup\{d{=}1,2\ \text{成对相关}\}$ ⟹ 恰可定出 $(A_1,A_2,M)$ ⟹ 按 A4-GATE **STOP** ✓。
+**$k\ge3$ 被支配 ⭐⭐**：$k$-窗口边际松弛 $\mathcal L_k$ 属 **Sherali–Adams 型**，而 $\mathrm{SA}_k\subseteq\mathrm{SOS/Lasserre}_{O(k)}$ ⟹ $\mathcal L_k\subseteq$Lasserre ⟹ 同阶 Lasserre 更强 ⟹ **A4 全族不能在 Lasserre 之外给新证书** ✗（档案实测 Delsarte+SDP = **105.2223** < 119 ✓）。
+**真正收获 ✓**：定位唯一活口 = 档案 **L3B Level 4（$n{=}10$，$1024\times1024$ PSD）"BLOCKED pending reduced implementation"**，且**两个后台 run（tidal-glade／marine-nudibranch）从未轮询** ⚠️ —— 这是 119 线上唯一具体、未完成、可推进的对象（计算型）。
