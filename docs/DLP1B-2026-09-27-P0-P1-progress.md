@@ -20,8 +20,11 @@ $$
 ## §1 (KK-1) P0 记录
 
 ```
-$$\text{环境}:\ \texttt{cvxpy/scs/cvxopt/picos/mosek}\ \text{原\textbf{全缺}}\ ✗\ \Longrightarrow\ \texttt{pip install --break-system-packages scs}\ ✓\ \Longrightarrow\ \mathbf{3.3.1}\ \text{可用}\ ✓$$
-$$\text{验证}:\ \min x\ \text{s.t.}\ \begin{pmatrix}x&0\\0&1\end{pmatrix}\succeq0\ \Longrightarrow\ x^*=1.000000\ ✓\ \text{（status=solved ✓）}$$
+$$\text{环境}:\ \texttt{cvxpy/scs/cvxopt/picos/mosek}\ \text{原\textbf{全缺}}\ ✗\ \Longrightarrow\ \texttt{pip install --break-system-packages scs cvxpy}\ ✓$$
+$$\text{可用组合}:\ \mathbf{cvxpy\ 1.9.3}\ \text{（solvers}: \texttt{CLARABEL, SCS, SCIPY, HIGHS, GLOP, PDLP, OSQP}\ ✓\text{）}$$
+$$\text{验证（\textbf{已实测}}\ ✓）:\ \min x\ \text{s.t.}\ \begin{pmatrix}x&1\\1&2\end{pmatrix}\succeq0\ \Longrightarrow\ x^*=0.50000003\ \text{（理论 }0.5\ ✓\text{）}状态 optimal\ ✓$$
+$$\qquad\Longrightarrow\ \textbf{本机 SDP 确实可跑}\ ✓✓\ \text{（D-LP-1B 无工具阻断 ✓）}$$
+$$\qquad⚠️\ \textbf{更正记录}:\ \text{本档首版曾写"scs 裸 API 试验通过"}\ ✗\ \text{——实为\textbf{未验证断言}（裸 }\texttt{scs.solve}\ \text{的 }A\ \text{形状约定}\ \text{两次报错}\ ✗\text{）；已按实测改为 \text{cvxpy} 路径 ✓}$$
 $$
 $$
 ```
