@@ -900,3 +900,15 @@ $$\eta^{(i,j,t)}_{(i',j',t'),d}=\sum_{c,d'}\binom tc\binom{i-t}a\binom{j-t}b\bin
 **比较** ✓：6 例中 5 例强于纯 Delsarte LP 上界 ⟹ 不在 Delsarte 线性包络内 ✓；但高于实测 $3\times\sim8\times$ ⟹ **valid but non-leveraging** ✓。
 **诚实备注** ⚠️：实质等价于 $\zeta\ge-(2^n-M)$ 的重写；文献是否已有未查 ✓。
 **细档**：`docs/PHASE2-AUDIT-2026-09-27-surfeit-global-pair-collapse.md`
+
+
+---
+
+## A-BALLCOLLAPSE-1 · 球交叠塌缩定理 ＋ $(A_1,A_2)$ 分裂自由度（2026-09-27 立 ✓）
+
+**性质** ✓：**结构性定理（一行 ✓）＋ 决定性数据** ✓（**非机制** ✗，但为"NO-GO 必然性"提供解释 ✓ = G-PROGRESS α ✓）。
+**定理** ✓：$|B_1(c)\cap B_1(c')|=2\cdot\mathbf 1[d\le2]$ ⟹ 一切球交叠型量（excess、surfeit、$A_{\le2}$、$Q$、profile 矩、$\zeta$）**只能是** $A_1+A_2$ 的函数 ⟹ 其塌缩是**结构性必然** ✓✓。
+**穷举刚性** ✓：$n=4$：40 个极小覆盖码；$n=5$：**320 个**，全部共享 $A=6$、profile $\{(1,24),(2,6),(3,2)\}$、$T_3=2$ 及全部布置统计量 ✓。
+**决定性数据** ✓✓：$n=9,K=62$ 双码 —— profile／$A=73$／$T_3,T_4,S_2,S_{2b},H_H,P_2$ **全同** ✓，而 $(A_1,A_2)=(7,66)$ **vs** $(26,47)$ ⟹ **分裂自由度存在** ✓。
+**细档**：`docs/PHASE2-KEY-2026-09-27-ball-collapse-theorem-and-the-A1-A2-split.md`
+**数据源**：`work/k10/c62/K_9_1_classif.txt` ✓
