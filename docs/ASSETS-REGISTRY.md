@@ -1498,3 +1498,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**保留登记（非目标 ✓）**】残余靶区 $\{\frac49<t<\frac{15}{31},\ 4t-2<\varepsilon<\varepsilon_2(t)\}$（非空、$u>0,v>0$）⟹ **重开须**：新资产 ＋ **正面 open 证据**（本轮**未取到**，不得以"我未见表"充数 ✗，G-4）✓
 - 【**池况提示（非决定 ⚠️）**】M1 四格 ＋ T-4 均在映射层关闭 ⟹ 池内剩余可查：**T-2**（$AG(7,3)$ 最大 cap）／**T-3**（疑似已解）／**T-8**（缺口未锁定）／**T-9**（已 REJECT）⟹ **待筛密度很低** ⚠️
 - 档：`docs/T4-CHECK-2026-09-27-source-first-SNIEP-n5-DROP.md`
+
+**🔴 C-390（2026-09-27 · T-2/T-3/T-8 终扫 ⟹ **旧池耗尽** ＋ **重新进货协议**）** ✓
+- 【**T-2 $AG(7,3)$ 最大 cap ＝ DROP**】$AG(6,3)=112$ 且**仿射等价唯一**（Potechin）；上界 $2.756^n$（E–G）；新下界 $2.218^n$（`arXiv:2209.10045`）；$n\ge7$ 大小未知 ⟹ **资产接口弱**（全局极值/堆积型；档内自评"攻击点弱"）＋ 生态持续收割 ＋ 属"改进界"dent 型 ⟹ DROP ✗
+- 【**T-3 最小 complete cap ＝ DROP（正面证据 ✓✓）**】Bishnoi 博客 **2026-03-10** 逐字：Grace–Voloch（`arXiv:2602.05254v1`）"an elegant algebraic construction of size $O(3^{n/2})$, **thus solving the problem**" ✓✓ ⟹ **有正面来源**（满足 G-4），非检索缺口 ✗
+- 【**T-8 $\pm$-rank ＝ HOLD**】ILAS **2026** 报告（`indico.math.vt.edu/event/2/contributions/351/`）逐字："…'generalizes' the binary rank and the term rank… **We establish several inequalities**…" ⚠️ ⟹ **对象刚引入、缺口未锁定、无正面 open claim** ⟹ **HOLD**（复活条件＝精确对象＋参数＋正面 open 证据）✓
+- 【**旧池耗尽判定 ✓**】T-1 DROP｜T-2 DROP｜T-3 DROP｜T-4 DROP｜T-5 DROP｜T-6 DROP｜T-7 DROP｜**T-8 HOLD**｜T-9 REJECT ⟹ **8 DROP ＋ 1 HOLD ＋ 1 REJECT ＝ 无可用入口** ✓
+- 【**重新进货协议（把 M1／D-A／D-B／G-4 变成生成器）**】①**黑名单**：covering／domination／saturating／syndrome-covering 及一切经 parity-check functional 等价的变体（除**新资产**外不再进池）✗；②**问题先行**（frontier open problem ⇒ fingerprint ⇒ asset match ⇒ P1/P2；**严禁**"手里有资产 ⇒ 到处找相似问题"）✓；③**四问闸**：Q1 是否全局极值/覆盖型（→M1 ✗）｜Q2 证书逻辑是否同一 functional（→隔离失败 ✗）｜Q3 是否有**正面 open 证据**（仅"未见表"不可用 ✗）｜Q4 现有资产能否产生**新约束**（否 ⟹ 映射层关闭 ✗）✓；④目标生态：rank／spectral｜finite geometry（非覆盖型 ⚠️）｜extremal（堆积/Turán 型）｜additive combinatorial invariant｜certificate-driven classification ✓
+- 【**首批扫描提案（round-1 ⚠️ · 非候选 · 下轮走全流程）**】B1 unicyclic／bicyclic 图 inertia（DMGAA）｜B2 树的 inverse eigenvalue（重数表／generalized stars）｜B3 spectral arbitrariness for trees（JCTA 2024）｜B4 Turán $(r+1,r)$-systems（2026-08-25 改进界）｜B5 $\pm$-rank 及 rank 不等式族（ILAS 2026，与 T-8 同源 ⚠️ HOLD）✓
+- 【**本轮研究资产（比单个 $K(10,1)$ 结果更重要）**】$$\boxed{\text{无【对象指纹＋后继链＋资产隔离】的大候选池，会系统性产生\textbf{假开放问题}}}$$（五连 DROP ＋ T-4 ＋ M1 族级关闭为证 ✓）
+- 档：`docs/POOL-SWEEP-2026-09-27-T2-T3-T8-final-cleanup-and-restock-protocol.md`

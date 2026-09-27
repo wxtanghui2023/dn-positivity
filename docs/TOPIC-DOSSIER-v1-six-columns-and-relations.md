@@ -22,6 +22,8 @@ FREEZE-ACK: D1=0
 
 ## **T-2 `AG(7,3)` 最大 cap**（候选，规模待估）
 
+> ⛔ **2026-09-27 终扫出口：T-2 ＝ DROP**（全局极值/堆积型；资产接口弱；生态持续收割；属「改进界」dent 型）⟹ 见 `docs/POOL-SWEEP-2026-09-27-T2-T3-T8-final-cleanup-and-restock-protocol.md` §0 ✓
+
 ```
 **【领域】** 有限几何 / cap set ✓
 **【内容与要求】** `P`：`c(7)`（`AG(7,3)` 最大 cap 大小）。要求：**精确值**或**严格改进的界** ✓
@@ -32,6 +34,8 @@ FREEZE-ACK: D1=0
 ```
 
 ## **T-3 `t(n)`：`AG(n,3)` 最小 complete cap**（暂：疑已解）
+
+> ⛔ **2026-09-27 终扫出口：T-3 ＝ DROP（有正面证据 ✓✓）**：Grace–Voloch（`arXiv:2602.05254`）被评「thus solving the problem」（Bishnoi 2026-03-10）⟹ 同上 §0 ✓
 
 ```
 **【领域】** 有限几何 ✓
@@ -95,6 +99,8 @@ FREEZE-ACK: D1=0
 ```
 
 ## **T-8 `\pm`-rank of `(0,\pm1)`-matrices**（暂缓）
+
+> ⚠️ **2026-09-27 终扫出口：T-8 ＝ HOLD**（缺口未锁定；ILAS 2026 仅引入对象与不等式，无正面 open claim）⟹ 同上 §0 ✓
 
 ```
 **【领域】** 矩阵组合 / 符号模式 ✓

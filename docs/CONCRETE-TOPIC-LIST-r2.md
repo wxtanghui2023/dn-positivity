@@ -17,11 +17,15 @@ FREEZE-ACK: D1=0
 　**状态：活跃（首攻）** ✓✓
 
 **【T-2】`AG(7,3)` 最大 cap 的大小**（`n\ge7`）
+
+> ⛔ **2026-09-27 终扫出口：T-2 ＝ DROP**（全局极值/堆积型；资产接口弱；生态持续收割；属「改进界」dent 型）⟹ 见 `docs/POOL-SWEEP-2026-09-27-T2-T3-T8-final-cleanup-and-restock-protocol.md` §0 ✓
 　已知：`AG(6,3)` 最大 cap `=112`，且**仿射等价唯一**（Potechin 2008）；`AG(n,3)` 上限约 `2.756^n`（Ellenberg–Gijswijt）｜ 缺口：**`n\ge7` 的最大 cap 大小未知**
 　资产：`A D`｜ 规模：`AG(7,3)` 有 `3^7=2187` 点，**极大**（须先评估可压缩性）｜ 等级：**逐字**（"It is still not known how large maximal caps are in dimensions larger than 6"）
 　**状态：候选（规模待估）** ⚠️
 
 **【T-3】`t(n)` = `AG(n,3)` 中最小 **complete cap** 的大小**
+
+> ⛔ **2026-09-27 终扫出口：T-3 ＝ DROP（有正面证据 ✓✓）**：Grace–Voloch（`arXiv:2602.05254`）被评「thus solving the problem」（Bishnoi 2026-03-10）⟹ 同上 §0 ✓
 　已知：`\sqrt2\,3^{n/2}\le t(n)\le 2^n`；Csajbók–Nagy 2025 `Problem 5.1` 明确列为 open ｜ **但**：**Grace–Voloch** 已给出 `O(3^{n/2})` 构造，"**solving the problem**"｜
 　**状态：疑似已被解决 ⟹ 暂**（须核是否完全闭合）⚠️
 
@@ -48,6 +52,8 @@ FREEZE-ACK: D1=0
 　⛔ **2026-09-27 出口：DROP**（资产隔离失败：与 $K_q(n,1)$ 同一覆盖逻辑；同族赛跑；分类已到 $q\le23$，库存旧记 $q\le16$ 过时）⟹ 见 `docs/T7-CHECK-2026-09-27-fingerprint-race-and-asset-isolation-DROP.md` ✓
 
 **【T-8】`\pm`-rank of `(0,\pm1)`-matrices（小阶/特定类）**
+
+> ⚠️ **2026-09-27 终扫出口：T-8 ＝ HOLD**（缺口未锁定；ILAS 2026 仅引入对象与不等式，无正面 open claim）⟹ 同上 §0 ✓
 　已知：`ILAS 2026` 有报告建立 `\pm`-rank 与 binary/term/实秩的不等式｜ 缺口：**具体阶数或类（如 ASM）上的精确值/界** —— **未锁定** ⚠️ ｜ 资产：`E D`
 　**状态：暂缓（缺口未锁定）** ⚠️
 
