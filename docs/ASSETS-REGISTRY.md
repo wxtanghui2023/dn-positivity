@@ -1628,3 +1628,37 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**下一步 R4-P1′（本档不跑）**】目标改写（**避免 union bound 真空** ✗）：直接用 $\sum_c|S\cup V(H_c)|\le451$ 与**局部图 $H_c$** 结构耦合；两条攻击面：(a) 把 451 与 excess 恒等式（285）及 $n_j$ 分布耦合；(b) 证某全局计数迫使某 $c$ 的 $|S\cup V(H)|\ge10$ ⟹ 可删 ⟹ $\bot$ ✓；**若两条都证不出 ⟹ 登记"codeword-labelled 局部层同样松弛"** ✗（与 R3-A3 同型收束）✓
 - 【**边界**】零计算；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）；451 为**必要条件**非矛盾 ✓
 - 档：`docs/R4-P1-2026-09-27-private-point-deficit-lemma-and-codeword-labelled-occupancy.md`
+
+**🔺 C-402（2026-09-27 · **R4-P1b：三点层 T1/T2/T3 符号筛选**）** ✓
+- 【**T1 ✓（用户参数化逐式验证）**】$a=d_{12},b=d_{13},c=d_{23}$；四类型计数 $n_{00},n_{10},n_{01},n_{11}$ ✓；反解 $$n_{11}=\tfrac{a+b-c}2,\ n_{10}=\tfrac{a+c-b}2,\ n_{01}=\tfrac{b+c-a}2,\ n_{00}=10-\tfrac{a+b+c}2$$ ⟹ **充要条件：$a+b+c$ 偶 ∧ 三角不等式 ∧ $a+b+c\le20$** ✓（次之 $a,b,c\le10$ 自动 ✓）；非退化 ⟹ $a,b,c\ge1$ ✓
+- 【**★T2：$\tau\in\{0,1\}$（本档推导 ✓✓）**】$$\boxed{\tau=[\max(a,b)\le1]+n_{11}[a\le2\wedge b\le2]+n_{10}[a\le2\wedge n_{01}=0]+n_{01}[a=0\wedge b\le2]}$$ ⟹ 非退化下第 1、2 项**互斥**（$n_{11}\ge1\Rightarrow a=b=1\Rightarrow c=0$ 退化 ✗）⟹ $\tau\in\{0,1\}$ ✓；**$\tau=1\iff\max(a,b,c)\le2\iff\{c_1,c_2,c_3\}$ 是 $G_2$ 的三角形** ✓；可达型**恰四**：$\mathrm{perm}(1,1,2)$ 与 $(2,2,2)$ ✓ ⟹ **三点张量 $T_{abc}$ 支撑仅四型（很薄的对象 ✓）**
+- 【**★T3-a：单三元组 FAIL ✗（须修正框架）**】$\tau$ 只依赖坐标四类型 ⟹ **由 $(a,b,c)$ 完全决定**（三球对坐标置换不变 ✓）⟹ "同 pairwise profile 而异 $\tau$" 在**单个三元组内不可能** ✗；**自由度只出现在张量分布层面** ✓
+- 【**★T3-b：张量层 PASS ✓（新信息量已识别）**】$$\boxed{\sum_x\binom{b(x)}3=\sum_{\text{unordered triples}}\tau=6\,T_3(G_2)}$$ 而 $T_3(G_2)$ **不被 $A$ 决定**（边数 $N_1+N_2$ 只给 $|E(G_2)|$；**同边数异三角形数**为初等图论事实 ✓）⟹ **三点层确有超出二阶计数的自由度，内容 ＝ 距离-≤2 图 $G_2$ 的三角形计数** ✓✓；与档案恒等式一致：$\sum\binom b3=Q+\sum\binom\delta3$ ✓ ⟹ **三点层 ＝ 覆盖轮廓三阶矩** ✓
+- 【**⚠️ 诚实限界（照唐先生 §7）**】$A\not\Rightarrow T$ **不是** P1 ✗；须 $T\in\mathcal T_{\rm cover}=\varnothing$ 或存在不可兼容模式 ✓；更冷现实：$\sum\binom b3$ 是 $\delta$-型泛函，档案已立"十类 $\sum_xf(\delta(x))$ 全被 profile 指纹钉住"（GAPTHEOREM ✓）⟹ **真问题转为"$b$-profile $\{n_j\}$ 是否被 $A$ 决定"**（**开放** ⚠️，本档不判 ✓）
+- 【**★耦合目标（本档提出，可证伪 ✓）**】资源候选：(i) 局部占用预算 $\sum_c|S(c)\cup V(H_c)|\le451$（R4-P1 ✓）；(ii) excess 285 ✓；**形态**：三角形 $(c_1,c_2,c_3)$ 处三码字的 $V(H)$ 各含一个 type-11 方向 ⟹ **三角形消耗局部占用** ⟹ 若 $T_3(G_2)$ 下界（covering 迫使）与 451 上界冲突 ⟹ $\bot$ ✓✓；形式化目标：$\exists K_\ast>K^\ast$ 使 $K_\ast\le T_3(G_2)\le K^\ast$ ✓
+- 【**Terwilliger 位置**】本档已完成 T1/T2/T3 ⟹ **先不开 Terwilliger SDP** ✗；**开它的门槛**＝§6 耦合若给出"三角形质量 vs 局部预算"的 $\bot$ ✓
+- 【**边界**】零计算（$11^3$ 由公式解析完成 ✓）；未上 Terwilliger；未碰 R3 线／$\mu$／PSD／SAT；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R4-P1b-2026-09-27-triple-layer-gates-T1-T2-T3-symbolic-screening.md`
+
+**🔻 C-403（2026-09-27 · **R5：三点层可证伪实验（$U$ 值集 ＋ 全局恒等式 ＋ 强制三角形）＋ 诚实对照**）** ✓
+- 【**★产出 1：$U(a,b,c)$ 精确值集**】$U:=|B_1(c_1)\cup B_1(c_2)\cup B_1(c_3)|=33-I_{12}-I_{13}-I_{23}+\tau$ ✓（$I_{ij}=2\cdot\mathbf 1[d_{ij}\le2]$ ✓、$\tau=\mathbf 1[\max\le2]$ ✓）⟹ $$\boxed{U\in\{\mathbf{28,29,31,33}\}}$$（三对皆 $\le2$：28；恰两对：29；恰一对：31；零对：33 ✓）⟹ **浪费 $33-U\in\{0,2,4,5\}$** ✓；**故"三球并集太小"在单三元组层面不产生矛盾** ✗（容量账 $1276\ge996$ 松 ✓）
+- 【**★产出 2：精确全局恒等式（与 1024/1309/285 接上 ✓✓）**】$$\boxed{1024=1309-2(N_1+N_2)+T_3-T_4+T_5-\cdots}\quad\Longleftrightarrow\quad\boxed{E=285=2(N_1+N_2)-T_3+T_4-T_5+\cdots}$$ ✓✓（$T_k:=\sum_{k\text{-子集}}|\text{共同球交}|$ ✓；高阶项**有限自动截断**（$k>11$ 交为空）⟹ **精确** ✓）；**读数**：285 ＝ 二阶层贡献 $2(N_1+N_2)$ 被三阶及以上**交替修正** ⟹ **三层在同一恒等式上耦合** ✓✓
+- 【**★产出 3：强制三角形（无条件 ✓✓）**】$Q=\sum_x\binom{\delta(x)}2$ **奇** ✓（档案链：$P=E+Q$ 且 $P=2(A_1+A_2)$ 偶 ⟹ $Q\equiv E\equiv1\bmod2$）⟹ $Q\ge1$ ⟹ $\exists x:b(x)\ge3$ ⟹ 其覆盖者中任取三者两两 $\le2$ ⟹ 三角形 ⟹ $$\boxed{T_3(G_2)\ge1}$$ ✓✓
+- 【**★修正（本档自查发现，两档同步）**】$\sum_x\binom{b(x)}3$ 是**无序**三元组 ⟹ $$\boxed{\sum_x\binom{b(x)}3=T_3(G_2)=Q+\sum_x\binom{\delta(x)}3}$$ ✓✓（**不是** $6T_3$ ✗；R4-P1b 已同步修正 ✓）⟹ $T_3\ge Q\ge1$ ✓
+- 【**⚠️ 诚实对照（必须与该恒等式同引 ✓）**】`FIBER-2026-09-26`：$\sum_xP(x)^2$ **不被二阶数据决定（带证人）** ⟹ 本档 T3-b **同型，不主张为新** ✗；`TERM-2026-09-27`：$n=4$ 全枚举 480 例 ⟹ triple **邻域结构零变化** ⟹ **封存三阶耦合** ✗（封的是"邻域"对象；$n=5$ **无数据，不得断言不存在** ✓）；`KOPT4-6` 有 STAR/TRI ✓
+- 【**本档真实增量 ✓**】(i) $U$ 值集；(ii) **全局恒等式（组合解释，R3 只有同源 $\delta$-型恒等式 ✓）**；(iii) $T_3\ge1$ 与 **STAR-叉桥接**（三角形 ⟺ 两距离-2 邻居共享恰一坐标 ✓）；＝三点层的**计数表述**（此前只有"邻域表述" ✓）
+- 【**缺口（具体 ✓）**】须两侧夹逼 $L\le T_3\le U$ 且 $L>U$ ✓：**上界来源** (a) R4-P1 局部占用预算 $\le451$ ✓、(b) 恒等式可行性 $N_1+N_2\in[143,459]$ ✓、(c) STAR-叉计数 ✓；**下界来源目前仅 $\ge1$（弱 ✗）—— 这是本路线真缺口** ✓
+- 【**边界**】零程序计算 ✓（全解析）；未碰 $\mu$/PSD/SAT/124-deletion；未上 Terwilliger；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R5-2026-09-27-triple-union-exact-values-and-the-global-inclusion-exclusion-identity.md`
+
+**🔺 C-404（2026-09-27 · **R4-T：$\tau$ 公式修正 ＋ triple-distribution closure test（T1/T2/T3）**）** ✓
+- 【**★修正（决定性 ✗✓）**】唐先生公式 $\tau=\frac{a+b-c}2+\mathbf 1[a=b=1]$ **缺因子** $\mathbf 1[a\le2\wedge b\le2]$ ✓；**反例** $(a,b,c)=(2,4,4)$：$r=\frac{2+4-4}2=1>0$ 但 $x=c_1\oplus e_i\ (i\in D_{12}\cap D_{13})$ 有 $d(x,c_2)=a-1=1$ ✓ 而 $d(x,c_3)=b-1=\mathbf 3>1$ ✗ ⟹ $x\notin B_1(c_3)$；且 $a=2>1\Rightarrow c_1\notin B_1(c_2)$ ⟹ **真值 $\tau=0$**，唐先生式给 1 ✗✓；同型反例族：凡 $\max>2$ 而 $r>0$ 者（$(4,2,4),(2,3,3)$ 等）✓
+- 【**★正确式 ✓✓**】$$\boxed{\tau=\mathbf 1[\max(a,b,c)\le2]\ \Big(=r\cdot\mathbf 1[a\le2\wedge b\le2]+\mathbf 1[a\le1\wedge b\le1]\Big)}$$、$\tau\in\{0,1\}$ ✓；非退化下两项**互斥**（$n_{11}\ge1\Rightarrow a=b=1\Rightarrow c=0$ 退化 ✗）✓；**$\tau>0\iff$ 三点构成 $G_2$ 三角形** ✓
+- 【**★T1 ✓**】$\tau=1$ 可达型**恰 4**：$\{\mathrm{perm}(1,1,2),(2,2,2)\}$ ✓；admissible 条件（$a+b+c$ 偶 ∧ 三角不等式 ∧ $\le20$）**唐先生正确** ✓
+- 【**★T2 ✓**】marginal 方程：$\sum_{abc}N_{abc}\cdot\#\{i\le3:d_i=k\}=(m-2)A_k^{(u)}$ ✓（每距离-$k$ 无序对属 $m-2$ 个三元组 ✓）；$\sum N_{abc}=\binom m3$ ✓；**不决定 $N_{abc}$** ⟹ 三阶自由度存在 ✓（**＝FIBER 同型，非新** ✗）
+- 【**★T3（诚实边界）**】$\sum_{\{c_1c_2c_3\}}\tau=\sum_x\binom{b(x)}3=\frac16(\sum_x\delta^3-285)$ ✓✓（**唐先生 §6/§7 公式正确** ✓；与本档 R5 修正一致：$\sum\binom b3=T_3$ **不是** $6T_3$ ✓；$T_3=Q+\sum\binom\delta3\ge Q\ge1$ ✓）；**但 $T_3=\sum_j\binom j3n_j$ 是 $b$-profile 的函数** ⟹ **T3 本身不提供超出 profile 的覆盖耦合** ✗ ⟹ **真问题＝$b$-profile $\{n_j\}$ 是否被 $A$ 决定** ⚠️（**开放**，＝FIBER/TERM 同一边界 ✓）
+- 【**空间隔离 ✓**】已核 `E58-triple-sum-collapse.md` 属**空间 A（RH）** —— **同名冲突，不引用、不合并** ✓✗
+- 【**档案对照 ✓**】`FIBER-2026-09-26`（三阶不变量带证人 ⟹ 同型，非新 ✗）；`TERM-2026-09-27`（$n=4$ 邻域零变化 ⟹ **封存**，封的是**邻域**对象 ✗；$n=5$ 无数据 ✓）；`KOPT4-6`（STAR/TRI ✓）
+- 【**本档增量 ✓**】$\tau$ 公式修正 ＋ 正确二分 ＋ closure test 的诚实边界定位 ✓
+- 【**边界**】零程序计算；未上 SDP/Terwilliger；未碰 R3 线/$\mu$/PSD/SAT；不跨空间；未开②；未改门；不声称 $K(10,1)\ge120$ ✗（V290）
+- 档：`docs/R4-T-2026-09-27-tau-formula-correction-and-triple-distribution-closure-test.md`
