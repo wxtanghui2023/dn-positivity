@@ -1185,3 +1185,11 @@ $k'$ 分布：$\{0{:}566,1{:}93,2{:}3\}$。
 **等价定理 ✓✓（三行）**：$f\in\mathbb Z_{\ge0},\ Tf\ge1$ ⟹ $\mathrm{supp}(f)$ 是 0-1 覆盖码且 $|\mathrm{supp}f|\le\sum f$ ⟹ $\boxed{\min\{\sum f\}=K(n,1)}$ ⟹ **整数松弛不是松弛** ✗；但给出**更宽的可搜索形式**（任一 $\sum f{=}119$ 解的支撑直接是 119-覆盖码 ✓✓）。
 **小 $n$ 验证 ✓✓（HIGHS）**：ILP 最优 $\sum f$ = $4/7/12$ 对 $n{=}4/5/6$，**与 $K(n,1)$ 完全相等**，且**最优解恒为 0-1 值** ✓；$n{=}5$ 穷举 $C(32,6)$ 全部 6-子集**无一覆盖** ⟹ $\sum f{=}6$ 不可行 ✓。
 **$n{=}10$**：ILP（1024 变量／1024 约束 ✓，HIGHS ✓，后台 setsid＋pyguard）已启动 ⏳；三结局：(i) $\le119$ ⟹ 取支撑得 119-码（正向突破）(ii) 不可行 ⟹ $K\ge120$ (iii) UNKNOWN。
+
+
+## A-INTRELAX-REFILE-1（2026-09-27）✅ 改档
+**A-INTRELAX-1 正式改档**：由「整数松弛」改为 **「整数覆盖的等价重参数化」（equivalent reparameterization）** —— 依据 $\min\{\mathbf 1^{\mathsf T}f:Tf\ge1,f\in\mathbb Z_{\ge0}\}=K(n,1)$ ⟹ 最优值相同、可行集对应 ⟹ **既不变弱也不变强** ⟹ **不得列入松弛族**（profile／$A_d$／local-SA／Lasserre ✗）；正确定位 = 面向 solver 的**重述**，服务同一决策问题 **P1：119 feasibility**。
+**状态锁定 🔒**：唯一运行 = 该 ILP（HIGHS，后台，不轮询）；暂不做：第二 CP-SAT／Level-4 Lasserre／R2 修复／新 $\delta$ 恒等式／第 22 个候选机制。
+**结果分叉**：$\sum f{=}119$ ⟹ 取支撑得 119-cover（正向突破）；证 optimum $=120$ ⟹ P1 完成；UNKNOWN ⟹ 才考虑 Level-4。
+**验收协议**：若得 119，**不得**只采信目标值，必须取 $C=\mathrm{supp}(f)$ 并独立验证 $|C|{=}119\wedge\forall x:|C\cap B_1(x)|\ge1$ ✓。
+**旁线审计**：变量域更宽（$\mathbb Z_{\ge0}$）⟹ 每 node LP 更松 ⟹ 通常更易解 ✓；但任一整数解 ⟹ $\mathrm{supp}(f)$ 即 0-1 覆盖码 ⟹ **不引入新对象类型**，且因 $K_{\mathbb Z}=K$ 也**不能给出更强证书** ⟹ 净价值 = **搜索效率**，非新信息源。
