@@ -29,6 +29,7 @@ FREEZE-ACK: D1=0
 　已知：`n\le4` 完全解决；`n\ge5` **未解决**；`5\times5` 有部分结果（Loewy–McDonald 等给出新可实现列表）｜ 缺口：**`n=5` 的完整刻画**
 　资产：`E✓✓ D`（trace／rank／inertia／符号推导）｜ 规模：谱参数空间**连续**⟹ 须先切成**有限具体列表**（如小整数谱）才可认证 ｜ 等级：**逐字**（"remains unsolved for `n\ge5`"）
 　**状态：候选（须先离散化）** ⚠️
+　⛔ **2026-09-27 出口：T-4 ＝ DROP**（M03 线已跑过：新性失败＋区域层 FAIL；$n=5$ 仍 open 但我方边际为零）⟹ 见 `docs/T4-CHECK-2026-09-27-source-first-SNIEP-n5-DROP.md` ✓
 
 **【T-5】图的 minimum rank / **inertia set**：小阶完备表**
 　已知：min-rank 问题对多类图族有结果；**inverse inertia 问题对"阶数不超过某值"的图已解决**（检索片段在此处截断，**具体阈值须核**）｜ 缺口：**下一阶数的完备表**（如 `n=8`）

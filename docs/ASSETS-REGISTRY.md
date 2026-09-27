@@ -1480,3 +1480,21 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 阈值漂移（第二轮）**】库存 T-7"前沿"写 $q\le16$；实际**分类到 $q\le23$** ⟹ 同 T-5 的 $6\to7$ ⟹ 强化 **G-4**（阈值类须追后继链）✓
 - 【**池级读数（本档真正产出 ⚠️）**】四连 DROP 三类死因：T-1 预登记撞车＋赛跑｜T-5 对象级收割＋阈值漂移｜T-6 赛跑全面＋证书链工业化｜T-7 **资产隔离失败**＋同族＋阈值漂移 ⟹ 池内**"表填空族 M1" 四格全落在"覆盖／支配／饱和"同一生态且已被工业化** ⚠️ ⟹ 建议（非决定）：**(a)** 对 M1 族做**族级判决**；或 **(b)** 转向**非同族**余项（**T-4** SNIEP $n=5$／**T-8** $\pm$-rank，属**方法族 M2：秩/惯性**，不涉覆盖证书）✓
 - 档：`docs/T7-CHECK-2026-09-27-fingerprint-race-and-asset-isolation-DROP.md`｜库存已标 DROP：`TOPIC-DOSSIER-v1`、`CONCRETE-TOPIC-LIST-r2` ✓
+
+**🔴 C-388（2026-09-27 · **M1 族级关闭**）** ✗
+- 【**判定（精确形式 · 照唐先生）**】$$\boxed{\text{现有 T1–T5 资产}\not\Rightarrow\text{M1 的全局极小值问题产生新的 P1/P2}}\quad\boxed{\textbf{M1 ＝ CLOSED FOR THIS ASSET PACKAGE}}$$
+  ⚠️ **仅资产—问题映射层** ✓ —— **不**声称"covering codes 无价值" ✗、**不**声称"该生态无 open problems" ✗
+- 【**证据链（四样本三类死因）**】T-1 预登记撞车＋赛跑（**形式 open ≠ 可用入口**）｜T-5 对象级收割＋阈值漂移（**小阶分类阈值易滞后**）｜T-6 工业化赛跑＋novelty gate 答不出（**covering 本体已有证书/checker/形式化生态**）｜T-7 **资产隔离失败**（saturating ＝ covering/syndrome 同一 functional）✓
+- 【**沉淀纪律** **(D-A)** "形式 open" ≠ "可用入口"；**(D-B)** "换个表示" ≠ "换个问题"（判据：证书逻辑是否同一 functional）✓
+- 【**重开条件（登记 ✓）**】出现新资产 $X$ 使 M1 中某格产生新的 P1/P2（且非"旧约束换参数/换表示"）✓；**排除**：换 $(q,n,R)$／换几何表示／"库仍写 unknown"／重算或形式化 ✗
+- 档：`docs/M1-FAMILY-CLOSURE-2026-09-27-closed-for-this-asset-package.md`
+
+**🔴 C-389（2026-09-27 · T-4 SNIEP $n=5$ ＝ **DROP**（资产—问题映射层））** ✗
+- 【**最硬依据：我方自己跑过并已判新性失败**】`M03-P2-SNIEP-FINAL-STAGE-REPORT.md` §0 逐字：*"P2-SNIEP 分支：**数学机制成功，独立新性失败** ⟹ 降级为「已知 SNIEP 区域的独立局部机制复核资产」"*；清单：独立新性 **否**／SNIEP 新结果 **否**／RH 桥接 **否**；Krawczyk 新性路线**关闭** ✓✓
+- 【**区域层 FAIL（实测）**】`(3b)` ＝ **MECHANISM EXTENSION / NO REGION EXTENSION**；$W_{\rm PS}\subseteq\{$JMP-已排除$\}\cup\{$Loewy-已排除$\}$ ✓
+- 【**同形赛跑**】我方研究族 $(1,t,t,-(q+\varepsilon),-(q+\varepsilon))$ **即** JMP 2017（LAA 512,129–135）之族（逐字：其 Thm 1 ≡ 我方 $u$-条件）✓；我方点被 **Marijuán 2023**（$a\le\frac{\sqrt5-1}4$ 恒可对称实现）与 **2026-05 WSU 学位论文**（充分区含 $1+4\lambda_2\lambda_5\ge0$）覆盖 ✓；最新 **arXiv:2608.19435**（Jin–Ke–Sui, **2026-08-19**, 45pp）**只加新不可能区域**（低迹；对角移位→临界高迹边界→加权五环），**未完成** $n=5$ ✓
+- 【**关键区分**】**$n=5$ 数学上仍 open ✓；但我方资产对该问题的边际已实测为零（区域层 FAIL）** ⟹ 关闭的是**资产—问题映射**，不是问题 ✗✓
+- 【**攻击面清点（全部已跑 ✓）**】线性层 已关闭｜Soules-1 解析定理（恒失败）｜Soules-2 **UNDECIDED**｜幂和 机制扩张/区域无扩张｜JMP 交错 CLOSED 无新排除｜Krawczyk 新性关闭 ✓
+- 【**保留登记（非目标 ✓）**】残余靶区 $\{\frac49<t<\frac{15}{31},\ 4t-2<\varepsilon<\varepsilon_2(t)\}$（非空、$u>0,v>0$）⟹ **重开须**：新资产 ＋ **正面 open 证据**（本轮**未取到**，不得以"我未见表"充数 ✗，G-4）✓
+- 【**池况提示（非决定 ⚠️）**】M1 四格 ＋ T-4 均在映射层关闭 ⟹ 池内剩余可查：**T-2**（$AG(7,3)$ 最大 cap）／**T-3**（疑似已解）／**T-8**（缺口未锁定）／**T-9**（已 REJECT）⟹ **待筛密度很低** ⚠️
+- 档：`docs/T4-CHECK-2026-09-27-source-first-SNIEP-n5-DROP.md`
