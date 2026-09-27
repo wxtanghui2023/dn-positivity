@@ -156,3 +156,12 @@ $ bash scripts/tech_word_check.sh "Booleanity"
 - 不写"不可能／不存在／无杠杆"作为终局判断 ✗（V290）—— 只写"**在已普查四族内未获杠杆**" ✓
 - R2 四条**均为候选**，**不得**预设 open／ADMIT ✓（G-4：须正面证据 ✓）
 - `/tmp/cov`（covering-**design** 搜索器）与 code 搜索**严格分账** ✗
+
+
+---
+
+## §12 ⚠️ 更新（2026-09-27 21:42 唐先生修正）
+
+$$\boxed{R2\!-\!1\ \textbf{DROP}\ |\ R2\!-\!2\ \textbf{ALIVE}\ |\ R2\!-\!3\ \textbf{HOLD}\ |\ R2\!-\!4\ \textbf{PRIORITY（已由 P1-5 执行）}}$$
+- **R2-1 理由翻转 ✓✓**：**不是**"$n=10$ 未被同余路线覆盖"，而是**恰恰相反** —— **Habsieger 原文（FPSAC 95）明确研究 $n\equiv2,4\bmod6$**，$n=10$ 给 $K(10,1)\ge104$，Zhang 提高至 $105$（远低于 119）⟹ **该路线已处理过且缺口巨大** ⟹ **DROP** ✓
+- **R2-4 ＝ PRIORITY 并已执行**：见 `docs/P1-5-2026-09-27-van-Wee-proof-decomposition-at-n10-and-R2-1-DROP.md`（**A 型输出：未消耗自由度＝坐标支撑层，且可证其在 van Wee／Habsieger 体系内不可见** ✓✓；条件挂在 R2-2 ✓）

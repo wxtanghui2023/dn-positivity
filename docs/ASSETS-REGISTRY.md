@@ -1546,3 +1546,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**杠杆判定（诚实）**】在**已普查四族内**未获作用于任意 119/120-cover 的 P1 杠杆 ✓；**措辞纪律**："未产生"≠"不存在" ✗（V290）✓
 - 【**R2 攻击点候选（不计算）**】**R2-1** 同余路线在 $n\equiv4\bmod6$（含 $n=10$）是否未覆盖 ⚠️（须正面 open 证据 ✓）｜**R2-2** 构造性给出 $n=10$ 的"同 $(A_1,A_2)$ 而 $J$ 分叉"两码（若不可能 ⟹ 本身即"$A$ 决定 $J$"新定理 ✓）｜**R2-3** $n=10$／$|C|=120$（$E=296$）的 $b$-profile 对照锚（只读不算 ✓）｜**R2-4** van Wee 证明**内部**等号分析对 $n=10$ 的类比 ✓
 - 档：`docs/119-ATTACK-R1-2026-09-27-P1-global-invariant-census-and-leverage-verdict.md`（**纯普查／拆解 · 零新术语 · 未动算 · 未改门** ✓）
+
+**🔧 C-394（2026-09-27 · **P1-5：Van Wee 分解 @ $n=10$** ＋ **R2-1 ＝ DROP**（理由翻转））** ✓
+- 【**R2-1 ＝ DROP（唐先生 21:42 修正 ✓✓）**】**不是**"$n=10$ 未被同余路线覆盖"，而是**恰恰相反** —— **Habsieger 原文（FPSAC 95）明确研究 $n\equiv5$ 与 $n\equiv2,4\bmod6$**（逐字 ✓），$n=10$ 给 $K(10,1)\ge104$、Zhang 提至 $\ge105$ ⟹ **已处理且距 119 有 14–15 缺口** ✓；Wu–Chen 2024 的新方法**只对 $6\mid n$** ✓（其论文仍把 $n=10$ 所在的一般问题列为 open ✓）
+- 【**Habsieger 体系（本轮新取 source ✓✓）**】$F_i(x)=\sum_{y\in S_i(x)}F(y)$；Lemma 1（Krawtchouk 型复合）；$\delta=N_0+N_1-1\ge0$；$\|\delta\|=(n+1)|C|-2^n$；**层公式** $(4)$：$\delta_i=(n+1-i)N_{i-1}+N_i+(i+1)N_{i+1}-\binom ni$；**Lemma 2**：$p$ 奇素数 $|n+1\Longrightarrow\sum_{i=0}^{p-1}\delta_i\equiv p-1\bmod p$；另列 $p\in\{2,3,4,5\}$ 同余 ✓
+- 【**逐步分解表（饱和判定）**】一阶 excess ＝ **已饱和**（$\|\delta\|=11|C|-1024$；$119\Rightarrow285$）｜局部 congruence ＝ **已使用且自动满足**（$n+1=11$ 素数；$285=11\cdot25+10\equiv10\bmod11$ ✓ 无剩余切割力）｜二阶 intersection ＝ **部分使用**（Zhang pair-covering ＋ van Wee Lemma 3b/8；产出 104/105/107）｜等号条件 ＝ **$n=10$ 不适用**（$n\ne2^m$ ⟹ 整条等号链不适用；`ALG-VW` 已定位缺口）｜整数性余量 ＝ **线性内容已吃尽**（模 11 定理；$g$-形线性内容＝整数性，非线性＝Booleanity）｜**coordinate/support ＝ 未被使用 ⟸ 自由度所在** ✓
+- 【**★A 型输出（本档核心 ✓✓）**】**命题（2 行可自证）**：由 (4)，$\{\delta_i\}$ 与 $\{N_i\}$ **逐点互相决定** ⟹ 凡只用 $\{N_i\}/\{\delta_i\}$（及其层和、模 $p$ 同余、对 $x$ 的聚合）的判据**完全由距离层决定** ✓；**见证（P12-PASS）**：三个最优 $(8,32)_1$ 码**全距离分布相同**而 $\sum_{i<j}q_{ij}^2=64/128/256$ ⟹ **距离层判据不可能区分它们** ⟹ **坐标支撑层承载距离层之外的信息** ✓✓ ⟹ van Wee／Habsieger／Zhang／Wu–Chen 的**全部量**都只依赖 $(N_i,\delta_i)$ 或其局部几何 ⟹ **支撑层的 $m_{ij},q_{ij},J$ 在其体系内结构性不可见** ＝ **未被 excess／congruence 理论吃掉的结构性自由度** ✓✓
+- 【**A 型的两个条件（必须随结论引用 ✗）**】① **存在性未定**：P12-PASS 见证在 $n=8$；**$n=10$ 是否也有"同距离分布、异 $J$"未知** ⟹ 归 **R2-2**（若不存在 ⟹ 落 **B**）｜② **不等式转换未完成**：有维度 ≠ 有约束，须写成对任意 119-cover 成立的不等式（不得只在构造族内成立 ✗）
+- 【**R2 状态**】$\text{R2-1 }\textbf{DROP}\ |\ \text{R2-2 }\textbf{ALIVE（下一档）}\ |\ \text{R2-3 }\textbf{HOLD}\ |\ \text{R2-4 }\textbf{已执行（A 型出）}$ ✓
+- 档：`docs/P1-5-2026-09-27-van-Wee-proof-decomposition-at-n10-and-R2-1-DROP.md`｜（R1 档已补 §12 更新 ✓）
