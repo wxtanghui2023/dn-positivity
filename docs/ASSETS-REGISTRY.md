@@ -1817,3 +1817,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**下一步两出口（登记未做 ✓）**】① 找新机制界 $b_4$（如用 §1 的 $d_1(y)\le6$ 做全局计数 ⚠️）；② 若在 119-cover 中 $b_4$ 可大 ⟹ 明确记为 natural limit ✓
 - 【**边界**】零程序计算；未上 SDP/SAT；未开门②；未改门；不跨空间（回查已分栏 ✓）；不声称 119-cover 中 $b_4$ 可大 ✗；不声称折衷式无用 ✗
 - 档：`docs/P1-B4-2026-09-27-internal-block-local-fact-and-avoidance-side-unboundedness.md`
+
+**5️⃣ C-421（2026-09-27 · **P1-D5：缺失邻居坐标结构 —— 结构恒等式（layer-5 接口）＋ 缺失集无新信息 ＋ 存在侧自由**）** ✓
+- 【**★★(1) 精确结构恒等式（新 ✓✓）**】内部块 $y=c{\oplus}u$（$u\subseteq S(c),|u|=4$ ✓）⟹ $$\boxed{d_1(y)\ =\ \#\{i\notin u:\ c\oplus e_u\oplus e_i\in C\}}$$ ✓✓ **证明**：$i\in u\Rightarrow y{\oplus}e_i=c{\oplus}e_{(u\setminus i)}$（重量 3、支撑 $\subseteq S(c)$）$\overset{(\alpha)}{\Longrightarrow}\notin C$ ✓（不计数）；$i\notin u\Rightarrow y{\oplus}e_i=c{\oplus}e_u{\oplus}e_i$（**重量 5** ✓）⟹ 计数当且仅当在 $C$ ✓ ⟹ **内部块的全部一阶邻居恰是重量 5 码字** ⟹ **本线第一次把 layer-5 接入** ✓✓；含 C-420 的 $d_1\le6$ 作为系 ✓
+- 【**✗(2) 缺失集无新信息**】$\mathrm{miss}(y):=[10]\setminus S(y)\supseteq u$ 的内容**就是** $u\subseteq S(c)$（经 $(\alpha)$ 解释 ✓）⟹ **等价于 $b_4$ 的定义条件**（"哪些 $u$ 是内部块"✓）⟹ 单靠缺失集不产生新量 ✗（再走一步即退回 C-417／C-419 同源链 ✓）
+- 【**⚠️(3) 存在侧自由（真正接口）**】自由部分是 $S(y)\cap([10]\setminus u)=\{i\notin u:c{\oplus}e_u{\oplus}e_i\in C\}$（§(1) 的**生成集** ✓）；**不受** $(\alpha)$（只覆盖重量 2／3 ✓）与 $A(c)=0$（只管重量 2 ✓）约束 ⟹ **接口处无 demand > capacity** ✗⚠️；**但接口本身有价值**：把"内部块"与**重量 5 层**绑定 ⟹ 若将来能对重量 5 层建独立（非 avoidance／非容量）约束，则直接回传到 $b_4$ ✓
+- 【**★(4) 状态锁（照唐先生 23:24 ✓）**】$$\textbf{avoidance: STOP}\ ✗\quad\textbf{profile/capacity: STOP}\ ✗\quad\textbf{内部 block 的邻接结构: LIVE}\ ✓$$ C-419 **HOLD** ✓；C-420 结论（$C_1\Rightarrow b_4$ 可达 210）保留 ✓；**本档未形成新全局约束** ✗（诚实 ✓）
+- 【**下一步（登记未做 ⚠️）**】① 对 weight-5 层建**排列级**约束（非 avoidance／非容量 ✓）；② 用"生成集"定义新的 global 量（$\sum_u|\{i\notin u:c{\oplus}e_u{\oplus}e_i\in C\}|$ 的排列敏感函数 ✓）；③ 检验其是否与 119 的覆盖需求碰撞 ⚠️
+- 【**边界**】零程序计算；未上 SDP/SAT；未开门②；未改门；不跨空间（回查已分栏 ✓）；不声称 119-cover 中 $b_4$ 可大 ✗；不声称重量 5 层路线有效 ✗；不声称 P1 成立 ✗（V290）
+- 档：`docs/P1-D5-2026-09-27-missing-neighbour-structure-and-the-layer5-interface.md`
