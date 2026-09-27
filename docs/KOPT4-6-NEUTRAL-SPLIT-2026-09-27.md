@@ -278,10 +278,35 @@ $$\tau(E)\le k-1\Rightarrow124\to123;\quad \tau(E)=k\Rightarrow124\to124;\quad \
 **优先级（唐先生 ✓）**：**L4 → L3 → L5 → L6**；**不机械升 $k$** ✗
 
 ⚠️ **本轮补充（定义等价 ✓ 省力记录）**：$M_r(E)<|E|\iff\tau(E)>r$ **是定义等价**（**不是**更强的证书）⟹
-- **L4 已由本次 $k{=}4$ 运行完备解答** ✓：**全部** residual $A$ 均跑 `can_cover(E,3)` 且 `k3bad=0`；豁免类由"3 簇互不可共享 ⟹ 各需 $\ge2$ 词"得 $\tau\ge6$ ⟹ **$\forall|A|{=}4:\tau(E(A))\ge4$** ⟹ **$4\to3$ 降基数出口堵死** ✓（P3 层结论，**强于**"无 moved" ✓）
+- **L4 判据已被本次 $k{=}4$ 运行完整覆盖（⚠️ 封存待收尾 ✓）**：**全部** residual $A$ 均已跑 `can_cover(E,3)` 且 `k3bad=0`；豁免类由"3 簇互不可共享 ⟹ 各需 $\ge2$ 词"得 $\tau\ge6$ ⟹ 运行收尾后即得 **$\forall|A|{=}4:\tau(E(A))\ge4$** ⟹ **$4\to3$ 降基数出口堵死** ✓（P3 层结论，**强于**"无 moved" ✓）
+  **运行中读数（不提前结案 ✓）**：$1{,}250{,}000/\approx1{,}651{,}000$ 残差，$1723.3$s，`MOVED=0`，`k3bad=0`，ETA $\approx$19:46 ✓
 - ⟹ M 判据的价值在**计算路线**（max-union 枚举替代 SAT）；真正的新内容在 **L3／L5／L6** ✓
 
 **待命脚本** ✓：`/tmp/kopt16_L5fingerprint.py`（L1／L3／L5 统计器：$|E|$／$N_j$ 谱／$|Q(E)|$／$\alpha(E)$／$q$ 度数直方图／$\tau$ 桶／fingerprint 类计数）——零 CPU 已就绪，$k{=}4$ 收尾后可立开 ✓
+
+### 5.9 L5 指纹规格冻结（唐先生 19:36 ✓）
+
+**目标**：把 $9{,}381{,}251$ 个 $A$ 压缩成**少数结构类型**；**不碰求解器** ✗、**不存中心编号／完整矩阵** ✗（指纹须为等距不变量 ✓）
+
+| 层 | 指纹 |
+|:--:|------|
+| **F0** | $(\|E\|,\ N_1,\dots,N_{10})$（$N_j=\#\{\{x,y\}\subseteq E:d(x,y)=j\}$）|
+| **F1** | $(F_0,\ \|Q(E)\|,\ \text{degree\_hist})$，$\text{degree\_hist}=$ multiset $\{\|B_1(z)\cap E\|:z\in Q(E)\}$ ⭐**第一主指标** |
+| **F2** | $(F_1,\ \text{pair\_intersection\_hist})$，$=\text{multiset}\{\|S_z\cap S_{z'}\|:z<z'\in Q(E)\}$（**仅当 F1 已显聚类才算** ✓）|
+
+**τ 三态绑定 ✓**：`EXEMPT`（结构证书 $\tau\ge6$）｜`NO_3_COVER`（`can_cover(E,3)=False` ⟹ $\tau\ge4$）｜`3_COVER`（$\tau\le3$，出现即 $124\to123$ ✓）＋ 非豁免者再记 τ 桶 $4$ 或 $\ge5$
+
+**必报告表 ✓**：每层（F0／F1／F2）的 `样本数 / distinct classes / 最大类占比 / singleton 占比` ＋ **同类异 τ 计数**（STOP-3 判据）
+
+**STOP 条件（先定死 ✓）**：
+- **STOP-1**：F0 已高度离散且无压缩 ⟹ 不继续 F1 ✗
+- **STOP-2**：F1 近似一一对应（类/样本 $>0.5$）⟹ **L5 停，转 L3** ✗
+- **STOP-3**：有强聚类但**同类异 τ** ⟹ **有价值的失败**：指纹不足，需找真正决定兼容性的 invariant ✓
+- **SURVIVOR**：少数 fingerprint 类覆盖绝大多数 $A$ ⟹ 进入**代表元 ＋ 统一证明** ✓（$F(E){=}F(E')\Rightarrow$ 同 covering obstruction ⟹ 尝试从 $F$ 本身推出 $\tau\ge4$ ✓ = 计算证据 → 结构性证书 ✓）
+
+**路线（唐先生 ✓）**：$\boxed{L4\ \text{封存}\to L5\ \text{压缩}\to L3\ \text{兼容性}\to L5\ \text{代表类证明}\to L6\ \text{势垒}}$，**不机械升 $k$** ✗
+
+**脚本 ✓**：`/tmp/kopt17_L5fingerprint.py`（按本规格实现；用法 `kopt17_L5fingerprint.py <S> <F2N>`；零 CPU 就绪 ✓）
 
 ## §6 红线（硬 ✓）
 
