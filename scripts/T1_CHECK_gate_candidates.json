@@ -1,0 +1,28 @@
+[
+  {
+    "id": "T-1-zL(5,5)",
+    "object_type": "limited_augmented_zarankiewicz",
+    "params": {"m": 5, "n": 5, "lower_bound": 15},
+    "fingerprint": "limited augmented Zarankiewicz number z_L(5,5)：在 C4-free 5x5 二分图上加容许 2-edges (i,j;k,l)，禁 generalized C4-cycles；求 z_L(5,5) 精确值（现下界 15，作者自述 exhaustive search 超出其范围）。成果形态＝精确整数或完备不可达证书。来源 MDPI Symmetry 18(7):1076 (2026-06-24)；预印本 arXiv:2604.04111。",
+    "e4": {
+      "e4_0": {"verdict": "PASS", "evidence": "语义闸：z_L(m,n) 定义逐字锁定（Symmetry 18(7):1076 §1/§2：G=(S,T,E1∪E2)，E2=2-edges 四元组；非退化/行退化/列退化三类；禁 generalized C4-cycle）。对象与既有资产不同形（非 RH 变体、非已有资产换壳）。"},
+      "e4_1": {"verdict": "OPEN", "evidence": "精确实例检索：z_L(5,5) 精确值未见于文献。arXiv:2604.04111 逐字：'The exact value of z_L(5,5) remains open; here a lower bound of 15 was established'。最新 arXiv:2609.07227(2026-09-07) 未触及 5x5。"},
+      "e4_2": {"verdict": "OPEN", "evidence": "家族定理检索：已有 K_{4t}／K_{5t} 入射图族给渐近下界（相对间隙 1/4→2/5）与前作孤立小参数结果，但均不决定 5x5 精确值；亦无覆盖该格的定理。"},
+      "e4_3": {"verdict": "OPEN", "evidence": "必要条件闭包：已知一般上界（KST 型 K_{2,2}-free 上界及其增广版）不足以致 15 与上界重合；无必要条件定理封闭该格。"},
+      "e4_4": {"verdict": "OPEN", "evidence": "现状核验（含 owner 与工业化）：值未达成 ✓；但同一作者组（Qi–Cui–Xu）2026 年持续产出（06-24 Symmetry 论文；其在同文已对 5x3/5x4 做完整 extremal 枚举并置于附录），且 arXiv:2609.07227 属同对象同族；独立第二组 arXiv:2605.09926 已给三边框架 z_{3L}(5,5)>=16。=> 该格无主记录 'owner=是'（见 Zarankiewicz-A3-source-check.md 记录型入口 #4，判定 D，预登记'不在 Zarankiewicz 内部改参数救场'）。"}
+    }
+  },
+  {
+    "id": "CTRL-P7-2-forbidden-configuration-boundary",
+    "object_type": "forbidden_configuration_boundary",
+    "params": {},
+    "fingerprint": "forbidden configuration 的边界分类：固定 k 时边界已被完全判定（下一步由 Anstee-Sali 支配）——本对照用于验证指纹闸是否工作。",
+    "e4": {
+      "e4_0": {"verdict": "PASS", "evidence": "语义闸：对象为 forbidden configuration 边界（对照用）。"},
+      "e4_1": {"verdict": "OPEN", "evidence": "对照用：故意填 OPEN 以隔离指纹闸效果。"},
+      "e4_2": {"verdict": "OPEN", "evidence": "对照用。"},
+      "e4_3": {"verdict": "OPEN", "evidence": "对照用。"},
+      "e4_4": {"verdict": "OPEN", "evidence": "对照用。"}
+    }
+  }
+]

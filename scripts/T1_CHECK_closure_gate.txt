@@ -1,0 +1,5 @@
+[ADMIT  ] T-1-zL(5,5)
+[BLOCKED] CTRL-P7-2-forbidden-configuration-boundary
+           · 指纹命中: EJC-DS20v2-Thm-1.13-1.14 —— KNOWN — 边界已被完全判定（下一层由 Anstee–Sali 猜想支配）
+
+合计: BLOCKED=1  ADMIT=1  HOLD=0

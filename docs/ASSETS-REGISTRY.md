@@ -1442,3 +1442,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**本线完成的工作**】$9{,}381{,}251$ 个局部交换 → 逐层压缩 → 少数可复用几何不变量 ＋ **纯几何机制的能力边界**（精确）✓ ⟹ **B ＝ machine certificate ＋ transferable mechanism ＝ 正确收口**（**非失败转场** ✓）
 - **不再行动** ✗：不扩枚举／不重扫 873,472／不优化 L3-α 证书／不重启 distance-type classification ✓
 - 档：`docs/BFREEZE-2026-09-27-transferable-assets-T1-T5-and-stop-rationale.md`
+
+**🆕 C-384（2026-09-27 · T-1 `z_L(5,5)` 归位 ＝ DROP；含门运行与门缺口）** ✓
+- 【**门运行**】`scripts/closure_gate.py` ＋ `scripts/T1_CHECK_gate_candidates.json` ⟹ **T-1 ＝ ADMIT**（E4 五金齐 OPEN/PASS；无机器判定理、无指纹命中）；**阳性对照**（forbidden configuration 边界）＝ **BLOCKED** ⟹ **门本身工作正常** ✓（输出 `scripts/T1_CHECK_closure_gate.txt`）
+- 【**仍 DROP · 三条独立依据**】① `Zarankiewicz-A3-source-check.md`（**09-24 22:33**，晚于 T-1"首攻"标记 13:39/13:52）已登记**记录型入口 #4**：`owner＝是`、`路线＝构造＋上界论证`、`判定 D` ＋ 预登记「**不在 Zarankiewicz 内部改参数救场**」✓；② `AMEND-21` 明文「**未覆盖 ≠ 未知**」禁令 ✓；③ **同形赛跑**（作者同文已对 5×3／5×4 做完整 extremal 枚举并置附录 ⟹ 5×5 为其下一步）＋ 独立第二组 `arXiv:2605.09926` 已给 $z_{3L}(5,5)\ge16$ ＋ `A3` 的 **E5 工业化**校准 ✓
+- 【**三点 source 核验（已跑完 · zero-compute）**】① 定义**逐字锁定** ✓✓（`Symmetry 18(7):1076` §1/§2：1-edges／2-edges 四元组 $(i,j;k,l)$／非退化·行退化·列退化／禁 generalized $C_4$）；② **仍 open** ✓✓（`arXiv:2604.04111` 逐字：*"The exact value of $z_L(5,5)$ remains open; here a lower bound of 15 was established"*）＋**解库存疑点**：14＝前作下界、**15＝现下界** ✓；③ extremal $C_4$-free 5×5 **未被收割，但在跑** ⚠️
+- 【**⚠️ 门缺口（只登记，不擅改门）**】**G-1** 无 owner／工业化（**E5**）前置问；**G-2** 未实现「未覆盖≠未知」禁令（"无人做"可伪装成 E4 的 OPEN）；**G-3** E4 五闸 evidence 可同源重复填 ⟹ 门会**放行项目已判除的条目** ⚠️（建议须唐先生批）
+- 【**交棒**】**T-5 三点**：① 目标阶**图数**核实（库存"约 $10^4$"为估计）② 已知**完备阶数阈值** ③ **公开证书状态**（结果已解决 vs 仅有算法／部分族）；**不得预设 $n=8$ 首攻** ✓
+- 档：`docs/T1-CHECK-2026-09-27-zL-5-5-three-point-source-verification-DROP-to-T5.md`、`docs/GATE-RUN-2026-09-27-T1-closure-gate-admits-but-preregistration-drops.md`｜脚本：`scripts/T1_CHECK_gate_candidates.json`、`scripts/T1_CHECK_closure_gate.txt`
