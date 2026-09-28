@@ -3311,3 +3311,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**唯一缺口**】**BÖW 2004 之 general $R{=}1$ theorem 正文**；取到后唯一代入 $(b,t){=}(10,0),R{=}1$，应得 $107$；再问 $F(10)\stackrel{?}{\ge}108$
 - 【**本轮取法结果**】Östergård 主页（`users.aalto.fi/~pat/`）为**纯书目**（无 PDF 链接）✗；搜索引擎仍全灭（432／402）✗ ⟹ 退回 `AUDIT-x` §3 四条（①装 pypdf 重抽 `/tmp/keri.pdf`（表含 $\mathbf b/\mathbf c/\mathbf d$ 图例）②《Covering Codes》(1997) ③引文反查 Haas 2002／Plagne 2009）
 - 档：`docs/AUDIT-2026-09-28y-van-Lint-van-Wee-theorem-obtained-and-the-marker-legend.md`
+
+**🗝️ AUDIT-2026-09-28z（非 C 号）：$K(10,1)$ 下界演进之**逐步出处锁定**（Kéri 档 ＋ pypdf）** ✓
+- 【**★ 工具突破**】`pip install pypdf` 成功抽出 Kéri 档：**191 页／423,136 字符**；已存 `sources/Keri-covering-code-history.pdf` 及 `...-Hungarian-EXTRACT.txt`
+- 【**★ Kéri 档逐字（匈牙利文）**】"**107 ≤ K(10, 1) ≤ 120**. Prompt felső korlát 128. A felső korlát javítása 120-ra [58, 64]. Prompt alsó korlát: **94**. Az alsó korlát javítása **96-ra [18], 97-re [46], 103-ra [52], 105-re [67], 107-re [130]**."；另"Totókód 120 kódszóval: Fagioli C. (1975)"
+- 【**★★ 逐步出处（全部锁定）**】$94$ 平凡；$\mathbf{96}$＝**Stanton \& Kalbfleisch (1968)**, Aequ. Math. 1, 94–103；$\mathbf{97}$＝**Cohen–Lobstein–Sloane (1986)**, IEEE TIT 32, 680–694；$\mathbf{103}$＝**van Wee (1988)**, IEEE TIT 34, 237–245（**本会话已取原式并复核 $2^{10}/10{=}102.4\Rightarrow103$ ✓ 完全一致**）；$\mathbf{105}$＝★★**Zhang (1991), "Linear inequalities for covering codes: Part I — Pair covering inequalities", IEEE TIT 37, 573–582**；$\mathbf{107}$＝**BÖW (2004)**, J. Combin. Des. 12, 157–176
+- 【**上界**】$128$（平凡）$\to120$：$[58]$ Wille (1990) 模拟退火、$[64]$ **Östergård (1991)**, IEEE TIT 37, 179–180
+- 【**★ 机制定位**】$105$ 之来源 ＝ Zhang 1991 ＝ **pair covering inequalities（线性不等式族）**；Habsieger 1997 摘要逐字谓其改进"the lower bounds for $K(n,1)$ given by **Zhang (1991, 1992)**" ⟹ **Zhang 系＝线性不等式族之祖**（本线档案 `SPHERELP`·`HQ1`·`M2B` 涉同族 ⚠️）
+- 【**缺口与下一步（更新优先级）**】仍缺：① **Zhang 1991 pair covering inequality 原式（$\to105$）**；② **BÖW general $R{=}1$（$\to107$）**（同族；前者更可能免费）
+- 档：`docs/AUDIT-2026-09-28z-K10-1-lower-bound-provenance-chain-locked.md`
