@@ -3185,3 +3185,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 但完整补集结构＝完全不变量 ⟹ 无归约**】$\mathbb F_2^{10}\setminus C$ 确定 $C$ ⟹ 补集同构型 ⟺ $C$ 同构型（极大不变量）⟹ **必不被距离/三点数据决定**，但**等价于 $C$ 本身** ⟹ 同 `AUDIT-g` 之"完整 state＝$C$"陷阱 ⚠️
 - 【**唯一有意义形式**】须寻**中间层**边界不变量（细于一阶、粗于完整补集）；判据＝∃同距离/三点数据而边界不变量不同者；候选（未做）＝补图之**环空间/连通分支/边界算子核（同调量）**
 - 档：`docs/AUDIT-2026-09-28k-Phi2-downgraded-and-the-boundary-representation-gate.md`
+
+**☠️ AUDIT-2026-09-28l（非 C 号）：Test-$B1$ —— 补图恒连通 ⟹ components 无信息 ⟹ 边界层降级** ✓
+- 【**★★ 实测（18 个极小覆盖码，$K{=}143..192$）**】**补图 $G{=}Q_{10}[V\setminus C]$ 全部连通（分支数 ${\equiv}1$）**；最大分支 $832$–$881$；按 $(K,N_1,N_2)$ 及按 a-profile 分桶：18 桶，**多分支结构桶 $=0$**
+- 【**原因**】相关 $K$ 范围内 $|V\setminus C|\approx880$（巨大）、每点度数 $10{-}a_x\approx8$–$10$（稠密）⟹ 极可能被 covering-radius-1 **强制连通**（18/18 支持；**未证** ⚠️）；对照 $K\to1024$ 时可断，但不在射程
+- 【**判定**】Gate $B1$-B 触发 ⟹ **components 候选 KILL**；按唐先生"若不成立，边界层整体降级" ⟹ **边界层降级** ✗
+- 【**★ 系统性剥除总表（6 类）**】①一阶 ownership→sphere ledger ②coset size→linear counting ③subspace LP→93.0909 ④integer coset class→同层重编码 ⑤$\Phi_2$→三点距离层 ⑥补图 components→恒连通退化；**且 ⑤⑥ 皆早期廉价杀**
+- 档：`docs/AUDIT-2026-09-28l-TestB1-complement-is-connected-so-components-carry-no-info.md`
