@@ -1960,3 +1960,15 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**状态 ✓**】**$R=0$ 未被排除** ✓（§3 明示其在所有 $s$ 存活 ✓）；新定理为"$B_4\to$ layer-5"接口的**正确形式** ✓ 且**一般成立**（非 $R=0$ 专属 ✓）；级联为下一步 ⚠️（**登记未做，唐先生裁定 ✗**）
 - 【**依赖 ✓**】§0(3) 依赖 $(\alpha)$（即 $A(c)=0$ ✓）—— 引用须与 C-410 同引 ✓；**零程序计算**（仅一处整数核对 ✓）；**不作路线裁定** ✗（照 23:54 令 ✓）
 - 档：`docs/WITCOV-2026-09-28-r0-two-corrections-and-forced-high-layer-covering-theorem.md`
+
+**🌊 C-434（2026-09-28 10:2x · **WITCASC：无条件级联引理 ＋ $k{=}10$ 终止二择 ＋ 为何仍无矛盾**）** ✓
+- 【**★★(1) 一般级联引理（新 ✓✓，\textbf{无条件}、不需 $(\alpha)$、不需 $R{=}0$）**】$W\subseteq[10]$、$4\le|W|=k\le9$：$$c\oplus e_W\notin C\ \wedge\ \forall i\in W:\ c\oplus e_{W\setminus i}\notin C\ \Longrightarrow\ \exists\,j\notin W:\ c\oplus e_{W\cup j}\in C$$ ✓✓ **证明 4 行**：点 $p=c\oplus e_W$ 须被覆盖；其 1-邻点恰两类（$j\in W$：$c\oplus e_{W\setminus j}$ —— 被假设排除 ✗；$j\notin W$：$c\oplus e_{W\cup j}$ ✓）＋ $p$ 自身（亦被排除 ✗）⟹ **唯一出路** ✓（权 $\le10$ ⟹ 须 $k\le9$ ✓）
+- 【**★★(2) 终止二择（新 ✓✓，对\ \textbf{每个} $c\in C$）**】$k=10$ 无 $j\notin W$ ⟹ 若 $c\oplus e_{[10]}\notin C$ 且 $\forall i:\ c\oplus e_{[10]\setminus i}\notin C$ 则该点**未被覆盖** ✗ ⟹ $$\boxed{\text{或 }c\oplus e_{[10]}\in C\ \text{（weight-10）};\ \text{或}\ \exists i:\ c\oplus e_{[10]\setminus i}\in C\ \text{（weight-9）}}$$ ✓✓（对任一 119-cover 的任一码字成立 ✓）
+- 【**★★(3) 与 witness 系统统一（新 ✓✓）**】$k=3$ 的同类式（"下邻"＝weight-2 点）由 $A(c)=0$ **自动排除** ⟹ 得**强制 weight-4 witness** ✓✓ ＝ **见证系统**（C-419／C-430／C-433 ✓）⟹ **见证系统 ＝ 级联的 $k{=}3$ 层** ✓✓；级联 ＝ 其 $k\ge4$ 自然延拓 ✓（"迫使高层"是同一机制的连续谱 ✓）
+- 【**★(4) $(\alpha)$ 假设已核（引用纪律 ✓）**】原文（P1-MICRO 行 17-18）：$(\alpha)$ 依赖 **全局 tetra-avoidance**（$N_{\rm tetra}=0$，即 P1-AVOID 案前提 ✓）**而非仅 $A(c)=0$** ✗✓；**级联引理本身不需 $(\alpha)$** ✓（与 WITCOV §0(3) 恰相反 —— 那条**需要** ✓）
+- 【**★(5) $s=10$ 强制塔定量（新 ✓）**】$R=0\Rightarrow b_3=0,b_4=30\Rightarrow$ 缺失 4-子集 $=180$ ⟹ $\boxed{c_5+c_4\ge36}$ ✓；"全 4-子集缺失"的 5-子集 $=252-30\cdot6=72$（**两 $B_4$ 块交 $\le2$ ⟹ 不可共处 5-集 ✓**）⟹ $\boxed{c_6\ge12}$ ✓；合计 $\ge48\ll118$ ✓
+- 【**★(6) 层-5 覆盖者共享规则 ✓**】两个缺失 $u,u'$ 可共享覆盖者 $\iff|u\cap u'|=3\ \wedge\ c\oplus e_{u\cup u'}\in C$ ✓（Johnson 式 ✓）
+- 【**⚠️(7) 为何仍无矛盾（三条精确原因 ✓）**】① **禁层只有 weight 2／3** ✓（$(\alpha)$ 与 $A(c)=0$ 只排 $\le3$ ✓；weight $\ge4$ 内部码字**完全无约束** ✗，与 P1-D4b 的 $C_0$ 显式反例一致 ✓）；② **容量充裕** ✓（层-5 需 $\ge36$ vs 可用 $252$ ✓；层-6 需 $\ge12$ vs $210$ ✓，每层差一个数量级 ✓）；③ **顶端仅给二择、不给否证** ✗✓（唯一无出口处是 $k=10$ ✓）⟹ **级联 ＝ forced tower ✓；\textbf{不能}判死 $R{=}0$** ✗✓（照唐先生判据 ✓）
+- 【**★(8) 要产生矛盾需要什么（登记 ✗）**】① 层 $\ge4$ 的**禁配置**（$k\ge4$ 的 $(\alpha)$-类比 —— 目前**不存在** ✗）；② 或**容量冲突**（各层差一个数量级 ⟹ 需真正的全局计数 ✗）
+- 【**边界 ✓**】零程序计算 ✓；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗（照 23:54 令 ✓）；$(\alpha)$ 依赖已精确标注 ✓（防误引 ✓）；不声称 $R=0$ 已排除 ✗；不声称 P1 成立 ✗（V290）
+- 档：`docs/WITCASC-2026-09-28-cascade-lemma-termination-dichotomy-and-why-no-contradiction.md`
