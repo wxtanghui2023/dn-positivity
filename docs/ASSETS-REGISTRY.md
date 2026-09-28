@@ -2115,3 +2115,15 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 下一靶（登记）**】① $\mathbf{33\ \text{完整球 packing}}＋\le t$ 污染点共存（唐先生 §13–§14 ✓）；② $t{=}12$ 之干净命题（去 $H$）：$|A|=45$、外部每点恰一 $A$-邻、$A$-外部入射 $=12$ ⟹ $|A|\le40$？✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 $t{=}12$ 已关闭 ✗（V290）
 - 档：`docs/WITSAT2-2026-09-28-saturation-only-at-t12-and-the-33-zero-U-degree-bound.md`
+
+**🧩 C-447（2026-09-28 13:2x · **WITA0：两处假前提 ＋ $d(A_0)\ge3$ 结构（新 ✓✓）＋ wedge 闭包（新 ✓✓）**）** ✓
+- 【**✗✗假前提一（$t{=}12$）**】"$A$ 是最小距离 $\ge3$ 的码 $\Rightarrow$ 球两两不交 $\Rightarrow|\bigcup_aB_1(a)|=450$" **不成立** ✗✗（$|A|=45>40=A(9,3)$ ⟹ $A$ 必有距离 $\le2$ 的对 ✓，正是 $e,D_2>0$ 之本意 ✓）⟹ "所有不等式取等" ✗ 与"精确分割 $393+45+12+62$" ✗ 均不成立；**正确**：$d\in\{1,2\}\Rightarrow|B_1(a)\cap B_1(a')|=\mathbf2$ ⟹ $|\bigcup_aB_1(a)|=450-2(A_1{+}A_2)+\text{三重修正}$ ✓；$|N(A)\cap U|\le12$ ✓（非 $=12$ ✗）、$|U\setminus(A\cup P)|\ge62$ ✓（非 $=62$ ✗）
+- 【**✗✗假前提二（$|H|{=}1$）**】"$h,u,v\in C_0$ 且 $C_0$ 最小距离 $3$" **不成立** ✗✗（$A=C_0\setminus\{h\}$、$|A|=44>40$ ⟹ $C_0$ 含距离 $\le2$ 的对 ✗）⟹ 定位到 $S_2(h)$ **不成立** ✗（$d(h,u)\in\{1,2\}$ 皆可能 ✓）；**但** "$z\in N(h)$ 为中点 $\Rightarrow d(h,u),d(h,v)\le2$" ✓✓ 正确 ✓
+- 【**✓✓(1) 修正后的锋利版（新）**】$A_0:=\{a\in A:d_U(a)=0\}$ ⟹ $$\boxed{d(A_0)\ge3}$$ ✓✓（**对全部 $t$ 成立**）：$d\le1\Rightarrow a'\in N(a)\subseteq U^c$ 而 $a'\in A\subseteq U$ 矛盾 ✗；$d{=}2\Rightarrow$ 共同邻点 $\in N(a)\subseteq U^c$ 且 $r_A\ge2\Rightarrow\notin X_L=U^c$ 矛盾 ✗ ⟹ **三推论**：① $A_0$ 球两两不交 ✓；② $|N[A_0]|=10|A_0|$ ✓；③ $\boxed{d(A_0,A_1)\ge3}$ ✓ ⟹ $|A_0|\in[33,40]$ ✓✓、$|A_1|\in[5,12]$ ✓、$\sum_{a\in A_1}d_U(a)=12$ ✓✓（全部 $U$-入射由 $A_1$ 承担 ✓）
+- 【**✓✓(2) wedge 闭包（新，$|H|{=}1$）**】$\{i,j\},\{i,k\}\in E_h$（即 $e_i{\oplus}e_j,e_i{\oplus}e_k\in A\cap S_2(h)$）⟹ 中点 $=\{e_i,e_j{\oplus}e_k\}$ ✓；$e_i$ weight-1 $\in N(h)$ ✓、$e_j{\oplus}e_k$ 距 $h$ 为 2 $\Rightarrow\notin N(h)$ ✓、$r_A\ge2\Rightarrow\notin X_L$ ✓ ⟹ $$\boxed{e_j{\oplus}e_k\in U\setminus N(h),\ r_A\ge2}$$ ✓✓ ⟹ 每楔耗 $\ge2$ 预算 ⟹ $$\boxed{\#\{\text{被迫中点}\}\le\lfloor t/2\rfloor}$$ ✓✓（$t{=}11\Rightarrow\le5$ ✓）
+- 【**✓(3) 其他正确项**】两点距离 2 $\iff$ $K_9$ 两边相邻 ✓✓；$|H|{=}1$ 载体与中点类型排除（引理 C-445 ＋ $T_A{=}0$）✓✓；$t{=}12$ 的 $A\leftrightarrow P\leftrightarrow W$ 与 $N(A)\cap W=\varnothing$ ✓✓
+- 【**⚠️(4) 推测（非结果）**】唐先生提议之 "$D_2>0\Rightarrow2e(A)+\mathrm{leak}\ge12$" **未被推出** ✗（wedge 仅给 $\ge2$ ✓）⟹ 登记为**猜想** ✓
+- 【**⚠️(5) 无杀**】全部 $t$ 仍可行 ✓；两处假前提之否证不带来新界 ✗（但 (1)(2) 为新结构资产 ✓✓）
+- 【**★(6) 下一靶**】① $t{=}12$：$A_0$（33–40 点、球不交、$d(A_0,A_1)\ge3$）＋ $A_1$（$\le12$）＋ $P$（$\le12$）共存 ✓✓；② $|H|{=}1$：用 wedge 闭包 $\#\le5$ 与 $D_2\ge t-7-e$ 对撞 ✓；③ 猜想之证否／证成 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称猜想成立 ✗（V290）
+- 档：`docs/WITA0-2026-09-28-two-false-premises-and-the-clean-centre-structure.md`
