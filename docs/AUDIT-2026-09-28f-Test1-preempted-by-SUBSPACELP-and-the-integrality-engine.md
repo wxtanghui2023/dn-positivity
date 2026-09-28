@@ -72,12 +72,12 @@ $$\text{判据（同 Gate C）：若归并后约束仍可化回线性 ⟹ KILL; 
 
 ```
 $ bash scripts/tech_word_check.sh "等号定理" "零增益" "整性引擎"
-技术词 等号定理   命中文件数=1    :: ./SUBSPACELP-2026-09-28-level-m-lp-relaxation-equals-volume-bound.md
-技术词 零增益    命中文件数=1    :: ./SUBSPACELP-2026-09-28-level-m-lp-relaxation-equals-volume-bound.md
-技术词 整性引擎   命中文件数=0    ::
+技术词 等号定理   命中文件数=5    :: ./ASSETS-REGISTRY.md ./E-GATE-and-Lemma-R-R2-CLOSED.md ./LEMMA-R-P1-CLOSED-prior-art-and-three-gate-correction.md ./SUBSPACELP-2026-09-28-level-m-lp-relaxation-equals-volume-bound.md ./AUDIT-2026-09-28f-...
+技术词 零增益    命中文件数=13   :: ./NEGATIVE-RESULTS-2026-09-12-ROUND.md ./C320-...-CLOSED-M5-question-OPEN.md ./SUBSPACELP-2026-09-28-... ./AUDIT-2026-09-28f-...
+技术词 整性引擎   命中文件数=1    :: ./SUBSPACELP-2026-09-28-level-m-lp-relaxation-equals-volume-bound.md
 ```
 
-**口径**：`等号定理`／`零增益` 之命中即**本档所接续之档**（`SUBSPACELP`）⟹ 标「**档案已有（本线，引用，不列为提出）**」✓；`整性引擎` 为本档新造 ✓
+**口径（空间隔离 ✓）**：`等号定理`／`零增益` 之多数命中属**空间 A（RH 线）**（`E-GATE-…`／`LEMMA-R-…`／`NEGATIVE-RESULTS-…`／`C320-…`）⟹ 标「**空间 A 同名，不计**」✗；本线之作＝`SUBSPACELP` ＋ 本档 ✓。原口径如下：`等号定理`／`零增益` 之命中即**本档所接续之档**（`SUBSPACELP`）⟹ 标「**档案已有（本线，引用，不列为提出）**」✓；`整性引擎` 为本档新造 ✓
 
 ## §7 边界（硬 ✓）
 
