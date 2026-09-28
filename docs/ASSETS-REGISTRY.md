@@ -2360,3 +2360,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 正式靶题（照唐先生）**】$$\boxed{\text{Type II covering bridge}:\ (F,G,D)\Longrightarrow\text{共同邻点容量上界}\Longrightarrow c+d\le10\ ?}$$ 第一步：把 $r$ 下界按层分裂、与 $q_{ab}$ 层上界（含 69 零对）冲突；第二步：$q_{ab}$ 精确层矩阵（14×14 可穷举）；第三步：Type III
 - 【**边界 ✓**】零程序计算 ✓（符号/整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（三词均 0 ✓）；**不作路线裁定** ✗（V290）
 - 档：`docs/WITMAP-2026-09-28-proof-state-map-and-the-bridge-quantitative-core.md`
+
+**🔤 C-471（2026-09-28 13:1x · **WITUOBJ：$U$ 对象声明（$|U|\le119$ 为构造性恒等式）；①②确认；桥之干净形式 $X_L\to q$**）** ✓
+- 【**✓✓(1) 唐先生 §① 正确（$X_L$ 版本）**】$H{:=}C_0\cap C_1$、$X_L{:=}U^c\setminus N(H)$ ⟹ 仅对 $x\in X_L$ 可排除 $d(u,v){=}0$ ⟹ $$x\in X_L\Rightarrow\exists u\in C_0,v\in C_1:\ d(u,v){=}2$$ ✓✓（＝C-438 ✓；**C-469 之层距离-2 表真正约束的是 $X_L$** ✓）
+- 【**✓✓(2) 唐先生 §② 正确（全空间恒等式）**】$$\sum_{x\in\mathbb F_2^9}r_0(x)r_1(x)=9|H|+2q$$ ✓✓（$r_b{:=}|C_b\cap N(x)|$，$q{:=}\#\{(u,v)\in C_0{\times}C_1:d{=}2\}$；证明：展开 $=\sum_{(u,v)}|N(u)\cap N(v)|$，对角 $u{=}v{=}h\in H$ 给 $|N(h)|{=}9$，非对角非零 iff $d{=}2$ 且给 2 ✓✓）⟹ 限制到 $X_L$ 时 heavy 项消失（$X_L\cap N(H){=}\varnothing$）⟹ $$|X_L|\le\sum_{X_L}r_0r_1\le2q$$ ✓✓
+- 【**✗✗(3) 唐先生 §③ 须定向更正：$|U|\le119$ 是构造性恒等式，非待证输入**】档案定义（C-435/C-436 ✓）：$U{:=}P_0\cup P_1$（两层投影之并）；$|C|{=}|C_0|{+}|C_1|{=}|P_0|{+}|P_1|{=}119$ **恒等式** ✓ ⟹ $H{=}P_0\cap P_1\Rightarrow|U|{=}119-|H|\le119$ ✓✓ **平凡成立**；且 $U$ 是 9-cover（$\mathbb F_2^9{=}N[U]$ ✓）⟹ $|U|\ge K(9,1){=}62$ ✓✓ ⟹ $$\boxed{62\le|U|\le119}$$ 两端**皆已成立** ⟹ **撤回 $|U^c|\ge393$ 与 $q$ 下界属误撤** ✗✗
+- 【**✓✓(4) §③ 之根因：$U$ 之对象两义**】唐先生之 $U{=}\bigcup_{a\in A_0}N(a)$（**球并**，$|{\cdot}|\le10|A_0|\le400$ ✗）与档案之 $U{=}P_0\cup P_1$（**层并**，$62\le|U|\le119$ ✓）**不同** ⟹ **纪律（第 6 次同类混淆 ✓）**：凡用 $U/H/X_L/C_0/C_1/N/A_0$ 须**先声明对象** ✓✓
+- 【**✓(5) 桥之干净形式（照唐先生）**】$$\text{Type II}\to U\to H\to X_L{=}U^c\setminus N(H)\to q\to\text{层容量}$$ (A) $62\le|U|\le119$ ✓；(B) $|X_L|\ge|U^c|-9|H|{=}8s-559$ ✓；(C) $$\boxed{q\ge\lceil(8s-559)/2\rceil}$$ ✓（仅 $s\ge70$ 生效）；(D) 层允许矩阵（69 零格删 ✓ C-469）；(E) $Q_{\max}$ **未求** ⚠️；(F) 预算 $11\le c{+}d\le18$、$d\le16$ ✓。数值：$s{=}70{\to}1$、$80{\to}41$、$100{\to}121$、$119{\to}\mathbf{197}$ ✓（**197 即 $s{=}119$ 特例** ✓）
+- 【**★(6) 下一轮唯一靶点（照唐先生）**】$$\boxed{\text{Type II}\to(|U|,|H|,|X_L|)\to q_{\min}\ \text{vs}\ q_{\max}^{\text{layer}}}$$ 先问 Type II 全体合法状态之 $Q_{\max}{=}\max q$ 与 $L_{\rm cov}{=}\min|X_L|$；若 $L_{\rm cov}{>}2Q_{\max}$ ⟹ Type II 死 ✓；否则须进精细分配（共同邻落 $U$ vs $X_L$）⟹ **不依赖 197 ✓**
+- 【**边界 ✓**】零程序计算 ✓（符号/整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（三词均 0 ✓）；**不作路线裁定** ✗（V290）
+- 档：`docs/WITUOBJ-2026-09-28-U-object-declaration-and-the-clean-bridge-XL-to-q.md`
