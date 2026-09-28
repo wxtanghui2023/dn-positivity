@@ -1,0 +1,3293 @@
+The Covering Excess Method
+in the Theory
+of Covering Codes
+Wolfgang Haas
+Dissertation zur Erlangung des Doktorgrades der Fakult¨ at
+f¨ ur Mathematik und Physik
+der Albert-Ludwigs-Universit¨ at Freiburg im Breisgau
+Oktober 2008
+Dekan: Prof. Dr. Ludger R¨ uschendorf (Freiburg)
+1. Referent: Prof. Dr. Jan-Christoph Schlage-Puchta (Gent)
+2. Referent: Prof. Dr. Laurent Habsieger (Lyon)
+Betzreuung: Prof. Dr. Dieter Wolke (Freiburg)
+Datum der Promotion: 26. 1. 2009
+F¨ ur Lara
+
+Acknowledgements
+First of all I wish like to thank Dieter Wolke (Freiburg) for his friendly
+support over many, many years. Without his permanent encouragement this
+thesis would not have been possible. I thank Laurent Habsieger (Lyon),
+whose ﬁne papers on the subject are an important source of inspiration to
+me. Moreover I wish like to thank J¨ orn Quistorﬀ † (Berlin), who brought
+me nearer to the world of mathematics. Finally I thank Michael Botzet
+(Hamburg), who brought me to coding theory.
+
+Contents
+1 Introduction 3
+1.1 A sphere-covering problem . . . . . . . . . . . . . . . . . . . . 3
+1.2 Overview of the thesis . . . . . . . . . . . . . . . . . . . . . . 4
+2 Preliminaries 5
+2.1 Codes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.2 The covering excess . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.3 A bound for K(n, 1) with even n . . . . . . . . . . . . . . . . 9
+3 Bounds for K(n, 1) with odd n 13
+3.1 The case n ≡ 5 (mod 6) . . . . . . . . . . . . . . . . . . . . . 13
+3.1.1 The bound of van Wee . . . . . . . . . . . . . . . . . . 13
+3.1.2 The Theorem of Blass and Litsyn . . . . . . . . . . . . 15
+3.1.3 The new bound . . . . . . . . . . . . . . . . . . . . . . 22
+3.2 The case n ≡ 1, 3 (mod 6) . . . . . . . . . . . . . . . . . . . . 25
+3.2.1 Steiner systems . . . . . . . . . . . . . . . . . . . . . . 25
+3.2.2 Perfect coverings of spheres . . . . . . . . . . . . . . . 26
+3.3 The general excess bound . . . . . . . . . . . . . . . . . . . . 27
+3.4 Habsiegers improvement and the excess matrix . . . . . . . . . 30
+3.5 Congruence properties for the covering excess function . . . . 35
+3.5.1 Some lemmas . . . . . . . . . . . . . . . . . . . . . . . 35
+3.5.2 Proof of Theorem 32 . . . . . . . . . . . . . . . . . . . 40
+3.5.3 Proof of Theorem 26 . . . . . . . . . . . . . . . . . . . 41
+3.5.4 The main property of the excess matrix . . . . . . . . . 43
+3.6 Congruence set systems and their resolvability . . . . . . . . . 43
+3.6.1 Simple properties of congruence set systems . . . . . . 44
+3.6.2 The classiﬁcation of congruence set systems on small
+sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+1
+3.6.3 Open questions . . . . . . . . . . . . . . . . . . . . . . 53
+3.6.4 Proof of Theorem 33 . . . . . . . . . . . . . . . . . . . 53
+3.7 The general excess bound improved . . . . . . . . . . . . . . . 54
+4 Bounds for K(n, R) 57
+4.1 The bounds of van Wee and Honkala . . . . . . . . . . . . . . 57
+4.2 An improvement of Honkala’s bound . . . . . . . . . . . . . . 60
+4.3 The case ϵ = R . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+A Further results 71
+A.1 Notes to Chapter 2 and 3 . . . . . . . . . . . . . . . . . . . . 71
+A.2 Notes to Chapter 4 . . . . . . . . . . . . . . . . . . . . . . . . 72
+B The new bounds 73
+Bibliography 75
+2
+Chapter 1
+Introduction
+Let K(n, R) denote the minimal cardinality of a binary code of length n and
+covering radius R. This thesis is concerned with lower bounds on K(n, R)
+by the method of covering excess, which was ﬁrst proposed by Johnson [18]
+in 1972 and later rediscovered by van Wee [29] in 1988.
+1.1 A sphere-covering problem
+Let F = {0, 1} denote the ﬁnite ﬁeld with two elements. To measure the
+similarity between two words of length n over F, we introduce their Hamming
+distance, which simply counts the number of places, where the words diﬀer.
+The space Fn of the binary words of length n over F, equipped with the
+Hamming distance, is one of the most important ﬁnite metric spaces.
+Like in every (ﬁnite) metric space there are two fundamental questions,
+the sphere-packing and the sphere-covering problem.
+(i) Determine the maximal number A(n, 2e+1) of non-overlapping spheres
+of given radius e, that can be placed in the Hamming space Fn.
+(ii) Determine the minimal number K(n, R) of spheres of given radius R
+needed to cover the whole space Fn.
+The quantity A(n, d) was widely studied during the last six decades in the
+framework of error-correcting codes. The sphere-covering problem (ii) how-
+ever was not studied equally extensive, but in the last two or three decades,
+it attracted much attention to the mathematicians. In generally the deter-
+mination of K(n, R) is very diﬃcult and we have to be content with lower
+3
+and upper bounds. A trivial lower bound for K(n, R) certainly is the cardi-
+nality of the whole space Fn divided by the cardinality of a Hamming sphere
+with radius R. Many methods are known to improve on this lower bound,
+the so-called sphere-covering bound. One of the most eﬃcient method is the
+covering excess counting method, which is the object of the present thesis.
+It relies on the fact, that for arithmetical reasons under certain conditions
+a sphere-covering is forced to cover words in a small Hamming sphere more
+than once, the so-called covering excess.
+1.2 Overview of the thesis
+In chapter 2 we give the necessary background on codes as well as the no-
+tations and terminology on covering excess, which are used throughout this
+work. As a ﬁrst instance of the covering excess counting method we give
+Johnson’s and van Wee’s bound on K(n, 1) for even n, which makes use of a
+forced covering excess in a sphere of radius one.
+In chapter 3 we study bounds for K(n, 1) when n is odd. We ﬁrst use a
+method of Blass and Litsyn [1] to give the presently best known lower bound
+for K(n, 1) if n ≡ 5 (mod 6). Then we discuss the general excess bound,
+which follows from the fact, that if n ≡ − 1 (mod p) for an odd prime p,
+there exists a covering excess on a sphere with radius p − 1. We give a new
+lower bound for the covering excess, leading to a ”general improvement of
+the general excess bound” for binary codes with covering radius one.
+In chapter 4 we study bounds for K(n, R), which rely on a covering excess
+in spheres with radius one. We describe a classical bound of van Wee for
+this case from 1988 and a slight improvement of this bound by Honkala. We
+present a short proof of a further improvement of Honkala’s bound. Moreover
+we give an improvement of the van Wee bound in case that R + 1 divides n,
+when both bounds coincide and no general further progress of the van Wee
+bound is known up to now.
+4
+Chapter 2
+Preliminaries
+2.1 Codes
+Let F = {0, 1} denote the ﬁnite ﬁeld with two elements. The Hamming
+distance d(x, y) between x = ( x1, . . . , xn) ∈ Fn and y = ( y1, . . . , yn) ∈ Fn is
+deﬁned by
+d(x, y) = |{i ∈ {1, ..., n} | xi ⁄= yi}|.
+One easily checks, that Fn, equipped with the Hamming distance, is a ﬁnite
+metric space, the so-called Hamming space.
+Any nonempty subset C ⊂ Fn is called a code. For x ∈ Fn the distance
+d(x, C) is deﬁned by
+d(x, C) = min
+c∈C
+d(x, c).
+We say that x R-covers y, if d(x, y) ≤ R holds. C R -covers x means
+d(x, C) ≤ R. In both cases we simply say ”cover” instead of ” R-cover”, if R
+is clear from the context.
+If |C| ≥ 2, then d(C) denotes the minimum distance of C:
+d(C) = min
+c1,c2∈C,c1⁄=c2
+d(c1, c2).
+Let B(x, e) denote the Hamming sphere with radius e centered on x ∈ Fn,
+B(x, e) = {y ∈ Fn : d(x, y) ≤ e}.
+One easily sees, that the cardinality of a sphere B(x, e) does not depend on
+5
+x ∈ Fn. So we may set
+V (n, e) = |B(x, e)| =
+∑
+0≤i≤e
+(n
+i
+)
+(2.1)
+for any x ∈ Fn.
+Like in every (ﬁnite) metric space there exists the fundamental sphere-
+packing problem:
+(i) Determine the maximal number of non-overlapping spheres of given
+radius e, that can be placed in the Hamming space Fn.
+One easily sees, that the centers of the spheres in such a packing form a code
+C ⊂ Fn with minimum distance at least 2 e + 1. Thus the number requested
+in (i) is A(n, 2e + 1), where A(n, d) denotes the maximal cardinality of a code
+C ⊂ Fn with minimum distance at least d.
+Assume that a set of messages is encoded by the words of a code C ⊂ Fn
+with minimum distance at least 2 e + 1. If during the transmission of such
+a word there occur at most e errors, then these errors can be corrected by
+the receiver. Thus A(n, d) is the most basic quantity in coding theory, since
+A(n, 2e + 1) is the maximal cardinality of a code correcting up to e errors.
+For a monograph on error-correcting codes see [26]. Updated internet tables
+for A(n, d) are given by Brouwer [2].
+In this thesis however we are concerned with the dual sphere-covering
+problem:
+(ii) Determine the minimal number of spheres of given radius R needed to
+cover the whole space Fn.
+The covering radius R = R(C) of a code C ⊂ Fn denotes the least integer
+R, such that the spheres with radius R centered on the codewords cover
+the whole space. It is clear, that the centers of the spheres of a covering
+described in (ii) form a code with covering radius at most R. Equivalently,
+a code C ⊂ Fn has covering radius (at most) R, if
+∀x ∈ Fn ∃c ∈ C with d(x, c) ≤ R (2.2)
+holds or, simply, if each x ∈ Fn is R-covered by C. K(n, R) denotes the
+minimal cardinality of a code C ⊂ Fn with covering radius (at most) R.
+6
+In the last two or three decades the theory of covering codes attracted
+a great amount of attention. A monograph [4] appeared in 1997. Updated
+internet tables for K(n, R) are given by K´eri [19]. An internet bibliography
+on covering codes is compiled by Lobstein [25].
+Let 0 = (0 , . . . ,0) ∈ Fn denote the all-zero word of length n. Replacing
+the ith coordinate of the all-zero word by one yields the unit vector ei ∈ Fn,
+1 ≤ i ≤ n. By the weight w(x) of a word x ∈ Fn we denote the number of
+its nonzero coordinates. The support of x ∈ Fn = ( x1, . . . , xn), supp(x), is
+deﬁned by
+supp(x) = {1 ≤ i ≤ n | xi ⁄= 0}. (2.3)
+Binary vectors may be identiﬁed with their supports and if x, y ∈ Fn, then
+x ⊂ y, x ∪ y and x ∩ y refer to the supports of x and y.
+We further set
+Fn
+i = {x ∈ Fn | the ith coordinate of x equals 1 }.
+Let C ⊂ Fn be a code with covering radius R and cardinality K(n, R). Then
+by Fn ⊂⋃
+c∈C B(c, R) we get |Fn| ≤∑
+c∈C |B(c, R)| = |C|V (n, R) and thus
+K(n, R) ≥ 2n
+V (n, R). (2.4)
+This is the most basic lower bound on K(n, R), called the sphere-covering
+bound. In generally this bound cannot be improved, since there are codes
+attaining equality in (2.4). These codes are called perfect. One especially
+famous family of perfect codes are the so-called Hamming codes.
+Theorem 1 (Hamming [11]) . If
+n = 2 m − 1,
+then there exists a perfect code C ⊂ Fn with covering radius one. Especially
+K(n, 1) = 2 n−m.
+In the majority of cases however the sphere-covering bound can be im-
+proved. Many diﬀerent methods are known to do this, see [4]. One of the
+most eﬃcient method is the covering excess counting method, which is the
+object of the present thesis. It relies on the fact, that sometimes a covering
+code is forced to cover words in a small Hamming sphere more than once, the
+7
+so-called covering excess. As a simple example it could be possible, that a
+codeword covers always an even number of points in a Hamming sphere, but
+the cardinality of the sphere is odd. Then a covering excess in that sphere is
+unavoidable.
+The ﬁrst who introduced the method of covering excess was Johnson [18]
+in 1972, but his remarkable paper remained unnoticed until the appearance
+of a monograph on covering codes [4] in 1997. The method was rediscovered
+by van Wee [29] in 1988, so it should be quite fair, to attribute the method
+both to Johnson and van Wee. After some prerequisites in section 2.2 we
+recall their most prominent example in section 2.3, a lower bound for K(n, 1)
+for even n.
+2.2 The covering excess
+In this section we give the deﬁnition of covering excess, some notations and
+a few basic equations, which will be used throughout this work.
+Let C ⊂ Fn be a code with covering radius R. For x ∈ Fn we deﬁne the
+covering excess E(x) by
+E(x) = EC(x) = |B(x, R) ∩ C| − 1. (2.5)
+By (2.2) E(x) ≥ 0 for every x ∈ Fn, and E(x) is strictly positive, if x is
+covered by at least two codewords from C. For V ⊂ Fn, i ≥ 0 and x ∈ Fn
+we set
+E(V ) =
+∑
+y∈V
+E(y),
+Ei(x) =
+∑
+y∈Fn,d(x,y)=i
+E(y),
+Z = {z ∈ Fn | E(z) > 0},
+Zi = {z ∈ Fn | E(z) = i}.
+8
+For V ⊂ Fn we have
+E(V ) =
+∑
+x∈V
+(|B(x, R) ∩ C| − 1) (2.6)
+=
+∑
+x∈V
+∑
+c∈B(x,R)∩C
+1 − |V |
+=
+∑
+c∈C
+∑
+x∈B(c,R)∩V
+1 − |V |
+=
+∑
+c∈C
+|B(c, R) ∩ V | − |V |.
+In the special case V = Fn we get
+E(Fn) = |C|V (n, R) − 2n, (2.7)
+which in case of R = 1 by (2.1) further simpliﬁes to
+E(Fn) = |C|(n + 1) − 2n. (2.8)
+2.3 A bound for K(n, 1) with even n
+The case of binary codes with covering radius one is of special interest. Here
+the sphere-covering bound (2.4) reads
+K(n, 1) ≥ 2n
+n + 1 . (2.9)
+We now present the argument of Johnson and van Wee to improve on this
+bound for even n, which is probably the most famous application of the
+covering excess method.
+Theorem 2 (Johnson [18], van Wee [29]) . Let C ⊂ Fn be a binary code with
+covering radius one. If x ∈ Fn, then
+E(B(x, 1)) ≡
+{ 1 ( mod 2) if n is even and x ⁄∈ C,
+0 ( mod 2) if n is odd.
+9
+Proof. Let δ(x) = 1 if x ∈ C, otherwise δ(x) = 0. If c ∈ C, then |B(c, 1) ∩
+B(x, 1)| equals the number of words in the sphere B(x, 1), which were 1-
+covered by c. One easily sees, that
+|B(c, 1) ∩ B(x, 1)| =
+
+
+
+|B(x, 1)| = n + 1 if d(c, x) = 0 ,
+2 if d(c, x) = 1 or 2 ,
+0 if d(c, x) ≥ 3.
+Now (2.6) applied to V = B(x, 1) yields
+E(B(x, 1)) =
+∑
+c∈C
+|B(c, 1) ∩ B(x, 1)| − |B(x, 1)|
+= δ(x)(n + 1) + 2
+∑
+c∈C, 1≤d(c,x)≤2
+1 − (n + 1)
+≡ (δ(x) − 1)(n + 1) (mod 2)
+and Theorem 2 follows.
+Now let n be even and C ⊂ Fn a binary code with covering radius one.
+Since E(B(x, 1)) is always nonnegative, from Theorem 2 follows
+E(B(x, 1)) ≥ 1 if x ⁄∈ C. (2.10)
+Thus there exists a covering excess on every sphere of radius one not centered
+on a codeword. This was used by Johnson and van Wee to derive the following
+improvement of the sphere-covering bound (2.9), the ﬁrst excess bound for
+binary codes with covering radius one (see [4]).
+Theorem 3 (Johnson [18], van Wee [29]) . When n is even we have
+K(n, 1) ≥ 2n
+n .
+Proof. Let C ⊂ Fn be a binary code with covering radius one. Note, that
+z ∈ Z means E(z) ≥ 1 and thus |B(z, 1) ∩ C| ≥ 2, implying
+|B(z, 1) \ C| ≤ | B(z, 1)| − 2 = n − 1 if z ∈ Z. (2.11)
+10
+We now get
+2n − |C| =
+∑
+x∈Fn\C
+1
+≤
+∑
+x∈Fn\C
+E(B(x, 1)) by (2 .10)
+=
+∑
+x∈Fn\C
+∑
+z∈B(x,1)
+E(z)
+=
+∑
+z∈Z
+E(z)
+∑
+x∈B(z,1)\C
+1
+≤ (n − 1)E(Fn) by (2 .11)
+= ( n − 1)(|C|(n + 1) − 2n) by (2 .8)
+implying |C| ≥ 2n/n and Theorem 3 follows.
+In general, Theorem 3 cannot be improved, as we see in the next theorem.
+Theorem 4 (Johnson [18], van Wee [29]) . For m ≥ 1 we have
+K(2m, 1) = 2 2m−m.
+Proof. By Theorem 1 there exists a perfect code C ⊂ F2m−1 of length 2 m − 1,
+covering radius one and cardinality |C| = 2 2m−m−1. One easily sees, that the
+code C ′ ⊂ F2m
+of length 2 m deﬁned by
+C ′ = {(0, x) | x ∈ C} ∪ {(1, x) | x ∈ C}
+has covering radius one and satisﬁes |C ′| = 2 2m−m. Therefore K(2m, 1) ≤
+22m−m. The corresponding lower bound follows from Theorem 3.
+If n is odd, there is no forced covering excess in a sphere of radius one.
+For instance the Hamming sphere B(0, 1) centered on the all zero word 0
+of length n could be perfectly covered (i.e. without covering excess) by the
+words e1, e2 + e3, e4 + e5, . . . ,en−1 + en. What can we do to improve on the
+sphere-covering bound? We have to look for a covering excess in a sphere
+with radius greater than one!
+11
+12
+Chapter 3
+Bounds for K(n, 1) with odd n
+In this chapter we study bounds for K(n, 1), where n is odd. We start with
+the case n ≡ 5 (mod 6), where a covering excess in a sphere of radius two
+can be found. We describe a classical bound of van Wee [29] for this case
+as well as an improvement due to Blass and Litsyn [1]. We further improve
+on this bound, giving the presently best known lower bound for K(n, 1) if
+n ≡ 5 (mod 6).
+Next we discuss the general excess bound for K(n, 1) (due to Habsieger
+[9] and Honkala [16]), which follows from the fact, that if n ≡ − 1 (mod p)
+for an odd prime p, there exists a covering excess ≥ p − 1 on a sphere with
+radius p − 1. Answering a question of Habsieger, we prove that this covering
+excess indeed grows quadratic in p. This yields a ”general improvement of
+the general excess bound” for binary codes with covering radius one. The
+proof uses a classiﬁcation theorem for certain subset systems as well as new
+congruence properties for the excess function, which were conjectured by
+Habsieger.
+3.1 The case n ≡ 5 ( mod 6)
+3.1.1 The bound of van Wee
+Let C ⊂ Fn be a binary code with covering radius one. As we have already
+seen, there is no need for a covering excess in a sphere of radius one in case
+of odd n, so lets hope n ≡ − 1 (mod 3), when the following theorem of van
+Wee applies.
+13
+Theorem 5 (van Wee [29]) . Let C ⊂ Fn be a binary code with covering
+radius one and n ≡ −1 ( mod 3). If x ∈ Fn, then
+E(B(x, 2)) ≡ −1 ( mod 3). (3.1)
+Proof. If c ∈ C, then |B(c, 1) ∩ B(x, 2)| equals the number of words in the
+sphere B(x, 2), which were 1-covered by c. One easily sees, that
+|B(c, 1) ∩ B(x, 2)| =
+
+
+
+|B(c, 1)| = n + 1 if d(c, x) ≤ 1,
+3 if d(c, x) = 2 or 3 ,
+0 if d(c, x) ≥ 4.
+Now (2.6) applied to V = B(x, 2) yields
+E(B(x, 2)) =
+∑
+c∈C
+|B(c, 1) ∩ B(x, 2)| − |B(x, 2)|
+= ( n + 1)
+∑
+c∈C, d (c,x)≤1
+1 + 3
+∑
+c∈C, 2≤d(c,x)≤3
+1 −
+(
+1 + n +
+(n
+2
+))
+≡ −
+(n
+2
+)
+(mod 3)
+≡ − 1 (mod 3)
+by (2.1) and n ≡ −1 (mod 3).
+If n ≡ − 1 (mod 3) with even n, then the better bound in Theorem 3
+applies, so we may restrict us to the case n ≡ 5 (mod 6).
+Theorem 6 (van Wee [29]) . When n ≡ 5 ( mod 6), we have
+K(n, 1) ≥
+(
+1 + 4
+n2 + n + 2
+) 2n
+n + 1 .
+Proof. Let C ⊂ Fn be a binary code with covering radius one and |C| =
+K(n, 1). Since E(B(x, 2)) is always nonnegative for x ∈ Fn, from (3.1)
+follows
+E(B(x, 2)) ≥ 2 for each x ∈ Fn. (3.2)
+14
+We now get
+2 · 2n =
+∑
+x∈Fn
+2
+≤
+∑
+x∈Fn
+E(B(x, 2)) by (3 .2)
+=
+∑
+x∈Fn
+∑
+z∈B(x,2)
+E(z)
+=
+∑
+z∈Fn
+E(z)
+∑
+x∈B(z,2)
+1
+= V (n, 2)E(Fn)
+= V (n, 2)(|C|(n + 1) − 2n) by (2 .8)
+and Theorem 6 follows by V (n, 2) = 1 + n +
+(n
+2
+)
+(see (2.1)).
+3.1.2 The Theorem of Blass and Litsyn
+Theorem 6 was further improved by Blass and Litsyn [1], Habsieger [9],
+Honkala [15], [16], [17] and van Wee [31]. The best of these bounds is due to
+Blass and Litsyn [1]:
+Theorem 7 (Blass and Litsyn [1]) . If n ≡ 5 ( mod 6), then
+K(n, 1) ≥
+(
+1 + 40
+10n2 − 44n + 77
+) 2n
+n + 1 . (3.3)
+In section 3.1.3 we give a simpliﬁcation of the proof of Theorem 7, which
+at the same time leads to a better result. We give the complete proof (for
+n ≥ 17), since it is divided on the three papers [1], [7], [16] and it saves the
+eﬀorts of the reader to ﬁnd out, which of the material of [1] is needed and
+which not. For the rest of this section we give the necessary lemmas, which
+already can be found in [1] and [16], in a slightly modiﬁed manner.
+All improvements on Theorem 6 mentioned above rely on the fact, that
+not always equality can hold in (3.2) and so one has to upper-bound |B|,
+where B is deﬁned by
+B = {x ∈ Fn | E(B(x, 2)) = 2 }. (3.4)
+Crucial is a structural property of B described in the next lemma. Assume
+for the rest of this section, that C ⊂ Fn is a ﬁxed binary code with covering
+radius one and n ≡ 5 (mod 6), n ≥ 11.
+15
+Lemma 8 (van Wee [31]). For every x ∈ B there exists a unique z ∈ B(x, 2)
+with E(z) > 0. Consequently E(z) = 2 (i.e. z ∈ Z2).
+Proof. Assume to the contrary, there exist distinct z1, z2 ∈ B(x, 2) with
+E(z1) > 0 and E(z2) > 0. One easily sees, that in all cases there ex-
+ists y ∈ B(x, 1) such that, say z1 ∈ B(y, 1), but z2 ⁄∈ B(y, 1). Now
+E(B(y, 1)) ≥ E(z1) ≥ 1. On the other hand by Theorem 2 we have
+E(B(y, 1)) ≡ 0 (mod 2), implying E(B(y, 1)) ≥ 2. This however gives the
+contradiction 2 = E(B(x, 2)) ≥ E(B(y, 1)) + E(z2) ≥ 3.
+For x ∈ Fn we set
+L = {y ∈ Fn : E(B(y, 2)) = 5 },
+B(x) = B(x, 2) ∩ B.
+One easily checks, that if z ∈ Z2, then E(B(z, 2)) > 2 and thus E(B(z, 2)) ≥
+5 by Theorem 5. We partition Z2 into the following subsets (diﬀerent from
+[1]):
+Z (1)
+2 = L ∩ Z2,
+Z (2)
+2 =
+{
+z ∈ Z2 \ Z (1)
+2 | |B(z)| >
+(n − 3
+2
+)}
+,
+Z (3)
+2 =
+{
+z ∈ Z2 \ Z (1)
+2 | |B(z)| ≤
+(n − 3
+2
+)}
+. (3.5)
+The next lemmas are from [1].
+Lemma 9 (Blass, Litsyn [1]) . If z ∈ Z2, then
+|B(z)| ≤
+(n − 2
+2
+)
+. (3.6)
+If additionally z ∈ Z (1)
+2 , then there are exactly three distinct words yi ∈
+B(z, 2), i = 1 , 2, 3, such that E(yi) = 1 . For every c ∈ C with d(yi, c) ≤ 1
+for at least one yi we also have d(z, c) ≤ 1.
+Proof. By z ∈ Z2, z is covered exactly three times.
+Case I. z ∈ C.
+Without loss z = 0 and C ′ = {0, e1, e2} ⊂ C. Clearly
+E(e1) ≥ 1, E(e2) ≥ 1, E(e1 + e2) ≥ 1. (3.7)
+16
+To show (3.6), simply note that for x ∈ B(0) we have d(x, e1) > 2, since
+otherwise E(B(x, 2)) ≥ E(0) + E(e1) ≥ 3 contradicting E(B(x, 2)) = 2 for
+x ∈ B(0) ⊂ B. Similar d(x, e2) > 2. Thus every word in B(0) has weight
+two and starts with two zeros, i.e.
+B(0) ⊂ {ei + ej | 3 ≤ i < j ≤ n}, (3.8)
+and (3.6) follows in case I.
+If z = 0 ∈ Z (1)
+2 , then E(B(0, 2)) = 5 and by (3.7) in fact we have
+E(e1) = E(e2) = E(e1 + e2) = 1 . (3.9)
+Thus we may set y1 = e1, y2 = e2 and y3 = e1 + e2. Assume c ∈ C with
+d(yi, c) ≤ 1 for at least one yi. By (3.9), yi is covered exactly twice. Since
+each yi, i = 1, 2, 3, is covered by two words from C ′, we ﬁnd c ∈ C ′ and thus
+d(z, c) = d(0, c) ≤ 1.
+Case II. z ⁄∈ C.
+Without loss z = 0 and {e1, e2, e3} ⊂ C. Clearly E(e1 + e2) ≥ 1,
+E(e1+e3) ≥ 1 and like in case I one shows d(x, e1+e2) > 2 and d(x, e1+e3) >
+2 whenever x ∈ B(0). Thus every word in B(0) has weight one or two and
+starts with three zeros, i.e.
+B(0) ⊂ {ei | 4 ≤ i ≤ n} ∪ {ei + ej | 4 ≤ i < j ≤ n}, (3.10)
+implying |B(0)| ≤ n − 3 +
+(n−3
+2
+)
+=
+(n−2
+2
+)
+and (3.6) follows in case II too.
+Setting y1 = e1 + e2, y2 = e2 + e3 and y3 = e1 + e3, the proof of the
+second half of the Lemma is very similar like in case I.
+Lemma 10 (Blass, Litsyn [1]) . We have
+|Z1| ≥ 3|Z (1)
+2 |. (3.11)
+Proof. By Lemma 9, |Z1 ∩ B(z, 2)| = 3 whenever z ∈ Z (1)
+2 . Thus Lemma
+10 follows, if we can show, that no y ∈ Z1 satisﬁes y ∈ B(z1, 2) ∩ B(z2, 2)
+whenever z1, z2 ∈ Z (1)
+2 with z1 ⁄= z2.
+Assume to the contrary, that y ∈ Z1 ∩ B(z1, 2) ∩ B(z2, 2). Since y is
+covered by C, there exists c ∈ C with d(c, y) ≤ 1. By Lemma 9 we get
+d(c, z1) ≤ 1 as well as d(c, z2) ≤ 1, implying d(z1, z2) ≤ 2. But then B(z1, 2)
+contains two words from Z2 (z1 and z2) as well as three words from Z1 by
+Lemma 9 and thus E(B(z1, 2)) ≥ 7 contradicting z1 ∈ Z (1)
+2 .
+17
+Lemma 11 (Blass, Litsyn [1]) . If z ∈ Z (2)
+2 , there are exactly three words
+yi ∈ B(z, 2) \ {z} (i = 1, 2, 3) satisfying E(yi) = 2 .
+Proof. Case I. z ∈ C.
+Without loss z = 0 and {0, e1, e2} ⊂ C. We set y1 = e1, y2 = e2 and
+y3 = e1 + e2. By (3.7) we have yi ∈ B(z, 2) \ {z} and E(yi) > 0 (i = 1, 2, 3).
+We next prove, that there is no other word y ∈ B(0, 2) \ { 0} satisfying
+E(y) > 0.
+Without loss it suﬃces to consider the cases y = e3 or y = ei + e3
+with i ⁄= 3. By E(e3) > 0 (resp. E(ei + e3) > 0) and E(0) = 2 we have
+E(B(e3 + ej, 2)) > 2 for j ⁄= 3, implying e3 + ej ⁄∈ B(0). Therefore by (3.8)
+each word of B(0) must be of the form ei + ej, 4 ≤ i < j ≤ n. The number
+of such vectors is at most
+(n−3
+2
+)
+, contradicting the deﬁnition of Z (2)
+2 .
+It remains to show E(y1) = E(y2) = E(y3) = 2. The case E(y1) =
+E(y2) = E(y3) = 1 is impossible, since it yields E(B(z, 2)) = 5 and thus
+z ∈ Z (1)
+2 , contradicting the deﬁnition of Z (2)
+2 . If E(y1) ≥ 2 or E(y3) ≥ 2,
+then e1 + e (with e = 0 or e = e2) must be covered by a codeword c ∈ C,
+C ⁄= 0, e1, e2. Now c = e1 + e + ej with j ≥ 3 is impossible, since then
+E(y) > 0 with y = e1 + ej and y ∈ B(z, 2) \ {z, y1, y2, y3}. There remains
+the possibility c = e1 + e2 ∈ C and E(y1) = E(y3) = 2 follows. For reasons
+of symmetry we also have E(y2) = 2.
+Case II. z ⁄∈ C.
+Without loss z = 0 and {e1, e2, e3} ⊂ C. We set y1 = e1+e2, y2 = e2+e3
+and y3 = e1 + e3. Clearly E(yi) > 0 ( i = 1 , 2, 3). We show, that there is
+no other word y ∈ B(0, 2) \ {0} with E(y) > 0. It suﬃces to consider the
+cases y = ei0 or y = ei0 + e4, 1 ≤ i0 ≤ n. Similar like in case I we see, that
+we then have B(0) ⊂ B1 := {ei + ej | 4 ≤ i < j ≤ n} in the ﬁrst case and
+B(0) ⊂ B2 := {ei | 5 ≤ i ≤ n} ∪ { ei + ej | 5 ≤ i < j ≤ n} in the second
+case (use (3.10)). Since |B1| = |B2| =
+(n−3
+2
+)
+we get a contradiction to the
+deﬁnition of Z (2)
+2 .
+It remains to show E(y1) = E(y2) = E(y3) = 2. Like in case I E(y1) =
+E(y2) = E(y3) = 1 is impossible. For reasons of symmetry it suﬃces to
+assume E(y1) ≥ 2. Then y1 = e1 + e2 must be covered by a codeword c ∈ C,
+c = e1 + e2 + e with e = 0 or e = ei, i ≥ 3. Now e = 0 (resp. e = ei,
+i ≥ 4) is impossible, since then E(e1) > 0 (resp. E(e1 + ei) > 0). Hence
+y1 ⁄∈ C, c = e1 + e2 + e3 ∈ C and E(y1) = 2 follows. Since c also covers y2
+and y3, we get E(y2) ≥ 2 and E(y3) ≥ 2. Now like in the case of y1 we have
+18
+E(y2) = E(y3) = 2 also.
+For z ∈ Z (2)
+2 we set
+H(z) = {z, y1, y2, y3} ⊂ Z (2)
+2 ∪ Z (3)
+2 , (3.12)
+where y1, y2 and y3 are deﬁned in Lemma 11. Clearly
+|H(z)| = 4 if z ∈ Z (2)
+2 . (3.13)
+Following the proof of Lemma 11, we notice, that if z ∈ C, then for some
+i, j ∈ {1, . . . , n}, i ⁄= j
+H(z) = {z, z + ei, z + ej, z + ei + ej} ⊂ C. (3.14)
+If z ⁄∈ C, then
+H(z) = {z, z + ek + el, z + ek + em, z + el + em} with H(z) ∩ C = ∅ (3.15)
+for some k, l, m ∈ { 1, . . . , n}, k ⁄= l ⁄= m ⁄= k. Moreover in that case
+{z + ek, z + el, z + em, z + ek + el + em} ⊂ C.
+Lemma 12 (Blass, Litsyn [1]). If z1, z2 ∈ Z (2)
+2 , then either H(z1)∩H(z2) = ∅
+or H(z1) = H(z2).
+Proof. Assume y ∈ H(z1) ∩ H(z2). By deﬁnition of H(z) we have E(y) = 2.
+Case I. y ∈ C.
+Then z1, z2 ∈ C (otherwise H(z1) ∩ C = ∅). From (3.14) follows H(z1) =
+{z1, z1 + ei, z1 + ej, z1 + ei + ej} = {y, y + ei, y + ej, y + ei + ej} ⊂ C
+for some i, j ∈ { 1, . . . , n}, i ⁄= j. Similar by y ∈ H(z2) we have H(z2) =
+{y, y + ek, y + el, y + ek + el} ⊂ C for some k, l ∈ {1, . . . , n}, k ⁄= l. We now
+get {i, j} = {k, l} (otherwise E(y) > 2), i.e. H(z1) = H(z2).
+Case II. y ⁄∈ C.
+Then z1, z2 ⁄∈ C (otherwise H(z1), H(z2) ⊂ C). From (3.15) follows
+H(z1) = {z1, z1 + ek + el, z1 + ek + em, z1 + el + em} = {y, y + ek + el, y +
+ek + em, y + el + em} for some k, l, m ∈ { 1, . . . , n}, k ⁄= l ⁄= m ⁄= k and
+{z1 + ek, z1 + el, z1 + em, z1 + ek + el + em} = {y + ek, y + el, y + em, y + ek +
+el + em} ⊂ C. Similar by y ∈ H(z2) we have H(z2) = {y, y + ek′ + el′, y +
+ek′ + em′, y + el′ + em′} for some k′, l′, m′ ∈ {1, . . . , n}, k′ ⁄= l′ ⁄= m′ ⁄= k′ and
+{y + ek′, y + el′, y + em′, y + ek′ + el′ + em′} ⊂ C. Like in case I we now get
+{k, l, m} = {k′, l′.m′}, i.e. H(z1) = H(z2).
+19
+The proof of the case z ∈ C of the following Lemma already appeared in
+Honkala [16].
+Lemma 13 (Blass, Litsyn [1], Honkala [16]) . If z ∈ Z (2)
+2 we have
+∑
+y∈H(z)
+|B(y)| ≤ 4
+(n − 3
+2
+)
+. (3.16)
+Proof. By the deﬁnition of H(z) we have y ∈ Z2 whenever y ∈ H = H(z).
+Indeed we will show
+∑
+y∈H\{x}
+|B(y)| ≤ 3
+(n − 3
+2
+)
+(3.17)
+whenever x ∈ H, since by (3.13) this implies
+3
+∑
+y∈H
+|B(y)| =
+∑
+x∈H
+∑
+y∈H\{x}
+|B(y)| ≤ 12
+(n − 3
+2
+)
+and (3.16) follows.
+Case I. z ∈ C.
+Without loss z = 0 and H = {0, e1, e2, e1 + e2}, see (3.14). Moreover, it
+suﬃces to show (3.17) for x = e1 + e2, i.e. H ′ := H \ {x} = {0, e1, e2}. For
+y ∈ H ′ we have
+B(y) ⊂ B(y) := {y + ei + ej | 3 ≤ i < j ≤ n}, (3.18)
+(compare (3.8)). Note, that the sets B(y), y ∈ H ′ are pairwise disjoint.
+We now consider the covering excess in a sphere of radius two centered
+on ei, 3 ≤ i ≤ n. Clearly B(ei, 2) ∩ H = H ′ and thus E(B(ei, 2) ∩ H) = 6 by
+E(y) = 2 whenever y ∈ H. By Theorem 5 however we have E(B(ei, 2)) ≡
+−1 (mod 3). This implies
+∀ 3 ≤ i ≤ n ∃ui ∈ B(ei, 2) \ H with E(ui) > 0. (3.19)
+We set B∗ =⋃
+y∈H ′ B(y) and consider two subcases.
+Subcase A. Each word ui has weight at least two, 3 ≤ i ≤ n.
+We ﬁrst show
+|B(ui, 2) ∩ B∗ ∩ Fn
+i | ≥ 6 (3 ≤ i ≤ n). (3.20)
+20
+To see this, ﬁx i with 3 ≤ i ≤ n. Note that in subcase A by ui ∈ B(ei, 2) we
+have ui ∈ Fn
+i . If ui ∈ Fn
+1 , then B(ui, 2) ∩ B(e1) ∩ Fn
+i = B(e1) ∩ Fn
+i implying
+|B(ui, 2)∩B(e1) ∩Fn
+i | = |B(e1) ∩Fn
+i | = n−3 ≥ 6 and (3.20) follows. If ui ∈ Fn
+2
+or w(ui) = 2, then the argument is very similar. There remains the case,
+that ui starts with two zeros and satisﬁes w(ui) = 3. Then for each of the
+three elements y ∈ H ′ we have |B(ui, 2) ∩ B(y) ∩ Fn
+i | = 2 and (3.20) follows
+again.
+Each word in B∗ occurs in exactly two of the sets B∗ ∩ Fn
+i , 3 ≤ i ≤ n.
+Therefore
+⏐⏐⏐⏐⏐
+⋃
+3≤i≤n
+(B(ui, 2) ∩ B∗)
+⏐⏐⏐⏐⏐ (3.21)
+≥
+⏐⏐⏐⏐⏐
+⋃
+3≤i≤n
+(B(ui, 2) ∩ B∗ ∩ Fn
+i )
+⏐⏐⏐⏐⏐ ≥ 1
+2
+∑
+3≤i≤n
+|B(ui, 2) ∩ B∗ ∩ Fn
+i | ≥ 3(n − 3).
+by (3.20). Now, if x ∈ B(ui, 2) ∩ B∗, (3 ≤ i ≤ n), then there exists y′ ∈ H ′
+with x ∈ B(y′) and thus y′ ∈ B(x, 2). Therefore E(B(x, 2)) ≥ E(y′) +
+E(ui) > 2, which implies x ⁄∈ ⋃
+y∈H ′ B(y) whenever x ∈ B(ui, 2) ∩ B∗,
+3 ≤ i ≤ n. Using (3.18) and (3.21) we now get
+∑
+y∈H ′
+|B(y)| ≤ | B∗| −
+⏐⏐⏐⏐⏐
+⋃
+3≤i≤n
+(B(ui, 2) ∩ B∗)
+⏐⏐⏐⏐⏐
+≤ 3
+(n − 2
+2
+)
+− 3(n − 3) = 3
+(n − 3
+2
+)
+and (3.17) follows, completing the proof of Lemma 13 in subcase A.
+Subcase B. There is a word ui with w(ui) = 1.
+If ej0 with a suitable j0, 3 ≤ j0 ≤ n occurs among the words ui, then (3.21)
+follows again, since then each of the 3( n − 3) words of the form y + ei + ej0,
+y ∈ H ′, 3 ≤ i ≤ n, i ⁄= j0 lies in B(ej0, 2) ∩ B∗. Since we have already seen,
+that (3.21) implies (3.17), the proof of Lemma 13 is complete in case I.
+Case II. z ⁄∈ C.
+In this case by (3.15) we may assume z = 0 and H = {0, e1 + e2, e1 +
+e3, e2 + e3}. It suﬃces to show (3.17) for x = e2 + e3, i.e. H ′ = H \ {x} =
+{0, e1 + e2, e1 + e3}. For y ∈ H ′ we have
+B(y) ⊂ B(y) := {y + ei | 4 ≤ i ≤ n} ∪ {y + ei + ej | 4 ≤ i < j ≤ n},
+21
+see (3.10). The excess argument from case I leading to (3.19) applies equally
+well to the spheres B(e1 + ei, 2), 4 ≤ i ≤ n and yields
+∀ 4 ≤ i ≤ n ∃vi ∈ B(e1 + ei, 2) \ H with E(vi) > 0.
+Again we set B∗ =⋃
+y∈H ′ B(y) and consider two subcases.
+Subcase A . Neither e1 nor one of the words e1 + ej occurs among the
+words vi, 4 ≤ i, j ≤ n.
+We show
+|B(vi, 2) ∩ B∗ ∩ Fn
+i | ≥ 6 (4 ≤ i ≤ n). (3.22)
+To see this, ﬁx i with 4 ≤ i ≤ n. Again in subcase A we have vi ∈ Fn
+i . If vi
+does not start with (100), then |B(vi, 2)∩B(y) ∩Fn
+i | = n−3 ≥ 6 for a suitable
+y ∈ H ′ and (3.22) follows. If vi starts with (100) then |B(vi, 2)∩B(y)∩Fn
+i | = 2
+for every y ∈ H ′ and (3.22) follows again.
+Now (3.21) (with ui replaced by vi) follows like in case I. The rest of the
+proof of Lemma 13 in subcase A is the same.
+Subcase B. Either e1 or one of the words e1 + ej, 4 ≤ j ≤ n occurs among
+the words vi, 4 ≤ i ≤ n.
+If e1 occurs among the words vi, then each of the 3( n − 3) words of the
+form y + ei, y ∈ H ′, 4 ≤ i ≤ n lies in B(e1, 2) ∩ B∗. If e1 + ej0 with a suitable
+j0, 4 ≤ j0 ≤ n occurs among the words vi, then each of the 3( n − 3) words
+of the form either y + ej0 or y + ei + ej0, y ∈ H ′, 4 ≤ i ≤ n, i ⁄= j0 lies
+in B(e1 + ej0, 2) ∩ B∗. In both cases the proof proceeds exactly like in case
+I.
+3.1.3 The new bound
+In this section we further improve on (3.3). The bound given in the next
+theorem appears to be the presently best lower bound on K(n, 1) when n ≡
+5 (mod 6).
+Theorem 14 (Haas [7]) . If n ≥ 11 and n ≡ 5 (mod 6), then
+K(n, 1) ≥
+(
+1 + 8
+2n2 − 10n + 19
+) 2n
+n + 1 .
+As a corollary we get the following new bounds on K(n, 1). The old
+records in parenthesis follow from (3.3).
+22
+Corollary 15.
+K(17, 1) ≥ 7419 (7414 [ 1]),
+K(23, 1) ≥ 352827 (352736 [ 1]),
+K(29, 1) ≥ 17997161 (17994966 [ 1]).
+Proof of Theorem 14. We use the notations of the previous section. Let n
+be an integer with n ≥ 11 and n ≡ 5 (mod 6). By (3.3) Theorem 14 does
+hold for n = 11, so we may assume n ≥ 17. Let C ⊂ Fn be a binary code of
+length n with covering radius one.
+By M ⊂ Z (2)
+2 we denote a set of maximal cardinality satisfying H(z1) ∩
+H(z2) = ∅ whenever z1, z2 ∈ M with z1 ⁄= z2. Moreover we set H =⋃
+z∈M H(z). Then by Lemma 12, (3.12), (3.13) we have |H| = 4|M | and
+Z (2)
+2 ∪ Z (3)
+2 = H ∪ (Z (3)
+2 \ H). (3.23)
+Lemma 16. If z ∈ L, then |B(z, 2) ∩ Z1| ≥ 2.
+Proof. By |E(B(z, 2))| = 5 there exists u ∈ B(z, 2) with E(u) odd. Fix any
+x ∈ B(u, 1) ∩ B(z, 1). By Theorem 2 we have E(B(x, 1)) ≡ 0 (mod 2). Thus
+there exists v ∈ B(x, 1) ⊂ B(z, 2) with v ⁄= u and E(v) odd. Now, since
+E(B(z, 2)) is odd, there must exist w ∈ B(z, 2) with E(w) odd, w ⁄= u and
+w ⁄= v. Since E(u), E(v) and E(w) are odd, nonnegative integers adding to
+at most 5, at least two of them must equal one and Lemma 16 follows.
+We now may complete the proof of Theorem 14. From Lemma 8 follows
+B ⊂⋃
+z∈Z2 B(z) (remember, that B is deﬁned in (3.4)). Thus by (3.23) we
+get
+B ⊂
+⋃
+z∈Z2
+B(z) =
+⋃
+z∈Z(1)
+2
+B(z) ∪
+⋃
+z∈M
+⋃
+y∈H(z)
+B(y) ∪
+⋃
+z∈Z(3)
+2 \H
+B(z),
+23
+which by (3.5), (3.23), Lemma 9 and Lemma 13 implies
+|B| ≤
+∑
+z∈Z(1)
+2
+|B(z)| +
+∑
+z∈M
+∑
+y∈H(z)
+|B(y)| +
+∑
+z∈Z(3)
+2 \H
+|B(z)| (3.24)
+≤
+(n − 2
+2
+)
+|Z (1)
+2 | + 4|M |
+(n − 3
+2
+)
++
+(n − 3
+2
+)
+|(Z (2)
+2 ∪ Z (3)
+2 ) \ H|
+=
+(n − 2
+2
+)
+|Z (1)
+2 | +
+(n − 3
+2
+)
+|Z (2)
+2 ∪ Z (3)
+2 |
+=
+(n − 3
+2
+)
+|Z2| + (n − 3)|Z (1)
+2 |.
+Moreover E(Fn) =∑
+i≥0 i|Zi| ≥ 2|Z2| + |Z1|. Thus
+2|Z2| ≤ E(Fn) − |Z1|. (3.25)
+By Theorem 5 we have
+(
+1 + n +
+(n
+2
+))
+E(Fn) = V (n, 2)E(Fn)
+=
+∑
+x∈Fn
+E(B(x, 2))
+≥ 2|B| + 5|L| + 8(2n − |B| − |L|)
+= 8 · 2n − 6|B| − 3|L|.
+Substituting (3.11), (3.24) and (3.25) on the right-hand side yields
+(
+1 + n +
+(n
+2
+)
++ 3
+(n − 3
+2
+))
+E(Fn) (3.26)
+≥ 8 · 2n +
+(
+3
+(n − 3
+2
+)
+− 2(n − 3)
+)
+|Z1| − 3|L|.
+By Lemma 16 for n ≥ 17 we have
+(
+3
+(n − 3
+2
+)
+− 2(n − 3)
+)
+|Z1| ≥ 3
+2
+(
+1 + n +
+(n
+2
+))
+|Z1|
+= 3
+2
+∑
+z∈Z1
+∑
+x∈B(z,2)
+1
+≥ 3
+2
+∑
+x∈L
+∑
+z∈B(x,2)∩Z1
+1
+≥ 3|L|.
+24
+This inserted in (3.26) yields
+E(Fn) ≥ 8 · 2n
+1 + n +
+(n
+2
+)
++ 3
+(n − 3
+2
+)
+and Theorem 14 follows by (2.8).
+3.2 The case n ≡ 1, 3 ( mod 6)
+We have seen, that in the case n ≡ 5 (mod 6) a binary code of length n
+and covering radius one forces a covering excess in every sphere of radius
+two (Theorem 5). In this section we have a look on the remaining odd cases
+n ≡ 1, 3 (mod 6) and show, that then there are coverings of spheres with
+radius three indeed without covering excess. For the proof we have to review
+shortly some basic facts on Steiner systems.
+3.2.1 Steiner systems
+We shortly give the deﬁnition and a few basic facts for Steiner systems, which
+are basic objects in design theory. They are related to the construction of
+perfect coverings of Hamming spheres, i.e. covering codes without covering
+excess on certain spheres.
+Deﬁnition 17. A Steiner system S(t, k, n) is a collection of k-subsets (called
+blocks) of {1, . . . , n}, such that every t-subset of {1, . . . , n} is contained in
+exactly one of the blocks.
+The connection to coding theory is given by the quantity supp deﬁned in
+(2.3), which yields a natural one to one correspondence between the words
+x ∈ Fn and the subsets of {1, . . . , n}.
+The history of Steiner systems goes back until 1847, when Kirkman con-
+sidered the special case t = 2 and k = 3. A Steiner system S(2, 3, n) is called
+a Steiner triple system.
+Theorem 18 (Kirkman [20] 1847) . A Steiner triple system S(2, 3, n) exists
+if and only if n ≡ 1, 3 ( mod 6).
+A Steiner system S(3, 4, n) is called a Steiner quadrupel system.
+Theorem 19 (Hanani [12] 1960) . A Steiner quadrupel system S(3, 4, n) ex-
+ists if and only if n ≡ 2, 4 ( mod 6).
+25
+3.2.2 Perfect coverings of spheres
+Deﬁnition 20. A perfect R-covering of a Hamming sphere B(x, r) with x ∈
+Fn is a code C ⊂ Fn, such that each y ∈ B(x, r) is R-covered exactly once by
+C.
+Clearly a perfect code C ⊂ Fn with covering radius R is a perfect R-
+covering of any sphere B(x, r), x ∈ Fn, r ≥ 0. Perfect coverings of spheres
+are related to Steiner systems as we will show in the next theorem.
+Theorem 21. A perfect 1-covering of a Hamming sphere B ⊂ Fn with radius
+three exists, if and only if there exists a Steiner quadruple system S(3, 4, n +
+1), i.e. if n ≡ 1, 3 ( mod 6).
+Proof. It suﬃces to consider the case B = B(0, 3) with the all-zero word
+0 ∈ Fn.
+Assume D1, . . . , Dr ⊂ {1, . . . , n+ 1} are the blocks of a Steiner quadruple
+system S(3, 4, n + 1) on the set {1, . . . , n + 1}. Then one easily sees, that
+the code C = {0, supp−1(D1 \ {n + 1}), . . . , supp−1(Dr \ {n + 1})} ⊂ Fn is a
+perfect 1-covering of B(0, 3).
+Conversely assume that C ⊂ Fn is a perfect 1-covering of B(0, 3). Let
+Ci ⊂ C be the words of weight i in C, i ≥ 0. If 0 ∈ C, then C1 = C2 = ∅. One
+easily sees, that in this case {supp(u)∪{n+1} | u ∈ C3}∪{ supp(u) | u ∈ C4}
+is a Steiner quadruple system S(3, 4, n + 1) on the set {1, . . . , n+ 1}.
+Consider the case 0 ⁄∈ C. Then |C1| = 1, say C1 = {en}. Then supp(u) ⊂
+{1, . . . , n− 1} and |u ∪ v| = 4 whenever u, v ∈ C2, u ⁄= v. One checks, that
+{u ∪ v | u, v ∈ C2, u ⁄= v}
+∪ { supp(u) ∪ {n, n + 1} | u ∈ C2}
+∪ { supp(u) ∪ {n + 1} | u ∈ C3}
+∪ { supp(u) | u ∈ C4}
+is a Steiner quadruple system S(3, 4, n + 1) on the set {1, . . . , n+ 1}.
+The last part of the claim now follows from Theorem 19.
+Similar (somewhat easier) one can show, that a perfect 1-covering of a
+Hamming sphere B ⊂ Fn with radius two exists if and only if a Steiner triple
+system S(2, 3, n) exists, which by Theorem 18 is the case, if n ≡ 1, 3 (mod 6).
+One might try to extend the construction from Theorem 21 to spheres
+of radius four, thereby obtaining the statement, that a perfect 1-covering of
+26
+a Hamming sphere B ⊂ Fn with radius four exists if and only if a Steiner
+quintuple system S(4, 5, n + 2) exists. This however in generally is incor-
+rect, since for instance by Theorem 1 there exists a perfect 1-covering of a
+Hamming sphere B ⊂ F15 with radius four, but there is no Steiner system
+S(4, 5, 17) ( ¨Osterg ˚ ard and Pottonen [27]). At the present nothing seems to
+be known concerning perfect 1-coverings of spheres with radius greater than
+three.
+Question 22. For which values of n there exists a perfect 1-covering of a
+Hamming sphere B ⊂ Fn with radius four?
+By Theorem 21 there is no forced covering excess on a sphere with radius
+three if n ≡ 1, 3 (mod 6). In order to improve on the sphere-covering bound
+(2.9) we will have to look on a covering excess in a sphere with radius greater
+than three!
+3.3 The general excess bound
+Again let C ⊂ Fn be a code with covering radius one.
+Theorem 5 was independently generalized by Habsieger [9] and Honkala
+[16], who showed that there is a covering excess in a sphere of radius p − 1
+whenever n ≡ − 1 (mod p) for an odd prime p. For the proof we need a
+simple lemma, which was ﬁrst stated in Cohen et al. [5]. For x ∈ Fn and an
+integer i we deﬁne Ai(x) by
+Ai(x) = |{c ∈ C | d(c, x) = i}|. (3.27)
+Note that Ai(x) = 0, if i is negative.
+Lemma 23 (Cohen et al. [5]) . For x ∈ Fn and i ≥ 0 we have
+Ei(x) = ( n − i + 1)Ai−1(x) + Ai(x) + (i + 1)Ai+1(x) −
+(n
+i
+)
+. (3.28)
+Proof. It suﬃces to consider the case x = 0. Then Aj(0) is the number of
+codewords of weight j, j ≥ 0. Let S(0, i) denote the set of words with weight
+i. One easily sees, that for c ∈ C
+|B(c, 1) ∩ S(0, i)| =
+
+
+
+n − i + 1 if w(c) = i − 1,
+1 if w(c) = i,
+i + 1 if w(c) = i + 1,
+0 otherwise .
+27
+Therefore by (2.6) applied to V = S(0, i) and R = 1 we have
+Ei(0) = E(S(0, i))
+=
+∑
+c∈C
+|B(c, 1) ∩ S(0, i)| − |S(0, i)|
+=
+∑
+j
+∑
+c∈C
+w(c)=j
+|B(c, 1) ∩ S(0, i)| − |S(0, i)|
+= ( n − i + 1)Ai−1(0) + Ai(0) + (i + 1)Ai+1(0) −
+(n
+i
+)
+.
+Theorem 24 (Habsieger [9], Honkala [16]) . Let C ⊂ Fn be a binary code
+with covering radius one and n ≡ −1 ( mod p) for an odd prime p. If x ∈ Fn,
+then
+E(B(x, p − 1)) = E0(x) + E1(x) + . . . + Ep−1(x) ≡ −1 ( mod p). (3.29)
+Proof. Summing (3.28) with 0 ≤ i ≤ p − 1 gives
+∑
+0≤i≤p−1
+Ei(x)
+=
+∑
+0≤i≤p−1
+(n − i + 1)Ai−1(x) +
+∑
+0≤i≤p−1
+Ai(x) +
+∑
+0≤i≤p−1
+(i + 1)Ai+1(x) −
+−
+∑
+0≤i≤p−1
+(n
+i
+)
+= ( n + 1)
+∑
+0≤i≤p−2
+Ai(x) + p(Ap−1(x) + Ap(x)) −
+∑
+0≤i≤p−1
+(n
+i
+)
+≡ −
+∑
+0≤i≤p−1
+(n
+i
+)
+(mod p)
+≡ −
+∑
+0≤i≤p−1
+(−1)i (mod p)
+≡ − 1 (mod p)
+by n ≡ −1 (mod p).
+28
+As a consequence we get the following bound on K(n, 1), the general
+excess bound for binary codes with covering radius one.
+Theorem 25 (Habsieger [9], Honkala [16]) . When n ≡ − 1 ( mod p) for an
+odd prime p, then
+K(n, 1) ≥
+(
+1 + p − 1
+V (n, p − 1)
+) 2n
+n + 1 . (3.30)
+Proof. Let C ⊂ Fn be a binary code with covering radius one and |C| =
+K(n, 1). From (3.29) follows E(B(x, p − 1)) ≥ p − 1, since E(B(x, p − 1)) is
+always nonnegative for x ∈ Fn. We now get
+(p − 1)2n =
+∑
+x∈Fn
+(p − 1)
+≤
+∑
+x∈Fn
+E(B(x, p − 1))
+=
+∑
+x∈Fn
+∑
+z∈B(x,p−1)
+E(z)
+=
+∑
+z∈Fn
+E(z)
+∑
+x∈B(z,p−1)
+1
+= V (n, p − 1)E(Fn)
+= V (n, p − 1)(|C|(n + 1) − 2n) by (2 .8)
+and Theorem 25 follows.
+The condition n ≡ −1 (mod p) is always satisﬁed for a suitable odd prime
+p, except if n = 2 m − 1, but then the value of K(n, 1) is known by Theorem
+1. If we deﬁne the residue classes Rp ⊂ N for an odd prime p by
+Rp = {n ∈ N | n ≡ −1 (mod p)},
+we have
+N \ {2m − 1 | m ∈ N} = R3 ∪ R5 ∪ . . . ∪ Rp ∪ . . . .
+Then, as a major statement, the general excess bound says
+K(n, 1) − 2n
+n + 1 → ∞ if n → ∞ , n ∈ R p for a ﬁxed odd prime p. (3.31)
+29
+Note, that (3.31) (and (3.30)) does not imply
+K(n, 1) − 2n
+n + 1 → ∞ if n → ∞ , n ∈ N \ {2m − 1 | m ∈ N}, (3.32)
+since (3.30) cannot improve on the sphere covering bound, if p is too large
+compared to n. The quality of the general excess bound depends on the least
+odd prime divisor of n + 1.
+A proof of (3.32) could be found in [6].
+The rest of this chapter is devoted to the possibility for further improve-
+ments of the general excess bound.
+3.4 Habsiegers improvement and the excess
+matrix
+Let C ⊂ Fn be a code with covering radius one, n odd. Theorem 24 states,
+that whenever n ≡ − 1 (mod p) for an odd prime p, then there exists a
+covering excess in a sphere with radius p − 1. This gives rise to the natural
+question, under which circumstances there exists a perfect 1-covering of a
+sphere with radius p − 2. A necessary condition is, that p is the least odd
+prime satisfying n ≡ − 1 (mod p), since if n ≡ − 1 (mod p′) with an odd
+prime p′ < p, then by Theorem 24 there exists a covering excess in a sphere
+of radius p′ − 1 ≤ p − 2. This condition indeed is suﬃcient in the cases p = 3
+(see the last paragraph of section 2.3) and p = 5 (see Theorem 21). At the
+present state of knowledge the existence of a perfect 1-covering of a sphere
+with radius p − 2, where n is odd and p is the least odd prime divisor of n + 1
+cannot proved or refuted when p ≥ 7, see section 3.2.2. It is perhaps worth
+noting, that another necessary condition for Ei(x) = 0 whenever 0 ≤ i ≤ p−2
+arising from (3.28) is always satisﬁed.
+Theorem 26. Let n ⁄= 2 m −1 be odd and p the least odd prime satisfying n ≡
+−1 (mod p). Then there exist nonnegative integers A0, . . . , Ap−1 satisfying
+Ei := (n − i + 1)Ai−1 + Ai + (i + 1)Ai+1 −
+(n
+i
+)
+= 0 (3.33)
+for 0 ≤ i ≤ p − 2 (assume A−1 = 0).
+30
+The proof of Theorem 26 is postponed to section 3.5, where the necessary
+tools are developed.
+If it cannot be excluded, that there is no covering excess in a sphere of
+radius p − 2, what can be done to further improve on the general excess
+bound?
+Let us note the following immediate consequence of Theorem 24.
+Theorem 27 (Habsieger [9], Honkala [16]) . Assume C ⊂ Fn is a binary code
+of length n and covering radius one with n ≡ − 1 (mod p) for an odd prime
+p. Then for every x ∈ Fn
+E0(x) = E1(x) = . . . = Ep−2(x) = 0 (3.34)
+implies
+Ep−1(x) ≥ p − 1. (3.35)
+Habsiegers idea was, that if (3.34) cannot excluded, it could be possible to
+improve on (3.35). His result is conditional and uses another set of congruence
+properties of the excess function.
+Deﬁnition 28. Assume C ⊂ Fn is a binary code of length n and covering
+radius one with odd n. We say, that C satisﬁes condition (q), if there exist
+integers β0, . . . , βq−2, such that
+∑
+0≤i≤q−2
+βiEi(x) + Eq−1(x) ≡ 0 (mod q) (3.36)
+holds whenever x ∈ Fn.
+Theorem 29 (Habsieger [9]) . If p ≥ 5, then in Theorem 27, (3.35) may be
+replaced by
+Ep−1(x) ≥ 2p − 1, (3.37)
+if additionally C satisﬁes condition (q) for q = p − 1 and q = p − 2.
+We give the proof of Theorem 29 in a framework diﬀerent from the orig-
+inal, since we develop material needed later. We ﬁrst introduce the notion
+of the excess matrix. For the study of covering excess it suﬃces to consider
+spheres centered on 0 and we use the abbreviation Ei = Ei(0) for i ≥ 0.
+31
+Deﬁnition 30. Let C ⊂ Fn be a binary code of length n and covering radius
+one with n ≡ −1 (mod p) for an odd prime p. Assume
+E0 = E1 = . . . = Ep−2 = 0. (3.38)
+Let dj (j ∈ A = {1, . . . , Ep−1}) run over the set Z ∩ B(0, p − 1), such that
+every d ∈ Z ∩ B(0, p − 1) occurs exactly E(d) times. Then the Ep−1 × n-
+matrix D, whose rows consists of the words dj (j ∈ A) is called the excess
+matrix of C. The column vectors of D are the incident vectors of a subset
+system B1, . . . , Bn ⊂ A, i.e. for 1 ≤ i ≤ n
+Bi = {j ∈ A : the ith coordinate of dj is nonzero} ⊂ A.
+Note that
+w(dj) = p − 1 for j ∈ A (3.39)
+by (3.38). Moreover Ep−1 > 0 by (3.35). Thus the excess matrix is nonempty.
+We next show, that condition ( q) implies a strong structure on the column
+sets B1, . . . , Bn ⊂ A of the excess matrix.
+Theorem 31. Assume the propositions of Deﬁnition 30 are satisﬁed. Let
+s, r1, . . . , rs be any integers satisfying 1 ≤ s ≤ p − 1 and 1 ≤ r1 < . . . < r s ≤
+n. We set q = p − s. If C satisﬁes condition (q), then the column sets Bi,
+1 ≤ i ≤ n of the excess matrix satisfy
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+Bri
+⏐⏐⏐⏐⏐ ≡ 0 (mod q). (3.40)
+Proof. Let y ∈ Fn denote the unique vector, whose ith coordinate is nonzero
+if and only if i ∈ {r1, . . . , rs} (1 ≤ i ≤ n).
+Now if z ∈ B(y, q − 2), then d(z, 0) ≤ d(z, y) + d(y, 0) ≤ p − 2 and
+thus z ∈ B(0, p − 2) implying E(z) = 0 by (3.38). Therefore Ei(y) = 0 for
+0 ≤ i ≤ q − 2, which yields
+Eq−1(y) ≡ 0 (mod q) (3.41)
+by (3.36) (applied to x = y). If z ∈ Z ∩ B(y, q − 1), then d(z, 0) ≤ d(z, y) +
+32
+d(y, 0) ≤ p − 1 and thus z ∈ Z ∩ B(0, p − 1). Therefore
+Eq−1(y) =
+∑
+z∈Z
+d(z,y)=q−1
+E(z) (3.42)
+=
+∑
+z∈Z∩B(0,p−1)
+d(z,y)=q−1
+E(z)
+= |{j ∈ A | d(dj, y) = q − 1}|.
+We next show
+{j ∈ A : d(dj, y) = q − 1} =
+⋂
+1≤i≤s
+Bri. (3.43)
+Assume ﬁrst d(dj, y) = q − 1 for an integer j with 1 ≤ j ≤ Ep−1. To
+show j ∈ ⋂
+1≤i≤s Bri it suﬃces to show, that the ith coordinates of dj are
+nonzero whenever i ∈ {r1, . . . , rs}. Assume to the contrary, that, say the r1th
+coordinate of dj is zero. This means that there are at most s − 1 nonzero
+coordinates among the set {r1, . . . , rs}. Since dj has exactly p − 1 nonzero
+coordinates, dj must have at least ( p − 1) − (s − 1) = q nonzero coordinates
+outside of {r1, . . . , rs}. In these coordinates y is zero however, implying
+d(dj, y) ≥ q, contradicting d(dj, y) = q − 1.
+Conversely assume j ∈⋂
+1≤i≤s Bri. This means that the ith coordinates
+of dj are nonzero whenever i ∈ { r1, . . . , rs}. Moreover dj has exactly q − 1
+nonzero coordinates outside the set {r1, . . . , rs}. Using the deﬁnition of y
+we now see, that y and dj exactly diﬀer in these q − 1 coordinates, i.e.
+d(dj, y) = q − 1. This completes the proof of (3.43). Now (3.40) follows by
+(3.41), (3.42) and (3.43).
+Proof of Theorem 29. It suﬃces to consider the case x = 0. Assume equality
+holds in (3.35), i.e. Ep−1 = |A| = p − 1. Since any row of the excess matrix
+D has weight p − 1 ≥ 2, D has at least two nonempty column sets, say
+B1, B2 ⊂ A. Since C satisﬁes condition (p−1) we may apply Theorem 31 with
+s = 1 and r1 = 1 (resp. r1 = 2) and get |B1| ≡ | B2| ≡ 0 (mod p−1), implying
+B1 = B2 = A by |A| = p − 1. Again by Theorem 31 (with s = 2 and r1 = 1,
+r2 = 2) however we ﬁnd |B1 ∩ B2| ≡ 0 (mod p − 2), since C satisﬁes condition
+(p − 2). This gives the contradiction p − 1 = |A| = |B1| = |B1 ∩ B2| ≡ 0 (mod
+p − 2). Therefore Ep−1 > p − 1 and (3.37) follows by (3.34) and Theorem
+24.
+33
+In [9] Habsieger explicitly gave congruence properties of type (3.36) for
+q ≤ 5 and raised the question, if the conditions ( p − 1) and ( p − 2) are always
+satisﬁed for C under the propositions of Theorem 29. He wrote:
+It is probably true, that a necessary and suﬃcient condition for
+the existence of (3.36) (for q = p−1 and q = p−2) is that p divides
+n + 1. Since the applications of . . . require explicit congruence
+properties, we shall not try to prove this characterization.
+In the next section we prove the suﬃcient part of Habsiegers conjecture. Mo-
+tivated by important structural properties of the excess matrix (see Theorem
+31), we show more generally, that condition ( q) is satisﬁed for any binary code
+of length n and covering radius one, if q and n + 1 do not have a common
+odd prime divisor. More precisely we prove the following theorem.
+Theorem 32. Let n, q be integers with 1 ≤ q ≤ n and odd n. Assume q
+and n + 1 do not have a common odd prime divisor. Then there are integers
+β0, . . . , βq−2 depending only on q and the residue class of n (mod q ), such
+that for every binary code C ⊂ Fn with covering radius one and each x ∈ Fn
+we have ∑
+0≤i≤q−2
+βiEi(x) + Eq−1(x) ≡ 0 ( mod q). (3.44)
+Note that Habsiegers conjecture follows from Theorem 32 applied to q =
+p − 2 resp. q = p − 1, since by (3.29) and (3.34) p is the least odd prime
+satisfying n ≡ −1 (mod p) and therefore q and n + 1 do not have a common
+odd prime divisor.
+As the second major question concerning Theorem 29, Habsieger [9] asked
+whether the estimation Ep−1 ≥ 2p − 1 could be improved further. Indeed
+Honkala [17] showed Ep−1 ≥ 3p − 1. In Habsiegers words:
+. . . the inequality Ep−1 ≥ 2p − 1 can probably sharpened. One
+might even get a bound which is quadratic in p.
+As a main goal for the rest of this chapter we will answer this question
+in the aﬃrmative. Under essential use of the structural properties of the
+excess matrix stated in Theorem 31 together with the congruence properties
+described in Theorem 32 we will give a proof of the following unconditional
+result.
+34
+Theorem 33. Assume C ⊂ Fn is a binary code of length n and covering
+radius one with n ≡ −1 (mod p) for an odd prime p. Then for every x ∈ Fn
+E0(x) = E1(x) = . . . = Ep−2(x) = 0 (3.45)
+implies
+Ep−1(x) ≥ (p − 2)p − 1. (3.46)
+In section 3.7 we will use Theorem 33 to give a ”general improvement of
+the general excess bound” for binary codes with covering radius one.
+3.5 Congruence properties for the covering
+excess function
+In this section we prove Theorem 32 and discuss some of its consequences
+including the outstanding proof of Theorem 26. In this section we always
+assume, that variables with negative index equal zero.
+3.5.1 Some lemmas
+For the proof of Theorem 32 we need some lemmas.
+Lemma 34. Let m, n be nonnegative integers with n odd. Then there are
+integers γi (0 ≤ i ≤ n+1
+2 ) satisfying
+(n − 2i + 1)γi + (2i + 2)γi+1 ≡
+( n + 1
+2i + 1
+)
+(mod 2m) (3.47)
+for 0 ≤ i ≤ n−1
+2 .
+Proof. Recursively choose integers ui (0 ≤ i ≤ n+1
+2 ) satisfying
+(n − 2i)ui+1 ≡ 1 − (2i + 1)ui (mod 2 m)
+for 0 ≤ i ≤ n−1
+2 (here u0 may be chosen arbitrarily). This is possible, since
+n − 2i is odd (0 ≤ i ≤ n−1
+2 ) and therefore n − 2i and the modul 2 m do not
+have a common prime divisor. We now set
+γi = ui
+(n + 1
+2i
+) (
+0 ≤ i ≤ n + 1
+2
+)
+35
+and ﬁnd (0 ≤ i ≤ n−1
+2 )
+(n − 2i + 1)γi + (2i + 2)γi+1
+= ( n − 2i + 1)ui
+(n + 1
+2i
+)
++ (2i + 2)ui+1
+( n + 1
+2i + 2
+)
+= ( n − 2i + 1)ui
+(n + 1
+2i
+)
++ (n − 2i)ui+1
+( n + 1
+2i + 1
+)
+≡ (n − 2i + 1)ui
+(n + 1
+2i
+)
++ (1 − (2i + 1)ui)
+( n + 1
+2i + 1
+)
+(mod 2 m)
+=
+( n + 1
+2i + 1
+)
+.
+Lemma 35. Let m, n be nonnegative integers with n odd. Then there are
+integers α′
+i (0 ≤ i ≤ n) satisfying
+(n − i + 1)α′
+i−1 + α′
+i + (i + 1)α′
+i+1 ≡
+(n
+i
+)
+(mod 2m) (3.48)
+for 0 ≤ i ≤ n − 1.
+Proof. We use Lemma 34 to get integers γi (0 ≤ i ≤ n+1
+2 ) satisfying (3.47).
+The integers α′
+i (0 ≤ i ≤ n) are deﬁned recursively. When i is even with
+0 ≤ i ≤ n we set
+α′
+i = γ i
+2
+− α′
+i−1 (0 ≤ i ≤ n, i even). (3.49)
+When i is odd with 0 ≤ i ≤ n we choose any integer α′
+i satisfying
+iα′
+i ≡
+( n
+i − 1
+)
+− (n − i + 2)α′
+i−2 − α′
+i−1 (mod 2 m) (0 ≤ i ≤ n, i odd).
+(3.50)
+This is possible, since i and 2 m do not have a common prime divisor if i is
+odd. When i is even with 0 ≤ i ≤ n − 1, then (3.48) follows from (3.50)
+36
+(with i + 1 instead of i). When i is odd with 0 ≤ i ≤ n − 1 we have
+(n − i + 1)α′
+i−1 + α′
+i + (i + 1)α′
+i+1
+= ( n − i + 2)(α′
+i−2 + α′
+i−1) + (i + 1)(α′
+i + α′
+i+1)
+−((n − i + 2)α′
+i−2 + α′
+i−1 + iα′
+i)
+=
+(
+n − 2i − 1
+2 + 1
+)
+γ i−1
+2
++
+(
+2i − 1
+2 + 2
+)
+γ i+1
+2
+by (3.49)
+−((n − i + 2)α′
+i−2 + α′
+i−1 + iα′
+i)
+≡
+(n + 1
+i
+)
+−
+( n
+i − 1
+)
+(mod 2 m) by (3.47), (3.50)
+=
+(n
+i
+)
+and (3.48) holds again.
+Lemma 36. Assume n, u are nonnegative odd integers, such that n+1 and u
+do not have a common prime divisor. Then there are integers α′′
+i (0 ≤ i ≤ n)
+satisfying
+(n − i + 1)α′′
+i−1 + α′′
+i + (i + 1)α′′
+i+1 ≡
+(n
+i
+)
+(mod u) (3.51)
+for 0 ≤ i ≤ n − 1.
+Proof. Choose an integer α satisfying
+α(n + 1) ≡ 1 (mod u). (3.52)
+This is possible, since u and n + 1 are assumed to be without common prime
+divisor. We set
+α′′
+i = α
+(n
+i
+)
+(0 ≤ i ≤ n)
+37
+and have (0 ≤ i ≤ n − 1)
+(n − i + 1)α′′
+i−1 + α′′
+i + (i + 1)α′′
+i+1
+= α
+(
+(n − i + 1)
+( n
+i − 1
+)
++
+(n
+i
+)
++ (i + 1)
+( n
+i + 1
+))
+= α
+(
+i
+(n
+i
+)
++
+(n
+i
+)
++ (n − i)
+(n
+i
+))
+= α(n + 1)
+(n
+i
+)
+≡
+(n
+i
+)
+(mod u) by (3.52) .
+Lemma 37. Let n, q be positive integers with n odd. Moreover assume, that
+n+1 and q do not have a common odd prime divisor. Then there are integers
+αi (0 ≤ i ≤ n) satisfying
+(n − i + 1)αi−1 + αi + (i + 1)αi+1 ≡
+(n
+i
+)
+(mod q) (3.53)
+for 0 ≤ i ≤ n − 1.
+Proof. Write
+q = 2 mu (3.54)
+with m ≥ 0 and odd u. Then the propositions of Lemma 35 and Lemma
+36 are satisﬁed and we get integers α′
+i, α′′
+i (0 ≤ i ≤ n) satisfying (3.48) and
+(3.51). Now by the well-known chinese remainder theorem there are integers
+αi (0 ≤ i ≤ n) satisfying
+αi ≡ α′
+i (mod 2 m),
+αi ≡ α′′
+i (mod u)
+for 0 ≤ i ≤ n, since 2 m and u do not have a common prime divisor. By
+(3.48) and (3.51) this implies
+(n − i + 1)αi−1 + αi + (i + 1)αi+1 ≡
+(n
+i
+)
+(mod 2 m),
+(n − i + 1)αi−1 + αi + (i + 1)αi+1 ≡
+(n
+i
+)
+(mod u)
+for 0 ≤ i ≤ n − 1 and (3.53) follows by (3.54).
+38
+Lemma 38. Let n, q be positive integers with n odd and q ≥ 2. Then there
+are integers βi (0 ≤ i ≤ q − 1) depending only on q and the residue class of
+n (mod q) satisfying
+(n − i)βi+1 + βi + iβi−1 ≡ 0 ( mod q) (3.55)
+for 0 ≤ i ≤ q − 2 and
+βq−1 = βq−2 = 1. (3.56)
+Proof. Note that, since n is odd, there exists a suitable odd positive integer
+r ≤ 2q − 1 with n ≡ r (mod q). For 0 ≤ i ≤ q − 1 we set
+β = r + 3
+2 ,
+ki =
+⌊ q − i − 1
+2
+⌋
+,
+βi =
+(β + ki − 1
+ki
+)
+.
+Of course β, βi (0 ≤ i ≤ q − 1) are integers, because r is odd and ki ≥ 0 for
+0 ≤ i ≤ q − 1. Now (3.56) is satisﬁed by kq−1 = kq−2 = 0. It remains to show
+(3.55). We consider two cases.
+Case I. 0 ≤ i ≤ q − 2 with q − i even.
+Then ki = ki+1 = ki−1 − 1 (for i > 0) and thus
+(n − i)βi+1 + βi + iβi−1
+≡ (r − i)
+(β + ki+1 − 1
+ki+1
+)
++
+(β + ki − 1
+ki
+)
++ i
+(β + ki−1 − 1
+ki−1
+)
+(mod q)
+= ( r − i + 1)
+(β + ki+1 − 1
+ki+1
+)
++ i
+(β + ki−1 − 1
+ki−1
+)
+≡ (r + q − i + 1)
+(β + ki+1 − 1
+ki+1
+)
+− (q − i)
+(β + ki−1 − 1
+ki−1
+)
+(mod q)
+= 2 ( β + ki+1)
+(β + ki+1 − 1
+ki+1
+)
+− 2 (ki+1 + 1)
+(β + ki+1
+ki+1 + 1
+)
+= 0
+and (3.55) follows in case I. Note, that this holds in the case i = 0 too.
+39
+Case II. 0 ≤ i ≤ q − 2 with q − i odd.
+Then ki−1 = ki = ki+1 + 1 (for i > 0) and thus
+(n − i)βi+1 + βi + iβi−1
+≡ (r − i)
+(β + ki+1 − 1
+ki+1
+)
++ (i + 1)
+(β + ki − 1
+ki
+)
+(mod q)
+≡ (r + q − i)
+(β + ki+1 − 1
+ki+1
+)
+− (q − i − 1)
+(β + ki − 1
+ki
+)
+(mod q)
+= 2 ( β + ki − 1)
+(β + ki − 2
+ki − 1
+)
+− 2ki
+(β + ki − 1
+ki
+)
+= 0
+and (3.55) follows again. Note, that the integers βi (0 ≤ i ≤ q − 1) only
+depend on q and r, the residue class of n (mod q).
+3.5.2 Proof of Theorem 32
+Using (3.28) one immediately sees, that Theorem 32 follows from Theorem
+39, a purely number theoretic version.
+Theorem 39. Let n, q be integers with 1 ≤ q ≤ n and odd n, such that q
+and n + 1 do not have a common odd prime divisor. Then there are integers
+β0, . . . , βq−2 depending only on q and the residue class of n (mod q) satisfying
+∑
+0≤i≤q−2
+βiEi + Eq−1 ≡ 0 ( mod q) (3.57)
+with
+Ei = Ei(A0, . . . , Aq) = ( n + 1 − i)Ai−1 + Ai + (i + 1)Ai+1 −
+(n
+i
+)
+(3.58)
+for 0 ≤ i ≤ q − 1 and any integers A0, . . . , Aq.
+Proof. There is nothing to prove when q = 1, so we may assume q ≥ 2.
+The propositions of Lemma 38 are satisﬁed. Therefore there exist integers
+βi (0 ≤ i ≤ q − 1) depending only on q and the residue class of n (mod q)
+satisfying (3.55) and (3.56) for 0 ≤ i ≤ q − 2.
+40
+Inserting (3.58) we ﬁnd
+∑
+0≤i≤q−2
+βiEi + Eq−1 (3.59)
+=
+∑
+0≤i≤q−1
+βiEi by (3.56)
+=
+∑
+0≤i≤q−1
+βi
+(
+(n + 1 − i)Ai−1 + Ai + (i + 1)Ai+1 −
+(n
+i
+))
+=
+∑
+0≤i≤q−2
+((n − i)βi+1 + βi + iβi−1)Ai −
+∑
+0≤i≤q−1
+βi
+(n
+i
+)
++βq−1Aq−1 + βq−2(q − 1)Aq−1 + βq−1qAq
+≡ −
+∑
+0≤i≤q−1
+βi
+(n
+i
+)
+(mod q)
+by (3.55) and (3.56). We now use Lemma 37. The propositions are satisﬁed.
+Therefore there exist integers αi (0 ≤ i ≤ n) satisfying (3.53) for 0 ≤ i ≤
+n − 1. We thus have
+∑
+0≤i≤q−1
+βi
+(n
+i
+)
+≡
+∑
+0≤i≤q−1
+βi((n − i + 1)αi−1 + αi + (i + 1)αi+1) (mod q)
+=
+∑
+0≤i≤q−2
+αi((n − i)βi+1 + βi + iβi−1)
++αq−1βq−1 + (q − 1)αq−1βq−2 + qαqβq−1
+≡ 0 (mod q)
+by (3.55) and (3.56). Inserting this in (3.59) we get (3.57).
+3.5.3 Proof of Theorem 26
+We start to show by induction, that there are integers A0, . . . , Ap−1 satisfying
+(3.33) for 0 ≤ i ≤ p − 2. We set A0 = 0, A1 = 1 and (3.33) is satisﬁed for
+i = 0. Now let q be an integer with 2 ≤ q ≤ p − 1 and assume A0, . . . , Aq−1
+are integers satisfying (3.33) for 0 ≤ i ≤ q − 2. Choose an integer Aq such
+that |Eq−1| is minimal. We apply Theorem 39. Apparently q and n + 1 do
+not have a common odd prime divisor, since q < p and p is assumed to be
+41
+the least odd prime divisor of n + 1. Therefore the propositions of Theorem
+39 are satisﬁed. Thus we may apply (3.57) and get Eq−1 ≡ 0 (mod q) by
+Ei = 0 for 0 ≤ i ≤ q − 2. Since the coeﬃcient of Aq in (3.33) for i = q − 1
+is q we have Eq−1 = 0 because Aq is assumed to be chosen in such a way,
+that |Eq−1| is minimal. Thus (3.33) holds for i = q − 1 too and by induction
+on q there exist integers A0, . . . , Ap−1 satisfying (3.33) for 0 ≤ i ≤ p − 2. It
+remains to show, that A0, . . . , Ap−1 are nonnegative. By induction we show
+0 ≤ Ai ≤ 1
+i
+( n
+i − 1
+)
+(3.60)
+for 1 ≤ i ≤ p − 1. By A0 = 0, A1 = 1 and (3.33) we have A2 = ( n − 1)/2.
+Therefore (3.60) is satisﬁed for i = 1 , 2. Now assume 3 ≤ q ≤ p − 1 and
+(3.60) holds for 1 ≤ i ≤ q − 1. We show
+0 ≤ Aq ≤ 1
+q
+( n
+q − 1
+)
+. (3.61)
+The inequality at the right-hand side of (3.61) immediately follows from
+(3.33) (for i = q − 1) and Aq−2 ≥ 0, Aq−1 ≥ 0 (by the left-hand side of (3.60)
+for i = q − 2, q − 1). To show the left-hand side of (3.61) we have
+qAq =
+( n
+q − 1
+)
+− (n − q + 2)Aq−2 − Aq−1 by 3.33
+≥
+( n
+q − 1
+)
+− n − q + 2
+q − 2
+( n
+q − 3
+)
+− 1
+q − 1
+( n
+q − 2
+)
+by 3.60
+=
+(
+1 − q − 1
+n − q + 3 − 1
+n − q + 2
+)( n
+q − 1
+)
+≥
+(
+1 − q
+n − q + 2
+)( n
+q − 1
+)
+≥
+(
+1 − p
+n − p + 2
+)( n
+q − 1
+)
+by q ≤ p
+≥ 0
+by p ≤ n+1
+2 (since p is an odd prime dividing the even number n + 1).
+Therefore the inequality at the left-hand side of (3.61) follows. By induction
+on q now (3.60) follows for 1 ≤ i ≤ p − 1. This completes the proof of
+Theorem 26.
+42
+3.5.4 The main property of the excess matrix
+Again let C ⊂ Fn be a binary code of odd length n and covering radius one
+with n ≡ −1 (mod p) for an odd prime p. Assume
+E0 = E1 = . . . = Ep−2 = 0 (3.62)
+with Ei = Ei(0) for i ≥ 0. Remember that the excess matrix D of C and
+their column sets B1, . . . , Bn ⊂ A were deﬁned in Deﬁnition 30. We now use
+Theorem 31 and Theorem 32 to prove the following main theorem on the
+excess matrix.
+Theorem 40. The column sets B1, . . . , Bn ⊂ A of the excess matrix D
+always satisfy
+|{1 ≤ i ≤ n | a ∈ Bi}| = p − 1 whenever a ∈ A (3.63)
+and ⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+Bri
+⏐⏐⏐⏐⏐ ≡ 0 (mod p − s) (3.64)
+whenever 1 ≤ s ≤ p − 1 and r1, . . . , rs are integers with 1 ≤ r1 < r 2 < . . . <
+rs ≤ n.
+Proof. (3.63) follows directly from (3.39), since each row of the excess matrix
+is a word dj for a suitable j ∈ A. Concerning (3.64), let 1 ≤ s ≤ p − 1 and
+r1, . . . , rs be integers with 1 ≤ r1 < r 2 < . . . < r s ≤ n. We set q = p − s.
+Now q and n + 1 cannot have a common odd prime divisor p′ ≤ q < p , since
+then n ≡ − 1 (mod p′) and thus E0 + E1 + . . . + Ep′−1 ≡ − 1 (mod p′) by
+Theorem 24, contradicting (3.62). Therefore the propositions of Theorem
+32 are satisﬁed. An application of Theorem 32 now yields, that C satisﬁes
+condition ( q) (see deﬁnition 28) and (3.64) follows by Theorem 31.
+As the next major step towards the proof of Theorem 33 we proceed with
+a detailed study of subset systems satisfying (3.63) and (3.64) in the next
+section.
+3.6 Congruence set systems and their resolv-
+ability
+Deﬁnition 41. Let A be a ﬁnite nonempty set and p an integer with p ≥ 2.
+A p-congruence set system on A is a sequence of (not necessarily distinct)
+43
+subsets B1, . . . , Bn ⊂ A satisfying
+|{1 ≤ i ≤ n | a ∈ Bi}| = p − 1 (3.65)
+for every a ∈ A and
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+Bri
+⏐⏐⏐⏐⏐ ≡ 0 (mod p − s) (3.66)
+whenever 1 ≤ s ≤ p − 1 and r1, . . . , rs are integers with 1 ≤ r1 < r 2 < . . . <
+rs ≤ n.
+Note, that p is not required to be prime in this section. Moreover (3.65)
+implies 1 ≤ p − 1 ≤ n, because A is supposed to be nonempty.
+Let us use p − CSS (A; B1, . . . , Bn) as an abbreviation for the statement,
+that p ≥ 2, A is a nonempty ﬁnite set and the subsets B1, . . . , Bn ⊂ A form
+a p-congruence set system on A.
+3.6.1 Simple properties of congruence set systems
+Lemma 42. If p ≥ 3, then p − CSS (A; B1, . . . , Bn) implies
+(p − 1) − CSS (Bj; B1 ∩ Bj, . . . , Bj−1 ∩ Bj, Bj+1 ∩ Bj, . . . , Bn ∩ Bj)
+whenever 1 ≤ j ≤ n with Bj ⁄= ∅.
+Proof. Using p − CSS (A; B1, . . . , Bn) we ﬁnd
+|{1 ≤ i ≤ n | i ⁄= j, a ∈ Bi ∩ Bj}| = |{1 ≤ i ≤ n | a ∈ Bi} \ {j}| = p − 2
+whenever a ∈ Bj and
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+(Bri ∩ Bj)
+⏐⏐⏐⏐⏐ =
+⏐⏐⏐⏐⏐Bj ∩
+⋂
+1≤i≤s
+Bri
+⏐⏐⏐⏐⏐ ≡ 0 (mod p − 1 − s)
+whenever 1 ≤ s ≤ p−2 and r1, . . . , rs are integers with 1 ≤ r1 < . . . < r s ≤ n,
+ri ⁄= j (1 ≤ i ≤ s). From this Lemma 42 immediately follows.
+Lemma 43. Assume A′′ ⊂ A with |A′′| < |A|. Then p−CSS (A; B1, . . . , Bn)
+and p − CSS (A′′; B1 ∩ A′′, . . . , Bn ∩ A′′) imply
+p − CSS (A \ A′′; B1 \ A′′, . . . , Bn \ A′′).
+44
+Proof. By p − CSS (A; B1, . . . , Bn) we ﬁnd
+|{1 ≤ i ≤ n | a ∈ Bi \ A′′}| = |{1 ≤ i ≤ n : a ∈ Bi}| = p − 1
+for each a ∈ A \ A′′. Moreover, if 1 ≤ s ≤ p − 1 and r1, . . . , rs are integers
+with 1 ≤ r1 < . . . < r s ≤ n, then
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+(Bri \ A′′)
+⏐⏐⏐⏐⏐ =
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+Bri \
+⋂
+1≤i≤s
+(Bri ∩ A′′)
+⏐⏐⏐⏐⏐
+=
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+Bri
+⏐⏐⏐⏐⏐ −
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+(Bri ∩ A′′)
+⏐⏐⏐⏐⏐
+≡ 0 (mod p − s)
+by p−CSS (A; B1, . . . , Bn) and p−CSS (A′′; B1∩A′′, . . . , Bn∩A′′) and Lemma
+43 follows.
+Lemma 44. p − CSS (A; B1, . . . , Bn) implies
+(p − 1)|A| =
+∑
+1≤i≤n
+|Bi|. (3.67)
+Proof. By (3.65) we have
+(p − 1)|A| = (p − 1)
+∑
+a∈A
+1 =
+∑
+a∈A
+∑
+1≤i≤n
+a∈Bi
+1 =
+∑
+1≤i≤n
+|Bi|.
+In the next lemma we give a simple, but important example of a congru-
+ence set system.
+Lemma 45. Assume p ≥ 2 and A = {a1, . . . , ap} with |A| = p. Then
+p − CSS (A; A \ {a1}, . . . , A\ {ap}).
+Proof. For every a ∈ A there exists a unique number j with 1 ≤ j ≤ p and
+a = aj. Therefore
+|{1 ≤ i ≤ p | a ∈ A \ {ai}}| = |{1 ≤ i ≤ p | i ⁄= j}| = p − 1.
+45
+Moreover whenever 1 ≤ s ≤ p − 1 and r1, . . . , rs are integers with 1 ≤ r1 <
+. . . < r s ≤ p then
+⏐⏐⏐⏐⏐
+⋂
+1≤i≤s
+(A \ {ari})
+⏐⏐⏐⏐⏐ = |A \ {ar1, . . . , ars}| = p − s ≡ 0 (mod p − s)
+and Lemma 45 follows.
+Lemma 45 may be used to construct more examples of congruence set
+systems. Let Pk(A) denote the set of the k-element subsets of A. Assume A
+is a ﬁnite nonempty set and p an integer with p ≥ 2. We call a sequence of
+(not necessarily distinct) subsets B1, . . . , Bn ⊂ A p -resolvable on A, if there
+is a partition A1 ∪ . . . ∪ At = A of A in pairwise disjoint subsets Aj ⊂ A
+(1 ≤ j ≤ t) satisfying
+|Aj| = p,
+|{1 ≤ i ≤ n | Bi ∩ Aj ⁄= ∅}| = p
+and
+{Bi ∩ Aj | 1 ≤ i ≤ n with Bi ∩ Aj ⁄= ∅} = Pp−1(Aj)
+whenever 1 ≤ j ≤ t. Using Lemma 45 it is not diﬃcult to see, that
+p − CSS (A; B1, . . . , Bn) holds whenever the sequence B1, . . . , Bn ⊂ A is
+p-resolvable on A. The main object of the next section is to show a partial
+converse.
+3.6.2 The classiﬁcation of congruence set systems on
+small sets
+In the next theorem we give a complete characterization for congruence set
+systems on a set A with |A| ≤ (p − 3)p.
+Theorem 46. Assume p − CSS (A; B1, . . . , Bn) with
+|A| ≤ (p − 3)p. (3.68)
+Then the sequence B1, . . . , Bn ⊂ A is p-resolvable on A. Especially |A| is
+divisible by p.
+46
+Proof. Without loss of generality we may assume Bi ⁄= ∅ for 1 ≤ i ≤ n,
+since empty sets occuring in the sequence B1, . . . , Bn do neither inﬂuence the
+property of being a p-congruence set system nor the notion of p-resolvability.
+The propositions of Theorem 46 are not satisﬁed for p ≤ 3, so we may assume
+p ≥ 4 (and thus n ≥ 3). Theorem 46 follows by induction on p and |A|, if
+we are able to show, that the sequence B1, . . . , Bn ⊂ A is p-resolvable on A
+under the assumption of the following statements (i) and (ii).
+(i) If 2 ≤ p′ < p, p′ − CSS (A′; B′
+1, . . . , B′
+n′) and
+|A′| ≤ (p′ − 3)p′, (3.69)
+then the sequence B′
+1, . . . , B′
+n′ is p′-resolvable on A′.
+(ii) If |A′| < |A| and p−CSS (A′; B′
+1, . . . , B′
+n′), then the sequence B′
+1, . . . , B′
+n′
+is p-resolvable on A′.
+We ﬁrst show, that it suﬃces to prove the existence of a subset A′′ ⊂ A
+satisfying
+|A′′| = p (3.70)
+and
+{Bi ∩ A′′ | 1 ≤ i ≤ n with Bi ∩ A′′ ⁄= ∅} = Pp−1(A′′). (3.71)
+Note that from (3.65), (3.71) and |Pp−1(A′′)| = p follows
+|{1 ≤ i ≤ n | Bi ∩ A′′ ⁄= ∅}| = p. (3.72)
+Therefore, if A′′ = A, then the sequence B1, . . . , Bn is p-resolvable on A
+with the only resolution class A′′. If |A′′| < |A|, then (3.71), (3.72) and an
+application of Lemma 45 with A = A′′ immediately imply p − CSS (A′′; B1 ∩
+A′′, . . . , Bn∩A′′). Now by Lemma 43 we have p−CSS (A\A′′; B1\A′′, . . . , Bn\
+A′′). We thus may apply statement (ii) with n′ = n, A′ = A \ A′′ and
+B′
+i = Bi \A′′ (1 ≤ i ≤ n). We ﬁnd that the sequence B1 \A′′, . . . , Bn \A′′ is p-
+resolvable on A\A′′. This means that there is a partition A1∪. . .∪At = A\A′′
+of A \ A′′ in pairwise disjoint subsets Aj ⊂ A \ A′′ (1 ≤ j ≤ t) satisfying
+|Aj| = p,
+|{1 ≤ i ≤ n | (Bi \ A′′) ∩ Aj ⁄= ∅}| = p
+47
+and
+{(Bi \ A′′) ∩ Aj | 1 ≤ i ≤ n with ( Bi \ A′′) ∩ Aj ⁄= ∅} = Pp−1(Aj)
+for 1 ≤ j ≤ t. If we now set At+1 = A′′, then this together with (3.70),
+(3.71) and (3.72) implies, that A1 ∪ . . .∪ At ∪ At+1 = A with pairwise disjoint
+subsets Aj ⊂ A (1 ≤ j ≤ t + 1) satisfying
+|Aj| = p,
+|{1 ≤ i ≤ n | Bi ∩ Aj ⁄= ∅}| = p
+and
+{Bi ∩ Aj | 1 ≤ i ≤ n with Bi ∩ Aj ⁄= ∅} = Pp−1(Aj)
+for 1 ≤ j ≤ t + 1. This means, that the sequence B1, . . . , Bn is p-resolvable
+on A. Therefore the proof of Theorem 46 is complete, if we can show that
+there exists a subset A′′ ⊂ A satisfying (3.70) and (3.71). Let us consider
+two cases.
+Case I. |Bi| ≥ (p − 3)(p − 1) for 1 ≤ i ≤ n.
+By (3.66) we have |Bi| ≡ 0 (mod p − 1) for 1 ≤ i ≤ n. This implies, that
+indeed in case I we have
+|Bi| = (p − 3)(p − 1) for 1 ≤ i ≤ n, (3.73)
+since otherwise by (3.68) we would have the contradiction |Bi| ≥ (p − 2)(p −
+1) > (p−3)p ≥ |A| ≥ | Bi| (1 ≤ i ≤ n). Again by (3.66) we have |B1 ∩B2| ≡ 0
+(mod p − 2) (remember p ≥ 4 and n ≥ 3). This implies |B1 ∩ B2| ≤
+(p − 3)(p − 2), since otherwise by (3.73) we would have the contradiction
+|B1 ∩ B2| ≥ (p − 2)2 > (p − 3)(p − 1) = |B1| ≥ | B1 ∩ B2|. We therefore have
+|A| ≥ | B1 ∪ B2| = |B1| + |B2| − |B1 ∩ B2|
+≥ 2(p − 3)(p − 1) − (p − 3)(p − 2)
+= ( p − 3)p,
+which implies
+|A| = (p − 3)p (3.74)
+by (3.68). Now (3.73) and (3.74) inserted in (3.67) immediately yields
+n = p. (3.75)
+48
+From (3.73), (3.74) and p ≥ 4 follows A \ Bi ⁄= ∅ for 1 ≤ i ≤ p. Therefore we
+may choose ai ∈ A \ Bi (1 ≤ i ≤ p). We set
+A′′ = {a1, . . . , ap}.
+We next show
+|A′′| = p. (3.76)
+Otherwise at least two of the elements a1, . . . , ap must be equal, say a1 = a2.
+Then by deﬁnition a1 ⁄∈ B1 ∪ B2. Therefore by (3.75)
+|{1 ≤ i ≤ n | a1 ∈ Bi}| ≤ |{ 3 ≤ i ≤ p | a1 ∈ Bi}| ≤ p − 2
+contradicting (3.65).
+We now show
+Bi ∩ A′′ = A′′ \ {ai} (1 ≤ i ≤ p). (3.77)
+Fix i0 with 1 ≤ i0 ≤ p. We have Bi0 ∩ A′′ ⊂ A′′ \ {ai0} by ai0 ⁄∈ Bi0. It
+remains to show A′′ \ {ai0} ⊂ Bi0 ∩ A′′. Assume a ∈ A′′ \ {ai0}, say a = ai1
+with 1 ≤ i1 ≤ p, i1 ⁄= i0. Then ai1 ∈ Bi0, since otherwise by (3.75) and
+ai1 ⁄∈ Bi1
+|{1 ≤ i ≤ n | ai1 ∈ Bi}| ≤ |{ 1 ≤ i ≤ p | i ⁄= i0, i ⁄= i1}| ≤ p − 2
+contradicting (3.65). Therefore A′′ \ {ai0} ⊂ Bi0 ∩ A′′ and (3.77) follows. By
+(3.75) and (3.77) we now have
+{Bi ∩ A′′ | 1 ≤ i ≤ n with Bi ∩ A′′ ⁄= ∅} = {A′′ \ {a1}, . . . , A′′ \ {ap}}
+= Pp−1(A′′).
+Thus by (3.76) the subset A′′ ⊂ A satisﬁes (3.70) and (3.71). This completes
+the proof of Theorem 46 in case I.
+Case II. There exists an integer i0 with 1 ≤ i0 ≤ n and
+|Bi0| < (p − 3)(p − 1).
+Without loss of generality we may assume i0 = 1. Using |B1| ≡ 0 (mod
+p − 1) and B1 ⁄= ∅ we thus may assume
+|B1| = c(p − 1) ≤ (p − 4)(p − 1) (3.78)
+49
+with a suitable integer c with 1 ≤ c ≤ p − 4. Especially in case II we have
+p ≥ 5 and n ≥ 4. By Lemma 42 we now have
+(p − 1) − CSS (B1; B2 ∩ B1, . . . , Bn ∩ B1).
+From (3.78) follows, that (3.69) is satisﬁed for A′ = B1, n′ = n − 1, B′
+i =
+Bi+1 ∩ B1 (1 ≤ i ≤ n′) and p′ = p − 1. Therefore by (i) we know, that the
+sequence B2 ∩ B1, . . . , Bn ∩ B1 is ( p − 1)-resolvable on B1. Thus (use (3.78))
+there exists a partition B1 = B∗
+1 ∪ . . . ∪ B∗
+c in pairwise disjoint sets B∗
+j ⊂ B1
+(1 ≤ j ≤ c) satisfying
+|B∗
+j | = p − 1, (3.79)
+|{2 ≤ i ≤ n | Bi ∩ B∗
+j ⁄= ∅}| = p − 1
+and
+{Bi ∩ B∗
+j | 2 ≤ i ≤ n with Bi ∩ B∗
+j ⁄= ∅} = Pp−2(B∗
+j ) (3.80)
+for 1 ≤ j ≤ c. For the case j = 1 without loss of generality we further may
+assume
+{Bi ∩ B∗
+1 | 2 ≤ i ≤ n with Bi ∩ B∗
+1 ⁄= ∅} = {B2 ∩ B∗
+1, . . . , Bp ∩ B∗
+1}
+= Pp−2(B∗
+1), (3.81)
+Bi ∩ B∗
+1 = ∅ for p < i ≤ n.
+We next show, that the proof of Theorem 46 is complete, if we may prove
+the existence of a ∈ A \ B1 satisfying
+a ∈ Bi (2 ≤ i ≤ p). (3.82)
+Note that by (3.65) and (3.82) we have
+a ⁄∈ Bi (p < i ≤ n). (3.83)
+If we set
+A′′ = B∗
+1 ∪ {a}
+then by (3.79) and a ⁄∈ B∗
+1 ⊂ B1 we have
+|A′′| = p. (3.84)
+50
+Using B1 ∩ A′′ = B∗
+1 now from (3.81), (3.82) and (3.83) follows
+{Bi ∩ A′′ | 1 ≤ i ≤ n with Bi ∩ A′′ ⁄= ∅}
+= {B1 ∩ A′′, . . . , Bp ∩ A′′}
+= {B∗
+1} ∪ {(B2 ∩ B∗
+1) ∪ {a}, . . . ,(Bp ∩ B∗
+1) ∪ {a}}
+= {B∗
+1} ∪ {D ∪ {a} | D ⊂ B∗
+1, |D| = p − 2}
+= Pp−1(A′′).
+Therefore by (3.84) the subset A′′ ⊂ A satisﬁes (3.70) and (3.71) and Theo-
+rem 46 follows, if we show, that there exists a ∈ A \ B1 satisfying (3.82). We
+consider two subcases.
+Case A. |Bi| ≥ (p − 3)(p − 1) (2 ≤ i ≤ p). (3.85)
+In this case by (3.79) and (3.80) we ﬁnd B∗
+j \ Bi ⁄= ∅ (1 ≤ j ≤ c, 2 ≤ i ≤ n)
+and thus
+|B1 \ Bi| =
+∑
+1≤j≤c
+|B∗
+j \ Bi| ≥ c (2 ≤ i ≤ n). (3.86)
+Moreover by (3.68), (3.85) and p ≥ 5 we have
+(|A| − |Bi|)(p − 2) ≤ (p − 3)(p − 2) < (p − 3)(p − 1) ≤ |Bi|
+for 2 ≤ i ≤ p. Addition of |A| − |Bi| yields
+(|A| − |Bi|)(p − 1) < |A| (2 ≤ i ≤ p). (3.87)
+Using ( A \ B1) \ Bi = (A \ Bi) \ (B1 \ Bi) for 2 ≤ i ≤ p we now ﬁnd
+⏐⏐⏐⏐⏐
+⋃
+2≤i≤p
+((A \ B1) \ Bi)
+⏐⏐⏐⏐⏐ ≤
+∑
+2≤i≤p
+(|A \ Bi| − |B1 \ Bi|)
+< |A|
+p − 1(p − 1) − c(p − 1) by (3.86) and (3.87)
+= |A \ B1| by (3.78).
+Therefore there exists a ∈ A \ B1 with a ⁄∈ (A \ B1) \ Bi for every i with
+2 ≤ i ≤ p and (3.82) follows in subcase A.
+Case B. There exists j0 with 2 ≤ j0 ≤ p and
+|Bj0| < (p − 3)(p − 1).
+51
+Like at the beginning of case II without loss of generality we may assume
+j0 = 2 and
+|B2| = d(p − 1)
+with a suitable integer d with 1 ≤ d ≤ p − 4. Likewise we may assume
+that the sequence B1 ∩ B2, B3 ∩ B2, . . . , Bn ∩ B2 is ( p − 1)-resolvable on B2.
+Therefore there is a partition B2 = B∗∗
+1 ∪. . .∪B∗∗
+d in pairwise disjoint subsets
+B∗∗
+j ⊂ B2 (1 ≤ j ≤ d) satisfying
+|B∗∗
+j | = p − 1,
+|{1 ≤ i ≤ n, i ⁄= 2 | Bi ∩ B∗∗
+j ⁄= ∅}| = p − 1 (3.88)
+and
+{Bi ∩ B∗∗
+j | 1 ≤ i ≤ n, i ⁄= 2 with Bi ∩ B∗∗
+j ⁄= ∅} = Pp−2(B∗∗
+j ) (3.89)
+for 1 ≤ j ≤ d. By (3.81) we have
+|B2 ∩ B∗
+1| = p − 2. (3.90)
+From this follows, that there exists an integer j1 with 1 ≤ j1 ≤ d satisfying
+|B∗∗
+j1 ∩ B∗
+1| ≥ 2. (3.91)
+Otherwise we would have |B∗∗
+j ∩ B∗
+1| ≤ 1 for 1 ≤ j ≤ d and thus
+|B2 ∩ B∗
+1| =
+∑
+1≤j≤d
+|B∗∗
+j ∩ B∗
+1| ≤ d ≤ p − 4
+contradicting (3.90). By (3.81) for every i with 3 ≤ i ≤ p we have |Bi ∩B∗
+1| =
+p − 2, which together with (3.79) implies |B∗
+1 \ Bi| = 1 (3 ≤ i ≤ p). Thus
+by (3.91) Bi ∩ B∗∗
+j1 is nonempty for 3 ≤ i ≤ p, which again by (3.91) and
+B∗
+1 ⊂ B1 does hold for i = 1 as well. By (3.88) and (3.89) we thus have
+{Bi ∩ B∗∗
+j1 | 1 ≤ i ≤ p, i ⁄= 2} = Pp−2(B∗∗
+j1 ). (3.92)
+Especially |B1 ∩ B∗∗
+j1 | = p − 2. By |B∗∗
+j1 | = p − 1 there exists a ∈ B∗∗
+j1 \ B1,
+i.e. a ⁄∈ B1 ∩ B∗∗
+j1 . From (3.92) now follows a ∈ Bi ∩ B∗∗
+j1 for 3 ≤ i ≤ p. By
+a ∈ B∗∗
+j1 ⊂ B2 we thus see, that a ∈ A \ B1 satisﬁes (3.82). Thus Theorem
+46 follows in subcase B too.
+52
+3.6.3 Open questions
+Let M (m) denote the least common multiple of the integers 1 , . . . , m. Let
+p be an odd prime and A a set with |A| = M (p − 1). Then trivially the
+sequence B1 = . . . = Bp−1 = A forms a p-congruence set system on A, which
+is not p-resolvable on A. We conjecture, that this is the least |A| with this
+property.
+Conjecture 47. The proposition (3.68) in Theorem 46 may be replaced by
+|A| < M (p − 1).
+Strongly related to this conjecture is the following. Call a p-congruence
+set system simple, if p−CSS (A; B1, . . . , Bn) holds, but not p−CSS (A′′; B1 ∩
+A′′, . . . , Bn ∩ A′′) whenever A′′ ⊂ A with 1 ≤ |A′′| < |A|. Examples of simple
+congruence set systems are the sequence of the ( p − 1)-element subsets of a
+p-element set or the congruence set system on a set A with |A| = M (p − 1)
+mentioned above. Theorem 46 says, that the ﬁrst mentioned p-congruence
+set system is the only simple one on a set of cardinality at most ( p − 3)p. A
+solution for the following problem would yield a complete classiﬁcation of all
+congruence set systems.
+Problem 48. Determine all simple congruence set systems.
+3.6.4 Proof of Theorem 33
+Proof. Let C ⊂ Fn be a binary code of length n and covering radius one with
+n ≡ −1 (mod p) for an odd prime p. Assume x ∈ Fn satisﬁes
+E0(x) = E1(x) = . . . = Ep−2(x) = 0 . (3.93)
+We have to show
+Ep−1(x) ≥ (p − 2)p − 1. (3.94)
+It suﬃces to consider the case x = 0 and we write Ei instead of Ei(0) for
+0 ≤ i ≤ p − 1. By Theorem 40 we have p − CSS (A; B1, . . . , Bn) for the
+column sets B1, . . . , Bn ⊂ A of the excess matrix D of C. By (3.93) and
+Theorem 24 we have |A| = Ep−1 ≡ −1 (mod p) and thus |A| is not divisible
+by p. An application of Theorem 46 yields Ep−1 = |A| > (p − 3)p. Now
+(3.94) follows by Ep−1 ≡ −1 (mod p). This completes the proof of Theorem
+33.
+53
+We remark, that conjecture 47 implies, that the right-hand side of (3.46)
+in Theorem 33 may be replaced by M (p − 1), which grows exponentially with
+p.
+3.7 The general excess bound improved
+We now use Theorem 33 to give the following improvement of the general
+excess bound for binary codes with covering radius one (Theorem 25).
+Theorem 49. If n ≡ −1 (mod p) for an odd prime p, then
+K(n, 1) ≥
+(
+1 + 1
+g(n)
+) 2n
+n + 1
+with
+g(n) = 1
+(p − 2)p − 1
+( n
+p − 1
+)
++
+∑
+0≤i≤p−2
+1
+i + 1
+(n
+i
+)
+.
+Proof. Assume n ≡ − 1 (mod p) for an odd prime p and a positive integer
+n. Without loss of generality we may assume that n is odd, since for even n
+Theorem 49 easily follows from Theorem 3. Let C ⊂ Fn be a code of length
+n and covering radius one with |C| = K(n, 1). Assume p′ ≤ p is the least odd
+prime satisfying n ≡ − 1 (mod p′). We may assume p′ ≥ 5, since for p′ = 3
+Theorem 49 already follows from Theorem 6. We use Theorem 33 (with p′
+instead of p). Let x ∈ Fn. If E0(x) = . . . = Ep′−2(x) = 0 is satisﬁed, then
+Ep′−1(x) ≥ (p′ − 2)p′ − 1. If E0(x) = . . . = Ep′−2(x) = 0 is not satisﬁed, let
+q (1 ≤ q ≤ p′ − 1 ≤ n) denote the least integer satisfying Eq−1(x) > 0. Now
+q and n + 1 do not have a common odd prime divisor, since q < p ′ and p′ is
+assumed to be the least odd prime divisor of n+1. Therefore the propositions
+of Theorem 32 are satisﬁed. From (3.44), E0(x) = . . . = Eq−2(x) = 0 and
+Eq−1(x) > 0 now follows Eq−1(x) ≥ q. Altogether we see, that at least one
+of the inequalities
+E0(x) ≥ 1, E1(x) ≥ 2, . . . , Ep′−2(x) ≥ p′ − 1 and Ep′−1(x) ≥ (p′ − 2)p′ − 1
+is satisﬁed. By p′ ≤ p and ( p′ − 2)p′ − 1 ≥ p′ for p′ ≥ 5 this implies, that at
+least one of the inequalities
+E0(x) ≥ 1, E1(x) ≥ 2, . . . , Ep−2(x) ≥ p − 1 and Ep−1(x) ≥ (p − 2)p − 1
+54
+must be satisﬁed. From this we get
+1
+(p − 2)p − 1Ep−1(x) +
+∑
+0≤i≤p−2
+1
+i + 1 Ei(x) ≥ 1
+for each x ∈ Fn. Summing over all x ∈ Fn and using
+∑
+x∈Fn
+Ei(x) =
+(n
+i
+)
+E(Fn) =
+(n
+i
+)
+((n + 1)|C| − 2n)
+for 0 ≤ i ≤ n by (2.8), we get
+((n + 1)|C| − 2n)
+(
+1
+(p − 2)p − 1
+( n
+p − 1
+)
++
+∑
+0≤i≤p−2
+1
+i + 1
+(n
+i
+))
+≥ 2n
+and Theorem 49 follows by |C| = K(n, 1).
+55
+56
+Chapter 4
+Bounds for K(n, R)
+In this chapter we examine bounds for K(n, R), which rely on a covering
+excess in spheres with radius one. We describe a classical bound of van
+Wee for this case from 1988 and a slight improvement of this bound by
+Honkala. We present a short proof of a further improvement of Honkala’s
+bound. Moreover we give an improvement of the van Wee bound in case that
+R + 1 divides n, when both bounds coincide and no general further progress
+of the van Wee bound is known up to now.
+4.1 The bounds of van Wee and Honkala
+Let C ⊂ Fn be a binary code with covering radius R. We deﬁne the set A of
+deep holes by
+A = {x ∈ Fn | d(x, C) = R}.
+Trivially we have
+|A| ≥ 2n − |C|V (n, R − 1). (4.1)
+The special case R = 1 and even n of the following theorem is already
+contained in Theorem 2. Let ⌈x⌉ denote the smallest integer bigger than or
+equal to x.
+Theorem 50 (van Wee [29]) . Let C ⊂ Fn be a binary code with covering
+radius R. Then for x ∈ A we have
+E(B(x, 1)) ≥ ϵ,
+57
+where ϵ is deﬁned by
+ϵ = (R + 1)
+⌈ n + 1
+R + 1
+⌉
+− (n + 1) ≤ R. (4.2)
+Proof. If c ∈ C, then |B(c, R) ∩ B(x, 1)| equals the number of words in the
+sphere B(x, 1), which were R-covered by c. By x ∈ A we have d(c, x) ≥ R.
+One easily sees, that
+|B(c, R) ∩ B(x, 1)| =
+{ R + 1 if R ≤ d(c, x) ≤ R + 1,
+0 if d(c, x) ≥ R + 2.
+Now (2.6) applied to V = B(x, 1) yields
+E(B(x, 1)) =
+∑
+c∈C
+|B(c, R) ∩ B(x, 1)| − |B(x, 1)|
+≡ − (n + 1) (mod R + 1)
+≡ ϵ (mod R + 1)
+and Theorem 50 follows by 0 ≤ ϵ ≤ R.
+We need another lemma before we can generalize Theorem 3.
+Lemma 51. Let C ⊂ Fn be a binary code with covering radius R ≤ n. Then
+for z ∈ Z we have
+|A ∩ B(z, 1)| ≤ n − R.
+Proof. It suﬃces to consider the case z = 0. By 0 ∈ Z there exist two
+distinct codewords c1, c2 ∈ C with d(0, c1) ≤ R and d(0, c2) ≤ R. We have
+supp(c1) ⁄= supp(c2), so without loss i0 ∈ supp(c2) \ supp(c1) with a suitable
+i0, 1 ≤ i0 ≤ n. If d(0, c1) ≤ R−2, then A∩B(z, 1) = ∅ and Lemma 51 follows.
+If d(0, c1) = R − 1, then clearly S = {0, ei0} ∪ {ei | i ∈ supp(c1)} ⊂ B(0, 1) \
+(A ∩ B(0, 1)) and Lemma 51 follows by |S| = R + 1 and |B(0, 1)| = n + 1. If
+d(0, c1) = R, then S = {ei0} ∪ {ei | i ∈ supp(c1)} ⊂ B(0, 1) \ (A ∩ B(0, 1))
+and Lemma 51 follows again.
+The following theorem of van Wee [29] generalizes Theorem 3 to arbitrary
+covering radius.
+58
+Theorem 52 (van Wee [29]) . If 1 ≤ R < n , then
+K(n, R) ≥ (n − R + ϵ)2n
+(n − R)V (n, R) + ϵV (n, R − 1),
+where ϵ is deﬁned in (4.2).
+Proof. Let C ⊂ Fn be a binary code with covering radius R and |C| =
+K(n, R). We get
+ϵ|A| =
+∑
+x∈A
+ϵ
+≤
+∑
+x∈A
+E(B(x, 1)) by Theorem 50
+=
+∑
+x∈A
+∑
+z∈B(x,1)
+E(z)
+=
+∑
+z∈Z
+E(z)
+∑
+x∈A∩B(z,1)
+1
+≤ (n − R)E(Fn) by Lemma 51
+= ( n − R)(|C|V (n, R) − 2n) by (2 .7)
+and Theorem 52 follows by (4.1) and |C| = K(n, R).
+Theorem 52 was further improved by Honkala [13], [14].
+Theorem 53 (Honkala [13], [14]) . If R ≥ 2, n ≥ 2R + 1 and ϵ (deﬁned in
+(4.2)) satisﬁes
+ϵ ≤ R − 1,
+then
+K(n, R) ≥ (ρ + ϵ)2n
+ρV (n, R) + ϵV (n, R − 1),
+where
+ρ =
+{ n − 3 + 2
+n if R = 2,
+n − R − 1 if R ≥ 3. (4.3)
+The proof of Theorem 53 works by dividing Z into several classes, use
+improved estimations for some of them and then average in a suitable manner.
+We omit the proof, since it is somewhat complicated and in the next section
+we present a quite short proof of a further improvement of Theorem 53.
+59
+4.2 An improvement of Honkala’s bound
+In this section we prove the following theorem.
+Theorem 54. If R ≥ 1, n ≥ 2R + 1 and ϵ is deﬁned in (4.2), then
+K(n, R) ≥ (n − 2R + 2ϵ)2n
+(n − 2R + ϵ)V (n, R) + ϵV (n, R − 1).
+Especially the extra summand 2 /n in (4.3) in case of R = 2 may be
+omitted. Note, that the restriction n ≥ 2R + 1 is not essential, since all
+values of K(n, R) are known, when n < 2R + 1, see [4].
+As a corollary we get the following improvements for K´ eris table [19].
+Corollary 55.
+K(19, 2) ≥ 2898 (2897 [ 14])
+K(25, 2) ≥ 107218 (107203 [ 14])
+K(28, 2) ≥ 683980 (683972 [ 10])
+K(31, 2) ≥ 4464944 (4464613 [ 14])
+K(32, 4) ≥ 110467 (110215 [ 14]).
+Proof of Theorem 54. Let C ⊂ Fn be a binary code with covering radius R
+and |C| = K(n, R). We set
+Ai = {x ∈ A | E(B(x, 1)) = i} (ϵ ≤ i < R ),
+AR = {x ∈ A | E(B(x, 1)) ≥ R}.
+Moreover for ϵ ≤ i < R let
+Z (i) = {z ∈ Z | Ai ∩ B(z, 1) ⁄= ∅, A j ∩ B(z, 1) = ∅ for all ϵ ≤ j < i },
+Z (R) = Z \
+⋃
+ϵ≤i<R
+Z (i). (4.4)
+By deﬁnition we have ( ϵ ≤ i < R )
+Ai ∩ B(z, 1) = ∅ if z ∈ Z (j) with i < j ≤ R. (4.5)
+We now improve on Lemma 51.
+60
+Lemma 56. If ϵ ≤ i ≤ R and z ∈ Z (i), then
+|A ∩ B(z, 1)| ≤ n − 2R + i.
+Proof. If i = R, then Lemma 56 follows from Lemma 51, so we may assume
+ϵ ≤ i < R . By (4.4) we may choose x ∈ Ai ∩ B(z, 1). By z ∈ Z there
+exist c1, c2 ∈ C with c1 ⁄= c2 and d(c1, z), d(c2, z) ≤ R. By x ∈ A and
+d(z, x) ≤ 1 we have d(c1, x), d(c2, x) ∈ { R, R + 1}. We only consider the
+case d(c1, x) = d(c2, x) = R + 1 (implying x ⁄= z), since the other cases
+are working quite similar. Assume x = ( x1, . . . , xn), ci = ( ci1, . . . , cin) for
+i ∈ {1, 2} and
+Bi = {1 ≤ j ≤ n | cij ⁄= xj}, i ∈ {1, 2}.
+Clearly x + ek is R-covered both by c1 as well as by c2 whenever k ∈ B1 ∩ B2,
+implying |B1 ∩ B2| ≤ ∑
+k∈B1∩B2 E(x + ek) ≤ E(B(x, 1)) = i by x ∈ Ai.
+Therefore we have
+|B1 ∪ B2| = |B1| + |B2| − |B1 ∩ B2| = 2R + 2 − |B1 ∩ B2| ≥ 2R − i + 2.
+Fix j0 ∈ {1, . . . , n} with z = x + ej0. Now for every k ∈ (B1 ∪ B2) \ {j0} we
+either have d(z + ek, c1) < R or d(z + ek, c2) < R , which means z + ek ⁄∈ A
+for k ∈ (B1 ∪ B2) \ {j0}. This implies
+|A ∩ B(z, 1)| ≤ B(z, 1) − |(B1 ∪ B2) \ {j0}|
+= n + 1 − |(B1 ∪ B2) \ {j0}|
+≤ n − 2R + i,
+completing the proof of Lemma 56.
+We now are able to prove Theorem 54. We may assume ϵ > 0, since the
+61
+case ϵ = 0 reduces to the sphere-covering bound (2.4). We have
+|A| =
+∑
+ϵ≤i≤R
+|Ai| by Theorem 50
+≤
+∑
+ϵ≤i≤R
+1
+i
+∑
+x∈Ai
+E(B(x, 1))
+=
+∑
+ϵ≤i≤R
+1
+i
+∑
+z∈Z
+E(z)
+∑
+x∈Ai∩B(z,1)
+1
+=
+∑
+ϵ≤j≤R
+∑
+z∈Z(j)
+E(z)
+∑
+ϵ≤i≤R
+1
+i
+∑
+x∈Ai∩B(z,1)
+1
+=
+∑
+ϵ≤j≤R
+∑
+z∈Z(j)
+E(z)
+∑
+j≤i≤R
+1
+i
+∑
+x∈Ai∩B(z,1)
+1 by (4.5)
+≤
+∑
+ϵ≤j≤R
+1
+j
+∑
+z∈Z(j)
+E(z)
+∑
+x∈A∩B(z,1)
+1
+≤
+∑
+ϵ≤j≤R
+n − 2R + j
+j
+∑
+z∈Z(j)
+E(z) by Lemma 56
+≤ n − 2R + ϵ
+ϵ
+∑
+z∈Z
+E(z) by n ≥ 2R + 1
+= n − 2R + ϵ
+ϵ E(Fn)
+and Theorem 54 follows using (2.7), (4.1) and |C| = K(n, R).
+4.3 The case ϵ = R
+Of special interest is the case ϵ = R (which means, that R + 1 divides n),
+since then van Wee’s bound (Theorem 52) and the new bound (Theorem
+54) coincide and the propositions of Honkala’s bound (Theorem 53) are not
+satisﬁed. Indeed (as far as the author is aware) in that case no general
+improvement of the van Wee bound is known. In this section we present
+such an improvement.
+Theorem 57. If 2 ≤ R < n , R + 1 divides n and
+M =
+(R
+2
+)
++ R − 1
+V (n, 2) − 1 − (R − 2)
+(
+n − R−3
+2
+) ≤ 1
+n (4.6)
+62
+holds, then
+K(n, R) ≥ (n − τ )2n
+(n − R − τ )V (n, R) + RV (n, R − 1)
+with
+τ = (n − R) M
+M + 1 .
+It is easy to see, that the denominator of the fraction in (4.6) is strictly
+positive for 2 ≤ R < n . Thus M > 0, implying τ > 0, which means, that
+Theorem 57 indeed improves on the van Wee bound (Theorem 52). Moreover
+condition (4.6) is usually satisﬁed, for instance if R is ﬁxed and n is large
+enough.
+For the rest of the section we always assume R ≥ 2.
+Corollary 58.
+K(21, 2) ≥ 9900 (9893 [ 29])
+K(24, 2) ≥ 60381 (60350 [ 29])
+K(33, 2) ≥ 16210701 (16207424 [ 29])
+K(20, 3) ≥ 892 (889 [ 29])
+K(32, 3) ≥ 855613 (854890 [ 29])
+K(30, 4) ≥ 38067 (37973 [ 29]).
+Let C ⊂ Fn be a binary code with covering radius R and |C| = K(n, R).
+For the proof of Theorem 57 we use the notations of the sections 4.1 and 4.2.
+Moreover we set
+Z(1) = {z ∈ Z | |A ∩ B(z, 1)| = n − R},
+Z(2) = {z ∈ Z | A ∩ B(z, 1) = ∅},
+Z(3) = Z \ (Z(1) ∪ Z(2)).
+We have
+Z(1) ∩ B(C, R − 2) = ∅, (4.7)
+where B(C, i), 0 ≤ i ≤ n is deﬁned by
+B(C, i) =
+⋃
+c∈C
+B(c, i) (0 ≤ i ≤ n).
+63
+If not, assume z ∈ Z(1) ∩ B(C, R − 2). Then there exists c ∈ C with d(z, c) ≤
+R − 2. This implies d(x, c) ≤ R − 1 for every x ∈ B(z, 1) and thus A ∩
+B(z, 1) = ∅, contradicting |A ∩ B(z, 1)| = n − R > 0 for z ∈ Z(1).
+For the proof of Theorem 57 we need three more lemmas.
+Lemma 59. If y, c ∈ Fn with d(y, c) ≤ R − 2, then
+|B(y, 2) ∩ B(c, R − 2)| ≥ 1 + (R − 2)
+(
+n − R − 3
+2
+)
+. (4.8)
+Proof. It suﬃces to consider the case d(y, c) = R − 2, since it is well-known,
+that |B(x1, r1) ∩ B(x2, r2)| ≥ | B(x3, r1) ∩ B(x4, r2)| whenever x1, x2, x3, x4 ∈
+Fn satisfy d(x1, x2) ≤ d(x3, x4) (van Wee [29], see also [4] Theorem 2.4.8).
+Assume x ∈ B(y, 2) ∩ B(c, R − 2). Then either x = y or x is obtained
+from y by changing y in one of the R − 2 coordinates, where y diﬀers from
+c and in zero or one of the n − 1 remaining coordinates. Now every x ∈
+B(y, 2) ∩ B(c, R − 2) obtained from y by changing y in two of the R − 2
+coordinates, where c and y diﬀer, is counted twice. Altogether
+|B(y, 2) ∩ B(c, R − 2)| = 1 + ( R − 2)n −
+(R − 2
+2
+)
+and (4.8) follows.
+A part of the next lemma already appeared in Habsieger, Plagne [10]
+(Lemma 6).
+Lemma 60. For every z ∈ Z(1) there exists a set Dz satisfying
+a) Dz ⊂ (B(z, 2) \ {z}) ∩ B(C, R − 2) ∩ Z(2),
+b) |Dz| =
+(R
+2
+)
++ R − 1,
+c) E(y) ≥ E(z) for every y ∈ Dz.
+Proof. It suﬃces to assume z = 0. By 0 ∈ Z(1) ⊂ Z there exist c1, c2 ∈ C
+with c1 ⁄= c2, d(c1, 0) ≤ R and d(c2, 0) ≤ R. We have
+w(c1 ∩ c2) ≤ R − 1, (4.9)
+since w(c1 ∩ c2) ≥ R would imply c1 = c2. We set
+Dj(u) = {x ∈ Fn | w(x) = j, x ⊂ u}
+64
+for u ∈ Fn, j ∈ {1, 2}. Apparently
+|Dj(u)| =
+(w(u)
+j
+)
+, u ∈ Fn, j ∈ {1, 2}. (4.10)
+From (4.7) follows
+d(ci, 0) ∈ {R − 1, R}, i ∈ {1, 2}.
+Therefore it suﬃces to consider the following three cases.
+Case I. d(c1, 0) = d(c2, 0) = R.
+We have d(x, ci) = R−1 for x ∈ D1(ci), i ∈ {1, 2}, implying A∩(D1(c1)∪
+D1(c2)) = ∅. Thus D1(c1) ∪ D1(c2) ⊂ B(0, 1) \ (A ∩ B(0, 1)) implying
+w(c1 ∪ c2) = |D1(c1 ∪ c2)| by (4.10)
+= |D1(c1) ∪ D1(c2)|
+≤ | B(0, 1)| − |A ∩ B(0, 1)|
+= n + 1 − (n − R) by 0 ∈ Z(1)
+= R + 1.
+From this follows
+w(c1 ∩ c2) = |D1(c1 ∩ c2)| by (4.10)
+= |D1(c1) ∩ D1(c2)|
+= |D1(c1)| + |D1(c2)| − |D1(c1) ∪ D1(c2)|
+≥ 2R − (R + 1) by (4.10)
+= R − 1.
+By (4.9) this implies
+w(c1 ∩ c2) = R − 1 (4.11)
+and thus
+d(c1, c2) = w(c1 ∪ c2) − w(c1 ∩ c2) (4.12)
+≤ R + 1 − (R − 1)
+= 2 .
+We now set
+D0 = D2(c1) ∪ D2(c2) ⊂ (B(0, 2) \ {0}) ∩ B(C, R − 2).
+65
+To prove a) it remains to show D0 ⊂ Z(2). Assume y ∈ D0, say y ∈ D2(c1).
+Then d(y, c1) = R − 2, implying d(y, c2) ≤ d(y, c1) +d(c1, c2) ≤ R by (4.12)
+and thus y ∈ Z. Again by d(y, c1) = R − 2 we ﬁnd d(x, c1) ≤ R − 1 for
+every x ∈ B(y, 1). Thus A ∩ B(y, 1) = ∅ implying y ∈ Z(2) and D0 ⊂ Z(2)
+follows. To show b) we have
+|D0| = |D2(c1)| + |D2(c2)| − |D2(c1) ∩ D2(c2)|
+= |D2(c1)| + |D2(c2)| − |D2(c1 ∩ c2)|
+=
+(R
+2
+)
++
+(R
+2
+)
+−
+(R − 1
+2
+)
+by (4.10) and (4.11)
+=
+(R
+2
+)
++ R − 1.
+Case II. d(c1, 0) = R − 1, d(c2, 0) = R.
+Similar like in case I we ﬁnd c1 ⊂ c2, w(c1 ∩ c2) = R − 1 and w(c1 ∪ c2) =
+R. We set
+D0 = D1(c1) ∪ D2(c2)
+and a), b) follow similar like in case I. Moreover d(c1, c2) = 1, so that (4.12)
+is satisﬁed.
+Case III. d(c1, 0) = d(c2, 0) = R − 1.
+Here we ﬁnd w(c1 ∩ c2) = R − 2, w(c1 ∪ c2) = R and we set
+D0 = D1(c1) ∪ D1(c2) ∪ D2(c1) ∪ D2(c2).
+Again a) and b) follow and (4.12) is satisﬁed. This completes the proof of
+Lemma 60 a) and b).
+It remains to show c). Assume y ∈ D0. From (4.12) (valid in all cases)
+follows
+d(c, c′) ≤ 2 (4.13)
+whenever c, c′ ∈ C with d(c, 0) ≤ R and d(c′, 0) ≤ R. Now c) follows, if
+we are able to show d(c, y) ≤ R for every c ∈ C with d(c, 0) ≤ R. Assume
+c ∈ C with d(c, 0) ≤ R. By y ∈ D0 ⊂ B(C, R − 2) there exists c′ ∈ C with
+d(c′, y) ≤ R − 2. By y ∈ B(0, 2) we have d(c′, 0) ≤ d(c′, y) + d(y, 0) ≤
+R − 2 + 2 = R. Thus d(c, c′) ≤ 2 by (4.13) and we get d(c, y) ≤ d(c, c′) +
+d(c′, y) ≤ 2 + R − 2 = R by (4.13). This completes the proof of Lemma
+60.
+66
+Lemma 61.
+((R
+2
+)
++ R − 1
+) ∑
+z∈Z(1)
+E(z)
+≤
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+)) ∑
+z∈Z(2)
+E(z).
+Proof. For z ∈ Z(1) let Dz denote a set satisfying a), b) and c) from Lemma
+60. For i ≥ 1 we set
+D =
+⋃
+z∈Z(1)
+Dz,
+Z(1),i = {z ∈ Z(1) | E(z) = i},
+Di = {y ∈ D | E(y) = i}.
+Moreover we use the abbreviation ( i, j ≥ 1)
+aij =
+∑
+z∈Z(1),i
+∑
+y∈Dj ∩Dz
+1.
+Assume z ∈ Z(1) and y ∈ Dz. Then by Lemma 60 a) y ∈ Dz ⊂ B(z, 2) ∩
+B(C, R − 2). Thus z ∈ B(y, 2) and d(y, cy) ≤ R − 2 for a suitable cy ∈ C.
+Now by z ∈ Z(1) and (4.7) we get z ⁄∈ B(cy, R − 2). Fixing y ∈ D we thus
+have
+|{z ∈ Z(1) | y ∈ Dz}| ≤ | B(y, 2) \ (B(y, 2) ∩ B(cy, R − 2))| (4.14)
+≤ V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+)
+67
+by Lemma 59. Fixing i ≥ 1 we now get
+((R
+2
+)
++ R − 1
+)
+|Z(1),i| −
+∑
+j>i
+aij
+=
+∑
+z∈Z(1),i
+∑
+y∈Dz
+1 −
+∑
+j>i
+∑
+z∈Z(1),i
+∑
+y∈Dj ∩Dz
+1 by Lemma 60 b)
+=
+∑
+z∈Z(1),i
+∑
+y∈Di∩Dz
+1 by Lemma 60 c)
+=
+∑
+y∈Di
+∑
+z∈Z(1),i
+y∈Dz
+1
+=
+∑
+y∈Di
+∑
+z∈Z(1)
+y∈Dz
+1 −
+∑
+j<i
+∑
+y∈Di
+∑
+z∈Z(1),j
+y∈Dz
+1 by Lemma 60 c)
+≤
+∑
+y∈Di
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+))
+−
+∑
+j<i
+∑
+z∈Z(1),j
+∑
+y∈Di∩Dz
+1
+by (4.14)
+=
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+))
+|Di| −
+∑
+j<i
+aji.
+Multiplying with i and sum over all i ≥ 1 we get
+((R
+2
+)
++ R − 1
+) ∑
+z∈Z(1)
+E(z)
+=
+((R
+2
+)
++ R − 1
+)∑
+i≥1
+i|Z(1),i|
+≤
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+))∑
+i≥1
+i|Di|
++
+∑
+i≥1
+i
+∑
+j>i
+aij −
+∑
+i≥1
+i
+∑
+j<i
+aji
+=
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+))∑
+y∈D
+E(y) −
+∑ ∑
+1≤i<j
+(j − i)aij
+≤
+(
+V (n, 2) − 1 − (R − 2)
+(
+n − R − 3
+2
+)) ∑
+z∈Z(2)
+E(z),
+68
+since D ⊂ Z(2) by Lemma 60 a).
+Proof of Theorem 57. Let C ⊂ Fn be a binary code with covering radius R
+and |C| = K(n, R). Assume
+∑
+z∈Z(i)
+E(z) = xi
+∑
+z∈Z
+E(z) (1 ≤ i ≤ 3),
+with suitable nonnegative real numbers x1, x2, x3. By R < n we see, that the
+sets Z(1), Z(2) and Z(3) are pairwise disjoint and satisfy Z(1) ∪ Z(2) ∪ Z(3) = Z,
+implying
+x1 + x2 + x3 = 1. (4.15)
+Moreover by Lemma 51
+|A ∩ B(z, 1)| ≤ n − R − 1 if z ∈ Z(3). (4.16)
+Remember that M is deﬁned in (4.6). By Lemma 61 we have
+x2 ≥ M x1, (4.17)
+which by (4.15) implies x1 ≤ 1 − x2 ≤ 1 − M x1. Thus
+x1 ≤ 1
+M + 1 . (4.18)
+Since ϵ = R if R + 1 divides n, we ﬁnd
+R|A| ≤
+∑
+x∈A
+E(B(x, 1)) by Theorem 50 (4.19)
+=
+∑
+z∈Z
+E(z)
+∑
+x∈A∩B(z,1)
+1
+≤ (n − R)
+∑
+z∈Z(1)
+E(z) + (n − R − 1)
+∑
+z∈Z(3)
+E(z)
+(by Lemma 51 and (4.16))
+= ( n − R)
+∑
+z∈Z
+E(z) − (n − R)
+∑
+z∈Z(2)
+E(z) −
+∑
+z∈Z(3)
+E(z)
+= ( n − R − (n − R)x2 − x3)
+∑
+z∈Z
+E(z).
+69
+We have
+(n − R)x2 + x3 = 1 − x1 + (n − R − 1)x2 by (4.15)
+≥ 1 − (1 − (n − R − 1)M )x1 by (4.17)
+≥ 1 − (1 − (n − R − 1)M ) 1
+M + 1 by (4.6) and (4.18)
+= ( n − R) M
+M + 1= τ.
+This inserted in (4.19) yields
+R|A| ≤ (n − R − τ )
+∑
+z∈Z
+E(z) = ( n − R − τ )E(Fn)
+and Theorem 57 follows by (2.7), (4.1) and |C| = K(n, R).
+70
+Appendix A
+Further results
+Here we shortly resume further work, which was done by various authors
+using the method of covering excess. Much of this work generalizes the set
+F = {0, 1} to an alphabet consisting of q letters. Then Aq(n, d) denotes the
+maximal cardinality of a q-ary code with minimum Hamming distance d and
+Kq(n, R) the minimal cardinality of a q-ary code of length n and covering
+radius R. Of special interest is the ternary case q = 3 due to its connection to
+football pools. So for instance the determination of K3(n, 1) is widely known
+as the football pool problem (for n matches): try to forecast the outcome of
+n football matches, each having three possible results (including a tie). You
+get a second price, if one of your forecasts has n − 1 correct results. Then
+K3(n, 1) equals the least number of forecasts to place, which, no matter of
+the outcome of the matches, guarantee at least a second price.
+The method of covering excess is often combined with the use of linear
+inequalities on the quantities Ai(x) deﬁned in (3.27).
+A.1 Notes to Chapter 2 and 3
+Generalizations of the binary Hamming codes (Theorem 1) to the q-ary case
+can be found in every textbook on coding theory, see for instance Cohen et
+al. [4], or in an early paper of Shapiro and Slotnick [28].
+An improvement of the bound K(n, 1) ≥ 2n/n for even n (Theorem 3) is
+due to Habsieger [9], if additionally n is divisible by 5, but not divisible by 3.
+In all other cases (apart from a few sporadic values of n) Theorem 3 gives the
+currently best known lower bound on K(n, 1) if n is even. A generalization
+71
+of Theorem 3 to lower-bound Kq(n, 1) if q and n are even, can be found in
+van Wee [30].
+A analogous approach to the theory of covering excess can be used to
+upper-bound Aq(n, d), see van Wee [30].
+A covering excess in spheres of radius two corresponding to Theorem
+5 in the ternary case q = 3 and R = 1 (occurring if n ≡ 0 (mod 3) or
+n ≡ 2 (mod 3)) is studied in Habsieger [8] and van Wee [30].
+A.2 Notes to Chapter 4
+Generalizations of Theorem 52 to the q-ary case can be found in Chen,
+Honkala [3] and van Wee [30]. Lower-bounding K(n, R) with the use of
+a covering excess in spheres with radius two is studied by Honkala [14] and
+in the q-ary case by Chen, Honkala [3]. Lower bounds for Kq(n, R) in the
+ternary case q = 3 can also be found in Habsieger [8].
+A covering excess in spheres of radius two in the binary case, based on the
+nonexistence of certain pair covering designs, was already investigated in the
+early paper of Johnson [18]. The method was later rediscovered by Zhang
+[32]. The corresponding ternary case q = 3 is studied in an unpublished
+paper from Lo and Zhen [24].
+Many of the currently best known lower bounds for K(n, R) result from
+a similar covering excess in a sphere of radius three, see the papers Li, Chen
+[21] and Lo, Zhang [23].
+Application of the method of covering excess to binary/ternary mixed
+codes are considered in van Wee [30] and especially in van Lint jr., van Wee
+[22].
+72
+Appendix B
+The new bounds
+Here we collect all new bounds from this thesis.
+Theorem 14 (Haas [7]). If n ≥ 11 and n ≡ 5 (mod 6), then
+K(n, 1) ≥
+(
+1 + 8
+2n2 − 10n + 19
+) 2n
+n + 1 .
+Corollary.
+K(17, 1) ≥ 7419 (7414 [1]) ,
+K(23, 1) ≥ 352827 (352736 [1]) ,
+K(29, 1) ≥ 17997161 (17994966 [1]) .
+Theorem 49 . If n ≡ −1 (mod p) for an odd prime p, then
+K(n, 1) ≥
+(
+1 + 1
+g(n)
+) 2n
+n + 1
+with
+g(n) = 1
+(p − 2)p − 1
+( n
+p − 1
+)
++
+∑
+0≤i≤p−2
+1
+i + 1
+(n
+i
+)
+.
+Theorem 54 . If R ≥ 1 and n ≥ 2R + 1, then
+K(n, R) ≥ (n − 2R + 2ϵ)2n
+(n − 2R + ϵ)V (n, R) + ϵV (n, R − 1)
+73
+with
+ϵ = (R + 1)
+⌈ n + 1
+R + 1
+⌉
+− (n + 1) ≤ R.
+Corollary.
+K(19, 2) ≥ 2898 (2897 [14])
+K(25, 2) ≥ 107218 (107203 [14])
+K(28, 2) ≥ 683980 (683972 [10])
+K(31, 2) ≥ 4464944 (4464613 [14])
+K(32, 4) ≥ 110467 (110215 [14]) .
+Theorem 57 . If 2 ≤ R < n , R + 1 divides n and
+M =
+(R
+2
+)
++ R − 1
+V (n, 2) − 1 − (R − 2)
+(
+n − R−3
+2
+) ≤ 1
+n
+holds, then
+K(n, R) ≥ (n − τ )2n
+(n − R − τ )V (n, R) + RV (n, R − 1)
+with
+τ = (n − R) M
+M + 1 .
+Corollary.
+K(21, 2) ≥ 9900 (9893 [29])
+K(24, 2) ≥ 60381 (60350 [29])
+K(33, 2) ≥ 16210701 (16207424 [29])
+K(20, 3) ≥ 892 (889 [29])
+K(32, 3) ≥ 855613 (854890 [29])
+K(30, 4) ≥ 38067 (37973 [29]) .
+74
+Bibliography
+[1] U. Blass, S. Litsyn , Several new lower bounds on the size of codes
+with covering radius one, IEEE Trans. Inform. Theory 44, 5 (1998)
+1998-2002.
+[2] A. Brouwer , Tables of general binary codes ,
+http://www.win.tue.nl/∼aeb/codes/binary-1.html.
+[3] W. Chen, I. S. Honkala , Lower bounds for q-ary covering codes,
+IEEE Trans. Inform. Theory 36 (1990), 664-671.
+[4] G. Cohen, I. Honkala, S. Litsyn, A. Lobstein , Covering codes,
+North Holland Mathematical Library, vol 54, 1997, Elsevier.
+[5] G. D. Cohen, A. C. Lobstein, N. J. A. Sloane , Further results
+on the covering radius of codes, IEEE Trans. Inform. Theory 32 (1986),
+680-694.
+[6] W. Haas , Lower bounds for q-ary codes of covering radius one, Discr.
+Mathematics 219 (2000), 97-106.
+[7] W. Haas , Lower bounds for binary codes with covering radius one,
+IEEE Trans. Inform. Theory 53, 8 (2007) 2880-2881.
+[8] L. Habsieger , Some new lower bounds for ternary covering codes,
+Electronic J. Combinatorics, http://www.combinatorics.org/Volume-
+3/foatatoc.html, R 23 (1996).
+[9] L. Habsieger , Binary codes with covering radius one: Some new lower
+bounds, Disc. Mathematics 176 (1997), 115-130.
+[10] L. Habsieger, A. Plagne , New lower bounds for covering codes, Disc.
+Mathematics 222 (2000), 125-149.
+75
+[11] R. W. Hamming , Error Detection and Error Correction Codes, The
+Bell System Technical Journal XXVI 2 (1950), 147-160.
+[12] H. Hanani, On quadrupel systems, Canad. J. Math. 12 (1960), 145-157.
+[13] I. S. Honkala , Combinatorial bounds for binary constant weight and
+covering codes, Ph. D. Thesis, University of Turku, Finland, 108 pp.,
+1989.
+[14] I. S. Honkala , Modiﬁed bounds for covering codes, IEEE Trans. In-
+form. Theory 37 (1991), 351-365.
+[15] I. S. Honkala , A lower bound on binary codes with covering radius
+one, Lecture Notes in Computer Science, No. 781, 34-37, Springer-
+Verlag, 1994.
+[16] I. S. Honkala , A new lower bound on codes with covering radius one,
+Proc. Internat. Symp. on Information Theory and its Applications, vol
+1, 39-41, Sydney, 1994.
+[17] I. S. Honkala , Combinatorial lower bounds on binary codes with cov-
+ering radius one, Ars Combinatoria 50 (1998), 149-159.
+[18] S. M. Johnson , A new lower bound for coverings by rook domains,
+Utilitas Mathematica 1 (1972), 121-140.
+[19] G. K ´eri, Tables for Covering Codes , http://www.sztaki.hu/ ∼
+keri/codes/.
+[20] Rev. T.P. Kirkman , On a problem in combinations , Cambr. and
+Dublin Math. J. 2 (1847), 191-204.
+[21] D. Li, W. Chen , New lower bounds for binary covering codes, IEEE
+Trans. Inform. Theory 40 (1994), 1122-1129.
+[22] J. H. van Lint, Jr., G. J. M. van Wee , Generalized bounds on bi-
+nary/ternary mixed packing and covering codes, Journal of Comb. The-
+ory Series A 57 (1991), 130-143.
+[23] C. Lo, Z. Zhang , Linear inequalities for covering codes: Part II-triple
+covering inequalities, IEEE Trans. Inform. Theory 38 (1992), 1648-1662.
+76
+[24] C. Lo, Z. Zhang , New lower bounds for K3(n, R) from linear inequal-
+ities, unpublished.
+[25] A. Lobstein , R´ef´erences sur le rayon de recouvrement (Covering Ra-
+dius), http://www.infres.enst.fr/∼lobstein/biblio.html.
+[26] F.J. MacWilliams, N.J.A. Sloane , The Theory of Error-Correcting
+Codes, Amsterdam, North-Holland, 1977.
+[27] P.R.J. ¨Osterg ˚ ard, O. Pottonen , There exists no Steiner system
+S(4,5,17), Journal of Comb. Theory Series A, to appear.
+[28] H. S. Shapiro, D. L. Slotnick , On the mathematical theory of error
+correcting codes, IBM. J. Res. Develop., vol 3 (1959), 25-37.
+[29] G. J. M. van Wee , Improved sphere bounds for the covering radius of
+codes, IEEE Trans. Inform. Theory 34 (1988), 237-245.
+[30] G. J. M. van Wee , Bounds on packings and coverings by spheres in
+q-ary and mixed Hamming spaces, Journal of Comb. Theory Series A
+57 (1991), 117-129.
+[31] G. J. M. van Wee , Some new lower bounds for binary and ternary
+covering codes, IEEE Trans. Inform. Theory 39 (1991), 1422-1424.
+[32] Z. Zhang , Linear inequalities for covering codes: Part I-pair covering
+inequalities, IEEE Trans. Inform. Theory 37 (1991), 573-582.
+77
