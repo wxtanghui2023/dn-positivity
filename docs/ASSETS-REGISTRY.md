@@ -2069,3 +2069,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) 迭代框架与下一靶（⚠️ 登记）**】规律 $\Delta_A=(|A|-40)+(8a-353)$ ✓ ⟹ **仅 $a=44$ 裕量为负**（$-1$ ✓）——这解释了为何只有它被此机制杀死 ✓；$a=45$（$s\ge107$、$|A|\ge33$、$\mathrm{Bmax}(12)=6\Rightarrow|A|\le46$ ✓）**不矛盾** ✗ ⟹ 需新论证 ✓（登记未做 ✓）
 - 【**边界 ✓**】零程序计算 ✓（仅整数/有限情形核对 ✓＋一处文献取证 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 119 已排除 ✗（V290）
 - 档：`docs/WITB45-2026-09-28-boundary-rigidity-kills-a44-and-yields-C0-ge-45.md`
+
+**🎯 C-443（2026-09-28 12:0x · **WITRMAX：$a=45$ 的 $t$-参数化 ＋ $r_{\max}$ 三分类（三处因子 2 修正；Case I＝硬核）**）** ✓
+- 【**✓(1) $t$-参数化核验（唐先生 §1 ✓）**】$a=45$：$|A|=s-74$ ✓；$t:=s-107=\Delta_A=9a+s-512$ ✓；$s\in[107,119]\Rightarrow t\in[0,12]$ ✓；预算 $L_A+\mathrm{leak}\le t$ ✓；判据 $|A|=33+t\le40+\beta\Rightarrow\boxed{\beta\ge t-7}$ ✓✓；**战场确为 $t\ge8$** ✓✓（$t\le7$：$|A|\le40$ 自动 ✓ — 唐先生表逐位无误 ✓）
+- 【**✗✗(2) 三处因子 2 修正（必标 ✓）**】核心恒等式 $2D_2(A)=\sum_{y\in V}\binom{r_y}2$ ✓（唐先生 §7 写对 ✓）；**①** §5 的 $D_2\ge T_A$ **不对** ✗ ⟹ 应为 $$\boxed{D_2\ge\tfrac12T_A}$$ ✓✓；**②** §6 表给的是 $\sum\binom{r_y}2$ 而非 $D_2$ ✗ ⟹ $T_A{=}2,3,4\Rightarrow\boxed{D_2\le1,3,5}$ ✓✓（非 $3,6,10$ ✗）；**③** §9 之"桥"缺 $1/2$ ✗ ⟹ $$\boxed{\beta=\tfrac12L_A+\tfrac12\sum_{X_L}\tfrac{(r_y-1)(r_y-2)}2+\tfrac12\sum_{V\setminus X_L}\binom{r_y}2}\ \Longrightarrow\ \boxed{\beta\ge\tfrac12L_A}$$ ✓✓
+- 【**✓✓(3) 三分类精确内容（唐先生 §12 ✓）**】**Case I**（$r_{\max}{=}1$）：$T_A{=}0\Rightarrow L_A{=}2e$ ✓，$\beta=e+\tfrac12\sum_{V\setminus X_L}\binom{r_y}2$ ✓；**Case II**（$r_{\max}{=}2$）：$\sum_{X_L}\binom{r_y}2=T_A$ ⟹ $\beta=e+\tfrac12(T_A+\sum_{V\setminus X_L}\binom{r_y}2)$ ✓（唐先生 §12 之 $\beta=L_A-e$ 需 $D_2=T_A$ ✗，仅当无外部贡献 ✓）；**Case III**（$r_{\max}\ge3$）：局部三角结构 ✓✓（§11 已核：$\{e_i,e_j,e_k\}$ 两两距离 2 ✓，三对共同邻点 $(0,e_i{\oplus}e_j),(0,e_i{\oplus}e_k),(0,e_j{\oplus}e_k)$ ✓）⟹ $$\boxed{D_2\ge3}$$ ✓✓（$2D_2\ge\binom32+3=6$ ✓）
+- 【**★★(4) 硬核判定（本档 ✓✓）**】Case I 的 $\beta=\tfrac12L_A$ 是同一预算下的**最小值** ✗✓ ⟹ **排除 $a=45$ 必须\textbf{结构性排除 Case I}** ✓✓；**预算相容性核对**：$2e\le L_A\le t\Rightarrow e\le t/2$ ⟹ $t{=}8$：需 $e\ge1\le4$ ✓；$t{=}12$：需 $e\ge5\le6$ ✓ ⟹ **预算不排除 Case I** ✗✓
+- 【**★★(5) 命题式二分（新 ✓✓）**】$t\ge8\Longrightarrow$ 或 $e(A)+\tfrac12\sum_{V\setminus X_L}\binom{r_y}2\ge t-7$（Case I ✓），或 $r_{\max}\ge2$ ✓；**锐化**：Case I 时 $T_A=0\Rightarrow$ 每个 $x\in X_L$ 恰有一个 $A$-邻 ⟹ $X_L$ 与 $A$ **近似一一对应** ＝ 最容易满足判据的退化结构 ✓✓
+- 【**⚠️(6) 状态**】已确立：$t$-参数化／三修正／三分类内容／$D_2\ge\tfrac12T_A$ 与 $\beta\ge\tfrac12L_A$／Case III 之 $D_2\ge3$／命题式二分 ✓；已否证："Case I 由预算排除" ✗、"$D_2\ge T_A$" ✗、"$D_2\le3,6,10$" ✗；**未确立**：$a=45$ 的排除、Case I 的结构性排除（须证 $T_A=0\Rightarrow|A|\le40$）、$r\ge3$ 局部相容性分类 ⚠️
+- 【**★(7) 下一靶（登记）**】① 证 $T_A=0\ (\text{Case I})\Rightarrow|A|\le40$（可杀 $t\ge8$ 之 Case I ✓）；② 或分类 $r=3,4,\dots$ 的局部构型与互斥 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 Case I 不可行 ✗（V290）
+- 档：`docs/WITRMAX-2026-09-28-a45-t-parametrisation-rmax-trichotomy-and-case-I-hard-core.md`
