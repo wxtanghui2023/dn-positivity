@@ -3098,3 +3098,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★六项检验 ＋ 第一轮审计结果**】凡"新对象"几乎皆 $I$-确定 ⟹ **系统性 fail (6)**：owner 超图／三角关联／对易代数／掩码族 **全关闭** ✗；距离分布、surfeit 泛函 **已死**（L0）✗；**活口候选仅二**：**(α) 次正规划分**（Honkala 1991，$C{=}C_0{\sqcup}C_1$；必要非分离）；**(β) 私有覆盖 $\rho(c)$**（不可重复计数，非 covering 线性重写）
 - 【**下一步**】不再同层造 lemma；只为 $(\alpha)/(\beta)$ 做六项检验
 - 档：`docs/AUDIT-2026-09-28b-P-minus-1-representation-break-and-119-representation-audit-r1.md`
+
+**☠️ AUDIT-2026-09-28c（非 C 号）：ρ-账本可行性测试 FAILS（循环）⟹ ownership/private-coverage 层早杀** ✓
+- 【**✓ 接受唐先生修正**】$R=\sum\rho(c)\le|C|r$ **恒成立** ⟹ 前档 §4 之 $R>118r$ 不可能 ⟹ **本档撤销该式** ✓
+- 【**★★ 结构性发现**】$\rho(c)+\omega(c)=11$ **精确成立**（$B_1(c)$ 之 11 点只分"私有/共享"两类）⟹ $\omega=11-\rho$ 为**从属量**，**无独立 overlap 变量** ⚠️（唐先生所提 $\rho+\omega$ 形式不产生新自由度）
+- 【**★ 可行性测试（实测）**】(a) $\sum\rho\le11K$ 平凡；(b) $P=\sum\rho\ge2048-11K$；(c) 合并 ⟹ $K\ge93.09$ **恰为球覆盖界**；(d) 加极小性 $\rho\ge1$ ⟹ $K\le1024$ 弱；(e) 一切塌缩为恒等 $11K=1024+E$ ⟹ **全部 tautology** ⟹ 无 $U(118)<L$ 可出现
+- 【**★ 判定**】ρ-账本（直接计数）＝ covering 恒等式之重写 ⟹ **未过第 (6) 项** ⟹ **按令立即关闭 ownership/private-coverage 层**（早期位置，非再来几十个 C 号）✗
+- 【**附注**】$(\beta)$ 候选"过 $P_{1\text{-I}}$ 门"之理由方向对但不足：互斥性仅给 $\sum\rho{=}\#$单覆盖点，后者完全由 $E,K$ 决定 ⚠️
+- 【**早期复查前瞻**】$(\alpha)$ 与 A10/A11 皆 $I$-关联量 ⟹ 由 `AUDIT-b` ★依赖诊断（$I$ 唯一 ⟹ $I$-型 $\Phi$ 无 $C$-信息）**亦无法单独给出 $K$-界** ⚠️（**未展开，不主张已死**）
+- 档：`docs/AUDIT-2026-09-28c-rho-ledger-feasibility-test-fails-circular.md`
