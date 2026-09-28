@@ -3176,3 +3176,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 三处自纠**】①`AUDIT-i` 之"$M_3$ 结构定理"实为**恒等重写**（实测 $m_i(c){=}a_{c\oplus e_i}$ ⟹ 换标号 tautology），其 D1 应**降级** ✗；②正确分解式 $M_3{=}10K{+}12N_2{+}6\Sigma_y\binom{a_y}3$（实测 ✓）；③唐先生式第一项应为 $(10K{+}4N_2)$（实测 $\sum_c\sum_i m_i{=}10K{+}4N_2{\ne}M_1$，差 $4N_2$）
 - 【**边界**】穷举证于 $n{=}6,7$；$\nu$ 为局部量（与 $n$ 无关之结构）⟹ 强烈提示 $n{=}10$ 同，**未证** ⚠️
 - 档：`docs/AUDIT-2026-09-28j-Test1prime-TWO-inclusion-HOLDS-plus-three-self-corrections.md`
+
+**★ AUDIT-2026-09-28k（非 C 号）：$\Phi_2$ 正式降格 ＋ 补集/边界表示门（两点结构判定）** ✓
+- 【**$\Phi_2$ 降格**】$\Phi_2\to M_3\to$ 三点距离数据 ⟹ 降格为三点层 ✗；且 `AUDIT-j` 自纠"$M_3$ 结构定理"即 tautology ⟹ **未留隐藏新量**；**局部计数型表示族系统性剥除汇总**：一阶 ownership→sphere ledger／coset size→linear counting／subspace LP→93.0909／integer coset class→同层重编码／$\Phi_2$→三点层
+- 【**不做 $n{=}10$ 穷举**】$\nu(c_1,c_2,c_3){=}F(d_{12},d_{13},d_{23})$ 为**局部**几何事实（$n{=}6,7$ 已穷举证）；$n{=}10$ 只增算量、**不改研究层级**
+- 【**新门 $P_{-1}^{\rm boundary}$**】$C\to Q_{10}\setminus C\to\partial(Q_{10}\setminus C)\to$ boundary/flow 不变量；与 private-neighbor ledger 之别：新对象在**非码点邻接结构**上计数
+- 【**★★ 一阶边界量已被距离分布吸收 ✗（实测）**】$\partial{=}10K{-}2N_1$（三例皆等 ✓）；$|E(Q_{10}\setminus C)|{=}\frac12(10(1024{-}K){-}\partial)$ 亦由 $(K,N_1)$ 定 ⟹ **一阶边界全部被吸收**
+- 【**⚠️ 但完整补集结构＝完全不变量 ⟹ 无归约**】$\mathbb F_2^{10}\setminus C$ 确定 $C$ ⟹ 补集同构型 ⟺ $C$ 同构型（极大不变量）⟹ **必不被距离/三点数据决定**，但**等价于 $C$ 本身** ⟹ 同 `AUDIT-g` 之"完整 state＝$C$"陷阱 ⚠️
+- 【**唯一有意义形式**】须寻**中间层**边界不变量（细于一阶、粗于完整补集）；判据＝∃同距离/三点数据而边界不变量不同者；候选（未做）＝补图之**环空间/连通分支/边界算子核（同调量）**
+- 档：`docs/AUDIT-2026-09-28k-Phi2-downgraded-and-the-boundary-representation-gate.md`
