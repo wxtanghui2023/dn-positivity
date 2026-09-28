@@ -75,9 +75,11 @@ $$\boxed{\text{须唐先生定夺}:\ \text{(i) 停 119 线};\ \text{(ii) 换更�
 ```
 $ bash scripts/tech_word_check.sh "表示层失败" "信息增量" "全候选关闭"
 技术词 表示层失败  命中文件数=0    ::
-技术词 信息增量     命中文件数=0    ::
+技术词 信息增量     命中文件数=5    :: ./V125-S1-completeness-audit-upgrade-fails-equals-E148.md ./C324-C323-closure-Mahler-chain-archived-pivot-to-next-external-problem.md ./MASTER-STATUS-AND-CLOSURES.md
 技术词 全候选关闭   命中文件数=0    ::
 ```
+
+**口径（空间隔离 ✓）**：`信息增量` 之 5 命中（`V125-…`／`C324-…`／`MASTER-STATUS-…`）皆**空间 A（RH 线）** ⟹ 标「**空间 A 同名，不计**」✗；本线新造为**标签级**首次 ✓
 
 ## §6 边界（硬 ✓）
 
