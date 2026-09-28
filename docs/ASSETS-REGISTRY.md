@@ -3002,3 +3002,4 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - **边界**：**不作路线裁定** ✗；**明确否认** $C{=}3{\Rightarrow}{\neg}1111$ 与 $128{=}145{-}17$ 已 ✗（V290）
 - 档：`docs/WITAUDIT3-2026-09-28-coverer-vs-extra-owner-resolution.md`
 **🧩 C-537（09-28 18:3 · WITAR：Ar 交集全分类——deg=2→cov(0,0,1⁸)、deg=3→cov(1¹⁰)；每邻居至多被一个 Best owner 覆盖 ✗✓）** ✓ 档入。
+**🫴 C-538（09-28 18:4 · WITCOVER：deg=3 时 Lr 候选全类—每 Kr 恰 2 个 TypeI、8 个 TypeIII；I–I恒2、I–III恒4、III–III多为4）** ✓
