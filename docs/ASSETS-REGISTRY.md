@@ -3107,3 +3107,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**附注**】$(\beta)$ 候选"过 $P_{1\text{-I}}$ 门"之理由方向对但不足：互斥性仅给 $\sum\rho{=}\#$单覆盖点，后者完全由 $E,K$ 决定 ⚠️
 - 【**早期复查前瞻**】$(\alpha)$ 与 A10/A11 皆 $I$-关联量 ⟹ 由 `AUDIT-b` ★依赖诊断（$I$ 唯一 ⟹ $I$-型 $\Phi$ 无 $C$-信息）**亦无法单独给出 $K$-界** ⚠️（**未展开，不主张已死**）
 - 档：`docs/AUDIT-2026-09-28c-rho-ledger-feasibility-test-fails-circular.md`
+
+**🧾 AUDIT-2026-09-28d（非 C 号）：$P_{-1}$ 信息增量钉死 ＋ 全候选机制关闭（状态上报）** ✓
+- 【**★★ $P_{-1}$ 信息增量定级**】首次证明 $\Phi(I)$ **与 $C$ 无关**（$I$ 唯一）⟹ 过去大量结构虽正确却**原则上不可能**区分 118 与 119 ⟹ **不是某 lemma 失败，而是整个表示层失败**；已杀掉最大假进展来源
+- 【**硬门（照令）**】$|C|\le118$ 下是否存在**只能由 $C$ 决定**、且必须亏损 $\ge1$ 之量？
+- 【**(α) FAILS**】normal 递推：$A\subseteq N_1^9[\operatorname{proj}(C_0)]\cup\operatorname{proj}(C_1)$ ⟹ $512\le10a{+}b$ 与 $512\le10b{+}a$ ⟹ 合并 $1024\le11K$ ⟹ $K\ge93.09$ **恰为球覆盖界** ⟹ **循环**（实测三坐标成立但无新信息）✗
+- 【**(β) FAILS**】已由 `AUDIT-c` 早杀；细化版 $(\rho{+}\omega{+}\text{A10/A11})$ 亦 FAIL（$\omega{=}11{-}\rho$ 无自由度；A10/A11 为 $I$-关联量）✗
+- 【**★★ 全候选机制关闭**】excess/congruence（C-545）／subspace linear（C-546/547）／SDP（C-474）／$H_k$（C-544）／$\rho$-账本（`AUDIT-c`）／$(\alpha)$ 次正规（本档）／一切 $I$-型 $\Phi$（`AUDIT-b`）／距离分布（C-546）——**皆已关闭**
+- 【**须唐先生定夺**】(i) 停 119 线；(ii) 换更根本坐标系（Layer 3）；(iii) 他择 —— **本线不作路线裁定** ✗
+- 档：`docs/AUDIT-2026-09-28d-P-minus-1-info-gain-nailed-and-all-candidate-mechanisms-closed.md`
