@@ -3278,3 +3278,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 与档案重叠（必录）**】$\mathrm{mult}$ 之定义含"中点 $\cap C{=}\varnothing$" ⟹ 即档案 **C-532·C-533 之中点参数化**对象 ⟹ 本档之 $X$ **部分退入已归档之中点结构层**（同层）
 - 【**判定**】未得 $E\ge153/154$；本链给出**一本新账（$X{=}908$）而不闭合**
 - 档：`docs/AUDIT-2026-09-28u-distance3-hole-filling-X-and-the-multiplicity-verdict.md`
+
+**🔒 AUDIT-2026-09-28v（非 C 号）：本轮封口 ＋ Habsieger–Plagne 2000 摘要到手 ＋ ⚠️$K{=}106$ **已被排除**** ✓
+- 【**① 封口**】局部链（$\Phi_2\to$coset$\to$spectral$\to$complement$\to(S_c,G_c)\to$距离-3 补洞 $X$）**全部未产出新增约束** ⟹ **STOP，不再追加人为约束**
+- 【**② H–P 2000 摘要（逐字）**】"New lower bounds for covering codes", Discrete Math **222 (2000), 125–149**, DOI 10.1016/S0012-365X(00)00011-X；**机制 ＝ linear inequality of a code**（LP 族）；用**classical formula (2)** 得下界；给**改进公式**；应用于经典案例**改进近 20%** 之最佳下界 ⟹ **107 属线性不等式（LP）族**
+- 【**旁证**】检索得逐字"Improved Sphere Bounds… $K(n,1)\ge 2^n/n$, $n$ even" ⟹ 线性不等式族**确能超越体积界**（与 `SUBSPACELP` 等号定理不冲突：后者限于 coset-计数型 LP）
+- 【**★★ ③ 目标重定位（核心）**】BÖW 2004 给 $a(10)\ge\mathbf{107}$ ⟹ $K\ne106$ ⟹ **"证明 $K\ge107$" ＝ 已知定理；唐先生之 $K{=}106$ 路线无新排除空间**；真正**新**之地板目标 ＝ $\mathbf{108}$（$E\ge164\iff K\ge108$）⟹ 可挖空间（下界端）＝ $107\to108$，而 $106$ **已无仗可打**
+- 【**④ 唐先生 6 步队列**】① 取 H–P 正文：**摘要已得 ✓／正文未得**（付费）；② 精确定理/公式：**未得**；③ 代入 $q{=}2,n{=}10,R{=}1$：待②；④ 与 $K{=}106$ 比较：**已完成 ⟹ 已排除**；⑤ 查 BÖW 转述：**本轮无需**；⑥ 回具体结构：**不触发**
+- 档：`docs/AUDIT-2026-09-28v-round-seal-Habsieger-Plagne-obtained-and-106-is-already-excluded.md`
