@@ -3004,3 +3004,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 **🧩 C-537（09-28 18:3 · WITAR：Ar 交集全分类——deg=2→cov(0,0,1⁸)、deg=3→cov(1¹⁰)；每邻居至多被一个 Best owner 覆盖 ✗✓）** ✓ 档入。
 **🫴 C-538（09-28 18:4 · WITCOVER：deg=3 时 Lr 候选全类—每 Kr 恰 2 个 TypeI、8 个 TypeIII；I–I恒2、I–III恒4、III–III多为4）** ✓
 **🔒 C-539（09-28 19:3 · WITCLOSE3：excess–shell 路线无闸门闭幕（285→N₁+N₂≥143→Nₐₐ≤240→m≥11，与|R|=79 相容））** ✓
+
+**⚠️ C-540（09-28 19:5 · WITDUP：纪律事故（第4次同型）——δ-场一/二/三阶恒等式族已于 EXCESS-2026-09-25 入库；本档如实记录重复 ＋ 登记文献状态账 105≤K(10,1)≤120）** ✓
+- 【**⚠️ 事故**】我在 9-28 两轮"重新推出"的 $\sum\delta{=}285$、$4(A_1{+}A_2){=}285{+}\sum\delta^2$（含系数 4）、三阶恒等式、三球交表、"不排除 119"结论 —— **全部已在 `EXCESS-2026-09-25` 中**；唯一新增＝$285{+}6\mathrm{Tri}(S)$ 打包写法（代数同源）
+- 【**根因**】未按 PROTOCOL-pre-work-map-check 先跑**已存在术语**（只跑新造词）；同类**第 4 次**（前：C-451/452/453 系列）
+- 【**★文献状态账（唯一新增 ✓）**】Cohen 1997 Table A：$105\le K(10,1)\le120$；口径纪律：105 带标记 e ⟹ **不得**写成"Prop 2.6 给出 105"；时序：1997 **105** → 2004 **107**（BÖW/OEIS）→ 自算 SDP 105.2223 → 上界 120 ⟹ **119 未被经典 excess 排除** ✓
+- 【**路线地位**】C-539 之 285-excess ⊂ Cohen §2.5 经典 excess family；旧档已做 Haas 2013 层式 → **LP=93.09（不足）**；**未做者**＝旧档所标 `Layer 2+`（子空间耦合＋incidence＋整数可行）＝**与唐先生"Krawtchouk/全局约束"同层** ✓
+- 档：`docs/WITDUP-2026-09-28-excess-identities-were-already-archived-and-the-literature-verdict.md`
