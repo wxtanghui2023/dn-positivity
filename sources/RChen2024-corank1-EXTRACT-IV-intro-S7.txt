@@ -1,0 +1,1829 @@
+CO-RANK 1ARITHMETIC SIEGEL–WEIL IV:
+ANALYTIC LOCAL-TO-GLOBAL
+RYAN C. CHEN
+Abstract. This is the fourth in a sequence of four papers, where we prove the arithmetic Siegel–
+Weil formula in co-rank 1 for Kudla–Rapoport special cycles on exotic smooth integral models of
+unitary Shimura varieties of arbitrarily large even arithmetic dimension. Our arithmetic Siegel–
+Weil formula implies that degrees of Kudla–Rapoport arithmetic special 1-cycles are encoded in the
+first derivatives of unitary Eisenstein series Fourier coefficients.
+In this paper, we pin down precise normalizations for some U(m, m ) Siegel Eisenstein series,
+give local Siegel–Weil special value formulas with explicit constants, and record a geometric Siegel–
+Weil result for degrees of complex 0-cycles. Using this, we complete the proof of our arithmetic
+Siegel–Weil results by patching together the local main theorems from our companion papers.
+Contents
+1. Introduction 3
+1.1. Eisenstein series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2. Classical and geometric Siegel–Weil . . . . . . . . . . . . . . . . . . . . . . . . 5
+1.3. Arithmetic Siegel–Weil . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+1.4. Outline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.5. Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+Part 1. Eisenstein series 13
+2. Setup 13
+2.1. The group U(m, m ) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+2.2. Ad` elic and classical Eisenstein series . . . . . . . . . . . . . . . . . . . . . . . . 14
+2.3. Fourier expansion and local Whittaker functions . . . . . . . . . . . . . . . . . 17
+2.4. Singular Fourier coefficients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+3. Weil representation 20
+3.1. Weil index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+3.2. Weil representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+4. Local Whittaker functions 24
+4.1. Local L-factors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+4.2. Normalized Archimedean Whittaker functions . . . . . . . . . . . . . . . . . . 25
+4.3. Normalized non-Archimedean Whittaker functions . . . . . . . . . . . . . . . . 26
+Date: May 2, 2024.
+1arXiv:2405.01429v1  [math.NT]  2 May 20244.4. Local densities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+4.5. Local densities and spherical non-Archimedean Whittaker functions . . . . . . 29
+5. Local functional equations 31
+5.1. Non-Archimedean . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+5.2. Archimedean . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+6. Normalized Fourier coefficients 34
+6.1. Global normalization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+6.2. Singular Fourier coefficients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Part 2. Siegel–Weil 38
+7. Local Siegel–Weil 38
+7.1. Volume forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+7.2. Special value formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+7.3. Explicit Haar measures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+7.4. Uniformization degrees for special cycles . . . . . . . . . . . . . . . . . . . . . 44
+8. Geometric Siegel–Weil 48
+8.1. Degrees of 0-cycles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+8.2. Complex volumes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+9. Arithmetic Siegel–Weil 52
+9.1. Main theorems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+9.2. Faltings heights of Hecke translates of CM elliptic curves . . . . . . . . . . . . 62
+References 67
+21.Introduction
+This paper is a continuation of our companion papers [Che24a; Che24b; Che24c]. In this paper,
+we complete the proof of our global arithmetic Siegel–Weil results using our local main theorems
+from [Che24a; Che24b] and the geometric local-to-global reduction procedure from [Che24c]. We
+refer the reader to the introduction of [Che24a] for additional motivation, overview, and strategy
+for our four-part sequence of papers.
+For the reader’s convenience, we recall the statements of our global arithmetic Siegel–Weil results
+(Section 1.3); this section is an abridged version of the analogous [Che24a, Sections 1.2 and 1.3].
+In the present paper, the main new ingredients are (1) precise normalizations for Eisenstein
+series and their relation with singular Fourier coefficients of co-rank 1, (2) classical local Siegel–
+Weil formulas with precise constants, and (3) a geometric Siegel–Weil formula for complex 0-cycles,
+which will be treated in Section 8 (along with an observation about complex volumes of unitary
+Shimura varieties, which may be of independent interest).
+For introductory purposes, Section 1.2 contains some background on classical and geometric
+Siegel–Weil. This is included for comparison with arithmetic Siegel–Weil, and also helps us fix
+some notation. The material in Section 1.2 is mostly expository, but some of our formulations may
+be new, particularly in our normalizations for Eisenstein series. The same normalization choices
+play an amplified role in our main arithmetic Siegel–Weil results. We also mention some results
+(comparison of complex volume and degrees of complex zero cycles to Eisenstein series) which seem
+to be new or at least not explicit in the literature; see discussion following (1.2.6) and (1.2.10).
+In Section 1.4, we outline the structure of this paper and its relation with our companion papers
+[Che24a; Che24b; Che24c].
+1.1.Eisenstein series. In our work, we focus on the unitary/Hermitian case. For the introduction,
+fix an imaginary quadratic field F/Qwith ring of integers OFand odd discriminant ∆. Given
+m∈Z≥0and an even integer n∈Z, we consider the (normalized) Siegel Eisenstein series
+E∗(z, s)◦
+n:= Λ m(s)◦
+nX
+a b
+c d
+∈P1(Z)\SU(m,m)(Z)det(y)s−s0
+det(cz+d)n|det(cz+d)|2(s−s0)(1.1.1)
+for the group
+U(m, m ):=(
+h∈ResOF/ZGL2m:th 
+0 1 m
+−1m0!
+h= 
+0 1 m
+−1m0!)
+(1.1.2)
+where Λ m(s)◦
+nis the normalizing factor
+Λm(s)◦
+n:=(2π)m(m−1)/2
+(−2πi)nmπm(−s+s0)|∆|m(m−1)/4+⌊m/2⌋(s+s0)(1.1.3)
+·
+m−1Y
+j=0Γ(s−s0+n−j)·L(2s+m−j, ηj+n)
+.
+In (1.1.2), the notation 1 mstands for the m×midentity matrix, we wrote SU(m, m )⊆U(m, m ) for
+the determinant 1 subgroup, and we set P1:=P∩SU(m, m ) for the Siegel parabolic P⊆U(m, m )
+3(consisting of m×mblock upper triangular matrices). The variable s∈Cis a complex parameter,
+we set s0= (n−m)/2, and the element z=x+iylies in Hermitian upper-half space (i.e.
+x∈Herm m(R) and y∈Herm m(R)>0; the latter means that yis positive definite).1The symbol η
+denotes the quadratic character associated to F/Q(via class field theory). The sum in (1.1.1) is
+convergent for Re( s)> m/ 2, and admits meromorphic continuation to all s∈C. When m= 1, the
+expression in (1.1.1) is a classical Eisenstein series on the usual upper-half plane.
+The normalized Eisenstein series has a symmetric functional equation
+E∗(z, s)◦
+n= (−1)m(m−1)(n−m−1)/2E∗(z,−s)◦
+n, (1.1.4)
+see Section 6.1. Our definition of the normalizing factor Λ m(s)◦
+nis motivated by symmetry of
+global and local functional equations, along with certain local special value formulas; see Sections 2
+to 6 for further discussion. The function Λ m(s)◦
+nshould be closely related with the L-function of
+an Artin–Tate motive attached to the group U(m, m ), in the sense of Gross [Gro97] (see [BH21,
+Remark 1.1.1]).
+Given T∈Herm m(Q), the Eisenstein series E∗(z, s)◦
+nhasT-th Fourier coefficient
+E∗
+T(y, s)◦
+n:= 2m(m−1)/2|∆|−m(m−1)/4Z
+Herm m(Z)\Herm m(R)E∗(z, s)◦
+ne−2πitr(Tz)dx (1.1.5)
+forz=x+iyin Hermitian upper-half space, where this integral is taken with respect to the
+Euclidean measure2on Herm m(R). The integral is convergent for Re( s)> m/ 2, and admits mero-
+morphic continuation to all s∈C. When det T̸= 0, there is a factorization into normalized local
+Whittaker functions
+E∗
+T(y, s)◦
+n=W∗
+T,∞(y, s)◦
+nY
+pW∗
+T,p(s)◦
+n (1.1.6)
+over all places, see Part 1. The preceding setup is as in [Che24a, Section 1.1], and is taken from
+loc. cit. verbatim.
+For example, if n= 2 and m= 1, we have
+W∗
+T,p(s)◦
+2=pvp(T)(s+1/2)σ−2s(pvp(T)) σs(r):=X
+d|rds(1.1.7)
+W∗
+T,∞(y, s)◦
+2= Γ(s−1/2)−1|4πTy|s−1/2Z∞
+ae−4π|T|yu(u±1)s+1/2us−3/2
+for any nonzero T∈Z, where a= 0 and the sign ±is + (resp. a= 1 and the sign ±is−) ifT >0
+(resp. if T < 0). Here W∗
+T,∞(y, s)◦
+2(resp. W∗
+T,p(s)◦
+2) is a certain normalized Archimedean (resp.
+non-Archimedean) local Whittaker function.
+1Here, the notation Herm mdenotes a scheme over Spec Z, e.g. Herm m(R) denotes m×mcomplex Hermitian
+matrices, and Herm m(Q) denotes m×mHermitian matrices with entries in F.
+2The factor 2m(m−1)/2|∆|−m(m−1)/4disappears in the (usual) equivalent ad` elic formulation, upon taking a certain
+self-dual Haar measure. The ad` elic formulations of (1.1.1) and (1.1.5) are used in Section 2.
+41.2.Classical and geometric Siegel–Weil. LetVbe an n-dimensional F-vector space, equipped
+with a non-degenerate Hermitian pairing ( −,−). Set G=U(V) and assume n > 0. Fix a full-
+rankOF-lattice L⊆V. For simplicity, we assume in the introduction that Lis self-dual.3Write
+KL,f⊆G(Af) for the stabilizer of L⊗ZˆZ, where Afdenotes the finite ad` ele ring of Q.
+First consider the case where Vis positive definite. Since we assumed Lis self-dual, this forces
+n≡0 (mod 4) (by the global product formula for local invariants of Hermitian spaces). Given any
+positive definite Hermitian OF-lattice L, we set
+ZT,L:={x∈ Lm: (x, x) =T}, (1.2.1)
+where ( x, x) denotes the Gram matrix4ofx. When m≤n, we have
+2Λn(0)◦
+n=X
+OF-lattices L
+self-dual, rank n,
+positive definite1
+|Aut(L)|= #[G(Q)\(G(Af)/KL,f)] (1.2.2)
+2Λn(0)◦
+n
+κΛm(s0)◦nE∗
+T(y, s0)◦
+n=X
+OF-lattices L
+self-dual, rank n,
+positive definite|ZT,L|
+|Aut(L)|for any T∈Herm m(Q), (1.2.3)
+where κ= 2 (resp. κ= 1) if m=n(resp. if m < n ). The sums run over isomorphism classes of
+positive definite rank nself-dual OF-lattices, the notation Aut( L) means the (unitary) automor-
+phism group of L. The symbols #[ −] and | − | mean groupoid and set cardinality, respectively.
+That is, we have
+2Λn(0)◦
+n
+κΛm(s0)◦nE∗(z, s0)◦
+n=X
+OF-lattices L
+self-dual, rank n,
+positive definite1
+|Aut(L)|ΘL(z) (1.2.4)
+which re-expresses the Eisenstein series at s=s0as a weighted sum of theta series for the lattices
+L.
+Equations (1.2.2) and (1.2.3) are special cases of (unitary analogues of) the classical Siegel mass
+formula andSiegel–Weil formula respectively. For (1.2.2), see Proposition 8.2.1. Equation (1.2.3)
+follows from [Ich04, Proposition 6.2], [Ich07, Theorem 1.1], and [Yam11, Theorem 2.2] (in combi-
+nation with (1.2.2)).
+Next, consider the case where Vhas arbitrary signature ( n−r, r). Since Lwas assumed self-dual,
+this forces n≡2r(mod 4). There is an associated Hermitian symmetric domain Dwhich param-
+eterizes maximal negative definite subspaces of the complex Hermitian space VR. For sufficiently
+small open compact Kf⊆KL,f(so that we have manifolds instead of orbifolds, for simplicity),
+there is an associated complex Shimura variety
+ShKf,C(G) = [G(Q)\(D ×G(Af)/Kf)] (1.2.5)
+3We always mean self-dual for the bilinear trace pairing trF/Q(v, w) unless otherwise specified; see conventions in
+[Che24a, Section 2.2].
+4Ifxis the m-tuple [ x1, . . . , x m], the notation ( x, x) will mean the matrix with i, j-th entry ( xi, xj). We often
+write e.g. [ x1, . . . , x m] instead of ( x1, . . . , x m) for tuples, to avoid confusion with Hermitian pairings ( −,−).
+5of dimension ( n−r)r(analytification suppressed from notation). In the signature ( n,0) and ( n−1,1)
+cases respectively, we have “geometric Siegel mass formulas”
+2Λn(0)◦
+n=vol(Sh Kf,C(G))
+[KL,f:Kf]−2Λn(0)◦
+n=vol(Sh Kf,C(G))
+[KL,f:Kf](1.2.6)
+where vol(Sh KL,f,C(G)) is the volume with respect to the Chern form of a certain dual tautological
+bundle. The case of signature ( n−1,1) may be extracted from [BH21, Theorem A], see Proposi-
+tion 8.2.3.5The case of signature ( n,0) is an equivalent reformulation of the classical Siegel mass
+formula (1.2.2): if we allow the (stacky) level Kf=KL,f, then there is a canonical equivalence of
+groupoids
+ShKL,C(G)∼=(
+Hermitian OF-lattices Lwhich are
+self-dual and signature ( n,0))
+(1.2.7)
+in that case.
+Ingeometric Siegel–Weil formulas , the sets ZT,L(from classical Siegel–Weil) are replaced by
+special cycles ZT,Cover the Shimura variety, and the theta series Θ L(z) become generating series
+of special cycles . One can define ZT,Cby the complex uniformization
+ZT,C:="
+G(Q)\ a
+x∈Vm
+(x,x)=TD(x∞)× D(xf)!#
+(1.2.8)
+where D(x)⊆ D is the closed complex submanifold consisting of those complex lines perpendicular
+to all elements of the m-tuple x, and
+D(xf):={g∈G(Af)/Kf:g−1xi∈L⊗ZˆZfor all xi∈xf} ⊆G(Af)/Kf. (1.2.9)
+Here x∞andxfdenote the image of xinV(R)mandV(Af)m, respectively. The definition in (1.2.8)
+is (a reformulation of) a definition due to Kudla [Kud04] (there for GSpin), with unitary analogue
+as in [Liu11, §3]. We call D(x∞) an Archimedean local special cycle andD(xf) an “away-from- ∞”
+local special cycle. There is a natural map ZT,C→ShKf,C, which is a disjoint union of closed
+immersions of complex manifolds after possibly shrinking Kf.
+Ageometric Siegel–Weil formula for signature ( n−1,1) is an identity of the shape
+−2Λn(0)◦
+n
+κΛm(s0)◦nE∗
+T(y, s0)◦
+n=vol(ZT,C)
+[KL,f:Kf]. (1.2.10)
+form≤n−1 (so κ= 1). In the case of signature ( n,0), the expression in (1.2.10) (without the
+minus sign on the left) is an equivalent reformulation of the classical Siegel–Weil formula (1.2.3):
+if we allow the (stacky) level Kf=KL,f, there is a canonical equivalence of groupoids
+ZT,C∼=(
+pairs ( L, x), where Lis a self-dual Hermitian OF-lattice
+of signature ( n,0) and x∈ Lmis an m-tuple with ( x, x) =T)
+. (1.2.11)
+5In Proposition 8.2.3, note that we took vol( −) with respect to the tautological bundle. Here we are taking volume
+with respect to the dual bundle, which produces the minus sign in (1.2.6).
+6Our presentation of the geometric Siegel–Weil formula in (1.2.10) may be nonstandard. Its ap-
+pearance is intended to highlight the similarity with our formulation of arithmetic Siegel–Weil in
+(1.3.3).
+Strictly speaking, geometric Siegel–Weil formulas in literature typically restrict to Vsatisfying
+Weil’s convergence condition (meaning Vanisotropic or m < n −1 in the signature ( n−1,1)
+Hermitian setup), see remarks following [Kud04, Theorem 4.1] and [Li24, Theorem 3.6.1]. It is also
+typical to phrase geometric Siegel–Weil formulas in terms of “coherent” Eisenstein series, while
+ourE∗(z, s)◦
+nis described in terms of an incoherent ad` elic Hermitian space (positive definite at
+∞and self-dual at all finite places), see Part 1. Outside of those cases available in the literature,
+geometric Siegel–Weil formulas may need additional care. For example, when m= 1 and n= 2
+andT= 0 (which is essentially about “complex volume of modular curve”), the formula in (1.2.10)
+is only valid up to a non-holomorphic correction term2hF
+wF·1
+8πyon the left, where hF(resp. wF)
+is the class number of (resp. number of roots of unity in) OF. In this case, the right-hand side is
+2hF
+wF·ζ(−1)
+2=−hF
+12wF.
+We will need the following geometric Siegel–Weil result which does not seem to be covered by
+the literature discussed in the previous paragraph. We prove (1.2.10) when Tis nonsingular of rank
+m=n−1, see Proposition 8.1.1 (also complex uniformization from [Che24c, Section 5.3], as well as
+(9.1.2)); in that case, ZT,Cis 0 dimensional. For example, when n= 2 and O×
+F={±1}, the special
+cycleZT,Ccan be described in terms of Hecke translates of CM elliptic curves Section 9.2, and
+(1.2.10) is then the (well-known) statement that the T-th Hecke correspondence (over the modular
+curve) has bidegree
+−1
+hF2Λ2(0)◦
+2
+Λ1(1/2)◦
+2E∗
+T(y,1/2)◦
+2=σ1(T) (1.2.12)
+forT∈Z>0. The extra factor of hFaccounts for multiple connected components in the Shimura
+variety, see Section 9.2.
+We remark that our proof of (1.2.10) (for Tnonsingular of rank m=n−1) is inspired by [LZ22,
+Remark 4.6.2], and may be carried out using either complex or non-Archimedean (Rapoport–Zink)
+uniformization. We need that case of (1.2.10) as an ingredient for our main arithmetic Siegel–Weil
+results.
+1.3.Arithmetic Siegel–Weil. Since the work of Kudla–Rapoport [KR14] (also Rapoport–Smithling–
+Zhang [RSZ21]), it has been customary to define special cycles Z(T)→ M over (stacky) integral
+models M → SpecOFfor Shimura varieties associated to G′:= Res F/QGm×G. After adding
+enough level K′
+f⊆G′(Af) toMC, we have a finite covering map MK′
+f,C→ShKf,C(G). In this
+paper, we mainly take M → SpecOFto be the “exotic smooth” Rapoport–Smithling–Zhang (RSZ)
+integral model of odd relative dimension n−1 [RSZ21, §6] (empty if n≡0 (mod 4)). When n= 2,
+the stack Mis essentially a disjoint union of (stacky) modular curves (Section 9.2, also [Che24a,
+Example 3.1.2]).
+The stack Madmits a moduli description: it parameterizes tuples ( A0, ι0, λ0, A, ι, λ ) where A0
+andAare abelian schemes (dimensions 1 and nrespectively) with OF-actions ι0andι, and with
+compatible quasi-polarizations λ0andλ. The datum ( A0, ι0, λ0, A, ι, λ ) satisfies a few additional
+7conditions, which we suppress in the introduction (see [Che24a, Section 3.1] and [Che24c, Sec-
+tion 2.1]). We are able to prove versions of our main global results for more general M(including
+odd arithmetic dimension n) at the price of discarding finitely many primes (particularly ramified
+primes for odd n); see Remark 9.1.5.
+The moduli stack Mcarries a natural family of Hermitian OF-lattices
+Lat→ M L at:= HomOF(A0, A). (1.3.1)
+Given any T∈Herm m(Q), the associated Kudla–Rapoport special cycle Z(T)→ M is defined as
+the substack
+Z(T):={x∈ Latm: (x, x) =T} ⊆ L atm(1.3.2)
+consisting of m-tuples with Gram matrix T. More precisely, see [Che24c, Section 2.1]. This is in
+close analogy with classical Siegel–Weil: there we considered OF-lattices varying in a given genus ,6
+and here we are considering OF-lattices varying over the moduli stack M. In the complex fiber, the
+special cycles Z(T)Crecover the special cycles ZT,Cappearing in (1.2.8), up to MK′
+f,Cbeing a finite
+cover of Sh Kf,C(G) (for suitable K′
+f); see [Che24c, Section 5.3]. The morphism Z(T)→SpecOFis
+smooth of relative dimension n−1−rank( T) in the generic fiber over Spec F. IfTis not positive
+semi-definite, then Z(T) is empty.
+Anarithmetic Siegel–Weil formula is a (in general conjectural) identity roughly of the shape
+hF
+wFd
+ds
+s=s02Λn(s−s0)◦
+n
+κΛm(s)◦nE∗
+T(y, s)◦
+n?=cvolbE∨([bZ(T)]). (1.3.3)
+with κas in Section 1.2. As discussed in [Che24a, Section 1.2], a precise formulation of arithmetic
+Siegel–Weil has not been proposed in full generality (on both the analytic and geometric sides). Our
+normalization on the analytic side is already nonstandard; we would like to highlight the similarity
+with normalizations for geometric and classical Siegel–Weil, as presented in (1.2.3) and (1.2.10). The
+normalization is in general delicate for arithmetic Siegel–Weil formulas, where both the derivative
+and special value at s=s0may have meaning (we do observe this for our main theorem, see
+[Che24a, Remark 1.3.1] and discussion below).
+In [Che24c, Section 3] and [Che24a, Section 3.6], we proposed a new candidate definition of
+arithmetic cycle classes
+[bZ(T)]:= [bZ(T)H] +X
+pprime[LZ(T)V,p]∈cChm(M)Q (1.3.4)
+associated to arbitrary (possibly singular) T, where cChm(M)Qis an arithmetic Chow group as-
+sociated to M. Here, [ bZ(T)H] should describe “horizontal” contributions andLZ(T)V,pshould
+describe “vertical” contributions.
+Due to non-properness of M → SpecOFin general, one should likely modify [ bZ(T)] on a suitable
+compactification of M. IfZ(T)→SpecOFis proper, however, we consider certain “arithmetic
+6In our previous setup, this meant the set of isomorphism classes of positive definite rank nself-dual OF-lattices.
+8degrees without boundary contributions” (a real number)
+ddeg([bZ(T)]·bc1(bE∨)n−m):=Z
+MCgT,y∧c1(bE∨
+C)n−m
+(1.3.5)
++ddeg((bE∨)n−rank( T)|Z(T)H)
++X
+pprimedegFp(LZ(T)V,p·(E∨)n−m) logp
+conditional on convergence of the integral, for a certain metrized tautological bundle bEonM
+([Che24a, Sections 3.4 and 3.5]) (we do check convergence of the integral in the settings of our
+arithmetic Siegel–Weil results). Here we set MC:=M × SpecOFSpecCfor either embedding
+F→C. The middle term is mixed characteristic in nature: for rank T=n−1, it is (essentially) a
+weighted sum of Faltings heights of abelian varieties (Remark 9.1.4). For proper Z(T)→ O F, the
+quantity in (1.3.5) should coincide with the arithmetic degree (without boundary contributions) of
+a version of [ bZ(T)] on any reasonable compactification of M.
+The following is the main global theorem for our four-paper sequence.
+Theorem A (Co-rank 1 arithmetic Siegel–Weil) .Assume the prime 2splits in OF.
+(1) For any T∈Herm n(Q)with rank( T) =n−1and any y∈Herm n(R)>0, we have
+hF
+wFd
+ds
+s=0E∗
+T(y, s)◦
+n=ddeg([bZ(T)]). (1.3.6)
+(2) For any T♭∈Herm n−1(Q)with detT♭̸= 0and any y♭∈Herm n−1(R)>0, we have
+2hF
+wFd
+ds
+s=0Λn(s)◦
+n
+Λn−1(s+ 1/2)◦nE∗
+T♭(y♭, s+ 1/2)◦
+n
+=ddeg([bZ(T♭)·bc1(bE∨)). (1.3.7)
+This appears below as Theorem 9.1.1. Note that part (1) concerns the central derivative of
+aU(n, n) Eisenstein series, while part (2) concerns a non-central derivative of a U(n−1, n−1)
+Eisenstein series. For n≡0 (mod 4), Theorem A(1) also holds in the sense that there is no self-dual
+OF-lattice of signature ( n−1,1) and the right-hand side is 0 (Remark 9.1.3).
+Remark 1.3.1. Our result in Theorem A(2) combined with our geometric Siegel–Weil result
+((1.2.10) and surrounding discussion, also Proposition 8.1.1) shows that, for the relevant (normal-
+ized) U(n−1, n−1) Eisenstein series, both the derivative and special value at s= 1/2simultaneously
+have arithmetic-geometric meaning (also mentioned in [Che24a, Remark 1.3.1]). This phenomenon
+amplifies the sensitivity of Theorem A(2) to the choice of normalization for the Eisenstein series,
+and is one reason for the importance of Part 1 in this paper (where we discuss our normalizations
+for Eisenstein series and local Whittaker functions).
+Question (Arithmetic Siegel–Weil) .LetT∈Herm n(Q)be arbitrary. For a suitable current gT,y,
+a suitable compactification of M, and a possibly modified class [bZ(T)]on the compactification, do
+we have
+hF
+wFd
+ds
+s=0E∗
+T(y, s)◦
+n?=ddeg([bZ(T)]). (1.3.8)
+9Our theorem verifies this proposed arithmetic Siegel–Weil formula for all singular T∈Herm n(Q)
+of rank n−1, in the sense of “arithmetic degrees without boundary contributions”. The formula
+also holds (in the same sense) for all nonsingular T∈Herm n(Q). This latter case (“central deriva-
+tive nonsingular arithmetic Siegel–Weil”) is possibly considered known to experts up to a volume
+constant by collecting the local theorems in [Liu11; LZ22; LL22]. This particular global statement
+does not appear in the literature, though other variants are available (e.g. for unramified CM fields
+F/F 0with F0̸=Q[LZ22] or on integral models with bad reduction and correction terms by special
+values of other Eisenstein series [HLSY23]). In our setup, we will compute the volume constant
+and explain how to extract the det T̸= 0 case of (1.3.8) from the literature (Remark 9.1.2).
+Remark 1.3.2. Part (2) of Theorem A is the special case of part (1) when T= diag(0 , T♭) and
+y= diag(1 , y♭). The geometric sides agree essentially by definition (1.3.5). On the analytic side,
+the relation is provided by the formula
+E∗
+T(y, s)◦
+n=Λn(s)◦
+n
+Λn−1(s+ 1/2)◦nE∗
+T♭(y♭, s+ 1/2)◦
+n−Λn(−s)◦
+n
+Λn−1(−s+ 1/2)◦nE∗
+T♭(y♭, s−1/2)◦
+n (1.3.9)
+from Corollary 6.2.2, along with the functional equation E∗
+T♭(y♭, s)◦
+n=E∗
+T♭(y♭,−s)◦
+n. The general
+case of Theorem A is proved in a similar way as the special case T= diag(0 , T♭), with an additional
+“local diagonalizability argument” (Proof of Theorem 9.1.1) where the identity is proved moduloP
+ℓ̸=pQ·logℓfor any given p(varying premoves the ambiguity).
+Unlike E∗
+T♭(y, s)◦
+n, the Fourier coefficient E∗
+T(y, s)◦
+ndoes not admit an obvious Euler product
+decomposition into local Whittaker functions as Tis singular. Since our proof of Theorem A is
+local (via local Whittaker functions and local special cycles), the decomposition (1.3.9) is crucial
+for our method (to use local Whittaker functions to describe E∗
+T(y, s)◦
+n). This decomposition is
+sensitive to the normalization used to define E∗(z, s)◦
+n, and is another reason for the importance of
+Part 1 in this paper, where we treat normalized Eisenstein series and local Whittaker functions.
+It is also possible to formulate and prove Theorem A in terms of Faltings heights (i.e. replacing
+the middle term in (1.3.5) with the degree of the metrized Hodge bundle). The formulation in
+Theorem A seems more natural to us, but the version with Faltings heights is in Remark 9.1.4.
+Since our proof of Theorem A will be local in nature, we also have a version for more general
+moduli stacks M(including odd arithmetic dimension n) at the price of discarding finitely many
+primes (particularly the ramified ones). This is explained in Remark 9.1.5.
+The simplest case of Theorem A is the case n= 2. When O×
+F={±1}, the Serre tensor
+construction gives an open and closed embedding M0×SpecOFMell→ M , where M0is the moduli
+stack of elliptic curves with signature (1 ,0) action by OFandMellis the moduli stack of all elliptic
+curves, base-changed to OF(Section 9.2). In this case, the special cycle Z(j)→ M forj∈Z>0
+pulls back to the j-th Hecke correspondence. Then the proof of Theorem 9.1.1(2) gives the following
+corollary (appearing below as Corollary 9.2.2). One might think of this corollary as reformulating
+a result of Nakkajima–Taguchi [NT91] (they compute Faltings heights of elliptic curves with CM
+by possibly non-maximal orders) by averaging over Hecke translates and expressing the result in
+terms of Eisenstein series Fourier coefficients.
+10Corollary 1.3.3. Assume 2is split in OF. Fix any elliptic curve E0overCwithOF-action. For
+any integer j >0, we have
+X
+Ew− →E0(hFal(E)−hFal(E0)) =1
+2d
+ds
+s=1/2
+js+1/2σ−2s(j)
+(1.3.10)
+where the sum runs over degree jisogenies w:E0→Eof elliptic curves.
+The notation hFal(E) denotes the (stable) Faltings height of the elliptic curve Eafter descent to
+any number field, and similarly for E0. The quantity js+1/2σ−2s(j) is the product of the normalized
+non-Archimedean local Whittaker functions in the j-th Fourier coefficient E∗
+j(y, s)◦
+2(with m= 1)
+as in (1.1.7). The derivative of the Archimedean local Whittaker function W∗
+j,∞(y, s)◦
+2ats= 1/2
+was calculated explicitly and compared with its geometric counterpart (integral of Green function
+wedge Chern form on upper half-plane) in our companion paper [Che24b, Section 4.2].
+Our purely Archimedean result (for arbitrary nandm♭≥1) is the following.
+Theorem B (Archimedean arithmetic Siegel–Weil, nonsingular) .Consider any integer m♭with
+1≤m♭≤n, and consider any T♭∈Hermm♭(Q)which is nonsingular and not positive definite.
+(3) For any y♭∈Hermm♭(R)>0, we have an equality of real numbers
+ddeg([bZ(T♭)]·bc1(bE∨)n−m♭):=Z
+MCgT♭,y♭∧c1(bE∨
+C)n−m♭= (−1)n−m♭C·hF
+wFd
+ds
+s=s♭
+0E∗
+T♭(y♭, s)◦
+n
+(1.3.11)
+where s♭
+0:= (n−m♭)/2. Here C∈Q>0is the volume constant from Lemma 7.4.1(1), for
+the Hermitian space Vandv0=∞in the notation of loc. cit.. The constant Cmay depend
+onnandm♭(and F), but does not otherwise depend on T♭.
+This appears below (in stronger form) as Theorem 9.1.6. That version applies for all n(even or
+not) and arbitrary level, as it is a statement about the complex Shimura variety. We gave the weaker
+version here to avoid more notation in the introduction. Due to non-properness of MC→SpecC
+forn >2, the corresponding Archimedean result of [GS19] does not apply here if n >2.
+When m♭=n, the preceding Archimedean theorem follows from Liu’s result [Liu11, Theorem
+4.17]. We do not have a new proof of this case. Instead, we deduce our general result from his by
+a certain limiting argument. This is also our method at non-Archimedean places (replacing Liu’s
+Archimedean results with the non-Archimedean results of Li–Zhang [LZ22] and Li–Liu [LL22]).
+These local theorems were the main results of our companion papers [Che24a; Che24b]. In this
+paper, we explain how to combine our local theorems at all places to prove the (global) Theorems
+A and B.
+1.4.Outline. We briefly summarize the remaining content in this paper, and discuss the relation
+with our companion papers [Che24a; Che24b; Che24c]. Further explanations may be found at the
+beginning of some sections.
+The remaining sections are divided into Parts 1 and 2.
+In Part 1 “Eisenstein series”, we study U(m, m ) Siegel–Weil Eisenstein series. To formulate and
+prove our main results, it is extremely important that we normalize the Eisenstein series and local
+11Whittaker functions (e.g. by certain L-factors). As in our main local theorems from [Che24a;
+Che24b], it seems that these normalized versions correspond more naturally to geometric objects
+(e.g. global and local special cycles). We pin down explicit precise normalizations, guided by special
+value formulas and symmetric functional equations. We also study (normalized) Fourier coefficients
+for singular T(focusing on rank m−1 and size m×m), and give formulas needed for our main
+results.
+In Part 2 “Siegel–Weil”, we first give some special value formulas (local and geometric Siegel–
+Weil, Sections 7 and 8) which are needed to prove our arithmetic Siegel–Weil theorems. Our treat-
+ment of our geometric Siegel–Weil result is inspired by [LZ22, Remark 4.6.2], and the argument may
+be carried out using complex (Archimedean) uniformization or Rapoport–Zink (non-Archimedean)
+uniformization in similar fashions. We also compare complex volumes of unitary Shimura varieties
+with the special value of our Eisenstein series normalizing factor (“geometric Siegel mass formula”),
+which may be of independent interest Section 8.2. The finale occurs in Section 9.1, where we collect
+our local main theorems to prove our (global) arithmetic Siegel–Weil theorems. This proof relies
+on results from almost all preceding sections, including our three other companion papers. The
+key inputs from those papers are our non-Archimedean local arithmetic Siegel–Weil theorems from
+[Che24a], our Archimedean local arithmetic Siegel–Weil theorem from [Che24b], and the geomet-
+ric local-to-glocal reduction process (via Archimedean and non-Archimedean uniformization) from
+[Che24c]. Section 9.2 contains a reformulation of our arithmetic Siegel–Weil results in the special
+casen= 2, via an exceptional comparison with Hecke translates of CM elliptic curves.
+1.5.Acknowledgements. I thank my advisor Wei Zhang for suggesting this topic, for his dedi-
+cated support and constant enthusiasm, for insightful discussions throughout the entire course of
+this project, and for helpful comments on earlier drafts. I thank Tony Feng, Qiao He, Benjamin
+Howard, Ishan Levy, Chao Li, Keerthi Madapusi, Andreas Mihatsch, Siddarth Sankaran, Ananth
+Shankar, Yousheng Shi, Tonghai Yang, Shou-Wu Zhang, and Zhiyu Zhang for helpful comments or
+discussions.
+This work was partly supported by the National Science Foundation Graduate Research Fellow-
+ship under Grant Nos. DGE-1745302 and DGE-2141064. Parts of this work were completed at
+the Mathematical Sciences Research Institute (MSRI), now becoming the Simons Laufer Mathe-
+matical Sciences Institute (SLMath), and the Hausdorff Institute for Mathematics. I thank these
+institutes for their support and hospitality. The former is supported by the National Science Foun-
+dation (Grant No. DMS-1928930), and the latter is funded by the Deutsche Forschungsgemein-
+schaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC-2047/1
+– 390685813.
+12Part 1.Eisenstein series
+2.Setup
+2.1.The group U(m, m ).We fix notation for the unitary group U(m, m ).
+LetA→Bbe a finite locally free morphism of (commutative) rings, and suppose Bis given an
+involution b7→b(“conjugation”) over A. We are mostly interested in the case where F/F+is a
+CM extension of number fields (with F+the index 2 totally real subfield) and B/A =OF/OF+for
+the corresponding rings of integers (also the local analogues) etc..
+Fix an integer m≥0. Write 1 mfor the m×midentity matrix (sometimes we drop the subscript
+m), and let H=U(m, m ) be the unitary group
+H=U(m, m ):=(
+h∈ResB/AGL2m:th 
+0 1 m
+−1m0!
+h= 
+0 1 m
+−1m0!)
+(2.1.1)
+wherethdenotes conjugate transpose (with Hthe trivial group if m= 0, by convention). Equiva-
+lently, Hconsists of block matrices
+ 
+a b
+c d!
+satisfyingtac=tcatad−tcb= 1mtbd=tdb (2.1.2)
+with a, b, c, d ∈ResB/AMm×m. We refer to Has the group U(m, m ) (for signature reasons when
+B/A isC/R).
+Given an integer jwith 0 ≤j≤m, we consider the injection
+µm
+j:U(j, j)→U(m, m ) 
+a b
+c d!
+7→
+1m−j0 0 0
+0 a 0 b
+0 0 1 m−j0
+0 c 0 d
+. (2.1.3)
+Consider the subgroups
+P:=(
+h= 
+∗ ∗
+0∗!
+∈H)
+(2.1.4)
+M:=(
+m(a) = 
+a0
+0ta−1!
+:a∈ResB/AGLm)
+(2.1.5)
+N:=(
+n(b) = 
+1mb
+0 1 m!
+:b∈Herm m)
+(2.1.6)
+ofH. We have P(R) =M(R)N(R) for all A-algebras R. We occasionally write Pm, Mm, Nmto
+emphasize dependence on m.
+Set
+wj=
+1m−j0 0 0
+0 0 0 1 j
+0 0 1 m−j0
+0−1j 0 0
+(2.1.7)
+forjwith 0 ≤j≤m. We also write w=wmwhen j=mandmis understood.
+13LetFvbe a finite ´ etale algebra of degree 2 over a local field F+
+v. Consider B/A =OFv/OF+
+vfor
+the respective rings of integers (with OF+
+v:=F+
+vandOFv:=FvifF+
+vis Archimedean).
+IfFv/F+
+v=C/R, we consider the standard maximal compact subgroup
+K◦
+v:=( 
+a b
+−b a!
+∈H(R) :ata+btb= 1mandatb=bta)
+⊆H(R) (2.1.8)
+We write U(m)⊆GLm(C) for (the real points of) the unitary group for the usual positive definite
+rank mcomplex Hermitian space (specified by the Gram matrix 1 m). There is an isomorphism
+Kv→U(m)×U(m) sending the displayed matrix to ( a+ib, a−ib)∈U(m)×U(m) (see e.g. [GS19,
+§2.5.1]).
+IfF+
+vis non-Archimedean, we consider the standard open compact subgroup
+K◦
+v:=H(OF+
+v)⊆H(F+
+v). (2.1.9)
+IfFv/F+
+v=C/Ror if F+
+vis non-Archimedean, we have H(F+
+v) = P(F+
+v)K◦
+v. If F+
+vis non-
+Archimedean and
+w−1n(b)w=m(a)k (2.1.10)
+with n(b)∈N(F+
+v) and m(a)∈M(F+
+v) and k∈K◦
+v, we have |deta|Fv<1 and moreover
+deta∈F+
+v(see [Shi97, §13.4]).
+IfF/F+is a CM extension of number fields and B/A =OF/OF+, we write
+K◦=Y
+vK◦
+v K◦
+∞=Y
+v|∞K◦
+v K◦
+f=Y
+v<∞K◦
+v (2.1.11)
+where the products run over places vofF+.
+For places vofF+, we use the notation Fv:=Q
+w|vFwwhere wruns over places of F, similarly
+OFv:=Q
+w|vOFw, as well as F+
+∞=Q
+v|∞F+
+vandF∞=Q
+w|∞Fw, etc..
+2.2.Ad` elic and classical Eisenstein series. Characters are assumed continuous and unitary
+unless specified otherwise. Let Fvbe a degree 2 ´ etale algebra over a local field F+
+v, and form the
+corresponding unitary group H=U(m, m ) as in Section 2.1. If F+
+vis Archimedean, we assume in
+Section 2.2 that Fv/F+
+visC/R.
+Given s∈Cand a character χv:F×
+v→C×, we may form the local degenerate principal series
+I(s, χv):= IndH(F+
+v)
+P(F+
+v)(χv| − |s+m/2
+Fv). (2.2.1)
+This is an unnormalized induction, consisting of smooth and Kv-finite functions Φ v:H(F+
+v)→C
+satisfying
+Φv(m(a)n(b)h, s) =χv(a)|deta|s+m/2
+Fv(2.2.2)
+for all m(a)∈M(F+
+v) and n(b)∈N(F+
+v) and h∈H(F+
+v). Here we wrote χv(a):=χv(deta) for
+short. A section Φ v(h, s) ofI(s, χv) isstandard if Φ(k, s) is independent of sfor any fixed k∈Kv.
+We say Φ visspherical if Φv(hk, s) = Φ v(h, s) for any k∈Kv. We write Φ◦
+vfor the unique spherical
+standard section satisfying Φ◦
+v(1, s) = 1 for all s, and call Φ◦
+vthenormalized spherical section .
+14Next, suppose F/F+is a CM extension of number fields. We write AFfor the ad` ele ring of F
+andAfor the ad` ele ring of F+. Given s∈Cand a character χ:F×\A×
+F→C×ands∈C, we
+similarly form the global degenerate principal series
+I(s, χ):= IndH(A)
+P(A)(χ| − |s+m/2
+F) (2.2.3)
+which is an unnormalized induction, consisting of smooth and K-finite functions Φ: H(A)→C
+satisfying
+Φ(m(a)n(b)h, s) =χ(a)|deta|s+m/2
+F(2.2.4)
+for all m(a)∈M(A) and n(b)∈N(A) and h∈H(A). Given characters χf:A×
+F,f→C×and
+χ∞:A×
+F,∞→C×, we similarly form I(s, χf) and I(s, χ∞). We also speak of spherical sections and
+thespherical standard section , as above. We sometimes write Im(s, χ) etc. to indicate dependence
+onm.
+Given a standard section Φ( h, s) of the global degenerate principal series I(s, χ), we form the
+Siegel Eisenstein series
+E(h, s,Φ) =X
+γ∈P(F+)\H(F+)Φ(γh, s) (2.2.5)
+which is absolutely convergent for Re( s)> m/ 2. We also form E(h,Φ, s) when Φ is a finite
+meromorphic linear combination of standard sections by extending linearly.
+Define another character ˇ χ:F×\A×
+F→C×as ˇχ(a):=χ(a)−1. There is a functional equation
+E(h,−s, M(χ, s)Φ) = E(h, s,Φ) (2.2.6)
+where M(χ, s):I(s, χ)→I(−s,ˇχ) is the intertwining operator
+(M(s, χ)Φ)(h) =Z
+N(A)Φ(w−1n(b)h, s)dn(b) (2.2.7)
+for Re( s)> m/ 2 (see e.g. [Tan99]). We occasionally write Mm(s, χ) to emphasize the understood
+m(inU(m, m )).
+Fix an identification of F+
+v-algebras Fv∼=Cfor each Archimedean place vofF+. We consider
+classical Eisenstein series on the Hermitian upper-half space
+Hm:={z∈Mm,m(F∞) : (2i)−1(z−tz)>0} (2.2.8)
+={z=x+iy:x, y∈Herm m(F+
+∞) with y >0}, (2.2.9)
+where the latter expression means that xandyarem×mHermitian matrices with ypositive
+definite (at every place v| ∞ofF+
+v). Given z=x+iy∈ H m, we write hz∈H(F+
+∞)⊆H(A) for
+any element hz=n(x)m(a) where a∈GLm(F∞) satisfies ata=y. Note hz·i1m=z.
+We restrict to Φ = Φ ∞⊗Φffor standard sections Φ ∞∈I(s, χ∞) and Φ f∈I(s, χf). Fix an
+integer nvfor each place v| ∞ofF+
+v, and assume χv|F+×
+v= sgn( −)nvfor every v| ∞. We also let
+k(χv)∈Zbe the integer satisfying
+χv(z) = (z/|z|1/2
+Fv)k(χv)where z∈Fv, (2.2.10)
+15for each place v| ∞ofF+
+v. For such v, we let Φ v= Φ(nv)
+vbe the unique standard section of I(s, χv)
+of scalar weight
+(n1, n2) where n1=n+k(χ)
+2and n2=−n+k(χ)
+2(2.2.11)
+such that Φ(nv)
+v(1, s) = 1 (as in [GS19, §3.2, §3.3]). The scalar weight condition means that
+Φ(nv)
+v(hk, s) = det( k1)n1det(k2)n2Φ(nv)
+v(h, s) for all h∈H(F+
+v) and k∈Kvwhere n1= (nv+
+k(χv))/2 and n2= (−nv+k(χv))/2 and
+k= 
+a b
+−b a!
+∈Kv k1=a+ib k 2=a−ib. (2.2.12)
+Note that Φ(nv)
+vdoes not depend on the choice of identification Fv∼=C.
+Ify=atafor some a∈GLm(Fv), a computation (omitted) shows
+χv(a)−1(dety)−nv/2Φ(nv)
+v(w−1n(b)m(a)) = (det y)s−s0det(−iy+b)−(s−s0)det(iy+b)−(s−s0)−nv
+(2.2.13)
+for any b∈Herm m(F+
+v), where s0= (nv−m)/2 (reduce to the case a= 1mand write w−1n(b) =
+n(−b(1m+b2)−1)m(b+i1m)−1kfork∈Kv). Equation (2.2.13) may be used to translate various
+statements from [Shi82] to statements about Archimedean Whittaker functions, etc. (see [Che24b,
+Section 4.3] for more on this).
+Remark 2.2.1. Given g=xg+iyg∈Mm,m(C) with xg, ygHermitian and xgpositive definite, we
+define log det( g) by the “principal branch” (such that g7→log det gis holomorphic, and log det g∈R
+ifyg= 0) as in [Shi82, (1.11)] and the surrounding discussion of loc. cit.. If ygis positive definite
+andxgis only assumed Hermitian, we also take
+log det g= log det( −ig) +mlogi log det g= log det( ig)−mlogi (2.2.14)
+where log i:=πi/2 (as in [Shi82, (1.11)]). This convention is implicit in (2.2.13).
+We take Φ ∞=⊗v|∞Φ(nv)
+v. We write n= (nv)v|∞for the collection of Archimedean weights (and
+will eventually focus on the case where all nvare equal to some fixed integer n). In the above
+situation, we write E(h, s,Φ)n:=E(h, s,Φ) and consider an associated classical Eisenstein series
+E(z, s,Φ)n:=E(z, s,Φ):=χ∞(a)−1det(y)−n/2E(hz, s,Φ)n (2.2.15)
+where z=x+iyandhz=n(x)m(a) with ata=yas above, and where det( y)−n/2stands forQ
+v|∞det(yv)−nv/2. This does not depend on the choice of hz, i.e. E(hzk∞, s,Φ)n=E(hz, s,Φ)n
+for any k∞∈K∞.
+When F+=Qands0:= (n−m)/2 (setting n=n∞andk(χ) =k(χ∞)), a computation
+(omitted) gives the more classical form
+E(z, s,Φ)n=X
+γ∈P(Z)\U(m,m)(Z)det(y)s−s0det(γ)(n+k(χ))/2
+det(cz+d)n|det(cz+d)|2(s−s0)Φf(γ, s) (2.2.16)
+=X
+γ∈P1(Z)\SU(m,m)(Z)det(y)s−s0
+det(cz+d)n|det(cz+d)|2(s−s0)Φf(γ, s) (2.2.17)
+16where
+γ= 
+a b
+c d!
+, (2.2.18)
+where SU(m, m )⊆U(m, m ) is the determinant 1 subgroup, and P1:=SU(m, m )∩P. We have
+P(Q)\H(Q) =P(Z)\H(Z) =P1(Q)\H1(Q) =P1(Z)\H1(Z) (e.g. [Ike08, Proposition 12.6]). When
+m= 1, the exceptional isomorphism SL 2→SU(1,1) (over Spec Q) implies that the above expres-
+sion is a classical Eisenstein series for SL 2on the upper-half plane.
+Our main theorem (Theorem 9.1.1) concerns Fourier coefficients of E(z, s,Φ)n(normalized as in
+Section 6.1), but the variant
+˜E(a, s,Φ)n:=χ(a)−1|det(a)|−n/2
+FE(m(a), s,Φ)nfora∈GLn(AF). (2.2.19)
+will be useful for studying Fourier coefficients of E(z, s,Φ)nfor singular T(see below). If a∈
+GLm(F∞) is any element satisfying atafory∈Herm m(F+
+∞)>0, we have
+E(iy, s, Φ)n=˜E(a, s,Φ)n. (2.2.20)
+2.3.Fourier expansion and local Whittaker functions. Take notation as in Section 2.2, e.g.
+F/F+is a CM extension of number fields. Choose a nontrivial additive character ψ:F+\A→C×.
+We have a Fourier expansion
+E(h, s,Φ) =X
+T∈Herm m(F+)ET(h, s,Φ) (2.3.1)
+where
+ET(h, s,Φ) =Z
+N(F+)\N(A)E(n(b)h, s,Φ)ψ(−tr(Tb))dn(b) (2.3.2)
+for Re( s)> m/ 2, and where dn(b) is the Haar measure on N(A) which is self-dual with respect to
+the pairing ( b, b′)7→ψ(tr(bb′)). We refer to ET(h, s,Φ) as the T-th Fourier term .
+For any a∈GLm(F), a change of variables gives
+ET(m(a)h, s,Φ) = EtaTa(h, s,Φ). (2.3.3)
+We also have
+ET(m(a)h, s,Φ) = ET(h, s,Φ) for any 
+1m−m♭∗
+0 1m♭!
+∈GLm(AF) if T= 
+0 0
+0T♭!
+(2.3.4)
+with the block matrix T♭∈Hermm♭(F+) having det T♭̸= 0 (here m♭is arbitrary) (follows from
+[GS19, Lemma 5.4, (5.56)]).
+Allowing arbitrary Tagain, assume there is a factorization Φ = ( ⊗v|∞Φv)⊗Φf. For each v| ∞,
+assume Φ v= Φ(nv)
+vis the scalar weight standard section as in Section 2.2, for some nv∈Z. Write
+n= (nv)v|∞for the resulting tuple of integers.
+Consider a=a∞af∈GLm(AF), with a∞∈GLm(F∞) and af∈GLm(AF,f). Set y=a∞ta∞
+(temporary). We then have T-thFourier coefficients ET(y, s,Φ)nand ˜ET(a, s,Φ)ncharacterized
+17by the relations
+ET(y, s,Φ)nqT=χ∞(a∞)−1det(y)−n/2ET(n(x)m(a), s,Φ) (2.3.5)
+˜ET(a, s,Φ)nψf(tr(Tb))qT=χ(a)−1|deta|−n/2
+FET(n(x+b)m(a), s,Φ) (2.3.6)
+for any x∈Herm m(F∞) and b∈Herm m(Af), with z:=x+iy, and with qT:=ψ∞(tr(Tz)). These
+correspond to the classical Eisenstein series and its variant in (2.2.15) and (2.2.19).
+When det T̸= 0 and Φ = ⊗vΦvis factorizable over all places, we have a factorization
+ET(h, s,Φ) =Y
+vWT,v(hv, s,Φv) (2.3.7)
+intolocal Whittaker functions defined below (2.3.8).
+We switch to local notation: let Fvbe a degree 2 ´ etale algebra over a local field F+
+v, with
+nontrivial involution a7→a. We assume F+
+vhas characteristic 0 (because Karel assumes this
+[Kar79]). If F+
+vis Archimedean, we also assume Fv/F+
+v=C/R.
+Letχv:F×
+v→C×andψv:F+
+v→C×be characters with ψvnontrivial, and suppose Φ v∈I(s, χv)
+is a standard section. Given T∈Herm m(F+
+v) with det T̸= 0, there is a local Whittaker function
+defined by the absolutely convergent integral
+WT,v(h, s,Φv):=Z
+N(F+
+v)Φv(w−1n(b)h, s)ψv(−tr(Tb))dn(b) (2.3.8)
+forh∈H(F+
+v) and s∈Cwith Re( s)> m/ 2, where dn(b) is the Haar measure which is self-dual with
+respect to the pairing ( b, b′)7→ψv(tr(bb′)) on Herm m(F+
+v)∼=N(F+
+v). For each fixed h, the function
+WT,v(h, s,Φv) admits holomorphic continuation to s∈C[Kar79, Corollary 3.6.1][KS97][Ich04, §6].
+Extending linearly defines WT,v(h, s,Φv) whenever Φ vis a finite meromorphic linear combination
+of standard sections. For any a∈GLm(Fv), a change of variables shows
+WT,v(m(a)h, s,Φv) = ˇχv(a)|deta|−s+m/2
+FvWtaTa,v(h, s,Φv) (2.3.9)
+for ˇχv(a):=χv(a)−1as above. We use the shorthand WT,v(s,Φv):=WT,v(1, s,Φv).
+Lemma 2.3.1. With notation as above, assume that F+
+vis non-Archimedean with residue field of
+cardinality qv. Suppose Φv∈I(s, χv)is a standard section and h∈H(F+
+v)is a fixed element.
+(1) We have WT,v(h, s,Φv)∈C[q−s
+v, qs
+v].
+(2) If h∈Kv, we have WT,v(h, s,Φv)∈C[q−2s
+v].
+(3) Suppose χ′
+v:F×
+v→C×is another character satisfying χ′
+v|F+×
+v=ξvχv|F+×
+vfor an unramified
+character ξv:F+×
+v→C×. Assume h∈Kv, and suppose Ψv∈I(s, χ′
+v)is a standard
+section satisfying Ψv(w−1h) = Φ v(w−1h). If f(X)∈C[X]is the polynomial satisfying
+f(q−2s
+v) =WT,v(h, s,Φv), then we have f(ξv(ϖ0)q−2s) =WT,v(h, s,Ψv), where ϖ0∈F+
+vis
+a uniformizer.
+Proof. A general result of Karel [Kar79, Corollary 3.6.1] states that WT,v(h, s,Φv)∈C[q−s
+v, qs
+v],
+and that WT,v(h, s,Φv) may be computed for all sas the integral over a sufficiently large open
+compact subgroup of N(F+
+v). Recall that we have Φ v(m(a)h, s) =χv(deta)|deta|s+m/2
+FvΦv(h, s)
+for all a∈GLm(Fv) and all h∈H(F+
+v). Then apply the discussion surrounding (2.1.10). □
+18In the case where F+
+vis non-Archimedean, consider the case where χvis unramified and χv|F+×
+v=
+ηn
+vfor some integer n, where ηv:F+×
+v→ {± 1}is the quadratic character associated to Fv/F+
+v. Con-
+sider the normalized spherical standard section Φ◦
+v∈I(s, χv). We temporarily write WT,v(h, s,Φ◦
+v)n
+for the associated local Whittaker function, emphasizing the possible dependence on n. By Lemma
+2.3.1(3), the implicit χv-dependence of WT,v(h, s,Φ◦
+v)nis only on the restriction χv|F+×
+v. IfFv/F+
+v
+is not inert, then WT,v(h, s,Φ◦
+v)ndoes not depend on n(note nmust be even if Fv/F+
+vis ramified).
+IfFv/F+
+vis inert, then WT,v(h, s,Φ◦
+v)ndepends only the parity of n. The ring endomorphism of
+C[q−2s
+v] sending q−2s
+v7→ −q−2s
+vswaps WT,v(h, s,Φ◦
+v)nandWT,v(h, s,Φ◦
+v)n+1, by Lemma 2.3.1(3).
+2.4.Singular Fourier coefficients. Retain notation from Section 2.3 (switching back to global
+notation). The Fourier terms ET(h, s,Φ) for singular T∈Herm m(F+) are known to be closely
+related with Fourier terms of Eisenstein series on smaller groups (e.g. [GS19, §5.2]). We focus on
+the case where rank T=m−1 (assume this throughout Section 2.4). On account of (2.3.3), it will
+be enough to describe the case where Tis block diagonal of the form
+T= 
+0 0
+0T♭!
+(2.4.1)
+with det T♭̸= 0.
+Assume m≥1, and fix an integer n∈Z. Let χ:F×\A×
+F→C×be a character satisfying
+χ|A×=ηn, where ηis the quadratic character associated with F/F+. Note ˇ χ=χin this case.
+Take a factorizable standard section Φ = ⊗vΦv∈I(s, χ), and assume Φ v= Φ(n)
+vis the normalized
+scalar weight standard section (Section 2.2) for every Archimedean place v, with nthe fixed integer
+from above (same for every v| ∞).
+Take Tas in (2.4.1). Given a∈GLm(AF), we study the Fourier coefficient ˜ET(a, s,Φ)n. By the
+Iwasawa decomposition, every a∈GLm(AF) admits a decomposition
+a= 
+11∗
+0 1 m−1! 
+a#0
+0a♭!
+k (2.4.2)
+with a#∈GL1(AF), with a♭∈GLm−1(AF), and with k∈Q
+v|∞U(m)×Q
+v<∞GLm(OFv). We will
+be eventually interested in the case when Φ fis spherical, which implies ˜ET(ak, s, Φ)n=˜ET(a, s,Φ)
+for any k∈Q
+v|∞U(m)×Q
+v<∞GLm(OFv) (also using the fact that Φ vis a scalar weight standard
+section for each v| ∞). In light of the invariance property in (2.3.4), it is thus harmless to restrict
+to the case of block diagonal a= diag( a#, a♭). Assume this for the rest of Section 2.4 (but we do
+not assume Φ fis spherical for now).
+Setm♭:=m−1. Arguing as in the proof of [KR88, Lemma 2.4] (see also [GS19, Lemma 5.4]
+and [HSY21, Theorem 2.2]) gives
+˜ET(a, s,Φ)n=|deta#|s−s0
+F˜ET♭(a♭, s+ 1/2, µm∗
+m♭(s, χ)Φ)n (2.4.3)
++|deta#|−s−s0
+F˜ET♭(a♭, s−1/2, Um
+m♭(s, χ)Φ)n
+19where s0:= (n−m)/2, where
+Im(s, χ) Im♭(s+ 1/2, χ)
+Ψ Ψ◦µm
+m♭µm∗
+m♭(s,χ)
+(2.4.4)
+(with µm
+m♭:U(m♭, m♭)→U(m, m ) as in Section 2.1), and where
+Im(s, χ) Im♭(s−1/2, χ)
+Ψ
+h7→R
+b1∈Hermm−m♭(A)
+b12∈Mm−m♭,m♭(AF)Ψ 
+w−1
+m·n 
+b1 b12
+tb12 0!
+wm♭µm
+m♭(h), s!
+db1db12
+Um
+m♭(s,χ)
+(2.4.5)
+for Re( s)> m/ 2 (with meromorphic continuation to s∈C). A calculation shows
+Mm♭(s−1/2, χ)◦Um
+m♭(s, χ) =µm∗
+m♭(−s, χ)◦Mm(s, χ), (2.4.6)
+compare [GS19, Lemma 5.5(iii)].
+In Corollary 6.2.2, we rewrite (2.4.3) more explicitly when Φ vis the normalized spherical standard
+section for every non-Archimedean v.
+3.Weil representation
+3.1.Weil index. We recall Weil indices , which are certain constants appearing in the Weil rep-
+resentation and other calculations below. We compute the instances which we need.
+Suppose F+
+vis a local field (arbitrary characteristic) with nontrivial additive character ψv:F+
+v→
+C×, and suppose Vvis a (finite dimensional) F+
+vvector space equipped with a non-degenerate
+quadratic form Q(−). The map V→C×given by x7→ψv(Q(x)) is a “non-degenerate character of
+the second degree” in the sense of [Wei64] [Rao93, Appendix], so there is an associated Weil index
+γψv(Vv)∈C×(which is an eighth root of unity). The quantity ψψv(Vv) depends only on ψvand
+the isomorphism class of Vv, and we have
+γψv(Vv) =γψv(Vv) γψv(Vv⊕V′
+v) =γψv(Vv)γψv(V′
+v) (3.1.1)
+for orthogonal direct sums Vv⊕V′
+v(follows from the definition, see [Rao93, Theorem A.2]). The
+Weil index also satisfies a global product formula [Wei64, Proposition 5].
+When F+
+vhas characteristic ̸= 2 and Vvhas a bilinear pairing ( −,−), our convention is that
+x7→(x, x) is the associated quadratic form (and vice-versa).
+Lemma 3.1.1. LetF+
+vbe a local field of characteristic ̸= 2, let ψv:F+
+v→C×be a nontrivial
+additive character, and let Vvbe a finite dimensional F+
+vvector space with non-degenerate bilinear
+pairing. Assume any of the following situations holds.
+(1) The bilinear pairing on Vvis given by
+ 
+0 1 d
+1d0!
+. (3.1.2)
+20(2) The field F+
+vis non-Archimedean with residue characteristic ̸= 2, there exists a self-dual
+lattice in Vv, and ψvis unramified.
+Then the Weil index is γψv(Vv) = 1 .
+Proof. (1) By compatibility with orthogonal direct sums, we reduce to the case d= 1. Given
+a nonzero element a∈F+×
+v, we use the temporary notation γψv(a) for the Weil index of the
+one-dimensional quadratic space containing an element xwith ( x, x) =a. We have γψv(Vv) =
+γψv(a)γψv(−a−1) for some a∈F+×
+v. We have γψv(a)γψv(−a−1) = 1 (follows from [Rao93, Theorem
+A.4], which relates Weil indices and the Hilbert symbol).
+(2) By compatibility with orthogonal direct sums, it is enough to show γψv(a) = 1 for a∈ O×
+F+
+v.
+This follows from [Rao93, Proposition A.11]. □
+Remark 3.1.2. The explicit formula of [Rao93, Proposition A.12] shows that Lemma 3.1.1(2) is
+false if F+
+v=Q2(e.g. if Vvhas rank one).
+Next, let Fvbe an ´ etale algebra of degree 2 over a local field F+
+vof characteristic ̸= 2 (residue
+characteristic 2 allowed). Write ηv:F+×
+v→ {± 1}for the quadratic character associated to Fv/F+
+v
+(trivial if Fv/F+
+vis split), and write a7→afor the nontrivial involution of Fvover F+
+v. IfF+
+vis
+non-Archimedean, we write d(resp. ∆) for the different (resp. discriminant) ideal for the extension
+Fv/F+
+v(where d=OFvand ∆ = OF+
+vin the split case). We sometimes abuse notation and write
+dand ∆ for understood/chosen generators of these ideals. We write qvfor the residue cardinality
+ofF+
+vifF+
+vis non-Archimedean.
+Any non-degenerate Fv/F+
+vHermitian space Vvhas an associated F+
+v-bilinear pairing1
+2trFv/F+
+v(−,−)
+and quadratic form x7→1
+2trFv/F+
+v(x, x). (Elsewhere, we typically normalize the trace bilinear pair-
+ing without the factor of1
+2.) We write γψv(Vv) for the Weil index of this quadratic space with
+respect to a nontrivial additive character ψv:F+
+v→C×. We know γψv(Vv)4= 1 (see e.g. [Rao93,
+Corollary A.5(4)] and [Kud94, Theorem 3.1]).
+We write γψv(Fv) for the Weil index associated to the one-dimensional Hermitian space Fvwith
+pairing ( x, y) =xy. We write ϵv(s, ξv, ψv) for the local epsilon factor associated to a quasi-character
+ξv:F+×
+v→C×(as in [Tat79, §3][Tat67], for the quasi-character ξv| − |sand the self-dual Haar
+measure for ψv).
+IfF+
+vis non-Archimedean with uniformizer ϖ0, we have
+ϵv(s, ηv, ψv) =|ϖc(ψv)
+0∆|s−1/2
+F+
+vγψv(Fv) (3.1.3)
+where
+c(ψv) = max {j∈Z:ψv|ϖ−j
+0OF+vis trivial }. (3.1.4)
+IfF+
+vis Archimedean, we have
+ϵv(s, ηv, ψv) =|a|s−1/2
+F+
+vγψv(Fv). (3.1.5)
+where a∈F+×
+vis such that
+ψv(x) =e2πiaxifF+
+v=Rand ψv(z) =e2πitrC/R(az)ifF+
+v=C. (3.1.6)
+21These identities follow from [JL70, Lemma 1.2(iii),(iv)] and properties of epsilon factors. For the
+reader’s convenience, we recall γψv(C) =iifF+
+v=Randψv(x) =e2πix.
+In all cases, we have
+γψv(Fv)2=ϵv(1/2, ηv, ψv)2=ηv(−1). (3.1.7)
+IfF+
+vis non-Archimedean, recall that ϵv(s, ξv, ψv) = 1 if ξvandψvare unramified. If F+
+v=Rand
+ψv(x) =e2πix, recall ϵv(s,sgnj,ψv) = 1 (resp. = −i) ifjis even (resp. odd) where sgn: R×→ {± 1}
+is the sign character (these formulas will be used implicitly in Section 5.2). Recall our convention
+that self-duality for Hermitian lattices is understood with respect to the trace pairing (unless
+otherwise specified) [Che24a, Section 2.2].
+For Hermitian lattices, we always use the term self-dual to mean self-dual with respect to the
+trace pairing (i.e. L=L∨) unless specified otherwise. If Fv/F+
+vis ramified and Lis a self-dual
+Hermitian lattice, then Lmust have even rank (see e.g. [Shi97, Lemma 13.3]).
+Lemma 3.1.3. LetF+
+vbe a local field of characteristic ̸= 2, let ψv:F+
+v→C×be a nontrivial
+additive character, and let Fv/F+
+vbe a degree 2´ etale algebra. Let Vvbe a finite dimensional non-
+degenerate Fv/F+
+vHermitian space. Assume any of the following situations hold.
+(1) The Hermitian space Vvadmits a basis with Gram matrix.
+ 
+0 1 d
+1d0!
+. (3.1.8)
+(2) We have Fv=F+
+v×F+
+v.
+(3) The extension Fv/F+
+vis unramified or F+
+vhas residue characteristic ̸= 2. Moreover, the
+fieldF+
+vis non-Archimedean, there exists a full-rank self-dual OFv-lattice in Vv, and Vvhas
+even rank.
+(4) The field F+
+vis non-Archimedean, the extension Fv/F+
+vis unramified, there exists a full-
+rank self-dual lattice in Vv, and ψvis unramified.
+Then the Weil index is γψv(Vv) = 1 .
+Proof. We have (3) = ⇒(1) (see [LL22, Lemma 2.12] for the ramified situation, in which case
+the even rank assumption is redundant). This implication is false if Fv/F+
+vis ramified with F+
+vof
+residue characteristic 2.
+In situations (1) and (2) we may pick a basis {1, α}forFvas an F+
+vvector space where
+trFv/F+
+v(α) = 0. Applying Lemma 3.1.1 proves the claims.
+In situation (4), we may diagonalize the given self-dual lattice, hence reducing to the case where
+Vvhas rank one. In this case, we have γψv(Vv) =γψv(Fv) =ϵ(1/2, ηv, ψv) = 1. □
+3.2.Weil representation. LetFv/F+
+vand accompanying notation be as in Section 3.1. Assume
+Fv/F+
+v=C/RifF+
+vis Archimedean. We also assume F+
+vhas characteristic 0 (because [Kud94]
+assumes this).
+LetVvbe a non-degenerate Fv/F+
+vHermitian space of dimension n≥0. Choose a nontrivial
+additive character ψv:F+
+v→C×, and let χv:F×
+v→C×be a character such that χv|F+×
+v=ηn
+v.
+22There is a local Weil representation ωv=ωχv,ψvofU(m, m )(F+
+v)×U(Vv)(F+
+v) on the space of
+Schwartz function S(Vm
+v) (the Schr¨ odinger model [Kud94]), which we normalize as
+(ωv(m(a))φv)(x) =χv(deta)|deta|n/2
+Fvφv(x·a) m(a)∈M(F+
+v)
+(ωv(n(b))φv)(x) =ψv(trb(x, x))φv(x) n(b)∈N(F+
+v)
+(ωv(w)φv)(x) =γψv(Vv)mbφv(x) m(a)∈M(F+
+v)
+(ωv(h)φv)(x) =φv(h−1·x) h∈U(m, m )(F+
+v)
+forφv∈ S(Vm
+v) and x∈Vm
+v(viewed as n×mmatrices), where
+bφv(x) =Z
+Vmvφv(y)ψv(trFv/F+
+vtr(x, y))dy (3.2.1)
+is Fourier transform for the corresponding self-dual Haar measure on Vm
+v. The constant γψv(Vv) is
+the Weil index from Section 3.1
+With s0:= (n−m)/2, there is a map S(Vm
+v)→I(χv, s0) sending φv∈ S(Vm
+v) to the function
+h7→(ωv(h)φv)(0). The associated standard section Φ φv∈I(χv, s) is the Siegel–Weil section for
+φv[GS19, §5.1].
+IfF+
+vis non-Archimedean, choose a generator dof the different ideal of Fv/F+
+v, and let M◦
+2be
+the rank 2 Hermitian OFv-lattice admitting a basis with Gram matrix
+ 
+0 d−1
+d−10!
+. (3.2.2)
+Note that M◦
+2=M◦∗
+2is self-dual (with respect to the F+
+v-bilinear pairing trFv/F+
+v(−,−)).
+Lemma 3.2.1. In the situation above, assume moreover that χvandψvare unramified, and that
+F+
+vis non-Archimedean. Suppose φv= 111⊗m
+Mwhere 111Mis the characteristic function of a full rank
+OFv-lattice M⊆Vvin any of the following situations.
+(1) The lattice Mis self-dual. Moreover, the extension Fv/F+
+vis unramified, or F+
+vhas residue
+characteristic ̸= 2.
+(2) We have M∼=(M◦
+2)⊕d(orthogonal direct sum) for some d≥0.
+Then the associated Siegel-Weil section Φφvis the normalized spherical section Φ◦
+v, i.e. Kv-fixed
+with Φφv(1) = 1 .
+Proof. Follows from the explicit formulas above, since wandP(OF+
+v) generate Kv=U(m, m )(OF+
+v)
+and since the Weil index γψv(Vv) is 1 (Lemma 3.1.3).
+IfMhas even rank, then condition (1) implies condition (2) (the ramified case is [LL22, Lemma
+2.12]). □
+Next, consider the case where Fv/F+
+v=C/R. Suppose the n-dimensional Hermitian space Vvis
+positive definite, with Hermitian pairing ( −,−). Ifψv(x) =e2πix, the Gaussian
+φv(x) =e−2πtr(x,x)∈ S(Vm
+v) (3.2.3)
+23forx= (x1, . . . , x m)∈Vm
+v(where tr( x, x) = ( x1, x1) +···+ (xm, xm)) has associated Siegel–Weil
+section
+Φφv= Φ(n)
+v (3.2.4)
+where Φ(n)
+vis the scalar weight standard section described surrounding (2.2.11), see [GS19, (2.68)].
+Remark 3.2.2. Suppose F/F+is a CM extension of number fields with associated quadratic
+character ηand accompanying notation as in Section 2.2. With mandnas above, choose any
+character χ:F×\A×
+F→C×satisfying χ|A×=ηn. Choose nontrivial additive characters ψv:F+
+v→
+C×for each place v(the ψvneed not come from a global character). Suppose we are given a
+collection of local Weil representations ωχv,ψvon some S(Vm
+v) for each place vofF+
+v(where the
+collection ( Vv)vof local Hermitian spaces need not come from a global Hermitian space). Choose
+φv∈ S(Vm
+v) for each place v, and assume φv= 111m
+Lvfor some full-rank self-dual lattice Lv⊆Vvfor
+all but finitely many v. Set Φ :=N
+vΦφv.
+In this situation, the Eisenstein series variant ˜E(a, s,Φ)n(2.2.19) does not depend on the choice
+ofχ. This follows upon inspecting the Weil representation, particularly the action of m(a).
+This remark also has a local version, i.e. the Whittaker function variants ˜W∗
+T,v(a, s)◦
+nand
+˜W∗
+T,v(a, s,Φφv)n(Sections 4.2 and 4.3) do not depend on the choice of χv.
+4.Local Whittaker functions
+LetFv/F+
+vand accompanying notation be as in Section 3.2. If F+
+vhas residue characteristic 2,
+we also assume Fv/F+
+vis unramified. Let χv:F×
+v→C×be a character satisfying χv|F+×
+v=ηn
+v
+for some integer n∈Z, with neven if Fv/F+
+vis ramified. Assume χvis unramified if F+
+vis
+non-Archimedean. Let ψv:F+
+v→C×be an unramified nontrivial additive character. Assume
+ψv(x) =e2πixifF+
+v=R. These are our default hypotheses, but weaker hypotheses often suffice
+(as will be indicated below).
+Let Φ◦
+v∈I(s, χv) be the normalized spherical standard section if F+
+vis non-Archimedean. Let
+Φ(n)
+v∈I(s, χv) be the normalized scalar weight standard section from Section 2.2 if Fv/F+
+v=C/R.
+Given an integer m≥0 (we do not assume m≤n, unless otherwise specified) and given
+T∈Herm m(F+
+v) with det T̸= 0, we define normalized local Whittaker functions
+W∗
+T,v(h, s)◦
+n:= Λ T,v(s)◦
+nWT,v(h, s,Φ◦
+v) for F+
+vnon-Archimedean (4.0.1)
+W∗
+T,v(h, s)◦
+n:= Λ T,v(s)◦
+nWT,v(h, s,Φ(n)
+v) for F+
+vArchimedean (4.0.2)
+for certain normalizing factors Λ T,v(s)◦
+n(see (4.3.1) and (4.2.1) below).
+The preceding normalization gives W∗
+T,v(h, s)◦
+na clean functional equation (Section 5). Moreover,
+the normalized function W∗
+T,v(h, s)◦
+n(as opposed to the unnormalized versions) seem to correspond
+more naturally to local information about special cycles (e.g. local contributions to arithmetic
+degrees) in arithmetic (and non-arithmetic) Siegel–Weil formulas. For example, our main local
+theorems [Che24a, Section 9] and [Che24b, Section 4] are proved in terms of the derivative of
+W∗
+T,v(1, s)◦
+nand not WT,v(1, s,Φ◦
+v) orWT,v(1, s,Φ(n)
+v).
+The normalizing factors Λ T,v(s)◦
+nalso carry geometric information. For example, consider an
+imaginary quadratic field F/Qof odd discriminant, suppose m=nis even, and form the product
+242Q
+vΛT,v(s)◦
+nover all places vofQ. Ifn≡0 (mod 4), evaluation at s= 0 returns the degree
+of a certain 0-dimensional unitary complex Shimura variety (stack), giving a case of a unitary
+analogue of the Siegel mass formula. If n≡2 (mod 4), evaluation at s= 0 returns the volume of a
+certain ( n−1)-dimensional unitary complex Shimura variety (stack). These volume identities will
+be discussed in Section 8.2 (but are not needed for our main theorems on arithmetic Siegel–Weil).
+4.1.Local L-factors. We use the following (standard) local factors as in [Tat79, §3].
+IfF+
+vis a local field (allowing arbitrary characteristic in Section 4.1) and ξv:F+×
+v→C×is
+a quasi-character, we write Lv(s, ξv) for the corresponding local L-factor (for the quasi-character
+ξv| − |s
+F+
+v). Given any nontrivial additive character ψv:F+
+v→C×, we write ϵv(s, ξv, ψv) for the
+corresponding local epsilon factor (as appeared in Section 3.1) and ρv(s, ξv, ψv) for the local factor
+from Tate’s thesis [Tat67, Theorem 2.4.1], which satisfies
+ρv(s, ξv, ψv) =ϵv(s, ξv, ψv)−1Lv(1−s, ξ−1
+v)−1Lv(s, ξv). (4.1.1)
+IfF+is a global field with a quasi-character ξ:F+×\AF+→C×and nontrivial additive character
+ψ:F+\AF+→C×, we write
+Λ(s, ξ) =Y
+vLv(s, ξv) L(s, ξ) =Y
+v<∞Lv(s, ξ) ϵ(s, ξ) =Y
+vϵv(s, ξv, ψv) (4.1.2)
+and have Λ( s, ξ) =ϵ(s, ξ)Λ(1−s, ξ−1). For the reader’s convenience, we recall the formulas
+Lv(s, ξv) =
+
+(1−ξv(ϖ0)|ϖ0|s
+F+
+v)−1ifξvis unramified
+1 if ξvis ramifiedifF+
+vis non-Archimedean
+with uniformizer ϖ0∈F+
+v
+Lv(s,sgnj) =
+
+π−s/2Γ(s/2) if jis even
+π−(s+1)/2Γ((s+ 1)/2) if jis oddifF+
+v=Rand sgn denotes
+the sign character.
+4.2.Normalized Archimedean Whittaker functions. With notation as above, assume Fv/F+
+v
+isC/Rand let ψv:R→C×be the standard additive character x7→e2πix. The symbol hwill denote
+an element of U(m, m )(F+
+v). Fix integers n, m with m≥0.
+Consider T∈Herm m(F+
+v) with det T̸= 0. With s0:= (n−m)/2 as above, we define the
+normalizing factor
+ΛT,v(s)◦
+n:=(2π)m(m−1)/2
+(−2πi)nmπm(−s+s0)
+m−1Y
+j=0Γ(s−s0+n−j)
+|detT|−s−s0
+F+
+v(4.2.1)
+(compare [GS19, (3.3.14)], also Shimura [Shi82]) where Γ is the usual gamma function.
+We define a normalized Archimedean Whittaker function
+W∗
+T,v(h, s)◦
+n:= Λ T,v(s)◦
+nWT,v(h, s,Φ(n)
+v). (4.2.2)
+Fora∈GLm(Fv), we also consider the variant
+˜W∗
+T,v(a, s)◦
+n:=χv(a)−1|deta|−n/2
+FvW∗
+T,v(m(a), s)◦
+n·q−Tq−T:=e−2πitr(iTy)(4.2.3)
+25with y:=ata(temporary notation). This is a (normalized) local analogue of (2.3.6). For any
+a∈GLm(Fv) and k∈U(m), we have the “linear invariance” properties
+˜W∗
+T,v(a, s)◦
+n=˜W∗
+taTa(1, s)◦
+n˜W∗
+T,v(1, s)◦
+n=˜W∗
+T,v(k, s)◦
+n. (4.2.4)
+The first expression follows from (2.3.9), and the second expression follows from the scalar weight
+property of Φ(n)
+v. Given y∈Herm m(R)>0, we also set W∗
+T,v(y, s)◦
+n:=˜W∗
+T,v(m(a), s)◦
+nfor any
+a∈GLm(Fv) satisfying ata=y(does not depend on the choice of a).7We use the shorthand
+W∗
+T,v(s)◦
+n:=˜W∗
+T,v(1, s)◦
+n.
+For all n∈Z, we have the functional equation
+W∗
+T,v(h, s)◦
+n=ηv(detT)n−m−1W∗
+T,v(h,−s)◦
+n. (4.2.5)
+The case when Tis positive definite follows from [Shi82, Theorem 3.1] (via (2.2.13), see also [GS19,
+(3.54)]). The case of general T(still with det T̸= 0) should follow from [Shi82, Theorem 4.2,
+(4.34.K)], though we will give an alternative proof (Lemma 5.2.1). Here ηvis the sign character
+sgn(−).
+Write ( r1, r2) for the signature of T(temporary notation). If either n≥r1orr2= 0, then the
+function W∗
+T,v(h, s)◦
+nis holomorphic for all s∈C, for fixed h(follows from [Shi82, Theorem 4.2,
+(4.34.K)]). For any a∈GLm(Fv), we also have
+˜W∗
+T,v(a, s0)◦
+n=
+
+1 if Tis positive definite
+0 if m≤nandTis not positive definite.(4.2.6)
+For the case when Tis positive definite, see [Shi97, (3.15)] (also the proof of [GS19, Proposition
+3.2]). The non positive definite case with m≤nfollows from [Shi82, Theorem 4.2, (4.34.K)] (see
+also [GS19, Proposition 3.3(i)]).
+4.3.Normalized non-Archimedean Whittaker functions. With n,χv,ψv,ηv, etc. as at the
+beginning of Section 4, assume F+
+vis non-Archimedean. For the moment, we only assume F+
+vhas
+characteristic ̸= 2, and allow χvpossibly ramified. We can also allow Fv/F+
+vto be ramified with
+F+
+vof residue characteristic 2 in Section 4.3. The symbol hwill denote an element of U(m, m )(F+
+v).
+Assume ψv:F+
+v→C×is a nontrivial unramified additive character. Let ϖ0be a uniformizer of
+F+
+v, and let qvbe the residue cardinality of F+
+v. Consider T∈Herm m(F+
+v) with det T̸= 0.
+We define the local normalizing factor
+ΛT,v(s)◦
+n:=|∆|−m(m−1)/4
+F+
+v
+m−1Y
+j=0Lv(2s+m−j, ηj+n
+v)
+|(detT)∆⌊m/2⌋|−s−s0
+F+
+v. (4.3.1)
+The local L-factors appearing in Λ T,v(s)◦
+nshould be compared with e.g. [HKS96, §6].
+Suppose Vvis an n-dimensional non-degenerate Fv/F+
+vHermitian space. Consider a full-rank
+lattice Lv⊆Vv, and take the Schwartz function φv= 111m
+Lv∈ S(Vm
+v). Form the associated Siegel–
+Weil standard section Φ φv∈I(χv, s). Let Sbe the Gram matrix of any basis for Lv.
+7With this notation, there is possible ambiguity for the meaning of W∗
+T,v(1, s)◦
+n, which could refer to either
+W∗
+T,v(h, s)◦
+norW∗
+T,v(y, s)◦
+nevaluated at h= 12mory= 1m. To avoid confusion, we will avoid the symbol W∗
+T,v(1, s)◦
+n
+when vis Archimedean.
+26We consider the normalized local Whittaker function W∗
+T,vand the variant ˜W∗
+T,v
+W∗
+T,v(h, s,Φφv)n:=γψv(Vv)mvol(Lv)−mΛT,v(s)◦
+nWT,v(h, s,Φφv) (4.3.2)
+˜W∗
+T,v(a, s,Φφv)n:=χv(a)−1|deta|−n/2
+FvW∗
+T,v(m(a), s,Φφv) (4.3.3)
+fora∈GLm(Fv). The volume vol( Lv) is taken with respect to the self-dual Haar measure with
+respect to the pairing x, y7→ψv(tr(x, y)) on Vv(compare Lemma 4.4.2). The variant ˜W∗
+T,vis a local
+analogue of (2.2.19). These will depend on nin general. For any a∈GLm(Fv) and k∈GLm(OF+
+v),
+we have the “linear invariance” property
+˜W∗
+T,v(a, s,Φφv)n=˜W∗
+taTa,v(1, s,Φφv)n W∗
+T,v(1, s,Φφv)n=˜W∗
+T,v(1, s)n=˜W∗
+T,v(k, s,Φφv)n.
+(4.3.4)
+The left expression follows from (2.3.9). The right expression follows from the expression χv(k)−1ωv(m(k))φv=
+φvfor all k, where ωvis the local Weil representation (Section 3.2).
+Now assume χvis unramified, and recall the normalized spherical standard section Φ◦
+v∈I(χv, s).
+IfLvis self-dual, we have Φ φv= Φ◦
+v(Section 3.2), at least outside the case of Fv/F+
+vramified
+with residue characteristic 2. If Fv/F+
+vis ramified of residue characteristic 2, this still holds if
+Lv= (M◦
+2)⊕dfor some d≥0 (with M◦
+2the “standard” self-dual lattice from (3.2.2). Note that
+γψv(Vv) = 1 in these cases.
+In the situation of the previous paragraph, we set
+W∗
+T,v(h, s)◦
+n:=W∗
+T,v(h, s,Φφv)n˜W∗
+T,v(a, s)◦
+n:=˜W∗
+T,v(a, s,Φφv)n
+forh∈H(F+
+v) and a∈GLm(Fv). Note W∗
+T,v(h, s)◦
+n= Λ T,v(s)◦
+nWT,v(h, s,Φ◦
+v). The alternative
+normalization
+W(∗)
+T,v(h, s)◦
+n:=|(detT)∆⌊m/2⌋|s+s0
+F+
+vW∗
+T,v(h, s)◦
+n (4.3.5)
+will also be useful.
+We use the shorthand W∗
+T,v(s)◦
+n:=W∗
+T,v(1, s)◦
+nandW(∗)
+T,v(s)◦
+n:=W(∗)
+T,v(1, s)◦
+n. We further describe
+these functions in the following sections (e.g. special values and functional equations). We are
+mostly interested in the spherical local Whittaker function W∗
+T,v(h, s)◦
+n, and the case of general φv
+plays a very limited role in the present work.
+4.4.Local densities. We relate non-Archimedean Whittaker functions with local densities. This
+should be essentially known, but we restate the result for clarity (Lemma 4.4.2).8In Section 4.4,
+we do not need to assume χvis unramified (but still require χv|F+×
+v=ηn
+v).
+Retain notation and assumptions from Section 4.3. In Section 4.4, we now require F+
+vto have
+characteristic 0, exclude the case where Fv/F+
+vis ramified with F+
+vof residue characteristic 2, and
+8The proof is essentially as in [KR14, Proposition 10.1], with a few modifications. In the ramified situation,
+we should use M◦
+2(from Section 3.2) instead of L1,1(in the proof of loc. cit.); the proposition statement changes
+correspondingly, see [Shi22, Proposition 9.7]. Moreover, the quantity γp(V)nappearing before [KR14, (10.3)] should
+beγp(V)−nfor consistency with the Schr¨ odinger model of the Weil representation from [Kud94, Theorem 3.1 §3,
+§5] (and the same applies to [Shi22, Proposition 9.7]). The interpolation of WT,v(s,Φφv) in the two cited references
+should also be shifted by s0= (n−m)/2 in the s-variable. The cited results also restrict to the case F+
+v=Qp, but
+the result and (modified) proof hold more generally.
+27taken≥0. We write
+Herm m(OF+
+v)∗:={b∈Herm m(F+
+v) : tr( bc)∈ OF+
+vfor all c∈Herm m(OF+
+v)} (4.4.1)
+={b∈Herm m(F+
+v) :bi,j∈ OF+
+vifi=jandbi,j∈d−1OFvifi̸=j}.
+Given nonsingular Hermitian matrices S∈Herm n(F+
+v) and T∈Herm m(F+
+v), we consider the local
+representation density (or just local density )
+Den(S, T):= lim
+k→∞vol({x∈Mn,m(OFv) :txSx−T∈ϖk
+0Herm m(OF+
+v)∗})
+q−km2
+v(4.4.2)
+where Mn,m(OFv) is given the Haar measure of total volume 1. The limit argument stabilizes for
+k≫0 (follows from the proof of Lemma 4.4.2). The local density Den( S, T) depends only on the
+isomorphism classes of the Hermitian lattices defined by SandT. Ifn < m then Den( S, T) = 0.
+IfS∈Herm n(OF+
+v)∗, we have
+Den(S, T) = lim
+k→∞#{x∈Mn,m(OFv/ϖk
+0OFv) :txSx−T∈ϖk
+0Herm m(OF+
+v)∗}
+qk·m(2n−m)
+v. (4.4.3)
+IfS∈Herm n(OF+
+v)∗andT̸∈Herm m(OF+
+v)∗, we have Den( S, T) = 0.
+Remark 4.4.1. IfS∈Herm n(OF+
+v)∗andT∈Herm m(OF+
+v)∗with m≤n, the local density
+Den(S, T) admits the following equivalent formulation. Suppose M(resp. L) is a Hermitian OFv-
+lattice which admits a basis with Gram matrix S(resp. T). Write dfor any trace-zero generator
+of the different ideal dofFv/F+
+v, and let M′(resp. L′) be the skew-Hermitian lattice with pairing
+dS(resp. dT). If Herm( M′, L′) is the scheme of skew-Hermitian module homomorphisms given by
+Herm( M′, L′)(R):= Herm( M′⊗R, L′⊗R) (4.4.4)
+forOF+
+v-algebras R(where the right-hand side means OFv-linear homomorphisms preserving the
+skew-Hermitian pairing), we have
+#Herm( M′, L′)(OF+
+v/ϖk
+0OF+
+v) = #{x∈Mn,m(OFv/ϖk
+0OFv) :txSx−T∈ϖk
+0Herm m(OF+
+v)∗}
+(4.4.5)
+and also m(2n−m) = dim(Herm( M′, L′)×Spec F+
+v) (and the right-hand side is nonempty). This
+recovers the formulations in [LZ22, §3.1] (inert), [FYZ24, §2.3] (inert and split), and [HLSY23, §5.1]
+(ramified).
+Return to the situation of general SandT(and possibly m > n ). Fix characters χv:F×
+v→C×
+andψv:F+
+v→C×as above, with ψvunramified. Let Mbe a Hermitian OFv-lattice admitting a
+basis whose Gram matrix is S. Write Vv=M⊗OFvFvfor the associated Fv/F+
+vHermitian space,
+and let φv∈ S(Vm
+v) be the function φv= 111⊗m
+M, where 1 11Mis the characteristic function of M.
+Let Φ φv∈I(s, χv) be the associated Siegel–Weil section, and form the local Whittaker function
+WT,v(h, s,Φφv) as in Section 2.3. Set WT,v(s,Φφv):=WT,v(1, s,Φφv).
+With M◦
+2being the rank 2 self-dual Hermitian lattice from (3.2.2), let Sr,rbe the Gram matrix
+of a basis for Lv,r,r:=M⊕(M◦
+2)⊕r(orthogonal direct sum). When Fv/F+
+vis not ramified, we also
+letSrbe the Gram matrix of a basis for Lv,r:=M⊕ ⟨1⟩⊕r(orthogonal direct sum), where ⟨1⟩is a
+28rank one self-dual lattice. The notations Lv,r,randLv,rwill only be used in the proof of the next
+lemma.
+Lemma 4.4.2. With notation as above, there exists Den(S, T, X )∈Q[X](necessarily unique) such
+that
+WT,v(s0+s,Φφv) =γψv(Vv)−m|detS|m
+F+
+v|∆|e
+F+
+vDen(S, T, q−2s
+v) for all s∈C (4.4.6)
+Den(Sr,r, T) = Den( S, T, q−2r
+v) for all r∈Z≥0 (4.4.7)
+where γψv(Vv)is the Weil index, s0= (n−m)/2, and e=nm/2 +m(m−1)/4. For all r∈Z≥0,
+we also have
+Den(Sr, T) = Den( S, T, (−qv)−r) ifFv/F+
+vis inert (4.4.8)
+Den(Sr, T) = Den( S, T, q−r
+v) ifFv/F+
+vis split . (4.4.9)
+Proof. As mentioned above (Footnote 8), this is a restatement of a result which should be essentially
+known [KR14, Proposition 10.1] [Shi22, Proposition 9.7], up to a few modifications. The modified
+version stated here may be proved by a similar interpolation argument, as explained below. For any
+r∈Z≥0, setVv,r,r:=Lv,r,r⊗OFvFv, and let φv,r,r= 111m
+Lv,r,r. Equip Herm m(OF+
+v) and Vv,r,rwith the
+self-dual Haar measures with respect to ( b, c)7→ψv(tr(bc)) and ψv(trFv/F+
+v(tr(−,−))) respectively.
+Using the Weil representation, we compute
+WT,v(s0+r,Φφv) (4.4.10)
+= lim
+k→∞Z
+ϖ−k
+0Herm m(OF+v)ψv(−tr(Tb))Φφv(w−1n(b), s0+r)dn(b)
+=γψv(Vv)−mlim
+k→∞Z
+ϖ−k
+0Herm m(OF+v)ψv(−tr(Tb))Z
+Vmv,r,rψv(tr(b(x, x)))φv,r,r(x)dx dn (b)
+=γψv(Vv)−mlim
+k→∞vol(ϖ−k
+0Herm m(OF+
+v))Z
+x∈Vm
+v,r,r
+(x,x)−T∈ϖk
+0Herm m(OF+v)∗φv,r,r(x)dx
+=γψv(Vv)−mvol(Herm m(OF+
+v))vol( Lm
+v,r,r)Den( Sr,r, T)
+We have the volume identities
+vol(Herm m(OF+
+v)) =|∆|m(m−1)/4
+F+
+vvol(Lv,r,r) =|detS|F+
+v|∆|n/2
+F+
+v(4.4.11)
+for the self-dual Haar measures described above. We already know WT,v(s,Φφv)∈C[q−2s
+v] by
+Lemma 2.3.1. Since Den( Sr,r, T)∈Qfor all r≥0, we conclude WT,v(s,Φφv)∈Q[q−2s
+v]. The
+additional claims involving Den( Sr, T) in the unramified case may be proved similarly, using Lv,r
+instead of Lv,r,r. □
+4.5.Local densities and spherical non-Archimedean Whittaker functions. Take Fv/F+
+v,
+ψv, and χvas in Section 4.4, and continue to assume n≥0 for the moment. Set s0= (n−m)/2.
+We assume χvis unramified.
+29LetM◦be a self-dual Hermitian OFv-lattice of rank n. This characterizes M◦uniquely up to
+isomorphism, and forces nto be even if Fv/F+
+vis ramified. We also have γψv(Vv) = 1 (Lemma
+3.1.3).
+SetVv=M◦⊗OFvFv, and let φv∈ S(Vm
+v) be the characteristic function of M◦m. Then the
+associated Siegel–Weil section Φ φv∈I(s, χv) coincides with the normalized spherical Whittaker
+function Φ◦
+v(Lemma 3.2.1).
+Remark 4.5.1. Even if χvis possibly ramified, we still have WT,v(s,Φφv) =WT,v(s,Φ◦
+v) for any
+T∈Herm m(F+
+v) with det T̸= 0 (by Lemma 2.3.1(3) or Lemma 4.4.2), where Φ◦
+v∈I(s, χ′
+v) is the
+standard normalized spherical section for an unramified χ′
+v.
+Suppose T∈Herm m(F+
+v) with det T̸= 0. If Sis the Gram matrix of any basis for M◦, Lemma
+4.4.2 gives
+WT,v(s0+s,Φ◦
+v) =|∆|m(m−1)/4
+F+
+vDen(S, T, q−2s
+v) (4.5.1)
+for all s∈C.
+Suppose M◦′is a rank mHermitian OFv-lattice such that
+
+
+M◦′is self-dual if Fv/F+
+vis unramified or if mis even
+M◦′is almost self-dual if Fv/F+
+vis ramified and mis odd.(4.5.2)
+LetS′∈Herm( F+
+v) be the Gram matrix of a basis for M◦′. We have
+
+m−1Y
+j=0Lv(2(s+s0) +m−j, ηj+n
+v)
+−1
+= Den( S, S′, X)|X=q−2s
+v. (4.5.3)
+See [LZ22, (3.2.0.1)] (inert), [FYZ24, Theorem 2.2] (split and inert), [LL22, Lemma 2.15] (ramified).
+There is a (normalized) local density polynomial Den(X, T)n∈Z[1/qv][X] such that
+W(∗)
+T,v(s+s0)◦
+n= Den( q−2s
+v, T)n (4.5.4)
+for all s∈C(with W(∗)
+T,vas in Section 4.3). See the “Cho–Yamauchi formulas” proved in [LZ22,
+Theorem 3.5.1] (inert), [FYZ24, Theorem 2.2] (split and inert), and [LL22, Lemma 2.15] (ramified).
+Note that our convention differs slightly from [LL22] in the ramified case, where they consider
+polynomials in q−s
+vinstead.
+The polynomial Den( X, T)nis nonzero if and only if T∈Herm( OF+
+v)∗, in which case Den( X, T)n
+has constant term 1. When m=n, we have Den( X, T)n∈Z[X] for any T. More classically, see
+[Shi97, Theorem 13.6], which implies that Den( qn
+vX, T)n∈Z[X] with constant term 1.
+We have
+Den(X, T)n+1= Den( q−1
+vX, T)n ifFv/F+
+vis split
+Den(X, T)n+1= Den( −q−1
+vX, T)n ifFv/F+
+vis inert (4.5.5)
+Den(X, T)n+2= Den( q−2
+vX, T)n ifFv/F+
+vis ramified .
+Forn <0, we define Den( X, T)nusing (4.5.5). Note that (4.5.4) continues to hold. For the rest of
+Section 4.5, we allow general n∈Z(assumed even if Fv/F+
+vis ramified).
+30

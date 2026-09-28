@@ -1,0 +1,738 @@
+using a local normalizing factor , which we define as
+ΛT(s)◦
+n:=(2π)m(m−1)/2
+(−2πi)nmπm(−s+s0)
+m−1Y
+j=0Γ(s−s0+n−j)
+|detT|−s−s0
+F0. (3.3.3)
+This formula should be compared with [GS19, (3.3.14)] and [Shi82].
+We have a functional equation
+W∗
+T(h, s)◦
+n=η(detT)n−m−1W∗
+T(h, s)◦
+n. (3.3.4)
+The case when Tis positive definite follows from [Shi82, Theorem 3.1] (via [Che24c, (2.2.13)],
+see also [GS19, (3.54)]). The case of general T(still with det T̸= 0) should follow from [Shi82,
+Theorem 4.2, (4.34.K)], though we will give an alternative proof in our companion paper [Che24c,
+Lemma 5.2.1].
+We use the notation
+W∗
+T(s)◦
+n:=W∗
+T(12m, s)◦
+ne2πtr(T)(3.3.5)
+and have the invariance property
+W∗
+T(s)◦
+n=W∗
+tkTk(s)◦
+n (3.3.6)
+for any k∈U(m) (unitary group for the positive definite Hermitian space specified by the Gram
+matrix 1 m).
+Next, write ( r1, r2) for the signature of T(temporary notation). If either n≥r1orr2= 0, then
+the function W∗
+T(h, s)◦
+nis holomorphic for all s∈C, for fixed h(follows from [Shi82, Theorem 4.2,
+(4.34.K)]). We also have
+W∗
+T(s0)◦
+n=
+
+1 if Tis positive definite
+0 if m≤nandTis not positive definite.(3.3.7)
+For the case when Tis positive definite, see [Shi97, (3.15)] (also the proof of [GS19, Proposition
+3.2]). The non positive definite case with m≤nfollows from [Shi82, Theorem 4.2, (4.34.K)] (see
+also [GS19, Proposition 3.3(i)]).
+4.Archimedean local main theorem
+LetVbe the non-degenerate C/RHermitian space of rank nand signature ( n−1,1).
+We freely use notation for the Hermitian symmetric domain Dand its special cycles (Section
+2.1) as well as the Archimedean local Whittaker functions W∗
+T(s)◦
+nforT∈Herm m(R) (complex
+Hermitian matrices) with det T̸= 0 (3.3.5).
+4.1.Statement of local main theorem. Our main Archimedean local identity (“Archimedean
+local arithmetic Siegel–Weil”) is the following.
+Theorem 4.1.1. Letx∈Vmbe am-tuple with nonsingular Gram matrix, and set T= (x, x). If
+m≥n−1or if Tis not positive definite, we have
+Z
+D[ξ(x)]∧c1(bE∨)n−m=d
+ds
+s=−s0W∗
+T(s)◦
+n. (4.1.1)
+16where s0= (n−m)/2.
+In Theorem 4.1.1, integration of the current [ ξ(x)]∧c1(bE∨)n−moverDis understood in the sense
+discussed in [Che24b, Section 3.2]. The displayed integral is convergent (combine Lemma 2.3.3 and
+Lemma 2.3.1). The local functional equation (3.3.4) implies that the derivative of W∗
+T(s)◦
+nats=s0
+ands=−s0are the same up to a simple sign.
+The case m=nof Theorem 4.1.1 is the content of [Liu11, Theorem 4.17] (when translating to
+Liu’s notation, recall also that W∗
+T(0)◦
+n= 0 when m≤nfor non positive-definite T(3.3.7). We do
+not give a new proof of this case. Indeed, we reduce the other cases of Theorem 4.1.1 to the case
+m=nby the following limiting result.
+Proposition 4.1.2. LetT♭∈Herm m(R)be a matrix with detT♭̸= 0, assume m≤n, and
+sets0= (n−m)/2. Assume that either m=n−1or that T♭is not positive definite. Given
+t= diag( tm+1, . . . , t n)∈Herm n−m(R), set T= diag( t, T♭).
+d
+ds
+s=−s0W∗
+T♭(s)◦
+n= lim
+t→0±d
+ds
+s=0W∗
+T(s)◦
+n+ (log |t|F+
+v+ log(4 π)−Γ′(1))W∗
+T♭(−s0)◦
+n
+(4.1.2)
+where |t|R:=|dett|R, and where the sign on 0±(meaning all tjhave this sign) is
+
+
+−ifT♭is positive definite
++else.(4.1.3)
+Recall that a similar limit formula was crucial for our proof of a “non-Archimedean local Siegel–
+Weil formula” in our companion paper [Che24a, Section 9]. A side-by-side comparison of the limit
+formulas in all cases (non-Archimedean and Archimedean) may be found in [Che24a, Section 8.4].
+Nevertheless, the proofs we give for these limit formulas are fairly different in the non-Archimedean
+vs Archimedean cases.
+Remark 4.1.3. In the situation of Proposition 4.1.2, recall that W∗
+T♭(−s0)◦
+n= 0 if T♭is not
+positive definite, by (3.3.7) and the functional equation (3.3.4). Due to this vanishing, the term
+(log|t|F+
+v+log(4 π)−Γ′(1)) from Proposition 4.1.2 should not be taken seriously outside the positive
+definite T♭case (especially if m̸=n−1).
+IfT♭has signature ( p, q) for q≥2, we also have
+d
+ds
+s=−s0W∗
+T♭(s)◦
+n=d
+ds
+s=0W∗
+T(s)◦
+n= 0 (4.1.4)
+for any t∈Herm n−m(R) with det t̸= 0 by [Shi82, Theorem 4.2, (4.34.K)]. Thus Proposition 4.1.2
+holds for T♭of signature ( p, q) when q≥2 (both sides of the identity are 0).
+The proof of the remaining cases of Proposition 4.1.2 will occupy most of the rest of Section 4.
+The case of T♭having signature ( m−1,1) is completed in Section 4.4, and the case of positive
+definite T♭is completed in Section 4.5. We also obtain an explicit formula for both sides of (4.1.1)
+when Tis positive definite, namely (4.5.4) (the formula is a polynomial in the eigenvalues of T−1).
+Once the proposition is proved, Theorem 4.1.1 follows (and is equivalent to the proposition for
+any given T♭, which is the Tin Theorem 4.1.1) by the following argument.
+17Proof of equivalence of Theorem 4.1.1 and Proposition 4.1.2. LetT♭be as in Proposition 4.1.2. We
+may assume T♭has signature ( m,0) or ( m−1,1) by Remark 4.1.3. Suppose x♭= (x♭
+1, . . . , x♭
+m)∈Vm
+satisfies ( x♭, x♭) =T♭. Given an orthogonal basis x#= (xm+1, . . . , x n) of span( x♭)⊥, settj= (xj, xj)
+forj≥m+ 1, set t= (tm+1, . . . , t n), set x= (xm+1, . . . , x n, x♭
+1, . . . , x♭
+m)∈Vn, and set T= (x, x).
+We have
+d
+ds
+s=0W∗
+T(s)◦
+n=Z
+D[ξ(x)] =Z
+D[ξ(x♭)]∧ω(x#) +Z
+D(x♭)ξ(x) (4.1.5)
+where the first equality is the m=ncase of Theorem 4.1.1 (already proved by Liu as cited above)
+and the second identity is by definition.
+Using the pointwise convergence lim a→0ω(ax) =c1(bE∨) onDfor each x∈V(2.2.8), we have
+lim
+x#→0Z
+D[ξ(x♭)]∧ω(x#) =Z
+D[ξ(x♭)]∧c1(bE∨)n−m(4.1.6)
+(say, where the limit runs over x#= (am+1xm+1, . . . , a nxn) asaj→0 for all j) by dominated
+convergence (applying estimate from the proof of Lemma 2.3.1 and convergence from Lemma 2.3.3,
+particularly convergence of (2.3.8)).
+The closed submanifold D(x♭)⊆ D is a single point if T♭is positive definite (in which case we
+assumed m=n−1), and is empty if T♭is not positive definite. We thus have
+Z
+D(x♭)ξ(x) =
+
+−Ei(4π(xn, xn)) if T♭is positive definite
+0 else .(4.1.7)
+Recall asymptotics for the function Ei (2.2.2) and recall Γ′(1) = −γ. Recall the special value
+formulas from (3.3.7) (and the functional equation (3.3.4)). We substitute into (4.1.5) to obtain
+Z
+D[ξ(x♭)]∧c1(bE∨)n−m= lim
+t→0±d
+ds
+s=0W∗
+T(s)◦
+n+ (log |t|F+
+v+ log(4 π)−Γ′(1))W∗
+T♭(−s0)◦
+n
+(4.1.8)
+(where the sign on 0±is the sign of t, determined by the signature of T♭) which proves the claimed
+equivalence. □
+Remark 4.1.4. For any T∈Herm m(R) with det T̸= 0, recall that the (normalized) Archimedean
+local Whittaker function W∗
+T(s)◦
+nsatisfies a certain “linear invariance” property, i.e. the local
+Whittaker function is unchanged if we replace TbytkTk for any k∈U(m) (3.3.6). It is thus
+enough to prove Proposition 4.1.2 when T♭is diagonal.
+Remark 4.1.5. Using the linear invariance property for Whittaker functions, the limiting relation
+in (4.1.8) implies that the quantity
+Z
+D[ξ(x♭)]∧c1(bE∨)n−m(4.1.9)
+from Theorem 4.1.1 is similarly linearly invariant (i.e. does not change if x♭is replaced by x♭·k
+for any k∈U(m), where x♭is viewed as a row vector of elements in V). Stated alternatively,
+we observe that the linear invariance result of Liu forR
+D[ξ(x♭)]∧c1(bE∨)n−mwhen m=n[Liu11,
+Proposition 4.10] can be used to prove the analogous linear invariance in our setting via limiting,
+even before we have proved Theorem 4.1.1 or Proposition 4.1.2.
+184.2.Computation when n= 2.Before proving Theorem 4.1.1 via Proposition 4.1.2 in the later
+sections, we check the n= 2 case of Theorem 4.1.1 by direct computation (the case n= 1 and
+m̸=nis trivial as both sides of the identity are trivially 0). The proof for general n(which
+proceeds differently, not relying on the n= 2 computation) begins in Section 4.3 below.
+Take n= 2 throughout Section 4.2, and suppose T∈Ris nonzero. By [Shi82, (1.29) and (3.3)]
+(translation via (3.2.7)) and some rearranging, we have the formula
+W∗
+T(s)◦
+n= Γ(s−1/2)−1|4πT|s−1/2Z∞
+0e−4πTu(u+ 1)s+1/2us−3/2du (4.2.1)
+= 1 + Γ( s−1/2)−1|4πT|s−1/2Z∞
+0e−4πTu((u+ 1)s+1/2−1)us−3/2du (4.2.2)
+ifT >0, where the integrals in (4.2.1) and (4.2.2) are convergent for Re( s)>1/2 and Re( s)>−1/2
+respectively. We similarly have
+W∗
+T(s)◦
+n= Γ(s−1/2)−1|4πT|s−1/2Z∞
+1e4πTu(u−1)s+1/2us−3/2du (4.2.3)
+ifT <0, where displayed integral is convergent for Re( s)>−3/2.
+Proposition 4.2.1. Given any nonzero T∈Rand any x∈VwithT= (x, x), we have
+Z
+Dξ(x)c1(bE∨) =−d
+ds
+s=1/2W∗
+T(s)◦
+n=
+
+(−4πT)−1ifT >0
+(4πT)−1e4πT−Ei(4πT)ifT <0.(4.2.4)
+The preceding proposition (proved below) shows that Theorem 4.1.1 holds when n= 2 (the
+functional equation implies −d
+ds|s=1/2W∗
+T(s)◦
+n=d
+ds|s=−1/2W∗
+T(s)◦
+n).
+Lemma 4.2.2. For any nonzero T∈R, we have
+−d
+ds
+s=1/2W∗
+T(s)◦
+n=
+
+(−4πT)−1ifT >0
+(4πT)−1e4πT−Ei(4πT)ifT <0.(4.2.5)
+Proof. Recall that Γ( s)−1=s+O(s2) near s= 0. The integrals in (4.2.2) and (4.2.3) are convergent
+and holomorphic at s= 1/2. Directly evaluating the integrals at s= 1/2 gives the claimed
+formulas. □
+Lemma 4.2.3. With x∈VandT∈Ras in the statement of Proposition 4.2.1, we have
+Z
+Dξ(x)c1(bE∨) =
+
+(−4πT)−1ifT >0
+(4πT)−1e4πT−Ei(4πT)ifT <0.(4.2.6)
+Proof. By (2.3.2), we have
+c1(bE∨) =1
+2πi∂∂(logR(x, z)) =1
+2πidz∧dz
+(1−zz)2. (4.2.7)
+19IfT >0, we have
+Z
+Dξ(x)c1(bE∨) =Z
+DZ∞
+1e−4πTuz z(1−zz)−1u−1du1
+2πidz∧dz
+(1−zz)2(4.2.8)
+=−2Z1
+0Z∞
+1e−4πTur2(1−r2)−1u−1(1−r2)−2r du dr (4.2.9)
+=−Z∞
+1Z∞
+0e−4πTvuu−1dv du (4.2.10)
+= (−4πT)−1(4.2.11)
+via the change of variables v=r2(1−r2)−1.
+IfT <0, we have
+Z
+Dξ(x)c1(bE∨) =Z
+DZ∞
+1e4πTu(1−zz)−1u−1du1
+2πidz∧dz
+(1−zz)2(4.2.12)
+=−2Z1
+0Z∞
+1e4πTu(1−r2)−1u−1(1−r2)−2r du dr (4.2.13)
+=−Z∞
+1Z∞
+1e4πTvuu−1dv du (4.2.14)
+= (4πT)−1Z∞
+1e4πTuu−2du (4.2.15)
+via the change of variables v= (1−r2)−1. We also have
+Z∞
+1e4πTuu−2du=e4πT−(4πT) Ei(4 πT) (4.2.16)
+via integration by parts. □
+Proof of Proposition 4.2.1. Already proved by direct computation in Lemmas 4.2.2 and 4.2.3. □
+4.3.More on Archimedean local Whittaker functions. We use some special functions studied
+by Shimura [Shi82] to describe the Archimedean Whittaker functions W∗
+T(s)◦
+nfrom above. We allow
+arbitrary n∈Zfor the moment.
+We first recall Shimura’s definitions. Given an integer m≥0, set
+Γm(s) =πm(m−1)/2m−1Y
+k=0Γ(s−k) (4.3.1)
+as in [Shi82, (1.17.K)], where Γ is the usual gamma function. Given Hermitian matrices h, h′, the
+notation h > h′will mean that h−h′is positive definite. For
+α, β∈C g∈Herm m(R)>0 h∈Herm m(R)
+z∈ H′:={z=x+iy∈Mm,m(C) with x, y∈Herm m(R) and x >0}
+20we set
+ξ(g, h;α, β):=Z
+Herm m(R)e−2πitr(hx)det(x+ig)−αdet(x−ig)−βdx (4.3.2)
+η(g, h;α, β):=Z
+Herm m(R)
+x>h
+x>−he−tr(gx)det(x+h)α−mdet(x−h)β−mdx (4.3.3)
+ζm(z;α, β):=Z
+Herm m(R)>0e−tr(zx)det(x+ 1m)α−mdet(x)β−mdx (4.3.4)
+ωm(z;α, β):= Γm(β)−1det(z)βζm(z;α, β) (4.3.5)
+ζp,q(g;α, β):=e−tr(g)/2Z
+Herm m(R)
+x+diag(1 p,0)>0
+x+diag(0 ,1q)>0e−tr(gx)det(x+ diag(1 p,0))α−mdet(x+ diag(0 ,1q))β−m
+(4.3.6)
+initially defined for Re( α),Re(β)≫0. All implicit measures in the integrals are Euclidean. See
+Remark 3.2.1 for the log branch convention.
+The special functions ξ, η, ζ m, ωm, ζp,qare copied from [Shi82, (1.25), (1.26), (3.2), (3.6), (4.16)],
+respectively. Formulas relating ξandη, relating ηandζm, and relating ηandζp,qare given in
+[Shi82, (1.29), (3.3), (4.18)]. These will be used implicitly in our computations below.
+Recall that ωm(z;α, β) admits holomorphic continuation to all ( z, α, β )∈ H′×C2(by [Shi82,
+Theorem 3.1]), and that Γ q(α−p)−1Γp(β−q)−1ζp,q(g;α, β) admits holomorphic continuation to
+all (α, β), for any g(by [Shi82, Theorem 4.2]). We also recall the special value formula
+ωm(z;m, β) =ωm(z;a,0) = 1 (4.3.7)
+for all α, β∈C[Shi82, (3.15)].
+We will also use the differential operator ∆ := det( ∂/∂z j,k) on the space of matrices z= (zj,k)j,k∈
+Mm,m(C) as in [Shi82, (3.10.II)] (also [Liu11, (4-20)]). For any u∈Herm m(R)>0, with u1/2denoting
+its unique positive definite Hermitian square-root, we have the relation
+(−1)m∆(e−truzdet(uz)−βωm(u1/2zu1/2;α, β))
+=e−truzdet(uz)−βdet(u)ωm(u1/2zu1/2;α+ 1, β) (4.3.8)
+where ∆ is applied to the zvariable, and where both sides are evaluated at z∈ H′. The preceding
+formula is a slight variant of [Shi82, (3.12)] and [Liu11, (4-21)] (and can be verified by similar
+reasoning). We will use this formula in its equivalent form
+(−1)metruz∆(e−truzdet(z)−βωm(u1/2zu1/2;α, β))
+= Γm(β)−1det(u)β+1ζm(u1/2zu1/2;α+ 1, β). (4.3.9)
+Remark 4.3.1.
+(1) The special function ξ(which takes multiple arguments) should not be confused with the
+Green function from Section 2.2 (which takes one argument), as should be clear from con-
+text. The same applies to ηthe special function (which takes multiple arguments) and η
+the quadratic character (which takes one argument).
+21(2) The definition of ζp,qin [Shi82, (4.16)] has a running assumption that “ gis diagonal”, but
+we can make the same definition without this diagonal assumption.
+(3) Liu also uses these functions but with slightly different normalizations [Liu11, §4A]. We
+follow Shimura’s normalizations.
+Given T∈Herm m(R) with det T̸= 0, we set (non-standard)
+W∗
+T(α, β):=e2πtrT2m(m−1)π−mβ
+(−2πi)m(α−β)Γm(α)|detT|−α+mξ(1m, T;α, β) (4.3.10)
+forα, β∈Cinitially defined for Re( α),Re(β)≫0. We have
+W∗
+T(s)◦
+n=W∗
+T(α, β) when α=s−s0+nandβ=s−s0 (4.3.11)
+where s0= (n−m)/2 (see (3.2.7)). We caution the reader against confusing W∗
+T(α, β) with the
+symbol W∗
+T(y, s)◦
+nappearing in Section 1.2 (also [Che24c, Part 1]).
+For any c∈GLm(C) such that c1p,qtc=T(where 1 p,q= diag(1 p,−1q)∈Mm,m(R)), and with
+g:=tcc, we have
+W∗
+T(α, β) =e2πtrT(2π)2mβπ−mβΓm(β)−1|detT|−α+m2m(m−α−β)|detT|α+β−mη(2πg,1p,q;α, β)
+=e2πtrTΓm(β)−1|det 4πT|βζp,q(4πg;α, β). (4.3.12)
+When Tis positive definite, our conventions imply
+W∗
+T(α, β) =ωm(4πg;α, β). (4.3.13)
+Lemma 4.3.2. Suppose T∈Herm m(R)hasdetT̸= 0. IfTis positive definite (resp. not positive
+definite), the function W∗
+T(α, β)admits holomorphic continuation to all (α, β)∈C2(resp. for
+Re(α)> m−1and all β). In this region, we have
+∂
+∂αW∗
+T(α, β) = 0 (4.3.14)
+forβ= 0(resp. β∈Z≤0).
+Proof. LetThave signature ( p, q) and let gbe as above. The holomorphic continuation of Γ p(β−
+q)−1Γq(α−p)−1ζp,q(4πg;α, β) to all ( α, β)∈C2(as recalled above from [Shi82, Theorem 4.2])
+implies that W∗
+T(α, β) admits holomorphic continuation to the region claimed.
+When Tis positive definite, (4.3.7) implies ( ∂/∂α )W∗
+T(α,0) = 0. If Tis not positive definite,
+the function Γ m(β)−1Γp(β−q) has a zero at every β∈Z≤0, which implies W∗
+T(α, β) = 0 for all
+β∈Z≤0. Thus ( ∂/∂α )W∗
+T(α, β) = 0 for all b∈Z≤0in this case. □
+22Suppose n≥1 is an integer. For any g= (−4π)−1diag( a, b)∈Herm n(R)>0witha∈Herm n−1(R)<0
+andb∈R<0, we have (as in [Shi82, (4.25)] and also [Liu11, (4-15)])
+e2πtrgζn−1,1(4πg;α, β) (4.3.15)
+=Z
+Cn−1etr(aww∗)+bw∗wζ1(−b(1 +w∗w);β, α−n+ 1) (4.3.16)
+·etr(−au/2)η(−a, u/2;α, β−1)dw
+=Z
+Cn−1etr(aww∗)+bw∗wζ1(−b(1 +w∗w);β, α−n+ 1) (4.3.17)
+·det(u)α+β−nζn−1(−u1/2au1/2;α, β−1)dw
+with w∈Cn−1viewed as column vectors, with w∗:=tw, with u= 1 n−1+ww∗, with u1/2the
+unique positive definite Hermitian square-root of u, and with dwbeing the Euclidean measure.
+We next specialize (4.3.17) to α=n. We have
+eb(1+w∗w)ζ1(−b(1 +w∗w);β,1) =Z∞
+1eb(1+w∗w)xxβ−1dx. (4.3.18)
+Combining (4.3.9) and (4.3.7), we also find
+det(u)βζn−1(−u1/2au1/2;n, β−1) = (−1)n−1e−trau∆|z=−a(e−truzdet(z)−β+1). (4.3.19)
+Hence, we have
+(−1)n−1ebΓm−1(β−1)−1e2πtrgζn−1,1(4πg;n, β) (4.3.20)
+=Z
+Cn−1Z∞
+1etr(aww∗)eb(1+w∗w)xxβ−1(4.3.21)
+·e−tr(1m−1+ww∗)a∆|z=−a(e−tr(1m−1+ww∗)zdet(z)−β+1)dx dw.
+These rearrangements are initially valid for Re( β)≫0, but in fact hold for all β∈Cby analytic
+continuation (see also [Shi82, (3.8)] for estimates on ζ1andζn−1giving convergence).
+The next lemma generalizes a calculation of Liu [Liu11, Lemma 4.7], and will be used to re-
+express (4.3.21) more explicitly. In the statement and proof below, we adopt the following notation
+from [Liu11, Lemma 4.7]: given a matrix u∈Mn,n(C) and sets I, J⊆ {1, . . . n}of the same
+cardinality, the symbol |uI,J|(resp. |uI,J|) will mean the determinant of the matrix obtained from
+uby discarding (resp. keeping) the rows in indexed by Iand the columns indexed by J.
+Lemma 4.3.3. Given any u∈Mm,m(C)andz0∈Herm m(R)>0withz0diagonal, we have
+∆|z=z0(etruzdet(z)s) =etruz0det(z0)smX
+t=0X
+J={j1<···<jt}
+J⊆{1,...,m} tY
+k=1(s+k−1)!
+|g0,J,J|−1|uJ,J|(4.3.22)
+for all s∈C, where the inner sum runs over all subsets J⊆ {1, . . . , m }of size t.
+Proof. Observe that (upon fixing uandz0), the expression
+e−truz0det(z0)−s∆|z=z0(etruzdet(z)s) (4.3.23)
+23is a polynomial in s. Hence it is enough to prove the lemma holds for all s∈Z≥1. The case s= 1 is
+given by the proof of [Liu11, Lemma 4.7] via combinatorial calculation. For all s∈Z≥1, a similar
+calculation shows
+e−truz0det(z0)−s∆|z=z0(etruzdet(z)s) =mX
+t=0X
+J={j1<···<jt}
+J⊆{1,...,m}Ns,t· |z0,J,J|−1|uJ,J| (4.3.24)
+for all s∈Z≥1, where Ns,tis the number of tuples (( σ1, J1), . . . , (σs, Js)) where Ji⊆Jare disjoint
+subsets (possibly empty) withSJi=Jand each σiis a permutation of Ji. If|Ji|denotes the
+cardinality of Ji, then there are t+s−1
+s−1
+possibilities for the tuple ( |J1|, . . . ,|Js|), and each such tuple
+admits t! corresponding tuples (( σ1, J1), . . . , (σs, Js)). Hence Ns,t= t+s−1
+s−1
+t! =Qt
+k=1(s+k−1).□
+4.4.Limiting identity: non positive definite T♭.Take integers m, n≥1, assume m≤n,
+and set s0= (n−m)/2. Given a= diag( a1, . . . , a n−1)∈Herm n−1(R)<0andb∈R<0, set a♭=
+diag( an−m+1, . . . , a n−1)∈Herm n−m(R) and
+T= (−4π)−1diag( a,−b) T♭= (−4π)−1diag( a♭,−b)
+g= (−4π)−1diag( a, b) g♭= (−4π)−1diag( a♭, b).
+We have T, g∈Herm n(R) and T♭, g♭∈Herm m(R).
+We have
+W∗
+T♭(α, β) =e2πtrT♭Γm(β)−1|det 4πT♭|βζm−1,1(4πg♭;α, β)
+=eb|det 4πT♭|βπ−m+1Γ(β)−1Γm−1(β−1)−1e2πtrg♭ζm−1,1(4πg♭;α, β)
+which implies
+∂
+∂βW∗
+T♭(m, β) (4.4.1)
+=d
+dβΓ(β)−1
+|det 4πT♭|βπ−m+1ebΓm−1(β−1)−1e2πtrg♭ζm−1,1(4πg♭;m, β)
+whenever both sides are evaluated at β∈Z≤0.
+Equation (4.3.11) and Lemma 4.3.2 imply
+d
+ds
+s=−s0W∗
+T♭(s)◦
+n=∂
+∂β
+β=m−nW∗
+T♭(m, β). (4.4.2)
+Since Γ( s)−1has residue ( −1)n−m(n−m)! at s=m−n, we use (4.4.1) and (4.3.21) to find
+d
+ds
+s=−s0W∗
+T♭(s)◦
+n (4.4.3)
+= (−1)n−m(n−m)!|det 4πT♭|m−n(−π)−m+1(4.4.4)
+·Z
+Cm−1Z∞
+1etr(aww∗)eb(1+w∗w)xxm−n−1
+·e−tr(1m−1+ww∗)a♭∆|z=−a♭(e−tr(1m−1+ww∗)zdet(z)n−m+1)dx dw.
+24Next, we write w= (w1, . . . , w m) and apply Lemma 4.3.3 to find (using det(1 + ww∗) = 1 + w∗w
+as in [Shi82, Lemma 2.2])
+d
+ds
+s=−s0W∗
+T♭(s)◦
+n
+= (−1)n+1(n−m)!|det 4πT♭|m−nπ−m+1det(−a♭)n−m
+·m−1X
+t=0X
+I={i1<···<it}
+I⊆{1,...,m−1}m−1−tY
+k=1(n−m+k)(ai1···ait)
+Z
+Cm−1Z∞
+1etr(aww∗)eb(1+w∗w)xxm−n−1(1 +wi1wi1+···+wit+wit)dx dw
+= (−1)n+1π−m+1(−b)m−n(4.4.5)
+·m−1X
+t=0X
+I={i1<···<it}
+I⊆{1,...,m−1}
+(n−1−t)!(ai1···ait)
+Z
+Cm−1Z∞
+1etr(aww∗)eb(1+w∗w)xxm−n−1(1 +wi1wi1+···+wit+wit)dx dw
+.
+We have used exponential decay of the functionR∞
+1ecxxm−n−1asc→ −∞ for convergence estimates
+(to rearrange integrals). The previous formulas also hold when T♭, m, g♭, a♭are replaced by T, n, g, a
+(the latter is just the special case m=n).
+For the reader’s convenience, we recall the formulas (which will be used below)
+Z
+R2ec(x2+y2)dx dy =−πc−1Z
+R2(x2+y2)ec(x2+y2)dx dy =πc−2(4.4.6)
+valid for any c∈R<0.
+Proof of Proposition 4.1.2 when T♭is not positive definite. It is enough to check the case where T♭
+is diagonal and signature ( m−1,1), by Remarks 4.1.3 and 4.1.4. Take notation as above. There is
+nothing to check when m=n. Otherwise, we may show
+lim
+ai→0
+i=1,...,n−md
+ds
+s=0W∗
+T(s)◦
+n=d
+ds
+s=−s0W∗
+T♭(s)◦
+n (4.4.7)
+via (4.4.5). Indeed, interchanging the limit and integrals (dominated convergence) and integrating
+out the variables w1, . . . , w n−mgives the claim (using the left identity in (4.4.6)). □
+4.5.Limiting identity: positive definite T♭.Take any integer n≥1 and set m=n−1, so
+thats0= (n−m)/2 = 1 /2. Given a= diag( a1, . . . , a n−1)∈Herm n−1(R)<0andb∈R<0, set
+T♭= (−4π)−1aand T= (−4π)−1diag( a,−b). (4.5.1)
+Equation (4.3.11) and Lemma 4.3.2 imply
+d
+ds
+s=−1/2W∗
+T♭(s)◦
+n=−d
+ds
+s=1/2W∗
+T♭(s)◦
+n=−∂
+∂β
+β=0W∗
+T♭(n, β) (4.5.2)
+25where the first equality is via the functional equation (3.3.4). We have
+W∗
+T♭(n, β) = Γ m(β)−1det(−a)βζm(−a;n, β) = (−1)me−tradet(−a)−1∆|z=1m(etrazdet(z)−β)
+(4.5.3)
+where the first equality is by (4.3.5) and (4.3.13), and the second equality is by (4.3.9) and (4.3.7).
+Applying Lemma 4.3.3 then yields
+−∂
+∂β
+β=0W∗
+T♭(n, β) = det( a)−1m−1X
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−1−t)!(ai1···ait). (4.5.4)
+Before proceeding, we define several functions which serve only to aid computation in Section
+4.5. Set
+dm:=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!(ai1···ait) (4.5.5)
+qm(x):= (x+a1)−1···(x+am)−1(4.5.6)
+rm(x):= 1−(x+a1)−1− ··· − (x+am)−1(4.5.7)
+hm(x):=q(x)exm−1X
+k=0kX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−1−k)!ai1···aitxk−t(4.5.8)
+um(x):=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!ai1···ait(1−(x+ai1)−1− ··· − (x+ait)−1) (4.5.9)
+fm(x):=qm(x)um(x) (4.5.10)
+where dependence on a1, . . . , a mis suppressed from notation.
+Next, we consider (4.4.5) for the matrix T. Changing variables x7→x/band computing the dw
+integral (using (4.4.6)), we find
+d
+ds
+s=0W∗
+T(s)◦
+n=−Z1/b
+−∞fm(x)exx−1dx=−Ei(b) +Z1/b
+−∞(1−fm(x))exx−1dx (4.5.11)
+with m=n−1 as above, and where Ei is the exponential integral function from Section 2.2.
+Lemma 4.5.1. We have fm(x) = 1 + O(x)near x= 0.
+Proof. In the lemma statement, the variables a1, . . . , a mare understood to be fixed (and negative).
+Since fm(x) is a rational function of x, it is enough to check fm(0) = 1, i.e. that
+mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!a−1
+j1···a−1
+jm−t(1−a−1
+i1− ··· − a−1
+it) = 1
+26where {j1, . . . , j m−t}={1, . . . , m }\{i1, . . . , i t}. This holds because the sum telescopes, i.e. for any
+given t= 0, . . . , m −1, we have
+X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!a−1
+j1···a−1
+jm−t=X
+I′={i′
+1<···<i′
+t+1}
+I′⊆{1,...,m}(m−t−1)!a−1
+j′
+1···a−1
+j′
+m−t−1(a−1
+i′
+1+···+a−1
+i′
+t)
+where {j′
+1, . . . , j′
+m−t−1}={1, . . . , m } \ {i′
+1, . . . , i′
+t+1}. □
+Lemma 4.5.2. We haved
+dxhm(x) = (1 −fm(x))exx−1.
+Proof. We prove this by induction on m. The case m= 0 is clear, as both sides of the identity are 0.
+Next, suppose the claim holds for some m. We write fm+1(x),hm+1(x), etc. for the corresponding
+functions formed with respect to the tuple ( a1, . . . , a m, am+1) for any given choice of am+1∈R<0.
+Observe that we have an inductive formula
+hm+1(x) =hm(x) +qm+1(x)dm (4.5.12)
+which implies
+d
+dxhm+1(x)−d
+dxhm(x) =qm+1(x)rm+1(x)exdm. (4.5.13)
+So it is enough to check fm(x)−fm+1(x) =xqm+1(x)rm+1(x)dm, which is equivalent to checking
+(x+am+1)um(x)−um+1(x) =xrm+1(x)dm. (4.5.14)
+To see that this holds, we first compute
+um+1−(am+1um(x)−am+1(x+am+1)−1dm)
+=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m+ 1−t)!ai1···ait(1−(x+ai1)−1− ··· − (x+ait)−1).
+Using the identity am+1(x+am+1)−1= 1−x(x+am+1)−1, we see that (4.5.14) is equivalent to the
+identity
+xum(x)−xrm+1(x)dm+ (1−x(x+am+1)−1)dm (4.5.15)
+=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m+ 1−t)!ai1···ait(1−(x+ai1)−1− ··· − (x+ait)−1).
+27To see that the latter identity holds, we compute
+xum(x)−xrm+1(x)dm+ (1−x(x+am+1)−1)dm=xum(x)−xrm(x) +dm
+=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!ai1···ait(m+ 1−t−aj1(x+aj1)−1− ··· − ajm−t(x+ajm−t)−1)
+=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m+ 1−t)!ai1···ait
+−mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!ai1···ait(aj1(x+aj1)−1+···+ajm−t(x+ajm−t)−1)
+where {j1, . . . , j m−t}={1, . . . , m } \ {i1, . . . , i t}.
+We thus find that (4.5.15) is equivalent to the identity
+mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m+ 1−t)!ai1···ait((x+ai1)−1+···+ (x+ait)−1)
+=mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}(m−t)!ai1···ait(aj1(x+aj1)−1+···+ajm−t(x+ajm−t)−1)
+with{j1, . . . , j m−t}as above, and this identity holds because both expressions are equal to
+mX
+t=0X
+I={i1<···<it}
+I⊆{1,...,m}tX
+i=1(m+ 1−t)!ai1···ait(x+aii)−1. □
+Proof of Proposition 4.1.2 when T♭is positive definite. We may assume T♭is diagonal by Remark
+4.1.4. With TandT♭as above, we find
+lim
+b→0−d
+ds
+s=0W∗
+T(s)◦
+n+ Ei( b)
+=Z0
+−∞(1−fm(x))exx−1dx (4.5.16)
+via (4.5.11) (and Lemma 4.5.1 for convergence of the integral). The asymptotics for Ei( b) asb→0−
+(2.2.2) show that it is enough to verify the identity
+d
+ds
+s=−1/2W∗
+T♭(s)◦
+n=Z0
+−∞(1−fm(x))exx−1dx. (4.5.17)
+The left-hand side was computed in (4.5.4) (via (4.5.2)). The right-hand side is equal to hm(0) (in
+the notation above) via the explicit antiderivative result from Lemma 4.5.2. Inspecting the formula
+forhm(x) shows that the claimed identity holds. □
+28References
+[Che24a] Ryan C. Chen. Co-rank 1Arithmetic Siegel–Weil I: Local non-Archimedean .https:
+//arxiv.org/a/chen_r_2.html . Preprint. 2024.
+[Che24b] Ryan C. Chen. Co-rank 1Arithmetic Siegel–Weil III: Geometric local-to-global .https:
+//arxiv.org/a/chen_r_2.html . Preprint. 2024.
+[Che24c] Ryan C. Chen. Co-rank 1Arithmetic Siegel–Weil IV: Analytic local-to-global .https:
+//arxiv.org/a/chen_r_2.html . Preprint. 2024.
+[GS19] Luis E. Garcia and Siddarth Sankaran. “Green forms and the arithmetic Siegel-Weil
+formula”. In: Invent. Math. 215.3 (2019), pp. 863–975.
+[GS87] Henri Gillet and Christophe Soul´ e. “Intersection theory using Adams operations”. In:
+Invent. Math. 90.2 (1987), pp. 243–277.
+[GS90] Henri Gillet and Christophe Soul´ e. “Arithmetic intersection theory”. In: Inst. Hautes
+´Etudes Sci. Publ. Math. 72 (1990), 93–174 (1991).
+[Ich04] Atsushi Ichino. “A regularized Siegel-Weil formula for unitary groups”. In: Math. Z.
+247.2 (2004), pp. 241–277.
+[Kud97] Stephen S. Kudla. “Algebraic cycles on Shimura varieties of orthogonal type”. In: Duke
+Math. J. 86.1 (1997), pp. 39–78.
+[Liu11] Yifeng Liu. “Arithmetic theta lifting and L-derivatives for unitary groups, I”. In: Algebra
+Number Theory 5.7 (2011), pp. 849–921.
+[LL22] Chao Li and Yifeng Liu. “Chow groups and L-derivatives of automorphic motives for
+unitary groups, II”. In: Forum Math. Pi 10 (2022), Paper No. e5, 71.
+[LZ22] Chao Li and Wei Zhang. “Kudla–Rapoport cycles and derivatives of local densities”. In:
+J. Amer. Math. Soc. 35.3 (2022), pp. 705–797.
+[RSZ21] Michael Rapoport, Brian Smithling, and Wei Zhang. “On Shimura varieties for unitary
+groups”. In: Pure Appl. Math. Q. 17.2 (2021), pp. 773–837.
+[Shi82] Goro Shimura. “Confluent hypergeometric functions on tube domains”. In: Math. Ann.
+260.3 (1982), pp. 269–302.
+[Shi97] Goro Shimura. Euler products and Eisenstein series . Vol. 93. CBMS Regional Confer-
+ence Series in Mathematics. Published for the Conference Board of the Mathematical
+Sciences, Washington, DC; by the American Mathematical Society, Providence, RI, 1997,
+pp. xx+259.
+[WW73] Edmund T. Whittaker and George N. Watson. A course of modern analysis. An in-
+troduction to the general theory of infinite processes and of analytic functions: with an
+account of the principal transcendental functions . Fourth edition. Reprinted. Cambridge
+University Press, New York, 1973, p. 608.
+Department of Mathematics, Massachusetts Institute of Technology, 182 Memorial Drive, Cam-
+bridge, MA 02139, USA
+Email address :rcchen@mit.edu
+29

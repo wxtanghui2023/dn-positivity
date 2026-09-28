@@ -1,0 +1,1232 @@
+CO-RANK 1ARITHMETIC SIEGEL–WEIL III:
+GEOMETRIC LOCAL-TO-GLOBAL
+RYAN C. CHEN
+Abstract. This is the third in a sequence of four papers, where we prove the arithmetic Siegel–
+Weil formula in co-rank 1 for Kudla–Rapoport special cycles on exotic smooth integral models of
+unitary Shimura varieties of arbitrarily large even arithmetic dimension. Our arithmetic Siegel–
+Weil formula implies that degrees of Kudla–Rapoport arithmetic special 1-cycles are encoded in the
+first derivatives of unitary Eisenstein series Fourier coefficients.
+In this paper, we finish the reduction process from global arithmetic intersection numbers for
+special cycles to the local geometric quantities in our companion papers.
+Building on our previous companion papers, we also propose a construction for arithmetic special
+cycle classes associated to possibly singular matrices of arbitrary co-rank.
+Contents
+1. Introduction 3
+1.1. Arithmetic Siegel–Weil . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2. Local-to-global . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.3. Outline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+1.4. Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Part 1. Global special cycles 12
+2. Moduli stacks of abelian varieties 12
+2.1. Integral models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.2. Level structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+2.3. Generic smoothness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+3. Arithmetic cycle classes 25
+3.1. Arithmetic Chow rings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+3.2. Horizontal arithmetic special cycle classes . . . . . . . . . . . . . . . . . . . . . 27
+3.3. Arithmetic degrees without boundary contributions . . . . . . . . . . . . . . . 28
+Part 2. Uniformization 32
+4. Non-Archimedean 33
+4.1. Formal completion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+4.2. Local special cycles away from p. . . . . . . . . . . . . . . . . . . . . . . . . . 34
+4.3. Framing objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Date: May 2, 2024.
+1arXiv:2405.01428v1  [math.NT]  2 May 20244.4. Framed stack . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+4.5. Quotient . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+4.6. Uniformization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+4.7. Global and local . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+4.8. Local intersection numbers: vertical . . . . . . . . . . . . . . . . . . . . . . . . 48
+4.9. Local intersection numbers: horizontal . . . . . . . . . . . . . . . . . . . . . . 49
+5. Archimedean 51
+5.1. Local special cycles away from ∞. . . . . . . . . . . . . . . . . . . . . . . . . 51
+5.2. Framing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+5.3. Uniformization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+5.4. Local intersection numbers: Archimedean . . . . . . . . . . . . . . . . . . . . . 53
+Appendices 56
+Appendix A. Quasi-compactness of special cycles 56
+A.1. Terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+A.2. Proof . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Appendix B. Miscellany on p-divisible groups 59
+B.1. Terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+B.2. Isogeny criterion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+B.3. p-divisible groups over Spec Aand Spf A. . . . . . . . . . . . . . . . . . . . . 62
+References 64
+21.Introduction
+This paper is a continuation of our companion papers [Che24a; Che24b], and will be followed
+by [Che24c]. We refer the reader to the introductions of [Che24a; Che24c] for further motivation,
+overview, and strategy for our four-part series of papers. The discussion in Section 1.1 is an abridged
+version of loc. cit..
+In Section 1.2 below, we survey the remainder of the reduction process from global arithmetic
+Siegel–Weil to our local main theorems (which were stated in terms of local special cycles and local
+Whittaker functions). The reduction process will require work on both the geometric and analytic
+sides of the arithmetic Siegel–Weil formula, and uses (geometric) “local height decomposition”
+inputs from [Che24a, Sections 10 and 11]. The present paper paper focuses on geometric aspects.
+Analytic aspects will be treated in our companion paper [Che24c], where we combine our preceding
+results to complete the proof of our co-rank 1 arithmetic Siegel–Weil formula.
+In Section 1.3, we outline the structure of this paper and its relation with our companion papers
+[Che24a; Che24b; Che24c].
+1.1.Arithmetic Siegel–Weil. For the introduction, fix an imaginary quadratic field F/Qwith
+ring of integers OFand odd discriminant ∆. Let Vbe a non-degenerate F/QHermitian space
+of signature ( n−1,1) with pairing ( −,−). Set G=U(V). For the introduction, we assume V
+contains a full-rank self-dual1OF-lattice.
+Since the work of Kudla–Rapoport [KR14] (also Rapoport–Smithling–Zhang [RSZ21]), it has
+been customary to define special cycles Z(T)→ M over (stacky) integral models M → SpecOF
+for Shimura varieties associated to G′:= Res F/QGm×G. In this paper, we mainly take M →
+SpecOFto be the “exotic smooth” Rapoport–Smithling–Zhang (RSZ) integral model of odd relative
+dimension n−1 [RSZ21, §6] (empty if n≡0 (mod 4)). The stack Madmits a moduli description:
+it parameterizes tuples ( A0, ι0, λ0, A, ι, λ ) where A0andAare abelian schemes (dimensions 1 and
+nrespectively) with OF-actions ι0andι, and with compatible quasi-polarizations λ0andλ. The
+datum ( A0, ι0, λ0, A, ι, λ ) satisfies a few additional conditions, which we suppress in the introduction
+(see [Che24a, Section 3.1] and Section 2.1). We are able to prove versions of our main global results
+for more general M(including odd arithmetic dimension n) at the price of discarding finitely many
+primes (particularly ramified primes for odd n); see [Che24c, Remark 9.1.5].
+The moduli stack Mcarries a natural family of Hermitian OF-lattices
+Lat→ M L at:= HomOF(A0, A). (1.1.1)
+Given2anyT∈Herm m(Q), the associated Kudla–Rapoport special cycle Z(T)→ M is defined as
+the substack
+Z(T):={x∈ Latm: (x, x) =T} ⊆ L atm(1.1.2)
+1Our convention is that self-duality for Hermitian lattices is always with respect to the trace pairing, here
+trF/Q(−,−).
+2The notation Herm mdenotes a scheme over Spec Z, e.g. Herm m(Q) denotes m×mHermitian matrices with
+entries in F.
+3consisting of m-tuples with Gram matrix T. More precisely, see Section 2.1. The morphism
+Z(T)→SpecOFis smooth of relative dimension n−1−rank( T) in the generic fiber over Spec F.
+IfTis not positive semi-definite, then Z(T) is empty.
+We propose a new candidate definition of arithmetic cycle classes
+[bZ(T)]:= [bZ(T)H] +X
+pprime[LZ(T)V,p]∈cChm(M)Q (1.1.3)
+associated to arbitrary (possibly singular) T, where cChm(M)Qis an arithmetic Chow group as-
+sociated to M(Section 3.1). Here, [ bZ(T)H] should describe “horizontal” contributions and
+LZ(T)V,pshould describe “vertical” contributions. The vertical (positive characteristic) contri-
+butionsLZ(T)V,pwere defined in our companion paper [Che24a, Section 3.6]. As we explain in
+Section 3.2 of this paper, the class [ bZ(T)H] may be constructed using currents gT,y(associated to
+Tand allowed to vary with a parameter y∈Herm m(R)>0) satisfying a modified current equation ,
+i.e. that
+−1
+2πi∂∂gT,y+δZ(T)C∧[c1(bE∨
+C)m−rank( T)] (1.1.4)
+is represented by a smooth ( m, m )-form. For such currents, we apply the proposal of [GS19, §5.4]
+to the flat part3Z(T)HofZ(T).
+For general T, there is no precise definition of [ bZ(T)] which has been proposed in the prior
+literature [Li24, Remark 4.4.2]. Our candidate definition may need modification on a compactifica-
+tion, but we expect it to apply in already-compact situations (e.g. the Rapoport–Smithling–Zhang
+[RSZ21] setup for CM extensions of totally real fields ̸=Q). In general, it may also be necessary
+to modify the Green currents differently than in [GS19, Definition 4.7]; see discussion below.
+Currents satisfying (1.1.4) were constructed by Garcia and Sankaran [GS19], using the Mathai–
+Quillen theory of superconnections [GS19, (4.38)]. For their arithmetic Siegel–Weil results, how-
+ever, they need a non “linearly invariant” modification of their current [GS19, Definition 4.7] (see
+discussion below).
+We choose to instead use the star-product approach of Kudla [Kud97a] (as formulated by Liu
+for unitary groups [Liu11]) to define the currents gT,yfor our arithmetic Siegel–Weil results. Tradi-
+tionally, the star product approach was used for nonsingular T(or at least block diagonal T, with
+diagonal entries 0 or nonsingular). In [Che24b, Section 2.4], we gave a (new) linearly invariant
+modification in the case of singular T∈Herm n(Q) with rank n−1, which will appear in our
+arithmetic Siegel–Weil result for singular T. The discussion in [Che24b, Section 2.4] focused on the
+local version (on the Hermitian symmetric domain); we descend it to the complex Shimura variety
+in Section 5.4 of this paper.
+As part of the expected automorphic behavior of [ bZ(T)], it is expected that these classes should
+satisfy a certain “linear invariance” property for the action4of GL m(OF) on Hermitian matrices
+3Given an algebraic stack Xover a Dedekind domain R, itsflat part orhorizontal part ofXHis the largest closed
+substack XH⊆ X which is flat over Spec R. The stack XHis also the scheme-theoretic image of the generic fiber of
+X. Given a formal algebraic stack Xover Spf Rfor a complete discrete valuation ring R, itsflat part orhorizontal
+partXHis the largest closed substack XH⊆ X which is flat over Spf R(in the sense discussed in Section 4.7).
+4For any γ∈GLm(OF) and any Hermitian matrix T∈Herm m(Q), we say e.g. that TandtγTγ are GL m(OF)-
+equivalent , and that they lie in the same GL m(OF)-equivalence class .
+4T. We verify this for the classes we define: for any gT,ysatisfying
+gT,y=gtγTγ,γ−1ytγ−1, (1.1.5)
+we show
+[bZ(T)] = [bZ(tγTγ)] (1.1.6)
+where [ bZ(T)] is formed with respect to yand [bZ(tγTγ)] is formed with respect to γ−1ytγ−1. In
+fact, we prove refined results: we showed that the vertical part at each prime pis linearly invariant
+on the level of Grothendieck groups [Che24a, (3.6.11)], and we will see that the horizontal part
+is linear invariant on its own Section 3.2. The currents gT,yappearing in our main arithmetic
+Siegel–Weil results satisfy the linear invariance property in (1.1.5); see Section 5.4 (also [Che24b,
+Section 2.4]). Note that the Garcia–Sankaran Green currents in [GS19, (4.38)] also satisfy the same
+linear invariance property (but the modified currents in [GS19, Definition 4.7] do not).
+Due to non-properness of M → SpecOFin general, one should likely modify [ bZ(T)] on a suitable
+compactification of M. IfZ(T)→SpecOFis proper, however, we consider certain “arithmetic
+degrees without boundary contributions” (a real number) when m≤n, given by
+ddeg([bZ(T)]·bc1(bE∨)n−m):=Z
+MCgT,y∧c1(bE∨
+C)n−m
+(1.1.7)
++ddeg((bE∨)n−rank( T)|Z(T)H)
++X
+pprimedegFp(LZ(T)V,p·(E∨)n−m) logp
+conditional on convergence of the integral, for a certain metrized tautological bundle bEonM
+(Section 2.1); we do check convergence of the integral in the settings of our arithmetic Siegel–Weil
+results. Here we set MC:=M × SpecOFSpecCfor either embedding F→C. The middle term is
+mixed characteristic in nature: for rank( T) =n−1, it is (essentially) a weighted sum of Faltings
+heights of abelian varieties ([Che24c, Remark 9.1.4]). For proper Z(T)→ O F, the quantity in
+(1.1.7) should coincide with the arithmetic degree (without boundary contributions) of a version
+of [bZ(T)] on any reasonable compactification of M.
+We consider the (normalized) U(m, m ) Siegel Eisenstein series
+E∗(z, s)◦
+n:= Λ m(s)◦
+nX
+a b
+c d
+∈P1(Z)\SU(m,m)(Z)det(y)s−s0
+det(cz+d)n|det(cz+d)|2(s−s0). (1.1.8)
+Here Λ m(s)◦
+nis a certain normalizing factor [Che24c, (6.1.2)], consisting of various L-functions and
+Γ functions, etc.. We wrote P1:=P∩SU(m, m ) for P⊆U(m, m ) denoting the Siegel parabolic
+(m×mblock upper triangular), the element z=x+iylies in Hermitian upper-half space (i.e.
+x∈Herm m(R) and y∈Herm m(R)>0, meaning yis positive definite), and s0= (n−m)/2. Given
+T∈Herm m(Q), the Eisenstein series E∗(z, s)◦
+nhasT-th Fourier coefficient
+E∗
+T(y, s)◦
+n:= 2m(m−1)/2|∆|−m(m−1)/4Z
+Herm m(Z)\Herm m(R)E∗(z, s)◦
+ne−2πitr(Tz)dx (1.1.9)
+forz=x+iyin Hermitian upper-half space, where this integral is taken with respect to the
+Euclidean measure on Herm m(R).
+5In our four-part sequence of papers, our main result is an arithmetic Siegel–Weil formula in
+co-rank 1, i.e. we show that the formula
+hF
+wFd
+ds
+s=s02Λn(s−s0)◦
+n
+κΛm(s)◦nE∗
+T(y, s)◦
+n?=cvolbE∨([bZ(T)]). (1.1.10)
+holds when m=nandTis singular of co-rank 1. Here, we write hF(resp. wF) for the class
+number of (resp. number of roots of unity in) OF, and κ= 1 (resp. κ= 2) if m < n (resp. m=n).
+We also prove (the closely related version of) (1.1.10) when Tis nonsingular of rank n−1; in that
+case, the special value at s=s0simultaneously has geometric meaning (“geometric Siegel–Weil”).
+We refer to the introduction of our companion paper [Che24c] for further discussion on this.
+As formulated in (1.1.10), the arithmetic Siegel–Weil formula was possibly considered essentially
+previously known (at least up to a volume constant) for nonsingular T∈Herm n(Q) by the local
+theorems [Liu11; LZ22; LL22] (see discussion following [Che24a, (1.3.8)]). Our four-part series
+resolves the case where Tis singular of co-rank 1. Non-Archimedean aspects of the arithmetic
+Siegel–Weil formula (along with combined non-Archimedean and Archimedean results) were open
+for corank ≥1, prior to our work. As formulated in (1.1.10), the arithmetic Siegel–Weil formula
+is essentially open in corank ≥2. We refer to the introductions of our companion papers [Che24a;
+Che24c] for a more comprehensive review.
+1.2.Local-to-global. Our proof of arithmetic Siegel–Weil in co-rank 1 is local in nature. In our
+previous companion papers [Che24a; Che24b], we formulated and proved the key “local arithmetic
+Siegel–Weil” formulas at all places, which are local analogues of (the co-rank 1 case of) (1.1.10).
+At the Archimedean place (resp. non-Archimedean places), the geometric side of our local theorem
+takes place on an appropriate Hermitian symmetric domain (resp. Rapoport–Zink space).
+The main objective of this paper is to explain how to patch these local geometric quantities to
+the (global) arithmetic intersection number considered in (1.1.7).
+For motivation, we first illustrate (a special case of) the local-to-global reduction process on the
+analytic side of the arithmetic Siegel–Weil formula, involving Eisenstein series and local Whittaker
+functions. In the special case of (1.1.10) when T= diag(0 , T♭) for T♭nonsingular of rank n−1 and
+y= diag(1 , y♭), we have a local decomposition
+1
+2d
+ds
+s=0E∗
+T(y, s)◦
+n=d
+ds
+s=0Λn(s)◦
+n
+Λn−1(s+ 1/2)◦nE∗
+T♭(y♭, s+ 1/2)◦
+n
+(1.2.1)
+=d
+ds
+s=0Λn(s)◦
+n
+Λn−1(s+ 1/2)◦n
+E∗
+T♭(y♭,1/2)◦
+n (1.2.2)
++ 
+d
+ds
+s=1/2W∗
+T♭,∞(y♭,1/2)◦
+n!Y
+pW∗
+T♭,p(1/2)◦
+n (1.2.3)
++X
+p 
+d
+ds
+s=1/2W∗
+T,p(s)◦
+n!
+W∗
+T♭,∞(y,1/2)◦
+nY
+ℓ̸=pW∗
+T♭,ℓ(1/2)◦
+n (1.2.4)
+by the Leibniz rule and the Euler product
+E∗
+T♭(y♭, s)◦
+n=W∗
+T♭,∞(y♭, s)◦
+nY
+pW∗
+T♭,p(s)◦
+n (1.2.5)
+6of local (normalized) Whittaker functions over all places ([Che24c, Section 6.1]). If Tis not in block
+diagonal form buttγTγ is block diagonal for some γ∈GLn(OF), a certain “linear invariance”
+property for Eisenstein series ([Che24c, Section 2.3]) gives a similar local decomposition. If no
+such γexists, we instead take γ∈GLn(OF⊗ZZ(p)) (“local diagonlizability”); this introduces a
+discrepancy ofP
+ℓ̸=pQ·logℓ, but vary premoves this discrepancy by R-linear independence of log p
+over all primes p(see [Che24c, Section 9.1]). This “ p-local diagonalization” argument is a new
+feature on the analytic side for our local-to-global reduction of arithmetic Siegel–Weil.
+To reduce (1.1.10) (for Tsingular of co-rank 1) to our local main theorems from [Che24a,
+Section 9] and [Che24b, Section 4], we exhibit a local decomposition on the geometric side analogous
+to (1.2.2), (1.2.3), and (1.2.4).
+On the geometric side of the arithmetic Siegel–Weil formula, we will use uniformization (Archimedean
+and non-Archimedean) to pass from arithmetic intersection numbers for global special cycles to geo-
+metric quantities defined for local special cycles. (This local-to-global reduction is treated more
+carefully in Section 5.4.) As mentioned in [Che24a, Section 1.7], a key difficulty is that our arith-
+metic intersection numbers involve a mixed characteristic contribution (e.g. Faltings heights of
+abelian varieties, coming from components of Z(T) flat over Spec OF) which do not admit an
+obvious canonical local decomposition. This is the main difference between our local-to-global
+arguments and previous work such as [KR14; LZ22], which only involve intersection numbers for
+purely vertical special cycles (empty in the generic fiber).
+As we sketched in [Che24a, Section 1.7], we consider the local decomposition of the difference
+of Faltings heights between isogenous abelian varieties. The somewhat delicate passage from Falt-
+ings heights (and “tautological heights) to local quantities calculate-able on Rapoport–Zink spaces
+was treated in [Che24a, Sections 10 and 11], but the precise relation with global special cycles
+was not completed there. In Section 4.9 of this paper, we explain how to use the results from
+[Che24a, Sections 10 and 11] to calculate arithmetic intersection numbers for global special cycles
+via uniformization.
+For suitable open compact subgroups K′
+f=K0,f×Kf⊆(Res F/QGm)(Af)×U(V)(Af) =G′(Af)
+(withAfthe ad` ele ring of Q), there is a version MK′
+fofMwith level K′
+fstructure (essentially as
+considered by Kottwitz [Kot92]); we postpone the definition to Section 2.2. Similarly write Z(T)K′
+f
+for the pullback of Z(T)→ M toMK′
+f.
+We first consider Archimedean intersection numbers, involving Green currents (in the terminol-
+ogy above, this is still “purely vertical” from the perspective of this paper). Fix an embedding
+F→C, and set MK′
+f,C:=MK′
+f×SpecOFC. For sufficiently small K′
+fand any T∈Herm m(Q) (for
+anym), there are complex uniformization isomorphisms (Section 5.4)
+Man
+K′
+f,C∼=G′(Q)\(D ×G′(Af)/K′
+f) (1.2.6)
+Z(T)K′
+f∼=G′(Q)\ a
+x∈Vm
+(x,x)=TD(x∞)× D′(xf)!
+. (1.2.7)
+HereDis a Hermitian symmetric domain (parameterizing maximal negative definite subspaces of
+the complex Hermitian space V⊗QR), the notation D(x)⊆ Ddenotes an Archimedean local special
+7cycle (the complex submanifold corresponding to subspaces perpendicular to every element of the
+mtuple x), and the set D′(xf) = ((Res F/QGm)(Af)/K0,f× D(xf))⊆G′(Af)/K′
+fis what we call
+an “away-from- ∞” local special cycle (Section 5.1).
+Consider any y∈Herm m(R)>0andx∈Vmwith ( x, x) =T. For the moment, assume m≥n−1
+ifTis positive definite. If Tis singular, we also require m=nand rank( T) =n−1. In these cases,
+we constructed currents [ ξ(x, y)] on the Hermitian symmetric domain D[Che24b, Section 2.4].
+These will descend to currents gT,yon the (analytification of the) complex Shimura variety Man
+K′
+f,C.
+We have the local and global Archimedean intersection numbers
+Int∞(T, y):=Z
+D[ξ(x, y)]∧c1(bE∨)n−mInt∞,global(T, y):=Z
+Man
+CgT,y∧c1(bE∨
+C)n−m(1.2.8)
+respectively. Via uniformization, these are related by the formula (“local to global”, Section 5.4)
+Int∞,global(T, y) = Int ∞(T, y)[bOF:K0,f]
+|O×
+F|/hF·deg"
+U(V)(Q)\a
+x∈Vm
+(x,x)=TD(xf)#
+(1.2.9)
+wherebOF:=OF⊗ZˆZ, and where deg[ −] denotes groupoid cardinality. For simplicity, consider the
+case when T♭:=Tis moreover nonsingular (the body of this paper treats the more general case).
+Our main Archimedean local theorem [Che24b, Theorem 4.1.1] gives
+Int∞(T♭, y) =−d
+ds
+s=1/2W∗
+T♭(y, s)◦
+n. (1.2.10)
+By “local Siegel–Weil” (see [Che24c, Section 7.4]), we have
+deg"
+U(V)(Q)\a
+x∈Vm
+(x,x)=T♭D(xf)#
+=2hF
+wFY
+pW∗
+T♭,p(1/2)◦
+n (1.2.11)
+and the comparison with (1.2.3) now emerges.
+We next consider “non-Archimedean” intersection numbers, which will involve positive charac-
+teristic contributions (e.g. from components Z(T) in positive characteristic) and parts of mixed
+characteristic contributions (from components of Z(T) flat over OF, giving Faltings heights of
+abelian varieties). We allow possibly stacky level K′
+f, but assume that K′
+fis standard at p(Sec-
+tion 2.2). For the moment, we assume pis a prime which is nonsplit in OF. Set Fp:=F⊗QQp
+and let ˘Fpbe the completion of the maximal unramified extension of Fp. We then have (stacky)
+Rapoport–Zink uniformization isomorphisms (Section 4.6)
+˘MK′
+f∼=[I′(Q)\(N′×G′(Ap
+f)/K′p
+f)] (1.2.12)
+˘Z(T)K′
+f∼="
+I′(Q)\ a
+x∈Vm
+(x,x)=TZ′(xp)× Z′(xp)!#
+. (1.2.13)
+The notations ˘Z(T)K′
+fand ˘Z(T)K′
+fdenote the respective formal completions along supersingular
+loci (after base-change to Spec O˘Fp). Here I′∼=ResF/QGm×U(V), where Vis a certain positive
+definite F/QHermitian space which is isomorphic to Vat all places other than ∞andp. Here
+8N′=N(1,0)′× N is a Rapoport–Zink space, which is a locally Noetherian formal scheme and
+a certain moduli space of p-divisible groups. The notation Z′(xp) =N(1,0)′× Z(xp)⊆ N′
+denotes a certain local Kudla–Rapoport special cycle (closed formal subscheme) at p, and the set
+Z′(xp) = (Res F/QGm)(Ap
+f)/Kp
+0,f× Z(xp)⊆G′(Ap
+f)/K′p
+fis what we call an “away-from- p” local
+special cycle.
+For illustration purposes, consider a nonsingular T♭∈Herm n−1(Q) (again, the body of this paper
+treats a more general setup). Suppose x♭∈Vn−1is any tuple with Gram matrix T♭. We then have
+local and global non-Archimedean vertical intersection numbers at p
+IntV,p(T♭):= 2[˘Fp:˘Qp]−1degFp(LZ(x♭
+p)V·E∨) logp IntV,p,global(T♭):= degFp(LZ(T)V,p·E∨) logp
+(1.2.14)
+corresponding to the “vertical parts”LZ(xp) andLZ(T♭)V,pof local and global special cycles
+respectively, intersected against an appropriate dual tautological bundle E∨.
+At least if p̸= 2, we also have local (Int H,p(T)) and global (Int H,ℓ,global(T)) non-Archimedean
+horizontal intersection numbers at p(elements of Q·logp) given by
+IntH,p(T♭)∼local change of Faltings heights along “minimal isogenies” (1.2.15)
+ddeg(bE∨|Z(T♭)H)−(degZZ(T♭)H)·hCM
+bE∨=X
+ℓIntH,ℓ,global(T♭) (1.2.16)
+where the sum ranges over all primes ℓ, with all but finitely many terms equal to 0. Here hCM
+bE∨is
+a certain height constant, see (2.1.13). The precise definition of Int H,p(T♭) that we use is more
+complicated; we defer to Section 4.9 (and the motivation in [Che24a, Section 1.6]). The symbol
+ddeg denotes an arithmetic degree of a certain metrized line bundle [Che24a, Section 3.5], and
+degZZ(T♭)His the “degree” of Z(T♭)H→SpecZ(more precisely, see Section 4.9).
+We consider total “intersection numbers”
+Intp(T♭):= Int H,p(T♭) + Int V,p(T♭) Int p,global(T♭):= Int H,p,global(T♭) + Int V,p,global(T♭)
+(1.2.17)
+(local and global) at p, and have the following local-to-global relation, whose precise formulation
+and proof is the main objective of this paper (see Sections 4.8 and 4.9).
+Theorem. We have
+Intp,global(T) = Int p(T♭)[bOF:K0,f]
+|O×
+F|/hF·deg"
+U(V)(Q)\a
+x∈Vm
+(x,x)=T♭Z(xp)#
+. (1.2.18)
+The main ingredients are Rapoport–Zink uniformization (Sections 4.8 and 4.9) and the “local
+decomposition of heights” input from our companion paper [Che24a, Sections 10 and 11]. Our local
+main non-Archimedean theorem from [Che24a, Section 9] gives
+Intp(T♭) =−d
+ds
+s=1/2W∗
+T♭(s)◦
+n. (1.2.19)
+9By “local Siegel–Weil” (see [Che24c, Section 7.4]), we have
+deg"
+U(V)(Q)\a
+x∈Vm
+(x,x)=T♭Z(xp)#
+=2hF
+wFW∗
+T♭,∞(y♭,1/2)◦
+nY
+ℓ̸=pW∗
+T♭,ℓ(1/2)◦
+n (1.2.20)
+for any y♭∈Herm n−1(R)>0, and the comparison with (1.2.4) now emerges.
+The height constant hCM
+bE∨is essentially the derivative appearing in (1.2.2) (see [Che24c, (9.1.2)]),
+and the degree degZZ(T)His essentially the special value E∗
+T♭(y♭, s)◦
+nappearing in loc. cit. (by
+geometric Siegel–Weil as in [Che24c, Remark 8.1.2] or [Che24c, (1.2.10)]). The comparison with
+(1.2.2) now emerges.
+A similar local-to-global reduction is possible (and carried out in Section 4) if pis split (allowing
+p= 2), though we now need Rapoport–Zink uniformization involving ordinary abelian varieties. In
+the split case, we only uniformize special cycles Z(T) with Tof rank ≥n−1.
+1.3.Outline. We briefly summarize the remaining content in this paper, and discuss the relation
+with our companion papers [Che24a; Che24b; Che24c]. Further explanations may be found at the
+beginning of some sections.
+The remaining sections into Parts 1 and 2 and appendices.
+In Part 1 “Global special cycles”, we set up the global moduli stacks (RSZ) and special cycles
+(KR) appearing in our main global theorems. The exotic smooth case was discussed in our com-
+panion paper [Che24a, Section 3.1]. In the present paper, we also allow a more general setup at
+the price of possibly discarding finitely many primes (particularly the ramified primes in the case
+of odd arithmetic dimension). Our main theorems will also apply in these situations [Che24c, Re-
+mark 9.1.5]. In Section 3, we define associated arithmetic special cycle classes and discuss arithmetic
+degrees.
+In Part 2 “Uniformization” we discuss complex and Rapoport–Zink uniformization of special cy-
+cles in our setup, and finish the reduction process from global heights/intersection numbers to the
+geometric quantities appearing in the “local arithmetic Siegel–Weil” theorems of our companion pa-
+pers [Che24a; Che24b]. Strictly speaking, the Rapoport–Zink uniformization we need at split places
+does not seem covered by the literature (not supersingular locus). We treat inert/ramified/split
+in parallel. For the most part, we disallow p= 2 only in the ramified case. Using the analogous
+local construction from [Che24b, Section 2.4], we explain a modified Green current for singular T
+(of rank n−1 and size n×n) in Section 5.4.
+The analytic side of the local-to-global reduction process will appear in our final companion
+paper [Che24c], where we complete the proof of our (global) co-rank 1 arithmetic Siegel–Weil
+formula using essentially all preceding results.
+Appendix A contains some notation on abelian schemes, and records a proof for quasi-compactness
+of special cycles (which does not seem explicitly available in the literature). Appendix B concerns
+p-divisible groups, where we fix some notation and record some (presumably standard) facts.
+Our algebro-geometric conventions follow the Stacks project [SProject] unless stated otherwise.
+101.4.Acknowledgements. I thank my advisor Wei Zhang for suggesting this topic, for his dedi-
+cated support and constant enthusiasm, for insightful discussions throughout the entire course of
+this project, and for helpful comments on earlier drafts. I thank Tony Feng, Qiao He, Benjamin
+Howard, Ishan Levy, Chao Li, Keerthi Madapusi, Andreas Mihatsch, Siddarth Sankaran, Ananth
+Shankar, Yousheng Shi, Tonghai Yang, Shou-Wu Zhang, and Zhiyu Zhang for helpful comments or
+discussions.
+This work was partly supported by the National Science Foundation Graduate Research Fellow-
+ship under Grant Nos. DGE-1745302 and DGE-2141064. Parts of this work were completed at
+the Mathematical Sciences Research Institute (MSRI), now becoming the Simons Laufer Mathe-
+matical Sciences Institute (SLMath), and the Hausdorff Institute for Mathematics. I thank these
+institutes for their support and hospitality. The former is supported by the National Science Foun-
+dation (Grant No. DMS-1928930), and the latter is funded by the Deutsche Forschungsgemein-
+schaft (DFG, German Research Foundation) under Germany’s Excellence Strategy – EXC-2047/1
+– 390685813.
+11Part 1.Global special cycles
+2.Moduli stacks of abelian varieties
+Fix an imaginary quadratic field extension F/Qwith ring of integers OFand write a7→aσfor
+the nontrivial automorphism σofF. We write ∆ ∈Z<0and√
+∆∈ O F(pick a square root) for
+(generators of the) discriminant and different, respectively.
+In [Che24a, Section 3] of our companion paper, we stated our main global theorems in terms
+of certain “exotic smooth” moduli stacks M → SpecOFof RSZ (Rapoport–Smithling–Zhang)
+[RSZ21]. Since our proofs are eventually local in nature, our global theorems also apply for other
+RSZ integral models after inverting finitely many primes. We explain these more general integral
+models (associated to non-degenerate Hermitian OF-lattices L) in Section 2.1. Sections 2.2 and 2.3
+and Appendix A contain some technical facts (level structure, generic smoothness of special cycles,
+and quasi-compactness of special cycles respectively) which were skipped in [Che24a, Section 3].
+2.1.Integral models. For the reader’s convenience, we recall the notion of a Hermitian abelian
+scheme in the terminology of [Che24a, Definition 3.1.1].
+Definition 2.1.1. LetSbe a scheme over Spec OF. By a Hermitian abelian scheme over S, we
+mean a tuple ( A, ι, λ ) where
+A is an abelian scheme over Sof constant relative dimension n
+ι:OF→End(A) is a ring homomorphism
+λ:A→A∨is a quasi-polarization satisfying:
+(Action compatibility) The Rosati involution †on End0(A) satisfies
+ι(a)†=ι(aσ) for all a∈ O F.
+For any fixed n≥1 (even or odd), the moduli stack of Hermitian abelian schemes Mis the
+stack5in groupoids over Spec OFwith
+M(S):={groupoid of relative n-dimensional Hermitian abelian schemes over S} (2.1.1)
+forOF-schemes S.
+For an integer rwith 0 ≤r≤n, we also recall
+(Kottwitz ( n−r, r) signature condition) For all a∈ O F, the characteristic polynomial of
+ι(a) acting on Lie Ais (x−a)n−r(x−aσ)r∈ O S[x]
+for pairs ( A, ι), where A→Sis a relative n-dimensional abelian scheme with OF-action ι, and S
+is anOF-scheme. Here we view OSas an OF-algebra via the structure map S→SpecOF. This
+defines a substack6
+M(n−r, r)⊆M (2.1.2)
+5By a stack in groupoids over some base scheme S, we always mean a (not necessarily algebraic) stack in groupoids
+as in [SProject, Definition 02ZI] over the fppf site ( Sch/S)fppf.
+6Asubstack will always mean a strictly full substack.
+12consisting of Hermitian abelian schemes of signature ( n−r, r). The inclusion M(n−r, r)→M
+is representable by schemes (in the sense of [SProject, Section 04ST]) and is a closed immersion.
+There is an isomorphism7M(n−r, r)→M(r, n−r) given by ( A, ι, λ )7→(A, ι◦σ, λ).
+For any integer d≥1, there is a substack M(d)⊆Mconsisting of Hermitian abelian schemes
+(A, ι, λ ) where λis polarization of constant degree deg λ:= deg ker λ=d. IfAn,d(over Spec OF)
+denotes the moduli stack of (relative) n-dimensional abelian schemes equipped with a polarization
+of degree d, the forgetful map M(d)→ A n,dis representable by schemes, finite, and unramified
+(e.g. via Lemma A.2.3).
+HenceM(d)is a Noetherian Deligne–Mumford stack which is separated and finite type over
+SpecOF(because this is true of An,das proved with level structure in the classical [MFK94, §7.2
+Theorem 7.9]; one can deduce the stacky version upon inverting primes dividing the level, taking
+stack quotients, and patching over Spec OF).
+We set
+M(n−r, r)(d):=M(n−r, r)∩M(d)(2.1.3)
+where the right-hand side is an intersection of substacks of M. There is an open and closed disjoint
+union decomposition8
+M(d)[1/∆] =a
+(n−r,r)M(n−r, r)(d)[1/∆] (2.1.4)
+over Spec OF[1/∆], where the disjoint union runs over all possible signatures ( n−r, r).
+The structure morphism M(n−r, r)(d)[1/(d∆)]→SpecOF[1/∆] is smooth of relative dimension
+(n−r)r(e.g. recall that being smooth of some relative dimension may be checked fppf locally on the
+target for morphisms of algebraic stacks; then apply Remark 2.3.6 below). We set M0:=M(1,0)(1).
+The structure morphism M0→SpecOFis proper, quasi-finite, and ´ etale by [How12, Proposition
+3.1.2] or [How15, Proposition 2.1.2].
+Given any non-degenerate Hermitian OF-lattice Lof rank nand signature ( n−r, r), we define
+an associated substack
+M ⊆M0×SpecOFM(n−r, r) (2.1.5)
+as follows (cf. [KR14, Proposition 2.12], there in a principally polarized situation). Write ( −,−)
+for the pairing on L, letbLbe the smallest positive integer such that bL·(−,−) isOF-valued.
+IfLis self-dual9of signature ( n−1,1) and 2 ∤∆, we take M → O Fto be the exotic smooth
+moduli stack described in [Che24a, Section 3.1]. We refer to this as the even exotic smooth case .
+Otherwise, let L′be the Hermitian OFlattice which is the OF-module Lbut with Hermitian
+pairing bL·(−,−). Form the dual lattice L′∨ofL′with respect to the Hermitian pairing, and set
+d′
+L:=|L′∨/L′|. Let dL∈Z>0be the product of ramified primes and the primes pfor which L⊗ZZp
+is not self-dual.
+7As in the Stacks project (e.g. [SProject, Section 04XA]), we often abuse terminology and say “isomorphism” of
+stacks instead of “equivalence”.
+8Here, the notation M(d)[1/∆] means M(d)×SpecOFSpecOF[1/∆]. We often use such shorthand, along with
+subscripts for base change, e.g. M(d)
+S:=M(d)×SpecOFSover an understood base.
+9As in [Che24a, Section 2.2], our convention is that self-duality (without additional specification) is understood
+with respect to the trace pairing; here that means tr OF/Z(−,−).
+13Definition 2.1.2. In the preceding situation, we let M ⊆M0×SpecOFM(n−r, r)[1/dL] be the
+substack
+M(S):=
+
+(A0, ι0, λ0, A, ι, λ ) :HomOF⊗ˆZp(Tp(A0,s), Tp(As))∼=L⊗ZˆZp
+for every geometric point sofS, with p= char( s),
+andbL·λis a polarization of degree d′
+L
+
+(2.1.6)
+for schemes Sover Spec OF[1/dL], where
+(A0, ι0, λ0)∈M0(S) ( A, ι, λ )∈M(n−r, r)(S). (2.1.7)
+IfLis self-dual of signature ( n−1,1) and 2 ∤∆, then applying Definition 2.1.2 over Spec OF[1/∆]
+would give M[1/∆] (for the exotic smooth moduli stack M).
+In Definition 2.1.2, the notation HomOF⊗ˆZp(Tp(A0,s), Tp(As))∼=L⊗ZˆZpasserts the existence
+of isomorphisms of Hermitian lattices, and the elements of HomOF⊗ˆZp(Tp(A0,s), Tp(As)) are not
+required to respect Hermitian pairings. As usual, Tp(−) is the away-from- pad` elic Tate module (if
+p= 0, this is over the full finite ad` eles) and ˆZp=Q
+ℓ̸=pZℓ.
+In all cases, note that Mdepends only on the ad` elic isomorphism class10ofL. The stack Mand
+its special cycles are the global moduli stacks of main interest in this work. We generally suppress
+Lfrom notation, but sometimes write MLinstead of Mto emphasize Ldependence.
+We claim that Mis a Noetherian Deligne–Mumford stack which is separated and smooth of
+relative dimension ( n−r)rover Spec OF[1/dL]. The even exotic smooth case was discussed in
+[Che24a, Section 3.1]. The general case is similar: there is an open and closed disjoint union
+decomposition
+M0×SpecOFM(n−r, r)(d)[1/(d∆)] =a
+L′′ML′′(2.1.8)
+running over representatives L′′, one for each ad` elic isomorphism class of non-degenerate Hermitian
+OF-lattices of signature ( n−r, r) satisfying L′′⊆L′′∨and|L′′∨/L′′|=d. We have used flatness
+ofM(n−r, r)(d)[1/(d∆)]→SpecOF[1/(d∆)] in the open and closed decomposition (to lift to
+characteristic 0; cf. [KR14, Proposition 2.12] [RSZ18, Remark 4.2]). With notation as above, the
+map
+MLML′
+(A0, ι0, λ0, A, ι, λ ) (A0, ι0, λ0, A, ι, b Lλ)(2.1.9)
+is an isomorphism for any L, after restricting to Spec OF[1/(dL∆)].
+Remark 2.1.3. IfLhas rank n= 1, we can construct Mwithout discarding any primes. Then
+M → SpecOFis smooth, by smoothness of M(1,0)(d)→SpecOFfor any d∈Z>0.
+Given any Lwith associated moduli stack M, and given any T∈Herm m(Q), there is a Kudla–
+Rapoport special cycle Z(T)→ M as in [KR14, Definition 2.8] (there in a principally polarized
+situation). For the reader’s convenience, we recall the definition (which is also [Che24a, Defini-
+tion 3.2.1]).
+10We say that non-degenerate Hermitian OFlattices LandL′aread` elically isomorphic (or are in the same ad` elic
+isomorphism class ) if there exist isomorphisms of OF⊗ZZp-Hermitian lattices L⊗ZZp∼=L′⊗ZZpfor every prime
+p, as well as isomorphisms of OF⊗ZR-Hermitian spaces L⊗ZR∼=L′⊗ZR(classical terminology: genus ).
+14Definition 2.1.4 (Kudla–Rapoport special cycles) .Given an integer m≥0, let T∈Herm m(Q)
+be a m×mHermitian matrix (with coefficients in F). The Kudla–Rapoport (KR) special cycle
+Z(T) is the stack in groupoids over Spec OFdefined as follows: for schemes Sover Spec OF, we
+takeZ(T)(S) to be the groupoid
+Z(T)(S):=
+
+(A0, ι0, λ0, A, ι, λ, x ) :(A0, ι0, λ0, A, ι, λ )∈ M(S)
+x= [x1, . . . , x m]∈Hom OF(A0, A)m
+(x, x) =T
+
+(2.1.10)
+where ( x, x) is the matrix with i, j-th entry given by x†
+ixj∈End0
+OF(A0) (a quasi-endomorphism),
+with†denoting the Rosati involution. We sometimes refer to elements x∈Hom OF(A0, A) as
+special homomorphisms .
+By Lemma A.2.3, the forgetful map Z(T)→ M is representable by schemes, finite, and unram-
+ified (and of finite presentation). Hence Z(T) is a separated Deligne–Mumford stack of finite type
+over Spec OF.
+In the situation of Definition 2.1.4, recall End OF(A0) =OF(if the right-hand side is abuse of
+notation for global sections of the constant sheaf OFonS). If the Hermitian pairing on LisOF-
+valued, we thus have Z(T) =∅unless Thas coefficients in OF. IfLis self-dual and 2 ∤∆, we have
+Z(T) =∅unless√
+∆·Thas coefficients in OF. Positivity of the Rosati involution also implies that
+the special cycle Z(T) is empty unless Tis positive semi-definite of rank ≤n.
+In the even exotic smooth case, recall that we considered a certain metrized dual tautological
+bundle bE∨onM[Che24a, Sections 3.4 and 3.5]. A similar setup applies on MLfor any L; we now
+briefly recall the definitions for the reader’s convenience.
+We write Ω∨
+0for the line bundle on M0given by the functorial association ( A0, ι0, λ0)7→LieA0
+for objects ( A0, ι0, λ0)∈M0(S). Given any object ( A, ι, λ )∈M(n−r, r)[1/∆](S), there is a unique
+direct sum decomposition
+LieA= (Lie A)+⊕(LieA)−(2.1.11)
+where the ιaction on (Lie A)+(resp. (Lie A)−) isOF-linear (resp. σ-linear).
+Definition 2.1.5. By the tautological bundle EonM(n−r, r), we mean the rank rlocally free
+sheafE(for the fppf topology) whose dual is E∨:= (Lie A)−for (A, ι, λ )∈M(n−1,1)[1/∆].
+By the tautological bundle EonM, we mean the locally free sheaf whose dual is Ω∨
+0⊗E∨
+(pullbacks suppressed from notation).
+The bundles E∨, Ω∨
+0, andE∨may each be equipped with certain Hermitian metrics; we write
+bE∨,bΩ∨
+0, andbE∨for the resulting metrized bundles. We normalize these metrics as in [Che24a,
+Section 3.5] (in particular, the metric on bE∨involves the factor of 4 πeγwhich appears in [Che24a,
+(3.5.3)]. For readers interested in Faltings height, we also consider the metrized Hodge (determi-
+nant) bundle bωonM, which is pulled back from the Hodge determinant bundle ωonM(n−r, r)
+and with metric normalized as in [Che24a, (3.5.1)].
+The Faltings height of any elliptic curve with CM by OFis (with our normalizations)
+hCM
+Fal:= (bωA0) =1
+2L′(1, η)
+L(1, η)+1
+2Γ′(1)
+Γ(1)+1
+4log|∆| −1
+2log(2π) (2.1.12)
+15where ηis the quadratic character associated to F/Q, and Γ is the usual gamma function. This
+comes from the classical Chowla–Selberg formula (the statement above is as in [KRY04, Proposition
+10.10]). It will also be convenient to consider the height constants
+hCM
+tau:=−hCM
+Fal+1
+4log|∆| −1
+2log(4πeγ) hCM
+bE∨:=−hCM
+Fal−1
+4log|∆|+hCM
+tau. (2.1.13)
+These will re-appear in Section 4.9.
+The next lemma will provide a base point for non-Archimedean uniformization (Section 4.3).
+The notation Aσ
+0denotes the abelian scheme A0but with OF-action ι0◦σ.
+Lemma 2.1.6. LetLbe any non-degenerate Hermitian OF-lattice of rank nand signature (n−r, r),
+with associated moduli stack M. There exists a finite degree field extension E/F and(A0, ι0, λ0, A, ι, λ )∈
+M(OE[1/dL])such that AisOF-linearly isogenous to An−r
+0×(Aσ
+0)r. In particular, Mis nonempty.
+Proof. First consider κ=C(equipped with a morphism OF→C). Fix the trivializations of roots
+of unity Z/dZ∼− →µµµd(C) sending 1 7→e−2πi/d.
+Choose√
+∆ to be the square-root whose image under F→Chas positive imaginary part. We
+pass between Hermitian and alternating forms using the generator√
+∆ of the different ideal (as in
+[Che24a, Section 2.1]). Express Las a triple ( L, ι, λ ) where ι:OF→EndZ(L) is an action and λ
+is aOF-compatible alternating pairing on L.
+Take ( A0, ι0, λ0) to be the complex elliptic curve C/OF. IfL0:=OFis the rank one Hermitian
+OF-lattice with Hermitian pairing ( x, y) =xσy, we have H1(A0,Z)∼=L0as Hermitian lattices.
+Take any orthogonal decomposition LF=W⊕W⊥where Wis positive definite of rank n−r
+andW⊥is negative definite of rank r. Define the C=OF⊗ZR-action on L⊗ZRto agree with ιon
+W⊗FCand to agree with ι◦σonW⊥⊗FC. This complex structure gives a tuple ( A, ι, λ ), where
+A:= (L⊗ZR)/Lis an abelian variety with OF-action ιand action compatible quasi-polarization
+λ. We have H1(A,Z)∼=Las Hermitian lattices. By the usual comparison of H1(−,Z) with p-adic
+Tate modules [Mum85, §24 Theorem 1], we conclude ( A0, ι0, λ0, A, ι, λ )∈ M(C).
+We claim that AisOF-linearly isogenous to An−r
+0×(Aσ
+0)r. Indeed, any OF-linear inclusion
+On−r
+F,→L∩Wand any σ-linear inclusion Or
+F,→L∩W⊥will define an OF-linear isogeny
+An−r
+0×(Aσ
+0)r→A.
+Since A0is defined over some number field Q, it follows that Aand any isogeny An−r
+0×(Aσ
+0)r→A
+may also be defined over Q(here using characteristic zero, so the kernel of the isogeny is ´ etale).
+Descend these objects to some number field E.
+Over a number field, it is a classical fact that any elliptic curve with OF-action has everywhere po-
+tentially good reduction [Deu41]. After extending Eif necessary, we thus obtain ( A0, ι0, λ0, A, ι, λ )∈
+M(OE[1/dL]) (the OF-actions extend by the N´ eron mapping property, and the polarizations extend
+to polarizations as in the proof of [FC90, Theorem 1.9]). The N´ eron mapping property extends the
+isogeny An−r
+0×(Aσ
+0)r→Aover Spec OE[1/dL]. □
+2.2.Level structure. LetLbe any non-degenerate Hermitian OF-lattice of rank n, and form the
+associated moduli stack M. We discuss level structure for M.
+16SetV=L⊗OFF, and form the unitary group U(V) (over Spec Q). Let L0=OFany self-dual
+Hermitian OF-lattice of rank 1. We set
+KL0,p:= Stab U(V0)(Qp)(L0⊗Zp) KL,p:= Stab U(V)(Qp)(L⊗Zp)
+KL0,f=Y
+pKL0,p KL,f=Y
+pKL,p
+for all p, where Stab U(V)(Qp)(L⊗Zp) denotes the stabilizer of L⊗ZpinU(V)(Qp), etc.. We say
+that KL,f⊆U(V)(Af) is the ad` elic stabilizer ofL. Set K′
+L,f=KL0,f×KL,f. Note that there is
+no dependence (up to functorial isomorphism) on the choice of L0, or the choice of Lwithin its
+ad` elic isomorphism class. We use the usual notation where Kp
+L,fmeans to omit the p-th factor in
+the product, etc..
+For integers N≥1, we define the “principal congruence subgroups”
+Kp(N):= ker( KL,p→GL(L⊗Zp/NZp)) Kf(N) =Y
+pKL,p(N)
+(suppressing Ldependence from notation) and similarly define K0,p(N0) and Kf(N0) for N0≥1.
+Given a pair N′= (N0, N) of integers N0, N≥1, we set K′
+f(N′):=K0,f(N0)×Kf(N) and
+K′
+p(N′):=K0,p(N0)×Kp(N), etc.. Given N′= (N0, N), we sometimes abuse notation, e.g. N′≥a
+means N0, N≥a, and the notation X[1/N′] for an algebraic stack Xwill mean inverting all primes
+dividing N′. IfN0=N, we write K′
+f(N):=K′
+f(N′).
+LetK′
+f=K0,f×Kf⊆K′
+L,fbe any open compact subgroup which admits product factorizations
+K0,f=Q
+pK0,pandKf=Q
+pKp. We set K′
+p:=K0,p×Kp, etc.. Let NK′
+fbe the product of primes
+pfor which K0,p̸=KL0,porKp̸=KL,p. We say that K′
+fisstandard atpifp∤NK′
+f.
+Notation 2.2.1. ForK′
+f⊆K′
+L,fas above, we reserve the term small orsmall level to mean that
+K′
+f⊆K′
+f(N′) for some N′≥3.
+Consider α= (A0, ι0, λ0, A, ι, λ )∈ M (S) for some scheme S. Suppose pis a prime which is
+invertible on S. For any integer e≥0, we consider the fppf sheaf
+Level (pe)⊆Isom(A0[pe], L0⊗ZZ/peZ)×Isom(A[pe],(L0⊗OFL)⊗ZZ/peZ) (2.2.1)
+onS, where Level (pe) is the open and closed subfunctor corresponding to isomorphisms A0[pe]→
+L0/peL0andA[pe]→L/peLwhich lift to OF-linear isomorphisms
+Tp(A0,s)∼− →L0 unitary up to scalar
+Hom OF(Tp(A0,s), Tp(As))∼− →L unitary
+over every geometric point sofS. Since L0is rank one, the “unitary up to scalar” condition is
+automatic.
+Consider any open compact subgroup K′
+p⊆K′
+L,p. For each e≥0, we write K′
+pmodpe(temporary
+notation) for the image of K′
+pin GL 1(L0⊗ZZ/peZ)×GLn(L⊗ZZ/peZ). There is a canonical action
+ofK′
+pmod peon Level (pe).
+Definition 2.2.2 (Level structure) .LetK′
+f⊆K′
+L,pbe any factorizable open compact subgroup, as
+above. Consider an object α= (A0, ι0, λ0, A, ι, λ )∈ M(S) for some scheme S→SpecOF[1/NK′
+f].
+17Ifpis prime which is invertible on S, the sheaf of level K′
+pstructures for αis the quotient
+(coequalizer)11
+LevelK′p:= (K′
+pmod pe)e≥0\(Level (pe))e≥0 (2.2.2)
+in the category of pro-objects for the category of fppf sheaves on S. Ifpis not invertible on S, we
+let LevelK′pbe the constant sheaf valued in a singleton set.
+Thesheaf of level K′
+fstructures for αis the product
+LevelK′
+f:=Y
+pLevelK′p. (2.2.3)
+over all primes p. This is an fppf sheaf on S, and is locally constant in the ´ etale topology.
+AK′
+plevel structure (rep. K′
+flevel structure ) forαis a global section of LevelK′p(resp. LevelK′
+f).
+Remark 2.2.3. LetK′
+f,α, and Sbe as in Definition 2.2.2. Fix a geometric point sofS, with
+char( s) =p≥0. Assume moreover that Sis connected. In this case, giving a K′
+f-level structure for
+αis (canonically) same as giving a pair (˜ η0,˜η) where ˜ η0(resp. ˜ η) is a π1,´et(S,s)-stable Kp
+0,f-orbit
+(resp. Kp
+f-orbit) of isomorphisms
+η0:Tp(A0,s)∼− →L0⊗ZˆZpunitary up to scalar
+η: HomOF⊗ZˆZp(Tp(A0,s, As)∼− →L⊗ZˆZpunitary .
+In the notation of Definition 2.2.2, note that K′
+p=K′
+p(pe) implies LevelK′p= (Level (pe)). In
+Remark 2.2.3, note that the “unitary up to scalar” condition is automatic because L0has rank 1.
+Even when Sis not connected, we abuse notation and write (˜ η0,˜η) for level K′
+fstructure in the
+sense of Section 2.2
+Given an open compact K′
+fas in Definition 2.2.2, we now define a stack in groupoids MK′
+fover
+SpecOF[1/(dLNK′
+f)] with
+MK′
+f(S):={(α,˜η0,˜η) :α∈ M(s) and (˜ η0,˜η) a level K′
+fstructure for α} (2.2.4)
+for schemes Sover Spec OF[1/(dLNK′
+f)]. Given T∈Herm m(Q), we write Z(T)K′
+f:=Z(T)×MMK′
+f
+(“level K′
+fspecial cycle”).
+Write An,d,N for the moduli stack over Spec OF[1/N] of (relative) n-dimensional abelian schemes
+Awith degree dpolarization and a chosen isomorphism A[N]→L⊗Z/NZof group schemes (not
+necessarily compatible with symplectic pairings). We similarly form A1,1,N0using the lattice L0
+(and pick a basis of L0for convenience). Recall that An,d,N is representable by a separated Deligne–
+Mumford stack of finite type over Spec OF[1/N], and that An,d,N is a scheme quasi-projective over
+SpecOF[1/N] ifN≥3 (see [MFK94, §7.2 Theorem 7.9]).
+LetbL, dL∈Z>0be associated to L, as discussed before Definition 2.1.2. If K′
+f(N′) is the
+principal congruence subgroup of some level N′= (N0, N), consider the forgetful morphism
+MK′
+f(N′) A1,1,N0× A n,dL,N (2.2.5)
+11Note that this quotient LevelK′pis (isomorphic to) a sheaf (not just a pro-sheaf), so it is sensible to refer to
+LevelK′pan fppf sheaf on S(rather than a pro-object).
+18which forgets the OF-actions and sends λ7→bLλ. For level structure, see the description in (2.2.1).
+The induced map
+MK′
+f(N′)→ M [1/N′]×(A1,1×An,dL)(A1,1,N0× A n,dL,N)[1/dL] (2.2.6)
+is representable by schemes and is an open and closed immersion. Hence MK′
+f(N′)→ A 1,1,N0×
+An,dL,N[1/dL] is finite (and representable by schemes).
+Lemma 2.2.4.
+(1) For any open compact subgroup K′
+fas in Definition 2.2.2, the stack MK′
+fis a separated
+Deligne–Mumford stack of finite type over SpecOF. IfK′
+fis small, then MK′
+fis a quasi-
+projective scheme over SpecOF.
+(2) For any inclusion K′
+f⊆K′′
+f, the forgetful morphism MK′
+f→ M K′′
+f[1/NK′
+f](i.e. expand a
+K′
+f-orbit to a K′′
+forbit) is finite ´ etale of degree |K′′
+f/K′
+f|. IfK′
+f⊆K′′
+fis a normal subgroup,
+thenMK′
+f→ M K′′
+f[1/NK′
+f]is a torsor for the finite discrete group K′′
+f/K′
+f.
+Proof. The second sentence in part (2) is clear from construction (and makes sense before we know
+these stacks are algebraic). When K′
+f=K′
+f(N′) for some N′, the claims in part (1) follow from
+(2.2.6).
+For general K′
+f, select N′= (N0, N) such that MK′
+f(N′)is a scheme and K′
+f(N′)⊆K′
+f. Then
+MK′
+f(N′)→ M K′
+f[1/N′] is a torsor for the finite discrete group K′
+f/K′
+f(N′) (in particular, finite
+´ etale), and hence admits the stack quotient presentation MK′
+f[1/N′]∼=[MK′
+f(N′)/(K′
+f/K′
+f(N′))],
+which shows that MK′
+f[1/N′] is Deligne–Mumford. Picking another M′= (M0, M) such that
+gcd(N0N, M 0M) is only divisible by primes dividing NK′
+f, we find that MK′
+f[1/M′] is Deligne–
+Mumford as well. These two charts show that MK′
+fis Deligne–Mumford, as well as separated and
+finite type over Spec OF.
+IfK′
+f⊆K′′
+f, then for any scheme Swith a morphism S→ M K′′
+f, the 2-fiber product MK′
+f×MK′′
+fS
+is fibered in setoids, hence equivalent to a sheaf (of sets). But since MK′
+f(N′)→ M K′
+f[1/N′] is a
+K′
+f/K′
+f(N′)-torsor and affine morphisms satisfy fpqc descent [SProject, Section 0244], we conclude
+thatMK′
+f[1/N′]×MK′′
+fSis represented by a scheme. As above, we may pick some other M′
+to patch and show that the morphism MK′
+f→ M K′′
+f[1/NK′
+f] is representable by schemes. Since
+MK′
+f(N′)→ M K′
+f[1/N′] andMK′
+f(N′)→ M K′′
+f[1/N′] are both finite ´ etale surjections, we conclude
+thatMK′
+f→ M K′′
+f[1/NK′
+f] is finite ´ etale by varying N′again (using standard facts like [SProject,
+Lemma 02K6, Lemma 01KV, Lemma 0AH6, Lemma 02LS]). The remaining claims follow from
+this. □
+Lemma 2.2.5. Fix any prime pand a matrix T∈Herm m(Q)with m≥0. The morphism
+Z(T)K′
+f(pe)→ M K′
+f(pe)is a disjoint union of closed immersions for all e≫0.
+Proof. Fore∈Z≥0, we define a stack (used only in this proof) M(pe) over Spec OF[1/(dLp)] as
+follows. For schemes Sover Spec OF[1/(dLp)], we take M(pe)(S) to be the groupoid
+M(pe)(S):=(
+(A0, ι0, λ0, A, ι, λ, x ) :(A0, ι0, λ0, A, ι, λ )∈ M(S)
+x= [x1, . . . , x m]∈Hom OF(A0[pe], A[pe])m)
+.(2.2.7)
+19We have a commutative diagram
+M(pe)
+Z(T)[1/p] M.(2.2.8)
+The forgetful morphism M(pe)→ M [1/p] is representable by schemes and a finite ´ etale surjection.
+Thus, M(pe) is representable by a separated Deligne–Mumford stack of finite type over Spec OF.
+We claim that Z(T)→ M (pe) is a closed immersion for e≫0. This may be checked fppf locally
+on the target. Suppose S→ M [1/p] is an fppf cover by a Noetherian scheme S(possible since M
+is locally Noetherian and quasi-compact). It is enough to check that Z(T)×MS→ M (pe)×MSis
+a closed immersion of schemes. Since the morphism Z(T)→ M (resp. M(pe)→ M [1/p]) is finite
+and unramified (resp. finite), we conclude that Z(T)[1/p]→ M (pe) is also finite and unramified.
+To prove the claim, it remains only to check that the morphism of schemes Z(T)×MS→
+M(pe)×MSis universally injective for e≫0 (for morphisms of schemes, being a closed immersion
+is the same as being proper, unramified, and universally injective [SProject, Lemma 04XV]).
+We first show that universal injectivity holds fiber-wise over every point s∈Sforesufficiently
+large (with epossibly depending on s). For any point sonSwith residue field k(s), we know
+thatZ(T)k(s)→ M (pe)k(s)is universally injective for e≫0 (possibly depending on s) because the
+map Hom( A1, A2)→Hom( Tp(A1), Tp(A2)) is injective for abelian varieties A1,A2over any field of
+characteristic ̸=p(apply this over a geometric point mapping to sand use finiteness of Z(T)).
+Being universally injective may be checked fiber-wise over S, so we need to show that there
+is a value of ewhich works for all points s∈Ssimultaneously. We can select e≫0 so that
+Z(T)×MS→ M (pe)×MSis universally injective (hence a closed immersion) over the generic
+point of each irreducible component of S. For such e, a limiting argument (“spreading out”) implies
+thatZ(T)×MS→ M (pe)×MSis a closed immersion over an open dense subset of S. Applying
+Noetherian induction on Sproves the claim.
+To finish the proof of the lemma, we observe that M(pe)×MMK′
+f(pe)→ M K′
+f(pe)is a fi-
+nite disjoint union of isomorphisms, corresponding to the constant sheaf valued in Hom OF(L0⊗Z
+Z/peZ, L⊗ZZ/peZ)m. Hence Z(T)K′
+f(pe)→ M K′
+f(pe)is a disjoint union of closed immersions. □
+Recall that we defined certain derived vertical special cycle classesLZ(T)V,p∈grm
+MK′
+0(Z(T)Fp)Q
+in our companion paper [Che24a, Section 3.6]. There we restricted to the even exotic smooth case
+(to avoid discussing the more general setup of Section 2.1), but the same constructions apply in
+the situation of Section 2.1. We also obtain classesLZ(T)(p),K′
+fandLZ(T)V,p,K′
+f(defined as in
+[Che24a, Section 3.6], but now pulled-back to MK′
+ffor some level K′
+faway from p, i.e. p∤NK′
+f)
+which are compatible with varying level K′
+f.
+2.3.Generic smoothness. We explain a generic smoothness result for special cycles (Lemma
+2.3.5). The other lemmas are auxiliary. The proof proceeds by reducing to p-divisible groups over
+a base where pis locally nilpotent, and then checking formal smoothness using Serre–Tate and
+Grothendieck–Messing deformation theory.
+20We first consider p-divisible groups (see Appendix B.1 for some terminology). For primes p, set
+OFp:=OF⊗ZZp. Suppose p∤∆ and consider schemes Sover Spf OFp, i.e. Sis a scheme over
+SpecOFwith plocally nilpotent on S. We consider tuples ( Y, ι, λ ) over Swhere
+Y is ap-divisible group over Sof height 2 nand di-
+mension n
+ι:OFp→End(Y) is an action satisfying the ( n−r, r) Kottwitz sig-
+nature condition, i.e. for all a∈ O Fp, the char-
+acteristic polynomial of ι(a) acting on Lie Yis
+(x−a)n−r(x−aσ)r∈ O S[x](2.3.1)
+λ:Y∼− →Y∨is a principal polarization whose Rosati involution
+†on End( Y) satisfies ι(a)†=ι(aσ) for all a∈ O Fp.
+In the signature condition described above, we view OSas an OFp-algebra via the structure map
+S→SpfOFp.
+Parts of the next formal smoothness result (Lemma 2.3.1) may exist in some form in the literature,
+see e.g. discussion about formal smoothness for “unramified Rapoport–Zink data” in [RZ96, 3.82]
+and the reference to [Kot92, §5] given there.
+Following [SProject, Section 04EW], we use the term thickening to refer to a closed immersion
+which is a homeomorphism on underlying topological spaces, and the term first order thickening
+for a thickening defined by a square zero ideal.
+LetSbe a scheme over Spf OFp, and suppose ( Y, ι, λ ) is a tuple over Sas in (2.3.1). There is
+an associated deformation functor Def (Y,ι,λ)(possibly non-standard usage, and it will not appear
+after Lemma 2.3.1) which sends a thickening S→S′to the set of (isomorphism classes of) lifts
+of (Y, ι, λ ) toS′. Write S[ϵ] and S[ϵ, ϵ′] as shorthand for S×SpecZSpecZ[ϵ]/(ϵ2) and S×SpecZ
+SpecZ[ϵ, ϵ′]/(ϵ2, ϵϵ′, ϵ′2), respectively. In the proof of Lemma 2.3.1, we will see that the canonical
+map
+Def(Y,ι,λ)(S[ϵ, ϵ′])→Def(Y,ι,λ)(S[ϵ])×Def(Y,ι,λ )(S)Def(Y,ι,λ)(S[ϵ′]) (2.3.2)
+is an isomorphism. More generally, if Mis a finite rank free OS-module and OS⊕Mdenotes
+the quasi-coherent OS-algebra with Man ideal of square zero, we will see that the functor M7→
+Def(Y,ι,λ)(SpecS(OS⊕M)) preserves fiber products over the base M= 0 (note that this holds
+when Def (Y,ι,λ)is replaced by any scheme, and this is essentially the method of proof). Here SpecS
+denotes relative Spec.
+For any scheme Sover Spf OFp, the above considerations imply that the set Def (Y,ι,λ)(S[ϵ])
+has the natural structure of a Γ( S,OS)-module in the standard way (as a “tangent space”) as in
+[SGA3II, Proposition 3.6] or [SProject, Section 06I2].
+Lemma 2.3.1. Letpbe a prime which is unramified in OF. The deformation problem for triples
+as in (2.3.1) is formally smooth of relative dimension (n−r)rin the following sense. Let Sbe any
+scheme over SpfOFp, and let (Y, ι, λ )be a triple over Sas in (2.3.1) .
+(1) The triple (Y, ι, λ )lifts along any first order thickening of affine schemes S→S′, i.e. the
+map Def(Y,ι,λ)(S′)→Def(Y,ι,λ)(S)is surjective.
+21(2) When S= Spec κfor a field κ, the κvector space Def(Y,ι,λ)(κ[ϵ])has dimension (n−r)r.
+If(n−r)r= 0, then (Y, ι, λ )lifts uniquely along any first order thickening of schemes S→S′.
+Proof. We study this lifting problem for p-divisible groups in terms of Grothendieck–Messing de-
+formation theory. Let S→S′be a first order thickening of schemes (not necessarily affine). View
+S ,→S′as a PD thickening, with trivial PD structure on the square zero ideal of the thickening.
+Write D(Y) for the covariant Dieudonn´ e crystal of Y, and write D(Y)(S) andD(Y)(S′) for the
+evaluation of this crystal on the PD thickenings id: S→SandS ,→S′respectively. We have a
+short exact sequence of OS-modules given by the Hodge filtration
+0→ΩY∨→D(Y)(S)→LieY→0 (2.3.3)
+with Ω Y∨= (Lie Y∨)∨and each OS-module above being finite locally free.
+We may decompose the Hodge filtration into eigenspaces with respect to the action ι:OFp→
+End(Y) (and the structure morphism S→SpecOFp). We use superscripts ( −)+and (−)−to
+denote these eigenspaces, where OFpacts linearly (resp. σ-linearly) on ( −)+(resp. ( −)−) via ι.
+Then we have short exact sequences
+0→Ω+
+Y∨→D(Y)(S)+→Lie+
+Y→0 (2.3.4)
+0→Ω−
+Y∨→D(Y)(S)−→Lie−
+Y→0 (2.3.5)
+where each OS-module above is finite locally free and, for example, we have D(Y) =D(Y)+⊕D(Y)−.
+From left to right, the modules in (2.3.4) have ranks r,n, and n−r, and the modules in (2.3.5)
+have ranks n−r,n, and rrespectively.
+Using the polarization λ, we may identify (2.3.4) with the dual of (2.3.5). There is a choice of
+sign in this identification, which plays essentially no role in this proof.
+We have D(Y)(S′)|S∼=D(Y)(S) canonically (as D(Y) is a crystal), and Grothendieck–Messing
+theory implies that lifting ( Y, ι, λ ) toS′is the same as lifting the Hodge filtration (2.3.3) compatibly
+with the action ιand the polarization λ. Compatibility with the ιaction means that we should
+lift the eigenspace decomposition in (2.3.4) and (2.3.5), and compatibility with the polarization λ
+means that the resulting exact sequences should again be dual to each other (as determined by λ).
+It is equivalent to lift either one of the exact sequences of (2.3.4) and (2.3.5) (one determines the
+other) to a filtration of D(Y)(S′)+orD(Y)(S′)−respectively (with no additional restrictions).
+Consider the lifting problem for, say, the + eigenspace of the Hodge filtration as in (2.3.4).
+Zariski locally on S′, this lifting problem may be identified with the problem of lifting an Spoint
+to an S′point on the Grassmannian parametrizing rank rsubbundles of the rank ntrivial bundle.
+This Grassmannian is smooth of relative dimension ( n−r)r, which proves the claims in the lemma
+statement. □
+The next three lemmas are used to prove Lemma 2.3.4. This latter lemma is in turn used in
+the proof of generic smoothness in Lemma 2.3.5, to reduce to bases where pis locally nilpotent for
+some unramified prime p. This will allow us to reduce to formal smoothness for deformations of
+p-divisible groups (with certain additional structure) as proved in Lemma 2.3.1.
+22Lemma 2.3.2. LetAbe an adic Noetherian ring, and let Xbe a locally Noetherian scheme over
+Spec A. IfXSpfA→SpfAis flat, then X→Spec Ais flat at every point of Xwhich lies over
+SpfA. IfX→Spec Ais locally of finite type, then the same holds with “flat” replaced by “smooth”.
+Proof. Here, flatness (resp. smoothness) of XSpfA→SpfAis equivalent to the requirement that,
+for every scheme Twith a map T→SpfA, the base changed map XT→Tis flat (resp. smooth).
+We first check the flatness assertion. Passing to an affine open of X, we may reduce to the case
+where X= Spec Bfor a Noetherian ring B. Let I⊆Abe an ideal of definition. Then XSpfAis
+described by a completed tensor product, and we have XSpfA=ˆBwhere ˆBis the I-adic completion
+ofB. Since Bis a Noetherian ring, the canonical map B→ˆBis flat. Since XSpfA→SpfAis flat,
+we know that A→ˆBis a flat ring map. We conclude that Bis flat over Aat every prime in the
+image of Spec ˆB→Spec B. These are precisely the points of Xlying over Spf A.
+Next, assume XSpfA→SpfAis smooth. By Noetherianity of A, the map f:X→Spec Ais
+locally of finite presentation. We have just shown that X→Spec Ais flat at every point x∈X
+which lies over Spf A. Thus, for such x∈X, the map f:X→Spec Ais smooth at xif and only
+ifXf(x)→Spec k(f(x)) is smooth at x, where k(f(x)) denotes the residue field of f(x). But since
+Spec k(f(x))→Spec Afactors through Spf A→Spec A, we conclude that Xf(x)→Spec k(f(x)) is
+indeed smooth. □
+Lemma 2.3.3. Letf:X→Ybe a locally of finite type (resp. locally of finite presentation)
+morphism of schemes, and assume that Yis a Jacobson scheme. Then fis smooth (resp. flat) if
+and only if fis smooth (resp. flat) at every point of Xwhich lies over a closed point of Y.
+Proof. Since fis locally of finite type (resp. locally of finite presentation), we know that Xis a
+Jacobson scheme (i.e. closed points are dense in every closed subset). Since fis smooth (resp. flat)
+on an open subset of X, it is enough to check that fis smooth (resp. flat) at every closed point of
+X. As fis locally of finite type and Yis Jacobson, we know that fmaps closed points to closed
+points [SProject, Lemma 01TB] which gives the lemma claim. □
+Lemma 2.3.4. LetXbe an algebraic stack, let Ybe a Jacobson locally Noetherian scheme, and
+letf:X → Ybe a morphism which is locally of finite type. For points y∈Y, write bOY,yfor the
+completion of the local ring at y. Then X → Yis smooth (resp. flat) if and only if XSpfbOY,y→
+SpfbOY,yis smooth (resp. flat) for every closed point y∈Y.
+Proof. Select any scheme Uwith a surjective smooth morphism U→ X. Then U→Yis a locally
+of finite type morphism of Jacobson locally Noetherian schemes, and X → Yis smooth (resp. flat)
+if and only if U→Yis smooth (resp. flat). By Lemma 2.3.3, we may check smoothness (resp.
+flatness) of U→Yat points of Ulying over closed points of Y. Ifx∈Uandy=f(x), then
+U→Yis smooth (resp. flat) at xif and only if USpecbOY,y→SpecbOY,yis smooth at x(first
+checking flatness, then checking smoothness in the fiber over the closed point). For any y∈Y,
+Lemma 2.3.2 implies that U→Yis smooth (resp. flat) at all points x∈Ulying over yif and only
+ifUSpfbOY,y→SpfbOY,yis smooth (resp. flat). By Lemma 2.3.3, we then see that U→Yis smooth
+(resp. flat) if and only if USpfbOY,y→SpfbOY,yis smooth (resp. flat) for every closed point y∈Y.
+23This is equivalent to the condition that XSpfbOY,y→SpfbOY,yis smooth (resp. flat) for all closed
+points y∈Y, since U→ X is a smooth surjection. □
+Lemma 2.3.5. LetLbe any non-degenerate Hermitian OF-lattice, with associated moduli stack
+M. Fix T∈Herm m(F).
+Then there exists N∈Zsuch that Z(T)[1/(NdL∆)]is either empty12or smooth of relative
+dimension (n−r−rank( T))rover SpecOF[1/(NdL∆)].
+We may take Nsuch that for p∤NdL∆, there exists g∈GLm(OFp)with
+tgTg= 
+Idrank( T)0
+0 0!
+(2.3.6)
+wheretgdenotes the conjugate transpose of g.
+Proof. Fix a prime p∤dL∆ such that there exists g∈GLm(OFp) satisfying (2.3.6). By Lemma
+2.3.4, it is enough to check that the base change Z(T)SpfOFpis either empty or smooth of relative
+dimension ( n−r−rank( T))rover Spf OFp.
+The morphism Z(T)SpfOFp→SpfOFpis representable by algebraic stacks and locally of finite
+presentation. Thus Z(T)SpfOFp→SpfOFpis smooth if and only if it is formally smooth [SProject,
+Lemma 0DP0].
+LetS→S′be a first order thickening of affine schemes, and assume S′is equipped with a
+morphism to Spf OFp. To check formal smoothness of Z(T)SpfOFp→SpfOFp, we need to show
+that every object ( A0, ι0, λ0, A, ι, λ, x )∈ Z(T)(S) admits a lift to S′.
+Form ( X0, ι0, λ0), where X0=A0[p∞] is the p-divisible group of A0with induced action ι0:OFp→
+End(X0) and principal polarization λ0:X0→X∨
+0. Similarly associate ( X, ι, λ ) to ( A, ι, λ ), where
+X=A[p∞] is the p-divisible group of A. Note that the polarization λ:X→X∨is principal because
+p∤dL∆. Write also x= [x1, . . . , x m] for the corresponding m-tuple of morphisms xi:X0→X.
+By Serre–Tate, lifting ( A0, ι0, λ0, A, ι, λ, x ) from StoS′is the same as lifting ( X0, ι0, λ0, X, ι, λ, x )
+from StoS′.
+Using an element g∈GLm(OFp) satisfying (2.3.6) as a “change of basis” for Xm
+0, we obtain we
+obtain an OF-linear “orthogonal splitting” X∼=Xrank( T)
+0 ×Y. That is, Yis ap-divisible group
+with action ιY:OFp→End(Y), and a principal polarization λY:Y→Y∨whose Rosati involution
+†satisfies ιY(a)†=ιY(aσ) for all a∈ O F. Under the described identification X∼=Xrank( T)
+0 ×Y,
+the polarization λonXis given by ( λ0)rank( T)×λY. The map x:Xm
+0→Xmay be identified with
+the projection Xm
+0→Xrank( T)
+0 onto the first rank( T) factors, followed by the canonical inclusion
+Xrank( T)
+0 →Xrank( T)
+0 ×Y.
+Note that the actions of OFponX0,X, and Yhave signatures (1 ,0), (n−r, r), and ( n−r−
+rank( T), r) respectively (in the sense of (2.3.1)). These considerations also show that rank( T)≤
+n−rifZ(T)SpfOFpis nonempty.
+The triple ( X0, ι0, λ0) admits a unique lift to S′as in Lemma 2.3.1. The projection map x:Xm
+0→
+Xrank( T)
+0 clearly lifts to S′as well. So it remains only to lift ( Y, ιY, λY) from StoS′. Such a lift
+exists by formal smoothness of the corresponding deformation problem described in Lemma 2.3.1.
+12Following the Stacks project [SProject, Definition 0055], our convention is that dim ∅=−∞.
+24We apply the same lemma to compute tangent spaces (e.g. after passing to an ´ etale cover by a
+scheme), which shows that the relative dimension is ( n−r−rank( T))r. □
+Remark 2.3.6. Taking T=∅(orT= 0) in Lemma 2.3.5 and varying over non-degenerate Hermit-
+ianOF-lattices Lsatisfying L⊆L∨and|L∨/L|=d, we see that M(n−r, r)(d)→SpecOF[1/(d∆)]
+is smooth of relative dimension ( n−r)rfor every d∈Z≥0. IfMis associated with any non-
+degenerate Hermitian OF-lattice L(not necessarily with L⊆L∨), this then implies that M →
+SpecOF[1/(dL∆)] is smooth of relative dimension ( n−r)r.
+3.Arithmetic cycle classes
+Retain notation from Section 2. Let Lbe a non-degenerate Hermitian OF-lattice of rank n,
+with associated moduli stack M. For Section 3, we assume Lhas signature ( n−1,1). Consider
+anm×mHermitian matrix T∈Herm m(Q), assume m≤n, and form the associated special
+cycleZ(T)→ M . One expects to be able to construct an associated arithmetic special cycle class
+[bZ(T)]∈cChm(M)Q.
+For arbitrary singular T, there is no proposed definition of [ bZ(T)] in the literature. In general,
+Z(T)Hhas larger-than-expected dimension. The stack Z(T) could also have components with
+larger-than-expected dimension in positive characteristic (occurs already for nonsingular T). Avail-
+able methods in the literature for treating the non-Archimedean theory ( K-theoretic and derived
+algebro-geometric) do not incorporate the Archimedean place in general, as needed for arithmetic
+intersection theory (see introduction). For some additional discussion, see [Che24a, Section 1.2].
+The analogue of the “linear invariance” approach of [KRY04, §6.4] (there for Shimura curves) is
+to first define [ bZ(T♭)] for nonsingular T♭, to considertγTγ = diag(0 , T♭) for some γ∈GLm(OF)
+with T♭nonsingular, and to define [ bZ(T)] by intersecting [ bZ(T♭)] with a power of some metrized
+tautological bundle (possibly with additional Archimedean adjustment). This is not literally pos-
+sible in the unitary setting, where OFmay have class number ̸= 1 (in particular, γas above may
+not exist). One also needs to verify independence of the choice of γ.
+For arbitrary T∈Herm m(Q), we propose to define [ bZ(T)] as a sum
+[bZ(T)]:= [bZ(T)H] +X
+pprime
+p∤dL[LZ(T)V,p]∈cChm(M)Q. (3.0.1)
+We construct [ bZ(T)H] using the horizontal part Z(T)Hand an appropriate Green current gT,y
+(3.2.5) with an additional parameter y∈Herm m(R)>0. The element [LZ(T)V,p] arises from a class
+LZ(T)V,p∈grm
+MK′
+0(Z(T)Fp)Qcorresponding to the “vertical part” of Z(T) atp. The vertical class
+LZ(T)V,pwas defined in [Che24a, Section 3.6]. The classesLZ(T)V,pare zero for all but finitely
+many primes p. We definedLZ(T)V,pusing a “ p-local” variant of the linear invariance strategy
+above.
+We will show that [ bZ(T)] satisfies the “linear invariance” property
+[bZ(T)] = [bZ(tγTγ)] (3.0.2)
+for all γ∈GLm(OF), where [ bZ(T)] is formed with respect to y∈Herm m(R)>0and [bZ(T)] is
+formed with respect to γ−1ytγ−1.
+25

@@ -1,0 +1,1381 @@
+Part 2.Local main theorems
+7.Sketch of limit argument
+For illustration purposes, we further sketch the local limiting strategy described in Section 1.6,
+particularly Figure 1. In Section 7, we let F/Qbe an imaginary quadratic field, and allow nto be
+even or odd.
+The limit strategy at an odd inert prime is outlined in Section 7.2. For comparison, we also
+include a sketch of the analogous Archimedean limit strategy in Section 7.1. We hope that the
+similarities between the Archimedean and non-Archimedean cases are visible from the sketches
+below. We treat our non-Archimedean local theorem in detail (via limiting) in Section 9 (with
+inert/ramified/split done essentially simultaneously). The proof of the Archimedean limit will
+require separate arguments, which are the subject of our companion paper [Che24a].
+7.1.Archimedean. For purposes of exposition in Section 7.1, we consider T♭∈Herm n(R) and
+t∈R<0. Set T:= diag( t, T♭). Let Vbe any signature ( n−1,1) non-degenerate F/QHermitian
+space with pairing denoted ( −,−) (for any n≥1).
+We prove the limiting identity (left vertical arrow in Figure 1)
+d
+ds
+s=−1/2W∗
+T♭,∞(s)◦
+n= lim
+t→0−d
+ds
+s=0W∗
+T,∞(s)◦
+n+ (log |t|∞+ log(4 πeγ))W∗
+T♭,∞(−1/2)◦
+n
+(7.1.1)
+where γis the Euler–Mascheroni constant, and | − |∞denotes the usual real norm. This formula
+appears in our companion paper (more generally) as [Che24a, Proposition 4.1.2]. The proof of this
+limiting formula is the bulk of the work at the Archimedean place. Note the similarity with the
+non-Archimedean version (7.2.1) (see also Section 8.4 for more comparisons).
+On the geometric side of Figure 1, the local 0-cycles (resp. 1-cycles) should be interpreted as
+Green currents of top degree ( n−1, n−1) (resp. degree ( n−2, n−2)) on the associated Hermitian
+symmetric domain Dparameterizing maximal negative definite C-linear subspaces of VR. Consider
+the signature ( n−1,1) complex Hermitian space VR, with Hermitian pairing ( −,−). Any tuple
+x∈VRwith nonsingular Gram matrix has an associated Kudla Green current [ ξ(x)], studied by Liu
+[Liu11] in the unitary case. There is a certain local special cycle D(x)⊆ D (complex submanifold
+which is the locus of C-lines z∈ Dwhich are perpendicular to all elements of the tuple x), arising
+in the complex uniformization of global special cycles.
+Letx♭= [x♭
+1, . . . , x♭
+n−1]∈Vn−1
+Rbe a tuple with Gram matrix T♭and consider nonzero x∈VR∈
+spanC(x♭)⊥in the orthogonal complement. Set
+x= [x, x♭
+1, . . . , x♭
+n−1] t:= (x, x) T:= diag( t, T♭). (7.1.2)
+Liu’s Archimedean local theorem [Liu11, Theorem 4.1.7] implies
+Z
+D[ξ(x)] =d
+ds
+s=0W∗
+T,∞(s)◦
+n. (7.1.3)
+We are using the star product construction of [ ξ(x)], which unfolds as
+[ξ(x)] = [ ξ(x)]∗[ξ(x♭)] =ω(x)∧[ξ(x♭)] + [ξ(x)]∧δD(x♭) (7.1.4)
+61where ω(x) is a (1 ,1)-form associated with x(Kudla–Millson form up to a normalization), δD(x♭)is
+a Dirac delta current, and ξ(x) is a certain function on Dwith logarithmic singularity along D(x).
+The function ξ(x) is expressed in terms of the exponential integral Ei. We haveR
+D[ξ(x)]∧δD(x♭)=
+−Ei(4πt) and the limit formulas
+lim
+x→0ω(x) =c1(bE∨) lim
+u→0−(Ei(u)−log|u|) =γ (7.1.5)
+where c1(bE∨) denotes the Chern form of dual tautological bundle on D(as in [Che24a, Section 2]).
+Under the assumption that T♭is positive definite, we have W∗
+T♭,∞(−1/2)◦
+n= deg D(x♭) = 1 (“local
+geometric Siegel–Weil”, i.e. D(x♭) is a single point). We thus have
+Z
+Dc1(bE∨)∧[ξ(x♭)] = lim
+x→0Z
+D[ξ(x)]
++ log|t|+ log(4 πeγ)
+. (7.1.6)
+Using the functional equation W∗
+T♭,∞(s)◦
+n=W∗
+T♭,∞(−s)◦
+n, the limit formula in (7.1.1) now implies
+the following theorem.
+Theorem (Archimedean local version of Theorem A) .We have
+−d
+ds
+s=1/2W∗
+T♭,∞(s)◦
+n=Z
+Dc1(bE∨)∧[ξ(x♭)]. (7.1.7)
+This is our main local Archimedean theorem for positive definite T♭(i.e. the dotted arrow in
+Figure 1). Its proof will appear in our companion paper [Che24a, Theorem 4.1.1], which also
+includes a version for non-positive definite T♭. Limiting on the geometric side of Figure 1 was
+provided by a limiting property of the (normalized) Kudla–Millson form, i.e. ω(x)→c1(bE∨) as
+x→0. To compare with the limit of Whittaker function derivatives, we used the special value
+formula W∗
+T♭,∞(−1/2)◦
+n= 1 (“local geometric Siegel–Weil”) and the asymptotics of Ei.
+7.2.Non-Archimedean. Letpbe an odd prime which is inert in OF. For our non-Archimedean
+main local theorems, we run an argument similar (in spirit) to the Archimedean case (Section 7.1)
+where the star product of Green currents is replaced by a derived tensor product of complexes of
+coherent sheaves on Rapoport–Zink spaces.
+Suppose T♭∈Herm n−1(Qp) with det T♭̸= 0, and consider t∈Qpsuch that T:= diag( t, T♭)
+hasε(T) =−1 (defines a nonsplit Hermitian space). For the normalized local Whittaker functions
+defined in Section 8 below, we will prove the limit formula
+d
+ds
+s=−1/2W∗
+T♭,p(s)◦
+n= lim
+t→0d
+ds
+s=0W∗
+T,p(s)◦
+n+ (log |t|p−logp)W∗
+T♭,p(−1/2)◦
+n
+. (7.2.1)
+This appears as Proposition 9.5.2 below. Note the similarity with the Archimedean version (7.1.1)
+(see also Section 8.4 for comparisons with the ramified and split versions).
+In Section 7.2, we set N:=N(n−1,1) for the Rapoport–Zink space N(n−1,1) from Section 4.
+We also use the notation on special cycles from loc. cit., e.g. Vis the space of local special
+quasi-homomorphisms.
+Ifxis a basis for V, then Z(x) is a scheme with structure morphism Z(x)→Spf˘Zpwhich is
+adic and proper [LZ22a, Lemma 2.10.1]. In this case, Z(x) is thus a finite order thickening of its
+62special fiber Z(x)Fp, and there is a degree map degFp: gr0K′
+0(Z(x))Q→Qgiven by the composite
+gr0K′
+0(Z(x))Q∼− →gr0K′
+0(Z(x)Fp)Q→gr0K′
+0(SpecFp)Q=Q (7.2.2)
+where the first arrow is induced by the d´ evissage pushforward isomorphism K′
+0(Z(x)Fp)→K′
+0(Z(x))
+and the second arrow is pushforward along Z(x)Fp→SpecFp(e.g. induced by taking Euler char-
+acteristics of coherent sheaves on Z(x)Fp).
+Letx♭= [x♭
+1, . . . ,x♭
+n−1]∈Vn−1be a tuple with Gram matrix T♭and consider nonzero x∈V∈
+spanFp(x♭)⊥in the orthogonal complement. Set
+x= [x,x♭
+1, . . . ,x♭
+n−1] t:= (x,x) T:= diag( t, T♭). (7.2.3)
+Li–Zhang’s inert Kudla–Rapoport theorem [LZ22a, Theorem 1.2.1] implies
+(degFpLZ(x))·logp=1
+2d
+ds
+s=0W∗
+T,p(s)◦
+n. (7.2.4)
+As an element of grn
+NK′
+0(Z(x))Q, the derived tensor product unfolds as
+LZ(x) = [LZ(x)⊗L
+ONLZ(x♭)] = [LZ(x)⊗L
+ONLZ(x♭)V] + [LZ(x)⊗L
+ONLZ(x♭)H]. (7.2.5)
+HereLZ(x♭)H= [OZ(x♭)H]∈grn−1
+NK′
+0(Z(x♭)H)Qis the “horizontal part” ofLZ(x♭), with Z(x♭)H⊆
+Z(x♭) denoting the flat part, andLZ(x♭)V∈grn−1
+NK′
+0(Z(x♭)Fp)Qis the “vertical part” ofLZ(x♭)
+(see [LZ22a, §5.2]; we are using the d´ evissage pushforward isomorphism K′
+0(Z(x♭)Fp)→K′
+0(Z(x♭)V)
+where Z(x♭)Vis the vertical part from loc. cit.).
+We show the limit formulas
+lim
+x→0(degFp[LZ(x)⊗L
+ONLZ(x♭)V]) = degFp(E∨·LZ(x♭)V) (7.2.6)
+lim
+x→0
+(degFp[LZ(x)⊗L
+ONLZ(x♭)H])·logp−1
+2(log|t|p−logp)·deg(Z(x♭)H)
+(7.2.7)
+=X
+Z,→Z(x♭)Hdeg(Z)·δtau(Z)·logp.
+HereE∨is the certain dual tautological bundle on N, the sum runs over components Zof (the
+finite scheme associated to) Z(x♭)H, the notation deg( Z(x♭)H) means the degree of the adic finite
+flat morphism Z(x♭)H→Spf˘Zp(and similarly for deg( Z)), and δtau(Z)∈Qis the appropriate
+“local change of tautological height”. As in Section 6.3, each Zis associated with a quasi-canonical
+lifting of some level s, and our notation δtau(Z) here is the δtau(s) in (6.2.7).
+The quantity δtau(Z) (and the closely related “local change of Faltings height” δFal) arise from
+our reduction process from mixed characteristic heights to local quantities. This local-to-global
+reduction is begun in Part 3 and completed in our companion paper [Che24b].
+The “vertical” limit formula in (7.2.6) follows from a Grothendieck–Messing theory argument
+(such vertical limiting behavior was observed in the inert case by [LZ22a] via computation, and
+later in the ramified case by [LL22] via a linear-invariance argument), see Lemma 9.5.4. We prove
+the “horizontal” limit formula in (7.2.7) componentwise, i.e. we prove a refined limiting formula
+for each component Z,→ Z(x♭)H(Remark 9.5.5). Each Zembeds into a smaller Rapoport–Zink
+space of dimension 2, where we make a computation in terms of quasi-canonical liftings.
+63We have the formula W∗
+T♭,p(−1/2)◦
+n= deg( Z(x♭)H→Spf˘Zp) (“local geometric Siegel–Weil”;
+right-hand side denotes degree of the indicated adic finite flat morphism), see Lemma 9.1.3 (observed
+in the inert case by Li–Zhang [LZ22a, Corollary 4.6.1]). Using the functional equation W∗
+T♭,p(s)◦
+n=
+W∗
+T♭,p(−s)◦
+n, the limit formula in (1.6.1) now implies
+−d
+ds
+s=1/2W∗
+T♭,p(s)◦
+n=
+2 degFp(E∨·LZ(x♭)V) + 2X
+Z,→Z(x♭)Hdeg(Z)·δtau(Z)
+·logp..(7.2.8)
+This is our main non-Archimedean local theorem for odd inert p(i.e. the dotted arrow in Figure
+1), and appeared previously in Section 1.8. The analogous statement treating inert/split/ramified
+simultaneously is Theorem 9.1.2 in this paper (there stated in terms of local densities). Limiting
+on the geometric side of Figure 1 was provided by the formulas in (7.2.6) and (7.2.7).
+8.Local Whittaker functions
+We will treat Eisenstein series and local Whitaker functions in greater detail in [Che24c, Part 1].
+Here in Section 8, we fix some notation and state key properties (e.g. functional equations) which
+we need as ingredients for proving our main local theorems on arithmetic Siegel–Weil in the non-
+Archimedean cases (Section 9).
+LetFbe a degree 2 finite ´ etale algebra over a non-Archimedean local field F0. Write OFand
+OF0for the corresponding rings of integers. Let p(resp. q) be the residue characteristic (resp.
+residue cardinality) of OF0. We write η:F×
+0→ {± 1}for the quadratic character associated to the
+extension F/F 0. Let ∆ ⊆ O F0be the discriminant ideal associated to F/F 0.
+8.1.Additional notation on U(m, m ).Recall the group U(m, m ) defined in (1.1.2). There we
+defined U(m, m ) with respect to the degree 2 finite flat map Z→ O F, but we can make the same
+definition with respect to any finite locally free morphism A→Bof commutative rings such that
+Bis equipped with an involution b7→boverA. In Section 8.1, we are interested in the case where
+A→BisOF0→ O F, and sometimes use the alternative notation H:=U(m, m ).
+We consider
+P:=(
+h= 
+∗ ∗
+0∗!
+∈H)
+M:=(
+m(a) = 
+a0
+0ta−1!
+:a∈ResB/AGLm)
+(8.1.1)
+w:= 
+0 1 m
+−1m0!
+N:=(
+n(b) = 
+1mb
+0 1 m!
+:b∈Herm m)
+(8.1.2)
+where P,M, and Nare subgroups of H. We have P(R) =M(R)N(R) for all A-algebras R. We
+consider the standard open compact subgroup
+K◦:=H(OF0)⊆H(F0) (8.1.3)
+and have H(F0) =P(F0)K◦.
+648.2.Principal series. Characters are assumed continuous and unitary unless specified otherwise.
+Form the group H=U(m, m ) as in Section 8.1. Given s∈Cand a character χ:F×→C×, we
+form the local degenerate principal series
+I(s, χ):= IndH(F0)
+P(F0)(χ· | − |s+m/2
+F). (8.2.1)
+This is an unnormalized induction, consisting of smooth and K◦-finite functions Φ: H(F0)→C
+satisfying
+Φ(m(a)n(b)h, s) =χ(a)|deta|s+m/2
+F(8.2.2)
+for all m(a)∈M(F0) and n(b)∈N(F0) and h∈H(F0). Here we wrote χ(a):=χ(deta) for short.
+A section Φ( h, s) ofI(s, χ) isstandard if Φ(k, s) is independent of sfor any fixed k∈K◦. We say
+that Φ is spherical if Φ(hk, s) = Φ( h, s) for any k∈K◦. We write Φ◦for the normalized spherical
+(standard) section , i.e. the spherical standard section satisfying Φ◦(1, s) = 1 for all s∈C.
+8.3.Normalized local Whittaker functions. Now assume F0has characteristic 0. Let χ:F×→
+C×andψ:F0→C×be characters with ψnontrivial. Given a standard section Φ ∈I(s, χ), and
+given T∈Herm m(F0) with det T̸= 0, there is a local Whittaker function defined by the absolutely
+convergent integral
+WT(h, s,Φ):=Z
+N(F0)Φ(w−1n(b)h, s)ψ(−tr(Tb))dn(b) (8.3.1)
+forh∈H(F0) and s∈Cwith Re( s)> m/ 2, where dn(b) is the Haar measure with respect to the
+pairing b, b′7→ψ(tr(bb′)) on Herm m(F0)∼=N(F0). For any fixed h, the function WT(h, s,Φ) admits
+holomorphic admits holomorphic continuation to s∈C[Kar79, Corollary 3.6.1][KS97]. Extending
+linearly defines WT(h, s,Φ) whenever Φ is a finite meromorphic linear combination of standard
+sections.
+Next, fix n∈Zand assume χ|F×
+0=ηn. Set s0:= (n−m)/2. We also assume χis unramified.
+Note that nmust then be even if F/F 0is ramified.
+We define a normalized local Whittaker function
+W∗
+T(h, s)◦
+n:= Λ T(s)◦
+nWT(h, s,Φ◦) (8.3.2)
+using the a local normalizing factor , which we define as
+ΛT(s)◦
+n:=|∆|−m(m−1)/4
+F0
+m−1Y
+j=0L(2s+m−j, ηj+n)
+|(detT)∆⌊m/2⌋|−s−s0
+F0. (8.3.3)
+For this particular (shifted) product of L-factors, compare [HKS96, §6]. The local L-factors L(s, ηj)
+are the standard ones as in [Tat79, §3]); for the reader’s convenience, we recall
+L(s, ξ) =
+
+(1−ξ(ϖ0)q−s)−1ifξis unramified
+1 if ξis ramified
+for any quasi-character ξofF0, where ϖ0denotes a uniformizer of OF0.
+We have a functional equation
+W∗
+T(h, s)◦
+n=η((−1)m(m−1)/2detT)n−m−1W∗
+T(h, s)◦
+n, (8.3.4)
+65see [Che24c, Section 5.1].
+We use the notation
+W∗
+T(s)◦
+n:=W∗
+T(12m, s)◦
+n. (8.3.5)
+IfF/F 0is ramified, we assume for the rest of Section 8 that OF0has odd residue characteristic.
+There is a normalized local density (Laurent) polynomial Den∗(X, T)n∈Z[1/q][X, X−1/2] such
+that
+W∗
+T(s+s0)◦
+n= Den∗(q−2s, T)n (8.3.6)
+for all s∈C. We also consider the variant Den( X, T)n∈Z[1/q][X] given by
+|(detT)∆⌊m/2⌋|s+s0
+F0W∗
+T(s+s0)◦
+n= Den( q−2s, T)n (8.3.7)
+for all s∈C. We have
+Den∗(X, L)n= (q2s0X−1/2)⌊val(L)⌋Den(X, L)n (8.3.8)
+as well as
+Den(X, T)n+1= Den( q−1X, T)n ifF/F 0is split
+Den(X, T)n+1= Den( −q−1X, T)n ifF/F 0is inert (8.3.9)
+Den(X, T)n+2= Den( q−2X, T)n ifF/F 0is ramified .
+Remark 8.3.1. On the right-hand side of (8.3.6), we mean evaluating Den∗(X, T)natX1/2=
+q−s. We similarly abuse notation elsewhere. For example, Den∗(qX, T )n∈Z[1/q1/2][X, X−1/2] is
+obtained from Den∗(X, T)nby replacing X1/2with q1/2X1/2. The notationd
+dX:Q[X, X−1/2]→
+Q[X, X−1/2] means the Q-linear map Xj/27→(j/2)Xj/2−1.
+IfLis a non-degenerate Hermitian OF-lattice which admits a basis with Gram matrix T, we set
+Den∗(X, L)n:= Den∗(X, T)n Den(X, L)n:= Den( X, T)n. (8.3.10)
+The local densities satisfy a certain cancellation property (which we will use): if L◦is a self-dual
+Hermitian lattice of rank n, then for any non-degenerate Hermitian lattice Land every integer
+r∈Z(assume ris even if F/F 0is ramified), we have
+Den(X, L⊕L◦)r+n= Den( X, L)r Den∗(X, L⊕L◦)r+n= Den∗(X, L)r (8.3.11)
+where L⊕L◦is the orthogonal direct sum. This follows from e.g. from “Cho–Yamauchi” formulas
+for local densities (as proved in [LZ22a, Theorem 3.5.1] (inert), [FYZ24, Theorem 2.2] (split and
+inert), and [LL22, Lema 2.15] (ramified)) and the following linear algebra fact: every lattice M′⊆
+(L⊕L◦)⊗OFFsatisfying L◦⊆M′⊆M′∗admits an orthogonal direct sum decomposition M′=
+L◦⊕M′′for some sublattice M′′.
+The functional equation in (8.3.4) implies
+Den(q2s0X−1, L)n=ε(L)n−m−1X−⌊val(L)⌋Den(q2s0X, L)n (8.3.12)
+Den∗(q2s0X−1, L)n=ε(L)n−m−1Den∗(q2s0X, L)n. (8.3.13)
+Both ε(L) and val( L) were defined in Section 2.2. In the case where χ|F×
+0is trivial, these non-
+Archimedean functional equations are essentially [Ike08, Corollary 3.2].
+66Ifm=nandF/F 0is unramified, our Den( X, L)nagrees with the polynomial Den( X, L) from
+[LZ22a, §3] and [FYZ24]. If m=nandF/F 0is ramified (so nis even, by the assumption that χ
+is unramified and χ|F×
+0=ηn), our Den( X2, L)nis the Den( X, L) of [LL22, §2].
+For any mandn, ifTdefines a self-dual Hermitian lattice when mis even and F/F 0is unramified
+(resp. an almost self-dual Hermitian lattice when mis odd and F/F 0is ramified), we have
+W∗
+T(s)◦
+n= 1 Den∗(X, T)n= Den( X, T)n= 1. (8.3.14)
+8.4.Limits. Take integers m, n with m≥1, set s0= (n−m)/2 as above, and set m♭=m−1.
+We consider nonsingular T∈Herm m(F0) of the form T= diag( t, T♭) where T♭∈Hermm♭(F0)
+with T♭nonsingular, and we study the local Whittaker function W∗
+T(s)◦
+nast→0. The following
+limiting identities will be crucial for the proofs of our main local theorems. We collect them here
+for easier comparison between the inert/ramified/split and Archimedean cases.
+Proofs of the non-Archimedean cases will appear in Section 9 below. The Archimedean case is (a
+special case of) one formulation of our main Archimedean local theorem, whose proof will appear
+in our companion paper [Che24a].
+The Archimedean case involves an analogous normalized Archimedean local Whittaker function
+W∗
+T(s)◦
+n. Since the present paper focuses on the non-Archimedean case, we have skipped the
+definition of W∗
+T(s)◦
+n(it is defined in a similar way as Section 8.3, but for a certain scalar weight
+standard section of the principal series, and for a different normalizing factor involving Gamma
+functions, etc.). A definition may be found in [Che24a, Section 3.1] (also [Che24c, Section 4.2]).
+Although the following limit formulas below look very similar in all cases, our proofs of these
+identities are fairly different in the non-Archimedean vs Archimedean cases.
+IfF0is non-Archimedean and F/F 0is inert, Proposition 9.5.2 implies
+d
+ds
+s=−1/2W∗
+T♭(s)◦
+n= lim
+t→0d
+ds
+s=0W∗
+T(s)◦
+n+ (log |t|F0−logqv)W∗
+T♭(−1/2)◦
+n
+(8.4.1)
+if the limit is taken over nonzero t∈F0with ε(diag( t, T♭)) =−1.
+IfF0is non-Archimedean and F/F 0is split, Proposition 9.5.2 implies
+d
+ds
+s=−1/2W∗
+T♭(s)◦
+n= lim
+t→0 
+logqv·W∗
+T(0)◦
+n+ (log |t|F0−logqv)·W∗
+T♭(−1/2)◦
+n
+(8.4.2)
+if the limit is taken over nonzero t∈F0.
+IfF0is non-Archimedean and F/F 0is ramified, Proposition 9.5.2 implies
+2d
+ds
+s=−1/2W∗
+T♭(s)◦
+n= lim
+t→0d
+ds
+s=0W∗
+T(s)◦
+n+ (log |t|F0−logqv)·W∗
+T♭(−1/2)◦
+n
+(8.4.3)
+if the limit is taken over nonzero t∈F0with ε(diag( t, T♭)) =−1.
+IfF/F 0isC/R, [Che24a, Proposition 4.1.2] gives
+d
+ds
+s=−1/2W∗
+T♭(s)◦
+n= lim
+t→0±d
+ds
+s=0W∗
+T(s)◦
+n+ (log |t|F0+ log(4 π)−Γ′(1))W∗
+T♭(−1/2)◦
+n
+(8.4.4)
+67where the sign on 0±is−(resp. +) if T♭is positive definite (resp. not positive definite). If
+T♭∈Hermm♭(R) is not positive definite, [Che24a, Proposition 4.1.2] also proves a similar limiting
+statement for arbitrary m♭(i.e. not necessarily m♭=n−1).
+9.Non-Archimedean local main theorems
+LetF0be a non-Archimedean local field of characteristic 0, residue cardinality q, and residue
+characteristic p. Let Fbe a finite ´ etale F0-algebra of degree 2. We use notation ˘Fand ˘F0as in
+Sections 4–6 (there with F0=Qp), so that [ ˘F:˘F0] = 1 (resp. [ ˘F:˘F0] = 2) if F/F 0is unramified
+(resp. ramified).
+Notation on Hermitian lattices from Section 2.2 will be used freely. For a non-degenerate Hermit-
+ianOF-lattice L, we use the shorthand val′(L):=⌊val(L)⌋ ∈Z≥0, as well as val′(x):=⌊val(x)⌋for
+anyx∈L(i.e. val′(L) = val( L)−1/2 ifF/F 0is ramified and Lhas odd rank, and val′(L) = val( L)
+otherwise). Fix an integer n≥1, and assume nis even if F/F 0is ramified.
+IfF0=Qp, we form the associated Rapoport–Zink space N:=N(n−1,1) (Section 4.1). Recall
+the space of local special quasi-homomorphisms W⊆V(Section 4.2). Recall that WandVare
+non-degenerate Hermitian F-modules of rank nifF/Qpis nonsplit (resp. rank n−1 and rank nis
+F/Qpis split). Recall ε(V) =−1 ifF/Qpis nonsplit (resp. ε(V) = 1 if F/Qpis split).
+9.1.Statement of local main theorem. We first define the geometric side of our main local
+identity, taking F0=Qp. We also assume p̸= 2 if F/Qpis nonsplit. Let L♭⊆Wbe any non-
+degenerate Hermitian OF-lattice of rank n−1. Form the associated local special cycle Z(L♭)⊆ N.
+Recall that the flat part Z(L♭)H⊆ Z(L♭) decomposes into quasi-canonical lifting cycles Z(M♭)◦
+for certain lattices M♭(Proposition 6.3.1). Recall also the derived vertical local special cycle
+LZ(L♭)V∈grn−1
+NK′
+0(Z(L♭))Q(Section 4.5).
+Definition 9.1.1. Given a non-degenerate Hermitian OF-lattice L♭⊆Wof rank n−1, the asso-
+ciated local intersection number is
+Int(L♭)n:= Int H(L♭)n+ IntV(L♭)n (9.1.1)
+where
+IntH(L♭)n:=X
+L♭⊆M♭⊆M♭∗
+t(M♭)≤1IntH(M♭)◦
+n (9.1.2)
+with the sum running over full rank lattices M♭⊆L♭
+F, where
+IntH(M♭)◦
+n:= 2 deg Z(M♭)◦·δtau(val′(M♭)) (9.1.3)
+for any non-degenerate integral lattice M♭⊆Wwith t(M♭)≤1, and where
+IntV(L♭)n:= 2[˘F:˘Qp]−1degk(LZ(L♭)V· E∨). (9.1.4)
+In our companion paper, we relate these local intersection numbers with global intersection
+numbers (end of [Che24b, Sections 4.8 and 4.9]).
+68The quantity
+degZ(M♭)◦=
+
+[˘F:˘Qp]pval′(M♭)(1−η(p)p−1) if val′(M♭)≥1
+[˘F:˘Qp] if val′(M♭) = 0(9.1.5)
+is the degree of the adic finite flat morphism Z(M♭)◦→SpfO˘F, where η(p):=−1,0,1 in the
+inert, ramified, and split cases respectively (see (6.2.1); the extra factor of [ ˘F:˘F0] accounts for
+the two components of Z(M♭)◦when F/F 0is ramified, see (6.3.1)). Recall that δtau(s) is the
+“local change of tautological height” defined in (6.2.7), and recall that E∨is the dual tautological
+bundle on N(Definition 4.1.9). In (9.1.4), we understand E∨= [ON]−[E]∈K′
+0(N) so that
+LZ(L♭)V· E∨∈Fn
+NK′
+0(Z(L♭)k)Q. For L♭as above, recall that Z(L♭)kis a scheme proper over
+Spec k[Che24b, Lemma 4.7.3], so there is a degree map degk:Fn
+NK′
+0(Z(L♭)k)→Z.
+We refer to Int H(L♭)nas the “horizontal part” of the local intersection number (coming from
+the flat part Z(L♭)H) and we refer to Int V(L♭)nas the “vertical part” of the local intersection
+number (coming from Z(L♭)k, supported in positive characteristic).
+We next define the automorphic side of our main local identity. For this, we allow F0to be an
+arbitrary finite extension of Qp(allowing p= 2 if F/F 0is unramified). If L♭is a non-degenerate
+Hermitian OF-lattice of rank n−1, we set
+∂Den∗(L♭)n:=−2[˘F:˘F0]d
+dX
+X=1Den∗(q2X, L♭)n (9.1.6)
+where Den∗(X, L♭)n∈Z[1/q][X, X−1/2] is a normalized local density (8.3.6). We are abusing
+notation as in Remark 8.3.1, i.e. Den∗(q2X, L♭)nmeans to evaluate Den∗(X, L♭)natX1/2being
+qX1/2. We also set
+Den∗(L♭)n:= [˘F:˘F0]·Den∗(q2, L♭)n. (9.1.7)
+Suppose M♭is a non-degenerate integral Hermitian OF-lattice of rank n−1 with t(M♭)≤1. IfM♭
+is maximal integral,21we set ∂Den∗
+H(M♭)◦
+n:=∂Den∗
+H(M♭)n. Otherwise, we define ∂Den∗
+H(M♭)◦
+n
+inductively so that the relation
+∂Den∗(M♭)n=X
+M♭⊆N♭⊆N♭∗∂Den∗
+H(N♭)◦
+n (9.1.8)
+is satisfied (induct on val( M♭)), where the sum runs over lattices N♭⊆M♭
+F. Given any non-
+degenerate integral Hermitian OF-lattice L♭of rank n−1, we then define ∂Den∗
+V(L♭)nso that the
+relation
+∂Den∗(L♭) =X
+L♭⊆M♭⊆M♭∗
+t(M♭)≤1∂Den∗
+H(M♭)◦
+n
++∂Den∗
+V(L♭)n (9.1.9)
+is satisfied, where the sum runs over lattices M♭⊆L♭
+F.
+21The symbol ◦indicates “primitive” here (for quasi-canonical lifting cycles), while ◦indices “spherical” in Section
+8.3. There is no notation clash as written, but we hope this remark helps to avoid confusion.
+69Theorem 9.1.2. Suppose F0=Qpand that p̸= 2unless F/Qpis split. For any non-degenerate
+Hermitian OF-lattice L♭⊆Wof rank n−1, we have
+Int(L♭)n=∂Den∗(L♭)n. (9.1.10)
+Moreover, we have
+IntH(M♭)◦
+n=∂Den∗
+H(M♭)◦
+n IntV(L♭)n=∂Den∗
+V(L♭)n. (9.1.11)
+where M♭⊆Wis any non-degenerate integral Hermitian OF-lattice of rank n−1witht(M♭)≤1.
+On account of the decompositions in (9.1.1), (9.1.2), and (9.1.9), it is clearly enough to prove
+the refined identities in (9.1.11). The theorem is also clear if L♭is not integral, since both sides
+of (9.1.10) are zero in this case (the special cycle Z(L♭) will be empty, and Den( X, L♭)nwill be
+identically zero as discussed in [Che24c, Section 4.4]).
+We also record a special value formula (as observed in the inert case by Li and Zhang [LZ22a,
+Corollary 4.6.1]) for later use. Its proof will appear in Section 9.2.
+Lemma 9.1.3. Suppose F0=Qpand that p̸= 2unless F/Qpis split. For any non-degenerate
+Hermitian OF-lattice L♭⊆Wof rank n−1, we have
+degZ(L♭)H= Den∗(L♭)n. (9.1.12)
+In the preceding lemma statement, deg Z(L♭)Hmeans the degree of the adic finite flat morphism
+Z(L♭)H→SpfO˘Fof formal schemes.
+9.2.Horizontal identity. We will need Cho–Yamauchi formulas for local densities (unitary ver-
+sion, as proved in [LZ22a, Theorem 3.5.1] (inert) [FYZ24, Theorem 2.2(3)] (split) [LL22, Lemma
+2.15] (ramified)). For this, we allow F0to be an arbitrary finite extension of Qp(allowing p= 2
+ifF/F 0is unramified). Then, if Lis any non-degenerate Hermitian OF-lattice of rank n(still
+assuming neven if F/F 0is ramified), we have
+Den(X, L)n=X
+L⊆M⊆M∗Xℓ(M/L )Den(X, M )◦
+n (9.2.1)
+Den(X, M )◦
+n:=t(M)−1Y
+i=0(1−ηi(ϖ0)qiX) (9.2.2)
+where η(ϖ0):=ηi(ϖ0):=−1,0,1 ifiis odd (resp. ηi(ϖ0):= 1 if iis even) in the inert, ramified,
+split cases respectively, and Den( X, L)n∈Z[X] is the local density polynomial normalized as in
+Section 8.3. The displayed sum runs over lattices M⊆LF.
+Suppose L♭is a Hermitian OF-lattice of rank n−1 (still assuming neven if F/F 0is rami-
+fied). If F/F 0is unramified, we have Den( X, L♭)n= Den( η(ϖ0)q−1X, L♭)n−1(8.3.9) and we set
+Den(X, L♭)◦
+n:= Den( η(ϖ0)q−1, L♭)◦
+n−1ifL♭is also integral.
+70IfF/F 0is ramified, we have
+Den(X, L♭)n=X
+L♭⊆M♭⊆M♭∗(q−1X)ℓ(M♭/L♭)Den(X, M♭)◦
+n (9.2.3)
+Den(X, M♭)◦
+n:=t(M♭)−3
+2Y
+i=0(1−q2iX) (9.2.4)
+where the sum runs over lattices M♭⊆L♭
+F(may be verified using [LL22, Lemma 2.15]).
+IfM♭is a non-degenerate integral Hermitian OF-lattice of rank n−1 with t(M♭)≤1, set
+Den∗(M♭)◦
+n:= [˘F:˘F0]qval′(M♭)Den(1 , M♭)◦
+n (9.2.5)
+We have
+[˘F:˘F0]Den∗(q2, L♭)n= [˘F:˘F0]Den∗(1, L♭)n=X
+L♭⊆M♭⊆M♭∗Den∗(M♭)◦
+n (9.2.6)
+where the sum runs over lattices M♭⊆L♭
+F. The first equality follows from the functional equation
+(8.3.13), and the second equality follows from the Cho–Yamauchi formulas (and (8.3.8)). Note
+Den∗(M♭)n= Den∗(M♭)◦
+nifM♭is maximal integral.
+Proof of Lemma 9.1.3. Follows from (9.2.6). Note Den∗(M♭)◦
+n= deg Z(M♭)◦ift(M♭)≤1, and
+Den∗(M♭)◦
+n= 0 if t(M♭)≥2. □
+Proposition 9.2.1. Assume F0=Qpand that p̸= 2unless F/Qpis split. For any rank n−1
+non-degenerate Hermitian OF-lattice M♭⊆Wwitht(M♭)≤1, we have
+IntH(M♭)◦
+n=∂Den∗
+H(M♭)◦
+n (9.2.7)
+Proof. By definition, the quantity Int H(M♭)◦
+ndepends only on val( M♭). Since t(M♭)≤1, we may
+write M♭=L♭′⊕L♭′′(orthogonal direct sum) where L♭′is self-dual of rank n−2 and val( L♭′′) =
+val(M♭) (in the unramified case, this follows upon diagonalizing M♭; in the ramified case, this
+follows from picking a “standard basis” as in [LL22, Lemma 2.12]). Using the cancellation property
+of local densities explained in (8.3.11), we thus reduce to the case n= 2 (which we now assume).
+By the inductive decompositions in (9.1.2) and (9.1.8), it is enough to show Int H(M♭)n=
+∂Den∗
+H(M♭)n(induct on val( M♭)). We have ∂Den∗(M♭)n=∂Den∗
+H(M♭)nby construction, since
+t(M♭)≤1 (i.e. compare (9.1.8) and (9.1.9)).
+Setb= val′(M♭). Using the Cho–Yamauchi formulas, we find
+Den∗(q2X, M♭)n=X−b/2bX
+j=0(qX)j∂Den∗(M♭)n= [˘F:˘F0]bX
+j=0(b−2j)qj(9.2.8)
+in all cases. The preceding formulas are valid even if F0̸=Qp(and also valid if p= 2 whenever
+F/F 0is unramified), hence why we wrote qinstead of p.
+71We have
+IntH(M♭)n= 2[˘F:˘Qp]X
+M♭⊆N♭⊆N♭∗ps(1−η(p)p−1)δtau(s) (9.2.9)
+=−[˘F:˘Qp]X
+M♭⊆N♭⊆N♭∗ps(1−η(p)p−1)
+s−(1−p−s)(1−η(p))
+(1−p−1)(p−η(p))
+where the sum runs over lattices N♭⊆M♭
+F, where s:= val′(N♭), and where η(p):=−1,0,1 in the
+inert, ramified, split cases respectively.
+We prove the identity Int H(M♭)n=∂Den∗(M♭)nby induction on b. The case b= 0 is clear, as
+both quantities are 0.
+Next suppose b≥1 and that M♭′(resp. M♭′′) is a rank one non-degenerate lattice with
+val′(M♭′) = b−1 (resp. val′(M♭′′) = b−2). If b−2≤0, set Int H(M♭′′)n:= 0 (in which
+case∂Den∗(M♭′′)n= 0 as well).
+We have
+∂Den∗(M♭)n−∂Den∗(M♭′)n= [˘F:˘F0](−bqb+b−1X
+j=0qj) (9.2.10)
+∂Den∗(M♭)n−∂Den∗(M♭′′)n= [˘F:˘F0](−bqb−bqb−1+ 2b−1X
+j=0qj). (9.2.11)
+IfF/Qpis inert, we find
+IntH(M♭)n−IntH(M♭′′)n=−[˘F:˘Qp]pb(1 +p−1)
+b−2(1−p−b)
+(1−p−1)(p+ 1)
+= [˘F:˘Qp](−bpb−bpb−1+ 2b−1X
+j=0pj). (9.2.12)
+IfF/Qpis ramified, we find
+IntH(M♭)n−IntH(M♭′)n=−[˘F:˘Qp]pb
+b−(1−p−b)
+(1−p−1)p
+(9.2.13)
+= [˘F:˘Qp](−bpb+b−1X
+j=0pj). (9.2.14)
+IfF/Qpis split, we find
+IntH(M♭)n−IntH(M♭′)n=−[˘F:˘Qp]bX
+j=0pj(1−p−1)j (9.2.15)
+= [˘F:˘Qp](−bpb+b−1X
+j=0pj). (9.2.16)
+This proves the lemma in all cases, by induction on b. □
+Corollary 9.2.2. Theorem 9.1.2 holds when n= 2.
+72Proof. Ifn= 2, Proposition 9.2.1 shows Int H(L♭)n=∂Den∗
+H(L♭)n=∂Den∗(L♭)n. We have
+gr1
+NK′
+0(Z(L♭)k)Q= 0 because Z(L♭)kis a scheme and because the reduced subscheme Nred⊆ N is
+0-dimensional (a disjoint union of copies of Spec k), see Lemma 4.4.1. Hence Int V(L♭)n= 0 since
+LZ(L♭)V∈gr1
+NK′
+0(Z(L♭)k)Q. □
+9.3.Induction formula. Throughout Sections 9.3 and 9.5, we allow F0to be an arbitrary finite
+extension of Qp(allowing p= 2 if F/F 0is unramified). We take the following setup for the rest of
+of Section 9 (i.e. the notations n,V,L,L′,L′′,L♭,x,x′, and x′′are all reserved unless otherwise
+indicated).
+Setup 9.3.1. LetVbe a non-degenerate Hermitian F-module of rank n, with pairing ( −,−).
+Assume nis even if F/F 0is ramified. Let L♭⊆Vbe a non-degenerate Hermitian OF-lattice
+of rank n−1. Let x, x′, x′′∈Vbe nonzero and orthogonal to L♭with⟨x⟩ ⊆ ⟨ x′⟩ ⊆ ⟨ x′′⟩and
+lengthOF(⟨x′⟩/⟨x⟩) = lengthOF(⟨x′′⟩/⟨x′⟩) = 1. Set
+L:=L♭⊕ ⟨x⟩ L′:=L♭⊕ ⟨x′⟩ L′′:=L♭⊕ ⟨x′′⟩ (9.3.1)
+The notation L′′andx′′will only appear in our proof of the induction formula (Proposition
+9.3.2) for F/F 0split.
+Proposition 9.3.2 (Induction formula) .Ifval(x)> a max(L♭)in the nonsplit cases (resp. if
+val(x)>2amax(L♭)in the case F/F 0is split), we have
+Den(X, L)n=
+
+X2Den(X, L′)n+ (1−X)Den( q2X, L♭)nifF/F 0is inert
+XDen(X, L′)n+ (1−X)Den( q2X, L♭)nifF/F 0is ramified
+XDen(X, L′)n+ Den( q2X, L♭)n ifF/F 0is split.(9.3.2)
+In the inert case, this is [Ter13, Theorem 5.1] (strictly speaking, there is a blanket p̸= 2
+assumption there), which is a unitary analogue of [Kat99, Theorem 2.6(1)] (orthogonal groups);
+see also [LZ22a, Proposition 3.7.1] (there stated allowing p= 2) for a statement closer to ours.
+Using the Cho–Yamauchi formulas, we give a uniform proof of the inert and ramified cases
+(Lemma 9.3.6). Our lower bounds on val( x) are possibly nonsharp (e.g. in the inert case, we only
+show the induction formula when val( x)>2amax(L♭)) but this makes no difference for the proof of
+Theorem 9.1.2, where we will take val( x)→ ∞ (Proposition 9.5.2).
+The case when F/F 0is split is more difficult for us, and the same proof only shows a weaker
+version of the induction formula (stated in Lemma 9.3.6), which is insufficient for our purposes.
+Extracting the induction formula from this weak version is the subject of Section 9.4.
+For the proof of Theorem 9.1.2, only the statement of the induction formula and the definitions
+in (9.3.3) and (9.3.4) will be needed.
+We first record a few preparatory lemmas. As in Section 2.2, we fix a uniformizer ϖ∈ O Fand
+a generator u∈ O Fof the different ideal such that ϖσ=−ϖanduσ=−u. We say a quantity
+stabilizes , e.g. for val( x)> C (for some constant C) if that quantity does not depend on xif
+val(x)> C. When F/F 0is nonsplit, given an OF-module Mandm∈M, we say e.g. that mis
+exact ϖe-torsion fore≥0 ifϖem= 0 but ϖe−1m̸= 0 (and if e= 0, the only exact ϖe-torsion
+element is 0). We use similar terminology for OF0-modules and exact ϖe
+0-torsion elements, etc..
+73Lemma 9.3.3. LetMbe a non-degenerate integral Hermitian OF-lattice of rank m. Suppose
+elements w1, . . . , w r∈MhaveOF-span M. Write Tfor the associated Gram matrix. Then
+t(M) + rank(( uT)⊗ O F/ϖ) =m.
+Proof. IfF/F 0is split, the rank continues to make sense because Tis Hermitian (e.g. diagonalize
+the Hermitian form). In the unramified cases, the lemma follows by diagonalizing the Hermitian
+form. In the ramified case, the lemma follows by putting Minto “standard form” (i.e. an orthogonal
+direct sum of rank one lattices and rank two hyperbolic lattices) as in [LL22, Definition 2.11]. We
+are allowing meven or odd. □
+Lemma 9.3.4. LetMbe a non-degenerate integral Hermitian OF-lattice of rank m. Suppose
+MF=W′⊕W′′is an orthogonal decomposition with W′′of rank 1.
+(1) We have t(M)−1≤t(M∩W′)≤t(M) + 1 .
+(2) Let M′⊆W′andM′′⊆W′′be the images of Munder the projections MF→W′and
+MF→W′′. Assume that M′andM′′are integral and that val(M′′)>0. Then we have
+t(M) =t(M′) + 1 .
+Proof.
+(1) The ramified case follows from [LL22, Lemma 2.23(2)]. The inert case when t(M) = 0 is
+[LZ22a, Lemma 4.5.1]. The same proof works in general for arbitrary F/F 0in arbitrary
+characteristic: select any basis ( w1, . . . , w m−1) ofN∩W′, extend to a basis ( w1, . . . , w m)
+ofMwith Gram matrix T, then use the formulas t(M) + rank(( uT)⊗ O F/ϖ) =mand
+t(M∩W′) + rank(( uT♭)⊗ O F/ϖ) =m−1.
+(2) Let w= [w1, . . . , w m] be any basis of M, and let T= (w, w) be the corresponding Gram
+matrix. Let w′= [w′
+1, . . . , w′
+m] be the projection of wtoW′, with Gram matrix T′= (w′, w′).
+Since val( M′′)>0, we see ( uT)⊗ O F/ϖ= (uT′)⊗ O F/ϖ. Applying Lemma 9.3.3 twice
+(once for Mandr=mand once for M′andr=m) proves the claim. □
+Set
+DenL♭,x(X)◦
+n:=X
+L⊆M⊆M∗
+M∩L♭
+F=L♭Xℓ(M/L )Den(X, M )◦
+n (9.3.3)
+DenL♭,x(X)n:= Den( X, L)n=X
+L♭⊆M♭⊆M♭∗DenM♭,x(X)◦
+n (9.3.4)
+where the first sum runs over lattices M⊆Vand the second sum runs over lattices M♭⊆L♭
+F. Note
+that the only dependence on xis on val( x) (since DenL♭,x(X)◦
+nonly depends on the isomorphism
+class of the Hermitian lattice L).
+Lemma 9.3.5. The polynomial
+fx(X):=
+
+DenL♭,x(X)◦
+n−X2DenL♭,x′(X)◦
+n ifF/F 0is inert
+DenL♭,x(X)◦
+n−XDenL♭,x′(X)◦
+n ifF/F 0is ramified
+DenL♭,x(X)◦
+n−2XDenL♭,x′(X)◦
+n+X2DenL♭,x′′(X)◦
+nifF/F 0is split(9.3.5)
+74(an element of Z[X]) stabilizes for val(x)>2[˘F:˘F0]−1amax(L♭).
+Proof. The notation fx(X) is temporary, used only for this lemma. If F/F 0is split, write ϖ=ϖ1ϖ2
+forϖi∈ O Fwith val( ϖ1x) = val( ϖ2x) = val( x) + 1. We may assume x′′=ϖ−1xin this case.
+Note DenL♭,x′(X)◦
+n= DenL♭,ϖ−1
+1x(X)◦
+n= DenL♭,ϖ−1
+2x(X)◦
+n.
+Inspecting (9.3.3) shows
+fx(X) =X
+L⊆M⊆M∗
+M∩L♭
+F=L♭
+ϖ−1x̸∈MXℓ(M/L )Den(X, M )◦
+n ifF/F 0is nonsplit (9.3.6)
+fx(X) =X
+L⊆M⊆M∗
+M∩L♭
+F=L♭
+ϖ−1
+1x̸∈M
+ϖ−1
+2x̸∈MXℓ(M/L )Den(X, M )◦
+n ifF/F 0is split (9.3.7)
+where the sums run over lattices M⊆V. For each such M, we know L♭⊆Mis a saturated
+sublattice, hence M=L♭⊕ ⟨ξ⟩(not necessarily orthogonal direct sum) for some ξ∈V.
+IfL♭is not integral, then the lemma is trivial as the polynomials of the lemma statement are 0.
+We assume L♭is integral for the rest of the proof.
+IfF/F 0is nonsplit, each lattice Mappearing in (9.3.6) is of the form M=L♭⊕ ⟨y+ϖ−ex⟩
+for a uniquely determined element y∈L♭∗/L♭, where e∈Z≥0is such that y∈L♭∗/L♭is of exact
+ϖe-torsion. Conversely, an element y∈L♭∗/L♭gives rise to an Mappearing in (9.3.6) if and only
+if val( y+ϖ−ex)≥0. If val( x)>2[˘F:˘F0]−1amax(L♭), then val( ϖ−ex)>0, so val( y+ϖ−ex)≥0
+holds if and only if val( y)≥0.
+IfF/F 0is split, the preceding paragraph holds upon replacing ϖ−ewith ϖ−e1
+1ϖ−e2
+2fore1, e2∈
+Z≥0such that y∈L♭∗/L♭is of exact ϖe1
+1ϖe2
+2-torsion (i.e. ϖe1
+1ϖe2
+2y∈L♭butϖe1−1
+1ϖe2
+2̸∈L♭and
+ϖe1
+1ϖe2−1
+2̸∈L♭).
+In the previous notation, we thus have
+fx(X) =X
+y∈L♭∗/L♭
+val(y)≥0Xℓ((L♭+⟨y⟩)/L♭)Den(X, M )◦
+n (9.3.8)
+where the sum runs over y, and M=L♭⊕ ⟨y+ϖ−ex⟩in the nonsplit case (resp. M=L♭⊕ ⟨y+
+ϖ−e1
+1ϖ−e2
+2x⟩in the split case).
+In the notation of (9.3.8), we have t(M) =t(L♭+⟨y⟩) + 1 by Lemma 9.3.4(2) (using val( ϖ−ex)>
+0 in the nonsplit case and val( ϖ−e2
+1ϖ−e2
+2x)>0 in the split case). Hence we have
+Den(X, M )◦
+n=t(M♭+⟨y⟩)Y
+i=0(1−ηi(ϖ0)qiX) (9.3.9)
+(see definition in (9.2.2)), and now the right-hand side of (9.3.8) clearly depends only on L♭(and
+not on x). □
+75Lemma 9.3.6. With notation as above, assume val(x)>2[˘F:˘F0]−1amax(L♭). We have
+(1−X)Den( q2X, L♭)n=
+
+Den(X, L)−X2Den(X, L′) ifF/F 0is inert
+Den(X, L)−XDen(X, L′) ifF/F 0is ramified
+Den(X, L)−2XDen(X, L′) +X2Den(X, L′′)ifF/F 0is split.
+(9.3.10)
+Proof. Combining (9.3.8) and (9.3.9), we find that the right-hand side of (9.3.10) is given by
+X
+L♭⊆M♭⊆M♭∗Xℓ(M♭/L♭)X
+y∈M♭∗/M♭
+val(y)≥0Xℓ((M♭+⟨y⟩)/M♭)t(M♭+⟨y⟩)Y
+i=0(1−ηi(ϖ0)qiX) (9.3.11)
+in all cases, where the outer sum runs over lattices M♭⊆L♭
+F.
+Collecting the terms with M♭+⟨y⟩=N♭for fixed integral lattices N♭⊆L♭
+F, we find that (9.3.11)
+is equal to
+X
+L♭⊆N♭⊆N♭∗Xℓ(N♭/L♭)t(N♭)Y
+i=0(1−ηi(ϖ0)qiX)X
+L♭⊆M♭⊆N♭
+N♭/M♭cyclic(number of generators of N♭/M♭).
+where the outer sum runs over lattices N♭⊆L♭
+Fand the inner sum runs over lattices M♭. We have
+X
+L♭⊆M♭⊆N♭
+N♭/M♭cyclic(number of generators of N♭/M♭) =X
+N♭∗⊆M♭∗⊆L♭∗
+M♭∗/N♭∗cyclic(number of generators of M♭∗/N♭∗)
+=|L♭∗/N♭∗|=|N♭/L♭|=qℓ(N♭/L♭)
+so (9.3.11) is equal to
+X
+L♭⊆N♭⊆N♭∗(qX)ℓ(N♭/L♭)t(N♭)Y
+i=0(1−ηi(ϖ0)qiX). (9.3.12)
+Inspecting the Cho–Yamauchi formulas (and surrounding discussion) at the beginning of Section
+9.2 shows that the displayed expression is equal to (1 −X)Den( q2X, L♭)nin all cases (if F/F 0is
+ramified, note that t(N♭) is always odd because N♭has rank n−1, which we have assumed is odd
+in the ramified case). □
+9.4.More on induction formula: split. Suppose F/F 0is split. To prove the induction formula
+(Proposition 9.3.2), it remains only to show that Den( X, L)−XDen(X, L′) stabilizes for val( x)>
+2amax(L♭), as Lemma 9.3.6 then shows (1 −X)(Den( X, L)−XDen(X, L′)) = (1 −X)Den( q2X, L♭)n.
+We define some more notation (only used in Section 9.4). Fix a uniformizer ϖ0ofOF0, and
+consider the elements
+ϖ1= (ϖ0,1) ϖ2= (1,−ϖ0) e1= (1,0) e2= (0,1) (9.4.1)
+76inOF=OF0×OF0. Given an OF-module M, we set M1:=e1MandM2:=e2M(soM=M1⊕M2).
+We similarly write y1:=e1yandy2:=e2yfory∈M. IfMis a non-degenerate Hermitian OF-
+lattice, we set M∗
+1:=e2M∗andM∗
+2:=e1M∗. IfMis moreover integral, the Hermitian pairing
+induces an identification M∗
+2/M1∼=Hom OF0(M∗
+1/M2, F0/OF0).
+For integers t≥0, we set
+m(t, X):=t−1Y
+i=0(1−qiX) (9.4.2)
+so that Den( X, M )◦
+n=m(t(M), x) for any integral non-degenerate Hermitian OF-lattice Mof rank
+n. IfTis a finite length OF0-module, we set
+t0(T):= dim Fq(T ⊗OF0Fq) ℓ0(T):= lengthOF0(T). (9.4.3)
+Lemma 9.4.1. Consider the polynomial
+hdiff,x(X):=X
+L⊆M⊆M∗
+M1∩L♭
+F=L♭
+1
+M2∩L♭
+F̸=L♭
+2
+M/L is cyclic
+ϖ−1
+1x̸∈MXℓ(M/L )m(t(M), X) (9.4.4)
+where the sum runs over lattices M⊆V(satisfying the displayed conditions). This sum stabilizes
+forval(x)>2amax(L♭).
+Proof. Each lattice Min the sum is of the form M=L+⟨ξ⟩for a unique element ξ=y+
+ϖ−e1
+1ϖ−e2
+2x∈L∗/Lwith y∈L♭∗, such that val( ξ)≥0, and with e1, e2∈Z≥0.
+Assume val( x)>2amax(L♭). We claim that val( y)≥0 (in the notation above). The additional
+conditions on Mimply that y1∈L♭∗
+2/L♭
+1is of exact ϖe1
+1-torsion and that ϖe2
+2y2̸∈L♭. We thus
+have e1≤amax(L♭) and e2< a max(L♭), so val( ϖ−e1
+1ϖ−e2
+2x)>0 when val( x)>2amax(L♭). This
+implies that val( y)≥0 as well.
+Consider the F-linear (non-unitary) automorphism ϕ:V→Vwhich is the identity on L♭
+Fand
+sends x7→ϖ2x. Then M7→ϕ(M) is a bijection from the set of lattices appearing in the sum for
+hdiff,x(X) to the set of lattices appearing in the sum for hdiff,ϖ2x(X) (we remind the reader that L
+depends on xas well).
+In the above setup, an application of Lemma 9.3.4(2) shows t(M) =t(ϕ(M)) =t(L♭+⟨y⟩)+1. We
+also find ℓ(M/L ) =ℓ(ϕ(M)/(L♭⊕⟨ϖ2x⟩)) =ℓ((L♭+⟨y⟩)/L♭). This shows hdiff,x(X) =hdiff,ϖ2x(X)
+(compare the Mterm and the ϕ(M) term). This proves the lemma, as the x-dependence of
+hdiff,x(X) is only on val( x). □
+Lemma 9.4.2. LetTbe a finite length OF0-module, and suppose Tisϖe
+0-torsion. For any integer
+b > e , form the OF0-module A=T ⊕(ϖ−b
+0OF0/OF0). Consider u=t+w∈Awith t∈ T and
+w∈ϖ−b
+0OF0/OF0both of exact ϖr
+0-torsion. There is a (non-canonical) isomorphism
+A/(u)∼=(T/(t))⊕(ϖ−b
+0OF0/OF0). (9.4.5)
+Proof. This follows from the structure theorem for finitely generated modules over the discrete
+valuation ring OF0. For example, we can select elements e1, . . . , e m∈ Tsuch that T=⟨e1⟩ ⊕ ··· ⊕
+77⟨en⟩and such that t=ϖs
+0e1for some s≥0. The case r= 0 is trivial, so take r≥1. Then r+s≤e.
+Ifw′∈ϖ−b
+0OF0/OF0is such that ϖs
+0w′=wthere is an isomorphism
+T ⊕(ϖ−b
+0OF0/OF0)→A (9.4.6)
+sending e17→e1+w′,ei7→eifori≥2, and z7→z(for any generator zofϖ−b
+0OF0/OF0). This
+isomorphism takes ttot+w. □
+Given a finite torsion cyclic OF0-module N∼=OF0/ϖa
+0OF0, we set ord( N):=a.
+Lemma 9.4.3. LetTbe a finite length OF0-module, and assume Tisϖe-torsion for some e≥0.
+For any integer b≥0, form the OF0-module Ab:=T ⊕(ϖ−b
+0OF0/OF0). The polynomial
+αb:=X
+cyclic submodules
+N⊆AbXord(N)m(t0(Ab/N), X) (9.4.7)
+stabilizes for b > e .
+Proof. Applying − ⊗OF0Fqto the exact sequence
+0→N→Ab→Ab/N→0 (9.4.8)
+shows
+t0(Ab/N) =
+
+t0(Ab) if N⊆ϖ0Ab
+t0(Ab)−1 if N̸⊆ϖ0Ab(9.4.9)
+for any cyclic submodule N⊆Ab. We also have t0(Ab) =t0(T) + 1 if b >1.
+There is a natural inclusion Ab→Ab+1. For any cyclic submodule N⊆Ab, we have
+t0(Ab/N) =
+
+t0(Ab+1/N)−1 if N=⟨t+ϖ−b
+0⟩with t∈ϖ0T
+t0(Ab+1/N) otherwise(9.4.10)
+where ϖ−b
+0∈ϖ−b
+0OF0/OF0. Assume b > e . Then, in the first case above, the element t∈ T is
+uniquely determined by N(using b > e ). The cyclic submodules N⊆Ab+1with N̸⊆Abare of the
+form N⟨t+ϖ−b−1
+0⟩for a unique t∈ T.
+We thus have
+αb+1−αb (9.4.11)
+=X
+t∈T
+N=⟨t+ϖ−b−1
+0⟩Xord(N)m(t0(Ab+1/N), X) +X
+t∈ϖ0T
+N=⟨t+ϖ−b
+0⟩Xord(N)m(t0(Ab+1/N), X) (9.4.12)
+−X
+t∈ϖ0T
+N=⟨t+ϖ−b
+0⟩Xord(N)m(t0(Ab/N), X) (9.4.13)
+where the sums run over t∈ Tort∈ϖT, as indicated. We compute
+X
+t∈T
+N=⟨t+ϖ−b−1
+0⟩Xord(N)m(t0(Ab+1/N), X) =|T |Xb+1m(t0(T), X) (9.4.14)
+78where |T |is the cardinality of T. For any integer a≥0, we have the identity m(a+1, X)−m(a, x) =
+−qaXm(a, X), so we compute
+X
+t∈ϖ0T
+N=⟨t+ϖ−b
+0⟩Xord(N)m(t0(Ab+1/N), X)−X
+t∈ϖ0T
+N=⟨t+ϖ−b
+0⟩Xord(N)m(t0(Ab/N), X) (9.4.15)
+=−|ϖ0T |qt0(T)Xb+1m(t0(T), X). (9.4.16)
+But the exact sequence
+0→ϖ0T → T → T /ϖ0T → 0 (9.4.17)
+shows that |T |=|ϖ0T |qt0(T)since t0(T) = dim FqT/ϖ0Tby definition. Substituting into (9.4.11)
+shows αb+1−αb= 0. □
+Lemma 9.4.4. The polynomial DenL♭,x(X)◦
+n−XDenL♭,x′(X)◦
+nstabilizes for val(x)>2amax(L♭).
+Proof. As the x′dependence of DenL♭,x′(X)◦
+nis only on val( x′), we may assume x′=ϖ−1
+1xwithout
+loss of generality. Assume val( x)>2amax(L♭). The lemma is trivial if L♭is not integral (the
+polynomial is 0), so assume L♭is integral.
+Inspecting (9.3.3) shows that DenL♭,x(X)◦
+n−XDenL♭,x′(X)◦
+nis equal to
+X
+L⊆M⊆M∗
+M∩L♭
+F=L♭
+ϖ−1
+1x̸∈MXℓ(M/L )m(t(M), X). (9.4.18)
+where the sum runs over lattices M⊆V(similar reasoning was used at the beginning of the proof of
+Lemma 9.3.5). For each Min the above sum, note that M/L is cyclic (again, L♭⊆Mis a saturated
+sublattice, so there is a direct sum decomposition M=L♭⊕ ⟨ξ⟩(not necessarily orthogonal) for
+some ξ∈V). By Lemma 9.4.1, it is enough to show that
+X
+L⊆M⊆M∗
+M1∩L♭
+F=L♭
+1
+M/L is cyclic
+ϖ−1
+1x̸∈MXℓ(M/L )m(t(M), X). (9.4.19)
+stabilizes for val( x)>2amax(L♭), where the sum runs over lattices M⊆V(because the difference
+between (9.4.19) and (9.4.18) is (9.4.4)).
+We find that (9.4.19) equals
+X
+L1⊆M1⊆L∗
+2
+M1∩L♭
+F=L♭
+1
+ϖ−1
+1x1̸∈M1X
+L2⊆M2⊆M∗
+1
+M2/L2is cyclicXℓ(M/L )m(t(M), X) (9.4.20)
+where the outer sum runs over lattices M1⊆V1, the right-most sum runs over lattices M2⊆V2, and
+M=M1⊕M2. Note that the lattices M1always satisfy M1/L1being cyclic, because M1∩L♭
+F=L♭
+1
+implies M1=L♭
+1⊕ ⟨y1+ϖ−e1
+1x⟩where y1∈L♭∗
+2/L♭
+1is of exact ϖe1
+1-torsion.
+To prove the lemma, it is enough to check that (9.4.20) does not change if xis replaced with
+ϖ2x. The set of lattices M1⊆V1appearing in the outer sum is indexed elements y1∈L♭∗
+2/L♭
+1
+79(since e1is determined by y1, in the above notation), and hence does not change if xis replaced
+byϖ2x(here using val( x)> a max(L♭) to ensure M1⊂L∗
+2for any choice of y1). Note also that
+ℓ0(M1/L1) =e1and hence does not change when xis replaced by ϖ2x.
+For the rest of the proof, fix an M1as in the outer sum of (9.4.20). We will show that the inner
+sum of (9.4.20) does not change if xis replaced by ϖ2x.
+SetA=M∗
+1/L2. The inner sum is
+Xℓ0(M1/L1)X
+cyclic submodules
+N⊆AXord(N)m(t0(A/N), X). (9.4.21)
+We already discussed that the factor Xℓ0(M1/L1)does not change when xis replaced by ϖ2x. On the
+other hand, we have A∼=Hom OF0(L∗
+2/M1, F0/OF0) soA∼=L∗
+2/M1(non-canonically). If b:= val( x)
+andT:=L♭∗
+2/L♭
+1, then Lemma 9.4.2 shows A∼=(T/⟨y1⟩)⊕(ϖ−b
+0OF0/OF0), where y1is associated
+toM1as above (since the submodule ( M1/L1)⊆L∗
+2/L1is cyclic and generated by y1+ϖ−e1x1
+where y1is of exact ϖe1
+1-torsion).
+Now Lemma 9.4.3 implies that the sum in (9.4.21) does not change if xis replaced by ϖ2x.□
+Proof of Proposition 9.3.2 in split case. Assume F/F 0is split. As remarked at the beinning of
+Section 9.4, it is enough to show that Den( X, L)−XDen(X, L′) stabilizes for val( x)>2amax(L♭).
+We have
+Den(X, L)−XDen(X, L′) =X
+L♭⊆M♭⊆M♭∗DenL♭,x(X)◦
+n−XDenL♭,x′(X)◦
+n (9.4.22)
+by definition (see (9.3.4)), so Lemma 9.4.4 proves the claimed stabilization. □
+9.5.Limits. We continue in the setup of Section 9.3 but now assume ε(V) =−1 ifF/F 0is nonsplit.
+Recall also the definitions in (9.3.3) and (9.3.4).
+LetM♭⊆L♭
+Fbe any non-degenerate Hermitian OF-lattice of rank n−1 with t(M♭)≤1. If
+F/F 0is nonsplit, set
+∂DenL♭(x)n:=−[˘F:˘F0]d
+dX
+X=1Den(X, L)n∂DenM♭,H(x)◦
+n:=−[˘F:˘F0]d
+dX
+X=1DenM♭,x(X)◦
+n
+∂DenL♭,H(x)n:=X
+L⊆N⊆N∗
+N♭=N∩L♭
+F
+t(N♭)≤1∂DenN♭,H(x)◦
+n ∂DenL♭,V(x)n:=∂DenL♭(x)n−∂DenL♭,H(x)n.
+IfF/F 0is split, set
+DenL♭(x)n:= Den( X, L)n
+X=1DenM♭,H(x)◦
+n:= DenM♭,x(X)◦
+n
+X=1
+DenL♭,H(x)n:=X
+L⊆N⊆N∗
+N♭=N∩L♭
+F
+t(N♭)≤1DenN♭,H(x)◦
+n DenL♭,V(x)n:= DenL♭(x)n−DenL♭,H(x)n.
+The above sums run over lattices N⊆V(soN♭varies). These definitions also apply for any x̸∈L♭
+F
+(not necessarily perpendicular to L♭
+F), as long as we take L=L♭+⟨x⟩.
+80Lemma 9.5.1. IfF/F 0is split, then DenL♭,V(x)n= 0for all x.
+Proof. Inspecting (9.2.2) shows that Den( X, M )◦
+n= 0 unless M=M∗. Lemma 9.3.4 implies
+DenN♭,x(X)◦
+n|X=1= 0 unless t(N♭)≤1, i.e. DenL♭(x)n= DenL♭,H(x). □
+Given x∈Vwith ( x, x)̸= 0, we set val′′(x):= val′(x) ifF/F 0is not inert (resp. val′′(x):=
+(val(x)−1)/2 ifF/F 0is inert) to save space. We say a limit stabilizes if the argument of the limit
+becomes constant.
+Proposition 9.5.2. IfF/F 0is nonsplit, we have
+∂Den∗(L♭)n= 2[˘F:˘F0]−1lim
+x→0
+∂DenL♭(x′)n−val′′(x)Den∗(L♭)n
+. (9.5.1)
+IfF/F 0is split, we have
+∂Den∗(L♭)n= lim
+x→0
+DenL♭(x′)n−val(x)Den∗(L♭)n
+. (9.5.2)
+The expressions are 0ifL♭is not integral, and all limits stabilize for val(x)≫0. IfL♭is integral
+andF/F 0is nonsplit (resp. split), then the limits stabilize when val(x)> amax(L♭)(resp. val(x)>
+2amax(L♭)).
+Proof. We emphasize that we are following Setup 9.3.1; in particular, we have x′→0 asx→0.
+Assume L♭is integral (as the lemma is otherwise clear) and assume val( x)> a max(L♭). The key
+input is the induction formula from Proposition 9.3.2.
+Case F/F 0is nonsplit: Multiply the induction formula from Proposition 9.3.2 by X−val′(L♭)/2,
+and call the resulting expression ( ∗) (temporary notation). Taking one derivative of ( ∗) atX= 1
+yields
+Den∗(L♭)n=∂DenL♭(x)n−∂DenL♭(x′)n. (9.5.3)
+Here we used Den(1 , L)n= Den(1 , L′)n= 0 because ε(V) =−1 causes a sign in the functional
+equation (8.3.12). Taking two derivatives of ( ∗) atX= 1 yields the identity
+val′(L♭)∂DenL♭(x)n+ [˘F:˘F0]d2
+dX2
+X=1Den(X, L)n (9.5.4)
+= (val′(L♭)−4[˘F:˘F0]−1)∂DenL♭(x′)n+ [˘F:˘F0]d2
+dX2
+X=1Den(X, L′)n+∂Den∗(L♭)n.
+Again using ε(V) =−1, we apply the functional equation for Den( X, L) (8.3.12) to find
+d2
+dX2
+X=1Den(X, L)n= (val( L)−1)d
+dX
+X=1Den(X, L)n (9.5.5)
+=−(val(L)−1)[˘F:˘F0]−1∂DenL♭(x)n (9.5.6)
+(the second equality is by definition) and similarly for L′. We also have
+val′(L♭) = val( L)−2[˘F:˘F0]−1val′′(x)−1 val( L) = val( L′) + 2[ ˘F:˘F0]−1. (9.5.7)
+Substituting all displayed equations into (9.5.4) proves the claim.
+Case F/F 0is split: Evaluating the induction formula from Proposition 9.3.2 at X= 1 yields
+Den∗(L♭)n= Den(1 , L)n−Den(1 , L′)n. (9.5.8)
+81Multiplying both sides of the induction formula by X−val(L♭)/2and taking one derivative at X= 1,
+we find
+val(L♭)Den(1 , L)n−2d
+dX
+X=1Den(X, L)n (9.5.9)
+= (val( L♭)−2)Den(1 , L′)n−2d
+dX
+X=1Den(X, L′)n+∂Den∗(L♭)n.
+The functional equation (8.3.12) implies
+2d
+dX
+X=1Den(X, L)n= val( L)Den(1 , L)n (9.5.10)
+and similarly for L′. We also have
+val(L♭) = val( L)−val(x) val( L) = val( L′) + 1. (9.5.11)
+Substituting all displayed equations into (9.5.9) proves the claim. □
+Corollary 9.5.3. LetM♭⊆L♭
+Fbe any full rank integral lattice with t(M♭)≤1. IfF/F 0is nonsplit,
+the following formulas hold.
+(1)∂Den∗
+V(L♭)n= 2[˘F:˘F0]−1limx→0∂DenL♭,V(x)n
+(2)∂Den∗
+H(L♭)n= 2[˘F:˘F0]−1limx→0
+∂DenL♭,H(x′)n−val′′(x)Den∗(L♭)n
+(3)∂Den∗
+H(M♭)◦
+n= 2[˘F:˘F0]−1limx→0
+∂DenM♭,H(x′)◦
+n−val′′(x)Den∗(M♭)◦
+n
+.
+IfF/F 0is split, the following formulas hold.
+(1)∂Den∗
+V(L♭)n= lim x→0DenL♭,V(x)n
+(2)∂Den∗
+H(L♭)n= lim x→0
+DenL♭,H(x′)n−val(x)Den∗(L♭)n
+(3)∂Den∗
+H(M♭)◦
+n= lim x→0
+DenM♭,H(x′)◦
+n−val(x)Den∗(M♭)◦
+n
+.
+All limits stabilize for val(x)≫0. The expressions (1) and (2) are 0ifL♭is not integral. If
+L♭is integral and F/F 0is nonsplit (resp. split), then the limits in (1) and (2) stabilize when
+val(x)> amax(L♭)(resp. val(x)>2amax(M♭)). If F/F 0is nonsplit (resp. split) , the limits in (3)
+stabilizes when val(x)> amax(M♭)(resp. val(x)>2amax(M♭)).
+Proof. Denote the result of Proposition 9.5.2 as (0). We have (3) = ⇒(2) (in all cases, nonsplit or
+split), by summing over M♭containing L♭. We have (0) = ⇒(3) by taking L♭=M♭and inducting
+on val( M♭) (starting with the base cases of M♭being maximal integral (still with t(M♭)≤1), in
+which case ∂Den∗(M♭)n=∂Den∗
+H(M♭)n=∂Den∗
+H(M♭)◦
+n, and similarly for Den∗(M♭)n, as well as
+∂DenM♭(x′)n(nonsplit) and DenM♭(x′)n(split)). Since (0) = (1) + (2), we conclude that (0) = ⇒
+(1) as well. □
+The following lemma is the geometric counterpart of Corollary 9.5.3(1) (in the special case when
+α=LZ(L♭)Vfor a non-degenerate Hermitian OF-lattice L♭⊆W).
+Lemma 9.5.4. Take F0=Q, and assume p̸= 2ifF/Qpis ramified. Let Z → Spec kbe a proper
+scheme equipped with a closed immersion Z,→ N . Given any α∈gr1K′
+0(Z), we have
+degk(α· E∨) = lim
+w→0degk(α·LZ(w)) (9.5.12)
+82where the limit runs over w∈W. The limit stabilizes for wsatisfying Z ⊆ Z (w).
+Proof. We may assume F/Qpis nonsplit, as otherwise gr1K′
+0(Z) = 0 (Section 4.4) for dimension
+reasons so the lemma is trivial.
+For any fixed w∈W, there exists e≫0 such that Z ⊆ Z (pew) (over a quasi-compact base
+scheme, petimes any quasi-homomorphism is a homomorphism for e≫0). Hence Z ⊆ Z (w) for
+allw∈Wlying in a sufficiently small neighborhood of 0.
+Assume w∈Wis such that Z ⊆ Z (w). Write I(w)⊆ O Nfor the ideal sheaf of Z(w)
+(recall that Z(w) is a Cartier divisor, see Section 4.5). The lemma now follows from the “linear
+invariance” argument in the proof of [LL22, Lemma 2.55(3)] (valid in the inert case as well, using
+[How19]). Alternatively, the proof of linear invariance (particularly [How19, Definition 4.2] (inert)
+[LL22, Lemma 2.39] (ramified)) exhibits a canonical isomorphism E ⊗ O Z(w)∼=I(w)⊗ O Z(w)via
+Grothendieck–Messing theory. □
+Proof of Theorem 9.1.2. The horizontal part of the theorem was already verified in Proposition
+9.2.1, so it remains to show Int V(L♭)n=∂Den∗
+V(L♭)n.
+IfF/Qpis split, thenLZ(L♭)V= 0 and so Int V(L♭)n= 0. Applying Corollary 9.5.3(1) with
+V=V, we find ∂Den∗
+V(L♭)n= 0 since DenL♭,V(x)n= 0 for all x(Lemma 9.5.1).
+Next assume F/Qpis nonsplit. For any w∈Wnot in L♭
+F, we have degk(LZ(L♭)V·LZ(w)) =
+∂DenL♭,V(w)nby [LZ22a, Theorem 8.2.1] (inert) and [LL22, Theorem 2.7] (the “vertical” parts of
+the main results of loc. cit..). Lemma 9.5.4 implies Int V(L♭)n= 2[˘F:˘F0]−1limw→0∂DenL♭,V(w)n.
+Restricting to wperpendicular to L♭
+F, the limiting formula in Corollary 9.5.3(1) now implies
+IntV(L♭)n=∂Den∗
+V(L♭)n. □
+Remark 9.5.5. Suppose F0=Qp, suppose F/Qpis nonsplit, and assume p̸= 2. Let M♭⊆Vbe
+a non-degenerate integral OF-lattice of rank n−1 with t(M♭)≤1. As above, let Z(M♭)◦⊆ N be
+the associated quasi-canonical lifting cycle.
+For any nonzero w∈Vnot in M♭
+F, we have degk(Z(M♭)◦∩ Z(w)) =∂DenM♭,H(w)◦
+nby [KR11,
+Proposition 8.4] (inert, see also [LZ22a, Corollary 5.4.6, Theorem 6.1.3]) and [LL22, Corollary 2.46]
+(ramified), i.e. the “horizontal” parts of the main results of loc. cit..
+The “horizontal part” of our main theorem showed Int H(M♭)◦
+n=∂Den∗
+H(M♭)◦
+n(Proposition
+9.2.1). Using also the special value formula in Lemma 9.1.3, our limiting result Corollary 9.5.3(3)
+is equivalent to the geometric statement
+2 degZ(M♭)◦·δtau(val′(M♭))
+= 2[˘F:˘Qp]−1lim
+x→0
+degk(Z(M♭)◦
+n∩ Z(x))−val′′(ϖx) degZ(M♭)◦
+(9.5.13)
+(limiting over nonzero xperpendicular to M♭) where δtau(val′(M♭)) is the “local change of tautolog-
+ical height”, as in (6.2.7) (which is −1/2 times the “local change of Faltings height” δFal(val′(M♭))).
+To prove our main theorem, we verified (9.5.13) indirectly by the computations in Section 9.2.
+Direct computations are also possible.
+83Part 3.Local change of heights
+Fix an imaginary quadratic field F/Q. Write ∆ for the discriminant and σfor the nontrivial
+involution. We allow 2 |∆ in Sections 10 and 11 unless otherwise specified. We set Fp:=F⊗QQp
+andOFp:=OF⊗ZZp.
+Throughout Sections 10 and 11, we write Efor a number field, with ring of integers OE. Given
+a prime p, we set OE,(p):=OE⊗ZZ(p). We use ˘Eto denote a finite degree field extension of ˘Qp,
+with ring of integers O˘E. We write dp⊆ O Fpfor the different ideal of OFp/Qp. We abuse notation
+and also mean dp:=√
+∆, which is a generator of the different ideal.
+By a place ˘wofE⊗Q˘Qp, we mean a prime ideal of E⊗Q˘Qp(equivalently, an element of
+Hom ˘Qp(E⊗Q˘Qp,Cp) up to automorphisms of Cp). We write ˘E˘wfor the residue field of ˘ w, with
+ring of integers O˘E˘w. We use the shorthand ˘ w|pto indicate a place of E⊗Q˘Qp, and may use
+subscripts (e.g. X′
+˘wandϕ˘win Section 11.2) to indicate base-change from Spec OE,(p)to Spf O˘E˘w.
+Whenever an OF-action or F-action is mentioned (e.g. on a sheaf of modules on Spec OE), we
+assume that OE(resp. O˘E) is equipped with morphism OF→ O E(resp. OF→ O ˘E).
+We write Xsfor a level s≥0 quasi-canonical lifting of signature (1 ,0) over Spec O˘Ewith its OFp-
+action ιXs, as explained in Section 6. The framing ρXsof loc. cit. is unimportant in Sections 10 and
+11 (and will be omitted). As before, the notation Xσ
+smeans Xsbut with OFp-action pre-composed
+byσ.
+Given a group scheme Gover a base S, we typically write e:S→Gfor the identity section. We
+abuse notation and use “ e” simultaneously for different group schemes.
+10.Faltings and “tautological” heights
+10.1. Heights. Suppose A→SpecOEis a semi-abelian N´ eron model of an abelian variety over
+E. The Faltings height ofA(or its generic fiber AE) is
+hFal(AE):=hFal(A):=1
+[E:Q]ddeg(bωA) (10.1.1)
+wherebωA= (ωA,∥−∥) = (e∗VnΩ1
+A/OE,∥−∥) is the Hermitian line bundle with norm ∥−∥normal-
+ized as in (3.5.1). The usual arithmetic degree ddeg was recalled in Section 3.3. Any abelian variety
+over a number field has everywhere potentially semi-abelian reduction, and the Faltings height of
+any abelian variety Bover Spec Eis defined so that hFal(B) is remains constant under finite field
+extensions E→E′. (We only consider stable Faltings height, as defined above.)
+We also consider certain “tautological heights” to describe the arithmetic intersections numbers
+appearing in Equation (1.3.4) (middle term). The terminology we introduce for this (e.g. “Kr¨ amer
+datum”) is likely nonstandard.
+Definition 10.1.1.
+(1) Given a scheme Sover Spec OF, aKr¨ amer datum (of signature ( n−1,1)) is a tuple ( A, ι,F)
+where A→Sis an abelian scheme, where ι:OF→End(A) an action of signature ( n−1,1),
+and where F ⊆ LieAis aι-stable local direct summand of rank n−1 such that the OF
+action via ιonF(resp. (Lie A)/F) isOF-linear (resp. σ-linear). We say that Fis the
+associated Kr¨ amer hyperplane .
+84(2) Given a formal scheme Sover Spf OFp, alocal Kr¨ amer datum (of signature ( n−1,1)) is a
+tuple ( X, ι,F) where Xis ap-divisible group over Sof height 2 nand dimension n, where
+ι:OFp→End(X) is an action of signature ( n−1,1), and where F ⊆ LieXis aι-stable
+local direct summand of rank n−1 such that the OFaction via ιonF(resp. (Lie X)/F)
+isOF-linear (resp. σ-linear). We say that Fis the associated Kr¨ amer hyperplane .
+(3) A quasi-polarized Kr¨ amer datum (resp. quasi-polarized local Kr¨ amer datum) is a tu-
+ple (A, ι, λ, F) (resp. ( X, ι, λ, F)) where ( A, ι, λ ) is a Hermitian abelian scheme (Defini-
+tion 3.1.1) (resp. ( X, ι, λ ) is a Hermitian p-divisible group (Definition 4.1.1, but we allow
+p= 2 even if F/Qpis ramified)) and ( A, ι,F) is a Kr¨ amer datum (resp. ( X, ι,F) is a
+Kr¨ amer datum).
+The name “Kr¨ amer datum” refers to the Kr¨ amer model, as studied (locally) in [Kr¨ a03]. For
+an understood Kr¨ amer datum ( A, ι, λ, F), we will use the shorthand E∨:= (Lie A)/F(cf. the
+“tautological bundles” of Definition 3.4.3). We use the same notation E∨:= (Lie X)/Fgiven an
+understood local Kr¨ amer datum ( X, ι,F). In both cases, the sheaf E∨is locally free of rank 1, and
+we call it the associated Kr¨ amer hyperplane quotient .
+Definition 10.1.2. Amorphism (resp. isogeny ) of Kr¨ amer data ( A1, ι1,F1)→(A2, ι2,F2) is an
+OF-homomorphism (resp. isogeny) A1→A2such that im( F1)⊆ F 2, where im( F1) is the image
+ofF1under Lie A1→LieA2. Amorphism (resp. isogeny ) of local Kr¨ amer data is defined in the
+same way.
+Lemma 10.1.3. LetSbe a scheme over SpecOF. Assume either that Sis a scheme over
+SpecOF[1/∆]or that S= Spec Rwhere Ris a Dedekind domain with fraction field of charac-
+teristic 0.
+(1) Suppose A→Sis an abelian scheme with an action ι:OF→End(X)of signature (n−1,1).
+Then the pair (A, ι)extends uniquely to a Kr¨ amer datum (A, ι,F)over S.
+(2) Given pairs (A1, ι1)and(A2, ι2)as above, any OF-linear homomorphism (resp. isogeny)
+A1→A2induces a morphism (resp. isogeny) of Kr¨ amer data.
+(3) If Sis a scheme over SpecOF[1/∆], the exact sequence
+0→ F → LieA→E∨→0 (10.1.2)
+has a unique OF-linear splitting.
+Proof. IfSis a scheme over Spec OF[1/∆], the claims hold because there is a unique decomposition
+LieA= (Lie A)+⊕(LieA)−characterized by ιacting OF-linearly on the rank n−1 subbundle
+(LieA)+(resp. σ-linearly on the rank 1 bundle (Lie A)−).
+Suppose instead that S= Spec Ris a Dedekind domain with fraction field Kof characteristic 0.
+By localizing, it is enough to verify the lemma when Ris a discrete valuation ring. Then part (1)
+amounts to the following fact: given a finite free R-module Mand any K-subspace W⊆M⊗K,
+there is a unique summand M′⊆Msuch that W=M′⊗K(namely M′=M∩W; note that
+M′⊆Mis a saturated sublattice). We are applying this when M= Lie AandW= (Lie A⊗K)+,
+in the notation above (and taking F=M′). The signature ( n−1,1) condition forces the OF-action
+85
