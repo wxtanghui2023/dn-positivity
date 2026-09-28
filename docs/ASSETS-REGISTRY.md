@@ -3068,3 +3068,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ $n{=}10$ 核心发现**】族天花板 $\max(r+\frac{s}{s+k})2^k=\mathbf{94.40}$ **恰在 condition (15) 边界取得**（$k{=}2,r{=}23,s{=}3$，余量 $0$）；前 4 名**全部**边界饱和 ⟹ **condition (15) 即天花板之来源**；C-546 脚本已令 $s=2^{n-k}-(n+1)r$ ⟹ 自洽 ✓
 - 【**✓ 无修订**】C-546 重建无需修订；附注：Haas 经验最优 $k{=}\lfloor(n{-}1)/2\rfloor{=}4$ 在 $n{=}10$ 反而不最优（$91.08$）⟹ 启发式在偶 $n$ 小维不可靠；且 $n{=}10$ 最优参数**合法**（不触发 $n{=}27$ 那种"最优参数被禁"）
 - 档：`docs/WITC547-2026-09-28-condition15-confirmed-as-the-binding-constraint.md`
+
+**★ C-548（09-28 20:1 · WITC548：★证明链重建 $P_0\to P_5$ ＋ 四门 ＋ 负面资产 ＋ 总原则）** ✓
+- 【**★★ 新证明链（制度）**】$P_0$（目标钉死）→ $P_1$（反面假设强迫新结构）→ **$P_{1\text{-I}}$**（独立于 covering identity）/ **$P_{1\text{-II}}$**（独立于 Haas/Plagne/SDP）→ $P_2$（离散容量/整数约束）→ **$P_{2\text{-R}}$**（实际产生 $118{\to}119$ 压力）→ $P_3$（$X{\ge}119$ vs $X{\le}118$ collision）→ $P_4$（equality 强迫有限结构）→ $P_5$（census）；**硬门**：无 $P_1$ obstruction 不进入大规模计算
+- 【**★ 核心转向**】旧＝找 inequality→算 bound；新＝**攻击反面假设** $|C|\le118\Rightarrow$ 结构不可能 ⟹ obstruction 判据 $A<B$（真 collision）
+- 【**★ 总原则**】**每走一步必须增加不可逆的数学压力**
+- 【**★ 负面资产**】$119$ **不是现有平均型下界机制自然产生的数**；已排除范式（共同特征＝global averaging/relaxation）：① excess/congruence ② subspace linear ineq ③ SDP relaxation ⟹ **不再找第四个"更强的 global inequality"**；应寻 **local structure → integer capacity → 119**
+- 【**⚠️ $P_0$ 目标分歧（待唐先生定）**】(甲) 档案既定（`M2-PREWORK`）：目标 $K(10,1)\ge120$ ⟺ 排除 $|C|{=}119$；(乙) 本轮回：假设 $|C|\le118$ ⟹ 仅得 $K\ge119$（**更弱**）——**二者不可混用**
+- 【**✓ 离散阶梯（复算）**】$E{=}11K{-}1024$，$E\equiv10\pmod{11}$ ∀K，$\Delta E{=}11$；$K{=}118{:}274$ vs $K{=}119{:}285$ ⟹ **一阶 excess 无法区分** ⟹ 碰撞必来自高阶/结构量
+- 【**下一轮（唯一）**】假设 $|C|{=}118$：覆盖结构额外强迫什么离散资源？沿 `Best owners→A_r→F/G→profile→cross-layer incompatibility` 重铸为**候选 $P_1$ 机制**
+- 档：`docs/WITC548-2026-09-28-proof-chain-rebuild-P0-P5-gates-and-the-negative-asset.md`
