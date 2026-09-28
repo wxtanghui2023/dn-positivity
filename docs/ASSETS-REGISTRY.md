@@ -3089,3 +3089,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**重叠机制实例**】C-515 已证 $\sum|W|{\le}6$ **假**（$\sum|W|{=}7$ 因 1 处 overlap）⟹ 重叠是常态，accounting 须显式处理
 - 【**唯一攻击点**】为 A 栏（尤其 A10/A11）建立 **global accounting map**；顺序：先找 invariant → 证独立 → 证不可累加损失 → 118 collision → 119
 - 档：`docs/AUDIT-2026-09-28-C448-C548-four-class-classification-and-the-accounting-gap.md`
+
+**🧾 AUDIT-2026-09-28b（非 C 号）：★换层门 $P_{-1}$ ＋ 119 表示审计（第一轮）** ✓
+- 【**★结论**】我们**不是失败了很多次；是在同一层失败了很多次**；缺的不是 $P_1$，而是更早的 $\mathbf{P_{-1}:}$ **representation break**
+- 【**★★ 依赖诊断（实测，可证）**】Best 码 $I$ 为 $(10,40,4)$ 之**唯一码**（Litsyn–Vardy 1994）⟹ $I$ 由参数完全确定（实测 $|I|{=}40$；距离 $\{4{:}440,6{:}240,8{:}100\}$；$|own|{=}3$ 之点数 $160$）⟹ **一切建在 $I$ 上的 $\Phi$（owner 超图／三角关联／$H_1,H_2$／掩码族／对易代数）对一切 $C$ 皆相同** ⟹ 承载 **ambient 几何**，**无法区分 $K{=}118$ 与 $K{=}119$** ⟹ **这解释了为何 122 档未产生相变**
+- 【**换层门 $P_{-1}$**】现在使用的数学对象是否已把 119 的关键差异**压扁**？是 ⟹ 继续证明无意义
+- 【**分层（按是否改变表示层 ✓）**】L0 原始 covering／L1 几何分解／L2 局部结构（皆已深）／**L3 尚未找到**；硬条件：$\Phi(C)$ 不能只是 L0–2 重新打包；应做 $C\to\Phi(C)\to\Psi(\Phi(C))\to$ obstruction（中间必有**非 covering-码语言**之核心对象）
+- 【**★六项检验 ＋ 第一轮审计结果**】凡"新对象"几乎皆 $I$-确定 ⟹ **系统性 fail (6)**：owner 超图／三角关联／对易代数／掩码族 **全关闭** ✗；距离分布、surfeit 泛函 **已死**（L0）✗；**活口候选仅二**：**(α) 次正规划分**（Honkala 1991，$C{=}C_0{\sqcup}C_1$；必要非分离）；**(β) 私有覆盖 $\rho(c)$**（不可重复计数，非 covering 线性重写）
+- 【**下一步**】不再同层造 lemma；只为 $(\alpha)/(\beta)$ 做六项检验
+- 档：`docs/AUDIT-2026-09-28b-P-minus-1-representation-break-and-119-representation-audit-r1.md`
