@@ -3368,3 +3368,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**四层定格**】sphere $94$ ／ **excess 方法（van Wee／Habsieger／Honkala／Haas 2008）$=\mathbf{103}$（饱和）** ／ **线性不等式（Zhang 1991 pair；Zhang–Lo 1992 triple）$=\mathbf{105}$** ／ **混合码 general $R{=}1$（BÖW 2004）$=\mathbf{107}$** ⟹ 唐先生之层级模型**成立**，但 excess 层止于 $103$
 - 【**新候选机制（专著所载，LIVE）**】① **radii-two 球 excess**（专著附录逐字"covering excess in spheres with **radius two**"，Honkala [14]；q-ary 见 Chen–Honkala [3]）；② **$q$-ary 推广**（Chen–Honkala [3]、van Wee [30]）；③ Blass–Litsyn $n\equiv5\ (\mathrm{mod}\ 6)$ 定理（专著书目 [1]）——$n{=}10\equiv4$ **不适用** ✗（与唐先生排除一致）
 - 档：`docs/AUDIT-2026-09-28af-Haas2008-thesis-obtained-and-the-excess-method-saturates-at-103.md`
+
+**🔬 AUDIT-2026-09-28ag（非 C 号）：Zhang $r{=}1$ 不等式已在 120-code 核验 ✓，但两处须修正** ✓
+- 【**✓✓ 核验**】唐先生写法 $\lambda{=}(27,5,1,1),\beta{=}22$ 在真实 120-code 上**零违反**，最小值**恰 $22$**（15 点达到）⟹ 有效且**紧**
+- 【**✗✓ ② 系数修正（本档要点）**】Zhang 原式 $r{=}1$ 应为 $m_1(A_0{+}A_1)+A_2{+}A_3\ge m_0$ ⟹ **正确 $\lambda{=}(5,5,1,1),\beta{=}22$**；唐先生之 $(27,5,1,1)$ 因 $27A_0{+}5A_1\ge5A_0{+}5A_1$ 恒成立而**为弱化**。后果：$\Sigma\lambda_j\binom{10}j$：正确 **$220{=}22\cdot10$** $\Rightarrow M\ge\frac{22\cdot1024}{220}=\mathbf{102.4}\Rightarrow\boxed{103}$（**van Wee 级**）；唐先生写法 $242{=}22\cdot11$ $\Rightarrow\mathbf{93.09}\Rightarrow\boxed{94}$（**球界级**）
+- 【**✗✓ ③ $Z'$ 修正**】$u\notin C\Rightarrow A_2{+}A_3\ge22$ **实测违反 $788/904$（87%）** ✗✗；成因：$u\notin C$ 时 $A_0{=}0$ 但 $A_1$ **未必为 $0$** ⟹ 正确式为 $\boxed{5A_1{+}A_2{+}A_3\ge22}$（**0 违反** ✓✓）
+- 【**★★ ④ 战略读数（最重要）**】Zhang $r{=}1$ 不等式之**简单应用**恰给 $\mathbf{103}$（van Wee 级）⟹ **单条 Zhang 不等式不直接给 $105$ 或 $107$；提升必来自 induced 不等式 ＋ 整数 rounding ＋ 非负线性组合**（与 `AUDIT-af` 之"excess 族止于 103"一致）
+- 【**⑤ 下一步**】①取正确种子 $Z=(5,5,1,1)_{22}$；②算 induced vectors $Z^{(i)}$（$\alpha^k_{i,j}=\sum_t\binom kt\binom{n-k}{i-t}$，$2t=k{+}i{-}j$）；③整数 rounding；④非负线性组合使 $\beta2^n/\Sigma\lambda_j\binom nj>106$。**注**：唐先生 §4–§8 之 induced 系数（$270/50/8/3$）须以 $\lambda{=}(5,5,1,1)$ 为种子重算 ⚠️
+- 档：`docs/AUDIT-2026-09-28ag-Zhang-r1-inequality-verified-but-two-corrections.md`
