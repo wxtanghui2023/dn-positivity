@@ -3221,3 +3221,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**证据表**】$107$＝最佳已发表下界（Kéri 表，源 2004 BÖW）；$108..118$、$119$＝**未知**；$120$＝最佳已发表上界（Östergård 1991 构造）⟹ **14 个整数字无一被数据排除**
 - 【**结论**】本档证明：**现有公开数据不支持"真值接近 119"之信念** ⚠️；119 certificate **暂停**（照令）；目标重定义＝真值定位 → 目标选择 → $P_1$
 - 档：`docs/AUDIT-2026-09-28o-P-minus-2-truth-location-audit-107-120.md`
+
+**🧊 AUDIT-2026-09-28p（非 C 号）：119 certificate **冻结** ＋ $107$ 下界来源拆解** ✓
+- 【**★ 冻结（照唐先生令）**】立即冻结 119 certificate；**不预设数字**
+- 【**★ 目标重定义（对称）**】$\text{Target}＝\text{improve either }107{\to}108\ \text{or}\ 120{\to}119$（至两端碰撞）；另合法目标＝具名受限族（线性／给定自同构群）之**精确最小值 ＋ 穷举证**（悬赏 PARTIAL 逐字"Closing a route is a result"）
+- 【**★ $107$ 来源**】R. Bertolo, P. R. J. Östergård, W. D. Weakley, "An updated table of binary/ternary mixed covering codes", **J. Combin. Designs 12 (2004), 157–176**（DOI 10.1002/jcd.20008）；机制谱系＝mixed covering codes 表 ⟸ excess 方法（Johnson／van Wee 修正下界）＋ mixed 关系 ＋ 计算机搜索
+- 【**★★ 关键负面证据**】Kéri **变更日志**（2004.12.20 起"improvements and corrections"）含 $K(19,2)$、$K(27,1)$ 等大量二元下界改进，**无一条涉及 $K(10,1)$** ⟹ **$107$ 自 2004 年起稳定（$\approx22$ 年）**；$120$ 自 Östergård 1991 起稳定（$\approx35$ 年）⟹ **两端皆陈旧 ⟹ 问题确实卡在文献前沿**
+- 【**上界侧状态**】Östergård 1991：60-word **mixed** covering code ⟹ $K(10,1)\le120$；Kamenetsky 显式构造文件（**2020-07-27**）给出全部 $120$ codeword、无 $119/118$；**未见任何公开来源宣称 $120$ 不能降到 $119$**
+- 【**证据表定稿**】$107$＝下界值（非构造）；$108..118$、$119$＝**未知**（无构造、无排除）；$120$＝上界值（显式构造）⟹ **14 个整数字无一被排除**；$119$ 与 $108$ 地位**相同**
+- 【**★ 建议优先（本档推荐）(甲) 上界路线**】取 Kamenetsky 之 $120$-code 做**删点/小改实验**：①单个删除后仍覆盖？②小规模 replacement/switch 得 $119$？③若得 $119$ ⟹ **直接 FULL（悬赏）**；此法便宜、可即时判定、且与下界侧表示审计之负证据无冲突
+- 档：`docs/AUDIT-2026-09-28p-119-freeze-and-the-107-source-decomposition.md`
