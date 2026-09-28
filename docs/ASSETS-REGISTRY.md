@@ -2058,3 +2058,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**与 C-440 的关系 ✓**】互补：C-440 的 $\mathrm{min\_excess}_9$ 闸门管 $|U^c|$ 可覆盖量（$a\le49$ 主导 ✓）；本文 $L_A$ 闸门管层内部几何 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $L_A$ 有正下界 ✗；不声称 119 已排除 ✗（V290）
 - 档：`docs/WITEFF-2026-09-28-effective-capacity-gate-LA-bound-and-boundary-rigidity.md`
+
+**🏁 C-442（2026-09-28 11:5x · **WITB45：边界刚性 ⟹ $|C_0|\ge45$（$a{=}44$ 全灭）；改进 C-435**）** ✓
+- 【**✓(1) 核验通过（唐先生 §1–§8 ✓✓）**】度数恒等式 $9|A|=2e(A)+|E(A,H)|+|E(A,X_L)|+|E(A,R)|$ ✓✓（$X_L=U^c\setminus N(H)$ ✓、$R=N(H)\setminus(A\cup H)$ ✓）；$|E(A,X_L)|=|X_L|+T_A$ ✓ ⟹ $$\boxed{9|A|=L_A+|X_L|+\mathrm{leak}}\ \Longrightarrow\ \boxed{L_A+\mathrm{leak}\le\Delta_A}$$ ✓✓（＝C-441 之锐化 ✓）
+- 【**✓边界刚性（$a{=}44,s{=}116$ ✓✓）**】$\Delta_A=0\Rightarrow L_A=\mathrm{leak}=0\Rightarrow e(A)=T_A=0$ ⟹ **$N(A)=X_L$** ✓、$|X_L|=369$ ✓、$|A|=41$ ✓、**$d(A)\ge3$** ✓✓（两点距离 2 ⟹ 共同邻点 $\in N(A)=X_L$ ⟹ $r_A\ge2$ 与 $T_A=0$ 矛盾 ✓）、**$N[A]$ 完美 packing（$|N[A]|=410$ ✓）、$N[A]\cap N[H]=\varnothing$** ✓✓
+- 【**★(2) 积分性事实（新 ✓✓）**】$2D_2(A)=\sum_{y\in V}\binom{r_A(y)}2$ ⟹ $$\boxed{T_A\ne1}$$ ✓✓（$T_A=1$ 会使 $2D_2=1$ 非整数 ✗）
+- 【**★★(3) 迭代判据（新 ✓✓）**】坏对 $\beta:=e(A)+D_2(A)$ ⟹ 移除 $\le\beta$ 点即得最小距离 $\ge3$ ⟹ $$\boxed{|A|\le A(9,3)+\beta}$$ ✓✓；配合 $2e+T_A+\mathrm{leak}\le\Delta_A$ 给出 $\mathrm{Bmax}(\Delta_A)$（$\Delta{=}0,1,2,3\Rightarrow0,0,1,3$ ✓）⟹ **排除判据**：$a+s-119>A(9,3)+\mathrm{Bmax}(\Delta_A)$ ⟹ 该 $(a,s)$ 不可能 ✓✓
+- 【**★★★(4) $a=44$ 全灭 ⟹ $|C_0|,|C_1|\ge45$（新，改进 C-435 的 44 ✓✓✓）**】$|C_0|=44$ 四情形逐一：$s{=}116$（$|A|{=}41>40$ ✗）｜$117$（$42>40$ ✗）｜$118$（$43>41$ ✗）｜$119$（$44>43$ ✗）⟹ **全部矛盾** ⟹ $|C_0|\ne44$ ⟹ **与 C-435 的 $a\ge44$ 合得 $|C_0|,|C_1|\ge45$** ✓✓✓
+- 【**★★$A(9,3)=40$ 来源核实（承重事实 ✓✓）**】Brouwer「Table of general binary codes」（`aeb.win.tue.nl/codes/binary-1.html` ✓ HTTP 200 ✓）表中 $n{=}10,d{=}4$ 取值 **40** ✓，经表内恒等式 $A_2(n{-}1,2e{-}1)=A_2(n,2e)$ ⟹ $A(9,3)=40$ ✓✓；**单一数值（非区间）⟹ 已定精确值** ✓；旁证 $n{=}11,d{=}4{:}72$、$n{=}12,d{=}4{:}144$ 与 Östergård–Baicheva–Kolev 1999 一致 ✓
+- 【**★(5) 迭代框架与下一靶（⚠️ 登记）**】规律 $\Delta_A=(|A|-40)+(8a-353)$ ✓ ⟹ **仅 $a=44$ 裕量为负**（$-1$ ✓）——这解释了为何只有它被此机制杀死 ✓；$a=45$（$s\ge107$、$|A|\ge33$、$\mathrm{Bmax}(12)=6\Rightarrow|A|\le46$ ✓）**不矛盾** ✗ ⟹ 需新论证 ✓（登记未做 ✓）
+- 【**边界 ✓**】零程序计算 ✓（仅整数/有限情形核对 ✓＋一处文献取证 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 119 已排除 ✗（V290）
+- 档：`docs/WITB45-2026-09-28-boundary-rigidity-kills-a44-and-yields-C0-ge-45.md`
