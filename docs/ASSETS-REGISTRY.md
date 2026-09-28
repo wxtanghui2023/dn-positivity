@@ -3125,3 +3125,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ 与 RH 之别**】RH 无限解析对象 vs 119 有限对象（$|Q_{10}|{=}1024$）⟹ 坐标系一旦正确，问题应**迅速收缩**
 - 【**下一阶段（唯一）**】专门寻找**真正跨出 $I$-geometry** 之新对象（Layer 3；须过六项检验，尤其第 (6) 项）；**不硬找 $P_1$**；**停线/换型/他择由唐先生定** ✗
 - 档：`docs/AUDIT-2026-09-28e-feasibility-gated-chain-and-the-no-leverage-conclusion.md`
+
+**📋 PLAN-2026-09-28（非 C 号）：文献链审计 ＋ 新三段式候选链 ＋ 三处校准** ✓
+- 【**文献链结论**】global relaxation chain（sphere→excess/congruence→linear ineq→weighted covering→subspace+LP→ILP→SDP）**成熟**；**119 恰落在该链未触及处**；$K_2(10,1)$ 仍记 $107\le K\le120$ ⟹ **合法开放目标**
+- 【**★新三段式候选链**】$C\xrightarrow{\text{subnormal}}(C_0,C_1)\xrightarrow{\text{refinement}}\text{finite local states}\xrightarrow{\text{discharging/LP}}\text{118 infeasibility}$；优于旧路之处＝引入 **$C$-dependent partition ＋ finite-state refinement**（非再研究固定 $I$）；模板＝**$K(9,1){=}62$**（Östergård–Blåss 2001：subspace distribution→refinement→inequivalent→LP→dim 0）
+- 【**★ 三处校准（实测）**】**(A)** subnormal 划分对 $(|C_0|,|C_1|)$ 之约束 ⟹ $11K\ge1024$ **无改进**（与 `AUDIT-d` 一致）；**(B)** "subspace distribution + LP" 在 $n{=}10$ **就是** Haas 型（C-546 已算 $94.4$ 已封）⟹ **新意必在"迭代 refinement"**；**(C)** 目标/下界比 $n{=}9$ 为 $1.19$、$n{=}10$ 为 $\mathbf{1.27}$（相对 gap 更大，绝对状态数仍小）
+- 【**★ 关键风险**】能否找到**比 generic subnormality 更强、且真依赖 $|C|\le118$** 之 refinement rule？成立 ⟹ $n{=}10$ 有限性反成优势
+- 【**首测提案 Test-1（待批准）**】$k{=}1,2$ 枚举 coset distribution 型 → 单轮 refinement → 比较 $K$ 下界是否 $>94.4$；判据：单轮即 $>94.4$ ⟹ 全量投入
+- 档：`docs/PLAN-2026-09-28-subnormal-refinement-and-the-ostergaard-blass-template.md`
