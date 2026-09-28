@@ -3141,3 +3141,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ 引擎重定位（档案自身诊断）**】Östergård–Blass 之引擎**不是 LP**（其松弛恰给体积界 ⟹ 零增益）；**是 整性 ＋ 不等价分布分类 ＋ 递归**；LP 之角色＝剪枝/校验 ⟹ 唐先生所要求之"state compatibility 约束"恰属**整性/分类层**，非 LP 层
 - 【**★ 修正后之下一实验 Test-1′（待批准，未执行）**】在**整性**层做一轮不等价分布分类：枚举 level-$m$ 整数分布（$\sum y_i{=}118$），按 $\operatorname{Aut}(Q_{10})$ 归并等价类，剔除与覆盖不相容者，看剩余类数是否骤降；判据同 Gate C
 - 档：`docs/AUDIT-2026-09-28f-Test1-preempted-by-SUBSPACELP-and-the-integrality-engine.md`
+
+**☠️ AUDIT-2026-09-28g（非 C 号）：Test-1′ 负（$\Delta_{\rm orbit}{=}0$）＋ 为何 coset 分类不可能咬** ✓
+- 【**★★ 结构性否决（一行论证）**】level-$m$ 分区：每个 coset 内 codeword 由 $(n{-}m)$ 位投影**唯一确定**（注入）⟹ **完整 local state $(P_\alpha)$ ⟺ $C$ 双射** ⟹ level-$m$ 之"完整局部状态"**就是 $C$ 本身**（无归约）
+- 【**★ size-level 实测（$K{=}118$）**】$N_{\rm raw}(m{=}1){=}\mathbf{31}$（$a{\in}[44,74]$）；$N_{\rm raw}(m{=}2){=}\mathbf{6220}$
+- 【**★ 线性闭包测试**】额外非线性条件（C-435：$P_0{\cup}P_1$ 须 9-cover）$|P_0{\cap}P_1|\le56$，但实测 $\min(a,b)_{\min}{=}44\le56$ **自动满足** ⟹ $\mathcal F_{\rm refined}^{\mathbb Z}{=}\mathcal F_{\rm linear}^{\mathbb Z}$ ⟹ **KILL**；Aut-orbit：$N_{\rm orbit}{=}1$，$\Delta_{\rm orbit}{=}0$
+- 【**★★ 诊断：为何 coset 分类不可能咬**】coset 尺寸归约把覆盖变成**线性计数**（`SUBSPACELP` 等号定理（一切 $m$）：$L(m){=}\frac{2^n}{n+1}$ 恰等号 ⟹ 无间隙）⟹ **尺寸层面不可能产生 $s_i{\not\leftrightarrow}s_j$ 型 incompatibility**
+- 【**★ 可信推论（未证，已标注）**】Östergård–Blåss 之真正力量**不来自某层约束**，而来自**递归分支 ＋ 不等价类剪枝**＝**计算力，非新不变量**；本法若成功产出为 **certificate**，非新数学层（与本项目纪律一致：solver UNKNOWN＝证据）
+- 【**判定**】Test-1′ 负 ⟹ coset-classification 路线 **KILL**；与 Test-1（LP 层 KILL）合：**coset 层之全部归约皆已否决**（限本档已检验之族）
+- 【**尚存活口（若仍推进）**】仅剩**计算型 certificate 路线**（非新不变量）
+- 档：`docs/AUDIT-2026-09-28g-Test1prime-negative-and-why-coset-classification-cannot-bite.md`
