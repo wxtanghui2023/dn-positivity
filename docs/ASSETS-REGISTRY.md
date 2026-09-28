@@ -3020,3 +3020,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ Haas 2013 潜在线索（仅登记）**】$\delta_{p-1}\ge(p-2)^{p-1}$（$n\equiv-1\bmod p$，$\delta_0{=}\cdots{=}\delta_{p-2}{=}0$）；$n{=}10,p{=}11$ **形式匹配** ✓ 但前提极强 ⟹ 标 **POTENTIAL GAP**，**非**当前路线（未证 119-code 强制该前提；未证可与 excess/profile 耦合）✗
 - 【**🛑 STOP**】不再算 Haas 2002 不等式；不重跑 2-face occupancy／excess moments／三球三阶矩／已关 Layer-2 incidence ILP／已无效 Best-code 局部容量路线 ✓
 - 档：`docs/WITHAAS-2026-09-28-haas-2002-2013-literature-verdict-and-the-K10-1-ladder.md`
+
+**☠️ C-542（09-28 20:1 · WITG1：★G1 判死（两条读法皆死）—— Haas 2013 强分支对 119-码**空洞**）** ✓
+- 【**✓✓(甲) 点式读法**】$Z{:=}\{x:\delta_0(x){=}\cdots{=}\delta_9(x){=}0\}{=}\varnothing$ 对 $K{\ge}103$ **已证**：(1) 球面剖分 $\sum_{i=0}^{10}\delta_i(x){=}11K{-}1024$；(2) $S_{10}(x){=}\{\bar x\}$ ⟹ $\delta_{10}(x){=}\delta(\bar x){\le}K{-}1$；(3) 若低十层全零则 $10K{\le}1023$ ⟹ $K{\le}102$。$K{=}119$：$285{>}118$ ⟹ $Z{=}\varnothing$ ∎
+- 【**★阈值恰为经典 excess 下界**】$K{\ge}103{\iff}Z{=}\varnothing$，$103{=}\lceil2^{10}/10\rceil{=}$ van Wee／经典 excess 下界 ⟹ Haas 2013 强分支假设与**已知下界本身**不相容（不止对 119 不适用）
+- 【**✗✓(乙) min-读法亦假**】$K{=}135$ 数值：$\min_x\delta_2(x){=}3{>}0$（$i{=}3..8$ 同）；仅 $i{\in}\{0,1,9,10\}$ 可达 0 ⟹ $\forall i{\le}9\min_x\delta_i{=}0$ **不成立**（**数值判定，非普遍证明**，已标注）
+- 【**结论**】$G_1{=}$**NO（两读法皆 NO）** ⟹ $G_1\to$ Haas 2013 路线 **DEAD**；按唐先生优先级 ⟹ 转向 **Attack A（Haas $k$-subspace flag coupling）**
+- 档：`docs/WITG1-2026-09-28-G1-is-dead-in-both-readings.md`
