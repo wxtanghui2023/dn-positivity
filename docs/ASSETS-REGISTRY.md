@@ -2151,3 +2151,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 下一靶**】① 攻 profile $3^4$（4 个 $r{=}3$ 点、12 对、12 个被迫点须落回 $P$ 的**封闭自洽** ✓）；② 攻 profile $3^32^11^1$；③ 用封闭条件把 profile 转成 $A_1$ 上的 $F_2^3$-型立方结构 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数与有限 profile 穷举 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
 - 档：`docs/WITPROF-2026-09-28-rmax-equals-3-forced-and-only-two-D2-profiles.md`
+
+**🔷 C-450（2026-09-28 14:5x · **WITPLANE：$3^4\Rightarrow P$ 是二维仿射平面（新 ✓✓）；闭环不排除 $3^4$（显式局部模型 ✗）**）** ✓
+- 【**✗✗系统性混淆（本档澄清）**】唐先生 §1 设 $S(p):=\operatorname{supp}(p)$（**坐标支撑**）且 $k=|S(p)|=r(p)$ **不对** ✗✗：$$r(p)=\big|\{i:p\oplus e_i\in A_1\}\big|\ \ \text{（\textbf{方向集} }D(p)\text{）}\ \ne\ \operatorname{supp}(p)=\{i:p_i=1\}$$ ✓ 二者**一般无关**；反例：$p=e_1{\oplus}\cdots{\oplus}e_5$（weight 5）而 $D(p)=\{7,8,9\}$ 完全可能 ✓ ⟹ §2 的"$|q|{=}k{-}2$"、§3–§5 的"weight-3 $\Rightarrow$ 三个单位向量入 $P$"、§4 的"2-交 3-一致族"、§6 的 (6)(7)、§8–§9 的型 A／型 B **全部不成立** ✗✗
+- 【**✓✓(1) 纠正后的闭环更强（新）**】$p\in P$、$i\ne j\in D(p)$：$p\oplus e_i,p\oplus e_j\in A_1$ 皆与 $p$ 距离 1 ⟹ 共同邻点 $=\{p,\ p\oplus e_i\oplus e_j\}$ ⟹ $$\boxed{q:=p\oplus e_i\oplus e_j\in P,\ r(q)\ge2}$$ ✓✓；且 $e_i\oplus e_j$（$i<j$）互异 ⟹ **闭环点互异** ✓✓
+- 【**★★(2) profile $3^4$ 的精确结构（新 ✓✓）**】每个 $p_a$ 的 $\binom32=3$ 个闭环点与 $p_a$ 合为 **4 点 = $P$** ⟹ $$\boxed{P=\{x,\ x\oplus u,\ x\oplus v,\ x\oplus(u\oplus v)\}}\ \big(u{=}e_i{\oplus}e_j,\ v{=}e_i{\oplus}e_k,\ u{\oplus}v{=}e_j{\oplus}e_k✓\big)$$ ⟹ $\{0,u,v,u\oplus v\}$ 对 XOR 封闭 ⟹ $$\boxed{P\ \text{是 }Q_9\ \text{中的二维仿射平面}}$$ ✓✓
+- 【**⚠️(3) 但闭环\ \textbf{不排除} $3^4$（显式局部模型 ✓）**】$A_1=\{e_i,e_j,e_k,e_i{\oplus}e_j{\oplus}e_k\}$（4 点，$e(A_1){=}0$ ✓）、$P=\{0,e_i{\oplus}e_j,e_i{\oplus}e_k,e_j{\oplus}e_k\}$ ⟹ $r(p)=\mathbf{(3,3,3,3)}$ ✓、$\sum r=12$ ✓、$2D_2=12$ ⟹ $D_2=6$ ✓✓ ⟹ **闭环条件不排除 $3^4$** ✗✓（但**全局**可完成性未验 ⚠️：须 $|A|{=}45$、$|U|{=}119$、其余 $N(A_1)$ 点落 $U^c$ ✓）
+- 【**✓(4) 其他正确项**】§11 的 $2D_2=\sum_P\binom{r_p}2=4\binom32=12\Rightarrow D_2=6$ 饱和等号 ✓✓；$r_{\max}\le3\Rightarrow D_2\le6$ ✓（C-449 ✓）
+- 【**★(5) 新纪律 ✓✓**】凡使用 $\operatorname{supp}$／支撑类论证，**必须先显式声明是"坐标支撑"还是"方向集"** ✓✓（防第 5 次同型混淆 ✓）
+- 【**★(6) 下一靶】① $3^4$：由"$P$ 二维仿射平面 ＋ $A_1$ 四点结构"做**全局**计数 ✓；② $3^32^11^1$：$r{=}2$ 点（1 个闭环点 ✓）与 $r{=}1$ 点（无闭环 ✓）之相容 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数与有限结构核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 $3^4$ 已排除 ✗（V290）
+- 档：`docs/WITPLANE-2026-09-28-profile-3-4-forces-an-affine-plane.md`
