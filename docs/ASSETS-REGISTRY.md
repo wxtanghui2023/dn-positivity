@@ -3344,3 +3344,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**机制说明**】三式左端右端皆为构型之函数 ⟹ 恒成立 ⟹ 限制构型空间但**不产生 $E$ 之下界不等式**；要 $E\ge153$ **必须引入独立不等式**（如 Zhang 之 pair covering inequality）
 - 【**下一代攻击点**】真正缺口 ＝ **上界** $N_1{+}N_2\le70$（"散布性 vs 重叠"之不等式）——恰为 **Zhang 1991 pair-covering inequalities（$\to105$）与 BÖW（$\to107$）** 所提供之类型 ⟹ 唯一有据之下一步：取 Zhang 1991 原式，观其如何约束 $(N_1,N_2)$ 与 face 占用
 - 档：`docs/AUDIT-2026-09-28ac-moment-identities-verified-and-the-upstream-bound-gap.md`
+
+**🔺 AUDIT-2026-09-28ad（非 C 号）：$T{=}\triangle(G_2)$ 确认 ✓，但 $(E)$／$(F)$ **实测失效**（49/120）＋ $d_1$ 口径冲突** ✓
+- 【**✓✓ (B) 三角形接口确认（本档最有价值）**】实测 $T{=}\sum_x\binom{a(x)}3=138=\triangle(G_2(C))=138$ ⟹ $\boxed{T=\triangle(G_2(C))}$；几何理由：三球交表仅 $(1,1,2)$-型$\Rightarrow1$、$(2,2,2)\Rightarrow1$ 非零，且 $(1,2,2)$ **不可能**（二进无解）⟹ $\boxed{\sum_x\delta^3=E+6\triangle(G_2(C))}$（**三阶矩恰为 $G_2$ 之三角形数**）
+- 【**✗✗ 口径冲突（必须修正）**】实测 $\sum_{c\in C}d_1(c)=2N_1=\mathbf{100}$ vs $\sum_x\delta(x)=E=\mathbf{296}$ ⟹ **不相等**；根源：$\delta(c)=d_1(c)$ 仅对**码字** $c$ 成立（$a(c)=1+d_1(c)$），而 $\sum_x\delta(x)$ 系对**全部 1024 点**求和 ⟹ $E{=}142$ **不给** $N_1$ ⟹ **$N_1{=}71$ 及由此得之 $(G)(H)$ 皆不成立**
+- 【**✗✗ (E)／(F) 实测失效**】$(E)$ $d_2\le\min(9d_1,45)$ **违反 49**；$(F)$ $d_2+q\le9d_1$ **违反 49**；$(I)$ $q\le\binom{d_1}2$ **违反 0** ✓。诊断：$\sum_{y\in S_2(c)}m(y)=9s$ 成立 ⟹ $\#\{m\ge1\}\le9s$ ✓，但 $\#\{y\in S_2(c):m\ge1\}=|N(A)\cap S_2(c)|$ **≠** $d_2(c)=|C\cap S_2(c)|$（二者无包含关系）
+- 【**可存活资产**】✓$(B)$ $T=\triangle(G_2)$；✓$(I)$ $0\le q\le\binom{d_1}2$；✓$\sum\delta^3=E+6\triangle(G_2)$；✓三阶矩不能排除 $106$（$T{=}0$ 与 $E{=}142$ 相容，唐先生 §6 **正确**）。实测数据：$\sum_c d_1=100$；$\sum_c d_2=298$；$\sum_c q=4$；$\sum_c\binom{d_1}{2}=41$；$\sum\delta^2=500$
+- 【**正确的下一步**】需重建**正确**之局部不等式（形如 $|C\cap S_2(c)|\le F(d_1(c),\text{局部构型})$，须由**覆盖要求**逼出、非仅计数）；唐先生"距离1×距离2 耦合"方向正确但需换械 ⟹ 仍归结到 **Zhang 1991 pair-covering inequality** 之类型
+- 档：`docs/AUDIT-2026-09-28ad-triangle-interface-confirmed-but-E-F-refuted-and-the-d1-conflation.md`
