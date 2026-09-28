@@ -2822,3 +2822,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(4) 后续**】唯一可闭合路线 = **类型级有限命题**（C-512）✓；门 1 书面化（纯距离/支撑）✓；门 2A/2B 两向分开 ✓；门 3 取消/改写 ✓；**禁止**再走 owner-计数容量矛盾 ✗✓、把"$C{=}3\Rightarrow C\ge4$"当已证 ✗
 - 【**边界 ✓**】引 C-510…C-515 之实测 ✓；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查为写后补跑（据实 ⚠️；真输出已注入 ✓，皆自命中 1 ✓）**；**不作路线裁定** ✗；**明确否认** $C{=}3\Rightarrow\neg1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
 - 档：`docs/WITGATE-2026-09-28-full-chain-audit-ledger-and-two-conclusion-level-corrections.md`
+
+**🚩 C-517（2026-09-28 15:5x · **WITGA：Gate A 答案 ＝\ \textbf{否}（$\lambda{=}1$ 槽\ \textbf{从不}属 $E(w^\ast)$，**0/640**）；新刚性事实 $\pi(w^\ast)\cap\{\lambda{=}1\ \text{槽}\}{=}\varnothing$；唐先生 §4 之\textbf{第二种情形}为实**）** ✓
+- 【**✗✓(1) Gate A 为否**】$i_{\rm one}\in\pi(w^\ast)$ 之实例 $=\mathbf0/640$ ⟹ 唯一 $\lambda{=}1$ 槽**恒为私有槽**（其 $|W|{=}1$ 之点不是 $w^\ast$）⟹ **唐先生 §4 之规范化（若成立则 $W_{11}{=}\{w^\ast\}$）不能用** ✗✓
+- 【**✓✓(2)★新刚性事实**】$$\boxed{\pi(w^\ast)\cap\{i_{\rm one}\}=\varnothing}$$ ✓✓（640/640）—— 双支撑对**恒避开** $\lambda{=}1$ 槽 ⟹ 双支撑对之两槽**皆为 $\lambda{=}2$** ✓✓；$\lambda{=}1$ 槽**完全私有** ✓✓
+- 【**✓(3) 八格联合分布**】$(i_{\rm one},\pi)$：$i_{\rm one}{=}0\Rightarrow\pi\in\{\{1,3\}(79),\{2,3\}(79)\}$；$i_{\rm one}{=}1\Rightarrow\{\{0,2\}(81),\{2,3\}(81)\}$；$i_{\rm one}{=}2\Rightarrow\{\{0,1\}(81),\{1,3\}(81)\}$；$i_{\rm one}{=}3\Rightarrow\{\{0,1\}(79),\{0,2\}(79)\}$ ⟹ 每 $i_{\rm one}$ 恰配**两**个 $\pi$ ＝ **避开 $i_{\rm one}$ 的共端点对** ✓✓
+- 【**★(4) 四正之完整 incidence 结构（已定型）**】$\pi{=}\{u_1,u_2\}$（皆 $\lambda{=}2$）、第四槽 $u_3$（$\lambda{=}2$）、$\lambda{=}1$ 槽 $u_0$：$W_{u_1}{=}\{w^\ast,x_1\}$、$W_{u_2}{=}\{w^\ast,x_2\}$、$W_{u_3}{=}\{y_1,y_2\}$、$W_{u_0}{=}\{q\}$ ⟹ 相异点 $6$、incidence $7$、支撑多重集 $(2,1,1,1,1,1)$ ⟹ **四正结构可完全参数化为 $(\pi(w^\ast),R(w^\ast),u_0,\text{五点位置})$**，且 $\pi\cap\{u_0\}{=}\varnothing$ ✓✓
+- 【**✓✓(5) 逐条核验**】唐先生 §4 之**预判**（"若不成立，则 $w^\ast\subseteq$ 两个 $\lambda{=}2$ 槽，而唯一 $\lambda{=}1$ 槽完全私有"）**完全命中** ✓✓✓；§1（incidence 多重集 $(2,1,1,1,1,1)$）**成立** ✓✓；§7（private witness propagation）**方向正确** ✓✓（本档给其精确参数化）；§8（勿再追求"四正 $\Rightarrow\exists$ owner$\ge4$"）**同意** ✓✓
+- 【**★(6) 下一靶（照 §10 之序）**】**Gate B**：$w^\ast$ 之 owner-3 profile 三型完备性（由四点 radius-2 约束 ＋ $|\mathrm{own}(w^\ast)|{=}3$ ＋ $d(ab){=}d(uv){=}4$ ⟹ $R(w^\ast)\in\{R_1,R_2,R_3\}$ —— 局部有限距离引理 ✓✓）；**Gate C**：固定 $w^\ast$ ＋ $\pi\cap\{u_0\}{=}\varnothing$ ⟹ 五 private witness 之延拓恰为 $T_1,T_2$ 两型；**接口已备**：$(\pi,R(w^\ast),u_0,\text{五点位置})$ ✓✓；**禁止**再走 owner-计数容量矛盾 ✗✓、再用"$\lambda{=}1$ 槽属 $E(w^\ast)$"之规范化 ✗✓
+- 【**边界 ✓**】有限穷举 ✓（640 实例之 $i_{\rm one}/\pi$ ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查为写后补跑（据实 ⚠️；真输出已注入 ✓）**；**不作路线裁定** ✗；**不声称** Gate B/C 已证 ✗；**明确否认** $C{=}3\Rightarrow\neg1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
+- 档：`docs/WITGA-2026-09-28-gate-A-is-false-lambda-one-slot-is-private.md`
