@@ -2549,3 +2549,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓(I) 记账**】「自对偶」继续停用 ✗；用**自然双射** ✓；$\mu{=}384$ 标"实例计数" ✓
 - 【**边界 ✓**】有限穷举 ✓（160 三元组 ＋ 40 顶点 ＋ 780 对 ＋ 对角交点全量 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查确已先跑后写 ✓✓**（四词皆 0 ✓）；**不作路线裁定** ✗（V290）
 - 档：`docs/WITLAM40-2026-09-28-signature-theorem-and-the-two-8-regular-pair-graphs.md`
+
+**🔗 C-490（2026-09-28 14:3x · **WITCHOICE：$\mathcal T\cong E(H_1)$ ✓✓；$|W_e|\equiv2$ 且 $w(e)\in W_e$ ✓✓；\textbf{闭环} $r_w{\equiv}\mathbf4$、$r_{\bar w}{\equiv}\mathbf4$、$r_w{+}r_{\bar w}{\equiv}\mathbf8{=}d_{H_1}{=}d_{H_2}$ ✓✓✓；✗ 不能仅由 $H_1$ 重建**）** ✓
+- 【**(0) ✓✓✓$\mathcal T\cong E(H_1)$ 双射**】160 triple ↔ 160 条 $H_1$-边（$\lambda{\equiv}1$ 之边只属一个 triple ⟹ **单射** ✓✓）⟹ $$\boxed{X\leftrightarrow\mathcal T\leftrightarrow E(H_1)}$$ ✓✓ ⟹ 每特殊点 $x$ 可视为 $H_1$ 之一条边 ⟹ $P_3(x)$ **可重读为 128 条 $H_1$-边之子集** ✓✓（唐先生之展望 **已可正确定义** ✓）
+- 【**(1) ✓✓✓两候选结构**】$W_e{=}N_{H_2}(u)\cap N_{H_2}(v)$ ⟹ $|W_e|\equiv\mathbf2$ ✓✓（160/160）；$w(e)\in W_e$ ✓✓（160/160 True）⟹ "两候选 ⟹ 实选一" **完全成立** ✓✓
+- 【**(2) ✓✓✓闭环恒等式**】$$\forall v:\ r_w(v){=}\mathbf4,\quad r_{\bar w}(v){=}\mathbf4$$ ✓✓（各 40/40）；$\sum r_w{=}\sum r_{\bar w}{=}160$ ✓ ⟹ $$\boxed{r_w(v)+r_{\bar w}(v)\equiv\mathbf8=d_{H_1}(v)=d_{H_2}(v)}$$ ✓✓✓ —— 唐先生之"4+4=8 闭环" **精确成立** ✓✓（每码字 8 个"第三点角色"＝8 度 ✓）
+- 【**(3) ⚠️$H_1$-边对之 $H_2$-关系表**】共端点 $(480,640,\mathbf0)$／距离 2 $(3920,1280,1280)$／不相交 $(3200,640,1280)$；合计 $\binom{160}2{=}12720$ ✓。**观察**：共端点者**绝不**处 $H_2$-距离 2 ✓（0 例）；但同关系下计数**不恒定** ✗ ⟹ 选择映射 $w$ **不能仅由 $H_1$ 关系重建** ✗（需 $H_2$ 或更多数据 ✓）
+- 【**★(4) 下一靶**】① 将 $P_3(x)$ 经 $X\leftrightarrow E(H_1)$ 重读为 **128 条边之子集** 并求**边关系刻画** ✓（是否 $d_{H_1}$／$H_2$-共同邻点条件 ✓）；② $r_w{\equiv}r_{\bar w}{\equiv}4$ ⟹ $w$ 是否诱导 8-正则结构；$H_1\cong H_2$? ✓；③ $H_1,H_2$ 之**谱** ✓
+- 【**✓(5) 逐条核验**】唐先生"triple ＝ 一条 $H_1$-边 ＋ 一个共同 $H_2$-邻点"✓✓、"$r_w{=}r_{\bar w}{=}4$\ 双预测"✓✓✓、"$X\leftrightarrow\mathcal T\leftrightarrow E(H_1)$"✓✓"皆中**；唯 §③"少数固定值"⟹ **不成立** ✗（同关系下 $d_{H_2}$ 计数不恒定 ✓）
+- 【**边界 ✓**】有限穷举 ✓（160 三元组 ＋ 160 边 ＋ $\binom{160}2$ 边对全量 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查确已先跑后写 ✓✓**（四词皆 0 ✓）；**不作路线裁定** ✗（V290）
+- 档：`docs/WITCHOICE-2026-09-28-two-candidates-actual-choice-and-the-closed-loop.md`
