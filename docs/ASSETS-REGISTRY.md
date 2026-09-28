@@ -2046,3 +2046,15 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 档案接口 ✓**】① MCOVER／OBREVERSE（Östergård–Blass 子空间＋LP ✓）＝本类极值函数的标准工具 ✓；② DLP1A/1B（Delsarte LP／SDP ✓）＝$K(9,1)$ 侧锚点 ✓；③ C-435 的 $\mathrm{cov}_9$ 闸门 ＝ 此处 $s\ge\mathrm{min\_excess}_9$ ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 119 已排除 ✗；不声称 $\mathrm{min\_excess}_9$ 路线必成 ✗（V290）
 - 档：`docs/WITGATE-2026-09-28-capacity-gate-crossover-49-125-and-min-excess-restatement.md`
+
+**⚙️ C-441（2026-09-28 11:3x · **WITEFF：有效容量闸门 $L_A\le9a+s-512$ ＋ 双侧合并式修正 ＋ 边界刚性**）** ✓
+- 【**✗必改一（重复陷阱，第 3 次）**】前提**不是** $U^c\subseteq N[A]$ ✗，而是 $X_L\subseteq N(A)$ ✓✓（$U^c\subseteq N(C_0)=N(H\cup A)$ ✗；仅当 $x$ 无 $H$-邻（$x\in X_L$）才有 $N(x)\cap C_0\subseteq A$ ✓）⟹ **规则化**：本线凡"每个外部点"型断言，**一律先问是否仅对 $X_L$ 成立** ✓✓（同源：C-437 §0(3)／C-438 §1 ✗）
+- 【**✓(2) 精化恒等式（本档核验 ✓✓）**】$\sum_{x\in X_L}r_A(x)=|X_L|+T_A\le\sum_{x\notin A}r_A(x)=9|A|-2e(A)$ ⟹ $$\boxed{|X_L|\le9|A|-2e(A)-T_A}$$ ✓✓（① $X_L\cap A=\varnothing$ ✓；② $x\in X_L\Rightarrow r_A(x)\ge1$ ✓；③ $\sum_V r_A=9|A|$、$\sum_A r_A=2e(A)$ ✓）
+- 【**★★(3) 精化闸门（本档核心 ✓✓）**】记 $L_A:=2e(A)+T_A$ ✓（"有效容量损失"）⟹ $$\boxed{L_A\ \le\ 9a+s-512}\quad\iff\quad\boxed{9a+s\ \ge\ 512+L_A}$$ ✓✓（＝C-439 闸门 ＋ **层 $A$ 的内部结构项** ✓✓）
+- 【**✗必改二（双侧合并式算术）**】唐先生所写 $16s+L_A+L_B\le2189$ **不成立** ✗（用了 $a+b=119$ 代入，而界施于 $|A|,|B|$ ✓）；**正确**：$|A|+|B|=2s-119$ ⟹ $$\boxed{L_A+L_B\ \le\ 2s+47}$$ ✓✓；取 $L\ge2e$ 得 $$\boxed{e(A)+e(B)\ \le\ s+23}$$ ✓✓（**新且更紧**：唐先生版给 $s\le136.8$ 空转 ✗）
+- 【**★★(5) 边界刚性（新 ✓✓）**】$L_A\le9a+s-512$ 在 $a{=}44,s_{\min}{=}116$ 处给 $L_A\le0$ ⟹ $$\boxed{e(A)=0\ \wedge\ T_A=0}$$ ✓✓（$|A|=41$ ✓）⟹ **首次出现对"层内部几何"的必要条件** ✓✓（比纯容量多一层结构 ✓；但**尚非矛盾** ✗：独立集可达 256 ✓）；最紧处 $a\in\{44,46,49\}$（$L_A\le0$ 型 ✓）
+- 【**✓(6) $\rho_A$ 已核（唐先生 §7–§9 ✓）**】$|X_L|\le\sum_{a\in A}\rho_A(a)$、$\rho_A(a):=\#\{i:\exists j\ne i,\ a\oplus e_i\oplus e_j\in B\}\le9$ ✓（选择函数给单射 ✓）⟺ $\rho_A$ 是 $9|A|$ 的**方向级分解** ✓（与 (2) 的 $L_A$ 同族 ✓）
+- 【**⚠️(7) 为何仍不自动矛盾（诚实）**】$L_A$ 可为 $0$ ✗（取 $A$ 独立集且每个 $x\in X_L$ 恰一 $A$-邻 ✓）；$e(A)>0$ **不被强制** ✗（$a{=}59,s{=}62\Rightarrow|A|{=}2$ ✓）；⟹ 精化的作用 ＝ 把闸门**参数化到层内部几何** ✓；**唯一活口** ＝ 证明某 $(a,s)$ 区域强制 $L_A$ 超余量 ✗（需 $e(A)$／$T_A$ 下界 —— **目前无** ⚠️）
+- 【**与 C-440 的关系 ✓**】互补：C-440 的 $\mathrm{min\_excess}_9$ 闸门管 $|U^c|$ 可覆盖量（$a\le49$ 主导 ✓）；本文 $L_A$ 闸门管层内部几何 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $L_A$ 有正下界 ✗；不声称 119 已排除 ✗（V290）
+- 档：`docs/WITEFF-2026-09-28-effective-capacity-gate-LA-bound-and-boundary-rigidity.md`
