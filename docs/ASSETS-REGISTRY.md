@@ -2986,3 +2986,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★下一靶**】$\deg(S){=}1$ 反设下唯一 $R{=}\{a,b\}$，取 $a'\in D^c{\setminus}\{a,b\}$ 之 $x_{S,a'}$ 核其覆盖冲突 —— 证明 $\deg(S){\neq}0,1$ ✓；**禁止**纯计数 ✗、$F,G$ 反推 ✗；**不声称** $\deg(S){\ge}2$ 已证 ✗
 - **边界**：有限穷举 ✓；不跨空间 ✓；**不作路线裁定** ✗；**明确否认** $C{=}3{\Rightarrow}{\neg}1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
 - 档：`docs/WITDIST-2026-09-28-deg2and3-equal-distinct-R.md`
+
+**🔒 C-535（2026-09-28 18:0x · WITCLOSE：★$\deg(S)\neq0,1$\ 之\textbf{结构证明}（$x_{S,a'}$→覆盖者$K$→$R'\in\mathcal R_i(D,S)$→与 $\deg(S)\le1$ 冲突）—— 链闭合 ✓✓✓）** ✓
+- 【**✓✓✓ $\deg(S)\neq0$ 证明**】任 $a'\in D^c$：$x_{S,a'}=I_i\oplus\mathbf1_{S\cup\{a'\}}$，其覆盖者 $K$ 强制 $d(K,I_i){=}4$，$\mathrm{supp}(I_i\oplus K){=}S\cup R'$（$R'\in\binom{D^c}{2}$），$\Longrightarrow R'\in\mathcal R_i(D,S)\neq\varnothing$ ✓
+- 【**✓✓✓ $\deg(S)\neq1$ 证明**】反设 $\mathcal R_i{=}\{R\}$：取 $a'\in D^c{\setminus}R$，构造 $x_{S,a'}$，其覆盖者 $K$ 产生 $R'\ni a'$，$\Longrightarrow R'\neq R$，$\Longrightarrow |\mathcal R_i(D,S)|\ge2$，矛盾 ✓
+- 【**★链闭合**】$d(I_i,I_j){=}4\Rightarrow D,|D|{=}4\Rightarrow C_{ij}=\{I_i\oplus\mathbf1_S\}\Rightarrow|\mathrm{own}(w_S)|=2+\deg(S)\Rightarrow\deg(S)\ge2$（本档）$\Rightarrow|\mathrm{own}(w_S)|\ge4\Rightarrow C_{ij}\cap\mathcal S{=}\varnothing\Rightarrow W_{ij}{=}\varnothing\Rightarrow1111\notin M(O)$ ✓
+- 【**纯结构 ✓✓**】未使用 $F,G$／$\Sigma\lambda$／$\lVert T\rVert_1$／$\mathrm{OrbType}{\to}\lambda$；**不作路线裁定** ✗；**不声称** $C{=}3{\Rightarrow}{\neg}1111$ 已 ✗；**明确否认** $128{=}145{-}17$ 已 ✗（V290）
+- 档：`docs/WITCLOSE-2026-09-28-deg-not-0or1-structured-proof.md`
