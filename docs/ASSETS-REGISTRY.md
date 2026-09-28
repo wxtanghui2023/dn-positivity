@@ -3045,3 +3045,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**重定向（唯一活口）**】$103{\to}107$ 不可能来自 $H_k$（只给 $93.09$）⟹ 必来自**同余层**：van Wee 1988 → Habsieger → Haas 2013；核心 $=\delta_i(x)\pmod p$ 与非负性/层间递推之耦合；下一轮唯一 P1 问题＝"$n{=}10,|C|{=}119$ 下同余约束能否与已有 $\delta$-profile／$A_i$／incidence 数据产生新整数碰撞"
 - 【**⚠️ 阻塞**】Haas 2002/2013 正文不可得（403）；**若唐先生有 PDF 上传即可**，收件后只审计 congruence machinery ＋ $n{=}10$ 可用边界，不从摘要反推
 - 档：`docs/WITC544-2026-09-28-Hk-flag-route-DEAD-and-the-C543-correction.md`
+
+**☠️ C-545（09-28 20:1 · WITC545：★Haas-2013 congruence 路线 = DEAD（奇偶门）—— 正文级引文落槌）** ✓
+- 【**★判定**】$\boxed{\text{Haas-2013 congruence route = DEAD at parity gate}}$：$n{=}10$ 偶 ⟹ Theorem 3 假设（**odd $n$**）不满足 ⟹ congruence machinery 不可用
+- 【**门检证据（正文级逐字 ✓）**】(E1) Theorem 3："$1\le q\le n$ and **odd $n$**. Assume $q$ and $n+1$ do not have a common odd prime divisor."；(E2) Theorem 4 证明："Moreover $n$ is odd, since (10) cannot be satisfied for even $n$ when $p\ge5$ holds."；(E3) Theorem 5 证明开头："Without loss of generality we may assume that $n$ is odd, since for even $n$ Theorem 5 easily follows from the bound $K(n,1)\ge2^n/n$ due to Johnson and van Wee."；(E4) 常数正文确认 $\delta_{p-1}(x)\ge(p-2)p-1$（**非** 指数型 ✗）
+- 【**三校正**】(1) $p{=}11$ 形式匹配（$10\equiv-1\bmod11$）**不足**——Theorem 3 另有独立假设 $n$ odd；(2) Theorem 4 更不需审——**原文自陈**偶 $n$ 下 $\delta_0{=}\cdots{=}\delta_{p-2}{=}0$ 不可能（比 C-542 之 $Z{=}\varnothing$ 更早的**参数级阻塞**）；(3) Theorem 5 偶 $n$ ⟹ $K(n,1)\ge2^n/n$ ⟹ $K(10,1)\ge102.4\Rightarrow\mathbf{103}$（旧层级，非 119）
+- 【**结论**】无需做 Theorem 3→4→5 之 $n{=}10$ 翻译 ✓
+- 【**下一目标**】**Haas 2002 condition (15)** 之 P1 门检（**不同机制**）；须查其在 $n{=}10$、$K{\ge}119$ 时能否产生超出 $103$ 之量 ⚠️
+- 档：`docs/WITC545-2026-09-28-Haas2013-congruence-route-DEAD-at-parity-gate.md`
