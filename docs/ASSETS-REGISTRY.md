@@ -2370,3 +2370,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(6) 下一轮唯一靶点（照唐先生）**】$$\boxed{\text{Type II}\to(|U|,|H|,|X_L|)\to q_{\min}\ \text{vs}\ q_{\max}^{\text{layer}}}$$ 先问 Type II 全体合法状态之 $Q_{\max}{=}\max q$ 与 $L_{\rm cov}{=}\min|X_L|$；若 $L_{\rm cov}{>}2Q_{\max}$ ⟹ Type II 死 ✓；否则须进精细分配（共同邻落 $U$ vs $X_L$）⟹ **不依赖 197 ✓**
 - 【**边界 ✓**】零程序计算 ✓（符号/整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（三词均 0 ✓）；**不作路线裁定** ✗（V290）
 - 档：`docs/WITUOBJ-2026-09-28-U-object-declaration-and-the-clean-bridge-XL-to-q.md`
+
+**🅿️ C-472（2026-09-28 13:2x · **WITPOBJ：$P{:=}P_0\cup P_1$ 命名固化；Test 1/2 执行 ⟹ $q$-桥**不能**杀 Type II（$Q_{\max}\approx1339\gg197$）；单调下界障碍**）** ✓
+- 【**✓✓(1) 命名固化（照唐先生令）**】$$\boxed{P:=P_0\cup P_1}\quad(|P|{=}119-|H|,\ |P^c|{=}512-s)$$ **硬纪律**：$$\boxed{U_{\rm ball}:=\bigcup_{a\in A_0}N(a)\ \text{不得再进入任何 }U/P\ \text{记法}}$$（防第 7 次同型混淆 ✓）。同时并存之两个 $C$ 义须声明：$C_0,C_1$＝半侧投影；$C_3:=A_0\cap(3,3,3,5)$＝层计数 ✗ 同符号不同物
+- 【**✓✓(2) Test 1：Type II 层数据几乎约束不到 $q$**】Type II 之约束对象 $=A_0\subseteq A=C_0\setminus\{h\}$，$|A_0|\le40$，$|C_0|\ge45$ ⟹ $C_0\setminus(A_0\cup\{h\})$ 至少 **4** 点无约束；$C_1$（$\ge45$）**完全无约束** ⟹ **Type II 至多触及 41/119 个半侧点** ⟹ $Q_{\max}^{\rm layer}$ 几无压缩 ⚠️。自由上界：平凡 $q\le36\min(|C_0|,|C_1|)\le\mathbf{2124}$；Cauchy–Schwarz 精化 $q\le\frac{45\sqrt{|C_0||C_1|}}{2}\approx\mathbf{1339}$（据 $\sum_x r_S^2=9|S|+2A_2(S)\le45|S|$）
+- 【**✓✓(3) Test 2：无 $s$ 区间被杀**】$q_{\min}(s)=\lceil(8s-559)/2\rceil\le\mathbf{197}$（$s{=}119$）；供给端 $Q_{\max}\gtrsim1339\gg197$ 对所有 $62\le s\le119$ 成立 ⟹ $$\boxed{\text{无 }s\ \text{区间被杀}\Longrightarrow q\text{-桥不能杀 Type II}}$$ ⚠️
+- 【**✓✓(4) 障碍定位（本档）：单调下界障碍**】覆盖条件 $P^c\subseteq N(C_0)\cap N(C_1)$ 是**逐点 $\ge1$ 型** ⟹ 只给 $\sum_x r_0r_1$ 的**下**界（$8s{-}559$ 线之来源 ✓）⟹ $$\boxed{\text{覆盖条件永远给不出 }q\ \text{的上界}}$$ ✗（＝C-425 已记"covering inputs are monotone-down" ✓✓）；$q$ 之上界须来自**距离分布／LP 型**输入 ⟹ 当前资产池**无**此类工具 ✗
+- 【**✗(5) Test 3（shielding）之预判**】其拆分（$X_L$ 项＋$P\setminus N(H)$ 项）提法正确 ✓，但两式为**同一恒等式**之拆分 ⟹ 拆分本身不产生新上界 ✗；shielding 项只给下界 ⟹ **Test 3 as stated 亦不能闭合** ⚠️
+- 【**★(6) 可选方向（登记，不作裁定 ✗）**】① 引入距离分布／LP 型上界工具（$q$ 上界之源）；② 回 Type III（$|F|{=}3$ 类结构定理）；③ 重审 $C_0,C_1$ 之整体约束（覆盖侧是否存在**上界型**输入 ✗）
+- 【**边界 ✓**】零程序计算 ✓；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（`自由上界` 1 命中属**空间 A** ⟹ 标"空间 A 同名，不计" ✓；余两词 0 ✓）；**不作路线裁定** ✗（V290）
+- 档：`docs/WITPOBJ-2026-09-28-P-convention-and-Test12-no-kill-monotone-lower-bound-obstruction.md`
