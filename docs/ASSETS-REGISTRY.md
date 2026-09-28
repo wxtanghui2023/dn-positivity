@@ -3151,3 +3151,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**判定**】Test-1′ 负 ⟹ coset-classification 路线 **KILL**；与 Test-1（LP 层 KILL）合：**coset 层之全部归约皆已否决**（限本档已检验之族）
 - 【**尚存活口（若仍推进）**】仅剩**计算型 certificate 路线**（非新不变量）
 - 档：`docs/AUDIT-2026-09-28g-Test1prime-negative-and-why-coset-classification-cannot-bite.md`
+
+**🔍 AUDIT-2026-09-28h（非 C 号）：$\Phi_2$（全局方向重数剖面）＋ 五标准逐条判定** ✓
+- 【**★ 定义（本档首提）**】$\Phi_2(C){:=}\{|A(x)|\}_x$，$A(x){=}\{c:d(c,x){=}1\}$；动机：$x$ 为距离-2 对中点 $\iff c,c'{\in}A(x)$ 相异（$c{=}x{\oplus}e_i,c'{=}x{\oplus}e_j,i{\ne}j$）⟹ 天然的"pair→forced third-order"载体
+- 【**✓ 恒等式（实测）**】$\sum_x\binom{|A(x)|}2{=}2N_2$（三例：4572／3324／554 全等 ✓）；$\sum_x|A(x)|{=}10K$
+- 【**⚠️ 距离分布决定性门：未决**】8 个随机覆盖码（$K{=}143..498$）给 8 个互异距离分布 ⟹ 无同分布对可比；**理论论证（未证）**：$\Phi_2$ 之更高阶矩含**距离-2 三角** $T_{222}$ 型量，而距离分布仅给对数 $N_2$ ⟹ $\Phi_2$ 应**严格细于**距离分布 ⚠️
+- 【**★ 五标准判定**】1（$\neq$covering identity）✓；2（$\neq$coset reencoding）✓；3（$\neq$distance-dist reencoding）**未决** ⚠️；4（genuine incompatibility）**未测** ✗；5（对 $\|C\|{=}118$ 有作用）**未测** ✗ ⟹ 按"缺一不可" **尚未达标**
+- 【**建议**】先攻标准 3（最廉价且可早期否决），过再攻 4；**不可跳步**
+- 【**★ 地图命中**】`WITPLANE-2026-09-28` 已有**方向集** $r(p){:=}|\{i:p{\oplus}e_i{\in}A_1\}|$（C-450，$S$-$I$ **局部**版）⟹ 与本档**全局**剖面为**不同对象** ✓
+- 档：`docs/AUDIT-2026-09-28h-Phi2-direction-multiplicity-profile-and-the-five-criteria.md`
