@@ -3352,3 +3352,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**可存活资产**】✓$(B)$ $T=\triangle(G_2)$；✓$(I)$ $0\le q\le\binom{d_1}2$；✓$\sum\delta^3=E+6\triangle(G_2)$；✓三阶矩不能排除 $106$（$T{=}0$ 与 $E{=}142$ 相容，唐先生 §6 **正确**）。实测数据：$\sum_c d_1=100$；$\sum_c d_2=298$；$\sum_c q=4$；$\sum_c\binom{d_1}{2}=41$；$\sum\delta^2=500$
 - 【**正确的下一步**】需重建**正确**之局部不等式（形如 $|C\cap S_2(c)|\le F(d_1(c),\text{局部构型})$，须由**覆盖要求**逼出、非仅计数）；唐先生"距离1×距离2 耦合"方向正确但需换械 ⟹ 仍归结到 **Zhang 1991 pair-covering inequality** 之类型
 - 档：`docs/AUDIT-2026-09-28ad-triangle-interface-confirmed-but-E-F-refuted-and-the-d1-conflation.md`
+
+**⚖️ AUDIT-2026-09-28ae（非 C 号）：穷举定谳——交大小 $\in\{0,1\}$（"3 中心"否）＋ $n_0$ 为主项（$(5)/(F)$ 假之根因）** ✓
+- 【**★★ 穷举定谳（全量 $\binom{120}3$）**】三球交大小**只取 $0$ 或 $1$**——非零之距离型**仅两类**：$(1,1,2)\Rightarrow$ 交 $1$（**41 次**）、$(2,2,2)\Rightarrow$ 交 $1$（**97 次**）；其余全为 $0$；**无 3 者** ✗✗。逐例：$\{0,e_1,e_2\}\Rightarrow$ 共同 $1$-中心 $=\{0\}$（数 $=\mathbf1$）；$\{e_1,e_2,e_4\}\Rightarrow\{0\}$（数 $=1$）。理由：若 $x{=}e_i$ 为共同中心 $\Rightarrow d(e_i,e_j){=}2{>}1$ ✗ ⟹ **唐先生原断言（共同中心唯一）正确；本轮"3 中心"纠正撤销**
+- 【**✓✓ 三角形接口双重确认**】$\triangle(G_2(C))=41+97=\mathbf{138}=T=\sum_x\binom{a(x)}3$（两法独立一致）；且 $\sum\delta^3=E+6\triangle(G_2)$ 恒等 ✓
+- 【**★★ $(5)/(F)$ 之根因：漏 $n_0$**】正确分解 $d_2=n_0+n_1+n_2$（$n_j:=\#\{y\in C\cap S_2(c):m(y)=j\}$）；**实测求和** $\Sigma n_0=\mathbf{220}$、$\Sigma n_1=74$、$\Sigma n_2{=}\Sigma q=4$，$\Sigma(\cdot)=298=2N_2$ ✓ 自洽。故 $n_1+2n_2\le9s$ **成立（0 违反）**，但 $d_2+q=n_0+n_1+2n_2$ **≰ $9s$** ⟹ **$(5)/(F)$ 为假，根因为漏 $n_0$；且 $n_0$ 为主项（$220/298$）** ⟹ 读数：距离 2 码字对中**绝大多数（220/298）不被共同的距离 1 码字"桥接"**
+- 【**旁及纠正**】唐先生 22:23 之 $\Sigma\binom{\mu}2=2A_2\Rightarrow A_2\ge71$ ✗：实测 $|B_1(c)\cap B_1(c')|=2$ 对 $d{=}1$ **与** $d{=}2$ 皆成立、$d\ge3$ 为 $0$ ⟹ $\Sigma\binom{\mu}2=2(N_1{+}N_2)$（非 $2A_2$）⟹ 正确下界为 $\boxed{N_1+N_2\ge71}$
+- 【**可存活资产**】✓$T=\triangle(G_2)$（双重确认）✓$\sum\delta^3=E+6\triangle(G_2)$ ✓交大小 $\in\{0,1\}$（穷举）✓$n_1+2n_2\le9s$（真）✓$\Sigma n_0=220$（新量化）✓$N_1+N_2\ge71$ ✓$E$ 表（$106\Rightarrow142$、$107\Rightarrow153$）✓史链（$105{=}$Zhang、$107{=}$BÖW）
+- 档：`docs/AUDIT-2026-09-28ae-exhaustive-three-ball-and-the-n0-dominant-term.md`
