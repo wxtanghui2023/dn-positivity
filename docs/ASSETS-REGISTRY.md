@@ -3201,3 +3201,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ 表示层总审计**】四层表示类（incidence/multiplicity、coset/subspace、complement boundary、全局算子/谱）**皆无独立 $P_1$ 入口** ⟹ 按令 ⟹ **119 之数学新表示路线暂时没有可见入口**；**非**"所有表示都死" ✗（限已检验四类，V290）
 - 【**建议**】此时转 **certificate 路线不是退而求其次**（四类表示 ＋ 六个具体候选皆无独立 accounting）
 - 档：`docs/AUDIT-2026-09-28m-P-minus-1-spectral-gate-Q1-fails-and-the-representation-audit-verdict.md`
+
+**🚩 AUDIT-2026-09-28n（非 C 号）：表示审计 **PASS** ⟹ 119 Certificate Route **START**** ✓
+- 【**唐先生定格**】$\text{Representation Audit：PASS（否证完成）}$；$\text{119 Certificate Route：START}$
+- 【**实质理由**】非"四种表示都试过"，而是排除两类：**(甲) 压缩后只是旧不变量重写**（incidence／coset-subspace／低阶 boundary／Fourier 功率谱 → 终回覆盖计数、距离分布或其等价形式）；**(乙) 保留信息够新但压缩性消失**（full complement／full spectrum／sign pattern → 趋向完整编码 $C$，无中间态）
+- 【**Certificate 链**】$P_0$ 目标精确化 → $P_1$ 构造 $K\le118$ 不可能满足的可验证必要条件 → $P_2$ 压缩成有限证书对象 → $P_3$ 证所有 $|C|\le118$ 触发冲突 → $P_4$ 分类 → $P_5$ census；**纪律**：certificate 路线**也必须有真正的 $P_1$**，不能一上来 SAT/CP-SAT 暴力搜索
+- 【**★ 下一轮唯一任务（$P_1$）**】寻有限对象 $\Theta$：同时记录"覆盖"与"118 点不足"之冲突，且 $|\Theta|$ **严格小于** $|C|$ 完整描述
+- 【**★ 结构性提示（本档分析，未解）**】(甲) $\Theta$ 若为**线性对偶**（权重函数）⟹ 即 weighted covering/LP 对偶 ⟹ `SUBSPACELP` 等号定理 $L(m){=}\frac{2^n}{n+1}$ ⟹ **线性证书天花板 $93.09$** ✗；(乙) $\Theta$ 若为**无损编码** ⟹ $\Theta{=}C$ ⟹ 无压缩 ✗ ⟹ **$\Theta$ 必须是非线性、偏（partial）之对象**
+- 【**候选类（建议，未做）**】**(I) 极小不可行子系统（IIS)**：点集 $W$ 使"覆盖 $W$"之需求严格超出任意 $|C|\le118$ 之容量；**(II) 状态相容证书**：有限局部状态集＋不相容关系；**(III) 部分赋值扩展证书**
+- 【**$P_1$ 过关四条件**】①可有限验证 ②$|\Theta|$ 可压缩 ③冲突对 $K\le118$ 强制 ④**非**线性对偶、**非** $C$ 之无损编码
+- 档：`docs/AUDIT-2026-09-28n-representation-audit-PASS-and-certificate-route-START.md`
