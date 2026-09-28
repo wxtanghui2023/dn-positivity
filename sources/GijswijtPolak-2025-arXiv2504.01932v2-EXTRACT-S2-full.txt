@@ -1,0 +1,326 @@
+## 2 The SDP bound for covering codes
+
+Given a complex matrix AA, we write A𝖳A^{\\mathsf{T}} for the transpose of AA and A∗A^{\*} for the complex conjugate transpose of AA. So A∗=A𝖳A^{\*}=A^{\\mathsf{T}} if AA is a real matrix. We apply the same notation for vectors and scalars. So for z∈ℂz\\in\\mathbb{C} we denote the complex conjugate of zz by z∗z^{\*}. Given complex matrices A,BA,B of the same size, we denote by ⟨A,B⟩=tr(A∗​B)\\langle A,B\\rangle=\\tr(A^{\*}B) their Frobenius inner product. If AA is a square matrix, we write A⪰0A\\succeq 0 to denote that AA is positive semidefinite. Throughout the paper, we write JJ for the all-ones matrix, and II for the identity matrix, where the dimensions are clear from the context.
+
+Given a square matrix AA and c≥0c\\geq 0 we will use the following notation:
+
+| | | |
+| --- | --- | --- |
+| | R⁡(c,A)=(c(diagA)∗diagAA)andR⁡(A)=R⁡(1,A).R(c,A)=\\begin{pmatrix}c&(\\diag A)^{\*}\\\ \\diag A&A\\end{pmatrix}\\quad\\text{and}\\quad R(A)=R(1,A). | |
+
+Note that for positive semidefinite AA, the matrix R⁡(c,A)R(c,A) is PSD if and only if either c=0c=0 and A=0A=0, or c>0c>0 and c​A−(diagA)​(diagA)∗⪰0cA-(\\diag A)(\\diag A)^{\*}\\succeq 0, which follows by taking Schur complements.
+We remark that throughout the paper, we will mostly work with real matrices. In particular, the matrices in our SDP bounds will be real valued.
+
+Let q≥2q\\geq 2 and n≥1n\\geq 1 be integers, and denote 𝔼=\[q\]n\\mathbb{E}=\[q\]^{n}. We identify \[q\]n\[q\]^{n} with (ℤ/q​ℤ)n(\\mathbb{Z}/q\\mathbb{Z})^{n}, so that 𝔼\\mathbb{E} carries an additive group structure. Let C⊆𝔼C\\subseteq\\mathbb{E}. We define the 0,10,1-matrix MCM\_{C} of size \|𝔼\|×\|𝔼\|\|\\mathbb{E}\|\\times\|\\mathbb{E}\| as follows:
+
+| | | |
+| --- | --- | --- |
+| | (MC)𝐮,𝐯={1if 𝐮,𝐯∈C,0otherwise.(M\_{C})\_{\\mathbf{u},\\mathbf{v}}=\\begin{cases}1&\\text{if $\\mathbf{u},\\mathbf{v}\\in C$,}\\\ 0&\\text{otherwise.}\\end{cases} | |
+
+Furthermore, we define the following real matrices associated to CC:
+
+| | | | | |
+| --- | --- | --- | --- | --- |
+| | M\\displaystyle M | :=\|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)Mσ​C,\\displaystyle:=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\sigma C}, | |
+| | M′\\displaystyle M^{\\prime} | :=\|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)𝟎∈σ​CMσ​C,andM′′:=\|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)𝟎∉σ​CMσ​C.\\displaystyle:=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\mathbf{0}\\in\\sigma C\\end{subarray}}M\_{\\sigma C},\\quad\\text{and}\\quad M^{\\prime\\prime}:=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\mathbf{0}\\not\\in\\sigma C\\end{subarray}}M\_{\\sigma C}. | | (6) |
+
+We immediately observe the following relations for the entries of the matrices M,M′,M′′M,M^{\\prime},M^{\\prime\\prime}.
+
+###### Proposition 2.1(Basic inequalities and symmetry).
+
+The matrix MM is Aut⁡(q,n)\\mathrm{Aut}(q,n)-invariant and M′,M′′M^{\\prime},M^{\\prime\\prime} are Aut𝟎​(q,n)\\mathrm{Aut}\_{\\mathbf{0}}(q,n)-invariant. Moreover, for all 𝐮,𝐯∈𝔼\\mathbf{u},\\mathbf{v}\\in\\mathbb{E} we have
+
+- (i)
+
+
+M𝐮,𝐯=M𝟎,𝐯−𝐮′M\_{\\mathbf{u},\\mathbf{v}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}  and  M𝐮,𝐯′′=M𝟎,𝐯−𝐮′−M𝐮,𝐯′M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{v}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}-M^{\\prime}\_{\\mathbf{u},\\mathbf{v}},
+
+- (ii)
+
+
+0≤M𝐮,𝐯′≤M𝟎,𝐮′0\\leq M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}\\leq M^{\\prime}\_{\\mathbf{0},\\mathbf{u}},
+
+- (iii)
+
+
+0≤M𝐮,𝐯′′≤M𝐮,𝐮′′0\\leq M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{v}}\\leq M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{u}},
+
+- (iv)
+
+
+M𝐮,𝐯′=M𝐮′,𝐯′′M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}=M^{\\prime}\_{\\mathbf{u}^{\\prime},\\mathbf{v}^{\\prime}} if {𝟎,𝐮′,𝐯′}=σ⁡{𝟎,𝐮,𝐯}\\{\\mathbf{0},\\mathbf{u}^{\\prime},\\mathbf{v}^{\\prime}\\}=\\sigma\\{\\mathbf{0},\\mathbf{u},\\mathbf{v}\\} for some σ∈Aut⁡(q,n)\\sigma\\in\\mathrm{Aut}(q,n).
+
+
+###### Proof.
+
+The fact that M,M′,M′′M,M^{\\prime},M^{\\prime\\prime} are invariant under the respective groups follows directly by their construction. To see (i), note that M𝟎,𝐰′′=0M^{\\prime\\prime}\_{\\mathbf{0},\\mathbf{w}}=0 for every 𝐰∈𝔼\\mathbf{w}\\in\\mathbb{E}, so
+
+| | | |
+| --- | --- | --- |
+| | M𝐮,𝐯=M𝟎,𝐯−𝐮=M𝟎,𝐯−𝐮′+M𝟎,𝐯−𝐮′′=M𝟎,𝐯−𝐮′M\_{\\mathbf{u},\\mathbf{v}}=M\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}+M^{\\prime\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}} | |
+
+and
+
+| | | |
+| --- | --- | --- |
+| | M𝐮,𝐯′′=M𝐮,𝐯−M𝐮,𝐯′=M𝟎,𝐯−𝐮′−M𝐮,𝐯′.M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{v}}=M\_{\\mathbf{u},\\mathbf{v}}-M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{v}-\\mathbf{u}}-M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}. | |
+
+To see inequalities (ii) and (iii), note that M′M^{\\prime} and M′′M^{\\prime\\prime} are nonnegative linear combinations of the matrices Mσ​CM\_{\\sigma C} and 0≤(Mσ​C)𝐮,𝐯≤(Mσ​C)𝐮,𝐮0\\leq\\left(M\_{\\sigma C}\\right)\_{\\mathbf{u},\\mathbf{v}}\\leq\\left(M\_{\\sigma C}\\right)\_{\\mathbf{u},\\mathbf{u}}.
+
+To see (iv), we observe that
+
+| | | |
+| --- | --- | --- |
+| | M𝐮,𝐯′=\|Aut⁡(q,n)\|−1⋅\|{σ∈Aut⁡(q,n)∣{𝟎,𝐮,𝐯}⊆σ​C}\|M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}=\|\\mathrm{Aut}(q,n)\|^{-1}\\cdot\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\{\\mathbf{0},\\mathbf{u},\\mathbf{v}\\}\\subseteq\\sigma C\\}\| | |
+
+only depends on the orbit of {𝟎,𝐮,𝐯}\\{\\mathbf{0},\\mathbf{u},\\mathbf{v}\\}.
+∎
+
+The matrices M′M^{\\prime} and M′′M^{\\prime\\prime} satisfy the following conditions.
+
+###### Proposition 2.2(Semidefiniteness).
+
+The matrices M′,M′′M^{\\prime},M^{\\prime\\prime} are positive semidefinite. Moreover, the matrix R⁡(1−M𝟎,𝟎′,M′′)R(1-M^{\\prime}\_{\\mathbf{0},\\mathbf{0}},M^{\\prime\\prime}) is positive semidefinite.
+
+###### Proof.
+
+The matrices M′M^{\\prime} and M′′M^{\\prime\\prime} are nonnegative linear combinations of the positive semidefinite matrices Mσ​C=𝟏σ​C​(𝟏σ​C)𝖳M\_{\\sigma C}=\\mathbf{1}\_{\\sigma C}(\\mathbf{1}\_{\\sigma C})^{\\mathsf{T}}, and therefore themselves positive semidefinite. Since the matrices R⁡(Mσ​C)R(M\_{\\sigma C}) are positive semidefinite, so is
+
+| | | |
+| --- | --- | --- |
+| | R⁡(1−M𝟎,𝟎′,M′′)=(1−M𝟎,𝟎′(diagM′′)𝖳diagM′′M′′)=\|Aut⁡(q,n)\|∑σ∈Aut⁡(q,n)𝟎∉σ​C−1⁡R⁡(Mσ​C).∎R(1-M^{\\prime}\_{\\mathbf{0},\\mathbf{0}},M^{\\prime\\prime})=\\begin{pmatrix}1-M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}&\\left(\\diag M^{\\prime\\prime}\\right)^{\\mathsf{T}}\\\ \\diag M^{\\prime\\prime}&M^{\\prime\\prime}\\end{pmatrix}=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\mathbf{0}\\not\\in\\sigma C\\end{subarray}}R(M\_{\\sigma C}).\\qed | |
+
+The cardinality of CC can be expressed in terms of M′M^{\\prime} in several ways as follows.
+
+###### Proposition 2.3(Objective function).
+
+We have
+
+| | | |
+| --- | --- | --- |
+| | \|C\|=qn​M𝟎,𝟎′,\|C\|2=qn​∑𝐮∈𝔼M𝐮,𝐮′,\|C\|3=qn​∑𝐮,𝐯∈𝔼M𝐮,𝐯′.\|C\|=q^{n}M^{\\prime}\_{\\mathbf{0},\\mathbf{0}},\\quad\|C\|^{2}=q^{n}\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}},\\quad\|C\|^{3}=q^{n}\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}. | |
+
+###### Proof.
+
+For any 𝐮∈𝔼\\mathbf{u}\\in\\mathbb{E} we have \|{σ∈Aut⁡(q,n)\|σ​𝐮=𝟎}\|=\|Aut𝟎​(q,n)\|\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\,\|\\,\\sigma\\mathbf{u}=\\mathbf{0}\\}\|=\|\\mathrm{Aut}\_{\\mathbf{0}}(q,n)\|, so
+
+| | | |
+| --- | --- | --- |
+| | M𝟎,𝟎′=\|{σ∈Aut⁡(q,n)\| 0∈σ​C}\|\|Aut⁡(q,n)\|=\|C\|​\|Aut𝟎​(q,n)\|\|Aut⁡(q,n)\|=q−n​\|C\|.M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}=\\frac{\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\,\|\\,\\mathbf{0}\\in\\sigma C\\}\|}{\|\\mathrm{Aut}(q,n)\|}=\|C\|\\frac{\|\\mathrm{Aut}\_{\\mathbf{0}}(q,n)\|}{\|\\mathrm{Aut}(q,n)\|}=q^{-n}\|C\|. | |
+
+Moreover,
+
+| | | | |
+| --- | --- | --- | --- |
+| | ∑𝐮∈𝔼M𝐮,𝐮′\\displaystyle\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}} | =⟨M′,I⟩=\|Aut⁡(q,n)\|−1​∑𝐮∈C∑σ∈Aut⁡(q,n)σ​𝐮=𝟎⟨Mσ​C,I⟩=\|Aut⁡(q,n)\|−1​∑𝐮∈C∑σ∈Aut⁡(q,n)σ​𝐮=𝟎\|C\|\\displaystyle=\\langle M^{\\prime},I\\rangle=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\mathbf{u}\\in C}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\sigma\\mathbf{u}=\\mathbf{0}\\end{subarray}}\\langle M\_{\\sigma C},I\\rangle=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\mathbf{u}\\in C}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\sigma\\mathbf{u}=\\mathbf{0}\\end{subarray}}\|C\| | |
+| | | =\|Aut𝟎​(q,n)\|\|Aut⁡(q,n)\|​\|C\|2=q−n​\|C\|2,\\displaystyle=\\frac{\|\\mathrm{Aut}\_{\\mathbf{0}}(q,n)\|}{\|\\mathrm{Aut}(q,n)\|}\|C\|^{2}=q^{-n}\|C\|^{2}, | |
+
+and similarly
+
+| | | | |
+| --- | --- | --- | --- |
+| | ∑𝐮,𝐯∈𝔼M𝐮,𝐯′\\displaystyle\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}} | =⟨M′,J⟩=\|Aut⁡(q,n)\|−1​∑𝐮∈C∑σ∈Aut⁡(q,n)σ​𝐮=𝟎⟨Mσ​C,J⟩=\|Aut⁡(q,n)\|−1​∑𝐮∈C∑σ∈Aut⁡(q,n)σ​𝐮=𝟎\|C\|2\\displaystyle=\\langle M^{\\prime},J\\rangle=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\mathbf{u}\\in C}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\sigma\\mathbf{u}=\\mathbf{0}\\end{subarray}}\\langle M\_{\\sigma C},J\\rangle=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\mathbf{u}\\in C}\\sum\_{\\begin{subarray}{c}\\sigma\\in\\mathrm{Aut}(q,n)\\\ \\sigma\\mathbf{u}=\\mathbf{0}\\end{subarray}}\|C\|^{2} | |
+| | | =q−n​\|C\|3.∎\\displaystyle=q^{-n}\|C\|^{3}.\\qed | |
+
+Now suppose that CC has covering radius rr and that the set of inequalities (λ0,…,λn)​β(\\lambda\_{0},\\ldots,\\lambda\_{n})\\beta is valid for all codes of covering radius rr. Define
+
+| | | | |
+| --- | --- | --- | --- |
+| | N=\|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)Mσ​C⋅(∑ℓ=0nλℓ​\|σ​C∩Sℓ​(𝟎)\|−β).\\displaystyle N=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\sigma C}\\cdot\\left(\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\|-\\beta\\right). | | (7) |
+
+###### Proposition 2.4(Lasserre constraint and matrix cut inequalities).
+
+The following hold:
+
+- (i)
+
+
+The matrix R⁡(c,N)R(c,N) is positive semidefinite, where c=∑ℓ=0nλℓ⋅\|Sℓ​(𝟎)\|⋅M𝟎,𝟎′−βc=\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\cdot\|S\_{\\ell}(\\mathbf{0})\|\\cdot M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}-\\beta,
+
+- (ii)
+
+
+NN is invariant under Aut𝟎​(q,n)\\mathrm{Aut}\_{\\mathbf{0}}(q,n),
+
+- (iii)
+
+
+For all 𝐮,𝐯∈𝔼\\mathbf{u},\\mathbf{v}\\in\\mathbb{E} we have
+
+
+
+| | | |
+| --- | --- | --- |
+| | N𝐮,𝐯=−β​M𝐮,𝐯+∑ℓ=0nλℓ​∑𝐰∈Sℓ​(𝟎)M𝐮−𝐰,𝐯−𝐰′,N\_{\\mathbf{u},\\mathbf{v}}=-\\beta M\_{\\mathbf{u},\\mathbf{v}}+\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{0})}M^{\\prime}\_{\\mathbf{u}-\\mathbf{w},\\mathbf{v}-\\mathbf{w}}, | |
+
+- (iv)
+
+
+For all 𝐮,𝐯∈𝔼\\mathbf{u},\\mathbf{v}\\in\\mathbb{E} we have
+
+
+
+| | | | |
+| --- | --- | --- | --- |
+| | β​M𝟎,𝐮′\\displaystyle\\beta M^{\\prime}\_{\\mathbf{0},\\mathbf{u}} | ≤∑ℓ=0nλℓ​∑𝐰∈Sℓ​(𝐯)M𝐮,𝐰′,\\displaystyle\\leq\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}M^{\\prime}\_{\\mathbf{u},\\mathbf{w}}, | |
+| | β⁡(M𝟎,𝟎′−M𝟎,𝐮′)\\displaystyle\\beta\\bigl(M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}-M^{\\prime}\_{\\mathbf{0},\\mathbf{u}}\\bigr) | ≤∑ℓ=0nλℓ​∑𝐰∈Sℓ​(𝐯)(M𝐰,𝐰′−M𝐮,𝐰′),\\displaystyle\\leq\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}\\bigl(M^{\\prime}\_{\\mathbf{w},\\mathbf{w}}-M^{\\prime}\_{\\mathbf{u},\\mathbf{w}}\\bigr), | |
+| | β​M𝐮,𝐮′′\\displaystyle\\beta M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{u}} | ≤∑ℓ=0nλℓ​∑𝐰∈Sℓ​(𝐯)M𝐮,𝐰′′,\\displaystyle\\leq\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{w}}, | |
+| | β⁡((1−M𝟎,𝟎′)−M𝐮,𝐮′′)\\displaystyle\\beta\\bigl((1-M^{\\prime}\_{\\mathbf{0},\\mathbf{0}})-M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{u}}\\bigr) | ≤∑ℓ=0nλℓ​∑𝐰∈Sℓ​(𝐯)(M𝐰,𝐰′′−M𝐮,𝐰′′).\\displaystyle\\leq\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}\\bigl(M^{\\prime\\prime}\_{\\mathbf{w},\\mathbf{w}}-M^{\\prime\\prime}\_{\\mathbf{u},\\mathbf{w}}\\bigr). | |
+
+
+###### Remark 2.1.
+
+The conditions in Proposition [2.4](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem4 "Proposition 2.4 (Lasserre constraint and matrix cut inequalities). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes") derive from general relaxations for 0-1 linear programs. In our setting, the incidence vector 𝐱∈{0,1}𝔼\\mathbf{x}\\in\\{0,1\\}^{\\mathbb{E}} of CC satisfies the covering inequalities
+
+| | | |
+| --- | --- | --- |
+| | ∑i=0nλi​∑𝐯∈Si​(𝐮)𝐱𝐯≥βfor all 𝐮∈𝔼.\\sum\_{i=0}^{n}\\lambda\_{i}\\sum\_{\\mathbf{v}\\in S\_{i}(\\mathbf{u})}\\mathbf{x}\_{\\mathbf{v}}\\geq\\beta\\quad\\text{for all $\\mathbf{u}\\in\\mathbb{E}$.} | |
+
+However, the same method would apply in the setting of error correcting codes, where one might use inequalities 𝐱u+𝐱v≤1\\mathbf{x}\_{u}+\\mathbf{x}\_{v}\\leq 1, if d⁡(𝐮,𝐯)∈{1,…,d−1}d(\\mathbf{u},\\mathbf{v})\\in\\{1,\\ldots,d-1\\}.
+
+The matrix NN and conditions (i)–(iii) come from the Lasserre Hierarchy for 0,10,1 polytopes. Let 𝐲\\mathbf{y} be the extended incidence vector of CC, where for every subset S⊆𝔼S\\subseteq\\mathbb{E} we set 𝐲⁡(S)=1\\mathbf{y}(S)=1 if S⊆CS\\subseteq C and 𝐲⁡(S)=0\\mathbf{y}(S)=0 otherwise. The validity of the covering inequalities implies that for every 𝐮∈𝔼\\mathbf{u}\\in\\mathbb{E}, the matrix M∈ℂ𝒫⁡(𝔼)×𝒫⁡(𝔼)M\\in\\mathbb{C}^{\\mathcal{P}(\\mathbb{E})\\times\\mathcal{P}(\\mathbb{E})} given by MI,J=∑i=0nλi​∑𝐯∈Si​(𝐮)yI∪J∪{𝐯}−β​yI∪JM\_{I,J}=\\sum\_{i=0}^{n}\\lambda\_{i}\\sum\_{\\mathbf{v}\\in S\_{i}(\\mathbf{u})}y\_{I\\cup J\\cup\\{\\mathbf{v}\\}}-\\beta y\_{I\\cup J} is positive semidefinite. Restricting to sets I,JI,J of size at most 11 and averaging over Aut⁡(q,n)\\mathrm{Aut}(q,n) leads to the matrix NN and conditions (i)–(iii).
+
+The four sets of inequalities in part (iv) come from matrix cut inequalities \[ [16](https://arxiv.org/html/2504.01932v2#bib.bib16 "")\]. Let 𝐲∈ℂ∅∪𝔼\\mathbf{y}\\in\\mathbb{C}^{\\emptyset\\cup\\mathbb{E}} be the extended incidence vector of CC where 𝐲∅=1\\mathbf{y}\_{\\emptyset}=1, and 𝐲𝐮=1\\mathbf{y}\_{\\mathbf{u}}=1 if 𝐮∈C\\mathbf{u}\\in C and 𝐲𝐮=0\\mathbf{y}\_{\\mathbf{u}}=0 otherwise for 𝐮∈𝔼\\mathbf{u}\\in\\mathbb{E}. The vector 𝐱=𝐲\\mathbf{x}=\\mathbf{y} satisfies the homogenized cover inequalities
+
+| | | | |
+| --- | --- | --- | --- |
+| | ∑i=0nλi​∑𝐯∈Si​(𝐮)𝐱𝐯≥β​𝐱∅for all 𝐮∈𝔼.\\sum\_{i=0}^{n}\\lambda\_{i}\\sum\_{\\mathbf{v}\\in S\_{i}(\\mathbf{u})}\\mathbf{x}\_{\\mathbf{v}}\\geq\\beta\\mathbf{x}\_{\\emptyset}\\quad\\text{for all $\\mathbf{u}\\in\\mathbb{E}$}. | | (8) |
+
+The positive semidefinite matrix 𝐲𝐲𝖳=R⁡(MC)\\mathbf{y}\\mathbf{y}^{\\mathsf{T}}=R(M\_{C}) has the property that every column satisfies ( [8](https://arxiv.org/html/2504.01932v2#S2.E8 "In Remark 2.1. ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")), and so does the diagonal minus any column. Using the fact that for any σ∈Aut⁡(q,n)\\sigma\\in\\mathrm{Aut}(q,n) also σ​C\\sigma C has covering radius rr, and the fact that the sets of vectors 𝐱\\mathbf{x} satisfying ( [8](https://arxiv.org/html/2504.01932v2#S2.E8 "In Remark 2.1. ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) is closed under nonnegative linear combinations, we thus obtain two sets of inequalities for (the bordered version of) the matrix M′M^{\\prime}, and similarly for M′′M^{\\prime\\prime}. This yields the four conditions in (iv).
+
+###### Proof.
+
+To see (i), observe that for every σ\\sigma the number ∑ℓ=0nλℓ​\|σ​C∩Sℓ​(𝟎)\|−β\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\|-\\beta is nonnegative. Since the matrices R⁡(Mσ​C)R(M\_{\\sigma C}) are positive semidefinite, it follows that
+
+| | | |
+| --- | --- | --- |
+| | R⁡(c,N)=\|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)R⁡(Mσ​C)⋅(∑ℓ=0nλℓ​\|σ​C∩Sℓ​(𝟎)\|−β)R(c,N)=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}R(M\_{\\sigma C})\\cdot\\left(\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\|-\\beta\\right) | |
+
+is positive semidefinite.
+
+Item (ii) follows from the fact that for all τ∈Aut𝟎\\tau\\in\\mathrm{Aut}\_{\\mathbf{0}} and ℓ\\ell we have
+
+| | | | |
+| --- | --- | --- | --- |
+| | τ⁡(∑σ∈Aut⁡(q,n)Mσ​C⋅\|σ​C∩Sℓ​(𝟎)\|)\\displaystyle\\tau\\left(\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\sigma C}\\cdot\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\|\\right) | =∑σ∈Aut⁡(q,n)Mτ​σ​C⋅\|σ​C∩Sℓ​(𝟎)\|\\displaystyle=\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\tau\\sigma C}\\cdot\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\| | |
+| | | =∑σ∈Aut⁡(q,n)Mτ​σ​C⋅\|τ​σ​C∩τ​Sℓ​(𝟎)\|\\displaystyle=\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\tau\\sigma C}\\cdot\|\\tau\\sigma C\\cap\\tau S\_{\\ell}(\\mathbf{0})\| | |
+| | | =∑σ∈Aut⁡(q,n)Mτ​σ​C⋅\|τ​σ​C∩Sℓ​(𝟎)\|\\displaystyle=\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}M\_{\\tau\\sigma C}\\cdot\|\\tau\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\| | |
+| | | =∑ρ∈Aut⁡(q,n)Mρ​C⋅\|ρ​C∩Sℓ​(𝟎)\|,\\displaystyle=\\sum\_{\\rho\\in\\mathrm{Aut}(q,n)}M\_{\\rho C}\\cdot\|\\rho C\\cap S\_{\\ell}(\\mathbf{0})\|, | |
+
+where we used that Sℓ​(𝟎)S\_{\\ell}(\\mathbf{0}) is fixed under Aut𝟎​(q,n)\\mathrm{Aut}\_{\\mathbf{0}}(q,n) in the third equation, and we used the substitution ρ=τ​σ\\rho=\\tau\\sigma in the last equality.
+
+To see (iii), let 𝐮,𝐯∈𝔼\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}. We have
+
+| | | | |
+| --- | --- | --- | --- |
+| | ∑σ∈Aut⁡(q,n)(Mσ​C)𝐮,𝐯⋅\|σ​C∩Sℓ​(𝟎)\|\\displaystyle\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}(M\_{\\sigma C})\_{\\mathbf{u},\\mathbf{v}}\\cdot\|\\sigma C\\cap S\_{\\ell}(\\mathbf{0})\| | =∑𝐰∈Sℓ​(𝟎)\|{σ∈Aut(q,n)∣𝐮,𝐯,𝐰∈σC}\|\\displaystyle=\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{0})}\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{u},\\mathbf{v},\\mathbf{w}\\in\\sigma C\\}\| | |
+| | | =∑𝐰∈Sℓ​(𝟎)\|{σ∈Aut(q,n)∣𝐮−𝐰,𝐯−𝐰,𝟎∈σC}\|\\displaystyle=\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{0})}\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{u}-\\mathbf{w},\\mathbf{v}-\\mathbf{w},\\mathbf{0}\\in\\sigma C\\}\| | |
+| | | =\|Aut⁡(q,n)\|⋅∑𝐰∈Sℓ​(𝟎)M𝐮−𝐰,𝐯−𝐰′.\\displaystyle=\|\\mathrm{Aut}(q,n)\|\\cdot\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{0})}M^{\\prime}\_{\\mathbf{u}-\\mathbf{w},\\mathbf{v}-\\mathbf{w}}. | |
+
+Summing over ℓ\\ell and using that
+
+| | | |
+| --- | --- | --- |
+| | \|Aut⁡(q,n)\|−1​∑σ∈Aut⁡(q,n)(Mσ​C)𝐮,𝐯=M𝐮,𝐯\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\mathrm{Aut}(q,n)}(M\_{\\sigma C})\_{\\mathbf{u},\\mathbf{v}}=M\_{\\mathbf{u},\\mathbf{v}} | |
+
+shows (iii).
+
+To prove (iv), fix 𝐮,𝐯∈𝔼\\mathbf{u},\\mathbf{v}\\in\\mathbb{E} and let σ∈Aut⁡(q,n)\\sigma\\in\\mathrm{Aut}(q,n). Since σ​C\\sigma C has covering radius rr, we have
+
+| | | | |
+| --- | --- | --- | --- |
+| | ∑ℓ=0nλℓ​\|(σ​C)∩Sℓ​(𝐯)\|≥β.\\displaystyle\\sum\_{\\ell=0}^{n}\\lambda\_{\\ell}\|(\\sigma C)\\cap S\_{\\ell}(\\mathbf{v})\|\\geq\\beta. | | (9) |
+
+Partition Aut⁡(q,n)\\mathrm{Aut}(q,n) into subsets Γ1,…,Γ4\\Gamma\_{1},\\ldots,\\Gamma\_{4} given by
+
+| | | | | | |
+| --- | --- | --- | --- | --- | --- |
+| | | Γ1={σ∈Aut(q,n)∣𝟎∈σC,𝐮∈σC},\\displaystyle\\Gamma\_{1}=\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\in\\sigma C,\ \\mathbf{u}\\in\\sigma C\\}, | | Γ2={σ∈Aut(q,n)∣𝟎∈σC,𝐮∉σC}\\displaystyle\\Gamma\_{2}=\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\in\\sigma C,\ \\mathbf{u}\\not\\in\\sigma C\\} | |
+| | | Γ3={σ∈Aut(q,n)∣𝟎∉σC,𝐮∈σC},\\displaystyle\\Gamma\_{3}=\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\not\\in\\sigma C,\ \\mathbf{u}\\in\\sigma C\\}, | | Γ4={σ∈Aut(q,n)∣𝟎∉σC,𝐮∉σC}.\\displaystyle\\Gamma\_{4}=\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\not\\in\\sigma C,\ \\mathbf{u}\\not\\in\\sigma C\\}. | |
+
+Summing ( [9](https://arxiv.org/html/2504.01932v2#S2.E9 "In Proof. ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) over all σ∈Γ1\\sigma\\in\\Gamma\_{1} and dividing by \|Aut⁡(q,n)\|\|\\mathrm{Aut}(q,n)\| yields the first inequality since
+
+| | | |
+| --- | --- | --- |
+| | \|Aut⁡(q,n)\|−1​∑σ∈Γ1β=M𝟎,𝐮′​β\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\Gamma\_{1}}\\beta=M^{\\prime}\_{\\mathbf{0},\\mathbf{u}}\\beta | |
+
+and for every ℓ∈{0,…,n}\\ell\\in\\{0,\\ldots,n\\} we have
+
+| | | | |
+| --- | --- | --- | --- |
+| | \|Aut⁡(q,n)\|−1​∑σ∈Γ1\|σ​C∩Sℓ​(𝐯)\|\\displaystyle\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\sigma\\in\\Gamma\_{1}}\|\\sigma C\\cap S\_{\\ell}(\\mathbf{v})\| | =\|Aut(q,n)\|−1∑𝐰∈Sℓ​(𝐯)\|{σ∈Aut(q,n)∣𝟎,𝐮,𝐰∈σC}\|\\displaystyle=\|\\mathrm{Aut}(q,n)\|^{-1}\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0},\\mathbf{u},\\mathbf{w}\\in\\sigma C\\}\| | |
+| | | =∑𝐰∈Sℓ​(𝐯)M𝐮,𝐰′.\\displaystyle=\\sum\_{\\mathbf{w}\\in S\_{\\ell}(\\mathbf{v})}M^{\\prime}\_{\\mathbf{u},\\mathbf{w}}. | |
+
+Similarly, summing ( [9](https://arxiv.org/html/2504.01932v2#S2.E9 "In Proof. ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) over all σ∈Γ2\\sigma\\in\\Gamma\_{2}, σ∈Γ3\\sigma\\in\\Gamma\_{3} and σ∈Γ4\\sigma\\in\\Gamma\_{4} and dividing by \|Aut⁡(q,n)\|\|\\mathrm{Aut}(q,n)\| yields the second, third and fourth inequality, respectively. Here we use that for any 𝐚,𝐛∈𝔼\\mathbf{a},\\mathbf{b}\\in\\mathbb{E} we have
+
+| | | | |
+| --- | --- | --- | --- |
+| | \|Aut(q,n)\|−1⋅\|{σ∈Aut(q,n)∣𝟎∈σC,𝐚,𝐛∈σC}\|\\displaystyle\|\\mathrm{Aut}(q,n)\|^{-1}\\cdot\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\in\\sigma C,\ \\mathbf{a},\\mathbf{b}\\in\\sigma C\\}\| | =M𝐚,𝐛′\\displaystyle=M^{\\prime}\_{\\mathbf{a},\\mathbf{b}} | |
+| | \|Aut(q,n)\|−1⋅\|{σ∈Aut(q,n)∣𝟎∉σC,𝐚,𝐛∈σC}\|\\displaystyle\|\\mathrm{Aut}(q,n)\|^{-1}\\cdot\|\\{\\sigma\\in\\mathrm{Aut}(q,n)\\mid\\mathbf{0}\\not\\in\\sigma C,\ \\mathbf{a},\\mathbf{b}\\in\\sigma C\\}\| | =M𝐚,𝐛′′∎\\displaystyle=M^{\\prime\\prime}\_{\\mathbf{a},\\mathbf{b}}\\qed | |
+
+This leads to the following SDP lower bound on covering codes, which is always at least as tight as the LP bound mentioned in the introduction.111
+
+
+
+The LP bound requires nonnegativity of certain expressions involving Krawtchouk polynomials, which is equivalent to positive semidefiniteness of M=M′+M′′M=M^{\\prime}+M^{\\prime\\prime}. The LP bound further requires that a small subset of the matrix cut inequalities are satisfied. Thus the LP constraints are implied by the SDP constraints of Theorem [2.5](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem5 "Theorem 2.5 (Covering lower bound). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes").
+
+###### Theorem 2.5(Covering lower bound).
+
+Suppose that every C⊆𝔼C\\subseteq\\mathbb{E} with covering radius rr satisfies (λ0,…,λn)​β(\\lambda\_{0},\\ldots,\\lambda\_{n})\\beta. Then
+
+| | | |
+| --- | --- | --- |
+| | Kq​(n,r)3≥minM,M′,M′′,N⁡qn​∑𝐮,𝐯∈𝔼M𝐮,𝐯′K\_{q}(n,r)^{3}\\geq\\min\_{M,M^{\\prime},M^{\\prime\\prime},N}q^{n}\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}} | |
+
+where the minimum ranges over real matrices M,M′,M′′,NM,M^{\\prime},M^{\\prime\\prime},N that satisfy the conditions in Proposition [2.1](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem1 "Proposition 2.1 (Basic inequalities and symmetry). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes"), Proposition [2.2](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem2 "Proposition 2.2 (Semidefiniteness). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes") and Proposition [2.4](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem4 "Proposition 2.4 (Lasserre constraint and matrix cut inequalities). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes").
+
+###### Remark 2.2.
+
+The conditions in Proposition [2.1](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem1 "Proposition 2.1 (Basic inequalities and symmetry). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")(i) and Proposition [2.4](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem4 "Proposition 2.4 (Lasserre constraint and matrix cut inequalities). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes") express MM, M′′M^{\\prime\\prime} and NN in terms of M′M^{\\prime}, so the minimization can be expressed in terms of the matrix variable M′M^{\\prime} alone.
+
+###### Remark 2.3(Comparison of objective values).
+
+We have
+
+| | | | |
+| --- | --- | --- | --- |
+| | qn​∑𝐮,𝐯∈𝔼M𝐮,𝐯′3≥qn​∑𝐮∈𝔼M𝐮,𝐮′≥qn​M𝟎,𝟎′.\\displaystyle\\sqrt\[3\]{q^{n}\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}}\\geq\\sqrt{q^{n}\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}}}\\geq q^{n}M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}. | | (10) |
+
+It follows that qn​∑𝐮,𝐯∈𝔼M𝐮,𝐯′3\\sqrt\[3\]{q^{n}\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}} gives the tightest lower bound of the three expressions.
+
+To see ( [10](https://arxiv.org/html/2504.01932v2#S2.E10 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")), note the following general fact: for c∈ℝc\\in\\mathbb{R} and M∈ℝn×nM\\in\\mathbb{R}^{n\\times n} with m:=diag​(M)m:=\\text{diag}(M) we have
+
+| | | | |
+| --- | --- | --- | --- |
+| | (cm𝖳mM)⪰0⟹c​M−m​m𝖳⪰0⟹c⁡⟨M,J⟩≥⟨M,I⟩2.\\displaystyle\\begin{pmatrix}c&m^{\\mathsf{T}}\\\ m&M\\end{pmatrix}\\succeq 0\\quad\\Longrightarrow\\quad cM-mm^{\\mathsf{T}}\\succeq 0\\quad\\Longrightarrow\\quad c\\langle M,J\\rangle\\geq\\langle M,I\\rangle^{2}. | | (11) |
+
+By applying ( [11](https://arxiv.org/html/2504.01932v2#S2.E11 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) to the matrix MM from the Bose-Mesner algebra (and c=1c=1), we obtain
+
+| | | | |
+| --- | --- | --- | --- |
+| | qn​∑𝐮∈𝔼M𝐮,𝐮′≥(qn​M𝟎,𝟎′)2.\\displaystyle q^{n}\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}}\\geq(q^{n}M^{\\prime}\_{\\mathbf{0},\\mathbf{0}})^{2}. | | (12) |
+
+Since M′⪰0M^{\\prime}\\succeq 0 and M𝐮,𝐮′=M𝟎,𝐮′M^{\\prime}\_{\\mathbf{u},\\mathbf{u}}=M^{\\prime}\_{\\mathbf{0},\\mathbf{u}} for all 𝐮∈𝔼\\mathbf{u}\\in\\mathbb{E}, we have R⁡(M𝟎,𝟎′,M′)⪰0R(M^{\\prime}\_{\\mathbf{0},\\mathbf{0}},M^{\\prime})\\succeq 0. So by applying ( [11](https://arxiv.org/html/2504.01932v2#S2.E11 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) we obtain
+
+| | | | |
+| --- | --- | --- | --- |
+| | M𝟎,𝟎′​⟨M′,J⟩\\displaystyle M^{\\prime}\_{\\mathbf{0},\\mathbf{0}}\\langle M^{\\prime},J\\rangle | ≥⟨M′,I⟩2,so\\displaystyle\\geq\\langle M^{\\prime},I\\rangle^{2},\\quad\\quad\\text{so} | |
+| | (M𝟎,𝟎′)2​⟨M′,J⟩2\\displaystyle(M^{\\prime}\_{\\mathbf{0},\\mathbf{0}})^{2}\\langle M^{\\prime},J\\rangle^{2} | ≥⟨M′,I⟩4.\\displaystyle\\geq\\langle M^{\\prime},I\\rangle^{4}. | |
+
+By combining this inequality with ( [12](https://arxiv.org/html/2504.01932v2#S2.E12 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) we find
+
+| | | |
+| --- | --- | --- |
+| | ∑𝐮∈𝔼M𝐮,𝐮′​⟨M′,J⟩2≥qn​(M𝟎,𝟎′)2​⟨M′,J⟩2≥qn​⟨M′,I⟩4,\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}}\\langle M^{\\prime},J\\rangle^{2}\\geq q^{n}(M^{\\prime}\_{\\mathbf{0},\\mathbf{0}})^{2}\\langle M^{\\prime},J\\rangle^{2}\\geq q^{n}\\langle M^{\\prime},I\\rangle^{4}, | |
+
+so
+
+| | | |
+| --- | --- | --- |
+| | ⟨M′,J⟩2≥qn​⟨M′,I⟩3,implying(∑𝐮,𝐯∈𝔼M𝐮,𝐯′)2≥qn​(∑𝐮∈𝔼M𝐮,𝐮′)3.\\langle M^{\\prime},J\\rangle^{2}\\geq q^{n}\\langle M^{\\prime},I\\rangle^{3},\\quad\\text{implying}\\quad\\big(\\sum\_{\\mathbf{u},\\mathbf{v}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{v}}\\big)^{2}\\geq q^{n}\\big(\\sum\_{\\mathbf{u}\\in\\mathbb{E}}M^{\\prime}\_{\\mathbf{u},\\mathbf{u}}\\big)^{3}. | |
+
+Multiplying both sides by q2​nq^{2n}
+and combining with ( [12](https://arxiv.org/html/2504.01932v2#S2.E12 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")) this yields ( [10](https://arxiv.org/html/2504.01932v2#S2.E10 "In Remark 2.3 (Comparison of objective values). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes")), as desired.
+
+In the next sections, we make the SDP from Theorem [2.5](https://arxiv.org/html/2504.01932v2#S2.Thmtheorem5 "Theorem 2.5 (Covering lower bound). ‣ 2 The SDP bound for covering codes ‣ Semidefinite lower bounds for covering codes") effective by using symmetry reduction.
+
