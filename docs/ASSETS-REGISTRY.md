@@ -3133,3 +3133,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ 关键风险**】能否找到**比 generic subnormality 更强、且真依赖 $|C|\le118$** 之 refinement rule？成立 ⟹ $n{=}10$ 有限性反成优势
 - 【**首测提案 Test-1（待批准）**】$k{=}1,2$ 枚举 coset distribution 型 → 单轮 refinement → 比较 $K$ 下界是否 $>94.4$；判据：单轮即 $>94.4$ ⟹ 全量投入
 - 档：`docs/PLAN-2026-09-28-subnormal-refinement-and-the-ostergaard-blass-template.md`
+
+**🧾 AUDIT-2026-09-28f（非 C 号）：Test-1 结果 —— LP 层零增益（档案已证等号定理）⟹ 引擎必在整性** ✓
+- 【**★ Test-1 之 LP 部分已被档案抢先**】`SUBSPACELP-2026-09-28` 已证**等号定理** $L(m){=}\frac{2^n}{n+1}$（一切 $m$）；本档**独立复跑确认**：$n{=}10$ 时 $L(m)\equiv\mathbf{93.090909}$（$m{=}1{:}10$）；$n{=}9$ 时 $L(m)\equiv51.200000$（$m{=}1{:}9$）
+- 【**★ 四门判定**】$L_1(k){=}L_0{=}93.09$ ⟹ $\Delta_k{=}0$、$N_{\rm killed}{=}0$；Gate A 未触发、Gate B 未触发（约束全为线性计数，无真 incompatibility）、**Gate C ★触发 ⟹ LP-refinement 层 KILL**（＝"Haas-reencoding"）、Gate D 未触发（118 可行）
+- 【**⚠️ $L_0$ 口径更正**】$L_0{=}93.09$（level-$m$ LP 真值），**非** $94.4$（后者属 Plagne 之 $(r,s)$ 参数化，C-546）
+- 【**★★ 引擎重定位（档案自身诊断）**】Östergård–Blass 之引擎**不是 LP**（其松弛恰给体积界 ⟹ 零增益）；**是 整性 ＋ 不等价分布分类 ＋ 递归**；LP 之角色＝剪枝/校验 ⟹ 唐先生所要求之"state compatibility 约束"恰属**整性/分类层**，非 LP 层
+- 【**★ 修正后之下一实验 Test-1′（待批准，未执行）**】在**整性**层做一轮不等价分布分类：枚举 level-$m$ 整数分布（$\sum y_i{=}118$），按 $\operatorname{Aut}(Q_{10})$ 归并等价类，剔除与覆盖不相容者，看剩余类数是否骤降；判据同 Gate C
+- 档：`docs/AUDIT-2026-09-28f-Test1-preempted-by-SUBSPACELP-and-the-integrality-engine.md`
