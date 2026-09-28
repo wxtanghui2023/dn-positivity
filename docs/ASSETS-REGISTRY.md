@@ -3398,3 +3398,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ ③ 归属定位（核心）**】Zhang pair **单条**给 $103$（实测）；其 $105$ 须**完整 Zhang 方法**（induced ＋ rounding ＋ 组合）；本会话 FM 未闭合 ⟹ $105$ 与 $107$ **皆属已发表方法，而非单条不等式**，其原文**未得**（IEEE/Wiley 付费）⟹ 唐先生判断**成立**（不需新机制），但也**不能**由已实现机制自动得出 ⟹ 需**原文之精确不等式**。现有最强**可自行实现**机制 ＝ **level-3 SDP（Gijswijt–Polak 2025 Table 5）$=\mathbf{105.2223}\Rightarrow K\ge\mathbf{106}$** ⟹ **已排除 105；唯一待排除者 ＝ 106（即 $E{=}142$）**
 - 【**④ 三条可行之路（供唐先生定夺，不作裁定）**】(i) 取原文：Zhang 1991（IEEE TIT 37:573–582）／BÖW 2004（JCD 12:157–176）（付费墙）；(ii) 提高 SDP 层级：level-3 已给 105.2223，level ≥4 或可达 $>106$ ⟹ $K\ge107$（计算量待估）；(iii) 接受 **103** 为**自助算术上限**，记为负资产（"纯二进算术族不能区分 106 与 107"）
 - 档：`docs/AUDIT-2026-09-29a-all-implementable-mechanisms-cap-at-103.md`
+
+**🧮 AUDIT-2026-09-29b（非 C 号）：自证两不等式（含已验证恒等式）＋ $\theta$ 门槛表（$\theta_0{=}6\Rightarrow107$）＋ 缺口仍存** ✓
+- 【**✓✓ ① 自证恒等式（实测吻合）**】$\sum_{x\in A}E(B(x,1))=121M-4(N_1{+}N_2)-11264$，其中 $A{=}\{x:d(x,C){=}1\}$；关键事实 $E(B(x,1))=2(A_1{+}A_2)-11$ **恒为奇数** $\Rightarrow\ge1$（$\varepsilon{=}1$）；求和用 $\sum_A A_1=10M{-}2N_1$、$\sum_A A_2=45M{-}2N_2$、$|A|{=}1024{-}M$（等号）。**实测（120-code）**：$121\cdot120{-}4\cdot199{-}11264=\mathbf{2460}$，直算亦 $\mathbf{2460}$ ✓✓
+- 【**✓ ② 新上界（档案所指"缺件"之类型）**】van Wee 链 $\varepsilon|A|\le\sum_A E(B(x,1))$ + §1 恒等式 ⟹ $\boxed{4(N_1{+}N_2)\le122M-11288}$（$M{=}106$ 时 $\le411$；$M{=}120$ 时 $\le838$，实测 $199$ 远小）——**自证出档案所述之"$N_1{+}N_2$ 上界"**
+- 【**✗ ③ 缺口仍存**】下界（Cauchy–Schwarz，$M{=}106$）$N_1{+}N_2\ge117$ ⟹ $117\le N_1{+}N_2\le411$，缺口显著；欲闭合需上界 $\le116$，即 $1644\le464$ **假** ✗
+- 【**★ ④ $\theta$ 精化与门槛表**】van Wee 之实质 $|A|\le\theta E_{\rm tot}$，$\theta{=}\sum_{z\in Z}E(z)|A{\cap}B(z,1)|/E_{\rm tot}$（Lemma 51 给逐点 $\le n{-}R{=}9$）⟹ $M\ge1024(1{+}\theta_0)/(1{+}11\theta_0)$；表：$\theta_0{=}9{\Rightarrow}\mathbf{103}$、$8{\Rightarrow}104$、$7{\Rightarrow}106$、$\mathbf{6{\Rightarrow}107}$★、$5{\Rightarrow}110$、$4{\Rightarrow}114$。**但 120-code 实测 $\theta{=}2460/296=\mathbf{8.3108}$** ⟹ 任何普适 $\theta_0\ge8.31$ ⟹ 该路线极限 $\approx\boxed{104}$ ✗ ⟹ **$\theta$ 精化不能达 107**
+- 【**✓ ⑤ 附带核验**】$\varepsilon$ 不可提升至 $3$：$E(B(x,1))$ 为奇数且 $\min{=}1$（分布 $\{1{:}338,3{:}417,5{:}106,7{:}29,9{:}8,11{:}6\}$）；若 $\varepsilon{=}3\Rightarrow M\ge121>120$ **矛盾** ⟹ $\varepsilon{=}1$ 为真上限 ✓
+- 档：`docs/AUDIT-2026-09-29b-self-derived-identity-and-the-two-bounds-gap-remains.md`
