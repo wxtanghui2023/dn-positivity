@@ -3231,3 +3231,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**证据表定稿**】$107$＝下界值（非构造）；$108..118$、$119$＝**未知**（无构造、无排除）；$120$＝上界值（显式构造）⟹ **14 个整数字无一被排除**；$119$ 与 $108$ 地位**相同**
 - 【**★ 建议优先（本档推荐）(甲) 上界路线**】取 Kamenetsky 之 $120$-code 做**删点/小改实验**：①单个删除后仍覆盖？②小规模 replacement/switch 得 $119$？③若得 $119$ ⟹ **直接 FULL（悬赏）**；此法便宜、可即时判定、且与下界侧表示审计之负证据无冲突
 - 档：`docs/AUDIT-2026-09-28p-119-freeze-and-the-107-source-decomposition.md`
+
+**📐 AUDIT-2026-09-28q（非 C 号）：$107$ 公式链 —— van Wee 原式 ＋ $n{=}10$ 代入 ＋ 可调参数表** ✓
+- 【**★ van Wee 原式（逐字取自 `arXiv:2608.12595` equ (5)，引 van Wee 1988／Struik 1994）**】$M\left(\sum_{i=0}^{R}\binom ni-\frac{\binom nR}{\lceil\frac{n-R}{R+1}\rceil}\left(\left\lceil\frac{n+1}{R+1}\right\rceil-\frac{n+1}{R+1}\right)\right)\ge2^n$
+- 【**★ $n{=}10,R{=}1$ 代入（本档算术 ✓✓）**】$\sum_{i=0}^1\binom{10}i{=}11$；$\lceil\frac{9}{2}\rceil{=}5$；$\lceil\frac{11}2\rceil-\frac{11}2{=}0.5$；修正$=\frac{10}5\times0.5{=}1$ ⟹ 分母$=10$ ⟹ $K\ge102.4\Rightarrow\mathbf{103}$；**一般式（$n$ 偶）$K(n,1)\ge\frac{2^n}{n}$**（与 `arXiv:2203.16901` 摘要逐字一致 ✓✓）
+- 【**★ 链**】$\frac{2^n}{n+1}{=}93.09$ → van Wee → $\frac{2^n}{n}{=}102.4$ → Zhang(1991,92)／Habsieger(1997)／Haas → $\mathbf{107}$ → $\mathbf{?}$ → $119$
+- 【**Habsieger 1997（逐字）**】Delsarte… 逐字"covering condition expressed as a system of linear inequalities. The **excesses** then have a natural interpretation that makes **congruence properties** clear"；**★"We study more specifically the cases $n\equiv5 \bmod 6$ and $n\equiv2,4 \bmod 6$" ⟹ $n{=}10\equiv\mathbf4 \bmod 6$ 恰在其内**；新下界例 $K(14,1)\ge1172$、$K(20,1)\ge52456$
+- 【**excess 算术（复核唐先生 ✓）**】$\sum_x e(x)=11K-1024$：$K{=}107\Rightarrow153$；$119\Rightarrow285$；$120\Rightarrow296$ ⟹ 纯 excess 总量**不能**解释 $107\to119$
+- 【**★ 可调参数表**】体积项 $\frac{2^n}{n+1}{=}93.09$（精确，不可加强）；van Wee 修正 $=1$（$n$ 偶时精确）；取整 $102.4\to103$（不可加强）；**同余/excess 分布约束 $103\to107$（$+4$）＝未知**；**$107\to119$ 剩余 $+12$＝未知** ⟹ **已知部分已饱和；全部可调空间压在"同余/excess 分布层"**
+- 【**⚠️ 诚实边界**】Zhang(1991,92)、Habsieger(1997)、BÖW(2004) **正文式未取得**（付费墙）⟹ **本档不给"$107{=}$某显式公式"之陈述**（遵令不得编造）；下一步候选：`secemp9/arxiv-complete` 全文检索／作者主页／从 Zhang 1991 追
+- 档：`docs/AUDIT-2026-09-28q-107-formula-chain-van-Wee-specialization-and-tunable-parameters.md`
