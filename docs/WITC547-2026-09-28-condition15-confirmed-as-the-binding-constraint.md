@@ -49,9 +49,12 @@ $$\text{且 }n{=}10\ \text{之最优参数（}k{=}2,r{=}23,s{=}3\text{）\ \text
 ```
 $ bash scripts/tech_word_check.sh "binding约束" "边界饱和" "参数合法性"
 技术词 binding约束  命中文件数=0    ::
-技术词 边界饱和     命中文件数=0    ::
-技术词 参数合法性   命中文件数=0    ::
+技术词 边界饱和     命中文件数=1    :: ./C130-shape-test-step2-of-six-concrete-flows-S1-S2-S3-classification.md
+技术词 参数合法性   命中文件数=1    :: ./ERRATUM-LJCR-B1-semantics-skew-vs-general.md
 ```
+
+
+**口径（空间隔离 ✓）**：`边界饱和` 命中 `C130-…`、`参数合法性` 命中 `ERRATUM-LJCR-B1-…` —— 二者皆**空间 A（RH 线）** 同名 ⟹ 标「**空间 A 同名，不计**」✗（不作新性证据，亦不作"已有"依据）✓
 
 ## §5 边界（硬 ✓）
 
