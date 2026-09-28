@@ -3027,3 +3027,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗✓(乙) min-读法亦假**】$K{=}135$ 数值：$\min_x\delta_2(x){=}3{>}0$（$i{=}3..8$ 同）；仅 $i{\in}\{0,1,9,10\}$ 可达 0 ⟹ $\forall i{\le}9\min_x\delta_i{=}0$ **不成立**（**数值判定，非普遍证明**，已标注）
 - 【**结论**】$G_1{=}$**NO（两读法皆 NO）** ⟹ $G_1\to$ Haas 2013 路线 **DEAD**；按唐先生优先级 ⟹ 转向 **Attack A（Haas $k$-subspace flag coupling）**
 - 档：`docs/WITG1-2026-09-28-G1-is-dead-in-both-readings.md`
+
+**✅ C-543（09-28 20:0 · WITSUB：$k$-子空间覆盖不等式 ＋ 相对已有约束的\ \textbf{独立性（肯定回答）}）** ✓
+- 【**✓✓ 自推恒等式**】$\sum_{u\in U}c_u{=}(k{+}1)N_U{+}N_{U,1}$（$U$＝坐标 $k$-子空间；$|U\cap B_1(c)|{=}k{+}1$ 若 $c{\in}U$／$1$ 若 $d(c,U){=}1$／$0$ 否则）；数值核验 $k{=}2..5$ **全部精确成立** ✓
+- 【**✓✓ 覆盖式**】$(k{+}1)N_U{+}N_{U,1}\ \ge\ 2^k$（$k{=}10$ 退化即球覆盖 $11K{\ge}1024\Rightarrow93.09$）
+- 【**★★ 独立性（答唐先生之问：YES）**】$A_i$ 平移不变，$N_{U,1}$ 平移敏感——实例 $C\mapsto C{+}e_9$：$A_i$ 完全相同而 $N_{U,1}:7\to10$ ⟹ $N_U,N_{U,1}\notin\operatorname{span}(A_i)$ ⟹ **子空间覆盖不等式不在 $\mathcal F_{\rm old}$（$A_i$／$\delta$-moments／`FACE`）张成内** ✓✓
+- 【**⚠️ 诚实上限**】本档只用 $\delta\ge0$ ⟹ 弱（slack 大）；经典强化（van Wee／Habsieger／Haas 之 excess 同余）达 **103→107**，**仍 $<120$** ⟹ 要冲 120 须在「子空间不等式 × 119-专属结构」**耦合**里取增益
+- 【**⚠️ 阻塞**】Haas 2002 正文不可得（403）⟹ 无法逐条枚举；本档不等式为**自第一原理解析重建**，非逐字引用 ✓
+- 【**建议（窄）**】$k{=}3$ 最小情形，$N_U,N_{U,1}$ × 119-结构联合求带整性/同余之界；**单轮无增益 ⟹ Haas 线关闭**
+- 档：`docs/WITSUB-2026-09-28-k-subspace-covering-inequality-and-its-independence.md`
