@@ -3061,3 +3061,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★机制族穷尽（核心）**】三大已发表族皆够不到 119：① excess/congruence（Haas 2013）→ 退回 103（C-545 奇偶门）；② subspace linear-inequality（Haas 2002/Plagne）→ 主项 94.4／已实现 ≤107（本档）；③ SDP（Gijswijt-Polak 2025）→ 105.2223（C-474）⟹ **119 处于一切已发表机制可达域之外**，我们之 119-专属工作在**前沿** ✓
 - 【**⚠️ 边界**】§4 为"已发表机制"枚举，**非**"不存在任何机制"（V290）；Haas 2002 全文未审毕（仅据 Plagne 复述＋主定理）
 - 档：`docs/WITC546-2026-09-28-Haas2002-Plagne-family-caps-below-119.md`
+
+**✓ C-547（09-28 20:1 · WITC547：condition (15) 确认 = Haas-2002/Plagne 族之 binding 约束）** ✓
+- 【**✓ 形式（与 C-546 逐字一致）**】condition (15) ⟺ $s\le2^{n-k}-(n+1)r$ ⟺ $\boxed{2^{n-k}\ge(n+1)r+s}$；作用＝保证 Haas Thm 2 隐藏剩余项为正
+- 【**✓ $n{=}27$ 复算**】$2^{14}{=}16384$，$28\cdot585{=}16380$，差 $4{=}s$ ⟹ **边界饱和** ✓（唐先生例）
+- 【**★★ $n{=}10$ 核心发现**】族天花板 $\max(r+\frac{s}{s+k})2^k=\mathbf{94.40}$ **恰在 condition (15) 边界取得**（$k{=}2,r{=}23,s{=}3$，余量 $0$）；前 4 名**全部**边界饱和 ⟹ **condition (15) 即天花板之来源**；C-546 脚本已令 $s=2^{n-k}-(n+1)r$ ⟹ 自洽 ✓
+- 【**✓ 无修订**】C-546 重建无需修订；附注：Haas 经验最优 $k{=}\lfloor(n{-}1)/2\rfloor{=}4$ 在 $n{=}10$ 反而不最优（$91.08$）⟹ 启发式在偶 $n$ 小维不可靠；且 $n{=}10$ 最优参数**合法**（不触发 $n{=}27$ 那种"最优参数被禁"）
+- 档：`docs/WITC547-2026-09-28-condition15-confirmed-as-the-binding-constraint.md`
