@@ -3336,3 +3336,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**骨架图（定稿）**】$94\xrightarrow{\text{sphere}}96,97\xrightarrow{\text{excess}}103\xrightarrow{\text{van Wee}}105\xrightarrow{\textbf{Zhang pair ineq.}}107\xrightarrow{\textbf{BÖW general }R{=}1}$；上界 $120$
 - 【**下一步（目标已收敛）**】①写出 **Zhang 1991 pair-covering inequality 原式** ②追 **BÖW 如何推广为 general $R{=}1$** ③算 $n{=}10$ 之 $107$；价值：若 BÖW 式可写成 $F(n,K,\text{excess/profile})\ge0$，代 $K{=}106$ 可独立得 $K\ge107$；若 slack 极小则可判断 $107\to108$
 - 档：`docs/AUDIT-2026-09-28ab-history-correction-Habsieger-104-and-the-chain-verified.md`
+
+**⚖️ AUDIT-2026-09-28ac（非 C 号）：三矩恒等式实测通过，但按判据 **STOP**（缺 $N_1{+}N_2$ 上界）** ✓
+- 【**★ 三式实测（120-code，$n{=}10$，$K{=}120$，全部精确通过）**】(1) $\sum\delta=296=11\cdot120-1024$ ✓；(2a) $\sum\binom{a}{2}=398=2(N_1{+}N_2)$（$N_1{=}50,N_2{=}149$）✓；(2b) $E+\sum\delta^2=796=4(N_1{+}N_2)$ ✓；(3) $\sum\binom{a}{3}=138=(\sum\delta^3-\sum\delta)/6$ ✓ ⟹ **三式皆为恒等式（构型决定），非不等式**
+- 【**★★ 缺口精确定位**】$M{=}106\Rightarrow E{=}142$；由 (2b) 及 $\delta\in\mathbb Z_{\ge0}\Rightarrow\sum\delta^2\ge E$ 得 $\boxed{N_1{+}N_2\ge71}$（**下界**）；C-S 另给 $\ge41$（更弱）。**矛盾需上界**（$N_1{+}N_2\le70$ 或 $\sum\delta^2$ 之上界）——**三式皆不给**；三阶项 $\sum\delta^3\ge E$ 贡献恰为 $0$
+- 【**★ 判据执行（照唐先生 STOP 条）**】判据逐字"如只得到 $E\ge142$ 或更弱，就立即 STOP" ⟹ 实测最强结论 ＝ $N_1{+}N_2\ge71$ 暨 $E\ge142$（＝假设本身）⟹ **STOP：矩堆叠路线（一阶→二阶→三阶）本档关闭**（与 `EXCESS-2026-09-25` 一致）
+- 【**机制说明**】三式左端右端皆为构型之函数 ⟹ 恒成立 ⟹ 限制构型空间但**不产生 $E$ 之下界不等式**；要 $E\ge153$ **必须引入独立不等式**（如 Zhang 之 pair covering inequality）
+- 【**下一代攻击点**】真正缺口 ＝ **上界** $N_1{+}N_2\le70$（"散布性 vs 重叠"之不等式）——恰为 **Zhang 1991 pair-covering inequalities（$\to105$）与 BÖW（$\to107$）** 所提供之类型 ⟹ 唯一有据之下一步：取 Zhang 1991 原式，观其如何约束 $(N_1,N_2)$ 与 face 占用
+- 档：`docs/AUDIT-2026-09-28ac-moment-identities-verified-and-the-upstream-bound-gap.md`
