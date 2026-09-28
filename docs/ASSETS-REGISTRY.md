@@ -2993,3 +2993,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★链闭合**】$d(I_i,I_j){=}4\Rightarrow D,|D|{=}4\Rightarrow C_{ij}=\{I_i\oplus\mathbf1_S\}\Rightarrow|\mathrm{own}(w_S)|=2+\deg(S)\Rightarrow\deg(S)\ge2$（本档）$\Rightarrow|\mathrm{own}(w_S)|\ge4\Rightarrow C_{ij}\cap\mathcal S{=}\varnothing\Rightarrow W_{ij}{=}\varnothing\Rightarrow1111\notin M(O)$ ✓
 - 【**纯结构 ✓✓**】未使用 $F,G$／$\Sigma\lambda$／$\lVert T\rVert_1$／$\mathrm{OrbType}{\to}\lambda$；**不作路线裁定** ✗；**不声称** $C{=}3{\Rightarrow}{\neg}1111$ 已 ✗；**明确否认** $128{=}145{-}17$ 已 ✗（V290）
 - 档：`docs/WITCLOSE-2026-09-28-deg-not-0or1-structured-proof.md`
+
+**🩺 C-536（2026-09-28 18:1x · WITAUDIT3：★★审计覆盖者 vs 额外 owner —— $x_{S,a'}$ 覆盖者**恒满足** $d(I_i,K){=}4$ 与 $T{\cap}D{=}S$；但 $|R'|$ 可变（{$2{\dots}7$}），**非恒 2** ⟹ C-535 不能升级为 $D^c{=}\bigcup R$）** ✓
+- 【**✓✓ 覆盖者类型（deg=2 侧）**】$x_{S,a'}{\to}K$ 恒有 $d(I_i,K){=}4$ 及 $T{\cap}D{=}S$（2560/2560）✓✓；但 $|R'|{=}|T{\setminus}S|$ 变化（$\{2,3,4,5,6,7,0\}$ 皆出现），**非恒 2** ✗✓
+- 【**✓✓✓ 裁定**】$x_{S,a'}$ 覆盖者与 C-533 额外 owner 是**两个不同的东西**：参数化 $T{\cap}D{=}S$ 共享，但 $|R'|$ 迥异 ✓ ⟹ 不能将覆盖者直接映射到 $\mathcal R_i(D,S)$ ⟹ $D^c{=}\bigcup R$ **不成立** ✗✓（与 C-534 之 640×$\deg{=}2$ 相容）
+- 【**C-535 每步审计**】{\color{green}√} $d(x,I_i){=}3$，$d(x,I_j){=}3$ ✓；{\color{green}√}覆盖者 $d(I_i,K){=}4$（2560/2560）✓✓；{\color{green}√}$T{\cap}D{=}S$（2560/2560）✓✓；{\color{red}✗}$|T{\setminus}S|$ 非恒 2 ✗✓
+- 【**★下一靶**】在 $\deg(S){=}2$ 反设下，需**证明**六 $a'{\in}D^c$ 中最少有两个被 $|R'|{=}2$ 的覆盖者命中（即真正的额外 owner 级 candidate）⟹ 否则不能闭合 $\deg{\ge}2$ 之结构证明 ✓✓；**禁止**纯计数 ✗、$F,G$ 反推 ✗
+- **边界**：**不作路线裁定** ✗；**明确否认** $C{=}3{\Rightarrow}{\neg}1111$ 与 $128{=}145{-}17$ 已 ✗（V290）
+- 档：`docs/WITAUDIT3-2026-09-28-coverer-vs-extra-owner-resolution.md`
