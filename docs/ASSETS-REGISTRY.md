@@ -3011,3 +3011,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★文献状态账（唯一新增 ✓）**】Cohen 1997 Table A：$105\le K(10,1)\le120$；口径纪律：105 带标记 e ⟹ **不得**写成"Prop 2.6 给出 105"；时序：1997 **105** → 2004 **107**（BÖW/OEIS）→ 自算 SDP 105.2223 → 上界 120 ⟹ **119 未被经典 excess 排除** ✓
 - 【**路线地位**】C-539 之 285-excess ⊂ Cohen §2.5 经典 excess family；旧档已做 Haas 2013 层式 → **LP=93.09（不足）**；**未做者**＝旧档所标 `Layer 2+`（子空间耦合＋incidence＋整数可行）＝**与唐先生"Krawtchouk/全局约束"同层** ✓
 - 档：`docs/WITDUP-2026-09-28-excess-identities-were-already-archived-and-the-literature-verdict.md`
+
+**📚 C-541（09-28 20:0 · WITHAAS：★Haas 2002／2013 文献判定 ＋ $K(10,1)$ 阶梯状态 —— **119 仍开放**）** ✓
+- 【**✓ Haas 2002 fingerprint（摘要逐字 ✓）**】"the numbers of elements of C that lie in a **fixed k-dimensional subspace** … satisfy a **certain system of linear inequalities**"（$q{=}2,3$，general lower bounds for $k_2(n),k_3(n)$）；摘要**不含** $n{=}10$／119／120／$K(10,1)$ 专项结论 ⟹ 归类 **general lower-bound method**（非专项闭合论文）✓
+- 【**✓ 与 FACE 之关系**】Haas-type subspace coupling $\not\equiv$ FACE incidence（FACE 已证 $q_F$ 归约到 $9A_1{+}A_2$）；**但机制不同≠档案未覆盖** ✗
+- 【**✓ 阶梯（校准）**】sphere $94$ ＜ LP/layered $93.09$ ＜ 3-point/SDP $105.2223$（Gijswijt–Polak 2025 Table 5）＜ **published record 107**（BÖW 2004）＜ upper 120 ⟹ $$107\le K(10,1)\le120$$；$K(10,1){=}120$ 尚未由已发表方法证明 ✓
+- 【**🔒 判定（交叉验证，非论文内部结论）**】**Haas 2002：NOT CLOSED** = "provides a genuine method family, but does not close the 119-word case"；**两条必须分开记**：(甲) fingerprint $\neq$ 已证明新下界；(乙) **119-word case：OPEN** ⟹ 后做 novelty audit **不得**把"方法存在"误记成"目标已解决" ✓✓
+- 【**⚠️ Haas 2013 潜在线索（仅登记）**】$\delta_{p-1}\ge(p-2)^{p-1}$（$n\equiv-1\bmod p$，$\delta_0{=}\cdots{=}\delta_{p-2}{=}0$）；$n{=}10,p{=}11$ **形式匹配** ✓ 但前提极强 ⟹ 标 **POTENTIAL GAP**，**非**当前路线（未证 119-code 强制该前提；未证可与 excess/profile 耦合）✗
+- 【**🛑 STOP**】不再算 Haas 2002 不等式；不重跑 2-face occupancy／excess moments／三球三阶矩／已关 Layer-2 incidence ILP／已无效 Best-code 局部容量路线 ✓
+- 档：`docs/WITHAAS-2026-09-28-haas-2002-2013-literature-verdict-and-the-K10-1-ladder.md`
