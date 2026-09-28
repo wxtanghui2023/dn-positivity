@@ -3286,3 +3286,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ ③ 目标重定位（核心）**】BÖW 2004 给 $a(10)\ge\mathbf{107}$ ⟹ $K\ne106$ ⟹ **"证明 $K\ge107$" ＝ 已知定理；唐先生之 $K{=}106$ 路线无新排除空间**；真正**新**之地板目标 ＝ $\mathbf{108}$（$E\ge164\iff K\ge108$）⟹ 可挖空间（下界端）＝ $107\to108$，而 $106$ **已无仗可打**
 - 【**④ 唐先生 6 步队列**】① 取 H–P 正文：**摘要已得 ✓／正文未得**（付费）；② 精确定理/公式：**未得**；③ 代入 $q{=}2,n{=}10,R{=}1$：待②；④ 与 $K{=}106$ 比较：**已完成 ⟹ 已排除**；⑤ 查 BÖW 转述：**本轮无需**；⑥ 回具体结构：**不触发**
 - 档：`docs/AUDIT-2026-09-28v-round-seal-Habsieger-Plagne-obtained-and-106-is-already-excluded.md`
+
+**📅 AUDIT-2026-09-28w（非 C 号）：$103$ vs $107$ 冲突已定分 —— $103$ 系 van Wee **1991** 之值** ✓
+- 【**★ 证据（逐字）**】`pure.tue.nl/ws/files/1995874/353803.pdf` 元数据："Wee, van, G. J. M. (**1991**). Covering codes, perfect codes, and codes from algebraic curves. [Dissertatie 1]"; "Document status and date: Gepubliceerd: **01/01/1991**"; "te verdedigen op dinsdag **4 juni 1991**" ⟹ 文中"best lower bound known is $K_2(10,1)\ge103$" 系 **1991 年之陈述**
+- 【**★ 下界时间链（定稿）**】$1988$ van Wee $2^n/n\Rightarrow102.4\to103$；**$1991$ $\mathbf{103}$（van Wee 博士论文）**；$1997$ $105$（CLLM 综述 Table A，标 "j"）；**$2004$ $\mathbf{107}$（BÖW）**；$2026$-$08$ $\mathbf{107}$（Kéri 表，经 Recensorium 悬赏页）⟹ **当前最佳下界 ＝ $\mathbf{107}$**，与 $120$ 合成 $107\le K\le120$
+- 【**唐先生其他结论核验**】(甲) H–P 2000 属 linear-inequality 族 ✓；(乙) Habsieger/Honkala 直接 congruence 界在 $n{=}10$ 仅给 $94$ ✓（$f(10){=}\frac1{10}\sum\binom{10}i{=}102.4$，$K\ge(1{+}\frac1{102.4})\frac{1024}{11}{=}94.0$）；(丙) 2000 论文公式不产生 $107$ ✓；**(丁) "文献路线不能关闭 106" ✗ —— $107>106$ 已关闭**（$103$ 为旧值）
+- 【**建议下一步**】查针对 $n{=}10$ 之**专门更强不等式**（$103\to107$ 之 4 步来源）：**Haas 2000**（Discrete Math 219, 97–106）、**Blass–Litsyn 1998**（IEEE TIT 44, 1998–2002）、**Habsieger 1997**（Discrete Math 176, 115–130）、**Plagne 后续**；目标层次：下界端可挖 $107\to108$（$\Leftrightarrow E\ge164$）、上界端 $120\to119$
+- 【**边界**】$107$ 依赖 BÖW 2004 归属（OEIS 2026-05 版 ＋ Kéri 表 2026-08 **两独立权威一致**）；**BÖW 正文未核** ⚠️
+- 档：`docs/AUDIT-2026-09-28w-103-vs-107-discrepancy-resolved-by-dating-van-Wee-1991.md`
