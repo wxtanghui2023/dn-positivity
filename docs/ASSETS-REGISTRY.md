@@ -2213,3 +2213,17 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(8) 下一靶**】① $t:=\#\{q:r_q{=}3\}$ 与 $f{=}\sum_p|F_p|$ 联立（$Q_3$ 二部 3-正则覆盖结构 ✓）；② $\Gamma_C,\Gamma_D$ 入 §8 三元 profile（$|\mathcal W|{=}3$ 已定值 ✓）；③ $r_q{=}2$ 之 15 个"交 $=3$"型（$\mathcal W$ 相同 ✓）单独审 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅有限穷举 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（`零松弛` 2 既有、`耦合不等式` 1 既有 + 2 空间 A 同名 ⟹ 均不计 ✗）；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
 - 档：`docs/WITCOUP-2026-09-28-rq-classification-and-the-W-identically-3-correction.md`
+
+**🧩 C-456（2026-09-28 12:5x · **WITCAPP：局部 $F$--$G$ 耦合（新 ✓✓✓）；精确表 $\max(|F|{+}|G|)\le\mathbf{22}$**）** ✓
+- 【**✓✓✓(1) 唐先生 §1 之 $F_i\cap F_j=\varnothing$ 成立（新）**】$p_i\ne p_j$ 皆偶 ⟹ $d_{\text{pref}}(p_i,p_j){=}2$（偶 prefix 互距 2 ✓）⟹ 若共享 suffix $v$ 则距离 $=2$ 违 $d(A_0)\ge3$ ✗ ⟹ $$F_i\cap F_j=\varnothing$$ ✓✓
+- 【**✓✓✓(2) 唐先生 §2 之 $\partial^-G$ 机制成立（新，且严格 ✓✓）**】$\partial^-G:=\bigcup_{w\in G_q}\binom w3$；$v\in F_p$（$p\sim q$）⟹ $v\not\subseteq w$（否则 $d{=}1{+}1{=}2$ ✗）⟹ 恰为 $F_p\cap\partial^-G=\varnothing$ ✓✓
+- 【**✓✓✓(3) 精确局部容量（本档穷举定值；唐先生两条更强）**】| $g_q$ | $\|\partial^-G\|$ | 可用 | $\max\Sigma_{p\sim q}f_p$ | 唐先生 ||---|---|---|---|---|| 3 | 12 | 8 | **8** ✓✓ | 8 ✓ |
+|| 2 | 8 | 12 | **8** ✓✓ | 12 ✗（更强 ✓）|| 1 | 4 | 16 | **12** ✓✓ | 14 ✗（更强 ✓）|| 0 | 0 | 20 | **12** ✓✓ | 16 ✗ | ⟹（仅 3 邻 ⟹ $s_q\le12$）$$\boxed{s_q\le8\Rightarrow g_q\le3;\quad 9\le s_q\le12\Rightarrow g_q\le1}$$ ✓✓✓
+- 【**✗✗(4) 唐先生 §3／§5 之 $Q_4$／"四个偶邻"仍误**】每奇 $q$ 仅 **3** 偶邻（穷举 ✓）⟹ $s_q\le12$（非 16 ✗）⟹ 其表 $s{=}13..16$ 三行**空置** ✗ ⟹ §8／§9 之"$|F|{=}15,16\Rightarrow|G|{=}0$" ✗ 不成立。**正确**：$s_q=|F|-f_{p(q)}$（每奇 $q$ 恰缺一个偶 prefix ✓）⟹ $|F|{=}16\Rightarrow s_q\equiv12\Rightarrow g_q\le1\Rightarrow$ $$\boxed{|G|\le4}$$（非 0 ✗）
+- 【**✓✓(5) 唐先生 §11 方法对、系数错**】$|G|{=}12\Rightarrow g_q\equiv3\Rightarrow s_q\le8\ \forall q\Rightarrow\sum_q s_q\le32$；而 $\sum_q s_q=3|F|$（每偶点 3 奇邻 ✓）⟹ $3|F|\le32$（**非** $4|F|$ ✗，亦非 $F\le8$ ✗）⟹ $$\boxed{|G|=12\Rightarrow|F|\le10}\Longrightarrow\boxed{|F|+|G|\le22}$$ ✓✓（非 20 ✗）
+- 【**✓✓✓(6) 本档新获：精确 profile 优化（照 §13／§14）**】穷举全部 $5^4{=}625$ 个 $(f_p)$ profile ⟹ $$\boxed{\max(|F|{+}|G|)\le\mathbf{22}}$$ ✓✓✓（原 28 ✗；于 $(0,4,4,4)$：$|F|{=}12,|G|\le10$ 与 $(2,2,2,4)$：$|F|{=}10,|G|\le12$ 取到 ✓）
+- 【**✗(7) 已否证**】"$|F|{=}15/16\Rightarrow|G|{=}0$" ✗；"$G{>}0\Rightarrow F\le14$" ✗；"$g{=}1\Rightarrow\Sigma\le14$" ✗；"$g{=}0\Rightarrow\Sigma\le16$" ✗；"$4|F|\le32$" ✗；"$Q_4$／4 邻" ✗
+- 【**✓(8) 其他正确**】§3 之 $\|\partial^-G\|{=}12$ ✓✓（无重合：三集重合须 $\subseteq w\cap w'$ 而 $|w\cap w'|{=}2$ ✗）；§4 之 $\|\partial^-G\|{=}8$ ✓；§7 反向阈值形式 ✓；§13／§14 profile 提法 ✓✓✓（本档即照此执行 ✓）
+- 【**★(9) 下一靶**】① $|C|\le12$、$|D|\le12$ 与 $\boxed{|F|{+}|G|\le22}$ 联立（$d{=}3$ 与 $d{=}4$ 两层 ✓）；② $d(x,y){=}2$ 禁止联 $F$--$G$--$C_3/D_3$ ✓；③ $\Gamma_C,\Gamma_D$ 三元 profile ✓
+- 【**边界 ✓**】零程序计算 ✓（仅有限穷举：$\binom{15}3$ 组 $G$ ＋ 族回溯 ＋ $5^4$ profile ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查已先跑后写 ✓✓**（三词均 0 ✓）；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
+- 档：`docs/WITCAPP-2026-09-28-local-FG-coupling-and-F-plus-G-le-22.md`
