@@ -3116,3 +3116,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ 全候选机制关闭**】excess/congruence（C-545）／subspace linear（C-546/547）／SDP（C-474）／$H_k$（C-544）／$\rho$-账本（`AUDIT-c`）／$(\alpha)$ 次正规（本档）／一切 $I$-型 $\Phi$（`AUDIT-b`）／距离分布（C-546）——**皆已关闭**
 - 【**须唐先生定夺**】(i) 停 119 线；(ii) 换更根本坐标系（Layer 3）；(iii) 他择 —— **本线不作路线裁定** ✗
 - 档：`docs/AUDIT-2026-09-28d-P-minus-1-info-gain-nailed-and-all-candidate-mechanisms-closed.md`
+
+**🧾 AUDIT-2026-09-28e（非 C 号）：可行性—难易度门控链 ＋ "无 119-leverage" 结论** ✓
+- 【**★ $\alpha$ 亦已 FAIL**】`AUDIT-d`：normal 递推 $1024\le11K$ ⟹ $K\ge93.09$ 恰球覆盖界 ⟹ 按唐先生 20:29 判据**已落入"$\alpha$ 亦 FAIL"分支** ⟹ **当前所有已知／自造机制均无 119-leverage**
+- 【**★ 门控链（制度）**】$P_0\to\mathbf{P_{-1}}\to P_1\to P_2\to P_3\to P_4\to P_5$，每层硬退出条件；状态/可行性/难度表已列（$P_{-1}$ 已完成；$P_1$ 未找到 ★★高；$P_2$ ★★高；$P_3$ ★很高；$P_4$ ★★★★中；$P_5$ ★★★★中）⟹ **$P_4/P_5$ 不是瓶颈，$P_1\to P_3$ 才是**
+- 【**★ 已完成 dead branches（非"待完善"）**】Haas/Plagne（C-546/547）／SDP（C-474）／$I$-geometry（`AUDIT-b`）／$\rho$-ownership（`AUDIT-c`）／$(\alpha)$ 次正规（`AUDIT-d`）
+- 【**★ 可行性两层**】第一层（找新机制）**中低**；第二层（找到后完成）**中乃至偏高**；真正风险＝"**找不到产生 119 的正确坐标**"；估：机制发现**难**／机制验证**中**／最终有限证明**中低**
+- 【**★ 与 RH 之别**】RH 无限解析对象 vs 119 有限对象（$|Q_{10}|{=}1024$）⟹ 坐标系一旦正确，问题应**迅速收缩**
+- 【**下一阶段（唯一）**】专门寻找**真正跨出 $I$-geometry** 之新对象（Layer 3；须过六项检验，尤其第 (6) 项）；**不硬找 $P_1$**；**停线/换型/他择由唐先生定** ✗
+- 档：`docs/AUDIT-2026-09-28e-feasibility-gated-chain-and-the-no-leverage-conclusion.md`
