@@ -2663,3 +2663,17 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(6) 下一靶**】① 把 $\delta\le1$ 之**机制**写成命题（**为何 $E$ 必近饱和？** 疑与 $k_2$ 之跨色对**必消耗性**有关，照 C-436 跨色 2-覆盖 ✓✓）；② 五个 mixed $O$ 之几何解释（可否总结为少数几条 ⟹ 接桥④ ✓）；③ 若 $\#\{y:\delta\le1\}$ 可由结构给出 ⟹ $\#\{y\}\stackrel{?}{=}17$ ✓；④ **转④条件**：若 mixed 内余量亦无统一关系 ⟹ ③ 贡献已尽 ⟹ 转 ④（三重 $N_2$ 轨道占据模式 ✓）
 - 【**边界 ✓**】有限穷举 ✓（23200 对 ＋ 78 类 ＋ mixed ＋ $\delta$ 分布 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查确已先跑后写 ✓✓**（三词皆 0 ✓）；**不作路线裁定** ✗；**不声称** $\delta\le1$ 机制已证 ✗；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
 - 档：`docs/WITMIX-2026-09-28-mixed-orbit-types-and-the-capacity-margin-mechanism.md`
+
+**🧪 C-502（2026-09-28 15:1x · **WITCAP2：训练集冻结验证 —— $C_{\rm train}{=}C_{\rm all}$ \textbf{78/78} ✓✓✓（\textbf{无 leakage}）；$(O,\delta_{\rm train})$ 测试集 \textbf{0 错／100\%} ✓✓✓；$E\Rightarrow\delta\le1$ \textbf{0 违反} ✓✓**）** ✓
+- 【**★(0) 逻辑更正（照唐先生 ✓✓）**】C-501 末句"$(O,\delta)$ 之 coarsening ⟹ 继承 100\% transfer" **不成立** ✗✓（coarsening 一般**不**继承分类能力）；且 $C(O){:=}\max_{\text{全部数据}}$ 会**引入测试集信息 ⟹ leakage** ✗✓ ⟹ 本档改为**训练集定义** ✓
+- 【**✓✓✓(1) 训练集冻结（唯一实验）**】$C_{\rm train}(O){:=}\max_{x\in X_{\rm train}}(k_1{+}k_2)$；$\delta_{\rm train}{:=}C_{\rm train}(O)-(k_1{+}k_2)$ ⟹ 结果：
+  · 训练／测试 $11600$／$11600$ ✓；测试集出现 $O$ 数 $78/78$（**无 unseen** ✓）
+  · $$C_{\rm train}(O)=C_{\rm all}(O)\ \text{对}\ \mathbf{78/78}\ \text{成立}$$ ✓✓✓（不等者 $\mathbf0$ ✓ ⟹ **无 leakage** ✓✓）
+  · $$\big(O,\delta_{\rm train}\big)\ \text{测试集}:\ \text{未覆盖 }0,\ \text{错误 }\mathbf0,\ \text{准确率 }\mathbf{100.00\%}$$ ✓✓✓
+  · $E\Rightarrow\delta\le1$（测试集，$C_{\rm train}$ 定义）：违反 $\mathbf0$／$1360$ ✓✓
+- 【**✓✓✓(2) 结构链（首条干净链）**】$$\boxed{\text{统一 OrbType}\to\text{OrbType-特定容量}\to\delta\le1\to E}$$ ✓✓
+- 【**✓✓(3) 一致性之意义**】$C_{\rm train}{=}C_{\rm all}$ 对全部 78 个 $O$ 成立 ⟹ $C(O)$ **非 census 伪影**，而**候选结构量** ✓✓ ⟹ 可争取证明 $$C(O)\ \text{为 OrbType 决定之\ \textbf{结构容量上界}}$$ ✓（照唐先生 §"更漂亮之可能" ✓）
+- 【**✓✓(4) 逐条核验**】唐先生 §"必须修正之逻辑点" **完全正确** ✓✓✓；§$y\in E_x\Rightarrow k_1{+}k_2\ge C(O(y))-1$ **成立** ✓✓；§"78 vs 46 是两个不同 quotient，78 更细但不称更好" **照办** ✓✓；§"若训练集 $C$ 在测试集掉下来则仍是 census-derived" ⟹ **未掉** ✓✓✓
+- 【**★(5) 下一靶**】① 争证 $C(O)$ 为结构容量上界（关键：$\delta\ge2$ 为何不可达于 $E$ ✓）；② 争证 $$\delta\le1\Rightarrow\text{恰 }17\ \text{个局部缺陷}$$ —— **桥④之真正入口** ✓✓✓；③ 五个 mixed $O$ 之几何解释 ✓；**禁止**再找更多特征 ✗（照唐先生 ✓✓）
+- 【**边界 ✓**】有限穷举 ＋ 训练/测试冻结 ✓（$C$ 仅由训练集定 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查确已先跑后写 ✓✓**（`结构链` 1 命中属**空间 A** ⟹ 不计 ✗✓）；**不作路线裁定** ✗；**不声称** $C(O)$ 结构上界性已证 ✗；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
+- 档：`docs/WITCAP2-2026-09-28-frozen-training-capacity-passes-strict-holdout.md`
