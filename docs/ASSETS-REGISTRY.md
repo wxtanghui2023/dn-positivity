@@ -3294,3 +3294,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**建议下一步**】查针对 $n{=}10$ 之**专门更强不等式**（$103\to107$ 之 4 步来源）：**Haas 2000**（Discrete Math 219, 97–106）、**Blass–Litsyn 1998**（IEEE TIT 44, 1998–2002）、**Habsieger 1997**（Discrete Math 176, 115–130）、**Plagne 后续**；目标层次：下界端可挖 $107\to108$（$\Leftrightarrow E\ge164$）、上界端 $120\to119$
 - 【**边界**】$107$ 依赖 BÖW 2004 归属（OEIS 2026-05 版 ＋ Kéri 表 2026-08 **两独立权威一致**）；**BÖW 正文未核** ⚠️
 - 档：`docs/AUDIT-2026-09-28w-103-vs-107-discrepancy-resolved-by-dating-van-Wee-1991.md`
+
+**⛔ AUDIT-2026-09-28x（非 C 号）：BÖW 一般定理取法受阻 ＋ 文献账定格** ✓
+- 【**受阻（诚实）**】`tavily_*` **432**（额度耗尽）；`firecrawl_*` **402**（credits 耗尽）；`web_search` 走 Firecrawl ⟹ 402；`web_fetch`（Kéri PDF）**200 但返回原始 PDF 二进制**；`pdftotext` **未安装**；朴素 `zlib` 抽流 **0 字节**（子集字体内码）⟹ **本轮无法取到 BÖW 2004 一般定理式**（**非**"不存在"，**工具额度所致**）
+- 【**文献账定格**】$\boxed{107\le K_2(10,1)\le120}$（两独立权威一致）；演进 $94\to96\to97\to103\to105\to107$；$1988$ van Wee 原式（$\to103$，**已取且代入已核**）；$1991$ van Wee 博士论文 $103$（**已定分**）；$1997$ CLLM 综述 $105$；$2004$ BÖW $107$（OEIS 逐字 `[a(10)>=107]`）；上界 $120$（Östergård 1991 → Kamenetsky 显式 $120$ 词，**已取并核**）
+- 【**旁证账**】H–P 2000 ＝ linear inequality 族（摘要逐字 ✓）；Habsieger/Honkala 直接界在 $n{=}10$ **仅 94** ✓；Blass–Litsyn 1998 主攻 $A'(9,1)>57$、$K(II,1)>180$（**非** $107$ 此项）；Haas 2000（DM 219）与 Haas 2002（DM 256）**须区分**
+- 【**★ 可执行取法（四条）**】①装 PDF 抽文器（`pip install pypdf` 或 `apt pdftotext`）重抽已下载之 `/tmp/keri.pdf`（$798{,}720$ B）；②**作者主页**（Östergård @ Aalto、Weakley @ IPFW，常自挂 PDF）＝**最可能免费源**；③Cohen–Honkala–Litsyn–Lobstein《Covering Codes》(1997) 相关章含 general $R{=}1$ 界标准形式；④**引文反查**（Haas 2002、Plagne 2009 多半逐字引 BÖW 定理）
+- 【**边界**】**不主张** BÖW 定理不存在 ✗（V290）；**不编造**其公式 ✗
+- 档：`docs/AUDIT-2026-09-28x-BOW-theorem-retrieval-blocked-and-the-literature-ledger.md`
