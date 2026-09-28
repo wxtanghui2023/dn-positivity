@@ -2127,3 +2127,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(6) 下一靶**】① $t{=}12$：$A_0$（33–40 点、球不交、$d(A_0,A_1)\ge3$）＋ $A_1$（$\le12$）＋ $P$（$\le12$）共存 ✓✓；② $|H|{=}1$：用 wedge 闭包 $\#\le5$ 与 $D_2\ge t-7-e$ 对撞 ✓；③ 猜想之证否／证成 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称猜想成立 ✗（V290）
 - 档：`docs/WITA0-2026-09-28-two-false-premises-and-the-clean-centre-structure.md`
+
+**🏆 C-448（2026-09-28 13:5x · **WITCODE：$t{=}12\Rightarrow e(A)=0$（新 ✓✓）＋ 判死 $A(9,3)$ 路线（$D_2\ge5$ 被强制）**）** ✓
+- 【**✓✓(1) 新结果 $t{=}12\Rightarrow e(A)=0$（对全部 $q=|A_1|\in[0,12]$ 成立）**】链条：① $d(A_0)\ge3\Rightarrow e(A_0)=0$（C-447 ✓）；② $d(A_0,A_1)\ge3$ ✓（**本档更简洁证明**：$d{=}1\Rightarrow b\in N(a)\subseteq U^c$ 而 $b\in A\subseteq U$ ✗；$d{=}2\Rightarrow$ 共同邻点 $r_A\ge2\Rightarrow\notin X_L{=}U^c\Rightarrow\in U$，**但** $y\sim a$ 且 $a\in A_0\Rightarrow y\in N(a)\subseteq U^c$ ✗ —— **不需** $|A_1|{=}12$ ✓✓）；③ $$\boxed{U^c=N(A_0)\ \dot\cup\ (N(A_1)\cap U^c)}$$ ✓✓；④ 集合大小 $|N(A_1)\cap U^c|=393-9|A_0|=9q-12$ ✓✓；⑤ 入射计数 $E(A_1,U^c)=9q-2e(A_1)-12$ ✓；⑥ 比较得 $$\boxed{e(A_1)=0}$$ ✓✓ ⟹ **$e(A)=0$** ✓✓；且 $N(A_1)\cap U^c$ 每点恰一个 $A_1$-邻 ✓
+- 【**✓✓(2) 配套新结果**】① $$\boxed{N(P)\cap A_0=\varnothing}$$ ✓✓（$P:=N(A_1)\cap U$；$p\sim a_0,a_1\Rightarrow d\le2$ 违 ②）；② $\boxed{\mathrm{leak}=|E(A,B)|=t=12}$ ✓✓（$2e+\mathrm{leak}=t$ 且 $e=0$）；③ $A_1\subseteq R:=Q_9\setminus(A_0\cup N(A_0))$、$|R|=512-330=\mathbf{182}$ ✓✓
+- 【**✗✗(3) 最后一步不成立 —— 本档判死该路线**】"$e(A)=0\Rightarrow d(A)\ge3\Rightarrow45\le A(9,3)=40\Rightarrow\bot$" **无效** ✗✗：$e(A)=0$ **只排除距离-1 对** ✗；$A_1$ 内部距离-2 对未被排除 ✓；而 $\beta=e+D_2=D_2\ge t-7=5$ ✓✓ ⟹ $$\boxed{D_2(A)\ge5>0\ \text{被强制}}\Longrightarrow\boxed{A\ \text{可证不是最小距离}\ge3}$$ ⟹ **$A(9,3)$ 路线封闭** ✗✓（**必须与 $e(A)=0$ 同时引用**，否则误得矛盾 ✓✓）
+- 【**✓(4) $D_2$ 窗口锐化（新）**】所有 $A$ 的距离-2 对之两共同邻点皆 $\in P$ ✓（$\notin X_L{=}U^c$ ✓、$\notin A$ 因 $e(A){=}0$ ✓、$\notin W$ 因 $W\cap N(A){=}\varnothing$ ✓）⟹ $2D_2=\sum_{p\in P}\binom{r_A(p)}2$ ✓、$\sum_P r_A=12$ ✓、$r_A(p)\le9$ ⟹ $$\boxed{D_2\le18}$$ ✓✓（锐于 C-446 的 19 ✓）⟹ $$\boxed{D_2\in[5,18]}$$ ✓；**杀 $t{=}12$ 只需 $D_2\le4$** ✗
+- 【**✓(5) 其他正确项**】§6–§7 的 $U^c$ 二分割与 $E(P,A_0)=0$ ✓✓；§8–§9 的 $e(A_1)=0$ 推导 ✓✓；§12 的 $A_1$ 内距离-2 对见证在 $P$ ✓
+- 【**✗(6) 已否证**】"球不交／450"（二次 ✗）；"$|P|=12$" ✗（仅 $\le12$ ✓）；"$e(A)=0\Rightarrow$ 码矛盾" ✗✓；"$A_1$ 内距离-2 对另一中点必在 $U^c$" ✗（$t{=}12$ 时 $X_L{=}U^c$ 已饱和 ⟹ 两中点皆在 $P$ ✓）
+- 【**★(7) 下一靶**】① 证 $D_2\le4$（等价排除"六个 $r{=}2$ 的 $P$-点"最小缺陷构型 ✓）；② $A_1\subseteq R\ (q\le12,\ |R|{=}182)$ 局部分类 ✓；③ 用 $N(P)\cap A_0=\varnothing$ 做二部禁邻计数 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 $t{=}12$ 已关闭 ✗（V290）
+- 档：`docs/WITCODE-2026-09-28-zero-internal-edges-at-t12-and-the-closure-of-the-code-bound-route.md`
