@@ -3036,3 +3036,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 阻塞**】Haas 2002 正文不可得（403）⟹ 无法逐条枚举；本档不等式为**自第一原理解析重建**，非逐字引用 ✓
 - 【**建议（窄）**】$k{=}3$ 最小情形，$N_U,N_{U,1}$ × 119-结构联合求带整性/同余之界；**单轮无增益 ⟹ Haas 线关闭**
 - 档：`docs/WITSUB-2026-09-28-k-subspace-covering-inequality-and-its-independence.md`
+
+**☠️ C-544（09-28 20:0 · WITC544：★$H_k$ flag 路线=DEAD ＋ 对 C-543 之更正）** ✓
+- 【**★核心判据（立法 ✓）**】$H_k(F)\equiv\sum_{x\in F}(c_x{-}1){=}\sum_{x\in F}\delta(x)\ge0$；数值 $k{=}1..4$／24 组随机 $F$：$H_k$ 之 slack $\equiv\sum_{x\in F}\delta(x)$，**24/24 全等** ✓✓ ⟹ 即使 $a_F$ 是新变量坐标，$H_k$ **亦无新数学内容**
+- 【**推理**】$k{=}0$ 即逐点覆盖；$k{\ge}1$ 由逐点求和得 ⟹ $H_k\in\operatorname{span}(\text{覆盖条件})\subset\operatorname{span}(\mathcal F_{\rm old})$ ⟹ **依赖** ✗
+- 【**⚠️ 自我纠错（对 C-543 §2）**】C-543 仅证得**变量**独立（$N_U\notin\operatorname{span}(A_i)$）；$H_k$ 作**约束**恒等覆盖条件 ⟹ **变量独立 $\not\Rightarrow$ 约束独立** ✓✓（本档核心教训）
+- 【**判定**】**Haas $H_k$ flag route = DEAD** ✗；链须分离：covering positivity（**所有 $H_k$ 属此**）≠ excess congruence（真正出 $103$–$107$）⟹ **不再碰** $H_k$／face occupancy／flag 化 ✗
+- 【**重定向（唯一活口）**】$103{\to}107$ 不可能来自 $H_k$（只给 $93.09$）⟹ 必来自**同余层**：van Wee 1988 → Habsieger → Haas 2013；核心 $=\delta_i(x)\pmod p$ 与非负性/层间递推之耦合；下一轮唯一 P1 问题＝"$n{=}10,|C|{=}119$ 下同余约束能否与已有 $\delta$-profile／$A_i$／incidence 数据产生新整数碰撞"
+- 【**⚠️ 阻塞**】Haas 2002/2013 正文不可得（403）；**若唐先生有 PDF 上传即可**，收件后只审计 congruence machinery ＋ $n{=}10$ 可用边界，不从摘要反推
+- 档：`docs/WITC544-2026-09-28-Hk-flag-route-DEAD-and-the-C543-correction.md`
