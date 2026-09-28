@@ -2035,3 +2035,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**阈值表 ✓**】$|C_0|=42\Rightarrow s\ge134$ ✓；$44\Rightarrow s\ge116$ ✓；$50\Rightarrow s\ge62$ ✓；$60\Rightarrow s\ge-28$（空 ✓）
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称获得新界 ✗✓；不声称 42/77 为普适分支 ✗；不声称 119 已排除 ✗（V290）
 - 档：`docs/WITCAP-2026-09-28-branch-42-77-capacity-no-go-and-despecialization-equivalence.md`
+
+**📐 C-440（2026-09-28 11:2x · **WITGATE：容量闸门的精确形式（交界点 $393/8$、$\mathrm{min\_excess}_9$ 重述、$s\le61$ 为空之更正）**）** ✓
+- 【**✓(1) 参数化形式与表复核通过**】$$\boxed{s\ \ge\ 512-9a}\ (a:=|C_0|✓)$$ ✓ 逐位：$a{=}42\Rightarrow134$｜$43\Rightarrow125$｜$44\Rightarrow116$｜$45\Rightarrow107$｜$50\Rightarrow62$｜$51\Rightarrow53$｜$56\Rightarrow8$｜$57\Rightarrow-1$（自动 ✓）
+- 【**★★(2) 交界点的精确来源（新 ✓✓）**】第二条约束 $H\subseteq C_0\Longrightarrow|H|=119-s\le a\Longrightarrow\boxed{s\ge119-a}$ ✓（此前只用于 $|A|\ge0$，**从未与容量并列** ✗）；交界 $512-9a=119-a\iff393=8a\iff\boxed{a=393/8=49.125}$ ✓✓ ⟹ $$\boxed{a\le49\ \text{容量主导};\quad a\ge50\ \text{由 }H\subseteq C_0\ \text{主导}\ (a{=}50:69>62✓)}$$ ✓✓ ＝ **唐先生"转折点在 50"的精确原因** ✓✓；容量闸门**有效作用域 ＝ $a\le49$** ✓
+- 【**★★(3) 闸门的精确重述（新 ✓✓）**】$$\mathrm{cov}_9(a)\ge512-s\iff\boxed{9a-\mathrm{cov}_9(a)\ \le\ 9a+s-512}\iff\boxed{\text{「}C_0\ \text{的强制重叠损失}\le\text{滑动余量」}}$$ ✓✓；等价形式 $\boxed{s\ \ge\ \mathrm{min\_excess}_9(a):=512-\mathrm{cov}_9(a)}$ ✓✓（＝ **C-435 §0(5) 的 $\mathrm{cov}_9$ 闸门 ＝ 同一物** ✓）
+- 【**★(4) 致密度事实（新 ✓）**】$\mathrm{cov}_9(m)=9m\iff m\le A(9,3)=40$ ✓✓（最小距离 $\ge3$ 集合无重叠 ⟹ **度数界在此紧**）；$m\ge41\Longrightarrow\mathrm{cov}_9(m)<9m\ \wedge\ \mathrm{min\_excess}_9(m)>512-9m$ ✓✓ ⟹ **容量界不再是紧的**，闸门自 $a\ge41$ 起才有"额外牙齿" ✓
+- 【**✗✗(5) 更正：$s\le61$ 分支为空** ✓✓】$U$ 是 9-cover（C-435 §0(2) ✓）$\Longrightarrow s\ge K(9,1)=62$ **恒成立** ⟹ 唐先生"若已有独立的 $s\le61$"**该前提不存在** ✗；故"切掉 $|C_0|\le50$"**不再需要**（空分支 ✓）；**但方法论要点仍成立** ✓✓：$a\le50$ 区域由容量切掉 ⟹ 一般 NO-GO 只剩 **$a\ge51$ 侧的 $\mathrm{cov}_9$ 精确形状** ⚠️
+- 【**★★(6) 完整 NO-GO 路线（登记 ⚠️，不需新机制）**】求 $\mathrm{min\_excess}_9(a)$（$a\in[44,59]$）；若 $\exists a:\ \mathrm{min\_excess}_9(a)>119\Longrightarrow$ 该 $a$ 不可行 ✓；若 $[44,59]$ 全排除 ⟹ 矛盾（因 $|C_0|,|C_1|\ge44$ 且和为 119 迫使 $|C_0|\in[44,59]$ ✓✓）—— **只用**「$U$ cover $\Rightarrow s\ge62$」＋ 9 维极值函数 ✓✓；**依赖** $\mathrm{min\_excess}_9$ 的值/强下界 ✗（文献/计算 ⚠️）
+- 【**★(7) 档案接口 ✓**】① MCOVER／OBREVERSE（Östergård–Blass 子空间＋LP ✓）＝本类极值函数的标准工具 ✓；② DLP1A/1B（Delsarte LP／SDP ✓）＝$K(9,1)$ 侧锚点 ✓；③ C-435 的 $\mathrm{cov}_9$ 闸门 ＝ 此处 $s\ge\mathrm{min\_excess}_9$ ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 119 已排除 ✗；不声称 $\mathrm{min\_excess}_9$ 路线必成 ✗（V290）
+- 档：`docs/WITGATE-2026-09-28-capacity-gate-crossover-49-125-and-min-excess-restatement.md`
