@@ -2090,3 +2090,16 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️(4) 下一靶（登记）**】① 在**载体入射预算 $\le t$** 约束下求 $A$ 的可行性（＝带预算的码问题 ✓）；② 或攻 $A(9,3)=40$ 的**带缺陷版**：$|A|=41+t'$ 且允许 $\beta$ 个坏对时是否可行 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
 - 档：`docs/WITCAR-2026-09-28-case-I-carrier-correction-and-t12-refutation.md`
+
+**🔬 C-445（2026-09-28 12:4x · **WITSH：singleton-$H$ 分离引理（新 ✓✓）＋ 载体第 5 次 ＋ §12 重犯**）** ✓
+- 【**★★(1) singleton-$H$ 分离引理（新 ✓✓，唐先生 §2 内核之严格化）**】设 $h\in H$、$\{u,v\}\subseteq A$、$d(u,v)=2$ ⟹ **两个共同邻点不可能同时落在 $N(h)$** ✓✓，即每对距离-2 至少一个见证 $\in U\cup(N(H)\setminus N(h))$ ✓✓。**证明**：平移 $h\mapsto0$ ✓；$u=z\oplus e_i,\ v=z\oplus e_j$ ⟹ 共同邻点 $=\{z,\ z\oplus e_i\oplus e_j\}$ ✓；若二者皆 weight-1（$\in N(0)$）则 $z=e_p$、$z\oplus e_i\oplus e_j=e_q$，$e_p\oplus e_q=e_i\oplus e_j\Rightarrow\{p,q\}=\{i,j\}$ ⟹ $\{u,v\}=\{0,e_i\oplus e_j\}\ni0=h\notin A$ ✗ 矛盾 ✓✓
+- 【**（穷举核验 ✓✓）**】$Q_9$ 全部 $(z,i,j)$ 上验证：共同邻点 $\equiv\{z,z\oplus e_i\oplus e_j\}$ ✓；"二者皆 weight-1" 之 **72 例**中 $u,v$ 皆非 0 者 ＝ **0** ⟹ **零反例** ✓✓
+- 【**✗✗(2) 载体错误第 5 次复发**】唐先生 §1 的 $X_L=V\setminus N(H)$ ✗、§2 的"共同邻点必属于 $N(H)$" ✗ ⟹ §1 的"$\forall y\notin N(H):r_A(y)\le1$" ✗（仅对 $y\in X_L$ 成立 ✓）；**§2 的 $D_2(A)=0$ 未被证出** ✗（正确载体：$V\setminus X_L=U\cup N(H)$ ✓，C-444 ✓）
+- 【**✗✗(3) §12 重犯 C-444 §0(3) 已否证之断言**】"(45,119), $T_A{=}0$ 不可能" ✗ —— **一行否证 ✓✓**：$$\sum_{y\in V}r_A(y)=\sum_{a\in A}|N(a)|=9|A|=\mathbf{405}\ \text{（恒真 ✓✓）}$$ ⟹ 唐先生 §12 的 "$\sum_y r_A(y)=512$" 对任何 $|A|=45$ 都不可能 ✗（$512\ne405$ ✓）；$T_A=0$ 只约束 $X_L$ 上的 $r_A$ ✓
+- 【**✓(4) 条件链（在 $D_2=0$ 前提下）**】$|A|-\tau(G_1(A))\le A(9,3)=40\Rightarrow\tau\ge4\Rightarrow e(A)\ge4$ ✓；与 $e\le5$ 合 ⟹ $$\boxed{e(A)\in\{4,5\}}$$ ✓✓；$e{=}4\Rightarrow\mathrm{leak}\le3$、$e{=}5\Rightarrow\mathrm{leak}\le1$ ✓；$e{=}4\Rightarrow A=C\sqcup T$、$|C|=40$、$d(C)\ge3$（**极值 $(9,3)$ 码核心** ✓✓）
+- 【**✓(5) §9 纤维结构（正确且有用 ✓✓）**】$T_A=0\Rightarrow f:X_L\to A$ 良定义、纤维 $F_a$、$|F_a|\le9$、$\sum_a|F_a|=|X_L|$ ✓；且 $d(a,b)=2\Rightarrow F_a\cap N(b)=\varnothing$ ✓✓（否则该点 $r_A\ge2$ 与 $T_A=0$ 矛盾 ✓）
+- 【**⚠️(6) 无杀（诚实）**】取消 $D_2=0$ 后 $t{=}11$ 只需 $e+D_2\ge4\wedge2e+\mathrm{leak}\le11$ ⟹ 可行例 $(4,0)$、$(0,4)$ ⟹ **无矛盾** ✗；**真正缺口** ＝ $|H|=1$ 时 $D_2=0$ 是否成立 ⚠️
+- 【**★(7) 下一靶**】① 攻 $|H|{=}1\Rightarrow D_2=0$（或用分离引理做"每对至少耗一个 $U\setminus N(h)$ 见证"的定量版 ✓）；② 条件式的极值延拓分类（40-码 ＋ 4 点 ＋ singleton $H$ ✓）；③ $A(9,3)=40$ 极值码分类**不在档案** ✗（须文献 ✓）
+- 【**条件旗标 ✓**】§0(4)、§1 的 §3–§7、§13–§14 均为**条件式**（在 $D_2=0$ 下）⟹ 不得脱旗引用 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ＋ 引理穷举验证 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 $D_2=0$ 成立或失败 ✗（V290）
+- 档：`docs/WITSH-2026-09-28-singleton-H-separation-lemma-and-the-fifth-carrier-slip.md`
