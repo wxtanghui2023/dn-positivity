@@ -3078,3 +3078,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ 离散阶梯（复算）**】$E{=}11K{-}1024$，$E\equiv10\pmod{11}$ ∀K，$\Delta E{=}11$；$K{=}118{:}274$ vs $K{=}119{:}285$ ⟹ **一阶 excess 无法区分** ⟹ 碰撞必来自高阶/结构量
 - 【**下一轮（唯一）**】假设 $|C|{=}118$：覆盖结构额外强迫什么离散资源？沿 `Best owners→A_r→F/G→profile→cross-layer incompatibility` 重铸为**候选 $P_1$ 机制**
 - 档：`docs/WITC548-2026-09-28-proof-chain-rebuild-P0-P5-gates-and-the-negative-asset.md`
+
+**🧾 AUDIT-2026-09-28（**非 C 号** · 遵唐先生 20:19「找到 invariant 前不加 C 编号」令 ✓）：C-448→C-548 证明链审计（四类分档 ＋ accounting 缺口）** ✓
+- 【**统计佐证（实测）**】C-448→C-548 共 **122** 档：`恒等式` 39／`容量` 48／`刚性` 24／`闸门` 10／`CLOSED` 7／`STOP` 4 ⟹ **结构/容量/恒等式三样都多，「账本」为零** ✓
+- 【**结论**】(i) 内部结构丰富但**尚未形成 lower-bound mechanism**（如实承认）；(ii) **D 栏（无 accounting interface）最大**；(iii) 唯一缺件＝**global accounting map**
+- 【**根因（三类混淆）**】结构信息 ≠ 独立约束 ≠ 可用于下界的量；实例：$H_k$（C-544 判为 covering 重写）／$A_i{\cap}A_j{=}\varnothing$（损失可重叠）／大量 rigidity（无 leverage）
+- 【**四类分档**】**A**（真正独立结构事实，A1–A13：签名定理／$H_0{\sqcup}H_1{\sqcup}H_2$／闭环恒等／对易代数／$n_i{\equiv}(128,29,2)$／对角不相交／$d(w^*)$ 型／骨架冻结／$K_3(4)$／**障碍阶≡4**／**点态 owner**／$A_r$ 分类／中点参数化）；**B**（covering 重写，降级：$H_k$／C-543 主张／$\sigma$-和／$P_3$ 包含排除／三球矩）；**C**（局部容量界：$c{\le}12$、$c{+}d{\le}20$、$\max(|F|{+}|G|){\le}22$、$c{+}d{+}f{+}g{\le}40$、删除阶梯、$2{\le}\deg(S){\le}3$、$|\cap|{\le}9h{+}2q$）；**D**（无 accounting interface，**最大栏**）
+- 【**★leverage test（制度）**】每 lemma 须申报"最多贡献多少码字损失"；答不出不许继续堆 ⟹ **A10（障碍阶≡4）／A11（点态 owner）是唯一两组用"排除/损失"语言说过话的** ✓
+- 【**accounting invariant 规格**】$\mathcal I{=}\{(c,x)\}$；$\rho(c){=}$ 私有覆盖数（**不可重复计数**）；$R{=}\sum\rho$，$r{=}\max\rho$；目标 $|C|{\le}118\Rightarrow R>118r\Rightarrow\lceil R/r\rceil{=}119$
+- 【**重叠机制实例**】C-515 已证 $\sum|W|{\le}6$ **假**（$\sum|W|{=}7$ 因 1 处 overlap）⟹ 重叠是常态，accounting 须显式处理
+- 【**唯一攻击点**】为 A 栏（尤其 A10/A11）建立 **global accounting map**；顺序：先找 invariant → 证独立 → 证不可累加损失 → 118 collision → 119
+- 档：`docs/AUDIT-2026-09-28-C448-C548-four-class-classification-and-the-accounting-gap.md`
