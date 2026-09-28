@@ -3269,3 +3269,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**旁注（不救）**】$\min d(C)\ge3\Rightarrow$ 球不相交 $\Rightarrow K\le\lfloor1024/11\rfloor{=}93$ ⟹ $K{=}106$ 必有距离 $\le2$ 对 ⟹ $N_1{+}N_2\ge1$（远弱于 $71$）
 - 【**★ 文献线索（供 $107$ 原式）**】BÖW 2004 **参考文献**含 **L. Habsieger & A. Plagne, "New lower bounds for covering codes", Discrete Math 222 (2000), 125–149**；另含 Blass–Litsyn 1998（IEEE TIT 44, 1998–2002）、Haas 2000（Discrete Math 219, 97–106）、Cock–Östergård 1997、Di Pasquale–Östergård 2003 ⟹ **"general lower bound for $R{=}1$" 之最可能源＝Habsieger–Plagne 2000**（下一步取它）
 - 档：`docs/AUDIT-2026-09-28t-local-state-SG-verification-and-STOP.md`
+
+**🔎 AUDIT-2026-09-28u（非 C 号）：距离-3 补洞链之 $X$ —— $\mathrm{mult}(x)$ **不是** $a(x)$ 之函数 ⟹ 不能压回 $E$** ✓
+- 【**① §1 必要条件核验＋修正**】原式 $i,j\notin S_c\Rightarrow\exists k:c{\oplus}e_i{\oplus}e_j{\oplus}e_k\in C$：**含 $y_{ij}\in C$ 之修正版违例数 $=0$** ✓✓；但 $y_{ij}=c{\oplus}e_i{\oplus}e_j\in C$ 之情形有 $\mathbf{220}$ 例 ⟹ **原式省略该项则有 220 反例**；正确版 $i,j\notin S_c\Rightarrow[y_{ij}\in C]\vee[\exists k:\cdots]$。（$y_{ij}\in C\iff\{i,j\}\in G_c$）
+- 【**② ★ $X$ 精确值**】$\mathrm{mult}(x){:=}\#\{c:d(c,x){=}2\wedge\text{中点}(c,x)\cap C{=}\varnothing\}$；$\boxed{X{=}\sum_x\delta(x)\mathrm{mult}(x){=}\mathbf{908}}$；分布 $\{0{:}25,1{:}29,2{:}3,3{:}35,4{:}73,5{:}50,6{:}2,7{:}6\}$
+- 【**★★ ③ 关键否定**】$\mathrm{mult}(x)$ **不是** $a(x)$ 之函数：$a{=}2\Rightarrow\mathrm{mult}\in\{0..7\}$、$a{=}3\Rightarrow\{0..5\}$、$a{=}4\Rightarrow\{0,2,6\}$、$a{=}5\Rightarrow\{4\}$ ⟹ $\mathrm{mult}$ **严格细于** $a(x)$ ⟹ $X$ 不能写成 $F(E)$ ⟹ **唐先生 §10 之压缩落空**
+- 【**三本账**】$\sum\delta a{=}\mathbf{796}{=}4(N_1{+}N_2)$（档案）；$\sum\delta\,\mathrm{mult}{=}\mathbf{908}$（本档）；$\sum\delta\nu_2{=}\mathbf{1270}$；$796<908<1270$ 互不重合，但 $X$ 无独立上界（$\mathrm{mult}\le\nu_2$ 仅给 $X\le1270$）
+- 【**⚠️ 与档案重叠（必录）**】$\mathrm{mult}$ 之定义含"中点 $\cap C{=}\varnothing$" ⟹ 即档案 **C-532·C-533 之中点参数化**对象 ⟹ 本档之 $X$ **部分退入已归档之中点结构层**（同层）
+- 【**判定**】未得 $E\ge153/154$；本链给出**一本新账（$X{=}908$）而不闭合**
+- 档：`docs/AUDIT-2026-09-28u-distance3-hole-filling-X-and-the-multiplicity-verdict.md`
