@@ -3261,3 +3261,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**项目状态更新**】$107\le K_2(10,1)\le120$；上界端 $120_{\rm Kam}$ 经 $1\to0$、$2\to1$（穷举 $7140$）皆不可降 ⟹ **global 119 存在性完全开放**；下界端 $107$（BÖW 2004）原式**尚未取得**
 - 【**$107$ 原式拆解：未完成（诚实）**】已核：归属 BÖW 2004；van Wee 原式（$\to103$）已取且代入已核；Habsieger 1997 覆盖 $n\equiv4 \bmod 6$。**未取得**：BÖW 2004 定理正文、Zhang 1991/92、Haas 具体式 ⟹ **不编造 $107$ 之显式公式**；候选取法：`secemp9/arxiv-complete` 全文检索／作者主页／从 Zhang 1991 追引
 - 档：`docs/AUDIT-2026-09-28s-119-profile-feasibility-audit-huge-solution-space.md`
+
+**🛑 AUDIT-2026-09-28t（非 C 号）：局部状态 $(S_c,G_c)$ 核验：恒等式全对，但局部条件不给下界 ⟹ **STOP**** ✓
+- 【**核验（$120$-code 实测）**】邻居恒等式 $a(c\oplus e_i){=}1{+}\mathbf 1_{c\oplus e_i\in C}{+}d_i(c)$ **违例数 $=0$** ✓✓；$\sum_c s(c){=}\mathbf{100}{=}2N_1$ ✓、$\sum_c t(c){=}\mathbf{298}{=}2N_2$ ✓、$\sum_c E_c{=}\mathbf{796}{=}4(N_1{+}N_2)$ ✓✓ ⟹ $E_c{=}2(s(c){+}t(c))$ 与 $E{+}\sum_x\delta^2{=}4(N_1{+}N_2)$ **皆核实**
+- 【**⚠️ 诚实记录**】脚本首行把 $2(s{+}t)$ 与 $\delta(c){=}a(c){-}1{=}s(c)$ 相比，误报"$114$ 违例"——系**比较对象写错**（$E_c$ 是球上求和，非 $\delta(c)$），**非恒等式错**；以求和层三式为准
+- 【**★★ STOP 判定（照令）**】局部状态 $(S_c,G_c)$ ＋ 私有条件（$s{>}0\Rightarrow\exists i\notin S_c,\deg_{G_c}(i){=}0$，推导成立）**但** $(\varnothing,\varnothing)$ 与 $(\{1\},\varnothing)$ 皆合法 ⟹ $\min(s{+}t){=}0$ ⟹ **不给下界 ⟹ 无新增约束** ⟹ 唯一可用者仍为 $\delta{\ge}0\Rightarrow N_1{+}N_2\ge E/2$（$K{=}106\Rightarrow\ge71$，即已知）⟹ **按令立即停**
+- 【**旁注（不救）**】$\min d(C)\ge3\Rightarrow$ 球不相交 $\Rightarrow K\le\lfloor1024/11\rfloor{=}93$ ⟹ $K{=}106$ 必有距离 $\le2$ 对 ⟹ $N_1{+}N_2\ge1$（远弱于 $71$）
+- 【**★ 文献线索（供 $107$ 原式）**】BÖW 2004 **参考文献**含 **L. Habsieger & A. Plagne, "New lower bounds for covering codes", Discrete Math 222 (2000), 125–149**；另含 Blass–Litsyn 1998（IEEE TIT 44, 1998–2002）、Haas 2000（Discrete Math 219, 97–106）、Cock–Östergård 1997、Di Pasquale–Östergård 2003 ⟹ **"general lower bound for $R{=}1$" 之最可能源＝Habsieger–Plagne 2000**（下一步取它）
+- 档：`docs/AUDIT-2026-09-28t-local-state-SG-verification-and-STOP.md`
