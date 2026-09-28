@@ -3160,3 +3160,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**建议**】先攻标准 3（最廉价且可早期否决），过再攻 4；**不可跳步**
 - 【**★ 地图命中**】`WITPLANE-2026-09-28` 已有**方向集** $r(p){:=}|\{i:p{\oplus}e_i{\in}A_1\}|$（C-450，$S$-$I$ **局部**版）⟹ 与本档**全局**剖面为**不同对象** ✓
 - 档：`docs/AUDIT-2026-09-28h-Phi2-direction-multiplicity-profile-and-the-five-criteria.md`
+
+**★ AUDIT-2026-09-28i（非 C 号）：Criterion 3 —— $M_3$ 结构定理 ＋ ⚠️ 三点数据层预警** ✓
+- 【**★★ $M_3$ 结构定理（实测三例全等）**】$\sum_x a_x^3{=}\sum_{c\in C}\sum_{i=1}^{10}m_i(c)^2$，$m_i(c){:=}\#\{j:c{\oplus}e_i{\oplus}e_j{\in}C\}$（$5958{=}5958$／$5188{=}5188$／$5646{=}5646$）；一阶对照 $\sum_i m_i{=}10{+}2|D_2(c)|$，$\sum_c|D_2(c)|{=}2N_2$
+- 【**Criterion 3 判定**】**应通过**：$M_3$ 需**方向度谱** $\{m_i(c)\}$，非仅其和（后者才由 $N_2$ 定）⟹ $\Phi_2$ 细于距离分布（**构造验证待做** ⚠️）
+- 【**★★ 早期否决预警（本档真正价值）**】$\Phi_2$ 高阶矩 **⊆ 三点（triple）数据层**；而 Gijswijt 2005／Gijswijt–Polak 2025 之 SDP 变量＝**3-point configurations**（C-474 已录论文自述）⟹ **该层已被 SDP 优化过，得 $105.2223<119$** ⟹ 按 C-546 机制族穷尽，$\Phi_2$ **极可能继承同一天花板** ⚠️
+- 【**诚实边界**】SDP 是**松弛**，不榨尽三点组合力量 ⟹ **不构成逻辑否决** ✗；但按"早期杀"纪律为**强预警**，须**先量化**再投入
+- 【**建议**】先做一次廉价量化：$\Phi_2$ 之信息是否已被 SDP 之三点约束覆盖？是 ⟹ **早期 KILL**；否 ⟹ 再构造同距离分布异 $\Phi_2$ 之对，进 Criterion 4
+- 档：`docs/AUDIT-2026-09-28i-criterion3-M3-structure-and-the-three-point-layer-warning.md`
