@@ -1972,3 +1972,17 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(8) 要产生矛盾需要什么（登记 ✗）**】① 层 $\ge4$ 的**禁配置**（$k\ge4$ 的 $(\alpha)$-类比 —— 目前**不存在** ✗）；② 或**容量冲突**（各层差一个数量级 ⟹ 需真正的全局计数 ✗）
 - 【**边界 ✓**】零程序计算 ✓；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗（照 23:54 令 ✓）；$(\alpha)$ 依赖已精确标注 ✓（防误引 ✓）；不声称 $R=0$ 已排除 ✗；不声称 P1 成立 ✗（V290）
 - 档：`docs/WITCASC-2026-09-28-cascade-lemma-termination-dichotomy-and-why-no-contradiction.md`
+
+**🧬 C-435（2026-09-28 10:3x · **WITFIB：FIBER-INDUCTION 精确形式 ＋ 五条必要条件 ＋ $\mathrm{cov}_9$ 活口**）** ✓
+- 【**设定 ✓**】$C\subseteq\mathbb F_2^{10}$、$|C|=119$、半径-1 覆盖 ✓；取定末坐标 $(x,b)$ ✓；$P_b:=\{x:(x,b)\in C\}$、$a=|P_0|$、$b=|P_1|$、$a+b=119$ ✓；$N_9[\cdot]$＝9 维闭半径-1 邻域 ✓
+- 【**★★(1) 覆盖条件的精确等价（本档核心 ✓✓）**】$$\text{整码覆盖}\iff \mathbb F_2^9=N_9[P_0]\cup P_1\ \wedge\ \mathbb F_2^9=N_9[P_1]\cup P_0\iff\boxed{U_0\subseteq P_1\ \wedge\ U_1\subseteq P_0}$$ ✓✓（$U_b:=\mathbb F_2^9\setminus N_9[P_b]$ ＝ "层 $b$ 的洞" ✓；$m(x)=0$ 的 fiber 两点**各需邻层承担** ✓ ＝ 唐先生的 $L(x)=2-m(x)$ 读法 ✓）
+- 【**★★(2) $P_0\cup P_1$ 必是 9-cover（新 ✓✓）**】$\mathbb F_2^9\subseteq N_9[P_0]\cup N_9[P_1]=N_9[P_0\cup P_1]$ ⟹ $$\boxed{|P_0\cup P_1|\ge K(9,1)=62}\ \Longrightarrow\ \boxed{|P_0\cap P_1|\le\mathbf{57}}$$ ✓✓（**＝唐先生期望的 P1，成立 ✓✓**）
+- 【**★★(3) 分裂必须平衡（新 ✓✓）**】$|U_0|\ge512-10a$ 且 $U_0\subseteq P_1$ ⟹ $512-10a\le b$ ⟹ $$\boxed{a\ge\big\lceil 393/9\big\rceil=\mathbf{44}}$$ ✓✓（对称 $b\ge44$ ⟹ $a\in[44,75]$ ✓）
+- 【**★(4) 负载式（新 ✓）**】$|U_0|+|U_1|\le a+b=119$ ⟹ $$\boxed{|N_9[P_0]|+|N_9[P_1]|\ge\mathbf{905}}$$ ✓✓（＝唐先生的 $905$ ✓，现为**必要式** ✓）
+- 【**★★(5) 精确必要条件（新 ✓✓ ＝ 唐先生 P3 的正确形式）**】$\mathrm{cov}_9(s):=\max_{|S|=s}|N_9[S]|$ ✓（**"$K(9,1)=62$ 的带 holes 版本"**）$$\boxed{512-\mathrm{cov}_9(a)\le b\ \wedge\ 512-\mathrm{cov}_9(b)\le a}$$ ✓✓（$\mathrm{cov}_9(62)=512$ ✓ 饱和点 ✓）
+- 【**★(6) 递归形式（新 ✓）**】$m$ 维分裂（两层 $s_1,s_2$）：$2^m-(m+1)s_1\le s_2$ 且对偶 ✓ ⟹ **分裂树**，逐层下降至 $m=1$ ✓（与 Östergård–Blass 的 subspace 递归**同族**，但用 $K$ 的 **holes** 而非 LP ✓）
+- 【**⚠️(7) 但计数层被封顶（诚实 ✓✓）**】由 (3)＋(4) 相加即得 $(n+1)|C|\ge2^n$ ⟹ $|C|\ge93.09$ ⟹ **与 C-431"cell-LP ≡ 体积界"同一层** ✓ ⟹ **任何只用 $|S|,|N[S]|$ 的计数式都到不了 119** ✗✓
+- 【**★★活口 ✓✓**】唯一可用 ＝ $\mathrm{cov}_9(s)$ 的**精确形状**（$s\le61$ 时洞的结构 ✓），而非计数上界 ⟹ **＝唐先生 P3** ✓；**未证明**它在 $s\le61$ 处足以产生矛盾 ✗（登记未做 ✓）
+- 【**⚠️ P2 的诚实答复（未找到 ✗）**】第二个"被迫 9-cover"对象：自然候选 $P_0\cap P_1$、$P_0\triangle P_1$、$P_0$、$P_1$ **皆不被迫覆盖** ✗；$N_9[P_0]\cup N_9[P_1]=\mathbb F_2^9$ 是覆盖条件本身（无新信息 ✓）⟹ **尚无 $|P_0|+|P_1|\ge124$ 型冲突** ✗
+- 【**边界 ✓**】零程序计算 ✓（三处整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗（照 23:54 令 ✓）；$K(9,1)=62$ 为**文献值**（档级 ✓）；不声称 119 已排除 ✗；不声称 $\mathrm{cov}_9$ 路线必成 ✗（V290 ✓）
+- 档：`docs/WITFIB-2026-09-28-fiber-induction-exact-form-five-necessary-conditions-and-cov9-gate.md`
