@@ -3320,3 +3320,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ 机制定位**】$105$ 之来源 ＝ Zhang 1991 ＝ **pair covering inequalities（线性不等式族）**；Habsieger 1997 摘要逐字谓其改进"the lower bounds for $K(n,1)$ given by **Zhang (1991, 1992)**" ⟹ **Zhang 系＝线性不等式族之祖**（本线档案 `SPHERELP`·`HQ1`·`M2B` 涉同族 ⚠️）
 - 【**缺口与下一步（更新优先级）**】仍缺：① **Zhang 1991 pair covering inequality 原式（$\to105$）**；② **BÖW general $R{=}1$（$\to107$）**（同族；前者更可能免费）
 - 档：`docs/AUDIT-2026-09-28z-K10-1-lower-bound-provenance-chain-locked.md`
+
+**📚 AUDIT-2026-09-28aa（非 C 号）：Kéri 档方法章确认下界家族，但**不含 BÖW 公式**（否证）** ✓
+- 【**① 方法章逐字（匈牙利文，§2.4.5 "Alsó korlátokat tárgyaló publikációk"）**】"**Zhang** 之 1991／1992 两文（$[67,71]$）基于**线性不等式组**之研究确定新下界"；家族逐字列 **Habsieger** $[82]$1994、$[91]$1996、$[100]$1997、**Habsieger–Plagne** $[116]$2000、**Haas** $[117]$2000、**Blass–Litsyn** $[103,104]$1998；对 Zhang 之评价逐字："后来他人以**更精细方法**（或计算机）证得更好下界，仅一例外"
+- 【**② ★ 否证（诚实）**】档内关键词命中：Zhang 9、Haas 11、Habsieger 7、Weakley 11、Blass 8、Litsyn 15、Honkala 21、van Wee 12；**"excess" 0、"linearis" 0**；全部 "general"（3 处）**皆在参考文献**、非正文公式 ⟹ **Kéri 档（191 页）不给 BÖW 之具体不等式**
+- 【**③ ★ Zhang 系列确认**】$[67]$ **Z. Zhang, "Linear inequalities for covering codes: Part I — Pair covering inequalities", IEEE TIT 37 (1991), 573–582**；$[71]$ **Z. Zhang & C. Lo, "Part II — Triple covering inequalities", IEEE TIT 38 (1992)**；$[69]$ Lo–Zhang 1992 未刊手稿：业界**不**接受其下界为已证（逐字"a szakma nem fogadja el bizonyítottnak"）⟹ 谱系：**Zhang(1991) Pair → Zhang–Lo(1992) Triple → Habsieger(94/96/97) → H–P(2000) → BÖW(2004)**
+- 【**④ 目标与取法**】固定目标 ＝ **BÖW 2004 §general $R{=}1$ inequality**（可能为分段/取整多参数 bound，非单变量 $F(n)$）；取法：①**2005–2011 之 covering-code／domination 论文与学位论文，逐篇反提 BÖW 之 theorem statement** ②`pypdf` 路数（已通）③引文网络 cited-by。注意 Wu–Chen 2024（arXiv:2203.16901）仅处理 $n\equiv0 \bmod 6$ ⟹ **$n{=}10$ 不在其内** ⟹ $107$ 仍是**小维度专门值**
+- 档：`docs/AUDIT-2026-09-28aa-Keri-method-chapter-confirms-the-family-but-no-BOW-formula.md`
