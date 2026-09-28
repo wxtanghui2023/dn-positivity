@@ -3376,3 +3376,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ ④ 战略读数（最重要）**】Zhang $r{=}1$ 不等式之**简单应用**恰给 $\mathbf{103}$（van Wee 级）⟹ **单条 Zhang 不等式不直接给 $105$ 或 $107$；提升必来自 induced 不等式 ＋ 整数 rounding ＋ 非负线性组合**（与 `AUDIT-af` 之"excess 族止于 103"一致）
 - 【**⑤ 下一步**】①取正确种子 $Z=(5,5,1,1)_{22}$；②算 induced vectors $Z^{(i)}$（$\alpha^k_{i,j}=\sum_t\binom kt\binom{n-k}{i-t}$，$2t=k{+}i{-}j$）；③整数 rounding；④非负线性组合使 $\beta2^n/\Sigma\lambda_j\binom nj>106$。**注**：唐先生 §4–§8 之 induced 系数（$270/50/8/3$）须以 $\lambda{=}(5,5,1,1)$ 为种子重算 ⚠️
 - 档：`docs/AUDIT-2026-09-28ag-Zhang-r1-inequality-verified-but-two-corrections.md`
+
+**✅ AUDIT-2026-09-28ah（非 C 号）：$Z^{(i)}$ 表独立复算全对 ✓；**pair 层闭合于 103**（含三处修正）** ✓
+- 【**✓✓ ① 全表独立复算**】以暴力枚举 association scheme 交数 $p^k_{ij}=\#\{x:d(0,x){=}i,d(v,x){=}j\}$（$v$ 取重量 $k$）于 $Q_{10}$，再算 $Z^{(i)}_k=\sum_{j=0}^{3}\lambda_jp^k_{ij}$ ⟹ **11 行逐项与唐先生表一致**（例 $Z^{(1)}=(50,14,18,3,4,0,\ldots)$、$Z^{(5)}=(0,0,56,21,90,30,90,21,56,0,0)$）
+- 【**✗✓ ② sanity 常数修正（修正后更强）**】唐先生写 $\sum_kZ^{(i)}_k\binom{10}k=22\binom{10}i$（其数值例 $2200$ 与 $22\binom{10}1{=}220$ **自相矛盾**）✗；**实测** $\sum_kZ^{(i)}_k\binom{10}k=\mathbf{220}\binom{10}i=(\sum_j\lambda_j\binom{10}j)\binom{10}i$，**比例 $220$ 对一切 $i$ 恒定** ⟹ 任一 induced 之界 $M\ge\frac{22\binom{10}i\cdot2^{10}}{220\binom{10}i}=\mathbf{102.4}\Rightarrow\boxed{103}$ ✓✓
+- 【**★★ ③ pair 层闭合判定（本档核心）**】$i{=}0,\ldots,10$ 逐条实测（$M\ge102.4000\Rightarrow103$）**全部 $11/11$** ⟹ $\boxed{\text{induced ＋ 非负线性组合\ \textbf{不可能}把 }103\ \text{提到 }107}$（因比例恒为 $220$，系齐次缩放）——唐先生 §2 之判断**已数值证实**；增益只可能来自 **rounding（破坏齐次比例）**
+- 【**✗ ④ rounding 无空间**】$L:=5A_0+5A_1+A_2+A_3$ 之 $\mathrm{mod}\ 11$ 分布（120-code 全量）$\{0{:}22,1{:}167,2{:}65,3{:}202,4{:}261,5{:}141,6{:}88,7{:}48,8{:}17,9{:}9,10{:}4\}$ ⟹ **各余数皆出现 ⟹ 无同余型 rounding 增益** ✗；另：唐先生 §4 之 $A_0{=}1\Rightarrow A_1{=}A_2{=}A_3{=}0$ **实测违反 $120/120$** ✗✗（样本 $u\in C$：$(1,0,5,18)$）
+- 【**★ ⑤ 止损判定（照唐先生 §7 判据）**】判据逐字"若所有候选 rounding 都满足全局比值 $\le106$，则此路线到不了 $107$" ⟹ 本轮①$11/11$ 给 $103$、②无 rounding 空间 ⟹ $\boxed{\textbf{PAIR 层路线闭合于 }103}$ ⟹ 下一步进入 **triple-covering／二阶局部约束**（与文献走向一致：Zhang 1991 pair → Zhang–Lo 1992 triple）；与 `AUDIT-af`（excess 族止于 $103$）一致
+- 档：`docs/AUDIT-2026-09-28ah-induced-table-verified-and-pair-level-closed-at-103.md`
