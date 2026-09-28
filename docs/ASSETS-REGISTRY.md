@@ -2138,3 +2138,16 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 下一靶**】① 证 $D_2\le4$（等价排除"六个 $r{=}2$ 的 $P$-点"最小缺陷构型 ✓）；② $A_1\subseteq R\ (q\le12,\ |R|{=}182)$ 局部分类 ✓；③ 用 $N(P)\cap A_0=\varnothing$ 做二部禁邻计数 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 $t{=}12$ 已关闭 ✗（V290）
 - 档：`docs/WITCODE-2026-09-28-zero-internal-edges-at-t12-and-the-closure-of-the-code-bound-route.md`
+
+**💎 C-449（2026-09-28 14:2x · **WITPROF：$r_{\max}{=}3$ 被逼出 ＋ $D_2\in\{5,6\}$ 仅两 profile ＋ P-3 被推翻**）** ✓
+- 【**✗必改（因子 2，同型第 3 次）**】唐先生 §1 的 $D_2=\sum_P\binom{r_p}2$ **不对** ✗；**正确** $$2D_2=\sum_{p\in P}\binom{r_p}2=\sum_j\binom j2n_j$$ ✓✓（距离-2 对有**恰好 2 个**共同邻点 ✓）
+- 【**✗✗§2 例子不可能（纠正其"纠正"）**】型 $(2,2,2,2,2,1,1)$：$\sum r=12$ ✓ 但 $\sum\binom r2=\mathbf5$ 奇 ⟹ $2D_2=5$ ⟹ $D_2=2.5$ **非整数** ✗✗ ⟹ **该型不存在**；故 $D_2=5$ **必须出现 $r\ge3$** ✓✓（与其 §2 结论相反 ✓）；其"$\sum r=12$ 不能得等价性"之**方法提醒正确** ✓✓
+- 【**★★★(1) $r_{\max}\le3$（新）**】设 $r(p)=k$、支撑 $S$；则 $\{e_i:i\in S\}\subseteq A_1$ 两两距离 2 ✓，且每对 $i<j$ 的第二共同邻点 $e_i\oplus e_j\in P$ 且 $r\ge2$ ✓✓ ⟹ $$\sum_{p'\in P}r(p')\ \ge\ k+2\binom k2=k^2$$ ✓✓（被迫点与 $p$ 及 $k$ 个一阶点**互异** ✓）⟹ $k^2\le12$ ⟹ $$\boxed{k\le3}$$ ✓
+- 【**★★★(2) $r_{\max}=3$ 被逼出 ⟹ P-3 被推翻（核心）**】若 $r_{\max}\le2$：$\sum\binom r2=n_2$、$\sum r=2n_2+n_1=12$ ⟹ $n_2=2D_2$ ⟹ $$n_1=12-4D_2\ge0\Longrightarrow\boxed{D_2\le3}$$ ✓✓ ⟹ 与强制的 $D_2\ge5$ **直接矛盾** ✗✗ ⟹ $$\boxed{\exists p:r_A(p)\ge3}$$ ✓✓ ⟹ 与 (1) 合：$$\boxed{r_{\max}=3}$$ ✓✓✓ ⟹ **Lemma P-3 不可证且为假** ✗✗；**§6 的 Case II（$r_{\max}{=}2$）为空** ✗；**Case I 是唯一分支** ✓✓
+- 【**★★★(3) $D_2\in\{5,6\}$，恰两 profile（穷举核验 ✓）**】由 $k\le3$：$\sum\binom r2=3n_3+n_2\le12$（极大 $n_3{=}4$ ✓）⟹ $$\boxed{D_2\le6}$$ ✓✓ ⟹ $$\boxed{D_2\in\{5,6\}}$$ ✓✓✓；且 $$\boxed{D_2=5\iff\text{profile }3^32^11^1},\quad \boxed{D_2=6\iff\text{profile }3^4}$$ ✓✓（搜索空间由 $[5,18]$ 暴缩为**两种** ✓✓）
+- 【**★★(4) 第二共同邻点封闭条件（新）**】$\forall p\in P,\ \forall\{i,j\}\subseteq\operatorname{supp}(p)$：$$\boxed{p\oplus e_i\oplus e_j\in P\ \text{且}\ r(p\oplus e_i\oplus e_j)\ge2}$$ ✓✓ ⟹ 每个 $r{=}3$ 点必生 3 个被迫点（各 $r\ge2$ ✓）；这是把 profile 与**几何**绑死的唯一新接口 ✓✓
+- 【**✓(5) 其他正确项**】§3 的 $2D_2=\sum s^2+\sum s$ ✓；§7 的 $r\ge3\Rightarrow A_1$ 含距离-2 三角形 ✓✓（且现已**被逼出必存在** ✓）；$A_0$ 可消（$r_A(p)=r_{A_1}(p)$）✓✓
+- 【**✗(6) 已否证**】P-3 ✗✗；Case II（$r_{\max}{=}2$）✗；型 $(2^5 1^2)$ ✗；$n_1=12-2D_2$ ✗（应为 $12-4D_2$ ✓）；$D_2=\sum_P\binom{r_p}2$ ✗
+- 【**★(7) 下一靶**】① 攻 profile $3^4$（4 个 $r{=}3$ 点、12 对、12 个被迫点须落回 $P$ 的**封闭自洽** ✓）；② 攻 profile $3^32^11^1$；③ 用封闭条件把 profile 转成 $A_1$ 上的 $F_2^3$-型立方结构 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数与有限 profile 穷举 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
+- 档：`docs/WITPROF-2026-09-28-rmax-equals-3-forced-and-only-two-D2-profiles.md`
