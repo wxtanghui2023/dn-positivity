@@ -3414,3 +3414,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**④ 路线判定**】(A)「攻 pair 数上界」之自然框架已证**等价球界** ⟹ **(A) 死亡**；本会话已实测全部 $\Phi(A_j)$ 型量（excess／shell／induced／FM／$\theta$）皆止于 $103$–$104$ ⟹ **可实现算术族内 (A) 无入口** ⟹ 须转 **(B)** 高阶 SDP 或 **(C)** 取原文
 - 【**⑤ 当前总账（诚实收束）**】可实现算术族 $103$（上确界）／$\theta$ 精化 $\approx104$／$N_1{+}N_2$ 框架**等价球界**（本档）／**level-3 SDP $105.2223\Rightarrow K\ge106$**（可自行实现之最强）／(B) 高阶 SDP **未做**／(C) Zhang 1991／BÖW 2004 原文 **未得** ⟹ **我们未能复现 107；缺口确实存在于"覆盖效率"之外——须非松弛型（integrality）论证**
 - 档：`docs/AUDIT-2026-09-29c-self-correction-the-N1N2-reduction-is-dead.md`
+
+**⛔ AUDIT-2026-09-29d（非 C 号）：路线 (B) 由**原作者亲口宣告不可行**；SDP 族在 $r{=}1$ 系统性弱于组合方法 ⟹ $107$ 必出自**组合（integrality）**机制** ✓
+- 【**★★ ① 原作者原话（逐字，决定性）**】"While in principle one could also define a full hierarchy... practical obstacles (in particular, the **rapidly increasing number of variables and the size of the block matrices**) make the full **second and higher levels of the Lasserre hierarchy difficult to compute**. Therefore, we focus on a **3-point bound**..." ⟹ **连二阶完整层级都做不到** ⟹ **(B)「提高 SDP 层级」不可行**（原作者判定）；另逐字本文"setting new records across a broad range" ⟹ 即 **已是最强（2025）**
+- 【**✓✓ ② Table 5 取证**】$n{=}6{:}11.5980$、$7{:}15.9999$、$8{:}31.9999$、$9{:}\mathbf{55.3464}$、$10{:}\mathbf{105.2223}$、$11{:}170.6666$、$12{:}341.3333{=}2^n/n$
+- 【**★★ ③ 关键读数**】$n{=}9$ 之真值 $K_2(9,1){=}\mathbf{62}$（Östergård–Blass 已定）而 SDP 仅给 $55.3464$ ⟹ **差 $6.65$** ⟹ SDP 族在 $r{=}1$ **远弱于组合方法**（仅 $n{=}6,7,8$ 接近真值）⟹ $n{=}10$ 之 $105.2223$ 与发表记录 $107$ **自洽**（SDP 弱于组合）
+- 【**④ 路线总判定**】(A) pair 数上界 **死亡**（`AUDIT-29c`：框架 ≡ 球界）／**(B) 高阶 SDP 死亡**（本档：原作者谓 higher levels "difficult to compute"）／**(C) Zhang 1991／Zhang–Lo 1992／BÖW 2004 之组合机制 ＝ 唯一路**（本档 ③：SDP 弱于组合）⟹ **我们未能复现 $107$ 不是实现失败，而是方法学边界**；$107$ 必用 **integrality／组合**推理
+- 【**⑤ 已归档资源**】`sources/Gijswijt-Polak-2025-arXiv2504.01932-FULLTEXT.txt`（纯文本 $128{,}364$ 字符）＋ `.html`（$1{,}005{,}444$ B）；含 §2（Theorem 2.5 原式）、§3（Terwilliger 代数）、§4（binary 对称化 Theorem 4.9）、附录 A（Table 5）
+- 【**⑥ 建议下一步（(C) 之可自做形式）**】自推 **Zhang–Lo 三重覆盖不等式**（1992, Part II — Triple covering inequalities）之 $r{=}1$ 类比；纪律：预估成本 ＋ 查 load／内存（本档已做：load 0.53／可用 5074 MB）＋ 经 `scripts/pyguard.sh`
+- 档：`docs/AUDIT-2026-09-29d-route-B-dead-by-the-authors-own-statement.md`
