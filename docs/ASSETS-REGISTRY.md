@@ -3252,3 +3252,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**判定**】上界路线（此码）：单删 ＋ 2-for-1 皆负 ⟹ 该 $120$-code 局部尺度上**已紧**；**本结果只针对此码，不排除他码可降** ✗
 - 【**未做候选**】①$3$-for-$2$／一般 $k$-for-$(k-1)$ 穷举 ②换其他 $120$-code ③非局部从零构造
 - 档：`docs/AUDIT-2026-09-28r-120-code-deletion-experiment-single-and-2-for-1-both-negative.md`
+
+**📊 AUDIT-2026-09-28s（非 C 号）：119 profile 可行性审计 —— 解空间 $2.1\times10^{10}$ ⟹ 矩约束排除不了 119** ✓
+- 【**$3$-for-$2$ 停止（照令）**】information gain/cost 不划算；局部 surgery 只能证"此码邻域无更小码"，≠排除他码
+- 【**★★ 精确计数**】profile $=(n_0..n_{10})$，$\sum n_j{=}1024$、$\sum j n_j{=}11K{-}1024$：$K{=}107\Rightarrow149{,}027{,}949$ 个；$K{=}118\Rightarrow15{,}435{,}776{,}320$；$\mathbf{K{=}119\Rightarrow21{,}329{,}274{,}912}$；$K{=}120\Rightarrow29{,}143{,}348{,}027$ ⟹ **一阶矩不可能排除 119**
+- 【**二阶矩仍不排除**】$\sum_j\binom j2 n_j{=}2(N_1{+}N_2)$；校准 120-code 实测 $172{+}108{+}48{+}70{=}\mathbf{398}{=}2\times199$ ✓；119 由凸性得 $N_1{+}N_2\ge\mathbf{89}$（下界），上界极松 ⟹ 亦不排除
+- 【**★ 按唐先生判据之判定**】"若 119 之 profile 很容易存在，则 119 下界路线很可能很难" ⟹ **下界路线（矩/profile 层）判定：难**（**只**针对该层，非一切下界方法）
+- 【**项目状态更新**】$107\le K_2(10,1)\le120$；上界端 $120_{\rm Kam}$ 经 $1\to0$、$2\to1$（穷举 $7140$）皆不可降 ⟹ **global 119 存在性完全开放**；下界端 $107$（BÖW 2004）原式**尚未取得**
+- 【**$107$ 原式拆解：未完成（诚实）**】已核：归属 BÖW 2004；van Wee 原式（$\to103$）已取且代入已核；Habsieger 1997 覆盖 $n\equiv4 \bmod 6$。**未取得**：BÖW 2004 定理正文、Zhang 1991/92、Haas 具体式 ⟹ **不编造 $107$ 之显式公式**；候选取法：`secemp9/arxiv-complete` 全文检索／作者主页／从 Zhang 1991 追引
+- 档：`docs/AUDIT-2026-09-28s-119-profile-feasibility-audit-huge-solution-space.md`
