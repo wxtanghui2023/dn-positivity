@@ -1948,3 +1948,15 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★纪律（照唐先生 §3 ✓）**】保持 $4b_4+b_3$ 口径 ✓；**不得**偷换为 $4d_4(c)$ ✗（$\binom{|S_y\cap S(c)|}3=0$ 当 $\le2$ ✓ ⟹ $4d_4(c)$ 会**高估** ✗）
 - 【**评估（照判据 ✓，不做裁定 ✗）**】① **过门 ✓✓**：$\sum_T\binom{m_T}2$ 取决于 4-集**成对交叠** ✓，非 profile 量 ⟹ **未落入 STOP** ✓（属 C-417／C-425 之外**第三种** ✓）；② ⚠️**下界侧为空** ✓（$\sum_Tm_T=\binom s3$ 时 $\forall T:m_T=1$ ⟹ 二阶量 $=0$ ✓，凸性不给正下界 ✗）；③ ⚠️**上界侧＝唯一活口** ✓（登记未做 ✗；可用局部界：$E_J\le2b_4(s-4)$ ✓、$E_{\rm cross}\le b_3b_4$ ✓）
 - 【**不碰 $E_3$** ✓（照唐先生 §7 刹车 ✓）】；**零程序计算** ✓；**不作路线裁定** ✗；档 `docs/WITSTAR-2026-09-28-witness-star-overlap-classification-private-public-and-johnson-identity.md`
+
+**⚖️ C-433（2026-09-28 10:1x · **WITCOV：$R=0$ 两处修正 ＋ 强制高层覆盖定理（新）**）** ✓
+- 【**✗修正一（算术滑落）**】$b_3=\binom s3-4b_4$ 代入 $b_4\le\frac14\binom s3$ **只给 $b_3\ge0$** ✗；唐先生所写 $b_3\ge\frac12\binom s3$ **不成立** ✗✓（该数字恰是错代换产物 ✓）。**整数核对**（$s=0..10$）：$b_3$ 下界依 $s$ 为 $0,0,0,1,0,2,0,3,0,0,0$ ✓（非 $\frac12\binom s3$ ✓）
+- 【**✗修正二（packing 界用错对象）**】正确界涉及 **$S$ 内部的 pair** ✓：$$b_3\le(10-s)\Big\lfloor\tbinom{s}{2}/3\Big\rfloor$$ ✓（因同外部坐标 $x$ 下的 $B_3$ triples 两两至多共享 1 点 ⟹ 每 pair 至多用一次 ⟹ $3|\mathcal B_x|\le\binom s2$ ✓）—— **非** $\binom t2$ ✗（与上一轮 (20) 一致 ✓）
+- 【**结论 ✗**】**"$R=0\Rightarrow s\le4$" 不成立** ✗✓：修正后**无 $s$ 上界** ✓；$R=0$ 在**所有 $s$** 存活 ✓（$s=10$ 反而极紧：$b_3\le0\Rightarrow b_3=0\Rightarrow b_4=30$ ✓，无矛盾 ⚠️）
+- 【**★★(3) 强制高层覆盖定理（新 ✓✓，一般形式，\textbf{不需} $R=0$）**】$$u\subseteq S(c),\ |u|=4,\ c\oplus e_u\notin C\ \Longrightarrow\ \exists\,i\notin u:\ c\oplus e_{u\cup\{i\}}\in C$$ ✓✓ **证明 3 行**：点 $c\oplus e_u$ 须被覆盖 ✓；其 1-邻点两类 —— $c\oplus e_{u\setminus i}$（$|u\setminus i|=3$、$\subseteq S(c)\overset{(\alpha)}{\Longrightarrow}\notin C$ ✗）与 $c\oplus e_{u\cup i}$（$|u\cup i|=5$ ✓）⟹ **唯一出路 ＝ 距离-5 码字** ✓✓（＝档案 P1-D3"被迫高层码字"的**对偶层** ✓✓）
+- 【**★(4) 计数形式（新 ✓）**】$$\binom{s(c)}4-b_4\ \le\ \sum_{w\in C,\,d(c,w)=5}\binom{|S_w\cap S(c)|}4\ =\ 5c_5+c_4$$ ✓（$c_j:=\#\{w:d(c,w)=5,\ |S_w\cap S(c)|=j\}$ ✓；$j=5$ 贡献 5 ✓、$j=4$ 贡献 1 ✓、$j\le3$ 贡献 0 ✗）
+- 【**★(5) 级联（新 ✓✓，登记未做 ⚠️）**】$k\ge4$：若某 $k$-子集 $W\subseteq S(c)$ 的**全部** $(k-1)$-子集皆缺失 ⟹ $\exists$ weight-$(k{+}1)$ 码字 $\supseteq W$ ✓（同法 ✓）；$R=0$ 时 $B_4$ 稀疏（$4b_4\le\binom s3$）⟹ 大量缺失 ⟹ **强制塔**上行 ✓✓ ⟹ **必在 weight $\le10$ 终止 ⟹ 终止层即潜在矛盾位置** ⚠️
+- 【**★(6) $s=4$ 两刚性模型（分类仍成立 ✓）**】$(b_4,b_3)\in\{(1,0),(0,4)\}$ ✓（只用 $b_4\le\frac14\binom43=1$ ✓）；**Model A** $B_4=\{S\}$：单 4-子集自覆盖 ⟹ 无强制 ✓；**Model B** $B_4=\varnothing,B_3=\binom S3$ ⟹ $c\oplus e_S\notin C$ ⟹ **强制 weight-5 码字 $c\oplus e_{S\cup\{i\}}$（$i\in S^c$）** ✓✓（须 $s\le9$ ✓）
+- 【**状态 ✓**】**$R=0$ 未被排除** ✓（§3 明示其在所有 $s$ 存活 ✓）；新定理为"$B_4\to$ layer-5"接口的**正确形式** ✓ 且**一般成立**（非 $R=0$ 专属 ✓）；级联为下一步 ⚠️（**登记未做，唐先生裁定 ✗**）
+- 【**依赖 ✓**】§0(3) 依赖 $(\alpha)$（即 $A(c)=0$ ✓）—— 引用须与 C-410 同引 ✓；**零程序计算**（仅一处整数核对 ✓）；**不作路线裁定** ✗（照 23:54 令 ✓）
+- 档：`docs/WITCOV-2026-09-28-r0-two-corrections-and-forced-high-layer-covering-theorem.md`
