@@ -3001,3 +3001,4 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★下一靶**】在 $\deg(S){=}2$ 反设下，需**证明**六 $a'{\in}D^c$ 中最少有两个被 $|R'|{=}2$ 的覆盖者命中（即真正的额外 owner 级 candidate）⟹ 否则不能闭合 $\deg{\ge}2$ 之结构证明 ✓✓；**禁止**纯计数 ✗、$F,G$ 反推 ✗
 - **边界**：**不作路线裁定** ✗；**明确否认** $C{=}3{\Rightarrow}{\neg}1111$ 与 $128{=}145{-}17$ 已 ✗（V290）
 - 档：`docs/WITAUDIT3-2026-09-28-coverer-vs-extra-owner-resolution.md`
+**🧩 C-537（09-28 18:3 · WITAR：Ar 交集全分类——deg=2→cov(0,0,1⁸)、deg=3→cov(1¹⁰)；每邻居至多被一个 Best owner 覆盖 ✗✓）** ✓ 档入。
