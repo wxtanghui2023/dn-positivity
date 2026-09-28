@@ -2979,3 +2979,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(5) 下一靶**】① 证明 $\deg(S)\neq0,1$（$|\mathcal R_i(D,S)|\ge2$）：**(A)** $\deg(S){=}1$ 时有唯 $R{=}\{a,b\}$，取另四 $a'\in D^c{\setminus}\{a,b\}$ 之 $x_{S,a'}{=}I_i\oplus\mathbf1_{S\cup\{a'\}}$ ⟹ 覆盖矛盾 ✓✓；**(B)** $\deg(S){=}0$ ⟹ $6R$-候选全非码字 ⟹ 与 $d(I_i,I_j){=}4$ 之几何冲突 ✓；② 输出六个 $x_{S,a}$ 之覆盖 support 型（距 4／5）✓✓；**禁止**再统计 $\deg(S)$ ✗✓（已知 $\{2,3\}$）、纯计数 ✗✓、由 $F,G$ 反推 ✗✓
 - 【**边界 ✓**】有限穷举 ✓（160 对 × 六 $S$ × 额外 owner 全量 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查为写后补跑（据实 ⚠️；真输出已注入 ✓，皆自命中 1 ✓）**；**不作路线裁定** ✗；**不声称** $\deg(S)\ge2$ 已有结构证明 ✗；**明确否认** $C{=}3\Rightarrow\neg1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
 - 档：`docs/WITPARAM-2026-09-28-extra-owner-parameterization-holds-completely.md`
+**🫴 C-534（2026-09-28 17:5x · WITDIST：$R$ 存在且尽皆互异，$S\to R$ 为单射）** ✓ registry appended.
+
+**🫴 C-534（2026-09-28 17:5x · WITDIST：★$R$ 映射为单射（$\deg{=}2\Rightarrow|$distinct $R|{=}2$ 3968；$\deg{=}3\Rightarrow3$ 1984），无重复 $R$）** ✓
+- 【**✓✓ $S{\to}R$ 为单射**】三正实例中 $d(I_i,I_j){=}4$ 之对，每 $S\in\binom D2$ 之额外 owner 到 $\binom{D^c}{2}$ 映射 **无重复**（$\deg{=}2$ 时两 $R$ 互异 3968，$\deg{=}3$ 时三 $R$ 互异 1984）⟹ 即唐先生 §4 之"$K_{S,R}$ 只 owner 一个中点"之直接推论 ✓✓
+- 【**★下一靶**】$\deg(S){=}1$ 反设下唯一 $R{=}\{a,b\}$，取 $a'\in D^c{\setminus}\{a,b\}$ 之 $x_{S,a'}$ 核其覆盖冲突 —— 证明 $\deg(S){\neq}0,1$ ✓；**禁止**纯计数 ✗、$F,G$ 反推 ✗；**不声称** $\deg(S){\ge}2$ 已证 ✗
+- **边界**：有限穷举 ✓；不跨空间 ✓；**不作路线裁定** ✗；**明确否认** $C{=}3{\Rightarrow}{\neg}1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
+- 档：`docs/WITDIST-2026-09-28-deg2and3-equal-distinct-R.md`
