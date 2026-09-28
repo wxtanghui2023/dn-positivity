@@ -3302,3 +3302,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ 可执行取法（四条）**】①装 PDF 抽文器（`pip install pypdf` 或 `apt pdftotext`）重抽已下载之 `/tmp/keri.pdf`（$798{,}720$ B）；②**作者主页**（Östergård @ Aalto、Weakley @ IPFW，常自挂 PDF）＝**最可能免费源**；③Cohen–Honkala–Litsyn–Lobstein《Covering Codes》(1997) 相关章含 general $R{=}1$ 界标准形式；④**引文反查**（Haas 2002、Plagne 2009 多半逐字引 BÖW 定理）
 - 【**边界**】**不主张** BÖW 定理不存在 ✗（V290）；**不编造**其公式 ✗
 - 档：`docs/AUDIT-2026-09-28x-BOW-theorem-retrieval-blocked-and-the-literature-ledger.md`
+
+**📐 AUDIT-2026-09-28y（非 C 号）：van Lint–van Wee 1991 定理到手（只给 $103$）＋ Kéri 标记图例定源** ✓
+- 【**★ 祖公式（唐先生取证，本档复核）**】van Lint–van Wee 1991 混合 $R{=}1$ 定理：$|C|\ge\frac{(2t+b)3^t2^b}{(2t+b)(1+2t+b)-b}$（$b$ 偶）；代入 $t{=}0,b{=}10$：$\frac{10\cdot1024}{110-10}{=}\mathbf{102.4}\Rightarrow\boxed{103}$ ✓（源：其 Theorem 16）
+- 【**★ 四路下界账（定格）**】van Wee 1988（$2^n/n$）$\to\mathbf{103}$（**原式已取**）；**van Lint–van Wee 1991 $\to\mathbf{103}$（已取）**；Habsieger/Honkala excess $\to\mathbf{94}$；**BÖW 2004 $\to\mathbf{107}$（正文未取）** ⟹ **$103$、$94$ 皆不能解释 $107$ ⟹ 之前一直在代错公式**
+- 【**★★ 猜测正式排除**】"$107$ ＝ van Lint–van Wee 1991 直接代入" ✗——该式在 $n{=}10$ 只给 $103$；且 Kéri 标记 $\mathbf b$（1991）$\ne\mathbf d$（2004）为**两条独立机制** ⟹ $107$ 确系 BÖW 之**新** mechanism
+- 【**★ Kéri 标记图例定源**】$\mathbf b{=}$van Lint–van Wee (1991)；$\mathbf c{=}$Östergård–Hämäläinen (1997)；$\mathbf d{=}$**BÖW (2004)** ⟹ $107$ 之作者标记 ＝ $\mathbf d$
+- 【**唯一缺口**】**BÖW 2004 之 general $R{=}1$ theorem 正文**；取到后唯一代入 $(b,t){=}(10,0),R{=}1$，应得 $107$；再问 $F(10)\stackrel{?}{\ge}108$
+- 【**本轮取法结果**】Östergård 主页（`users.aalto.fi/~pat/`）为**纯书目**（无 PDF 链接）✗；搜索引擎仍全灭（432／402）✗ ⟹ 退回 `AUDIT-x` §3 四条（①装 pypdf 重抽 `/tmp/keri.pdf`（表含 $\mathbf b/\mathbf c/\mathbf d$ 图例）②《Covering Codes》(1997) ③引文反查 Haas 2002／Plagne 2009）
+- 档：`docs/AUDIT-2026-09-28y-van-Lint-van-Wee-theorem-obtained-and-the-marker-legend.md`
