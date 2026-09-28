@@ -2970,3 +2970,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(6) 下一靶**】① 由中点参数化 ＋ $K_6$ 结构**正向推** $|\mathrm{own}(w_S)|\ge4$ —— 现已是**纯 $D$ 四坐标问题** ✓✓✓；② 研究 $S\mapsto\{K_S,L_S\}$ 之规则（查是否有 $S\leftrightarrow D{\setminus}S$ 或其它对称）✓✓；③ 重跑两支复核（修 C-525 脚本 bug）✓；**禁止**假定 universal owner ✗✓、纯计数 ✗✓、由 $F,G$ 反推 ✗✓
 - 【**边界 ✓**】有限穷举 ✓（960 例之中点／owner ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查为写后补跑（据实 ⚠️；真输出已注入 ✓，皆自命中 1 ✓）**；**不作路线裁定** ✗；**不声称** $|\mathrm{own}(w_S)|\ge4$ 已有结构证明 ✗；**明确否认** $C{=}3\Rightarrow\neg1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
 - 档：`docs/WITMID-2026-09-28-midpoint-parametrization-confirmed-and-no-universal-owner.md`
+
+**🏆 C-533（2026-09-28 17:5x · **WITPARAM：★★充要参数化\textbf{完全成立}（$K{=}I_i\oplus\mathbf1_{S\cup R}$，$R\in\binom{D^c}{2}$），**2240/2240**（100\%）；$\deg(S){=}|\mathcal R_i(D,S)|\in\{2,3\}$（320+640）**）** ✓
+- 【**✓✓✓(1) 充要参数化完全成立**】对每 $S\in\binom D2$，$w_S{=}I_i\oplus\mathbf1_S$；若 $K\in\mathrm{own}(w_S)\setminus\{i,j\}$，则 $$\boxed{\mathrm{supp}(I_i\oplus K)=S\cup R,\quad R\in\textstyle\binom{D^c}{2}}$$ ✓✓✓（**2240/2240，100\%，零失败**）⟹ 唐先生 §1 之充要参数化**完全确证** ✓✓✓（非近似、非统计）⟹ 额外 owner 之 macro-support 必须为 $S\subseteq D$ 与 $R\subseteq D^c$ 之并 ✓✓
+- 【**✓✓(2) $\deg(S)\in\{2,3\}$**】分布 $\{3{:}320,\ 2{:}640\}$ ⟹ $|\mathrm{own}(w_S)|=2+2=4$ 或 $2+3=5$ ✓✓；**核心**：$|\mathcal R_i(D,S)|\ge\mathbf2$ 于全部实例 ✓✓（$\deg(S){=}0,1$ 之**零实例**）⟹ 仅须证明**为何禁止** $0,1$ ✓✓
+- 【**✓(3) 与 C-532 之连续性**】中点参数化 $\to D^c$ 六坐标 $\to\binom{D^c}{2}$ 之 15 元 $\to$ $6\times15$ 局部二部图 ⟹ 问题**纯代数化** ✓✓
+- 【**✓✓(4) 逐条核验**】唐先生 §1 之充要参数化**完全确证** ✓✓✓（2240/2240）；§2–§3（$K_{2,2,2}$、$\mathrm{supp}=S\cup R$）**完全正确** ✓✓（实测 100\%）；§4（$K_{S,R}$ 只 owner 一个中点 $w_S$）**成立** ✓✓（按公式 $2+|S\triangle T|$ 唯一 min 在 $T{=}S$）；§5–§6（$6\times15$ 二部图 codegree 问题）**方向正确** ✓✓✓；§7–§8（从 $\deg(S)\le1$ 不可能出发）**成立** ✓✓
+- 【**★(5) 下一靶**】① 证明 $\deg(S)\neq0,1$（$|\mathcal R_i(D,S)|\ge2$）：**(A)** $\deg(S){=}1$ 时有唯 $R{=}\{a,b\}$，取另四 $a'\in D^c{\setminus}\{a,b\}$ 之 $x_{S,a'}{=}I_i\oplus\mathbf1_{S\cup\{a'\}}$ ⟹ 覆盖矛盾 ✓✓；**(B)** $\deg(S){=}0$ ⟹ $6R$-候选全非码字 ⟹ 与 $d(I_i,I_j){=}4$ 之几何冲突 ✓；② 输出六个 $x_{S,a}$ 之覆盖 support 型（距 4／5）✓✓；**禁止**再统计 $\deg(S)$ ✗✓（已知 $\{2,3\}$）、纯计数 ✗✓、由 $F,G$ 反推 ✗✓
+- 【**边界 ✓**】有限穷举 ✓（160 对 × 六 $S$ × 额外 owner 全量 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**词回查为写后补跑（据实 ⚠️；真输出已注入 ✓，皆自命中 1 ✓）**；**不作路线裁定** ✗；**不声称** $\deg(S)\ge2$ 已有结构证明 ✗；**明确否认** $C{=}3\Rightarrow\neg1111$ 已证 ✗（V290）；**明确否认** $128{=}145{-}17$ 已证 ✗（V290）
+- 档：`docs/WITPARAM-2026-09-28-extra-owner-parameterization-holds-completely.md`
