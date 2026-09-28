@@ -2080,3 +2080,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★(7) 下一靶（登记）**】① 证 $T_A=0\ (\text{Case I})\Rightarrow|A|\le40$（可杀 $t\ge8$ 之 Case I ✓）；② 或分类 $r=3,4,\dots$ 的局部构型与互斥 ✓
 - 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗；不声称 Case I 不可行 ✗（V290）
 - 档：`docs/WITRMAX-2026-09-28-a45-t-parametrisation-rmax-trichotomy-and-case-I-hard-core.md`
+
+**📦 C-444（2026-09-28 12:2x · **WITCAR：Case I 载体修正（$V\setminus X_L=U\cup N(H)$）＋ 否证 $t{=}12$ 之杀 ＋ 集中化修好**）** ✓
+- 【**✓(1) §1–§2 成立（一处记号 ✓）**】$T_A=0\Rightarrow r_A\equiv1$ on $X_L$ ✓ $\Rightarrow|E(A,X_L)|=|X_L|$ ✓；$9|A|=2e+|E(A,H)|+|X_L|+|E(A,R)|$ ✓（唐先生写 $9a$ 应为 $\boxed{9|A|}$ ✗ 记号；仅 $t{=}12$ 时二者重合 ✓）$\Rightarrow 2e+\mathrm{leak}=9|A|-|X_L|\le t\Rightarrow\boxed{e(A)\le t/2}$ ✓✓；$\beta=e+\tfrac12\sum_{V\setminus X_L}\binom{r_A}2$ ✓✓
+- 【**✗必改一（载体错位）**】唐先生 §3 的 $V\setminus X_L=N(H)$ **不对** ✗（系把 $X_L$ 误作 $V\setminus N(H)$ ✓）；**正确**：$$X_L:=U^c\setminus N(H)\Longrightarrow\boxed{V\setminus X_L=U\cup N(H)}$$ ✓✓ ⟹ 坏对见证可落在**整个 $U$（含全部 $B$，至多 75 点）** ⟹ §4 的 $2D_2=\sum_{N(H)}\binom{r_y}2$ ✗、§5 的"由至多 4 个 $H$-球承载" ✗；**正确**：$2D_2(A)=\sum_{y\in U\cup N(H)}\binom{r_A(y)}2$ ✓✓、§8 的 $M$ 应为 $U\cup N(H)$ ✓
+- 【**✗✗必改二（结论级）**】**"$(a,s)=(45,119)$、$T_A=0$ 直接不可能" 不成立** ✗✗。**病根**：$H=\varnothing$ 时 $X_L=U^c$ **而非 $V$** ✗（唐先生 §10 写"此时 $X_L=V$" ✗）⟹ $T_A=0$ 只要求每个 $x\in U^c$ 恰一个 $A$-邻 ✓。**实际核对**：$t{=}12$：$|A|{=}45$、$|X_L|{=}512-119=\mathbf{393}\le9|A|=\mathbf{405}$ ✓ **可满足**；且 $2e(A)+|E(A,R)|=405-393=12=t$ ✓ 与预算相容 ✓ ⟹ **$t{=}12$ 的 Case I 未被关闭** ✗✓
+- 【**★★(2) 集中化直觉可修好（新 ✓✓）**】载体虽**大**（$U\cup N(H)$ 可至 119 点 ✓），但其 **A-入射预算极小**：$$\boxed{\sum_{y\in V\setminus X_L}r_A(y)=2e(A)+\mathrm{leak}\ \le\ t\ \le\ 12}\ \Longrightarrow\ \boxed{D_2(A)\le\tfrac12\binom t2}$$ ✓✓ ⟹ $\beta\le\tfrac t2+\tfrac12\binom t2$（$t{=}8{\Rightarrow}18$、$10{\Rightarrow}27$、$12{\Rightarrow}39$）而所需仅 $\beta\ge t-7\le5$ ⟹ $$\boxed{\text{Case I 的计数层对全部 }t\in[8,12]\ \text{存活}}$$ ✗✓（**必须结构论证** ✓）
+- 【**★(3) 第 4 次同型陷阱（制度 ✓✓）**】$X_L$ 约定再次被误用 ✗（首次 C-437 §0(3)、二次 C-438 §1、三次 C-441 §0(1)、**本档第四次**）⟹ **规则强化**：凡涉及 $X_L/V\setminus X_L$ 的等式，**一律先写出 $V\setminus X_L=U\cup N(H)$ 再继续** ✓✓（已同步 TOOLS.md ✓）
+- 【**⚠️(4) 下一靶（登记）**】① 在**载体入射预算 $\le t$** 约束下求 $A$ 的可行性（＝带预算的码问题 ✓）；② 或攻 $A(9,3)=40$ 的**带缺陷版**：$|A|=41+t'$ 且允许 $\beta$ 个坏对时是否可行 ✓
+- 【**边界 ✓**】零程序计算 ✓（仅整数核对 ✓）；未上 SDP/SAT ✗；未开门② ✓；未改门 ✓；**不作路线裁定** ✗；不声称 $a=45$ 已排除 ✗（V290）
+- 档：`docs/WITCAR-2026-09-28-case-I-carrier-correction-and-t12-refutation.md`
