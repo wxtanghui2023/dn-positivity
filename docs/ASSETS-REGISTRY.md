@@ -3192,3 +3192,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**判定**】Gate $B1$-B 触发 ⟹ **components 候选 KILL**；按唐先生"若不成立，边界层整体降级" ⟹ **边界层降级** ✗
 - 【**★ 系统性剥除总表（6 类）**】①一阶 ownership→sphere ledger ②coset size→linear counting ③subspace LP→93.0909 ④integer coset class→同层重编码 ⑤$\Phi_2$→三点距离层 ⑥补图 components→恒连通退化；**且 ⑤⑥ 皆早期廉价杀**
 - 档：`docs/AUDIT-2026-09-28l-TestB1-complement-is-connected-so-components-carry-no-info.md`
+
+**★ AUDIT-2026-09-28m（非 C 号）：$P_{-1}^{\rm spectral}$ 门检 —— $Q1$ 不过 ＋ 表示层总审计** ✓
+- 【**设定**】$f{=}1_C$、$g{=}1_{B_1(0)}$，覆盖 $\iff f*g{\ge}1$ 逐点；$\hat g(S){=}11{-}2|S|$
+- 【**Q1 = 不过 ✗（经典）**】Delsarte–MacWilliams：Walsh **功率谱** $\{P_j{=}\sum_{|S|{=}j}\hat f(S)^2\}$ **⟺ 距离分布** $\{D_i\}$（Krawtchouk 可逆）⟹ Fourier 之自然内容＝距离分布重编码；**⚠️ 数值 spot-check 有 bug 已诚实记录**（$x{=}0$ 通过 $153600$ ✓ Parseval；$x{\ne}0$ 不过 $18432$ vs $151552$ ⟹ 我的 FWT 字符/索引配对约定错误，未修；但 Q1 由经典定理给出）
+- 【**Q2 = 有 ✓**】$\operatorname{sgn}\hat f(S)$ 不被功率谱决定
+- 【**Q3 = 未见，且结构上无中间层 ⚠️**】功率谱 $\sim11$ 参数（KILL）；完整谱 $\in\mathbb R^{1024}$ 反变换 $\Longleftrightarrow C$ **完全不变量**（无归约）；符号型 $1024$ bits $\approx$ 完整谱 ⟹ **近完全不变量**、无可压缩中间层 ⟹ **同一双分岔**
+- 【**★★ 表示层总审计**】四层表示类（incidence/multiplicity、coset/subspace、complement boundary、全局算子/谱）**皆无独立 $P_1$ 入口** ⟹ 按令 ⟹ **119 之数学新表示路线暂时没有可见入口**；**非**"所有表示都死" ✗（限已检验四类，V290）
+- 【**建议**】此时转 **certificate 路线不是退而求其次**（四类表示 ＋ 六个具体候选皆无独立 accounting）
+- 档：`docs/AUDIT-2026-09-28m-P-minus-1-spectral-gate-Q1-fails-and-the-representation-audit-verdict.md`
