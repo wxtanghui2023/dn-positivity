@@ -3053,3 +3053,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**结论**】无需做 Theorem 3→4→5 之 $n{=}10$ 翻译 ✓
 - 【**下一目标**】**Haas 2002 condition (15)** 之 P1 门检（**不同机制**）；须查其在 $n{=}10$、$K{\ge}119$ 时能否产生超出 $103$ 之量 ⚠️
 - 档：`docs/WITC545-2026-09-28-Haas2013-congruence-route-DEAD-at-parity-gate.md`
+
+**☠️ C-546（09-28 20:1 · WITC546：Haas-2002／Plagne 族对 $n{=}10$ 天花板 $\ll119$ ＋ ★机制族穷尽）** ✓
+- 【**✓ Plagne 2009 主定理逐字**】$|C|\ge(r+\frac{s}{s+k})2^k+\frac1{s+k}\sum_{i=1}^{r}((\frac{s(n-k+1)}{k}+n+1-s-2k)i+\frac{s(s-k)}{k})N_i$，约束 $s\le2^{n-k}-(n+1)r$；结构＝按前缀 $\sigma\in A^k$ 分 $2^k$ 块，$n_\sigma$＝块占据，$N_i{=}#\{\sigma:n_\sigma{=}r{-}i\}$ ✓
+- 【**✓ $n{=}10$ 重建**】主项 $\max_{(k,r,s)}(r+\frac{s}{s+k})2^k\approx\mathbf{94.4}$（$k{=}2,r{=}23,s{=}3$；Haas 经验最优 $k{=}\lfloor(n-1)/2\rfloor{=}4$ 反而只给 $91.08$）⟹ 阶梯 $93.09<94.4\ll103<107\ll119$
+- 【**✓ condition (15) 定性**】仅为 Haas Thm 2 "剩余项须为正"之**参数选择**条件；Plagne 已将其显式化并可控 ⟹ **不改族之量级**
+- 【**★机制族穷尽（核心）**】三大已发表族皆够不到 119：① excess/congruence（Haas 2013）→ 退回 103（C-545 奇偶门）；② subspace linear-inequality（Haas 2002/Plagne）→ 主项 94.4／已实现 ≤107（本档）；③ SDP（Gijswijt-Polak 2025）→ 105.2223（C-474）⟹ **119 处于一切已发表机制可达域之外**，我们之 119-专属工作在**前沿** ✓
+- 【**⚠️ 边界**】§4 为"已发表机制"枚举，**非**"不存在任何机制"（V290）；Haas 2002 全文未审毕（仅据 Plagne 复述＋主定理）
+- 档：`docs/WITC546-2026-09-28-Haas2002-Plagne-family-caps-below-119.md`
