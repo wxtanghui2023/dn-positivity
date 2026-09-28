@@ -3406,3 +3406,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ ④ $\theta$ 精化与门槛表**】van Wee 之实质 $|A|\le\theta E_{\rm tot}$，$\theta{=}\sum_{z\in Z}E(z)|A{\cap}B(z,1)|/E_{\rm tot}$（Lemma 51 给逐点 $\le n{-}R{=}9$）⟹ $M\ge1024(1{+}\theta_0)/(1{+}11\theta_0)$；表：$\theta_0{=}9{\Rightarrow}\mathbf{103}$、$8{\Rightarrow}104$、$7{\Rightarrow}106$、$\mathbf{6{\Rightarrow}107}$★、$5{\Rightarrow}110$、$4{\Rightarrow}114$。**但 120-code 实测 $\theta{=}2460/296=\mathbf{8.3108}$** ⟹ 任何普适 $\theta_0\ge8.31$ ⟹ 该路线极限 $\approx\boxed{104}$ ✗ ⟹ **$\theta$ 精化不能达 107**
 - 【**✓ ⑤ 附带核验**】$\varepsilon$ 不可提升至 $3$：$E(B(x,1))$ 为奇数且 $\min{=}1$（分布 $\{1{:}338,3{:}417,5{:}106,7{:}29,9{:}8,11{:}6\}$）；若 $\varepsilon{=}3\Rightarrow M\ge121>120$ **矛盾** ⟹ $\varepsilon{=}1$ 为真上限 ✓
 - 档：`docs/AUDIT-2026-09-29b-self-derived-identity-and-the-two-bounds-gap-remains.md`
+
+**⚠️ AUDIT-2026-09-29c（非 C 号）：★自查纠错 —— $N_1{+}N_2$ 归约**失效**（框架等价球界）；路线 (A) 当场死亡** ✓
+- 【**✗✗ ① 自查纠错（推翻 `AUDIT-29b` §2）**】以恒等式 $4(N_1{+}N_2)=E+\sum\delta^2$（$E{=}11M{-}1024$）：下界（$\delta^2\ge\delta$）$N_1{+}N_2\ge E/2$；上界（van Wee 路线）$N_1{+}N_2\le(122M{-}11288)/4$。**实测** $M{=}106$：$E{=}142$，下界 $\mathbf{71}$，上界 $\mathbf{411.0}$ ⟹ $\boxed{71\le N_1{+}N_2\le411}$ ⟹ **下界 $\not>$ 上界 ⟹ 无矛盾** ✗
+- 【**② 另一处数字错**】`AUDIT-29b` §3 所写"下界 $117$"**系误读**（把 $2(N_1{+}N_2)$ 之下界当成 $N_1{+}N_2$）；**正确**下界 $=\max(71,41)=71$（C-S 实为 $41$）⚠️
+- 【**★★ ③ 根因（本档核心）**】上界 $-$ 下界 $=\frac{122M-11288}{4}-\frac{11M-1024}{2}=\frac{100M-9240}{4}=25M-2310$ ⟹ $>0\iff M>92.4$ ⟹ **该框架仅在 $M\le92$ 时排除 ⟹ 等价于球界（$\lceil1024/11\rceil=94$）级** ✗✗ ⟹ van Wee 之力量来自 $A$（deep holes）结构，**不能**改写为 $N_1{+}N_2$ 双边夹逼；故 `AUDIT-29b` §2 之"自证出档案所述缺件"为**误判**
+- 【**④ 路线判定**】(A)「攻 pair 数上界」之自然框架已证**等价球界** ⟹ **(A) 死亡**；本会话已实测全部 $\Phi(A_j)$ 型量（excess／shell／induced／FM／$\theta$）皆止于 $103$–$104$ ⟹ **可实现算术族内 (A) 无入口** ⟹ 须转 **(B)** 高阶 SDP 或 **(C)** 取原文
+- 【**⑤ 当前总账（诚实收束）**】可实现算术族 $103$（上确界）／$\theta$ 精化 $\approx104$／$N_1{+}N_2$ 框架**等价球界**（本档）／**level-3 SDP $105.2223\Rightarrow K\ge106$**（可自行实现之最强）／(B) 高阶 SDP **未做**／(C) Zhang 1991／BÖW 2004 原文 **未得** ⟹ **我们未能复现 107；缺口确实存在于"覆盖效率"之外——须非松弛型（integrality）论证**
+- 档：`docs/AUDIT-2026-09-29c-self-correction-the-N1N2-reduction-is-dead.md`
