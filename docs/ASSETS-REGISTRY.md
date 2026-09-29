@@ -3542,3 +3542,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗ ③ 作废清单**】`29p`（口径错 $2P_{\rm total}$ vs $2P(A)$）／`29q`（自指代入）／`29r`（同上，趋势系伪量）—— 三档之"界"**全部作废**
 - 【**④ 净状态（收束）**】本会话已系统封闭之机制族：excess $103$／线性不等式 $103$／induced＋FM $103$／$\theta$ 精化 $104$／SDP-3 $105.2223\Rightarrow106$／**fiber ≡ 覆盖（平凡）**；而 $107$ 为公开下界（BÖW 2004，closed access），其机制**本会话未得** ⟹ **自推路（可实现范围内）已穷尽；缺口始终是那"最后一个单位"**
 - 档：`docs/AUDIT-2026-09-29s-self-correction-fiber-route-is-circular-and-was-already-in-archive.md`
+
+**🧩 AUDIT-2026-09-29t（非 C 号）：局部三元组覆盖 ＝ 覆盖设计数 $C(v,3,2)$（＝Zhang 1991 机制）；精确化后仍不足** ✓
+- 【**✓✓ ① 框架验证**】修正我上轮 bug（$t_3/t_2$ 须用**翻转集** $w\oplus c$）后：边覆盖 $3t_3{+}t_2\ge\binom v2-|F_c|$ **零违例** ✓（余量 $0..14$）；$L1/L4/L5$ 亦零违例 ✓ ⟹ **唐先生的分层框架完全成立**
+- 【**★★ ② 表之精确化**】局部问题＝用三元组覆盖 $K_v-F_c$ 之边，**精确最小数 ＝ 覆盖设计数 $C(v,3,2)$**：$a_1{=}0$（$v{=}10$）：$15\to\mathbf{17}$（+2）；$a_1{=}2$：$10\to\mathbf{11}$；$a_1{=}4$：$5\to\mathbf{6}$；$a_1{=}6$：$2\to\mathbf{3}$；$v\equiv1,3 \bmod 6$ 时无间隙（Steiner 存在 ✓）；Schönheim 下界 $\lceil\frac v3\lceil\frac{v-1}2\rceil\rceil$ 给出 $17/11/6/3$ 之证书 ✓
+- 【**★★ ③ 机制辨识（关键）**】zbMATH 之 Zhang 1991 评审逐字："a classic problem of **covering pairs by $k$-tuples**"；而我们复原 Zhang 之式时正是 $m_0=m_1+F(n{-}r{+}1,r{+}2)$，$F(10,3)=C(10,3,2)=\mathbf{17}\Rightarrow m_0=22$ ✓✓ ⟹ **该局部框架就是 Zhang 之机制（不含新机制）**，上限仍在 $103$–$105$ 族
+- 【**✗ ④ 决定性扫描**】约束 Delsarte($k{=}1..10$)＋$\Sigma A_i{=}106$＋覆盖$(9A_1{+}A_2{+}3A_3\ge45)$＋局部设计$(A_3\ge\hat h(A_1)-A_2)$，$\hat h$＝凸包络（顶点 $(0,17),(1,12),(3,7),(7,1),(8,0)$）⟹ $A_1=0,1,2,3,4,5,6,7$ **皆可行**（最小可行 $A_2$ ＝ $1.29,1.02,1.19,2.54,5.75,9.81,14.41,20.49$），**仅 $A_1=8$ 不可行** ⟹ **不排除 $M{=}106$** ✗。⚠️ 诚实标注：扫描用 $A_2^{\rm all}$ 扣减（偏保守/偏弱）；若用 $A_2^{UU}$ 之下界可略收紧，但缺口甚大
+- 【**⑤ 结论**】局部设计障碍**真实**（$\lceil\cdot\rceil$ 漏掉 $+1\sim+2$）但**力度不足**（与 Delsarte 不碰撞）；根因＝该机制 ≡ Zhang 覆盖设计 ⟹ 欲 $107$ 须**非**覆盖设计型之新信息（本会话已排除 6 族＋纤维＋覆盖设计）
+- 档：`docs/AUDIT-2026-09-29t-local-triple-cover-is-the-covering-design-number-and-does-not-close.md`
