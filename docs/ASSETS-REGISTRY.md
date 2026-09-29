@@ -3478,3 +3478,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗✓ ③ 自查纠错**】链 $\sum_{x\in A}(\text{球 excess})=11E-4(N_1{+}N_2)\ge|A|$ ⟹ $M{=}106$：$4(N_1{+}N_2)\le644$ ⟹ $\boxed{N_1{+}N_2\le\mathbf{161}}$（**我上轮误写 $411$，系把 $12288$ 记成 $11288$** ✗）；下界仍 $E/2=71$ ⟹ 余量 $90$，未闭合
 - 【**④ 缺口精确定位**】所需 ＝ 一条在 $M{=}106$ **失效**、$M\ge120$ **成立**的不等式；形式上等价于把 van Wee 之 $9$ 因子抬到 $>12.7$ ⟹ 即 $E$ 之下界须 $>142$。已知该因子来自 $2t{+}b{-}R=9$（结构常数，不可调）；可实现算术族上确界 $103$–$104$，SDP-3 $=105.2223\Rightarrow106$ ⟹ **须非松弛型（integrality/几何）机制，且不是"更多高重数点"型**
 - 档：`docs/AUDIT-2026-09-29k-P1-target-refuted-by-monotone-trend-plus-upper-bound-correction.md`
+
+**🚨 AUDIT-2026-09-29l（非 C 号）：第三次同型误读 —— Habsieger parity 属**球 excess**，非**点计数** $|D\cap\Gamma(x)|$** ✓
+- 【**✗✗ ① (A) 假**】$x\notin D\Rightarrow\mu(x)=r(x)$ 恒奇：**实测**（120-code）$\mu$ 分布 $\{1{:}746,2{:}136,3{:}13,4{:}2,5{:}7\}$ ⟹ **偶者 $138/904$** ✗✗
+- 【**✗✗ ② (B) 假**】$c\in D\Rightarrow s(c)=|D\cap\Gamma(c)|$ 恒奇：**实测** $s$ 分布 $\{0{:}55,1{:}36,2{:}23,3{:}6\}$ ⟹ **偶者 $78/120$** ✗✗（而 $\sum_c s(c)=100=2A_1$ ✓ 该恒等式本身正确）
+- 【**✓✓ ④ 真正之 parity（100% 实测）**】$c\in D$：$\delta_{N[c]}(D)$ **偶**（$120/120$ ✓，Habsieger (1.8)）；$x\notin D$：$\delta_{N[x]}(D)$ **奇**（$904/904$ ✓，(1.7)）—— 对象是 $\delta_{N[v]}=\sum_{y\in N[v]}(|D\cap N[y]|-1)$（**球内 excess 之和**；旁证：Wu–Chen 之 $\delta_{V(Q_n)}(D)=(n+1)|D|-|V(Q_n)|$ 恰合此定义）
+- 【**✗ ③ 崩塌链**】$(B)\Rightarrow2A_1\ge106\Rightarrow A_1\ge53$ —— (B) 假 ⟹ 无从推出；**实测 $A_1=\mathbf{50}<53$** ✗（真者为 $A_1\le71$，由 $\sum_{x\notin D}r(x)=10M-2A_1\ge1024-M$ 得）⟹ "18 预算" 与 $A_2\ge27$ **皆建在假前提上** ✗
+- 【**✓ ④ 唐先生恒等式全部正确（实测）**】$\sum_{x\notin D}r(x)=10M-2A_1$（$1100$ ✓）；$E_{\rm out}=E-2A_1$（$196$ ✓）；$\sum_x\binom{\mu(x)}2=2(A_1+A_2)$（$398$ ✓）；$\sum_{c\in D}\binom{\mu(c)}2=2A_1+\sum_c\binom{s(c)}2$ ✓；**(N) $9A_1+A_2+3A_3\ge\frac{45M}2$**（120-code $3335\ge2700$ ✓；$M{=}106$：$\ge2385$ ✓）⟹ **惟 (A)(B) 及其下游须弃**
+- 【**★★ ⑤ 同型警示（第三次）**】①`29g/29h`：$\sum\binom\delta2$ vs surfeit $\delta_{N[v]}$；②`29j`：球 excess parity 用到点 excess $\mu-1$；③**本档**：用到点计数 $|D\cap\Gamma(x)|$（即 $\mu,s$）⟹ **凡引 Habsieger parity，必先写出 $\delta_{N[v]}=\sum_{y\in N[v]}(|D\cap N[y]|-1)$ 再往下**；parity 是**一阶邻域的求和量**，任何"某点邻域计数"皆不得直接套
+- 【**⑥ 校正后之 106-specific 系统（只留真者）**】$A_1\le71$；$9A_1+A_2+3A_3\ge2385$；$2(A_1+A_2)=\sum_x\binom{\mu(x)}2$；$\sum_{x\notin D}r(x)=1060-2A_1\ge918$；$\sum_{x\in A}(\text{球 excess})=1562-4(N_1{+}N_2)\ge918\Rightarrow N_1{+}N_2\le161$ ⟹ **缺口不变**（须一条在 $M{=}106$ 失效之不等式；本档未提供）
+- 档：`docs/AUDIT-2026-09-29l-parity-conflation-third-time-point-count-vs-ball-excess.md`
