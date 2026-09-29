@@ -143,3 +143,14 @@ $$\textbf{（甲）}\ \text{Zhang--Lo 1992 \textbf{三重覆盖}不等式之 }r{
 ⟹ pair 层已封（R02）而**三重层未试** ⟹ 且**非单条 linear** ⟹ 与 29e 的不可能性**不冲突** ✓✓
 
 ROUTE-CHECK: R01=NA R02=FINGERPRINT-CITED R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=NA R10=NA R11=NA R12=NA R13=NA R14=NA R15=FINGERPRINT-CITED R16=NA R17=NA R18=NA R19=NA R20=NA
+
+---
+
+## §7.3 ⚠️ 勘误：106→107 归约有 ×2 漏因子（2026-09-29 22:3x）【新增】
+
+$$\boxed{\text{`RESULT-29n` §3 之 }N_{\le2}\ge\Sigma\delta\ \textbf{错};\ \text{正确为 }N_{\le2}\ge\tfrac12\Sigma\delta}$$
+- **反向验证**：$n{=}9$ 62-码 $N_{\le2}{=}73<\Sigma\delta{=}108$ ✗；$n{=}10$ 120-码 $N_{\le2}{=}199<\Sigma\delta{=}296$ ✗ ⟹ **两个已知码双双违反** ✓✓
+- **后果**：§2 净成果 (C) 之「$\mu_{\max}\ge4$ 推论」**作废** ✗；「一格缺口」应为 $\approx\mathbf{72}$（$N_{\le2}$ 单位）✗；§4「结构诊断」之前提须重估 ⚠️
+- 详 `docs/ERRATUM-2026-09-29-n1-factor-two-in-the-106-107-reduction.md`
+- **未受影响** ✓：复现 107 $\iff$ 排除 $M{=}106$｜恒等式 $E1/E2/E3$｜恒等式 $T$｜`AUDIT-29e` 之禁令
+- **顺带有效新式** ✓：$P\le2A_2$
