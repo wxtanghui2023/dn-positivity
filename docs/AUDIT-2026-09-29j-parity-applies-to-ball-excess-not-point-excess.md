@@ -49,7 +49,7 @@ $$\text{而你 }\S8\text{--}\S9\ \text{所要的是\ \textbf{下界}（"至少 7
 ## §5 校正后之 P1（**保留你的靶，去掉错的前提 ✓**）
 
 $$\text{你的靶（}\S9\text{）本不需 parity}:\ \boxed{\text{若某 }M{=}106\ \text{码有}\ \ge72\ \text{个点满足}\ e(x)\ge2\ (\text{即 }\mu\ge3),\ \text{则}\ \sum_xe\ge144>142=E\Longrightarrow\bot}✓$$
-$$\therefore\ \text{该靶\ \textbf{依然有效}（充分条件）；但其\ \textbf{前提不得由 parity 得出}（见 }\S1\text{）}$
+$$\therefore\ \text{该靶\ \textbf{依然有效}（充分条件）；但其\ \textbf{前提不得由 parity 得出}（见 }\S1\text{）}$$
 $$\text{且\ \textbf{不能}由纯计数得出}:\ \text{若仅 }k\le71\ \text{点有 }e\ge2\ \text{而其余 }e\le1,\ \text{则}\ \sum e\le10k+(1024-k)=1024+9k\ \text{可远超 }142\ \Longrightarrow\ \textbf{计数不约束}$$
 $$\therefore\ \boxed{\text{须\ \textbf{几何}论证（球交叠／深洞邻接结构），非 parity／非计数}}$$
 
