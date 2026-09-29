@@ -4,7 +4,7 @@
 # 输出：命中行 + 结论行（可直接粘进新档首行）
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 1
-MAPS=(docs/CLOSED-ROUTES-MAP.md docs/MASTER-STATUS-AND-CLOSURES.md docs/MASTER-NOGO-AND-LIVE-PATHS.md docs/ASSETS-REGISTRY.md docs/INDEX-BY-DIRECTION.md)
+MAPS=(docs/MASTER-FAILURE-MAP-107-LINE.md docs/CLOSED-ROUTES-MAP.md docs/MASTER-STATUS-AND-CLOSURES.md docs/MASTER-NOGO-AND-LIVE-PATHS.md docs/ASSETS-REGISTRY.md docs/INDEX-BY-DIRECTION.md)
 for f in "${MAPS[@]}"; do [ -f "$f" ] || echo "!! 缺档: $f"; done
 if [ $# -eq 0 ]; then echo "用法: $0 关键词1 [关键词2 ...]"; exit 2; fi
 PAT=$(printf '%s|' "$@"); PAT=${PAT%|}
