@@ -53,11 +53,11 @@ $$\text{（推广至 }r>1:\ \text{求和论证 }\Sigma_u[(10-r)N_u+\Sigma_{v\sim
 $$\boxed{\text{fiber LP}\to\text{local multiplicity LP}\to\boxed{\text{finite local types}}\to\text{compatibility enumeration}\to M\le61\ \text{之不可行性}}$$
 $$\text{定义局部类型}:\ \tau(F)=(\text{weight dist},\ \text{internal distances},\ \text{boundary coverage},\ \text{multiplicity profile})$$
 $$\text{问题转化为}:\ \text{枚举有限个 }\tau\ +\ \text{LP 剪枝}\ +\ \text{fiber compatibility}✓$$
-$$\textbf{双侧 benchmark（须分开）}:\quad \text{上界 }62\le K(9,1)\le\mathbf{66}\ (\text{当前我方});\qquad \text{下界 }M\le61\stackrel{?}{\Longrightarrow}\bot$$
+$$\textbf{双侧 benchmark（须分开）}:\quad \text{上界 }62\le K(9,1)\le\mathbf{66}\ (\text{当前我方});\qquad \text{下界 }M\le61\Longrightarrow\bot\ (\text{待证})$$
 | 方法 | 当前上界 |
 |---|---|
 | remove-and-repair | $66$ |
-| 下一版结构化搜索 | ？ |
+| 下一版结构化搜索 | 待测 |
 | 目标 | $\mathbf{62}$ |
 
 ## §6 技术词回查（**先跑后写 ✓**）
