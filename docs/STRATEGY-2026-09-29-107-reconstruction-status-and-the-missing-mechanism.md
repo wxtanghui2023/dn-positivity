@@ -85,3 +85,16 @@ $ bash scripts/tech_word_check.sh "107目标即系数9到6" "单元整性不足�
 
 - **ILP 实测（$r{=}1..5$，$M{=}105/106/107$）＋ 天花板交叉核对** ✓；**不占 C 号** ✓
 - **不主张** $107$ 不可达 ✗（V290）；本档系**我方机制之边界陈述**✓
+
+---
+
+## §9 ⚠️ **勘误（2026-09-29 15:2x，自查）—— §1／§2 之"系数 9"陈述作废**
+
+$$\textbf{错误}:\ \text{§1／§2 曾称}\ 107\iff 6E+M\ge1024\ \text{即"把 van Wee 系数 }9\ \text{改到 }6"\ ✗$$
+$$\textbf{反证（自查）}:\ \text{若}\ 9E\ \ge\ 2^n-M\ \text{普遍成立，则}\ n{=}7\ \text{给}\ M\ \ge\ 17.53\ >\ 16=K(7,1)\ \ ✗\ \text{矛盾}$$
+$$\therefore\ \boxed{9E\ge2^n-M\ \textbf{不普遍成立};\ \text{散点数值吻合（}n{=}10\text{）不等于定理}✗}$$
+$$\textbf{正确版}:\ \text{van Wee 1988}\ K(n,1)\ge2^n/n\ \text{仅对\ \textbf{偶}\ }n\ \text{成立}$$
+$$n{=}8{:}\ 32=K(8,1)\ \textbf{紧}✓;\quad n{=}6{:}\ 10.67\Rightarrow11<12✓;\quad n{=}10{:}\ 102.4\Rightarrow103✓$$
+$$\boxed{\text{故}\ 107\ \text{之机制\ \textbf{不是}\ "系数 }9\to6"\ \text{型改进;}\ \text{正确技术族 ＝ k-tuple covering inequalities}}$$
+$$\text{阶梯（精确）}:\ 94\to96\ (\text{Stanton--Kalbfleisch 1968})\to97\ (\text{Cohen--Lobstein--Sloane 1986})\to103\ (\text{van Wee 1988, }\varepsilon\text{-精化})\to105\ (\text{Zhang 1991, \textbf{pair} covering})\to107\ (\text{BÖW 2004, general }R{=}1)$$
+$$\therefore\ \textbf{缺口定位修正}:\ \text{缺的不是"全局整性论证"（此说法过泛）}，\text{而是\ \textbf{k-tuple covering 不等式族之 }k\ \text{提升}（\text{pair}\to\text{triple}\to\text{general}}）✓$$

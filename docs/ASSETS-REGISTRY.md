@@ -3729,3 +3729,8 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⑤ 项目状态**】总课题进行中；里程碑一（重现 $107$）**未完成**（缺口已定位）；里程碑二未进入；副产品（$K(5,1){=}7$、$K(6,1)\ge12$、$\mathrm{Def}$ 放大律、压缩 $190\times$）**已严格但不接 $107$**
 - 【**⑥ 建议**】A 继续攻全局整性（但须先有候选不等式，我方暂无）；B 把负结果归档为定论；C 改换总课题
 - 档：`docs/STRATEGY-2026-09-29-107-reconstruction-status-and-the-missing-mechanism.md`
+
+**⚠️ 勘误（并入 STRATEGY 档 §9）**：§1／§2 之「系数 $9\to6$」陈述**作废** ✗
+- 反证：若 $9E\ge2^n-M$ 普遍成立，则 $n{=}7$ 给 $M\ge17.53>16=K(7,1)$ ⟹ 矛盾 ✗（散点吻合 $\ne$ 定理）
+- 正确：van Wee 1988 之 $K(n,1)\ge2^n/n$ **仅对偶 $n$** 成立（$n{=}8$ 紧 ✓；$n{=}10\Rightarrow103$ ✓）
+- **缺口定位修正**：缺的不是「全局整性论证」（过泛），而是 **k-tuple covering 不等式族之 $k$ 提升**（pair $105$ → triple → general $107$）
