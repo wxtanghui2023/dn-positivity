@@ -3908,3 +3908,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**未解决**】107 本身（本档只解决"方法在哪、长什么样"）；接口（$t[n,k]$ vs $K(n,1)$）待接
 - 抽取文本存：`sources/Struik-1994-TUe-thesis-covering-codes-EXTRACT.txt`（271,130 字符）
 - 档：`docs/SOURCE-2026-09-29-method-source-located-Struik-1994-thesis-chapter-2.md`
+
+**🔍 AUDIT-2026-09-29n（非 C 号）：开工前查地图 —— pair covering 路线"是否已试过"** ✓
+- 【**✓ 已试（三次）**】pair 层三次独立攻击（单条／组合／整数消元）皆 $=103$（未达文献 $105$）；`ASSETS-REGISTRY` L3392 逐字"自助路线在 pair 层三重独立失败"
+- 【**✓ 已试**】Struik/van Wee **一阶局部不等式**已审计（`ODDENGINE-2026-09-26`）：偶 $n\to1$ ✓、奇 $n\to0$ **空** ✗（奇偶引理 $\mathrm{OC}\equiv n{+}1\bmod2$）
+- 【**✗ 未试**】**文献原式 (2.35) 从未正确转录**；且 **我方本轮实现失败**（OCR 臆测 ⟹ $n{=}10$ 给 $4$，应 $\sim103$）⟹ 数值全部作废
+- 【**★ 关键区别**】已试者＝**我方重构版**（止于 $103$）；未试者＝**文献原式**（Struik §2.7，pp. 41–43）⟹ "未复现 105" 与 "未试 (2.35)" 是同一件事的两面
+- 【**下一步**】渲染 pp. 41–43 视觉转录 → 实现 → **校准 = 105?** → 若过则升一阶试 107
+- 档：`docs/AUDIT-2026-09-29n-prework-map-check-on-the-pair-covering-route.md`
