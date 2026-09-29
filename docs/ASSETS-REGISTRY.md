@@ -3818,3 +3818,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**首个数据（⚠️）**】贪心极大 packing（$|P|{=}32$）：$w$ 分布 $1{:}32,\ 2{:}256,\ 4{:}192,\ 5{:}32$ ⟹ **低重区 $L_1$ 非空（32 点），集中风险真实**；不可用均值论证 ✗
 - 【**下一目标**】求 $L_t(P)$ 之**结构容量界** ⟹ 提升 $\mathrm{Def}$ 斜率 ⟹ 逼近 $9a-406$
 - 档：`docs/RESULT-2026-09-29b-mother-inequality-verified-and-the-wP-interface.md`
+
+**✅ RESULT-c（2026-09-29，非 C 号）：精确两来源恒等式 $\mathrm{Def}=2(A_1+A_2)-\sum\binom{\mu-1}2$（$60/60$）＋ $L_1$ 问题修正** ✓
+- 【**✓✓ 恒等式**】$\sum_x\binom{\mu}2=2(A_1+A_2)$ 且 $\binom{\mu}2=(\mu-1)+\binom{\mu-1}2$ ⟹ $\boxed{\mathrm{Def}=2(A_1+A_2)-T}$，$T=\sum\binom{\mu-1}2$；**实测 $60/60$**
+- 【**含义**】$\mathrm{Def}$ 两来源：近邻对数 $A_1{+}A_2$ ＋ 三重覆盖修正 $T$；**母式只计第一来源** ✗（低重区集中时失效）
+- 【**数据**】62-码随机 $53$-子集：$A_1{=}5,A_2{=}50\Rightarrow2(A_1{+}A_2){=}110,T{=}28,\mathrm{Def}{=}\mathbf{82}>71$（纤维上限）⟹ **纤维条件确有约束力**（启示性）
+- 【**✗ 被否构造（诚实记录）**】$A=P\cup L_1$ 塌缩（$L_1$ 含 packing 自身，$m_P(p){=}1$ 平凡）⟹ 正确问题＝**非 packing** 私有点 $N_1^*(P):=\#\{x\notin P:m_P(x){=}1\}$ 之容量
+- 【**下一目标**】证 $2(A_1+A_2)-T>9a-406$ 对某 $a$ 必成立（或互补对上必成立）
+- 档：`docs/RESULT-2026-09-29c-exact-two-source-identity-and-the-L1-question.md`
