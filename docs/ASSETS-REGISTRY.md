@@ -3496,3 +3496,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ ④ 唯一近饱和之约束（关键读数）**】$A_1{+}A_2$ 趋势外推 $\approx156$ vs 上界 $161$ ⟹ **近饱和（差 5）**；而该上界之来源正是 van Wee 逐点界 $|A\cap B(z,1)|\le n{-}R=9$ ⟹ 锐化它 $\Leftrightarrow$ $\theta$ 从 9 降，而 **$\theta$ 问题已证死**（实测 $\theta{=}8.31\Rightarrow$ 极限 $\approx104$）✗ ⟹ **唯一近饱和之链恰是已封之链**
 - 【**⑤ 净结论**】所有 106-specific 真者约束**可行且大部分松**；唯一近饱和者之锐化 ＝ 已封之 $\theta$ 问题 ⟹ 所需新约束**不属于"计数/奇偶/excess"型**（本会话已系统覆盖）⟹ 指向**几何构型**（深洞邻接图局部形状）或**原文**（BÖW）
 - 档：`docs/AUDIT-2026-09-29m-true-system-feasible-A3-bound-needed-contradicts-trend.md`
+
+**🔒 AUDIT-2026-09-29n（非 C 号）：BÖW 2004 为 closed access —— 取原文之路**穷尽**；Kéri 只给归因不给公式 ⟹ 自推为唯一路** ✓
+- 【**✓ 直接回答唐先生**】若真能获取原文 ⟹ 对"复现 107"**不必**自推（读它即可）；但**前提不成立**：BÖW 为 closed access，**取不到** ⟹ 自推**不是可选项，是唯一路**
+- 【**✓✓ 取证穷尽（四处实测）**】① OpenAlex `works/doi:10.1002/jcd.20008`：$\texttt{oa\_status}=\textbf{closed}$、$\texttt{any\_repository\_has\_fulltext}=\textbf{False}$、**无任何副本** ✗；② Wiley `pdfdirect` 与 `pdf` 两路皆 **403** ✗；③ Kéri 综述（423k 字符免费）：Bertolo 13 处／Weakley 11 处皆用于**分类/构造/Table**，**未转录** general $R{=}1$ 式 ✗；④ Haas 2008：**未引** Bertolo/Weakley ✗。摘要逐字（可得）："…and **a general lower bound for $R=1$**" ✓ 但正文不可得
+- 【**✓ Kéri 归因逐字**】"107 ≤ K(10,1) ≤ 120 … az alsó korlát javítása 96-ra [18], 97-re [46], 103-ra [52], 105-re [67], **107-re [130]**"；$[130]$ = Bertolo–Östergård–Weakley, *An updated table of binary/ternary mixed covering codes*, J. Combin. Des. **12 (2004) 157–176** ⟹ **107 确实归 [130]；105 归 [67] = Zhang 1991** —— 归因链完整 ✓
+- 【**✓✓ 本会话可取之一手源（已尽）**】van Wee 1991 博论（TU/e 免费 → 给 $103$）／Gijswijt–Polak 2025（arXiv → $105.2223\Rightarrow106$）／Wu–Chen 2024（arXiv → surfeit 不适用）／Haas 2008（freidok → excess 族止于 $103$）／Kéri 综述（归因链）⟹ **可取者已尽取；不可取者恰是唯一藏 $107$ 之处** ✗
+- 【**④ 路线判定**】(i) 自推 —— 唯一路（但已系统证：可实现算术族 $103$–$104$，SDP-3 $105.2223\Rightarrow106$）；(ii) 取原文 —— **不可行**（closed）✗ ⟹ **须自推且须非松弛型（integrality/几何）机制**；本会话**已定位缺口，但未产出该机制**
+- 档：`docs/AUDIT-2026-09-29n-BOW-closed-access-retrieval-exhausted.md`
