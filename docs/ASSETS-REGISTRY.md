@@ -3673,3 +3673,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ ④ 结构性封顶（本档最重要）**】$256=|N_1(A)\cup B|=|N_1(A)|+|B|-|\cap|\le|N_1(A)|+b$，而 $|N_1(A)|\le9a$；**用精确 $|N_1(A)|$ 只会让 $b$ 下界变小 ⟹ 更弱** ⟹ 该层可用的**最强**界就是 $9a\Rightarrow$ 球界 $52$ —— **方向性论证，非技术不足**
 - 【**⑤ 下一步**】按执行顺序：fiber LP → local multiplicity LP → **finite local types** → compatibility enumeration → $M\le61$ 不可行性；局部类型 $\tau(F)=(\text{weight dist},\text{internal distances},\text{boundary coverage},\text{multiplicity profile})$；**双侧 benchmark 须分开**：上界 $62\le K(9,1)\le\mathbf{66}$（我方 remove-and-repair），下界 $M\le61\stackrel{?}{\Rightarrow}\bot$
 - 档：`docs/CALIBRATE-K91-2026-09-29b-linear-local-layer-closed-and-finite-type-entry.md`
+
+**🔧 CALIBRATE-K9-c（2026-09-29，非 C 号）：加 cap 后仍为 $52$（rich 集合为空）；含我自身两处 bug 之更正** ✓
+- 【**① ⚠️ 我上一档遗漏之上界**】$|N_1(A)|\le2^{n-r}=256$（纤维本身只有 256 点）⟹ 正确形式 $256\le\min(2^{n-r},(10-r)N_u)+\sum_{v\sim u}N_v$
+- 【**✓ ② cap 不改善（验证于 $r{=}1,2,3$）**】cap 之析取形式：「或 $N_u\ge$ thr（rich，自动满足）；或 $(10-r)N_u+\sum_{v\sim u}N_v\ge2^{n-r}$」，thr $=\lceil2^{n-r}/(10-r)\rceil$（$r{=}1\Rightarrow29$、$2\Rightarrow16$、$3\Rightarrow10$）；**枚举全部 $2^m$ 个 rich 集合 × LP ⟹ $M_{\min}=\mathbf{51.2}$ 且最优 rich 集合为空** ⟹ cap 从未激活 ⟹ 界仍为 $52$（直觉：rich 代价高于所换松弛，不划算）
+- 【**③ ⚠️ 我自身两处 bug**】bug-1（优先级）：`1<<(9-r)+(10-r)-1` 被解析为 `1<<16` ⟹ thr$=7281$ 荒谬 ⟹ big-M 松弛无穷 ⟹ 约束全空 ⟹ 首测 "$M_{\min}{=}48$" 为**垃圾** ✗；bug-2：我此前"用精确 $|N_1(A)|$ 只会更弱"对 $|N_1(A)|$ 成立，但**不等于**"加 cap 也无效"——cap 是另一个（上）界，须单独检验（本档已检验 ✓）
+- 【**④ 结论维持**】$\boxed{\text{LINEAR-LOCAL-ACCOUNTING = CLOSED at }52}$（一阶纤维 LP ＋ 二阶 multiplicity profile ＋ cap 三层皆不破 52）；推广：求和论证 $\sum_u[(10-r)N_u+\sum_{v\sim u}N_v]=10M$ 对一切 $r$ 恒给 52
+- 【**⑤ 下一层之关键警告**】有限类型层之**致命问题**：兼容条件为**集合级** $N_1(A)\cup B=\mathbb F_2^{n-r}$ ⟹ $\tau$ 若只记**计数统计**则**不能判定**兼容 ⟹ 类型数**不压缩**；可用之 $\tau$ 必须记录 **defect 集合结构** $D_A=\mathbb F_2^{n-r}\setminus N_1(A)$（且 $D_A\subseteq B$、$D_B\subseteq A$）；而 $r{=}1$ 时此即**精确重述**（$K(n,1)=\min\{|A|+|B|:N_1(A)\cup B=N_1(B)\cup A=\mathbb F_2^{n-1}\}$）⟹ **无压缩** ⟹ 建议：$\tau$ 须以 defect 集合为主变量，且从**小 $n$ 已知值递归校准**（$K(5,1){=}7,\ K(6,1){=}12,\ K(7,1){=}16,\ K(8,1){=}32$）
+- 档：`docs/CALIBRATE-K91-2026-09-29c-cap-does-not-help-and-two-self-corrections.md`
