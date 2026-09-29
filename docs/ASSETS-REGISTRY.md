@@ -3850,3 +3850,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 约定清单**】（i）$N_1^{\mathrm{op}}$ 必须用**开**（$d{=}1$ 恰一），否则等号失效；（ii）$L=N_1(P)\setminus P$（全部 $9|P|$ 邻点，**非**"私有"，与 RESULT-b/d 不同）
 - 【**下一目标**】证明 $u$ 之统一上界 ⟹ $R$ 下界 ⟹ 净 $F$
 - 档：`docs/RESULT-2026-09-29f-rq-equals-2tq-exact-identity-and-the-convention-issue.md`
+
+**✅ RESULT-g（2026-09-29，非 C 号）：$u$-lemma 归约为 9 坐标线性三元组图（三条归约 $30/30$）** ✓✓
+- 【**✓✓ 坐标归约**】$q=p\oplus e_i\in Q$：$t_q=0\iff$ 不存在三元组 $\{i,j,k\}$ 使 $p\oplus\{i,j,k\}\in P$（因 $p'\in P$ 距 $p$ 至少 3，$d(e_i,S)=2\iff|S|{=}3\wedge i\in S$）
+- 【**✓✓ 邻居必私有**】$\forall q\in Q\cap N_1(P)$：$s_q=1$（$p'$ 邻接 $p\oplus e_i\Rightarrow d(p,p'){=}2$，与 packing 矛盾）
+- 【**✓✓ $T_p$ 线性**】$T_p=\{S:|S|{=}3,p\oplus S\in P\}$ 两两交 $\le1$（因 $|S\triangle S'|\ge3$）；实测 $|T_p|\in[1,9]$（$\text{STS}(9)$ 界 $12$）
+- 【**最终局部形式**】$u=\sum_{p}\#\{i\notin\bigcup T_p:p\oplus e_i\in Q\}$；$u$ 实测 $\in[1,6]$
+- 【**下一目标**】证 $u\le U$（常数）或证 $|\bigcup T_p|$ 之统一下界（可用 Steiner/线性超图极值结果）
+- 档：`docs/RESULT-2026-09-29g-u-lemma-reduced-to-linear-triple-graphs-on-9-coordinates.md`
