@@ -1,0 +1,454 @@
+ 
+ Improved Lower Bounds on the Domination Number of Hypercubes and Binary Codes with Covering Radius One 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ arXiv is now an independent nonprofit! 
+ Learn more 
+ × 
+ Back to arXiv 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Abstract 
+ 1 Introduction 
+ 2 Generalities 
+ 3 Conclusion 
+ References 
+ License: CC BY-NC-ND 4.0
+arXiv:2203.16901v3 [math.CO] 20 Apr 2022 
+Improved Lower Bounds on the Domination Number of Hypercubes and Binary Codes with Covering Radius One
+ Ying-Sian Wu
+ Email:  10831036@st.fhjh.tp.edu.tw 
+ Email:  puggywu15@gmail.com 
+ Jun-Yo Chen
+ Email:  aggacc@gmail.com 
+ Abstract 
+ A dominating set on an n n -dimensional hypercube is equivalent to a binary covering code of length n n and covering radius 1. It is still an open problem to determine the domination number γ ⁡ ( Q n ) ​  for  ​ n ≥ 9 ​  and  ​ n ≠ 2 k , 2 k − 1 \gamma(Q_{n})\text{ for }n\geq 9\text{ and }n\neq 2^{k},2^{k}-1 ( k ∈ ℕ k\in\mathbb{N} ). When n n is a multiple of 6, the best known lower bound is γ ⁡ ( Q n ) ≥ 2 n n \gamma(Q_{n})\geq\frac{2^{n}}{n} , given by Van Wee [ 4 ] . In this article, we present a new method using congruence properties due to Laurent Habsieger [ 1 ] and obtained an improved lower bound γ ⁡ ( Q n ) ≥ ( n − 2 ) ​ 2 n n 2 − 2 ​ n − 2 \gamma(Q_{n})\geq\frac{(n-2)2^{n}}{n^{2}-2n-2} . 
+ 1 Introduction 
+ Determining the domination number is an important optimization problem in graph theory, as well as one of Karp’s
+21 NP-complete problems in computational complexity theory. The domination problem on hypercubes is equivalent to the covering code problem. 
+ The n n -dimensional hypercube Q n Q_{n} is defined recursively in terms of the cartesian product of graphs as follows, 
+ Q 1 = K 2 , Q n = K 2 ​ □ ​ Q n − 1 . Q_{1}=K_{2},\;\;\;Q_{n}=K_{2}\square Q_{n-1}. 
+ (1.1) 
+ Therefore, Q n Q_{n} can also be defined as 
+ V ( Q n ) = 2 { 1 , 2 , … , n } ,   E ( Q n ) = { u v : u , v ∈ V ( Q n ) , u ⊂ v ,  and  | v − u | = 1 } . V(Q_{n})=2^{\left\{1,2,\ldots,n\right\}},\text{ }E(Q_{n})=\left\{uv:u,v\in V(Q_{n}),u\subset v,\text{ and }|v-u|=1\right\}. 
+ (1.2) 
+ To avoid confusion, we use small brackets to express vertices. For instance, the vertex { 2 , 3 , 5 } \left\{2,3,5\right\} is written as ( 2 , 3 , 5 ) (2,3,5) . Note that the vertex ∅ \emptyset is written as ( 0 ) (0) . Moreover, we define ( a 1 , … , a i , 0 ) ≡ ( a 1 , … , a i ) (a_{1},\ldots,a_{i},0)\equiv(a_{1},\ldots,a_{i}) to simplify some of our arguments. 
+ Given S ⊆ V ⁡ ( Q n ) S\subseteq V(Q_{n}) , we define the function g g to express all different members in the union of the coordinates of the vertices in S. That is, 
+ g ⁡ ( S ) ≔ ⋃ v ∈ S v . g(S)\coloneqq\bigcup_{v\in S}v. 
+ (1.3) 
+ Moreover, let S ⁡ [ a ] S[a] indicate the subset of S in which each vertex’s coordinate contains the number a a . That is, 
+ S ⁡ [ a ] ≔ { v : a ∈ v ​  and  ​ v ∈ S } . S[a]\coloneqq\left\{v:a\in v\text{ and }v\in S\right\}. 
+ (1.4) 
+ e.g. For S = { ( 1 , 2 , 3 ) , ( 2 , 5 ) , ( 3 , 5 ) } S=\Bigl\{(1,2,3),(2,5),(3,5)\Bigr\} , g ⁡ ( S ) = { 1 , 2 , 3 , 5 } g(S)=\left\{1,2,3,5\right\} and S ⁡ [ 5 ] = { ( 2 , 5 ) , ( 3 , 5 ) } S[5]=\Bigl\{(2,5),(3,5)\Bigr\} . 
+ For some v ∈ V ⁡ ( Q n ) v\in V(Q_{n}) and S ⊆ V ⁡ ( Q n ) S\subseteq V(Q_{n}) , we define the neighbor of v v and S S as follows. 
+ N i ​ ( v ) = { u ∈ V ⁡ ( Q n ) : d ⁡ ( u , v ) = i } , N i ​ ( S ) = ⋃ v ∈ S N i ​ ( v ) N_{i}(v)=\left\{u\in V(Q_{n}):d(u,v)=i\right\},N_{i}(S)=\bigcup_{v\in S}N_{i}(v) 
+ N ⁡ [ v ] = N 0 ​ ( v ) ∪ N 1 ​ ( v ) , N ⁡ [ S ] = ⋃ v ∈ S N ⁡ [ v ] . N[v]=N_{0}(v)\cup N_{1}(v),N[S]=\bigcup_{v\in S}N[v]. 
+ (1.5) 
+ Given S ⊆ V ⁡ ( Q n ) S\subseteq V(Q_{n}) , if N ⁡ [ S ] = V ⁡ ( Q n ) N[S]=V(Q_{n}) , we call S S a d ​ o ​ m ​ i ​ n ​ a ​ t ​ i ​ n ​ g dominating s ​ e ​ t set of Q n Q_{n} .
+If there doesn’t exist S ′ ⊆ V ⁡ ( Q n ) S^{\prime}\subseteq V(Q_{n}) such that | S ′ | < | S | |S^{\prime}|<|S| and N ⁡ [ S ′ ] = V ⁡ ( Q n ) N[S^{\prime}]=V(Q_{n}) , we call S S a m ​ i ​ n ​ i ​ m ​ u ​ m minimum d ​ o ​ m ​ i ​ n ​ a ​ t ​ i ​ n ​ g dominating s ​ e ​ t set of Q n Q_{n} , and call | S | |S| the d ​ o ​ m ​ i ​ n ​ a ​ t ​ i ​ o ​ n domination n ​ u ​ m ​ b ​ e ​ r number of Q n Q_{n} . In this article, we denote a given dominating set as D D , and denote the domination number as γ ⁡ ( Q n ) \gamma(Q_{n}) .
+Table 1 and 2 in the appendix give the latest results of the upper and lower bounds on γ ⁡ ( Q n ) \gamma(Q_{n}) . The summerization is due to Gerzson Kéri [ 2 ] [ 3 ] . 
+ Definition 1 . 
+ Given a dominating set D D and S ⊆ V ⁡ ( Q n ) S\subseteq V(Q_{n}) , we denote the e ​ x ​ c ​ e ​ s ​ s excess of D D on S S by δ S ​ ( D ) \delta_{S}(D) , which is defined as ∑ v ∈ S ( | N ⁡ [ v ] ∩ D | − 1 ) \sum_{v\in S}(|N[v]\cap D|-1) . When D D is clear, we briefly write δ S ≔ δ S ​ ( D ) \delta_{S}\coloneqq\delta_{S}(D) . Also, if S = { v } S=\left\{v\right\} , then δ v ≔ δ { v } \delta_{v}\coloneqq\delta_{\left\{v\right\}} . 
+ We further define the symbols below. Likewise, the D D can be omitted if it’s clear. 
+ V ​ δ x ​ ( D ) ≔ { v : δ v ​ ( D ) = x ​  and  ​ v ∈ V ⁡ ( Q n ) } , V\delta^{x}(D)\coloneqq\left\{v:\delta_{v}(D)=x\text{ and }v\in V(Q_{n})\right\}, 
+ V ​ δ ​ ( D ) ≔ ⋃ x ≥ 1 V ​ δ x ​ ( D ) , C ⁡ ( D ) ≔ ⋃ x ≥ 2 V ​ δ x ​ ( D ) . V\delta(D)\coloneqq\bigcup_{x\geq 1}V\delta^{x}(D),\;\;C(D)\coloneqq\bigcup_{x\geq 2}V\delta^{x}(D). 
+ (1.6) 
+ Previous studies came up with various congruence properties of δ N i ​ ( v ) ​ ( D ) \delta_{N_{i}(v)}(D) , which help estimate δ V ⁡ ( Q n ) ​ ( D ) \delta_{V(Q_{n})}(D) , and thus obtained the lower bounds on γ ⁡ ( Q n ) \gamma(Q_{n}) due to the relation δ V ⁡ ( Q n ) ​ ( D ) = ( n + 1 ) ​ | D | − | V ⁡ ( Q n ) | \delta_{V(Q_{n})}(D)=(n+1)|D|-|V(Q_{n})| . Theorem 1 is a segment of the properties given by Laurent Habsieger [ 1 ] (1997), which we will apply. 
+ Theorem 1 . 
+ (Habsieger) 
+ δ N ⁡ [ v ] ​ ( D ) ≡ n + 1 ​  (mod 2) , if  ​ v ∉ D . \delta_{N[v]}(D)\equiv n+1\text{ (mod 2)}\text{, if }v\notin D. 
+ (1.7) 
+ δ N ⁡ [ v ] ​ ( D ) ≡ 0 ​  (mod 2) , if  ​ v ∈ D . \delta_{N[v]}(D)\equiv 0\text{ (mod 2)}\text{, if }v\in D. 
+ (1.8) 
+ δ N 1 ​ [ v ] ​ ( D ) + δ N 2 ​ [ v ] ​ ( D ) ≡ 0 ​  (mod 3) , if  ​ n ≡ 0 ​  (mod 3) . \delta_{N_{1}[v]}(D)+\delta_{N_{2}[v]}(D)\equiv 0\text{ (mod 3)}\text{, if }n\equiv 0\text{ (mod 3)}. 
+ (1.9) 
+ We then put forward the pivotal concept throughout this article, s ​ u ​ r ​ f ​ e ​ i ​ t surfeit . Although it seems closely related to e ​ x ​ c ​ e ​ s ​ s excess , we shall demonstrate that such further analyzation is enough to improve the known bounds. 
+ Definition 2 . 
+ Given a dominating set D D and S ⊆ V ⁡ ( Q n ) S\subseteq V(Q_{n}) , we denote the s ​ u ​ r ​ f ​ e ​ i ​ t surfeit of D D on S S by ζ S ​ ( D ) \zeta_{S}(D) , which is defined as ∑ v ∈ S ∖ D ( δ N ⁡ [ v ] ​ ( D ) − 1 ) \sum_{v\in S\setminus D}(\delta_{N[v]}(D)-1) . When D is clear, we briefly write ζ S ≔ ζ S ​ ( D ) \zeta_{S}\coloneqq\zeta_{S}(D) . Also, if S = { v } S=\left\{v\right\} , then ζ v ≔ ζ { v } \zeta_{v}\coloneqq\zeta_{\left\{v\right\}} . 
+ We further define the symbols below. Likewise, the D D can be omitted if it’s clear. 
+ V ζ x ( D ) ≔ { v : δ N ⁡ [ v ] ( D ) = x + 1  and  v ∈ V ( Q n ) ∖ D } ,   V ζ ( D ) ≔ ⋃ x ≥ 1 V ζ x ( D ) V\zeta^{x}(D)\coloneqq\left\{v:\delta_{N[v]}(D)=x+1\text{ and }v\in V(Q_{n})\setminus D\right\},\text{ }V\zeta(D)\coloneqq\bigcup_{x\geq 1}V\zeta^{x}(D) 
+ (1.10) 
+ We look into the cases when n n is a multiple of 6. By calculating ζ V ⁡ ( Q n ) ​ ( D ) \zeta_{V(Q_{n})}(D) using two different methods, we show that it leads to a contradiction if γ ⁡ ( Q n ) \gamma(Q_{n}) is too small. 
+ 2 Generalities 
+ All the arguments are considered in the cases when n n is a multiple of 6.
+ Given an arbitary value γ ∗ \gamma^{*} , we assume that there exists a dominating set D D satisfying | D | = γ ∗ |D|=\gamma^{*} . We calculate ζ V ⁡ ( Q n ) \zeta_{V(Q_{n})} using two different methods, and write the value we obtain as ζ m ​ 1 \zeta_{m1} and ζ m ​ 2 \zeta_{m2} , respectively. A dominating set should lead to ζ m ​ 1 = ζ m ​ 2 \zeta_{m1}=\zeta_{m2} . However, we will show that there must be ζ m ​ 2 > ζ m ​ 1 \zeta_{m2}>\zeta_{m1} when γ ∗ \gamma^{*} is too small, implying that such dominating set D D can’t exist, so γ ⁡ ( Q n ) > γ ∗ \gamma(Q_{n})>\gamma^{*} .
+ For all v ∈ V ⁡ ( Q n ) ∖ D , v\in V(Q_{n})\setminus D, we have δ N ⁡ [ v ] ≥ 1 \delta_{N[v]}\geq 1 by (1.7), so the fisrt method to calculate ζ V ⁡ ( Q n ) \zeta_{V(Q_{n})} holds. Note that for all u ∈ V ​ δ x , u\in V\delta^{x}, we have | N ⁡ [ u ] ∖ D | = n − x |N[u]\setminus D|=n-x , and ∑ x ∈ ℕ x ​ | V ​ δ x | = δ V ⁡ ( Q n ) \sum_{x\in\mathbb{N}}x|V\delta^{x}|=\delta_{V(Q_{n})} . The value obtained this way is written as ζ m ​ 1 \zeta_{m1} : 
+ ζ V ⁡ ( Q n ) \displaystyle\zeta_{V(Q_{n})} 
+ = ∑ x ∈ ℕ ∑ u ∈ V ​ δ x x ⁡ ( n − x ) − | V ⁡ ( Q n ) ∖ D | \displaystyle=\sum_{x\in\mathbb{N}}\sum_{u\in V\delta^{x}}x(n-x)-|V(Q_{n})\setminus D| 
+ (2.1) 
+ = ∑ x ∈ ℕ x ⁡ ( n − x ) ​ | V ​ δ x | − 2 n + | D | \displaystyle=\sum_{x\in\mathbb{N}}x(n-x)|V\delta^{x}|-2^{n}+|D| 
+ = ( n − 1 ) ​ δ V ⁡ ( Q n ) − 2 n + | D | − ∑ x ∈ ℕ x ⁡ ( x − 1 ) ​ | V ​ δ x | ≕ ζ m ​ 1 . \displaystyle=(n-1)\delta_{V(Q_{n})}-2^{n}+|D|-\sum_{x\in\mathbb{N}}x(x-1)|V\delta^{x}|\eqqcolon\zeta_{m1}. 
+ ζ m ​ 1 \zeta_{m1} attains its maximum when C = ∅ C=\emptyset . We write this value as ζ max \zeta_{\text{\text{max}}} . 
+ ζ m ​ 1 ≤ ζ max ≔ ( n − 1 ) ​ δ V ⁡ ( Q n ) − 2 n + | D | . \zeta_{m1}\leq\zeta_{\text{\text{max}}}\coloneqq(n-1)\delta_{V(Q_{n})}-2^{n}+|D|. 
+ (2.2) 
+ Let us consider another method to calculate ζ V ⁡ ( Q n ) \zeta_{V(Q_{n})} . The value obtained this way is written as ζ m ​ 2 \zeta_{m2} : 
+ ζ V ⁡ ( Q n ) = ∑ i ≥ 1 ( 2 ​ i ​ | V ​ ζ 2 ​ i | + ( 2 ​ i + 1 ) ​ | V ​ ζ 2 ​ i + 1 | ) = ∑ i ≥ 1 2 ​ i ​ | V ​ ζ 2 ​ i | ≕ ζ m ​ 2 . \zeta_{V(Q_{n})}=\sum_{i\geq 1}\Bigl(2i|V\zeta^{2i}|+(2i+1)|V\zeta^{2i+1}|\Bigr)=\sum_{i\geq 1}2i|V\zeta^{2i}|\eqqcolon\zeta_{m2}. 
+ (2.3) 
+ Note that by (1.7) we have V ​ ζ 2 ​ i + 1 = ∅ V\zeta^{2i+1}=\emptyset . 
+ Lemma 1 . 
+ For all u ∈ V ​ δ 1 u\in V\delta^{1} , if d ⁡ ( u , C ) ≥ 3 d(u,C)\geq 3 , then ζ N ⁡ [ u ] ≥ 6 \zeta_{N[u]}\geq 6 .
+ Moreover, if ζ N ⁡ [ u ] = 6 \zeta_{N[u]}=6 ,
+then N ⁡ [ u ] ∩ V ​ ζ ⊆ V ​ ζ 2 , | N ⁡ [ u ] ∩ V ​ ζ | = 3 . N[u]\cap V\zeta\subseteq V\zeta^{2},|N[u]\cap V\zeta|=3. 
+ Proof. 
+ Assume without loss of generality that u = ( 0 ) u=(0) , N ⁡ [ u ] ∩ D = { ( 1 ) , ( a ) } N[u]\cap D=\left\{(1),(a)\right\} , where a ∈ { 0 , 2 , 3 , … , n } a\in\left\{0,2,3,\ldots,n\right\} , then { ( 0 ) , ( 1 , a ) } ⊂ V ​ δ 1 \left\{(0),(1,a)\right\}\subset V\delta^{1} . For convenience we assume that a ≠ 0 a\neq 0 , since the case a = 0 a=0 can be dealt with similiarly.
+Let S = V ​ δ ∩ ( N ⁡ [ u ] ∪ N 2 ​ [ u ] ) ∖ { ( 0 ) , ( 1 , a ) } S=V\delta\cap(N[u]\cup N_{2}[u])\setminus\left\{(0),(1,a)\right\} . 
+ Applying (1.9) on u u , we have | S | ≡ 2 |S|\equiv 2 (mod 3). Moreover, by applying (1.7) on the vertices in N ⁡ [ u ] N[u] , we know for all k ∈ { 1 , 2 , … , n } k\in\left\{1,2,\ldots,n\right\} , there must be | S ⁡ [ k ] | ≡ 0 |S[k]|\equiv 0 (mod 2). 
+ We know | S | ≠ 2 |S|\neq 2 , since otherwise there exists k ∈ { 1 , 2 , … , n } k\in\left\{1,2,\ldots,n\right\} such that | S ⁡ [ k ] | = 1 |S[k]|=1 , contradicting (1.7).
+Moreover, since ( 1 ) , ( a ) ∈ D (1),(a)\in D , we know 
+ ζ N ⁡ [ u ] = 2 ​ | S | − | S ⁡ [ 1 ] ∪ S ⁡ [ a ] | . \zeta_{N[u]}=2|S|-|S[1]\cup S[a]|. 
+ So if | S | ≥ 8 |S|\geq 8 , then ζ N ⁡ [ u ] ≥ | S | ≥ 8 \zeta_{N[u]}\geq|S|\geq 8 . Now the only case left is | S | = 5 |S|=5 . 
+ If | S ⁡ [ 0 ] | = 4 |S[0]|=4 or | S ⁡ [ a ] | = 4 |S[a]|=4 , then it again contradicts (1.7) for there exists some | S ⁡ [ k ] | = 1 |S[k]|=1 . Thus, | S ⁡ [ 1 ] ∪ S ⁡ [ a ] | ≤ 4 |S[1]\cup S[a]|\leq 4 , ζ N ⁡ [ u ] ≥ 6 \zeta_{N[u]}\geq 6 , and
+the equalities hold simultaneously. So if ζ N ⁡ [ u ] = 6 \zeta_{N[u]}=6 , then
+ | S ⁡ [ 1 ] | = | S ⁡ [ a ] | = 2 |S[1]|=|S[a]|=2 , and
+for all k ∈ g ⁡ ( S ) ∖ { 1 , a } k\in g(S)\setminus\left\{1,a\right\} , we have | S ⁡ [ k ] | ≤ 3 |S[k]|\leq 3 , | S ⁡ [ k ] | = 2 |S[k]|=2 . This leads to N ⁡ [ u ] ∩ V ​ ζ ⊆ V ​ ζ 2 N[u]\cap V\zeta\subseteq V\zeta^{2} and | N ⁡ [ u ] ∩ V ​ ζ | = 3 |N[u]\cap V\zeta|=3 .
+∎ 
+ Lemma 1 allows us to compute ζ m ​ 2 \zeta_{m2} under a hypothetical scenario. However, we won’t discuss if it’s posiible for D D to satisfy such rigorous conditions. 
+ Corollary 1 . 
+ If the dominating set D D satisfies 
+ C = ∅ ​  and  ​ | N ⁡ [ u ] ∩ V ​ ζ | = 6 ​  for all  ​ u ∈ V ​ δ , C=\emptyset\text{ and }|N[u]\cap V\zeta|=6\text{ for all }u\in V\delta, 
+ then | V ​ ζ | = | V ​ ζ 2 | = 1 3 ​ ∑ u ∈ V ​ δ 1 | N ⁡ [ u ] ∩ V ​ ζ | = δ V ⁡ ( Q n ) |V\zeta|=|V\zeta^{2}|=\frac{1}{3}\sum_{u\in V\delta^{1}}|N[u]\cap V\zeta|=\delta_{V(Q_{n})} . Therefore, 
+ ζ m ​ 2 = 2 δ V ⁡ ( Q n ) ,   ζ m ​ 2 − ζ m ​ 1 = 2 δ V ⁡ ( Q n ) − ζ max . \zeta_{m2}=2\delta_{V(Q_{n})},\text{ }\zeta_{m2}-\zeta_{m1}=2\delta_{V(Q_{n})}-\zeta_{\text{max}}. 
+ Note that 2 ​ δ V ⁡ ( Q n ) − ζ max 2\delta_{V(Q_{n})}-\zeta_{\text{max}} can be determined uniquely by γ ∗ \gamma^{*} .
+So if we can prove that there must be ζ m ​ 2 − ζ m ​ 1 ≥ 2 ​ δ V ⁡ ( Q n ) − ζ max \zeta_{m2}-\zeta_{m1}\geq 2\delta_{V(Q_{n})}-\zeta_{\text{max}} whenever D D doesn’t satisfy the conditions mentioned in Corollary 1, then we can conclude that γ ⁡ ( Q n ) > γ ∗ \gamma(Q_{n})>\gamma^{*} when γ ∗ \gamma^{*} leads to 2 ​ δ V ⁡ ( Q n ) − ζ max > 0 2\delta_{V(Q_{n})}-\zeta_{\text{max}}>0 . 
+ Since the influence C C has on ζ m ​ 1 \zeta_{m1} is clear, we will focus on ζ m ​ 2 \zeta_{m2} . Lemma 2 and 3 show when it is possible that | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 for some u ∈ V ​ δ 1 u\in V\delta^{1} , and Lemma 4 and 5 specify the influence C C has on ζ m ​ 2 \zeta_{m2} . 
+ Lemma 2 . 
+ For all u ∈ V ​ δ 1 u\in V\delta^{1} , if | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 , then d ⁡ ( u , C ) ≤ 2 d(u,C)\leq 2 . 
+ Proof. 
+ Assume that d ⁡ ( u , C ) ≥ 3 d(u,C)\geq 3 for some u u with | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 .
+ By Lemma 1, we have | ζ N ⁡ [ u ] | ≥ 8 |\zeta_{N[u]}|\geq 8 , so there exists v ∈ N ⁡ [ u ] ∩ V ​ ζ v\in N[u]\cap V\zeta such that ζ v ≥ 4 \zeta_{v}\geq 4 .
+ Let S ≔ N ⁡ [ u ] ∩ ( D ∪ V ​ ζ ) S\coloneqq N[u]\cap(D\cup V\zeta) , then | S | ≤ 4 |S|\leq 4 .
+However, N ⁡ [ u ] ∩ V ​ ζ ⊆ S N[u]\cap V\zeta\subseteq S , and N ⁡ [ v ] ⊆ N ⁡ [ u ] ∪ N 2 ​ [ u ] N[v]\subseteq N[u]\cup N_{2}[u] . So for all w ∈ N ⁡ [ v ] ∩ V ​ δ w\in N[v]\cap V\delta , we have
+ w ∈ V ​ δ 1 w\in V\delta^{1} and 
+ N ⁡ [ w ] ∩ N ⁡ [ u ] ⊆ N ⁡ [ u ] ∩ V ​ ζ ⊆ S ​  or  ​ w = v . N[w]\cap N[u]\subseteq N[u]\cap V\zeta\subseteq S\text{ or }w=v. 
+ Therefore, 
+ ζ v = | N ⁡ [ v ] ∩ V ​ δ | − 1 ≤ ( 1 + | S ∖ { v } | ) − 1 ≤ 3 , \zeta_{v}=|N[v]\cap V\delta|-1\leq(1+|S\setminus\left\{v\right\}|)-1\leq 3, 
+ which leads to a contradiction.
+∎ 
+ For some u ∈ V ​ δ 1 u\in V\delta^{1} , in Lemma 3 we will show that | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 requires more rigorous conditions. To
+simplifly our arguments, given v ∈ C v\in C , we devide ( N 1 ​ [ v ] ∪ N 2 ​ [ v ] ) ∩ V ​ δ 1 (N_{1}[v]\cup N_{2}[v])\cap V\delta^{1} into the follwing vertex sets: 
+ T 1 ​ ( v ) ≔ ( N ⁡ [ v ] ∖ D ) ∩ V ​ δ 1 T_{1}(v)\coloneqq(N[v]\setminus D)\cap V\delta^{1} 
+ T 2 ​ ( v ) ≔ { u ∈ N 2 ​ [ v ] ∩ V ​ δ 1 : | N ⁡ [ u ] ∩ N ⁡ [ v ] ∩ D | = 0 } T_{2}(v)\coloneqq\left\{u\in N_{2}[v]\cap V\delta^{1}:|N[u]\cap N[v]\cap D|=0\right\} 
+ T 3 ​ ( v ) ≔ { u ∈ N 2 ​ [ v ] ∩ V ​ δ 1 : | N ⁡ [ u ] ∩ N ⁡ [ v ] ∩ D | = 2 } T_{3}(v)\coloneqq\left\{u\in N_{2}[v]\cap V\delta^{1}:|N[u]\cap N[v]\cap D|=2\right\} 
+ (2.5) 
+ T 4 ​ ( v ) ≔ { u ∈ N 2 ​ [ v ] ∩ V ​ δ 1 : | N ⁡ [ u ] ∩ N ⁡ [ v ] ∩ D | = 1 } T_{4}(v)\coloneqq\left\{u\in N_{2}[v]\cap V\delta^{1}:|N[u]\cap N[v]\cap D|=1\right\} 
+ T 5 ​ ( v ) ≔ ( N ⁡ [ v ] ∩ D ) ∩ V ​ δ 1 T_{5}(v)\coloneqq(N[v]\cap D)\cap V\delta^{1} 
+ Lemma 3 . 
+ For all u ∈ V ​ δ 1 u\in V\delta^{1} , if | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 , then: 
+ 1. 
+ | N ⁡ [ u ] ∩ V ​ ζ | = 2 . |N[u]\cap V\zeta|=2. 
+ 2. 
+ There exists v ∈ C ∖ D v\in C\setminus D such that u ∈ T 1 ​ ( v ) ∪ T 2 ​ ( v ) u\in T_{1}(v)\cup T_{2}(v) , or there exists v ∈ C ∩ D v\in C\cap D such that u ∈ T 2 ​ ( v ) . u\in T_{2}(v). 
+ 3. 
+ After renaming the coordinates such that v = ( 0 ) v=(0) , v v satisfies the following conditions: 
+ | N 1 ​ [ v ] ∩ V ​ δ | ≤ 3 ​  and  ​ | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] | ≤ 2 ​ , if  ​ u = ( a ) ∈ T 1 ​ ( v ) . |N_{1}[v]\cap V\delta|\leq 3\text{ and }|(N_{2}[v]\cap V\delta)[a]|\leq 2\text{, if }u=(a)\in T_{1}(v). 
+ (2.6) 
+ ( a ) , ( b ) ∉ V ​ δ ​  and  ​ | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] | , | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ b ] | ≤ 3 ,  if  ​ u = ( a , b ) ∈ T 2 ​ ( v ) ∖ D . \begin{gathered}(a),(b)\notin V\delta\text{ and }|(N_{2}[v]\cap V\delta)[a]|,|(N_{2}[v]\cap V\delta)[b]|\leq 3,\\
+\text{ if }u=(a,b)\in T_{2}(v)\setminus D.\end{gathered} 
+ (2.7) 
+ | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] | , | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ b ] | ≤ 2 ​ , if  ​ u = ( a ) ∈ T 2 ​ ( v ) ∩ D . |(N_{2}[v]\cap V\delta)[a]|,|(N_{2}[v]\cap V\delta)[b]|\leq 2\text{, if }u=(a)\in T_{2}(v)\cap D. 
+ (2.8) 
+ Proof. 
+ Given v ∈ C v\in C , we will show if u ∈ T 1 ​ ( v ) ∪ T 2 ​ ( v ) u\in T_{1}(v)\cup T_{2}(v) , then it is possible that | N ⁡ [ u ] ∩ V ​ ζ | = 2 |N[u]\cap V\zeta|=2 if (2.6), (2.7), (2.8) hold. On the other hand, we will show if u ∉ T 1 ​ ( v ) ∪ T 2 ​ ( v ) u\notin T_{1}(v)\cup T_{2}(v) for all v ∈ C v\in C , then | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 . We assume without loss of generality that v = ( 0 ) v=(0) . 
+ Case 1-(1) u ∈ T 1 ​ ( v ) u\in T_{1}(v) and v ∉ D v\notin D .
+ Apparently, if | N ⁡ [ u ] ∩ V ​ ζ | = 2 |N[u]\cap V\zeta|=2 , then N ⁡ [ u ] ∩ V ​ ζ = { u , v } N[u]\cap V\zeta=\left\{u,v\right\} .
+Let u = ( a ) ∉ D u=(a)\notin D .
+ Since u ∈ V ​ δ 1 u\in V\delta^{1} , we have | g ⁡ ( N ⁡ [ u ] ∩ D ) | = 3 |g(N[u]\cap D)|=3 . So if | N 1 ​ [ v ] ∩ V ​ δ | ≥ 4 |N_{1}[v]\cap V\delta|\geq 4 , then there exists ( k ) ∈ N 1 ​ [ v ] ∩ V ​ δ (k)\in N_{1}[v]\cap V\delta such that 
+ k ∉ g ⁡ ( N ⁡ [ u ] ∩ D ) ​ ,  ​ ( a , k ) ∈ N ⁡ [ u ] ∩ V ​ ζ . k\notin g(N[u]\cap D)\text{, }(a,k)\in N[u]\cap V\zeta. 
+ Likewise, if | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] | ≥ 3 |(N_{2}[v]\cap V\delta)[a]|\geq 3 , then there exists w ∈ ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] ​ ,  ​ b ∈ w ∖ { a } w\in(N_{2}[v]\cap V\delta)[a]\text{, }b\in w\setminus\left\{a\right\} such that 
+ b ∉ g ⁡ ( N ⁡ [ u ] ∩ D ) ​ ,  ​ ( a , b ) ∈ N ⁡ [ u ] ∩ V ​ ζ . b\notin g(N[u]\cap D)\text{, }(a,b)\in N[u]\cap V\zeta. 
+ Both assumptions lead to contradictions, so (2.6) must hold. 
+ Case 1-(2) u ∈ T 1 ​ ( v ) u\in T_{1}(v) and v ∈ D v\in D .
+ We prove by contradiction. Assume that | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 , then it’s trivial that δ v = 2 \delta_{v}=2 . Let N ⁡ [ v ] ∩ D = { ( 0 ) , ( 1 ) , ( 2 ) } N[v]\cap D=\left\{(0),(1),(2)\right\} , u = ( a ) ∉ D u=(a)\notin D . 
+ We have ( 1 ) , ( 2 ) , ( a ) ∈ V ​ δ (1),(2),(a)\in V\delta , so for w ∈ { ( 1 , a ) , ( 2 , a ) } w\in\left\{(1,a),(2,a)\right\} , there is w ∉ N ⁡ [ u ] ∩ V ​ ζ w\notin N[u]\cap V\zeta if and only if w ∈ D w\in D . Thus, we assume that { ( 1 , a ) , ( 2 , a ) } ∩ D = ( 1 , a ) \left\{(1,a),(2,a)\right\}\cap D=(1,a) , implying | N ⁡ [ u ] ∩ V ​ ζ | = { u , ( 2 , a ) } |N[u]\cap V\zeta|=\left\{u,(2,a)\right\} .
+There doesn’t exist k ∈ { 3 , 4 , … , n } k\in\left\{3,4,\ldots,n\right\} such that ( a , k ) ∈ N ⁡ [ u ] ∩ V ​ ζ (a,k)\in N[u]\cap V\zeta . Therefore, 
+ ( N 1 ​ [ u ] ∪ N 2 ​ [ u ] ) ∩ V ​ δ ⊆ { ( 0 ) , ( 1 ) , ( 2 ) , ( 1 , a ) , ( 2 , a ) , ( 1 , 2 , a ) } . (N_{1}[u]\cup N_{2}[u])\cap V\delta\subseteq\left\{(0),(1),(2),(1,a),(2,a),(1,2,a)\right\}. 
+ (*) 
+ Applying (1.7) on u u , we get δ ( 1 , a ) + δ ( 2 , a ) ≡ 0 \delta_{(1,a)}+\delta_{(2,a)}\equiv 0 (mod 2). However, by (*) we know that N ⁡ [ ( 1 , a ) ] ∩ D ⊆ { ( 1 ) , ( 1 , a ) , ( 1 , 2 , a ) } N[(1,a)]\cap D\subseteq\left\{(1),(1,a),(1,2,a)\right\} , N ⁡ [ ( 2 , a ) ] ∩ D ⊆ { ( 2 ) , ( 1 , 2 , a ) } N[(2,a)]\cap D\subseteq\left\{(2),(1,2,a)\right\} , implying 1 ≤ δ ( 1 , a ) ≤ 2 1\leq\delta_{(1,a)}\leq 2 and δ ( 2 , a ) ≤ 1 \delta_{(2,a)}\leq 1 . Moreover, δ ( 1 , a ) = 2 \delta_{(1,a)}=2 if and only if δ ( 2 , a ) = 1 \delta_{(2,a)}=1 , so we have δ ( 1 , a ) + δ ( 2 , a ) = 1 \delta_{(1,a)}+\delta_{(2,a)}=1 or 3, which is a contradiction. Therefore, | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 . 
+ Case 2. u ∈ T 2 ​ ( v ) u\in T_{2}(v) .
+ Let u = ( a , b ) u=(a,b) where ( a ) , ( b ) ∉ D (a),(b)\notin D .
+If | N ⁡ [ u ] ∩ V ​ ζ | = 2 |N[u]\cap V\zeta|=2 , then N ⁡ [ u ] ∩ V ​ ζ = { ( a ) , ( b ) } N[u]\cap V\zeta=\left\{(a),(b)\right\} .
+Consider the case u ∉ D u\notin D .
+We have ( a ) , ( b ) ∉ ( N 1 ​ [ v ] ∩ V ​ δ ) (a),(b)\notin(N_{1}[v]\cap V\delta) , since otherwise u ∈ N ⁡ [ u ] ∩ V ​ ζ u\in N[u]\cap V\zeta , which is a contradiction. Moreover,
+ | g ⁡ ( N ⁡ [ u ] ∩ D ) | = 4 |g(N[u]\cap D)|=4 , so if | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] | ≥ 4 |(N_{2}[v]\cap V\delta)[a]|\geq 4 , then there exists w ∈ ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ a ] w\in(N_{2}[v]\cap V\delta)[a] , k ∈ w ∖ { a } k\in w\setminus\left\{a\right\} such that 
+ k ∉ g ⁡ ( N ⁡ [ u ] ∩ D ) ​ ,  ​ ( a , b , k ) ∈ N ⁡ [ u ] ∩ V ​ ζ , k\notin g(N[u]\cap D)\text{, }(a,b,k)\in N[u]\cap V\zeta, 
+ which is also a contradiction. Likewise, we have | ( N 2 ​ [ v ] ∩ V ​ δ ) ​ [ b ] | ≤ 3 |(N_{2}[v]\cap V\delta)[b]|\leq 3 , so
+(2.6) must hold. The same argument can be applied to the case u ∈ D u\in D and show that (2.7) must hold. 
+ Case 3. u ∈ T 3 ​ ( v ) u\in T_{3}(v) and u ∉ T 1 ​ ( v ′ ) ∪ T 2 ​ ( v ′ ) u\notin T_{1}(v^{\prime})\cup T_{2}(v^{\prime}) for all v ′ ∈ C v^{\prime}\in C .
+ Let ( 1 ) , ( 2 ) ∈ D ​  and  ​ u = ( 1 , 2 ) (1),(2)\in D\text{ and }u=(1,2) . We prove by contradiction, assuming | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 .
+It’s trivial that δ v ≤ 3 \delta_{v}\leq 3 . 
+ If | N ⁡ [ u ] ∩ V ​ ζ | = 1 |N[u]\cap V\zeta|=1 , we let N ⁡ [ u ] ∩ V ​ ζ = { ( 1 , 2 , a ) } N[u]\cap V\zeta=\left\{(1,2,a)\right\} , where a ∈ { 0 , 3 , 4 , … , n } a\in\left\{0,3,4,\ldots,n\right\} , then ( N 1 ​ [ u ] ∪ N 2 ​ [ u ] ) ∩ V ​ δ ⊆ { ( 0 ) , ( 1 , a ) , ( 2 , a ) } (N_{1}[u]\cup N_{2}[u])\cap V\delta\subseteq\left\{(0),(1,a),(2,a)\right\} and δ ( 1 , a ) , δ ( 2 , a ) ≥ 1 \delta_{(1,a)},\delta_{(2,a)}\geq 1 . We know { ( 1 , a ) , ( 2 , a ) } ∩ C ≠ ∅ \left\{(1,a),(2,a)\right\}\cap C\neq\emptyset by applying (1.9) on ( 0 ) (0) . Let ( 1 , a ) ∈ C (1,a)\in C , then there exists
+ b ∈ { 0 , 3 , 4 , … , n } ∖ { a } b\in\left\{0,3,4,\ldots,n\right\}\setminus\left\{a\right\} such that 
+ ( 1 , a , b ) ∈ D ​ ,  ​ ( 1 , b ) ∈ V ​ δ ​ ,  ​ ( 1 , 2 , b ) ∈ N ⁡ [ u ] ∩ V ​ ζ , (1,a,b)\in D\text{, }(1,b)\in V\delta\text{, }(1,2,b)\in N[u]\cap V\zeta, 
+ (**) 
+ which is a contradiction. Therefore, | N ⁡ [ u ] ∩ V ​ ζ | = 2 |N[u]\cap V\zeta|=2 .
+ Now let N ⁡ [ u ] ∩ V ​ ζ = { ( 1 , 2 , 3 ) , ( 1 , 2 , k ) } N[u]\cap V\zeta=\left\{(1,2,3),(1,2,k)\right\} , where k ∈ { 0 , 4 , 5 , … , n } k\in\left\{0,4,5,\ldots,n\right\} , then 
+ ( N 1 ​ [ u ] ∪ N 2 ​ [ u ] ) ∩ V ​ δ ⊆ { ( 0 ) , ( 1 , 3 ) , ( 2 , 3 ) , ( 1 , k ) , ( 2 , k ) , ( 1 , 2 , 3 , k ) } . (N_{1}[u]\cup N_{2}[u])\cap V\delta\subseteq\left\{(0),(1,3),(2,3),(1,k),(2,k),(1,2,3,k)\right\}. 
+ Thus, N ⁡ [ v ] ∩ D ⊆ { ( 1 ) , ( 2 ) , ( 3 ) , ( k ) } N[v]\cap D\subseteq\left\{(1),(2),(3),(k)\right\} . We denote the excesses as δ ( 0 ) ≕ o \delta_{(0)}\eqqcolon o , δ ( 1 , 3 ) ≕ p \delta_{(1,3)}\eqqcolon p , δ ( 2 , 3 ) ≕ q \delta_{(2,3)}\eqqcolon q , δ ( 1 , k ) ≕ r \delta_{(1,k)}\eqqcolon r , δ ( 2 , k ) ≕ s \delta_{(2,k)}\eqqcolon s , δ ( 1 , 2 , 3 , k ) ≕ t \delta_{(1,2,3,k)}\eqqcolon t , respectively. By (1.7), (1.8) and (1.9) we derive the following relations (note that δ ( 1 , 2 ) = 1 \delta_{(1,2)}=1 ): 
+ o + p + r ≡ 1 ​  (mod 2)  , \displaystyle o+p+r\equiv 1\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 0 ) + δ N 1 ​ [ ( 0 ) ] ≡ 0 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(0)}+\delta_{N_{1}[(0)]}\equiv 0\text{ (mod 2) }; 
+ (I) 
+ o + q + s ≡ 1 ​  (mod 2)  , \displaystyle o+q+s\equiv 1\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 2 ) + δ N 1 ​ [ ( 2 ) ] ≡ 0 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(2)}+\delta_{N_{1}[(2)]}\equiv 0\text{ (mod 2) }; 
+ (II) 
+ p + q + t ≡ 0 ​  (mod 2)  , \displaystyle p+q+t\equiv 0\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 1 , 2 , 3 ) + δ N 1 ​ [ ( 1 , 2 , 3 ) ] ≡ 1 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(1,2,3)}+\delta_{N_{1}[(1,2,3)]}\equiv 1\text{ (mod 2) }; 
+ (III) 
+ r + s + t ≡ 0 ​  (mod 2)  , \displaystyle r+s+t\equiv 0\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 1 , 2 , k ) + δ N 1 ​ [ ( 1 , 2 , k ) ] ≡ 1 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(1,2,k)}+\delta_{N_{1}[(1,2,k)]}\equiv 1\text{ (mod 2) }; 
+ (IV) 
+ o + p + q + r + s + t ≡ 0 \displaystyle o+p+q+r+s+t\equiv 0 
+ (mod 3),   since  ​ δ N 1 ​ [ u ] + δ N 2 ​ [ u ] ≡ 0 ​  (mod 3)  . \displaystyle\text{ (mod 3), }\text{ since }\delta_{N_{1}[u]}+\delta_{N_{2}[u]}\equiv 0\text{ (mod 3) }. 
+ (V) 
+ If o = 3 o=3 , then N ⁡ [ v ] ∩ D = { ( 1 ) , ( 2 ) , ( 3 ) , ( k ) } N[v]\cap D=\left\{(1),(2),(3),(k)\right\} , and the following relations hold. Note that the restrictions leading to these results are due to (**). 
+ 1 ≤ p ≤ 2 ​ , \displaystyle 1\leq p\leq 2\text{, } 
+ since  ​ N ​ [ ( 1 , 3 ) ] ∩ D ⊆ { ( 1 ) , ( 3 ) , ( 1 , 3 , k ) } ​  and  ​ ( 1 ) , ( 3 ) ∈ D ; \displaystyle\text{ since }N[(1,3)]\cap D\subseteq\left\{(1),(3),(1,3,k)\right\}\text{ and }(1),(3)\in D; 
+ (VI) 
+ 1 ≤ q ≤ 2 ​ , \displaystyle 1\leq q\leq 2\text{, } 
+ since  ​ N ​ [ ( 2 , 3 ) ] ∩ D ⊆ { ( 2 ) , ( 3 ) , ( 2 , 3 , k ) } ​  and  ​ ( 2 ) , ( 3 ) ∈ D ; \displaystyle\text{ since }N[(2,3)]\cap D\subseteq\left\{(2),(3),(2,3,k)\right\}\text{ and }(2),(3)\in D; 
+ (VII) 
+ 1 ≤ r ≤ 2 ​ , \displaystyle 1\leq r\leq 2\text{, } 
+ since  ​ N ​ [ ( 1 , k ) ] ∩ D ⊆ { ( 1 ) , ( k ) , ( 1 , 3 , k ) } ​  and  ​ ( 1 ) , ( k ) ∈ D ; \displaystyle\text{ since }N[(1,k)]\cap D\subseteq\left\{(1),(k),(1,3,k)\right\}\text{ and }(1),(k)\in D; 
+ (VIII) 
+ 1 ≤ s ≤ 2 ​ , \displaystyle 1\leq s\leq 2\text{, } 
+ since  ​ N ​ [ ( 2 , k ) ] ∩ D ⊆ { ( 2 ) , ( k ) , ( 2 , 3 , k ) } ​  and  ​ ( 2 ) , ( k ) ∈ D ; \displaystyle\text{ since }N[(2,k)]\cap D\subseteq\left\{(2),(k),(2,3,k)\right\}\text{ and }(2),(k)\in D; 
+ (IX) 
+ t ≤ 1 ​ , \displaystyle t\leq 1\text{, } 
+ otherwise  ​ u ∈ T 1 ​ ( ( , , , , , , , ) ) ∪ T 2 ​ ( ( , , , , , , , ) ) . \displaystyle\text{ otherwise }u\in T_{1}((1,2,3,k))\cup T_{2}((1,2,3,k)). 
+ (X) 
+ Note that we don’t derive 1 ≤ r ≤ 3 1\leq r\leq 3 in (VIII) from 
+ N ⁡ [ ( 1 , k ) ] ∩ D ⊆ { ( 1 ) , ( k ) , ( 1 , 3 , k ) , ( 1 , k ) } , N[(1,k)]\cap D\subseteq\left\{(1),(k),(1,3,k),(1,k)\right\}, 
+ because if ( 1 , k ) ∈ D (1,k)\in D when k ≠ 0 k\neq 0 , then ( 1 ) ∈ V ​ δ (1)\in V\delta , ( 1 , 2 ) ∈ V ​ ζ (1,2)\in V\zeta , which is a contradiction. The same reason stands for (IX). 
+ Now if o + p + q + r + s + t = 12 o+p+q+r+s+t=12 , then p = q = r = s = 2 p=q=r=s=2 and t = 1 t=1 , contradicting (III), so the only possibility is o + p + q + r + s + t = 9 o+p+q+r+s+t=9 . However, this implies that ( p + q + t ) + ( r + s + t ) − t = 6 (p+q+t)+(r+s+t)-t=6 . By (III) and (IV) we know t = 0 t=0 , and by (I) and (II) we know that p,q,r,s have the same parity, which is impossible. Therefore, | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 .
+ If o = 2 o=2 , then we assume without loss of generality that N ⁡ [ v ] ∩ D ⊆ { ( 1 ) , ( 2 ) , ( k ) } N[v]\cap D\subseteq\left\{(1),(2),(k)\right\} . This time we obtain p ≤ 1 p\leq 1 , q ≤ 1 q\leq 1 , 1 ≤ r ≤ 2 1\leq r\leq 2 , 1 ≤ s ≤ 2 1\leq s\leq 2 , t ≤ 1 t\leq 1 . If o + p + q + r + s + t = 9 o+p+q+r+s+t=9 , then p = q = 1 p=q=1 , r = s = 2 r=s=2 , t = 1 t=1 , contradicting (III), so the only possibility left is o + p + q + r + s + t = 6 o+p+q+r+s+t=6 . This implies that ( p + q + t ) + ( r + s + t ) − t = 4 (p+q+t)+(r+s+t)-t=4 . By (III) and (IV) we know t = 0 t=0 , and by (I) and (II) we know that p , q , r , s p,q,r,s have the same parity, p = q = r = s = 1 p=q=r=s=1 . However, p = q = 1 p=q=1 implies ( 1 , 3 , k ) , ( 2 , 3 , k ) ∈ D (1,3,k),(2,3,k)\in D , leading to t = 1 t=1 , which is a contradiction. Therefore, | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 . 
+ Case 4. u ∈ T 5 ​ ( v ) u\in T_{5}(v) and u ∉ T 1 ​ ( v ′ ) ∪ T 2 ​ ( v ′ ) u\notin T_{1}(v^{\prime})\cup T_{2}(v^{\prime}) for all v ′ ∈ C v^{\prime}\in C .
+ If v ∈ D v\in D , we can prove | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 using the same method as in Case 3. We sketch our arguements in a simplified version, since they are highly similiar to those in Case 3:
+ Let ( 1 ) , ( 2 ) ∈ D (1),(2)\in D and u = ( 1 ) u=(1) . We prove by contradiction, assuming that | N ⁡ [ u ] ∩ V ​ ζ | ≤ 2 |N[u]\cap V\zeta|\leq 2 . It is trivial that δ v ≤ 3 \delta_{v}\leq 3 , and it is easy to show | N ⁡ [ u ] ∩ V ​ ζ | = 2 |N[u]\cap V\zeta|=2 . Assume without loss of generality that N ⁡ [ u ] ∩ V ​ ζ = { ( 1 , 2 ) , ( 1 , 3 ) } N[u]\cap V\zeta=\left\{(1,2),(1,3)\right\} , then 
+ ( N 1 ​ [ u ] ∪ N 2 ​ [ u ] ) ∩ V ​ δ ⊆ { ( 0 ) , ( 2 ) , ( 3 ) , ( 1 , 2 ) , ( 1 , 3 ) , ( 1 , 2 , 3 ) } . (N_{1}[u]\cup N_{2}[u])\cap V\delta\subseteq\left\{(0),(2),(3),(1,2),(1,3),(1,2,3)\right\}. 
+ (***) 
+ We denote the excesses as δ ( 0 ) ≕ o \delta_{(0)}\eqqcolon o , δ ( 2 ) ≕ p \delta_{(2)}\eqqcolon p , δ ( 3 ) ≕ q \delta_{(3)}\eqqcolon q , δ ( 1 , 2 ) ≕ r \delta_{(1,2)}\eqqcolon r , δ ( 1 , 3 ) ≕ s \delta_{(1,3)}\eqqcolon s , δ ( 1 , 2 , 3 ) ≕ t \delta_{(1,2,3)}\eqqcolon t , respectively. By (1.7),(1.8),(1.9) we derive the follwing relations (note that δ ( 1 ) = 1 \delta_{(1)}=1 ) : 
+ o + r + s ≡ 1 ​  (mod 2)  , \displaystyle o+r+s\equiv 1\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 1 ) + δ N 1 ​ [ ( 1 ) ] ≡ 0 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(1)}+\delta_{N_{1}[(1)]}\equiv 0\text{ (mod 2) }; 
+ (XI) 
+ o + p + q ≡ 1 ​  (mod 2)  , \displaystyle o+p+q\equiv 1\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 0 ) + δ N 1 ​ [ ( 0 ) ] ≡ 0 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(0)}+\delta_{N_{1}[(0)]}\equiv 0\text{ (mod 2) }; 
+ (XII) 
+ p + r + t ≡ 0 ​  (mod 2)  , \displaystyle p+r+t\equiv 0\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 1 , 2 ) + δ N 1 ​ [ ( 1 , 2 ) ] ≡ 1 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(1,2)}+\delta_{N_{1}[(1,2)]}\equiv 1\text{ (mod 2) }; 
+ (XIII) 
+ q + s + t ≡ 0 ​  (mod 2)  , \displaystyle q+s+t\equiv 0\text{ (mod 2) }\text{, } 
+ since  ​ δ ( 1 , 3 ) + δ N 1 ​ [ ( 1 , 3 ) ] ≡ 1 ​  (mod 2)  ; \displaystyle\text{ since }\delta_{(1,3)}+\delta_{N_{1}[(1,3)]}\equiv 1\text{ (mod 2) }; 
+ (XIV) 
+ o + p + q + r + s + t ≡ 0 \displaystyle o+p+q+r+s+t\equiv 0 
+ (mod 3),   since  ​ δ N 1 ​ [ u ] + δ N 2 ​ [ u ] ≡ 0 ​  (mod 3)  . \displaystyle\text{ (mod 3), }\text{ since }\delta_{N_{1}[u]}+\delta_{N_{2}[u]}\equiv 0\text{ (mod 3) }. 
+ (XV) 
+ If o = 3 o=3 , then N ⁡ [ v ] ∩ D = { ( 0 ) , ( 1 ) , ( 2 ) , ( 3 ) } N[v]\cap D=\left\{(0),(1),(2),(3)\right\} , and the following relations hold. Note that the restricitons leading to these results are due to (***). 
+ 1 ≤ p ≤ 2 ​ , \displaystyle 1\leq p\leq 2\text{, } 
+ since  ​ N ​ [ ( 2 ) ] ∩ D ⊆ { ( 0 ) , ( 2 ) , ( 2 , 3 ) } ​  and  ​ ( 0 ) , ( 2 ) ∈ D ; \displaystyle\text{ since }N[(2)]\cap D\subseteq\left\{(0),(2),(2,3)\right\}\text{ and }(0),(2)\in D; 
+ (XVI) 
+ 1 ≤ q ≤ 2 ​ , \displaystyle 1\leq q\leq 2\text{, } 
+ since  ​ N ​ [ ( 3 ) ] ∩ D ⊆ { ( 0 ) , ( 3 ) , ( 2 , 3 ) } ​  and  ​ ( 0 ) , ( 3 ) ∈ D ; \displaystyle\text{ since }N[(3)]\cap D\subseteq\left\{(0),(3),(2,3)\right\}\text{ and }(0),(3)\in D; 
+ (XVII) 
+ 1 ≤ r ≤ 2 ​ , \displaystyle 1\leq r\leq 2\text{, } 
+ since  ​ N ​ [ ( 1 , 2 ) ] ∩ D ⊆ { ( 1 ) , ( 2 ) , ( 1 , 2 , 3 ) } ​  and  ​ ( 1 ) , ( 2 ) ∈ D ; \displaystyle\text{ since }N[(1,2)]\cap D\subseteq\left\{(1),(2),(1,2,3)\right\}\text{ and }(1),(2)\in D; 
+ (XVIII) 
+ 1 ≤ s ≤ 2 ​ , \displaystyle 1\leq s\leq 2\text{, } 
+ since  ​ N ​ [ ( 1 , 3 ) ] ∩ D ⊆ { ( 1 ) , ( 3 ) , ( 1 , 2 , 3 ) } ​  and  ​ ( 1 ) , ( 3 ) ∈ D ; \displaystyle\text{ since }N[(1,3)]\cap D\subseteq\left\{(1),(3),(1,2,3)\right\}\text{ and }(1),(3)\in D; 
+ (XIX) 
+ t ≤ 1 ​ , \displaystyle t\leq 1\text{, } 
+ otherwise  ​ u ∈ T 2 ​ ( ( , , , , , ) ) \displaystyle\text{ otherwise }u\in T_{2}((1,2,3)) 
+ (XX) 
+ We have o + p + q + r + s + t = 9 o+p+q+r+s+t=9 or 12 12 , but we can easily lead to contradicitons using (XI) to (XV). If o = 2 o=2 , then N ⁡ [ v ] ∩ D ⊆ { ( 0 ) , ( 1 ) , ( 2 ) } N[v]\cap D\subseteq\left\{(0),(1),(2)\right\} . This time we obtain 1 ≤ p ≤ 2 1\leq p\leq 2 , q ≤ 1 q\leq 1 , 1 ≤ r ≤ 2 1\leq r\leq 2 , s ≤ 1 s\leq 1 , t ≤ 1 t\leq 1 , so we have o + p + q + r + s + t = 6 o+p+q+r+s+t=6 or 9 9 , but again we can easily lead to contradictions using (XI) to (XV). Therefore, | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 .
+ On the other hand, if v ∉ D v\notin D , we let u = ( 1 ) ∈ D u=(1)\in D . It’s trivial that | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 if δ v = 3 \delta_{v}=3 . If δ v = 2 \delta_{v}=2 , we let N ⁡ [ v ] ∩ D = { ( 1 ) , ( 2 ) , ( 3 ) } N[v]\cap D=\left\{(1),(2),(3)\right\} . For w ∈ { ( 1 , 2 ) , ( 1 , 3 ) } w\in\left\{(1,2),(1,3)\right\} , we have w ∉ N ⁡ [ u ] ∩ V ​ ζ w\notin N[u]\cap V\zeta if and only if w ∈ D w\in D . Moreover, ( 0 ) ∈ N ⁡ [ u ] ∩ V ​ ζ (0)\in N[u]\cap V\zeta . So if | { ( 1 , 2 ) , ( 1 , 3 ) } ∩ D | = 0 |\left\{(1,2),(1,3)\right\}\cap D|=0 , then | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 . If not, let ( 1 , 2 ) ∈ D (1,2)\in D , then ( 1 , 2 ) ∈ C ∩ D (1,2)\in C\cap D and u ∈ T 5 ​ ( 1 , 2 ) u\in T_{5}(1,2) , implying | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 . 
+ Case 5. u ∈ T 4 ​ ( v ) u\in T_{4}(v) and u ∉ T 1 ​ ( v ′ ) ∪ T 2 ​ ( v ′ ) u\notin T_{1}(v^{\prime})\cup T_{2}(v^{\prime}) for all v ′ ∈ C v^{\prime}\in C .
+ If v ∈ D v\in D , we let ( 1 ) , ( 2 ) ∈ N ⁡ [ v ] ∩ D (1),(2)\in N[v]\cap D , u = ( 1 , a ) u=(1,a) where ( a ) ∉ D (a)\notin D .
+ We have { ( 0 ) , ( 1 ) , ( 1 , 2 ) , ( 1 , a ) } ⊂ V ​ δ \left\{(0),(1),(1,2),(1,a)\right\}\subset V\delta . Therefore, if { ( 1 , a ) , ( 1 , 2 , a ) } ∩ D = ∅ \left\{(1,a),(1,2,a)\right\}\cap D=\emptyset , then { ( a ) , ( 1 , a ) , ( 1 , 2 , a ) } ⊆ N ⁡ [ u ] ∩ V ​ ζ \left\{(a),(1,a),(1,2,a)\right\}\subseteq N[u]\cap V\zeta ; If ( 1 , 2 , a ) ∈ D (1,2,a)\in D , then u ∈ T 3 ​ ( ( , , , ) ) u\in T_{3}((1,2)) ; If ( 1 , a ) ∈ D (1,a)\in D , then u ∈ T 5 ​ ( ( 1 ) ) u\in T_{5}((1)) . 
+ On the other hand, if v ∉ D v\notin D , let ( 1 ) , ( 2 ) , ( 3 ) ∈ N ⁡ [ v ] ∩ D (1),(2),(3)\in N[v]\cap D , u = ( 1 , a ) u=(1,a) where ( a ) ∈ D (a)\in D .
+We
+ have { ( 1 , 2 ) , ( 1 , 3 ) } ⊂ V ​ δ \left\{(1,2),(1,3)\right\}\subset V\delta and ( a ) ∈ N ⁡ [ u ] ∩ V ​ ζ (a)\in N[u]\cap V\zeta . Thus, if { ( 1 , 2 , a ) , ( 1 , 3 , a ) } ∩ D = ∅ \left\{(1,2,a),(1,3,a)\right\}\cap D=\emptyset , then { ( a ) , ( 1 , 2 , a ) , ( 1 , 3 , a ) } ⊆ N ⁡ [ u ] ∩ V ​ ζ \left\{(a),(1,2,a),(1,3,a)\right\}\subseteq N[u]\cap V\zeta ; If { ( 1 , 2 , a ) , ( 1 , 3 , a ) } ∩ D ≠ ∅ \left\{(1,2,a),(1,3,a)\right\}\cap D\neq\emptyset , then there exists w ∈ { ( 1 , 2 ) , ( 1 , 3 ) } ​  such that  ​ u ∈ T 3 ​ ( w ) w\in\left\{(1,2),(1,3)\right\}\text{ such that }u\in T_{3}(w) . 
+ Everyone possible condition above implies that | N ⁡ [ u ] ∩ V ​ ζ | ≥ 3 |N[u]\cap V\zeta|\geq 3 .
+ ∎ 
+ Given v ∈ C v\in C , we define S i ​ ( v ) ≔ { u ∈ T i ​ ( v ) : | N ⁡ [ u ] ∩ V ​ ζ | = 2 } S_{i}(v)\coloneqq\left\{u\in T_{i}(v):|N[u]\cap V\zeta|=2\right\} .
+ The contribution v ∪ S 1 ​ ( v ) ∪ S 2 ​ ( v ) v\cup S_{1}(v)\cup S_{2}(v) has on ζ V ⁡ ( Q n ) \zeta_{V(Q_{n})} is 
+ ∑ w ∈ V ζ δ N ⁡ [ w ] ∩ ( v ∪ S 1 ​ ( v ) ∪ S 2 ​ ( v ) ) \displaystyle\sum_{w\in V_{\zeta}}\delta_{N[w]\cap(v\cup S_{1}(v)\cup S_{2}(v))} 
+ = δ v ​ | N ⁡ [ v ] ∩ V ​ ζ | + ∑ u ∈ S 1 ​ ( v ) ∪ S 2 ​ ( v ) | N ⁡ [ u ] ∩ V ​ ζ | \displaystyle=\delta_{v}|N[v]\cap V\zeta|+\sum_{u\in S_{1}(v)\cup S_{2}(v)}|N[u]\cap V\zeta| 
+ (2.9) 
+ = δ v ​ ( n − δ v ) + 2 ​ ( S 1 ​ ( v ) ∪ S 2 ​ ( v ) ) . \displaystyle=\delta_{v}(n-\delta_{v})+2(S_{1}(v)\cup S_{2}(v)). 
+ In contrast, if there were | N ⁡ [ u ] ∩ V ​ ζ | = 3 |N[u]\cap V\zeta|=3 for all u ∈ v ∪ S 1 ​ ( v ) ∪ S 2 ​ ( v ) u\in v\cup S_{1}(v)\cup S_{2}(v) (as if we "ignored" the influence of v v ), then the contribution becomes 
+ δ v ​ | N ⁡ [ v ] ∩ V ​ ζ | + ∑ u ∈ S 1 ​ ( v ) ∪ S 2 ​ ( v ) | N ⁡ [ u ] ∩ V ​ ζ | = 3 ​ δ v + 3 ​ | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | . \delta_{v}|N[v]\cap V\zeta|+\sum_{u\in S_{1}(v)\cup S_{2}(v)}|N[u]\cap V\zeta|=3\delta_{v}+3|S_{1}(v)\cup S_{2}(v)|. 
+ (2.10) 
+ The difference between (2.9) and (2.10) is δ v ​ ( n − δ v − 3 ) − | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | \delta_{v}(n-\delta_{v}-3)-|S_{1}(v)\cup S_{2}(v)| . We need to obtain the lower bound on this value in order to specify the influence C C has on ζ m ​ 2 \zeta_{m2} . 
+ Lemma 4 . 
+ For all v ∈ C v\in C , the lower bound on δ v ​ ( n − δ v − 3 ) − | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | \delta_{v}(n-\delta_{v}-3)-|S_{1}(v)\cup S_{2}(v)| is 
+ 0 , \displaystyle 0, 
+ if  ​ 3 ≤ δ v ≤ n − 4 ​ , or  ​ δ v = 2 ​  and  ​ n ≥ 18 ; \displaystyle\text{ if }3\leq\delta_{v}\leq n-4\text{, or }\delta_{v}=2\text{ and }n\geq 18; 
+ − 1 , \displaystyle-1, 
+ if  ​ δ v = 2 ​  and  ​ n = 12 ; \displaystyle\text{ if }\delta_{v}=2\text{ and }n=12; 
+ − 4.5 , \displaystyle-4.5, 
+ if  ​ δ v = n − 3 ; \displaystyle\text{ if }\delta_{v}=n-3; 
+ − n − 1 , \displaystyle-n-1, 
+ if  ​ δ v = n − 2 ; \displaystyle\text{ if }\delta_{v}=n-2; 
+ − 2 ​ n + 0.5 , \displaystyle-2n+0.5, 
+ if  ​ δ v = n − 1 ; \displaystyle\text{ if }\delta_{v}=n-1; 
+ − 3 ​ n , \displaystyle-3n, 
+ if  ​ δ v = n . \displaystyle\text{ if }\delta_{v}=n. 
+ Proof. 
+ Assume without lost of generality that v = ( 0 ) v=(0) .
+ If v ∉ D v\notin D , let { ( 1 ) , ( 2 ) , … , ( δ v + 1 ) } ⊂ D \left\{(1),(2),\ldots,(\delta_{v}+1)\right\}\subset D . Define A ≔ g ⁡ ( S 2 ​ ( v ) ∩ D ) A\coloneqq g(S_{2}(v)\cap D) and B ≔ g ⁡ ( S 2 ​ ( v ) ) ∖ A B\coloneqq g(S_{2}(v))\setminus A . By (2.7) and (2.8) we know that 
+ ∀ k ∈ A ​ , we have  ​ S 2 ​ ( v ) ​ [ k ] ≤ 2 ​ ;  ​ ∀ k ∈ B ​ , we have  ​ S 2 ​ ( v ) ​ [ k ] ≤ 3 . \forall k\in A\text{, we have }S_{2}(v)[k]\leq 2\text{; }\forall k\in B\text{, we have }S_{2}(v)[k]\leq 3. 
+ So | S 2 ​ ( v ) | ≤ 1 2 ​ ( 2 ​ | A | + 3 ​ | B | ) |S_{2}(v)|\leq\frac{1}{2}(2|A|+3|B|) . 
+ By (2.7) we also know that for all k ∈ g ​ ( S 1 ​ ( v ) ) k\in g(S_{1}(v)) , we have k ∉ S 2 ​ ( v ) ∖ D k\notin S_{2}(v)\setminus D , k ∉ B k\notin B . Therefore, | B | ≤ n − δ v − 1 − | S 1 ​ ( v ) | |B|\leq n-\delta_{v}-1-|S_{1}(v)| . Since | A | + | B | ≤ n − δ v − 1 |A|+|B|\leq n-\delta_{v}-1 , we have 
+ | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | \displaystyle|S_{1}(v)\cup S_{2}(v)| 
+ ≤ | S 1 ​ ( v ) | + 1 2 ​ ( 2 ​ | A | + 3 ​ | B | ) \displaystyle\leq|S_{1}(v)|+\frac{1}{2}\Bigl(2|A|+3|B|\Bigr) 
+ ≤ | S 1 ​ ( v ) | + 1 2 ​ ( 2 ​ | S 1 ​ ( v ) | + 3 ​ ( n − δ v − 1 − | S 1 ​ ( v ) | ) ) \displaystyle\leq|S_{1}(v)|+\frac{1}{2}\Bigl(2|S_{1}(v)|+3(n-\delta_{v}-1-|S_{1}(v)|)\Bigr) 
+ = | S 1 ​ ( v ) | + 1 2 ​ ( 3 ​ n − 3 ​ δ v − 3 − | S 1 ​ ( v ) | ) . \displaystyle=|S_{1}(v)|+\frac{1}{2}\Bigl(3n-3\delta_{v}-3-|S_{1}(v)|\Bigr). 
+ By (2.6) we know that | S 1 ​ ( v ) | ≤ 3 |S_{1}(v)|\leq 3 , so | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | ≤ 1 2 ​ ( 3 ​ n − 3 ​ δ v ) |S_{1}(v)\cup S_{2}(v)|\leq\frac{1}{2}(3n-3\delta_{v}) .
+ On the other hand, if v ∈ D v\in D , let { ( 0 ) , ( 1 ) , ( 2 ) , … , ( δ v ) } ⊂ D \left\{(0),(1),(2),\ldots,(\delta_{v})\right\}\subset D . Note that | S 1 ​ ( v ) | = 0 |S_{1}(v)|=0 .
+ By (2.8), for all k ∈ { δ v + 1 , δ v + 2 , … , n } k\in\left\{\delta_{v}+1,\delta_{v}+2,\ldots,n\right\} , we have | S 2 ​ ( v ) ​ [ k ] | ≤ 3 |S_{2}(v)[k]|\leq 3 . Therefore, 
+ | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | = | S 2 ​ ( v ) | ≤ 3 2 ​ | { δ v + 1 , δ v + 2 , … , n } | = 3 2 ​ ( n − δ v ) . |S_{1}(v)\cup S_{2}(v)|=|S_{2}(v)|\leq\frac{3}{2}|\left\{\delta_{v}+1,\delta_{v}+2,\ldots,n\right\}|=\frac{3}{2}(n-\delta_{v}). 
+ No matter whether v ∈ D v\in D or not, we obtain 
+ δ v ​ ( n − δ v − 3 ) − | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | ≥ δ v ​ ( n − δ v − 3 ) − 3 2 ​ ( n − δ v ) , \delta_{v}(n-\delta_{v}-3)-|S_{1}(v)\cup S_{2}(v)|\geq\delta_{v}(n-\delta_{v}-3)-\frac{3}{2}(n-\delta_{v}), 
+ and the lower bounds given in the Lemma can thus be verified.
+∎ 
+ By definition, ∑ i ≥ 1 ( 2 ​ i + 1 ) ​ | V ​ ζ 2 ​ i | = ∑ x ∈ ℕ x ​ ∑ u ∈ V ​ δ x | N ⁡ [ u ] ∩ V ​ ζ | \sum_{i\geq 1}(2i+1)|V\zeta^{2i}|=\sum_{x\in\mathbb{N}}x\sum_{u\in V\delta^{x}}|N[u]\cap V\zeta| , and we can now estimate its lower bound using the results in Lemma 4. 
+ Lemma 5 . 
+ The following inequality holds: 
+ ∑ i ≥ 1 ( 2 ​ i + 1 ) ​ | V ​ ζ 2 ​ i | \displaystyle\sum_{i\geq 1}(2i+1)|V\zeta^{2i}| 
+ ≥ 3 ​ δ V ⁡ ( Q n ) − | V ​ δ 2 ​ | − 4.5 | ​ V ​ δ n − 3 ​ | − ( n + 1 ) | ​ V ​ δ n − 2 ​ | − ( 2 ​ n − 0.5 ) | ​ V ​ δ n − 1 ​ | − 3 ​ n | ​ V ​ δ n | . \displaystyle\geq 3\delta_{V(Q_{n})}-|V\delta^{2}|-4.5|V\delta^{n-3}|-(n+1)|V\delta^{n-2}|-(2n-0.5)|V\delta^{n-1}|-3n|V\delta^{n}|. 
+ Proof. 
+ ∑ i ≥ 1 ( 2 ​ i + 1 ) ​ | V ​ ζ 2 ​ i | \displaystyle\sum_{i\geq 1}(2i+1)|V\zeta^{2i}| 
+ = ∑ x ∈ ℕ x ​ ∑ u ∈ V ​ δ x ( | N ⁡ [ u ] ∩ V ​ ζ | ) \displaystyle=\sum_{x\in\mathbb{N}}x\sum_{u\in V\delta^{x}}(|N[u]\cap V\zeta|) 
+ = 3 ​ δ V ⁡ ( Q n ) + ∑ x ∈ ℕ x ​ ∑ u ∈ V ​ δ x ( | N ⁡ [ u ] ∩ V ​ ζ | − 3 ) \displaystyle=3\delta_{V(Q_{n})}+\sum_{x\in\mathbb{N}}x\sum_{u\in V\delta^{x}}(|N[u]\cap V\zeta|-3) 
+ = 3 ​ δ V ⁡ ( Q n ) + ∑ v ∈ C δ v ​ ( | N ⁡ [ v ] ∩ V ​ ζ | − 3 ) + ∑ u ∈ V ​ δ 1 ( | N ⁡ [ u ] ∩ V ​ ζ | − 3 ) \displaystyle=3\delta_{V(Q_{n})}+\sum_{v\in C}\delta_{v}(|N[v]\cap V\zeta|-3)+\sum_{u\in V\delta^{1}}(|N[u]\cap V\zeta|-3) 
+ ≥ 3 ​ δ V ⁡ ( Q n ) + ∑ v ∈ C δ v ​ ( n − δ v − 3 ) + ∑ u ∈ V ​ δ 1 ( | N ⁡ [ u ] ∩ V ​ ζ | − 3 ) | ∃ v ​  such that  ​ u ∈ S 1 ​ ( v ) ∪ S 2 ​ ( v ) \displaystyle\geq 3\delta_{V(Q_{n})}+\sum_{v\in C}\delta_{v}(n-\delta_{v}-3)+\sum_{u\in V\delta^{1}}\Bigl.(|N[u]\cap V\zeta|-3)\Bigr|_{\exists v\text{ such that }u\in S_{1}(v)\cup S_{2}(v)} 
+ ≥ 3 ​ δ V ⁡ ( Q n ) + ∑ v ∈ C ( δ v ​ ( n − δ v − 3 ) − | S 1 ​ ( v ) ∪ S 2 ​ ( v ) | ) \displaystyle\geq 3\delta_{V(Q_{n})}+\sum_{v\in C}\Bigl(\delta_{v}(n-\delta_{v}-3)-|S_{1}(v)\cup S_{2}(v)|\Bigr) 
+ ≥ 3 ​ δ V ⁡ ( Q n ) − | V ​ δ 2 ​ | − 4.5 | ​ V ​ δ n − 3 ​ | − ( n + 1 ) | ​ V ​ δ n − 2 ​ | − ( 2 ​ n − 0.5 ) | ​ V ​ δ n − 1 ​ | − 3 ​ n | ​ V ​ δ n | . \displaystyle\geq 3\delta_{V(Q_{n})}-|V\delta^{2}|-4.5|V\delta^{n-3}|-(n+1)|V\delta^{n-2}|-(2n-0.5)|V\delta^{n-1}|-3n|V\delta^{n}|. 
+ ∎ 
+ Lemma 5 clarifies the influence C C has on ζ m ​ 2 \zeta_{m2} , so we can discuss ζ m ​ 2 − ζ m ​ 1 \zeta_{m2}-\zeta_{m1} when D D doesn’t satisfy the conditions in Corollary 1. The main idea is that the existence of C C makes both ζ m ​ 2 \zeta_{m2} and ζ m ​ 1 \zeta_{m1} decrease, but the latter decreases faster. 
+ Lemma 6 . 
+ When n ≥ 12 n\geq 12 , if D D satisfies V ​ ζ ≠ V ​ ζ 2 V\zeta\neq V\zeta^{2} or C ≠ ∅ C\neq\emptyset , then
+ ζ m ​ 2 − ζ m ​ 1 ≥ 2 ​ δ V ⁡ ( Q n ) − ζ max . \zeta_{m2}-\zeta_{m1}\geq 2\delta_{V(Q_{n})}-\zeta_{\text{max}}. 
+ Proof. 
+ ζ m ​ 2 − 2 ​ δ V ⁡ ( Q n ) \displaystyle\zeta_{m2}-2\delta_{V(Q_{n})} 
+ = 1 3 ​ ( ∑ i ≥ 1 ( 6 ​ i ​ | V ​ ζ 2 ​ i | ) − 6 ​ δ V ⁡ ( Q n ) ) \displaystyle=\frac{1}{3}\left(\sum_{i\geq 1}(6i|V\zeta^{2i}|)-6\delta_{V(Q_{n})}\right) 
+ = 1 3 ​ ( ∑ i ≥ 1 ( 2 ​ i − 2 ) ​ | V ​ ζ 2 ​ i | + 2 ​ ∑ i ≥ 1 ( 2 ​ i + 1 ) ​ | V ​ ζ 2 ​ i | − 6 ​ δ V ⁡ ( Q n ) ) \displaystyle=\frac{1}{3}\left(\sum_{i\geq 1}(2i-2)|V\zeta^{2i}|+2\sum_{i\geq 1}(2i+1)|V\zeta^{2i}|-6\delta_{V(Q_{n})}\right) 
+ ≥ 1 3 ​ ( ∑ i ≥ 1 ( 2 ​ i − 2 ) ​ | V ​ ζ 2 ​ i | − 2 ​ | V ​ δ 2 | − 9 ​ | V ​ δ n − 3 ​ | − ( 2 ​ n + 2 ) | ​ V ​ δ n − 2 | CLOSE \displaystyle\geq\frac{1}{3}\Bigl(\sum_{i\geq 1}(2i-2)|V\zeta^{2i}|-2|V\delta^{2}|-9|V\delta^{n-3}|-(2n+2)|V\delta^{n-2}| 
+       − ( 4 n − 1 ) | V δ n − 1 | − 6 n | V δ n | ) . \displaystyle\text{ }\text{ }\text{ }\text{ }-(4n-1)|V\delta^{n-1}|-6n|V\delta^{n}|\Bigr). 
+ ζ m ​ 1 − ζ max \displaystyle\zeta_{m1}-\zeta_{\text{max}} 
+ = − ∑ x ∈ ℕ x ( x − 1 ) | V δ x | \displaystyle=-\sum_{x\in\mathbb{N}}x(x-1)|V\delta^{x}| 
+ = − 2 ​ | V ​ δ 2 | − 6 ​ | V ​ δ 3 | − … − ( n − 3 ) ​ ( n − 4 ) ​ | V ​ δ n − 3 ​ | − ( n − 2 ) ​ ( n − 3 ) | ​ V ​ δ n − 2 | \displaystyle=-2|V\delta^{2}|-6|V\delta^{3}|-\ldots-(n-3)(n-4)|V\delta^{n-3}|-(n-2)(n-3)|V\delta^{n-2}| 
+       − ( n − 1 ) ( n − 2 ) | V δ n − 1 | − n ( n − 1 ) | V δ n | . \displaystyle\text{ }\text{ }\text{ }\text{ }-(n-1)(n-2)|V\delta^{n-1}|-n(n-1)|V\delta^{n}|. 
+ Therefore, if | ⋃ i > 1 V ​ ζ 2 ​ i | ≠ ∅ |\bigcup_{i>1}V\zeta^{2i}|\neq\emptyset or C ≠ ∅ C\neq\emptyset , then ζ m ​ 2 − 2 ​ δ V ⁡ ( Q n ) > ζ m ​ 1 − ζ max \zeta_{m2}-2\delta_{V(Q_{n})}>\zeta_{m1}-\zeta_{\text{max}} .
+∎ 
+ Recall that we assumed the dominating set D D has | D | = γ ∗ |D|=\gamma^{*} . We can compute δ V ⁡ ( Q n ) \delta_{V(Q_{n})} and ζ max \zeta_{\text{max}} only using | D | |D| and n n .
+However, if we obtain 2 ​ δ V ⁡ ( Q n ) − ζ max > 0 2\delta_{V(Q_{n})}-\zeta_{\text{max}}>0 , then by Corallary 1 and Lemma 6 we know D D must lead to ζ m ​ 2 > ζ m ​ 1 \zeta_{m2}>\zeta_{m1} , which is a contradiction. Therefore, such D D can’t exist, so γ ⁡ ( Q n ) > γ ∗ \gamma(Q_{n})>\gamma^{*} .
+In other words, γ ⁡ ( Q n ) \gamma(Q_{n}) must lead to 2 ​ δ V ⁡ ( Q n ) − ζ max ≤ 0 2\delta_{V(Q_{n})}-\zeta_{\text{max}}\leq 0 . 
+ Theorem 2 . 
+ If n ≡ 0 n\equiv 0 (mod 6), then γ ⁡ ( Q n ) ≥ ( n − 2 ) ​ 2 n n 2 − 2 ​ n − 2 \gamma(Q_{n})\geq\dfrac{(n-2)2^{n}}{n^{2}-2n-2} . 
+ Proof. 
+ Consider a minimum dominating set of Q n Q_{n} . We have 
+ δ V ⁡ ( Q n ) = ( n + 1 ) γ ( Q n ) − 2 n ,   ζ max = ( n − 1 ) δ V ⁡ ( Q n ) − 2 n + γ ( Q n ) = n 2 γ ( Q n ) − n 2 n . \delta_{V(Q_{n})}=(n+1)\gamma(Q_{n})-2^{n},\text{ }\zeta_{\text{max}}=(n-1)\delta_{V(Q_{n})}-2^{n}+\gamma(Q_{n})=n^{2}\gamma(Q_{n})-n2^{n}. 
+ Since ζ max − 2 ​ δ V ⁡ ( Q n ) ≥ 0 \zeta_{\text{max}}-2\delta_{V(Q_{n})}\geq 0 , there must be 
+ ( n 2 − 2 n − 2 ) γ ( Q n ) − ( n − 2 ) 2 n ≥ 0 ,   γ ( Q n ) ≥ ( n − 2 ) ​ 2 n n 2 − 2 ​ n − 2 . (n^{2}-2n-2)\gamma(Q_{n})-(n-2)2^{n}\geq 0,\text{ }\gamma(Q_{n})\geq\dfrac{(n-2)2^{n}}{n^{2}-2n-2}. 
+ ∎ 
+ Corollary 2 . 
+ γ ⁡ ( Q 12 ) ≥ 348 \gamma(Q_{12})\geq 348 , γ ⁡ ( Q 18 ) ≥ 14666 \gamma(Q_{18})\geq 14666 , γ ⁡ ( Q 24 ) ≥ 701709 . \gamma(Q_{24})\geq 701709. 
+ 3 Conclusion 
+ Table 1 and 2 in the appendix is due to Gerzson Kéri [ 2 ] [ 3 ] . When n n is a multiple of 6, the best known result is γ ⁡ ( Q n ) ≥ 2 n n \gamma(Q_{n})\geq\frac{2^{n}}{n} , given by van Wee [ 4 ] . Our lower bound is higher, and several improvements are listed in Corollary 2.
+Also, although we didn’t discuss the correctness of Lemma 6 when n = 6 n=6 , our lower bound still gives the desired result γ ⁡ ( Q 6 ) ≥ 12 \gamma(Q_{6})\geq 12 . 
+ Acknowledgements 
+ We thank Gerard Jennhwa Chang and Chun-Ju Lai for encouragements and comments. We are grateful to Gerzson Kéri, Patric Östergård and Jan-Christoph Schlage-Puchta for their useful correspondence. Lastly, we would like to thank Laurent Habsieger, whose fine paper inspired us a lot. 
+ References 
+ [1] 
+Laurent Habsieger, Binary codes with covering radius one: Some new lower bounds , Discrete Math. 176 (1997) 664-671.
+ [2] 
+Gerzson Kéri, Tables for bounds on covering codes , 21 Nov. 2001. http://old.sztaki.hu/ keri/.
+ [3] 
+Gerzson Kéri, Lefedő kódok kérdései: Optimális vagy optimálishoz közeli lefedő kódok szerkesztésének módszertana, története, egyéb vonatkozásai, adatbázisa , 1st ed. Beau Bassin: GlobeEdit (2017) 66-69.
+ [4] 
+Gerard J.M. Van Wee, Improved sphere bounds on the covering radius of codes , IEEE Trans. Infrom. Theory 34 (1988)
+237-245.
+ Appendix 
+ Table 1: the latest results of the bounds on γ ⁡ ( Q n ) \gamma(Q_{n}) 
+ a a 
+ Taussky, Todd, 1948 
+ j j 
+ Östergård, Weakly, 1999 
+ b b 
+ Stanton, Kalbfleisch, 1968,1969 
+ k k 
+ Habsieger, 1997 
+ c c 
+ perfect code 
+ l l 
+ Hass, 2007-2008 
+ d d 
+ Östergård, Blass, 2001 
+ m m 
+ Habsieger, Plagne, 2000 
+ e e 
+ Wille, 1990, 1996 
+ n n 
+ Li, Chen, 1994 
+ f f 
+ Bertolo, Östergård, Weakly, 2004 
+ o o 
+ Kéri, 2006 
+ g g 
+ Blass, Litsyn, 1998, 1999 
+ p p 
+ Östergård, Kaikkonen, 1998 
+ h h 
+ Cohen, Lobstein, Sloane, 1986 
+ q q 
+ Plagne, 2008 
+ i i 
+ van Wee,1988 
+ Table 2: the latest results of the bounds on γ ⁡ ( Q n ) \gamma(Q_{n}) 
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from
+ our major funders ,
+ member institutions , ,
+ and all contributors.
+ About 
+ · 
+ Help 
+ · 
+ Contact 
+ · 
+ Subscribe 
+ · 
+ Copyright 
+ · 
+ Privacy 
+ · 
+ Accessibility 
+ · 
+ Operational Status (opens in new tab) 
+ Major funding support from 
