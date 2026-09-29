@@ -154,3 +154,31 @@ $$\boxed{\text{`RESULT-29n` §3 之 }N_{\le2}\ge\Sigma\delta\ \textbf{错};\ \te
 - 详 `docs/ERRATUM-2026-09-29-n1-factor-two-in-the-106-107-reduction.md`
 - **未受影响** ✓：复现 107 $\iff$ 排除 $M{=}106$｜恒等式 $E1/E2/E3$｜恒等式 $T$｜`AUDIT-29e` 之禁令
 - **顺带有效新式** ✓：$P\le2A_2$
+
+---
+
+## §8 22:00–23:1x 会话续段（唐先生令：先复现 107）【新增·供续线】
+
+**令序**：先复现 107（=排除 $M{=}106$）⟹ 106 已在手**不回退** ⟹ A/B ⟹ 继续 (II)
+
+### §8.1 本轮**净工具**（全部可复用，已双码或双例核验）
+
+| 工具 | 内容 | 位置 |
+|---|---|---|
+| $F1$–$F6$ | 恒等式清单（$F2$: $\mu(y){=}1{+}a_y$；$F6$: $\Sigma_{x\notin C}\delta{=}11M{-}1024{-}2A_1$） | `ROUTE-…-107-ladder` §3 |
+| $F7$ **勘误** | $\Sigma\binom\mu2\ge\Sigma\delta\Rightarrow N_{\le2}\ge\tfrac12\Sigma\delta$（旧 $\ge\Sigma\delta$ **错**） | `ERRATUM-n1` |
+| $F9$ | $2A_2=\Sigma_{x\notin C}\binom\mu2+P$ ✓✓ | `AUDIT-zg` §6 |
+| 恒等式 $T$ | $\Sigma\binom{\mu(x)}3=P+E$；引理 T：两两 $d\le2$ 三点组**仅两型**且公共点**恰 1 个** | `SPEC-…-jia` |
+| $L1$ | 每距-2 中点须 $\ge3$ 个"内部"距-2 码字（条件 $\mu\le2$） | `LEMMA-L1` |
+| **层覆盖族** | $M\binom nk\le2(n{+}1{-}k)A_{k{-}1}{+}2A_k{+}2(k{+}1)A_{k{+}1}$ ✓✓ | `AUDIT-zi` §1 |
+| **局部锚定约束** | 私有点: $a_0{=}0,a_1{=}1$ ＋ $a_2\ge5$（9 邻居须由距-2 词覆盖） | `AUDIT-zk` §1 |
+| **类级标定** | 聚合/谱类在 $n{=}9$ **连 $M{=}61$ 都判可行**；$M_{\rm agg}(10){=}\mathbf{95}$ | `AUDIT-zj` |
+
+### §8.2 本轮**否定**（皆"该路线不足"，非"不可能"）
+
+$$\text{① 聚合恒等式层（}M{=}106\ \text{可行）｜② (α) 计数差 }26\times\ \text{｜③ (β) }\mu_{\max}\ \text{迭代无矛盾｜④ 层覆盖族 min }4930<5565\ \text{｜⑤ (II) 局部松弛 }11$$
+
+### §8.3 结论与建议
+
+$$\boxed{\text{我方已达成 }K(10,1)\ge\mathbf{106}\ (\text{SDP-3}{=}105.2223,\ \text{可复现})\ \textbf{保留};\quad 106\to107\ \textbf{超出三类方法之总和}}$$
+$$\therefore\ \textbf{(III) 建议收束存档};\ \text{若续攻，须先出现\ \textbf{新承重机制}（非松弛、非聚合、非局部结构）}$$
