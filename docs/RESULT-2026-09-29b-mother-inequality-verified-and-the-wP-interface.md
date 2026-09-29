@@ -15,8 +15,8 @@ D1: 0（产出＝**母式核实 ＋ 接口 ＋ 首个数据** ⚠️✓）
 $$\boxed{\text{① 勘误确认}:\ a,b\in[\mathbf{47},\mathbf{59}]\ (\text{15 例}\to13\text{ 例};\ \text{仅排 }a{=}46,60)\ ✓\ \text{已落档}}$$
 $$\boxed{\text{② 母式（更干净之证明）}:\ \mathrm{Def}(A)\ \ge\ 2\sum_{c\in A\setminus P}m(c),\ m(c)=|P\cap B_2(c)|\ ✓✓\ (\text{实测 }40/40)}$$
 $$\boxed{\text{③ 我方旧引理 ＝ 其特例}:\ m(c)\ge1\Longrightarrow\mathrm{Def}\ge2(a-|P|)\ge2(a-40)\ ✓}$$
-$$\boxed{\text{④ 斜率问题}:\ \text{母式斜率}\ 2\sum m\ \text{vs 所需}\ 9a-406\ (\text{斜率 }9)};\ \text{差 7 倍}\ ⚠️}$$
-$$\boxed{\text{⑤ 首个数据}:\ \text{极大 packing：}w_P(x)\ge1\ \forall x\ (\text{实测}\ ✓);\ \text{且低重区\ \textbf{确实存在}\ (w{=}1\ \text{有 }32\ \text{点})⚠️}$$
+$$\text{④ 斜率问题}:\ \text{母式斜率}\ 2\sum m\ \text{vs 所需}\ 9a-406\ (\text{斜率}\ 9)\Longrightarrow\ \text{差 7 倍}\ ⚠️$$
+$$\text{⑤ 首个数据}:\ \text{极大 packing 使}\ w_P(x)\ge1\ \forall x\ (\text{实测}\ ✓);\ \text{低重区确实存在}\ (w{=}1\ \text{有}\ 32\ \text{点})\ ⚠️$$
 
 ## §1 母式之干净证明（✓ 逐行）
 
