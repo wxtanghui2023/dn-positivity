@@ -87,3 +87,10 @@ $$\textbf{（丙）}\ \text{一个\ \textbf{新表示层}}（\text{非 }A\ \text
 反重复清单 : 技术词 反重复清单   命中文件数=0    ::
 Aut不变性定理 : 技术词 Aut不变性定理 命中文件数=0    ::
 ```
+
+## §9 溯源判定（2026-09-29 22:10，唐先生命）【不要两线混账】
+
+$$\boxed{\text{119 线之 NO-GO 库存}\ \textbf{全部在排除（下界）侧};\ \text{而 119 目标在上界（构造）侧} \Longrightarrow \textbf{不构成对 119 目标的封锁}}$$
+- 依据：`PLAN-119` §3（资产/方法错配）｜`K101-119-LINE-ARCHIVE` §0（OPEN — structurally audited／**current mechanisms** NO-GO）｜`MASTER-STATUS` §119-P1-CONSOLIDATION（21 机制 CLOSED ⟹ 核心 ＝ 整性）｜`ASSETS-REGISTRY` L1905（**上界侧 LIVE ✓✓**）
+- ⟹ 该 NO-GO 族与 107 下界线**同墙**（定理 A／B）＝「**107 复现**」侧性质；**下界线**方以该墙为**真实障碍** ✓✓
+- 详 `docs/HANDOVER-2026-09-29-2130-session-state-and-next-entry.md` §7.1

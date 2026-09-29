@@ -84,3 +84,24 @@ ROUTE-CHECK: R02=NA R06=NA R07=NA R08=NA R16=NA R17=NA R18=DUPLICATE R19=DUPLICA
 **审查结论**：§5 四条入口中，**仅 4a（上界侧 n=9 校准）为干净可开案项** ✓；第 1 条已被三层独立证据封闭（R19 ＋ 28c ＋ 29x）✗；第 4b 已有专案 ✗；第 2／3 条须先补前置理由（非强制型论证／可核验性）⚠️。
 
 ROUTE-CHECK: R01=NA R02=NA R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=FINGERPRINT-CITED R10=NA R11=NA R12=NA R13=NA R14=FINGERPRINT-CITED R15=NA R16=NA R17=FINGERPRINT-CITED R18=NA R19=FINGERPRINT-CITED R20=NA
+
+---
+
+## §7.1 溯源判定（唐先生 21:56 命：block 是 119 的 NO-GO，还是 107 的复现？）【新增】
+
+$$\boxed{\text{判定}:\ \text{该 block ＝ \textbf{排除侧机制族 NO-GO}，其内容与 \textbf{107 下界线同一堵墙};\ 对 \textbf{119 目标的 NO-GO 不成立} ✗}}$$
+
+**证据链（逐条可核）**：
+
+1. `PLAN-119-GOAL-ASSETS-GAPS-AND-WORKFLOW.md` §3 诊断（**决定性**）：**目标在上界（构造）侧，而近期精力全在下界（排除）侧 ⟹ 资产/方法错配** ✗✓ ⟹ 119 目标 ＝ $\exists$ 9-cover $U$，${\mathcal L}_9(U)\le119$（**构造问题**）。
+2. `K101-119-LINE-ARCHIVE-2026-09-26-OPEN-structurally-audited.md` §0（唐先生 09-26 21:26 裁定）：状态 ＝ **OPEN — structurally audited / current mechanisms NO-GO**；逐字「**不是** CLOSED ✗；**不是**『119 不存在』✗」；障碍 ＝ "缺一个真正改变 quantity 的**新不变量**"。
+3. `MASTER-STATUS-AND-CLOSURES.md` §119-P1-CONSOLIDATION：**21 mechanisms CLOSED ⟶ irreducible core ＝ exact Boolean feasibility（整性）** —— 与 107 线「**须非松弛（整性/组合）论证**」**是同一句**。
+4. `MASTER-FAILURE-MAP-107-LINE.md` §2 定理 A／B：两线**共享同一结构性墙**（Aut-不变松弛族天花板 ⟹ 107 必非松弛；目标等价 ＝ 覆盖问题本身）。
+5. `ASSETS-REGISTRY.md` L3937：逐字「**107/120 复现＝仅学技术，非目标**」⟹ 复现 107 **从不是** 119 目标。
+6. `ASSETS-REGISTRY.md` L1905：**上界侧（文献 120 → 119）：LIVE ✓✓**。
+
+$$\therefore\ \text{存在的是\ \textbf{排除侧机制族 NO-GO}，而该族正是 107 下界线所用工具（局部 incidence 量／守恒律／松弛族）}\ \Longrightarrow\ \text{性质上属\ \textbf{「107 复现」侧}，}\ \textbf{不封锁 119 构造目标}\ ✓$$
+
+**对 §7 的修正**：§5.4b 一行由「命中 R14 ✗」改为 ⟹「**构造侧 LIVE ✓✓；R14 之『已攻击』记录属排除侧**」。**建议**（**待唐先生定，不自裁 ✗**）：`ROUTE-FINGERPRINTS.tsv` 之 R14 判定字段由 `LINE-ALREADY-ATTACKED` 改为 `EXCL-SIDE-NOGO-构造侧LIVE`。
+
+ROUTE-CHECK: R01=NA R02=NA R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=NA R10=NA R11=NA R12=NA R13=NA R14=FINGERPRINT-CITED R15=NA R16=NA R17=NA R18=NA R19=NA R20=NA
