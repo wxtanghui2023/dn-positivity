@@ -105,3 +105,41 @@ $$\therefore\ \text{存在的是\ \textbf{排除侧机制族 NO-GO}，而该族�
 **对 §7 的修正**：§5.4b 一行由「命中 R14 ✗」改为 ⟹「**构造侧 LIVE ✓✓；R14 之『已攻击』记录属排除侧**」。**建议**（**待唐先生定，不自裁 ✗**）：`ROUTE-FINGERPRINTS.tsv` 之 R14 判定字段由 `LINE-ALREADY-ATTACKED` 改为 `EXCL-SIDE-NOGO-构造侧LIVE`。
 
 ROUTE-CHECK: R01=NA R02=NA R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=NA R10=NA R11=NA R12=NA R13=NA R14=FINGERPRINT-CITED R15=NA R16=NA R17=NA R18=NA R19=NA R20=NA
+
+---
+
+## §0.1 优先级更正（唐先生 2026-09-29 22:21，**永久生效**）【新增】
+
+> 唐先生原话：「**我们首先是复现 107，然后才能知道怎么去走 120→119 与 107→108**」
+
+$$\boxed{\textbf{硬次序}:\ \text{① 复现 }107\ (\text{＝排除 }M{=}106)\ \Longrightarrow\ \text{② 才谈 }120{\to}119\ \text{与}\ 107{\to}108}$$
+⟹ **两端改进暂缓** ✗；**§5.2（min/max 泛函）等 107 线上的子课题降为从属** ⚠️；
+⟹ 理由（唐先生）：**不先掌握 107 是"怎么被做出来的"，两端的攻击设计无据** ✓✓
+
+## §7.2 「复现 107」状态与主路径（查地图＋引既有档）【新增】
+
+**A. 复现账（引 `AUDIT-2026-09-29f` §1，逐字）**
+
+$$\text{可复现}:\ \text{上界 }120\ ✓\ (\text{证书在手}),\ \text{下界 }94\ ✓\ (\text{球界}),\ 103\ ✓\ (\text{van Wee excess 自推})$$
+$$\text{不可复现}:\ 96,\ 97,\ 105,\ 107\ ✗$$
+$$\textbf{读法}:\ \text{上界已握在手里；缺口全在\textbf{下界中段} }97\to105\to107$$
+
+**B. 三条已死（引既有档，**不得重攻**）**
+
+| 路线 | 判定 | 依据 |
+|---|---|---|
+| pair 层（任何形式） | **CLOSED-103** ✗ | `ROUTE-FINGERPRINTS` R02（三重独立失败，皆 103） |
+| 高阶 SDP | **DEAD-BY-AUTHORS** ✗ | R15／`AUDIT-29d` |
+| **单条**线性不等式 | **已证不可能** ✗✓ | `AUDIT-2026-09-29e`：任何单条给界 ≤ LP ≤ 105.2223 < 107 |
+
+**C. 107 复现的**最锐等价形式**（＝本线主目标，与 `RESULT-29n` §3–§4 同）**
+
+$$\boxed{\text{复现 }107\ \iff\ \textbf{排除 }M{=}106\ \iff\ \text{证}\ \Sigma\delta\ge143\ ({\rm iff}\ N_{\le2}\ge\tfrac{143}{4}\mu_{\max},\ \text{配}\ \mu_{\max}\ge4)}$$
+$$\text{缺口} = \textbf{一格}:\ \text{现有 }N_{\le2}\ge142,\ \mu_{\max}{=}4\ \text{分支下差 }1$$
+
+**D. 档案指定之下一步（`AUDIT-29d` ＋ `MASTER-FAILURE-MAP` §6 甲，**唯一未被封闭的组合路线**）**
+
+$$\textbf{（甲）}\ \text{Zhang--Lo 1992 \textbf{三重覆盖}不等式之 }r{=}1\ \text{类比}\ \text{（原式未取 ⟹ 须\textbf{自推}）}$$
+⟹ pair 层已封（R02）而**三重层未试** ⟹ 且**非单条 linear** ⟹ 与 29e 的不可能性**不冲突** ✓✓
+
+ROUTE-CHECK: R01=NA R02=FINGERPRINT-CITED R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=NA R10=NA R11=NA R12=NA R13=NA R14=NA R15=FINGERPRINT-CITED R16=NA R17=NA R18=NA R19=NA R20=NA
