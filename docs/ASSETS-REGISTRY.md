@@ -3842,3 +3842,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**规模**】$a{=}53$：$|P|{=}27,|Q|{=}26,|L|{=}243,R{=}67,\sum w_{\text{旧}}{=}50,F{-}F(P){=}79>71$ ✓
 - 【**下一目标**】求 $R=I(Q,N_1^*(P))$ 之统一下界，再经凸性得净 $F$
 - 档：`docs/RESULT-2026-09-29e-new-weight-overreaches-by-one-per-fiber.md`
+
+**✅ RESULT-f（2026-09-29，非 C 号）：$r_q=2t_q$ 精确恒等式（开邻域 $40/40$）；约定点名；$u\in[0,6]$ 首测** ✓
+- 【**✓✓ 等式**】$r_q=|N_1^{\mathrm{op}}(q)\cap L|=2t_q$，$t_q=|\{p\in P:d(p,q)=2\}|$；**开邻域 $40/40$**、闭邻域 $3/40$ ✗ ⟹ 唐先生之 $\ge$ 可强化为 $=$
+- 【**✓ 三条界（$40/40$）**】$|L|=9|P|=243$；$\mathrm{Def}(A)\ge2|Q|$（$a{=}53\Rightarrow52\le\mathrm{Def}\le71$）；$R=2\sum t_q\ge2(|Q|-u)$，$u=|\{q:t_q=0\}|$
+- 【**✓ $u$ 首测**】$u\in\{0,\dots,6\}$（众数 $2$–$4$）⟹ 经验 $R\ge2(|Q|-6)$，但 $u$ 之界**未证** ⚠️
+- 【**⚠️ 约定清单**】（i）$N_1^{\mathrm{op}}$ 必须用**开**（$d{=}1$ 恰一），否则等号失效；（ii）$L=N_1(P)\setminus P$（全部 $9|P|$ 邻点，**非**"私有"，与 RESULT-b/d 不同）
+- 【**下一目标**】证明 $u$ 之统一上界 ⟹ $R$ 下界 ⟹ 净 $F$
+- 档：`docs/RESULT-2026-09-29f-rq-equals-2tq-exact-identity-and-the-convention-issue.md`
