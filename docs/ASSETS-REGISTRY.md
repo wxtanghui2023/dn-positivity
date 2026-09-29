@@ -3887,3 +3887,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ 正确恒等式**】$F(A)=\mathrm{Def}(A)=\sum_{i\ge1}(i-1)A_i^{\rm prof}$
 - 【**⚠️ 循环**】slice 条件 $\iff\mathrm{Def}\le9a-406$；随机子集仅 $12/25$ 满足 ⟹ 约束来自互补性本身，而 fiber ＝ 精确重述
 - 档：`docs/RESULT-2026-09-29k-notation-collisions-and-the-trivial-inequality.md`
+
+**⚠️ RESULT-l（2026-09-29，非 C 号）：逐-$q$ 敌意关系被否；$\tau_q$ 求和重复计数；捎得 $|D_A|>106-a$ 重述** ✗✓
+- 【**✗ 候选 A 否证**】$\tau_q\le2t_q-1$（$t_q{>}0$）违例 $300/576$；非正贡献 $q$：$300/647$ ⟹ 逐-$q$ 单调性失败
+- 【**⚠️ 归一化缺陷**】我方 $\tau_q$（局部化 $T$）在求和时重复计数（每点落在 $\le11$ 个 $q$-球内）⟹ $\sum\tau_q\gg T$，实测"净"$-18$ **不表示** $F$
+- 【**✓✓ 重述**】$F(A)=10a-512+|D_A|$ ⟹ $F(A)>9a-406\iff\boxed{|D_A|>106-a}$（恰为 slice 条件之取反；不可再约）
+- 【**滑位提醒**】$2E=\sum_q r_q$ 不成立（$E$ ＝全部近邻对；$R=\sum r_q$ ＝incidence）
+- 档：`docs/RESULT-2026-09-29l-per-q-hostility-refuted-and-the-DA-restatement.md`
