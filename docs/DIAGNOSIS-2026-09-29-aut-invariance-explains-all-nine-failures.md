@@ -22,7 +22,7 @@ $$\boxed{\text{④ 方法结构}:\ \text{必须\ \textbf{有内容的}对称破�
 
 $$\text{松弛族}:\ \text{Delsarte LP}／\text{SDP-3 (Terwilliger)}／\text{Habsieger 同余}\ \text{—— 全部}\ \operatorname{Aut}(Q_{10}){-}\textbf{不变}$$
 $$\text{真值}:\ 107\ \text{由\ \textbf{具体}（非对称）覆盖达成};\ \text{且 }107>105.2223\ (\text{Aut-不变最优松弛})$$
-$$\therefore\ \boxed{\text{间隙内容 ＝ "整数性/支撑非对称性"；不变式方法之天花板\ \textbf{结构上}＝}105.2223$$
+$$\therefore\ \boxed{\text{7/9 为 Aut-不变}\Longrightarrow\textbf{必然}\ \text{不越 }105.2223;\quad 2/9\ \text{破坏对称但\ \textbf{无内容}（固定坐标）}\Longrightarrow\ \text{反退化到球界}\ 94\ ✗}$$
 
 ## §2 对本会话 9 条的判定（✓）
 
