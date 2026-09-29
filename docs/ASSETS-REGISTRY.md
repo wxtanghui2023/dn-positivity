@@ -3423,3 +3423,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⑤ 已归档资源**】`sources/Gijswijt-Polak-2025-arXiv2504.01932-FULLTEXT.txt`（纯文本 $128{,}364$ 字符）＋ `.html`（$1{,}005{,}444$ B）；含 §2（Theorem 2.5 原式）、§3（Terwilliger 代数）、§4（binary 对称化 Theorem 4.9）、附录 A（Table 5）
 - 【**⑥ 建议下一步（(C) 之可自做形式）**】自推 **Zhang–Lo 三重覆盖不等式**（1992, Part II — Triple covering inequalities）之 $r{=}1$ 类比；纪律：预估成本 ＋ 查 load／内存（本档已做：load 0.53／可用 5074 MB）＋ 经 `scripts/pyguard.sh`
 - 档：`docs/AUDIT-2026-09-29d-route-B-dead-by-the-authors-own-statement.md`
+
+**🔚 AUDIT-2026-09-29e（非 C 号）：结论 —— 单条线性不等式**不可能**给 $107$（实测反例 ＋ 结构上限 $\le105.2223$）** ✓
+- 【**✓✓ ① 实测反例（决定性）**】12 个随机贪心覆盖码（$\mathbb F_2^{10}$，$M\in[144,152]$）：**$\min_u(A_0{+}A_1{+}A_2)=\mathbf 1$**（seed 0,5）或 $2$ ⟹ 「$A_0{+}A_1{+}A_2\ge6$」（本可给 $110$）**为假** ✗✗；同型 $\min_u(A_1{+}A_2)=0$ 或 $1$ ⟹ 该类不等式**全假**；唯一真者 $\min_u(A_0{+}A_1)=1$（**仅覆盖条件本身** ⟹ 球界 $94$）⟹ 真实码存在**极稀疏点**（2 球内仅 1 个码字）
+- 【**✓✓ ② 结构上限（本档核心）**】任何单条有效不等式 $\sum_j\lambda_jA_j(u)\ge\beta$ 给 $M\ge\beta2^n/\sum_j\lambda_j\binom nj$，该界**恰为覆盖 LP（level-2）之对偶** ⟹ $\text{LP}\le\text{SDP}$；Gijswijt–Polak 2025 level-3（最强）$=\mathbf{105.2223}$ ⟹ **任何单条线性不等式之界 $\le105.2223<107$** ✗✓（旁证：Zhang $r{=}1$ 单条 $102.4$、其 induced 全表 $102.4$（$11/11$））
+- 【**③ 三层路线最终账**】(A) pair 数上界 **死**（框架 ≡ 球界）／(B) 高阶 SDP **死**（原作者谓不可行）／(C) **单条线性不等式 死**（本档）／**(D) integrality／非松弛论证 ＝ 唯一存活** ⟹ **要 $107$ 须非松弛型论证**，这正是 Zhang 1991 的 rounding 与 BÖW 2004 之所在
+- 【**④ 给唐先生之直白结论**】①「自行推导一条不等式」**不可能**成功（已验证上限）；②这不是实现失败，而是**方法学定理**：$107>105.2223=$ 最强松弛；③故 $107$ 必含**整数性/组合**步骤，其原文未得；④唯一可自做者 ＝ 自建 **integrality 论证**（"假设 $M{=}106\Rightarrow$ 结构 $\Rightarrow\bot$"），而非造不等式
+- 档：`docs/AUDIT-2026-09-29e-single-linear-inequality-cannot-reach-107.md`
