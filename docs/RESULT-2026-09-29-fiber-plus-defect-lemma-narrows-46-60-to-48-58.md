@@ -1,4 +1,4 @@
-# RESULT（2026-09-29）—— **fiber ＋ 缺陷引理把 $[46,60]$ 收窄为 $[48,58]$**（本会话首个真结果）
+# RESULT（2026-09-29）—— **fiber ＋ 缺陷引理把 $[46,60]$ 收窄为 $[47,59]$**（本会话首个真结果）
 
 > **性质**：**问题特化**（非候选生成）——**不占 C 号** ✓；**不作路线裁定** ✗；空间 B ✓
 > **时间**：2026-09-29 18:44 ✓
@@ -16,7 +16,7 @@ D1: 0（产出＝**一条新引理 ＋ 一次范围收窄** ⚠️✓）
 $$\boxed{\text{① 配方识别}:\ n{=}6\ \text{的成功 ＝ 精确重述} \otimes \text{独立小维定理};\ \text{故 }n{=}10\ \text{需 }Q_9\ \text{缺陷定理}✓}$$
 $$\boxed{\text{② 新引理（有效）}:\ \mathrm{Def}(A)\ \ge\ 2\,(a-A(9,3))\ =\ 2(a-40)\quad\forall A\subseteq Q_9\ ✓✓}$$
 $$\boxed{\text{③ 收窄}:\ a,b\in[46,60]\ \Longrightarrow\ \mathbf{a,b\in[47,59]}\ (\text{15 例}\to13\ \text{例})✓✓}$$
-$$\boxed{\text{④ 自审（诚实）}:\ \text{余下 }[48,58]\ \text{需}\ \mathrm{Def}\ge9a-406;\ \text{实测 }62\text{-码之 }53\text{-子集}\ \mathrm{Def}\approx36\ll72\Longrightarrow\textbf{该强界为假}✗}$$
+$$\boxed{\text{④ 自审（诚实）}:\ \text{余下 }[47,59]\ \text{需}\ \mathrm{Def}\ge9a-406;\ \text{实测 }62\text{-码之 }53\text{-子集}\ \mathrm{Def}\approx36\ll72\Longrightarrow\textbf{该强界为假}✗}$$
 
 ## §1 配方识别（✓）
 
@@ -35,18 +35,18 @@ $$\therefore\ \text{每加入一个 }c\in A\setminus P\ \text{至少新增 }2\ \
 
 $$D_A\subseteq B\Longrightarrow|D_A|\le b=106-a;\quad |D_A|=512-|N_1(A)|=512-10a+\mathrm{Def}(A)$$
 $$\Longrightarrow\ 512-10a+2(a-40)\ \le\ 106-a\ \Longrightarrow\ \mathbf{326\le7a}\ \Longrightarrow\ a\ge\mathbf{47}$$
-$$\text{对称（交换两侧）}:\ b\ge48\ \Longrightarrow\ a\le58$$
+$$\text{对称（交换两侧）}:\ b\ge47\ \Longrightarrow\ a\le59$$
 $$\therefore\ \boxed{a,b\in[\mathbf{47},\mathbf{59}]\ (\text{原 }[46,60];\ 15\ \text{例}\to13\ \text{例};\ \text{排除 }a{=}46,\ a{=}60)}\ ✓✓$$
 
 ## §4 自审（✗ 诚实标注）
 
-$$\text{余下 }a\in[48,58]\ \text{须 }\mathrm{Def}(A)\ge9a-406\ \text{或}\ \mathrm{Def}(B)\ge9b-406$$
+$$\text{余下 }a\in[47,59]\ \text{须 }\mathrm{Def}(A)\ge9a-406\ \text{或}\ \mathrm{Def}(B)\ge9b-406$$
 $$\text{实测}:62\text{-码的 }53\text{-子集}\ \mathrm{Def}\approx36\ \ll\ 9\cdot53-406=71\ \Longrightarrow\ \textbf{强界为假}\ ✗$$
 $$\therefore\ \boxed{\text{单靠 }Q_9\ \text{缺陷定理到不了 }107;\ \text{缺口精确化如下}}✗$$
 
 ## §5 缺口精确化（**供下一步**）
 
-$$\boxed{\text{需要}:\ \text{对 }a\in[48,58]\ \text{之\ \textbf{互补对} }(a,106-a),\ \text{至少一侧的 }\mathrm{Def}\ \text{下界超过 }9a-406}$$
+$$\boxed{\text{需要}:\ \text{对 }a\in[47,59]\ \text{之\ \textbf{互补对} }(a,106-a),\ \text{至少一侧的 }\mathrm{Def}\ \text{下界超过 }9a-406}$$
 $$\text{我方引理只给 }2(a-40)\ (\text{线性});\ \text{所需为 }9a-406\ (\text{斜率 }9)\ \Longrightarrow\ \textbf{差 }7\ \text{倍斜率}$$
 $$\therefore\ \text{下一步之\ \textbf{唯一}正确形式}:\ \text{把 }2(a-40)\ \text{强化到}\ \ge9a-406\ (\text{或证明互补对上总有一侧成立})$$
 
