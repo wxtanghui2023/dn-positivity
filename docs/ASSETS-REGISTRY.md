@@ -3639,3 +3639,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**④ ★ 独立性门：通过**】距离 $2$ 之码字对共 $149$，$\text{supp}(G)$ 仅 $123$，**被排除 $26$** ⟹ $\text{supp}(G)\subsetneq\{$距离 2$\}$ ⟹ $G$ **不是**距离-2 邻接矩阵（且权重非齐一、对角 $\ne$ 度）⟹ **$G$ 不完全由「码字距离 2 ＋ degree」决定 ⟹ 是真独立对象** ✓。对比：若统计**全部**点之 owner 对，则总和 $=\Sigma_x\binom{\mu(x)}2=2(N_1{+}N_2)$ 属距离分布层 ✗ —— 故 $G$ 之价值在**只取 $\mu{=}2$ 层**
 - 【**⑤ 诚实之缺**】可算之线性泛函皆为旧账（行和 $=$ owner degree；总和 $=N_2$；$\Sigma\lambda=\text{trace}=2N_2$）；而 $E=\Sigma(\mu-1)=n_2+2n_3+\cdots$ **不是** $G$ 之泛函（$G$ 只涉 $\mu{=}2$）⟹ 欲接 $E$ 须**分层** $G^{(k)}$ 并按 $E=\Sigma_k(k{-}1)|G^{(k)}|$ 组装；**本档未做到**，亦未取出 (i) 非平凡特征值约束／(ii) 秩-零化约束／(iii) 新 PSD 不等式 ✗
 - 档：`docs/DERIVE-107-2026-09-29e-owner-incidence-operator-G-spectrum-and-the-independence-gate.md`
+
+**🕸️ DERIVE-107-f（2026-09-29，非 C 号）：owner-pair 多重图 $H$ —— 唐先生公式 $\text{rank}A=120-b(H)$ **精确成立**；正因此谱支线落回经典** ✓
+- 【**✓ ① 四项数据**】$H$：$|V|{=}120$、$|E|{=}136$（$110$ 单 $+\ 13$ 双，无三重）；**连通分量 $38$ 个**（大小多为 $1$–$6$，较大者 $15,6,6,\dots$），其中**二分 $30$ 个、非二分 $8$ 个** ⟹ $H$ **高度碎裂**
+- 【**✓✓ ② 你的公式精确成立**】经典 unsigned incidence 秩公式 $\text{rank}(A)=|V|-b$；**实测 $\text{rank}(A)=\mathbf{90}=120-30$，与 $b(H)=30$ 精确吻合** ⟹ $\dim\ker A^\top=136-90=\mathbf{46}=\underbrace{16}_{136-120}+\underbrace{30}_{b(H)}$ —— **正是你 §8/§9 所推之式**
+- 【**✓ ③ $G$ 之零化亦经典**】$\text{nullity}(G)=120-90=\mathbf{30}=b(H)$；经典事实：signless Laplacian $G=D+B$ 之零化重数 $=H$ 之二分分量数 ⟹ 你 §6 之「$\lambda_{\min}(G)=0\iff\exists$ 二分分量」**完全被证实**
+- 【**⚠️ ④ 自指 $\leftrightarrow$ 重边（因子 $2$）**】实测 self-ref $=\mathbf{26}$、双 edge $=\mathbf{13}$ ⟹ $\boxed{\#\text{self-ref}=2\times\#\{\text{双 edge}\}}$ —— 你判据方向正确，但每对双 edge 贡献 $2$ 个 $y$（$y$ 与 $z(y)$ 皆在 $Y_2$）；$z(z(y))=y$ 之**对合性**亦证实
+- 【**✗ ⑤ 归位（为何到经典为止）**】秩缺口 $120-90=30=b(H)$（全由二分分量解释）；$\dim\ker A^\top=46=16+b(H)$（全由 $|E|-|V|$ 与 $b(H)$ 解释）⟹ **无一项超出经典 unsigned-incidence／signless-Laplacian 理论** ⟹ 按判门表「$\text{rank}A<120\Rightarrow$ 追额外 nullity」之答案：**额外 nullity 即 $b(H)$ 本身**（经典）
+- 【**⑥ 未做强塞（守 §10 纪律）**】「每条独立 cycle relation ⟹ 至少一个额外 $E$-贡献」之链**本档未做**；亦未做跨码相关性。建议下一刀（若继续）：对 $120$-code 与 $3$ 个 greedy 码同时算 $(\text{rank}A,\ b(H),\ \dim\ker A^\top,\ E)$ 看是否同变
+- 档：`docs/DERIVE-107-2026-09-29f-owner-pair-multigraph-H-rank-formula-and-its-classical-closure.md`
