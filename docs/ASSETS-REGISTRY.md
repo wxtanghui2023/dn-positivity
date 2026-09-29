@@ -3461,3 +3461,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ ④ 余量否证**】$M{=}106$：$E{=}142$，$L{=}918$，$9E{=}1278$ ⟹ **余量 $\mathbf{360}$** ⟹ 该框架**逼不出任何单位** ✗ ⟹ 须把 $9$ 因子提到 $\ge12.7$ 或引入**独立新量**（而可实现算术族上确界 $\approx103$–$104$，level-3 SDP $=105.2223\Rightarrow106$）
 - 【**⑤ 分层账（定稿）**】sphere $94$ ／ **mixed generalized bound（van Wee Thm 16 ≡ van Lint–van Wee Thm 5）$=\mathbf{103}$（本档一手确认）** ／ Habsieger parity（同层，$\varepsilon{=}1$，实测全中）／ Wu–Chen surfeit（$n{=}10$ **不适用**）／ **目标 $107$ 未达** ⟹ **mixed 广义界线对 $n{=}10$ 封闭且只给 $103$；$107$ 不在该框架内**
 - 档：`docs/AUDIT-2026-09-29i-vanLint-vanWee-Thm5-equals-Thm16-gives-103-slack-360.md`
+
+**⚠️ AUDIT-2026-09-29j（非 C 号）：parity 属**球 excess**，不是**点 excess** —— 唐先生 §8 那步错，且方向恰好相反** ✓
+- 【**✓ ① 唐先生 §1–§7 全部正确**】Theorem 5 退化还原（$\tau_0{=}1,\tau_1{=}0$，$A_0{=}\varnothing$、$A_1{=}A$，$T_0{=}0,T_1{=}10$，$L{=}L_1{=}1024{-}M$）、$j^*{=}1$、唯一不等式 $9(11M{-}1024)\ge1024{-}M$、$103$ 临界点（$M{=}102$ 排除 $882<922$；$M{=}103$ 通过 $981\ge921$）——**已逐字对原文，全对**
+- 【**✗✗ ② 纠错：点 excess 不恒偶**】Habsieger 同余之对象是 $\delta_{N[v]}=\sum_{y\in N[v]}(\mu(y)-1)$（**球内 excess 之和**），**非** $\mu(v)-1$。**实测（120-code 深洞）**：$e(x)=\mu(x)-1$ 分布 $\{0{:}746,1{:}136,2{:}13,3{:}2,4{:}7\}$ ⟹ **$138/904$ 为奇** ⟹ "$\sum e/2=71$" **不成立**，该计数链**断裂**
+- 【**✓ ③ 真正之 parity**】$E(B(x,1))=\sum_{y\in B_1(x)}(\mu(y)-1)$ 对深洞**全奇**（实测 $904/904$）⟹ $\ge1$（与 $\varepsilon{=}1$ 一致）
+- 【**✓ ④ 两条聚合恒等式（新）**】$\sum_{x\in V}\sum_{y\in B_1(x)}e(y)=11E$（$3256{=}11\cdot296$ ✓）；$\sum_{x\in C}\sum_{y\in B_1(x)}e(y)=4(N_1{+}N_2)$（$796{=}4\cdot199$ ✓）
+- 【**★ ⑤ 方向反证（核心）**】球 excess 为奇且 $\ge1$ ⟹ $|A|+2m\le\sum_{x\in A}(\text{球 excess})\le9E$（$m=\#\{x\in A:\text{球 excess}\ge3\}$）⟹ $M{=}106$：$\boxed{m\le180}$（**上界**）⟹ parity＋计数给的是**上界**（集中度有上限），**非下界**；而唐先生 §8–§9 所要的是**下界** ⟹ **方向相反** ✗
+- 【**✓ ⑥ 校正后之 P1（保留靶，去掉错前提）**】"若某 $M{=}106$ 码有 $\ge72$ 个点满足 $e\ge2$（$\mu\ge3$），则 $\sum e\ge144>142=E\Rightarrow\bot$" —— **靶依然有效**（充分条件），但其前提**不得由 parity 得出**，且**纯计数不约束**（若仅 $k\le71$ 点有 $e\ge2$ 而其余 $e\le1$，则 $\sum e\le1024+9k$ 可远超 142）⟹ **须几何论证（球交叠／深洞邻接结构）**
+- 【**✓ ⑦ 点 excess 真实结构**】$\sum_x\binom{e(x)}2=2(N_1{+}N_2)-E$（120-code：$102$）；$\#\{x:e\ge2\}=51$
+- 档：`docs/AUDIT-2026-09-29j-parity-applies-to-ball-excess-not-point-excess.md`
