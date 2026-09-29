@@ -3923,3 +3923,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**③ 唯一未做过**】Struik §2.7 式 (2.35) 原式（全档无痕迹），但属 105 同族 ⟹ 做完仍 <107 ✗
 - 【**教训**】查地图须读直接相关的档（不可只 grep 关键词）；"新"的判断落在**层**（pair/triple/integrality）而非**源**
 - 档：`docs/AUDIT-2026-09-29o-selfcheck-my-proposal-was-duplicate-and-regression.md`
+
+**🗺️ MASTER-FAILURE-MAP-107-LINE（2026-09-29，非 C 号）：107 线失败地图＋资产账＋反重复清单** ✓✓
+- 【**用途**】**今后任何 107/119 轮次开工第一件事读本档**（唐先生令：失败必须学习/总结/积累）
+- 【**两条结构性定理**】A｜Aut-不变性：松弛族皆 Aut(Q10)-不变 ⟹ 天花板 105.2223 ⟹ **107 必出自整性**；B｜目标等价：$F(A)>9a{-}406\iff|D_A|>106{-}a\iff$ 覆盖问题本身 ⟹ **任何对 $A$ 的局部/统计分解信息量为零**
+- 【**反重复清单 13 条**】含：重取 van Wee（重复）／重攻 pair 层（三重失败）／parity（三次被推翻）／fiber（精确重述）／矩不等式（Delsarte 张成）／Aut-不变泛函（定理 A）／hole 强制（无机制）／$L(p)$（$\equiv0$）／逐-$q$ 敌意（违例 300/576）等
+- 【**封闭层账**】sphere 94｜excess 103（饱和）｜Zhang pair 单条 103｜induced 103｜induced+FM 103｜SDP-3 105.2223⟹106 ⟹ 自助路线全部分解层止于 103–106
+- 【**已验证资产 11 项**】含 120-cover 证书、$K(9,1){=}62$ 码、$r_q{=}2t_q$、$f(j)$ 表、$\mathrm{Def}$ 精确分解、两来源恒等式、度数集中、P12-PASS、$2^m$ 杠杆限制
+- 【**仅剩三条方向**】甲 Zhang–Lo triple（原式未取）；乙 整性/枚举（实测不足）；丙 新表示层（15+ 次未找到）
+- 档：`docs/MASTER-FAILURE-MAP-107-LINE.md`
