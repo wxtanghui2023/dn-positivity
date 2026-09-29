@@ -3573,3 +3573,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ ③ 该族天花板（证明）**】$r{=}10$ 之 cell 系统**恰是**逐点覆盖条件本身；其**线性松弛**＝经典覆盖 LP（本会话已证界 $93.09\Rightarrow94$）⟹ 对任何 $M\ge94$（含 106）该线性松弛**恒可行** ⟹ **此族作为线性松弛永不能排除 106** ✗✓
 - 【**④ 缺的那一件**】线性部分（cell 覆盖）已到底；唯一可能新内容＝**非线性＋整性**。唐先生正确点名的 **Parseval** $\sum_T S_T^2=1024M\iff\sum_x f^2=\sum_x f$（即 $f\in\{0,1\}$）✓ 配合 $f\ge0$、$\sum f=M$ 确实**强制指示函数** ✓；但把 Parseval（二次）以 SDP 松弛，正是 **SDP-3 ＝ $105.2223\Rightarrow106$** 之路 ✗ ⟹ 坐标-cell 路最终仍落在同一天花板（线性 $94$／SDP $105.22$）
 - 档：`docs/AUDIT-2026-09-29w-coordinate-cell-walsh-system-tested-no-contradiction-up-to-r7.md`
+
+**🕳️ AUDIT-2026-09-29x（非 C 号）：private 点层无强制 excess；发现 excess 密度逆趋势（一切"强制"论证之结构性障碍）** ✓
+- 【**✓ ① 接受纠偏**】cell／Walsh 之 $S_T=\widehat{1_C}(T)$ ＋ 固定子空间 codeword 数 ＝ **Habsieger 之特征函数线性不等式** ✓；$n\equiv4\bmod6$ 时 Habsieger 1995/97 已达 $104$、Zhang 达 $105$、BÖW 2004 达 $107$ ⟹ **该线不构成新机制**，不应再计为新 P1
+- 【**✓ ② 新硬界（净得）**】$\delta(x)=\mu(x)-1$；$x\notin C$ 且 $\delta{=}0\iff\mu{=}1$（唯一 owner ✓）；$E_{\rm out}=\Sigma_{x\notin C}(\mu{-}1)\le E{=}142$ ⟹ $P_2\le142$；$\#\{x\notin C\}{=}918$ ⟹ $\boxed{P_1\ge\mathbf{776}}$ ✓
+- 【**✗ ③ 计数纠错**】$S_2(x)$ 的 $45$ 点中：含 $k$ 的 $9$ 点（距 $c{=}1$，**被 $c$ 覆盖**）／不含 $k$ 的 $\mathbf{36}$ 点（距 $c{=}3$，$c$ 覆盖不到）⟹ **被强制接管的是 $36$ 点，不是 $9$** ✗
+- 【**✗✗ ④ 实测判定（无强制 excess）**】120-code 之 $746$ 个 private 点：$36$ 强制点由 $12$–$19$ 个其它码字覆盖（均值 $14.4$）；$\min\delta_{\rm coverer}=\mathbf{0}$ 者 **$740/746$** ⟹ **零-excess 服务可实现** ⟹ 该层**不强制**额外 excess ✗✗
+- 【**★⑤ 结构性障碍（本档最重要）**】最锐可推目标：若 $\frac{P_2}{\#\{x\notin C\}}>0.1547$ 即得 $107$；实测比值 **随 $M$ 递减**：$M{=}120$：$0.1748$／$M{=}148$：$0.4235$／$M{=}152$：$0.4484$ ⟹ 外推至 $M{=}106$ 约 $0.05$–$0.15$ **低于门槛** ⟹ 目标落空 ✗（同型：$E/(1024{-}M)$：$M{=}120\Rightarrow0.327$，$M{=}106\Rightarrow0.155$ 递减）⟹ **一切"强制 excess"论证皆逆势**：越小的 $M$ 越**没有** excess 可用 ✓✓ —— 这解释了本会话"六族＋fiber＋cell＋private"全部止步的共同原因
+- 档：`docs/AUDIT-2026-09-29x-private-point-layer-and-the-excess-density-inverse-trend.md`
