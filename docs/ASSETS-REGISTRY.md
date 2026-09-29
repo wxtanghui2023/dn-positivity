@@ -3858,3 +3858,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**最终局部形式**】$u=\sum_{p}\#\{i\notin\bigcup T_p:p\oplus e_i\in Q\}$；$u$ 实测 $\in[1,6]$
 - 【**下一目标**】证 $u\le U$（常数）或证 $|\bigcup T_p|$ 之统一下界（可用 Steiner/线性超图极值结果）
 - 档：`docs/RESULT-2026-09-29g-u-lemma-reduced-to-linear-triple-graphs-on-9-coordinates.md`
+
+**⚠️ RESULT-h（2026-09-29，非 C 号）：极值表复核 ✓；单射性获证 ✓✓；"缺口强制"标为假设 ⚠️**
+- 【**✓ 极值表**】$3m_p\le\binom{v_p}2$ ⟹ $v_p\ge\lceil(1+\sqrt{1+24m_p})/2\rceil$，表 $(3,4,5,6,6,7,7,8,8)$ 逐项正确；$u_p\le9-v_p$
+- 【**✗ 订正**】$u_p>0\Rightarrow v_p\le8\Rightarrow m_p\le\mathbf 8$（原稿 $5$ ✗）；度数加强 $d_x\le4\Rightarrow m_p\le12$
+- 【**✓✓ 单射**】$(p,i)\mapsto p\oplus e_i$ 在 $U_p$ 上单射（$q$ 双重表示 $\Rightarrow d(p,p'){=}2$ 矛盾）⟹ $u$ 为真实全局点数，无重复
+- 【**⚠️ 假设**】"每个 $U_p$-点强制独立缺口"未获证：$q$ 由 $p$ 覆盖 ⟹ 该处无缺口，机制未找到
+- 档：`docs/RESULT-2026-09-29h-extremal-table-checked-injectivity-proved-forcing-hypothesis-open.md`
