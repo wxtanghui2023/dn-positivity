@@ -3770,3 +3770,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗ 双计数纠正**】$\sum_{\text{iso}}t(c)=A_2^{0+}+\#(\text{iso-iso})\ge A_2^{0+}$（**非等号**）；由 $\sum t(c)\le2A_2$ 只得 $A_2\ge2.5n_0$（非 $5n_0$）
 - 【**✗ 实测否证 $5n_0$**】$M{=}145$：$A_2{=}293<320$ ✗；$M{=}147$：$322<385$ ✗ ⟹ $A_2\ge5n_0$ **假**；$2.5n_0$ 版成立 ✓
 - 档：`docs/AUDIT-2026-09-29ze-isolated-codeword-capacity-f-sublinear-and-5n0-false.md`
+
+**📋 PROTOCOL（2026-09-29，非 C 号）：资产迁移表 T0→T7 实打 $K(10,1)\ge107$ —— T4 处全断** ✗
+- 【**T0 目标**】$K(10,1)\ge107\iff$ 不存在 $|C|\le106$ 的半径 1 覆盖
+- 【**T1 瓶颈**】$\overline f=1.139$（$M{=}106$）；纯计数给 $94$，缺 $13$；结构性瓶颈＝counting **加性**、看不见**球的排布**
+- 【**T2 资产接口**】Habsieger（ball-excess 同余）／van Wee（$\varepsilon$，偶 $n$）／Zhang（pair/triple）／SDP-3（PSD）／Östergård–Blass（子空间＋枚举）／BÖW 2004（**不可得**）
+- 【**★T4 增益（关键）**】Habsieger：同余在 $n{=}10$ **自动** ⟹ 零增益 ✗；Zhang/SDP：**松弛型**而 $107>105.2223$ ⟹ 不可能 ✗；Östergård–Blass：枚举完整性但 $2^{256}$ ✗ ⟹ **全部资产 T4 ＝ 0**
+- 【**T5 碰撞**】现有两条独立约束最高 $105.2223\Rightarrow106$；要 $107$ 须第三条独立约束 —— 本会话 8 条候选均未产生 ✗
+- 【**自评（唐先生标准）**】否证能力 ✓✓（$8/8$ 有效，含 $3$ 次自查纠错）；**迁移能力 ✗（T4 处 $0/6$）**
+- 档：`docs/PROTOCOL-T0-T7-asset-transfer-applied-to-K10-1-107.md`
