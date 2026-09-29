@@ -3488,3 +3488,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★★ ⑤ 同型警示（第三次）**】①`29g/29h`：$\sum\binom\delta2$ vs surfeit $\delta_{N[v]}$；②`29j`：球 excess parity 用到点 excess $\mu-1$；③**本档**：用到点计数 $|D\cap\Gamma(x)|$（即 $\mu,s$）⟹ **凡引 Habsieger parity，必先写出 $\delta_{N[v]}=\sum_{y\in N[v]}(|D\cap N[y]|-1)$ 再往下**；parity 是**一阶邻域的求和量**，任何"某点邻域计数"皆不得直接套
 - 【**⑥ 校正后之 106-specific 系统（只留真者）**】$A_1\le71$；$9A_1+A_2+3A_3\ge2385$；$2(A_1+A_2)=\sum_x\binom{\mu(x)}2$；$\sum_{x\notin D}r(x)=1060-2A_1\ge918$；$\sum_{x\in A}(\text{球 excess})=1562-4(N_1{+}N_2)\ge918\Rightarrow N_1{+}N_2\le161$ ⟹ **缺口不变**（须一条在 $M{=}106$ 失效之不等式；本档未提供）
 - 档：`docs/AUDIT-2026-09-29l-parity-conflation-third-time-point-count-vs-ball-excess.md`
+
+**🧪 AUDIT-2026-09-29m（非 C 号）："真者系统"可行域**非空**；所需 $A_3\le552$ 与密度趋势相冲** ✓
+- 【**✗ ① 可行性判定**】约束 $0\le A_1\le71$、$A_1{+}A_2\le161$、$9A_1{+}A_2{+}3A_3\ge2385$、$A_1{+}A_2{+}A_3\le\binom{106}2$ —— **LP 判定：可行** ✓，可行点例 $(A_1,A_2,A_3)=(71,0,582)$ ⟹ **本会话所建全部真者约束不构成对 $M{=}106$ 的排除** ✗
+- 【**✓ ② 唯一所需约束之定位**】$\max(9A_1{+}A_2)=729$（$A_1{=}71,A_2{=}90$）⟹ $3A_3\ge1656$ ⟹ $\boxed{A_3\ge\mathbf{552}}$ **被强制**；排除 106 需 $\boxed{A_3\le552}$ 型独立上界
+- 【**✗✗ ③ 趋势否证**】$A_3/\binom M2$：$120$：$0.1277$／$128$：$0.1250$／$140$：$0.1244$／$155$：$0.1222$／$161$：$0.1222$ —— **稳定** ⟹ $M{=}106$ 时 $A_3\approx0.125\cdot5565\approx\mathbf{696}\gg552$ ⟹ 所需上界要求密度 $\le0.0992$，**比实测低 $\approx21\%$**，与该族趋势**相冲**；（诚实标注：趋势由 $M\ge120$ 外加码字测得，外推至 $106$ 系**假设** ⚠️）
+- 【**✓ ④ 唯一近饱和之约束（关键读数）**】$A_1{+}A_2$ 趋势外推 $\approx156$ vs 上界 $161$ ⟹ **近饱和（差 5）**；而该上界之来源正是 van Wee 逐点界 $|A\cap B(z,1)|\le n{-}R=9$ ⟹ 锐化它 $\Leftrightarrow$ $\theta$ 从 9 降，而 **$\theta$ 问题已证死**（实测 $\theta{=}8.31\Rightarrow$ 极限 $\approx104$）✗ ⟹ **唯一近饱和之链恰是已封之链**
+- 【**⑤ 净结论**】所有 106-specific 真者约束**可行且大部分松**；唯一近饱和者之锐化 ＝ 已封之 $\theta$ 问题 ⟹ 所需新约束**不属于"计数/奇偶/excess"型**（本会话已系统覆盖）⟹ 指向**几何构型**（深洞邻接图局部形状）或**原文**（BÖW）
+- 档：`docs/AUDIT-2026-09-29m-true-system-feasible-A3-bound-needed-contradicts-trend.md`
