@@ -48,9 +48,9 @@ ROUTE-CHECK: R01=NA R02=FINGERPRINT-CITED R03=NA R04=NA R05=NA R06=NA R07=NA R08
 
 ---
 
-## §5 附带加强（✓ 由 zr 形状直接推出）
+## §5 附带加强（✓ 由 `AUDIT-zg` 形状直接推出）
 
-$$\text{在 zr 形状下，非码字之 }\mu{=}2\ \text{点}\ \textbf{恰为}\ 44\ \text{个距-2 中点}\ (\text{其余非码字点}\ \mu{=}1)$$
+$$\text{在该形状下，非码字之 }\mu{=}2\ \text{点}\ \textbf{恰为}\ 44\ \text{个距-2 中点}\ (\text{其余非码字点}\ \mu{=}1)$$
 $$\text{而自由点}\ m\oplus e_j\ \text{皆}\ \textbf{非码字}\ (\text{否则其覆盖 }m\Rightarrow\mu(m)\ge3 ✗)\ \Longrightarrow\ \mu(m\oplus e_j)=\mathbf1$$
 $$\therefore\ \boxed{\text{每个自由点\ \textbf{私有}（唯一覆盖者）}} \Longrightarrow\ \text{其覆盖者\ \textbf{互不相同}};\ \text{8 个自由点之覆盖者集合}\ =\ \text{内部(2 个/词)}+\text{附着(1 个/词)}$$
 $$\Longrightarrow\ \text{每中点之覆盖者数}\in[4,8],\ \text{内部词}\ge3\ \text{（与 L1 相容，且更强：\textbf{无重复})}\ ✓$$
