@@ -3711,3 +3711,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⑦ 下一步**】A-1 求 $\mathrm{Def}(m,k)$ 精确结构律（$Q_5$：$k{=}5\to4$、$k{=}6\to6$）以替代枚举；B 对称性约化（6-cube 等距群阶 $5{,}160{,}960$）；C 接受并归档
 - **含我自身 bug 之更正**：全掩码误写 $V{-}1$，已修 $(1\ll V){-}1$（**今日第三次同类错**）
 - 档：`docs/CALIBRATE-n6-2026-09-29-A3-two-sided-closure-excludes-M11-and-gives-K61-geq-12.md`
+
+**📐 CALIBRATE-n6-b（2026-09-29，非 C 号）：结构压缩 $1.1{\times}10^6\to\mathbf{5760}$；$K(6,1)\ge12$ 纯结构复核** ✓
+- 【**✓✓ ① 你的引理成立（数值印证）**】$4$-packing（两两距离 $\ge3$）之 $|A|{=}4$ 者 $=\mathbf{120}$ 个；$|A|{=}5$ 者 $=\mathbf{0}$ ⟹ $\boxed{A(5,3)=\mathbf{4}}$；$\mathrm{Def}_{\min}(5,5)=\mathbf{4}$，$\mathrm{Def}{=}2$ 者 $\mathbf{0}$ ⟹ 「$|A|{=}5\Rightarrow\mathrm{Def}(A)\ge4$」之**结构证明成立**（无需枚举）
+- 【**✓✓ ② 刚性化**】$M{=}11$：$\mathrm{Def}(A)\le5a-21$ ⟹ $a\le4$ 与 $b\le4$ 皆 ✗ ⟹ $a,b\in\{5,6\}$；$a{=}5$ 时引理给 $\mathrm{Def}\ge4$ 而约束给 $\le4$ ⟹ $\mathrm{Def}(A){=}4$ 且 $|D_A|{=}6{=}b$ ⟹ $\boxed{B=D_A}$（无空位加字）；**实测：全部 $5760$ 个 $\mathrm{Def}{=}4$ 之 $5$-set 皆有 $|D_A|{=}6$**
+- 【**✓✓ ③ 零互补对（结论）**】检查全部 $5760$ 个：满足 $N_1(B)\supseteq Q_5\setminus A$（$\iff D_B\subseteq A$）者 $=\mathbf{0}$ ⟹ $\boxed{M{=}11\ \text{不存在}\Rightarrow K(6,1)\ge12}$（与 A-3 独立一致）
+- 【**✓ ④ 压缩比**】枚举量 $1{,}107{,}568\to\mathbf{5760}$（$\approx190\times$），且**不需** $2^{32}$
+- 【**✓ ⑤ 递归模板（确认）**】若每个 $k$-set $A\subseteq Q_m$ 满足 $|D_A|\ge m+1$ 且 $A(m,3)<k+1$，则 $K(m,1)\ge k+2$；实证链：$\mathrm{Def}_{\min}(5,5){=}4\Rightarrow|D_A|\ge6{=}m{+}1\Rightarrow K(5,1)\ge7$，再经双边刚性 $\Rightarrow K(6,1)\ge12$ ⟹ 压缩链 min defect → defect-set shape → dual closure → lower bound **已跑通一级**
+- 【**⑥ 下一步**】A-1' 分类 $5760$ 个 $\mathrm{Def}{=}4$ 之 defect-set 形状（已知 $|D_A|{=}6$ 恒成立）以**不用枚举**证明 $D_{D_A}\nsubseteq A$；A-2 推广到 $Q_6$（$A(6,3){=}?$ 待测）以取 $K(7,1)\ge16$；C 归档
+- 档：`docs/CALIBRATE-n6b-2026-09-29-structural-compression-5760-and-K61-lower-bound.md`
