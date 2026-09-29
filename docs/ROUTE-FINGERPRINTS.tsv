@@ -1,0 +1,16 @@
+# route-id	指纹正则（grep -E）	判定	证据出处
+R01	(Struik.*van ?Wee|van ?Wee.*Struik|重取.*van ?Wee)	DUPLICATE	docs/AUDIT-2026-09-28q
+R02	(pair[ -]?covering|pair 层)	CLOSED-103	ASSETS-REGISTRY L3392
+R03	(点态.*parity|point.?excess.*parity|点态.*奇偶)	REFUTED-x3	docs/AUDIT-2026-09-29z
+R04	(p ?= ?11 同余|模 ?11 ?同余|粗同余)	IDENTITY	docs/AUDIT-2026-09-29z
+R05	(fiber|纤维化|竖直对)	EXACT-RESTATEMENT	docs/WITFIB-2026-09-28
+R06	(profile 矩|矩不等式|face 矩|Σ ?f\(μ)	DELSARTE-SPAN	docs/AUDIT-2026-09-29zc
+R07	(Aut-?不变|automorphism-?invariant|谱泛函|谱不变量)	LE-CEILING-105.2223	docs/DIAGNOSIS-2026-09-29
+R08	(hole 强制|缺口强制|强制.*hole)	NO-MECHANISM	docs/RESULT-2026-09-29h
+R09	(找.*B[ÖO]W|B[ÖO]W.*正文|Bertolo.*正文)	UNOBTAINABLE	—
+R10	(pair 污染|Λ 量|Lambda 量)	RE-ENCODING	docs/AUDIT-2026-09-29za
+R11	(L\(p\).*packing|packing.*excess.*全局|全局.*packing.*机制)	IDENTICALLY-ZERO	docs/RESULT-2026-09-29m
+R12	(逐-?q|敌意关系|tau_q|τ_q)	REFUTED-300-of-576	docs/RESULT-2026-09-29l
+R13	(度数集中|G_3\(P\).*度数|n_0.*n_3.*压缩)	CAPPED-BY-|Q|	docs/RESULT-2026-09-29j
+R14	(119.*直接|直接.*119|119 案)	LINE-ALREADY-ATTACKED	docs/119-ATTACK-R1-2026-09-27
+R15	(SDP.*升阶|更高阶 SDP|Lasserre.*更高)	DEAD-BY-AUTHORS	docs/AUDIT-2026-09-29d

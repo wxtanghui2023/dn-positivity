@@ -50,8 +50,11 @@ scan=0
 if [ "$checked" -gt 0 ]; then
   recent=$(git log --diff-filter=A --name-only --pretty=format: -n 200 -- docs papers 2>/dev/null | grep -aE '^(docs|papers)/.*\.md$' | head -"$SCAN_N" || true)
   for g in $recent; do
-    d1line=$(git show "HEAD:$g" 2>/dev/null | grep -a -m1 -E '^D1[:：]' || true)
-    [ -z "$d1line" ] && break                       # 旧档无 D1 行 ⟹ 计数在此断代
+    ghead=$(git show "HEAD:$g" 2>/dev/null | head -20 || true)
+    # ── (α) 轮次分类（唐先生 2026-09-23 11:50 批准）：只计 [RESEARCH]；[REVIEW] 与历史未标注档一律跳过
+    printf '%s' "$ghead" | grep -aq "\[REVIEW\]" && continue
+    printf '%s' "$ghead" | grep -aq "\[RESEARCH\]" || continue     # (γ) 新口径起算：未标注者不计
+    d1line=$(printf '%s' "$ghead" | grep -a -m1 -E '^D1[:：]' || true)
     if printf '%s' "$d1line" | grep -aqE '^D1[:：][[:space:]]*(0|零)'; then
       scan=$((scan+1))
     else
@@ -71,9 +74,12 @@ if grep -aqE '^D1[:：][[:space:]]*(0|零)([[:space:]]|$)' "$first" 2>/dev/null;
 elif ! grep -aqE '^D1[:：]' "$first" 2>/dev/null; then
   myd1_missing=yes
 fi
+proj_is_review=no
+if [ -n "${first:-}" ] && head -20 "$first" 2>/dev/null | grep -aq "\[REVIEW\]"; then proj_is_review=yes; fi
 projected=$count
 if [ "$checked" -gt 0 ] && [ "$myd1_missing" = no ]; then
-  if [ "$myd1_zero" = yes ]; then projected=$((count+1)); else projected=0; fi
+  if [ "${proj_is_review:-no}" = yes ]; then projected=$count          # (α) [REVIEW] 轮次不计 D1
+  elif [ "$myd1_zero" = yes ]; then projected=$((count+1)); else projected=0; fi
 fi
 
 if [ "$checked" -gt 0 ]; then
@@ -99,6 +105,30 @@ if [ "$count" -ge "$THRESHOLD" ] && [ "$checked" -gt 0 ]; then
       grep -aq "D1-ESCAPE" "$f" 2>/dev/null || freeze_bad="$freeze_bad $f"
     fi
   done
+fi
+
+
+# ── 规则4 ROUTE-DEDUP GATE（唐先生 2026-09-29 19:48）：已关闭路线指纹比对（机器强制）
+#     凡新档正文命中已关闭路线之指纹者，必须在该档 ROUTE-CHECK 行中逐条申报；
+#     且不得把已关闭路线申报为 NEW。依据： docs/MASTER-FAILURE-MAP-107-LINE.md §3
+route_bad=""
+FP="docs/ROUTE-FINGERPRINTS.tsv"
+if [ -f "$FP" ] && [ "$checked" -gt 0 ]; then
+  while IFS=$'\t' read -r rid rx verdict evid; do
+    case "$rid" in \#*|"") continue ;; esac
+    [ -z "$rx" ] && continue
+    for f in $staged_new; do
+      case "$f" in *ERRATUM*) continue ;; esac
+      head -20 "$f" 2>/dev/null | grep -aq "外部复核件" && continue
+      if grep -aqE "$rx" "$f" 2>/dev/null; then
+        if ! grep -aqE "^ROUTE-CHECK:.*$rid=" "$f" 2>/dev/null; then
+          route_bad="$route_bad  [$rid/$verdict] $(basename "$f")"
+        elif grep -aqE "^ROUTE-CHECK:.*$rid=NEW" "$f" 2>/dev/null; then
+          route_bad="$route_bad  [$rid=NEW违规] $(basename "$f")"
+        fi
+      fi
+    done
+  done < "$FP"
 fi
 
 rc=0
@@ -130,6 +160,15 @@ if [ -n "$freeze_bad" ]; then
   for f in $freeze_bad; do echo "   - $f"; done
   echo "   若本档【就是】冻结程序 ⟹ 在档内写一行： FREEZE-ACK: 本档即冻结审计"
   echo "   若在冻结期声称非零 D1 ⟹ 另加一行： FREEZE-ACK: D1-ESCAPE <理由（须为可检验的新自由度）>"
+  rc=1
+fi
+if [ -n "$route_bad" ]; then
+  echo "⛔ 拒绝（规则4 ROUTE-DEDUP）：以下新档命中【已关闭路线】之指纹，但未在 ROUTE-CHECK 行申报："
+  echo "$route_bad" | tr ' ' '\n' | grep -a . | sed 's/^/   /'
+  echo "   本档须含一行机器可读申报，例："
+  echo "     ROUTE-CHECK: R02=EXTENDS|DUPLICATE R12=DUPLICATE <其余>=NEW"
+  echo "   已关闭路线清单： docs/MASTER-FAILURE-MAP-107-LINE.md §3 ＋ docs/ROUTE-FINGERPRINTS.tsv"
+  echo "   若确为新层（非清单内）⟹ 该指纹不应命中；请先核对后再提交"
   rc=1
 fi
 exit $rc
