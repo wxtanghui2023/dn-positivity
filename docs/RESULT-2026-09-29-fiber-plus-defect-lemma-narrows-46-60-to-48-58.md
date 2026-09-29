@@ -15,7 +15,7 @@ D1: 0（产出＝**一条新引理 ＋ 一次范围收窄** ⚠️✓）
 
 $$\boxed{\text{① 配方识别}:\ n{=}6\ \text{的成功 ＝ 精确重述} \otimes \text{独立小维定理};\ \text{故 }n{=}10\ \text{需 }Q_9\ \text{缺陷定理}✓}$$
 $$\boxed{\text{② 新引理（有效）}:\ \mathrm{Def}(A)\ \ge\ 2\,(a-A(9,3))\ =\ 2(a-40)\quad\forall A\subseteq Q_9\ ✓✓}$$
-$$\boxed{\text{③ 收窄}:\ a,b\in[46,60]\ \Longrightarrow\ \mathbf{a,b\in[48,58]}\ (\text{15 例}\to\text{11 例})✓✓}$$
+$$\boxed{\text{③ 收窄}:\ a,b\in[46,60]\ \Longrightarrow\ \mathbf{a,b\in[47,59]}\ (\text{15 例}\to13\ \text{例})✓✓}$$
 $$\boxed{\text{④ 自审（诚实）}:\ \text{余下 }[48,58]\ \text{需}\ \mathrm{Def}\ge9a-406;\ \text{实测 }62\text{-码之 }53\text{-子集}\ \mathrm{Def}\approx36\ll72\Longrightarrow\textbf{该强界为假}✗}$$
 
 ## §1 配方识别（✓）
@@ -34,9 +34,9 @@ $$\therefore\ \text{每加入一个 }c\in A\setminus P\ \text{至少新增 }2\ \
 ## §3 收窄（✓✓）
 
 $$D_A\subseteq B\Longrightarrow|D_A|\le b=106-a;\quad |D_A|=512-|N_1(A)|=512-10a+\mathrm{Def}(A)$$
-$$\Longrightarrow\ 512-10a+2(a-40)\ \le\ 106-a\ \Longrightarrow\ 432\le9a\ \Longrightarrow\ a\ge\mathbf{48}$$
+$$\Longrightarrow\ 512-10a+2(a-40)\ \le\ 106-a\ \Longrightarrow\ \mathbf{326\le7a}\ \Longrightarrow\ a\ge\mathbf{47}$$
 $$\text{对称（交换两侧）}:\ b\ge48\ \Longrightarrow\ a\le58$$
-$$\therefore\ \boxed{a,b\in[\mathbf{48},\mathbf{58}]\ (\text{原 }[46,60];\ \text{15 例}\to\text{11 例})}\ ✓✓$$
+$$\therefore\ \boxed{a,b\in[\mathbf{47},\mathbf{59}]\ (\text{原 }[46,60];\ 15\ \text{例}\to13\ \text{例};\ \text{排除 }a{=}46,\ a{=}60)}\ ✓✓$$
 
 ## §4 自审（✗ 诚实标注）
 
@@ -54,3 +54,13 @@ $$\therefore\ \text{下一步之\ \textbf{唯一}正确形式}:\ \text{把 }2(a-
 
 - **引理之证明为解析（极大 packing ＋ 2-交点）** ✓；**实测（62-码覆盖检验、53-/60-子集 $\mathrm{Def}$）** ✓；**不占 C 号** ✓
 - **不主张** $107$ 可达/不可达 ✗（V290）；本档为**部分收窄**，非完整证明 ✓
+
+
+---
+
+## §7 ⚠️ 勘误（2026-09-29 18:50，自查）
+
+$$\textbf{错误}:\ \S3\ \text{曾写}\ 432\le9a\Rightarrow a\ge48\ ✗\ (\text{代数错误})$$
+$$\textbf{正确}:\ 512-10a+2(a-40)\le106-a\iff432-8a\le106-a\iff\mathbf{326\le7a}\iff a\ge46.57\iff a\ge\mathbf{47}$$
+$$\therefore\ \boxed{a,b\in[\mathbf{47},\mathbf{59}]};\quad \text{收窄内容} ＝ \text{仅排除 }a{=}46,\ a{=}60\ (15\ \text{例}\to13\ \text{例})$$
+$$\text{（本文档标题与 §3 均已按此更正）}$$
