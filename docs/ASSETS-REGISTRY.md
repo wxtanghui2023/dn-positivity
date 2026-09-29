@@ -3757,3 +3757,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ 证书存盘**】`sources/K10-1-120-cover-CERTIFICATE.txt`：$|C|{=}120$，覆盖 $1024/1024$ ✓ ⟹ $K(10,1)\le120$ **可重跑**
 - 【**下一步**】问 $M{=}106$ 是否被迫满足 $S_c/S_x$ 约束（$2A_2$ 固定 ⟹ 可能矛盾）；或用 120-cover 抽更多非 Delsarte 关系
 - 档：`docs/AUDIT-2026-09-29zc-first-non-Delsarte-local-quantity-and-the-120-cover-certificate.md`
+
+**⚠️ AUDIT-2026-09-29zd（非 C 号）：缺口恒等式纠正（补 $n_0$ 项）；归一化对齐；结论真但弱** ✗
+- 【**✓ 定义对齐**】$\mu(x)=|C\cap N[x]|$；$s(c)=\mu(c)-1$；$A_1^{std},A_2^{std}$＝无序码字对（距离 $1/2$）个数；基础双计数 $\sum_x\binom{\mu}2=2A_1^{std}+2A_2^{std}$（实测 $760=118+642$ ✓）
+- 【**✓✓ 正确恒等式**】$2A_2^{std}-(10M-2^{10})=n_0+\sum_c\binom{s(c)-1}{2}+\sum_{x\notin C}\binom{\mu(x)-1}{2}$，$n_0=\#\{c:\mu(c)=1\}$；**实测 6 码全部精确成立**
+- 【**✓ 错位根源**】$\binom s2=(s-1)+\binom{s-1}2$ 仅对 $s\ge1$ 成立，$s=0$ 须补 $+1$ ⟹ 此前偏差 $61$–$74$ 全由此解释
+- 【**✗ 效用**】$M{=}106$ 仅给 $A_2\ge18$，实数码 $A_2\sim300$ ⟹ **松弛 $\sim280$ ⟹ 不能排除 $106$**；$S_c/S_x$ 路线**真但弱**
+- 档：`docs/AUDIT-2026-09-29zd-gap-identity-corrected-n0-term-and-the-normalization-reconciled.md`
