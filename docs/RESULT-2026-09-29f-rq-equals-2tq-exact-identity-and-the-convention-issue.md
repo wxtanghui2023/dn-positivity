@@ -39,13 +39,13 @@ $$\therefore\ \boxed{R\ge2(|Q|-u)\ge2(|Q|-6)\ (\text{经验})};\ \text{但 }u\ \
 ## §4 约定清单（⚠️ 必须贯通）
 
 $$\text{（i）邻域}:\ N_1^{\mathrm{op}}\ \text{＝恰距离 1（\textbf{开}）；不可用闭（否则 §1 失效）}✗$$
-$$\text{（ii）}L:\ N_1(P)\setminus P\ \text{＝全部 }9|P|\ \text{个邻点（\textbf{非}"私有"}；与 RESULT-b/d 之定义不同）}⚠️$$
+$$\text{（ii）}L:\ N_1(P)\setminus P\ \text{＝全部}\ 9|P|\ \text{个邻点（非"私有"；与 RESULT-b/d 之定义不同）}\ ⚠️$$
 $$\therefore\ \text{后续凡用 }L,r_q,t_q,u,\ \text{一律按上面两条}✓$$
 
 ## §5 下一目标（不变）
 
 $$\boxed{\text{证明 }u\ \text{之统一上界};\ \text{再经 }R=2\sum t_q\Rightarrow R\ \text{下界}\Rightarrow\ \text{净 }F}$$
-$$\text{潜在结构来源（唐先生）}:\ u\ \text{来自"distance-1-only" fiber};\ \text{或与那个未解释的"}-1"同源}⚠️$$
+$$\text{潜在结构来源（唐先生）}:\ u\ \text{来自 distance-1-only fiber};\ \text{或与那个未解释的}\ -1\ \text{同源}\ ⚠️$$
 
 ## §6 边界（硬 ✓）
 
