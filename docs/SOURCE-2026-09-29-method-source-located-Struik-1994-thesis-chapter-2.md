@@ -42,7 +42,7 @@ $$\text{与档案此前锁定之阶梯一致}:\ 103\to105\to107✓$$
 ## §4 诚实标注（⚠️）
 
 $$\text{（甲）本档\ \textbf{未}解决 107};\ \text{它解决的是"方法}\textbf{在哪、长什么样}"✗$$
-$$\text{（乙）该论著针对 }t[n,k]\ (\text{线性码})，与 }K(n,1)\ (\text{一般码})\ \text{接口待接}⚠️$$
+$$\text{（乙）该论著针对 }t[n,k]\text{（线性码）}，\ \text{与 }K(n,1)\text{（一般码）之接口待接}\ ⚠️$$
 $$\text{（丙）}sources/\ \text{内还有 }Haas2008\ \text{(excess method)}、CKMS1985、Graham-Sloane1985、Keri\ \text{史}\ ——\ \textbf{均未按方法检索}✗$$
 
 ## §5 边界（硬 ✓）
