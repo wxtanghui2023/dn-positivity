@@ -182,3 +182,43 @@ $$\text{① 聚合恒等式层（}M{=}106\ \text{可行）｜② (α) 计数差 
 
 $$\boxed{\text{我方已达成 }K(10,1)\ge\mathbf{106}\ (\text{SDP-3}{=}105.2223,\ \text{可复现})\ \textbf{保留};\quad 106\to107\ \textbf{超出三类方法之总和}}$$
 $$\therefore\ \textbf{(III) 建议收束存档};\ \text{若续攻，须先出现\ \textbf{新承重机制}（非松弛、非聚合、非局部结构）}$$
+
+---
+
+## §9 23:00–00:30 续段（唐先生令：无文献 ⟹ **逆向重建**）【新增·供续线】
+
+### §9.1 唐先生之框架升级（逐字固化）
+
+$$\textbf{合法机制三条件}:\ \textbf{N1 非仿射}|\ \textbf{N2 非聚合}|\ \textbf{N3 资源单调性}\ (\mathcal D_1{\subsetneq}\mathcal D_2\ \text{或}\ R_{\rm req}{\ge}f({\rm defect}),R_{\rm avail}{\le}U)$$
+$$\textbf{冻结}:\ A,C,F,H,B_{\rm affine},B_{\rm private}\ \text{全部冻结};\ G=\text{仅工具};\ D/E\ \text{曾为唯一待 P1（本晚亦被否，见 §9.3）}$$
+$$\textbf{四条 STOP 条件}:\ F/G/H/B\ \text{各自"若不产生真新信息即砍"};\ \text{且"}\textbf{不得换符号包装}"
+
+### §9.2 本段**新工具/新事实**（可复用 ✓）
+
+| 项 | 内容 | 档 |
+|---|---|---|
+| **恒等式 δ** | $\delta_{N[v]}=11\mathbf 1_{v\in C}+2a_1(v)+2a_2(v)-11$（1024/1024 ✓）⟹ 档案"球 excess parity"＝**平凡推论** | `INV3` |
+| **层覆盖族** | $M\binom nk\le2(n{+}1{-}k)A_{k-1}+2A_k+2(k{+}1)A_{k+1}$（双码 ✓✓） | `AUDIT-zi` |
+| **3-for-2 穷举器** | 120-码 3-for-2 **闭合**（Good$\ge3$ 者 $0/523{,}776$）；可复用至 $j$-for-$(j{-}1)$ | `MAP-M1` §2.1 |
+| **类级标定器** | 聚合/谱类于 $n{=}9$ 连 $M{=}61$ 都判可行；$M_{\rm agg}(10){=}95$ | `AUDIT-zj` |
+| **精化切片关系** | $Q_9=N[P_0]\cup P_1$ 且 $Q_9=N[P_1]\cup P_0$（全切片 ✓✓，但不紧） | `INV5` |
+| **通用界 vs 真值表** | 通用公式仅 $n{=}7,8$ 精确；$n{=}9$ 差 $10.8$；$n{=}10$ 差 $4.6$ | `INV4` §2 |
+
+### §9.3 本段**否定（kill）总账**（九条）
+
+$$\text{① (α) 内部计数差 }26\times\ ✗\ \text{｜② (β) }\mu_{\max}\ \text{迭代无矛盾}\ ✗\ \text{｜③ 聚合层可行（含退化解）}\ ✗$$
+$$\text{④ 层覆盖族不足（}\min\Sigma A_k{=}4930<\binom{106}2\text{）}\ ✗\ \text{｜⑤ (II) 破对称局部松弛 11}\ ✗\ \text{｜⑥ 机制 C $\ge3$ 阶全负}\ ✗$$
+$$\text{⑦ owner-conditioned 无规则（}\textbf{F/H 暂停}\text{）}\ ✗\ \text{｜⑧ B-P1 碰撞（}r{=}1\ \text{平凡＋即 }F9\text{）}\ ✗\ \text{｜⑨ D/E 无紧量（四次确认）}\ ✗$$
+$$\text{⑩ 五轮逆向重建：同余/细节/parity/}\gamma_2\text{/切片 —— \textbf{逐族排除}}\ ✗$$
+
+### §9.4 **结论（本段最硬的一条）**
+
+$$\boxed{\text{107 出自\ \textbf{n-专属（含计算/结构）论证}}\ ——\ \text{证据}:\ \text{通用公式仅 }n{=}7,8\ \text{精确};\ K(9,1){=}62\ \text{亦由分类/计算确立}}$$
+$$\qquad\Longrightarrow\ AUDIT\text{-}28q\ \text{之"通用公式＋可调参数"模型\ \textbf{被推翻}};\ \text{"逆向解参数"是}\textbf{错的模型}$$
+$$\therefore\ \text{欲复现 107 须重做一类 }n{=}10\text{ 的\ \textbf{分类/极值计算}} \Longrightarrow \text{我方现有工具不足（同整性墙）} \ ⚠️$$
+
+### §9.5 状态与入口（供下次）
+
+$$K(10,1):\ \text{我方已达 }\mathbf{106}\ (\text{SDP-3}{=}105.2223,\ \text{可复现})\ \textbf{保留};\quad 107\ \text{未复现}$$
+$$\textbf{唯一尚未试之形}:\ \text{把 }n{=}10\ \text{之极值\ \textbf{分类计算}\ 做出来（＝重做 }K(9,1){=}62\ \text{同型工作，规模更大）}$$
+$$\textbf{或}:\ \text{承认边界——把 }106\to107\ \text{记为"需 }n\text{-专属论证/计算"（本段证据支持此判定）} \ ⚠️$$
