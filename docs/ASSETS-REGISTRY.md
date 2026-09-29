@@ -3504,3 +3504,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ 本会话可取之一手源（已尽）**】van Wee 1991 博论（TU/e 免费 → 给 $103$）／Gijswijt–Polak 2025（arXiv → $105.2223\Rightarrow106$）／Wu–Chen 2024（arXiv → surfeit 不适用）／Haas 2008（freidok → excess 族止于 $103$）／Kéri 综述（归因链）⟹ **可取者已尽取；不可取者恰是唯一藏 $107$ 之处** ✗
 - 【**④ 路线判定**】(i) 自推 —— 唯一路（但已系统证：可实现算术族 $103$–$104$，SDP-3 $105.2223\Rightarrow106$）；(ii) 取原文 —— **不可行**（closed）✗ ⟹ **须自推且须非松弛型（integrality/几何）机制**；本会话**已定位缺口，但未产出该机制**
 - 档：`docs/AUDIT-2026-09-29n-BOW-closed-access-retrieval-exhausted.md`
+
+**🔓 AUDIT-2026-09-29o（非 C 号）：新源打通（zbMATH API）；Zhang 1991 机制**逐字确认**** ✓
+- 【**✓✓ ① 新源**】`api.zbmath.org/v1/document/_search?search_string=<q>&results_per_page=N`，**免费无 key**（首查 HTTP 200，19,110 B；随后限流 502 ⚠️）；对比：Tavily 432／Firecrawl 402／archive.org HTTP 000（被墙）⟹ **zbMATH 与 OpenAlex 为当前仅存免费元数据源**
+- 【**✓✓ ② Zhang 1991 评审逐字**】"A new technique combining the **Hamming association scheme** and the results of a classic problem of **covering pairs by $k$-tuples** is introduced. This new method leads to improvement of the lower bounds on $K(n,R)$ for over 80 pairs of values of $n$ and $R$ within the range of $n\le33$ and $R\le10$"（出处：IEEE Trans. Inf. Theory 37(3) 573–582, 1991）
+- 【**✓✓ ③ 与实测之吻合（关键）**】我们此前复原之式 $\sum_{i=0}^{r-2}m_0A_i(u)+m_1(A_{r-1}{+}A_r)+A_{r+1}{+}A_{r+2}\ge m_0$，$m_0=m_1+F(n{-}r{+}1,r{+}2)$，$m_1=\max_{i\ge2}[\cdots]/(i{-}1)$，其中 $F$ ＝"covering pairs by $k$-tuples" ＝ $C(n,k,2)$ 覆盖设计数 —— **与评审所描述机制完全一致** ✓✓；$(n,r)=(10,1)\Rightarrow(5,5,1,1)_{22}\Rightarrow103$ ✓（已在 120-code 实测）⟹ **机制已对上；但该单条仅给 103 ⟹ 105 必来自同族其它成员/组合**（评审谓"80+ 组 $(n,R)$"）
+- 【**⚠️ ④ 未取**】BÖW 2004 之 zbMATH 评审本轮未取（502 限流）；archive.org 被墙 ✗ ⟹ **可复取：待限流解除**
+- 【**★ ⑤ 对唐先生问题之诚实回答**】①不是难度问题：$K(10,1)$ 精确值**至今开放**，"107"是**已发表下界**；②也不是"没有数学机制"：$107>105.2223=$ 2025 最强 SDP ⟹ **计数/松弛型无法达到**，须 integrality/构型型；③**卡点在源**：Zhang 1991（105）与 BÖW 2004（107）皆付费墙，本会话已穷尽免费路（ScienceDirect 403／Wiley 403／pure.tue.nl 仅到 van Wee／Kéri 不转录／Haas 未引）；④**我自己的错（认）**：前七轮反复未先验前提 ⟹ 三次同型误读＋一次算术滑误＋一次自杀命令 ＝ **执行失败**
+- 档：`docs/AUDIT-2026-09-29o-zbMATH-review-confirms-Zhang-mechanism.md`
