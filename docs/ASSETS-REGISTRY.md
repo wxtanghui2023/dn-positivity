@@ -3900,3 +3900,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ 精确分解**】$\mathrm{Def}(A)=\sum_{x\in N_1(P)}q_x+\sum_{x\notin N_1(P)}(q_x-1)_+$（实测 $20/20$）
 - 【**量级**】$a{=}53$：part1$=68$、part2$=11$、$\mathrm{Def}{=}79>71$ ⟹ 过剩 **86% 来自 $Q$ 撞 $P$**，敌人是 $Q$
 - 档：`docs/RESULT-2026-09-29m-Lp-is-identically-zero-and-the-exact-excess-split.md`
+
+**★ SOURCE（2026-09-29，非 C 号）：方法源定位 —— Struik 1994 TU/e 博士论文第 2 章下界全谱** ✓
+- 【**★ 定位**】`sources/TUe-covering-codes-chapter-IR425174.pdf` ＝ **M. Struik (1994) TU/e PhD《Covering codes》**，123 页，DOI 10.6100/IR425174；**档案内已久但从未按"方法描述"检索** ✗（我方失误，已记录）
+- 【**§2 全谱**】2.3 Johnson／2.4 van Wee／2.5 改进（线性码）／**2.7 Zhang（pair covering inequality，式 (2.35)，$\varphi$ 见 (2.36)）**／2.8 Spheres&Hyperplanes／**2.9 Another Lower Bound**
+- 【**★ 扩展链逐字**】van Wee[84] → Zhang pair[89] → **Zhang–Lo Part II[91] triple**（$A_{r+2}{+}A_{r+3}\ge\varphi(A_{r-2}{+}A_{r-1},\,A_r{+}A_{r+1})$）→ Habsieger → Habsieger–Plagne → BÖW 2004
+- 【**未解决**】107 本身（本档只解决"方法在哪、长什么样"）；接口（$t[n,k]$ vs $K(n,1)$）待接
+- 抽取文本存：`sources/Struik-1994-TUe-thesis-covering-codes-EXTRACT.txt`（271,130 字符）
+- 档：`docs/SOURCE-2026-09-29-method-source-located-Struik-1994-thesis-chapter-2.md`
