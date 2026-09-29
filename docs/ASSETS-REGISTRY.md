@@ -3916,3 +3916,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**★ 关键区别**】已试者＝**我方重构版**（止于 $103$）；未试者＝**文献原式**（Struik §2.7，pp. 41–43）⟹ "未复现 105" 与 "未试 (2.35)" 是同一件事的两面
 - 【**下一步**】渲染 pp. 41–43 视觉转录 → 实现 → **校准 = 105?** → 若过则升一阶试 107
 - 档：`docs/AUDIT-2026-09-29n-prework-map-check-on-the-pair-covering-route.md`
+
+**🔍 AUDIT-2026-09-29o（非 C 号）：自查 —— 我上一轮提案 ＝ 重复 ＋ 回退** ✓
+- 【**① 重复**】van Wee 原式早在档（`AUDIT-28q`，源 `arXiv:2608.12595` 自注"引 Struik 1994"）⟹ 打开 Struik 取它 ＝ 同一界
+- 【**② 回退**】pair 层已三重失败（`ASSETS-REGISTRY` L3392）；档案已定下一步＝**升一阶到 Zhang–Lo triple**（`AUDIT-29d`）；我提"回 pair 层"与之逆向
+- 【**③ 唯一未做过**】Struik §2.7 式 (2.35) 原式（全档无痕迹），但属 105 同族 ⟹ 做完仍 <107 ✗
+- 【**教训**】查地图须读直接相关的档（不可只 grep 关键词）；"新"的判断落在**层**（pair/triple/integrality）而非**源**
+- 档：`docs/AUDIT-2026-09-29o-selfcheck-my-proposal-was-duplicate-and-regression.md`
