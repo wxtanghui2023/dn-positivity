@@ -32,7 +32,7 @@ $$\textbf{L3}\ \text{距离分布}:\ A_d(C)\quad(\text{＝Delsarte 层})$$
 $$\downarrow\ \textbf{【断层 ✗✗】}\ \text{需\ \textbf{整性压缩}}$$
 $$\textbf{L4}\ \text{排布/支撑层}:\ \text{局部构型的共存性}\ (\text{119 线已证 }L_4\ne L_3)$$
 
-$$\text{已证箭头}:\ L0\to L1\to L2\to L3\ \text{全部\ \textbf{精确}}（本会话实测：}\sum_x\tbinom{\mu}2=2A_1+2A_2\ ✓,\ \text{缺口恒等式}\ ✓)$$
+$$\text{已证箭头}:\ L_0\to L_1\to L_2\to L_3\ \text{全部精确}\ ✓\quad\text{（实测}\ \sum_x\tbinom{\mu}{2}=2A_1+2A_2\ ✓,\ \text{缺口恒等式}\ ✓\text{）}$$
 $$\text{已证上界}:\ L3\ \text{层（松弛）天花板}＝\mathbf{105.2223}\Longrightarrow106\ <\ 107\ ✗$$
 
 ## §2 失败分类（**③ 失败根源**，按唐先生 7 类）
