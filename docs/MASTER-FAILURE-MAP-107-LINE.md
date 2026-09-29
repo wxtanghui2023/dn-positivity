@@ -13,7 +13,7 @@ D1: 0（产出＝**一份汇总地图 ＋ 反重复清单** ⚠️✓）
 
 ## §1 阶梯（**数值均已核验** ✓）
 
-$$\underbrace{94}_{\text{球界 }\lceil1024/11\rceil}\ <\ \underbrace{103}_{\text{van Wee 1988}=2^n/n\ \checkmark}\ <\ \underbrace{105}_{\text{Zhang 1991 pair}\ \textbf{未复现}}\ <\ \underbrace{107}_{\text{BÖW 2004}\ \textbf{源不可得}}\ \ll\ \underbrace{120}_{\text{上界}=F_4\times F_2^7\ \checkmark\ \textbf{手头有证书}}}$$
+$$94\ (\text{球界})\ <\ 103\ (\text{van Wee 1988},\ 2^n/n)\ <\ 105\ (\text{Zhang pair},\ \textbf{未复现})\ <\ 107\ (\text{BÖW 2004},\ \textbf{源不可得})\ \ll\ 120\ (\text{上界},\ \textbf{证书在手})$$
 $$\textbf{最强松弛}:\ \text{SDP-3 (Gijswijt--Polak 2025)}\Rightarrow\mathbf{105.2223}\Longrightarrow106\ <\ 107\ (n{=}10)$$
 $$\textbf{excess 数值}:\ M{=}106\Rightarrow E{=}142;\quad 107\Rightarrow153;\quad 119\Rightarrow285;\quad 120\Rightarrow296\ \checkmark$$
 
@@ -45,7 +45,7 @@ $$\text{（出处}\ \texttt{CONNECTION-AUDIT-2026-09-29}／\texttt{RESULT-l}\ \t
 | 12 | 逐-$q$ 敌意关系 | **违例 300/576** | `RESULT-l` |
 | 13 | 度数集中 → 压 $u$ | **被 $\lvert Q\rvert$ 截断** | `RESULT-j` |
 
-$$\textbf{判据}:\ \text{凡新候选，先比对本表};\ \textbf{命中即停}✗;\ \text{且失败分类须为\ \textbf{类 7（真断点）}才可继续（}1\text{–}6\ \text{类一律停）✓$$
+$$\textbf{判据}:\ \text{凡新候选先比对本表};\ \textbf{命中即停}\ ✗;\ \text{且失败分类须为类 7（真断点）才可继续};\ \text{类 1–6 一律停}\ ✓$$
 
 ## §4 已封闭层（**累计层级账**）
 
