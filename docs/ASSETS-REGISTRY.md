@@ -3743,3 +3743,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ 仍成立**】$E{=}142$；$2P_1\le142\Rightarrow P_1\le71$；$2P_2$ 恒等式（实测成立 $284{=}284$）
 - 【**路线**】失败的是**中间桥梁**（point-excess parity），非 $107$ 主线；下一步＝重建 $n{=}10$ 局部 excess 不等式→$106$ 之 $P_j$ 矛盾（**尚无候选**）
 - 档：`docs/AUDIT-2026-09-29z-point-parity-retracted-and-the-correct-excess-layer.md`
+
+**⚠️ AUDIT-2026-09-29zb（非 C 号）：$Q_5\times Q_5$ fiber 路线两前提实测** ⚠️✗✓
+- 【**① 前提甲（某 fiber $\ge5$）**】硬 cap=4（$|C|\le128$）贪心 **4/4 全败**（用尽 128 词仍未覆盖完）；无 cap 时需 $147$–$150$ 词 ⟹ **有压力但未证** ⚠️
+- 【**② 前提乙（5-截面 $\mathrm{Def}{=}4$）**】$3$ 码 $\times$ $54$ 个 $\ge5$-fiber 的 5-截面：$\mathrm{Def}$ 分布 $4{:}12,\ 5{:}2,\ 6{:}14,\ 7{:}10,\ 8{:}10,\ 9{:}3,\ 10{:}1,\ 11{:}2$ ⟹ $\mathrm{Def}{=}4$ 仅 $\approx22\%$，**未被强迫** ✗（而 $Q_5$ 放大定理要求恰 $\mathrm{Def}{=}4$）
+- 【**③ 副产品：合法 120-cover**】由截断的 $118$ 词补 $2$ 词得 $|C|{=}120$ 全覆盖 ⟹ $K(10,1)\le120$ **可重跑证书** ✓✓
+- 【**④ 判定**】承重前提乙实测弱 ⟹ 按唐先生顺序**不能继续跨 fiber 补洞** ⚠️
+- 档：`docs/AUDIT-2026-09-29zb-Q5xQ5-fiber-route-two-premises-tested.md`
