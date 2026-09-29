@@ -3880,3 +3880,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⚠️ 弱相关**】slice 成立组 $n_{0..3}$ 均值 $1.7$ vs 不成立 $2.7$（方向对，证据弱）
 - 【**slice 精确形式**】$|D_A|\le106-a\iff\mathrm{Def}(A)\le9a-406$；目标＝证 $2(A_1{+}A_2)-T>9a-406$
 - 档：`docs/RESULT-2026-09-29j-degree-concentration-and-why-this-route-is-capped.md`
+
+**⚠️ RESULT-k（2026-09-29，非 C 号）：三处记号冲突 ＋ 新不等式"真但极弱"；slice 条件即 $\mathrm{Def}\le9a-406$** ✗✓
+- 【**⚠️ 三记号冲突**】$A_d^{\rm pair}$（码字对）$\ne A_i^{\rm prof}$（profile），关系 $2(A_1^{\rm pair}{+}A_2^{\rm pair})=\sum_i\binom i2A_i^{\rm prof}$；$T=\sum\binom{\mu-1}2\ne\sum\binom{w}3$；$A$ **不是** 3-packing（仅 $P$ 是）
+- 【**✗ 新不等式**】$2A_0+\sum_{i\ge3}(2+\binom i3)A_i^{\rm prof}<1430-9a$：$25/25$ 成立但 LHS $128$–$258$ vs RHS $908$–$998$，**松弛 $4$–$7$ 倍 ⟹ 无信息量**
+- 【**✓ 正确恒等式**】$F(A)=\mathrm{Def}(A)=\sum_{i\ge1}(i-1)A_i^{\rm prof}$
+- 【**⚠️ 循环**】slice 条件 $\iff\mathrm{Def}\le9a-406$；随机子集仅 $12/25$ 满足 ⟹ 约束来自互补性本身，而 fiber ＝ 精确重述
+- 档：`docs/RESULT-2026-09-29k-notation-collisions-and-the-trivial-inequality.md`
