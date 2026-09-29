@@ -3690,3 +3690,13 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⑤ 下一步**】A 提炼 $|A|{=}3$ 非线性为一般律（两球必重叠 $\to$ 覆盖上界）并试推广至 5-cube；B $n{=}6$ 用**对称性约化**（4-cube 等距群阶 $3840$、5-cube $46080$）压缩 $2^{32}$；C 直接攻 $M{=}K(n,1){-}1$ 之矛盾
 - **含我自身 bug 之更正**：全宇宙掩码误写为 $V{-}1$，已修为 $(1\ll V){-}1$ ✓
 - 档：`docs/CALIBRATE-n5-2026-09-29-defect-recursion-reproduces-K51-and-first-nonlinearity.md`
+
+**📏 CALIBRATE-n5-b（2026-09-29，非 C 号）：overlap deficit 三处纠正；正确恒等式；$\mathrm{Def}{=}0\iff k\le A(m,3)$ 之 packing 阈值律** ✓
+- 【**✗ ① $I(d)$ 表漏 $d{=}2$**】实测 $|B_1(a)\cap B_1(b)|$：(1,2)∶80、(2,2)∶160、(3,0)∶160、(4,0)∶80 ⟹ **$d{=}2$ 亦为 $2$**（唐先生写 $0$）
+- 【**✗ ② $\tau(A)\ne0$**】三个两两距离 $2$ 之中心（$x{=}0$，中心 $e_1,e_2,e_3$）**有公共点**，三重交大小 $1$ ⟹ 唐先生写 $\tau{=}0$
+- 【**✗✗ ③ 致命：$\alpha(Q_4,3)=\mathbf{0}$**】实测 $Q_4$ 存在三点**两两距离 $2$ 且无任何距离-1 边**（如 $0000,0011,1100$ 型）⟹ 「$e(A)\ge1$」**为假** ⟹ 亏损 $2$ 之源**不是**距离-1 边，而是**距离-2 对**（＋三重交修正）
+- 【**✓ ④ 正确恒等式（4000 例全量核验）**】$\boxed{|N_1(A)|=(m+1)k-T(A)}$，$T(A)=\sum_{x:\mu(x)\ge2}(\mu(x)-1)$（重叠总单位）；解析形式 $|N_1|=3(m+1)-2\,\mathrm{P2}+\tau$（$\mathrm{P2}=\#\{$对$:d\le2\}$）
+- 【**★ ⑤ packing 阈值律（本档最重要）**】实测 $Q_5$（容量 $6k$）：$k{=}1..4$ 时 $\mathrm{Def}{=}0$（容量**紧**）；$k{=}5$：$\max|N_1|{=}26$，$\mathrm{Def}{=}\mathbf{4}$；$k{=}6$：$30$，$\mathrm{Def}{=}\mathbf{6}$ ⟹ $\boxed{\mathrm{Def}=0\iff k\le A(m,3)}$（中心两两距离 $\ge3$ ⟺ 半径-1 球互不相交）；实测 $A(4,3){=}\mathbf{2}$、$A(5,3){=}\mathbf{4}$ ⟹ 可传递局部律 $\boxed{k>A(m,3)\Rightarrow|N_1(A)|\le(m+1)k-\mathbf{1}}$
+- 【**⑥ 对 $n{=}5$ 之效力**】仅容量给 $M\ge\mathbf{4}$ ✗；加阈值律给 $M\ge\mathbf{6}$ ✓；真值 $7$ ⟹ **仍差 1**（须再加「$B$ 覆盖 $V\setminus A$」之完整纤维对信息）
+- 【**⑦ 下一步**】A-1 求 $k>A(m,3)$ 处 $\mathrm{Def}$ 之精确值（$Q_5$：$k{=}5\Rightarrow4$、$k{=}6\Rightarrow6$，试定 $\mathrm{Def}=f(k-A(m,3))$）；A-2 把阈值律写成**中心点集之纯组合条件**；A-3 试以 packing 阈值律替代 $n{=}6$ 之 $2^{32}$ 枚举
+- 档：`docs/CALIBRATE-n5b-2026-09-29-overlap-deficit-and-the-packing-threshold-law.md`
