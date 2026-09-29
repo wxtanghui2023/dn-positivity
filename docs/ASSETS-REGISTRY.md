@@ -3834,3 +3834,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ 定义滑动提醒**】$\S2$ 用**距离-1 私有**，上轮 $N_1^*$ 用 $B_2$ 私有 —— 须固定其一
 - 【**数据**】62-码 $53$-子集：$|P|{=}27,|Q|{=}26,F(A){=}78>71$（纤维上限）⟹ 纤维条件**有约束力**（启示性）
 - 档：`docs/RESULT-2026-09-29d-private-fiber-formula-verified-withdrawing-my-correction.md`
+
+**⚠️ RESULT-e（2026-09-29，非 C 号）：新权重 $r(r+1)/2$ 过强（差 $1$/fiber，恰为承重项）；旧式站立** ✗✓
+- 【**✗ 新式**】$r+\binom r2=\frac{r(r+1)}2$ 仅 $26/60$ 成立（过强）
+- 【**✓✓ 旧式**】$\frac{(r-1)(r+2)}2$ **$60/60$** 成立；二者恰差 $1$/fiber ⟹ **"$-1$" 承重，不可删**（其来源未明 ⚠️）
+- 【**✓✓ 凸性**】$\sum\binom{r_x}2\ge\ell\binom{\lfloor R/\ell\rfloor}2+(R\bmod\ell)\lfloor R/\ell\rfloor$ **$60/60$** 成立；粗版 $\ge\frac{R^2}{2\ell}-\frac R2$ 亦可用
+- 【**规模**】$a{=}53$：$|P|{=}27,|Q|{=}26,|L|{=}243,R{=}67,\sum w_{\text{旧}}{=}50,F{-}F(P){=}79>71$ ✓
+- 【**下一目标**】求 $R=I(Q,N_1^*(P))$ 之统一下界，再经凸性得净 $F$
+- 档：`docs/RESULT-2026-09-29e-new-weight-overreaches-by-one-per-fiber.md`
