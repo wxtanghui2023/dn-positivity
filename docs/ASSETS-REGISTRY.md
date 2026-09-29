@@ -3734,3 +3734,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 反证：若 $9E\ge2^n-M$ 普遍成立，则 $n{=}7$ 给 $M\ge17.53>16=K(7,1)$ ⟹ 矛盾 ✗（散点吻合 $\ne$ 定理）
 - 正确：van Wee 1988 之 $K(n,1)\ge2^n/n$ **仅对偶 $n$** 成立（$n{=}8$ 紧 ✓；$n{=}10\Rightarrow103$ ✓）
 - **缺口定位修正**：缺的不是「全局整性论证」（过泛），而是 **k-tuple covering 不等式族之 $k$ 提升**（pair $105$ → triple → general $107$）
+
+**⚠️ AUDIT-2026-09-29z（非 C 号）：point-excess parity 第二次被推翻 ＋ kam.txt 截断冻结** ✗✓
+- 【**✗ 撤销清单（全确认）**】$s(c)\in\{1,3,5,7,9\}$／$r_x{=}\frac{\mu(x)-1}{2}$／$q_c{=}\frac{s(c)-1}{2}$／$P_1\ge53$／$\sum q{+}\sum r{=}18$／$P_2{=}9{+}\sum q^2{+}\sum r^2$／$P_2$ 奇／$P_1\ge60\Rightarrow\bot$ —— **全部删除**（实测：码字 $\mu$ 偶 $42$/奇 $76$；非码字 $\mu$ 偶 $148$/奇 $758$）
+- 【**✓ 正确层**】Habsieger 之量＝**ball-excess 聚合** $\delta_{N[v]}$，非 $\mu(v)-1$ 自身（与 `AUDIT-2026-09-29j` 一致）
+- 【**✓ kam.txt 截断**】a(10) 段落仅 $118$ 词、$12$ 点未覆盖 ⟹ 末 $2$ 词被截断 ⟹ **冻结**；由它得出的 $P_1{=}49/P_2{=}142/P_3{=}875$ **全部作废**
+- 【**✓ $p{=}11$ 自动性**】$\sum_{i=0}^{10}\Delta_i(v)=E\equiv-1\pmod{11}$ 恒成立 ⟹ 粗同余**不能单独产生 $107$**；须找**低阶局部**同余／线性组合
+- 【**✓ 仍成立**】$E{=}142$；$2P_1\le142\Rightarrow P_1\le71$；$2P_2$ 恒等式（实测成立 $284{=}284$）
+- 【**路线**】失败的是**中间桥梁**（point-excess parity），非 $107$ 主线；下一步＝重建 $n{=}10$ 局部 excess 不等式→$106$ 之 $P_j$ 矛盾（**尚无候选**）
+- 档：`docs/AUDIT-2026-09-29z-point-parity-retracted-and-the-correct-excess-layer.md`
