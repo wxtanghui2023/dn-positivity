@@ -3787,3 +3787,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**④ 连接搜索**】C1 SDP-剪枝枚举：$106>105.2223$ ⟹ **临界点剪不动** ✗；C2 缺口大小界：$f_9$ **等价原问题** ✗；C3 支撑级不变量：只在 $n{=}2^m$ 生效 ✗ ⟹ 三候选全败
 - 【**判定**】6 项资产无一能跨断层；唯一已知跨者＝BÖW 2004（不可得）；下一步正确候选＝**"整性约束的压缩形式"**
 - 档：`docs/CONNECTION-AUDIT-2026-09-29-info-gap-and-asset-crossing-analysis.md`
+
+**✗ AUDIT-2026-09-29zf（非 C 号）：$F_4$-cell 分解（对极强迫）实测真但弱（第 9 条）** ✗
+- 【**分解**】$Q_{10}=F_4\times F_2^7\times F_2$；cell＝$F_2^8$ 的 $256$ 个，各 $4$ 点；码字 $(a,u)$ 在 cell 内只覆盖 $3/4$ 点
+- 【**新特征（该分解独有）**】对极点 $(\bar a,u)$ 必须由**相邻 cell** 覆盖 ⟹ 强迫量 $\delta_u$
+- 【**实测（45 种 $F_4$-坐标选择）**】$\Sigma_u\delta_u\in[94,120]$（最紧：空 cell $142$、单点 $108$、双点 $6$）；相邻容量 $\approx8\times$码字数 ⟹ **松弛巨大** ✗；一阶计数仍 $11M\ge1024$（球界）
+- 【**判定**】类 2（真但弱）⟹ **第 9 条候选死**；断层（整性压缩）未被跨过
+- 档：`docs/AUDIT-2026-09-29zf-F4-cell-antipodal-forcing-tested-and-weak.md`
