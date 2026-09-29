@@ -3700,3 +3700,14 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**⑥ 对 $n{=}5$ 之效力**】仅容量给 $M\ge\mathbf{4}$ ✗；加阈值律给 $M\ge\mathbf{6}$ ✓；真值 $7$ ⟹ **仍差 1**（须再加「$B$ 覆盖 $V\setminus A$」之完整纤维对信息）
 - 【**⑦ 下一步**】A-1 求 $k>A(m,3)$ 处 $\mathrm{Def}$ 之精确值（$Q_5$：$k{=}5\Rightarrow4$、$k{=}6\Rightarrow6$，试定 $\mathrm{Def}=f(k-A(m,3))$）；A-2 把阈值律写成**中心点集之纯组合条件**；A-3 试以 packing 阈值律替代 $n{=}6$ 之 $2^{32}$ 枚举
 - 档：`docs/CALIBRATE-n5b-2026-09-29-overlap-deficit-and-the-packing-threshold-law.md`
+
+**🏁 CALIBRATE-n6（2026-09-29，非 C 号）：A-3 双侧 defect 闭环排除 $M{=}11$，给出 $K(6,1)\ge12$（非阈值律之功）** ✓
+- 【**✓✓ ① 结果**】$M{=}11$ 全部排除 ⟹ $\boxed{K(6,1)\ge12}$（已知值复现）
+- 【**✓ ② 先分层**】纤维 $\mathbb F_2^6=\mathbb F_2^5\times\mathbb F_2$，$V{=}Q_5$（32 点），球 6 点；$|D_A|\ge32-6a$ 且需 $\le b{=}11{-}a$ ⟹ $21\le5a$ ⟹ $a\ge5$；对称地 $b\ge5$ ⟹ $M{=}11\Rightarrow a,b\in\{5,6\}$（**此步确为容量级**）
+- 【**✓ ③ 双侧闭环（真正承重）**】条件 $D_A\subseteq B,\ D_B\subseteq A$；对给定 $A$ 需 $B\supseteq D_A$、$|B|{=}11{-}a$、且 $V\setminus A\subseteq N_1(B)$ ⟹ 令 $R{=}(V\setminus A)\setminus N_1(D_A)$，需 $\mathrm{min\_cover}(R)\le(11{-}a)-|D_A|$
+- 【**✓✓ ④ 全枚举零候选**】$a{=}5$：枚举 $201{,}376$，过 $|D_A|\le b$ 者 $5{,}760$，过计数筛者 $0$，**候选 0**；$a{=}6$：$906{,}192$，过 $73{,}680$，过计数筛 $2{,}640$，**候选 0**；自检 $|A|{=}1\Rightarrow|D_A|{=}26$ ✓ ⟹ $M{=}11$ 不可行 ⟹ $K(6,1)\ge12$
+- 【**⑤ 门槛满足（按唐先生要求）**】阈值律＋容量对 $n{=}5$ 只给 $6<7$ ⟹ 其本身不足；本档拒绝用的是「$|D_A|\le b$ ＋ $B$ 覆盖 $V\setminus A$」完整纤维对条件，尤其 $a{=}6$ 时 $2{,}640$ 例需**精确覆盖检查**方被拒 ⟹ 承重者为闭环，非局部律
+- 【**✗ ⑥ 代价**】$n{=}6$：$1{,}107{,}568$ 子集、3 s；$n{=}7$：$C(64,7)\approx6.2\times10^8$ ✗；$n{=}8,9$ ✗ ⟹ 机制**可传递**（$n{=}5\to6$ 成功）但**代价爆炸**；欲至 $n{=}9$ 须**压缩**（对称性约化／defect 结构律）
+- 【**⑦ 下一步**】A-1 求 $\mathrm{Def}(m,k)$ 精确结构律（$Q_5$：$k{=}5\to4$、$k{=}6\to6$）以替代枚举；B 对称性约化（6-cube 等距群阶 $5{,}160{,}960$）；C 接受并归档
+- **含我自身 bug 之更正**：全掩码误写 $V{-}1$，已修 $(1\ll V){-}1$（**今日第三次同类错**）
+- 档：`docs/CALIBRATE-n6-2026-09-29-A3-two-sided-closure-excludes-M11-and-gives-K61-geq-12.md`
