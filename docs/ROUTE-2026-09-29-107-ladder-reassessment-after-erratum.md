@@ -18,9 +18,9 @@ $$\therefore\ \mu_{\max}\ge4\ \text{之推论作废；「一格缺口」为假�
 
 $$94\ (\text{球界})\ \checkmark\ \to\ 103\ (\text{van Wee},\ \checkmark\ \text{已自推})\ \to\ \mathbf{105}\ (\text{Zhang--Lo 三重层},\ \textbf{缺})\ \to\ \mathbf{107}\ (\text{BÖW 混合框架},\ \textbf{缺})$$
 
-$$\boxed{\text{⚠️ 对我 22:2x 说法的更正}:\ \text{「甲」（三重层）之\ \textbf{直接产出是 }105,\ \textbf{不是 }107}$$
-$$\text{理由（档案文献谱系）}:\ \text{Zhang pair}\to105;\ \text{Zhang--Lo \textbf{三重}}\to\text{更高};\ 107\ \text{出自 BÖW 之\ \textbf{混合码框架}(general }R{=}1)$$
-$$\therefore\ \text{甲的正确目标}:\ \textbf{排除 }M{=}104\ (\Sigma\delta{=}120)\ \Longrightarrow\ K\ge105\ \checkmark\quad(\text{第一级检查点})$$
+$$\boxed{\text{⚠️ 对我 22:2x 说法的更正}:\ \text{「甲」（三重层）\ \textbf{不自动直接给 }107}$$
+$$\text{文献谱系（档案）}:\ \text{van Wee}\to103\ \text{（已自推）};\ \text{Zhang 1991 \textbf{pair}}\to105\ \text{（我方 R02 已封 ⟹ 未复现）};\ 107\ \text{出自 BÖW 2004 \textbf{混合框架}}$$
+$$\therefore\ \text{甲（三重层）之 \textbf{最近检查点} = \text{排除 }M{=}104\ (\Sigma\delta{=}120)\Longrightarrow K\ge105;\ \text{能否越过 105 \textbf{待算}，\textbf{不得预设}}⚠️$$
 
 ## §3 可用等式/不等式清单（**本档汇总，全部已核**）
 
