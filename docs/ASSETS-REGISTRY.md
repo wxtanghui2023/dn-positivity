@@ -3430,3 +3430,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**③ 三层路线最终账**】(A) pair 数上界 **死**（框架 ≡ 球界）／(B) 高阶 SDP **死**（原作者谓不可行）／(C) **单条线性不等式 死**（本档）／**(D) integrality／非松弛论证 ＝ 唯一存活** ⟹ **要 $107$ 须非松弛型论证**，这正是 Zhang 1991 的 rounding 与 BÖW 2004 之所在
 - 【**④ 给唐先生之直白结论**】①「自行推导一条不等式」**不可能**成功（已验证上限）；②这不是实现失败，而是**方法学定理**：$107>105.2223=$ 最强松弛；③故 $107$ 必含**整数性/组合**步骤，其原文未得；④唯一可自做者 ＝ 自建 **integrality 论证**（"假设 $M{=}106\Rightarrow$ 结构 $\Rightarrow\bot$"），而非造不等式
 - 档：`docs/AUDIT-2026-09-29e-single-linear-inequality-cannot-reach-107.md`
+
+**📋 AUDIT-2026-09-29f（非 C 号）：复现账（唐先生质问）＋ 自查陷阱 —— 采样搜索会给出**假**不等式** ✓
+- 【**✓ 认账**】唐先生质问「我们连别人已有的上下界都不知道怎么到达，也好意思挑战它」**成立**：我们跳过了"复现"直接"挑战"
+- 【**✓✓ ① 复现账**】上界：$128$（平凡）✓、$\mathbf{120}$（Östergård 1991 混合码 $\mathbb F_4\times\mathbb F_2^7$ $60$ 字 ⟶ 代入）**✓✓ 手头有 120-code，已独立验证覆盖半径 1**；下界：$94$（球界）✓✓、$96$（Stanton–Kalbfleisch 1968）✗、$97$（Cohen–Lobstein–Sloane 1986）✗、$\mathbf{103}$（van Wee 1988，excess）**✓✓ 已自行推出**、$\mathbf{105}$（Zhang 1991，pair covering 族）✗（单条只给 $103$）、$\mathbf{107}$（BÖW 2004，general $R{=}1$）✗ ⟹ **上界侧已握在手里；缺口全在下界中段 $97\to105\to107$**
+- 【**★★ ② 自查陷阱（新发现）**】$\min\sum_j\lambda_j\binom{10}j$ s.t. $\sum_j\lambda_jA_j(u)\ge1$（采样 $11{,}264$ 条剖面：120-code ＋ 10 贪心码）之 LP 解为 $\lambda=\frac1{60}(1,0,1,0,1,0,1,0,1,0,1)$ ⟹ 不等式 $\boxed{A_{\rm even}(u)\ge60}\Rightarrow M\ge\mathbf{120}$ ✗；**反例（已核）**：全奇重码 $C=\{x:\mathrm{wt}(x)\ \text{奇}\}$（$M{=}512$）是覆盖码且偶数重量点处 $A_{\rm even}\equiv\mathbf 0$ ⟹ **该"最优不等式"为假** ⟹ **采样搜索不可靠**（缺结构化大码）。附带真观察：120-code 之 $\min_uA_{\rm even}=\mathbf{60}=M/2$（恰等号）
+- 【**③ 次序纠正**】正确次序：**①复现上界 → ②复现下界链 → ③才谈挑战**；现状 ①**已完成**、② 仅 $94/103$ 可复现 ⟹ 下一步应做 **②**，且先把 $96/97$（老文献，方法应属初等）补齐
+- 档：`docs/AUDIT-2026-09-29f-reproduction-ledger-and-the-sampling-trap.md`
