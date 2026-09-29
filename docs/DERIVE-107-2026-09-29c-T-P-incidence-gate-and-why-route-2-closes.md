@@ -52,8 +52,8 @@ $$\text{（iii）}p(y)\ \text{分布}\ \{3{:}6,4{:}2,5{:}1,6{:}6,7{:}7\}:\ \text
 
 ## §5 判门结论（**按你 §8 之三条**）
 
-$$\textbf{判据①}\ p(y){=}0\ \text{大量存在？}\ \textbf{否}（0/22）\qquad\textbf{判据②}\ p(y)\ \text{可达 }8{-}10？\ \textbf{否}（最大 7）$$
-$$\textbf{判据③}\ \text{是否被"明显小于 10 之常数统一压住"\ 且\ \textbf{能转入 }E？}\ \text{前半\ \textbf{是}（}p\le10-\mu\text{）；后半\ \textbf{否}（}\mu\ \text{相消）}$$
+$$\textbf{判据①}\ p(y){=}0\ \text{大量存在}\,\text{（否）}\ \textbf{否}（0/22）\qquad\textbf{判据②}\ p(y)\ \text{可达 }8{-}10\,\text{（否）}\ \textbf{否}（最大 7）$$
+$$\textbf{判据③}\ \text{是否被"明显小于 10 之常数统一压住"\ 且\ \textbf{能转入 }E}\ \text{前半\ \textbf{是}（}p\le10-\mu\text{）；后半\ \textbf{否}（}\mu\ \text{相消）}$$
 $$\therefore\ \boxed{\text{②\ \textbf{关闭}}:\ \text{压制是平凡的，代价由 }\mu\ \text{自付，不产生 }6E\ \text{级信息}}✗✓$$
 
 ## §6 下一刀（**③，同一纪律 ✓**）
