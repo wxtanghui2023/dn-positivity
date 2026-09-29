@@ -66,3 +66,21 @@ $$\therefore\ \text{要找的是\ \textbf{逆单调}（随 }M\ \text{减小而�
 分类：本档新增 = 无；档案已有（引用）= V₂/A_d/n_j/orbit/priv/BÖW-V_R；通用词（不计）= 顺单调/逆单调。
 
 ROUTE-CHECK: R02=NA R06=NA R07=NA R08=NA R16=NA R17=NA R18=DUPLICATE R19=DUPLICATE R20=DUPLICATE
+
+---
+
+## §7 新会话开案审查（2026-09-29 22:05，逐条查地图）【新增】
+
+**规程**：照 `PROTOCOL-pre-work-map-check.md`；查 `CLOSED-ROUTES-MAP.md`／`MASTER-STATUS-AND-CLOSURES.md`／`MASTER-NOGO-AND-LIVE-PATHS.md`／`ASSETS-REGISTRY.md`／`ROUTE-FINGERPRINTS.tsv`。
+
+| §5 入口 | 地图判定 | 既有依据（引用，非新案） |
+|---|---|---|
+| 1 逐码字 priv(c) 上界 | **不得开案 ✗** | R19（`BLOCKED-BY-\|A\|≤Σδ`）｜`AUDIT-2026-09-28c`：ownership/private-coverage 层＝covering 恒等式之重写 ⟹ 按令**已关** ✗｜`AUDIT-2026-09-29x`：private 点层**无强制 excess**（740/746 可零-excess 服务）＋**excess 密度逆势** ✗✗｜`RESULT-29n` §5 之 α3 ＝同内容 |
+| 2 min/max 型泛函 | **未直接命中，须先越反例** ⚠️ | 无同名关闭条目；但 §2-K（8 量中 7 个顺单调）＋`AUDIT-2026-09-29x`（一切**强制型**论证逆势）⟹ min 型＝强制型 ⟹ **须先答「为何非强制型」** 再开 |
+| 3 V_R 结构反推 | **触及禁区** ⚠️ | R09／R17（BÖW 正文不可得，唐先生明令）⟹ 反推**无地面真值可核验**，不得作为主路线 |
+| 4a n=9 校准到 62（现 66，差 6.5%） | **干净可开案 ✓✓** | `ASSETS-REGISTRY` L1905：**上界侧 LIVE ✓✓**（C-427 战略更新）；无同名关闭条目 |
+| 4b n=10 之 ≤119 | **命中 R14 ✗** | R14＝`LINE-ALREADY-ATTACKED`（`docs/119-ATTACK-R1-2026-09-27`） |
+
+**审查结论**：§5 四条入口中，**仅 4a（上界侧 n=9 校准）为干净可开案项** ✓；第 1 条已被三层独立证据封闭（R19 ＋ 28c ＋ 29x）✗；第 4b 已有专案 ✗；第 2／3 条须先补前置理由（非强制型论证／可核验性）⚠️。
+
+ROUTE-CHECK: R01=NA R02=NA R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=FINGERPRINT-CITED R10=NA R11=NA R12=NA R13=NA R14=FINGERPRINT-CITED R15=NA R16=NA R17=FINGERPRINT-CITED R18=NA R19=FINGERPRINT-CITED R20=NA
