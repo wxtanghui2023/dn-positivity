@@ -3865,3 +3865,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ 单射**】$(p,i)\mapsto p\oplus e_i$ 在 $U_p$ 上单射（$q$ 双重表示 $\Rightarrow d(p,p'){=}2$ 矛盾）⟹ $u$ 为真实全局点数，无重复
 - 【**⚠️ 假设**】"每个 $U_p$-点强制独立缺口"未获证：$q$ 由 $p$ 覆盖 ⟹ 该处无缺口，机制未找到
 - 档：`docs/RESULT-2026-09-29h-extremal-table-checked-injectivity-proved-forcing-hypothesis-open.md`
+
+**✅ RESULT-i（2026-09-29，非 C 号）：$f(j)$ 精确表 ＋ incidence 不等式 $u\le\sum_p f(m_p)$** ✓
+- 【**✓ $D(v,3,2)$**】$(1,1,2,4,7,8,12)$（$v{=}3..9$）；除 $v{=}5$ 外度数界全紧；$v{=}8$ 之 $8$ 边显式构造核验通过
+- 【**✓✓ $f(j)$**】$f=9-\min\{v:D\ge j\}=(6,4,3,3,2,2,2,1,0,\dots)$；$m_p\ge9\Rightarrow u_p{=}0$
+- 【**✓**】$\sum_p m_p=2E_3(P)$（三边 $\leftrightarrow$ 距离-3 对，2 对 1）
+- 【**⚠️**】$u\le\sum_p f(m_p)$ 成立但被 $|Q|$ 截断；须再补 $E_3(P)$ 之下界方能发力
+- 档：`docs/RESULT-2026-09-29i-fj-exact-and-the-incidence-inequality.md`
