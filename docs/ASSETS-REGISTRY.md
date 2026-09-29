@@ -3764,3 +3764,9 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ 错位根源**】$\binom s2=(s-1)+\binom{s-1}2$ 仅对 $s\ge1$ 成立，$s=0$ 须补 $+1$ ⟹ 此前偏差 $61$–$74$ 全由此解释
 - 【**✗ 效用**】$M{=}106$ 仅给 $A_2\ge18$，实数码 $A_2\sim300$ ⟹ **松弛 $\sim280$ ⟹ 不能排除 $106$**；$S_c/S_x$ 路线**真但弱**
 - 档：`docs/AUDIT-2026-09-29zd-gap-identity-corrected-n0-term-and-the-normalization-reconciled.md`
+
+**✗ AUDIT-2026-09-29ze（非 C 号）：孤立码字容量路线 —— $f(r)$ 次线性；$A_2\ge5n_0$ 实测假** ✗
+- 【**✗ $f(r)$ 次线性**】局部几何：$c'{=}0$ 与 $c{=}e_i{+}e_j$（$d{=}2$）⟹ $c$ 覆盖 $N(0)$ 中恰 $\{e_i,e_j\}$ ⟹ $U(\mathcal F)=\bigcup\mathcal F$ ⟹ $f(r)=\min\{k:\binom k2\ge r\}\sim\sqrt{2r}$（$r{=}6\Rightarrow f{=}4$）⟹ **孤立码字越多平摊越少 ⟹ 无容量冲突**
+- 【**✗ 双计数纠正**】$\sum_{\text{iso}}t(c)=A_2^{0+}+\#(\text{iso-iso})\ge A_2^{0+}$（**非等号**）；由 $\sum t(c)\le2A_2$ 只得 $A_2\ge2.5n_0$（非 $5n_0$）
+- 【**✗ 实测否证 $5n_0$**】$M{=}145$：$A_2{=}293<320$ ✗；$M{=}147$：$322<385$ ✗ ⟹ $A_2\ge5n_0$ **假**；$2.5n_0$ 版成立 ✓
+- 档：`docs/AUDIT-2026-09-29ze-isolated-codeword-capacity-f-sublinear-and-5n0-false.md`
