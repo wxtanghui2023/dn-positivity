@@ -3681,3 +3681,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**④ 结论维持**】$\boxed{\text{LINEAR-LOCAL-ACCOUNTING = CLOSED at }52}$（一阶纤维 LP ＋ 二阶 multiplicity profile ＋ cap 三层皆不破 52）；推广：求和论证 $\sum_u[(10-r)N_u+\sum_{v\sim u}N_v]=10M$ 对一切 $r$ 恒给 52
 - 【**⑤ 下一层之关键警告**】有限类型层之**致命问题**：兼容条件为**集合级** $N_1(A)\cup B=\mathbb F_2^{n-r}$ ⟹ $\tau$ 若只记**计数统计**则**不能判定**兼容 ⟹ 类型数**不压缩**；可用之 $\tau$ 必须记录 **defect 集合结构** $D_A=\mathbb F_2^{n-r}\setminus N_1(A)$（且 $D_A\subseteq B$、$D_B\subseteq A$）；而 $r{=}1$ 时此即**精确重述**（$K(n,1)=\min\{|A|+|B|:N_1(A)\cup B=N_1(B)\cup A=\mathbb F_2^{n-1}\}$）⟹ **无压缩** ⟹ 建议：$\tau$ 须以 defect 集合为主变量，且从**小 $n$ 已知值递归校准**（$K(5,1){=}7,\ K(6,1){=}12,\ K(7,1){=}16,\ K(8,1){=}32$）
 - 档：`docs/CALIBRATE-K91-2026-09-29c-cap-does-not-help-and-two-self-corrections.md`
+
+**✅ CALIBRATE-n5（2026-09-29，非 C 号）：defect 递归**精确复现** $K(5,1)=7$；首个非线性出现在 $|A|=3$** ✓
+- 【**✓✓ ① 精确复现**】$n{=}5$、$\mathbb F_2^5=\mathbb F_2^4\times\mathbb F_2$、$V=$4-cube（$16$ 点，每字覆盖 $5$ 点）；覆盖 $\iff N_1(A)\cup B=V\wedge N_1(B)\cup A=V\iff D_A\subseteq B,\ D_B\subseteq A$；**精确枚举全部 $2^{16}$ 个 $A$**：$\min_A[|A|+\mathrm{minB}(A)]=\mathbf{7}$（取到者 $|A|{=}3,\ |D_A|{=}3,\ |B|{=}4$）✓；**两道自检皆过**：$|A|{=}1\Rightarrow|D_A|{=}11$ ✓、$\mathrm{min\_cover}$(4-cube)$=4=K(4,1)$ ✓
+- 【**★★ ② 首个非线性（本档最重要）**】$|A|$ vs $\min|D_A|$：$0\to16$、$1\to11$、$2\to6$、$\mathbf{3\to3}$（容量界 $1$，**松 +2**）、$4\to0$、$5\to0$ ⟹ **首个非线性在 $|A|{=}3$** ⟹ 即 **3 个字至多覆盖 13 点**（根因：4-cube 中任两球必重叠，$15-2=13$）
+- 【**✓ ③ 非线性承重**】仅用容量 $|D_A|\ge16-5a$ 与 $|B|\ge|D_A|$ 给 $\min_a[a+\max(1,16-5a)]=\mathbf{4}$（$<7$）⟹ **非线性不可省**
+- 【**✗ ④ 代价（无压缩）**】本档可行因 $2^{16}$；$n{=}6{:}2^{32}$、$n{=}7{:}2^{64}$、$n{=}8{:}2^{128}$、$n{=}9{:}2^{256}$ 皆不可行 ⟹ 直接枚举**止步于 $n{=}5$**；要带到 $n\ge6$ 须把"非线性"提炼成**定理/可传递局部律**（＝唐先生所谓 P1 真机制）
+- 【**⑤ 下一步**】A 提炼 $|A|{=}3$ 非线性为一般律（两球必重叠 $\to$ 覆盖上界）并试推广至 5-cube；B $n{=}6$ 用**对称性约化**（4-cube 等距群阶 $3840$、5-cube $46080$）压缩 $2^{32}$；C 直接攻 $M{=}K(n,1){-}1$ 之矛盾
+- **含我自身 bug 之更正**：全宇宙掩码误写为 $V{-}1$，已修为 $(1\ll V){-}1$ ✓
+- 档：`docs/CALIBRATE-n5-2026-09-29-defect-recursion-reproduces-K51-and-first-nonlinearity.md`
