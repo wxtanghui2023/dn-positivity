@@ -52,3 +52,13 @@ $$\therefore\ \text{S1 原样（聚合夹逼）}\ \textbf{失败};\ \text{须升
 - 未重攻 pair 层（R02）／未取论文原文（R16–17）✓；未碰 RH ✓
 
 ROUTE-CHECK: R01=NA R02=FINGERPRINT-CITED R03=NA R04=NA R05=NA R06=NA R07=NA R08=NA R09=NA R10=NA R11=NA R12=NA R13=NA R14=NA R15=FINGERPRINT-CITED R16=NA R17=NA R18=NA R19=NA R20=NA
+
+---
+
+## §6 附：本档顺带核验的**新恒等式 F9**（双码实跑 ✓✓）
+
+$$\boxed{\ 2A_2\ =\ \sum_{x\notin C}\binom{\mu(x)}2\ +\ P\ }\qquad\Bigl(P=\sum_{y\in C}\binom{a_y}2\Bigr)$$
+
+**来源**：每条距离-2 对恰有 2 个"中点"（距两端各 1 的点）；对每个点 $m$，$\binom{k_m}2$（$k_m{=}|S(m)\cap C|$）即以其为中点之距离-2 对数，其中 $m\notin C$ 时 $k_m{=}\mu(m)$、$m\in C$ 时 $k_m{=}a_m$。
+**实测**：$n{=}9$ 62-码 $132{=}126{+}6$ ✓✓；$n{=}10$ 120-码 $298{=}257{+}41$ ✓✓
+（等价于 F3 ＋ 码字点分解，但对 $A_2$ 单价可用 ⟹ 收入清单 F9）
