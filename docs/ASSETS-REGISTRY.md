@@ -3720,3 +3720,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ ⑤ 递归模板（确认）**】若每个 $k$-set $A\subseteq Q_m$ 满足 $|D_A|\ge m+1$ 且 $A(m,3)<k+1$，则 $K(m,1)\ge k+2$；实证链：$\mathrm{Def}_{\min}(5,5){=}4\Rightarrow|D_A|\ge6{=}m{+}1\Rightarrow K(5,1)\ge7$，再经双边刚性 $\Rightarrow K(6,1)\ge12$ ⟹ 压缩链 min defect → defect-set shape → dual closure → lower bound **已跑通一级**
 - 【**⑥ 下一步**】A-1' 分类 $5760$ 个 $\mathrm{Def}{=}4$ 之 defect-set 形状（已知 $|D_A|{=}6$ 恒成立）以**不用枚举**证明 $D_{D_A}\nsubseteq A$；A-2 推广到 $Q_6$（$A(6,3){=}?$ 待测）以取 $K(7,1)\ge16$；C 归档
 - 档：`docs/CALIBRATE-n6b-2026-09-29-structural-compression-5760-and-K61-lower-bound.md`
+
+**🎯 STRATEGY（2026-09-29，非 C 号）：107 重建之现状 —— 目标形式、机制天花板、缺失机制定位** ✓
+- 【**✓ ① 目标形式**】$K(10,1)\ge107\iff\boxed{6E+M\ge1024}\iff 67M\ge7168$（$E{=}11M{-}1024$）⟹ **107 ＝ 把 van Wee 之系数 $9$ 改进到 $6$**（等价：$\#\{$非码字$\}\le6E$）
+- 【**✓ ② 机制天花板表**】球界 $94$／van Wee 深洞 $103$（系数 $9$，实测 $8.31$ **饱和**）／单条线性不等式 $103$／Zhang 覆盖设计 $105$（整性）／SDP-3 $105.2223\Rightarrow106$（**层次不可升**）／**目标 $107$** ⟹ $107>105.2223$ ⟹ **必须整性，不可能来自松弛法**
+- 【**✗ ③ 本轮实验：单元整性不足**】固定 $r$ 坐标 $\Rightarrow2^r$ 单元，$N_u\in\mathbb Z$，约束 $(11-r)N_u+\sum_{v\sim u}N_v\ge2^{10-r}$；**实测 $r{=}1..5$、$M{=}105/106/107$ 全部 LP 与 ILP 皆可行**（求和论证给球界 $93.09$；整数化亦可行）⟹ **单元整性层不足**
+- 【**✓ ④ 缺失机制定位（本档核心）**】须一个**全局**整性论证：非 $\{A_i\}$ 之函数（松弛 $\le105.2223$）、非 unit/cell 单元层（$\le94$）；已知此类机制唯一样本＝Zhang 覆盖设计计数（$105$）及其**强化**（$107$），而强化之唯一实现＝Bertolo–Östergård–Weakley 2004 之 general $R{=}1$ lower bound —— **正文不可得** ⟹ **我方现有机制不能产出 $107$；缺口 ＝ 全局整性论证**
+- 【**⑤ 项目状态**】总课题进行中；里程碑一（重现 $107$）**未完成**（缺口已定位）；里程碑二未进入；副产品（$K(5,1){=}7$、$K(6,1)\ge12$、$\mathrm{Def}$ 放大律、压缩 $190\times$）**已严格但不接 $107$**
+- 【**⑥ 建议**】A 继续攻全局整性（但须先有候选不等式，我方暂无）；B 把负结果归档为定论；C 改换总课题
+- 档：`docs/STRATEGY-2026-09-29-107-reconstruction-status-and-the-missing-mechanism.md`
