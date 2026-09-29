@@ -3648,3 +3648,12 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗ ⑤ 归位（为何到经典为止）**】秩缺口 $120-90=30=b(H)$（全由二分分量解释）；$\dim\ker A^\top=46=16+b(H)$（全由 $|E|-|V|$ 与 $b(H)$ 解释）⟹ **无一项超出经典 unsigned-incidence／signless-Laplacian 理论** ⟹ 按判门表「$\text{rank}A<120\Rightarrow$ 追额外 nullity」之答案：**额外 nullity 即 $b(H)$ 本身**（经典）
 - 【**⑥ 未做强塞（守 §10 纪律）**】「每条独立 cycle relation ⟹ 至少一个额外 $E$-贡献」之链**本档未做**；亦未做跨码相关性。建议下一刀（若继续）：对 $120$-code 与 $3$ 个 greedy 码同时算 $(\text{rank}A,\ b(H),\ \dim\ker A^\top,\ E)$ 看是否同变
 - 档：`docs/DERIVE-107-2026-09-29f-owner-pair-multigraph-H-rank-formula-and-its-classical-closure.md`
+
+**🧾 DERIVE-107-g（2026-09-29，非 C 号）：秩公式 $\text{rank}A=M-b(H)$ 跨四码精确成立；$§3/§4$ 两条恒等式纠正；碰撞量 $S$ 实测** ✓
+- 【**✓✓ ① 秩公式跨码验证**】四码全中：$120$-code $90=120-30$；greedy0 $147=149-2$；greedy1 $142=147-5$；greedy2 $146=152-6$ ⟹ $\boxed{\text{rank}(A)=|V|-b(H)}$ 精确成立（经典定理确认）；且 $120$-code 之 $H$ **远比其他碎裂**（$38$ 分量 vs $4$–$8$）
+- 【**✗ ② 你 §4 为假**】实测 $\Sigma_z\binom{\mu(z)}2=\mathbf{398}$，而 $2P_2=2N_2^{cw}=298$ ✗；正确 $2(N_1{+}N_2)=2(50{+}149)=398$ ✓✓。**根因**：距离-1 之码字对（$50$ 对）的两个共同邻点 $=$ 那两个码字**自身**，亦计入 $\binom{\mu}{2}$ ⟹ 该量属**距离分布层**，非新量
+- 【**✗ ③ 你 §3 为假**】实测 $\Sigma_{z\in Q}r(z)=\mathbf{112}$（非 $|Y_2|=136$）；**精确修正**：$\boxed{\Sigma_{z\in Q}r(z)=|Y_2|-\#\{y:z(y)\in C\}=136-24=112}$ ✓（根因：$24/136$ 个 $z(y)$ 是**码字**，$\notin Q$）；$\Sigma_{z\in Q}\delta(z)=145$（实测）
+- 【**✓ ④ 碰撞量 $S$**】$d_H(c)$（$=G$ 之对角）分布 $\{0{:}14,1{:}18,2{:}38,3{:}23,4{:}26,5{:}1\}$，$\Sigma_c d_H(c)=272=2|Y_2|$；$\boxed{S=\Sigma_c\binom{d_H(c)}2=\mathbf{273}}$（C-S 下界 $173$ ✓）；恒等式 $\Sigma d_H^2=818=272+2\cdot273$ ✓；**$S/E$ 不恒定**（$0.922$ v.s. $1.663/1.685/1.588$）⟹ $S\not\propto E$ ✗
+- 【**★ ⑤ 一处新稳定比**】$|Y_2|/E$：$0.459,0.475,0.474,0.438$ ⟹ $\approx\mathbf{0.46}$ **稳定**（经验规律，非定理；若保持则 $M{=}106$ 时 $|Y_2|\approx65$）
+- 【**⑥ 判定**】$\text{rank}(A)=M-b(H)$（经典）＋ $\Sigma\binom{\mu}2=2(N_1{+}N_2)$（距离分布层）＋ $\Sigma_{z\in Q}r=|Y_2|-\#\{z(y)\in C\}$ ⟹ 你 §2 之 $\delta(z)$ 全局和**由既有账目决定** ⟹ **$\delta$-路线（含 $H$／秩／谱）落回经典**；$S$ 虽为真全局量但未建立 $E$-联系 ✗
+- 档：`docs/DERIVE-107-2026-09-29g-H-rank-formula-cross-code-and-the-three-identities-audit.md`
