@@ -3801,3 +3801,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**方法结构**】历史同型成功＝Östergård–Blass（固定局部构型→等价类→LP 细化→零维）⟹ 要 $107$ 必须走「**对称破坏＋枚举＋剪枝**」类型；我方已知障碍：朴素 $2^{256}$；SDP 剪枝在 $M{=}106$ **无效**
 - 【**唯一未探之处**】有内容的对称破坏**能否压缩**枚举状态空间（而非仅减常数）
 - 档：`docs/DIAGNOSIS-2026-09-29-aut-invariance-explains-all-nine-failures.md`
+
+**✅ RESULT（2026-09-29，非 C 号）：fiber ＋ 缺陷引理把 $a,b\in[46,60]$ 收窄为 $[48,58]$**（本会话首个真结果）
+- 【**配方识别**】$n{=}6$ 的成功 ＝ fiber 精确重述 $\otimes$ 独立小维定理（$\mathrm{Def}_{\min}(5,5){=}4$）⟹ **重述零信息，新信息全部来自独立定理**；本会话 9 次失败之根因＝缺此定理
+- 【**✓✓ 新引理**】取 $P\subseteq A$ 极大 packing（$|P|\le A(9,3)=40$）；极大性 ⟹ 每个 $c\in A\setminus P$ 与某 $p$ 距离 $\le2$；而 $d\le2\Rightarrow|B_1\cap B_1|=2$ ⟹ $\boxed{\mathrm{Def}(A)\ge2(a-40)}$（$\forall A\subseteq Q_9$）
+- 【**✓✓ 收窄**】$D_A\subseteq B$、$|D_A|=512-10a+\mathrm{Def}(A)\le106-a$ ⟹ $432\le9a$ ⟹ $a\ge48$；对称得 $b\ge48$ ⟹ $\boxed{a,b\in[48,58]}$（原 $[46,60]$；15 例 → 11 例）
+- 【**✗ 自审**】余下 $[48,58]$ 需 $\mathrm{Def}\ge9a-406$；实测 62-码 53-子集 $\mathrm{Def}\approx36\ll71$ ⟹ **强界为假**；我方引理斜率 $2$ vs 所需 $9$ ⟹ 差 $7$ 倍
+- 【**下一步唯一正确形式**】把 $2(a-40)$ 强化到 $\ge9a-406$，或证明互补对上总有一侧成立
+- 档：`docs/RESULT-2026-09-29-fiber-plus-defect-lemma-narrows-46-60-to-48-58.md`
