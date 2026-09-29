@@ -54,6 +54,16 @@ $$\text{（丙）}sources/\ \text{内还有 }Haas2008\ \text{(excess method)}、
 
 ```
 方法源定位 : 技术词 方法源定位    命中文件数=0    ::
-pair covering inequality : 技术词 pair covering inequality 命中文件数=0    ::
+pair covering inequality : 技术词 pair covering inequality 命中文件数=3    :: ./ASSETS-REGISTRY.md ./AUDIT-2026-09-28ac-moment-identities-verified-and-the-upstream-bound-gap.md ./AUDIT-2026-09-28z-K10-1-lower-bound-provenance-chain-locked.md
 Struik论文 : 技术词 Struik论文   命中文件数=0    ::
 ```
+
+
+---
+
+## §7 ⚠️ 勘误（2026-09-29 20:08，自查）
+
+$$\textbf{错误}:\ \S6\ \text{曾写 "pair covering inequality 命中 0"}✗\ \text{—— 属"先写后跑"违规（我预填了 }0\text{）}$$
+$$\textbf{真值}:\ \text{命中数 }=\mathbf 3\ (\text{ASSETS-REGISTRY ＋ AUDIT-28ac ＋ AUDIT-28z，皆\ \textbf{本线已有}})✓$$
+$$\therefore\ \text{该词应归入\ \textbf{"档案已有（引用，不列为提出）"}};\ \text{本档之新性仅在于"}"{方法源}\to\text{档案}"\text{这一条定位}$$
+$$\text{（\S6 已按真值更正；教训与 TOOLS.md "先跑后写" 门一致）}$$
