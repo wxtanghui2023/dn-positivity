@@ -3750,3 +3750,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**③ 副产品：合法 120-cover**】由截断的 $118$ 词补 $2$ 词得 $|C|{=}120$ 全覆盖 ⟹ $K(10,1)\le120$ **可重跑证书** ✓✓
 - 【**④ 判定**】承重前提乙实测弱 ⟹ 按唐先生顺序**不能继续跨 fiber 补洞** ⚠️
 - 档：`docs/AUDIT-2026-09-29zb-Q5xQ5-fiber-route-two-premises-tested.md`
+
+**✓ AUDIT-2026-09-29zc（非 C 号）：首个通过 P-b 的非 Delsarte 局部量 $S_c,S_x$ ＋ 120-cover 证书** ✓✓
+- 【**✓ 恒等式**】$2A_2=S_c+S_x$，$S_c=\sum_c\binom{s(c)}2$（码字端）、$S_x=\sum_{x\notin C}\binom{\mu(x)}2$（非码字端）；实测 $12$ 码全成立
+- 【**✓✓ P-b 预检通过（本会话首次）**】精确数据（无抽样）最小二乘于 $\{A_1..A_5,1\}$：残差 $=4.08>0$ ⟹ $S_c\notin\operatorname{span}\{A_1..A_5,1\}$ ⟹ **非 Delsarte 量**；机理＝$S_c$ 是 distance-1 图的**樱桃数**（不由边数/度序列决定）。⚠️ 仅排除 $A_1..A_5$
+- 【**✓✓ 证书存盘**】`sources/K10-1-120-cover-CERTIFICATE.txt`：$|C|{=}120$，覆盖 $1024/1024$ ✓ ⟹ $K(10,1)\le120$ **可重跑**
+- 【**下一步**】问 $M{=}106$ 是否被迫满足 $S_c/S_x$ 约束（$2A_2$ 固定 ⟹ 可能矛盾）；或用 120-cover 抽更多非 Delsarte 关系
+- 档：`docs/AUDIT-2026-09-29zc-first-non-Delsarte-local-quantity-and-the-120-cover-certificate.md`
