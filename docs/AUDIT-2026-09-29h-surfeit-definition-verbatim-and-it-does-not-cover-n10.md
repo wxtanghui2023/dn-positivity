@@ -40,7 +40,8 @@ $$\textbf{原文逐字}:\ "\text{We look into the cases when }n\text{ is a }\tex
 $$\textbf{摘要逐字}:\ "\text{When }n\text{ is a multiple of }6\text{, the best known lower bound is }\gamma(Q_n)\ge 2^n/n\ldots\text{we obtain }\gamma(Q_n)\ge\frac{(n-2)2^n}{n^2-2n-2}"$$
 $$\therefore\ \boxed{\text{其推导依赖 (1.9)（须 }3\mid n\text{）与 }6\mid n\text{ 之双法计算} \Longrightarrow n{=}10\ (\equiv4\bmod6)\ \textbf{不覆盖}}✗✗$$
 $$\textbf{且}:\ \text{其式在 }n{=}10\ \text{之数值}=\frac{8\cdot1024}{100-20-2}=\frac{8192}{78}=105.026\Rightarrow\mathbf{106}<107\ ——\ \text{即\ \textbf{即使}适用也不够}$$
-$$\therefore\ \boxed{\text{surfeit 线对 }n{=}10\ \textbf{封闭}}✓✓$$
+$$\therefore\ \boxed{\text{\textbf{Wu--Chen 之 surfeit contradiction \textbf{不覆盖} }n{=}10}$$
+$$\text{\textbf{措辞精度（唐先生令）}:\ "Wu--Chen 这套证明不适用"\ \ne\ "所有 surfeit 推导皆不可能" —— \textbf{后者不得主张} ✗$$
 
 ## §4 ④ 多码复核（**✓，含一处诚实标注**）
 
