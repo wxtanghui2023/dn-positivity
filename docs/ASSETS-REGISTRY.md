@@ -3872,3 +3872,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓**】$\sum_p m_p=2E_3(P)$（三边 $\leftrightarrow$ 距离-3 对，2 对 1）
 - 【**⚠️**】$u\le\sum_p f(m_p)$ 成立但被 $|Q|$ 截断；须再补 $E_3(P)$ 之下界方能发力
 - 档：`docs/RESULT-2026-09-29i-fj-exact-and-the-incidence-inequality.md`
+
+**⚠️ RESULT-j（2026-09-29，非 C 号）：$G_3(P)$ 度数集中（强规律）＋ 该路线被 $|Q|$ 截断之判定** ✗✓
+- 【**✓**】$m_p=\deg_{G_3(P)}(p)$ 确认；$\sum jn_j=2E_3(P)$
+- 【**✓✓ 强规律**】$n_0{+}n_1{+}n_2{+}n_3\le5$（实测 0–5，$|P|\approx23$–$28$）⟹ 度数集中在 $4$–$7$
+- 【**✗ 判定**】$u\le\sum f(j)n_j\approx2|P|\approx50\gg|Q|\approx25$ ⟹ 被 $|Q|$ 截断，**无新信息**；该子路线到不了 $u\le U$
+- 【**⚠️ 弱相关**】slice 成立组 $n_{0..3}$ 均值 $1.7$ vs 不成立 $2.7$（方向对，证据弱）
+- 【**slice 精确形式**】$|D_A|\le106-a\iff\mathrm{Def}(A)\le9a-406$；目标＝证 $2(A_1{+}A_2)-T>9a-406$
+- 档：`docs/RESULT-2026-09-29j-degree-concentration-and-why-this-route-is-capped.md`
