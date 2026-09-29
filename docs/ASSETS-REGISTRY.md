@@ -3665,3 +3665,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**④ 校准答案（对唐先生核心问题）**】机制层 **✓ 可拆**（且已判定 LP 非承重、枚举承重）；实现层 **✗ 不可复现**（枚举与最优构造皆不能）⟹ 此前九支线之失败**不是"机制理解错误"，而是实现（枚举/构造）能力不足**；对 $107$ 之推论：$106$ 不可能之证须**枚举型**，而枚举恰为我方短板 ⟹ 应**换手段**（增强枚举/剪枝）而非继续找不等式
 - 【**⑤ 下一步**】A：改进构造搜索（ILP／置换群约化）以求 $62$ certificate；B：实现「纤维细化 ＋ LP 剪枝」原型以求 $M\le61$ 不可行性；C：接受校准结论并存档（不占 C 号；未用 SAT/CP-SAT ✓）
 - 档：`docs/CALIBRATE-K91-2026-09-29-fiber-LP-family-and-the-construction-gap.md`
+
+**📉 CALIBRATE-K9-b（2026-09-29，非 C 号）：$r{=}1$ 第二层仍可行；线性局部账目层**结构封顶**于 $52$；转入有限类型层** ✓
+- 【**✓ ① 逻辑纠正（我撤回越界表述）**】已证者仅为「**固定 $r$ 的纤维一阶 LP** $\Rightarrow10M\ge512\Rightarrow M\ge52$（与 $r$ 无关）」；**不含**"$57\to62$ 不可能来自任何 LP／线性不等式"✗；正确版：**$57\to62$ 不能仅靠一阶纤维 LP 得到** ✓；更强的 LP 可编码**整数性／子空间兼容／不等价分支／局部结构**
+- 【**✓ ② $r{=}1$ 精确结构**】$\mathbb F_2^9=\mathbb F_2^8\times\mathbb F_2$，$A{=}\{y:(y,0)\in C\}$、$B{=}\{y:(y,1)\in C\}$ ⟹ 覆盖 $\iff\boxed{N_1(A)\cup B=\mathbb F_2^8\ \wedge\ N_1(B)\cup A=\mathbb F_2^8}$（**精确重述**）；第一层 $256\le9a+b,\ 256\le a+9b\Rightarrow M\ge52$
+- 【**✓ ③ 第二层实验（11/11 可行）**】变量 $a,b,T_0^{(j)},T_1^{(j)}$，约束 $a{+}b{=}M$、$\Sigma T{=}256$、$T^{(0)}{=}0$、$\Sigma jT_0^{(j)}{=}9a{+}b$、$\Sigma jT_1^{(j)}{=}9b{+}a$ ⟹ **$M{=}52..62$ 全部可行** ⟹ 加入 fiber 内 multiplicity profile **不产生 gap**（二阶一致性 $\Sigma\binom j2T^{(j)}=$ pair-overlap 依赖码字距离结构，**不可闭式给出**）
+- 【**✓✓ ④ 结构性封顶（本档最重要）**】$256=|N_1(A)\cup B|=|N_1(A)|+|B|-|\cap|\le|N_1(A)|+b$，而 $|N_1(A)|\le9a$；**用精确 $|N_1(A)|$ 只会让 $b$ 下界变小 ⟹ 更弱** ⟹ 该层可用的**最强**界就是 $9a\Rightarrow$ 球界 $52$ —— **方向性论证，非技术不足**
+- 【**⑤ 下一步**】按执行顺序：fiber LP → local multiplicity LP → **finite local types** → compatibility enumeration → $M\le61$ 不可行性；局部类型 $\tau(F)=(\text{weight dist},\text{internal distances},\text{boundary coverage},\text{multiplicity profile})$；**双侧 benchmark 须分开**：上界 $62\le K(9,1)\le\mathbf{66}$（我方 remove-and-repair），下界 $M\le61\stackrel{?}{\Rightarrow}\bot$
+- 档：`docs/CALIBRATE-K91-2026-09-29b-linear-local-layer-closed-and-finite-type-entry.md`
