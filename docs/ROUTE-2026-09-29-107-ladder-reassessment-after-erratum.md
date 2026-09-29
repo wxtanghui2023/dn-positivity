@@ -14,13 +14,14 @@ D1: 0（产出 = 路线重估 ＋ 一张可用等式/不等式清单 ⚠️✓�
 $$\boxed{\text{已撤回}:\ N_{\le2}\ge\Sigma\delta\ \text{（}M{=}106\Rightarrow142\text{）};\quad \text{正确}:\ N_{\le2}\ \ge\ \tfrac12\Sigma\delta\ \text{（}M{=}106\Rightarrow\mathbf{71}\text{）}}$$
 $$\therefore\ \mu_{\max}\ge4\ \text{之推论作废；「一格缺口」为假象，真缺口}\approx\mathbf{72}\ (N_{\le2}\ \text{单位})\ ✗$$
 
-## §2 复现阶梯（**按序爬**，逐级可判定）
+## §2 复现阶梯（**勘误两次后之正确版**）
 
-$$94\ (\text{球界})\ \checkmark\ \to\ 103\ (\text{van Wee},\ \checkmark\ \text{已自推})\ \to\ \mathbf{105}\ (\text{Zhang--Lo 三重层},\ \textbf{缺})\ \to\ \mathbf{107}\ (\text{BÖW 混合框架},\ \textbf{缺})$$
+$$94\ (\text{球界})\ \checkmark\ \to\ 103\ (\text{van Wee},\ \checkmark\ \text{已自推})\ \to\ \mathbf{106}\ (\text{SDP-3}=105.2223,\ \checkmark\ \textbf{我方最强可实现的在下界})\ \to\ \mathbf{107}\ (\text{BÖW 混合框架},\ \textbf{唯一缺口})$$
 
-$$\boxed{\text{⚠️ 对我 22:2x 说法的更正}:\ \text{「甲」（三重层）\ \textbf{不自动直接给 }107}$$
-$$\text{文献谱系（档案）}:\ \text{van Wee}\to103\ \text{（已自推）};\ \text{Zhang 1991 \textbf{pair}}\to105\ \text{（我方 R02 已封 ⟹ 未复现）};\ 107\ \text{出自 BÖW 2004 \textbf{混合框架}}$$
-$$\therefore\ \text{甲（三重层）之 \textbf{最近检查点} = \text{排除 }M{=}104\ (\Sigma\delta{=}120)\Longrightarrow K\ge105;\ \text{能否越过 105 \textbf{待算}，\textbf{不得预设}}⚠️$$
+$$\boxed{\textbf{❗ 我 22:4x 之错}：\text{把目标写成"排除 }M{=}104\ (\Rightarrow105)"\ \textbf{是回退} ✗}$$
+$$\text{依据（唐先生约束 2，逐字）}：\text{「\textbf{不回退 }103\to105\to106（已完成资产）; \textbf{当前唯一缺口 = }106\to107」}$$
+$$\therefore\ \text{105（Zhang pair）在我方\ \textbf{低于已在手的 106} \Longrightarrow \textbf{不爬}、仅作技术来源 ⚠️}$$
+$$\boxed{\text{唯一正确目标}：\textbf{排除 }M{=}106\ (\Sigma\delta{=}142)\ \Longrightarrow\ K\ge107\ \Longleftrightarrow\ \text{复现 }107}$$
 
 ## §3 可用等式/不等式清单（**本档汇总，全部已核**）
 
@@ -41,11 +42,11 @@ $$\text{因 } E=11M-1024\ \text{是\ \textbf{恒等式}}\ \Longrightarrow\ \text
 $$\Longrightarrow\ \text{必须给出一套\ \textbf{多量联立}（}M,\ N_{\le2},\ A_2,\ P,\ E,\ \mu\text{-剖面}）\text{，并使该系统在 }M{=}106\ \text{处\ \textbf{不可行}}$$
 $$\text{且因 }E\ \text{被 }M\ \text{锁定}，\text{任何"强制 excess"路线都需\ \textbf{在 }M\ \text{的特定值上扣}——这与 }AUDIT\text{-}29x\ \text{的"逆趋势"结论一致}\ ⚠️$$
 
-## §5 下一步（可执行，按序）
+## §5 下一步（可执行）
 
-- **S1（甲·第一级）**：用 F4/F8 ＋ F5 求 $\Sigma_x\binom{\mu}3$ 之**两侧夹逼**，目标先**排除 $M{=}104$** ⟹ $K\ge105$
+- **S1（甲·唯一目标）**：用 F4/F8 ＋ F5 求 $\Sigma_x\binom{\mu}3$ 之**两侧夹逼**，**直接排除 $M{=}106$** ⟹ $K\ge107$ ✓（**不回退：不从 104/105 绕** ✗）
 - **S2**：把 F5 强化为 $P\le2A_2-\Theta$（$\Theta$＝共同邻点非码字之双计数），再回代 F4
-- **S3**：$M{=}106$ 级（⟹107）须引入**混合/短化框架**（BÖW 型），**非**三重层所能及 ⚠️；须先做完 S1/S2 再评估
+- **S3**：若 S1 两侧夹逼**不足**（$\Sigma_x\binom{\mu}3$ 之上下界不交叉），则须引入**混合/短化框架**（BÖW 型）作为增援层 ⚠️
 
 ## §6 边界（硬 ✓）
 
