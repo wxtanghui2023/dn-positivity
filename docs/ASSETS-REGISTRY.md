@@ -3826,3 +3826,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✗ 被否构造（诚实记录）**】$A=P\cup L_1$ 塌缩（$L_1$ 含 packing 自身，$m_P(p){=}1$ 平凡）⟹ 正确问题＝**非 packing** 私有点 $N_1^*(P):=\#\{x\notin P:m_P(x){=}1\}$ 之容量
 - 【**下一目标**】证 $2(A_1+A_2)-T>9a-406$ 对某 $a$ 必成立（或互补对上必成立）
 - 档：`docs/RESULT-2026-09-29c-exact-two-source-identity-and-the-L1-question.md`
+
+**⚠️ RESULT-d（2026-09-29，非 C 号）：fiber 净收益公式 $\frac{(j-1)(j+2)}2$ 实测成立；我的"修正"被推翻撤回** ✗✓
+- 【**✗ 我的修正作废**】$\sum(2r_x-1)$ 仅 $32/50$ 成立（反例 $a{=}50$：$F{-}F(P){=}75<81$）
+- 【**✓✓ 唐先生原式**】$\sum_{x\in L}\frac{(r_x-1)(r_x+2)}2$ **$50/50$ 成立**
+- 【**我之错因**】误把 $T$-成本写成 $\binom{r_x-1}2$；$x\in L\Rightarrow\mu_A{-}1=r_x\Rightarrow$ 成本 $=\binom{r_x}2$
+- 【**✓ 定义滑动提醒**】$\S2$ 用**距离-1 私有**，上轮 $N_1^*$ 用 $B_2$ 私有 —— 须固定其一
+- 【**数据**】62-码 $53$-子集：$|P|{=}27,|Q|{=}26,F(A){=}78>71$（纤维上限）⟹ 纤维条件**有约束力**（启示性）
+- 档：`docs/RESULT-2026-09-29d-private-fiber-formula-verified-withdrawing-my-correction.md`
