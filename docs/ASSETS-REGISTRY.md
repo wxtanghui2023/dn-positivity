@@ -3794,3 +3794,10 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**实测（45 种 $F_4$-坐标选择）**】$\Sigma_u\delta_u\in[94,120]$（最紧：空 cell $142$、单点 $108$、双点 $6$）；相邻容量 $\approx8\times$码字数 ⟹ **松弛巨大** ✗；一阶计数仍 $11M\ge1024$（球界）
 - 【**判定**】类 2（真但弱）⟹ **第 9 条候选死**；断层（整性压缩）未被跨过
 - 档：`docs/AUDIT-2026-09-29zf-F4-cell-antipodal-forcing-tested-and-weak.md`
+
+**🧭 DIAGNOSIS（2026-09-29，非 C 号）：Aut-不变性解释全部 9 次失败；下一步形式＝有内容的对称破坏** ✓
+- 【**诊断**】松弛族（Delsarte LP／SDP-3 Terwilliger／Habsieger 同余）**全部 $\operatorname{Aut}(Q_{10})$-不变**；而 $107$ 由**具体**覆盖达成且 $107>105.2223$ ⟹ 间隙 ＝ **整性/非对称间隙** ⟹ **Aut-不变论证结构上不可能跨过**
+- 【**9 条判定**】$7/9$ 为 Aut-不变（$\mu,P_j$、parity、$\Lambda$、face、$S_c$、$n_0$）⟹ **必然**不越 $105.2223$；$2/9$ 破坏对称但**无内容**（固定坐标）⟹ 反退化到球界 $94$
+- 【**方法结构**】历史同型成功＝Östergård–Blass（固定局部构型→等价类→LP 细化→零维）⟹ 要 $107$ 必须走「**对称破坏＋枚举＋剪枝**」类型；我方已知障碍：朴素 $2^{256}$；SDP 剪枝在 $M{=}106$ **无效**
+- 【**唯一未探之处**】有内容的对称破坏**能否压缩**枚举状态空间（而非仅减常数）
+- 档：`docs/DIAGNOSIS-2026-09-29-aut-invariance-explains-all-nine-failures.md`
