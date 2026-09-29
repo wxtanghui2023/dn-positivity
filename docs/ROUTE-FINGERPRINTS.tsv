@@ -14,3 +14,8 @@ R12	(逐-?q|敌意关系|tau_q|τ_q)	REFUTED-300-of-576	docs/RESULT-2026-09-29l
 R13	(度数集中|G_3\(P\).*度数|n_0.*n_3.*压缩)	CAPPED-BY-|Q|	docs/RESULT-2026-09-29j
 R14	(119.*直接|直接.*119|119 案)	LINE-ALREADY-ATTACKED	docs/119-ATTACK-R1-2026-09-27
 R15	(SDP.*升阶|更高阶 SDP|Lasserre.*更高)	DEAD-BY-AUTHORS	docs/AUDIT-2026-09-29d
+R16	(转录公式|取.*正文|抄.*公式|搬到公式|OCR 转录|拿到.*论文|论文.*拿)	FORBIDDEN-BY-OPERATOR	唐先生多次令: 论文不可得
+R17	(找.*B[ÖO]W|找.*Zhang.*原文|Habsieger.*原文|求.*付费墙|open.?access.*covering)	FORBIDDEN-BY-OPERATOR	同上
+R18	(三点构型.*独立|orbit 族.*独立|rank 增量)	INDEP-但顺单调-不咬小M	docs/HANDOVER-2026-09-29-2130
+R19	(priv.*逆单调|私有点.*界|逐码字 priv)	BLOCKED-BY-|A|-le-Sigma-delta	docs/HANDOVER-2026-09-29-2130
+R20	(反复.*103|回退.*103|重算.*103)	FORBIDDEN-BY-OPERATOR	唐先生 2026-09-29 本轮
