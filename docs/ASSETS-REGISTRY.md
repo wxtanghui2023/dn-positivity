@@ -3894,3 +3894,9 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓✓ 重述**】$F(A)=10a-512+|D_A|$ ⟹ $F(A)>9a-406\iff\boxed{|D_A|>106-a}$（恰为 slice 条件之取反；不可再约）
 - 【**滑位提醒**】$2E=\sum_q r_q$ 不成立（$E$ ＝全部近邻对；$R=\sum r_q$ ＝incidence）
 - 档：`docs/RESULT-2026-09-29l-per-q-hostility-refuted-and-the-DA-restatement.md`
+
+**⚠️ RESULT-m（2026-09-29，非 C 号）：$L(p)\equiv0$（硬检查否掉提案）；得精确过剩分解** ✗✓
+- 【**✗ $L(p)\equiv0$**】$P$ 是 3-packing ⟹ 半径 1 球互不相交 ⟹ $p_x\in\{0,1\}$ ⟹ $\sum(p_x-1)_+=0$（实测 $20/20$）；$p>40$ 时 packing 不存在
+- 【**✓✓ 精确分解**】$\mathrm{Def}(A)=\sum_{x\in N_1(P)}q_x+\sum_{x\notin N_1(P)}(q_x-1)_+$（实测 $20/20$）
+- 【**量级**】$a{=}53$：part1$=68$、part2$=11$、$\mathrm{Def}{=}79>71$ ⟹ 过剩 **86% 来自 $Q$ 撞 $P$**，敌人是 $Q$
+- 档：`docs/RESULT-2026-09-29m-Lp-is-identically-zero-and-the-exact-excess-split.md`
