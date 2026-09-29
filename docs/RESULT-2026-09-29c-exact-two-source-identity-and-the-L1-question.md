@@ -43,7 +43,7 @@ $$\therefore\ \text{正确问题}:\ \#\{x\notin P:\ m_P(x)=1\}\ \text{之容量�
 
 ## §5 下一目标（修正版）
 
-$$\boxed{\text{求 }N_1^*(P):=\#\{x\in Q_9\setminus P:m_P(x)=1\}\ \text{之容量界};\ \text{并计 }A\setminus P\ \text{内部对数}$$
+$$\therefore\ \text{须证}:\ 2(A_1+A_2)-T\ >\ 9a-406\ \text{对某 }a\ \text{成立，或互补对上总有一侧成立}$$
 $$\text{工具}:\ \S1\ \text{恒等式}:\ \mathrm{Def}=2(A_1+A_2)-T;\quad \text{纤维条件}:\ \mathrm{Def}\le9a-406$$
 $$\therefore\ \text{须证}:\ 2(A_1+A_2)-T\ >\ 9a-406\ \text{对某些 }a\ \text{必成立（或互补对上必成立）}$$
 
