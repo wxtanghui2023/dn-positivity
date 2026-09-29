@@ -15,7 +15,7 @@ D1: 0（产出＝**一否证 ＋ 一精确分解 ＋ 一量级数据** ⚠️✓
 $$\boxed{\text{① ✗ }L(p)\equiv0:\ P\ \text{packing}\Rightarrow B_1(p)\ \text{互不相交}\Rightarrow p_x\in\{0,1\}\Rightarrow\Sigma(p_x-1)_+=0}$$
 $$\boxed{\text{② ✗ }p>A(9,3)=40\ \text{时 packing 不存在}⟹\ L(p)\ \text{无定义（非零）}}$$
 $$\boxed{\text{③ ✓✓ 精确分解}:\ \mathrm{Def}(A)=\sum_{x\in N_1(P)}q_x+\sum_{x\notin N_1(P)}(q_x-1)_+\ (\text{实测 }20/20)}$$
-$$\boxed{\text{④ 量级（}a{=}53）：\text{part1}=68,\ \text{part2}=11,\ \mathrm{Def}=79>71\ ⟹\ \textbf{过剩几乎全来自 }Q\ \text{撞 }P}}$$
+$$\text{② }p>A(9,3)=40\ \text{时 packing 不存在}\ \Longrightarrow\ L(p)\ \text{无定义}\ ✗$$
 
 ## §1 $L(p)\equiv0$（✗ 硬检查否掉提案）
 
