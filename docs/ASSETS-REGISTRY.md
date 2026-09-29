@@ -3453,3 +3453,11 @@ $$\Longrightarrow\ |\bigcup S_z|=\Sigma-L\le|E|+1-4=|E|-3<|E|\ \Longrightarrow\ 
 - 【**✓ ④ 多码复核**】$\sum\binom\delta2=2(N_1{+}N_2)-E$ 与 $H+\sum_C\binom{1+d_1}2=2U_2$ 在 120-code／贪心-0／贪心-3 上**全 True**；**诚实标注**：全偶重码行之第一式 "False" 系**我把对计数截断在头 400 个码字（$M{=}512$）所致，非恒等式失败**（我的实现缺陷）
 - 【**⑤ 已归档**】`sources/Wu-Chen-2024-arXiv2203.16901-FULLTEXT.txt`
 - 档：`docs/AUDIT-2026-09-29h-surfeit-definition-verbatim-and-it-does-not-cover-n10.md`
+
+**📕 AUDIT-2026-09-29i（非 C 号）：一手确认 —— van Lint–van Wee Thm 5 在 $R{=}1$ **就是** van Wee Thm 16；$(0,10,1)$ 给 **103**；$M{=}106$ 余量 **360**** ✓
+- 【**✓✓ ① 免费一手全文**】`sources/vanWee-1991-thesis-TUe-353803.pdf`（$8{,}278{,}815$ B，$220$ 页，有文本层；来源 `pure.tue.nl/ws/files/1995874/353803.pdf`，**免费**；ScienceDirect 反 $403$ ✗）；目录逐字：Paper 5（$q$-ary/mixed，p.84）、**Paper 6 "Generalized Bounds on Binary/Ternary Mixed Packing- and Covering Codes"（p.101）**
+- 【**✓✓ ② 等价链逐字**】论文引言："In a joint work with J.H. van Lint, Jr., **Theorem 16 is generalized for all covering radii $R$** (see [19, Theorem 5])" ⟹ **Thm 5 $\big|_{R=1}$ ≡ Thm 16**；**Theorem 16 逐字（p.97）**：$|C|\ge\frac{(2t+b)3^t2^b}{(2t+b)(1+2t+b)-b}$（$b$ 偶）；$(t,b)=(0,10)$：$\frac{10\cdot1024}{110-10}=102.4\Rightarrow103$ ✓
+- 【**✓✓ ③ 机制逐字**】条件 $(2t+b-R)P(M)\ge Q(M)$，$P(M){=}MV(t,b,R)-3^t2^b$，$Q(M){=}L+\sum_{j=1}^{j^*-1}(j-1)L_j+(j^*-1)(\sum_{j=1}^{R}L_j-P(M))$；**LEMMA 6**（若 $M$ 满足则 $M{+}1$ 亦满足）⟹ $M_0$ 由二分法确定。于 $(0,10,1)$：$\tau_0{=}1,\tau_1{=}0$（两类），$j^*{=}1\Rightarrow Q{=}L{=}1024{-}M$ ⟹ $9E\ge1024-M\Rightarrow100M\ge10240\Rightarrow M\ge102.4\Rightarrow\boxed{103}$ ✓✓（唐先生 $882<922$、$981\ge921$ **逐位相符**）
+- 【**★ ④ 余量否证**】$M{=}106$：$E{=}142$，$L{=}918$，$9E{=}1278$ ⟹ **余量 $\mathbf{360}$** ⟹ 该框架**逼不出任何单位** ✗ ⟹ 须把 $9$ 因子提到 $\ge12.7$ 或引入**独立新量**（而可实现算术族上确界 $\approx103$–$104$，level-3 SDP $=105.2223\Rightarrow106$）
+- 【**⑤ 分层账（定稿）**】sphere $94$ ／ **mixed generalized bound（van Wee Thm 16 ≡ van Lint–van Wee Thm 5）$=\mathbf{103}$（本档一手确认）** ／ Habsieger parity（同层，$\varepsilon{=}1$，实测全中）／ Wu–Chen surfeit（$n{=}10$ **不适用**）／ **目标 $107$ 未达** ⟹ **mixed 广义界线对 $n{=}10$ 封闭且只给 $103$；$107$ 不在该框架内**
+- 档：`docs/AUDIT-2026-09-29i-vanLint-vanWee-Thm5-equals-Thm16-gives-103-slack-360.md`

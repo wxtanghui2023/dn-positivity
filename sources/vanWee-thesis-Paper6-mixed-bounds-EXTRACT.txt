@@ -1,0 +1,503 @@
+
+===== PDF p103 =====
+96 PACKINGS AND COVERINGS BY SPHERES 
+3) We list the improvements by Theorem 14 on Table 1 of [20) in the follow­
+ing corollary. The old lower bounds, all established by the sphere covering 
+bound, are given in brackets. 
+COROLLARY 15. 
+K3(8, 1)~ 390 (386) 
+K3(9, 1)~ 1043 (1036) 
+K3(11, 1)~ 7736 (7703) 
+K3(12, 1)~ 21329 (21258) . 
+V. BINARY/TERNARY MIXED CODES 
+In this final section we assume that H = D"~ D"~. Coverings of these 
+spaces H have an obvious practical importance for football pools. Through the 
+last decades many interesting covering codes were found by Finnish football 
+pool fans, and often published in Finnish magazins. Also, a recent work of 
+Hämäläinen and Rankinen [8] is concerned with this matter. They included a 
+table with lower and upper bounds on covering codes in H. 
+It is not immediately clear how methods like those in Section m can be 
+used in the case H = D"~ D"~. Here, we treat only the special case of 1-coverings 
+in detail (1beorem 16). By this example we hope to illustrate in a clear and 
+comprehensive way how the idea of counting excess on spheres can be applied. 
+For R > 1 things become much more complicated. In a joint work with J.H. van 
+Lint, Jr., Theorem 16 is generalized for all covering radii R (see [19, Theorem 
+5)). 
+The situation for packings is quite different. We leave it as an easy excer­
+cise to derive Theorem 17 by altering the proof of Theorem 16. In contrast with 
+the situation for coverings, here no extra difficulties arise when one tries to gen­
+eralize for all packing radii e. We refer the reader for the general bound (which 
+includes Theorem 17) to [19, Theorem 9). 
+Theorem 16 and its generalization [19, Theorem 5) give various improve­
+ments on the lower bounds in [8, Table I], which were all computed using the 
+sphere covering bound (1). In [19) we present a new table with lower bounds on 
+===== PDF p104 =====
+PACKINGS AND COVERINGS BY SPHERES 97 
+coverings (and upper bounds on packings). We do not give the computed values 
+of 1beorems 16 and 17 here. but simply refer to that table (the column 
+e=l,R=l). 
+a) 
+b) 
+THEOREM 16. Let C be a code in H with CR (C) = 1. Then 
+(2t+b)3 126 
+1 C 1 ~ if b is even, (2t+b )(1 +2t+b )-b 
+(2t+b)3126 
+1 C 1 > if b is odd. - (2t+b)(1+2t+b}-2t 
+PROOF. a) Let A' denote the set of words in H that are equal toa code· 
+word or can be obtained from a codeword by changing one temary coordinate. 
+PutA :=H\A'.Letae A. Then IB 1(c)"B 1(a)I e {0.2} forallce C. Since 
+1B 1(a)1 = 1 + 2t + bis odd, B 1 (a) " Z * 0. Therefore 
+A ~ v B1(z) . 
+:r.eZ 
+But then also 
+Wegel 
+3126 -ICI (1+2t)S IAIS IZI (1+2t+b-2)S 
+s ( 1 c 1 (1 + 2t + b) - 312b)(2t + b - 1) ' 
+and a) follows. 
+b) In this case let A' denote the set of words in H that are equal toa codeword or 
+can be obtained from a codeword by changing one binary coordinate. Again we 
+put A := H\A'. Suppose a e A. Then there is ace C which differs from a in 
+exactly one coordinate, which is ternary. We have IB 1(c)"B 1 (a)I = 3. If 
+aé Z, then IB 1(b)"B1(a)I e {0,2} for all be C\{c}. Since 
+IB 1(a)I =1+2t+b is even, B 1(a)(JZ;it:0. If ae Z, then again 
+B 1 (a) " Z * 0. The rest of the proof is similar to the corresponding part of the 
+proofofa)(use IA 1:t!312b -- IC 1 (1 +b)here). 
+Theorem 16 generalizes Corollary la of (32]. It is always at least as good 
+as the sphere covering bound. 
+This last statement also holds for Theorem 17, compared to the sphere 
+packing bound. 
+===== PDF p105 =====
+98 PACKINGS AND COVERINGS BY SPHERES 
+THEOREM 17.LetC be acode inH with PR(C)= 1. Theo 
+a) (2t+b)3'2b 
+IC 1 S (2t+b)(l+2t+b)+b if bis even, 
+b) ' (2t+b)3'2b 
+IC 1 s (2t+b)(1+2t+b)+ 2t ifbisodd. 
+REFERENCES 
+1. A. Blokhuis and C.W.H. Lam, More coverings by rook domains, J. Com­
+bin. Theory A 36 (1984), 240-244. 
+2. W.A. Carnielli, On covering and coloring problems for rook domains, 
+Discr. Math. 57 (1985), 9-16. 
+3. W. Chen and I.S. Honkala, Lower bounds for q-ary covering codes, IEEE 
+Trans. lnform. Theory 36 (1990), 664-671. 
+4. G.O. Cohen, A.C. Lobstein and N.J.A. Sloane, Further results on the cov­
+ering radius of codes, IEEE Trans. Inform. Theory 32 (1986), 680-694. 
+5. T.J. Dickson, On a covering problem conceming abelian groups, J. Lon­
+donMath. Soc. (2) 3 (1971), 222-232. 
+6. H. Femandes and E. Rechtschaffen, The football pool problem for 7 and 8 
+matches, J. Combin. Theory A 35 (1983), 109-114. 
+7. S.W. Golomb and E.C. Posner, Rook domains, latin squares, affine planes, 
+and error-distributing codes, IEEE Trans. Inform. Theory 10 (1964), 196-
+208. 
+8. H.O. Hämäläinen and S. Rankinen, Upper bounds for football pool prob­
+lems and mixed covering codes, J. Combin. Theory A 56 (1991), 84-95. 
+9. l.S. Honkala, Lower bounds for binary covering codes, IEEE Trans. 
+Jnform. Theory 34 (1988), 326-329. 
+10. ------, Modified bounds for covering codes, submitted to IEEE Trans. 
+lnform. Theory. 
+11. I.S. Honkala and H.O. Hämäläinen, A new construction for covering 
+codes, IEEE Trans. Jnform. Theory 34 (1988), 1343-1344. 
+12. J.G. Kalbfteisch and R.G. Stanton, A combinatorial problem in matching, 
+J. London Math. Soc. ( 1) 44 (1969), 60-64, and (2) 1 (1969), 398. 
+===== PDF p106 =====
+PACKINGS AND COVERINGS BY SPHERES 99 
+13. J.O. Kalbfteisch, R.O. Stanton and J.D. Hotton, On covering sets and 
+error-correcting codes,/. Combin. Theory A 11(1971),233-250. 
+14. J.O. Kalbfteisch and P.H. Weiland, Some new results for the covering 
+problem, in "Recent Progress in Combinatorics" (W.T. Tutte, ed.), Proc. 
+3rd Waterloo Conf. Combinatorics 1968, Academie Press, New Yott.. 
+1969. 
+15. H.J.L. Kamps and J.H. van Lint, A covering problem, in "Combinatorial 
+Theory and lts Applications" (P. Erdös et al., Eds.), pp. 679-685, Collo­
+quia Mathematica Societatis János Bolyai, Vol. 4, North-Holland, 
+Amsterdam/New York, 1970. 
+16. ------, The football pool problem for 5 matches. J. Combin. Theory 3 
+(1967), 315-325. 
+17. P.J.M. van Laamoven, E.HL. Aans, J.H. van Lint and L.T. Wille, New 
+upper bounds for the football pool problem for 6, 7 and 8 matches, J. 
+Combin. Theory 52 (1989), 304-312. 
+18. J.H. van Lint Jr., Covering radius problems, Master's Thesis, Eindhoven 
+University ofTechnology (June 1988). 
+19. J.H. van Lint, Jr., and O.J.M. van Wee, Oeneralized bounds on 
+binary/temary mixed packing- and covering codes, J. Combin. Theory A 
+56 (1991). 
+20. A.C. Lobstein and G.J.M. van Wee, On nonna! and subnormal q-ary 
+codes, IEEE Trans. /nform. Theory 35 (1989), 1291-1295, and 36 (1990), 
+1498. 
+21. G. Losey, Note on a theorem of Zaremba, J. Combin. Theory 6 (1969), 
+208-200. 
+22. E. Mattioli, Sopra una panicolare proprietà dei gruppi abeliani finiti, Ann. 
+Sc. Norm. Sup. Pisa (3) 3 (1950), 59-65. 
+23. J.G. Mauldon, Covering theorems for groups, Quart. J. Math. Oxford (2) 1 
+(1950), 284-287. 
+24. E.R. Rodemich, Coverings by rook domains, J. Combin. Theory 9 (1970), 
+117-128. 
+25. R.G. Stanton, Covering theorems in groups {or: How to win at football 
+pools), in "Recent Progress in Combinatorics" (W.T. Tutte, ed.), Proc. 3rd 
+Waterloo Conf. Combinatorics 1968, Academie Press, New York, 1969. 
+26. R.G. Stanton, J.D. Horton and J.G. Kalbfleisch, Covering theorems for 
+vectors with special reference to the case of four and five components, J. 
+London Math. Soc. (2) 1(1969),493-499. 
+===== PDF p107 =====
+100 PACKINGS AND COVERINGS BY SPHERES 
+27. R.G. Stanton and J.G. Kalbfteisch, Covering problems for dichotomized 
+matchings, Aequat. Math. 1 (1968), 94-103. 
+28. ------, lntersection inequalities for the covering problem, SIAM J. Appl. 
+Math. 17 (1969), 1311-1316. 
+29. 0. Taussky and J. Todd, Covering theorems for groups, Ann. Soc. Pol. 
+Math. 21 (1948), 303-305. 
+30. ------, Some discrete variable computations, in "Proceedings of Symposia 
+in Applied Mathematics", Vol. 10, pp. 201-209, Amer. Math. Soc., Provi­
+dence, R.I., 1960. 
+31. E.W. Weber, On the football pool problem for 6 matches: a new upper 
+bound,J. Combin. TheoryA 35 (1983), 106-108. 
+32. G.J.M. van Wee, Improved sphere bounds on the covering radius of codes, 
+IEEE Trans. Jnform. Theory 34 (1988), 237-245. 
+33. L.T. Wille, The football pool problem for 6 matches: a new upper bound 
+obtained by simulated annealing, J. Combin. Theory A 45 (1987), 171-177. 
+34. S.K. Zaremba, A covering theorem for abelian groups, J. London Math. 
+Soc. 26 (1950), 71-72. 
+35. ------, Covering problems conceming abelian groups, J. London Math. 
+Soc. 27 (1952), 242-246. 
+===== PDF p108 =====
+JOURNAL OF COMBINATORIAL THEORY, Series A 56, (1991) 
+GENERALIZED BOUNDS ON BINARYfl'ERNARY MIXED 
+PACKING-AND COVERING CODES 
+J.H. van Lint, Jr., and G.J.M. van Wee* 
+Eindhoven University of Technology 
+Department of Mathematics and Computing Science 
+P.O. Box513 
+5600 MB Eindhoven 
+The Netherlands 
+ABSTRACT 
+We derive lower bounds on R-coverings and upper bounds on e-packings 
+of IF~ JFt These bounds are generalizations of the bounds for the cases 
+R = l, e = 1 or t = 0 or b = 0, which were already derived in a paper by the 
+second-named author. The present work. is a supplement to that paper. The com­
+puted results fort+ b s 13 and R, es 3 are collected in a table. 
+0097-3165/91 $3.00 
+Copyright © 1991 by Academie Press. Ine. 
+All righ1s of reproduclion in any form rescrved. 
+* Tuis research was supported by the Netherlands organization for scientific research (NWO). 
+101 
+===== PDF p109 =====
+102 BINARY /TERNARY MIXED CODES 
+1. INTRODUCTION 
+One of the goals of [5] was to illustrate that the ideas of [6] can also be 
+successfuUy applied to mixed codes. In Section V of [5] a lower bound on 1-
+coverings of IF~ IF~ was derived. Tuis paper may be seen as a supplement to 
+that section of [5]. We generalize Theorem 16 of [5] toa bound which holds for 
+all covering radii R (lbeorem 5). The proof of [5. Theorem 16] could be kept 
+short and easy. For R > 1, however. one meets several complications. Although 
+Section IIA might look rather technical. we hope to have put things in a readable 
+way. 
+So far about coverings. As was mentioned in [5, Section V], the situation 
+for packings is quite different. Theorem 17 of [5] already dealt with 1-packings. 
+Without any real difficulty. this bound can be generalized to a bound for all 
+packing radii e. We fulfil this task in Section IIB (lbeorem 9). 
+We assume that the reader is familiar with [5. especially Sections 1, II and 
+V], and we shall use the same notation and terminology. In addition. we shall 
+denote the number of words in a sphere with radius r in H := IF~ IF~ by 
+V(t, b, r) (as in [1]). Hence 
+V(t, b, r)= ~;t ~l 21 [l~Jl , 
+(with the convention that [:] = 0 lf k >nor k < 0). 
+Also, in [ l} the notation 
+K (t, b, R) := min { 1 C 1 1 0 ~ C 1;; H. CR ( C) = R} 
+wasused. 
+The computed values for n = t + b s; 13 of the bounds that we derive in 
+Section Il, are assembled in Table 1 in Section III. This table contains many 
+improvements on the tables in [l] and [3]. 
+Many of our results were already presented in [2]. 
+===== PDF p110 =====
+BINARY /TERNARY MIXED CODES 103 
+II. THE BOUNDS 
+In this paper (except in the Appendix) we are dealing with the case 
+H = F~ F~. First we define the "temary" and "binary" distance between two 
+wordsinH. 
+DEFINITION 1. Let x, y e H. We define 
+d1(X, y) := 1 {i E {l, 2, · • •, t} 1 Xi =#y;} ,, and 
+db(x,y) := 1 {i E {t+ l,t+2, · · · ,t+b} 1 Xi :i!yï} 1 
+Hence we have d'(x, y) + db(x, y) = d(x, y). The following observation is 
+fundamental to our investigations. 
+LEMMA 2. Let x, y e H, re {O, l, · · · , n} and d(x, y)2: r. 
+Then 
+{ 
+0 ifd(x,y)>r+l 
+IB,(x) n B 1(y)I = r + 1 if d(x, y) =r + 1 
+r + 1 +t if d(x, y) =rand d'(x,y) =t . 
+A. Coverlngs 
+Throughout Part A of this section we assume that C is a code in H with 
+CR(C)=Rand ICI =M. 
+Put 
+A:={xeHld(x,C)=R}. 
+Por j = 0, 1, · · ·, R, let 'tj e {O, 1, · · ·, R} be such that 
+'t'j & 1+2t + b + j (mod R + 1) , 
+and put 
+(1) 
+{2) 
+Aj := {xe A 1 Vee C(d(x,c)=R ~ d'(x,c)='tj)} , {3) 
+~~~nz, ~ 
+===== PDF p111 =====
+104 BINARY /TERNARY MIXED CODES 
+(5) 
+N9te that (A r. Z) u A '0 u A' 1 u · · · u A 'R is a partition of A, and that some 
+of the defined sets may be empty. 
+LEMMA 3. Let a e A. Then 
+{
+1 ifa e Ar. Z 
+Ec(Bi(a))~ j ifaeA'iforsomej. 
+PROOF. The case a e A r. Z is trivial. If a e A'i• then there is a unique 
+c e C with d(c, a) =R. By (3) and Lemma 2 1BR(c)r.B 1(a) 1 =R + 1 + "i· For 
+all be C\{c} we have d(b,a);;?.R+l, hence (by Lemma 2) 
+IBR(b) r. B 1(a) 1 e {O,R + l}. Using [5, Definition 1] and (2), we conclude 
+that 
+Ec(B 1 (a)) = IBR(c) r. B 1 (a) 1 - IB 1(a)1 
+= R + 1 + t i - (1 + 2t + b) = j (mod R + 1) . 
+Since O~ j ~ R, the result follows .. 
+LEMMA 4. Ifz e Z, then IA r. B1(z) 1~2t +b-R. 
+This lemma is a special case of amore general result, namely Lemma 10, 
+that is proved in the Appendix. Lemma 10 is also used in the proof of [5, 
+Theorem 6]. 
+For j = 0, l, · · ·, R we define 
+T· ·- 2i [tl 't [ b l J .- 'tj R - 'tj (6) 
+(with the usual convention that [:] = O if k >nor k < 0). Note that if x e H, 
+then Ti = 1 {y e H 1 d(x, y) = R A d'(x, y) = 'tj} 1. We also define 
+Hence 
+Li := max(O, 312b - M (V (t, b, R)- Tj)) (j = 0, l, · · · , R) , and 
+L:=max(0,3'2b-M(V(Î,b,R-1)+To)). 
+===== PDF p112 =====
+BINARY /TERNARY MIXED CODES 
+IAi I ;;:: Li (j = O. 1. · · · , R), and 
+IA \Aol;:: L . 
+Furthennore. let j* e { 1, 2. · · · , R} be taken such that j* = 1 if 
+R 
+MV (t, b, R)- 31217 > L Lj , and such that 
+j=l . 
+R R 
+L Li s MV(t, b, R)-3 12hs L Li 
+j=j"'+l j=j* 
+otherwise. 
+THEOREMS. 
+(2t + b -R + j* -1) (MV(t, b, R)- 312b) 
+j*-1 R 
+;;::L + L (j -1) Lj + (j* -1) L Lj . 
+j=l j=j* 
+PROOF. 
+(2t + b-R) (MV(t, b, R)-3 12b) 
+105 
+(7) 
+(8) 
+(9) 
+(10) 
+= L (2t+b-R)Ec({x}) (by [5, Eq. (4) and Lemma 2b]) 
+XEZ 
+~ L L Ec({x}) (byLemma4) 
+xeZ aeAnB 1(x) 
+= L L Ec({x}) 
+aeA xeB 1 (a)rlZ 
+= L Ec(B 1 (a)) (by [5, Definition 4a 
+aeA 
+and Lemma 2b]) 
+R 
+= L Ec(B 1 (a)) + L L Ec(B 1 (a)) 
+aeAnZ j=O aeA'1 
+R 
+;;::t· IAnZl+l:jlA'jl (byLemma3) 
+j=O 
+R R 
+=IA 'uA'j 1 + l: i IA'jl 
+j=O j=I 
+===== PDF p113 =====
+106 BINARY /TERNARY MIXED CODES 
+R 
+=IA \Aol + I, (J-1) (IA;I - IZ;D =: (*) . 
+j=I 
+Let io e Jl. 2, · · · , R} be such that 
+R R 
+I, IA;I s I, IZ;I s I, IA;I 
+j=Jo+l J=l J•io 
+We claim thatj* s j 0 • If j* = l, this is obviously true. If j* > l, then (using [5, 
+Eq. (4)], (9) and (7)), 
+R 
+I, IZ;IS IZISMV(t,b,R)-3 12b 
+j=I 
+R R 
+S I, L;S I, IA;I , 
+j=j* j=j* 
+and consequently j* S j 0 • This completes the proof of our claim. 
+Wegel 
+io-1 R R 
+(11) 
+(•);;::IA \Aol + I, (j-1) IA;I +üo-l)(I, IA;I - I, IZ;D 
+j=I j=Jo j=I 
+R 
++ I, (j-l)(IA;l-IA;D 
+i=J.+l 
+j*-1 ;.-1 
+;;:: IA \Ao I + I, (j - 1) IA; I + I, (j -1) IA; I 
+J=l j=j* 
+R R 
++ (j* -1)( I, IA; 1 - I, IZ; 1) + O (since j* s jo) 
+i=io J=l 
+j*4 R R 
+~ IA \Ao 1 + I, (j - 1) IA; 1 + (j* -1)( I, IA; 1 - I, IZ; 1) 
+j=I j=j* j=I 
+j*-1 R 
+~ L + L (j -1) L; + (j* - 1)( L L; - IZ 1) (by (7) and (8)). 
+j=I j=j* 
+Substitution of IZ 1 S MV(t, b, R)- 312b (see (11)) gives the desired result. 
+Theorem 5 gives a lower bound on K (t, b, R). If, for given t, band R, M 0 
+is the minimal M that satisfics (10), then it follows that K(t, b, R);;:: M 0 • The 
+only thing that we need now is an easy way to detennine this M 0 . Because the 
+L;. Land j* depend on M, it is not immediately clear that M + 1 satisfies (10) if 
+M does. That this is true nevertheless is shown by Lemma 6. By this lemma, M 0 
+===== PDF p114 =====
+BINARY /TERNARY MIXED CODES 107 
+can be determined very quickly. for instance by a binary search on the interval 
+[Lb. Ub], where lh is taken the best lower bound on K(t, b. R) known (or sim­
+ply the sphere covering bound), and 
+Ub =min {2.t • lh 1 k e 'IV u {O} and M =2.t • lh satisfies (10)} . 
+The above method is the one that we used to compute Table 1. 
+LEMMA 6. If for given t, band R, M satisfies (10), then so does M + 1. 
+PROOF. For convenience, we put 
+P(M) :=MV(t, b, R)-3 12b , and 
+j*-1 R 
+Q(M) :=L + I, U-1) Lj + U* -1)( L Lj-P(M)) . (12) 
+j=l i=i* 
+In (12) the Lj. L and j* are calculated using M. As with P (M) and Q (M), in the 
+rest of the proof we shall write Lj(M), L (M) and j* (M) to indicate that M is 
+used. Now "Msatisfies (10)" is equivalent to "(2t+b-R)P(M)~ Q(M)" (see 
+the proof of Th. 5). One immediately verifies that P(M + l)~ P(M). 
+Lj(M + l):s= Lj(M) for all j. and L(M + l)S L(M). It follows that 
+j*(M + l)S j*(M). 
+Ifj*(M + l)=j*(M), then 
+j*(M)-1 
+Q(M + l)=L(M + 1) + L U- l)Lj(M + 1) 
+j=l 
+R 
++U*(M)-1)( L Lj(M + 1)-P(M + 1)) 
+j=j*(M) 
+S Q(M). 
+If j*(M + 1) < j*(M), then by the first inequality of (9) (which is always true), 
+R 
+I, Lj(M + 1)-P(M + 1) S Lj*(M+o(M + 1) . (13) 
+j=j*(M+l) 
+Weget 
+j*(M+lH 
+Q (M + 1) = L (M + 1) + L u -1) Lj(M + 1) + 
+j=l 
+===== PDF p115 =====
+108 BINARY /TERNARY MIXED CODES 
+R . 
+(j*(M + 1)-1)( L Lj(M + 1)-P(M + 1)) 
+j=j*(M+l) 
+j*(M+l) 
+s L(M + 1) + L (j -1) Lj(M + 1) 
+j=l 
+j*(J.1)-1 
+S L(M) + L (j -1) Lj(M) S Q (M) 
+j=l 
+(by (13)) 
+(note that all three tenns of (12) are nonnegative). We conclude that in both 
+cases Q(M + l)S Q(M). The lemma now follows from 
+(2t +b-R)P(M + 1)~ (2t+b-R)P(M)~ Q(M)~ Q(M + 1) . 
+Remarks: 
+1) As already said, Theorem 5 generalizes [5, Theorem 16]. It also general­
+b.es the cases q = 2 and q = 3 of [5, Theorem 6]. 
+2) Remark 2 of [5, Section IIIA] almost literally applies; i.e., Theorem S is 
+nota generalization of [6, Theorem 9]. 
+3) Theorem 5 is always at least as good as the sphere covering bound. 
+B.Packings 
+Here we assume that C is a code in H with PR (C) = e and 1 C 1 =M. For 
+j=O, 1, · · · ,elet9i E {O, l, ·" ,e} besuchthat 
+9j = 1 + 2t + b - j (mode + 1) . (14) 
+We define A, the Ai and Ti (j = 0, l, · · ·, e) as in (1), (3) and (6), with R 
+replaced bye and 'tj by 9j, and we put 
+ó':=l~:~J(e+l). 
+In order to have a positive denominator in Theorem 9, we make the 
+(nonsignificant) assumption that e < t + b. 
+LEMMA7. 
+1 G ('\ S 1(a)1 ~ j if a E Aj . 
+===== PDF p116 =====
+BINARY/TERNARY MIXED CODES 109 
+PROOF. Let a e Ai. Then there is a unique c e C with d (c, a) = e. By the 
+definition of Ai and Lemma 2, IB,(c) () S 1(a)1 = e + 1 +ei -1 = e +ai. For 
+every beC\{c} we have d(b,a)~e+l and hence IB,(b)()S1(a)I= 
+IB,(b) () B1(a) 1 e {O, e + l}. By [5, Eq. (6)] and (14) we have 
+IG () S1(a) 1 • IS1(a)l - IB,(c) () S1(a)I 
+= 2t + b - (e + 9j) s j (mod e + 1) , 
+from which the lemma follows. 
+LEMMA 8. Por all ze G 
+1 A () S 1 (z) I S ö' . 
+PROOF. The proof of [5, Lemma 10] is valid here if we use 
+IS1(z)I =2t +b instead of n(q-1). 
+THEOREM9. 
+f,'3'2b ICl:s; , 
+PROOF. 
+e e 
+f,'V(t, b, e) + L )Tj 
+j-=<J 
+L il c 1 Tj = L j IAj 1 
+j-=<J j-=<J 
+e 
+s E E IG () S1(a)I 
+j-=<J aeA1 
+= L IA() S1(z)I 
+zeG 
+s ö'IG 1 
+=5'(3'2b- IC IV(t, b, e)) 
+(15) 
+(by Lemma 7) 
+(by Lemma 8) 
+(by [5, Eq. (5)]) . 
+===== PDF p117 =====
+110 BINARY /TERNARY MIXED CODES 
+Remarks: 
+1) Theorem 9 generalizes [5, Theorem 17] and it also generalizes the cases 
+q =,2 and q = 3 of [5, Theorem 11]. 
+2) The bound (15) is always at least as good as the sphere packing bound. 
+m. THETABLE 
+Here we present the table that was announced in this paper and in [5] many 
+times already. We have computed the bounds in Theorems 5 and 9 for 
+n = t + b S 13. We did not include the cases with t = 0. The reason for this is 
+that for binary coverings a better table already appeared in [6] (see Remark 2 in 
+Section HA), and that for binary packings Theorem 9 does not improve on the 
+table in [4, p. 674]. 
+The results for the cases with e = 1, R = 1 orb= 0 (ort= 0) were already 
+established in [5, Theorems 6, 11, 16 and 17]. All other results in the table are 
+due to Theorems 5 and 9 of the present wo1k For comparison, in the table we 
+have given the sphere packing bound and the sphere covering bound in brackets 
+below the bounds obtained from Theorem 9 and Theorem 5, respectively. 
+APPENDIX 
+Here we prove a lemma that has been used in the proof of [5, Theorem 6] 
+as well as in this paper (Lemma 4). We state it in a general form which applies 
+to both situations. Lemma 10 could also be used instead of [6, Lemma 7b] in the 
+proof of [6, Theorem 9]. 
+Consider a general Hamming space H (as in [5, Sections 1 and Il]). Let C 
+be acode in H with CR(C) =Rand putA := {x e H 1 d(x, C) =R}. 
+===== PDF p118 =====
+BINARY /TERNARY MIXED CODES 111 
+LEMMA 10. Ifz e Z(C), then 
+" IA() B1(z)I S L (qi-1) - R . (16) 
+i=l 
+PROOF. Let ze Z. By [5, Eq. (3)] there are different codewords b and c 
+such that d 1 :=d{z,b)SR and dz:=d(z,c)SR. W.l.o.g. d 1 Sdz. If 
+d 1 S R - 2, then B 1 (z) t: BR-t (b), hence IA ""B 1(z)1 = 0, and (16) holds. Now 
+suppose that d1 ~ R -1. Let i be a coordinate such that ei-:;. zi and bi'#. ei. Put 
+x :=(z1z2 · · · Zi-tCiZi+t • • • z"), 
+and 
+F 2 := B 1 (z) () BR-1 (c)- BR-1 (b). 
+We have 
+IA nB1(z)I S IB1(z) n (BR-1(b)u BR-1(c))I = IB1(z)I - IFtl - IF2 I. 
+We claim that 
+IFtl + IF2l~R+l. 
+To prove this, we distinguish between the cases i) d 1 = R - 1 and b; -:;. z;, and ii) 
+d 1 = R orb; = z;. In case i) F 1 contains the R - 1 words 
+(z 1 z2 · · · Zj-1 bjZj+t · · • z") , 
+where j runs through the coordinates where b and z differ, as well as z and x. 
+Hence 
+IFil + IF2l~R+l+O=R+l. 
+In case ii) we have d(x, z)= l, d(x, b)~ Rand d(x,c)S R -1, hence x e F2 • 
+Since IF 1 1 ~ R, we conclude that also in this case 
+IF1l+IF2l~R+l. 
+Tuis completes the proof of our claim, and (16) follows. 
