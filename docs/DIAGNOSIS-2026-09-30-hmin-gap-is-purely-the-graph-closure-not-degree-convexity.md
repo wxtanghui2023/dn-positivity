@@ -34,7 +34,7 @@ $$\text{且 }m{=}13\ \text{处 }J{+}8{=}19<23 \Longrightarrow \text{"}J{+}8\ \te
 ## §3 **改向后的可证目标（供下一步）**
 
 $$\textbf{目标}:\ \forall\ \text{图 }G\ (r\ \text{顶点，每边至少属一个三角形，恰 }m\ \text{个三角形}):\quad \sum_{e}\binom{t_e}2\ \ge\ J(r,m)+\Delta(r,m)$$
-$$\textbf{可用之局部关系（闭合特有 ✓）}:\ \tau_v=|E(N(v))|\ (\text{顶点 }v\ \text{处三角形数＝其邻域图之边数});\quad \sum_v\tau_v=3m;\quad \tau_v\le\binom{d_v}2;\quad 2h=\sum_{vw\in E}\binom{|N(v)\cap N(w)|}2 ✓$$
+$$\textbf{可用之局部关系（闭合特有 ✓）}:\ \tau_v=|E(N(v))|\ (\text{顶点 }v\ \text{处三角形数＝其邻域图之边数});\quad \sum_v\tau_v=3m;\quad \tau_v\le\binom{d_v}2;\quad h=\sum_{vw\in E}\binom{|N(v)\cap N(w)|}2\ (\text{无序边，一次}) ✓$$
 $$\Longrightarrow\ \textbf{\text{须证之核心}}:\ \text{闭合强迫"邻域图之边数分布"远离凸性最优分布} ✓\ (\text{研究级} ⚠️)$$
 
 ## §4 **r=9 之检验（判据按唐先生）**
