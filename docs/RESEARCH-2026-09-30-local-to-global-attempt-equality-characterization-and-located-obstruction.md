@@ -50,3 +50,19 @@ $$\text{空间 A/B 分离（AMEND-27）}:\ \text{“局部到全局”之既有�
 $$\textbf{(D1)}\ \text{无 P1} ✗;\ \textbf{(D2)}\ \text{定理双向已证（可复核 ✓）；实测零违反};\ \textbf{(D3)}\ \text{未主张新值／未取禁用原文／未碰 RH} ✓$$
 
 ROUTE-CHECK: R01=NA R02=FINGERPRINT-CITED R03=NA R04=NA R05=FINGERPRINT-CITED R06=NA R07=NA R08=FINGERPRINT-CITED R09=NA R10=NA R11=NA R12=NA R13=NA R14=FINGERPRINT-CITED R15=FINGERPRINT-CITED R16=NA R17=NA R18=NA R19=NA R20=NA
+
+---
+
+## §6 **层间交叠实算结果（120-码，$m{=}2$）＋ 同障碍之高阶版本** ✗
+
+$$\text{层大小}:\ (|L_{00}|,|L_{01}|,|L_{10}|,|L_{11}|)=(28,32,32,28);\quad |N_1[L_\sigma]|=(207,210,210,207)\ ✓$$
+$$\textbf{成对交叠}\ A_{\sigma\tau}=|N_1[L_\sigma]\cap N_1[L_\tau]|:\ \text{相邻对（}d{=}1\text{）}=\mathbf{162}\ (\times4);\quad \text{对角对（}d{=}2\text{）}=\mathbf{204}\ (\times2)\ ✓\ \text{——只依赖 }d(\sigma,\tau)\ ✓$$
+$$\textbf{恒等式核验}\ ✓✓:\ |\bigcap_\sigma N_1[L_\sigma]|=156,\ |\bigcup_\sigma L_\sigma|=111,\ \#\text{eq}=156-11=\mathbf{145}\ \text{（与实测取等点数 145 完全一致 ✓✓）}$$
+$$\textbf{但（关键 ✗）}:\ \text{Inclusion--exclusion}:\ 156=834-1056+(\text{triples})-(\text{quad})\ \Longrightarrow\ (\text{triples})-(\text{quad})=378\ \text{——\textbf{\text{高阶项巨大}}} ✗$$
+$$\therefore\ \boxed{\text{成对交叠\ \textbf{不足}：须全部阶；即“层间耦合”之完整信息\ =\ 原问题}} ✗✓\ \text{——与 §2 障碍\ \textbf{同一性质}} ✓$$
+
+## §7 **本会话研究尝试之诚实总结**
+
+$$\textbf{已产（真 ✓）}:\ \text{块分层引理};\ \text{逐点模式不等式（健全、真码多处取等）};\ \text{跨层两不等式（超加性＋上界）};\ \textbf{\text{取等之双向精确刻画（定理 ★）}};\ \text{新不等式（§1c）};\ \text{等价的层间交叠实证} ✓$$
+$$\textbf{未产（✗）}:\ M\ \text{之新下界};\ \text{“取等刚性不可全局一致”之证明} ✗\ ——\ \textbf{\text{障碍已定位两次（聚合化、成对交叠）}}，皆为“\textbf{\text{丢掉耦合}}” ✓$$
+$$\textbf{定位结论}:\ \text{局部结构改写是\ \textbf{精确} 的（不含松弛）} ✓,\ \text{但一切\ \textbf{局部→全局} 的\ \textbf{聚合} 步骤所丢信息恰是\ \textbf{原问题的内容}} ✗ ⟹ \text{此线\ \textbf{已定位、未闭合}} ✓$$
