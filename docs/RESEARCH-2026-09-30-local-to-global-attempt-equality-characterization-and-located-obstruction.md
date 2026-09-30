@@ -45,6 +45,8 @@ $$\textbf{分类（三项如实 ✓）}:\ \text{(1) }\textbf{本档新增}：\te
 $$\text{空间 A/B 分离（AMEND-27）}:\ \text{“局部到全局”之既有命中属空间 A} ⟹ \text{标为**跨空间同名（不计）**} ✓$$
 
 
+$$\text{【补记·回查 ✓】技术词“层间耦合”：命中 3 处 = 本档 ＋ }V235\text{-euler-layer-compatibility…（空间 A）＋ }CLOSED\text{-ROUTES-MAP} ⟹ \textbf{跨空间同名（不计）} ✗\ \text{（本档不主张该词之新性）}$$
+
 ## §4 边界与纪律
 
 $$\textbf{(D1)}\ \text{无 P1} ✗;\ \textbf{(D2)}\ \text{定理双向已证（可复核 ✓）；实测零违反};\ \textbf{(D3)}\ \text{未主张新值／未取禁用原文／未碰 RH} ✓$$
