@@ -43,7 +43,7 @@ $$\textbf{(D1)}\ \text{无 P1} ✗;\ \textbf{(D2)}\ \text{实测可复现（}out
 ## §6 【技术词回查】
 
 ```
-技术词 箭头实测   命中文件数=1
-技术词 饱和度   命中文件数=0
+技术词 箭头实测   命中文件数=1    :: ./AUDIT-2026-09-30-arrow-test-119-local-graphs-far-from-saturation-formal-downgrade.md
+技术词 饱和度      命中文件数=9    :: （含 E208-full-pool-gamma-local-selfconsistent-fixedpoint.md / E209-wall-neighborhood-roots-no-go-arc-closure.md 等）
 ```
-$$\textbf{分类}：\textbf{本档新增}：\text{两词皆仅本档} ✓;\ \textbf{通用词（不计）}：\text{"降级／需求侧"裸词} ✓$$
+$$\textbf{分类}：\textbf{本档新增}：\text{仅「箭头实测」（1 档）} ✓;\quad \textbf{档案已有（引用，不列为提出）}：\text{「饱和度」9 档 ✗ 非新} ✓;\quad \textbf{通用词（不计）}：\text{"降级／需求侧"裸词} ✓$$
