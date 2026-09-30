@@ -68,3 +68,28 @@ $$\therefore\ \boxed{\text{成对交叠\ \textbf{不足}：须全部阶；即“
 $$\textbf{已产（真 ✓）}:\ \text{块分层引理};\ \text{逐点模式不等式（健全、真码多处取等）};\ \text{跨层两不等式（超加性＋上界）};\ \textbf{\text{取等之双向精确刻画（定理 ★）}};\ \text{新不等式（§1c）};\ \text{等价的层间交叠实证} ✓$$
 $$\textbf{未产（✗）}:\ M\ \text{之新下界};\ \text{“取等刚性不可全局一致”之证明} ✗\ ——\ \textbf{\text{障碍已定位两次（聚合化、成对交叠）}}，皆为“\textbf{\text{丢掉耦合}}” ✓$$
 $$\textbf{定位结论}:\ \text{局部结构改写是\ \textbf{精确} 的（不含松弛）} ✓,\ \text{但一切\ \textbf{局部→全局} 的\ \textbf{聚合} 步骤所丢信息恰是\ \textbf{原问题的内容}} ✗ ⟹ \text{此线\ \textbf{已定位、未闭合}} ✓$$
+
+---
+
+## §8 **研究级续做（本轮新增三项，皆实测 ✓）**
+
+$$\textbf{(8.1) 取等之\ \textbf{强化形式}} ✓✓:\ \delta_y=0\Longrightarrow S_y=\varnothing\ (\Rightarrow y\notin L_\sigma\ \forall\sigma)\ \text{且}\ y\in N_1[L_\sigma]\ \forall\sigma\ \Longrightarrow\ \forall\sigma\ \exists w\in L_\sigma:\ d(w,y)=\mathbf 1\ (\text{恰为 1，非 }\le1)$$
+$$\qquad\textbf{实测}:\ \text{两码×三层}\ \textbf{\text{违反数}=0}\ ✓✓\ (120\text{-码 }m{=}1,2,3;\ 62\text{-码 }m{=}1,2,3)$$
+$$\qquad\therefore\ \text{取等点被}\ \textbf{每一层} \text{以“距离恰 1”之码字\ \textbf{包围}};\ \text{且各层之该码字\ \textbf{互不相同}（层不同 ✓）}$$
+
+$$\textbf{(8.2) 等价计数之上界} ✓:\ \text{每个 }(y,\sigma)\ \text{对（}y\in E,\ \sigma\in\mathbb F_2^m\text{）至少对应一个码字 }c=(\sigma,w)\ (w\sim y);\ \text{而一个码字最多服务 }nc\ \text{个 }y\ (\text{其 }nc\ \text{个补空间邻点})$$
+$$\qquad\Longrightarrow\ \boxed{|E|\cdot 2^m\ \le\ M\cdot nc}\ \text{即}\ |E|\le\frac{M\,nc}{2^m}\ ✓\ \text{——}\textbf{\text{比前之}}\ \#\text{eq}\cdot2^m\le\sum_\sigma|N_1[L_\sigma]|\le(nc{+}1)M\ \textbf{\text{更紧}}（nc\ \text{vs}\ nc{+}1）$$
+$$\qquad\textbf{实测}:\ 120\text{-码 }m{=}2:\ |E|{=}145\le240\ ✓;\ 62\text{-码 }m{=}2:\ |E|{=}68\le108.5\ ✓\ \text{（皆满足，未违 ✗）}$$
+
+$$\textbf{(8.3) 全局矛盾检验（逐 }m\text{，判定式 }2^{nc}+2^n-(nc{+}1)M>M(m+1+\tfrac{nc}{2^m})\text{）} ✗$$
+| $m$ | $nc$ | LHS | RHS | 判定 |
+|---|---|---|---|---|
+| 1 | 9 | 476 | 689.0 | 不矛盾 ✗ |
+| 2 | 8 | 326 | 530.0 | 不矛盾 ✗ |
+| 3 | 7 | 304 | 516.8 | 不矛盾 ✗ |
+| 4 | 6 | 346 | 569.8 | 不矛盾 ✗ |
+| 5 | 5 | 420 | 652.6 | 不矛盾 ✗ |
+
+$$\therefore\ \boxed{\text{“取等计数 vs 码字容量”这一族全局化，\ 在}\ \textbf{每一个} \text{块大小 }m\in\{1..5\}\ \text{处\ \textbf{系统性失败}} ✗;\ \text{且差距是\ \textbf{因子 }\sim1.5\text{--}2}\ (\text{非“差一点”}) ⚠️}$$
+$$\qquad\Longrightarrow\ \text{这不是“再加一个想法”可及；而是\ \textbf{\text{结构性缺口}} ✗\ ——\ \text{与 §2／§6 之两次定位\ \textbf{同性质}（聚合必丢耦合）✓}$$
+$$\textbf{诚实}:\ \text{本轮未产 }M\ \text{之下界} ✗;\ “取等刚性无法全局一致”\ \textbf{\text{仍未证}} ✗;\ \text{但其\ \textbf{\text{失败幅度已量化}}（每 }m\ \text{皆因子 }1.5\text{--}2\ ✗）\ ✓$$
