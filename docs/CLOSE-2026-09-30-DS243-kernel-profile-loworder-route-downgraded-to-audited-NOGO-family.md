@@ -39,6 +39,16 @@ $$\boxed{\text{DS243「核／profile／低阶相关」＝\ \textbf{已审计的 
 $$\textbf{严谨表述（禁越界 ✓）}:\ \text{上述各层\ \textbf{均未产生 obstruction}；其中⑦之联合模型\ \textbf{尚未判定}（UNKNOWN）} ⚠️$$
 $$\qquad\textbf{不得} \text{写成“全部饱和 ⟹ 障碍必然在元素级”} ✗\ \text{（工作假设，非定理）；亦不得写“已排除 DS243 之存在”} ✗$$
 
+
+## §1b **正式结论句（逐字照唐先生 14:33 定稿 ✓）**
+
+$$\boxed{\text{在目前\ 	extbf{实际测试并闭合} 的 kernel/profile/low-order-correlation 层级中，	extbf{没有发现能够产生矛盾的必要条件}。}}$$
+$$\qquad\therefore\ 	ext{该方法族作为当前 obstruction 搜索路线\ 	extbf{正式降级为 audited NO-GO}} ✓$$
+$$\boxed{\text{但：双核完整联合模型仍\ 	extbf{UNKNOWN}}}\ ——\ \textbf{必须保留在档案里，不得偷偷改成 FEASIBLE} ✗✓$$
+$$\textbf{同时禁止}:\ 	ext{写成 “DS243} \Rightarrow \text{119 可行”} ✗;\ 	ext{亦\ 	extbf{禁止} 写成 “DS243} \Rightarrow \text{119 不可能”} ✗$$
+$$\textbf{本档所留} = \boxed{\text{DS243 不能在目前测试的聚合／谱／低阶相关层产生所需 obstruction}} ✓;\quad \textbf{路线关闭} \ne \textbf{问题关闭} ✓$$
+
+
 ## §2 **可复用资产（本线净产出 ✓）**
 
 $$\textbf{(A)}\ \text{新总量恒等式 } T=\sum_{i<j}|R_i\cap R_j|=60\ ✓\ (\text{cross-set 条件之真贡献})$$
