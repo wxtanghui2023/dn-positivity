@@ -132,3 +132,24 @@ $$\textbf{关键读数}:\ \text{仅 }m{=}1\ \text{可能收口}——\text{需 }
 $$\textbf{诚实（第 4 次同障）}:\ \text{中间步骤 (3)(4) 仍为\ \textbf{聚合量}} ⟹ \text{与 §2／§6／§8.3 同性质：聚合必丢耦合} ✗$$
 $$\Longrightarrow\ \textbf{\text{新靶（非聚合、可量化）}}:\ \boxed{\text{证明任意 }106\text{-covering 之 }m{=}1\ \text{取等点集满足}\ \lambda\le4}\ ⚠️\ \text{（即：无点 1-邻域内含 }>4\ \text{个取等点）}$$
 $$\qquad\text{——}\textbf{\text{这是本线首个把“需要什么”写成具体数值命题者}} ✓✓;\ \text{其真假未知} ⚠️$$
+
+---
+
+## §11 **决定性否定（本轮终局）：判据在实测 $\lambda$ 处\ \textbf{恰好退化为球界}** ✗✓（含精确关系）
+
+$$\textbf{恒等式（本轮新）}:\ \text{组装式}\ =\ \text{球界}\ \frac{2^n}{n+1}\ \Longleftrightarrow\ \lambda=n+1-2^m\ \text{（直接解出）}$$
+$$\textbf{实测核对（两个真码）}:$$
+| 码 | $m$ | 所需 $\lambda=n{+}1{-}2^m$ | **实测 $\lambda$** | 组装式值 | 球界 |
+|---|---|---|---|---|---|
+| 120-码 $(n{=}10)$ | 1 | 9 | **9** ✓✓ | 93.09 | 93.09 |
+| 120-码 | 2 | 7 | **7** ✓✓ | 93.09 | 93.09 |
+| 120-码 | 3 | 3 | 4 ⚠️（差 1） | 92.16 | 93.09 |
+| 62-码 $(n{=}9)$ | 1 | 8 | **8** ✓✓ | 51.20 | 51.20 |
+| 62-码 | 2 | 6 | **6** ✓✓ | 51.20 | 51.20 |
+
+$$\Longrightarrow\ \boxed{\gamma_1/\lambda\ \text{路线在\ \textbf{实测参数} 处\ \textbf{恒等于球界}} ✗✓\ \text{（}m{=}1,2\ \text{逐位吻合};\ m{=}3\ \text{差 1）}}$$
+$$\therefore\ \text{该路线\ \textbf{无任何杠杆}} ✗:\ \text{其“上限 123”（}\lambda{=}1\text{）在\ \textbf{真实码} 处\ \textbf{从不接近}（实测 }\lambda=n{+}1{-}2^m\ \text{为结构性取值）；}$$
+$$\qquad\text{而欲达 }M\ge107\ \text{需 }\lambda\le4\ (m{=}1)\text{，与实测 }\lambda{=}n{-}1{=}9\ \text{相差 }2.25\ \text{倍} ✗\ ——\ \textbf{且 }M{<}K\ \text{区域\ \textbf{不可观测}}（无码）⟹ \text{该靶\ \textbf{不可验证}} ✗$$
+
+$$\textbf{本线终局（诚实 ✓）}:\ \text{(甲)(乙)}\ \text{两线\ \textbf{精确} 重构了局部结构（取等刻画／刚性／跨层不等式／}\gamma_1\ \text{量 —— 皆真 ✓）},\ \text{但\ \textbf{每一步的可用后果都在实测参数处退化为\ \textbf{经典球界／聚合量}}} ✗$$
+$$\qquad\Longrightarrow\ \textbf{\text{结论}}:\ \text{本线\ \textbf{已定位、已穷尽其可及后果、未闭合}} ✓\ ——\ \text{“取等刚性不可全局一致”之证明\ \textbf{仍属研究级}} ✗;\ \text{且其\ \textbf{所需新机制＝非聚合、非球界型} 仍未出现} ✗$$
