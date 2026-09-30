@@ -110,3 +110,25 @@ $$\qquad\text{与参考值对照（120-码）}:\ 50.2<54\ ✗;\ 24.8<27\ ✗;\ 1
 $$\textbf{诚实（✗）}:\ \text{单靠 }\gamma_1\ \text{与 }\gamma_1\ge|E|/(nc{+}1)\ \text{仍\ \textbf{复现旧界}} ✗\ (|E|\le\frac{(nc+1)M}{2^m}\ ✓)\ \Longrightarrow\ \text{要咬，必须给出\ \textbf{基于 }E\ \text{之\ \textbf{集合结构} 的 }\gamma_1\ \text{下界}} ⚠️$$
 $$\qquad\text{即}:\ \text{需要关于 }E\ \text{之\ \textbf{额外结构事实}}（\text{如 }E\ \text{之最小距离／分布／“形状”}）\ ✓\ \text{——}\textbf{\text{这是本线首次出现的、带具体数值靶的非聚合目标}} ✓✓$$
 $$\qquad\text{已知 }E\ \text{之结构事实（现仅有）}:\ E\subseteq\bigcap_\sigma N_1[L_\sigma],\ E\cap\bigcup_\sigma L_\sigma=\varnothing,\ \forall\sigma\ \exists w\in L_\sigma: d(w,y){=}1\ (\text{§8.1}) ⚠️\ ——\ \textbf{\text{尚不足以定 }\gamma_1}$$
+
+---
+
+## §10 **组装结果（本轮）：$\gamma_1$ 路线的完整不等式与其\ \textbf{结构上限}** ✓（含实测）
+
+$$\text{四个分量}:\ \text{(1)}\ M\ge2^m\gamma_1(E)\ \text{（§9 已证）};\ \text{(2)}\ \gamma_1(E)\ge|E|/\lambda,\ \lambda:=\max_a|N_1[a]\cap E|\ \text{（标准：一覆盖点至多覆盖 }\lambda\ \text{个 }E\ \text{点）};$$
+$$\qquad\text{(3)}\ |E|\ge2^{nc}-\Sigma\delta\ \text{（非取等点 }\delta\ge1\text{）};\ \text{(4)}\ \Sigma\delta\le(n{+}2)M-2^n\ \text{（}\Sigma\delta=(m{+}1)M+\Sigma_\sigma|N_1[L_\sigma]|-2^n\ \text{与 }|N_1[L_\sigma]|\le(nc{+}1)|L_\sigma|\text{）}$$
+$$\Longrightarrow\ \boxed{M\ \ge\ \frac{2^m\,(2^{nc}+2^n)}{\lambda\ +\ 2^m(n+2)}}\ ✓\ \text{（\textbf{\text{新不等式族}}，含 min-型量之局部密度参数 }\lambda\text{）}$$
+
+$$\textbf{实测（120-码）}:$$
+| $m$ | $\|E\|$ | $\lambda$ | $\|E\|/\lambda$ | 组装式 |
+|---|---|---|---|---|
+| 1 | 394 | **9** | 43.78 | **93.09** |
+| 2 | 145 | **7** | 20.71 | **93.09** |
+| 3 | 34 | **4** | 8.50 | 92.16 |
+
+$$\textbf{路线之上限（最佳 }\lambda{=}1\text{）}:\ m{=}1:\ 122.88\Rightarrow M\ge\mathbf{123}\ ✓;\ m{=}2:\ 104.49\Rightarrow105\ ✗;\ m{=}3:\ 96\ ✗;\ m{=}4:\ 91\ ✗$$
+$$\textbf{关键读数}:\ \text{仅 }m{=}1\ \text{可能收口}——\text{需 }\lambda+2(n{+}2)<\tfrac{2(2^{n-1}+2^n)}{106}=28.98\ \text{即}\ \boxed{\lambda\le4};\ \text{而实测 }\lambda{=}9\ ✗\ \Longrightarrow\ \textbf{\text{未成立}} ✗$$
+
+$$\textbf{诚实（第 4 次同障）}:\ \text{中间步骤 (3)(4) 仍为\ \textbf{聚合量}} ⟹ \text{与 §2／§6／§8.3 同性质：聚合必丢耦合} ✗$$
+$$\Longrightarrow\ \textbf{\text{新靶（非聚合、可量化）}}:\ \boxed{\text{证明任意 }106\text{-covering 之 }m{=}1\ \text{取等点集满足}\ \lambda\le4}\ ⚠️\ \text{（即：无点 1-邻域内含 }>4\ \text{个取等点）}$$
+$$\qquad\text{——}\textbf{\text{这是本线首个把“需要什么”写成具体数值命题者}} ✓✓;\ \text{其真假未知} ⚠️$$
