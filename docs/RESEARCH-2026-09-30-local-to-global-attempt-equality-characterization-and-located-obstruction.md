@@ -93,3 +93,20 @@ $$\textbf{(8.3) 全局矛盾检验（逐 }m\text{，判定式 }2^{nc}+2^n-(nc{+}
 $$\therefore\ \boxed{\text{“取等计数 vs 码字容量”这一族全局化，\ 在}\ \textbf{每一个} \text{块大小 }m\in\{1..5\}\ \text{处\ \textbf{系统性失败}} ✗;\ \text{且差距是\ \textbf{因子 }\sim1.5\text{--}2}\ (\text{非“差一点”}) ⚠️}$$
 $$\qquad\Longrightarrow\ \text{这不是“再加一个想法”可及；而是\ \textbf{\text{结构性缺口}} ✗\ ——\ \text{与 §2／§6 之两次定位\ \textbf{同性质}（聚合必丢耦合）✓}$$
 $$\textbf{诚实}:\ \text{本轮未产 }M\ \text{之下界} ✗;\ “取等刚性无法全局一致”\ \textbf{\text{仍未证}} ✗;\ \text{但其\ \textbf{\text{失败幅度已量化}}（每 }m\ \text{皆因子 }1.5\text{--}2\ ✗）\ ✓$$
+
+---
+
+## §9 **反推（用户选项①）：缺口需要什么量？—— 答案＝取等点集之\ \textbf{覆盖数}\ $\gamma_1(E)$（min-型）** ✓，并已证 $M\ge2^m\gamma_1(E)$
+
+$$\textbf{推导（新定理 ✓）}:\ E\subseteq N_1[L_\sigma]\ \forall\sigma\ (\text{§0 刻画之直接推论})\ \Longrightarrow\ L_\sigma\ \text{本身即覆盖 }E\ \text{之集合} \Longrightarrow\ |L_\sigma|\ge\gamma_1(E):=\min\{|A|:N_1[A]\supseteq E\}$$
+$$\qquad\Longrightarrow\ \boxed{M=\sum_\sigma|L_\sigma|\ \ge\ 2^m\,\gamma_1(E)}\ ✓\ \text{（\textbf{\text{首次得到含 min-型非聚合量之精确不等式}}）}$$
+
+$$\textbf{实测（120-码，参考点）}:\ \gamma_1(E)\ \text{之 LP 下界／贪心上界}:\ m{=}1:\ 50.23/70\ (|E|{=}394);\ m{=}2:\ 24.80/32\ (|E|{=}145);\ m{=}3:\ 10.60/12\ (|E|{=}34)$$
+$$\qquad\text{层大小皆}\ge\gamma_1(E)\ ✓\ (\text{如 }m{=}2:\ |L_\sigma|=(28,32,32,28)\ge24.8 ✓);\quad M{=}120\ge2^m\gamma_1\ ✓\ \text{全部满足 ✗（未违）}$$
+
+$$\textbf{排除 }M{=}106\ \text{之\ \textbf{具体靶（量化 ✓✓）}}:\ \text{需 }M<2^m\gamma_1(E)\ \text{即}\ \gamma_1(E)>\tfrac{106}{2^m}\ \Longrightarrow\ \boxed{\gamma_1(E)\ \ge\ 54\ (m{=}1);\ \ 27\ (m{=}2);\ \ 14\ (m{=}3)}$$
+$$\qquad\text{与参考值对照（120-码）}:\ 50.2<54\ ✗;\ 24.8<27\ ✗;\ 10.6<14\ ✗\ \Longrightarrow\ \textbf{\text{目标皆\ \textbf{高于} 参考值，但仅高出 }\sim7\%\text{--}30\%}\ ⚠️$$
+
+$$\textbf{诚实（✗）}:\ \text{单靠 }\gamma_1\ \text{与 }\gamma_1\ge|E|/(nc{+}1)\ \text{仍\ \textbf{复现旧界}} ✗\ (|E|\le\frac{(nc+1)M}{2^m}\ ✓)\ \Longrightarrow\ \text{要咬，必须给出\ \textbf{基于 }E\ \text{之\ \textbf{集合结构} 的 }\gamma_1\ \text{下界}} ⚠️$$
+$$\qquad\text{即}:\ \text{需要关于 }E\ \text{之\ \textbf{额外结构事实}}（\text{如 }E\ \text{之最小距离／分布／“形状”}）\ ✓\ \text{——}\textbf{\text{这是本线首次出现的、带具体数值靶的非聚合目标}} ✓✓$$
+$$\qquad\text{已知 }E\ \text{之结构事实（现仅有）}:\ E\subseteq\bigcap_\sigma N_1[L_\sigma],\ E\cap\bigcup_\sigma L_\sigma=\varnothing,\ \forall\sigma\ \exists w\in L_\sigma: d(w,y){=}1\ (\text{§8.1}) ⚠️\ ——\ \textbf{\text{尚不足以定 }\gamma_1}$$
