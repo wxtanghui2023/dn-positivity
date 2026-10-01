@@ -31,3 +31,19 @@ $$\therefore\ \text{唯一可行解 ＝ \textbf{显式登记}}:\ \text{与其事
 - ✅ `docs/ASSUMPTIONS-LEXICON.tsv`（词表：raw→class→canonical）
 - ✅ `docs/ASSUMPTIONS.tsv`（登记册；**27 条最承重断言已人工定标**）
 - ⏳ 其余 1263−27 条待补
+
+## 写入即登记（**新断言必走** ✓ 2026-10-01 立）
+
+**根因**：历史账 1263 条中人工定标仅 27 条（2.1%），且正则抽取不可行（91 条中 52 垃圾）⟹ 补历史账永远追不上。**故改为"诞生即登记"**。
+
+每个新断言（新 `.md` 档或 `ID-CLAIMS.tsv` 新行）**必须**在档头给出：
+
+```markdown
+### <断言 id> — <一句话陈述>
+ASSUMES: <标签1> | <标签2>        # ★=不可得/未证/代理  △=单点验证
+DERIVES-FROM: <前提断言 id> ...   # 已立结论走此列，**不得**写进 ASSUMES
+```
+
+并**同批**在 `docs/ASSUMPTIONS.tsv` 追加一行（`provenance=人工定标`）。
+
+**审计**：`python3 scripts/assumes_audit.py` ⟹ 输出覆盖率与 `docs/ASSUMES-BACKLOG.md`（按被引用次数排序的待补清单）。
