@@ -48,7 +48,7 @@ $$\textbf{(D1)}\ \text{无 P1} ✗;\ \textbf{(D2)}\ \text{定义取自档案原�
 ## §7 【技术词回查】
 
 ```
-技术词 P2a定义对齐   命中文件数=1
-技术词 标度律       命中文件数=1
+技术词 P2a定义对齐   命中文件数=1    :: ./AUDIT-2026-09-30-P2a-definition-alignment-retraction-and-2A2R-scaling.md
+技术词 标度律       命中文件数=11   :: （含 p5-8-distortion-test.md / ASSETS-REGISTRY.md / delta-rigidity-spectrum.md 等）
 ```
-$$\textbf{分类}：\textbf{本档新增}：\text{两词皆仅本档} ✓;\ \textbf{通用词（不计）}：\text{"分拆／撤回"裸词} ✓$$
+$$\textbf{分类}：\textbf{本档新增}：\text{仅「P2a定义对齐」（1 档）} ✓;\quad \textbf{档案已有（引用，不列为提出）}：\text{「标度律」11 档 ✗ 非新} ✓;\quad \textbf{通用词（不计）}：\text{"分拆／撤回"裸词} ✓$$
