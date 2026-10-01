@@ -15,6 +15,11 @@ ASSUMES: N/A (组织性索引)
 | **119 线（K(10,1)）** | B | **进行中** | `MASTER-FAILURE-MAP-107-LINE.md`｜`ROUTE-FINGERPRINTS.tsv` | 覆盖码；SDP-3 ⟹ 106；107 = BÖW |
 | **A23D4（depth-four 局部最优性）** | — | **已完成** | `A23D4-CLOSURE-2026-09-26-depth-four-local-optimality-theorem.md` ＋ dossier/archive/census｜`scripts/C2a_depth.py` | 完成但**此前未单独建档** ⟹ 本档补 |
 
+## 一之二、**已建之"前沿已有成果"课题**（代号＝小灵按主题自定 ✓ 2026-10-01）
+
+| **`ALIGN-LI`**（Li 系数对齐线） | A | **结果＝前沿已有** ⟹ 归档 | `topics/ALIGN-LI/README.md` | 证据：Λ₂(0)=5/36 与前沿一致 ✓ |
+| **`ALIGN-COMPRESS`**（有限压缩–惯性对齐线） | A | **结果＝前沿已有** ⟹ 归档 | `topics/ALIGN-COMPRESS/README.md` | 证据：P27 = Bombieri（自曝重发现）⚠️ |
+
 ## 二、**待唐先生确认之二课题**（成果为**前沿已有**，但须单独归档 ⚠️）
 
 | 候选 | 证据（档案原文） |
