@@ -81,6 +81,23 @@ $$\boxed{\text{119 ＝ } \texttt{HUNT-R2} \text{ 之 C1（并被定为 TOP-1）}
 - **REJECT（已关）** ✗：HUNT-R3 三项（S1/S2/S3）｜C-2 $\pm$-rank｜C-3 $11/8$-猜想｜P4 Mathlib 形式化｜P5 跨学科泛题｜C328 四条（Mahler-Lehmer／Barker／Littlewood／Lonely Runner）
 - **未逐条展开**：`NEW-TOPIC-SEARCH-R1` 之**四桶八候选**（仅存"资产包抽象化 $\mathcal A_{\rm cover}$"层表 ⚠️ 待补审）
 
+
+## §3b **账目补齐**（更正：上条只列 4 项 ✗）
+
+$$	ext{"约 20 项"＝七份清单上\ 	extbf{具名候选总合}};\qquad 	ext{"4 项"＝其中\ 	extbf{标签恰为 PASS}\ 者} \Longrightarrow\ 	extbf{	ext{上条漏列两批同属"可用但未启动"者}} ✗$$
+
+| 批次 | 项 | 数 |
+|---|---|---|
+| ① 标签 PASS（HUNT-R2 硬门／TOPIC-SEARCH-R1 G 门） | C2 覆盖设计｜C3 Butson-Hadamard｜C4 差族｜C-1 $z_L(5,5)$ | **4** |
+| ② **RESEARCH-PIVOT 五门全过**（上条漏列 ✗） | **P1 认证/审计型**｜**P2 $\mathrm{PG}(n,q)$ saturating set／arc**｜**P3 结构矩阵族惯性/负指标界** | **3** |
+| ③ **CAPABILITY-FIRST 四问题类**（上条漏列 ✗，属"类"非具名问题） | K-1 常数改进｜K-2 穷举边界扩展｜K-3 Mathlib 缺口｜K-4 已发表主张复核 | **4** |
+| ④ 已启动 | C1（**＝119**） | 1 |
+| ⑤ HOLD／暂缓 | C5 Erdős｜C-2 $\pm$-rank | 2 |
+| ⑥ REJECT（已关） | HUNT-R3 三项（S1/S2/S3）｜C-3 $11/8$｜P4 Mathlib 形式化｜P5 跨尺度泛题｜C328 四条（Mahler-Lehmer／Barker／Littlewood／Lonely Runner） | **10** |
+| ⑦ **未逐条展开** ⚠️ | `NEW-TOPIC-SEARCH-R1` 四桶 8 候选 | **8** |
+
+$$\Longrightarrow\ 	extbf{\text{"可用但未启动"实为 }11\text{ 项}}（4+3+4）,\ \text{而非 }4\text{ 项};\ \text{另有 }8\text{ 项未审} ✓$$
+
 ## §4 边界与纪律
 
 $$\textbf{(D1)}\ \text{不主张数学新值} ✓;\ \textbf{(D2)}\ \text{裁定皆溯至原档（逐字/档级）} ✓;\ \textbf{(D3)}\ \text{未取禁用原文／未碰 RH} ✓$$
