@@ -14,6 +14,15 @@ $$\text{[① n}\le41\text{]}:\ \textbf{FEASIBLE}\ (\text{CP-SAT}\ 1.7\,\mathrm{s
 
 $$\text{[② n}\le40\text{]}:\ \textbf{UNKNOWN}\ (300\,\mathrm{s}\ \text{用尽}:\ 3{,}456{,}004\ \text{冲突},\ 37{,}921{,}730\ \text{分支})\ \Longrightarrow\ \textbf{\text{未决（不作不存在证据）}};\ \text{已启动 }1800\,\mathrm{s}\ \text{长跑（仅 }n{=}40\text{）} ✓$$
 
+
+## L2-a（LP 对偶权重法）—— **已实测：耗尽** ✗✗（2026-10-01 16:2x）
+
+$$\max\sum_T w_T\ \text{s.t.}\ \forall B:\sum_{T\subset B}w_T\le1,\ w\ge0\ \Longrightarrow\ \lambda=33.0000000000\ (\text{均匀权 }w_T{=}1/15,\ 495\times\tfrac1{15}{=}33)$$
+- 深零 13860；支撑 495；**924 块全部取等**
+- **严格有理证书** ✓：$\sum=33/1$，整数算术逐块复核通过（`out/hnc2_lp_dual.log`）
+- **判定**：$M\ge33$ —— **仅等于 Schönheim 界** ⟹ **LP 弛豫弱**，**不足以触及 40/41** ⟹ 路径 a **耗尽** ✗
+- **推论（重要）**：库下限 40 **不可能来自一阶 LP/均匀权** ⟹ 必来自**更强方法**（递归 Schönheim／整数性／结构论证）⟹ **L2-c／L2-e 为下一刀**
+
 ## 待决 ⏳
 
 $$\text{[② n}\le40\text{]}:\ \text{CP-SAT 上限 }300\,\mathrm{s}\ \text{运行中};\ \text{三出口}:\ \textbf{FEASIBLE}\ (\text{上界 }41\to40,\ \text{记录改进})\ \mid\ \textbf{INFEASIBLE}\ (\Longrightarrow C(12,6,4)=41\ \text{精确},\ \text{gap 闭合})\ \mid\ \textbf{UNKNOWN}\ (\text{未决，不作不存在证据})$$
