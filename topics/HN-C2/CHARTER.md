@@ -93,6 +93,11 @@ $$\text{记教训}：\text{把已试路线重新包装为"存活点"＝\ 二次�
 $$\boxed{\text{课题须先过}\ \textbf{价值评估}（V1 问题地位／V2 记录传播／V3 可验证性／V4 成本-收益／V5 竞争密度／V6 可发表性／V7 能力资产）\ \text{并给出"是否值得推进"裁定}}$$
 $$\text{详见}\ \texttt{docs/VALUE-ASSESSMENT-2026-10-01-topics-worthiness.md}\ ✓$$
 
+## §4.4 判定记录（三轮）
+
+$$①300\,\mathrm{s}\ \text{UNKNOWN}（3{,}456{,}004/37{,}921{,}730）\to ②600\,\mathrm{s}\ \text{UNKNOWN}（97{,}379/9{,}489{,}229）\to ③3600\,\mathrm{s}\ \text{UNKNOWN}（99{,}954/1{,}067{,}879）$$
+$$\Longrightarrow\ \textbf{判定平台}：\text{冲突不动+分支大降}\Rightarrow\text{结构性硬}\Rightarrow\ \textbf{换法（S1 lex-leader／S2 定向构造）}，\textbf{不得再加时限} ✓$$
+
 ## §4.5 **有效攻击点（预筛后 · 仅存活者）** ✓
 
 | 排名 | 攻击点 | 通过三问？ | 现状 |

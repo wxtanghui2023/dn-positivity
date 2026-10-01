@@ -51,6 +51,11 @@ $$\text{对比（未加强版 300}\,\mathrm{s}）: \text{冲突 }3{,}456{,}004,\
 **第三轮（2026-10-01 16:50 启动）** ✓：时限 $600\to3600\,\mathrm{s}$，workers $4\to8$。
 $$\text{对称破缺说明}：\text{安全之 lex-leader 编码需 }\approx\!11{,}000\ \text{辅助变量（CP-SAT 无内建 lex 约束）} \Longrightarrow\ \text{本轮\textbf{先以"拉长时限"替代}，若仍 UNKNOWN 再上 lex-leader} ✓$$
 
+## 第三轮结果（3600 s／8 workers）
+
+$$\textbf{UNKNOWN}\ (3600\,\mathrm{s};\ \text{冲突 }99{,}954,\ \text{分支 }1{,}067{,}879)\ \Longrightarrow\ \text{不作不存在证据}$$
+$$\textbf{方法判读}：\text{冲突不动}（97{,}379\to99{,}954）＋\text{分支大降}（9.49\text{M}\to1.07\text{M}）\Longrightarrow\ \textbf{判定平台}，\text{须换法：}S1\ \text{lex-leader}／S2\ \text{定向构造}$$
+
 ## 待决 ⏳
 
 $$\text{[② n}\le40\text{]}:\ \text{CP-SAT 上限 }300\,\mathrm{s}\ \text{运行中};\ \text{三出口}:\ \textbf{FEASIBLE}\ (\text{上界 }41\to40,\ \text{记录改进})\ \mid\ \textbf{INFEASIBLE}\ (\Longrightarrow C(12,6,4)=41\ \text{精确},\ \text{gap 闭合})\ \mid\ \textbf{UNKNOWN}\ (\text{未决，不作不存在证据})$$
