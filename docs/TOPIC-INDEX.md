@@ -7,6 +7,11 @@ ASSUMES: N/A (组织性索引)
 
 > 依 唐先生 2026-10-01 14:07 令：**每个课题单独建档**；**前沿方法论单独成资产**（见 `METHODOLOGY-ASSETS.md`）
 
+## 〇、**两级地图（先看这个）**
+
+- **L1 课题级**（做什么问题）＝`AUDIT-2026-10-01b-topic-level-screening-lists-reaudit-TWO-LEVEL-MAP.md` §2 ⟹ 候选约 20 项，**除 119 外皆未启动或已 REJECT**
+- **L2 课题内路线级**（该问题怎么打）＝`POOL-2026-09-30-V2`／`ASTRA-TYPE-OPEN-PROBLEM-TABLE`／`ASSET-TO-PROBLEM-MATCHING-v1`
+
 ## 一、已确认课题
 
 | 课题 | 空间 | 状态 | 主档／索引 | 备注 |
