@@ -32,7 +32,7 @@ else:
         for cid in set(IDRE.findall(txt)): ins[cid]+=1
 human={k:v for k,v in reg.items() if v[1]=='人工定标'}
 todo=sorted([i for i in ids if i not in human],key=lambda x:-ins[x])[:50]
-lines=["结论: 已查地图：命中 1 处 —— 先逐条判 已DEAD/已封/已登记；命中即引既有条目，不得开新案","D0: 本档对象 = 工具产物（待补假设清单）；非数学命题，不主张任何新值","D1: 0","",
+lines=["结论: 已查地图：命中 1 处 —— 先逐条判 已DEAD/已封/已登记；命中即引既有条目，不得开新案","D0: 本档对象 = 工具产物（待补假设清单）；非数学命题，不主张任何新值","D1: 0","ASSUMES: N/A (工具产物)","",
  "# ASSUMES-BACKLOG — 待补假设登记清单（按被引用次数排序）","",
  f"- 登记册总数：{len(reg)}；其中**人工定标 {len(human)}**；ID-CLAIMS 断言 {len(ids)}",
  f"- 覆盖率（人工定标/ID-CLAIMS）：**{len(human)}/{len(ids)} = {100*len(human)/max(1,len(ids)):.1f}%**","",

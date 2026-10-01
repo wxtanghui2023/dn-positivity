@@ -10,6 +10,9 @@
 set -uo pipefail
 cd "$(git rev-parse --show-toplevel)" || exit 0
 
+# ── 规则4（2026-10-01 14:03）：新断言档必须登记假设 ──
+bash scripts/assumes_gate.sh || exit 1
+
 LEDGER="docs/D0-D1-LEDGER.md"
 THRESHOLD=3
 SCAN_N=30
