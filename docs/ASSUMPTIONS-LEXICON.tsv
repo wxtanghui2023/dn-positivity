@@ -1,0 +1,92 @@
+raw	class	canonical
+假设:H 是经验性元规律	assumption	H 是经验性元规律
+假设:RH 下被证明	assumption	RH 下被证明
+假设:Ш 型为 cylinder	assumption	Ш 型为 cylinder
+假设:下的 iff 判据	assumption	下的 iff 判据
+假设:不控负部	assumption	不控负部
+假设:与结论	assumption	与结论
+假设:实测失效	assumption	实测失效
+假设:审计：分离被正性替代	assumption	审计：分离被正性替代
+假设:对相关猜想	assumption	对相关猜想
+假设:清单审计（分离被正性替代	assumption	清单审计（分离被正性替代
+假设:的否定全部已被本档案覆盖 ——	assumption	的否定全部已被本档案覆盖 ——
+假设:目标失败	assumption	目标失败
+假设:目标失败 → failure 产生局部约束 → 两个可交换的自然	assumption	目标失败 → failure 产生局部约束 → 两个可交换的自然
+假设:离轴零点 δ 的响应 = 0	assumption	离轴零点 δ 的响应 = 0
+假设:纪律为主线 ＋ 并入 回复 1 的 G3 刀口	assumption	纪律为主线 ＋ 并入 回复 1 的 G3 刀口
+若A成立	assumption	若A成立
+若P-SF成立	assumption	若P-SF成立
+若P成立	assumption	若P成立
+若R-A 不成立	assumption	若R-A 不成立
+若三条成立	assumption	若三条成立
+若兼容条件只能成立	assumption	若兼容条件只能成立
+若反向蕴含不成立	assumption	若反向蕴含不成立
+若对任意输入成立	assumption	若对任意输入成立
+若幂律成立	assumption	若幂律成立
+若所有有限兼容条件成立	assumption	若所有有限兼容条件成立
+若焊接成立	assumption	若焊接成立
+若覆盖论证成立	assumption	若覆盖论证成立
+若该线索成立	assumption	若该线索成立
+若逐点成立	assumption	若逐点成立
+假设:逐条放松	assumption	逐条放松
+假设:闭合    命中文件数=0 ::	assumption	闭合    命中文件数=0 ::
+假设:＝逐素数可分＋非退化归一化	assumption	＝逐素数可分＋非退化归一化
+★依赖RH(空间A专属)	garbage	
+假设:Euler 积与逐素数可分）	garbage	
+假设:H	garbage	
+假设:H ✓✓	garbage	
+假设:H】（经验性	garbage	
+假设:RH）	garbage	
+假设:RH）✓	garbage	
+假设:|	garbage	
+假设:× 我方可得性）	garbage	
+假设:→ 对质 ζ/B2-1）✓	garbage	
+假设:✓	garbage	
+假设:✓】	garbage	
+假设:✓）	garbage	
+假设:✗	garbage	
+假设:⟹ 循环	garbage	
+假设:⟹ 聚合	garbage	
+假设:【被否 ✗】	garbage	
+假设:【解析性】未被 canonicity 推出 ✗ ⟹ 新的唯一靶 	garbage	
+假设:】✓	garbage	
+假设:】✗	garbage	
+假设:】的形式 ✓	garbage	
+假设:】（若涉及 ✓）	garbage	
+假设:为假（§3）	garbage	
+假设:会空转）✓	garbage	
+假设:充分性  命中文件数=0 ::  ⟹ 本档新增	garbage	
+假设:均被否掉）	garbage	
+假设:实测失效（符号 50/50）|	garbage	
+假设:实测失效＋同族推论＋循环性 ✓	garbage	
+假设:审计 —— 分离不是缺口（正性替代它）	garbage	
+假设:已实测失败）✓	garbage	
+假设:换覆盖／B4 防变量重命名／B5 防只得不闭合的局部信号）✓✓	garbage	
+假设:清单 ⟹ 对质 ζ/B2-1 能否提供	garbage	
+假设:清单无带宽项 ＋ 论文 Remark 1.1 的表述推出）⚠️	garbage	
+假设:的严格替代 ✓）	garbage	
+假设:结论 ⇒ 结论」✗	garbage	
+假设:被否 ✓✓（κ 才是覆盖之源 ✓）	garbage	
+假设:远少于 Hamburger）	garbage	
+假设:（扩张／specification／Axiom A ✓）未对任何	garbage	
+假设:（零点到临界线距离 b/logT）	garbage	
+假设:） |	garbage	
+假设:）✓	garbage	
+假设:）✓✓	garbage	
+假设:）时 ✓：A(M)B(M) ∈ [0.6079M, 1.2158	garbage	
+假设:＝指数增长）	garbage	
+若(T1)成立	garbage	
+若(a)＋(b) 皆成立	garbage	
+若(b)成立	garbage	
+若(iii)成立	garbage	
+若(二)成立	garbage	
+若其等价性依赖正性而核不正 ⟹ 其主张不成立	garbage	
+若宣称幂律则 a−b+1 符号稳定）：✓成立	garbage	
+若需要 ⟹ R1 不成立	garbage	
+数值实测	generic	数值实测
+条件性	generic	条件性
+模条件	generic	模条件
+若局部化不成立	generic	若局部化不成立
+若该局部界成立	generic	若该局部界成立
+△Jensen松弛	marked	△Jensen松弛
+△单点验证	marked	△单点验证
