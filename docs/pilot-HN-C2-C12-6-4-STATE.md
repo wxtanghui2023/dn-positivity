@@ -23,6 +23,19 @@ $$\max\sum_T w_T\ \text{s.t.}\ \forall B:\sum_{T\subset B}w_T\le1,\ w\ge0\ \Long
 - **判定**：$M\ge33$ —— **仅等于 Schönheim 界** ⟹ **LP 弛豫弱**，**不足以触及 40/41** ⟹ 路径 a **耗尽** ✗
 - **推论（重要）**：库下限 40 **不可能来自一阶 LP/均匀权** ⟹ 必来自**更强方法**（递归 Schönheim／整数性／结构论证）⟹ **L2-c／L2-e 为下一刀**
 
+
+## ★ 天花板前置分析（2026-10-01 16:2x，路径去留之先验裁定 ✓✓）
+
+| 路径 | **天花板** | 来源 | 判定 |
+|---|---|---|---|
+| A 一阶 LP/均匀权 | **33** | **对称性**（$S_{12}$ 传递 ⟹ 群平均得均匀权 $c{=}1/15$；$495/15{=}33$）—— **与实测 λ=33 完全吻合** ✓ | **死** ✗（与 40 无关） |
+| **C 递归 Schönheim** | **恰好 40** | $C(12,6,4)\ge\lceil\frac{12}{6}C(11,5,3)\rceil$，而 **$C(11,5,3){=}20$ 为库内已封闭精确值** ⟹ $2\times20{=}40$ —— **与库下限 40 精确吻合** ✓✓ | **只能到 40，够不到 41** ✗ |
+| D ILP 最优性 | 无先验上限（精确法） | — | 计算难（1800 s UNKNOWN）⚠️ |
+| E 核库下限出处 | — | **已查明 ＝ 递归 Schönheim（见 C）** ✓✓ | 已完成 |
+| **J Johnson/Delsarte 型 LP** | **待算**（$\ge33$） | Johnson 方案 $J(12,6)$ 之线性规划界 | **下一刀** ✓ |
+
+$$\boxed{\text{结论}：M\in\{40,41\}\ \text{且}\ 40\ \text{恰为 Schönheim 界}\ \Longrightarrow\ \text{证 }M\ge41\ \text{必须证\ \textbf{Schönheim 递归在此不紧}}（\text{需稳定性/整数性论证}）}$$
+
 ## 待决 ⏳
 
 $$\text{[② n}\le40\text{]}:\ \text{CP-SAT 上限 }300\,\mathrm{s}\ \text{运行中};\ \text{三出口}:\ \textbf{FEASIBLE}\ (\text{上界 }41\to40,\ \text{记录改进})\ \mid\ \textbf{INFEASIBLE}\ (\Longrightarrow C(12,6,4)=41\ \text{精确},\ \text{gap 闭合})\ \mid\ \textbf{UNKNOWN}\ (\text{未决，不作不存在证据})$$
