@@ -36,6 +36,13 @@ $$\max\sum_T w_T\ \text{s.t.}\ \forall B:\sum_{T\subset B}w_T\le1,\ w\ge0\ \Long
 
 $$\boxed{\text{结论}：M\in\{40,41\}\ \text{且}\ 40\ \text{恰为 Schönheim 界}\ \Longrightarrow\ \text{证 }M\ge41\ \text{必须证\ \textbf{Schönheim 递归在此不紧}}（\text{需稳定性/整数性论证}）}$$
 
+## ★ J（Johnson/Delsarte 型）之裁定：**量级上不可能，直接排除** ✗（2026-10-01 16:2x）
+
+$$\text{① 理论}：J1\ (4\text{-子集赋权}/\text{每块}\le1)\ \text{的对偶＝分数覆盖数}\ \Longrightarrow\ \text{天花板 }33\ (=\text{路径 a, 已死});\quad J2\ \text{升阶一般仅 }O(1)\ \text{提升}$$
+$$\text{② 量级}：33 \to 41\ \text{需 }\textbf{+8 单位（+24\%）}，\text{而历史最强升阶增益 }+0.5\sim1\ \text{单位}\ \Longrightarrow\ \textbf{不可能} ✗$$
+$$\text{③ 前提}：J\ \text{天花板}\ge41\ \text{不成立}\ \Longrightarrow\ \textbf{不投入计算}（\text{省时省钱}）✓✗$$
+**正确方向** ⟹ 证 **Schönheim 递归在 $(12,6,4)$ 不紧**，入手＝**等号稳定性**：$40=2\times C(11,5,3)$，若 40 块存在**必处处取等** ⟹ 查 $C(11,5,3){=}20$ 的**等号构型分类**并验"拼合"
+
 ## 待决 ⏳
 
 $$\text{[② n}\le40\text{]}:\ \text{CP-SAT 上限 }300\,\mathrm{s}\ \text{运行中};\ \text{三出口}:\ \textbf{FEASIBLE}\ (\text{上界 }41\to40,\ \text{记录改进})\ \mid\ \textbf{INFEASIBLE}\ (\Longrightarrow C(12,6,4)=41\ \text{精确},\ \text{gap 闭合})\ \mid\ \textbf{UNKNOWN}\ (\text{未决，不作不存在证据})$$
