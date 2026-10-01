@@ -1,46 +1,46 @@
 结论: 已查地图：命中 2 处 —— 先逐条判 已DEAD/已封/已登记；命中即引既有条目，不得开新案
-D0: 本档对象 = 方法论资产登记（外部前沿 + 我方自产）；非数学命题，不主张任何新值
+D0: 本档对象 = 方法论资产登记（外部前沿 ＋ 我方自产）；非数学命题，不主张任何新值
 D1: 0
 ASSUMES: N/A (方法论登记)
 
 # METHODOLOGY-ASSETS — 方法论资产（内容 ＋ **适用边界**）
 
-> 依 唐先生 2026-10-01 14:07 令：**所有前沿文献的方法论单独作为资产**，须写明 **① 方法内容 ② 适用边界**（何时可用／何时不可用）
+> 依 唐先生 2026-10-01 14:07 令：**所有前沿文献的方法论单独作为资产**，须写明 **① 方法内容 ② 适用边界**（何时可用／不可用）
 
 ## 甲、覆盖码／组合学（119 线主要相关）
 
-| 方法 | 出处 | 内容 | **适用边界** | 我方记录 |
+| 方法 | 出处 | 内容 | 适用边界 | 我方记录 |
 |---|---|---|---|---|
-| **球界** | 经典 | $\|C\|\ge 2^n/V(n,R)$ | 任意 $；仅一阶 | K(10,1)≥94 ✓ |
-| **van Wee 超量法** | van Wee 1988 | 球内"超额"$\delta_{N[v]}$ 双计数 ⟹ 修正球界 | 需逐点球结构；{=}10$ 下给 102.4⟹103 | 自导 103 ✓；INV2 仅一步松弛 |
-| **Habsieger 同余/超量矩阵** | Habsieger 94/96/97 | 层式差 $\delta_i$＋条件 (q) ⟹ {p-1}\ge2p-1$ | **\mid n+1*；n 奇/偶分支不同；{=}10$ 只到 104 | 审计=103–106 层 ✗ |
-| **Zhang pair / Zhang–Lo triple 不等式** | Zhang 1991/92 | 线性不等式系统（对/三元覆盖） | 单一线性；**已被更精细法超越**（仅 K(12,3)≥18 未破） | 105（文献值） |
-| **BÖW 混合码 general R=1** | Bertolo–Östergård–Weakley 2004 | 混合码 {2,3}(b,t;R)$ 一般下界（含构造） | 一般 $；**全文不可得** ⟹ 我方列为★假设 | K(10,1)≥107 之源 ✗ |
+| **球界** | 经典 | $|C|\ge 2^n/V(n,R)$ | 任意 $(n,R)$；仅一阶 | K(10,1)≥94 ✓ |
+| **van Wee 超量法** | van Wee 1988 | 球内超额 $\delta_{N[v]}$ 双计数 ⟹ 修正球界 | 需逐点球结构；$n{=}10$ 给 102.4⟹103 | 自导 103 ✓；INV2 仅一步松弛 |
+| **Habsieger 同余/超量矩阵** | Habsieger 1994/96/97 | 层式差 $\delta_i$ ＋条件 (q) ⟹ $E_{p-1}\ge 2p-1$ | **须 $p\mid n+1$**；n 奇/偶分支不同；$n{=}10$ 只到 104 | 审计＝103–106 层 ✗ |
+| **Zhang pair / Zhang–Lo triple** | Zhang 1991/92 | 线性不等式系统（对/三元覆盖） | 单一线性；**已被更精细法超越**（仅 K(12,3)≥18 未破） | 105（文献值） |
+| **BÖW 混合码 general R=1** | Bertolo–Östergård–Weakley 2004 | 混合码 $K_{2,3}(b,t;R)$ 一般下界（含构造） | 一般 $(b,t)$；**全文不可得** ⟹ 列为★假设 | K(10,1)≥107 之源 ✗ |
 | **SDP-3（三阶 Parseval 松弛）** | Gijswijt–Polak 2025 | 三阶正半定松弛 ⟹ 105.2223⟹106 | **是松弛** ⟹ 天花板 105.2223；**不可能给 107** | 我方 106 之据 ✓✓ |
-| **子空间分布＋LP 分类** | Östergård–Blass 2001 | 逐坐标/子空间分布细化＋等价类剪枝＋LP | 需算力/分类枚举；M≲20 实践包络 | n=9 62 之证；n=10 不可行 ✗ |
-| **坐标式构造＋同构约化** | Kéri 2009 (Ch.9) | 逐坐标建码＋逐层同构拒绝＋Hall 型体积剪枝；**空集⟹下界** | 表包络 \lesssim20$、坐标 $\lesssim9$、单跑可>1 周 | 我方实测 n=6 即超时 ✗ |
+| **子空间分布＋LP 分类** | Östergård–Blass 2001 | 逐坐标/子空间分布细化＋等价类剪枝＋LP | 需算力/分类枚举；$M\lesssim 20$ 实践包络 | n=9 得 62；n=10 不可行 ✗ |
+| **坐标式构造＋同构约化** | Kéri 2009 (Ch.9) | 逐坐标建码＋逐层同构拒绝＋Hall 型体积剪枝；**空集⟹下界** | 包络 $M\lesssim20$、坐标 $\lesssim9$、单跑可 >1 周 | 我方实测 n=6 即超时 ✗ |
 
-## 乙、AI／形式化与知识组织（本轮新收）
+## 乙、AI／形式化与知识组织
 
-| 方法 | 出处 | 内容 | **适用边界** | 我方记录 |
+| 方法 | 出处 | 内容 | 适用边界 | 我方记录 |
 |---|---|---|---|---|
-| **证明图＋信任边界** | OpenMath (zhuhaichao518) | 节点＝命题、超边＝推导；四量分离（status/confidence/supportScore/obligations）；**公理政策在模型之外**；最小不动点**防循环自证** | 原型论域＝整数多项式＋MP ⟹ **不能承载我方数学** ✗；可借 **schema** ✓ | 已 fork 三件 ✓ |
-| **plan–prove–verify–regulate** | QED (arXiv 2604.24021) | Decomposer 出 YAML 计划 DAG（依赖/难度/关键步/自评）→ 证明 → 双层校验 → Regulator 三分支 | 开放问题、自然语言；需 Codex/Claude/Gemini CLI | 可借**流程** ✓ |
-| **蓝图（blueprint）** | leanblueprint/LeanArchitect/Lean Atlas | LaTeX `\uses`/`\leanok` → 依赖图＋完成度；边分 8 类 | 需 LaTeX 结构；Lean Atlas 需 Lean 项目 | 待用 |
-| **柔性形式化（flexiformal）** | OMDoc/sTeX | 三层层级（object/statement/theory）＋theory inclusion；**不承诺某一逻辑** | 需要**结构化撰写**；非自动 | 待用 |
+| **证明图＋信任边界** | OpenMath (zhuhaichao518) | 节点＝命题、超边＝推导；四量分离（status/confidence/supportScore/obligations）；公理政策在模型之外；最小不动点**防循环自证** | 原型论域＝整数多项式＋MP ⟹ **不能承载我方数学** ✗；schema 可借 ✓ | 已 fork 三件 ✓ |
+| **plan–prove–verify–regulate** | QED (arXiv 2604.24021) | Decomposer 出 YAML 计划 DAG（依赖/难度/关键步/自评）→ 证明 → 双层校验 → Regulator 三分支 | 开放问题、自然语言；需 Codex/Claude/Gemini CLI | 借**流程** ✓ |
+| **蓝图 blueprint** | leanblueprint／LeanArchitect／Lean Atlas | LaTeX `\uses`/`\leanok` → 依赖图＋完成度；边分 8 类 | 需 LaTeX 结构；Lean Atlas 需 Lean 项目 | 待用 |
+| **柔性形式化 flexiformal** | OMDoc／sTeX | 三层（object/statement/theory）＋theory inclusion；**不承诺某一逻辑** | 需结构化撰写；非自动 | 待用 |
 | **零标注依赖图抽取** | KnowTeX (arXiv 2601.15294) | 从**普通 LaTeX** 抽依赖图（无标注/无证明助手/无形式化） | 输入须 LaTeX | 待用 |
-| **依赖图驱动自动形式化** | ARIA (arXiv 2510.04520) | Graph-of-Thought 拆概念依赖图＋RAG＋Scorer | 目标是 Lean 形式化 | 待用 |
-| **通用 Lean 交互/训练/检索** | LeanDojo v1/v2 | 抽取 file deps/AST/proof states/premises；Pantograph；ReProver | 须 Lean/Mathlib（已装 ✓） | 待用 |
+| **依赖图驱动自动形式化** | ARIA (arXiv 2510.04520) | Graph-of-Thought 拆概念依赖图 ＋ RAG ＋ Scorer | 目标是 Lean 形式化 | 待用 |
+| **通用 Lean 交互/训练/检索** | LeanDojo v1/v2 | 抽取 file deps/AST/proof states/premises；Pantograph；ReProver | 须 Lean/Mathlib（**已装 ✓**） | 待用 |
 | **论证图** | Argdown | markdown 式 pro/con 论证图 | 表述性；非证明 | 待用 |
 
-## 丙、我方自产方法论（**须同等登记** ✓）
+## 丙、我方自产方法论（**同级登记** ✓）
 
 | 方法 | 内容 | 适用边界 | 记录 |
 |---|---|---|---|
-| **极值层＋载荷谱** | 由 {\max}(r,m)$ ＋载荷凸性给 $ 下界；$\Gamma{=}H_2{-}H_1$ 量化二阶缺口 | 仅**局部**（\le9$）；对全局需求侧（$）无接口 ✗ | RESULT-2026-09-30 系列 |
-| **枚举穷尽性＋反例优先** | 先证伪（找反例）再声称；<K$ 区数据不可达 ⟹ 只能证伪不能证实 | 小参数可穷尽；大参数无效 | 多档 |
+| **极值层＋载荷谱** | 由 $e_{\max}(r,m)$ ＋载荷凸性给 $h$ 下界；$\Gamma=H_2-H_1$ 量化二阶缺口 | 仅**局部**（$r\le9$）；对全局需求侧 $W$ **无接口** ✗ | RESULT-2026-09-30 系列 |
+| **枚举穷尽性＋反例优先** | 先证伪再声称；$M<K$ 区数据不可达 ⟹ **只能证伪不能证实** | 小参数可穷尽；大参数无效 | 多档 |
 | **机械门（防漂移）** | 已查地图／D0-D1／技术词回查／**规则4 假设登记** | 仅新档；需人写 ASSUMES | pre-commit ✓ |
 
 ## 使用纪律
 
-32582\textbf{① 引用方法论须随引其\ \textbf{适用边界}};\quad \textbf{② 自产方法论与外来方法论\ \textbf{同级登记}};\quad \textbf{③ 边界外使用须显式标 }\star\ ✓32582
+$$\text{① 引用方法论须随引其\ \textbf{适用边界}};\quad \text{② 自产与外来方法论\ \textbf{同级登记}};\quad \text{③ 边界外使用须显式标 }\star\ ✓$$
