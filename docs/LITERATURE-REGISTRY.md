@@ -88,3 +88,21 @@ ASSUMES: N/A (文献登记)
 $$\textbf{(D1)}\ \text{不主张数学新值} ✓;\ \textbf{(D2)}\ \text{题名与用途取自 grep 上下文（可复核）} ✓;\ \textbf{(D3)}\ \text{未取禁用原文／未碰 RH} ✓$$
 
 ROUTE-CHECK: R01=DUPLICATE  <其余>=NEW
+
+## §7 题名补齐（arXiv API 实取 ✓ 2026-10-01）
+
+| 编号 | 题名 | 作者 |
+|---|---|---|
+| `arXiv:1801.08442` | Limit Operators, Compactness and Essential Spectra on Bounded Symmetric Domains | Raffael Hagger |
+| `arXiv:1910.01227` | Jensen Polynomials for the Riemann Xi Function | Michael Griffin, Ken Ono, Larry Rolen et al. |
+| `arXiv:2006.08503` | The second moment of $S_n(t)$ on the Riemann hypothesis | Andrés Chirre, Emily Quesada-Herrera |
+| `arXiv:2008.07206` | Jensen polynomials are not a plausible route to proving the Riemann Hypothesis | David W. Farmer |
+| `arXiv:2203.14950` | On the Montgomery--Vaughan weighted generalization of Hilbert's inequality | Wijit Yangjit |
+| `arXiv:2204.01036` | From asymptotic to closed forms for the Keiper/Li approach to the Riemann Hypothesis | André Voros |
+| `arXiv:2211.14918` | On the number variance of zeta zeros and a conjecture of Berry | Meghann Moriah Lugar, Micah B. Milinovich, Emily Quesada-Herrera |
+| `arXiv:2504.01932` | Semidefinite lower bounds for covering codes | Dion Gijswijt, Sven Polak |
+| `arXiv:2511.23257` | Quadratic Forms, Real Zeros and Echoes of the Spectral Action | Alain Connes, Walter D. van Suijlekom |
+| `arXiv:2608.12315` | On the optimal constant in the Montgomery-Vaughan weighted Hilbert inequality | Brad Rodgers |
+| `arXiv:2608.19872` | New upper and lower bounds on covering codes K_q(n,R) for alphabets of size 5 &lt;= q &lt;= 21 | Mark Marosi |
+
+> 上表 11 条原为 §5-1 之待办 ⟹ 已补齐 ✓；§1/§2 表内其余编号题名取自档案上下文（可复核）。
