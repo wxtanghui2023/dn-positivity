@@ -43,6 +43,14 @@ $$\text{② 量级}：33 \to 41\ \text{需 }\textbf{+8 单位（+24\%）}，\tex
 $$\text{③ 前提}：J\ \text{天花板}\ge41\ \text{不成立}\ \Longrightarrow\ \textbf{不投入计算}（\text{省时省钱}）✓✗$$
 **正确方向** ⟹ 证 **Schönheim 递归在 $(12,6,4)$ 不紧**，入手＝**等号稳定性**：$40=2\times C(11,5,3)$，若 40 块存在**必处处取等** ⟹ 查 $C(11,5,3){=}20$ 的**等号构型分类**并验"拼合"
 
+
+## 决定性判定 · 第二轮（加强结构版）结果与第三轮
+
+$$\text{[第二轮（等号结构约束）]}:\ \textbf{UNKNOWN}\ (600\,\mathrm{s};\ \text{冲突 }97{,}379,\ \text{分支 }9{,}489{,}229)\ \Longrightarrow\ \text{不作不存在证据} ⚠️$$
+$$\text{对比（未加强版 300}\,\mathrm{s}）: \text{冲突 }3{,}456{,}004,\ \text{分支 }37{,}921{,}730\ \Longrightarrow\ \textbf{\text{结构约束使冲突\ ↓35×、分支\ ↓4×}} ✓\ \text{（空间确被压小，但 600}\,\mathrm{s}\ \text{不足）}$$
+**第三轮（2026-10-01 16:50 启动）** ✓：时限 $600\to3600\,\mathrm{s}$，workers $4\to8$。
+$$\text{对称破缺说明}：\text{安全之 lex-leader 编码需 }\approx\!11{,}000\ \text{辅助变量（CP-SAT 无内建 lex 约束）} \Longrightarrow\ \text{本轮\textbf{先以"拉长时限"替代}，若仍 UNKNOWN 再上 lex-leader} ✓$$
+
 ## 待决 ⏳
 
 $$\text{[② n}\le40\text{]}:\ \text{CP-SAT 上限 }300\,\mathrm{s}\ \text{运行中};\ \text{三出口}:\ \textbf{FEASIBLE}\ (\text{上界 }41\to40,\ \text{记录改进})\ \mid\ \textbf{INFEASIBLE}\ (\Longrightarrow C(12,6,4)=41\ \text{精确},\ \text{gap 闭合})\ \mid\ \textbf{UNKNOWN}\ (\text{未决，不作不存在证据})$$
