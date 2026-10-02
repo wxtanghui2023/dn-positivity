@@ -67,6 +67,14 @@ $$\text{记教训}：\text{把已试路线重新包装为"存活点"＝\ 二次�
 $$\boxed{\text{课题须先过}\ \textbf{价值评估}（V1 问题地位／V2 记录传播／V3 可验证性／V4 成本-收益／V5 竞争密度／V6 可发表性／V7 能力资产）\ \text{并给出"是否值得推进"裁定}}$$
 $$\text{详见}\ \texttt{docs/VALUE-ASSESSMENT-2026-10-01-topics-worthiness.md}\ ✓$$
 
+
+## §2.10 **命题级验证门**（唐先生 2026-10-02 10:03 令 ✓）
+
+$$\boxed{\text{推导中用到的\ \textbf{每一个数学命题}，在\ \textbf{作为前提使用之前}，必须先附\ \textbf{机器检验}（脚本＋输出）；未验证者标 CONJECTURED，\textbf{不得作前提}}}$$
+$$\text{三档状态}：\textbf{VERIFIED-SMALL}（\text{小规模穷举，反例}=0）｜\textbf{VERIFIED-EXACT}（\text{精确计算/证书}）｜\textbf{REFUTED}（\text{有反例}）；\quad \text{台账}＝\texttt{docs/PROPOSITIONS.tsv}$$
+$$\text{硬要求}：\text{任何脚本\ \textbf{先写文件 → \texttt{python3 -m py_compile} → 最小样例自检 → 再跑}};\ \text{任何"保持某不变量"之构造，\textbf{先做反例搜索}}$$
+$$\text{记教训}：\text{本日 }P\text{-001（"2-switch 保 }λ\text{"）为\ \textbf{100\% 错}（36/36），\text{十行穷举即可杀死}} \Longrightarrow \textbf{\text{"先理论推导"若不带反例检验，等于没推导}}$$
+
 ## §4 **逐环节：全部思路 × 可行性**
 
 | 环 | 思路 | 可行性 |
@@ -93,10 +101,26 @@ $$\text{记教训}：\text{把已试路线重新包装为"存活点"＝\ 二次�
 $$\boxed{\text{课题须先过}\ \textbf{价值评估}（V1 问题地位／V2 记录传播／V3 可验证性／V4 成本-收益／V5 竞争密度／V6 可发表性／V7 能力资产）\ \text{并给出"是否值得推进"裁定}}$$
 $$\text{详见}\ \texttt{docs/VALUE-ASSESSMENT-2026-10-01-topics-worthiness.md}\ ✓$$
 
+
+## §2.10 **命题级验证门**（唐先生 2026-10-02 10:03 令 ✓）
+
+$$\boxed{\text{推导中用到的\ \textbf{每一个数学命题}，在\ \textbf{作为前提使用之前}，必须先附\ \textbf{机器检验}（脚本＋输出）；未验证者标 CONJECTURED，\textbf{不得作前提}}}$$
+$$\text{三档状态}：\textbf{VERIFIED-SMALL}（\text{小规模穷举，反例}=0）｜\textbf{VERIFIED-EXACT}（\text{精确计算/证书}）｜\textbf{REFUTED}（\text{有反例}）；\quad \text{台账}＝\texttt{docs/PROPOSITIONS.tsv}$$
+$$\text{硬要求}：\text{任何脚本\ \textbf{先写文件 → \texttt{python3 -m py_compile} → 最小样例自检 → 再跑}};\ \text{任何"保持某不变量"之构造，\textbf{先做反例搜索}}$$
+$$\text{记教训}：\text{本日 }P\text{-001（"2-switch 保 }λ\text{"）为\ \textbf{100\% 错}（36/36），\text{十行穷举即可杀死}} \Longrightarrow \textbf{\text{"先理论推导"若不带反例检验，等于没推导}}$$
+
 ## §4.4 判定记录（三轮）
 
 $$①300\,\mathrm{s}\ \text{UNKNOWN}（3{,}456{,}004/37{,}921{,}730）\to ②600\,\mathrm{s}\ \text{UNKNOWN}（97{,}379/9{,}489{,}229）\to ③3600\,\mathrm{s}\ \text{UNKNOWN}（99{,}954/1{,}067{,}879）$$
 $$\Longrightarrow\ \textbf{判定平台}：\text{冲突不动+分支大降}\Rightarrow\text{结构性硬}\Rightarrow\ \textbf{换法（S1 lex-leader／S2 定向构造）}，\textbf{不得再加时限} ✓$$
+
+
+## §2.10 **命题级验证门**（唐先生 2026-10-02 10:03 令 ✓）
+
+$$\boxed{\text{推导中用到的\ \textbf{每一个数学命题}，在\ \textbf{作为前提使用之前}，必须先附\ \textbf{机器检验}（脚本＋输出）；未验证者标 CONJECTURED，\textbf{不得作前提}}}$$
+$$\text{三档状态}：\textbf{VERIFIED-SMALL}（\text{小规模穷举，反例}=0）｜\textbf{VERIFIED-EXACT}（\text{精确计算/证书}）｜\textbf{REFUTED}（\text{有反例}）；\quad \text{台账}＝\texttt{docs/PROPOSITIONS.tsv}$$
+$$\text{硬要求}：\text{任何脚本\ \textbf{先写文件 → \texttt{python3 -m py_compile} → 最小样例自检 → 再跑}};\ \text{任何"保持某不变量"之构造，\textbf{先做反例搜索}}$$
+$$\text{记教训}：\text{本日 }P\text{-001（"2-switch 保 }λ\text{"）为\ \textbf{100\% 错}（36/36），\text{十行穷举即可杀死}} \Longrightarrow \textbf{\text{"先理论推导"若不带反例检验，等于没推导}}$$
 
 ## §4.5 **有效攻击点（预筛后 · 仅存活者）** ✓
 

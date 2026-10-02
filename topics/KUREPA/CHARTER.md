@@ -25,6 +25,14 @@ $$\text{副目标 }K\text{-B}：\text{新等价重构（承 Petojević 2023 路�
 
 $$\text{已知}=L0,L1,L2,L4,L5\ (L3\ \text{待核});\quad \text{可证（预期）}=\textbf{K-A（部分模结果，低成本）};\quad \text{待完成}=L6\ (\text{本体})$$
 
+
+## §2.10 **命题级验证门**（唐先生 2026-10-02 10:03 令 ✓）
+
+$$\boxed{\text{推导中用到的\ \textbf{每一个数学命题}，在\ \textbf{作为前提使用之前}，必须先附\ \textbf{机器检验}（脚本＋输出）；未验证者标 CONJECTURED，\textbf{不得作前提}}}$$
+$$\text{三档状态}：\textbf{VERIFIED-SMALL}（\text{小规模穷举，反例}=0）｜\textbf{VERIFIED-EXACT}（\text{精确计算/证书}）｜\textbf{REFUTED}（\text{有反例}）；\quad \text{台账}＝\texttt{docs/PROPOSITIONS.tsv}$$
+$$\text{硬要求}：\text{任何脚本\ \textbf{先写文件 → \texttt{python3 -m py_compile} → 最小样例自检 → 再跑}};\ \text{任何"保持某不变量"之构造，\textbf{先做反例搜索}}$$
+$$\text{记教训}：\text{本日 }P\text{-001（"2-switch 保 }λ\text{"）为\ \textbf{100\% 错}（36/36），\text{十行穷举即可杀死}} \Longrightarrow \textbf{\text{"先理论推导"若不带反例检验，等于没推导}}$$
+
 ## §4 **逐环节：全部思路 × 可行性**（已过 §2.7 三问）
 
 ### 环节 **L3′ ＝ K-A（部分模结果）**（待完成 ⏳ · **本课题主攻**）

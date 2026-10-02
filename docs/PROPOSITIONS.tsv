@@ -1,0 +1,8 @@
+# 命题台账：本档记录**推导中使用的每个数学命题**及其机器验证状态
+# 格式：proposition-id <TAB> 命题 <TAB> 状态 <TAB> 检验脚本 <TAB> 实测结果 <TAB> 引用处
+# 状态：VERIFIED-SMALL（穷举小规模，反例=0）｜VERIFIED-EXACT（精确计算/证书）｜REFUTED（有反例）｜CONJECTURED（未验证 ⟹ **不得作前提**）
+P-001	两区块共享恰2元素时作 2-switch，保持 pair 多重集（即保持 λ）	REFUTED	scripts/prop_check_twoswitch.py	穷举 36 个 2-switch，**36/36 全部改变对多重集**（反例：交换 (2,3)<->(6,7) 新增对 [(4,6),(4,7),(5,6),(5,7),(2,8),(2,9),(3,8),(3,9)]）	RESULT-2026-10-01c；S2A v3（λ 违例 0->28）
+P-002	HN-C2 等号结构（每点恰20块 + λ=10/9）线性可行	VERIFIED-EXACT	scripts/hnc2_structure_only_feas.py	CP-SAT 0.9s OPTIMAL，给出显式 40 块构型（度=20, λ 违例=0）	CHARTER-HN-C2 §4.4b
+P-003	上述结构精确解覆盖 411/495 个 4-子集	VERIFIED-EXACT	out/hnc2_struct_only_result.json	直接计数：覆盖 411/495，未覆盖 84	RESULT-2026-10-01c
+P-004	Schönheim 递归给出 C(12,6,4) >= 40 = 2 x C(11,5,3)	VERIFIED-EXACT	（经典定理；C(11,5,3)=20 见 LJCR）	与库下限 40 吻合	CHARTER-HN-C2 §2 L2
+P-005	等号结构定理：M=40 存在 ⟹ 每点恰在 20 块 ∧ 6 个互不相交特对（对内 λ=10/外来 9）	CONJECTURED	（未写检验脚本；推导见 EQUALITY-STRUCTURE.md）	**未验证** ⟹ 按 §2.10 不得作为前提 ⚠️	EQUALITY-STRUCTURE.md
