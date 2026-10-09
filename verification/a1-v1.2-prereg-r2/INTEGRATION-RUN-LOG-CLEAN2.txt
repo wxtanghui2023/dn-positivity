@@ -1,0 +1,20 @@
+# clean-directory run: /tmp/a1r2-clean2
+# exit=0
+
+I1 runner uses the shared scorer : True | scorer A1-v1.2-SCORER-r2.1 15a400d566cf
+  D1_defined_field_error             expected=REJECT               actual=REJECT               PASS
+  D2_null_required_violation         expected=REJECT               actual=REJECT               PASS
+  D3_truncated_but_parsable          expected=PARTIAL_TRUNCATED    actual=PARTIAL_TRUNCATED    PASS
+  D4_abnormal_termination            expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
+  D5_correct_scoreable               expected=ACCEPT               actual=ACCEPT               PASS
+  parsable+'content_filter'          expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
+  parsable+'error'                   expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
+  parsable+None                      expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
+  parsable+'mystery'                 expected=UNCLASSIFIED_RESPONSE actual=UNCLASSIFIED_RESPONSE PASS
+I2b all excluded             : True
+I3 differential              : True 
+I4 archive integrity only    : True | no-rejudge counters {'score_c1b': 3, 'aggregate_c1b': 5, 'score_records': 0}
+I5 model gate                : True
+I6 aggregation semantics     : True
+I7 synthetic null rule       : True
+ALL PASS: True
