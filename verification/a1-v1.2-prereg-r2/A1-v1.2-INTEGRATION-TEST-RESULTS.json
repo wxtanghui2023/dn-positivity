@@ -1,0 +1,268 @@
+{
+ "spec": "A1-v1.2-INTEGRATION-TEST-RESULTS",
+ "revision": 2,
+ "model_calls": 0,
+ "network": "none",
+ "purpose": "verify that the formal runner scores through the shared r2 scorer, and that no scoring function is applied to round-1 material",
+ "I1_identity": {
+  "runner_SCORE_C1B_is_scorer_score_c1b": true,
+  "runner_classify_is_scorer_classify": true,
+  "scorer_id": "A1-v1.2-SCORER-r2.1",
+  "scorer_module_path": "/tmp/a1r2-stage/l8_1_a12_scorer.py",
+  "scorer_module_sha256": "15a400d566cf5f5f30fe7bb3801a85635d05582d2e03ad5dcfd4c69b75184b5e",
+  "pass": true
+ },
+ "I2_runner_end_to_end": {
+  "cases": [
+   {
+    "case": "D1_defined_field_error",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "state": "SCOREABLE"
+   },
+   {
+    "case": "D2_null_required_violation",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "state": "SCOREABLE"
+   },
+   {
+    "case": "D3_truncated_but_parsable",
+    "expected": "PARTIAL_TRUNCATED",
+    "actual": "PARTIAL_TRUNCATED",
+    "pass": true,
+    "state": "PARTIAL_TRUNCATED"
+   },
+   {
+    "case": "D4_abnormal_termination",
+    "expected": "MEASUREMENT_FAILURE",
+    "actual": "MEASUREMENT_FAILURE",
+    "pass": true,
+    "state": "MEASUREMENT_FAILURE"
+   },
+   {
+    "case": "D5_correct_scoreable",
+    "expected": "ACCEPT",
+    "actual": "ACCEPT",
+    "pass": true,
+    "state": "SCOREABLE"
+   }
+  ],
+  "pass": true
+ },
+ "I2c_parsable_with_abnormal_terminal": {
+  "cases": [
+   {
+    "finish": "content_filter",
+    "content": "parsable",
+    "expected_state": "MEASUREMENT_FAILURE",
+    "actual_state": "MEASUREMENT_FAILURE",
+    "pass": true,
+    "never_scored": true
+   },
+   {
+    "finish": "error",
+    "content": "parsable",
+    "expected_state": "MEASUREMENT_FAILURE",
+    "actual_state": "MEASUREMENT_FAILURE",
+    "pass": true,
+    "never_scored": true
+   },
+   {
+    "finish": null,
+    "content": "parsable",
+    "expected_state": "MEASUREMENT_FAILURE",
+    "actual_state": "MEASUREMENT_FAILURE",
+    "pass": true,
+    "never_scored": true
+   },
+   {
+    "finish": "mystery",
+    "content": "parsable",
+    "expected_state": "UNCLASSIFIED_RESPONSE",
+    "actual_state": "UNCLASSIFIED_RESPONSE",
+    "pass": true,
+    "never_scored": true
+   }
+  ],
+  "pass": true,
+  "why": "a system-side termination or an unknown terminal state must never be scored, even when the content parses (previously it returned SCOREABLE)"
+ },
+ "I2b_all_excluded_aggregation": {
+  "C1c_verdict": "UNDECIDABLE",
+  "pass": true
+ },
+ "I3_differential_equivalence": {
+  "checked": 7,
+  "mismatches": [],
+  "pass": true
+ },
+ "I4_round1_archive_integrity": {
+  "policy": "INTEGRITY ONLY \u2014 round-1 material is hashed and its frozen verdicts are reported verbatim; it is NOT re-scored and no new capability verdict is produced",
+  "archive_files": [
+   {
+    "file": "A1-FINAL-VERDICTS.json",
+    "sha256_at_freeze": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+    "sha256_now": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+    "unchanged": true
+   },
+   {
+    "file": "A1-RUN-LEDGER.json",
+    "sha256_at_freeze": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+    "sha256_now": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+    "unchanged": true
+   },
+   {
+    "file": "RAW-A1.jsonl",
+    "sha256_at_freeze": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+    "sha256_now": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+    "unchanged": true
+   }
+  ],
+  "archive_unchanged": true,
+  "frozen_verdicts_reported_verbatim": {
+   "C1a": "SUCCESS",
+   "C1b": "UNDECIDABLE",
+   "C1c": "UNDECIDABLE"
+  },
+  "frozen_verdicts_unchanged": true,
+  "anchored_at": "content hashes taken from the round-1 freeze commits via git show <commit>:<path> (RAW-A1.jsonl b03e757, A1-FINAL-VERDICTS.json c227e3e, A1-RUN-LEDGER.json b03e757)",
+  "no_rejudge_guard": {
+   "counters": {
+    "score_c1b": 3,
+    "aggregate_c1b": 5,
+    "score_records": 0
+   },
+   "all_zero": true,
+   "contains_no_new_capability_verdict": true
+  },
+  "pass": true
+ },
+ "I5_model_gate": {
+  "unauthorised_call_raised": true,
+  "message": "model calls are NOT authorised; refusing to call for C1b-positive-appl",
+  "authorised_call_raised": true,
+  "no_call_made": true,
+  "pass": true
+ },
+ "I6_aggregation_semantics": {
+  "c1b": [
+   {
+    "probe": "only_noncompliance",
+    "expected": "FAILURE",
+    "actual": "FAILURE",
+    "excluded": [],
+    "excluded_expected": [],
+    "pass": true
+   },
+   {
+    "probe": "noncompliance_plus_accept",
+    "expected": "FAILURE",
+    "actual": "FAILURE",
+    "excluded": [],
+    "excluded_expected": [],
+    "pass": true
+   },
+   {
+    "probe": "noncompliance_plus_reject",
+    "expected": "FAILURE",
+    "actual": "FAILURE",
+    "excluded": [],
+    "excluded_expected": [],
+    "pass": true
+   },
+   {
+    "probe": "all_accept",
+    "expected": "SUCCESS",
+    "actual": "SUCCESS",
+    "excluded": [],
+    "excluded_expected": [],
+    "pass": true
+   },
+   {
+    "probe": "accept_plus_measurement_failure",
+    "expected": "UNDECIDABLE",
+    "actual": "UNDECIDABLE",
+    "excluded": [
+     "u"
+    ],
+    "excluded_expected": [
+     "u"
+    ],
+    "pass": true
+   }
+  ],
+  "c1c": [
+   {
+    "probe": "only_noncompliance",
+    "expected": "FAILURE",
+    "actual": "FAILURE",
+    "pass": true
+   },
+   {
+    "probe": "noncompliance_plus_accept",
+    "expected": "SUCCESS",
+    "actual": "SUCCESS",
+    "pass": true
+   }
+  ],
+  "pass": true,
+  "why": "MODEL_NONCOMPLIANCE is declared to count as a rejection; before the repair it was excluded and a capability failure became UNDECIDABLE"
+ },
+ "I7_synthetic_null_rule": {
+  "instance": "synthetic (built in this script, not a frozen instance)",
+  "synthetic_truth": {
+   "H1_common_core": true,
+   "H2_uniform_size": false,
+   "H3_tight": null,
+   "H4_no_complementary_pair": true,
+   "applicable": false
+  },
+  "undefined_hyps_requiring_null": [
+   "H3_tight"
+  ],
+  "cases": [
+   {
+    "case": "explicit_null_accepted",
+    "expected": "ACCEPT",
+    "actual": "ACCEPT",
+    "pass": true,
+    "violations": []
+   },
+   {
+    "case": "missing_null_field_rejected",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "UNDEFINED field H3_tight missing; explicit null required (missing != null)"
+    ]
+   },
+   {
+    "case": "non_null_for_undefined_rejected",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "UNDEFINED field H3_tight must be explicit null (got True)"
+    ]
+   }
+  ],
+  "pass": true,
+  "why": "the repaired behaviour of the new rule is validated on synthetic data only, so it never requires re-scoring round-1 material"
+ },
+ "summary": {
+  "I1": true,
+  "I2": true,
+  "I2c": true,
+  "I2b": true,
+  "I3": true,
+  "I4": true,
+  "I5": true,
+  "I6": true,
+  "I7": true
+ },
+ "all_pass": true
+}
