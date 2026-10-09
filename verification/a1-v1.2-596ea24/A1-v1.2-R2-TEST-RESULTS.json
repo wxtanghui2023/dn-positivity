@@ -1,0 +1,315 @@
+{
+ "spec": "A1-v1.2-R2-TEST-RESULTS",
+ "model_calls": 0,
+ "network_access": "none",
+ "field_semantics": {
+  "true_false": "judgement value of a DEFINED hypothesis",
+  "null": "hypothesis UNDEFINED under this instance preconditions",
+  "missing": "incomplete output / format violation; missing != null",
+  "defined_rule": "present, boolean, correct",
+  "undefined_rule": "explicit null required; else frozen format rules"
+ },
+ "null_semantics_suite": [
+  {
+   "case": "N1_no_core_all_nulls_correct",
+   "expected": "ACCEPT",
+   "actual": "ACCEPT",
+   "pass": true,
+   "violations": []
+  },
+  {
+   "case": "N2_no_core_undefined_missing",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "UNDEFINED field H3_tight missing; the null convention requires an explicit null (missing != null)",
+    "UNDEFINED field H4_no_complementary_pair missing; the null convention requires an explicit null (missing != null)"
+   ]
+  },
+  {
+   "case": "N3_no_core_undefined_answered_false",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "UNDEFINED field H3_tight must be explicit null (got False)"
+   ]
+  },
+  {
+   "case": "N4_no_core_undefined_answered_true",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "UNDEFINED field H4_no_complementary_pair must be explicit null (got True)"
+   ]
+  },
+  {
+   "case": "N5_positive_all_true",
+   "expected": "ACCEPT",
+   "actual": "ACCEPT",
+   "pass": true,
+   "violations": []
+  },
+  {
+   "case": "N6_positive_defined_field_null",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "defined field H4_no_complementary_pair must be boolean true/false (got None)"
+   ]
+  },
+  {
+   "case": "N7_not_tight_correct",
+   "expected": "ACCEPT",
+   "actual": "ACCEPT",
+   "pass": true,
+   "violations": []
+  },
+  {
+   "case": "N8_defined_field_missing",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "missing DEFINED field H3_tight (missing != null)"
+   ]
+  },
+  {
+   "case": "N9_unknown_extra_key_ignored",
+   "expected": "ACCEPT",
+   "actual": "ACCEPT",
+   "pass": true,
+   "violations": []
+  },
+  {
+   "case": "N10_applicable_wrong_type",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "applicable must be boolean (got 'no')"
+   ]
+  }
+ ],
+ "h1_not_h2_suite": {
+  "cases": [
+   {
+    "case": "B1_branch_correct",
+    "expected": "ACCEPT",
+    "actual": "ACCEPT",
+    "pass": true,
+    "violations": []
+   },
+   {
+    "case": "B2_branch_wrong_H4",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "wrong H4_no_complementary_pair (submitted False, truth True)"
+    ]
+   },
+   {
+    "case": "B3_branch_H3_missing",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "UNDEFINED field H3_tight missing; the null convention requires an explicit null (missing != null)"
+    ]
+   },
+   {
+    "case": "B4_branch_H3_answered_false",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "UNDEFINED field H3_tight must be explicit null (got False)"
+    ]
+   },
+   {
+    "case": "B5_branch_H4_missing",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "missing DEFINED field H4_no_complementary_pair (missing != null)"
+    ]
+   },
+   {
+    "case": "B6_branch_H4_null_when_defined",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "defined field H4_no_complementary_pair must be boolean true/false (got None)"
+    ]
+   },
+   {
+    "case": "B7_branch_claims_applicable",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "violations": [
+     "wrong applicable (submitted True, truth False)",
+     "conclusion must be null when not applicable (got 3)"
+    ]
+   }
+  ],
+  "pass": true,
+  "truth": {
+   "H1_common_core": true,
+   "H2_uniform_size": false,
+   "H3_tight": null,
+   "H4_no_complementary_pair": true,
+   "applicable": false,
+   "tau_star": 4
+  }
+ },
+ "format_suite": [
+  {
+   "case": "F1_hyps_missing",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "hyps object missing or malformed"
+   ]
+  },
+  {
+   "case": "F2_hyps_not_object",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "hyps object missing or malformed"
+   ]
+  },
+  {
+   "case": "F3_not_an_object",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "submission is not a JSON object"
+   ]
+  },
+  {
+   "case": "F4_applicable_missing",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "missing applicable"
+   ]
+  },
+  {
+   "case": "F5_conclusion_bool_true",
+   "expected": "REJECT",
+   "actual": "REJECT",
+   "pass": true,
+   "violations": [
+    "conclusion must be an integer when applicable (got True)"
+   ]
+  },
+  {
+   "case": "F6_conclusion_absent_when_not_applicable",
+   "expected": "ACCEPT",
+   "actual": "ACCEPT",
+   "pass": true,
+   "violations": []
+  }
+ ],
+ "status_to_scoring_r2": {
+  "SCOREABLE": "score normally",
+  "PARTIAL_TRUNCATED": "EXCLUDED from the capability verdict; reported as a separate completeness stratum (neither SUCCESS nor FAILURE)",
+  "MEASUREMENT_FAILURE": "UNDECIDABLE (never FAILURE, never SUCCESS)",
+  "MODEL_NONCOMPLIANCE": "counts as a rejection (capability failure)",
+  "UNCLASSIFIED_RESPONSE": "UNDECIDABLE + flagged for human review; an unknown finish_reason or an unrecognised termination mode must never be silently mapped to a capability verdict"
+ },
+ "abnormal_termination_suite": [
+  {
+   "case": "A1_finish_content_filter_parsable",
+   "expected": "SCOREABLE",
+   "actual": "SCOREABLE",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  },
+  {
+   "case": "A2_finish_content_filter_empty",
+   "expected": "MEASUREMENT_FAILURE",
+   "actual": "MEASUREMENT_FAILURE",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  },
+  {
+   "case": "A3_finish_error_empty",
+   "expected": "MEASUREMENT_FAILURE",
+   "actual": "MEASUREMENT_FAILURE",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  },
+  {
+   "case": "A4_finish_absent_parsable",
+   "expected": "SCOREABLE",
+   "actual": "SCOREABLE",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  },
+  {
+   "case": "A5_finish_unknown_empty",
+   "expected": "UNCLASSIFIED_RESPONSE",
+   "actual": "UNCLASSIFIED_RESPONSE",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  },
+  {
+   "case": "A6_finish_length_parsable",
+   "expected": "PARTIAL_TRUNCATED",
+   "actual": "PARTIAL_TRUNCATED",
+   "pass": true,
+   "note": "new finish_reason values must be classified by a declared rule, not silently mapped"
+  }
+ ],
+ "round1_under_r2": {
+  "per_instance": {
+   "C1b-positive-applicable": {
+    "verdict": "ACCEPT",
+    "violations": []
+   },
+   "C1b-negative-not-tight": {
+    "verdict": "ACCEPT",
+    "violations": []
+   },
+   "C1b-negative-no-core": {
+    "verdict": "REJECT",
+    "violations": [
+     "UNDEFINED field H3_tight must be explicit null (got False)",
+     "UNDEFINED field H4_no_complementary_pair must be explicit null (got True)"
+    ]
+   }
+  },
+  "status": "DIAGNOSTIC ONLY. r2 is a NEW version; it does NOT and MUST NOT re-judge round 1. The v1.1 prompt never asked for an explicit null, so any rejection here is a FORMAT-COMPLIANCE difference under a convention that did not exist in round 1; it is NOT a capability statement."
+ },
+ "measurement_rates_round1": {
+  "round1_n": 12,
+  "classifications": {
+   "SCOREABLE": 9,
+   "PARTIAL_TRUNCATED": 0,
+   "MEASUREMENT_FAILURE": 3,
+   "MODEL_NONCOMPLIANCE": 0
+  },
+  "cap_hit_rate": 0.25,
+  "scoreable_rate": 0.75,
+  "measurement_failure_rate": 0.25,
+  "undecidable_rate_measurement": 0.25,
+  "note": "the three rates must be reported separately; a larger budget is NOT itself evidence of success"
+ },
+ "null_semantics_suite_pass": true,
+ "format_suite_pass": true,
+ "abnormal_termination_suite_pass": true,
+ "h1_not_h2_suite_pass": true
+}
