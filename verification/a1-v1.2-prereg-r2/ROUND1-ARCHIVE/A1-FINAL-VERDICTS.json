@@ -1,0 +1,96 @@
+{
+ "spec": "A1-ROUND-1-FINAL-VERDICTS",
+ "ruling": "operator 2026-10-09 20:03 \u2014 option (a): mechanical FAILURE kept for C1b, registered as an INVALID rejection caused by a spec-scorer mismatch, capability interpretation UNDECIDABLE",
+ "model": {
+  "alias": "deepseek/deepseek-v4-flash",
+  "api_id": "deepseek-v4-flash",
+  "temperature": 0.2,
+  "max_output_tokens": 4000,
+  "timeout_s": 300
+ },
+ "calls_this_round": {
+  "primary": 12,
+  "transport_retry": 0,
+  "timeouts": 0,
+  "http_4xx": 0,
+  "budget_consumed": "12/12 primary",
+  "retry_allowance_used": "0/4"
+ },
+ "new_model_calls_after_ruling": 0,
+ "capabilities": {
+  "C1a": {
+   "final_interpretation": "SUCCESS",
+   "mechanical_result": "SUCCESS",
+   "validity": "VALID",
+   "evidence": "5 attempts; 4 DISTINCT valid new objects after frozen canonical de-duplication; 1 duplicate; 0 rejected; infeasible control correct",
+   "supportable_statement": "within this finite frozen test domain and this model and parameter configuration, the object-construction capability test was passed",
+   "scope_limit": "DOES NOT generalise beyond the frozen instances, domain or model"
+  },
+  "C1b": {
+   "mechanical_result": "FAILURE",
+   "validity": "INVALID (spec-scorer mismatch contaminates the sole rejection)",
+   "final_interpretation": "UNDECIDABLE",
+   "defect": "DEFECT-3 SPEC-SCORER MISMATCH / INVALID REJECTION",
+   "evidence": "positive ACCEPT; not-tight ACCEPT; no-core REJECT driven only by H4_no_complementary_pair, whose frozen truth value is undefined (None) for that instance while the model answered true; the pre-registered allowed_output for that instance pins only H1, applicable and conclusion, all of which the model satisfied exactly",
+   "root_cause": "the pre-registration recorded an allowed_output binding but never constrained the scorer's exact-match on an UNDEFINED field",
+   "supportable_statement": "no valid judgement about the cross-domain instantiation capability can be made this round"
+  },
+  "C1c": {
+   "mechanical_result": "UNDECIDABLE",
+   "validity": "N/A (not measurable under this pre-registration)",
+   "final_interpretation": "UNDECIDABLE",
+   "defect": "DEFECT-2 MEASUREMENT CAPACITY BOUNDARY",
+   "evidence": "3/3 attempts: finish_reason=length, completion_tokens=4000, reasoning_tokens=4000, content length 0",
+   "supportable_statement": "the frozen output configuration failed to measure the compositional-dependency capability; this neither proves nor disproves its presence"
+  }
+ },
+ "round_conclusion": {
+  "shows_capability": "only C1a, and only within the frozen finite test domain",
+  "c1b_c1c": "neither validly measured",
+  "forbidden_extrapolations": [
+   "claiming the framework has autonomous mathematical discovery capability",
+   "claiming the framework lacks it",
+   "extrapolating a single local capability success into overall discovery capability",
+   "treating UNDECIDABLE as FAILURE, or as absence of capability"
+  ]
+ },
+ "freeze": {
+  "commit": "70d6c67",
+  "policy": "no artefact is overwritten; original outputs, original scorer results, pre-fix and post-fix runners, incident report and all hashes are retained",
+  "artefacts": {
+   "scorer_v1_code_combined": "09c23de4d141ae97eaa1dd3e483ff7131867c346b822dba4f87d3109d00e8e8a",
+   "scorer_v1_frozen_inputs": "27f9ba95050602341ba3aa8726b3a9138d2bea68d50e3764ee0ef56e81b65ef9",
+   "scorer_v1_scoring_rules": "704ee50d1d301e2a7ebbaa4ad13fc94111cb5f03fa8db8ae72f31eb648aee6a8",
+   "scorer_v1_controls": "8305eeb9e11bb8147b3fb0f7504b7faa2152079d45482f730f79f96d81daf00e",
+   "prereg_v1.1": "5805b5c47783218d14e51f5e7e2b39991769aa671d6b8adef084377344f587f0",
+   "prereg_v1.0": "0ccf77c1569aadd6acf2e9b4a0d7d470941a369b095cc8950ac94b9f1e24b1e3",
+   "runner_pre_fix_crashing": "ec524fc48d291d2298692373696facee5f8eb87587416fcf5a7f8864a565c5a8",
+   "runner_post_fix": "3c8b1cbf0315d8f34f7f3df3b4d0321d672a00683782274615d60623154e2f6f",
+   "offline_scorer": "924b5cda57beda59664b9a286b9f035484a0bbd313c3e5b37abe3bffa34b27d4",
+   "raw_records": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+   "ledger_reconstructed": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+   "partial_run_record": "35e157b313f5ef82d5b1ad52e5d534963a181e668cda34d7347f734d6dd6592a",
+   "incident_report_01": "a73afccaad931b9222bd4b11b1f17b887373c1e01f6d6bf59d63877163e6bb57",
+   "pre_fix_log_with_traceback": "1e3efd193508e76d071753ccb9f2db651673bc4d4dfe1a5c781c45cf081a5164",
+   "offline_score_result": "f86a19a56bb3bdf168ae873d7d4a4dfcf308953bdeee7a7fa372944d0f5f97b0",
+   "aggregation_selftest": "e4266bb31fdd8e159126a6571d0943138c0cf9f64248ede95faae1e1056f7409",
+   "evaluator_selftest": "19d7f15df05d40b7f0c2cf574af5269ca97d38e31e99172ed4904aa2706c9eeb",
+   "scorer_closure": "d10697dcc0c09816887a7896a39f61072c126359d23c66141ba2f47375bd59df",
+   "freeze_manifest": "34c9604a53b715a23585f5d0af7a09d883123f5bd6e83bc0d1f7f7f87cb0676f"
+  }
+ },
+ "v12_prerequisites_before_any_new_model_call": {
+  "must_specify": [
+   "whether undefined hypothesis values are ignored or must be answered",
+   "exactly which fields the allowed_output binding constrains, and what happens to fields outside that binding",
+   "explicit UNDECIDABLE trigger conditions per capability (including unparsable counts and empty-content-at-cap patterns)",
+   "an output budget sufficient to avoid the capacity boundary, declared in advance"
+  ],
+  "process": [
+   "synthetic positive and negative regression on the new rules",
+   "re-pre-registration with a new hash",
+   "separate authorisation request"
+  ],
+  "authorised_now": false
+ }
+}

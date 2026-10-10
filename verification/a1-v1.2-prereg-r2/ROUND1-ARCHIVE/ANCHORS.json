@@ -1,0 +1,34 @@
+{
+ "spec": "A1-ROUND-1-FREEZE-ANCHORS",
+ "model_calls": 0,
+ "anchor_provenance": "content hashes taken from the round-1 freeze commits via git show <commit>:<path> (RAW-A1.jsonl b03e757, A1-FINAL-VERDICTS.json c227e3e, A1-RUN-LEDGER.json b03e757)",
+ "files": {
+  "A1-FINAL-VERDICTS.json": {
+   "sha256_at_freeze": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+   "git_blob_sha_at_freeze": "cf6bbb91f3b62a8530818a1f18e070862f251d65",
+   "recorded_from_commit": "c227e3e",
+   "sha256_current": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+   "unchanged_since_freeze": true
+  },
+  "A1-RUN-LEDGER.json": {
+   "sha256_at_freeze": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+   "git_blob_sha_at_freeze": "3d407536f285caefa2eab4ffa0c1dfc2cb1d210d",
+   "recorded_from_commit": "b03e757",
+   "sha256_current": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+   "unchanged_since_freeze": true
+  },
+  "RAW-A1.jsonl": {
+   "sha256_at_freeze": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+   "git_blob_sha_at_freeze": "e49bbb630c627dd3e3f7f357346d23aaaf11d92c",
+   "recorded_from_commit": "b03e757",
+   "sha256_current": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+   "unchanged_since_freeze": true
+  }
+ },
+ "frozen_capability_verdicts": {
+  "C1a": "SUCCESS",
+  "C1b": "UNDECIDABLE",
+  "C1c": "UNDECIDABLE"
+ },
+ "policy": "round-1 material is used for INTEGRITY ONLY: hashes and frozen verdicts are checked, never re-scored"
+}

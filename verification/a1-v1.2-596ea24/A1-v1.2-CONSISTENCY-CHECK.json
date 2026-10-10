@@ -1,0 +1,333 @@
+{
+ "spec": "A1-v1.2-CONSISTENCY-CHECK",
+ "freeze_commit": "596ea24",
+ "model_calls": 0,
+ "K1_recorded_hashes_match_disk": {
+  "all_match": true,
+  "items": [
+   {
+    "key": "spec_v1.2_candidate",
+    "recorded": "df0f436274fcdbb40d785a9113546ffd8422fce91748306e4f2142b5a611cee0",
+    "actual": "df0f436274fcdbb40d785a9113546ffd8422fce91748306e4f2142b5a611cee0",
+    "match": true
+   },
+   {
+    "key": "spec_r1",
+    "recorded": "9dc81cd4f473fdeb24f93b4435b5f474168e651d1d1fe3e0e715ffa9619fa4da",
+    "actual": "9dc81cd4f473fdeb24f93b4435b5f474168e651d1d1fe3e0e715ffa9619fa4da",
+    "match": true
+   },
+   {
+    "key": "spec_r2",
+    "recorded": "443bd9e2791e2cbc1a6790996ad4a4cbbba3db33fe81b1f506e1436d55a71b2c",
+    "actual": "443bd9e2791e2cbc1a6790996ad4a4cbbba3db33fe81b1f506e1436d55a71b2c",
+    "match": true
+   },
+   {
+    "key": "r2_test_results",
+    "recorded": "94a0ef4d91f35cb9b9a66bd0fb91fde143acbb3df3138da174faf7fadb93fd53",
+    "actual": "94a0ef4d91f35cb9b9a66bd0fb91fde143acbb3df3138da174faf7fadb93fd53",
+    "match": true
+   },
+   {
+    "key": "open_items_resolution",
+    "recorded": "825edf62d429f2a48b2b9c9c14991e09ba0fb42d6a439a5b4cbfaa8acc995700",
+    "actual": "825edf62d429f2a48b2b9c9c14991e09ba0fb42d6a439a5b4cbfaa8acc995700",
+    "match": true
+   },
+   {
+    "key": "gate_ab_results",
+    "recorded": "aa66d6933eebb9a273f494d3b07f8249dc54a39e7d8ead85b04f9b1a5e4e9d93",
+    "actual": "aa66d6933eebb9a273f494d3b07f8249dc54a39e7d8ead85b04f9b1a5e4e9d93",
+    "match": true
+   },
+   {
+    "key": "calibration_plan",
+    "recorded": "8eae6961278fb6e04b75db95b3458a4766b5871139f282a914b960c792a06cec",
+    "actual": "8eae6961278fb6e04b75db95b3458a4766b5871139f282a914b960c792a06cec",
+    "match": true
+   },
+   {
+    "key": "defect_register_addendum",
+    "recorded": "1ae7d9b6220e4e2fa19a236cb83799b09438a21387f518ab61f452cece0061fd",
+    "actual": "1ae7d9b6220e4e2fa19a236cb83799b09438a21387f518ab61f452cece0061fd",
+    "match": true
+   },
+   {
+    "key": "round1_final_results",
+    "recorded": "9a20859732689e5d95c212372e23827289d43fc2902531a865533f17fe61148d",
+    "actual": "9a20859732689e5d95c212372e23827289d43fc2902531a865533f17fe61148d",
+    "match": true
+   },
+   {
+    "key": "round1_final_verdicts",
+    "recorded": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+    "actual": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+    "match": true
+   },
+   {
+    "key": "raw_records",
+    "recorded": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+    "actual": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+    "match": true
+   },
+   {
+    "key": "prereg_v1.1",
+    "recorded": "10c8609d87c3f0b7411864568aca2a802d279d73dd848559c3cf58e243f49930",
+    "actual": "10c8609d87c3f0b7411864568aca2a802d279d73dd848559c3cf58e243f49930",
+    "match": true
+   },
+   {
+    "key": "r2_scorer_tests",
+    "recorded": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
+    "actual": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
+    "match": true
+   },
+   {
+    "key": "open_items_script",
+    "recorded": "6267642a4f15a398324cc1c96c651ed8bbe160715b6b76145a0bdd046304b4bc",
+    "actual": "6267642a4f15a398324cc1c96c651ed8bbe160715b6b76145a0bdd046304b4bc",
+    "match": true
+   },
+   {
+    "key": "gate_ab_script",
+    "recorded": "f5720c78bd8c10861ebbad9b5f1d956a9f7492494274f5cad4cb454a0e3fc104",
+    "actual": "f5720c78bd8c10861ebbad9b5f1d956a9f7492494274f5cad4cb454a0e3fc104",
+    "match": true
+   }
+  ]
+ },
+ "K2_reviewed_files_unchanged_since_freeze": {
+  "all_identical": true,
+  "items": [
+   {
+    "file": "l8_1_a12_r2_tests.py",
+    "disk": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
+    "at_freeze_commit": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
+    "identical": true
+   },
+   {
+    "file": "A1-v1.2-R2-TEST-RESULTS.json",
+    "disk": "94a0ef4d91f35cb9b9a66bd0fb91fde143acbb3df3138da174faf7fadb93fd53",
+    "at_freeze_commit": "94a0ef4d91f35cb9b9a66bd0fb91fde143acbb3df3138da174faf7fadb93fd53",
+    "identical": true
+   },
+   {
+    "file": "A1-v1.2-PREREGISTRATION-DRAFT.json",
+    "disk": "32e8882ff1fa022e10689e5a43700d693f9070cfc77fa02221a0b93e2ea61300",
+    "at_freeze_commit": "32e8882ff1fa022e10689e5a43700d693f9070cfc77fa02221a0b93e2ea61300",
+    "identical": true
+   },
+   {
+    "file": "A1-v1.2-PREREGISTRATION-DRAFT.md",
+    "disk": "fd54014fc59afd98f651acd9cd5acac6dbd0b8ffbf0ee7834fd178fe72f4793c",
+    "at_freeze_commit": "fd54014fc59afd98f651acd9cd5acac6dbd0b8ffbf0ee7834fd178fe72f4793c",
+    "identical": true
+   },
+   {
+    "file": "A1-v1.2-PREFLIGHT-CALIBRATION-PLAN.md",
+    "disk": "8eae6961278fb6e04b75db95b3458a4766b5871139f282a914b960c792a06cec",
+    "at_freeze_commit": "8eae6961278fb6e04b75db95b3458a4766b5871139f282a914b960c792a06cec",
+    "identical": true
+   },
+   {
+    "file": "A1-v1.2-SPEC-CANDIDATE-r2.md",
+    "disk": "443bd9e2791e2cbc1a6790996ad4a4cbbba3db33fe81b1f506e1436d55a71b2c",
+    "at_freeze_commit": "443bd9e2791e2cbc1a6790996ad4a4cbbba3db33fe81b1f506e1436d55a71b2c",
+    "identical": true
+   }
+  ]
+ },
+ "K3_thresholds_identical_to_v11": {
+  "all_identical": true,
+  "items": [
+   {
+    "capability": "C1a",
+    "field": "SUCCESS",
+    "v11": ">= 3 of 5 feasible attempts valid AND the infeasible control is handled correctly",
+    "draft": ">= 3 of 5 feasible attempts valid AND the infeasible control is handled correctly",
+    "identical": true
+   },
+   {
+    "capability": "C1a",
+    "field": "FAILURE",
+    "v11": "<= 2 valid (including 0) \u2014 an insufficient but JUDGEABLE outcome",
+    "draft": "<= 2 valid (including 0) \u2014 an insufficient but JUDGEABLE outcome",
+    "identical": true
+   },
+   {
+    "capability": "C1a",
+    "field": "UNDECIDABLE",
+    "v11": ">= 3 of 5 attempts unparsable, or verifier/interface failure prevents judging",
+    "draft": ">= 3 of 5 attempts unparsable, or verifier/interface failure prevents judging",
+    "identical": true
+   },
+   {
+    "capability": "C1a",
+    "field": "unit",
+    "v11": "attempts on C1a-feasible-1 (5) plus the infeasible control (1)",
+    "draft": "attempts on C1a-feasible-1 (5) plus the infeasible control (1)",
+    "identical": true
+   },
+   {
+    "capability": "C1b",
+    "field": "SUCCESS",
+    "v11": "applicability correct on all 3 AND a valid conclusion on the applicable one",
+    "draft": "applicability correct on all 3 AND a valid conclusion on the applicable one",
+    "identical": true
+   },
+   {
+    "capability": "C1b",
+    "field": "FAILURE",
+    "v11": "any applicability decision wrong (including overclaiming on a non-applicable case)",
+    "draft": "any applicability decision wrong (including overclaiming on a non-applicable case)",
+    "identical": true
+   },
+   {
+    "capability": "C1b",
+    "field": "UNDECIDABLE",
+    "v11": "the lemma statement cannot be expressed/parsed for judging",
+    "draft": "the lemma statement cannot be expressed/parsed for judging",
+    "identical": true
+   },
+   {
+    "capability": "C1b",
+    "field": "unit",
+    "v11": "3 instances (1 applicable + 2 non-applicable)",
+    "draft": "3 instances (1 applicable + 2 non-applicable)",
+    "identical": true
+   },
+   {
+    "capability": "C1c",
+    "field": "SUCCESS",
+    "v11": ">= 1 attempt with valid conclusion AND cone uses both sources AND the frozen two-sided deletion test on the cone passes",
+    "draft": ">= 1 attempt with valid conclusion AND cone uses both sources AND the frozen two-sided deletion test on the cone passes",
+    "identical": true
+   },
+   {
+    "capability": "C1c",
+    "field": "FAILURE",
+    "v11": "0 attempts satisfying all of the above (judgeable outcome)",
+    "draft": "0 attempts satisfying all of the above (judgeable outcome)",
+    "identical": true
+   },
+   {
+    "capability": "C1c",
+    "field": "UNDECIDABLE",
+    "v11": ">= 2 of 3 attempts unparsable, or dependency not expressible",
+    "draft": ">= 2 of 3 attempts unparsable, or dependency not expressible",
+    "identical": true
+   },
+   {
+    "capability": "C1c",
+    "field": "unit",
+    "v11": "3 attempts on C1c-two-source",
+    "draft": "3 attempts on C1c-two-source",
+    "identical": true
+   }
+  ]
+ },
+ "K4_statistics": {
+  "denominator": "12 primary calls in round 1 (withheld retries = 0)",
+  "dimension_1_measurement_state_PARTITION_of_all_calls": {
+   "definition": "each call receives exactly one state; the categories are mutually exclusive AND exhaustive, so they sum to 100%",
+   "states": {
+    "SCOREABLE": {
+     "count": 9,
+     "share_of_12": 0.75
+    },
+    "MEASUREMENT_FAILURE": {
+     "count": 3,
+     "share_of_12": 0.25
+    }
+   },
+   "sums_to_n": 12,
+   "sums_to_100pct": true
+  },
+  "dimension_2_cap_hit": {
+   "definition": "a SEPARATE dimension: the count of calls whose finish_reason is length. It is NOT one of the state categories and does NOT have to sum with them.",
+   "count": 3,
+   "seqs": [
+    10,
+    11,
+    12
+   ],
+   "share_of_12": 0.25,
+   "note": "in round 1 all cap hits happen to also be measurement failures; in general a cap hit whose partial content parses would be PARTIAL_TRUNCATED, so cap hit and measurement failure are NOT the same category"
+  },
+  "dimension_3_undecidable_measurement_layer": {
+   "definition": "an OUTCOME derived from dimension 1 (the MEASUREMENT_FAILURE share), not an independent category",
+   "count": 3,
+   "share_of_12": 0.25
+  },
+  "caution": "reported as 25% / 75% / 25% these are NOT mutually exclusive classes summing to 100%: only dimension 1 is a partition, dimension 2 is independent and dimension 3 is derived from dimension 1"
+ },
+ "K5_budget_status": {
+  "value": 16000,
+  "status_recorded": "CANDIDATE \u2014 NOT FROZEN until the budget decomposition and calibration plan are reviewed",
+  "is_frozen": false,
+  "md_states_candidate": true
+ },
+ "K6_json_md_consistency": {
+  "all_ok": true,
+  "checks": {
+   "model_alias": true,
+   "temperature": true,
+   "primary_calls_12": true,
+   "retry_cap_4": true,
+   "stop_rule_new_prereg": true,
+   "draft_not_approved": true,
+   "null_convention_in_md": true,
+   "h4_precondition_in_md": true,
+   "partial_truncated_in_md": true,
+   "unclassified_in_md": true,
+   "no_rejudge_round1_in_md": true
+  }
+ },
+ "declared_gaps_found_by_self_check": [
+  {
+   "gap": "the readable pre-registration draft does not explicitly state that the round-1 cross-domain submission, which r2 would reject for a null-format reason, must NOT be used as capability evidence about r2, and that round 1 must not be re-judged",
+   "where_it_exists_instead": "A1-v1.2-SPEC-CANDIDATE-r2.md section 5 states it explicitly",
+   "disposition": "NOT fixed during review (reviewed artefacts are frozen); recommended for the next revision",
+   "severity": "documentation completeness, not a rule conflict"
+  }
+ ],
+ "K7_regression_reproducible": {
+  "suites": {
+   "null_semantics_suite": {
+    "reproduced": true,
+    "n_cases": 10,
+    "all_pass": true
+   },
+   "format_suite": {
+    "reproduced": true,
+    "n_cases": 6,
+    "all_pass": true
+   },
+   "abnormal_termination_suite": {
+    "reproduced": true,
+    "n_cases": 6,
+    "all_pass": true
+   },
+   "h1_not_h2_suite": {
+    "reproduced": true,
+    "n_cases": 7,
+    "all_pass": true
+   }
+  },
+  "all_reproduced": true,
+  "all_cases_pass": true,
+  "scorer_under_test": "score_c1b_r2 (defined in this module and called directly by the suites)",
+  "IMPORTANT_LIMITATION": "the r2 scorer is defined inside the test module; there is NO r2 experiment runner that imports it yet, so what the suites verify is the scorer implementation as written in this module and its wiring to the case tables. Runner integration is NOT done and is flagged for the reviewer.",
+  "tests_call_implementation_directly": "run() -> score_c1b_r2(inst, submission); no helper short-circuit"
+ },
+ "summary": {
+  "K1": true,
+  "K2": true,
+  "K3": true,
+  "K4": "re-derived with explicit dimensions (see caution)",
+  "K5": true,
+  "K6": true,
+  "K7": true
+ }
+}

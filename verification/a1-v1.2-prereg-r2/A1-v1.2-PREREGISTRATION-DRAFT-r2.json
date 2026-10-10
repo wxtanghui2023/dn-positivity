@@ -1,0 +1,300 @@
+{
+ "spec": "A1-v1.2-PREREGISTRATION-DRAFT-r1",
+ "status": "DRAFT / NOT APPROVED",
+ "not_approved_because": [
+  "Gate C independent review has NOT been performed",
+  "the capacity calibration has NOT been executed",
+  "the spec revision r2 has NOT been approved as a formal specification"
+ ],
+ "authority": "operator ruling 2026-10-09 21:37 (items 1-4)",
+ "explicit_disclaimers": [
+  "no condition in this draft may be reported as PASSED unless it has actually been passed",
+  "this draft does NOT authorise any model call",
+  "this draft does NOT lift the round-1 freeze",
+  "the pre-flight calibration must NOT be used to adjust the budget after the main run begins"
+ ],
+ "baseline": {
+  "round1_archive_frozen_immutable": "c227e3e",
+  "v12_candidate_delivery_node": "69d82ca",
+  "round1_verdicts_immutable": {
+   "C1a": "SUCCESS",
+   "C1b": "UNDECIDABLE",
+   "C1c": "UNDECIDABLE",
+   "note": "mechanical C1b FAILURE retained but registered as an INVALID rejection"
+  }
+ },
+ "capability_definitions": {
+  "C1a_object_construction": {
+   "unit": "attempts on C1a-feasible-1 (5) plus the infeasible control (1)",
+   "SUCCESS": ">= 3 of 5 feasible attempts valid AND the infeasible control is handled correctly",
+   "FAILURE": "<= 2 valid (including 0) \u2014 an insufficient but JUDGEABLE outcome",
+   "UNDECIDABLE": ">= 3 of 5 attempts unparsable, or verifier/interface failure prevents judging",
+   "counting_rule": "each output judged individually by the frozen scorer; passing outputs are canonicalised; the SAME canonical object counts ONCE",
+   "duplicate_policy": "repeated identical objects never count as multiple discoveries",
+   "carried_over_unchanged": true
+  },
+  "C1b_cross_domain_instantiation": {
+   "unit": "3 instances (1 applicable + 2 non-applicable)",
+   "SUCCESS": "applicability correct on all 3 AND a valid conclusion on the applicable one",
+   "FAILURE": "any applicability decision wrong (including overclaiming on a non-applicable case)",
+   "UNDECIDABLE": "the lemma statement cannot be expressed/parsed for judging",
+   "r2_semantics_note": "SUCCESS/FAILURE are computed under the r2 field semantics below; in particular undefined hypotheses require an explicit null and missing fields are format violations, not nulls",
+   "carried_over_unchanged_thresholds": true,
+   "changed_semantics": "DEFECT-3/6/7/8 corrections (see spec r2)"
+  },
+  "C1c_compositional_dependency": {
+   "unit": "3 attempts on C1c-two-source",
+   "SUCCESS": ">= 1 attempt with valid conclusion AND cone uses both sources AND the frozen two-sided deletion test on the cone passes",
+   "FAILURE": "0 attempts satisfying all of the above (judgeable outcome)",
+   "UNDECIDABLE": ">= 2 of 3 attempts unparsable, or dependency not expressible",
+   "interpretation_limit": "C1c passing means at least one pre-specified output passed the frozen two-source dependency check; it does NOT represent the model's success rate on independent tasks, and does NOT prove general compositional discovery capability.",
+   "carried_over_unchanged": true
+  }
+ },
+ "field_semantics_r2": {
+  "true_false": "judgement value of a DEFINED hypothesis",
+  "null": "the hypothesis is UNDEFINED under this instance preconditions",
+  "missing": "incomplete output / format violation; missing MUST NOT be equated with null",
+  "defined_field_rule": "must be present, boolean, and correct",
+  "undefined_field_rule": "must be explicit null; otherwise handled by the frozen format rules",
+  "key_distinction": "explicit null resolves OUTPUT AMBIGUITY only; it does not make the scorer mathematically correct, so every hypothesis keeps its own definability condition and truth logic"
+ },
+ "hypothesis_preconditions_r2": {
+  "H1_common_core": {
+   "defined": "always",
+   "truth": "core C is non-empty"
+  },
+  "H2_uniform_size": {
+   "defined": "always",
+   "truth": "all blocks have equal size"
+  },
+  "H3_tight": {
+   "defined": "iff H1 AND H2",
+   "truth": "2*(b-|C|)+|C| equals n",
+   "evidence": "the formula uses both b and |C|"
+  },
+  "H4_no_complementary_pair": {
+   "defined": "iff H1 ONLY",
+   "truth": "no two blocks have complementary remainder parts",
+   "evidence": "remainder parts are formed by removing the core, so uniform size is NOT required",
+   "defect_corrected": "DEFECT-8"
+  },
+  "constrained_fields_per_instance": {
+   "N7": "H1..H4 + applicable + conclusion",
+   "NOT_TIGHT": "H1..H4 + applicable + conclusion",
+   "NO_CORE": "H1, H2 + applicable + conclusion",
+   "H1_NOT_H2": "H1, H2, H4 + applicable + conclusion"
+  }
+ },
+ "measurement_classification_r2": {
+  "states": {
+   "SCOREABLE": "score normally",
+   "PARTIAL_TRUNCATED": "EXCLUDED from the capability verdict; reported as a separate completeness stratum (neither SUCCESS nor FAILURE)",
+   "MEASUREMENT_FAILURE": "UNDECIDABLE (never FAILURE, never SUCCESS)",
+   "MODEL_NONCOMPLIANCE": "counts as a rejection (capability failure)",
+   "UNCLASSIFIED_RESPONSE": "UNDECIDABLE + flagged for human review; an unknown finish_reason or an unrecognised termination mode must never be silently mapped to a capability verdict"
+  },
+  "order_rule": "finish_reason is evaluated BEFORE parsability",
+  "aggregation": "a capability is judged only from SCOREABLE attempts; if every attempt is excluded (PARTIAL_TRUNCATED / MEASUREMENT_FAILURE / UNCLASSIFIED) the capability is UNDECIDABLE",
+  "round1_rates": {
+   "round1_n": 12,
+   "classifications": {
+    "SCOREABLE": 9,
+    "PARTIAL_TRUNCATED": 0,
+    "MEASUREMENT_FAILURE": 3,
+    "MODEL_NONCOMPLIANCE": 0
+   },
+   "cap_hit_rate": 0.25,
+   "scoreable_rate": 0.75,
+   "measurement_failure_rate": 0.25,
+   "undecidable_rate_measurement": 0.25,
+   "note": "the three rates must be reported separately; a larger budget is NOT itself evidence of success"
+  }
+ },
+ "preflight_calibration": {
+  "mandatory": true,
+  "offline_part_status": "COMPLETED (zero model calls)",
+  "execution_status": "NOT AUTHORISED / NOT EXECUTED",
+  "pass_conditions": [
+   "at least k-1 of k declared repetitions produce a parsable, format-compliant complete answer",
+   "no repetition produces empty content due to hitting the cap",
+   "cap-hit rate at or below the threshold fixed in this pre-registration"
+  ],
+  "boundary": "offline replay can validate the classification logic but CANNOT prove that the model will produce a complete answer under a new budget",
+  "red_line": "the calibration must not be used to adjust the budget after the main run begins; any condition change must be pre-fixed in a new pre-registration",
+  "plan_doc": "A1-v1.2-PREFLIGHT-CALIBRATION-PLAN.md"
+ },
+ "model_budget_calls": {
+  "model": {
+   "alias": "deepseek/deepseek-v4-flash",
+   "api_id": "deepseek-v4-flash",
+   "temperature": 0.2
+  },
+  "max_output_tokens": {
+   "value": 16000,
+   "status": "CANDIDATE \u2014 NOT FROZEN until the budget decomposition and calibration plan are reviewed"
+  },
+  "budget_decomposition_required": [
+   "input tokens",
+   "expected reasoning tokens",
+   "answer tokens",
+   "format overhead",
+   "safety margin"
+  ],
+  "planned_primary_calls": 12,
+  "retry_rule": "transport/5xx only; global cap 4; original parameters enforced by ledger",
+  "stop_rules": [
+   "abort if the ledger fails validation",
+   "abort on any protocol deviation requiring a rule change",
+   "no mid-run rule, threshold, prompt or budget changes",
+   "any change requires a new pre-registration and fresh authorisation"
+  ],
+  "authorisation_status": "NOT AUTHORISED \u2014 zero model calls"
+ },
+ "aggregation_and_mapping": {
+  "per_capability": [
+   "valid",
+   "invalid",
+   "rejected",
+   "undecidable",
+   "partial_truncated",
+   "measurement_failure counts reported separately",
+   "NO cross-capability offsetting"
+  ],
+  "outcome_to_conclusion": [
+   {
+    "result": "C1b and C1c both validly measured and passing",
+    "conclusion": "the three capabilities are supported within the specified test domain",
+    "next": "enlarge the independent domain and check generalisation"
+   },
+   {
+    "result": "C1b or C1c validly measured and failing",
+    "conclusion": "the corresponding capability test was not passed",
+    "next": "localise the gap; must not be attributed to capacity"
+   },
+   {
+    "result": "any capability still UNDECIDABLE",
+    "conclusion": "that capability remains unmeasured",
+    "next": "stop capability extrapolation and re-examine the measurement design"
+   },
+   {
+    "result": "measurement valid but no genuinely new mathematical mechanism",
+    "conclusion": "engineering capability is NOT mathematical discovery capability",
+    "next": "independent novelty and mathematical-validity audit"
+   }
+  ]
+ },
+ "open_risks": [
+  "the compositional reasoning requirement is only LOWER bounded at 4000; the true requirement is unknown",
+  "the round-1 sample is small (12 primary calls); n=1 per cross-domain instance",
+  "the cross-domain instance class H1=true/H2=false appears in NO round-1 instance, so the corrected branch is validated only synthetically",
+  "UNCLASSIFIED_RESPONSE has no round-1 precedent; its handling is untested against a real provider response",
+  "the pre-registration is not independently reviewed (Gate C not performed)",
+  "the model id is not listed by the endpoint metadata even though calls succeed"
+ ],
+ "unresolved_items": [
+  "Gate C independent review: NOT PERFORMED (reviewer not designated; any internal review must be labelled INTERNAL INDEPENDENT REVIEW and must disclose prior participation)",
+  "pre-flight calibration execution: NOT AUTHORISED",
+  "budget freeze: NOT DONE (16000 remains a candidate)",
+  "k for the calibration repetitions and the cap-hit threshold: NOT YET FIXED",
+  "formal approval of spec r2 as the experiment specification: NOT GRANTED"
+ ],
+ "version_differences": {
+  "v1.1_to_candidate": [
+   "preconditions unified and made explicit",
+   "defect-3 regression case added"
+  ],
+  "candidate_to_r1": [
+   "H4 precondition corrected to H1 only (DEFECT-8)",
+   "PARTIAL_TRUNCATED stratum added (DEFECT-9)",
+   "budget restated as a decomposition",
+   "threshold provenance declared",
+   "H1/H2 branch regression cases A13-A16 added"
+  ],
+  "r1_to_r2": [
+   "undefined policy fixed to explicit null (ruling item 1)",
+   "missing vs null distinguished; defined fields require boolean type",
+   "scorer must implement per-hypothesis definability and truth logic",
+   "H1=true/H2=false branch: H3 must be null AND H4 must be evaluated",
+   "UNCLASSIFIED_RESPONSE state added"
+  ],
+  "r2_to_r1_revision": [
+   "readable draft gains the explicit round-1 prohibition (item 5)",
+   "new shared scorer module l8_1_a12_scorer.py becomes the single scoring implementation",
+   "new formal runner l8_1_a12_runner.py imports that scorer (item 4 evidence)",
+   "new integration test suite l8_1_a12_integration.py"
+  ]
+ },
+ "artefact_hashes": {
+  "A1-v1.2-INTEGRATION-TEST-RESULTS.json": "7a7b15c4ae072993f5b4123e4ee5fd4cfb573138c2b58fc9549a739e8d6d9251",
+  "A1-v1.2-PREREGISTRATION-DRAFT-r2.md": "480ae086fe24ca8ff48fd82995f448f5510312e219691a740349ea4b5f28ade4",
+  "DEFECT-REPAIR-REGISTER.md": "0b7075e342384542fab2103f589ae84e89e9caf4cd2d983e5f8627794ec53891",
+  "INTEGRATION-RUN-LOG-CLEAN2.txt": "19e7167537ae46fc3a9bb3499164d749f0870f8b4dbd0523fd19cbdd0f5cf3de",
+  "INTEGRATION-RUN-LOG.txt": "73581035877940bfb1ba328a4a2949e2984595f13dc7bc00a5935b09e71e2e27",
+  "README.md": "3190312c3942735be17c3c98028ef3ca1270f5bef7459b12cde5753aafa9a8b8",
+  "RUN-INTEGRATION.md": "20014b99292126b1079d913ad56d2dc3a1aafc201b2967822dfcf01ea362603d",
+  "VERSION-DIFFERENCES.md": "4d9cb89c0503967a83724c27c160f742c0ee3a03b693923d9cd63f248333f773",
+  "l8_1_a12_integration.py": "23ace67de33497dc3e210476d25ad0f85d4493ce7d27e89f4e705b2b707da09a",
+  "l8_1_a12_runner.py": "be3d43fb63fc74d5bac5022eb403ff271abf276c013d2ff8a4edf461940ba0c2",
+  "l8_1_a12_scorer.py": "15a400d566cf5f5f30fe7bb3801a85635d05582d2e03ad5dcfd4c69b75184b5e",
+  "deps/l8_1_a12_candidate_gates.py": "f5720c78bd8c10861ebbad9b5f1d956a9f7492494274f5cad4cb454a0e3fc104",
+  "deps/l8_1_a12_open_items.py": "6267642a4f15a398324cc1c96c651ed8bbe160715b6b76145a0bdd046304b4bc",
+  "deps/l8_1_a12_r2_tests.py": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
+  "deps/l8_1_a1_aggregate.py": "689be82388c3c623a796717f4108ba3acb3286d6953969a4e84714086dfca0d9",
+  "deps/l8_1_a1_evaluator.py": "bfd3acb353f256e335e3b4b7943bdf52a6919a0758fb22058e784a42cef4c440",
+  "deps/l8_1_a1_run.py": "3c8b1cbf0315d8f34f7f3df3b4d0321d672a00683782274615d60623154e2f6f",
+  "deps/l8_1_dc1.py": "2a71e6ba5cd198f23126ddb59ad3b00434ebd9199168a7d1374729331ef3afdc",
+  "ROUND1-ARCHIVE/A1-FINAL-VERDICTS.json": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+  "ROUND1-ARCHIVE/A1-RUN-LEDGER.json": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+  "ROUND1-ARCHIVE/ANCHORS.json": "06ab9eb98fa6b2514d8ad33bfc30cfb8f8358c557fefa8c13e20d886820174b9",
+  "ROUND1-ARCHIVE/RAW-A1.jsonl": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41"
+ },
+ "gate_c_status": "NOT PASSED (no independent review performed); the draft may be prepared but must not be frozen as a formal pre-registration until Gate C passes",
+ "source_thresholds": {
+  "carried_over_from": "A1-PREREGISTERED-EXPERIMENT-v1.1.json",
+  "prereg_v1.1_sha256": "10c8609d87c3f0b7411864568aca2a802d279d73dd848559c3cf58e243f49930",
+  "note": "thresholds were loaded PROGRAMMATICALLY from the v1.1 pre-registration, not paraphrased, so they cannot drift silently"
+ },
+ "version_identifier": "A1-v1.2-PREREG-R2",
+ "supersedes": "A1-v1.2-PREREGISTRATION-DRAFT (r2 draft) \u2014 kept unchanged as history",
+ "round1_material_use_prohibition": {
+  "text": "Round 1 is frozen and must not be re-judged or overwritten. The round-1 cross-domain submission would be rejected under the r2 explicit-null convention for a FORMAT reason (H3_tight answered false rather than null); that rejection is NOT capability evidence about r2 and must not be used to infer, support or refute r2 capability.",
+  "rationale": "the undefined-value convention genuinely changes the verdict, which is precisely why it had to be frozen before the experiment rather than after",
+  "permitted_use": "explanatory material about measurement / format semantics only, kept strictly separate from capability discussion"
+ },
+ "open_item_status": {
+  "item_4_runner_integration": {
+   "status": "AUTHOR EVIDENCE PROVIDED \u2014 operator review pending",
+   "evidence": "A1-v1.2-INTEGRATION-TEST-RESULTS.json: identity of the scoring callable, four mandated end-to-end cases through the runner, differential equivalence with the earlier test module, round-1 replay, and the model-call gate",
+   "not_self_certified": "the author does not declare this PASS; the reviewer decides"
+  },
+  "item_5_readable_draft_prohibition": {
+   "status": "FIXED IN THIS REVISION \u2014 operator review pending",
+   "where": "section 1bis of the readable draft and round1_material_use_prohibition here"
+  }
+ },
+ "revision_of": "A1-v1.2-PREREG-R1",
+ "terminal_state_priority": {
+  "evaluated_before_parsability": true,
+  "length_parsable": "PARTIAL_TRUNCATED",
+  "length_not_parsable": "MEASUREMENT_FAILURE",
+  "content_filter_error_or_missing": "MEASUREMENT_FAILURE (content is not scored)",
+  "stop_parsable": "SCOREABLE",
+  "stop_not_parsable": "MODEL_NONCOMPLIANCE",
+  "unknown_finish_reason": "UNCLASSIFIED_RESPONSE (human review)"
+ },
+ "aggregation_semantics": {
+  "MODEL_NONCOMPLIANCE": "counts as a rejection (capability failure), never excluded",
+  "excluded_states": [
+   "PARTIAL_TRUNCATED",
+   "MEASUREMENT_FAILURE",
+   "UNCLASSIFIED_RESPONSE"
+  ],
+  "applies_to": [
+   "C1b",
+   "C1c"
+  ]
+ },
+ "round1_material_policy": "INTEGRITY_ONLY: hash-check the archive, report the frozen verdicts verbatim, assert mechanically that no scoring function is applied to round-1 material",
+ "revision_notes_r2b": "I4 guard repaired and bytecode removed; re-verified from two independent fresh extractions."
+}

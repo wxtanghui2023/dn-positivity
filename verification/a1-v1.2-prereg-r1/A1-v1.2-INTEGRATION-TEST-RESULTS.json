@@ -1,0 +1,110 @@
+{
+ "spec": "A1-v1.2-INTEGRATION-TEST-RESULTS",
+ "model_calls": 0,
+ "network": "none",
+ "purpose": "verify that the formal runner scores via the shared r2 scorer",
+ "I1_identity": {
+  "runner_SCORE_C1B_is_scorer_score_c1b": true,
+  "runner_classify_is_scorer_classify": true,
+  "scorer_id": "A1-v1.2-SCORER-r2",
+  "scorer_module_path": "/home/node/.openclaw/workspace/discovery/dcl/l8_1_a12_scorer.py",
+  "scorer_module_sha256": "b01c3e4ae7df3b209de6d4306244e85e6396383562dfe452ae666bb949da58a2",
+  "test_module_defines_its_own_copy": true,
+  "pass": true
+ },
+ "I2_runner_end_to_end": {
+  "cases": [
+   {
+    "case": "D1_defined_field_error",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "state": "SCOREABLE",
+    "violations": [
+     "wrong H3_tight (submitted False, truth True)"
+    ]
+   },
+   {
+    "case": "D2_null_required_violation",
+    "expected": "REJECT",
+    "actual": "REJECT",
+    "pass": true,
+    "state": "SCOREABLE",
+    "violations": [
+     "UNDEFINED field H4_no_complementary_pair must be explicit null (got True)"
+    ]
+   },
+   {
+    "case": "D3_truncated_but_parsable",
+    "expected": "PARTIAL_TRUNCATED",
+    "actual": "PARTIAL_TRUNCATED",
+    "pass": true,
+    "state": "PARTIAL_TRUNCATED",
+    "violations": []
+   },
+   {
+    "case": "D4_abnormal_termination",
+    "expected": "MEASUREMENT_FAILURE",
+    "actual": "MEASUREMENT_FAILURE",
+    "pass": true,
+    "state": "MEASUREMENT_FAILURE",
+    "violations": []
+   },
+   {
+    "case": "D5_correct_scoreable",
+    "expected": "ACCEPT",
+    "actual": "ACCEPT",
+    "pass": true,
+    "state": "SCOREABLE",
+    "violations": []
+   }
+  ],
+  "pass": true
+ },
+ "I2b_all_excluded_aggregation": {
+  "C1c_state": "MEASUREMENT_FAILURE",
+  "C1c_verdict": "UNDECIDABLE",
+  "pass": true
+ },
+ "I3_differential_equivalence": {
+  "checked": 8,
+  "mismatches": [],
+  "pass": true
+ },
+ "I4_round1_replay": {
+  "n_records": 12,
+  "excluded_count": 3,
+  "C1b_verdict": "FAILURE",
+  "C1b_per_instance": {
+   "C1b-positive-applicable": "ACCEPT",
+   "C1b-negative-not-tight": "ACCEPT",
+   "C1b-negative-no-core": "REJECT"
+  },
+  "C1c_states": [
+   "MEASUREMENT_FAILURE",
+   "MEASUREMENT_FAILURE",
+   "MEASUREMENT_FAILURE"
+  ],
+  "C1c_verdict": "UNDECIDABLE",
+  "expected": "all three compositional records are MEASUREMENT_FAILURE so C1c stays UNDECIDABLE",
+  "pass": true,
+  "note": "DIAGNOSTIC ONLY: this does not re-judge round 1; it shows the runner chain executes on preserved data"
+ },
+ "I5_model_gate": {
+  "unauthorised_call_raised": true,
+  "message": "model calls are NOT authorised; refusing to call for C1b-positive-appl",
+  "authorised_call_raised": true,
+  "authorised_message": "live calling is not implemented in this round (design-only path)",
+  "no_call_made": true,
+  "pass": true
+ },
+ "summary": {
+  "I1": true,
+  "I2": true,
+  "I2b": true,
+  "I3": true,
+  "I4": true,
+  "I5": true
+ },
+ "all_pass": true
+}
