@@ -226,12 +226,17 @@
   ]
  },
  "artefact_hashes": {
-  "INTEGRATION-RUN-LOG.txt": "3f1516d188b02143278270258adfa81e5ab66f42c894ccac1e193d989997cf91",
+  "A1-v1.2-PREREGISTRATION-DRAFT-r2.md": "480ae086fe24ca8ff48fd82995f448f5510312e219691a740349ea4b5f28ade4",
+  "INTEGRATION-RUN-LOG.txt": "73581035877940bfb1ba328a4a2949e2984595f13dc7bc00a5935b09e71e2e27",
   "l8_1_a12_scorer.py": "15a400d566cf5f5f30fe7bb3801a85635d05582d2e03ad5dcfd4c69b75184b5e",
-  "l8_1_a12_integration.py": "81ff5cb8681732949e1ad43e45910f369465b9c372b2d91b6771bb76f4278511",
-  "INTEGRATION-RUN-LOG-CLEAN2.txt": "7f416b1b9aa0d418062e4ec6b9611971989b261b5a3568a8b7f8f5198f19d795",
-  "A1-v1.2-INTEGRATION-TEST-RESULTS.json": "833fe12dd640ed39ab303d4026bdd9eb9fc6ceb302cbc8949c595bdee89ab8e9",
+  "DEFECT-REPAIR-REGISTER.md": "691466e7410984c3126550a4911eb87278e5e72e3ae131bc96de89c4f19366d7",
+  "RUN-INTEGRATION.md": "4bf17135cc7cb9414543074459ad12ff5050c895be959eb22ef3b5ddb50da5ab",
+  "l8_1_a12_integration.py": "23ace67de33497dc3e210476d25ad0f85d4493ce7d27e89f4e705b2b707da09a",
+  "VERSION-DIFFERENCES.md": "464466f3c5a869b9bcb757d1cd11b437320042f234820367ca384e0ef29a859a",
+  "INTEGRATION-RUN-LOG-CLEAN2.txt": "19e7167537ae46fc3a9bb3499164d749f0870f8b4dbd0523fd19cbdd0f5cf3de",
+  "A1-v1.2-INTEGRATION-TEST-RESULTS.json": "7a7b15c4ae072993f5b4123e4ee5fd4cfb573138c2b58fc9549a739e8d6d9251",
   "l8_1_a12_runner.py": "be3d43fb63fc74d5bac5022eb403ff271abf276c013d2ff8a4edf461940ba0c2",
+  "README.md": "3190312c3942735be17c3c98028ef3ca1270f5bef7459b12cde5753aafa9a8b8",
   "deps/l8_1_a1_run.py": "3c8b1cbf0315d8f34f7f3df3b4d0321d672a00683782274615d60623154e2f6f",
   "deps/l8_1_a12_candidate_gates.py": "f5720c78bd8c10861ebbad9b5f1d956a9f7492494274f5cad4cb454a0e3fc104",
   "deps/l8_1_a1_aggregate.py": "689be82388c3c623a796717f4108ba3acb3286d6953969a4e84714086dfca0d9",
@@ -239,19 +244,10 @@
   "deps/l8_1_a1_evaluator.py": "bfd3acb353f256e335e3b4b7943bdf52a6919a0758fb22058e784a42cef4c440",
   "deps/l8_1_a12_r2_tests.py": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
   "deps/l8_1_a12_open_items.py": "6267642a4f15a398324cc1c96c651ed8bbe160715b6b76145a0bdd046304b4bc",
-  "deps/__pycache__/l8_1_a1_run.cpython-311.pyc": "3bf3088ed728350f46e993e862f1b1845b94fae6754575aaeba8c53378c6a95d",
-  "deps/__pycache__/l8_1_dc1.cpython-311.pyc": "4d463f895091287c33ded4673b57b4dc483af7b1e392d038cba45becce1165fe",
-  "deps/__pycache__/l8_1_a1_aggregate.cpython-311.pyc": "0e313cb653139b36d9113b1e09255b7566778972008d1246fcdb9d4e5ea80891",
-  "deps/__pycache__/l8_1_a12_candidate_gates.cpython-311.pyc": "a8696555900db9d660b9863e783bfabab4fb3de18b447fc9e6774e5e35590997",
-  "deps/__pycache__/l8_1_a12_r2_tests.cpython-311.pyc": "0b9fc62772228af764ff3ffcc34ee90e8134429f2d3ce9850f316e192440d070",
-  "deps/__pycache__/l8_1_a1_evaluator.cpython-311.pyc": "a7a3a0b000c46ad804493fa432b473b553f4cefae1bdc82fc5555b2743f7532d",
-  "deps/__pycache__/l8_1_a12_open_items.cpython-311.pyc": "633a9c8261c854a457140a6951a9fc67bfc421d513ec111373402d24e207dd10",
   "ROUND1-ARCHIVE/A1-FINAL-VERDICTS.json": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
   "ROUND1-ARCHIVE/ANCHORS.json": "06ab9eb98fa6b2514d8ad33bfc30cfb8f8358c557fefa8c13e20d886820174b9",
   "ROUND1-ARCHIVE/A1-RUN-LEDGER.json": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
-  "ROUND1-ARCHIVE/RAW-A1.jsonl": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
-  "__pycache__/l8_1_a12_scorer.cpython-311.pyc": "252a9ab9316a58aee975d234c9dd38d086ca6291fd6fe4d8a0bb3cf7d1083ad8",
-  "__pycache__/l8_1_a12_runner.cpython-311.pyc": "53fe6730e7da10e50c5cb87b1f659056ea858ddc2f8185a38e52245594c49998"
+  "ROUND1-ARCHIVE/RAW-A1.jsonl": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41"
  },
  "gate_c_status": "NOT PASSED (no independent review performed); the draft may be prepared but must not be frozen as a formal pre-registration until Gate C passes",
  "source_thresholds": {
@@ -261,13 +257,6 @@
  },
  "version_identifier": "A1-v1.2-PREREG-R2",
  "supersedes": "A1-v1.2-PREREGISTRATION-DRAFT (r2 draft) \u2014 kept unchanged as history",
- "revision_notes": [
-  "item 5 FIXED: the readable draft now carries the explicit prohibition on using the round-1 cross-domain rejection as capability evidence, and states that round 1 is not re-judged",
-  "item 4 ADDRESSED with author evidence: a shared scorer module, a formal runner that imports it, and integration tests proving the runner scores through that implementation; operator review still pending",
-  "artefact hashes recomputed to include the new scorer / runner / integration artefacts",
-  "the readable and machine-readable drafts are regenerated together so they cannot drift",
-  "R2 repairs the four audited defects: terminal-state priority (D-A), MODEL_NONCOMPLIANCE aggregation (D-B), round-1 integrity-only policy (D-5), package self-containment (D-4), and the stale hash count / stale file name in the readable draft."
- ],
  "round1_material_use_prohibition": {
   "text": "Round 1 is frozen and must not be re-judged or overwritten. The round-1 cross-domain submission would be rejected under the r2 explicit-null convention for a FORMAT reason (H3_tight answered false rather than null); that rejection is NOT capability evidence about r2 and must not be used to infer, support or refute r2 capability.",
   "rationale": "the undefined-value convention genuinely changes the verdict, which is precisely why it had to be frozen before the experiment rather than after",
@@ -306,5 +295,6 @@
    "C1c"
   ]
  },
- "round1_material_policy": "INTEGRITY_ONLY: hash-check the archive, report the frozen verdicts verbatim, assert mechanically that no scoring function is applied to round-1 material"
+ "round1_material_policy": "INTEGRITY_ONLY: hash-check the archive, report the frozen verdicts verbatim, assert mechanically that no scoring function is applied to round-1 material",
+ "revision_notes_r2b": "I4 guard repaired and bytecode removed; re-verified from two independent fresh extractions."
 }
