@@ -1,4 +1,4 @@
-# independent fresh extraction 2 of the published package: /tmp/r2c-fresh2
+# independent fresh extraction 2 of the published package: /tmp/r2d-fresh2
 exit=0
 all_pass=True
 
@@ -19,4 +19,7 @@ I5 model gate                : True
 I6 aggregation semantics     : True | calls {'score_records': 0, 'runner_SCORE_C1B': 0, 'score_c1b': 0, 'aggregate_c1b': 5}
 I7 synthetic null rule       : True
 I4 record stable             : True
+I8 required-dep control      : True 
+required checks              : ['I1', 'I2', 'I2c', 'I2b', 'I3', 'I4', 'I5', 'I6', 'I7', 'I4_stable', 'I8']
+summary None keys            : []
 ALL PASS: True
