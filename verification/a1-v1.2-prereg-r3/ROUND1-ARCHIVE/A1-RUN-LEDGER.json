@@ -1,0 +1,158 @@
+{
+ "reconstructed_from": "RAW-A1.jsonl",
+ "method": "deterministic rebuild; timestamps unavailable in raw stream",
+ "ledger": {
+  "entries": [
+   {
+    "seq": 1,
+    "kind": "primary",
+    "task_id": "C1a-feasible-1",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 2,
+    "kind": "primary",
+    "task_id": "C1a-feasible-1",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 3,
+    "kind": "primary",
+    "task_id": "C1a-feasible-1",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 4,
+    "kind": "primary",
+    "task_id": "C1a-feasible-1",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 5,
+    "kind": "primary",
+    "task_id": "C1a-feasible-1",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 6,
+    "kind": "primary",
+    "task_id": "C1a-infeasible-ctl",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 7,
+    "kind": "primary",
+    "task_id": "C1b-positive-applicable",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 8,
+    "kind": "primary",
+    "task_id": "C1b-negative-not-tight",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 9,
+    "kind": "primary",
+    "task_id": "C1b-negative-no-core",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 10,
+    "kind": "primary",
+    "task_id": "C1c-two-source",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 11,
+    "kind": "primary",
+    "task_id": "C1c-two-source",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   },
+   {
+    "seq": 12,
+    "kind": "primary",
+    "task_id": "C1c-two-source",
+    "trigger": null,
+    "params_digest": "FROZEN-IDENTICAL",
+    "original_params_digest": "FROZEN-IDENTICAL",
+    "params_identical": true,
+    "result_code": "ok",
+    "timestamp": "reconstructed"
+   }
+  ],
+  "global_retry_cap": 4,
+  "max_total_calls": 16,
+  "allowed_retry_triggers": [
+   "http_5xx",
+   "transport_error"
+  ],
+  "forbidden_retry_triggers": [
+   "timeout",
+   "unparsable_content",
+   "wrong_content",
+   "other"
+  ]
+ },
+ "validation": {
+  "ok": true,
+  "problems": [],
+  "n_entries": 12,
+  "n_retries": 0
+ }
+}
