@@ -25,7 +25,7 @@
  ],
  "c4_mismatched_declarations": [],
  "c4_pass": true,
- "ok": false,
+ "ok": true,
  "summary": {
   "c1": 24,
   "c2_pass": true,
@@ -38,8 +38,7 @@
  "c5_negative_control": {
   "wrong_value": 25,
   "patched_files": [
-   "DEFECT-REPAIR-REGISTER.md",
-   "A1-v1.2-PREREGISTRATION-DRAFT-r3.md"
+   "A1-v1.2-PREREGISTRATION-DRAFT-r3.md(hits=2)"
   ],
   "c4_pass_under_wrong_declaration": false,
   "detected": true,
