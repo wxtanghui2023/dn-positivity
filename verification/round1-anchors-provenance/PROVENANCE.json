@@ -1,0 +1,62 @@
+{
+ "spec": "ROUND1-ANCHOR-PROVENANCE",
+ "model_calls": 0,
+ "purpose": "external baseline pointers for the round-1 freeze anchors used by the verified r2 package; the verified package itself is NOT modified",
+ "author_side_repository_head": "84dd657 Makes required dependencies fail closed and records the fourth audit round. The differential test modu",
+ "files": {
+  "RAW-A1.jsonl": {
+   "freeze_commit": "b03e757455b9ee4f088dfd462921b8113fecd804",
+   "freeze_commit_short": "b03e757",
+   "freeze_commit_date": "2026-10-09T19:14:36+08:00",
+   "freeze_commit_subject": "The authorised A1 model experiment was executed and completed all twelve primary calls with no transport retri",
+   "git_blob_sha_at_freeze": "e49bbb630c627dd3e3f7f357346d23aaaf11d92c",
+   "git_blob_sha_now": "e49bbb630c627dd3e3f7f357346d23aaaf11d92c",
+   "blob_unchanged_since_freeze": true,
+   "sha256_now": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+   "sha256_recorded_in_package_anchors": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
+   "sha256_matches_package_anchors": true,
+   "git_blob_sha_recorded_in_package_anchors": "e49bbb630c627dd3e3f7f357346d23aaaf11d92c",
+   "blob_matches_package_anchors": true
+  },
+  "A1-FINAL-VERDICTS.json": {
+   "freeze_commit": "c227e3e8b1e417e4655f91efe209bbf985fefce9",
+   "freeze_commit_short": "c227e3e",
+   "freeze_commit_date": "2026-10-09T20:05:03+08:00",
+   "freeze_commit_subject": "The first A1 round is frozen with the three-layer distinction the ruling requires, and no artefact is overwrit",
+   "git_blob_sha_at_freeze": "cf6bbb91f3b62a8530818a1f18e070862f251d65",
+   "git_blob_sha_now": "cf6bbb91f3b62a8530818a1f18e070862f251d65",
+   "blob_unchanged_since_freeze": true,
+   "sha256_now": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+   "sha256_recorded_in_package_anchors": "4ec84a834c009f7ab4698b65a9c4e26de7ea5e05ecec8084b9b542b001779fcd",
+   "sha256_matches_package_anchors": true,
+   "git_blob_sha_recorded_in_package_anchors": "cf6bbb91f3b62a8530818a1f18e070862f251d65",
+   "blob_matches_package_anchors": true
+  },
+  "A1-RUN-LEDGER.json": {
+   "freeze_commit": "b03e757455b9ee4f088dfd462921b8113fecd804",
+   "freeze_commit_short": "b03e757",
+   "freeze_commit_date": "2026-10-09T19:14:36+08:00",
+   "freeze_commit_subject": "The authorised A1 model experiment was executed and completed all twelve primary calls with no transport retri",
+   "git_blob_sha_at_freeze": "3d407536f285caefa2eab4ffa0c1dfc2cb1d210d",
+   "git_blob_sha_now": "3d407536f285caefa2eab4ffa0c1dfc2cb1d210d",
+   "blob_unchanged_since_freeze": true,
+   "sha256_now": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+   "sha256_recorded_in_package_anchors": "3411b1e23761a003cab3753d8b89201824e8317ca9bc37fbe469a89b56aedb4e",
+   "sha256_matches_package_anchors": true,
+   "git_blob_sha_recorded_in_package_anchors": "3d407536f285caefa2eab4ffa0c1dfc2cb1d210d",
+   "blob_matches_package_anchors": true
+  }
+ },
+ "what_this_proves": [
+  "the archived round-1 files in the package hash to the same SHA-256 and the same git blob SHA as the versions at their recorded freeze commits",
+  "the SHA-256 values in the package ANCHORS.json equal a fresh recomputation over the archived bytes, so the correspondence is verifiable by content address"
+ ],
+ "what_this_does_not_prove": [
+  "it does not demonstrate that the freeze commits existed at the stated time (no external timestamping or transparency log is used)",
+  "the commit metadata is author-attested: the author repository is not published, so a third party cannot independently confirm the commits themselves"
+ ],
+ "independent_verifiers_can": [
+  "recompute sha256 over ROUND1-ARCHIVE/* in the verified package and compare with ANCHORS.json (already done inside check I4)",
+  "compare git_blob_sha_at_freeze here with git hash-object of the archived bytes"
+ ]
+}
