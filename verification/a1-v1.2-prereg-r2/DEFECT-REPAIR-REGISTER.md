@@ -17,3 +17,5 @@
 
 | D-⑤c | 禁键检查查错对象：扫描 `inspect_round1()` 返回值而非**组装的 I4 输出** | 先组装完整 I4 对象 → **对其递归扫描两次**；`pass` 依赖两次结果；新增**扫描正控** | I4：`contains_no_new_capability_verdict=true`、`rescan_after_population_clean=true`、`structural_scan_control.detects_injected_keys=true` | 结果 JSON → `I4_round1_archive_integrity.no_rejudge_guard` |
 | D-⑤d | 负控未覆盖 `runner.SCORE_C1B`（导入期绑定） | 将其纳入独立计数与负控 | `monitored_entry_points` 四项；`guard_delta` = `{score_records:1, runner_SCORE_C1B:1, score_c1b:1, aggregate_c1b:1}` ⟹ `detected=true` | 同上 |
+
+| D-⑥ | 必需依赖缺失被**静默过滤**：I3 记 `None` 且汇总丢弃 `None` ⟹ 可 `ALL PASS: True`；且失败仍 `exit 0` | 显式 `REQUIRED_CHECKS`；不可用 ⟹ I3=`False`；`all_pass` 要求严格 `is True` 且无 `None`；失败 `exit 1`；新增 **I8** 负控 | I8：`child.exit=1`、`child.all_pass=false`、`child.I3=false`；`summary_none_keys=[]` | 结果 JSON → `I8_required_dependency_control`、`required_checks`、`summary_none_keys` |
