@@ -11,3 +11,6 @@
 | D-5 | 可读版仍写「15 项哈希」且指向旧 JSON 名 | 哈希项数**机械注入**（本版 26 项）；文件名统一为 `-r2.json` | 生成后自检：无 `15 项`、无旧文件名 | r2 草案 §0 与 §产物哈希 |
 
 > 修的是**实现**，不是判据：阈值、门禁与预注册的判定规则**未放宽**；**零模型调用**；第一轮冻结结果**未改**。
+
+| D-⑤b | I4 零调用断言不可靠（共享可变计数器；`all_zero` 为早期快照；`contains_no_new_capability_verdict` 查错对象） | 专用计数器 + armed 期**不可变快照** + 立即还原 + 后段调用**独立标注** + 对实际输出的**递归结构断言** + **负控** | I4：`round1_phase_snapshot={0,0,0}`、负控 `delta={1,1,1}` ⟹ `detected=true`、`I4_record_stable_after_later_phases=true` | `A1-v1.2-INTEGRATION-TEST-RESULTS.json` → `I4_round1_archive_integrity.no_rejudge_guard` |
+| D-④b | 发布目录含 9 个未追踪 `.pyc` 字节码 | 删除 `__pycache__` 两处；清单重建 | `sha256sum -c` 全 OK；目录内无 `pyc` | 本文件 §清理 |
