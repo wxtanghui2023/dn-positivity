@@ -14,3 +14,6 @@
 
 | D-⑤b | I4 零调用断言不可靠（共享可变计数器；`all_zero` 为早期快照；`contains_no_new_capability_verdict` 查错对象） | 专用计数器 + armed 期**不可变快照** + 立即还原 + 后段调用**独立标注** + 对实际输出的**递归结构断言** + **负控** | I4：`round1_phase_snapshot={0,0,0}`、负控 `delta={1,1,1}` ⟹ `detected=true`、`I4_record_stable_after_later_phases=true` | `A1-v1.2-INTEGRATION-TEST-RESULTS.json` → `I4_round1_archive_integrity.no_rejudge_guard` |
 | D-④b | 发布目录含 9 个未追踪 `.pyc` 字节码 | 删除 `__pycache__` 两处；清单重建 | `sha256sum -c` 全 OK；目录内无 `pyc` | 本文件 §清理 |
+
+| D-⑤c | 禁键检查查错对象：扫描 `inspect_round1()` 返回值而非**组装的 I4 输出** | 先组装完整 I4 对象 → **对其递归扫描两次**；`pass` 依赖两次结果；新增**扫描正控** | I4：`contains_no_new_capability_verdict=true`、`rescan_after_population_clean=true`、`structural_scan_control.detects_injected_keys=true` | 结果 JSON → `I4_round1_archive_integrity.no_rejudge_guard` |
+| D-⑤d | 负控未覆盖 `runner.SCORE_C1B`（导入期绑定） | 将其纳入独立计数与负控 | `monitored_entry_points` 四项；`guard_delta` = `{score_records:1, runner_SCORE_C1B:1, score_c1b:1, aggregate_c1b:1}` ⟹ `detected=true` | 同上 |
