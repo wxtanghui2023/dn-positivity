@@ -1,5 +1,6 @@
-# clean-directory run: /tmp/a1r2-clean2
-# exit=0
+# independent fresh extraction 2 of the published package: /tmp/r2b-fresh2
+exit=0
+all_pass=True
 
 I1 runner uses the shared scorer : True | scorer A1-v1.2-SCORER-r2.1 15a400d566cf
   D1_defined_field_error             expected=REJECT               actual=REJECT               PASS
@@ -11,10 +12,9 @@ I1 runner uses the shared scorer : True | scorer A1-v1.2-SCORER-r2.1 15a400d566c
   parsable+'error'                   expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
   parsable+None                      expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
   parsable+'mystery'                 expected=UNCLASSIFIED_RESPONSE actual=UNCLASSIFIED_RESPONSE PASS
-I2b all excluded             : True
-I3 differential              : True 
-I4 archive integrity only    : True | no-rejudge counters {'score_c1b': 3, 'aggregate_c1b': 5, 'score_records': 0}
+I4 integrity only            : True | round-1 snapshot {'score_c1b': 0, 'aggregate_c1b': 0, 'score_records': 0} | control delta {'score_c1b': 1, 'aggregate_c1b': 1, 'score_records': 1} | detected True
 I5 model gate                : True
-I6 aggregation semantics     : True
+I6 aggregation semantics     : True | calls {'score_c1b': 0, 'aggregate_c1b': 5, 'score_records': 0}
 I7 synthetic null rule       : True
+I4 record stable             : True
 ALL PASS: True
