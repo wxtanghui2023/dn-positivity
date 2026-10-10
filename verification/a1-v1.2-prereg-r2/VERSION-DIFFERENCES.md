@@ -23,3 +23,10 @@ python3 l8_1_a12_integration.py     # 期望 ALL PASS: True
 - **I4 守卫缺陷修复**：启用**专用** round-1 计数器、在 armed 期间取**不可变快照**、随即**还原受护函数**（后段 I6/I7 调用**单独计数并明确标注**）、`contains_no_new_capability_verdict` 改为对**实际 I4 输出结构**递归检查、新增**负控**（故意重判一条 round-1 记录 ⟹ 守卫**必须**检出，否则 I4 失败）。
 - **发布目录清理**：删除 **2 个 `__pycache__` / 9 个 `.pyc`**；清单覆盖全部应纳入文件。
 - **复验**：从**两次独立全新解压**运行，结果一致。
+
+
+## r2c（第三轮审计修复）
+- **禁键检查改为对「组装完成的 I4 输出对象」递归扫描两次**（填充自身字段前/后各一次），`pass` **依赖两次结果**；并新增**扫描正控**（注入 `C1b_verdict` 与 `nest.per_instance` ⟹ 必须检出）。
+- **负控覆盖全部评分入口**：`runner.score_records`、**`runner.SCORE_C1B`（导入期绑定，此前未纳管）**、`scorer.score_c1b`、`scorer.aggregate_c1b` —— 要求**每个入口**均产生增量（`guard_delta` 四项均 ≥1），否则 I4 失败。
+- 修正 `find_verdict_keys` 路径拼接的前导点缺陷（`'.nest.per_instance'` → `'nest.per_instance'`），使位置比对可精确成立。
+- 复验：两次独立全新解压运行，结果一致。
