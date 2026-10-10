@@ -1,4 +1,4 @@
-# independent fresh extraction 2 of the published package: /tmp/r2b-fresh2
+# independent fresh extraction 2 of the published package: /tmp/r2c-fresh2
 exit=0
 all_pass=True
 
@@ -12,9 +12,11 @@ I1 runner uses the shared scorer : True | scorer A1-v1.2-SCORER-r2.1 15a400d566c
   parsable+'error'                   expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
   parsable+None                      expected=MEASUREMENT_FAILURE  actual=MEASUREMENT_FAILURE  PASS
   parsable+'mystery'                 expected=UNCLASSIFIED_RESPONSE actual=UNCLASSIFIED_RESPONSE PASS
-I4 integrity only            : True | round-1 snapshot {'score_c1b': 0, 'aggregate_c1b': 0, 'score_records': 0} | control delta {'score_c1b': 1, 'aggregate_c1b': 1, 'score_records': 1} | detected True
+I4 integrity only            : True | round-1 snapshot {'score_records': 0, 'runner_SCORE_C1B': 0, 'score_c1b': 0, 'aggregate_c1b': 0}
+   entry points monitored    : ['score_records', 'runner_SCORE_C1B', 'score_c1b', 'aggregate_c1b'] | control delta {'score_records': 1, 'runner_SCORE_C1B': 1, 'score_c1b': 1, 'aggregate_c1b': 1} | detected True
+   assembled-object scan     : True | rescan clean True | scanner control True
 I5 model gate                : True
-I6 aggregation semantics     : True | calls {'score_c1b': 0, 'aggregate_c1b': 5, 'score_records': 0}
+I6 aggregation semantics     : True | calls {'score_records': 0, 'runner_SCORE_C1B': 0, 'score_c1b': 0, 'aggregate_c1b': 5}
 I7 synthetic null rule       : True
 I4 record stable             : True
 ALL PASS: True
