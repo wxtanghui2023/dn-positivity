@@ -1,0 +1,49 @@
+{
+ "package": "a1-v1.2-prereg-r3",
+ "c1_count_from_data_source": 24,
+ "c1_source_file": "A1-v1.2-PREREGISTRATION-DRAFT-r3.json",
+ "c2_verified": 24,
+ "c2_missing": [],
+ "c2_mismatch": [],
+ "c2_pass": true,
+ "c3_uncovered_files": [],
+ "c3_sums_entries": 25,
+ "c3_includes_json": true,
+ "c3_sums_digests_pass": true,
+ "c3_pass": true,
+ "c4_declared": [
+  {
+   "file": "A1-v1.2-PREREGISTRATION-DRAFT-r3.md",
+   "value": 24,
+   "context": "> 机器可读版（含 24 项哈希）：`A1-v1.2-PREREGI"
+  },
+  {
+   "file": "A1-v1.2-PREREGISTRATION-DRAFT-r3.md",
+   "value": 24,
+   "context": "**产物哈希（24 项，机械计算）**：见 `A1-v1.2-"
+  }
+ ],
+ "c4_mismatched_declarations": [],
+ "c4_pass": true,
+ "ok": false,
+ "summary": {
+  "c1": 24,
+  "c2_pass": true,
+  "c3_pass": true,
+  "c4_pass": true,
+  "claims": [
+   24
+  ]
+ },
+ "c5_negative_control": {
+  "wrong_value": 25,
+  "patched_files": [
+   "DEFECT-REPAIR-REGISTER.md",
+   "A1-v1.2-PREREGISTRATION-DRAFT-r3.md"
+  ],
+  "c4_pass_under_wrong_declaration": false,
+  "detected": true,
+  "c2_still_pass": false,
+  "c3_still_pass": false
+ }
+}
