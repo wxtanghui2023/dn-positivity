@@ -239,7 +239,7 @@
   "ROUND1-ARCHIVE/RAW-A1.jsonl": "1c636f91f3a2c19fd1507955ca0f2268ae6c9baf9e7543aea8bf9e26c3a1ec41",
   "RUN-INTEGRATION.md": "ad1f457616f87c39ab77733623c9f643251d7e707505c0a9ef5668004f512a1c",
   "VERSION-DIFFERENCES.md": "a87018f51d321b7c3127995d9be22b0e02145cc7c530b0bd800c71330e72dd53",
-  "check_consistency.py": "056ca4c926e5fb4539d3930d0383ae5d1c435957b91402b5b1345a9e693d0f7a",
+  "check_consistency.py": "b7eddbc9a3a68a7f071d6e3d49454ee78a11ae1a2d4b0dbc0cd019c9c8b78e68",
   "deps/l8_1_a12_candidate_gates.py": "f5720c78bd8c10861ebbad9b5f1d956a9f7492494274f5cad4cb454a0e3fc104",
   "deps/l8_1_a12_open_items.py": "6267642a4f15a398324cc1c96c651ed8bbe160715b6b76145a0bdd046304b4bc",
   "deps/l8_1_a12_r2_tests.py": "320d01cc542141404e4cd9dbd4160b40034d1880506a92998a5220be13f24f4d",
