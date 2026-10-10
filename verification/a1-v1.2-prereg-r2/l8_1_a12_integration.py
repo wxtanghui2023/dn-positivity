@@ -10,6 +10,11 @@ Repairs found in the second audit:
   restored immediately afterwards, later-phase calls counted separately and labelled, a structural
   assertion over the real I4 result, and a negative control that deliberately re-judges a round-1
   record — the guard MUST detect it, otherwise I4 fails.
+  Revision 5 makes a REQUIRED dependency fail closed: the differential module is declared required,
+  so if it is unusable the check reports False (never None), the summary aggregation refuses to
+  filter anything out, and the process exits non-zero on failure.  A new negative control (I8) hides
+  that module in a throwaway copy and re-runs this suite as a child, asserting a non-zero exit, a
+  false all_pass and a false I3.
   Revision 4 closes two residual gaps: the forbidden-key scan now runs against the ASSEMBLED I4
   object (twice, before and after populating its own fields) and `pass` depends on it, with a
   positive control proving the scanner detects injected keys; and `runner.SCORE_C1B` — bound to the
@@ -41,11 +46,18 @@ import l8_1_a12_runner as runner
 import l8_1_a1_evaluator as ev
 from l8_1_a1_run import extract_json
 
+# REQUIRED acceptance dependency: the differential reference implementation.  A missing or broken
+# module is an acceptance FAILURE, never a silent skip -- the previous broad except produced
+# pass=None, which the summary aggregation then filtered out of all_pass.
+REQUIRED_DEP_MODULES = ('l8_1_a12_r2_tests',)
+REQUIRED_CHECKS = ('I1', 'I2', 'I2c', 'I2b', 'I3', 'I4', 'I5', 'I6', 'I7', 'I4_stable')
+IMPORT_ERRORS = {}
 try:
     import l8_1_a12_r2_tests as r2tests
-    HAVE_R2 = True
-except Exception:
-    r2tests, HAVE_R2 = None, False
+except Exception as _e:
+    r2tests = None
+    IMPORT_ERRORS['l8_1_a12_r2_tests'] = '%s: %s' % (type(_e).__name__, _e)
+HAVE_R2 = r2tests is not None
 
 OUT = os.path.join(HERE, 'A1-v1.2-INTEGRATION-TEST-RESULTS.json')
 ARCHIVE = os.path.join(HERE, 'ROUND1-ARCHIVE')
@@ -117,8 +129,51 @@ def rejudge_control(archive):
     return type(out).__name__
 
 
+def required_dependency_control():
+    """I8 NEGATIVE CONTROL: hide a REQUIRED dependency in a throwaway copy and re-run this suite.
+
+    The child must exit non-zero, must not report all_pass true, and its I3 must be exactly False
+    rather than None.  This proves a missing required dependency cannot be silently filtered out.
+    """
+    import shutil, subprocess, tempfile
+    tmp = tempfile.mkdtemp(prefix='a1-depctl-')
+    rec = {'what': 'remove deps/l8_1_a12_r2_tests.py in a throwaway copy and re-run this suite',
+           'removed': [], 'child': {}, 'pass': False}
+    try:
+        for dp, dns, fns in os.walk(HERE):
+            dns[:] = [d for d in dns if d != '__pycache__']
+            rel = os.path.relpath(dp, HERE)
+            dst_dir = tmp if rel == '.' else os.path.join(tmp, rel)
+            os.makedirs(dst_dir, exist_ok=True)
+            for fn in fns:
+                if fn.endswith('.pyc'):
+                    continue
+                shutil.copy2(os.path.join(dp, fn), os.path.join(dst_dir, fn))
+        for cand in (os.path.join(tmp, 'deps', 'l8_1_a12_r2_tests.py'),
+                     os.path.join(tmp, 'l8_1_a12_r2_tests.py')):
+            if os.path.exists(cand):
+                os.remove(cand)
+                rec['removed'].append(os.path.relpath(cand, tmp))
+        env = dict(os.environ)
+        env['A1_SKIP_NEGATIVE_CONTROL'] = '1'
+        p = subprocess.run([sys.executable, 'l8_1_a12_integration.py'], cwd=tmp, env=env,
+                           capture_output=True, text=True, timeout=600)
+        child_out = os.path.join(tmp, 'A1-v1.2-INTEGRATION-TEST-RESULTS.json')
+        child = json.load(open(child_out)) if os.path.exists(child_out) else None
+        i3 = ((child or {}).get('summary') or {}).get('I3')
+        rec['child'] = {'exit': p.returncode, 'all_pass': (child or {}).get('all_pass'), 'I3': i3,
+                        'stderr_tail': (p.stderr or '').strip()[-160:]}
+        rec['pass'] = bool(p.returncode != 0 and (child or {}).get('all_pass') is False
+                           and i3 is False)
+    except Exception as e:
+        rec['error'] = '%s: %s' % (type(e).__name__, str(e)[:120])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    return rec
+
+
 def main():
-    res = {'spec': 'A1-v1.2-INTEGRATION-TEST-RESULTS', 'revision': 4,
+    res = {'spec': 'A1-v1.2-INTEGRATION-TEST-RESULTS', 'revision': 5,
            'model_calls': 0, 'network': 'none',
            'purpose': 'verify that the formal runner scores through the shared r2 scorer, and that '
                       'no scoring function is applied to round-1 material'}
@@ -219,8 +274,11 @@ def main():
         res['I3_differential_equivalence'] = diff
     else:
         res['I3_differential_equivalence'] = {
-            'pass': None, 'status': 'SKIPPED_UNAVAILABLE',
-            'why': 'the r2 test module is not bundled next to this script'}
+            'pass': False, 'status': 'REQUIRED_DEPENDENCY_UNUSABLE',
+            'import_errors': IMPORT_ERRORS,
+            'why': 'the r2 differential test module is a REQUIRED acceptance dependency; when it is '
+                   'unusable the acceptance must FAIL and the process must exit non-zero (previously '
+                   'this reported pass=None, which the summary then filtered out)'}
 
     # ---------------- I4 ROUND-1 ARCHIVE INTEGRITY ONLY (no re-judging)
     anchors = json.load(open(os.path.join(ARCHIVE, 'ANCHORS.json')))
@@ -409,7 +467,18 @@ def main():
                       'I6': res['I6_aggregation_semantics']['pass'],
                       'I7': res['I7_synthetic_null_rule']['pass'],
                       'I4_stable': res['I4_record_stable_after_later_phases']}
-    res['all_pass'] = all(v for v in res['summary'].values() if v is not None)
+    if os.environ.get('A1_SKIP_NEGATIVE_CONTROL'):
+        res['I8_required_dependency_control'] = {
+            'status': 'SKIPPED_IN_CHILD_RUN',
+            'why': 'this process is the child spawned by the parent negative control'}
+    else:
+        res['I8_required_dependency_control'] = required_dependency_control()
+        res['summary']['I8'] = res['I8_required_dependency_control']['pass']
+    checks = list(REQUIRED_CHECKS) + (['I8'] if 'I8' in res['summary'] else [])
+    res['required_checks'] = checks
+    res['summary_none_keys'] = [k for k, v in res['summary'].items() if v is None]
+    res['all_pass'] = bool(all(res['summary'].get(k) is True for k in checks)
+                           and not res['summary_none_keys'])
     json.dump(res, open(OUT, 'w'), indent=1)
 
     print('I1 runner uses the shared scorer :', res['I1_identity']['pass'],
@@ -433,8 +502,12 @@ def main():
           '| calls', res['I6_aggregation_semantics']['scoring_calls_during_I6'])
     print('I7 synthetic null rule       :', res['I7_synthetic_null_rule']['pass'])
     print('I4 record stable             :', res['I4_record_stable_after_later_phases'])
+    print('I8 required-dep control      :', res['summary'].get('I8'),
+          res['I8_required_dependency_control'].get('status', ''))
+    print('required checks              :', res['required_checks'])
+    print('summary None keys            :', res['summary_none_keys'])
     print('ALL PASS:', res['all_pass'])
-    return 0
+    return 0 if res['all_pass'] else 1
 
 
 if __name__ == '__main__':
