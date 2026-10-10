@@ -10,6 +10,11 @@ Repairs found in the second audit:
   restored immediately afterwards, later-phase calls counted separately and labelled, a structural
   assertion over the real I4 result, and a negative control that deliberately re-judges a round-1
   record — the guard MUST detect it, otherwise I4 fails.
+  Revision 4 closes two residual gaps: the forbidden-key scan now runs against the ASSEMBLED I4
+  object (twice, before and after populating its own fields) and `pass` depends on it, with a
+  positive control proving the scanner detects injected keys; and `runner.SCORE_C1B` — bound to the
+  scorer at import time — is now counted and exercised too, so the negative control demonstrates an
+  increment for EVERY scoring entry point rather than only the ones it happened to call.
 
 Checks
   I1 identity of the scoring implementation used by the formal runner
@@ -59,13 +64,19 @@ def rec(task, sub=None, finish='stop', seq=1, raw_content=None):
 
 
 def find_verdict_keys(obj, path=''):
-    """structural search for capability-verdict keys anywhere in an object"""
+    """structural search for capability-verdict keys anywhere in an object.
+
+    Paths are built without a leading separator so that reported locations are clean (the earlier
+    version emitted '.nest.per_instance', which made exact comparisons against expected locations
+    fail even when detection itself worked).
+    """
     hits = []
     if isinstance(obj, dict):
         for k, v in obj.items():
+            sub = ('%s.%s' % (path, k)) if path else k
             if k in VERDICT_KEYS:
-                hits.append('%s.%s' % (path, k) if path else k)
-            hits += find_verdict_keys(v, '%s.%s' % (path, k))
+                hits.append(sub)
+            hits += find_verdict_keys(v, sub)
     elif isinstance(obj, list):
         for i, v in enumerate(obj):
             hits += find_verdict_keys(v, '%s[%d]' % (path, i))
@@ -88,22 +99,26 @@ def inspect_round1(archive, anchors):
 
 
 def rejudge_control(archive):
-    """NEGATIVE CONTROL: deliberately push a preserved round-1 record through the scoring chain.
+    """NEGATIVE CONTROL: deliberately exercise EVERY guarded scoring entry point.
 
-    This mimics the prohibited behaviour so that the guard can be shown to detect it.  Its output is
-    DISCARDED and is never reported as a capability verdict; only the guard delta is recorded.
+    The preserved round-1 record is pushed through the runner exactly as the prohibited behaviour
+    would, and each entry point is invoked so that the guard must register an increment for all of
+    them.  Every value produced here is DISCARDED and is never reported as a capability verdict; only
+    the guard deltas are recorded.  `runner.SCORE_C1B` is bound to the scorer at import time, so it
+    needs its own wrapper and its own exercise.
     """
     raw = [json.loads(l) for l in open(os.path.join(archive, 'RAW-A1.jsonl'))]
-    out = runner.score_records(raw[:1])          # the prohibited path; output discarded on purpose
-    scorer.score_c1b(ev.N7, {'hyps': {'H1_common_core': True, 'H2_uniform_size': True,
-                                      'H3_tight': True, 'H4_no_complementary_pair': True},
-                             'applicable': True, 'conclusion': 3})   # wrapper liveness
-    scorer.aggregate_c1b({'ctrl': 'ACCEPT'})                         # wrapper liveness
+    GOOD = {'hyps': {'H1_common_core': True, 'H2_uniform_size': True, 'H3_tight': True,
+                     'H4_no_complementary_pair': True}, 'applicable': True, 'conclusion': 3}
+    out = runner.score_records(raw[:1])        # entry point: runner.score_records
+    runner.SCORE_C1B(ev.N7, GOOD)              # entry point: runner.SCORE_C1B (import-time binding)
+    scorer.score_c1b(ev.N7, GOOD)              # entry point: scorer.score_c1b
+    scorer.aggregate_c1b({'ctrl': 'ACCEPT'})   # entry point: scorer.aggregate_c1b
     return type(out).__name__
 
 
 def main():
-    res = {'spec': 'A1-v1.2-INTEGRATION-TEST-RESULTS', 'revision': 3,
+    res = {'spec': 'A1-v1.2-INTEGRATION-TEST-RESULTS', 'revision': 4,
            'model_calls': 0, 'network': 'none',
            'purpose': 'verify that the formal runner scores through the shared r2 scorer, and that '
                       'no scoring function is applied to round-1 material'}
@@ -209,9 +224,10 @@ def main():
 
     # ---------------- I4 ROUND-1 ARCHIVE INTEGRITY ONLY (no re-judging)
     anchors = json.load(open(os.path.join(ARCHIVE, 'ANCHORS.json')))
-    guard = {'score_c1b': 0, 'aggregate_c1b': 0, 'score_records': 0}
+    ENTRY_POINTS = ('score_records', 'runner_SCORE_C1B', 'score_c1b', 'aggregate_c1b')
+    guard = {k: 0 for k in ENTRY_POINTS}
     _orig = {'score_c1b': scorer.score_c1b, 'aggregate_c1b': scorer.aggregate_c1b,
-             'score_records': runner.score_records}
+             'score_records': runner.score_records, 'SCORE_C1B': runner.SCORE_C1B}
 
     def _wrap(f, key):
         def g(*a, **k):
@@ -223,54 +239,75 @@ def main():
         scorer.score_c1b = _wrap(_orig['score_c1b'], 'score_c1b')
         scorer.aggregate_c1b = _wrap(_orig['aggregate_c1b'], 'aggregate_c1b')
         runner.score_records = _wrap(_orig['score_records'], 'score_records')
+        runner.SCORE_C1B = _wrap(_orig['SCORE_C1B'], 'runner_SCORE_C1B')
 
     def _disarm():
         scorer.score_c1b = _orig['score_c1b']
         scorer.aggregate_c1b = _orig['aggregate_c1b']
         runner.score_records = _orig['score_records']
+        runner.SCORE_C1B = _orig['SCORE_C1B']
 
     _arm()
-    r1 = inspect_round1(ARCHIVE, anchors)              # phase 1: permitted inspection only
-    snapshot = dict(guard)                             # IMMUTABLE snapshot, taken while armed
+    r1 = inspect_round1(ARCHIVE, anchors)          # phase 1: the permitted inspection only
+    snapshot = dict(guard)                         # IMMUTABLE snapshot, taken while armed
     try:
-        control_type = rejudge_control(ARCHIVE)        # phase 2: deliberate violation
+        control_type = rejudge_control(ARCHIVE)    # phase 2: the deliberate violation
         control_err = None
     except Exception as e:
         control_type, control_err = None, '%s: %s' % (type(e).__name__, str(e)[:60])
     delta = {k: guard[k] - snapshot[k] for k in guard}
-    _disarm()                                          # later checks are counted separately
+    _disarm()                                      # restored immediately: later checks are separate
 
-    frozen_expected = anchors['frozen_capability_verdicts']
-    forbidden = find_verdict_keys(r1)                  # structural check of the ACTUAL I4 output
-    res['I4_round1_archive_integrity'] = {
+    # assemble the COMPLETE I4 object, then scan THAT object
+    i4 = {
         'policy': 'INTEGRITY ONLY — round-1 material is hashed and its frozen verdicts are reported '
                   'verbatim; it is NOT re-scored and no new capability verdict is produced',
         'archive_files': r1['archive_files'],
         'archive_unchanged': r1['archive_unchanged'],
         'frozen_verdicts_reported_verbatim': r1['frozen_verdicts_reported_verbatim'],
-        'frozen_verdicts_unchanged': r1['frozen_verdicts_reported_verbatim'] == frozen_expected,
+        'frozen_verdicts_unchanged': (r1['frozen_verdicts_reported_verbatim']
+                                      == anchors['frozen_capability_verdicts']),
         'anchored_at': anchors['anchor_provenance'],
         'no_rejudge_guard': {
             'counter_scope': 'dedicated to the round-1 phase; taken as an immutable snapshot before '
-                             'the negative control, and the guarded functions are restored '
+                             'the negative control, and every guarded function is restored '
                              'immediately afterwards so later checks cannot alter this record',
+            'monitored_entry_points': list(ENTRY_POINTS),
             'round1_phase_snapshot': snapshot,
             'all_zero_in_round1_phase': all(v == 0 for v in snapshot.values()),
-            'negative_control': {'what': 'deliberately push one preserved round-1 record through the '
-                                         'scoring chain; its output is discarded',
-                                 'returned': control_type, 'error': control_err,
-                                 'guard_delta': delta,
-                                 'detected': any(v > 0 for v in delta.values())},
-            'guard_is_live': any(v > 0 for v in delta.values()),
-            'contains_no_new_capability_verdict': not forbidden,
-            'forbidden_keys_found': forbidden,
-            'checked_structure': 'the actual I4 result object (recursive key search)'},
+            'negative_control': {
+                'what': 'push one preserved round-1 record through the runner, as the prohibited '
+                        'behaviour would, and invoke every guarded entry point; all outputs are '
+                        'discarded',
+                'returned': control_type, 'error': control_err,
+                'guard_delta': delta,
+                'detected': all(delta[k] >= 1 for k in ENTRY_POINTS)},
+            'guard_is_live_for_every_entry_point': all(delta[k] >= 1 for k in ENTRY_POINTS),
+            'scanned_object': "the assembled res['I4_round1_archive_integrity'] object",
+            'forbidden_keys_found': None,
+            'contains_no_new_capability_verdict': None,
+            'rescan_after_population_clean': None,
+            'structural_scan_control': None,
+        },
     }
-    i4 = res['I4_round1_archive_integrity']
+    forbidden = find_verdict_keys(i4)              # scan #1: the assembled object
+    i4['no_rejudge_guard']['forbidden_keys_found'] = forbidden
+    i4['no_rejudge_guard']['contains_no_new_capability_verdict'] = not forbidden
+    forbidden_again = find_verdict_keys(i4)        # scan #2: after its own fields are populated
+    i4['no_rejudge_guard']['rescan_after_population_clean'] = (not forbidden_again)
+    scan_control = find_verdict_keys({'C1b_verdict': 'FAILURE', 'nest': {'per_instance': {}}})
+    want = ['C1b_verdict', 'nest.per_instance']
+    i4['no_rejudge_guard']['structural_scan_control'] = {
+        'injected_keys': want, 'found': sorted(scan_control),
+        'detects_injected_keys': sorted(scan_control) == sorted(want)}
+    ng = i4['no_rejudge_guard']
     i4['pass'] = bool(i4['archive_unchanged'] and i4['frozen_verdicts_unchanged']
-                      and i4['no_rejudge_guard']['all_zero_in_round1_phase']
-                      and i4['no_rejudge_guard']['guard_is_live']
-                      and i4['no_rejudge_guard']['contains_no_new_capability_verdict'])
+                      and ng['all_zero_in_round1_phase']
+                      and ng['guard_is_live_for_every_entry_point']
+                      and ng['contains_no_new_capability_verdict']
+                      and ng['rescan_after_population_clean']
+                      and ng['structural_scan_control']['detects_injected_keys'])
+    res['I4_round1_archive_integrity'] = i4
 
     # ---------------- I5 model gate
     gate = {}
@@ -290,9 +327,9 @@ def main():
     res['I5_model_gate'] = gate
 
     # ---------------- I6 regression for D-B: counted SEPARATELY (outside the round-1 guard)
-    later = {'score_c1b': 0, 'aggregate_c1b': 0, 'score_records': 0}
+    later = {k: 0 for k in ENTRY_POINTS}
     _lo = {'score_c1b': scorer.score_c1b, 'aggregate_c1b': scorer.aggregate_c1b,
-           'score_records': runner.score_records}
+           'score_records': runner.score_records, 'SCORE_C1B': runner.SCORE_C1B}
 
     def _later(f, key):
         def g(*a, **k):
@@ -302,6 +339,7 @@ def main():
     scorer.score_c1b = _later(_lo['score_c1b'], 'score_c1b')
     scorer.aggregate_c1b = _later(_lo['aggregate_c1b'], 'aggregate_c1b')
     runner.score_records = _later(_lo['score_records'], 'score_records')
+    runner.SCORE_C1B = _later(_lo['SCORE_C1B'], 'runner_SCORE_C1B')
 
     probes = [
         ('only_noncompliance', {'t': 'MODEL_NONCOMPLIANCE'}, 'FAILURE', []),
@@ -321,8 +359,8 @@ def main():
            for n, s, e in [('only_noncompliance', ['MODEL_NONCOMPLIANCE'], 'FAILURE'),
                            ('noncompliance_plus_accept', ['MODEL_NONCOMPLIANCE', 'ACCEPT'],
                             'SUCCESS')]]
-    scorer.score_c1b, scorer.aggregate_c1b, runner.score_records = (
-        _lo['score_c1b'], _lo['aggregate_c1b'], _lo['score_records'])
+    scorer.score_c1b, scorer.aggregate_c1b = _lo['score_c1b'], _lo['aggregate_c1b']
+    runner.score_records, runner.SCORE_C1B = _lo['score_records'], _lo['SCORE_C1B']
     res['I6_aggregation_semantics'] = {
         'c1b': i6, 'c1c': i6c, 'pass': all(c['pass'] for c in i6) and all(c['pass'] for c in i6c),
         'scoring_calls_during_I6': dict(later),
@@ -383,9 +421,13 @@ def main():
                  c.get('actual') or c['actual_state'], 'PASS' if c['pass'] else 'FAIL'))
     g = i4['no_rejudge_guard']
     print('I4 integrity only            :', i4['pass'],
-          '| round-1 snapshot', g['round1_phase_snapshot'],
+          '| round-1 snapshot', g['round1_phase_snapshot'])
+    print('   entry points monitored    :', g['monitored_entry_points'],
           '| control delta', g['negative_control']['guard_delta'],
           '| detected', g['negative_control']['detected'])
+    print('   assembled-object scan     :', g['contains_no_new_capability_verdict'],
+          '| rescan clean', g['rescan_after_population_clean'],
+          '| scanner control', g['structural_scan_control']['detects_injected_keys'])
     print('I5 model gate                :', gate['pass'])
     print('I6 aggregation semantics     :', res['I6_aggregation_semantics']['pass'],
           '| calls', res['I6_aggregation_semantics']['scoring_calls_during_I6'])
