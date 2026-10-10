@@ -30,3 +30,10 @@ python3 l8_1_a12_integration.py     # 期望 ALL PASS: True
 - **负控覆盖全部评分入口**：`runner.score_records`、**`runner.SCORE_C1B`（导入期绑定，此前未纳管）**、`scorer.score_c1b`、`scorer.aggregate_c1b` —— 要求**每个入口**均产生增量（`guard_delta` 四项均 ≥1），否则 I4 失败。
 - 修正 `find_verdict_keys` 路径拼接的前导点缺陷（`'.nest.per_instance'` → `'nest.per_instance'`），使位置比对可精确成立。
 - 复验：两次独立全新解压运行，结果一致。
+
+
+## r2d（第四轮审计修复：必需依赖 fail-closed）
+- **审查者裁定（可复现的验收缺陷）**：差分测试模块的导入用了宽泛 `except Exception`，失败时 I3 记为 `pass=None`，而汇总用 `all(v for v in values if v is not None)` ⟹ **必需依赖缺失仍可能输出 `ALL PASS: True`**（错误放行路径）；且脚本失败时**仍返回 0**。
+- **修复**：`REQUIRED_DEP_MODULES`/`REQUIRED_CHECKS` 显式声明；模块不可用时 I3 = **`False`**（附 import 错误），**绝不为 `None`**；`all_pass` 要求每项必需检查 **严格 `is True`** 且 `summary_none_keys` 必须为空；**失败时进程 `exit 1`**。
+- **新增 I8 负控**：在**一次性副本**中删除 `deps/l8_1_a12_r2_tests.py` 并以子进程重跑本套件 ⟹ 子进程必须 `exit != 0`、`all_pass=false`、`I3=false`（而非 `None`）。
+- 复验：两次独立全新解压运行，结果一致。
